@@ -88,3 +88,20 @@ test('Bisherige ergänzende Exporte behalten ihre Zusammenführung und atomare K
   assert.deepEqual(new Set(result.aliases), new Set(['Früher', 'Heute']));
   assert.deepEqual(result.combatProfile, overlay.combatProfile);
 });
+
+test('Technikrelease ergänzt nur sein Arsenal und überschreibt keine Live- oder Ausrüstungsdaten', () => {
+  const archived = { id:'test', name:'Test', updatedAt:'2026-10-13T00:00:00Z',
+    combatProfile:{ hitPoints:{current:7}, resources:[{id:'special-action',current:0}], weapons:[{id:'weapon'}],
+      techniques:[{id:'control',damageModel:{mode:'none'}},{id:'keep'}] } };
+  const release = markCharacterDatabaseOverlay({ id:'test', name:'Test', updatedAt:'2026-10-15T00:00:00Z',
+    combatProfile:{ techniques:[{id:'control',damageModel:{mode:'weapon-dice'}},{id:'personal'}] }
+  },{mergeCombatTechniques:true});
+  for(const sources of [[archived,release],[release,archived]]) {
+    const result=merge(sources);
+    assert.deepEqual(result.combatProfile.techniques.map(t=>t.id),['control','keep','personal']);
+    assert.equal(result.combatProfile.techniques[0].damageModel.mode,'weapon-dice');
+    for(const key of ['hitPoints','resources','weapons'])assert.deepEqual(result.combatProfile[key],archived.combatProfile[key]);
+  }
+  const future=markCharacterDatabaseOverlay({...archived,updatedAt:'2026-10-16T00:00:00Z'}, {replaceExportedFields:true});
+  assert.deepEqual(merge([archived,release,future]).combatProfile,archived.combatProfile);
+});

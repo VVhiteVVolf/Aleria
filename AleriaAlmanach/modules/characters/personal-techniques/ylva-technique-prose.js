@@ -1,3 +1,4 @@
+import { reviseWeaponTechniqueSave } from '../../combat-styles/weapon-technique-control.js';
 // Character-specific presentation; class catalog mechanics remain shared.
 export const YLVA_DUEL_OWNER_ID = 'bSYZYAEOwiRgy44f6OmO';
 const prose = {
@@ -23,12 +24,14 @@ const prose = {
   'Abstand mit dem Speer': 'Ylva stößt zur Mitte und lässt die Spitze anschließend zwischen sich und dem Gegner stehen.',
   'Versetzter Grenzpfeil': 'Ylva versetzt die Bogenhand, täuscht die Schusslinie an und löst auf die neu entstandene Lücke.',
   'Atem des Fährtenlesers': 'Ylva beruhigt ihren Atem und sammelt die Kraft, den nächsten Anprall abzufangen.',
-  'Schafthebel': 'Ylva schiebt den Speerschaft hinter die geführte Waffe und versucht, sie mit einer kurzen Drehung aus dem Griff zu hebeln.',
+  'Schafthebel': 'Ylva stößt durch die Deckung, hakt den Speerschaft hinter die geführte Waffe und hebelt sie mit einer kurzen Drehung aus dem Griff.',
   'Aus der Angriffslinie': 'Ylva liest Schulter und Waffenhand des Gegners und nimmt ihren Körper aus der angekündigten Stoßbahn.'
 };
 
 export function describeYlvaTechniques(techniques = []) {
-  return techniques.map(entry => {
+  return techniques.map(source => {
+    const entry = { ...source, secondarySave: reviseWeaponTechniqueSave(source.secondarySave, source.costs?.some(cost => cost.resourceId === 'special-action')) };
+    if (!entry.secondarySave) delete entry.secondarySave;
     const narrative = prose[entry.name];
     if (!narrative) return entry;
     // Keep the authoritative mechanic wording, including future catalog revisions.

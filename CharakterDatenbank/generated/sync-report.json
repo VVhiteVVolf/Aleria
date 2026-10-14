@@ -2,9 +2,9 @@
   "schema": "aleria.character-sync-report",
   "schemaVersion": 1,
   "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
-  "sourceExportedAt": "2026-10-14T19:00:46.364Z",
+  "sourceExportedAt": "2026-10-14T22:04:14.066Z",
   "summary": {
-    "sourceDocuments": 365,
+    "sourceDocuments": 374,
     "total": 238,
     "mergedSameNameGroups": 45,
     "familyLinked": 160,
@@ -1016,6 +1016,7 @@
         "tmfBA2zPTc88EMMGkyyA",
         "tmfBA2zPTc88EMMGkyyA",
         "tmfBA2zPTc88EMMGkyyA",
+        "tmfBA2zPTc88EMMGkyyA",
         "tmfBA2zPTc88EMMGkyyA"
       ],
       "ages": [
@@ -1068,6 +1069,7 @@
         "person--haus-wyrm--gais-wyrm",
         "person--haus-wyrm--gais-wyrm",
         "person--haus-wyrm--gais-wyrm",
+        "person--haus-wyrm--gais-wyrm",
         "person--haus-wyrm--gais-wyrm"
       ],
       "ages": [
@@ -1095,6 +1097,7 @@
         "q1QtSIug74FzzwUAqWrs",
         "q1QtSIug74FzzwUAqWrs",
         "q1QtSIug74FzzwUAqWrs",
+        "q1QtSIug74FzzwUAqWrs",
         "q1QtSIug74FzzwUAqWrs"
       ],
       "ages": [
@@ -1105,6 +1108,7 @@
       "name": "Gethin",
       "canonicalDocumentId": "6atOllMA637Z2VNAZAxf",
       "documentIds": [
+        "6atOllMA637Z2VNAZAxf",
         "6atOllMA637Z2VNAZAxf",
         "6atOllMA637Z2VNAZAxf",
         "6atOllMA637Z2VNAZAxf",
@@ -1124,7 +1128,8 @@
         "person--haus-gafyr--gildas-gafyr",
         "person--haus-gafyr--gildas-gafyr",
         "person--haus-gafyr--gildas-gafyr",
-        "person--haus-gafyr--gildas-gafyr"
+        "person--haus-gafyr--gildas-gafyr",
+        "gildas-gafyr"
       ],
       "ages": [
         "Geburtsjahr 1722"
@@ -1134,6 +1139,7 @@
       "name": "Guinevere Neidr",
       "canonicalDocumentId": "person--haus-neidr--guinevere-neidr",
       "documentIds": [
+        "person--haus-neidr--guinevere-neidr",
         "person--haus-neidr--guinevere-neidr",
         "person--haus-neidr--guinevere-neidr",
         "person--haus-neidr--guinevere-neidr",
@@ -1199,6 +1205,7 @@
       "name": "Kane Draig",
       "canonicalDocumentId": "HjDXMMexahez1G0rJrBE",
       "documentIds": [
+        "HjDXMMexahez1G0rJrBE",
         "HjDXMMexahez1G0rJrBE",
         "HjDXMMexahez1G0rJrBE",
         "HjDXMMexahez1G0rJrBE",
@@ -1324,6 +1331,7 @@
         "person--haus-saethwyr--nudd-saethwyr",
         "person--haus-saethwyr--nudd-saethwyr",
         "person--haus-saethwyr--nudd-saethwyr",
+        "person--haus-saethwyr--nudd-saethwyr",
         "person--haus-saethwyr--nudd-saethwyr"
       ],
       "ages": [
@@ -1419,6 +1427,7 @@
       "name": "Ylva Wolfshorn",
       "canonicalDocumentId": "bSYZYAEOwiRgy44f6OmO",
       "documentIds": [
+        "bSYZYAEOwiRgy44f6OmO",
         "bSYZYAEOwiRgy44f6OmO",
         "bSYZYAEOwiRgy44f6OmO",
         "bSYZYAEOwiRgy44f6OmO",
@@ -1519,6 +1528,24 @@
         "ujMjNxdOs1pnR2jGNus4"
       ],
       "note": "Pompösa und Roisin ergänzt; bestehende Tierbesitzer verknüpft; Uffel ist besitzerloser Bordkater. Kampfprofile und übrige Figuren unverändert."
+    },
+    {
+      "release": "martial-control-2026-10-15",
+      "exportedAt": "2026-10-14T22:04:14.066Z",
+      "characterIds": [
+        "bSYZYAEOwiRgy44f6OmO",
+        "q1QtSIug74FzzwUAqWrs",
+        "HjDXMMexahez1G0rJrBE",
+        "tmfBA2zPTc88EMMGkyyA",
+        "gildas-gafyr",
+        "person--haus-neidr--guinevere-neidr",
+        "person--haus-saethwyr--nudd-saethwyr",
+        "person--haus-wyrm--gais-wyrm",
+        "6atOllMA637Z2VNAZAxf"
+      ],
+      "fields": [
+        "combatProfile.techniques"
+      ]
     }
   ]
 }

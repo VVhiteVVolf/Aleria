@@ -30,6 +30,7 @@ import { empowerAuraAttack } from './combat-aura-attack.js';
 import { resolveCombatWeaponGrip } from './combat-weapon-grip.js';
 import { getHuskarlTechniqueUnavailableReason, getHuskarlTechniqueRequirements } from '../classes/aldrimar/aldrimar-combat-rules.js';
 import { getPairedAttackWeapon, requiresPairedCombatWeapons } from './combat-paired-weapons.js';
+import { resolveTechniqueSaveDc } from './combat-technique-save-dc.js';
 import { getCombatWeaponAttackValues } from './combat-weapon-attack-values.js';
 
 let emptyCharacterTargetProfile = null;
@@ -117,12 +118,7 @@ function buildCombatProfileActions(character, profile, options = {}) {
       const scaling = getTechniqueDamageScaling(technique, profile);
       const versatileFormula = technique.damageModel?.mode === 'weapon-dice' && activeWeapon?.versatileDamageFormula
         ? resolveTechniqueDamageFormula(technique, { ...activeWeapon, damageFormula: activeWeapon.versatileDamageFormula }, profile) : '';
-      const saveAttribute = getEffectiveCombatAttribute(calculation, technique.secondarySave?.dcAttributeKey);
-      const secondarySaveDc = technique.secondarySave?.enabled
-        ? technique.secondarySave.fixedDc ?? (Number(technique.secondarySave.dcBase || 8)
-          + (technique.secondarySave.addProficiency ? getProficiencyBonus(calculation) : 0)
-          + getAttributeModifier(saveAttribute))
-        : null;
+      const secondarySaveDc = resolveTechniqueSaveDc(technique.secondarySave, calculation, activeWeapon || {});
       const classModifiers = getCenyrClassActionModifiers(calculation, {
         technique,
         weapon: activeWeapon,

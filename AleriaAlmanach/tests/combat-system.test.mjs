@@ -694,7 +694,7 @@ test('persistiert neu migrierte Tagesressourcen, ohne Kommentarressourcen dauerh
   assert.equal(persisted.some(resource => resource.id === 'action'), false);
 });
 
-test('füllt Aktionsressourcen für jeden neuen Gesamtkommentar wieder auf', () => {
+test('füllt Aktionsressourcen nur beim nächsten eigenen Gesamtkommentar wieder auf', () => {
   const depleted = [
     { id: 'action', name: 'Aktion', current: 0, maximum: 1, scope: 'comment' },
     { id: 'mana', name: 'Mana', current: 4, maximum: 8, scope: 'persistent' }
@@ -705,7 +705,9 @@ test('füllt Aktionsressourcen für jeden neuen Gesamtkommentar wieder auf', () 
     targetId: 'target',
     targetSnapshot: { hitPointsAfter: 9, maximumHitPoints: 10 },
     actorResourceSnapshot: { after: depleted }
-  }}] }, { id: 'c2', commentSegments: [{ kind: 'speech', text: 'Weiter.' }] }];
+  }}] }, { id: 'c2', characterId: 'actor', commentSegments: [{ kind: 'speech', text: 'Weiter.' }] }];
+  const other = [...comments.slice(0,1), { id:'other', characterId:'target', commentSegments:[{kind:'speech',text:'Gegner spricht.'}] }];
+  assert.equal(deriveCombatStateFromComments(other).get('actor').resources.find(resource => resource.id === 'action').current,0);
   assert.equal(deriveCombatStateFromComments(comments).get('actor').resources.find(resource => resource.id === 'action').current, 1);
   assert.equal(deriveCombatStateFromComments(comments).get('actor').resources.find(resource => resource.id === 'mana').current, 4);
 });

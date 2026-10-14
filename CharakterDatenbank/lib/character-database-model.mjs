@@ -1,3 +1,4 @@
+import { markCharacterTechniqueOverlay, isCharacterTechniqueOverlay, applyCharacterTechniqueOverlays } from './character-technique-overlays.mjs';
 import { createHash } from 'node:crypto';
 
 export const CHARACTER_DATABASE_SCHEMA_VERSION = 1;
@@ -347,7 +348,7 @@ function sourcePriority(character) {
   return meaningfulSize(character) * 1_000_000 + Math.floor(updatedAt / 1000);
 }
 
-export function markCharacterDatabaseOverlay(character = {}, { replaceExportedFields = false } = {}) {
+export function markCharacterDatabaseOverlay(character = {}, { replaceExportedFields = false, mergeCombatTechniques = false } = {}) {
   Object.defineProperty(character, CHARACTER_OVERLAY_MARKER, {
     value: true,
     enumerable: false,
@@ -360,6 +361,7 @@ export function markCharacterDatabaseOverlay(character = {}, { replaceExportedFi
     configurable: false,
     writable: false
   });
+  if (mergeCombatTechniques) markCharacterTechniqueOverlay(character);
   return character;
 }
 
@@ -409,12 +411,12 @@ function groupArchiveCharacters(characters = []) {
       .map(character => text(character.id))
       .filter(Boolean)
       .sort((first, second) => first.localeCompare(second))[0];
-    const merged = sortedByPriority.slice(1).reduce(
+    let merged = sortedByPriority.slice(1).reduce(
       (current, fallback) => fillMissingValues(current, fallback),
       structuredClone(sortedByPriority[0])
     );
     const combatOverlay = sourceCharacters
-      .filter(character => character?.[CHARACTER_OVERLAY_MARKER] === true && character.combatProfile)
+      .filter(character => character?.[CHARACTER_OVERLAY_MARKER] === true && character.combatProfile && !isCharacterTechniqueOverlay(character))
       .sort((first, second) => sourcePriority(second) - sourcePriority(first))[0];
     if (combatOverlay) merged.combatProfile = structuredClone(combatOverlay.combatProfile);
     // Verified exports own their supplied fields, including empty lists and nulls.
@@ -423,6 +425,8 @@ function groupArchiveCharacters(characters = []) {
       .filter(character => character?.[CHARACTER_SNAPSHOT_MARKER] === true)
       .sort((first, second) => (Date.parse(text(first.updatedAt)) || 0) - (Date.parse(text(second.updatedAt)) || 0));
     snapshotOverlays.forEach(character => Object.assign(merged, structuredClone(character)));
+    const latestCombatTimestamp = Math.max(0, ...[combatOverlay, ...snapshotOverlays].filter(source => source?.combatProfile).map(source => Date.parse(source.updatedAt || '') || 0));
+    merged = applyCharacterTechniqueOverlays(merged, sourceCharacters, latestCombatTimestamp);
     merged.id = canonicalDocumentId;
     merged.aliases = uniqueBy([
       ...(Array.isArray(merged.aliases) ? merged.aliases : []),

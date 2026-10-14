@@ -60,8 +60,8 @@ try {
       await search.fill('Schafthebel');
       assert.equal(await library.locator('[data-arsenal-row]:not([hidden])').count(),1);
       await library.getByRole('button',{name:/Schafthebel/}).click();
-      assert.match(await page.locator('#attack-preview').innerText(),/Kein direkter Schaden/);
-      assert.match(await page.locator('#attack-preview').innerText(),/KRF SG 14/);
+      assert.match(await page.locator('#attack-preview').innerText(),/1W8\+1W4\+5/);
+      assert.match(await page.locator('#attack-preview').innerText(),/KRF SG 16/);
       await search.fill('');
       await library.locator('[data-attack-id="technique:ylva-fallender-dorn"]').click();
       const variant = library.locator('[data-action="select-variant"]');
@@ -75,6 +75,14 @@ try {
       assert.ok((await library.locator('[data-action="select-variant"] option').allTextContents()).every(text=>text.includes('beritten')));
       await library.locator('[data-attack-id="technique:combat-style-drachentanz-jungdrache-lauernde-klaue"]').click();
       assert.match(await page.locator('#attack-preview').innerText(),/Vorbereiteter Konter/);
+      await library.locator('[data-attack-id="technique:gais-wyrmsbrecher"]').click();
+      assert.match(await page.locator('#attack-preview').innerText(),/3W12\+1/);
+      assert.match(await page.locator('#attack-preview').innerText(),/1W20 \+6/);
+      await page.locator('#attack-preview').screenshot({path:`${output}/gais-wyrmsbrecher-preview.png`});
+      await library.locator('[data-attack-id="technique:combat-style-drachentanz-jungdrache-entwaffnende-klaue"]').click();
+      assert.match(await page.locator('#attack-preview').innerText(),/2W12\+1/);
+      assert.match(await page.locator('#attack-preview').innerText(),/KRF SG 15/);
+      await page.locator('#attack-preview').screenshot({path:`${output}/gais-enhanced-counter-preview.png`});
     } else if (slug === 'gawain') {
       await library.locator('[data-attack-id="weapon:gawain-draig-knightly-sword"]').click();
       await library.locator('[data-action="select-variant"]').selectOption('gawain-draig-knightly-sword:foot:two-handed');
@@ -146,10 +154,10 @@ try {
   await page.waitForFunction(()=>window.guideSceneReady);
   const composer=page.locator('[data-combat-composer]');
   assert.match(await composer.innerText(),/Schafthebel/);
-  assert.doesNotMatch(await composer.locator('.combat-action-values').innerText(),/1[Wd]/);
+  assert.match(await composer.locator('.combat-action-values').innerText(),/1W8\+1W4\+5/);
   await composer.locator('[data-action="open-action-table"]').click();
   await page.locator('[data-arsenal-card="technique:ylva-schafthebel"] [data-combat-action-option]').click();
-  assert.match(await page.locator('.combat-arsenal-detail').innerText(),/Kein Schaden/);
+  assert.match(await page.locator('.combat-arsenal-detail').innerText(),/Waffenschaden/);
   await page.locator('[data-action="close-action-table"]').click();
   await page.evaluate(()=>window.selectGuideAction('ylva-drei-dornen-ein-sturz'));
   const sequenceValues=await composer.locator('.combat-action-values').innerText();

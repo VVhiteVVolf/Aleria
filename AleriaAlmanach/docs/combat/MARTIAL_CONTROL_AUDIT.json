@@ -1,0 +1,3189 @@
+{
+  "schemaVersion": 1,
+  "release": "2026-10-15",
+  "referenceWeapon": "1d10",
+  "note": "Würfelformeln ohne feste Attribut-, Waffen- oder Klassenboni; normaler Treffer vor Rüstung. Persönliche Techniken gehören nicht zum Klassenkatalog.",
+  "classes": [
+    {
+      "classId": "cantref",
+      "count": 59,
+      "roles": {
+        "weapon-attack": 48,
+        "prepared-counter": 3,
+        "guard-or-preparation": 8
+      },
+      "entries": [
+        {
+          "id": "combat-style-drachentanz-jungdrache-geschlossene-schuppe",
+          "name": "Geschlossene Schuppe",
+          "level": 3,
+          "role": "guard-or-preparation",
+          "costs": [
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": ""
+        },
+        {
+          "id": "combat-style-drachentanz-jungdrache-sicherer-drachenhieb",
+          "name": "Sicherer Drachenhieb",
+          "level": 1,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "1d10",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "2d10"
+        },
+        {
+          "id": "combat-style-drachentanz-jungdrache-geschuppte-deckung",
+          "name": "Geschuppte Deckung",
+          "level": 2,
+          "role": "guard-or-preparation",
+          "costs": [
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            },
+            {
+              "resourceId": "bonus-action",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": ""
+        },
+        {
+          "id": "combat-style-drachentanz-jungdrache-verwurzelte-schuppe",
+          "name": "Verwurzelte Schuppe",
+          "level": 2,
+          "role": "guard-or-preparation",
+          "costs": [
+            {
+              "resourceId": "bonus-action",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": ""
+        },
+        {
+          "id": "combat-style-drachentanz-jungdrache-gesammelter-blick",
+          "name": "Gesammelter Blick",
+          "level": 2,
+          "role": "guard-or-preparation",
+          "costs": [
+            {
+              "resourceId": "bonus-action",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": ""
+        },
+        {
+          "id": "combat-style-drachentanz-jungdrache-taeuschende-klaue",
+          "name": "Täuschende Klaue",
+          "level": 2,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1
+            },
+            {
+              "resourceId": "bonus-action",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "1d10",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "1d10"
+        },
+        {
+          "id": "combat-style-drachentanz-jungdrache-staubende-schwinge",
+          "name": "Stäubende Schwinge",
+          "level": 3,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1
+            },
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "1d10",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "1d10",
+          "savingThrow": {
+            "attribute": "dexterity",
+            "base": 10,
+            "weaponAttribute": true,
+            "fixed": null
+          }
+        },
+        {
+          "id": "combat-style-drachentanz-jungdrache-gebundene-klaue",
+          "name": "Gebundene Klaue",
+          "level": 3,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1
+            },
+            {
+              "resourceId": "bonus-action",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "1d10",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "1d10",
+          "savingThrow": {
+            "attribute": "strength",
+            "base": 10,
+            "weaponAttribute": true,
+            "fixed": null
+          }
+        },
+        {
+          "id": "combat-style-drachentanz-jungdrache-unruhiger-griff",
+          "name": "Unruhiger Griff",
+          "level": 4,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1
+            },
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "1d10",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "1d10",
+          "savingThrow": {
+            "attribute": "strength",
+            "base": 10,
+            "weaponAttribute": true,
+            "fixed": null
+          }
+        },
+        {
+          "id": "combat-style-drachentanz-jungdrache-gleitende-schuppe",
+          "name": "Gleitende Schuppe",
+          "level": 4,
+          "role": "guard-or-preparation",
+          "costs": [
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": ""
+        },
+        {
+          "id": "combat-style-drachentanz-jungdrache-lauernde-klaue",
+          "name": "Lauernde Klaue",
+          "level": 3,
+          "role": "prepared-counter",
+          "costs": [
+            {
+              "resourceId": "bonus-action",
+              "amount": 1
+            },
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "",
+          "referenceCounterDamage": "1d10",
+          "levelTwentyDamage": ""
+        },
+        {
+          "id": "combat-style-drachentanz-jungdrache-entwaffnende-klaue",
+          "name": "Entwaffnende Klaue",
+          "level": 4,
+          "role": "prepared-counter",
+          "costs": [
+            {
+              "resourceId": "bonus-action",
+              "amount": 1
+            },
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            },
+            {
+              "resourceId": "special-action",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "",
+          "referenceCounterDamage": "2d10",
+          "levelTwentyDamage": "",
+          "savingThrow": {
+            "attribute": "strength",
+            "base": 11,
+            "weaponAttribute": true,
+            "fixed": null
+          }
+        },
+        {
+          "id": "combat-style-drachentanz-jungdrache-fallende-schwinge",
+          "name": "Fallende Schwinge",
+          "level": 5,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1
+            },
+            {
+              "resourceId": "bonus-action",
+              "amount": 1
+            },
+            {
+              "resourceId": "special-action",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "2d10",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "3d10",
+          "savingThrow": {
+            "attribute": "dexterity",
+            "base": 11,
+            "weaponAttribute": true,
+            "fixed": null
+          }
+        },
+        {
+          "id": "combat-style-drachentanz-jungdrache-erstickte-antwort",
+          "name": "Erstickte Antwort",
+          "level": 5,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1
+            },
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "1d10+1d4",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "2d10+1d4",
+          "savingThrow": {
+            "attribute": "strength",
+            "base": 10,
+            "weaponAttribute": true,
+            "fixed": null
+          }
+        },
+        {
+          "id": "combat-style-drachentanz-jungdrache-drachenklammer",
+          "name": "Drachenklammer",
+          "level": 6,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1
+            },
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            },
+            {
+              "resourceId": "special-action",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "1d10",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "1d10",
+          "savingThrow": {
+            "attribute": "constitution",
+            "base": 11,
+            "weaponAttribute": true,
+            "fixed": null
+          }
+        },
+        {
+          "id": "combat-style-drachentanz-jungdrache-brechender-widerhall",
+          "name": "Brechender Widerhall",
+          "level": 6,
+          "role": "prepared-counter",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1
+            },
+            {
+              "resourceId": "bonus-action",
+              "amount": 1
+            },
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            },
+            {
+              "resourceId": "special-action",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "",
+          "referenceCounterDamage": "2d10",
+          "levelTwentyDamage": "",
+          "savingThrow": {
+            "attribute": "constitution",
+            "base": 11,
+            "weaponAttribute": true,
+            "fixed": null
+          }
+        },
+        {
+          "id": "combat-style-drachentanz-jungdrache-kurze-drachenspur",
+          "name": "Kurze Drachenspur",
+          "level": 1,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "bonus-action",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "1d4",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "1d4"
+        },
+        {
+          "id": "combat-style-drachentanz-cantref-grund-wacht",
+          "name": "Geschlossene Speerwacht",
+          "level": 2,
+          "role": "guard-or-preparation",
+          "costs": [
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": ""
+        },
+        {
+          "id": "combat-style-drachentanz-cantref-grund-linie",
+          "name": "Stoß an der Schaftlinie",
+          "level": 3,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "1d10",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "2d10"
+        },
+        {
+          "id": "combat-style-drachentanz-cantref-grund-schritt",
+          "name": "Schritt hinter der Spitze",
+          "level": 4,
+          "role": "guard-or-preparation",
+          "costs": [
+            {
+              "resourceId": "bonus-action",
+              "amount": 1
+            },
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": ""
+        },
+        {
+          "id": "combat-style-drachentanz-cantref-grund-durchbruch",
+          "name": "Durchbruch des Grenzwächters",
+          "level": 5,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1
+            },
+            {
+              "resourceId": "special-action",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "2d10",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "3d10"
+        },
+        {
+          "id": "combat-style-drachentanz-cantref-jungdrache-kuss-der-speerspitze",
+          "name": "Kuss der Speerspitze",
+          "level": 1,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "bonus-action",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "1d4",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "1d4"
+        },
+        {
+          "id": "combat-style-drachentanz-cantref-jungdrache-haken-des-jungdrachen",
+          "name": "Haken des Jungdrachens",
+          "level": 2,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1
+            },
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "1d10+1d6",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "2d10+1d6",
+          "savingThrow": {
+            "attribute": "strength",
+            "base": 10,
+            "weaponAttribute": true,
+            "fixed": null
+          }
+        },
+        {
+          "id": "combat-style-drachentanz-cantref-jungdrache-wacht-der-langen-schuppe",
+          "name": "Wacht der langen Schuppe",
+          "level": 3,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "1d10",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "2d10"
+        },
+        {
+          "id": "combat-style-drachentanz-cantref-jungdrache-kreisender-dorn",
+          "name": "Kreisender Dorn",
+          "level": 4,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1
+            },
+            {
+              "resourceId": "bonus-action",
+              "amount": 1
+            },
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "1d10+1d6+1d4",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "1d10+1d6+1d4"
+        },
+        {
+          "id": "combat-style-drachentanz-cantref-jungdrache-durchstossende-spur",
+          "name": "Durchstoßende Spur",
+          "level": 5,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1
+            },
+            {
+              "resourceId": "bonus-action",
+              "amount": 1
+            },
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "1d10+1d6+1d4",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "2d10+1d6+1d4"
+        },
+        {
+          "id": "combat-style-drachentanz-cantref-jungdrache-sechszackige-linie",
+          "name": "Sechszackige Linie",
+          "level": 6,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1
+            },
+            {
+              "resourceId": "bonus-action",
+              "amount": 1
+            },
+            {
+              "resourceId": "special-action",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "2d10",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "3d10",
+          "savingThrow": {
+            "attribute": "dexterity",
+            "base": 11,
+            "weaponAttribute": true,
+            "fixed": null
+          }
+        },
+        {
+          "id": "combat-style-drachentanz-cantref-schwertdrache-kleine-spirale",
+          "name": "Kleine Spirale",
+          "level": 7,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1
+            },
+            {
+              "resourceId": "bonus-action",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "1d10+2d4",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "2d10+1d4"
+        },
+        {
+          "id": "combat-style-drachentanz-cantref-schwertdrache-schaftbrecher",
+          "name": "Schaftbrecher",
+          "level": 7,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1
+            },
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "1d10+1d4",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "2d10",
+          "savingThrow": {
+            "attribute": "strength",
+            "base": 10,
+            "weaponAttribute": true,
+            "fixed": null
+          }
+        },
+        {
+          "id": "combat-style-drachentanz-cantref-schwertdrache-nadelwehr",
+          "name": "Nadelwehr",
+          "level": 8,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            },
+            {
+              "resourceId": "bonus-action",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "1d10+1d4",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "2d10"
+        },
+        {
+          "id": "combat-style-drachentanz-cantref-schwertdrache-duell-der-reichweiten",
+          "name": "Duell der Reichweiten",
+          "level": 8,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1
+            },
+            {
+              "resourceId": "bonus-action",
+              "amount": 1
+            },
+            {
+              "resourceId": "special-action",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "2d10+2d4",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "3d10+1d4"
+        },
+        {
+          "id": "combat-style-drachentanz-speerdrache-fliessende-eroeffnung",
+          "name": "Fließende Eröffnung",
+          "level": 9,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1
+            },
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "1d10+2d6",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "2d10+1d6"
+        },
+        {
+          "id": "combat-style-drachentanz-speerdrache-gleitende-bindung",
+          "name": "Gleitende Bindung",
+          "level": 10,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            },
+            {
+              "resourceId": "special-action",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "2d10+1d6",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "3d10"
+        },
+        {
+          "id": "combat-style-drachentanz-speerdrache-rankenspitze",
+          "name": "Rankenspitze",
+          "level": 11,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1
+            },
+            {
+              "resourceId": "special-action",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "2d10+1d6",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "3d10"
+        },
+        {
+          "id": "combat-style-drachentanz-speerdrache-albischer-halbkreis",
+          "name": "Albischer Halbkreis",
+          "level": 12,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "bonus-action",
+              "amount": 1
+            },
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            },
+            {
+              "resourceId": "special-action",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "2d10+1d4+1d6",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "3d10+1d4"
+        },
+        {
+          "id": "combat-style-drachentanz-speerdrache-steter-atem",
+          "name": "Steter Atem",
+          "level": 13,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1
+            },
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "1d10+1d8",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "2d10",
+          "savingThrow": {
+            "attribute": "wisdom",
+            "base": 10,
+            "weaponAttribute": true,
+            "fixed": null
+          }
+        },
+        {
+          "id": "combat-style-drachentanz-speerdrache-gewundener-schaft",
+          "name": "Gewundener Schaft",
+          "level": 14,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1
+            },
+            {
+              "resourceId": "bonus-action",
+              "amount": 1
+            },
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "1d10+1d6+1d8",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "2d10+1d6",
+          "savingThrow": {
+            "attribute": "strength",
+            "base": 10,
+            "weaponAttribute": true,
+            "fixed": null
+          }
+        },
+        {
+          "id": "combat-style-drachentanz-speerdrache-siebter-strom",
+          "name": "Siebter Strom",
+          "level": 15,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1
+            },
+            {
+              "resourceId": "special-action",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "2d10+1d8",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "3d10"
+        },
+        {
+          "id": "combat-style-drachentanz-speerdrache-uferwechsel",
+          "name": "Uferwechsel",
+          "level": 16,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            },
+            {
+              "resourceId": "bonus-action",
+              "amount": 1
+            },
+            {
+              "resourceId": "special-action",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "2d10+1d8",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "3d10"
+        },
+        {
+          "id": "combat-style-drachentanz-speerdrache-aura-im-strom",
+          "name": "Aura im Strom",
+          "level": 17,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1
+            },
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            },
+            {
+              "resourceId": "special-action",
+              "amount": 1
+            },
+            {
+              "resourceId": "aura-focus",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "5d10+1d6",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "5d10+1d6"
+        },
+        {
+          "id": "combat-style-drachentanz-speerdrache-ungebrochener-kreis",
+          "name": "Ungebrochener Kreis",
+          "level": 18,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1
+            },
+            {
+              "resourceId": "bonus-action",
+              "amount": 1
+            },
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "2d10+1d6",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "2d10+1d6"
+        },
+        {
+          "id": "combat-style-drachentanz-speerdrache-ferne-linie",
+          "name": "Ferne Linie",
+          "level": 19,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1
+            },
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            },
+            {
+              "resourceId": "special-action",
+              "amount": 1
+            },
+            {
+              "resourceId": "aura-focus",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "5d10+1d6",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "5d10+1d6"
+        },
+        {
+          "id": "combat-style-drachentanz-speerdrache-ewiger-reigen",
+          "name": "Ewiger Reigen des Speerdrachen",
+          "level": 20,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1
+            },
+            {
+              "resourceId": "bonus-action",
+              "amount": 1
+            },
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            },
+            {
+              "resourceId": "special-action",
+              "amount": 2
+            },
+            {
+              "resourceId": "aura-focus",
+              "amount": 2
+            }
+          ],
+          "referenceDamage": "8d10+1d6+1d4",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "8d10+1d6+1d4"
+        },
+        {
+          "id": "combat-style-drachentanz-lanzendrache-erste-bahn",
+          "name": "Erste Bahn der Lanze",
+          "level": 9,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1
+            },
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "1d10+2d6",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "2d10+1d6"
+        },
+        {
+          "id": "combat-style-drachentanz-lanzendrache-schafttor",
+          "name": "Schafttor",
+          "level": 13,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1
+            },
+            {
+              "resourceId": "bonus-action",
+              "amount": 1
+            },
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "1d10+1d6+1d8",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "2d10+1d6",
+          "savingThrow": {
+            "attribute": "strength",
+            "base": 10,
+            "weaponAttribute": true,
+            "fixed": null
+          }
+        },
+        {
+          "id": "combat-style-drachentanz-lanzendrache-aura-an-der-spitze",
+          "name": "Aura an der Spitze",
+          "level": 17,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1
+            },
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            },
+            {
+              "resourceId": "special-action",
+              "amount": 1
+            },
+            {
+              "resourceId": "aura-focus",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "5d10+1d6",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "5d10+1d6"
+        },
+        {
+          "id": "combat-style-drachentanz-lanzendrache-durchgehender-anritt",
+          "name": "Durchgehender Anritt",
+          "level": 18,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1
+            },
+            {
+              "resourceId": "bonus-action",
+              "amount": 1
+            },
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "2d10+1d6+1d4",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "2d10+1d6+1d4"
+        },
+        {
+          "id": "combat-style-drachentanz-lanzendrache-horizontstich",
+          "name": "Horizontstich des peitschenden Drachen",
+          "level": 20,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1
+            },
+            {
+              "resourceId": "bonus-action",
+              "amount": 1
+            },
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            },
+            {
+              "resourceId": "special-action",
+              "amount": 2
+            },
+            {
+              "resourceId": "aura-focus",
+              "amount": 2
+            }
+          ],
+          "referenceDamage": "8d10+1d6+1d4",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "8d10+1d6+1d4"
+        },
+        {
+          "id": "combat-style-drachentanz-peitschender-platzender-schaft",
+          "name": "Platzender Schaftwechsel",
+          "level": 9,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1
+            },
+            {
+              "resourceId": "bonus-action",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "1d10+1d4+1d6",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "2d10+1d4"
+        },
+        {
+          "id": "combat-style-drachentanz-peitschender-donnernder-vorgriff",
+          "name": "Donnernder Vorgriff",
+          "level": 12,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1
+            },
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "1d10+1d6",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "2d10",
+          "savingThrow": {
+            "attribute": "strength",
+            "base": 10,
+            "weaponAttribute": true,
+            "fixed": null
+          }
+        },
+        {
+          "id": "combat-style-drachentanz-peitschender-zerreissende-spitze",
+          "name": "Zerreißende Spitze",
+          "level": 15,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1
+            },
+            {
+              "resourceId": "bonus-action",
+              "amount": 1
+            },
+            {
+              "resourceId": "special-action",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "2d10+1d4+1d8",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "3d10+1d4"
+        },
+        {
+          "id": "combat-style-drachentanz-lanzendrache-ruecklaufende-spitze",
+          "name": "Rücklaufende Spitze",
+          "level": 11,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            },
+            {
+              "resourceId": "bonus-action",
+              "amount": 1
+            },
+            {
+              "resourceId": "special-action",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "2d10+1d4+1d6",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "3d10+1d4"
+        },
+        {
+          "id": "combat-style-drachentanz-lanzendrache-weite-nadel",
+          "name": "Weite Nadel",
+          "level": 15,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1
+            },
+            {
+              "resourceId": "special-action",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "2d10+1d8",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "3d10"
+        },
+        {
+          "id": "combat-style-drachentanz-lanzendrache-koenigliche-schranke",
+          "name": "Königliche Schranke",
+          "level": 19,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            },
+            {
+              "resourceId": "special-action",
+              "amount": 1
+            },
+            {
+              "resourceId": "aura-focus",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "5d10",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "5d10"
+        },
+        {
+          "id": "combat-style-drachentanz-huetender-ruhige-schwelle",
+          "name": "Ruhige Schwelle",
+          "level": 9,
+          "role": "guard-or-preparation",
+          "costs": [
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": ""
+        },
+        {
+          "id": "combat-style-drachentanz-huetender-ausdauernde-wehr",
+          "name": "Ausdauernde Wehr",
+          "level": 9,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            },
+            {
+              "resourceId": "bonus-action",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "1d10+1d4+1d6",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "2d10+1d4"
+        },
+        {
+          "id": "combat-style-drachentanz-huetender-schaftnest",
+          "name": "Schaftnest",
+          "level": 13,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            },
+            {
+              "resourceId": "bonus-action",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "1d10+1d8",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "2d10"
+        },
+        {
+          "id": "combat-style-drachentanz-huetender-langer-wachgang",
+          "name": "Langer Wachgang",
+          "level": 17,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            },
+            {
+              "resourceId": "special-action",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "3d10",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "3d10"
+        },
+        {
+          "id": "combat-style-drachentanz-huetender-letzte-schwelle",
+          "name": "Letzte Schwelle des hütenden Drachen",
+          "level": 20,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            },
+            {
+              "resourceId": "bonus-action",
+              "amount": 1
+            },
+            {
+              "resourceId": "special-action",
+              "amount": 2
+            },
+            {
+              "resourceId": "aura-focus",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "6d10",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "6d10",
+          "savingThrow": {
+            "attribute": "strength",
+            "base": 11,
+            "weaponAttribute": true,
+            "fixed": null
+          }
+        }
+      ]
+    },
+    {
+      "classId": "uchelwyr",
+      "count": 86,
+      "roles": {
+        "weapon-attack": 75,
+        "prepared-counter": 3,
+        "guard-or-preparation": 8
+      },
+      "entries": [
+        {
+          "id": "combat-style-drachentanz-jungdrache-geschlossene-schuppe",
+          "name": "Geschlossene Schuppe",
+          "level": 3,
+          "role": "guard-or-preparation",
+          "costs": [
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": ""
+        },
+        {
+          "id": "combat-style-drachentanz-jungdrache-sicherer-drachenhieb",
+          "name": "Sicherer Drachenhieb",
+          "level": 1,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "1d10",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "2d10"
+        },
+        {
+          "id": "combat-style-drachentanz-jungdrache-geschuppte-deckung",
+          "name": "Geschuppte Deckung",
+          "level": 2,
+          "role": "guard-or-preparation",
+          "costs": [
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            },
+            {
+              "resourceId": "bonus-action",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": ""
+        },
+        {
+          "id": "combat-style-drachentanz-jungdrache-verwurzelte-schuppe",
+          "name": "Verwurzelte Schuppe",
+          "level": 2,
+          "role": "guard-or-preparation",
+          "costs": [
+            {
+              "resourceId": "bonus-action",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": ""
+        },
+        {
+          "id": "combat-style-drachentanz-jungdrache-gesammelter-blick",
+          "name": "Gesammelter Blick",
+          "level": 2,
+          "role": "guard-or-preparation",
+          "costs": [
+            {
+              "resourceId": "bonus-action",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": ""
+        },
+        {
+          "id": "combat-style-drachentanz-jungdrache-taeuschende-klaue",
+          "name": "Täuschende Klaue",
+          "level": 2,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1
+            },
+            {
+              "resourceId": "bonus-action",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "1d10",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "1d10"
+        },
+        {
+          "id": "combat-style-drachentanz-jungdrache-staubende-schwinge",
+          "name": "Stäubende Schwinge",
+          "level": 3,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1
+            },
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "1d10",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "1d10",
+          "savingThrow": {
+            "attribute": "dexterity",
+            "base": 10,
+            "weaponAttribute": true,
+            "fixed": null
+          }
+        },
+        {
+          "id": "combat-style-drachentanz-jungdrache-gebundene-klaue",
+          "name": "Gebundene Klaue",
+          "level": 3,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1
+            },
+            {
+              "resourceId": "bonus-action",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "1d10",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "1d10",
+          "savingThrow": {
+            "attribute": "strength",
+            "base": 10,
+            "weaponAttribute": true,
+            "fixed": null
+          }
+        },
+        {
+          "id": "combat-style-drachentanz-jungdrache-unruhiger-griff",
+          "name": "Unruhiger Griff",
+          "level": 4,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1
+            },
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "1d10",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "1d10",
+          "savingThrow": {
+            "attribute": "strength",
+            "base": 10,
+            "weaponAttribute": true,
+            "fixed": null
+          }
+        },
+        {
+          "id": "combat-style-drachentanz-jungdrache-gleitende-schuppe",
+          "name": "Gleitende Schuppe",
+          "level": 4,
+          "role": "guard-or-preparation",
+          "costs": [
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": ""
+        },
+        {
+          "id": "combat-style-drachentanz-jungdrache-lauernde-klaue",
+          "name": "Lauernde Klaue",
+          "level": 3,
+          "role": "prepared-counter",
+          "costs": [
+            {
+              "resourceId": "bonus-action",
+              "amount": 1
+            },
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "",
+          "referenceCounterDamage": "1d10",
+          "levelTwentyDamage": ""
+        },
+        {
+          "id": "combat-style-drachentanz-jungdrache-entwaffnende-klaue",
+          "name": "Entwaffnende Klaue",
+          "level": 4,
+          "role": "prepared-counter",
+          "costs": [
+            {
+              "resourceId": "bonus-action",
+              "amount": 1
+            },
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            },
+            {
+              "resourceId": "special-action",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "",
+          "referenceCounterDamage": "2d10",
+          "levelTwentyDamage": "",
+          "savingThrow": {
+            "attribute": "strength",
+            "base": 11,
+            "weaponAttribute": true,
+            "fixed": null
+          }
+        },
+        {
+          "id": "combat-style-drachentanz-jungdrache-fallende-schwinge",
+          "name": "Fallende Schwinge",
+          "level": 5,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1
+            },
+            {
+              "resourceId": "bonus-action",
+              "amount": 1
+            },
+            {
+              "resourceId": "special-action",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "2d10",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "3d10",
+          "savingThrow": {
+            "attribute": "dexterity",
+            "base": 11,
+            "weaponAttribute": true,
+            "fixed": null
+          }
+        },
+        {
+          "id": "combat-style-drachentanz-jungdrache-erstickte-antwort",
+          "name": "Erstickte Antwort",
+          "level": 5,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1
+            },
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "1d10+1d4",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "2d10+1d4",
+          "savingThrow": {
+            "attribute": "strength",
+            "base": 10,
+            "weaponAttribute": true,
+            "fixed": null
+          }
+        },
+        {
+          "id": "combat-style-drachentanz-jungdrache-drachenklammer",
+          "name": "Drachenklammer",
+          "level": 6,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1
+            },
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            },
+            {
+              "resourceId": "special-action",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "1d10",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "1d10",
+          "savingThrow": {
+            "attribute": "constitution",
+            "base": 11,
+            "weaponAttribute": true,
+            "fixed": null
+          }
+        },
+        {
+          "id": "combat-style-drachentanz-jungdrache-brechender-widerhall",
+          "name": "Brechender Widerhall",
+          "level": 6,
+          "role": "prepared-counter",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1
+            },
+            {
+              "resourceId": "bonus-action",
+              "amount": 1
+            },
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            },
+            {
+              "resourceId": "special-action",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "",
+          "referenceCounterDamage": "2d10",
+          "levelTwentyDamage": "",
+          "savingThrow": {
+            "attribute": "constitution",
+            "base": 11,
+            "weaponAttribute": true,
+            "fixed": null
+          }
+        },
+        {
+          "id": "combat-style-drachentanz-jungdrache-kurze-drachenspur",
+          "name": "Kurze Drachenspur",
+          "level": 1,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "bonus-action",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "1d4",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "1d4"
+        },
+        {
+          "id": "combat-style-drachentanz-cantref-jungdrache-kuss-der-speerspitze",
+          "name": "Kuss der Speerspitze",
+          "level": 1,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "bonus-action",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "1d4",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "1d4"
+        },
+        {
+          "id": "combat-style-drachentanz-cantref-jungdrache-haken-des-jungdrachen",
+          "name": "Haken des Jungdrachens",
+          "level": 2,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1
+            },
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "1d10+1d6",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "2d10+1d6",
+          "savingThrow": {
+            "attribute": "strength",
+            "base": 10,
+            "weaponAttribute": true,
+            "fixed": null
+          }
+        },
+        {
+          "id": "combat-style-drachentanz-cantref-jungdrache-wacht-der-langen-schuppe",
+          "name": "Wacht der langen Schuppe",
+          "level": 3,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "1d10",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "2d10"
+        },
+        {
+          "id": "combat-style-drachentanz-uchelwyr-grund-wacht",
+          "name": "Hut des Wappenträgers",
+          "level": 2,
+          "role": "guard-or-preparation",
+          "costs": [
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": ""
+        },
+        {
+          "id": "combat-style-drachentanz-uchelwyr-grund-linie",
+          "name": "Schnitt über die Flanke",
+          "level": 3,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "1d10",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "2d10"
+        },
+        {
+          "id": "combat-style-drachentanz-uchelwyr-grund-schritt",
+          "name": "Schritt neben dem Ross",
+          "level": 4,
+          "role": "guard-or-preparation",
+          "costs": [
+            {
+              "resourceId": "bonus-action",
+              "amount": 1
+            },
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": ""
+        },
+        {
+          "id": "combat-style-drachentanz-uchelwyr-grund-durchbruch",
+          "name": "Entschlossener Wappenhieb",
+          "level": 5,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1
+            },
+            {
+              "resourceId": "special-action",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "2d10",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "3d10"
+        },
+        {
+          "id": "combat-style-drachentanz-uchelwyr-jungdrache-hoher-grusshieb",
+          "name": "Hoher Grußhieb",
+          "level": 1,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "bonus-action",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "1d4",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "1d4"
+        },
+        {
+          "id": "combat-style-drachentanz-uchelwyr-jungdrache-zuegelhand",
+          "name": "Zügelhand",
+          "level": 2,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1
+            },
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "1d10+1d4",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "2d10+1d4"
+        },
+        {
+          "id": "combat-style-drachentanz-uchelwyr-jungdrache-steigbuegelkonter",
+          "name": "Steigbügelkonter",
+          "level": 3,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "1d10",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "2d10"
+        },
+        {
+          "id": "combat-style-drachentanz-uchelwyr-jungdrache-kreis-der-flanken",
+          "name": "Kreis der Flanken",
+          "level": 4,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1
+            },
+            {
+              "resourceId": "bonus-action",
+              "amount": 1
+            },
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "1d10+1d6+1d4",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "1d10+1d6+1d4"
+        },
+        {
+          "id": "combat-style-drachentanz-uchelwyr-jungdrache-vorstoss-des-hohen-sitzes",
+          "name": "Vorstoß des hohen Sitzes",
+          "level": 5,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1
+            },
+            {
+              "resourceId": "bonus-action",
+              "amount": 1
+            },
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "1d10+1d6",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "2d10+1d6",
+          "savingThrow": {
+            "attribute": "strength",
+            "base": 10,
+            "weaponAttribute": true,
+            "fixed": null
+          }
+        },
+        {
+          "id": "combat-style-drachentanz-uchelwyr-jungdrache-wappen-des-jungdrachen",
+          "name": "Wappen des Jungdrachens",
+          "level": 6,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1
+            },
+            {
+              "resourceId": "bonus-action",
+              "amount": 1
+            },
+            {
+              "resourceId": "special-action",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "2d10",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "3d10"
+        },
+        {
+          "id": "combat-style-drachentanz-sattelantritt",
+          "name": "Sattelantritt",
+          "level": 2,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "1d10",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "2d10"
+        },
+        {
+          "id": "combat-style-drachentanz-niedrige-lanzenbahn",
+          "name": "Niedrige Lanzenbahn",
+          "level": 5,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1
+            },
+            {
+              "resourceId": "bonus-action",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "1d10+1d6",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "2d10+1d6"
+        },
+        {
+          "id": "combat-style-drachentanz-cantref-schwertdrache-kleine-spirale",
+          "name": "Kleine Spirale",
+          "level": 7,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1
+            },
+            {
+              "resourceId": "bonus-action",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "1d10+2d4",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "2d10+1d4"
+        },
+        {
+          "id": "combat-style-drachentanz-cantref-schwertdrache-duell-der-reichweiten",
+          "name": "Duell der Reichweiten",
+          "level": 8,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1
+            },
+            {
+              "resourceId": "bonus-action",
+              "amount": 1
+            },
+            {
+              "resourceId": "special-action",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "2d10+2d4",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "3d10+1d4"
+        },
+        {
+          "id": "combat-style-drachentanz-uchelwyr-schwertdrache-hohe-bindung",
+          "name": "Hohe Bindung",
+          "level": 7,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1
+            },
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "1d10+1d4",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "2d10"
+        },
+        {
+          "id": "combat-style-drachentanz-uchelwyr-schwertdrache-zaumzeugfinte",
+          "name": "Zaumzeugfinte",
+          "level": 7,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1
+            },
+            {
+              "resourceId": "bonus-action",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "1d10+2d4",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "2d10+1d4"
+        },
+        {
+          "id": "combat-style-drachentanz-uchelwyr-schwertdrache-ritterliche-antwort",
+          "name": "Ritterliche Antwort",
+          "level": 8,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            },
+            {
+              "resourceId": "bonus-action",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "1d10+2d4",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "2d10+1d4"
+        },
+        {
+          "id": "combat-style-drachentanz-uchelwyr-schwertdrache-hochgericht",
+          "name": "Hochgericht",
+          "level": 8,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1
+            },
+            {
+              "resourceId": "bonus-action",
+              "amount": 1
+            },
+            {
+              "resourceId": "special-action",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "2d10+2d4",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "3d10+1d4"
+        },
+        {
+          "id": "combat-style-drachentanz-kreis-um-die-schranke",
+          "name": "Kreis um die Schranke",
+          "level": 7,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1
+            },
+            {
+              "resourceId": "bonus-action",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "1d10+2d4",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "2d10+1d4"
+        },
+        {
+          "id": "combat-style-drachentanz-koenigsanritt",
+          "name": "Königsanritt",
+          "level": 8,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1
+            },
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            },
+            {
+              "resourceId": "special-action",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "2d10+1d4",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "3d10",
+          "savingThrow": {
+            "attribute": "dexterity",
+            "base": 11,
+            "weaponAttribute": true,
+            "fixed": null
+          }
+        },
+        {
+          "id": "combat-style-drachentanz-speerdrache-fliessende-eroeffnung",
+          "name": "Fließende Eröffnung",
+          "level": 9,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1
+            },
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "1d10+2d6",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "2d10+1d6"
+        },
+        {
+          "id": "combat-style-drachentanz-speerdrache-gleitende-bindung",
+          "name": "Gleitende Bindung",
+          "level": 10,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            },
+            {
+              "resourceId": "special-action",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "2d10+1d6",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "3d10"
+        },
+        {
+          "id": "combat-style-drachentanz-speerdrache-rankenspitze",
+          "name": "Rankenspitze",
+          "level": 11,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1
+            },
+            {
+              "resourceId": "special-action",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "2d10+1d6",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "3d10"
+        },
+        {
+          "id": "combat-style-drachentanz-speerdrache-albischer-halbkreis",
+          "name": "Albischer Halbkreis",
+          "level": 12,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "bonus-action",
+              "amount": 1
+            },
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            },
+            {
+              "resourceId": "special-action",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "2d10+1d4+1d6",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "3d10+1d4"
+        },
+        {
+          "id": "combat-style-drachentanz-speerdrache-steter-atem",
+          "name": "Steter Atem",
+          "level": 13,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1
+            },
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "1d10+1d8",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "2d10",
+          "savingThrow": {
+            "attribute": "wisdom",
+            "base": 10,
+            "weaponAttribute": true,
+            "fixed": null
+          }
+        },
+        {
+          "id": "combat-style-drachentanz-speerdrache-gewundener-schaft",
+          "name": "Gewundener Schaft",
+          "level": 14,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1
+            },
+            {
+              "resourceId": "bonus-action",
+              "amount": 1
+            },
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "1d10+1d6+1d8",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "2d10+1d6",
+          "savingThrow": {
+            "attribute": "strength",
+            "base": 10,
+            "weaponAttribute": true,
+            "fixed": null
+          }
+        },
+        {
+          "id": "combat-style-drachentanz-speerdrache-siebter-strom",
+          "name": "Siebter Strom",
+          "level": 15,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1
+            },
+            {
+              "resourceId": "special-action",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "2d10+1d8",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "3d10"
+        },
+        {
+          "id": "combat-style-drachentanz-speerdrache-uferwechsel",
+          "name": "Uferwechsel",
+          "level": 16,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            },
+            {
+              "resourceId": "bonus-action",
+              "amount": 1
+            },
+            {
+              "resourceId": "special-action",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "2d10+1d8",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "3d10"
+        },
+        {
+          "id": "combat-style-drachentanz-speerdrache-aura-im-strom",
+          "name": "Aura im Strom",
+          "level": 17,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1
+            },
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            },
+            {
+              "resourceId": "special-action",
+              "amount": 1
+            },
+            {
+              "resourceId": "aura-focus",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "5d10+1d6",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "5d10+1d6"
+        },
+        {
+          "id": "combat-style-drachentanz-speerdrache-ungebrochener-kreis",
+          "name": "Ungebrochener Kreis",
+          "level": 18,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1
+            },
+            {
+              "resourceId": "bonus-action",
+              "amount": 1
+            },
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "2d10+1d6",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "2d10+1d6"
+        },
+        {
+          "id": "combat-style-drachentanz-speerdrache-ferne-linie",
+          "name": "Ferne Linie",
+          "level": 19,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1
+            },
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            },
+            {
+              "resourceId": "special-action",
+              "amount": 1
+            },
+            {
+              "resourceId": "aura-focus",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "5d10+1d6",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "5d10+1d6"
+        },
+        {
+          "id": "combat-style-drachentanz-speerdrache-ewiger-reigen",
+          "name": "Ewiger Reigen des Speerdrachen",
+          "level": 20,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1
+            },
+            {
+              "resourceId": "bonus-action",
+              "amount": 1
+            },
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            },
+            {
+              "resourceId": "special-action",
+              "amount": 2
+            },
+            {
+              "resourceId": "aura-focus",
+              "amount": 2
+            }
+          ],
+          "referenceDamage": "8d10+1d6+1d4",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "8d10+1d6+1d4"
+        },
+        {
+          "id": "combat-style-drachentanz-lanzendrache-erste-bahn",
+          "name": "Erste Bahn der Lanze",
+          "level": 9,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1
+            },
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "1d10+2d6",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "2d10+1d6"
+        },
+        {
+          "id": "combat-style-drachentanz-lanzendrache-schafttor",
+          "name": "Schafttor",
+          "level": 13,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1
+            },
+            {
+              "resourceId": "bonus-action",
+              "amount": 1
+            },
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "1d10+1d6+1d8",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "2d10+1d6",
+          "savingThrow": {
+            "attribute": "strength",
+            "base": 10,
+            "weaponAttribute": true,
+            "fixed": null
+          }
+        },
+        {
+          "id": "combat-style-drachentanz-lanzendrache-aura-an-der-spitze",
+          "name": "Aura an der Spitze",
+          "level": 17,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1
+            },
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            },
+            {
+              "resourceId": "special-action",
+              "amount": 1
+            },
+            {
+              "resourceId": "aura-focus",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "5d10+1d6",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "5d10+1d6"
+        },
+        {
+          "id": "combat-style-drachentanz-lanzendrache-durchgehender-anritt",
+          "name": "Durchgehender Anritt",
+          "level": 18,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1
+            },
+            {
+              "resourceId": "bonus-action",
+              "amount": 1
+            },
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "2d10+1d6+1d4",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "2d10+1d6+1d4"
+        },
+        {
+          "id": "combat-style-drachentanz-lanzendrache-horizontstich",
+          "name": "Horizontstich des peitschenden Drachen",
+          "level": 20,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1
+            },
+            {
+              "resourceId": "bonus-action",
+              "amount": 1
+            },
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            },
+            {
+              "resourceId": "special-action",
+              "amount": 2
+            },
+            {
+              "resourceId": "aura-focus",
+              "amount": 2
+            }
+          ],
+          "referenceDamage": "8d10+1d6+1d4",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "8d10+1d6+1d4"
+        },
+        {
+          "id": "combat-style-drachentanz-peitschender-platzender-schaft",
+          "name": "Platzender Schaftwechsel",
+          "level": 9,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1
+            },
+            {
+              "resourceId": "bonus-action",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "1d10+1d4+1d6",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "2d10+1d4"
+        },
+        {
+          "id": "combat-style-drachentanz-peitschender-donnernder-vorgriff",
+          "name": "Donnernder Vorgriff",
+          "level": 12,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1
+            },
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "1d10+1d6",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "2d10",
+          "savingThrow": {
+            "attribute": "strength",
+            "base": 10,
+            "weaponAttribute": true,
+            "fixed": null
+          }
+        },
+        {
+          "id": "combat-style-drachentanz-peitschender-zerreissende-spitze",
+          "name": "Zerreißende Spitze",
+          "level": 15,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1
+            },
+            {
+              "resourceId": "bonus-action",
+              "amount": 1
+            },
+            {
+              "resourceId": "special-action",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "2d10+1d4+1d8",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "3d10+1d4"
+        },
+        {
+          "id": "combat-style-drachentanz-lanzendrache-ruecklaufende-spitze",
+          "name": "Rücklaufende Spitze",
+          "level": 11,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            },
+            {
+              "resourceId": "bonus-action",
+              "amount": 1
+            },
+            {
+              "resourceId": "special-action",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "2d10+1d4+1d6",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "3d10+1d4"
+        },
+        {
+          "id": "combat-style-drachentanz-lanzendrache-weite-nadel",
+          "name": "Weite Nadel",
+          "level": 15,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1
+            },
+            {
+              "resourceId": "special-action",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "2d10+1d8",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "3d10"
+        },
+        {
+          "id": "combat-style-drachentanz-lanzendrache-koenigliche-schranke",
+          "name": "Königliche Schranke",
+          "level": 19,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            },
+            {
+              "resourceId": "special-action",
+              "amount": 1
+            },
+            {
+              "resourceId": "aura-focus",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "5d10",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "5d10"
+        },
+        {
+          "id": "combat-style-drachentanz-huetender-ruhige-schwelle",
+          "name": "Ruhige Schwelle",
+          "level": 9,
+          "role": "guard-or-preparation",
+          "costs": [
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": ""
+        },
+        {
+          "id": "combat-style-drachentanz-huetender-ausdauernde-wehr",
+          "name": "Ausdauernde Wehr",
+          "level": 9,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            },
+            {
+              "resourceId": "bonus-action",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "1d10+1d4+1d6",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "2d10+1d4"
+        },
+        {
+          "id": "combat-style-drachentanz-huetender-schaftnest",
+          "name": "Schaftnest",
+          "level": 13,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            },
+            {
+              "resourceId": "bonus-action",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "1d10+1d8",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "2d10"
+        },
+        {
+          "id": "combat-style-drachentanz-huetender-langer-wachgang",
+          "name": "Langer Wachgang",
+          "level": 17,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            },
+            {
+              "resourceId": "special-action",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "3d10",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "3d10"
+        },
+        {
+          "id": "combat-style-drachentanz-huetender-letzte-schwelle",
+          "name": "Letzte Schwelle des hütenden Drachen",
+          "level": 20,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            },
+            {
+              "resourceId": "bonus-action",
+              "amount": 1
+            },
+            {
+              "resourceId": "special-action",
+              "amount": 2
+            },
+            {
+              "resourceId": "aura-focus",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "6d10",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "6d10",
+          "savingThrow": {
+            "attribute": "strength",
+            "base": 11,
+            "weaponAttribute": true,
+            "fixed": null
+          }
+        },
+        {
+          "id": "combat-style-drachentanz-rueckzuegelkonter",
+          "name": "Rückzügelkonter",
+          "level": 9,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            },
+            {
+              "resourceId": "bonus-action",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "1d10+1d4+1d6",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "2d10+1d4"
+        },
+        {
+          "id": "combat-style-drachentanz-unbewegter-reiter",
+          "name": "Unbewegter Reiter",
+          "level": 15,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            },
+            {
+              "resourceId": "special-action",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "2d10+1d8",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "3d10"
+        },
+        {
+          "id": "combat-style-drachentanz-donnernder-lanzenstoss",
+          "name": "Donnernder Lanzenstoß",
+          "level": 9,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1
+            },
+            {
+              "resourceId": "bonus-action",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "1d10+1d4+1d6",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "2d10+1d4"
+        },
+        {
+          "id": "combat-style-drachentanz-hufschlag-des-kolosses",
+          "name": "Hufschlag des Kolosses",
+          "level": 16,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1
+            },
+            {
+              "resourceId": "bonus-action",
+              "amount": 1
+            },
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "1d10+1d6+1d4",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "1d10+1d6+1d4"
+        },
+        {
+          "id": "combat-style-drachentanz-sporn-des-zorns",
+          "name": "Sporn des Windes",
+          "level": 9,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1
+            },
+            {
+              "resourceId": "bonus-action",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "1d10+1d4+1d6",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "2d10+1d4"
+        },
+        {
+          "id": "combat-style-drachentanz-krone-des-hohen-sattels",
+          "name": "Krone des hohen Sattels",
+          "level": 19,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1
+            },
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            },
+            {
+              "resourceId": "special-action",
+              "amount": 1
+            },
+            {
+              "resourceId": "aura-focus",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "5d10+1d6",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "5d10+1d6"
+        },
+        {
+          "id": "combat-style-drachentanz-sprung-ueber-die-flanke",
+          "name": "Sprung über die Flanke",
+          "level": 9,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1
+            },
+            {
+              "resourceId": "bonus-action",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "1d10+1d4+1d6",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "2d10+1d4"
+        },
+        {
+          "id": "combat-style-drachentanz-galoppierende-drachenspur",
+          "name": "Galoppierende Drachenspur",
+          "level": 15,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "bonus-action",
+              "amount": 1
+            },
+            {
+              "resourceId": "special-action",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "1d4+1d10",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "1d4+1d10"
+        },
+        {
+          "id": "combat-style-drachentanz-wechselritt",
+          "name": "Wechselritt",
+          "level": 9,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1
+            },
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "1d10+1d6",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "2d10"
+        },
+        {
+          "id": "combat-style-drachentanz-vier-zuegel-kreis",
+          "name": "Vier-Zügel-Kreis",
+          "level": 15,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1
+            },
+            {
+              "resourceId": "bonus-action",
+              "amount": 1
+            },
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "1d10+1d6",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "1d10+1d6"
+        },
+        {
+          "id": "combat-style-drachentanz-rasender-jagdritt",
+          "name": "Rasender Jagdritt",
+          "level": 16,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1
+            },
+            {
+              "resourceId": "bonus-action",
+              "amount": 1
+            },
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            },
+            {
+              "resourceId": "special-action",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "1d10+2d6+1d4",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "1d10+2d6+1d4"
+        },
+        {
+          "id": "combat-style-drachentanz-geteilte-zuegellinie",
+          "name": "Geteilte Zügellinie",
+          "level": 12,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1
+            },
+            {
+              "resourceId": "special-action",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "2d10+1d6",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "3d10"
+        },
+        {
+          "id": "combat-style-drachentanz-schweifender-flankenschnitt",
+          "name": "Flankenschnitt",
+          "level": 9,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1
+            },
+            {
+              "resourceId": "bonus-action",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "1d10+1d4+1d6",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "2d10+1d4"
+        },
+        {
+          "id": "combat-style-drachentanz-schweifender-offene-sichel",
+          "name": "Offene Sichel",
+          "level": 11,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1
+            },
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "1d10+2d6",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "2d10+1d6"
+        },
+        {
+          "id": "combat-style-drachentanz-schweifender-wechselnder-horizont",
+          "name": "Wechselnder Horizont",
+          "level": 13,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1
+            },
+            {
+              "resourceId": "bonus-action",
+              "amount": 1
+            },
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "1d10+1d6+1d4+1d8",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "2d10+1d6+1d4"
+        },
+        {
+          "id": "combat-style-drachentanz-schweifender-halber-ring",
+          "name": "Halber Ring",
+          "level": 15,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1
+            },
+            {
+              "resourceId": "special-action",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "1d10+1d6",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "1d10+1d6"
+        },
+        {
+          "id": "combat-style-drachentanz-schweifender-durchgezogener-schweif",
+          "name": "Durchgezogener Schweif",
+          "level": 17,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1
+            },
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            },
+            {
+              "resourceId": "special-action",
+              "amount": 1
+            },
+            {
+              "resourceId": "aura-focus",
+              "amount": 1
+            }
+          ],
+          "referenceDamage": "5d10+1d6",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "5d10+1d6"
+        },
+        {
+          "id": "combat-style-drachentanz-schweifender-letzter-horizont",
+          "name": "Letzter Horizont des schweifenden Drachen",
+          "level": 20,
+          "role": "weapon-attack",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1
+            },
+            {
+              "resourceId": "bonus-action",
+              "amount": 1
+            },
+            {
+              "resourceId": "reaction",
+              "amount": 1
+            },
+            {
+              "resourceId": "special-action",
+              "amount": 2
+            },
+            {
+              "resourceId": "aura-focus",
+              "amount": 2
+            }
+          ],
+          "referenceDamage": "8d10+1d6+1d4",
+          "referenceCounterDamage": "",
+          "levelTwentyDamage": "8d10+1d6+1d4"
+        }
+      ]
+    }
+  ]
+}

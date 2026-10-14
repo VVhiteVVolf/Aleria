@@ -1,3 +1,4 @@
+import { resolvePreparedCounterProfile } from './combat-counter-resolution.js';
 import { getCombatRollContext } from './combat-resolution-service.js?v=20260928-equipment-art-v4';
 import { getCombatAttackNumbers, evaluateCombatAttackRoll } from './combat-attack-evaluation.js?v=20260928-equipment-art-v4';
 import { parseDamageFormula, combineDamageFormulas, buildDamageNotation } from './rules/combat-mvp-rules.js';
@@ -100,4 +101,15 @@ export function formatCombatChance(chance) {
   if (!chance) return '';
   if (chance.label === 'Automatisch') return 'Automatisch';
   return `${(chance.probability * 100).toLocaleString('de-DE', { maximumFractionDigits: 1 })} % ${chance.label}`;
+}
+
+// Preview uses the exact trigger resolver; switching weapons/grip later changes
+// the counter's eventual values, never the already paid preparation.
+export function getPreparedCounterPreview(profile) {
+  const condition = profile.selectedAction?.effects?.map(effect => effect.condition).find(c => c?.counterAttack?.enabled);
+  if (!condition) return null;
+  const counter = resolvePreparedCounterProfile(profile, condition);
+  if (!counter) return null;
+  return { attackModifier: counter.attackModifier, damage: getCombatDamagePreview(counter),
+    secondarySave: counter.selectedAction.secondarySave, rollMode: 'advantage' };
 }

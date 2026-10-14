@@ -84,6 +84,7 @@
         "bSYZYAEOwiRgy44f6OmO",
         "bSYZYAEOwiRgy44f6OmO",
         "bSYZYAEOwiRgy44f6OmO",
+        "bSYZYAEOwiRgy44f6OmO",
         "bSYZYAEOwiRgy44f6OmO"
       ],
       "documents": [
@@ -121,6 +122,11 @@
           "documentId": "bSYZYAEOwiRgy44f6OmO",
           "createdAt": "",
           "updatedAt": "2026-10-14T19:00:46.364Z"
+        },
+        {
+          "documentId": "bSYZYAEOwiRgy44f6OmO",
+          "createdAt": "",
+          "updatedAt": "2026-10-14T22:04:14.066Z"
         }
       ]
     },
@@ -142,8 +148,8 @@
   },
   "sync": {
     "strategy": "online-wins-runtime-local-wins-identity",
-    "sourceArchive": "Charakter Archiv Exporte/ylva-waffentechniken-2026-10-14.json",
-    "sourceExportedAt": "2026-10-14T19:00:46.364Z",
+    "sourceArchive": "Charakter Archiv Exporte/martial-control-bSYZYAEOwiRgy44f6OmO-2026-10-15.json",
+    "sourceExportedAt": "2026-10-14T22:04:14.066Z",
     "sourceUpdatedAt": "2026-10-14T19:00:46.364Z",
     "sourceDocumentIds": [
       "bSYZYAEOwiRgy44f6OmO",
@@ -152,9 +158,10 @@
       "bSYZYAEOwiRgy44f6OmO",
       "bSYZYAEOwiRgy44f6OmO",
       "bSYZYAEOwiRgy44f6OmO",
+      "bSYZYAEOwiRgy44f6OmO",
       "bSYZYAEOwiRgy44f6OmO"
     ],
-    "contentHash": "4f42ac407fd5b6a532c68c215995e9cb90fc5992f33772f64756dd17dfa5cffc"
+    "contentHash": "a3a14d6d81d91615b946c72e7eaf450ccac12ce380b6ec2880b2a36fd30f8be7"
   },
   "local": {
     "notes": "",
@@ -24384,6 +24391,1058 @@
             "background": "Huskarl"
           }
         }
+      },
+      {
+        "id": "bSYZYAEOwiRgy44f6OmO",
+        "name": "Ylva Wolfshorn",
+        "updatedAt": "2026-10-14T22:04:14.066Z",
+        "combatProfile": {
+          "techniques": [
+            {
+              "weaponTypes": [
+                "sword",
+                "axe",
+                "dagger"
+              ],
+              "maximumTargets": 1,
+              "trainingForm": "Stand des Schildes",
+              "requirements": "Schwert, Axt oder Sax",
+              "cultureTraining": {
+                "schemaVersion": 1,
+                "cultureIds": [
+                  "aldrimar"
+                ],
+                "allowedClassIds": [
+                  "skytte"
+                ],
+                "branchId": "skytte-sidearm",
+                "slotBands": [
+                  "foundation"
+                ],
+                "requiresShield": false,
+                "requiresTwoHands": false,
+                "requiresDualWield": false,
+                "requiresMounted": false
+              },
+              "combatStyleFormId": "huskarl-schildgrund",
+              "mechanicNotes": [
+                "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+              ],
+              "minimumLevel": 4,
+              "auraBypass": {
+                "allowed": true,
+                "resourceId": "aura-focus",
+                "cost": 1
+              },
+              "rollMode": "normal",
+              "id": "combat-style-huskarl-skytte-grund-4",
+              "damageType": "",
+              "range": "Waffenreichweite",
+              "damageFormula": "",
+              "combatStyleId": "huskarl-waffenlehre",
+              "effects": [
+                {
+                  "id": "combat-style-huskarl-skytte-grund-4-weapon-damage",
+                  "type": "damage",
+                  "target": "target",
+                  "formula": "",
+                  "damageType": "",
+                  "inheritWeaponDamageType": true,
+                  "magical": false,
+                  "on": "hit",
+                  "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik."
+                }
+              ],
+              "damageBonus": 0,
+              "cenyrTraining": {
+                "branchId": "",
+                "assignedSlotId": "",
+                "selectedAtLevel": null,
+                "sourceStatus": "",
+                "classWeaponProfiles": {},
+                "designNotes": "",
+                "slotBands": [],
+                "allowedClassIds": [],
+                "requiresMounted": false,
+                "uchelwyrCompatible": false,
+                "weaponRuleSetId": ""
+              },
+              "targetDefenseModifier": 0,
+              "live": true,
+              "compatibleWeaponIds": [],
+              "name": "Sax im Unterholz",
+              "effect": "(Nahkampftreffer mit Bindung: KRF-Rettungswurf gegen −1 Angriff für einen eigenen Beitrag.)",
+              "followUpAttack": {
+                "enabled": false
+              },
+              "description": "Ylva schließt die Entfernung und drängt mit der kurzen Schneide gegen den Waffenarm. (Nahkampftreffer mit Bindung: KRF-Rettungswurf gegen −1 Angriff für einen eigenen Beitrag.)",
+              "weaponLabel": "Schwert, Axt oder Sax",
+              "damageModel": {
+                "mode": "weapon-dice",
+                "weaponDiceMultiplier": 1,
+                "bonusFormula": "",
+                "weaponBonuses": [],
+                "bonusWeaponDice": 0,
+                "bonusWeaponDieCap": 12,
+                "scalingSteps": [
+                  {
+                    "level": 7,
+                    "formula": "1d4"
+                  },
+                  {
+                    "level": 9,
+                    "formula": "1d6"
+                  },
+                  {
+                    "level": 13,
+                    "formula": "1d8"
+                  },
+                  {
+                    "level": 17,
+                    "formula": "1d10"
+                  }
+                ]
+              },
+              "duration": "",
+              "category": "technique",
+              "mechanics": {},
+              "activationType": "action",
+              "costs": [
+                {
+                  "id": "combat-style-huskarl-skytte-grund-4-action-1",
+                  "resourceId": "action",
+                  "name": "Aktion",
+                  "amount": 1,
+                  "scope": "comment"
+                },
+                {
+                  "id": "combat-style-huskarl-skytte-grund-4-reaction-2",
+                  "resourceId": "reaction",
+                  "name": "Reaktion",
+                  "amount": 1,
+                  "scope": "comment"
+                }
+              ],
+              "target": "Ein Gegner",
+              "attackBonus": 0,
+              "triggerRules": [],
+              "status": "confirmed",
+              "criticalThreshold": 20,
+              "tags": "Huskarl-Waffenlehre · skytte · Stand des Schildes",
+              "aiInstructions": "",
+              "active": true,
+              "secondarySave": {
+                "enabled": true,
+                "attributeKey": "strength",
+                "dcBase": 10,
+                "dcAttributeKey": "strength",
+                "addProficiency": true,
+                "failureCondition": {
+                  "id": "combat-style-huskarl-skytte-grund-4-failed-save",
+                  "name": "Gebundene Waffenführung",
+                  "duration": "1 eigener Beitrag",
+                  "description": "−1 Angriff für einen eigenen Beitrag nach misslungenem KRF-Rettungswurf; nicht additiv.",
+                  "tags": "Huskarl-Waffenlehre",
+                  "mechanics": {
+                    "attack": -1
+                  }
+                },
+                "useWeaponAttribute": true
+              }
+            },
+            {
+              "damageFormula": "",
+              "combatStyleId": "huskarl-waffenlehre",
+              "target": "Ein Gegner",
+              "damageBonus": 0,
+              "maximumTargets": 1,
+              "category": "technique",
+              "id": "combat-style-huskarl-skytte-wahl-7",
+              "mechanics": {},
+              "tags": "Huskarl-Waffenlehre · skytte · Stand des Schildes",
+              "combatStyleFormId": "huskarl-schildgrund",
+              "mechanicNotes": [
+                "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+              ],
+              "description": "Dornwacht trifft tief an die gegnerische Deckung und bringt Waffenhand und Stand aus dem Takt. (Der nächste eigene Waffen-/Technikangriff erhält −1 Angriff; auch ein Fehlschlag verbraucht den Malus. Verfällt spätestens am Ende des nächsten eigenen Beitrags.)",
+              "damageModel": {
+                "mode": "weapon-dice",
+                "weaponDiceMultiplier": 1,
+                "bonusFormula": "",
+                "weaponBonuses": [
+                  {
+                    "diceCount": 1,
+                    "dieCap": 6
+                  }
+                ],
+                "bonusWeaponDice": 0,
+                "bonusWeaponDieCap": 12,
+                "scalingSteps": [
+                  {
+                    "level": 7,
+                    "formula": "1d4"
+                  },
+                  {
+                    "level": 9,
+                    "formula": "1d6"
+                  },
+                  {
+                    "level": 13,
+                    "formula": "1d8"
+                  },
+                  {
+                    "level": 17,
+                    "formula": "1d10"
+                  }
+                ]
+              },
+              "weaponLabel": "Speer",
+              "active": true,
+              "targetDefenseModifier": 0,
+              "compatibleWeaponIds": [],
+              "weaponTypes": [
+                "spear"
+              ],
+              "range": "Waffenreichweite",
+              "cultureTraining": {
+                "schemaVersion": 1,
+                "cultureIds": [
+                  "aldrimar"
+                ],
+                "allowedClassIds": [
+                  "skytte"
+                ],
+                "branchId": "skytte-spear",
+                "slotBands": [
+                  "foundation"
+                ],
+                "requiresShield": false,
+                "requiresTwoHands": false,
+                "requiresDualWield": false,
+                "requiresMounted": false
+              },
+              "effects": [
+                {
+                  "id": "combat-style-huskarl-skytte-wahl-7-weapon-damage",
+                  "type": "damage",
+                  "target": "target",
+                  "formula": "",
+                  "damageType": "",
+                  "inheritWeaponDamageType": true,
+                  "magical": false,
+                  "on": "hit",
+                  "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik."
+                }
+              ],
+              "minimumLevel": 4,
+              "status": "confirmed",
+              "requirements": "Speer",
+              "trainingForm": "Stand des Schildes",
+              "followUpAttack": {
+                "enabled": false
+              },
+              "activationType": "action",
+              "live": true,
+              "attackBonus": 0,
+              "name": "Speer gegen den Schritt",
+              "triggerRules": [],
+              "secondarySave": {
+                "enabled": true,
+                "attributeKey": "strength",
+                "dcBase": 10,
+                "dcAttributeKey": "strength",
+                "addProficiency": true,
+                "failureCondition": {
+                  "id": "martial-position-penalty",
+                  "name": "Gehemmter Schritt",
+                  "duration": "Bis zum Ende des nächsten eigenen Beitrags",
+                  "description": "Der nächste eigene Waffen-/Technikangriff erhält −1 Angriff; auch ein Fehlschlag verbraucht den Malus. Verfällt spätestens am Ende des nächsten eigenen Beitrags.",
+                  "tags": "Huskarl-Waffenlehre",
+                  "mechanics": {
+                    "movement": 0
+                  },
+                  "stanceGroup": "martial-position-penalty",
+                  "active": true,
+                  "durationModel": {
+                    "kind": "actor-comments",
+                    "remainingActorComments": 1
+                  },
+                  "triggerRules": [
+                    {
+                      "id": "martial-position-penalty-once",
+                      "name": "Stellungseffekt",
+                      "phase": "pre-roll",
+                      "recipient": "actor",
+                      "sourceRelation": "self",
+                      "activation": "passive",
+                      "frequency": "comment",
+                      "actionKinds": [
+                        "weapon",
+                        "technique"
+                      ],
+                      "weaponAttackOnly": true,
+                      "condition": "always",
+                      "effects": {
+                        "attackModifier": -1
+                      },
+                      "resultEffects": [
+                        {
+                          "id": "martial-position-penalty-consume",
+                          "type": "remove-condition",
+                          "target": "self",
+                          "conditionId": "martial-position-penalty",
+                          "on": "always"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "useWeaponAttribute": true
+              },
+              "costs": [
+                {
+                  "id": "combat-style-huskarl-skytte-wahl-7-action-1",
+                  "resourceId": "action",
+                  "name": "Aktion",
+                  "amount": 1,
+                  "scope": "comment"
+                },
+                {
+                  "id": "combat-style-huskarl-skytte-wahl-7-reaction-2",
+                  "resourceId": "reaction",
+                  "name": "Reaktion",
+                  "amount": 1,
+                  "scope": "comment"
+                }
+              ],
+              "criticalThreshold": 20,
+              "effect": "(Der nächste eigene Waffen-/Technikangriff erhält −1 Angriff; auch ein Fehlschlag verbraucht den Malus. Verfällt spätestens am Ende des nächsten eigenen Beitrags.)",
+              "damageType": "",
+              "auraBypass": {
+                "allowed": true,
+                "resourceId": "aura-focus",
+                "cost": 1
+              }
+            },
+            {
+              "activationType": "action",
+              "range": "Waffenreichweite",
+              "damageFormula": "",
+              "combatStyleId": "huskarl-waffenlehre",
+              "live": true,
+              "mechanicNotes": [
+                "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+              ],
+              "id": "combat-style-huskarl-skytte-wahl-9",
+              "weaponTypes": [
+                "sword",
+                "axe",
+                "dagger"
+              ],
+              "name": "Axt am Waffenarm",
+              "effect": "(Nach Treffer KRF-Rettungswurf: bei Fehlschlag −1 Angriff für einen eigenen Beitrag.)",
+              "damageModel": {
+                "mode": "weapon-dice",
+                "weaponDiceMultiplier": 1,
+                "bonusFormula": "",
+                "weaponBonuses": [],
+                "bonusWeaponDice": 0,
+                "bonusWeaponDieCap": 12,
+                "scalingSteps": [
+                  {
+                    "level": 7,
+                    "formula": "1d4"
+                  },
+                  {
+                    "level": 9,
+                    "formula": "1d6"
+                  },
+                  {
+                    "level": 13,
+                    "formula": "1d8"
+                  },
+                  {
+                    "level": 17,
+                    "formula": "1d10"
+                  }
+                ]
+              },
+              "weaponLabel": "Schwert, Axt oder Sax",
+              "description": "Ylva führt die kurze Schneide gegen den Waffenarm und stört dessen nächsten Ausholschwung. (Nach Treffer KRF-Rettungswurf: bei Fehlschlag −1 Angriff für einen eigenen Beitrag.)",
+              "triggerRules": [],
+              "damageBonus": 0,
+              "combatStyleFormId": "huskarl-schildgrund",
+              "damageType": "",
+              "auraBypass": {
+                "allowed": true,
+                "resourceId": "aura-focus",
+                "cost": 1
+              },
+              "compatibleWeaponIds": [],
+              "costs": [
+                {
+                  "id": "combat-style-huskarl-skytte-wahl-9-action-1",
+                  "resourceId": "action",
+                  "name": "Aktion",
+                  "amount": 1,
+                  "scope": "comment"
+                },
+                {
+                  "id": "combat-style-huskarl-skytte-wahl-9-reaction-2",
+                  "resourceId": "reaction",
+                  "name": "Reaktion",
+                  "amount": 1,
+                  "scope": "comment"
+                }
+              ],
+              "minimumLevel": 5,
+              "maximumTargets": 1,
+              "category": "technique",
+              "tags": "Huskarl-Waffenlehre · skytte · Stand des Schildes",
+              "requirements": "Schwert, Axt oder Sax",
+              "trainingForm": "Stand des Schildes",
+              "cultureTraining": {
+                "schemaVersion": 1,
+                "cultureIds": [
+                  "aldrimar"
+                ],
+                "allowedClassIds": [
+                  "skytte"
+                ],
+                "branchId": "skytte-sidearm",
+                "slotBands": [
+                  "foundation"
+                ],
+                "requiresShield": false,
+                "requiresTwoHands": false,
+                "requiresDualWield": false,
+                "requiresMounted": false
+              },
+              "target": "Ein Gegner",
+              "criticalThreshold": 20,
+              "targetDefenseModifier": 0,
+              "effects": [
+                {
+                  "id": "combat-style-huskarl-skytte-wahl-9-weapon-damage",
+                  "type": "damage",
+                  "target": "target",
+                  "formula": "",
+                  "damageType": "",
+                  "inheritWeaponDamageType": true,
+                  "magical": false,
+                  "on": "hit",
+                  "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik."
+                }
+              ],
+              "status": "confirmed",
+              "secondarySave": {
+                "enabled": true,
+                "attributeKey": "strength",
+                "dcBase": 10,
+                "dcAttributeKey": "strength",
+                "addProficiency": true,
+                "failureCondition": {
+                  "id": "combat-style-huskarl-skytte-wahl-9-failed-save",
+                  "name": "Gebundene Waffenführung",
+                  "duration": "1 eigener Beitrag",
+                  "description": "−1 Angriff für einen eigenen Beitrag nach misslungenem KRF-Rettungswurf; nicht additiv.",
+                  "tags": "Huskarl-Waffenlehre",
+                  "mechanics": {
+                    "attack": -1
+                  }
+                },
+                "useWeaponAttribute": true
+              },
+              "attackBonus": 0,
+              "active": true,
+              "followUpAttack": {
+                "enabled": false
+              },
+              "mechanics": {}
+            },
+            {
+              "active": true,
+              "minimumLevel": 7,
+              "status": "confirmed",
+              "trainingForm": "Persönliche Techniken · Ylva Wolfshorn",
+              "category": "technique",
+              "weaponTypes": [
+                "spear"
+              ],
+              "maximumTargets": 1,
+              "damageFormula": "",
+              "damageModel": {
+                "mode": "weapon-dice",
+                "weaponDiceMultiplier": 1,
+                "bonusFormula": "",
+                "weaponBonuses": [],
+                "bonusWeaponDice": 0,
+                "bonusWeaponDieCap": 12,
+                "scalingSteps": [
+                  {
+                    "level": 7,
+                    "formula": "1d4"
+                  },
+                  {
+                    "level": 9,
+                    "formula": "1d6"
+                  },
+                  {
+                    "level": 13,
+                    "formula": "1d8"
+                  },
+                  {
+                    "level": 17,
+                    "formula": "1d10"
+                  }
+                ]
+              },
+              "auraBypass": {
+                "allowed": false
+              },
+              "tags": "Persönlich · Ylva Wolfshorn · Schaden und Kontrolle",
+              "id": "ylva-schafthebel",
+              "name": "Schafthebel",
+              "activationType": "action",
+              "costs": [
+                {
+                  "resourceId": "action",
+                  "name": "Aktion",
+                  "amount": 1,
+                  "scope": "comment"
+                },
+                {
+                  "resourceId": "reaction",
+                  "name": "Reaktion",
+                  "amount": 1,
+                  "scope": "comment"
+                }
+              ],
+              "description": "Ylva stößt durch die Deckung, hakt den Speerschaft hinter die geführte Waffe und hebelt sie mit einer kurzen Drehung aus dem Griff. (Waffenschaden und Entwaffnung nach Treffer und misslungener KRF-Rettung; Aufheben und Waffenwechsel kosten reguläre Ressourcen.)",
+              "effect": "(Waffenschaden und Entwaffnung nach Treffer und misslungener KRF-Rettung; Aufheben und Waffenwechsel kosten reguläre Ressourcen.)",
+              "target": "Ein Gegner",
+              "range": "Waffenreichweite",
+              "requirements": "Ylvas persönliche Ausbildung; geführter Speer.",
+              "effects": [
+                {
+                  "type": "damage",
+                  "target": "target",
+                  "on": "hit"
+                }
+              ],
+              "secondarySave": {
+                "enabled": true,
+                "attributeKey": "strength",
+                "dcBase": 10,
+                "useWeaponAttribute": true,
+                "addProficiency": true,
+                "failureCondition": {
+                  "id": "ylva-schafthebel-entwaffnet",
+                  "name": "Entwaffnet",
+                  "description": "Die geführte Waffe liegt aufnehmbar in der Szene.",
+                  "duration": "1 eigener Beitrag",
+                  "disarm": true,
+                  "mechanics": {}
+                }
+              }
+            },
+            {
+              "active": true,
+              "minimumLevel": 7,
+              "status": "confirmed",
+              "trainingForm": "Persönliche Techniken · Ylva Wolfshorn",
+              "category": "technique",
+              "weaponTypes": [
+                "spear"
+              ],
+              "maximumTargets": 1,
+              "damageFormula": "",
+              "damageModel": {
+                "mode": "none"
+              },
+              "auraBypass": {
+                "allowed": false
+              },
+              "tags": "Persönlich · Ylva Wolfshorn · Kontrolle · Kein Schaden",
+              "id": "ylva-aus-der-angriffslinie",
+              "name": "Aus der Angriffslinie",
+              "activationType": "reaction",
+              "costs": [
+                {
+                  "resourceId": "reaction",
+                  "name": "Reaktion",
+                  "amount": 1,
+                  "scope": "comment"
+                }
+              ],
+              "description": "Ylva liest Schulter und Waffenhand des Gegners und nimmt ihren Körper aus der angekündigten Stoßbahn. (Einmal Nachteil auf den nächsten eingehenden Waffenangriff.)",
+              "effect": "(Einmal Nachteil auf den nächsten eingehenden Waffenangriff.)",
+              "target": "Selbst",
+              "range": "Selbst",
+              "duration": "Bis zum Ende des nächsten eigenen Beitrags",
+              "requirements": "Ylvas persönliche Ausbildung; geführter Speer. Vor dem gegnerischen Angriff vorbereiten.",
+              "effects": [
+                {
+                  "type": "buff",
+                  "target": "self",
+                  "on": "always",
+                  "condition": {
+                    "id": "ylva-aus-der-angriffslinie",
+                    "name": "Aus der Angriffslinie",
+                    "description": "Der nächste eingehende Waffen-/Technikangriff hat Nachteil; einmalig, auch bei Fehlschlag verbraucht.",
+                    "duration": "Bis zum Ende des nächsten eigenen Beitrags",
+                    "durationModel": {
+                      "kind": "actor-comments",
+                      "remainingActorComments": 1
+                    },
+                    "stanceGroup": "ylva-speerabwehr",
+                    "mechanics": {},
+                    "triggerRules": [
+                      {
+                        "id": "ylva-aus-der-angriffslinie-once",
+                        "name": "Aus der Angriffslinie",
+                        "phase": "pre-roll",
+                        "recipient": "target",
+                        "sourceRelation": "self",
+                        "activation": "passive",
+                        "frequency": "comment",
+                        "condition": "always",
+                        "actionKinds": [
+                          "weapon",
+                          "technique"
+                        ],
+                        "weaponAttackOnly": true,
+                        "effects": {
+                          "rollMode": "disadvantage"
+                        },
+                        "resultEffects": [
+                          {
+                            "id": "ylva-aus-der-angriffslinie-consume",
+                            "type": "remove-condition",
+                            "target": "target",
+                            "conditionId": "ylva-aus-der-angriffslinie",
+                            "on": "always"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "id": "ylva-schaftfang-und-stoss",
+              "name": "Schaftfang und Stoß",
+              "active": true,
+              "minimumLevel": 7,
+              "status": "confirmed",
+              "category": "technique",
+              "trainingForm": "Persönliche Techniken · Ylva Wolfshorn",
+              "weaponTypes": [
+                "spear"
+              ],
+              "maximumTargets": 1,
+              "target": "Ein Gegner",
+              "range": "Waffenreichweite",
+              "activationType": "bonus-action",
+              "costs": [
+                {
+                  "resourceId": "bonus-action",
+                  "name": "Bonusaktion",
+                  "amount": 1,
+                  "scope": "comment"
+                },
+                {
+                  "resourceId": "reaction",
+                  "name": "Reaktion",
+                  "amount": 1,
+                  "scope": "comment"
+                }
+              ],
+              "description": "Ylva fängt die gegnerische Waffenführung am Schaft ab und stößt durch die entstandene Lücke. (1× Waffenwürfel + Ausbildungswürfel + Schadensbonus. Nach Treffer KRF SG 10 + Waffenattribut + Kompetenz (derzeit 16): bei Scheitern einmal −2 auf den nächsten Waffen-/Technikangriff, spätestens bis Ende des nächsten eigenen Beitrags.)",
+              "effect": "(1× Waffenwürfel + Ausbildungswürfel + Schadensbonus. Nach Treffer KRF SG 10 + Waffenattribut + Kompetenz (derzeit 16): bei Scheitern einmal −2 auf den nächsten Waffen-/Technikangriff, spätestens bis Ende des nächsten eigenen Beitrags.)",
+              "requirements": "Ylvas persönliche Ausbildung; geführter Speer.",
+              "tags": "Persönlich · Ylva Wolfshorn",
+              "auraBypass": {
+                "allowed": false
+              },
+              "effects": [
+                {
+                  "type": "damage",
+                  "target": "target",
+                  "on": "hit"
+                }
+              ],
+              "damageFormula": "",
+              "damageModel": {
+                "mode": "weapon-dice",
+                "weaponDiceMultiplier": 1,
+                "bonusFormula": "",
+                "weaponBonuses": [],
+                "bonusWeaponDice": 0,
+                "bonusWeaponDieCap": 12,
+                "scalingSteps": [
+                  {
+                    "level": 7,
+                    "formula": "1d4"
+                  },
+                  {
+                    "level": 9,
+                    "formula": "1d6"
+                  },
+                  {
+                    "level": 13,
+                    "formula": "1d8"
+                  },
+                  {
+                    "level": 17,
+                    "formula": "1d10"
+                  }
+                ]
+              },
+              "secondarySave": {
+                "enabled": true,
+                "attributeKey": "strength",
+                "dcBase": 10,
+                "useWeaponAttribute": true,
+                "addProficiency": true,
+                "failureCondition": {
+                  "id": "martial-position-penalty",
+                  "name": "Unsicherer Stand",
+                  "description": "Der nächste eigene Waffen-/Technikangriff erhält −2 Angriff; auch bei Fehlschlag verbraucht. Verfällt am Ende des nächsten eigenen Beitrags.",
+                  "stanceGroup": "martial-position-penalty",
+                  "active": true,
+                  "duration": "Bis zum Ende des nächsten eigenen Beitrags",
+                  "durationModel": {
+                    "kind": "actor-comments",
+                    "remainingActorComments": 1
+                  },
+                  "mechanics": {
+                    "movement": 0
+                  },
+                  "triggerRules": [
+                    {
+                      "id": "martial-position-penalty-once",
+                      "name": "Stellungseffekt",
+                      "phase": "pre-roll",
+                      "recipient": "actor",
+                      "sourceRelation": "self",
+                      "activation": "passive",
+                      "frequency": "comment",
+                      "actionKinds": [
+                        "weapon",
+                        "technique"
+                      ],
+                      "weaponAttackOnly": true,
+                      "condition": "always",
+                      "effects": {
+                        "attackModifier": -2
+                      },
+                      "resultEffects": [
+                        {
+                          "id": "martial-position-penalty-consume",
+                          "type": "remove-condition",
+                          "target": "self",
+                          "conditionId": "martial-position-penalty",
+                          "on": "always"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "id": "ylva-brechender-dorn",
+              "name": "Brechender Dorn",
+              "active": true,
+              "minimumLevel": 7,
+              "status": "confirmed",
+              "category": "technique",
+              "trainingForm": "Persönliche Techniken · Ylva Wolfshorn",
+              "weaponTypes": [
+                "spear"
+              ],
+              "maximumTargets": 1,
+              "target": "Ein Gegner",
+              "range": "Waffenreichweite",
+              "activationType": "bonus-action",
+              "costs": [
+                {
+                  "resourceId": "bonus-action",
+                  "name": "Bonusaktion",
+                  "amount": 1,
+                  "scope": "comment"
+                },
+                {
+                  "resourceId": "reaction",
+                  "name": "Reaktion",
+                  "amount": 1,
+                  "scope": "comment"
+                },
+                {
+                  "resourceId": "special-action",
+                  "name": "Besondere Aktion",
+                  "amount": 1,
+                  "scope": "persistent"
+                }
+              ],
+              "description": "Mit einem tiefen Stoß treibt Ylva die Deckung auf, hakt den Schaft hinter die geführte Waffe und reißt sie mit einer Drehung aus dem Griff. (2× Waffenwürfel + Ausbildungswürfel + Schadensbonus. Nach Treffer KRF SG 11 + Waffenattribut + Kompetenz (derzeit 17): bei Scheitern Entwaffnung. Körperwaffen bleiben erhalten und erhalten stattdessen −1 Angriff bis Ende des nächsten eigenen Beitrags.)",
+              "effect": "(2× Waffenwürfel + Ausbildungswürfel + Schadensbonus. Nach Treffer KRF SG 11 + Waffenattribut + Kompetenz (derzeit 17): bei Scheitern Entwaffnung. Körperwaffen bleiben erhalten und erhalten stattdessen −1 Angriff bis Ende des nächsten eigenen Beitrags.)",
+              "requirements": "Ylvas persönliche Ausbildung; geführter Speer.",
+              "tags": "Persönlich · Ylva Wolfshorn",
+              "auraBypass": {
+                "allowed": false
+              },
+              "effects": [
+                {
+                  "type": "damage",
+                  "target": "target",
+                  "on": "hit"
+                }
+              ],
+              "damageFormula": "",
+              "damageModel": {
+                "mode": "weapon-dice",
+                "weaponDiceMultiplier": 1,
+                "bonusFormula": "",
+                "weaponBonuses": [
+                  {
+                    "diceCount": 1,
+                    "dieCap": 12
+                  }
+                ],
+                "bonusWeaponDice": 0,
+                "bonusWeaponDieCap": 12,
+                "scalingSteps": [
+                  {
+                    "level": 7,
+                    "formula": "1d4"
+                  },
+                  {
+                    "level": 9,
+                    "formula": "1d6"
+                  },
+                  {
+                    "level": 13,
+                    "formula": "1d8"
+                  },
+                  {
+                    "level": 17,
+                    "formula": "1d10"
+                  }
+                ]
+              },
+              "secondarySave": {
+                "enabled": true,
+                "attributeKey": "strength",
+                "dcBase": 11,
+                "useWeaponAttribute": true,
+                "addProficiency": true,
+                "failureCondition": {
+                  "id": "ylva-brechender-dorn-entwaffnet",
+                  "name": "Entwaffnet",
+                  "disarm": true,
+                  "description": "Die geführte Waffe fällt aufnehmbar in die Szene.",
+                  "duration": "1 eigener Beitrag",
+                  "mechanics": {}
+                }
+              }
+            },
+            {
+              "id": "ylva-niederhaltender-stoss",
+              "name": "Niederhaltender Stoß",
+              "active": true,
+              "minimumLevel": 7,
+              "status": "confirmed",
+              "category": "technique",
+              "trainingForm": "Persönliche Techniken · Ylva Wolfshorn",
+              "weaponTypes": [
+                "spear"
+              ],
+              "maximumTargets": 1,
+              "target": "Ein Gegner",
+              "range": "Waffenreichweite",
+              "activationType": "action",
+              "costs": [
+                {
+                  "resourceId": "action",
+                  "name": "Aktion",
+                  "amount": 1,
+                  "scope": "comment"
+                },
+                {
+                  "resourceId": "bonus-action",
+                  "name": "Bonusaktion",
+                  "amount": 1,
+                  "scope": "comment"
+                }
+              ],
+              "description": "Ylva setzt die Spitze an und hält den Waffenarm unter Druck, ehe der Gegner zu einer schnellen Antwort ansetzen kann. (1× Waffenwürfel + Ausbildungswürfel + Schadensbonus. Nach Treffer KRF SG 10 + Waffenattribut + Kompetenz (derzeit 16): bei Scheitern keine Reaktion bis Ende des nächsten eigenen Beitrags.)",
+              "effect": "(1× Waffenwürfel + Ausbildungswürfel + Schadensbonus. Nach Treffer KRF SG 10 + Waffenattribut + Kompetenz (derzeit 16): bei Scheitern keine Reaktion bis Ende des nächsten eigenen Beitrags.)",
+              "requirements": "Ylvas persönliche Ausbildung; geführter Speer.",
+              "tags": "Persönlich · Ylva Wolfshorn",
+              "auraBypass": {
+                "allowed": false
+              },
+              "effects": [
+                {
+                  "type": "damage",
+                  "target": "target",
+                  "on": "hit"
+                }
+              ],
+              "damageFormula": "",
+              "damageModel": {
+                "mode": "weapon-dice",
+                "weaponDiceMultiplier": 1,
+                "bonusFormula": "",
+                "weaponBonuses": [],
+                "bonusWeaponDice": 0,
+                "bonusWeaponDieCap": 12,
+                "scalingSteps": [
+                  {
+                    "level": 7,
+                    "formula": "1d4"
+                  },
+                  {
+                    "level": 9,
+                    "formula": "1d6"
+                  },
+                  {
+                    "level": 13,
+                    "formula": "1d8"
+                  },
+                  {
+                    "level": 17,
+                    "formula": "1d10"
+                  }
+                ]
+              },
+              "secondarySave": {
+                "enabled": true,
+                "attributeKey": "strength",
+                "dcBase": 10,
+                "useWeaponAttribute": true,
+                "addProficiency": true,
+                "failureCondition": {
+                  "id": "ylva-reaktion-gebunden",
+                  "name": "Waffenarm gebunden",
+                  "blockedResource": "reaction",
+                  "description": "Keine Reaktion bis zum Ende des nächsten eigenen Beitrags.",
+                  "duration": "Bis zum Ende des nächsten eigenen Beitrags",
+                  "durationModel": {
+                    "kind": "actor-comments",
+                    "remainingActorComments": 1
+                  },
+                  "mechanics": {}
+                }
+              }
+            },
+            {
+              "id": "ylva-wolfsgriff",
+              "name": "Wolfsgriff",
+              "active": true,
+              "minimumLevel": 7,
+              "status": "confirmed",
+              "category": "technique",
+              "trainingForm": "Persönliche Techniken · Ylva Wolfshorn",
+              "weaponTypes": [
+                "dagger",
+                "axe"
+              ],
+              "maximumTargets": 1,
+              "target": "Ein Gegner",
+              "range": "Waffenreichweite",
+              "activationType": "bonus-action",
+              "costs": [
+                {
+                  "resourceId": "bonus-action",
+                  "name": "Bonusaktion",
+                  "amount": 1,
+                  "scope": "comment"
+                },
+                {
+                  "resourceId": "reaction",
+                  "name": "Reaktion",
+                  "amount": 1,
+                  "scope": "comment"
+                },
+                {
+                  "resourceId": "special-action",
+                  "name": "Besondere Aktion",
+                  "amount": 1,
+                  "scope": "persistent"
+                }
+              ],
+              "description": "Ylva bindet mit der freien Hand den Waffenarm und treibt ihre kurze Schneide in die ungeschützte Seite. (Sax oder Handaxt: 2× Waffenwürfel + Ausbildungswürfel + Schadensbonus. Nach Treffer KRF SG 11 + Waffenattribut + Kompetenz (derzeit 15): bei Scheitern keine Reaktion bis Ende des nächsten eigenen Beitrags.)",
+              "effect": "(Sax oder Handaxt: 2× Waffenwürfel + Ausbildungswürfel + Schadensbonus. Nach Treffer KRF SG 11 + Waffenattribut + Kompetenz (derzeit 15): bei Scheitern keine Reaktion bis Ende des nächsten eigenen Beitrags.)",
+              "requirements": "Ylvas persönliche Ausbildung; geführter Sax oder geführte Handaxt.",
+              "tags": "Persönlich · Ylva Wolfshorn",
+              "auraBypass": {
+                "allowed": false
+              },
+              "effects": [
+                {
+                  "type": "damage",
+                  "target": "target",
+                  "on": "hit"
+                }
+              ],
+              "damageFormula": "",
+              "damageModel": {
+                "mode": "weapon-dice",
+                "weaponDiceMultiplier": 1,
+                "bonusFormula": "",
+                "weaponBonuses": [
+                  {
+                    "diceCount": 1,
+                    "dieCap": 12
+                  }
+                ],
+                "bonusWeaponDice": 0,
+                "bonusWeaponDieCap": 12,
+                "scalingSteps": [
+                  {
+                    "level": 7,
+                    "formula": "1d4"
+                  },
+                  {
+                    "level": 9,
+                    "formula": "1d6"
+                  },
+                  {
+                    "level": 13,
+                    "formula": "1d8"
+                  },
+                  {
+                    "level": 17,
+                    "formula": "1d10"
+                  }
+                ]
+              },
+              "secondarySave": {
+                "enabled": true,
+                "attributeKey": "strength",
+                "dcBase": 11,
+                "useWeaponAttribute": true,
+                "addProficiency": true,
+                "failureCondition": {
+                  "id": "ylva-reaktion-gebunden",
+                  "name": "Waffenarm gebunden",
+                  "blockedResource": "reaction",
+                  "description": "Keine Reaktion bis zum Ende des nächsten eigenen Beitrags.",
+                  "duration": "Bis zum Ende des nächsten eigenen Beitrags",
+                  "durationModel": {
+                    "kind": "actor-comments",
+                    "remainingActorComments": 1
+                  },
+                  "mechanics": {}
+                }
+              }
+            }
+          ]
+        }
       }
     ]
   },
@@ -26104,7 +27163,7 @@
           "secondarySave": {
             "enabled": true,
             "attributeKey": "strength",
-            "dcBase": 8,
+            "dcBase": 10,
             "dcAttributeKey": "strength",
             "addProficiency": true,
             "failureCondition": {
@@ -26116,7 +27175,8 @@
               "mechanics": {
                 "attack": -1
               }
-            }
+            },
+            "useWeaponAttribute": true
           }
         },
         {
@@ -27169,7 +28229,7 @@
           "secondarySave": {
             "enabled": true,
             "attributeKey": "strength",
-            "dcBase": 8,
+            "dcBase": 10,
             "dcAttributeKey": "strength",
             "addProficiency": true,
             "failureCondition": {
@@ -27216,7 +28276,8 @@
                   ]
                 }
               ]
-            }
+            },
+            "useWeaponAttribute": true
           },
           "costs": [
             {
@@ -27467,7 +28528,7 @@
           "secondarySave": {
             "enabled": true,
             "attributeKey": "strength",
-            "dcBase": 8,
+            "dcBase": 10,
             "dcAttributeKey": "strength",
             "addProficiency": true,
             "failureCondition": {
@@ -27479,7 +28540,8 @@
               "mechanics": {
                 "attack": -1
               }
-            }
+            },
+            "useWeaponAttribute": true
           },
           "attackBonus": 0,
           "active": true,
@@ -28295,12 +29357,35 @@
           "maximumTargets": 1,
           "damageFormula": "",
           "damageModel": {
-            "mode": "none"
+            "mode": "weapon-dice",
+            "weaponDiceMultiplier": 1,
+            "bonusFormula": "",
+            "weaponBonuses": [],
+            "bonusWeaponDice": 0,
+            "bonusWeaponDieCap": 12,
+            "scalingSteps": [
+              {
+                "level": 7,
+                "formula": "1d4"
+              },
+              {
+                "level": 9,
+                "formula": "1d6"
+              },
+              {
+                "level": 13,
+                "formula": "1d8"
+              },
+              {
+                "level": 17,
+                "formula": "1d10"
+              }
+            ]
           },
           "auraBypass": {
             "allowed": false
           },
-          "tags": "Persönlich · Ylva Wolfshorn · Kontrolle · Kein Schaden",
+          "tags": "Persönlich · Ylva Wolfshorn · Schaden und Kontrolle",
           "id": "ylva-schafthebel",
           "name": "Schafthebel",
           "activationType": "action",
@@ -28318,17 +29403,22 @@
               "scope": "comment"
             }
           ],
-          "description": "Ylva schiebt den Speerschaft hinter die geführte Waffe und versucht, sie mit einer kurzen Drehung aus dem Griff zu hebeln. (Kein Schaden. Nach Treffer KRF SG 14 oder Entwaffnung; Aufheben und Waffenwechsel kosten ihre regulären Ressourcen.)",
-          "effect": "(Kein Schaden. Nach Treffer KRF SG 14 oder Entwaffnung; Aufheben und Waffenwechsel kosten ihre regulären Ressourcen.)",
+          "description": "Ylva stößt durch die Deckung, hakt den Speerschaft hinter die geführte Waffe und hebelt sie mit einer kurzen Drehung aus dem Griff. (Waffenschaden und Entwaffnung nach Treffer und misslungener KRF-Rettung; Aufheben und Waffenwechsel kosten reguläre Ressourcen.)",
+          "effect": "(Waffenschaden und Entwaffnung nach Treffer und misslungener KRF-Rettung; Aufheben und Waffenwechsel kosten reguläre Ressourcen.)",
           "target": "Ein Gegner",
           "range": "Waffenreichweite",
           "requirements": "Ylvas persönliche Ausbildung; geführter Speer.",
-          "effects": [],
+          "effects": [
+            {
+              "type": "damage",
+              "target": "target",
+              "on": "hit"
+            }
+          ],
           "secondarySave": {
             "enabled": true,
             "attributeKey": "strength",
-            "fixedDc": 14,
-            "addProficiency": false,
+            "addProficiency": true,
             "failureCondition": {
               "id": "ylva-schafthebel-entwaffnet",
               "name": "Entwaffnet",
@@ -28336,7 +29426,9 @@
               "duration": "1 eigener Beitrag",
               "disarm": true,
               "mechanics": {}
-            }
+            },
+            "dcBase": 10,
+            "useWeaponAttribute": true
           }
         },
         {
@@ -28366,12 +29458,6 @@
               "name": "Reaktion",
               "amount": 1,
               "scope": "comment"
-            },
-            {
-              "resourceId": "special-action",
-              "name": "Besondere Aktion",
-              "amount": 1,
-              "scope": "persistent"
             }
           ],
           "description": "Ylva liest Schulter und Waffenhand des Gegners und nimmt ihren Körper aus der angekündigten Stoßbahn. (Einmal Nachteil auf den nächsten eingehenden Waffenangriff.)",
@@ -28608,8 +29694,8 @@
               "scope": "comment"
             }
           ],
-          "description": "Ylva fängt die gegnerische Waffenführung am Schaft ab und stößt durch die entstandene Lücke. (1× Waffenwürfel + Ausbildungswürfel + Schadensbonus. Nach Treffer KRF SG 14: bei Scheitern einmal −2 auf den nächsten Waffen-/Technikangriff, spätestens bis Ende des nächsten eigenen Beitrags.)",
-          "effect": "(1× Waffenwürfel + Ausbildungswürfel + Schadensbonus. Nach Treffer KRF SG 14: bei Scheitern einmal −2 auf den nächsten Waffen-/Technikangriff, spätestens bis Ende des nächsten eigenen Beitrags.)",
+          "description": "Ylva fängt die gegnerische Waffenführung am Schaft ab und stößt durch die entstandene Lücke. (1× Waffenwürfel + Ausbildungswürfel + Schadensbonus. Nach Treffer KRF SG 10 + Waffenattribut + Kompetenz (derzeit 16): bei Scheitern einmal −2 auf den nächsten Waffen-/Technikangriff, spätestens bis Ende des nächsten eigenen Beitrags.)",
+          "effect": "(1× Waffenwürfel + Ausbildungswürfel + Schadensbonus. Nach Treffer KRF SG 10 + Waffenattribut + Kompetenz (derzeit 16): bei Scheitern einmal −2 auf den nächsten Waffen-/Technikangriff, spätestens bis Ende des nächsten eigenen Beitrags.)",
           "requirements": "Ylvas persönliche Ausbildung; geführter Speer.",
           "tags": "Persönlich · Ylva Wolfshorn",
           "auraBypass": {
@@ -28652,8 +29738,7 @@
           "secondarySave": {
             "enabled": true,
             "attributeKey": "strength",
-            "fixedDc": 14,
-            "addProficiency": false,
+            "addProficiency": true,
             "failureCondition": {
               "id": "martial-position-penalty",
               "name": "Unsicherer Stand",
@@ -28697,7 +29782,9 @@
                   ]
                 }
               ]
-            }
+            },
+            "dcBase": 10,
+            "useWeaponAttribute": true
           }
         },
         {
@@ -28735,8 +29822,8 @@
               "scope": "persistent"
             }
           ],
-          "description": "Mit einem tiefen Stoß treibt Ylva die Deckung auf, hakt den Schaft hinter die geführte Waffe und reißt sie mit einer Drehung aus dem Griff. (2× Waffenwürfel + Ausbildungswürfel + Schadensbonus. Nach Treffer KRF SG 14: bei Scheitern Entwaffnung. Körperwaffen bleiben erhalten und erhalten stattdessen −1 Angriff bis Ende des nächsten eigenen Beitrags.)",
-          "effect": "(2× Waffenwürfel + Ausbildungswürfel + Schadensbonus. Nach Treffer KRF SG 14: bei Scheitern Entwaffnung. Körperwaffen bleiben erhalten und erhalten stattdessen −1 Angriff bis Ende des nächsten eigenen Beitrags.)",
+          "description": "Mit einem tiefen Stoß treibt Ylva die Deckung auf, hakt den Schaft hinter die geführte Waffe und reißt sie mit einer Drehung aus dem Griff. (2× Waffenwürfel + Ausbildungswürfel + Schadensbonus. Nach Treffer KRF SG 11 + Waffenattribut + Kompetenz (derzeit 17): bei Scheitern Entwaffnung. Körperwaffen bleiben erhalten und erhalten stattdessen −1 Angriff bis Ende des nächsten eigenen Beitrags.)",
+          "effect": "(2× Waffenwürfel + Ausbildungswürfel + Schadensbonus. Nach Treffer KRF SG 11 + Waffenattribut + Kompetenz (derzeit 17): bei Scheitern Entwaffnung. Körperwaffen bleiben erhalten und erhalten stattdessen −1 Angriff bis Ende des nächsten eigenen Beitrags.)",
           "requirements": "Ylvas persönliche Ausbildung; geführter Speer.",
           "tags": "Persönlich · Ylva Wolfshorn",
           "auraBypass": {
@@ -28784,8 +29871,7 @@
           "secondarySave": {
             "enabled": true,
             "attributeKey": "strength",
-            "fixedDc": 14,
-            "addProficiency": false,
+            "addProficiency": true,
             "failureCondition": {
               "id": "ylva-brechender-dorn-entwaffnet",
               "name": "Entwaffnet",
@@ -28793,7 +29879,9 @@
               "description": "Die geführte Waffe fällt aufnehmbar in die Szene.",
               "duration": "1 eigener Beitrag",
               "mechanics": {}
-            }
+            },
+            "dcBase": 11,
+            "useWeaponAttribute": true
           }
         },
         {
@@ -28881,8 +29969,8 @@
               "scope": "comment"
             }
           ],
-          "description": "Ylva setzt die Spitze an und hält den Waffenarm unter Druck, ehe der Gegner zu einer schnellen Antwort ansetzen kann. (1× Waffenwürfel + Ausbildungswürfel + Schadensbonus. Nach Treffer KRF SG 14: bei Scheitern keine Reaktion bis Ende des nächsten eigenen Beitrags.)",
-          "effect": "(1× Waffenwürfel + Ausbildungswürfel + Schadensbonus. Nach Treffer KRF SG 14: bei Scheitern keine Reaktion bis Ende des nächsten eigenen Beitrags.)",
+          "description": "Ylva setzt die Spitze an und hält den Waffenarm unter Druck, ehe der Gegner zu einer schnellen Antwort ansetzen kann. (1× Waffenwürfel + Ausbildungswürfel + Schadensbonus. Nach Treffer KRF SG 10 + Waffenattribut + Kompetenz (derzeit 16): bei Scheitern keine Reaktion bis Ende des nächsten eigenen Beitrags.)",
+          "effect": "(1× Waffenwürfel + Ausbildungswürfel + Schadensbonus. Nach Treffer KRF SG 10 + Waffenattribut + Kompetenz (derzeit 16): bei Scheitern keine Reaktion bis Ende des nächsten eigenen Beitrags.)",
           "requirements": "Ylvas persönliche Ausbildung; geführter Speer.",
           "tags": "Persönlich · Ylva Wolfshorn",
           "auraBypass": {
@@ -28925,8 +30013,7 @@
           "secondarySave": {
             "enabled": true,
             "attributeKey": "strength",
-            "fixedDc": 14,
-            "addProficiency": false,
+            "addProficiency": true,
             "failureCondition": {
               "id": "ylva-reaktion-gebunden",
               "name": "Waffenarm gebunden",
@@ -28938,7 +30025,9 @@
                 "remainingActorComments": 1
               },
               "mechanics": {}
-            }
+            },
+            "dcBase": 10,
+            "useWeaponAttribute": true
           }
         },
         {
@@ -29094,8 +30183,8 @@
               "scope": "persistent"
             }
           ],
-          "description": "Ylva bindet mit der freien Hand den Waffenarm und treibt ihre kurze Schneide in die ungeschützte Seite. (Sax oder Handaxt: 2× Waffenwürfel + Ausbildungswürfel + Schadensbonus. Nach Treffer KRF SG 12: bei Scheitern keine Reaktion bis Ende des nächsten eigenen Beitrags.)",
-          "effect": "(Sax oder Handaxt: 2× Waffenwürfel + Ausbildungswürfel + Schadensbonus. Nach Treffer KRF SG 12: bei Scheitern keine Reaktion bis Ende des nächsten eigenen Beitrags.)",
+          "description": "Ylva bindet mit der freien Hand den Waffenarm und treibt ihre kurze Schneide in die ungeschützte Seite. (Sax oder Handaxt: 2× Waffenwürfel + Ausbildungswürfel + Schadensbonus. Nach Treffer KRF SG 11 + Waffenattribut + Kompetenz (derzeit 15): bei Scheitern keine Reaktion bis Ende des nächsten eigenen Beitrags.)",
+          "effect": "(Sax oder Handaxt: 2× Waffenwürfel + Ausbildungswürfel + Schadensbonus. Nach Treffer KRF SG 11 + Waffenattribut + Kompetenz (derzeit 15): bei Scheitern keine Reaktion bis Ende des nächsten eigenen Beitrags.)",
           "requirements": "Ylvas persönliche Ausbildung; geführter Sax oder geführte Handaxt.",
           "tags": "Persönlich · Ylva Wolfshorn",
           "auraBypass": {
@@ -29143,8 +30232,7 @@
           "secondarySave": {
             "enabled": true,
             "attributeKey": "strength",
-            "fixedDc": 12,
-            "addProficiency": false,
+            "addProficiency": true,
             "failureCondition": {
               "id": "ylva-reaktion-gebunden",
               "name": "Waffenarm gebunden",
@@ -29156,7 +30244,9 @@
                 "remainingActorComments": 1
               },
               "mechanics": {}
-            }
+            },
+            "dcBase": 11,
+            "useWeaponAttribute": true
           }
         },
         {

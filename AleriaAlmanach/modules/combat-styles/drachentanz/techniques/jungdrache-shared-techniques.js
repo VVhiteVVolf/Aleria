@@ -1,4 +1,6 @@
 ﻿import { DRACHENTANZ_FORM_IDS as F } from '../drachentanz-ids.js';
+import { createWeaponTechniqueSave } from '../../weapon-technique-control.js';
+import { createWeaponTechniqueDamageProfile } from '../../weapon-technique-budget.js';
 import { createDrachentanzTechnique, temporaryCondition } from './drachentanz-technique-factory.js';
 
 const DURATION = 'Bis zum Ende des nächsten eigenen Beitrags';
@@ -11,7 +13,7 @@ function make(spec) {
     requirements: 'Waffe: Beliebig. Geführte Waffe, ihre Reichweite und gegebenenfalls Munition beachten.',
     auraBypassAllowed: false, ...spec, slug: `jungdrache-${spec.slug}` });
   // Control trades the usual bonus technique dice for a single normal weapon hit.
-  if (!spec.noPrimaryDamage && !spec.fullTechniqueDamage) technique.damageModel = {
+  if (!spec.noPrimaryDamage && !spec.fullTechniqueDamage && !spec.damageModel) technique.damageModel = {
     mode: 'weapon-dice', weaponDiceMultiplier: 1, bonusWeaponDice: 0, bonusFormula: '', scalingSteps: []
   };
   return technique;
@@ -40,16 +42,22 @@ function hindrance(slug, name, { blockedResource = '', prone = false, disarm = f
     mechanics: {}, ...(prone ? { blockedResource: 'bonus-action' } : {}) };
 }
 
-function save(failureCondition, attributeKey = 'strength') {
-  return { enabled: true, attributeKey, fixedDc: 13, dcBase: 8, dcAttributeKey: 'strength', addProficiency: true, failureCondition };
+function save(failureCondition, attributeKey = 'strength', strong = false) {
+  return createWeaponTechniqueSave(failureCondition, { attributeKey, strong });
 }
 
-function counter(slug, name, minimumLevel, costs, consequence = null, saveAttribute = 'strength') {
-  const extra = consequence ? ` Bei Treffer: ${saveAttribute === 'constitution' ? 'KON' : saveAttribute === 'dexterity' ? 'GES' : 'STÄ'}-Rettungswurf SG 13; bei Scheitern ${consequence.description}` : '';
-  const description = `Lauert auf den nächsten verfehlten Waffen- oder Technikangriff: ein automatischer Gegenangriff mit Vorteil und normalem Schaden der aktuell geführten Waffe.${extra} Einmalig, bis zum Ende des nächsten eigenen Beitrags; keine Konterketten. Treffer des Gegners lösen den Konter nicht aus.`;
+function damage(extraCap = 0) {
+  const model = createWeaponTechniqueDamageProfile({}, [{ resourceId: 'action', amount: 1 }]).damageModel;
+  return { ...model, weaponBonuses: extraCap ? [{ diceCount: 1, dieCap: extraCap }] : [] };
+}
+
+function counter(slug, name, minimumLevel, costs, consequence = null, saveAttribute = 'strength', enhanced = false) {
+  const extra = consequence ? ` Bei Treffer: ${saveAttribute === 'constitution' ? 'KON' : saveAttribute === 'dexterity' ? 'GES' : 'KRF'}-Rettung SG 11 + Waffenattribut + Kompetenz; bei Scheitern ${consequence.description}` : '';
+  const description = `Nach dem nächsten verfehlten Waffen- oder Technikangriff folgt einmal ein automatischer Gegenangriff mit Vorteil: ${enhanced ? 'Waffenbasis + 1 zusätzlicher Waffenwürfel + Ausbildungswürfel' : 'normaler Waffenschaden'} + Schadensbonus der dann geführten Waffe.${extra} Bis zum Ende des nächsten eigenen Beitrags; keine Konterketten. Treffer des Gegners lösen den Konter nicht aus.`;
   return make({ slug, name, minimumLevel, costs, noPrimaryDamage: true, target: 'Selbst', duration: DURATION,
     description: 'Der Jungdrache lässt dem Gegner eine scheinbare Lücke und hält die Antwort bereit.', effect: description,
-    effects: [stance(slug, name, description, { counterAttack: { enabled: true, secondarySave: consequence ? save(consequence, saveAttribute) : null } })] });
+    effects: [stance(slug, name, description, { counterAttack: { enabled: true,
+      ...(enhanced ? { damageModel: damage(12) } : {}), secondarySave: consequence ? save(consequence, saveAttribute, true) : null } })] });
 }
 
 export const JUNGDRACHE_SHARED_TECHNIQUES = Object.freeze([
@@ -63,7 +71,7 @@ export const JUNGDRACHE_SHARED_TECHNIQUES = Object.freeze([
     noPrimaryDamage: true, target: 'Selbst', duration: DURATION, description: 'Die Füße greifen den Boden; der Körper nimmt den bevorstehenden Treffer abgefedert auf.',
     effect: 'Der nächste schädigende Treffer verursacht 4 Schaden weniger. Einmalig; ersetzt andere Jungdrachen-Schutzhaltungen.',
     effects: [stance('verwurzelte-schuppe', 'Verwurzelte Schuppe', '−4 Schaden beim nächsten schädigenden Treffer.', { damageGuard: { reduction: 4, charges: 1 } })] }),
-  make({ slug: 'gesammelter-blick', name: 'Gesammelter Blick', minimumLevel: 2, costs: ['bonus-action', 'reaction'],
+  make({ slug: 'gesammelter-blick', name: 'Gesammelter Blick', minimumLevel: 2, costs: ['bonus-action'],
     noPrimaryDamage: true, target: 'Selbst', duration: DURATION, description: 'Der Blick folgt der gegnerischen Deckung, bis sich die passende Angriffslinie öffnet.',
     effect: '+2 auf den nächsten Waffen- oder Technikangriff; auch ein Fehlschlag verbraucht die Vorbereitung.',
     effects: [stance('gesammelter-blick', 'Gesammelter Blick', '+2 auf den nächsten Angriff.', { stanceGroup: 'jungdrache-preparation',
@@ -73,27 +81,33 @@ export const JUNGDRACHE_SHARED_TECHNIQUES = Object.freeze([
     effects: [{ ...stance('offene-linie', 'Offene Linie', 'Vorteil auf den nächsten Angriff.', { stanceGroup: 'jungdrache-preparation',
       triggerRules: [once('offene-linie', 'Offene Linie', { rollMode: 'advantage' })] }), on: 'hit' }] }),
   make({ slug: 'staubende-schwinge', name: 'Stäubende Schwinge', minimumLevel: 3, costs: ['action', 'reaction'],
-    description: 'Ein präziser Treffer kippt den Gegner aus seinem sicheren Stand.', effect: 'Normaler Waffenschaden; GES-Rettung SG 13, bei Scheitern Liegend: keine Bonusaktion im nächsten eigenen Beitrag.',
+    description: 'Ein präziser Treffer kippt den Gegner aus seinem sicheren Stand.', effect: 'Normaler Waffenschaden; GES-Rettung SG 10 + Waffenattribut + Kompetenz, bei Scheitern Liegend: keine Bonusaktion im nächsten eigenen Beitrag.',
     secondarySave: save(hindrance('liegend', 'Liegend', { prone: true }), 'dexterity') }),
   make({ slug: 'gebundene-klaue', name: 'Gebundene Klaue', minimumLevel: 3, costs: ['action', 'bonus-action'],
-    description: 'Die Waffe bindet die gegnerische Gegenwehr, während der Treffer seinen Griff erschüttert.', effect: 'Normaler Waffenschaden; STÄ-Rettung SG 13, bei Scheitern keine Reaktion im nächsten eigenen Beitrag.',
+    description: 'Die Waffe bindet die gegnerische Gegenwehr, während der Treffer seinen Griff erschüttert.', effect: 'Normaler Waffenschaden; KRF-Rettung SG 10 + Waffenattribut + Kompetenz, bei Scheitern keine Reaktion im nächsten eigenen Beitrag.',
     secondarySave: save(hindrance('gebundene-klaue', 'Gebundene Klaue', { blockedResource: 'reaction' })) }),
   make({ slug: 'unruhiger-griff', name: 'Unruhiger Griff', minimumLevel: 4, costs: ['action', 'reaction'],
-    description: 'Ein gezielter Treffer stört die schnelle Folgebewegung des Gegners.', effect: 'Normaler Waffenschaden; STÄ-Rettung SG 13, bei Scheitern keine Bonusaktion im nächsten eigenen Beitrag.',
+    description: 'Ein gezielter Treffer stört die schnelle Folgebewegung des Gegners.', effect: 'Normaler Waffenschaden; KRF-Rettung SG 10 + Waffenattribut + Kompetenz, bei Scheitern keine Bonusaktion im nächsten eigenen Beitrag.',
     secondarySave: save(hindrance('unruhiger-griff', 'Unruhiger Griff', { blockedResource: 'bonus-action' })) }),
-  make({ slug: 'gleitende-schuppe', name: 'Gleitende Schuppe', minimumLevel: 4, costs: ['reaction', 'special-action'],
+  make({ slug: 'gleitende-schuppe', name: 'Gleitende Schuppe', minimumLevel: 4, costs: ['reaction'],
     noPrimaryDamage: true, target: 'Selbst', duration: DURATION, description: 'Eine fließende Haltung lässt die nächste gegnerische Angriffslinie ins Leere gleiten.',
     effect: 'Der nächste gegen dich gerichtete Waffen- oder Technikangriff hat Nachteil. Einmalig; ersetzt andere Jungdrachen-Schutzhaltungen.',
     effects: [stance('gleitende-schuppe', 'Gleitende Schuppe', 'Nachteil auf den nächsten eingehenden Waffenangriff.', {
       triggerRules: [once('gleitende-schuppe', 'Gleitende Schuppe', { rollMode: 'disadvantage' }, { recipient: 'target' })] })] }),
   counter('lauernde-klaue', 'Lauernde Klaue', 3, ['bonus-action', 'reaction']),
-  counter('entwaffnende-klaue', 'Entwaffnende Klaue', 4, ['action', 'reaction', 'special-action'], hindrance('entwaffnet', 'Entwaffnet', { disarm: true })),
-  counter('fallende-schwinge', 'Fallende Schwinge', 5, ['action', 'bonus-action', 'special-action'], hindrance('liegend', 'Liegend', { prone: true }), 'dexterity'),
-  counter('erstickte-antwort', 'Erstickte Antwort', 5, ['action', 'reaction', 'special-action'], hindrance('erstickte-antwort', 'Erstickte Antwort', { blockedResource: 'reaction' })),
+  counter('entwaffnende-klaue', 'Entwaffnende Klaue', 4, ['bonus-action', 'reaction', 'special-action'], hindrance('entwaffnet', 'Entwaffnet', { disarm: true }), 'strength', true),
+  make({ slug: 'fallende-schwinge', name: 'Fallende Schwinge', minimumLevel: 5, costs: ['action', 'bonus-action', 'special-action'],
+    damageModel: damage(12), description: 'Die Waffe trifft hoch, bevor ein tiefer Schaftzug den gegnerischen Stand öffnet.',
+    effect: 'Direkter Angriff: Waffenbasis + 1 Waffenwürfel + Ausbildungswürfel + Schadensbonus. Nach Treffer GES-Rettung SG 11 + Waffenattribut + Kompetenz; bei Scheitern Liegend: keine Bonusaktion im nächsten eigenen Beitrag.',
+    secondarySave: save(hindrance('liegend', 'Liegend', { prone: true }), 'dexterity', true) }),
+  make({ slug: 'erstickte-antwort', name: 'Erstickte Antwort', minimumLevel: 5, costs: ['action', 'reaction'],
+    damageModel: damage(4), description: 'Der Treffer drückt den Waffenarm zur Seite und unterbricht den angesetzten Gegenschlag.',
+    effect: 'Direkter Angriff: Waffenbasis + 1 Waffen-Zusatzwürfel (höchstens W4) + Ausbildungswürfel + Schadensbonus. Nach Treffer KRF-Rettung SG 10 + Waffenattribut + Kompetenz; bei Scheitern keine Reaktion im nächsten eigenen Beitrag.',
+    secondarySave: save(hindrance('erstickte-antwort', 'Erstickte Antwort', { blockedResource: 'reaction' })) }),
   make({ slug: 'drachenklammer', name: 'Drachenklammer', minimumLevel: 6, costs: ['action', 'reaction', 'special-action'],
-    description: 'Ein schwer gesetzter Treffer nimmt dem Gegner für einen Augenblick jede klare Angriffslinie.', effect: 'Normaler Waffenschaden; KON-Rettung SG 13, bei Scheitern Benommen: im nächsten eigenen Beitrag keine Aktion. Bonusaktion und Reaktion bleiben verfügbar.',
-    secondarySave: save(hindrance('benommen', 'Benommen', { blockedResource: 'action' }), 'constitution') }),
-  counter('brechender-widerhall', 'Brechender Widerhall', 6, ['action', 'bonus-action', 'reaction', 'special-action'], hindrance('benommen', 'Benommen', { blockedResource: 'action' }), 'constitution'),
+    description: 'Ein schwer gesetzter Treffer nimmt dem Gegner für einen Augenblick jede klare Angriffslinie.', effect: 'Normaler Waffenschaden; KON-Rettung SG 11 + Waffenattribut + Kompetenz, bei Scheitern Benommen: im nächsten eigenen Beitrag keine Aktion. Bonusaktion und Reaktion bleiben verfügbar.',
+    secondarySave: save(hindrance('benommen', 'Benommen', { blockedResource: 'action' }), 'constitution', true) }),
+  counter('brechender-widerhall', 'Brechender Widerhall', 6, ['action', 'bonus-action', 'reaction', 'special-action'], hindrance('benommen', 'Benommen', { blockedResource: 'action' }), 'constitution', true),
   make({ slug: 'kurze-drachenspur', name: 'Kurze Drachenspur', minimumLevel: 1, costs: ['bonus-action'], fullTechniqueDamage: true,
     description: 'Ein schneller Angriff prüft die gegnerische Deckung.', effect: 'Leichter Einzelangriff mit dem Schaden einer schnellen Grundtechnik; kein kostenloser Folgeangriff.' })
 ]);

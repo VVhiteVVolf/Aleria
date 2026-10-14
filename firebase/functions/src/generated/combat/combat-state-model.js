@@ -523,7 +523,7 @@ export function overlayCombatHitPointState(profile = {}, state = null) {
     conditions: [...(Array.isArray(profile.conditions) ? profile.conditions : []), ...temporaryConditions],
     temporaryConditions,
     concentration: state.concentration || null,
-    selectedAction: profile.selectedAction?.secondarySave?.fixedDc == null && profile.selectedAction?.secondarySave?.dcAttributeKey === 'strength' ? {
+    selectedAction: profile.selectedAction?.secondarySave?.fixedDc == null && (profile.selectedAction?.secondarySave?.useWeaponAttribute ? profile.weapon?.attackAttribute : profile.selectedAction?.secondarySave?.dcAttributeKey) === 'strength' ? {
       ...profile.selectedAction, secondarySave: { ...profile.selectedAction.secondarySave,
         dc: Number(profile.selectedAction.secondarySave.dc || 0) + strengthDelta }
     } : profile.selectedAction,

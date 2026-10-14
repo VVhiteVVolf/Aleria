@@ -25,18 +25,20 @@ test('personal grant is owner-scoped, idempotent and preserves every live pool a
 });
 
 for (const [roll, save, dropped] of [[15, 1, true], [1, 1, false], [2, 1, false], [15, 20, false], [20, 1, true]]) {
-  test(`Schafthebel attack ${roll}, save ${save}: never damages, correct disarm and exact costs`, async () => {
+  test(`Schafthebel attack ${roll}, save ${save}: damage follows hit, save controls disarm, exact costs`, async () => {
     const actor = profile('ylva-schafthebel'), victim = target();
-    assert.equal(actor.selectedAction.formula, ''); assert.equal(getCombatDamagePreview(actor), null);
-    const dice = receipts([roll], save); dice.rollDamage = () => { throw Error('Damage roll in non-damaging technique'); };
+    assert.equal(actor.selectedAction.formula, '1d8+1d4'); assert.equal(getCombatDamagePreview(actor).notation, '1d8+1d4+5');
+    assert.equal(actor.selectedAction.secondarySave.dc, 16);
+    const dice = receipts([roll], save);
     const result = await new CombatResolutionService(dice).resolveAttack({ actor, target: victim });
-    assert.equal(result.damage, null); assert.equal(!!result.sceneItemEvents?.length, dropped);
-    assert.equal(getCriticalWeaponAttacks(result).length, roll === 1 ? 1 : 0);
+    assert.equal(!!result.damage, result.attack.hit); assert.equal(!!result.sceneItemEvents?.length, dropped);
+    if (result.attack.hit) assert.ok(result.targetSnapshot.hitPointsAfter < victim.currentHitPoints);
+    assert.equal(getCriticalWeaponAttacks(result).length, [1,20].includes(roll) ? 1 : 0);
     assert.deepEqual(result.resourceCosts.map(c => [c.resourceId, c.amount]), [['action', 1], ['reaction', 1]]);
   });
 }
 
-test('spear requirement and no damage model survive normalization and mini view shows current affordability', () => {
+test('spear requirement and weapon damage model survive normalization and mini view shows current affordability', () => {
   const actor = profile('ylva-schafthebel'); assert.equal(actor.selectedAction.compatible, true);
   assert.equal(profile('ylva-schafthebel', 'ylva-saex').selectedAction.compatible, false);
   assert.match(renderPersonalTechniquesSummary(actor), /Schafthebel/);

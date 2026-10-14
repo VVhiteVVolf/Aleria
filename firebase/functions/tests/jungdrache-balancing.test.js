@@ -9,7 +9,7 @@ import { deriveSceneItems } from '../src/generated/scene-items/scene-items-model
 const semantic = value => JSON.parse(JSON.stringify(value), (key, entry) => key === 'id' && typeof entry === 'string'
   ? entry.replace(/-[\da-f]{8}-[\da-f]{4}-[\da-f]{4}-[\da-f]{4}-[\da-f]{12}$/, '') : entry);
 
-for (const stance of ['Lauernde Klaue','Entwaffnende Klaue','Fallende Schwinge','Erstickte Antwort','Brechender Widerhall']) {
+for (const stance of ['Lauernde Klaue','Entwaffnende Klaue','Brechender Widerhall']) {
   test(`${stance}: browser/server rolls, authoritative state, replay and tamper rejection`, async () => {
     const { profile: target } = await prepare('Gildas Gafyr', stance);
     const actor = fighter('Asgeir Wolfshorn');

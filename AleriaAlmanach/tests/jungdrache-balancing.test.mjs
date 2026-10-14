@@ -29,7 +29,7 @@ for (const name of ['Gawain Draig', 'Gildas Gafyr']) for (const t of techniques.
       const before = actor.resources.find(r => r.id === cost.resourceId);
       assert.equal(result.actorResourceSnapshot.after.find(r => r.id === cost.resourceId).current, before.current - cost.amount);
     }
-    if (t.secondarySave?.enabled) assert.equal(result.secondarySaves[0].dc, 13);
+    if (t.secondarySave?.enabled) assert.equal(result.secondarySaves[0].dc, actor.selectedAction.secondarySave.dc);
   });
 }
 

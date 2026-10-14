@@ -2,7 +2,7 @@ import { resolveCombatProfile } from '../../AleriaAlmanach/modules/combat/combat
 import assert from 'node:assert/strict';
 import { withEquippedCombatWeapon } from '../../AleriaAlmanach/modules/combat/combat-equipment-state.js';
 import { getCombatMounts } from '../../AleriaAlmanach/modules/combat/combat-support-equipment.js';
-import { getCombatDamagePreview, getExplicitAttackSequencePreview } from '../../AleriaAlmanach/modules/combat/combat-action-estimates.js';
+import { getCombatDamagePreview, getExplicitAttackSequencePreview, getPreparedCounterPreview } from '../../AleriaAlmanach/modules/combat/combat-action-estimates.js';
 import { getCombatFormPresentation } from '../../AleriaAlmanach/modules/combat-styles/combat-form-presentation.js';
 import { getBonusDamageFormulas, getUniversalDamageBonus } from '../../AleriaAlmanach/modules/combat/combat-profile-model.js';
 import { combineDamageFormulas, buildDamageNotation } from '../../AleriaAlmanach/modules/combat/rules/combat-mvp-rules.js';
@@ -55,7 +55,7 @@ function describeVariant(character, loadout, action) {
   const healing = (selected.effects || []).find(e => e.type === 'healing');
   const healingFormula = healing?.scaling === 'hit-die-and-tenth-maximum'
     ? `1W${profile.hitPoints.hitDie} + ${Math.ceil(profile.maximumHitPoints / 10)}` : dice(healing?.formula || healing?.amount || '');
-  const counter = (selected.effects || []).map(e => e.condition?.counterAttack).find(c => c?.enabled);
+  const counter = getPreparedCounterPreview(profile);
   const conditions = (selected.effects || []).filter(e => e.condition?.name).map(e => ({
     name: e.condition.name, description: e.condition.description || e.notes, duration: e.condition.duration,
     trigger: e.on === 'hit' ? 'Bei Treffer' : e.on === 'save-failure' ? 'Bei misslungener Rettung' : e.target === 'self' ? 'Auf die eigene Figur' : 'Gemäß Auslöser',
@@ -73,7 +73,7 @@ function describeVariant(character, loadout, action) {
     healing: healingFormula, healingIcon: healingFormula ? dieIcon(healingFormula, 'healing') : '',
     saveTiming: selected.secondarySave?.timing === 'after-sequence' ? 'Rettung nach der gesamten Folge · immer' : 'Rettung nach Treffer',
     save: saveLabel(selected.secondarySave), saveEffect: selected.secondarySave?.failureCondition?.description || '',
-    followUp: followUpSummary(profile), counter: counter ? { save: saveLabel(counter.secondarySave), note: 'Gegenangriff erst nach dem beschriebenen Auslöser; Werte der dann geführten Waffe.' } : null,
+    followUp: followUpSummary(profile), counter: counter ? { attack: `1W20 ${signed(counter.attackModifier)} · Vorteil`, damage: dice(counter.damage?.notation), damageIcon: dieIcon(counter.damage?.notation), save: saveLabel(counter.secondarySave), note: 'Erst nach einem gegnerischen Fehlschlag. Vorschau mit dieser Waffe; beim Auslösen zählt die dann tatsächlich geführte Waffe.' } : null,
     conditions, groups: (selected.effects || []).map(e => e.condition?.stanceGroup).filter(Boolean),
     duration: source.duration || '', range: source.range || (profile.actionResolutionMode === 'automatic' ? '' : loadout.range),
     target: source.target || '', requirements: source.requirements || '',

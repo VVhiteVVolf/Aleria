@@ -1,5 +1,5 @@
 export const gaisGuide = {
-  reviewedAt: '2026-10-14',
+  reviewedAt: '2026-10-15',
   slug: 'gais', id: 'person--haus-wyrm--gais-wyrm', name: 'Sir Gais Wyrm', eyebrow: 'Ritter · Uchelwyr',
   title: 'Lanzenführung, Deckung und vorbereitete Konter',
   intro: 'Gais verbindet den Druck der Lanze mit den Haltungen des Jungdrachens. Er kann den Gegner binden, dessen Waffenführung stören oder eine verfehlte Attacke beantworten. Entscheidend ist, welche Reaktion er vorbereitet und welche Ressourcen er dafür freihält.',
@@ -19,8 +19,10 @@ export const gaisGuide = {
     ['Ein gefährlicher Treffer steht bevor?', 'Verwurzelte Schuppe federt einmal Schaden ab; Geschuppte Deckung hilft über RK. Wähle eine Jungdrachen-Schutzhaltung, statt mehrere übereinanderzulegen.']
   ],
   combos: [
+    { title: 'Ein entschlossener Durchbruch', mode: 'aggressiv', actions: ['Wyrmsbrecher'], text: 'Gais bindet alle regulären Ressourcen und eine Besondere Aktion in einen einzelnen Angriff. (+2 auf den Trefferwurf; 3× Waffenwürfel + voller Schadensbonus.)', caution: 'Hoher Schaden pro Treffer hilft gegen Rüstung. Ein Fehlschlag verbraucht trotzdem alle Kosten; keine zusätzliche Kontrolle oder automatische Pferdeattacke.' },
+    { title: 'Tiefe Lanzenlinie und Anschluss', mode: 'beritten', mounted: true, actions: ['Niedrige Lanzenbahn', 'Wacht der langen Schuppe'], text: 'Der tiefe Angriff bündelt Schaden und öffnet die Deckung, die freie Reaktion erlaubt einen zweiten Lanzenangriff.', caution: 'Berittene Voraussetzung beachten. Der RK-Bonus der Wacht entsteht nur nach ihrem Treffer.' },
     { title: 'Gezielter Angriff und Lanzenwacht', mode: 'ausdauer', actions: ['Schnitt über die Flanke', 'Wacht der langen Schuppe'],
-      text: 'Der Hauptangriff hat einen kleinen Trefferbonus. Der Reaktionsangriff bringt zusätzlich +1 RK. Die Bonusaktion bleibt für einen leichten Angriff, eine passende Vorbereitung oder die einmalige Heilung frei.',
+      text: 'Der Hauptangriff hat einen kleinen Trefferbonus. Nur bei Treffer bringt der Reaktionsangriff zusätzlich +1 RK. Die Bonusaktion bleibt für einen leichten Angriff, eine passende Vorbereitung oder die einmalige Heilung frei.',
       caution: 'Wacht der langen Schuppe ist ein bezahlter Reaktionsangriff. Die Lauernde Klaue ist eine andere, erst auszulösende Kontervorbereitung.' },
     { title: 'Verstärkter Hieb mit Anschlussangriff', mode: 'aggressiv', actions: ['Entschlossener Wappenhieb', 'Wacht der langen Schuppe'],
       text: 'Eine Besondere Aktion verstärkt den Hauptangriff, die Reaktion liefert einen weiteren regulären Waffenangriff und Deckung. Gut, wenn der Gegner jetzt besiegt werden kann.',
@@ -39,8 +41,13 @@ export const gaisGuide = {
       caution: 'Das Aufsteigen kostet nach der Startaufstellung eine Bonusaktion. Sattelantritt kostet eine Aktion und bleibt dann möglich; für einen zusätzlichen Bonusangriff ist die Bonusaktion bereits verbraucht.' }
   ],
   techniques: [
+    ['Wyrmsbrecher', 'Persönlich', 'Ein hoher Schadenswurf mit +2 Trefferbonus. Mit der Lanze 3W12 + 1, mit dem Schwert 3W8 + 1; einmal bezahlt, ein Trefferwurf. Für die entscheidende Öffnung oder gegen starken Rüstungsschutz.'],
+    ['Haken des Jungdrachens', 'Kontrolle', 'Lanze plus Zusatzwürfel bis W6; nach Treffer KRF-Rettung, bei Scheitern einmal −2 auf den nächsten Waffenangriff. Kein begrenzter Vorrat nötig.'],
+    ['Zügelhand', 'Ausdauer', 'Lanze plus Zusatzwürfel bis W4 und +2 RK bis Ende des nächsten eigenen Beitrags. Die Deckung entsteht auch bei Fehlschlag; die Bonusaktion bleibt frei.'],
+    ['Fallende Schwinge', 'Kontrolle', 'Direkter Angriff mit zusätzlichem Waffenwürfel. Nach Treffer GES-Rettung gegen Bonusaktionsentzug; keine Kontervorbereitung mehr.'],
+    ['Gesammelter Blick', 'Vorbereitung', 'Nur Bonusaktion für einmal +2 Trefferbonus. Gut vor einem wichtigen Angriff; auch ein Fehlschlag verbraucht den Bonus.'],
     ['Schnitt über die Flanke', 'Alltag', 'Ein gezielter Aktionsangriff mit Trefferbonus. Gute Grundlage, wenn begrenzte Ressourcen geschont werden sollen.'],
-    ['Wacht der langen Schuppe', 'Alltag', 'Mit der Lanze besonders nützlich: Reaktionsangriff plus +1 RK. Die Technik setzt eine passende Waffe voraus.'],
+    ['Wacht der langen Schuppe', 'Alltag', 'Mit der Lanze besonders nützlich: Reaktionsangriff und nur bei Treffer +1 RK. Die Technik setzt eine passende Waffe voraus.'],
     ['Verwurzelte Schuppe', 'Ausdauer', 'Eine Bonusaktion für 4 weniger Schaden beim nächsten schädigenden Treffer. Einmalig; ersetzt andere Jungdrachen-Schutzhaltungen.'],
     ['Geschuppte Deckung', 'Abwehr', '+2 RK, aber Bonusaktion und Reaktion sind gebunden. Gegen viele Angriffe eher erwägen als gegen einen einzelnen verheerenden Treffer.'],
     ['Gebundene Klaue', 'Kontrolle', 'Reaktionssperre nach Rettungswurf. Besonders wertvoll gegen teure Folgen, die eine Reaktion benötigen.'],
@@ -48,13 +55,13 @@ export const gaisGuide = {
     ['Unruhiger Griff', 'Kontrolle', 'Alternative Bonusaktionssperre mit KRF statt GES als Rettungswurf. Die gegnerischen Stärken entscheiden, welche Probe attraktiver ist.'],
     ['Täuschende Klaue', 'Vorbereitung', 'Vorteil für den nächsten eigenen Angriff nach einem Treffer. Mit einem anschließenden Reaktionsangriff nutzbar.'],
     ['Lauernde Klaue', 'Konter', 'Bedingte Gegenattacke. Stark, wenn ein gegnerischer Fehlschlag wahrscheinlich ist; kein garantierter Zusatzschaden.'],
-    ['Entwaffnende Klaue', 'Situativ', 'Teure Kontervorbereitung: Erst gegnerischer Fehlschlag, dann eigener Treffer und misslungener Rettungswurf. Gegen eine wichtige Waffe interessant, aber kein zuverlässiger Eröffnungsautomat.'],
-    ['Erstickte Antwort', 'Situativ', 'Reaktionssperre über einen vorbereiteten Konter. Die direkte Gebundene Klaue ist oft leichter zeitlich zu planen.'],
-    ['Gleitende Schuppe', 'Abwehr', 'Einmal Nachteil auf einen eingehenden Waffenangriff. Kostet eine Besondere Aktion und ersetzt andere Jungdrachen-Schutzhaltungen.'],
+    ['Entwaffnende Klaue', 'Situativ', 'Verstärkte Kontervorbereitung mit einem zusätzlichen Waffenwürfel: Erst gegnerischer Fehlschlag, dann eigener Treffer und misslungener Rettungswurf. Gegen eine wichtige Waffe interessant, aber kein zuverlässiger Eröffnungsautomat.'],
+    ['Erstickte Antwort', 'Situativ', 'Direkter Angriff mit Waffenbasis plus Zusatzwürfel bis W4 und möglicher Reaktionssperre. Kostet Aktion und Reaktion; die Bonusaktion bleibt frei.'],
+    ['Gleitende Schuppe', 'Abwehr', 'Einmal Nachteil auf einen eingehenden Waffenangriff. Kostet nur die Reaktion und ersetzt andere Jungdrachen-Schutzhaltungen.'],
     ['Entschlossener Wappenhieb', 'Spitze', 'Zusätzlicher Waffenwürfel für eine Besondere Aktion. Nicht gedankenlos in eine kaum treffbare Verteidigung werfen.'],
     ['Kuss der Speerspitze', 'Leicht', 'Leichter Bonusangriff und bei Treffer ein einmaliger Stellungsschutz. Er verwendet den begrenzten Bonusangriffswürfel, nicht den vollen W12.'],
     ['Sattelantritt', 'Beritten', 'Nur mit geführtem Reittier. Keine frei erfundenen zusätzlichen Pferdewürfel zum Lanzenangriff.'],
-    ['Niedrige Lanzenbahn', 'Beritten', 'Eine weitere berittene Kontrolloption. Reittier, Waffenfreigabe und tatsächliche Reichweite prüfen.']
+    ['Niedrige Lanzenbahn', 'Beritten', 'Berittener Angriff für Aktion und Bonusaktion: Waffenbasis plus Zusatzwürfel bis W6 und bessere Trefferaussicht. Die Reaktion bleibt für einen Anschlussangriff frei.']
   ],
   equipment: [
     ['Lanze', 'W12 Grundwürfel, aber keine zusätzliche Waffenverzauberung. Sie öffnet passende Speer-/Lanzentechniken. Ihre Reichweite ist im aktuellen Eintrag nicht mit einer konkreten Meterzahl hinterlegt; daraus keine kostenlose Distanzüberlegenheit erfinden.'],
@@ -68,5 +75,5 @@ export const gaisGuide = {
       'Soll das Pferd selbst kämpfen, muss es in der Szene als eigener Akteur geführt werden. Sein Hufschlag verbraucht seine Aktion. Er wird nicht zusätzlich in Gais’ Technik eingerechnet. Überleben und Rückzug des Rosses gehören zur Planung eines langen Gefechts.'],
     joke: 'Die schwarz-goldene Satteldecke bringt Stilpunkte. Die sind leider keine Rüstungsklasse.' }],
   pitfalls: ['Geschuppte Deckung, Verwurzelte Schuppe, Gleitende Schuppe und Jungdrachen-Konterhaltungen ersetzen einander. Schutz und Konter nicht versehentlich gegenseitig löschen.', 'Nicht jede Technik muss besser sein als jede andere. Ein einfacher Angriff kann bei knappen Ressourcen die richtige Entscheidung sein.', 'Durchschnaufen heilt einmal pro langer Rast. Bei 43 maximalen TP sind es 1W10 + 5; keine Heilung über das Maximum.', 'Ein Niederwerfen nimmt hier die Bonusaktion. Es macht den Gegner weder hilflos noch leichter zu treffen.', 'Benommenheitstechniken Drachenklammer und Brechender Widerhall sind erst ab Stufe 6 zugänglich. Auf Stufe 5 nicht vorwegnehmen.'],
-  conclusion: 'Gais spielt sich am stärksten mit sauberer Ressourcenplanung: gezielte Angriffe, eine passende Antwort und gelegentlich eine Kontrolltechnik. Sein Arsenal reicht aus; die Kunst besteht darin, die richtige Möglichkeit rechtzeitig auszuwählen.'
+  conclusion: 'Gais spielt sich am stärksten mit sauberer Ressourcenplanung: gezielte Angriffe, eine passende Antwort und gelegentlich eine Kontrolltechnik. Wyrmsbrecher liefert eine persönliche Schadensspitze, Kontrollangriffe verbinden ihren Eingriff mit verwertbarem Waffenschaden. Entscheidend bleibt, welche Ressourcen für die folgende Antwort frei bleiben.'
 };

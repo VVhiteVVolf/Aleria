@@ -4,6 +4,8 @@ import { consumeCombatAmmunition } from './combat-ammunition.js';
 import { validateCombatActorProfile } from './combat-profile-resolver.js';
 import { compactCombatResolution } from './combat-resolution-storage.js';
 import { resolveCombatWeaponGrip } from './combat-weapon-grip.js';
+import { resolveTechniqueDamageFormula } from './combat-technique-damage.js';
+import { resolveTechniqueSaveDc } from './combat-technique-save-dc.js';
 import { getConditionArmorBonus } from './combat-armor-stances.js';
 
 function afterProfile(profile, result, role) {
@@ -23,7 +25,7 @@ function afterProfile(profile, result, role) {
     channeling: result[`${role}ChannelingSnapshot`] ? result[`${role}ChannelingSnapshot`].after : profile.channeling };
 }
 
-function counterProfile(defender, stance) {
+export function resolvePreparedCounterProfile(defender, stance) {
   const heldWeapon = getCombatWeaponLoadout(defender).right;
   if (!heldWeapon) return null;
   const values = getCombatWeaponAttackValues(defender, heldWeapon);
@@ -37,8 +39,11 @@ function counterProfile(defender, stance) {
     baseWeaponFormula: heldWeapon.damageFormula, versatileWeaponFormula: heldWeapon.versatileDamageFormula,
     compatible: true, costs: [], auraBypass: { allowed: false }, resolutionMode: 'weapon-attack',
     criticalThreshold: 20, effects: weapon.effects || [], secondarySave: stance.counterAttack.secondarySave
-      ? { ...stance.counterAttack.secondarySave, dc: stance.counterAttack.secondarySave.fixedDc || 13 } : null };
-  const { action, weaponGrip } = resolveCombatWeaponGrip(baseAction, defender, defender.weaponGrip);
+      ? { ...stance.counterAttack.secondarySave, dc: resolveTechniqueSaveDc(stance.counterAttack.secondarySave, defender, weapon) } : null };
+  const { action: heldAction, weaponGrip } = resolveCombatWeaponGrip(baseAction, defender, defender.weaponGrip);
+  const model = stance.counterAttack.damageModel;
+  const formula = model ? resolveTechniqueDamageFormula({ damageModel: model }, heldAction.weapon, defender) : heldAction.weapon.damageFormula;
+  const action = model ? { ...heldAction, formula, weapon: { ...heldAction.weapon, damageFormula: formula } } : heldAction;
   return { ...defender, weapon: action.weapon, weaponGrip, activeWeaponId: weapon.id, selectedAction: action, profileActionId: action.id,
     profileActionKind: 'weapon', actionResolutionMode: 'weapon-attack', resourceCosts: [], actionCosts: [],
     attackModifier: action.attackModifier, damageModifier: action.damageModifier,
@@ -87,7 +92,7 @@ export async function attachPreparedCounter(result, actor, target, options, reso
   targetAfter.temporaryConditions = targetAfter.temporaryConditions.filter(condition => condition.id !== stance.id);
   targetAfter.conditions = targetAfter.conditions.filter(condition => condition.id !== stance.id);
   result.targetConditionSnapshot = { before: result.targetConditionSnapshot?.before || target.temporaryConditions || [], after: targetAfter.temporaryConditions };
-  const counterActor = counterProfile(targetAfter, stance);
+  const counterActor = resolvePreparedCounterProfile(targetAfter, stance);
   let unavailable = !counterActor ? 'Keine geführte, verfügbare Waffe.' : '';
   if (counterActor && !validateCombatActorProfile(counterActor).ready) unavailable = 'Die Figur kann nicht mehr gegenangreifen.';
   if (actorAfter.currentHitPoints <= 0) unavailable = 'Das angreifende Ziel ist bereits kampfunfähig.';

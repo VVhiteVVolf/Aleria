@@ -1,5 +1,5 @@
 import { getSpellLevelLabel } from '../combat-spell-slots.js?v=20260803-character-creation-v1';
-import { getCombatDamagePreview, getExplicitAttackSequencePreview } from '../combat-action-estimates.js?v=20260928-equipment-art-v4';
+import { getCombatDamagePreview, getExplicitAttackSequencePreview, getPreparedCounterPreview } from '../combat-action-estimates.js?v=20260928-equipment-art-v4';
 import { getCombatFormPresentation } from '../../combat-styles/combat-form-presentation.js?v=20260909-dragon-parent-v2';
 
 function escapeHtml(value) {
@@ -127,7 +127,10 @@ export function renderCombatValueStrip(actor = {}) {
   }
   const damage = getCombatDamagePreview(actor);
   const stats = getCombatDisplayStats(actor, damage);
-  return `<div class="combat-action-values" aria-label="Kampfwerte">${renderValue('Treffer', stats.attack)}${renderValue('Schaden', stats.damage, damage?.damageType)}${renderDamageAverage(damage)}</div>`;
+  const counter = getPreparedCounterPreview(actor);
+  const save = actor.selectedAction?.secondarySave;
+  const attribute = { strength: 'KRF', dexterity: 'GES', constitution: 'KON', wisdom: 'WEI' };
+  return `<div class="combat-action-values" aria-label="Kampfwerte">${renderValue('Treffer', stats.attack)}${renderValue('Schaden', stats.damage, damage?.damageType)}${renderDamageAverage(damage)}${save?.enabled ? renderValue(save.timing === 'after-sequence' ? 'Rettung nach Folge' : 'Rettung nach Treffer', `${attribute[save.attributeKey] || save.attributeKey} SG ${save.dc}`) : ''}${counter ? renderValue('Konter-Treffer', signedNumber(counter.attackModifier), 'Nur nach Auslöser · Vorteil') + renderValue('Konter-Schaden', counter.damage?.notation?.toUpperCase().replace(/D/g, 'W'), 'Aktuell geführte Waffe') + (counter.secondarySave?.enabled ? renderValue('Konter-Rettung', `${attribute[counter.secondarySave.attributeKey] || counter.secondarySave.attributeKey} SG ${counter.secondarySave.dc}`) : '') : ''}</div>`;
 }
 
 function renderDamageAverage(damage) {

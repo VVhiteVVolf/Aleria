@@ -43,8 +43,8 @@ test(`${g.name}: legal action budgets, existing techniques, owned companions and
     assert.deepEqual(triple.followUp.steps.map(s => s.damage), ['1W8','1W6+5']);
     assert.equal(triple.save, 'GES SG 18'); assert.match(triple.saveTiming, /immer/);
     const lever = model.arsenal.entries.find(e => e.name === 'Schafthebel');
-    assert.ok(lever.variants.every(v => v.damage === 'Kein direkter Schaden' && v.save === 'KRF SG 14'));
-    assert.ok(lever.variants.every(v => v.weaponId === 'ylva-speer'));
+    assert.ok(lever.variants.every(v => v.damage.includes('W8') || v.damage.includes('W10')));
+    assert.ok(lever.variants.every(v => v.save === 'KRF SG 16' && v.weaponId === 'ylva-speer'));
     const double = model.arsenal.entries.find(e => e.name === 'Der fallende Dorn').variants.find(v => v.id === 'ylva-speer:foot:two-handed');
     assert.equal(double.attack,'1W20 +7'); assert.equal(double.damage,'1W10+5'); assert.equal(double.followUp.enhancedDamage,'2W10+5');
   } else if (g.slug === 'gais') {

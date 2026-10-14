@@ -1,6 +1,7 @@
 import { DRACHENTANZ_FORM_NAMES } from '../drachentanz-ids.js?v=20260909-dragon-parent-v2';
 import { createDrachentanzDamageProfile } from '../drachentanz-damage-progression.js?v=20260905-damage-balance-v1';
 import { hasWeaponTechniqueControl } from '../../weapon-technique-budget.js';
+import { reviseWeaponTechniqueSave } from '../../weapon-technique-control.js';
 import { reviseMartialPositionEntry } from '../../martial-position-effects.js';
 
 const RESOURCE_NAMES = Object.freeze({
@@ -118,7 +119,8 @@ export function createDrachentanzTechnique(spec) {
     activationType: ['action', 'reaction', 'bonus-action'].find(id => costs.some(cost => cost.resourceId === id)) || spec.activationType || 'action',
     weaponTypes: spec.weaponTypes || DEFAULT_WEAPON_TYPES,
     compatibleWeaponIds: [],
-    ...createDrachentanzDamageProfile({ ...spec, damageControl: hasWeaponTechniqueControl(spec) }, costs),
+    ...createDrachentanzDamageProfile({ ...spec, damageControl: spec.damageControl ?? hasWeaponTechniqueControl(spec) }, costs),
+    ...(spec.damageModel ? { damageModel: spec.damageModel } : {}),
     damageType: '',
     attackBonus: Number(spec.attackBonus) || 0,
     damageBonus: Number(spec.damageBonus) || 0,
@@ -143,7 +145,9 @@ export function createDrachentanzTechnique(spec) {
     active: true,
     mechanics: spec.mechanics || {},
     triggerRules: spec.triggerRules || [],
-    secondarySave: spec.secondarySave || { enabled: false },
+    secondarySave: (spec.allowedClassIds || []).some(id => ['cantref', 'uchelwyr'].includes(id))
+      ? reviseWeaponTechniqueSave(spec.secondarySave, costs.some(cost => cost.resourceId === 'special-action')) || { enabled: false }
+      : spec.secondarySave || { enabled: false },
     followUpAttack: spec.followUpAttack || { enabled: false },
     cenyrTraining: {
       branchId: spec.branchId || '',

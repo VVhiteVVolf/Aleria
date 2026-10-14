@@ -1,9 +1,11 @@
 // Personal training, deliberately absent from every class and form catalog.
+import { createWeaponTechniqueDamageProfile } from '../../combat-styles/weapon-technique-budget.js';
+import { createWeaponTechniqueSave } from '../../combat-styles/weapon-technique-control.js';
 import { createYlvaWeaponTechniques } from './ylva-weapon-techniques.js';
 import { YLVA_DUEL_OWNER_ID, describeYlvaTechniques } from './ylva-technique-prose.js';
 export { YLVA_DUEL_OWNER_ID } from './ylva-technique-prose.js';
 const cost = (resourceId, name) => ({ resourceId, name, amount: 1, scope: resourceId === 'special-action' ? 'persistent' : 'comment' });
-const action = cost('action', 'Aktion'), reaction = cost('reaction', 'Reaktion'), special = cost('special-action', 'Besondere Aktion');
+const action = cost('action', 'Aktion'), reaction = cost('reaction', 'Reaktion');
 const duration = 'Bis zum Ende des nächsten eigenen Beitrags';
 const base = { active: true, minimumLevel: 7, status: 'confirmed', trainingForm: 'Persönliche Techniken · Ylva Wolfshorn',
   category: 'technique', weaponTypes: ['spear'], maximumTargets: 1, damageFormula: '',
@@ -13,12 +15,13 @@ const evadeId = 'ylva-aus-der-angriffslinie';
 
 export function createYlvaDuelTechniques() {
   return describeYlvaTechniques([{ ...base, id: 'ylva-schafthebel', name: 'Schafthebel', activationType: 'action', costs: [action, reaction],
-    description: 'Ylva hebelt mit ihrem Speerschaft die geführte Waffe aus dem Griff. Ein normaler Speer-Angriffswurf, aber kein Schaden. Nur nach Treffer: KRF-Rettungswurf SG 14. Bei Scheitern fällt die Waffe aufnehmbar in die Szene. Körperwaffen bleiben erhalten und erhalten stattdessen −1 Angriff im nächsten eigenen Beitrag.',
-    effect: 'Kein Schaden. Nach Treffer KRF SG 14 oder Entwaffnung; Aufheben und Waffenwechsel kosten ihre regulären Ressourcen.',
-    target: 'Ein Gegner', range: 'Waffenreichweite', requirements: 'Ylvas persönliche Ausbildung; geführter Speer.', effects: [],
-    secondarySave: { enabled: true, attributeKey: 'strength', fixedDc: 14, addProficiency: false,
-      failureCondition: { id: 'ylva-schafthebel-entwaffnet', name: 'Entwaffnet', description: 'Die geführte Waffe liegt aufnehmbar in der Szene.', duration: '1 eigener Beitrag', disarm: true, mechanics: {} } }
-  }, { ...base, id: evadeId, name: 'Aus der Angriffslinie', activationType: 'reaction', costs: [reaction, special],
+    ...createWeaponTechniqueDamageProfile({ damageControl: true }, [action, reaction]),
+    tags: 'Persönlich · Ylva Wolfshorn · Schaden und Kontrolle',
+    description: 'Ylva stößt durch die Deckung, legt den Schaft hinter die geführte Waffe und hebelt sie mit einer Drehung aus dem Griff. (1× Waffenwürfel + Ausbildungswürfel + voller Schadensbonus. Nach Treffer KRF-Rettung: SG 10 + Waffenattribut + Kompetenz, derzeit 16. Bei Scheitern Entwaffnung; Körperwaffen erhalten stattdessen −1 Angriff im nächsten eigenen Beitrag.)',
+    effect: '(Waffenschaden und Entwaffnung nach Treffer und misslungener KRF-Rettung; Aufheben und Waffenwechsel kosten reguläre Ressourcen.)',
+    target: 'Ein Gegner', range: 'Waffenreichweite', requirements: 'Ylvas persönliche Ausbildung; geführter Speer.', effects: [{ type: 'damage', target: 'target', on: 'hit' }],
+    secondarySave: createWeaponTechniqueSave( { id: 'ylva-schafthebel-entwaffnet', name: 'Entwaffnet', description: 'Die geführte Waffe liegt aufnehmbar in der Szene.', duration: '1 eigener Beitrag', disarm: true, mechanics: {} })
+  }, { ...base, id: evadeId, name: 'Aus der Angriffslinie', activationType: 'reaction', costs: [reaction],
     description: 'Ylva bereitet mit dem Speer eine ausweichende Abwehr vor. Der nächste gegen sie gerichtete Waffen- oder Technikangriff erhält Nachteil. Einmalig, auch bei Fehlschlag verbraucht; verfällt spätestens am Ende ihres nächsten eigenen Beitrags. Kein Schaden, keine freie Bewegung und keine rückwirkende Änderung eines Wurfs.',
     effect: 'Einmal Nachteil auf den nächsten eingehenden Waffenangriff.', target: 'Selbst', range: 'Selbst', duration,
     requirements: 'Ylvas persönliche Ausbildung; geführter Speer. Vor dem gegnerischen Angriff vorbereiten.',

@@ -67,3 +67,5 @@ Eine bestätigte Namenskorrektur gilt bereits beim Gruppieren für alle Exporte 
 ## Firestore
 
 Die Datenbankoberfläche liest dieselbe Collection `characters` wie der Almanach und führt sie im Browser anhand der stabilen Dokument-ID mit dem lokalen Snapshot zusammen. Die ältere Prototyp-Collection `characterDatabase` wird nicht mehr beschrieben; zwei parallele Online-Wahrheiten würden sonst zwangsläufig auseinanderlaufen.
+
+Technik-Releases verwenden `mergeStrategy: "merge-combat-techniques"`: Der Export liefert ausschließlich die betroffenen Einträge in `character.combatProfile.techniques`. Bestehende IDs werden ersetzt, neue IDs einmal ergänzt. TP, Ressourcen, Zustände, Ausrüstung und alle anderen Profilfelder bleiben erhalten. Ein später datierter vollständiger Kampfprofil-Snapshot hat Vorrang vor einem älteren Technikrelease.

@@ -1,3 +1,4 @@
+import { createWeaponTechniqueDamageProfile } from '../../weapon-technique-budget.js';
 import { DRACHENTANZ_FORM_IDS as F } from '../drachentanz-ids.js?v=20260909-dragon-parent-v2';
 import { createDrachentanzTechnique, movementEffect, secondarySave, temporaryCondition } from './drachentanz-technique-factory.js?v=20260909-dragon-parent-v2';
 
@@ -28,8 +29,9 @@ function mounted(formId, spec) {
 export const UCHELWYR_MOUNTED_TECHNIQUES = Object.freeze([
   mounted(F.jungdrache, { slug: 'sattelantritt', name: 'Sattelantritt', minimumLevel: 2, slotBands: ['foundation'], costs: ['action'],
     description: 'Der erste gelehrte Angriff aus dem Sattel verbindet einen geraden Anritt mit sicherem Zügelmaß.', effect: 'Verursacht Technikschaden und erlaubt 3 Meter Eigenbewegung.', effects: [movementEffect('uchelwyr-sattelantritt', 3, 'move', 'self')] }),
-  mounted(F.jungdrache, { slug: 'niedrige-lanzenbahn', name: 'Niedrige Lanzenbahn', minimumLevel: 5, slotBands: ['foundation'], costs: ['action', 'bonus-action', 'reaction'],
-    description: 'Waffe und Ross passieren die gegnerische Flanke auf einer tiefen, schwer abzufangenden Linie.', effect: 'Verursacht Technikschaden und behandelt die Zielverteidigung als 1 Punkt niedriger.', targetDefenseModifier: -1 }),
+  mounted(F.jungdrache, { slug: 'niedrige-lanzenbahn', name: 'Niedrige Lanzenbahn', minimumLevel: 5, slotBands: ['foundation'], costs: ['action', 'bonus-action'],
+    damageModel: { ...createWeaponTechniqueDamageProfile({}, [{ resourceId: 'action', amount: 1 }]).damageModel, weaponBonuses: [{ diceCount: 1, dieCap: 6 }] },
+    description: 'Waffe und Ross passieren die gegnerische Flanke auf einer tiefen, schwer abzufangenden Linie.', effect: 'Waffenbasis + 1 Waffen-Zusatzwürfel (höchstens W6) + Ausbildungswürfel + Schadensbonus. Zielverteidigung 1 Punkt niedriger; Reaktion bleibt frei.', targetDefenseModifier: -1 }),
   mounted(F.schwertdrache, { slug: 'kreis-um-die-schranke', name: 'Kreis um die Schranke', minimumLevel: 7, slotBands: ['duelist'], costs: ['action', 'bonus-action'],
     description: 'Der Uchelwyr umkreist den Duellgegner und bindet dessen Waffe von der Außenseite.', effect: 'Verursacht Technikschaden, erhält +1 Angriff und erlaubt 4 Meter Eigenbewegung.', attackBonus: 1, effects: [movementEffect('uchelwyr-schranke', 4, 'move', 'self')] }),
   mounted(F.schwertdrache, { slug: 'koenigsanritt', name: 'Königsanritt', minimumLevel: 8, slotBands: ['duelist'], costs: ['action', 'reaction', 'special-action'],

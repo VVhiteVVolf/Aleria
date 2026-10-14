@@ -1,3 +1,5 @@
+import { createPositionCondition } from '../../martial-position-effects.js';
+import { createWeaponTechniqueDamageProfile } from '../../weapon-technique-budget.js';
 import { DRACHENTANZ_FORM_IDS } from '../drachentanz-ids.js?v=20260909-dragon-parent-v2';
 import { getFoundationSupplements } from './foundation-supplements.js';
 import {
@@ -18,6 +20,12 @@ function foundation(spec) {
   return createDrachentanzTechnique({ formId: F, slotBands: ['foundation'], tier: 'Grundform', ...spec });
 }
 
+const hakenPenalty = createPositionCondition(false, { name: 'Verhakte Haltung' });
+hakenPenalty.description = 'Der nächste eigene Waffen-/Technikangriff erhält −2 Angriff; einmalig, auch bei Fehlschlag verbraucht. Verfällt spätestens am Ende des nächsten eigenen Beitrags.';
+hakenPenalty.triggerRules = hakenPenalty.triggerRules.map(rule => ({ ...rule, effects: { attackModifier: -2 } }));
+const controlledDamage = cap => ({ ...createWeaponTechniqueDamageProfile({}, [{ resourceId: 'action', amount: 1 }]).damageModel,
+  weaponBonuses: [{ diceCount: 1, dieCap: cap }] });
+
 export const CANTREF_FOUNDATION_TECHNIQUES = Object.freeze([
   ...getFoundationSupplements('cantref'),
   foundation({
@@ -30,15 +38,16 @@ export const CANTREF_FOUNDATION_TECHNIQUES = Object.freeze([
   foundation({
     slug: 'cantref-jungdrache-haken-des-jungdrachen', name: 'Haken des Jungdrachens', minimumLevel: 2,
     description: 'Schaft und Blatt greifen Waffe, Arm oder Bein des Gegners und reißen dessen Haltung auf.',
-    effect: 'Verursacht Technikschaden. Misslingt ein Stärkerettungswurf, erhält das Ziel −1 Angriff bis zu seinem nächsten Beitrag.',
-    costs: ['action', 'reaction'], secondarySave: secondarySave('cantref-haken', 'Verhakte Haltung', 'Die verhakte Haltung erschwert den nächsten Angriff.', { attack: -1 }),
+    effect: 'Waffenbasis + 1 Waffen-Zusatzwürfel (höchstens W6) + Ausbildungswürfel + Schadensbonus. Nach Treffer KRF-Rettung SG 10 + Waffenattribut + Kompetenz; bei Scheitern einmal −2 auf den nächsten Waffen-/Technikangriff.',
+    costs: ['action', 'reaction'], damageModel: controlledDamage(6),
+    secondarySave: { ...secondarySave('cantref-haken', 'Verhakte Haltung', hakenPenalty.description), failureCondition: hakenPenalty },
     allowedClassIds: ['cantref', 'uchelwyr'], classWeaponProfiles: CANTREF_UCHELWYR_WEAPONS, weaponRuleSetId: 'cantref-polearm', uchelwyrCompatible: true, weaponTypes: ['spear', 'polearm']
   }),
   foundation({
     slug: 'cantref-jungdrache-wacht-der-langen-schuppe', name: 'Wacht der langen Schuppe', minimumLevel: 3,
     description: 'Der Cantref fängt einen Vorstoß an der äußersten Reichweite ab und antwortet aus sicherer Linie.',
-    effect: 'Reaktionsangriff mit Technikschaden. Bis zum nächsten eigenen Beitrag steigt die Rüstungsklasse um 1.',
-    activationType: 'reaction', costs: ['reaction'], effects: [temporaryCondition('cantref-wacht', 'Lange Wacht', 'Die Stangenwaffe hält die Angriffslinie geschlossen.', { armorClass: 1 }, { target: 'self', on: 'always' })],
+    effect: 'Reaktionsangriff mit Technikschaden. Nur bei Treffer +1 RK bis zum Ende des nächsten eigenen Beitrags.',
+    activationType: 'reaction', costs: ['reaction'], effects: [temporaryCondition('cantref-wacht', 'Lange Wacht', '+1 RK nach einem Treffer; bis zum Ende des nächsten eigenen Beitrags.', { armorClass: 1 }, { target: 'self', on: 'hit' })],
     allowedClassIds: ['cantref', 'uchelwyr'], classWeaponProfiles: CANTREF_UCHELWYR_WEAPONS, weaponRuleSetId: 'cantref-polearm', uchelwyrCompatible: true, weaponTypes: ['spear', 'polearm']
   }),
   foundation({
@@ -59,7 +68,7 @@ export const CANTREF_FOUNDATION_TECHNIQUES = Object.freeze([
   foundation({
     slug: 'cantref-jungdrache-sechszackige-linie', name: 'Sechszackige Linie', minimumLevel: 6,
     description: 'Sechs Lehrstöße wechseln Höhe, Seite und Griff, bis die gegnerische Linie keine sichere Öffnung mehr kennt.',
-    effect: 'Verursacht Technikschaden. Misslingt ein Geschicklichkeitsrettungswurf, wird das Ziel 2 Meter zurückgedrängt.',
+    effect: 'Verursacht Technikschaden; nach Treffer GES-Rettung, bei Scheitern −1 RK im nächsten eigenen Beitrag.',
     activationType: 'special-action', costs: ['action', 'bonus-action', 'special-action'], secondarySave: secondarySave('cantref-sechszackig', 'Gebrochene Linie', 'Der Zielstand wird durch die Folge der Stöße aufgebrochen.', { armorClass: -1 }, { attributeKey: 'dexterity' }),
     allowedClassIds: ['cantref'], classWeaponProfiles: CANTREF_WEAPONS, weaponRuleSetId: 'cantref-polearm', weaponTypes: ['spear', 'polearm']
   })
@@ -71,8 +80,8 @@ export const UCHELWYR_FOUNDATION_TECHNIQUES = Object.freeze([
     description: 'Die Klinge sinkt aus der hohen Reiterwacht in einen knappen, sicheren Lehrhieb.', effect: 'Verursacht Technikschaden.',
     activationType: 'bonus-action', costs: ['bonus-action'], allowedClassIds: ['uchelwyr'], classWeaponProfiles: UCHELWYR_WEAPONS, weaponTypes: ['sword', 'spear'] }),
   foundation({ slug: 'uchelwyr-jungdrache-zuegelhand', name: 'Zügelhand', minimumLevel: 2,
-    description: 'Eine einhändige Parade hält die zweite Hand für Zügel oder Schild frei.', effect: 'Verursacht Technikschaden und gibt bis zum nächsten eigenen Beitrag +1 Rüstungsklasse.',
-    costs: ['action', 'reaction'], effects: [temporaryCondition('uchelwyr-zuegelhand', 'Zügelhand', 'Die einhändige Linie schützt Reiter und Flanke.', { armorClass: 1 }, { target: 'self', on: 'always' })],
+    description: 'Eine einhändige Parade hält die zweite Hand für Zügel oder Schild frei.', effect: 'Waffenbasis + 1 Waffen-Zusatzwürfel (höchstens W4) + Ausbildungswürfel + Schadensbonus. +2 RK bis zum Ende des nächsten eigenen Beitrags, auch bei Fehlschlag.',
+    costs: ['action', 'reaction'], damageModel: controlledDamage(4), effects: [temporaryCondition('uchelwyr-zuegelhand', 'Zügelhand', '+2 RK bis zum Ende des nächsten eigenen Beitrags.', { armorClass: 2 }, { target: 'self', on: 'always' })],
     allowedClassIds: ['uchelwyr'], classWeaponProfiles: UCHELWYR_WEAPONS, weaponTypes: ['sword', 'spear'] }),
   foundation({ slug: 'uchelwyr-jungdrache-steigbuegelkonter', name: 'Steigbügelkonter', minimumLevel: 3,
     description: 'Der Uchelwyr fängt einen Angriff mit kurzer Klingenbewegung ab und antwortet über die freie Seite.', effect: 'Reaktionsangriff mit Technikschaden.',
@@ -81,7 +90,7 @@ export const UCHELWYR_FOUNDATION_TECHNIQUES = Object.freeze([
     description: 'Ein weiter Seitenhieb hält Gegner von beiden Flanken fern.', effect: 'Trifft bis zu zwei Gegner mit je Technikschaden.',
     costs: ['action', 'bonus-action', 'reaction'], maximumTargets: 2, target: 'Bis zu zwei Gegner', allowedClassIds: ['uchelwyr'], classWeaponProfiles: UCHELWYR_WEAPONS, weaponTypes: ['sword', 'spear'] }),
   foundation({ slug: 'uchelwyr-jungdrache-vorstoss-des-hohen-sitzes', name: 'Vorstoß des hohen Sitzes', minimumLevel: 5,
-    description: 'Ein langer Vorstoß verbindet Reichweite, festen Sitz und das Gewicht des gesamten Körpers.', effect: 'Verursacht Technikschaden und schiebt das Ziel bei misslungenem Stärkerettungswurf 2 Meter zurück.',
+    description: 'Ein langer Vorstoß verbindet Reichweite, festen Sitz und das Gewicht des gesamten Körpers.', effect: 'Verursacht Technikschaden; nach Treffer KRF-Rettung, bei Scheitern −1 RK im nächsten eigenen Beitrag.',
     activationType: 'action', costs: ['action', 'bonus-action', 'reaction'], secondarySave: secondarySave('uchelwyr-vorstoss', 'Zurückgedrängt', 'Der Vorstoß bricht den Stand des Ziels.', { armorClass: -1 }),
     allowedClassIds: ['uchelwyr'], classWeaponProfiles: UCHELWYR_WEAPONS, weaponTypes: ['sword', 'spear'] }),
   foundation({ slug: 'uchelwyr-jungdrache-wappen-des-jungdrachen', name: 'Wappen des Jungdrachens', minimumLevel: 6,

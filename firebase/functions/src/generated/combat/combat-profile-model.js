@@ -617,6 +617,7 @@ function sanitizeTechniqueSecondarySave(value = {}) {
     enabled: normalizeBoolean(source.enabled),
     attributeKey: getAttributeKey(source.attributeKey, 'constitution'),
     dcBase: normalizeNumber(source.dcBase, 8, 0, 99),
+    ...(source.useWeaponAttribute === true ? { useWeaponAttribute: true } : {}),
     ...(source.fixedDc != null ? { fixedDc: normalizeNumber(source.fixedDc, 15, 1, 99) } : {}),
     dcAttributeKey: getAttributeKey(source.dcAttributeKey, 'strength'),
     addProficiency: normalizeBoolean(source.addProficiency, true),

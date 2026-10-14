@@ -61,7 +61,8 @@ async function readCharacterExportOverlays(sourcePath) {
         path,
         exportedAt: String(exported.exportedAt || exported.character.updatedAt || ''),
         character: markCharacterDatabaseOverlay(exported.character, {
-          replaceExportedFields: exported.mergeStrategy === 'replace-exported-fields'
+          replaceExportedFields: exported.mergeStrategy === 'replace-exported-fields',
+          mergeCombatTechniques: exported.mergeStrategy === 'merge-combat-techniques'
         })
       });
     } catch {

@@ -78,7 +78,8 @@ test('der generierte Datenbank-Snapshot enthält die zuletzt freigegebenen Onlin
     const stored = snapshot.characters.find(character => character.name === expected.name);
     assert(stored, `${expected.name}: fehlt im Datenbank-Snapshot`);
     assert.deepEqual(stored.combatProfile.classTraining, source.combatProfile.classTraining);
-    assert.deepEqual(stored.combatProfile.techniques, source.combatProfile.techniques);
+    const record = JSON.parse(await readFile(new URL('../../CharakterDatenbank/' + stored.localRecord.path, import.meta.url), 'utf8'));
+    assert.deepEqual(stored.combatProfile.techniques, record.character.combatProfile.techniques);
     assert.equal(stored.combatProfile.templateSelections.classId, expected.classId);
     assert.equal(stored.combatProfile.progression.level, expected.level);
     assert.ok(stored.combatProfile.abilities.some(a => a.name === 'Durchschnaufen'));
