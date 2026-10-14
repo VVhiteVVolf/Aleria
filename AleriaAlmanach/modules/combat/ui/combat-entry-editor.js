@@ -324,12 +324,14 @@ function renderTechnique(item) {
     <label><span>Schlagworte</span><input data-entry-field="tags" value="${escapeHtml(item.tags)}"></label>
     <label class="wide"><span>Verbindliche Hinweise an AleriaGPT</span><textarea data-entry-field="aiInstructions" rows="4">${escapeHtml(item.aiInstructions)}</textarea></label>
   </div>
-  <fieldset class="combat-entry-editor-mechanics"><legend>Rettungswurf nach einem Treffer</legend><div class="combat-entry-editor-grid">
+  <fieldset class="combat-entry-editor-mechanics"><legend>${secondarySave.timing === 'after-sequence' ? 'Rettungswurf nach der Angriffsfolge' : 'Rettungswurf nach einem Treffer'}</legend><div class="combat-entry-editor-grid">
+    ${secondarySave.requiresHit === false ? '<p class="wide">Der Rettungswurf erfolgt auch nach verfehlten Angriffen.</p>' : ''}
     <label class="check"><input type="checkbox" data-entry-field="secondarySave.enabled"${checked(secondarySave.enabled)}> Aktiv</label>
     <label><span>Rettungsattribut</span><select data-entry-field="secondarySave.attributeKey">${renderAttributeOptions(secondarySave.attributeKey || 'constitution')}</select></label>
+    ${secondarySave.fixedDc != null ? `<label><span>Fester SG</span><input value="${escapeHtml(secondarySave.fixedDc)}" readonly></label><p class="wide">Dieser ausdrücklich festgelegte SG verwendet keinen Attribut- oder Kompetenzbonus.</p>` : `
     <label><span>Grund-SG</span><input type="number" min="0" max="99" data-entry-field="secondarySave.dcBase" value="${escapeHtml(secondarySave.dcBase ?? 8)}"></label>
-    <label><span>SG-Attribut</span><select data-entry-field="secondarySave.dcAttributeKey">${renderAttributeOptions(secondarySave.dcAttributeKey || 'strength')}</select></label>
-    <label class="check"><input type="checkbox" data-entry-field="secondarySave.addProficiency"${checked(secondarySave.addProficiency !== false)}> Kompetenzbonus zum SG</label>
+    ${secondarySave.useWeaponAttribute ? '<label><span>SG-Attribut</span><input value="Attribut der geführten Waffe" readonly></label>' : `<label><span>SG-Attribut</span><select data-entry-field="secondarySave.dcAttributeKey">${renderAttributeOptions(secondarySave.dcAttributeKey || 'strength')}</select></label>`}
+    <label class="check"><input type="checkbox" data-entry-field="secondarySave.addProficiency"${checked(secondarySave.addProficiency !== false)}> Kompetenzbonus zum SG</label>`}
     <label><span>Zustandsname bei Fehlschlag</span><input data-entry-field="secondarySave.failureCondition.name" value="${escapeHtml(failureCondition.name)}"></label>
     <label><span>Dauer</span><input data-entry-field="secondarySave.failureCondition.duration" value="${escapeHtml(failureCondition.duration)}"></label>
     <label><span>Angriffsmodifikator</span><input type="number" min="-99" max="99" data-entry-field="secondarySave.failureCondition.mechanics.attack" value="${escapeHtml(failureCondition.mechanics?.attack ?? 0)}"></label>

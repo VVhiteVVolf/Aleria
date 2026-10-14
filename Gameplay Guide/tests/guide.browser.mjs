@@ -176,7 +176,28 @@ try {
   await page.screenshot({path:`${output}/ylva-scene-prepared.png`});
   await page.evaluate(()=>window.clearGuidePreparation());
   await panel.getByText('Keine temporären Effekte',{exact:true}).waitFor();
+  for (const id of ['ylva-schafthebel','ylva-drei-dornen-ein-sturz']) {
+    await page.evaluate(async id => {
+      const { openCombatEntryEditor } = await import('./modules/combat/ui/combat-entry-editor.js');
+      const { createYlvaDuelTechniques } = await import('./modules/characters/personal-techniques/ylva-duel-techniques.js');
+      openCombatEntryEditor({kind:'technique',item:createYlvaDuelTechniques().find(t=>t.id===id),onSave:value=>window.guideSavedTechnique=value});
+      const overlay=document.getElementById('combat-entry-editor-overlay');overlay.classList.add('active');overlay.setAttribute('aria-hidden','false');
+    },id);
+    const editor=page.locator('#combat-entry-editor-overlay');
+    if(id==='ylva-schafthebel') {
+      assert.equal(await editor.locator('input[value="Attribut der geführten Waffe"]').count(),1);
+      assert.equal(await editor.locator('[data-entry-field="secondarySave.dcAttributeKey"]').count(),0);
+    } else {
+      assert.match(await editor.innerText(),/Rettungswurf nach der Angriffsfolge/);
+      assert.match(await editor.innerText(),/auch nach verfehlten Angriffen/);
+      assert.equal(await editor.locator('label').filter({hasText:'Fester SG'}).locator('input').inputValue(),'18');
+    }
+    await editor.locator('[data-entry-action="save"]').click();
+    const saved=await page.evaluate(()=>window.guideSavedTechnique);
+    if(id==='ylva-schafthebel') assert.equal(saved.secondarySave.useWeaponAttribute,true);
+    else {assert.equal(saved.secondarySave.fixedDc,18);assert.equal(saved.secondarySave.requiresHit,false);assert.equal(saved.followUpAttack.steps.length,2);}
+  }
   assert.deepEqual(errors,[]); assert.deepEqual(missing,[]);
-  await writeFile(`${output}/browser-report.json`,JSON.stringify({checks,characterButtons:true,horseInventoryAndSheet:true,composerAndArsenal:true,miniSceneRefresh:true,errors,missing},null,2));
+  await writeFile(`${output}/browser-report.json`,JSON.stringify({checks,editorSaveMetadata:true,characterButtons:true,horseInventoryAndSheet:true,composerAndArsenal:true,miniSceneRefresh:true,errors,missing},null,2));
   console.log(JSON.stringify({checks,errors,missing}));
 } finally { await browser?.close(); server.close(); }
