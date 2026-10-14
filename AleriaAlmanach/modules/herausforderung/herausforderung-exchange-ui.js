@@ -1,4 +1,4 @@
-import { createHerausforderungAiTemplate, createHerausforderungExport, parseHerausforderungImport, MAX_HERAUSFORDERUNG_IMPORT_BYTES } from './herausforderung-exchange.js?v=20261014-herausforderung-rewards-v2';
+import { createHerausforderungAiTemplate, createHerausforderungExport, parseHerausforderungImport, MAX_HERAUSFORDERUNG_IMPORT_BYTES } from './herausforderung-exchange.js?v=20261014-herausforderung-combat-v1';
 import { STANDARD_ITEMS } from '../item-register/item-register-standard.js';
 
 const bindings = new WeakMap();
@@ -20,7 +20,7 @@ export function mountHerausforderungExchange(root, binding) {
     if (!trigger || root.getAttribute('aria-busy') === 'true') return;
     const current = bindings.get(root);
     const action = trigger.dataset.herausforderungExchange;
-    if (action === 'ai-template') { download(createHerausforderungAiTemplate(catalog()), 'aleria-herausforderung-ki-vorlage.json'); current.onStatus('KI-Vorlage mit leerer Herausforderung, Anleitung und aktuellen Register-IDs exportiert.'); }
+    if (action === 'ai-template') { download(createHerausforderungAiTemplate(catalog(), current.getCombatContext?.() || {}), 'aleria-herausforderung-ki-vorlage.json'); current.onStatus('KI-Vorlage mit leerer Herausforderung, Anleitung und aktuellen Register-IDs exportiert.'); }
     if (action === 'draft') { download(createHerausforderungExport(current.getDraft()), 'aleria-herausforderung-entwurf.json'); current.onStatus('Der aktuelle Entwurf wurde als JSON exportiert.'); }
     if (action === 'import') root.querySelector('[data-herausforderung-import-file]').click();
   });
@@ -32,7 +32,7 @@ export function mountHerausforderungExchange(root, binding) {
     const current = bindings.get(root);
     try {
       if (file.size > MAX_HERAUSFORDERUNG_IMPORT_BYTES) throw Error('Die JSON-Datei darf höchstens 2 MB groß sein.');
-      const parsed = parseHerausforderungImport(await file.text(), catalog());
+      const parsed = parseHerausforderungImport(await file.text(), catalog(), current.getCombatContext?.() || {});
       if (!root.classList.contains('active') || bindings.get(root) !== current) return;
       current.onImport(parsed.event, parsed.issues);
     } catch (error) { current.onStatus(error.message, 'error'); }

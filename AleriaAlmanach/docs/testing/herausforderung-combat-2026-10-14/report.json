@@ -1,0 +1,111 @@
+{
+  "date": "2026-10-14",
+  "feature": "Herausforderung: Kampfmechanik und Zielgruppe",
+  "releaseVersion": "20261014-herausforderung-combat-v1",
+  "verification": {
+    "targetedUnitTests": {
+      "passed": 55,
+      "failed": 0
+    },
+    "serverTests": {
+      "passed": 165,
+      "failed": 0,
+      "additionalDependencyTestPassed": true
+    },
+    "frontendTests": {
+      "passed": 1514,
+      "failed": 3,
+      "total": 1517
+    },
+    "existingFrontendFailures": [
+      "idwal-ship-cats: missing companion owner reference",
+      "idwal-ship-cats: creature/inventory owner mismatch",
+      "wolfshorn-combat-sheets: archive compared with an older export"
+    ],
+    "build": {
+      "passed": true,
+      "command": "node node_modules/vite/bin/vite.js build",
+      "warning": "Existing large application bundle"
+    },
+    "integration": {
+      "passed": 24,
+      "failed": 0,
+      "realFirestoreTransactions": true,
+      "project": "demo-aleria-herausforderung",
+      "duel": {
+        "passed": true,
+        "environment": "isolated Firestore emulator at 127.0.0.1:8186",
+        "project": "demo-aleria-herausforderung",
+        "sourceSceneReadAt": "2026-10-14T11:37:02.624Z",
+        "sourceCommentCount": 182,
+        "liveSceneWrites": 0,
+        "checks": [
+          "live-duel-copy-buff-counter-history",
+          "segment-order-before",
+          "segment-order-after",
+          "damage-healing-temp-resources-tamper",
+          "opponent-debuff-damage",
+          "explicit-counter-removal",
+          "all-combatants-selected",
+          "closed-and-new-fight-binding",
+          "failure-once",
+          "invalid-die-rollback-retry",
+          "invalid-configuration",
+          "resource-cap-combat-end-final-summary",
+          "concentration-save-and-linked-effects"
+        ]
+      },
+      "previousRewardScenarios": "Four scenarios with Gawain Draig and Guinevere Neidr, eleven inventory/reward callable tests rerun."
+    },
+    "browser": {
+      "passed": true,
+      "checks": [
+        "audience-three-modes-and-person-search",
+        "recipient-damage-formula-and-magic",
+        "named-resource-and-condition-picker",
+        "export-preserves-targets-and-responsive-layout",
+        "real-client-segment-order-before-and-after"
+      ],
+      "errors": [],
+      "missing": [],
+      "noFirebaseCalls": true
+    },
+    "previousAuthoringBrowser": {
+      "passed": true,
+      "includes": "Handelsregister search, items, copper, failure retry, AI template, draft import/export and original icon"
+    },
+    "screenshotsVisuallyInspected": [
+      "combat-editor-desktop.png",
+      "combat-editor-mobile.png",
+      "combat-effects-desktop.png",
+      "combat-effects-mobile.png"
+    ],
+    "productionSceneWrites": 0
+  },
+  "behavior": {
+    "audience": [
+      "all",
+      "combatants",
+      "selected"
+    ],
+    "independentEffectRecipient": true,
+    "combatEffects": [
+      "damage",
+      "healing",
+      "temporary-hit-points",
+      "restore-resource",
+      "spend-resource",
+      "remove-condition"
+    ],
+    "existingStatusMechanics": true,
+    "concentrationAndLinkedConditions": true,
+    "segmentOrder": true,
+    "serverBoundEncounter": true,
+    "historicalDicePreserved": true,
+    "failureClaimsIdempotent": true,
+    "atomicInventoryAndCombatGrants": true,
+    "aiExchangeContainsActiveCombatCatalog": true,
+    "publishedOriginalSymbolPreserved": true
+  },
+  "isolation": "The active scene was read only, cloned into separate emulator threads and tested with deterministic dice. The example challenge was not created in the live scene."
+}

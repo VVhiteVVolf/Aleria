@@ -51,7 +51,7 @@ test('rewards and penalties reject invalid money, references, quantities and eff
   assert.ok(validateHerausforderungBenefits({ effects: [condition(), condition()] }));
   assert.ok(validateHerausforderungBenefits({ effects: [{ ...condition(), mechanics: { skill: 31 } }] }));
   assert.ok(validateHerausforderungBenefits({ effects: [{ ...condition(), durationAmount: 0 }] }));
-  assert.deepEqual(normalizeHerausforderungBenefits(), { copper: 0, items: [], effects: [] });
+  assert.deepEqual(normalizeHerausforderungBenefits(), { copper: 0, items: [], effects: [], combatEffects: [] });
 });
 
 test('copper amounts preserve Pfennig precision and legacy gold amounts retain their value', () => {

@@ -4,6 +4,7 @@ import { synchronizeEquipmentFromInventory } from '../character-equipment/charac
 import { attachInventoryEquipment } from '../character-equipment/character-equipment-registration.js';
 import { createManualCombatCondition, buildCombatStatusChange, formatStatusDuration } from '../combat-status/combat-status-model.js';
 import { COMBAT_STATUS_PRESETS, STATUS_MODIFIERS, STATUS_ROLL_MODES } from '../combat-status/combat-status-catalog.js';
+import { normalizeChallengeCombatEffects, validateChallengeCombatEffects, normalizeChallengeRecipient, formatChallengeCombatResult } from './herausforderung-combat-effects.js';
 
 export const MAX_REWARD_ITEMS = 8;
 export const MAX_REWARD_EFFECTS = 4;
@@ -13,15 +14,16 @@ const copy = value => JSON.parse(JSON.stringify(value));
 export function normalizeHerausforderungBenefits(value = {}) {
   return {
     copper: value?.copper != null ? localizedNumber(value.copper) || 0 : (localizedNumber(value?.gold) || 0) * 1000,
+    combatEffects: normalizeChallengeCombatEffects(value?.combatEffects),
     items: (Array.isArray(value?.items) ? value.items : []).slice(0, MAX_REWARD_ITEMS).map(item => ({
       template: clean(item?.template, 240), moduleId: clean(item?.moduleId, 240), sourceRevision: clean(item?.sourceRevision, 160),
       quantity: Number(item?.quantity ?? 1), title: clean(item?.title), ...(item?.product ? { product: copy(item.product) } : {})
     })),
     effects: (Array.isArray(value?.effects) ? value.effects : []).slice(0, MAX_REWARD_EFFECTS).map(effect => ({
       effectId: clean(effect?.effectId, 40), presetId: clean(effect?.presetId, 80), name: clean(effect?.name, 160),
-      description: clean(effect?.description, 1600), kind: effect?.kind === 'debuff' ? 'debuff' : 'buff',
+      description: clean(effect?.description, 1600), kind: ['buff', 'debuff', 'condition'].includes(effect?.kind) ? effect.kind : 'buff',
       durationKind: clean(effect?.durationKind || 'actor-comments', 40), durationAmount: Number(effect?.durationAmount ?? 2),
-      mechanics: { ...(effect?.mechanics || {}) }
+      mechanics: { ...(effect?.mechanics || {}) }, ...(effect?.targetActorId ? normalizeChallengeRecipient(effect) : {})
     }))
   };
 }
@@ -30,6 +32,13 @@ export function validateHerausforderungBenefits(value = {}, { effectsOnly = fals
   if (value != null && (typeof value !== 'object' || Array.isArray(value))) return 'Belohnungen müssen als gültige Konfiguration vorliegen.';
   if (value?.items != null && !Array.isArray(value.items)) return 'Die Gegenstandsliste ist ungültig.';
   if (value?.effects != null && !Array.isArray(value.effects)) return 'Die Effektliste ist ungültig.';
+  for (const effect of value?.effects || []) {
+    if (!effect || typeof effect !== 'object' || Array.isArray(effect)) return 'Jeder Zustand muss als gültiges Objekt vorliegen.';
+    if (effect.kind != null && !['buff', 'debuff', 'condition'].includes(effect.kind)) return 'Die Zustandsart ist ungültig.';
+    if (effect.targetActorId != null && (typeof effect.targetActorId !== 'string' || effect.targetActorId.length > 240)) return 'Der Zustandsempfänger ist ungültig.';
+  }
+  const combatError = validateChallengeCombatEffects(value?.combatEffects ?? []);
+  if (combatError) return combatError;
   const normalized = normalizeHerausforderungBenefits(value);
   const input = value?.copper ?? (value?.gold != null ? (localizedNumber(value.gold) ?? NaN) * 1000 : 0);
   const copper = input === '' ? 0 : localizedNumber(input);
@@ -47,6 +56,8 @@ export function validateHerausforderungBenefits(value = {}, { effectsOnly = fals
     ids.add(effect.effectId);
     if (effect.presetId && !COMBAT_STATUS_PRESETS.some(preset => preset.id === effect.presetId)) return 'Die Effektvorlage ist unbekannt.';
     const allowed = new Set([...STATUS_MODIFIERS, ...STATUS_ROLL_MODES].map(([key]) => key));
+    const preset = COMBAT_STATUS_PRESETS.find(preset => preset.id === effect.presetId);
+    if (preset?.mechanics?.blocksActions) allowed.add('blocksActions');
     if (Object.keys(effect.mechanics).some(key => !allowed.has(key))) return 'Der Effekt enthält eine nicht unterstützte Mechanik.';
     try { createManualCombatCondition(effect, { id: effect.effectId }); }
     catch (error) { return error.message; }
@@ -56,7 +67,7 @@ export function validateHerausforderungBenefits(value = {}, { effectsOnly = fals
 
 export function hasHerausforderungBenefits(approach) {
   return [approach?.rewards, approach?.partialEffects, approach?.failureEffects].some(value =>
-    normalizeHerausforderungBenefits(value).copper > 0 || value?.items?.length || value?.effects?.length);
+    normalizeHerausforderungBenefits(value).copper > 0 || value?.items?.length || value?.effects?.length || value?.combatEffects?.length);
 }
 
 export function benefitsForTier(approach, tier) {
@@ -71,7 +82,8 @@ export function formatHerausforderungRewardReceipt(receipt) {
   const copper = receipt.copper ?? (receipt.gold || 0) * 1000;
   if (copper) parts.push(`${formatCopper(copper)} ins Inventar`);
   for (const item of receipt.items || []) parts.push(`${item.quantity}× ${item.name} ins Inventar`);
-  for (const effect of receipt.effects || []) parts.push(`${effect.name} · ${formatStatusDuration(effect)}`);
+  for (const effect of receipt.effects || []) parts.push(`${effect.actorName ? effect.actorName + ': ' : ''}${effect.name} · ${formatStatusDuration(effect)}`);
+  for (const effect of receipt.combatEffects || []) parts.push(formatChallengeCombatResult(effect));
   return parts.join(' · ');
 }
 
@@ -79,7 +91,7 @@ export function formatHerausforderungRewardReceipt(receipt) {
 // effect validation and clocks. This module only assembles a challenge grant.
 export function applyHerausforderungBenefits({ character, profile, state = {}, benefits, identity, challengeId, tier, encounterId = '', now }) {
   const normalized = normalizeHerausforderungBenefits(benefits);
-  const error = validateHerausforderungBenefits(normalized);
+  const error = validateHerausforderungBenefits(benefits);
   if (error) throw Error(error);
   let inventory = copy(character.inventory || {});
   inventory.items ||= [];

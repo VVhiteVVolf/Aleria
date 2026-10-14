@@ -14,6 +14,14 @@ test('unabhängige Figuren verhindern keine Rücknahme', () => {
   assert.equal(findLaterMechanicalDependency([{ id: 'a', characterId: 'gildas' }, { id: 'b', characterId: 'observer' }], 'a'), null);
 });
 
+test('eine spätere Herausforderung koppelt ihren Wirkungsempfänger an vorherige Kampfhandlungen', () => {
+  const hit = { id: 'hit', combatResolution: { actorId: 'ylva', targetId: 'gais' } };
+  const challenge = { id: 'challenge', characterId: 'gawain', commentSegments: [{ skillResolution: {
+    actorId: 'gawain', herausforderungCombatSnapshots: [{ actorId: 'gais', after: { current: 30 } }]
+  } }] };
+  assert.equal(findLaterMechanicalDependency([hit, challenge], 'hit')?.id, 'challenge');
+});
+
 test('bereits beendete Konzentration koppelt spätere unabhängige Änderungen nicht dauerhaft', () => {
   const cast = { id: 'cast', commentSegments: [{ combatResolution: { actorId: 'caster', targetId: 'ally',
     actorConcentrationSnapshot: { after: { instanceId: 'one', tracksConditions: true } },

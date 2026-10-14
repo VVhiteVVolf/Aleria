@@ -1,8 +1,9 @@
 import { getSkillDefinition } from '../skill-checks/skill-check-model.js?v=20260928-equipment-art-v4';
-import { normalizeHerausforderungBenefits, validateHerausforderungBenefits } from './herausforderung-rewards.js?v=20261014-herausforderung-rewards-v2';
+import { normalizeHerausforderungBenefits, validateHerausforderungBenefits } from './herausforderung-rewards.js?v=20261014-herausforderung-combat-v1';
+import { normalizeChallengeAudience, validateChallengeAudience } from './herausforderung-combat-context.js';
 
 export const HERAUSFORDERUNG_EVENT_KIND = 'herausforderung-event';
-export const HERAUSFORDERUNG_SCHEMA_VERSION = 3;
+export const HERAUSFORDERUNG_SCHEMA_VERSION = 4;
 export const MIN_HERAUSFORDERUNG_APPROACHES = 1;
 export const MAX_HERAUSFORDERUNG_APPROACHES = 6;
 export const HERAUSFORDERUNG_NARROW_FAILURE_MARGIN = 3;
@@ -13,6 +14,8 @@ export const HERAUSFORDERUNG_ALTERNATIVE_MODIFIER = -2;
 export function getHerausforderungValidationIssues(event = {}) {
   event = event && typeof event === 'object' ? event : {};
   const issues = [];
+  const audienceError = validateChallengeAudience(event.audience);
+  if (audienceError) issues.push({ field: 'audience', message: audienceError });
   if (!String(event.publicDescription || '').trim()) issues.push({ field: 'publicDescription', message: 'Eine öffentliche Beschreibung ist erforderlich.' });
   const approaches = Array.isArray(event.approaches) ? event.approaches : [];
   if (!approaches.length) issues.push({ field: 'approaches', message: 'Mindestens ein Ansatz ist erforderlich.' });
@@ -92,6 +95,9 @@ export function normalizeHerausforderungEvent(value = {}) {
     schemaVersion: HERAUSFORDERUNG_SCHEMA_VERSION,
     title: text(source.title, 180) || 'Herausforderung',
     publicDescription: text(source.publicDescription, 4000),
+    audience: normalizeChallengeAudience(source.audience),
+    combatBound: source.combatBound === true || source.audience?.mode === 'combatants',
+    combatContext: { encounterId: text(source.combatContext?.encounterId, 180) },
     approaches
   };
 }
@@ -122,6 +128,7 @@ export function collectHerausforderungApproaches(comments = []) {
       approaches.push({
         schemaVersion: HERAUSFORDERUNG_SCHEMA_VERSION,
         source: 'herausforderung',
+        audience: event.audience, combatBound: event.combatBound, combatContext: event.combatContext,
         id: getHerausforderungApproachTargetId(commentId, approach.approachId),
         commentId,
         approachId: approach.approachId,

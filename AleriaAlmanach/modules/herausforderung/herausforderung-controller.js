@@ -5,8 +5,8 @@ import {
   getHerausforderungValidationIssues,
   normalizeHerausforderungApproach,
   normalizeHerausforderungEvent
-} from './herausforderung-model.js?v=20261014-herausforderung-rewards-v2';
-import { collectHerausforderungProgress } from './herausforderung-progress.js?v=20261014-herausforderung-rewards-v2';
+} from './herausforderung-model.js?v=20261014-herausforderung-combat-v1';
+import { collectHerausforderungProgress } from './herausforderung-progress.js?v=20261014-herausforderung-combat-v1';
 import {
   ensureHerausforderungDialog,
   renderApproachRows,
@@ -15,9 +15,14 @@ import {
   setHerausforderungSubmitting,
   updateHerausforderungDraft,
   showHerausforderungValidation
-} from './herausforderung-ui.js?v=20261014-herausforderung-rewards-v2';
-import { mountHerausforderungRewardEditor } from './herausforderung-rewards-ui.js?v=20261014-herausforderung-rewards-v2';
-import { mountHerausforderungExchange } from './herausforderung-exchange-ui.js?v=20261014-herausforderung-rewards-v2';
+} from './herausforderung-ui.js?v=20261014-herausforderung-combat-v1';
+import { mountHerausforderungRewardEditor } from './herausforderung-rewards-ui.js?v=20261014-herausforderung-combat-v1';
+import { createChallengeCombatContext, normalizeChallengeAudience, getChallengeCombatBindingError, challengeRequiresCombat } from './herausforderung-combat-context.js';
+import { mountChallengeAudience, refreshChallengeAudience } from './herausforderung-audience-ui.js';
+import { resolveCombatProfile } from '../combat/combat-profile-resolver.js';
+import { deriveCombatStateFromComments, overlayCombatHitPointState } from '../combat/combat-state-model.js';
+import { getActiveCombatEncounter } from '../combat/combat-encounter-model.js';
+import { mountHerausforderungExchange } from './herausforderung-exchange-ui.js?v=20261014-herausforderung-combat-v1';
 
 let activeThreadId = '';
 let draftApproaches = [];
@@ -25,17 +30,25 @@ let submitting = false;
 let renderProgress = new Map();
 let operationId = '';
 let submittedDraft = '';
+let draftAudience = normalizeChallengeAudience();
+let draftCombatBound = false;
+let dialogCombatContext = { encounterId: '', participants: [] };
+let renderEncounter = null;
 
 function defaultApproaches() {
   return [normalizeHerausforderungApproach({}, 0)];
 }
 
 function renderDialog(activeIndex = 0) {
+  mountChallengeAudience(document.getElementById('herausforderung-overlay'), { audience: draftAudience,
+    getActors: () => globalThis.getAvailableCommentCharacters?.() || [], combatContext: dialogCombatContext,
+    getCombatRequired: () => challengeRequiresCombat(draftApproaches),
+    getCombatBound: () => draftCombatBound || challengeRequiresCombat(draftApproaches), onChange: value => { if (typeof value === 'boolean') draftCombatBound = value; updateHerausforderungDraft(buildDraft(), { actors: globalThis.getAvailableCommentCharacters?.() || [] }); } });
   renderApproachRows(draftApproaches, activeIndex);
   mountHerausforderungRewardEditor(document.getElementById('herausforderung-overlay'), { approaches: draftApproaches,
-    onChange: () => updateHerausforderungDraft(buildDraft()) });
-  mountHerausforderungExchange(document.getElementById('herausforderung-overlay'), { getDraft: buildDraft, onStatus: setHerausforderungStatus, onImport: importDraft });
-  updateHerausforderungDraft(buildDraft());
+    getCombatContext: () => dialogCombatContext, onChange: () => { refreshChallengeAudience(document.getElementById('herausforderung-overlay')); updateHerausforderungDraft(buildDraft(), { actors: globalThis.getAvailableCommentCharacters?.() || [] }); } });
+  mountHerausforderungExchange(document.getElementById('herausforderung-overlay'), { getDraft: buildDraft, getCombatContext: () => dialogCombatContext, onStatus: setHerausforderungStatus, onImport: importDraft });
+  updateHerausforderungDraft(buildDraft(), { actors: globalThis.getAvailableCommentCharacters?.() || [] });
 }
 
 function importDraft(event, issues) {
@@ -44,6 +57,8 @@ function importDraft(event, issues) {
   root.querySelector('[data-herausforderung-field="title"]').value = event.title;
   root.querySelector('[data-herausforderung-field="publicDescription"]').value = event.publicDescription;
   draftApproaches = event.approaches;
+  draftAudience = normalizeChallengeAudience(event.audience);
+  draftCombatBound = event.combatBound;
   operationId = crypto.randomUUID();
   submittedDraft = '';
   renderDialog();
@@ -61,6 +76,12 @@ function openDialog() {
   activeThreadId = String(globalThis.getCurrentCommentThreadId?.() || '');
   if (!activeThreadId) return;
   draftApproaches = defaultApproaches();
+  draftAudience = normalizeChallengeAudience();
+  const comments = globalThis.getCachedCommentsForThread?.(activeThreadId) || [];
+  const states = deriveCombatStateFromComments(comments);
+  const profiles = (globalThis.getAvailableCommentCharacters?.() || []).map(actor => overlayCombatHitPointState(resolveCombatProfile(actor), states.get(actor.id)));
+  dialogCombatContext = { ...createChallengeCombatContext(comments, profiles), actors: (globalThis.getAvailableCommentCharacters?.() || []).map(({ id, name }) => ({ actorId: id, name })) };
+  draftCombatBound = !!dialogCombatContext.encounterId;
   operationId = crypto.randomUUID();
   submittedDraft = '';
   const root = ensureHerausforderungDialog();
@@ -120,6 +141,7 @@ function buildDraft() {
   return {
     title: root?.querySelector('[data-herausforderung-field="title"]')?.value || 'Herausforderung',
     publicDescription: root?.querySelector('[data-herausforderung-field="publicDescription"]')?.value || '',
+    audience: draftAudience, combatBound: draftCombatBound || draftAudience.mode === 'combatants' || challengeRequiresCombat(draftApproaches),
     approaches: draftApproaches
   };
 }
@@ -127,6 +149,10 @@ function buildDraft() {
 async function submitEvent() {
   if (submitting || !activeThreadId) return;
   const draft = buildDraft();
+  if (draft.combatBound && !dialogCombatContext.encounterId) {
+    setHerausforderungStatus('Für diese Zielgruppe oder Wirkung ist ein aktiver Kampf erforderlich.', 'error');
+    return;
+  }
   const issues = getHerausforderungValidationIssues(draft);
   showHerausforderungValidation(issues);
   if (issues.length) {
@@ -174,6 +200,8 @@ function attemptApproach(trigger) {
   const threadId = globalThis.getCurrentCommentThreadId?.() || '';
   const comments = globalThis.getCachedCommentsForThread?.(threadId) || [];
   const target = collectHerausforderungApproaches(comments).find(approach => approach.commentId === trigger.dataset.commentId && approach.approachId === trigger.dataset.approachId);
+  const expired = target && getChallengeCombatBindingError(target, getActiveCombatEncounter(comments));
+  if (expired) { globalThis.showAppStatus?.(expired, 'error'); return; }
   if (!target || collectHerausforderungProgress(comments).get(target.id)?.solved) {
     globalThis.showAppStatus?.('Dieser Ansatz ist nicht mehr verfügbar.', 'error');
     return;
@@ -197,7 +225,7 @@ document.addEventListener('click', event => {
     updateApproachField(index, 'difficulty', Number(trigger.dataset.value));
     const input = trigger.closest('[data-herausforderung-approach-row]')?.querySelector('[data-herausforderung-field="difficulty"]');
     if (input) input.value = trigger.dataset.value;
-    updateHerausforderungDraft(buildDraft());
+    updateHerausforderungDraft(buildDraft(), { actors: globalThis.getAvailableCommentCharacters?.() || [] });
   }
 });
 
@@ -208,11 +236,11 @@ document.addEventListener('change', event => {
   if (!Number.isInteger(index)) return;
   if (field.dataset.herausforderungField === 'preferredSkill') {
     togglePreferredSkill(index, field.dataset.skillId, field.checked);
-    updateHerausforderungDraft(buildDraft());
+    updateHerausforderungDraft(buildDraft(), { actors: globalThis.getAvailableCommentCharacters?.() || [] });
     return;
   }
   if (field.dataset.herausforderungField) updateApproachField(index, field.dataset.herausforderungField, field.value);
-  updateHerausforderungDraft(buildDraft());
+  updateHerausforderungDraft(buildDraft(), { actors: globalThis.getAvailableCommentCharacters?.() || [] });
 });
 
 document.addEventListener('input', event => {
@@ -222,7 +250,7 @@ document.addEventListener('input', event => {
   if (!field.dataset.herausforderungField || field.dataset.herausforderungField === 'preferredSkill') return;
   if (Number.isInteger(index)) updateApproachField(index, field.dataset.herausforderungField, field.value);
   field.removeAttribute('aria-invalid');
-  updateHerausforderungDraft(buildDraft());
+  updateHerausforderungDraft(buildDraft(), { actors: globalThis.getAvailableCommentCharacters?.() || [] });
 });
 
 document.addEventListener('keydown', event => {
@@ -236,11 +264,11 @@ document.addEventListener('keydown', event => {
 
 globalThis.AleriaHerausforderung = Object.freeze({
   open: openDialog,
-  setRenderContext(comments = []) { renderProgress = collectHerausforderungProgress(comments); },
+  setRenderContext(comments = []) { renderProgress = collectHerausforderungProgress(comments); renderEncounter = getActiveCombatEncounter(comments); },
   isComment: comment => isHerausforderungComment(comment),
   renderComment: (comment, index) => {
     try {
-      return renderHerausforderungComment(comment, index, { progress: renderProgress });
+      return renderHerausforderungComment(comment, index, { progress: renderProgress, encounter: renderEncounter, actors: globalThis.getAvailableCommentCharacters?.() || [] });
     } catch (error) {
       console.error('herausforderung render failed:', error);
       return '';

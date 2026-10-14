@@ -20,6 +20,7 @@ import { applyCombatStatusCommentToStateMap } from '../combat-status/combat-stat
 import { reconcileConcentrationConditions } from './combat-condition-lifecycle.js?v=20260906-character-vitality-v1';
 import { getEffectiveCombatAttribute, getAttributeModifier, getUniversalDamageBonus } from './combat-profile-model.js?v=20260928-equipment-art-v4';
 import { getBurningArmorPenalty } from './combat-creature-traits.js';
+import { applyChallengeCombatSnapshots } from '../herausforderung/herausforderung-combat-snapshots.js';
 
 function finiteOrNull(value) {
   if (value == null || value === '') return null;
@@ -379,6 +380,7 @@ export function deriveCombatStateFromComments(comments = [], position = {}) {
         const previous = states.get(sourceId) || {};
         states.set(sourceId, { ...previous, abilities: snapshot.after.map(ability => ({ ...ability })) });
       });
+      applyChallengeCombatSnapshots(states, resolution.herausforderungCombatSnapshots || []);
       reconcileConcentrationConditions(states);
       for (const event of resolution.sceneItemEvents || []) applySceneItemEvent(sceneItems, event);
       if (resolution.sceneItemEvents?.length) applyDroppedWeaponsToStates(states, sceneItems);

@@ -18,8 +18,6 @@ export async function prepareHerausforderungRewards(database, transaction, event
       item.product = JSON.parse(JSON.stringify(product));
       item.title = product.title;
     }
-    for (const effect of approach.rewards.effects) effect.kind = 'buff';
-    for (const bundle of [approach.partialEffects, approach.failureEffects]) for (const effect of bundle.effects) effect.kind = 'debuff';
   }
   return event;
 }
@@ -30,9 +28,9 @@ export function herausforderungEffectClaimId(challengeId, actorId, tier) {
 
 export function applyHerausforderungRewardToAttempt({ challenge, resolution, actor, profile, state, inventory, equipment, identity, encounterId }) {
   const benefits = benefitsForTier(challenge, resolution.herausforderungTier);
-  if (!benefits?.copper && !benefits?.items?.length && !benefits?.effects?.length) return null;
+  if (!benefits?.copper && !benefits?.items?.length && !benefits?.effects?.length && !benefits?.combatEffects?.length) return null;
   try {
-    return applyHerausforderungBenefits({ character: { ...actor, inventory, combatProfile: { ...actor.combatProfile, ...equipment } }, profile, state, benefits,
+    return applyHerausforderungBenefits({ character: { ...actor, inventory, combatProfile: { ...actor.combatProfile, ...equipment } }, profile, state, benefits: { ...benefits, effects: [], combatEffects: [] },
       identity, challengeId: challenge.id, tier: resolution.herausforderungTier, encounterId, now: resolution.validatedAt });
   } catch (error) { throw new HttpsError('failed-precondition', error.message); }
 }

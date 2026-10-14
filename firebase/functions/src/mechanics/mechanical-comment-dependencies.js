@@ -28,6 +28,10 @@ function actorIds(comment = {}) {
     add(segment.actorId || segment.characterId);
     add(segment.inventoryUse?.actorId);
     add(segment.inventoryUse?.sceneItemEvent?.sourceActorId);
+    add(segment.skillResolution?.actorId);
+    for (const snapshot of segment.skillResolution?.herausforderungCombatSnapshots || []) add(snapshot.actorId);
+    for (const snapshot of segment.skillResolution?.ruleResourceSnapshots || []) add(snapshot.sourceActorId);
+    for (const snapshot of segment.skillResolution?.ruleAbilitySnapshots || []) add(snapshot.sourceActorId);
   }
   for (const resolution of getEncounterResolutionGroups(comment).flat()) {
     add(resolution.actorId); add(resolution.targetId);

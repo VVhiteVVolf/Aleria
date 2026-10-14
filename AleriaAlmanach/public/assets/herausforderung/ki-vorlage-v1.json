@@ -22,6 +22,8 @@
       "Nur Spielleitung oder Redaktion darf Belohnungen und mechanische Folgen veröffentlichen."
     ],
     "syntax": {
+      "audience": "Objekt { mode: all | combatants | selected, actorIds: [] }. all: alle Szenenteilnehmer; combatants: nur aktive Teilnehmer des gebundenen Kampfes; selected: eine bis 40 reale Figuren-IDs aus dem Figurenkatalog. Diese Zielgruppe bestimmt, wer würfeln darf.",
+      "combatBound": "Boolean. true bindet die Herausforderung an den aktuellen Kampf. Die echte encounterId wird ausschließlich vom Server gesetzt. Bei Kampfteilnehmer-Zielgruppe, fremden Empfängern oder einer Dauer bis Kampfende zwingend.",
       "title": "Öffentlich, maximal 180 Zeichen.",
       "publicDescription": "Öffentlich, erforderlich, maximal 4.000 Zeichen.",
       "approach": {
@@ -36,7 +38,8 @@
       "rewards": {
         "copper": "Zahl in Kupfertalern (KT), 0 bis 1.000.000.000, höchstens zwei Nachkommastellen. Taler meint Kupfertaler. 1 KT = 100 Eisenpfennig; 2.5 bedeutet 2,5 KT. Gold ist kein Eingabefeld.",
         "items": "Maximal acht Referenzen aus itemTemplates. Nur template, moduleId, sourceRevision, title und quantity verwenden. Keine erfundenen IDs, product-Snapshots, Inventar-IDs oder Kampfdaten. Neue Gegenstände zuerst im Handelsregister anlegen.",
-        "effects": "Maximal vier Buffs."
+        "effects": "Maximal vier Buffs, Debuffs oder Zustände. Art und Empfänger ausdrücklich wählen.",
+        "combatEffects": "Maximal acht direkte Kampfwirkungen: Schaden, Heilung, temporäre TP, Ressource auffüllen/entziehen oder Zustand entfernen."
       },
       "failureBundles": "partialEffects und failureEffects haben copper: 0, items: [] und höchstens vier effects. Geldverlust oder Gegenstandsverlust nicht erfinden; dafür sind diese Felder nicht vorgesehen.",
       "quantity": "Ganze Zahl 1–9.999; Waffen und Rüstungen immer quantity: 1. Tiere sind keine Gegenstandsbelohnungen.",
@@ -45,11 +48,24 @@
         "presetId": "Eine erlaubte effectPresets.id oder leer für einen eigenen Effekt.",
         "name": "Erforderlich, maximal 160 Zeichen.",
         "description": "Erzählerische Beschreibung, maximal 1.600 Zeichen. Freitext erfindet keine zusätzliche Mechanik.",
-        "kind": "buff in rewards, debuff in Fehlschlagsfolgen.",
+        "kind": "buff, debuff oder condition nach tatsächlicher Wirkung.",
+        "targetActorId": "Leer für die würfelnde Figur; sonst eine aktive combat.participants.actorId. Dies ist der Wirkungsempfänger, unabhängig von der Zielgruppe der Herausforderung.",
         "durationKind": "Ein erlaubter durations.id-Wert.",
         "durationAmount": "Bei actor-comments und scene-comments ganze Zahl 1–999, sonst 2 als Platzhalter.",
         "mechanics": "Nur die unten aufgeführten modifierKeys und rollModeKeys. Ganzzahlige Boni/Mali −30 bis +30. Wurfarten: normal, advantage oder disadvantage. Eigene Wirkungsfelder werden nicht unterstützt."
       },
+      "combatEffect": {
+        "effectId": "Eindeutig, maximal 40 Zeichen.",
+        "type": "Eine combatEffectTypes.id.",
+        "targetActorId": "Leer für die würfelnde Figur oder eine aktive Kampfteilnehmer-ID.",
+        "amount": "Fester ganzzahliger Betrag 1–10000, oder 0 bei Formel/Zustandsentfernung.",
+        "formula": "Optional z. B. 1W6+2; höchstens 20 Würfel W4/W6/W8/W10/W12. Nur für Schaden, Heilung oder temporäre TP. Bei Formel amount: 0.",
+        "damageType": "Bei Schaden die tatsächliche Schadensart, z. B. Stich oder Feuer.",
+        "magical": "Boolean; berücksichtigt magische Resistenzen.",
+        "resourceId": "Bei Ressourcenwirkung eine vorhandene Ressourcen-ID des Empfängers.",
+        "conditionId": "Bei remove-condition die tatsächliche aktive Zustands-ID. Kampfaura-Zustände können so nicht entfernt werden."
+      },
+      "combatRules": "Rüstung, Resistenzen, Schutzladungen und temporäre TP nutzen die Kampflogik. Heilung ist auf maximale TP begrenzt; temporäre TP verwenden den höheren Wert und stapeln nicht. Kritischer Fertigkeitserfolg verdoppelt Schaden/Heilung nicht. Folgen werden an ihrer Segmentposition angewendet; frühere Handlungen ändern sich nicht.",
       "duration": "Neue Effekte verlieren im Vergabebeitrag keine Laufzeit. Eigene Beiträge, Szenenbeiträge, Rast und Kampfende nutzen die bestehenden Zustandsuhren."
     },
     "examples": {
@@ -88,6 +104,37 @@
     }
   },
   "catalog": {
+    "combat": {
+      "encounterId": "",
+      "participants": []
+    },
+    "actors": [],
+    "combatEffectTypes": [
+      {
+        "id": "damage",
+        "label": "Schaden"
+      },
+      {
+        "id": "healing",
+        "label": "Heilung"
+      },
+      {
+        "id": "temporary-hit-points",
+        "label": "Temporäre TP"
+      },
+      {
+        "id": "restore-resource",
+        "label": "Ressource auffüllen"
+      },
+      {
+        "id": "spend-resource",
+        "label": "Ressource entziehen"
+      },
+      {
+        "id": "remove-condition",
+        "label": "Zustand entfernen"
+      }
+    ],
     "skills": [
       {
         "id": "persuasion",
@@ -3627,9 +3674,17 @@
   },
   "challenge": {
     "kind": "herausforderung-event",
-    "schemaVersion": 3,
+    "schemaVersion": 4,
     "title": "Neue Herausforderung",
     "publicDescription": "",
+    "audience": {
+      "mode": "all",
+      "actorIds": []
+    },
+    "combatBound": false,
+    "combatContext": {
+      "encounterId": ""
+    },
     "approaches": [
       {
         "approachId": "ansatz-1",
@@ -3641,16 +3696,19 @@
         "failureConsequence": "",
         "rewards": {
           "copper": 0,
+          "combatEffects": [],
           "items": [],
           "effects": []
         },
         "partialEffects": {
           "copper": 0,
+          "combatEffects": [],
           "items": [],
           "effects": []
         },
         "failureEffects": {
           "copper": 0,
+          "combatEffects": [],
           "items": [],
           "effects": []
         }

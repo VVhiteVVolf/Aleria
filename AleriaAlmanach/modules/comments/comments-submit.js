@@ -79,6 +79,7 @@ async function submitComment() {
     if (window.AleriaSkillChecks?.handleSubmission) {
       const skillResult = await window.AleriaSkillChecks.handleSubmission({
         threadId,
+        deferToCombat: window.AleriaCombat?.hasCombatSegments?.(commentSegments) === true,
         text,
         charName: name,
         charTitle: title,
@@ -195,7 +196,8 @@ async function submitComment() {
       || (segment?.inventoryUse?.actorPersistence?.kind === 'character'
         && segment?.inventoryUse?.actorPersistence?.recordId)
     ));
-    if (backend && !backend._localFallback && !hasPersistentCombatTransaction && !commentSegments.some(segment => segment.kind === 'sceneitem')) {
+    const hasSkillAttempt = commentSegments.some(segment => segment.mechanicMode === 'skill' || segment.skillResolution);
+    if (backend && !backend._localFallback && !hasPersistentCombatTransaction && !hasSkillAttempt && !commentSegments.some(segment => segment.kind === 'sceneitem')) {
       try {
         const localBackend = getLocalCommentBackend();
         const hasProfileTransaction = (commentMetadata.commentSegments || [])

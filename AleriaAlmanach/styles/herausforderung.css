@@ -174,3 +174,11 @@
   .herausforderung-attempt-btn { margin-left: auto; }
   .herausforderung-reward-grid, .herausforderung-reward-modifiers { grid-template-columns: 1fr 1fr; }
 }
+
+.herausforderung-audience { display:grid; gap:12px; padding:16px; border:1px solid #b49b7366; border-radius:5px; background:#f3ead8; }
+.herausforderung-audience-people { display:grid; gap:8px; max-height:220px; overflow:auto; padding:8px; }
+.herausforderung-audience-people label, .herausforderung-fields .herausforderung-combat-checkbox { display:flex; align-items:center; gap:8px; }
+.herausforderung-audience-people input, .herausforderung-fields .herausforderung-combat-checkbox input { width:16px; height:16px; flex:0 0 16px; padding:0; accent-color:#756947; }
+.herausforderung-combat-effects { display:grid; gap:10px; border-top:1px solid #b49b7366; padding-top:12px; }
+.herausforderung-combat-effects h4 { margin:0; font:13px Cinzel,Georgia,serif; }
+.herausforderung-scope { font-size:11px; color:#c7b696; }

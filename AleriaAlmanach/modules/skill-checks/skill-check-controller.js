@@ -1,8 +1,11 @@
+import { previewChallengeCombatBenefits, collectChallengeGrantKeys } from '../herausforderung/herausforderung-combat-preview.js';
+import { getChallengeCombatBindingError } from '../herausforderung/herausforderung-combat-context.js';
+import { getActiveCombatEncounter } from '../combat/combat-encounter-model.js';
 import { sceneDiceService } from '../scene-dice/dice-service.js?v=20261013-performance-v1';
 import { CombatProfileResolver } from '../combat/combat-profile-resolver.js?v=20260928-equipment-art-v4';
 import { createSceneSkillProfileResolver } from './skill-scene-profile.js?v=20260928-equipment-art-v4';
 import { getSceneRecoveryDayKey } from '../scene-time/scene-recovery-day.js';
-import { formatHerausforderungRewardReceipt } from '../herausforderung/herausforderung-rewards.js?v=20261014-herausforderung-rewards-v2';
+import { formatHerausforderungRewardReceipt } from '../herausforderung/herausforderung-rewards.js?v=20261014-herausforderung-combat-v1';
 import {
   SKILL_DEFINITIONS,
   buildSkillRollNotation,
@@ -526,13 +529,15 @@ async function resolveSegment(segment, submission, actors, challenges, index, to
   if (!allowed.some(skill => skill.id === settings.skillId)) throw new Error('Wähle für jeden Fertigkeitsversuch eine zur Blase passende Fertigkeit.');
   const targetChallenge = challenges.find(challenge => challenge.id === settings.targetChallengeId) || null;
   if (settings.targetChallengeId && !targetChallenge) throw new Error('Die gewählte verdeckte Herausforderung ist nicht mehr verfügbar.');
+  const eligibility = targetChallenge && getChallengeCombatBindingError(targetChallenge, getActiveCombatEncounter(resolutionContext.comments || []), actor.id);
+  if (eligibility) throw Error(eligibility);
   const profile = resolutionContext.profileResolver.resolve(actor);
   const ruleContext = buildClientSkillRuleContext(segment, actor, profile, targetChallenge, actors, resolutionContext.profileResolver);
   const stage = document.querySelector('[data-skill-dice-stage]');
   if (stage) stage.innerHTML = '';
   const definition = getSkillDefinition(settings.skillId);
   setResolutionStatus(total > 1 ? `Fertigkeitsversuch ${index + 1} von ${total} …` : `${definition?.label || 'Fertigkeit'} wird gewürfelt …`);
-  const resolution = await skillResolutionService.resolve({
+  let resolution = await skillResolutionService.resolve({
     actor,
     settings,
     challenge: targetChallenge,
@@ -547,6 +552,9 @@ async function resolveSegment(segment, submission, actors, challenges, index, to
     rulePeriods: resolutionContext.rulePeriods,
     usedRuleFrequencyKeys: resolutionContext.usedRuleFrequencyKeys
   });
+  resolution = await previewChallengeCombatBenefits({ challenge: targetChallenge, resolution, actors,
+    profileResolver: resolutionContext.profileResolver, comments: resolutionContext.comments || [],
+    grantedKeys: resolutionContext.grantedKeys, container: stage });
   resolutionContext.usedRuleFrequencyKeys = new Set(resolution.usedRuleFrequencyKeys || []);
   resolutionContext.profileResolver.appendResolution(resolution);
   return { ...resolution, actorProfileSnapshot: profile.aiSnapshot || null, originalAttempt: String(segment.text || '') };
@@ -570,10 +578,10 @@ function buildStoredChallenge(segment) {
 
 async function handleSubmission(submission = {}) {
   const segments = Array.isArray(submission.commentSegments) ? submission.commentSegments : [];
-  const skillSegments = segments.filter(segment => normalizeMechanicMode(segment?.mechanicMode, segment) === 'skill');
+  const skillSegments = submission.deferToCombat ? [] : segments.filter(segment => normalizeMechanicMode(segment?.mechanicMode, segment) === 'skill');
   const hasChallenges = segments.some(segment => segment?.skillChallengeEnabled
     && String(segment.kind || segment.commentKind || '') === 'performance');
-  if (!skillSegments.length && !hasChallenges) return { handled: false, published: false };
+  if (!skillSegments.length && !hasChallenges && !submission.deferToCombat) return { handled: false, published: false };
   const actors = mergeActors(latestComposerContext?.sceneActors || []);
   const challenges = getComposerChallenges(submission.threadId || '');
   const comments = globalThis.getCachedCommentsForThread?.(submission.threadId || '') || [];
@@ -583,7 +591,7 @@ async function handleSubmission(submission = {}) {
     day: getSceneRecoveryDayKey(submission.threadId, comments)
   };
   const resolutionContext = {
-    rulePeriods,
+    rulePeriods, comments, grantedKeys: collectChallengeGrantKeys(comments),
     profileResolver: createSceneSkillProfileResolver(comments, { commentId: rulePeriods.comment, recoveryDayKey: rulePeriods.day }),
     usedRuleFrequencyKeys: deriveCombatRuleFrequencyKeys(comments, rulePeriods)
   };
@@ -753,6 +761,13 @@ globalThis.AleriaSkillChecks = Object.freeze({
     });
   },
   handleSubmission,
+  async resolveDraftSegment(segment, submission, resolutionContext) {
+    const actors = mergeActors(latestComposerContext?.sceneActors || []);
+    const challenges = getComposerChallenges(submission.threadId || '');
+    openResolutionDialog();
+    try { return await resolveSegment(segment, submission, actors, challenges, 0, 1, resolutionContext); }
+    finally { closeResolutionDialog(); }
+  },
   narrateCommittedMechanics,
   renderEvaluation,
   renderChallengeStatus,

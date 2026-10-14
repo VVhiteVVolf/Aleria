@@ -287,23 +287,18 @@ export async function commitCombatCommentOperation(request, {
       delete clean.inventoryUse;
       return clean;
     });
-    const validatedSkills = await validateSkillCommentSegments({
-      database,
-      transaction,
-      request,
-      metadata: { ...metadata, commentSegments: enhancedSegments },
-      history: trustedHistory,
-      challengeHistory: allHistory.filter(comment => isTrustedSkillChallengeComment(comment) || isTrustedHerausforderungComment(comment)),
-      rulePeriods,
-      usedRuleFrequencyKeys,
-      entryId,
-      workingStates,
-      persistentUpdates,
-      workingInventories,
-      deferClaimWrites: true
-    });
-    enhancedSegments = validatedSkills.commentSegments;
-    usedRuleFrequencyKeys = validatedSkills.usedRuleFrequencyKeys;
+    const skillClaimWrites = [];
+    const locallyClaimedSkills = new Set();
+    const resolveSkillEntry = async entry => {
+      const validated = await validateSkillCommentSegments({ database, transaction, request,
+        metadata: { ...metadata, commentSegments: enhancedSegments }, history: trustedHistory,
+        challengeHistory: allHistory.filter(comment => isTrustedSkillChallengeComment(comment) || isTrustedHerausforderungComment(comment)),
+        rulePeriods, usedRuleFrequencyKeys, entryId, workingStates, persistentUpdates, workingInventories,
+        deferClaimWrites: true, segmentIndexes: new Set([entry.index]), locallyClaimed: locallyClaimedSkills });
+      enhancedSegments = validated.commentSegments;
+      usedRuleFrequencyKeys = validated.usedRuleFrequencyKeys;
+      skillClaimWrites.push(...(validated.claimWrites || []));
+    };
 
     const resolveInventoryEntry = async entry => {
       const descriptor = inventoryDescriptor(entry);
@@ -396,10 +391,13 @@ export async function commitCombatCommentOperation(request, {
     const startedAreaActions = new Map();
     const pendingWeaponDrops = new Set();
     const dropKey = profile => `${profile.characterId}:${profile.weapon?.inventoryItemId || `weapon:${profile.weapon?.id}`}`;
-    let nextInventoryEntry = 0;
+    const precedingEntries = [...inventoryEntries.map(entry => ({ ...entry, mechanic: 'inventory' })),
+      ...skillEntries.map(entry => ({ ...entry, mechanic: 'skill' }))].sort((a, b) => a.index - b.index);
+    let nextPrecedingEntry = 0;
+    const resolvePreceding = async entry => entry.mechanic === 'skill' ? resolveSkillEntry(entry) : resolveInventoryEntry(entry);
     for (const { index, segment, submitted, targetIndex, targetCount, primary } of entries) {
-      while (nextInventoryEntry < inventoryEntries.length && inventoryEntries[nextInventoryEntry].index <= index) {
-        await resolveInventoryEntry(inventoryEntries[nextInventoryEntry++]);
+      while (nextPrecedingEntry < precedingEntries.length && precedingEntries[nextPrecedingEntry].index <= index) {
+        await resolvePreceding(precedingEntries[nextPrecedingEntry++]);
       }
       const actorPersistence = normalizePersistence(submitted.actorPersistence, submitted.actorId);
       const targetPersistence = normalizePersistence(submitted.targetPersistence, submitted.targetId);
@@ -630,9 +628,9 @@ export async function commitCombatCommentOperation(request, {
       }
     }
 
-    while (nextInventoryEntry < inventoryEntries.length) await resolveInventoryEntry(inventoryEntries[nextInventoryEntry++]);
+    while (nextPrecedingEntry < precedingEntries.length) await resolvePreceding(precedingEntries[nextPrecedingEntry++]);
     criticalLifecycle = lifecycle.finish({ ...metadata, commentSegments: enhancedSegments });
-    persistSkillChallengeClaims(transaction, validatedSkills.claimWrites);
+    persistSkillChallengeClaims(transaction, skillClaimWrites);
     const mechanicalUndo = {};
     profileUpdates = [...persistentUpdates.values()].map(update => {
       const values = { updatedAt: new Date(nowClient).toISOString() };

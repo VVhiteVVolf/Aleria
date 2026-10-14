@@ -1,3 +1,5 @@
+import { applySkillRuntimeSnapshots } from '../skill-checks/skill-runtime-state.js';
+import { collectChallengeGrantKeys } from '../herausforderung/herausforderung-combat-preview.js';
 import { prepareCombatEquipment, reserveCombatEquipment } from './combat-equipment-preparation.js?v=20260928-equipment-art-v4';
 import { beginCriticalContribution } from '../combat-critical/combat-critical-lifecycle.js';
 import { estimateCombatHitChance } from './combat-action-estimates.js?v=20260928-equipment-art-v4';
@@ -30,7 +32,7 @@ import {
   getResolutionTargetConcentrationState,
   getResolutionTargetResourceState,
   overlayCombatHitPointState
-} from './combat-state-model.js?v=20260928-equipment-art-v4';
+} from './combat-state-model.js?v=20261014-herausforderung-combat-v1';
 import {
   getReservedEquipmentSwitchWeaponId,
   withEquippedCombatWeapon
@@ -893,9 +895,36 @@ async function handleSubmission(submission = {}) {
   activateResolutionDialog();
   try {
     const resolutionGroups = [];
+    const skillResolutions = new Map();
+    const skillContext = {
+      comments: cachedComments,
+      grantedKeys: collectChallengeGrantKeys(cachedComments),
+      rulePeriods: stateContext.rulePeriods,
+      usedRuleFrequencyKeys: stateContext.usedRuleFrequencyKeys,
+      profileResolver: {
+        resolve: actor => {
+          const profile = resolveActorProfile(actor, {
+            actorId: actor.id, storedStates: stateContext.storedStates, workingStates: stateContext.workingStates,
+            resetCommentResources: true, commentResourceResetActors: stateContext.commentResourceResetActors,
+            recoveryDayKey: stateContext.recoveryDayKey
+          });
+          const previous = stateContext.workingStates.get(actor.id) || {};
+          stateContext.workingStates.set(actor.id, { ...previous, resources: profile.resources });
+          return profile;
+        },
+        appendResolution: resolution => applySkillRuntimeSnapshots(stateContext.workingStates, resolution)
+      }
+    };
     for (const segment of segments) {
       previewConsumedItem(segment, characters, submission.characterId, stateContext.workingStates, stateContext.storedStates,
         { sceneItems: stateContext.sceneItems, resourceResetActors: stateContext.commentResourceResetActors, recoveryDayKey: stateContext.recoveryDayKey });
+      if (String(segment.mechanicMode) === 'skill') {
+        if (!globalThis.AleriaSkillChecks?.resolveDraftSegment) throw Error('Die Fertigkeitsauswertung ist noch nicht geladen.');
+        skillContext.usedRuleFrequencyKeys = stateContext.usedRuleFrequencyKeys;
+        const resolution = await globalThis.AleriaSkillChecks.resolveDraftSegment(segment, submission, skillContext);
+        skillResolutions.set(segment, resolution);
+        stateContext.usedRuleFrequencyKeys = skillContext.usedRuleFrequencyKeys;
+      }
       if (!isCombatSegment(segment)) continue;
       resolutionGroups.push(await resolveCombatSegment(
         segment,
@@ -910,6 +939,7 @@ async function handleSubmission(submission = {}) {
     let resolutionIndex = 0;
     const enhancedSegments = segments.map(segment => {
       const { clientSegmentId, ...storedSegment } = segment;
+      if (skillResolutions.has(segment)) return { ...storedSegment, skillResolution: skillResolutions.get(segment) };
       if (!isCombatSegment(storedSegment)) return storedSegment;
       const combatResolutions = resolutionGroups[resolutionIndex++] || [];
       const combatResolution = combatResolutions[0];
@@ -1043,6 +1073,7 @@ globalThis.AleriaCombat = Object.freeze({
     resolvedCombatTargetCache = new WeakMap();
   },
   handleSubmission,
+  hasCombatSegments: segments => (segments || []).some(isCombatSegment),
   narrateCommittedMechanics,
   renderEvaluation: renderCombatEvaluation
 });

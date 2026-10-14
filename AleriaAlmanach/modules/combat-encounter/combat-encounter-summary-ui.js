@@ -23,6 +23,7 @@ export function renderEncounterSummary(event, { preview = false, comments = [] }
     <h3>${preview ? 'Vorschau · ' : ''}${escape(describeEncounterOutcome(event))}</h3>
     ${reason ? `<p>${escape(reason)}</p>` : ''}
     ${summary ? `<p>${summary.actionCount} ausgewertete ${summary.actionCount === 1 ? 'Kampfhandlung' : 'Kampfhandlungen'}</p><div class="combat-encounter-summary-scroll"><table><caption>Trefferpunkte und Verbrauch bis zum Abschluss</caption><thead><tr><th>Figur</th><th>TP Beginn → Ende</th><th>Handlungen</th><th>Schaden verursacht</th><th>Ressourcen verbraucht</th></tr></thead><tbody>${rows}</tbody></table></div>` : ''}
+    ${summary?.challengeEffects ? `<p>Herausforderungen: ${summary.challengeEffects.attempts} Versuche · ${summary.challengeEffects.effects} Wirkungen · ${summary.challengeEffects.damage} Schaden · ${summary.challengeEffects.healing} TP geheilt · ${summary.challengeEffects.temporaryHitPoints} temporäre TP erhalten</p>` : ''}
     ${highlights ? `<details><summary>Besondere Momente</summary><ul>${highlights}</ul></details>` : ''}
     ${preview ? `<p><strong>${event.experience?.total || 0} EP werden vergeben.</strong>${awards.length ? ` ${awards.map(award => `${escape(award.name)} +${award.experience} EP`).join(' · ')}` : ''}</p>` : ''}
     <p class="combat-encounter-summary-note">Kampfgebundene Zustände, Konzentration und Kanalisierung der Beteiligten enden. Trefferpunkte und verbrauchte Ressourcen werden nicht aufgefüllt.</p>

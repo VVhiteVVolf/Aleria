@@ -2,6 +2,7 @@ import { FieldValue, getFirestore } from 'firebase-admin/firestore';
 import { createHash } from 'node:crypto';
 import { HttpsError, onCall } from 'firebase-functions/v2/https';
 import { getHerausforderungValidationIssues, normalizeHerausforderungEvent } from '../generated/herausforderung/herausforderung-model.js';
+import { bindHerausforderungCombatContext } from './herausforderung-combat-effects.js';
 import { assertHerausforderungRewardAuthority, prepareHerausforderungRewards } from './herausforderung-rewards.js';
 
 const MAX_COMMENT_BYTES = 700_000;
@@ -62,6 +63,7 @@ export const commitHerausforderung = onCall({
         return;
       }
     }
+    await bindHerausforderungCombatContext(database, transaction, event, entryId);
     await prepareHerausforderungRewards(database, transaction, event);
     transaction.create(ref, {
       entryId,

@@ -1,3 +1,4 @@
+import { summarizeChallengeCombatReceipts, normalizeChallengeCombatSummary } from '../herausforderung/herausforderung-combat-summary.js';
 import { getCombatResolutionTree, getCommentCombatResolutionGroups } from './combat-resolution-tree.js';
 export { getCommentCombatResolutionGroups as getEncounterResolutionGroups } from './combat-resolution-tree.js';
 // Persisted, bounded factual summaries. No DOM, profile writes or inferred story.
@@ -63,6 +64,7 @@ export function buildCombatEncounterSummary({ encounterId, participants = [], co
   let inEncounter = false;
   let actionCount = 0;
   const highlights = [];
+  const challengeEffects = { attempts: 0, effects: 0, damage: 0, healing: 0, temporaryHitPoints: 0 };
   for (const comment of comments) {
     const event = comment.combatEncounter;
     if (event?.encounterId === encounterId) {
@@ -72,6 +74,8 @@ export function buildCombatEncounterSummary({ encounterId, participants = [], co
     }
     if (!inEncounter) continue;
     if (event?.encounterId === encounterId && event.operation === 'end') break;
+    const challenge = summarizeChallengeCombatReceipts(comment, encounterId, ids);
+    for (const key of Object.keys(challengeEffects)) challengeEffects[key] += challenge[key];
     for (const group of getCommentCombatResolutionGroups(comment)) {
       const relevant = group.filter(resolution => ids.has(resolution.actorId) || ids.has(resolution.targetId));
       if (!relevant.length) continue;
@@ -100,7 +104,7 @@ export function buildCombatEncounterSummary({ encounterId, participants = [], co
       }
     }
   }
-  return normalizeCombatEncounterSummary({ actionCount, highlights: highlights.slice(-8), participants: participants.map(participant => ({
+  return normalizeCombatEncounterSummary({ ...(challengeEffects.attempts ? { challengeEffects } : {}), actionCount, highlights: highlights.slice(-8), participants: participants.map(participant => ({
     actorId: participant.actorId, name: participant.name, before: participant.entrySnapshot,
     after: captureEncounterSnapshot(profiles.get(participant.actorId), states.get(participant.actorId)),
     actions: metrics.get(participant.actorId).actions, damage: metrics.get(participant.actorId).damage,
@@ -113,7 +117,7 @@ export function buildCombatEncounterSummary({ encounterId, participants = [], co
 export function reconcileEncounterSummaryMetrics(event = {}, comments = []) {
   if (!event.summary || !comments.some(c => c.combatEncounter?.encounterId === event.encounterId && c.combatEncounter.operation === 'start')) return event.summary;
   const computed = buildCombatEncounterSummary({ encounterId: event.encounterId, participants: event.participants || [], comments });
-  return { ...event.summary, actionCount: computed.actionCount, highlights: computed.highlights,
+  return { ...event.summary, ...(computed.challengeEffects ? { challengeEffects: computed.challengeEffects } : {}), actionCount: computed.actionCount, highlights: computed.highlights,
     participants: event.summary.participants.map(participant => {
       const metric = computed.participants.find(p => p.actorId === participant.actorId);
       return metric ? { ...participant, actions: metric.actions, damage: metric.damage, costs: metric.costs } : participant;
@@ -122,7 +126,7 @@ export function reconcileEncounterSummaryMetrics(event = {}, comments = []) {
 
 export function normalizeCombatEncounterSummary(value) {
   if (!value || typeof value !== 'object') return null;
-  return { actionCount: number(value.actionCount) || 0,
+  return { ...(value.challengeEffects ? { challengeEffects: normalizeChallengeCombatSummary(value.challengeEffects) } : {}), actionCount: number(value.actionCount) || 0,
     highlights: (Array.isArray(value.highlights) ? value.highlights : []).slice(-8).map(item => ({
       commentId: text(item.commentId), actionName: text(item.actionName), actorName: text(item.actorName), targetName: text(item.targetName),
       type: item.type === 'defeat' ? 'defeat' : 'critical'

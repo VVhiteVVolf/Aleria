@@ -19,6 +19,8 @@ import { classifyHerausforderungOutcome, collectHerausforderungApproaches } from
 import { ProvidedDiceAdapter } from './provided-dice-adapter.js';
 import { benefitsForTier } from '../generated/herausforderung/herausforderung-rewards.js';
 import { applyHerausforderungRewardToAttempt, herausforderungEffectClaimId } from './herausforderung-rewards.js';
+import { challengeCombatDescriptors, stageHerausforderungCombatBenefits } from './herausforderung-combat-effects.js';
+import { getChallengeCombatBindingError } from '../generated/herausforderung/herausforderung-combat-context.js';
 import { getActiveCombatEncounter } from '../generated/combat/combat-encounter-model.js';
 
 const RECORD_KINDS = new Set(['character', 'creature']);
@@ -110,9 +112,11 @@ export async function validateSkillCommentSegments({
   workingStates = new Map(),
   persistentUpdates = new Map(),
   workingInventories = new Map(),
-  deferClaimWrites = false
+  deferClaimWrites = false,
+  segmentIndexes = null,
+  locallyClaimed = new Set()
 } = {}) {
-  const entries = skillSegments(metadata);
+  const entries = skillSegments(metadata).filter(entry => !segmentIndexes || segmentIndexes.has(entry.index));
   if (!entries.length) return {
     commentSegments: Array.isArray(metadata?.commentSegments) ? metadata.commentSegments : [],
     usedRuleFrequencyKeys
@@ -123,7 +127,8 @@ export async function validateSkillCommentSegments({
     ...collectHerausforderungApproaches(challengeHistory)
   ];
   const encounterParties = getActiveCombatPartyMap(history);
-  const encounterId = getActiveCombatEncounter(history)?.encounterId || '';
+  const encounter = getActiveCombatEncounter(history);
+  const encounterId = encounter?.encounterId || '';
   const revealed = collectRevealedChallengeIds(history);
   const challengeById = new Map(challenges.map(challenge => [String(challenge.id), challenge]));
   const descriptors = entries.flatMap(entry => {
@@ -141,7 +146,8 @@ export async function validateSkillCommentSegments({
           persistence: normalizePersistence(challenge.authorPersistence, challenge.authorId)
         }]
       : [];
-    return [actor, ...target, ...ruleSelectionDescriptors(entry).map(selection => ({ role: 'support', ...selection }))];
+    const recipients = challenge ? challengeCombatDescriptors(challenge, encounter).map(descriptor => ({ ...descriptor, persistence: normalizePersistence(descriptor.persistence, descriptor.actorId) })) : [];
+    return [actor, ...target, ...recipients, ...ruleSelectionDescriptors(entry).map(selection => ({ role: 'support', ...selection }))];
   });
 
   const recordEntries = [...new Map(descriptors.map(descriptor => {
@@ -162,7 +168,6 @@ export async function validateSkillCommentSegments({
   const enhanced = (Array.isArray(metadata?.commentSegments) ? metadata.commentSegments : []).map(segment => ({ ...segment }));
   let usedKeys = usedRuleFrequencyKeys instanceof Set ? new Set(usedRuleFrequencyKeys) : new Set();
   const pendingClaims = [];
-  const locallyClaimed = new Set();
 
   for (const entry of entries) {
     const actorDescriptor = {
@@ -189,6 +194,9 @@ export async function validateSkillCommentSegments({
       || (challenge.createdBy && String(challenge.createdBy) === String(request.auth?.uid || '')))) {
       fail('failed-precondition', 'Die eigene verdeckte Herausforderung kann nicht selbst untersucht werden.');
     }
+
+    const eligibility = challenge && getChallengeCombatBindingError(challenge, encounter, actorDescriptor.actorId);
+    if (eligibility) fail('failed-precondition', eligibility);
 
     const actor = makeActor(actorRecord, actorDescriptor.persistence, actorDescriptor.actorId);
     const profile = applySkillRuntimeState(
@@ -296,6 +304,7 @@ export async function validateSkillCommentSegments({
     if (challenge?.source === 'herausforderung') {
       const tier = classifyHerausforderungOutcome(resolution);
       resolution.herausforderungTier = tier;
+      resolution.herausforderungEncounterId = encounterId;
       const revealText = tier === 'kritischer-erfolg' || tier === 'erfolg'
         ? challenge.insight
         : (tier === 'knapp' ? challenge.partialHint : challenge.failureConsequence);
@@ -363,7 +372,7 @@ export async function validateSkillCommentSegments({
     if (challenge?.source === 'herausforderung') {
       const tier = resolution.herausforderungTier;
       const benefits = benefitsForTier(challenge, tier);
-      const hasBenefits = !!(benefits?.copper || benefits?.items?.length || benefits?.effects?.length);
+      const hasBenefits = !!(benefits?.copper || benefits?.items?.length || benefits?.effects?.length || benefits?.combatEffects?.length);
       const success = isSuccessfulSkillOutcome(resolution.outcome);
       const claimId = success ? herausforderungClaimId(challenge) : herausforderungEffectClaimId(challenge.id, actorDescriptor.actorId, tier);
       let eligible = hasBenefits;
@@ -382,7 +391,15 @@ export async function validateSkillCommentSegments({
           state: workingStates.get(actorDescriptor.actorId) || {}, inventory: workingInventories.get(key) || update?.inventory || actorRecord.inventory || {},
           equipment: update?.equipment || {}, identity: claimId, encounterId });
         if (grant) {
-          resolution.herausforderungReward = grant.receipt;
+          const combat = await stageHerausforderungCombatBenefits({ challenge, actorId: actorDescriptor.actorId, benefits, identity: claimId,
+            encounter, submitted: entry.submitted, descriptors, records, recordEntries, workingStates, persistentUpdates, recoveryDayKey: rulePeriods.day });
+          resolution.herausforderungCombatResults = combat.results;
+          resolution.herausforderungCombatSnapshots = combat.snapshots;
+          resolution.herausforderungCombatSaves = combat.saves;
+          resolution.herausforderungEncounterId = combat.encounterId;
+          resolution.herausforderungReward = { ...grant.receipt,
+            effects: combat.results.filter(result => result.condition).map(result => ({ ...result.condition, actorId: result.actorId, actorName: result.actorName })),
+            combatEffects: combat.results.filter(result => !result.condition) };
           if (grant.actorInventorySnapshot) resolution.actorInventorySnapshot = grant.actorInventorySnapshot;
           if (grant.actorConditionSnapshot) resolution.actorConditionSnapshot = grant.actorConditionSnapshot;
           const current = workingStates.get(actorDescriptor.actorId) || {};
@@ -391,7 +408,7 @@ export async function validateSkillCommentSegments({
             ...(grant.actorConditionSnapshot ? { temporaryConditions: grant.actorConditionSnapshot.after } : {}) });
           if (grant.inventoryChanged) {
             workingInventories.set(key, grant.inventory);
-            persistentUpdates.set(key, { ...(update || { entry: recordEntries.find(entry => entry.key === key), record: actorRecord }),
+            persistentUpdates.set(key, { ...(persistentUpdates.get(key) || update || { entry: recordEntries.find(entry => entry.key === key), record: actorRecord }),
               inventory: grant.inventory, equipment: { weapons: grant.combatProfile.weapons || [], armorItems: grant.combatProfile.armorItems || [] } });
           }
         }
