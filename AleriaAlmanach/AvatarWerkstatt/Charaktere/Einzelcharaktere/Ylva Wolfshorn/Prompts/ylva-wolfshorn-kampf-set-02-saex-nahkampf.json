@@ -1,0 +1,145 @@
+{
+  "version": 1,
+  "characterName": "Ylva Wolfshorn",
+  "characterFolder": "Charaktere/Einzelcharaktere/Ylva Wolfshorn",
+  "setId": "set-02",
+  "referenceImage": "Referenzen/ylva-wolfshorn-nutzerreferenz.png",
+  "characterDescription": "Ylva Wolfshorn, the woman in the exact Image 1: mature young adult face with the same tapered oval jaw, fine nose, steel-blue-gray almond eyes, dirty honey-blond hair, fine loose strands, braided crown sides and two long front braids. Preserve her precise understated facial proportions and the nuanced, textured, subdued shading and fine irregular outlines of the uploaded avatar. NOT bright generic cel-shaded anime, NOT chibi or photorealism. Her exact brown-gray fur shoulder mantle, dark deep teal dress with the original narrow gold edging and low neckline, round bronze clasp, small fang pendant and brown strapped/embossed leather wrist bracers remain unchanged; bare fingers and hands. Extend the same dress and practical belt below the original crop without replacing her clothing with new armor. No helmet, shield, plate armor or changed hair ornaments.",
+  "theme": "Wolfshorn-Saex – Nahkampf und Reaktion",
+  "promptTemplate": "Anleitungen/Lesefassungen/Charakter-Emotionssheet Master Prompt.txt",
+  "sheet": {
+    "aspectRatio": "1:1",
+    "columns": 3,
+    "rows": 3,
+    "actualPixels": [
+      1254,
+      1254
+    ]
+  },
+  "panels": [
+    {
+      "index": 1,
+      "position": "Top Left",
+      "category": "Angriff",
+      "emotion": "Kontrollierter Diagonalschnitt",
+      "gesture": "Focused narrowed eyes and clenched closed jaw; RIGHT hand guides the Saex into a compact downward-outward diagonal cut below face, LEFT open hand balances at upper chest, believable forearms."
+    },
+    {
+      "index": 2,
+      "position": "Top Center",
+      "category": "Angriff",
+      "emotion": "Schneller kurzer Stich",
+      "gesture": "Intense direct gaze and a short open-mouth exhale; RIGHT forearm extends the knife on an oblique forward thrust aimed outside the tile, LEFT hand draws back beside ribs, no knife aimed into camera."
+    },
+    {
+      "index": 3,
+      "position": "Top Right",
+      "category": "Manöver",
+      "emotion": "Abwartende Klingenfinte",
+      "gesture": "Subtle sly smile and angled gaze; RIGHT hand carries Saex low beside hip, torso slightly rotated, LEFT hand loosely raised for balance as she prepares a feint."
+    },
+    {
+      "index": 4,
+      "position": "Middle Left",
+      "category": "Abwehr",
+      "emotion": "Wachsame Klingenabwehr",
+      "gesture": "Alert wide eyes and firm mouth; RIGHT hand raises Saex diagonally just outside shoulder in a compact defensive guard, LEFT forearm lifted below chin, face unobstructed."
+    },
+    {
+      "index": 5,
+      "position": "Center",
+      "category": "Abwehr",
+      "emotion": "Zähes Ableiten",
+      "gesture": "Teeth lightly gritted, brows knitted; RIGHT hand angles blade outward at lower chest level to deflect, LEFT open hand stays clear of blade, protective but natural posture."
+    },
+    {
+      "index": 6,
+      "position": "Middle Right",
+      "category": "Manöver",
+      "emotion": "Seitliches Umgehen",
+      "gesture": "Eyes tracking off to one side, thoughtful tight lips; slight lateral movement with RIGHT Saex held near belt pointing safely out and LEFT hand open beside torso, measured maneuver rather than a repeated attack."
+    },
+    {
+      "index": 7,
+      "position": "Bottom Left",
+      "category": "Gelassen",
+      "emotion": "Ruhige Messerbereitschaft",
+      "gesture": "Soft easy half-smile, relaxed eyes and upright shoulders; RIGHT Saex lowered beside hip with tip down, LEFT thumb hooked lightly at belt, poised and composed."
+    },
+    {
+      "index": 8,
+      "position": "Bottom Center",
+      "category": "Gestik",
+      "emotion": "Den Gegner markieren",
+      "gesture": "A firm confident knowing expression; LEFT index finger points offscreen toward the unseen counterpart while RIGHT hand keeps Saex lowered at her own side, no second weapon."
+    },
+    {
+      "index": 9,
+      "position": "Bottom Right",
+      "category": "Angeschlagen",
+      "emotion": "Nach einem Treffer sammeln",
+      "gesture": "Pained but conscious face with cheek abrasion and bruised temple, dusty fur mantle; RIGHT hand at viewer's left holds the Saex safely lowered, LEFT hand at viewer's right rests against the sore temple. Exactly two naturally attached uncrossed arms."
+    }
+  ],
+  "splitter": {
+    "cols": 3,
+    "rows": 3,
+    "gap_x": 0,
+    "gap_y": 0,
+    "autocrop": false
+  },
+  "outputNaming": "ylva-wolfshorn-kampf-set-02-saex-nahkampf_Bild01.png bis _Bild09.png",
+  "status": "erzeugt, mit V3 zerlegt und visuell geprüft",
+  "createdAt": "2026-10-14",
+  "stem": "ylva-wolfshorn-kampf-set-02-saex-nahkampf",
+  "referenceSha256": "0665c9b0059d3c791c97c34307d727aa15cc9cda98b4887ed708b8df588a5a87",
+  "inputImageFiles": [
+    "Referenzen/ylva-wolfshorn-nutzerreferenz.png",
+    "Referenzen/ylva-saex-v2.png"
+  ],
+  "weapon": "Exactly ONE Wolfshorn Saex in her RIGHT hand, matching Image 2: a single-edged straight long-knife blade with a sloped broken-back pointed tip, steel edge, restrained gold vine knotwork ALONG THE SPINE, dark carved wood handle and modest wolf motif at its end. The blade is a practical large knife/short seax, not a longsword, curved sabre or dagger with a huge crossguard. RIGHT hand wraps around the wooden handle, never grips the blade. LEFT hand is free for balancing, guarding and gesturing. No spear in this set.",
+  "background": "Gemeinsames ruhiges mittelalterliches Übungsfeld bei weichem Tageslicht.",
+  "framing": "Vollständiger Kopf bis Hüfte/oberer Oberschenkel; Hände und Schaftgriffe lesbar.",
+  "promptFile": "Prompts/ylva-wolfshorn-kampf-set-02-saex-nahkampf.txt",
+  "sheetFile": "Sheets/ylva-wolfshorn-kampf-set-02-saex-nahkampf-v3.png",
+  "outputFolder": "Output/set-02",
+  "generationMode": "built-in image_gen",
+  "draftSheetFile": "Sheets/Entwuerfe/ylva-wolfshorn-kampf-set-02-saex-nahkampf-v1.png",
+  "correctionPromptFile": "Prompts/ylva-wolfshorn-kampf-set-02-saex-nahkampf-waffenhand-v3.txt",
+  "correctionInputImageFiles": [
+    "Sheets/Entwuerfe/ylva-wolfshorn-kampf-set-02-saex-nahkampf-v2.png",
+    "Referenzen/ylva-wolfshorn-nutzerreferenz.png",
+    "Referenzen/ylva-saex-v2.png"
+  ],
+  "correctionReason": "Im angeschlagenen Feld Saex-Hand links im Bild, freie Hand rechts an der geprellten Schläfe; keine gekreuzten Arme.",
+  "avatarCount": 9,
+  "correctionHistory": [
+    {
+      "promptFile": "Prompts/ylva-wolfshorn-kampf-set-02-saex-nahkampf-korrektur.txt",
+      "inputImageFiles": [
+        "Sheets/Entwuerfe/ylva-wolfshorn-kampf-set-02-saex-nahkampf-v1.png",
+        "Referenzen/ylva-wolfshorn-nutzerreferenz.png",
+        "Referenzen/ylva-saex-v2.png"
+      ],
+      "resultFile": "Sheets/Entwuerfe/ylva-wolfshorn-kampf-set-02-saex-nahkampf-v2.png",
+      "result": "Die Waffenhand blieb auf der falschen Bildseite; durch v3 ersetzt."
+    }
+  ],
+  "visualReview": {
+    "reviewedAt": "2026-10-14",
+    "reviewedAvatars": 9,
+    "passed": true,
+    "checks": [
+      "Originalavatar und dessen Zeichenstil",
+      "tatsächliche Inventarwaffe",
+      "lesbare Mimik und Gestik",
+      "plausible Waffenhaltung",
+      "ruhige und angeschlagene Reaktionen",
+      "keine Nachbarbildreste, Schrift oder Trennlinien"
+    ]
+  },
+  "avatarPixels": [
+    418,
+    418
+  ]
+}

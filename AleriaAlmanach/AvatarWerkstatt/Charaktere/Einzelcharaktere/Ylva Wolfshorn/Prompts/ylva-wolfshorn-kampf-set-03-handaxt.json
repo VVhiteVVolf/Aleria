@@ -1,0 +1,125 @@
+{
+  "version": 1,
+  "characterName": "Ylva Wolfshorn",
+  "characterFolder": "Charaktere/Einzelcharaktere/Ylva Wolfshorn",
+  "setId": "set-03",
+  "referenceImage": "Referenzen/ylva-wolfshorn-nutzerreferenz.png",
+  "characterDescription": "Ylva Wolfshorn, the woman in the exact Image 1: mature young adult face with the same tapered oval jaw, fine nose, steel-blue-gray almond eyes, dirty honey-blond hair, fine loose strands, braided crown sides and two long front braids. Preserve her precise understated facial proportions and the nuanced, textured, subdued shading and fine irregular outlines of the uploaded avatar. NOT bright generic cel-shaded anime, NOT chibi or photorealism. Her exact brown-gray fur shoulder mantle, dark deep teal dress with the original narrow gold edging and low neckline, round bronze clasp, small fang pendant and brown strapped/embossed leather wrist bracers remain unchanged; bare fingers and hands. Extend the same dress and practical belt below the original crop without replacing her clothing with new armor. No helmet, shield, plate armor or changed hair ornaments.",
+  "theme": "Wolfshorn-Handaxt – Nahkampf und Wendigkeit",
+  "promptTemplate": "Anleitungen/Lesefassungen/Charakter-Emotionssheet Master Prompt.txt",
+  "sheet": {
+    "aspectRatio": "1:1",
+    "columns": 3,
+    "rows": 3,
+    "actualPixels": [
+      1254,
+      1254
+    ]
+  },
+  "panels": [
+    {
+      "index": 1,
+      "position": "Top Left",
+      "category": "Angriff",
+      "emotion": "Kontrollierter kurzer Axthieb",
+      "gesture": "Focused narrowed steel-blue eyes and firm jaw; RIGHT hand guides short axe into a compact outward diagonal strike beside body, LEFT open palm lifted near chest, face and weapon grip clearly visible."
+    },
+    {
+      "index": 2,
+      "position": "Top Center",
+      "category": "Angriff",
+      "emotion": "Energischer Seitwärtshieb",
+      "gesture": "Drawn brows and a short forceful exhale; RIGHT arm sweeps the same single hand axe laterally below chin, LEFT hand withdrawn beside ribs to balance, normal small axe size."
+    },
+    {
+      "index": 3,
+      "position": "Top Right",
+      "category": "Manöver",
+      "emotion": "Täuschende Axtfinte",
+      "gesture": "A knowing faint sly smile and attentive side gaze; RIGHT hand carries axe near one hip with blade safely outside body, torso slightly turned, LEFT hand open near belt while she changes approach angle."
+    },
+    {
+      "index": 4,
+      "position": "Middle Left",
+      "category": "Abwehr",
+      "emotion": "Wachsame hohe Deckung",
+      "gesture": "Alert widened eyes and compressed lips; RIGHT hand raises short axe beside shoulder, single blade facing outward, LEFT forearm below chin and away from blade, full face unobstructed."
+    },
+    {
+      "index": 5,
+      "position": "Center",
+      "category": "Abwehr",
+      "emotion": "Standhaftes Ableiten",
+      "gesture": "Gritted teeth and knitted brows; RIGHT hand braces short haft at lower chest with blade outward in a compact parry, LEFT open hand clear of the axe, realistic wrist and shoulder alignment."
+    },
+    {
+      "index": 6,
+      "position": "Middle Right",
+      "category": "Manöver",
+      "emotion": "Seitliches Ausweichen",
+      "gesture": "Intent eyes tracking sideways, mouth firmly closed; modest lateral torso shift, RIGHT axe held low close to hip, LEFT palm slightly raised for balance; tactical movement with readable hands."
+    },
+    {
+      "index": 7,
+      "position": "Bottom Left",
+      "category": "Gelassen",
+      "emotion": "Gelassene Axtbereitschaft",
+      "gesture": "The uploaded avatar's subtle confident smile, soft direct gaze and relaxed shoulders; RIGHT hand loosely but safely holds axe lowered at side, LEFT hand rests at belt, no attacking motion."
+    },
+    {
+      "index": 8,
+      "position": "Bottom Center",
+      "category": "Gestik",
+      "emotion": "Auf den Gegenüber deuten",
+      "gesture": "One raised brow and a knowing firm expression; LEFT bare index finger points clearly toward an unseen opponent beside the camera, RIGHT hand supports the axe low at her side, no giant foreshortened palm."
+    },
+    {
+      "index": 9,
+      "position": "Bottom Right",
+      "category": "Angeschlagen",
+      "emotion": "Nach einem Treffer Halt finden",
+      "gesture": "Minor cheek bruise and shallow brow scratch, dust at fur mantle, exhausted but determined eyes and a restrained pained exhale; RIGHT hand holds axe low, LEFT palm presses ribs, slightly bent torso, no serious bleeding or redesigned clothing."
+    }
+  ],
+  "splitter": {
+    "cols": 3,
+    "rows": 3,
+    "gap_x": 0,
+    "gap_y": 0,
+    "autocrop": false
+  },
+  "outputNaming": "ylva-wolfshorn-kampf-set-03-handaxt_Bild01.png bis _Bild09.png",
+  "status": "erzeugt, mit V3 zerlegt und visuell geprüft",
+  "createdAt": "2026-10-14",
+  "stem": "ylva-wolfshorn-kampf-set-03-handaxt",
+  "referenceSha256": "0665c9b0059d3c791c97c34307d727aa15cc9cda98b4887ed708b8df588a5a87",
+  "inputImageFiles": [
+    "Referenzen/ylva-wolfshorn-nutzerreferenz.png",
+    "Referenzen/ylva-handaxt-v1.png"
+  ],
+  "weapon": "Exactly ONE actual Wolfshorn hand axe in her RIGHT bare hand, matching Image 2: short natural brown wood haft with a brown leather lower grip, ONE gray/dark steel bearded crescent blade with bright steel cutting edge, restrained engraved Celtic knotwork on the metal face. Practical one-handed hunting/utility axe, no giant greataxe, double head, second axe, gold wolf head or extra spear. RIGHT fingers and thumb wrap the leather/wood grip, never the axe head. LEFT hand remains free to gesture and balance. No shield or Saex in this set.",
+  "background": "Gemeinsames ruhiges mittelalterliches Übungsfeld bei weichem Tageslicht.",
+  "framing": "Vollständiger Kopf bis Hüfte/oberer Oberschenkel; Hände und Schaftgriffe lesbar.",
+  "promptFile": "Prompts/ylva-wolfshorn-kampf-set-03-handaxt.txt",
+  "sheetFile": "Sheets/ylva-wolfshorn-kampf-set-03-handaxt.png",
+  "outputFolder": "Output/set-03",
+  "generationMode": "built-in image_gen",
+  "avatarCount": 9,
+  "visualReview": {
+    "reviewedAt": "2026-10-14",
+    "reviewedAvatars": 9,
+    "passed": true,
+    "checks": [
+      "Originalavatar und dessen Zeichenstil",
+      "tatsächliche Inventarwaffe",
+      "lesbare Mimik und Gestik",
+      "plausible Waffenhaltung",
+      "ruhige und angeschlagene Reaktionen",
+      "keine Nachbarbildreste, Schrift oder Trennlinien"
+    ]
+  },
+  "avatarPixels": [
+    418,
+    418
+  ]
+}

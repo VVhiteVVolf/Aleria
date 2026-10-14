@@ -1,0 +1,127 @@
+Use case: illustration-story. Asset: one reusable RPG combat avatar sheet.
+Create ONE square 1:1 image, exactly 3 columns by 3 rows, NINE equal square panels. Seamless edge-to-edge tiles, NO borders, gutters, divider strokes, captions, numbers, text, speech balloons, motion symbols or watermarks. Each panel contains only this same single character.
+INPUT ROLES: Image 1 is the EXACT avatar supplied by the user in this request, and is the ONLY authority for the character's identity and ARTISTIC STYLE. Image 2 is ONLY the actual inventory weapon, its geometry, material and decoration. Do not transfer the item illustration's style onto the person. Do not use another character, generic anime preset or a previous generated combat sheet as a style reference.
+HIGHEST PRIORITY: faithfully expand the original avatar into new expressions and weapon poses. Preserve the exact face, age, eye shape and color, hairstyle, hairline, skin tone, clothing, armor, accessories, original line quality, shading technique, texture level, subdued palette and rendering style. Do not redesign, beautify, sharpen or simplify the person. The finished sheet must visibly belong to the same avatar family as Image 1.
+CAMERA: eye-level medium portrait, framed a little farther away than the source, complete head to upper thighs or hips, both elbows, hands and most torso comfortably visible. The face remains large enough to read as an avatar. Similar camera distance throughout all nine squares; no bird's eye view, fisheye, full-body distant figures, extreme foreshortening or weapon aimed directly into the lens.
+Long polearms remain genuinely long. In most polearm panels show primarily their SHAFT; it is completely fine for the head and butt to be outside the individual square. NEVER compress or bend a weapon merely to fit its entire length. Weapon parts may leave their own square but must not intrude into another tile. No floating weapons, duplicated shafts or hands gripping a blade. Exactly two anatomically credible arms and hands, fingers and opposed thumbs wrapped naturally around the relevant grip. In two-handed polearm actions the two hands grasp the SAME continuous shaft at separated leverage points. Gestures use a free hand while the other safely supports the weapon. Faces are never obstructed by weapons or hands.
+BACKGROUND OVERRIDE REQUESTED BY USER: replace the source environment with the SAME outdoor medieval practice field in all four sets, open compacted sandy ground, a low weathered timber fence with a modest pale stone wall farther back, subdued trees and grass, a distant straw practice target and simple weapon rack. Calm soft mild daytime lighting, softly subordinate background. No castle banners, crowds, opponents, horses, pets, shields, magical effects, explosions or extra carried equipment. One character per panel.
+Top row combines attacking and tactical maneuvering poses; middle row combines defense and evasive maneuvering; bottom row contains a relaxed armed pose, a one-handed pointing gesture addressed to an unseen opponent, and one visibly battered but conscious pose. Distinct facial expressions and readable body language in every tile. Injured pose: minor cheek bruise or shallow scratch, dust, discomfort and exertion; no major bleeding, dismemberment, dramatic new scars or altered outfit.
+The explicit current requests for practice-field background, weapons, farther-out framing and one injured tile override the generic background/free-hands/close-up/neutral-pose clauses in the master template below. All identity and artistic-style requirements remain binding.
+
+EXACT CHARACTER LOCK:
+Ylva Wolfshorn, the woman in the exact Image 1: mature young adult face with the same tapered oval jaw, fine nose, steel-blue-gray almond eyes, dirty honey-blond hair, fine loose strands, braided crown sides and two long front braids. Preserve her precise understated facial proportions and the nuanced, textured, subdued shading and fine irregular outlines of the uploaded avatar. NOT bright generic cel-shaded anime, NOT chibi or photorealism. Her exact brown-gray fur shoulder mantle, dark deep teal dress with the original narrow gold edging and low neckline, round bronze clasp, small fang pendant and brown strapped/embossed leather wrist bracers remain unchanged; bare fingers and hands. Extend the same dress and practical belt below the original crop without replacing her clothing with new armor. No helmet, shield, plate armor or changed hair ornaments.
+
+Charakter-Emotionssheet Master Prompt (9er Set)
+Take the provided portrait image as the ONLY reference for the character.
+Create a complete 3×3 expression and gesture sheet (9 panels) featuring the EXACT SAME character.
+Identity Preservation (Highest Priority)
+The character must remain 100% identical in every panel.
+Preserve exactly:
+Face shape and proportions
+Eyes, eyebrows and nose
+Hairstyle, hair volume and hairline
+Facial hair
+Armor, clothing, colors and accessories
+Age
+Art style
+Line quality
+Rendering quality
+Lighting
+Color palette
+Do NOT redesign, reinterpret or stylize the character differently.
+Every panel should feel like the same portrait with altered expressions and poses, not nine separate illustrations.
+
+Background Consistency
+Use the exact same background in every panel.
+Same environment
+Same lighting
+Same camera distance
+Same perspective
+No simplification
+No redesign
+The only changes should be the character’s expression, head angle (minor), gaze and body gesture.
+
+Composition
+Square overall format (1:1)
+3×3 grid
+Nine equally sized panels
+No white borders
+No text
+No captions
+No symbols
+No speech bubbles
+No props unless explicitly requested
+Character visible from chest to upper body in every panel
+Same camera angle and framing across all panels
+Minimal variation in rotation only when it supports the expression
+
+Expression Consistency
+This is NOT nine different drawings.
+It must look like the same portrait whose facial muscles and body language change naturally.
+Changes should primarily affect:
+Eyebrows
+Eyes
+Eyelids
+Mouth
+Jaw tension
+Head tilt
+Eye direction
+Avoid changing:
+Skull proportions
+Hair shape
+Armor proportions
+Clothing folds unnecessarily
+High character consistency is critical.
+
+Gesture Rules
+Every emotion must also be expressed through:
+Hands
+Arms
+Shoulders
+Head position
+Torso posture
+Eye direction
+Body language is more important than facial expression alone.
+Every panel should immediately communicate a usable RPG reaction.
+Avoid neutral filler poses.
+Every tile should have a clear storytelling purpose.
+No repeated gestures.
+
+Character Description
+Ylva Wolfshorn, the woman in the exact Image 1: mature young adult face with the same tapered oval jaw, fine nose, steel-blue-gray almond eyes, dirty honey-blond hair, fine loose strands, braided crown sides and two long front braids. Preserve her precise understated facial proportions and the nuanced, textured, subdued shading and fine irregular outlines of the uploaded avatar. NOT bright generic cel-shaded anime, NOT chibi or photorealism. Her exact brown-gray fur shoulder mantle, dark deep teal dress with the original narrow gold edging and low neckline, round bronze clasp, small fang pendant and brown strapped/embossed leather wrist bracers remain unchanged; bare fingers and hands. Extend the same dress and practical belt below the original crop without replacing her clothing with new armor. No helmet, shield, plate armor or changed hair ornaments.
+
+Weapon: Exactly ONE Dornwacht Wolfshorn hunting spear, matching Image 2: continuous ash-brown long wooden shaft with modest silver vine-and-leaf details, dark green leather wrap, a broad steel leaf-shaped SINGLE spear blade and understated silver wolf-head collar. Not a trident, axe or ornate magical staff. Use two hands for active attack/defense and one supporting hand in the gesture/rest/injury tiles; the blade is allowed out of frame in MOST panels.
+
+Theme
+Dornwacht – Speerführung und Distanz
+Panel List
+Top Left
+Gezielter Vorstoß: Calm focused eyes and firmly closed mouth; two separated hands drive the single spear obliquely forward beside her body, lead elbow extending, rear hand near hip. Shaft leaves the side of the square.
+Top Center
+Täuschende Finte: Small knowing half-smile and measuring gaze; torso turned slightly, two hands withdraw the same spear close to one hip before a feint, blade outside frame.
+Top Right
+Entschlossener Druckstoß: Knitted brows and slightly open mouth with exertion; weight subtly forward, rear hand pushes and forward hand guides one straight shaft at lower chest height, aimed offscreen.
+Middle Left
+Sichere Schaftparade: Steady concentrated eyes and compressed lips; both hands brace the same continuous shaft horizontally BELOW the chin with natural separated grips, face fully clear.
+Center
+Seitliches Ableiten: Alert widened eyes and tense shoulders; guide hand high, rear hand lower, single shaft angled diagonally outward beside the shoulder to redirect an unseen attack.
+Middle Right
+Ausweichendes Manövrieren: Watchful sideward gaze and set jaw; small lateral torso movement, elbows bent, both hands hold the same spear low and diagonal in readiness, no face-covering shaft.
+Bottom Left
+Gelassene Waffenruhe: The same subtle confident smile as the avatar, relaxed shoulders; left hand safely holds spear upright beside her body, right hand rests lightly at the belt, spearhead outside the upper frame.
+Bottom Center
+Den Gegenüber herausfordern: One raised brow, confident direct gaze and slightly parted lips; RIGHT bare index finger clearly points at an unseen opponent beside the camera, LEFT hand supports the upright spear. Natural palm, no giant foreground hand.
+Bottom Right
+Angeschlagen, aber standhaft: Small cheek bruise and superficial scratch, dust at mantle and weary narrowed eyes; lips press with discomfort, slight bend at torso, LEFT hand steadies the spear while RIGHT hand presses her ribs. Same face and outfit.
+
+Quality Goals
+Same person in all nine panels
+Same portrait identity
+Highly expressive but believable
+Strong hand acting
+Natural body language
+Consistent anatomy
+Consistent proportions
+Consistent rendering quality
+Anime style identical to the reference image
+Every panel suitable as an RPG reaction portrait

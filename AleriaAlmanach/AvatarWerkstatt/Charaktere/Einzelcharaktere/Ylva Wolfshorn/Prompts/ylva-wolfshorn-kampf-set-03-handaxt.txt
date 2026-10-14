@@ -1,0 +1,127 @@
+Use case: illustration-story. Asset: one reusable RPG combat avatar sheet.
+Create ONE square 1:1 image, exactly 3 columns by 3 rows, NINE equal square panels. Seamless edge-to-edge tiles, NO borders, gutters, divider strokes, captions, numbers, text, speech balloons, motion symbols or watermarks. Each panel contains only this same single character.
+INPUT ROLES: Image 1 is the EXACT avatar supplied by the user in this request, and is the ONLY authority for the character's identity and ARTISTIC STYLE. Image 2 is ONLY the actual inventory weapon, its geometry, material and decoration. Do not transfer the item illustration's style onto the person. Do not use another character, generic anime preset or a previous generated combat sheet as a style reference.
+HIGHEST PRIORITY: faithfully expand the original avatar into new expressions and weapon poses. Preserve the exact face, age, eye shape and color, hairstyle, hairline, skin tone, clothing, armor, accessories, original line quality, shading technique, texture level, subdued palette and rendering style. Do not redesign, beautify, sharpen or simplify the person. The finished sheet must visibly belong to the same avatar family as Image 1.
+CAMERA: eye-level medium portrait, framed a little farther away than the source, complete head to upper thighs or hips, both elbows, hands and most torso comfortably visible. The face remains large enough to read as an avatar. Similar camera distance throughout all nine squares; no bird's eye view, fisheye, full-body distant figures, extreme foreshortening or weapon aimed directly into the lens.
+Long polearms remain genuinely long. In most polearm panels show primarily their SHAFT; it is completely fine for the head and butt to be outside the individual square. NEVER compress or bend a weapon merely to fit its entire length. Weapon parts may leave their own square but must not intrude into another tile. No floating weapons, duplicated shafts or hands gripping a blade. Exactly two anatomically credible arms and hands, fingers and opposed thumbs wrapped naturally around the relevant grip. In two-handed polearm actions the two hands grasp the SAME continuous shaft at separated leverage points. Gestures use a free hand while the other safely supports the weapon. Faces are never obstructed by weapons or hands.
+BACKGROUND OVERRIDE REQUESTED BY USER: replace the source environment with the SAME outdoor medieval practice field in all six sets, open compacted sandy ground, a low weathered timber fence with a modest pale stone wall farther back, subdued trees and grass, a distant straw practice target and simple weapon rack. Calm soft mild daytime lighting, softly subordinate background. No castle banners, crowds, opponents, horses, pets, shields, magical effects, explosions or extra carried equipment. One character per panel.
+Top row combines attacking and tactical maneuvering poses; middle row combines defense and evasive maneuvering; bottom row contains a relaxed armed pose, a one-handed pointing gesture addressed to an unseen opponent, and one visibly battered but conscious pose. Distinct facial expressions and readable body language in every tile. Injured pose: minor cheek bruise or shallow scratch, dust, discomfort and exertion; no major bleeding, dismemberment, dramatic new scars or altered outfit.
+The explicit current requests for practice-field background, weapons, farther-out framing and one injured tile override the generic background/free-hands/close-up/neutral-pose clauses in the master template below. All identity and artistic-style requirements remain binding.
+
+EXACT CHARACTER LOCK:
+Ylva Wolfshorn, the woman in the exact Image 1: mature young adult face with the same tapered oval jaw, fine nose, steel-blue-gray almond eyes, dirty honey-blond hair, fine loose strands, braided crown sides and two long front braids. Preserve her precise understated facial proportions and the nuanced, textured, subdued shading and fine irregular outlines of the uploaded avatar. NOT bright generic cel-shaded anime, NOT chibi or photorealism. Her exact brown-gray fur shoulder mantle, dark deep teal dress with the original narrow gold edging and low neckline, round bronze clasp, small fang pendant and brown strapped/embossed leather wrist bracers remain unchanged; bare fingers and hands. Extend the same dress and practical belt below the original crop without replacing her clothing with new armor. No helmet, shield, plate armor or changed hair ornaments.
+
+Charakter-Emotionssheet Master Prompt (9er Set)
+Take the provided portrait image as the ONLY reference for the character.
+Create a complete 3×3 expression and gesture sheet (9 panels) featuring the EXACT SAME character.
+Identity Preservation (Highest Priority)
+The character must remain 100% identical in every panel.
+Preserve exactly:
+Face shape and proportions
+Eyes, eyebrows and nose
+Hairstyle, hair volume and hairline
+Facial hair
+Armor, clothing, colors and accessories
+Age
+Art style
+Line quality
+Rendering quality
+Lighting
+Color palette
+Do NOT redesign, reinterpret or stylize the character differently.
+Every panel should feel like the same portrait with altered expressions and poses, not nine separate illustrations.
+
+Background Consistency
+Use the exact same background in every panel.
+Same environment
+Same lighting
+Same camera distance
+Same perspective
+No simplification
+No redesign
+The only changes should be the character’s expression, head angle (minor), gaze and body gesture.
+
+Composition
+Square overall format (1:1)
+3×3 grid
+Nine equally sized panels
+No white borders
+No text
+No captions
+No symbols
+No speech bubbles
+No props unless explicitly requested
+Character visible from chest to upper body in every panel
+Same camera angle and framing across all panels
+Minimal variation in rotation only when it supports the expression
+
+Expression Consistency
+This is NOT nine different drawings.
+It must look like the same portrait whose facial muscles and body language change naturally.
+Changes should primarily affect:
+Eyebrows
+Eyes
+Eyelids
+Mouth
+Jaw tension
+Head tilt
+Eye direction
+Avoid changing:
+Skull proportions
+Hair shape
+Armor proportions
+Clothing folds unnecessarily
+High character consistency is critical.
+
+Gesture Rules
+Every emotion must also be expressed through:
+Hands
+Arms
+Shoulders
+Head position
+Torso posture
+Eye direction
+Body language is more important than facial expression alone.
+Every panel should immediately communicate a usable RPG reaction.
+Avoid neutral filler poses.
+Every tile should have a clear storytelling purpose.
+No repeated gestures.
+
+Character Description
+Ylva Wolfshorn, the woman in the exact Image 1: mature young adult face with the same tapered oval jaw, fine nose, steel-blue-gray almond eyes, dirty honey-blond hair, fine loose strands, braided crown sides and two long front braids. Preserve her precise understated facial proportions and the nuanced, textured, subdued shading and fine irregular outlines of the uploaded avatar. NOT bright generic cel-shaded anime, NOT chibi or photorealism. Her exact brown-gray fur shoulder mantle, dark deep teal dress with the original narrow gold edging and low neckline, round bronze clasp, small fang pendant and brown strapped/embossed leather wrist bracers remain unchanged; bare fingers and hands. Extend the same dress and practical belt below the original crop without replacing her clothing with new armor. No helmet, shield, plate armor or changed hair ornaments.
+
+Weapon: Exactly ONE actual Wolfshorn hand axe in her RIGHT bare hand, matching Image 2: short natural brown wood haft with a brown leather lower grip, ONE gray/dark steel bearded crescent blade with bright steel cutting edge, restrained engraved Celtic knotwork on the metal face. Practical one-handed hunting/utility axe, no giant greataxe, double head, second axe, gold wolf head or extra spear. RIGHT fingers and thumb wrap the leather/wood grip, never the axe head. LEFT hand remains free to gesture and balance. No shield or Saex in this set.
+
+Theme
+Wolfshorn-Handaxt – Nahkampf und Wendigkeit
+Panel List
+Top Left
+Kontrollierter kurzer Axthieb: Focused narrowed steel-blue eyes and firm jaw; RIGHT hand guides short axe into a compact outward diagonal strike beside body, LEFT open palm lifted near chest, face and weapon grip clearly visible.
+Top Center
+Energischer Seitwärtshieb: Drawn brows and a short forceful exhale; RIGHT arm sweeps the same single hand axe laterally below chin, LEFT hand withdrawn beside ribs to balance, normal small axe size.
+Top Right
+Täuschende Axtfinte: A knowing faint sly smile and attentive side gaze; RIGHT hand carries axe near one hip with blade safely outside body, torso slightly turned, LEFT hand open near belt while she changes approach angle.
+Middle Left
+Wachsame hohe Deckung: Alert widened eyes and compressed lips; RIGHT hand raises short axe beside shoulder, single blade facing outward, LEFT forearm below chin and away from blade, full face unobstructed.
+Center
+Standhaftes Ableiten: Gritted teeth and knitted brows; RIGHT hand braces short haft at lower chest with blade outward in a compact parry, LEFT open hand clear of the axe, realistic wrist and shoulder alignment.
+Middle Right
+Seitliches Ausweichen: Intent eyes tracking sideways, mouth firmly closed; modest lateral torso shift, RIGHT axe held low close to hip, LEFT palm slightly raised for balance; tactical movement with readable hands.
+Bottom Left
+Gelassene Axtbereitschaft: The uploaded avatar's subtle confident smile, soft direct gaze and relaxed shoulders; RIGHT hand loosely but safely holds axe lowered at side, LEFT hand rests at belt, no attacking motion.
+Bottom Center
+Auf den Gegenüber deuten: One raised brow and a knowing firm expression; LEFT bare index finger points clearly toward an unseen opponent beside the camera, RIGHT hand supports the axe low at her side, no giant foreshortened palm.
+Bottom Right
+Nach einem Treffer Halt finden: Minor cheek bruise and shallow brow scratch, dust at fur mantle, exhausted but determined eyes and a restrained pained exhale; RIGHT hand holds axe low, LEFT palm presses ribs, slightly bent torso, no serious bleeding or redesigned clothing.
+
+Quality Goals
+Same person in all nine panels
+Same portrait identity
+Highly expressive but believable
+Strong hand acting
+Natural body language
+Consistent anatomy
+Consistent proportions
+Consistent rendering quality
+Anime style identical to the reference image
+Every panel suitable as an RPG reaction portrait

@@ -1,0 +1,496 @@
+{
+  "createdAt": "2026-10-14",
+  "character": "Ylva Wolfshorn",
+  "generationMode": "built-in image_gen",
+  "splitter": "AleriaAlmanach\\AvatarWerkstatt\\Werkzeuge\\Avatar Splitterer\\AvatarSplitterPro_V3.py",
+  "splitterSha256": "d6523dcd145af51ccbcc04d3e51a8a5d6a643531e6beb7bc194bece4a5562ac8",
+  "operation": "Original V3 get_crops and crop_box methods, no GUI",
+  "sourcePortrait": "Referenzen/ylva-wolfshorn-nutzerreferenz.png",
+  "settings": {
+    "cols": 3,
+    "rows": 3,
+    "gap_x": 0,
+    "gap_y": 0,
+    "autocrop": false
+  },
+  "sets": [
+    {
+      "setId": "set-01",
+      "theme": "Dornwacht – Speerführung und Distanz",
+      "sheet": "Sheets/ylva-wolfshorn-kampf-set-01-dornwacht-speer.png",
+      "sheetSha256": "df0c229e9f07d67102c037985a4f353dc457027bf0db1bf3f2162244f4c2759a",
+      "sheetSize": [
+        1254,
+        1254
+      ],
+      "cellSize": [
+        418,
+        418
+      ],
+      "avatarCount": 9,
+      "outputs": [
+        {
+          "index": 1,
+          "emotion": "Gezielter Vorstoß",
+          "file": "Output/set-01/ylva-wolfshorn-kampf-set-01-dornwacht-speer_Bild01.png",
+          "box": [
+            0,
+            0,
+            418,
+            418
+          ],
+          "sha256": "727e79fd75d526e901b761c7078333e842abdf7fb64a6d088916eb5f8f08d875",
+          "category": "Angriff",
+          "gesture": "Calm focused eyes and firmly closed mouth; two separated hands drive the single spear obliquely forward beside her body, lead elbow extending, rear hand near hip. Shaft leaves the side of the square."
+        },
+        {
+          "index": 2,
+          "emotion": "Täuschende Finte",
+          "file": "Output/set-01/ylva-wolfshorn-kampf-set-01-dornwacht-speer_Bild02.png",
+          "box": [
+            418,
+            0,
+            836,
+            418
+          ],
+          "sha256": "f33d5ec3adf838724edefb7d3fdcc6d3fd3c0ad7c4f7c7dc48b2ef48b03d0273",
+          "category": "Manöver",
+          "gesture": "Small knowing half-smile and measuring gaze; torso turned slightly, two hands withdraw the same spear close to one hip before a feint, blade outside frame."
+        },
+        {
+          "index": 3,
+          "emotion": "Entschlossener Druckstoß",
+          "file": "Output/set-01/ylva-wolfshorn-kampf-set-01-dornwacht-speer_Bild03.png",
+          "box": [
+            836,
+            0,
+            1254,
+            418
+          ],
+          "sha256": "6752c009ea9208c210e710829b9851c74b884a53afb00b00751cfdee4914fe5b",
+          "category": "Angriff",
+          "gesture": "Knitted brows and slightly open mouth with exertion; weight subtly forward, rear hand pushes and forward hand guides one straight shaft at lower chest height, aimed offscreen."
+        },
+        {
+          "index": 4,
+          "emotion": "Sichere Schaftparade",
+          "file": "Output/set-01/ylva-wolfshorn-kampf-set-01-dornwacht-speer_Bild04.png",
+          "box": [
+            0,
+            418,
+            418,
+            836
+          ],
+          "sha256": "7209b35b819ecf1f85898500cb1f96e0681efacb1616410224b1b996a5a74785",
+          "category": "Abwehr",
+          "gesture": "Steady concentrated eyes and compressed lips; both hands brace the same continuous shaft horizontally BELOW the chin with natural separated grips, face fully clear."
+        },
+        {
+          "index": 5,
+          "emotion": "Seitliches Ableiten",
+          "file": "Output/set-01/ylva-wolfshorn-kampf-set-01-dornwacht-speer_Bild05.png",
+          "box": [
+            418,
+            418,
+            836,
+            836
+          ],
+          "sha256": "3c884bc8804ff54d5d5434ecbbc846768b68faafd6b0827e4c7c73a676a0d287",
+          "category": "Abwehr",
+          "gesture": "Alert widened eyes and tense shoulders; guide hand high, rear hand lower, single shaft angled diagonally outward beside the shoulder to redirect an unseen attack."
+        },
+        {
+          "index": 6,
+          "emotion": "Ausweichendes Manövrieren",
+          "file": "Output/set-01/ylva-wolfshorn-kampf-set-01-dornwacht-speer_Bild06.png",
+          "box": [
+            836,
+            418,
+            1254,
+            836
+          ],
+          "sha256": "efc61155f8a0399cb06719ecf1d226c72996cf237d03e74715f7085c5d253512",
+          "category": "Manöver",
+          "gesture": "Watchful sideward gaze and set jaw; small lateral torso movement, elbows bent, both hands hold the same spear low and diagonal in readiness, no face-covering shaft."
+        },
+        {
+          "index": 7,
+          "emotion": "Gelassene Waffenruhe",
+          "file": "Output/set-01/ylva-wolfshorn-kampf-set-01-dornwacht-speer_Bild07.png",
+          "box": [
+            0,
+            836,
+            418,
+            1254
+          ],
+          "sha256": "6b67140742191f260e6a06c9f8f7e7f2db6d3bf621606396ec34c6d8d0383dcf",
+          "category": "Gelassen",
+          "gesture": "The same subtle confident smile as the avatar, relaxed shoulders; left hand safely holds spear upright beside her body, right hand rests lightly at the belt, spearhead outside the upper frame."
+        },
+        {
+          "index": 8,
+          "emotion": "Den Gegenüber herausfordern",
+          "file": "Output/set-01/ylva-wolfshorn-kampf-set-01-dornwacht-speer_Bild08.png",
+          "box": [
+            418,
+            836,
+            836,
+            1254
+          ],
+          "sha256": "f83953dff73d3cb4e233dc69ad8ccf65169b6e7f053e14be061e4800e71a1aa2",
+          "category": "Gestik",
+          "gesture": "One raised brow, confident direct gaze and slightly parted lips; RIGHT bare index finger clearly points at an unseen opponent beside the camera, LEFT hand supports the upright spear. Natural palm, no giant foreground hand."
+        },
+        {
+          "index": 9,
+          "emotion": "Angeschlagen, aber standhaft",
+          "file": "Output/set-01/ylva-wolfshorn-kampf-set-01-dornwacht-speer_Bild09.png",
+          "box": [
+            836,
+            836,
+            1254,
+            1254
+          ],
+          "sha256": "2c36e961d2d16998851c2a01d2fb3d11fc87fd862ae48d2f9d26b4280d5996d5",
+          "category": "Angeschlagen",
+          "gesture": "Small cheek bruise and superficial scratch, dust at mantle and weary narrowed eyes; lips press with discomfort, slight bend at torso, LEFT hand steadies the spear while RIGHT hand presses her ribs. Same face and outfit."
+        }
+      ],
+      "visualReview": {
+        "reviewedAt": "2026-10-14",
+        "reviewedAvatars": 9,
+        "passed": true,
+        "checks": [
+          "Originalavatar und dessen Zeichenstil",
+          "tatsächliche Inventarwaffe",
+          "lesbare Mimik und Gestik",
+          "plausible Waffenhaltung",
+          "ruhige und angeschlagene Reaktionen",
+          "keine Nachbarbildreste, Schrift oder Trennlinien"
+        ]
+      }
+    },
+    {
+      "setId": "set-02",
+      "theme": "Wolfshorn-Saex – Nahkampf und Reaktion",
+      "sheet": "Sheets/ylva-wolfshorn-kampf-set-02-saex-nahkampf-v3.png",
+      "sheetSha256": "fb07943886d72dc954586f12553f4a1e27b5d8dfffde851eb3db1f22f8f207b0",
+      "sheetSize": [
+        1254,
+        1254
+      ],
+      "cellSize": [
+        418,
+        418
+      ],
+      "avatarCount": 9,
+      "outputs": [
+        {
+          "index": 1,
+          "emotion": "Kontrollierter Diagonalschnitt",
+          "file": "Output/set-02/ylva-wolfshorn-kampf-set-02-saex-nahkampf_Bild01.png",
+          "box": [
+            0,
+            0,
+            418,
+            418
+          ],
+          "sha256": "d453938e7ce52bae1289585328f80d10960e5806f090f940e5a82df2f054a1ab",
+          "category": "Angriff",
+          "gesture": "Focused narrowed eyes and clenched closed jaw; RIGHT hand guides the Saex into a compact downward-outward diagonal cut below face, LEFT open hand balances at upper chest, believable forearms."
+        },
+        {
+          "index": 2,
+          "emotion": "Schneller kurzer Stich",
+          "file": "Output/set-02/ylva-wolfshorn-kampf-set-02-saex-nahkampf_Bild02.png",
+          "box": [
+            418,
+            0,
+            836,
+            418
+          ],
+          "sha256": "8039b97b5cbdefeab2cd144133ad8ea55054237f26bc368995ad8e26f47581ea",
+          "category": "Angriff",
+          "gesture": "Intense direct gaze and a short open-mouth exhale; RIGHT forearm extends the knife on an oblique forward thrust aimed outside the tile, LEFT hand draws back beside ribs, no knife aimed into camera."
+        },
+        {
+          "index": 3,
+          "emotion": "Abwartende Klingenfinte",
+          "file": "Output/set-02/ylva-wolfshorn-kampf-set-02-saex-nahkampf_Bild03.png",
+          "box": [
+            836,
+            0,
+            1254,
+            418
+          ],
+          "sha256": "2394a8ccf6c6332f77bc1168b0b177f6fbde6c723d42a378eab02f49da0e3502",
+          "category": "Manöver",
+          "gesture": "Subtle sly smile and angled gaze; RIGHT hand carries Saex low beside hip, torso slightly rotated, LEFT hand loosely raised for balance as she prepares a feint."
+        },
+        {
+          "index": 4,
+          "emotion": "Wachsame Klingenabwehr",
+          "file": "Output/set-02/ylva-wolfshorn-kampf-set-02-saex-nahkampf_Bild04.png",
+          "box": [
+            0,
+            418,
+            418,
+            836
+          ],
+          "sha256": "b4588f5ac08ba4703709c5c27e61f0614f2f278cb2aeab66fac7256e27d852aa",
+          "category": "Abwehr",
+          "gesture": "Alert wide eyes and firm mouth; RIGHT hand raises Saex diagonally just outside shoulder in a compact defensive guard, LEFT forearm lifted below chin, face unobstructed."
+        },
+        {
+          "index": 5,
+          "emotion": "Zähes Ableiten",
+          "file": "Output/set-02/ylva-wolfshorn-kampf-set-02-saex-nahkampf_Bild05.png",
+          "box": [
+            418,
+            418,
+            836,
+            836
+          ],
+          "sha256": "3a42c14a75039856680b08879413ae5c4c1972abe8dbc97767a87e90bd5ea20b",
+          "category": "Abwehr",
+          "gesture": "Teeth lightly gritted, brows knitted; RIGHT hand angles blade outward at lower chest level to deflect, LEFT open hand stays clear of blade, protective but natural posture."
+        },
+        {
+          "index": 6,
+          "emotion": "Seitliches Umgehen",
+          "file": "Output/set-02/ylva-wolfshorn-kampf-set-02-saex-nahkampf_Bild06.png",
+          "box": [
+            836,
+            418,
+            1254,
+            836
+          ],
+          "sha256": "00de91adbd85a9ae5ad6494425be7ced4f1cda561dce444771c0fdcdc6941618",
+          "category": "Manöver",
+          "gesture": "Eyes tracking off to one side, thoughtful tight lips; slight lateral movement with RIGHT Saex held near belt pointing safely out and LEFT hand open beside torso, measured maneuver rather than a repeated attack."
+        },
+        {
+          "index": 7,
+          "emotion": "Ruhige Messerbereitschaft",
+          "file": "Output/set-02/ylva-wolfshorn-kampf-set-02-saex-nahkampf_Bild07.png",
+          "box": [
+            0,
+            836,
+            418,
+            1254
+          ],
+          "sha256": "47c27875a21df5bcc42efaba2b280a7330fc082945ad0d60c3363ba72914e290",
+          "category": "Gelassen",
+          "gesture": "Soft easy half-smile, relaxed eyes and upright shoulders; RIGHT Saex lowered beside hip with tip down, LEFT thumb hooked lightly at belt, poised and composed."
+        },
+        {
+          "index": 8,
+          "emotion": "Den Gegner markieren",
+          "file": "Output/set-02/ylva-wolfshorn-kampf-set-02-saex-nahkampf_Bild08.png",
+          "box": [
+            418,
+            836,
+            836,
+            1254
+          ],
+          "sha256": "6db9d0c2643cde8deb4a4b93640824ec3a60b8493f0453b488059b93fc4d237f",
+          "category": "Gestik",
+          "gesture": "A firm confident knowing expression; LEFT index finger points offscreen toward the unseen counterpart while RIGHT hand keeps Saex lowered at her own side, no second weapon."
+        },
+        {
+          "index": 9,
+          "emotion": "Nach einem Treffer sammeln",
+          "file": "Output/set-02/ylva-wolfshorn-kampf-set-02-saex-nahkampf_Bild09.png",
+          "box": [
+            836,
+            836,
+            1254,
+            1254
+          ],
+          "sha256": "328b7c0cb5cea3ce96fec49aa90d5784e2f1ba9106fb71bf1f46122e8b9b9625",
+          "category": "Angeschlagen",
+          "gesture": "Pained but conscious face with cheek abrasion and bruised temple, dusty fur mantle; RIGHT hand at viewer's left holds the Saex safely lowered, LEFT hand at viewer's right rests against the sore temple. Exactly two naturally attached uncrossed arms."
+        }
+      ],
+      "visualReview": {
+        "reviewedAt": "2026-10-14",
+        "reviewedAvatars": 9,
+        "passed": true,
+        "checks": [
+          "Originalavatar und dessen Zeichenstil",
+          "tatsächliche Inventarwaffe",
+          "lesbare Mimik und Gestik",
+          "plausible Waffenhaltung",
+          "ruhige und angeschlagene Reaktionen",
+          "keine Nachbarbildreste, Schrift oder Trennlinien"
+        ]
+      }
+    },
+    {
+      "setId": "set-03",
+      "theme": "Wolfshorn-Handaxt – Nahkampf und Wendigkeit",
+      "sheet": "Sheets/ylva-wolfshorn-kampf-set-03-handaxt.png",
+      "sheetSha256": "06ec7e9bb37913c622344ac9f617e127477d0565a25f2e18a4197f03caf655b8",
+      "sheetSize": [
+        1254,
+        1254
+      ],
+      "cellSize": [
+        418,
+        418
+      ],
+      "avatarCount": 9,
+      "outputs": [
+        {
+          "index": 1,
+          "emotion": "Kontrollierter kurzer Axthieb",
+          "file": "Output/set-03/ylva-wolfshorn-kampf-set-03-handaxt_Bild01.png",
+          "box": [
+            0,
+            0,
+            418,
+            418
+          ],
+          "sha256": "5450f531ba68522cc0aecb0481e6ab52308ea813929eba4c931c6f959c42eb33",
+          "category": "Angriff",
+          "gesture": "Focused narrowed steel-blue eyes and firm jaw; RIGHT hand guides short axe into a compact outward diagonal strike beside body, LEFT open palm lifted near chest, face and weapon grip clearly visible."
+        },
+        {
+          "index": 2,
+          "emotion": "Energischer Seitwärtshieb",
+          "file": "Output/set-03/ylva-wolfshorn-kampf-set-03-handaxt_Bild02.png",
+          "box": [
+            418,
+            0,
+            836,
+            418
+          ],
+          "sha256": "0a88e48e97f4a3c735ab5dc3f414d9c1fa81ad70488fb4813b89af84d480ab01",
+          "category": "Angriff",
+          "gesture": "Drawn brows and a short forceful exhale; RIGHT arm sweeps the same single hand axe laterally below chin, LEFT hand withdrawn beside ribs to balance, normal small axe size."
+        },
+        {
+          "index": 3,
+          "emotion": "Täuschende Axtfinte",
+          "file": "Output/set-03/ylva-wolfshorn-kampf-set-03-handaxt_Bild03.png",
+          "box": [
+            836,
+            0,
+            1254,
+            418
+          ],
+          "sha256": "a9137e25602962507b92f62ca62121d06e620c245c9d9bb96a31f8cdaa83d343",
+          "category": "Manöver",
+          "gesture": "A knowing faint sly smile and attentive side gaze; RIGHT hand carries axe near one hip with blade safely outside body, torso slightly turned, LEFT hand open near belt while she changes approach angle."
+        },
+        {
+          "index": 4,
+          "emotion": "Wachsame hohe Deckung",
+          "file": "Output/set-03/ylva-wolfshorn-kampf-set-03-handaxt_Bild04.png",
+          "box": [
+            0,
+            418,
+            418,
+            836
+          ],
+          "sha256": "f2ff5756d79d9f7d663e9f55e42e420145bd8cce8413870598181660e6b2e0d1",
+          "category": "Abwehr",
+          "gesture": "Alert widened eyes and compressed lips; RIGHT hand raises short axe beside shoulder, single blade facing outward, LEFT forearm below chin and away from blade, full face unobstructed."
+        },
+        {
+          "index": 5,
+          "emotion": "Standhaftes Ableiten",
+          "file": "Output/set-03/ylva-wolfshorn-kampf-set-03-handaxt_Bild05.png",
+          "box": [
+            418,
+            418,
+            836,
+            836
+          ],
+          "sha256": "dc9da23d45bbd9eca41b4a2df3caaddc1c33633d297992d3baa287878e0d8aa2",
+          "category": "Abwehr",
+          "gesture": "Gritted teeth and knitted brows; RIGHT hand braces short haft at lower chest with blade outward in a compact parry, LEFT open hand clear of the axe, realistic wrist and shoulder alignment."
+        },
+        {
+          "index": 6,
+          "emotion": "Seitliches Ausweichen",
+          "file": "Output/set-03/ylva-wolfshorn-kampf-set-03-handaxt_Bild06.png",
+          "box": [
+            836,
+            418,
+            1254,
+            836
+          ],
+          "sha256": "2c457f77bbcf830a35f107beffe33f152caf436553bee8a3ea74c18a051cd855",
+          "category": "Manöver",
+          "gesture": "Intent eyes tracking sideways, mouth firmly closed; modest lateral torso shift, RIGHT axe held low close to hip, LEFT palm slightly raised for balance; tactical movement with readable hands."
+        },
+        {
+          "index": 7,
+          "emotion": "Gelassene Axtbereitschaft",
+          "file": "Output/set-03/ylva-wolfshorn-kampf-set-03-handaxt_Bild07.png",
+          "box": [
+            0,
+            836,
+            418,
+            1254
+          ],
+          "sha256": "ba69f76087f2e06273cd7d612b80dcb93c9f0de5ad97b580b58dfcc674b85e3a",
+          "category": "Gelassen",
+          "gesture": "The uploaded avatar's subtle confident smile, soft direct gaze and relaxed shoulders; RIGHT hand loosely but safely holds axe lowered at side, LEFT hand rests at belt, no attacking motion."
+        },
+        {
+          "index": 8,
+          "emotion": "Auf den Gegenüber deuten",
+          "file": "Output/set-03/ylva-wolfshorn-kampf-set-03-handaxt_Bild08.png",
+          "box": [
+            418,
+            836,
+            836,
+            1254
+          ],
+          "sha256": "b27ca2da0d07a4bb42bd084c516d9bf5606f8660386593740310f70241afe59d",
+          "category": "Gestik",
+          "gesture": "One raised brow and a knowing firm expression; LEFT bare index finger points clearly toward an unseen opponent beside the camera, RIGHT hand supports the axe low at her side, no giant foreshortened palm."
+        },
+        {
+          "index": 9,
+          "emotion": "Nach einem Treffer Halt finden",
+          "file": "Output/set-03/ylva-wolfshorn-kampf-set-03-handaxt_Bild09.png",
+          "box": [
+            836,
+            836,
+            1254,
+            1254
+          ],
+          "sha256": "8974e0468989c9d25f7e587f150cd13a73bd1aed4de128da4157beed6652ec88",
+          "category": "Angeschlagen",
+          "gesture": "Minor cheek bruise and shallow brow scratch, dust at fur mantle, exhausted but determined eyes and a restrained pained exhale; RIGHT hand holds axe low, LEFT palm presses ribs, slightly bent torso, no serious bleeding or redesigned clothing."
+        }
+      ],
+      "visualReview": {
+        "reviewedAt": "2026-10-14",
+        "reviewedAvatars": 9,
+        "passed": true,
+        "checks": [
+          "Originalavatar und dessen Zeichenstil",
+          "tatsächliche Inventarwaffe",
+          "lesbare Mimik und Gestik",
+          "plausible Waffenhaltung",
+          "ruhige und angeschlagene Reaktionen",
+          "keine Nachbarbildreste, Schrift oder Trennlinien"
+        ]
+      }
+    }
+  ],
+  "avatarCount": 27,
+  "visualReview": {
+    "reviewedAt": "2026-10-14",
+    "reviewedAvatars": 27,
+    "passed": true,
+    "method": "Alle 27 tatsächlich exportierten PNGs in drei Prüfübersichten bei Originalgröße angesehen."
+  },
+  "referenceSha256": "0665c9b0059d3c791c97c34307d727aa15cc9cda98b4887ed708b8df588a5a87",
+  "background": "Gemeinsames mittelalterliches Übungsfeld mit Sandboden, niedrigem Zaun, heller Mauer und entfernten Übungszielen bei mildem Tageslicht.",
+  "framing": "Kopf bis Hüfte/oberer Oberschenkel, gut sichtbare Hände; lange Waffen dürfen den Bildrand verlassen."
+}

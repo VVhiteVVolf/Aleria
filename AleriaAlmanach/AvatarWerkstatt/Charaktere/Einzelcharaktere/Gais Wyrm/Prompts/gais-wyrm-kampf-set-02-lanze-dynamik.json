@@ -1,0 +1,125 @@
+{
+  "version": 1,
+  "characterName": "Gais Wyrm",
+  "characterFolder": "Charaktere/Einzelcharaktere/Gais Wyrm",
+  "setId": "set-02",
+  "referenceImage": "Referenzen/gais-wyrm-nutzerreferenz.png",
+  "characterDescription": "Sir Gais Wyrm, the young adult knight in the exact Image 1: fair skin, the same short richly rust-red tousled hair and asymmetrical fringe, subtle crown tufts, narrow amber-brown eyes, youthful fine angular jaw, straight brows, clean-shaven face. Preserve his precise illustrated anime linework, sharp restrained cel shading, warm original palette and age; no beard, longer hair, muscular adult redesign or different eye shape. Preserve the dark charcoal/black plate armor, modest thin gold edging, rounded dark pauldrons, high black gorget, gold/yellow central breastplate with the BLACK Wyrm dragon, black sleeves and black gloves from the source. Extend the original armor down to waist/upper thighs with a practical belt, retaining its exact design. Do not replace the avatar armor with a chainmail-only outfit from an older equipment entry. No helmet, shield, horse, sword or extra weapon.",
+  "theme": "Lanze – Dynamik und Gegenwehr",
+  "promptTemplate": "Anleitungen/Lesefassungen/Charakter-Emotionssheet Master Prompt.txt",
+  "sheet": {
+    "aspectRatio": "1:1",
+    "columns": 3,
+    "rows": 3,
+    "actualPixels": [
+      1254,
+      1254
+    ]
+  },
+  "panels": [
+    {
+      "index": 1,
+      "position": "Top Left",
+      "category": "Angriff",
+      "emotion": "Entschlossen Raum gewinnen",
+      "gesture": "Sharp focused eyes and a tight confident smile; modest forward shoulder movement, both hands extending one lance obliquely across lower chest, rear grip at hip and forward guide grip clearly separated."
+    },
+    {
+      "index": 2,
+      "position": "Top Center",
+      "category": "Angriff",
+      "emotion": "Reaktiver Gegenstoß",
+      "gesture": "Brows sharply knit, teeth briefly clenched; slight recoil then a compact two-handed counterthrust toward the outer side of the tile, no weapon or large fist in front of the face."
+    },
+    {
+      "index": 3,
+      "position": "Top Right",
+      "category": "Manöver",
+      "emotion": "Den Winkel wechseln",
+      "gesture": "Calculating sideways glance and asymmetric brow; torso turned a little, hands reposition the same shaft diagonally low across hips to change the approach angle, no repeated lunging pose."
+    },
+    {
+      "index": 4,
+      "position": "Middle Left",
+      "category": "Abwehr",
+      "emotion": "Hohe äußere Deckung",
+      "gesture": "Eyes slightly widened, lips parted with concentration; both hands lift one continuous shaft into a diagonal guard on the OUTSIDE of shoulder, complete head and eyes clear."
+    },
+    {
+      "index": 5,
+      "position": "Center",
+      "category": "Abwehr",
+      "emotion": "Standhafte Gegenwehr",
+      "gesture": "Fierce steady eyes and gritted teeth; elbows bend as both hands brace the same shaft low and outward against imagined pressure, no opponent or contact shown."
+    },
+    {
+      "index": 6,
+      "position": "Middle Right",
+      "category": "Manöver",
+      "emotion": "Kontrolliert zurücknehmen",
+      "gesture": "Cool watchful sidelong look, firm closed mouth; shoulders drawn slightly back, lance supported in two hands at lower chest in a compact protective carry, tactical retreat rather than panic."
+    },
+    {
+      "index": 7,
+      "position": "Bottom Left",
+      "category": "Gelassen",
+      "emotion": "Selbstsichere Trainingspause",
+      "gesture": "Small amused smirk and easy eyes, shoulders loose; RIGHT hand holds lance at a relaxed diagonal beside body, LEFT hand lightly rests on belt, weapon point offscreen."
+    },
+    {
+      "index": 8,
+      "position": "Bottom Center",
+      "category": "Gestik",
+      "emotion": "Mit knapper Geste dirigieren",
+      "gesture": "Stern assured expression, lips slightly open as if issuing a brief challenge; LEFT index finger extends toward the unseen counterpart offscreen while RIGHT hand supports the upright lance, natural glove anatomy."
+    },
+    {
+      "index": 9,
+      "position": "Bottom Right",
+      "category": "Angeschlagen",
+      "emotion": "Erschöpft wieder sammeln",
+      "gesture": "Dust along hair and gold-edged armor, small brow bruise and cheek abrasion, strained amber-brown eyes and a short tired exhale; RIGHT hand steadies the upright lance, LEFT palm rests on sore shoulder, slightly slumped but proud and conscious."
+    }
+  ],
+  "splitter": {
+    "cols": 3,
+    "rows": 3,
+    "gap_x": 0,
+    "gap_y": 0,
+    "autocrop": false
+  },
+  "outputNaming": "gais-wyrm-kampf-set-02-lanze-dynamik_Bild01.png bis _Bild09.png",
+  "status": "erzeugt, mit V3 zerlegt und visuell geprüft",
+  "createdAt": "2026-10-14",
+  "stem": "gais-wyrm-kampf-set-02-lanze-dynamik",
+  "referenceSha256": "1decd881d5981d358bf7ffc0e4df384b69729e4d821ecd0c2575c275d603df3b",
+  "inputImageFiles": [
+    "Referenzen/gais-wyrm-nutzerreferenz.png",
+    "Referenzen/gais-lanze-v4.png"
+  ],
+  "weapon": "Use exactly the SAME single Gais inventory lance as in Image 2 and his first set: dark brown straight long wood shaft, black leather grip, restrained gold Wyrm fittings, gold dragon-head socket and ONE steel leaf-shaped point. Preserve real long proportions. No sword, shield, second lance, horse or huge tapered jousting cone. In active poses both gloved hands use separated grips on one continuous shaft. The weapon head should remain naturally outside the crop in MOST panels; do not miniaturize it to fit.",
+  "background": "Gemeinsames ruhiges mittelalterliches Übungsfeld bei weichem Tageslicht.",
+  "framing": "Vollständiger Kopf bis Hüfte/oberer Oberschenkel; Hände und Schaftgriffe lesbar.",
+  "promptFile": "Prompts/gais-wyrm-kampf-set-02-lanze-dynamik.txt",
+  "sheetFile": "Sheets/gais-wyrm-kampf-set-02-lanze-dynamik.png",
+  "outputFolder": "Output/set-02",
+  "generationMode": "built-in image_gen",
+  "avatarCount": 9,
+  "visualReview": {
+    "reviewedAt": "2026-10-14",
+    "reviewedAvatars": 9,
+    "passed": true,
+    "checks": [
+      "Originalavatar und dessen Zeichenstil",
+      "tatsächliche Inventarwaffe",
+      "lesbare Mimik und Gestik",
+      "plausible Waffenhaltung",
+      "ruhige und angeschlagene Reaktionen",
+      "keine Nachbarbildreste, Schrift oder Trennlinien"
+    ]
+  },
+  "avatarPixels": [
+    418,
+    418
+  ]
+}

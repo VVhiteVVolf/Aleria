@@ -1,0 +1,22 @@
+{
+  "reviewedAt": "2026-10-14",
+  "bindingIdentity": {
+    "file": "Referenzen/gais-wyrm-nutzerreferenz.png",
+    "source": "Unveränderte PNG-Bytes des Nutzeranhangs vom 14. Oktober 2026.",
+    "sha256": "1decd881d5981d358bf7ffc0e4df384b69729e4d821ecd0c2575c275d603df3b"
+  },
+  "equipment": [
+    {
+      "source": "AleriaAlmanach/public/assets/character-equipment/gais-lanze-v4.png",
+      "copy": "Referenzen/gais-lanze-v4.png",
+      "sha256": "4741171f8a94c6855bcdd90d0dee72ba61353643afd9ad2fa952a26c2ff068d6",
+      "role": "Nur Geometrie und Verzierung der tatsächlichen Inventarwaffe; keine Stil- oder Personenreferenz."
+    },
+    {
+      "source": "AleriaAlmanach/public/assets/character-equipment/gais-langschwert-v2.png",
+      "copy": "Referenzen/gais-langschwert-v2.png",
+      "sha256": "652e224c3ecfa3b142f00b9821e10be47def7c38a1a601564fe95ee19ed19080",
+      "role": "Nur die tatsächliche Inventarwaffe, kein Transfer ihres Zeichenstils auf die Person."
+    }
+  ]
+}

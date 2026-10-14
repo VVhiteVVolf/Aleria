@@ -1,0 +1,133 @@
+{
+  "version": 1,
+  "characterName": "Gais Wyrm",
+  "characterFolder": "Charaktere/Einzelcharaktere/Gais Wyrm",
+  "setId": "set-01",
+  "referenceImage": "Referenzen/gais-wyrm-nutzerreferenz.png",
+  "characterDescription": "Sir Gais Wyrm, the young adult knight in the exact Image 1: fair skin, the same short richly rust-red tousled hair and asymmetrical fringe, subtle crown tufts, narrow amber-brown eyes, youthful fine angular jaw, straight brows, clean-shaven face. Preserve his precise illustrated anime linework, sharp restrained cel shading, warm original palette and age; no beard, longer hair, muscular adult redesign or different eye shape. Preserve the dark charcoal/black plate armor, modest thin gold edging, rounded dark pauldrons, high black gorget, gold/yellow central breastplate with the BLACK Wyrm dragon, black sleeves and black gloves from the source. Extend the original armor down to waist/upper thighs with a practical belt, retaining its exact design. Do not replace the avatar armor with a chainmail-only outfit from an older equipment entry. No helmet, shield, horse, sword or extra weapon.",
+  "theme": "Lanze – Kontrolle und Bereitschaft",
+  "promptTemplate": "Anleitungen/Lesefassungen/Charakter-Emotionssheet Master Prompt.txt",
+  "sheet": {
+    "aspectRatio": "1:1",
+    "columns": 3,
+    "rows": 3,
+    "actualPixels": [
+      1254,
+      1254
+    ]
+  },
+  "panels": [
+    {
+      "index": 1,
+      "position": "Top Left",
+      "category": "Angriff",
+      "emotion": "Präziser Lanzenvorstoß",
+      "gesture": "Eyes narrowed in cool concentration, mouth closed firmly; two separated gloved hands guide the same lance into an oblique forward thrust beside torso, rear grip near hip, face clear."
+    },
+    {
+      "index": 2,
+      "position": "Top Center",
+      "category": "Manöver",
+      "emotion": "Berechnende Finte",
+      "gesture": "A faint smug one-sided smile, assessing eyes; slight torso turn, both hands pull one continuous shaft close to hip in a controlled feint, not a giant overhead chop."
+    },
+    {
+      "index": 3,
+      "position": "Top Right",
+      "category": "Angriff",
+      "emotion": "Druckvoller Nachstoß",
+      "gesture": "Firm drawn brows and open mouth in a short controlled exertion; rear hand drives forward, lead hand stabilizes one long lance aimed offscreen below shoulder, source face proportions preserved."
+    },
+    {
+      "index": 4,
+      "position": "Middle Left",
+      "category": "Abwehr",
+      "emotion": "Ruhige Querschafparade",
+      "gesture": "Composed unwavering look, lips pressed; both hands braced apart around one horizontal shaft below chin, elbows modestly bent to absorb a hypothetical blow."
+    },
+    {
+      "index": 5,
+      "position": "Center",
+      "category": "Abwehr",
+      "emotion": "Wachsame schräge Deckung",
+      "gesture": "One brow lifted with alert concern and slightly parted lips; continuous shaft diagonally beside shoulder, two hands holding practical leverage points, no shaft through his face."
+    },
+    {
+      "index": 6,
+      "position": "Middle Right",
+      "category": "Manöver",
+      "emotion": "Seitlicher Stellungswechsel",
+      "gesture": "Sideward focused gaze, chin tucked slightly; torso angled in a small lateral adjustment, both hands hold lance low and outward in a measured ready guard."
+    },
+    {
+      "index": 7,
+      "position": "Bottom Left",
+      "category": "Gelassen",
+      "emotion": "Souveräne Lanzenruhe",
+      "gesture": "The uploaded avatar's restrained arrogant calm, half-lidded eyes and a subtle closed-mouth hint of a smile; LEFT hand supports the upright lance, RIGHT hand relaxed at belt, weight easy."
+    },
+    {
+      "index": 8,
+      "position": "Bottom Center",
+      "category": "Gestik",
+      "emotion": "Auf den Gegenüber zeigen",
+      "gesture": "Confident direct amber-brown gaze, slightly raised brow; RIGHT gloved index finger points at the unseen opponent beside the camera while LEFT hand supports the long upright shaft, a readable normal-sized hand."
+    },
+    {
+      "index": 9,
+      "position": "Bottom Right",
+      "category": "Angeschlagen",
+      "emotion": "Angeschlagen Haltung bewahren",
+      "gesture": "Small bruise on cheek and a shallow scratch, dusty armor and tired narrowed eyes; LEFT hand steadies the lance as RIGHT gloved hand presses ribs, shoulders slightly uneven, restrained pain in mouth. No blood-soaked damage or new armor design."
+    }
+  ],
+  "splitter": {
+    "cols": 3,
+    "rows": 3,
+    "gap_x": 0,
+    "gap_y": 0,
+    "autocrop": false
+  },
+  "outputNaming": "gais-wyrm-kampf-set-01-lanze-kontrolle_Bild01.png bis _Bild09.png",
+  "status": "erzeugt, mit V3 zerlegt und visuell geprüft",
+  "createdAt": "2026-10-14",
+  "stem": "gais-wyrm-kampf-set-01-lanze-kontrolle",
+  "referenceSha256": "1decd881d5981d358bf7ffc0e4df384b69729e4d821ecd0c2575c275d603df3b",
+  "inputImageFiles": [
+    "Referenzen/gais-wyrm-nutzerreferenz.png",
+    "Referenzen/gais-lanze-v4.png"
+  ],
+  "weapon": "Exactly ONE actual Gais lance, matching Image 2: long continuous dark brown wooden shaft, black/brown leather grip, modest gold bands, small Wyrm dragon medallion, gold dragon-head socket below a SINGLE steel leaf-shaped point, small steel butt spike if visible. Normal practical proportions, no huge lance cone, giant spearhead or flags. Two separated gloved hands grasp the SAME shaft during two-handed actions, one near hip and one guiding farther along. Rest/point/injury poses may support it with one hand. MOST panels may show only the shaft and a grip: the actual long point naturally lies outside their square.",
+  "background": "Gemeinsames ruhiges mittelalterliches Übungsfeld bei weichem Tageslicht.",
+  "framing": "Vollständiger Kopf bis Hüfte/oberer Oberschenkel; Hände und Schaftgriffe lesbar.",
+  "promptFile": "Prompts/gais-wyrm-kampf-set-01-lanze-kontrolle.txt",
+  "sheetFile": "Sheets/gais-wyrm-kampf-set-01-lanze-kontrolle-v2.png",
+  "outputFolder": "Output/set-01",
+  "generationMode": "built-in image_gen",
+  "draftSheetFile": "Sheets/Entwuerfe/gais-wyrm-kampf-set-01-lanze-kontrolle-v1.png",
+  "correctionPromptFile": "Prompts/gais-wyrm-kampf-set-01-lanze-kontrolle-korrektur.txt",
+  "correctionInputImageFiles": [
+    "Sheets/Entwuerfe/gais-wyrm-kampf-set-01-lanze-kontrolle-v1.png",
+    "Referenzen/gais-wyrm-nutzerreferenz.png",
+    "Referenzen/gais-lanze-v4.png"
+  ],
+  "correctionReason": "Ein durchgehender Lanzenschaft durch beide Hände im oberen linken Feld.",
+  "avatarCount": 9,
+  "visualReview": {
+    "reviewedAt": "2026-10-14",
+    "reviewedAvatars": 9,
+    "passed": true,
+    "checks": [
+      "Originalavatar und dessen Zeichenstil",
+      "tatsächliche Inventarwaffe",
+      "lesbare Mimik und Gestik",
+      "plausible Waffenhaltung",
+      "ruhige und angeschlagene Reaktionen",
+      "keine Nachbarbildreste, Schrift oder Trennlinien"
+    ]
+  },
+  "avatarPixels": [
+    418,
+    418
+  ]
+}

@@ -1,0 +1,127 @@
+Use case: illustration-story. Asset: one reusable RPG combat avatar sheet.
+Create ONE square 1:1 image, exactly 3 columns by 3 rows, NINE equal square panels. Seamless edge-to-edge tiles, NO borders, gutters, divider strokes, captions, numbers, text, speech balloons, motion symbols or watermarks. Each panel contains only this same single character.
+INPUT ROLES: Image 1 is the EXACT avatar supplied by the user in this request, and is the ONLY authority for the character's identity and ARTISTIC STYLE. Image 2 is ONLY the actual inventory weapon, its geometry, material and decoration. Do not transfer the item illustration's style onto the person. Do not use another character, generic anime preset or a previous generated combat sheet as a style reference.
+HIGHEST PRIORITY: faithfully expand the original avatar into new expressions and weapon poses. Preserve the exact face, age, eye shape and color, hairstyle, hairline, skin tone, clothing, armor, accessories, original line quality, shading technique, texture level, subdued palette and rendering style. Do not redesign, beautify, sharpen or simplify the person. The finished sheet must visibly belong to the same avatar family as Image 1.
+CAMERA: eye-level medium portrait, framed a little farther away than the source, complete head to upper thighs or hips, both elbows, hands and most torso comfortably visible. The face remains large enough to read as an avatar. Similar camera distance throughout all nine squares; no bird's eye view, fisheye, full-body distant figures, extreme foreshortening or weapon aimed directly into the lens.
+Long polearms remain genuinely long. In most polearm panels show primarily their SHAFT; it is completely fine for the head and butt to be outside the individual square. NEVER compress or bend a weapon merely to fit its entire length. Weapon parts may leave their own square but must not intrude into another tile. No floating weapons, duplicated shafts or hands gripping a blade. Exactly two anatomically credible arms and hands, fingers and opposed thumbs wrapped naturally around the relevant grip. In two-handed polearm actions the two hands grasp the SAME continuous shaft at separated leverage points. Gestures use a free hand while the other safely supports the weapon. Faces are never obstructed by weapons or hands.
+BACKGROUND OVERRIDE REQUESTED BY USER: replace the source environment with the SAME outdoor medieval practice field in all six sets, open compacted sandy ground, a low weathered timber fence with a modest pale stone wall farther back, subdued trees and grass, a distant straw practice target and simple weapon rack. Calm soft mild daytime lighting, softly subordinate background. No castle banners, crowds, opponents, horses, pets, shields, magical effects, explosions or extra carried equipment. One character per panel.
+Top row combines attacking and tactical maneuvering poses; middle row combines defense and evasive maneuvering; bottom row contains a relaxed armed pose, a one-handed pointing gesture addressed to an unseen opponent, and one visibly battered but conscious pose. Distinct facial expressions and readable body language in every tile. Injured pose: minor cheek bruise or shallow scratch, dust, discomfort and exertion; no major bleeding, dismemberment, dramatic new scars or altered outfit.
+The explicit current requests for practice-field background, weapons, farther-out framing and one injured tile override the generic background/free-hands/close-up/neutral-pose clauses in the master template below. All identity and artistic-style requirements remain binding.
+
+EXACT CHARACTER LOCK:
+Sir Gais Wyrm, the young adult knight in the exact Image 1: fair skin, the same short richly rust-red tousled hair and asymmetrical fringe, subtle crown tufts, narrow amber-brown eyes, youthful fine angular jaw, straight brows, clean-shaven face. Preserve his precise illustrated anime linework, sharp restrained cel shading, warm original palette and age; no beard, longer hair, muscular adult redesign or different eye shape. Preserve the dark charcoal/black plate armor, modest thin gold edging, rounded dark pauldrons, high black gorget, gold/yellow central breastplate with the BLACK Wyrm dragon, black sleeves and black gloves from the source. Extend the original armor down to waist/upper thighs with a practical belt, retaining its exact design. Do not replace the avatar armor with a chainmail-only outfit from an older equipment entry. No helmet, shield, horse, sword or extra weapon.
+
+Charakter-Emotionssheet Master Prompt (9er Set)
+Take the provided portrait image as the ONLY reference for the character.
+Create a complete 3×3 expression and gesture sheet (9 panels) featuring the EXACT SAME character.
+Identity Preservation (Highest Priority)
+The character must remain 100% identical in every panel.
+Preserve exactly:
+Face shape and proportions
+Eyes, eyebrows and nose
+Hairstyle, hair volume and hairline
+Facial hair
+Armor, clothing, colors and accessories
+Age
+Art style
+Line quality
+Rendering quality
+Lighting
+Color palette
+Do NOT redesign, reinterpret or stylize the character differently.
+Every panel should feel like the same portrait with altered expressions and poses, not nine separate illustrations.
+
+Background Consistency
+Use the exact same background in every panel.
+Same environment
+Same lighting
+Same camera distance
+Same perspective
+No simplification
+No redesign
+The only changes should be the character’s expression, head angle (minor), gaze and body gesture.
+
+Composition
+Square overall format (1:1)
+3×3 grid
+Nine equally sized panels
+No white borders
+No text
+No captions
+No symbols
+No speech bubbles
+No props unless explicitly requested
+Character visible from chest to upper body in every panel
+Same camera angle and framing across all panels
+Minimal variation in rotation only when it supports the expression
+
+Expression Consistency
+This is NOT nine different drawings.
+It must look like the same portrait whose facial muscles and body language change naturally.
+Changes should primarily affect:
+Eyebrows
+Eyes
+Eyelids
+Mouth
+Jaw tension
+Head tilt
+Eye direction
+Avoid changing:
+Skull proportions
+Hair shape
+Armor proportions
+Clothing folds unnecessarily
+High character consistency is critical.
+
+Gesture Rules
+Every emotion must also be expressed through:
+Hands
+Arms
+Shoulders
+Head position
+Torso posture
+Eye direction
+Body language is more important than facial expression alone.
+Every panel should immediately communicate a usable RPG reaction.
+Avoid neutral filler poses.
+Every tile should have a clear storytelling purpose.
+No repeated gestures.
+
+Character Description
+Sir Gais Wyrm, the young adult knight in the exact Image 1: fair skin, the same short richly rust-red tousled hair and asymmetrical fringe, subtle crown tufts, narrow amber-brown eyes, youthful fine angular jaw, straight brows, clean-shaven face. Preserve his precise illustrated anime linework, sharp restrained cel shading, warm original palette and age; no beard, longer hair, muscular adult redesign or different eye shape. Preserve the dark charcoal/black plate armor, modest thin gold edging, rounded dark pauldrons, high black gorget, gold/yellow central breastplate with the BLACK Wyrm dragon, black sleeves and black gloves from the source. Extend the original armor down to waist/upper thighs with a practical belt, retaining its exact design. Do not replace the avatar armor with a chainmail-only outfit from an older equipment entry. No helmet, shield, horse, sword or extra weapon.
+
+Weapon: Exactly ONE Gais inventory longsword in his RIGHT gloved hand, matching Image 2: straight double-edged plain steel blade with tapering point, modest golden straight/slightly swept crossguard, black leather-wrapped hilt and round gold pommel with a BLACK Wyrm dragon. Normal longsword size, never an oversized greatsword, dagger, curved saber or spear. The RIGHT hand wraps the HILT behind the crossguard, never the blade; the LEFT gloved hand remains free for balancing and gesturing, except a natural two-handed guard may support the lower hilt. No shield, second sword, lance or horse.
+
+Theme
+Langschwert – Hieb, Parade und Haltung
+Panel List
+Top Left
+Präziser Diagonalhieb: Cool narrowed eyes and firm jaw; RIGHT hand drives a compact diagonal cut downward and outward below his unobstructed face, LEFT hand loosely lifted beside ribs for balance.
+Top Center
+Entschlossener kurzer Stich: Sharp focused stare with a short open-mouth exertion; RIGHT hand extends the sword into an oblique thrust beside torso toward the outer tile, LEFT arm drawn back naturally. Avoid blade aimed into camera.
+Top Right
+Taktische Schwertfinte: A small smug smile and measuring sideward gaze; RIGHT sword carried low beside hip, torso modestly turned as he changes the angle, LEFT palm partly open near belt.
+Middle Left
+Ruhige äußere Parade: Calm concentrated eyes and tight mouth; RIGHT hand holds blade diagonally beside shoulder in a compact defensive guard, LEFT forearm below chin and clear of cutting edge, face completely visible.
+Center
+Zähes Abfangen: Teeth briefly clenched with effort, alert amber-brown eyes; RIGHT hand braces hilt at lower chest, blade angled outward to deflect an unseen strike, LEFT hand can support the lower HILT with no fingers on blade.
+Middle Right
+Den Gegner umrunden: Calculating sideways eyes and slightly lifted brow; small lateral torso movement, RIGHT sword in safe low guard alongside hip, LEFT hand relaxed and balancing.
+Bottom Left
+Gelassene Schwertbereitschaft: Uploaded avatar's self-assured mild arrogance, easy half-lidded eyes and faint smile; RIGHT hand holds sword lowered with tip safely outside frame, LEFT hand rests on belt.
+Bottom Center
+Mit dem Finger herausfordern: Direct confident gaze and a brief challenging open mouth; LEFT gloved index finger points toward unseen counterpart offscreen, RIGHT hand keeps sword safely low at his own side, realistic hand size.
+Bottom Right
+Angeschlagen weiterkämpfen: Small cheek abrasion, slight brow bruise and dusty armor, tired but stubborn eyes; RIGHT hand holds sword low, LEFT palm presses his sore ribs, a small bend at torso and strained closed lips. Conscious, not defeated, same armor.
+
+Quality Goals
+Same person in all nine panels
+Same portrait identity
+Highly expressive but believable
+Strong hand acting
+Natural body language
+Consistent anatomy
+Consistent proportions
+Consistent rendering quality
+Anime style identical to the reference image
+Every panel suitable as an RPG reaction portrait

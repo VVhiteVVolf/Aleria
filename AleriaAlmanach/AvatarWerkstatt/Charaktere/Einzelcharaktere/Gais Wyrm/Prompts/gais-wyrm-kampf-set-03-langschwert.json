@@ -1,0 +1,125 @@
+{
+  "version": 1,
+  "characterName": "Gais Wyrm",
+  "characterFolder": "Charaktere/Einzelcharaktere/Gais Wyrm",
+  "setId": "set-03",
+  "referenceImage": "Referenzen/gais-wyrm-nutzerreferenz.png",
+  "characterDescription": "Sir Gais Wyrm, the young adult knight in the exact Image 1: fair skin, the same short richly rust-red tousled hair and asymmetrical fringe, subtle crown tufts, narrow amber-brown eyes, youthful fine angular jaw, straight brows, clean-shaven face. Preserve his precise illustrated anime linework, sharp restrained cel shading, warm original palette and age; no beard, longer hair, muscular adult redesign or different eye shape. Preserve the dark charcoal/black plate armor, modest thin gold edging, rounded dark pauldrons, high black gorget, gold/yellow central breastplate with the BLACK Wyrm dragon, black sleeves and black gloves from the source. Extend the original armor down to waist/upper thighs with a practical belt, retaining its exact design. Do not replace the avatar armor with a chainmail-only outfit from an older equipment entry. No helmet, shield, horse, sword or extra weapon.",
+  "theme": "Langschwert – Hieb, Parade und Haltung",
+  "promptTemplate": "Anleitungen/Lesefassungen/Charakter-Emotionssheet Master Prompt.txt",
+  "sheet": {
+    "aspectRatio": "1:1",
+    "columns": 3,
+    "rows": 3,
+    "actualPixels": [
+      1254,
+      1254
+    ]
+  },
+  "panels": [
+    {
+      "index": 1,
+      "position": "Top Left",
+      "category": "Angriff",
+      "emotion": "Präziser Diagonalhieb",
+      "gesture": "Cool narrowed eyes and firm jaw; RIGHT hand drives a compact diagonal cut downward and outward below his unobstructed face, LEFT hand loosely lifted beside ribs for balance."
+    },
+    {
+      "index": 2,
+      "position": "Top Center",
+      "category": "Angriff",
+      "emotion": "Entschlossener kurzer Stich",
+      "gesture": "Sharp focused stare with a short open-mouth exertion; RIGHT hand extends the sword into an oblique thrust beside torso toward the outer tile, LEFT arm drawn back naturally. Avoid blade aimed into camera."
+    },
+    {
+      "index": 3,
+      "position": "Top Right",
+      "category": "Manöver",
+      "emotion": "Taktische Schwertfinte",
+      "gesture": "A small smug smile and measuring sideward gaze; RIGHT sword carried low beside hip, torso modestly turned as he changes the angle, LEFT palm partly open near belt."
+    },
+    {
+      "index": 4,
+      "position": "Middle Left",
+      "category": "Abwehr",
+      "emotion": "Ruhige äußere Parade",
+      "gesture": "Calm concentrated eyes and tight mouth; RIGHT hand holds blade diagonally beside shoulder in a compact defensive guard, LEFT forearm below chin and clear of cutting edge, face completely visible."
+    },
+    {
+      "index": 5,
+      "position": "Center",
+      "category": "Abwehr",
+      "emotion": "Zähes Abfangen",
+      "gesture": "Teeth briefly clenched with effort, alert amber-brown eyes; RIGHT hand braces hilt at lower chest, blade angled outward to deflect an unseen strike, LEFT hand can support the lower HILT with no fingers on blade."
+    },
+    {
+      "index": 6,
+      "position": "Middle Right",
+      "category": "Manöver",
+      "emotion": "Den Gegner umrunden",
+      "gesture": "Calculating sideways eyes and slightly lifted brow; small lateral torso movement, RIGHT sword in safe low guard alongside hip, LEFT hand relaxed and balancing."
+    },
+    {
+      "index": 7,
+      "position": "Bottom Left",
+      "category": "Gelassen",
+      "emotion": "Gelassene Schwertbereitschaft",
+      "gesture": "Uploaded avatar's self-assured mild arrogance, easy half-lidded eyes and faint smile; RIGHT hand holds sword lowered with tip safely outside frame, LEFT hand rests on belt."
+    },
+    {
+      "index": 8,
+      "position": "Bottom Center",
+      "category": "Gestik",
+      "emotion": "Mit dem Finger herausfordern",
+      "gesture": "Direct confident gaze and a brief challenging open mouth; LEFT gloved index finger points toward unseen counterpart offscreen, RIGHT hand keeps sword safely low at his own side, realistic hand size."
+    },
+    {
+      "index": 9,
+      "position": "Bottom Right",
+      "category": "Angeschlagen",
+      "emotion": "Angeschlagen weiterkämpfen",
+      "gesture": "Small cheek abrasion, slight brow bruise and dusty armor, tired but stubborn eyes; RIGHT hand holds sword low, LEFT palm presses his sore ribs, a small bend at torso and strained closed lips. Conscious, not defeated, same armor."
+    }
+  ],
+  "splitter": {
+    "cols": 3,
+    "rows": 3,
+    "gap_x": 0,
+    "gap_y": 0,
+    "autocrop": false
+  },
+  "outputNaming": "gais-wyrm-kampf-set-03-langschwert_Bild01.png bis _Bild09.png",
+  "status": "erzeugt, mit V3 zerlegt und visuell geprüft",
+  "createdAt": "2026-10-14",
+  "stem": "gais-wyrm-kampf-set-03-langschwert",
+  "referenceSha256": "1decd881d5981d358bf7ffc0e4df384b69729e4d821ecd0c2575c275d603df3b",
+  "inputImageFiles": [
+    "Referenzen/gais-wyrm-nutzerreferenz.png",
+    "Referenzen/gais-langschwert-v2.png"
+  ],
+  "weapon": "Exactly ONE Gais inventory longsword in his RIGHT gloved hand, matching Image 2: straight double-edged plain steel blade with tapering point, modest golden straight/slightly swept crossguard, black leather-wrapped hilt and round gold pommel with a BLACK Wyrm dragon. Normal longsword size, never an oversized greatsword, dagger, curved saber or spear. The RIGHT hand wraps the HILT behind the crossguard, never the blade; the LEFT gloved hand remains free for balancing and gesturing, except a natural two-handed guard may support the lower hilt. No shield, second sword, lance or horse.",
+  "background": "Gemeinsames ruhiges mittelalterliches Übungsfeld bei weichem Tageslicht.",
+  "framing": "Vollständiger Kopf bis Hüfte/oberer Oberschenkel; Hände und Schaftgriffe lesbar.",
+  "promptFile": "Prompts/gais-wyrm-kampf-set-03-langschwert.txt",
+  "sheetFile": "Sheets/gais-wyrm-kampf-set-03-langschwert.png",
+  "outputFolder": "Output/set-03",
+  "generationMode": "built-in image_gen",
+  "avatarCount": 9,
+  "visualReview": {
+    "reviewedAt": "2026-10-14",
+    "reviewedAvatars": 9,
+    "passed": true,
+    "checks": [
+      "Originalavatar und dessen Zeichenstil",
+      "tatsächliche Inventarwaffe",
+      "lesbare Mimik und Gestik",
+      "plausible Waffenhaltung",
+      "ruhige und angeschlagene Reaktionen",
+      "keine Nachbarbildreste, Schrift oder Trennlinien"
+    ]
+  },
+  "avatarPixels": [
+    418,
+    418
+  ]
+}
