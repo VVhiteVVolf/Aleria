@@ -26,6 +26,14 @@
       "combatBound": "Boolean. true bindet die Herausforderung an den aktuellen Kampf. Die echte encounterId wird ausschließlich vom Server gesetzt. Bei Kampfteilnehmer-Zielgruppe, fremden Empfängern oder einer Dauer bis Kampfende zwingend.",
       "title": "Öffentlich, maximal 180 Zeichen.",
       "publicDescription": "Öffentlich, erforderlich, maximal 4.000 Zeichen.",
+      "sceneImage": {
+        "optional": "Optionales öffentliches Stimmungsbild; null oder url leer bedeutet ohne Bild. Keine Lösung im Bild oder Begleittext verraten. Keine Bildlinks erfinden; nur vom Nutzer bereitgestellte Bilder verwenden.",
+        "url": "Direkter HTTP(S)-Bildlink oder vorhandener Projektpfad, maximal 2.048 Zeichen. PNG, JPG, WebP, GIF und AVIF je nach Browser. Keine lokalen Laufwerkspfade, Uploads, base64- oder data-URLs.",
+        "alt": "Bildbeschreibung für Screenreader, maximal 240 Zeichen.",
+        "caption": "Optionale öffentliche Bildunterschrift, maximal 500 Zeichen.",
+        "format": "Eine imageFormats.id. original bewahrt die Bildproportionen.",
+        "fit": "Eine imageFits.id. contain zeigt das vollständige Bild; cover schneidet auf das gewählte Format zu. Bei original bleibt das Originalformat erhalten."
+      },
       "approach": {
         "approachId": "Eindeutig, maximal 40 Zeichen.",
         "label": "Öffentlich, maximal 160 Zeichen.",
@@ -3492,6 +3500,50 @@
         "priceRange": null
       }
     ],
+    "imageFormats": [
+      {
+        "id": "original",
+        "label": "Originalformat"
+      },
+      {
+        "id": "16:9",
+        "label": "Querformat · 16:9"
+      },
+      {
+        "id": "3:2",
+        "label": "Querformat · 3:2"
+      },
+      {
+        "id": "4:3",
+        "label": "Querformat · 4:3"
+      },
+      {
+        "id": "1:1",
+        "label": "Quadrat · 1:1"
+      },
+      {
+        "id": "2:3",
+        "label": "Hochformat · 2:3"
+      },
+      {
+        "id": "9:16",
+        "label": "Hochformat · 9:16"
+      },
+      {
+        "id": "21:9",
+        "label": "Panorama · 21:9"
+      }
+    ],
+    "imageFits": [
+      {
+        "id": "contain",
+        "label": "Vollständig anzeigen"
+      },
+      {
+        "id": "cover",
+        "label": "Rahmen ausfüllen · zuschneiden"
+      }
+    ],
     "effectPresets": [
       {
         "id": "advantage",
@@ -3674,9 +3726,16 @@
   },
   "challenge": {
     "kind": "herausforderung-event",
-    "schemaVersion": 4,
+    "schemaVersion": 5,
     "title": "Neue Herausforderung",
     "publicDescription": "",
+    "sceneImage": {
+      "url": "",
+      "alt": "",
+      "caption": "",
+      "format": "original",
+      "fit": "contain"
+    },
     "audience": {
       "mode": "all",
       "actorIds": []

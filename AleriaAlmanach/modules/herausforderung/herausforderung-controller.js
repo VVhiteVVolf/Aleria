@@ -5,7 +5,7 @@ import {
   getHerausforderungValidationIssues,
   normalizeHerausforderungApproach,
   normalizeHerausforderungEvent
-} from './herausforderung-model.js?v=20261014-herausforderung-combat-v1';
+} from './herausforderung-model.js?v=20261015-challenge-scene-image-v1';
 import { collectHerausforderungProgress } from './herausforderung-progress.js?v=20261014-herausforderung-combat-v1';
 import {
   ensureHerausforderungDialog,
@@ -15,7 +15,7 @@ import {
   setHerausforderungSubmitting,
   updateHerausforderungDraft,
   showHerausforderungValidation
-} from './herausforderung-ui.js?v=20261015-skill-challenges-v2';
+} from './herausforderung-ui.js?v=20261015-challenge-scene-image-v1';
 import { bindSkillIconTooltips } from '../skill-checks/skill-icon-view.js';
 import { mountHerausforderungRewardEditor } from './herausforderung-rewards-ui.js?v=20261014-herausforderung-combat-v1';
 import { createChallengeCombatContext, normalizeChallengeAudience, getChallengeCombatBindingError, challengeRequiresCombat } from './herausforderung-combat-context.js';
@@ -23,10 +23,12 @@ import { mountChallengeAudience, refreshChallengeAudience } from './herausforder
 import { resolveCombatProfile } from '../combat/combat-profile-resolver.js';
 import { deriveCombatStateFromComments, overlayCombatHitPointState } from '../combat/combat-state-model.js';
 import { getActiveCombatEncounter } from '../combat/combat-encounter-model.js';
-import { mountHerausforderungExchange } from './herausforderung-exchange-ui.js?v=20261014-herausforderung-combat-v1';
+import { mountHerausforderungExchange } from './herausforderung-exchange-ui.js?v=20261015-challenge-scene-image-v1';
 import { createHerausforderungAttemptPicker } from './herausforderung-attempt-dialog.js';
+import { bindChallengeSceneImageEvents, readChallengeSceneImage, setChallengeSceneImage } from './herausforderung-scene-image-ui.js';
 
 bindSkillIconTooltips(document);
+bindChallengeSceneImageEvents(document);
 
 let activeThreadId = '';
 let draftApproaches = [];
@@ -61,6 +63,7 @@ function importDraft(event, issues) {
   const root = document.getElementById('herausforderung-overlay');
   root.querySelector('[data-herausforderung-field="title"]').value = event.title;
   root.querySelector('[data-herausforderung-field="publicDescription"]').value = event.publicDescription;
+  setChallengeSceneImage(root, event.sceneImage);
   draftApproaches = event.approaches;
   draftAudience = normalizeChallengeAudience(event.audience);
   draftCombatBound = event.combatBound;
@@ -95,6 +98,7 @@ function openDialog() {
   const description = root.querySelector('[data-herausforderung-field="publicDescription"]');
   if (title) title.value = 'Herausforderung';
   if (description) description.value = '';
+  setChallengeSceneImage(root, null);
   renderDialog();
   setHerausforderungStatus('Öffentliche Beschreibung sowie mindestens einen Ansatz mit Fertigkeit, Schwierigkeit und verdeckter Erkenntnis ausfüllen.');
   globalThis.activateDialog?.('herausforderung-overlay', { initialFocus: '[data-herausforderung-field="title"]' });
@@ -146,6 +150,7 @@ function buildDraft() {
   return {
     title: root?.querySelector('[data-herausforderung-field="title"]')?.value || 'Herausforderung',
     publicDescription: root?.querySelector('[data-herausforderung-field="publicDescription"]')?.value || '',
+    sceneImage: readChallengeSceneImage(root),
     audience: draftAudience, combatBound: draftCombatBound || draftAudience.mode === 'combatants' || challengeRequiresCombat(draftApproaches),
     approaches: draftApproaches
   };
@@ -242,6 +247,10 @@ document.addEventListener('click', event => {
   if (submitting) return;
   if (action === 'open') openDialog();
   if (action === 'close') closeDialog();
+  if (action === 'clear-image') {
+    setChallengeSceneImage(document.getElementById('herausforderung-overlay'), null);
+    updateHerausforderungDraft(buildDraft(), { actors: globalThis.getAvailableCommentCharacters?.() || [] });
+  }
   if (action === 'add-approach') addApproach();
   if (action === 'remove-approach') removeApproach(Number(trigger.dataset.approachIndex));
   if (action === 'submit') void submitEvent();

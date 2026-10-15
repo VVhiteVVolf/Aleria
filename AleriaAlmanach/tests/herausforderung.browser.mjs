@@ -35,7 +35,7 @@ await import('./modules/herausforderung/herausforderung-controller.js');
 window.openCommentFormForSkillChallenge=(challenge,skillId)=>{window.testSettings=AleriaSkillChecks.getChallengeAttemptSettings(challenge,skillId);const segment={...window.testSettings,id:'attempt-segment',text:''};document.getElementById('cf-segment-list').innerHTML='<div data-segment-id="attempt-segment"><div data-segment-mechanics-host></div></div>';AleriaSkillChecks.mountComposer(document.getElementById('cf-segment-list'),{segments:[segment],selectedCharacterId:${JSON.stringify(actors[0].id)},threadId:'isolated-browser'});window.testSegment=segment;};
 window.testReady=true;
 </script></body></html>`;
-const types = { '.js': 'text/javascript', '.mjs': 'text/javascript', '.css': 'text/css', '.png': 'image/png', '.webp': 'image/webp', '.json': 'application/json', '.woff2': 'font/woff2' };
+const types = { '.js': 'text/javascript', '.mjs': 'text/javascript', '.css': 'text/css', '.png': 'image/png', '.jpg': 'image/jpeg', '.webp': 'image/webp', '.json': 'application/json', '.woff2': 'font/woff2' };
 const server = createServer(async (req, res) => {
   try {
     const pathname = decodeURIComponent(new URL(req.url, 'http://localhost').pathname);
@@ -57,6 +57,7 @@ try {
   page.on('response', response => { if (response.status() >= 400 && new URL(response.url()).hostname === host && !response.url().endsWith('/favicon.ico')) missing.push(response.url()); });
   await page.route('**/*', route => new URL(route.request().url()).hostname === host ? route.continue() : route.abort());
   if (publicBase) await page.route('**/AleriaAlmanach/challenge-test.html*', route => route.fulfill({ status: 200, contentType: 'text/html', body: fixture }));
+  await page.route('**/test-scene-broken.png', route => route.fulfill({ status: 200, contentType: 'image/png', body: 'not an image' }));
   await page.goto(publicBase ? new URL('AleriaAlmanach/challenge-test.html', publicBase).href : `http://127.0.0.1:${server.address().port}/AleriaAlmanach/challenge-test.html`);
   await page.waitForFunction(() => window.testReady);
   await page.locator('[data-herausforderung-action="open"]').click();
@@ -92,6 +93,43 @@ try {
   assert.equal(await field('publicDescription').getAttribute('aria-invalid'), 'true');
   await field('title').fill('Die verschlossene Torwache');
   await field('publicDescription').fill('Regen zieht über die Zinnen. Die Wache versperrt Gawain und Guinevere den Weg.');
+  const imageEditor=overlay.locator('[data-ha-image-editor]');
+  const imageField=name=>imageEditor.locator(`[data-ha-image-field="${name}"]`);
+  const imageSource='../Stammbäume/assets/images/portraits/haus-wyrm/gais-wyrm.jpg';
+  await imageEditor.locator('summary').click();
+  await imageField('url').fill(imageSource);
+  await imageField('alt').fill('Ein Ritter bewacht das Tor.');
+  await imageField('caption').fill('Die Wache im letzten Abendlicht.');
+  const imagePreview=overlay.locator('[data-herausforderung-preview] .herausforderung-scene-image');
+  await imagePreview.locator('img').evaluate(img=>{img.loading='eager'});
+  await page.waitForFunction(()=>document.querySelector('[data-herausforderung-preview] [data-ha-scene-image]')?.naturalWidth>0);
+  for(const format of ['original','16:9','3:2','4:3','1:1','2:3','9:16','21:9']) {
+    await imageField('format').selectOption(format);
+    assert.equal(await imagePreview.getAttribute('data-ha-image-format'),format);
+    if(format!=='original') {
+      const bounds=await imagePreview.locator('a').boundingBox(),[w,h]=format.split(':').map(Number);
+      assert.ok(Math.abs(bounds.width/bounds.height-w/h)<0.03,format+' frame ratio');
+    }
+  }
+  await imageField('format').selectOption('16:9');await imageField('fit').selectOption('cover');
+  assert.equal(await imagePreview.locator('img').evaluate(img=>getComputedStyle(img).objectFit),'cover');
+  await imageField('fit').selectOption('contain');
+  assert.equal(await imagePreview.locator('img').evaluate(img=>getComputedStyle(img).objectFit),'contain');
+  assert.equal(await imagePreview.locator('img').getAttribute('alt'),'Ein Ritter bewacht das Tor.');
+  assert.equal(await imagePreview.locator('a').getAttribute('target'),'_blank');
+  await imageField('url').fill('./test-scene-broken.png');
+  await imagePreview.locator('.herausforderung-image-fallback').waitFor({state:'visible'});
+  await imageField('url').fill('javascript:alert(1)');
+  assert.equal(await imageField('url').getAttribute('aria-invalid'),'true');
+  await overlay.locator('[data-herausforderung-action="submit"]').click();
+  assert.equal(await page.evaluate(()=>testCalls),0);
+  await overlay.locator('[data-herausforderung-action="clear-image"]').click();
+  assert.equal(await imagePreview.count(),0);
+  await imageEditor.locator('summary').click();await imageField('url').fill(imageSource);
+  await imageField('format').selectOption('16:9');await imageField('caption').fill('Die Wache im letzten Abendlicht.');
+  await imageField('alt').fill('Ein Ritter bewacht das Tor.');
+  await imagePreview.locator('img').evaluate(img=>{img.loading='eager'});
+  await page.waitForFunction(()=>document.querySelector('[data-herausforderung-preview] [data-ha-scene-image]')?.naturalWidth>0);
   await field('label').fill('Mit der Wache verhandeln');
   await overlay.locator('[data-skill-id="persuasion"]').check();
   assert.equal(await overlay.locator('[data-herausforderung-preview] [data-skill-icon="persuasion"]').count(), 1);
@@ -178,6 +216,7 @@ try {
   await draftDownload.saveAs(resolve(out, 'draft.json'));
   const exported = JSON.parse(await readFile(resolve(out, 'draft.json'), 'utf8'));
   assert.equal(exported.challenge.approaches[0].rewards.copper, 2.5);
+  assert.equal(exported.challenge.sceneImage.format,'16:9');assert.equal(exported.challenge.sceneImage.url,imageSource);
   const [badChooser] = await Promise.all([page.waitForEvent('filechooser'), overlay.locator('[data-herausforderung-exchange="import"]').click()]);
   await badChooser.setFiles({ name: 'bad.json', mimeType: 'application/json', buffer: Buffer.from('{ invalid json') });
   await overlay.locator('[data-herausforderung-status]').filter({ hasText: 'kein gültiges JSON' }).waitFor();
@@ -187,6 +226,7 @@ try {
   await goodChooser.setFiles({ name: 'ai-response.json', mimeType: 'application/json', buffer: Buffer.from(JSON.stringify(exported)) });
   await overlay.locator('[data-herausforderung-status]').filter({ hasText: 'Entwurf importiert' }).waitFor();
   assert.equal(await field('title').inputValue(), 'KI importierte Torwache');
+  assert.equal(await imageField('url').inputValue(),imageSource);assert.equal(await imageField('caption').inputValue(),'Die Wache im letzten Abendlicht.');
   assert.equal(await page.evaluate(() => testWrites.length), 0, 'Import does not publish');
   await page.evaluate(() => window.testFail = true);
   await overlay.locator('[data-herausforderung-action="submit"]').click();
@@ -196,6 +236,16 @@ try {
   await overlay.locator('[data-herausforderung-action="submit"]').click();
   await page.evaluate(() => document.querySelector('[data-herausforderung-action="submit"]').click());
   await overlay.waitFor({ state: 'hidden' });
+  assert.equal(await page.locator('#published .herausforderung-scene-image img').getAttribute('alt'),'Ein Ritter bewacht das Tor.');
+  await page.locator('#published .herausforderung-scene-image').scrollIntoViewIfNeeded();
+  await page.locator('#published').screenshot({path:resolve(out,'scene-image-landscape.png')});
+  await page.setViewportSize({width:390,height:844});
+  assert.ok(await page.locator('#published').evaluate(el=>el.scrollWidth<=el.clientWidth+1));
+  await page.locator('#published').screenshot({path:resolve(out,'scene-image-mobile.png')});
+  await page.evaluate(async()=>{testHistory[0].herausforderung.sceneImage.format='2:3';await loadCommentsIntoPage()});
+  await page.locator('#published').screenshot({path:resolve(out,'scene-image-portrait.png')});
+  await page.evaluate(async()=>{testHistory[0].herausforderung.sceneImage.format='16:9';await loadCommentsIntoPage()});
+  await page.setViewportSize({width:1440,height:1000});
   assert.equal(await page.evaluate(() => testWrites.length), 1, 'Double submission produces a single challenge');
   const benefitData = await page.evaluate(() => testWrites[0].metadata.herausforderung.approaches[0]);
   assert.equal(benefitData.rewards.copper, 2.5);
@@ -256,6 +306,6 @@ try {
   await page.screenshot({ path: resolve(out, 'resolved-desktop.png') });
   assert.deepEqual(errors, []);
   assert.deepEqual(missing, []);
-  await writeFile(resolve(out, 'browser-result.json'), JSON.stringify({ passed: true, viewports: ['1440×1000', '390×844'], checks: ['field validation', 'secret-free preview', 'preserved approach fields', 'difficulty preset', 'mobile overflow', 'failed save retry', 'single submission', 'direct skill/target selection', 'resolved approach lock', 'canonical Handelsregister list', 'distinct providers and category filters', 'price and source preview', 'empty search recovery', 'live catalog refresh retains selection', 'Kupfertaler input and receipt', 'AI template download', 'draft export and validated JSON import', 'reward and debuff serialization'], errors, missing }, null, 2));
+  await writeFile(resolve(out, 'browser-result.json'), JSON.stringify({ passed: true, viewports: ['1440×1000', '390×844'], checks: ['field validation', 'secret-free preview', 'preserved approach fields', 'difficulty preset', 'mobile overflow', 'failed save retry', 'single submission', 'direct skill/target selection', 'resolved approach lock', 'canonical Handelsregister list', 'distinct providers and category filters', 'price and source preview', 'empty search recovery', 'live catalog refresh retains selection', 'Kupfertaler input and receipt', 'AI template download', 'draft export and validated JSON import', 'reward and debuff serialization', 'eight scene-image aspect ratios', 'contain and cover image rendering', 'alt text and original-image link', 'broken image fallback and unsafe URL rejection', 'remove image and restore', 'image import export and publication', 'mobile landscape and portrait scene image'], errors, missing, productionWrites:0 }, null, 2));
   console.log('Challenge browser checks passed; screenshots: ' + out);
 } finally { await browser?.close(); await new Promise(done => server.close(done)); }

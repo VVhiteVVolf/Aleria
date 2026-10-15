@@ -1,9 +1,10 @@
-import { normalizeHerausforderungEvent, normalizeHerausforderungApproach, getHerausforderungValidationIssues, MAX_HERAUSFORDERUNG_APPROACHES } from './herausforderung-model.js?v=20261014-herausforderung-combat-v1';
+import { normalizeHerausforderungEvent, normalizeHerausforderungApproach, getHerausforderungValidationIssues, MAX_HERAUSFORDERUNG_APPROACHES } from './herausforderung-model.js?v=20261015-challenge-scene-image-v1';
 import { SKILL_DEFINITIONS, getSkillDefinition } from '../skill-checks/skill-check-model.js';
 import { COMBAT_STATUS_PRESETS, STATUS_MODIFIERS, STATUS_ROLL_MODES } from '../combat-status/combat-status-catalog.js';
 import { STATUS_DURATIONS } from '../combat-status/combat-status-model.js';
 import { CHALLENGE_COMBAT_EFFECT_TYPES } from './herausforderung-combat-effects.js';
 import { collectRegisterTemplates } from '../item-register/item-register-templates.js';
+import { CHALLENGE_IMAGE_FORMATS, CHALLENGE_IMAGE_FITS, EMPTY_CHALLENGE_SCENE_IMAGE } from './herausforderung-scene-image-model.js';
 
 export const HERAUSFORDERUNG_EXPORT_FORMAT = 'aleria.herausforderung';
 export const HERAUSFORDERUNG_EXPORT_VERSION = 1;
@@ -27,6 +28,7 @@ export function createHerausforderungExport(draft) {
 
 export function createHerausforderungAiTemplate(registerSnapshot = {}, combatContext = {}) {
   const challenge = authoringEvent({ title: 'Neue Herausforderung', publicDescription: '', combatBound: !!combatContext.encounterId, audience: { mode: 'all', actorIds: [] }, approaches: [normalizeHerausforderungApproach({ approachId: 'ansatz-1', label: 'Ansatz 1' })] });
+  challenge.sceneImage = { ...EMPTY_CHALLENGE_SCENE_IMAGE };
   const itemTemplates = collectRegisterTemplates(registerSnapshot).map(item => ({ template: item.id, title: item.title, category: item.category,
     moduleId: item.moduleId || '', sourceRevision: item.sourceRevision || '', priceRange: item.priceRange || null }));
   return {
@@ -39,6 +41,7 @@ export function createHerausforderungAiTemplate(registerSnapshot = {}, combatCon
         audience: 'Objekt { mode: all | combatants | selected, actorIds: [] }. all: alle Szenenteilnehmer; combatants: nur aktive Teilnehmer des gebundenen Kampfes; selected: eine bis 40 reale Figuren-IDs aus dem Figurenkatalog. Diese Zielgruppe bestimmt, wer würfeln darf.',
         combatBound: 'Boolean. true bindet die Herausforderung an den aktuellen Kampf. Die echte encounterId wird ausschließlich vom Server gesetzt. Bei Kampfteilnehmer-Zielgruppe, fremden Empfängern oder einer Dauer bis Kampfende zwingend.',
         title: 'Öffentlich, maximal 180 Zeichen.', publicDescription: 'Öffentlich, erforderlich, maximal 4.000 Zeichen.',
+        sceneImage: { optional: 'Optionales öffentliches Stimmungsbild; null oder url leer bedeutet ohne Bild. Keine Lösung im Bild oder Begleittext verraten. Keine Bildlinks erfinden; nur vom Nutzer bereitgestellte Bilder verwenden.', url: 'Direkter HTTP(S)-Bildlink oder vorhandener Projektpfad, maximal 2.048 Zeichen. PNG, JPG, WebP, GIF und AVIF je nach Browser. Keine lokalen Laufwerkspfade, Uploads, base64- oder data-URLs.', alt: 'Bildbeschreibung für Screenreader, maximal 240 Zeichen.', caption: 'Optionale öffentliche Bildunterschrift, maximal 500 Zeichen.', format: 'Eine imageFormats.id. original bewahrt die Bildproportionen.', fit: 'Eine imageFits.id. contain zeigt das vollständige Bild; cover schneidet auf das gewählte Format zu. Bei original bleibt das Originalformat erhalten.' },
         approach: { approachId: 'Eindeutig, maximal 40 Zeichen.', label: 'Öffentlich, maximal 160 Zeichen.', preferredSkills: 'Array erlaubter skills.id-Werte.', difficulty: 'Ganze Zahl 1–40.', insight: 'Verdeckte Erkenntnis, erforderlich, maximal 2.000 Zeichen.', partialHint: 'Optional, maximal 2.000 Zeichen.', failureConsequence: 'Optional, maximal 2.000 Zeichen.' },
         rewards: { copper: 'Zahl in Kupfertalern (KT), 0 bis 1.000.000.000, höchstens zwei Nachkommastellen. Taler meint Kupfertaler. 1 KT = 100 Eisenpfennig; 2.5 bedeutet 2,5 KT. Gold ist kein Eingabefeld.', items: 'Maximal acht Referenzen aus itemTemplates. Nur template, moduleId, sourceRevision, title und quantity verwenden. Keine erfundenen IDs, product-Snapshots, Inventar-IDs oder Kampfdaten. Neue Gegenstände zuerst im Handelsregister anlegen.', effects: 'Maximal vier Buffs, Debuffs oder Zustände. Art und Empfänger ausdrücklich wählen.', combatEffects: 'Maximal acht direkte Kampfwirkungen: Schaden, Heilung, temporäre TP, Ressource auffüllen/entziehen oder Zustand entfernen.' },
         failureBundles: 'partialEffects und failureEffects haben copper: 0, items: [] und höchstens vier effects. Geldverlust oder Gegenstandsverlust nicht erfinden; dafür sind diese Felder nicht vorgesehen.',
@@ -59,6 +62,7 @@ export function createHerausforderungAiTemplate(registerSnapshot = {}, combatCon
       actors: combatContext.actors || combatContext.participants || [],
       combatEffectTypes: CHALLENGE_COMBAT_EFFECT_TYPES.map(([id, label]) => ({ id, label })),
       skills: SKILL_DEFINITIONS.map(({ id, label }) => ({ id, label })), itemTemplates,
+      imageFormats: CHALLENGE_IMAGE_FORMATS.map(([id, label]) => ({ id, label })), imageFits: CHALLENGE_IMAGE_FITS.map(([id, label]) => ({ id, label })),
       effectPresets: COMBAT_STATUS_PRESETS.map(({ id, name, kind, description, mechanics = {}, blockedResource }) => ({ id, name, kind, description, mechanics, ...(blockedResource ? { blockedResource } : {}) })),
       durations: STATUS_DURATIONS.map(([id, label]) => ({ id, label })), modifierKeys: STATUS_MODIFIERS.map(([id, label]) => ({ id, label })), rollModeKeys: STATUS_ROLL_MODES.map(([id, label]) => ({ id, label }))
     }, challenge

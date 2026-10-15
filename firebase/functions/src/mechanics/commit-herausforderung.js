@@ -30,13 +30,7 @@ export function validateHerausforderungEvent(event = {}) {
   return getHerausforderungValidationIssues(event)[0]?.message || null;
 }
 
-export const commitHerausforderung = onCall({
-  region: 'europe-west1',
-  maxInstances: 10,
-  concurrency: 20,
-  enforceAppCheck: false,
-  timeoutSeconds: 20
-}, async request => {
+export async function commitHerausforderungOperation(request, { database = getFirestore(), now = Date.now() } = {}) {
   if (!request.auth) fail('unauthenticated', 'Eine Firebase-Anmeldung ist erforderlich.');
   const payload = clonePayload(request.data);
   const entryId = clean(payload.entryId, 240);
@@ -48,13 +42,11 @@ export const commitHerausforderung = onCall({
   if (validationError) fail('invalid-argument', validationError);
   assertHerausforderungRewardAuthority(event, request.auth);
 
-  const database = getFirestore();
   const operationId = clean(metadata.operationId, 80);
   if (operationId && !/^[a-zA-Z0-9-]{8,80}$/.test(operationId)) fail('invalid-argument', 'Die Vorgangskennung ist ungültig.');
   const fingerprint = createHash('sha256').update(JSON.stringify({ entryId, event: metadata.herausforderung })).digest('hex');
   const operationKey = operationId ? 'challenge-' + createHash('sha256').update(request.auth.uid + '\u0000' + operationId).digest('hex') : '';
   const ref = operationKey ? database.collection('comments').doc(operationKey) : database.collection('comments').doc();
-  const now = Date.now();
   await database.runTransaction(async transaction => {
     if (operationKey) {
       const existing = await transaction.get(ref);
@@ -99,4 +91,8 @@ export const commitHerausforderung = onCall({
     });
   });
   return { id: ref.id };
-});
+}
+
+export const commitHerausforderung = onCall({
+  region: 'europe-west1', maxInstances: 10, concurrency: 20, enforceAppCheck: false, timeoutSeconds: 20
+}, request => commitHerausforderungOperation(request));

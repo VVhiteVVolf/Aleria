@@ -1,7 +1,8 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
 
-import { validateHerausforderungEvent } from '../src/mechanics/commit-herausforderung.js';
+import { validateHerausforderungEvent, commitHerausforderungOperation } from '../src/mechanics/commit-herausforderung.js';
+import { database } from './fixtures/combat-transaction-database.js';
 import { normalizeHerausforderungEvent } from '../src/generated/herausforderung/herausforderung-model.js';
 
 function validEvent(overrides = {}) {
@@ -14,6 +15,22 @@ function validEvent(overrides = {}) {
     ...overrides
   });
 }
+
+test('Szenenbild wird serverseitig gespeichert, normalisiert und bei Wiederholung nicht doppelt veröffentlicht', async () => {
+  const db=database({}),sceneImage={url:'https://imgur.com/AbC123',alt:'Eine Wache',caption:'Abendlicht',format:'2:3',fit:'contain'};
+  const request={auth:{uid:'image-author',token:{aleriaRole:'editor'}},data:{entryId:'image-test',text:'Herausforderung',metadata:{operationId:'scene-image-20261015',herausforderung:validEvent({sceneImage})}}};
+  const first=await commitHerausforderungOperation(request,{database:db,now:123});
+  const again=await commitHerausforderungOperation(request,{database:db,now:124});
+  assert.equal(first.id,again.id);assert.equal(db.data.size,1);
+  assert.deepEqual(db.data.get('comments/'+first.id).herausforderung.sceneImage,{...sceneImage,url:'https://i.imgur.com/AbC123.jpg'});
+});
+
+test('Server weist unsichere Bildquellen vor dem ersten Schreibzugriff zurück', async () => {
+  const db=database({});
+  const challenge=validEvent();challenge.sceneImage={url:'javascript:alert(1)',format:'16:9'};
+  await assert.rejects(commitHerausforderungOperation({auth:{uid:'author',token:{}},data:{entryId:'image-test',text:'Bild',metadata:{herausforderung:challenge}}},{database:db}),/Szenenbild/);
+  assert.equal(db.data.size,0);
+});
 
 test('eine vollständige Herausforderung besteht die Validierung', () => {
   assert.equal(validateHerausforderungEvent(validEvent()), null);

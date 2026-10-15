@@ -1,0 +1,70 @@
+{
+  "date": "2026-10-15",
+  "feature": "Optionales öffentliches Szenenbild für Herausforderungen",
+  "focusedTests": {
+    "passed": 87,
+    "failed": 0
+  },
+  "browser": {
+    "passed": true,
+    "viewports": [
+      "1440×1000",
+      "390×844"
+    ],
+    "checks": [
+      "field validation",
+      "secret-free preview",
+      "preserved approach fields",
+      "difficulty preset",
+      "mobile overflow",
+      "failed save retry",
+      "single submission",
+      "direct skill/target selection",
+      "resolved approach lock",
+      "canonical Handelsregister list",
+      "distinct providers and category filters",
+      "price and source preview",
+      "empty search recovery",
+      "live catalog refresh retains selection",
+      "Kupfertaler input and receipt",
+      "AI template download",
+      "draft export and validated JSON import",
+      "reward and debuff serialization",
+      "eight scene-image aspect ratios",
+      "contain and cover image rendering",
+      "alt text and original-image link",
+      "broken image fallback and unsafe URL rejection",
+      "remove image and restore",
+      "image import export and publication",
+      "mobile landscape and portrait scene image"
+    ],
+    "errors": [],
+    "missing": [],
+    "productionWrites": 0
+  },
+  "formats": [
+    "original",
+    "16:9",
+    "3:2",
+    "4:3",
+    "1:1",
+    "2:3",
+    "9:16",
+    "21:9"
+  ],
+  "server": "Shared validation, canonical image storage and idempotent transaction tested against an isolated database.",
+  "screenshots": [
+    "scene-image-landscape.png",
+    "scene-image-mobile.png",
+    "scene-image-portrait.png"
+  ],
+  "liveSceneWrites": 0,
+  "backendTests": {
+    "passed": 183,
+    "failed": 0
+  },
+  "productionBuild": {
+    "exitCode": 0,
+    "passed": true
+  }
+}

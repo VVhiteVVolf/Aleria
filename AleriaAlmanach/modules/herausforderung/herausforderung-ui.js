@@ -1,9 +1,10 @@
-import { normalizeHerausforderungEvent, MAX_HERAUSFORDERUNG_APPROACHES, getHerausforderungValidationIssues, HERAUSFORDERUNG_PREFERRED_MODIFIER, HERAUSFORDERUNG_ALTERNATIVE_MODIFIER } from './herausforderung-model.js?v=20261014-herausforderung-combat-v1';
+import { normalizeHerausforderungEvent, MAX_HERAUSFORDERUNG_APPROACHES, getHerausforderungValidationIssues, HERAUSFORDERUNG_PREFERRED_MODIFIER, HERAUSFORDERUNG_ALTERNATIVE_MODIFIER } from './herausforderung-model.js?v=20261015-challenge-scene-image-v1';
 import { getApproachProgress, HERAUSFORDERUNG_TIER_LABELS } from './herausforderung-progress.js?v=20261014-herausforderung-combat-v1';
 import { getChallengeCombatBindingError } from './herausforderung-combat-context.js';
 import { SKILL_DEFINITIONS } from '../skill-checks/skill-check-model.js?v=20260928-equipment-art-v4';
 import { renderSkillIcon, renderSkillHint, skillTooltipAttributes, describeSkillChoice, bindSkillIconTooltips } from '../skill-checks/skill-icon-view.js';
 import { renderHerausforderungRewardEditor, rewardSummary, rewardReceiptSummary } from './herausforderung-rewards-ui.js?v=20261014-herausforderung-combat-v1';
+import { renderChallengeSceneImageEditor, renderChallengeSceneImage, refreshChallengeSceneImageEditor } from './herausforderung-scene-image-ui.js';
 
 const ASSET_ROOT = './public/assets/herausforderung/';
 export const HERAUSFORDERUNG_ICON_URL = '../IconOrdner/Buttom Icons/Herausforderung.png';
@@ -41,6 +42,7 @@ export function ensureHerausforderungDialog() {
             <h3 id="herausforderung-public-title">01 <span>Die sichtbare Situation</span><small>Für alle sichtbar</small></h3>
             <label><span>Titel</span><input data-herausforderung-field="title" maxlength="180" value="Herausforderung"></label>
             <label><span>Öffentliche Beschreibung</span><textarea data-herausforderung-field="publicDescription" maxlength="4000" rows="3" placeholder="Was sehen, hören oder bemerken die Beteiligten?"></textarea></label>
+            ${renderChallengeSceneImageEditor()}
           </section>
           <section class="herausforderung-fields herausforderung-audience" data-herausforderung-audience></section>
           <div class="herausforderung-section-title"><h3>02 <span>Wege zur Erkenntnis</span></h3><span data-herausforderung-count></span></div>
@@ -99,6 +101,7 @@ function preferredSkillHints(approach) {
 export function updateHerausforderungDraft(event, { actors = [] } = {}) {
   const root = dialogRoot();
   if (!root) return;
+  refreshChallengeSceneImageEditor(root);
   bindSkillIconTooltips(root.ownerDocument).hide();
   event.approaches.forEach((approach, index) => {
     const row = root.querySelector(`[data-herausforderung-approach-row][data-approach-index="${index}"]`);
@@ -160,7 +163,7 @@ export function renderHerausforderungComment(comment = {}, index = 0, { preview 
     if (state.solved) solvedCount++;
     return `<li class="${state.solved ? 'is-solved' : ''}"><div class="herausforderung-path"><span class="herausforderung-path-number">${approachIndex + 1}</span><div><strong>${escapeMarkup(approach.label)}</strong><div class="herausforderung-path-skills">${preferredSkillHints(approach)}${state.attempts ? `<small>${state.attempts} ${state.attempts === 1 ? 'Versuch' : 'Versuche'}</small>` : ''}</div></div></div>${preview ? '<span class="herausforderung-preview-badge">Offen</span>' : state.solved ? `<span class="herausforderung-solved">${icon('insight')}Aufgedeckt</span>` : unavailable ? `<span class="herausforderung-solved">${escapeMarkup(unavailable)}</span>` : `<button type="button" class="herausforderung-button herausforderung-attempt-btn" data-herausforderung-action="attempt" data-comment-id="${escapeMarkup(comment.id || '')}" data-approach-id="${escapeMarkup(approach.approachId)}" aria-label="${escapeMarkup(approach.label)} versuchen">${icon('attempt')}<span>Versuchen</span></button>`}${rewardSummary(approach.rewards) ? `<div class="herausforderung-reward-teaser">Belohnung: ${escapeMarkup(rewardSummary(approach.rewards))}</div>` : ''}${!preview && state.attempts ? `<div class="herausforderung-result" data-tier="${escapeMarkup(state.tier)}"><small>${escapeMarkup(state.actorName)} · ${escapeMarkup(HERAUSFORDERUNG_TIER_LABELS[state.tier] || 'Versuch')}</small>${state.revealedText ? `<p>${escapeMarkup(state.revealedText)}</p>` : ''}${rewardReceiptSummary(state.reward) ? `<p class="herausforderung-reward-receipt">${escapeMarkup(rewardReceiptSummary(state.reward))}</p>` : ''}${!state.solved ? '<small>Dieser Ansatz bleibt offen.</small>' : ''}</div>` : ''}</li>`;
   }).join('');
-  return `${divider}<section class="herausforderung-event"><header>${icon('challenge')}<div><small>Herausforderung</small><strong>${escapeMarkup(event.title)}</strong></div><span class="herausforderung-event-progress">${solvedCount}/${event.approaches.length} aufgedeckt</span></header><p class="herausforderung-scope">${escapeMarkup(audienceLabel)}${event.combatBound ? " · An diesen Kampf gebunden" : ""}</p>${event.publicDescription ? `<p class="herausforderung-description">${escapeMarkup(event.publicDescription)}</p>` : ''}${approaches ? `<ul class="herausforderung-approach-list">${approaches}</ul>` : ''}</section>`;
+  return `${divider}<section class="herausforderung-event"><header>${icon('challenge')}<div><small>Herausforderung</small><strong>${escapeMarkup(event.title)}</strong></div><span class="herausforderung-event-progress">${solvedCount}/${event.approaches.length} aufgedeckt</span></header><p class="herausforderung-scope">${escapeMarkup(audienceLabel)}${event.combatBound ? " · An diesen Kampf gebunden" : ""}</p>${renderChallengeSceneImage(event.sceneImage, event.title)}${event.publicDescription ? `<p class="herausforderung-description">${escapeMarkup(event.publicDescription)}</p>` : ''}${approaches ? `<ul class="herausforderung-approach-list">${approaches}</ul>` : ''}</section>`;
 }
 
 export const herausforderungUiInternals = Object.freeze({ escapeMarkup });

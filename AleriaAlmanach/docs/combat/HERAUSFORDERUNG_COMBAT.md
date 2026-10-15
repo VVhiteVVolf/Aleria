@@ -1,5 +1,9 @@
 # Herausforderungen im Kampf
 
+Jede Herausforderung kann ein optionales öffentliches **Szenenbild** enthalten. Im Abschnitt „Die sichtbare Situation → Szenenbild“ einen direkten Bildlink (oder vorhandenen Projektpfad), Format, vollständige Anzeige/Zuschnitt, Bildbeschreibung und optionale Unterschrift wählen. Originalformat, 16:9, 3:2, 4:3, 1:1, 2:3, 9:16 und 21:9 sind verfügbar. Standardmäßig bleibt das vollständige Bild sichtbar; ein Klick öffnet das Original. Die öffentliche Vorschau und die veröffentlichte Karte verwenden dieselbe Darstellung. Ein nicht ladbares Bild zeigt einen Ersatzhinweis und blockiert keine Versuche. Alte Herausforderungen bleiben ohne Bildrahmen. Bilder, Alttext und Unterschrift dürfen keine verdeckte Lösung enthalten.
+
+KI-Vorlage und Entwurfsaustausch enthalten `sceneImage: { url, alt, caption, format, fit }` beziehungsweise `null`. Die Vorlage beschreibt alle erlaubten Bildformate und weist die KI an, nur bereitgestellte Bilder zu verwenden. `format: "original"` erhält die Proportionen; bei anderen Formaten bedeutet `fit: "contain"` vollständige Anzeige und `fit: "cover"` Zuschnitt. Bilddateien werden über ihre Quelle referenziert, nicht in die JSON-Datei eingebettet. Browser und Server prüfen dieselbe Bildkonfiguration.
+
 Die Zielgruppe bestimmt, wer eine Herausforderung versuchen darf:
 
 - **Alle Szenenteilnehmer:** Auch Zuschauer können einen Lösungsweg versuchen.

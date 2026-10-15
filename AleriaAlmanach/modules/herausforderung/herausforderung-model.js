@@ -1,9 +1,10 @@
 import { getSkillDefinition } from '../skill-checks/skill-check-model.js?v=20260928-equipment-art-v4';
 import { normalizeHerausforderungBenefits, validateHerausforderungBenefits } from './herausforderung-rewards.js?v=20261014-herausforderung-combat-v1';
 import { normalizeChallengeAudience, validateChallengeAudience } from './herausforderung-combat-context.js';
+import { normalizeChallengeSceneImage, validateChallengeSceneImage } from './herausforderung-scene-image-model.js';
 
 export const HERAUSFORDERUNG_EVENT_KIND = 'herausforderung-event';
-export const HERAUSFORDERUNG_SCHEMA_VERSION = 4;
+export const HERAUSFORDERUNG_SCHEMA_VERSION = 5;
 export const MIN_HERAUSFORDERUNG_APPROACHES = 1;
 export const MAX_HERAUSFORDERUNG_APPROACHES = 6;
 export const HERAUSFORDERUNG_NARROW_FAILURE_MARGIN = 3;
@@ -14,6 +15,8 @@ export const HERAUSFORDERUNG_ALTERNATIVE_MODIFIER = -2;
 export function getHerausforderungValidationIssues(event = {}) {
   event = event && typeof event === 'object' ? event : {};
   const issues = [];
+  const imageError = validateChallengeSceneImage(event.sceneImage);
+  if (imageError) issues.push({ field: 'sceneImage', message: imageError });
   const audienceError = validateChallengeAudience(event.audience);
   if (audienceError) issues.push({ field: 'audience', message: audienceError });
   if (!String(event.publicDescription || '').trim()) issues.push({ field: 'publicDescription', message: 'Eine öffentliche Beschreibung ist erforderlich.' });
@@ -95,6 +98,7 @@ export function normalizeHerausforderungEvent(value = {}) {
     schemaVersion: HERAUSFORDERUNG_SCHEMA_VERSION,
     title: text(source.title, 180) || 'Herausforderung',
     publicDescription: text(source.publicDescription, 4000),
+    sceneImage: normalizeChallengeSceneImage(source.sceneImage),
     audience: normalizeChallengeAudience(source.audience),
     combatBound: source.combatBound === true || source.audience?.mode === 'combatants',
     combatContext: { encounterId: text(source.combatContext?.encounterId, 180) },
