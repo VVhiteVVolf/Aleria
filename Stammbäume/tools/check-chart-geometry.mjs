@@ -5,6 +5,7 @@ import { FAMILY_REGISTRY } from '../assets/js/data/families.registry.js';
 import { startChartQualityServer } from './chart-quality-server.mjs';
 
 const args = Object.fromEntries(process.argv.slice(2).map(value => value.replace(/^--/, '').split('=')));
+const auditStartedAt = performance.now();
 const root = fileURLToPath(new URL('../../', import.meta.url));
 const requestedIds = args.families?.split(',');
 const records = FAMILY_REGISTRY.filter(record => record.family?.persons.length && (!requestedIds || requestedIds.includes(record.id)));
@@ -46,6 +47,6 @@ try {
   }
   if (args.report) await writeFile(args.report, JSON.stringify(results, null, 2));
   const failed = results.filter(result => !result.passed);
-  console.log(JSON.stringify({ checked: results.length, failed: failed.length, cards: results.reduce((sum, result) => sum + (result.cardCount || 0), 0), failures: failed }, null, 2));
+  console.log(JSON.stringify({ checked: results.length, failed: failed.length, cards: results.reduce((sum, result) => sum + (result.cardCount || 0), 0), durationSeconds: Number(((performance.now() - auditStartedAt) / 1000).toFixed(2)), failures: failed }, null, 2));
   if (failed.length) process.exitCode = 1;
 } finally { await browser?.close(); await server.close(); }
