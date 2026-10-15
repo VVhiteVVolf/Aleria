@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import { createHash, randomUUID } from 'node:crypto';
 import { createRequire } from 'node:module';
-import { readFile, writeFile } from 'node:fs/promises';
+import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { resolve, relative, sep, isAbsolute } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -15,6 +15,12 @@ const bucket = 'aleriaprojekt.firebasestorage.app';
 const database = 'projects/aleriaprojekt/databases/(default)';
 const digest = bytes => createHash('sha256').update(bytes).digest('hex');
 const save = (name, value) => writeFile(new URL(name, artifacts), JSON.stringify(value, null, 2) + '\n');
+const privateBackups = resolve(workspace, '.private-backups/castell-draig/2026-10-15');
+
+async function savePrivateBackup(name, value) {
+  await mkdir(privateBackups, { recursive: true });
+  await writeFile(resolve(privateBackups, name), JSON.stringify(value, null, 2) + '\n');
+}
 
 function decode(value) {
   if ('mapValue' in value) return Object.fromEntries(Object.entries(value.mapValue.fields || {}).map(([k, v]) => [k, decode(v)]));
@@ -181,7 +187,7 @@ async function releaseModuleImages(publication, firestore) {
   const revision = Math.max(Date.now(), Number(configuration.moduleStoreUpdatedAtClient || 0) + 1,
     Number(configuration.moduleStoreManifest?.updatedAtClient || 0) + 1);
   const changed = updates.filter(update => JSON.stringify(update.before) !== JSON.stringify(update.after));
-  await save('modules-live-before-release-2026-10-15.json', { readAt: new Date().toISOString(), documents, config });
+  await savePrivateBackup('modules-live-before-release.json', { readAt: new Date().toISOString(), documents, config });
   const writes = changed.map(update => ({
     update: { name: update.document.name, fields: {
       entryJson: { stringValue: JSON.stringify(update.after) }, updatedAtClient: { integerValue: String(revision) }
@@ -212,7 +218,7 @@ async function releaseModuleImages(publication, firestore) {
     nonArtworkFieldsUnchanged: true, roomThreadsUnchanged: true,
     modules: updates.map(update => ({ id: update.id, title: update.after.title, pages: update.after.pages.length, images: update.images }))
   };
-  await save('modules-after-release-2026-10-15.json', { report, documents: after });
+  await savePrivateBackup('modules-after-release.json', { report, documents: after });
   await save('release-verification-2026-10-15.json', report);
   return report;
 }
