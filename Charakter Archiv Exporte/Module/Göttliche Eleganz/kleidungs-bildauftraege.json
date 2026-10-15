@@ -1,6 +1,6 @@
 {
   "module": "Göttliche Eleganz",
-  "status": "Bilder werden ausdrücklich in einer anderen Instanz erstellt",
+  "status": "Freigegebener Rüstungs-/Inventarstil auf weißen Puppentorsi; Oberteil und Hosenansatz, keine Beine, Füße oder Schuhe",
   "stylePreset": "fantasy-inventory-item",
   "items": [
     {
@@ -202,6 +202,66 @@
       "description": "Dunkler Seidensamt, heller Brokat und eine bis in die Ärmel geführte Weißgoldstickerei bilden das aufwendigste Herrenmodell des Hauses. Der argentische Aufbau bleibt klar; die großen cenyrischen Flechtmotive erscheinen erst, wenn Licht über Schulter und Mantel wandert.",
       "details": "Hemd, Hose, Festwams, Überrobe und abnehmbarer Mantel werden gemeinsam gefertigt. Individuell angepasste Weißgoldfassungen tragen wenige ausgesuchte Granate. Zusätzliche Steine oder andere Edelmetallmengen werden vor Auftragserteilung gesondert vereinbart.",
       "destination": "AleriaAlmanach/assets/goettliche-eleganz/kleidung/herren-goettliche-eleganz.png"
+    },
+    {
+      "id": "braut-morgenband",
+      "category": "damen-hochzeit",
+      "name": "Morgenband",
+      "materials": "Feines Leinen · Blaues Wolltuch · Seidenborte",
+      "cut": "Brautgarnitur mit geschnürtem Überkleid",
+      "description": "Helles Leinen und ein tiefblaues Überkleid geben dieser Brautgarnitur ihre freundliche, klare Wirkung. Eine schmale elfenbeinfarbene Seidenborte zieht sich um den rechteckigen Ausschnitt; kleine cenyrische Flechtmuster laufen an den Ärmelenden zusammen.",
+      "details": "Der weite Rock fällt ohne Schleppe. Ein passendes blaues Haarband gehört dazu, bleibt aber so schlicht, dass sich die Braut auch nach dem Hochzeitstag gern darin zeigt. Das Innenmieder wird bei der Anprobe auf ihren Sitz abgestimmt.",
+      "destination": "AleriaAlmanach/assets/goettliche-eleganz/kleidung/braut-morgenband.png"
+    },
+    {
+      "id": "braut-rosenseide",
+      "category": "damen-hochzeit",
+      "name": "Rosenseide",
+      "materials": "Purpurne Tirnara-Seide · Elfenbeinbrokat · Silberfaden",
+      "cut": "Brautkleid mit Wechselärmeln und Schulterüberwurf",
+      "description": "Weiche purpurne Seide liegt über einem hellen Brokatuntergewand. Am Mieder und an den schmalen Ärmelansätzen öffnen sich kleine silbergestickte Rosen; cenyrische Flechtlinien verbinden die Blüten zu einem ruhigen Saum.",
+      "details": "Die weiten Wechselärmel und der leichte elfenbeinfarbene Schulterüberwurf lassen sich nach der Trauung abnehmen. Ein schmaler Silberverschluss hält den Überwurf; Futter und Mieder tragen ihn, ohne den seidigen Fall zu beschweren.",
+      "destination": "AleriaAlmanach/assets/goettliche-eleganz/kleidung/braut-rosenseide.png"
+    },
+    {
+      "id": "braut-zwei-heimaten",
+      "category": "damen-hochzeit",
+      "name": "Braut der zwei Heimaten",
+      "materials": "Elfenbeinseide · Weißgold · Süßwasserperlen · Granate",
+      "cut": "Persönlicher Brautentwurf mit abnehmbarem Festmantel",
+      "description": "Elfenbeinfarbene Seide und eine fein bestickte purpurne Miederbahn tragen den kostbarsten Brautentwurf des Hauses. Weißgoldfäden zeichnen südliches Olivenlaub, das an Taille und Ärmeln in cenyrische Flechtmuster übergeht. Wenige kleine Perlen und tiefrote Granate ruhen in eigens gefertigten Fassungen.",
+      "details": "Untergewand, Brautkleid, Wechselärmel, schmaler Schmuckgürtel und abnehmbarer Festmantel entstehen gemeinsam nach Maß. Eleonora stimmt jedes Blatt und jede Fassung auf den Schnitt ab; mehrere Anproben und die beschriebenen Besätze gehören zur Garnitur.",
+      "destination": "AleriaAlmanach/assets/goettliche-eleganz/kleidung/braut-zwei-heimaten.png"
+    },
+    {
+      "id": "braeutigam-treuefaden",
+      "category": "herren-hochzeit",
+      "name": "Treuefaden",
+      "materials": "Feines blaues Wolltuch · Leinen · Seidenborte",
+      "cut": "Hochzeitswams mit Hemd und passender Hose",
+      "description": "Ein tiefblaues Wams mit hellem Stehkragen gibt dieser Hochzeitsgarnitur ihre klare Linie. Elfenbeinfarbene Seidenborten laufen an der Knopfleiste entlang; an den Ärmelenden liegt eine zurückhaltende cenyrische Flechtstickerei in hellem Garn.",
+      "details": "Das helle Hemd und die passende dunkelblaue Hose sind aufeinander abgestimmt. Eine gute Schulteranprobe sorgt für Bewegungsfreiheit beim Fest und beim Tanz. Die Garnitur bleibt auch später ein ordentliches Gewand für wichtige Einladungen.",
+      "destination": "AleriaAlmanach/assets/goettliche-eleganz/kleidung/braeutigam-treuefaden.png"
+    },
+    {
+      "id": "braeutigam-olivenschwur",
+      "category": "herren-hochzeit",
+      "name": "Olivenschwur",
+      "materials": "Burgunderroter Seidenbrokat · Goldfaden · Silber",
+      "cut": "Hochzeitsgarnitur mit kurzer offener Überrobe",
+      "description": "Burgunderroter Seidenbrokat liegt über einem elfenbeinfarbenen Wams. Goldene Olivenzweige wachsen schmal am Kragen der offenen Überrobe empor; cenyrische Flechtbänder setzen sich an ihren Ärmelenden fort. Die südliche Zier bleibt auf wenigen ruhigen Flächen konzentriert.",
+      "details": "Ein silberner Verschluss hält die Robe an der Brust. Hemd, Hose und ein schmaler Stoffgürtel gehören zur Garnitur. Die Robe ist leicht genug für das Hochzeitsmahl und lässt dem Bräutigam beim Tanz Raum.",
+      "destination": "AleriaAlmanach/assets/goettliche-eleganz/kleidung/braeutigam-olivenschwur.png"
+    },
+    {
+      "id": "braeutigam-heller-bund",
+      "category": "herren-hochzeit",
+      "name": "Der Helle Bund",
+      "materials": "Elfenbeinbrokat · Nachtblaue Seide · Weißgold · Granate",
+      "cut": "Persönlicher Bräutigamsentwurf mit Festmantel",
+      "description": "Ein elfenbeinfarbenes Brokatwams steht im Mittelpunkt dieser feierlichen Garnitur. Nachtblaue Seide fasst Kragen und Ärmel; echte Weißgoldstickerei verbindet argentisches Laubwerk mit cenyrischen Flechtlinien. Ein einzelner gefasster Granat setzt den farbigen Mittelpunkt an der Mantelschließe.",
+      "details": "Hemd, Hose, Wams, offene Überrobe und abnehmbarer Mantel werden als gemeinsamer Einzelentwurf gefertigt. Die Weißgoldarbeiten entstehen in Gwynthor und werden unterlegt, damit kein Metall am Stoff scheuert. Eleonora begleitet die Anproben bis zum letzten Sitz des Kragens.",
+      "destination": "AleriaAlmanach/assets/goettliche-eleganz/kleidung/braeutigam-heller-bund.png"
     }
   ]
 }

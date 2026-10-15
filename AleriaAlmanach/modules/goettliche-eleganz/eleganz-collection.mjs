@@ -1,6 +1,6 @@
 // Prices are integer Kupfertaler. Display denominations are chosen by the catalog.
-// Clothing artwork is deliberately unassigned; its production is a separate task.
-const model = (id,name,copper,materials,cut,description,details,features,occasion) => ({id,name,copper,materials,cut,description,details,features,occasion});
+import {eleganzGarment as model} from './eleganz-garment.mjs';
+import {ELEGANZ_WEDDING} from './eleganz-wedding-collection.mjs';
 export const ELEGANZ_COLLECTION = Object.freeze({
   damen: [
     model('lichtleinen','Lichtleinen',18,'Cenyrisches Leinen · Wollborte','Hemdgewand mit schmalem Überkleid',
@@ -65,5 +65,7 @@ export const ELEGANZ_COLLECTION = Object.freeze({
     model('herren-goettliche-eleganz','Göttliche Eleganz · Der Dunkle',52000,'Dunkler Seidensamt · Elfenbeinbrokat · Weißgold · Ausgewählte Granate','Einzelentwurf einer vollständigen Festgarnitur',
       'Dunkler Seidensamt, heller Brokat und eine bis in die Ärmel geführte Weißgoldstickerei bilden das aufwendigste Herrenmodell des Hauses. Der argentische Aufbau bleibt klar; die großen cenyrischen Flechtmotive erscheinen erst, wenn Licht über Schulter und Mantel wandert.',
       'Hemd, Hose, Festwams, Überrobe und abnehmbarer Mantel werden gemeinsam gefertigt. Individuell angepasste Weißgoldfassungen tragen wenige ausgesuchte Granate. Zusätzliche Steine oder andere Edelmetallmengen werden vor Auftragserteilung gesondert vereinbart.', ['Vollständige fünfteilige Garnitur','Eleonoras persönlicher Einzelentwurf','Eigene Weißgoldarbeiten aus Gwynthor'],'Seltene Zeremonie')
-  ]
+  ],
+  'damen-hochzeit':ELEGANZ_WEDDING.damen,
+  'herren-hochzeit':ELEGANZ_WEDDING.herren
 });

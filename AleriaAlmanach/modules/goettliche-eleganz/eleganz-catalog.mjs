@@ -7,18 +7,18 @@ function price(copper) {
 }
 export function buildEleganzCatalog() {
   return {headerIcon:`${ELEGANZ_ART}/schild.png`,title:'Güterregister',subtitle:'Argentisch-Cenyrische Kleidung · Göttliche Eleganz',
-    categories:[{id:'damen',label:'Damenkleidung'},{id:'herren',label:'Herrenkleidung'}],allLabel:'Die ganze Kollektion',filterLabel:'Garnituren des Hauses',searchPlaceholder:'Schnitt, Stoff oder Anlass suchen …',
+    categories:[{id:'damen',label:'Damenkleidung'},{id:'herren',label:'Herrenkleidung'},{id:'damen-hochzeit',label:'Hochzeitsmode · Damen'},{id:'herren-hochzeit',label:'Hochzeitsmode · Herren'}],allLabel:'Die ganze Kollektion',filterLabel:'Garnituren des Hauses',searchPlaceholder:'Schnitt, Stoff oder Anlass suchen …',
     noteIcon:'✦',noteTitle:'Guter Stoff. Der richtige Schnitt.',noteText:'Vom guten Alltagsgewand bis zum seltenen Einzelentwurf verbindet das Haus argentische Mode mit cenyrischem Handwerk. Die Hausmodelle werden anprobiert und angepasst; die besonderen Garnituren entstehen nach Maß.',
     items:Object.entries(ELEGANZ_COLLECTION).flatMap(([category,items])=>items.map((item,index)=>({
-      id:item.id,category,title:item.name,subtitle:`${item.cut} · Argentisch-Cenyrisch`,status:'available',badge:index<2?'Guter Alltag':index>7?'Einzelanfertigung':'Hauskollektion',
-      image:'',imageFit:'contain',imagePosition:'center',imageFormat:'portrait',imageHeight:360,
+      id:item.id,category,title:item.name,subtitle:`${item.cut} · Argentisch-Cenyrisch`,status:'available',badge:category.endsWith('hochzeit')?'Hochzeitsmode':index<2?'Guter Alltag':index>7?'Einzelanfertigung':'Hauskollektion',
+      image:`${ELEGANZ_ART}/kleidung/${item.id}.png`,imageFit:'contain',imagePosition:'center',imageFormat:'square',imageHeight:300,
       descriptionTitle:'Schnitt & Erscheinung',description:paragraph(item.description)+paragraph(item.details),
       featuresTitle:'Zur Garnitur',features:item.features.map(text=>({icon:'✦',title:'',text})),
       originTitle:'Stoff & Herkunft',origin:`${item.materials} · Hauswerkstätten in Gwynthor; Importstoffe über die Veltrane-Route.`,
-      usageTitle:'Passender Anlass',usageTags:[item.occasion],tags:['Kleidung','Argentisch-Cenyrisch',category==='damen'?'Damen':'Herren',item.materials],
+      usageTitle:'Passender Anlass',usageTags:[item.occasion],tags:['Kleidung','Argentisch-Cenyrisch',category.startsWith('damen')?'Damen':'Herren',item.materials],
       ...price(item.copper),unit:'1 Garnitur',priceTitle:'Preis der beschriebenen Garnitur',priceFill:15+index*9,priceOptions:[],
       priceNote:'Die genannten Teile, Besätze und die übliche Anpassung gehören zum Preis. Schuhe und nicht genannter Schmuck werden gesondert bestellt.',
-      conditionsTitle:'Anprobe & Fertigung',conditions:index<5?'Nach Stoff- und Größenvorrat; einfache Anpassungen nach Absprache.':'Fertigung nach Bestellung. Stoff, Anproben und Fertigstellung werden vor Auftragserteilung vereinbart.',attributes:[]
+      conditionsTitle:'Anprobe & Fertigung',conditions:category.endsWith('hochzeit')?'Für die Hochzeit nach Bestellung gefertigt. Stoff, Anproben und Fertigstellung werden vor Auftragserteilung vereinbart.':index<5?'Nach Stoff- und Größenvorrat; einfache Anpassungen nach Absprache.':'Fertigung nach Bestellung. Stoff, Anproben und Fertigstellung werden vor Auftragserteilung vereinbart.',attributes:[]
     }))),
     footerCards:[{icon:'✦',title:'Eine Anprobe lohnt sich',text:'Maelwen führt den Auftragskalender; besondere Entwürfe und letzte Anproben übernimmt Eleonora selbst.'},
       {icon:'◈',title:'Handwerk ohne fremde Zwischenhändler',text:'Die Veltrane liefern die südlichen Stoffe, Gwynthors Werkstätten die feinen Beschläge. So bleibt mehr Sorgfalt für Schnitt und Ausführung.'},

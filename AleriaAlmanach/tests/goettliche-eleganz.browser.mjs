@@ -48,10 +48,10 @@ try {
     await page.screenshot({path:resolve(output,`04-hierarchie-${i}.png`)});
   }
   await show(4);
-  assert.equal(await page.locator('#modal-overlay .trade-catalog-item').count(),20);
-  for(const category of ['damen','herren']) {
+  assert.equal(await page.locator('#modal-overlay .trade-catalog-item').count(),26);
+  for(const category of ['damen','herren','damen-hochzeit','herren-hochzeit']) {
     await page.locator(`#modal-overlay [data-trade-filter="${category}"]`).click();
-    assert.equal(await page.locator('#modal-overlay .trade-catalog-item:visible').count(),10);
+    assert.equal(await page.locator('#modal-overlay .trade-catalog-item:visible').count(),category.endsWith('hochzeit')?3:10);
     assert.equal(await page.locator('#modal-overlay .trade-catalog-item:visible').first().locator('.trade-catalog-description p').count(),2);
     await page.screenshot({path:resolve(output,`05-kollektion-${category}.png`)});
   }
@@ -75,6 +75,6 @@ try {
   await page.goto(`${server.origin}/Kontinente/Estryll/K%C3%B6nigreich%20Cenyr/Grafschaft%20Celtigerns%20Wacht/Grafschaft%20Celtigerns%20Wacht.html`);
   await page.locator('a[href*="haus=haus-raves"]').first().waitFor();
   await context.close();
-  await writeFile(resolve(output,'report.json'),JSON.stringify({passed:true,pages:6,hierarchyTabs:3,garments:20,profiles:14,localArtworkLoaded:true,productionRequestsBlocked:true},null,2));
-  console.log(`PASS: sechs Seiten, drei Reiter, zwanzig Garnituren, vierzehn Profile, Haus- und Stadtverknüpfungen. ${output}`);
+  await writeFile(resolve(output,'report.json'),JSON.stringify({passed:true,pages:6,hierarchyTabs:3,garments:26,weddingGarments:6,profiles:14,localArtworkLoaded:true,productionRequestsBlocked:true},null,2));
+  console.log(`PASS: sechs Seiten, drei Hierarchiereiter, 26 Garnituren mit sechs Hochzeitsmodellen, vierzehn Profile, Haus- und Stadtverknüpfungen. ${output}`);
 } finally {await browser?.close();await server.close();}
