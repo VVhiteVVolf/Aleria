@@ -21,7 +21,7 @@ import {
   listFamilyRecords,
   loadFamilyById,
   saveFamilyToLibrary
-} from '../services/family-library.js?v=20261014-kanne-v3';
+} from '../services/family-library.js?v=20261016-eleganz-v1';
 import { downloadFamilyJson, parseFamilyJson } from '../services/family-transfer.js';
 import { saveFamilyRecordsAtomically } from '../services/family-persistence.js';
 import {

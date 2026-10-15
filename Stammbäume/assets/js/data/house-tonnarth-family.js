@@ -1,5 +1,5 @@
 import { DEFAULT_RELATIONSHIP_COLORS } from '../config/family-colors.js';
-import { withKrummeKanneTonnarthLink } from './krumme-kanne-tonnarth-link.js?v=20261014-kanne-v3';
+import { withKrummeKanneTonnarthLink } from './krumme-kanne-tonnarth-link.js?v=20261016-eleganz-v1';
 import { createFounderTimeJumpPlaceholderHouseFamily } from './blank-house-family-factory.js';
 import { GWYNTHOR_COMMONER_HOUSE_PROFILES } from './celtigerns-wacht-house-profiles.js';
 import {

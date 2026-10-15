@@ -465,9 +465,9 @@
           "kingdom": "assets/images/regions/koenigreich-cenyr.png"
         }
       },
-      "personCount": 10,
-      "revision": 3,
-      "updatedAt": "2026-09-27T22:40:51.817Z",
+      "personCount": 12,
+      "revision": 4,
+      "updatedAt": "2026-10-15T22:51:07.134Z",
       "link": "Stammbaum.html?family=haus-coeddu&mode=view",
       "source": "github"
     },
@@ -1885,6 +1885,106 @@
       "revision": 2,
       "updatedAt": "2026-10-14T16:37:45.782Z",
       "link": "Stammbaum.html?family=haus-dubhdarach&mode=view",
+      "source": "github"
+    },
+    {
+      "id": "haus-raves",
+      "familyId": "haus-raves",
+      "title": "Haus Raves",
+      "motto": "",
+      "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Raves.png",
+      "folderPath": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Gwynthor"
+      ],
+      "houseProfile": {
+        "rankId": "commoner",
+        "seat": "Gwynthor",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "house-draig",
+        "liegeHouseName": "Haus Draig",
+        "regionEmblems": {
+          "seat": "",
+          "barony": "",
+          "county": "",
+          "kingdom": ""
+        }
+      },
+      "personCount": 16,
+      "revision": 1,
+      "updatedAt": "2026-10-15T22:51:07.134Z",
+      "link": "Stammbaum.html?family=haus-raves&mode=view",
+      "source": "github"
+    },
+    {
+      "id": "haus-veltrane",
+      "familyId": "haus-veltrane",
+      "title": "Haus Veltrane",
+      "motto": "",
+      "emblem": "assets/images/houses/Kaiserreich Argentum/Veltrane.png",
+      "folderPath": [
+        "Kaiserreich Argentum",
+        "Unsortiert"
+      ],
+      "houseProfile": {
+        "rankId": "commoner",
+        "seat": "",
+        "barony": "",
+        "county": "Unsortiert",
+        "kingdom": "Kaiserreich Argentum",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "",
+          "barony": "",
+          "county": "",
+          "kingdom": ""
+        }
+      },
+      "personCount": 4,
+      "revision": 1,
+      "updatedAt": "2026-10-15T22:51:07.134Z",
+      "link": "Stammbaum.html?family=haus-veltrane&mode=view",
+      "source": "github"
+    },
+    {
+      "id": "haus-maerllys",
+      "familyId": "haus-maerllys",
+      "title": "Haus Maerllys",
+      "motto": "",
+      "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Maerllys.png",
+      "folderPath": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Gwynthor"
+      ],
+      "houseProfile": {
+        "rankId": "commoner",
+        "seat": "Gwynthor",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "haus-draig",
+        "liegeHouseName": "Haus Draig",
+        "regionEmblems": {
+          "seat": "assets/images/regions/gwynthor.png",
+          "barony": "assets/images/regions/llamreis-ankunft.png",
+          "county": "assets/images/regions/celtigerns-wacht.png",
+          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+        }
+      },
+      "personCount": 18,
+      "revision": 1,
+      "updatedAt": "2026-10-15T22:51:07.134Z",
+      "link": "Stammbaum.html?family=haus-maerllys&mode=view",
       "source": "github"
     }
   ]

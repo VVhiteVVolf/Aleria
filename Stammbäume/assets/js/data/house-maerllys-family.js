@@ -14,6 +14,7 @@ import {
   MAERLLYS_YSGRIF_MARRIAGE
 } from './maerllys-cross-family-marriages.js';
 import { TONNARTH_MAERLLYS_MARRIAGE } from './tonnarth-maerllys-marriage.js';
+import { withEleganzMaerllysLink } from './eleganz-family-links.js';
 
 const MAERLLYS_HOUSE_ID = 'house-maerllys';
 const MAERLLYS_EMBLEM = 'assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Maerllys.png';
@@ -68,7 +69,7 @@ const FOUNDER_IDS = BASE_FAMILY.partnerships[0].participantIds;
 const TIME_JUMP_ID = BASE_FAMILY.timeJumps[0].id;
 const GRANDPARENT_IDS = ['cadfan-maerllys', 'eira-spouse-maerllys'];
 
-export const HOUSE_MAERLLYS_FAMILY = Object.freeze({
+export const HOUSE_MAERLLYS_FAMILY = withEleganzMaerllysLink({
   ...BASE_FAMILY,
   houses: Object.freeze([
     ...BASE_FAMILY.houses,

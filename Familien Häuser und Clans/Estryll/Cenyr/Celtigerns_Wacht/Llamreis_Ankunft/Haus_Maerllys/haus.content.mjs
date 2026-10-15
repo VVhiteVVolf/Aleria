@@ -2,6 +2,7 @@
 // Fehlende Angaben bleiben leer oder folgen später; offene Punkte siehe RITTERHAEUSER-UND-VORBEREITUNG.md.
 export const HOUSE_CONTENT = {
   "id": "haus-maerllys",
+  "contentVersion": "eleganz-20261016",
   "name": "Haus Maerllys",
   "type": "Bürgerliches Haus",
   "page": "kleinehaeuser.html",
@@ -15,13 +16,14 @@ export const HOUSE_CONTENT = {
   "showMotto": false,
   "prepared": true,
   "registerPage": true,
-  "biographySourceRevision": 5,
+  "biographySourceRevision": 6,
+  "biographyPreviousDefaultFingerprints": ["1741:ce940b97:2291e4d9"],
   "biographyIntroTitle": "Über das Haus",
   "biographyHistoryTitle": "Geschichte",
   "biographySummary": {
-    "overview": "Haus Maerllys ist eine bürgerliche Familie aus Gwynthor.",
-    "history": "Folgt …",
-    "character": "Folgt …"
+    "overview": "Die Maerllys gehören zu Gwynthors alten Schneiderfamilien. Schere, Tuch und Garnrolle stehen auf ihrem Wappen für ein Handwerk, das am guten Sitz seiner Arbeit gemessen wird.",
+    "history": "Gwenora Maerllys verband die Kunst ihrer Familie mit den Stofflieferungen des Kapitäns Matteo Veltrane. Aus ihrem gemeinsamen Krämerladen erwuchs der Raves-Zweig und später die Göttliche Eleganz. Die heutige Maerllys-Linie stammt aus dem Zweig ihres Bruders; die Namen der dazwischenliegenden Generationen sind verloren.",
+    "character": "Die Familie hält an cenyrischen Schnitten und sorgfältiger Handarbeit fest. Ihre Verwandtschaft mit den Raves verbindet die heimische Schneiderkunst mit den Stoffen des Südens."
   },
   "placeholders": {
     "male": "../Stammbäume/assets/images/placeholders/male.png",
@@ -100,14 +102,14 @@ export const HOUSE_CONTENT = {
     "enemies": ""
   },
   "sections": {
-    "overview": "Haus Maerllys ist eine bürgerliche Familie aus Gwynthor. Weitere Inhalte folgen.",
-    "history": "Folgt …",
-    "traditions": "Folgt …",
+    "overview": "Die Maerllys gehören zu Gwynthors alten Schneiderfamilien. Ihr Wappen zeigt Schere, Tuch und Garnrolle: den schlichten Stolz eines Hauses, dessen Ansehen mit jeder sauber gearbeiteten Naht wächst.",
+    "history": "Gwenora Maerllys heiratete den aus Tirnara stammenden Kapitän Matteo Veltrane. Gemeinsam eröffneten sie 1662 einen Krämerladen und begründeten die Familie Raves. Gwenoras Schnittkunst und Matteos Handelsroute legten den Grund für die spätere Göttliche Eleganz. Die jüngere Maerllys-Hauptlinie führt über Gwenoras unbenannten Bruder zu Cadfan und Owain; die genaue Generationenfolge ist nicht mehr überliefert.",
+    "traditions": "Ein gutes Kleid soll sich seinem Träger fügen. Bevor ein Stück die Werkbank verlässt, werden Fall, Nähte und Bewegungsfreiheit geprüft.",
     "knighthood": "Folgt …",
     "succession": "Folgt …",
     "holdings": "Folgt …",
     "cultureReligion": "Folgt …",
-    "conflictsAlliances": "Folgt …",
+    "conflictsAlliances": "Mit den Raves verbindet die Maerllys eine alte Verwandtschaft und die gemeinsame Schneidertradition. Über Gwenoras Ehe reicht diese Verbindung bis zum Handelshaus Veltrane in Tirnara.",
     "values": "Folgt …",
     "court": "Folgt …",
     "familyTree": "Die Hausbio öffnet sich über das Wappen im Stammbaum. Personen und Verbindungen sind in der Familienakte verzeichnet.",

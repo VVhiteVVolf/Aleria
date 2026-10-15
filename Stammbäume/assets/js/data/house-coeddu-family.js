@@ -3,6 +3,7 @@ import { GWYNTHOR_COMMONER_HOUSE_PROFILES } from './celtigerns-wacht-house-profi
 import { createFamilyPerson, createMarriage, createParentages } from './family-record-builders.js';
 import { COEDDU_CRAIGDDU_MARRIAGE } from './coeddu-craigddu-marriage.js';
 import { LLYWELYN_COEDDU_BIOGRAPHY } from './person-biographies/llywelyn-coeddu.js';
+import { withEleganzCoedduLink } from './eleganz-family-links.js';
 
 const HOUSE_ID = 'house-coeddu';
 const EMBLEM = 'assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Coeddu.png';
@@ -20,7 +21,7 @@ function member(id, name, sex, birth, options = {}) {
   return createFamilyPerson({ id, name, sex, birth, houseId: HOUSE_ID, ...options });
 }
 
-export const HOUSE_COEDDU_FAMILY = Object.freeze({
+export const HOUSE_COEDDU_FAMILY = withEleganzCoedduLink({
   ...BASE,
   houses: [
     ...BASE.houses,

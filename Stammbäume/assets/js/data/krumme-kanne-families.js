@@ -1,6 +1,6 @@
 import { createFounderTimeJumpPlaceholderHouseFamily } from './blank-house-family-factory.js';
 import { createFamilyPerson, createMarriage, createParentages } from './family-record-builders.js';
-import { GWYNTHOR_COMMONER_HOUSE_PROFILES } from './celtigerns-wacht-house-profiles.js?v=20261014-kanne-v3';
+import { GWYNTHOR_COMMONER_HOUSE_PROFILES } from './celtigerns-wacht-house-profiles.js?v=20261016-eleganz-v1';
 import { kanneFamilyPerson, KANNE_MARRIAGES, KANNE_FAMILY_DEFINITIONS } from './krumme-kanne-family-people.js';
 
 const emblem = name => `assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/${name}.png`;

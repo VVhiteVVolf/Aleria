@@ -2,7 +2,7 @@ import {
   FAMILY_REGISTRY,
   getRegisteredFamily,
   RETIRED_FAMILY_IDS
-} from '../data/families.registry.js?v=20261014-kanne-v3';
+} from '../data/families.registry.js?v=20261016-eleganz-v1';
 import { normalizeFamily } from '../domain/family-schema.js';
 import { createHouseProfileFromFolderPath } from '../domain/house-profile.js';
 import {

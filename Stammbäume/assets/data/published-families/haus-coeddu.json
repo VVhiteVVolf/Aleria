@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "familyId": "haus-coeddu",
-  "revision": 3,
-  "updatedAt": "2026-09-27T22:40:51.817Z",
+  "revision": 4,
+  "updatedAt": "2026-10-15T22:51:07.134Z",
   "family": {
     "schema": "aleria.family-tree",
     "schemaVersion": 1,
@@ -332,19 +332,25 @@
         "id": "maelwen-coeddu",
         "worldPersonId": "person--haus-coeddu--maelwen-coeddu",
         "name": "Maelwen Coeddu",
-        "title": "",
+        "title": "Empfangsmeisterin · Kundschaft & Termine",
         "sex": "female",
         "status": "alive",
         "birth": "1713",
         "death": "",
-        "portrait": "",
+        "portrait": "../AleriaAlmanach/assets/goettliche-eleganz/portraits/maelwen.png",
         "portraitPlaceholder": "auto",
         "houseId": "house-coeddu",
         "familyRole": "core",
         "lineageRole": "branch",
         "tags": [],
-        "notes": "",
-        "extensions": {}
+        "notes": "Maelwen empfängt die Kundschaft und hält die Anproben im Takt. Sie kann eine verlegene Braut beruhigen und einem ungeduldigen Herrn höflich seinen Termin nennen. Tiberians Reisebriefe bewahrt sie zwischen den weniger dringlichen Bestellungen auf.",
+        "extensions": {
+          "registryManagedFields": [
+            "title",
+            "notes",
+            "portrait"
+          ]
+        }
       },
       {
         "id": "thalor-coeddu",
@@ -399,6 +405,54 @@
         "tags": [],
         "notes": "Junger Sohn Llywelyns und Catrins; im Jahr 1740 fünf Jahre alt.",
         "extensions": {}
+      },
+      {
+        "id": "tiberian-raves",
+        "worldPersonId": "person--haus-raves--tiberian-raves",
+        "name": "Tiberian Raves",
+        "title": "Handelsmeister · Seeroute & Fortuna",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1703",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/goettliche-eleganz/portraits/tiberian.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-raves",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Tiberian hält die Verbindung zu den Veltrane und zum Markt der Fortuna. Er reist oft nach Tirnara, prüft Zusagen und sorgt dafür, dass aus einem guten Vertrag auch eine pünktliche Lieferung wird. Einen überladenen Laderaum erkennt er schneller als eine schlechte Ausrede.",
+        "extensions": {
+          "registryManagedFields": [
+            "title",
+            "notes",
+            "portrait"
+          ]
+        }
+      },
+      {
+        "id": "serafina-raves",
+        "worldPersonId": "person--haus-raves--serafina-raves",
+        "name": "Serafina Raves",
+        "title": "Tochter Tiberians · Hauskind",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1734",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/goettliche-eleganz/portraits/serafina.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-raves",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Serafina zählt die kleinen Stoffballen im Schaufenster und wartet ungeduldig auf Tiberians Heimkehr. Aus jedem seiner Besuche soll er ihr eine Geschichte und einen besonders schönen Knopf mitbringen.",
+        "extensions": {
+          "registryManagedFields": [
+            "title",
+            "notes",
+            "portrait"
+          ]
+        }
       }
     ],
     "partnerships": [
@@ -449,6 +503,26 @@
           "crossFamilyRelationship": {
             "linkId": "marriage-llywelyn-coeddu-catrin-craigddu",
             "counterpartFamilyId": "craigddu"
+          }
+        }
+      },
+      {
+        "id": "marriage-tiberian-maelwen-raves",
+        "participantIds": [
+          "tiberian-raves",
+          "maelwen-coeddu"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "1733",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Tiberian und Maelwen leben mit ihrer Tochter in Gwynthor.",
+        "extensions": {
+          "crossFamilyRelationship": {
+            "linkId": "marriage-tiberian-maelwen-raves",
+            "counterpartFamilyId": "haus-raves"
           }
         }
       }
@@ -545,6 +619,21 @@
         "visibility": "public",
         "notes": "",
         "extensions": {}
+      },
+      {
+        "id": "parentage-serafina-raves",
+        "childId": "serafina-raves",
+        "parentIds": [
+          "tiberian-raves",
+          "maelwen-coeddu"
+        ],
+        "partnershipId": "marriage-tiberian-maelwen-raves",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
       }
     ],
     "houses": [
@@ -563,9 +652,35 @@
         "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Craigddu.png",
         "status": "active",
         "extensions": {}
+      },
+      {
+        "id": "house-raves",
+        "name": "Haus Raves",
+        "motto": "",
+        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Raves.png",
+        "status": "active"
       }
     ],
-    "cadetBranches": [],
+    "cadetBranches": [
+      {
+        "id": "married-away-maelwen-raves",
+        "name": "Haus Raves",
+        "subtitle": "Wegverheiratete Linie",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-tiberian-maelwen-raves",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-raves",
+        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Raves.png",
+        "emblemScale": 0.86,
+        "crestFrame": "iron",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-raves",
+        "notes": "Maelwen heiratete Tiberian Raves. Die vollständige Raves-Linie steht in ihrer eigenen Akte.",
+        "extensions": {}
+      }
+    ],
     "timeJumps": [
       {
         "id": "gap-coeddu-to-1682",
@@ -648,7 +763,7 @@
     },
     "extensions": {
       "blankFamily": false,
-      "sourceRevision": 2,
+      "sourceRevision": 3,
       "registryManagedDocumentFields": [
         "description"
       ],
@@ -751,8 +866,8 @@
       },
       "registryTombstones": {},
       "registryUpgrade": {
-        "fromRevision": 1,
-        "toRevision": 2
+        "fromRevision": 2,
+        "toRevision": 3
       }
     }
   }

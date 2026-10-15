@@ -308,6 +308,7 @@
           commonerHouse("swyll", "Swyll"),
           commonerHouse("aelmor", "Aelmor"),
           commonerHouse("maerllys", "Maerllys"),
+          commonerHouse("raves", "Raves"),
           commonerHouse("braglas", "Braglas"),
           commonerHouse("tonnarth", "Tonnarth"),
           commonerHouse("ysgrif", "Ysgrif"),
@@ -322,6 +323,17 @@
     ]),
 
     merchants: Object.freeze([
+      Object.freeze({
+        name: "Göttliche Eleganz",
+        image: "/AleriaAlmanach/assets/goettliche-eleganz/schild.png",
+        symbolAlt: "Göttliche Eleganz · Das bemalte Ladenschild",
+        trade: "Schneiderei & Kleidungshandel",
+        owner: "Eleonora Cassia Raves",
+        wealth: "Sehr wohlhabend",
+        reputation: "Hervorragend",
+        influence: "Gwynthor · Handel nach Tirnara",
+        description: "Die wohl beste Schneiderei der Innenstadt verbindet argentische Mode mit cenyrischem Handwerk. Südliche Stoffe kommen über die Veltrane-Route; das Haus kooperiert mit dem Markt der Fortuna."
+      }),
       Object.freeze({
         name: "Celtigerns Letzte Rast",
         image: `${establishmentAssetRoot}/celtigerns-letzte-rast.png`,

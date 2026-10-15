@@ -53,8 +53,9 @@ import { HOUSE_BIOGRAPHY as haus_gelyn } from "../../../../Familien Häuser und 
 import { HOUSE_BIOGRAPHY as haus_gostyn } from "../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Gostyn/haus.biography.mjs?v=gwendolyn-20260911h";
 import { HOUSE_BIOGRAPHY as haus_gwyllach } from "../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Gwyllach/haus.biography.mjs?v=gwendolyn-20260911h";
 import { HOUSE_BIOGRAPHY as haus_loer } from "../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Loer/haus.biography.mjs?v=gwendolyn-20260911h";
-import { HOUSE_BIOGRAPHY as haus_maerllys } from "../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Maerllys/haus.biography.mjs?v=gwendolyn-20260911h";
+import { HOUSE_BIOGRAPHY as haus_maerllys } from "../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Maerllys/haus.biography.mjs?v=eleganz-20261016";
 import { HOUSE_BIOGRAPHY as haus_pendrwn } from "../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Pendrwn/haus.biography.mjs?v=gwendolyn-20260911h";
+import { HOUSE_BIOGRAPHY as haus_raves } from "../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Raves/haus.biography.mjs?v=eleganz-20261016";
 import { HOUSE_BIOGRAPHY as haus_rhyddid } from "../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Rhyddid/haus.biography.mjs?v=gwendolyn-20260911h";
 import { HOUSE_BIOGRAPHY as haus_sgrechiwr } from "../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Sgrechiwr/haus.biography.mjs?v=gwendolyn-20260911h";
 import { HOUSE_BIOGRAPHY as haus_svathamar } from "../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Svathamar/haus.biography.mjs?v=gwendolyn-20260911h";
@@ -127,8 +128,9 @@ export const HOUSE_BIOGRAPHY_DEFAULTS = Object.freeze({
   "haus-gostyn": Object.freeze({ sourceRevision: 2, biography: haus_gostyn, replacedDefaultFingerprints: Object.freeze([]) }),
   "haus-gwyllach": Object.freeze({ sourceRevision: 3, biography: haus_gwyllach, replacedDefaultFingerprints: Object.freeze([]) }),
   "haus-loer": Object.freeze({ sourceRevision: 2, biography: haus_loer, replacedDefaultFingerprints: Object.freeze([]) }),
-  "haus-maerllys": Object.freeze({ sourceRevision: 5, biography: haus_maerllys, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-maerllys": Object.freeze({ sourceRevision: 6, biography: haus_maerllys, replacedDefaultFingerprints: Object.freeze(["1741:ce940b97:2291e4d9"]) }),
   "haus-pendrwn": Object.freeze({ sourceRevision: 3, biography: haus_pendrwn, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-raves": Object.freeze({ sourceRevision: 1, biography: haus_raves, replacedDefaultFingerprints: Object.freeze([]) }),
   "haus-rhyddid": Object.freeze({ sourceRevision: 5, biography: haus_rhyddid, replacedDefaultFingerprints: Object.freeze([]) }),
   "haus-sgrechiwr": Object.freeze({ sourceRevision: 2, biography: haus_sgrechiwr, replacedDefaultFingerprints: Object.freeze([]) }),
   "haus-svathamar": Object.freeze({ sourceRevision: 2, biography: haus_svathamar, replacedDefaultFingerprints: Object.freeze(["3335:d9a453de:2720dcec"]) }),

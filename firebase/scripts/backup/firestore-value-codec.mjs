@@ -23,3 +23,18 @@ export function decodeFirestoreValue(value) {
 export function decodeFirestoreFields(fields) {
   return Object.fromEntries(Object.entries(fields).map(([key, value]) => [key, decodeFirestoreValue(value)]));
 }
+
+// New authored JSON only. Existing REST fields must never pass through this
+// encoder: timestamps, references and byte values keep their original types.
+export function encodeFirestoreValue(input) {
+  if(input===null) return {nullValue:null};
+  if(Array.isArray(input)) return {arrayValue:{values:input.map(encodeFirestoreValue)}};
+  if(typeof input==='object') return {mapValue:{fields:encodeFirestoreFields(input)}};
+  if(typeof input==='boolean') return {booleanValue:input};
+  if(typeof input==='string') return {stringValue:input};
+  if(typeof input==='number' && Number.isFinite(input)) return Number.isInteger(input)?{integerValue:String(input)}:{doubleValue:input};
+  throw new Error('Nicht unterstützter neuer Firestore-Wert.');
+}
+export function encodeFirestoreFields(input) {
+  return Object.fromEntries(Object.entries(input).map(([key,value])=>[key,encodeFirestoreValue(value)]));
+}

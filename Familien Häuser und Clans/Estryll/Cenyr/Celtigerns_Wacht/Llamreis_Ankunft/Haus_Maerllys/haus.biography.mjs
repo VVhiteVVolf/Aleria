@@ -7,7 +7,7 @@ export const HOUSE_BIOGRAPHY = {
   "image": "",
   "imageWidth": 30,
   "imageSquare": true,
-  "description": "Haus Maerllys ist eine bürgerliche Familie aus Gwynthor.",
+  "description": "Die Maerllys gehören zu Gwynthors alten Schneiderfamilien. Schere, Tuch und Garnrolle stehen auf ihrem Wappen für ein Handwerk, das am guten Sitz seiner Arbeit gemessen wird.",
   "quote": "",
   "quoteBy": "",
   "commentSequence": [],
@@ -55,11 +55,11 @@ export const HOUSE_BIOGRAPHY = {
     "connectionPortraitHeight": 80,
     "connectionTextOffset": 0,
     "biographyTitle": "Über das Haus",
-    "biographyText": "Haus Maerllys ist eine bürgerliche Familie aus Gwynthor.",
+    "biographyText": "Die Maerllys gehören zu Gwynthors alten Schneiderfamilien. Schere, Tuch und Garnrolle stehen auf ihrem Wappen für ein Handwerk, das am guten Sitz seiner Arbeit gemessen wird.",
     "abilitiesTitle": "Einfluss und Aufgaben",
     "abilities": [],
     "historyTitle": "Geschichte",
-    "historyText": "Folgt …",
+    "historyText": "Gwenora Maerllys verband die Kunst ihrer Familie mit den Stofflieferungen des Kapitäns Matteo Veltrane. Aus ihrem gemeinsamen Krämerladen erwuchs der Raves-Zweig und später die Göttliche Eleganz. Die heutige Maerllys-Linie stammt aus dem Zweig ihres Bruders; die Namen der dazwischenliegenden Generationen sind verloren.",
     "worksTitle": "Hausgeschichte",
     "works": [],
     "extraSections": [
@@ -67,7 +67,7 @@ export const HOUSE_BIOGRAPHY = {
         "position": "afterWorks",
         "mode": "text",
         "title": "Werte und Stellung",
-        "text": "Folgt …"
+        "text": "Die Familie hält an cenyrischen Schnitten und sorgfältiger Handarbeit fest. Ihre Verwandtschaft mit den Raves verbindet die heimische Schneiderkunst mit den Stoffen des Südens."
       }
     ],
     "triviaTitle": "Besonderheiten",

@@ -1,0 +1,966 @@
+{
+  "schemaVersion": 1,
+  "familyId": "haus-maerllys",
+  "revision": 1,
+  "updatedAt": "2026-10-15T22:51:07.134Z",
+  "family": {
+    "schema": "aleria.family-tree",
+    "schemaVersion": 1,
+    "document": {
+      "id": "haus-maerllys",
+      "title": "Haus Maerllys",
+      "motto": "",
+      "description": "Gwynthorer Schneiderfamilie, deren Schere und Garnrolle seit Generationen für gute Arbeit stehen. Gwenora Maerllys begründete mit Matteo Veltrane die Raves-Linie; die jüngere Hauptlinie führt bis zu Nia und ihren Geschwistern.",
+      "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Maerllys.png",
+      "houseProfile": {
+        "rankId": "commoner",
+        "seat": "Gwynthor",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "haus-draig",
+        "liegeHouseName": "Haus Draig",
+        "regionEmblems": {
+          "seat": "assets/images/regions/gwynthor.png",
+          "barony": "assets/images/regions/llamreis-ankunft.png",
+          "county": "assets/images/regions/celtigerns-wacht.png",
+          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+        }
+      }
+    },
+    "persons": [
+      {
+        "id": "haus-maerllys-gruender",
+        "worldPersonId": "person--haus-maerllys--haus-maerllys-gruender",
+        "name": "???",
+        "title": "Gründer des Hauses",
+        "sex": "male",
+        "status": "dead",
+        "birth": "",
+        "death": "????",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-maerllys",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Gründerfamilie"
+        ],
+        "notes": "Historische Gründerfigur vor dem Überlieferungssprung; Name und genaue Lebensdaten sind noch nicht belegt.",
+        "extensions": {}
+      },
+      {
+        "id": "haus-maerllys-gruenderin",
+        "worldPersonId": "person--haus-maerllys--haus-maerllys-gruenderin",
+        "name": "???",
+        "title": "Gründerin des Hauses",
+        "sex": "female",
+        "status": "dead",
+        "birth": "",
+        "death": "????",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-maerllys",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [
+          "Gründerfamilie"
+        ],
+        "notes": "Historische Gründerfigur vor dem Überlieferungssprung; Name und genaue Lebensdaten sind noch nicht belegt.",
+        "extensions": {}
+      },
+      {
+        "id": "cadfan-maerllys",
+        "worldPersonId": "person--haus-maerllys--cadfan-maerllys",
+        "name": "Cadfan Maerllys",
+        "title": "Ältestes überliefertes Oberhaupt des Hauses Maerllys",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1662",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-maerllys",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "eira-spouse-maerllys",
+        "worldPersonId": "person--family-tree--eira-spouse-maerllys",
+        "name": "Eira",
+        "title": "Großmutter Nia Maerllys’",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1666",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "owain-maerllys",
+        "worldPersonId": "person--haus-maerllys--owain-maerllys",
+        "name": "Owain Maerllys",
+        "title": "Großonkel Nia Maerllys’",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1665",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-maerllys",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Bruder Cadfan Maerllys’; heiratete Gwenllian Ysgrif.",
+        "extensions": {}
+      },
+      {
+        "id": "gwenllian-ysgrif",
+        "worldPersonId": "person--haus-ysgrif--gwenllian-ysgrif",
+        "name": "Gwenllian Ysgrif",
+        "title": "An Haus Maerllys verheiratete Ysgrif",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1668",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-ysgrif",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Schwester Idris Ysgrifs; heiratete Owain Maerllys.",
+        "extensions": {}
+      },
+      {
+        "id": "geraint-maerllys",
+        "worldPersonId": "person--haus-maerllys--geraint-maerllys",
+        "name": "Geraint Maerllys",
+        "title": "Sohn Owain Maerllys’ und Gwenllian Ysgrifs",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1691",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-maerllys",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Angehöriger des Hauses Maerllys; heiratete Llio Falchdyn.",
+        "extensions": {}
+      },
+      {
+        "id": "llio-falchdyn",
+        "worldPersonId": "person--haus-falchdyn--llio-falchdyn",
+        "name": "Llio Falchdyn",
+        "title": "An Haus Maerllys verheiratete Falchdyn",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1692",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-falchdyn",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Tochter Madoc Falchdyns; heiratete Geraint Maerllys. Die Verbindung wird in beiden Familienakten geführt.",
+        "extensions": {}
+      },
+      {
+        "id": "rhoswen-maerllys",
+        "worldPersonId": "person--haus-maerllys--rhoswen-maerllys",
+        "name": "Rhoswen Maerllys",
+        "title": "An Haus Tonnarth verheiratete Maerllys",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1694",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-maerllys",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Tochter Owain Maerllys’ und Gwenllian Ysgrifs; heiratete Madoc Tonnarth.",
+        "extensions": {}
+      },
+      {
+        "id": "madoc-tonnarth",
+        "worldPersonId": "person--haus-tonnarth--madoc-tonnarth",
+        "name": "Madoc Tonnarth",
+        "title": "Onkel Llewarch Tonnarths",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1692",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-tonnarth",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Bruder Cadell Tonnarths; heiratete Rhoswen Maerllys und hat mit ihr drei Söhne.",
+        "extensions": {}
+      },
+      {
+        "id": "iorwerth-maerllys",
+        "worldPersonId": "person--haus-maerllys--iorwerth-maerllys",
+        "name": "Iorwerth Maerllys",
+        "title": "Vater Nia Maerllys’",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1689",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-maerllys",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Angehöriger des Hauses Maerllys; heiratete Bronwen Swyll.",
+        "extensions": {}
+      },
+      {
+        "id": "bronwen-swyll",
+        "worldPersonId": "person--haus-swyll--bronwen-swyll",
+        "name": "Bronwen Swyll",
+        "title": "An Haus Maerllys verheiratete Swyll",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1691",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-swyll",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Schwester Iestyn Swylls; heiratete Iorwerth Maerllys.",
+        "extensions": {}
+      },
+      {
+        "id": "elowen-maerllys",
+        "worldPersonId": "person--haus-maerllys--elowen-maerllys",
+        "name": "Elowen Maerllys",
+        "title": "Ältere Schwester Nia Maerllys’",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1713",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-maerllys",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Unverheiratet und ohne Verlobung.",
+        "extensions": {}
+      },
+      {
+        "id": "nia-maerllys",
+        "worldPersonId": "person--haus-maerllys--nia-maerllys",
+        "name": "Nia Maerllys",
+        "title": "Angehörige des Hauses Maerllys",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1716",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-maerllys/nia-maerllys.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-maerllys",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "24 Jahre"
+        ],
+        "notes": "Im Jahr 1740 vierundzwanzig Jahre alt; unverheiratet und ohne Verlobung.",
+        "extensions": {}
+      },
+      {
+        "id": "rhys-maerllys",
+        "worldPersonId": "person--haus-maerllys--rhys-maerllys",
+        "name": "Rhys Maerllys",
+        "title": "Jüngerer Bruder Nia Maerllys’",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1719",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-maerllys",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Unverheiratet und ohne Verlobung.",
+        "extensions": {}
+      },
+      {
+        "id": "gwenora-maerllys",
+        "worldPersonId": "person--haus-maerllys--gwenora-maerllys",
+        "name": "Gwenora Maerllys",
+        "title": "Schneidermeisterin · Mitbegründerin des Geschäfts",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1638",
+        "death": "1714",
+        "portrait": "../AleriaAlmanach/assets/goettliche-eleganz/portraits/gwenora.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-maerllys",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Gwenora verstand mehr von Stoff als die meisten Tuchhändler. Sie nähte für Gwynthors Bürger, handelte selbstbewusst mit dem fremden Kapitän und brachte ihm bei, dass ein gutes Geschäft am Saum ebenso leicht scheitert wie auf See.",
+        "extensions": {
+          "registryManagedFields": [
+            "title",
+            "notes",
+            "portrait"
+          ]
+        }
+      },
+      {
+        "id": "matteo-veltrane",
+        "worldPersonId": "person--haus-veltrane--matteo-veltrane",
+        "name": "Matteo Septimus Veltrane",
+        "title": "Handelskapitän · Begründer der Gwynthorer Linie",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1633",
+        "death": "1708",
+        "portrait": "../AleriaAlmanach/assets/goettliche-eleganz/portraits/matteo.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-veltrane",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Matteo kam mit Seide und Olivenöl nach Gwynthor und fand in Gwenoras Werkstatt einen Grund zu bleiben. Aus seinem kleinen Krämerladen und ihren Aufträgen wuchs ein Geschäft, das die Schiffe seines Stammhauses nie aus den Augen verlor.",
+        "extensions": {
+          "registryManagedFields": [
+            "title",
+            "notes",
+            "portrait"
+          ]
+        }
+      },
+      {
+        "id": "unbekannter-bruder-gwenora-maerllys",
+        "worldPersonId": "person--haus-maerllys--unbekannter-bruder-gwenora-maerllys",
+        "name": "Unbekannter Bruder",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "",
+        "death": "????",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-maerllys",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Gwenoras Bruder gehört zur älteren Schneiderfamilie. Die genaue Generationenfolge bis Cadfan und Owain ist nicht überliefert.",
+        "extensions": {}
+      }
+    ],
+    "partnerships": [
+      {
+        "id": "marriage-haus-maerllys-founders",
+        "participantIds": [
+          "haus-maerllys-gruender",
+          "haus-maerllys-gruenderin"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Gründerehe des Hauses.",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-cadfan-eira-maerllys",
+        "participantIds": [
+          "cadfan-maerllys",
+          "eira-spouse-maerllys"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-owain-maerllys-gwenllian-ysgrif",
+        "participantIds": [
+          "owain-maerllys",
+          "gwenllian-ysgrif"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-geraint-maerllys-llio-falchdyn",
+        "participantIds": [
+          "geraint-maerllys",
+          "llio-falchdyn"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-iorwerth-maerllys-bronwen-swyll",
+        "participantIds": [
+          "iorwerth-maerllys",
+          "bronwen-swyll"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-madoc-tonnarth-rhoswen-maerllys",
+        "participantIds": [
+          "madoc-tonnarth",
+          "rhoswen-maerllys"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-matteo-gwenora-raves",
+        "participantIds": [
+          "matteo-veltrane",
+          "gwenora-maerllys"
+        ],
+        "type": "marriage",
+        "status": "ended",
+        "start": "1660",
+        "end": "1708",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Matteo blieb bei Gwenora in Gwynthor; ihr Geschäft begründete die Raves-Linie.",
+        "extensions": {
+          "crossFamilyRelationship": {
+            "linkId": "marriage-matteo-gwenora-raves",
+            "counterpartFamilyId": "haus-raves"
+          }
+        }
+      }
+    ],
+    "parentages": [
+      {
+        "id": "parentage-cadfan-maerllys",
+        "childId": "cadfan-maerllys",
+        "parentIds": [
+          "unbekannter-bruder-gwenora-maerllys"
+        ],
+        "partnershipId": "",
+        "type": "claimed",
+        "legitimacy": "unknown",
+        "certainty": "unknown",
+        "visibility": "public",
+        "notes": "Die Maerllys-Hauptlinie führt über Gwenoras unbenannten Bruder und nicht einzeln überlieferte Generationen zu Cadfan und Owain.",
+        "extensions": {
+          "timeJumpId": "gap-maerllys-to-1662",
+          "registryManagedFields": [
+            "parentIds",
+            "partnershipId",
+            "certainty",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "parentage-owain-maerllys",
+        "childId": "owain-maerllys",
+        "parentIds": [
+          "unbekannter-bruder-gwenora-maerllys"
+        ],
+        "partnershipId": "",
+        "type": "claimed",
+        "legitimacy": "unknown",
+        "certainty": "unknown",
+        "visibility": "public",
+        "notes": "Die Maerllys-Hauptlinie führt über Gwenoras unbenannten Bruder und nicht einzeln überlieferte Generationen zu Cadfan und Owain.",
+        "extensions": {
+          "timeJumpId": "gap-maerllys-to-1662",
+          "registryManagedFields": [
+            "parentIds",
+            "partnershipId",
+            "certainty",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "parentage-iorwerth-maerllys",
+        "childId": "iorwerth-maerllys",
+        "parentIds": [
+          "cadfan-maerllys",
+          "eira-spouse-maerllys"
+        ],
+        "partnershipId": "marriage-cadfan-eira-maerllys",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-geraint-maerllys",
+        "childId": "geraint-maerllys",
+        "parentIds": [
+          "owain-maerllys",
+          "gwenllian-ysgrif"
+        ],
+        "partnershipId": "marriage-owain-maerllys-gwenllian-ysgrif",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-rhoswen-maerllys",
+        "childId": "rhoswen-maerllys",
+        "parentIds": [
+          "owain-maerllys",
+          "gwenllian-ysgrif"
+        ],
+        "partnershipId": "marriage-owain-maerllys-gwenllian-ysgrif",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-elowen-maerllys",
+        "childId": "elowen-maerllys",
+        "parentIds": [
+          "iorwerth-maerllys",
+          "bronwen-swyll"
+        ],
+        "partnershipId": "marriage-iorwerth-maerllys-bronwen-swyll",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-nia-maerllys",
+        "childId": "nia-maerllys",
+        "parentIds": [
+          "iorwerth-maerllys",
+          "bronwen-swyll"
+        ],
+        "partnershipId": "marriage-iorwerth-maerllys-bronwen-swyll",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-rhys-maerllys",
+        "childId": "rhys-maerllys",
+        "parentIds": [
+          "iorwerth-maerllys",
+          "bronwen-swyll"
+        ],
+        "partnershipId": "marriage-iorwerth-maerllys-bronwen-swyll",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-gwenora-maerllys",
+        "childId": "gwenora-maerllys",
+        "parentIds": [
+          "haus-maerllys-gruender",
+          "haus-maerllys-gruenderin"
+        ],
+        "partnershipId": "marriage-haus-maerllys-founders",
+        "type": "claimed",
+        "legitimacy": "unknown",
+        "certainty": "unknown",
+        "visibility": "public",
+        "notes": "Überlieferung über nicht einzeln bekannte Generationen.",
+        "extensions": {
+          "timeJumpId": "gap-maerllys-to-gwenora"
+        }
+      },
+      {
+        "id": "parentage-unbekannter-bruder-gwenora-maerllys",
+        "childId": "unbekannter-bruder-gwenora-maerllys",
+        "parentIds": [
+          "haus-maerllys-gruender",
+          "haus-maerllys-gruenderin"
+        ],
+        "partnershipId": "marriage-haus-maerllys-founders",
+        "type": "claimed",
+        "legitimacy": "unknown",
+        "certainty": "unknown",
+        "visibility": "public",
+        "notes": "Überlieferung über nicht einzeln bekannte Generationen.",
+        "extensions": {
+          "timeJumpId": "gap-maerllys-to-gwenora"
+        }
+      }
+    ],
+    "houses": [
+      {
+        "id": "house-maerllys",
+        "name": "Haus Maerllys",
+        "motto": "",
+        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Maerllys.png",
+        "status": "active"
+      },
+      {
+        "id": "house-swyll",
+        "name": "Haus Swyll",
+        "motto": "",
+        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Swyll.png",
+        "status": "active"
+      },
+      {
+        "id": "house-tonnarth",
+        "name": "Haus Tonnarth",
+        "motto": "",
+        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Tonnarth.png",
+        "status": "active"
+      },
+      {
+        "id": "house-ysgrif",
+        "name": "Haus Ysgrif",
+        "motto": "",
+        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Ysgrif.png",
+        "status": "active"
+      },
+      {
+        "id": "house-falchdyn",
+        "name": "Haus Falchdyn",
+        "motto": "",
+        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Falchdyn.png",
+        "status": "active"
+      },
+      {
+        "id": "house-veltrane",
+        "name": "Haus Veltrane",
+        "motto": "",
+        "emblem": "assets/images/houses/Kaiserreich Argentum/Veltrane.png",
+        "status": "active"
+      },
+      {
+        "id": "house-raves",
+        "name": "Haus Raves",
+        "motto": "",
+        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Raves.png",
+        "status": "active"
+      }
+    ],
+    "cadetBranches": [
+      {
+        "id": "married-away-tonnarth-rhoswen-maerllys",
+        "name": "Haus Tonnarth",
+        "subtitle": "Wegverheiratete Linie",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-madoc-tonnarth-rhoswen-maerllys",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-tonnarth",
+        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Tonnarth.png",
+        "emblemScale": 0.86,
+        "crestFrame": "iron",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-tonnarth",
+        "notes": "Rhoswen Maerllys wurde an Madoc Tonnarth verheiratet; dieselbe Ehe wird in der Tonnarth-Gegenakte geführt.",
+        "extensions": {}
+      },
+      {
+        "id": "raves-branch-maerllys",
+        "name": "Haus Raves",
+        "subtitle": "Gegründetes Kadettenhaus",
+        "linkType": "cadet-house",
+        "parentPartnershipId": "marriage-matteo-gwenora-raves",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-raves",
+        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Raves.png",
+        "emblemScale": 0.86,
+        "crestFrame": "iron",
+        "frameScale": 1,
+        "founded": "1662",
+        "targetFamilyId": "haus-raves",
+        "notes": "Gwenora und Matteo begründeten den Raves-Zweig. Dessen Nachkommen werden ausschließlich dort gezeigt.",
+        "extensions": {}
+      }
+    ],
+    "timeJumps": [
+      {
+        "id": "gap-maerllys-to-gwenora",
+        "parentPartnershipId": "marriage-haus-maerllys-founders",
+        "sharedParentPartnershipIds": [],
+        "parentPersonId": "",
+        "childIds": [
+          "gwenora-maerllys",
+          "unbekannter-bruder-gwenora-maerllys"
+        ],
+        "years": 0,
+        "fromYear": "",
+        "toYear": "1638",
+        "label": "Älterer Schneiderzweig um Gwenora",
+        "notes": "Die Namen der frühen Generationen sind verloren.",
+        "extensions": {
+          "preparedPlaceholder": false
+        }
+      },
+      {
+        "id": "gap-maerllys-to-1662",
+        "parentPartnershipId": "",
+        "sharedParentPartnershipIds": [],
+        "parentPersonId": "unbekannter-bruder-gwenora-maerllys",
+        "childIds": [
+          "cadfan-maerllys",
+          "owain-maerllys"
+        ],
+        "years": 0,
+        "fromYear": "????",
+        "toYear": "1662",
+        "label": "Nicht einzeln überlieferte Maerllys-Generationen bis Cadfan und Owain",
+        "notes": "Die spätere Maerllys-Linie folgt seriell hinter Gwenoras unbenanntem Bruder. Die Raves-Nachkommen bleiben in ihrer eigenen Akte.",
+        "extensions": {
+          "preparedPlaceholder": true,
+          "registryManagedFields": [
+            "parentPartnershipId",
+            "parentPersonId",
+            "childIds",
+            "fromYear",
+            "toYear",
+            "label",
+            "notes"
+          ]
+        }
+      }
+    ],
+    "lineage": {
+      "founderPartnershipId": "marriage-haus-maerllys-founders",
+      "houseId": "house-maerllys",
+      "crestSubtitle": "",
+      "crestEmblemScale": 0.86,
+      "crestFrame": "iron",
+      "crestFrameScale": 1,
+      "timeGap": {
+        "enabled": false,
+        "years": 0,
+        "fromYear": "",
+        "toYear": "",
+        "label": ""
+      },
+      "originHouse": {
+        "enabled": false,
+        "id": "lineage-origin-house",
+        "houseId": "",
+        "name": "Ursprungshaus",
+        "subtitle": "",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "childIds": [],
+        "targetFamilyId": "",
+        "notes": "",
+        "timeGap": {
+          "enabled": false,
+          "years": 0,
+          "fromYear": "",
+          "toYear": "",
+          "label": ""
+        }
+      }
+    },
+    "presentation": {
+      "relationshipColors": {
+        "marriage": "#326c4a",
+        "engagement": "#b88b37",
+        "union": "#8e2724",
+        "affair": "#704485",
+        "concubinage": "#704485",
+        "political": "#9d7d48",
+        "forced": "#c7a974",
+        "biological": "#8e2724",
+        "adoptive": "#2f75a8",
+        "foster": "#2f75a8",
+        "step": "#7eb4d7",
+        "magical": "#704485",
+        "claimed": "#62615e"
+      }
+    },
+    "view": {
+      "focusPersonId": "haus-maerllys-gruender",
+      "orientation": "vertical",
+      "ancestorDepth": 20,
+      "descendantDepth": 20,
+      "limitGenerations": false,
+      "showSiblings": true
+    },
+    "extensions": {
+      "blankFamily": false,
+      "preparedTimeJump": true,
+      "pendingDescendantReview": false,
+      "sourceRevision": 6,
+      "registryManagedViewFields": [
+        "focusPersonId",
+        "limitGenerations"
+      ],
+      "sourceNote": "Die konkrete Maerllys-Linie reicht nur bis zu Nias Großvater Cadfan und dessen Bruder Owain. Owain und Gwenllian Ysgrif haben Geraint sowie Rhoswen, die an Madoc Tonnarth verheiratet ist; ihre Ehe und der direkte Tonnarth-Zielknoten werden in beiden Gegenakten geführt, während die drei Kinder ausschließlich im Zielhaus Tonnarth erscheinen. Geraints Ehe mit Llio Falchdyn wird als dieselbe Weltperson und dieselbe Partnerschaft auch in der neuen Falchdyn-Gegenakte geführt; mangels vorgegebener Kinder entsteht daraus in keiner Akte eine zusätzliche Nachkommenslinie. Nia ist mangels vorgegebener Altersangabe im Jahr 1740 vorläufig vierundzwanzig Jahre alt; sie sowie Elowen und Rhys bleiben unverheiratet und ohne Verlobung. Nias Mutter Bronwen Swyll und Großonkel Owains Ehe mit Gwenllian Ysgrif werden mit gemeinsamen Weltpersonen- und Partnerschafts-IDs in den jeweiligen Gegenstammbäumen geführt. Das vorgegebene Nia-Porträt wurde lokal gesichert.",
+      "registryManagedDocumentFields": [
+        "description"
+      ],
+      "houseBiographyModule": {
+        "schema": "aleria.house-module",
+        "schemaVersion": 1,
+        "pageTitle": "Haus Maerllys",
+        "housePage": true,
+        "image": "",
+        "imageWidth": 30,
+        "imageSquare": true,
+        "description": "Die Maerllys gehören zu Gwynthors alten Schneiderfamilien. Schere, Tuch und Garnrolle stehen auf ihrem Wappen für ein Handwerk, das am guten Sitz seiner Arbeit gemessen wird.",
+        "quote": "",
+        "quoteBy": "",
+        "commentSequence": [],
+        "stats": [
+          [
+            "Voller Name",
+            "Haus Maerllys"
+          ],
+          [
+            "Rang",
+            "Bürgerlich"
+          ],
+          [
+            "Stammsitz",
+            "Gwynthor"
+          ],
+          [
+            "Grafschaft",
+            "Celtigerns Wacht"
+          ],
+          [
+            "Oberhaupt",
+            ""
+          ],
+          [
+            "Erbe",
+            ""
+          ],
+          [
+            "Lehnsherr",
+            "Haus Draig"
+          ],
+          [
+            "Ursprung",
+            ""
+          ],
+          [
+            "Schutzpatronin",
+            ""
+          ]
+        ],
+        "house": {
+          "crestImage": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Maerllys.png",
+          "sideWidth": 100,
+          "connectionPortraitHeight": 80,
+          "connectionTextOffset": 0,
+          "biographyTitle": "Über das Haus",
+          "biographyText": "Die Maerllys gehören zu Gwynthors alten Schneiderfamilien. Schere, Tuch und Garnrolle stehen auf ihrem Wappen für ein Handwerk, das am guten Sitz seiner Arbeit gemessen wird.",
+          "abilitiesTitle": "Einfluss und Aufgaben",
+          "abilities": [],
+          "historyTitle": "Geschichte",
+          "historyText": "Gwenora Maerllys verband die Kunst ihrer Familie mit den Stofflieferungen des Kapitäns Matteo Veltrane. Aus ihrem gemeinsamen Krämerladen erwuchs der Raves-Zweig und später die Göttliche Eleganz. Die heutige Maerllys-Linie stammt aus dem Zweig ihres Bruders; die Namen der dazwischenliegenden Generationen sind verloren.",
+          "worksTitle": "Hausgeschichte",
+          "works": [],
+          "extraSections": [
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Werte und Stellung",
+              "text": "Die Familie hält an cenyrischen Schnitten und sorgfältiger Handarbeit fest. Ihre Verwandtschaft mit den Raves verbindet die heimische Schneiderkunst mit den Stoffen des Südens."
+            }
+          ],
+          "triviaTitle": "Besonderheiten",
+          "trivia": [],
+          "quotesTitle": "Hausmotto",
+          "quotes": [],
+          "connectionsTitle": "Verbündete und Kadettenhäuser",
+          "connections": [
+            {
+              "name": "Haus Draig",
+              "detail": "Lehnsherr",
+              "image": "../Stammbäume/assets/images/houses/Llamreis Ankunft/haus-draig.png",
+              "imageFormat": "square"
+            }
+          ],
+          "documentsTitle": "Mehr über das Haus",
+          "documents": [
+            {
+              "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Maerllys.png",
+              "title": "Haus Maerllys · vollständige Hausseite",
+              "text": "Wappen und bisher bekannte Angaben. Weitere Inhalte folgen.",
+              "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-maerllys"
+            }
+          ],
+          "footer": ""
+        }
+      }
+    }
+  }
+}

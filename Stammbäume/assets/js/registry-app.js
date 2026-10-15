@@ -1,7 +1,7 @@
 import { createGitHubFamilyRepository } from './modules/github-publication/github-family-repository.js';
 import { mergePublishedRegistryRecords } from './modules/family-registry/published-registry-merge.js';
 import { createRegistryBrowser } from './modules/family-registry/registry-browser-controller.js';
-import { listFamilyRecords } from './services/family-library.js?v=20261014-kanne-v3';
+import { listFamilyRecords } from './services/family-library.js?v=20261016-eleganz-v1';
 import { FAMILY_REGISTRY_FOLDERS } from './data/family-registry-folders.js';
 
 const records = listFamilyRecords();

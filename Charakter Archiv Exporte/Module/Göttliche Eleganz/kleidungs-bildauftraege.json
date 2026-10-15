@@ -1,0 +1,207 @@
+{
+  "module": "Göttliche Eleganz",
+  "status": "Bilder werden ausdrücklich in einer anderen Instanz erstellt",
+  "stylePreset": "fantasy-inventory-item",
+  "items": [
+    {
+      "id": "lichtleinen",
+      "category": "damen",
+      "name": "Lichtleinen",
+      "materials": "Cenyrisches Leinen · Wollborte",
+      "cut": "Hemdgewand mit schmalem Überkleid",
+      "description": "Ein helles Leinengewand mit dunkelblauem, schlicht geschnürtem Überkleid. Der cenyrische Schnitt lässt Schultern und Schritte frei; eine schmale argentische Borte gibt dem Ausschnitt seine ruhige Linie.",
+      "details": "Die sichtbaren Säume sind sauber gefasst, beanspruchte Stellen innen verstärkt. Gedacht für Frauen, die täglich gut gekleidet sein möchten, ohne eine Festgarnitur zu bezahlen.",
+      "destination": "AleriaAlmanach/assets/goettliche-eleganz/kleidung/lichtleinen.png"
+    },
+    {
+      "id": "gassenbluete",
+      "category": "damen",
+      "name": "Gassenblüte",
+      "materials": "Feines Wolltuch · Leinenfutter",
+      "cut": "Gegürtetes Tageskleid mit Wechselärmeln",
+      "description": "Moosgrünes Wolltuch und cremefarbene Ärmel bilden eine Garnitur für Markttag, Besuch und Schenkenabend. Kleine purpurne Einfassungen setzen südliche Akzente, während der weite Rock und das warme Futter cenyrisch bleiben.",
+      "details": "Die Ärmel lassen sich zum Reinigen lösen. Eine verdeckte Tasche liegt tief in der Seitennaht; der mitgelieferte Stoffgürtel trägt weder schwere Beschläge noch unnötigen Zierrat.",
+      "destination": "AleriaAlmanach/assets/goettliche-eleganz/kleidung/gassenbluete.png"
+    },
+    {
+      "id": "kaufmannstochter",
+      "category": "damen",
+      "name": "Die Kaufmannstochter",
+      "materials": "Dichtes Wolltuch · Schmale Seidenborte",
+      "cut": "Tailliertes Besuchskleid mit offenem Überrock",
+      "description": "Dunkles Rot liegt über einem elfenbeinfarbenen Untergewand. Ein schmaler, sauber gearbeiteter Ausschnitt und längere Ärmel erinnern an die Kaufmannshäuser Tirnaras; der robuste Überrock verträgt Gwynthors kühlere Tage.",
+      "details": "Der Seidenbesatz bleibt bewusst sparsam. Die Wirkung entsteht durch Sitz und Fall des guten Tuches, nicht durch die Menge glänzender Zutaten.",
+      "destination": "AleriaAlmanach/assets/goettliche-eleganz/kleidung/kaufmannstochter.png"
+    },
+    {
+      "id": "bannkreisabend",
+      "category": "damen",
+      "name": "Abend im Bannkreis",
+      "materials": "Feines Wolltuch · Seidenfutter",
+      "cut": "Langes Kleid mit kurzer Mantelschulter",
+      "description": "Ein tiefblaues Kleid mit weich fallenden Falten und einer kurzen, an den Schultern befestigten Mantelbahn. Silberfarbene Flechtborten greifen cenyrische Muster auf, die schmale Taille und die geschlitzten Ärmel stammen aus argentischer Mode.",
+      "details": "Das leichte Seidenfutter sorgt für einen ruhigen Fall, ohne das Gewand zu steif zu machen. Die Mantelbahn wird für längere Aufenthalte im warmen Saal abgenommen.",
+      "destination": "AleriaAlmanach/assets/goettliche-eleganz/kleidung/bannkreisabend.png"
+    },
+    {
+      "id": "purpurnaht",
+      "category": "damen",
+      "name": "Purpurnaht",
+      "materials": "Wollsamt · Seidenbesätze",
+      "cut": "Festkleid mit geschnürtem Mieder und weiten Ärmeln",
+      "description": "Dunkler Wollsamt fängt das Licht in breiten, ruhigen Flächen. Zwischen den Ärmelschlitzen erscheint elfenbeinfarbene Seide; eine cenyrische Flechtstickerei zieht sich schmal um Saum und Ausschnitt.",
+      "details": "Ein festes Leineninnenmieder trägt die Form und lässt sich anpassen. Die Garnitur enthält einen passenden Stoffgürtel; schwere Schmuckstücke würden ihre klare Wirkung eher stören.",
+      "destination": "AleriaAlmanach/assets/goettliche-eleganz/kleidung/purpurnaht.png"
+    },
+    {
+      "id": "tirnaras-morgen",
+      "category": "damen",
+      "name": "Tirnaras Morgen",
+      "materials": "Importierte Seide · Leineninnenmieder",
+      "cut": "Helles Seidenkleid mit blauem Überwurf",
+      "description": "Warme elfenbeinfarbene Seide trifft auf einen schmalen dunkelblauen Überwurf. Die luftige argentische Silhouette wird durch einen cenyrischen Schulterverschluss und ein tragfähiges Innenmieder an die nördliche Garderobe angepasst.",
+      "details": "Die feinen Nähte liegen weitgehend verborgen. In dieser Garnitur wird die Seide selbst zum Schmuck: glatt, leicht und bei Bewegung von einem zurückhaltenden Glanz.",
+      "destination": "AleriaAlmanach/assets/goettliche-eleganz/kleidung/tirnaras-morgen.png"
+    },
+    {
+      "id": "silberlaub",
+      "category": "damen",
+      "name": "Silberlaub",
+      "materials": "Seidensamt · Silberfaden",
+      "cut": "Dunkelgrünes Saalgewand mit Blattstickerei",
+      "description": "Dunkelgrüner Seidensamt trägt eine feine Stickerei aus echten Silberfäden. Die Blattformen erinnern an cenyrisches Laubwerk; schmale, weich geschlitzte Ärmel verleihen dem Gewand die südliche Leichtigkeit.",
+      "details": "Eine kleine Silberfassung schließt den Ausschnitt. Die Stickerei sitzt auf besonders unterlegten Partien, damit das Gewicht des Metalls den Stoff nicht verzieht.",
+      "destination": "AleriaAlmanach/assets/goettliche-eleganz/kleidung/silberlaub.png"
+    },
+    {
+      "id": "zwei-kuesten",
+      "category": "damen",
+      "name": "Fest der zwei Küsten",
+      "materials": "Seidenbrokat · Silber · Kleine Granate",
+      "cut": "Zweiteilige Festgarnitur mit kurzer Schleppe",
+      "description": "Purpurner Brokat und elfenbeinfarbene Seide erinnern an die Waren, die zwischen den beiden Küsten reisen. In das argentische Muster sind schmale cenyrische Flechtbänder eingewebt; kleine gefasste Granate markieren die Schulterschließen.",
+      "details": "Die kurze Schleppe lässt sich aufnehmen. Das Haus stimmt Brokat und Besätze einzeln aufeinander ab; Muster, Futter und Metallfassungen gehören zur vollständigen Garnitur.",
+      "destination": "AleriaAlmanach/assets/goettliche-eleganz/kleidung/zwei-kuesten.png"
+    },
+    {
+      "id": "sternendame",
+      "category": "damen",
+      "name": "Dame unter Sternen",
+      "materials": "Nachtblaue Seide · Weißgoldfaden · Bergkristall",
+      "cut": "Maßgearbeitetes Zeremonialgewand",
+      "description": "Nachtblaue Seide wird von schmalen Bahnen aus echtem Weißgoldfaden durchzogen. Kleine klare Bergkristalle setzen Lichtpunkte, ohne den weichen Fall des Gewandes zu verdecken. Die hohe Rückenlinie und der weite Saum verbinden argentische Feierlichkeit mit cenyrischer Zurückhaltung.",
+      "details": "Mehrere Anproben gehören zur Fertigung. Jede Fassung wird vor dem Aufnähen geprüft; das Innengewand trägt den größten Teil des Schmuckgewichts.",
+      "destination": "AleriaAlmanach/assets/goettliche-eleganz/kleidung/sternendame.png"
+    },
+    {
+      "id": "damen-goettliche-eleganz",
+      "category": "damen",
+      "name": "Göttliche Eleganz · Die Weiße",
+      "materials": "Elfenbeinseide · Seidenbrokat · Weißgold · Ausgewählte Granate",
+      "cut": "Einzelentwurf einer vollständigen Festgarnitur",
+      "description": "Eleonoras kostbarster Hausentwurf führt glatte Elfenbeinseide, purpurnen Brokat und feinste Weißgoldstickerei zusammen. Die Ornamente folgen dem Schnitt, statt ihn zu überdecken. Wenige ausgesuchte Granate sitzen in eigens angefertigten, glatt unterlegten Fassungen.",
+      "details": "Untergewand, Obergewand, Wechselärmel, schmaler Schmuckgürtel und abnehmbarer Festmantel werden gemeinsam entworfen. Der Preis gilt für diese festgelegte Ausführung mit ihren Besätzen; andere Steine oder umfangreichere Edelmetallarbeiten werden vor der Bestellung gesondert vereinbart.",
+      "destination": "AleriaAlmanach/assets/goettliche-eleganz/kleidung/damen-goettliche-eleganz.png"
+    },
+    {
+      "id": "heller-faden",
+      "category": "herren",
+      "name": "Heller Faden",
+      "materials": "Cenyrisches Leinen · Wollborte",
+      "cut": "Hemd, schmale Hose und schlichtes Wams",
+      "description": "Ein helles Hemd, eine dunkelblaue Hose und ein gut geschnittenes, ungefüttertes Wams bilden die preiswerteste Herrengarnitur des Hauses. Kleine argentische Knopfreihen geben ihr eine klare Linie, ohne den alltagstauglichen cenyrischen Schnitt zu verdrängen.",
+      "details": "Die Garnitur ist leicht zu pflegen und an beanspruchten Nähten verstärkt. Schmuck und Mantel sind nicht erforderlich, um darin ordentlich vorzusprechen.",
+      "destination": "AleriaAlmanach/assets/goettliche-eleganz/kleidung/heller-faden.png"
+    },
+    {
+      "id": "innenstadt",
+      "category": "herren",
+      "name": "Der Innenstadtgang",
+      "materials": "Wolltuch · Leinen",
+      "cut": "Gefüttertes Wams mit Hemd und Hose",
+      "description": "Das dunkelgrüne Wams sitzt etwas länger und fällt über die Hüfte. Ein schmaler purpurner Kragenbesatz erinnert an die südlichen Vorbilder; das helle Hemd und die robuste Hose bleiben bewusst schlicht.",
+      "details": "Das Leinenfutter ist angenehm auf der Haut und lässt sich bei späteren Änderungen gut öffnen. Gedacht für den Marktgang ebenso wie für ein ordentliches Abendessen.",
+      "destination": "AleriaAlmanach/assets/goettliche-eleganz/kleidung/innenstadt.png"
+    },
+    {
+      "id": "kontorrock",
+      "category": "herren",
+      "name": "Der Kontorrock",
+      "materials": "Dichtes Wolltuch · Schmale Seidenborte",
+      "cut": "Langes Wams mit kurzer Überrobe",
+      "description": "Eine kurze dunkelblaue Überrobe liegt über einem weinroten Wams. Die argentische Knopffront streckt die Silhouette; cenyrische Flechtborten an den Ärmelenden geben dem Gewand eine örtliche Handschrift.",
+      "details": "Die Garnitur ist für lange Tage im Kontor gedacht. Eine innenliegende Tasche nimmt einen gefalteten Brief auf; das Futter lässt an den Schultern ausreichend Bewegung.",
+      "destination": "AleriaAlmanach/assets/goettliche-eleganz/kleidung/kontorrock.png"
+    },
+    {
+      "id": "nordlicht",
+      "category": "herren",
+      "name": "Nordlicht",
+      "materials": "Feines Wolltuch · Seidenfutter",
+      "cut": "Mantelgarnitur mit standfestem Kragen",
+      "description": "Dunkles Tuch, ein heller Kragen und eine schmale Schulterbahn geben diesem Gewand einen ruhigen, kräftigen Umriss. Argentische Verschlüsse aus versilbertem Messing treffen auf cenyrische Mantelproportionen.",
+      "details": "Der Mantel ist warm genug für Gwynthors Straßen, aber leichter als ein Reisemantel. Unter ihm bleibt das passende Wams auch im Saal eine vollständige Kleidung.",
+      "destination": "AleriaAlmanach/assets/goettliche-eleganz/kleidung/nordlicht.png"
+    },
+    {
+      "id": "purpurkontor",
+      "category": "herren",
+      "name": "Purpurkontor",
+      "materials": "Wollsamt · Seide",
+      "cut": "Festwams mit weiter kurzer Schaube",
+      "description": "Purpurner Wollsamt und elfenbeinfarbene Ärmel machen diese Garnitur deutlich festlicher als einen gewöhnlichen Kontorrock. Die breite cenyrische Schulterlinie wird durch eine schmale argentische Knopfleiste geordnet.",
+      "details": "Die Schaube ist kurz genug, um beim Sitzen nicht zu stören. Eine sorgfältige Anprobe sorgt dafür, dass der Samt auch ohne schweren Schmuck seine Wirkung behält.",
+      "destination": "AleriaAlmanach/assets/goettliche-eleganz/kleidung/purpurkontor.png"
+    },
+    {
+      "id": "suedwind",
+      "category": "herren",
+      "name": "Südwind",
+      "materials": "Tirnara-Seide · Feines Wolltuch",
+      "cut": "Leichtes Seidenwams mit langer offener Robe",
+      "description": "Silbergraue Seide liegt unter einer tiefblauen offenen Robe. Das Gewand nimmt die leichten Schichten südlicher Kaufleute auf und gibt ihnen mit festem Tuch an Schulter und Rücken einen cenyrischen Halt.",
+      "details": "Schmale weiße Borten und eine einzelne gut gearbeitete Schließe genügen als Zier. Die Garnitur ist für den Sommerempfang und warme Säle gedacht.",
+      "destination": "AleriaAlmanach/assets/goettliche-eleganz/kleidung/suedwind.png"
+    },
+    {
+      "id": "silberbund",
+      "category": "herren",
+      "name": "Silberbund",
+      "materials": "Seidensamt · Silberfaden · Silberbeschläge",
+      "cut": "Saalgarnitur mit besticktem Schulterkragen",
+      "description": "Ein dunkelrotes Samtwams trägt einen breiten, aber flach anliegenden Schulterkragen. Feine Silberfäden bilden argentische Blattmuster, die an den Rändern in cenyrische Flechtlinien übergehen.",
+      "details": "Silberne Verschlüsse werden direkt für diese Garnitur angepasst. Die Unterlage hält Metall und Stickerei vom empfindlichen Seidenfutter fern.",
+      "destination": "AleriaAlmanach/assets/goettliche-eleganz/kleidung/silberbund.png"
+    },
+    {
+      "id": "zwei-haefen",
+      "category": "herren",
+      "name": "Herr der zwei Häfen",
+      "materials": "Seidenbrokat · Silber · Kleine Granate",
+      "cut": "Brokatgarnitur mit halblangem Festmantel",
+      "description": "Der silbergraue Brokat zeigt ein ruhiges Wechselspiel aus Blättern und Flechtbändern. Ein halblanger purpurner Mantel und zwei kleine gefasste Granate an der Schulter geben dem Gewand seine feierliche Farbe.",
+      "details": "Der Schnitt bleibt beweglich und trägt seine Zier hauptsächlich am Oberkörper. Der Preis umfasst Mantel, Wams, Unterkleidung und den passenden schmalen Gürtel.",
+      "destination": "AleriaAlmanach/assets/goettliche-eleganz/kleidung/zwei-haefen.png"
+    },
+    {
+      "id": "argentsalon",
+      "category": "herren",
+      "name": "Argentischer Salon",
+      "materials": "Nachtblauer Seidenbrokat · Weißgold · Bergkristall",
+      "cut": "Maßgearbeitete Zeremonialgarnitur",
+      "description": "Nachtblauer Brokat und ein heller, fein bestickter Kragen erinnern an die Kaufmannspaläste Argentums. Weißgold und klare Bergkristalle setzen wenige bewusste Lichtpunkte. Der Mantel fällt breit, ohne in eine lange Schleppe auszulaufen.",
+      "details": "Eleonora stimmt die Haltung der Schultern und die Proportionen des Kragens auf den Träger ab. Mehrere Anproben und die festgelegten Fassungen sind im Preis enthalten.",
+      "destination": "AleriaAlmanach/assets/goettliche-eleganz/kleidung/argentsalon.png"
+    },
+    {
+      "id": "herren-goettliche-eleganz",
+      "category": "herren",
+      "name": "Göttliche Eleganz · Der Dunkle",
+      "materials": "Dunkler Seidensamt · Elfenbeinbrokat · Weißgold · Ausgewählte Granate",
+      "cut": "Einzelentwurf einer vollständigen Festgarnitur",
+      "description": "Dunkler Seidensamt, heller Brokat und eine bis in die Ärmel geführte Weißgoldstickerei bilden das aufwendigste Herrenmodell des Hauses. Der argentische Aufbau bleibt klar; die großen cenyrischen Flechtmotive erscheinen erst, wenn Licht über Schulter und Mantel wandert.",
+      "details": "Hemd, Hose, Festwams, Überrobe und abnehmbarer Mantel werden gemeinsam gefertigt. Individuell angepasste Weißgoldfassungen tragen wenige ausgesuchte Granate. Zusätzliche Steine oder andere Edelmetallmengen werden vor Auftragserteilung gesondert vereinbart.",
+      "destination": "AleriaAlmanach/assets/goettliche-eleganz/kleidung/herren-goettliche-eleganz.png"
+    }
+  ]
+}

@@ -1,0 +1,302 @@
+{
+  "schemaVersion": 1,
+  "familyId": "haus-veltrane",
+  "revision": 1,
+  "updatedAt": "2026-10-15T22:51:07.134Z",
+  "family": {
+    "schema": "aleria.family-tree",
+    "schemaVersion": 1,
+    "document": {
+      "id": "haus-veltrane",
+      "title": "Haus Veltrane",
+      "motto": "",
+      "description": "Mächtige bürgerliche Kaufmanns- und Seefahrerfamilie aus dem Tirnara-Teil des Kaiserreichs Argentum. Seit Jahrhunderten bringen ihre Schiffe Seide, Stoffe, Gewürze und Olivenöl nach Lothir und Estryll. Partner des Marktes der Fortuna und Stammhaus der Raves in Gwynthor.",
+      "emblem": "assets/images/houses/Kaiserreich Argentum/Veltrane.png",
+      "houseProfile": {
+        "rankId": "commoner",
+        "seat": "",
+        "barony": "",
+        "county": "Unsortiert",
+        "kingdom": "Kaiserreich Argentum",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "",
+          "barony": "",
+          "county": "",
+          "kingdom": ""
+        }
+      }
+    },
+    "persons": [
+      {
+        "id": "haus-veltrane-gruender",
+        "worldPersonId": "person--haus-veltrane--haus-veltrane-gruender",
+        "name": "Unbekannter Gründer",
+        "title": "Gründer des Hauses",
+        "sex": "male",
+        "status": "dead",
+        "birth": "",
+        "death": "????",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-veltrane",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Gründerfamilie"
+        ],
+        "notes": "Historische Gründerfigur vor dem Überlieferungssprung; Name und genaue Lebensdaten sind noch nicht belegt.",
+        "extensions": {}
+      },
+      {
+        "id": "haus-veltrane-gruenderin",
+        "worldPersonId": "person--haus-veltrane--haus-veltrane-gruenderin",
+        "name": "Unbekannte Gründerin",
+        "title": "Gründerin des Hauses",
+        "sex": "female",
+        "status": "dead",
+        "birth": "",
+        "death": "????",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-veltrane",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [
+          "Gründerfamilie"
+        ],
+        "notes": "Historische Gründerfigur vor dem Überlieferungssprung; Name und genaue Lebensdaten sind noch nicht belegt.",
+        "extensions": {}
+      },
+      {
+        "id": "matteo-veltrane",
+        "worldPersonId": "person--haus-veltrane--matteo-veltrane",
+        "name": "Matteo Septimus Veltrane",
+        "title": "Handelskapitän · Begründer der Gwynthorer Linie",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1633",
+        "death": "1708",
+        "portrait": "../AleriaAlmanach/assets/goettliche-eleganz/portraits/matteo.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-veltrane",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Matteo kam mit Seide und Olivenöl nach Gwynthor und fand in Gwenoras Werkstatt einen Grund zu bleiben. Aus seinem kleinen Krämerladen und ihren Aufträgen wuchs ein Geschäft, das die Schiffe seines Stammhauses nie aus den Augen verlor.",
+        "extensions": {
+          "registryManagedFields": [
+            "title",
+            "notes",
+            "portrait"
+          ]
+        }
+      },
+      {
+        "id": "gwenora-maerllys",
+        "worldPersonId": "person--haus-maerllys--gwenora-maerllys",
+        "name": "Gwenora Maerllys",
+        "title": "Schneidermeisterin · Mitbegründerin des Geschäfts",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1638",
+        "death": "1714",
+        "portrait": "../AleriaAlmanach/assets/goettliche-eleganz/portraits/gwenora.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-maerllys",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Gwenora verstand mehr von Stoff als die meisten Tuchhändler. Sie nähte für Gwynthors Bürger, handelte selbstbewusst mit dem fremden Kapitän und brachte ihm bei, dass ein gutes Geschäft am Saum ebenso leicht scheitert wie auf See.",
+        "extensions": {
+          "registryManagedFields": [
+            "title",
+            "notes",
+            "portrait"
+          ]
+        }
+      }
+    ],
+    "partnerships": [
+      {
+        "id": "marriage-haus-veltrane-founders",
+        "participantIds": [
+          "haus-veltrane-gruender",
+          "haus-veltrane-gruenderin"
+        ],
+        "type": "marriage",
+        "status": "ended",
+        "start": "",
+        "end": "",
+        "certainty": "unknown",
+        "visibility": "public",
+        "notes": "Gründerehe des Hauses.",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-matteo-gwenora-raves",
+        "participantIds": [
+          "matteo-veltrane",
+          "gwenora-maerllys"
+        ],
+        "type": "marriage",
+        "status": "ended",
+        "start": "1660",
+        "end": "1708",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Matteo blieb bei Gwenora in Gwynthor; ihr Geschäft begründete die Raves-Linie.",
+        "extensions": {}
+      }
+    ],
+    "parentages": [
+      {
+        "id": "parentage-matteo-veltrane",
+        "childId": "matteo-veltrane",
+        "parentIds": [
+          "haus-veltrane-gruender",
+          "haus-veltrane-gruenderin"
+        ],
+        "partnershipId": "marriage-haus-veltrane-founders",
+        "type": "claimed",
+        "legitimacy": "unknown",
+        "certainty": "unknown",
+        "visibility": "public",
+        "notes": "Überlieferte Zugehörigkeit zum alten Stammhaus über nicht einzeln bekannte Generationen.",
+        "extensions": {
+          "timeJumpId": "gap-veltrane-to-1633"
+        }
+      }
+    ],
+    "houses": [
+      {
+        "id": "house-veltrane",
+        "name": "Haus Veltrane",
+        "motto": "",
+        "emblem": "assets/images/houses/Kaiserreich Argentum/Veltrane.png",
+        "status": "active"
+      },
+      {
+        "id": "house-maerllys",
+        "name": "Haus Maerllys",
+        "motto": "",
+        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Maerllys.png",
+        "status": "active"
+      },
+      {
+        "id": "house-raves",
+        "name": "Haus Raves",
+        "motto": "",
+        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Raves.png",
+        "status": "active"
+      }
+    ],
+    "cadetBranches": [
+      {
+        "id": "raves-offshoot-veltrane",
+        "name": "Haus Raves · Gwynthor",
+        "subtitle": "Ausgewanderte Hauslinie",
+        "linkType": "migration-offshoot",
+        "parentPartnershipId": "",
+        "parentPersonId": "matteo-veltrane",
+        "childIds": [],
+        "houseId": "house-raves",
+        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Raves.png",
+        "emblemScale": 0.86,
+        "crestFrame": "iron",
+        "frameScale": 1,
+        "founded": "1662",
+        "targetFamilyId": "haus-raves",
+        "notes": "Matteo blieb bei Gwenora in Gwynthor. Die Nachkommen werden ausschließlich in der Raves-Akte fortgeführt.",
+        "extensions": {}
+      }
+    ],
+    "timeJumps": [
+      {
+        "id": "gap-veltrane-to-1633",
+        "parentPartnershipId": "marriage-haus-veltrane-founders",
+        "sharedParentPartnershipIds": [],
+        "parentPersonId": "",
+        "childIds": [
+          "matteo-veltrane"
+        ],
+        "years": 0,
+        "fromYear": "",
+        "toYear": "1633",
+        "label": "Über Jahrhunderte gewachsene Handelsfamilie",
+        "notes": "Der Zeitsprung ist der alleinige absolute Generationentrenner unter dem Hauswappen. Bekannte Nachkommen werden später ausschließlich hinter diesem Knoten ergänzt.",
+        "extensions": {
+          "preparedPlaceholder": false
+        }
+      }
+    ],
+    "lineage": {
+      "founderPartnershipId": "marriage-haus-veltrane-founders",
+      "houseId": "house-veltrane",
+      "crestSubtitle": "",
+      "crestEmblemScale": 0.86,
+      "crestFrame": "iron",
+      "crestFrameScale": 1,
+      "timeGap": {
+        "enabled": false,
+        "years": 0,
+        "fromYear": "",
+        "toYear": "",
+        "label": ""
+      },
+      "originHouse": {
+        "enabled": false,
+        "id": "lineage-origin-house",
+        "houseId": "",
+        "name": "Ursprungshaus",
+        "subtitle": "",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "childIds": [],
+        "targetFamilyId": "",
+        "notes": "",
+        "timeGap": {
+          "enabled": false,
+          "years": 0,
+          "fromYear": "",
+          "toYear": "",
+          "label": ""
+        }
+      }
+    },
+    "presentation": {
+      "relationshipColors": {
+        "marriage": "#326c4a",
+        "engagement": "#b88b37",
+        "union": "#8e2724",
+        "affair": "#704485",
+        "concubinage": "#704485",
+        "political": "#9d7d48",
+        "forced": "#c7a974",
+        "biological": "#8e2724",
+        "adoptive": "#2f75a8",
+        "foster": "#2f75a8",
+        "step": "#7eb4d7",
+        "magical": "#704485",
+        "claimed": "#62615e"
+      }
+    },
+    "view": {
+      "focusPersonId": "haus-veltrane-gruender",
+      "orientation": "vertical",
+      "ancestorDepth": 8,
+      "descendantDepth": 8,
+      "limitGenerations": false,
+      "showSiblings": true
+    },
+    "extensions": {
+      "blankFamily": false,
+      "sourceRevision": 1,
+      "sourceNote": "Bürgerliches Stammhaus der Raves, vorläufig unter Kaiserreich Argentum / Unsortiert. Keine ungenannten Häfen, Adelstitel oder vollständige Hauptlinie erfunden. Die Zugehörigkeit Lucianos ist bekannt, seine konkrete Verwandtschaft zu Matteo bleibt offen."
+    }
+  }
+}

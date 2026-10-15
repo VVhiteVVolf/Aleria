@@ -41,8 +41,9 @@ import { FAELAORN_HOUSE_FAMILIES } from './faelaorn-house-families.js';
 import { LOWER_KNIGHT_HOUSE_FAMILIES } from './lower-knight-house-families.js?v=armel-bio-20260912';
 import { ARTUS_STREBEN_HOUSE_FAMILIES } from './artus-streben-house-families.js';
 import { GWENDOLYNS_UFER_HOUSE_FAMILIES } from './gwendolyns-ufer-house-families.js';
-import { GWYNTHOR_COMMONER_HOUSE_FAMILIES } from './gwynthor-commoner-house-families.js?v=20261014-kanne-v3';
+import { GWYNTHOR_COMMONER_HOUSE_FAMILIES } from './gwynthor-commoner-house-families.js?v=20261016-eleganz-v1';
 import { HOUSE_BRADRHITH_FAMILY } from './house-bradrhith-family.js';
+import { HOUSE_VELTRANE_FAMILY } from './eleganz-family-records.js';
 import { LLYSFAEN_COMMONER_HOUSE_FAMILIES } from './llysfaen-commoner-house-families.js';
 import { RHONWENS_TRAENEN_HOUSE_FAMILIES } from './rhonwens-traenen-house-families.js';
 import { CENYR_COUNTY_HOUSE_FAMILIES } from './cenyr-county-house-families.js';
@@ -67,7 +68,7 @@ import { MOCHDAER_ORIGIN_HOUSE_FAMILIES } from './mochdaer-house-families.js';
 import { BLODYN_HOUSE_FAMILIES } from './blodyn-house-families.js';
 import { VENNYR_NEW_HOUSE_FAMILIES } from './vennyr-house-families.js';
 import { createFolderPathFromHouseProfile } from '../domain/house-profile.js';
-import { HOUSE_BIOGRAPHY_DEFAULTS } from './house-biographies.registry.js?v=20261014-kanne-v3';
+import { HOUSE_BIOGRAPHY_DEFAULTS } from './house-biographies.registry.js?v=20261016-eleganz-v1';
 import { withHouseBiographyDefault } from '../modules/house-biography/house-biography-registry-default.js';
 import { withCwingodSourcePortraitUpgrade } from './cwingod-source-portrait-upgrade.js';
 import { withMathghamSourceCounterUpgrade } from './mathgham-source-counter-upgrade.js';
@@ -365,6 +366,7 @@ export const FAMILY_REGISTRY = Object.freeze([
     family,
     type: 'commoner'
   })),
+  familyRecord({ id: 'haus-veltrane', title: 'Haus Veltrane', family: HOUSE_VELTRANE_FAMILY, type: 'commoner' }),
   familyRecord({
     id: 'haus-bradrhith',
     title: 'Haus Bradrhith',
