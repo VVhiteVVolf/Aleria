@@ -76,8 +76,11 @@ try {
   await page.locator('#tooltip-coexistence').evaluate(element => element.remove());
   assert.equal(await overlay.locator('.herausforderung-skill-check [data-skill-icon]').count(), 32);
   await overlay.locator('.herausforderung-skill-check [data-skill-icon]').evaluateAll(images => Promise.all(images.map(image => { image.loading = 'eager'; return image.decode(); })));
-  await overlay.locator('[data-skill-id="perception"]').focus();
-  await overlay.locator('[data-skill-id="insight"]').focus();
+  await overlay.locator('[data-skill-id="insight"]').scrollIntoViewIfNeeded();
+  await page.evaluate(() => document.fonts.ready);
+  await page.evaluate(() => new Promise(requestAnimationFrame));
+  await overlay.locator('[data-skill-id="perception"]').evaluate(element => element.focus({ preventScroll: true }));
+  await overlay.locator('[data-skill-id="insight"]').evaluate(element => element.focus({ preventScroll: true }));
   assert.match(await page.locator('.skill-icon-tooltip').innerText(), /Motiv erkennen.*Bogenwert|Motiv erkennen.*Charakterbogen/);
   await page.keyboard.press('Escape');
   assert.equal(await page.locator('.skill-icon-tooltip').count(), 0);

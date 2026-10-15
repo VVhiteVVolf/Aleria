@@ -28,11 +28,11 @@ try{
  await published.locator('[data-herausforderung-action="attempt"]').click();assert.equal(await picker.locator('[data-ha-attempt-action="choose"]').count(),3);
  await picker.locator('[data-skill-id="perception"]').click();assert.equal(await page.evaluate(()=>testSelected.skillId),'perception');assert.equal(await page.locator('[data-skill-input="skillId"][value="perception"]').isChecked(),true);
  await published.getByRole('button',{name:'Herausforderung bearbeiten'}).click();assert.equal(await editor.locator('[data-herausforderung-submit-label]').innerText(),'Änderungen speichern');
- assert.equal(await editor.locator('[data-herausforderung-field="preferredSkill"]').count(),32);
+ assert.equal(await editor.locator('[data-herausforderung-field="preferredSkill"]').count(),32);assert.equal(await editor.locator('[data-herausforderung-field="difficulty"]').isDisabled(),true);assert.equal(await editor.locator('[data-herausforderung-field="insight"]').count(),0);assert.doesNotMatch(await editor.innerText(),/\+2 auf diesen Ansatz/);
  await editor.locator('[data-skill-id="insight"]').focus();assert.match(await page.locator('.skill-icon-tooltip').innerText(),/Absichten.*Mimik/);await page.keyboard.press('Escape');assert.equal(await editor.isVisible(),true);
  await editor.locator('[data-skill-id="attribute:strength"]').check();await editor.locator('[data-skill-id="save:strength"]').check();
  await editor.locator('[data-herausforderung-field="title"]').fill('Seinen nächsten Zug lesen · geprüft');
- const outcome=editor.locator('[data-ho-row="1"]');await outcome.locator('[data-ho-field="minimumTotal"]').fill('19');
+ const outcome=editor.locator('[data-ho-row="1"]');await outcome.locator('[data-ho-field="minimumTotal"]').fill('19');assert.equal(await editor.locator('[data-herausforderung-field="difficulty"]').inputValue(),'19');
  await outcome.locator('[data-hr-editor] > summary').click();await outcome.locator('[data-hr-field="copper"]').fill('2.5');await outcome.locator('[data-hr-field="name"]').fill('Vorausschau');
  await outcome.locator('[data-hr-field="usageScope"]').selectOption('attack');
  assert.equal(await outcome.locator('[data-hr-field="usageScope"]').inputValue(),'attack');
