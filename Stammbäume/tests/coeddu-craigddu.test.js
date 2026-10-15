@@ -11,8 +11,9 @@ import { auditFamilyChartLayoutPolicy } from '../assets/js/adapters/family-chart
 const records = ['haus-coeddu', 'craigddu'].map(id => FAMILY_REGISTRY.find(record => record.id === id));
 const [coeddu, craigddu] = records.map(record => assertValidFamily(record.family).family);
 
-test('Coeddu bleibt klein: unbekannter Ursprung, Zeitsprung, drei Geschwister und ein Sohn', () => {
-  assert.equal(coeddu.persons.length, 10);
+test('Coeddu behält seinen Ursprung und die Hauptlinie; Maelwens Raves-Zweig ergänzt zwei Personen', () => {
+  assert.equal(coeddu.persons.length, 12);
+  assert.equal(coeddu.persons.filter(person => !['tiberian-raves','serafina-raves'].includes(person.id)).length, 10);
   const jump = coeddu.timeJumps[0];
   assert.deepEqual(jump.childIds, ['brenric-coeddu']);
   const ancestry = coeddu.parentages.find(link => link.childId === 'brenric-coeddu');
@@ -28,7 +29,9 @@ test('Coeddu bleibt klein: unbekannter Ursprung, Zeitsprung, drei Geschwister un
 });
 
 test('Die Ehe verbindet beide Akten mit denselben Weltpersonen; Craigddu behält seine IDs', async () => {
-  assertMirroredCrossFamilyBatch(records);
+  // The additional Raves marriage is unchanged in this Coeddu–Craigddu audit.
+  // The Eleganz suite separately checks both endpoints of that new connection.
+  assertMirroredCrossFamilyBatch(records.map(record => ({ ...record, baseFamily: record.family })));
   const candidates = records.flatMap(createFamilyCandidates);
   for (const [name,id] of [['Llywelyn Coeddu','person--craigddu--person-d189ca4a'],['Catrin Craigddu','person--craigddu--person-bc7dd4e8']]) {
     const matches = candidates.filter(person => person.displayName === name);
