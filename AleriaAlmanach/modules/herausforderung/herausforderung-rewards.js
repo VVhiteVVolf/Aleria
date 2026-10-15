@@ -1,10 +1,11 @@
+import { validateConditionUsage } from '../combat/combat-condition-usage.js?v=20261015-graded-challenges-v1';
 import { createOwnedItem } from '../item-register/item-register-model.js';
 import { moneyState, moneyTotal, toMinor, formatMoney, formatCopper, localizedNumber } from '../item-register/item-register-money.js';
 import { synchronizeEquipmentFromInventory } from '../character-equipment/character-equipment-sync.js';
 import { attachInventoryEquipment } from '../character-equipment/character-equipment-registration.js';
-import { createManualCombatCondition, buildCombatStatusChange, formatStatusDuration } from '../combat-status/combat-status-model.js';
+import { createManualCombatCondition, buildCombatStatusChange, formatStatusDuration } from '../combat-status/combat-status-model.js?v=20261015-graded-challenges-v1';
 import { COMBAT_STATUS_PRESETS, STATUS_MODIFIERS, STATUS_ROLL_MODES } from '../combat-status/combat-status-catalog.js';
-import { normalizeChallengeCombatEffects, validateChallengeCombatEffects, normalizeChallengeRecipient, formatChallengeCombatResult } from './herausforderung-combat-effects.js';
+import { normalizeChallengeCombatEffects, validateChallengeCombatEffects, normalizeChallengeRecipient, formatChallengeCombatResult } from './herausforderung-combat-effects.js?v=20261015-graded-challenges-v1';
 
 export const MAX_REWARD_ITEMS = 8;
 export const MAX_REWARD_EFFECTS = 4;
@@ -23,7 +24,7 @@ export function normalizeHerausforderungBenefits(value = {}) {
       effectId: clean(effect?.effectId, 40), presetId: clean(effect?.presetId, 80), name: clean(effect?.name, 160),
       description: clean(effect?.description, 1600), kind: ['buff', 'debuff', 'condition'].includes(effect?.kind) ? effect.kind : 'buff',
       durationKind: clean(effect?.durationKind || 'actor-comments', 40), durationAmount: Number(effect?.durationAmount ?? 2),
-      mechanics: { ...(effect?.mechanics || {}) }, ...(effect?.targetActorId ? normalizeChallengeRecipient(effect) : {})
+      mechanics: { ...(effect?.mechanics || {}) }, ...(effect?.usage ? { usage: { scope: effect.usage.scope, ...(effect.usage.actorId ? { actorId: effect.usage.actorId } : {}) } } : {}), ...(effect?.targetActorId ? normalizeChallengeRecipient(effect) : {})
     }))
   };
 }
@@ -34,6 +35,8 @@ export function validateHerausforderungBenefits(value = {}, { effectsOnly = fals
   if (value?.effects != null && !Array.isArray(value.effects)) return 'Die Effektliste ist ungültig.';
   for (const effect of value?.effects || []) {
     if (!effect || typeof effect !== 'object' || Array.isArray(effect)) return 'Jeder Zustand muss als gültiges Objekt vorliegen.';
+    const usageError = validateConditionUsage(effect.usage, effect.mechanics);
+    if (usageError) return usageError;
     if (effect.kind != null && !['buff', 'debuff', 'condition'].includes(effect.kind)) return 'Die Zustandsart ist ungültig.';
     if (effect.targetActorId != null && (typeof effect.targetActorId !== 'string' || effect.targetActorId.length > 240)) return 'Der Zustandsempfänger ist ungültig.';
   }
@@ -66,11 +69,13 @@ export function validateHerausforderungBenefits(value = {}, { effectsOnly = fals
 }
 
 export function hasHerausforderungBenefits(approach) {
-  return [approach?.rewards, approach?.partialEffects, approach?.failureEffects].some(value =>
+  return [approach?.rewards, approach?.partialEffects, approach?.failureEffects, ...(approach?.outcomeTable || []).map(row => row.benefits)].some(value =>
     normalizeHerausforderungBenefits(value).copper > 0 || value?.items?.length || value?.effects?.length || value?.combatEffects?.length);
 }
 
 export function benefitsForTier(approach, tier) {
+  const row = approach?.outcomeTable?.find(row => row.id === tier);
+  if (row) return row.benefits;
   if (['erfolg', 'kritischer-erfolg'].includes(tier)) return approach.rewards;
   return tier === 'knapp' ? approach.partialEffects : approach.failureEffects;
 }

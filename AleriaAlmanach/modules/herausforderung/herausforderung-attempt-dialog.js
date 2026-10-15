@@ -1,5 +1,5 @@
-import { getChallengeAttemptChoices } from '../skill-checks/skill-challenge-attempt.js';
-import { getChallengeAffinityModifier } from '../skill-checks/skill-check-model.js?v=20260928-equipment-art-v4';
+import { getChallengeAttemptChoices } from '../skill-checks/skill-challenge-attempt.js?v=20261015-graded-challenges-v1';
+import { getChallengeAffinityModifier } from '../skill-checks/skill-check-model.js?v=20261015-graded-challenges-v1';
 import { renderSkillIcon } from '../skill-checks/skill-icon-view.js';
 
 const escape = value => String(value ?? '').replace(/[&<>"']/g, character => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[character]));

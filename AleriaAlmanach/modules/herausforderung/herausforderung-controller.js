@@ -1,3 +1,4 @@
+import { mountChallengeOutcomesEditor } from './herausforderung-outcomes-ui.js?v=20261015-graded-challenges-v1';
 import {
   collectHerausforderungApproaches,
   isHerausforderungComment,
@@ -5,8 +6,8 @@ import {
   getHerausforderungValidationIssues,
   normalizeHerausforderungApproach,
   normalizeHerausforderungEvent
-} from './herausforderung-model.js?v=20261015-challenge-scene-image-v1';
-import { collectHerausforderungProgress } from './herausforderung-progress.js?v=20261014-herausforderung-combat-v1';
+} from './herausforderung-model.js?v=20261015-graded-challenges-v1';
+import { collectHerausforderungProgress } from './herausforderung-progress.js?v=20261015-graded-challenges-v1';
 import {
   ensureHerausforderungDialog,
   renderApproachRows,
@@ -15,16 +16,16 @@ import {
   setHerausforderungSubmitting,
   updateHerausforderungDraft,
   showHerausforderungValidation
-} from './herausforderung-ui.js?v=20261015-challenge-scene-image-v1';
+} from './herausforderung-ui.js?v=20261015-graded-challenges-v1';
 import { bindSkillIconTooltips } from '../skill-checks/skill-icon-view.js';
-import { mountHerausforderungRewardEditor } from './herausforderung-rewards-ui.js?v=20261014-herausforderung-combat-v1';
-import { createChallengeCombatContext, normalizeChallengeAudience, getChallengeCombatBindingError, challengeRequiresCombat } from './herausforderung-combat-context.js';
+import { mountHerausforderungRewardEditor } from './herausforderung-rewards-ui.js?v=20261015-graded-challenges-v1';
+import { createChallengeCombatContext, normalizeChallengeAudience, getChallengeCombatBindingError, challengeRequiresCombat } from './herausforderung-combat-context.js?v=20261015-graded-challenges-v1';
 import { mountChallengeAudience, refreshChallengeAudience } from './herausforderung-audience-ui.js';
 import { resolveCombatProfile } from '../combat/combat-profile-resolver.js';
 import { deriveCombatStateFromComments, overlayCombatHitPointState } from '../combat/combat-state-model.js';
 import { getActiveCombatEncounter } from '../combat/combat-encounter-model.js';
-import { mountHerausforderungExchange } from './herausforderung-exchange-ui.js?v=20261015-challenge-scene-image-v1';
-import { createHerausforderungAttemptPicker } from './herausforderung-attempt-dialog.js';
+import { mountHerausforderungExchange } from './herausforderung-exchange-ui.js?v=20261015-graded-challenges-v1';
+import { createHerausforderungAttemptPicker } from './herausforderung-attempt-dialog.js?v=20261015-graded-challenges-v1';
 import { bindChallengeSceneImageEvents, readChallengeSceneImage, setChallengeSceneImage } from './herausforderung-scene-image-ui.js';
 
 bindSkillIconTooltips(document);
@@ -52,6 +53,7 @@ function renderDialog(activeIndex = 0) {
     getCombatRequired: () => challengeRequiresCombat(draftApproaches),
     getCombatBound: () => draftCombatBound || challengeRequiresCombat(draftApproaches), onChange: value => { if (typeof value === 'boolean') draftCombatBound = value; updateHerausforderungDraft(buildDraft(), { actors: globalThis.getAvailableCommentCharacters?.() || [] }); } });
   renderApproachRows(draftApproaches, activeIndex);
+  mountChallengeOutcomesEditor(document.getElementById('herausforderung-overlay'), { approaches: draftApproaches, onChange: () => updateHerausforderungDraft(buildDraft(), { actors: globalThis.getAvailableCommentCharacters?.() || [] }) });
   mountHerausforderungRewardEditor(document.getElementById('herausforderung-overlay'), { approaches: draftApproaches,
     getCombatContext: () => dialogCombatContext, onChange: () => { refreshChallengeAudience(document.getElementById('herausforderung-overlay')); updateHerausforderungDraft(buildDraft(), { actors: globalThis.getAvailableCommentCharacters?.() || [] }); } });
   mountHerausforderungExchange(document.getElementById('herausforderung-overlay'), { getDraft: buildDraft, getCombatContext: () => dialogCombatContext, onStatus: setHerausforderungStatus, onImport: importDraft });
@@ -216,7 +218,8 @@ function getAvailableAttemptTarget(request) {
   const target = collectHerausforderungApproaches(comments).find(approach => approach.commentId === request.commentId && approach.approachId === request.approachId);
   const expired = target && getChallengeCombatBindingError(target, getActiveCombatEncounter(comments));
   if (expired) { globalThis.showAppStatus?.(expired, 'error'); return null; }
-  if (!target || collectHerausforderungProgress(comments).get(target.id)?.solved) {
+  const progress = target && collectHerausforderungProgress(comments).get(target.id);
+  if (!target || progress?.solved || (target.attemptLimit && progress?.attempts >= target.attemptLimit)) {
     globalThis.showAppStatus?.('Dieser Ansatz ist nicht mehr verfügbar.', 'error');
     return null;
   }

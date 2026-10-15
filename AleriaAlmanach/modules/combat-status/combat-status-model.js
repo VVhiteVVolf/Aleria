@@ -1,3 +1,4 @@
+import { createConditionUsage } from '../combat/combat-condition-usage.js?v=20261015-graded-challenges-v1';
 import { normalizeRuntimeCondition } from '../combat/combat-condition-duration.js?v=20260906-character-vitality-v1';
 import { COMBAT_STATUS_PRESETS, STATUS_MODIFIERS, STATUS_ROLL_MODES } from './combat-status-catalog.js?v=20260906-effect-rolls-v1';
 
@@ -33,12 +34,14 @@ export function createManualCombatCondition(value = {}, { id, encounterId = '' }
     id: clean(id, 180), name, active: true, source: clean(value.source || 'Manuell vergeben'),
     presetId: preset?.id || '', statusKind: ['buff', 'debuff', 'condition'].includes(value.kind) ? value.kind : preset?.kind || 'condition',
     description: clean(value.description || preset?.description, 1600), mechanics, manual: true,
+    ...createConditionUsage(value.usage, mechanics),
     ...(preset?.blockedResource ? { blockedResource: preset.blockedResource } : {}),
     durationModel: { kind, amount, encounterId: kind === 'combat' ? encounterId : '' }
   });
 }
 
 export function formatStatusDuration(condition = {}) {
+  if (condition.usage) return condition.usage.scope === 'attack' ? 'Nächster passender Angriff' : 'Nächste passende Kampfaktion';
   if (condition.berserk) return `Bis Kampfende / ruhiger eigener Post · Rettung ${Number(condition.berserk.survivalCharges) > 0 ? '1/1' : '0/1'}`;
   const duration = normalizeRuntimeCondition(condition).durationModel;
   if (duration.kind === 'actor-comments') return duration.remainingActorComments === 1 ? '1 eigener Beitrag' : `${duration.remainingActorComments} eigene Beiträge`;

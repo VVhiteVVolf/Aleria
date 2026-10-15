@@ -1,10 +1,11 @@
-import { getSkillDefinition } from '../skill-checks/skill-check-model.js?v=20260928-equipment-art-v4';
-import { normalizeHerausforderungBenefits, validateHerausforderungBenefits } from './herausforderung-rewards.js?v=20261014-herausforderung-combat-v1';
-import { normalizeChallengeAudience, validateChallengeAudience } from './herausforderung-combat-context.js';
+import { normalizeChallengeOutcomes, validateChallengeOutcomes, getOutcomeSuccessDifficulty } from './herausforderung-outcomes.js?v=20261015-graded-challenges-v1';
+import { getSkillDefinition } from '../skill-checks/skill-check-model.js?v=20261015-graded-challenges-v1';
+import { normalizeHerausforderungBenefits, validateHerausforderungBenefits } from './herausforderung-rewards.js?v=20261015-graded-challenges-v1';
+import { normalizeChallengeAudience, validateChallengeAudience } from './herausforderung-combat-context.js?v=20261015-graded-challenges-v1';
 import { normalizeChallengeSceneImage, validateChallengeSceneImage } from './herausforderung-scene-image-model.js';
 
 export const HERAUSFORDERUNG_EVENT_KIND = 'herausforderung-event';
-export const HERAUSFORDERUNG_SCHEMA_VERSION = 5;
+export const HERAUSFORDERUNG_SCHEMA_VERSION = 6;
 export const MIN_HERAUSFORDERUNG_APPROACHES = 1;
 export const MAX_HERAUSFORDERUNG_APPROACHES = 6;
 export const HERAUSFORDERUNG_NARROW_FAILURE_MARGIN = 3;
@@ -27,9 +28,12 @@ export function getHerausforderungValidationIssues(event = {}) {
   approaches.forEach((approach, index) => {
     if (!Array.isArray(approach?.preferredSkills) || !approach.preferredSkills.some(skill => String(skill || '').trim())) issues.push({ index, field: 'preferredSkill', message: `Ansatz ${index + 1}: Mindestens eine passende Fertigkeit wählen.` });
     else if (approach.preferredSkills.some(skill => !getSkillDefinition(skill))) issues.push({ index, field: 'preferredSkill', message: `Ansatz ${index + 1}: Eine gültige Fertigkeit wählen.` });
-    if (!String(approach?.insight || '').trim()) issues.push({ index, field: 'insight', message: `Ansatz ${index + 1}: Eine verdeckte Erkenntnis eintragen.` });
+    if (!approach?.outcomeTable?.length && !String(approach?.insight || '').trim()) issues.push({ index, field: 'insight', message: `Ansatz ${index + 1}: Eine verdeckte Erkenntnis eintragen.` });
     const difficulty = Number(approach?.difficulty ?? 10);
     if (!Number.isInteger(difficulty) || difficulty < 1 || difficulty > 40) issues.push({ index, field: 'difficulty', message: `Ansatz ${index + 1}: Schwierigkeit als ganze Zahl von 1 bis 40 eintragen.` });
+    const outcomeError = validateChallengeOutcomes(approach?.outcomeTable);
+    if (outcomeError) issues.push({ index, field: 'outcomeTable', message: outcomeError });
+    if (approach?.attemptLimit != null && approach.attemptLimit !== 1) issues.push({ index, field: 'attemptLimit', message: 'attemptLimit unterstützt genau einen Versuch pro Ansatz.' });
     const id = text(approach?.approachId, 40);
     if (id && ids.has(id)) issues.push({ index, field: 'label', message: 'Jeder Ansatz benötigt eine eigene ID.' });
     if (id) ids.add(id);
@@ -66,13 +70,15 @@ export function normalizeHerausforderungApproach(value = {}, index = 0) {
     approachId: text(source.approachId, 40) || makeApproachId(),
     label: text(source.label, 160) || `Ansatz ${index + 1}`,
     preferredSkills,
-    difficulty: integer(source.difficulty, 10, 1, 40),
+    difficulty: integer(getOutcomeSuccessDifficulty(source.outcomeTable, source.difficulty), 10, 1, 40),
     insight: text(source.insight, 2000),
     partialHint: text(source.partialHint, 2000),
     failureConsequence: text(source.failureConsequence, 2000),
     rewards: normalizeHerausforderungBenefits(source.rewards),
     partialEffects: normalizeHerausforderungBenefits(source.partialEffects),
-    failureEffects: normalizeHerausforderungBenefits(source.failureEffects)
+    failureEffects: normalizeHerausforderungBenefits(source.failureEffects),
+    ...(source.outcomeTable?.length ? { outcomeTable: normalizeChallengeOutcomes(source.outcomeTable) } : {}),
+    ...(source.attemptLimit === 1 ? { attemptLimit: 1 } : {})
   };
 }
 
@@ -149,6 +155,8 @@ export function collectHerausforderungApproaches(comments = []) {
         rewards: approach.rewards,
         partialEffects: approach.partialEffects,
         failureEffects: approach.failureEffects,
+        ...(approach.outcomeTable ? { outcomeTable: approach.outcomeTable } : {}),
+        ...(approach.attemptLimit ? { attemptLimit: approach.attemptLimit } : {}),
         authorId: '',
         authorKey,
         authorName: text(event.title, 180),

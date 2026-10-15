@@ -79,6 +79,7 @@ function enrichRetrieval(retrieval = {}, facts = {}) {
 
 export async function narrateSkillResolution(facts = {}) {
   const fallback = fallbackSkillNarration(facts);
+  if (facts.herausforderungLabel && facts.revealedText) return { text: cleanNarration(facts.revealedText), source: 'authored-challenge' };
   if (!globalThis.AleriaGptClient?.isConfigured?.() || !globalThis.AleriaGptRetrieval?.retrieve) {
     return { text: fallback, source: 'deterministic', reason: 'aleria-gpt-unavailable' };
   }

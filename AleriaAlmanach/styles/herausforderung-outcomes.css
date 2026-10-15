@@ -1,0 +1,6 @@
+.herausforderung-outcomes { border: 1px solid var(--border-color, #b99a62); padding: 1rem; }
+.herausforderung-outcomes fieldset { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: .75rem; margin-block: 1rem; padding: 1rem; }
+.herausforderung-outcomes label { display: grid; gap: .35rem; }
+.herausforderung-outcomes textarea { min-height: 6rem; }
+.herausforderung-outcomes p { grid-column: 1 / -1; }
+.herausforderung-outcome-note { color: inherit; opacity: .9; }

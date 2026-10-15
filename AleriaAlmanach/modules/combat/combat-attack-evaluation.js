@@ -55,11 +55,11 @@ export function getCombatAttackNumbers(actor, target, context) {
       : Number(actor.attackModifier || 0)
         + Number(targetAuraOnActor.attack || 0)
         + (['spell', 'prayer', 'song'].includes(actionKind) ? Number(targetAuraOnActor.spellAttack || 0) : 0)
-        + preRollEffects.attackModifier;
+        + preRollEffects.attackModifier + Number(context.conditionUsage?.attack || 0);
     const targetDefense = savingThrowMode
       ? Number(actor.actionSpellSaveDc || actor.spellSaveDc || 10) + Number(targetAuraOnActor.spellSaveDc || 0) + preRollEffects.spellSaveDcModifier
       : Number(target.totalDefense) + Number(actor.selectedAction?.targetDefenseModifier || 0)
-        + Number(actorAuraOnTarget.armorClass || 0) + preRollEffects.defenseModifier;
+        + Number(actorAuraOnTarget.armorClass || 0) + preRollEffects.defenseModifier + Number(context.conditionUsage?.armorClass || 0);
   return { attackModifier, targetDefense };
 }
 

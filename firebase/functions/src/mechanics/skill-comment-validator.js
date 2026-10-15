@@ -1,3 +1,4 @@
+import { applyChallengeOutcome } from '../generated/herausforderung/herausforderung-outcomes.js';
 import { createHash, randomUUID } from 'node:crypto';
 import { HttpsError } from 'firebase-functions/v2/https';
 import { getPersistentCombatResources, recoverDailyCombatResources } from '../generated/combat/combat-action-economy.js';
@@ -309,6 +310,16 @@ export async function validateSkillCommentSegments({
         ? challenge.insight
         : (tier === 'knapp' ? challenge.partialHint : challenge.failureConsequence);
       if (revealText) resolution.revealedText = clean(revealText, 5000);
+      applyChallengeOutcome(challenge, resolution);
+      if (challenge.attemptLimit === 1) {
+        const attemptId = 'attempt-' + herausforderungClaimId(challenge);
+        const ref = database.collection('herausforderung_attempt_claims').doc(attemptId);
+        const snapshot = await transaction.get(ref);
+        const priorAttempt = history.some(comment => (comment.commentSegments || []).some(segment => segment.skillResolution?.targetChallengeId === challenge.id));
+        if (snapshot.exists || priorAttempt || locallyClaimed.has(attemptId)) fail('already-exists', 'Dieser Lösungsweg wurde bereits versucht.');
+        locallyClaimed.add(attemptId);
+        pendingClaims.push({ ref, challenge, resolution });
+      }
     }
 
     (Array.isArray(resolution.ruleResourceSnapshots) ? resolution.ruleResourceSnapshots : []).forEach(snapshot => {

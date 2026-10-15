@@ -1,10 +1,11 @@
+import { getConditionUsageBenefits, consumeConditionUsage } from './combat-condition-usage.js?v=20261015-graded-challenges-v1';
 import { resolveTechniqueSecondarySave } from './combat-technique-secondary-save.js';
-import { resolveFollowUpAttacks } from './combat-follow-up-resolution.js?v=20260928-equipment-art-v4';
+import { resolveFollowUpAttacks } from './combat-follow-up-resolution.js?v=20261015-graded-challenges-v1';
 import { attachPreparedCounter } from './combat-counter-resolution.js';
 import { attachTechniqueDisarm } from './combat-technique-disarm.js';
 import { releaseCriticalTemporaryOwnership } from '../combat-critical/combat-critical-lifecycle.js';
 import { getActionPaymentCosts } from './combat-action-economy.js';
-import { getCombatAttackNumbers, evaluateCombatAttackRoll, evaluateSavingThrowRoll, applyOutcome } from './combat-attack-evaluation.js?v=20260928-equipment-art-v4';
+import { getCombatAttackNumbers, evaluateCombatAttackRoll, evaluateSavingThrowRoll, applyOutcome } from './combat-attack-evaluation.js?v=20261015-graded-challenges-v1';
 import { validateSpellCatalogTarget } from '../spell-catalog/spell-catalog-targets.js';
 import { buildAttackNotation, buildDamageNotation, combineDamageFormulas, evaluateAttackRoll } from './rules/combat-mvp-rules.js?v=20260905-party-combat-v1';
 import {
@@ -286,9 +287,10 @@ export function getCombatRollContext(actor, target = {}, options = {}) {
   }).concat(buildSupportAuraApplications(ruleSources, actionKind));
   markCombatRuleApplications(preRollApplications, usedRuleFrequencyKeys);
   const preRollEffects = mergeCombatRuleEffects(preRollApplications);
+  const conditionUsage = getConditionUsageBenefits(actor, target, { enabled: !savingThrowMode && !automaticMode, startedAction: options.startedAction });
   const profileRollModes = [requestedRollMode, ...(savingThrowMode
     ? getSavingThrowRollModes(target, actor.actionSaveAttribute)
-    : getActiveRollModes(actor))];
+    : getActiveRollModes(actor)), ...conditionUsage.rollModes];
   const profileRollMode = mergeRollModes(profileRollModes);
   const auraRollMode = savingThrowMode ? actorAuraOnTarget.attackRollMode : targetAuraOnActor.attackRollMode;
   const safeRollMode = mergeRestrictedRollModes(options.counterAttack ? ['advantage']
@@ -296,7 +298,7 @@ export function getCombatRollContext(actor, target = {}, options = {}) {
   return { relationship, distanceMeters, auraContext, actorAuraOnTarget, targetAuraOnActor,
     resolutionMode, savingThrowMode, automaticMode, ruleSources, usedRuleFrequencyKeys, rulePeriods,
     actionKind, profileActionId, ruleProfileState, preRollApplications, preRollEffects,
-    profileRollModes, profileRollMode, auraRollMode, safeRollMode, ruleCache };
+    profileRollModes, profileRollMode, auraRollMode, safeRollMode, ruleCache, conditionUsage };
 }
 
 
@@ -973,6 +975,17 @@ export class CombatResolutionService {
       },
       resolvedAt: new Date().toISOString()
     };
+    if (rollContext.conditionUsage.actorIds.length) {
+      const before = baseResolution.actorConditionSnapshot?.before || actor.temporaryConditions || [];
+      const after = baseResolution.actorConditionSnapshot?.after || actorConditions;
+      baseResolution.actorConditionSnapshot = { before, after: consumeConditionUsage(after, rollContext.conditionUsage.actorIds) };
+    }
+    if (rollContext.conditionUsage.targetIds.length) {
+      const before = baseResolution.targetConditionSnapshot?.before || target.temporaryConditions || [];
+      const after = baseResolution.targetConditionSnapshot?.after || targetConditions;
+      baseResolution.targetConditionSnapshot = { before, after: consumeConditionUsage(after, rollContext.conditionUsage.targetIds) };
+    }
+    if (rollContext.conditionUsage.actorIds.length || rollContext.conditionUsage.targetIds.length) baseResolution.conditionUsage = { actorConditionIds: rollContext.conditionUsage.actorIds, targetConditionIds: rollContext.conditionUsage.targetIds };
     attachTechniqueDisarm(baseResolution, target);
     return attachPreparedCounter(baseResolution, actor, target, options, (counterActor, counterTarget) => {
       const dice = this.dice.forCounter?.(0) || this.dice;

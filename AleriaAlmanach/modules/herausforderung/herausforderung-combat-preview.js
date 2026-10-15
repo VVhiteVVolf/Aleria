@@ -1,8 +1,9 @@
-import { applyChallengeCombatBenefits } from './herausforderung-combat-effects.js';
-import { getChallengeCombatBindingError } from './herausforderung-combat-context.js';
+import { applyChallengeOutcome } from './herausforderung-outcomes.js?v=20261015-graded-challenges-v1';
+import { applyChallengeCombatBenefits } from './herausforderung-combat-effects.js?v=20261015-graded-challenges-v1';
+import { getChallengeCombatBindingError } from './herausforderung-combat-context.js?v=20261015-graded-challenges-v1';
 import { getActiveCombatEncounter } from '../combat/combat-encounter-model.js';
-import { classifyHerausforderungOutcome } from './herausforderung-model.js';
-import { benefitsForTier } from './herausforderung-rewards.js';
+import { classifyHerausforderungOutcome } from './herausforderung-model.js?v=20261015-graded-challenges-v1';
+import { benefitsForTier } from './herausforderung-rewards.js?v=20261015-graded-challenges-v1';
 import { sceneDiceService } from '../scene-dice/dice-service.js?v=20261013-performance-v1';
 import { buildDamageNotation } from '../combat/rules/combat-mvp-rules.js';
 import { CombatDiceAdapter } from '../combat/combat-dice-adapter.js';
@@ -18,7 +19,8 @@ export async function previewChallengeCombatBenefits({ challenge, resolution, ac
   const encounter = getActiveCombatEncounter(comments);
   const error = getChallengeCombatBindingError(challenge, encounter, resolution.actorId);
   if (error) throw Error(error);
-  const tier = classifyHerausforderungOutcome(resolution), key = `${challenge.id}:${resolution.actorId}:${tier}`;
+  applyChallengeOutcome(challenge, resolution);
+  const tier = resolution.herausforderungTier || classifyHerausforderungOutcome(resolution), key = `${challenge.id}:${resolution.actorId}:${tier}`;
   resolution.herausforderungTier = tier;
   if (grantedKeys.has(key)) return resolution;
   const benefits = benefitsForTier(challenge, tier);

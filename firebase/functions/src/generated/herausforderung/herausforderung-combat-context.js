@@ -1,3 +1,4 @@
+import { challengeBenefitBundles } from './herausforderung-outcomes.js?v=20261015-graded-challenges-v1';
 import { getActiveCombatEncounter } from '../combat/combat-encounter-model.js';
 
 export function getChallengeCombatParticipants(encounter) {
@@ -5,13 +6,13 @@ export function getChallengeCombatParticipants(encounter) {
 }
 
 export function challengeCombatTargetIds(approach = {}) {
-  return [...new Set(['rewards', 'partialEffects', 'failureEffects'].flatMap(field =>
-    [...(approach[field]?.effects || []), ...(approach[field]?.combatEffects || [])].map(effect => effect.targetActorId).filter(Boolean)))];
+  return [...new Set(challengeBenefitBundles(approach).flatMap(bundle =>
+    [...(bundle.effects || []), ...(bundle.combatEffects || [])].flatMap(effect => [effect.targetActorId, effect.usage?.actorId]).filter(Boolean)))];
 }
 
 export function challengeRequiresCombat(approaches = []) {
   return approaches.some(approach => challengeCombatTargetIds(approach).length ||
-    ['rewards', 'partialEffects', 'failureEffects'].some(field => approach[field]?.effects?.some(effect => effect.durationKind === 'combat')));
+    challengeBenefitBundles(approach).some(bundle => bundle.effects?.some(effect => effect.durationKind === 'combat')));
 }
 
 export function getChallengeCombatBindingError(challenge, encounter, actorId = '') {

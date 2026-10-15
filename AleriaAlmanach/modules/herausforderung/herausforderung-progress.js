@@ -1,4 +1,4 @@
-import { getHerausforderungApproachTargetId } from './herausforderung-model.js?v=20261014-herausforderung-combat-v1';
+import { getHerausforderungApproachTargetId } from './herausforderung-model.js?v=20261015-graded-challenges-v1';
 
 export const HERAUSFORDERUNG_TIER_LABELS = Object.freeze({
   'kritischer-erfolg': 'Kritischer Erfolg', erfolg: 'Erfolg', knapp: 'Teilhinweis', deutlich: 'Gescheitert'
@@ -12,11 +12,11 @@ export function collectHerausforderungProgress(comments = []) {
       const id = String(resolution?.targetChallengeId || '');
       if (!id.startsWith('herausforderung:')) continue;
       const previous = progress.get(id) || { attempts: 0, solved: false };
-      const solved = ['success', 'critical-success'].includes(resolution.outcome);
+      const solved = resolution.herausforderungSolved ?? ['success', 'critical-success'].includes(resolution.outcome);
       // A later failed attempt must never replace an already published insight.
       progress.set(id, {
         ...previous,
-        ...(!previous.solved ? { tier: resolution.herausforderungTier || (solved ? 'erfolg' : 'deutlich'), actorName: resolution.actorName || '', revealedText: resolution.revealedText || '', reward: resolution.herausforderungReward || null } : {}),
+        ...(!previous.solved ? { tier: resolution.herausforderungTier || (solved ? 'erfolg' : 'deutlich'), ...(resolution.herausforderungLabel ? { label: resolution.herausforderungLabel } : {}), actorName: resolution.actorName || '', revealedText: resolution.revealedText || '', reward: resolution.herausforderungReward || null } : {}),
         attempts: previous.attempts + 1,
         solved: previous.solved || solved
       });

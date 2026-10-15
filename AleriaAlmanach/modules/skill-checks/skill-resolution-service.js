@@ -5,7 +5,7 @@ import {
   isSuccessfulSkillOutcome,
   normalizeSkillCheckSettings,
   resolveSkillModifier
-} from './skill-check-model.js?v=20260928-equipment-art-v4';
+} from './skill-check-model.js?v=20261015-graded-challenges-v1';
 import { getAuraTargetMechanics, getActiveRollModes } from '../combat/combat-profile-model.js?v=20260928-equipment-art-v4';
 import { mergeRollModes } from '../combat/combat-roll-mode.js?v=20260906-effect-rolls-v1';
 import {

@@ -38,22 +38,14 @@ function clonePayload(value) {
   }
 }
 
-export const commitSkillComment = onCall({
-  region: 'europe-west1',
-  maxInstances: 20,
-  concurrency: 30,
-  enforceAppCheck: false,
-  timeoutSeconds: 30
-}, async request => {
+export async function commitSkillCommentOperation(request, { database = getFirestore(), now = Date.now() } = {}) {
   if (!request.auth) fail('unauthenticated', 'Eine Firebase-Anmeldung ist erforderlich.');
   const payload = clonePayload(request.data);
   const entryId = clean(payload.entryId, 240);
   if (!entryId || !clean(payload.text) || !skillSegments(payload.metadata).length) {
     fail('invalid-argument', 'Kommentarbereich, Text und Fertigkeitswurf sind erforderlich.');
   }
-  const database = getFirestore();
   const ref = database.collection('comments').doc();
-  const now = Date.now();
   let document;
   let profileUpdates = [];
   let responseSegments = [];
@@ -137,4 +129,6 @@ export const commitSkillComment = onCall({
     profileUpdates,
     mechanics: { commentSegments: responseSegments, ...(criticalLifecycle.length ? { criticalLifecycle } : {}) }
   };
-});
+}
+
+export const commitSkillComment = onCall({ region: 'europe-west1', maxInstances: 20, concurrency: 30, enforceAppCheck: false, timeoutSeconds: 30 }, request => commitSkillCommentOperation(request));

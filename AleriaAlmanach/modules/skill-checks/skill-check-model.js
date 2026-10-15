@@ -10,6 +10,7 @@ export const SKILL_DEFINITIONS = Object.freeze([
   { id: 'intimidation', label: 'Einschüchtern', aliases: ['einschüchtern', 'einschuechtern'], attributeKey: 'charisma' },
   { id: 'deception', label: 'Täuschen', aliases: ['täuschen', 'taeuschen'], attributeKey: 'charisma' },
   { id: 'performance', label: 'Auftreten', aliases: ['auftreten', 'schauspiel'], attributeKey: 'charisma' },
+  { id: 'perception', label: 'Wahrnehmung', aliases: ['wahrnehmung'], attributeKey: 'wisdom' },
   { id: 'insight', label: 'Motiv erkennen', aliases: ['motiv erkennen', 'motiverkennen'], attributeKey: 'wisdom' },
   { id: 'animal-handling', label: 'Mit Tieren umgehen', aliases: ['mit tieren umgehen', 'tierkunde'], attributeKey: 'wisdom' },
   { id: 'medicine', label: 'Heilkunde', aliases: ['heilkunde'], attributeKey: 'wisdom' },
@@ -32,7 +33,7 @@ export const COMMENT_KIND_SKILL_IDS = Object.freeze({
   speech: ['persuasion'],
   shout: ['intimidation'],
   performance: ['deception', 'performance'],
-  thought: ['insight', 'investigation', 'religion', 'arcane-kunde', 'history', 'nature'],
+  thought: ['insight', 'investigation', 'religion', 'arcane-kunde', 'history', 'nature', 'perception'],
   animal: ['animal-handling'],
   interact: ['medicine', 'sleight-of-hand', 'acrobatics', 'athletics', 'body-control', 'survival'],
   flirt: ['seduction']

@@ -1,12 +1,12 @@
-import { previewChallengeCombatBenefits, collectChallengeGrantKeys } from '../herausforderung/herausforderung-combat-preview.js';
-import { getChallengeAttemptSettings } from './skill-challenge-attempt.js';
-import { getChallengeCombatBindingError } from '../herausforderung/herausforderung-combat-context.js';
+import { previewChallengeCombatBenefits, collectChallengeGrantKeys } from '../herausforderung/herausforderung-combat-preview.js?v=20261015-graded-challenges-v1';
+import { getChallengeAttemptSettings } from './skill-challenge-attempt.js?v=20261015-graded-challenges-v1';
+import { getChallengeCombatBindingError } from '../herausforderung/herausforderung-combat-context.js?v=20261015-graded-challenges-v1';
 import { getActiveCombatEncounter } from '../combat/combat-encounter-model.js';
 import { sceneDiceService } from '../scene-dice/dice-service.js?v=20261013-performance-v1';
 import { CombatProfileResolver } from '../combat/combat-profile-resolver.js?v=20260928-equipment-art-v4';
 import { createSceneSkillProfileResolver } from './skill-scene-profile.js?v=20260928-equipment-art-v4';
 import { getSceneRecoveryDayKey } from '../scene-time/scene-recovery-day.js';
-import { formatHerausforderungRewardReceipt } from '../herausforderung/herausforderung-rewards.js?v=20261014-herausforderung-combat-v1';
+import { formatHerausforderungRewardReceipt } from '../herausforderung/herausforderung-rewards.js?v=20261015-graded-challenges-v1';
 import {
   SKILL_DEFINITIONS,
   buildSkillRollNotation,
@@ -22,9 +22,9 @@ import {
   normalizeSkillChallenge,
   normalizeSkillCheckSettings,
   resolveSkillModifier
-} from './skill-check-model.js?v=20260928-equipment-art-v4';
-import { narrateSkillResolution } from './skill-check-narration.js?v=20260805-herausforderung-v2';
-import { SkillResolutionService, getSkillRollContext } from './skill-resolution-service.js?v=20261014-herausforderung-v3';
+} from './skill-check-model.js?v=20261015-graded-challenges-v1';
+import { narrateSkillResolution } from './skill-check-narration.js?v=20261015-graded-challenges-v1';
+import { SkillResolutionService, getSkillRollContext } from './skill-resolution-service.js?v=20261015-graded-challenges-v1';
 import { collectCombatTriggerRules, deriveCombatRuleFrequencyKeys } from '../combat/combat-trigger-rules.js?v=20260928-equipment-art-v4';
 import { renderAutomaticRollMode } from '../combat/ui/combat-roll-mode-view.js?v=20260906-effect-rolls-v1';
 import { renderSkillIcon, renderSkillChoiceGroup, renderPreferredSkillHints, skillTooltipAttributes, bindSkillIconTooltips } from './skill-icon-view.js';
@@ -208,7 +208,7 @@ function getComposerChallenges(threadId) {
   return [
     ...collectRecentSkillChallenges(comments, 3),
     ...getHerausforderungApproaches(comments)
-  ].filter(challenge => !revealed.has(challenge.id));
+  ].filter(challenge => !revealed.has(challenge.id) && (!challenge.attemptLimit || comments.flatMap(comment => comment.commentSegments || []).filter(segment => segment.skillResolution?.targetChallengeId === challenge.id).length < challenge.attemptLimit));
 }
 
 function getContributionRankLabel(rank) {
@@ -647,6 +647,7 @@ async function narrateCommittedMechanics(mechanics = {}) {
         targetActor: resolution.targetChallengeAuthor || '',
         revealedText: resolution.revealedText || '',
         herausforderungTier: resolution.herausforderungTier || '',
+        herausforderungLabel: resolution.herausforderungLabel || '',
         actorProfileSnapshot: resolution.actorProfileSnapshot || null,
         ruleApplications: resolution.ruleApplications || []
       })
@@ -672,7 +673,7 @@ const HERAUSFORDERUNG_TIER_LABELS = {
 function renderEvaluation(source = {}) {
   const resolution = source.skillResolution || source.resolution;
   if (!resolution?.resolutionId) return '';
-  const outcomeLabel = HERAUSFORDERUNG_TIER_LABELS[resolution.herausforderungTier] || getOutcomeLabel(resolution.outcome);
+  const outcomeLabel = resolution.herausforderungLabel || HERAUSFORDERUNG_TIER_LABELS[resolution.herausforderungTier] || getOutcomeLabel(resolution.outcome);
   const sourceLabel = resolution.narration?.source === 'aleria-gpt' ? 'AleriaGPT-Auswertung' : 'Systemauswertung · ohne KI';
   const affinity = Number(resolution.affinityModifier || 0);
   const rewardReceipt = formatHerausforderungRewardReceipt(resolution.herausforderungReward);

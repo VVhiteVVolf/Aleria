@@ -1,7 +1,7 @@
 import { parseDamageFormula } from '../combat/rules/combat-mvp-rules.js';
 import { applyTypedCombatDamage, applyCombatHealing, applyTemporaryHitPoints } from '../combat/combat-effect-model.js';
 import { normalizeCombatHitPointState, applyCombatResourceCosts } from '../combat/combat-state-model.js';
-import { createManualCombatCondition, buildCombatStatusChange } from '../combat-status/combat-status-model.js';
+import { createManualCombatCondition, buildCombatStatusChange } from '../combat-status/combat-status-model.js?v=20261015-graded-challenges-v1';
 import { resolveCombatConcentration } from '../combat/combat-concentration-resolution.js';
 export { applyChallengeCombatSnapshots } from './herausforderung-combat-snapshots.js';
 

@@ -74,8 +74,9 @@ try {
   await overlay.locator('[data-skill-id="insight"]').locator('..').dispatchEvent('pointerover');
   assert.equal(await page.locator('[role="tooltip"]').count(), 1, 'Combat and skill hints share one visible tooltip');
   await page.locator('#tooltip-coexistence').evaluate(element => element.remove());
-  assert.equal(await overlay.locator('.herausforderung-skill-check [data-skill-icon]').count(), 18);
+  assert.equal(await overlay.locator('.herausforderung-skill-check [data-skill-icon]').count(), 19);
   await overlay.locator('.herausforderung-skill-check [data-skill-icon]').evaluateAll(images => Promise.all(images.map(image => { image.loading = 'eager'; return image.decode(); })));
+  await overlay.locator('[data-skill-id="perception"]').focus();
   await overlay.locator('[data-skill-id="insight"]').focus();
   assert.match(await page.locator('.skill-icon-tooltip').innerText(), /Motiv erkennen.*\+2/);
   await page.keyboard.press('Escape');
@@ -95,7 +96,7 @@ try {
   await field('publicDescription').fill('Regen zieht über die Zinnen. Die Wache versperrt Gawain und Guinevere den Weg.');
   const imageEditor=overlay.locator('[data-ha-image-editor]');
   const imageField=name=>imageEditor.locator(`[data-ha-image-field="${name}"]`);
-  const imageSource='../Stammbäume/assets/images/portraits/haus-wyrm/gais-wyrm.jpg';
+  const imageSource='./public/assets/herausforderung/ylva-gais-zug-lesen-v1.png';
   await imageEditor.locator('summary').click();
   await imageField('url').fill(imageSource);
   await imageField('alt').fill('Ein Ritter bewacht das Tor.');
@@ -275,7 +276,7 @@ try {
     await loadCommentsIntoPage();
     openCommentFormForSkillChallenge(AleriaHerausforderung.collectApproaches(testHistory)[0]);
   });
-  assert.equal(await page.locator('.skill-choice').count(), 6);
+  assert.equal(await page.locator('.skill-choice').count(), 7);
   const selectedSkill = () => page.locator('[data-skill-input="skillId"]:checked');
   assert.equal(await selectedSkill().inputValue(), 'insight');
   assert.match(await selectedSkill().locator('..').innerText(), /Passend · \+2/);

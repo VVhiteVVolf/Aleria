@@ -1,8 +1,9 @@
-import { normalizeHerausforderungEvent, normalizeHerausforderungApproach, getHerausforderungValidationIssues, MAX_HERAUSFORDERUNG_APPROACHES } from './herausforderung-model.js?v=20261015-challenge-scene-image-v1';
-import { SKILL_DEFINITIONS, getSkillDefinition } from '../skill-checks/skill-check-model.js';
+import { challengeBenefitBundles } from './herausforderung-outcomes.js?v=20261015-graded-challenges-v1';
+import { normalizeHerausforderungEvent, normalizeHerausforderungApproach, getHerausforderungValidationIssues, MAX_HERAUSFORDERUNG_APPROACHES } from './herausforderung-model.js?v=20261015-graded-challenges-v1';
+import { SKILL_DEFINITIONS, getSkillDefinition } from '../skill-checks/skill-check-model.js?v=20261015-graded-challenges-v1';
 import { COMBAT_STATUS_PRESETS, STATUS_MODIFIERS, STATUS_ROLL_MODES } from '../combat-status/combat-status-catalog.js';
-import { STATUS_DURATIONS } from '../combat-status/combat-status-model.js';
-import { CHALLENGE_COMBAT_EFFECT_TYPES } from './herausforderung-combat-effects.js';
+import { STATUS_DURATIONS } from '../combat-status/combat-status-model.js?v=20261015-graded-challenges-v1';
+import { CHALLENGE_COMBAT_EFFECT_TYPES } from './herausforderung-combat-effects.js?v=20261015-graded-challenges-v1';
 import { collectRegisterTemplates } from '../item-register/item-register-templates.js';
 import { CHALLENGE_IMAGE_FORMATS, CHALLENGE_IMAGE_FITS, EMPTY_CHALLENGE_SCENE_IMAGE } from './herausforderung-scene-image-model.js';
 
@@ -14,10 +15,10 @@ const copy = value => JSON.parse(JSON.stringify(value));
 function authoringEvent(source) {
   const event = normalizeHerausforderungEvent(source);
   event.combatContext = { encounterId: '' };
-  for (const approach of event.approaches) for (const field of ['rewards', 'partialEffects', 'failureEffects']) {
+  for (const approach of event.approaches) for (const bundle of challengeBenefitBundles(approach)) {
     // Inventory instances and server-resolved product snapshots are never an
     // authoring instruction. Only catalog references belong in exchange files.
-    approach[field].items = approach[field].items.map(({ product, ...reference }) => reference);
+    bundle.items = bundle.items.map(({ product, ...reference }) => reference);
   }
   return event;
 }
@@ -40,13 +41,14 @@ export function createHerausforderungAiTemplate(registerSnapshot = {}, combatCon
       syntax: {
         audience: 'Objekt { mode: all | combatants | selected, actorIds: [] }. all: alle Szenenteilnehmer; combatants: nur aktive Teilnehmer des gebundenen Kampfes; selected: eine bis 40 reale Figuren-IDs aus dem Figurenkatalog. Diese Zielgruppe bestimmt, wer würfeln darf.',
         combatBound: 'Boolean. true bindet die Herausforderung an den aktuellen Kampf. Die echte encounterId wird ausschließlich vom Server gesetzt. Bei Kampfteilnehmer-Zielgruppe, fremden Empfängern oder einer Dauer bis Kampfende zwingend.',
+        outcomeTable: 'Optional pro Ansatz: Array mit 3–10 Stufen { id, label, natural, minimumTotal, text, success, benefits }. natural ist 20/1 für Krit oder 0 für Gesamtwert-Schwellen. Bei Krit ist minimumTotal null. Genau eine natürliche 20, eine natürliche 1 und eine nichtkritische Auffangstufe mit minimumTotal null sind erforderlich. Sonst gilt nur die höchste erreichte Schwelle. benefits verwendet die reguläre Belohnungssyntax; bei success:false sind Geld und Gegenstände verboten. attemptLimit:1 erlaubt nur einen Versuch pro Lösungsweg. Ohne outcomeTable gelten die bisherigen drei Ergebnisgruppen.',
         title: 'Öffentlich, maximal 180 Zeichen.', publicDescription: 'Öffentlich, erforderlich, maximal 4.000 Zeichen.',
         sceneImage: { optional: 'Optionales öffentliches Stimmungsbild; null oder url leer bedeutet ohne Bild. Keine Lösung im Bild oder Begleittext verraten. Keine Bildlinks erfinden; nur vom Nutzer bereitgestellte Bilder verwenden.', url: 'Direkter HTTP(S)-Bildlink oder vorhandener Projektpfad, maximal 2.048 Zeichen. PNG, JPG, WebP, GIF und AVIF je nach Browser. Keine lokalen Laufwerkspfade, Uploads, base64- oder data-URLs.', alt: 'Bildbeschreibung für Screenreader, maximal 240 Zeichen.', caption: 'Optionale öffentliche Bildunterschrift, maximal 500 Zeichen.', format: 'Eine imageFormats.id. original bewahrt die Bildproportionen.', fit: 'Eine imageFits.id. contain zeigt das vollständige Bild; cover schneidet auf das gewählte Format zu. Bei original bleibt das Originalformat erhalten.' },
         approach: { approachId: 'Eindeutig, maximal 40 Zeichen.', label: 'Öffentlich, maximal 160 Zeichen.', preferredSkills: 'Array erlaubter skills.id-Werte.', difficulty: 'Ganze Zahl 1–40.', insight: 'Verdeckte Erkenntnis, erforderlich, maximal 2.000 Zeichen.', partialHint: 'Optional, maximal 2.000 Zeichen.', failureConsequence: 'Optional, maximal 2.000 Zeichen.' },
         rewards: { copper: 'Zahl in Kupfertalern (KT), 0 bis 1.000.000.000, höchstens zwei Nachkommastellen. Taler meint Kupfertaler. 1 KT = 100 Eisenpfennig; 2.5 bedeutet 2,5 KT. Gold ist kein Eingabefeld.', items: 'Maximal acht Referenzen aus itemTemplates. Nur template, moduleId, sourceRevision, title und quantity verwenden. Keine erfundenen IDs, product-Snapshots, Inventar-IDs oder Kampfdaten. Neue Gegenstände zuerst im Handelsregister anlegen.', effects: 'Maximal vier Buffs, Debuffs oder Zustände. Art und Empfänger ausdrücklich wählen.', combatEffects: 'Maximal acht direkte Kampfwirkungen: Schaden, Heilung, temporäre TP, Ressource auffüllen/entziehen oder Zustand entfernen.' },
         failureBundles: 'partialEffects und failureEffects haben copper: 0, items: [] und höchstens vier effects. Geldverlust oder Gegenstandsverlust nicht erfinden; dafür sind diese Felder nicht vorgesehen.',
         quantity: 'Ganze Zahl 1–9.999; Waffen und Rüstungen immer quantity: 1. Tiere sind keine Gegenstandsbelohnungen.',
-        effect: { effectId: 'Innerhalb der Ergebnisgruppe eindeutig, maximal 40 Zeichen.', presetId: 'Eine erlaubte effectPresets.id oder leer für einen eigenen Effekt.', name: 'Erforderlich, maximal 160 Zeichen.', description: 'Erzählerische Beschreibung, maximal 1.600 Zeichen. Freitext erfindet keine zusätzliche Mechanik.', kind: 'buff, debuff oder condition nach tatsächlicher Wirkung.', targetActorId: 'Leer für die würfelnde Figur; sonst eine aktive combat.participants.actorId. Dies ist der Wirkungsempfänger, unabhängig von der Zielgruppe der Herausforderung.', durationKind: 'Ein erlaubter durations.id-Wert.', durationAmount: 'Bei actor-comments und scene-comments ganze Zahl 1–999, sonst 2 als Platzhalter.', mechanics: 'Nur die unten aufgeführten modifierKeys und rollModeKeys. Ganzzahlige Boni/Mali −30 bis +30. Wurfarten: normal, advantage oder disadvantage. Eigene Wirkungsfelder werden nicht unterstützt.' },
+        effect: { effectId: 'Innerhalb der Ergebnisgruppe eindeutig, maximal 40 Zeichen.', presetId: 'Eine erlaubte effectPresets.id oder leer für einen eigenen Effekt.', name: 'Erforderlich, maximal 160 Zeichen.', description: 'Erzählerische Beschreibung, maximal 1.600 Zeichen. Freitext erfindet keine zusätzliche Mechanik.', kind: 'buff, debuff oder condition nach tatsächlicher Wirkung.', targetActorId: 'Leer für die würfelnde Figur; sonst eine aktive combat.participants.actorId. Dies ist der Wirkungsempfänger, unabhängig von der Zielgruppe der Herausforderung.', usage: 'Optional { scope: attack | action, actorId: aktive Kampfteilnehmer-ID }. Einmaliger Effekt: attack gilt nur für den nächsten einzelnen Angriffswurf, action für alle Angriffswürfe der nächsten Kampfaktion. actorId begrenzt, wessen Angriff ihn auslöst. Nur attack, armorClass und attackRollMode als mechanics; der Verbrauch erfolgt auch bei einem verfehlten Angriff, niemals bei Rede, Heilung, automatischer Wirkung oder Rettungswurf.', durationKind: 'Ein erlaubter durations.id-Wert.', durationAmount: 'Bei actor-comments und scene-comments ganze Zahl 1–999, sonst 2 als Platzhalter.', mechanics: 'Nur die unten aufgeführten modifierKeys und rollModeKeys. Ganzzahlige Boni/Mali −30 bis +30. Wurfarten: normal, advantage oder disadvantage. Eigene Wirkungsfelder werden nicht unterstützt.' },
         combatEffect: { effectId: 'Eindeutig, maximal 40 Zeichen.', type: 'Eine combatEffectTypes.id.', targetActorId: 'Leer für die würfelnde Figur oder eine aktive Kampfteilnehmer-ID.', amount: 'Fester ganzzahliger Betrag 1–10000, oder 0 bei Formel/Zustandsentfernung.', formula: 'Optional z. B. 1W6+2; höchstens 20 Würfel W4/W6/W8/W10/W12. Nur für Schaden, Heilung oder temporäre TP. Bei Formel amount: 0.', damageType: 'Bei Schaden die tatsächliche Schadensart, z. B. Stich oder Feuer.', magical: 'Boolean; berücksichtigt magische Resistenzen.', resourceId: 'Bei Ressourcenwirkung eine vorhandene Ressourcen-ID des Empfängers.', conditionId: 'Bei remove-condition die tatsächliche aktive Zustands-ID. Kampfaura-Zustände können so nicht entfernt werden.' },
         combatRules: 'Rüstung, Resistenzen, Schutzladungen und temporäre TP nutzen die Kampflogik. Heilung ist auf maximale TP begrenzt; temporäre TP verwenden den höheren Wert und stapeln nicht. Kritischer Fertigkeitserfolg verdoppelt Schaden/Heilung nicht. Folgen werden an ihrer Segmentposition angewendet; frühere Handlungen ändern sich nicht.',
         duration: 'Neue Effekte verlieren im Vergabebeitrag keine Laufzeit. Eigene Beiträge, Szenenbeiträge, Rast und Kampfende nutzen die bestehenden Zustandsuhren.'
@@ -88,16 +90,17 @@ export function parseHerausforderungImport(input, registerSnapshot = {}, combatC
     for (const field of ['approachId', 'label', 'insight', 'partialHint', 'failureConsequence']) if (approach[field] != null && typeof approach[field] !== 'string') throw Error(`Ansatz ${index + 1}: ${field} muss ein Text sein.`);
     if (approach.difficulty != null && typeof approach.difficulty !== 'number') throw Error(`Ansatz ${index + 1}: difficulty muss eine ganze JSON-Zahl sein.`);
     if (approach.preferredSkills?.some?.(id => !getSkillDefinition(id))) throw Error(`Ansatz ${index + 1} verwendet eine unbekannte Fertigkeits-ID.`);
-    for (const field of ['rewards', 'partialEffects', 'failureEffects']) {
-      const bundle = approach[field];
+    for (const [bundleIndex, bundle] of challengeBenefitBundles(approach).entries()) {
+      const field = `Ergebnisgruppe ${bundleIndex + 1}`;
       if (bundle != null && (typeof bundle !== 'object' || Array.isArray(bundle))) throw Error(`${field} muss ein Objekt sein.`);
       for (const list of ['effects', 'combatEffects', 'items']) if (bundle?.[list] != null && !Array.isArray(bundle[list])) throw Error(`${field}.${list} muss eine Liste sein.`);
-      if (approach[field]?.gold != null) throw Error('Geld als copper in Kupfertalern angeben. Das Feld gold ist im KI-Import nicht erlaubt.');
-      if (approach[field]?.copper != null && typeof approach[field].copper !== 'number') throw Error('copper muss eine JSON-Zahl in Kupfertalern sein, zum Beispiel 2.5.');
-      for (const effect of [...(approach[field]?.effects || []), ...(approach[field]?.combatEffects || [])]) {
+      if (bundle?.gold != null) throw Error('Geld als copper in Kupfertalern angeben. Das Feld gold ist im KI-Import nicht erlaubt.');
+      if (bundle?.copper != null && typeof bundle.copper !== 'number') throw Error('copper muss eine JSON-Zahl in Kupfertalern sein, zum Beispiel 2.5.');
+      for (const effect of [...(bundle?.effects || []), ...(bundle?.combatEffects || [])]) {
+        if (effect?.usage?.actorId && !combatContext.participants?.some(participant => participant.actorId === effect.usage.actorId)) throw Error('Die Figur für den Effektverbrauch ist nicht im aktiven Kampf.');
         if (effect?.targetActorId && !combatContext.participants?.some(participant => participant.actorId === effect.targetActorId)) throw Error('Der Wirkungsempfänger ist nicht im aktiven Kampf.');
       }
-      for (const item of Array.isArray(approach[field]?.items) ? approach[field].items : []) {
+      for (const item of Array.isArray(bundle?.items) ? bundle.items : []) {
         const template = catalog.get(item?.template);
         if (!template) throw Error(`Ansatz ${index + 1}: Die Registervorlage „${item?.template || ''}“ ist nicht verfügbar. Handelsregister laden und erneut importieren.`);
         if (['waffen', 'ruestungen'].includes(template.category) && Number(item.quantity ?? 1) !== 1) throw Error('Waffen und Rüstungen werden einzeln vergeben.');

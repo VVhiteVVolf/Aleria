@@ -1,3 +1,4 @@
+import { challengeBenefitBundles } from '../generated/herausforderung/herausforderung-outcomes.js';
 import { createHash } from 'node:crypto';
 import { HttpsError } from 'firebase-functions/v2/https';
 import { resolveRegisterItemTemplate } from './item-register-template.js';
@@ -11,7 +12,7 @@ export function assertHerausforderungRewardAuthority(event, auth) {
 
 export async function prepareHerausforderungRewards(database, transaction, event) {
   for (const approach of event.approaches) {
-    for (const item of approach.rewards.items) {
+    for (const bundle of challengeBenefitBundles(approach)) for (const item of bundle.items || []) {
       const product = await resolveRegisterItemTemplate(database, transaction, item);
       if (!product) throw new HttpsError('invalid-argument', 'Eine Registervorlage für die Belohnung fehlt.');
       if (['waffen', 'ruestungen'].includes(product.category) && item.quantity !== 1) throw new HttpsError('invalid-argument', 'Waffen und Rüstungen werden einzeln vergeben.');

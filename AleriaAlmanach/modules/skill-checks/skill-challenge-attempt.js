@@ -1,4 +1,4 @@
-import { COMMENT_KIND_SKILL_IDS, getSkillDefinition } from './skill-check-model.js?v=20260928-equipment-art-v4';
+import { COMMENT_KIND_SKILL_IDS, getSkillDefinition } from './skill-check-model.js?v=20261015-graded-challenges-v1';
 
 // The existing contribution catalog remains the owner of skill/kind mapping.
 export function getChallengeAttemptChoices(challenge) {

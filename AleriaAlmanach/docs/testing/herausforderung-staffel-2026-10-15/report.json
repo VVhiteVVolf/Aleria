@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-15",
+  "feature": "Ergebnisstaffeln, Wahrnehmung und einmalige Kampfvorteile für Herausforderungen",
+  "unitTests": {
+    "passed": 166,
+    "failed": 0
+  },
+  "serverTests": {
+    "passed": 192,
+    "failed": 0
+  },
+  "browserChecks": {
+    "graded": 10,
+    "existing": 25,
+    "errors": []
+  },
+  "sceneCopy": {
+    "passed": true,
+    "scenarios": 7,
+    "sourceCommentCount": 198,
+    "productionWrites": 0
+  },
+  "buildPassed": true,
+  "functionsVerified": [
+    {
+      "id": "commitHerausforderung",
+      "state": "ACTIVE",
+      "updatedAt": "2026-10-15T15:41:31.463563326Z"
+    },
+    {
+      "id": "commitSkillComment",
+      "state": "ACTIVE",
+      "updatedAt": "2026-10-15T15:41:31.259384830Z"
+    },
+    {
+      "id": "commitCombatComment",
+      "state": "ACTIVE",
+      "updatedAt": "2026-10-15T15:41:26.010477956Z"
+    }
+  ],
+  "screenshots": [
+    "desktop.png",
+    "mobile.png"
+  ],
+  "publication": "Der offene Szeneneintrag wird nach der Prüfung der veröffentlichten Oberfläche separat angelegt. Keine historischen Würfe werden verändert."
+}

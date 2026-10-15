@@ -2,7 +2,7 @@ import { getCommentActorIds } from './combat-condition-duration.js';
 import { bindCombatTooltips } from './ui/combat-tooltips.js?v=20261015-skill-challenges-v2';
 import { beginCombatContribution, conditionsAtContributionStart } from './combat-contribution-start.js';
 import { applySkillRuntimeSnapshots } from '../skill-checks/skill-runtime-state.js';
-import { collectChallengeGrantKeys } from '../herausforderung/herausforderung-combat-preview.js';
+import { collectChallengeGrantKeys } from '../herausforderung/herausforderung-combat-preview.js?v=20261015-graded-challenges-v1';
 import { prepareCombatEquipment, reserveCombatEquipment } from './combat-equipment-preparation.js?v=20260928-equipment-art-v4';
 import { beginCriticalContribution } from '../combat-critical/combat-critical-lifecycle.js';
 import { estimateCombatHitChance } from './combat-action-estimates.js?v=20260928-equipment-art-v4';
@@ -16,7 +16,7 @@ import {
   CombatProfileResolver,
   getCombatActorValidationMessage
 } from './combat-profile-resolver.js?v=20260928-equipment-art-v4';
-import { CombatResolutionService, getCombatRollContext } from './combat-resolution-service.js?v=20260928-equipment-art-v4';
+import { CombatResolutionService, getCombatRollContext } from './combat-resolution-service.js?v=20261015-graded-challenges-v1';
 import {
   applyCombatResourceCosts,
   deriveCombatStateFromComments,

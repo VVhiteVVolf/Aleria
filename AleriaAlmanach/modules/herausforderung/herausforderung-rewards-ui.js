@@ -1,12 +1,12 @@
 import { renderChallengeCombatEffects, renderChallengeRecipientOptions, renderChallengeCombatChoiceOptions, updateChallengeCombatInput } from './herausforderung-combat-effects-ui.js';
-import { CHALLENGE_COMBAT_EFFECT_TYPES, MAX_CHALLENGE_COMBAT_EFFECTS } from './herausforderung-combat-effects.js';
+import { CHALLENGE_COMBAT_EFFECT_TYPES, MAX_CHALLENGE_COMBAT_EFFECTS } from './herausforderung-combat-effects.js?v=20261015-graded-challenges-v1';
 import { collectRegisterTemplates } from '../item-register/item-register-templates.js';
 import { mountRegisterTemplatePicker, refreshRegisterTemplatePicker, createRegisterTemplatePickerState } from '../item-register/item-register-template-picker.js';
 import { formatCopper } from '../item-register/item-register-money.js';
 import { STANDARD_ITEMS } from '../item-register/item-register-standard.js';
 import { COMBAT_STATUS_PRESETS, STATUS_MODIFIERS, STATUS_ROLL_MODES } from '../combat-status/combat-status-catalog.js';
-import { STATUS_DURATIONS, formatStatusDuration } from '../combat-status/combat-status-model.js';
-import { normalizeHerausforderungBenefits, hasHerausforderungBenefits, MAX_REWARD_ITEMS, MAX_REWARD_EFFECTS, formatHerausforderungRewardReceipt } from './herausforderung-rewards.js?v=20261014-herausforderung-combat-v1';
+import { STATUS_DURATIONS, formatStatusDuration } from '../combat-status/combat-status-model.js?v=20261015-graded-challenges-v1';
+import { normalizeHerausforderungBenefits, hasHerausforderungBenefits, MAX_REWARD_ITEMS, MAX_REWARD_EFFECTS, formatHerausforderungRewardReceipt } from './herausforderung-rewards.js?v=20261015-graded-challenges-v1';
 
 const bindings = new WeakMap();
 const escape = value => String(value ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
@@ -164,7 +164,7 @@ export function rewardSummary(benefits = {}) {
   const parts = [];
   if (Number(benefits.copper) > 0) parts.push(formatCopper(benefits.copper));
   for (const item of benefits.items || []) parts.push(`${item.quantity}× ${item.product?.title || item.title || 'Gegenstand'}`);
-  for (const effect of benefits.effects || []) parts.push(`${effect.name || 'Effekt'} (${formatStatusDuration({ durationModel: { kind: effect.durationKind, amount: effect.durationAmount } })})`);
+  for (const effect of benefits.effects || []) parts.push(`${effect.name || 'Effekt'} (${formatStatusDuration({ usage: effect.usage, durationModel: { kind: effect.durationKind, amount: effect.durationAmount } })})`);
   for (const effect of benefits.combatEffects || []) parts.push(`${CHALLENGE_COMBAT_EFFECT_TYPES.find(([type]) => type === effect.type)?.[1] || effect.type}: ${effect.formula || effect.amount || effect.conditionId}`);
   return parts.join(' · ');
 }

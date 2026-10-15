@@ -1,9 +1,10 @@
+import { getConditionUsageBenefits } from './combat-condition-usage.js?v=20261015-graded-challenges-v1';
 import { collectApplicableCombatRules, markCombatRuleApplications, mergeCombatRuleEffects } from './combat-trigger-rules.js?v=20260928-equipment-art-v4';
 import { getBonusDamageFormulas, getUniversalDamageBonus, getWeaponAttackModifier, getWeaponDamageModifier } from './combat-profile-model.js?v=20260928-equipment-art-v4';
 import { getCombatWeaponLoadout } from './combat-weapon-loadout.js';
 import { mergeRestrictedRollModes } from './combat-roll-mode.js';
 import { combineDamageFormulas, evaluateAttackRoll } from './rules/combat-mvp-rules.js';
-import { applyOutcome } from './combat-attack-evaluation.js?v=20260928-equipment-art-v4';
+import { applyOutcome } from './combat-attack-evaluation.js?v=20261015-graded-challenges-v1';
 import { resolveCombatWard } from './combat-ward-resolution.js';
 
 // Each follow-up has its own attack, damage, defenses and per-attack equipment rules.
@@ -46,14 +47,17 @@ export async function resolveFollowUpAttacks({ dice, actor, target, weapon, atta
       };
       const followPreApplications = collectFollowRules('pre-roll');
       const followPreEffects = mergeCombatRuleEffects(followPreApplications);
-      const followRollMode = mergeRestrictedRollModes([profileRollModes, offBalance ? 'advantage' : 'normal', auraRollMode,
+      const usage = getConditionUsageBenefits(actor, target, { attackIndex: followUpIndex + 1, startedAction: options.startedAction });
+      const initialUsage = getConditionUsageBenefits(actor, target, { startedAction: options.startedAction });
+      const unconditionalModes = profileRollModes.slice(0, profileRollModes.length - initialUsage.rollModes.length);
+      const followRollMode = mergeRestrictedRollModes([unconditionalModes, usage.rollModes, offBalance ? 'advantage' : 'normal', auraRollMode,
         followPreApplications.map(application => application.effects?.rollMode)], followPreEffects);
       const followAttackModifier = Number(actor.attackModifier || 0) + attackDelta + Number(followUp.attackBonus || 0)
         + Number(targetAuraOnActor.attack || 0)
         + (['spell', 'prayer', 'song'].includes(actionKind) ? Number(targetAuraOnActor.spellAttack || 0) : 0)
-        + followPreEffects.attackModifier;
+        + followPreEffects.attackModifier + usage.attack;
       let followDefense = Number(target.totalDefense) + Number(actor.selectedAction?.targetDefenseModifier || 0)
-        + Number(actorAuraOnTarget.armorClass || 0) + followPreEffects.defenseModifier;
+        + Number(actorAuraOnTarget.armorClass || 0) + followPreEffects.defenseModifier + usage.armorClass;
       const followAttackRoll = await dice.rollAttack({
         modifier: followAttackModifier,
         rollMode: followRollMode,
