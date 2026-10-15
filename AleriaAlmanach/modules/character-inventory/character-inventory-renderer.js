@@ -15,7 +15,8 @@ function getCharacterInventoryImageClass(className, options = {}) {
 function buildCharacterInventoryImage(src, alt, className, fallback = '*', options = {}) {
   const image = sanitizeImageSrc(src || '');
   const imageClass = getCharacterInventoryImageClass(className, options);
-  if (image) return `<img class="${imageClass}" src="${escapeHtml(image)}" alt="${escapeHtml(alt || '')}" data-ci-image-fallback="${escapeHtml(fallback || '*')}" loading="lazy" decoding="async" referrerpolicy="no-referrer">`;
+  // sanitizeImageSrc already escapes the URL for an HTML attribute.
+  if (image) return `<img class="${imageClass}" src="${image}" alt="${escapeHtml(alt || '')}" data-ci-image-fallback="${escapeHtml(fallback || '*')}" loading="lazy" decoding="async" referrerpolicy="no-referrer">`;
   return `<div class="${imageClass} ci-placeholder">${escapeHtml(fallback || '*')}</div>`;
 }
 
