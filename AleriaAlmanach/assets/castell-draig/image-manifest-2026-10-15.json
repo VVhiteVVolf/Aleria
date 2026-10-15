@@ -1,0 +1,604 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-10-15T14:25:37.711Z",
+  "scope": "Replace artwork only in the five existing Castell Draig modules. Preserve every existing page, thread key, cast, text and resource field.",
+  "generator": "built-in image_gen",
+  "stylePreset": "anime-scene-portrait",
+  "styleSource": "AleriaAlmanach/docs/art/image-style-presets.json",
+  "stylePrompt": "Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.",
+  "jobs": [
+    {
+      "id": "bergfried-aussenansicht",
+      "moduleId": "modul-1781468221923",
+      "pageIndex": 0,
+      "scene": "Exterior establishing view of Castell Draig's mighty grey stone keep and surrounding crenellated curtain walls high on a steep wooded mountain above a medieval town. Compact interconnected towers, slate conical roofs, a few burgundy banners with the actual House Draig emblem. Clear soft daylight and pale blue sky, distant hills and stone approach road. Preserve the mountain-castle identity of the old cover, no magical floating structures or modern buildings.",
+      "originalReferenceNumber": 1,
+      "prompt": "Use case: stylized-concept. Asset type: a finished environment illustration for ONE interactive roleplay chat room in Aleria, Castell Draig. Exact portrait aspect ratio 2:3, 1024 by 1536 composition, opaque full-bleed rectangular image. Reference 1 is the new council-room illustration and defines ONLY the coherent clean anime drawing language and castle materials; do not copy its round table or room layout into this different scene. Reference 2 is the ACTUAL HOUSE DRAIG HERALDRY: red wyvern and black castle on ivory, use its design faithfully if a house emblem is visible; it is not a background-style reference. Reference 3 is the old exterior, a subject and architectural silhouette guide ONLY; completely discard its watercolor treatment and parchment edges.\nSCENE: Exterior establishing view of Castell Draig's mighty grey stone keep and surrounding crenellated curtain walls high on a steep wooded mountain above a medieval town. Compact interconnected towers, slate conical roofs, a few burgundy banners with the actual House Draig emblem. Clear soft daylight and pale blue sky, distant hills and stone approach road. Preserve the mountain-castle identity of the old cover, no magical floating structures or modern buildings.\nREQUIRED COMPLETE SAVED STYLE: Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nFor this environment use crisp confident anime background lineart, clean broad flat cel-shaded color areas with only two or three tones per material. Keep stone, wood and cloth surfaces SIMPLE, not physically rendered or richly textured. Restrained natural colors, clear readable room depth, warm grey stone and dark oak connect the castle series. Quiet composition; the architecture and a few functional objects identify the location. No text or captions, no watermark, no collage, no parchment, no ragged borders, no watercolor or gouache, no photorealism, no lens effects, no film grain, no invented unrelated heraldry. Show one coherent empty place, no foreground character or frozen story action.",
+      "referenceImages": [
+        "E:\\Aleria\\AleriaAlmanach\\public\\assets\\castell-draig\\2026-10-15\\bergfried-ratskammer.png",
+        "E:\\Aleria\\Stammbäume\\assets\\images\\houses\\Llamreis Ankunft\\haus-draig.png",
+        "E:\\Aleria\\.codex-temp\\castell-draig-originals\\01.png"
+      ],
+      "localPath": "AleriaAlmanach/public/assets/castell-draig/2026-10-15/bergfried-aussenansicht.png",
+      "status": "generated",
+      "generatedSource": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a13fe5-d5d5-7703-bbfd-19388583f19c\\exec-e1f23738-32db-463e-acf3-2222ab145a8e.png",
+      "generatedAt": "2026-10-15T14:27:37.583Z"
+    },
+    {
+      "id": "bergfried-thronsaal",
+      "moduleId": "modul-1781468221923",
+      "pageIndex": 1,
+      "scene": "The keep's throne hall viewed along a burgundy carpet toward a SINGLE carved oak throne on a low stone dais beneath one House Draig tapestry. Grey stone pillars, high narrow windows, dark timber ceiling, restrained brass candle stands. Empty benches along the sides. A practical noble castle hall, dignified but not a royal cathedral, no people, no guards.",
+      "originalReferenceNumber": 2,
+      "prompt": "Use case: stylized-concept. Asset type: a finished environment illustration for ONE interactive roleplay chat room in Aleria, Castell Draig. Exact portrait aspect ratio 2:3, 1024 by 1536 composition, opaque full-bleed rectangular image. Reference 1 is the new council-room illustration and defines ONLY the coherent clean anime drawing language and castle materials; do not copy its round table or room layout into this different scene. Reference 2 is the ACTUAL HOUSE DRAIG HERALDRY: red wyvern and black castle on ivory, use its design faithfully if a house emblem is visible; it is not a background-style reference.\nSCENE: The keep's throne hall viewed along a burgundy carpet toward a SINGLE carved oak throne on a low stone dais beneath one House Draig tapestry. Grey stone pillars, high narrow windows, dark timber ceiling, restrained brass candle stands. Empty benches along the sides. A practical noble castle hall, dignified but not a royal cathedral, no people, no guards.\nREQUIRED COMPLETE SAVED STYLE: Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nFor this environment use crisp confident anime background lineart, clean broad flat cel-shaded color areas with only two or three tones per material. Keep stone, wood and cloth surfaces SIMPLE, not physically rendered or richly textured. Restrained natural colors, clear readable room depth, warm grey stone and dark oak connect the castle series. Quiet composition; the architecture and a few functional objects identify the location. No text or captions, no watermark, no collage, no parchment, no ragged borders, no watercolor or gouache, no photorealism, no lens effects, no film grain, no invented unrelated heraldry. Show one coherent empty place, no foreground character or frozen story action.",
+      "referenceImages": [
+        "E:\\Aleria\\AleriaAlmanach\\public\\assets\\castell-draig\\2026-10-15\\bergfried-ratskammer.png",
+        "E:\\Aleria\\Stammbäume\\assets\\images\\houses\\Llamreis Ankunft\\haus-draig.png"
+      ],
+      "localPath": "AleriaAlmanach/public/assets/castell-draig/2026-10-15/bergfried-thronsaal.png",
+      "status": "generated",
+      "generatedSource": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a13fe5-d5d5-7703-bbfd-19388583f19c\\exec-6755057d-eb7f-445f-bbad-ebd999408cf0.png",
+      "generatedAt": "2026-10-15T14:27:37.848Z"
+    },
+    {
+      "id": "bergfried-audienzhalle",
+      "moduleId": "modul-1781468221923",
+      "pageIndex": 2,
+      "scene": "The waiting hall outside the throne room. A stone-vaulted corridor with a heavy closed oak double door at the far end, two upholstered benches, a small side table, narrow leaded windows and a burgundy runner. Readable calm daylight. Clearly a waiting area with seats and a doorway, no throne and no people.",
+      "originalReferenceNumber": 3,
+      "prompt": "Use case: stylized-concept. Asset type: a finished environment illustration for ONE interactive roleplay chat room in Aleria, Castell Draig. Exact portrait aspect ratio 2:3, 1024 by 1536 composition, opaque full-bleed rectangular image. Reference 1 is the new council-room illustration and defines ONLY the coherent clean anime drawing language and castle materials; do not copy its round table or room layout into this different scene. Reference 2 is the ACTUAL HOUSE DRAIG HERALDRY: red wyvern and black castle on ivory, use its design faithfully if a house emblem is visible; it is not a background-style reference.\nSCENE: The waiting hall outside the throne room. A stone-vaulted corridor with a heavy closed oak double door at the far end, two upholstered benches, a small side table, narrow leaded windows and a burgundy runner. Readable calm daylight. Clearly a waiting area with seats and a doorway, no throne and no people.\nREQUIRED COMPLETE SAVED STYLE: Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nFor this environment use crisp confident anime background lineart, clean broad flat cel-shaded color areas with only two or three tones per material. Keep stone, wood and cloth surfaces SIMPLE, not physically rendered or richly textured. Restrained natural colors, clear readable room depth, warm grey stone and dark oak connect the castle series. Quiet composition; the architecture and a few functional objects identify the location. No text or captions, no watermark, no collage, no parchment, no ragged borders, no watercolor or gouache, no photorealism, no lens effects, no film grain, no invented unrelated heraldry. Show one coherent empty place, no foreground character or frozen story action.",
+      "referenceImages": [
+        "E:\\Aleria\\AleriaAlmanach\\public\\assets\\castell-draig\\2026-10-15\\bergfried-ratskammer.png",
+        "E:\\Aleria\\Stammbäume\\assets\\images\\houses\\Llamreis Ankunft\\haus-draig.png"
+      ],
+      "localPath": "AleriaAlmanach/public/assets/castell-draig/2026-10-15/bergfried-audienzhalle.png",
+      "status": "generated",
+      "generatedSource": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a13fe5-d5d5-7703-bbfd-19388583f19c\\exec-65044571-abba-4d5b-90f5-b2100cc9d6c0.png",
+      "generatedAt": "2026-10-15T14:27:38.117Z"
+    },
+    {
+      "id": "bergfried-ratskammer",
+      "moduleId": "modul-1781468221923",
+      "pageIndex": 3,
+      "scene": "The circular council chamber with a large ROUND oak table and empty chairs, wooden ceiling, two windows, one House Draig tapestry, two rolled maps and a small candle holder. Quiet readable daylight. No people.",
+      "originalReferenceNumber": 4,
+      "prompt": "Use case: style-transfer. Create ONE finished replacement illustration of the council chamber of Castell Draig for an interactive roleplay chat room. Exact portrait aspect ratio 2:3, full-bleed rectangular environment illustration. Reference 1 is the existing room and defines the round chamber, timber ceiling, large ROUND wooden council table and circle of empty chairs; preserve these architectural ideas while redrawing everything in the required anime style. Reference 2 is the actual House Draig emblem and defines the red wyvern and black castle on an ivory field, use it faithfully on ONE restrained wall hanging. Replace the unrelated blue-and-gold lion heraldry. Empty room, no people. Table largely clear with just two rolled maps and a small candle holder. Warm grey stone, dark oak, muted burgundy fabrics, daylight from two narrow windows balanced by candlelight; brighter and clearly readable, quiet intimate castle room, not a cathedral. REQUIRED COMPLETE SAVED STYLE: Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung. Since there are no people, apply the clear anime background drawing, simplified materials and clean two-to-three-tone cel shading to the entire environment. Do not imitate the old watercolor rendering. No parchment, ragged borders, paint splatters, photographic textures, film grain, photorealism, text, watermark or collage. One restrained, coherent scene with ample open floor and a readable round table.",
+      "referenceImages": [
+        "E:\\Aleria\\.codex-temp\\castell-draig-plan-images\\ratskammer.png",
+        "E:\\Aleria\\Stammbäume\\assets\\images\\houses\\Llamreis Ankunft\\haus-draig.png"
+      ],
+      "localPath": "AleriaAlmanach/public/assets/castell-draig/2026-10-15/bergfried-ratskammer.png",
+      "status": "generated",
+      "generatedSource": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a13fe5-d5d5-7703-bbfd-19388583f19c\\exec-1101789a-88e2-41d2-9ff4-55e3ba24f63b.png"
+    },
+    {
+      "id": "bergfried-grosse-galerie",
+      "moduleId": "modul-1781468221923",
+      "pageIndex": 4,
+      "scene": "A grand but intimate castle gallery with a long upper balcony, regularly spaced stone arches, several clearly framed ancestral paintings, a few burgundy hangings and an open flagstone walkway. Daylight through tall leaded windows. Portrait paintings are small indistinct historical silhouettes, not invented identifiable characters. No living people.",
+      "originalReferenceNumber": 5,
+      "prompt": "Use case: stylized-concept. Asset type: a finished environment illustration for ONE interactive roleplay chat room in Aleria, Castell Draig. Exact portrait aspect ratio 2:3, 1024 by 1536 composition, opaque full-bleed rectangular image. Reference 1 is the new council-room illustration and defines ONLY the coherent clean anime drawing language and castle materials; do not copy its round table or room layout into this different scene. Reference 2 is the ACTUAL HOUSE DRAIG HERALDRY: red wyvern and black castle on ivory, use its design faithfully if a house emblem is visible; it is not a background-style reference.\nSCENE: A grand but intimate castle gallery with a long upper balcony, regularly spaced stone arches, several clearly framed ancestral paintings, a few burgundy hangings and an open flagstone walkway. Daylight through tall leaded windows. Portrait paintings are small indistinct historical silhouettes, not invented identifiable characters. No living people.\nREQUIRED COMPLETE SAVED STYLE: Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nFor this environment use crisp confident anime background lineart, clean broad flat cel-shaded color areas with only two or three tones per material. Keep stone, wood and cloth surfaces SIMPLE, not physically rendered or richly textured. Restrained natural colors, clear readable room depth, warm grey stone and dark oak connect the castle series. Quiet composition; the architecture and a few functional objects identify the location. No text or captions, no watermark, no collage, no parchment, no ragged borders, no watercolor or gouache, no photorealism, no lens effects, no film grain, no invented unrelated heraldry. Show one coherent empty place, no foreground character or frozen story action.",
+      "referenceImages": [
+        "E:\\Aleria\\AleriaAlmanach\\public\\assets\\castell-draig\\2026-10-15\\bergfried-ratskammer.png",
+        "E:\\Aleria\\Stammbäume\\assets\\images\\houses\\Llamreis Ankunft\\haus-draig.png"
+      ],
+      "localPath": "AleriaAlmanach/public/assets/castell-draig/2026-10-15/bergfried-grosse-galerie.png",
+      "status": "generated",
+      "generatedSource": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a13fe5-d5d5-7703-bbfd-19388583f19c\\exec-c47e630c-78b0-4382-b74c-5e18e12f10d1.png",
+      "generatedAt": "2026-10-15T14:27:38.398Z"
+    },
+    {
+      "id": "bergfried-burgkapelle",
+      "moduleId": "modul-1781468221923",
+      "pageIndex": 5,
+      "scene": "A quiet private castle chapel. Simple stone altar, brass chalice, plain candles, two short rows of oak pews, a tall stained-glass window with abstract red and gold sacred light. Ribbed stone vault, dark wood, soft morning light. Medieval Aleria fantasy devotional room, no modern church furnishings, no text, no people.",
+      "originalReferenceNumber": 6,
+      "prompt": "Use case: stylized-concept. Asset type: a finished environment illustration for ONE interactive roleplay chat room in Aleria, Castell Draig. Exact portrait aspect ratio 2:3, 1024 by 1536 composition, opaque full-bleed rectangular image. Reference 1 is the new council-room illustration and defines ONLY the coherent clean anime drawing language and castle materials; do not copy its round table or room layout into this different scene. Reference 2 is the ACTUAL HOUSE DRAIG HERALDRY: red wyvern and black castle on ivory, use its design faithfully if a house emblem is visible; it is not a background-style reference.\nSCENE: A quiet private castle chapel. Simple stone altar, brass chalice, plain candles, two short rows of oak pews, a tall stained-glass window with abstract red and gold sacred light. Ribbed stone vault, dark wood, soft morning light. Medieval Aleria fantasy devotional room, no modern church furnishings, no text, no people.\nREQUIRED COMPLETE SAVED STYLE: Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nFor this environment use crisp confident anime background lineart, clean broad flat cel-shaded color areas with only two or three tones per material. Keep stone, wood and cloth surfaces SIMPLE, not physically rendered or richly textured. Restrained natural colors, clear readable room depth, warm grey stone and dark oak connect the castle series. Quiet composition; the architecture and a few functional objects identify the location. No text or captions, no watermark, no collage, no parchment, no ragged borders, no watercolor or gouache, no photorealism, no lens effects, no film grain, no invented unrelated heraldry. Show one coherent empty place, no foreground character or frozen story action.",
+      "referenceImages": [
+        "E:\\Aleria\\AleriaAlmanach\\public\\assets\\castell-draig\\2026-10-15\\bergfried-ratskammer.png",
+        "E:\\Aleria\\Stammbäume\\assets\\images\\houses\\Llamreis Ankunft\\haus-draig.png"
+      ],
+      "localPath": "AleriaAlmanach/public/assets/castell-draig/2026-10-15/bergfried-burgkapelle.png",
+      "status": "generated",
+      "generatedSource": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a13fe5-d5d5-7703-bbfd-19388583f19c\\exec-85ee41c5-ce69-409c-8686-3e72629ecf7f.png",
+      "generatedAt": "2026-10-15T14:30:54.390Z"
+    },
+    {
+      "id": "bergfried-arbeitszimmer-graf",
+      "moduleId": "modul-1781468221923",
+      "pageIndex": 6,
+      "scene": "The count's private working study. Broad carved oak desk facing two visitor chairs, restrained House Draig tapestry, tall leaded window, bookcase and a small hearth. One bound ledger, quill, sealed letter and simple regional map on the wall. Dignified burgundy upholstery and grey stone, a warm intimate lived-in room, no people.",
+      "originalReferenceNumber": 7,
+      "prompt": "Use case: stylized-concept. Asset type: a finished environment illustration for ONE interactive roleplay chat room in Aleria, Castell Draig. Exact portrait aspect ratio 2:3, 1024 by 1536 composition, opaque full-bleed rectangular image. Reference 1 is the new council-room illustration and defines ONLY the coherent clean anime drawing language and castle materials; do not copy its round table or room layout into this different scene. Reference 2 is the ACTUAL HOUSE DRAIG HERALDRY: red wyvern and black castle on ivory, use its design faithfully if a house emblem is visible; it is not a background-style reference.\nSCENE: The count's private working study. Broad carved oak desk facing two visitor chairs, restrained House Draig tapestry, tall leaded window, bookcase and a small hearth. One bound ledger, quill, sealed letter and simple regional map on the wall. Dignified burgundy upholstery and grey stone, a warm intimate lived-in room, no people.\nREQUIRED COMPLETE SAVED STYLE: Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nFor this environment use crisp confident anime background lineart, clean broad flat cel-shaded color areas with only two or three tones per material. Keep stone, wood and cloth surfaces SIMPLE, not physically rendered or richly textured. Restrained natural colors, clear readable room depth, warm grey stone and dark oak connect the castle series. Quiet composition; the architecture and a few functional objects identify the location. No text or captions, no watermark, no collage, no parchment, no ragged borders, no watercolor or gouache, no photorealism, no lens effects, no film grain, no invented unrelated heraldry. Show one coherent empty place, no foreground character or frozen story action.",
+      "referenceImages": [
+        "E:\\Aleria\\AleriaAlmanach\\public\\assets\\castell-draig\\2026-10-15\\bergfried-ratskammer.png",
+        "E:\\Aleria\\Stammbäume\\assets\\images\\houses\\Llamreis Ankunft\\haus-draig.png"
+      ],
+      "localPath": "AleriaAlmanach/public/assets/castell-draig/2026-10-15/bergfried-arbeitszimmer-graf.png",
+      "status": "generated",
+      "generatedSource": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a13fe5-d5d5-7703-bbfd-19388583f19c\\exec-f65e626d-8369-4302-b9af-1071a03108b7.png",
+      "generatedAt": "2026-10-15T14:30:54.651Z"
+    },
+    {
+      "id": "bergfried-arbeitszimmer-baron",
+      "moduleId": "modul-1781468221923",
+      "pageIndex": 7,
+      "scene": "A distinctly separate, smaller study used by the baron and knight-prince. Oak writing desk placed SIDEWAYS beside a narrow corner window, one visitor chair, a modest map table against the wall, one sheathed sword on a stand and a low book cabinet. Grey stone, warm tan wood and subdued burgundy. Composition must differ from the count's broad frontal desk study. No people.",
+      "originalReferenceNumber": 7,
+      "prompt": "Use case: stylized-concept. Asset type: a finished environment illustration for ONE interactive roleplay chat room in Aleria, Castell Draig. Exact portrait aspect ratio 2:3, 1024 by 1536 composition, opaque full-bleed rectangular image. Reference 1 is the new council-room illustration and defines ONLY the coherent clean anime drawing language and castle materials; do not copy its round table or room layout into this different scene. Reference 2 is the ACTUAL HOUSE DRAIG HERALDRY: red wyvern and black castle on ivory, use its design faithfully if a house emblem is visible; it is not a background-style reference.\nSCENE: A distinctly separate, smaller study used by the baron and knight-prince. Oak writing desk placed SIDEWAYS beside a narrow corner window, one visitor chair, a modest map table against the wall, one sheathed sword on a stand and a low book cabinet. Grey stone, warm tan wood and subdued burgundy. Composition must differ from the count's broad frontal desk study. No people.\nREQUIRED COMPLETE SAVED STYLE: Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nFor this environment use crisp confident anime background lineart, clean broad flat cel-shaded color areas with only two or three tones per material. Keep stone, wood and cloth surfaces SIMPLE, not physically rendered or richly textured. Restrained natural colors, clear readable room depth, warm grey stone and dark oak connect the castle series. Quiet composition; the architecture and a few functional objects identify the location. No text or captions, no watermark, no collage, no parchment, no ragged borders, no watercolor or gouache, no photorealism, no lens effects, no film grain, no invented unrelated heraldry. Show one coherent empty place, no foreground character or frozen story action.",
+      "referenceImages": [
+        "E:\\Aleria\\AleriaAlmanach\\public\\assets\\castell-draig\\2026-10-15\\bergfried-ratskammer.png",
+        "E:\\Aleria\\Stammbäume\\assets\\images\\houses\\Llamreis Ankunft\\haus-draig.png"
+      ],
+      "localPath": "AleriaAlmanach/public/assets/castell-draig/2026-10-15/bergfried-arbeitszimmer-baron.png",
+      "status": "generated",
+      "generatedSource": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a13fe5-d5d5-7703-bbfd-19388583f19c\\exec-84914942-60f6-4a84-b5b6-1f5c4c401a4b.png",
+      "generatedAt": "2026-10-15T14:30:54.916Z"
+    },
+    {
+      "id": "bergfried-festsaal",
+      "moduleId": "modul-1781468221923",
+      "pageIndex": 8,
+      "scene": "The great feast hall of Castell Draig prepared but unoccupied. Long oak trestle tables and benches, a slightly raised high table at the far end, tall grey stone windows, dark timber roof trusses, three iron candle chandeliers and a broad hearth. A few simple cups and pottery dishes, restrained burgundy fabrics with one correct House Draig banner. No feast in progress, no people.",
+      "originalReferenceNumber": 8,
+      "prompt": "Use case: stylized-concept. Asset type: a finished environment illustration for ONE interactive roleplay chat room in Aleria, Castell Draig. Exact portrait aspect ratio 2:3, 1024 by 1536 composition, opaque full-bleed rectangular image. Reference 1 is the new council-room illustration and defines ONLY the coherent clean anime drawing language and castle materials; do not copy its round table or room layout into this different scene. Reference 2 is the ACTUAL HOUSE DRAIG HERALDRY: red wyvern and black castle on ivory, use its design faithfully if a house emblem is visible; it is not a background-style reference.\nSCENE: The great feast hall of Castell Draig prepared but unoccupied. Long oak trestle tables and benches, a slightly raised high table at the far end, tall grey stone windows, dark timber roof trusses, three iron candle chandeliers and a broad hearth. A few simple cups and pottery dishes, restrained burgundy fabrics with one correct House Draig banner. No feast in progress, no people.\nREQUIRED COMPLETE SAVED STYLE: Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nFor this environment use crisp confident anime background lineart, clean broad flat cel-shaded color areas with only two or three tones per material. Keep stone, wood and cloth surfaces SIMPLE, not physically rendered or richly textured. Restrained natural colors, clear readable room depth, warm grey stone and dark oak connect the castle series. Quiet composition; the architecture and a few functional objects identify the location. No text or captions, no watermark, no collage, no parchment, no ragged borders, no watercolor or gouache, no photorealism, no lens effects, no film grain, no invented unrelated heraldry. Show one coherent empty place, no foreground character or frozen story action.",
+      "referenceImages": [
+        "E:\\Aleria\\AleriaAlmanach\\public\\assets\\castell-draig\\2026-10-15\\bergfried-ratskammer.png",
+        "E:\\Aleria\\Stammbäume\\assets\\images\\houses\\Llamreis Ankunft\\haus-draig.png"
+      ],
+      "localPath": "AleriaAlmanach/public/assets/castell-draig/2026-10-15/bergfried-festsaal.png",
+      "status": "generated",
+      "generatedSource": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a13fe5-d5d5-7703-bbfd-19388583f19c\\exec-fe10a509-655a-46f4-ae15-08a5dc90189b.png",
+      "generatedAt": "2026-10-15T14:30:55.192Z"
+    },
+    {
+      "id": "aussenanlagen-innenhof",
+      "moduleId": "modul-1781469771512",
+      "pageIndex": 0,
+      "scene": "Broad empty inner courtyard of Castell Draig viewed from just inside an arch. Grey curtain walls and compact slate-roofed towers surround a stone-paved court, the keep rises behind, a low training shed stands to one side. Restrained House Draig banners. Mild daylight, mountain ridges beyond walls, readable welcoming environment, no assembled troops or people.",
+      "originalReferenceNumber": 9,
+      "prompt": "Use case: stylized-concept. Asset type: a finished environment illustration for ONE interactive roleplay chat room in Aleria, Castell Draig. Exact portrait aspect ratio 2:3, 1024 by 1536 composition, opaque full-bleed rectangular image. Reference 1 is the new council-room illustration and defines ONLY the coherent clean anime drawing language and castle materials; do not copy its round table or room layout into this different scene. Reference 2 is the ACTUAL HOUSE DRAIG HERALDRY: red wyvern and black castle on ivory, use its design faithfully if a house emblem is visible; it is not a background-style reference.\nSCENE: Broad empty inner courtyard of Castell Draig viewed from just inside an arch. Grey curtain walls and compact slate-roofed towers surround a stone-paved court, the keep rises behind, a low training shed stands to one side. Restrained House Draig banners. Mild daylight, mountain ridges beyond walls, readable welcoming environment, no assembled troops or people.\nREQUIRED COMPLETE SAVED STYLE: Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nFor this environment use crisp confident anime background lineart, clean broad flat cel-shaded color areas with only two or three tones per material. Keep stone, wood and cloth surfaces SIMPLE, not physically rendered or richly textured. Restrained natural colors, clear readable room depth, warm grey stone and dark oak connect the castle series. Quiet composition; the architecture and a few functional objects identify the location. No text or captions, no watermark, no collage, no parchment, no ragged borders, no watercolor or gouache, no photorealism, no lens effects, no film grain, no invented unrelated heraldry. Show one coherent empty place, no foreground character or frozen story action.",
+      "referenceImages": [
+        "E:\\Aleria\\AleriaAlmanach\\public\\assets\\castell-draig\\2026-10-15\\bergfried-ratskammer.png",
+        "E:\\Aleria\\Stammbäume\\assets\\images\\houses\\Llamreis Ankunft\\haus-draig.png"
+      ],
+      "localPath": "AleriaAlmanach/public/assets/castell-draig/2026-10-15/aussenanlagen-innenhof.png",
+      "status": "generated",
+      "generatedSource": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a13fe5-d5d5-7703-bbfd-19388583f19c\\exec-0508974a-f73a-47bd-a86a-d5bcc450bf8f.png",
+      "generatedAt": "2026-10-15T14:32:03.299Z"
+    },
+    {
+      "id": "aussenanlagen-haupttor",
+      "moduleId": "modul-1781469771512",
+      "pageIndex": 1,
+      "scene": "Castell Draig's fortified main gate viewed from the stone approach: two sturdy round grey towers, high pointed arch, raised iron portcullis and open oak gate leaves. The passage reveals a glimpse of the courtyard. Burgundy banners with the actual House Draig emblem. Gentle daylight, mountain castle construction, no people.",
+      "originalReferenceNumber": 10,
+      "prompt": "Use case: stylized-concept. Asset type: a finished environment illustration for ONE interactive roleplay chat room in Aleria, Castell Draig. Exact portrait aspect ratio 2:3, 1024 by 1536 composition, opaque full-bleed rectangular image. Reference 1 is the new council-room illustration and defines ONLY the coherent clean anime drawing language and castle materials; do not copy its round table or room layout into this different scene. Reference 2 is the ACTUAL HOUSE DRAIG HERALDRY: red wyvern and black castle on ivory, use its design faithfully if a house emblem is visible; it is not a background-style reference.\nSCENE: Castell Draig's fortified main gate viewed from the stone approach: two sturdy round grey towers, high pointed arch, raised iron portcullis and open oak gate leaves. The passage reveals a glimpse of the courtyard. Burgundy banners with the actual House Draig emblem. Gentle daylight, mountain castle construction, no people.\nREQUIRED COMPLETE SAVED STYLE: Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nFor this environment use crisp confident anime background lineart, clean broad flat cel-shaded color areas with only two or three tones per material. Keep stone, wood and cloth surfaces SIMPLE, not physically rendered or richly textured. Restrained natural colors, clear readable room depth, warm grey stone and dark oak connect the castle series. Quiet composition; the architecture and a few functional objects identify the location. No text or captions, no watermark, no collage, no parchment, no ragged borders, no watercolor or gouache, no photorealism, no lens effects, no film grain, no invented unrelated heraldry. Show one coherent empty place, no foreground character or frozen story action.",
+      "referenceImages": [
+        "E:\\Aleria\\AleriaAlmanach\\public\\assets\\castell-draig\\2026-10-15\\bergfried-ratskammer.png",
+        "E:\\Aleria\\Stammbäume\\assets\\images\\houses\\Llamreis Ankunft\\haus-draig.png"
+      ],
+      "localPath": "AleriaAlmanach/public/assets/castell-draig/2026-10-15/aussenanlagen-haupttor.png",
+      "status": "generated",
+      "generatedSource": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a13fe5-d5d5-7703-bbfd-19388583f19c\\exec-2498507e-c2ae-435b-a426-56b7cf58410b.png",
+      "generatedAt": "2026-10-15T14:32:03.553Z"
+    },
+    {
+      "id": "aussenanlagen-brunnenplatz",
+      "moduleId": "modul-1781469771512",
+      "pageIndex": 2,
+      "scene": "A quiet stone-paved square inside the castle walls, centered on a low round stone well with a simple iron winding frame and wooden bucket. A few modest benches, a passage to the keep, one slate-roofed corner tower, burgundy banner. Small patch of greenery, soft daytime light. No people or animals.",
+      "originalReferenceNumber": 11,
+      "prompt": "Use case: stylized-concept. Asset type: a finished environment illustration for ONE interactive roleplay chat room in Aleria, Castell Draig. Exact portrait aspect ratio 2:3, 1024 by 1536 composition, opaque full-bleed rectangular image. Reference 1 is the new council-room illustration and defines ONLY the coherent clean anime drawing language and castle materials; do not copy its round table or room layout into this different scene. Reference 2 is the ACTUAL HOUSE DRAIG HERALDRY: red wyvern and black castle on ivory, use its design faithfully if a house emblem is visible; it is not a background-style reference.\nSCENE: A quiet stone-paved square inside the castle walls, centered on a low round stone well with a simple iron winding frame and wooden bucket. A few modest benches, a passage to the keep, one slate-roofed corner tower, burgundy banner. Small patch of greenery, soft daytime light. No people or animals.\nREQUIRED COMPLETE SAVED STYLE: Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nFor this environment use crisp confident anime background lineart, clean broad flat cel-shaded color areas with only two or three tones per material. Keep stone, wood and cloth surfaces SIMPLE, not physically rendered or richly textured. Restrained natural colors, clear readable room depth, warm grey stone and dark oak connect the castle series. Quiet composition; the architecture and a few functional objects identify the location. No text or captions, no watermark, no collage, no parchment, no ragged borders, no watercolor or gouache, no photorealism, no lens effects, no film grain, no invented unrelated heraldry. Show one coherent empty place, no foreground character or frozen story action.",
+      "referenceImages": [
+        "E:\\Aleria\\AleriaAlmanach\\public\\assets\\castell-draig\\2026-10-15\\bergfried-ratskammer.png",
+        "E:\\Aleria\\Stammbäume\\assets\\images\\houses\\Llamreis Ankunft\\haus-draig.png"
+      ],
+      "localPath": "AleriaAlmanach/public/assets/castell-draig/2026-10-15/aussenanlagen-brunnenplatz.png",
+      "status": "generated",
+      "generatedSource": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a13fe5-d5d5-7703-bbfd-19388583f19c\\exec-f1a3fbb2-3e85-4517-9c51-3684f419fa39.png",
+      "generatedAt": "2026-10-15T14:34:01.230Z"
+    },
+    {
+      "id": "aussenanlagen-trainingsplatz",
+      "moduleId": "modul-1781469771512",
+      "pageIndex": 3,
+      "scene": "The castle's EMPTY practice yard: level sandy ground, three straw practice targets, two wooden training dummies, a simple rack of wooden swords and a low covered equipment shed. Grey crenellated castle walls and red House Draig banners behind. Clear daylight and open space suitable for sparring roleplay, no soldiers, no named characters.",
+      "originalReferenceNumber": 12,
+      "prompt": "Use case: stylized-concept. Asset type: a finished environment illustration for ONE interactive roleplay chat room in Aleria, Castell Draig. Exact portrait aspect ratio 2:3, 1024 by 1536 composition, opaque full-bleed rectangular image. Reference 1 is the new council-room illustration and defines ONLY the coherent clean anime drawing language and castle materials; do not copy its round table or room layout into this different scene. Reference 2 is the ACTUAL HOUSE DRAIG HERALDRY: red wyvern and black castle on ivory, use its design faithfully if a house emblem is visible; it is not a background-style reference.\nSCENE: The castle's EMPTY practice yard: level sandy ground, three straw practice targets, two wooden training dummies, a simple rack of wooden swords and a low covered equipment shed. Grey crenellated castle walls and red House Draig banners behind. Clear daylight and open space suitable for sparring roleplay, no soldiers, no named characters.\nREQUIRED COMPLETE SAVED STYLE: Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nFor this environment use crisp confident anime background lineart, clean broad flat cel-shaded color areas with only two or three tones per material. Keep stone, wood and cloth surfaces SIMPLE, not physically rendered or richly textured. Restrained natural colors, clear readable room depth, warm grey stone and dark oak connect the castle series. Quiet composition; the architecture and a few functional objects identify the location. No text or captions, no watermark, no collage, no parchment, no ragged borders, no watercolor or gouache, no photorealism, no lens effects, no film grain, no invented unrelated heraldry. Show one coherent empty place, no foreground character or frozen story action.",
+      "referenceImages": [
+        "E:\\Aleria\\AleriaAlmanach\\public\\assets\\castell-draig\\2026-10-15\\bergfried-ratskammer.png",
+        "E:\\Aleria\\Stammbäume\\assets\\images\\houses\\Llamreis Ankunft\\haus-draig.png"
+      ],
+      "localPath": "AleriaAlmanach/public/assets/castell-draig/2026-10-15/aussenanlagen-trainingsplatz.png",
+      "status": "generated",
+      "generatedSource": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a13fe5-d5d5-7703-bbfd-19388583f19c\\exec-61eafded-4cf6-4d32-9dba-a69f1fda572b.png",
+      "generatedAt": "2026-10-15T14:34:01.507Z"
+    },
+    {
+      "id": "aussenanlagen-gestuet",
+      "moduleId": "modul-1781469771512",
+      "pageIndex": 4,
+      "scene": "Castell Draig's calm stud and stable courtyard. Low stone-and-oak stable building under a slate roof, tidy open stall doors, a water trough, a small paddock containing two calm ordinary horses, one chestnut and one pale dun. Grey castle wall in the distance. Soft morning sunlight. No riders, no tack detail overload, no people.",
+      "originalReferenceNumber": 13,
+      "prompt": "Use case: stylized-concept. Asset type: a finished environment illustration for ONE interactive roleplay chat room in Aleria, Castell Draig. Exact portrait aspect ratio 2:3, 1024 by 1536 composition, opaque full-bleed rectangular image. Reference 1 is the new council-room illustration and defines ONLY the coherent clean anime drawing language and castle materials; do not copy its round table or room layout into this different scene. Reference 2 is the ACTUAL HOUSE DRAIG HERALDRY: red wyvern and black castle on ivory, use its design faithfully if a house emblem is visible; it is not a background-style reference.\nSCENE: Castell Draig's calm stud and stable courtyard. Low stone-and-oak stable building under a slate roof, tidy open stall doors, a water trough, a small paddock containing two calm ordinary horses, one chestnut and one pale dun. Grey castle wall in the distance. Soft morning sunlight. No riders, no tack detail overload, no people.\nREQUIRED COMPLETE SAVED STYLE: Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nFor this environment use crisp confident anime background lineart, clean broad flat cel-shaded color areas with only two or three tones per material. Keep stone, wood and cloth surfaces SIMPLE, not physically rendered or richly textured. Restrained natural colors, clear readable room depth, warm grey stone and dark oak connect the castle series. Quiet composition; the architecture and a few functional objects identify the location. No text or captions, no watermark, no collage, no parchment, no ragged borders, no watercolor or gouache, no photorealism, no lens effects, no film grain, no invented unrelated heraldry. Show one coherent empty place, no foreground character or frozen story action.",
+      "referenceImages": [
+        "E:\\Aleria\\AleriaAlmanach\\public\\assets\\castell-draig\\2026-10-15\\bergfried-ratskammer.png",
+        "E:\\Aleria\\Stammbäume\\assets\\images\\houses\\Llamreis Ankunft\\haus-draig.png"
+      ],
+      "localPath": "AleriaAlmanach/public/assets/castell-draig/2026-10-15/aussenanlagen-gestuet.png",
+      "status": "generated",
+      "generatedSource": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a13fe5-d5d5-7703-bbfd-19388583f19c\\exec-e1d5bbca-f799-4e99-8cfe-de056a00af13.png",
+      "generatedAt": "2026-10-15T14:35:23.257Z"
+    },
+    {
+      "id": "aussenanlagen-gartenanlage",
+      "moduleId": "modul-1781469771512",
+      "pageIndex": 5,
+      "scene": "The castle's sheltered garden inside the curtain wall. Low clipped hedges, simple herb and rose beds, a narrow gravel path to one stone bench beneath a small tree, distant grey castle towers. Soft fresh daylight, restrained natural greens and burgundy flowers, peaceful intimate medieval garden, no fountain palace extravagance, no people.",
+      "originalReferenceNumber": 14,
+      "prompt": "Use case: stylized-concept. Asset type: a finished environment illustration for ONE interactive roleplay chat room in Aleria, Castell Draig. Exact portrait aspect ratio 2:3, 1024 by 1536 composition, opaque full-bleed rectangular image. Reference 1 is the new council-room illustration and defines ONLY the coherent clean anime drawing language and castle materials; do not copy its round table or room layout into this different scene. Reference 2 is the ACTUAL HOUSE DRAIG HERALDRY: red wyvern and black castle on ivory, use its design faithfully if a house emblem is visible; it is not a background-style reference.\nSCENE: The castle's sheltered garden inside the curtain wall. Low clipped hedges, simple herb and rose beds, a narrow gravel path to one stone bench beneath a small tree, distant grey castle towers. Soft fresh daylight, restrained natural greens and burgundy flowers, peaceful intimate medieval garden, no fountain palace extravagance, no people.\nREQUIRED COMPLETE SAVED STYLE: Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nFor this environment use crisp confident anime background lineart, clean broad flat cel-shaded color areas with only two or three tones per material. Keep stone, wood and cloth surfaces SIMPLE, not physically rendered or richly textured. Restrained natural colors, clear readable room depth, warm grey stone and dark oak connect the castle series. Quiet composition; the architecture and a few functional objects identify the location. No text or captions, no watermark, no collage, no parchment, no ragged borders, no watercolor or gouache, no photorealism, no lens effects, no film grain, no invented unrelated heraldry. Show one coherent empty place, no foreground character or frozen story action.",
+      "referenceImages": [
+        "E:\\Aleria\\AleriaAlmanach\\public\\assets\\castell-draig\\2026-10-15\\bergfried-ratskammer.png",
+        "E:\\Aleria\\Stammbäume\\assets\\images\\houses\\Llamreis Ankunft\\haus-draig.png"
+      ],
+      "localPath": "AleriaAlmanach/public/assets/castell-draig/2026-10-15/aussenanlagen-gartenanlage.png",
+      "status": "generated",
+      "generatedSource": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a13fe5-d5d5-7703-bbfd-19388583f19c\\exec-f1efad91-c077-420a-a184-70f721ed8b82.png",
+      "generatedAt": "2026-10-15T14:35:23.511Z"
+    },
+    {
+      "id": "wohntrakte-korridor",
+      "moduleId": "modul-1781470059057",
+      "pageIndex": 0,
+      "scene": "A quiet residential corridor in Castell Draig with repeated low grey stone arches, warm oak doors to private chambers, a burgundy runner, occasional simple wall lamps and leaded windows. A small bench beside one door, one restrained House Draig hanging near the foreground. Human-scale intimate corridor, warm late-afternoon daylight, not an immense cathedral, no people.",
+      "originalReferenceNumber": 15,
+      "prompt": "Use case: stylized-concept. Asset type: a finished environment illustration for ONE interactive roleplay chat room in Aleria, Castell Draig. Exact portrait aspect ratio 2:3, 1024 by 1536 composition, opaque full-bleed rectangular image. Reference 1 is the new council-room illustration and defines ONLY the coherent clean anime drawing language and castle materials; do not copy its round table or room layout into this different scene. Reference 2 is the ACTUAL HOUSE DRAIG HERALDRY: red wyvern and black castle on ivory, use its design faithfully if a house emblem is visible; it is not a background-style reference.\nSCENE: A quiet residential corridor in Castell Draig with repeated low grey stone arches, warm oak doors to private chambers, a burgundy runner, occasional simple wall lamps and leaded windows. A small bench beside one door, one restrained House Draig hanging near the foreground. Human-scale intimate corridor, warm late-afternoon daylight, not an immense cathedral, no people.\nREQUIRED COMPLETE SAVED STYLE: Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nFor this environment use crisp confident anime background lineart, clean broad flat cel-shaded color areas with only two or three tones per material. Keep stone, wood and cloth surfaces SIMPLE, not physically rendered or richly textured. Restrained natural colors, clear readable room depth, warm grey stone and dark oak connect the castle series. Quiet composition; the architecture and a few functional objects identify the location. No text or captions, no watermark, no collage, no parchment, no ragged borders, no watercolor or gouache, no photorealism, no lens effects, no film grain, no invented unrelated heraldry. Show one coherent empty place, no foreground character or frozen story action.",
+      "referenceImages": [
+        "E:\\Aleria\\AleriaAlmanach\\public\\assets\\castell-draig\\2026-10-15\\bergfried-ratskammer.png",
+        "E:\\Aleria\\Stammbäume\\assets\\images\\houses\\Llamreis Ankunft\\haus-draig.png"
+      ],
+      "localPath": "AleriaAlmanach/public/assets/castell-draig/2026-10-15/wohntrakte-korridor.png",
+      "status": "generated",
+      "generatedSource": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a13fe5-d5d5-7703-bbfd-19388583f19c\\exec-0dde526e-db0d-4ded-a820-b36d05aadd3f.png",
+      "generatedAt": "2026-10-15T14:37:55.070Z"
+    },
+    {
+      "id": "wohntrakte-grafengemaecher",
+      "moduleId": "modul-1781470059057",
+      "pageIndex": 1,
+      "scene": "The actual private bedchamber of the count and countess, not a corridor. A substantial oak double bed with burgundy curtains and ivory linen, a modest hearth, two comfortable chairs near a leaded window, a small writing table and a clothing chest. Grey stone walls and dark timber beams, one subtle House Draig wall hanging. Quiet warm daylight, dignified private domestic space, no people.",
+      "originalReferenceNumber": 15,
+      "prompt": "Use case: stylized-concept. Asset type: a finished environment illustration for ONE interactive roleplay chat room in Aleria, Castell Draig. Exact portrait aspect ratio 2:3, 1024 by 1536 composition, opaque full-bleed rectangular image. Reference 1 is the new council-room illustration and defines ONLY the coherent clean anime drawing language and castle materials; do not copy its round table or room layout into this different scene. Reference 2 is the ACTUAL HOUSE DRAIG HERALDRY: red wyvern and black castle on ivory, use its design faithfully if a house emblem is visible; it is not a background-style reference.\nSCENE: The actual private bedchamber of the count and countess, not a corridor. A substantial oak double bed with burgundy curtains and ivory linen, a modest hearth, two comfortable chairs near a leaded window, a small writing table and a clothing chest. Grey stone walls and dark timber beams, one subtle House Draig wall hanging. Quiet warm daylight, dignified private domestic space, no people.\nREQUIRED COMPLETE SAVED STYLE: Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nFor this environment use crisp confident anime background lineart, clean broad flat cel-shaded color areas with only two or three tones per material. Keep stone, wood and cloth surfaces SIMPLE, not physically rendered or richly textured. Restrained natural colors, clear readable room depth, warm grey stone and dark oak connect the castle series. Quiet composition; the architecture and a few functional objects identify the location. No text or captions, no watermark, no collage, no parchment, no ragged borders, no watercolor or gouache, no photorealism, no lens effects, no film grain, no invented unrelated heraldry. Show one coherent empty place, no foreground character or frozen story action.",
+      "referenceImages": [
+        "E:\\Aleria\\AleriaAlmanach\\public\\assets\\castell-draig\\2026-10-15\\bergfried-ratskammer.png",
+        "E:\\Aleria\\Stammbäume\\assets\\images\\houses\\Llamreis Ankunft\\haus-draig.png"
+      ],
+      "localPath": "AleriaAlmanach/public/assets/castell-draig/2026-10-15/wohntrakte-grafengemaecher.png",
+      "status": "generated",
+      "generatedSource": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a13fe5-d5d5-7703-bbfd-19388583f19c\\exec-2362d1ac-fae8-4afe-b0c2-50fffbd331a0.png",
+      "generatedAt": "2026-10-15T14:37:55.337Z"
+    },
+    {
+      "id": "wohntrakte-gemaecher",
+      "moduleId": "modul-1781470059057",
+      "pageIndex": 2,
+      "scene": "An unassigned noble guest or family bedchamber in Castell Draig, no named inhabitant. One modest curtained oak bed with muted burgundy quilt, a clothing chest, a small washstand with ceramic basin, a narrow writing desk below a leaded window. Soft daylight on grey stone and dark oak. Distinct composition from the count's double-bed chamber, no people, no invented personal heraldry.",
+      "originalReferenceNumber": 15,
+      "prompt": "Use case: stylized-concept. Asset type: a finished environment illustration for ONE interactive roleplay chat room in Aleria, Castell Draig. Exact portrait aspect ratio 2:3, 1024 by 1536 composition, opaque full-bleed rectangular image. Reference 1 is the new council-room illustration and defines ONLY the coherent clean anime drawing language and castle materials; do not copy its round table or room layout into this different scene. Reference 2 is the ACTUAL HOUSE DRAIG HERALDRY: red wyvern and black castle on ivory, use its design faithfully if a house emblem is visible; it is not a background-style reference.\nSCENE: An unassigned noble guest or family bedchamber in Castell Draig, no named inhabitant. One modest curtained oak bed with muted burgundy quilt, a clothing chest, a small washstand with ceramic basin, a narrow writing desk below a leaded window. Soft daylight on grey stone and dark oak. Distinct composition from the count's double-bed chamber, no people, no invented personal heraldry.\nREQUIRED COMPLETE SAVED STYLE: Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nFor this environment use crisp confident anime background lineart, clean broad flat cel-shaded color areas with only two or three tones per material. Keep stone, wood and cloth surfaces SIMPLE, not physically rendered or richly textured. Restrained natural colors, clear readable room depth, warm grey stone and dark oak connect the castle series. Quiet composition; the architecture and a few functional objects identify the location. No text or captions, no watermark, no collage, no parchment, no ragged borders, no watercolor or gouache, no photorealism, no lens effects, no film grain, no invented unrelated heraldry. Show one coherent empty place, no foreground character or frozen story action.",
+      "referenceImages": [
+        "E:\\Aleria\\AleriaAlmanach\\public\\assets\\castell-draig\\2026-10-15\\bergfried-ratskammer.png",
+        "E:\\Aleria\\Stammbäume\\assets\\images\\houses\\Llamreis Ankunft\\haus-draig.png"
+      ],
+      "localPath": "AleriaAlmanach/public/assets/castell-draig/2026-10-15/wohntrakte-gemaecher.png",
+      "status": "generated",
+      "generatedSource": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a13fe5-d5d5-7703-bbfd-19388583f19c\\exec-680b832a-946a-412a-a4fa-b091769ff1ea.png",
+      "generatedAt": "2026-10-15T14:39:09.179Z"
+    },
+    {
+      "id": "verlies-gang",
+      "moduleId": "modul-1781476636047",
+      "pageIndex": 0,
+      "scene": "A castle dungeon passage descending gently into grey stone barrel vaults. Heavy closed oak cell doors with small barred openings on one side, sparse iron wall lanterns and a stone stair rising in the distance. Cool grey-blue shadows and warm amber lantern pools, dim yet clearly readable. No people, no gore, no skeletons, no magical effects.",
+      "originalReferenceNumber": 16,
+      "prompt": "Use case: stylized-concept. Asset type: a finished environment illustration for ONE interactive roleplay chat room in Aleria, Castell Draig. Exact portrait aspect ratio 2:3, 1024 by 1536 composition, opaque full-bleed rectangular image. Reference 1 is the new council-room illustration and defines ONLY the coherent clean anime drawing language and castle materials; do not copy its round table or room layout into this different scene. Reference 2 is the ACTUAL HOUSE DRAIG HERALDRY: red wyvern and black castle on ivory, use its design faithfully if a house emblem is visible; it is not a background-style reference.\nSCENE: A castle dungeon passage descending gently into grey stone barrel vaults. Heavy closed oak cell doors with small barred openings on one side, sparse iron wall lanterns and a stone stair rising in the distance. Cool grey-blue shadows and warm amber lantern pools, dim yet clearly readable. No people, no gore, no skeletons, no magical effects.\nREQUIRED COMPLETE SAVED STYLE: Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nFor this environment use crisp confident anime background lineart, clean broad flat cel-shaded color areas with only two or three tones per material. Keep stone, wood and cloth surfaces SIMPLE, not physically rendered or richly textured. Restrained natural colors, clear readable room depth, warm grey stone and dark oak connect the castle series. Quiet composition; the architecture and a few functional objects identify the location. No text or captions, no watermark, no collage, no parchment, no ragged borders, no watercolor or gouache, no photorealism, no lens effects, no film grain, no invented unrelated heraldry. Show one coherent empty place, no foreground character or frozen story action.",
+      "referenceImages": [
+        "E:\\Aleria\\AleriaAlmanach\\public\\assets\\castell-draig\\2026-10-15\\bergfried-ratskammer.png",
+        "E:\\Aleria\\Stammbäume\\assets\\images\\houses\\Llamreis Ankunft\\haus-draig.png"
+      ],
+      "localPath": "AleriaAlmanach/public/assets/castell-draig/2026-10-15/verlies-gang.png",
+      "status": "generated",
+      "generatedSource": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a13fe5-d5d5-7703-bbfd-19388583f19c\\exec-812e95dc-4570-498b-9666-b7886e6bcd57.png",
+      "generatedAt": "2026-10-15T14:39:09.443Z"
+    },
+    {
+      "id": "verlies-wachstube",
+      "moduleId": "modul-1781476636047",
+      "pageIndex": 1,
+      "scene": "The dungeon guards' small practical watch room. Sturdy oak duty desk with a ledger and quill, a key board with several iron keys, a plain bench, two closed cell-passage doors and a wall lamp. Rough grey stone vault, subtle House Draig banner. Restrained warm lamplight, no people, no violence.",
+      "originalReferenceNumber": 17,
+      "prompt": "Use case: stylized-concept. Asset type: a finished environment illustration for ONE interactive roleplay chat room in Aleria, Castell Draig. Exact portrait aspect ratio 2:3, 1024 by 1536 composition, opaque full-bleed rectangular image. Reference 1 is the new council-room illustration and defines ONLY the coherent clean anime drawing language and castle materials; do not copy its round table or room layout into this different scene. Reference 2 is the ACTUAL HOUSE DRAIG HERALDRY: red wyvern and black castle on ivory, use its design faithfully if a house emblem is visible; it is not a background-style reference.\nSCENE: The dungeon guards' small practical watch room. Sturdy oak duty desk with a ledger and quill, a key board with several iron keys, a plain bench, two closed cell-passage doors and a wall lamp. Rough grey stone vault, subtle House Draig banner. Restrained warm lamplight, no people, no violence.\nREQUIRED COMPLETE SAVED STYLE: Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nFor this environment use crisp confident anime background lineart, clean broad flat cel-shaded color areas with only two or three tones per material. Keep stone, wood and cloth surfaces SIMPLE, not physically rendered or richly textured. Restrained natural colors, clear readable room depth, warm grey stone and dark oak connect the castle series. Quiet composition; the architecture and a few functional objects identify the location. No text or captions, no watermark, no collage, no parchment, no ragged borders, no watercolor or gouache, no photorealism, no lens effects, no film grain, no invented unrelated heraldry. Show one coherent empty place, no foreground character or frozen story action.",
+      "referenceImages": [
+        "E:\\Aleria\\AleriaAlmanach\\public\\assets\\castell-draig\\2026-10-15\\bergfried-ratskammer.png",
+        "E:\\Aleria\\Stammbäume\\assets\\images\\houses\\Llamreis Ankunft\\haus-draig.png"
+      ],
+      "localPath": "AleriaAlmanach/public/assets/castell-draig/2026-10-15/verlies-wachstube.png",
+      "status": "generated",
+      "generatedSource": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a13fe5-d5d5-7703-bbfd-19388583f19c\\exec-d21a0687-e41b-4803-8d08-36fe2e584be2.png",
+      "generatedAt": "2026-10-15T14:41:56.775Z"
+    },
+    {
+      "id": "verlies-wachtmeisterquartier",
+      "moduleId": "modul-1781476636047",
+      "pageIndex": 2,
+      "scene": "The dungeon watchmaster's private living and working chamber, clearly distinct from the watch room. A narrow simple bed in an alcove, small writing desk beneath a barred high window, a clothes chest, a spare chair and one key ring on the wall. Stone vault, worn but clean oak, cool daylight and one small oil lamp. No people.",
+      "originalReferenceNumber": 17,
+      "prompt": "Use case: stylized-concept. Asset type: a finished environment illustration for ONE interactive roleplay chat room in Aleria, Castell Draig. Exact portrait aspect ratio 2:3, 1024 by 1536 composition, opaque full-bleed rectangular image. Reference 1 is the new council-room illustration and defines ONLY the coherent clean anime drawing language and castle materials; do not copy its round table or room layout into this different scene. Reference 2 is the ACTUAL HOUSE DRAIG HERALDRY: red wyvern and black castle on ivory, use its design faithfully if a house emblem is visible; it is not a background-style reference.\nSCENE: The dungeon watchmaster's private living and working chamber, clearly distinct from the watch room. A narrow simple bed in an alcove, small writing desk beneath a barred high window, a clothes chest, a spare chair and one key ring on the wall. Stone vault, worn but clean oak, cool daylight and one small oil lamp. No people.\nREQUIRED COMPLETE SAVED STYLE: Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nFor this environment use crisp confident anime background lineart, clean broad flat cel-shaded color areas with only two or three tones per material. Keep stone, wood and cloth surfaces SIMPLE, not physically rendered or richly textured. Restrained natural colors, clear readable room depth, warm grey stone and dark oak connect the castle series. Quiet composition; the architecture and a few functional objects identify the location. No text or captions, no watermark, no collage, no parchment, no ragged borders, no watercolor or gouache, no photorealism, no lens effects, no film grain, no invented unrelated heraldry. Show one coherent empty place, no foreground character or frozen story action.",
+      "referenceImages": [
+        "E:\\Aleria\\AleriaAlmanach\\public\\assets\\castell-draig\\2026-10-15\\bergfried-ratskammer.png",
+        "E:\\Aleria\\Stammbäume\\assets\\images\\houses\\Llamreis Ankunft\\haus-draig.png"
+      ],
+      "localPath": "AleriaAlmanach/public/assets/castell-draig/2026-10-15/verlies-wachtmeisterquartier.png",
+      "status": "generated",
+      "generatedSource": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a13fe5-d5d5-7703-bbfd-19388583f19c\\exec-7690b735-6818-4f40-877e-cc750cece311.png",
+      "generatedAt": "2026-10-15T14:41:57.051Z"
+    },
+    {
+      "id": "verlies-verhoerkammer",
+      "moduleId": "modul-1781476636047",
+      "pageIndex": 3,
+      "scene": "An EMPTY non-graphic interrogation chamber in the castle dungeon. One plain rectangular oak table, two simple opposing chairs, a closed ledger, a metal water pitcher and one lantern. Thick stone walls, a heavy closed oak door and a small high barred window. Clear restrained composition, no instruments of torture, no people, no blood.",
+      "originalReferenceNumber": 18,
+      "prompt": "Use case: stylized-concept. Asset type: a finished environment illustration for ONE interactive roleplay chat room in Aleria, Castell Draig. Exact portrait aspect ratio 2:3, 1024 by 1536 composition, opaque full-bleed rectangular image. Reference 1 is the new council-room illustration and defines ONLY the coherent clean anime drawing language and castle materials; do not copy its round table or room layout into this different scene. Reference 2 is the ACTUAL HOUSE DRAIG HERALDRY: red wyvern and black castle on ivory, use its design faithfully if a house emblem is visible; it is not a background-style reference.\nSCENE: An EMPTY non-graphic interrogation chamber in the castle dungeon. One plain rectangular oak table, two simple opposing chairs, a closed ledger, a metal water pitcher and one lantern. Thick stone walls, a heavy closed oak door and a small high barred window. Clear restrained composition, no instruments of torture, no people, no blood.\nREQUIRED COMPLETE SAVED STYLE: Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nFor this environment use crisp confident anime background lineart, clean broad flat cel-shaded color areas with only two or three tones per material. Keep stone, wood and cloth surfaces SIMPLE, not physically rendered or richly textured. Restrained natural colors, clear readable room depth, warm grey stone and dark oak connect the castle series. Quiet composition; the architecture and a few functional objects identify the location. No text or captions, no watermark, no collage, no parchment, no ragged borders, no watercolor or gouache, no photorealism, no lens effects, no film grain, no invented unrelated heraldry. Show one coherent empty place, no foreground character or frozen story action.",
+      "referenceImages": [
+        "E:\\Aleria\\AleriaAlmanach\\public\\assets\\castell-draig\\2026-10-15\\bergfried-ratskammer.png",
+        "E:\\Aleria\\Stammbäume\\assets\\images\\houses\\Llamreis Ankunft\\haus-draig.png"
+      ],
+      "localPath": "AleriaAlmanach/public/assets/castell-draig/2026-10-15/verlies-verhoerkammer.png",
+      "status": "generated",
+      "generatedSource": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a13fe5-d5d5-7703-bbfd-19388583f19c\\exec-edcf0c56-c1a2-475d-bfb8-3648119d1cce.png",
+      "generatedAt": "2026-10-15T14:43:07.980Z"
+    },
+    {
+      "id": "verlies-folterkammer",
+      "moduleId": "modul-1781476636047",
+      "pageIndex": 4,
+      "scene": "An unoccupied medieval castle torture chamber shown as a restrained non-graphic environment. A plain wooden restraint bench with leather straps, a rack of iron shackles on the wall, a closed tool chest and one wall lantern. Grey stone barrel vault and small barred high window. No person, victim, injury, blood, gore, severed body parts or scene of violence. Focus on the room architecture, no sensational props.",
+      "originalReferenceNumber": 19,
+      "prompt": "Use case: stylized-concept. Asset type: a finished environment illustration for ONE interactive roleplay chat room in Aleria, Castell Draig. Exact portrait aspect ratio 2:3, 1024 by 1536 composition, opaque full-bleed rectangular image. Reference 1 is the new council-room illustration and defines ONLY the coherent clean anime drawing language and castle materials; do not copy its round table or room layout into this different scene. Reference 2 is the ACTUAL HOUSE DRAIG HERALDRY: red wyvern and black castle on ivory, use its design faithfully if a house emblem is visible; it is not a background-style reference.\nSCENE: An unoccupied medieval castle torture chamber shown as a restrained non-graphic environment. A plain wooden restraint bench with leather straps, a rack of iron shackles on the wall, a closed tool chest and one wall lantern. Grey stone barrel vault and small barred high window. No person, victim, injury, blood, gore, severed body parts or scene of violence. Focus on the room architecture, no sensational props.\nREQUIRED COMPLETE SAVED STYLE: Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nFor this environment use crisp confident anime background lineart, clean broad flat cel-shaded color areas with only two or three tones per material. Keep stone, wood and cloth surfaces SIMPLE, not physically rendered or richly textured. Restrained natural colors, clear readable room depth, warm grey stone and dark oak connect the castle series. Quiet composition; the architecture and a few functional objects identify the location. No text or captions, no watermark, no collage, no parchment, no ragged borders, no watercolor or gouache, no photorealism, no lens effects, no film grain, no invented unrelated heraldry. Show one coherent empty place, no foreground character or frozen story action.",
+      "referenceImages": [
+        "E:\\Aleria\\AleriaAlmanach\\public\\assets\\castell-draig\\2026-10-15\\bergfried-ratskammer.png",
+        "E:\\Aleria\\Stammbäume\\assets\\images\\houses\\Llamreis Ankunft\\haus-draig.png"
+      ],
+      "localPath": "AleriaAlmanach/public/assets/castell-draig/2026-10-15/verlies-folterkammer.png",
+      "status": "generated",
+      "generatedSource": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a13fe5-d5d5-7703-bbfd-19388583f19c\\exec-7f068d8a-a32d-4fde-b976-95b3e48f8a4e.png",
+      "generatedAt": "2026-10-15T14:43:08.240Z"
+    },
+    {
+      "id": "verlies-gefaengniszelle",
+      "moduleId": "modul-1781476636047",
+      "pageIndex": 5,
+      "scene": "One small empty castle prison cell. Stone sleeping ledge with a folded rough blanket, a plain wooden stool, earthenware water jug and a narrow high barred window casting a soft beam onto grey flagstones. Iron-barred door visible along one edge. Sparse, austere, readable anime background, no prisoner, no filth spectacle or gore.",
+      "originalReferenceNumber": 20,
+      "prompt": "Use case: stylized-concept. Asset type: a finished environment illustration for ONE interactive roleplay chat room in Aleria, Castell Draig. Exact portrait aspect ratio 2:3, 1024 by 1536 composition, opaque full-bleed rectangular image. Reference 1 is the new council-room illustration and defines ONLY the coherent clean anime drawing language and castle materials; do not copy its round table or room layout into this different scene. Reference 2 is the ACTUAL HOUSE DRAIG HERALDRY: red wyvern and black castle on ivory, use its design faithfully if a house emblem is visible; it is not a background-style reference.\nSCENE: One small empty castle prison cell. Stone sleeping ledge with a folded rough blanket, a plain wooden stool, earthenware water jug and a narrow high barred window casting a soft beam onto grey flagstones. Iron-barred door visible along one edge. Sparse, austere, readable anime background, no prisoner, no filth spectacle or gore.\nREQUIRED COMPLETE SAVED STYLE: Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nFor this environment use crisp confident anime background lineart, clean broad flat cel-shaded color areas with only two or three tones per material. Keep stone, wood and cloth surfaces SIMPLE, not physically rendered or richly textured. Restrained natural colors, clear readable room depth, warm grey stone and dark oak connect the castle series. Quiet composition; the architecture and a few functional objects identify the location. No text or captions, no watermark, no collage, no parchment, no ragged borders, no watercolor or gouache, no photorealism, no lens effects, no film grain, no invented unrelated heraldry. Show one coherent empty place, no foreground character or frozen story action.",
+      "referenceImages": [
+        "E:\\Aleria\\AleriaAlmanach\\public\\assets\\castell-draig\\2026-10-15\\bergfried-ratskammer.png",
+        "E:\\Aleria\\Stammbäume\\assets\\images\\houses\\Llamreis Ankunft\\haus-draig.png"
+      ],
+      "localPath": "AleriaAlmanach/public/assets/castell-draig/2026-10-15/verlies-gefaengniszelle.png",
+      "status": "generated",
+      "generatedSource": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a13fe5-d5d5-7703-bbfd-19388583f19c\\exec-40c753c8-bf1a-4630-bc2c-ca1e73da1cec.png",
+      "generatedAt": "2026-10-15T14:44:15.989Z"
+    },
+    {
+      "id": "twr-dragwyn-aussenansicht",
+      "moduleId": "modul-1781480328358",
+      "pageIndex": 0,
+      "scene": "Exterior view looking upward at Twr Dragwyn, the castle wizard's tall tapered ROUND dark-grey stone tower with a steep slate conical roof, narrow warm lit windows, two modest adjoining turrets and one restrained violet hanging with a small correct House Draig emblem. Dramatic purple-grey clouded sky with ONE distant thin lightning fork, not an explosion. Preserve the existing tower silhouette and storm mood. No people or floating structures.",
+      "originalReferenceNumber": 21,
+      "prompt": "Use case: stylized-concept. Asset type: a finished environment illustration for ONE interactive roleplay chat room in Aleria, Castell Draig. Exact portrait aspect ratio 2:3, 1024 by 1536 composition, opaque full-bleed rectangular image. Reference 1 is the new council-room illustration and defines ONLY the coherent clean anime drawing language and castle materials; do not copy its round table or room layout into this different scene. Reference 2 is the ACTUAL HOUSE DRAIG HERALDRY: red wyvern and black castle on ivory, use its design faithfully if a house emblem is visible; it is not a background-style reference. Reference 3 is the old exterior, a subject and architectural silhouette guide ONLY; completely discard its watercolor treatment and parchment edges.\nSCENE: Exterior view looking upward at Twr Dragwyn, the castle wizard's tall tapered ROUND dark-grey stone tower with a steep slate conical roof, narrow warm lit windows, two modest adjoining turrets and one restrained violet hanging with a small correct House Draig emblem. Dramatic purple-grey clouded sky with ONE distant thin lightning fork, not an explosion. Preserve the existing tower silhouette and storm mood. No people or floating structures.\nREQUIRED COMPLETE SAVED STYLE: Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nFor this environment use crisp confident anime background lineart, clean broad flat cel-shaded color areas with only two or three tones per material. Keep stone, wood and cloth surfaces SIMPLE, not physically rendered or richly textured. Restrained natural colors, clear readable room depth, warm grey stone and dark oak connect the castle series. Quiet composition; the architecture and a few functional objects identify the location. No text or captions, no watermark, no collage, no parchment, no ragged borders, no watercolor or gouache, no photorealism, no lens effects, no film grain, no invented unrelated heraldry. Show one coherent empty place, no foreground character or frozen story action.",
+      "referenceImages": [
+        "E:\\Aleria\\AleriaAlmanach\\public\\assets\\castell-draig\\2026-10-15\\bergfried-ratskammer.png",
+        "E:\\Aleria\\Stammbäume\\assets\\images\\houses\\Llamreis Ankunft\\haus-draig.png",
+        "E:\\Aleria\\.codex-temp\\castell-draig-originals\\21.png"
+      ],
+      "localPath": "AleriaAlmanach/public/assets/castell-draig/2026-10-15/twr-dragwyn-aussenansicht.png",
+      "status": "generated",
+      "generatedSource": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a13fe5-d5d5-7703-bbfd-19388583f19c\\exec-f658ce49-f04e-45e0-a6b6-ae049b327be1.png",
+      "generatedAt": "2026-10-15T14:44:16.264Z"
+    },
+    {
+      "id": "twr-dragwyn-empfangshalle",
+      "moduleId": "modul-1781480328358",
+      "pageIndex": 2,
+      "scene": "The entrance reception hall INSIDE the round wizard tower of Castell Draig. Curved grey stone walls, pointed oak entry door, small reception desk, two visitor chairs, a modest violet runner and a stone spiral stair partially visible at the side. Soft window daylight, one restrained violet hanging with a correct small House Draig emblem. Empty practical welcoming interior, no people.",
+      "originalReferenceNumber": 21,
+      "prompt": "Use case: stylized-concept. Asset type: a finished environment illustration for ONE interactive roleplay chat room in Aleria, Castell Draig. Exact portrait aspect ratio 2:3, 1024 by 1536 composition, opaque full-bleed rectangular image. Reference 1 is the new council-room illustration and defines ONLY the coherent clean anime drawing language and castle materials; do not copy its round table or room layout into this different scene. Reference 2 is the ACTUAL HOUSE DRAIG HERALDRY: red wyvern and black castle on ivory, use its design faithfully if a house emblem is visible; it is not a background-style reference.\nSCENE: The entrance reception hall INSIDE the round wizard tower of Castell Draig. Curved grey stone walls, pointed oak entry door, small reception desk, two visitor chairs, a modest violet runner and a stone spiral stair partially visible at the side. Soft window daylight, one restrained violet hanging with a correct small House Draig emblem. Empty practical welcoming interior, no people.\nREQUIRED COMPLETE SAVED STYLE: Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nFor this environment use crisp confident anime background lineart, clean broad flat cel-shaded color areas with only two or three tones per material. Keep stone, wood and cloth surfaces SIMPLE, not physically rendered or richly textured. Restrained natural colors, clear readable room depth, warm grey stone and dark oak connect the castle series. Quiet composition; the architecture and a few functional objects identify the location. No text or captions, no watermark, no collage, no parchment, no ragged borders, no watercolor or gouache, no photorealism, no lens effects, no film grain, no invented unrelated heraldry. Show one coherent empty place, no foreground character or frozen story action.",
+      "referenceImages": [
+        "E:\\Aleria\\AleriaAlmanach\\public\\assets\\castell-draig\\2026-10-15\\bergfried-ratskammer.png",
+        "E:\\Aleria\\Stammbäume\\assets\\images\\houses\\Llamreis Ankunft\\haus-draig.png"
+      ],
+      "localPath": "AleriaAlmanach/public/assets/castell-draig/2026-10-15/twr-dragwyn-empfangshalle.png",
+      "status": "generated",
+      "generatedSource": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a13fe5-d5d5-7703-bbfd-19388583f19c\\exec-62d0cb87-db15-4ae1-b051-2155c96a6dc8.png",
+      "generatedAt": "2026-10-15T14:46:00.079Z"
+    },
+    {
+      "id": "twr-dragwyn-kunstgalerie",
+      "moduleId": "modul-1781480328358",
+      "pageIndex": 3,
+      "scene": "A quiet art gallery within the round wizard tower. Curved stone wall with four well-spaced framed fantasy landscapes and abstract celestial studies, a single stone sculpture on a low plinth, a wooden viewing bench and tall narrow windows. Soft daylight, subtle violet textile accents. Readable gallery, restrained hanging arrangement, no real artist copies or identifiable portraits, no people.",
+      "originalReferenceNumber": 21,
+      "prompt": "Use case: stylized-concept. Asset type: a finished environment illustration for ONE interactive roleplay chat room in Aleria, Castell Draig. Exact portrait aspect ratio 2:3, 1024 by 1536 composition, opaque full-bleed rectangular image. Reference 1 is the new council-room illustration and defines ONLY the coherent clean anime drawing language and castle materials; do not copy its round table or room layout into this different scene. Reference 2 is the ACTUAL HOUSE DRAIG HERALDRY: red wyvern and black castle on ivory, use its design faithfully if a house emblem is visible; it is not a background-style reference.\nSCENE: A quiet art gallery within the round wizard tower. Curved stone wall with four well-spaced framed fantasy landscapes and abstract celestial studies, a single stone sculpture on a low plinth, a wooden viewing bench and tall narrow windows. Soft daylight, subtle violet textile accents. Readable gallery, restrained hanging arrangement, no real artist copies or identifiable portraits, no people.\nREQUIRED COMPLETE SAVED STYLE: Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nFor this environment use crisp confident anime background lineart, clean broad flat cel-shaded color areas with only two or three tones per material. Keep stone, wood and cloth surfaces SIMPLE, not physically rendered or richly textured. Restrained natural colors, clear readable room depth, warm grey stone and dark oak connect the castle series. Quiet composition; the architecture and a few functional objects identify the location. No text or captions, no watermark, no collage, no parchment, no ragged borders, no watercolor or gouache, no photorealism, no lens effects, no film grain, no invented unrelated heraldry. Show one coherent empty place, no foreground character or frozen story action.",
+      "referenceImages": [
+        "E:\\Aleria\\AleriaAlmanach\\public\\assets\\castell-draig\\2026-10-15\\bergfried-ratskammer.png",
+        "E:\\Aleria\\Stammbäume\\assets\\images\\houses\\Llamreis Ankunft\\haus-draig.png"
+      ],
+      "localPath": "AleriaAlmanach/public/assets/castell-draig/2026-10-15/twr-dragwyn-kunstgalerie.png",
+      "status": "generated",
+      "generatedSource": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a13fe5-d5d5-7703-bbfd-19388583f19c\\exec-e136df45-ba18-4d4a-89cb-e41e8066f456.png",
+      "generatedAt": "2026-10-15T14:46:00.334Z"
+    },
+    {
+      "id": "twr-dragwyn-lehrsaal",
+      "moduleId": "modul-1781480328358",
+      "pageIndex": 4,
+      "scene": "A small teaching room inside the round castle wizard tower. Three rows of simple oak pupil desks facing one teacher's lectern and a dark slate board marked only with a few nonlinguistic geometric circles. Curved grey stone walls, high narrow windows and restrained violet textiles. Daylight, room ready for a lesson, no students, no teacher, no written words.",
+      "originalReferenceNumber": 21,
+      "prompt": "Use case: stylized-concept. Asset type: a finished environment illustration for ONE interactive roleplay chat room in Aleria, Castell Draig. Exact portrait aspect ratio 2:3, 1024 by 1536 composition, opaque full-bleed rectangular image. Reference 1 is the new council-room illustration and defines ONLY the coherent clean anime drawing language and castle materials; do not copy its round table or room layout into this different scene. Reference 2 is the ACTUAL HOUSE DRAIG HERALDRY: red wyvern and black castle on ivory, use its design faithfully if a house emblem is visible; it is not a background-style reference.\nSCENE: A small teaching room inside the round castle wizard tower. Three rows of simple oak pupil desks facing one teacher's lectern and a dark slate board marked only with a few nonlinguistic geometric circles. Curved grey stone walls, high narrow windows and restrained violet textiles. Daylight, room ready for a lesson, no students, no teacher, no written words.\nREQUIRED COMPLETE SAVED STYLE: Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nFor this environment use crisp confident anime background lineart, clean broad flat cel-shaded color areas with only two or three tones per material. Keep stone, wood and cloth surfaces SIMPLE, not physically rendered or richly textured. Restrained natural colors, clear readable room depth, warm grey stone and dark oak connect the castle series. Quiet composition; the architecture and a few functional objects identify the location. No text or captions, no watermark, no collage, no parchment, no ragged borders, no watercolor or gouache, no photorealism, no lens effects, no film grain, no invented unrelated heraldry. Show one coherent empty place, no foreground character or frozen story action.",
+      "referenceImages": [
+        "E:\\Aleria\\AleriaAlmanach\\public\\assets\\castell-draig\\2026-10-15\\bergfried-ratskammer.png",
+        "E:\\Aleria\\Stammbäume\\assets\\images\\houses\\Llamreis Ankunft\\haus-draig.png"
+      ],
+      "localPath": "AleriaAlmanach/public/assets/castell-draig/2026-10-15/twr-dragwyn-lehrsaal.png",
+      "status": "generated",
+      "generatedSource": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a13fe5-d5d5-7703-bbfd-19388583f19c\\exec-26f043ca-bde5-4b9e-bad4-2496a4f56883.png",
+      "generatedAt": "2026-10-15T14:48:01.220Z"
+    },
+    {
+      "id": "twr-dragwyn-wachraum",
+      "moduleId": "modul-1781480328358",
+      "pageIndex": 5,
+      "scene": "The retained knights' watch room inside the wizard tower. A small oak duty table and benches, rack holding two spears and a plain shield with the actual House Draig emblem, cloak pegs, a closed passage door and narrow window. Functional grey stone, dark oak, restrained burgundy fabric with a subtle violet doorway hanging. No guards, no people.",
+      "originalReferenceNumber": 21,
+      "prompt": "Use case: stylized-concept. Asset type: a finished environment illustration for ONE interactive roleplay chat room in Aleria, Castell Draig. Exact portrait aspect ratio 2:3, 1024 by 1536 composition, opaque full-bleed rectangular image. Reference 1 is the new council-room illustration and defines ONLY the coherent clean anime drawing language and castle materials; do not copy its round table or room layout into this different scene. Reference 2 is the ACTUAL HOUSE DRAIG HERALDRY: red wyvern and black castle on ivory, use its design faithfully if a house emblem is visible; it is not a background-style reference.\nSCENE: The retained knights' watch room inside the wizard tower. A small oak duty table and benches, rack holding two spears and a plain shield with the actual House Draig emblem, cloak pegs, a closed passage door and narrow window. Functional grey stone, dark oak, restrained burgundy fabric with a subtle violet doorway hanging. No guards, no people.\nREQUIRED COMPLETE SAVED STYLE: Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nFor this environment use crisp confident anime background lineart, clean broad flat cel-shaded color areas with only two or three tones per material. Keep stone, wood and cloth surfaces SIMPLE, not physically rendered or richly textured. Restrained natural colors, clear readable room depth, warm grey stone and dark oak connect the castle series. Quiet composition; the architecture and a few functional objects identify the location. No text or captions, no watermark, no collage, no parchment, no ragged borders, no watercolor or gouache, no photorealism, no lens effects, no film grain, no invented unrelated heraldry. Show one coherent empty place, no foreground character or frozen story action.",
+      "referenceImages": [
+        "E:\\Aleria\\AleriaAlmanach\\public\\assets\\castell-draig\\2026-10-15\\bergfried-ratskammer.png",
+        "E:\\Aleria\\Stammbäume\\assets\\images\\houses\\Llamreis Ankunft\\haus-draig.png"
+      ],
+      "localPath": "AleriaAlmanach/public/assets/castell-draig/2026-10-15/twr-dragwyn-wachraum.png",
+      "status": "generated",
+      "generatedSource": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a13fe5-d5d5-7703-bbfd-19388583f19c\\exec-095e0d8a-da8c-4f6f-905c-e1a61a03c8de.png",
+      "generatedAt": "2026-10-15T14:48:01.485Z"
+    },
+    {
+      "id": "twr-dragwyn-bibliothek",
+      "moduleId": "modul-1781480328358",
+      "pageIndex": 6,
+      "scene": "The large library inside the round wizard tower. Curving tall oak bookcases following grey stone walls, a short upper gallery reached by a wooden stair, one central reading table with two chairs and a single open book, narrow windows with daylight. Restrained violet textiles, a quiet inviting fantasy anime library with clear open circulation space, no clutter piles, no people.",
+      "originalReferenceNumber": 21,
+      "prompt": "Use case: stylized-concept. Asset type: a finished environment illustration for ONE interactive roleplay chat room in Aleria, Castell Draig. Exact portrait aspect ratio 2:3, 1024 by 1536 composition, opaque full-bleed rectangular image. Reference 1 is the new council-room illustration and defines ONLY the coherent clean anime drawing language and castle materials; do not copy its round table or room layout into this different scene. Reference 2 is the ACTUAL HOUSE DRAIG HERALDRY: red wyvern and black castle on ivory, use its design faithfully if a house emblem is visible; it is not a background-style reference.\nSCENE: The large library inside the round wizard tower. Curving tall oak bookcases following grey stone walls, a short upper gallery reached by a wooden stair, one central reading table with two chairs and a single open book, narrow windows with daylight. Restrained violet textiles, a quiet inviting fantasy anime library with clear open circulation space, no clutter piles, no people.\nREQUIRED COMPLETE SAVED STYLE: Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nFor this environment use crisp confident anime background lineart, clean broad flat cel-shaded color areas with only two or three tones per material. Keep stone, wood and cloth surfaces SIMPLE, not physically rendered or richly textured. Restrained natural colors, clear readable room depth, warm grey stone and dark oak connect the castle series. Quiet composition; the architecture and a few functional objects identify the location. No text or captions, no watermark, no collage, no parchment, no ragged borders, no watercolor or gouache, no photorealism, no lens effects, no film grain, no invented unrelated heraldry. Show one coherent empty place, no foreground character or frozen story action.",
+      "referenceImages": [
+        "E:\\Aleria\\AleriaAlmanach\\public\\assets\\castell-draig\\2026-10-15\\bergfried-ratskammer.png",
+        "E:\\Aleria\\Stammbäume\\assets\\images\\houses\\Llamreis Ankunft\\haus-draig.png"
+      ],
+      "localPath": "AleriaAlmanach/public/assets/castell-draig/2026-10-15/twr-dragwyn-bibliothek.png",
+      "status": "generated",
+      "generatedSource": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a13fe5-d5d5-7703-bbfd-19388583f19c\\exec-731c23c3-bf04-4235-adb7-89f594d850dd.png",
+      "generatedAt": "2026-10-15T14:49:37.963Z"
+    },
+    {
+      "id": "twr-dragwyn-archiv",
+      "moduleId": "modul-1781480328358",
+      "pageIndex": 7,
+      "scene": "The wizard's orderly archive chamber inside the round tower. Rows of lower oak cabinets with closed doors and shallow parchment pigeonholes, a few rolled scrolls in leather cases, one sorting table and a small leaded window. Curved stone walls, cool diffuse daylight, one violet curtain. Clearly a records archive with storage rather than a grand reading library. No readable labels, no people.",
+      "originalReferenceNumber": 21,
+      "prompt": "Use case: stylized-concept. Asset type: a finished environment illustration for ONE interactive roleplay chat room in Aleria, Castell Draig. Exact portrait aspect ratio 2:3, 1024 by 1536 composition, opaque full-bleed rectangular image. Reference 1 is the new council-room illustration and defines ONLY the coherent clean anime drawing language and castle materials; do not copy its round table or room layout into this different scene. Reference 2 is the ACTUAL HOUSE DRAIG HERALDRY: red wyvern and black castle on ivory, use its design faithfully if a house emblem is visible; it is not a background-style reference.\nSCENE: The wizard's orderly archive chamber inside the round tower. Rows of lower oak cabinets with closed doors and shallow parchment pigeonholes, a few rolled scrolls in leather cases, one sorting table and a small leaded window. Curved stone walls, cool diffuse daylight, one violet curtain. Clearly a records archive with storage rather than a grand reading library. No readable labels, no people.\nREQUIRED COMPLETE SAVED STYLE: Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nFor this environment use crisp confident anime background lineart, clean broad flat cel-shaded color areas with only two or three tones per material. Keep stone, wood and cloth surfaces SIMPLE, not physically rendered or richly textured. Restrained natural colors, clear readable room depth, warm grey stone and dark oak connect the castle series. Quiet composition; the architecture and a few functional objects identify the location. No text or captions, no watermark, no collage, no parchment, no ragged borders, no watercolor or gouache, no photorealism, no lens effects, no film grain, no invented unrelated heraldry. Show one coherent empty place, no foreground character or frozen story action.",
+      "referenceImages": [
+        "E:\\Aleria\\AleriaAlmanach\\public\\assets\\castell-draig\\2026-10-15\\bergfried-ratskammer.png",
+        "E:\\Aleria\\Stammbäume\\assets\\images\\houses\\Llamreis Ankunft\\haus-draig.png"
+      ],
+      "localPath": "AleriaAlmanach/public/assets/castell-draig/2026-10-15/twr-dragwyn-archiv.png",
+      "status": "generated",
+      "generatedSource": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a13fe5-d5d5-7703-bbfd-19388583f19c\\exec-eb35d918-0b91-44af-87a7-332f49119fbb.png",
+      "generatedAt": "2026-10-15T14:49:38.227Z"
+    },
+    {
+      "id": "twr-dragwyn-schreibstube",
+      "moduleId": "modul-1781480328358",
+      "pageIndex": 8,
+      "scene": "A small shared scribes' workroom inside the wizard tower. Two side-by-side oak writing desks beneath narrow leaded windows, quills, inkpots, a few orderly sheets and wax seals, one low shelf of blank bound books. Grey curved stone walls, timber beams, restrained violet curtain, bright gentle daylight. No readable writing, no people.",
+      "originalReferenceNumber": 21,
+      "prompt": "Use case: stylized-concept. Asset type: a finished environment illustration for ONE interactive roleplay chat room in Aleria, Castell Draig. Exact portrait aspect ratio 2:3, 1024 by 1536 composition, opaque full-bleed rectangular image. Reference 1 is the new council-room illustration and defines ONLY the coherent clean anime drawing language and castle materials; do not copy its round table or room layout into this different scene. Reference 2 is the ACTUAL HOUSE DRAIG HERALDRY: red wyvern and black castle on ivory, use its design faithfully if a house emblem is visible; it is not a background-style reference.\nSCENE: A small shared scribes' workroom inside the wizard tower. Two side-by-side oak writing desks beneath narrow leaded windows, quills, inkpots, a few orderly sheets and wax seals, one low shelf of blank bound books. Grey curved stone walls, timber beams, restrained violet curtain, bright gentle daylight. No readable writing, no people.\nREQUIRED COMPLETE SAVED STYLE: Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nFor this environment use crisp confident anime background lineart, clean broad flat cel-shaded color areas with only two or three tones per material. Keep stone, wood and cloth surfaces SIMPLE, not physically rendered or richly textured. Restrained natural colors, clear readable room depth, warm grey stone and dark oak connect the castle series. Quiet composition; the architecture and a few functional objects identify the location. No text or captions, no watermark, no collage, no parchment, no ragged borders, no watercolor or gouache, no photorealism, no lens effects, no film grain, no invented unrelated heraldry. Show one coherent empty place, no foreground character or frozen story action.",
+      "referenceImages": [
+        "E:\\Aleria\\AleriaAlmanach\\public\\assets\\castell-draig\\2026-10-15\\bergfried-ratskammer.png",
+        "E:\\Aleria\\Stammbäume\\assets\\images\\houses\\Llamreis Ankunft\\haus-draig.png"
+      ],
+      "localPath": "AleriaAlmanach/public/assets/castell-draig/2026-10-15/twr-dragwyn-schreibstube.png",
+      "status": "generated",
+      "generatedSource": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a13fe5-d5d5-7703-bbfd-19388583f19c\\exec-b32857cc-c8e5-4ee4-836b-ff109644c09e.png",
+      "generatedAt": "2026-10-15T14:51:19.706Z"
+    },
+    {
+      "id": "twr-dragwyn-studierzimmer",
+      "moduleId": "modul-1781480328358",
+      "pageIndex": 9,
+      "scene": "An intimate scholarly reading and study room in the round wizard tower. A comfortable upholstered chair beside a modest hearth, a small reading desk with one open book and a simple brass armillary sphere, low bookcase and a narrow window. Soft cool daylight balanced by hearthlight, grey stone, dark oak, muted violet textiles. Distinct from a formal office, no people, no visual clutter.",
+      "originalReferenceNumber": 21,
+      "prompt": "Use case: stylized-concept. Asset type: a finished environment illustration for ONE interactive roleplay chat room in Aleria, Castell Draig. Exact portrait aspect ratio 2:3, 1024 by 1536 composition, opaque full-bleed rectangular image. Reference 1 is the new council-room illustration and defines ONLY the coherent clean anime drawing language and castle materials; do not copy its round table or room layout into this different scene. Reference 2 is the ACTUAL HOUSE DRAIG HERALDRY: red wyvern and black castle on ivory, use its design faithfully if a house emblem is visible; it is not a background-style reference.\nSCENE: An intimate scholarly reading and study room in the round wizard tower. A comfortable upholstered chair beside a modest hearth, a small reading desk with one open book and a simple brass armillary sphere, low bookcase and a narrow window. Soft cool daylight balanced by hearthlight, grey stone, dark oak, muted violet textiles. Distinct from a formal office, no people, no visual clutter.\nREQUIRED COMPLETE SAVED STYLE: Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nFor this environment use crisp confident anime background lineart, clean broad flat cel-shaded color areas with only two or three tones per material. Keep stone, wood and cloth surfaces SIMPLE, not physically rendered or richly textured. Restrained natural colors, clear readable room depth, warm grey stone and dark oak connect the castle series. Quiet composition; the architecture and a few functional objects identify the location. No text or captions, no watermark, no collage, no parchment, no ragged borders, no watercolor or gouache, no photorealism, no lens effects, no film grain, no invented unrelated heraldry. Show one coherent empty place, no foreground character or frozen story action.",
+      "referenceImages": [
+        "E:\\Aleria\\AleriaAlmanach\\public\\assets\\castell-draig\\2026-10-15\\bergfried-ratskammer.png",
+        "E:\\Aleria\\Stammbäume\\assets\\images\\houses\\Llamreis Ankunft\\haus-draig.png"
+      ],
+      "localPath": "AleriaAlmanach/public/assets/castell-draig/2026-10-15/twr-dragwyn-studierzimmer.png",
+      "status": "generated",
+      "generatedSource": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a13fe5-d5d5-7703-bbfd-19388583f19c\\exec-cc6e0b15-0922-4ba4-8807-fc067140fb03.png",
+      "generatedAt": "2026-10-15T14:51:19.966Z"
+    },
+    {
+      "id": "twr-dragwyn-alchemielabor",
+      "moduleId": "modul-1781480328358",
+      "pageIndex": 10,
+      "scene": "A clean practical medieval fantasy alchemy laboratory inside the round stone wizard tower. One sturdy oak workbench with a small glass alembic, three stoppered flasks, mortar and pestle, a balance scale and a modest cupboard of jars. A narrow window lights the bench, small contained furnace below a stone hood. Grey stone and muted violet cloth, simple flat anime materials, no neon chemistry, no explosions, no people.",
+      "originalReferenceNumber": 21,
+      "prompt": "Use case: stylized-concept. Asset type: a finished environment illustration for ONE interactive roleplay chat room in Aleria, Castell Draig. Exact portrait aspect ratio 2:3, 1024 by 1536 composition, opaque full-bleed rectangular image. Reference 1 is the new council-room illustration and defines ONLY the coherent clean anime drawing language and castle materials; do not copy its round table or room layout into this different scene. Reference 2 is the ACTUAL HOUSE DRAIG HERALDRY: red wyvern and black castle on ivory, use its design faithfully if a house emblem is visible; it is not a background-style reference.\nSCENE: A clean practical medieval fantasy alchemy laboratory inside the round stone wizard tower. One sturdy oak workbench with a small glass alembic, three stoppered flasks, mortar and pestle, a balance scale and a modest cupboard of jars. A narrow window lights the bench, small contained furnace below a stone hood. Grey stone and muted violet cloth, simple flat anime materials, no neon chemistry, no explosions, no people.\nREQUIRED COMPLETE SAVED STYLE: Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nFor this environment use crisp confident anime background lineart, clean broad flat cel-shaded color areas with only two or three tones per material. Keep stone, wood and cloth surfaces SIMPLE, not physically rendered or richly textured. Restrained natural colors, clear readable room depth, warm grey stone and dark oak connect the castle series. Quiet composition; the architecture and a few functional objects identify the location. No text or captions, no watermark, no collage, no parchment, no ragged borders, no watercolor or gouache, no photorealism, no lens effects, no film grain, no invented unrelated heraldry. Show one coherent empty place, no foreground character or frozen story action.",
+      "referenceImages": [
+        "E:\\Aleria\\AleriaAlmanach\\public\\assets\\castell-draig\\2026-10-15\\bergfried-ratskammer.png",
+        "E:\\Aleria\\Stammbäume\\assets\\images\\houses\\Llamreis Ankunft\\haus-draig.png"
+      ],
+      "localPath": "AleriaAlmanach/public/assets/castell-draig/2026-10-15/twr-dragwyn-alchemielabor.png",
+      "status": "generated",
+      "generatedSource": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a13fe5-d5d5-7703-bbfd-19388583f19c\\exec-cb6ea436-788a-4c90-b3f1-7e8bc16c6278.png",
+      "generatedAt": "2026-10-15T14:52:37.035Z"
+    },
+    {
+      "id": "twr-dragwyn-gemaecher",
+      "moduleId": "modul-1781480328358",
+      "pageIndex": 11,
+      "scene": "The wizard tower's private bedchamber, no named inhabitant. One comfortable oak bed in a curved stone alcove with muted violet curtains and ivory bedding, a small washstand, closed clothing chest and armchair beside a tall narrow window. A modest hearth provides a warm accent. Quiet domestic interior, no clutter of magical props, no people.",
+      "originalReferenceNumber": 21,
+      "prompt": "Use case: stylized-concept. Asset type: a finished environment illustration for ONE interactive roleplay chat room in Aleria, Castell Draig. Exact portrait aspect ratio 2:3, 1024 by 1536 composition, opaque full-bleed rectangular image. Reference 1 is the new council-room illustration and defines ONLY the coherent clean anime drawing language and castle materials; do not copy its round table or room layout into this different scene. Reference 2 is the ACTUAL HOUSE DRAIG HERALDRY: red wyvern and black castle on ivory, use its design faithfully if a house emblem is visible; it is not a background-style reference.\nSCENE: The wizard tower's private bedchamber, no named inhabitant. One comfortable oak bed in a curved stone alcove with muted violet curtains and ivory bedding, a small washstand, closed clothing chest and armchair beside a tall narrow window. A modest hearth provides a warm accent. Quiet domestic interior, no clutter of magical props, no people.\nREQUIRED COMPLETE SAVED STYLE: Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nFor this environment use crisp confident anime background lineart, clean broad flat cel-shaded color areas with only two or three tones per material. Keep stone, wood and cloth surfaces SIMPLE, not physically rendered or richly textured. Restrained natural colors, clear readable room depth, warm grey stone and dark oak connect the castle series. Quiet composition; the architecture and a few functional objects identify the location. No text or captions, no watermark, no collage, no parchment, no ragged borders, no watercolor or gouache, no photorealism, no lens effects, no film grain, no invented unrelated heraldry. Show one coherent empty place, no foreground character or frozen story action.",
+      "referenceImages": [
+        "E:\\Aleria\\AleriaAlmanach\\public\\assets\\castell-draig\\2026-10-15\\bergfried-ratskammer.png",
+        "E:\\Aleria\\Stammbäume\\assets\\images\\houses\\Llamreis Ankunft\\haus-draig.png"
+      ],
+      "localPath": "AleriaAlmanach/public/assets/castell-draig/2026-10-15/twr-dragwyn-gemaecher.png",
+      "status": "generated",
+      "generatedSource": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a13fe5-d5d5-7703-bbfd-19388583f19c\\exec-43e17b58-4e62-42c8-9be2-cdd702e930c4.png",
+      "generatedAt": "2026-10-15T14:52:37.285Z"
+    },
+    {
+      "id": "twr-dragwyn-arbeitszimmer-ratsmagier",
+      "moduleId": "modul-1781480328358",
+      "pageIndex": 12,
+      "scene": "The council wizard's formal office at the upper level of the round tower. A large oak writing desk with two visitor chairs, one closed grimoire and a single simple brass celestial instrument; tall narrow arched windows reveal distant mountain sky. Curved stone walls, a restrained violet hanging with a small correct House Draig emblem, low bookcase. Clear daylight, dignified but understated magical scholarship, no person, no floating objects.",
+      "originalReferenceNumber": 21,
+      "prompt": "Use case: stylized-concept. Asset type: a finished environment illustration for ONE interactive roleplay chat room in Aleria, Castell Draig. Exact portrait aspect ratio 2:3, 1024 by 1536 composition, opaque full-bleed rectangular image. Reference 1 is the new council-room illustration and defines ONLY the coherent clean anime drawing language and castle materials; do not copy its round table or room layout into this different scene. Reference 2 is the ACTUAL HOUSE DRAIG HERALDRY: red wyvern and black castle on ivory, use its design faithfully if a house emblem is visible; it is not a background-style reference.\nSCENE: The council wizard's formal office at the upper level of the round tower. A large oak writing desk with two visitor chairs, one closed grimoire and a single simple brass celestial instrument; tall narrow arched windows reveal distant mountain sky. Curved stone walls, a restrained violet hanging with a small correct House Draig emblem, low bookcase. Clear daylight, dignified but understated magical scholarship, no person, no floating objects.\nREQUIRED COMPLETE SAVED STYLE: Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nFor this environment use crisp confident anime background lineart, clean broad flat cel-shaded color areas with only two or three tones per material. Keep stone, wood and cloth surfaces SIMPLE, not physically rendered or richly textured. Restrained natural colors, clear readable room depth, warm grey stone and dark oak connect the castle series. Quiet composition; the architecture and a few functional objects identify the location. No text or captions, no watermark, no collage, no parchment, no ragged borders, no watercolor or gouache, no photorealism, no lens effects, no film grain, no invented unrelated heraldry. Show one coherent empty place, no foreground character or frozen story action.",
+      "referenceImages": [
+        "E:\\Aleria\\AleriaAlmanach\\public\\assets\\castell-draig\\2026-10-15\\bergfried-ratskammer.png",
+        "E:\\Aleria\\Stammbäume\\assets\\images\\houses\\Llamreis Ankunft\\haus-draig.png"
+      ],
+      "localPath": "AleriaAlmanach/public/assets/castell-draig/2026-10-15/twr-dragwyn-arbeitszimmer-ratsmagier.png",
+      "status": "generated",
+      "generatedSource": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a13fe5-d5d5-7703-bbfd-19388583f19c\\exec-f81c2055-1ba1-49f8-b235-50899ff7a5de.png",
+      "generatedAt": "2026-10-15T14:53:41.437Z"
+    },
+    {
+      "id": "twr-dragwyn-portalraum",
+      "moduleId": "modul-1781480328358",
+      "pageIndex": 13,
+      "scene": "The portal chamber INSIDE the round wizard tower. One freestanding ancient stone doorway with a very restrained pale blue-violet softly luminous surface, standing on a low circular stone platform. Grey curved stone walls, three shallow steps, a small control plinth and tall narrow windows. Simple nonlinguistic geometric markings only, quiet stable magic, no storm, no explosion, no cosmic spectacle, no people.",
+      "originalReferenceNumber": 21,
+      "prompt": "Use case: stylized-concept. Asset type: a finished environment illustration for ONE interactive roleplay chat room in Aleria, Castell Draig. Exact portrait aspect ratio 2:3, 1024 by 1536 composition, opaque full-bleed rectangular image. Reference 1 is the new council-room illustration and defines ONLY the coherent clean anime drawing language and castle materials; do not copy its round table or room layout into this different scene. Reference 2 is the ACTUAL HOUSE DRAIG HERALDRY: red wyvern and black castle on ivory, use its design faithfully if a house emblem is visible; it is not a background-style reference.\nSCENE: The portal chamber INSIDE the round wizard tower. One freestanding ancient stone doorway with a very restrained pale blue-violet softly luminous surface, standing on a low circular stone platform. Grey curved stone walls, three shallow steps, a small control plinth and tall narrow windows. Simple nonlinguistic geometric markings only, quiet stable magic, no storm, no explosion, no cosmic spectacle, no people.\nREQUIRED COMPLETE SAVED STYLE: Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nFor this environment use crisp confident anime background lineart, clean broad flat cel-shaded color areas with only two or three tones per material. Keep stone, wood and cloth surfaces SIMPLE, not physically rendered or richly textured. Restrained natural colors, clear readable room depth, warm grey stone and dark oak connect the castle series. Quiet composition; the architecture and a few functional objects identify the location. No text or captions, no watermark, no collage, no parchment, no ragged borders, no watercolor or gouache, no photorealism, no lens effects, no film grain, no invented unrelated heraldry. Show one coherent empty place, no foreground character or frozen story action.",
+      "referenceImages": [
+        "E:\\Aleria\\AleriaAlmanach\\public\\assets\\castell-draig\\2026-10-15\\bergfried-ratskammer.png",
+        "E:\\Aleria\\Stammbäume\\assets\\images\\houses\\Llamreis Ankunft\\haus-draig.png"
+      ],
+      "localPath": "AleriaAlmanach/public/assets/castell-draig/2026-10-15/twr-dragwyn-portalraum.png",
+      "status": "generated",
+      "generatedSource": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a13fe5-d5d5-7703-bbfd-19388583f19c\\exec-b83e0759-bf7e-4881-a466-aa37d41cdd52.png",
+      "generatedAt": "2026-10-15T14:53:41.707Z"
+    }
+  ]
+}
