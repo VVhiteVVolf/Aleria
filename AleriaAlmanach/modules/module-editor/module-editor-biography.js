@@ -7,8 +7,8 @@ function buildBiographyPortraitStagesEditor(biography = {}) {
   );
   return `
           <div class="module-editor-field wide">
-            <label>Portrait-Altersstufen</label>
-            <div class="module-editor-help">[1] verwendet immer das Hauptportrait der Biographie. In [2] bis [5] können weitere Altersstadien hinterlegt werden.</div>
+            <label>Portraits und Altersstufen</label>
+            <div class="module-editor-help">[1] verwendet immer das Hauptportrait der Biographie. In [2] bis [5] können weitere Portraits oder Altersstadien hinterlegt werden.</div>
             <div class="inline-stat-editor biography-portrait-stage-editor">
               <div class="inline-stat-row biography-portrait-stage-row is-default">
                 <strong>[1]</strong>
@@ -19,7 +19,19 @@ function buildBiographyPortraitStagesEditor(biography = {}) {
                 <input class="inline-edit-input me-biography-portrait-stage" type="text" inputmode="url" data-biography-portrait-stage-index="${index}" value="${escapeHtml(source)}" placeholder="Optionale Portrait-URL für Altersstufe ${index + 2}">
               </label>`).join('')}
             </div>
+            <div class="module-editor-grid">
+              ${Array.from({ length: 5 }, (_, index) => `<label class="module-editor-field">Bildunterschrift [${index + 1}]<input type="text" class="me-biography-portrait-caption" data-biography-portrait-caption-index="${index}" maxlength="500" value="${escapeHtml(biography.portraitCaptions?.[index] || '')}"></label>`).join('')}
+            </div>
           </div>`;
+}
+
+function collectBiographyPortraitCaptions(card) {
+  const captions = Array(5).fill('');
+  card.querySelectorAll('.me-biography-portrait-caption').forEach(input => {
+    const index = Number(input.dataset.biographyPortraitCaptionIndex);
+    if (Number.isInteger(index) && index >= 0 && index < captions.length) captions[index] = String(input.value || '').trim();
+  });
+  return captions;
 }
 
 function collectBiographyPortraitStages(card) {
@@ -568,6 +580,7 @@ function collectBiographyModuleEditorPage(card, page) {
   page.biography = sanitizeBiographyData({
     portrait: getTrimmedFormValue(card, '.me-biography-portrait'),
     portraitStages: collectBiographyPortraitStages(card),
+    portraitCaptions: collectBiographyPortraitCaptions(card),
     biographyTitle: getTrimmedFormValue(card, '.me-biography-title'),
     biographyText: getTrimmedFormValue(card, '.me-biography-text'),
     sideWidth: getFormValue(card, '.me-biography-side-width'),

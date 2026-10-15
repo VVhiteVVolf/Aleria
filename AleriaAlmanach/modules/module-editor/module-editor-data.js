@@ -1091,9 +1091,14 @@ function sanitizeBiographyData(data = {}) {
     { length: 4 },
     (_, index) => String(Array.isArray(data.portraitStages) ? data.portraitStages[index] || '' : '').trim()
   );
+  const portraitCaptions = Array.from(
+    { length: 5 },
+    (_, index) => String(Array.isArray(data.portraitCaptions) ? data.portraitCaptions[index] || '' : '').trim().slice(0, 500)
+  );
 
   return {
     portraitStages,
+    ...(portraitCaptions.some(Boolean) ? { portraitCaptions } : {}),
     portrait: String(data.portrait || '').trim(),
     sideWidth: clampBiographyNumber(data.sideWidth, 100, 35, 100),
     connectionPortraitHeight: clampBiographyNumber(data.connectionPortraitHeight, 68, 44, 140),

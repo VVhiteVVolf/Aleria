@@ -115,6 +115,7 @@ function getBiographyPortraitStages(page) {
     : (Array.isArray(page?.imageTabs) ? page.imageTabs.map(item => item?.image || '') : []);
   return stages.map((source, index) => ({
     label: `[${index + 2}]`,
+    caption: String(page?.biography?.portraitCaptions?.[index + 1] || '').trim(),
     image: sanitizeImageSrc(source || '')
   })).filter(stage => stage.image);
 }
@@ -126,20 +127,21 @@ function buildBiographyPortrait(page, entry) {
   const mainPortrait = sanitizeImageSrc(page.image || page.biography?.portrait || entry?.image || entry?.portrait || '');
   const tabs = portraitStages.length
     ? [
-        ...(mainPortrait ? [{ label: '[1]', image: mainPortrait }] : []),
+        ...(mainPortrait ? [{ label: '[1]', image: mainPortrait, caption: String(page.biography?.portraitCaptions?.[0] || '').trim() }] : []),
         ...portraitStages
       ]
     : getModulePortraitTabs(page);
   if (tabs.length < 2) {
     const image = tabs.length === 1 ? tabs[0].image : mainPortrait;
     return image
-      ? `<img class="biography-portrait" src="${image}" alt="${escapeHtml(entry.title || '')}" loading="eager" decoding="async" fetchpriority="high"${buildModuleImageElementAttrs(page, 'cover', 'center top')}>`
+      ? `<img class="biography-portrait" src="${image}" alt="${escapeHtml(entry.title || '')}" loading="eager" decoding="async" fetchpriority="high"${buildModuleImageElementAttrs(page, 'cover', 'center top')}>${page.biography?.portraitCaptions?.[0] ? `<p class="biography-portrait-caption active">${escapeHtml(page.biography.portraitCaptions[0])}</p>` : ''}`
       : `<div class="biography-portrait placeholder">${getInitialChar(entry.title)}</div>`;
   }
   return `
         <div class="module-portrait-tabs biography-portrait-tabs" data-portrait-tabs>
           ${buildModulePortraitTabBar(tabs)}
           ${tabs.map((tab, index) => buildModulePortraitPaneImage(page, tab, index, 'biography-portrait')).join('')}
+          ${tabs.some(tab => tab.caption) ? `<div aria-live="polite">${tabs.map((tab, index) => `<p class="biography-portrait-caption${index === 0 ? ' active' : ''}" data-portrait-caption="${index}">${escapeHtml(tab.caption || '')}</p>`).join('')}</div>` : ''}
         </div>`;
 }
 
@@ -1770,5 +1772,8 @@ document.addEventListener('click', event => {
   });
   wrap.querySelectorAll('[data-portrait-pane]').forEach(pane => {
     pane.classList.toggle('active', String(pane.dataset.portraitPane) === index);
+  });
+  wrap.querySelectorAll('[data-portrait-caption]').forEach(caption => {
+    caption.classList.toggle('active', String(caption.dataset.portraitCaption) === index);
   });
 });
