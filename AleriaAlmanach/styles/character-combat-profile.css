@@ -1,3 +1,5 @@
+@import url('./character-skill-icons.css?v=20261015-skill-icons-v1');
+
 .cp-combat-tab {
   overflow-y: auto;
   background:
@@ -623,17 +625,6 @@
   color: var(--sheet-gold-bright);
   font: 600 1rem/1 "Cinzel", serif;
   text-align: center;
-}
-
-.cp-sheet-skill-identity {
-  display: grid;
-  gap: 0.26rem;
-}
-
-.cp-sheet-skill-identity input:last-child {
-  padding-block: 0.28rem;
-  color: var(--sheet-muted);
-  font-size: 0.72rem;
 }
 
 .cp-sheet-head-actions {

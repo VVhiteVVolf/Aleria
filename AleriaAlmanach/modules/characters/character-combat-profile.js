@@ -55,6 +55,7 @@ import {
 
 import { mountCharacterCombatStatus } from './character-combat-status.js?v=20260928-equipment-art-v4';
 import { renderCharacterGameplayGuideLink } from './gameplay-guide-link.js';
+import { renderCharacterSkillIcon, updateCharacterSkillIcon } from './character-skill-icons.js?v=20261015-skill-icons-v1';
 
 let activeCharacter = null;
 let draftProfile = sanitizeCharacterCombatProfile({});
@@ -521,7 +522,7 @@ function renderSkills(profile) {
       <div class="cp-sheet-table-head" role="row"><span>Gesamt</span><span>Fertigkeit</span><span>Attribut</span><span>Kompetenz</span><span>Bonus</span><span></span></div>
       ${profile.skills.map(skill => `<div class="cp-sheet-table-row" role="row">
         <strong data-combat-skill-total="${escapeMarkup(skill.id)}">${displayModifier(getSkillTotal(profile, skill))}</strong>
-        <div class="cp-sheet-skill-identity"><input data-combat-collection="skills" data-combat-item-id="${escapeMarkup(skill.id)}" data-combat-property="name" value="${escapeMarkup(skill.name)}" maxlength="100" aria-label="Fertigkeit"><input data-combat-collection="skills" data-combat-item-id="${escapeMarkup(skill.id)}" data-combat-property="notes" value="${escapeMarkup(skill.notes)}" maxlength="500" placeholder="Notiz / Besonderheit" aria-label="Fertigkeitsnotiz"></div>
+        <div class="cp-sheet-skill-identity">${renderCharacterSkillIcon(skill)}<input data-combat-collection="skills" data-combat-item-id="${escapeMarkup(skill.id)}" data-combat-property="name" value="${escapeMarkup(skill.name)}" maxlength="100" aria-label="Fertigkeit"><input data-combat-collection="skills" data-combat-item-id="${escapeMarkup(skill.id)}" data-combat-property="notes" value="${escapeMarkup(skill.notes)}" maxlength="500" placeholder="Notiz / Besonderheit" aria-label="Fertigkeitsnotiz"></div>
         <select data-combat-collection="skills" data-combat-item-id="${escapeMarkup(skill.id)}" data-combat-property="attributeKey" aria-label="Attribut">${renderAttributeOptions(skill.attributeKey)}</select>
         <select data-combat-collection="skills" data-combat-item-id="${escapeMarkup(skill.id)}" data-combat-property="proficiency" aria-label="Kompetenz"><option value="none"${selected(skill.proficiency, 'none')}>Keine</option><option value="trained"${selected(skill.proficiency, 'trained')}>Trainiert</option><option value="expertise"${selected(skill.proficiency, 'expertise')}>Expertise</option></select>
         <input type="number" min="-99" max="99" data-combat-collection="skills" data-combat-item-id="${escapeMarkup(skill.id)}" data-combat-property="bonus" value="${skill.bonus}" aria-label="Freier Bonus">
@@ -1038,6 +1039,7 @@ function updateDraftField(target) {
   const item = findCollectionItem(collectionPath, itemId);
   if (!item) return false;
   setAtPath(item, property, inputValue(target));
+  if (collectionPath === 'skills' && property === 'name') updateCharacterSkillIcon(target);
   if (collectionPath === 'magic.spells' && property === 'level') {
     const level = Math.max(0, Math.min(10, Number(target.value) || 0));
     item.level = level;

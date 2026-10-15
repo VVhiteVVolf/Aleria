@@ -1,0 +1,26 @@
+.cp-sheet-skill-identity {
+  display: grid;
+  grid-template-columns: 2.75rem minmax(0, 1fr);
+  gap: .26rem .6rem;
+  align-items: center;
+  min-width: 0;
+}
+
+.cp-sheet-skill-icon {
+  grid-column: 1;
+  grid-row: 1 / 3;
+  width: 2.75rem;
+  height: 2.75rem;
+  object-fit: contain;
+}
+
+.cp-sheet-skill-identity > input {
+  grid-column: 2;
+  min-width: 0;
+}
+
+.cp-sheet-skill-identity > input:last-child {
+  padding-block: .28rem;
+  color: var(--sheet-muted);
+  font-size: .72rem;
+}
