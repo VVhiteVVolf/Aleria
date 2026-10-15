@@ -1,5 +1,5 @@
 import { getSkillIconPresentation } from './skill-icon-registry.js';
-import { bindDelegatedTooltips } from '../tooltips/tooltip-controller.js';
+import { bindDelegatedTooltips } from '../tooltips/tooltip-controller.js?v=20261015-skill-challenges-v2';
 import { getChallengeAffinityModifier, getSkillDefinition } from './skill-check-model.js?v=20260928-equipment-art-v4';
 
 const escape = value => String(value ?? '').replace(/[&<>"']/g, character => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[character]);

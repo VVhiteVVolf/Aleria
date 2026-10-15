@@ -20,7 +20,7 @@ export function bindDelegatedTooltips(root, { attribute, className, idPrefix, cl
     const text = nextSource?.getAttribute(attribute);
     if (!text || nextSource.closest('[hidden]') || !nextSource.isConnected) return;
     if (anchor === nextAnchor && source === nextSource) return;
-    hide(); source = nextSource; anchor = nextAnchor;
+    owners.forEach(owner => owner.hide()); source = nextSource; anchor = nextAnchor;
     popup = document.createElement('div'); popup.className = className;
     const serial = (sequences.get(document) || 0) + 1;
     sequences.set(document, serial);

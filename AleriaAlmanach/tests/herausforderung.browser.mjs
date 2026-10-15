@@ -62,6 +62,17 @@ try {
   await page.locator('[data-herausforderung-action="open"]').click();
   const overlay = page.locator('#herausforderung-overlay');
   const field = name => overlay.locator(`[data-herausforderung-field="${name}"]`).first();
+  await page.evaluate(async () => {
+    const { bindCombatTooltips } = await import('./modules/combat/ui/combat-tooltips.js');
+    bindCombatTooltips(document);
+    const sample = document.createElement('span');
+    sample.id = 'tooltip-coexistence'; sample.tabIndex = 0; sample.dataset.combatTooltip = 'Trefferwurf';
+    sample.textContent = 'Tooltip-Test'; document.querySelector('.herausforderung-public').append(sample); sample.focus();
+  });
+  assert.equal(await page.locator('.combat-tooltip').count(), 1);
+  await overlay.locator('[data-skill-id="insight"]').locator('..').dispatchEvent('pointerover');
+  assert.equal(await page.locator('[role="tooltip"]').count(), 1, 'Combat and skill hints share one visible tooltip');
+  await page.locator('#tooltip-coexistence').evaluate(element => element.remove());
   assert.equal(await overlay.locator('.herausforderung-skill-check [data-skill-icon]').count(), 18);
   await overlay.locator('.herausforderung-skill-check [data-skill-icon]').evaluateAll(images => Promise.all(images.map(image => { image.loading = 'eager'; return image.decode(); })));
   await overlay.locator('[data-skill-id="insight"]').focus();

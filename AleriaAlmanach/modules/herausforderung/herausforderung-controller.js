@@ -15,7 +15,7 @@ import {
   setHerausforderungSubmitting,
   updateHerausforderungDraft,
   showHerausforderungValidation
-} from './herausforderung-ui.js?v=20261015-skill-challenges-v1';
+} from './herausforderung-ui.js?v=20261015-skill-challenges-v2';
 import { bindSkillIconTooltips } from '../skill-checks/skill-icon-view.js';
 import { mountHerausforderungRewardEditor } from './herausforderung-rewards-ui.js?v=20261014-herausforderung-combat-v1';
 import { createChallengeCombatContext, normalizeChallengeAudience, getChallengeCombatBindingError, challengeRequiresCombat } from './herausforderung-combat-context.js';

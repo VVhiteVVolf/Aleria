@@ -1,4 +1,4 @@
-import { bindDelegatedTooltips } from '../../tooltips/tooltip-controller.js';
+import { bindDelegatedTooltips } from '../../tooltips/tooltip-controller.js?v=20261015-skill-challenges-v2';
 
 export function bindCombatTooltips(root) {
   return bindDelegatedTooltips(root, {
