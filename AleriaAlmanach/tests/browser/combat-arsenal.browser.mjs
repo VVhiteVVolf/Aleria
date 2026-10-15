@@ -3,6 +3,7 @@ import { createServer } from 'node:http';
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { resolve, extname } from 'node:path';
 import { pathToFileURL, fileURLToPath } from 'node:url';
+import { fourStrikes, selfCounter } from '../fixtures/combat-evaluation-scenarios.mjs';
 const { chromium } = await import(process.argv[2] ? pathToFileURL(resolve(process.argv[2])).href : 'playwright');
 const root = fileURLToPath(new URL('../../../',import.meta.url)), output = resolve(root, '.codex-temp/arsenal-ui');
 await mkdir(output, { recursive: true });
@@ -18,7 +19,7 @@ import {bindCombatTooltips} from './modules/combat/ui/combat-tooltips.js';
 bindCombatTooltips(document);
 const characters=${JSON.stringify(characters)}, receipt=${JSON.stringify(receipt)};
 window.setActor=(index)=>{const c=characters[index],actor=resolveCombatProfile(c,{includeAiSnapshot:false});window.actor=actor;window.groups=[...getActionGroups(actor)].map(([key,choices])=>({key,label:choices[0].group,count:choices.length}));mountCombatComposer({card:document.getElementById('composer'),segment:{id:'local',kind:'combataction'},actor,actorReady:true,targets:[]});return actor.name;};
-document.getElementById('results').innerHTML=renderCombatEvaluation({resolution:receipt})+renderCombatEvaluation({resolution:{...receipt,actionName:'Speerstoß',attack:{...receipt.attack,total:21,diceResults:[17],hit:true},damage:{total:12,notation:'1d8+5'},targetSnapshot:{hitPointsBefore:87,hitPointsAfter:75}}});document.querySelectorAll('.combat-evaluation').forEach(e=>e.open=true);
+document.getElementById('results').innerHTML=renderCombatEvaluation({resolution:receipt})+renderCombatEvaluation({resolution:{...receipt,actionName:'Speerstoß',attack:{...receipt.attack,total:21,diceResults:[17],hit:true},damage:{total:12,notation:'1d8+5'},targetSnapshot:{hitPointsBefore:87,hitPointsAfter:75}}})+'<div id="four-strikes">'+renderCombatEvaluation({resolution:${JSON.stringify(fourStrikes)}})+'</div><div id="self-counter">'+renderCombatEvaluation({resolution:${JSON.stringify(selfCounter)}})+'</div>';document.querySelectorAll('.combat-evaluation').forEach(e=>e.open=true);
 window.setActor(characters.findIndex(c=>c.name.includes('Ylva')));window.ready=true;
 </script></html>`;
 const server=createServer(async(req,res)=>{try{const path=resolve(root,'.'+decodeURIComponent(new URL(req.url,'http://localhost').pathname));assert.ok(path.startsWith(root));res.setHeader('Content-Type',({'.html':'text/html;charset=utf-8','.js':'text/javascript;charset=utf-8','.mjs':'text/javascript;charset=utf-8','.css':'text/css','.json':'application/json','.webp':'image/webp','.png':'image/png'})[extname(path)]||'application/octet-stream');res.end(req.url==='/AleriaAlmanach/arsenal-test.html'?html:await readFile(path));}catch{res.statusCode=404;res.end();}});
@@ -31,6 +32,13 @@ try{
  await page.route('**/*',route=>new URL(route.request().url()).hostname==='127.0.0.1'?route.continue():route.abort());
  await page.goto(`http://127.0.0.1:${server.address().port}/AleriaAlmanach/arsenal-test.html`);await page.waitForFunction(()=>window.ready);
  await page.locator('#results').screenshot({path:output+'/evaluation-desktop.png'});
+ const four=page.locator('#four-strikes'), self=page.locator('#self-counter');
+ assert.equal(await four.locator('.combat-evaluation-body > .combat-evaluation-roll-scroll tbody tr').count(),4);
+ assert.equal(await self.locator('.combat-evaluation-stat').count(),0);
+ assert.equal(await self.locator('.combat-evaluation').getAttribute('data-state'),'self');
+ assert.match(await self.innerText(),/Konter vorbereitet/);assert.doesNotMatch(await self.innerText(),/1d20\+5|50 → 50/);
+ await four.screenshot({path:output+'/four-strikes-desktop.png'});await self.screenshot({path:output+'/self-counter-desktop.png'});
+ await four.locator('.combat-evaluation-ledger > summary').click();await four.screenshot({path:output+'/four-strikes-ledger-desktop.png'});await four.locator('.combat-evaluation-ledger > summary').click();
  await page.locator('.combat-evaluation-stat').first().focus();assert.equal(await page.locator('[role="tooltip"]').count(),1);assert.match(await page.locator('[role="tooltip"]').innerText(),/Trefferwurf/);await page.keyboard.press('Escape');assert.equal(await page.locator('[role="tooltip"]').count(),0);
  for(let index=0;index<characters.length;index++){
   const name=await page.evaluate(index=>window.setActor(index),index);
@@ -63,6 +71,7 @@ try{
  await page.locator('[data-action="close-action-table"]').click();
  await page.setViewportSize({width:390,height:844});await page.evaluate(index=>window.setActor(index),characters.findIndex(c=>c.name.includes('Ylva')));
  await page.locator('#results').screenshot({path:output+'/evaluation-mobile.png'});assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
+ await four.screenshot({path:output+'/four-strikes-mobile.png'});await self.screenshot({path:output+'/self-counter-mobile.png'});
  await page.locator('[data-action="open-action-table"]').click();await page.locator('.combat-action-table').screenshot({path:output+'/arsenal-mobile.png'});
  await page.locator('.combat-action-table [data-combat-action-search]').fill('Schafthebel');await page.locator('[data-arsenal-card]:not([hidden]) [data-combat-action-option]').click();assert.ok(await page.locator('[data-action="back-to-arsenal"]').isVisible());await page.locator('.combat-action-table').screenshot({path:output+'/detail-mobile.png'});await page.locator('[data-action="back-to-arsenal"]').click();
  assert.deepEqual(errors,[]);assert.deepEqual(missing,[]);

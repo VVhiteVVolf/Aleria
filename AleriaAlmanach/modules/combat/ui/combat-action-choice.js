@@ -1,7 +1,7 @@
 import { getActionPaymentCosts } from '../combat-action-economy.js?v=20260905-resource-balance-v2';
 import { getCombatResourceIconPresentation } from '../combat-resource-icons.js?v=20260803-composer-design-v1';
 import { escapeCombatHtml as escapeActionHtml } from './combat-presentation-markup.js';
-import { renderWeaponCrest } from './combat-presentation-icons.js';
+import { renderWeaponCrest } from './combat-presentation-icons.js?v=20261015-scenarios-v2';
 export { escapeActionHtml };
 
 export function getActionCostPresentation(actor = {}, action = {}) {

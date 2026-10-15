@@ -1,7 +1,7 @@
-import { getActionGroups } from './combat-action-card.js?v=20261015-arsenal-v1';
-import { escapeActionHtml as escape } from './combat-action-choice.js?v=20261015-arsenal-v1';
-import { arsenalFavorites, matchesArsenalChoice, getArsenalSectionCounts } from './combat-arsenal-model.js?v=20261015-arsenal-v1';
-import { renderArsenalSections, renderArsenalNavigation, renderArsenalDetail, renderArsenalResources } from './combat-arsenal-view.js?v=20261015-arsenal-v1';
+import { getActionGroups } from './combat-action-card.js?v=20261015-scenarios-v2';
+import { escapeActionHtml as escape } from './combat-action-choice.js?v=20261015-scenarios-v2';
+import { arsenalFavorites, matchesArsenalChoice, getArsenalSectionCounts } from './combat-arsenal-model.js?v=20261015-scenarios-v2';
+import { renderArsenalSections, renderArsenalNavigation, renderArsenalDetail, renderArsenalResources } from './combat-arsenal-view.js?v=20261015-scenarios-v2';
 
 export function renderActionTable(actor, selectedId, groups = getActionGroups(actor)) {
   const sections = [...groups.entries()].filter(([, actions]) => actions.length);

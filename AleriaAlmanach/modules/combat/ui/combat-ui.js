@@ -7,18 +7,21 @@ import {
 import {
   activationLabel, getCombatDisplayStats, getMagicDisplayStats, renderWeaponLoadout, bindWeaponImageFallback,
   getActionGroups, renderActionOptions, renderActionMetadata, renderActionDetails, renderCombatValueStrip, renderMagicValueStrip
-} from './combat-action-card.js?v=20261015-arsenal-v1';
+} from './combat-action-card.js?v=20261015-scenarios-v2';
 import { captureComposerViewState, restoreComposerViewState } from './combat-composer-view-state.js?v=20260928-equipment-art-v4';
 import { getActiveRollModes } from '../combat-profile-model.js?v=20260928-equipment-art-v4';
 import { renderAutomaticRollMode } from './combat-roll-mode-view.js?v=20260906-effect-rolls-v1';
-import { bindActionPicker, renderActionPicker } from './combat-action-picker.js?v=20261015-arsenal-v1';
+import { bindActionPicker, renderActionPicker } from './combat-action-picker.js?v=20261015-scenarios-v2';
 import { bindTargetPortraitFallback, optionLabel, renderSelectedTargetPortraits, renderTargetOptions } from './combat-target-picker.js?v=20260928-equipment-art-v4';
 import { renderCombatWeaponGrip } from './combat-weapon-grip-view.js';
 import { isSelfTargetAction } from '../combat-action-targeting.js';
-import { renderCounterConsequences } from './combat-counter-view.js';
+import { renderCounterConsequences } from './combat-counter-view.js?v=20261015-scenarios-v2';
 import { getStoredCriticalConsequences, getAttackSequenceOutcome } from '../combat-resolution-tree.js';
 import { summarizeRuleEffects } from './combat-rule-presentation.js';
-import { renderEvaluationStats } from './combat-evaluation-stats.js';
+import { renderEvaluationStats } from './combat-evaluation-stats.js?v=20261015-scenarios-v2';
+import { getEvaluationScenario, getEvaluationSelfLabel, getEvaluationFactSummary } from './combat-evaluation-model.js';
+import { renderEvaluationEffectCards } from './combat-evaluation-effects.js';
+import { renderEvaluationLedger } from './combat-evaluation-ledger.js';
 function escapeHtml(value) {
   return String(value ?? '')
     .replace(/&/g, '&amp;')
@@ -196,6 +199,7 @@ export function setCombatResolutionStatus(message, detail = '') {
 }
 
 function getEvaluationLabel(resolution) {
+  if (getEvaluationScenario(resolution).self) return `${resolution.attack?.forcedSuccess ? 'Cheat · ' : ''}${getEvaluationSelfLabel(resolution)}`;
   const sequence = getAttackSequenceOutcome(resolution);
   if (sequence.count > 1) return `Angriffsfolge · ${sequence.hits}/${sequence.count} Treffer${sequence.criticalHits ? ' · kritisch' : ''}${sequence.failures ? ' · Patzer' : ''}`;
   const effectTypes = new Set((Array.isArray(resolution.effectResults) ? resolution.effectResults : [])
@@ -297,8 +301,9 @@ function getEvaluationPortrait(id) {
 function renderEvaluationActors(actorId, actorName, targetId, targetName) {
   const actorPortrait = getEvaluationPortrait(actorId);
   const targetPortrait = getEvaluationPortrait(targetId);
-  if (!actorPortrait && !targetPortrait) return '';
   const avatar = (portrait, name) => `<span class="combat-evaluation-avatar">${portrait ? `<img src="${escapeHtml(portrait)}" alt="">` : escapeHtml((name || '?').slice(0, 1))}</span>`;
+  if (actorId && actorId === targetId) return `<div class="combat-evaluation-actors combat-evaluation-actors--self">${avatar(actorPortrait, actorName)}<span class="combat-evaluation-arrow" aria-hidden="true">↻</span><span>Selbst</span></div>`;
+  if (!actorPortrait && !targetPortrait) return '';
   return `<div class="combat-evaluation-actors">
     ${avatar(actorPortrait, actorName)}
     <span class="combat-evaluation-arrow">→</span>
@@ -329,66 +334,17 @@ export function renderCombatEvaluation(source = {}) {
       </div>
     </details>`;
   }
-  const attack = resolution.attack;
-  const sequence = getAttackSequenceOutcome(resolution);
-  const state = sequence.criticalHits ? 'critical' : sequence.hits ? 'hit' : sequence.failures ? 'failure' : 'miss';
+  const scenario = getEvaluationScenario(resolution);
+  const state = scenario.state;
   const narrationMeta = resolution.narration || {};
-  const narrationSource = getNarrationSourceMeta(narrationMeta);
-  const narration = String(narrationMeta.text || '').trim() || getEvaluationFallback(resolution);
-  const damageNotations = (resolution.effectResults || []).filter(result => result.effect?.type === 'damage' && result.recipient !== 'actor')
-    .map(result => result.roll?.notation || (Number.isFinite(result.amount) ? String(result.amount) : '')).filter(Boolean);
-  const damage = resolution.damage
-    ? `<span><b>${escapeHtml(resolution.damage.total)}</b> Schaden · ${escapeHtml(damageNotations.length > 1 ? damageNotations.join(' + ') : resolution.damage.notation || '')}</span>`
-    : '';
-  const remainingHitPoints = resolution.targetSnapshot?.hitPointsAfter != null
-    ? `<span>Ziel: <b>${escapeHtml(resolution.targetSnapshot.hitPointsAfter)}</b> TP${resolution.targetSnapshot.defeated ? ' · ausgeschaltet' : ''}</span>`
-    : '';
-  const hitPointTransition = resolution.targetSnapshot?.hitPointsAfter != null
-    ? `<span>Ziel-TP: <b>${escapeHtml(resolution.targetSnapshot.hitPointsBefore)}</b> &rarr; <b>${escapeHtml(resolution.targetSnapshot.hitPointsAfter)}</b>${resolution.targetSnapshot.defeated ? ' &middot; ausgeschaltet' : ''}</span>`
-    : remainingHitPoints;
-  const temporaryHitPoints = Number(resolution.targetSnapshot?.temporaryHitPointsBefore || 0) > 0
-    ? `<span>Temp. TP: <b>${escapeHtml(resolution.targetSnapshot.temporaryHitPointsBefore)}</b> &rarr; <b>${escapeHtml(resolution.targetSnapshot.temporaryHitPointsAfter || 0)}</b></span>`
-    : '';
-  const resourceChanges = (Array.isArray(resolution.actorResourceSnapshot?.changes)
-    ? resolution.actorResourceSnapshot.changes
-    : []).map(change => (
-      `<span>${escapeHtml(change.name || 'Ressource')}: <b>${escapeHtml(change.before)}</b> &rarr; <b>${escapeHtml(change.after)}</b></span>`
-    )).join('');
-  const ammunitionUse = resolution.actorInventorySnapshot?.ammunitionUse
-    ? `<span>Munition: <b>${escapeHtml(resolution.actorInventorySnapshot.ammunitionUse.name)}</b> ${escapeHtml(resolution.actorInventorySnapshot.ammunitionUse.before)} &rarr; ${escapeHtml(resolution.actorInventorySnapshot.ammunitionUse.after)}</span>`
-    : '';
-  const ruleLedger = (Array.isArray(resolution.ruleApplications) ? resolution.ruleApplications : []).map(rule => (
-    `<span class="combat-rule-ledger"><b>${escapeHtml(rule.sourceActorName || 'Regelquelle')} \u00b7 ${escapeHtml(rule.ruleName)}</b><small>${escapeHtml(summarizeRuleEffects(rule.effects))}</small></span>`
-  )).join('');
-  const ruleResourceChanges = (Array.isArray(resolution.ruleResourceSnapshots) ? resolution.ruleResourceSnapshots : [])
-    .flatMap(snapshot => (snapshot.changes || []).map(change => (
-      `<span>${escapeHtml(snapshot.sourceActorName || 'Reaktion')} \u00b7 ${escapeHtml(change.name || 'Ressource')}: <b>${escapeHtml(change.before)}</b> &rarr; <b>${escapeHtml(change.after)}</b></span>`
-    ))).join('');
-  const secondarySaves = (Array.isArray(resolution.secondarySaves) ? resolution.secondarySaves : []).map(save => ({ afterSequence: save.timing === 'after-sequence', html: (
-    `<span><b>${escapeHtml(({strength:'KRF',dexterity:'GES',constitution:'KON',intelligence:'INT',wisdom:'WEI',charisma:'CHA'})[save.attributeKey] || 'Rettung')}-Rettung ${escapeHtml(save.total)}</b> gegen SG ${escapeHtml(save.dc)} · ${save.succeeded ? 'gelungen' : 'misslungen'}</span>`
-  ) }));
-  const followUpAttacks = (Array.isArray(resolution.followUpAttacks) ? resolution.followUpAttacks : []).map((followUp, index) => {
-    const followAttack = followUp.attack || {};
-    const outcome = followAttack.criticalFailure ? 'Kritischer Fehlschlag' : followAttack.criticalSuccess ? 'Kritischer Treffer' : followAttack.hit ? 'Treffer' : 'verfehlt';
-    return `<span><b>Folgeangriff ${index + 1}: ${escapeHtml(followAttack.total ?? '—')}</b> gegen ${escapeHtml(followAttack.targetDefense ?? '—')} · ${outcome}${followUp.damage ? `, ${escapeHtml(followUp.damage.total)} Schaden` : ''}${followAttack.diceResults?.length ? ` · W20 [${escapeHtml(followAttack.diceResults.join(', '))}] ${Number(followAttack.modifier) >= 0 ? '+' : ''}${escapeHtml(followAttack.modifier ?? 0)}` : ''}</span>`;
-  }).join('');
-  const appliedCondition = resolution.targetConditionSnapshot?.applied?.name
-    ? `<span>Zustand: <b>${escapeHtml(resolution.targetConditionSnapshot.applied.name)}</b></span>`
-    : '';
-  const previousActorConditions = new Set((resolution.actorConditionSnapshot?.before || []).map(condition => condition.id));
-  const actorConditionChanges = (resolution.actorConditionSnapshot?.after || [])
-    .filter(condition => !previousActorConditions.has(condition.id))
-    .map(condition => `<span>Auf ${escapeHtml(resolution.actorName)}: <b>${escapeHtml(condition.name)}</b> · ${escapeHtml(condition.description || condition.duration || '')}</span>`).join('');
-  const mechanicNotes = (Array.isArray(resolution.mechanicNotes) ? resolution.mechanicNotes : [])
-    .map(note => `<span><b>Waffenregel:</b> ${escapeHtml(note)}</span>`).join('');
-  const effectResults = (Array.isArray(resolution.effectResults) ? resolution.effectResults : []).map(renderEffectResult).filter(Boolean).join('');
-  const ruleConflicts = (Array.isArray(resolution.ruleConflicts) ? resolution.ruleConflicts : []).map(conflict => `<span class="combat-rule-conflict"><b>Regelkonflikt:</b> ${escapeHtml((conflict.applications || []).map(item => item.ruleName).join(' ↔ ') || conflict.message || 'gleichrangige Regeln')} · Entscheidung durch Beteiligte oder Erzähler</span>`).join('');
-  const defeatNotice = resolution.defeat?.occurred
-    ? `<span><b>Kampfunfähig${resolution.defeat.nonlethal ? ' · nichttödlich' : ''}</b> · kein automatischer Tod; die weitere Darstellung entscheiden die Beteiligten.</span>`
-    : '';
-  const savingThrowMode = attack.resolutionMode === 'saving-throw';
-  const rollLabel = savingThrowMode ? 'Rettungswurf' : (attack.resolutionMode === 'spell-attack' ? 'Zauberangriff' : 'Angriff');
-  const defenseLabel = savingThrowMode ? 'Zauber-SG' : 'Verteidigung';
+  const storedNarrationSource = getNarrationSourceMeta(narrationMeta);
+  const originalNarration = String(narrationMeta.text || '').trim();
+  const factSummary = getEvaluationFactSummary(resolution);
+  const narration = factSummary || originalNarration || getEvaluationFallback(resolution);
+  const narrationSource = factSummary ? {key:'system',label:'Gespeicherte Regelbelege',title:'Diese Darstellung liest ausschließlich die gespeicherten Würfe und Wirkungen. Die ursprüngliche Erzählung bleibt erhalten.'} : storedNarrationSource;
+  const actionName = resolution.actionName || resolution.weapon?.name || '';
+  const areaLabel = scenario.multipleTargets ? ` · Flächenwirkung · Ziel ${Number(resolution.multiTargetIndex || 0) + 1}/${Number(resolution.multiTargetCount)} · ${resolution.targetName || 'Ziel'}` : '';
+
   return `
     <details class="combat-evaluation" data-state="${state}" data-narration-source="${narrationSource.key}" aria-label="Kampfauswertung">
       <summary class="combat-evaluation-summary">
@@ -398,37 +354,17 @@ export function renderCombatEvaluation(source = {}) {
       </summary>
       <div class="combat-evaluation-body">
         <div class="combat-evaluation-heading">
-          <span>Kampfauswertung${Number(resolution.multiTargetCount) > 1 ? ` · Ziel ${Number(resolution.multiTargetIndex) + 1}/${Number(resolution.multiTargetCount)}` : ''}</span>
+          <span>Kampfauswertung${escapeHtml(areaLabel)}</span>
           <strong>${escapeHtml(getEvaluationLabel(resolution))}</strong>
         </div>
         ${narration ? `<p>${escapeHtml(narration)}</p>` : ''}
-        ${resolution.actionName ? `<div class="combat-evaluation-action-name">${escapeHtml(resolution.actionName)}</div>` : ''}
+        ${actionName ? `<div class="combat-evaluation-action-name">${escapeHtml(actionName)}</div>` : ''}
         ${renderEvaluationStats(resolution)}
+        ${renderEvaluationEffectCards(resolution)}
         ${renderCounterConsequences(resolution, { renderEffectResult, summarizeRuleEffects })}
         ${getStoredCriticalConsequences(resolution).map(consequence => `<p class="combat-critical-consequence"><strong>W${consequence.version >= 2 ? 20 : 10} · ${escapeHtml(consequence.roll)} · ${escapeHtml(consequence.name)}</strong><br>${escapeHtml(consequence.actorName)}: ${escapeHtml(consequence.description)}</p>`).join('')}
-        <details class="combat-evaluation-ledger"><summary>Wurfdetails & Wirkungen</summary><div class="combat-evaluation-mechanics">
-          <span><b>${escapeHtml(attack.total)}</b> ${rollLabel} · ${escapeHtml(attack.notation || '')}</span>
-          ${attack.diceResults?.length ? `<span>${sequence.count > 1 ? 'Auftakt' : rollLabel}: W20 [${escapeHtml(attack.diceResults.join(', '))}] ${Number(attack.modifier) >= 0 ? '+' : ''}${escapeHtml(attack.modifier ?? 0)} · ${savingThrowMode ? (attack.saveSucceeded ? 'gelungen' : 'misslungen') : attack.criticalFailure ? 'Kritischer Fehlschlag' : attack.criticalSuccess ? 'Kritischer Treffer' : attack.hit ? 'Treffer' : 'verfehlt'}</span>` : ''}
-          <span>gegen <b>${escapeHtml(attack.targetDefense)}</b> ${defenseLabel}</span>
-          ${savingThrowMode ? `<span>Rettung ${attack.saveSucceeded ? 'gelungen' : 'misslungen'}${resolution.damage?.halvedBySave ? ' · halber Schaden' : ''}</span>` : ''}
-          ${damage}
-          ${hitPointTransition}
-          ${temporaryHitPoints}
-          ${resourceChanges}
-          ${ammunitionUse}
-          ${ruleResourceChanges}
-          ${secondarySaves.filter(s => !s.afterSequence).map(s => s.html).join('')}
-          ${followUpAttacks}
-          ${secondarySaves.filter(s => s.afterSequence).map(s => s.html).join('')}
-          ${appliedCondition}
-          ${actorConditionChanges}
-          ${mechanicNotes}
-          ${effectResults}
-          ${resolution.turnStart ? `<span><b>${escapeHtml(resolution.turnStart.name)} · Zugbeginn:</b> ${resolution.turnStart.suppressed ? 'durch Feuer unterdrückt' : `+${Number(resolution.turnStart.restored) || 0} LP${resolution.turnStart.roll?.notation ? ` (${escapeHtml(resolution.turnStart.roll.notation)})` : ''}`}</span>` : ''}
-          ${ruleConflicts}
-          ${defeatNotice}
-          ${ruleLedger}
-        </div></details>
+        <details class="combat-evaluation-ledger"><summary>Wurfdetails & Wirkungen</summary>${renderEvaluationLedger(resolution, { renderEffectResult, summarizeRuleEffects })}</details>
+        ${originalNarration && originalNarration !== narration ? `<details class="combat-evaluation-original-narration"><summary>Gespeicherte Erzählung · ${escapeHtml(storedNarrationSource.label)}</summary><p>${escapeHtml(originalNarration)}</p></details>` : ''}
         <div class="combat-evaluation-source" data-source="${narrationSource.key}" title="${escapeHtml(narrationSource.title)}">${escapeHtml(narrationSource.label)}</div>
       </div>
     </details>`;

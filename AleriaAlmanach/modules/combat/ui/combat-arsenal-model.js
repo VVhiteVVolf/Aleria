@@ -1,4 +1,4 @@
-import { getActionCostPresentation } from './combat-action-choice.js?v=20261015-arsenal-v1';
+import { getActionCostPresentation } from './combat-action-choice.js?v=20261015-scenarios-v2';
 
 export function actionDescription({ action, entry = {} }) {
   return String(entry.effect || entry.description || action.weapon?.notes || '');

@@ -1,7 +1,7 @@
 import { escapeCombatHtml as escape, combatTooltipAttributes } from './combat-presentation-markup.js';
 
 const crestFiles = new Set(['bow', 'one-handed', 'spear', 'universal', 'two-handed', 'unarmed', 'shield', 'magic', 'axe', 'dagger', 'mace', 'paired']);
-const statFiles = Object.freeze({ attack: ['roll-d20.png', 'W20'], damage: ['attack-melee.png', 'Schaden'], defense: ['shield.png', 'RK'], hp: ['hit-points.png', 'TP'], save: ['roll-d20.png', 'SG'] });
+const statFiles = Object.freeze({ attack: ['roll-d20.png', 'W20'], damage: ['attack-melee.png', 'Schaden'], defense: ['shield.png', 'RK'], hp: ['hit-points.png', 'TP'], save: ['roll-d20.png', 'SG'], effect: ['magic.webp', 'Wirkung'], counter: ['counter.webp', 'Konter'], duration: ['duration.png', 'Dauer'] });
 
 export function renderWeaponCrest(weapon = {}, { withLabel = false } = {}) {
   const id = crestFiles.has(weapon.icon) ? weapon.icon : 'universal';

@@ -79,5 +79,7 @@ export function getActionWeaponSections(choices = []) {
     if (!sections.has(key)) sections.set(key, { key, groupKey: choice.groupKey, weapon: choice.weaponCategory, choices: [] });
     sections.get(key).choices.push(choice);
   }
-  return [...sections.values()];
+  return [...sections.values()].map(section => ({ ...section, weapon: { ...section.weapon,
+    icon: section.weapon.id === 'paired' ? 'paired' : families[section.weapon.id][1],
+    title: [...new Set(section.choices.map(choice => choice.weaponCategory.title))].join(' / ') } }));
 }

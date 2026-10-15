@@ -1,7 +1,7 @@
 import { getSpellLevelLabel } from '../combat-spell-slots.js?v=20260803-character-creation-v1';
 import { getCombatDamagePreview, getExplicitAttackSequencePreview, getPreparedCounterPreview } from '../combat-action-estimates.js?v=20260928-equipment-art-v4';
-import { getActionCategoryPresentation, compareArsenalChoices, getActionWeaponSections, getArsenalClassIds } from './combat-action-taxonomy.js';
-import { renderCombatStatIcon } from './combat-presentation-icons.js';
+import { getActionCategoryPresentation, compareArsenalChoices, getActionWeaponSections, getArsenalClassIds } from './combat-action-taxonomy.js?v=20261015-scenarios-v2';
+import { renderCombatStatIcon } from './combat-presentation-icons.js?v=20261015-scenarios-v2';
 import { combatTooltipAttributes } from './combat-presentation-markup.js';
 
 function escapeHtml(value) {

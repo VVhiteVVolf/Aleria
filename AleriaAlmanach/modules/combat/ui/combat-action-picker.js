@@ -1,9 +1,9 @@
-import { getActionGroups } from './combat-action-card.js?v=20261015-arsenal-v1';
-import { escapeActionHtml as escapeHtml, renderActionCosts as renderCosts, renderActionChoice, filterActionChoices } from './combat-action-choice.js?v=20261015-arsenal-v1';
-import { bindActionTable } from './combat-action-table.js?v=20261015-arsenal-v1';
-import { getActionWeaponSections } from './combat-action-taxonomy.js';
-import { renderWeaponCrest } from './combat-presentation-icons.js';
-export { getActionCostPresentation } from './combat-action-choice.js?v=20261015-arsenal-v1';
+import { getActionGroups } from './combat-action-card.js?v=20261015-scenarios-v2';
+import { escapeActionHtml as escapeHtml, renderActionCosts as renderCosts, renderActionChoice, filterActionChoices } from './combat-action-choice.js?v=20261015-scenarios-v2';
+import { bindActionTable } from './combat-action-table.js?v=20261015-scenarios-v2';
+import { getActionWeaponSections } from './combat-action-taxonomy.js?v=20261015-scenarios-v2';
+import { renderWeaponCrest } from './combat-presentation-icons.js?v=20261015-scenarios-v2';
+export { getActionCostPresentation } from './combat-action-choice.js?v=20261015-scenarios-v2';
 
 export function renderActionPicker(actor = {}, selectedId = '', groups = getActionGroups(actor)) {
   const selected = [...groups.values()].flat().find(({ action }) => action.id === selectedId);

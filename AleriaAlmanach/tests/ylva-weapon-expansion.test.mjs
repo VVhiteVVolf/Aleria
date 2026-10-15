@@ -67,8 +67,7 @@ test('sweep is target-specific, survives unrelated posts, target lock expires on
   const actor=profile('drei-dornen-ein-sturz'), victim=target();
   const result=await new CombatResolutionService(receipts([2,2,2])).resolveAttack({actor,target:victim});
   const html = renderCombatEvaluation({ combatResolution: result });
-  const ledger = html.slice(html.indexOf('class="combat-evaluation-ledger"'));
-  assert.ok(ledger.indexOf('Folgeangriff 2') < ledger.indexOf('GES-Rettung'), 'Die vollständigen Würfe bleiben chronologisch; die Zusammenfassung steht separat davor.');
+  assert.ok(html.indexOf('Folgeangriff 2') < html.indexOf('GES-Rettung'), 'Die Einzelangriffe erscheinen vor der Rettung nach der Folge.');
   assert.match(html, /Öffnung nach dem Feger/); assert.match(html, /bis zum Ende von Ylvas nächstem Beitrag/);
   const states=deriveCombatStateFromComments([{characterId:ylva.id,combatResolution:result}]);
   assert.equal(states.get(ylva.id).temporaryConditions.length,1);

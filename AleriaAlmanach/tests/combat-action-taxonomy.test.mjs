@@ -6,6 +6,7 @@ import { getActionWeaponPresentation, getActionWeaponSections } from '../modules
 import { resolveCombatProfile } from '../modules/combat/combat-profile-resolver.js';
 import { matchesArsenalChoice, getArsenalSectionCounts } from '../modules/combat/ui/combat-arsenal-model.js';
 import { renderEvaluationStats } from '../modules/combat/ui/combat-evaluation-stats.js';
+import { renderEvaluationEffectCards } from '../modules/combat/ui/combat-evaluation-effects.js';
 
 const snapshot = JSON.parse(await readFile(new URL('../../CharakterDatenbank/generated/characters.snapshot.json', import.meta.url), 'utf8'));
 const characters = snapshot.characters.filter(c => c.combatProfile?.progression?.level > 2 && !/duncan/i.test(c.name));
@@ -68,6 +69,7 @@ test('Auswertung zeigt gespeicherte Würfe, TP und Kosten und maskiert Text; die
   assert.match(html, /87 → 78/); assert.match(html, /&lt;Aktion&gt;/); assert.match(html, /data-combat-tooltip/);
   assert.deepEqual(resolution, before);
   assert.doesNotMatch(renderEvaluationStats({ attack: { resolutionMode: 'automatic' } }), />—<.*Verteidigung/s);
-  const sequence = renderEvaluationStats({ attack: { total: 4, hit: false }, secondarySaves: [{ attributeKey: 'dexterity', total: 12, dc: 18, succeeded: false, timing: 'after-sequence' }], targetConditionSnapshot: { applied: { name: 'Gefegt', duration: 'Nächster eigener Beitrag' } } });
+  const sequenceResolution = { attack: { total: 4, hit: false }, secondarySaves: [{ attributeKey: 'dexterity', total: 12, dc: 18, succeeded: false, timing: 'after-sequence' }], targetConditionSnapshot: { applied: { name: 'Gefegt', duration: 'Nächster eigener Beitrag' } } };
+  const sequence = renderEvaluationStats(sequenceResolution) + renderEvaluationEffectCards(sequenceResolution);
   assert.match(sequence, /GES-Rettung · SG 18/); assert.match(sequence, /Misslungen · nach der Folge/); assert.match(sequence, /Gefegt/);
 });

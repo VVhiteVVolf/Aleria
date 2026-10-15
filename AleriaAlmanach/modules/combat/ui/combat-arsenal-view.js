@@ -1,9 +1,9 @@
-import { escapeActionHtml as escape, renderActionCosts } from './combat-action-choice.js?v=20261015-arsenal-v1';
-import { renderActionDetails, renderCombatValueStrip } from './combat-action-card.js?v=20261015-arsenal-v1';
-import { actionDescription } from './combat-arsenal-model.js?v=20261015-arsenal-v1';
+import { escapeActionHtml as escape, renderActionCosts } from './combat-action-choice.js?v=20261015-scenarios-v2';
+import { renderActionDetails, renderCombatValueStrip } from './combat-action-card.js?v=20261015-scenarios-v2';
+import { actionDescription } from './combat-arsenal-model.js?v=20261015-scenarios-v2';
 import { getCombatResourceIconPresentation } from '../combat-resource-icons.js?v=20260803-composer-design-v1';
-import { renderWeaponCrest } from './combat-presentation-icons.js';
-import { getActionWeaponSections } from './combat-action-taxonomy.js';
+import { renderWeaponCrest } from './combat-presentation-icons.js?v=20261015-scenarios-v2';
+import { getActionWeaponSections } from './combat-action-taxonomy.js?v=20261015-scenarios-v2';
 
 export function renderArsenalNavigation(groups) {
   return [...groups].map(([key, choices]) => `<div class="combat-arsenal-nav-group"><button type="button" data-arsenal-section="${escape(key)}" aria-pressed="false"><span data-arsenal-label>${escape(choices[0].group)}</span><b data-arsenal-count>${choices.length}</b></button>${getActionWeaponSections(choices).map(section => `<button type="button" class="combat-arsenal-nav-weapon" data-arsenal-section="${escape(section.key)}" aria-pressed="false">${renderWeaponCrest(section.weapon)}<span data-arsenal-label>${escape(section.weapon.label)}</span><b data-arsenal-count>${section.choices.length}</b></button>`).join('')}</div>`).join('');

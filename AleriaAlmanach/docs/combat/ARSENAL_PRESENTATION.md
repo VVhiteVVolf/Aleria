@@ -30,3 +30,18 @@ Zwölf neue transparente Wappenicons liegen unter `IconOrdner/IconsCharakterboge
 Erneute Archivprüfung: `node AleriaAlmanach/scripts/audit-combat-arsenal.mjs`. Optional können ein JSON-Export als erster Parameter und ein Berichtspfad als zweiter Parameter angegeben werden.
 
 Automatische Prüfungen umfassen Waffenreihenfolge, vollständige Arsenale, persönliche Rubriken, gemeinsame Mehrklassenformen, sichere Textdarstellung und unveränderte gespeicherte Würfe. Browserprüfungen umfassen alle 13 Figuren, Suche, Waffenfilter, Karten, Vorschau, Tooltips und mobile Darstellung.
+
+## Szenarioabhängige Auswertung
+
+Das anschließende Nutzerfeedback wird durch eigene Präsentationsmodule umgesetzt:
+
+- `combat-evaluation-model.js` liest Szenario, Angriffsinstanzen, Schadensbelege und Zustandsänderungen aus der gespeicherten Auswertung.
+- `combat-evaluation-rolls.js` zeigt jeden Treffer- und Schadenswurf getrennt und ordnet die verbuchte Abwehr über vorhandene Folgeangriffs- oder Wurf-IDs zu. Fehlen ältere Instanzbelege, wird keine Schadensverteilung erfunden.
+- `combat-evaluation-effects.js` zeigt angewandte Zustände, Konterbereitschaft, Heilung und Schutz mit Empfänger und Dauer. Eine zukünftige Entwaffnung beim Konter wird ausdrücklich als bedingte Folge dargestellt.
+- `combat-evaluation-ledger.js` gliedert Belege in Würfe, Schaden/Schutz, Wirkungen, Zustände, Ressourcen und Regeln. Bereits sichtbare Angriffsfolgen werden beim Aufklappen nicht verdoppelt.
+
+Selbstwirkungen und unterstützende automatische Fähigkeiten verwenden blaue Karten. Automatische Handlungen zeigen keine technisch hinterlegte Dummy-W20-Notation. Unveränderte TP erscheinen bei solchen Fähigkeiten nicht als Hauptergebnis; tatsächliche Heilung, Eigenschaden und Änderungen temporärer TP bleiben sichtbar. Mehrzielwirkungen benennen Ziel und laufende Zielnummer; Rettungen und Schadensarten bleiben je Ziel getrennt.
+
+Die originalen Asgeir–Nudd-Belege wurden ausschließlich gelesen. Asgeirs vier Trefferwürfe sind 12, 20, 14 und 10; nur der zweite trifft und verursacht 8 gewürfelten beziehungsweise 6 angewandten Schaden. Nudds gespeicherte Vorbereitung „Entwaffnende Klaue“ behält ihre damaligen Kosten und ihren damaligen festen Konter-SG 13. Spätere Klassenrevisionen werden nicht rückwirkend auf diese Belege angewandt.
+
+Bei Angriffsfolgen und Selbstvorbereitungen steht eine aus den Regelbelegen abgeleitete Zusammenfassung im Vordergrund. Die ursprüngliche gespeicherte Erzählung bleibt separat aufklappbar und wird nicht überschrieben.
