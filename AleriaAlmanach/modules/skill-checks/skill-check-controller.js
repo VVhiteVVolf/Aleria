@@ -1,4 +1,5 @@
 import { previewChallengeCombatBenefits, collectChallengeGrantKeys } from '../herausforderung/herausforderung-combat-preview.js';
+import { getChallengeAttemptSettings } from './skill-challenge-attempt.js';
 import { getChallengeCombatBindingError } from '../herausforderung/herausforderung-combat-context.js';
 import { getActiveCombatEncounter } from '../combat/combat-encounter-model.js';
 import { sceneDiceService } from '../scene-dice/dice-service.js?v=20261013-performance-v1';
@@ -747,12 +748,7 @@ document.addEventListener('input', event => {
 });
 
 globalThis.AleriaSkillChecks = Object.freeze({
-  getChallengeAttemptSettings(challenge) {
-    const skillId = challenge?.preferredSkills?.find(id => SKILL_DEFINITIONS.some(skill => skill.id === id));
-    const kind = ['speech', 'shout', 'performance', 'thought', 'animal', 'interact', 'flirt'].find(value => getSkillsForCommentKind(value).some(skill => skill.id === skillId));
-    if (!kind || !challenge?.id) return null;
-    return { kind, mechanicMode: 'skill', skillId, skillTargetActorKey: challenge.authorKey, skillTargetChallengeId: challenge.id, skillDifficulty: challenge.difficulty };
-  },
+  getChallengeAttemptSettings,
   mountComposer(list, context = {}) {
     mountComposers({
       list,

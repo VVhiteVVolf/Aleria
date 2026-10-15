@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-15",
+  "feature": "Fertigkeit vor einem Herausforderungsversuch wählen",
+  "unitAndServerValidatorTests": {
+    "passed": 82,
+    "failed": 0,
+    "crossKindCases": "Five skills for Gawain Draig and Guinevere Neidr against the real server validator"
+  },
+  "browser": {
+    "passed": true,
+    "checks": [
+      "all-five-skills-visible-no-roll-before-selection-keyboard-and-mobile",
+      "Gawain Draig-persuasion-real-composer-and-roll",
+      "Gawain Draig-intimidation-real-composer-and-roll",
+      "Gawain Draig-deception-real-composer-and-roll",
+      "Gawain Draig-performance-real-composer-and-roll",
+      "Gawain Draig-seduction-real-composer-and-roll",
+      "Guinevere Neidr-persuasion-real-composer-and-roll",
+      "Guinevere Neidr-intimidation-real-composer-and-roll",
+      "Guinevere Neidr-deception-real-composer-and-roll",
+      "Guinevere Neidr-performance-real-composer-and-roll",
+      "Guinevere Neidr-seduction-real-composer-and-roll",
+      "changed-skill-scene-and-solved-approach-rechecked-before-composer",
+      "one-skill-explicit-keyboard-choice"
+    ],
+    "errors": [],
+    "missing": [],
+    "productionWrites": 0,
+    "source": "local"
+  },
+  "editorRegression": {
+    "passed": true,
+    "includes": "Challenge editor, rewards, item search, AI import/export, skill icons and attempted contribution"
+  },
+  "productionBuild": {
+    "passed": true,
+    "warning": "Existing large application bundle"
+  },
+  "isolation": "Browser writes are local fixture state only. No live characters, inventories, combat history or scenes changed.",
+  "architecture": "Feature-owned picker with delegated events; shared skill/kind catalog; selected skill handed to the existing comment composer. No server or schema changes."
+}

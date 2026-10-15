@@ -8,6 +8,8 @@ Die Zielgruppe bestimmt, wer eine Herausforderung versuchen darf:
 
 Die Zielgruppe ist unabhängig vom **Empfänger** einer Wirkung. Ein Versuch von Ylva kann beispielsweise einen Buff für Ylva oder einen Debuff für Gais auslösen. Standardempfänger ist die versuchende Figur. Andere Empfänger müssen aktive Teilnehmer des aktuellen Kampfes sein.
 
+**Versuchen** öffnet zuerst die Fertigkeitsauswahl. Dort erscheinen alle passenden Fertigkeiten des gewählten Lösungswegs mit ihren Icons und dem Ansatzbonus. Ein Klick auf eine Fertigkeit öffnet den Beitragseditor mit genau dieser Fertigkeit und der zugehörigen Beitragsart. Auch bei nur einer passenden Fertigkeit bleibt die Wahl ausdrücklich. Erst **Eintragen** würfelt. Abbrechen verändert den vorhandenen Entwurf nicht; eine erfolgreiche Auswahl übernimmt ihn und ergänzt den Versuch. Vor der Übergabe werden Szene, verfügbare Fertigkeiten, Kampfbindung und bereits gelöste Ansätze erneut geprüft.
+
 Bei Erfolg, knappem Scheitern und deutlichem Scheitern lassen sich eigene Wirkungspakete vorbereiten. Erfolg vergibt Gegenstände aus dem Handelsregister, Kupfertaler sowie Kampfzustände und direkte Wirkungen. Fehlschlagsfolgen verwenden Zustände und direkte Wirkungen. Ein Erfolg vergibt sein Paket einmal pro Ansatz; Folgen eines Fehlschlags gelten einmal pro Figur, Ansatz und Ergebnisstufe. Kritischer Fertigkeitserfolg verdoppelt die Wirkungen nicht.
 
 ## Verfügbare Kampfmechanik

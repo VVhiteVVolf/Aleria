@@ -1,0 +1,27 @@
+.herausforderung-attempt-overlay { background:#160d0bb3; backdrop-filter:blur(4px); }
+.herausforderung-attempt-card { display:flex; flex-direction:column; width:min(620px,100%); max-height:92dvh; border:1px solid #b99759; border-radius:12px; overflow:hidden; color:#39281d; background:#f1e6cf; box-shadow:0 24px 70px #100b0880; font-family:Georgia,serif; }
+.herausforderung-attempt-card * { box-sizing:border-box; }
+.herausforderung-attempt-card header { display:flex; align-items:flex-start; justify-content:space-between; gap:18px; padding:22px 24px; border-bottom:3px double #ad8750; background:linear-gradient(115deg,#30211c,#4b2024); color:#f1dfaf; }
+.herausforderung-attempt-card header small { color:#d4ad6e; font-size:11px; letter-spacing:.13em; text-transform:uppercase; }
+.herausforderung-attempt-card h2 { margin:8px 0 0; font:21px/1.35 Cinzel,Georgia,serif; color:inherit; }
+.herausforderung-attempt-card header button { flex:0 0 36px; min-height:36px; border:1px solid #ad875066; border-radius:5px; background:#ffffff08; color:#f1dfaf; font-size:24px; cursor:pointer; }
+.herausforderung-attempt-body { min-height:0; overflow:auto; padding:20px 24px; }
+.herausforderung-attempt-body p { margin:0 0 14px; font-size:14px; line-height:1.5; color:#75634e; }
+.herausforderung-attempt-body .herausforderung-attempt-target { color:#493422; font-weight:bold; overflow-wrap:anywhere; }
+.herausforderung-attempt-choices { display:grid; gap:10px; }
+.herausforderung-attempt-choice { display:flex; align-items:center; gap:13px; width:100%; padding:12px 14px; text-align:left; color:#493422; background:#fffaf0; border:1px solid #b49b7380; border-radius:6px; cursor:pointer; font-family:inherit; }
+.herausforderung-attempt-choice .skill-medallion { width:44px; height:44px; flex:0 0 44px; object-fit:contain; }
+.herausforderung-attempt-choice > span:first-of-type { flex:1; min-width:0; }
+.herausforderung-attempt-choice strong { display:block; font-size:16px; overflow-wrap:anywhere; }
+.herausforderung-attempt-choice small { display:block; margin-top:5px; color:#75634e; font-size:12px; }
+.herausforderung-attempt-choice:hover { border-color:#96723f; background:#f8edd5; }
+.herausforderung-attempt-card button:focus-visible { outline:2px solid #977540; outline-offset:-3px; }
+.herausforderung-attempt-card footer { display:flex; align-items:center; justify-content:space-between; gap:12px; padding:14px 24px; border-top:1px solid #b49b7377; background:#e8dac0; }
+.herausforderung-attempt-card footer span { font-size:12px; color:#75634e; }
+.herausforderung-attempt-card footer button { padding:10px 15px; color:#594531; border:1px solid #b49b73; border-radius:4px; background:#f5ead5; font-family:inherit; cursor:pointer; }
+@media (max-width:600px) {
+  .scene-time-event-overlay.herausforderung-attempt-overlay { padding:12px; align-items:center; }
+  .herausforderung-attempt-card header, .herausforderung-attempt-card footer { padding:16px; }
+  .herausforderung-attempt-body { padding:16px; }
+  .herausforderung-attempt-card h2 { font-size:18px; }
+}

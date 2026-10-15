@@ -12,7 +12,7 @@ const publicBase = process.argv[3];
 const out = resolve(root, `.codex-temp/herausforderung${publicBase ? '-online' : ''}`);
 await mkdir(out, { recursive: true });
 const fixture = `<!doctype html><html lang="de"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<link rel="stylesheet" href="./styles.css"><link rel="stylesheet" href="./styles/scene-time.css"><link rel="stylesheet" href="./styles/skill-checks.css"><link rel="stylesheet" href="./styles/herausforderung.css">
+<link rel="stylesheet" href="./styles.css"><link rel="stylesheet" href="./styles/scene-time.css"><link rel="stylesheet" href="./styles/skill-checks.css"><link rel="stylesheet" href="./styles/herausforderung.css"><link rel="stylesheet" href="./styles/herausforderung-attempt.css">
 <style>body{margin:0;background:#302c25;font-family:Georgia;color:#ead9b8}main{padding:20px}#cf-segment-list{background:#f4e5c7;color:#39281d;padding:20px}*{box-sizing:border-box}</style>
 <body><main><button data-herausforderung-action="open">Herausforderung anlegen</button><div id="published"></div><div id="cf-segment-list"></div></main>
 <script>
@@ -32,7 +32,7 @@ window.testOffers = [{ ...saex, id: 'offer:test-saex', section: 'offer', listId:
 window.AleriaItemRegister = { ensure: () => {}, store: { snapshot: () => ({ standards: STANDARD_ITEMS, offers: window.testOffers, status: 'live' }) } };
 await import('./modules/skill-checks/skill-check-controller.js');
 await import('./modules/herausforderung/herausforderung-controller.js');
-window.openCommentFormForSkillChallenge=challenge=>{window.testSettings=AleriaSkillChecks.getChallengeAttemptSettings(challenge);const segment={...window.testSettings,id:'attempt-segment',text:''};document.getElementById('cf-segment-list').innerHTML='<div data-segment-id="attempt-segment"><div data-segment-mechanics-host></div></div>';AleriaSkillChecks.mountComposer(document.getElementById('cf-segment-list'),{segments:[segment],selectedCharacterId:${JSON.stringify(actors[0].id)},threadId:'isolated-browser'});window.testSegment=segment;};
+window.openCommentFormForSkillChallenge=(challenge,skillId)=>{window.testSettings=AleriaSkillChecks.getChallengeAttemptSettings(challenge,skillId);const segment={...window.testSettings,id:'attempt-segment',text:''};document.getElementById('cf-segment-list').innerHTML='<div data-segment-id="attempt-segment"><div data-segment-mechanics-host></div></div>';AleriaSkillChecks.mountComposer(document.getElementById('cf-segment-list'),{segments:[segment],selectedCharacterId:${JSON.stringify(actors[0].id)},threadId:'isolated-browser'});window.testSegment=segment;};
 window.testReady=true;
 </script></body></html>`;
 const types = { '.js': 'text/javascript', '.mjs': 'text/javascript', '.css': 'text/css', '.png': 'image/png', '.webp': 'image/webp', '.json': 'application/json', '.woff2': 'font/woff2' };
@@ -207,6 +207,7 @@ try {
   assert.equal(await page.evaluate(() => testCalls), 2, 'One failure and one successful retry');
   assert.ok(!(await page.locator('#published').innerText()).includes('GEHEIM'));
   await page.locator('#published [data-herausforderung-action="attempt"]').click();
+  await page.locator('#herausforderung-attempt-overlay [data-ha-attempt-action="choose"][data-skill-id="persuasion"]').click();
   const settings = await page.evaluate(() => testSettings);
   assert.equal(settings.mechanicMode, 'skill');
   assert.equal(settings.skillId, 'persuasion');

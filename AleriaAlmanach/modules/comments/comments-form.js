@@ -82,8 +82,8 @@ function openCommentFormAfter(commentId) {
 
 // The comment composer owns its draft. Challenge features hand over a target;
 // they do not reach into segment state or synthesize DOM change events.
-function openCommentFormForSkillChallenge(challenge) {
-  const settings = window.AleriaSkillChecks?.getChallengeAttemptSettings?.(challenge);
+function openCommentFormForSkillChallenge(challenge, skillId = '') {
+  const settings = window.AleriaSkillChecks?.getChallengeAttemptSettings?.(challenge, skillId);
   if (!settings) return;
   openCommentForm();
   setCommentMode('charakter', { render: false, persist: false });

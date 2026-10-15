@@ -24,6 +24,7 @@ import { resolveCombatProfile } from '../combat/combat-profile-resolver.js';
 import { deriveCombatStateFromComments, overlayCombatHitPointState } from '../combat/combat-state-model.js';
 import { getActiveCombatEncounter } from '../combat/combat-encounter-model.js';
 import { mountHerausforderungExchange } from './herausforderung-exchange-ui.js?v=20261014-herausforderung-combat-v1';
+import { createHerausforderungAttemptPicker } from './herausforderung-attempt-dialog.js';
 
 bindSkillIconTooltips(document);
 
@@ -37,6 +38,7 @@ let draftAudience = normalizeChallengeAudience();
 let draftCombatBound = false;
 let dialogCombatContext = { encounterId: '', participants: [] };
 let renderEncounter = null;
+const attemptPicker = createHerausforderungAttemptPicker();
 
 function defaultApproaches() {
   return [normalizeHerausforderungApproach({}, 0)];
@@ -199,17 +201,38 @@ async function submitEvent() {
   }
 }
 
-function attemptApproach(trigger) {
+function getAvailableAttemptTarget(request) {
   const threadId = globalThis.getCurrentCommentThreadId?.() || '';
+  if (threadId !== request.threadId) {
+    globalThis.showAppStatus?.('Die Szene wurde gewechselt. Wähle den Lösungsweg in der aktuellen Szene.', 'error');
+    return null;
+  }
   const comments = globalThis.getCachedCommentsForThread?.(threadId) || [];
-  const target = collectHerausforderungApproaches(comments).find(approach => approach.commentId === trigger.dataset.commentId && approach.approachId === trigger.dataset.approachId);
+  const target = collectHerausforderungApproaches(comments).find(approach => approach.commentId === request.commentId && approach.approachId === request.approachId);
   const expired = target && getChallengeCombatBindingError(target, getActiveCombatEncounter(comments));
-  if (expired) { globalThis.showAppStatus?.(expired, 'error'); return; }
+  if (expired) { globalThis.showAppStatus?.(expired, 'error'); return null; }
   if (!target || collectHerausforderungProgress(comments).get(target.id)?.solved) {
     globalThis.showAppStatus?.('Dieser Ansatz ist nicht mehr verfügbar.', 'error');
-    return;
+    return null;
   }
-  globalThis.openCommentFormForSkillChallenge?.(target);
+  return target;
+}
+
+function attemptApproach(trigger) {
+  const request = { threadId: globalThis.getCurrentCommentThreadId?.() || '',
+    commentId: trigger.dataset.commentId, approachId: trigger.dataset.approachId };
+  const target = getAvailableAttemptTarget(request);
+  if (!target) return;
+  const opened = attemptPicker.open(target, skillId => {
+    const latest = getAvailableAttemptTarget(request);
+    if (!latest) return;
+    if (!globalThis.AleriaSkillChecks?.getChallengeAttemptSettings(latest, skillId)) {
+      globalThis.showAppStatus?.('Diese Fertigkeit ist für den Lösungsweg nicht mehr verfügbar.', 'error');
+      return;
+    }
+    globalThis.openCommentFormForSkillChallenge?.(latest, skillId);
+  });
+  if (!opened) globalThis.showAppStatus?.('Für diesen Lösungsweg ist keine passende Fertigkeit verfügbar.', 'error');
 }
 
 document.addEventListener('click', event => {

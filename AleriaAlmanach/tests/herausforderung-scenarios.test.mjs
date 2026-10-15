@@ -8,6 +8,7 @@ import { classifyHerausforderungOutcome, collectHerausforderungApproaches, norma
 import { collectHerausforderungProgress } from '../modules/herausforderung/herausforderung-progress.js';
 import { renderHerausforderungComment } from '../modules/herausforderung/herausforderung-ui.js';
 import { validateSkillCommentSegments } from '../../firebase/functions/src/mechanics/skill-comment-validator.js';
+import { getChallengeAttemptSettings } from '../modules/skill-checks/skill-challenge-attempt.js';
 
 // Run the real browser resolver and the server validator, using an isolated
 // in-memory transaction store. No production documents or resources are touched.
@@ -17,6 +18,27 @@ function transactionStore(actor) {
     get: async ref => ({ exists: documents.has(ref.path), data: () => documents.get(ref.path) }),
     create(ref, value) { assert.ok(!documents.has(ref.path)); documents.set(ref.path, structuredClone(value)); }
   } };
+}
+
+for (const actor of actors) for (const skillId of ['persuasion', 'intimidation', 'deception', 'performance', 'seduction']) {
+  test(`one guard approach accepts the explicit ${skillId} choice by ${actor.name} on the server`, async () => {
+    const event = normalizeHerausforderungEvent({ title: 'Die Torwache', publicDescription: 'Eine Wache versperrt den Durchgang.',
+      approaches: [{ approachId: 'pass', label: 'Die Wache lässt dich passieren', preferredSkills: ['persuasion', 'intimidation', 'deception', 'performance', 'seduction'], difficulty: 15, insight: 'Die Wache öffnet das Tor.' }] });
+    const origin = { id: 'guard', herausforderung: event, serverValidatedMechanics: true };
+    const challenge = collectHerausforderungApproaches([origin])[0];
+    const selected = getChallengeAttemptSettings(challenge, skillId);
+    const client = await new SkillResolutionService({ rollSkill: async ({ modifier, rollMode }) => ({ natural: 20, total: 20 + modifier, dice: rollMode === 'normal' ? [20] : [20, 20], keptDice: [20] }) })
+      .resolve({ actor, settings: { skillId, targetChallengeId: challenge.id }, challenge, actorPersistence: { kind: 'character', recordId: actor.id } });
+    const result = await validateSkillCommentSegments({ ...transactionStore(actor), request: { auth: { uid: 'isolated-choice' } },
+      metadata: { commentSegments: [{ kind: selected.kind, mechanicMode: 'skill', skillId, skillTargetChallengeId: challenge.id, skillResolution: client }] },
+      history: [origin], challengeHistory: [origin], entryId: 'isolated-guard-choice' });
+    const resolution = result.commentSegments[0].skillResolution;
+    assert.equal(resolution.serverValidated, true);
+    assert.equal(resolution.skillId, skillId);
+    assert.equal(resolution.affinityModifier, 2);
+    assert.equal(resolution.total, client.total);
+    assert.equal(resolution.targetChallengeId, challenge.id);
+  });
 }
 
 for (const scenario of scenarios) {
