@@ -1,4 +1,4 @@
-@import url('./combat-evaluation-scenarios.css?v=20261015-scenarios-v2');
+@import url('./combat-evaluation-scenarios.css?v=20261015-ledger-layout-v3');
 
 .combat-weapon-badge { display: inline-flex; align-items: center; gap: .45rem; min-width: 0; color: #375951; }
 .combat-weapon-badge img { flex: none; width: 2.25rem; height: 2.25rem; object-fit: contain; }

@@ -21,7 +21,7 @@ import { summarizeRuleEffects } from './combat-rule-presentation.js';
 import { renderEvaluationStats } from './combat-evaluation-stats.js?v=20261015-scenarios-v2';
 import { getEvaluationScenario, getEvaluationSelfLabel, getEvaluationFactSummary } from './combat-evaluation-model.js';
 import { renderEvaluationEffectCards } from './combat-evaluation-effects.js';
-import { renderEvaluationLedger } from './combat-evaluation-ledger.js';
+import { renderEvaluationLedger } from './combat-evaluation-ledger.js?v=20261015-ledger-layout-v3';
 function escapeHtml(value) {
   return String(value ?? '')
     .replace(/&/g, '&amp;')

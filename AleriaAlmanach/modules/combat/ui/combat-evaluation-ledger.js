@@ -3,7 +3,7 @@ import { renderEvaluationAttackRows, renderEvaluationDamageInstances, renderEval
 import { getRecordedConditionChanges, getEvaluationScenario } from './combat-evaluation-model.js';
 
 const section = (title, body) => body ? `<section class="combat-evaluation-record-section"><h4>${escape(title)}</h4>${body}</section>` : '';
-const records = entries => entries.length ? `<ul class="combat-evaluation-record-list">${entries.map(entry=>`<li>${entry}</li>`).join('')}</ul>` : '';
+const records = (entries, className = '') => entries.length ? `<ul class="combat-evaluation-record-list${className ? ` ${className}` : ''}">${entries.map(entry=>`<li>${entry}</li>`).join('')}</ul>` : '';
 
 function renderResourceRecords(resolution) {
   const entries = [
@@ -12,7 +12,7 @@ function renderResourceRecords(resolution) {
     ...(resolution.ruleResourceSnapshots || []).flatMap(snapshot => (snapshot.changes || []).map(change => ({ change, owner: snapshot.sourceActorName || 'Regelquelle' })))
   ];
   const ammunition = resolution.actorInventorySnapshot?.ammunitionUse;
-  return records([...entries.map(({change,owner})=>`<b>${escape(owner || 'Figur')} · ${escape(change.name || change.resourceId || 'Ressource')}</b><span>${escape(change.before)} → ${escape(change.after)}</span>`), ...(ammunition ? [`<b>Munition · ${escape(ammunition.name)}</b><span>${escape(ammunition.before)} → ${escape(ammunition.after)}</span>`] : [])]);
+  return records([...entries.map(({change,owner})=>`<b>${escape(owner || 'Figur')} · ${escape(change.name || change.resourceId || 'Ressource')}</b><span>${escape(change.before)} → ${escape(change.after)}</span>`), ...(ammunition ? [`<b>Munition · ${escape(ammunition.name)}</b><span>${escape(ammunition.before)} → ${escape(ammunition.after)}</span>`] : [])], 'combat-evaluation-record-list--resources');
 }
 
 function renderStateRecords(resolution) {

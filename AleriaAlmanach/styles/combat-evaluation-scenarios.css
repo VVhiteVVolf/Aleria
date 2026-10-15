@@ -29,17 +29,20 @@
 .combat-evaluation-counter-rules small { display: block; margin-top: .2rem; color: var(--combat-copy); font-size: .74rem; }
 .combat-evaluation-effect[data-effect-operation="removed"] { border-left-color: #93a0a6; }
 .combat-evaluation-effect[data-effect-operation="removed"] h4 { color: #ced7db; }
-.combat-evaluation-records { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .8rem; margin: .65rem 0 .2rem; text-align: left; }
+.combat-evaluation-records { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; gap: .8rem; margin: .65rem 0 .2rem; text-align: left; }
 .combat-evaluation-record-section { min-width: 0; padding: .65rem; border: 1px solid #ffffff24; border-radius: 5px; background: #00000010; }
 .combat-evaluation-record-section:has(.combat-evaluation-roll-scroll) { grid-column: 1 / -1; }
 .combat-evaluation .combat-evaluation-record-section h4 { margin: 0 0 .5rem; color: var(--combat-result); font: 600 .75rem/1.3 "Cinzel", Georgia, serif; }
 .combat-evaluation-record-list { display: grid; gap: .4rem; margin: 0; padding: 0; list-style: none; }
-.combat-evaluation-record-list li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: .15rem .5rem; padding: .35rem 0; border-bottom: 1px solid #ffffff16; font: 400 .78rem/1.4 Georgia, serif; overflow-wrap: anywhere; }
+.combat-evaluation-record-list li { display: grid; grid-template-columns: minmax(0, 1fr); gap: .3rem .5rem; padding: .4rem 0; border-bottom: 1px solid #ffffff16; font: 400 .78rem/1.4 Georgia, serif; overflow-wrap: anywhere; }
 .combat-evaluation-record-list li > b { color: var(--combat-result); font-weight: 600; }
+.combat-evaluation-record-list li > span { color: var(--combat-muted); }
 .combat-evaluation-record-list li > small, .combat-evaluation-record-list li > :only-child { grid-column: 1 / -1; }
 .combat-evaluation-record-list li > small { color: var(--combat-muted); font-size: .73rem; }
+.combat-evaluation-record-list--resources li { grid-template-columns: minmax(0, 1fr) max-content; align-items: baseline; }
+.combat-evaluation-record-list--resources li > span { color: var(--combat-result); white-space: nowrap; font-variant-numeric: tabular-nums; }
 .combat-evaluation-original-narration { margin: .65rem 0 .2rem; font-size: .72rem; color: var(--combat-muted); }
 .combat-evaluation-original-narration > summary { cursor: pointer; width: max-content; margin: auto; }
 .combat-evaluation-counter { margin: .8rem 0; padding: .65rem; border: 1px solid #b1a0d760; border-radius: 5px; background: #221e3a30; }
 .combat-evaluation .combat-evaluation-counter > h4 { margin: .1rem 0 .6rem; color: #e3d1f9; font: 600 .82rem/1.4 "Cinzel", Georgia, serif; }
-@media (max-width: 600px) { .combat-evaluation-records { grid-template-columns: 1fr; } .combat-evaluation-record-list li { grid-template-columns: 1fr; } .combat-evaluation-effects { grid-template-columns: 1fr; } }
+@media (max-width: 600px) { .combat-evaluation-records { grid-template-columns: 1fr; } .combat-evaluation-effects { grid-template-columns: 1fr; } }
