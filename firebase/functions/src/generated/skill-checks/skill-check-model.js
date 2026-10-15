@@ -3,6 +3,9 @@ import {
   resolveCharacterCombatProfile
 } from '../combat/combat-profile-model.js?v=20260928-equipment-art-v4';
 
+import { ATTRIBUTE_CHECK_DEFINITIONS, SAVING_THROW_DEFINITIONS, resolveAttributeCheckModifier } from './attribute-check-model.js?v=20261015-check-options-v1';
+export { ATTRIBUTE_CHECK_DEFINITIONS, SAVING_THROW_DEFINITIONS };
+
 export const SEGMENT_MECHANIC_MODES = Object.freeze(['normal', 'skill', 'combat', 'magic']);
 
 export const SKILL_DEFINITIONS = Object.freeze([
@@ -22,11 +25,14 @@ export const SKILL_DEFINITIONS = Object.freeze([
   { id: 'survival', label: 'Überleben', aliases: ['überleben', 'ueberleben'], attributeKey: 'wisdom' },
   { id: 'sleight-of-hand', label: 'Fingerfertigkeit', aliases: ['fingerfertigkeit'], attributeKey: 'dexterity' },
   { id: 'acrobatics', label: 'Akrobatik', aliases: ['akrobatik'], attributeKey: 'dexterity' },
+  { id: 'stealth', label: 'Heimlichkeit', aliases: ['heimlichkeit', 'schleichen'], attributeKey: 'dexterity' },
   { id: 'athletics', label: 'Athletik', aliases: ['athletik'], attributeKey: 'strength' },
   { id: 'seduction', label: 'Flirten', aliases: ['flirten', 'verführen', 'verfuehren'], attributeKey: 'charisma' },
   { id: 'body-control', label: 'Körperbeherrschung', aliases: ['körperbeherrschung', 'koerperbeherrschung'], attributeKey: 'constitution' }
 ]);
 
+export const CHECK_DEFINITIONS = Object.freeze([...SKILL_DEFINITIONS, ...ATTRIBUTE_CHECK_DEFINITIONS, ...SAVING_THROW_DEFINITIONS]);
+const CHECKS_BY_ID = new Map(CHECK_DEFINITIONS.map(check => [check.id, check]));
 const SKILLS_BY_ID = new Map(SKILL_DEFINITIONS.map(skill => [skill.id, skill]));
 
 export const COMMENT_KIND_SKILL_IDS = Object.freeze({
@@ -35,7 +41,7 @@ export const COMMENT_KIND_SKILL_IDS = Object.freeze({
   performance: ['deception', 'performance'],
   thought: ['insight', 'investigation', 'religion', 'arcane-kunde', 'history', 'nature', 'perception'],
   animal: ['animal-handling'],
-  interact: ['medicine', 'sleight-of-hand', 'acrobatics', 'athletics', 'body-control', 'survival'],
+  interact: ['medicine', 'sleight-of-hand', 'acrobatics', 'athletics', 'body-control', 'survival', 'stealth'],
   flirt: ['seduction']
 });
 
@@ -69,6 +75,18 @@ export function getSkillDefinition(skillId) {
   return SKILLS_BY_ID.get(String(skillId || '')) || null;
 }
 
+export function getCheckDefinition(id) { return CHECKS_BY_ID.get(String(id || '')) || null; }
+
+export function getChecksForCommentKind(kind) {
+  const skills = getSkillsForCommentKind(kind);
+  return kind === 'interact' ? [...skills, ...ATTRIBUTE_CHECK_DEFINITIONS, ...SAVING_THROW_DEFINITIONS] : skills;
+}
+
+export function getCheckCommentKind(id) {
+  const definition = getCheckDefinition(id);
+  return definition?.checkType ? 'interact' : Object.keys(COMMENT_KIND_SKILL_IDS).find(kind => COMMENT_KIND_SKILL_IDS[kind].includes(id)) || '';
+}
+
 export function getSkillsForCommentKind(kind) {
   return (COMMENT_KIND_SKILL_IDS[String(kind || '')] || [])
     .map(getSkillDefinition)
@@ -82,11 +100,12 @@ export function findProfileSkill(profile, definition) {
 }
 
 export function resolveSkillModifier(character = {}, skillId = '') {
-  const definition = getSkillDefinition(skillId);
+  const definition = getCheckDefinition(skillId);
   if (!definition) throw new Error('Die gewählte Fertigkeit ist nicht verfügbar.');
   const profile = character?.characterId && Array.isArray(character?.attributes) && Array.isArray(character?.skills)
     ? character
     : resolveCharacterCombatProfile(character);
+  if (definition.checkType) return resolveAttributeCheckModifier(profile, definition);
   const profileSkill = findProfileSkill(profile, definition);
   const syntheticSkill = {
     id: `derived-${definition.id}`,
@@ -108,7 +127,7 @@ export function normalizeSkillChallenge(source = {}) {
   if (!source || typeof source !== 'object' || source.enabled === false) return null;
   const preferredSkills = [...new Set((Array.isArray(source.preferredSkills) ? source.preferredSkills : [])
     .map(value => String(value || ''))
-    .filter(value => SKILLS_BY_ID.has(value)))];
+    .filter(value => CHECKS_BY_ID.has(value)))];
   return {
     schemaVersion: 2,
     id: String(source.id || '').trim().slice(0, 120),
@@ -117,8 +136,8 @@ export function normalizeSkillChallenge(source = {}) {
     disguisedKind: 'speech',
     difficulty: clampInteger(source.difficulty, 10, 1, 40),
     preferredSkills,
-    preferredModifier: clampInteger(source.preferredModifier, 2, -20, 20),
-    alternativeModifier: clampInteger(source.alternativeModifier, -2, -20, 20),
+    preferredModifier: 0,
+    alternativeModifier: 0,
     defenseMode: ['fixed', 'passive'].includes(String(source.defenseMode || 'passive')) ? String(source.defenseMode || 'passive') : 'passive',
     defenseSkillId: SKILLS_BY_ID.has(String(source.defenseSkillId || 'deception')) ? String(source.defenseSkillId || 'deception') : 'deception'
   };
@@ -126,7 +145,7 @@ export function normalizeSkillChallenge(source = {}) {
 
 export function normalizeSkillCheckSettings(source = {}) {
   return {
-    skillId: SKILLS_BY_ID.has(String(source.skillId || '')) ? String(source.skillId) : '',
+    skillId: CHECKS_BY_ID.has(String(source.skillId || '')) ? String(source.skillId) : '',
     customModifier: clampInteger(source.customModifier, 0, -99, 99),
     difficulty: clampInteger(source.difficulty, 10, 1, 40),
     rollMode: ['advantage', 'disadvantage'].includes(source.rollMode) ? source.rollMode : 'normal',
@@ -135,11 +154,8 @@ export function normalizeSkillCheckSettings(source = {}) {
 }
 
 export function getChallengeAffinityModifier(challenge, skillId) {
-  const normalized = normalizeSkillChallenge(challenge);
-  if (!normalized) return 0;
-  return normalized.preferredSkills.includes(String(skillId || ''))
-    ? normalized.preferredModifier
-    : normalized.alternativeModifier;
+  // Compatibility for stored challenge shapes; new checks use sheet values.
+  return 0;
 }
 
 export function classifySkillCheck({ natural = 0, total = 0, difficulty = 10 } = {}) {

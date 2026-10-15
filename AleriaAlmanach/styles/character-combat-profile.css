@@ -1741,3 +1741,8 @@ details[open] > summary > .cp-card-disclosure { transform: rotate(225deg); }
 .cp-gameplay-guide-link:focus-visible { outline: 3px solid #b18435; outline-offset: 3px; }
 .cp-gameplay-guide-link img { display: block; width: 100%; height: auto; }
 @media (prefers-reduced-motion: reduce) { .cp-gameplay-guide-link { transition: none; } }
+
+/* Attribute artwork follows the same medallion language as skills. */
+.cp-sheet-attribute-icon { display: block; width: 44px; height: 44px; margin: 0 auto 6px; object-fit: contain; }
+.cp-sheet-save-identity { display: inline-flex; align-items: center; gap: 7px; }
+.cp-sheet-save-icon { flex: 0 0 28px; width: 28px; height: 28px; object-fit: contain; }

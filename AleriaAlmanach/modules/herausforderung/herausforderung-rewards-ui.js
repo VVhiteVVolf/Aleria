@@ -1,4 +1,5 @@
 import { renderChallengeCombatEffects, renderChallengeRecipientOptions, renderChallengeCombatChoiceOptions, updateChallengeCombatInput } from './herausforderung-combat-effects-ui.js';
+import { renderChallengeEffectUsage, renderChallengeUsageActorOptions, updateChallengeEffectUsage } from './herausforderung-effect-usage-ui.js?v=20261015-check-options-v1';
 import { CHALLENGE_COMBAT_EFFECT_TYPES, MAX_CHALLENGE_COMBAT_EFFECTS } from './herausforderung-combat-effects.js?v=20261015-graded-challenges-v1';
 import { collectRegisterTemplates } from '../item-register/item-register-templates.js';
 import { mountRegisterTemplatePicker, refreshRegisterTemplatePicker, createRegisterTemplatePickerState } from '../item-register/item-register-template-picker.js';
@@ -20,14 +21,17 @@ function effectMarkup(effect, index, defaultKind) {
   return `<div class="herausforderung-effect" data-hr-effect-index="${index}">
     <div class="herausforderung-effect-head"><strong>${icon(kind === 'buff' ? 'buff' : 'debuff')}${kind === 'buff' ? 'Buff' : 'Debuff / Zustand'} ${index + 1}</strong><button type="button" data-hr-action="remove-effect" aria-label="Effekt entfernen">Entfernen ×</button></div>
     <div class="herausforderung-reward-grid"><label>Art<select data-hr-field="kind">${[["buff", "Buff"], ["debuff", "Debuff"], ["condition", "Zustand"]].map(([value, label]) => `<option value="${value}"${kind === value ? " selected" : ""}>${label}</option>`).join("")}</select></label><label>Empfänger<select data-hr-field="targetActorId" data-hr-recipient="${escape(effect.targetActorId || '')}"></select></label><label>Vorlage<select data-hr-field="presetId"><option value="">Eigener Effekt</option>${COMBAT_STATUS_PRESETS.map(preset => `<option value="${preset.id}"${effect.presetId === preset.id ? ' selected' : ''}>${escape(preset.name)}</option>`).join('')}</select></label><label>Name<input maxlength="160" data-hr-field="name" value="${escape(effect.name)}"></label><label>Dauer<select data-hr-field="durationKind">${STATUS_DURATIONS.map(([id, label]) => `<option value="${id}"${effect.durationKind === id ? ' selected' : ''}>${label}</option>`).join('')}</select></label><label>Beitragsanzahl<input type="number" min="1" max="999" data-hr-field="durationAmount" value="${escape(effect.durationAmount)}"${['actor-comments', 'scene-comments'].includes(effect.durationKind) ? '' : ' disabled'}></label></div>
+    ${renderChallengeEffectUsage(effect)}
     <label>Beschreibung<textarea maxlength="1600" rows="2" data-hr-field="description">${escape(effect.description)}</textarea></label>
     <details class="herausforderung-effect-values"><summary>Boni, Mali & Wurfarten</summary><div class="herausforderung-reward-modifiers">${modifierInputs}${STATUS_ROLL_MODES.map(([key, label]) => `<label>${label}<select data-hr-field="rollMode" data-modifier="${key}">${[['normal', 'Normal'], ['advantage', 'Vorteil'], ['disadvantage', 'Nachteil']].map(([value, text]) => `<option value="${value}"${effect.mechanics?.[key] === value ? ' selected' : ''}>${text}</option>`).join('')}</select></label>`).join('')}</div></details>
   </div>`;
 }
 
-export function renderHerausforderungRewardEditor(approach, index) {
-  return `<details class="herausforderung-benefits" data-hr-editor data-hr-approach-index="${index}"${hasHerausforderungBenefits(approach) ? ' open' : ''}><summary>${icon('items')} Belohnungen & mechanische Folgen <small>Inventar · Kupfertaler · Buffs · Debuffs</small></summary><div class="herausforderung-benefits-body"><p class="herausforderung-note">Erfolg belohnt die erfolgreiche Figur einmalig. Fehlschlagsfolgen gelten je Figur und Ergebnisstufe einmal; der Ansatz bleibt offen.</p>${Object.entries(BUNDLES).map(([field, [label, kind]]) => {
-    const bundle = approach[field] || normalizeHerausforderungBenefits();
+export function renderHerausforderungRewardEditor(approach, index, { outcomeIndex = null } = {}) {
+  const outcome = outcomeIndex == null ? null : approach.outcomeTable?.[outcomeIndex];
+  const bundles = outcome ? [[outcome.success ? 'rewards' : 'failureEffects', ['Wirkung dieser Ergebnisstufe', outcome.success ? 'buff' : 'debuff']]] : Object.entries(BUNDLES);
+  return `<details class="herausforderung-benefits" data-hr-editor data-hr-approach-index="${index}"${outcome ? ` data-hr-outcome-index="${outcomeIndex}"` : ''}${!outcome && hasHerausforderungBenefits(approach) ? ' open' : ''}><summary>${icon('items')} Belohnungen & mechanische Folgen <small>Inventar · Kupfertaler · Buffs · Debuffs</small></summary><div class="herausforderung-benefits-body"><p class="herausforderung-note">${outcome ? 'Nur die erreichte Ergebnisstufe wird angewendet. Bereits ausgewertete Versuche behalten ihre ursprünglichen Folgen.' : 'Erfolg belohnt die erfolgreiche Figur einmalig. Fehlschlagsfolgen gelten je Figur und Ergebnisstufe einmal; der Ansatz bleibt offen.'}</p>${bundles.map(([field, [label, kind]]) => {
+    const bundle = (outcome ? outcome.benefits : approach[field]) || normalizeHerausforderungBenefits();
     return `<details class="herausforderung-benefit-bundle" data-hr-bundle="${field}" data-hr-section="${field}"${field === 'rewards' || bundle.effects.length || bundle.combatEffects?.length ? ' open' : ''}><summary>${icon(kind === 'buff' ? 'items' : 'debuff')}${label}</summary><div>
       ${field === 'rewards' ? `<label><span>${icon('copper')}Kupfertaler (KT)</span><input type="number" min="0" max="1000000000" step="0.01" data-hr-field="copper" value="${escape(bundle.copper || '')}" placeholder="0"></label><p class="herausforderung-note">Gegenstände und Kupfertaler werden direkt ins Inventar übernommen. Belohnungen sind in der öffentlichen Vorschau sichtbar.</p><div class="herausforderung-reward-picker"><section data-hr-template-picker aria-label="Belohnung aus dem Handelsregister auswählen"></section><div class="herausforderung-reward-add"><label>Menge<input type="number" min="1" max="9999" data-hr-field="item-quantity" value="1"></label><button type="button" class="herausforderung-button" data-hr-action="add-item"${bundle.items.length >= MAX_REWARD_ITEMS ? ' disabled' : ''}>${icon('items')}Gegenstand hinzufügen</button></div></div><ul class="herausforderung-reward-items">${bundle.items.map((item, itemIndex) => `<li data-hr-item-index="${itemIndex}"><span>${escape(item.title || item.product?.title || item.template)}</span><label>Menge<input type="number" min="1" max="9999" data-hr-field="quantity" value="${escape(item.quantity)}"></label><button type="button" data-hr-action="remove-item" aria-label="${escape(item.title || 'Gegenstand')} entfernen">×</button></li>`).join('')}</ul>` : ''}
       ${bundle.effects.map((effect, effectIndex) => effectMarkup(effect, effectIndex, kind)).join('')}
@@ -40,8 +44,9 @@ function rerender(editor, binding) {
   const index = Number(editor.dataset.hrApproachIndex);
   const open = editor.open;
   const bundles = [...editor.querySelectorAll('[data-hr-bundle][open]')].map(element => element.dataset.hrBundle);
-  editor.outerHTML = renderHerausforderungRewardEditor(binding.approaches[index], index);
-  const next = binding.root.querySelector(`[data-hr-approach-index="${index}"]`);
+  const outcomeIndex = editor.dataset.hrOutcomeIndex == null ? null : Number(editor.dataset.hrOutcomeIndex);
+  editor.outerHTML = renderHerausforderungRewardEditor(binding.approaches[index], index, { outcomeIndex });
+  const next = binding.root.querySelector(`[data-hr-approach-index="${index}"]${outcomeIndex == null ? ':not([data-hr-outcome-index])' : `[data-hr-outcome-index="${outcomeIndex}"]`}`);
   next.open = open;
   next.querySelectorAll('[data-hr-bundle]').forEach(element => element.open = bundles.includes(element.dataset.hrBundle));
   mountPickers(binding);
@@ -52,10 +57,16 @@ function context(root, target) {
   const binding = bindings.get(root);
   const approach = binding?.approaches[Number(editor?.dataset.hrApproachIndex)];
   const field = target.closest('[data-hr-bundle]')?.dataset.hrBundle;
-  return approach && field ? { editor, binding, approach, field, bundle: approach[field], kind: BUNDLES[field][1] } : null;
+  const outcome = editor?.dataset.hrOutcomeIndex == null ? null : approach?.outcomeTable?.[Number(editor.dataset.hrOutcomeIndex)];
+  return approach && field ? { editor, binding, approach, owner: outcome || approach, field, bundle: outcome ? outcome.benefits : approach[field], kind: BUNDLES[field][1] } : null;
 }
 
 function mountPickers(binding) {
+  for (const select of binding.root.querySelectorAll('[data-hr-usage-actor]')) {
+    const ctx = context(binding.root, select);
+    const effect = ctx.bundle.effects[Number(select.closest('[data-hr-effect-index]').dataset.hrEffectIndex)];
+    select.innerHTML = renderChallengeUsageActorOptions(binding.getCombatContext(), effect.usage?.actorId || '');
+  }
   for (const select of binding.root.querySelectorAll('[data-hr-combat-choice]')) {
     const ctx = context(binding.root, select);
     const effect = ctx.bundle.combatEffects[Number(select.closest('[data-hr-combat-index]').dataset.hrCombatIndex)];
@@ -70,16 +81,16 @@ function mountPickers(binding) {
   }
   for (const picker of binding.root.querySelectorAll('[data-hr-template-picker]')) {
     const editor = picker.closest('[data-hr-editor]');
-    const approach = binding.approaches[Number(editor.dataset.hrApproachIndex)];
-    let state = binding.pickerStates.get(approach);
-    if (!state) { state = createRegisterTemplatePickerState(); binding.pickerStates.set(approach, state); }
+    const ctx = context(binding.root, picker);
+    let state = binding.pickerStates.get(ctx.owner);
+    if (!state) { state = createRegisterTemplatePickerState(); binding.pickerStates.set(ctx.owner, state); }
     mountRegisterTemplatePicker(picker, { items: templates(), state, onSelect: product => {
       const quantity = editor.querySelector('[data-hr-field="item-quantity"]');
       const single = ['waffen', 'ruestungen'].includes(product?.category);
       const busy = binding.root.getAttribute('aria-busy') === 'true';
       quantity.disabled = single || busy;
       if (single) quantity.value = '1';
-      editor.querySelector('[data-hr-action="add-item"]').disabled = busy || !product || approach.rewards.items.length >= MAX_REWARD_ITEMS;
+      editor.querySelector('[data-hr-action="add-item"]').disabled = busy || !product || ctx.bundle.items.length >= MAX_REWARD_ITEMS;
     } });
   }
 }
@@ -103,7 +114,7 @@ export function mountHerausforderungRewardEditor(root, { approaches, onChange, g
     const { bundle, editor, binding, kind } = ctx;
     const action = trigger.dataset.hrAction;
     if (action === 'add-item') {
-      const selected = binding.pickerStates.get(ctx.approach)?.selectedId;
+      const selected = binding.pickerStates.get(ctx.owner)?.selectedId;
       const product = templates().find(item => item.id === selected);
       const quantity = Number(editor.querySelector('[data-hr-field="item-quantity"]').value);
       if (!product || !Number.isSafeInteger(quantity) || quantity < 1 || quantity > 9999) { editor.querySelector('[data-hr-error]').textContent = 'Registervorlage und gültige Menge wählen.'; return; }
@@ -147,7 +158,8 @@ export function mountHerausforderungRewardEditor(root, { approaches, onChange, g
     else if (field === 'quantity' && itemIndex !== undefined) bundle.items[Number(itemIndex)].quantity = target.value;
     else if (effectIndex !== undefined) {
       const effect = bundle.effects[Number(effectIndex)];
-      if (field === 'modifier' || field === 'rollMode') effect.mechanics[target.dataset.modifier] = target.value;
+      if (updateChallengeEffectUsage(effect, field, target.value)) rerender(editor, binding);
+      else if (field === 'modifier' || field === 'rollMode') effect.mechanics[target.dataset.modifier] = target.value;
       else if (field === 'presetId') {
         const preset = COMBAT_STATUS_PRESETS.find(item => item.id === target.value);
         Object.assign(effect, { presetId: target.value, kind: preset?.kind || effect.kind, name: preset?.name || effect.name, description: preset?.description || effect.description, mechanics: { ...(preset?.mechanics || {}) } });

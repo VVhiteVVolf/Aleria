@@ -52,7 +52,7 @@ test('ordnet jeder geforderten Sprechblase nur ihre passenden Fertigkeiten zu', 
   assert.deepEqual(getSkillsForCommentKind('speech').map(skill => skill.id), ['persuasion']);
   assert.deepEqual(getSkillsForCommentKind('performance').map(skill => skill.id), ['deception', 'performance']);
   assert.deepEqual(getSkillsForCommentKind('thought').map(skill => skill.id), ['insight', 'investigation', 'religion', 'arcane-kunde', 'history', 'nature', 'perception']);
-  assert.deepEqual(getSkillsForCommentKind('interact').map(skill => skill.id), ['medicine', 'sleight-of-hand', 'acrobatics', 'athletics', 'body-control', 'survival']);
+  assert.deepEqual(getSkillsForCommentKind('interact').map(skill => skill.id), ['medicine', 'sleight-of-hand', 'acrobatics', 'athletics', 'body-control', 'survival', 'stealth']);
   assert.deepEqual(getSkillsForCommentKind('flirt').map(skill => skill.id), ['seduction']);
   assert.equal(getSkillsForCommentKind('flirt')[0].label, 'Flirten');
 });
@@ -149,7 +149,7 @@ test('fällt bei leerer Fertigkeit transparent auf das zugehörige Attribut zur�
   assert.equal(result.modifier, 3);
 });
 
-test('wendet bevorzugten Bonus und alternative Erschwernis der Herausforderung an', () => {
+test('verwendet Bogenwerte ohne zusätzliche bevorzugte Boni oder alternative Erschwernisse', () => {
   const challenge = normalizeSkillChallenge({
     id: 'lie-1',
     enabled: true,
@@ -158,8 +158,8 @@ test('wendet bevorzugten Bonus und alternative Erschwernis der Herausforderung a
     preferredModifier: 2,
     alternativeModifier: -2
   });
-  assert.equal(getChallengeAffinityModifier(challenge, 'insight'), 2);
-  assert.equal(getChallengeAffinityModifier(challenge, 'deception'), -2);
+  assert.equal(getChallengeAffinityModifier(challenge, 'insight'), 0);
+  assert.equal(getChallengeAffinityModifier(challenge, 'deception'), 0);
 });
 
 test('wertet natürliche 20 und 1 kritisch sowie den übrigen Wurf gegen SG aus', () => {

@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "tool": "built-in image_gen",
+  "size": [
+    96,
+    96
+  ],
+  "format": "lossless WebP, generated alpha preserved",
+  "entries": [
+    {
+      "id": "strength",
+      "name": "Kraft",
+      "file": "strength-v1.webp",
+      "bytes": 14314,
+      "sourceSha256": "c7331937b4c1d7fa87c6702b6b852a0afb800803a5d86bf10bf4482b6c96f1a9"
+    },
+    {
+      "id": "dexterity",
+      "name": "Geschick",
+      "file": "dexterity-v1.webp",
+      "bytes": 13228,
+      "sourceSha256": "3566ac50318d2d06165eef2796b1d49adc335beaa8857e7d5df8a2b01a28a624"
+    },
+    {
+      "id": "constitution",
+      "name": "Konstitution",
+      "file": "constitution-v1.webp",
+      "bytes": 14410,
+      "sourceSha256": "3557edec63155277c387ad1bbf3af6ca7bb19e0a9bc0e91b474c825185762537"
+    },
+    {
+      "id": "intelligence",
+      "name": "Intelligenz",
+      "file": "intelligence-v1.webp",
+      "bytes": 15162,
+      "sourceSha256": "48c7f012e0dfeec372c77d4da931ec703349a3144aa6824641a86b4bb40f153b"
+    },
+    {
+      "id": "wisdom",
+      "name": "Weisheit",
+      "file": "wisdom-v1.webp",
+      "bytes": 15858,
+      "sourceSha256": "6db6d56a3ce9f52b369a3428e5fa10175032f6ef67c54f946bda89a416a63cae"
+    },
+    {
+      "id": "charisma",
+      "name": "Charisma",
+      "file": "charisma-v1.webp",
+      "bytes": 14762,
+      "sourceSha256": "32f92332f76c465d8970fcd2ce1e66420f476996b4e05fa06a487e54f7975b30"
+    }
+  ]
+}

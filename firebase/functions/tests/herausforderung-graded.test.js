@@ -20,7 +20,7 @@ async function setup(){
   return {db,attempt,created};
 }
 
-for(const [natural,tier,recipient,count] of [[20,'critical-success',actorId,1],[16,'success',actorId,1],[13,'partial',actorId,1],[10,'neutral',actorId,0],[3,'failure',opponentId,1],[2,'major-failure',actorId,1],[1,'critical-failure',opponentId,1]]) {
+for(const [natural,tier,recipient,count] of [[20,'critical-success',actorId,1],[18,'success',actorId,1],[15,'partial',actorId,1],[12,'neutral',actorId,0],[7,'failure',opponentId,1],[2,'major-failure',actorId,1],[1,'critical-failure',opponentId,1]]) {
   test(`server validates ${tier}, ignores forged effects and atomically prevents any second attempt`,async()=>{
     const {db,attempt,created}=await setup();
     const originalChallenge=structuredClone(db.data.get('comments/'+created.id));
@@ -28,7 +28,7 @@ for(const [natural,tier,recipient,count] of [[20,'critical-success',actorId,1],[
     const result=await commitSkillCommentOperation(attempt(natural),{database:db,now:200});
     const resolution=result.mechanics.commentSegments[0].skillResolution;
     assert.equal(resolution.herausforderungTier,tier);
-    assert.equal(resolution.total,natural+2);
+    assert.equal(resolution.total,natural);
     assert.equal(resolution.revealedText,gradedEvent().approaches[0].outcomeTable.find(row=>row.id===tier).text);
     assert.equal(resolution.herausforderungCombatResults?.length || 0,count);
     if(count)assert.equal(resolution.herausforderungCombatResults[0].actorId,recipient);
@@ -42,7 +42,7 @@ for(const [natural,tier,recipient,count] of [[20,'critical-success',actorId,1],[
 
 test('one-shot attack bonuses are consumed by the authoritative combat transaction and replay identically',async()=>{
   const {db,attempt}=await setup();
-  await commitSkillCommentOperation(attempt(13),{database:db,now:200});
+  await commitSkillCommentOperation(attempt(15),{database:db,now:200});
   const before=deriveCombatStateFromComments(history(db)).get(actorId).temporaryConditions;
   assert.equal(before.length,1);
   const segment={commentKind:'combataction',actorId,text:'Attacks.',combatAction:{encounterId:'duel',profileActionId:'weapon:sword'},combatResolution:{resolutionId:'untrusted',actorId,targetId:opponentId,
@@ -57,7 +57,7 @@ test('one-shot attack bonuses are consumed by the authoritative combat transacti
 test('graded rewards cannot bypass author roles and duplicate attempt segments roll back atomically',async()=>{
   const {db,attempt}=await setup();
   await assert.rejects(commitHerausforderungOperation({auth,data:{entryId:'scene',text:'Unauthorized',metadata:{herausforderung:gradedEvent()}}},{database:db}),/Spielleitung|Redaktion/);
-  const payload=attempt(13);payload.data.metadata.commentSegments.push(structuredClone(payload.data.metadata.commentSegments[0]));
+  const payload=attempt(15);payload.data.metadata.commentSegments.push(structuredClone(payload.data.metadata.commentSegments[0]));
   const before=structuredClone([...db.data]);
   await assert.rejects(commitSkillCommentOperation(payload,{database:db,now:200}),/bereits versucht/);
   assert.deepEqual([...db.data],before);

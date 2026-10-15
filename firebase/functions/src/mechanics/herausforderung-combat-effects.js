@@ -1,5 +1,5 @@
 import { HttpsError } from 'firebase-functions/v2/https';
-import { getActiveCombatEncounter } from '../generated/combat/combat-encounter-model.js';
+import { getActiveCombatEncounter, deriveCombatEncounterState } from '../generated/combat/combat-encounter-model.js';
 import { resolveCombatProfile } from '../generated/combat/combat-profile-resolver.js';
 import { overlayCombatHitPointState } from '../generated/combat/combat-state-model.js';
 import { getPersistentCombatResources, recoverDailyCombatResources } from '../generated/combat/combat-action-economy.js';
@@ -9,7 +9,7 @@ import { getChallengeCombatParticipants, challengeCombatTargetIds, getChallengeC
 import { isTrustedMechanicalComment, sortSceneHistory } from './trusted-scene-history.js';
 import { ProvidedDiceAdapter } from './provided-dice-adapter.js';
 
-export async function bindHerausforderungCombatContext(database, transaction, event, entryId) {
+export async function bindHerausforderungCombatContext(database, transaction, event, entryId, { encounterId = '' } = {}) {
   if (event.audience.mode === 'selected') for (const actorId of event.audience.actorIds) {
     if (actorId.includes('/')) throw new HttpsError('invalid-argument', 'Eine Figuren-ID ist ungültig.');
     const character = await transaction.get(database.collection('characters').doc(actorId));
@@ -24,9 +24,9 @@ export async function bindHerausforderungCombatContext(database, transaction, ev
   if (!requiresCombat) return;
   const snapshot = await transaction.get(database.collection('comments').where('entryId', '==', entryId));
   const history = sortSceneHistory(snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }))).filter(isTrustedMechanicalComment);
-  const encounter = getActiveCombatEncounter(history);
+  const encounter = encounterId ? deriveCombatEncounterState(history).get(encounterId) : getActiveCombatEncounter(history);
   if (!encounter) throw new HttpsError('failed-precondition', 'Für diese Herausforderung ist ein aktiver Kampf erforderlich.');
-  const participants = getChallengeCombatParticipants(encounter);
+  const participants = encounterId ? [...encounter.participants.values()] : getChallengeCombatParticipants(encounter);
   if (targetIds.some(id => !participants.some(participant => participant.actorId === id))) throw new HttpsError('invalid-argument', 'Kampfwirkungen dürfen nur aktive Teilnehmer dieses Kampfes treffen.');
   event.combatBound = true;
   event.combatContext = { encounterId: encounter.encounterId };

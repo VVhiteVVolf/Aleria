@@ -1,16 +1,16 @@
 import { normalizeChallengeOutcomes, validateChallengeOutcomes, getOutcomeSuccessDifficulty } from './herausforderung-outcomes.js?v=20261015-graded-challenges-v1';
-import { getSkillDefinition } from '../skill-checks/skill-check-model.js?v=20261015-graded-challenges-v1';
+import { getCheckDefinition } from '../skill-checks/skill-check-model.js?v=20261015-check-options-v1';
 import { normalizeHerausforderungBenefits, validateHerausforderungBenefits } from './herausforderung-rewards.js?v=20261015-graded-challenges-v1';
-import { normalizeChallengeAudience, validateChallengeAudience } from './herausforderung-combat-context.js?v=20261015-graded-challenges-v1';
+import { normalizeChallengeAudience, validateChallengeAudience } from './herausforderung-combat-context.js?v=20261015-check-options-v1';
 import { normalizeChallengeSceneImage, validateChallengeSceneImage } from './herausforderung-scene-image-model.js';
 
 export const HERAUSFORDERUNG_EVENT_KIND = 'herausforderung-event';
-export const HERAUSFORDERUNG_SCHEMA_VERSION = 6;
+export const HERAUSFORDERUNG_SCHEMA_VERSION = 7;
 export const MIN_HERAUSFORDERUNG_APPROACHES = 1;
 export const MAX_HERAUSFORDERUNG_APPROACHES = 6;
 export const HERAUSFORDERUNG_NARROW_FAILURE_MARGIN = 3;
-export const HERAUSFORDERUNG_PREFERRED_MODIFIER = 2;
-export const HERAUSFORDERUNG_ALTERNATIVE_MODIFIER = -2;
+export const HERAUSFORDERUNG_PREFERRED_MODIFIER = 0;
+export const HERAUSFORDERUNG_ALTERNATIVE_MODIFIER = 0;
 
 // Used by both the authoring dialog and the server before normalization.
 export function getHerausforderungValidationIssues(event = {}) {
@@ -26,8 +26,8 @@ export function getHerausforderungValidationIssues(event = {}) {
   if (approaches.length > MAX_HERAUSFORDERUNG_APPROACHES) issues.push({ field: 'approaches', message: 'Höchstens sechs Ansätze sind erlaubt.' });
   const ids = new Set();
   approaches.forEach((approach, index) => {
-    if (!Array.isArray(approach?.preferredSkills) || !approach.preferredSkills.some(skill => String(skill || '').trim())) issues.push({ index, field: 'preferredSkill', message: `Ansatz ${index + 1}: Mindestens eine passende Fertigkeit wählen.` });
-    else if (approach.preferredSkills.some(skill => !getSkillDefinition(skill))) issues.push({ index, field: 'preferredSkill', message: `Ansatz ${index + 1}: Eine gültige Fertigkeit wählen.` });
+    if (!Array.isArray(approach?.preferredSkills) || !approach.preferredSkills.some(skill => String(skill || '').trim())) issues.push({ index, field: 'preferredSkill', message: `Ansatz ${index + 1}: Mindestens eine passende Probe wählen.` });
+    else if (approach.preferredSkills.some(skill => !getCheckDefinition(skill))) issues.push({ index, field: 'preferredSkill', message: `Ansatz ${index + 1}: Eine gültige Fertigkeit, einen Attributs- oder Rettungswurf wählen.` });
     if (!approach?.outcomeTable?.length && !String(approach?.insight || '').trim()) issues.push({ index, field: 'insight', message: `Ansatz ${index + 1}: Eine verdeckte Erkenntnis eintragen.` });
     const difficulty = Number(approach?.difficulty ?? 10);
     if (!Number.isInteger(difficulty) || difficulty < 1 || difficulty > 40) issues.push({ index, field: 'difficulty', message: `Ansatz ${index + 1}: Schwierigkeit als ganze Zahl von 1 bis 40 eintragen.` });

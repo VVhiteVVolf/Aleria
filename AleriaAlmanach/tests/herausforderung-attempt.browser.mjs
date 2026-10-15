@@ -107,7 +107,7 @@ try {
     assert.ok(!result.error, result.error);
     const resolution = result.commentMetadata.commentSegments.at(-1).skillResolution;
     assert.equal(resolution.skillId, skillId); assert.equal(resolution.actorId, actor.id);
-    assert.equal(resolution.affinityModifier, 2); assert.equal(resolution.targetChallengeId, settings.target);
+    assert.equal(resolution.affinityModifier, 0); assert.equal(resolution.targetChallengeId, settings.target);
     assert.equal(await page.evaluate(() => testRolls.length), before + 1);
     await form.locator('#test-close-form').click();
     checks.push(`${actor.name}-${skillId}-real-composer-and-roll`);

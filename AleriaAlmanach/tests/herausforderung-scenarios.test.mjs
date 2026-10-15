@@ -35,7 +35,7 @@ for (const actor of actors) for (const skillId of ['persuasion', 'intimidation',
     const resolution = result.commentSegments[0].skillResolution;
     assert.equal(resolution.serverValidated, true);
     assert.equal(resolution.skillId, skillId);
-    assert.equal(resolution.affinityModifier, 2);
+    assert.equal(resolution.affinityModifier, 0);
     assert.equal(resolution.total, client.total);
     assert.equal(resolution.targetChallengeId, challenge.id);
   });
@@ -65,7 +65,7 @@ for (const scenario of scenarios) {
       assert.equal(resolution.difficulty, client.difficulty);
       assert.equal(resolution.herausforderungTier, scenario.tier);
       assert.equal(resolution.serverValidated, true);
-      assert.equal(resolution.affinityModifier, scenario.id === 'bridge' ? -2 : 2);
+      assert.equal(resolution.affinityModifier, 0);
       const revealed = scenario.tier === 'knapp' ? scenario.partialHint : scenario.tier === 'deutlich' ? scenario.failureConsequence : scenario.insight;
       assert.equal(resolution.revealedText, revealed);
       const history = [origin, { id: 'attempt', commentSegments: result.commentSegments }];

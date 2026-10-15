@@ -1,4 +1,4 @@
-import { mountChallengeOutcomesEditor } from './herausforderung-outcomes-ui.js?v=20261015-graded-challenges-v1';
+import { mountChallengeOutcomesEditor } from './herausforderung-outcomes-ui.js?v=20261015-check-options-v1';
 import {
   collectHerausforderungApproaches,
   isHerausforderungComment,
@@ -6,7 +6,7 @@ import {
   getHerausforderungValidationIssues,
   normalizeHerausforderungApproach,
   normalizeHerausforderungEvent
-} from './herausforderung-model.js?v=20261015-graded-challenges-v1';
+} from './herausforderung-model.js?v=20261015-check-options-v1';
 import { collectHerausforderungProgress } from './herausforderung-progress.js?v=20261015-graded-challenges-v1';
 import {
   ensureHerausforderungDialog,
@@ -16,21 +16,22 @@ import {
   setHerausforderungSubmitting,
   updateHerausforderungDraft,
   showHerausforderungValidation
-} from './herausforderung-ui.js?v=20261015-graded-challenges-v1';
-import { bindSkillIconTooltips } from '../skill-checks/skill-icon-view.js';
-import { mountHerausforderungRewardEditor } from './herausforderung-rewards-ui.js?v=20261015-graded-challenges-v1';
-import { createChallengeCombatContext, normalizeChallengeAudience, getChallengeCombatBindingError, challengeRequiresCombat } from './herausforderung-combat-context.js?v=20261015-graded-challenges-v1';
+} from './herausforderung-ui.js?v=20261015-check-options-v1';
+import { bindSkillIconTooltips } from '../skill-checks/skill-icon-view.js?v=20261015-check-options-v1';
+import { mountHerausforderungRewardEditor } from './herausforderung-rewards-ui.js?v=20261015-check-options-v1';
+import { createChallengeCombatContext, normalizeChallengeAudience, getChallengeCombatBindingError, challengeRequiresCombat } from './herausforderung-combat-context.js?v=20261015-check-options-v1';
 import { mountChallengeAudience, refreshChallengeAudience } from './herausforderung-audience-ui.js';
 import { resolveCombatProfile } from '../combat/combat-profile-resolver.js';
 import { deriveCombatStateFromComments, overlayCombatHitPointState } from '../combat/combat-state-model.js';
 import { getActiveCombatEncounter } from '../combat/combat-encounter-model.js';
 import { mountHerausforderungExchange } from './herausforderung-exchange-ui.js?v=20261015-graded-challenges-v1';
-import { createHerausforderungAttemptPicker } from './herausforderung-attempt-dialog.js?v=20261015-graded-challenges-v1';
+import { createHerausforderungAttemptPicker } from './herausforderung-attempt-dialog.js?v=20261015-check-options-v1';
 import { bindChallengeSceneImageEvents, readChallengeSceneImage, setChallengeSceneImage } from './herausforderung-scene-image-ui.js';
 
 bindSkillIconTooltips(document);
 bindChallengeSceneImageEvents(document);
 
+let editingComment = null;
 let activeThreadId = '';
 let draftApproaches = [];
 let submitting = false;
@@ -76,7 +77,7 @@ function importDraft(event, issues) {
   setHerausforderungStatus(issues.length ? `Entwurf importiert. ${issues.length} Pflichtangaben bitte ergänzen.` : 'Entwurf importiert. Situation, Lösungswege und Belohnungen prüfen; danach ausdrücklich veröffentlichen.');
 }
 
-function openDialog() {
+function openDialog(comment = null) {
   if (submitting) return;
   const thread = globalThis.getCurrentCommentThread?.();
   if (!thread || thread.kind !== 'session') {
@@ -85,12 +86,13 @@ function openDialog() {
   }
   activeThreadId = String(globalThis.getCurrentCommentThreadId?.() || '');
   if (!activeThreadId) return;
+  editingComment = comment?.herausforderung ? comment : null;
   draftApproaches = defaultApproaches();
   draftAudience = normalizeChallengeAudience();
   const comments = globalThis.getCachedCommentsForThread?.(activeThreadId) || [];
   const states = deriveCombatStateFromComments(comments);
   const profiles = (globalThis.getAvailableCommentCharacters?.() || []).map(actor => overlayCombatHitPointState(resolveCombatProfile(actor), states.get(actor.id)));
-  dialogCombatContext = { ...createChallengeCombatContext(comments, profiles), actors: (globalThis.getAvailableCommentCharacters?.() || []).map(({ id, name }) => ({ actorId: id, name })) };
+  dialogCombatContext = { ...createChallengeCombatContext(comments, profiles, { encounterId: editingComment?.herausforderung?.combatBound ? editingComment.herausforderung.combatContext?.encounterId : '' }), actors: (globalThis.getAvailableCommentCharacters?.() || []).map(({ id, name }) => ({ actorId: id, name })) };
   draftCombatBound = !!dialogCombatContext.encounterId;
   operationId = crypto.randomUUID();
   submittedDraft = '';
@@ -101,8 +103,17 @@ function openDialog() {
   if (title) title.value = 'Herausforderung';
   if (description) description.value = '';
   setChallengeSceneImage(root, null);
+  root.dataset.editing = editingComment ? 'true' : 'false';
+  root.querySelector('#herausforderung-dialog-title').textContent = editingComment ? 'Herausforderung bearbeiten' : 'Eine Herausforderung gestalten';
+  root.querySelector('[data-herausforderung-submit-label]').textContent = editingComment ? 'Änderungen speichern' : 'Veröffentlichen';
+  if (editingComment) {
+    const event = normalizeHerausforderungEvent(editingComment.herausforderung);
+    title.value = event.title; description.value = event.publicDescription;
+    setChallengeSceneImage(root, event.sceneImage);
+    draftApproaches = event.approaches; draftAudience = event.audience; draftCombatBound = event.combatBound;
+  }
   renderDialog();
-  setHerausforderungStatus('Öffentliche Beschreibung sowie mindestens einen Ansatz mit Fertigkeit, Schwierigkeit und verdeckter Erkenntnis ausfüllen.');
+  setHerausforderungStatus(editingComment ? 'Änderungen gelten für neue Versuche. Bisherige Würfe und Folgen bleiben erhalten.' : 'Öffentliche Beschreibung sowie mindestens einen Ansatz mit Probe, Schwierigkeit und verdeckter Erkenntnis ausfüllen.');
   globalThis.activateDialog?.('herausforderung-overlay', { initialFocus: '[data-herausforderung-field="title"]' });
 }
 
@@ -110,6 +121,7 @@ function closeDialog() {
   if (submitting) return;
   globalThis.deactivateDialog?.('herausforderung-overlay');
   activeThreadId = '';
+  editingComment = null;
   draftApproaches = [];
   operationId = '';
   submittedDraft = '';
@@ -187,6 +199,7 @@ async function submitEvent() {
       commentKind: 'herausforderung-event',
       herausforderung: event,
       operationId,
+      ...(editingComment ? { commentId: editingComment.id, expectedRevision: editingComment.herausforderungRevision || 0 } : {}),
       orderKey: globalThis.getNextCommentOrderKey?.(threadId, null) ?? Date.now()
     });
     published = true;
@@ -198,10 +211,11 @@ async function submitEvent() {
     setHerausforderungSubmitting(false);
   }
   if (!published) return;
+  const edited = !!editingComment;
   closeDialog();
-  globalThis.showAppStatus?.('Die Herausforderung wurde veröffentlicht.', 'success');
+  globalThis.showAppStatus?.(edited ? 'Die Änderungen wurden gespeichert.' : 'Die Herausforderung wurde veröffentlicht.', 'success');
   try {
-    await globalThis.loadCommentsIntoPage?.(threadId, true, { page: 'last' });
+    await globalThis.loadCommentsIntoPage?.(threadId, true, edited ? {} : { page: 'last' });
   } catch (error) {
     console.error('herausforderung refresh failed:', error);
     globalThis.showAppStatus?.('Die Herausforderung ist gespeichert. Bitte die Szene neu laden, um sie anzuzeigen.', 'error');
@@ -249,6 +263,12 @@ document.addEventListener('click', event => {
   const action = trigger.dataset.herausforderungAction;
   if (submitting) return;
   if (action === 'open') openDialog();
+  if (action === 'edit') {
+    const comments = globalThis.getCachedCommentsForThread?.(globalThis.getCurrentCommentThreadId?.() || '') || [];
+    const comment = comments.find(comment => comment.id === trigger.dataset.commentId && isHerausforderungComment(comment));
+    if (comment) openDialog(comment);
+    else globalThis.showAppStatus?.('Die Herausforderung ist nicht mehr verfügbar. Bitte die Szene neu laden.', 'error');
+  }
   if (action === 'close') closeDialog();
   if (action === 'clear-image') {
     setChallengeSceneImage(document.getElementById('herausforderung-overlay'), null);

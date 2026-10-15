@@ -30,6 +30,37 @@ export function validateHerausforderungEvent(event = {}) {
   return getHerausforderungValidationIssues(event)[0]?.message || null;
 }
 
+async function updateHerausforderung({ database, request, metadata, event, entryId, text, fingerprint, now }) {
+  const commentId = clean(metadata.commentId, 240);
+  if (!commentId || commentId.includes('/')) fail('invalid-argument', 'Die Herausforderungs-ID ist ungültig.');
+  const expectedRevision = Number(metadata.expectedRevision);
+  if (!Number.isSafeInteger(expectedRevision) || expectedRevision < 0) fail('invalid-argument', 'Die Bearbeitungsversion fehlt. Bitte die Herausforderung erneut öffnen.');
+  const ref = database.collection('comments').doc(commentId);
+  await database.runTransaction(async transaction => {
+    const snapshot = await transaction.get(ref);
+    if (!snapshot.exists) fail('not-found', 'Diese Herausforderung ist nicht mehr verfügbar.');
+    const original = snapshot.data();
+    if (original.entryId !== entryId || !original.herausforderung) fail('failed-precondition', 'Der Eintrag ist keine Herausforderung dieser Szene.');
+    const revision = Number(original.herausforderungRevision || 0);
+    if (original.herausforderungLastEdit?.operationId === metadata.operationId
+      && original.herausforderungLastEdit?.uid === request.auth.uid
+      && original.herausforderungFingerprint === fingerprint) return;
+    if (revision !== expectedRevision) fail('aborted', 'Die Herausforderung wurde inzwischen geändert. Bitte erneut öffnen.');
+    // Existing attempts, rolls, claims and effects are immutable records. Editing
+    // the authored challenge only changes what future attempts will resolve.
+    await bindHerausforderungCombatContext(database, transaction, event, entryId, {
+      encounterId: original.herausforderung.combatBound ? original.herausforderung.combatContext?.encounterId : ''
+    });
+    await prepareHerausforderungRewards(database, transaction, event);
+    transaction.update(ref, { herausforderung: event, text, herausforderungFingerprint: fingerprint,
+      herausforderungRevision: revision + 1,
+      herausforderungLastEdit: { operationId: clean(metadata.operationId, 80), uid: request.auth.uid },
+      editedBy: request.auth.uid, editedAtClient: now, editedAt: FieldValue.serverTimestamp(),
+      activityAtClient: now, activityAt: FieldValue.serverTimestamp() });
+  });
+  return { id: commentId, updated: true };
+}
+
 export async function commitHerausforderungOperation(request, { database = getFirestore(), now = Date.now() } = {}) {
   if (!request.auth) fail('unauthenticated', 'Eine Firebase-Anmeldung ist erforderlich.');
   const payload = clonePayload(request.data);
@@ -45,6 +76,7 @@ export async function commitHerausforderungOperation(request, { database = getFi
   const operationId = clean(metadata.operationId, 80);
   if (operationId && !/^[a-zA-Z0-9-]{8,80}$/.test(operationId)) fail('invalid-argument', 'Die Vorgangskennung ist ungültig.');
   const fingerprint = createHash('sha256').update(JSON.stringify({ entryId, event: metadata.herausforderung })).digest('hex');
+  if (metadata.commentId) return updateHerausforderung({ database, request, metadata, event, entryId, text, fingerprint, now });
   const operationKey = operationId ? 'challenge-' + createHash('sha256').update(request.auth.uid + '\u0000' + operationId).digest('hex') : '';
   const ref = operationKey ? database.collection('comments').doc(operationKey) : database.collection('comments').doc();
   await database.runTransaction(async transaction => {

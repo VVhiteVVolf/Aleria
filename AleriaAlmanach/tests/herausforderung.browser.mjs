@@ -74,11 +74,11 @@ try {
   await overlay.locator('[data-skill-id="insight"]').locator('..').dispatchEvent('pointerover');
   assert.equal(await page.locator('[role="tooltip"]').count(), 1, 'Combat and skill hints share one visible tooltip');
   await page.locator('#tooltip-coexistence').evaluate(element => element.remove());
-  assert.equal(await overlay.locator('.herausforderung-skill-check [data-skill-icon]').count(), 19);
+  assert.equal(await overlay.locator('.herausforderung-skill-check [data-skill-icon]').count(), 32);
   await overlay.locator('.herausforderung-skill-check [data-skill-icon]').evaluateAll(images => Promise.all(images.map(image => { image.loading = 'eager'; return image.decode(); })));
   await overlay.locator('[data-skill-id="perception"]').focus();
   await overlay.locator('[data-skill-id="insight"]').focus();
-  assert.match(await page.locator('.skill-icon-tooltip').innerText(), /Motiv erkennen.*\+2/);
+  assert.match(await page.locator('.skill-icon-tooltip').innerText(), /Motiv erkennen.*Bogenwert|Motiv erkennen.*Charakterbogen/);
   await page.keyboard.press('Escape');
   assert.equal(await page.locator('.skill-icon-tooltip').count(), 0);
   assert.ok(await overlay.isVisible(), 'Escape closes the tooltip before the editor');
@@ -266,8 +266,10 @@ try {
   assert.equal(await page.locator('[data-skill-input="targetChallengeId"]').inputValue(), settings.skillTargetChallengeId);
   assert.equal(await page.locator('[data-skill-input="skillId"]:checked').inputValue(), 'persuasion');
   assert.equal(await page.locator('.skill-choice [data-skill-icon="persuasion"]').count(), 1);
-  await page.locator('.skill-check-target-note .skill-icon-hint').focus();
-  assert.match(await page.locator('.skill-icon-tooltip').innerText(), /Überzeugen.*\+2/);
+  await page.locator('.skill-check-target-note .skill-icon-hint').scrollIntoViewIfNeeded();
+  await page.evaluate(() => new Promise(requestAnimationFrame));
+  await page.locator('.skill-check-target-note .skill-icon-hint').evaluate(element => element.focus({ preventScroll: true }));
+  assert.match(await page.locator('.skill-icon-tooltip').innerText(), /Überzeugen.*Bogenwert|Überzeugen.*Charakterbogen/);
   await page.keyboard.press('Escape');
   await page.screenshot({ path: resolve(out, 'attempt-desktop.png') });
   await page.evaluate(async () => {
@@ -279,16 +281,16 @@ try {
   assert.equal(await page.locator('.skill-choice').count(), 7);
   const selectedSkill = () => page.locator('[data-skill-input="skillId"]:checked');
   assert.equal(await selectedSkill().inputValue(), 'insight');
-  assert.match(await selectedSkill().locator('..').innerText(), /Passend · \+2/);
+  assert.match(await selectedSkill().locator('..').innerText(), /Passend · Charakterbogen/);
   await selectedSkill().focus(); await page.keyboard.press('ArrowRight');
   assert.equal(await selectedSkill().inputValue(), 'investigation');
-  assert.match(await selectedSkill().locator('..').innerText(), /Alternative · −2/);
+  assert.match(await selectedSkill().locator('..').innerText(), /Alternative · Charakterbogen/);
   assert.ok(await selectedSkill().evaluate(element => element === document.activeElement), 'Changing skill retains keyboard focus');
   await page.keyboard.press('Escape');
   await page.screenshot({ path: resolve(out, 'attempt-choices-desktop.png') });
   await page.setViewportSize({ width: 390, height: 844 });
   await page.locator('.skill-check-target-note .skill-icon-hint').tap();
-  assert.match(await page.locator('.skill-icon-tooltip').innerText(), /Motiv erkennen.*\+2/);
+  assert.match(await page.locator('.skill-icon-tooltip').innerText(), /Motiv erkennen.*Bogenwert|Motiv erkennen.*Charakterbogen/);
   const tooltipBounds = await page.locator('.skill-icon-tooltip').boundingBox();
   assert.ok(tooltipBounds.x >= 0 && tooltipBounds.x + tooltipBounds.width <= 390);
   await page.screenshot({ path: resolve(out, 'attempt-choices-mobile.png') });

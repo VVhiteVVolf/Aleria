@@ -1,6 +1,5 @@
-import { getChallengeAttemptChoices } from '../skill-checks/skill-challenge-attempt.js?v=20261015-graded-challenges-v1';
-import { getChallengeAffinityModifier } from '../skill-checks/skill-check-model.js?v=20261015-graded-challenges-v1';
-import { renderSkillIcon } from '../skill-checks/skill-icon-view.js';
+import { getChallengeAttemptChoices } from '../skill-checks/skill-challenge-attempt.js?v=20261015-check-options-v1';
+import { renderSkillIcon } from '../skill-checks/skill-icon-view.js?v=20261015-check-options-v1';
 
 const escape = value => String(value ?? '').replace(/[&<>"']/g, character => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[character]));
 
@@ -14,9 +13,9 @@ function createAttemptDialog() {
   root.setAttribute('aria-labelledby', 'herausforderung-attempt-title');
   root.setAttribute('aria-describedby', 'herausforderung-attempt-description');
   root.innerHTML = `<section class="herausforderung-attempt-card">
-    <header><div><small>Herausforderung angehen</small><h2 id="herausforderung-attempt-title">Welche Fertigkeit möchtest du nutzen?</h2></div><button type="button" data-ha-attempt-action="close" aria-label="Fertigkeitsauswahl schließen">×</button></header>
-    <div class="herausforderung-attempt-body"><p class="herausforderung-attempt-target" data-ha-attempt-target></p><p id="herausforderung-attempt-description">Wähle eine passende Fertigkeit für deinen Versuch. Gewürfelt wird erst beim Eintragen deines Beitrags.</p><div class="herausforderung-attempt-choices" data-ha-attempt-choices aria-label="Passende Fertigkeiten"></div></div>
-    <footer><span>Ein Versuch · eine Fertigkeit</span><button type="button" data-ha-attempt-action="close">Abbrechen</button></footer>
+    <header><div><small>Herausforderung angehen</small><h2 id="herausforderung-attempt-title">Welche Probe möchtest du nutzen?</h2></div><button type="button" data-ha-attempt-action="close" aria-label="Probenauswahl schließen">×</button></header>
+    <div class="herausforderung-attempt-body"><p class="herausforderung-attempt-target" data-ha-attempt-target></p><p id="herausforderung-attempt-description">Wähle eine der angebotenen Proben für deinen Versuch. Gewürfelt wird erst beim Eintragen deines Beitrags.</p><div class="herausforderung-attempt-choices" data-ha-attempt-choices aria-label="Passende Proben"></div></div>
+    <footer><span>Ein Versuch · eine Probe</span><button type="button" data-ha-attempt-action="close">Abbrechen</button></footer>
   </section>`;
   document.body.appendChild(root);
   return root;
@@ -57,8 +56,8 @@ export function createHerausforderungAttemptPicker() {
     current = { choices, onChoose };
     dialog.querySelector('[data-ha-attempt-target]').textContent = `${challenge.visibleText || challenge.authorName || 'Lösungsweg'} · SG ${challenge.difficulty}`;
     dialog.querySelector('[data-ha-attempt-choices]').innerHTML = choices.map(skill => {
-      const modifier = getChallengeAffinityModifier(challenge, skill.id);
-      return `<button type="button" class="herausforderung-attempt-choice" data-ha-attempt-action="choose" data-skill-id="${escape(skill.id)}">${renderSkillIcon(skill)}<span><strong>${escape(skill.label)}</strong><small>Passende Fertigkeit · ${modifier >= 0 ? '+' : '−'}${Math.abs(modifier)}</small></span><span aria-hidden="true">→</span></button>`;
+      const detail = skill.checkType === 'saving-throw' ? 'Eigener Rettungswurfwert mit Ausbildung' : skill.checkType === 'attribute' ? 'Attributsmodifikator ohne Übungsbonus' : 'Fertigkeitswert mit Übung';
+      return `<button type="button" class="herausforderung-attempt-choice" data-ha-attempt-action="choose" data-skill-id="${escape(skill.id)}">${renderSkillIcon(skill)}<span><strong>${escape(skill.label)}</strong><small>${detail}</small></span><span aria-hidden="true">→</span></button>`;
     }).join('');
     globalThis.activateDialog(dialog.id, { initialFocus: '[data-ha-attempt-action="choose"]' });
     return true;

@@ -46,9 +46,9 @@ test('eine Herausforderung ohne Ansätze wird abgelehnt', () => {
   assert.match(validateHerausforderungEvent(event), /mindestens ein Ansatz/i);
 });
 
-test('ein Ansatz ohne bevorzugte Fertigkeit wird abgelehnt', () => {
+test('ein Ansatz ohne angebotene Probe wird abgelehnt', () => {
   const event = validEvent({ approaches: [{ label: 'Ohne Fertigkeit', preferredSkills: [], insight: 'Etwas' }] });
-  assert.match(validateHerausforderungEvent(event), /passende Fertigkeit/);
+  assert.match(validateHerausforderungEvent(event), /passende Probe/);
 });
 
 test('ein Ansatz ohne verdeckte Erkenntnis wird abgelehnt', () => {

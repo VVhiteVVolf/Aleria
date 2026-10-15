@@ -18,6 +18,14 @@ import { getSkillsForCommentKind, resolveSkillModifier } from '../modules/skill-
 
 const event = () => normalizeHerausforderungEvent(gradedEvent());
 const approach = () => event().approaches[0];
+
+test('every W20 face and total across all boundaries selects exactly the agreed single tier',()=>{
+  const challenge=approach();
+  for(let natural=1;natural<=20;natural++)for(let total=-100;total<=150;total++){
+    const expected=natural===20?'critical-success':natural===1?'critical-failure':total>=18?'success':total>=15?'partial':total>=12?'neutral':total>=5?'failure':'major-failure';
+    assert.equal(selectChallengeOutcome(challenge,{natural,total}).id,expected,`${natural}/${total}`);
+  }
+});
 const attach = (profile, effects) => overlayCombatHitPointState(profile, { temporaryConditions: effects.map(effect => createManualCombatCondition(effect, { id: effect.effectId, encounterId: 'duel' })) });
 const profiles = () => [resolveCombatProfile(person(actorId)), resolveCombatProfile(person(opponentId))];
 const calls = [];

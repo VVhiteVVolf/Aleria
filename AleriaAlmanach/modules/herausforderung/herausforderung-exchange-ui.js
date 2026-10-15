@@ -1,4 +1,4 @@
-import { createHerausforderungAiTemplate, createHerausforderungExport, parseHerausforderungImport, MAX_HERAUSFORDERUNG_IMPORT_BYTES } from './herausforderung-exchange.js?v=20261015-graded-challenges-v1';
+import { createHerausforderungAiTemplate, createHerausforderungExport, parseHerausforderungImport, MAX_HERAUSFORDERUNG_IMPORT_BYTES } from './herausforderung-exchange.js?v=20261015-check-options-v1';
 import { STANDARD_ITEMS } from '../item-register/item-register-standard.js';
 
 const bindings = new WeakMap();

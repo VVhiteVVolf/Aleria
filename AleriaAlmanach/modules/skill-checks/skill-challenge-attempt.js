@@ -1,11 +1,11 @@
-import { COMMENT_KIND_SKILL_IDS, getSkillDefinition } from './skill-check-model.js?v=20261015-graded-challenges-v1';
+import { getCheckCommentKind, getCheckDefinition } from './skill-check-model.js?v=20261015-check-options-v1';
 
 // The existing contribution catalog remains the owner of skill/kind mapping.
 export function getChallengeAttemptChoices(challenge) {
   const ids = Array.isArray(challenge?.preferredSkills) ? challenge.preferredSkills : [];
   return [...new Set(ids)].flatMap(id => {
-    const skill = getSkillDefinition(id);
-    const kind = Object.keys(COMMENT_KIND_SKILL_IDS).find(kind => COMMENT_KIND_SKILL_IDS[kind].includes(id));
+    const skill = getCheckDefinition(id);
+    const kind = getCheckCommentKind(id);
     return skill && kind ? [{ ...skill, kind }] : [];
   });
 }

@@ -1,3 +1,4 @@
+import { renderAttributeIcon } from '../skill-checks/attribute-icon-registry.js?v=20261015-check-options-v1';
 import {
   COMBAT_ATTRIBUTE_DEFINITIONS,
   COMBAT_WEAPON_TYPE_OPTIONS,
@@ -426,6 +427,7 @@ function renderAttributeRadar(profile) {
         <div class="cp-sheet-attribute-grid">
           ${profile.attributes.map(attribute => `
             <article class="cp-sheet-attribute">
+              ${renderAttributeIcon(attribute)}
               <input class="cp-sheet-attribute-name" data-combat-collection="attributes" data-combat-item-id="${attribute.key}" data-combat-property="label" value="${escapeMarkup(attribute.label)}" maxlength="40" aria-label="Attributname">
               <input class="cp-sheet-attribute-score" type="number" min="1" max="40" data-combat-collection="attributes" data-combat-item-id="${attribute.key}" data-combat-property="score" value="${attribute.score}" aria-label="${escapeMarkup(attribute.label)} Wert">
               <strong data-combat-attribute-modifier="${attribute.key}">${displayModifier(getAttributeModifier(attribute))}</strong>
@@ -492,7 +494,7 @@ function renderSavingThrows(profile) {
       const definition = profile.attributes.find(attribute => attribute.key === save.attributeKey);
       return `<div>
         <strong data-combat-save-total="${save.attributeKey}">${displayModifier(getSavingThrowTotal(profile, save.attributeKey))}</strong>
-        <span>${escapeMarkup(definition?.label || save.attributeKey)}</span>
+        <span class="cp-sheet-save-identity">${renderAttributeIcon(save.attributeKey, { className: 'cp-sheet-save-icon', size: 28 })}${escapeMarkup(definition?.label || save.attributeKey)}</span>
         <label title="Trainiert"><input type="checkbox" data-combat-collection="savingThrows" data-combat-item-id="${save.attributeKey}" data-combat-property="proficient"${checked(save.proficient)}> K</label>
         <label title="Expertise"><input type="checkbox" data-combat-collection="savingThrows" data-combat-item-id="${save.attributeKey}" data-combat-property="expertise"${checked(save.expertise)}> E</label>
         <input type="number" min="-99" max="99" data-combat-collection="savingThrows" data-combat-item-id="${save.attributeKey}" data-combat-property="bonus" value="${save.bonus}" aria-label="Freier Bonus">

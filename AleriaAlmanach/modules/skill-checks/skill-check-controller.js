@@ -1,6 +1,8 @@
+import { getCheckDescription } from './skill-check-guidance.js?v=20261015-check-options-v1';
+import { describeCheckModifierSource } from './attribute-check-model.js?v=20261015-check-options-v1';
 import { previewChallengeCombatBenefits, collectChallengeGrantKeys } from '../herausforderung/herausforderung-combat-preview.js?v=20261015-graded-challenges-v1';
-import { getChallengeAttemptSettings } from './skill-challenge-attempt.js?v=20261015-graded-challenges-v1';
-import { getChallengeCombatBindingError } from '../herausforderung/herausforderung-combat-context.js?v=20261015-graded-challenges-v1';
+import { getChallengeAttemptSettings } from './skill-challenge-attempt.js?v=20261015-check-options-v1';
+import { getChallengeCombatBindingError } from '../herausforderung/herausforderung-combat-context.js?v=20261015-check-options-v1';
 import { getActiveCombatEncounter } from '../combat/combat-encounter-model.js';
 import { sceneDiceService } from '../scene-dice/dice-service.js?v=20261013-performance-v1';
 import { CombatProfileResolver } from '../combat/combat-profile-resolver.js?v=20260928-equipment-art-v4';
@@ -16,18 +18,19 @@ import {
   getChallengeAffinityModifier,
   getChallengeId,
   getSkillDefinition,
-  getSkillsForCommentKind,
+  getChecksForCommentKind,
+  getCheckDefinition,
   isSuccessfulSkillOutcome,
   normalizeMechanicMode,
   normalizeSkillChallenge,
   normalizeSkillCheckSettings,
   resolveSkillModifier
-} from './skill-check-model.js?v=20261015-graded-challenges-v1';
+} from './skill-check-model.js?v=20261015-check-options-v1';
 import { narrateSkillResolution } from './skill-check-narration.js?v=20261015-graded-challenges-v1';
-import { SkillResolutionService, getSkillRollContext } from './skill-resolution-service.js?v=20261015-graded-challenges-v1';
+import { SkillResolutionService, getSkillRollContext } from './skill-resolution-service.js?v=20261015-check-options-v1';
 import { collectCombatTriggerRules, deriveCombatRuleFrequencyKeys } from '../combat/combat-trigger-rules.js?v=20260928-equipment-art-v4';
 import { renderAutomaticRollMode } from '../combat/ui/combat-roll-mode-view.js?v=20260906-effect-rolls-v1';
-import { renderSkillIcon, renderSkillChoiceGroup, renderPreferredSkillHints, skillTooltipAttributes, bindSkillIconTooltips } from './skill-icon-view.js';
+import { renderSkillIcon, renderSkillChoiceGroup, renderPreferredSkillHints, skillTooltipAttributes, bindSkillIconTooltips } from './skill-icon-view.js?v=20261015-check-options-v1';
 
 bindSkillIconTooltips(document);
 
@@ -255,7 +258,7 @@ function renderSkillSupportOptions(segment, actor, actors = []) {
 
 function renderSkillComposer(segment, actor, challenges, actors = [], sceneResolver = profileResolver) {
   if (normalizeMechanicMode(segment?.mechanicMode, segment) !== 'skill') return '';
-  const kindSkills = getSkillsForCommentKind(segment.kind);
+  const kindSkills = getChecksForCommentKind(segment.kind);
   const settings = normalizeSkillCheckSettings({
     skillId: segment.skillId || kindSkills[0]?.id,
     customModifier: segment.skillCustomModifier,
@@ -293,11 +296,11 @@ function renderSkillComposer(segment, actor, challenges, actors = [], sceneResol
     const skill = rollContext.skill;
     rollModes = [...rollContext.profileRollModes, ...rollContext.preApplications.map(application => application.effects?.rollMode)];
     const sign = skill.modifier >= 0 ? '+' : '';
-    profileDetail = `${sign}${skill.modifier} aus ${skill.source === 'character-sheet' ? 'Fertigkeit & Attribut' : 'Attribut (Fertigkeit noch leer)'}`;
+    profileDetail = `${sign}${skill.modifier} aus ${describeCheckModifierSource(skill.source)}`;
   }
   return `
     <section class="skill-check-composer" data-skill-composer>
-      <div class="skill-check-composer-title"><span>Fertigkeitsauswertung</span><strong>Würfelt erst beim Eintragen</strong></div>
+      <div class="skill-check-composer-title"><span>Probenauswertung</span><strong>Würfelt erst beim Eintragen</strong></div>
       ${actor ? '' : '<p class="skill-check-warning">Wähle zuerst eine Figur mit Charakter- oder Kreaturenbogen.</p>'}
       <div class="skill-check-fields">
         ${renderSkillChoiceGroup({ skills: kindSkills, selectedId: segment.skillId, segmentId: segment.id, target, profileDetail })}
@@ -357,9 +360,8 @@ function renderChallengeComposer(segment) {
           <label>Schwierigkeit<input type="number" min="1" max="40" value="${clampNumber(segment.skillChallengeDifficulty, 10, 1, 40)}" data-skill-input="challengeDifficulty"></label>
           <label>Gegenprobe<select data-skill-input="challengeDefenseMode"><option value="passive"${challenge?.defenseMode === 'passive' ? ' selected' : ''}>Passive Gegenfertigkeit (10 + Bonus)</option><option value="fixed"${challenge?.defenseMode === 'fixed' ? ' selected' : ''}>Fester SG</option></select></label>
           <label>Verteidigende Fertigkeit<select data-skill-input="challengeDefenseSkillId">${SKILL_DEFINITIONS.map(skill => `<option value="${skill.id}"${skill.id === challenge?.defenseSkillId ? ' selected' : ''}>${escapeHtml(skill.label)}</option>`).join('')}</select></label>
-          <div class="skill-challenge-skills"><span>Bevorzugte Lösungen</span>${SKILL_DEFINITIONS.map(skill => `<label ${skillTooltipAttributes(`${skill.label} als passende Lösung für diese verdeckte Herausforderung auswählen.`)}><input type="checkbox" data-skill-challenge-skill="${skill.id}"${preferred.has(skill.id) ? ' checked' : ''}>${renderSkillIcon(skill)}${escapeHtml(skill.label)}</label>`).join('')}</div>
-          <label>Bonus bevorzugt<input type="number" min="-20" max="20" value="${clampNumber(segment.skillChallengePreferredModifier, 2, -20, 20)}" data-skill-input="challengePreferredModifier"></label>
-          <label>Modifikator andere Fertigkeit<input type="number" min="-20" max="20" value="${clampNumber(segment.skillChallengeAlternativeModifier, -2, -20, 20)}" data-skill-input="challengeAlternativeModifier"></label>
+          <div class="skill-challenge-skills"><span>Bevorzugte Lösungen</span>${SKILL_DEFINITIONS.map(skill => `<label ${skillTooltipAttributes(`${skill.label}: ${getCheckDescription(skill)} Als mögliche Lösung auswählen.`)}><input type="checkbox" data-skill-challenge-skill="${skill.id}"${preferred.has(skill.id) ? ' checked' : ''}>${renderSkillIcon(skill)}${escapeHtml(skill.label)}</label>`).join('')}</div>
+          <p>Proben verwenden den Bogenwert einschließlich Übung und geltender Effekte. Kein zusätzlicher Ansatzbonus.</p>
         </div>
         <p class="skill-challenge-privacy">Der Abschnitt wird als gewöhnliche Rede veröffentlicht. Erst eine erfolgreiche Auswertung entlarvt ihn als Schauspiel.</p>` : ''}
     </section>`;
@@ -418,8 +420,6 @@ function updateSegmentField(segment, field, value) {
     }
   }
   if (field === 'challengeDifficulty') segment.skillChallengeDifficulty = clampNumber(value, 10, 1, 40);
-  if (field === 'challengePreferredModifier') segment.skillChallengePreferredModifier = clampNumber(value, 2, -20, 20);
-  if (field === 'challengeAlternativeModifier') segment.skillChallengeAlternativeModifier = clampNumber(value, -2, -20, 20);
   if (field === 'challengeDefenseMode') segment.skillChallengeDefenseMode = value === 'fixed' ? 'fixed' : 'passive';
   if (field === 'challengeDefenseSkillId') segment.skillChallengeDefenseSkillId = getSkillDefinition(value) ? String(value) : 'deception';
   globalThis.persistCommentDraft?.();
@@ -485,7 +485,7 @@ function ensureResolutionDialog() {
   overlay.setAttribute('aria-hidden', 'true');
   overlay.innerHTML = `
     <div class="skill-resolution-dialog">
-      <span>Fertigkeitsauswertung</span>
+      <span>Probenauswertung</span>
       <h2>Die Würfel entscheiden</h2>
       <div class="skill-dice-stage" data-skill-dice-stage></div>
       <p data-skill-resolution-status>Bereit …</p>
@@ -518,7 +518,7 @@ function setResolutionStatus(message) {
 async function resolveSegment(segment, submission, actors, challenges, index, total, resolutionContext) {
   const actor = getActorForSegment(segment, submission.characterId, actors);
   if (!actor) throw new Error('Für diesen Fertigkeitsversuch ist keine Figur mit Profil ausgewählt.');
-  const allowed = getSkillsForCommentKind(segment.commentKind || segment.kind);
+  const allowed = getChecksForCommentKind(segment.commentKind || segment.kind);
   const settings = normalizeSkillCheckSettings({
     skillId: segment.skillId || allowed[0]?.id,
     customModifier: segment.skillCustomModifier,
@@ -535,7 +535,7 @@ async function resolveSegment(segment, submission, actors, challenges, index, to
   const ruleContext = buildClientSkillRuleContext(segment, actor, profile, targetChallenge, actors, resolutionContext.profileResolver);
   const stage = document.querySelector('[data-skill-dice-stage]');
   if (stage) stage.innerHTML = '';
-  const definition = getSkillDefinition(settings.skillId);
+  const definition = getCheckDefinition(settings.skillId);
   setResolutionStatus(total > 1 ? `Fertigkeitsversuch ${index + 1} von ${total} …` : `${definition?.label || 'Fertigkeit'} wird gewürfelt …`);
   let resolution = await skillResolutionService.resolve({
     actor,
@@ -689,7 +689,7 @@ function renderEvaluation(source = {}) {
     : '';
   return `
     <aside class="skill-evaluation" data-state="${escapeHtml(resolution.herausforderungTier || resolution.outcome || 'failure')}" aria-label="Fertigkeitsauswertung">
-      <div class="skill-evaluation-heading"><span>Fertigkeitsauswertung</span><strong>${escapeHtml(outcomeLabel)}</strong></div>
+      <div class="skill-evaluation-heading"><span>Probenauswertung</span><strong>${escapeHtml(outcomeLabel)}</strong></div>
       <p>${escapeHtml(resolution.narration?.text || '')}</p>
       <div class="skill-evaluation-mechanics">
         <span><b>${escapeHtml(resolution.total)}</b> ${escapeHtml(resolution.skillName)}</span>

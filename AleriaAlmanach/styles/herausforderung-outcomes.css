@@ -1,5 +1,6 @@
 .herausforderung-outcomes { border: 1px solid var(--border-color, #b99a62); padding: 1rem; }
-.herausforderung-outcomes fieldset { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: .75rem; margin-block: 1rem; padding: 1rem; }
+.herausforderung-outcomes > fieldset { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); min-inline-size: 0; gap: .75rem; margin-block: 1rem; padding: 1rem; }
+.herausforderung-outcomes > fieldset > .herausforderung-benefits { grid-column: 1 / -1; min-width: 0; }
 .herausforderung-outcomes label { display: grid; gap: .35rem; }
 .herausforderung-outcomes textarea { min-height: 6rem; }
 .herausforderung-outcomes p { grid-column: 1 / -1; }

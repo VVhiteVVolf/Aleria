@@ -1,4 +1,4 @@
-import { getHerausforderungApproachTargetId } from './herausforderung-model.js?v=20261015-graded-challenges-v1';
+import { getHerausforderungApproachTargetId } from './herausforderung-model.js?v=20261015-check-options-v1';
 
 export const HERAUSFORDERUNG_TIER_LABELS = Object.freeze({
   'kritischer-erfolg': 'Kritischer Erfolg', erfolg: 'Erfolg', knapp: 'Teilhinweis', deutlich: 'Gescheitert'

@@ -1,5 +1,5 @@
 import { challengeBenefitBundles } from './herausforderung-outcomes.js?v=20261015-graded-challenges-v1';
-import { getActiveCombatEncounter } from '../combat/combat-encounter-model.js';
+import { getActiveCombatEncounter, deriveCombatEncounterState } from '../combat/combat-encounter-model.js';
 
 export function getChallengeCombatParticipants(encounter) {
   return encounter?.participants instanceof Map ? [...encounter.participants.values()].filter(participant => participant.status === 'active') : [];
@@ -35,9 +35,9 @@ export function validateChallengeAudience(value = {}) {
   return null;
 }
 
-export function createChallengeCombatContext(comments = [], profiles = []) {
-  const encounter = getActiveCombatEncounter(comments);
-  const participants = getChallengeCombatParticipants(encounter).map(participant => {
+export function createChallengeCombatContext(comments = [], profiles = [], { encounterId = '' } = {}) {
+  const encounter = encounterId ? deriveCombatEncounterState(comments).get(encounterId) : getActiveCombatEncounter(comments);
+  const participants = (encounterId && encounter ? [...encounter.participants.values()] : getChallengeCombatParticipants(encounter)).map(participant => {
     const profile = profiles.find(profile => (profile.characterId || profile.id) === participant.actorId);
     return { actorId: participant.actorId, name: participant.name, resources: (profile?.resources || []).map(({ id, name, maximum, scope }) => ({ id, name, maximum, scope })),
       conditions: (profile?.temporaryConditions || []).map(({ id, name }) => ({ id, name })) };

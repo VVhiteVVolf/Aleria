@@ -1,0 +1,77 @@
+{
+  "date": "2026-10-15",
+  "sourceBaseline": "298004d22dcdf800878b5ca5d50d40185f5a2a41",
+  "unitTests": {
+    "passed": 103,
+    "failed": 0
+  },
+  "serverTests": {
+    "passed": 209,
+    "failed": 0,
+    "files": 38
+  },
+  "browser": {
+    "passed": true,
+    "checks": 53,
+    "options": 32,
+    "icons": 6,
+    "allThreeOriginalSkills": true,
+    "rawAndSavingThrowComposer": true,
+    "editAfterAttempt": true,
+    "gradeBenefitsEditable": true,
+    "alpha": [
+      {
+        "width": 96,
+        "height": 96,
+        "corner": 0,
+        "center": 253
+      },
+      {
+        "width": 96,
+        "height": 96,
+        "corner": 0,
+        "center": 253
+      },
+      {
+        "width": 96,
+        "height": 96,
+        "corner": 0,
+        "center": 253
+      },
+      {
+        "width": 96,
+        "height": 96,
+        "corner": 0,
+        "center": 253
+      },
+      {
+        "width": 96,
+        "height": 96,
+        "corner": 0,
+        "center": 253
+      },
+      {
+        "width": 96,
+        "height": 96,
+        "corner": 0,
+        "center": 253
+      }
+    ],
+    "errors": [],
+    "productionWrites": 0
+  },
+  "gradeBoundaryCombinations": 5020,
+  "verified": [
+    "20 Fertigkeiten, sechs Attributswürfe, sechs Rettungswürfe",
+    "Übung genau einmal, keine zusätzlichen +2/−2",
+    "Wahrnehmung, Nachforschungen und Motiv erkennen gleichzeitig auswählbar",
+    "natürliche 1/20 und sämtliche Ergebnisschwellen",
+    "Rettungswurf-Ausbildung, aktive Boni und attributsspezifische Vor-/Nachteile",
+    "Import/Export und KI-Anleitung",
+    "Registergegenstände und Kupfertaler, einschließlich 2,5 KT ohne Kritverdopplung",
+    "Kampfboni, Verbrauch, Beitragstakte und einmalige Vergabe",
+    "Bearbeiten nach Versuch/Kampfende, unveränderte Würfe und Effekte, idempotente Speicherung",
+    "32 erklärende Tooltips, echte Icontransparenz und schmale Bildschirme"
+  ],
+  "baselineNote": "Ein zusätzlich untersuchter, unveränderter Kampfform-Auswahltest scheitert bereits vor diesen Änderungen (Jungdrachen-Gruppierung 2 statt 1). Er gehört zur separaten laufenden Kampfformüberarbeitung. Die Herausforderungsprüfung und alle 209 Serverprüfungen bestehen."
+}

@@ -11,7 +11,7 @@ import { SkillResolutionService } from '../generated/skill-checks/skill-resoluti
 import {
   collectRecentSkillChallenges,
   collectRevealedChallengeIds,
-  getSkillsForCommentKind,
+  getChecksForCommentKind,
   isSuccessfulSkillOutcome,
   normalizeSkillCheckSettings,
   resolveSkillModifier
@@ -176,7 +176,7 @@ export async function validateSkillCommentSegments({
       persistence: normalizePersistence(entry.submitted.actorPersistence, entry.submitted.actorId)
     };
     const actorRecord = records.get(recordKey(actorDescriptor.persistence));
-    const allowed = getSkillsForCommentKind(entry.segment.commentKind || entry.segment.kind);
+    const allowed = getChecksForCommentKind(entry.segment.commentKind || entry.segment.kind);
     const settings = normalizeSkillCheckSettings({
       skillId: entry.segment.skillId || entry.submitted.skillId,
       customModifier: entry.segment.skillCustomModifier ?? entry.submitted.customModifier,

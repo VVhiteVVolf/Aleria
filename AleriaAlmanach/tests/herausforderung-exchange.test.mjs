@@ -38,7 +38,7 @@ test('filled draft export round-trips rewards while discarding untrusted server 
 test('imports reject malformed syntax, incompatible formats, unknown IDs and invalid effects', () => {
   for (const input of ['bad json', '[]', 'null', JSON.stringify({ format: 'unknown', version: 1 }), JSON.stringify({ format: 'aleria.herausforderung', version: 2 })]) assert.throws(() => parseHerausforderungImport(input, register));
   let source = draft(); source.approaches[0].preferredSkills = ['invented'];
-  assert.throws(() => parseHerausforderungImport(JSON.stringify(source), register), /unbekannte Fertigkeits-ID/);
+  assert.throws(() => parseHerausforderungImport(JSON.stringify(source), register), /unbekannte Proben-ID/);
   source = draft(); source.approaches[0].preferredSkills = 'persuasion';
   assert.throws(() => parseHerausforderungImport(JSON.stringify(source), register), /Liste/);
   source = draft(); source.approaches[0].difficulty = [15];
