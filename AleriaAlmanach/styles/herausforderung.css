@@ -1,4 +1,5 @@
 @import url('./item-register-template-picker.css');
+@import url('./skill-icons.css?v=20261015-skill-challenges-v1');
 /* Challenge editor and published cards own their parchment / burgundy theme. */
 .herausforderung-overlay { padding: 20px; backdrop-filter: blur(5px); }
 .herausforderung-card {
@@ -71,6 +72,12 @@
 .herausforderung-skill-check span { display: block; padding: 8px 10px; border: 1px solid #b49b7380; border-radius: 4px; background: #f2e8d3; color: #594531; font-size: 12px; }
 .herausforderung-skill-check input:checked + span { background: #4a5140; color: #fff2c9; border-color: #75815a; box-shadow: inset 0 0 0 1px #c5b67c33; }
 .herausforderung-skill-check input:focus-visible + span { outline: 2px solid #805a2e; outline-offset: 2px; }
+.skill-summary-item { display: inline-flex; align-items: center; gap: 4px; }
+.skill-summary-item .skill-medallion { width: 22px; height: 22px; }
+.herausforderung-summary-text small { display: flex; flex-wrap: wrap; align-items: center; gap: 5px 10px; }
+.herausforderung-fields .herausforderung-skill-check > span { display: inline-flex; align-items: center; gap: 7px; min-height: 48px; padding: 5px 9px 5px 5px; }
+.herausforderung-skill-check > input { padding: 0; border: 0; }
+.herausforderung-path-skills { display: flex; flex-wrap: wrap; align-items: center; gap: 7px; margin-top: 5px; }
 .herausforderung-insight > span { color: #586047; }
 .herausforderung-consequences { border-top: 1px solid #b49b7359; padding-top: 12px; }
 .herausforderung-consequences > summary { cursor: pointer; color: #75634e; font-size: 13px; }

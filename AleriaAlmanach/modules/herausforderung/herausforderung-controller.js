@@ -15,7 +15,8 @@ import {
   setHerausforderungSubmitting,
   updateHerausforderungDraft,
   showHerausforderungValidation
-} from './herausforderung-ui.js?v=20261014-herausforderung-combat-v1';
+} from './herausforderung-ui.js?v=20261015-skill-challenges-v1';
+import { bindSkillIconTooltips } from '../skill-checks/skill-icon-view.js';
 import { mountHerausforderungRewardEditor } from './herausforderung-rewards-ui.js?v=20261014-herausforderung-combat-v1';
 import { createChallengeCombatContext, normalizeChallengeAudience, getChallengeCombatBindingError, challengeRequiresCombat } from './herausforderung-combat-context.js';
 import { mountChallengeAudience, refreshChallengeAudience } from './herausforderung-audience-ui.js';
@@ -23,6 +24,8 @@ import { resolveCombatProfile } from '../combat/combat-profile-resolver.js';
 import { deriveCombatStateFromComments, overlayCombatHitPointState } from '../combat/combat-state-model.js';
 import { getActiveCombatEncounter } from '../combat/combat-encounter-model.js';
 import { mountHerausforderungExchange } from './herausforderung-exchange-ui.js?v=20261014-herausforderung-combat-v1';
+
+bindSkillIconTooltips(document);
 
 let activeThreadId = '';
 let draftApproaches = [];
@@ -254,6 +257,7 @@ document.addEventListener('input', event => {
 });
 
 document.addEventListener('keydown', event => {
+  if (event.defaultPrevented) return;
   if (!event.target?.closest?.('#herausforderung-overlay')) return;
   if (event.key !== 'Escape' && !(event.key === 'Enter' && (event.ctrlKey || event.metaKey))) return;
   event.preventDefault();

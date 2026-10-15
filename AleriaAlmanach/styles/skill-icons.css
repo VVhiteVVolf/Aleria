@@ -1,0 +1,17 @@
+.skill-medallion { display: inline-block; flex: none; width: 32px; height: 32px; object-fit: contain; vertical-align: middle; }
+.skill-icon-list { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 5px; }
+.skill-icon-hint { display: inline-flex; align-items: center; justify-content: center; flex: none; width: 42px; height: 42px; padding: 3px; border: 1px solid #a58a5d66; border-radius: 50%; background: #ffffff0d; color: inherit; cursor: help; }
+.skill-icon-hint:hover, .skill-icon-hint:focus-visible { background: #d6b16c2b; outline: 2px solid #bc975a; outline-offset: 2px; }
+.skill-icon-tooltip { position: fixed; z-index: 1000000; box-sizing: border-box; width: max-content; max-width: min(320px, calc(100vw - 16px)); padding: 11px 13px; border: 1px solid #bc975a; border-radius: 6px; background: #352820; color: #fff0d0; box-shadow: 0 5px 18px #1d140b50; font: 14px/1.45 Georgia, serif; text-align: left; pointer-events: none; overflow-wrap: anywhere; }
+.skill-choice-group { grid-column: 1 / -1; min-width: 0; margin: 0; padding: 0; border: 0; }
+.skill-choice-group > legend { padding: 0 0 6px; color: #6d5420; font: 600 .62rem/1.4 "Cinzel", Georgia, serif; }
+.skill-choice-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(160px, 100%), 1fr)); gap: 7px; margin-bottom: 6px; }
+.skill-check-fields .skill-choice { display: block; position: relative; min-width: 0; cursor: pointer; }
+.skill-choice > input[type="radio"] { position: absolute; width: 1px; height: 1px; padding: 0; margin: 0; border: 0; opacity: 0; clip-path: inset(50%); }
+.skill-choice-face { display: flex; align-items: center; gap: 8px; min-height: 54px; padding: 7px 9px; border: 1px solid #a58a5d88; border-radius: 6px; background: #fff8eab3; color: #554324; }
+.skill-choice-copy { display: grid; gap: 3px; min-width: 0; }
+.skill-choice-copy strong { font: 600 .8rem/1.25 Georgia, serif; overflow-wrap: anywhere; }
+.skill-check-fields .skill-choice-copy small { color: inherit; font: 400 .72rem/1.25 Georgia, serif; letter-spacing: 0; }
+.skill-choice input:checked + .skill-choice-face { border-color: #687a52; background: #435c47; color: #fff2d1; }
+.skill-choice input:focus-visible + .skill-choice-face { outline: 2px solid #a77538; outline-offset: 2px; }
+.skill-challenge-skills .skill-medallion { width: 26px; height: 26px; }

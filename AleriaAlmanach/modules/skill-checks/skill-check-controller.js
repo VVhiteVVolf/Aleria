@@ -26,6 +26,9 @@ import { narrateSkillResolution } from './skill-check-narration.js?v=20260805-he
 import { SkillResolutionService, getSkillRollContext } from './skill-resolution-service.js?v=20261014-herausforderung-v3';
 import { collectCombatTriggerRules, deriveCombatRuleFrequencyKeys } from '../combat/combat-trigger-rules.js?v=20260928-equipment-art-v4';
 import { renderAutomaticRollMode } from '../combat/ui/combat-roll-mode-view.js?v=20260906-effect-rolls-v1';
+import { renderSkillIcon, renderSkillChoiceGroup, renderPreferredSkillHints, skillTooltipAttributes, bindSkillIconTooltips } from './skill-icon-view.js';
+
+bindSkillIconTooltips(document);
 
 const profileResolver = new CombatProfileResolver();
 const skillResolutionService = new SkillResolutionService({
@@ -296,12 +299,7 @@ function renderSkillComposer(segment, actor, challenges, actors = [], sceneResol
       <div class="skill-check-composer-title"><span>Fertigkeitsauswertung</span><strong>Würfelt erst beim Eintragen</strong></div>
       ${actor ? '' : '<p class="skill-check-warning">Wähle zuerst eine Figur mit Charakter- oder Kreaturenbogen.</p>'}
       <div class="skill-check-fields">
-        <label>Fertigkeit
-          <select data-skill-input="skillId">
-            ${kindSkills.map(skill => `<option value="${skill.id}"${skill.id === segment.skillId ? ' selected' : ''}>${escapeHtml(skill.label)}</option>`).join('')}
-          </select>
-          <small>${escapeHtml(profileDetail)}</small>
-        </label>
+        ${renderSkillChoiceGroup({ skills: kindSkills, selectedId: segment.skillId, segmentId: segment.id, target, profileDetail })}
         <label class="skill-check-target-search">Figur durchsuchen
           <input type="search" data-skill-target-actor-search placeholder="Name der Figur …" autocomplete="off">
         </label>
@@ -327,7 +325,7 @@ function renderSkillComposer(segment, actor, challenges, actors = [], sceneResol
         </label>
         ${renderAutomaticRollMode(rollModes)}
       </div>
-      ${target ? `<div class="skill-check-target-note"><b>${escapeHtml(target.authorName)} · ${escapeHtml(getContributionRankLabel(target.contributionRank))}</b><span>Bevorzugte Fertigkeiten: ${escapeHtml(target.preferredSkills.map(id => getSkillDefinition(id)?.label).filter(Boolean).join(', ') || 'keine')}</span></div>` : ''}
+      ${target ? `<div class="skill-check-target-note"><b>${escapeHtml(target.authorName)} · ${escapeHtml(getContributionRankLabel(target.contributionRank))}</b>${renderPreferredSkillHints(target)}</div>` : ''}
       ${renderSkillSupportOptions(segment, actor, actors)}
     </section>`;
 }
@@ -358,7 +356,7 @@ function renderChallengeComposer(segment) {
           <label>Schwierigkeit<input type="number" min="1" max="40" value="${clampNumber(segment.skillChallengeDifficulty, 10, 1, 40)}" data-skill-input="challengeDifficulty"></label>
           <label>Gegenprobe<select data-skill-input="challengeDefenseMode"><option value="passive"${challenge?.defenseMode === 'passive' ? ' selected' : ''}>Passive Gegenfertigkeit (10 + Bonus)</option><option value="fixed"${challenge?.defenseMode === 'fixed' ? ' selected' : ''}>Fester SG</option></select></label>
           <label>Verteidigende Fertigkeit<select data-skill-input="challengeDefenseSkillId">${SKILL_DEFINITIONS.map(skill => `<option value="${skill.id}"${skill.id === challenge?.defenseSkillId ? ' selected' : ''}>${escapeHtml(skill.label)}</option>`).join('')}</select></label>
-          <div class="skill-challenge-skills"><span>Bevorzugte Lösungen</span>${SKILL_DEFINITIONS.map(skill => `<label><input type="checkbox" data-skill-challenge-skill="${skill.id}"${preferred.has(skill.id) ? ' checked' : ''}>${escapeHtml(skill.label)}</label>`).join('')}</div>
+          <div class="skill-challenge-skills"><span>Bevorzugte Lösungen</span>${SKILL_DEFINITIONS.map(skill => `<label ${skillTooltipAttributes(`${skill.label} als passende Lösung für diese verdeckte Herausforderung auswählen.`)}><input type="checkbox" data-skill-challenge-skill="${skill.id}"${preferred.has(skill.id) ? ' checked' : ''}>${renderSkillIcon(skill)}${escapeHtml(skill.label)}</label>`).join('')}</div>
           <label>Bonus bevorzugt<input type="number" min="-20" max="20" value="${clampNumber(segment.skillChallengePreferredModifier, 2, -20, 20)}" data-skill-input="challengePreferredModifier"></label>
           <label>Modifikator andere Fertigkeit<input type="number" min="-20" max="20" value="${clampNumber(segment.skillChallengeAlternativeModifier, -2, -20, 20)}" data-skill-input="challengeAlternativeModifier"></label>
         </div>
@@ -367,6 +365,7 @@ function renderChallengeComposer(segment) {
 }
 
 function mountComposers(context = {}) {
+  bindSkillIconTooltips(document).hide();
   latestComposerContext = context;
   const segments = Array.isArray(context.segments) ? context.segments : [];
   const needsSkillComposer = segments.some(segment => normalizeMechanicMode(segment?.mechanicMode, segment) === 'skill');
@@ -729,7 +728,10 @@ document.addEventListener('change', event => {
   if (field?.matches?.('[data-skill-input]')) {
     updateSegmentField(segment, field.dataset.skillInput, field.type === 'checkbox' ? field.checked : field.value);
     if (field.dataset.skillInput === 'challengeEnabled') rerenderSegmentEditor();
-    else if (['skillId', 'targetActorKey', 'targetChallengeId'].includes(field.dataset.skillInput)) remountAll();
+    else if (['skillId', 'targetActorKey', 'targetChallengeId'].includes(field.dataset.skillInput)) {
+      remountAll();
+      if (field.dataset.skillInput === 'skillId') latestComposerContext?.list?.querySelector(`[data-segment-id="${CSS.escape(String(segment.id))}"] [data-skill-input="skillId"]:checked`)?.focus({ preventScroll: true });
+    }
     return;
   }
   if (field?.matches?.('[data-skill-challenge-skill]')) togglePreferredSkill(segment, field.dataset.skillChallengeSkill, field.checked);

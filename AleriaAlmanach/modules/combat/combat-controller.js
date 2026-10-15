@@ -1,5 +1,5 @@
 import { getCommentActorIds } from './combat-condition-duration.js';
-import { bindCombatTooltips } from './ui/combat-tooltips.js';
+import { bindCombatTooltips } from './ui/combat-tooltips.js?v=20261015-skill-challenges-v1';
 import { beginCombatContribution, conditionsAtContributionStart } from './combat-contribution-start.js';
 import { applySkillRuntimeSnapshots } from '../skill-checks/skill-runtime-state.js';
 import { collectChallengeGrantKeys } from '../herausforderung/herausforderung-combat-preview.js';

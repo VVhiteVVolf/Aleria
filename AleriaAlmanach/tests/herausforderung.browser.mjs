@@ -5,9 +5,11 @@ import { resolve, extname, sep } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { actors } from './support/herausforderung-scenarios.mjs';
 
+// All writes use the in-page backend stub, including checks against public assets.
 const { chromium } = await import(process.argv[2] ? pathToFileURL(resolve(process.argv[2])).href : 'playwright');
 const root = resolve(fileURLToPath(new URL('../../', import.meta.url)));
-const out = resolve(root, '.codex-temp/herausforderung');
+const publicBase = process.argv[3];
+const out = resolve(root, `.codex-temp/herausforderung${publicBase ? '-online' : ''}`);
 await mkdir(out, { recursive: true });
 const fixture = `<!doctype html><html lang="de"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="stylesheet" href="./styles.css"><link rel="stylesheet" href="./styles/scene-time.css"><link rel="stylesheet" href="./styles/skill-checks.css"><link rel="stylesheet" href="./styles/herausforderung.css">
@@ -33,7 +35,7 @@ await import('./modules/herausforderung/herausforderung-controller.js');
 window.openCommentFormForSkillChallenge=challenge=>{window.testSettings=AleriaSkillChecks.getChallengeAttemptSettings(challenge);const segment={...window.testSettings,id:'attempt-segment',text:''};document.getElementById('cf-segment-list').innerHTML='<div data-segment-id="attempt-segment"><div data-segment-mechanics-host></div></div>';AleriaSkillChecks.mountComposer(document.getElementById('cf-segment-list'),{segments:[segment],selectedCharacterId:${JSON.stringify(actors[0].id)},threadId:'isolated-browser'});window.testSegment=segment;};
 window.testReady=true;
 </script></body></html>`;
-const types = { '.js': 'text/javascript', '.css': 'text/css', '.png': 'image/png', '.json': 'application/json', '.woff2': 'font/woff2' };
+const types = { '.js': 'text/javascript', '.mjs': 'text/javascript', '.css': 'text/css', '.png': 'image/png', '.webp': 'image/webp', '.json': 'application/json', '.woff2': 'font/woff2' };
 const server = createServer(async (req, res) => {
   try {
     const pathname = decodeURIComponent(new URL(req.url, 'http://localhost').pathname);
@@ -48,16 +50,25 @@ await new Promise(done => server.listen(0, '127.0.0.1', done));
 let browser;
 try {
   browser = await chromium.launch({ headless: true, executablePath: process.env.PLAYWRIGHT_EXECUTABLE });
-  const page = await browser.newPage({ viewport: { width: 1440, height: 1000 } });
+  const page = await browser.newPage({ viewport: { width: 1440, height: 1000 }, hasTouch: true });
   const errors = [], missing = [];
   page.on('pageerror', error => errors.push(error.message));
-  page.on('response', response => { if (response.status() >= 400 && response.url().startsWith('http://127.0.0.1')) missing.push(response.url()); });
-  await page.route('**/*', route => new URL(route.request().url()).hostname === '127.0.0.1' ? route.continue() : route.abort());
-  await page.goto(`http://127.0.0.1:${server.address().port}/AleriaAlmanach/challenge-test.html`);
+  const host = publicBase ? new URL(publicBase).hostname : '127.0.0.1';
+  page.on('response', response => { if (response.status() >= 400 && new URL(response.url()).hostname === host && !response.url().endsWith('/favicon.ico')) missing.push(response.url()); });
+  await page.route('**/*', route => new URL(route.request().url()).hostname === host ? route.continue() : route.abort());
+  if (publicBase) await page.route('**/AleriaAlmanach/challenge-test.html*', route => route.fulfill({ status: 200, contentType: 'text/html', body: fixture }));
+  await page.goto(publicBase ? new URL('AleriaAlmanach/challenge-test.html', publicBase).href : `http://127.0.0.1:${server.address().port}/AleriaAlmanach/challenge-test.html`);
   await page.waitForFunction(() => window.testReady);
   await page.locator('[data-herausforderung-action="open"]').click();
   const overlay = page.locator('#herausforderung-overlay');
   const field = name => overlay.locator(`[data-herausforderung-field="${name}"]`).first();
+  assert.equal(await overlay.locator('.herausforderung-skill-check [data-skill-icon]').count(), 18);
+  await overlay.locator('.herausforderung-skill-check [data-skill-icon]').evaluateAll(images => Promise.all(images.map(image => { image.loading = 'eager'; return image.decode(); })));
+  await overlay.locator('[data-skill-id="insight"]').focus();
+  assert.match(await page.locator('.skill-icon-tooltip').innerText(), /Motiv erkennen.*\+2/);
+  await page.keyboard.press('Escape');
+  assert.equal(await page.locator('.skill-icon-tooltip').count(), 0);
+  assert.ok(await overlay.isVisible(), 'Escape closes the tooltip before the editor');
   assert.equal(await overlay.locator('.herausforderung-head > img').getAttribute('src'), '../IconOrdner/Buttom Icons/Herausforderung.png');
   const [templateDownload] = await Promise.all([page.waitForEvent('download'), overlay.locator('[data-herausforderung-exchange="ai-template"]').click()]);
   await templateDownload.saveAs(resolve(out, 'ai-template.json'));
@@ -72,6 +83,8 @@ try {
   await field('publicDescription').fill('Regen zieht über die Zinnen. Die Wache versperrt Gawain und Guinevere den Weg.');
   await field('label').fill('Mit der Wache verhandeln');
   await overlay.locator('[data-skill-id="persuasion"]').check();
+  assert.equal(await overlay.locator('[data-herausforderung-preview] [data-skill-icon="persuasion"]').count(), 1);
+  await overlay.locator('.herausforderung-skills').screenshot({ path: resolve(out, 'editor-skill-icons.png') });
   await overlay.locator('[data-herausforderung-action="set-difficulty"][data-value="15"]').click();
   await field('insight').fill('GEHEIM: Die Wache erwartet das Losungswort Silbermorgen.');
   assert.ok(!(await overlay.locator('[data-herausforderung-preview]').innerText()).includes('GEHEIM'));
@@ -188,8 +201,38 @@ try {
   assert.equal(settings.skillId, 'persuasion');
   assert.equal(settings.kind, 'speech');
   assert.equal(await page.locator('[data-skill-input="targetChallengeId"]').inputValue(), settings.skillTargetChallengeId);
-  assert.equal(await page.locator('[data-skill-input="skillId"]').inputValue(), 'persuasion');
+  assert.equal(await page.locator('[data-skill-input="skillId"]:checked').inputValue(), 'persuasion');
+  assert.equal(await page.locator('.skill-choice [data-skill-icon="persuasion"]').count(), 1);
+  await page.locator('.skill-check-target-note .skill-icon-hint').focus();
+  assert.match(await page.locator('.skill-icon-tooltip').innerText(), /Überzeugen.*\+2/);
+  await page.keyboard.press('Escape');
   await page.screenshot({ path: resolve(out, 'attempt-desktop.png') });
+  await page.evaluate(async () => {
+    window.originalTestHistory = structuredClone(testHistory);
+    testHistory[0].herausforderung.approaches[0].preferredSkills = ['insight'];
+    await loadCommentsIntoPage();
+    openCommentFormForSkillChallenge(AleriaHerausforderung.collectApproaches(testHistory)[0]);
+  });
+  assert.equal(await page.locator('.skill-choice').count(), 6);
+  const selectedSkill = () => page.locator('[data-skill-input="skillId"]:checked');
+  assert.equal(await selectedSkill().inputValue(), 'insight');
+  assert.match(await selectedSkill().locator('..').innerText(), /Passend · \+2/);
+  await selectedSkill().focus(); await page.keyboard.press('ArrowRight');
+  assert.equal(await selectedSkill().inputValue(), 'investigation');
+  assert.match(await selectedSkill().locator('..').innerText(), /Alternative · −2/);
+  assert.ok(await selectedSkill().evaluate(element => element === document.activeElement), 'Changing skill retains keyboard focus');
+  await page.keyboard.press('Escape');
+  await page.screenshot({ path: resolve(out, 'attempt-choices-desktop.png') });
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.locator('.skill-check-target-note .skill-icon-hint').tap();
+  assert.match(await page.locator('.skill-icon-tooltip').innerText(), /Motiv erkennen.*\+2/);
+  const tooltipBounds = await page.locator('.skill-icon-tooltip').boundingBox();
+  assert.ok(tooltipBounds.x >= 0 && tooltipBounds.x + tooltipBounds.width <= 390);
+  await page.screenshot({ path: resolve(out, 'attempt-choices-mobile.png') });
+  await page.keyboard.press('Escape');
+  assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1));
+  await page.setViewportSize({ width: 1440, height: 1000 });
+  await page.evaluate(async () => { window.testHistory = originalTestHistory; await loadCommentsIntoPage(); });
   await page.evaluate(async () => {
     const target = AleriaHerausforderung.collectApproaches(testHistory)[0];
     testHistory.push({ id: 'success', commentSegments: [{ skillResolution: { targetChallengeId: target.id, outcome: 'success', herausforderungTier: 'erfolg', actorName: 'Gawain Draig', herausforderungReward: { copper: 2.5, items: [{ name: 'Saex', quantity: 1 }], effects: [] }, revealedText: 'Die Wache erwartet das Losungswort Silbermorgen.' } }] });

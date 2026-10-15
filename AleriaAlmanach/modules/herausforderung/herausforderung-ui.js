@@ -1,7 +1,8 @@
-import { normalizeHerausforderungEvent, MAX_HERAUSFORDERUNG_APPROACHES, getHerausforderungValidationIssues } from './herausforderung-model.js?v=20261014-herausforderung-combat-v1';
+import { normalizeHerausforderungEvent, MAX_HERAUSFORDERUNG_APPROACHES, getHerausforderungValidationIssues, HERAUSFORDERUNG_PREFERRED_MODIFIER, HERAUSFORDERUNG_ALTERNATIVE_MODIFIER } from './herausforderung-model.js?v=20261014-herausforderung-combat-v1';
 import { getApproachProgress, HERAUSFORDERUNG_TIER_LABELS } from './herausforderung-progress.js?v=20261014-herausforderung-combat-v1';
 import { getChallengeCombatBindingError } from './herausforderung-combat-context.js';
 import { SKILL_DEFINITIONS } from '../skill-checks/skill-check-model.js?v=20260928-equipment-art-v4';
+import { renderSkillIcon, renderSkillHint, skillTooltipAttributes, describeSkillChoice, bindSkillIconTooltips } from '../skill-checks/skill-icon-view.js';
 import { renderHerausforderungRewardEditor, rewardSummary, rewardReceiptSummary } from './herausforderung-rewards-ui.js?v=20261014-herausforderung-combat-v1';
 
 const ASSET_ROOT = './public/assets/herausforderung/';
@@ -61,7 +62,7 @@ function renderSkillCheckboxes(approach, index) {
   const preferred = new Set(approach.preferredSkills || []);
   return SKILL_GROUPS.map(group => `<div class="herausforderung-skill-group"><span>${group.label}</span><div>${group.ids.map(id => {
     const skill = SKILL_DEFINITIONS.find(entry => entry.id === id);
-    return `<label class="herausforderung-skill-check"><input type="checkbox" data-herausforderung-approach-index="${index}" data-herausforderung-field="preferredSkill" data-skill-id="${id}"${preferred.has(id) ? ' checked' : ''}><span>${escapeMarkup(skill.label)}</span></label>`;
+    return `<label class="herausforderung-skill-check" ${skillTooltipAttributes(`${skill.label} als passende Fertigkeit festlegen: +${HERAUSFORDERUNG_PREFERRED_MODIFIER} auf diesen Ansatz.`)}><input type="checkbox" data-herausforderung-approach-index="${index}" data-herausforderung-field="preferredSkill" data-skill-id="${id}"${preferred.has(id) ? ' checked' : ''}><span>${renderSkillIcon(skill)}${escapeMarkup(skill.label)}</span></label>`;
   }).join('')}</div></div>`).join('');
 }
 
@@ -87,12 +88,18 @@ export function renderApproachRows(approaches = [], activeIndex = 0) {
 }
 
 function skillSummary(approach) {
-  return escapeMarkup((approach.preferredSkills || []).map(id => SKILL_DEFINITIONS.find(skill => skill.id === id)?.label).filter(Boolean).join(' · ') || 'Fertigkeiten wählen');
+  return (approach.preferredSkills || []).map(id => SKILL_DEFINITIONS.find(skill => skill.id === id)).filter(Boolean).map(skill => `<span class="skill-summary-item">${renderSkillIcon(skill)}${escapeMarkup(skill.label)}</span>`).join('') || 'Fertigkeiten wählen';
+}
+
+function preferredSkillHints(approach) {
+  const skills = (approach.preferredSkills || []).map(id => SKILL_DEFINITIONS.find(skill => skill.id === id)).filter(Boolean);
+  return skills.length ? `<span class="skill-icon-list" aria-label="Passende Fertigkeiten">${skills.map(skill => renderSkillHint(skill, `${describeSkillChoice(skill, { preferred: true, modifier: HERAUSFORDERUNG_PREFERRED_MODIFIER })} Andere Fertigkeiten bleiben mit ${HERAUSFORDERUNG_ALTERNATIVE_MODIFIER} möglich.`)).join('')}</span>` : '<small>Fertigkeiten wählen</small>';
 }
 
 export function updateHerausforderungDraft(event, { actors = [] } = {}) {
   const root = dialogRoot();
   if (!root) return;
+  bindSkillIconTooltips(root.ownerDocument).hide();
   event.approaches.forEach((approach, index) => {
     const row = root.querySelector(`[data-herausforderung-approach-row][data-approach-index="${index}"]`);
     if (!row) return;
@@ -151,7 +158,7 @@ export function renderHerausforderungComment(comment = {}, index = 0, { preview 
   const approaches = event.approaches.map((approach, approachIndex) => {
     const state = getApproachProgress(progress, comment.id, approach.approachId);
     if (state.solved) solvedCount++;
-    return `<li class="${state.solved ? 'is-solved' : ''}"><div class="herausforderung-path"><span class="herausforderung-path-number">${approachIndex + 1}</span><div><strong>${escapeMarkup(approach.label)}</strong><small>${skillSummary(approach)}${state.attempts ? ` · ${state.attempts} ${state.attempts === 1 ? 'Versuch' : 'Versuche'}` : ''}</small></div></div>${preview ? '<span class="herausforderung-preview-badge">Offen</span>' : state.solved ? `<span class="herausforderung-solved">${icon('insight')}Aufgedeckt</span>` : unavailable ? `<span class="herausforderung-solved">${escapeMarkup(unavailable)}</span>` : `<button type="button" class="herausforderung-button herausforderung-attempt-btn" data-herausforderung-action="attempt" data-comment-id="${escapeMarkup(comment.id || '')}" data-approach-id="${escapeMarkup(approach.approachId)}" aria-label="${escapeMarkup(approach.label)} versuchen">${icon('attempt')}<span>Versuchen</span></button>`}${rewardSummary(approach.rewards) ? `<div class="herausforderung-reward-teaser">Belohnung: ${escapeMarkup(rewardSummary(approach.rewards))}</div>` : ''}${!preview && state.attempts ? `<div class="herausforderung-result" data-tier="${escapeMarkup(state.tier)}"><small>${escapeMarkup(state.actorName)} · ${escapeMarkup(HERAUSFORDERUNG_TIER_LABELS[state.tier] || 'Versuch')}</small>${state.revealedText ? `<p>${escapeMarkup(state.revealedText)}</p>` : ''}${rewardReceiptSummary(state.reward) ? `<p class="herausforderung-reward-receipt">${escapeMarkup(rewardReceiptSummary(state.reward))}</p>` : ''}${!state.solved ? '<small>Dieser Ansatz bleibt offen.</small>' : ''}</div>` : ''}</li>`;
+    return `<li class="${state.solved ? 'is-solved' : ''}"><div class="herausforderung-path"><span class="herausforderung-path-number">${approachIndex + 1}</span><div><strong>${escapeMarkup(approach.label)}</strong><div class="herausforderung-path-skills">${preferredSkillHints(approach)}${state.attempts ? `<small>${state.attempts} ${state.attempts === 1 ? 'Versuch' : 'Versuche'}</small>` : ''}</div></div></div>${preview ? '<span class="herausforderung-preview-badge">Offen</span>' : state.solved ? `<span class="herausforderung-solved">${icon('insight')}Aufgedeckt</span>` : unavailable ? `<span class="herausforderung-solved">${escapeMarkup(unavailable)}</span>` : `<button type="button" class="herausforderung-button herausforderung-attempt-btn" data-herausforderung-action="attempt" data-comment-id="${escapeMarkup(comment.id || '')}" data-approach-id="${escapeMarkup(approach.approachId)}" aria-label="${escapeMarkup(approach.label)} versuchen">${icon('attempt')}<span>Versuchen</span></button>`}${rewardSummary(approach.rewards) ? `<div class="herausforderung-reward-teaser">Belohnung: ${escapeMarkup(rewardSummary(approach.rewards))}</div>` : ''}${!preview && state.attempts ? `<div class="herausforderung-result" data-tier="${escapeMarkup(state.tier)}"><small>${escapeMarkup(state.actorName)} · ${escapeMarkup(HERAUSFORDERUNG_TIER_LABELS[state.tier] || 'Versuch')}</small>${state.revealedText ? `<p>${escapeMarkup(state.revealedText)}</p>` : ''}${rewardReceiptSummary(state.reward) ? `<p class="herausforderung-reward-receipt">${escapeMarkup(rewardReceiptSummary(state.reward))}</p>` : ''}${!state.solved ? '<small>Dieser Ansatz bleibt offen.</small>' : ''}</div>` : ''}</li>`;
   }).join('');
   return `${divider}<section class="herausforderung-event"><header>${icon('challenge')}<div><small>Herausforderung</small><strong>${escapeMarkup(event.title)}</strong></div><span class="herausforderung-event-progress">${solvedCount}/${event.approaches.length} aufgedeckt</span></header><p class="herausforderung-scope">${escapeMarkup(audienceLabel)}${event.combatBound ? " · An diesen Kampf gebunden" : ""}</p>${event.publicDescription ? `<p class="herausforderung-description">${escapeMarkup(event.publicDescription)}</p>` : ''}${approaches ? `<ul class="herausforderung-approach-list">${approaches}</ul>` : ''}</section>`;
 }
