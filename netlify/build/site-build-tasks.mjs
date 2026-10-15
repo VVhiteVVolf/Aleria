@@ -40,7 +40,7 @@ export const SITE_BUILD_TASKS = [
       'Familien Häuser und Clans/', 'Bestiarium/modules/',
       ...['character-equipment', 'characters', 'classes', 'combat', 'combat-critical',
         'combat-status', 'combat-styles', 'creatures', 'herausforderung', 'image-library',
-        'krumme-kanne', 'scene-items', 'scene-rest', 'spell-catalog']
+        'krumme-kanne', 'goettliche-eleganz', 'scene-items', 'scene-rest', 'spell-catalog']
         .map(feature => `AleriaAlmanach/modules/${feature}/`)],
     excludes: ['Gameplay Guide/assets/'],
     commands: [['netlify/build/verify-task-inputs.mjs', 'gameplay-guides'],
@@ -63,6 +63,7 @@ export const SITE_BUILD_TASKS = [
       'AleriaAlmanach/public/assets/regional-equipment/', 'Stammbäume/assets/js/',
       'Stammbäume/assets/data/family-sources/', 'Familien Häuser und Clans/',
       'AleriaAlmanach/modules/krumme-kanne/krumme-kanne-roster.mjs',
+      'AleriaAlmanach/modules/goettliche-eleganz/eleganz-family-people.mjs',
       'AleriaAlmanach/scripts/build-regional-equipment.mjs', almanach('regional-equipment')],
     commands: [testCommand(almanach('regional-equipment'))]
   },
@@ -72,7 +73,8 @@ export const SITE_BUILD_TASKS = [
       'Stammbäume/vendor/', 'Stammbäume/tests/', 'Stammbäume/tools/',
       'Stammbäume/Stammbaum.html', 'Stammbäume/index.html',
       'Stammbäume/package.json', 'Stammbäume/package-lock.json', 'Familien Häuser und Clans/',
-      'AleriaAlmanach/package.json', 'AleriaAlmanach/modules/krumme-kanne/krumme-kanne-roster.mjs'],
+      'AleriaAlmanach/package.json', 'AleriaAlmanach/modules/krumme-kanne/krumme-kanne-roster.mjs',
+      'AleriaAlmanach/modules/goettliche-eleganz/eleganz-family-people.mjs'],
     excludes: ['Stammbäume/assets/data/published-families/backups/'],
     commands: [['netlify/build/verify-task-inputs.mjs', 'family-charts'],
       ['Stammbäume/tools/check-release.mjs', '--prepare-browser']]
