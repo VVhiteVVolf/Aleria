@@ -96,7 +96,7 @@ function buildArchiveDashboardDiscoveryPanel(sections = []) {
         <span class="archive-dashboard-panel-mark" aria-hidden="true">✦</span>
       </div>
       <button class="archive-dashboard-discovery-card" type="button" data-archive-action="open-entry" data-entry-id="${escapeHtml(item.entry.id)}">
-        ${image ? `<img src="${escapeHtml(image)}" alt="" loading="lazy" decoding="async">` : ''}
+        ${image ? `<img src="${image}" alt="" loading="lazy" decoding="async">` : ''}
         <span class="archive-dashboard-discovery-copy">
           <strong>${escapeHtml(item.entry.title)}</strong>
           <span>${escapeHtml(excerpt)}</span>
@@ -149,7 +149,7 @@ function buildArchiveDashboardSceneCards(sections = [], options = {}) {
       : '';
     return `
       <button class="archive-dashboard-scene-card" type="button" data-archive-action="open-entry" data-entry-id="${escapeHtml(item.entry.id)}" data-page-index="${pageIndex}">
-        ${image ? `<img class="archive-dashboard-scene-cover" src="${escapeHtml(image)}" alt="" loading="lazy" decoding="async">` : '<span class="archive-dashboard-scene-cover"></span>'}
+        ${image ? `<img class="archive-dashboard-scene-cover" src="${image}" alt="" loading="lazy" decoding="async">` : '<span class="archive-dashboard-scene-cover"></span>'}
         <span class="archive-dashboard-scene-copy">
           <span class="archive-dashboard-scene-heading">
             <strong>${escapeHtml(item.entry.title || item.entry.id)}</strong>
@@ -157,7 +157,7 @@ function buildArchiveDashboardSceneCards(sections = [], options = {}) {
           </span>
           ${activity ? `
             <span class="archive-dashboard-scene-activity">
-              ${portrait ? `<img src="${escapeHtml(portrait)}" alt="" loading="lazy" decoding="async">` : '<i aria-hidden="true">✦</i>'}
+              ${portrait ? `<img src="${portrait}" alt="" loading="lazy" decoding="async">` : '<i aria-hidden="true">✦</i>'}
               <span>Zuletzt ${escapeHtml(activity.authorName)} · ${escapeHtml(formatArchiveDashboardRelativeTime(activity.activityAt))}</span>
             </span>
             ${excerpt ? `<span class="archive-dashboard-scene-excerpt">${escapeHtml(excerpt)}</span>` : ''}` : `
@@ -296,7 +296,7 @@ function buildArchiveDashboardSectionCards(sections = []) {
     const description = href ? 'Schulen, Druidenkunst & göttliche Magie' : `${stats.moduleCount} Module · ${stats.pageCount} Seiten`;
     return `
       <${tag} class="archive-dashboard-section" ${action} data-section-theme="${escapeHtml(group.theme.slug)}">
-        ${group.iconUrl ? `<img class="archive-dashboard-section-icon" src="${escapeHtml(group.iconUrl)}" alt="" loading="lazy" decoding="async">` : '<span class="archive-dashboard-section-mark" aria-hidden="true">✦</span>'}
+        ${group.iconUrl ? `<img class="archive-dashboard-section-icon" src="${group.iconUrl}" alt="" loading="lazy" decoding="async">` : '<span class="archive-dashboard-section-mark" aria-hidden="true">✦</span>'}
         <span class="archive-dashboard-section-copy">
           <span class="archive-dashboard-section-name">${escapeHtml(group.label)}</span>
           <span class="archive-dashboard-section-meta">${escapeHtml(description)}</span>

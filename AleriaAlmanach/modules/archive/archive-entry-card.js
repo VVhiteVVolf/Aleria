@@ -11,7 +11,7 @@ function renderArchiveEntryCard(entry, section, { priorityImage = false, manageM
   return `
     <button class="entry-card-open" type="button" data-archive-action="open-entry" data-entry-id="${escapeHtml(entry.id || '')}" aria-label="${escapeHtml(title)} öffnen">
       <span class="card-image-wrap">
-        ${image ? `<img src="${escapeHtml(image)}" alt="" ${imageLoading}>` : `<span class="card-placeholder-inner" aria-hidden="true">${escapeHtml(entry.icon || '✦')}</span>`}
+        ${image ? `<img src="${image}" alt="" ${imageLoading}>` : `<span class="card-placeholder-inner" aria-hidden="true">${escapeHtml(entry.icon || '✦')}</span>`}
         ${entry.locked ? '<span class="entry-card-lock">Geschützt</span>' : ''}
       </span>
       <span class="entry-card-copy">

@@ -122,7 +122,7 @@ function getArchiveHierarchySection(node, tab = '') {
 
 function renderArchiveHierarchyRowIcon(node, className = 'archive-hierarchy-row-icon') {
   const icon = sanitizeImageSrc(node?.section?.iconUrl || '');
-  if (icon) return `<span class="${className}"><img src="${escapeHtml(icon)}" alt="" loading="lazy" decoding="async"></span>`;
+  if (icon) return `<span class="${className}"><img src="${icon}" alt="" loading="lazy" decoding="async"></span>`;
   return `<span class="${className} archive-hierarchy-row-mark" aria-hidden="true">✦</span>`;
 }
 
@@ -132,7 +132,7 @@ function renderArchiveHierarchyEntry(entry) {
   return `
     <button class="archive-hierarchy-entry" type="button" data-archive-action="open-entry" data-entry-id="${escapeHtml(entry?.id || '')}">
       ${image
-        ? `<span class="archive-hierarchy-entry-icon"><img src="${escapeHtml(image)}" alt="" loading="lazy" decoding="async"></span>`
+        ? `<span class="archive-hierarchy-entry-icon"><img src="${image}" alt="" loading="lazy" decoding="async"></span>`
         : `<span class="archive-hierarchy-entry-icon archive-hierarchy-entry-mark" aria-hidden="true">${escapeHtml(entry?.icon || '✦')}</span>`}
       <span class="archive-hierarchy-entry-title">${escapeHtml(entry?.title || 'Unbenanntes Modul')}</span>
       <span class="archive-hierarchy-entry-meta">${pageCount} S.</span>
@@ -204,7 +204,7 @@ function renderArchiveHierarchyContentHeading(node, model) {
   return `
     ${renderArchiveHierarchyBreadcrumbs(node, model)}
     <header class="archive-hierarchy-content-heading">
-      ${image ? `<img class="archive-hierarchy-heading-image${icon ? ' is-emblem' : ''}" src="${escapeHtml(image)}" alt="" decoding="async">` : ''}
+      ${image ? `<img class="archive-hierarchy-heading-image${icon ? ' is-emblem' : ''}" src="${image}" alt="" decoding="async">` : ''}
       <div>
         <h2>${escapeHtml(node.label)}</h2>
         ${description ? `<p>${escapeHtml(description)}</p>` : ''}
