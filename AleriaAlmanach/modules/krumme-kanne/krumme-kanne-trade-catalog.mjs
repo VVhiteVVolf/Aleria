@@ -1,31 +1,18 @@
 import { KANNE_DISHES, KANNE_IMPORTS } from './krumme-kanne-menu.mjs';
 import { KANNE_DISH_NOTES } from './krumme-kanne-dish-notes.mjs';
-import { parsePrice } from '../item-register/item-register-money.js';
+import { fixedTradePrice as fixedPrice, convertStandardGoods } from '../trade-catalog/standard-goods-conversion.mjs';
 
 const asset = (folder, id) => `./assets/krumme-kanne/${folder}/${id}.png`;
 const paragraphs = texts => texts.map(text => `<p>${text}</p>`).join('');
-const fixedPrice = value => {
-  const price = parsePrice(value);
-  if (!price || price.minCopper !== price.maxCopper) throw new Error(`Ungültiger Ausschankpreis: ${value}`);
-  return { priceMin: price.minCopper.toLocaleString('de-DE', { maximumFractionDigits: 2 }), priceMax: '', currencyCode: 'KT', currencyLabel: 'Kupfertaler', currencyIcon: '◈' };
-};
 const defaults = { status: 'available', imageFit: 'contain', imagePosition: 'center', imageHeight: 320, descriptionTitle: 'Zubereitung & Geschmack', featuresTitle: 'Auf dem Teller', features: [], originTitle: 'Herkunft', usageTitle: 'Am Tisch', priceTitle: 'Preis & Portion', priceFill: 35, priceOptions: [], conditionsTitle: 'Verfügbarkeit', attributes: [] };
 
 function standardItems(page) {
-  // Rebuilding an already converted page must not progressively lose its source.
-  if (!page.goodsTable) return structuredClone(page.tradeCatalog.items.filter(i => i.id.startsWith('standard-')));
-  return page.goodsTable.tables[0].rows.filter(r => ['speisen', 'getranke'].includes(r.category)).map((r, index) => {
-    const v = r.values;
-    const food = r.category === 'speisen';
-    return { ...defaults, ...fixedPrice(v.price), id: `standard-${String(index + 1).padStart(2, '0')}`, category: r.category,
-      title: v.name, subtitle: v.kind, unit: v.portion, image: r.image, imageFormat: r.imageFormat,
-      badge: food ? 'Aus der Hausküche' : 'Am Tresen', tags: [food ? 'Standardküche' : 'Standardausschank'],
-      description: paragraphs([...(r.details || v.description).split(/\n\s*\n/), food
-        ? 'In der Krummen Kanne gehört dieses Gericht zur einfachen Karte für den täglichen Hunger. Die Küche bereitet es portionsweise aus dem jeweiligen Tagesvorrat zu; die Schankmägde nennen auf Nachfrage die heutige Ausführung. Die angegebenen Beilagen gehören zur Portion, zusätzliche Bestellungen werden gesondert berechnet.'
-        : 'Elidyr führt diesen Trunk im gewöhnlichen Ausschank der Kanne. Die angegebene Portion wird einzeln am Tisch oder direkt am Tresen gereicht. Wer eine bestimmte Herkunft oder Zunftabfüllung sucht, findet die namentlich geführten Biere und Whiskys unter „Importierte Getränke“.']),
-      origin: 'Die Krumme Kanne · Gwynthor', usageTags: [v.portion], priceNote: '',
-      conditions: /Gebackenes Huhn/.test(v.name) ? 'Saisonal und nur bei entsprechender Lieferung erhältlich.' : 'Nach Tagesvorrat; die Schankmägde geben Auskunft.' };
-  });
+  return convertStandardGoods(page, { defaults, origin: 'Die Krumme Kanne · Gwynthor',
+    descriptionForRow: row => paragraphs([...(row.details || row.values.description).split(/\n\s*\n/), row.category === 'speisen'
+      ? 'In der Krummen Kanne gehört dieses Gericht zur einfachen Karte für den täglichen Hunger. Die Küche bereitet es portionsweise aus dem jeweiligen Tagesvorrat zu; die Schankmägde nennen auf Nachfrage die heutige Ausführung. Die angegebenen Beilagen gehören zur Portion, zusätzliche Bestellungen werden gesondert berechnet.'
+      : 'Elidyr führt diesen Trunk im gewöhnlichen Ausschank der Kanne. Die angegebene Portion wird einzeln am Tisch oder direkt am Tresen gereicht. Wer eine bestimmte Herkunft oder Zunftabfüllung sucht, findet die namentlich geführten Biere und Whiskys unter „Importierte Getränke“.']),
+    conditionsForRow: row => /Gebackenes Huhn/.test(row.values.name)
+      ? 'Saisonal und nur bei entsprechender Lieferung erhältlich.' : 'Nach Tagesvorrat; die Schankmägde geben Auskunft.' });
 }
 
 export function buildKanneTradeCatalog(page, catalogs) {

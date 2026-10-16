@@ -1,0 +1,1116 @@
+{
+  "schemaVersion": 1,
+  "familyId": "haus-sonnenfels",
+  "revision": 1,
+  "updatedAt": "2026-10-16T14:46:16.491Z",
+  "family": {
+    "schema": "aleria.family-tree",
+    "schemaVersion": 1,
+    "document": {
+      "id": "haus-sonnenfels",
+      "title": "Haus Sonnenfels",
+      "motto": "",
+      "description": "Weisenfluher Landherren mit Stammsitz Burg Sonnenfels. Dietmar führt das Haus in der Heimat; sein Onkel Albrecht begründete nach einem Erbstreit mit der Lachenden Nixe einen wohlhabenden Gwynthorer Haushalt.",
+      "emblem": "assets/images/houses/Weisenfluh/haus-sonnenfels.png",
+      "houseProfile": {
+        "rankId": "knight",
+        "seat": "Burg Sonnenfels",
+        "barony": "",
+        "county": "Südliches Weisenfluh",
+        "kingdom": "Weisenfluh",
+        "secondarySeats": [
+          "Gwynthor · Die Lachende Nixe"
+        ],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "",
+          "barony": "",
+          "county": "",
+          "kingdom": ""
+        }
+      }
+    },
+    "persons": [
+      {
+        "id": "haus-sonnenfels-gruender",
+        "worldPersonId": "person--haus-sonnenfels--haus-sonnenfels-gruender",
+        "name": "Unbekannter Gründer",
+        "title": "Gründer des Hauses",
+        "sex": "male",
+        "status": "dead",
+        "birth": "",
+        "death": "????",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-sonnenfels",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Gründerfamilie"
+        ],
+        "notes": "Historische Gründerfigur vor dem Überlieferungssprung; Name und genaue Lebensdaten sind noch nicht belegt.",
+        "extensions": {}
+      },
+      {
+        "id": "haus-sonnenfels-gruenderin",
+        "worldPersonId": "person--haus-sonnenfels--haus-sonnenfels-gruenderin",
+        "name": "Unbekannte Gründerin",
+        "title": "Gründerin des Hauses",
+        "sex": "female",
+        "status": "dead",
+        "birth": "",
+        "death": "????",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-sonnenfels",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [
+          "Gründerfamilie"
+        ],
+        "notes": "Historische Gründerfigur vor dem Überlieferungssprung; Name und genaue Lebensdaten sind noch nicht belegt.",
+        "extensions": {}
+      },
+      {
+        "id": "dagorath-sonnenfels",
+        "worldPersonId": "person--haus-sonnenfels--dagorath-sonnenfels",
+        "name": "Dagorath Sonnenfels",
+        "title": "Verstorbener Landherr von Sonnenfels",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1646",
+        "death": "1694",
+        "portrait": "../AleriaAlmanach/assets/lachende-nixe/portraits/dagorath.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-sonnenfels",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Dagorath hielt Burg und Güter zusammen und erzog seine Kinder im Bewusstsein ihres Namens. Sein Tod ließ mehr offene Ansprüche zurück, als seine Familie friedlich lösen konnte.",
+        "extensions": {
+          "registryManagedFields": [
+            "title",
+            "notes",
+            "portrait"
+          ]
+        }
+      },
+      {
+        "id": "mechthild-sonnenfels",
+        "worldPersonId": "person--haus-sonnenfels--mechthild-sonnenfels",
+        "name": "Mechthild",
+        "title": "Dagoraths Witwe",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1653",
+        "death": "1725",
+        "portrait": "../AleriaAlmanach/assets/lachende-nixe/portraits/mechthild.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Mechthild bewahrte die Briefe ihrer Kinder, auch als zwischen Sonnenfels und Gwynthor kaum noch ein gutes Wort wechselte. In ihren letzten Jahren überließ sie die lauten Familiengespräche gern anderen.",
+        "extensions": {
+          "registryManagedFields": [
+            "title",
+            "notes",
+            "portrait"
+          ]
+        }
+      },
+      {
+        "id": "gerold-sonnenfels",
+        "worldPersonId": "person--haus-sonnenfels--gerold-sonnenfels",
+        "name": "Gerold Sonnenfels",
+        "title": "Dagoraths Bruder · Albrechts Onkel",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1649",
+        "death": "1720",
+        "portrait": "../AleriaAlmanach/assets/lachende-nixe/portraits/gerold.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-sonnenfels",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Gerold verstand es, am richtigen Tisch gehört zu werden. Nach Dagoraths Tod stellte er sich mit seinem Sohn gegen Albrechts Erbanspruch; die Folgen seiner Einmischung überdauerten ihn.",
+        "extensions": {
+          "registryManagedFields": [
+            "title",
+            "notes",
+            "portrait"
+          ]
+        }
+      },
+      {
+        "id": "adelgund-sonnenfels",
+        "worldPersonId": "person--haus-sonnenfels--adelgund-sonnenfels",
+        "name": "Adelgund",
+        "title": "Gerolds Gemahlin",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1653",
+        "death": "1728",
+        "portrait": "../AleriaAlmanach/assets/lachende-nixe/portraits/adelgund.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Adelgund führte Gerolds Haushalt mit nüchterner Sorgfalt. Sie ließ selten erkennen, welche Familiengespräche sie billigte und welche sie lediglich schweigend überstand.",
+        "extensions": {
+          "registryManagedFields": [
+            "title",
+            "notes",
+            "portrait"
+          ]
+        }
+      },
+      {
+        "id": "albrecht-sonnenfels",
+        "worldPersonId": "person--haus-sonnenfels--albrecht-sonnenfels",
+        "name": "Albrecht Sonnenfels",
+        "title": "Inhaber der Lachenden Nixe",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1677",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/lachende-nixe/references/albrecht.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-sonnenfels",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Albrecht Sonnenfels machte aus einer heruntergekommenen Hafenkneipe eines der angesehensten Häuser Gwynthors. Er entscheidet über große Geschäfte, pflegt seine Verbindungen und vergisst selten, wem er eine offene Tür verdankt.",
+        "extensions": {
+          "registryManagedFields": [
+            "title",
+            "notes",
+            "portrait"
+          ]
+        }
+      },
+      {
+        "id": "johanna-falkenhayn",
+        "worldPersonId": "person--haus-falkenhayn--johanna-falkenhayn",
+        "name": "Johanna Falkenhayn",
+        "title": "Hausmutter · Personalführung",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1682",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/lachende-nixe/references/johanna.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-falkenhayn",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Johanna kennt die Menschen ihres Hauses und bemerkt Unruhe, bevor sie den Salon erreicht. Sie führt das Personal, hält die Abläufe zusammen und lässt sich von einem teuren Rock ebenso wenig einschüchtern wie von einer lauten Stimme.",
+        "extensions": {
+          "registryManagedFields": [
+            "title",
+            "notes",
+            "portrait"
+          ]
+        }
+      },
+      {
+        "id": "erhard-sonnenfels",
+        "worldPersonId": "person--haus-sonnenfels--erhard-sonnenfels",
+        "name": "Erhard Sonnenfels",
+        "title": "Verstorbener Herr von Burg Sonnenfels",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1680",
+        "death": "1732",
+        "portrait": "../AleriaAlmanach/assets/lachende-nixe/portraits/erhard.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-sonnenfels",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Nach Albrechts Fortgang führte Erhard den heimischen Besitz. Er sprach ungern über die Jahre des Erbstreits und hinterließ seinem Sohn Dietmar einen geordneten Hof, aber eine zerrissene Verwandtschaft.",
+        "extensions": {
+          "registryManagedFields": [
+            "title",
+            "notes",
+            "portrait"
+          ]
+        }
+      },
+      {
+        "id": "hedwig-sonnenfels",
+        "worldPersonId": "person--haus-sonnenfels--hedwig-sonnenfels",
+        "name": "Hedwig",
+        "title": "Erhards Gemahlin · Dietmars Mutter",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1682",
+        "death": "1736",
+        "portrait": "../AleriaAlmanach/assets/lachende-nixe/portraits/hedwig.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Hedwig führte die Vorräte und die stilleren Pflichten der Burg. Dietmar lernte von ihr, dass ein großes Haus von verlässlichen Händen lebt, nicht allein von einem ehrwürdigen Namen.",
+        "extensions": {
+          "registryManagedFields": [
+            "title",
+            "notes",
+            "portrait"
+          ]
+        }
+      },
+      {
+        "id": "adelheid-sonnenfels",
+        "worldPersonId": "person--haus-sonnenfels--adelheid-sonnenfels",
+        "name": "Adelheid Sonnenfels",
+        "title": "In ein unbekanntes Haus verheiratet",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1683",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/lachende-nixe/portraits/adelheid.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-sonnenfels",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Adelheid verließ Sonnenfels durch ihre Heirat. Von ihrem neuen Haushalt ist wenig überliefert; ihre wenigen Briefe an Albrecht sind freundlich und vermeiden alte Ansprüche.",
+        "extensions": {
+          "registryManagedFields": [
+            "title",
+            "notes",
+            "portrait"
+          ]
+        }
+      },
+      {
+        "id": "oswald-sonnenfels",
+        "worldPersonId": "person--haus-sonnenfels--oswald-sonnenfels",
+        "name": "Oswald Sonnenfels",
+        "title": "Albrechts jüngster Bruder · Burgverwalter",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1685",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/lachende-nixe/portraits/oswald.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-sonnenfels",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Oswald blieb in Weisenfluh und kümmert sich um den Alltag des Burgbesitzes. Den Streit seiner älteren Verwandten trägt er nicht gern weiter; ein ausgebesserter Dachstuhl ist ihm lieber als eine weitere Erörterung des Erbrechts.",
+        "extensions": {
+          "registryManagedFields": [
+            "title",
+            "notes",
+            "portrait"
+          ]
+        }
+      },
+      {
+        "id": "konrad-sonnenfels",
+        "worldPersonId": "person--haus-sonnenfels--konrad-sonnenfels",
+        "name": "Konrad Sonnenfels",
+        "title": "Gerolds Sohn · Albrechts Vetter",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1675",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/lachende-nixe/portraits/konrad.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-sonnenfels",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Konrad gewann im Erbstreit Einfluss, doch das Haus folgte später Erhard und dessen Sohn Dietmar. Er behielt einen kleineren Besitz und den Stolz seines Zweiges. Über Albrechts Erfolg in Gwynthor spricht er nur auf Nachfrage.",
+        "extensions": {
+          "registryManagedFields": [
+            "title",
+            "notes",
+            "portrait"
+          ]
+        }
+      },
+      {
+        "id": "brunhild-sonnenfels",
+        "worldPersonId": "person--haus-sonnenfels--brunhild-sonnenfels",
+        "name": "Brunhild",
+        "title": "Konrads Gemahlin",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1680",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/lachende-nixe/portraits/brunhild.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Brunhild hält Konrads Haushalt fern vom täglichen Streit um Namen und Vorrang. Sie achtet auf eine gute Tafel, zuverlässige Bedienstete und darauf, dass Hartwig nicht jede Kränkung seines Vaters zu seiner eigenen macht.",
+        "extensions": {
+          "registryManagedFields": [
+            "title",
+            "notes",
+            "portrait"
+          ]
+        }
+      },
+      {
+        "id": "hartwig-sonnenfels",
+        "worldPersonId": "person--haus-sonnenfels--hartwig-sonnenfels",
+        "name": "Hartwig Sonnenfels",
+        "title": "Konrads Sohn · Ritter des Seitenzweiges",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1704",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/lachende-nixe/portraits/hartwig.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-sonnenfels",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Hartwig versieht seinen Dienst in Weisenfluh und hält sich mit Urteilen über den alten Erbstreit zurück. Er lässt sich lieber an seinem eigenen Wort messen als an den Geschichten seines Vaters.",
+        "extensions": {
+          "registryManagedFields": [
+            "title",
+            "notes",
+            "portrait"
+          ]
+        }
+      },
+      {
+        "id": "dietmar-sonnenfels",
+        "worldPersonId": "person--haus-sonnenfels--dietmar-sonnenfels",
+        "name": "Dietmar Sonnenfels",
+        "title": "Amtierendes Hausoberhaupt · Burg Sonnenfels",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1707",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/lachende-nixe/portraits/dietmar.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-sonnenfels",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [],
+        "notes": "Dietmar führt Burg Sonnenfels seit dem Tod seines Vaters. Er prüft Ernten, Abgaben und Bauarbeiten selbst und lässt die älteren Familienkränkungen selten an seinen Tisch. Sein Onkel in Gwynthor bleibt für ihn Verwandtschaft, auch wenn ihre Häuser weit auseinanderliegen.",
+        "extensions": {
+          "registryManagedFields": [
+            "title",
+            "notes",
+            "portrait"
+          ]
+        }
+      },
+      {
+        "id": "ottilie-sonnenfels",
+        "worldPersonId": "person--haus-sonnenfels--ottilie-sonnenfels",
+        "name": "Ottilie",
+        "title": "Dietmars Gemahlin",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1709",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/lachende-nixe/portraits/ottilie.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Ottilie empfängt die Gäste der Burg und kennt die Verwalter der umliegenden Höfe beim Namen. Zwischen Besuch und Rechnung findet sie Zeit für ihre Kinder, deren kleine Geheimnisse ihr selten lange verborgen bleiben.",
+        "extensions": {
+          "registryManagedFields": [
+            "title",
+            "notes",
+            "portrait"
+          ]
+        }
+      },
+      {
+        "id": "raban-sonnenfels",
+        "worldPersonId": "person--haus-sonnenfels--raban-sonnenfels",
+        "name": "Raban Sonnenfels",
+        "title": "Dietmars Sohn · Kind auf Burg Sonnenfels",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1730",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/lachende-nixe/portraits/raban.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-sonnenfels",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Raban kennt jeden Winkel des Burghofs und möchte schon bei jeder Besichtigung dabei sein. Sein Vater lässt ihn zunächst lernen, aufmerksam zuzuhören.",
+        "extensions": {
+          "registryManagedFields": [
+            "title",
+            "notes",
+            "portrait"
+          ]
+        }
+      },
+      {
+        "id": "irmelin-sonnenfels",
+        "worldPersonId": "person--haus-sonnenfels--irmelin-sonnenfels",
+        "name": "Irmelin Sonnenfels",
+        "title": "Dietmars Tochter · Kind auf Burg Sonnenfels",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1735",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/lachende-nixe/portraits/irmelin.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-sonnenfels",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Irmelin sammelt bunte Blätter für Ottilie und besteht darauf, jedes Pferd der Burg begrüßen zu dürfen. Ihr Bruder darf ihr dabei helfen, wenn er höflich fragt.",
+        "extensions": {
+          "registryManagedFields": [
+            "title",
+            "notes",
+            "portrait"
+          ]
+        }
+      },
+      {
+        "id": "simon-sonnenfels",
+        "worldPersonId": "person--haus-sonnenfels--simon-sonnenfels",
+        "name": "Simon Sonnenfels",
+        "title": "Hauswächter · Sicherheit",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1710",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/lachende-nixe/references/simon.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-sonnenfels",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Simon hält die Schwelle der Nixe ruhig. Er kennt die Stammgäste und die Männer, die zu viel Mut aus einem Becher ziehen. Ein kurzer Blick genügt ihm meist, bevor eine laute Szene überhaupt entsteht.",
+        "extensions": {
+          "registryManagedFields": [
+            "title",
+            "notes",
+            "portrait"
+          ]
+        }
+      },
+      {
+        "id": "david-sonnenfels",
+        "worldPersonId": "person--haus-sonnenfels--david-sonnenfels",
+        "name": "David Sonnenfels",
+        "title": "Hausmeier · Finanzen & Vorräte",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1713",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/lachende-nixe/references/david.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-sonnenfels",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "David führt die Bücher, zahlt die Löhne und lässt sich jede teure Lieferung zeigen. Sein höfliches Lächeln wird schmaler, sobald eine Rechnung die vereinbarte Menge verschweigt.",
+        "extensions": {
+          "registryManagedFields": [
+            "title",
+            "notes",
+            "portrait"
+          ]
+        }
+      },
+      {
+        "id": "rosalinde-sonnenfels",
+        "worldPersonId": "person--haus-sonnenfels--rosalinde-sonnenfels",
+        "name": "Rosalinde Sonnenfels",
+        "title": "Korrespondenz & besondere Empfangstermine",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1721",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/lachende-nixe/portraits/rosalinde.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-sonnenfels",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Rosalinde hilft Johanna bei Briefen, Einladungen und besonderen Empfangsterminen. Ihre auffallende Schönheit macht sie rasch zum Gespräch; sie selbst möchte lieber daran erkannt werden, ob eine Zusage am nächsten Tag noch gilt.",
+        "extensions": {
+          "registryManagedFields": [
+            "title",
+            "notes",
+            "portrait"
+          ]
+        }
+      },
+      {
+        "id": "kaspar-sonnenfels",
+        "worldPersonId": "person--haus-sonnenfels--kaspar-sonnenfels",
+        "name": "Kaspar Sonnenfels",
+        "title": "Besorgungen & Lieferwege",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1715",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/lachende-nixe/portraits/kaspar.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-sonnenfels",
+        "familyRole": "bastard",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Kaspar kennt die Wege zwischen Kai, Markt und Hintertür. Albrecht hat ihn als seinen Sohn anerkannt und holt ihn ins Haus, wenn eine Besorgung zuverlässige Hände verlangt. Über seine Mutter wird nicht gesprochen.",
+        "extensions": {
+          "registryManagedFields": [
+            "title",
+            "notes",
+            "portrait"
+          ]
+        }
+      },
+      {
+        "id": "unbekannter-gemahl-adelheid-sonnenfels",
+        "worldPersonId": "person--haus-unbekannt-adelheid-sonnenfels--unbekannter-gemahl-adelheid-sonnenfels",
+        "name": "Unbekannter Gemahl",
+        "title": "",
+        "sex": "male",
+        "status": "unknown",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-unbekannt-adelheid-sonnenfels",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Adelheids Gemahl gehört einem nicht benannten Haus an.",
+        "extensions": {}
+      },
+      {
+        "id": "unbekannte-mutter-kaspar-sonnenfels",
+        "worldPersonId": "person--family-tree--unbekannte-mutter-kaspar-sonnenfels",
+        "name": "Unbekannte Mutter",
+        "title": "",
+        "sex": "female",
+        "status": "unknown",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "affair",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Kaspars Mutter ist unbekannt. Sie wird nicht mit Johanna Falkenhayn gleichgesetzt.",
+        "extensions": {}
+      }
+    ],
+    "partnerships": [
+      {
+        "id": "marriage-haus-sonnenfels-founders",
+        "participantIds": [
+          "haus-sonnenfels-gruender",
+          "haus-sonnenfels-gruenderin"
+        ],
+        "type": "marriage",
+        "status": "ended",
+        "start": "",
+        "end": "",
+        "certainty": "unknown",
+        "visibility": "public",
+        "notes": "Gründerehe des Hauses.",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-dagorath-mechthild-sonnenfels",
+        "participantIds": [
+          "dagorath-sonnenfels",
+          "mechthild-sonnenfels"
+        ],
+        "type": "marriage",
+        "status": "ended",
+        "start": "1674",
+        "end": "1694",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-gerold-adelgund-sonnenfels",
+        "participantIds": [
+          "gerold-sonnenfels",
+          "adelgund-sonnenfels"
+        ],
+        "type": "marriage",
+        "status": "ended",
+        "start": "1672",
+        "end": "1720",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-albrecht-johanna-sonnenfels",
+        "participantIds": [
+          "albrecht-sonnenfels",
+          "johanna-falkenhayn"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "1708",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-erhard-hedwig-sonnenfels",
+        "participantIds": [
+          "erhard-sonnenfels",
+          "hedwig-sonnenfels"
+        ],
+        "type": "marriage",
+        "status": "ended",
+        "start": "1704",
+        "end": "1732",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-konrad-brunhild-sonnenfels",
+        "participantIds": [
+          "konrad-sonnenfels",
+          "brunhild-sonnenfels"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "1700",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-dietmar-ottilie-sonnenfels",
+        "participantIds": [
+          "dietmar-sonnenfels",
+          "ottilie-sonnenfels"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "1728",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-adelheid-unknown-sonnenfels",
+        "participantIds": [
+          "adelheid-sonnenfels",
+          "unbekannter-gemahl-adelheid-sonnenfels"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "1704",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "affair-albrecht-unknown-sonnenfels",
+        "participantIds": [
+          "albrecht-sonnenfels",
+          "unbekannte-mutter-kaspar-sonnenfels"
+        ],
+        "type": "affair",
+        "status": "ended",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Aus der früheren Verbindung ging Kaspar hervor. Albrecht erkannte ihn als seinen Sohn an.",
+        "extensions": {}
+      }
+    ],
+    "parentages": [
+      {
+        "id": "parentage-dagorath-sonnenfels",
+        "childId": "dagorath-sonnenfels",
+        "parentIds": [
+          "haus-sonnenfels-gruender",
+          "haus-sonnenfels-gruenderin"
+        ],
+        "partnershipId": "marriage-haus-sonnenfels-founders",
+        "type": "claimed",
+        "legitimacy": "unknown",
+        "certainty": "unknown",
+        "visibility": "public",
+        "notes": "Nicht einzeln überlieferte Generationen zwischen dem Gründerpaar und den beiden Brüdern.",
+        "extensions": {
+          "timeJumpId": "gap-sonnenfels-to-1646"
+        }
+      },
+      {
+        "id": "parentage-gerold-sonnenfels",
+        "childId": "gerold-sonnenfels",
+        "parentIds": [
+          "haus-sonnenfels-gruender",
+          "haus-sonnenfels-gruenderin"
+        ],
+        "partnershipId": "marriage-haus-sonnenfels-founders",
+        "type": "claimed",
+        "legitimacy": "unknown",
+        "certainty": "unknown",
+        "visibility": "public",
+        "notes": "Nicht einzeln überlieferte Generationen zwischen dem Gründerpaar und den beiden Brüdern.",
+        "extensions": {
+          "timeJumpId": "gap-sonnenfels-to-1646"
+        }
+      },
+      {
+        "id": "parentage-albrecht-sonnenfels",
+        "childId": "albrecht-sonnenfels",
+        "parentIds": [
+          "dagorath-sonnenfels",
+          "mechthild-sonnenfels"
+        ],
+        "partnershipId": "marriage-dagorath-mechthild-sonnenfels",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-erhard-sonnenfels",
+        "childId": "erhard-sonnenfels",
+        "parentIds": [
+          "dagorath-sonnenfels",
+          "mechthild-sonnenfels"
+        ],
+        "partnershipId": "marriage-dagorath-mechthild-sonnenfels",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-adelheid-sonnenfels",
+        "childId": "adelheid-sonnenfels",
+        "parentIds": [
+          "dagorath-sonnenfels",
+          "mechthild-sonnenfels"
+        ],
+        "partnershipId": "marriage-dagorath-mechthild-sonnenfels",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-oswald-sonnenfels",
+        "childId": "oswald-sonnenfels",
+        "parentIds": [
+          "dagorath-sonnenfels",
+          "mechthild-sonnenfels"
+        ],
+        "partnershipId": "marriage-dagorath-mechthild-sonnenfels",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-konrad-sonnenfels",
+        "childId": "konrad-sonnenfels",
+        "parentIds": [
+          "gerold-sonnenfels",
+          "adelgund-sonnenfels"
+        ],
+        "partnershipId": "marriage-gerold-adelgund-sonnenfels",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-hartwig-sonnenfels",
+        "childId": "hartwig-sonnenfels",
+        "parentIds": [
+          "konrad-sonnenfels",
+          "brunhild-sonnenfels"
+        ],
+        "partnershipId": "marriage-konrad-brunhild-sonnenfels",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-dietmar-sonnenfels",
+        "childId": "dietmar-sonnenfels",
+        "parentIds": [
+          "erhard-sonnenfels",
+          "hedwig-sonnenfels"
+        ],
+        "partnershipId": "marriage-erhard-hedwig-sonnenfels",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-raban-sonnenfels",
+        "childId": "raban-sonnenfels",
+        "parentIds": [
+          "dietmar-sonnenfels",
+          "ottilie-sonnenfels"
+        ],
+        "partnershipId": "marriage-dietmar-ottilie-sonnenfels",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-irmelin-sonnenfels",
+        "childId": "irmelin-sonnenfels",
+        "parentIds": [
+          "dietmar-sonnenfels",
+          "ottilie-sonnenfels"
+        ],
+        "partnershipId": "marriage-dietmar-ottilie-sonnenfels",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-simon-sonnenfels",
+        "childId": "simon-sonnenfels",
+        "parentIds": [
+          "albrecht-sonnenfels",
+          "johanna-falkenhayn"
+        ],
+        "partnershipId": "marriage-albrecht-johanna-sonnenfels",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-david-sonnenfels",
+        "childId": "david-sonnenfels",
+        "parentIds": [
+          "albrecht-sonnenfels",
+          "johanna-falkenhayn"
+        ],
+        "partnershipId": "marriage-albrecht-johanna-sonnenfels",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-rosalinde-sonnenfels",
+        "childId": "rosalinde-sonnenfels",
+        "parentIds": [
+          "albrecht-sonnenfels",
+          "johanna-falkenhayn"
+        ],
+        "partnershipId": "marriage-albrecht-johanna-sonnenfels",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-kaspar-sonnenfels",
+        "childId": "kaspar-sonnenfels",
+        "parentIds": [
+          "albrecht-sonnenfels",
+          "unbekannte-mutter-kaspar-sonnenfels"
+        ],
+        "partnershipId": "affair-albrecht-unknown-sonnenfels",
+        "type": "biological",
+        "legitimacy": "illegitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Anerkannter unehelicher Sohn Albrechts; seine Mutter bleibt unbekannt.",
+        "extensions": {}
+      }
+    ],
+    "houses": [
+      {
+        "id": "house-sonnenfels",
+        "name": "Haus Sonnenfels",
+        "motto": "",
+        "emblem": "assets/images/houses/Weisenfluh/haus-sonnenfels.png",
+        "status": "active"
+      },
+      {
+        "id": "house-falkenhayn",
+        "name": "Haus Falkenhayn",
+        "motto": "",
+        "emblem": "",
+        "status": "active"
+      },
+      {
+        "id": "house-unbekannt-adelheid-sonnenfels",
+        "name": "Unbekanntes Haus",
+        "motto": "",
+        "emblem": "",
+        "status": "active"
+      }
+    ],
+    "cadetBranches": [
+      {
+        "id": "married-away-adelheid-sonnenfels",
+        "name": "Unbekanntes Haus",
+        "subtitle": "Wegverheiratete Linie",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-adelheid-unknown-sonnenfels",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-unbekannt-adelheid-sonnenfels",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "silver",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-unbekannt",
+        "notes": "Adelheid wurde in ein nicht benanntes Haus verheiratet. Ihre weitere Linie gehört zu diesem Haus.",
+        "extensions": {}
+      }
+    ],
+    "timeJumps": [
+      {
+        "id": "gap-sonnenfels-to-1646",
+        "parentPartnershipId": "marriage-haus-sonnenfels-founders",
+        "sharedParentPartnershipIds": [],
+        "parentPersonId": "",
+        "childIds": [
+          "dagorath-sonnenfels",
+          "gerold-sonnenfels"
+        ],
+        "years": 0,
+        "fromYear": "",
+        "toYear": "1646",
+        "label": "Nicht einzeln überlieferte Generationen bis Dagorath und Gerold",
+        "notes": "Der Zeitsprung ist der alleinige absolute Generationentrenner unter dem Hauswappen. Bekannte Nachkommen werden später ausschließlich hinter diesem Knoten ergänzt.",
+        "extensions": {
+          "preparedPlaceholder": false
+        }
+      }
+    ],
+    "lineage": {
+      "founderPartnershipId": "marriage-haus-sonnenfels-founders",
+      "houseId": "house-sonnenfels",
+      "crestSubtitle": "",
+      "crestEmblemScale": 0.86,
+      "crestFrame": "silver",
+      "crestFrameScale": 1,
+      "timeGap": {
+        "enabled": false,
+        "years": 0,
+        "fromYear": "",
+        "toYear": "",
+        "label": ""
+      },
+      "originHouse": {
+        "enabled": false,
+        "id": "lineage-origin-house",
+        "houseId": "",
+        "name": "Ursprungshaus",
+        "subtitle": "",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "childIds": [],
+        "targetFamilyId": "",
+        "notes": "",
+        "timeGap": {
+          "enabled": false,
+          "years": 0,
+          "fromYear": "",
+          "toYear": "",
+          "label": ""
+        }
+      }
+    },
+    "presentation": {
+      "relationshipColors": {
+        "marriage": "#326c4a",
+        "engagement": "#b88b37",
+        "union": "#8e2724",
+        "affair": "#704485",
+        "concubinage": "#704485",
+        "political": "#9d7d48",
+        "forced": "#c7a974",
+        "biological": "#8e2724",
+        "adoptive": "#2f75a8",
+        "foster": "#2f75a8",
+        "step": "#7eb4d7",
+        "magical": "#704485",
+        "claimed": "#62615e"
+      }
+    },
+    "view": {
+      "focusPersonId": "albrecht-sonnenfels",
+      "orientation": "vertical",
+      "ancestorDepth": 8,
+      "descendantDepth": 8,
+      "limitGenerations": false,
+      "showSiblings": true
+    },
+    "extensions": {
+      "blankFamily": false,
+      "preparedTimeJump": true,
+      "pendingDescendantReview": false,
+      "sourceRevision": 1,
+      "sourceNote": "Ausbau nach Nutzervorgaben vom 16. Oktober 2026. Albrechts vorhandene Biografie bleibt verbindlich: Dagoraths legitimer Sohn, Erbstreit mit Onkel und Vetter, späterer Neubeginn in Gwynthor. Erhards Sohn Dietmar führt heute das Haus in Weisenfluh. Adelheids fortgeheiratete Linie endet am Zielhaus; Rosalinde ist 19 Jahre alt, Kaspars Mutter unbekannt."
+    }
+  }
+}

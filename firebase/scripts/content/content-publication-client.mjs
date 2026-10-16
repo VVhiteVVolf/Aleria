@@ -30,7 +30,7 @@ export async function backupContentPublication(label,documents,newIds,now) {
 export async function assertPublishedLocalArtwork(paths) {
   for(const path of new Set(paths)) {
     if(!path.startsWith('./assets/')) throw new Error(`Unerwarteter Bildpfad: ${path}`);
-    const response=await fetch(`https://dieweltvonaleria.netlify.app/AleriaAlmanach/${path.slice(2)}?eleganz=20261016`,{signal:AbortSignal.timeout(30000)});
+    const response=await fetch(`https://dieweltvonaleria.netlify.app/AleriaAlmanach/${path.slice(2)}`,{signal:AbortSignal.timeout(30000)});
     if(!response.ok || !Buffer.from(await response.arrayBuffer()).equals(await readFile(new URL(`../../../AleriaAlmanach/${path.slice(2)}`,import.meta.url)))) throw new Error(`Bild noch nicht veröffentlicht: ${path}`);
   }
 }

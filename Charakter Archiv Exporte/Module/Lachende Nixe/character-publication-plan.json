@@ -1,0 +1,2369 @@
+{
+  "schemaVersion": 1,
+  "group": "Die Lachende Nixe",
+  "entries": [
+    {
+      "id": "person--haus-sonnenfels--dagorath-sonnenfels",
+      "key": "dagorath",
+      "group": "Sonnenfels",
+      "create": true,
+      "data": {
+        "name": "Dagorath Sonnenfels",
+        "title": "Verstorbener Landherr von Sonnenfels",
+        "fraktion": "Haus Sonnenfels",
+        "role": "Verstorbener Landherr von Sonnenfels",
+        "status": "dead",
+        "relevance": "minor",
+        "taxonomyPath": "Weisenfluh > Südliches Weisenfluh > Burg Sonnenfels",
+        "currentLocation": "",
+        "origin": "Weisenfluh",
+        "plotNode": "",
+        "profileLink": "",
+        "playerOwner": "",
+        "bio": "Dagorath hielt Burg und Güter zusammen und erzog seine Kinder im Bewusstsein ihres Namens. Sein Tod ließ mehr offene Ansprüche zurück, als seine Familie friedlich lösen konnte.",
+        "aliases": [],
+        "archived": false,
+        "createdAt": "2026-10-16T15:33:58.080Z",
+        "updatedAt": "2026-10-16T15:33:58.080Z",
+        "portrait": "./assets/lachende-nixe/portraits/dagorath.png",
+        "emotes": [],
+        "emotesOverride": false,
+        "imageSetSchemaVersion": 0,
+        "imageSets": [],
+        "activeImageSetId": "",
+        "imageSetsOverride": false,
+        "inventory": null,
+        "biography": null,
+        "identity": {
+          "worldPersonId": "person--haus-sonnenfels--dagorath-sonnenfels"
+        },
+        "genealogy": {
+          "worldPersonId": "person--haus-sonnenfels--dagorath-sonnenfels",
+          "sex": "male",
+          "status": "dead",
+          "birth": "1646",
+          "death": "1694",
+          "houseId": "house-sonnenfels",
+          "houseName": "Haus Sonnenfels",
+          "familyRole": "core",
+          "portraitPlaceholder": "auto",
+          "tags": [],
+          "sources": [
+            {
+              "familyId": "haus-sonnenfels",
+              "personId": "dagorath-sonnenfels",
+              "releaseId": "",
+              "publishedAt": "",
+              "importedAt": "2026-10-16T15:33:58.080Z",
+              "lastSyncedAt": "2026-10-16T15:33:58.080Z",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-sonnenfels&mode=view&person=dagorath-sonnenfels",
+              "fingerprint": "{\"name\":\"Dagorath Sonnenfels\",\"title\":\"Verstorbener Landherr von Sonnenfels\",\"birth\":\"1646\",\"death\":\"1694\",\"sex\":\"male\",\"status\":\"dead\",\"houseId\":\"house-sonnenfels\",\"portrait\":\"../AleriaAlmanach/assets/lachende-nixe/portraits/dagorath.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"haus-sonnenfels-gruender\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"unknown\",\"worldPersonId\":\"person--haus-sonnenfels--haus-sonnenfels-gruender\",\"name\":\"Unbekannter Gründer\"},{\"personId\":\"haus-sonnenfels-gruenderin\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"unknown\",\"worldPersonId\":\"person--haus-sonnenfels--haus-sonnenfels-gruenderin\",\"name\":\"Unbekannte Gründerin\"}],\"partners\":[{\"personId\":\"mechthild-sonnenfels\",\"type\":\"marriage\",\"status\":\"ended\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sonnenfels--mechthild-sonnenfels\",\"name\":\"Mechthild\"}],\"children\":[{\"personId\":\"albrecht-sonnenfels\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sonnenfels--albrecht-sonnenfels\",\"name\":\"Albrecht Sonnenfels\"},{\"personId\":\"erhard-sonnenfels\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sonnenfels--erhard-sonnenfels\",\"name\":\"Erhard Sonnenfels\"},{\"personId\":\"adelheid-sonnenfels\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sonnenfels--adelheid-sonnenfels\",\"name\":\"Adelheid Sonnenfels\"},{\"personId\":\"oswald-sonnenfels\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sonnenfels--oswald-sonnenfels\",\"name\":\"Oswald Sonnenfels\"}]}}"
+            }
+          ],
+          "relationships": {
+            "parents": [
+              {
+                "personId": "haus-sonnenfels-gruender",
+                "type": "claimed",
+                "legitimacy": "unknown",
+                "certainty": "unknown",
+                "worldPersonId": "person--haus-sonnenfels--haus-sonnenfels-gruender",
+                "name": "Unbekannter Gründer"
+              },
+              {
+                "personId": "haus-sonnenfels-gruenderin",
+                "type": "claimed",
+                "legitimacy": "unknown",
+                "certainty": "unknown",
+                "worldPersonId": "person--haus-sonnenfels--haus-sonnenfels-gruenderin",
+                "name": "Unbekannte Gründerin"
+              }
+            ],
+            "partners": [
+              {
+                "personId": "mechthild-sonnenfels",
+                "type": "marriage",
+                "status": "ended",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-sonnenfels--mechthild-sonnenfels",
+                "name": "Mechthild"
+              }
+            ],
+            "children": [
+              {
+                "personId": "albrecht-sonnenfels",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-sonnenfels--albrecht-sonnenfels",
+                "name": "Albrecht Sonnenfels"
+              },
+              {
+                "personId": "erhard-sonnenfels",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-sonnenfels--erhard-sonnenfels",
+                "name": "Erhard Sonnenfels"
+              },
+              {
+                "personId": "adelheid-sonnenfels",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-sonnenfels--adelheid-sonnenfels",
+                "name": "Adelheid Sonnenfels"
+              },
+              {
+                "personId": "oswald-sonnenfels",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-sonnenfels--oswald-sonnenfels",
+                "name": "Oswald Sonnenfels"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "person--haus-sonnenfels--mechthild-sonnenfels",
+      "key": "mechthild",
+      "group": "Sonnenfels",
+      "create": true,
+      "data": {
+        "name": "Mechthild",
+        "title": "Dagoraths Witwe",
+        "fraktion": "Haus Sonnenfels",
+        "role": "Dagoraths Witwe",
+        "status": "dead",
+        "relevance": "minor",
+        "taxonomyPath": "Weisenfluh > Südliches Weisenfluh > Burg Sonnenfels",
+        "currentLocation": "",
+        "origin": "Weisenfluh",
+        "plotNode": "",
+        "profileLink": "",
+        "playerOwner": "",
+        "bio": "Mechthild bewahrte die Briefe ihrer Kinder, auch als zwischen Sonnenfels und Gwynthor kaum noch ein gutes Wort wechselte. In ihren letzten Jahren überließ sie die lauten Familiengespräche gern anderen.",
+        "aliases": [],
+        "archived": false,
+        "createdAt": "2026-10-16T15:33:58.080Z",
+        "updatedAt": "2026-10-16T15:33:58.080Z",
+        "portrait": "./assets/lachende-nixe/portraits/mechthild.png",
+        "emotes": [],
+        "emotesOverride": false,
+        "imageSetSchemaVersion": 0,
+        "imageSets": [],
+        "activeImageSetId": "",
+        "imageSetsOverride": false,
+        "inventory": null,
+        "biography": null,
+        "identity": {
+          "worldPersonId": "person--haus-sonnenfels--mechthild-sonnenfels"
+        },
+        "genealogy": {
+          "worldPersonId": "person--haus-sonnenfels--mechthild-sonnenfels",
+          "sex": "female",
+          "status": "dead",
+          "birth": "1653",
+          "death": "1725",
+          "houseId": "",
+          "houseName": "",
+          "familyRole": "married",
+          "portraitPlaceholder": "auto",
+          "tags": [],
+          "sources": [
+            {
+              "familyId": "haus-sonnenfels",
+              "personId": "mechthild-sonnenfels",
+              "releaseId": "",
+              "publishedAt": "",
+              "importedAt": "2026-10-16T15:33:58.080Z",
+              "lastSyncedAt": "2026-10-16T15:33:58.080Z",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-sonnenfels&mode=view&person=mechthild-sonnenfels",
+              "fingerprint": "{\"name\":\"Mechthild\",\"title\":\"Dagoraths Witwe\",\"birth\":\"1653\",\"death\":\"1725\",\"sex\":\"female\",\"status\":\"dead\",\"houseId\":\"\",\"portrait\":\"../AleriaAlmanach/assets/lachende-nixe/portraits/mechthild.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"dagorath-sonnenfels\",\"type\":\"marriage\",\"status\":\"ended\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sonnenfels--dagorath-sonnenfels\",\"name\":\"Dagorath Sonnenfels\"}],\"children\":[{\"personId\":\"albrecht-sonnenfels\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sonnenfels--albrecht-sonnenfels\",\"name\":\"Albrecht Sonnenfels\"},{\"personId\":\"erhard-sonnenfels\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sonnenfels--erhard-sonnenfels\",\"name\":\"Erhard Sonnenfels\"},{\"personId\":\"adelheid-sonnenfels\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sonnenfels--adelheid-sonnenfels\",\"name\":\"Adelheid Sonnenfels\"},{\"personId\":\"oswald-sonnenfels\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sonnenfels--oswald-sonnenfels\",\"name\":\"Oswald Sonnenfels\"}]}}"
+            }
+          ],
+          "relationships": {
+            "parents": [],
+            "partners": [
+              {
+                "personId": "dagorath-sonnenfels",
+                "type": "marriage",
+                "status": "ended",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-sonnenfels--dagorath-sonnenfels",
+                "name": "Dagorath Sonnenfels"
+              }
+            ],
+            "children": [
+              {
+                "personId": "albrecht-sonnenfels",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-sonnenfels--albrecht-sonnenfels",
+                "name": "Albrecht Sonnenfels"
+              },
+              {
+                "personId": "erhard-sonnenfels",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-sonnenfels--erhard-sonnenfels",
+                "name": "Erhard Sonnenfels"
+              },
+              {
+                "personId": "adelheid-sonnenfels",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-sonnenfels--adelheid-sonnenfels",
+                "name": "Adelheid Sonnenfels"
+              },
+              {
+                "personId": "oswald-sonnenfels",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-sonnenfels--oswald-sonnenfels",
+                "name": "Oswald Sonnenfels"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "person--haus-sonnenfels--gerold-sonnenfels",
+      "key": "gerold",
+      "group": "Sonnenfels",
+      "create": true,
+      "data": {
+        "name": "Gerold Sonnenfels",
+        "title": "Dagoraths Bruder · Albrechts Onkel",
+        "fraktion": "Haus Sonnenfels",
+        "role": "Dagoraths Bruder · Albrechts Onkel",
+        "status": "dead",
+        "relevance": "minor",
+        "taxonomyPath": "Weisenfluh > Südliches Weisenfluh > Burg Sonnenfels",
+        "currentLocation": "",
+        "origin": "Weisenfluh",
+        "plotNode": "",
+        "profileLink": "",
+        "playerOwner": "",
+        "bio": "Gerold verstand es, am richtigen Tisch gehört zu werden. Nach Dagoraths Tod stellte er sich mit seinem Sohn gegen Albrechts Erbanspruch; die Folgen seiner Einmischung überdauerten ihn.",
+        "aliases": [],
+        "archived": false,
+        "createdAt": "2026-10-16T15:33:58.080Z",
+        "updatedAt": "2026-10-16T15:33:58.080Z",
+        "portrait": "./assets/lachende-nixe/portraits/gerold.png",
+        "emotes": [],
+        "emotesOverride": false,
+        "imageSetSchemaVersion": 0,
+        "imageSets": [],
+        "activeImageSetId": "",
+        "imageSetsOverride": false,
+        "inventory": null,
+        "biography": null,
+        "identity": {
+          "worldPersonId": "person--haus-sonnenfels--gerold-sonnenfels"
+        },
+        "genealogy": {
+          "worldPersonId": "person--haus-sonnenfels--gerold-sonnenfels",
+          "sex": "male",
+          "status": "dead",
+          "birth": "1649",
+          "death": "1720",
+          "houseId": "house-sonnenfels",
+          "houseName": "Haus Sonnenfels",
+          "familyRole": "core",
+          "portraitPlaceholder": "auto",
+          "tags": [],
+          "sources": [
+            {
+              "familyId": "haus-sonnenfels",
+              "personId": "gerold-sonnenfels",
+              "releaseId": "",
+              "publishedAt": "",
+              "importedAt": "2026-10-16T15:33:58.080Z",
+              "lastSyncedAt": "2026-10-16T15:33:58.080Z",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-sonnenfels&mode=view&person=gerold-sonnenfels",
+              "fingerprint": "{\"name\":\"Gerold Sonnenfels\",\"title\":\"Dagoraths Bruder · Albrechts Onkel\",\"birth\":\"1649\",\"death\":\"1720\",\"sex\":\"male\",\"status\":\"dead\",\"houseId\":\"house-sonnenfels\",\"portrait\":\"../AleriaAlmanach/assets/lachende-nixe/portraits/gerold.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"haus-sonnenfels-gruender\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"unknown\",\"worldPersonId\":\"person--haus-sonnenfels--haus-sonnenfels-gruender\",\"name\":\"Unbekannter Gründer\"},{\"personId\":\"haus-sonnenfels-gruenderin\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"unknown\",\"worldPersonId\":\"person--haus-sonnenfels--haus-sonnenfels-gruenderin\",\"name\":\"Unbekannte Gründerin\"}],\"partners\":[{\"personId\":\"adelgund-sonnenfels\",\"type\":\"marriage\",\"status\":\"ended\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sonnenfels--adelgund-sonnenfels\",\"name\":\"Adelgund\"}],\"children\":[{\"personId\":\"konrad-sonnenfels\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sonnenfels--konrad-sonnenfels\",\"name\":\"Konrad Sonnenfels\"}]}}"
+            }
+          ],
+          "relationships": {
+            "parents": [
+              {
+                "personId": "haus-sonnenfels-gruender",
+                "type": "claimed",
+                "legitimacy": "unknown",
+                "certainty": "unknown",
+                "worldPersonId": "person--haus-sonnenfels--haus-sonnenfels-gruender",
+                "name": "Unbekannter Gründer"
+              },
+              {
+                "personId": "haus-sonnenfels-gruenderin",
+                "type": "claimed",
+                "legitimacy": "unknown",
+                "certainty": "unknown",
+                "worldPersonId": "person--haus-sonnenfels--haus-sonnenfels-gruenderin",
+                "name": "Unbekannte Gründerin"
+              }
+            ],
+            "partners": [
+              {
+                "personId": "adelgund-sonnenfels",
+                "type": "marriage",
+                "status": "ended",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-sonnenfels--adelgund-sonnenfels",
+                "name": "Adelgund"
+              }
+            ],
+            "children": [
+              {
+                "personId": "konrad-sonnenfels",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-sonnenfels--konrad-sonnenfels",
+                "name": "Konrad Sonnenfels"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "person--haus-sonnenfels--adelgund-sonnenfels",
+      "key": "adelgund",
+      "group": "Sonnenfels",
+      "create": true,
+      "data": {
+        "name": "Adelgund",
+        "title": "Gerolds Gemahlin",
+        "fraktion": "Haus Sonnenfels",
+        "role": "Gerolds Gemahlin",
+        "status": "dead",
+        "relevance": "minor",
+        "taxonomyPath": "Weisenfluh > Südliches Weisenfluh > Burg Sonnenfels",
+        "currentLocation": "",
+        "origin": "Weisenfluh",
+        "plotNode": "",
+        "profileLink": "",
+        "playerOwner": "",
+        "bio": "Adelgund führte Gerolds Haushalt mit nüchterner Sorgfalt. Sie ließ selten erkennen, welche Familiengespräche sie billigte und welche sie lediglich schweigend überstand.",
+        "aliases": [],
+        "archived": false,
+        "createdAt": "2026-10-16T15:33:58.080Z",
+        "updatedAt": "2026-10-16T15:33:58.080Z",
+        "portrait": "./assets/lachende-nixe/portraits/adelgund.png",
+        "emotes": [],
+        "emotesOverride": false,
+        "imageSetSchemaVersion": 0,
+        "imageSets": [],
+        "activeImageSetId": "",
+        "imageSetsOverride": false,
+        "inventory": null,
+        "biography": null,
+        "identity": {
+          "worldPersonId": "person--haus-sonnenfels--adelgund-sonnenfels"
+        },
+        "genealogy": {
+          "worldPersonId": "person--haus-sonnenfels--adelgund-sonnenfels",
+          "sex": "female",
+          "status": "dead",
+          "birth": "1653",
+          "death": "1728",
+          "houseId": "",
+          "houseName": "",
+          "familyRole": "married",
+          "portraitPlaceholder": "auto",
+          "tags": [],
+          "sources": [
+            {
+              "familyId": "haus-sonnenfels",
+              "personId": "adelgund-sonnenfels",
+              "releaseId": "",
+              "publishedAt": "",
+              "importedAt": "2026-10-16T15:33:58.080Z",
+              "lastSyncedAt": "2026-10-16T15:33:58.080Z",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-sonnenfels&mode=view&person=adelgund-sonnenfels",
+              "fingerprint": "{\"name\":\"Adelgund\",\"title\":\"Gerolds Gemahlin\",\"birth\":\"1653\",\"death\":\"1728\",\"sex\":\"female\",\"status\":\"dead\",\"houseId\":\"\",\"portrait\":\"../AleriaAlmanach/assets/lachende-nixe/portraits/adelgund.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"gerold-sonnenfels\",\"type\":\"marriage\",\"status\":\"ended\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sonnenfels--gerold-sonnenfels\",\"name\":\"Gerold Sonnenfels\"}],\"children\":[{\"personId\":\"konrad-sonnenfels\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sonnenfels--konrad-sonnenfels\",\"name\":\"Konrad Sonnenfels\"}]}}"
+            }
+          ],
+          "relationships": {
+            "parents": [],
+            "partners": [
+              {
+                "personId": "gerold-sonnenfels",
+                "type": "marriage",
+                "status": "ended",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-sonnenfels--gerold-sonnenfels",
+                "name": "Gerold Sonnenfels"
+              }
+            ],
+            "children": [
+              {
+                "personId": "konrad-sonnenfels",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-sonnenfels--konrad-sonnenfels",
+                "name": "Konrad Sonnenfels"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "person--haus-sonnenfels--albrecht-sonnenfels",
+      "key": "albrecht",
+      "group": "Sonnenfels",
+      "create": true,
+      "data": {
+        "name": "Albrecht Sonnenfels",
+        "title": "Inhaber der Lachenden Nixe",
+        "fraktion": "Die Lachende Nixe",
+        "role": "Inhaber der Lachenden Nixe",
+        "status": "active",
+        "relevance": "supporting",
+        "taxonomyPath": "Weisenfluh > Südliches Weisenfluh > Burg Sonnenfels",
+        "currentLocation": "Gwynthor · Die Lachende Nixe",
+        "origin": "Weisenfluh",
+        "plotNode": "",
+        "profileLink": "",
+        "playerOwner": "",
+        "bio": "Albrecht Sonnenfels machte aus einer heruntergekommenen Hafenkneipe eines der angesehensten Häuser Gwynthors. Er entscheidet über große Geschäfte, pflegt seine Verbindungen und vergisst selten, wem er eine offene Tür verdankt.",
+        "aliases": [],
+        "archived": false,
+        "createdAt": "2026-10-16T15:33:58.080Z",
+        "updatedAt": "2026-10-16T15:33:58.080Z",
+        "portrait": "./assets/lachende-nixe/references/albrecht.png",
+        "emotes": [],
+        "emotesOverride": false,
+        "imageSetSchemaVersion": 0,
+        "imageSets": [],
+        "activeImageSetId": "",
+        "imageSetsOverride": false,
+        "inventory": null,
+        "biography": null,
+        "identity": {
+          "worldPersonId": "person--haus-sonnenfels--albrecht-sonnenfels"
+        },
+        "genealogy": {
+          "worldPersonId": "person--haus-sonnenfels--albrecht-sonnenfels",
+          "sex": "male",
+          "status": "alive",
+          "birth": "1677",
+          "death": "",
+          "houseId": "house-sonnenfels",
+          "houseName": "Haus Sonnenfels",
+          "familyRole": "core",
+          "portraitPlaceholder": "auto",
+          "tags": [],
+          "sources": [
+            {
+              "familyId": "haus-sonnenfels",
+              "personId": "albrecht-sonnenfels",
+              "releaseId": "",
+              "publishedAt": "",
+              "importedAt": "2026-10-16T15:33:58.080Z",
+              "lastSyncedAt": "2026-10-16T15:33:58.080Z",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-sonnenfels&mode=view&person=albrecht-sonnenfels",
+              "fingerprint": "{\"name\":\"Albrecht Sonnenfels\",\"title\":\"Inhaber der Lachenden Nixe\",\"birth\":\"1677\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-sonnenfels\",\"portrait\":\"../AleriaAlmanach/assets/lachende-nixe/references/albrecht.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"dagorath-sonnenfels\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sonnenfels--dagorath-sonnenfels\",\"name\":\"Dagorath Sonnenfels\"},{\"personId\":\"mechthild-sonnenfels\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sonnenfels--mechthild-sonnenfels\",\"name\":\"Mechthild\"}],\"partners\":[{\"personId\":\"johanna-falkenhayn\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-falkenhayn--johanna-falkenhayn\",\"name\":\"Johanna Falkenhayn\"},{\"personId\":\"unbekannte-mutter-kaspar-sonnenfels\",\"type\":\"affair\",\"status\":\"ended\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--unbekannte-mutter-kaspar-sonnenfels\",\"name\":\"Unbekannte Mutter\"}],\"children\":[{\"personId\":\"simon-sonnenfels\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sonnenfels--simon-sonnenfels\",\"name\":\"Simon Sonnenfels\"},{\"personId\":\"david-sonnenfels\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sonnenfels--david-sonnenfels\",\"name\":\"David Sonnenfels\"},{\"personId\":\"rosalinde-sonnenfels\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sonnenfels--rosalinde-sonnenfels\",\"name\":\"Rosalinde Sonnenfels\"},{\"personId\":\"kaspar-sonnenfels\",\"type\":\"biological\",\"legitimacy\":\"illegitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sonnenfels--kaspar-sonnenfels\",\"name\":\"Kaspar Sonnenfels\"}]}}"
+            }
+          ],
+          "relationships": {
+            "parents": [
+              {
+                "personId": "dagorath-sonnenfels",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-sonnenfels--dagorath-sonnenfels",
+                "name": "Dagorath Sonnenfels"
+              },
+              {
+                "personId": "mechthild-sonnenfels",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-sonnenfels--mechthild-sonnenfels",
+                "name": "Mechthild"
+              }
+            ],
+            "partners": [
+              {
+                "personId": "johanna-falkenhayn",
+                "type": "marriage",
+                "status": "active",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-falkenhayn--johanna-falkenhayn",
+                "name": "Johanna Falkenhayn"
+              },
+              {
+                "personId": "unbekannte-mutter-kaspar-sonnenfels",
+                "type": "affair",
+                "status": "ended",
+                "certainty": "confirmed",
+                "worldPersonId": "person--family-tree--unbekannte-mutter-kaspar-sonnenfels",
+                "name": "Unbekannte Mutter"
+              }
+            ],
+            "children": [
+              {
+                "personId": "simon-sonnenfels",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-sonnenfels--simon-sonnenfels",
+                "name": "Simon Sonnenfels"
+              },
+              {
+                "personId": "david-sonnenfels",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-sonnenfels--david-sonnenfels",
+                "name": "David Sonnenfels"
+              },
+              {
+                "personId": "rosalinde-sonnenfels",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-sonnenfels--rosalinde-sonnenfels",
+                "name": "Rosalinde Sonnenfels"
+              },
+              {
+                "personId": "kaspar-sonnenfels",
+                "type": "biological",
+                "legitimacy": "illegitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-sonnenfels--kaspar-sonnenfels",
+                "name": "Kaspar Sonnenfels"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "person--haus-falkenhayn--johanna-falkenhayn",
+      "key": "johanna",
+      "group": "Falkenhayn",
+      "create": true,
+      "data": {
+        "name": "Johanna Falkenhayn",
+        "title": "Hausmutter · Personalführung",
+        "fraktion": "Die Lachende Nixe",
+        "role": "Hausmutter · Personalführung",
+        "status": "active",
+        "relevance": "minor",
+        "taxonomyPath": "Weisenfluh > Südliches Weisenfluh > Burg Sonnenfels",
+        "currentLocation": "Gwynthor · Die Lachende Nixe",
+        "origin": "Weisenfluh",
+        "plotNode": "",
+        "profileLink": "",
+        "playerOwner": "",
+        "bio": "Johanna kennt die Menschen ihres Hauses und bemerkt Unruhe, bevor sie den Salon erreicht. Sie führt das Personal, hält die Abläufe zusammen und lässt sich von einem teuren Rock ebenso wenig einschüchtern wie von einer lauten Stimme.",
+        "aliases": [],
+        "archived": false,
+        "createdAt": "2026-10-16T15:33:58.080Z",
+        "updatedAt": "2026-10-16T15:33:58.080Z",
+        "portrait": "./assets/lachende-nixe/references/johanna.png",
+        "emotes": [],
+        "emotesOverride": false,
+        "imageSetSchemaVersion": 0,
+        "imageSets": [],
+        "activeImageSetId": "",
+        "imageSetsOverride": false,
+        "inventory": null,
+        "biography": null,
+        "identity": {
+          "worldPersonId": "person--haus-falkenhayn--johanna-falkenhayn"
+        },
+        "genealogy": {
+          "worldPersonId": "person--haus-falkenhayn--johanna-falkenhayn",
+          "sex": "female",
+          "status": "alive",
+          "birth": "1682",
+          "death": "",
+          "houseId": "house-falkenhayn",
+          "houseName": "Haus Falkenhayn",
+          "familyRole": "married",
+          "portraitPlaceholder": "auto",
+          "tags": [],
+          "sources": [
+            {
+              "familyId": "haus-sonnenfels",
+              "personId": "johanna-falkenhayn",
+              "releaseId": "",
+              "publishedAt": "",
+              "importedAt": "2026-10-16T15:33:58.080Z",
+              "lastSyncedAt": "2026-10-16T15:33:58.080Z",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-sonnenfels&mode=view&person=johanna-falkenhayn",
+              "fingerprint": "{\"name\":\"Johanna Falkenhayn\",\"title\":\"Hausmutter · Personalführung\",\"birth\":\"1682\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-falkenhayn\",\"portrait\":\"../AleriaAlmanach/assets/lachende-nixe/references/johanna.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"albrecht-sonnenfels\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sonnenfels--albrecht-sonnenfels\",\"name\":\"Albrecht Sonnenfels\"}],\"children\":[{\"personId\":\"simon-sonnenfels\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sonnenfels--simon-sonnenfels\",\"name\":\"Simon Sonnenfels\"},{\"personId\":\"david-sonnenfels\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sonnenfels--david-sonnenfels\",\"name\":\"David Sonnenfels\"},{\"personId\":\"rosalinde-sonnenfels\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sonnenfels--rosalinde-sonnenfels\",\"name\":\"Rosalinde Sonnenfels\"}]}}"
+            }
+          ],
+          "relationships": {
+            "parents": [],
+            "partners": [
+              {
+                "personId": "albrecht-sonnenfels",
+                "type": "marriage",
+                "status": "active",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-sonnenfels--albrecht-sonnenfels",
+                "name": "Albrecht Sonnenfels"
+              }
+            ],
+            "children": [
+              {
+                "personId": "simon-sonnenfels",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-sonnenfels--simon-sonnenfels",
+                "name": "Simon Sonnenfels"
+              },
+              {
+                "personId": "david-sonnenfels",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-sonnenfels--david-sonnenfels",
+                "name": "David Sonnenfels"
+              },
+              {
+                "personId": "rosalinde-sonnenfels",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-sonnenfels--rosalinde-sonnenfels",
+                "name": "Rosalinde Sonnenfels"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "person--haus-sonnenfels--erhard-sonnenfels",
+      "key": "erhard",
+      "group": "Sonnenfels",
+      "create": true,
+      "data": {
+        "name": "Erhard Sonnenfels",
+        "title": "Verstorbener Herr von Burg Sonnenfels",
+        "fraktion": "Haus Sonnenfels",
+        "role": "Verstorbener Herr von Burg Sonnenfels",
+        "status": "dead",
+        "relevance": "minor",
+        "taxonomyPath": "Weisenfluh > Südliches Weisenfluh > Burg Sonnenfels",
+        "currentLocation": "",
+        "origin": "Weisenfluh",
+        "plotNode": "",
+        "profileLink": "",
+        "playerOwner": "",
+        "bio": "Nach Albrechts Fortgang führte Erhard den heimischen Besitz. Er sprach ungern über die Jahre des Erbstreits und hinterließ seinem Sohn Dietmar einen geordneten Hof, aber eine zerrissene Verwandtschaft.",
+        "aliases": [],
+        "archived": false,
+        "createdAt": "2026-10-16T15:33:58.080Z",
+        "updatedAt": "2026-10-16T15:33:58.080Z",
+        "portrait": "./assets/lachende-nixe/portraits/erhard.png",
+        "emotes": [],
+        "emotesOverride": false,
+        "imageSetSchemaVersion": 0,
+        "imageSets": [],
+        "activeImageSetId": "",
+        "imageSetsOverride": false,
+        "inventory": null,
+        "biography": null,
+        "identity": {
+          "worldPersonId": "person--haus-sonnenfels--erhard-sonnenfels"
+        },
+        "genealogy": {
+          "worldPersonId": "person--haus-sonnenfels--erhard-sonnenfels",
+          "sex": "male",
+          "status": "dead",
+          "birth": "1680",
+          "death": "1732",
+          "houseId": "house-sonnenfels",
+          "houseName": "Haus Sonnenfels",
+          "familyRole": "core",
+          "portraitPlaceholder": "auto",
+          "tags": [],
+          "sources": [
+            {
+              "familyId": "haus-sonnenfels",
+              "personId": "erhard-sonnenfels",
+              "releaseId": "",
+              "publishedAt": "",
+              "importedAt": "2026-10-16T15:33:58.080Z",
+              "lastSyncedAt": "2026-10-16T15:33:58.080Z",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-sonnenfels&mode=view&person=erhard-sonnenfels",
+              "fingerprint": "{\"name\":\"Erhard Sonnenfels\",\"title\":\"Verstorbener Herr von Burg Sonnenfels\",\"birth\":\"1680\",\"death\":\"1732\",\"sex\":\"male\",\"status\":\"dead\",\"houseId\":\"house-sonnenfels\",\"portrait\":\"../AleriaAlmanach/assets/lachende-nixe/portraits/erhard.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"dagorath-sonnenfels\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sonnenfels--dagorath-sonnenfels\",\"name\":\"Dagorath Sonnenfels\"},{\"personId\":\"mechthild-sonnenfels\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sonnenfels--mechthild-sonnenfels\",\"name\":\"Mechthild\"}],\"partners\":[{\"personId\":\"hedwig-sonnenfels\",\"type\":\"marriage\",\"status\":\"ended\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sonnenfels--hedwig-sonnenfels\",\"name\":\"Hedwig\"}],\"children\":[{\"personId\":\"dietmar-sonnenfels\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sonnenfels--dietmar-sonnenfels\",\"name\":\"Dietmar Sonnenfels\"}]}}"
+            }
+          ],
+          "relationships": {
+            "parents": [
+              {
+                "personId": "dagorath-sonnenfels",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-sonnenfels--dagorath-sonnenfels",
+                "name": "Dagorath Sonnenfels"
+              },
+              {
+                "personId": "mechthild-sonnenfels",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-sonnenfels--mechthild-sonnenfels",
+                "name": "Mechthild"
+              }
+            ],
+            "partners": [
+              {
+                "personId": "hedwig-sonnenfels",
+                "type": "marriage",
+                "status": "ended",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-sonnenfels--hedwig-sonnenfels",
+                "name": "Hedwig"
+              }
+            ],
+            "children": [
+              {
+                "personId": "dietmar-sonnenfels",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-sonnenfels--dietmar-sonnenfels",
+                "name": "Dietmar Sonnenfels"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "person--haus-sonnenfels--hedwig-sonnenfels",
+      "key": "hedwig",
+      "group": "Sonnenfels",
+      "create": true,
+      "data": {
+        "name": "Hedwig",
+        "title": "Erhards Gemahlin · Dietmars Mutter",
+        "fraktion": "Haus Sonnenfels",
+        "role": "Erhards Gemahlin · Dietmars Mutter",
+        "status": "dead",
+        "relevance": "minor",
+        "taxonomyPath": "Weisenfluh > Südliches Weisenfluh > Burg Sonnenfels",
+        "currentLocation": "",
+        "origin": "Weisenfluh",
+        "plotNode": "",
+        "profileLink": "",
+        "playerOwner": "",
+        "bio": "Hedwig führte die Vorräte und die stilleren Pflichten der Burg. Dietmar lernte von ihr, dass ein großes Haus von verlässlichen Händen lebt, nicht allein von einem ehrwürdigen Namen.",
+        "aliases": [],
+        "archived": false,
+        "createdAt": "2026-10-16T15:33:58.080Z",
+        "updatedAt": "2026-10-16T15:33:58.080Z",
+        "portrait": "./assets/lachende-nixe/portraits/hedwig.png",
+        "emotes": [],
+        "emotesOverride": false,
+        "imageSetSchemaVersion": 0,
+        "imageSets": [],
+        "activeImageSetId": "",
+        "imageSetsOverride": false,
+        "inventory": null,
+        "biography": null,
+        "identity": {
+          "worldPersonId": "person--haus-sonnenfels--hedwig-sonnenfels"
+        },
+        "genealogy": {
+          "worldPersonId": "person--haus-sonnenfels--hedwig-sonnenfels",
+          "sex": "female",
+          "status": "dead",
+          "birth": "1682",
+          "death": "1736",
+          "houseId": "",
+          "houseName": "",
+          "familyRole": "married",
+          "portraitPlaceholder": "auto",
+          "tags": [],
+          "sources": [
+            {
+              "familyId": "haus-sonnenfels",
+              "personId": "hedwig-sonnenfels",
+              "releaseId": "",
+              "publishedAt": "",
+              "importedAt": "2026-10-16T15:33:58.080Z",
+              "lastSyncedAt": "2026-10-16T15:33:58.080Z",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-sonnenfels&mode=view&person=hedwig-sonnenfels",
+              "fingerprint": "{\"name\":\"Hedwig\",\"title\":\"Erhards Gemahlin · Dietmars Mutter\",\"birth\":\"1682\",\"death\":\"1736\",\"sex\":\"female\",\"status\":\"dead\",\"houseId\":\"\",\"portrait\":\"../AleriaAlmanach/assets/lachende-nixe/portraits/hedwig.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"erhard-sonnenfels\",\"type\":\"marriage\",\"status\":\"ended\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sonnenfels--erhard-sonnenfels\",\"name\":\"Erhard Sonnenfels\"}],\"children\":[{\"personId\":\"dietmar-sonnenfels\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sonnenfels--dietmar-sonnenfels\",\"name\":\"Dietmar Sonnenfels\"}]}}"
+            }
+          ],
+          "relationships": {
+            "parents": [],
+            "partners": [
+              {
+                "personId": "erhard-sonnenfels",
+                "type": "marriage",
+                "status": "ended",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-sonnenfels--erhard-sonnenfels",
+                "name": "Erhard Sonnenfels"
+              }
+            ],
+            "children": [
+              {
+                "personId": "dietmar-sonnenfels",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-sonnenfels--dietmar-sonnenfels",
+                "name": "Dietmar Sonnenfels"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "person--haus-sonnenfels--adelheid-sonnenfels",
+      "key": "adelheid",
+      "group": "Sonnenfels",
+      "create": true,
+      "data": {
+        "name": "Adelheid Sonnenfels",
+        "title": "In ein unbekanntes Haus verheiratet",
+        "fraktion": "Haus Sonnenfels",
+        "role": "In ein unbekanntes Haus verheiratet",
+        "status": "active",
+        "relevance": "minor",
+        "taxonomyPath": "Weisenfluh > Südliches Weisenfluh > Burg Sonnenfels",
+        "currentLocation": "Weisenfluh · unbekanntes Haus",
+        "origin": "Weisenfluh",
+        "plotNode": "",
+        "profileLink": "",
+        "playerOwner": "",
+        "bio": "Adelheid verließ Sonnenfels durch ihre Heirat. Von ihrem neuen Haushalt ist wenig überliefert; ihre wenigen Briefe an Albrecht sind freundlich und vermeiden alte Ansprüche.",
+        "aliases": [],
+        "archived": false,
+        "createdAt": "2026-10-16T15:33:58.080Z",
+        "updatedAt": "2026-10-16T15:33:58.080Z",
+        "portrait": "./assets/lachende-nixe/portraits/adelheid.png",
+        "emotes": [],
+        "emotesOverride": false,
+        "imageSetSchemaVersion": 0,
+        "imageSets": [],
+        "activeImageSetId": "",
+        "imageSetsOverride": false,
+        "inventory": null,
+        "biography": null,
+        "identity": {
+          "worldPersonId": "person--haus-sonnenfels--adelheid-sonnenfels"
+        },
+        "genealogy": {
+          "worldPersonId": "person--haus-sonnenfels--adelheid-sonnenfels",
+          "sex": "female",
+          "status": "alive",
+          "birth": "1683",
+          "death": "",
+          "houseId": "house-sonnenfels",
+          "houseName": "Haus Sonnenfels",
+          "familyRole": "core",
+          "portraitPlaceholder": "auto",
+          "tags": [],
+          "sources": [
+            {
+              "familyId": "haus-sonnenfels",
+              "personId": "adelheid-sonnenfels",
+              "releaseId": "",
+              "publishedAt": "",
+              "importedAt": "2026-10-16T15:33:58.080Z",
+              "lastSyncedAt": "2026-10-16T15:33:58.080Z",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-sonnenfels&mode=view&person=adelheid-sonnenfels",
+              "fingerprint": "{\"name\":\"Adelheid Sonnenfels\",\"title\":\"In ein unbekanntes Haus verheiratet\",\"birth\":\"1683\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-sonnenfels\",\"portrait\":\"../AleriaAlmanach/assets/lachende-nixe/portraits/adelheid.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"dagorath-sonnenfels\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sonnenfels--dagorath-sonnenfels\",\"name\":\"Dagorath Sonnenfels\"},{\"personId\":\"mechthild-sonnenfels\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sonnenfels--mechthild-sonnenfels\",\"name\":\"Mechthild\"}],\"partners\":[{\"personId\":\"unbekannter-gemahl-adelheid-sonnenfels\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-unbekannt-adelheid-sonnenfels--unbekannter-gemahl-adelheid-sonnenfels\",\"name\":\"Unbekannter Gemahl\"}],\"children\":[]}}"
+            }
+          ],
+          "relationships": {
+            "parents": [
+              {
+                "personId": "dagorath-sonnenfels",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-sonnenfels--dagorath-sonnenfels",
+                "name": "Dagorath Sonnenfels"
+              },
+              {
+                "personId": "mechthild-sonnenfels",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-sonnenfels--mechthild-sonnenfels",
+                "name": "Mechthild"
+              }
+            ],
+            "partners": [
+              {
+                "personId": "unbekannter-gemahl-adelheid-sonnenfels",
+                "type": "marriage",
+                "status": "active",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-unbekannt-adelheid-sonnenfels--unbekannter-gemahl-adelheid-sonnenfels",
+                "name": "Unbekannter Gemahl"
+              }
+            ],
+            "children": []
+          }
+        }
+      }
+    },
+    {
+      "id": "person--haus-sonnenfels--oswald-sonnenfels",
+      "key": "oswald",
+      "group": "Sonnenfels",
+      "create": true,
+      "data": {
+        "name": "Oswald Sonnenfels",
+        "title": "Albrechts jüngster Bruder · Burgverwalter",
+        "fraktion": "Haus Sonnenfels",
+        "role": "Albrechts jüngster Bruder · Burgverwalter",
+        "status": "active",
+        "relevance": "minor",
+        "taxonomyPath": "Weisenfluh > Südliches Weisenfluh > Burg Sonnenfels",
+        "currentLocation": "Weisenfluh · Burg Sonnenfels",
+        "origin": "Weisenfluh",
+        "plotNode": "",
+        "profileLink": "",
+        "playerOwner": "",
+        "bio": "Oswald blieb in Weisenfluh und kümmert sich um den Alltag des Burgbesitzes. Den Streit seiner älteren Verwandten trägt er nicht gern weiter; ein ausgebesserter Dachstuhl ist ihm lieber als eine weitere Erörterung des Erbrechts.",
+        "aliases": [],
+        "archived": false,
+        "createdAt": "2026-10-16T15:33:58.080Z",
+        "updatedAt": "2026-10-16T15:33:58.080Z",
+        "portrait": "./assets/lachende-nixe/portraits/oswald.png",
+        "emotes": [],
+        "emotesOverride": false,
+        "imageSetSchemaVersion": 0,
+        "imageSets": [],
+        "activeImageSetId": "",
+        "imageSetsOverride": false,
+        "inventory": null,
+        "biography": null,
+        "identity": {
+          "worldPersonId": "person--haus-sonnenfels--oswald-sonnenfels"
+        },
+        "genealogy": {
+          "worldPersonId": "person--haus-sonnenfels--oswald-sonnenfels",
+          "sex": "male",
+          "status": "alive",
+          "birth": "1685",
+          "death": "",
+          "houseId": "house-sonnenfels",
+          "houseName": "Haus Sonnenfels",
+          "familyRole": "core",
+          "portraitPlaceholder": "auto",
+          "tags": [],
+          "sources": [
+            {
+              "familyId": "haus-sonnenfels",
+              "personId": "oswald-sonnenfels",
+              "releaseId": "",
+              "publishedAt": "",
+              "importedAt": "2026-10-16T15:33:58.080Z",
+              "lastSyncedAt": "2026-10-16T15:33:58.080Z",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-sonnenfels&mode=view&person=oswald-sonnenfels",
+              "fingerprint": "{\"name\":\"Oswald Sonnenfels\",\"title\":\"Albrechts jüngster Bruder · Burgverwalter\",\"birth\":\"1685\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-sonnenfels\",\"portrait\":\"../AleriaAlmanach/assets/lachende-nixe/portraits/oswald.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"dagorath-sonnenfels\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sonnenfels--dagorath-sonnenfels\",\"name\":\"Dagorath Sonnenfels\"},{\"personId\":\"mechthild-sonnenfels\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sonnenfels--mechthild-sonnenfels\",\"name\":\"Mechthild\"}],\"partners\":[],\"children\":[]}}"
+            }
+          ],
+          "relationships": {
+            "parents": [
+              {
+                "personId": "dagorath-sonnenfels",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-sonnenfels--dagorath-sonnenfels",
+                "name": "Dagorath Sonnenfels"
+              },
+              {
+                "personId": "mechthild-sonnenfels",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-sonnenfels--mechthild-sonnenfels",
+                "name": "Mechthild"
+              }
+            ],
+            "partners": [],
+            "children": []
+          }
+        }
+      }
+    },
+    {
+      "id": "person--haus-sonnenfels--konrad-sonnenfels",
+      "key": "konrad",
+      "group": "Sonnenfels",
+      "create": true,
+      "data": {
+        "name": "Konrad Sonnenfels",
+        "title": "Gerolds Sohn · Albrechts Vetter",
+        "fraktion": "Haus Sonnenfels",
+        "role": "Gerolds Sohn · Albrechts Vetter",
+        "status": "active",
+        "relevance": "minor",
+        "taxonomyPath": "Weisenfluh > Südliches Weisenfluh > Burg Sonnenfels",
+        "currentLocation": "Weisenfluh · Burg Sonnenfels",
+        "origin": "Weisenfluh",
+        "plotNode": "",
+        "profileLink": "",
+        "playerOwner": "",
+        "bio": "Konrad gewann im Erbstreit Einfluss, doch das Haus folgte später Erhard und dessen Sohn Dietmar. Er behielt einen kleineren Besitz und den Stolz seines Zweiges. Über Albrechts Erfolg in Gwynthor spricht er nur auf Nachfrage.",
+        "aliases": [],
+        "archived": false,
+        "createdAt": "2026-10-16T15:33:58.080Z",
+        "updatedAt": "2026-10-16T15:33:58.080Z",
+        "portrait": "./assets/lachende-nixe/portraits/konrad.png",
+        "emotes": [],
+        "emotesOverride": false,
+        "imageSetSchemaVersion": 0,
+        "imageSets": [],
+        "activeImageSetId": "",
+        "imageSetsOverride": false,
+        "inventory": null,
+        "biography": null,
+        "identity": {
+          "worldPersonId": "person--haus-sonnenfels--konrad-sonnenfels"
+        },
+        "genealogy": {
+          "worldPersonId": "person--haus-sonnenfels--konrad-sonnenfels",
+          "sex": "male",
+          "status": "alive",
+          "birth": "1675",
+          "death": "",
+          "houseId": "house-sonnenfels",
+          "houseName": "Haus Sonnenfels",
+          "familyRole": "core",
+          "portraitPlaceholder": "auto",
+          "tags": [],
+          "sources": [
+            {
+              "familyId": "haus-sonnenfels",
+              "personId": "konrad-sonnenfels",
+              "releaseId": "",
+              "publishedAt": "",
+              "importedAt": "2026-10-16T15:33:58.080Z",
+              "lastSyncedAt": "2026-10-16T15:33:58.080Z",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-sonnenfels&mode=view&person=konrad-sonnenfels",
+              "fingerprint": "{\"name\":\"Konrad Sonnenfels\",\"title\":\"Gerolds Sohn · Albrechts Vetter\",\"birth\":\"1675\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-sonnenfels\",\"portrait\":\"../AleriaAlmanach/assets/lachende-nixe/portraits/konrad.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"gerold-sonnenfels\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sonnenfels--gerold-sonnenfels\",\"name\":\"Gerold Sonnenfels\"},{\"personId\":\"adelgund-sonnenfels\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sonnenfels--adelgund-sonnenfels\",\"name\":\"Adelgund\"}],\"partners\":[{\"personId\":\"brunhild-sonnenfels\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sonnenfels--brunhild-sonnenfels\",\"name\":\"Brunhild\"}],\"children\":[{\"personId\":\"hartwig-sonnenfels\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sonnenfels--hartwig-sonnenfels\",\"name\":\"Hartwig Sonnenfels\"}]}}"
+            }
+          ],
+          "relationships": {
+            "parents": [
+              {
+                "personId": "gerold-sonnenfels",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-sonnenfels--gerold-sonnenfels",
+                "name": "Gerold Sonnenfels"
+              },
+              {
+                "personId": "adelgund-sonnenfels",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-sonnenfels--adelgund-sonnenfels",
+                "name": "Adelgund"
+              }
+            ],
+            "partners": [
+              {
+                "personId": "brunhild-sonnenfels",
+                "type": "marriage",
+                "status": "active",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-sonnenfels--brunhild-sonnenfels",
+                "name": "Brunhild"
+              }
+            ],
+            "children": [
+              {
+                "personId": "hartwig-sonnenfels",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-sonnenfels--hartwig-sonnenfels",
+                "name": "Hartwig Sonnenfels"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "person--haus-sonnenfels--brunhild-sonnenfels",
+      "key": "brunhild",
+      "group": "Sonnenfels",
+      "create": true,
+      "data": {
+        "name": "Brunhild",
+        "title": "Konrads Gemahlin",
+        "fraktion": "Haus Sonnenfels",
+        "role": "Konrads Gemahlin",
+        "status": "active",
+        "relevance": "minor",
+        "taxonomyPath": "Weisenfluh > Südliches Weisenfluh > Burg Sonnenfels",
+        "currentLocation": "Weisenfluh · Burg Sonnenfels",
+        "origin": "Weisenfluh",
+        "plotNode": "",
+        "profileLink": "",
+        "playerOwner": "",
+        "bio": "Brunhild hält Konrads Haushalt fern vom täglichen Streit um Namen und Vorrang. Sie achtet auf eine gute Tafel, zuverlässige Bedienstete und darauf, dass Hartwig nicht jede Kränkung seines Vaters zu seiner eigenen macht.",
+        "aliases": [],
+        "archived": false,
+        "createdAt": "2026-10-16T15:33:58.080Z",
+        "updatedAt": "2026-10-16T15:33:58.080Z",
+        "portrait": "./assets/lachende-nixe/portraits/brunhild.png",
+        "emotes": [],
+        "emotesOverride": false,
+        "imageSetSchemaVersion": 0,
+        "imageSets": [],
+        "activeImageSetId": "",
+        "imageSetsOverride": false,
+        "inventory": null,
+        "biography": null,
+        "identity": {
+          "worldPersonId": "person--haus-sonnenfels--brunhild-sonnenfels"
+        },
+        "genealogy": {
+          "worldPersonId": "person--haus-sonnenfels--brunhild-sonnenfels",
+          "sex": "female",
+          "status": "alive",
+          "birth": "1680",
+          "death": "",
+          "houseId": "",
+          "houseName": "",
+          "familyRole": "married",
+          "portraitPlaceholder": "auto",
+          "tags": [],
+          "sources": [
+            {
+              "familyId": "haus-sonnenfels",
+              "personId": "brunhild-sonnenfels",
+              "releaseId": "",
+              "publishedAt": "",
+              "importedAt": "2026-10-16T15:33:58.080Z",
+              "lastSyncedAt": "2026-10-16T15:33:58.080Z",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-sonnenfels&mode=view&person=brunhild-sonnenfels",
+              "fingerprint": "{\"name\":\"Brunhild\",\"title\":\"Konrads Gemahlin\",\"birth\":\"1680\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"\",\"portrait\":\"../AleriaAlmanach/assets/lachende-nixe/portraits/brunhild.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"konrad-sonnenfels\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sonnenfels--konrad-sonnenfels\",\"name\":\"Konrad Sonnenfels\"}],\"children\":[{\"personId\":\"hartwig-sonnenfels\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sonnenfels--hartwig-sonnenfels\",\"name\":\"Hartwig Sonnenfels\"}]}}"
+            }
+          ],
+          "relationships": {
+            "parents": [],
+            "partners": [
+              {
+                "personId": "konrad-sonnenfels",
+                "type": "marriage",
+                "status": "active",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-sonnenfels--konrad-sonnenfels",
+                "name": "Konrad Sonnenfels"
+              }
+            ],
+            "children": [
+              {
+                "personId": "hartwig-sonnenfels",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-sonnenfels--hartwig-sonnenfels",
+                "name": "Hartwig Sonnenfels"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "person--haus-sonnenfels--hartwig-sonnenfels",
+      "key": "hartwig",
+      "group": "Sonnenfels",
+      "create": true,
+      "data": {
+        "name": "Hartwig Sonnenfels",
+        "title": "Konrads Sohn · Ritter des Seitenzweiges",
+        "fraktion": "Haus Sonnenfels",
+        "role": "Konrads Sohn · Ritter des Seitenzweiges",
+        "status": "active",
+        "relevance": "minor",
+        "taxonomyPath": "Weisenfluh > Südliches Weisenfluh > Burg Sonnenfels",
+        "currentLocation": "Weisenfluh · Burg Sonnenfels",
+        "origin": "Weisenfluh",
+        "plotNode": "",
+        "profileLink": "",
+        "playerOwner": "",
+        "bio": "Hartwig versieht seinen Dienst in Weisenfluh und hält sich mit Urteilen über den alten Erbstreit zurück. Er lässt sich lieber an seinem eigenen Wort messen als an den Geschichten seines Vaters.",
+        "aliases": [],
+        "archived": false,
+        "createdAt": "2026-10-16T15:33:58.080Z",
+        "updatedAt": "2026-10-16T15:33:58.080Z",
+        "portrait": "./assets/lachende-nixe/portraits/hartwig.png",
+        "emotes": [],
+        "emotesOverride": false,
+        "imageSetSchemaVersion": 0,
+        "imageSets": [],
+        "activeImageSetId": "",
+        "imageSetsOverride": false,
+        "inventory": null,
+        "biography": null,
+        "identity": {
+          "worldPersonId": "person--haus-sonnenfels--hartwig-sonnenfels"
+        },
+        "genealogy": {
+          "worldPersonId": "person--haus-sonnenfels--hartwig-sonnenfels",
+          "sex": "male",
+          "status": "alive",
+          "birth": "1704",
+          "death": "",
+          "houseId": "house-sonnenfels",
+          "houseName": "Haus Sonnenfels",
+          "familyRole": "core",
+          "portraitPlaceholder": "auto",
+          "tags": [],
+          "sources": [
+            {
+              "familyId": "haus-sonnenfels",
+              "personId": "hartwig-sonnenfels",
+              "releaseId": "",
+              "publishedAt": "",
+              "importedAt": "2026-10-16T15:33:58.080Z",
+              "lastSyncedAt": "2026-10-16T15:33:58.080Z",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-sonnenfels&mode=view&person=hartwig-sonnenfels",
+              "fingerprint": "{\"name\":\"Hartwig Sonnenfels\",\"title\":\"Konrads Sohn · Ritter des Seitenzweiges\",\"birth\":\"1704\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-sonnenfels\",\"portrait\":\"../AleriaAlmanach/assets/lachende-nixe/portraits/hartwig.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"konrad-sonnenfels\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sonnenfels--konrad-sonnenfels\",\"name\":\"Konrad Sonnenfels\"},{\"personId\":\"brunhild-sonnenfels\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sonnenfels--brunhild-sonnenfels\",\"name\":\"Brunhild\"}],\"partners\":[],\"children\":[]}}"
+            }
+          ],
+          "relationships": {
+            "parents": [
+              {
+                "personId": "konrad-sonnenfels",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-sonnenfels--konrad-sonnenfels",
+                "name": "Konrad Sonnenfels"
+              },
+              {
+                "personId": "brunhild-sonnenfels",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-sonnenfels--brunhild-sonnenfels",
+                "name": "Brunhild"
+              }
+            ],
+            "partners": [],
+            "children": []
+          }
+        }
+      }
+    },
+    {
+      "id": "person--haus-sonnenfels--dietmar-sonnenfels",
+      "key": "dietmar",
+      "group": "Sonnenfels",
+      "create": true,
+      "data": {
+        "name": "Dietmar Sonnenfels",
+        "title": "Amtierendes Hausoberhaupt · Burg Sonnenfels",
+        "fraktion": "Haus Sonnenfels",
+        "role": "Amtierendes Hausoberhaupt · Burg Sonnenfels",
+        "status": "active",
+        "relevance": "minor",
+        "taxonomyPath": "Weisenfluh > Südliches Weisenfluh > Burg Sonnenfels",
+        "currentLocation": "Weisenfluh · Burg Sonnenfels",
+        "origin": "Weisenfluh",
+        "plotNode": "",
+        "profileLink": "",
+        "playerOwner": "",
+        "bio": "Dietmar führt Burg Sonnenfels seit dem Tod seines Vaters. Er prüft Ernten, Abgaben und Bauarbeiten selbst und lässt die älteren Familienkränkungen selten an seinen Tisch. Sein Onkel in Gwynthor bleibt für ihn Verwandtschaft, auch wenn ihre Häuser weit auseinanderliegen.",
+        "aliases": [],
+        "archived": false,
+        "createdAt": "2026-10-16T15:33:58.080Z",
+        "updatedAt": "2026-10-16T15:33:58.080Z",
+        "portrait": "./assets/lachende-nixe/portraits/dietmar.png",
+        "emotes": [],
+        "emotesOverride": false,
+        "imageSetSchemaVersion": 0,
+        "imageSets": [],
+        "activeImageSetId": "",
+        "imageSetsOverride": false,
+        "inventory": null,
+        "biography": null,
+        "identity": {
+          "worldPersonId": "person--haus-sonnenfels--dietmar-sonnenfels"
+        },
+        "genealogy": {
+          "worldPersonId": "person--haus-sonnenfels--dietmar-sonnenfels",
+          "sex": "male",
+          "status": "alive",
+          "birth": "1707",
+          "death": "",
+          "houseId": "house-sonnenfels",
+          "houseName": "Haus Sonnenfels",
+          "familyRole": "core",
+          "portraitPlaceholder": "auto",
+          "tags": [],
+          "sources": [
+            {
+              "familyId": "haus-sonnenfels",
+              "personId": "dietmar-sonnenfels",
+              "releaseId": "",
+              "publishedAt": "",
+              "importedAt": "2026-10-16T15:33:58.080Z",
+              "lastSyncedAt": "2026-10-16T15:33:58.080Z",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-sonnenfels&mode=view&person=dietmar-sonnenfels",
+              "fingerprint": "{\"name\":\"Dietmar Sonnenfels\",\"title\":\"Amtierendes Hausoberhaupt · Burg Sonnenfels\",\"birth\":\"1707\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-sonnenfels\",\"portrait\":\"../AleriaAlmanach/assets/lachende-nixe/portraits/dietmar.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"erhard-sonnenfels\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sonnenfels--erhard-sonnenfels\",\"name\":\"Erhard Sonnenfels\"},{\"personId\":\"hedwig-sonnenfels\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sonnenfels--hedwig-sonnenfels\",\"name\":\"Hedwig\"}],\"partners\":[{\"personId\":\"ottilie-sonnenfels\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sonnenfels--ottilie-sonnenfels\",\"name\":\"Ottilie\"}],\"children\":[{\"personId\":\"raban-sonnenfels\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sonnenfels--raban-sonnenfels\",\"name\":\"Raban Sonnenfels\"},{\"personId\":\"irmelin-sonnenfels\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sonnenfels--irmelin-sonnenfels\",\"name\":\"Irmelin Sonnenfels\"}]}}"
+            }
+          ],
+          "relationships": {
+            "parents": [
+              {
+                "personId": "erhard-sonnenfels",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-sonnenfels--erhard-sonnenfels",
+                "name": "Erhard Sonnenfels"
+              },
+              {
+                "personId": "hedwig-sonnenfels",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-sonnenfels--hedwig-sonnenfels",
+                "name": "Hedwig"
+              }
+            ],
+            "partners": [
+              {
+                "personId": "ottilie-sonnenfels",
+                "type": "marriage",
+                "status": "active",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-sonnenfels--ottilie-sonnenfels",
+                "name": "Ottilie"
+              }
+            ],
+            "children": [
+              {
+                "personId": "raban-sonnenfels",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-sonnenfels--raban-sonnenfels",
+                "name": "Raban Sonnenfels"
+              },
+              {
+                "personId": "irmelin-sonnenfels",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-sonnenfels--irmelin-sonnenfels",
+                "name": "Irmelin Sonnenfels"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "person--haus-sonnenfels--ottilie-sonnenfels",
+      "key": "ottilie",
+      "group": "Sonnenfels",
+      "create": true,
+      "data": {
+        "name": "Ottilie",
+        "title": "Dietmars Gemahlin",
+        "fraktion": "Haus Sonnenfels",
+        "role": "Dietmars Gemahlin",
+        "status": "active",
+        "relevance": "minor",
+        "taxonomyPath": "Weisenfluh > Südliches Weisenfluh > Burg Sonnenfels",
+        "currentLocation": "Weisenfluh · Burg Sonnenfels",
+        "origin": "Weisenfluh",
+        "plotNode": "",
+        "profileLink": "",
+        "playerOwner": "",
+        "bio": "Ottilie empfängt die Gäste der Burg und kennt die Verwalter der umliegenden Höfe beim Namen. Zwischen Besuch und Rechnung findet sie Zeit für ihre Kinder, deren kleine Geheimnisse ihr selten lange verborgen bleiben.",
+        "aliases": [],
+        "archived": false,
+        "createdAt": "2026-10-16T15:33:58.080Z",
+        "updatedAt": "2026-10-16T15:33:58.080Z",
+        "portrait": "./assets/lachende-nixe/portraits/ottilie.png",
+        "emotes": [],
+        "emotesOverride": false,
+        "imageSetSchemaVersion": 0,
+        "imageSets": [],
+        "activeImageSetId": "",
+        "imageSetsOverride": false,
+        "inventory": null,
+        "biography": null,
+        "identity": {
+          "worldPersonId": "person--haus-sonnenfels--ottilie-sonnenfels"
+        },
+        "genealogy": {
+          "worldPersonId": "person--haus-sonnenfels--ottilie-sonnenfels",
+          "sex": "female",
+          "status": "alive",
+          "birth": "1709",
+          "death": "",
+          "houseId": "",
+          "houseName": "",
+          "familyRole": "married",
+          "portraitPlaceholder": "auto",
+          "tags": [],
+          "sources": [
+            {
+              "familyId": "haus-sonnenfels",
+              "personId": "ottilie-sonnenfels",
+              "releaseId": "",
+              "publishedAt": "",
+              "importedAt": "2026-10-16T15:33:58.080Z",
+              "lastSyncedAt": "2026-10-16T15:33:58.080Z",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-sonnenfels&mode=view&person=ottilie-sonnenfels",
+              "fingerprint": "{\"name\":\"Ottilie\",\"title\":\"Dietmars Gemahlin\",\"birth\":\"1709\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"\",\"portrait\":\"../AleriaAlmanach/assets/lachende-nixe/portraits/ottilie.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"dietmar-sonnenfels\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sonnenfels--dietmar-sonnenfels\",\"name\":\"Dietmar Sonnenfels\"}],\"children\":[{\"personId\":\"raban-sonnenfels\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sonnenfels--raban-sonnenfels\",\"name\":\"Raban Sonnenfels\"},{\"personId\":\"irmelin-sonnenfels\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sonnenfels--irmelin-sonnenfels\",\"name\":\"Irmelin Sonnenfels\"}]}}"
+            }
+          ],
+          "relationships": {
+            "parents": [],
+            "partners": [
+              {
+                "personId": "dietmar-sonnenfels",
+                "type": "marriage",
+                "status": "active",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-sonnenfels--dietmar-sonnenfels",
+                "name": "Dietmar Sonnenfels"
+              }
+            ],
+            "children": [
+              {
+                "personId": "raban-sonnenfels",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-sonnenfels--raban-sonnenfels",
+                "name": "Raban Sonnenfels"
+              },
+              {
+                "personId": "irmelin-sonnenfels",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-sonnenfels--irmelin-sonnenfels",
+                "name": "Irmelin Sonnenfels"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "person--haus-sonnenfels--raban-sonnenfels",
+      "key": "raban",
+      "group": "Sonnenfels",
+      "create": true,
+      "data": {
+        "name": "Raban Sonnenfels",
+        "title": "Dietmars Sohn · Kind auf Burg Sonnenfels",
+        "fraktion": "Haus Sonnenfels",
+        "role": "Dietmars Sohn · Kind auf Burg Sonnenfels",
+        "status": "active",
+        "relevance": "minor",
+        "taxonomyPath": "Weisenfluh > Südliches Weisenfluh > Burg Sonnenfels",
+        "currentLocation": "Weisenfluh · Burg Sonnenfels",
+        "origin": "Weisenfluh",
+        "plotNode": "",
+        "profileLink": "",
+        "playerOwner": "",
+        "bio": "Raban kennt jeden Winkel des Burghofs und möchte schon bei jeder Besichtigung dabei sein. Sein Vater lässt ihn zunächst lernen, aufmerksam zuzuhören.",
+        "aliases": [],
+        "archived": false,
+        "createdAt": "2026-10-16T15:33:58.080Z",
+        "updatedAt": "2026-10-16T15:33:58.080Z",
+        "portrait": "./assets/lachende-nixe/portraits/raban.png",
+        "emotes": [],
+        "emotesOverride": false,
+        "imageSetSchemaVersion": 0,
+        "imageSets": [],
+        "activeImageSetId": "",
+        "imageSetsOverride": false,
+        "inventory": null,
+        "biography": null,
+        "identity": {
+          "worldPersonId": "person--haus-sonnenfels--raban-sonnenfels"
+        },
+        "genealogy": {
+          "worldPersonId": "person--haus-sonnenfels--raban-sonnenfels",
+          "sex": "male",
+          "status": "alive",
+          "birth": "1730",
+          "death": "",
+          "houseId": "house-sonnenfels",
+          "houseName": "Haus Sonnenfels",
+          "familyRole": "core",
+          "portraitPlaceholder": "auto",
+          "tags": [],
+          "sources": [
+            {
+              "familyId": "haus-sonnenfels",
+              "personId": "raban-sonnenfels",
+              "releaseId": "",
+              "publishedAt": "",
+              "importedAt": "2026-10-16T15:33:58.080Z",
+              "lastSyncedAt": "2026-10-16T15:33:58.080Z",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-sonnenfels&mode=view&person=raban-sonnenfels",
+              "fingerprint": "{\"name\":\"Raban Sonnenfels\",\"title\":\"Dietmars Sohn · Kind auf Burg Sonnenfels\",\"birth\":\"1730\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-sonnenfels\",\"portrait\":\"../AleriaAlmanach/assets/lachende-nixe/portraits/raban.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"dietmar-sonnenfels\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sonnenfels--dietmar-sonnenfels\",\"name\":\"Dietmar Sonnenfels\"},{\"personId\":\"ottilie-sonnenfels\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sonnenfels--ottilie-sonnenfels\",\"name\":\"Ottilie\"}],\"partners\":[],\"children\":[]}}"
+            }
+          ],
+          "relationships": {
+            "parents": [
+              {
+                "personId": "dietmar-sonnenfels",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-sonnenfels--dietmar-sonnenfels",
+                "name": "Dietmar Sonnenfels"
+              },
+              {
+                "personId": "ottilie-sonnenfels",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-sonnenfels--ottilie-sonnenfels",
+                "name": "Ottilie"
+              }
+            ],
+            "partners": [],
+            "children": []
+          }
+        }
+      }
+    },
+    {
+      "id": "person--haus-sonnenfels--irmelin-sonnenfels",
+      "key": "irmelin",
+      "group": "Sonnenfels",
+      "create": true,
+      "data": {
+        "name": "Irmelin Sonnenfels",
+        "title": "Dietmars Tochter · Kind auf Burg Sonnenfels",
+        "fraktion": "Haus Sonnenfels",
+        "role": "Dietmars Tochter · Kind auf Burg Sonnenfels",
+        "status": "active",
+        "relevance": "minor",
+        "taxonomyPath": "Weisenfluh > Südliches Weisenfluh > Burg Sonnenfels",
+        "currentLocation": "Weisenfluh · Burg Sonnenfels",
+        "origin": "Weisenfluh",
+        "plotNode": "",
+        "profileLink": "",
+        "playerOwner": "",
+        "bio": "Irmelin sammelt bunte Blätter für Ottilie und besteht darauf, jedes Pferd der Burg begrüßen zu dürfen. Ihr Bruder darf ihr dabei helfen, wenn er höflich fragt.",
+        "aliases": [],
+        "archived": false,
+        "createdAt": "2026-10-16T15:33:58.080Z",
+        "updatedAt": "2026-10-16T15:33:58.080Z",
+        "portrait": "./assets/lachende-nixe/portraits/irmelin.png",
+        "emotes": [],
+        "emotesOverride": false,
+        "imageSetSchemaVersion": 0,
+        "imageSets": [],
+        "activeImageSetId": "",
+        "imageSetsOverride": false,
+        "inventory": null,
+        "biography": null,
+        "identity": {
+          "worldPersonId": "person--haus-sonnenfels--irmelin-sonnenfels"
+        },
+        "genealogy": {
+          "worldPersonId": "person--haus-sonnenfels--irmelin-sonnenfels",
+          "sex": "female",
+          "status": "alive",
+          "birth": "1735",
+          "death": "",
+          "houseId": "house-sonnenfels",
+          "houseName": "Haus Sonnenfels",
+          "familyRole": "core",
+          "portraitPlaceholder": "auto",
+          "tags": [],
+          "sources": [
+            {
+              "familyId": "haus-sonnenfels",
+              "personId": "irmelin-sonnenfels",
+              "releaseId": "",
+              "publishedAt": "",
+              "importedAt": "2026-10-16T15:33:58.080Z",
+              "lastSyncedAt": "2026-10-16T15:33:58.080Z",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-sonnenfels&mode=view&person=irmelin-sonnenfels",
+              "fingerprint": "{\"name\":\"Irmelin Sonnenfels\",\"title\":\"Dietmars Tochter · Kind auf Burg Sonnenfels\",\"birth\":\"1735\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-sonnenfels\",\"portrait\":\"../AleriaAlmanach/assets/lachende-nixe/portraits/irmelin.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"dietmar-sonnenfels\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sonnenfels--dietmar-sonnenfels\",\"name\":\"Dietmar Sonnenfels\"},{\"personId\":\"ottilie-sonnenfels\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sonnenfels--ottilie-sonnenfels\",\"name\":\"Ottilie\"}],\"partners\":[],\"children\":[]}}"
+            }
+          ],
+          "relationships": {
+            "parents": [
+              {
+                "personId": "dietmar-sonnenfels",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-sonnenfels--dietmar-sonnenfels",
+                "name": "Dietmar Sonnenfels"
+              },
+              {
+                "personId": "ottilie-sonnenfels",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-sonnenfels--ottilie-sonnenfels",
+                "name": "Ottilie"
+              }
+            ],
+            "partners": [],
+            "children": []
+          }
+        }
+      }
+    },
+    {
+      "id": "person--haus-sonnenfels--simon-sonnenfels",
+      "key": "simon",
+      "group": "Sonnenfels",
+      "create": true,
+      "data": {
+        "name": "Simon Sonnenfels",
+        "title": "Hauswächter · Sicherheit",
+        "fraktion": "Die Lachende Nixe",
+        "role": "Hauswächter · Sicherheit",
+        "status": "active",
+        "relevance": "minor",
+        "taxonomyPath": "Weisenfluh > Südliches Weisenfluh > Burg Sonnenfels",
+        "currentLocation": "Gwynthor · Die Lachende Nixe",
+        "origin": "Weisenfluh",
+        "plotNode": "",
+        "profileLink": "",
+        "playerOwner": "",
+        "bio": "Simon hält die Schwelle der Nixe ruhig. Er kennt die Stammgäste und die Männer, die zu viel Mut aus einem Becher ziehen. Ein kurzer Blick genügt ihm meist, bevor eine laute Szene überhaupt entsteht.",
+        "aliases": [],
+        "archived": false,
+        "createdAt": "2026-10-16T15:33:58.080Z",
+        "updatedAt": "2026-10-16T15:33:58.080Z",
+        "portrait": "./assets/lachende-nixe/references/simon.png",
+        "emotes": [],
+        "emotesOverride": false,
+        "imageSetSchemaVersion": 0,
+        "imageSets": [],
+        "activeImageSetId": "",
+        "imageSetsOverride": false,
+        "inventory": null,
+        "biography": null,
+        "identity": {
+          "worldPersonId": "person--haus-sonnenfels--simon-sonnenfels"
+        },
+        "genealogy": {
+          "worldPersonId": "person--haus-sonnenfels--simon-sonnenfels",
+          "sex": "male",
+          "status": "alive",
+          "birth": "1710",
+          "death": "",
+          "houseId": "house-sonnenfels",
+          "houseName": "Haus Sonnenfels",
+          "familyRole": "core",
+          "portraitPlaceholder": "auto",
+          "tags": [],
+          "sources": [
+            {
+              "familyId": "haus-sonnenfels",
+              "personId": "simon-sonnenfels",
+              "releaseId": "",
+              "publishedAt": "",
+              "importedAt": "2026-10-16T15:33:58.080Z",
+              "lastSyncedAt": "2026-10-16T15:33:58.080Z",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-sonnenfels&mode=view&person=simon-sonnenfels",
+              "fingerprint": "{\"name\":\"Simon Sonnenfels\",\"title\":\"Hauswächter · Sicherheit\",\"birth\":\"1710\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-sonnenfels\",\"portrait\":\"../AleriaAlmanach/assets/lachende-nixe/references/simon.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"albrecht-sonnenfels\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sonnenfels--albrecht-sonnenfels\",\"name\":\"Albrecht Sonnenfels\"},{\"personId\":\"johanna-falkenhayn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-falkenhayn--johanna-falkenhayn\",\"name\":\"Johanna Falkenhayn\"}],\"partners\":[],\"children\":[]}}"
+            }
+          ],
+          "relationships": {
+            "parents": [
+              {
+                "personId": "albrecht-sonnenfels",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-sonnenfels--albrecht-sonnenfels",
+                "name": "Albrecht Sonnenfels"
+              },
+              {
+                "personId": "johanna-falkenhayn",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-falkenhayn--johanna-falkenhayn",
+                "name": "Johanna Falkenhayn"
+              }
+            ],
+            "partners": [],
+            "children": []
+          }
+        }
+      }
+    },
+    {
+      "id": "person--haus-sonnenfels--david-sonnenfels",
+      "key": "david",
+      "group": "Sonnenfels",
+      "create": true,
+      "data": {
+        "name": "David Sonnenfels",
+        "title": "Hausmeier · Finanzen & Vorräte",
+        "fraktion": "Die Lachende Nixe",
+        "role": "Hausmeier · Finanzen & Vorräte",
+        "status": "active",
+        "relevance": "minor",
+        "taxonomyPath": "Weisenfluh > Südliches Weisenfluh > Burg Sonnenfels",
+        "currentLocation": "Gwynthor · Die Lachende Nixe",
+        "origin": "Weisenfluh",
+        "plotNode": "",
+        "profileLink": "",
+        "playerOwner": "",
+        "bio": "David führt die Bücher, zahlt die Löhne und lässt sich jede teure Lieferung zeigen. Sein höfliches Lächeln wird schmaler, sobald eine Rechnung die vereinbarte Menge verschweigt.",
+        "aliases": [],
+        "archived": false,
+        "createdAt": "2026-10-16T15:33:58.080Z",
+        "updatedAt": "2026-10-16T15:33:58.080Z",
+        "portrait": "./assets/lachende-nixe/references/david.png",
+        "emotes": [],
+        "emotesOverride": false,
+        "imageSetSchemaVersion": 0,
+        "imageSets": [],
+        "activeImageSetId": "",
+        "imageSetsOverride": false,
+        "inventory": null,
+        "biography": null,
+        "identity": {
+          "worldPersonId": "person--haus-sonnenfels--david-sonnenfels"
+        },
+        "genealogy": {
+          "worldPersonId": "person--haus-sonnenfels--david-sonnenfels",
+          "sex": "male",
+          "status": "alive",
+          "birth": "1713",
+          "death": "",
+          "houseId": "house-sonnenfels",
+          "houseName": "Haus Sonnenfels",
+          "familyRole": "core",
+          "portraitPlaceholder": "auto",
+          "tags": [],
+          "sources": [
+            {
+              "familyId": "haus-sonnenfels",
+              "personId": "david-sonnenfels",
+              "releaseId": "",
+              "publishedAt": "",
+              "importedAt": "2026-10-16T15:33:58.080Z",
+              "lastSyncedAt": "2026-10-16T15:33:58.080Z",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-sonnenfels&mode=view&person=david-sonnenfels",
+              "fingerprint": "{\"name\":\"David Sonnenfels\",\"title\":\"Hausmeier · Finanzen & Vorräte\",\"birth\":\"1713\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-sonnenfels\",\"portrait\":\"../AleriaAlmanach/assets/lachende-nixe/references/david.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"albrecht-sonnenfels\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sonnenfels--albrecht-sonnenfels\",\"name\":\"Albrecht Sonnenfels\"},{\"personId\":\"johanna-falkenhayn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-falkenhayn--johanna-falkenhayn\",\"name\":\"Johanna Falkenhayn\"}],\"partners\":[],\"children\":[]}}"
+            }
+          ],
+          "relationships": {
+            "parents": [
+              {
+                "personId": "albrecht-sonnenfels",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-sonnenfels--albrecht-sonnenfels",
+                "name": "Albrecht Sonnenfels"
+              },
+              {
+                "personId": "johanna-falkenhayn",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-falkenhayn--johanna-falkenhayn",
+                "name": "Johanna Falkenhayn"
+              }
+            ],
+            "partners": [],
+            "children": []
+          }
+        }
+      }
+    },
+    {
+      "id": "person--haus-sonnenfels--rosalinde-sonnenfels",
+      "key": "rosalinde",
+      "group": "Sonnenfels",
+      "create": true,
+      "data": {
+        "name": "Rosalinde Sonnenfels",
+        "title": "Korrespondenz & besondere Empfangstermine",
+        "fraktion": "Die Lachende Nixe",
+        "role": "Korrespondenz & besondere Empfangstermine",
+        "status": "active",
+        "relevance": "minor",
+        "taxonomyPath": "Weisenfluh > Südliches Weisenfluh > Burg Sonnenfels",
+        "currentLocation": "Gwynthor · Die Lachende Nixe",
+        "origin": "Weisenfluh",
+        "plotNode": "",
+        "profileLink": "",
+        "playerOwner": "",
+        "bio": "Rosalinde hilft Johanna bei Briefen, Einladungen und besonderen Empfangsterminen. Ihre auffallende Schönheit macht sie rasch zum Gespräch; sie selbst möchte lieber daran erkannt werden, ob eine Zusage am nächsten Tag noch gilt.",
+        "aliases": [],
+        "archived": false,
+        "createdAt": "2026-10-16T15:33:58.080Z",
+        "updatedAt": "2026-10-16T15:33:58.080Z",
+        "portrait": "./assets/lachende-nixe/portraits/rosalinde.png",
+        "emotes": [],
+        "emotesOverride": false,
+        "imageSetSchemaVersion": 0,
+        "imageSets": [],
+        "activeImageSetId": "",
+        "imageSetsOverride": false,
+        "inventory": null,
+        "biography": null,
+        "identity": {
+          "worldPersonId": "person--haus-sonnenfels--rosalinde-sonnenfels"
+        },
+        "genealogy": {
+          "worldPersonId": "person--haus-sonnenfels--rosalinde-sonnenfels",
+          "sex": "female",
+          "status": "alive",
+          "birth": "1721",
+          "death": "",
+          "houseId": "house-sonnenfels",
+          "houseName": "Haus Sonnenfels",
+          "familyRole": "core",
+          "portraitPlaceholder": "auto",
+          "tags": [],
+          "sources": [
+            {
+              "familyId": "haus-sonnenfels",
+              "personId": "rosalinde-sonnenfels",
+              "releaseId": "",
+              "publishedAt": "",
+              "importedAt": "2026-10-16T15:33:58.080Z",
+              "lastSyncedAt": "2026-10-16T15:33:58.080Z",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-sonnenfels&mode=view&person=rosalinde-sonnenfels",
+              "fingerprint": "{\"name\":\"Rosalinde Sonnenfels\",\"title\":\"Korrespondenz & besondere Empfangstermine\",\"birth\":\"1721\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-sonnenfels\",\"portrait\":\"../AleriaAlmanach/assets/lachende-nixe/portraits/rosalinde.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"albrecht-sonnenfels\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sonnenfels--albrecht-sonnenfels\",\"name\":\"Albrecht Sonnenfels\"},{\"personId\":\"johanna-falkenhayn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-falkenhayn--johanna-falkenhayn\",\"name\":\"Johanna Falkenhayn\"}],\"partners\":[],\"children\":[]}}"
+            }
+          ],
+          "relationships": {
+            "parents": [
+              {
+                "personId": "albrecht-sonnenfels",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-sonnenfels--albrecht-sonnenfels",
+                "name": "Albrecht Sonnenfels"
+              },
+              {
+                "personId": "johanna-falkenhayn",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-falkenhayn--johanna-falkenhayn",
+                "name": "Johanna Falkenhayn"
+              }
+            ],
+            "partners": [],
+            "children": []
+          }
+        }
+      }
+    },
+    {
+      "id": "person--haus-sonnenfels--kaspar-sonnenfels",
+      "key": "kaspar",
+      "group": "Sonnenfels",
+      "create": true,
+      "data": {
+        "name": "Kaspar Sonnenfels",
+        "title": "Besorgungen & Lieferwege",
+        "fraktion": "Die Lachende Nixe",
+        "role": "Besorgungen & Lieferwege",
+        "status": "active",
+        "relevance": "minor",
+        "taxonomyPath": "Weisenfluh > Südliches Weisenfluh > Burg Sonnenfels",
+        "currentLocation": "Gwynthor · Die Lachende Nixe",
+        "origin": "Weisenfluh",
+        "plotNode": "",
+        "profileLink": "",
+        "playerOwner": "",
+        "bio": "Kaspar kennt die Wege zwischen Kai, Markt und Hintertür. Albrecht hat ihn als seinen Sohn anerkannt und holt ihn ins Haus, wenn eine Besorgung zuverlässige Hände verlangt. Über seine Mutter wird nicht gesprochen.",
+        "aliases": [],
+        "archived": false,
+        "createdAt": "2026-10-16T15:33:58.080Z",
+        "updatedAt": "2026-10-16T15:33:58.080Z",
+        "portrait": "./assets/lachende-nixe/portraits/kaspar.png",
+        "emotes": [],
+        "emotesOverride": false,
+        "imageSetSchemaVersion": 0,
+        "imageSets": [],
+        "activeImageSetId": "",
+        "imageSetsOverride": false,
+        "inventory": null,
+        "biography": null,
+        "identity": {
+          "worldPersonId": "person--haus-sonnenfels--kaspar-sonnenfels"
+        },
+        "genealogy": {
+          "worldPersonId": "person--haus-sonnenfels--kaspar-sonnenfels",
+          "sex": "male",
+          "status": "alive",
+          "birth": "1715",
+          "death": "",
+          "houseId": "house-sonnenfels",
+          "houseName": "Haus Sonnenfels",
+          "familyRole": "bastard",
+          "portraitPlaceholder": "auto",
+          "tags": [],
+          "sources": [
+            {
+              "familyId": "haus-sonnenfels",
+              "personId": "kaspar-sonnenfels",
+              "releaseId": "",
+              "publishedAt": "",
+              "importedAt": "2026-10-16T15:33:58.080Z",
+              "lastSyncedAt": "2026-10-16T15:33:58.080Z",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-sonnenfels&mode=view&person=kaspar-sonnenfels",
+              "fingerprint": "{\"name\":\"Kaspar Sonnenfels\",\"title\":\"Besorgungen & Lieferwege\",\"birth\":\"1715\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-sonnenfels\",\"portrait\":\"../AleriaAlmanach/assets/lachende-nixe/portraits/kaspar.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"albrecht-sonnenfels\",\"type\":\"biological\",\"legitimacy\":\"illegitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sonnenfels--albrecht-sonnenfels\",\"name\":\"Albrecht Sonnenfels\"},{\"personId\":\"unbekannte-mutter-kaspar-sonnenfels\",\"type\":\"biological\",\"legitimacy\":\"illegitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--unbekannte-mutter-kaspar-sonnenfels\",\"name\":\"Unbekannte Mutter\"}],\"partners\":[],\"children\":[]}}"
+            }
+          ],
+          "relationships": {
+            "parents": [
+              {
+                "personId": "albrecht-sonnenfels",
+                "type": "biological",
+                "legitimacy": "illegitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-sonnenfels--albrecht-sonnenfels",
+                "name": "Albrecht Sonnenfels"
+              },
+              {
+                "personId": "unbekannte-mutter-kaspar-sonnenfels",
+                "type": "biological",
+                "legitimacy": "illegitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--family-tree--unbekannte-mutter-kaspar-sonnenfels",
+                "name": "Unbekannte Mutter"
+              }
+            ],
+            "partners": [],
+            "children": []
+          }
+        }
+      }
+    },
+    {
+      "id": "person--lachende-nixe--eirona",
+      "key": "eirona",
+      "group": "Gesellschaft & Musik",
+      "create": true,
+      "data": {
+        "name": "Eirona",
+        "title": "Kurtisane",
+        "fraktion": "Die Lachende Nixe",
+        "role": "Kurtisane",
+        "status": "active",
+        "relevance": "minor",
+        "taxonomyPath": "",
+        "currentLocation": "Gwynthor · Die Lachende Nixe",
+        "origin": "",
+        "plotNode": "",
+        "profileLink": "",
+        "playerOwner": "",
+        "bio": "Eirona empfängt neue Gesichter mit offenem Lächeln und findet rasch ein Gespräch, in dem auch ein schweigsamer Gast seinen Platz hat.",
+        "aliases": [],
+        "archived": false,
+        "createdAt": "2026-10-16T15:33:58.080Z",
+        "updatedAt": "2026-10-16T15:33:58.080Z",
+        "portrait": "./assets/lachende-nixe/references/kurtisane-1.png",
+        "emotes": [],
+        "emotesOverride": false,
+        "imageSetSchemaVersion": 0,
+        "imageSets": [],
+        "activeImageSetId": "",
+        "imageSetsOverride": false,
+        "inventory": null,
+        "biography": null,
+        "identity": {
+          "worldPersonId": "person--lachende-nixe--eirona"
+        },
+        "genealogy": {
+          "worldPersonId": "person--lachende-nixe--eirona",
+          "sex": "female",
+          "status": "alive",
+          "birth": "1713",
+          "death": "",
+          "houseId": "",
+          "houseName": "",
+          "familyRole": "",
+          "portraitPlaceholder": "",
+          "tags": [],
+          "sources": [],
+          "relationships": {
+            "parents": [],
+            "partners": [],
+            "children": []
+          }
+        }
+      }
+    },
+    {
+      "id": "person--lachende-nixe--rhosiel",
+      "key": "rhosiel",
+      "group": "Gesellschaft & Musik",
+      "create": true,
+      "data": {
+        "name": "Rhosiel",
+        "title": "Kurtisane",
+        "fraktion": "Die Lachende Nixe",
+        "role": "Kurtisane",
+        "status": "active",
+        "relevance": "minor",
+        "taxonomyPath": "",
+        "currentLocation": "Gwynthor · Die Lachende Nixe",
+        "origin": "",
+        "plotNode": "",
+        "profileLink": "",
+        "playerOwner": "",
+        "bio": "Rhosiel kennt die höflichen Spiele des Salons. Sie hört aufmerksam zu und vergisst selten, welchen Wein ein Gast beim letzten Besuch bevorzugte.",
+        "aliases": [],
+        "archived": false,
+        "createdAt": "2026-10-16T15:33:58.080Z",
+        "updatedAt": "2026-10-16T15:33:58.080Z",
+        "portrait": "./assets/lachende-nixe/references/kurtisane-2.png",
+        "emotes": [],
+        "emotesOverride": false,
+        "imageSetSchemaVersion": 0,
+        "imageSets": [],
+        "activeImageSetId": "",
+        "imageSetsOverride": false,
+        "inventory": null,
+        "biography": null,
+        "identity": {
+          "worldPersonId": "person--lachende-nixe--rhosiel"
+        },
+        "genealogy": {
+          "worldPersonId": "person--lachende-nixe--rhosiel",
+          "sex": "female",
+          "status": "alive",
+          "birth": "1711",
+          "death": "",
+          "houseId": "",
+          "houseName": "",
+          "familyRole": "",
+          "portraitPlaceholder": "",
+          "tags": [],
+          "sources": [],
+          "relationships": {
+            "parents": [],
+            "partners": [],
+            "children": []
+          }
+        }
+      }
+    },
+    {
+      "id": "person--lachende-nixe--lliwen",
+      "key": "lliwen",
+      "group": "Gesellschaft & Musik",
+      "create": true,
+      "data": {
+        "name": "Lliwen",
+        "title": "Kurtisane",
+        "fraktion": "Die Lachende Nixe",
+        "role": "Kurtisane",
+        "status": "active",
+        "relevance": "minor",
+        "taxonomyPath": "",
+        "currentLocation": "Gwynthor · Die Lachende Nixe",
+        "origin": "",
+        "plotNode": "",
+        "profileLink": "",
+        "playerOwner": "",
+        "bio": "Lliwen bringt Wärme in einen steifen Abend. Ihr Lachen trägt weiter als ihre Stimme, und sie bemerkt schnell, wann ein Gast lieber in Ruhe gelassen werden möchte.",
+        "aliases": [],
+        "archived": false,
+        "createdAt": "2026-10-16T15:33:58.080Z",
+        "updatedAt": "2026-10-16T15:33:58.080Z",
+        "portrait": "./assets/lachende-nixe/references/kurtisane-3.png",
+        "emotes": [],
+        "emotesOverride": false,
+        "imageSetSchemaVersion": 0,
+        "imageSets": [],
+        "activeImageSetId": "",
+        "imageSetsOverride": false,
+        "inventory": null,
+        "biography": null,
+        "identity": {
+          "worldPersonId": "person--lachende-nixe--lliwen"
+        },
+        "genealogy": {
+          "worldPersonId": "person--lachende-nixe--lliwen",
+          "sex": "female",
+          "status": "alive",
+          "birth": "1716",
+          "death": "",
+          "houseId": "",
+          "houseName": "",
+          "familyRole": "",
+          "portraitPlaceholder": "",
+          "tags": [],
+          "sources": [],
+          "relationships": {
+            "parents": [],
+            "partners": [],
+            "children": []
+          }
+        }
+      }
+    },
+    {
+      "id": "person--lachende-nixe--severina",
+      "key": "severina",
+      "group": "Gesellschaft & Musik",
+      "create": true,
+      "data": {
+        "name": "Severina",
+        "title": "Kurtisane",
+        "fraktion": "Die Lachende Nixe",
+        "role": "Kurtisane",
+        "status": "active",
+        "relevance": "minor",
+        "taxonomyPath": "",
+        "currentLocation": "Gwynthor · Die Lachende Nixe",
+        "origin": "",
+        "plotNode": "",
+        "profileLink": "",
+        "playerOwner": "",
+        "bio": "Severina schätzt leise Gespräche und einen sorgfältig gedeckten Tisch. Sie versteht es, einem Abend Form zu geben, ohne selbst laut werden zu müssen.",
+        "aliases": [],
+        "archived": false,
+        "createdAt": "2026-10-16T15:33:58.080Z",
+        "updatedAt": "2026-10-16T15:33:58.080Z",
+        "portrait": "./assets/lachende-nixe/references/kurtisane-4.png",
+        "emotes": [],
+        "emotesOverride": false,
+        "imageSetSchemaVersion": 0,
+        "imageSets": [],
+        "activeImageSetId": "",
+        "imageSetsOverride": false,
+        "inventory": null,
+        "biography": null,
+        "identity": {
+          "worldPersonId": "person--lachende-nixe--severina"
+        },
+        "genealogy": {
+          "worldPersonId": "person--lachende-nixe--severina",
+          "sex": "female",
+          "status": "alive",
+          "birth": "1708",
+          "death": "",
+          "houseId": "",
+          "houseName": "",
+          "familyRole": "",
+          "portraitPlaceholder": "",
+          "tags": [],
+          "sources": [],
+          "relationships": {
+            "parents": [],
+            "partners": [],
+            "children": []
+          }
+        }
+      }
+    },
+    {
+      "id": "person--lachende-nixe--adeltrud",
+      "key": "adeltrud",
+      "group": "Gesellschaft & Musik",
+      "create": true,
+      "data": {
+        "name": "Adeltrud",
+        "title": "Musikantin",
+        "fraktion": "Die Lachende Nixe",
+        "role": "Musikantin",
+        "status": "active",
+        "relevance": "minor",
+        "taxonomyPath": "",
+        "currentLocation": "Gwynthor · Die Lachende Nixe",
+        "origin": "Weisenfluh",
+        "plotNode": "",
+        "profileLink": "",
+        "playerOwner": "",
+        "bio": "Adeltrud begleitet Gespräche mit ruhigen Weisen und kennt die alten Lieder ihrer Weisenfluher Heimat. Ein Blick zu Johanna genügt, bevor sie die Lautstärke des Salons verändert.",
+        "aliases": [],
+        "archived": false,
+        "createdAt": "2026-10-16T15:33:58.080Z",
+        "updatedAt": "2026-10-16T15:33:58.080Z",
+        "portrait": "./assets/lachende-nixe/references/musikantin-1.png",
+        "emotes": [],
+        "emotesOverride": false,
+        "imageSetSchemaVersion": 0,
+        "imageSets": [],
+        "activeImageSetId": "",
+        "imageSetsOverride": false,
+        "inventory": null,
+        "biography": null,
+        "identity": {
+          "worldPersonId": "person--lachende-nixe--adeltrud"
+        },
+        "genealogy": {
+          "worldPersonId": "person--lachende-nixe--adeltrud",
+          "sex": "female",
+          "status": "alive",
+          "birth": "1712",
+          "death": "",
+          "houseId": "",
+          "houseName": "",
+          "familyRole": "",
+          "portraitPlaceholder": "",
+          "tags": [],
+          "sources": [],
+          "relationships": {
+            "parents": [],
+            "partners": [],
+            "children": []
+          }
+        }
+      }
+    },
+    {
+      "id": "person--lachende-nixe--thjodhild",
+      "key": "thjodhild",
+      "group": "Gesellschaft & Musik",
+      "create": true,
+      "data": {
+        "name": "Thjodhild",
+        "title": "Musikantin",
+        "fraktion": "Die Lachende Nixe",
+        "role": "Musikantin",
+        "status": "active",
+        "relevance": "minor",
+        "taxonomyPath": "",
+        "currentLocation": "Gwynthor · Die Lachende Nixe",
+        "origin": "Aldrimar",
+        "plotNode": "",
+        "profileLink": "",
+        "playerOwner": "",
+        "bio": "Thjodhild bringt nordische Melodien aus Aldrimar ins Haus. Sie singt klar und zurückhaltend und hebt sich die lebhafteren Stücke für den späteren Abend auf.",
+        "aliases": [],
+        "archived": false,
+        "createdAt": "2026-10-16T15:33:58.080Z",
+        "updatedAt": "2026-10-16T15:33:58.080Z",
+        "portrait": "./assets/lachende-nixe/references/musikantin-2.png",
+        "emotes": [],
+        "emotesOverride": false,
+        "imageSetSchemaVersion": 0,
+        "imageSets": [],
+        "activeImageSetId": "",
+        "imageSetsOverride": false,
+        "inventory": null,
+        "biography": null,
+        "identity": {
+          "worldPersonId": "person--lachende-nixe--thjodhild"
+        },
+        "genealogy": {
+          "worldPersonId": "person--lachende-nixe--thjodhild",
+          "sex": "female",
+          "status": "alive",
+          "birth": "1714",
+          "death": "",
+          "houseId": "",
+          "houseName": "",
+          "familyRole": "",
+          "portraitPlaceholder": "",
+          "tags": [],
+          "sources": [],
+          "relationships": {
+            "parents": [],
+            "partners": [],
+            "children": []
+          }
+        }
+      }
+    },
+    {
+      "id": "person--lachende-nixe--lorcan",
+      "key": "lorcan",
+      "group": "Hausleitung",
+      "create": true,
+      "data": {
+        "name": "Lorcan Scáthaire",
+        "title": "Engster Vertrauter · rechte Hand",
+        "fraktion": "Die Lachende Nixe",
+        "role": "Engster Vertrauter · rechte Hand",
+        "status": "active",
+        "relevance": "minor",
+        "taxonomyPath": "",
+        "currentLocation": "Gwynthor · Die Lachende Nixe",
+        "origin": "",
+        "plotNode": "",
+        "profileLink": "",
+        "playerOwner": "",
+        "bio": "Lorcan spricht selten vor allen. Er hält Albrecht den Rücken frei, trägt vertrauliche Nachrichten und kennt die Gespräche, die besser im Hinterzimmer bleiben.",
+        "aliases": [],
+        "archived": false,
+        "createdAt": "2026-10-16T15:33:58.080Z",
+        "updatedAt": "2026-10-16T15:33:58.080Z",
+        "portrait": "./assets/lachende-nixe/references/lorcan.png",
+        "emotes": [],
+        "emotesOverride": false,
+        "imageSetSchemaVersion": 0,
+        "imageSets": [],
+        "activeImageSetId": "",
+        "imageSetsOverride": false,
+        "inventory": null,
+        "biography": null,
+        "identity": {
+          "worldPersonId": "person--lachende-nixe--lorcan"
+        },
+        "genealogy": {
+          "worldPersonId": "person--lachende-nixe--lorcan",
+          "sex": "male",
+          "status": "alive",
+          "birth": "",
+          "death": "",
+          "houseId": "",
+          "houseName": "",
+          "familyRole": "",
+          "portraitPlaceholder": "",
+          "tags": [],
+          "sources": [],
+          "relationships": {
+            "parents": [],
+            "partners": [],
+            "children": []
+          }
+        }
+      }
+    }
+  ]
+}

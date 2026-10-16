@@ -23,7 +23,8 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "blaithneach",
       "leitheach",
       "dunfal",
-      "aislearneach"
+      "aislearneach",
+      "kaiserreich-argentum"
     ],
     "houseIds": [
       "haus-madryn",
@@ -53,6 +54,10 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "haus-awenydd",
       "haus-awenor",
       "haus-loer",
+      "haus-trevoryn",
+      "haus-svathamar",
+      "haus-dubhdarach",
+      "haus-raves",
       "haus-draenmelyn",
       "haus-pendrwn",
       "haus-swyll",
@@ -424,6 +429,7 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "haus-mac-corcaigh",
       "haus-von-hochreuth",
       "haus-weinlaub",
+      "haus-sonnenfels",
       "haus-falveri",
       "haus-karreg",
       "haus-frye",
@@ -543,7 +549,8 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "haus-ui-faill-duibhne",
       "haus-uilebheist",
       "haus-cnogan",
-      "sept-techtmar"
+      "sept-techtmar",
+      "haus-veltrane"
     ]
   },
   {
@@ -595,6 +602,10 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "haus-awenydd",
       "haus-awenor",
       "haus-loer",
+      "haus-trevoryn",
+      "haus-svathamar",
+      "haus-dubhdarach",
+      "haus-raves",
       "haus-draenmelyn",
       "haus-pendrwn",
       "haus-swyll",
@@ -862,6 +873,10 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "haus-awenydd",
       "haus-awenor",
       "haus-loer",
+      "haus-trevoryn",
+      "haus-svathamar",
+      "haus-dubhdarach",
+      "haus-raves",
       "haus-draenmelyn",
       "haus-pendrwn",
       "haus-swyll",
@@ -999,6 +1014,10 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "haus-awenydd",
       "haus-awenor",
       "haus-loer",
+      "haus-trevoryn",
+      "haus-svathamar",
+      "haus-dubhdarach",
+      "haus-raves",
       "haus-draenmelyn",
       "haus-pendrwn",
       "haus-swyll",
@@ -1051,6 +1070,10 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "haus-awenydd",
       "haus-awenor",
       "haus-loer",
+      "haus-trevoryn",
+      "haus-svathamar",
+      "haus-dubhdarach",
+      "haus-raves",
       "haus-draenmelyn",
       "haus-pendrwn",
       "haus-swyll",
@@ -6629,10 +6652,12 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     "countryId": "weisenfluh",
     "regionId": "",
     "children": [
-      "weisenfluh/region-ewigensee"
+      "weisenfluh/region-ewigensee",
+      "weisenfluh/sudliches-weisenfluh"
     ],
     "houseIds": [
-      "haus-weinlaub"
+      "haus-weinlaub",
+      "haus-sonnenfels"
     ]
   },
   {
@@ -6668,6 +6693,41 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     "children": [],
     "houseIds": [
       "haus-weinlaub"
+    ]
+  },
+  {
+    "id": "weisenfluh/sudliches-weisenfluh",
+    "parentId": "weisenfluh",
+    "name": "Südliches Weisenfluh",
+    "path": [
+      "Weisenfluh",
+      "Südliches Weisenfluh"
+    ],
+    "image": "",
+    "countryId": "weisenfluh",
+    "regionId": "sudliches-weisenfluh",
+    "children": [
+      "weisenfluh/sudliches-weisenfluh/burg-sonnenfels"
+    ],
+    "houseIds": [
+      "haus-sonnenfels"
+    ]
+  },
+  {
+    "id": "weisenfluh/sudliches-weisenfluh/burg-sonnenfels",
+    "parentId": "weisenfluh/sudliches-weisenfluh",
+    "name": "Burg Sonnenfels",
+    "path": [
+      "Weisenfluh",
+      "Südliches Weisenfluh",
+      "Burg Sonnenfels"
+    ],
+    "image": "",
+    "countryId": "weisenfluh",
+    "regionId": "sudliches-weisenfluh",
+    "children": [],
+    "houseIds": [
+      "haus-sonnenfels"
     ]
   },
   {
@@ -9509,6 +9569,39 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "haus-cnogan",
       "sept-techtmar"
     ]
+  },
+  {
+    "id": "kaiserreich-argentum",
+    "parentId": "",
+    "name": "Kaiserreich Argentum",
+    "path": [
+      "Kaiserreich Argentum"
+    ],
+    "image": "",
+    "countryId": "kaiserreich-argentum",
+    "regionId": "",
+    "children": [
+      "kaiserreich-argentum/unsortiert"
+    ],
+    "houseIds": [
+      "haus-veltrane"
+    ]
+  },
+  {
+    "id": "kaiserreich-argentum/unsortiert",
+    "parentId": "kaiserreich-argentum",
+    "name": "Unsortiert",
+    "path": [
+      "Kaiserreich Argentum",
+      "Unsortiert"
+    ],
+    "image": "",
+    "countryId": "kaiserreich-argentum",
+    "regionId": "unsortiert",
+    "children": [],
+    "houseIds": [
+      "haus-veltrane"
+    ]
   }
 ];
 export const REGIONAL_EQUIPMENT_HOUSES = [
@@ -9724,6 +9817,17 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
       "Ewigensee"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-weinlaub&mode=view"
+  },
+  {
+    "id": "haus-sonnenfels",
+    "name": "Haus Sonnenfels",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Weisenfluh/haus-sonnenfels.png",
+    "path": [
+      "Weisenfluh",
+      "Südliches Weisenfluh",
+      "Burg Sonnenfels"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-sonnenfels&mode=view"
   },
   {
     "id": "haus-falveri",
@@ -12703,6 +12807,54 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "tree": "/Stammbäume/Stammbaum.html?family=haus-loer&mode=view"
   },
   {
+    "id": "haus-trevoryn",
+    "name": "Haus Trevoryn",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Llamreis%20Ankunft/B%C3%BCrgerliche/Gwynthor/Trevoryn.png",
+    "path": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Gwynthor"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-trevoryn&mode=view"
+  },
+  {
+    "id": "haus-svathamar",
+    "name": "Haus Svathamar",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Llamreis%20Ankunft/B%C3%BCrgerliche/Gwynthor/Svathamar.png",
+    "path": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Gwynthor"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-svathamar&mode=view"
+  },
+  {
+    "id": "haus-dubhdarach",
+    "name": "Haus Dubhdarach",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Llamreis%20Ankunft/B%C3%BCrgerliche/Gwynthor/Dubhdarach.png",
+    "path": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Gwynthor"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-dubhdarach&mode=view"
+  },
+  {
+    "id": "haus-raves",
+    "name": "Haus Raves",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Llamreis%20Ankunft/B%C3%BCrgerliche/Gwynthor/Raves.png",
+    "path": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Gwynthor"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-raves&mode=view"
+  },
+  {
     "id": "haus-draenmelyn",
     "name": "Haus Draenmelyn",
     "image": "/Stammb%C3%A4ume/assets/images/houses/Llamreis%20Ankunft/B%C3%BCrgerliche/Gwynthor/Draenmelyn.png",
@@ -12833,6 +12985,16 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
       "Gwynthor"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=craigddu&mode=view"
+  },
+  {
+    "id": "haus-veltrane",
+    "name": "Haus Veltrane",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Kaiserreich%20Argentum/Veltrane.png",
+    "path": [
+      "Kaiserreich Argentum",
+      "Unsortiert"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-veltrane&mode=view"
   },
   {
     "id": "haus-bradrhith",

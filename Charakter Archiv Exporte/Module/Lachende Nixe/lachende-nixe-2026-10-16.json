@@ -1,0 +1,4174 @@
+{
+  "type": "aleria-module-package",
+  "version": 1,
+  "exportedAt": "2026-10-16T12:00:00Z",
+  "module": {
+    "type": "aleria-module",
+    "version": 1,
+    "section": {
+      "key": "Gwynthor",
+      "tab": "Völker & Kulturen",
+      "desc": "",
+      "nodeId": "node:volker-kulturen:cenyr/celtigerns-wacht/llamreis-ankunft/gwynthor",
+      "path": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Gwynthor"
+      ]
+    },
+    "entry": {
+      "id": "die-lachende-nixe",
+      "title": "Die Lachende Nixe",
+      "subtitle": "Gwynthors Freudenhaus",
+      "type": "Taverne",
+      "category": "Gwynthor",
+      "moduleWidth": 100,
+      "moduleHeight": 100,
+      "image": "./assets/lachende-nixe/scenes/aussenansicht.png",
+      "stamp": "Celtigerns Wacht · Gwynthor · Aleria",
+      "icon": "",
+      "symbol": "./assets/lachende-nixe/references/schild.png",
+      "locked": false,
+      "appendCommentsPage": true,
+      "enablePageComments": true,
+      "sessionCast": [],
+      "sessionCastDetails": [],
+      "pages": [
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "0",
+          "image": "./assets/lachende-nixe/scenes/aussenansicht.png",
+          "imageWidth": 30,
+          "pageTitle": "Die Lachende Nixe",
+          "description": "<b>Die Lachende Nixe</b> gilt als das bekannteste <b>Freudenhaus </b>Gwynthors und zählt zugleich zu den <i>teuersten </i>Etablissements der Stadt. Hinter ihrer reich verzierten Fassade verbergen sich luxuriöse Salons, private Gesellschaftsräume und Gästezimmer, die von Kaufleuten, Kapitänen, Söldneroffizieren und gelegentlich sogar Adligen besucht werden. Was einst eine heruntergekommene Hafenkneipe nahe den Docks war, wurde über Jahrzehnte hinweg durch den Ehrgeiz <b>Albrecht Sonnenfels</b>' zu einem Wahrzeichen des Hafendistrikts ausgebaut. Heute konkurriert die Lachende Nixe weniger mit gewöhnlichen Tavernen als vielmehr mit den besten Häusern der Stadt.<br><!--EndFragment-->",
+          "quote": "",
+          "quoteBy": "",
+          "enableComments": true,
+          "commentDivider": true,
+          "imageTall": true,
+          "stats": [
+            [
+              "Gegründet",
+              "1696"
+            ],
+            [
+              "Standort",
+              "Hafendistrikt, Südliche Docks von Gwynthor"
+            ],
+            [
+              "Besitzer",
+              "Albrecht Sonnenfels"
+            ],
+            [
+              "Bekannt für",
+              "Luxuriöse Gesellschaft, Diskretion und private Salons"
+            ],
+            [
+              "Küche",
+              "Weisenfluher, Cenyri und Küstenküche"
+            ],
+            [
+              "Kapazität",
+              "Über 30 Gäste und mehr als 10 Zimmer"
+            ],
+            [
+              "Besonderheit",
+              "Prominentestes Freudenhaus Gwynthors"
+            ],
+            [
+              "Wahrzeichen",
+              "Das herzförmige Schild der Lachenden Nixe"
+            ]
+          ],
+          "commentSequence": [
+            {
+              "narrator": true,
+              "text": "..........."
+            }
+          ],
+          "imageFit": "cover",
+          "imagePosition": "center"
+        },
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "1",
+          "image": "https://i.imgur.com/bhx5KlJ.png",
+          "imageWidth": 20,
+          "pageTitle": "Inhaber der Lachenden Nixe",
+          "description": "<b>Albrecht Sonnenfels</b> stammt aus dem südlichen Weisenfluh, wo seine Familie einst zu den angesehenen Landherren der Region gehörte. Nach einem erbitterten Erbstreit verließ er seine Heimat und ließ sich in Gwynthor nieder. Dort arbeitete er zunächst für die Klingende Münze und die Rote Kompanie, ehe er sein Vermögen nutzte, um eine heruntergekommene Hafenkneipe zu erwerben. Über Jahrzehnte hinweg verwandelte er das Haus in die Lachende Nixe, das heute als bekanntestes Freudenhaus Gwynthors gilt.<br><!--EndFragment-->",
+          "quote": "„Ein Mann verliert sein Land nicht, solange er weiß, wie man ein neues gewinnt.“<br><!--EndFragment-->",
+          "quoteBy": "— Albrecht Sonnenfels",
+          "commentDivider": true,
+          "imageTall": true,
+          "biographyPage": true,
+          "stats": [
+            [
+              "Vollständiger Name",
+              "Albrecht Sonnenfels"
+            ],
+            [
+              "Titel",
+              "Inhaber"
+            ],
+            [
+              "Haus",
+              "Sonnenfels"
+            ],
+            [
+              "Alter",
+              "63"
+            ],
+            [
+              "Herkunft",
+              "Weisenfluh, Burg Sonnenfels"
+            ],
+            [
+              "Wohlstand",
+              "Sehr hoch"
+            ]
+          ],
+          "biography": {
+            "portraitStages": [
+              "",
+              "",
+              "",
+              ""
+            ],
+            "portrait": "",
+            "sideWidth": 100,
+            "connectionPortraitHeight": 68,
+            "connectionTextOffset": 7,
+            "biographyTitle": "Übersicht",
+            "biographyText": "<b>Albrecht Sonnenfels</b> stammt aus dem südlichen Weisenfluh, wo seine Familie einst zu den angesehenen Landherren der Region gehörte. Nach einem erbitterten Erbstreit verließ er seine Heimat und ließ sich in Gwynthor nieder. Dort arbeitete er zunächst für die Klingende Münze und die Rote Kompanie, ehe er sein Vermögen nutzte, um eine heruntergekommene Hafenkneipe zu erwerben. Über Jahrzehnte hinweg verwandelte er das Haus in die Lachende Nixe, das heute als bekanntestes Freudenhaus Gwynthors gilt.<br><!--EndFragment-->",
+            "abilitiesTitle": "Persönlichkeitsmerkmale",
+            "abilities": [
+              {
+                "title": "Charismatischer Gastgeber",
+                "detail": "Versteht es Menschen für sich zu gewinnen und Beziehungen aufzubauen.",
+                "icon": "../IconOrdner/Cktraits/Trait_education_diplomacy_3.png"
+              },
+              {
+                "title": "Eiserner Geschäftsmann",
+                "detail": "Trifft Entscheidungen selten aus Gefälligkeit, sondern aus Kalkül.",
+                "icon": "../IconOrdner/Cktraits/Trait_education_stewardship_3.png"
+              },
+              {
+                "title": "Diskreter Patron",
+                "detail": "Schützt die Privatsphäre seiner Gäste kompromisslos.",
+                "icon": "../IconOrdner/Big Traits/Trait_patient.png"
+              },
+              {
+                "title": "Mann vieler Gerüchte",
+                "detail": "Spricht nur selten über seine Vergangenheit und nährt damit zahllose Spekulationen.",
+                "icon": "../IconOrdner/Cktraits/Trait_education_intrigue_3.png"
+              }
+            ],
+            "extraSections": [
+              {
+                "title": "Das Haus und seine Menschen",
+                "text": "<p>Johanna hält den Alltag zusammen, Simon die Unruhe von der Tür fern und David die Bücher in Ordnung. Rosalinde übernimmt Briefe und besondere Empfangstermine; Kaspar kennt die Wege zu den Lieferanten. Über die Verwandtschaft auf Burg Sonnenfels spricht Albrecht seltener als über sein Haus am Hafen.</p>"
+              }
+            ],
+            "historyTitle": "Geschichte",
+            "historyText": "<!--StartFragment-->Albrecht Sonnenfels ist der unbestrittene Sohn des Landherrn Dagorath Sonnenfels. Nach dessen Tod geriet seine Erbberechtigung jedoch unter Beschuss. Sein Onkel und dessen Sohn verbreiteten Gerüchte über eine angebliche uneheliche Abstammung und gewannen schließlich die Unterstützung des örtlichen Lehensherrn. Was darauf folgte, ist bis heute unklar. Manche behaupten, Albrecht sei mit einem Teil des Familienvermögens geflohen, andere sprechen von einer ungerechten Vertreibung. Sicher ist nur, dass er in Gwynthor neu begann und innerhalb weniger Jahrzehnte ein kleines Vermögen aufbaute.<br><br><!--EndFragment-->",
+            "worksTitle": "Wissenswertes",
+            "works": [
+              "Besitzer der Lachenden Nixe",
+              "Tatsächlich Ritter aus Weisenfluh",
+              "Verbündeter der Klingenden Münze",
+              "Ehemaliges Mitglied der Roten Kompanie, lange her",
+              "Einer der wohlhabendsten Bürger des Hafendistrikts",
+              "Bekannt für Diskretion und Gastfreundschaft",
+              "Umgeben von Gerüchten über seine Herkunft",
+              "Angeblich Beziehungen zur Unterwelt"
+            ],
+            "triviaTitle": "Trivia",
+            "trivia": [
+              "Trinkt ausschließlich Wein aus Weisenfluh.",
+              "Besitzt noch immer sein altes Familiensiegel.",
+              "Kann die Herkunft eines Weines oft nach wenigen Schlucken bestimmen.",
+              "Verabscheut Verschwendung von Lebensmitteln.",
+              "Spricht selten öffentlich über seinen Vetter."
+            ],
+            "quotesTitle": "Zitate",
+            "quotes": [
+              "„Gold öffnet Türen. Ein guter Ruf sorgt dafür, dass sie offen bleiben.“"
+            ],
+            "connectionsTitle": "Verbindungen",
+            "connections": [
+              {
+                "type": "connection",
+                "name": "Klingende Münze",
+                "detail": "Eingetragenes Mitglied",
+                "image": "https://i.imgur.com/jqR4FUw.png",
+                "imageFormat": "square"
+              },
+              {
+                "type": "connection",
+                "name": "Die Rote Bank",
+                "detail": "Kunde",
+                "image": "https://i.imgur.com/zAwJdmc.png",
+                "imageFormat": "square"
+              },
+              {
+                "type": "connection",
+                "name": "Die Rote Kompanie",
+                "detail": "Ehemaliges Mitglied",
+                "image": "https://i.imgur.com/QG4mL5M.png",
+                "imageFormat": "square"
+              },
+              {
+                "type": "connection",
+                "name": "Die Gleißende Hand",
+                "detail": "In Kontakt",
+                "image": "https://i.imgur.com/D5NHzX6.png",
+                "imageFormat": "square"
+              },
+              {
+                "type": "heading",
+                "title": "Beziehungen",
+                "detail": ""
+              },
+              {
+                "type": "connection",
+                "name": "Simon Sonnenfels",
+                "detail": "1. Sohn",
+                "image": "https://i.imgur.com/lEqrzDF.png",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "name": "David Sonnenfels",
+                "detail": "2. Sohn",
+                "image": "https://i.imgur.com/SyLcCwM.png",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "name": "Lorcan Scáthaire",
+                "detail": "Engster Vertrauter",
+                "image": "https://i.imgur.com/66gLVtj.png",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "name": "Johanna Falkenhayn",
+                "detail": "Frau & Geliebte",
+                "image": "https://i.imgur.com/Uy2R1Yj.png",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "name": "Rosalinde Sonnenfels",
+                "detail": "Korrespondenz & besondere Empfangstermine",
+                "image": "./assets/lachende-nixe/portraits/rosalinde.png",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "name": "Kaspar Sonnenfels",
+                "detail": "Besorgungen & Lieferwege",
+                "image": "./assets/lachende-nixe/portraits/kaspar.png",
+                "imageFormat": "portrait"
+              }
+            ],
+            "documentsTitle": "Das Haus Sonnenfels",
+            "documents": [
+              {
+                "icon": "../Stammbäume/assets/images/houses/Weisenfluh/haus-sonnenfels.png",
+                "title": "Sonnenfels",
+                "text": "Die Familie auf Burg Sonnenfels und Albrechts Zweig in Gwynthor.",
+                "link": "../Stammbäume/Stammbaum.html?family=haus-sonnenfels&mode=view"
+              }
+            ],
+            "footer": "„Ein Mann verliert sein Land nicht, solange er weiß, wie man ein neues gewinnt.“"
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "2",
+          "pageTitle": "✦ — Angestellte— ✦",
+          "description": "",
+          "hierarchyPage": true,
+          "hierarchy": {
+            "layoutMode": "vertical",
+            "treeDisplayMode": "tabs",
+            "cardFontScale": 87,
+            "portraitScale": 130,
+            "chartScale": 100,
+            "eyebrow": "Hierarchie",
+            "subtitle": "Die Lachende Nixe",
+            "centerLabel": "Struktur der Lachenden Nixe",
+            "emblem": "https://i.imgur.com/oZUJ5Qv.png",
+            "sideImage": "https://i.imgur.com/oZUJ5Qv.png",
+            "organizationTitle": "Die Lachende Nixe",
+            "motto": "\"Jeder Gast betritt die Lachende Nixe mit einem Namen. Die meisten verlassen sie mit einem Geheimnis.\"",
+            "description": "<b>Die Lachende Nixe</b> gilt als das bekannteste Freudenhaus Gwynthors und zählt zu den prestigeträchtigsten Etablissements der gesamten Celtigerns Wacht. Hinter ihrer prachtvollen Fassade vereinen sich Herberge, Schankbetrieb, Unterhaltungshaus und gesellschaftlicher Treffpunkt für Kaufleute, Adlige, Offiziere und wohlhabende Reisende. Während einfache Seeleute und Hafenarbeiter die umliegenden Schenken bevorzugen, finden jene mit schwerem Geldbeutel ihren Weg durch die Türen der Nixe.<br><!--EndFragment-->",
+            "detailsTitle": "Details",
+            "details": [
+              {
+                "icon": "-",
+                "label": "Gegründet",
+                "value": "1696"
+              },
+              {
+                "icon": "-",
+                "label": "Standort",
+                "value": "Hafendistrikt von Gwynthor"
+              },
+              {
+                "icon": "-",
+                "label": "Besitzer",
+                "value": "Albrecht Sonnenfels"
+              },
+              {
+                "icon": "-",
+                "label": "Kapazität",
+                "value": "Über 30 Gäste und Bewohner"
+              },
+              {
+                "icon": "-",
+                "label": "Bekannt für",
+                "value": "Diskretion, Luxus und Gesellschaft"
+              },
+              {
+                "icon": "-",
+                "label": "Personal",
+                "value": "Mehrere Dutzend Angestellte"
+              },
+              {
+                "icon": "-",
+                "label": "Küche",
+                "value": "Weisenfluher, Cenyri und südliche Spezialitäten"
+              }
+            ],
+            "quoteLabel": "Spruch",
+            "quote": "Wo Gold fließt, Geheimnisse gehandelt werden und selbst die Mächtigen ihre Masken ablegen.<!--EndFragment-->",
+            "chartTitle": "Aufbau",
+            "chartIntro": "<b>Die Lachende Nixe</b> ist streng hierarchisch organisiert und beschäftigt deutlich mehr Personal als die meisten Herbergen oder Tavernen Gwynthors. An der Spitze steht Albrecht Sonnenfels, der Eigentümer des Hauses, welcher die langfristige Ausrichtung, größere Investitionen und die Beziehungen zu Adel, Kaufleuten und Gilden beaufsichtigt. Unter ihm führen Hausmutter, Hausvogt, Hauswächter und Hausmeier die täglichen Geschäfte. Ihnen unterstehen die Verantwortlichen für Schankbetrieb, Herberge, Küche, Sicherheit und Unterhaltung sowie zahlreiche Bedienstete, Köche, Schankkräfte, Zimmermädchen und Wachen. Trotz ihres Rufes als Freudenhaus funktioniert die Lachende Nixe wie ein gut geführtes Handelshaus, in dem Disziplin, Diskretion und Professionalität ebenso wichtig sind wie Charme und Gastfreundschaft.<br><!--EndFragment-->",
+            "trees": [
+              {
+                "id": "fuehrung",
+                "parentTreeId": "",
+                "label": "Führung",
+                "levels": [
+                  {
+                    "label": "Inhaber",
+                    "nodes": [
+                      {
+                        "portrait": "https://i.imgur.com/bhx5KlJ.png",
+                        "title": "Albrecht Sonnenfels",
+                        "subtitle": "Besitzer",
+                        "text": "Verantwortlich für die langfristige Führung des Hauses, größere Investitionen, Handelsbeziehungen und den Ruf der Lachenden Nixe.",
+                        "id": "nixe-original-1"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Hausleitung",
+                    "nodes": [
+                      {
+                        "portrait": "https://i.imgur.com/Uy2R1Yj.png",
+                        "title": "Johanna Falkenhayn",
+                        "subtitle": "Hausmutter, Personalführung",
+                        "text": "Verantwortlich für Personalführung, Gästebetreuung und das Wohlbefinden der Angestellten des Hauses.",
+                        "id": "nixe-original-2"
+                      },
+                      {
+                        "portrait": "https://i.imgur.com/66gLVtj.png",
+                        "title": "Lorcan Scáthaire",
+                        "subtitle": "Hausvogt, Verwaltung",
+                        "text": "Beaufsichtigt den täglichen Betrieb, koordiniert die verschiedenen Hausbereiche und setzt die Anweisungen der Hausleitung um.",
+                        "id": "nixe-original-3"
+                      },
+                      {
+                        "portrait": "https://i.imgur.com/SyLcCwM.png",
+                        "title": "David Sonnenfels",
+                        "subtitle": "Hausmeier, Verwaltung",
+                        "text": "Verwaltet Finanzen, Vorräte, Verträge, Löhne und den wirtschaftlichen Betrieb des Hauses.",
+                        "id": "nixe-original-5"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Korrespondenz & Kontor",
+                    "nodes": [
+                      {
+                        "id": "nixe-rosalinde",
+                        "portrait": "./assets/lachende-nixe/portraits/rosalinde.png",
+                        "title": "Rosalinde Sonnenfels",
+                        "subtitle": "Korrespondenz & besondere Empfangstermine",
+                        "text": "Rosalinde hilft Johanna bei Briefen, Einladungen und besonderen Empfangsterminen. Ihre auffallende Schönheit macht sie rasch zum Gespräch; sie selbst möchte lieber daran erkannt werden, ob eine Zusage am nächsten Tag noch gilt."
+                      },
+                      {
+                        "id": "nixe-frei-schreibgehilfe-posten-i",
+                        "portrait": "",
+                        "title": "Freier Platz",
+                        "subtitle": "Schreibgehilfe · Posten I",
+                        "text": "Führt Bestellbriefe, kurze Listen und Abschriften für David."
+                      },
+                      {
+                        "id": "nixe-frei-schreibgehilfe-posten-ii",
+                        "portrait": "",
+                        "title": "Freier Platz",
+                        "subtitle": "Schreibgehilfe · Posten II",
+                        "text": "Ordnet Belege und hält die vereinbarten Empfangstermine schriftlich fest."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "herberge",
+                "parentTreeId": "",
+                "label": "Herberge & Gäste",
+                "levels": [
+                  {
+                    "label": "Empfang & täglicher Gästebetrieb",
+                    "nodes": [
+                      {
+                        "portrait": "",
+                        "title": "Name",
+                        "subtitle": "Gastwirt",
+                        "text": "",
+                        "id": "nixe-original-6"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Zimmerführung & Empfang",
+                    "nodes": [
+                      {
+                        "id": "nixe-frei-oberstubenmagd",
+                        "portrait": "",
+                        "title": "Freier Platz",
+                        "subtitle": "Oberstubenmagd",
+                        "text": "Teilt die Zimmerdienste ein und prüft Leinen, Waschzeug und vorbereitete Gästezimmer."
+                      },
+                      {
+                        "id": "nixe-frei-empfangskraft",
+                        "portrait": "",
+                        "title": "Freier Platz",
+                        "subtitle": "Empfangskraft",
+                        "text": "Nimmt Ankünfte auf, weist freie Zimmer zu und hält Rücksprache mit Johanna."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Zimmerdienst & Ausschank",
+                    "nodes": [
+                      {
+                        "portrait": "",
+                        "title": "Name",
+                        "subtitle": "Magd",
+                        "text": "",
+                        "id": "nixe-original-7"
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Name",
+                        "subtitle": "Magd",
+                        "text": "",
+                        "id": "nixe-original-8"
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Name",
+                        "subtitle": "Magd",
+                        "text": "",
+                        "id": "nixe-original-9"
+                      },
+                      {
+                        "id": "nixe-frei-schankkraft-posten-i",
+                        "portrait": "",
+                        "title": "Freier Platz",
+                        "subtitle": "Schankkraft · Posten I",
+                        "text": "Bedient die kleinen Tische im vorderen Salon."
+                      },
+                      {
+                        "id": "nixe-frei-schankkraft-posten-ii",
+                        "portrait": "",
+                        "title": "Freier Platz",
+                        "subtitle": "Schankkraft · Posten II",
+                        "text": "Reicht bestellte Getränke und hält die Gläser im Umlauf."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Gepäck & Zimmerwege",
+                    "nodes": [
+                      {
+                        "id": "nixe-frei-hausbursche-posten-i",
+                        "portrait": "",
+                        "title": "Freier Platz",
+                        "subtitle": "Hausbursche · Posten I",
+                        "text": "Trägt Gepäck und begleitet ankommende Gäste zu ihren Zimmern."
+                      },
+                      {
+                        "id": "nixe-frei-hausbursche-posten-ii",
+                        "portrait": "",
+                        "title": "Freier Platz",
+                        "subtitle": "Hausbursche · Posten II",
+                        "text": "Bringt frisches Wasser und erledigt die Wege zwischen Zimmern und Empfang."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "gesellschaft",
+                "parentTreeId": "",
+                "label": "Gesellschaft & Unterhaltung",
+                "levels": [
+                  {
+                    "label": "Salonführung",
+                    "nodes": [
+                      {
+                        "id": "nixe-frei-salonmeisterin",
+                        "portrait": "",
+                        "title": "Freier Platz",
+                        "subtitle": "Salonmeisterin",
+                        "text": "Koordiniert Gesellschaft, Musik und Tanz mit Johanna und achtet auf den Takt des Abends."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Gesellschaft",
+                    "nodes": [
+                      {
+                        "portrait": "https://i.imgur.com/En8zKuU.png",
+                        "title": "Eirona",
+                        "subtitle": "Kurtisane",
+                        "text": "Eirona empfängt neue Gesichter mit offenem Lächeln und findet rasch ein Gespräch, in dem auch ein schweigsamer Gast seinen Platz hat.",
+                        "id": "nixe-original-10"
+                      },
+                      {
+                        "portrait": "https://i.imgur.com/VHH9ahH.png",
+                        "title": "Rhosiel",
+                        "subtitle": "Kurtisane",
+                        "text": "Rhosiel kennt die höflichen Spiele des Salons. Sie hört aufmerksam zu und vergisst selten, welchen Wein ein Gast beim letzten Besuch bevorzugte.",
+                        "id": "nixe-original-11"
+                      },
+                      {
+                        "portrait": "https://i.imgur.com/0Jth6p9.png",
+                        "title": "Lliwen",
+                        "subtitle": "Kurtisane",
+                        "text": "Lliwen bringt Wärme in einen steifen Abend. Ihr Lachen trägt weiter als ihre Stimme, und sie bemerkt schnell, wann ein Gast lieber in Ruhe gelassen werden möchte.",
+                        "id": "nixe-original-12"
+                      },
+                      {
+                        "portrait": "https://i.imgur.com/pgQVQBT.png",
+                        "title": "Severina",
+                        "subtitle": "Kurtisane",
+                        "text": "Severina schätzt leise Gespräche und einen sorgfältig gedeckten Tisch. Sie versteht es, einem Abend Form zu geben, ohne selbst laut werden zu müssen.",
+                        "id": "nixe-original-13"
+                      },
+                      {
+                        "id": "nixe-frei-kurtisane-weiterer-posten-i",
+                        "portrait": "",
+                        "title": "Freier Platz",
+                        "subtitle": "Kurtisane · weiterer Posten I",
+                        "text": "Eigener freier Platz für eine erwachsene Gesellschafterin des Hauses."
+                      },
+                      {
+                        "id": "nixe-frei-kurtisane-weiterer-posten-ii",
+                        "portrait": "",
+                        "title": "Freier Platz",
+                        "subtitle": "Kurtisane · weiterer Posten II",
+                        "text": "Eigener freier Platz für eine erwachsene Gesellschafterin des Hauses."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Musik",
+                    "nodes": [
+                      {
+                        "portrait": "https://i.imgur.com/Ym2emFq.png",
+                        "title": "Adeltrud",
+                        "subtitle": "Musikantin",
+                        "text": "Adeltrud begleitet Gespräche mit ruhigen Weisen und kennt die alten Lieder ihrer Weisenfluher Heimat. Ein Blick zu Johanna genügt, bevor sie die Lautstärke des Salons verändert.",
+                        "id": "nixe-original-14"
+                      },
+                      {
+                        "portrait": "https://i.imgur.com/GJRh5W7.png",
+                        "title": "Thjodhild",
+                        "subtitle": "Musikantin",
+                        "text": "Thjodhild bringt nordische Melodien aus Aldrimar ins Haus. Sie singt klar und zurückhaltend und hebt sich die lebhafteren Stücke für den späteren Abend auf.",
+                        "id": "nixe-original-15"
+                      },
+                      {
+                        "id": "nixe-frei-instrumentalist-oder-instrumentalistin",
+                        "portrait": "",
+                        "title": "Freier Platz",
+                        "subtitle": "Instrumentalist oder Instrumentalistin",
+                        "text": "Ergänzt die vorhandenen Musikerinnen bei größeren Gesellschaften."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Tanz",
+                    "nodes": [
+                      {
+                        "portrait": "",
+                        "title": "Name",
+                        "subtitle": "Tänzerin",
+                        "text": "",
+                        "id": "nixe-original-16"
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Name",
+                        "subtitle": "Tänzerin",
+                        "text": "",
+                        "id": "nixe-original-17"
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Name",
+                        "subtitle": "Tänzerin",
+                        "text": "",
+                        "id": "nixe-original-18"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "kueche",
+                "parentTreeId": "",
+                "label": "Küche",
+                "levels": [
+                  {
+                    "label": "Küchenführung",
+                    "nodes": [
+                      {
+                        "portrait": "",
+                        "title": "Name",
+                        "subtitle": "Koch",
+                        "text": "",
+                        "id": "nixe-original-19"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Vorbereitung & Anrichten",
+                    "nodes": [
+                      {
+                        "portrait": "",
+                        "title": "Name",
+                        "subtitle": "Küchengehilfe",
+                        "text": "",
+                        "id": "nixe-original-20"
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Name",
+                        "subtitle": "Küchengehilfe",
+                        "text": "",
+                        "id": "nixe-original-21"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Sauberes Geschirr & Küchenwäsche",
+                    "nodes": [
+                      {
+                        "id": "nixe-frei-kuchenmagd",
+                        "portrait": "",
+                        "title": "Freier Platz",
+                        "subtitle": "Küchenmagd",
+                        "text": "Reinigt Geschirr und Tücher und hält den kleinen Arbeitsbereich für die nächste Bestellung frei."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "sicherheit",
+                "parentTreeId": "",
+                "label": "Sicherheit",
+                "levels": [
+                  {
+                    "label": "Hauswächter",
+                    "nodes": [
+                      {
+                        "portrait": "https://i.imgur.com/lEqrzDF.png",
+                        "title": "Simon Sonnenfels",
+                        "subtitle": "Hauswächter, Sicherheit",
+                        "text": "Leitet die Sicherheit des Etablissements und sorgt für Ordnung, Diskretion und den Schutz von Gästen und Personal.",
+                        "id": "nixe-original-4"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Schwelle & Nacht",
+                    "nodes": [
+                      {
+                        "portrait": "",
+                        "title": "Name",
+                        "subtitle": "Türsteher",
+                        "text": "",
+                        "id": "nixe-original-25"
+                      },
+                      {
+                        "id": "nixe-frei-nachtwache",
+                        "portrait": "",
+                        "title": "Freier Platz",
+                        "subtitle": "Nachtwache",
+                        "text": "Beaufsichtigt die geschlossene Haustür und den rückwärtigen Zugang während der Nacht."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Salondienst",
+                    "nodes": [
+                      {
+                        "id": "nixe-frei-saalwache-posten-i",
+                        "portrait": "",
+                        "title": "Freier Platz",
+                        "subtitle": "Saalwache · Posten I",
+                        "text": "Bleibt im vorderen Haus ansprechbar und greift auf Simons Zeichen ein."
+                      },
+                      {
+                        "id": "nixe-frei-saalwache-posten-ii",
+                        "portrait": "",
+                        "title": "Freier Platz",
+                        "subtitle": "Saalwache · Posten II",
+                        "text": "Geht die Flure und Hinterausgänge ab und unterstützt die Türwache bei Bedarf."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "sonstige",
+                "parentTreeId": "",
+                "label": "Sonstige",
+                "levels": [
+                  {
+                    "label": "Versorgung & Hauswäsche",
+                    "nodes": [
+                      {
+                        "id": "nixe-kaspar",
+                        "portrait": "./assets/lachende-nixe/portraits/kaspar.png",
+                        "title": "Kaspar Sonnenfels",
+                        "subtitle": "Besorgungen & Lieferwege",
+                        "text": "Kaspar kennt die Wege zwischen Kai, Markt und Hintertür. Albrecht hat ihn als seinen Sohn anerkannt und holt ihn ins Haus, wenn eine Besorgung zuverlässige Hände verlangt. Über seine Mutter wird nicht gesprochen."
+                      },
+                      {
+                        "id": "nixe-frei-waschemeisterin",
+                        "portrait": "",
+                        "title": "Freier Platz",
+                        "subtitle": "Wäschemeisterin",
+                        "text": "Hält frische Wäsche, kleine Reparaturen und die Rückläufe aus der Waschküche zusammen."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Wege, Bäder & Reinigung",
+                    "nodes": [
+                      {
+                        "portrait": "",
+                        "title": "Name",
+                        "subtitle": "Laufbursche",
+                        "text": "",
+                        "id": "nixe-original-22"
+                      },
+                      {
+                        "id": "nixe-frei-laufbursche-weiterer-posten",
+                        "portrait": "",
+                        "title": "Freier Platz",
+                        "subtitle": "Laufbursche · weiterer Posten",
+                        "text": "Übernimmt einen zweiten eigenen Botendienst zwischen Markt und Haus."
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Name",
+                        "subtitle": "Zubermädchen",
+                        "text": "",
+                        "id": "nixe-original-23"
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Name",
+                        "subtitle": "Putzkraft",
+                        "text": "",
+                        "id": "nixe-original-24"
+                      },
+                      {
+                        "id": "nixe-frei-reinigungskraft-weiterer-posten",
+                        "portrait": "",
+                        "title": "Freier Platz",
+                        "subtitle": "Reinigungskraft · weiterer Posten",
+                        "text": "Übernimmt einen zweiten eigenen Reinigungsdienst in Fluren und Nebenräumen."
+                      },
+                      {
+                        "id": "nixe-frei-flickmagd",
+                        "portrait": "",
+                        "title": "Freier Platz",
+                        "subtitle": "Flickmagd",
+                        "text": "Bessert Bettwäsche, Tücher und einfache Hauskleidung aus."
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "levels": [
+              {
+                "label": "Gründer & Besitzer",
+                "nodes": [
+                  {
+                    "portrait": "https://i.imgur.com/bhx5KlJ.png",
+                    "title": "Albrecht Sonnenfels",
+                    "subtitle": "Besitzer",
+                    "text": "Verantwortlich für die langfristige Führung des Hauses, größere Investitionen, Handelsbeziehungen und den Ruf der Lachenden Nixe."
+                  }
+                ]
+              },
+              {
+                "label": "Führungsebene",
+                "nodes": [
+                  {
+                    "portrait": "https://i.imgur.com/Uy2R1Yj.png",
+                    "title": "Johanna Falkenhayn",
+                    "subtitle": "Hausmutter, Personalführung",
+                    "text": "Verantwortlich für Personalführung, Gästebetreuung und das Wohlbefinden der Angestellten des Hauses."
+                  },
+                  {
+                    "portrait": "https://i.imgur.com/66gLVtj.png",
+                    "title": "Lorcan Scáthaire",
+                    "subtitle": "Hausvogt, Verwaltung",
+                    "text": "Beaufsichtigt den täglichen Betrieb, koordiniert die verschiedenen Hausbereiche und setzt die Anweisungen der Hausleitung um."
+                  },
+                  {
+                    "portrait": "https://i.imgur.com/lEqrzDF.png",
+                    "title": "Simon Sonnenfels",
+                    "subtitle": "Hauswächter, Sicherheit",
+                    "text": "Leitet die Sicherheit des Etablissements und sorgt für Ordnung, Diskretion und den Schutz von Gästen und Personal."
+                  },
+                  {
+                    "portrait": "https://i.imgur.com/SyLcCwM.png",
+                    "title": "David Sonnenfels",
+                    "subtitle": "Hausmeier, Verwaltung",
+                    "text": "Verwaltet Finanzen, Vorräte, Verträge, Löhne und den wirtschaftlichen Betrieb des Hauses."
+                  }
+                ]
+              },
+              {
+                "label": "Herberge & Gäste",
+                "nodes": [
+                  {
+                    "portrait": "",
+                    "title": "Name",
+                    "subtitle": "Gastwirt",
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "label": "",
+                "nodes": [
+                  {
+                    "portrait": "",
+                    "title": "Name",
+                    "subtitle": "Magd",
+                    "text": ""
+                  },
+                  {
+                    "portrait": "",
+                    "title": "Name",
+                    "subtitle": "Magd",
+                    "text": ""
+                  },
+                  {
+                    "portrait": "",
+                    "title": "Name",
+                    "subtitle": "Magd",
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "label": "Gesellschaft & Unterhaltung",
+                "nodes": [
+                  {
+                    "portrait": "https://i.imgur.com/En8zKuU.png",
+                    "title": "Name",
+                    "subtitle": "Kurtisane",
+                    "text": ""
+                  },
+                  {
+                    "portrait": "https://i.imgur.com/VHH9ahH.png",
+                    "title": "Name",
+                    "subtitle": "Kurtisane",
+                    "text": ""
+                  },
+                  {
+                    "portrait": "https://i.imgur.com/0Jth6p9.png",
+                    "title": "Name",
+                    "subtitle": "Kurtisane",
+                    "text": ""
+                  },
+                  {
+                    "portrait": "https://i.imgur.com/pgQVQBT.png",
+                    "title": "Name",
+                    "subtitle": "Kurtisane",
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "label": "Musikanten",
+                "nodes": [
+                  {
+                    "portrait": "https://i.imgur.com/Ym2emFq.png",
+                    "title": "Name",
+                    "subtitle": "Musikant",
+                    "text": ""
+                  },
+                  {
+                    "portrait": "https://i.imgur.com/GJRh5W7.png",
+                    "title": "Name",
+                    "subtitle": "Musikant",
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "label": "Tänzer",
+                "nodes": [
+                  {
+                    "portrait": "",
+                    "title": "Name",
+                    "subtitle": "Tänzerin",
+                    "text": ""
+                  },
+                  {
+                    "portrait": "",
+                    "title": "Name",
+                    "subtitle": "Tänzerin",
+                    "text": ""
+                  },
+                  {
+                    "portrait": "",
+                    "title": "Name",
+                    "subtitle": "Tänzerin",
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "label": "Küche & Schank",
+                "nodes": [
+                  {
+                    "portrait": "",
+                    "title": "Name",
+                    "subtitle": "Koch",
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "label": "",
+                "nodes": [
+                  {
+                    "portrait": "",
+                    "title": "Name",
+                    "subtitle": "Küchengehilfe",
+                    "text": ""
+                  },
+                  {
+                    "portrait": "",
+                    "title": "Name",
+                    "subtitle": "Küchengehilfe",
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "label": "Sonstige",
+                "nodes": [
+                  {
+                    "portrait": "",
+                    "title": "Name",
+                    "subtitle": "Laufbursche",
+                    "text": ""
+                  },
+                  {
+                    "portrait": "",
+                    "title": "Name",
+                    "subtitle": "Zubermädchen",
+                    "text": ""
+                  },
+                  {
+                    "portrait": "",
+                    "title": "Name",
+                    "subtitle": "Putzkraft",
+                    "text": ""
+                  },
+                  {
+                    "portrait": "",
+                    "title": "Name",
+                    "subtitle": "Türsteher",
+                    "text": ""
+                  }
+                ]
+              }
+            ],
+            "footerNote": "Wo Gold fließt, Geheimnisse gehandelt werden und selbst die Mächtigen ihre Masken ablegen.",
+            "backLabel": "Zurueck zur Uebersicht",
+            "printLabel": "Akte drucken"
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "p-mqip4rae-yn0km",
+          "imageWidth": 38,
+          "pageTitle": "✦ —Angebot— ✦",
+          "tradeCatalog": {
+            "headerIcon": "./assets/lachende-nixe/references/schild.png",
+            "title": "Güterregister",
+            "subtitle": "Kleine Küche & gute Gläser · Die Lachende Nixe",
+            "categories": [
+              {
+                "id": "hauskarte",
+                "label": "Weisenfluher Hauskarte"
+              },
+              {
+                "id": "weine",
+                "label": "Weine"
+              },
+              {
+                "id": "importe",
+                "label": "Importierte Getränke"
+              },
+              {
+                "id": "speisen",
+                "label": "Standard Speisen"
+              },
+              {
+                "id": "getranke",
+                "label": "Standard Getränke"
+              }
+            ],
+            "allLabel": "Alle Angebote",
+            "searchPlaceholder": "Gericht, Wein oder Zunft suchen …",
+            "filterLabel": "Die Hauskarte",
+            "noteIcon": "♧",
+            "noteTitle": "Ein leichter Teller zum langen Abend",
+            "noteText": "Drei kleine Vorspeisen und drei leichte Hauptgerichte verbinden die Sorgfalt Weisenfluher Küche mit dem Abend im Salon. Ein angekündigtes Monatsgericht ergänzt die Karte. Gute Zutaten und ruhige Zubereitung bestimmen den Preis; die Portionen bleiben klein.",
+            "items": [
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 320,
+                "descriptionTitle": "Zubereitung & Geschmack",
+                "featuresTitle": "Auf dem Teller",
+                "features": [
+                  "Lauwarme Birne · milder Ziegenfrischkäse",
+                  "Geröstete Walnuss & wenig Blütenhonig",
+                  "Kleiner, fleischloser Auftakt"
+                ],
+                "originTitle": "Herkunft",
+                "usageTitle": "Am Tisch",
+                "priceTitle": "Preis & Portion",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Verfügbarkeit",
+                "attributes": [],
+                "priceMin": "4",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "birne-frischkaese",
+                "category": "hauskarte",
+                "title": "Birne, Frischkäse & geröstete Walnuss",
+                "subtitle": "Vorspeise",
+                "unit": "Kleine Portion",
+                "image": "./assets/lachende-nixe/food/birne-frischkaese.png",
+                "imageFormat": "square",
+                "badge": "Vorspeise",
+                "tags": [
+                  "Weisenfluher Küche",
+                  "Vorspeise"
+                ],
+                "description": "<p>Drei dünne Spalten einer festen Birne werden kurz in wenig Butter gewendet und noch lauwarm neben einen kleinen Löffel Ziegenfrischkäse gelegt. Geröstete Walnuss und ein Hauch Blütenhonig geben Biss und Süße; fein geschnittener Sauerampfer hält den Teller frisch. Die Birne bleibt im Inneren fest, der Käse bewusst mild.</p><p>Eine kleine Weisenfluher Vorspeise für den Beginn eines langen Abends. Sie sättigt wenig und lässt dem Wein Raum. Käse, Nüsse, Birne und Garnitur gehören zusammen zur Portion; eine Brotscheibe wird nur auf Wunsch dazugereicht.</p>",
+                "origin": "Hausküche der Lachenden Nixe · Weisenfluher Art",
+                "usageTags": [
+                  "Kleine Portion",
+                  "Leichte Abendkarte"
+                ],
+                "priceNote": "Die beschriebenen Zutaten und Beilagen gehören zur kleinen Hausportion.",
+                "conditions": "Frisch nach Bestellung; nach verlässlicher Tageslieferung."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 320,
+                "descriptionTitle": "Zubereitung & Geschmack",
+                "featuresTitle": "Auf dem Teller",
+                "features": [
+                  "Klarer Pilzsud · ohne Sahne",
+                  "Feine Pilzstreifen & Schnittlauch",
+                  "Kleine warme Schale"
+                ],
+                "originTitle": "Herkunft",
+                "usageTitle": "Am Tisch",
+                "priceTitle": "Preis & Portion",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Verfügbarkeit",
+                "attributes": [],
+                "priceMin": "4,5",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "pilzessenz",
+                "category": "hauskarte",
+                "title": "Klare Waldpilzessenz",
+                "subtitle": "Vorspeise",
+                "unit": "Kleine Portion",
+                "image": "./assets/lachende-nixe/food/pilzessenz.png",
+                "imageFormat": "square",
+                "badge": "Vorspeise",
+                "tags": [
+                  "Weisenfluher Küche",
+                  "Vorspeise"
+                ],
+                "description": "<p>Getrocknete und frische Waldpilze ziehen langsam mit Petersilienwurzel und einem kleinen Bund Kräuter. Die Küche seiht den Sud sorgfältig ab und reicht ihn klar, dunkelgolden und duftend. Wenige feine Pilzstreifen und Schnittlauch genügen als Einlage; schwere Sahne bleibt dem kleinen Schälchen fern.</p><p>Die Essenz wird erst kurz vor dem Servieren erhitzt, damit der Pilzduft im Schälchen bleibt. Ihre kräftige Würze kommt aus der langen Ziehzeit. Ein leichter Auftakt nach Weisenfluher Art, warm genug für einen kühlen Hafenabend und klein genug, um den folgenden Teller nicht zu verdrängen.</p>",
+                "origin": "Hausküche der Lachenden Nixe · Weisenfluher Art",
+                "usageTags": [
+                  "Kleine Portion",
+                  "Leichte Abendkarte"
+                ],
+                "priceNote": "Die beschriebenen Zutaten und Beilagen gehören zur kleinen Hausportion.",
+                "conditions": "Frisch nach Bestellung; nach verlässlicher Tageslieferung."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 320,
+                "descriptionTitle": "Zubereitung & Geschmack",
+                "featuresTitle": "Auf dem Teller",
+                "features": [
+                  "Ein kleines, frisch gebackenes Törtchen",
+                  "Zartes Krebsfleisch & Dill",
+                  "Nach guter Küstenlieferung"
+                ],
+                "originTitle": "Herkunft",
+                "usageTitle": "Am Tisch",
+                "priceTitle": "Preis & Portion",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Verfügbarkeit",
+                "attributes": [],
+                "priceMin": "5,5",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "krebstoertchen",
+                "category": "hauskarte",
+                "title": "Kleines Krebstörtchen mit Dill",
+                "subtitle": "Vorspeise",
+                "unit": "Kleine Portion",
+                "image": "./assets/lachende-nixe/food/krebstoertchen.png",
+                "imageFormat": "square",
+                "badge": "Vorspeise",
+                "tags": [
+                  "Weisenfluher Küche",
+                  "Vorspeise"
+                ],
+                "description": "<p>Ein dünner, knuspriger Teigboden trägt zart ausgelöstes Krebsfleisch, wenig helles Wurzelgemüse und eine leichte Dillbindung. Das Törtchen kommt warm auf den Teller; daneben liegen einige saure Gurkenwürfel und zwei kleine Kräuterblätter. Weder Füllung noch Teig sollen den Geschmack des Krebsfleisches verdecken.</p><p>Das ist ein einzelnes kleines Törtchen, kein ganzer gedeckter Kuchen. Die Küche bäckt nur wenige Stücke gleichzeitig, damit der Boden knusprig bleibt. Die Weisenfluher Zubereitung wird mit der jeweiligen guten Küstenlieferung des Hauses verbunden; bei ausbleibender Lieferung nennt der Ausschank den Ersatz des Tages.</p>",
+                "origin": "Hausküche der Lachenden Nixe · Weisenfluher Art",
+                "usageTags": [
+                  "Kleine Portion",
+                  "Leichte Abendkarte"
+                ],
+                "priceNote": "Die beschriebenen Zutaten und Beilagen gehören zur kleinen Hausportion.",
+                "conditions": "Frisch nach Bestellung; nach verlässlicher Tageslieferung."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 320,
+                "descriptionTitle": "Zubereitung & Geschmack",
+                "featuresTitle": "Auf dem Teller",
+                "features": [
+                  "Kleines Filet · sanft gegart",
+                  "Feiner Lauch & zwei kleine Kartoffeln",
+                  "Helle Buttersoße separat erkennbar"
+                ],
+                "originTitle": "Herkunft",
+                "usageTitle": "Am Tisch",
+                "priceTitle": "Preis & Portion",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Verfügbarkeit",
+                "attributes": [],
+                "priceMin": "9",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "saibling-lauch",
+                "category": "hauskarte",
+                "title": "Saibling auf feinem Lauch",
+                "subtitle": "Leichtes Hauptgericht",
+                "unit": "Kleine Portion",
+                "image": "./assets/lachende-nixe/food/saibling-lauch.png",
+                "imageFormat": "square",
+                "badge": "Leichtes Hauptgericht",
+                "tags": [
+                  "Weisenfluher Küche",
+                  "Leichtes Hauptgericht"
+                ],
+                "description": "<p>Ein kleines Saiblingsfilet wird sanft auf der Haut gegart, bis sie an den Rändern fein knuspert und das Fleisch noch saftig auseinanderfällt. Darunter liegt eine schmale Bahn weich gedünsteter Lauchstreifen. Ein Löffel heller Buttersoße, Dill und zwei kleine gedämpfte Kartoffeln runden den Teller ab.</p><p>Die Zubereitung folgt der Weisenfluher Vorliebe für klare Aromen und sorgfältig behandelten Fisch. Das Haus kauft frischen Fisch aus verlässlichen Lieferungen in Gwynthor; es verspricht keinen tagelang über Land gereisten Frischfang. Eine leichte Portion für die spätere Stunde, ohne mächtige Beilagen oder schwere Kruste.</p>",
+                "origin": "Hausküche der Lachenden Nixe · Weisenfluher Art",
+                "usageTags": [
+                  "Kleine Portion",
+                  "Leichte Abendkarte"
+                ],
+                "priceNote": "Die beschriebenen Zutaten und Beilagen gehören zur kleinen Hausportion.",
+                "conditions": "Frisch nach Bestellung; nach verlässlicher Tageslieferung."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 320,
+                "descriptionTitle": "Zubereitung & Geschmack",
+                "featuresTitle": "Auf dem Teller",
+                "features": [
+                  "Drei saftige Scheiben Hühnerbrust",
+                  "Leichter Birnenjus & junge Möhren",
+                  "Kleine Beilage aus Kräutergerste"
+                ],
+                "originTitle": "Herkunft",
+                "usageTitle": "Am Tisch",
+                "priceTitle": "Preis & Portion",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Verfügbarkeit",
+                "attributes": [],
+                "priceMin": "10,5",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "huhn-birnenjus",
+                "category": "hauskarte",
+                "title": "Zarte Hühnerbrust mit Birnenjus",
+                "subtitle": "Leichtes Hauptgericht",
+                "unit": "Kleine Portion",
+                "image": "./assets/lachende-nixe/food/huhn-birnenjus.png",
+                "imageFormat": "square",
+                "badge": "Leichtes Hauptgericht",
+                "tags": [
+                  "Weisenfluher Küche",
+                  "Leichtes Hauptgericht"
+                ],
+                "description": "<p>Die Hühnerbrust wird schonend gegart und in drei kleine, saftige Scheiben geschnitten. Ein klarer Geflügeljus mit wenig Birnensaft verleiht ihr eine runde, kaum süße Note. Dazu kommen glasierte junge Möhren und ein kleiner Löffel lockerer Kräutergerste; die Soße benetzt das Fleisch, statt es zu überdecken.</p><p>Der Teller bleibt bewusst klein. Röstaroma, Birne und frische Kräuter sollen zusammenpassen, ohne nach einem schweren Festessen zu schmecken. Die Küche richtet jede Portion erst nach der Bestellung an. Für einen zweiten Hunger kann später nachbestellt werden; eine üppige Tavernenplatte ist diese Hausgarnitur nicht.</p>",
+                "origin": "Hausküche der Lachenden Nixe · Weisenfluher Art",
+                "usageTags": [
+                  "Kleine Portion",
+                  "Leichte Abendkarte"
+                ],
+                "priceNote": "Die beschriebenen Zutaten und Beilagen gehören zur kleinen Hausportion.",
+                "conditions": "Frisch nach Bestellung; nach verlässlicher Tageslieferung."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 320,
+                "descriptionTitle": "Zubereitung & Geschmack",
+                "featuresTitle": "Auf dem Teller",
+                "features": [
+                  "Frische kleine Kräuterknöpfle",
+                  "Waldpilze, Nussbutter & feiner Käse",
+                  "Fleischlos · kleine Hauptportion"
+                ],
+                "originTitle": "Herkunft",
+                "usageTitle": "Am Tisch",
+                "priceTitle": "Preis & Portion",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Verfügbarkeit",
+                "attributes": [],
+                "priceMin": "8",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "kraeuterknoepfle",
+                "category": "hauskarte",
+                "title": "Kräuterknöpfle mit Waldpilzen",
+                "subtitle": "Leichtes Hauptgericht",
+                "unit": "Kleine Portion",
+                "image": "./assets/lachende-nixe/food/kraeuterknoepfle.png",
+                "imageFormat": "square",
+                "badge": "Leichtes Hauptgericht",
+                "tags": [
+                  "Weisenfluher Küche",
+                  "Leichtes Hauptgericht"
+                ],
+                "description": "<p>Kleine weiche Knöpfle werden mit frischen Kräutern durchzogen, kurz in Nussbutter geschwenkt und mit wenigen gebratenen Waldpilzen angerichtet. Fein gehobelter gereifter Käse schmilzt nur leicht darüber. Die Butter duftet nussig; eine schwere Käsedecke oder dicke Rahmsoße würde den feinen Teig unnötig beschweren.</p><p>Die fleischlose Weisenfluher Hausportion ist kleiner als eine Schüssel für hungrige Reisende. Sie kommt frisch aus der Pfanne und eignet sich auch dazu, langsam neben einem Glas Weißwein gegessen zu werden. Die verwendeten Pilze wechseln mit der verlässlichen Tageslieferung, die sorgfältige Zubereitung bleibt dieselbe.</p>",
+                "origin": "Hausküche der Lachenden Nixe · Weisenfluher Art",
+                "usageTags": [
+                  "Kleine Portion",
+                  "Leichte Abendkarte"
+                ],
+                "priceNote": "Die beschriebenen Zutaten und Beilagen gehören zur kleinen Hausportion.",
+                "conditions": "Frisch nach Bestellung; nach verlässlicher Tageslieferung."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 320,
+                "descriptionTitle": "Zubereitung & Geschmack",
+                "featuresTitle": "Auf dem Teller",
+                "features": [
+                  "Zwei kleine ausgelöste Wachtelbrüstchen",
+                  "Dunkler Traubenjus & Pastinake",
+                  "Nur einmal im Monat · angekündigter Abend"
+                ],
+                "originTitle": "Herkunft",
+                "usageTitle": "Am Tisch",
+                "priceTitle": "Preis & Portion",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Verfügbarkeit",
+                "attributes": [],
+                "priceMin": "16,5",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "wachtel-traubenjus",
+                "category": "hauskarte",
+                "title": "Wachtelbrust an dunklem Traubenjus",
+                "subtitle": "Monatsgericht",
+                "unit": "Kleine Portion",
+                "image": "./assets/lachende-nixe/food/wachtel-traubenjus.png",
+                "imageFormat": "square",
+                "badge": "Monatsgericht",
+                "tags": [
+                  "Weisenfluher Küche",
+                  "Monatsgericht"
+                ],
+                "description": "<p>An einem angekündigten Abend im Monat bereitet die Küche ausgelöste Wachtelbrüstchen zu. Sie werden vorsichtig gebraten und mit einem dunklen, klar eingekochten Jus aus roten Trauben und etwas Weisenfluher Wein vollendet. Dazu gibt es einen kleinen Pastinakenfondant und wenige glasierte Trauben; die zarte Brust bleibt der Mittelpunkt.</p><p>Das Monatsgericht ist eine kleine besondere Bestellung, kein mehrgängiges Festmahl. Die begrenzte Lieferung wird vorher mit der Küche abgestimmt und am selben Abend aufgebraucht. Wer es probieren möchte, lässt seinen Wunsch rechtzeitig bei Johanna vermerken. Außerhalb dieses angekündigten Abends gehört es nicht zur täglichen Hauskarte.</p>",
+                "origin": "Hausküche der Lachenden Nixe · Weisenfluher Art",
+                "usageTags": [
+                  "Kleine Portion",
+                  "Ein Abend im Monat"
+                ],
+                "priceNote": "Die beschriebenen Zutaten und Beilagen gehören zur kleinen Hausportion.",
+                "conditions": "Nur an einem angekündigten Abend im Monat. Begrenzte Portionen; Vorbestellung bei Johanna."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 320,
+                "descriptionTitle": "Im Glas",
+                "featuresTitle": "Ausschank",
+                "features": [
+                  "Namentlich geführte Abfüllung",
+                  "Ein Glas enthält 0,15 l"
+                ],
+                "originTitle": "Herkunft",
+                "usageTitle": "Am Tisch",
+                "priceTitle": "Preis & Portion",
+                "priceFill": 35,
+                "priceOptions": [
+                  {
+                    "label": "Glas",
+                    "unit": "0,15 l",
+                    "price": "8"
+                  },
+                  {
+                    "label": "Flasche",
+                    "unit": "0,75 l",
+                    "price": "40"
+                  }
+                ],
+                "conditionsTitle": "Verfügbarkeit",
+                "attributes": [],
+                "priceMin": "8",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "weinlaub-1734",
+                "category": "weine",
+                "title": "Weinlaub · Jahrgang 1734",
+                "subtitle": "Weisenfluher Rotwein",
+                "unit": "Glas · 0,15 l",
+                "image": "./assets/lachende-nixe/drinks/weinlaub-1734.png",
+                "imageFormat": "square",
+                "badge": "Weisenfluh",
+                "tags": [
+                  "Weisenfluher Rotwein"
+                ],
+                "description": "<p>Ein trockener Rotwein des Hauses Weinlaub aus der Gegend des Ewigensees. Reife rote Frucht, zurückhaltendes Holz und eine ruhige, weiche Gerbstoffnote machen den jüngeren Jahrgang zum zugänglichen Begleiter des Abends. Die Nixe lässt die Flasche vor dem ersten Glas öffnen und nennt den Jahrgang ausdrücklich.</p>",
+                "origin": "Weisenfluh · Weinkeller der Lachenden Nixe",
+                "usageTags": [
+                  "Weisenfluher Rotwein"
+                ],
+                "priceNote": "Glas und ungeöffnete Flasche können getrennt bestellt werden.",
+                "conditions": "Nach Flaschenvorrat; gereifte Jahrgänge und Champagnia auf Anfrage."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 320,
+                "descriptionTitle": "Im Glas",
+                "featuresTitle": "Ausschank",
+                "features": [
+                  "Namentlich geführte Abfüllung",
+                  "Ein Glas enthält 0,15 l"
+                ],
+                "originTitle": "Herkunft",
+                "usageTitle": "Am Tisch",
+                "priceTitle": "Preis & Portion",
+                "priceFill": 35,
+                "priceOptions": [
+                  {
+                    "label": "Glas",
+                    "unit": "0,15 l",
+                    "price": "14"
+                  },
+                  {
+                    "label": "Flasche",
+                    "unit": "0,75 l",
+                    "price": "70"
+                  }
+                ],
+                "conditionsTitle": "Verfügbarkeit",
+                "attributes": [],
+                "priceMin": "14",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "weinlaub-1728",
+                "category": "weine",
+                "title": "Weinlaub · Jahrgang 1728",
+                "subtitle": "Gereifter Weisenfluher Rotwein",
+                "unit": "Glas · 0,15 l",
+                "image": "./assets/lachende-nixe/drinks/weinlaub-1728.png",
+                "imageFormat": "square",
+                "badge": "Weisenfluh",
+                "tags": [
+                  "Gereifter Weisenfluher Rotwein"
+                ],
+                "description": "<p>Der gereifte Weinlaub-Jahrgang wird für Gäste aufbewahrt, die einen stilleren, tieferen Wein suchen. Gedörrte dunkle Frucht, eine feine erdige Würze und weiche Tannine verlangen kein lautes Essen daneben. David führt die wenigen Flaschen einzeln im Kellerbuch; die alte Jahreszahl wird beim Einschenken genannt.</p>",
+                "origin": "Weisenfluh · Weinkeller der Lachenden Nixe",
+                "usageTags": [
+                  "Gereifter Weisenfluher Rotwein"
+                ],
+                "priceNote": "Glas und ungeöffnete Flasche können getrennt bestellt werden.",
+                "conditions": "Nach Flaschenvorrat; gereifte Jahrgänge und Champagnia auf Anfrage."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 320,
+                "descriptionTitle": "Im Glas",
+                "featuresTitle": "Ausschank",
+                "features": [
+                  "Namentlich geführte Abfüllung",
+                  "Ein Glas enthält 0,15 l"
+                ],
+                "originTitle": "Herkunft",
+                "usageTitle": "Am Tisch",
+                "priceTitle": "Preis & Portion",
+                "priceFill": 35,
+                "priceOptions": [
+                  {
+                    "label": "Glas",
+                    "unit": "0,15 l",
+                    "price": "6"
+                  },
+                  {
+                    "label": "Flasche",
+                    "unit": "0,75 l",
+                    "price": "30"
+                  }
+                ],
+                "conditionsTitle": "Verfügbarkeit",
+                "attributes": [],
+                "priceMin": "6",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "weissmann-weisswein",
+                "category": "weine",
+                "title": "Weissmann · Weißwein",
+                "subtitle": "Weisenfluher Weißwein",
+                "unit": "Glas · 0,15 l",
+                "image": "./assets/lachende-nixe/drinks/weissmann-weisswein.png",
+                "imageFormat": "square",
+                "badge": "Weisenfluh",
+                "tags": [
+                  "Weisenfluher Weißwein"
+                ],
+                "description": "<p>Ein heller, trockener Weißwein aus Weisenfluh mit frischer Säure, gelber Frucht und einer leisen Kräuternote. Er wird kühl und in kleinen Gläsern gereicht. Seine klare Art passt zu Fisch und Krebstörtchen, bleibt aber auch ohne eine Bestellung aus der Küche angenehm leicht.</p>",
+                "origin": "Weisenfluh · Weinkeller der Lachenden Nixe",
+                "usageTags": [
+                  "Weisenfluher Weißwein"
+                ],
+                "priceNote": "Glas und ungeöffnete Flasche können getrennt bestellt werden.",
+                "conditions": "Nach Flaschenvorrat; gereifte Jahrgänge und Champagnia auf Anfrage."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 320,
+                "descriptionTitle": "Im Glas",
+                "featuresTitle": "Ausschank",
+                "features": [
+                  "Namentlich geführte Abfüllung",
+                  "Ein Glas enthält 0,10 l"
+                ],
+                "originTitle": "Herkunft",
+                "usageTitle": "Am Tisch",
+                "priceTitle": "Preis & Portion",
+                "priceFill": 35,
+                "priceOptions": [
+                  {
+                    "label": "Glas",
+                    "unit": "0,10 l",
+                    "price": "18"
+                  },
+                  {
+                    "label": "Flasche",
+                    "unit": "0,75 l",
+                    "price": "90"
+                  }
+                ],
+                "conditionsTitle": "Verfügbarkeit",
+                "attributes": [],
+                "priceMin": "18",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "weissmann-champagnia",
+                "category": "weine",
+                "title": "Weissmann · Champagnia",
+                "subtitle": "Weisenfluher Schaumwein",
+                "unit": "Glas · 0,10 l",
+                "image": "./assets/lachende-nixe/drinks/weissmann-champagnia.png",
+                "imageFormat": "square",
+                "badge": "Weisenfluh",
+                "tags": [
+                  "Weisenfluher Schaumwein"
+                ],
+                "description": "<p>Der Champagnia von Weissmann steht für besondere Anlässe im Keller der Nixe. Feine Perlen, helle Frucht und ein sanfter Duft nach frischem Gebäck machen ihn lebendig, ohne ihn süß und schwer werden zu lassen. Johanna lässt ihn erst zum vereinbarten Anlass öffnen; der Ausschank aus einer geöffneten Flasche ist begrenzt.</p>",
+                "origin": "Weisenfluh · Weinkeller der Lachenden Nixe",
+                "usageTags": [
+                  "Weisenfluher Schaumwein"
+                ],
+                "priceNote": "Glas und ungeöffnete Flasche können getrennt bestellt werden.",
+                "conditions": "Nach Flaschenvorrat; gereifte Jahrgänge und Champagnia auf Anfrage."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 320,
+                "descriptionTitle": "Im Glas",
+                "featuresTitle": "Ausschank",
+                "features": [
+                  "Schlichter Wein aus der Hauskaraffe",
+                  "Ein Glas enthält 0,20 l"
+                ],
+                "originTitle": "Herkunft",
+                "usageTitle": "Am Tisch",
+                "priceTitle": "Preis & Portion",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Verfügbarkeit",
+                "attributes": [],
+                "priceMin": "0,8",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "tischwein-rot",
+                "category": "weine",
+                "title": "Roter Tischwein",
+                "subtitle": "Unbenannter Hauswein",
+                "unit": "Glas · 0,20 l",
+                "image": "./assets/lachende-nixe/drinks/tischwein-rot.png",
+                "imageFormat": "square",
+                "badge": "Tischwein",
+                "tags": [
+                  "Unbenannter Hauswein"
+                ],
+                "description": "<p>Ein schlichter trockener Rotwein ohne ausgezeichnetes Gut und ohne beworbenen Jahrgang. Er wird aus der geöffneten Hauskaraffe gereicht, ist fruchtig, geradlinig und deutlich günstiger als die geführten Weisenfluher Flaschen. Die Herkunft kann mit dem zugekauften Fass wechseln.</p>",
+                "origin": "Wechselnder Fassbezug · Hauskaraffe",
+                "usageTags": [
+                  "Unbenannter Hauswein"
+                ],
+                "priceNote": "Preis für ein Glas aus der geöffneten Hauskaraffe.",
+                "conditions": "Im gewöhnlichen Ausschank nach Fassvorrat."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 320,
+                "descriptionTitle": "Im Glas",
+                "featuresTitle": "Ausschank",
+                "features": [
+                  "Schlichter Wein aus der Hauskaraffe",
+                  "Ein Glas enthält 0,20 l"
+                ],
+                "originTitle": "Herkunft",
+                "usageTitle": "Am Tisch",
+                "priceTitle": "Preis & Portion",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Verfügbarkeit",
+                "attributes": [],
+                "priceMin": "0,9",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "tischwein-weiss",
+                "category": "weine",
+                "title": "Weißer Tischwein",
+                "subtitle": "Unbenannter Hauswein",
+                "unit": "Glas · 0,20 l",
+                "image": "./assets/lachende-nixe/drinks/tischwein-weiss.png",
+                "imageFormat": "square",
+                "badge": "Tischwein",
+                "tags": [
+                  "Unbenannter Hauswein"
+                ],
+                "description": "<p>Ein heller, unkomplizierter Weißwein für Gäste, die keinen besonderen Namen bestellen möchten. Die Hauskaraffe wird kühl gehalten; etwas frische Säure und eine milde Fruchtnote genügen. Es handelt sich um einfachen zugekauften Tischwein, nicht um eine umetikettierte Abfüllung von Weinlaub oder Weissmann.</p>",
+                "origin": "Wechselnder Fassbezug · Hauskaraffe",
+                "usageTags": [
+                  "Unbenannter Hauswein"
+                ],
+                "priceNote": "Preis für ein Glas aus der geöffneten Hauskaraffe.",
+                "conditions": "Im gewöhnlichen Ausschank nach Fassvorrat."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 320,
+                "descriptionTitle": "Im Glas",
+                "featuresTitle": "Ausschank",
+                "features": [
+                  "Schlichter Wein aus der Hauskaraffe",
+                  "Ein Glas enthält 0,20 l"
+                ],
+                "originTitle": "Herkunft",
+                "usageTitle": "Am Tisch",
+                "priceTitle": "Preis & Portion",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Verfügbarkeit",
+                "attributes": [],
+                "priceMin": "1,1",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "tischwein-rose",
+                "category": "weine",
+                "title": "Rosé-Tischwein",
+                "subtitle": "Unbenannter Hauswein",
+                "unit": "Glas · 0,20 l",
+                "image": "./assets/lachende-nixe/drinks/tischwein-rose.png",
+                "imageFormat": "square",
+                "badge": "Tischwein",
+                "tags": [
+                  "Unbenannter Hauswein"
+                ],
+                "description": "<p>Ein einfacher, leicht gekühlter Rosé aus dem gewöhnlichen Fassbezug der Nixe. Helle rote Frucht und eine zurückhaltende Säure machen ihn zum unaufwendigen Abendglas. Er besitzt weder einen geschützten Gutsnamen noch einen eigens geführten Jahrgang; sein Preis gilt für das einzeln ausgeschenkte Glas.</p>",
+                "origin": "Wechselnder Fassbezug · Hauskaraffe",
+                "usageTags": [
+                  "Unbenannter Hauswein"
+                ],
+                "priceNote": "Preis für ein Glas aus der geöffneten Hauskaraffe.",
+                "conditions": "Im gewöhnlichen Ausschank nach Fassvorrat."
+              },
+              {
+                "id": "teyrngarch-brauerzunft-bier-hellwacht",
+                "category": "importe",
+                "status": "available",
+                "title": "Hellwacht",
+                "subtitle": "Cenyrischer Import · Bier",
+                "image": "./public/assets/brewer-guilds/bier-hellwacht.png",
+                "imageFormat": "portrait",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 420,
+                "badge": "Hausbier",
+                "tags": [
+                  "Mildes Malz",
+                  "Golden",
+                  "Dezente Bittere"
+                ],
+                "descriptionTitle": "Charakter & Herkunft",
+                "description": "<p><strong>Hellwacht</strong> ist das klassische Aushängeschild der Teyrngarch Zunft – ein ehrliches, helles Bier mit goldener Farbe, klarer Note und stabiler Qualität. Es ist nicht ganz so edel wie die Goldhaube, aber nah dran: vollmundig, mild malzig, mit einer dezenten Bittere im Abgang. Ein Bier, das sich nicht versteckt, aber auch nicht aufdrängt.</p>\n<p>Es kostet etwas mehr als das übliche Tavernenzeug, dafür bekommt man ein sauberes Gebräu, das sowohl am Kamin als auch bei der Ratsversammlung bestehen kann. Wer keine Goldhaube will, aber trotzdem zeigen möchte, dass er Geschmack hat – greift zu Hellwacht.</p>",
+                "featuresTitle": "Steckbrief",
+                "features": [],
+                "originTitle": "Herkunft",
+                "origin": "Aberon · Sonnenküste · Königreich Cenyr",
+                "usageTitle": "Am Tisch",
+                "usageTags": [
+                  "Mildes Malz",
+                  "Golden",
+                  "Dezente Bittere"
+                ],
+                "priceTitle": "Ausschank im Haus",
+                "priceMin": "",
+                "priceMax": "",
+                "priceFill": 0,
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "priceOptions": [
+                  {
+                    "label": "Krug",
+                    "unit": "0,5 l",
+                    "price": "2,6"
+                  }
+                ],
+                "priceNote": "Ausschankgröße und Preis aus dem Sortiment: Die Teyrngarch Brauerzunft.",
+                "conditionsTitle": "Verfügbarkeit",
+                "conditions": "Nach Fass- und Flaschenvorrat. Das Haus nennt die derzeit geöffnete Abfüllung.",
+                "attributes": [],
+                "sealImage": "./public/assets/brewer-guilds/teyrngarch-brauzeichen.png"
+              },
+              {
+                "id": "teyrngarch-brauerzunft-bier-hopfgold",
+                "category": "importe",
+                "status": "available",
+                "title": "Hopfgold",
+                "subtitle": "Cenyrischer Import · Bier",
+                "image": "./public/assets/brewer-guilds/bier-hopfgold.png",
+                "imageFormat": "portrait",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 420,
+                "badge": "Hausbier",
+                "tags": [
+                  "Strohgold",
+                  "Frisch",
+                  "Milder Hopfen"
+                ],
+                "descriptionTitle": "Charakter & Herkunft",
+                "description": "<p><strong>Hopfgold</strong> ist ein sehr helles, leichtes Bier mit klarem Charakter und einfacher Seele. Gebraut für den Durst, nicht fürs Grübeln – mit strohgelber Farbe, milder Kohlensäure und einer dezenten Hopfennote. Kein großes Gewese, kein schwerer Nachgang – dafür frisch, unkompliziert und ehrlich.</p>\n<p>Wird gern in Tavernen ausgeschenkt, wo viel getrunken, aber wenig gezahlt wird. Passt gut zu geröstetem Brot, Wurst, oder einfach einem langen Gespräch am Schanktresen. Wer Goldhaube nicht jeden Tag zahlen will, greift zu Hopfgold – und bleibt oft dabei.</p>",
+                "featuresTitle": "Steckbrief",
+                "features": [],
+                "originTitle": "Herkunft",
+                "origin": "Aberon · Sonnenküste · Königreich Cenyr",
+                "usageTitle": "Am Tisch",
+                "usageTags": [
+                  "Taverne",
+                  "Wurst & Brot"
+                ],
+                "priceTitle": "Ausschank im Haus",
+                "priceMin": "",
+                "priceMax": "",
+                "priceFill": 0,
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "priceOptions": [
+                  {
+                    "label": "Krug",
+                    "unit": "0,5 l",
+                    "price": "1,3"
+                  }
+                ],
+                "priceNote": "Ausschankgröße und Preis aus dem Sortiment: Die Teyrngarch Brauerzunft.",
+                "conditionsTitle": "Verfügbarkeit",
+                "conditions": "Nach Fass- und Flaschenvorrat. Das Haus nennt die derzeit geöffnete Abfüllung.",
+                "attributes": [],
+                "sealImage": "./public/assets/brewer-guilds/teyrngarch-brauzeichen.png"
+              },
+              {
+                "id": "teyrngarch-brauerzunft-bier-sonnenglanz",
+                "category": "importe",
+                "status": "available",
+                "title": "Sonnenglanz",
+                "subtitle": "Cenyrischer Import · Bier",
+                "image": "./public/assets/brewer-guilds/bier-sonnenglanz.png",
+                "imageFormat": "portrait",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 420,
+                "badge": "Hausbier",
+                "tags": [
+                  "Kräuter",
+                  "Blütenhonig",
+                  "Leicht"
+                ],
+                "descriptionTitle": "Charakter & Herkunft",
+                "description": "<p><strong>Sonnenglanz</strong> ist ein leichtes, helles Bier mit feinem Kräuteraroma und einem Hauch von Blütenhonig. Es wird bevorzugt am Vormittag oder zu leichten Speisen getrunken – besonders beliebt bei Handwerkern, Kutschern und jenen, die zwar Durst, aber noch was vorhaben. Der milde Antrunk erinnert an frisches Gras und Kräuterwiese, gefolgt von einer sanften, fast süßlichen Note und einem kühlen, klaren Abgang.</p>\n<p>Ein ideales Bier für warme Tage, Brotzeitplatten oder das erste Krugerl beim Frühmarkt. Achtung: Trotz geringer Umdrehung trinkt es sich schneller leer, als man „noch eins“ sagen kann.</p>",
+                "featuresTitle": "Steckbrief",
+                "features": [],
+                "originTitle": "Herkunft",
+                "origin": "Aberon · Sonnenküste · Königreich Cenyr",
+                "usageTitle": "Am Tisch",
+                "usageTags": [
+                  "Frühmarkt",
+                  "Brotzeit"
+                ],
+                "priceTitle": "Ausschank im Haus",
+                "priceMin": "",
+                "priceMax": "",
+                "priceFill": 0,
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "priceOptions": [
+                  {
+                    "label": "Krug",
+                    "unit": "0,5 l",
+                    "price": "0,6"
+                  }
+                ],
+                "priceNote": "Ausschankgröße und Preis aus dem Sortiment: Die Teyrngarch Brauerzunft.",
+                "conditionsTitle": "Verfügbarkeit",
+                "conditions": "Nach Fass- und Flaschenvorrat. Das Haus nennt die derzeit geöffnete Abfüllung.",
+                "attributes": [],
+                "sealImage": "./public/assets/brewer-guilds/teyrngarch-brauzeichen.png"
+              },
+              {
+                "id": "penderyn-brauer-destillierzunft-bier-goldschuppen",
+                "category": "importe",
+                "status": "available",
+                "image": "./public/assets/brewer-guilds/bier-goldschuppen.png",
+                "imageFormat": "square",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 420,
+                "badge": "Hausbier",
+                "title": "Goldschuppen Bier",
+                "subtitle": "Cenyrischer Import · Bier",
+                "unit": "",
+                "tags": [
+                  "Helles Malz",
+                  "Vanille",
+                  "Eiche"
+                ],
+                "descriptionTitle": "Charakter & Herkunft",
+                "description": "<p>Das Goldschuppen ist das standardisierte Helle der Penderyn-Destillerie, entstanden aus nüchterner Notwendigkeit und ehrgeizigem Stolz. Wer Whiskey brennt, kann nicht zulassen, dass allein die Teyrngarcher Brauerzunft den Biermarkt dominiert. Also brachte die Gilde ihr eigenes Helles hervor – nicht als Nebenspielerei, sondern als ernstzunehmende Antwort.</p>\n<p>Gebraut wird es mit hellem Gerstenmalz, sauber geführter Gärung und einer bewusst milden Hopfung. Der eigentliche Kniff liegt jedoch in der Reifung: Ein Teil des Suds ruht für kurze Zeit in ehemaligen Penderyn-Whiskeyfässern, bevor er mit dem frischen Bier verschnitten wird. Kein schwerer Fassgeschmack, kein aufdringliches Brennfeuer – nur ein Hauch von Eichenwärme und feiner Vanillenote, der dem Bier Tiefe verleiht, ohne es zu beschweren.</p>\n<p>Gedacht ist es als Alltagsbier mit Anspruch. Leicht genug für lange Abende, charakterstark genug, um neben großen Namen zu bestehen. In städtischen Gegenden längst ein Exportschlager – Tavernen in ganz Cenyr führen es mittlerweile selbstverständlich.</p>\n<p>Im Glas schimmert es wie eine einzelne, sonnenbeschienene Drachenschuppe – warm golden, klar, mit feinem, cremigem Schaum. Der erste Duft ist frisch: Getreide, ein Hauch Blütenhonig, darunter fast unmerklich die leise Spur von Eiche.</p>\n<p>Der erste Schluck ist weich. Kein Angriff, kein Aufplustern. Es legt sich an den Gaumen wie warmer Spätsommer. Leicht süßliches Malz, dann eine dezente, saubere Hopfenbittere, die nicht sticht, sondern trägt. Und dann – fast unbewusst – dieser feine Whiskey-Schatten: Vanille, ein Hauch Karamell, eine trockene Holznote im Nachklang.</p>\n<p>Es will dich nicht beeindrucken. Es will dich entspannen.<br>Ein Bier, das dich sitzen lässt, statt dich aufzurütteln.<br>Ein ruhiger Atemzug eines Drachen – nicht sein Feuer.</p>",
+                "featuresTitle": "Steckbrief",
+                "features": [],
+                "originTitle": "Herkunft",
+                "origin": "Penderyn-Destillerie · Königreich Cenyr",
+                "usageTitle": "Am Tisch",
+                "usageTags": [
+                  "Tavernenabend",
+                  "Alltagsbier"
+                ],
+                "priceTitle": "Ausschank im Haus",
+                "priceFill": 0,
+                "priceMin": "",
+                "priceMax": "",
+                "priceOptions": [
+                  {
+                    "label": "Krug",
+                    "unit": "0,5 l",
+                    "price": "2"
+                  }
+                ],
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "priceNote": "Ausschankgröße und Preis aus dem Sortiment: Die Penderyn Brauer- & Destillierzunft.",
+                "conditionsTitle": "Verfügbarkeit",
+                "conditions": "Nach Fass- und Flaschenvorrat. Das Haus nennt die derzeit geöffnete Abfüllung.",
+                "attributesTitle": "Attribute",
+                "attributes": [],
+                "sealImage": "./public/assets/brewer-guilds/penderyn-brennzeichen.png"
+              },
+              {
+                "id": "penderyn-brauer-destillierzunft-whisky-rhagorol",
+                "category": "importe",
+                "status": "available",
+                "image": "./public/assets/brewer-guilds/whisky-rhagorol.png",
+                "imageFormat": "portrait",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 420,
+                "badge": "Hausabfüllung",
+                "title": "Penderyn · Rhagorol",
+                "subtitle": "Cenyrischer Import · Whisky",
+                "unit": "",
+                "tags": [
+                  "Apfel",
+                  "Stachelbeere",
+                  "Rauch"
+                ],
+                "descriptionTitle": "Charakter & Herkunft",
+                "description": "<p>Der <strong>Rhagorol</strong> ist kein gewöhnlicher Whiskey – er ist ein maskierter Gentleman, der sich mit einem süffisanten Grinsen in dein Herz stiehlt. Ein Tropfen, der nicht nur <strong>getrunken</strong>, sondern <strong>erlebt</strong> wird. Jede Facette seines Geschmacks ist wie der raffinierte Schliff eines Dolchs: präzise, verführerisch, und leicht gefährlich.</p>\n<p>Schon beim ersten Schluck tänzelt eine <strong>helle Säure</strong> auf der Zunge, frech wie ein Dieb im Morgengrauen. Die <strong>Apfelnoten</strong> eröffnen die Melodie, frisch und verspielt, doch dann – <strong>Stachelbeere.</strong> Eine Frucht mit Biss. Anders. Wild. Sie nimmt die Süße an der Hand und zerrt sie in dunklere Gassen. Hier wird nicht geschmeichelt. Hier wird verführt.</p>\n<p>Im Abgang bleibt ein <strong>rauchiger Schatten</strong> zurück, wie das Parfüm eines Spions, der längst verschwunden ist. Der Rhagorol gleicht einem Flirt mit Konsequenzen – aufregend, unvergesslich, ein wenig gefährlich.</p>\n<p><em>\"Rhagorol ist kein Whiskey für einen leichten Abend. Es ist der Drink für das letzte Wort, für das letzte Lächeln – bevor die Tür ins Dunkel aufschwingt.\"</em></p><p>Die vollständige Bezeichnung lautet <strong>Penderyn · Rhagorol</strong>: Penderyn nennt die Brennerei und Familientradition, Rhagorol diese Abfüllung. Der Zusatz bleibt dem Hausnamen auf dem Etikett untergeordnet.</p>",
+                "featuresTitle": "Steckbrief",
+                "features": [],
+                "originTitle": "Herkunft",
+                "origin": "Penderyn · Mathragon & Gwynthor · Königreich Cenyr",
+                "usageTitle": "Am Tisch",
+                "usageTags": [
+                  "Später Abend",
+                  "Würzige Speisen"
+                ],
+                "priceTitle": "Ausschank im Haus",
+                "priceFill": 0,
+                "priceMin": "",
+                "priceMax": "",
+                "priceOptions": [
+                  {
+                    "label": "Glas",
+                    "unit": "4 cl",
+                    "price": "6,5"
+                  }
+                ],
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "priceNote": "Ausschankgröße und Preis aus dem Sortiment: Die Penderyn Brauer- & Destillierzunft.",
+                "conditionsTitle": "Verfügbarkeit",
+                "conditions": "Nach Fass- und Flaschenvorrat. Das Haus nennt die derzeit geöffnete Abfüllung.",
+                "attributesTitle": "Attribute",
+                "attributes": [],
+                "sealImage": "./public/assets/brewer-guilds/penderyn-brennzeichen.png"
+              },
+              {
+                "id": "penderyn-brauer-destillierzunft-whisky-penderyn",
+                "category": "importe",
+                "status": "available",
+                "image": "./public/assets/brewer-guilds/whisky-penderyn.png",
+                "imageFormat": "portrait",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 420,
+                "badge": "Hausabfüllung",
+                "title": "Penderyn",
+                "subtitle": "Cenyrischer Import · Whisky",
+                "unit": "",
+                "tags": [
+                  "Apfel & Birne",
+                  "Schneebeere",
+                  "Edler Rauch"
+                ],
+                "descriptionTitle": "Charakter & Herkunft",
+                "description": "<p>Ein Schluck <strong>Penderyn Whiskey</strong> ist wie das erste Kapitel eines alten Liedes, gesungen am Feuer der Legenden. Geboren aus den Reben des Hochlands und destilliert in den Hallen der <strong>Penderyn-Brennerei</strong>, erhebt sich dieser Whiskey wie ein <strong>ritterlicher Held</strong> – stolz, tiefgründig, unerschrocken.</p>\n<p>Sein <strong>Geschmacksprofil</strong> eröffnet mit <strong>klaren Noten von Apfel und Birne</strong>, getragen von einer <strong>sanften Süße der Schneebeere</strong> – eine seltene Frucht, Symbol der Reinheit und Verbundenheit mit dem alten Land. Doch was diesen Tropfen zum Epos erhebt, sind seine <strong>rauchigen Schatten</strong>, die durch jeden Schluck ziehen wie ein Nebel über dem Schlachtfeld – <em>nicht überwältigend, sondern edel und getragen</em>.</p>\n<p>Der Whiskey selbst glänzt <strong>bernsteinrot</strong>, warm wie ein Schwertgriff, das im Sonnenlicht ruht. Im Abgang bleibt er <strong>edel, würzig und seelenruhig</strong>, wie ein alter Krieger, der seine Geschichte erzählt, ohne sie aufzudrängen.</p>\n<p><em>\"Penderyn ist kein Getränk. Es ist ein Schwur in flüssiger Form.\"</em></p><p>Der Hauptwhisky trägt den Namen seiner Brennerei: <strong>Penderyn</strong>. Hausname und Herkunft stehen auf dem Etikett an erster Stelle.</p>",
+                "featuresTitle": "Steckbrief",
+                "features": [],
+                "originTitle": "Herkunft",
+                "origin": "Penderyn · Mathragon & Gwynthor · Königreich Cenyr",
+                "usageTitle": "Am Tisch",
+                "usageTags": [
+                  "Festtafel",
+                  "Ruhiger Abend"
+                ],
+                "priceTitle": "Ausschank im Haus",
+                "priceFill": 0,
+                "priceMin": "",
+                "priceMax": "",
+                "priceOptions": [
+                  {
+                    "label": "Glas",
+                    "unit": "4 cl",
+                    "price": "12"
+                  }
+                ],
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "priceNote": "Ausschankgröße und Preis aus dem Sortiment: Die Penderyn Brauer- & Destillierzunft.",
+                "conditionsTitle": "Verfügbarkeit",
+                "conditions": "Nach Fass- und Flaschenvorrat. Das Haus nennt die derzeit geöffnete Abfüllung.",
+                "attributesTitle": "Attribute",
+                "attributes": [],
+                "sealImage": "./public/assets/brewer-guilds/penderyn-brennzeichen.png"
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 320,
+                "descriptionTitle": "Zubereitung & Geschmack",
+                "featuresTitle": "Auf dem Teller",
+                "features": [],
+                "originTitle": "Herkunft",
+                "usageTitle": "Am Tisch",
+                "priceTitle": "Preis & Portion",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Verfügbarkeit",
+                "attributes": [],
+                "priceMin": "0,5",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "standard-01",
+                "category": "speisen",
+                "title": "Eintopf des Tages",
+                "subtitle": "Speise",
+                "unit": "Pro Schüssel",
+                "image": "https://i.imgur.com/V5An4nq.png",
+                "imageFormat": "square",
+                "badge": "Aus der Hausküche",
+                "tags": [
+                  "Standardküche"
+                ],
+                "description": "<p>Ein kräftiger, sättigender Eintopf auf Basis einer dicken Brühe, langsam gekocht mit grob geschnittenem Wurzelgemüse wie Karotten, Pastinaken und Sellerie. Linsen sorgen für Biss und Sämigkeit, während kleine, angebratene Speckwürfel dem Gericht eine herzhafte Note verleihen. Einfach, nahrhaft und ideal nach einem langen Tag auf der Straße. Wird heiß serviert in einer hölzernen Schale – Löffel inklusive.</p><p>Auf Wunsch bereitet die Küche auch diese einfache Hausportion zu. Sie gehört zur gewöhnlichen Versorgung der Herberge; die kleine Weisenfluher Abendkarte wird gesondert geführt. Bestellte Beilagen und weitere Portionen kommen einzeln auf die Rechnung.</p>",
+                "origin": "Die Lachende Nixe · Gwynthor",
+                "usageTags": [
+                  "Pro Schüssel"
+                ],
+                "priceNote": "",
+                "conditions": "Nach Tagesvorrat."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 320,
+                "descriptionTitle": "Zubereitung & Geschmack",
+                "featuresTitle": "Auf dem Teller",
+                "features": [],
+                "originTitle": "Herkunft",
+                "usageTitle": "Am Tisch",
+                "priceTitle": "Preis & Portion",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Verfügbarkeit",
+                "attributes": [],
+                "priceMin": "4",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "standard-02",
+                "category": "speisen",
+                "title": "Geröstetes Fleisch",
+                "subtitle": "Speise",
+                "unit": "Pro Teller",
+                "image": "https://i.imgur.com/2K4MCGF.png",
+                "imageFormat": "square",
+                "badge": "Aus der Hausküche",
+                "tags": [
+                  "Standardküche"
+                ],
+                "description": "<p>Saftiges Fleischstück, über offenem Feuer langsam gegart, bis es außen eine kräftige Röstaroma-Kruste trägt und innen zart bleibt. Dazu werden geschmorte Zwiebeln gereicht, in Fett und eigenem Saft karamellisiert. Begleitet wird das Gericht von zwei Scheiben geröstetem Bauernbrot – schlicht, sättigend, und ideal für hungrige Reisende. Serviert auf einem flachen Holzbrett, direkt aus der Pfanne.</p><p>Auf Wunsch bereitet die Küche auch diese einfache Hausportion zu. Sie gehört zur gewöhnlichen Versorgung der Herberge; die kleine Weisenfluher Abendkarte wird gesondert geführt. Bestellte Beilagen und weitere Portionen kommen einzeln auf die Rechnung.</p>",
+                "origin": "Die Lachende Nixe · Gwynthor",
+                "usageTags": [
+                  "Pro Teller"
+                ],
+                "priceNote": "",
+                "conditions": "Nach Tagesvorrat."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 320,
+                "descriptionTitle": "Zubereitung & Geschmack",
+                "featuresTitle": "Auf dem Teller",
+                "features": [],
+                "originTitle": "Herkunft",
+                "usageTitle": "Am Tisch",
+                "priceTitle": "Preis & Portion",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Verfügbarkeit",
+                "attributes": [],
+                "priceMin": "0,1",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "standard-03",
+                "category": "speisen",
+                "title": "Hafergrütze mit Schmalz",
+                "subtitle": "Speise",
+                "unit": "Pro Schüssel",
+                "image": "https://i.imgur.com/ZlFrksC.png",
+                "imageFormat": "square",
+                "badge": "Aus der Hausküche",
+                "tags": [
+                  "Standardküche"
+                ],
+                "description": "<p>Grob geschroteter Hafer, langsam in Wasser und einer Prise Salz zu einer dickflüssigen Grütze aufgekocht. Obenauf ein kleiner Klecks Schmalz, der beim Servieren langsam zerläuft und dem Gericht eine herzhafte Tiefe verleiht. Einfaches, wärmendes Mahl, wie es in Hütten, Lagern und Tavernen gleichermaßen geschätzt wird. Deftig, nahrhaft – und genau richtig für den leeren Magen.</p><p>Auf Wunsch bereitet die Küche auch diese einfache Hausportion zu. Sie gehört zur gewöhnlichen Versorgung der Herberge; die kleine Weisenfluher Abendkarte wird gesondert geführt. Bestellte Beilagen und weitere Portionen kommen einzeln auf die Rechnung.</p>",
+                "origin": "Die Lachende Nixe · Gwynthor",
+                "usageTags": [
+                  "Pro Schüssel"
+                ],
+                "priceNote": "",
+                "conditions": "Nach Tagesvorrat."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 320,
+                "descriptionTitle": "Zubereitung & Geschmack",
+                "featuresTitle": "Auf dem Teller",
+                "features": [],
+                "originTitle": "Herkunft",
+                "usageTitle": "Am Tisch",
+                "priceTitle": "Preis & Portion",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Verfügbarkeit",
+                "attributes": [],
+                "priceMin": "1,1",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "standard-04",
+                "category": "speisen",
+                "title": "Blutwurst & Kraut​",
+                "subtitle": "Speise",
+                "unit": "Pro Teller",
+                "image": "https://i.imgur.com/508vYQa.png",
+                "imageFormat": "landscape",
+                "badge": "Aus der Hausküche",
+                "tags": [
+                  "Standardküche"
+                ],
+                "description": "<p>Zwei dicke Scheiben Blutwurst, in der Pfanne scharf angebraten, bis die Haut knusprig aufplatzt und das Innere weich und würzig bleibt. Dazu wird heißes Sauerkraut gereicht – mit Kümmel, Lorbeer und einem Hauch Apfelessig verfeinert. Ein deftiges Gericht für raue Tage, serviert auf einem flachen Teller mit dunklem Brot auf Wunsch. Rustikal, kräftig und beliebt bei jenen, die’s ehrlich mögen.</p><p>Auf Wunsch bereitet die Küche auch diese einfache Hausportion zu. Sie gehört zur gewöhnlichen Versorgung der Herberge; die kleine Weisenfluher Abendkarte wird gesondert geführt. Bestellte Beilagen und weitere Portionen kommen einzeln auf die Rechnung.</p>",
+                "origin": "Die Lachende Nixe · Gwynthor",
+                "usageTags": [
+                  "Pro Teller"
+                ],
+                "priceNote": "",
+                "conditions": "Nach Tagesvorrat."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 320,
+                "descriptionTitle": "Zubereitung & Geschmack",
+                "featuresTitle": "Auf dem Teller",
+                "features": [],
+                "originTitle": "Herkunft",
+                "usageTitle": "Am Tisch",
+                "priceTitle": "Preis & Portion",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Verfügbarkeit",
+                "attributes": [],
+                "priceMin": "1,8",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "standard-05",
+                "category": "speisen",
+                "title": "Gebackenes Huhn",
+                "subtitle": "Speise",
+                "unit": "Pro Teller",
+                "image": "https://i.imgur.com/JfVbk6H.png",
+                "imageFormat": "square",
+                "badge": "Aus der Hausküche",
+                "tags": [
+                  "Standardküche"
+                ],
+                "description": "<p>Ein halbes Huhn, über offener Glut knusprig gebacken, mit goldbrauner Haut und kräftiger Würzung. Das Fleisch ist saftig, leicht rauchig im Geschmack, und wird begleitet von zwei dicken Scheiben Bauernbrot sowie einer Portion Hartkäse, grob geschnitten. Eine herzhafte, reichhaltige Mahlzeit – einfach, ehrlich und sättigend.</p><p>Auf Wunsch bereitet die Küche auch diese einfache Hausportion zu. Sie gehört zur gewöhnlichen Versorgung der Herberge; die kleine Weisenfluher Abendkarte wird gesondert geführt. Bestellte Beilagen und weitere Portionen kommen einzeln auf die Rechnung.</p>",
+                "origin": "Die Lachende Nixe · Gwynthor",
+                "usageTags": [
+                  "Pro Teller"
+                ],
+                "priceNote": "",
+                "conditions": "Saisonal und nach Lieferung; bitte beim Empfang erfragen."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 320,
+                "descriptionTitle": "Zubereitung & Geschmack",
+                "featuresTitle": "Auf dem Teller",
+                "features": [],
+                "originTitle": "Herkunft",
+                "usageTitle": "Am Tisch",
+                "priceTitle": "Preis & Portion",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Verfügbarkeit",
+                "attributes": [],
+                "priceMin": "0,85",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "standard-06",
+                "category": "speisen",
+                "title": "Bohneneintopf",
+                "subtitle": "Speise",
+                "unit": "Pro Schüssel",
+                "image": "https://i.imgur.com/Qc6RIks.png",
+                "imageFormat": "square",
+                "badge": "Aus der Hausküche",
+                "tags": [
+                  "Standardküche"
+                ],
+                "description": "<p>Ein sämiger Eintopf aus weißen und braunen Bohnen, langsam geschmort mit fein gehacktem Lauch, Thymian und einer ordentlichen Portion gerösteter Speckwürfel. Die Brühe ist kräftig gewürzt, leicht rauchig im Geschmack und sättigend bis zum letzten Löffel. Serviert wird das Gericht mit zwei dicken Scheiben Bauernbrot – perfekt zum Tunken und Sattwerden. Herzhaft, deftig und ideal für kühle Abende.</p><p>Auf Wunsch bereitet die Küche auch diese einfache Hausportion zu. Sie gehört zur gewöhnlichen Versorgung der Herberge; die kleine Weisenfluher Abendkarte wird gesondert geführt. Bestellte Beilagen und weitere Portionen kommen einzeln auf die Rechnung.</p>",
+                "origin": "Die Lachende Nixe · Gwynthor",
+                "usageTags": [
+                  "Pro Schüssel"
+                ],
+                "priceNote": "",
+                "conditions": "Nach Tagesvorrat."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 320,
+                "descriptionTitle": "Zubereitung & Geschmack",
+                "featuresTitle": "Auf dem Teller",
+                "features": [],
+                "originTitle": "Herkunft",
+                "usageTitle": "Am Tisch",
+                "priceTitle": "Preis & Portion",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Verfügbarkeit",
+                "attributes": [],
+                "priceMin": "0,15",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "standard-07",
+                "category": "speisen",
+                "title": "Geröstetes Bauernbrot",
+                "subtitle": "Speise",
+                "unit": "Pro Teller",
+                "image": "https://i.imgur.com/nZWyQPa.png",
+                "imageFormat": "square",
+                "badge": "Aus der Hausküche",
+                "tags": [
+                  "Standardküche"
+                ],
+                "description": "<p>Zwei dicke Scheiben kräftiges Landbrot, über dem Feuer angeröstet, bis die Kruste leicht bricht und das Innere warm und weich bleibt. Je nach Wunsch bestrichen mit herzhaftem Salzschmalz oder aromatischem Knoblauchfett. Eine einfache, aber beliebte Beilage – perfekt zu einem Krug Bier oder als Stärkung zwischendurch. Rustikal, würzig, sättigend.</p><p>Auf Wunsch bereitet die Küche auch diese einfache Hausportion zu. Sie gehört zur gewöhnlichen Versorgung der Herberge; die kleine Weisenfluher Abendkarte wird gesondert geführt. Bestellte Beilagen und weitere Portionen kommen einzeln auf die Rechnung.</p>",
+                "origin": "Die Lachende Nixe · Gwynthor",
+                "usageTags": [
+                  "Pro Teller"
+                ],
+                "priceNote": "",
+                "conditions": "Nach Tagesvorrat."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 320,
+                "descriptionTitle": "Zubereitung & Geschmack",
+                "featuresTitle": "Auf dem Teller",
+                "features": [],
+                "originTitle": "Herkunft",
+                "usageTitle": "Am Tisch",
+                "priceTitle": "Preis & Portion",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Verfügbarkeit",
+                "attributes": [],
+                "priceMin": "0,5",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "standard-08",
+                "category": "speisen",
+                "title": "Frühstücksteller",
+                "subtitle": "Speise",
+                "unit": "Pro Teller",
+                "image": "https://i.imgur.com/wgQVjia.png",
+                "imageFormat": "square",
+                "badge": "Aus der Hausküche",
+                "tags": [
+                  "Standardküche"
+                ],
+                "description": "<p>Ein deftiger Start in den Tag: knusprig gebratene Speckstreifen, ein frisch gebratenes Spiegelei mit leichtem Salzrand und gereifter Hartkäse, in dicken Streifen serviert. Einfach, nahrhaft und beliebt bei Reisenden und Handwerkern gleichermaßen.</p><p>Brot wird auf Wunsch separat gereicht und ist nicht im Preis enthalten.</p><p>Auf Wunsch bereitet die Küche auch diese einfache Hausportion zu. Sie gehört zur gewöhnlichen Versorgung der Herberge; die kleine Weisenfluher Abendkarte wird gesondert geführt. Bestellte Beilagen und weitere Portionen kommen einzeln auf die Rechnung.</p>",
+                "origin": "Die Lachende Nixe · Gwynthor",
+                "usageTags": [
+                  "Pro Teller"
+                ],
+                "priceNote": "",
+                "conditions": "Nach Tagesvorrat."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 320,
+                "descriptionTitle": "Zubereitung & Geschmack",
+                "featuresTitle": "Auf dem Teller",
+                "features": [],
+                "originTitle": "Herkunft",
+                "usageTitle": "Am Tisch",
+                "priceTitle": "Preis & Portion",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Verfügbarkeit",
+                "attributes": [],
+                "priceMin": "2",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "standard-09",
+                "category": "speisen",
+                "title": "Räucherfleisch",
+                "subtitle": "Speise",
+                "unit": "Pro Teller",
+                "image": "https://i.imgur.com/c2XjfdM.png",
+                "imageFormat": "square",
+                "badge": "Aus der Hausküche",
+                "tags": [
+                  "Standardküche"
+                ],
+                "description": "<p>Dünn geschnittenes Räucherfleisch, kalt serviert, mit kräftigem, würzigem Aroma aus Buchenrauch und Salz. Begleitet wird die Platte von grünen Bohnen, zwei halbierten Zwiebeln und ein paar dünnen Brotscheiben. Eine herzhafte, einfache Speise – beliebt bei Jägern, Händlern und jedem, der’s kalt, deftig und ehrlich mag. Ideal zu einem Krug hellen Bieres oder Apfelmost.</p><p>Auf Wunsch bereitet die Küche auch diese einfache Hausportion zu. Sie gehört zur gewöhnlichen Versorgung der Herberge; die kleine Weisenfluher Abendkarte wird gesondert geführt. Bestellte Beilagen und weitere Portionen kommen einzeln auf die Rechnung.</p>",
+                "origin": "Die Lachende Nixe · Gwynthor",
+                "usageTags": [
+                  "Pro Teller"
+                ],
+                "priceNote": "",
+                "conditions": "Nach Tagesvorrat."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 320,
+                "descriptionTitle": "Zubereitung & Geschmack",
+                "featuresTitle": "Auf dem Teller",
+                "features": [],
+                "originTitle": "Herkunft",
+                "usageTitle": "Am Tisch",
+                "priceTitle": "Preis & Portion",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Verfügbarkeit",
+                "attributes": [],
+                "priceMin": "3",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "standard-10",
+                "category": "speisen",
+                "title": "Räucherfisch",
+                "subtitle": "Speise",
+                "unit": "Pro Teller",
+                "image": "https://i.imgur.com/14g3XgA.png",
+                "imageFormat": "square",
+                "badge": "Aus der Hausküche",
+                "tags": [
+                  "Standardküche"
+                ],
+                "description": "<p>Ein ganzer Räucherfisch, über Buchenholz gegart, mit zartem Fleisch und feinem, salzigem Rauchgeschmack. Serviert mit leicht gedämpftem Lauch, einer Handvoll grüner Bohnen und einem Klecks hausgemachter Kräutersauce aus Dill, Petersilie und Schnittlauch. Eine fein gewürzte, aber bodenständige Mahlzeit – nahrhaft, frisch und besonders in Küstennähe sehr beliebt.</p><p>Auf Wunsch bereitet die Küche auch diese einfache Hausportion zu. Sie gehört zur gewöhnlichen Versorgung der Herberge; die kleine Weisenfluher Abendkarte wird gesondert geführt. Bestellte Beilagen und weitere Portionen kommen einzeln auf die Rechnung.</p>",
+                "origin": "Die Lachende Nixe · Gwynthor",
+                "usageTags": [
+                  "Pro Teller"
+                ],
+                "priceNote": "",
+                "conditions": "Nach Tagesvorrat."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 320,
+                "descriptionTitle": "Zubereitung & Geschmack",
+                "featuresTitle": "Auf dem Teller",
+                "features": [],
+                "originTitle": "Herkunft",
+                "usageTitle": "Am Tisch",
+                "priceTitle": "Preis & Portion",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Verfügbarkeit",
+                "attributes": [],
+                "priceMin": "0,3",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "standard-11",
+                "category": "speisen",
+                "title": "Sauergemüse",
+                "subtitle": "Speise",
+                "unit": "Pro Teller",
+                "image": "https://i.imgur.com/1sLGAIE.png",
+                "imageFormat": "square",
+                "badge": "Aus der Hausküche",
+                "tags": [
+                  "Standardküche"
+                ],
+                "description": "<p>Eine bunte Auswahl an eingelegten Gemüsen: Gurkenscheiben, Karottenstreifen, rote Rüben und Zwiebelringe – alles in würziger Lake fermentiert, leicht sauer und kräftig im Geschmack. Gereicht mit einem Viertel Laib grobem Bauernbrot, das den kräftigen Essigton ausgleicht. Beliebt als kleine Mahlzeit oder Beilage zu deftigem Fleisch. Frisch, haltbar und voller Geschmack.</p><p>Auf Wunsch bereitet die Küche auch diese einfache Hausportion zu. Sie gehört zur gewöhnlichen Versorgung der Herberge; die kleine Weisenfluher Abendkarte wird gesondert geführt. Bestellte Beilagen und weitere Portionen kommen einzeln auf die Rechnung.</p>",
+                "origin": "Die Lachende Nixe · Gwynthor",
+                "usageTags": [
+                  "Pro Teller"
+                ],
+                "priceNote": "",
+                "conditions": "Nach Tagesvorrat."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 320,
+                "descriptionTitle": "Zubereitung & Geschmack",
+                "featuresTitle": "Auf dem Teller",
+                "features": [],
+                "originTitle": "Herkunft",
+                "usageTitle": "Am Tisch",
+                "priceTitle": "Preis & Portion",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Verfügbarkeit",
+                "attributes": [],
+                "priceMin": "0,15",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "standard-12",
+                "category": "getranke",
+                "title": "Dünnes gewä. Bier",
+                "subtitle": "Alkoholisches Getränk",
+                "unit": "Pro Krug",
+                "image": "https://i.imgur.com/mGrMfTt.png",
+                "imageFormat": "portrait",
+                "badge": "Am Tresen",
+                "tags": [
+                  "Standardausschank"
+                ],
+                "description": "<p>Ein helles, stark verdünntes Gerstenbier, schwach im Geschmack, mit kaum wahrnehmbarem Hopfen. Günstig, leicht trüb und nur leicht alkoholisch – oft ausgeschenkt an Tagelöhner, Knappen oder Reisende mit wenig Münze. Mehr Durstlöscher als Genussmittel, dafür aber bekömmlich und sicherer als Brunnenwasser. Wird meist in einem groben Holzkrug serviert, ohne Schaumkrone.</p><p>Dieser Trunk gehört zum gewöhnlichen Ausschank des Hauses. Die angegebene Portion wird einzeln gereicht; besondere Herkunft, Jahrgänge und Zunftabfüllungen nennt die Weinkarte.</p>",
+                "origin": "Die Lachende Nixe · Gwynthor",
+                "usageTags": [
+                  "Pro Krug"
+                ],
+                "priceNote": "",
+                "conditions": "Nach Tagesvorrat."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 320,
+                "descriptionTitle": "Zubereitung & Geschmack",
+                "featuresTitle": "Auf dem Teller",
+                "features": [],
+                "originTitle": "Herkunft",
+                "usageTitle": "Am Tisch",
+                "priceTitle": "Preis & Portion",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Verfügbarkeit",
+                "attributes": [],
+                "priceMin": "0,5",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "standard-13",
+                "category": "getranke",
+                "title": "Einfaches Starkbier",
+                "subtitle": "Alkoholisches Getränk",
+                "unit": "Pro Krug",
+                "image": "https://i.imgur.com/yh4qIxn.png",
+                "imageFormat": "portrait",
+                "badge": "Am Tresen",
+                "tags": [
+                  "Standardausschank"
+                ],
+                "description": "<p>Ein dunkles, malzreiches Bier mit kräftigem Körper und leicht bitterer Note. Hergestellt aus geröstetem Getreide, mit einem Hauch Karamell und einer soliden Hopfenbasis. Wird kühl ausgeschenkt, mit dichter Schaumkrone im eisernen Krug. Beliebt bei Söldnern, Handwerkern und allen, die nach einem langen Tag etwas brauchen, das spürbar nachwirkt. Stark, sättigend und ehrlich gebraut – ohne Schnörkel, ohne Gnade.</p><p>Dieser Trunk gehört zum gewöhnlichen Ausschank des Hauses. Die angegebene Portion wird einzeln gereicht; besondere Herkunft, Jahrgänge und Zunftabfüllungen nennt die Weinkarte.</p>",
+                "origin": "Die Lachende Nixe · Gwynthor",
+                "usageTags": [
+                  "Pro Krug"
+                ],
+                "priceNote": "",
+                "conditions": "Nach Tagesvorrat."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 320,
+                "descriptionTitle": "Zubereitung & Geschmack",
+                "featuresTitle": "Auf dem Teller",
+                "features": [],
+                "originTitle": "Herkunft",
+                "usageTitle": "Am Tisch",
+                "priceTitle": "Preis & Portion",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Verfügbarkeit",
+                "attributes": [],
+                "priceMin": "1",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "standard-14",
+                "category": "getranke",
+                "title": "Schlichter Honigmet",
+                "subtitle": "Alkoholisches Getränk",
+                "unit": "Pro Krug",
+                "image": "https://i.imgur.com/jvPNRu8.png",
+                "imageFormat": "portrait",
+                "badge": "Am Tresen",
+                "tags": [
+                  "Standardausschank"
+                ],
+                "description": "<p>Ein goldener, klarer Met, süß im Geschmack, mit einem weichen Nachhall von Blütenhonig und einem Hauch Würze. Hergestellt aus einfachen Zutaten, ohne Firlefanz – doch mit Herz. Serviert im großen Humpen, leicht überschäumend, trinkt sich dieser Met wie ein Gruß aus sonnigen Tagen. Beliebt bei Bauern, Reisenden und solchen, die sich nach einem ehrlichen Tropfen sehnen, der Körper und Geist erwärmt.</p><p>Dieser Trunk gehört zum gewöhnlichen Ausschank des Hauses. Die angegebene Portion wird einzeln gereicht; besondere Herkunft, Jahrgänge und Zunftabfüllungen nennt die Weinkarte.</p>",
+                "origin": "Die Lachende Nixe · Gwynthor",
+                "usageTags": [
+                  "Pro Krug"
+                ],
+                "priceNote": "",
+                "conditions": "Nach Tagesvorrat."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 320,
+                "descriptionTitle": "Zubereitung & Geschmack",
+                "featuresTitle": "Auf dem Teller",
+                "features": [],
+                "originTitle": "Herkunft",
+                "usageTitle": "Am Tisch",
+                "priceTitle": "Preis & Portion",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Verfügbarkeit",
+                "attributes": [],
+                "priceMin": "0,6",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "standard-15",
+                "category": "getranke",
+                "title": "Apfelwein",
+                "subtitle": "Alkoholisches Getränk",
+                "unit": "Pro Glas",
+                "image": "https://i.imgur.com/oFEsIDl.png",
+                "imageFormat": "portrait",
+                "badge": "Am Tresen",
+                "tags": [
+                  "Standardausschank"
+                ],
+                "description": "<p>Ein klarer, herber Wein aus Äpfeln, wie ihn fast jede Region auf ihre eigene Weise keltert. Frisch gepresst, vergoren und in hölzernen Fässern gereift – dieser Trunk bringt den Geschmack von Herbstlaub, Obstgärten und alten Landwegen ins Glas. Leicht prickelnd auf der Zunge, dabei angenehm trocken. Getrunken aus einem einfachen Holzbecher, ist er der treue Begleiter für stille Abende wie auch für laute Tavernenrunden.</p><p>Dieser Trunk gehört zum gewöhnlichen Ausschank des Hauses. Die angegebene Portion wird einzeln gereicht; besondere Herkunft, Jahrgänge und Zunftabfüllungen nennt die Weinkarte.</p>",
+                "origin": "Die Lachende Nixe · Gwynthor",
+                "usageTags": [
+                  "Pro Glas"
+                ],
+                "priceNote": "",
+                "conditions": "Nach Tagesvorrat."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 320,
+                "descriptionTitle": "Zubereitung & Geschmack",
+                "featuresTitle": "Auf dem Teller",
+                "features": [],
+                "originTitle": "Herkunft",
+                "usageTitle": "Am Tisch",
+                "priceTitle": "Preis & Portion",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Verfügbarkeit",
+                "attributes": [],
+                "priceMin": "0,03",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "standard-16",
+                "category": "getranke",
+                "title": "Wasser",
+                "subtitle": "Wasser",
+                "unit": "Pro Becher",
+                "image": "https://i.imgur.com/AaDqMUO.png",
+                "imageFormat": "portrait",
+                "badge": "Am Tresen",
+                "tags": [
+                  "Standardausschank"
+                ],
+                "description": "<p>Klar, kühl und still – Wasser ist das schlichteste und zugleich kostbarste Getränk. In Krügen aus Holz oder Ton serviert, stammt es meist aus Brunnen, Quellen oder Regenfässern. In manchen Gegenden mit einem Hauch von Eisen oder Kalk im Geschmack, andernorts so frisch, als käme es direkt vom Gebirgsbach. Es löscht den Durst ohne Umstände – ehrlich, rein und unprätentiös.</p><p>Dieser Trunk gehört zum gewöhnlichen Ausschank des Hauses. Die angegebene Portion wird einzeln gereicht; besondere Herkunft, Jahrgänge und Zunftabfüllungen nennt die Weinkarte.</p>",
+                "origin": "Die Lachende Nixe · Gwynthor",
+                "usageTags": [
+                  "Pro Becher"
+                ],
+                "priceNote": "",
+                "conditions": "Nach Tagesvorrat."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 320,
+                "descriptionTitle": "Zubereitung & Geschmack",
+                "featuresTitle": "Auf dem Teller",
+                "features": [],
+                "originTitle": "Herkunft",
+                "usageTitle": "Am Tisch",
+                "priceTitle": "Preis & Portion",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Verfügbarkeit",
+                "attributes": [],
+                "priceMin": "1",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "standard-17",
+                "category": "getranke",
+                "title": "Klosterbier",
+                "subtitle": "Alkoholisches Getränk",
+                "unit": "Pro Krug",
+                "image": "https://i.imgur.com/ZIRrEhf.png",
+                "imageFormat": "portrait",
+                "badge": "Am Tresen",
+                "tags": [
+                  "Standardausschank"
+                ],
+                "description": "<p>Klosterbier stammt aus den nächstgelegenen Klöstern, in denen Mönche nicht nur beten, sondern auch brauen. Oft in kleinen Mengen hergestellt, landet es in regionalen Tavernen und Schankhäusern, wo es als ehrliches, kräftiges Bier geschätzt wird. Es ist meist günstiger als das Produkt großer Brauereien, aber deutlich sauberer und runder im Geschmack als das wässrige Kellerbräu einfacher Wirte.</p><p>Mitten zwischen Gebet und Handwerk gebraut, hat Klosterbier einen bodenständigen Ruf: schlicht, nahrhaft und überraschend beständig. Kein Festbier – aber ein Bier, das man trinken kann, ohne zu fluchen.</p><p>Dieser Trunk gehört zum gewöhnlichen Ausschank des Hauses. Die angegebene Portion wird einzeln gereicht; besondere Herkunft, Jahrgänge und Zunftabfüllungen nennt die Weinkarte.</p>",
+                "origin": "Die Lachende Nixe · Gwynthor",
+                "usageTags": [
+                  "Pro Krug"
+                ],
+                "priceNote": "",
+                "conditions": "Nach Tagesvorrat."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 320,
+                "descriptionTitle": "Zubereitung & Geschmack",
+                "featuresTitle": "Auf dem Teller",
+                "features": [],
+                "originTitle": "Herkunft",
+                "usageTitle": "Am Tisch",
+                "priceTitle": "Preis & Portion",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Verfügbarkeit",
+                "attributes": [],
+                "priceMin": "0,25",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "standard-18",
+                "category": "getranke",
+                "title": "Kräuteraufguss (Tee)",
+                "subtitle": "Tee",
+                "unit": "Pro Tasse",
+                "image": "https://i.imgur.com/0mkuSb5.png",
+                "imageFormat": "portrait",
+                "badge": "Am Tresen",
+                "tags": [
+                  "Standardausschank"
+                ],
+                "description": "<p>Ein dampfender Aufguss aus getrockneten Kräutern, oft mit Minze, Kamille, Thymian oder Fenchel verfeinert – je nachdem, was die Vorratskammer oder der Markt hergibt. Der Kräuteraufguss wird in einfachen Holz- oder Tonbechern gereicht und gilt als wärmendes, beruhigendes Getränk für Abende am Feuer oder kalte Morgenstunden. Nicht süß, nicht bitter – einfach wohltuend.</p><p>Dieser Trunk gehört zum gewöhnlichen Ausschank des Hauses. Die angegebene Portion wird einzeln gereicht; besondere Herkunft, Jahrgänge und Zunftabfüllungen nennt die Weinkarte.</p>",
+                "origin": "Die Lachende Nixe · Gwynthor",
+                "usageTags": [
+                  "Pro Tasse"
+                ],
+                "priceNote": "",
+                "conditions": "Nach Tagesvorrat."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 320,
+                "descriptionTitle": "Zubereitung & Geschmack",
+                "featuresTitle": "Auf dem Teller",
+                "features": [],
+                "originTitle": "Herkunft",
+                "usageTitle": "Am Tisch",
+                "priceTitle": "Preis & Portion",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Verfügbarkeit",
+                "attributes": [],
+                "priceMin": "1",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "standard-19",
+                "category": "getranke",
+                "title": "Einfacher Branntwein",
+                "subtitle": "Hochprozentiger",
+                "unit": "Pro Glas",
+                "image": "https://i.imgur.com/e1Qv6Ct.png",
+                "imageFormat": "portrait",
+                "badge": "Am Tresen",
+                "tags": [
+                  "Standardausschank"
+                ],
+                "description": "<p>Einfacher Branntwein ist genau das, wonach er klingt – lokal gebrannt, oft direkt beim Wirt, beim Bauern oder einem „versierten Bekannten“. Er wird aus allem hergestellt, was vergoren werden kann: Getreide, Obst, Weinreste – was eben da ist. Die Qualität schwankt gewaltig, aber der Effekt ist zuverlässig.</p><p>Man trinkt ihn selten aus Genuss, sondern weil man muss: zum Aufwärmen, Vergessen oder Durchhalten. In manchen Gegenden wird er als Medizin verkauft, in anderen einfach als „Stoff“. Brennt in der Kehle, zieht in den Kopf – und ist billig genug, um gefährlich zu sein.</p><p>Dieser Trunk gehört zum gewöhnlichen Ausschank des Hauses. Die angegebene Portion wird einzeln gereicht; besondere Herkunft, Jahrgänge und Zunftabfüllungen nennt die Weinkarte.</p>",
+                "origin": "Die Lachende Nixe · Gwynthor",
+                "usageTags": [
+                  "Pro Glas"
+                ],
+                "priceNote": "",
+                "conditions": "Nach Tagesvorrat."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 320,
+                "descriptionTitle": "Zubereitung & Geschmack",
+                "featuresTitle": "Auf dem Teller",
+                "features": [],
+                "originTitle": "Herkunft",
+                "usageTitle": "Am Tisch",
+                "priceTitle": "Preis & Portion",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Verfügbarkeit",
+                "attributes": [],
+                "priceMin": "1",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "standard-20",
+                "category": "getranke",
+                "title": "Lokaler Kräuterschnaps",
+                "subtitle": "Hochprozentiger",
+                "unit": "Pro Glas",
+                "image": "https://i.imgur.com/E2plMP4.png",
+                "imageFormat": "portrait",
+                "badge": "Am Tresen",
+                "tags": [
+                  "Standardausschank"
+                ],
+                "description": "<p>Lokaler Kräuterschnaps ist ein hausgemachter Schnaps, der mit dem versetzt wird, was Wiesen, Wälder und Gärten hergeben: Beifuß, Wermut, Wacholder, Angelika oder was der Großvater eben für heilkräftig hielt. Mal bitter, mal scharf, mal fast süß – je nachdem, wer ihn gemacht hat und wofür.</p><p>Getrunken wird er meist in kleinen Schlucken, oft „zur Verdauung“ oder „gegen das Wetter“, manchmal auch einfach zum Runterkommen. In der Taverne bestellt ihn meist der Ältere, der zu viel gesehen hat, oder der Krieger mit Magen aus Eisen. Nichts für Empfindliche – aber wer’s verträgt, schwört drauf.</p><p>Dieser Trunk gehört zum gewöhnlichen Ausschank des Hauses. Die angegebene Portion wird einzeln gereicht; besondere Herkunft, Jahrgänge und Zunftabfüllungen nennt die Weinkarte.</p>",
+                "origin": "Die Lachende Nixe · Gwynthor",
+                "usageTags": [
+                  "Pro Glas"
+                ],
+                "priceNote": "",
+                "conditions": "Nach Tagesvorrat."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 320,
+                "descriptionTitle": "Zubereitung & Geschmack",
+                "featuresTitle": "Auf dem Teller",
+                "features": [],
+                "originTitle": "Herkunft",
+                "usageTitle": "Am Tisch",
+                "priceTitle": "Preis & Portion",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Verfügbarkeit",
+                "attributes": [],
+                "priceMin": "1",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "standard-21",
+                "category": "getranke",
+                "title": "Kloster \"Spiritus\"",
+                "subtitle": "Hochprozentiger",
+                "unit": "Pro Glas",
+                "image": "https://i.imgur.com/w0pR8co.png",
+                "imageFormat": "portrait",
+                "badge": "Am Tresen",
+                "tags": [
+                  "Standardausschank"
+                ],
+                "description": "<p>Kloster \"Spiritus\" ist der hochprozentige Bruder des Klosterbiers – gebrannt in kleinen Mengen, oft unter medizinischem Vorwand, mit dem Segen der Schrift und der Kunst der Destillation. Hergestellt wird er aus Wein, Kräutern oder Getreide, je nach Orden und Region. Klar, stark und rein – ein Destillat, das die Seele wärmt und den Körper schwanken lässt.</p><p>Er landet selten in den großen Handelsströmen, sondern eher in den Taschen von Heilkundigen, Händlern oder Wirten mit Verbindung zum Konvent. Günstiger als städtische Destillate, aber von höherer Qualität als der gepanschte Fusel der Landbevölkerung. Spiritus ist kein Luxus – aber ein ehrlicher Tropfen mit Geschichte.</p><p>Dieser Trunk gehört zum gewöhnlichen Ausschank des Hauses. Die angegebene Portion wird einzeln gereicht; besondere Herkunft, Jahrgänge und Zunftabfüllungen nennt die Weinkarte.</p>",
+                "origin": "Die Lachende Nixe · Gwynthor",
+                "usageTags": [
+                  "Pro Glas"
+                ],
+                "priceNote": "",
+                "conditions": "Nach Tagesvorrat."
+              }
+            ],
+            "footerCards": [
+              {
+                "icon": "◈",
+                "title": "Der besondere Abend",
+                "text": "Wachtelbrust an dunklem Traubenjus gibt es einmal im Monat. Johanna nimmt Wünsche entgegen, solange die begrenzte Lieferung reicht."
+              },
+              {
+                "icon": "♧",
+                "title": "Die guten Flaschen",
+                "text": "Weinlaub und Weissmann kommen aus Weisenfluh. Die cenyrischen Zunftbiere und Whiskys ergänzen den Keller, drei einfache Tischweine den täglichen Ausschank."
+              },
+              {
+                "icon": "☷",
+                "title": "Bestellung & Rechnung",
+                "text": "Der Empfang nimmt Bestellungen auf. Angegebene Portionen, Gläser und Flaschen gelten einzeln; Übernachtung und Gesellschaft werden gesondert vereinbart."
+              }
+            ]
+          },
+          "tradeCatalogPage": true
+        },
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "nixe-services-20261016",
+          "pageTitle": "✦ — Services — ✦",
+          "guildServicesPage": true,
+          "guildServices": {
+            "title": "Services",
+            "introduction": "<p>Ein stilles Zimmer, ein Lied für die eigene Runde oder ein Abend mit einer Dame des Hauses: Johanna und der Empfang nehmen Wünsche entgegen und vereinbaren Zeit, Räume und Preis. Die folgenden Tarife gelten für die jeweils beschriebene Leistung.</p>",
+            "services": [
+              {
+                "title": "Gesellschaft im Salon",
+                "icon": "./assets/lachende-nixe/services/gesellschaft.png",
+                "description": "<p>Eine Dame des Hauses widmet dem Gast ihre Zeit am Tisch: Gespräch, gemeinsames Spiel und aufmerksame Begleitung durch den Abend. Eirona, Rhosiel, Lliwen oder Severina können beim Empfang angefragt werden.</p>",
+                "clients": "",
+                "scope": "Eine vereinbarte Stunde im öffentlichen Salon",
+                "terms": "20 Kupfertaler · je Stunde · eine Dame"
+              },
+              {
+                "title": "Eine Stunde zu zweit",
+                "icon": "./assets/lachende-nixe/services/privat.png",
+                "description": "<p>Ungestörte, intime Gesellschaft mit der gewünschten Dame. Johanna stimmt den Termin ab; die persönlichen Wünsche werden mit der Dame selbst besprochen. Ein vorhandenes Gästezimmer kann genutzt oder ein Raum gesondert gebucht werden.</p>",
+                "clients": "",
+                "scope": "Eine vereinbarte Stunde in privatem Rahmen",
+                "terms": "60 Kupfertaler · je Stunde · eine Dame"
+              },
+              {
+                "title": "Ein Abend in besonderer Gesellschaft",
+                "icon": "./assets/lachende-nixe/services/privat.png",
+                "description": "<p>Die gewählte Dame hält sich den vereinbarten Abend für ihren Gast frei. Ob er im Salon beginnt oder sich früh ins Private zurückzieht, wird beim Empfang abgestimmt. Der Abendtarif umfasst ihre Zeit, Getränke und Zimmer kommen auf die eigene Rechnung.</p>",
+                "clients": "",
+                "scope": "Zusammenhängender Abend · bis vier Stunden",
+                "terms": "190 Kupfertaler · bis vier Stunden · eine Dame"
+              },
+              {
+                "title": "Ein privater Tanz",
+                "icon": "./assets/lachende-nixe/services/tanz.png",
+                "description": "<p>Eine Tänzerin tritt für den eigenen Tisch oder eine kleine geschlossene Runde auf. Sie stimmt ihre Darbietung auf den Anlass und die Stimmung im Raum ab.</p>",
+                "clients": "",
+                "scope": "Eine kurze Darbietung nach Termin",
+                "terms": "15 Kupfertaler · eine Tänzerin · etwa eine Viertelstunde"
+              },
+              {
+                "title": "Kleine Tanzfolge",
+                "icon": "./assets/lachende-nixe/services/tanz.png",
+                "description": "<p>Zwei Tänzerinnen gestalten eine abgestimmte Folge für eine geschlossene Gesellschaft. Der Empfang reserviert die freie Fläche und legt den Beginn mit den Darstellerinnen fest.</p>",
+                "clients": "",
+                "scope": "Zwei Tänzerinnen · Musikbegleitung gesondert",
+                "terms": "40 Kupfertaler · zwei Tänzerinnen · etwa eine halbe Stunde"
+              },
+              {
+                "title": "Eine persönliche Weise",
+                "icon": "./assets/lachende-nixe/services/musik.png",
+                "description": "<p>Adeltrud oder Thjodhild widmet ein bekanntes Stück einem Gast oder seiner Runde. Wer einen besonderen Wunsch hat, nennt ihn vorab; die Musikerin sagt, welche Fassung sie beherrscht.</p>",
+                "clients": "",
+                "scope": "Ein vereinbartes Stück im Salon",
+                "terms": "5 Kupfertaler · je Lied oder Instrumentalstück"
+              },
+              {
+                "title": "Musik im Hinterzimmer",
+                "icon": "./assets/lachende-nixe/services/musik.png",
+                "description": "<p>Eine Musikerin begleitet eine kleine Runde mit Liedern und ruhigen Instrumentalweisen. Die Stücke lassen dem Gespräch Platz; lebhaftere Folgen können vor Beginn abgesprochen werden.</p>",
+                "clients": "",
+                "scope": "Eine Musikerin · eine volle Stunde",
+                "terms": "30 Kupfertaler · eine Musikerin · je Stunde"
+              },
+              {
+                "title": "Ein musikalischer Abend",
+                "icon": "./assets/lachende-nixe/services/musik.png",
+                "description": "<p>Adeltrud und Thjodhild wechseln Weisen, Gesang und kleine gemeinsame Stücke für eine geschlossene Abendgesellschaft ab. Kurze Pausen gehören zum vereinbarten Ablauf.</p>",
+                "clients": "",
+                "scope": "Drei Stunden mit beiden Musikerinnen · nach gemeinsamer Verfügbarkeit",
+                "terms": "150 Kupfertaler · zwei Musikerinnen · bis drei Stunden"
+              },
+              {
+                "title": "Eine ruhige Kammer",
+                "icon": "./assets/lachende-nixe/services/zimmer.png",
+                "description": "<p>Eine gepflegte Einzelkammer mit frischem Bettzeug, Waschkrug, Handtuch und verschließbarer Tür. Der Empfang nimmt die Ankunft auf und hält den Schlüssel bereit.</p>",
+                "clients": "",
+                "scope": "Eine Nacht · Ankunft und Abreise nach Hausabsprache",
+                "terms": "12 Kupfertaler · je Zimmer und Nacht · eine Person"
+              },
+              {
+                "title": "Die Perlenstube",
+                "icon": "./assets/lachende-nixe/services/zimmer.png",
+                "description": "<p>Das breite Bett unter perlfarbenen Vorhängen, feines Leinen und ein eigener Waschplatz machen die Perlenstube zur besonders angenehmen Übernachtung. Der Preis gilt für das Zimmer mit bis zu zwei Gästen.</p>",
+                "clients": "",
+                "scope": "Eine Nacht · bis zwei Personen",
+                "terms": "25 Kupfertaler · je Zimmer und Nacht · bis zwei Personen"
+              },
+              {
+                "title": "Ein festes Zimmer im Haus",
+                "icon": "./assets/lachende-nixe/services/dauer.png",
+                "description": "<p>Eine gewöhnliche Einzelkammer bleibt für einen ganzen Hausmonat reserviert. Tägliches einfaches Frühstück, frisches Waschwasser, Reinigung und regelmäßiger Wäschewechsel gehören dazu. Wer länger in Gwynthor bleibt, hat hier seinen festen Schlüssel.</p>",
+                "clients": "",
+                "scope": "Ein Aleria-Monat mit 36 Nächten · monatlich im Voraus",
+                "terms": "360 Kupfertaler · 36 Nächte · eine Person"
+              },
+              {
+                "title": "Die Perlenstube auf Dauer",
+                "icon": "./assets/lachende-nixe/services/dauer.png",
+                "description": "<p>Die Perlenstube wird für einen ganzen Hausmonat fest gehalten. Einfaches Frühstück für beide Gäste, täglicher Zimmerdienst und frisches Leinen sind eingeschlossen. Der Aufenthalt wird im Hausbuch vermerkt und kann nach Verfügbarkeit verlängert werden.</p>",
+                "clients": "",
+                "scope": "Ein Aleria-Monat mit 36 Nächten · bis zwei Personen",
+                "terms": "720 Kupfertaler · 36 Nächte · bis zwei Personen"
+              },
+              {
+                "title": "Ein warmer Zuber",
+                "icon": "./assets/lachende-nixe/services/bad.png",
+                "description": "<p>Warmes Wasser, ein sauberes Leinentuch und eine kleine Portion milder Seife stehen zum vereinbarten Zeitpunkt bereit. Das Zubermädchen richtet den Platz her und erneuert anschließend das Wasser.</p>",
+                "clients": "",
+                "scope": "Ein vorbereiteter Zuber · nach Termin",
+                "terms": "4 Kupfertaler · je Bad · eine Person"
+              },
+              {
+                "title": "Ein Salon für die eigene Runde",
+                "icon": "./assets/lachende-nixe/services/salon.png",
+                "description": "<p>Ein abgeschirmtes Hinterzimmer mit vorbereiteten Sitzplätzen, Kerzenlicht und Bedienung für bestellte Getränke. Es bietet einer kleinen Runde einen eigenen Ort für Gespräche, Musik oder Gesellschaft.</p>",
+                "clients": "",
+                "scope": "Bis sechs Gäste · Speisen, Getränke und Künstler gesondert",
+                "terms": "10 Kupfertaler · je Stunde · ein Hinterzimmer"
+              }
+            ],
+            "process": "<p>Der Empfang prüft freie Zimmer und Termine und bestätigt die gewünschte Dauer. Für private Gesellschaft wird die gewünschte Dame persönlich angefragt; Tanz und Musik werden mit den Künstlerinnen abgestimmt. Zusätzliche Stunden werden vor einer Verlängerung vereinbart.</p>",
+            "conditions": "<p>Speisen und Getränke werden nach der Hauskarte berechnet. Bei Gesellschaft, Tanz und Musik ist ein privater Raum nur dann eingeschlossen, wenn er ausdrücklich vereinbart wurde. Langzeitgäste zahlen ihren Hausmonat im Voraus; Gesellschaft und Abendessen werden gesondert bestellt.</p>",
+            "footer": "Die Lachende Nixe · südliches Hafenviertel, Gwynthor · Ein Hausmonat umfasst 36 Nächte."
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "p-mqmo049r-x6xqi",
+          "pageTitle": "✦ — Gästeverzeichnis — ✦",
+          "guestRegisterPage": true,
+          "guestRegister": {
+            "title": "Gästeverzeichnis",
+            "subtitle": "Johannas Hausbuch · Gäste & Aufenthalte",
+            "location": "Die Lachende Nixe · südliches Hafenviertel, Gwynthor",
+            "portraitSize": 96,
+            "note": "Johanna führt das Hausbuch unter Verschluss. Zimmer, Ankunft und besondere Wünsche werden mit dem Empfang abgestimmt.",
+            "sections": [
+              {
+                "id": "section-mqmo049r-0-bu8m",
+                "title": "Personen 1-4",
+                "subtitle": "Aktuell einquartierte Gäste",
+                "guests": [
+                  {
+                    "id": "guest-mqmo049r-0-whsw",
+                    "portrait": "",
+                    "portraitFit": "cover",
+                    "portraitPosition": "top",
+                    "name": "Freier Platz",
+                    "role": "—",
+                    "status": "Frei",
+                    "descriptionTitle": "Aufenthalt",
+                    "description": "—",
+                    "sideTitle": "Unterkunft",
+                    "infoRows": [
+                      {
+                        "label": "Herkunft",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Stand",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Begleitung",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Ankunft",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Zahlung",
+                        "value": "—"
+                      }
+                    ],
+                    "sideRows": [
+                      {
+                        "label": "Zimmer",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Etage",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Dauer",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Wünsche",
+                        "value": "—"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "guest-mqmo049r-1-7wjl",
+                    "portrait": "",
+                    "portraitFit": "cover",
+                    "portraitPosition": "top",
+                    "name": "Freier Platz",
+                    "role": "—",
+                    "status": "Frei",
+                    "descriptionTitle": "Aufenthalt",
+                    "description": "—",
+                    "sideTitle": "Unterkunft",
+                    "infoRows": [
+                      {
+                        "label": "Herkunft",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Stand",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Begleitung",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Ankunft",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Zahlung",
+                        "value": "—"
+                      }
+                    ],
+                    "sideRows": [
+                      {
+                        "label": "Zimmer",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Etage",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Dauer",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Wünsche",
+                        "value": "—"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "nixe-gast-3",
+                    "portrait": "",
+                    "portraitFit": "cover",
+                    "portraitPosition": "top",
+                    "name": "Freier Platz",
+                    "role": "—",
+                    "status": "Frei",
+                    "descriptionTitle": "Aufenthalt",
+                    "description": "—",
+                    "sideTitle": "Unterkunft",
+                    "infoRows": [
+                      {
+                        "label": "Herkunft",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Stand",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Begleitung",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Ankunft",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Zahlung",
+                        "value": "—"
+                      }
+                    ],
+                    "sideRows": [
+                      {
+                        "label": "Zimmer",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Etage",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Dauer",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Wünsche",
+                        "value": "—"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "nixe-gast-4",
+                    "portrait": "",
+                    "portraitFit": "cover",
+                    "portraitPosition": "top",
+                    "name": "Freier Platz",
+                    "role": "—",
+                    "status": "Frei",
+                    "descriptionTitle": "Aufenthalt",
+                    "description": "—",
+                    "sideTitle": "Unterkunft",
+                    "infoRows": [
+                      {
+                        "label": "Herkunft",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Stand",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Begleitung",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Ankunft",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Zahlung",
+                        "value": "—"
+                      }
+                    ],
+                    "sideRows": [
+                      {
+                        "label": "Zimmer",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Etage",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Dauer",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Wünsche",
+                        "value": "—"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "section-mqmo049r-1-40if",
+                "title": "Personen 5-8",
+                "subtitle": "Weitere Gäste oder spätere Anreisen",
+                "guests": [
+                  {
+                    "id": "nixe-gast-5",
+                    "portrait": "",
+                    "portraitFit": "cover",
+                    "portraitPosition": "top",
+                    "name": "Freier Platz",
+                    "role": "—",
+                    "status": "Frei",
+                    "descriptionTitle": "Aufenthalt",
+                    "description": "—",
+                    "sideTitle": "Unterkunft",
+                    "infoRows": [
+                      {
+                        "label": "Herkunft",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Stand",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Begleitung",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Ankunft",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Zahlung",
+                        "value": "—"
+                      }
+                    ],
+                    "sideRows": [
+                      {
+                        "label": "Zimmer",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Etage",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Dauer",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Wünsche",
+                        "value": "—"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "nixe-gast-6",
+                    "portrait": "",
+                    "portraitFit": "cover",
+                    "portraitPosition": "top",
+                    "name": "Freier Platz",
+                    "role": "—",
+                    "status": "Frei",
+                    "descriptionTitle": "Aufenthalt",
+                    "description": "—",
+                    "sideTitle": "Unterkunft",
+                    "infoRows": [
+                      {
+                        "label": "Herkunft",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Stand",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Begleitung",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Ankunft",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Zahlung",
+                        "value": "—"
+                      }
+                    ],
+                    "sideRows": [
+                      {
+                        "label": "Zimmer",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Etage",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Dauer",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Wünsche",
+                        "value": "—"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "nixe-gast-7",
+                    "portrait": "",
+                    "portraitFit": "cover",
+                    "portraitPosition": "top",
+                    "name": "Freier Platz",
+                    "role": "—",
+                    "status": "Frei",
+                    "descriptionTitle": "Aufenthalt",
+                    "description": "—",
+                    "sideTitle": "Unterkunft",
+                    "infoRows": [
+                      {
+                        "label": "Herkunft",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Stand",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Begleitung",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Ankunft",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Zahlung",
+                        "value": "—"
+                      }
+                    ],
+                    "sideRows": [
+                      {
+                        "label": "Zimmer",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Etage",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Dauer",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Wünsche",
+                        "value": "—"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "nixe-gast-8",
+                    "portrait": "",
+                    "portraitFit": "cover",
+                    "portraitPosition": "top",
+                    "name": "Freier Platz",
+                    "role": "—",
+                    "status": "Frei",
+                    "descriptionTitle": "Aufenthalt",
+                    "description": "—",
+                    "sideTitle": "Unterkunft",
+                    "infoRows": [
+                      {
+                        "label": "Herkunft",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Stand",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Begleitung",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Ankunft",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Zahlung",
+                        "value": "—"
+                      }
+                    ],
+                    "sideRows": [
+                      {
+                        "label": "Zimmer",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Etage",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Dauer",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Wünsche",
+                        "value": "—"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "nixe-gaeste-abschnitt-3",
+                "title": "Personen 9–12",
+                "subtitle": "",
+                "guests": [
+                  {
+                    "id": "nixe-gast-9",
+                    "portrait": "",
+                    "portraitFit": "cover",
+                    "portraitPosition": "top",
+                    "name": "Freier Platz",
+                    "role": "—",
+                    "status": "Frei",
+                    "descriptionTitle": "Aufenthalt",
+                    "description": "—",
+                    "sideTitle": "Unterkunft",
+                    "infoRows": [
+                      {
+                        "label": "Herkunft",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Stand",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Begleitung",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Ankunft",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Zahlung",
+                        "value": "—"
+                      }
+                    ],
+                    "sideRows": [
+                      {
+                        "label": "Zimmer",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Etage",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Dauer",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Wünsche",
+                        "value": "—"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "nixe-gast-10",
+                    "portrait": "",
+                    "portraitFit": "cover",
+                    "portraitPosition": "top",
+                    "name": "Freier Platz",
+                    "role": "—",
+                    "status": "Frei",
+                    "descriptionTitle": "Aufenthalt",
+                    "description": "—",
+                    "sideTitle": "Unterkunft",
+                    "infoRows": [
+                      {
+                        "label": "Herkunft",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Stand",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Begleitung",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Ankunft",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Zahlung",
+                        "value": "—"
+                      }
+                    ],
+                    "sideRows": [
+                      {
+                        "label": "Zimmer",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Etage",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Dauer",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Wünsche",
+                        "value": "—"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "nixe-gast-11",
+                    "portrait": "",
+                    "portraitFit": "cover",
+                    "portraitPosition": "top",
+                    "name": "Freier Platz",
+                    "role": "—",
+                    "status": "Frei",
+                    "descriptionTitle": "Aufenthalt",
+                    "description": "—",
+                    "sideTitle": "Unterkunft",
+                    "infoRows": [
+                      {
+                        "label": "Herkunft",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Stand",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Begleitung",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Ankunft",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Zahlung",
+                        "value": "—"
+                      }
+                    ],
+                    "sideRows": [
+                      {
+                        "label": "Zimmer",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Etage",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Dauer",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Wünsche",
+                        "value": "—"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "nixe-gast-12",
+                    "portrait": "",
+                    "portraitFit": "cover",
+                    "portraitPosition": "top",
+                    "name": "Freier Platz",
+                    "role": "—",
+                    "status": "Frei",
+                    "descriptionTitle": "Aufenthalt",
+                    "description": "—",
+                    "sideTitle": "Unterkunft",
+                    "infoRows": [
+                      {
+                        "label": "Herkunft",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Stand",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Begleitung",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Ankunft",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Zahlung",
+                        "value": "—"
+                      }
+                    ],
+                    "sideRows": [
+                      {
+                        "label": "Zimmer",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Etage",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Dauer",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Wünsche",
+                        "value": "—"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "nixe-gaeste-abschnitt-4",
+                "title": "Personen 13–16",
+                "subtitle": "",
+                "guests": [
+                  {
+                    "id": "nixe-gast-13",
+                    "portrait": "",
+                    "portraitFit": "cover",
+                    "portraitPosition": "top",
+                    "name": "Freier Platz",
+                    "role": "—",
+                    "status": "Frei",
+                    "descriptionTitle": "Aufenthalt",
+                    "description": "—",
+                    "sideTitle": "Unterkunft",
+                    "infoRows": [
+                      {
+                        "label": "Herkunft",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Stand",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Begleitung",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Ankunft",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Zahlung",
+                        "value": "—"
+                      }
+                    ],
+                    "sideRows": [
+                      {
+                        "label": "Zimmer",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Etage",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Dauer",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Wünsche",
+                        "value": "—"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "nixe-gast-14",
+                    "portrait": "",
+                    "portraitFit": "cover",
+                    "portraitPosition": "top",
+                    "name": "Freier Platz",
+                    "role": "—",
+                    "status": "Frei",
+                    "descriptionTitle": "Aufenthalt",
+                    "description": "—",
+                    "sideTitle": "Unterkunft",
+                    "infoRows": [
+                      {
+                        "label": "Herkunft",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Stand",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Begleitung",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Ankunft",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Zahlung",
+                        "value": "—"
+                      }
+                    ],
+                    "sideRows": [
+                      {
+                        "label": "Zimmer",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Etage",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Dauer",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Wünsche",
+                        "value": "—"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "nixe-gast-15",
+                    "portrait": "",
+                    "portraitFit": "cover",
+                    "portraitPosition": "top",
+                    "name": "Freier Platz",
+                    "role": "—",
+                    "status": "Frei",
+                    "descriptionTitle": "Aufenthalt",
+                    "description": "—",
+                    "sideTitle": "Unterkunft",
+                    "infoRows": [
+                      {
+                        "label": "Herkunft",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Stand",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Begleitung",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Ankunft",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Zahlung",
+                        "value": "—"
+                      }
+                    ],
+                    "sideRows": [
+                      {
+                        "label": "Zimmer",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Etage",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Dauer",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Wünsche",
+                        "value": "—"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "nixe-gast-16",
+                    "portrait": "",
+                    "portraitFit": "cover",
+                    "portraitPosition": "top",
+                    "name": "Freier Platz",
+                    "role": "—",
+                    "status": "Frei",
+                    "descriptionTitle": "Aufenthalt",
+                    "description": "—",
+                    "sideTitle": "Unterkunft",
+                    "infoRows": [
+                      {
+                        "label": "Herkunft",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Stand",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Begleitung",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Ankunft",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Zahlung",
+                        "value": "—"
+                      }
+                    ],
+                    "sideRows": [
+                      {
+                        "label": "Zimmer",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Etage",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Dauer",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Wünsche",
+                        "value": "—"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "nixe-gaeste-abschnitt-5",
+                "title": "Personen 17–20",
+                "subtitle": "",
+                "guests": [
+                  {
+                    "id": "nixe-gast-17",
+                    "portrait": "",
+                    "portraitFit": "cover",
+                    "portraitPosition": "top",
+                    "name": "Freier Platz",
+                    "role": "—",
+                    "status": "Frei",
+                    "descriptionTitle": "Aufenthalt",
+                    "description": "—",
+                    "sideTitle": "Unterkunft",
+                    "infoRows": [
+                      {
+                        "label": "Herkunft",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Stand",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Begleitung",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Ankunft",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Zahlung",
+                        "value": "—"
+                      }
+                    ],
+                    "sideRows": [
+                      {
+                        "label": "Zimmer",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Etage",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Dauer",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Wünsche",
+                        "value": "—"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "nixe-gast-18",
+                    "portrait": "",
+                    "portraitFit": "cover",
+                    "portraitPosition": "top",
+                    "name": "Freier Platz",
+                    "role": "—",
+                    "status": "Frei",
+                    "descriptionTitle": "Aufenthalt",
+                    "description": "—",
+                    "sideTitle": "Unterkunft",
+                    "infoRows": [
+                      {
+                        "label": "Herkunft",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Stand",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Begleitung",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Ankunft",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Zahlung",
+                        "value": "—"
+                      }
+                    ],
+                    "sideRows": [
+                      {
+                        "label": "Zimmer",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Etage",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Dauer",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Wünsche",
+                        "value": "—"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "nixe-gast-19",
+                    "portrait": "",
+                    "portraitFit": "cover",
+                    "portraitPosition": "top",
+                    "name": "Freier Platz",
+                    "role": "—",
+                    "status": "Frei",
+                    "descriptionTitle": "Aufenthalt",
+                    "description": "—",
+                    "sideTitle": "Unterkunft",
+                    "infoRows": [
+                      {
+                        "label": "Herkunft",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Stand",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Begleitung",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Ankunft",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Zahlung",
+                        "value": "—"
+                      }
+                    ],
+                    "sideRows": [
+                      {
+                        "label": "Zimmer",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Etage",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Dauer",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Wünsche",
+                        "value": "—"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "nixe-gast-20",
+                    "portrait": "",
+                    "portraitFit": "cover",
+                    "portraitPosition": "top",
+                    "name": "Freier Platz",
+                    "role": "—",
+                    "status": "Frei",
+                    "descriptionTitle": "Aufenthalt",
+                    "description": "—",
+                    "sideTitle": "Unterkunft",
+                    "infoRows": [
+                      {
+                        "label": "Herkunft",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Stand",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Begleitung",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Ankunft",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Zahlung",
+                        "value": "—"
+                      }
+                    ],
+                    "sideRows": [
+                      {
+                        "label": "Zimmer",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Etage",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Dauer",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Wünsche",
+                        "value": "—"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "5",
+          "image": "./assets/lachende-nixe/scenes/schankraum.png",
+          "imageWidth": 30,
+          "pageTitle": "II. — Schankraum",
+          "sessionPage": true,
+          "sessionIntro": "Leise Musik trägt durch den warmen Salon. Hinter dunklem Holz glänzen Gläser; zwischen den kleinen Tischen bleiben breite Wege frei. Das Licht der Hafenlaternen schimmert durch die hohen Fenster, während hinter schweren Vorhängen leisere Gespräche ihren Platz finden.",
+          "sessionHint": "Führe diese Szene als Kommentar fort.",
+          "sessionEmptyTitle": "Die Szene ist offen",
+          "sessionEmptyText": "Hier kann die Szene im fertigen Modus beginnen.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          },
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center"
+        },
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "6",
+          "image": "./assets/lachende-nixe/scenes/hinterzimmer.png",
+          "imageWidth": 30,
+          "pageTitle": "III. — Hinterzimmer",
+          "imageTall": true,
+          "sessionPage": true,
+          "sessionIntro": "Ein schwerer Vorhang dämpft die Stimmen aus dem Salon. Zwei Sessel stehen einander an einem kleinen Tisch gegenüber; ein unberührtes Weinglas fängt den Kerzenschein. Hier wird leiser gesprochen als draußen, und niemand drängt zur nächsten Bestellung.",
+          "sessionHint": "Führe diese Szene als Kommentar fort.",
+          "sessionEmptyTitle": "Die Szene ist offen",
+          "sessionEmptyText": "Hier kann die Szene im fertigen Modus beginnen.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          },
+          "imageFit": "cover",
+          "imagePosition": "center"
+        },
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "7",
+          "image": "./assets/lachende-nixe/scenes/kueche.png",
+          "imageWidth": 30,
+          "pageTitle": "IV. — Küche",
+          "sessionPage": true,
+          "sessionIntro": "Über dem kleinen Herd zieht heller Dampf zur Haube. Auf dem Arbeitstisch warten Kräuter, ein sauberes Tuch und wenige sorgfältig angerichtete Teller. Die Küche arbeitet in ruhigen Portionen; schwere Bratenplatten gehören heute nicht auf die Karte.",
+          "sessionHint": "Führe diese Szene als Kommentar fort.",
+          "sessionEmptyTitle": "Die Szene ist offen",
+          "sessionEmptyText": "Hier kann die Szene im fertigen Modus beginnen.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          },
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center"
+        },
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "8",
+          "image": "./assets/lachende-nixe/scenes/vorratskammer.png",
+          "imageWidth": 30,
+          "pageTitle": "V. — Vorratskammer",
+          "sessionPage": true,
+          "sessionIntro": "Kühle Luft liegt zwischen den Regalen. Weinflaschen ruhen neben kleinen Vorratsgefäßen; an der Wand hängen Kräuterbündel. David lässt jede Lieferung zählen, bevor sie im Keller verschwindet, und die guten Weisenfluher Jahrgänge stehen im verschlossenen Fach.",
+          "sessionHint": "Führe diese Szene als Kommentar fort.",
+          "sessionEmptyTitle": "Die Szene ist offen",
+          "sessionEmptyText": "Hier kann die Szene im fertigen Modus beginnen.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          },
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center"
+        },
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "9",
+          "image": "./assets/lachende-nixe/scenes/perlenstube.png",
+          "imageWidth": 30,
+          "pageTitle": "VI. — Gästezimmer · Zimmer I. – Perlenstube",
+          "sessionPage": true,
+          "sessionIntro": "Perlfarbene Vorhänge rahmen das breite Bett. Frisches Leinen, ein gefüllter Waschkrug und der gedämpfte Schein einer Laterne stehen bereit. Hinter der geschlossenen Tür wird der Hafen zu einem fernen Geräusch.",
+          "sessionHint": "Führe diese Szene als Kommentar fort.",
+          "sessionEmptyTitle": "Die Szene ist offen",
+          "sessionEmptyText": "Hier kann die Szene im fertigen Modus beginnen.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          },
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center"
+        }
+      ],
+      "schemaVersion": 1,
+      "multipage": true,
+      "previewImage": "./assets/lachende-nixe/scenes/aussenansicht.png"
+    }
+  }
+}

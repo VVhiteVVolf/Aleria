@@ -87,10 +87,13 @@ try {
   await page.locator('#modal-overlay [data-trade-filter="all"]').click();
   assert.equal(await page.locator('#modal-overlay .trade-catalog-item:visible').count(), 44);
   await show(4);
+  assert.equal(await page.locator('#modal-overlay .guild-service-card').count(), 11);
+  await loadedArtwork();
+  await show(5);
   assert.equal(await page.locator('#modal-overlay .guest-register-entry').count(), 16);
   assert.equal(await page.locator('#modal-overlay .guest-register-name strong').filter({ hasText: 'Freier Platz' }).count(), 16);
   await page.screenshot({ path: resolve(output, '05-gaestebuch.png') });
-  for (let i = 5; i < 10; i++) { await show(i); await loadedArtwork(); }
+  for (let i = 6; i < 11; i++) { await show(i); await loadedArtwork(); }
   const registerPlan = planKanneCharacters([], {});
   const membership = await page.evaluate(plan => {
     closeModal();
@@ -128,6 +131,6 @@ try {
   await page.goto(`${origin}/Kontinente/Estryll/K%C3%B6nigreich%20Cenyr/Grafschaft%20Celtigerns%20Wacht/Grafschaft%20Celtigerns%20Wacht.html`);
   for (const slug of ['trevoryn', 'svathamar', 'dubhdarach']) await page.locator(`a[href*="haus=haus-${slug}"]`).first().waitFor();
   await context.close();
-  await writeFile(resolve(output, 'report.json'), JSON.stringify({ passed: true, pages: 10, hierarchyTabs: 6, houseDishes: 15, imports: 8, localArtworkLoaded: true, productionRequestsBlocked: true }, null, 2));
-  console.log(`PASS: 10 pages, 6 working hierarchy tabs, 15 house dishes, 8 imports, all new artwork and CK icons load. Screenshots: ${output}`);
+  await writeFile(resolve(output, 'report.json'), JSON.stringify({ passed: true, pages: 11, hierarchyTabs: 6, houseDishes: 15, imports: 8, services: 11, localArtworkLoaded: true, productionRequestsBlocked: true }, null, 2));
+  console.log(`PASS: 11 pages, 6 working hierarchy tabs, 15 house dishes, 8 imports, 11 services, all new artwork and CK icons load. Screenshots: ${output}`);
 } finally { await browser?.close(); await new Promise(done => server.close(done)); }

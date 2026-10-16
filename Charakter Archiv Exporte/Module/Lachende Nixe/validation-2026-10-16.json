@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-10-16T15:44:28.152Z",
+  "browser": {
+    "passed": true,
+    "pages": 11,
+    "tabs": 6,
+    "offers": 45,
+    "items": 41,
+    "services": 14,
+    "kanneServices": 11,
+    "guests": 20,
+    "profiles": 28,
+    "productionRequestsBlocked": true
+  },
+  "geometry": {
+    "vertical": [
+      {
+        "familyId": "haus-sonnenfels",
+        "orientation": "vertical",
+        "cardCount": 28,
+        "labelCount": 9,
+        "routeCount": 30,
+        "issues": [],
+        "passed": true
+      }
+    ],
+    "horizontal": [
+      {
+        "familyId": "haus-sonnenfels",
+        "orientation": "horizontal",
+        "cardCount": 28,
+        "labelCount": 9,
+        "routeCount": 30,
+        "issues": [],
+        "passed": true
+      }
+    ]
+  },
+  "contentTests": 26,
+  "sharedTradeAndGenealogyTests": 9,
+  "buildTests": 15,
+  "images": {
+    "nixe": 46,
+    "kanneServices": 6,
+    "builtinImageGen": true
+  },
+  "preservation": {
+    "originalNixeNodes": 25,
+    "originalVacancies": 14,
+    "totalVacancies": 34,
+    "nixeStandardOffers": 21,
+    "kanneOffers": 44,
+    "kanneOriginalPagesExact": true,
+    "ownerOriginalProseAndPortrait": true,
+    "commentsAndSceneDates": true,
+    "liveResourceWrites": 0
+  }
+}

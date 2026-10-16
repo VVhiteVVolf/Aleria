@@ -1,0 +1,65 @@
+const dish=(id,name,course,copper,description,detail,visual,features)=>({id,name,course,copper,description,detail,visual,features});
+export const NIXE_DISHES=[
+  dish('birne-frischkaese','Birne, Frischkäse & geröstete Walnuss','Vorspeise',4,
+    'Drei dünne Spalten einer festen Birne werden kurz in wenig Butter gewendet und noch lauwarm neben einen kleinen Löffel Ziegenfrischkäse gelegt. Geröstete Walnuss und ein Hauch Blütenhonig geben Biss und Süße; fein geschnittener Sauerampfer hält den Teller frisch. Die Birne bleibt im Inneren fest, der Käse bewusst mild.',
+    'Eine kleine Weisenfluher Vorspeise für den Beginn eines langen Abends. Sie sättigt wenig und lässt dem Wein Raum. Käse, Nüsse, Birne und Garnitur gehören zusammen zur Portion; eine Brotscheibe wird nur auf Wunsch dazugereicht.',
+    'ONE small ivory ceramic appetizer plate with exactly three slender lightly caramelized pear wedges, one small quenelle of soft white goat cheese, a few toasted walnut pieces and two tiny green sorrel leaves, delicate honey drizzle. Small refined portion, clearly readable ingredients, no side objects.',
+    ['Lauwarme Birne · milder Ziegenfrischkäse','Geröstete Walnuss & wenig Blütenhonig','Kleiner, fleischloser Auftakt']),
+  dish('pilzessenz','Klare Waldpilzessenz','Vorspeise',4.5,
+    'Getrocknete und frische Waldpilze ziehen langsam mit Petersilienwurzel und einem kleinen Bund Kräuter. Die Küche seiht den Sud sorgfältig ab und reicht ihn klar, dunkelgolden und duftend. Wenige feine Pilzstreifen und Schnittlauch genügen als Einlage; schwere Sahne bleibt dem kleinen Schälchen fern.',
+    'Die Essenz wird erst kurz vor dem Servieren erhitzt, damit der Pilzduft im Schälchen bleibt. Ihre kräftige Würze kommt aus der langen Ziehzeit. Ein leichter Auftakt nach Weisenfluher Art, warm genug für einen kühlen Hafenabend und klein genug, um den folgenden Teller nicht zu verdrängen.',
+    'ONE small shallow cream ceramic handled bowl filled with clear dark golden mushroom consommé, three fine cooked mushroom slices and a few tiny chive rings visible in the broth. Small fine-dining portion, no spoon, no bread, no scenery.',
+    ['Klarer Pilzsud · ohne Sahne','Feine Pilzstreifen & Schnittlauch','Kleine warme Schale']),
+  dish('krebstoertchen','Kleines Krebstörtchen mit Dill','Vorspeise',5.5,
+    'Ein dünner, knuspriger Teigboden trägt zart ausgelöstes Krebsfleisch, wenig helles Wurzelgemüse und eine leichte Dillbindung. Das Törtchen kommt warm auf den Teller; daneben liegen einige saure Gurkenwürfel und zwei kleine Kräuterblätter. Weder Füllung noch Teig sollen den Geschmack des Krebsfleisches verdecken.',
+    'Das ist ein einzelnes kleines Törtchen, kein ganzer gedeckter Kuchen. Die Küche bäckt nur wenige Stücke gleichzeitig, damit der Boden knusprig bleibt. Die Weisenfluher Zubereitung wird mit der jeweiligen guten Küstenlieferung des Hauses verbunden; bei ausbleibender Lieferung nennt der Ausschank den Ersatz des Tages.',
+    'ONE tiny golden open savory tart on an ivory ceramic appetizer plate, filled with cooked white and coral-pink crayfish meat and a small touch of green dill, a few finely diced pickled cucumber cubes beside it. One tart, small refined portion, no whole animal, no utensils.',
+    ['Ein kleines, frisch gebackenes Törtchen','Zartes Krebsfleisch & Dill','Nach guter Küstenlieferung']),
+  dish('saibling-lauch','Saibling auf feinem Lauch','Leichtes Hauptgericht',9,
+    'Ein kleines Saiblingsfilet wird sanft auf der Haut gegart, bis sie an den Rändern fein knuspert und das Fleisch noch saftig auseinanderfällt. Darunter liegt eine schmale Bahn weich gedünsteter Lauchstreifen. Ein Löffel heller Buttersoße, Dill und zwei kleine gedämpfte Kartoffeln runden den Teller ab.',
+    'Die Zubereitung folgt der Weisenfluher Vorliebe für klare Aromen und sorgfältig behandelten Fisch. Das Haus kauft frischen Fisch aus verlässlichen Lieferungen in Gwynthor; es verspricht keinen tagelang über Land gereisten Frischfang. Eine leichte Portion für die spätere Stunde, ohne mächtige Beilagen oder schwere Kruste.',
+    'ONE small ivory ceramic dinner plate with a modest cooked char fish fillet, delicate crisp silver-brown skin on top and pale coral cooked flesh, on a narrow bed of soft leek ribbons, two tiny steamed potatoes and a restrained spoonful of light butter sauce, a little dill. No whole fish, refined light portion.',
+    ['Kleines Filet · sanft gegart','Feiner Lauch & zwei kleine Kartoffeln','Helle Buttersoße separat erkennbar']),
+  dish('huhn-birnenjus','Zarte Hühnerbrust mit Birnenjus','Leichtes Hauptgericht',10.5,
+    'Die Hühnerbrust wird schonend gegart und in drei kleine, saftige Scheiben geschnitten. Ein klarer Geflügeljus mit wenig Birnensaft verleiht ihr eine runde, kaum süße Note. Dazu kommen glasierte junge Möhren und ein kleiner Löffel lockerer Kräutergerste; die Soße benetzt das Fleisch, statt es zu überdecken.',
+    'Der Teller bleibt bewusst klein. Röstaroma, Birne und frische Kräuter sollen zusammenpassen, ohne nach einem schweren Festessen zu schmecken. Die Küche richtet jede Portion erst nach der Bestellung an. Für einen zweiten Hunger kann später nachbestellt werden; eine üppige Tavernenplatte ist diese Hausgarnitur nicht.',
+    'ONE modest ivory ceramic plate holding three small slices of moist cooked chicken breast, a little clear amber pear jus, three slender glazed baby carrots and one small mound of loose green-herb barley. Carefully spaced restrained meal, no large roast or unrelated garnish.',
+    ['Drei saftige Scheiben Hühnerbrust','Leichter Birnenjus & junge Möhren','Kleine Beilage aus Kräutergerste']),
+  dish('kraeuterknoepfle','Kräuterknöpfle mit Waldpilzen','Leichtes Hauptgericht',8,
+    'Kleine weiche Knöpfle werden mit frischen Kräutern durchzogen, kurz in Nussbutter geschwenkt und mit wenigen gebratenen Waldpilzen angerichtet. Fein gehobelter gereifter Käse schmilzt nur leicht darüber. Die Butter duftet nussig; eine schwere Käsedecke oder dicke Rahmsoße würde den feinen Teig unnötig beschweren.',
+    'Die fleischlose Weisenfluher Hausportion ist kleiner als eine Schüssel für hungrige Reisende. Sie kommt frisch aus der Pfanne und eignet sich auch dazu, langsam neben einem Glas Weißwein gegessen zu werden. Die verwendeten Pilze wechseln mit der verlässlichen Tageslieferung, die sorgfältige Zubereitung bleibt dieselbe.',
+    'ONE small shallow ivory ceramic plate of delicate green herb spaetzle-like button dumplings with a few sliced browned woodland mushrooms, a restrained glossy brown-butter coating and a few fine shavings of aged cheese. Light modest portion, no heavy cream sauce, no utensils.',
+    ['Frische kleine Kräuterknöpfle','Waldpilze, Nussbutter & feiner Käse','Fleischlos · kleine Hauptportion']),
+  dish('wachtel-traubenjus','Wachtelbrust an dunklem Traubenjus','Monatsgericht',16.5,
+    'An einem angekündigten Abend im Monat bereitet die Küche ausgelöste Wachtelbrüstchen zu. Sie werden vorsichtig gebraten und mit einem dunklen, klar eingekochten Jus aus roten Trauben und etwas Weisenfluher Wein vollendet. Dazu gibt es einen kleinen Pastinakenfondant und wenige glasierte Trauben; die zarte Brust bleibt der Mittelpunkt.',
+    'Das Monatsgericht ist eine kleine besondere Bestellung, kein mehrgängiges Festmahl. Die begrenzte Lieferung wird vorher mit der Küche abgestimmt und am selben Abend aufgebraucht. Wer es probieren möchte, lässt seinen Wunsch rechtzeitig bei Johanna vermerken. Außerhalb dieses angekündigten Abends gehört es nicht zur täglichen Hauskarte.',
+    'ONE small elegant ivory ceramic plate with two boneless cooked quail breast portions, glossy dark red grape jus beneath them, one small rectangular golden parsnip fondant and three glazed red grapes. Refined small special portion, no whole bird, no feathers, no grand feast.',
+    ['Zwei kleine ausgelöste Wachtelbrüstchen','Dunkler Traubenjus & Pastinake','Nur einmal im Monat · angekündigter Abend'])
+];
+
+export const NIXE_WINES=[
+  {id:'weinlaub-1734',name:'Weinlaub · Jahrgang 1734',kind:'Weisenfluher Rotwein',glass:8,bottle:40,unit:'0,15 l',
+    description:'Ein trockener Rotwein des Hauses Weinlaub aus der Gegend des Ewigensees. Reife rote Frucht, zurückhaltendes Holz und eine ruhige, weiche Gerbstoffnote machen den jüngeren Jahrgang zum zugänglichen Begleiter des Abends. Die Nixe lässt die Flasche vor dem ersten Glas öffnen und nennt den Jahrgang ausdrücklich.',
+    visual:'ONE corked dark green medieval wine bottle with dark red wine visible subtly through glass, cream painted paper label bearing clearly legible WEINLAUB and 1734, a tiny stylized grape motif, burgundy wax seal. Whole bottle centered, no glass or extra items.'},
+  {id:'weinlaub-1728',name:'Weinlaub · Jahrgang 1728',kind:'Gereifter Weisenfluher Rotwein',glass:14,bottle:70,unit:'0,15 l',
+    description:'Der gereifte Weinlaub-Jahrgang wird für Gäste aufbewahrt, die einen stilleren, tieferen Wein suchen. Gedörrte dunkle Frucht, eine feine erdige Würze und weiche Tannine verlangen kein lautes Essen daneben. David führt die wenigen Flaschen einzeln im Kellerbuch; die alte Jahreszahl wird beim Einschenken genannt.',
+    visual:'ONE squat dark antique green medieval wine bottle, deep aged red wine, parchment label with clearly legible WEINLAUB and 1728, tiny grape emblem, dark burgundy wax and restrained gold trim. Entire bottle, no separate glass or props.'},
+  {id:'weissmann-weisswein',name:'Weissmann · Weißwein',kind:'Weisenfluher Weißwein',glass:6,bottle:30,unit:'0,15 l',
+    description:'Ein heller, trockener Weißwein aus Weisenfluh mit frischer Säure, gelber Frucht und einer leisen Kräuternote. Er wird kühl und in kleinen Gläsern gereicht. Seine klare Art passt zu Fisch und Krebstörtchen, bleibt aber auch ohne eine Bestellung aus der Küche angenehm leicht.',
+    visual:'ONE slender pale green medieval wine bottle containing clear pale golden white wine, ivory label with clearly legible WEISSMANN, a small gold sun-like seal, cream waxed cork. Whole bottle, no glasses or extra props.'},
+  {id:'weissmann-champagnia',name:'Weissmann · Champagnia',kind:'Weisenfluher Schaumwein',glass:18,bottle:90,unit:'0,10 l',
+    description:'Der Champagnia von Weissmann steht für besondere Anlässe im Keller der Nixe. Feine Perlen, helle Frucht und ein sanfter Duft nach frischem Gebäck machen ihn lebendig, ohne ihn süß und schwer werden zu lassen. Johanna lässt ihn erst zum vereinbarten Anlass öffnen; der Ausschank aus einer geöffneten Flasche ist begrenzt.',
+    visual:'ONE stout elegant dark green medieval sparkling wine bottle with golden foil-like wax wrapping around its corked neck and tied cord, cream oval label with clearly legible WEISSMANN and CHAMPAGNIA, subtle gold border. Entire bottle, no glass or extraneous objects.'},
+  {id:'tischwein-rot',name:'Roter Tischwein',kind:'Unbenannter Hauswein',glass:0.8,unit:'0,20 l',description:'Ein schlichter trockener Rotwein ohne ausgezeichnetes Gut und ohne beworbenen Jahrgang. Er wird aus der geöffneten Hauskaraffe gereicht, ist fruchtig, geradlinig und deutlich günstiger als die geführten Weisenfluher Flaschen. Die Herkunft kann mit dem zugekauften Fass wechseln.',visual:'ONE simple small clear medieval stemmed wine glass containing ruby-red table wine, whole glass visible, modest ordinary glasswork, no bottle, labels or extra objects.'},
+  {id:'tischwein-weiss',name:'Weißer Tischwein',kind:'Unbenannter Hauswein',glass:0.9,unit:'0,20 l',description:'Ein heller, unkomplizierter Weißwein für Gäste, die keinen besonderen Namen bestellen möchten. Die Hauskaraffe wird kühl gehalten; etwas frische Säure und eine milde Fruchtnote genügen. Es handelt sich um einfachen zugekauften Tischwein, nicht um eine umetikettierte Abfüllung von Weinlaub oder Weissmann.',visual:'ONE ordinary small clear medieval stemmed wine glass filled with pale straw-gold white table wine, whole simple glass visible, no bottle, label or scenery.'},
+  {id:'tischwein-rose',name:'Rosé-Tischwein',kind:'Unbenannter Hauswein',glass:1.1,unit:'0,20 l',description:'Ein einfacher, leicht gekühlter Rosé aus dem gewöhnlichen Fassbezug der Nixe. Helle rote Frucht und eine zurückhaltende Säure machen ihn zum unaufwendigen Abendglas. Er besitzt weder einen geschützten Gutsnamen noch einen eigens geführten Jahrgang; sein Preis gilt für das einzeln ausgeschenkte Glas.',visual:'ONE modest clear medieval stemmed wine glass holding light rose-pink table wine, entire glass visible, uncomplicated ordinary glasswork, no bottle or additional objects.'}
+];
+
+export const NIXE_GUILD_IMPORTS=[
+  ['teyrngarch-brauerzunft','bier-hellwacht','Krug'],
+  ['teyrngarch-brauerzunft','bier-hopfgold','Krug'],
+  ['teyrngarch-brauerzunft','bier-sonnenglanz','Krug'],
+  ['penderyn-brauer-destillierzunft','bier-goldschuppen','Krug'],
+  ['penderyn-brauer-destillierzunft','whisky-rhagorol','Glas'],
+  ['penderyn-brauer-destillierzunft','whisky-penderyn','Glas']
+];
