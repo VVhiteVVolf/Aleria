@@ -6,1390 +6,204 @@
       "id": "person--haus-veltrane--matteo-veltrane",
       "key": "matteo",
       "group": "Veltrane",
-      "create": true,
-      "data": {
-        "name": "Matteo Septimus Veltrane",
-        "title": "Handelskapitän · Begründer der Gwynthorer Linie",
-        "fraktion": "Göttliche Eleganz",
-        "role": "Handelskapitän · Begründer der Gwynthorer Linie",
-        "status": "dead",
-        "relevance": "minor",
-        "taxonomyPath": "Kaiserreich Argentum > Unsortiert",
-        "currentLocation": "",
-        "origin": "Tirnara · Kaiserreich Argentum",
-        "plotNode": "",
-        "profileLink": "",
-        "playerOwner": "",
-        "bio": "Matteo kam mit Seide und Olivenöl nach Gwynthor und fand in Gwenoras Werkstatt einen Grund zu bleiben. Aus seinem kleinen Krämerladen und ihren Aufträgen wuchs ein Geschäft, das die Schiffe seines Stammhauses nie aus den Augen verlor.",
-        "aliases": [],
-        "archived": false,
-        "createdAt": "2026-10-15T23:44:30.684Z",
-        "updatedAt": "2026-10-15T23:44:30.684Z",
-        "portrait": "./assets/goettliche-eleganz/portraits/matteo.png",
-        "emotes": [],
-        "emotesOverride": false,
-        "imageSetSchemaVersion": 0,
-        "imageSets": [],
-        "activeImageSetId": "",
-        "imageSetsOverride": false,
-        "inventory": null,
-        "biography": null,
-        "identity": {
-          "worldPersonId": "person--haus-veltrane--matteo-veltrane"
-        },
-        "genealogy": {
-          "worldPersonId": "person--haus-veltrane--matteo-veltrane",
-          "sex": "male",
-          "status": "dead",
-          "birth": "1633",
-          "death": "1708",
-          "houseId": "house-veltrane",
-          "houseName": "Haus Veltrane",
-          "familyRole": "core",
-          "portraitPlaceholder": "auto",
-          "tags": [],
-          "sources": [
-            {
-              "familyId": "haus-raves",
-              "personId": "matteo-veltrane",
-              "releaseId": "",
-              "publishedAt": "",
-              "importedAt": "2026-10-15T23:44:30.684Z",
-              "lastSyncedAt": "2026-10-15T23:44:30.684Z",
-              "url": "../Stammbäume/Stammbaum.html?family=haus-raves&mode=view&person=matteo-veltrane",
-              "fingerprint": "{\"name\":\"Matteo Septimus Veltrane\",\"title\":\"Handelskapitän · Begründer der Gwynthorer Linie\",\"birth\":\"1633\",\"death\":\"1708\",\"sex\":\"male\",\"status\":\"dead\",\"houseId\":\"house-veltrane\",\"portrait\":\"../AleriaAlmanach/assets/goettliche-eleganz/portraits/matteo.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"gwenora-maerllys\",\"type\":\"marriage\",\"status\":\"ended\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--gwenora-maerllys\",\"name\":\"Gwenora Maerllys\"}],\"children\":[{\"personId\":\"lorenzo-raves\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-raves--lorenzo-raves\",\"name\":\"Lorenzo Cassian Raves\"},{\"personId\":\"livia-raves\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-raves--livia-raves\",\"name\":\"Livia Aurelia Raves\"},{\"personId\":\"flavia-raves\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-raves--flavia-raves\",\"name\":\"Flavia Marina Raves\"}]}}"
-            },
-            {
-              "familyId": "haus-maerllys",
-              "personId": "matteo-veltrane",
-              "releaseId": "",
-              "publishedAt": "",
-              "importedAt": "2026-10-15T23:44:30.684Z",
-              "lastSyncedAt": "2026-10-15T23:44:30.684Z",
-              "url": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=matteo-veltrane",
-              "fingerprint": "{\"name\":\"Matteo Septimus Veltrane\",\"title\":\"Handelskapitän · Begründer der Gwynthorer Linie\",\"birth\":\"1633\",\"death\":\"1708\",\"sex\":\"male\",\"status\":\"dead\",\"houseId\":\"house-veltrane\",\"portrait\":\"../AleriaAlmanach/assets/goettliche-eleganz/portraits/matteo.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"gwenora-maerllys\",\"type\":\"marriage\",\"status\":\"ended\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--gwenora-maerllys\",\"name\":\"Gwenora Maerllys\"}],\"children\":[]}}"
-            },
-            {
-              "familyId": "haus-veltrane",
-              "personId": "matteo-veltrane",
-              "releaseId": "",
-              "publishedAt": "",
-              "importedAt": "2026-10-15T23:44:30.684Z",
-              "lastSyncedAt": "2026-10-15T23:44:30.684Z",
-              "url": "../Stammbäume/Stammbaum.html?family=haus-veltrane&mode=view&person=matteo-veltrane",
-              "fingerprint": "{\"name\":\"Matteo Septimus Veltrane\",\"title\":\"Handelskapitän · Begründer der Gwynthorer Linie\",\"birth\":\"1633\",\"death\":\"1708\",\"sex\":\"male\",\"status\":\"dead\",\"houseId\":\"house-veltrane\",\"portrait\":\"../AleriaAlmanach/assets/goettliche-eleganz/portraits/matteo.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"haus-veltrane-gruender\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"unknown\",\"worldPersonId\":\"person--haus-veltrane--haus-veltrane-gruender\",\"name\":\"Unbekannter Gründer\"},{\"personId\":\"haus-veltrane-gruenderin\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"unknown\",\"worldPersonId\":\"person--haus-veltrane--haus-veltrane-gruenderin\",\"name\":\"Unbekannte Gründerin\"}],\"partners\":[{\"personId\":\"gwenora-maerllys\",\"type\":\"marriage\",\"status\":\"ended\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--gwenora-maerllys\",\"name\":\"Gwenora Maerllys\"}],\"children\":[]}}"
-            }
-          ],
-          "relationships": {
-            "parents": [
-              {
-                "personId": "haus-veltrane-gruender",
-                "type": "claimed",
-                "legitimacy": "unknown",
-                "certainty": "unknown",
-                "worldPersonId": "person--haus-veltrane--haus-veltrane-gruender",
-                "name": "Unbekannter Gründer"
-              },
-              {
-                "personId": "haus-veltrane-gruenderin",
-                "type": "claimed",
-                "legitimacy": "unknown",
-                "certainty": "unknown",
-                "worldPersonId": "person--haus-veltrane--haus-veltrane-gruenderin",
-                "name": "Unbekannte Gründerin"
-              }
-            ],
-            "partners": [
-              {
-                "personId": "gwenora-maerllys",
-                "type": "marriage",
-                "status": "ended",
-                "certainty": "confirmed",
-                "worldPersonId": "person--haus-maerllys--gwenora-maerllys",
-                "name": "Gwenora Maerllys"
-              }
-            ],
-            "children": []
-          }
-        }
-      }
+      "create": false,
+      "patch": null
     },
     {
       "id": "person--haus-maerllys--gwenora-maerllys",
       "key": "gwenora",
       "group": "Maerllys",
-      "create": true,
-      "data": {
-        "name": "Gwenora Maerllys",
-        "title": "Schneidermeisterin · Mitbegründerin des Geschäfts",
-        "fraktion": "Göttliche Eleganz",
-        "role": "Schneidermeisterin · Mitbegründerin des Geschäfts",
-        "status": "dead",
-        "relevance": "minor",
-        "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
-        "currentLocation": "",
-        "origin": "Gwynthor",
-        "plotNode": "",
-        "profileLink": "",
-        "playerOwner": "",
-        "bio": "Gwenora verstand mehr von Stoff als die meisten Tuchhändler. Sie nähte für Gwynthors Bürger, handelte selbstbewusst mit dem fremden Kapitän und brachte ihm bei, dass ein gutes Geschäft am Saum ebenso leicht scheitert wie auf See.",
-        "aliases": [],
-        "archived": false,
-        "createdAt": "2026-10-15T23:44:30.684Z",
-        "updatedAt": "2026-10-15T23:44:30.684Z",
-        "portrait": "./assets/goettliche-eleganz/portraits/gwenora.png",
-        "emotes": [],
-        "emotesOverride": false,
-        "imageSetSchemaVersion": 0,
-        "imageSets": [],
-        "activeImageSetId": "",
-        "imageSetsOverride": false,
-        "inventory": null,
-        "biography": null,
-        "identity": {
-          "worldPersonId": "person--haus-maerllys--gwenora-maerllys"
-        },
+      "create": false,
+      "patch": {
         "genealogy": {
-          "worldPersonId": "person--haus-maerllys--gwenora-maerllys",
-          "sex": "female",
-          "status": "dead",
-          "birth": "1638",
-          "death": "1714",
-          "houseId": "house-maerllys",
-          "houseName": "Haus Maerllys",
-          "familyRole": "core",
-          "portraitPlaceholder": "auto",
-          "tags": [],
           "sources": [
             {
               "familyId": "haus-raves",
-              "personId": "gwenora-maerllys",
               "releaseId": "",
               "publishedAt": "",
+              "fingerprint": "{\"name\":\"Gwenora Maerllys\",\"title\":\"Schneidermeisterin · Mitbegründerin des Geschäfts\",\"birth\":\"1638\",\"death\":\"1714\",\"sex\":\"female\",\"status\":\"dead\",\"houseId\":\"house-maerllys\",\"portrait\":\"../AleriaAlmanach/assets/goettliche-eleganz/portraits/gwenora-v2.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"matteo-veltrane\",\"type\":\"marriage\",\"status\":\"ended\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-veltrane--matteo-veltrane\",\"name\":\"Matteo Septimus Veltrane\"}],\"children\":[{\"personId\":\"lorenzo-raves\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-raves--lorenzo-raves\",\"name\":\"Lorenzo Cassian Raves\"},{\"personId\":\"livia-raves\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-raves--livia-raves\",\"name\":\"Livia Aurelia Raves\"},{\"personId\":\"flavia-raves\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-raves--flavia-raves\",\"name\":\"Flavia Marina Raves\"}]}}",
+              "lastSyncedAt": "2026-10-16T00:44:51.591Z",
               "importedAt": "2026-10-15T23:44:30.684Z",
-              "lastSyncedAt": "2026-10-15T23:44:30.684Z",
               "url": "../Stammbäume/Stammbaum.html?family=haus-raves&mode=view&person=gwenora-maerllys",
-              "fingerprint": "{\"name\":\"Gwenora Maerllys\",\"title\":\"Schneidermeisterin · Mitbegründerin des Geschäfts\",\"birth\":\"1638\",\"death\":\"1714\",\"sex\":\"female\",\"status\":\"dead\",\"houseId\":\"house-maerllys\",\"portrait\":\"../AleriaAlmanach/assets/goettliche-eleganz/portraits/gwenora.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"matteo-veltrane\",\"type\":\"marriage\",\"status\":\"ended\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-veltrane--matteo-veltrane\",\"name\":\"Matteo Septimus Veltrane\"}],\"children\":[{\"personId\":\"lorenzo-raves\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-raves--lorenzo-raves\",\"name\":\"Lorenzo Cassian Raves\"},{\"personId\":\"livia-raves\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-raves--livia-raves\",\"name\":\"Livia Aurelia Raves\"},{\"personId\":\"flavia-raves\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-raves--flavia-raves\",\"name\":\"Flavia Marina Raves\"}]}}"
+              "personId": "gwenora-maerllys"
             },
             {
-              "familyId": "haus-maerllys",
+              "importedAt": "2026-10-15T23:44:30.684Z",
+              "publishedAt": "",
               "personId": "gwenora-maerllys",
               "releaseId": "",
-              "publishedAt": "",
-              "importedAt": "2026-10-15T23:44:30.684Z",
-              "lastSyncedAt": "2026-10-15T23:44:30.684Z",
               "url": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=gwenora-maerllys",
-              "fingerprint": "{\"name\":\"Gwenora Maerllys\",\"title\":\"Schneidermeisterin · Mitbegründerin des Geschäfts\",\"birth\":\"1638\",\"death\":\"1714\",\"sex\":\"female\",\"status\":\"dead\",\"houseId\":\"house-maerllys\",\"portrait\":\"../AleriaAlmanach/assets/goettliche-eleganz/portraits/gwenora.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"haus-maerllys-gruender\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"unknown\",\"worldPersonId\":\"person--haus-maerllys--haus-maerllys-gruender\",\"name\":\"??? Maerllys\"},{\"personId\":\"haus-maerllys-gruenderin\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"unknown\",\"worldPersonId\":\"person--haus-maerllys--haus-maerllys-gruenderin\",\"name\":\"??? Maerllys\"}],\"partners\":[{\"personId\":\"matteo-veltrane\",\"type\":\"marriage\",\"status\":\"ended\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-veltrane--matteo-veltrane\",\"name\":\"Matteo Septimus Veltrane\"}],\"children\":[]}}"
+              "familyId": "haus-maerllys",
+              "lastSyncedAt": "2026-10-16T00:44:51.591Z",
+              "fingerprint": "{\"name\":\"Gwenora Maerllys\",\"title\":\"Schneidermeisterin · Mitbegründerin des Geschäfts\",\"birth\":\"1638\",\"death\":\"1714\",\"sex\":\"female\",\"status\":\"dead\",\"houseId\":\"house-maerllys\",\"portrait\":\"../AleriaAlmanach/assets/goettliche-eleganz/portraits/gwenora-v2.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"haus-maerllys-gruender\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"unknown\",\"worldPersonId\":\"person--haus-maerllys--haus-maerllys-gruender\",\"name\":\"??? Maerllys\"},{\"personId\":\"haus-maerllys-gruenderin\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"unknown\",\"worldPersonId\":\"person--haus-maerllys--haus-maerllys-gruenderin\",\"name\":\"??? Maerllys\"}],\"partners\":[{\"personId\":\"matteo-veltrane\",\"type\":\"marriage\",\"status\":\"ended\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-veltrane--matteo-veltrane\",\"name\":\"Matteo Septimus Veltrane\"}],\"children\":[]}}"
             },
             {
               "familyId": "haus-veltrane",
-              "personId": "gwenora-maerllys",
-              "releaseId": "",
-              "publishedAt": "",
               "importedAt": "2026-10-15T23:44:30.684Z",
-              "lastSyncedAt": "2026-10-15T23:44:30.684Z",
+              "publishedAt": "",
               "url": "../Stammbäume/Stammbaum.html?family=haus-veltrane&mode=view&person=gwenora-maerllys",
-              "fingerprint": "{\"name\":\"Gwenora Maerllys\",\"title\":\"Schneidermeisterin · Mitbegründerin des Geschäfts\",\"birth\":\"1638\",\"death\":\"1714\",\"sex\":\"female\",\"status\":\"dead\",\"houseId\":\"house-maerllys\",\"portrait\":\"../AleriaAlmanach/assets/goettliche-eleganz/portraits/gwenora.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"matteo-veltrane\",\"type\":\"marriage\",\"status\":\"ended\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-veltrane--matteo-veltrane\",\"name\":\"Matteo Septimus Veltrane\"}],\"children\":[]}}"
+              "fingerprint": "{\"name\":\"Gwenora Maerllys\",\"title\":\"Schneidermeisterin · Mitbegründerin des Geschäfts\",\"birth\":\"1638\",\"death\":\"1714\",\"sex\":\"female\",\"status\":\"dead\",\"houseId\":\"house-maerllys\",\"portrait\":\"../AleriaAlmanach/assets/goettliche-eleganz/portraits/gwenora-v2.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"matteo-veltrane\",\"type\":\"marriage\",\"status\":\"ended\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-veltrane--matteo-veltrane\",\"name\":\"Matteo Septimus Veltrane\"}],\"children\":[]}}",
+              "releaseId": "",
+              "personId": "gwenora-maerllys",
+              "lastSyncedAt": "2026-10-16T00:44:51.591Z"
             }
-          ],
-          "relationships": {
-            "parents": [
-              {
-                "personId": "haus-maerllys-gruender",
-                "type": "claimed",
-                "legitimacy": "unknown",
-                "certainty": "unknown",
-                "worldPersonId": "person--haus-maerllys--haus-maerllys-gruender",
-                "name": "??? Maerllys"
-              },
-              {
-                "personId": "haus-maerllys-gruenderin",
-                "type": "claimed",
-                "legitimacy": "unknown",
-                "certainty": "unknown",
-                "worldPersonId": "person--haus-maerllys--haus-maerllys-gruenderin",
-                "name": "??? Maerllys"
-              }
-            ],
-            "partners": [
-              {
-                "personId": "matteo-veltrane",
-                "type": "marriage",
-                "status": "ended",
-                "certainty": "confirmed",
-                "worldPersonId": "person--haus-veltrane--matteo-veltrane",
-                "name": "Matteo Septimus Veltrane"
-              }
-            ],
-            "children": []
-          }
-        }
+          ]
+        },
+        "updatedAt": "2026-10-16T00:44:51.591Z",
+        "portrait": "./assets/goettliche-eleganz/portraits/gwenora-v2.png"
       }
     },
     {
       "id": "person--haus-raves--lorenzo-raves",
       "key": "lorenzo",
       "group": "Raves",
-      "create": true,
-      "data": {
-        "name": "Lorenzo Cassian Raves",
-        "title": "Verstorbener Geschäftsinhaber",
-        "fraktion": "Göttliche Eleganz",
-        "role": "Verstorbener Geschäftsinhaber",
-        "status": "dead",
-        "relevance": "minor",
-        "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
-        "currentLocation": "",
-        "origin": "Gwynthor",
-        "plotNode": "",
-        "profileLink": "",
-        "playerOwner": "",
-        "bio": "Lorenzo machte aus dem Krämerladen ein Haus für gute Kleidung. Er gab den Maßstuben feste Werkstätten und ließ lieber eine Lieferung ausfallen, als zweifelhafte Seide unter dem Namen Raves zu verkaufen.",
-        "aliases": [],
-        "archived": false,
-        "createdAt": "2026-10-15T23:44:30.684Z",
-        "updatedAt": "2026-10-15T23:44:30.684Z",
-        "portrait": "./assets/goettliche-eleganz/portraits/lorenzo.png",
-        "emotes": [],
-        "emotesOverride": false,
-        "imageSetSchemaVersion": 0,
-        "imageSets": [],
-        "activeImageSetId": "",
-        "imageSetsOverride": false,
-        "inventory": null,
-        "biography": null,
-        "identity": {
-          "worldPersonId": "person--haus-raves--lorenzo-raves"
-        },
-        "genealogy": {
-          "worldPersonId": "person--haus-raves--lorenzo-raves",
-          "sex": "male",
-          "status": "dead",
-          "birth": "1665",
-          "death": "1734",
-          "houseId": "house-raves",
-          "houseName": "Haus Raves",
-          "familyRole": "core",
-          "portraitPlaceholder": "auto",
-          "tags": [],
-          "sources": [
-            {
-              "familyId": "haus-raves",
-              "personId": "lorenzo-raves",
-              "releaseId": "",
-              "publishedAt": "",
-              "importedAt": "2026-10-15T23:44:30.684Z",
-              "lastSyncedAt": "2026-10-15T23:44:30.684Z",
-              "url": "../Stammbäume/Stammbaum.html?family=haus-raves&mode=view&person=lorenzo-raves",
-              "fingerprint": "{\"name\":\"Lorenzo Cassian Raves\",\"title\":\"Verstorbener Geschäftsinhaber\",\"birth\":\"1665\",\"death\":\"1734\",\"sex\":\"male\",\"status\":\"dead\",\"houseId\":\"house-raves\",\"portrait\":\"../AleriaAlmanach/assets/goettliche-eleganz/portraits/lorenzo.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"matteo-veltrane\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-veltrane--matteo-veltrane\",\"name\":\"Matteo Septimus Veltrane\"},{\"personId\":\"gwenora-maerllys\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--gwenora-maerllys\",\"name\":\"Gwenora Maerllys\"}],\"partners\":[{\"personId\":\"rhiain-raves\",\"type\":\"marriage\",\"status\":\"ended\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-raves--rhiain-raves\",\"name\":\"Rhiain\"}],\"children\":[{\"personId\":\"eleonora-raves\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-raves--eleonora-raves\",\"name\":\"Eleonora Cassia Raves\"},{\"personId\":\"tiberian-raves\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-raves--tiberian-raves\",\"name\":\"Tiberian Raves\"},{\"personId\":\"orestian-raves\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-raves--orestian-raves\",\"name\":\"Orestian Raves\"}]}}"
-            }
-          ],
-          "relationships": {
-            "parents": [
-              {
-                "personId": "matteo-veltrane",
-                "type": "biological",
-                "legitimacy": "legitimate",
-                "certainty": "confirmed",
-                "worldPersonId": "person--haus-veltrane--matteo-veltrane",
-                "name": "Matteo Septimus Veltrane"
-              },
-              {
-                "personId": "gwenora-maerllys",
-                "type": "biological",
-                "legitimacy": "legitimate",
-                "certainty": "confirmed",
-                "worldPersonId": "person--haus-maerllys--gwenora-maerllys",
-                "name": "Gwenora Maerllys"
-              }
-            ],
-            "partners": [
-              {
-                "personId": "rhiain-raves",
-                "type": "marriage",
-                "status": "ended",
-                "certainty": "confirmed",
-                "worldPersonId": "person--haus-raves--rhiain-raves",
-                "name": "Rhiain"
-              }
-            ],
-            "children": [
-              {
-                "personId": "eleonora-raves",
-                "type": "biological",
-                "legitimacy": "legitimate",
-                "certainty": "confirmed",
-                "worldPersonId": "person--haus-raves--eleonora-raves",
-                "name": "Eleonora Cassia Raves"
-              },
-              {
-                "personId": "tiberian-raves",
-                "type": "biological",
-                "legitimacy": "legitimate",
-                "certainty": "confirmed",
-                "worldPersonId": "person--haus-raves--tiberian-raves",
-                "name": "Tiberian Raves"
-              },
-              {
-                "personId": "orestian-raves",
-                "type": "biological",
-                "legitimacy": "legitimate",
-                "certainty": "confirmed",
-                "worldPersonId": "person--haus-raves--orestian-raves",
-                "name": "Orestian Raves"
-              }
-            ]
-          }
-        }
-      }
+      "create": false,
+      "patch": null
     },
     {
       "id": "person--haus-raves--rhiain-raves",
       "key": "rhiain",
       "group": "Raves",
-      "create": true,
-      "data": {
-        "name": "Rhiain",
-        "title": "Altmeisterin · Schnittkunde & Ausbildung",
-        "fraktion": "Göttliche Eleganz",
-        "role": "Altmeisterin · Schnittkunde & Ausbildung",
-        "status": "active",
-        "relevance": "minor",
-        "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
-        "currentLocation": "Gwynthor · Göttliche Eleganz",
-        "origin": "Gwynthor",
-        "plotNode": "",
-        "profileLink": "",
-        "playerOwner": "",
-        "bio": "Rhiain erkennt einen verzogenen Fadenlauf mit einem Blick. Die Witwe des alten Inhabers gibt ihre Schnitte und ihre Geduld an die Lehrlinge weiter; den letzten Stich einer Festgarnitur prüft sie gern noch selbst.",
-        "aliases": [],
-        "archived": false,
-        "createdAt": "2026-10-15T23:44:30.684Z",
-        "updatedAt": "2026-10-15T23:44:30.684Z",
-        "portrait": "./assets/goettliche-eleganz/portraits/rhiain.png",
-        "emotes": [],
-        "emotesOverride": false,
-        "imageSetSchemaVersion": 0,
-        "imageSets": [],
-        "activeImageSetId": "",
-        "imageSetsOverride": false,
-        "inventory": null,
-        "biography": null,
-        "identity": {
-          "worldPersonId": "person--haus-raves--rhiain-raves"
-        },
-        "genealogy": {
-          "worldPersonId": "person--haus-raves--rhiain-raves",
-          "sex": "female",
-          "status": "alive",
-          "birth": "1674",
-          "death": "",
-          "houseId": "",
-          "houseName": "",
-          "familyRole": "married",
-          "portraitPlaceholder": "auto",
-          "tags": [],
-          "sources": [
-            {
-              "familyId": "haus-raves",
-              "personId": "rhiain-raves",
-              "releaseId": "",
-              "publishedAt": "",
-              "importedAt": "2026-10-15T23:44:30.684Z",
-              "lastSyncedAt": "2026-10-15T23:44:30.684Z",
-              "url": "../Stammbäume/Stammbaum.html?family=haus-raves&mode=view&person=rhiain-raves",
-              "fingerprint": "{\"name\":\"Rhiain\",\"title\":\"Altmeisterin · Schnittkunde & Ausbildung\",\"birth\":\"1674\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"\",\"portrait\":\"../AleriaAlmanach/assets/goettliche-eleganz/portraits/rhiain.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"lorenzo-raves\",\"type\":\"marriage\",\"status\":\"ended\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-raves--lorenzo-raves\",\"name\":\"Lorenzo Cassian Raves\"}],\"children\":[{\"personId\":\"eleonora-raves\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-raves--eleonora-raves\",\"name\":\"Eleonora Cassia Raves\"},{\"personId\":\"tiberian-raves\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-raves--tiberian-raves\",\"name\":\"Tiberian Raves\"},{\"personId\":\"orestian-raves\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-raves--orestian-raves\",\"name\":\"Orestian Raves\"}]}}"
-            }
-          ],
-          "relationships": {
-            "parents": [],
-            "partners": [
-              {
-                "personId": "lorenzo-raves",
-                "type": "marriage",
-                "status": "ended",
-                "certainty": "confirmed",
-                "worldPersonId": "person--haus-raves--lorenzo-raves",
-                "name": "Lorenzo Cassian Raves"
-              }
-            ],
-            "children": [
-              {
-                "personId": "eleonora-raves",
-                "type": "biological",
-                "legitimacy": "legitimate",
-                "certainty": "confirmed",
-                "worldPersonId": "person--haus-raves--eleonora-raves",
-                "name": "Eleonora Cassia Raves"
-              },
-              {
-                "personId": "tiberian-raves",
-                "type": "biological",
-                "legitimacy": "legitimate",
-                "certainty": "confirmed",
-                "worldPersonId": "person--haus-raves--tiberian-raves",
-                "name": "Tiberian Raves"
-              },
-              {
-                "personId": "orestian-raves",
-                "type": "biological",
-                "legitimacy": "legitimate",
-                "certainty": "confirmed",
-                "worldPersonId": "person--haus-raves--orestian-raves",
-                "name": "Orestian Raves"
-              }
-            ]
-          }
-        }
-      }
+      "create": false,
+      "patch": null
     },
     {
       "id": "person--haus-raves--livia-raves",
       "key": "livia",
       "group": "Raves",
-      "create": true,
-      "data": {
-        "name": "Livia Aurelia Raves",
-        "title": "Nach Venalys verheiratet",
-        "fraktion": "Göttliche Eleganz",
-        "role": "Nach Venalys verheiratet",
-        "status": "active",
-        "relevance": "minor",
-        "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
-        "currentLocation": "Venalys",
-        "origin": "Gwynthor",
-        "plotNode": "",
-        "profileLink": "",
-        "playerOwner": "",
-        "bio": "Livia lebt seit ihrer Heirat in Venalys. Ihre Briefe sind voll bissiger Bemerkungen über neue Säume, schlechte Festkleider und Menschen, die beides tragen. Gelegentlich reist ein seltenes Muster mit der Post nach Gwynthor.",
-        "aliases": [],
-        "archived": false,
-        "createdAt": "2026-10-15T23:44:30.684Z",
-        "updatedAt": "2026-10-15T23:44:30.684Z",
-        "portrait": "./assets/goettliche-eleganz/portraits/livia.png",
-        "emotes": [],
-        "emotesOverride": false,
-        "imageSetSchemaVersion": 0,
-        "imageSets": [],
-        "activeImageSetId": "",
-        "imageSetsOverride": false,
-        "inventory": null,
-        "biography": null,
-        "identity": {
-          "worldPersonId": "person--haus-raves--livia-raves"
-        },
-        "genealogy": {
-          "worldPersonId": "person--haus-raves--livia-raves",
-          "sex": "female",
-          "status": "alive",
-          "birth": "1669",
-          "death": "",
-          "houseId": "house-raves",
-          "houseName": "Haus Raves",
-          "familyRole": "core",
-          "portraitPlaceholder": "auto",
-          "tags": [],
-          "sources": [
-            {
-              "familyId": "haus-raves",
-              "personId": "livia-raves",
-              "releaseId": "",
-              "publishedAt": "",
-              "importedAt": "2026-10-15T23:44:30.684Z",
-              "lastSyncedAt": "2026-10-15T23:44:30.684Z",
-              "url": "../Stammbäume/Stammbaum.html?family=haus-raves&mode=view&person=livia-raves",
-              "fingerprint": "{\"name\":\"Livia Aurelia Raves\",\"title\":\"Nach Venalys verheiratet\",\"birth\":\"1669\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-raves\",\"portrait\":\"../AleriaAlmanach/assets/goettliche-eleganz/portraits/livia.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"matteo-veltrane\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-veltrane--matteo-veltrane\",\"name\":\"Matteo Septimus Veltrane\"},{\"personId\":\"gwenora-maerllys\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--gwenora-maerllys\",\"name\":\"Gwenora Maerllys\"}],\"partners\":[{\"personId\":\"unbekannter-gemahl-livia-raves\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-unbekannt-livia-raves--unbekannter-gemahl-livia-raves\",\"name\":\"Unbekannter Gemahl\"}],\"children\":[]}}"
-            }
-          ],
-          "relationships": {
-            "parents": [
-              {
-                "personId": "matteo-veltrane",
-                "type": "biological",
-                "legitimacy": "legitimate",
-                "certainty": "confirmed",
-                "worldPersonId": "person--haus-veltrane--matteo-veltrane",
-                "name": "Matteo Septimus Veltrane"
-              },
-              {
-                "personId": "gwenora-maerllys",
-                "type": "biological",
-                "legitimacy": "legitimate",
-                "certainty": "confirmed",
-                "worldPersonId": "person--haus-maerllys--gwenora-maerllys",
-                "name": "Gwenora Maerllys"
-              }
-            ],
-            "partners": [
-              {
-                "personId": "unbekannter-gemahl-livia-raves",
-                "type": "marriage",
-                "status": "active",
-                "certainty": "confirmed",
-                "worldPersonId": "person--haus-unbekannt-livia-raves--unbekannter-gemahl-livia-raves",
-                "name": "Unbekannter Gemahl"
-              }
-            ],
-            "children": []
-          }
-        }
-      }
+      "create": false,
+      "patch": null
     },
     {
       "id": "person--haus-raves--flavia-raves",
       "key": "flavia",
       "group": "Raves",
-      "create": true,
-      "data": {
-        "name": "Flavia Marina Raves",
-        "title": "Nach Tirnara verheiratet",
-        "fraktion": "Göttliche Eleganz",
-        "role": "Nach Tirnara verheiratet",
-        "status": "active",
-        "relevance": "minor",
-        "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
-        "currentLocation": "Tirnara",
-        "origin": "Gwynthor",
-        "plotNode": "",
-        "profileLink": "",
-        "playerOwner": "",
-        "bio": "Flavia kehrte durch ihre Heirat in den Süden zurück. Sie hat ein gutes Gedächtnis für Stoffpreise und ein besseres für Gefälligkeiten. In Gwynthor weiß man, dass ihre seltenen Empfehlungen eine Prüfung wert sind.",
-        "aliases": [],
-        "archived": false,
-        "createdAt": "2026-10-15T23:44:30.684Z",
-        "updatedAt": "2026-10-15T23:44:30.684Z",
-        "portrait": "./assets/goettliche-eleganz/portraits/flavia.png",
-        "emotes": [],
-        "emotesOverride": false,
-        "imageSetSchemaVersion": 0,
-        "imageSets": [],
-        "activeImageSetId": "",
-        "imageSetsOverride": false,
-        "inventory": null,
-        "biography": null,
-        "identity": {
-          "worldPersonId": "person--haus-raves--flavia-raves"
-        },
-        "genealogy": {
-          "worldPersonId": "person--haus-raves--flavia-raves",
-          "sex": "female",
-          "status": "alive",
-          "birth": "1674",
-          "death": "",
-          "houseId": "house-raves",
-          "houseName": "Haus Raves",
-          "familyRole": "core",
-          "portraitPlaceholder": "auto",
-          "tags": [],
-          "sources": [
-            {
-              "familyId": "haus-raves",
-              "personId": "flavia-raves",
-              "releaseId": "",
-              "publishedAt": "",
-              "importedAt": "2026-10-15T23:44:30.684Z",
-              "lastSyncedAt": "2026-10-15T23:44:30.684Z",
-              "url": "../Stammbäume/Stammbaum.html?family=haus-raves&mode=view&person=flavia-raves",
-              "fingerprint": "{\"name\":\"Flavia Marina Raves\",\"title\":\"Nach Tirnara verheiratet\",\"birth\":\"1674\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-raves\",\"portrait\":\"../AleriaAlmanach/assets/goettliche-eleganz/portraits/flavia.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"matteo-veltrane\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-veltrane--matteo-veltrane\",\"name\":\"Matteo Septimus Veltrane\"},{\"personId\":\"gwenora-maerllys\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--gwenora-maerllys\",\"name\":\"Gwenora Maerllys\"}],\"partners\":[{\"personId\":\"unbekannter-gemahl-flavia-raves\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-unbekannt-flavia-raves--unbekannter-gemahl-flavia-raves\",\"name\":\"Unbekannter Gemahl\"}],\"children\":[]}}"
-            }
-          ],
-          "relationships": {
-            "parents": [
-              {
-                "personId": "matteo-veltrane",
-                "type": "biological",
-                "legitimacy": "legitimate",
-                "certainty": "confirmed",
-                "worldPersonId": "person--haus-veltrane--matteo-veltrane",
-                "name": "Matteo Septimus Veltrane"
-              },
-              {
-                "personId": "gwenora-maerllys",
-                "type": "biological",
-                "legitimacy": "legitimate",
-                "certainty": "confirmed",
-                "worldPersonId": "person--haus-maerllys--gwenora-maerllys",
-                "name": "Gwenora Maerllys"
-              }
-            ],
-            "partners": [
-              {
-                "personId": "unbekannter-gemahl-flavia-raves",
-                "type": "marriage",
-                "status": "active",
-                "certainty": "confirmed",
-                "worldPersonId": "person--haus-unbekannt-flavia-raves--unbekannter-gemahl-flavia-raves",
-                "name": "Unbekannter Gemahl"
-              }
-            ],
-            "children": []
-          }
-        }
-      }
+      "create": false,
+      "patch": null
     },
     {
       "id": "person--haus-raves--eleonora-raves",
       "key": "eleonora",
       "group": "Raves",
-      "create": true,
-      "data": {
-        "name": "Eleonora Cassia Raves",
-        "title": "Inhaberin · Entwurf & letzte Anprobe",
-        "fraktion": "Göttliche Eleganz",
-        "role": "Inhaberin · Entwurf & letzte Anprobe",
-        "status": "active",
-        "relevance": "supporting",
-        "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
-        "currentLocation": "Gwynthor · Göttliche Eleganz",
-        "origin": "Gwynthor",
-        "plotNode": "",
-        "profileLink": "",
-        "playerOwner": "",
-        "bio": "Eleonora führt die Göttliche Eleganz mit ruhiger Stimme und einem unerbittlichen Auge für den Sitz eines Gewandes. Sie berät selbst, zeichnet die besonderen Entwürfe und lässt keine Festgarnitur gehen, deren Träger sich darin verkleidet fühlt.",
-        "aliases": [],
-        "archived": false,
-        "createdAt": "2026-10-15T23:44:30.684Z",
-        "updatedAt": "2026-10-15T23:44:30.684Z",
-        "portrait": "./assets/goettliche-eleganz/portraits/eleonora.png",
-        "emotes": [],
-        "emotesOverride": false,
-        "imageSetSchemaVersion": 0,
-        "imageSets": [],
-        "activeImageSetId": "",
-        "imageSetsOverride": false,
-        "inventory": null,
-        "biography": null,
-        "identity": {
-          "worldPersonId": "person--haus-raves--eleonora-raves"
-        },
-        "genealogy": {
-          "worldPersonId": "person--haus-raves--eleonora-raves",
-          "sex": "female",
-          "status": "alive",
-          "birth": "1701",
-          "death": "",
-          "houseId": "house-raves",
-          "houseName": "Haus Raves",
-          "familyRole": "core",
-          "portraitPlaceholder": "auto",
-          "tags": [],
-          "sources": [
-            {
-              "familyId": "haus-raves",
-              "personId": "eleonora-raves",
-              "releaseId": "",
-              "publishedAt": "",
-              "importedAt": "2026-10-15T23:44:30.684Z",
-              "lastSyncedAt": "2026-10-15T23:44:30.684Z",
-              "url": "../Stammbäume/Stammbaum.html?family=haus-raves&mode=view&person=eleonora-raves",
-              "fingerprint": "{\"name\":\"Eleonora Cassia Raves\",\"title\":\"Inhaberin · Entwurf & letzte Anprobe\",\"birth\":\"1701\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-raves\",\"portrait\":\"../AleriaAlmanach/assets/goettliche-eleganz/portraits/eleonora.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"lorenzo-raves\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-raves--lorenzo-raves\",\"name\":\"Lorenzo Cassian Raves\"},{\"personId\":\"rhiain-raves\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-raves--rhiain-raves\",\"name\":\"Rhiain\"}],\"partners\":[{\"personId\":\"luciano-veltrane\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-veltrane--luciano-veltrane\",\"name\":\"Luciano Marcellus Veltrane\"}],\"children\":[{\"personId\":\"aurelio-raves\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-raves--aurelio-raves\",\"name\":\"Aurelio Raves\"},{\"personId\":\"lavinia-raves\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-raves--lavinia-raves\",\"name\":\"Lavinia Raves\"}]}}"
-            }
-          ],
-          "relationships": {
-            "parents": [
-              {
-                "personId": "lorenzo-raves",
-                "type": "biological",
-                "legitimacy": "legitimate",
-                "certainty": "confirmed",
-                "worldPersonId": "person--haus-raves--lorenzo-raves",
-                "name": "Lorenzo Cassian Raves"
-              },
-              {
-                "personId": "rhiain-raves",
-                "type": "biological",
-                "legitimacy": "legitimate",
-                "certainty": "confirmed",
-                "worldPersonId": "person--haus-raves--rhiain-raves",
-                "name": "Rhiain"
-              }
-            ],
-            "partners": [
-              {
-                "personId": "luciano-veltrane",
-                "type": "marriage",
-                "status": "active",
-                "certainty": "confirmed",
-                "worldPersonId": "person--haus-veltrane--luciano-veltrane",
-                "name": "Luciano Marcellus Veltrane"
-              }
-            ],
-            "children": [
-              {
-                "personId": "aurelio-raves",
-                "type": "biological",
-                "legitimacy": "legitimate",
-                "certainty": "confirmed",
-                "worldPersonId": "person--haus-raves--aurelio-raves",
-                "name": "Aurelio Raves"
-              },
-              {
-                "personId": "lavinia-raves",
-                "type": "biological",
-                "legitimacy": "legitimate",
-                "certainty": "confirmed",
-                "worldPersonId": "person--haus-raves--lavinia-raves",
-                "name": "Lavinia Raves"
-              }
-            ]
-          }
-        }
-      }
+      "create": false,
+      "patch": null
     },
     {
       "id": "person--haus-raves--tiberian-raves",
       "key": "tiberian",
       "group": "Raves",
-      "create": true,
-      "data": {
-        "name": "Tiberian Raves",
-        "title": "Handelsmeister · Seeroute & Fortuna",
-        "fraktion": "Göttliche Eleganz",
-        "role": "Handelsmeister · Seeroute & Fortuna",
-        "status": "active",
-        "relevance": "minor",
-        "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
-        "currentLocation": "Gwynthor · Göttliche Eleganz",
-        "origin": "Gwynthor",
-        "plotNode": "",
-        "profileLink": "",
-        "playerOwner": "",
-        "bio": "Tiberian hält die Verbindung zu den Veltrane und zum Markt der Fortuna. Er reist oft nach Tirnara, prüft Zusagen und sorgt dafür, dass aus einem guten Vertrag auch eine pünktliche Lieferung wird. Einen überladenen Laderaum erkennt er schneller als eine schlechte Ausrede.",
-        "aliases": [],
-        "archived": false,
-        "createdAt": "2026-10-15T23:44:30.684Z",
-        "updatedAt": "2026-10-15T23:44:30.684Z",
-        "portrait": "./assets/goettliche-eleganz/portraits/tiberian.png",
-        "emotes": [],
-        "emotesOverride": false,
-        "imageSetSchemaVersion": 0,
-        "imageSets": [],
-        "activeImageSetId": "",
-        "imageSetsOverride": false,
-        "inventory": null,
-        "biography": null,
-        "identity": {
-          "worldPersonId": "person--haus-raves--tiberian-raves"
-        },
+      "create": false,
+      "patch": {
         "genealogy": {
-          "worldPersonId": "person--haus-raves--tiberian-raves",
-          "sex": "male",
-          "status": "alive",
-          "birth": "1703",
-          "death": "",
-          "houseId": "house-raves",
-          "houseName": "Haus Raves",
-          "familyRole": "core",
-          "portraitPlaceholder": "auto",
-          "tags": [],
           "sources": [
             {
-              "familyId": "haus-raves",
-              "personId": "tiberian-raves",
               "releaseId": "",
               "publishedAt": "",
-              "importedAt": "2026-10-15T23:44:30.684Z",
+              "familyId": "haus-raves",
               "lastSyncedAt": "2026-10-15T23:44:30.684Z",
               "url": "../Stammbäume/Stammbaum.html?family=haus-raves&mode=view&person=tiberian-raves",
-              "fingerprint": "{\"name\":\"Tiberian Raves\",\"title\":\"Handelsmeister · Seeroute & Fortuna\",\"birth\":\"1703\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-raves\",\"portrait\":\"../AleriaAlmanach/assets/goettliche-eleganz/portraits/tiberian.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"lorenzo-raves\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-raves--lorenzo-raves\",\"name\":\"Lorenzo Cassian Raves\"},{\"personId\":\"rhiain-raves\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-raves--rhiain-raves\",\"name\":\"Rhiain\"}],\"partners\":[{\"personId\":\"maelwen-coeddu\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-coeddu--maelwen-coeddu\",\"name\":\"Maelwen Coeddu\"}],\"children\":[{\"personId\":\"serafina-raves\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-raves--serafina-raves\",\"name\":\"Serafina Raves\"}]}}"
+              "importedAt": "2026-10-15T23:44:30.684Z",
+              "fingerprint": "{\"name\":\"Tiberian Raves\",\"title\":\"Handelsmeister · Seeroute & Fortuna\",\"birth\":\"1703\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-raves\",\"portrait\":\"../AleriaAlmanach/assets/goettliche-eleganz/portraits/tiberian.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"lorenzo-raves\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-raves--lorenzo-raves\",\"name\":\"Lorenzo Cassian Raves\"},{\"personId\":\"rhiain-raves\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-raves--rhiain-raves\",\"name\":\"Rhiain\"}],\"partners\":[{\"personId\":\"maelwen-coeddu\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-coeddu--maelwen-coeddu\",\"name\":\"Maelwen Coeddu\"}],\"children\":[{\"personId\":\"serafina-raves\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-raves--serafina-raves\",\"name\":\"Serafina Raves\"}]}}",
+              "personId": "tiberian-raves"
             },
             {
-              "familyId": "haus-coeddu",
+              "fingerprint": "{\"name\":\"Tiberian Raves\",\"title\":\"Handelsmeister · Seeroute & Fortuna\",\"birth\":\"1703\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-raves\",\"portrait\":\"../AleriaAlmanach/assets/goettliche-eleganz/portraits/tiberian.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"maelwen-coeddu\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-coeddu--maelwen-coeddu\",\"name\":\"Maelwen Coeddu\"}],\"children\":[]}}",
               "personId": "tiberian-raves",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-coeddu&mode=view&person=tiberian-raves",
+              "importedAt": "2026-10-15T23:44:30.684Z",
               "releaseId": "",
               "publishedAt": "",
-              "importedAt": "2026-10-15T23:44:30.684Z",
-              "lastSyncedAt": "2026-10-15T23:44:30.684Z",
-              "url": "../Stammbäume/Stammbaum.html?family=haus-coeddu&mode=view&person=tiberian-raves",
-              "fingerprint": "{\"name\":\"Tiberian Raves\",\"title\":\"Handelsmeister · Seeroute & Fortuna\",\"birth\":\"1703\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-raves\",\"portrait\":\"../AleriaAlmanach/assets/goettliche-eleganz/portraits/tiberian.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"maelwen-coeddu\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-coeddu--maelwen-coeddu\",\"name\":\"Maelwen Coeddu\"}],\"children\":[{\"personId\":\"serafina-raves\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-raves--serafina-raves\",\"name\":\"Serafina Raves\"}]}}"
+              "lastSyncedAt": "2026-10-16T00:44:51.591Z",
+              "familyId": "haus-coeddu"
             }
-          ],
-          "relationships": {
-            "parents": [
-              {
-                "personId": "lorenzo-raves",
-                "type": "biological",
-                "legitimacy": "legitimate",
-                "certainty": "confirmed",
-                "worldPersonId": "person--haus-raves--lorenzo-raves",
-                "name": "Lorenzo Cassian Raves"
-              },
-              {
-                "personId": "rhiain-raves",
-                "type": "biological",
-                "legitimacy": "legitimate",
-                "certainty": "confirmed",
-                "worldPersonId": "person--haus-raves--rhiain-raves",
-                "name": "Rhiain"
-              }
-            ],
-            "partners": [
-              {
-                "personId": "maelwen-coeddu",
-                "type": "marriage",
-                "status": "active",
-                "certainty": "confirmed",
-                "worldPersonId": "person--haus-coeddu--maelwen-coeddu",
-                "name": "Maelwen Coeddu"
-              }
-            ],
-            "children": [
-              {
-                "personId": "serafina-raves",
-                "type": "biological",
-                "legitimacy": "legitimate",
-                "certainty": "confirmed",
-                "worldPersonId": "person--haus-raves--serafina-raves",
-                "name": "Serafina Raves"
-              }
-            ]
-          }
-        }
+          ]
+        },
+        "updatedAt": "2026-10-16T00:44:51.591Z"
       }
     },
     {
       "id": "person--haus-raves--orestian-raves",
       "key": "orestian",
       "group": "Raves",
-      "create": true,
-      "data": {
-        "name": "Orestian Raves",
-        "title": "Zunftsmeier · Kasse, Löhne & Verträge",
-        "fraktion": "Göttliche Eleganz",
-        "role": "Zunftsmeier · Kasse, Löhne & Verträge",
-        "status": "active",
-        "relevance": "minor",
-        "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
-        "currentLocation": "Gwynthor · Göttliche Eleganz",
-        "origin": "Gwynthor",
-        "plotNode": "",
-        "profileLink": "",
-        "playerOwner": "",
-        "bio": "Orestian führt die Bücher, zahlt die Löhne und hält Maßbestellung und Rechnung zusammen. Die teuerste Seide beeindruckt ihn weniger als ein sauberer Beleg. Wenn er ein zweites Mal nachfragt, hat er den Fehler meist schon gefunden.",
-        "aliases": [],
-        "archived": false,
-        "createdAt": "2026-10-15T23:44:30.684Z",
-        "updatedAt": "2026-10-15T23:44:30.684Z",
-        "portrait": "./assets/goettliche-eleganz/portraits/orestian.png",
-        "emotes": [],
-        "emotesOverride": false,
-        "imageSetSchemaVersion": 0,
-        "imageSets": [],
-        "activeImageSetId": "",
-        "imageSetsOverride": false,
-        "inventory": null,
-        "biography": null,
-        "identity": {
-          "worldPersonId": "person--haus-raves--orestian-raves"
-        },
-        "genealogy": {
-          "worldPersonId": "person--haus-raves--orestian-raves",
-          "sex": "male",
-          "status": "alive",
-          "birth": "1704",
-          "death": "",
-          "houseId": "house-raves",
-          "houseName": "Haus Raves",
-          "familyRole": "core",
-          "portraitPlaceholder": "auto",
-          "tags": [],
-          "sources": [
-            {
-              "familyId": "haus-raves",
-              "personId": "orestian-raves",
-              "releaseId": "",
-              "publishedAt": "",
-              "importedAt": "2026-10-15T23:44:30.684Z",
-              "lastSyncedAt": "2026-10-15T23:44:30.684Z",
-              "url": "../Stammbäume/Stammbaum.html?family=haus-raves&mode=view&person=orestian-raves",
-              "fingerprint": "{\"name\":\"Orestian Raves\",\"title\":\"Zunftsmeier · Kasse, Löhne & Verträge\",\"birth\":\"1704\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-raves\",\"portrait\":\"../AleriaAlmanach/assets/goettliche-eleganz/portraits/orestian.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"lorenzo-raves\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-raves--lorenzo-raves\",\"name\":\"Lorenzo Cassian Raves\"},{\"personId\":\"rhiain-raves\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-raves--rhiain-raves\",\"name\":\"Rhiain\"}],\"partners\":[],\"children\":[]}}"
-            }
-          ],
-          "relationships": {
-            "parents": [
-              {
-                "personId": "lorenzo-raves",
-                "type": "biological",
-                "legitimacy": "legitimate",
-                "certainty": "confirmed",
-                "worldPersonId": "person--haus-raves--lorenzo-raves",
-                "name": "Lorenzo Cassian Raves"
-              },
-              {
-                "personId": "rhiain-raves",
-                "type": "biological",
-                "legitimacy": "legitimate",
-                "certainty": "confirmed",
-                "worldPersonId": "person--haus-raves--rhiain-raves",
-                "name": "Rhiain"
-              }
-            ],
-            "partners": [],
-            "children": []
-          }
-        }
-      }
+      "create": false,
+      "patch": null
     },
     {
       "id": "person--haus-veltrane--luciano-veltrane",
       "key": "luciano",
       "group": "Raves",
-      "create": true,
-      "data": {
-        "name": "Luciano Marcellus Veltrane",
-        "title": "Stoffmeister · Warenprüfung & Besätze",
-        "fraktion": "Göttliche Eleganz",
-        "role": "Stoffmeister · Warenprüfung & Besätze",
-        "status": "active",
-        "relevance": "minor",
-        "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
-        "currentLocation": "Gwynthor · Göttliche Eleganz",
-        "origin": "Tirnara · Kaiserreich Argentum",
-        "plotNode": "",
-        "profileLink": "",
-        "playerOwner": "",
-        "bio": "Luciano prüft Seiden, Futter und die feinen Beschläge aus Gwynthors Werkstätten. Eleonoras Gemahl kann an einem Muster lange schweigen, bevor er eine einzige, sehr genaue Frage stellt. Auf zweifelhafte Färbungen reagiert er empfindlicher als auf einen Sturm.",
-        "aliases": [],
-        "archived": false,
-        "createdAt": "2026-10-15T23:44:30.684Z",
-        "updatedAt": "2026-10-15T23:44:30.684Z",
-        "portrait": "./assets/goettliche-eleganz/portraits/luciano.png",
-        "emotes": [],
-        "emotesOverride": false,
-        "imageSetSchemaVersion": 0,
-        "imageSets": [],
-        "activeImageSetId": "",
-        "imageSetsOverride": false,
-        "inventory": null,
-        "biography": null,
-        "identity": {
-          "worldPersonId": "person--haus-veltrane--luciano-veltrane"
-        },
-        "genealogy": {
-          "worldPersonId": "person--haus-veltrane--luciano-veltrane",
-          "sex": "male",
-          "status": "alive",
-          "birth": "1698",
-          "death": "",
-          "houseId": "house-veltrane",
-          "houseName": "Haus Veltrane",
-          "familyRole": "married",
-          "portraitPlaceholder": "auto",
-          "tags": [],
-          "sources": [
-            {
-              "familyId": "haus-raves",
-              "personId": "luciano-veltrane",
-              "releaseId": "",
-              "publishedAt": "",
-              "importedAt": "2026-10-15T23:44:30.684Z",
-              "lastSyncedAt": "2026-10-15T23:44:30.684Z",
-              "url": "../Stammbäume/Stammbaum.html?family=haus-raves&mode=view&person=luciano-veltrane",
-              "fingerprint": "{\"name\":\"Luciano Marcellus Veltrane\",\"title\":\"Stoffmeister · Warenprüfung & Besätze\",\"birth\":\"1698\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-veltrane\",\"portrait\":\"../AleriaAlmanach/assets/goettliche-eleganz/portraits/luciano.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"eleonora-raves\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-raves--eleonora-raves\",\"name\":\"Eleonora Cassia Raves\"}],\"children\":[{\"personId\":\"aurelio-raves\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-raves--aurelio-raves\",\"name\":\"Aurelio Raves\"},{\"personId\":\"lavinia-raves\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-raves--lavinia-raves\",\"name\":\"Lavinia Raves\"}]}}"
-            }
-          ],
-          "relationships": {
-            "parents": [],
-            "partners": [
-              {
-                "personId": "eleonora-raves",
-                "type": "marriage",
-                "status": "active",
-                "certainty": "confirmed",
-                "worldPersonId": "person--haus-raves--eleonora-raves",
-                "name": "Eleonora Cassia Raves"
-              }
-            ],
-            "children": [
-              {
-                "personId": "aurelio-raves",
-                "type": "biological",
-                "legitimacy": "legitimate",
-                "certainty": "confirmed",
-                "worldPersonId": "person--haus-raves--aurelio-raves",
-                "name": "Aurelio Raves"
-              },
-              {
-                "personId": "lavinia-raves",
-                "type": "biological",
-                "legitimacy": "legitimate",
-                "certainty": "confirmed",
-                "worldPersonId": "person--haus-raves--lavinia-raves",
-                "name": "Lavinia Raves"
-              }
-            ]
-          }
-        }
-      }
+      "create": false,
+      "patch": null
     },
     {
       "id": "person--haus-coeddu--maelwen-coeddu",
       "key": "maelwen",
       "group": "Coeddu",
-      "create": true,
-      "data": {
-        "name": "Maelwen Coeddu",
-        "title": "Empfangsmeisterin · Kundschaft & Termine",
-        "fraktion": "Göttliche Eleganz",
-        "role": "Empfangsmeisterin · Kundschaft & Termine",
-        "status": "active",
-        "relevance": "minor",
-        "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
-        "currentLocation": "Gwynthor · Göttliche Eleganz",
-        "origin": "Gwynthor",
-        "plotNode": "",
-        "profileLink": "",
-        "playerOwner": "",
-        "bio": "Maelwen empfängt die Kundschaft und hält die Anproben im Takt. Sie kann eine verlegene Braut beruhigen und einem ungeduldigen Herrn höflich seinen Termin nennen. Tiberians Reisebriefe bewahrt sie zwischen den weniger dringlichen Bestellungen auf.",
-        "aliases": [],
-        "archived": false,
-        "createdAt": "2026-10-15T23:44:30.684Z",
-        "updatedAt": "2026-10-15T23:44:30.684Z",
-        "portrait": "./assets/goettliche-eleganz/portraits/maelwen.png",
-        "emotes": [],
-        "emotesOverride": false,
-        "imageSetSchemaVersion": 0,
-        "imageSets": [],
-        "activeImageSetId": "",
-        "imageSetsOverride": false,
-        "inventory": null,
-        "biography": null,
-        "identity": {
-          "worldPersonId": "person--haus-coeddu--maelwen-coeddu"
-        },
+      "create": false,
+      "patch": {
         "genealogy": {
-          "worldPersonId": "person--haus-coeddu--maelwen-coeddu",
-          "sex": "female",
-          "status": "alive",
-          "birth": "1713",
-          "death": "",
-          "houseId": "house-coeddu",
-          "houseName": "Haus Coeddu",
-          "familyRole": "core",
-          "portraitPlaceholder": "auto",
-          "tags": [],
           "sources": [
             {
-              "familyId": "haus-raves",
-              "personId": "maelwen-coeddu",
-              "releaseId": "",
               "publishedAt": "",
+              "releaseId": "",
+              "familyId": "haus-raves",
               "importedAt": "2026-10-15T23:44:30.684Z",
-              "lastSyncedAt": "2026-10-15T23:44:30.684Z",
               "url": "../Stammbäume/Stammbaum.html?family=haus-raves&mode=view&person=maelwen-coeddu",
-              "fingerprint": "{\"name\":\"Maelwen Coeddu\",\"title\":\"Empfangsmeisterin · Kundschaft & Termine\",\"birth\":\"1713\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-coeddu\",\"portrait\":\"../AleriaAlmanach/assets/goettliche-eleganz/portraits/maelwen.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"tiberian-raves\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-raves--tiberian-raves\",\"name\":\"Tiberian Raves\"}],\"children\":[{\"personId\":\"serafina-raves\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-raves--serafina-raves\",\"name\":\"Serafina Raves\"}]}}"
+              "lastSyncedAt": "2026-10-16T00:44:51.591Z",
+              "personId": "maelwen-coeddu",
+              "fingerprint": "{\"name\":\"Maelwen Coeddu\",\"title\":\"Empfangsmeisterin · Kundschaft & Termine\",\"birth\":\"1713\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-coeddu\",\"portrait\":\"../AleriaAlmanach/assets/goettliche-eleganz/portraits/maelwen-v2.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"tiberian-raves\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-raves--tiberian-raves\",\"name\":\"Tiberian Raves\"}],\"children\":[{\"personId\":\"serafina-raves\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-raves--serafina-raves\",\"name\":\"Serafina Raves\"}]}}"
             },
             {
-              "familyId": "haus-coeddu",
+              "importedAt": "2026-10-15T23:44:30.684Z",
+              "lastSyncedAt": "2026-10-16T00:44:51.591Z",
+              "publishedAt": "",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-coeddu&mode=view&person=maelwen-coeddu",
               "personId": "maelwen-coeddu",
               "releaseId": "",
-              "publishedAt": "",
-              "importedAt": "2026-10-15T23:44:30.684Z",
-              "lastSyncedAt": "2026-10-15T23:44:30.684Z",
-              "url": "../Stammbäume/Stammbaum.html?family=haus-coeddu&mode=view&person=maelwen-coeddu",
-              "fingerprint": "{\"name\":\"Maelwen Coeddu\",\"title\":\"Empfangsmeisterin · Kundschaft & Termine\",\"birth\":\"1713\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-coeddu\",\"portrait\":\"../AleriaAlmanach/assets/goettliche-eleganz/portraits/maelwen.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"brenric-coeddu\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-coeddu--brenric-coeddu\",\"name\":\"Brenric Coeddu\"},{\"personId\":\"gweneth-coeddu\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-coeddu--gweneth-coeddu\",\"name\":\"Gweneth Coeddu\"}],\"partners\":[{\"personId\":\"tiberian-raves\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-raves--tiberian-raves\",\"name\":\"Tiberian Raves\"}],\"children\":[{\"personId\":\"serafina-raves\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-raves--serafina-raves\",\"name\":\"Serafina Raves\"}]}}"
+              "familyId": "haus-coeddu",
+              "fingerprint": "{\"name\":\"Maelwen Coeddu\",\"title\":\"Empfangsmeisterin · Kundschaft & Termine\",\"birth\":\"1713\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-coeddu\",\"portrait\":\"../AleriaAlmanach/assets/goettliche-eleganz/portraits/maelwen-v2.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"brenric-coeddu\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-coeddu--brenric-coeddu\",\"name\":\"Brenric Coeddu\"},{\"personId\":\"gweneth-coeddu\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-coeddu--gweneth-coeddu\",\"name\":\"Gweneth Coeddu\"}],\"partners\":[{\"personId\":\"tiberian-raves\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-raves--tiberian-raves\",\"name\":\"Tiberian Raves\"}],\"children\":[]}}"
             }
-          ],
-          "relationships": {
-            "parents": [
-              {
-                "personId": "brenric-coeddu",
-                "type": "biological",
-                "legitimacy": "legitimate",
-                "certainty": "confirmed",
-                "worldPersonId": "person--haus-coeddu--brenric-coeddu",
-                "name": "Brenric Coeddu"
-              },
-              {
-                "personId": "gweneth-coeddu",
-                "type": "biological",
-                "legitimacy": "legitimate",
-                "certainty": "confirmed",
-                "worldPersonId": "person--haus-coeddu--gweneth-coeddu",
-                "name": "Gweneth Coeddu"
-              }
-            ],
-            "partners": [
-              {
-                "personId": "tiberian-raves",
-                "type": "marriage",
-                "status": "active",
-                "certainty": "confirmed",
-                "worldPersonId": "person--haus-raves--tiberian-raves",
-                "name": "Tiberian Raves"
-              }
-            ],
-            "children": [
-              {
-                "personId": "serafina-raves",
-                "type": "biological",
-                "legitimacy": "legitimate",
-                "certainty": "confirmed",
-                "worldPersonId": "person--haus-raves--serafina-raves",
-                "name": "Serafina Raves"
-              }
-            ]
-          }
-        }
+          ]
+        },
+        "updatedAt": "2026-10-16T00:44:51.591Z",
+        "portrait": "./assets/goettliche-eleganz/portraits/maelwen-v2.png"
       }
     },
     {
       "id": "person--haus-raves--aurelio-raves",
       "key": "aurelio",
       "group": "Raves",
-      "create": true,
-      "data": {
-        "name": "Aurelio Raves",
-        "title": "Schneiderlehrling · Schnitt & Heftarbeit",
-        "fraktion": "Göttliche Eleganz",
-        "role": "Schneiderlehrling · Schnitt & Heftarbeit",
-        "status": "active",
-        "relevance": "minor",
-        "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
-        "currentLocation": "Gwynthor · Göttliche Eleganz",
-        "origin": "Gwynthor",
-        "plotNode": "",
-        "profileLink": "",
-        "playerOwner": "",
-        "bio": "Aurelio lernt bei seiner Großmutter das Zuschneiden und Heften. Seine eigenen Entwürfe sind schon erstaunlich kühn; Rhiain lässt ihn danach besonders sorgfältig die geraden Nähte üben.",
-        "aliases": [],
-        "archived": false,
-        "createdAt": "2026-10-15T23:44:30.684Z",
-        "updatedAt": "2026-10-15T23:44:30.684Z",
-        "portrait": "./assets/goettliche-eleganz/portraits/aurelio.png",
-        "emotes": [],
-        "emotesOverride": false,
-        "imageSetSchemaVersion": 0,
-        "imageSets": [],
-        "activeImageSetId": "",
-        "imageSetsOverride": false,
-        "inventory": null,
-        "biography": null,
-        "identity": {
-          "worldPersonId": "person--haus-raves--aurelio-raves"
-        },
-        "genealogy": {
-          "worldPersonId": "person--haus-raves--aurelio-raves",
-          "sex": "male",
-          "status": "alive",
-          "birth": "1725",
-          "death": "",
-          "houseId": "house-raves",
-          "houseName": "Haus Raves",
-          "familyRole": "core",
-          "portraitPlaceholder": "auto",
-          "tags": [],
-          "sources": [
-            {
-              "familyId": "haus-raves",
-              "personId": "aurelio-raves",
-              "releaseId": "",
-              "publishedAt": "",
-              "importedAt": "2026-10-15T23:44:30.684Z",
-              "lastSyncedAt": "2026-10-15T23:44:30.684Z",
-              "url": "../Stammbäume/Stammbaum.html?family=haus-raves&mode=view&person=aurelio-raves",
-              "fingerprint": "{\"name\":\"Aurelio Raves\",\"title\":\"Schneiderlehrling · Schnitt & Heftarbeit\",\"birth\":\"1725\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-raves\",\"portrait\":\"../AleriaAlmanach/assets/goettliche-eleganz/portraits/aurelio.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"eleonora-raves\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-raves--eleonora-raves\",\"name\":\"Eleonora Cassia Raves\"},{\"personId\":\"luciano-veltrane\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-veltrane--luciano-veltrane\",\"name\":\"Luciano Marcellus Veltrane\"}],\"partners\":[],\"children\":[]}}"
-            }
-          ],
-          "relationships": {
-            "parents": [
-              {
-                "personId": "eleonora-raves",
-                "type": "biological",
-                "legitimacy": "legitimate",
-                "certainty": "confirmed",
-                "worldPersonId": "person--haus-raves--eleonora-raves",
-                "name": "Eleonora Cassia Raves"
-              },
-              {
-                "personId": "luciano-veltrane",
-                "type": "biological",
-                "legitimacy": "legitimate",
-                "certainty": "confirmed",
-                "worldPersonId": "person--haus-veltrane--luciano-veltrane",
-                "name": "Luciano Marcellus Veltrane"
-              }
-            ],
-            "partners": [],
-            "children": []
-          }
-        }
-      }
+      "create": false,
+      "patch": null
     },
     {
       "id": "person--haus-raves--lavinia-raves",
       "key": "lavinia",
       "group": "Raves",
-      "create": true,
-      "data": {
-        "name": "Lavinia Raves",
-        "title": "Tochter Eleonoras · Hauskind",
-        "fraktion": "Göttliche Eleganz",
-        "role": "Tochter Eleonoras · Hauskind",
-        "status": "active",
-        "relevance": "minor",
-        "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
-        "currentLocation": "Gwynthor · Göttliche Eleganz",
-        "origin": "Gwynthor",
-        "plotNode": "",
-        "profileLink": "",
-        "playerOwner": "",
-        "bio": "Lavinia sammelt die kleinsten hübschen Stoffreste und näht daraus Kleider für ihre Holzpuppe. Über den Geschmack ihrer Mutter hat sie bereits feste Ansichten, die sie beim Abendessen gern vorträgt.",
-        "aliases": [],
-        "archived": false,
-        "createdAt": "2026-10-15T23:44:30.684Z",
-        "updatedAt": "2026-10-15T23:44:30.684Z",
-        "portrait": "./assets/goettliche-eleganz/portraits/lavinia.png",
-        "emotes": [],
-        "emotesOverride": false,
-        "imageSetSchemaVersion": 0,
-        "imageSets": [],
-        "activeImageSetId": "",
-        "imageSetsOverride": false,
-        "inventory": null,
-        "biography": null,
-        "identity": {
-          "worldPersonId": "person--haus-raves--lavinia-raves"
-        },
-        "genealogy": {
-          "worldPersonId": "person--haus-raves--lavinia-raves",
-          "sex": "female",
-          "status": "alive",
-          "birth": "1731",
-          "death": "",
-          "houseId": "house-raves",
-          "houseName": "Haus Raves",
-          "familyRole": "core",
-          "portraitPlaceholder": "auto",
-          "tags": [],
-          "sources": [
-            {
-              "familyId": "haus-raves",
-              "personId": "lavinia-raves",
-              "releaseId": "",
-              "publishedAt": "",
-              "importedAt": "2026-10-15T23:44:30.684Z",
-              "lastSyncedAt": "2026-10-15T23:44:30.684Z",
-              "url": "../Stammbäume/Stammbaum.html?family=haus-raves&mode=view&person=lavinia-raves",
-              "fingerprint": "{\"name\":\"Lavinia Raves\",\"title\":\"Tochter Eleonoras · Hauskind\",\"birth\":\"1731\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-raves\",\"portrait\":\"../AleriaAlmanach/assets/goettliche-eleganz/portraits/lavinia.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"eleonora-raves\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-raves--eleonora-raves\",\"name\":\"Eleonora Cassia Raves\"},{\"personId\":\"luciano-veltrane\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-veltrane--luciano-veltrane\",\"name\":\"Luciano Marcellus Veltrane\"}],\"partners\":[],\"children\":[]}}"
-            }
-          ],
-          "relationships": {
-            "parents": [
-              {
-                "personId": "eleonora-raves",
-                "type": "biological",
-                "legitimacy": "legitimate",
-                "certainty": "confirmed",
-                "worldPersonId": "person--haus-raves--eleonora-raves",
-                "name": "Eleonora Cassia Raves"
-              },
-              {
-                "personId": "luciano-veltrane",
-                "type": "biological",
-                "legitimacy": "legitimate",
-                "certainty": "confirmed",
-                "worldPersonId": "person--haus-veltrane--luciano-veltrane",
-                "name": "Luciano Marcellus Veltrane"
-              }
-            ],
-            "partners": [],
-            "children": []
-          }
-        }
-      }
+      "create": false,
+      "patch": null
     },
     {
       "id": "person--haus-raves--serafina-raves",
       "key": "serafina",
       "group": "Raves",
-      "create": true,
-      "data": {
-        "name": "Serafina Raves",
-        "title": "Tochter Tiberians · Hauskind",
-        "fraktion": "Göttliche Eleganz",
-        "role": "Tochter Tiberians · Hauskind",
-        "status": "active",
-        "relevance": "minor",
-        "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
-        "currentLocation": "Gwynthor · Göttliche Eleganz",
-        "origin": "Gwynthor",
-        "plotNode": "",
-        "profileLink": "",
-        "playerOwner": "",
-        "bio": "Serafina zählt die kleinen Stoffballen im Schaufenster und wartet ungeduldig auf Tiberians Heimkehr. Aus jedem seiner Besuche soll er ihr eine Geschichte und einen besonders schönen Knopf mitbringen.",
-        "aliases": [],
-        "archived": false,
-        "createdAt": "2026-10-15T23:44:30.684Z",
-        "updatedAt": "2026-10-15T23:44:30.684Z",
-        "portrait": "./assets/goettliche-eleganz/portraits/serafina.png",
-        "emotes": [],
-        "emotesOverride": false,
-        "imageSetSchemaVersion": 0,
-        "imageSets": [],
-        "activeImageSetId": "",
-        "imageSetsOverride": false,
-        "inventory": null,
-        "biography": null,
-        "identity": {
-          "worldPersonId": "person--haus-raves--serafina-raves"
-        },
+      "create": false,
+      "patch": {
         "genealogy": {
-          "worldPersonId": "person--haus-raves--serafina-raves",
-          "sex": "female",
-          "status": "alive",
-          "birth": "1734",
-          "death": "",
-          "houseId": "house-raves",
-          "houseName": "Haus Raves",
-          "familyRole": "core",
-          "portraitPlaceholder": "auto",
-          "tags": [],
           "sources": [
             {
-              "familyId": "haus-raves",
-              "personId": "serafina-raves",
-              "releaseId": "",
               "publishedAt": "",
-              "importedAt": "2026-10-15T23:44:30.684Z",
               "lastSyncedAt": "2026-10-15T23:44:30.684Z",
+              "importedAt": "2026-10-15T23:44:30.684Z",
               "url": "../Stammbäume/Stammbaum.html?family=haus-raves&mode=view&person=serafina-raves",
-              "fingerprint": "{\"name\":\"Serafina Raves\",\"title\":\"Tochter Tiberians · Hauskind\",\"birth\":\"1734\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-raves\",\"portrait\":\"../AleriaAlmanach/assets/goettliche-eleganz/portraits/serafina.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"tiberian-raves\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-raves--tiberian-raves\",\"name\":\"Tiberian Raves\"},{\"personId\":\"maelwen-coeddu\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-coeddu--maelwen-coeddu\",\"name\":\"Maelwen Coeddu\"}],\"partners\":[],\"children\":[]}}"
-            },
-            {
-              "familyId": "haus-coeddu",
+              "fingerprint": "{\"name\":\"Serafina Raves\",\"title\":\"Tochter Tiberians · Hauskind\",\"birth\":\"1734\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-raves\",\"portrait\":\"../AleriaAlmanach/assets/goettliche-eleganz/portraits/serafina.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"tiberian-raves\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-raves--tiberian-raves\",\"name\":\"Tiberian Raves\"},{\"personId\":\"maelwen-coeddu\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-coeddu--maelwen-coeddu\",\"name\":\"Maelwen Coeddu\"}],\"partners\":[],\"children\":[]}}",
               "personId": "serafina-raves",
               "releaseId": "",
-              "publishedAt": "",
-              "importedAt": "2026-10-15T23:44:30.684Z",
-              "lastSyncedAt": "2026-10-15T23:44:30.684Z",
-              "url": "../Stammbäume/Stammbaum.html?family=haus-coeddu&mode=view&person=serafina-raves",
-              "fingerprint": "{\"name\":\"Serafina Raves\",\"title\":\"Tochter Tiberians · Hauskind\",\"birth\":\"1734\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-raves\",\"portrait\":\"../AleriaAlmanach/assets/goettliche-eleganz/portraits/serafina.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"tiberian-raves\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-raves--tiberian-raves\",\"name\":\"Tiberian Raves\"},{\"personId\":\"maelwen-coeddu\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-coeddu--maelwen-coeddu\",\"name\":\"Maelwen Coeddu\"}],\"partners\":[],\"children\":[]}}"
+              "familyId": "haus-raves"
             }
-          ],
-          "relationships": {
-            "parents": [
-              {
-                "personId": "tiberian-raves",
-                "type": "biological",
-                "legitimacy": "legitimate",
-                "certainty": "confirmed",
-                "worldPersonId": "person--haus-raves--tiberian-raves",
-                "name": "Tiberian Raves"
-              },
-              {
-                "personId": "maelwen-coeddu",
-                "type": "biological",
-                "legitimacy": "legitimate",
-                "certainty": "confirmed",
-                "worldPersonId": "person--haus-coeddu--maelwen-coeddu",
-                "name": "Maelwen Coeddu"
-              }
-            ],
-            "partners": [],
-            "children": []
-          }
-        }
+          ]
+        },
+        "updatedAt": "2026-10-16T00:44:51.591Z"
       }
     }
   ]

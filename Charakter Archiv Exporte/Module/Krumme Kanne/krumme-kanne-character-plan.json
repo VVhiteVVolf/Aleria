@@ -1,2318 +1,385 @@
 {
   "schemaVersion": 1,
-  "createdAt": "2026-10-14T17:08:06.479Z",
+  "createdAt": "2026-10-16T00:40:34.398Z",
   "group": "Die Krumme Kanne",
   "entries": [
     {
       "id": "person--krumme-kanne--merrik-trevoryn-kanne",
       "key": "merrik",
       "group": "Trevoryn",
-      "create": true,
-      "data": {
-        "name": "Merrik Trevoryn",
-        "title": "Mitinhaber · Ortskontakte",
-        "fraktion": "Die Krumme Kanne",
-        "role": "Mitinhaber · Ortskontakte",
-        "status": "active",
-        "relevance": "minor",
-        "taxonomyPath": "Cenyr > Celtigerns Wacht > Gwynthor > Bürgerliche",
-        "currentLocation": "Gwynthor · Die Krumme Kanne",
-        "origin": "Cenyri",
-        "plotNode": "",
-        "profileLink": "",
-        "playerOwner": "",
-        "bio": "Merrik kennt im Hafenviertel jeden Handwerker und jeden zweiten Gast. Der rothaarige Kriegsveteran hält die Verbindung zur Stadt und empfängt alte Kameraden gern selbst; bei gepanschtem Bier versteht er keinen Spaß.",
-        "aliases": [],
-        "archived": false,
-        "createdAt": "2026-10-14T17:08:06.479Z",
-        "updatedAt": "2026-10-14T17:08:06.479Z",
-        "portrait": "./assets/krumme-kanne/references/merrik.png",
-        "emotes": [],
-        "emotesOverride": false,
-        "imageSetSchemaVersion": 0,
-        "imageSets": [],
-        "activeImageSetId": "",
-        "imageSetsOverride": false,
-        "inventory": null,
-        "biography": null,
-        "identity": {
-          "worldPersonId": "person--krumme-kanne--merrik-trevoryn-kanne"
-        },
-        "genealogy": {
-          "worldPersonId": "person--krumme-kanne--merrik-trevoryn-kanne",
-          "sex": "male",
-          "status": "alive",
-          "birth": "1696",
-          "death": "",
-          "houseId": "house-trevoryn",
-          "houseName": "Haus Trevoryn",
-          "familyRole": "core",
-          "portraitPlaceholder": "auto",
-          "tags": [],
-          "sources": [
-            {
-              "familyId": "haus-trevoryn",
-              "personId": "merrik-trevoryn-kanne",
-              "releaseId": "",
-              "publishedAt": "",
-              "importedAt": "2026-10-14T17:08:06.479Z",
-              "lastSyncedAt": "2026-10-14T17:08:06.479Z",
-              "url": "../Stammbäume/Stammbaum.html?family=haus-trevoryn&mode=view&person=merrik-trevoryn-kanne",
-              "fingerprint": "{\"name\":\"Merrik Trevoryn\",\"title\":\"Mitinhaber · Ortskontakte\",\"birth\":\"1696\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-trevoryn\",\"portrait\":\"../AleriaAlmanach/assets/krumme-kanne/references/merrik.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"vater-trevoryn-kanne\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-trevoryn--vater-trevoryn-kanne\",\"name\":\"Unbekannter Vater\"},{\"personId\":\"nestwen-trevoryn-kanne\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--krumme-kanne--nestwen-trevoryn-kanne\",\"name\":\"Nestwen Trevoryn\"}],\"partners\":[{\"personId\":\"celyn-trevoryn-kanne\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--krumme-kanne--celyn-trevoryn-kanne\",\"name\":\"Celyn Trevoryn\"}],\"children\":[{\"personId\":\"cadri-trevoryn-kanne\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--krumme-kanne--cadri-trevoryn-kanne\",\"name\":\"Cadri Trevoryn\"},{\"personId\":\"enlli-trevoryn-kanne\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--krumme-kanne--enlli-trevoryn-kanne\",\"name\":\"Enlli Trevoryn\"}]}}"
-            }
-          ],
-          "relationships": {
-            "parents": [
-              {
-                "personId": "vater-trevoryn-kanne",
-                "type": "biological",
-                "legitimacy": "legitimate",
-                "certainty": "confirmed",
-                "worldPersonId": "person--haus-trevoryn--vater-trevoryn-kanne",
-                "name": "Unbekannter Vater"
-              },
-              {
-                "personId": "nestwen-trevoryn-kanne",
-                "type": "biological",
-                "legitimacy": "legitimate",
-                "certainty": "confirmed",
-                "worldPersonId": "person--krumme-kanne--nestwen-trevoryn-kanne",
-                "name": "Nestwen Trevoryn"
-              }
-            ],
-            "partners": [
-              {
-                "personId": "celyn-trevoryn-kanne",
-                "type": "marriage",
-                "status": "active",
-                "certainty": "confirmed",
-                "worldPersonId": "person--krumme-kanne--celyn-trevoryn-kanne",
-                "name": "Celyn Trevoryn"
-              }
-            ],
-            "children": [
-              {
-                "personId": "cadri-trevoryn-kanne",
-                "type": "biological",
-                "legitimacy": "legitimate",
-                "certainty": "confirmed",
-                "worldPersonId": "person--krumme-kanne--cadri-trevoryn-kanne",
-                "name": "Cadri Trevoryn"
-              },
-              {
-                "personId": "enlli-trevoryn-kanne",
-                "type": "biological",
-                "legitimacy": "legitimate",
-                "certainty": "confirmed",
-                "worldPersonId": "person--krumme-kanne--enlli-trevoryn-kanne",
-                "name": "Enlli Trevoryn"
-              }
-            ]
-          }
-        }
-      }
+      "create": false,
+      "patch": null
     },
     {
       "id": "person--krumme-kanne--hrolf-svathamar-kanne",
       "key": "hrolf",
       "group": "Svathamar",
-      "create": true,
-      "data": {
-        "name": "Hrolf Svathamar",
-        "title": "Mitinhaber · Hausfrieden",
-        "fraktion": "Die Krumme Kanne",
-        "role": "Mitinhaber · Hausfrieden",
-        "status": "active",
-        "relevance": "minor",
-        "taxonomyPath": "Cenyr > Celtigerns Wacht > Gwynthor > Bürgerliche",
-        "currentLocation": "Gwynthor · Die Krumme Kanne",
-        "origin": "Aldrimarer · Rorikshall",
-        "plotNode": "",
-        "profileLink": "",
-        "playerOwner": "",
-        "bio": "Hrolfs Lachen trägt bis auf die Gasse. Der Veteran aus Rorikshall sorgt dafür, dass auch ein voller Schankraum friedlich bleibt. Wird es ernst, genügt meist sein Aufstehen.",
-        "aliases": [],
-        "archived": false,
-        "createdAt": "2026-10-14T17:08:06.479Z",
-        "updatedAt": "2026-10-14T17:08:06.479Z",
-        "portrait": "./assets/krumme-kanne/references/hrolf.png",
-        "emotes": [],
-        "emotesOverride": false,
-        "imageSetSchemaVersion": 0,
-        "imageSets": [],
-        "activeImageSetId": "",
-        "imageSetsOverride": false,
-        "inventory": null,
-        "biography": null,
-        "identity": {
-          "worldPersonId": "person--krumme-kanne--hrolf-svathamar-kanne"
-        },
+      "create": false,
+      "patch": {
         "genealogy": {
-          "worldPersonId": "person--krumme-kanne--hrolf-svathamar-kanne",
-          "sex": "male",
-          "status": "alive",
-          "birth": "1694",
-          "death": "",
-          "houseId": "house-svathamar",
-          "houseName": "Haus Svathamar",
-          "familyRole": "core",
-          "portraitPlaceholder": "auto",
-          "tags": [],
           "sources": [
             {
-              "familyId": "haus-trevoryn",
-              "personId": "hrolf-svathamar-kanne",
+              "lastSyncedAt": "2026-10-16T00:40:34.398Z",
+              "importedAt": "2026-10-14T17:08:06.479Z",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-trevoryn&mode=view&person=hrolf-svathamar-kanne",
               "releaseId": "",
               "publishedAt": "",
-              "importedAt": "2026-10-14T17:08:06.479Z",
-              "lastSyncedAt": "2026-10-14T17:08:06.479Z",
-              "url": "../Stammbäume/Stammbaum.html?family=haus-trevoryn&mode=view&person=hrolf-svathamar-kanne",
-              "fingerprint": "{\"name\":\"Hrolf Svathamar\",\"title\":\"Mitinhaber · Hausfrieden\",\"birth\":\"1694\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-svathamar\",\"portrait\":\"../AleriaAlmanach/assets/krumme-kanne/references/hrolf.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"eirian-trevoryn-kanne\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--krumme-kanne--eirian-trevoryn-kanne\",\"name\":\"Eirian Trevoryn\"}],\"children\":[{\"personId\":\"styr-svathamar-kanne\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--krumme-kanne--styr-svathamar-kanne\",\"name\":\"Styr Svathamar\"},{\"personId\":\"heledd-svathamar-kanne\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--krumme-kanne--heledd-svathamar-kanne\",\"name\":\"Heledd Svathamar\"}]}}"
+              "fingerprint": "{\"name\":\"Hrolf Svathamar\",\"title\":\"Mitinhaber · Hausfrieden\",\"birth\":\"1694\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-svathamar\",\"portrait\":\"../AleriaAlmanach/assets/krumme-kanne/references/hrolf.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"eirian-trevoryn-kanne\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--krumme-kanne--eirian-trevoryn-kanne\",\"name\":\"Eirian Trevoryn\"}],\"children\":[]}}",
+              "personId": "hrolf-svathamar-kanne",
+              "familyId": "haus-trevoryn"
             },
             {
               "familyId": "haus-svathamar",
               "personId": "hrolf-svathamar-kanne",
-              "releaseId": "",
-              "publishedAt": "",
-              "importedAt": "2026-10-14T17:08:06.479Z",
-              "lastSyncedAt": "2026-10-14T17:08:06.479Z",
               "url": "../Stammbäume/Stammbaum.html?family=haus-svathamar&mode=view&person=hrolf-svathamar-kanne",
+              "publishedAt": "",
+              "lastSyncedAt": "2026-10-14T17:08:06.479Z",
+              "importedAt": "2026-10-14T17:08:06.479Z",
+              "releaseId": "",
               "fingerprint": "{\"name\":\"Hrolf Svathamar\",\"title\":\"Mitinhaber · Hausfrieden\",\"birth\":\"1694\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-svathamar\",\"portrait\":\"../AleriaAlmanach/assets/krumme-kanne/references/hrolf.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"vater-svathamar-kanne\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-svathamar--vater-svathamar-kanne\",\"name\":\"Unbekannter Vater\"},{\"personId\":\"mutter-svathamar-kanne\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-svathamar--mutter-svathamar-kanne\",\"name\":\"Unbekannte Mutter\"}],\"partners\":[{\"personId\":\"eirian-trevoryn-kanne\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--krumme-kanne--eirian-trevoryn-kanne\",\"name\":\"Eirian Trevoryn\"}],\"children\":[{\"personId\":\"styr-svathamar-kanne\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--krumme-kanne--styr-svathamar-kanne\",\"name\":\"Styr Svathamar\"},{\"personId\":\"heledd-svathamar-kanne\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--krumme-kanne--heledd-svathamar-kanne\",\"name\":\"Heledd Svathamar\"}]}}"
             }
-          ],
-          "relationships": {
-            "parents": [
-              {
-                "personId": "vater-svathamar-kanne",
-                "type": "biological",
-                "legitimacy": "legitimate",
-                "certainty": "confirmed",
-                "worldPersonId": "person--haus-svathamar--vater-svathamar-kanne",
-                "name": "Unbekannter Vater"
-              },
-              {
-                "personId": "mutter-svathamar-kanne",
-                "type": "biological",
-                "legitimacy": "legitimate",
-                "certainty": "confirmed",
-                "worldPersonId": "person--haus-svathamar--mutter-svathamar-kanne",
-                "name": "Unbekannte Mutter"
-              }
-            ],
-            "partners": [
-              {
-                "personId": "eirian-trevoryn-kanne",
-                "type": "marriage",
-                "status": "active",
-                "certainty": "confirmed",
-                "worldPersonId": "person--krumme-kanne--eirian-trevoryn-kanne",
-                "name": "Eirian Trevoryn"
-              }
-            ],
-            "children": [
-              {
-                "personId": "styr-svathamar-kanne",
-                "type": "biological",
-                "legitimacy": "legitimate",
-                "certainty": "confirmed",
-                "worldPersonId": "person--krumme-kanne--styr-svathamar-kanne",
-                "name": "Styr Svathamar"
-              },
-              {
-                "personId": "heledd-svathamar-kanne",
-                "type": "biological",
-                "legitimacy": "legitimate",
-                "certainty": "confirmed",
-                "worldPersonId": "person--krumme-kanne--heledd-svathamar-kanne",
-                "name": "Heledd Svathamar"
-              }
-            ]
-          }
-        }
+          ]
+        },
+        "updatedAt": "2026-10-16T00:40:34.398Z"
       }
     },
     {
       "id": "person--krumme-kanne--aedan-dubhdarach-kanne",
       "key": "aedan",
       "group": "Dubhdarach",
-      "create": true,
-      "data": {
-        "name": "Aedan Dubhdarach",
-        "title": "Mitinhaber · Einkauf & Gäste",
-        "fraktion": "Die Krumme Kanne",
-        "role": "Mitinhaber · Einkauf & Gäste",
-        "status": "active",
-        "relevance": "minor",
-        "taxonomyPath": "Cenyr > Celtigerns Wacht > Gwynthor > Bürgerliche",
-        "currentLocation": "Gwynthor · Die Krumme Kanne",
-        "origin": "Albe · Leitheach",
-        "plotNode": "",
-        "profileLink": "",
-        "playerOwner": "",
-        "bio": "Aedan verhandelt mit Lieferanten und empfängt Gäste im Hinterzimmer. Der höfliche Albe hört lieber zu, als selbst zu reden, und vergisst weder eine offene Zeche noch einen erwiesenen Gefallen.",
-        "aliases": [],
-        "archived": false,
-        "createdAt": "2026-10-14T17:08:06.479Z",
-        "updatedAt": "2026-10-14T17:08:06.479Z",
-        "portrait": "./assets/krumme-kanne/references/aedan.png",
-        "emotes": [],
-        "emotesOverride": false,
-        "imageSetSchemaVersion": 0,
-        "imageSets": [],
-        "activeImageSetId": "",
-        "imageSetsOverride": false,
-        "inventory": null,
-        "biography": null,
-        "identity": {
-          "worldPersonId": "person--krumme-kanne--aedan-dubhdarach-kanne"
-        },
+      "create": false,
+      "patch": {
         "genealogy": {
-          "worldPersonId": "person--krumme-kanne--aedan-dubhdarach-kanne",
-          "sex": "male",
-          "status": "alive",
-          "birth": "1695",
-          "death": "",
-          "houseId": "house-dubhdarach",
-          "houseName": "Haus Dubhdarach",
-          "familyRole": "core",
-          "portraitPlaceholder": "auto",
-          "tags": [],
           "sources": [
             {
-              "familyId": "haus-dubhdarach",
               "personId": "aedan-dubhdarach-kanne",
               "releaseId": "",
-              "publishedAt": "",
-              "importedAt": "2026-10-14T17:08:06.479Z",
               "lastSyncedAt": "2026-10-14T17:08:06.479Z",
+              "importedAt": "2026-10-14T17:08:06.479Z",
+              "fingerprint": "{\"name\":\"Aedan Dubhdarach\",\"title\":\"Mitinhaber · Einkauf & Gäste\",\"birth\":\"1695\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-dubhdarach\",\"portrait\":\"../AleriaAlmanach/assets/krumme-kanne/references/aedan.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"haus-dubhdarach-gruender\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"unknown\",\"worldPersonId\":\"person--haus-dubhdarach--haus-dubhdarach-gruender\",\"name\":\"Unbekannter Gründer\"},{\"personId\":\"haus-dubhdarach-gruenderin\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"unknown\",\"worldPersonId\":\"person--haus-dubhdarach--haus-dubhdarach-gruenderin\",\"name\":\"Unbekannte Gründerin\"}],\"partners\":[{\"personId\":\"mair-affair-tonnarth\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--mair-affair-tonnarth\",\"name\":\"Mair\"}],\"children\":[{\"personId\":\"neifion-dubhdarach-kanne\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--krumme-kanne--neifion-dubhdarach-kanne\",\"name\":\"Neifion Dubhdarach\"},{\"personId\":\"eirlys-dubhdarach-kanne\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--krumme-kanne--eirlys-dubhdarach-kanne\",\"name\":\"Eirlys Dubhdarach\"}]}}",
+              "familyId": "haus-dubhdarach",
               "url": "../Stammbäume/Stammbaum.html?family=haus-dubhdarach&mode=view&person=aedan-dubhdarach-kanne",
-              "fingerprint": "{\"name\":\"Aedan Dubhdarach\",\"title\":\"Mitinhaber · Einkauf & Gäste\",\"birth\":\"1695\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-dubhdarach\",\"portrait\":\"../AleriaAlmanach/assets/krumme-kanne/references/aedan.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"haus-dubhdarach-gruender\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"unknown\",\"worldPersonId\":\"person--haus-dubhdarach--haus-dubhdarach-gruender\",\"name\":\"Unbekannter Gründer\"},{\"personId\":\"haus-dubhdarach-gruenderin\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"unknown\",\"worldPersonId\":\"person--haus-dubhdarach--haus-dubhdarach-gruenderin\",\"name\":\"Unbekannte Gründerin\"}],\"partners\":[{\"personId\":\"mair-affair-tonnarth\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--mair-affair-tonnarth\",\"name\":\"Mair\"}],\"children\":[{\"personId\":\"neifion-dubhdarach-kanne\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--krumme-kanne--neifion-dubhdarach-kanne\",\"name\":\"Neifion Dubhdarach\"},{\"personId\":\"eirlys-dubhdarach-kanne\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--krumme-kanne--eirlys-dubhdarach-kanne\",\"name\":\"Eirlys Dubhdarach\"}]}}"
+              "publishedAt": ""
             },
             {
-              "familyId": "haus-tonnarth",
-              "personId": "aedan-dubhdarach-kanne",
-              "releaseId": "",
-              "publishedAt": "",
               "importedAt": "2026-10-14T17:08:06.479Z",
-              "lastSyncedAt": "2026-10-14T17:08:06.479Z",
+              "publishedAt": "",
               "url": "../Stammbäume/Stammbaum.html?family=haus-tonnarth&mode=view&person=aedan-dubhdarach-kanne",
-              "fingerprint": "{\"name\":\"Aedan Dubhdarach\",\"title\":\"Mitinhaber · Einkauf & Gäste\",\"birth\":\"1695\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-dubhdarach\",\"portrait\":\"../AleriaAlmanach/assets/krumme-kanne/references/aedan.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"mair-affair-tonnarth\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--mair-affair-tonnarth\",\"name\":\"Mair\"}],\"children\":[{\"personId\":\"neifion-dubhdarach-kanne\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--krumme-kanne--neifion-dubhdarach-kanne\",\"name\":\"Neifion Dubhdarach\"},{\"personId\":\"eirlys-dubhdarach-kanne\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--krumme-kanne--eirlys-dubhdarach-kanne\",\"name\":\"Eirlys Dubhdarach\"}]}}"
+              "releaseId": "",
+              "familyId": "haus-tonnarth",
+              "fingerprint": "{\"name\":\"Aedan Dubhdarach\",\"title\":\"Mitinhaber · Einkauf & Gäste\",\"birth\":\"1695\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-dubhdarach\",\"portrait\":\"../AleriaAlmanach/assets/krumme-kanne/references/aedan.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"mair-affair-tonnarth\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--mair-affair-tonnarth\",\"name\":\"Mair\"}],\"children\":[]}}",
+              "personId": "aedan-dubhdarach-kanne",
+              "lastSyncedAt": "2026-10-16T00:40:34.398Z"
             }
-          ],
-          "relationships": {
-            "parents": [
-              {
-                "personId": "haus-dubhdarach-gruender",
-                "type": "claimed",
-                "legitimacy": "unknown",
-                "certainty": "unknown",
-                "worldPersonId": "person--haus-dubhdarach--haus-dubhdarach-gruender",
-                "name": "Unbekannter Gründer"
-              },
-              {
-                "personId": "haus-dubhdarach-gruenderin",
-                "type": "claimed",
-                "legitimacy": "unknown",
-                "certainty": "unknown",
-                "worldPersonId": "person--haus-dubhdarach--haus-dubhdarach-gruenderin",
-                "name": "Unbekannte Gründerin"
-              }
-            ],
-            "partners": [
-              {
-                "personId": "mair-affair-tonnarth",
-                "type": "marriage",
-                "status": "active",
-                "certainty": "confirmed",
-                "worldPersonId": "person--family-tree--mair-affair-tonnarth",
-                "name": "Mair"
-              }
-            ],
-            "children": [
-              {
-                "personId": "neifion-dubhdarach-kanne",
-                "type": "biological",
-                "legitimacy": "legitimate",
-                "certainty": "confirmed",
-                "worldPersonId": "person--krumme-kanne--neifion-dubhdarach-kanne",
-                "name": "Neifion Dubhdarach"
-              },
-              {
-                "personId": "eirlys-dubhdarach-kanne",
-                "type": "biological",
-                "legitimacy": "legitimate",
-                "certainty": "confirmed",
-                "worldPersonId": "person--krumme-kanne--eirlys-dubhdarach-kanne",
-                "name": "Eirlys Dubhdarach"
-              }
-            ]
-          }
-        }
+          ]
+        },
+        "updatedAt": "2026-10-16T00:40:34.398Z"
       }
     },
     {
       "id": "person--krumme-kanne--eirian-trevoryn-kanne",
       "key": "eirian",
       "group": "Trevoryn",
-      "create": true,
-      "data": {
-        "name": "Eirian Trevoryn",
-        "title": "Hausvögtin · Personal & Dienstpläne",
-        "fraktion": "Die Krumme Kanne",
-        "role": "Hausvögtin · Personal & Dienstpläne",
-        "status": "active",
-        "relevance": "minor",
-        "taxonomyPath": "Cenyr > Celtigerns Wacht > Gwynthor > Bürgerliche",
-        "currentLocation": "Gwynthor · Die Krumme Kanne",
-        "origin": "Cenyri",
-        "plotNode": "",
-        "profileLink": "",
-        "playerOwner": "",
-        "bio": "Eirian teilt die Schichten ein, zahlt die Löhne aus und schlichtet die kleinen Streitigkeiten des Hauses. Wenn ihr Schlüsselbund am Tresen auftaucht, werden selbst die Wirte etwas aufmerksamer.",
-        "aliases": [],
-        "archived": false,
-        "createdAt": "2026-10-14T17:08:06.479Z",
-        "updatedAt": "2026-10-14T17:08:06.479Z",
-        "portrait": "./assets/krumme-kanne/portraits/eirian.png",
-        "emotes": [],
-        "emotesOverride": false,
-        "imageSetSchemaVersion": 0,
-        "imageSets": [],
-        "activeImageSetId": "",
-        "imageSetsOverride": false,
-        "inventory": null,
-        "biography": null,
-        "identity": {
-          "worldPersonId": "person--krumme-kanne--eirian-trevoryn-kanne"
-        },
+      "create": false,
+      "patch": {
         "genealogy": {
-          "worldPersonId": "person--krumme-kanne--eirian-trevoryn-kanne",
-          "sex": "female",
-          "status": "alive",
-          "birth": "1698",
-          "death": "",
-          "houseId": "house-trevoryn",
-          "houseName": "Haus Trevoryn",
-          "familyRole": "core",
-          "portraitPlaceholder": "auto",
-          "tags": [],
           "sources": [
             {
-              "familyId": "haus-trevoryn",
-              "personId": "eirian-trevoryn-kanne",
+              "fingerprint": "{\"name\":\"Eirian Trevoryn\",\"title\":\"Hausvögtin · Personal & Dienstpläne\",\"birth\":\"1698\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-trevoryn\",\"portrait\":\"../AleriaAlmanach/assets/krumme-kanne/portraits/eirian.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"vater-trevoryn-kanne\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-trevoryn--vater-trevoryn-kanne\",\"name\":\"Unbekannter Vater\"},{\"personId\":\"nestwen-trevoryn-kanne\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--krumme-kanne--nestwen-trevoryn-kanne\",\"name\":\"Nestwen Trevoryn\"}],\"partners\":[{\"personId\":\"hrolf-svathamar-kanne\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--krumme-kanne--hrolf-svathamar-kanne\",\"name\":\"Hrolf Svathamar\"}],\"children\":[]}}",
               "releaseId": "",
-              "publishedAt": "",
-              "importedAt": "2026-10-14T17:08:06.479Z",
-              "lastSyncedAt": "2026-10-14T17:08:06.479Z",
               "url": "../Stammbäume/Stammbaum.html?family=haus-trevoryn&mode=view&person=eirian-trevoryn-kanne",
-              "fingerprint": "{\"name\":\"Eirian Trevoryn\",\"title\":\"Hausvögtin · Personal & Dienstpläne\",\"birth\":\"1698\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-trevoryn\",\"portrait\":\"../AleriaAlmanach/assets/krumme-kanne/portraits/eirian.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"vater-trevoryn-kanne\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-trevoryn--vater-trevoryn-kanne\",\"name\":\"Unbekannter Vater\"},{\"personId\":\"nestwen-trevoryn-kanne\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--krumme-kanne--nestwen-trevoryn-kanne\",\"name\":\"Nestwen Trevoryn\"}],\"partners\":[{\"personId\":\"hrolf-svathamar-kanne\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--krumme-kanne--hrolf-svathamar-kanne\",\"name\":\"Hrolf Svathamar\"}],\"children\":[{\"personId\":\"styr-svathamar-kanne\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--krumme-kanne--styr-svathamar-kanne\",\"name\":\"Styr Svathamar\"},{\"personId\":\"heledd-svathamar-kanne\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--krumme-kanne--heledd-svathamar-kanne\",\"name\":\"Heledd Svathamar\"}]}}"
+              "familyId": "haus-trevoryn",
+              "lastSyncedAt": "2026-10-16T00:40:34.398Z",
+              "importedAt": "2026-10-14T17:08:06.479Z",
+              "personId": "eirian-trevoryn-kanne",
+              "publishedAt": ""
             },
             {
-              "familyId": "haus-svathamar",
-              "personId": "eirian-trevoryn-kanne",
-              "releaseId": "",
               "publishedAt": "",
-              "importedAt": "2026-10-14T17:08:06.479Z",
+              "personId": "eirian-trevoryn-kanne",
+              "familyId": "haus-svathamar",
               "lastSyncedAt": "2026-10-14T17:08:06.479Z",
+              "importedAt": "2026-10-14T17:08:06.479Z",
+              "fingerprint": "{\"name\":\"Eirian Trevoryn\",\"title\":\"Hausvögtin · Personal & Dienstpläne\",\"birth\":\"1698\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-trevoryn\",\"portrait\":\"../AleriaAlmanach/assets/krumme-kanne/portraits/eirian.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"hrolf-svathamar-kanne\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--krumme-kanne--hrolf-svathamar-kanne\",\"name\":\"Hrolf Svathamar\"}],\"children\":[{\"personId\":\"styr-svathamar-kanne\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--krumme-kanne--styr-svathamar-kanne\",\"name\":\"Styr Svathamar\"},{\"personId\":\"heledd-svathamar-kanne\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--krumme-kanne--heledd-svathamar-kanne\",\"name\":\"Heledd Svathamar\"}]}}",
               "url": "../Stammbäume/Stammbaum.html?family=haus-svathamar&mode=view&person=eirian-trevoryn-kanne",
-              "fingerprint": "{\"name\":\"Eirian Trevoryn\",\"title\":\"Hausvögtin · Personal & Dienstpläne\",\"birth\":\"1698\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-trevoryn\",\"portrait\":\"../AleriaAlmanach/assets/krumme-kanne/portraits/eirian.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"hrolf-svathamar-kanne\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--krumme-kanne--hrolf-svathamar-kanne\",\"name\":\"Hrolf Svathamar\"}],\"children\":[{\"personId\":\"styr-svathamar-kanne\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--krumme-kanne--styr-svathamar-kanne\",\"name\":\"Styr Svathamar\"},{\"personId\":\"heledd-svathamar-kanne\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--krumme-kanne--heledd-svathamar-kanne\",\"name\":\"Heledd Svathamar\"}]}}"
+              "releaseId": ""
             }
-          ],
-          "relationships": {
-            "parents": [
-              {
-                "personId": "vater-trevoryn-kanne",
-                "type": "biological",
-                "legitimacy": "legitimate",
-                "certainty": "confirmed",
-                "worldPersonId": "person--haus-trevoryn--vater-trevoryn-kanne",
-                "name": "Unbekannter Vater"
-              },
-              {
-                "personId": "nestwen-trevoryn-kanne",
-                "type": "biological",
-                "legitimacy": "legitimate",
-                "certainty": "confirmed",
-                "worldPersonId": "person--krumme-kanne--nestwen-trevoryn-kanne",
-                "name": "Nestwen Trevoryn"
-              }
-            ],
-            "partners": [
-              {
-                "personId": "hrolf-svathamar-kanne",
-                "type": "marriage",
-                "status": "active",
-                "certainty": "confirmed",
-                "worldPersonId": "person--krumme-kanne--hrolf-svathamar-kanne",
-                "name": "Hrolf Svathamar"
-              }
-            ],
-            "children": [
-              {
-                "personId": "styr-svathamar-kanne",
-                "type": "biological",
-                "legitimacy": "legitimate",
-                "certainty": "confirmed",
-                "worldPersonId": "person--krumme-kanne--styr-svathamar-kanne",
-                "name": "Styr Svathamar"
-              },
-              {
-                "personId": "heledd-svathamar-kanne",
-                "type": "biological",
-                "legitimacy": "legitimate",
-                "certainty": "confirmed",
-                "worldPersonId": "person--krumme-kanne--heledd-svathamar-kanne",
-                "name": "Heledd Svathamar"
-              }
-            ]
-          }
-        }
+          ]
+        },
+        "updatedAt": "2026-10-16T00:40:34.398Z"
       }
     },
     {
       "id": "person--family-tree--mair-affair-tonnarth",
       "key": "mair",
       "group": "Dubhdarach",
-      "create": true,
-      "data": {
-        "name": "Mair",
-        "title": "Rechnungsführerin · Kasse & Gästebuch",
-        "fraktion": "Die Krumme Kanne",
-        "role": "Rechnungsführerin · Kasse & Gästebuch",
-        "status": "active",
-        "relevance": "minor",
-        "taxonomyPath": "Cenyr > Celtigerns Wacht > Gwynthor > Bürgerliche",
-        "currentLocation": "Gwynthor · Die Krumme Kanne",
-        "origin": "Cenyri · Gwynthor",
-        "plotNode": "",
-        "profileLink": "",
-        "playerOwner": "",
-        "bio": "Mair führt Kassenbuch und Gästebuch mit ruhiger Hand. Eine vergessene Zeche entgeht ihr ebenso wenig wie ein Gast, der sein letztes Kupferstück dreimal umdreht. Ihr trockener Humor kommt meist erst mit der zweiten Rechnung zum Vorschein.",
-        "aliases": [],
-        "archived": false,
-        "createdAt": "2026-10-14T17:08:06.479Z",
-        "updatedAt": "2026-10-14T17:08:06.479Z",
-        "portrait": "./assets/krumme-kanne/portraits/mair.png",
-        "emotes": [],
-        "emotesOverride": false,
-        "imageSetSchemaVersion": 0,
-        "imageSets": [],
-        "activeImageSetId": "",
-        "imageSetsOverride": false,
-        "inventory": null,
-        "biography": null,
-        "identity": {
-          "worldPersonId": "person--family-tree--mair-affair-tonnarth"
-        },
+      "create": false,
+      "patch": {
         "genealogy": {
-          "worldPersonId": "person--family-tree--mair-affair-tonnarth",
-          "sex": "female",
-          "status": "alive",
-          "birth": "1697",
-          "death": "",
-          "houseId": "",
-          "houseName": "",
-          "familyRole": "married",
-          "portraitPlaceholder": "auto",
-          "tags": [],
           "sources": [
             {
-              "familyId": "haus-dubhdarach",
-              "personId": "mair-affair-tonnarth",
-              "releaseId": "",
-              "publishedAt": "",
+              "fingerprint": "{\"name\":\"Mair\",\"title\":\"Rechnungsführerin · Kasse & Gästebuch\",\"birth\":\"1697\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"\",\"portrait\":\"../AleriaAlmanach/assets/krumme-kanne/portraits/mair.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"gareth-tonnarth\",\"type\":\"affair\",\"status\":\"ended\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-tonnarth--gareth-tonnarth\",\"name\":\"Gareth Tonnarth\"},{\"personId\":\"aedan-dubhdarach-kanne\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--krumme-kanne--aedan-dubhdarach-kanne\",\"name\":\"Aedan Dubhdarach\"}],\"children\":[{\"personId\":\"caradog-bastard-tonnarth\",\"type\":\"biological\",\"legitimacy\":\"legitimized\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-tonnarth--caradog-bastard-tonnarth\",\"name\":\"Caradog Tonnarth\"},{\"personId\":\"neifion-dubhdarach-kanne\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--krumme-kanne--neifion-dubhdarach-kanne\",\"name\":\"Neifion Dubhdarach\"},{\"personId\":\"eirlys-dubhdarach-kanne\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--krumme-kanne--eirlys-dubhdarach-kanne\",\"name\":\"Eirlys Dubhdarach\"}]}}",
               "importedAt": "2026-10-14T17:08:06.479Z",
-              "lastSyncedAt": "2026-10-14T17:08:06.479Z",
+              "publishedAt": "",
+              "releaseId": "",
               "url": "../Stammbäume/Stammbaum.html?family=haus-dubhdarach&mode=view&person=mair-affair-tonnarth",
-              "fingerprint": "{\"name\":\"Mair\",\"title\":\"Rechnungsführerin · Kasse & Gästebuch\",\"birth\":\"1697\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"\",\"portrait\":\"../AleriaAlmanach/assets/krumme-kanne/portraits/mair.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"gareth-tonnarth\",\"type\":\"affair\",\"status\":\"ended\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-tonnarth--gareth-tonnarth\",\"name\":\"Gareth Tonnarth\"},{\"personId\":\"aedan-dubhdarach-kanne\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--krumme-kanne--aedan-dubhdarach-kanne\",\"name\":\"Aedan Dubhdarach\"}],\"children\":[{\"personId\":\"caradog-bastard-tonnarth\",\"type\":\"biological\",\"legitimacy\":\"legitimized\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-tonnarth--caradog-bastard-tonnarth\",\"name\":\"Caradog Tonnarth\"},{\"personId\":\"neifion-dubhdarach-kanne\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--krumme-kanne--neifion-dubhdarach-kanne\",\"name\":\"Neifion Dubhdarach\"},{\"personId\":\"eirlys-dubhdarach-kanne\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--krumme-kanne--eirlys-dubhdarach-kanne\",\"name\":\"Eirlys Dubhdarach\"}]}}"
+              "lastSyncedAt": "2026-10-14T17:08:06.479Z",
+              "personId": "mair-affair-tonnarth",
+              "familyId": "haus-dubhdarach"
             },
             {
+              "url": "../Stammbäume/Stammbaum.html?family=haus-tonnarth&mode=view&person=mair-affair-tonnarth",
+              "publishedAt": "",
               "familyId": "haus-tonnarth",
               "personId": "mair-affair-tonnarth",
+              "fingerprint": "{\"name\":\"Mair\",\"title\":\"Rechnungsführerin · Kasse & Gästebuch\",\"birth\":\"1697\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"\",\"portrait\":\"../AleriaAlmanach/assets/krumme-kanne/portraits/mair.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"gareth-tonnarth\",\"type\":\"affair\",\"status\":\"ended\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-tonnarth--gareth-tonnarth\",\"name\":\"Gareth Tonnarth\"},{\"personId\":\"aedan-dubhdarach-kanne\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--krumme-kanne--aedan-dubhdarach-kanne\",\"name\":\"Aedan Dubhdarach\"}],\"children\":[{\"personId\":\"caradog-bastard-tonnarth\",\"type\":\"biological\",\"legitimacy\":\"legitimized\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-tonnarth--caradog-bastard-tonnarth\",\"name\":\"Caradog Tonnarth\"}]}}",
+              "lastSyncedAt": "2026-10-16T00:40:34.398Z",
               "releaseId": "",
-              "publishedAt": "",
-              "importedAt": "2026-10-14T17:08:06.479Z",
-              "lastSyncedAt": "2026-10-14T17:08:06.479Z",
-              "url": "../Stammbäume/Stammbaum.html?family=haus-tonnarth&mode=view&person=mair-affair-tonnarth",
-              "fingerprint": "{\"name\":\"Mair\",\"title\":\"Rechnungsführerin · Kasse & Gästebuch\",\"birth\":\"1697\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"\",\"portrait\":\"../AleriaAlmanach/assets/krumme-kanne/portraits/mair.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"gareth-tonnarth\",\"type\":\"affair\",\"status\":\"ended\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-tonnarth--gareth-tonnarth\",\"name\":\"Gareth Tonnarth\"},{\"personId\":\"aedan-dubhdarach-kanne\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--krumme-kanne--aedan-dubhdarach-kanne\",\"name\":\"Aedan Dubhdarach\"}],\"children\":[{\"personId\":\"caradog-bastard-tonnarth\",\"type\":\"biological\",\"legitimacy\":\"legitimized\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-tonnarth--caradog-bastard-tonnarth\",\"name\":\"Caradog Tonnarth\"},{\"personId\":\"neifion-dubhdarach-kanne\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--krumme-kanne--neifion-dubhdarach-kanne\",\"name\":\"Neifion Dubhdarach\"},{\"personId\":\"eirlys-dubhdarach-kanne\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--krumme-kanne--eirlys-dubhdarach-kanne\",\"name\":\"Eirlys Dubhdarach\"}]}}"
+              "importedAt": "2026-10-14T17:08:06.479Z"
             }
-          ],
-          "relationships": {
-            "parents": [],
-            "partners": [
-              {
-                "personId": "gareth-tonnarth",
-                "type": "affair",
-                "status": "ended",
-                "certainty": "confirmed",
-                "worldPersonId": "person--haus-tonnarth--gareth-tonnarth",
-                "name": "Gareth Tonnarth"
-              },
-              {
-                "personId": "aedan-dubhdarach-kanne",
-                "type": "marriage",
-                "status": "active",
-                "certainty": "confirmed",
-                "worldPersonId": "person--krumme-kanne--aedan-dubhdarach-kanne",
-                "name": "Aedan Dubhdarach"
-              }
-            ],
-            "children": [
-              {
-                "personId": "caradog-bastard-tonnarth",
-                "type": "biological",
-                "legitimacy": "legitimized",
-                "certainty": "confirmed",
-                "worldPersonId": "person--haus-tonnarth--caradog-bastard-tonnarth",
-                "name": "Caradog Tonnarth"
-              },
-              {
-                "personId": "neifion-dubhdarach-kanne",
-                "type": "biological",
-                "legitimacy": "legitimate",
-                "certainty": "confirmed",
-                "worldPersonId": "person--krumme-kanne--neifion-dubhdarach-kanne",
-                "name": "Neifion Dubhdarach"
-              },
-              {
-                "personId": "eirlys-dubhdarach-kanne",
-                "type": "biological",
-                "legitimacy": "legitimate",
-                "certainty": "confirmed",
-                "worldPersonId": "person--krumme-kanne--eirlys-dubhdarach-kanne",
-                "name": "Eirlys Dubhdarach"
-              }
-            ]
-          }
-        }
+          ]
+        },
+        "updatedAt": "2026-10-16T00:40:34.398Z"
       }
     },
     {
       "id": "person--krumme-kanne--celyn-trevoryn-kanne",
       "key": "celyn",
       "group": "Trevoryn",
-      "create": true,
-      "data": {
-        "name": "Celyn",
-        "title": "Vorratsmeisterin · Vorräte & Wäsche",
-        "fraktion": "Die Krumme Kanne",
-        "role": "Vorratsmeisterin · Vorräte & Wäsche",
-        "status": "active",
-        "relevance": "minor",
-        "taxonomyPath": "Cenyr > Celtigerns Wacht > Gwynthor > Bürgerliche",
-        "currentLocation": "Gwynthor · Die Krumme Kanne",
-        "origin": "Cenyri · Gwynthor",
-        "plotNode": "",
-        "profileLink": "",
-        "playerOwner": "",
-        "bio": "Celyn hält Vorratskammer und Wäschetruhe gefüllt. Sie riecht schlechtes Korn, bevor der Sack offen ist, und spart lieber am Schwund als an den Portionen. Wer verspätet zum Dienst kommt, bekommt erst etwas zu essen und dann seine Standpauke.",
-        "aliases": [],
-        "archived": false,
-        "createdAt": "2026-10-14T17:08:06.479Z",
-        "updatedAt": "2026-10-14T17:08:06.479Z",
-        "portrait": "./assets/krumme-kanne/portraits/celyn.png",
-        "emotes": [],
-        "emotesOverride": false,
-        "imageSetSchemaVersion": 0,
-        "imageSets": [],
-        "activeImageSetId": "",
-        "imageSetsOverride": false,
-        "inventory": null,
-        "biography": null,
-        "identity": {
-          "worldPersonId": "person--krumme-kanne--celyn-trevoryn-kanne"
-        },
-        "genealogy": {
-          "worldPersonId": "person--krumme-kanne--celyn-trevoryn-kanne",
-          "sex": "female",
-          "status": "alive",
-          "birth": "1699",
-          "death": "",
-          "houseId": "house-trevoryn",
-          "houseName": "Haus Trevoryn",
-          "familyRole": "married",
-          "portraitPlaceholder": "auto",
-          "tags": [],
-          "sources": [
-            {
-              "familyId": "haus-trevoryn",
-              "personId": "celyn-trevoryn-kanne",
-              "releaseId": "",
-              "publishedAt": "",
-              "importedAt": "2026-10-14T17:08:06.479Z",
-              "lastSyncedAt": "2026-10-14T17:08:06.479Z",
-              "url": "../Stammbäume/Stammbaum.html?family=haus-trevoryn&mode=view&person=celyn-trevoryn-kanne",
-              "fingerprint": "{\"name\":\"Celyn Trevoryn\",\"title\":\"Vorratsmeisterin · Vorräte & Wäsche\",\"birth\":\"1699\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-trevoryn\",\"portrait\":\"../AleriaAlmanach/assets/krumme-kanne/portraits/celyn.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"merrik-trevoryn-kanne\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--krumme-kanne--merrik-trevoryn-kanne\",\"name\":\"Merrik Trevoryn\"}],\"children\":[{\"personId\":\"cadri-trevoryn-kanne\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--krumme-kanne--cadri-trevoryn-kanne\",\"name\":\"Cadri Trevoryn\"},{\"personId\":\"enlli-trevoryn-kanne\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--krumme-kanne--enlli-trevoryn-kanne\",\"name\":\"Enlli Trevoryn\"}]}}"
-            }
-          ],
-          "relationships": {
-            "parents": [],
-            "partners": [
-              {
-                "personId": "merrik-trevoryn-kanne",
-                "type": "marriage",
-                "status": "active",
-                "certainty": "confirmed",
-                "worldPersonId": "person--krumme-kanne--merrik-trevoryn-kanne",
-                "name": "Merrik Trevoryn"
-              }
-            ],
-            "children": [
-              {
-                "personId": "cadri-trevoryn-kanne",
-                "type": "biological",
-                "legitimacy": "legitimate",
-                "certainty": "confirmed",
-                "worldPersonId": "person--krumme-kanne--cadri-trevoryn-kanne",
-                "name": "Cadri Trevoryn"
-              },
-              {
-                "personId": "enlli-trevoryn-kanne",
-                "type": "biological",
-                "legitimacy": "legitimate",
-                "certainty": "confirmed",
-                "worldPersonId": "person--krumme-kanne--enlli-trevoryn-kanne",
-                "name": "Enlli Trevoryn"
-              }
-            ]
-          }
-        }
-      }
+      "create": false,
+      "patch": null
     },
     {
       "id": "person--haus-tonnarth--caradog-bastard-tonnarth",
       "key": "caradog",
       "group": "Tonnarth",
       "create": false,
-      "patch": {
-        "genealogy": {
-          "sources": [
-            {
-              "familyId": "haus-tonnarth",
-              "personId": "caradog-bastard-tonnarth",
-              "releaseId": "",
-              "publishedAt": "",
-              "importedAt": "2026-09-06T03:18:40.327Z",
-              "lastSyncedAt": "2026-10-14T17:08:06.479Z",
-              "url": "../Stammbäume/Stammbaum.html?family=haus-tonnarth&mode=view&person=caradog-bastard-tonnarth",
-              "fingerprint": "{\"name\":\"Caradog Tonnarth\",\"title\":\"Schreiber & Adjutant der Tiefenwyrm\",\"birth\":\"1718\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-tonnarth\",\"portrait\":\"https://i.imgur.com/LK3q0UI.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"gareth-tonnarth\",\"type\":\"biological\",\"legitimacy\":\"legitimized\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-tonnarth--gareth-tonnarth\",\"name\":\"Gareth Tonnarth\"},{\"personId\":\"mair-affair-tonnarth\",\"type\":\"biological\",\"legitimacy\":\"legitimized\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--mair-affair-tonnarth\",\"name\":\"Mair\"}],\"partners\":[],\"children\":[]}}"
-            },
-            {
-              "familyId": "haus-dubhdarach",
-              "personId": "caradog-bastard-tonnarth",
-              "releaseId": "",
-              "publishedAt": "",
-              "importedAt": "2026-10-14T17:08:06.479Z",
-              "lastSyncedAt": "2026-10-14T17:08:06.479Z",
-              "url": "../Stammbäume/Stammbaum.html?family=haus-dubhdarach&mode=view&person=caradog-bastard-tonnarth",
-              "fingerprint": "{\"name\":\"Caradog Tonnarth\",\"title\":\"Schreiber & Adjutant der Tiefenwyrm\",\"birth\":\"1718\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-tonnarth\",\"portrait\":\"https://i.imgur.com/LK3q0UI.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"gareth-tonnarth\",\"type\":\"biological\",\"legitimacy\":\"legitimized\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-tonnarth--gareth-tonnarth\",\"name\":\"Gareth Tonnarth\"},{\"personId\":\"mair-affair-tonnarth\",\"type\":\"biological\",\"legitimacy\":\"legitimized\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--mair-affair-tonnarth\",\"name\":\"Mair\"}],\"partners\":[],\"children\":[]}}"
-            }
-          ]
-        },
-        "updatedAt": "2026-10-14T17:08:06.479Z"
-      }
+      "patch": null
     },
     {
       "id": "person--krumme-kanne--gorwyst",
       "key": "gorwyst",
       "group": "Angestellte",
-      "create": true,
-      "data": {
-        "name": "Gorwyst",
-        "title": "Meier · Hof, Fässer & Reparaturen",
-        "fraktion": "Die Krumme Kanne",
-        "role": "Meier · Hof, Fässer & Reparaturen",
-        "status": "active",
-        "relevance": "minor",
-        "taxonomyPath": "",
-        "currentLocation": "Gwynthor · Die Krumme Kanne",
-        "origin": "Cenyri",
-        "plotNode": "",
-        "profileLink": "",
-        "playerOwner": "",
-        "bio": "Gorwyst nimmt die Lieferungen an, lässt Fässer rollen und hält Handwerker und Brennholz im Anmarsch. Er fragt lieber zweimal nach, als eine Last auf die falsche Treppe zu stellen. Cadri darf ihm im Hof zur Hand gehen.",
-        "aliases": [],
-        "archived": false,
-        "createdAt": "2026-10-14T17:08:06.479Z",
-        "updatedAt": "2026-10-14T17:08:06.479Z",
-        "portrait": "./assets/krumme-kanne/portraits/gorwyst.png",
-        "emotes": [],
-        "emotesOverride": false,
-        "imageSetSchemaVersion": 0,
-        "imageSets": [],
-        "activeImageSetId": "",
-        "imageSetsOverride": false,
-        "inventory": null,
-        "biography": null,
-        "identity": {
-          "worldPersonId": "person--krumme-kanne--gorwyst"
-        },
-        "genealogy": {
-          "worldPersonId": "person--krumme-kanne--gorwyst",
-          "sex": "male",
-          "status": "alive",
-          "birth": "1718",
-          "death": "",
-          "houseId": "",
-          "houseName": "",
-          "familyRole": "",
-          "portraitPlaceholder": "",
-          "tags": [],
-          "sources": [],
-          "relationships": {
-            "parents": [],
-            "partners": [],
-            "children": []
-          }
-        }
-      }
+      "create": false,
+      "patch": null
     },
     {
       "id": "person--krumme-kanne--elidyr-trevoryn-kanne",
       "key": "elidyr",
       "group": "Trevoryn",
-      "create": true,
-      "data": {
-        "name": "Elidyr Trevoryn",
-        "title": "Schankwirtsmeister · Tresen & Empfang",
-        "fraktion": "Die Krumme Kanne",
-        "role": "Schankwirtsmeister · Tresen & Empfang",
-        "status": "active",
-        "relevance": "minor",
-        "taxonomyPath": "Cenyr > Celtigerns Wacht > Gwynthor > Bürgerliche",
-        "currentLocation": "Gwynthor · Die Krumme Kanne",
-        "origin": "Cenyri",
-        "plotNode": "",
-        "profileLink": "",
-        "playerOwner": "",
-        "bio": "Elidyr empfängt die Gäste am Tresen und hält den Ausschank in Gang. Er behält sechs Bestellungen im Kopf und wird mit jedem vollen Tisch trockener im Ton. Eine Beschwerde hört er trotzdem bis zum Ende an.",
-        "aliases": [],
-        "archived": false,
-        "createdAt": "2026-10-14T17:08:06.479Z",
-        "updatedAt": "2026-10-14T17:08:06.479Z",
-        "portrait": "./assets/krumme-kanne/portraits/elidyr.png",
-        "emotes": [],
-        "emotesOverride": false,
-        "imageSetSchemaVersion": 0,
-        "imageSets": [],
-        "activeImageSetId": "",
-        "imageSetsOverride": false,
-        "inventory": null,
-        "biography": null,
-        "identity": {
-          "worldPersonId": "person--krumme-kanne--elidyr-trevoryn-kanne"
-        },
-        "genealogy": {
-          "worldPersonId": "person--krumme-kanne--elidyr-trevoryn-kanne",
-          "sex": "male",
-          "status": "alive",
-          "birth": "1705",
-          "death": "",
-          "houseId": "house-trevoryn",
-          "houseName": "Haus Trevoryn",
-          "familyRole": "core",
-          "portraitPlaceholder": "auto",
-          "tags": [],
-          "sources": [
-            {
-              "familyId": "haus-trevoryn",
-              "personId": "elidyr-trevoryn-kanne",
-              "releaseId": "",
-              "publishedAt": "",
-              "importedAt": "2026-10-14T17:08:06.479Z",
-              "lastSyncedAt": "2026-10-14T17:08:06.479Z",
-              "url": "../Stammbäume/Stammbaum.html?family=haus-trevoryn&mode=view&person=elidyr-trevoryn-kanne",
-              "fingerprint": "{\"name\":\"Elidyr Trevoryn\",\"title\":\"Schankwirtsmeister · Tresen & Empfang\",\"birth\":\"1705\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-trevoryn\",\"portrait\":\"../AleriaAlmanach/assets/krumme-kanne/portraits/elidyr.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"vater-trevoryn-kanne\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-trevoryn--vater-trevoryn-kanne\",\"name\":\"Unbekannter Vater\"},{\"personId\":\"nestwen-trevoryn-kanne\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--krumme-kanne--nestwen-trevoryn-kanne\",\"name\":\"Nestwen Trevoryn\"}],\"partners\":[],\"children\":[]}}"
-            }
-          ],
-          "relationships": {
-            "parents": [
-              {
-                "personId": "vater-trevoryn-kanne",
-                "type": "biological",
-                "legitimacy": "legitimate",
-                "certainty": "confirmed",
-                "worldPersonId": "person--haus-trevoryn--vater-trevoryn-kanne",
-                "name": "Unbekannter Vater"
-              },
-              {
-                "personId": "nestwen-trevoryn-kanne",
-                "type": "biological",
-                "legitimacy": "legitimate",
-                "certainty": "confirmed",
-                "worldPersonId": "person--krumme-kanne--nestwen-trevoryn-kanne",
-                "name": "Nestwen Trevoryn"
-              }
-            ],
-            "partners": [],
-            "children": []
-          }
-        }
-      }
+      "create": false,
+      "patch": null
     },
     {
       "id": "person--krumme-kanne--delyth",
       "key": "delyth",
       "group": "Angestellte",
-      "create": true,
-      "data": {
-        "name": "Delyth",
-        "title": "Erste Schankmagd · Tischdienst",
-        "fraktion": "Die Krumme Kanne",
-        "role": "Erste Schankmagd · Tischdienst",
-        "status": "active",
-        "relevance": "minor",
-        "taxonomyPath": "",
-        "currentLocation": "Gwynthor · Die Krumme Kanne",
-        "origin": "Cenyri",
-        "plotNode": "",
-        "profileLink": "",
-        "playerOwner": "",
-        "bio": "Delyth führt die Schankmägde durch den dichtesten Abendbetrieb. Sie weiß, wer seine Suppe langsam braucht und wer bloß wichtig aussehen möchte. Ihr keckes Lächeln macht den Anfang, ihre scharfe Zunge nötigenfalls den Schluss.",
-        "aliases": [],
-        "archived": false,
-        "createdAt": "2026-10-14T17:08:06.479Z",
-        "updatedAt": "2026-10-14T17:08:06.479Z",
-        "portrait": "./assets/krumme-kanne/portraits/delyth.png",
-        "emotes": [],
-        "emotesOverride": false,
-        "imageSetSchemaVersion": 0,
-        "imageSets": [],
-        "activeImageSetId": "",
-        "imageSetsOverride": false,
-        "inventory": null,
-        "biography": null,
-        "identity": {
-          "worldPersonId": "person--krumme-kanne--delyth"
-        },
-        "genealogy": {
-          "worldPersonId": "person--krumme-kanne--delyth",
-          "sex": "female",
-          "status": "alive",
-          "birth": "1713",
-          "death": "",
-          "houseId": "",
-          "houseName": "",
-          "familyRole": "",
-          "portraitPlaceholder": "",
-          "tags": [],
-          "sources": [],
-          "relationships": {
-            "parents": [],
-            "partners": [],
-            "children": []
-          }
-        }
-      }
+      "create": false,
+      "patch": null
     },
     {
       "id": "person--krumme-kanne--tesni",
       "key": "tesni",
       "group": "Angestellte",
-      "create": true,
-      "data": {
-        "name": "Tesni",
-        "title": "Schankmagd · Krüge & Tische",
-        "fraktion": "Die Krumme Kanne",
-        "role": "Schankmagd · Krüge & Tische",
-        "status": "active",
-        "relevance": "minor",
-        "taxonomyPath": "",
-        "currentLocation": "Gwynthor · Die Krumme Kanne",
-        "origin": "Cenyri",
-        "plotNode": "",
-        "profileLink": "",
-        "playerOwner": "",
-        "bio": "Tesni ist schnell mit den Krügen und noch schneller mit einem Lachen. Bestellungen merkt sie sich in kleinen Reimen. Beim Aufräumen singt sie die Feldzuglieder so schief, dass selbst die müdesten Veteranen grinsen.",
-        "aliases": [],
-        "archived": false,
-        "createdAt": "2026-10-14T17:08:06.479Z",
-        "updatedAt": "2026-10-14T17:08:06.479Z",
-        "portrait": "./assets/krumme-kanne/portraits/tesni.png",
-        "emotes": [],
-        "emotesOverride": false,
-        "imageSetSchemaVersion": 0,
-        "imageSets": [],
-        "activeImageSetId": "",
-        "imageSetsOverride": false,
-        "inventory": null,
-        "biography": null,
-        "identity": {
-          "worldPersonId": "person--krumme-kanne--tesni"
-        },
-        "genealogy": {
-          "worldPersonId": "person--krumme-kanne--tesni",
-          "sex": "female",
-          "status": "alive",
-          "birth": "1720",
-          "death": "",
-          "houseId": "",
-          "houseName": "",
-          "familyRole": "",
-          "portraitPlaceholder": "",
-          "tags": [],
-          "sources": [],
-          "relationships": {
-            "parents": [],
-            "partners": [],
-            "children": []
-          }
-        }
-      }
+      "create": false,
+      "patch": null
     },
     {
       "id": "person--krumme-kanne--tangwystl",
       "key": "tangwystl",
       "group": "Angestellte",
-      "create": true,
-      "data": {
-        "name": "Tangwystl",
-        "title": "Schankmagd · Abendtische",
-        "fraktion": "Die Krumme Kanne",
-        "role": "Schankmagd · Abendtische",
-        "status": "active",
-        "relevance": "minor",
-        "taxonomyPath": "",
-        "currentLocation": "Gwynthor · Die Krumme Kanne",
-        "origin": "Cenyri",
-        "plotNode": "",
-        "profileLink": "",
-        "playerOwner": "",
-        "bio": "Tangwystl kennt die Stammgäste und ihre Ausreden auswendig. Mit kupferroten Locken und zweideutigem Witz hält sie ganze Tische bei Laune. Bei der Zeche wird ihr Gedächtnis allerdings sehr genau.",
-        "aliases": [],
-        "archived": false,
-        "createdAt": "2026-10-14T17:08:06.479Z",
-        "updatedAt": "2026-10-14T17:08:06.479Z",
-        "portrait": "./assets/krumme-kanne/portraits/tangwystl.png",
-        "emotes": [],
-        "emotesOverride": false,
-        "imageSetSchemaVersion": 0,
-        "imageSets": [],
-        "activeImageSetId": "",
-        "imageSetsOverride": false,
-        "inventory": null,
-        "biography": null,
-        "identity": {
-          "worldPersonId": "person--krumme-kanne--tangwystl"
-        },
-        "genealogy": {
-          "worldPersonId": "person--krumme-kanne--tangwystl",
-          "sex": "female",
-          "status": "alive",
-          "birth": "1709",
-          "death": "",
-          "houseId": "",
-          "houseName": "",
-          "familyRole": "",
-          "portraitPlaceholder": "",
-          "tags": [],
-          "sources": [],
-          "relationships": {
-            "parents": [],
-            "partners": [],
-            "children": []
-          }
-        }
-      }
+      "create": false,
+      "patch": null
     },
     {
       "id": "person--krumme-kanne--fintan",
       "key": "fintan",
       "group": "Angestellte",
-      "create": true,
-      "data": {
-        "name": "Fintan",
-        "title": "Schankknecht · Speisen & Abenddienst",
-        "fraktion": "Die Krumme Kanne",
-        "role": "Schankknecht · Speisen & Abenddienst",
-        "status": "active",
-        "relevance": "minor",
-        "taxonomyPath": "",
-        "currentLocation": "Gwynthor · Die Krumme Kanne",
-        "origin": "Albe · Leitheach",
-        "plotNode": "",
-        "profileLink": "",
-        "playerOwner": "",
-        "bio": "Fintan trägt schwere Platten mit stoischer Ruhe durch den vollen Schankraum. Der junge Albe hört mehr zu, als er spricht. Nur bei falsch ausgesprochenen Leitheacher Gerichtsnamen wird er hartnäckig.",
-        "aliases": [],
-        "archived": false,
-        "createdAt": "2026-10-14T17:08:06.479Z",
-        "updatedAt": "2026-10-14T17:08:06.479Z",
-        "portrait": "./assets/krumme-kanne/portraits/fintan.png",
-        "emotes": [],
-        "emotesOverride": false,
-        "imageSetSchemaVersion": 0,
-        "imageSets": [],
-        "activeImageSetId": "",
-        "imageSetsOverride": false,
-        "inventory": null,
-        "biography": null,
-        "identity": {
-          "worldPersonId": "person--krumme-kanne--fintan"
-        },
-        "genealogy": {
-          "worldPersonId": "person--krumme-kanne--fintan",
-          "sex": "male",
-          "status": "alive",
-          "birth": "1712",
-          "death": "",
-          "houseId": "",
-          "houseName": "",
-          "familyRole": "",
-          "portraitPlaceholder": "",
-          "tags": [],
-          "sources": [],
-          "relationships": {
-            "parents": [],
-            "partners": [],
-            "children": []
-          }
-        }
-      }
+      "create": false,
+      "patch": null
     },
     {
       "id": "person--krumme-kanne--runa-svathamar-kanne",
       "key": "runa",
       "group": "Svathamar",
-      "create": true,
-      "data": {
-        "name": "Runa Svathamar",
-        "title": "Hausmeisterin · Zimmer & Kammern",
-        "fraktion": "Die Krumme Kanne",
-        "role": "Hausmeisterin · Zimmer & Kammern",
-        "status": "active",
-        "relevance": "minor",
-        "taxonomyPath": "Cenyr > Celtigerns Wacht > Gwynthor > Bürgerliche",
-        "currentLocation": "Gwynthor · Die Krumme Kanne",
-        "origin": "Aldrimarerin · Rorikshall",
-        "plotNode": "",
-        "profileLink": "",
-        "playerOwner": "",
-        "bio": "Runa sorgt für ordentliche Kammern, frische Laken und unbeschädigte Riegel. Gäste beurteilt sie zunächst nach ihrem Umgang mit nassen Stiefeln. Verlorene Geldbörsen verwahrt sie sorgfältiger als schlechte Ausreden.",
-        "aliases": [],
-        "archived": false,
-        "createdAt": "2026-10-14T17:08:06.479Z",
-        "updatedAt": "2026-10-14T17:08:06.479Z",
-        "portrait": "./assets/krumme-kanne/portraits/runa.png",
-        "emotes": [],
-        "emotesOverride": false,
-        "imageSetSchemaVersion": 0,
-        "imageSets": [],
-        "activeImageSetId": "",
-        "imageSetsOverride": false,
-        "inventory": null,
-        "biography": null,
-        "identity": {
-          "worldPersonId": "person--krumme-kanne--runa-svathamar-kanne"
-        },
-        "genealogy": {
-          "worldPersonId": "person--krumme-kanne--runa-svathamar-kanne",
-          "sex": "female",
-          "status": "alive",
-          "birth": "1706",
-          "death": "",
-          "houseId": "house-svathamar",
-          "houseName": "Haus Svathamar",
-          "familyRole": "core",
-          "portraitPlaceholder": "auto",
-          "tags": [],
-          "sources": [
-            {
-              "familyId": "haus-svathamar",
-              "personId": "runa-svathamar-kanne",
-              "releaseId": "",
-              "publishedAt": "",
-              "importedAt": "2026-10-14T17:08:06.479Z",
-              "lastSyncedAt": "2026-10-14T17:08:06.479Z",
-              "url": "../Stammbäume/Stammbaum.html?family=haus-svathamar&mode=view&person=runa-svathamar-kanne",
-              "fingerprint": "{\"name\":\"Runa Svathamar\",\"title\":\"Hausmeisterin · Zimmer & Kammern\",\"birth\":\"1706\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-svathamar\",\"portrait\":\"../AleriaAlmanach/assets/krumme-kanne/portraits/runa.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"vater-svathamar-kanne\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-svathamar--vater-svathamar-kanne\",\"name\":\"Unbekannter Vater\"},{\"personId\":\"mutter-svathamar-kanne\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-svathamar--mutter-svathamar-kanne\",\"name\":\"Unbekannte Mutter\"}],\"partners\":[],\"children\":[]}}"
-            }
-          ],
-          "relationships": {
-            "parents": [
-              {
-                "personId": "vater-svathamar-kanne",
-                "type": "biological",
-                "legitimacy": "legitimate",
-                "certainty": "confirmed",
-                "worldPersonId": "person--haus-svathamar--vater-svathamar-kanne",
-                "name": "Unbekannter Vater"
-              },
-              {
-                "personId": "mutter-svathamar-kanne",
-                "type": "biological",
-                "legitimacy": "legitimate",
-                "certainty": "confirmed",
-                "worldPersonId": "person--haus-svathamar--mutter-svathamar-kanne",
-                "name": "Unbekannte Mutter"
-              }
-            ],
-            "partners": [],
-            "children": []
-          }
-        }
-      }
+      "create": false,
+      "patch": null
     },
     {
       "id": "person--krumme-kanne--awenna",
       "key": "awenna",
       "group": "Angestellte",
-      "create": true,
-      "data": {
-        "name": "Awenna",
-        "title": "Zimmermagd · Obere Kammern",
-        "fraktion": "Die Krumme Kanne",
-        "role": "Zimmermagd · Obere Kammern",
-        "status": "active",
-        "relevance": "minor",
-        "taxonomyPath": "",
-        "currentLocation": "Gwynthor · Die Krumme Kanne",
-        "origin": "Cenyri",
-        "plotNode": "",
-        "profileLink": "",
-        "playerOwner": "",
-        "bio": "Awenna richtet Betten und Waschkrüge her und entdeckt jeden klemmenden Riegel. Einem Gast mit alten Wunden legt sie wortlos ein zweites Kissen bereit. Nadeln verleiht sie gern, ihren guten Kamm niemals.",
-        "aliases": [],
-        "archived": false,
-        "createdAt": "2026-10-14T17:08:06.479Z",
-        "updatedAt": "2026-10-14T17:08:06.479Z",
-        "portrait": "./assets/krumme-kanne/portraits/awenna.png",
-        "emotes": [],
-        "emotesOverride": false,
-        "imageSetSchemaVersion": 0,
-        "imageSets": [],
-        "activeImageSetId": "",
-        "imageSetsOverride": false,
-        "inventory": null,
-        "biography": null,
-        "identity": {
-          "worldPersonId": "person--krumme-kanne--awenna"
-        },
-        "genealogy": {
-          "worldPersonId": "person--krumme-kanne--awenna",
-          "sex": "female",
-          "status": "alive",
-          "birth": "1714",
-          "death": "",
-          "houseId": "",
-          "houseName": "",
-          "familyRole": "",
-          "portraitPlaceholder": "",
-          "tags": [],
-          "sources": [],
-          "relationships": {
-            "parents": [],
-            "partners": [],
-            "children": []
-          }
-        }
-      }
+      "create": false,
+      "patch": null
     },
     {
       "id": "person--krumme-kanne--llinos",
       "key": "llinos",
       "group": "Angestellte",
-      "create": true,
-      "data": {
-        "name": "Llinos",
-        "title": "Hausmagd · Wasser & Lampen",
-        "fraktion": "Die Krumme Kanne",
-        "role": "Hausmagd · Wasser & Lampen",
-        "status": "active",
-        "relevance": "minor",
-        "taxonomyPath": "",
-        "currentLocation": "Gwynthor · Die Krumme Kanne",
-        "origin": "Cenyri",
-        "plotNode": "",
-        "profileLink": "",
-        "playerOwner": "",
-        "bio": "Llinos bringt frisches Wasser, füllt die Lampen und hält die Schankstube sauber. Bei der Arbeit schimpft sie mit dem Kater, als wäre er ein fauler Kollege. Nestwen bringt ihr nebenbei das Stopfen bei.",
-        "aliases": [],
-        "archived": false,
-        "createdAt": "2026-10-14T17:08:06.479Z",
-        "updatedAt": "2026-10-14T17:08:06.479Z",
-        "portrait": "./assets/krumme-kanne/portraits/llinos.png",
-        "emotes": [],
-        "emotesOverride": false,
-        "imageSetSchemaVersion": 0,
-        "imageSets": [],
-        "activeImageSetId": "",
-        "imageSetsOverride": false,
-        "inventory": null,
-        "biography": null,
-        "identity": {
-          "worldPersonId": "person--krumme-kanne--llinos"
-        },
-        "genealogy": {
-          "worldPersonId": "person--krumme-kanne--llinos",
-          "sex": "female",
-          "status": "alive",
-          "birth": "1719",
-          "death": "",
-          "houseId": "",
-          "houseName": "",
-          "familyRole": "",
-          "portraitPlaceholder": "",
-          "tags": [],
-          "sources": [],
-          "relationships": {
-            "parents": [],
-            "partners": [],
-            "children": []
-          }
-        }
-      }
+      "create": false,
+      "patch": null
     },
     {
       "id": "person--krumme-kanne--nestwen-trevoryn-kanne",
       "key": "nestwen",
       "group": "Trevoryn",
-      "create": true,
-      "data": {
-        "name": "Nestwen Trevoryn",
-        "title": "Wäschehüterin · Flickstube",
-        "fraktion": "Die Krumme Kanne",
-        "role": "Wäschehüterin · Flickstube",
-        "status": "active",
-        "relevance": "minor",
-        "taxonomyPath": "Cenyr > Celtigerns Wacht > Gwynthor > Bürgerliche",
-        "currentLocation": "Gwynthor · Die Krumme Kanne",
-        "origin": "Cenyri",
-        "plotNode": "",
-        "profileLink": "",
-        "playerOwner": "",
-        "bio": "Nestwen flickt am hellen Fenster Wäsche und hütet die Geschichten der Familie. Seit Merrik aus dem Krieg heimkehrte, hebt sie immer einen Teller mehr auf. Hrolf unterbricht sie bedenkenlos, wenn wieder ein Knopf an seinem Rock hängt.",
-        "aliases": [],
-        "archived": false,
-        "createdAt": "2026-10-14T17:08:06.479Z",
-        "updatedAt": "2026-10-14T17:08:06.479Z",
-        "portrait": "./assets/krumme-kanne/portraits/nestwen.png",
-        "emotes": [],
-        "emotesOverride": false,
-        "imageSetSchemaVersion": 0,
-        "imageSets": [],
-        "activeImageSetId": "",
-        "imageSetsOverride": false,
-        "inventory": null,
-        "biography": null,
-        "identity": {
-          "worldPersonId": "person--krumme-kanne--nestwen-trevoryn-kanne"
-        },
-        "genealogy": {
-          "worldPersonId": "person--krumme-kanne--nestwen-trevoryn-kanne",
-          "sex": "female",
-          "status": "alive",
-          "birth": "1672",
-          "death": "",
-          "houseId": "house-trevoryn",
-          "houseName": "Haus Trevoryn",
-          "familyRole": "married",
-          "portraitPlaceholder": "auto",
-          "tags": [],
-          "sources": [
-            {
-              "familyId": "haus-trevoryn",
-              "personId": "nestwen-trevoryn-kanne",
-              "releaseId": "",
-              "publishedAt": "",
-              "importedAt": "2026-10-14T17:08:06.479Z",
-              "lastSyncedAt": "2026-10-14T17:08:06.479Z",
-              "url": "../Stammbäume/Stammbaum.html?family=haus-trevoryn&mode=view&person=nestwen-trevoryn-kanne",
-              "fingerprint": "{\"name\":\"Nestwen Trevoryn\",\"title\":\"Wäschehüterin · Flickstube\",\"birth\":\"1672\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-trevoryn\",\"portrait\":\"../AleriaAlmanach/assets/krumme-kanne/portraits/nestwen.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"vater-trevoryn-kanne\",\"type\":\"marriage\",\"status\":\"ended\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-trevoryn--vater-trevoryn-kanne\",\"name\":\"Unbekannter Vater\"}],\"children\":[{\"personId\":\"merrik-trevoryn-kanne\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--krumme-kanne--merrik-trevoryn-kanne\",\"name\":\"Merrik Trevoryn\"},{\"personId\":\"eirian-trevoryn-kanne\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--krumme-kanne--eirian-trevoryn-kanne\",\"name\":\"Eirian Trevoryn\"},{\"personId\":\"elidyr-trevoryn-kanne\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--krumme-kanne--elidyr-trevoryn-kanne\",\"name\":\"Elidyr Trevoryn\"}]}}"
-            }
-          ],
-          "relationships": {
-            "parents": [],
-            "partners": [
-              {
-                "personId": "vater-trevoryn-kanne",
-                "type": "marriage",
-                "status": "ended",
-                "certainty": "confirmed",
-                "worldPersonId": "person--haus-trevoryn--vater-trevoryn-kanne",
-                "name": "Unbekannter Vater"
-              }
-            ],
-            "children": [
-              {
-                "personId": "merrik-trevoryn-kanne",
-                "type": "biological",
-                "legitimacy": "legitimate",
-                "certainty": "confirmed",
-                "worldPersonId": "person--krumme-kanne--merrik-trevoryn-kanne",
-                "name": "Merrik Trevoryn"
-              },
-              {
-                "personId": "eirian-trevoryn-kanne",
-                "type": "biological",
-                "legitimacy": "legitimate",
-                "certainty": "confirmed",
-                "worldPersonId": "person--krumme-kanne--eirian-trevoryn-kanne",
-                "name": "Eirian Trevoryn"
-              },
-              {
-                "personId": "elidyr-trevoryn-kanne",
-                "type": "biological",
-                "legitimacy": "legitimate",
-                "certainty": "confirmed",
-                "worldPersonId": "person--krumme-kanne--elidyr-trevoryn-kanne",
-                "name": "Elidyr Trevoryn"
-              }
-            ]
-          }
-        }
-      }
+      "create": false,
+      "patch": null
     },
     {
       "id": "person--krumme-kanne--heilyn",
       "key": "heilyn",
       "group": "Angestellte",
-      "create": true,
-      "data": {
-        "name": "Heilyn",
-        "title": "Hausbursche · Holz, Wasser & Botengänge",
-        "fraktion": "Die Krumme Kanne",
-        "role": "Hausbursche · Holz, Wasser & Botengänge",
-        "status": "active",
-        "relevance": "minor",
-        "taxonomyPath": "",
-        "currentLocation": "Gwynthor · Die Krumme Kanne",
-        "origin": "Cenyri",
-        "plotNode": "",
-        "profileLink": "",
-        "playerOwner": "",
-        "bio": "Heilyn trägt Holz, Wasser und alles, wofür gerade eine Hand fehlt. Er ist noch unentschlossen, welches Handwerk er lernen möchte. Einen Teil seines Lohns bringt er jede Woche seiner kranken Tante.",
-        "aliases": [],
-        "archived": false,
-        "createdAt": "2026-10-14T17:08:06.479Z",
-        "updatedAt": "2026-10-14T17:08:06.479Z",
-        "portrait": "./assets/krumme-kanne/portraits/heilyn.png",
-        "emotes": [],
-        "emotesOverride": false,
-        "imageSetSchemaVersion": 0,
-        "imageSets": [],
-        "activeImageSetId": "",
-        "imageSetsOverride": false,
-        "inventory": null,
-        "biography": null,
-        "identity": {
-          "worldPersonId": "person--krumme-kanne--heilyn"
-        },
-        "genealogy": {
-          "worldPersonId": "person--krumme-kanne--heilyn",
-          "sex": "male",
-          "status": "alive",
-          "birth": "1722",
-          "death": "",
-          "houseId": "",
-          "houseName": "",
-          "familyRole": "",
-          "portraitPlaceholder": "",
-          "tags": [],
-          "sources": [],
-          "relationships": {
-            "parents": [],
-            "partners": [],
-            "children": []
-          }
-        }
-      }
+      "create": false,
+      "patch": null
     },
     {
       "id": "person--krumme-kanne--tadhg",
       "key": "tadhg",
       "group": "Angestellte",
-      "create": true,
-      "data": {
-        "name": "Tadhg",
-        "title": "Meisterkoch · Herd & Speisekarte",
-        "fraktion": "Die Krumme Kanne",
-        "role": "Meisterkoch · Herd & Speisekarte",
-        "status": "active",
-        "relevance": "minor",
-        "taxonomyPath": "",
-        "currentLocation": "Gwynthor · Die Krumme Kanne",
-        "origin": "Albe · Leitheach",
-        "plotNode": "",
-        "profileLink": "",
-        "playerOwner": "",
-        "bio": "Tadhg verbindet Leitheacher Kräuter mit nordischem Rauch und cenyrischen Eintöpfen. Seine beiden Gehilfen erkennen am Schimpfen, ob Salz oder Feuer fehlt. Am Bratspieß duldet er keine Zuschauer, auch keine Wirte.",
-        "aliases": [],
-        "archived": false,
-        "createdAt": "2026-10-14T17:08:06.479Z",
-        "updatedAt": "2026-10-14T17:08:06.479Z",
-        "portrait": "./assets/krumme-kanne/portraits/tadhg.png",
-        "emotes": [],
-        "emotesOverride": false,
-        "imageSetSchemaVersion": 0,
-        "imageSets": [],
-        "activeImageSetId": "",
-        "imageSetsOverride": false,
-        "inventory": null,
-        "biography": null,
-        "identity": {
-          "worldPersonId": "person--krumme-kanne--tadhg"
-        },
-        "genealogy": {
-          "worldPersonId": "person--krumme-kanne--tadhg",
-          "sex": "male",
-          "status": "alive",
-          "birth": "1692",
-          "death": "",
-          "houseId": "",
-          "houseName": "",
-          "familyRole": "",
-          "portraitPlaceholder": "",
-          "tags": [],
-          "sources": [],
-          "relationships": {
-            "parents": [],
-            "partners": [],
-            "children": []
-          }
-        }
-      }
+      "create": false,
+      "patch": null
     },
     {
       "id": "person--krumme-kanne--alaw",
       "key": "alaw",
       "group": "Angestellte",
-      "create": true,
-      "data": {
-        "name": "Alaw",
-        "title": "Kochgehilfin · Brühen, Gemüse & Brot",
-        "fraktion": "Die Krumme Kanne",
-        "role": "Kochgehilfin · Brühen, Gemüse & Brot",
-        "status": "active",
-        "relevance": "minor",
-        "taxonomyPath": "",
-        "currentLocation": "Gwynthor · Die Krumme Kanne",
-        "origin": "Cenyri",
-        "plotNode": "",
-        "profileLink": "",
-        "playerOwner": "",
-        "bio": "Alaw hütet Suppentopf und Fladenpfanne. Neue Kräutermischungen probiert sie auf Brotresten und hält gelungene Versuche auf alten Lieferscheinen fest. Tadhgs Schimpfen übersetzt sie meist richtig in Salzbedarf.",
-        "aliases": [],
-        "archived": false,
-        "createdAt": "2026-10-14T17:08:06.479Z",
-        "updatedAt": "2026-10-14T17:08:06.479Z",
-        "portrait": "./assets/krumme-kanne/portraits/alaw.png",
-        "emotes": [],
-        "emotesOverride": false,
-        "imageSetSchemaVersion": 0,
-        "imageSets": [],
-        "activeImageSetId": "",
-        "imageSetsOverride": false,
-        "inventory": null,
-        "biography": null,
-        "identity": {
-          "worldPersonId": "person--krumme-kanne--alaw"
-        },
-        "genealogy": {
-          "worldPersonId": "person--krumme-kanne--alaw",
-          "sex": "female",
-          "status": "alive",
-          "birth": "1716",
-          "death": "",
-          "houseId": "",
-          "houseName": "",
-          "familyRole": "",
-          "portraitPlaceholder": "",
-          "tags": [],
-          "sources": [],
-          "relationships": {
-            "parents": [],
-            "partners": [],
-            "children": []
-          }
-        }
-      }
+      "create": false,
+      "patch": null
     },
     {
       "id": "person--krumme-kanne--iorath",
       "key": "iorath",
       "group": "Angestellte",
-      "create": true,
-      "data": {
-        "name": "Iorath",
-        "title": "Kochgehilfe · Bratfeuer & Spülbank",
-        "fraktion": "Die Krumme Kanne",
-        "role": "Kochgehilfe · Bratfeuer & Spülbank",
-        "status": "active",
-        "relevance": "minor",
-        "taxonomyPath": "",
-        "currentLocation": "Gwynthor · Die Krumme Kanne",
-        "origin": "Cenyri",
-        "plotNode": "",
-        "profileLink": "",
-        "playerOwner": "",
-        "bio": "Iorath hält die Glut am Leben und die Spülbank frei. Er träumt von einem eigenen Gericht auf der Karte. Bis dahin erklärt er jeden angebrannten Rand zu einer nordischen Spezialität.",
-        "aliases": [],
-        "archived": false,
-        "createdAt": "2026-10-14T17:08:06.479Z",
-        "updatedAt": "2026-10-14T17:08:06.479Z",
-        "portrait": "./assets/krumme-kanne/portraits/iorath.png",
-        "emotes": [],
-        "emotesOverride": false,
-        "imageSetSchemaVersion": 0,
-        "imageSets": [],
-        "activeImageSetId": "",
-        "imageSetsOverride": false,
-        "inventory": null,
-        "biography": null,
-        "identity": {
-          "worldPersonId": "person--krumme-kanne--iorath"
-        },
-        "genealogy": {
-          "worldPersonId": "person--krumme-kanne--iorath",
-          "sex": "male",
-          "status": "alive",
-          "birth": "1721",
-          "death": "",
-          "houseId": "",
-          "houseName": "",
-          "familyRole": "",
-          "portraitPlaceholder": "",
-          "tags": [],
-          "sources": [],
-          "relationships": {
-            "parents": [],
-            "partners": [],
-            "children": []
-          }
-        }
-      }
+      "create": false,
+      "patch": null
     },
     {
       "id": "person--krumme-kanne--ketil-svathamar-kanne",
       "key": "ketil",
       "group": "Svathamar",
-      "create": true,
-      "data": {
-        "name": "Ketil Svathamar",
-        "title": "Wachführer · Tür & Nachtwache",
-        "fraktion": "Die Krumme Kanne",
-        "role": "Wachführer · Tür & Nachtwache",
-        "status": "active",
-        "relevance": "minor",
-        "taxonomyPath": "Cenyr > Celtigerns Wacht > Gwynthor > Bürgerliche",
-        "currentLocation": "Gwynthor · Die Krumme Kanne",
-        "origin": "Aldrimarer · Rorikshall",
-        "plotNode": "",
-        "profileLink": "",
-        "playerOwner": "",
-        "bio": "Ketil führt die Hauswache und geht mit Carreg durch den Hof. Er spricht leise und greift spät, dann aber entschlossen ein. Schreckt ein alter Soldat aus dem Schlaf, holt er zuerst einen Stuhl.",
-        "aliases": [],
-        "archived": false,
-        "createdAt": "2026-10-14T17:08:06.479Z",
-        "updatedAt": "2026-10-14T17:08:06.479Z",
-        "portrait": "./assets/krumme-kanne/portraits/ketil.png",
-        "emotes": [],
-        "emotesOverride": false,
-        "imageSetSchemaVersion": 0,
-        "imageSets": [],
-        "activeImageSetId": "",
-        "imageSetsOverride": false,
-        "inventory": null,
-        "biography": null,
-        "identity": {
-          "worldPersonId": "person--krumme-kanne--ketil-svathamar-kanne"
-        },
-        "genealogy": {
-          "worldPersonId": "person--krumme-kanne--ketil-svathamar-kanne",
-          "sex": "male",
-          "status": "alive",
-          "birth": "1702",
-          "death": "",
-          "houseId": "house-svathamar",
-          "houseName": "Haus Svathamar",
-          "familyRole": "core",
-          "portraitPlaceholder": "auto",
-          "tags": [],
-          "sources": [
-            {
-              "familyId": "haus-svathamar",
-              "personId": "ketil-svathamar-kanne",
-              "releaseId": "",
-              "publishedAt": "",
-              "importedAt": "2026-10-14T17:08:06.479Z",
-              "lastSyncedAt": "2026-10-14T17:08:06.479Z",
-              "url": "../Stammbäume/Stammbaum.html?family=haus-svathamar&mode=view&person=ketil-svathamar-kanne",
-              "fingerprint": "{\"name\":\"Ketil Svathamar\",\"title\":\"Wachführer · Tür & Nachtwache\",\"birth\":\"1702\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-svathamar\",\"portrait\":\"../AleriaAlmanach/assets/krumme-kanne/portraits/ketil.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"vater-svathamar-kanne\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-svathamar--vater-svathamar-kanne\",\"name\":\"Unbekannter Vater\"},{\"personId\":\"mutter-svathamar-kanne\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-svathamar--mutter-svathamar-kanne\",\"name\":\"Unbekannte Mutter\"}],\"partners\":[],\"children\":[]}}"
-            }
-          ],
-          "relationships": {
-            "parents": [
-              {
-                "personId": "vater-svathamar-kanne",
-                "type": "biological",
-                "legitimacy": "legitimate",
-                "certainty": "confirmed",
-                "worldPersonId": "person--haus-svathamar--vater-svathamar-kanne",
-                "name": "Unbekannter Vater"
-              },
-              {
-                "personId": "mutter-svathamar-kanne",
-                "type": "biological",
-                "legitimacy": "legitimate",
-                "certainty": "confirmed",
-                "worldPersonId": "person--haus-svathamar--mutter-svathamar-kanne",
-                "name": "Unbekannte Mutter"
-              }
-            ],
-            "partners": [],
-            "children": []
-          }
-        }
-      }
+      "create": false,
+      "patch": null
     },
     {
       "id": "person--krumme-kanne--gwern",
       "key": "gwern",
       "group": "Angestellte",
-      "create": true,
-      "data": {
-        "name": "Gwern",
-        "title": "Türwächter · Frühe Schicht",
-        "fraktion": "Die Krumme Kanne",
-        "role": "Türwächter · Frühe Schicht",
-        "status": "active",
-        "relevance": "minor",
-        "taxonomyPath": "",
-        "currentLocation": "Gwynthor · Die Krumme Kanne",
-        "origin": "Cenyri",
-        "plotNode": "",
-        "profileLink": "",
-        "playerOwner": "",
-        "bio": "Gwern behält den Eingang im Blick und begleitet Raufbolde bis zur Gasse. Die Hände des ehemaligen Hafenarbeiters wirken bedrohlicher als seine Stimme. In ruhigen Stunden schnitzt er winzige Tiere aus Holz.",
-        "aliases": [],
-        "archived": false,
-        "createdAt": "2026-10-14T17:08:06.479Z",
-        "updatedAt": "2026-10-14T17:08:06.479Z",
-        "portrait": "./assets/krumme-kanne/portraits/gwern.png",
-        "emotes": [],
-        "emotesOverride": false,
-        "imageSetSchemaVersion": 0,
-        "imageSets": [],
-        "activeImageSetId": "",
-        "imageSetsOverride": false,
-        "inventory": null,
-        "biography": null,
-        "identity": {
-          "worldPersonId": "person--krumme-kanne--gwern"
-        },
-        "genealogy": {
-          "worldPersonId": "person--krumme-kanne--gwern",
-          "sex": "male",
-          "status": "alive",
-          "birth": "1708",
-          "death": "",
-          "houseId": "",
-          "houseName": "",
-          "familyRole": "",
-          "portraitPlaceholder": "",
-          "tags": [],
-          "sources": [],
-          "relationships": {
-            "parents": [],
-            "partners": [],
-            "children": []
-          }
-        }
-      }
+      "create": false,
+      "patch": null
     },
     {
       "id": "person--krumme-kanne--rhunel",
       "key": "rhunel",
       "group": "Angestellte",
-      "create": true,
-      "data": {
-        "name": "Rhunel",
-        "title": "Nachtwächter · Hof & Hintertür",
-        "fraktion": "Die Krumme Kanne",
-        "role": "Nachtwächter · Hof & Hintertür",
-        "status": "active",
-        "relevance": "minor",
-        "taxonomyPath": "",
-        "currentLocation": "Gwynthor · Die Krumme Kanne",
-        "origin": "Cenyri",
-        "plotNode": "",
-        "profileLink": "",
-        "playerOwner": "",
-        "bio": "Rhunel bewacht Lieferhof und Hintertür. Ungewohnte Geräusche hört er sofort; seinen eigenen Becher sucht er dagegen ständig. Meldet Carreg etwas, schaut er selbst nach.",
-        "aliases": [],
-        "archived": false,
-        "createdAt": "2026-10-14T17:08:06.479Z",
-        "updatedAt": "2026-10-14T17:08:06.479Z",
-        "portrait": "./assets/krumme-kanne/portraits/rhunel.png",
-        "emotes": [],
-        "emotesOverride": false,
-        "imageSetSchemaVersion": 0,
-        "imageSets": [],
-        "activeImageSetId": "",
-        "imageSetsOverride": false,
-        "inventory": null,
-        "biography": null,
-        "identity": {
-          "worldPersonId": "person--krumme-kanne--rhunel"
-        },
-        "genealogy": {
-          "worldPersonId": "person--krumme-kanne--rhunel",
-          "sex": "male",
-          "status": "alive",
-          "birth": "1711",
-          "death": "",
-          "houseId": "",
-          "houseName": "",
-          "familyRole": "",
-          "portraitPlaceholder": "",
-          "tags": [],
-          "sources": [],
-          "relationships": {
-            "parents": [],
-            "partners": [],
-            "children": []
-          }
-        }
-      }
+      "create": false,
+      "patch": null
     },
     {
       "id": "person--krumme-kanne--styr-svathamar-kanne",
       "key": "styr",
       "group": "Svathamar",
-      "create": true,
-      "data": {
-        "name": "Styr Svathamar",
-        "title": "Schanklehrling",
-        "fraktion": "Die Krumme Kanne",
-        "role": "Schanklehrling",
-        "status": "active",
-        "relevance": "minor",
-        "taxonomyPath": "Cenyr > Celtigerns Wacht > Gwynthor > Bürgerliche",
-        "currentLocation": "Gwynthor · Die Krumme Kanne",
-        "origin": "Aldrimarisch-cenyrische Familie",
-        "plotNode": "",
-        "profileLink": "",
-        "playerOwner": "",
-        "bio": "Styr lernt bei Elidyr Bestellungen und das Rechnen am Tresen. Er möchte längst so gelassen wirken wie sein Vater. Meist verrät ihn das eine Tablett, das er sich zu viel aufgeladen hat.",
-        "aliases": [],
-        "archived": false,
-        "createdAt": "2026-10-14T17:08:06.479Z",
-        "updatedAt": "2026-10-14T17:08:06.479Z",
-        "portrait": "./assets/krumme-kanne/portraits/styr.png",
-        "emotes": [],
-        "emotesOverride": false,
-        "imageSetSchemaVersion": 0,
-        "imageSets": [],
-        "activeImageSetId": "",
-        "imageSetsOverride": false,
-        "inventory": null,
-        "biography": null,
-        "identity": {
-          "worldPersonId": "person--krumme-kanne--styr-svathamar-kanne"
-        },
+      "create": false,
+      "patch": {
         "genealogy": {
-          "worldPersonId": "person--krumme-kanne--styr-svathamar-kanne",
-          "sex": "male",
-          "status": "alive",
-          "birth": "1725",
-          "death": "",
-          "houseId": "house-svathamar",
-          "houseName": "Haus Svathamar",
-          "familyRole": "core",
-          "portraitPlaceholder": "auto",
-          "tags": [],
           "sources": [
             {
-              "familyId": "haus-trevoryn",
-              "personId": "styr-svathamar-kanne",
-              "releaseId": "",
               "publishedAt": "",
               "importedAt": "2026-10-14T17:08:06.479Z",
-              "lastSyncedAt": "2026-10-14T17:08:06.479Z",
-              "url": "../Stammbäume/Stammbaum.html?family=haus-trevoryn&mode=view&person=styr-svathamar-kanne",
-              "fingerprint": "{\"name\":\"Styr Svathamar\",\"title\":\"Schanklehrling\",\"birth\":\"1725\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-svathamar\",\"portrait\":\"../AleriaAlmanach/assets/krumme-kanne/portraits/styr.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"hrolf-svathamar-kanne\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--krumme-kanne--hrolf-svathamar-kanne\",\"name\":\"Hrolf Svathamar\"},{\"personId\":\"eirian-trevoryn-kanne\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--krumme-kanne--eirian-trevoryn-kanne\",\"name\":\"Eirian Trevoryn\"}],\"partners\":[],\"children\":[]}}"
-            },
-            {
-              "familyId": "haus-svathamar",
-              "personId": "styr-svathamar-kanne",
-              "releaseId": "",
-              "publishedAt": "",
-              "importedAt": "2026-10-14T17:08:06.479Z",
-              "lastSyncedAt": "2026-10-14T17:08:06.479Z",
               "url": "../Stammbäume/Stammbaum.html?family=haus-svathamar&mode=view&person=styr-svathamar-kanne",
-              "fingerprint": "{\"name\":\"Styr Svathamar\",\"title\":\"Schanklehrling\",\"birth\":\"1725\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-svathamar\",\"portrait\":\"../AleriaAlmanach/assets/krumme-kanne/portraits/styr.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"hrolf-svathamar-kanne\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--krumme-kanne--hrolf-svathamar-kanne\",\"name\":\"Hrolf Svathamar\"},{\"personId\":\"eirian-trevoryn-kanne\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--krumme-kanne--eirian-trevoryn-kanne\",\"name\":\"Eirian Trevoryn\"}],\"partners\":[],\"children\":[]}}"
+              "fingerprint": "{\"name\":\"Styr Svathamar\",\"title\":\"Schanklehrling\",\"birth\":\"1725\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-svathamar\",\"portrait\":\"../AleriaAlmanach/assets/krumme-kanne/portraits/styr.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"hrolf-svathamar-kanne\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--krumme-kanne--hrolf-svathamar-kanne\",\"name\":\"Hrolf Svathamar\"},{\"personId\":\"eirian-trevoryn-kanne\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--krumme-kanne--eirian-trevoryn-kanne\",\"name\":\"Eirian Trevoryn\"}],\"partners\":[],\"children\":[]}}",
+              "familyId": "haus-svathamar",
+              "releaseId": "",
+              "lastSyncedAt": "2026-10-14T17:08:06.479Z",
+              "personId": "styr-svathamar-kanne"
             }
-          ],
-          "relationships": {
-            "parents": [
-              {
-                "personId": "hrolf-svathamar-kanne",
-                "type": "biological",
-                "legitimacy": "legitimate",
-                "certainty": "confirmed",
-                "worldPersonId": "person--krumme-kanne--hrolf-svathamar-kanne",
-                "name": "Hrolf Svathamar"
-              },
-              {
-                "personId": "eirian-trevoryn-kanne",
-                "type": "biological",
-                "legitimacy": "legitimate",
-                "certainty": "confirmed",
-                "worldPersonId": "person--krumme-kanne--eirian-trevoryn-kanne",
-                "name": "Eirian Trevoryn"
-              }
-            ],
-            "partners": [],
-            "children": []
-          }
-        }
+          ]
+        },
+        "updatedAt": "2026-10-16T00:40:34.398Z"
       }
     },
     {
       "id": "person--krumme-kanne--heledd-svathamar-kanne",
       "key": "heledd",
       "group": "Svathamar",
-      "create": true,
-      "data": {
-        "name": "Heledd Svathamar",
-        "title": "Hauskind · Tischblumen",
-        "fraktion": "Die Krumme Kanne",
-        "role": "Hauskind · Tischblumen",
-        "status": "active",
-        "relevance": "minor",
-        "taxonomyPath": "Cenyr > Celtigerns Wacht > Gwynthor > Bürgerliche",
-        "currentLocation": "Gwynthor · Die Krumme Kanne",
-        "origin": "Aldrimarisch-cenyrische Familie",
-        "plotNode": "",
-        "profileLink": "",
-        "playerOwner": "",
-        "bio": "Heledd stellt gern Blumen auf die Tische und lauscht den Geschichten der Veteranen. In ihrem Heft sammelt sie die glaubwürdigsten davon. Hrolfs Berichte schneiden verdächtig gut ab.",
-        "aliases": [],
-        "archived": false,
-        "createdAt": "2026-10-14T17:08:06.479Z",
-        "updatedAt": "2026-10-14T17:08:06.479Z",
-        "portrait": "./assets/krumme-kanne/portraits/heledd.png",
-        "emotes": [],
-        "emotesOverride": false,
-        "imageSetSchemaVersion": 0,
-        "imageSets": [],
-        "activeImageSetId": "",
-        "imageSetsOverride": false,
-        "inventory": null,
-        "biography": null,
-        "identity": {
-          "worldPersonId": "person--krumme-kanne--heledd-svathamar-kanne"
-        },
+      "create": false,
+      "patch": {
         "genealogy": {
-          "worldPersonId": "person--krumme-kanne--heledd-svathamar-kanne",
-          "sex": "female",
-          "status": "alive",
-          "birth": "1730",
-          "death": "",
-          "houseId": "house-svathamar",
-          "houseName": "Haus Svathamar",
-          "familyRole": "core",
-          "portraitPlaceholder": "auto",
-          "tags": [],
           "sources": [
             {
-              "familyId": "haus-trevoryn",
-              "personId": "heledd-svathamar-kanne",
-              "releaseId": "",
-              "publishedAt": "",
-              "importedAt": "2026-10-14T17:08:06.479Z",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-svathamar&mode=view&person=heledd-svathamar-kanne",
               "lastSyncedAt": "2026-10-14T17:08:06.479Z",
-              "url": "../Stammbäume/Stammbaum.html?family=haus-trevoryn&mode=view&person=heledd-svathamar-kanne",
-              "fingerprint": "{\"name\":\"Heledd Svathamar\",\"title\":\"Hauskind · Tischblumen\",\"birth\":\"1730\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-svathamar\",\"portrait\":\"../AleriaAlmanach/assets/krumme-kanne/portraits/heledd.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"hrolf-svathamar-kanne\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--krumme-kanne--hrolf-svathamar-kanne\",\"name\":\"Hrolf Svathamar\"},{\"personId\":\"eirian-trevoryn-kanne\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--krumme-kanne--eirian-trevoryn-kanne\",\"name\":\"Eirian Trevoryn\"}],\"partners\":[],\"children\":[]}}"
-            },
-            {
               "familyId": "haus-svathamar",
               "personId": "heledd-svathamar-kanne",
               "releaseId": "",
+              "fingerprint": "{\"name\":\"Heledd Svathamar\",\"title\":\"Hauskind · Tischblumen\",\"birth\":\"1730\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-svathamar\",\"portrait\":\"../AleriaAlmanach/assets/krumme-kanne/portraits/heledd.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"hrolf-svathamar-kanne\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--krumme-kanne--hrolf-svathamar-kanne\",\"name\":\"Hrolf Svathamar\"},{\"personId\":\"eirian-trevoryn-kanne\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--krumme-kanne--eirian-trevoryn-kanne\",\"name\":\"Eirian Trevoryn\"}],\"partners\":[],\"children\":[]}}",
               "publishedAt": "",
-              "importedAt": "2026-10-14T17:08:06.479Z",
-              "lastSyncedAt": "2026-10-14T17:08:06.479Z",
-              "url": "../Stammbäume/Stammbaum.html?family=haus-svathamar&mode=view&person=heledd-svathamar-kanne",
-              "fingerprint": "{\"name\":\"Heledd Svathamar\",\"title\":\"Hauskind · Tischblumen\",\"birth\":\"1730\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-svathamar\",\"portrait\":\"../AleriaAlmanach/assets/krumme-kanne/portraits/heledd.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"hrolf-svathamar-kanne\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--krumme-kanne--hrolf-svathamar-kanne\",\"name\":\"Hrolf Svathamar\"},{\"personId\":\"eirian-trevoryn-kanne\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--krumme-kanne--eirian-trevoryn-kanne\",\"name\":\"Eirian Trevoryn\"}],\"partners\":[],\"children\":[]}}"
+              "importedAt": "2026-10-14T17:08:06.479Z"
             }
-          ],
-          "relationships": {
-            "parents": [
-              {
-                "personId": "hrolf-svathamar-kanne",
-                "type": "biological",
-                "legitimacy": "legitimate",
-                "certainty": "confirmed",
-                "worldPersonId": "person--krumme-kanne--hrolf-svathamar-kanne",
-                "name": "Hrolf Svathamar"
-              },
-              {
-                "personId": "eirian-trevoryn-kanne",
-                "type": "biological",
-                "legitimacy": "legitimate",
-                "certainty": "confirmed",
-                "worldPersonId": "person--krumme-kanne--eirian-trevoryn-kanne",
-                "name": "Eirian Trevoryn"
-              }
-            ],
-            "partners": [],
-            "children": []
-          }
-        }
+          ]
+        },
+        "updatedAt": "2026-10-16T00:40:34.398Z"
       }
     },
     {
       "id": "person--krumme-kanne--neifion-dubhdarach-kanne",
       "key": "neifion",
       "group": "Dubhdarach",
-      "create": true,
-      "data": {
-        "name": "Neifion Dubhdarach",
-        "title": "Schreiberlehrling",
-        "fraktion": "Die Krumme Kanne",
-        "role": "Schreiberlehrling",
-        "status": "active",
-        "relevance": "minor",
-        "taxonomyPath": "Cenyr > Celtigerns Wacht > Gwynthor > Bürgerliche",
-        "currentLocation": "Gwynthor · Die Krumme Kanne",
-        "origin": "Albisch-cenyrische Familie",
-        "plotNode": "",
-        "profileLink": "",
-        "playerOwner": "",
-        "bio": "Neifion übt bei Mair Lieferlisten und Rechnungen. Hinter seinem braven Blick stecken bissige kleine Beschreibungen der Stammgäste. Er nennt sie Schreibübungen und hält sie lieber unter Verschluss.",
-        "aliases": [],
-        "archived": false,
-        "createdAt": "2026-10-14T17:08:06.479Z",
-        "updatedAt": "2026-10-14T17:08:06.479Z",
-        "portrait": "./assets/krumme-kanne/portraits/neifion.png",
-        "emotes": [],
-        "emotesOverride": false,
-        "imageSetSchemaVersion": 0,
-        "imageSets": [],
-        "activeImageSetId": "",
-        "imageSetsOverride": false,
-        "inventory": null,
-        "biography": null,
-        "identity": {
-          "worldPersonId": "person--krumme-kanne--neifion-dubhdarach-kanne"
-        },
+      "create": false,
+      "patch": {
         "genealogy": {
-          "worldPersonId": "person--krumme-kanne--neifion-dubhdarach-kanne",
-          "sex": "male",
-          "status": "alive",
-          "birth": "1726",
-          "death": "",
-          "houseId": "house-dubhdarach",
-          "houseName": "Haus Dubhdarach",
-          "familyRole": "core",
-          "portraitPlaceholder": "auto",
-          "tags": [],
           "sources": [
             {
+              "url": "../Stammbäume/Stammbaum.html?family=haus-dubhdarach&mode=view&person=neifion-dubhdarach-kanne",
               "familyId": "haus-dubhdarach",
               "personId": "neifion-dubhdarach-kanne",
+              "fingerprint": "{\"name\":\"Neifion Dubhdarach\",\"title\":\"Schreiberlehrling\",\"birth\":\"1726\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-dubhdarach\",\"portrait\":\"../AleriaAlmanach/assets/krumme-kanne/portraits/neifion.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"aedan-dubhdarach-kanne\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--krumme-kanne--aedan-dubhdarach-kanne\",\"name\":\"Aedan Dubhdarach\"},{\"personId\":\"mair-affair-tonnarth\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--mair-affair-tonnarth\",\"name\":\"Mair\"}],\"partners\":[],\"children\":[]}}",
               "releaseId": "",
-              "publishedAt": "",
-              "importedAt": "2026-10-14T17:08:06.479Z",
               "lastSyncedAt": "2026-10-14T17:08:06.479Z",
-              "url": "../Stammbäume/Stammbaum.html?family=haus-dubhdarach&mode=view&person=neifion-dubhdarach-kanne",
-              "fingerprint": "{\"name\":\"Neifion Dubhdarach\",\"title\":\"Schreiberlehrling\",\"birth\":\"1726\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-dubhdarach\",\"portrait\":\"../AleriaAlmanach/assets/krumme-kanne/portraits/neifion.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"aedan-dubhdarach-kanne\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--krumme-kanne--aedan-dubhdarach-kanne\",\"name\":\"Aedan Dubhdarach\"},{\"personId\":\"mair-affair-tonnarth\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--mair-affair-tonnarth\",\"name\":\"Mair\"}],\"partners\":[],\"children\":[]}}"
-            },
-            {
-              "familyId": "haus-tonnarth",
-              "personId": "neifion-dubhdarach-kanne",
-              "releaseId": "",
               "publishedAt": "",
-              "importedAt": "2026-10-14T17:08:06.479Z",
-              "lastSyncedAt": "2026-10-14T17:08:06.479Z",
-              "url": "../Stammbäume/Stammbaum.html?family=haus-tonnarth&mode=view&person=neifion-dubhdarach-kanne",
-              "fingerprint": "{\"name\":\"Neifion Dubhdarach\",\"title\":\"Schreiberlehrling\",\"birth\":\"1726\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-dubhdarach\",\"portrait\":\"../AleriaAlmanach/assets/krumme-kanne/portraits/neifion.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"aedan-dubhdarach-kanne\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--krumme-kanne--aedan-dubhdarach-kanne\",\"name\":\"Aedan Dubhdarach\"},{\"personId\":\"mair-affair-tonnarth\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--mair-affair-tonnarth\",\"name\":\"Mair\"}],\"partners\":[],\"children\":[]}}"
+              "importedAt": "2026-10-14T17:08:06.479Z"
             }
-          ],
-          "relationships": {
-            "parents": [
-              {
-                "personId": "aedan-dubhdarach-kanne",
-                "type": "biological",
-                "legitimacy": "legitimate",
-                "certainty": "confirmed",
-                "worldPersonId": "person--krumme-kanne--aedan-dubhdarach-kanne",
-                "name": "Aedan Dubhdarach"
-              },
-              {
-                "personId": "mair-affair-tonnarth",
-                "type": "biological",
-                "legitimacy": "legitimate",
-                "certainty": "confirmed",
-                "worldPersonId": "person--family-tree--mair-affair-tonnarth",
-                "name": "Mair"
-              }
-            ],
-            "partners": [],
-            "children": []
-          }
-        }
+          ]
+        },
+        "updatedAt": "2026-10-16T00:40:34.398Z"
       }
     },
     {
       "id": "person--krumme-kanne--eirlys-dubhdarach-kanne",
       "key": "eirlys",
       "group": "Dubhdarach",
-      "create": true,
-      "data": {
-        "name": "Eirlys Dubhdarach",
-        "title": "Hauskind · Geschichtenhörerin",
-        "fraktion": "Die Krumme Kanne",
-        "role": "Hauskind · Geschichtenhörerin",
-        "status": "active",
-        "relevance": "minor",
-        "taxonomyPath": "Cenyr > Celtigerns Wacht > Gwynthor > Bürgerliche",
-        "currentLocation": "Gwynthor · Die Krumme Kanne",
-        "origin": "Albisch-cenyrische Familie",
-        "plotNode": "",
-        "profileLink": "",
-        "playerOwner": "",
-        "bio": "Eirlys faltet aus Nestwens Servietten lieber Boote als ordentliche Rechtecke. Die Veteranen fragt sie nach ihren Pferden und dem Essen im Lager. Ihre Schlachtensiege findet sie deutlich weniger interessant.",
-        "aliases": [],
-        "archived": false,
-        "createdAt": "2026-10-14T17:08:06.479Z",
-        "updatedAt": "2026-10-14T17:08:06.479Z",
-        "portrait": "./assets/krumme-kanne/portraits/eirlys.png",
-        "emotes": [],
-        "emotesOverride": false,
-        "imageSetSchemaVersion": 0,
-        "imageSets": [],
-        "activeImageSetId": "",
-        "imageSetsOverride": false,
-        "inventory": null,
-        "biography": null,
-        "identity": {
-          "worldPersonId": "person--krumme-kanne--eirlys-dubhdarach-kanne"
-        },
+      "create": false,
+      "patch": {
         "genealogy": {
-          "worldPersonId": "person--krumme-kanne--eirlys-dubhdarach-kanne",
-          "sex": "female",
-          "status": "alive",
-          "birth": "1731",
-          "death": "",
-          "houseId": "house-dubhdarach",
-          "houseName": "Haus Dubhdarach",
-          "familyRole": "core",
-          "portraitPlaceholder": "auto",
-          "tags": [],
           "sources": [
             {
+              "personId": "eirlys-dubhdarach-kanne",
+              "lastSyncedAt": "2026-10-14T17:08:06.479Z",
               "familyId": "haus-dubhdarach",
-              "personId": "eirlys-dubhdarach-kanne",
-              "releaseId": "",
               "publishedAt": "",
-              "importedAt": "2026-10-14T17:08:06.479Z",
-              "lastSyncedAt": "2026-10-14T17:08:06.479Z",
+              "fingerprint": "{\"name\":\"Eirlys Dubhdarach\",\"title\":\"Hauskind · Geschichtenhörerin\",\"birth\":\"1731\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-dubhdarach\",\"portrait\":\"../AleriaAlmanach/assets/krumme-kanne/portraits/eirlys.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"aedan-dubhdarach-kanne\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--krumme-kanne--aedan-dubhdarach-kanne\",\"name\":\"Aedan Dubhdarach\"},{\"personId\":\"mair-affair-tonnarth\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--mair-affair-tonnarth\",\"name\":\"Mair\"}],\"partners\":[],\"children\":[]}}",
+              "releaseId": "",
               "url": "../Stammbäume/Stammbaum.html?family=haus-dubhdarach&mode=view&person=eirlys-dubhdarach-kanne",
-              "fingerprint": "{\"name\":\"Eirlys Dubhdarach\",\"title\":\"Hauskind · Geschichtenhörerin\",\"birth\":\"1731\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-dubhdarach\",\"portrait\":\"../AleriaAlmanach/assets/krumme-kanne/portraits/eirlys.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"aedan-dubhdarach-kanne\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--krumme-kanne--aedan-dubhdarach-kanne\",\"name\":\"Aedan Dubhdarach\"},{\"personId\":\"mair-affair-tonnarth\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--mair-affair-tonnarth\",\"name\":\"Mair\"}],\"partners\":[],\"children\":[]}}"
-            },
-            {
-              "familyId": "haus-tonnarth",
-              "personId": "eirlys-dubhdarach-kanne",
-              "releaseId": "",
-              "publishedAt": "",
-              "importedAt": "2026-10-14T17:08:06.479Z",
-              "lastSyncedAt": "2026-10-14T17:08:06.479Z",
-              "url": "../Stammbäume/Stammbaum.html?family=haus-tonnarth&mode=view&person=eirlys-dubhdarach-kanne",
-              "fingerprint": "{\"name\":\"Eirlys Dubhdarach\",\"title\":\"Hauskind · Geschichtenhörerin\",\"birth\":\"1731\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-dubhdarach\",\"portrait\":\"../AleriaAlmanach/assets/krumme-kanne/portraits/eirlys.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"aedan-dubhdarach-kanne\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--krumme-kanne--aedan-dubhdarach-kanne\",\"name\":\"Aedan Dubhdarach\"},{\"personId\":\"mair-affair-tonnarth\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--mair-affair-tonnarth\",\"name\":\"Mair\"}],\"partners\":[],\"children\":[]}}"
+              "importedAt": "2026-10-14T17:08:06.479Z"
             }
-          ],
-          "relationships": {
-            "parents": [
-              {
-                "personId": "aedan-dubhdarach-kanne",
-                "type": "biological",
-                "legitimacy": "legitimate",
-                "certainty": "confirmed",
-                "worldPersonId": "person--krumme-kanne--aedan-dubhdarach-kanne",
-                "name": "Aedan Dubhdarach"
-              },
-              {
-                "personId": "mair-affair-tonnarth",
-                "type": "biological",
-                "legitimacy": "legitimate",
-                "certainty": "confirmed",
-                "worldPersonId": "person--family-tree--mair-affair-tonnarth",
-                "name": "Mair"
-              }
-            ],
-            "partners": [],
-            "children": []
-          }
-        }
+          ]
+        },
+        "updatedAt": "2026-10-16T00:40:34.398Z"
       }
     },
     {
       "id": "person--krumme-kanne--cadri-trevoryn-kanne",
       "key": "cadri",
       "group": "Trevoryn",
-      "create": true,
-      "data": {
-        "name": "Cadri Trevoryn",
-        "title": "Hauskind · Kleine Werkstatt",
-        "fraktion": "Die Krumme Kanne",
-        "role": "Hauskind · Kleine Werkstatt",
-        "status": "active",
-        "relevance": "minor",
-        "taxonomyPath": "Cenyr > Celtigerns Wacht > Gwynthor > Bürgerliche",
-        "currentLocation": "Gwynthor · Die Krumme Kanne",
-        "origin": "Cenyri",
-        "plotNode": "",
-        "profileLink": "",
-        "playerOwner": "",
-        "bio": "Cadri verbringt freie Nachmittage bei Gorwyst im Hof und baut lieber, als Gäste zu bedienen. Seine neueste Erfindung soll den Kater von den Lieferscheinen fernhalten. Briwsion schläft bereits darauf.",
-        "aliases": [],
-        "archived": false,
-        "createdAt": "2026-10-14T17:08:06.479Z",
-        "updatedAt": "2026-10-14T17:08:06.479Z",
-        "portrait": "./assets/krumme-kanne/portraits/cadri.png",
-        "emotes": [],
-        "emotesOverride": false,
-        "imageSetSchemaVersion": 0,
-        "imageSets": [],
-        "activeImageSetId": "",
-        "imageSetsOverride": false,
-        "inventory": null,
-        "biography": null,
-        "identity": {
-          "worldPersonId": "person--krumme-kanne--cadri-trevoryn-kanne"
-        },
-        "genealogy": {
-          "worldPersonId": "person--krumme-kanne--cadri-trevoryn-kanne",
-          "sex": "male",
-          "status": "alive",
-          "birth": "1728",
-          "death": "",
-          "houseId": "house-trevoryn",
-          "houseName": "Haus Trevoryn",
-          "familyRole": "core",
-          "portraitPlaceholder": "auto",
-          "tags": [],
-          "sources": [
-            {
-              "familyId": "haus-trevoryn",
-              "personId": "cadri-trevoryn-kanne",
-              "releaseId": "",
-              "publishedAt": "",
-              "importedAt": "2026-10-14T17:08:06.479Z",
-              "lastSyncedAt": "2026-10-14T17:08:06.479Z",
-              "url": "../Stammbäume/Stammbaum.html?family=haus-trevoryn&mode=view&person=cadri-trevoryn-kanne",
-              "fingerprint": "{\"name\":\"Cadri Trevoryn\",\"title\":\"Hauskind · Kleine Werkstatt\",\"birth\":\"1728\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-trevoryn\",\"portrait\":\"../AleriaAlmanach/assets/krumme-kanne/portraits/cadri.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"merrik-trevoryn-kanne\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--krumme-kanne--merrik-trevoryn-kanne\",\"name\":\"Merrik Trevoryn\"},{\"personId\":\"celyn-trevoryn-kanne\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--krumme-kanne--celyn-trevoryn-kanne\",\"name\":\"Celyn Trevoryn\"}],\"partners\":[],\"children\":[]}}"
-            }
-          ],
-          "relationships": {
-            "parents": [
-              {
-                "personId": "merrik-trevoryn-kanne",
-                "type": "biological",
-                "legitimacy": "legitimate",
-                "certainty": "confirmed",
-                "worldPersonId": "person--krumme-kanne--merrik-trevoryn-kanne",
-                "name": "Merrik Trevoryn"
-              },
-              {
-                "personId": "celyn-trevoryn-kanne",
-                "type": "biological",
-                "legitimacy": "legitimate",
-                "certainty": "confirmed",
-                "worldPersonId": "person--krumme-kanne--celyn-trevoryn-kanne",
-                "name": "Celyn Trevoryn"
-              }
-            ],
-            "partners": [],
-            "children": []
-          }
-        }
-      }
+      "create": false,
+      "patch": null
     },
     {
       "id": "person--krumme-kanne--enlli-trevoryn-kanne",
       "key": "enlli",
       "group": "Trevoryn",
-      "create": true,
-      "data": {
-        "name": "Enlli Trevoryn",
-        "title": "Hauskind · Katerfreundin",
-        "fraktion": "Die Krumme Kanne",
-        "role": "Hauskind · Katerfreundin",
-        "status": "active",
-        "relevance": "minor",
-        "taxonomyPath": "Cenyr > Celtigerns Wacht > Gwynthor > Bürgerliche",
-        "currentLocation": "Gwynthor · Die Krumme Kanne",
-        "origin": "Cenyri",
-        "plotNode": "",
-        "profileLink": "",
-        "playerOwner": "",
-        "bio": "Enlli hat einen eigenen Hocker in Nestwens Flickstube und hält Briwsion für den wichtigsten Bewohner der Kanne. Abends erzählt sie ihm, welche Gäste freundlich waren. Der Kater hört mit geschlossenen Augen zu.",
-        "aliases": [],
-        "archived": false,
-        "createdAt": "2026-10-14T17:08:06.479Z",
-        "updatedAt": "2026-10-14T17:08:06.479Z",
-        "portrait": "./assets/krumme-kanne/portraits/enlli.png",
-        "emotes": [],
-        "emotesOverride": false,
-        "imageSetSchemaVersion": 0,
-        "imageSets": [],
-        "activeImageSetId": "",
-        "imageSetsOverride": false,
-        "inventory": null,
-        "biography": null,
-        "identity": {
-          "worldPersonId": "person--krumme-kanne--enlli-trevoryn-kanne"
-        },
-        "genealogy": {
-          "worldPersonId": "person--krumme-kanne--enlli-trevoryn-kanne",
-          "sex": "female",
-          "status": "alive",
-          "birth": "1734",
-          "death": "",
-          "houseId": "house-trevoryn",
-          "houseName": "Haus Trevoryn",
-          "familyRole": "core",
-          "portraitPlaceholder": "auto",
-          "tags": [],
-          "sources": [
-            {
-              "familyId": "haus-trevoryn",
-              "personId": "enlli-trevoryn-kanne",
-              "releaseId": "",
-              "publishedAt": "",
-              "importedAt": "2026-10-14T17:08:06.479Z",
-              "lastSyncedAt": "2026-10-14T17:08:06.479Z",
-              "url": "../Stammbäume/Stammbaum.html?family=haus-trevoryn&mode=view&person=enlli-trevoryn-kanne",
-              "fingerprint": "{\"name\":\"Enlli Trevoryn\",\"title\":\"Hauskind · Katerfreundin\",\"birth\":\"1734\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-trevoryn\",\"portrait\":\"../AleriaAlmanach/assets/krumme-kanne/portraits/enlli.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"merrik-trevoryn-kanne\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--krumme-kanne--merrik-trevoryn-kanne\",\"name\":\"Merrik Trevoryn\"},{\"personId\":\"celyn-trevoryn-kanne\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--krumme-kanne--celyn-trevoryn-kanne\",\"name\":\"Celyn Trevoryn\"}],\"partners\":[],\"children\":[]}}"
-            }
-          ],
-          "relationships": {
-            "parents": [
-              {
-                "personId": "merrik-trevoryn-kanne",
-                "type": "biological",
-                "legitimacy": "legitimate",
-                "certainty": "confirmed",
-                "worldPersonId": "person--krumme-kanne--merrik-trevoryn-kanne",
-                "name": "Merrik Trevoryn"
-              },
-              {
-                "personId": "celyn-trevoryn-kanne",
-                "type": "biological",
-                "legitimacy": "legitimate",
-                "certainty": "confirmed",
-                "worldPersonId": "person--krumme-kanne--celyn-trevoryn-kanne",
-                "name": "Celyn Trevoryn"
-              }
-            ],
-            "partners": [],
-            "children": []
-          }
-        }
-      }
+      "create": false,
+      "patch": null
     }
   ]
 }
