@@ -1,0 +1,463 @@
+[
+  {
+    "case": "wife_topic_change",
+    "requested_model": "google/gemma-4-26b-a4b-it",
+    "requested_route": "coreweave/bf16",
+    "error": {
+      "status": 429,
+      "message": "{\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"google/gemma-4-26b-a4b-it is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations\",\"provider_name\":\"CoreWeave\",\"is_byok\":false,\"provider_error_code\":\"rate_limit_exceeded\",\"limit_source\":\"upstream_provider_shared_pool\",\"remedy_hint\":\"Retry shortly, add your own provider key (https://openrouter.ai/settings/integrations), or route to another provider with provider routing: https://openrouter.ai/docs/features/provider-routing\"}},\"user_id\":\"user_30NEeYybKyrMGCLrcWcfx8Kppwv\"}"
+    },
+    "seconds": 0.653
+  },
+  {
+    "case": "wife_topic_change",
+    "requested_model": "google/gemma-4-26b-a4b-it",
+    "requested_route": "makora",
+    "generation_id": "gen-1792099013-8Jiw85CszdLaIaMzonWB",
+    "provider": "Makora",
+    "actual_model": "google/gemma-4-26b-a4b-it",
+    "response": "[say with a warm, friendly tone] You're very welcome. If you ever need anything else—be it arrows, potions, or a bit of advice—you know where to find me. Safe travels, Alawen!",
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 11320,
+      "completion_tokens": 49,
+      "total_tokens": 11369,
+      "cost": 0.00114572,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00114572,
+        "upstream_inference_prompt_cost": 0.001132,
+        "upstream_inference_completions_cost": 1.372e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "pass": false,
+    "mentions_wife_or_female_partner": false,
+    "repeats_observed_trade_refusal": false,
+    "seconds": 0.986
+  },
+  {
+    "case": "wife_topic_change",
+    "requested_model": "google/gemma-4-26b-a4b-it",
+    "requested_route": "cloudflare",
+    "generation_id": "gen-1792099014-47xqVvMvfk0dIGWsohJ9",
+    "provider": "Cloudflare",
+    "actual_model": "google/gemma-4-26b-a4b-it",
+    "response": "[say with warm affection and a gentle rising tone] Drifa? [sigh] She's doing well, thank you for asking. She's back at the house, likely tending to the garden or fussing over some new recipe. [giggle] She's the light of my life, even if she does worry about me too much.",
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 11258,
+      "completion_tokens": 73,
+      "total_tokens": 11331,
+      "cost": 0.0011477,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0011477,
+        "upstream_inference_prompt_cost": 0.0011258,
+        "upstream_inference_completions_cost": 2.19e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "pass": true,
+    "mentions_wife_or_female_partner": true,
+    "repeats_observed_trade_refusal": false,
+    "seconds": 2.403
+  },
+  {
+    "case": "wife_topic_change",
+    "requested_model": "google/gemma-4-26b-a4b-it",
+    "requested_route": "parasail/bf16",
+    "generation_id": "gen-1792099014-fhKDh36N99YbeaRREBc3",
+    "provider": "Parasail",
+    "actual_model": "google/gemma-4-26b-a4b-it",
+    "response": "[say with warm affection and a gentle rising tone] Drifa? [sigh] She's as wonderful as the day I met her, thank you for asking. She's currently busy organizing some of the newer stock in the back. [giggle] Are you planning on staying in Riften long enough to see her, or are you just passing through?",
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 11254,
+      "completion_tokens": 75,
+      "total_tokens": 11329,
+      "cost": 0.00149302,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00149302,
+        "upstream_inference_prompt_cost": 0.00146302,
+        "upstream_inference_completions_cost": 3e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "pass": true,
+    "mentions_wife_or_female_partner": true,
+    "repeats_observed_trade_refusal": false,
+    "seconds": 3.071
+  },
+  {
+    "case": "wife_topic_change",
+    "requested_model": "google/gemma-4-31b-it",
+    "requested_route": "parasail/fp8",
+    "error": {
+      "status": 429,
+      "message": "{\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"google/gemma-4-31b-it is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations\",\"provider_name\":\"Parasail\",\"is_byok\":false,\"limit_source\":\"upstream_provider_shared_pool\",\"remedy_hint\":\"Retry shortly, add your own provider key (https://openrouter.ai/settings/integrations), or route to another provider with provider routing: https://openrouter.ai/docs/features/provider-routing\"}},\"user_id\":\"user_30NEeYybKyrMGCLrcWcfx8Kppwv\"}"
+    },
+    "seconds": 1.32
+  },
+  {
+    "case": "accepted_sale",
+    "requested_model": "google/gemma-4-26b-a4b-it",
+    "requested_route": "makora",
+    "generation_id": "gen-1792099017-IAUi8pyusU5VjaGZ51jz",
+    "provider": "Makora",
+    "actual_model": "google/gemma-4-26b-a4b-it",
+    "response": "[say with a shrug] Well, I've looked through everything, and it's just the fur ones. No leather in stock, I'm afraid.",
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 10443,
+      "completion_tokens": 35,
+      "total_tokens": 10478,
+      "cost": 0.0010541,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0010541,
+        "upstream_inference_prompt_cost": 0.0010443,
+        "upstream_inference_completions_cost": 9.8e-06
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "pass": false,
+    "reason": "missing footer",
+    "seconds": 0.889
+  },
+  {
+    "case": "wife_topic_change",
+    "requested_model": "google/gemma-4-31b-it",
+    "requested_route": "friendli",
+    "generation_id": "gen-1792099017-4f3xHUuTCm10gYTDIIFL",
+    "provider": "Friendli",
+    "actual_model": "google/gemma-4-31b-it",
+    "response": "[say with warm affection and a gentle rising tone] Drifa is doing well, thank you for asking! [laugh] Always the voice of reason in this house, though she still thinks I'm far too soft on my customers.",
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 11234,
+      "completion_tokens": 49,
+      "total_tokens": 11283,
+      "cost": 0.00159236,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00159236,
+        "upstream_inference_prompt_cost": 0.00157276,
+        "upstream_inference_completions_cost": 1.96e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "pass": true,
+    "mentions_wife_or_female_partner": true,
+    "repeats_observed_trade_refusal": false,
+    "seconds": 1.359
+  },
+  {
+    "case": "accepted_sale",
+    "requested_model": "google/gemma-4-26b-a4b-it",
+    "requested_route": "coreweave/bf16",
+    "generation_id": "gen-1792099018-pFb6TGkDaSwDPuvPtl5t",
+    "provider": "CoreWeave",
+    "actual_model": "google/gemma-4-26b-a4b-it",
+    "response": "[say with a warm, relieved tone] Done and done. [clear throat] Here's your pack. May it serve you better than the politics of this city serves most folk.\n\nACTION: Economy PARAMS: {\"intent\": \"sell Alawen one Backpack, Brown Fur for 180 septims; she agreed after a discount\"}\nACTION: Items PARAMS: {\"intent\": \"give Alawen one Backpack, Brown Fur\"}",
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 10415,
+      "completion_tokens": 94,
+      "total_tokens": 10509,
+      "cost": 0.0010697,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0010697,
+        "upstream_inference_prompt_cost": 0.0010415,
+        "upstream_inference_completions_cost": 2.82e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "pass": false,
+    "selected": "Economy",
+    "intent": "sell Alawen one Backpack, Brown Fur for 180 septims; she agreed after a discount",
+    "seconds": 2.142
+  },
+  {
+    "case": "accepted_sale",
+    "requested_model": "google/gemma-4-26b-a4b-it",
+    "requested_route": "cloudflare",
+    "generation_id": "gen-1792099018-UgjumgFf113VlN2mpcxJ",
+    "provider": "Cloudflare",
+    "actual_model": "google/gemma-4-26b-a4b-it",
+    "response": "[say with a warm, relieved chuckle] A deal is a deal. [clear throat] I'll take your word for it, and I'll hold you to it if I see Brynjolf looking sour again.\n\nACTION: Economy PARAMS: {\"intent\": \"sell Alawen the Brown Fur Backpack for 180 septims; she agreed after a discount\"}\nACTION: Items PARAMS: {\"intent\": \"give Alawen the Brown Fur Backpack\"}",
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 10415,
+      "completion_tokens": 100,
+      "total_tokens": 10515,
+      "cost": 0.0010715,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0010715,
+        "upstream_inference_prompt_cost": 0.0010415,
+        "upstream_inference_completions_cost": 3e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "pass": false,
+    "selected": "Economy",
+    "intent": "sell Alawen the Brown Fur Backpack for 180 septims; she agreed after a discount",
+    "seconds": 3.232
+  },
+  {
+    "case": "accepted_sale",
+    "requested_model": "google/gemma-4-26b-a4b-it",
+    "requested_route": "parasail/bf16",
+    "generation_id": "gen-1792099020-nnSzj7mqkoLJsSy0A0U4",
+    "provider": "Parasail",
+    "actual_model": "google/gemma-4-26b-a4b-it",
+    "response": "[say with a satisfied grunt] A deal is a deal. [clear throat] Let's get this sorted then.\n\nACTION: Economy PARAMS: {\"intent\": \"sell Alawen the Brown Fur Backpack for 180 septims; they just agreed\"}\nACTION: Items PARAMS: {\"intent\": \"give Alawen the Backpack, Brown Fur\"}",
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 10416,
+      "completion_tokens": 78,
+      "total_tokens": 10494,
+      "cost": 0.00138528,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00138528,
+        "upstream_inference_prompt_cost": 0.00135408,
+        "upstream_inference_completions_cost": 3.12e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "pass": false,
+    "selected": "Economy",
+    "intent": "sell Alawen the Brown Fur Backpack for 180 septims; they just agreed",
+    "seconds": 2.208
+  },
+  {
+    "case": "accepted_sale",
+    "requested_model": "google/gemma-4-31b-it",
+    "requested_route": "friendli",
+    "generation_id": "gen-1792099023-YUSpTngAdvUkIRRTh4ln",
+    "provider": "Friendli",
+    "actual_model": "google/gemma-4-31b-it",
+    "response": "[say with a warm, appreciative tone] It's a deal then. [laugh] I'll take the coin and you take the bag.\n\nACTION: Economy PARAMS: {\"intent\": \"sell Alawen the Brown Fur Backpack for 180 gold; she just agreed to the discounted price\"}",
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 10406,
+      "completion_tokens": 66,
+      "total_tokens": 10472,
+      "cost": 0.00148324,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 864,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00148324,
+        "upstream_inference_prompt_cost": 0.00145684,
+        "upstream_inference_completions_cost": 2.64e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "pass": true,
+    "selected": "Economy",
+    "intent": "sell Alawen the Brown Fur Backpack for 180 gold; she just agreed to the discounted price",
+    "seconds": 1.84
+  },
+  {
+    "case": "priced_sale_in_items_category",
+    "requested_model": "google/gemma-4-31b-it",
+    "requested_route": "parasail/fp8",
+    "generation_id": "gen-1792099024-e8D4GYAO25TNHltESIwe",
+    "provider": "Parasail",
+    "actual_model": "google/gemma-4-31b-it",
+    "response": "ACTION: GiveItem PARAMS: {\"item\": \"Backpack, Brown Fur\", \"recipient\": \"Alawen\"}",
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 5146,
+      "completion_tokens": 26,
+      "total_tokens": 5172,
+      "cost": 0.00078185,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 5,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00078185,
+        "upstream_inference_prompt_cost": 0.00077145,
+        "upstream_inference_completions_cost": 1.04e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "pass": false,
+    "selected": "GiveItem",
+    "seconds": 1.478
+  },
+  {
+    "case": "priced_sale_in_items_category",
+    "requested_model": "google/gemma-4-31b-it",
+    "requested_route": "friendli",
+    "generation_id": "gen-1792099026-2CtRosSeohKxGZ8BjKpu",
+    "provider": "Friendli",
+    "actual_model": "google/gemma-4-31b-it",
+    "response": "ACTION: GiveItem PARAMS: {\"item\": \"Backpack, Brown Fur\", \"recipient\": \"Alawen\"}",
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 5147,
+      "completion_tokens": 26,
+      "total_tokens": 5173,
+      "cost": 0.00073098,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00073098,
+        "upstream_inference_prompt_cost": 0.00072058,
+        "upstream_inference_completions_cost": 1.04e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "pass": false,
+    "selected": "GiveItem",
+    "seconds": 0.924
+  },
+  {
+    "case": "accepted_sale",
+    "requested_model": "google/gemma-4-31b-it",
+    "requested_route": "parasail/fp8",
+    "generation_id": "gen-1792099022-z2IJhnKW9Cb1GlKIOXQM",
+    "provider": "Parasail",
+    "actual_model": "google/gemma-4-31b-it",
+    "response": "[say with a warm, appreciative tone] It's a deal then! [laugh] I'll take the coin and you take the pack.\n\nACTION: Economy PARAMS: {\"intent\": \"sell Alawen the Brown Fur Backpack for 180 gold; she just agreed to the discounted price\"}",
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 10415,
+      "completion_tokens": 66,
+      "total_tokens": 10481,
+      "cost": 0.0015882,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 5,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0015882,
+        "upstream_inference_prompt_cost": 0.0015618,
+        "upstream_inference_completions_cost": 2.64e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "pass": true,
+    "selected": "Economy",
+    "intent": "sell Alawen the Brown Fur Backpack for 180 gold; she just agreed to the discounted price",
+    "seconds": 7.97
+  }
+]

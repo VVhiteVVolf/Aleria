@@ -1,0 +1,44 @@
+{
+  "scope": "Read-only analysis of live configuration, rendered requests and corresponding model responses; no SkyrimNet changes or paid API calls performed.",
+  "confirmed": {
+    "example_actor": "Arngeir",
+    "dialogue_model": "google/gemma-4-26b-a4b-it",
+    "temperature": 0.7,
+    "frequency_penalty_sent": false,
+    "presence_penalty_sent": false,
+    "event_history_count_dialogue": 50,
+    "observed_prompt_characters": [39966, 38880, 39614, 39599],
+    "observed_final_instruction_and_action_context_characters": 14713,
+    "latest_player_questions_present_in_requests": true,
+    "previous_npc_responses_present_in_requests": true,
+    "player_question_roles_correct": true,
+    "advance_conversation_instruction_already_present": true,
+    "repeated_phrase": "I will try to follow the Way of the Voice.",
+    "phrase_origin": "Vanilla player dialogue on 2026-10-05 at 17:15:45, addressed to Arngeir. In the 17:24:38 request it is correctly represented in a user-role message as Eydis Greymane speaking, but the subsequent model output adopts it as Arngeir's response.",
+    "separate_model_completions_repeat_phrase": [
+      "req_08542a88c3930028_1a10caabd12",
+      "req_8f8c858fe1754ce7_1a10cabcf3f",
+      "req_9f2135e2a81db0ce_1a10cac4d49"
+    ],
+    "latest_direct_question": "You say i have dragon blood, does that mean my grandfather was a dragon or something?",
+    "answer_to_direct_question": "It is not about the strength of your arm, but the clarity of your breath. You must learn to find the silence between the words, for that is where the true power resides.",
+    "gamemaster_output_at_172416": "ACTION: ContinueConversation PARAMS: {speaker: Borri, target: Arngeir, topic: Thu'um misuse}",
+    "sever_background_output_at_172415": "Borri to Wulfgar, topic Eydis Greymane's lack of discipline; lingering concern over violence during initiation.",
+    "npc_memories_rendered": "Recent training and confrontation memories are retrieved, including summaries suggesting prior discussion of the Dragonborn's nature.",
+    "final_user_message_layout": "A large instruction and available-actions block follows the latest player utterance; current direct questions are in preceding history messages.",
+    "no_demonstrated_tts_replay": true
+  },
+  "interpretation": "Distinct new model completions reproduce earlier dialogue despite receiving correctly attributed player input and prior responses. Automatic scene directors reinforce an old topic. Large mixed event, memory and action context, dialogue model instruction following, and explicit persona phrasing are plausible contributors; causal weights require controlled comparisons. There is no evidence in this example of lost player input or missing conversation storage.",
+  "recommended_controlled_tests": [
+    "Temporarily suspend GameMaster ContinueConversation and Severe background banter to isolate player-directed dialogue. Keep direct dialogue, quest actions and saved memories.",
+    "Repeat the same clear ancestry question and inspect the rendered prompt and reply.",
+    "If repetition persists, compare the dialogue model under otherwise unchanged conditions; do not change unrelated action or memory models.",
+    "Consider a narrowly scoped response instruction prioritizing the latest direct question, maintaining speaker identity and treating old conversations as history, not a pending script. Preserve personal prompts.",
+    "If supported by the selected provider, trial a modest dialogue-only frequency penalty. Do not treat this as a guaranteed fix for semantic topic repetition.",
+    "Avoid clearing memories or indiscriminately reducing history, which could remove needed conversational context."
+  ],
+  "sources": [
+    "https://github.com/MinLL/SkyrimNet-GamePlugin/issues/168",
+    "https://goncalo22.github.io/SkyrimNet-GamePlugin/Memory%20System/memory-recall/"
+  ]
+}

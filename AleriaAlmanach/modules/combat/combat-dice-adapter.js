@@ -1,5 +1,5 @@
 import { sceneDiceService } from '../scene-dice/dice-service.js?v=20261013-performance-v1';
-import { buildAttackNotation, buildDamageNotation } from './rules/combat-mvp-rules.js?v=20260905-party-combat-v1';
+import { buildAttackNotation, buildDamageRollPlan } from './rules/combat-mvp-rules.js?v=20260905-party-combat-v1';
 
 export class CombatDiceAdapter {
   constructor(service = sceneDiceService) {
@@ -20,12 +20,13 @@ export class CombatDiceAdapter {
   }
 
   async rollDamage({ damageFormula, bonus = 0, critical = false, actorName = '', targetName = '', container = null } = {}) {
-    const notation = buildDamageNotation(damageFormula, bonus, critical);
-    return this.service.roll(notation, container, {
+    const plan = buildDamageRollPlan(damageFormula, bonus, critical);
+    const roll = await this.service.roll(plan.notation, container, {
       roller: actorName,
-      purpose: `Schaden gegen ${targetName}`,
+      purpose: `${critical ? `Kritschaden (${plan.criticalDamage.maximum} gesetzt)` : 'Schaden'} gegen ${targetName}`,
       rollType: 'general'
     });
+    return { ...roll, ...(plan.criticalDamage ? { criticalDamage: plan.criticalDamage } : {}) };
   }
 
   async rollSavingThrow({ modifier = 0, rollMode = 'normal', actorName = '', targetName = '', container = null } = {}) {

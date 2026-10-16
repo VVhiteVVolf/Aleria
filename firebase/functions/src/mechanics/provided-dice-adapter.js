@@ -1,5 +1,5 @@
 import { HttpsError } from 'firebase-functions/v2/https';
-import { parseDamageFormula } from '../generated/combat/rules/combat-mvp-rules.js';
+import { buildDamageRollPlan } from '../generated/combat/rules/combat-mvp-rules.js';
 
 function invalid(message) {
   throw new HttpsError('invalid-argument', message);
@@ -89,25 +89,25 @@ export class ProvidedDiceAdapter {
   }
 
   async rollDamage({ damageFormula, bonus = 0, critical = false } = {}) {
-    const base = parseDamageFormula(damageFormula);
+    const plan = buildDamageRollPlan(damageFormula, bonus, critical);
     const source = this.damageSources[this.damageIndex++] || {};
-    const terms = base.terms || [{ diceCount: base.diceCount, sides: base.sides }];
-    const expectedTerms = terms.map(term => ({ ...term, diceCount: critical ? term.diceCount * 2 : term.diceCount }));
+    const expectedTerms = plan.terms;
     const submittedDice = Array.isArray(source.diceResults)
       ? source.diceResults
       : (Array.isArray(source.keptDice) ? source.keptDice : []);
     const expectedCount = expectedTerms.reduce((sum, term) => sum + term.diceCount, 0);
-    if (submittedDice.length !== expectedCount) invalid(`Schadenswurf: Es wurden ${expectedCount} gültige Würfelergebnisse erwartet.`);
+    if (submittedDice.length !== expectedCount) invalid(`Schadenswurf: Es wurden ${expectedCount} gültige Würfelergebnisse erwartet.${critical ? ' Beim Krit wird nur der zusätzliche Pool gewürfelt; der Grundpool zählt maximal. Bitte die Seite aktualisieren.' : ''}`);
     let offset = 0;
     const dice = expectedTerms.flatMap(term => {
       const values = submittedDice.slice(offset, offset + term.diceCount);
       offset += term.diceCount;
       return validateDieResults(values, term.diceCount, term.sides, 'Schadenswurf');
     });
-    const modifier = base.fixedModifier + Number(bonus || 0);
+    const modifier = plan.modifier;
     return {
       id: String(source.rollId || source.id || ''),
-      notation: `${expectedTerms.map(term => `${term.diceCount}d${term.sides}`).join('+')}${modifier ? `${modifier > 0 ? '+' : ''}${modifier}` : ''}`,
+      notation: plan.notation,
+      ...(plan.criticalDamage ? { criticalDamage: plan.criticalDamage } : {}),
       keptDice: dice,
       modifier,
       total: Math.max(0, dice.reduce((sum, value) => sum + value, 0) + modifier),

@@ -30,7 +30,7 @@ export function describeTechniqueDamage(technique = {}, profile = {}) {
     ? `${requiresPairedCombatWeapons(technique) ? 'Würfel beider Waffen' : `${model.weaponDiceMultiplier || 1}× Waffenwürfel`}${model.baseDieCap ? ` (je höchstens W${model.baseDieCap})` : ''}${model.bonusWeaponDice ? ` + ${model.bonusWeaponDice} Waffen-Zusatzwürfel (je höchstens W${model.bonusWeaponDieCap})` : ''}${(model.weaponBonuses || []).map(group => ` + ${group.diceCount} Waffen-Zusatzwürfel (je höchstens W${group.dieCap})`).join('')}${model.bonusFormula ? ` + ${model.bonusFormula}` : ''}`
     : technique.damageFormula || 'Kein direkter Schaden';
   const scaling = getTechniqueDamageScaling(technique, profile);
-  return `${base}${model.bonusModifier ? ` + ${model.bonusModifier} Technikbonus` : ''}${scaling ? ` + ${scaling.formula} Ausbildungsbonus` : ''}${model.lightAttack ? ' · halbe positive feste Schadensboni (abgerundet)' : ''}`.replace(/(\d)d(\d)/g, '$1W$2');
+  return `${base}${model.bonusModifier ? ` ${model.bonusModifier > 0 ? '+' : '−'} ${Math.abs(model.bonusModifier)} Technikmodifikator` : ''}${scaling ? ` + ${scaling.formula} Ausbildungsbonus` : ''}${model.lightAttack ? ' · halbe positive feste Schadensboni (abgerundet)' : ''}`.replace(/(\d)d(\d)/g, '$1W$2');
 }
 
 export function resolveTechniqueDamageFormula(technique = {}, weapon = {}, profile = {}) {

@@ -85,7 +85,8 @@ export const HORSE_BREEDING_CROSS_ENRICHMENTS = Object.freeze({
     note: 'Der bereits in der Rossmarkt-Kreuzungsmatrix benannte Edelsale verbindet die ritterliche Eleganz und Reiterbindung des Ceffyl mit der nordischen Ausdauer und Zuverlässigkeit des Sale. Sir Gais Wyrms schwarzer Hengst Rabenstolz gehört zu dieser Zucht; seine lange Mähne und der dichte schwarze Fesselbehang prägen seine Erscheinung.'
   },
   'ceffyl|hest': {
+    bestiaryId: 'roh-rhyfel',
     establishedBreed: 'Rhyfel',
-    note: 'Aus dieser Verbindung ging später die gefestigte Rhyfel-Linie hervor.'
+    note: 'Roh-Rhyfel bezeichnet die direkte Kreuzung aus Hest und Ceffyl. Aus solchen Pferden ging später durch gezielte Zucht die gefestigte Rhyfel-Linie hervor. Hest und Ceffyl werden bis heute unmittelbar miteinander gekreuzt; Körperbau und Temperament ihrer Nachkommen fallen jedoch uneinheitlicher aus und sind schwieriger vorherzusagen und zu kontrollieren. Die Erhabenheit, elegante Halslinie und Reitqualität des Ceffyl können sich mit der rohen Kraft, dem kräftigen Körperbau und dem dichten Fell des Hest verbinden. Die einzelnen Tiere unterscheiden sich deutlich; ein harmonisch gebauter Roh-Rhyfel kann dennoch ein gut reitbares Pferd sein. Astrid, Skalli Varulvs Schimmel, gehört zu dieser direkten Kreuzung.'
   }
 });

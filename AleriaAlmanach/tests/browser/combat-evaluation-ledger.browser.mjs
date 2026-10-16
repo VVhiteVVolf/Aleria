@@ -26,14 +26,23 @@ const secondary = {
   ruleApplications: [{ sourceActorName: 'Gais Wyrm', ruleName: 'Geschlossene Schuppe', effects: [] }],
   mechanicNotes: ['Einmalige Vorbereitungen werden erst durch den vorgesehenen Auslöser verbraucht.']
 };
+const critical = {
+  actorId: 'gawain', actorName: 'Gawain Draig', targetId: 'target', targetName: 'Übungsziel',
+  profileActionKind: 'weapon', weapon: { name: 'Schwert' },
+  attack: { total: 25, naturalRoll: 20, diceResults: [20], modifier: 5, hit: true, criticalSuccess: true, targetDefense: 15 },
+  damage: { notation: '1d8+11', diceResults: [1], modifier: 11, total: 12, primaryTotal: 12,
+    criticalDamage: { version: 1, rule: 'maximum-plus-roll', maximum: 8, fixedBonus: 3, maximizedFormula: '1d8', rolledFormula: '1d8' } },
+  targetSnapshot: { hitPointsBefore: 40, hitPointsAfter: 28 }
+};
 const html = `<!doctype html><html lang="de"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="stylesheet" href="styles/combat.css?v=20261015-ledger-layout-v3">
 <style>body{margin:16px;background:#eee4ce}*{box-sizing:border-box}main{max-width:840px;margin:auto}.combat-evaluation{padding:12px}</style>
-<main><div id="expired-counter" class="combat-evaluation" data-state="miss"></div><div id="other-records" class="combat-evaluation" data-state="self"></div></main>
+<main><div id="expired-counter" class="combat-evaluation" data-state="miss"></div><div id="other-records" class="combat-evaluation" data-state="self"></div><div id="critical-damage" class="combat-evaluation" data-state="critical"></div></main>
 <script type="module">
 import { renderEvaluationLedger } from './modules/combat/ui/combat-evaluation-ledger.js?v=20261015-ledger-layout-v3';
 document.getElementById('expired-counter').innerHTML=renderEvaluationLedger(${JSON.stringify(resolution)});
 document.getElementById('other-records').innerHTML=renderEvaluationLedger(${JSON.stringify(secondary)},{summarizeRuleEffects:()=>'+1 RK bis zum Ende des nächsten eigenen Beitrags; nur die stärkste Haltung zählt.'});
+document.getElementById('critical-damage').innerHTML=renderEvaluationLedger(${JSON.stringify(critical)});
 window.ready=true;
 </script></html>`;
 
@@ -65,6 +74,8 @@ try {
     await page.goto(`http://127.0.0.1:${server.address().port}/AleriaAlmanach/ledger-test.html`);
   }
   await page.waitForFunction(() => window.ready);
+  assert.match(await page.locator('#critical-damage').innerText(), /8 gesetzt \+ 1W8 \[1\] \+ 3/);
+  checks.push('Kritbeleg trennt maximalen Grundpool, gewürfelte Eins und festen Bonus.');
   for (const { label, viewport, cardWidth } of [
     { label: 'desktop', viewport: 1440, cardWidth: 840 },
     { label: 'narrow-embedded', viewport: 1440, cardWidth: 620 },

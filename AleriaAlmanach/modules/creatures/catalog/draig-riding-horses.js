@@ -7,7 +7,7 @@ export const DRAIG_RIDING_OWNER_IDS = Object.freeze({
   rhys: '9hurPRtv2yMJTYkAARkl',
   kane: 'HjDXMMexahez1G0rJrBE',
   carys: 'yLJ0Rr5suTSLa42sL743',
-  gethin: '6atOllMA637Z2VNAZAxf'
+  gethin: 'person--haus-draig--gethin-1722-draig'
 });
 
 function ridingHorse(spec, biography) {

@@ -3,13 +3,21 @@
 const amount = (costs, id) => costs.filter(cost => cost.resourceId === id)
   .reduce((sum, cost) => sum + Math.max(0, Math.min(6, Number(cost.amount) || 0)), 0);
 
-export function hasWeaponTechniqueControl(spec = {}) {
+export function getWeaponTechniqueControlTier(spec = {}) {
   const meaningful = condition => condition && (condition.blockedResource || condition.disarm || condition.damageGuard
     || condition.triggerRules?.length || Object.entries(condition.mechanics || {}).some(([key, value]) => key !== 'movement' && value !== 0));
-  return Boolean(spec.guard || spec.aim || spec.temporaryHp || spec.penalty
+  if (spec.guard || spec.aim || spec.temporaryHp || spec.penalty
     || meaningful(spec.secondarySave?.failureCondition)
     || spec.effects?.some(effect => ['healing', 'temporary-hit-points'].includes(effect.type)
-      || effect.type !== 'damage' && meaningful(effect.condition) && effect.type !== 'debuff'));
+      || effect.type !== 'damage' && meaningful(effect.condition) && (effect.type !== 'debuff' || effect.target !== 'self'))) return 'control';
+  if (spec.mobility || spec.slow || Number(spec.secondarySave?.failureCondition?.mechanics?.movement)
+    || spec.effects?.some(effect => effect.type === 'move' && Number(effect.movementMeters)
+      || Number(effect.condition?.mechanics?.movement) && (effect.type !== 'debuff' || effect.target !== 'self'))) return 'position';
+  return 'none';
+}
+
+export function hasWeaponTechniqueControl(spec = {}) {
+  return getWeaponTechniqueControlTier(spec) !== 'none';
 }
 
 function trainingSteps(spec, light) {
@@ -29,8 +37,9 @@ export function createWeaponTechniqueDamageProfile(spec = {}, costs = []) {
   const light = !actions && !reactions && bonuses > 0;
   if (actions) actions--; else if (reactions) reactions--; else if (bonuses) bonuses--;
   // Control/defense uses the weakest extra ordinary point to pay for its effect.
-  if (spec.damageControl && bonuses) bonuses--;
-  else if (spec.damageControl && reactions) reactions--;
+  const minorPosition = spec.damageControl && spec.damageControlTier === 'position';
+  if (spec.damageControl && !minorPosition && bonuses) bonuses--;
+  else if (spec.damageControl && !minorPosition && reactions) reactions--;
   const areaCap = spec.maximumTargets > 1 ? 6 : 12;
   const weaponBonuses = [
     { diceCount: actions, dieCap: areaCap },
@@ -41,6 +50,7 @@ export function createWeaponTechniqueDamageProfile(spec = {}, costs = []) {
   ].filter(group => group.diceCount > 0);
   return { damageFormula: '', damageModel: {
     mode: 'weapon-dice', weaponDiceMultiplier: 1, bonusFormula: '',
+    ...(minorPosition ? { bonusModifier: -1 } : {}),
     ...(light ? { baseDieCap: 4, lightAttack: true } : {}),
     weaponBonuses, bonusWeaponDice: 0, bonusWeaponDieCap: 12,
     scalingSteps: trainingSteps(spec, light)

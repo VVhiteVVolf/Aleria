@@ -1,11 +1,12 @@
+import { renderChallengeCheckOption, refreshChallengeCheckPolicyEditor } from './herausforderung-check-policy-ui.js?v=20261016-check-policy-v1';
 import { getCheckDescription } from '../skill-checks/skill-check-guidance.js?v=20261015-check-options-v1';
 import { getOutcomeSuccessDifficulty } from './herausforderung-outcomes.js?v=20261015-graded-challenges-v1';
 import { renderChallengeOutcomesEditor } from './herausforderung-outcomes-ui.js?v=20261015-check-options-v1';
-import { normalizeHerausforderungEvent, MAX_HERAUSFORDERUNG_APPROACHES, getHerausforderungValidationIssues } from './herausforderung-model.js?v=20261015-check-options-v1';
+import { normalizeHerausforderungEvent, MAX_HERAUSFORDERUNG_APPROACHES, getHerausforderungValidationIssues } from './herausforderung-model.js?v=20261016-check-policy-v1';
 import { getApproachProgress, HERAUSFORDERUNG_TIER_LABELS } from './herausforderung-progress.js?v=20261015-graded-challenges-v1';
 import { getChallengeCombatBindingError } from './herausforderung-combat-context.js?v=20261015-check-options-v1';
 import { CHECK_DEFINITIONS, ATTRIBUTE_CHECK_DEFINITIONS, SAVING_THROW_DEFINITIONS } from '../skill-checks/skill-check-model.js?v=20261015-check-options-v1';
-import { renderSkillIcon, renderSkillHint, skillTooltipAttributes, describeSkillChoice, bindSkillIconTooltips } from '../skill-checks/skill-icon-view.js?v=20261015-check-options-v1';
+import { renderSkillIcon, renderSkillHint, skillTooltipAttributes, describeSkillChoice, bindSkillIconTooltips } from '../skill-checks/skill-icon-view.js?v=20261016-check-policy-v1';
 import { renderHerausforderungRewardEditor, rewardSummary, rewardReceiptSummary } from './herausforderung-rewards-ui.js?v=20261015-check-options-v1';
 import { renderChallengeSceneImageEditor, renderChallengeSceneImage, refreshChallengeSceneImageEditor } from './herausforderung-scene-image-ui.js';
 
@@ -46,6 +47,7 @@ export function ensureHerausforderungDialog() {
             <label><span>Titel</span><input data-herausforderung-field="title" maxlength="180" value="Herausforderung"></label>
             <label><span>Öffentliche Beschreibung</span><textarea data-herausforderung-field="publicDescription" maxlength="4000" rows="3" placeholder="Was sehen, hören oder bemerken die Beteiligten?"></textarea></label>
             ${renderChallengeSceneImageEditor()}
+            <div class="herausforderung-target-editor" data-herausforderung-target></div>
           </section>
           <section class="herausforderung-fields herausforderung-audience" data-herausforderung-audience></section>
           <div class="herausforderung-section-title"><h3>02 <span>Wege zur Erkenntnis</span></h3><span data-herausforderung-count></span></div>
@@ -53,7 +55,7 @@ export function ensureHerausforderungDialog() {
           <button type="button" class="herausforderung-button herausforderung-add-approach" data-herausforderung-action="add-approach"><span aria-hidden="true">＋</span> Weiteren Ansatz hinzufügen</button>
         </div>
         <aside class="herausforderung-sidebar">
-          <section class="herausforderung-rules"><h3>${icon('attempt')} So wird geprüft</h3><p><strong>W20 + Probenwert aus dem Charakterbogen</strong> gegen die Schwierigkeit.</p><p>Fertigkeit mit Übung, Attributswurf ohne Übung oder Rettungswurf mit eigener Ausbildung. Alle gewählten Optionen sind gleichberechtigt.</p><ul><li><b>Erfolg:</b> Erkenntnis aufdecken, Ansatz abschließen.</li><li><b>1–3 Punkte darunter:</b> Teilhinweis, Ansatz bleibt offen.</li><li><b>Mehr als 3 darunter:</b> Konsequenz, Ansatz bleibt offen.</li><li><b>Natürliche 20 / 1:</b> kritischer Erfolg / deutlicher Fehlschlag.</li></ul><p>Figurenboni und aktive Regeln werden beim Eintragen berücksichtigt.</p></section>
+          <section class="herausforderung-rules"><h3>${icon('attempt')} So wird geprüft</h3><p><strong>W20 + Probenwert aus dem Charakterbogen</strong> gegen die Schwierigkeit.</p><p>Fertigkeit mit Übung, Attributswurf ohne Übung oder Rettungswurf mit eigener Ausbildung. Nur freigegebene Proben sind möglich. Ein festgelegter Proben-Malus wird zusätzlich zum Bogenwert berücksichtigt.</p><ul><li><b>Erfolg:</b> Erkenntnis aufdecken, Ansatz abschließen.</li><li><b>1–3 Punkte darunter:</b> Teilhinweis, Ansatz bleibt offen.</li><li><b>Mehr als 3 darunter:</b> Konsequenz, Ansatz bleibt offen.</li><li><b>Natürliche 20 / 1:</b> kritischer Erfolg / deutlicher Fehlschlag.</li></ul><p>Figurenboni und aktive Regeln werden beim Eintragen berücksichtigt.</p></section>
           <section class="herausforderung-preview"><h3>${icon('insight')} Öffentliche Vorschau</h3><p class="herausforderung-note">Verdeckte Texte erscheinen hier erst nach einem gewürfelten Ergebnis.</p><div data-herausforderung-preview></div></section>
         </aside>
       </div>
@@ -64,11 +66,7 @@ export function ensureHerausforderungDialog() {
 }
 
 function renderSkillCheckboxes(approach, index) {
-  const preferred = new Set(approach.preferredSkills || []);
-  return SKILL_GROUPS.map(group => `<div class="herausforderung-skill-group"><span>${group.label}</span><div>${group.ids.map(id => {
-    const skill = CHECK_DEFINITIONS.find(entry => entry.id === id);
-    return `<label class="herausforderung-skill-check" ${skillTooltipAttributes(`${skill.label}: ${getCheckDescription(skill)} Es zählt der Bogenwert einschließlich geltender Effekte.`)}><input type="checkbox" data-herausforderung-approach-index="${index}" data-herausforderung-field="preferredSkill" data-skill-id="${id}"${preferred.has(id) ? ' checked' : ''}><span>${renderSkillIcon(skill)}${escapeMarkup(skill.label)}</span></label>`;
-  }).join('')}</div></div>`).join('');
+  return SKILL_GROUPS.map(group => `<div class="herausforderung-skill-group"><span>${group.label}</span><div>${group.ids.map(id => renderChallengeCheckOption(approach, CHECK_DEFINITIONS.find(skill => skill.id === id), index)).join('')}</div></div>`).join('');
 }
 
 export function renderApproachRows(approaches = [], activeIndex = 0) {
@@ -82,7 +80,7 @@ export function renderApproachRows(approaches = [], activeIndex = 0) {
         <div class="herausforderung-approach-toolbar"><span>${icon('insight')} Verdeckte Ergebnisse vorbereiten</span><button type="button" class="herausforderung-remove-approach" data-herausforderung-action="remove-approach" data-approach-index="${index}" aria-label="Ansatz ${index + 1} entfernen"${approaches.length === 1 ? ' disabled' : ''}>Entfernen ×</button></div>
         <div class="herausforderung-approach-basics"><label><span>Bezeichnung des Ansatzes · öffentlich</span><input maxlength="160" data-herausforderung-approach-index="${index}" data-herausforderung-field="label" value="${escapeMarkup(approach.label)}" placeholder="z. B. Spuren untersuchen"></label><label><span>${approach.outcomeTable?.length ? 'Erfolgsschwelle · aus Ergebnisstaffel' : 'Schwierigkeit (SG)'}</span><input type="number" min="1" max="40" step="1" data-herausforderung-approach-index="${index}" data-herausforderung-field="difficulty" value="${escapeMarkup(approach.difficulty)}"${approach.outcomeTable?.length ? ' disabled title="Die Erfolgsschwelle wird in der Ergebnisstaffel geändert."' : ''}></label></div>
         ${approach.outcomeTable?.length ? '<p class="herausforderung-note">Ändere die Schwellen, Erkenntnisse und Wirkungen direkt in der Ergebnisstaffel. Es gilt jeweils genau eine Stufe.</p>' : `<div class="herausforderung-difficulty-presets" role="group" aria-label="Schwierigkeitsstufen">${DIFFICULTIES.map(preset => `<button type="button" data-herausforderung-action="set-difficulty" data-approach-index="${index}" data-value="${preset.value}" aria-pressed="${Number(approach.difficulty) === preset.value}">${preset.label} <b>${preset.value}</b></button>`).join('')}</div>`}
-        <fieldset class="herausforderung-skills"><legend>Passende Proben <span>Wert aus dem Charakterbogen</span></legend>${renderSkillCheckboxes(approach, index)}</fieldset>
+        <fieldset class="herausforderung-skills"><legend>Erlaubte Proben <span>Alle anderen sind gesperrt</span></legend><p class="herausforderung-note">Häkchen = erlaubt. Optionaler Malus: −30 bis 0, mit öffentlich sichtbarer Begründung. Ist etwas unmöglich, sperre die Probe: Eine natürliche 20 bleibt trotz Malus kritisch.</p>${renderSkillCheckboxes(approach, index)}</fieldset>
         ${approach.outcomeTable?.length ? '' : `<label class="herausforderung-insight"><span>${icon('insight')} Erkenntnis bei Erfolg · verdeckt</span><textarea maxlength="2000" data-herausforderung-approach-index="${index}" data-herausforderung-field="insight" rows="3" placeholder="Welche Wahrheit wird bei Erfolg aufgedeckt?">${escapeMarkup(approach.insight)}</textarea></label>
         <details class="herausforderung-consequences"${approach.partialHint || approach.failureConsequence ? ' open' : ''}><summary>Teilhinweis & Konsequenz <small>Optional</small></summary><div><label><span>Knapp gescheitert · 1–3 Punkte fehlen</span><textarea maxlength="2000" data-herausforderung-approach-index="${index}" data-herausforderung-field="partialHint" rows="2" placeholder="Ein unvollständiger oder mehrdeutiger Hinweis.">${escapeMarkup(approach.partialHint)}</textarea></label><label><span>Deutlich gescheitert · mehr als 3 Punkte fehlen</span><textarea maxlength="2000" data-herausforderung-approach-index="${index}" data-herausforderung-field="failureConsequence" rows="2" placeholder="Eine erzählerische Komplikation ohne Erkenntnis.">${escapeMarkup(approach.failureConsequence)}</textarea></label></div></details>`}
         ${approach.outcomeTable?.length ? renderChallengeOutcomesEditor(approach, index) : renderHerausforderungRewardEditor(approach, index)}
@@ -105,6 +103,7 @@ export function updateHerausforderungDraft(event, { actors = [] } = {}) {
   const root = dialogRoot();
   if (!root) return;
   refreshChallengeSceneImageEditor(root);
+  refreshChallengeCheckPolicyEditor(root, event.approaches);
   bindSkillIconTooltips(root.ownerDocument).hide();
   event.approaches.forEach((approach, index) => {
     const row = root.querySelector(`[data-herausforderung-approach-row][data-approach-index="${index}"]`);

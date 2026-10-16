@@ -15,8 +15,9 @@ import {
 } from '../combat/combat-trigger-rules.js?v=20260928-equipment-art-v4';
 import { consumeCombatRuleResources } from '../combat/combat-rule-consumption.js?v=20260928-equipment-art-v4';
 import { getCheckProfileRollModes } from './attribute-check-model.js?v=20261015-check-options-v1';
+import { getChallengeCheckRule } from '../herausforderung/herausforderung-check-policy.js?v=20261016-check-policy-v1';
 
-export const SKILL_EVALUATION_RULES_VERSION = 'skill-evaluation-5';
+export const SKILL_EVALUATION_RULES_VERSION = 'skill-evaluation-6';
 
 function createResolutionId() {
   return globalThis.crypto?.randomUUID?.() || `skill-evaluation-${Date.now()}-${Math.random().toString(36).slice(2, 9)}`;
@@ -111,7 +112,9 @@ export class SkillResolutionService {
     const { settings, skill, sources, periods, usedRuleFrequencyKeys, skillRuleState, preApplications, preEffects, profileRollModes, rollMode, checkType, actionKind, modifierKey }
       = getSkillRollContext({ actor, settings: sourceSettings }, options);
     const affinityModifier = challenge ? getChallengeAffinityModifier(challenge, settings.skillId) : 0;
-    const baseModifier = skill.modifier + settings.customModifier + affinityModifier;
+    const checkRule = getChallengeCheckRule(challenge, settings.skillId);
+    if (!checkRule.allowed) throw new Error('Diese Probe ist für den gewählten Lösungsweg gesperrt.');
+    const baseModifier = skill.modifier + settings.customModifier + affinityModifier + checkRule.modifier;
     const preModifier = baseModifier + preEffects[modifierKey];
     const difficulty = options.opposedDifficulty != null && Number.isFinite(Number(options.opposedDifficulty))
       ? Number(options.opposedDifficulty)
@@ -166,6 +169,8 @@ export class SkillResolutionService {
       profileModifier: skill.modifier,
       customModifier: settings.customModifier,
       affinityModifier,
+      challengeModifier: checkRule.modifier,
+      challengeModifierReason: checkRule.reason,
       ruleModifier: preEffects[modifierKey] + postEffects[modifierKey],
       totalModifier: preModifier + postEffects[modifierKey],
       difficulty,
@@ -180,6 +185,7 @@ export class SkillResolutionService {
       total,
       outcome,
       targetChallengeId: challenge?.id || '',
+      targetActorId: challenge?.authorId || '',
       targetChallengeAuthor: challenge?.authorName || '',
       targetCommentId: challenge?.commentId || '',
       targetSegmentIndex: challenge?.segmentIndex ?? null,

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>Dein Skyrim-Outfitarsenal</title>
+  <link rel="stylesheet" href="catalog/catalog.css">
+  <script defer src="catalog/catalog-ui.js"></script>
+  <script defer src="data/catalog-data.js"></script>
+</head>
+<body>
+<main class="arsenal" data-role="catalog">
+  <header class="masthead">
+    <div class="eyebrow">NOLVUS · TWISTED · DEINE ERGÄNZUNGEN</div>
+    <h1>Dein Outfitarsenal<span>.</span></h1>
+    <p class="intro">Rüstungen, Roben und Kleidung aus deinem aktiven Profil. Finde den passenden Look für deine nächste Rolle.</p>
+    <p class="profile" data-role="profile">Der lokale Katalog wird geladen …</p>
+    <div class="metrics" data-role="metrics"></div>
+  </header>
+  <div class="workspace">
+    <aside class="filters" aria-label="Katalogfilter">
+      <h2>Deinen Look finden</h2>
+      <label>Suche<input type="search" data-filter="search" placeholder="Outfit, Gegenstand oder Mod …" autocomplete="off"></label>
+      <label>Klasse / Kampfstil<select data-filter="role"><option value="">Alle Klassen</option></select></label>
+      <label>Gildenstil<select data-filter="guild"><option value="">Alle Gilden</option></select></label>
+      <label>Rüstungstyp<select data-filter="type"><option value="">Alle Typen</option><option>Schwer</option><option>Leicht</option><option>Kleidung</option><option>Unbekannt</option></select></label>
+      <label>Modelleinträge<select data-filter="gender"><option value="">Alle Einträge</option><option>Männer</option><option>Frauen</option></select></label>
+      <label class="check"><input type="checkbox" data-filter="torso"> Nur Rumpf / komplette Outfits</label>
+      <label class="check"><input type="checkbox" data-filter="new"> Neu installiert am 06.10.</label>
+      <label class="check"><input type="checkbox" data-filter="favorites"> Nur Merkliste</label>
+      <label class="check"><input type="checkbox" data-filter="base"> Grundspiel &amp; Creation Club zeigen</label>
+      <button class="reset" data-action="reset">Filter zurücksetzen</button>
+      <p class="filter-note">Klassen und Gilden sind Empfehlungen nach Namen und Stil. Sie sind keine Spielvoraussetzungen.</p>
+      <a class="export" href="data/outfits.csv" download>Gesamtliste als CSV ↗</a>
+    </aside>
+    <section class="results" aria-labelledby="results-title">
+      <div class="results-heading"><div><h2 id="results-title">Die Sammlung</h2><p data-role="result-count" aria-live="polite">Warte auf die ausgelesenen Gegenstände …</p></div><span class="snapshot">LOKALER BESTAND</span></div>
+      <p class="clarification">„Installiert“ bedeutet verfügbar im Modprofil – nicht bereits im Inventar deiner Figur. Männer-/Frauenangaben beziehen sich auf die eingetragenen Kleidungsmodelle; die Passform wurde hier nicht im Spiel geprüft.</p>
+      <div class="cards" data-role="cards"></div>
+      <button class="load-more" data-action="more" hidden>Weitere Pakete anzeigen</button>
+      <p class="empty" data-role="empty" hidden>Keine passenden Outfits. Versuche einen anderen Stil oder entferne einen Filter.</p>
+      <details class="visual-section" data-role="visual-section"><summary><span>Optik, Replacer &amp; BodySlide</span><small data-role="visual-count"></small></summary><p>Diese aktiven Zusatzpakete ändern vorhandene Outfits oder liefern Konvertierungen. Sie werden nicht als neue Gegenstände gezählt. BodySlide-Einträge allein bestätigen keinen fertigen Build.</p><input class="visual-search" type="search" data-filter="visual" aria-label="Optikpakete durchsuchen" placeholder="Replacer oder Konvertierung suchen …"><div class="visual-list" data-role="visual-list"></div></details>
+    </section>
+  </div>
+  <footer>Aus aktiven Plugins und MO2-Metadaten erstellt. Einzelne Varianten, Verzauberungen und Ausrüstungsstücke zählen getrennt. Ausgeblendete Körper-/Hilfsobjekte sowie fehlende Modellangaben sind keine Zusage zur Fehlerfreiheit des Loadouts. Aktualisieren: <strong>katalog_aktualisieren.bat</strong>.<p data-role="scan-note"></p></footer>
+  <p class="toast" data-role="toast" role="status" hidden></p>
+  <noscript>Bitte JavaScript für diesen lokalen Katalog aktivieren. Die vollständige Liste liegt auch unter data/outfits.csv.</noscript>
+</main>
+</body>
+</html>

@@ -1,0 +1,555 @@
+{
+  "stats": {
+    "disabled": 4,
+    "enabled": 6,
+    "total": 10
+  },
+  "triggers": [
+    {
+      "activation": "default",
+      "audience": "nearby_npcs",
+      "cooldownSeconds": 30,
+      "description": "NPC's reaction when climaxed",
+      "enabled": true,
+      "eventCriteria": {
+        "eventType": "tton_event",
+        "schemaConditions": [
+          {
+            "caseSensitive": false,
+            "fieldPath": "tton_type",
+            "operator": "equals",
+            "value": "climax"
+          },
+          {
+            "caseSensitive": true,
+            "fieldPath": "skipTrigger",
+            "operator": "equals",
+            "value": false
+          },
+          {
+            "caseSensitive": true,
+            "fieldPath": "speaker",
+            "operator": "not_equals",
+            "value": ""
+          }
+        ]
+      },
+      "inFileEnabled": true,
+      "interrupt": true,
+      "name": "tton_sex_climax",
+      "priority": 10,
+      "probability": 1.0,
+      "provenance": {
+        "found": true,
+        "orphan": false,
+        "overrides": false,
+        "path": "triggers/tton_sex_climax.yaml",
+        "shadowed": [],
+        "userCopy": false,
+        "winner": {
+          "label": "tetherball88.ostimnet",
+          "pluginId": "tetherball88.ostimnet",
+          "priorityIndex": 16,
+          "source": "external",
+          "title": "OStimNet",
+          "version": "2.5.0"
+        }
+      },
+      "response": {
+        "content": "{{ originator }} reacts appropriately to climax event. It can be as they climaxed or someone else climaxed on or in them or both.",
+        "type": "direct_narration"
+      }
+    },
+    {
+      "activation": "default",
+      "audience": "nearby_npcs",
+      "cooldownSeconds": 20,
+      "description": "Sensory awareness when partner is tensing up and approaching climax during intercourse",
+      "enabled": true,
+      "eventCriteria": {
+        "eventType": "tton_event",
+        "schemaConditions": [
+          {
+            "caseSensitive": false,
+            "fieldPath": "tton_type",
+            "operator": "equals",
+            "value": "partner_near_edge"
+          },
+          {
+            "caseSensitive": true,
+            "fieldPath": "skipTrigger",
+            "operator": "equals",
+            "value": false
+          },
+          {
+            "caseSensitive": true,
+            "fieldPath": "speaker",
+            "operator": "not_equals",
+            "value": ""
+          }
+        ]
+      },
+      "inFileEnabled": true,
+      "interrupt": false,
+      "name": "tton_partner_near_edge",
+      "priority": 8,
+      "probability": 1.0,
+      "provenance": {
+        "found": true,
+        "orphan": false,
+        "overrides": false,
+        "path": "triggers/tton_partner_near_edge.yaml",
+        "shadowed": [],
+        "userCopy": false,
+        "winner": {
+          "label": "tetherball88.ostimnet",
+          "pluginId": "tetherball88.ostimnet",
+          "priorityIndex": 16,
+          "source": "external",
+          "title": "OStimNet",
+          "version": "2.5.0"
+        }
+      },
+      "response": {
+        "content": "Your partner is tensing up, breathing heavily, and right on the edge of climax! React with spoken dialogue in this intense moment, and make an action call to PulloutDecision deciding whether to request pulling out or allow finishing inside.",
+        "type": "direct_narration"
+      }
+    },
+    {
+      "activation": "default",
+      "audience": "nearby_npcs",
+      "cooldownSeconds": 30,
+      "description": "Reaction when player declines NPC's requests during OStim scenes.",
+      "enabled": true,
+      "eventCriteria": {
+        "eventType": "tton_event",
+        "schemaConditions": [
+          {
+            "caseSensitive": false,
+            "fieldPath": "tton_type",
+            "operator": "equals",
+            "value": "action_decline"
+          },
+          {
+            "caseSensitive": true,
+            "fieldPath": "skipTrigger",
+            "operator": "equals",
+            "value": false
+          },
+          {
+            "caseSensitive": true,
+            "fieldPath": "speaker",
+            "operator": "not_equals",
+            "value": ""
+          }
+        ]
+      },
+      "inFileEnabled": true,
+      "interrupt": false,
+      "name": "tton_action_decline",
+      "priority": 3,
+      "probability": 1.0,
+      "provenance": {
+        "found": true,
+        "orphan": false,
+        "overrides": false,
+        "path": "triggers/tton_action_decline.yaml",
+        "shadowed": [],
+        "userCopy": false,
+        "winner": {
+          "label": "tetherball88.ostimnet",
+          "pluginId": "tetherball88.ostimnet",
+          "priorityIndex": 16,
+          "source": "external",
+          "title": "OStimNet",
+          "version": "2.5.0"
+        }
+      },
+      "response": {
+        "content": "An action you just attempted was declined or didn't happen. Stay in the present moment — don't repeat the attempt, don't plan ahead. React honestly as yourself given everything you know about {{player.name}} and this moment. One beat. Then continue naturally.",
+        "type": "direct_narration"
+      }
+    },
+    {
+      "activation": "default",
+      "audience": "nearby_npcs",
+      "cooldownSeconds": 30,
+      "description": "Reaction when OStim started",
+      "enabled": true,
+      "eventCriteria": {
+        "eventType": "tton_event",
+        "schemaConditions": [
+          {
+            "caseSensitive": false,
+            "fieldPath": "tton_type",
+            "operator": "equals",
+            "value": "sex_start"
+          },
+          {
+            "caseSensitive": true,
+            "fieldPath": "skipTrigger",
+            "operator": "equals",
+            "value": false
+          },
+          {
+            "caseSensitive": true,
+            "fieldPath": "speaker",
+            "operator": "not_equals",
+            "value": ""
+          }
+        ]
+      },
+      "inFileEnabled": true,
+      "interrupt": false,
+      "name": "tton_sex_start",
+      "priority": 2,
+      "probability": 1.0,
+      "provenance": {
+        "found": true,
+        "orphan": false,
+        "overrides": false,
+        "path": "triggers/tton_sex_start.yaml",
+        "shadowed": [],
+        "userCopy": false,
+        "winner": {
+          "label": "tetherball88.ostimnet",
+          "pluginId": "tetherball88.ostimnet",
+          "priorityIndex": 16,
+          "source": "external",
+          "title": "OStimNet",
+          "version": "2.5.0"
+        }
+      },
+      "response": {
+        "content": "The encounter begins — {{originator}} reacts, unfiltered, carrying everything that came before.",
+        "type": "direct_narration"
+      }
+    },
+    {
+      "activation": "default",
+      "audience": "nearby_npcs",
+      "cooldownSeconds": 20,
+      "description": "Reaction when scene in OStim was changed",
+      "enabled": true,
+      "eventCriteria": {
+        "eventType": "tton_event",
+        "schemaConditions": [
+          {
+            "caseSensitive": false,
+            "fieldPath": "tton_type",
+            "operator": "equals",
+            "value": "sex_change"
+          },
+          {
+            "caseSensitive": true,
+            "fieldPath": "skipTrigger",
+            "operator": "equals",
+            "value": false
+          },
+          {
+            "caseSensitive": true,
+            "fieldPath": "speaker",
+            "operator": "not_equals",
+            "value": ""
+          }
+        ]
+      },
+      "inFileEnabled": true,
+      "interrupt": false,
+      "name": "tton_sex_position_change",
+      "priority": 1,
+      "probability": 1.0,
+      "provenance": {
+        "found": true,
+        "orphan": false,
+        "overrides": false,
+        "path": "triggers/tton_sex_position_change.yaml",
+        "shadowed": [],
+        "userCopy": false,
+        "winner": {
+          "label": "tetherball88.ostimnet",
+          "pluginId": "tetherball88.ostimnet",
+          "priorityIndex": 16,
+          "source": "external",
+          "title": "OStimNet",
+          "version": "2.5.0"
+        }
+      },
+      "response": {
+        "content": "The position shift lands on {{ originator }} — they let slip their immediate, unfiltered reaction, colored by everything between them in this moment. The emotional thread carries forward.",
+        "type": "direct_narration"
+      }
+    },
+    {
+      "activation": "default",
+      "audience": "nearby_npcs",
+      "cooldownSeconds": 30,
+      "description": "Reaction when a spectator was added to a scene in OStim",
+      "enabled": true,
+      "eventCriteria": {
+        "eventType": "tton_event",
+        "schemaConditions": [
+          {
+            "caseSensitive": false,
+            "fieldPath": "tton_type",
+            "operator": "equals",
+            "value": "spectator_added"
+          },
+          {
+            "caseSensitive": true,
+            "fieldPath": "skipTrigger",
+            "operator": "equals",
+            "value": false
+          },
+          {
+            "caseSensitive": true,
+            "fieldPath": "speaker",
+            "operator": "not_equals",
+            "value": ""
+          }
+        ]
+      },
+      "inFileEnabled": true,
+      "interrupt": false,
+      "name": "tton_spectator_added",
+      "priority": 1,
+      "probability": 1.0,
+      "provenance": {
+        "found": true,
+        "orphan": false,
+        "overrides": false,
+        "path": "triggers/tton_spectator_added.yaml",
+        "shadowed": [],
+        "userCopy": false,
+        "winner": {
+          "label": "tetherball88.ostimnet",
+          "pluginId": "tetherball88.ostimnet",
+          "priorityIndex": 16,
+          "source": "external",
+          "title": "OStimNet",
+          "version": "2.5.0"
+        }
+      },
+      "response": {
+        "content": "{{ originator }} reacts to ongoing intimate scene.",
+        "type": "direct_narration"
+      }
+    },
+    {
+      "activation": "default",
+      "audience": "nearby_npcs",
+      "cooldownSeconds": 20,
+      "description": "Reaction when speed in OStim was changed",
+      "enabled": false,
+      "eventCriteria": {
+        "eventType": "tton_event",
+        "schemaConditions": [
+          {
+            "caseSensitive": false,
+            "fieldPath": "tton_type",
+            "operator": "equals",
+            "value": "sex_pace_change"
+          },
+          {
+            "caseSensitive": true,
+            "fieldPath": "skipTrigger",
+            "operator": "equals",
+            "value": false
+          },
+          {
+            "caseSensitive": true,
+            "fieldPath": "speaker",
+            "operator": "not_equals",
+            "value": ""
+          }
+        ]
+      },
+      "inFileEnabled": false,
+      "interrupt": false,
+      "name": "tton_sex_pace_change",
+      "priority": 1,
+      "probability": 1.0,
+      "provenance": {
+        "found": true,
+        "orphan": false,
+        "overrides": false,
+        "path": "triggers/tton_sex_pace_change.yaml",
+        "shadowed": [],
+        "userCopy": false,
+        "winner": {
+          "label": "tetherball88.ostimnet",
+          "pluginId": "tetherball88.ostimnet",
+          "priorityIndex": 16,
+          "source": "external",
+          "title": "OStimNet",
+          "version": "2.5.0"
+        }
+      },
+      "response": {
+        "content": "The pace shift lands on {{ originator }} — they let slip their immediate, unfiltered reaction, colored by everything between them in this moment. The emotional thread carries forward.",
+        "type": "direct_narration"
+      }
+    },
+    {
+      "activation": "default",
+      "audience": "nearby_npcs",
+      "cooldownSeconds": 30,
+      "description": "Reaction when OStim Ended",
+      "enabled": false,
+      "eventCriteria": {
+        "eventType": "tton_event",
+        "schemaConditions": [
+          {
+            "caseSensitive": false,
+            "fieldPath": "tton_type",
+            "operator": "equals",
+            "value": "sex_stop"
+          },
+          {
+            "caseSensitive": true,
+            "fieldPath": "skipTrigger",
+            "operator": "equals",
+            "value": false
+          },
+          {
+            "caseSensitive": true,
+            "fieldPath": "speaker",
+            "operator": "not_equals",
+            "value": ""
+          }
+        ]
+      },
+      "inFileEnabled": false,
+      "interrupt": false,
+      "name": "tton_sex_stop_comment",
+      "priority": 2,
+      "probability": 1.0,
+      "provenance": {
+        "found": true,
+        "orphan": false,
+        "overrides": false,
+        "path": "triggers/tton_sex_stop_comment.yaml",
+        "shadowed": [],
+        "userCopy": false,
+        "winner": {
+          "label": "tetherball88.ostimnet",
+          "pluginId": "tetherball88.ostimnet",
+          "priorityIndex": 16,
+          "source": "external",
+          "title": "OStimNet",
+          "version": "2.5.0"
+        }
+      },
+      "response": {
+        "content": "{{ originator }} surfaces from it — body settling, mind returning — one honest unguarded thought about how this ended and where they are now.",
+        "type": "direct_narration"
+      }
+    },
+    {
+      "activation": "default",
+      "audience": "nearby_npcs",
+      "cooldownSeconds": 0,
+      "description": "Reaction when OStim Ended",
+      "enabled": false,
+      "eventCriteria": {
+        "eventType": "tton_event",
+        "schemaConditions": [
+          {
+            "caseSensitive": false,
+            "fieldPath": "tton_type",
+            "operator": "equals",
+            "value": "sex_stop"
+          },
+          {
+            "caseSensitive": true,
+            "fieldPath": "skipTrigger",
+            "operator": "equals",
+            "value": false
+          }
+        ]
+      },
+      "inFileEnabled": false,
+      "interrupt": false,
+      "name": "tton_sex_stop_diary",
+      "priority": 1,
+      "probability": 1.0,
+      "provenance": {
+        "found": true,
+        "orphan": false,
+        "overrides": false,
+        "path": "triggers/tton_sex_stop_diary.yaml",
+        "shadowed": [],
+        "userCopy": false,
+        "winner": {
+          "label": "tetherball88.ostimnet",
+          "pluginId": "tetherball88.ostimnet",
+          "priorityIndex": 16,
+          "source": "external",
+          "title": "OStimNet",
+          "version": "2.5.0"
+        }
+      },
+      "response": {
+        "content": "{{ event_json.msg }}",
+        "nearbyRadius": 1100.0,
+        "targetScope": "all_nearby_actors",
+        "type": "diary_entry"
+      }
+    },
+    {
+      "activation": "default",
+      "audience": "nearby_npcs",
+      "cooldownSeconds": 30,
+      "description": "Reaction when a spectator fled the scene in OStim",
+      "enabled": false,
+      "eventCriteria": {
+        "eventType": "tton_event",
+        "schemaConditions": [
+          {
+            "caseSensitive": false,
+            "fieldPath": "tton_type",
+            "operator": "equals",
+            "value": "spectator_fled"
+          },
+          {
+            "caseSensitive": true,
+            "fieldPath": "skipTrigger",
+            "operator": "equals",
+            "value": false
+          },
+          {
+            "caseSensitive": true,
+            "fieldPath": "speaker",
+            "operator": "not_equals",
+            "value": ""
+          }
+        ]
+      },
+      "inFileEnabled": false,
+      "interrupt": false,
+      "name": "tton_spectator_fled",
+      "priority": 1,
+      "probability": 1.0,
+      "provenance": {
+        "found": true,
+        "orphan": false,
+        "overrides": false,
+        "path": "triggers/tton_spectator_fled.yaml",
+        "shadowed": [],
+        "userCopy": false,
+        "winner": {
+          "label": "tetherball88.ostimnet",
+          "pluginId": "tetherball88.ostimnet",
+          "priorityIndex": 16,
+          "source": "external",
+          "title": "OStimNet",
+          "version": "2.5.0"
+        }
+      },
+      "response": {
+        "content": "{{ decnpc(spectatorId).name }} flees from the ongoing intimate scene.",
+        "type": "direct_narration"
+      }
+    }
+  ]
+}

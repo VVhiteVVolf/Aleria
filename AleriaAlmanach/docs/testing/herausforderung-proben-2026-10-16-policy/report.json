@@ -1,0 +1,54 @@
+{
+  "date": "2026-10-16",
+  "publication": {
+    "netlifyDeployments": 0,
+    "firebaseDeployments": 0,
+    "gitPushes": 0,
+    "productionSceneWrites": 0
+  },
+  "rules": {
+    "allowedChecks": "preferredSkills ist bei eigenständigen Herausforderungen die verbindliche Freigabeliste. Nicht freigegebene Proben werden im Formular ausgegraut und serverseitig vor einem Wurf abgewiesen.",
+    "penalties": "checkPenalties: [{checkId,modifier,reason}]; nur erlaubte IDs, genau ein Eintrag pro ID, modifier ganzzahlig −30 bis 0, reason höchstens 240 Zeichen. Der Malus kommt aus der gespeicherten Herausforderung. Kein freier Spielerbonus.",
+    "critical": "Eine natürliche 20/1 behält ihre kritische Ergebnisstufe. Eine unmögliche Handlung muss gesperrt werden, statt nur einen hohen Malus zu erhalten.",
+    "target": "targetActor: {mode:auto|none|selected,actorId,name,persistence}. Feste Zielperson wird serverseitig aus dem echten Bogen gebunden; auto ordnet nur einen eindeutigen Gegner desselben aktiven Duells zu. none gilt für Umgebung/eigene Proben. Bei mehreren Gegnern wird keine Person erraten.",
+    "history": "Vorhandene Würfe, Belohnungen und Live-Ressourcen bleiben erhalten. Bearbeitungen betreffen kommende Versuche."
+  },
+  "tests": {
+    "frontend": 117,
+    "server": 225,
+    "newBrowserChecks": 29,
+    "attributeRegressionBrowserChecks": 18,
+    "desktop": true,
+    "mobileWidths": [
+      390,
+      320
+    ],
+    "errors": [],
+    "scenarios": [
+      "Verhör mit gesperrten Wissensproben",
+      "Flirten mit festem Malus",
+      "Eindeutiges Duell mit automatischer Zielperson",
+      "Mehrere Gegner ohne erratene Zielperson",
+      "Umgebungsprobe ohne Zielperson",
+      "Erlaubnisse und Malus nachbearbeiten",
+      "Attributswurf und Rettungswurf mit eigenen Werten",
+      "Eigene Zielperson ohne doppelte passive Regeln",
+      "Kreaturen mit expliziter und automatisch erkannter Profilquelle",
+      "KI-Export und Import einschließlich Freigaben, Malus und Zielperson",
+      "Manipulierte oder ungültige Proben-/Malusdaten"
+    ]
+  },
+  "generatedFiles": [
+    "firebase/functions/src/generated/herausforderung/herausforderung-model.js",
+    "firebase/functions/src/generated/herausforderung/herausforderung-check-policy.js",
+    "firebase/functions/src/generated/herausforderung/herausforderung-target.js",
+    "firebase/functions/src/generated/skill-checks/skill-resolution-service.js"
+  ],
+  "preview": {
+    "artifacts": "E:\\Aleria\\.codex-temp\\herausforderung\\policy-source\\.codex-temp\\check-policy-browser\\2026-10-16T02-12-43-654Z",
+    "source": "E:\\Aleria\\.codex-temp\\herausforderung\\policy-source\\AleriaAlmanach",
+    "note": "Lokale Testdaten, keine Online-Veröffentlichung.",
+    "url": "http://127.0.0.1:55671/AleriaAlmanach/policy-test.html",
+    "verified": true
+  }
+}

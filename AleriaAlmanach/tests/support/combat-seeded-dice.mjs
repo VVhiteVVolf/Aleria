@@ -1,5 +1,5 @@
 import { randomUUID } from 'node:crypto';
-import { parseDamageFormula, buildDamageNotation } from '../../modules/combat/rules/combat-mvp-rules.js';
+import { buildDamageRollPlan } from '../../modules/combat/rules/combat-mvp-rules.js';
 
 export class SeededCombatDice {
   constructor(seed = 1, fixed = null) { this.seed = seed >>> 0 || 1; this.fixed = fixed; }
@@ -14,10 +14,11 @@ export class SeededCombatDice {
   }
   async rollSavingThrow(request) { return this.rollAttack(request); }
   async rollDamage({ damageFormula, bonus = 0, critical = false }) {
-    const parsed = parseDamageFormula(damageFormula);
-    const dice = (parsed.terms || [parsed]).flatMap(term => Array.from({ length: term.diceCount * (critical ? 2 : 1) }, () => this.die(term.sides)));
-    const modifier = parsed.fixedModifier + bonus;
-    return { id: randomUUID(), notation: buildDamageNotation(damageFormula, bonus, critical),
+    const plan = buildDamageRollPlan(damageFormula, bonus, critical);
+    const dice = plan.terms.flatMap(term => Array.from({ length: term.diceCount }, () => this.die(term.sides)));
+    const modifier = plan.modifier;
+    return { id: randomUUID(), notation: plan.notation,
+      ...(plan.criticalDamage ? { criticalDamage: plan.criticalDamage } : {}),
       dice, keptDice: dice, modifier, total: Math.max(0, dice.reduce((sum, die) => sum + die, 0) + modifier) };
   }
 }

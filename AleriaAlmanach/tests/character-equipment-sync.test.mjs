@@ -15,6 +15,20 @@ function baseProfile(overrides = {}) {
   return { weapons: [], armorItems: [], ...overrides };
 }
 
+test('Waffenprofil und Zweihandwürfel überstehen Inventarübernahme und erneute Bogenanlage', () => {
+  const original = baseProfile({ weapons: [{ id: 'knight-sword', name: 'Ritterschwert',
+    weaponType: 'sword', weaponProfileId: 'sword', damageFormula: '1d8',
+    versatileDamageFormula: '1d10', equipped: true }] });
+  const linked = synchronizeEquipmentFromCombat({ combatProfile: original, characterId: 'knight' });
+  const restored = synchronizeEquipmentFromInventory({ inventory: linked.inventory,
+    combatProfile: baseProfile(), addMissingEquipment: true });
+  assert.equal(restored.combatProfile.weapons.length, 1);
+  assert.equal(restored.combatProfile.weapons[0].weaponProfileId, 'sword');
+  assert.equal(restored.combatProfile.weapons[0].versatileDamageFormula, '1d10');
+  assert.equal(restored.combatProfile.weapons[0].inventoryItemId, linked.inventory.items[0].id);
+  assert.deepEqual(synchronizeEquipmentFromInventory({ ...restored, addMissingEquipment: true }), restored);
+});
+
 test('aufgenommene Ausrüstung wird einmal ergänzt und ihr Ausrüstungszustand zurückgespiegelt', () => {
   const item = { id: 'found', name: 'Gefundene Klinge', category: 'weapon', equipped: false,
     equipmentLink: { kind: 'weapon', combatEntryId: 'found-blade' },

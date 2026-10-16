@@ -1,0 +1,19 @@
+import { renderSkillIcon } from './skill-icon-view.js?v=20261016-check-policy-v1';
+import { getCheckDefinition } from './skill-check-model.js?v=20261016-check-policy-v1';
+
+const escape = value => String(value ?? '').replace(/[&<>"']/g, character => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[character]);
+const signed = value => `${value >= 0 ? '+' : '−'}${Math.abs(value)}`;
+const asset = name => new URL(`../../public/assets/herausforderung/${name}-v1.png`, import.meta.url).href;
+
+export function renderSkillAttemptHeader({ actor, target, targetActor, skillId }) {
+  const skill = getCheckDefinition(skillId);
+  const targetName = targetActor?.name || target?.targetActor?.name || (target?.authorId ? target.authorName : 'Keine feste Zielperson');
+  const portrait = targetActor?.portrait;
+  return `<header class="skill-attempt-header"><img class="skill-attempt-emblem" src="${asset('attempt')}" alt="" width="58" height="58"><div><small>Ein Versuch · eine Probe</small><h3>${escape(target?.title || 'Fertigkeitsversuch')}</h3><p>${escape(target?.approachLabel || target?.visibleText || 'Beschreibe deine Absicht. Die Probe wird beim Eintragen ausgewertet.')}</p></div><span class="skill-attempt-timing">Würfelt erst beim Eintragen</span></header>
+    <div class="skill-attempt-context"><div><span class="skill-attempt-context-icon">${renderSkillIcon(skill)}</span><span><small>Handelnde Figur</small><strong>${escape(actor?.name || 'Zuerst Figur wählen')}</strong><small>${escape(skill?.label || 'Probe wählen')}</small></span></div><span class="skill-attempt-context-arrow" aria-hidden="true">→</span><div data-skill-target-person>${portrait ? `<img class="skill-attempt-target-portrait" src="${escape(portrait)}" alt="" width="48" height="48">` : `<img class="skill-attempt-context-icon" src="${asset('insight')}" alt="" width="48" height="48">`}<span><small>Zielperson${target?.targetInferred ? ' · automatisch zugeordnet' : target?.targetActor?.actorId ? ' · festgelegt' : ''}</small><strong>${escape(targetName)}</strong><small>${target?.authorId ? 'Für diesen Versuch bereits ausgewählt' : 'Eine Situation kann auch ohne Zielperson bestehen.'}</small></span></div></div>`;
+}
+
+export function renderSkillAttemptBreakdown({ actor, profileModifier = 0, ruleModifier = 0, checkRule, totalModifier = 0, difficulty = 10, checkType = 'skill' }) {
+  const sourceLabel = checkType === 'attribute' ? 'Attributswert · ohne Übung' : checkType === 'saving-throw' ? 'Rettungswurf · eigene Ausbildung' : 'Fertigkeitswert · mit Übung';
+  return `<section class="skill-attempt-breakdown" aria-label="Zusammensetzung des Probenwerts"><div class="skill-attempt-breakdown-heading"><img src="${asset('challenge')}" alt="" width="28" height="28"><strong>So setzt sich dein Wurf zusammen</strong><span>Automatisch berechnet</span></div><dl><div><dt>${sourceLabel}</dt><dd>${actor ? signed(profileModifier) : '—'}</dd></div><div><dt>Aktive Regeln</dt><dd>${actor ? signed(ruleModifier) : '—'}</dd></div><div${checkRule?.modifier ? ' class="has-penalty"' : ''}><dt>Festgelegter Malus</dt><dd>${checkRule?.modifier ? signed(checkRule.modifier) : 'Keiner'}</dd></div><div class="skill-attempt-total" data-skill-automatic-value><dt>Dein Probenwurf</dt><dd><output>${actor ? `W20 ${totalModifier >= 0 ? '+' : '−'} ${Math.abs(totalModifier)}` : 'Figur wählen'}</output></dd></div><div><dt>Erfolgsschwelle</dt><dd>SG ${escape(difficulty)}</dd></div></dl>${checkRule?.modifier ? `<p class="skill-attempt-penalty" data-skill-authored-penalty><b>Warum dieser Malus?</b> ${escape(checkRule.reason || 'Für diesen Ansatz vom Ersteller erschwert.')}</p>` : ''}<p class="skill-attempt-explanation">Der Bogenwert enthält die für diese Probe geltenden Attributs-, Ausbildungs- und Zustandswerte. Regeln nach dem Würfeln werden anschließend geprüft. Du kannst hier keinen freien Bonus eintragen.</p></section>`;
+}

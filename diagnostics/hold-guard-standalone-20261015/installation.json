@@ -1,0 +1,184 @@
+{
+  "status": "INSTALLED_STATICALLY_VALIDATED_NOT_GAME_TESTED",
+  "installed_at": "2026-10-15T21:14:28.580226+02:00",
+  "profile": "Nolvus Awakening - SkyrimNet Beta25 Test",
+  "mod": "Local - Hold Guard Armor - Huskarl Standalone 20261015",
+  "plugin": "HoldGuardHuskarlStandalone.esp",
+  "counts": {
+    "full": 252,
+    "light": 3786
+  },
+  "full_slots_free": 2,
+  "recipients": [
+    {
+      "npc": "Iona",
+      "editor_id": "HousecarlRiften",
+      "npc_form": "0x0A2C91~Skyrim.esm",
+      "hold": "Riften",
+      "outfit": "00085C:HoldGuardHuskarlStandalone.esp",
+      "prior_outfit": "skyrim.esm:0FF7E9",
+      "original_steel_shield_retained": true
+    },
+    {
+      "npc": "Calder",
+      "editor_id": "HousecarlWindhelm",
+      "npc_form": "0x0A2C90~Skyrim.esm",
+      "hold": "Eastmarch",
+      "outfit": "00085F:HoldGuardHuskarlStandalone.esp",
+      "prior_outfit": "qnd spid 4th northern god.esp:000800",
+      "original_steel_shield_retained": false
+    },
+    {
+      "npc": "Jordis the Sword-Maiden",
+      "editor_id": "HousecarlSolitude",
+      "npc_form": "0x0A2C8F~Skyrim.esm",
+      "hold": "Solitude",
+      "outfit": "00085A:HoldGuardHuskarlStandalone.esp",
+      "prior_outfit": "skyrim.esm:0FF7E9",
+      "original_steel_shield_retained": true
+    },
+    {
+      "npc": "Lydia",
+      "editor_id": "HousecarlWhiterun",
+      "npc_form": "0x0A2C8E~Skyrim.esm",
+      "hold": "Whiterun",
+      "outfit": "000858:HoldGuardHuskarlStandalone.esp",
+      "prior_outfit": "skyrim.esm:0FF7E9",
+      "original_steel_shield_retained": true
+    },
+    {
+      "npc": "Argis the Bulwark",
+      "editor_id": "HousecarlMarkarth",
+      "npc_form": "0x0A2C8C~Skyrim.esm",
+      "hold": "Markarth",
+      "outfit": "00085E:HoldGuardHuskarlStandalone.esp",
+      "prior_outfit": "tsosrefined.esp:000A12",
+      "original_steel_shield_retained": true
+    },
+    {
+      "npc": "Unmid Snow-Shod",
+      "editor_id": "Unmid",
+      "npc_form": "0x0371D7~Skyrim.esm",
+      "hold": "Riften",
+      "outfit": "00085B:HoldGuardHuskarlStandalone.esp",
+      "prior_outfit": "skyrim.esm:057A23",
+      "original_steel_shield_retained": false
+    },
+    {
+      "npc": "Galmar Stone-Fist",
+      "editor_id": "Galmar",
+      "npc_form": "0x014128~Skyrim.esm",
+      "hold": "Eastmarch",
+      "outfit": "00085F:HoldGuardHuskarlStandalone.esp",
+      "prior_outfit": "skyrim.esm:08CF6B",
+      "original_steel_shield_retained": false
+    },
+    {
+      "npc": "Irileth",
+      "editor_id": "Irileth",
+      "npc_form": "0x013BB8~Skyrim.esm",
+      "hold": "Whiterun",
+      "outfit": "000857:HoldGuardHuskarlStandalone.esp",
+      "prior_outfit": "skyrim.esm:057A2D",
+      "original_steel_shield_retained": false
+    },
+    {
+      "npc": "Helvard",
+      "editor_id": "Helvard",
+      "npc_form": "0x013657~Skyrim.esm",
+      "hold": "Falkreath",
+      "outfit": "000861:HoldGuardHuskarlStandalone.esp",
+      "prior_outfit": "tsosrefined.esp:000AD2",
+      "original_steel_shield_retained": false
+    },
+    {
+      "npc": "Jod",
+      "editor_id": "Jod",
+      "npc_form": "0x013618~Skyrim.esm",
+      "hold": "Pale",
+      "outfit": "000865:HoldGuardHuskarlStandalone.esp",
+      "prior_outfit": "skyrim.esm:0877C6",
+      "original_steel_shield_retained": false
+    },
+    {
+      "npc": "Gorm",
+      "editor_id": "Gorm",
+      "npc_form": "0x0135EA~Skyrim.esm",
+      "hold": "Hjaalmarch",
+      "outfit": "000863:HoldGuardHuskarlStandalone.esp",
+      "prior_outfit": "tsosrefined.esp:000B90",
+      "original_steel_shield_retained": false
+    },
+    {
+      "npc": "Faleen",
+      "editor_id": "Faleen",
+      "npc_form": "0x013397~Skyrim.esm",
+      "hold": "Markarth",
+      "outfit": "00085D:HoldGuardHuskarlStandalone.esp",
+      "prior_outfit": "skyrim.esm:028B44",
+      "original_steel_shield_retained": false
+    },
+    {
+      "npc": "Bolgeir Bearclaw",
+      "editor_id": "BolgeirBearclaw",
+      "npc_form": "0x013264~Skyrim.esm",
+      "hold": "Solitude",
+      "outfit": "000859:HoldGuardHuskarlStandalone.esp",
+      "prior_outfit": "tsosrefined.esp:000B1A",
+      "original_steel_shield_retained": false
+    },
+    {
+      "npc": "Rayya",
+      "editor_id": "BYOHHousecarlFalkreath",
+      "npc_form": "0x005215~HearthFires.esm",
+      "hold": "Falkreath",
+      "outfit": "000861:HoldGuardHuskarlStandalone.esp",
+      "prior_outfit": "qnd spid 4th falconer.esp:000802",
+      "original_steel_shield_retained": false
+    },
+    {
+      "npc": "Valdimar",
+      "editor_id": "BYOHHousecarlHjaalmarch",
+      "npc_form": "0x00521B~HearthFires.esm",
+      "hold": "Hjaalmarch",
+      "outfit": "000863:HoldGuardHuskarlStandalone.esp",
+      "prior_outfit": "goose_mages of skyrim.esp:000840",
+      "original_steel_shield_retained": false
+    },
+    {
+      "npc": "Gregor",
+      "editor_id": "BYOHHousecarlPale",
+      "npc_form": "0x00521E~HearthFires.esm",
+      "hold": "Pale",
+      "outfit": "000866:HoldGuardHuskarlStandalone.esp",
+      "prior_outfit": "skyrim.esm:0FF7E9",
+      "original_steel_shield_retained": true
+    }
+  ],
+  "old_mod_providers_unchanged": true,
+  "protected_files_verified": 5362,
+  "preexisting_master_order_exceptions_unchanged": [
+    [
+      "TAL_ThalmorStart.esp",
+      "AlternatePerspective.esp"
+    ],
+    [
+      "Sanctum of Ithelia - Lux.esp",
+      "Sanctum of Ithelia.esp"
+    ],
+    [
+      "Sanctum of Ithelia - Lux.esp",
+      "Lux.esp"
+    ],
+    [
+      "Local New Followers NPC Compatibility.esp",
+      "Twisted NPC Appearance Integration.esp"
+    ]
+  ],
+  "fingerprint": {
+    "modlist.txt": "9167fd0dfc479bac71f1374bdaf90816a23bb76699afa1a3477f35f14c5e3759",
+    "plugins.txt": "86778d684f50f61bedba364159cab3e6b3e92bf499d49e06586919ff1cb35150",
+    "loadorder.txt": "c2dad66439c02939afbfc93ad9b966f6629a3bb1006dfe06ddd2f382a2f70de2"
+  },
+  "game_tested": false
+}

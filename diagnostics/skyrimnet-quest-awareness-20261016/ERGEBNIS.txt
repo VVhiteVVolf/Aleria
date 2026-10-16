@@ -1,0 +1,67 @@
+Stille, gefilterte Questerfassung – 16.10.2026
+
+Installiert im persönlichen SkyrimNet-Overlay:
+triggers/local_meaningful_quest_journal.yaml
+Aktuelle Runtime-Konfiguration: config/Events.yaml.
+
+quest_objective_state ist nun aktiviert, aber seine ungefilterten Ereignisse
+werden weder dauerhaft gespeichert noch als kurzzeitiger Szenenkontext oder
+für automatische NPC-Reaktionen verwendet. Der native Ereignistyp ist ohnehin
+ephemer. Ein zusätzlicher lokaler Trigger speichert nur passende Ereignisse
+als persistent_generic mit Publikum player. Kein LLM-Aufruf für die Formulierung,
+keine neue gesprochene Reaktion und keine Unterbrechung durch diesen Trigger.
+Bestehende Hintergrund-Memory-Prozesse können gespeicherte Ereignisse später
+wie andere Verlaufseinträge berücksichtigen; Kostenfreiheit aller Folgeprozesse
+wird damit nicht behauptet.
+
+Filter:
+- Neues angezeigtes Ziel, sofern der vorherige Zustand nicht schon Displayed war.
+- Abschluss oder Scheitern eines vorher angezeigten Ziels.
+- Questname und Zieltext dürfen nicht leer sein.
+- Nicht aufgelöste <Alias...>-Ziele werden verworfen.
+- Nicht aktive Ziele, die intern von Dormant auf Failed/Completed wechseln,
+  sowie bloßes Ausblenden bereits abgeschlossener Ziele werden verworfen.
+- Kein globaler Cooldown: Ein Zielabschluss und das folgende neue Ziel dürfen
+  unmittelbar nacheinander gespeichert werden.
+
+Wissen bleibt als Journalzustand des Spielers markiert, nicht als etwas,
+das jeder NPC gesehen hat. Trigger-Publikum ist ausschließlich player.
+Die ungefilterten quest_stage- und quest_start_stop-Ereignisse bleiben aus.
+Questdialog-Aktionen, Modelle, Prompts und alle anderen Events unverändert.
+
+Prüfung:
+13 künstliche Zustands-/Textfälle bestanden; keine Ereignisse ins Spiel emittiert.
+Native YAML-Parser-Prüfung und 10 native Bedingungsvalidierungen erfolgreich.
+Die Plugin-Hub-Gesamtvalidierung ist dashboard-exklusiv (403); stattdessen
+wurden die zugänglichen lokalen Parser-/Bedingungsprüfungen verwendet.
+Trigger wird von TriggerManager ausdrücklich aus dem Overlay geladen.
+API-Rücklesen bestätigt OR zwischen zwei Regeln, implizites AND je Regel,
+alle Bedingungen, Antworttyp, Publikum, fehlende Unterbrechung und Cooldown 0.
+Event-API ordnet beim Serialisieren Einträge neu; nach Vergleich anhand der
+event_type-Schlüssel wurde ausschließlich quest_objective_state geändert.
+
+Abgleich mit 40 früheren Rohereignissen: 6 wären gespeichert, 34 verworfen.
+Dieser Abgleich führte keine alten Ereignisse erneut aus und trug nichts
+nachträglich in den Verlauf ein.
+Ein tatsächliches neues Ziel nach Aktivierung muss die vollständige Kette
+Filter -> persistenter Verlauf noch im normalen Spiel bestätigen.
+
+Neuer positiver QUEST-AKTIONSTEST während der Prüfung:
+02:26:41.344: Balimund -> TriggerDialogueLine, form_id 0001362B.
+02:26:42.234: [QUEST-TIF] src=action, FreeformRiften10, TIF__0001362B.
+02:26:42.370: Stoking the Flames erreicht tatsächlich Stage 20.
+02:26:42.721: Ziel Bring 10 fire salts to Balimund wird Displayed.
+Damit ist erstmals auch ein echter SkyrimNet-gesteuerter Queststart nach der
+Umstellung auf getrennte Aktionsauswertung belegt. Dieser Erfolg liegt vor
+Aktivierung des neuen Journalfilters und ist nicht diesem zuzuschreiben.
+Der erfundene Gilden-Partnerschaftsauftrag ist davon zu unterscheiden.
+
+Sicherung: Events.yaml vorher/nachher und neuer Trigger im ergänzenden privaten
+Migrationspaket. Bei späterer Übernahme Events nach Typ abgleichen, nicht
+pauschal über neuere Nutzereinstellungen kopieren. Zurücknehmen: Trigger
+deaktivieren und nur die frühere quest_objective_state-Zeile wiederherstellen.
+
+Quellen:
+https://github.com/MinLL/SkyrimNet-GamePlugin/blob/main/docs/modding/WORKFLOW_TRIGGERS.md
+Die tatsächlichen Feldnamen und Zustände wurden gegen die lokale API und die
+konkreten geloggten Ereignisse geprüft.

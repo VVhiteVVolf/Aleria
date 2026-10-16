@@ -1,0 +1,46 @@
+{
+  "format": "# Response Format\nNo headers or labels in your output\u2014just the response itself.\nSpeak in your natural voice. Respond with your own thoughts, not echoes of what was said.\n- No narration, asterisks, or action descriptions\nNever emit <thinking> or other reasoning tags. Output only the in-character text.\nEach response must advance the conversation\u2014new question, detail, realization, or decision.\n## Voice Performance Tags\nUse natural language [square bracket tags] to direct vocal performance, before spoken text.\nStart tags with a vocal verb such as say, whisper or shout. Non-verbal sounds include [sigh], [gasp], [grunt].\nNo narration or asterisks\u2014spoken words only.\n",
+  "rubric": "## Actions Available\nAfter your dialogue you may add ONE action on its own line. Most lines need none. Write your dialogue first, then the action line.\nAction Format:\n- ACTION: ActionName \u2014 an action with no parameters\n- ACTION: ActionName PARAMS: {\"param\": \"value\"} \u2014 use exactly the keys shown\n- ACTION: CategoryName PARAMS: {\"intent\": \"what you are doing, to whom, and why now\"} \u2014 category intent required\n- Use each name exactly as listed. No ACTION line when nothing is happening right now.\nExecution consistency:\n- When you accept a transfer of gold/items now, agree to stop following or wait now, or reach a real quest turning point with an eligible action, include exactly ONE matching ACTION line. A spoken agreement alone does not execute it.\n- Use only eligible names and parameter keys below. Category intents preserve who pays whom and the actual amount.\n- If no eligible action can perform the request, explain the limitation instead of claiming it happened.\n- Previous spoken claims are not proof of execution. Never repeat recorded successful payments.\nAvailable Actions:\n- Economy PARAMS: {\"intent\":\"string\"} \u2014 Category: money changing hands right now; paying or collecting coin, agreed buying/selling, gifts and rewards. Merely quoting a price or discussing payment needs no action.\n- Items PARAMS: {\"intent\":\"string\"} \u2014 Category: give or take an item right now, excluding coin and sales.\n- Companionship PARAMS: {\"intent\":\"string\"} \u2014 Category: join the player, wait here, resume following, dismiss a companion or stop accompanying the player.\n- Travel PARAMS: {\"intent\":\"string\"} \u2014 Category: go to another destination or cancel a travel task. Do not use for following or dismissing a companion.\n- TriggerDialogueLine PARAMS: {\"form_id\":\"8 hex characters\"} \u2014 Execute an explicitly available quest dialogue exchange. Use only the bracketed code shown in the quest context, without brackets.\nWhen to act:\n- An action is something you do or settle right now, in the line you just spoke: you agree, obey an order, or decide now.\n- Plans for later, hypotheticals, stories and questions need no action. An accepted immediate exchange does.\n- Do not repeat what already happened. Categories require concrete intent with sender, recipient, item or amount.\n",
+  "clarification": "\nFINAL OUTPUT CONTRACT \u2014 applies after all voice/style rules above:\nThe spoken-words-only/no-label rules apply ONLY to the spoken dialogue, not to the machine action footer.\nIf you agree to perform an eligible action now, output the spoken reply, then a newline and exactly ONE plain ACTION: line.\nThe action line must begin at column 1 with ACTION:. Never wrap it in brackets, quotes, Markdown or code fences. Never put voice tags on it.\nAgreement or a claim in dialogue does not execute anything; an accepted immediate transfer, dismissal or quest transition requires its matching footer.\nFor a category, include PARAMS: {\"intent\":\"specific immediate action and participants\"}. For TriggerDialogueLine, include the exact listed form_id.\nWhen no action is appropriate, output dialogue only. Do not invent actions or trigger actions merely to satisfy this format.\n",
+  "cases": [
+    {
+      "id": "pay_reward",
+      "context": "Elin owes Aldo an agreed reward of 50 gold. Elin has 200 gold; Aldo has completed the work. Elin is willing to pay now. No payment has occurred.",
+      "player": "The work is done. Give me the agreed 50 gold now, please.",
+      "allowed": [
+        "Economy"
+      ]
+    },
+    {
+      "id": "dismiss",
+      "context": "Elin is currently accompanying Aldo as his companion. She is willing to leave peacefully. No dismissal has occurred.",
+      "player": "Stop following me now. We are parting ways; go back to your own life.",
+      "allowed": [
+        "Companionship"
+      ]
+    },
+    {
+      "id": "quest_accept",
+      "context": "Quest: The Missing Ledger. Elin offers Aldo a job recovering her ledger. Available dialogue exchange [FE123ABC]: Player accepts the job; Elin gives directions and the engine starts the quest. This exchange has not fired. Elin wants Aldo to accept.",
+      "player": "Yes, I accept the job of recovering your ledger. Tell me where to begin.",
+      "allowed": [
+        "TriggerDialogueLine"
+      ]
+    },
+    {
+      "id": "conversation_only",
+      "context": "Elin and Aldo are resting under a roof during rain. Neither has requested any task, trade, journey or quest advancement.",
+      "player": "Do you like listening to rain?",
+      "allowed": []
+    }
+  ],
+  "models": [
+    "google/gemma-4-31b-it",
+    "google/gemma-4-26b-a4b-it",
+    "qwen/qwen3-235b-a22b-2507",
+    "deepseek/deepseek-v4-flash-0731",
+    "z-ai/glm-4.7"
+  ],
+  "request_count": 40,
+  "conservative_usd_ceiling": 0.04336586904
+}

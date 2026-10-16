@@ -4,7 +4,7 @@
   "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
   "sourceExportedAt": "2026-10-14T22:04:14.066Z",
   "summary": {
-    "sourceDocuments": 374,
+    "sourceDocuments": 373,
     "total": 238,
     "mergedSameNameGroups": 45,
     "familyLinked": 160,
@@ -1528,6 +1528,38 @@
         "ujMjNxdOs1pnR2jGNus4"
       ],
       "note": "Pompösa und Roisin ergänzt; bestehende Tierbesitzer verknüpft; Uffel ist besitzerloser Bordkater. Kampfprofile und übrige Figuren unverändert."
+    },
+    {
+      "sourceArchives": [
+        "Charakter Archiv Exporte/gethin-draig-zuordnung-2026-10-14.json",
+        "Charakter Archiv Exporte/gethin-altbestand-2026-10-14.json"
+      ],
+      "exportedAt": "2026-10-14T10:38:18.880Z",
+      "characterIds": [
+        "person--haus-draig--gethin-1722-draig",
+        "6atOllMA637Z2VNAZAxf"
+      ],
+      "note": "Gethin Draigs aktueller Bogen bleibt maßgeblich. Altbestand archiviert, Vivian umverknüpft, Ausrüstung mit Inventar/Register synchronisiert. Historische Beiträge unverändert."
+    },
+    {
+      "sourceArchives": [
+        "Charakter Archiv Exporte/gefaehrten/argent-2026-10-14/armel-inventar-und-reittier.json"
+      ],
+      "exportedAt": "2026-10-14T10:56:59.104Z",
+      "characterIds": [
+        "person--haus-balchder--armel-balchder"
+      ],
+      "note": "Argent als Herzogsschimmer mit Armel Balchders Inventar und Reittier-Biografie verknüpft. Andere Figuren und alle Kampfdaten unverändert."
+    },
+    {
+      "sourceArchives": [
+        "Charakter Archiv Exporte/gefaehrten/astrid-2026-10-14/skalli-inventar.json"
+      ],
+      "exportedAt": "2026-10-14T11:36:14.204Z",
+      "characterIds": [
+        "person--haus-varulv--skalli-varulv"
+      ],
+      "note": "Astrid als Roh-Rhyfel mit Skalli Varulvs Inventar verknüpft. Benannt nach Astrid Varulv, die 1627 bei ihrer Hochzeit mit Roger Vaeren vergiftet wurde. Alle übrigen Figuren und Kampfdaten erhalten."
     },
     {
       "release": "martial-control-2026-10-15",

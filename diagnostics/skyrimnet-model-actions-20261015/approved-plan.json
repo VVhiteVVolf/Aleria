@@ -1,0 +1,26 @@
+{
+  "dialogue_model": "google/gemma-4-26b-a4b-it",
+  "action_model": "google/gemma-4-31b-it",
+  "preserved_inherited_background_models": [
+    "narrative_engine_composer",
+    "narrative_engine_director"
+  ],
+  "changes": [
+    {
+      "target": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\SkyrimNet - Beta25 Test Runtime 20260927\\SKSE\\Plugins\\SkyrimNet\\config\\OpenRouter.yaml",
+      "relative": "SKSE/Plugins/SkyrimNet/config/OpenRouter.yaml",
+      "staged": "E:\\Aleria\\diagnostics\\skyrimnet-model-actions-20261015\\approved-stage\\SKSE\\Plugins\\SkyrimNet\\config\\OpenRouter.yaml",
+      "before_sha256": "f33c02edfded3526d09b0cf69a00cf0d51cd22a5f6a4a8f345b579498aa11798",
+      "after_sha256": "561dc821c18dde006086ca457d9bd7a7db2aede63d2ece3815a3a1f4c8ce7261",
+      "reason": "Use one approved dialogue model; retain action model and other effective variant choices"
+    },
+    {
+      "target": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\SkyrimNet - Beta25 Test Runtime 20260927\\SKSE\\Plugins\\SkyrimNet\\overlay\\prompts\\submodules\\user_final_instructions\\0750_embedded_actions.prompt",
+      "relative": "SKSE/Plugins/SkyrimNet/overlay/prompts/submodules/user_final_instructions/0750_embedded_actions.prompt",
+      "staged": "E:\\Aleria\\diagnostics\\skyrimnet-model-actions-20261015\\approved-stage\\SKSE\\Plugins\\SkyrimNet\\overlay\\prompts\\submodules\\user_final_instructions\\0750_embedded_actions.prompt",
+      "before_sha256": "cd295e2ec082cd5a6089f9c59a12ce0a05a7f5ec371d4232c1c37481c0e26800",
+      "after_sha256": "803b4eca9fe0f71b041c650f6dc2a59389b5cba51b1d9cd5a64c5ca5ea23c6e1",
+      "reason": "Scope speech formatting separately from the machine action footer; preserve eligibility and personal additions"
+    }
+  ]
+}

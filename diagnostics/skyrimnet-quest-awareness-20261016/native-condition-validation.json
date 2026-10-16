@@ -1,0 +1,112 @@
+[
+  {
+    "condition": {
+      "fieldPath": "quest",
+      "operator": "regex",
+      "value": "\\S",
+      "caseSensitive": true
+    },
+    "result": {
+      "valid": true
+    }
+  },
+  {
+    "condition": {
+      "fieldPath": "objective",
+      "operator": "regex",
+      "value": "\\S",
+      "caseSensitive": true
+    },
+    "result": {
+      "valid": true
+    }
+  },
+  {
+    "condition": {
+      "fieldPath": "objective",
+      "operator": "not_contains",
+      "value": "<Alias",
+      "caseSensitive": true
+    },
+    "result": {
+      "valid": true
+    }
+  },
+  {
+    "condition": {
+      "fieldPath": "new_state",
+      "operator": "equals",
+      "value": "Displayed",
+      "caseSensitive": true
+    },
+    "result": {
+      "valid": true
+    }
+  },
+  {
+    "condition": {
+      "fieldPath": "old_state",
+      "operator": "not_equals",
+      "value": "Displayed",
+      "caseSensitive": true
+    },
+    "result": {
+      "valid": true
+    }
+  },
+  {
+    "condition": {
+      "fieldPath": "quest",
+      "operator": "regex",
+      "value": "\\S",
+      "caseSensitive": true
+    },
+    "result": {
+      "valid": true
+    }
+  },
+  {
+    "condition": {
+      "fieldPath": "objective",
+      "operator": "regex",
+      "value": "\\S",
+      "caseSensitive": true
+    },
+    "result": {
+      "valid": true
+    }
+  },
+  {
+    "condition": {
+      "fieldPath": "objective",
+      "operator": "not_contains",
+      "value": "<Alias",
+      "caseSensitive": true
+    },
+    "result": {
+      "valid": true
+    }
+  },
+  {
+    "condition": {
+      "fieldPath": "old_state",
+      "operator": "equals",
+      "value": "Displayed",
+      "caseSensitive": true
+    },
+    "result": {
+      "valid": true
+    }
+  },
+  {
+    "condition": {
+      "fieldPath": "new_state",
+      "operator": "regex",
+      "value": "^(Completed|CompletedDisplayed|Failed|FailedDisplayed)$",
+      "caseSensitive": true
+    },
+    "result": {
+      "valid": true
+    }
+  }
+]

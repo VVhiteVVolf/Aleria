@@ -40,14 +40,20 @@ export function parseDamageFormula(value) {
   };
 }
 
-export function buildDamageNotation(damageFormula, bonus = 0, critical = false) {
+export function buildDamageRollPlan(damageFormula, bonus = 0, critical = false) {
   const parsed = parseDamageFormula(damageFormula);
   const terms = parsed.terms || [{ diceCount: parsed.diceCount, sides: parsed.sides }];
-  const modifier = parsed.fixedModifier + (Number(bonus) || 0);
-  const diceNotation = terms
-    .map(term => `${critical ? term.diceCount * 2 : term.diceCount}d${term.sides}`)
-    .join('+');
-  return `${diceNotation}${modifier === 0 ? '' : `${modifier > 0 ? '+' : ''}${modifier}`}`;
+  const fixedBonus = parsed.fixedModifier + (Number(bonus) || 0);
+  const maximum = critical ? terms.reduce((sum, term) => sum + term.diceCount * term.sides, 0) : 0;
+  const modifier = fixedBonus + maximum;
+  const diceNotation = terms.map(term => `${term.diceCount}d${term.sides}`).join('+');
+  return { terms, modifier, notation: `${diceNotation}${modifier === 0 ? '' : `${modifier > 0 ? '+' : ''}${modifier}`}`,
+    ...(critical ? { criticalDamage: { version: 1, rule: 'maximum-plus-roll', maximum, fixedBonus,
+      maximizedFormula: diceNotation, rolledFormula: diceNotation } } : {}) };
+}
+
+export function buildDamageNotation(damageFormula, bonus = 0, critical = false) {
+  return buildDamageRollPlan(damageFormula, bonus, critical).notation;
 }
 
 export function formatDamageFormula(terms, fixedModifier = 0) {

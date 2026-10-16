@@ -1,0 +1,41 @@
+name: FindClosestWater
+description: "Take stock of where the nearest water is — a pond, a river, a bath house pool — how far away it is and whether there is a clear way to reach it. This does NOT move you anywhere; it only tells you what is around, so you know your options and can mention them to others. Choose it whenever knowing where water is would matter: wanting to wash, needing a drink, planning a route. Pointless if you are already standing in water."
+questEditorId: SADirt_BridgeQuest
+scriptName: SADirt_Bridge
+executionFunctionName: SeekWaterNow
+parameterMapping:
+  - type: speaker
+    name: akActor
+    description: the one looking around for water
+eventString: "{{ actor.name }} pauses and looks around, taking stock of where the nearest water is."
+defaultPriority: 6
+enabled: true
+eligibilityRules:
+  - conditions:
+      - decoratorName: "is_in_combat"
+        arguments: ["currentActor"]
+        comparisonOperator: "=="
+        expectedValue: false
+    logicalOperator: "AND"
+    required: true
+  - conditions:
+      - decoratorName: "get_faction_rank"
+        arguments: ["currentActor", "SexLabAnimatingFaction"]
+        comparisonOperator: "<"
+        expectedValue: 0
+    logicalOperator: "AND"
+    required: true
+  - conditions:
+      - decoratorName: "get_faction_rank"
+        arguments: ["currentActor", "OStimExcitementFaction"]
+        comparisonOperator: "<"
+        expectedValue: 0
+    logicalOperator: "AND"
+    required: true
+  - conditions:
+      - decoratorName: "get_actor_value"
+        arguments: ["currentActor", "Variable04"]
+        comparisonOperator: "<"
+        expectedValue: 1
+    logicalOperator: "AND"
+    required: true

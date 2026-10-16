@@ -1,0 +1,10 @@
+{
+  "status": "COMPILED_CANDIDATE_NOT_GAME_TESTED",
+  "upstream_tag": "vbeta25.1-rc2",
+  "upstream_source_sha256": "3a01c19b071006edc3424e35b7274a7a665cc49079bd730a9b302338accc3497",
+  "candidate_pex_sha256": "4fa12f79c598af8c0018a3a8d3fba8c87bd73c27cf43118bc84abd705af26983",
+  "scope": [
+    "wait for power key release and IsShouting=false",
+    "bounded UIExtensions-to-PrismaUI chat handoff"
+  ]
+}

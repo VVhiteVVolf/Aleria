@@ -46,8 +46,8 @@ for (const [id, baseGrade, formulas, averages, notations] of damageSpells) {
       assert.equal(getCombatDamagePreview(actor).notation, notations[index].replaceAll('W', 'd'));
       assert.equal(getCombatDisplayStats(actor).damage, notations[index]);
       const markup = renderMagicValueStrip(actor);
-      assert.ok(markup.includes(`<span>Schaden</span><strong>${notations[index]}</strong>`));
-      assert.ok(markup.includes(`<span>Ø Schaden</span><strong>${averages[index].toLocaleString('de-DE')}</strong>`));
+      assert.ok(markup.includes(`Schaden</span><strong>${notations[index]}</strong>`));
+      assert.ok(markup.includes(`Ø Schaden</span><strong>${averages[index].toLocaleString('de-DE')}</strong>`));
       assert.ok(markup.includes(`<small>${actor.selectedAction.effects[0].damageType} · Schadensmod. +5</small>`));
       assert.doesNotMatch(markup, /<details/);
 

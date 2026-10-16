@@ -16,7 +16,7 @@ export const ARMEL_BALCHDER_BIOGRAPHY = {
     { label: 'Rittervater', value: 'Dalvin Balchder · Großvater und Vorbild' },
     { label: 'Tätigkeit', value: 'Geschäftspartner und informeller Vermögensverwalter Tudwal Draigs' },
     { label: 'Zukunft', value: 'Angehender Vogt · möglicherweise im Dienst von Haus Draig' },
-    { label: 'Reittier', value: 'Herzogsschimmer' }
+    { label: 'Reittier', value: 'Argent · Herzogsschimmer' }
   ],
   quote: 'Natürlich könnt Ihr Euch das leisten. Ich rechne nur nach, ob Ihr es Euch auch zweimal leisten könnt.',
   quoteBy: 'Armel Balchder zu Tudwal Draig',
@@ -86,7 +86,7 @@ export const ARMEL_BALCHDER_BIOGRAPHY = {
         title: 'Ein Herzogsschimmer für einen Mann mit Geschmack',
         position: 'afterWorks',
         mode: 'text',
-        text: '<p>Armel reitet einen <strong>Herzogsschimmer</strong>. Sein Pferd ist gut, edel und nicht übermäßig verspielt. Es passt zu einem Reiter, der zuverlässig ankommen, dabei ordentlich aussehen und sich anschließend wieder seinen eigentlichen Aufgaben widmen möchte.</p><p>Ganz ohne Eitelkeit ist diese Wahl allerdings nicht getroffen. Der Herzogsschimmer besitzt genügend Glanz, dass Armel ihn mit erkennbarem Vergnügen vorzeigen kann. Er schätzt den praktischen Nutzen und freut sich zugleich darüber, wenn jemand die Qualität bemerkt. Aus dem edlen Ross lässt sich nur kein besonderes Interesse seines Besitzers an ritterlichen Kämpfen ableiten.</p>'
+        text: '<p>Armel reitet <strong>Argent</strong>, einen <strong>Herzogsschimmer</strong>. Sein Pferd ist gut, edel und nicht übermäßig verspielt. Es passt zu einem Reiter, der zuverlässig ankommen, dabei ordentlich aussehen und sich anschließend wieder seinen eigentlichen Aufgaben widmen möchte.</p><p>Argents mattes schwarzes Fell wird an den unteren Beinen silbern; die Hufe glänzen silbrig. Seine voluminöse silberne Mähne geht zu den Spitzen in Weiß über. Der edle Sattel trägt das Balchder-Emblem.</p><p>Ganz ohne Eitelkeit ist diese Wahl allerdings nicht getroffen. Der Herzogsschimmer besitzt genügend Glanz, dass Armel ihn mit erkennbarem Vergnügen vorzeigen kann. Er schätzt den praktischen Nutzen und freut sich zugleich darüber, wenn jemand die Qualität bemerkt. Aus dem edlen Ross lässt sich nur kein besonderes Interesse seines Besitzers an ritterlichen Kämpfen ableiten.</p>'
       }
     ],
     triviaTitle: 'Marotten & Eigenarten',
@@ -114,7 +114,7 @@ export const ARMEL_BALCHDER_BIOGRAPHY = {
     documentsTitle: 'Haus & Reittier',
     documents: [
       { title: 'Haus Balchder', icon: '../Stammbäume/assets/images/houses/Llamreis%20Ankunft/haus-balchder.png', link: '../Stammbäume/Stammbaum.html?family=haus-balchder&mode=view&person=armel-balchder', text: 'Seine Familie, Dalvins Vorbild und die Schule, in der Armel sein wirtschaftliches Handwerk erlernte.' },
-      { title: 'Herzogsschimmer', icon: '../Bestiarium/assets/icons/pferde.webp', link: '../Bestiarium/tiere/pferde/herzogsschimmer/index.html', text: 'Die edle Pferderasse seines Reittiers im Bestiarium.' }
+      { title: 'Argent · Herzogsschimmer', icon: '../Bestiarium/assets/icons/pferde.webp', link: '../Bestiarium/tiere/pferde/herzogsschimmer/index.html', text: 'Die edle Pferderasse seines Reittiers Argent im Bestiarium.' }
     ],
     footer: 'Personenakte · Sir Armel Balchder · Haus Balchder'
   }

@@ -1,0 +1,116 @@
+{
+  "config_path": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\SkyrimNet - Beta25 Test Runtime 20260927\\SKSE\\Plugins\\SkyrimNet\\config\\Inworld.yaml",
+  "model": "inworld-tts-2",
+  "cache_max_voices": 80,
+  "cached_entries": 96,
+  "distinct_cached_keys": 96,
+  "max_parallel_requests": 2,
+  "max_retries": 1,
+  "checked_at": "2026-10-05T15:04:49.069530+00:00",
+  "mutations": false,
+  "api_status": 200,
+  "response_keys": [
+    "voices",
+    "nextPageToken",
+    "totalSize"
+  ],
+  "remote_voice_count_on_page": 338,
+  "has_next_page": false,
+  "voice_field_names": [
+    "name",
+    "langCode",
+    "displayName",
+    "description",
+    "tags",
+    "voiceId",
+    "source",
+    "ageGroup",
+    "gender",
+    "categories",
+    "promptLanguages",
+    "viewerState",
+    "owned",
+    "sharing",
+    "languageCode",
+    "localizations",
+    "workspaceTags",
+    "voiceVariants"
+  ],
+  "owned_voice_count": 63,
+  "skyrimnet_managed_voice_count": 63,
+  "managed_voices_matching_local_cache": 59,
+  "managed_voices_not_in_local_cache": [
+    {
+      "displayName": "femaleuniqueghost_en_us",
+      "voiceId": "default-jylzoxa0rvdbj-r7zzdrpa__femaleuniqueghost_en_us"
+    },
+    {
+      "displayName": "malebrutealt_en_us",
+      "voiceId": "default-jylzoxa0rvdbj-r7zzdrpa__malebrutealt_en_us"
+    },
+    {
+      "displayName": "malenordaltfour_en_us",
+      "voiceId": "default-jylzoxa0rvdbj-r7zzdrpa__malenordaltfour_en_us"
+    },
+    {
+      "displayName": "malenordcommalt_en_us",
+      "voiceId": "default-jylzoxa0rvdbj-r7zzdrpa__malenordcommalt_en_us"
+    }
+  ],
+  "source_counts": {
+    "IVC": 63,
+    "SYSTEM": 275
+  },
+  "voice_names_sample": [
+    {
+      "name": "workspaces/default-jylzoxa0rvdbj-r7zzdrpa/voices/000virtrandvoicetype_en_us",
+      "voiceId": "default-jylzoxa0rvdbj-r7zzdrpa__000virtrandvoicetype_en_us",
+      "displayName": "000virtrandvoicetype_en_us",
+      "description": "skyrimnet_md5=16e15d2382944a9784302e24124aacea skyrimnet_voice_key=000virtrandvoicetype skyrimnet_lang=EN_US",
+      "source": "IVC",
+      "owned": true,
+      "langCode": "EN_US",
+      "languageCode": "en-US"
+    },
+    {
+      "name": "Aanya",
+      "voiceId": "Aanya",
+      "displayName": "Aanya",
+      "description": "A professional adult female with a clear, formal, and authoritative voice, speaking Hindi in a studio environment.",
+      "source": "SYSTEM",
+      "owned": false,
+      "langCode": "HI_IN",
+      "languageCode": "hi-IN"
+    },
+    {
+      "name": "Aarav",
+      "voiceId": "Aarav",
+      "displayName": "Aarav",
+      "description": "A thoughtful adult male with an Indian accent speaking earnestly in a room with some background hum.",
+      "source": "SYSTEM",
+      "owned": false,
+      "langCode": "HI_IN",
+      "languageCode": "hi-IN"
+    },
+    {
+      "name": "Abby",
+      "voiceId": "Abby",
+      "displayName": "Abby",
+      "description": "Bright, eager American female child voice, ideal for animated characters, upbeat educational content, and lively kids' commercials.",
+      "source": "SYSTEM",
+      "owned": false,
+      "langCode": "EN_US",
+      "languageCode": "en-US"
+    },
+    {
+      "name": "Aditya",
+      "voiceId": "Aditya",
+      "displayName": "Aditya",
+      "description": "Confident, natural Indian male voice, ideal for customer support, corporate, and education.",
+      "source": "SYSTEM",
+      "owned": false,
+      "langCode": "EN_IN",
+      "languageCode": "en-IN"
+    }
+  ]
+}

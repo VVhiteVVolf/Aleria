@@ -23,6 +23,8 @@ import { applyHerausforderungRewardToAttempt, herausforderungEffectClaimId } fro
 import { challengeCombatDescriptors, stageHerausforderungCombatBenefits } from './herausforderung-combat-effects.js';
 import { getChallengeCombatBindingError } from '../generated/herausforderung/herausforderung-combat-context.js';
 import { getActiveCombatEncounter } from '../generated/combat/combat-encounter-model.js';
+import { withResolvedChallengeTarget } from '../generated/herausforderung/herausforderung-target.js';
+import { getChallengeCheckRule } from '../generated/herausforderung/herausforderung-check-policy.js';
 
 const RECORD_KINDS = new Set(['character', 'creature']);
 
@@ -139,7 +141,7 @@ export async function validateSkillCommentSegments({
       persistence: normalizePersistence(entry.submitted.actorPersistence, entry.submitted.actorId)
     };
     const challengeId = clean(entry.segment.skillTargetChallengeId || entry.submitted.targetChallengeId, 120);
-    const challenge = challengeById.get(challengeId);
+    const challenge = withResolvedChallengeTarget(challengeById.get(challengeId), { encounter, actorId: actor.actorId });
     const target = challenge?.authorPersistence?.recordId || challenge?.authorPersistence?.sourceCreatureId
       ? [{
           role: 'target',
@@ -187,11 +189,13 @@ export async function validateSkillCommentSegments({
     if (!allowed.some(skill => skill.id === settings.skillId)) {
       fail('failed-precondition', 'Die Fertigkeit passt nicht zur gewählten Blase.');
     }
-    const challenge = settings.targetChallengeId
+    const unresolvedChallenge = settings.targetChallengeId
       ? challenges.find(item => item.id === settings.targetChallengeId && !revealed.has(item.id))
       : null;
+    const challenge = withResolvedChallengeTarget(unresolvedChallenge, { encounter, actorId: actorDescriptor.actorId });
     if (settings.targetChallengeId && !challenge) fail('failed-precondition', 'Die verdeckte Herausforderung ist nicht mehr auflösbar.');
-    if (challenge && (String(challenge.authorId) === String(actorDescriptor.actorId)
+    if (!getChallengeCheckRule(challenge, settings.skillId).allowed) fail('failed-precondition', 'Diese Probe ist für den gewählten Lösungsweg gesperrt.');
+    if (challenge && challenge.source !== 'herausforderung' && (String(challenge.authorId) === String(actorDescriptor.actorId)
       || (challenge.createdBy && String(challenge.createdBy) === String(request.auth?.uid || '')))) {
       fail('failed-precondition', 'Die eigene verdeckte Herausforderung kann nicht selbst untersucht werden.');
     }
@@ -232,7 +236,7 @@ export async function validateSkillCommentSegments({
       selectedRuleIds: [],
       persistence: actorDescriptor.persistence
     }];
-    if (targetProfile) sources.push({
+    if (targetProfile && targetDescriptor.actorId !== actorDescriptor.actorId) sources.push({
       actorId: targetProfile.characterId,
       actorName: targetProfile.name,
       profile: targetProfile,

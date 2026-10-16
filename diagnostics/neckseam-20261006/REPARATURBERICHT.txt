@@ -1,0 +1,11 @@
+Hals- und Knoechelkanten repariert: 6. Oktober 2026
+
+Ursache: Das gemeinsame Null-Preset sammelte Reglernamen projektuebergreifend. NeckSeam und AnkleSize waren in manchen Projekten sichtbar, in anderen versteckte Anpassungsregler. Die Nullwerte ueberschrieben die erforderlichen Autorenvorgaben von 100 fuer Gewicht 0.
+
+635 betroffene Projekte neu gebaut. 631 Modelle fuer Gewicht 0 ersetzt. Saemtliche Modelle fuer Gewicht 100 und alle Morphdateien bytegenau unveraendert. Gemeinsames Null-Preset um die beiden technischen Anpassungsregler bereinigt; Buildgruppen auf die tatsaechlichen Projektnamen korrigiert.
+
+Beim Wench-Koerper passen die geprueften Halsvertices nach der Korrektur exakt zum bestehenden nackten Koerper. Kein neuer visueller Test im laufenden Spiel; der verbleibende Praxistest ist ein Spielneustart und die Kontrolle betroffener NPCs. Keine NPC-Gewichte, FaceGen-Dateien, Texturen, Spielstaende oder Plugins veraendert.
+
+Sicherung aller ersetzten Dateien: before-repair
+Hashpruefung: repair-deployment-plan.json und repair-deployment-result.json
+Die Nolvus-Upgrade-Sicherung auf D: wurde durch diese Reparatur noch nicht erneuert.

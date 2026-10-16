@@ -16,8 +16,9 @@ test('Brandhof läuft mit echten Katalogprofilen und produktiven Regeln bis zur 
   resolutions.forEach(resolution => {
     const parsed = parseDamageFormula(resolution.weapon.damageFormula);
     if (resolution.damage) {
-      const expectedDice = parsed.diceCount * (resolution.attack.criticalSuccess ? 2 : 1);
+      const expectedDice = parsed.diceCount;
       assert.equal(resolution.damage.diceResults.length, expectedDice);
+      if (resolution.attack.criticalSuccess) assert.equal(resolution.damage.criticalDamage.maximum, parsed.diceCount * parsed.sides);
       assert.ok(resolution.damage.diceResults.every(value => value >= 1 && value <= parsed.sides));
     }
     assert.ok(resolution.targetSnapshot.hitPointsAfter <= resolution.targetSnapshot.hitPointsBefore);

@@ -1,0 +1,20 @@
+{
+  "errors": [
+    {
+      "code": "SCAN_UNREADABLE_FILE",
+      "file": "prompts/submodules/character_bio/0171_severactions_dirtiness.prompt",
+      "message": "file was enumerable but could not be read"
+    }
+  ],
+  "files": 5,
+  "not_checked": [
+    "decorator names, arities and values (users register their own; every call is listed under unresolved)",
+    "action questEditorId / scriptName / executionFunctionName existence (needs game data)",
+    "eventType membership is a warning only (the game is the only source of the list)"
+  ],
+  "ok": false,
+  "plugin_id": "telord72612.bathing-in-skyrim-renewed-integration-for-skyrimnet",
+  "shadows": [],
+  "unresolved": [],
+  "warnings": []
+}

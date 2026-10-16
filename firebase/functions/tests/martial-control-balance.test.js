@@ -30,7 +30,7 @@ for(const name of ['Wyrmsbrecher','Haken des Jungdrachens','Fallende Schwinge','
     assert.deepEqual(verified.actorResourceSnapshot,client.actorResourceSnapshot);
     const invalid=structuredClone(client);invalid.damage.diceResults.pop();
     await assert.rejects(new ServerService(new ProvidedDiceAdapter(invalid)).resolveAttack({actor,target}));
-    if(name==='Wyrmsbrecher')assert.equal(verified.damage.diceResults.length,roll===20?6:3);
+    if(name==='Wyrmsbrecher')assert.equal(verified.damage.diceResults.length,3);
     if(actor.selectedAction.secondarySave){const missing=structuredClone(client);missing.secondarySaves=[];
       await assert.rejects(new ServerService(new ProvidedDiceAdapter(missing)).resolveAttack({actor,target}));}
   });

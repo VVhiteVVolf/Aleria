@@ -1,0 +1,125 @@
+{
+  "errors": [],
+  "files": 25,
+  "not_checked": [
+    "decorator names, arities and values (users register their own; every call is listed under unresolved)",
+    "action questEditorId / scriptName / executionFunctionName existence (needs game data)",
+    "eventType membership is a warning only (the game is the only source of the list)"
+  ],
+  "ok": true,
+  "plugin_id": "galanx.intelengine",
+  "shadows": [],
+  "unresolved": [
+    {
+      "code": "UNRESOLVED",
+      "col": 7,
+      "file": "intel_political_dm",
+      "line": 6,
+      "message": "variable 'politicalContext' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 9,
+      "file": "intel_schedule_safety_net",
+      "line": 5,
+      "message": "variable 'npcName' not found",
+      "original": "{{ npcName }}"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 12,
+      "file": "intel_schedule_safety_net",
+      "line": 6,
+      "message": "variable 'playerName' not found",
+      "original": "{{ playerName }}"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 14,
+      "file": "intel_schedule_safety_net",
+      "line": 7,
+      "message": "variable 'location' not found",
+      "original": "{{ location }}"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 18,
+      "file": "intel_schedule_safety_net",
+      "line": 8,
+      "message": "variable 'keywordHint' not found",
+      "original": "{{ keywordHint }}"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 4,
+      "file": "intel_schedule_safety_net",
+      "line": 11,
+      "message": "variable 'dialogue' not found",
+      "original": "{{ dialogue }}"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 7,
+      "file": "intel_story_dm",
+      "line": 7,
+      "message": "variable 'candidatePool' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 7,
+      "file": "intel_story_npc_dm",
+      "line": 7,
+      "message": "variable 'npcPairPool' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 21,
+      "file": "submodules/character_bio/0197_intel_received_messages",
+      "line": 3,
+      "message": "variable 'isValidActor' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 21,
+      "file": "submodules/character_bio/0198_intel_schedule_awareness",
+      "line": 3,
+      "message": "variable 'isValidActor' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 21,
+      "file": "submodules/character_bio/0199_intel_meeting_outcome",
+      "line": 3,
+      "message": "variable 'isValidActor' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 21,
+      "file": "submodules/character_bio/0200_intel_gossip",
+      "line": 3,
+      "message": "variable 'isValidActor' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 21,
+      "file": "submodules/character_bio/0800_intel_facts",
+      "line": 3,
+      "message": "variable 'isValidActor' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 21,
+      "file": "submodules/character_bio/0801_intel_task_awareness",
+      "line": 3,
+      "message": "variable 'isValidActor' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 19,
+      "file": "submodules/character_bio/0810_intel_political_awareness",
+      "line": 4,
+      "message": "variable 'read_json' not found"
+    }
+  ],
+  "warnings": []
+}

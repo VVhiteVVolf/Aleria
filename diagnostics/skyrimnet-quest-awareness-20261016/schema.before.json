@@ -1,0 +1,41 @@
+{
+  "defaultAllowNPCReaction": false,
+  "defaultNPCReactionCooldown": 0.0,
+  "defaultTTL": 30000,
+  "description": "Quest objective state changed (displayed/completed/dormant)",
+  "displayName": "Quest Objective State",
+  "eventType": "quest_objective_state",
+  "fields": [
+    {
+      "description": "Name of the quest",
+      "name": "quest",
+      "required": true,
+      "type": "String"
+    },
+    {
+      "description": "Objective text",
+      "name": "objective",
+      "required": true,
+      "type": "String"
+    },
+    {
+      "description": "Previous state (Dormant/Displayed/Completed/etc.)",
+      "name": "old_state",
+      "required": true,
+      "type": "String"
+    },
+    {
+      "description": "New state (Dormant/Displayed/Completed/etc.)",
+      "name": "new_state",
+      "required": true,
+      "type": "String"
+    }
+  ],
+  "formatTemplates": {
+    "compact": "{{ quest }}: {{ new_state }}",
+    "raw": "{{ quest }} objective: {{ old_state }} -> {{ new_state }}",
+    "recent_events": "Quest **{{ quest }}** objective state changed to {{ new_state }} ({{ time_desc }})",
+    "verbose": "Quest {{ quest }} objective '{{ objective }}' changed from {{ old_state }} to {{ new_state }}"
+  },
+  "isEphemeral": true
+}

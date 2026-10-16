@@ -1,0 +1,80 @@
+[
+  {
+    "relative": "SKSE/Plugins/SkyrimNet/overlay/prompts/submodules/user_final_instructions/0740_quest_dialogue.prompt",
+    "before_sha256": "5c1bcb0bc350dbb41be081a354faab4f2a591f1a2930413c48683f568a76a3c2",
+    "after_sha256": "a5580313653fea72c659872043dc683a1c56121e0b7de80a58012629742ed48b",
+    "reason": "Migrate quest guidance to the installed Beta26 API and recipient checks"
+  },
+  {
+    "relative": "SKSE/Plugins/SkyrimNet/prompts/submodules/user_final_instructions/0740_quest_dialogue.prompt",
+    "before_sha256": null,
+    "after_sha256": "a5580313653fea72c659872043dc683a1c56121e0b7de80a58012629742ed48b",
+    "reason": "Migrate quest guidance to the installed Beta26 API and recipient checks"
+  },
+  {
+    "relative": "SKSE/Plugins/SkyrimNet/prompts/components/quest_dialogue_action.prompt",
+    "before_sha256": null,
+    "after_sha256": "2f8ae691dcf7cdc78a829d724812247039f63b94e512832eb8d6e631cb6ca6d4",
+    "reason": "Migrate the retained legacy quest component; keep its wording"
+  },
+  {
+    "relative": "SKSE/Plugins/SkyrimNet/overlay/prompts/components/quest_dialogue_action.prompt",
+    "before_sha256": "244da216a9f618e0708560d7cc1975536b62047dbc26094f66d698292f6f5c64",
+    "after_sha256": "2f8ae691dcf7cdc78a829d724812247039f63b94e512832eb8d6e631cb6ca6d4",
+    "reason": "Migrate the retained legacy quest component; keep its wording"
+  },
+  {
+    "relative": "SKSE/Plugins/SkyrimNet/prompts/submodules/character_bio/0050_physical_activity.prompt",
+    "before_sha256": null,
+    "after_sha256": "442a1d28d752b4f45aaa853ad857e5ff6783379e54fd8b6cb441d8f4008cc056",
+    "reason": "Consolidate the personal import into the existing runtime without text changes"
+  },
+  {
+    "relative": "SKSE/Plugins/SkyrimNet/prompts/submodules/guidelines/0500_roleplay_guidelines.prompt",
+    "before_sha256": null,
+    "after_sha256": "12394b892645baeae43325d7e626346ba6512c1a8679879e85e572c0a5fff951",
+    "reason": "Consolidate the personal import into the existing runtime without text changes"
+  },
+  {
+    "relative": "SKSE/Plugins/SkyrimNet/prompts/components/context/component_npc_state_summary.prompt",
+    "before_sha256": null,
+    "after_sha256": "caf6be11c93aa1f361c0c6140bb158cd9d0a397536ba759e09573f2272bd1fd1",
+    "reason": "Consolidate the personal import into the existing runtime without text changes"
+  },
+  {
+    "relative": "SKSE/Plugins/SkyrimNet/overlay/prompts/submodules/character_bio/7100_memories.prompt",
+    "before_sha256": null,
+    "after_sha256": "1aa5083f84b27f732ae63ae00e1ed354c72733662d7d038fe687cb0a305e2470",
+    "reason": "Guard missing season context; preserve all memories and their selection"
+  },
+  {
+    "relative": "SKSE/Plugins/SkyrimNet/overlay/prompts/submodules/user_final_instructions/8000_recent_state_changes.prompt",
+    "before_sha256": null,
+    "after_sha256": "19d901ae2ef289f331b4b548dadc61287c553dda76b55741aa323eebe6f1e10a",
+    "reason": "Guard absent torso equipment without changing tracked state semantics"
+  },
+  {
+    "relative": "SKSE/Plugins/SkyrimNet/overlay/prompts/submodules/character_bio/0075_severactions_merchant.prompt",
+    "before_sha256": null,
+    "after_sha256": "ccc72cb809fa1f2a45a67348a04f7e8ef5cb551c70834ee023fbaafe54b274c6",
+    "reason": "Guard nonmerchant inventory results"
+  },
+  {
+    "relative": "SKSE/Plugins/SkyrimNet/overlay/prompts/submodules/user_final_instructions/0750_embedded_actions.prompt",
+    "before_sha256": null,
+    "after_sha256": "cd295e2ec082cd5a6089f9c59a12ce0a05a7f5ec371d4232c1c37481c0e26800",
+    "reason": "Use the current SeverActions rubric and require execution for immediate accepted requests"
+  },
+  {
+    "relative": "SKSE/Plugins/SkyrimNet/config/SkyrimNet.yaml",
+    "before_sha256": "00517252d0ef89639a8e435266b0b4feca564e8c104f02c275a265eda4869378",
+    "after_sha256": "818b66446e83c66289edd9d42d280d7c51a19cd968f596f87f018da223db04e5",
+    "reason": "Disable automatic conversation approach; retain real follower packages"
+  },
+  {
+    "relative": "SKSE/Plugins/SkyrimNet/config/Actions.yaml",
+    "before_sha256": "151104a0f791e74b66cb43f6780cd87cbc4e1f6c8cf101cd0da50cf158bf6a3b",
+    "after_sha256": "7c609516ed9fb21a1650dec102c722310162a60922ef0656acbd4a7d703cfbbc",
+    "reason": "Carry existing wait/follow settings to the renamed SeverActions actions"
+  }
+]

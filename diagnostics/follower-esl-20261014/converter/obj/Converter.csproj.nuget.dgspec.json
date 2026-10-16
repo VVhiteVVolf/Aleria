@@ -1,0 +1,70 @@
+{
+  "format": 1,
+  "restore": {
+    "E:\\Aleria\\diagnostics\\follower-esl-20261014\\converter\\Converter.csproj": {}
+  },
+  "projects": {
+    "E:\\Aleria\\diagnostics\\follower-esl-20261014\\converter\\Converter.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\Aleria\\diagnostics\\follower-esl-20261014\\converter\\Converter.csproj",
+        "projectName": "Converter",
+        "projectPath": "E:\\Aleria\\diagnostics\\follower-esl-20261014\\converter\\Converter.csproj",
+        "packagesPath": "C:\\Users\\fhg_r\\.nuget\\packages\\",
+        "outputPath": "E:\\Aleria\\diagnostics\\follower-esl-20261014\\converter\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "E:\\Aleria\\diagnostics\\follower-esl-20261014\\converter\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Users\\fhg_r\\.nuget\\packages": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Mutagen.Bethesda.Json": {
+              "target": "Package",
+              "version": "[0.39.5, )"
+            },
+            "Mutagen.Bethesda.Skyrim": {
+              "target": "Package",
+              "version": "[0.39.6, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

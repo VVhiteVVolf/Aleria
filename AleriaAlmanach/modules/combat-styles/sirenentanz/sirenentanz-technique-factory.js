@@ -1,7 +1,8 @@
 // Wyrmtanz shares the Drachentanz damage budget and combat effect contracts.
 // Derwyn techniques are selectable; the other Vennyr catalogues remain drafts.
 import { createDrachentanzDamageProfile } from '../drachentanz/drachentanz-damage-progression.js';
-import { hasWeaponTechniqueControl } from '../weapon-technique-budget.js';
+import { hasWeaponTechniqueControl, getWeaponTechniqueControlTier } from '../weapon-technique-budget.js';
+import { reviseWeaponTechniqueSave } from '../weapon-technique-control.js';
 import { reviseMartialPositionEntry } from '../martial-position-effects.js';
 import { techniqueCost, weaponDamageEffect, temporaryCondition, secondarySave } from '../drachentanz/techniques/drachentanz-technique-factory.js?v=20260909-dragon-parent-v2';
 import { getSirenentanzForms, SIRENENTANZ_FORM_IDS as F, DERWYN_FORM_IDS as D } from './sirenentanz-forms.js?v=20260909-dragon-parent-v2';
@@ -68,7 +69,8 @@ export function createSirenentanzTechnique(classId, spec) {
   const costs = SIRENENTANZ_COSTS[spec.cost].map((cost, index) => techniqueCost(id, cost, index));
   const damage = spec.noDamage
     ? { damageFormula: '', damageModel: { mode: 'fixed', scalingSteps: [] } }
-    : createDrachentanzDamageProfile({ minimumLevel: spec.level, allowedClassIds: [classId], maximumTargets: spec.targets || 1, damageControl: hasWeaponTechniqueControl(spec) }, costs);
+    : createDrachentanzDamageProfile({ minimumLevel: spec.level, allowedClassIds: [classId], maximumTargets: spec.targets || 1,
+      damageControl: hasWeaponTechniqueControl(spec), damageControlTier: getWeaponTechniqueControlTier(spec) }, costs);
   const requirements = [weapon.name, spec.mounted ? 'Beritten; für Anritte mindestens 3 m freier Anlauf.' : '',
     weapon.ranged ? 'Passende Munition bzw. einsatzbereite Wurfwaffe; Nachladen bleibt erforderlich.' : '',
     spec.requirement || ''].filter(Boolean).join(' · ');
@@ -84,7 +86,7 @@ export function createSirenentanzTechnique(classId, spec) {
     target: spec.noDamage ? 'Selbst' : 'Ein Gegner', duration: spec.noDamage ? '1 eigener Beitrag' : 'Sofort',
     requirements, costs, auraBypass: { allowed: true, resourceId: 'aura-focus', cost: 1 },
     effects: [...(spec.noDamage ? [] : [weaponDamageEffect(id)]), ...conditionEffects(id, { ...spec, styleName, sharedConditions: classId === 'derwyn' })],
-    secondarySave: save,
+    secondarySave: reviseWeaponTechniqueSave(save, costs.some(cost => cost.resourceId === 'special-action')),
     followUpAttack: { enabled: false }, mechanics: {}, triggerRules: [],
     tags: [styleName, classId, form.name, weapon.name].join(' · '),
     mechanicNotes: [spec.manual ? `Situativ auszuwerten: ${spec.manual}` : '', 'Erlernen verbraucht einen passenden Attackenslot; keine automatische Aktivierung.'].filter(Boolean),

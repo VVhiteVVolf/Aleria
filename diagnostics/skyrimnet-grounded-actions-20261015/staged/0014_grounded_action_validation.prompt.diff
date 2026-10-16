@@ -1,0 +1,11 @@
+--- submodules/character_bio/0014_grounded_action_validation.prompt.before
++++ submodules/character_bio/0014_grounded_action_validation.prompt.after
+@@ -0,0 +1,8 @@
++{% if render_mode == "action" %}
++## Validate the Operation Before Selecting It
++These checks take precedence over general instructions to act on hints, agreement, or willingness. Read the actual state and the Most Recent Exchange before choosing.
++- For GiveItem or SellItem, identify an actually listed matching item and sufficient quantity in the speaker's inventory or merchant stock. Use its real name. If none matches, choose None in the required response format. Never manufacture an inventory name from the dialogue's description or silently substitute an unrelated item. This check does not prohibit a real quest action from issuing its scripted reward.
++- An agreed-price sale is an Economy transaction. If only Items actions are available for that sale, choose None; GiveItem must not replace SellItem, bypass payment, or split the sale into a second gift.
++- Use confirmed outcomes supplied in the context. Do not repeat a completed transfer or payment unless a genuinely new transaction was explicitly agreed. A failed operation may justify a corrected attempt after its stated obstacle is resolved. A spoken promise, claim, or queued request is not confirmation; missing outcome information is not proof of success.
++- Output exactly one action in the required response format. If no eligible action can perform the grounded operation, choose None.
++{% endif %}

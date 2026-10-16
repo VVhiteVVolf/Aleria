@@ -4,7 +4,7 @@ import { createCriticalConsequence } from '../modules/combat-critical/combat-cri
 import { deriveCombatStateFromComments, overlayCombatHitPointState } from '../modules/combat/combat-state-model.js';
 import { resolveCombatProfile } from '../modules/combat/combat-profile-resolver.js';
 import { CombatResolutionService } from '../modules/combat/combat-resolution-service.js';
-import { parseDamageFormula } from '../modules/combat/rules/combat-mvp-rules.js';
+import { buildDamageRollPlan } from '../modules/combat/rules/combat-mvp-rules.js';
 import { releaseCriticalTemporaryOwnership } from '../modules/combat-critical/combat-critical-lifecycle.js';
 import { renderCombatEvaluation } from '../modules/combat/ui/combat-ui.js';
 import { applyTypedCombatDamage } from '../modules/combat/combat-effect-model.js';
@@ -26,8 +26,8 @@ function history(roll,failure=false){
 function dice(rolls=[15]){
  let index=0;const requests=[];
  return {requests,async rollAttack(o){requests.push(o);const n=rolls[Math.min(index++,rolls.length-1)];return {natural:n,total:n+o.modifier,dice:[n],keptDice:[n]};},
- async rollDamage(o){const f=parseDamageFormula(o.damageFormula);const values=(f.terms || [f]).flatMap(t=>Array(t.diceCount*(o.critical?2:1)).fill(4));
- return {total:Math.max(0,values.reduce((a,b)=>a+b,0)+f.fixedModifier+o.bonus),modifier:f.fixedModifier+o.bonus,keptDice:values};},
+ async rollDamage(o){const plan=buildDamageRollPlan(o.damageFormula,o.bonus,o.critical);const values=plan.terms.flatMap(t=>Array(t.diceCount).fill(4));
+ return {notation:plan.notation,criticalDamage:plan.criticalDamage,total:Math.max(0,values.reduce((a,b)=>a+b,plan.modifier)),modifier:plan.modifier,keptDice:values};},
  async rollSavingThrow(o){return {natural:12,total:12+o.modifier,dice:[12],keptDice:[12]};}};
 }
 async function evaluate(h,{attacker='a',defender='b',action='weapon:sword',rolls=[15],changeActor=p=>p,changeTarget=p=>p}={}){

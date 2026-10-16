@@ -1,0 +1,3815 @@
+{
+  "release": "2026-10-15",
+  "baselineCommit": "8424489938d9c2c28e531747278c2e41df40804d",
+  "referenceWeapon": "1d8",
+  "note": "Vergleich vor und nach der lokalen Überarbeitung. Keine Live-Ressourcen oder historischen Beiträge geändert.",
+  "damage": [
+    {
+      "id": "combat-style-drachentanz-cantref-jungdrache-kuss-der-speerspitze",
+      "name": "Kuss der Speerspitze",
+      "style": "drachentanz",
+      "level": 1,
+      "costs": [
+        {
+          "resourceId": "bonus-action",
+          "amount": 1
+        }
+      ],
+      "before": "1d4",
+      "after": "1d4-1"
+    },
+    {
+      "id": "combat-style-drachentanz-helwyr-jungdrache-laufender-schuss",
+      "name": "Laufender Schuss",
+      "style": "drachentanz",
+      "level": 1,
+      "costs": [
+        {
+          "resourceId": "bonus-action",
+          "amount": 1
+        }
+      ],
+      "before": "1d4",
+      "after": "1d4-1"
+    },
+    {
+      "id": "combat-style-drachentanz-helwyr-jungdrache-waldwacht",
+      "name": "Waldwacht",
+      "style": "drachentanz",
+      "level": 1,
+      "costs": [
+        {
+          "resourceId": "bonus-action",
+          "amount": 1
+        }
+      ],
+      "before": "1d4",
+      "after": "1d4-1"
+    },
+    {
+      "id": "combat-style-drachentanz-barddwyr-jungdrache-auftaktstich",
+      "name": "Auftaktstich",
+      "style": "drachentanz",
+      "level": 1,
+      "costs": [
+        {
+          "resourceId": "bonus-action",
+          "amount": 1
+        }
+      ],
+      "before": "1d4",
+      "after": "1d4-1"
+    },
+    {
+      "id": "combat-style-drachentanz-sattelantritt",
+      "name": "Sattelantritt",
+      "style": "drachentanz",
+      "level": 2,
+      "costs": [
+        {
+          "resourceId": "action",
+          "amount": 1
+        }
+      ],
+      "before": "1d8",
+      "after": "1d8-1"
+    },
+    {
+      "id": "combat-style-drachentanz-cantref-schwertdrache-duell-der-reichweiten",
+      "name": "Duell der Reichweiten",
+      "style": "drachentanz",
+      "level": 8,
+      "costs": [
+        {
+          "resourceId": "action",
+          "amount": 1
+        },
+        {
+          "resourceId": "bonus-action",
+          "amount": 1
+        },
+        {
+          "resourceId": "special-action",
+          "amount": 1
+        }
+      ],
+      "before": "2d8+2d4",
+      "after": "2d8+2d4-1"
+    },
+    {
+      "id": "combat-style-drachentanz-uchelwyr-schwertdrache-zaumzeugfinte",
+      "name": "Zaumzeugfinte",
+      "style": "drachentanz",
+      "level": 7,
+      "costs": [
+        {
+          "resourceId": "action",
+          "amount": 1
+        },
+        {
+          "resourceId": "bonus-action",
+          "amount": 1
+        }
+      ],
+      "before": "1d8+2d4",
+      "after": "1d8+2d4-1"
+    },
+    {
+      "id": "combat-style-drachentanz-helwyr-schwertdrache-flinker-doppelbogen",
+      "name": "Flinker Doppelbogen",
+      "style": "drachentanz",
+      "level": 7,
+      "costs": [
+        {
+          "resourceId": "action",
+          "amount": 1
+        },
+        {
+          "resourceId": "bonus-action",
+          "amount": 1
+        }
+      ],
+      "before": "1d8+2d4",
+      "after": "1d8+2d4-1"
+    },
+    {
+      "id": "combat-style-drachentanz-kreis-um-die-schranke",
+      "name": "Kreis um die Schranke",
+      "style": "drachentanz",
+      "level": 7,
+      "costs": [
+        {
+          "resourceId": "action",
+          "amount": 1
+        },
+        {
+          "resourceId": "bonus-action",
+          "amount": 1
+        }
+      ],
+      "before": "1d8+2d4",
+      "after": "1d8+2d4-1"
+    },
+    {
+      "id": "combat-style-drachentanz-schwertdrache-halbmondfinte",
+      "name": "Halbmondfinte",
+      "style": "drachentanz",
+      "level": 12,
+      "costs": [
+        {
+          "resourceId": "bonus-action",
+          "amount": 1
+        },
+        {
+          "resourceId": "reaction",
+          "amount": 1
+        },
+        {
+          "resourceId": "special-action",
+          "amount": 1
+        }
+      ],
+      "before": "2d8+1d4+1d6",
+      "after": "2d8+1d4+1d6-1"
+    },
+    {
+      "id": "combat-style-drachentanz-fliegender-sprungvers",
+      "name": "Sprungvers",
+      "style": "drachentanz",
+      "level": 9,
+      "costs": [
+        {
+          "resourceId": "action",
+          "amount": 1
+        },
+        {
+          "resourceId": "reaction",
+          "amount": 1
+        }
+      ],
+      "before": "1d8+2d6",
+      "after": "1d8+2d6-1"
+    },
+    {
+      "id": "combat-style-drachentanz-fliegender-himmelsballade",
+      "name": "Himmelsballade",
+      "style": "drachentanz",
+      "level": 20,
+      "costs": [
+        {
+          "resourceId": "action",
+          "amount": 1
+        },
+        {
+          "resourceId": "bonus-action",
+          "amount": 1
+        },
+        {
+          "resourceId": "reaction",
+          "amount": 1
+        },
+        {
+          "resourceId": "special-action",
+          "amount": 2
+        },
+        {
+          "resourceId": "aura-focus",
+          "amount": 2
+        }
+      ],
+      "before": "7d8+1d6+1d4+1d10",
+      "after": "7d8+1d6+1d4+1d10-1"
+    },
+    {
+      "id": "combat-style-drachentanz-rueckschritt-des-waechters",
+      "name": "Rückschritt des Wächters",
+      "style": "drachentanz",
+      "level": 9,
+      "costs": [
+        {
+          "resourceId": "reaction",
+          "amount": 1
+        }
+      ],
+      "before": "1d8+1d6",
+      "after": "1d8+1d6-1"
+    },
+    {
+      "id": "combat-style-drachentanz-helwyr-abwartender-lockschuss",
+      "name": "Lockschuss",
+      "style": "drachentanz",
+      "level": 11,
+      "costs": [
+        {
+          "resourceId": "bonus-action",
+          "amount": 1
+        },
+        {
+          "resourceId": "reaction",
+          "amount": 1
+        }
+      ],
+      "before": "1d8+1d4+1d6",
+      "after": "1d8+1d4+1d6-1"
+    },
+    {
+      "id": "combat-style-drachentanz-helwyr-abwartender-rueckwaertsregen",
+      "name": "Rückwärtsregen",
+      "style": "drachentanz",
+      "level": 18,
+      "costs": [
+        {
+          "resourceId": "action",
+          "amount": 1
+        },
+        {
+          "resourceId": "bonus-action",
+          "amount": 1
+        },
+        {
+          "resourceId": "reaction",
+          "amount": 1
+        },
+        {
+          "resourceId": "special-action",
+          "amount": 1
+        }
+      ],
+      "before": "1d8+2d6+1d4",
+      "after": "1d8+2d6+1d4-1"
+    },
+    {
+      "id": "combat-style-drachentanz-aufwindtritt",
+      "name": "Aufwindtritt",
+      "style": "drachentanz",
+      "level": 9,
+      "costs": [
+        {
+          "resourceId": "bonus-action",
+          "amount": 1
+        }
+      ],
+      "before": "1d4",
+      "after": "1d4-1"
+    },
+    {
+      "id": "combat-style-drachentanz-aurasprung",
+      "name": "Aurasprung",
+      "style": "drachentanz",
+      "level": 13,
+      "costs": [
+        {
+          "resourceId": "action",
+          "amount": 1
+        },
+        {
+          "resourceId": "aura-focus",
+          "amount": 1
+        }
+      ],
+      "before": "4d8",
+      "after": "4d8-1"
+    },
+    {
+      "id": "combat-style-drachentanz-drachenflug",
+      "name": "Drachenflug",
+      "style": "drachentanz",
+      "level": 17,
+      "costs": [
+        {
+          "resourceId": "action",
+          "amount": 1
+        },
+        {
+          "resourceId": "reaction",
+          "amount": 1
+        },
+        {
+          "resourceId": "special-action",
+          "amount": 1
+        },
+        {
+          "resourceId": "aura-focus",
+          "amount": 1
+        }
+      ],
+      "before": "4d8+1d6+1d10",
+      "after": "4d8+1d6+1d10-1"
+    },
+    {
+      "id": "combat-style-drachentanz-grenzenloser-aufstieg",
+      "name": "Grenzenloser Aufstieg",
+      "style": "drachentanz",
+      "level": 19,
+      "costs": [
+        {
+          "resourceId": "action",
+          "amount": 1
+        },
+        {
+          "resourceId": "bonus-action",
+          "amount": 1
+        },
+        {
+          "resourceId": "reaction",
+          "amount": 1
+        },
+        {
+          "resourceId": "special-action",
+          "amount": 1
+        },
+        {
+          "resourceId": "aura-focus",
+          "amount": 1
+        }
+      ],
+      "before": "4d8+1d6+1d4+1d10",
+      "after": "4d8+1d6+1d4+1d10-1"
+    },
+    {
+      "id": "combat-style-drachentanz-fallender-sternendrache",
+      "name": "Fallender Sternendrache",
+      "style": "drachentanz",
+      "level": 20,
+      "costs": [
+        {
+          "resourceId": "action",
+          "amount": 1
+        },
+        {
+          "resourceId": "bonus-action",
+          "amount": 1
+        },
+        {
+          "resourceId": "reaction",
+          "amount": 1
+        },
+        {
+          "resourceId": "special-action",
+          "amount": 2
+        },
+        {
+          "resourceId": "aura-focus",
+          "amount": 2
+        }
+      ],
+      "before": "7d8+1d6+1d4+1d10",
+      "after": "7d8+1d6+1d4+1d10-1"
+    },
+    {
+      "id": "combat-style-drachentanz-helwyr-fliegender-laufender-doppelschuss",
+      "name": "Laufender Doppelschuss",
+      "style": "drachentanz",
+      "level": 9,
+      "costs": [
+        {
+          "resourceId": "action",
+          "amount": 1
+        },
+        {
+          "resourceId": "bonus-action",
+          "amount": 1
+        }
+      ],
+      "before": "1d8+1d4+1d6",
+      "after": "1d8+1d4+1d6-1"
+    },
+    {
+      "id": "combat-style-drachentanz-helwyr-fliegender-klingensprung",
+      "name": "Klingensprung",
+      "style": "drachentanz",
+      "level": 13,
+      "costs": [
+        {
+          "resourceId": "action",
+          "amount": 1
+        },
+        {
+          "resourceId": "aura-focus",
+          "amount": 1
+        }
+      ],
+      "before": "4d8",
+      "after": "4d8-1"
+    },
+    {
+      "id": "combat-style-drachentanz-aufsteigender-schattenanstieg",
+      "name": "Schattenanstieg",
+      "style": "drachentanz",
+      "level": 9,
+      "costs": [
+        {
+          "resourceId": "bonus-action",
+          "amount": 1
+        },
+        {
+          "resourceId": "reaction",
+          "amount": 1
+        }
+      ],
+      "before": "1d8+1d4+1d6",
+      "after": "1d8+1d4+1d6-1"
+    },
+    {
+      "id": "combat-style-drachentanz-aufsteigender-verdeckter-gelenkschnitt",
+      "name": "Verdeckter Gelenkschnitt",
+      "style": "drachentanz",
+      "level": 15,
+      "costs": [
+        {
+          "resourceId": "action",
+          "amount": 1
+        },
+        {
+          "resourceId": "bonus-action",
+          "amount": 1
+        },
+        {
+          "resourceId": "reaction",
+          "amount": 1
+        }
+      ],
+      "before": "2d8+1d6+1d4",
+      "after": "2d8+1d6+1d4-1"
+    },
+    {
+      "id": "combat-style-drachentanz-aufsteigender-drachensturz",
+      "name": "Drachensturz aus schwarzem Himmel",
+      "style": "drachentanz",
+      "level": 17,
+      "costs": [
+        {
+          "resourceId": "action",
+          "amount": 1
+        },
+        {
+          "resourceId": "reaction",
+          "amount": 1
+        },
+        {
+          "resourceId": "special-action",
+          "amount": 1
+        },
+        {
+          "resourceId": "aura-focus",
+          "amount": 1
+        }
+      ],
+      "before": "4d8+1d6+1d10",
+      "after": "4d8+1d6+1d10-1"
+    },
+    {
+      "id": "combat-style-drachentanz-aufsteigender-gipfel-ohne-schatten",
+      "name": "Gipfel ohne Schatten",
+      "style": "drachentanz",
+      "level": 20,
+      "costs": [
+        {
+          "resourceId": "action",
+          "amount": 1
+        },
+        {
+          "resourceId": "bonus-action",
+          "amount": 1
+        },
+        {
+          "resourceId": "reaction",
+          "amount": 1
+        },
+        {
+          "resourceId": "special-action",
+          "amount": 2
+        },
+        {
+          "resourceId": "aura-focus",
+          "amount": 2
+        }
+      ],
+      "before": "7d8+1d6+1d4+1d10",
+      "after": "7d8+1d6+1d4+1d10-1"
+    },
+    {
+      "id": "combat-style-drachentanz-wechsel-der-mitte",
+      "name": "Wechsel der Mitte",
+      "style": "drachentanz",
+      "level": 10,
+      "costs": [
+        {
+          "resourceId": "action",
+          "amount": 1
+        },
+        {
+          "resourceId": "bonus-action",
+          "amount": 1
+        }
+      ],
+      "before": "1d8+1d4+1d6",
+      "after": "1d8+1d4+1d6-1"
+    },
+    {
+      "id": "combat-style-drachentanz-wende-des-allrounders",
+      "name": "Wende des Allrounders",
+      "style": "drachentanz",
+      "level": 14,
+      "costs": [
+        {
+          "resourceId": "action",
+          "amount": 1
+        },
+        {
+          "resourceId": "bonus-action",
+          "amount": 1
+        },
+        {
+          "resourceId": "reaction",
+          "amount": 1
+        }
+      ],
+      "before": "2d8+1d6+1d4",
+      "after": "2d8+1d6+1d4-1"
+    },
+    {
+      "id": "combat-style-drachentanz-helwyr-ausgeglichener-bogen-und-klinge",
+      "name": "Bogen und Klinge",
+      "style": "drachentanz",
+      "level": 11,
+      "costs": [
+        {
+          "resourceId": "action",
+          "amount": 1
+        },
+        {
+          "resourceId": "reaction",
+          "amount": 1
+        }
+      ],
+      "before": "1d8+2d6",
+      "after": "1d8+2d6-1"
+    },
+    {
+      "id": "combat-style-drachentanz-zwillingsdrache-scherenschritt",
+      "name": "Scherenschritt",
+      "style": "drachentanz",
+      "level": 11,
+      "costs": [
+        {
+          "resourceId": "bonus-action",
+          "amount": 1
+        },
+        {
+          "resourceId": "reaction",
+          "amount": 1
+        },
+        {
+          "resourceId": "special-action",
+          "amount": 1
+        }
+      ],
+      "before": "2d8+1d4+1d6",
+      "after": "2d8+1d4+1d6-1"
+    },
+    {
+      "id": "combat-style-drachentanz-zwillingsdrache-kreislauf-der-vier-schneiden",
+      "name": "Kreislauf der vier Schneiden",
+      "style": "drachentanz",
+      "level": 15,
+      "costs": [
+        {
+          "resourceId": "action",
+          "amount": 1
+        },
+        {
+          "resourceId": "bonus-action",
+          "amount": 1
+        },
+        {
+          "resourceId": "special-action",
+          "amount": 1
+        }
+      ],
+      "before": "3d8+1d4",
+      "after": "3d8+1d4-1"
+    },
+    {
+      "id": "combat-style-drachentanz-speerdrache-fliessende-eroeffnung",
+      "name": "Fließende Eröffnung",
+      "style": "drachentanz",
+      "level": 9,
+      "costs": [
+        {
+          "resourceId": "action",
+          "amount": 1
+        },
+        {
+          "resourceId": "reaction",
+          "amount": 1
+        }
+      ],
+      "before": "1d8+2d6",
+      "after": "1d8+2d6-1"
+    },
+    {
+      "id": "combat-style-drachentanz-speerdrache-albischer-halbkreis",
+      "name": "Albischer Halbkreis",
+      "style": "drachentanz",
+      "level": 12,
+      "costs": [
+        {
+          "resourceId": "bonus-action",
+          "amount": 1
+        },
+        {
+          "resourceId": "reaction",
+          "amount": 1
+        },
+        {
+          "resourceId": "special-action",
+          "amount": 1
+        }
+      ],
+      "before": "2d8+1d4+1d6",
+      "after": "2d8+1d4+1d6-1"
+    },
+    {
+      "id": "combat-style-drachentanz-speerdrache-ewiger-reigen",
+      "name": "Ewiger Reigen des Speerdrachen",
+      "style": "drachentanz",
+      "level": 20,
+      "costs": [
+        {
+          "resourceId": "action",
+          "amount": 1
+        },
+        {
+          "resourceId": "bonus-action",
+          "amount": 1
+        },
+        {
+          "resourceId": "reaction",
+          "amount": 1
+        },
+        {
+          "resourceId": "special-action",
+          "amount": 2
+        },
+        {
+          "resourceId": "aura-focus",
+          "amount": 2
+        }
+      ],
+      "before": "7d8+1d6+1d4+1d10",
+      "after": "7d8+1d6+1d4+1d10-1"
+    },
+    {
+      "id": "combat-style-drachentanz-lanzendrache-durchgehender-anritt",
+      "name": "Durchgehender Anritt",
+      "style": "drachentanz",
+      "level": 18,
+      "costs": [
+        {
+          "resourceId": "action",
+          "amount": 1
+        },
+        {
+          "resourceId": "bonus-action",
+          "amount": 1
+        },
+        {
+          "resourceId": "reaction",
+          "amount": 1
+        }
+      ],
+      "before": "1d8+1d6+1d4+1d10",
+      "after": "1d8+1d6+1d4+1d10-1"
+    },
+    {
+      "id": "combat-style-drachentanz-lanzendrache-ruecklaufende-spitze",
+      "name": "Rücklaufende Spitze",
+      "style": "drachentanz",
+      "level": 11,
+      "costs": [
+        {
+          "resourceId": "reaction",
+          "amount": 1
+        },
+        {
+          "resourceId": "bonus-action",
+          "amount": 1
+        },
+        {
+          "resourceId": "special-action",
+          "amount": 1
+        }
+      ],
+      "before": "2d8+1d4+1d6",
+      "after": "2d8+1d4+1d6-1"
+    },
+    {
+      "id": "combat-style-drachentanz-huetender-ausdauernde-wehr",
+      "name": "Ausdauernde Wehr",
+      "style": "drachentanz",
+      "level": 9,
+      "costs": [
+        {
+          "resourceId": "reaction",
+          "amount": 1
+        },
+        {
+          "resourceId": "bonus-action",
+          "amount": 1
+        }
+      ],
+      "before": "1d8+1d4+1d6",
+      "after": "1d8+1d4+1d6-1"
+    },
+    {
+      "id": "combat-style-drachentanz-rueckzuegelkonter",
+      "name": "Rückzügelkonter",
+      "style": "drachentanz",
+      "level": 9,
+      "costs": [
+        {
+          "resourceId": "reaction",
+          "amount": 1
+        },
+        {
+          "resourceId": "bonus-action",
+          "amount": 1
+        }
+      ],
+      "before": "1d8+1d4+1d6",
+      "after": "1d8+1d4+1d6-1"
+    },
+    {
+      "id": "combat-style-drachentanz-sporn-des-zorns",
+      "name": "Sporn des Windes",
+      "style": "drachentanz",
+      "level": 9,
+      "costs": [
+        {
+          "resourceId": "action",
+          "amount": 1
+        },
+        {
+          "resourceId": "bonus-action",
+          "amount": 1
+        }
+      ],
+      "before": "1d8+1d4+1d6",
+      "after": "1d8+1d4+1d6-1"
+    },
+    {
+      "id": "combat-style-drachentanz-krone-des-hohen-sattels",
+      "name": "Krone des hohen Sattels",
+      "style": "drachentanz",
+      "level": 19,
+      "costs": [
+        {
+          "resourceId": "action",
+          "amount": 1
+        },
+        {
+          "resourceId": "reaction",
+          "amount": 1
+        },
+        {
+          "resourceId": "special-action",
+          "amount": 1
+        },
+        {
+          "resourceId": "aura-focus",
+          "amount": 1
+        }
+      ],
+      "before": "4d8+1d6+1d10",
+      "after": "4d8+1d6+1d10-1"
+    },
+    {
+      "id": "combat-style-drachentanz-sprung-ueber-die-flanke",
+      "name": "Sprung über die Flanke",
+      "style": "drachentanz",
+      "level": 9,
+      "costs": [
+        {
+          "resourceId": "action",
+          "amount": 1
+        },
+        {
+          "resourceId": "bonus-action",
+          "amount": 1
+        }
+      ],
+      "before": "1d8+1d4+1d6",
+      "after": "1d8+1d4+1d6-1"
+    },
+    {
+      "id": "combat-style-drachentanz-galoppierende-drachenspur",
+      "name": "Galoppierende Drachenspur",
+      "style": "drachentanz",
+      "level": 15,
+      "costs": [
+        {
+          "resourceId": "bonus-action",
+          "amount": 1
+        },
+        {
+          "resourceId": "special-action",
+          "amount": 1
+        }
+      ],
+      "before": "1d4+1d8",
+      "after": "1d4+1d8-1"
+    },
+    {
+      "id": "combat-style-drachentanz-rasender-jagdritt",
+      "name": "Rasender Jagdritt",
+      "style": "drachentanz",
+      "level": 16,
+      "costs": [
+        {
+          "resourceId": "action",
+          "amount": 1
+        },
+        {
+          "resourceId": "bonus-action",
+          "amount": 1
+        },
+        {
+          "resourceId": "reaction",
+          "amount": 1
+        },
+        {
+          "resourceId": "special-action",
+          "amount": 1
+        }
+      ],
+      "before": "1d8+2d6+1d4",
+      "after": "1d8+2d6+1d4-1"
+    },
+    {
+      "id": "combat-style-drachentanz-schweifender-flankenschnitt",
+      "name": "Flankenschnitt",
+      "style": "drachentanz",
+      "level": 9,
+      "costs": [
+        {
+          "resourceId": "action",
+          "amount": 1
+        },
+        {
+          "resourceId": "bonus-action",
+          "amount": 1
+        }
+      ],
+      "before": "1d8+1d4+1d6",
+      "after": "1d8+1d4+1d6-1"
+    },
+    {
+      "id": "combat-style-drachentanz-schweifender-wechselnder-horizont",
+      "name": "Wechselnder Horizont",
+      "style": "drachentanz",
+      "level": 13,
+      "costs": [
+        {
+          "resourceId": "action",
+          "amount": 1
+        },
+        {
+          "resourceId": "bonus-action",
+          "amount": 1
+        },
+        {
+          "resourceId": "reaction",
+          "amount": 1
+        }
+      ],
+      "before": "2d8+1d6+1d4",
+      "after": "2d8+1d6+1d4-1"
+    },
+    {
+      "id": "combat-style-drachentanz-schweifender-halber-ring",
+      "name": "Halber Ring",
+      "style": "drachentanz",
+      "level": 15,
+      "costs": [
+        {
+          "resourceId": "action",
+          "amount": 1
+        },
+        {
+          "resourceId": "special-action",
+          "amount": 1
+        }
+      ],
+      "before": "1d8+1d6",
+      "after": "1d8+1d6-1"
+    },
+    {
+      "id": "combat-style-drachentanz-schweifender-letzter-horizont",
+      "name": "Letzter Horizont des schweifenden Drachen",
+      "style": "drachentanz",
+      "level": 20,
+      "costs": [
+        {
+          "resourceId": "action",
+          "amount": 1
+        },
+        {
+          "resourceId": "bonus-action",
+          "amount": 1
+        },
+        {
+          "resourceId": "reaction",
+          "amount": 1
+        },
+        {
+          "resourceId": "special-action",
+          "amount": 2
+        },
+        {
+          "resourceId": "aura-focus",
+          "amount": 2
+        }
+      ],
+      "before": "7d8+1d6+1d4+1d10",
+      "after": "7d8+1d6+1d4+1d10-1"
+    },
+    {
+      "id": "combat-style-drachentanz-bogendrache-flinker-nachschuss",
+      "name": "Flinker Nachschuss",
+      "style": "drachentanz",
+      "level": 10,
+      "costs": [
+        {
+          "resourceId": "bonus-action",
+          "amount": 1
+        },
+        {
+          "resourceId": "special-action",
+          "amount": 1
+        }
+      ],
+      "before": "1d4+1d8",
+      "after": "1d4+1d8-1"
+    },
+    {
+      "id": "combat-style-drachentanz-bogendrache-doppelter-jagdschritt",
+      "name": "Doppelter Jagdschritt",
+      "style": "drachentanz",
+      "level": 14,
+      "costs": [
+        {
+          "resourceId": "action",
+          "amount": 1
+        },
+        {
+          "resourceId": "bonus-action",
+          "amount": 1
+        },
+        {
+          "resourceId": "reaction",
+          "amount": 1
+        }
+      ],
+      "before": "2d8+1d6+1d4",
+      "after": "2d8+1d6+1d4-1"
+    },
+    {
+      "id": "combat-style-drachentanz-jagender-kurzer-fang",
+      "name": "Kurzer Fang",
+      "style": "drachentanz",
+      "level": 9,
+      "costs": [
+        {
+          "resourceId": "bonus-action",
+          "amount": 1
+        }
+      ],
+      "before": "1d4",
+      "after": "1d4-1"
+    },
+    {
+      "id": "combat-style-drachentanz-jagender-pfeil-aus-dem-saum",
+      "name": "Pfeil aus dem Saum",
+      "style": "drachentanz",
+      "level": 13,
+      "costs": [
+        {
+          "resourceId": "action",
+          "amount": 1
+        },
+        {
+          "resourceId": "bonus-action",
+          "amount": 1
+        },
+        {
+          "resourceId": "reaction",
+          "amount": 1
+        }
+      ],
+      "before": "2d8+1d6+1d4",
+      "after": "2d8+1d6+1d4-1"
+    },
+    {
+      "id": "combat-style-drachentanz-jagender-vollendete-jagd",
+      "name": "Vollendete Jagd",
+      "style": "drachentanz",
+      "level": 20,
+      "costs": [
+        {
+          "resourceId": "action",
+          "amount": 1
+        },
+        {
+          "resourceId": "bonus-action",
+          "amount": 1
+        },
+        {
+          "resourceId": "reaction",
+          "amount": 1
+        },
+        {
+          "resourceId": "special-action",
+          "amount": 2
+        },
+        {
+          "resourceId": "aura-focus",
+          "amount": 2
+        }
+      ],
+      "before": "7d8+1d6+1d4+1d10",
+      "after": "7d8+1d6+1d4+1d10-1"
+    },
+    {
+      "id": "combat-style-drachentanz-drachling-harter-wechsel",
+      "name": "Harter Wechsel",
+      "style": "drachentanz",
+      "level": 10,
+      "costs": [
+        {
+          "resourceId": "action",
+          "amount": 1
+        },
+        {
+          "resourceId": "bonus-action",
+          "amount": 1
+        },
+        {
+          "resourceId": "special-action",
+          "amount": 1
+        }
+      ],
+      "before": "2d8+1d4+1d6",
+      "after": "2d8+1d4+1d6-1"
+    },
+    {
+      "id": "combat-style-drachentanz-traellernder-auftakt-der-lerche",
+      "name": "Auftakt der Lerche",
+      "style": "drachentanz",
+      "level": 7,
+      "costs": [
+        {
+          "resourceId": "bonus-action",
+          "amount": 1
+        }
+      ],
+      "before": "1d4",
+      "after": "1d4-1"
+    },
+    {
+      "id": "combat-style-drachentanz-traellernder-dreifache-kadenz",
+      "name": "Dreifache Kadenz",
+      "style": "drachentanz",
+      "level": 8,
+      "costs": [
+        {
+          "resourceId": "action",
+          "amount": 1
+        },
+        {
+          "resourceId": "bonus-action",
+          "amount": 1
+        },
+        {
+          "resourceId": "special-action",
+          "amount": 1
+        }
+      ],
+      "before": "2d8+2d4",
+      "after": "2d8+2d4-1"
+    },
+    {
+      "id": "combat-style-drachentanz-kreischender-sprungrefrain",
+      "name": "Sprungrefrain",
+      "style": "drachentanz",
+      "level": 11,
+      "costs": [
+        {
+          "resourceId": "action",
+          "amount": 1
+        },
+        {
+          "resourceId": "bonus-action",
+          "amount": 1
+        }
+      ],
+      "before": "1d8+1d4+1d6",
+      "after": "1d8+1d4+1d6-1"
+    },
+    {
+      "id": "combat-style-drachentanz-kreischender-chor-der-spitzen",
+      "name": "Chor der Spitzen",
+      "style": "drachentanz",
+      "level": 18,
+      "costs": [
+        {
+          "resourceId": "action",
+          "amount": 1
+        },
+        {
+          "resourceId": "bonus-action",
+          "amount": 1
+        },
+        {
+          "resourceId": "reaction",
+          "amount": 1
+        },
+        {
+          "resourceId": "special-action",
+          "amount": 1
+        }
+      ],
+      "before": "1d8+2d6+1d4",
+      "after": "1d8+2d6+1d4-1"
+    },
+    {
+      "id": "combat-style-drachentanz-kreischender-letzter-schrei",
+      "name": "Letzter Schrei des Silberdrachen",
+      "style": "drachentanz",
+      "level": 20,
+      "costs": [
+        {
+          "resourceId": "action",
+          "amount": 1
+        },
+        {
+          "resourceId": "bonus-action",
+          "amount": 1
+        },
+        {
+          "resourceId": "reaction",
+          "amount": 1
+        },
+        {
+          "resourceId": "special-action",
+          "amount": 2
+        },
+        {
+          "resourceId": "aura-focus",
+          "amount": 2
+        }
+      ],
+      "before": "7d8+1d6+1d4+1d10",
+      "after": "7d8+1d6+1d4+1d10-1"
+    },
+    {
+      "id": "combat-style-huskarl-hird-maid-wahl-7",
+      "name": "Speer querstellen",
+      "style": "huskarl-waffenlehre",
+      "level": 4,
+      "costs": [
+        {
+          "resourceId": "action",
+          "amount": 1
+        },
+        {
+          "resourceId": "reaction",
+          "amount": 1
+        }
+      ],
+      "before": "1d8+1d6",
+      "after": "1d8+1d6-1"
+    },
+    {
+      "id": "combat-style-huskarl-hird-maid-wahl-12",
+      "name": "Vorstoß am Torpfosten",
+      "style": "huskarl-waffenlehre",
+      "level": 6,
+      "costs": [
+        {
+          "resourceId": "action",
+          "amount": 1
+        },
+        {
+          "resourceId": "bonus-action",
+          "amount": 1
+        }
+      ],
+      "before": "1d8+2d4",
+      "after": "1d8+2d4-1"
+    },
+    {
+      "id": "combat-style-huskarl-hird-maid-hirdwacht-wahl-1",
+      "name": "Speer der Nachtwache",
+      "style": "huskarl-waffenlehre",
+      "level": 9,
+      "costs": [
+        {
+          "resourceId": "action",
+          "amount": 1
+        },
+        {
+          "resourceId": "reaction",
+          "amount": 1
+        }
+      ],
+      "before": "1d8+1d6+1d4",
+      "after": "1d8+1d6+1d4-1"
+    },
+    {
+      "id": "combat-style-huskarl-skjoldr-wahl-7",
+      "name": "Schnitt zur Fessel",
+      "style": "huskarl-waffenlehre",
+      "level": 4,
+      "costs": [
+        {
+          "resourceId": "action",
+          "amount": 1
+        },
+        {
+          "resourceId": "reaction",
+          "amount": 1
+        }
+      ],
+      "before": "1d8+1d6",
+      "after": "1d8+1d6-1"
+    },
+    {
+      "id": "combat-style-huskarl-skjoldr-wahl-12",
+      "name": "Wechsel über die Kante",
+      "style": "huskarl-waffenlehre",
+      "level": 6,
+      "costs": [
+        {
+          "resourceId": "action",
+          "amount": 1
+        },
+        {
+          "resourceId": "bonus-action",
+          "amount": 1
+        }
+      ],
+      "before": "1d8+1d4",
+      "after": "1d8+1d4-1"
+    },
+    {
+      "id": "combat-style-huskarl-skjoldr-wall-wahl-1",
+      "name": "Fesselstoß der Linie",
+      "style": "huskarl-waffenlehre",
+      "level": 9,
+      "costs": [
+        {
+          "resourceId": "action",
+          "amount": 1
+        },
+        {
+          "resourceId": "reaction",
+          "amount": 1
+        }
+      ],
+      "before": "1d8+2d6",
+      "after": "1d8+2d6-1"
+    },
+    {
+      "id": "combat-style-huskarl-skjoldr-advance-wahl-2",
+      "name": "Zwei Klingen voran",
+      "style": "huskarl-waffenlehre",
+      "level": 11,
+      "costs": [
+        {
+          "resourceId": "action",
+          "amount": 1
+        },
+        {
+          "resourceId": "bonus-action",
+          "amount": 1
+        }
+      ],
+      "before": "1d8+1d4+1d6",
+      "after": "1d8+1d4+1d6-1"
+    },
+    {
+      "id": "combat-style-huskarl-skjoldr-advance-wahl-4",
+      "name": "Schildkante am Knie",
+      "style": "huskarl-waffenlehre",
+      "level": 15,
+      "costs": [
+        {
+          "resourceId": "action",
+          "amount": 1
+        },
+        {
+          "resourceId": "reaction",
+          "amount": 1
+        }
+      ],
+      "before": "2d8+1d6",
+      "after": "2d8+1d6-1"
+    },
+    {
+      "id": "combat-style-huskarl-skytte-wahl-7",
+      "name": "Speer gegen den Schritt",
+      "style": "huskarl-waffenlehre",
+      "level": 4,
+      "costs": [
+        {
+          "resourceId": "action",
+          "amount": 1
+        },
+        {
+          "resourceId": "reaction",
+          "amount": 1
+        }
+      ],
+      "before": "1d8+1d6",
+      "after": "1d8+1d6-1"
+    },
+    {
+      "id": "combat-style-huskarl-skytte-wahl-12",
+      "name": "Klinge am Wildwechsel",
+      "style": "huskarl-waffenlehre",
+      "level": 6,
+      "costs": [
+        {
+          "resourceId": "action",
+          "amount": 1
+        },
+        {
+          "resourceId": "bonus-action",
+          "amount": 1
+        }
+      ],
+      "before": "1d8+1d4",
+      "after": "1d8+1d4-1"
+    },
+    {
+      "id": "combat-style-huskarl-skytte-wall-wahl-1",
+      "name": "Speersperre im Dickicht",
+      "style": "huskarl-waffenlehre",
+      "level": 9,
+      "costs": [
+        {
+          "resourceId": "action",
+          "amount": 1
+        },
+        {
+          "resourceId": "reaction",
+          "amount": 1
+        }
+      ],
+      "before": "1d8+2d6",
+      "after": "1d8+2d6-1"
+    },
+    {
+      "id": "combat-style-huskarl-skytte-advance-wahl-2",
+      "name": "Speerschritt des Jägers",
+      "style": "huskarl-waffenlehre",
+      "level": 11,
+      "costs": [
+        {
+          "resourceId": "action",
+          "amount": 1
+        },
+        {
+          "resourceId": "bonus-action",
+          "amount": 1
+        }
+      ],
+      "before": "1d8+1d4+1d6",
+      "after": "1d8+1d4+1d6-1"
+    },
+    {
+      "id": "combat-style-huskarl-skytte-advance-wahl-4",
+      "name": "Sax am Wildpfad",
+      "style": "huskarl-waffenlehre",
+      "level": 15,
+      "costs": [
+        {
+          "resourceId": "action",
+          "amount": 1
+        },
+        {
+          "resourceId": "reaction",
+          "amount": 1
+        }
+      ],
+      "before": "2d8+1d6",
+      "after": "2d8+1d6-1"
+    },
+    {
+      "id": "combat-style-huskarl-thegnar-wahl-7",
+      "name": "Lanzenschaft zur Fessel",
+      "style": "huskarl-waffenlehre",
+      "level": 4,
+      "costs": [
+        {
+          "resourceId": "action",
+          "amount": 1
+        },
+        {
+          "resourceId": "reaction",
+          "amount": 1
+        }
+      ],
+      "before": "1d8+1d6",
+      "after": "1d8+1d6-1"
+    },
+    {
+      "id": "combat-style-huskarl-thegnar-wahl-12",
+      "name": "Hieb von der Wegkante",
+      "style": "huskarl-waffenlehre",
+      "level": 6,
+      "costs": [
+        {
+          "resourceId": "action",
+          "amount": 1
+        },
+        {
+          "resourceId": "bonus-action",
+          "amount": 1
+        }
+      ],
+      "before": "1d8+1d4",
+      "after": "1d8+1d4-1"
+    },
+    {
+      "id": "combat-style-huskarl-thegnar-wall-wahl-1",
+      "name": "Speer am Wegsaum",
+      "style": "huskarl-waffenlehre",
+      "level": 9,
+      "costs": [
+        {
+          "resourceId": "action",
+          "amount": 1
+        },
+        {
+          "resourceId": "reaction",
+          "amount": 1
+        }
+      ],
+      "before": "1d8+2d6",
+      "after": "1d8+2d6-1"
+    },
+    {
+      "id": "combat-style-huskarl-thegnar-advance-wahl-2",
+      "name": "Lanze am Außenbogen",
+      "style": "huskarl-waffenlehre",
+      "level": 11,
+      "costs": [
+        {
+          "resourceId": "action",
+          "amount": 1
+        },
+        {
+          "resourceId": "bonus-action",
+          "amount": 1
+        }
+      ],
+      "before": "1d8+1d4+1d6",
+      "after": "1d8+1d4+1d6-1"
+    },
+    {
+      "id": "combat-style-huskarl-thegnar-advance-wahl-4",
+      "name": "Abgesessener Fesselhieb",
+      "style": "huskarl-waffenlehre",
+      "level": 15,
+      "costs": [
+        {
+          "resourceId": "action",
+          "amount": 1
+        },
+        {
+          "resourceId": "reaction",
+          "amount": 1
+        }
+      ],
+      "before": "2d8+1d6",
+      "after": "2d8+1d6-1"
+    },
+    {
+      "id": "combat-style-huskarl-skeidr-wahl-7",
+      "name": "Haken an der Fessel",
+      "style": "huskarl-waffenlehre",
+      "level": 4,
+      "costs": [
+        {
+          "resourceId": "action",
+          "amount": 1
+        },
+        {
+          "resourceId": "reaction",
+          "amount": 1
+        }
+      ],
+      "before": "1d8+1d6",
+      "after": "1d8+1d6-1"
+    },
+    {
+      "id": "combat-style-huskarl-skeidr-wahl-12",
+      "name": "Sax durch die Enge",
+      "style": "huskarl-waffenlehre",
+      "level": 6,
+      "costs": [
+        {
+          "resourceId": "action",
+          "amount": 1
+        },
+        {
+          "resourceId": "bonus-action",
+          "amount": 1
+        }
+      ],
+      "before": "1d8+1d4",
+      "after": "1d8+1d4-1"
+    },
+    {
+      "id": "combat-style-huskarl-skeidr-wall-wahl-1",
+      "name": "Haken der Deckwache",
+      "style": "huskarl-waffenlehre",
+      "level": 9,
+      "costs": [
+        {
+          "resourceId": "action",
+          "amount": 1
+        },
+        {
+          "resourceId": "reaction",
+          "amount": 1
+        }
+      ],
+      "before": "1d8+2d6",
+      "after": "1d8+2d6-1"
+    },
+    {
+      "id": "combat-style-huskarl-skeidr-advance-wahl-2",
+      "name": "Klinge über der Planke",
+      "style": "huskarl-waffenlehre",
+      "level": 11,
+      "costs": [
+        {
+          "resourceId": "action",
+          "amount": 1
+        },
+        {
+          "resourceId": "bonus-action",
+          "amount": 1
+        }
+      ],
+      "before": "1d8+1d4+1d6",
+      "after": "1d8+1d4+1d6-1"
+    },
+    {
+      "id": "combat-style-huskarl-skeidr-advance-wahl-4",
+      "name": "Axtbart im Gedränge",
+      "style": "huskarl-waffenlehre",
+      "level": 15,
+      "costs": [
+        {
+          "resourceId": "action",
+          "amount": 1
+        },
+        {
+          "resourceId": "reaction",
+          "amount": 1
+        }
+      ],
+      "before": "2d8+1d6",
+      "after": "2d8+1d6-1"
+    },
+    {
+      "id": "combat-style-huskarl-skjaldr-wahl-7",
+      "name": "Axtbart zur Fessel",
+      "style": "huskarl-waffenlehre",
+      "level": 4,
+      "costs": [
+        {
+          "resourceId": "action",
+          "amount": 1
+        },
+        {
+          "resourceId": "reaction",
+          "amount": 1
+        }
+      ],
+      "before": "1d8+1d6",
+      "after": "1d8+1d6-1"
+    },
+    {
+      "id": "combat-style-huskarl-skjaldr-wahl-12",
+      "name": "Gerichteter Doppelhieb",
+      "style": "huskarl-waffenlehre",
+      "level": 6,
+      "costs": [
+        {
+          "resourceId": "action",
+          "amount": 1
+        },
+        {
+          "resourceId": "bonus-action",
+          "amount": 1
+        }
+      ],
+      "before": "1d8+1d4",
+      "after": "1d8+1d4-1"
+    },
+    {
+      "id": "combat-style-huskarl-skjaldr-wall-wahl-1",
+      "name": "Axtsperre der Fessel",
+      "style": "huskarl-waffenlehre",
+      "level": 9,
+      "costs": [
+        {
+          "resourceId": "action",
+          "amount": 1
+        },
+        {
+          "resourceId": "reaction",
+          "amount": 1
+        }
+      ],
+      "before": "1d8+2d6",
+      "after": "1d8+2d6-1"
+    },
+    {
+      "id": "combat-style-huskarl-skjaldr-advance-wahl-2",
+      "name": "Langer Axtschritt",
+      "style": "huskarl-waffenlehre",
+      "level": 11,
+      "costs": [
+        {
+          "resourceId": "action",
+          "amount": 1
+        },
+        {
+          "resourceId": "bonus-action",
+          "amount": 1
+        }
+      ],
+      "before": "1d8+1d4+1d6",
+      "after": "1d8+1d4+1d6-1"
+    },
+    {
+      "id": "combat-style-huskarl-skjaldr-advance-wahl-4",
+      "name": "Zwillingsgriff am Bein",
+      "style": "huskarl-waffenlehre",
+      "level": 15,
+      "costs": [
+        {
+          "resourceId": "action",
+          "amount": 1
+        },
+        {
+          "resourceId": "reaction",
+          "amount": 1
+        }
+      ],
+      "before": "2d8+1d6",
+      "after": "2d8+1d6-1"
+    },
+    {
+      "id": "combat-style-huskarl-skalde-wahl-7",
+      "name": "Sax an der Fessel",
+      "style": "huskarl-waffenlehre",
+      "level": 4,
+      "costs": [
+        {
+          "resourceId": "action",
+          "amount": 1
+        },
+        {
+          "resourceId": "reaction",
+          "amount": 1
+        }
+      ],
+      "before": "1d8+1d6",
+      "after": "1d8+1d6-1"
+    },
+    {
+      "id": "combat-style-huskarl-skalde-wahl-12",
+      "name": "Vorwärts im Gleichklang",
+      "style": "huskarl-waffenlehre",
+      "level": 6,
+      "costs": [
+        {
+          "resourceId": "action",
+          "amount": 1
+        },
+        {
+          "resourceId": "bonus-action",
+          "amount": 1
+        }
+      ],
+      "before": "1d8+1d4",
+      "after": "1d8+1d4-1"
+    }
+  ],
+  "saves": [
+    {
+      "id": "combat-style-drachentanz-arthwyr-jungdrache-brechender-biss",
+      "name": "Brechender Biss",
+      "style": "drachentanz",
+      "level": 2,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 10,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-drachentanz-arthwyr-jungdrache-sturmpranke",
+      "name": "Sturmpranke",
+      "style": "drachentanz",
+      "level": 5,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 10,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-drachentanz-helwyr-jungdrache-gekreuzter-fang",
+      "name": "Gekreuzter Fang",
+      "style": "drachentanz",
+      "level": 3,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "dexterity",
+        "base": 10,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-sirenentanz-derwyn-jungdrache-ruhiger-biss",
+      "name": "Ruhiger Biss",
+      "style": "drachentanz",
+      "level": 5,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 10,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-drachentanz-schwertdrache-schnitt-der-fuenf-finger",
+      "name": "Schnitt der fünf Finger",
+      "style": "drachentanz",
+      "level": 7,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "dexterity",
+        "base": 10,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-drachentanz-arthwyr-schwertdrache-griffbrecher",
+      "name": "Griffbrecher",
+      "style": "drachentanz",
+      "level": 7,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 10,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-drachentanz-schwertdrache-abgezaehlter-atem",
+      "name": "Abgezählter Atem",
+      "style": "drachentanz",
+      "level": 13,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "wisdom",
+        "base": 10,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-drachentanz-schwertdrache-tiefe-bindung",
+      "name": "Tiefe Bindung",
+      "style": "drachentanz",
+      "level": 14,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 10,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-drachentanz-gebrochener-ansturm",
+      "name": "Gebrochener Ansturm",
+      "style": "drachentanz",
+      "level": 12,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 11,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-drachentanz-wendepunkt",
+      "name": "Wendepunkt",
+      "style": "drachentanz",
+      "level": 15,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "dexterity",
+        "base": 10,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-drachentanz-aufsteigender-verdeckter-gelenkschnitt",
+      "name": "Verdeckter Gelenkschnitt",
+      "style": "drachentanz",
+      "level": 15,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "dexterity",
+        "base": 10,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-drachentanz-brechender-ruf",
+      "name": "Brechender Ruf",
+      "style": "drachentanz",
+      "level": 9,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 10,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-drachentanz-schulter-des-kraftdrachen",
+      "name": "Schulter des Kraftdrachen",
+      "style": "drachentanz",
+      "level": 10,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 10,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-drachentanz-mauerspalter",
+      "name": "Mauerspalter",
+      "style": "drachentanz",
+      "level": 15,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "constitution",
+        "base": 10,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-drachentanz-erdbebenpranke",
+      "name": "Erdbebenpranke",
+      "style": "drachentanz",
+      "level": 16,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 11,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-drachentanz-weltenbrecher",
+      "name": "Weltenbrecher",
+      "style": "drachentanz",
+      "level": 20,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "constitution",
+        "base": 11,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-drachentanz-bruellender-schildrachenmaul",
+      "name": "Schildrachenmaul",
+      "style": "drachentanz",
+      "level": 9,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 11,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-drachentanz-meisterliche-gegenwaage",
+      "name": "Meisterliche Gegenwaage",
+      "style": "drachentanz",
+      "level": 17,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 11,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-drachentanz-zwillingsdrache-zweifacher-haken",
+      "name": "Zweifacher Haken",
+      "style": "drachentanz",
+      "level": 13,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 10,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-drachentanz-jagender-griff-in-die-luecke",
+      "name": "Griff in die Lücke",
+      "style": "drachentanz",
+      "level": 15,
+      "before": {
+        "base": 8,
+        "attribute": "dexterity",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "dexterity",
+        "base": 10,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-drachentanz-baerenklaue-enterpranke",
+      "name": "Enterpranke",
+      "style": "drachentanz",
+      "level": 9,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 10,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-drachentanz-baerenklaue-gebrochene-reling",
+      "name": "Gebrochene Reling",
+      "style": "drachentanz",
+      "level": 13,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 10,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-drachentanz-baerenklaue-urteil-der-baerenklaue",
+      "name": "Urteil der Bärenklaue",
+      "style": "drachentanz",
+      "level": 20,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 11,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-drachentanz-drachling-soldnerkeil",
+      "name": "Söldnerkeil",
+      "style": "drachentanz",
+      "level": 6,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 11,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-drachentanz-kreischender-auravibrato",
+      "name": "Auravibrato",
+      "style": "drachentanz",
+      "level": 13,
+      "before": {
+        "base": 8,
+        "attribute": "charisma",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "wisdom",
+        "base": 10,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-sirenentanz-morwyr-haken-im-tau",
+      "name": "Haken im Tau",
+      "style": "sirenentanz",
+      "level": 5,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 10,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-sirenentanz-morwyr-flutwurf",
+      "name": "Flutwurf",
+      "style": "sirenentanz",
+      "level": 8,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 10,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-sirenentanz-morwyr-harpunendruck",
+      "name": "Harpunendruck",
+      "style": "sirenentanz",
+      "level": 11,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 10,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-sirenentanz-morwyr-leinenruck",
+      "name": "Leinenruck",
+      "style": "sirenentanz",
+      "level": 15,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 10,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-sirenentanz-morwyr-drehender-schaft",
+      "name": "Drehender Schaft",
+      "style": "sirenentanz",
+      "level": 13,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 10,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-sirenentanz-morwyr-eiserner-haken",
+      "name": "Eiserner Haken",
+      "style": "sirenentanz",
+      "level": 10,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 10,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-sirenentanz-morwyr-fest-im-tau",
+      "name": "Fest im Tau",
+      "style": "sirenentanz",
+      "level": 13,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 11,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-sirenentanz-morwyr-bastion-des-decks",
+      "name": "Bastion des Decks",
+      "style": "sirenentanz",
+      "level": 20,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 11,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-sirenentanz-rhyfelwyr-gegen-den-rausch",
+      "name": "Gegen den Rausch",
+      "style": "sirenentanz",
+      "level": 5,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 10,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-sirenentanz-rhyfelwyr-schwurbrechergriff",
+      "name": "Schwurbrechergriff",
+      "style": "sirenentanz",
+      "level": 11,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 10,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-sirenentanz-rhyfelwyr-gegen-den-schildwall",
+      "name": "Gegen den Schildwall",
+      "style": "sirenentanz",
+      "level": 15,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 10,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-sirenentanz-rhyfelwyr-umgeleitete-last",
+      "name": "Umgeleitete Last",
+      "style": "sirenentanz",
+      "level": 13,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 10,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-sirenentanz-rhyfelwyr-gebremster-rausch",
+      "name": "Gebremster Rausch",
+      "style": "sirenentanz",
+      "level": 10,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 10,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-sirenentanz-rhyfelwyr-halt-der-linie",
+      "name": "Halt der Linie",
+      "style": "sirenentanz",
+      "level": 13,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 11,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-sirenentanz-rhyfelwyr-grund-unter-dem-sturm",
+      "name": "Grund unter dem Sturm",
+      "style": "sirenentanz",
+      "level": 20,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 11,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-sirenentanz-ceidwyn-dreizackwacht",
+      "name": "Dreizackwacht",
+      "style": "sirenentanz",
+      "level": 4,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 10,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-sirenentanz-ceidwyn-unruhiger-pfeil",
+      "name": "Unruhiger Pfeil",
+      "style": "sirenentanz",
+      "level": 11,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 10,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-sirenentanz-ceidwyn-dreizackdruck",
+      "name": "Dreizackdruck",
+      "style": "sirenentanz",
+      "level": 15,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 10,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-sirenentanz-ceidwyn-kreisende-zinken",
+      "name": "Kreisende Zinken",
+      "style": "sirenentanz",
+      "level": 13,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 10,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-sirenentanz-ceidwyn-bindender-saebel",
+      "name": "Bindender Säbel",
+      "style": "sirenentanz",
+      "level": 10,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 10,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-sirenentanz-ceidwyn-zinken-der-wacht",
+      "name": "Zinken der Wacht",
+      "style": "sirenentanz",
+      "level": 13,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 11,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-sirenentanz-ceidwyn-hueter-der-reling",
+      "name": "Hüter der Reling",
+      "style": "sirenentanz",
+      "level": 20,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 11,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-sirenentanz-rhiddwyr-bolzen-des-reisenden",
+      "name": "Bolzen des Reisenden",
+      "style": "sirenentanz",
+      "level": 8,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 10,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-sirenentanz-rhiddwyr-drangbolzen",
+      "name": "Drangbolzen",
+      "style": "sirenentanz",
+      "level": 11,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 10,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-sirenentanz-rhiddwyr-wegedruck",
+      "name": "Wegedruck",
+      "style": "sirenentanz",
+      "level": 15,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 10,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-sirenentanz-rhiddwyr-kehrender-flegel",
+      "name": "Kehrender Flegel",
+      "style": "sirenentanz",
+      "level": 13,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 10,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-sirenentanz-rhiddwyr-riegel-des-reisenden",
+      "name": "Riegel des Reisenden",
+      "style": "sirenentanz",
+      "level": 10,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 10,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-sirenentanz-rhiddwyr-halt-am-grat",
+      "name": "Halt am Grat",
+      "style": "sirenentanz",
+      "level": 13,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 11,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-sirenentanz-rhiddwyr-letzter-hueter-des-weges",
+      "name": "Letzter Hüter des Weges",
+      "style": "sirenentanz",
+      "level": 20,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 11,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-sirenentanz-derwyn-gebundene-spitze",
+      "name": "Gebundene Spitze",
+      "style": "sirenentanz",
+      "level": 5,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 10,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-sirenentanz-derwyn-stille-schwertbindung",
+      "name": "Stille Schwertbindung",
+      "style": "sirenentanz",
+      "level": 11,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 10,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-sirenentanz-derwyn-gespiegelte-linie",
+      "name": "Gespiegelte Linie",
+      "style": "sirenentanz",
+      "level": 13,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 11,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-sirenentanz-derwyn-meister-des-rueckflusses",
+      "name": "Meister des Rückflusses",
+      "style": "sirenentanz",
+      "level": 20,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 11,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-sirenentanz-derwyn-drang-der-zinken",
+      "name": "Drang der Zinken",
+      "style": "sirenentanz",
+      "level": 9,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 10,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-sirenentanz-derwyn-fesselnde-zinken",
+      "name": "Fesselnde Zinken",
+      "style": "sirenentanz",
+      "level": 15,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 10,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-sirenentanz-derwyn-grundschlag-des-stabes",
+      "name": "Grundschlag des Stabes",
+      "style": "sirenentanz",
+      "level": 12,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 10,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-sirenentanz-derwyn-stern-gegen-stahl",
+      "name": "Stern gegen Stahl",
+      "style": "sirenentanz",
+      "level": 11,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 10,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-sirenentanz-derwyn-drang-des-morgensterns",
+      "name": "Drang des Morgensterns",
+      "style": "sirenentanz",
+      "level": 15,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 10,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-sirenentanz-milwr-schulterdruck",
+      "name": "Schulterdruck",
+      "style": "sirenentanz",
+      "level": 4,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 10,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-sirenentanz-milwr-rauer-hafen",
+      "name": "Rauer Hafen",
+      "style": "sirenentanz",
+      "level": 10,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 10,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-huskarl-hird-maid-grund-4",
+      "name": "Waffe binden",
+      "style": "huskarl-waffenlehre",
+      "level": 4,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 10,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-huskarl-hird-maid-grund-8",
+      "name": "Speer des Aufgebots",
+      "style": "huskarl-waffenlehre",
+      "level": 10,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 10,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-huskarl-hird-maid-wahl-7",
+      "name": "Speer querstellen",
+      "style": "huskarl-waffenlehre",
+      "level": 4,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 10,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-huskarl-hird-maid-wahl-9",
+      "name": "Hieb auf den Waffenarm",
+      "style": "huskarl-waffenlehre",
+      "level": 5,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 10,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-huskarl-hird-maid-hirdwacht-wahl-1",
+      "name": "Speer der Nachtwache",
+      "style": "huskarl-waffenlehre",
+      "level": 9,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 10,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-huskarl-hird-maid-hirdwacht-wahl-7",
+      "name": "Bindung des alten Wächters",
+      "style": "huskarl-waffenlehre",
+      "level": 18,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 10,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-huskarl-skjoldr-grund-4",
+      "name": "Gekreuzte Eisen",
+      "style": "huskarl-waffenlehre",
+      "level": 4,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 10,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-huskarl-skjoldr-wahl-7",
+      "name": "Schnitt zur Fessel",
+      "style": "huskarl-waffenlehre",
+      "level": 4,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 10,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-huskarl-skjoldr-wahl-9",
+      "name": "Gegengriff der Klingen",
+      "style": "huskarl-waffenlehre",
+      "level": 5,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 10,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-huskarl-skjoldr-wall-3",
+      "name": "Gekreuzte Wacht",
+      "style": "huskarl-waffenlehre",
+      "level": 13,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 11,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-huskarl-skjoldr-advance-2",
+      "name": "Schneidender Schritt",
+      "style": "huskarl-waffenlehre",
+      "level": 11,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 10,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-huskarl-skjoldr-advance-5",
+      "name": "Eisenpforte",
+      "style": "huskarl-waffenlehre",
+      "level": 17,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 11,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-huskarl-skjoldr-wall-wahl-1",
+      "name": "Fesselstoß der Linie",
+      "style": "huskarl-waffenlehre",
+      "level": 9,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 10,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-huskarl-skjoldr-wall-wahl-3",
+      "name": "Eisenkreuz am Waffenarm",
+      "style": "huskarl-waffenlehre",
+      "level": 13,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 10,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-huskarl-skjoldr-advance-wahl-4",
+      "name": "Schildkante am Knie",
+      "style": "huskarl-waffenlehre",
+      "level": 15,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 10,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-huskarl-skytte-grund-4",
+      "name": "Sax im Unterholz",
+      "style": "huskarl-waffenlehre",
+      "level": 4,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 10,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-huskarl-skytte-wahl-7",
+      "name": "Speer gegen den Schritt",
+      "style": "huskarl-waffenlehre",
+      "level": 4,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 10,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-huskarl-skytte-wahl-9",
+      "name": "Axt am Waffenarm",
+      "style": "huskarl-waffenlehre",
+      "level": 5,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 10,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-huskarl-skytte-wall-3",
+      "name": "Sax gegen den Ansturm",
+      "style": "huskarl-waffenlehre",
+      "level": 13,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 11,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-huskarl-skytte-advance-2",
+      "name": "Speer aus dem Unterholz",
+      "style": "huskarl-waffenlehre",
+      "level": 11,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 10,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-huskarl-skytte-advance-5",
+      "name": "Stoß des Wildpfads",
+      "style": "huskarl-waffenlehre",
+      "level": 17,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 11,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-huskarl-skytte-wall-wahl-1",
+      "name": "Speersperre im Dickicht",
+      "style": "huskarl-waffenlehre",
+      "level": 9,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 10,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-huskarl-skytte-wall-wahl-3",
+      "name": "Sax an der Sehne",
+      "style": "huskarl-waffenlehre",
+      "level": 13,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 10,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-huskarl-skytte-advance-wahl-4",
+      "name": "Sax am Wildpfad",
+      "style": "huskarl-waffenlehre",
+      "level": 15,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 10,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-huskarl-thegnar-grund-4",
+      "name": "Hieb des Wegwächters",
+      "style": "huskarl-waffenlehre",
+      "level": 4,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 10,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-huskarl-thegnar-wahl-7",
+      "name": "Lanzenschaft zur Fessel",
+      "style": "huskarl-waffenlehre",
+      "level": 4,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 10,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-huskarl-thegnar-wahl-9",
+      "name": "Bindung im Vorbeireiten",
+      "style": "huskarl-waffenlehre",
+      "level": 5,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 10,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-huskarl-thegnar-wall-3",
+      "name": "Hieb an der Flanke",
+      "style": "huskarl-waffenlehre",
+      "level": 13,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 11,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-huskarl-thegnar-advance-2",
+      "name": "Wegbrecherhieb",
+      "style": "huskarl-waffenlehre",
+      "level": 11,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 10,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-huskarl-thegnar-advance-5",
+      "name": "Abgesessener Durchbruch",
+      "style": "huskarl-waffenlehre",
+      "level": 17,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 11,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-huskarl-thegnar-wall-wahl-1",
+      "name": "Speer am Wegsaum",
+      "style": "huskarl-waffenlehre",
+      "level": 9,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 10,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-huskarl-thegnar-wall-wahl-3",
+      "name": "Abgesessene Klingenbindung",
+      "style": "huskarl-waffenlehre",
+      "level": 13,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 10,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-huskarl-thegnar-advance-wahl-4",
+      "name": "Abgesessener Fesselhieb",
+      "style": "huskarl-waffenlehre",
+      "level": 15,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 10,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-huskarl-skeidr-grund-4",
+      "name": "Haken am Waffenarm",
+      "style": "huskarl-waffenlehre",
+      "level": 4,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 10,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-huskarl-skeidr-wahl-7",
+      "name": "Haken an der Fessel",
+      "style": "huskarl-waffenlehre",
+      "level": 4,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 10,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-huskarl-skeidr-wahl-9",
+      "name": "Klingenfang am Mast",
+      "style": "huskarl-waffenlehre",
+      "level": 5,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 10,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-huskarl-skeidr-wall-3",
+      "name": "Wurf der Küstenwache",
+      "style": "huskarl-waffenlehre",
+      "level": 13,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 11,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-huskarl-skeidr-advance-2",
+      "name": "Wurf zur Landung",
+      "style": "huskarl-waffenlehre",
+      "level": 11,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 10,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-huskarl-skeidr-advance-5",
+      "name": "Kielbrecherhieb",
+      "style": "huskarl-waffenlehre",
+      "level": 17,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 11,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-huskarl-skeidr-wall-wahl-1",
+      "name": "Haken der Deckwache",
+      "style": "huskarl-waffenlehre",
+      "level": 9,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 10,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-huskarl-skeidr-wall-wahl-3",
+      "name": "Klammer an der Reling",
+      "style": "huskarl-waffenlehre",
+      "level": 13,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 10,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-huskarl-skeidr-advance-wahl-4",
+      "name": "Axtbart im Gedränge",
+      "style": "huskarl-waffenlehre",
+      "level": 15,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 10,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-huskarl-skjaldr-grund-4",
+      "name": "Doppelter Axtgriff",
+      "style": "huskarl-waffenlehre",
+      "level": 4,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 10,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-huskarl-skjaldr-wahl-7",
+      "name": "Axtbart zur Fessel",
+      "style": "huskarl-waffenlehre",
+      "level": 4,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 10,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-huskarl-skjaldr-wahl-9",
+      "name": "Äxte am Waffenarm",
+      "style": "huskarl-waffenlehre",
+      "level": 5,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 10,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-huskarl-skjaldr-wall-3",
+      "name": "Lange Gegenkante",
+      "style": "huskarl-waffenlehre",
+      "level": 13,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 11,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-huskarl-skjaldr-advance-2",
+      "name": "Gerichteter Axtschritt",
+      "style": "huskarl-waffenlehre",
+      "level": 11,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 10,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-huskarl-skjaldr-advance-5",
+      "name": "Spaltkeil",
+      "style": "huskarl-waffenlehre",
+      "level": 17,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 11,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-huskarl-skjaldr-wall-wahl-1",
+      "name": "Axtsperre der Fessel",
+      "style": "huskarl-waffenlehre",
+      "level": 9,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 10,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-huskarl-skjaldr-wall-wahl-3",
+      "name": "Lange Schaftbindung",
+      "style": "huskarl-waffenlehre",
+      "level": 13,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 10,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-huskarl-skjaldr-advance-wahl-4",
+      "name": "Zwillingsgriff am Bein",
+      "style": "huskarl-waffenlehre",
+      "level": 15,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 10,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-huskarl-skalde-wahl-7",
+      "name": "Sax an der Fessel",
+      "style": "huskarl-waffenlehre",
+      "level": 4,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 10,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-huskarl-skalde-wahl-9",
+      "name": "Klinge und Gegenrhythmus",
+      "style": "huskarl-waffenlehre",
+      "level": 5,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 10,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-huskarl-skalde-wall-3",
+      "name": "Takt gegen den Waffenarm",
+      "style": "huskarl-waffenlehre",
+      "level": 13,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 11,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-huskarl-skalde-advance-2",
+      "name": "Schnitt gegen den Rhythmus",
+      "style": "huskarl-waffenlehre",
+      "level": 11,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 10,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    },
+    {
+      "id": "combat-style-huskarl-skalde-advance-5",
+      "name": "Betonter Schlussakkord",
+      "style": "huskarl-waffenlehre",
+      "level": 17,
+      "before": {
+        "base": 8,
+        "attribute": "strength",
+        "weaponAttribute": false
+      },
+      "after": {
+        "attribute": "strength",
+        "base": 11,
+        "weaponAttribute": true,
+        "fixed": null
+      }
+    }
+  ]
+}

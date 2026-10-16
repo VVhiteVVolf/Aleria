@@ -45,6 +45,7 @@ export const BESTIARY_PROFILES = Object.freeze([
   Object.freeze({"id":"tiere/pferde/zuchtbuch/edelsale","name":"Edelsale","genus":"Pferde","url":"/Bestiarium/tiere/pferde/zuchtbuch/index.html#kreuzung-ceffyl-mit-sale"}),
   Object.freeze({"id":"tiere/pferde/zuchtbuch/eidwacht","name":"Eidwacht","genus":"Pferde","url":"/Bestiarium/tiere/pferde/zuchtbuch/index.html#kreuzung-ceffyl-mit-equo"}),
   Object.freeze({"id":"tiere/pferde/zuchtbuch/ritterschimmer","name":"Ritterschimmer","genus":"Pferde","url":"/Bestiarium/tiere/pferde/zuchtbuch/index.html#kreuzung-ceffyl-mit-herzogsschimmer"}),
+  Object.freeze({"id":"tiere/pferde/zuchtbuch/roh-rhyfel","name":"Roh-Rhyfel","genus":"Pferde","url":"/Bestiarium/tiere/pferde/zuchtbuch/index.html#kreuzung-ceffyl-mit-hest"}),
   Object.freeze({"id":"tiere/pferde/zuchtbuch/sonnenlaeufer","name":"Sonnenläufer","genus":"Pferde","url":"/Bestiarium/tiere/pferde/zuchtbuch/index.html#kreuzung-aurelianer-mit-ceffyl"}),
   Object.freeze({"id":"tiere/raubtiere/baeren/arth","name":"Arth","genus":"Bären"}),
   Object.freeze({"id":"tiere/raubtiere/baeren/banmor-isbjorn","name":"Bànmòr / Ísbjörn","genus":"Bären"}),

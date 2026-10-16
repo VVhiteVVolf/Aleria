@@ -952,6 +952,7 @@ export class CombatResolutionService {
         notation: summaryDamageRoll.notation,
         diceResults: Array.isArray(summaryDamageRoll.keptDice) ? summaryDamageRoll.keptDice.slice() : [],
         modifier: Number(summaryDamageRoll.modifier) || 0,
+        ...(summaryDamageRoll.criticalDamage ? { criticalDamage: summaryDamageRoll.criticalDamage } : {}),
         total: totalDamageApplied,
         primaryTotal: summaryDamageRoll.primaryTotal == null ? Number(summaryDamageRoll.total) : Number(summaryDamageRoll.primaryTotal),
         rawTotal: rawDamageRolled,

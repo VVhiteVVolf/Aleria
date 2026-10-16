@@ -390,7 +390,7 @@ test('Waffenwürfel und Cenyr-Waffenprofile werden erst bei der Kampfhandlung au
   assert.deepEqual(sanitized.techniques[0].cenyrTraining.allowedClassIds, ['cantref', 'uchelwyr']);
   assert.equal(sanitized.techniques[0].effects[0].inheritWeaponDamageType, true);
   const resolved = resolveCombatProfile({ id: 'cantref-test', name: 'Cantref', combatProfile: sanitized }, { actionId: `technique:${haken.id}` });
-  assert.equal(resolved.selectedAction.formula, '1d12');
+  assert.equal(resolved.selectedAction.formula, '1d12+1d6');
   assert.equal(resolved.selectedAction.targetDefenseModifier, -1);
 });
 

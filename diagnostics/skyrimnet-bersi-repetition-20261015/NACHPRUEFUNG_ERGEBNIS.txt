@@ -1,0 +1,182 @@
+SkyrimNet: freigegebener Providervergleich und neues Gespräch
+15.10.2026. Keine SkyrimNet-Einstellungen oder Prompts verändert.
+
+NACHTRAG: BESTÄTIGTER ERFOLG UM 23:22
+Nach der Nutzerrückmeldung zu DeepSeek und "Direct" wurde der neueste
+Engine-Log erneut gelesen. Die gespeicherte Routing-Konfiguration steht
+weiter auf smart; "Direct" wird daher nicht als nachgewiesene globale
+Provider-Routing-Umstellung interpretiert.
+23:22:21: direkte Spieleranweisung, einen tatsächlich vorhandenen
+Gegenstand zu geben, eine Robe, sofern vorhanden.
+Dialogmodell: deepseek/deepseek-v4-flash-0731.
+Aktionsauswertung: google/gemma-4-31b-it.
+23:22:23: konkrete Auswahl GiveItem mit item="Fine Mage Robes".
+23:22:30: item_given bestätigt: Korrilan gave Fine Mage Robes to Alawen.
+Damit ist die Übergabe in diesem späteren Versuch tatsächlich erfolgreich.
+Die frühere fehlgeschlagene Übergabe ist kein aktuell dauerhafter Defekt.
+Da sowohl die Anweisung als auch das Auswertungsmodell gegenüber dem
+Fehlschlag geändert waren, lässt sich der Erfolg nicht isoliert "Direct"
+oder DeepSeek zuschreiben. Es ist ein belegter funktionierender Pfad:
+DeepSeek-Dialog + Gemma-31B-Auswertung + realer Inventargegenstand.
+Die Empfehlung, Dialoge jetzt zwingend auf Gemma/Friendli umzustellen,
+wird durch diesen Praxisbefund ersetzt: DeepSeek zunächst beibehalten,
+Inventarbindung und die verbleibenden Zustands-/Begegnungsprobleme gezielt
+bearbeiten. Die weiter unten stehende Friendli-Empfehlung dokumentiert
+das Ergebnis des vorherigen begrenzten Modellvergleichs.
+
+1. AUSGEFÜHRTER VERGLEICH
+Der Nutzer hat den Export der vollständigen protokollierten Kontexte
+ausdrücklich genehmigt. Daraufhin wurde der zuvor blockierte Replay-Test
+ausgeführt. 14 Anfragen, 12 Modellantworten, 2 HTTP-429-Fehler, keine Retries.
+Gemeldete Gesamtkosten: 0.014544 USD. Preisgrenze unter 0.10 USD eingehalten.
+Es wurden keine Spielaktionen ausgelöst: direkter Modelltest außerhalb der
+laufenden SkyrimNet-Engine, nur Texte und Aktionsvorschläge zurückgegeben.
+
+Gleiche gespeicherte Nachrichten je Testfall, Temperatur 0.7, maximal 256
+Ausgabetoken, nicht gestreamt. Anbieter exakt festgelegt; keine Fallbacks.
+Alle 12 Modellantworten endeten mit stop, nicht mit Ausgabelängenabbruch.
+
+                         Frage nach Frau      Kaufannahme / Aktionsformat
+26B Makora               verfehlt             verfehlt, keine Aktion
+26B CoreWeave/bf16       HTTP 429             Economy UND Items, zwei Aktionen
+26B Cloudflare          beantwortet          Economy UND Items, zwei Aktionen
+26B Parasail/bf16        beantwortet          Economy UND Items, zwei Aktionen
+31B Parasail/fp8         HTTP 429             eine passende Economy-Aktion
+31B Friendli            beantwortet          eine passende Economy-Aktion
+
+Makora antwortet auf die Frage nach der Frau erneut mit einem Abschiedsgruß
+statt einer Antwort. Bei der Kaufannahme fällt es auf den alten Mangel an
+Lederrucksäcken zurück und wählt keine Aktion. Damit wurde der beobachtete
+Fehlertyp unter Makora in beiden Originalkontexten erneut erzeugt.
+
+Cloudflare und Parasail mit 26B beantworten die aktuelle Frage nach Drifa,
+geben beim Kauf aber zwei Aktionszeilen aus. Auch CoreWeave tut dies.
+Der lokale Prompt fordert eine einzige Aktionszeile. Solche Ausgaben sind
+kein bestandener Aktionstest, auch wenn die erste Zeile Economy richtig ist.
+Laut mitgesendeter Formatregel verarbeitet die Engine nur die erste Zeile;
+eine automatische doppelte Spielausführung wird hier NICHT behauptet.
+
+Friendli mit 31B besteht beide Dialogprüfungen. Das ist der beste vollständig
+erfolgreich getestete Kandidat dieser kleinen Stichprobe. Parasail mit 31B
+besteht den Kauf, die andere Anfrage scheitert an temporärem Upstream-Limit.
+Die zwei 429-Antworten sind Verfügbarkeitsprobleme, keine falschen Dialoge.
+
+Separater Aktions-Untertest: bezahlte Übergabe wurde schon in die falsche
+Items-Kategorie eingereiht; SellItem ist dort nicht verfügbar. Sowohl 31B
+Parasail als auch 31B Friendli wählen GiveItem statt None. Der Verkaufspreis
+steht ausdrücklich im Intent. Beide scheitern an dieser Prüfung.
+Ein Anbieterwechsel allein behebt diesen Kategorie-/Zustandsfehler nicht.
+
+GRENZEN
+Je Fall und Route nur ein Durchlauf. Keine statistische Erfolgsquote und
+keine Garantie gegen Wiederholungen in anderen Gesprächen. Die Bewertung
+wurde anhand der vollständigen Antworttexte manuell geprüft; nicht nur
+anhand des automatischen Tests. Frau-Antworten werden auf Themenbezug
+bewertet, nicht auf die Wahrheit neu erfundener Tagesaktivitäten Drifas.
+Der Dialogkontext enthält bereits ältere Wiederholungen. Der Test ist
+nicht identisch mit einer vollständigen Spielsimulation oder SSE-Wiedergabe.
+
+2. NEUES GESPRÄCH MIT KORRILAN, 22:50–23:15
+Der Haupt-Engine-Log wurde lokal gesichert. Die separaten API-/Gesprächslogs
+enden derzeit schon um 22:37; deshalb wurde der neuere Ablauf anhand der
+Engine-Ausgaben, gerenderten Aktionsprompts und Papyrus-Rückmeldungen geprüft.
+
+22:54:19: Spieler fragt, was Korrilan nach Riften führt.
+22:54:20: Korrilan beantwortet stattdessen die alte Kleidungsfrage und setzt
+Economy mit dem Intent, bereits für 81 Gold gekaufte Kleidung zu verkaufen.
+Der nachgeschaltete Auswerter wählt None. Kein erneuter Verkauf belegt.
+Hier ist ein Rückfall auf ein älteres Thema tatsächlich protokolliert.
+
+Ab 23:00: Die Payload-/Client-Zeilen zeigen DeepSeek V4 Flash 0731 für
+Korrilans Dialoge. In diesem Abschnitt werden mehrere aktuelle Fragen zu
+Politik, Herkunft der Stoffe und Lieferwegen sinnvoll aufgegriffen.
+Dies widerlegt eine pauschale Aussage, DeepSeek könne gar keine Aktionen.
+
+23:12:39: Korrilan erfindet einen Lieferauftrag für verzauberte Roben nach
+Windhelm. In den folgenden Antworten bleiben Empfänger, genauer Gegenstand
+und Bezahlung zunächst unkonkret. Erst nach expliziter Nachfrage nennt er
+Faryl Atheron und behauptet, dieser betreibe einen Laden im Grauen Bezirk.
+Die konkrete Robenlieferung wird im untersuchten Ablauf nicht durch einen
+passenden protokollierten Queststart abgesichert. Gespräch und Rollenspiel
+allein belegen keine tatsächlich angelegte Lieferquest.
+
+23:15:41: Spieler bittet um die Robe.
+23:15:42: DeepSeek wählt Items mit Intent:
+  Hand Alawen the packaged enchanted robes to deliver to Faryl Atheron...
+23:15:42: Aktionsauswerter, Gemma 26B, wählt:
+  ACTION: GiveItem PARAMS: {"item":"packaged enchanted robes","recipient":"Alawen"}
+23:15:45: SeverActions_Loot::GiveItem_Execute wird erfolgreich aufgerufen.
+23:15:50: tatsächliches Ergebnis:
+  item_give_failed: Korrilan doesn't have packaged enchanted robes to give
+
+URSACHE DER FEHLGESCHLAGENEN ÜBERGABE
+Der im Dialog erfundene Paketname existiert nicht in der mitgelieferten
+Händlerliste. Der Aktionsauswerter sieht echte Roben wie Blue Robes, Plain
+Robes, Novice Mage Robes of Destruction/Restoration oder Apprentice Mage
+Robes of Alteration/Restoration, übernimmt aber trotzdem den Fantasienamen.
+GiveItem verlangt laut lokaler Aktionsdefinition den echten Inventarnamen.
+Das installierte Script prüft sowohl persönliches Inventar als auch die
+Händlertruhe, und meldet erst nach erfolgloser Suche item_give_failed.
+Ein fehlendes Script, nicht registrierte Aktion oder genereller Defekt
+aller Gegenstandsübertragungen ist für diesen Vorgang daher nicht belegt.
+DeepSeek leitet die Aktion ein; Gemma konkretisiert sie mit ungültigem Item.
+
+3. VEX: ERNEUTES AUFSUCHEN UND SCHLEIFEN
+22:47:46: IntelEngine_StoryEngine::OnDungeonMasterResponse erhält einen
+konkreten informant-Auftrag für Vex. Sie soll Alawen wegen mangelnder
+Heimlichkeit aufsuchen und belehren. Das ist eine automatisch erzeugte
+Story-Begegnung, keine nachgewiesene normale Follower-Rekrutierung.
+22:48:43: erste entsprechende Annäherungs-Narration.
+22:50:59: weitere Ankunftsnarration mit praktisch demselben Belehrungsziel.
+22:51:01: Vex wiederholt nahezu wörtlich frühere Warnungen.
+22:52–22:53: trotz mehrerer Aufforderungen zu gehen wiederholt sie die
+Belehrung. Ein Teil der Einmischungen ist damit bereits durch die vom
+Storysystem eingespeisten Ziele vorgegeben, nicht nur durch das Dialogmodell.
+
+22:53:15: Narration sagt, Vex bereite ihren Abschied vor.
+22:53:17: Dialog erzeugt Travel ohne Parameter; Aktionsauswerter wählt None.
+In diesem konkreten Auswahlpfad wird dadurch keine Reise-/Wegschickaktion
+ausgeführt. Das beweist nicht, dass ein unabhängiger Besuchscontroller sie
+niemals später zurückschickt. Es erklärt aber, warum ein gesprochener
+Abschied nicht automatisch eine erfolgreiche Bewegungsaktion belegt.
+Beide Engine-Erweiterungen sind aktiv; die genaue Verantwortlichkeit der
+zweiten Ankunftsnarration ist hier nicht sicher zugeordnet. Kein pauschaler
+belegter Konflikt zwischen IntelEngine und NarrativeEngine wird behauptet.
+
+Die neue Anbieterabfrage konnte von 28 Antworten nur 2 auflösen:
+Vex 22:48:45: Makora, Gemma 26B.
+Bersi 22:46:31: Friendli, Gemma 31B, aktuelle Ortsfrage beantwortet.
+Die übrigen 26 IDs liefern 404-Metadaten, keine sichere Anbieterzuordnung.
+Insbesondere die Korrilan-Fehler dürfen keinem Provider zugeschrieben werden.
+Das jeweilige Modell ist dagegen teils direkt im lokalen Clientlog belegt.
+
+4. EMPFOHLENE GEZIELTE KORREKTUR
+A. Gemma-Routing zunächst modellbezogen auf geprüfte Anbieter begrenzen.
+   Für wichtige Dialoge ist 31B/Friendli hier der überzeugendste Testkandidat;
+   Cloudflare oder Parasail für 26B bleiben günstigere Kandidaten, haben
+   aber in dieser Stichprobe die Ein-Aktion-Formatregel verletzt.
+B. Vor GiveItem/SellItem reale Itemnamen und Mengen prüfen. Fehlender
+   Gegenstand -> keine Übergabe behaupten; None bzw. tatsächliches Hindernis.
+C. Bezahlte Übergaben konsequent Economy/SellItem zuordnen; Items darf
+   einen Verkauf nicht in ein Geschenk verwandeln. Preis/Zustimmung/Zahlung
+   und tatsächlich bestätigte Übergabe als getrennte Zustände behandeln.
+D. Erfundenen Lieferauftrag nicht als funktionierende Quest darstellen.
+   Dafür vorhandenen Questdialog auslösen oder eine tatsächlich unterstützte
+   Auftragsfunktion mit echten Gegenständen und verfolgtem Zustand benutzen.
+E. Automatische Aufsuch-/Informanten-Begegnungen und ihre Wiederholsperren
+   gezielt prüfen; "geh weg" braucht einen passenden Abschluss und je nach
+   Zustand Task-Abbruch/Heimkehr, nicht bloß eine Abschiedsformulierung.
+
+Das sind Vorschläge aus dieser Prüfung, noch keine installierten Änderungen.
+Keine Logs, Erinnerungen oder Profile gelöscht. Keine Modelle umgestellt.
+Im neuen untersuchten Engine-Zeitfenster keine error/critical-Zeilen;
+das schließt die belegten semantischen und Papyrus-Ergebnisfehler nicht aus.
+
+BELEGE
+provider-test-plan.json / provider-replay-results.json
+new-conversation-summary-lines.txt
+new-conversation-provider-metadata.json
+snapshot/SkyrimNet-new-conversation.log (Originalzeilennummern im Auszug)
+Lokale Quellen:
+SeverActions 4.3.0/.../actions/giveitem.yaml, Zeilen 3 und 16
+SeverActions 4.3.0/Source/Scripts/SeverActions_Loot.psc, Zeilen 500–566

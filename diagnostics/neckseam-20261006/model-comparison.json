@@ -1,0 +1,1023 @@
+{
+  "meshes/clothes/wench/wenchoutfitf_1.nif": [
+    {
+      "mod": "Local - New Downloads OBody Output 20261006",
+      "path": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\Local - New Downloads OBody Output 20261006\\meshes\\clothes\\wench\\wenchoutfitf_1.nif",
+      "textures": [
+        [
+          "textures\\actors\\character\\female\\femalebody_1.dds",
+          "textures\\actors\\character\\female\\femalebody_1_msn.dds",
+          "textures\\actors\\character\\female\\femalebody_1_sk.dds",
+          "",
+          "",
+          "",
+          "",
+          "textures\\actors\\character\\female\\femalebody_1_s.dds",
+          ""
+        ],
+        [
+          "textures\\clothes\\wench\\WenchOutfit.dds",
+          "textures\\clothes\\wench\\WenchOutfit_n.dds",
+          "textures\\gray.dds",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "textures\\actors\\character\\female\\FemaleUnderwear.dds",
+          "textures\\actors\\character\\female\\FemaleUnderwear_n.dds",
+          "textures\\gray.dds",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ],
+      "shaders": [
+        {
+          "type": 5,
+          "flags": [
+            "0x82601303",
+            "0x2008001"
+          ],
+          "gloss": 30.0,
+          "specular_strength": 3.0
+        },
+        {
+          "type": 0,
+          "flags": [
+            "0x82400303",
+            "0x2008011"
+          ],
+          "gloss": 80.0,
+          "specular_strength": 1.0
+        },
+        {
+          "type": 0,
+          "flags": [
+            "0x82400303",
+            "0x6008011"
+          ],
+          "gloss": 80.0,
+          "specular_strength": 1.0
+        }
+      ],
+      "names": [
+        "Scene Root",
+        "L Breast03",
+        "L Breast02",
+        "R Breast03",
+        "R Breast02",
+        "R Breast01",
+        "L Breast01",
+        "Clitoral1",
+        "VaginaB1",
+        "3BA",
+        "WenchTorso",
+        "FemaleUnderwearSH1",
+        "BODYTRI",
+        "clothes\\wench\\wenchoutfitf.tri"
+      ]
+    }
+  ],
+  "meshes/clothes/blacksmith/f/torso_1.nif": [
+    {
+      "mod": "Local - New Downloads OBody Output 20261006",
+      "path": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\Local - New Downloads OBody Output 20261006\\meshes\\clothes\\blacksmith\\f\\torso_1.nif",
+      "textures": [
+        [
+          "textures\\clothes\\blacksmith\\f\\BlacksmithFemaleBody.dds",
+          "textures\\clothes\\blacksmith\\f\\BlacksmithFemaleBody_N.dds",
+          "textures\\gray.dds",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "textures\\actors\\character\\female\\femalebody_1.dds",
+          "textures\\actors\\character\\female\\femalebody_1_msn.dds",
+          "textures\\actors\\character\\female\\femalebody_1_sk.dds",
+          "",
+          "",
+          "",
+          "",
+          "textures\\actors\\character\\female\\femalebody_1_s.dds",
+          ""
+        ]
+      ],
+      "shaders": [
+        {
+          "type": 0,
+          "flags": [
+            "0x82400303",
+            "0x2008001"
+          ],
+          "gloss": 80.0,
+          "specular_strength": 1.0
+        },
+        {
+          "type": 5,
+          "flags": [
+            "0x82601303",
+            "0x2008001"
+          ],
+          "gloss": 30.0,
+          "specular_strength": 3.0
+        }
+      ],
+      "names": [
+        "Scene Root",
+        "L Breast03",
+        "L Breast02",
+        "R Breast03",
+        "R Breast02",
+        "R Breast01",
+        "L Breast01",
+        "BlackSmithTorso",
+        "3BA",
+        "BODYTRI",
+        "clothes\\blacksmith\\f\\torso.tri"
+      ]
+    }
+  ],
+  "meshes/actors/character/character assets/femalebody_1.nif": [
+    {
+      "mod": "Twisted - Nolvus OBody BodySlide Output",
+      "path": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\Twisted - Nolvus OBody BodySlide Output\\meshes\\actors\\character\\character assets\\femalebody_1.nif",
+      "textures": [
+        [
+          "textures\\actors\\character\\female\\femalebody_1.dds",
+          "textures\\actors\\character\\female\\femalebody_1_msn.dds",
+          "textures\\actors\\character\\female\\femalebody_1_sk.dds",
+          "",
+          "",
+          "",
+          "",
+          "textures\\actors\\character\\female\\femalebody_1_s.dds",
+          ""
+        ],
+        [
+          "textures\\actors\\character\\female\\femalebody_etc_v2_1.dds",
+          "textures\\actors\\character\\female\\femalebody_etc_v2_1_msn.dds",
+          "textures\\actors\\character\\female\\femalebody_etc_v2_1_sk.dds",
+          "",
+          "",
+          "",
+          "",
+          "textures\\actors\\character\\female\\femalebody_etc_v2_1_s.dds",
+          ""
+        ],
+        [
+          "textures\\actors\\character\\female\\femalebody_etc_v2_1.dds",
+          "textures\\actors\\character\\female\\femalebody_etc_v2_1_msn.dds",
+          "textures\\actors\\character\\female\\femalebody_etc_v2_1_sk.dds",
+          "",
+          "",
+          "",
+          "",
+          "textures\\actors\\character\\female\\femalebody_etc_v2_1_s.dds",
+          ""
+        ]
+      ],
+      "shaders": [
+        {
+          "type": 5,
+          "flags": [
+            "0x82601303",
+            "0x2008001"
+          ],
+          "gloss": 30.0,
+          "specular_strength": 3.0
+        },
+        {
+          "type": 5,
+          "flags": [
+            "0x82401303",
+            "0x2008001"
+          ],
+          "gloss": 30.0,
+          "specular_strength": 3.0
+        },
+        {
+          "type": 5,
+          "flags": [
+            "0x82401303",
+            "0x2008001"
+          ],
+          "gloss": 30.0,
+          "specular_strength": 3.0
+        }
+      ],
+      "names": [
+        "Scene Root",
+        "Clitoral1",
+        "VaginaB1",
+        "VaginaDeep1",
+        "L Breast01",
+        "L Breast03",
+        "L Breast02",
+        "R Breast03",
+        "R Breast02",
+        "R Breast01",
+        "3BA",
+        "3BA_Vagina",
+        "3BA_Anus",
+        "BODYTRI",
+        "actors\\character\\character assets\\femalebody.tri"
+      ]
+    }
+  ],
+  "meshes/actors/character/facegendata/facegeom/skyrim.esm/00013654.nif": [
+    {
+      "mod": "Twisted - NPC Nolvus Restressourcen 20260924",
+      "path": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\Twisted - NPC Nolvus Restressourcen 20260924\\meshes\\actors\\character\\facegendata\\facegeom\\skyrim.esm\\00013654.nif",
+      "textures": [
+        [
+          "textures\\actors\\character\\mouth\\MouthHuman.dds",
+          "textures\\actors\\character\\mouth\\MouthHuman_N.dds",
+          "textures\\actors\\character\\mouth\\MouthHuman_SSS.dds",
+          "",
+          "textures\\cubemaps\\EyeCubeMap.dds",
+          "textures\\actors\\character\\mouth\\MouthHuman_e.dds",
+          "",
+          "",
+          ""
+        ],
+        [
+          "textures\\DB\\_dbHeads\\head\\FemaleHead.dds",
+          "textures\\DB\\_dbHeads\\head\\FemaleHead_msn.dds",
+          "textures\\DB\\_dbHeads\\head\\FemaleHead_sk.dds",
+          "textures\\DB\\_dbHeads\\head\\BlankDetailmap.dds",
+          "",
+          "",
+          "",
+          "textures\\DB\\_dbHeads\\head\\FemaleHead_S.dds",
+          ""
+        ],
+        [
+          "textures\\DB\\F\\dbFalkreath\\dbNarri\\marstonhair.dds",
+          "textures\\DB\\F\\dbFalkreath\\dbNarri\\marstonhair_n.dds",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "textures\\DB\\_dbScalp\\hairline01.dds",
+          "textures\\DB\\_dbScalp\\hairline01_n.dds",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "textures\\DB\\F\\dbFalkreath\\dbNarri\\nazar_hat_alb2.dds",
+          "textures\\DB\\F\\dbFalkreath\\dbNarri\\nazar_hat_nrm.dds",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "textures\\DB\\F\\dbFalkreath\\dbNarri\\nazar_hat_alb.dds",
+          "textures\\DB\\F\\dbFalkreath\\dbNarri\\nazar_hat_nrm.dds",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "textures\\DB\\_dbEyes\\Human\\EyeGreen.dds",
+          "textures\\DB\\_dbEyes\\EyeBrown_n.dds",
+          "textures\\DB\\_dbEyes\\EyeBrown_sk.dds",
+          "",
+          "textures\\DB\\_dbEyes\\EyeCubeMap.dds",
+          "textures\\DB\\_dbEyes\\EyeEnvironmentMask_M.dds",
+          "",
+          "",
+          ""
+        ],
+        [
+          "textures\\DB\\_dbBrows\\Brow04.dds",
+          "textures\\DB\\_dbBrows\\femalebrow_n.dds",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ],
+      "shaders": [
+        {
+          "type": 1,
+          "flags": [
+            "0x82400383",
+            "0x2008101"
+          ],
+          "gloss": 888.0,
+          "specular_strength": 1.0
+        },
+        {
+          "type": 4,
+          "flags": [
+            "0x82401703",
+            "0x2008101"
+          ],
+          "gloss": 30.0,
+          "specular_strength": 3.0
+        },
+        {
+          "type": 6,
+          "flags": [
+            "0x82440303",
+            "0x8191"
+          ],
+          "gloss": 10.0,
+          "specular_strength": 0.8999999761581421
+        },
+        {
+          "type": 6,
+          "flags": [
+            "0x8e440303",
+            "0x81a1"
+          ],
+          "gloss": 10.0,
+          "specular_strength": 0.6000000238418579
+        },
+        {
+          "type": 6,
+          "flags": [
+            "0x82440303",
+            "0x8191"
+          ],
+          "gloss": 10.0,
+          "specular_strength": 0.8999999761581421
+        },
+        {
+          "type": 6,
+          "flags": [
+            "0x82400303",
+            "0x8111"
+          ],
+          "gloss": 13.0,
+          "specular_strength": 0.20000000298023224
+        },
+        {
+          "type": 6,
+          "flags": [
+            "0x82400303",
+            "0x8111"
+          ],
+          "gloss": 13.0,
+          "specular_strength": 0.20000000298023224
+        },
+        {
+          "type": 1,
+          "flags": [
+            "0x82400383",
+            "0x2008191"
+          ],
+          "gloss": 479.0,
+          "specular_strength": 2.1999998092651367
+        },
+        {
+          "type": 6,
+          "flags": [
+            "0x8e44030b",
+            "0x81a1"
+          ],
+          "gloss": 10.0,
+          "specular_strength": 0.12999999523162842
+        }
+      ],
+      "names": [
+        "BSFaceGenNiNodeSkinned",
+        "FemaleMouthHumanoidDefault",
+        "FemaleHeadNord",
+        "001MadamNazar",
+        "zzzhairlineF",
+        "000MadamNazarHL",
+        "000MadamNazarB2",
+        "000MadamNazarB",
+        "FemaleEyesHumanBrightGreenCE",
+        "_KaliliesBrows04",
+        "DB_Narri",
+        "DB_scalp3",
+        "DB_NarriHL",
+        "DB_NarriACC",
+        "DB_NarriACC2",
+        "FemaleBrowsHuman10",
+        "FemaleEyesHumanBrightGreen",
+        "DB_scalp3F",
+        "_dbHair",
+        "_dbScalp",
+        "_dbHL",
+        "_dbHL2",
+        "_dbHL3",
+        "_dbHair2",
+        "_dbHair3"
+      ]
+    }
+  ],
+  "meshes/actors/character/facegendata/facegeom/3dnpc.esp/0000d6ee.nif": [
+    {
+      "mod": "Twisted - NPC Appearance Integration 20260924",
+      "path": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\Twisted - NPC Appearance Integration 20260924\\meshes\\actors\\character\\facegendata\\facegeom\\3dnpc.esp\\0000d6ee.nif",
+      "textures": [
+        [
+          "textures\\twistednpctransfer\\3dnpc\\females\\teeth\\mouthhuman.dds",
+          "textures\\twistednpctransfer\\3dnpc\\females\\teeth\\mouthhuman_n.dds",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "textures\\actors\\character\\female\\femalehead.dds",
+          "textures\\twistednpctransfer\\actors\\character\\highelffemale\\femalehead_msn.dds",
+          "textures\\actors\\character\\female\\femalehead_sk.dds",
+          "textures\\actors\\character\\male\\blankdetailmap.dds",
+          "",
+          "",
+          "textures\\actors\\character\\facegendata\\facetint\\3dnpc.esp\\0000d6ee.dds",
+          "textures\\actors\\character\\female\\femalehead_s.dds",
+          ""
+        ],
+        [
+          "textures\\twistednpctransfer\\3dnpc\\females\\hair\\equanimity.dds",
+          "textures\\twistednpctransfer\\3dnpc\\females\\hair\\equanimity_n.dds",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "textures\\twistednpctransfer\\3dnpc\\females\\hair\\00hairline01.dds",
+          "textures\\twistednpctransfer\\3dnpc\\females\\hair\\00hairline01_n.dds",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "textures\\twistednpctransfer\\3dnpc\\females\\eyes\\glathriel.dds",
+          "textures\\twistednpctransfer\\actors\\character\\eyes\\eyebrown_n.dds",
+          "textures\\twistednpctransfer\\actors\\character\\eyes\\eyebrown_sk.dds",
+          "",
+          "textures\\twistednpctransfer\\cubemaps\\eyecubemap.dds",
+          "textures\\twistednpctransfer\\actors\\character\\eyes\\eyeenvironmentmask_m.dds",
+          "",
+          "",
+          ""
+        ],
+        [
+          "textures\\twistednpctransfer\\3dnpc\\females\\brows\\glathriel.dds",
+          "textures\\actors\\character\\femalebrows\\femalebrow_n.dds",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ],
+      "shaders": [
+        {
+          "type": 0,
+          "flags": [
+            "0x82400303",
+            "0x208011"
+          ],
+          "gloss": 186.0,
+          "specular_strength": 0.8399996757507324
+        },
+        {
+          "type": 4,
+          "flags": [
+            "0x82401703",
+            "0x2008001"
+          ],
+          "gloss": 30.0,
+          "specular_strength": 3.0
+        },
+        {
+          "type": 6,
+          "flags": [
+            "0x82440303",
+            "0x8081"
+          ],
+          "gloss": 11.0,
+          "specular_strength": 0.8999999761581421
+        },
+        {
+          "type": 6,
+          "flags": [
+            "0x82440303",
+            "0x8081"
+          ],
+          "gloss": 11.0,
+          "specular_strength": 0.8999999761581421
+        },
+        {
+          "type": 6,
+          "flags": [
+            "0x8e440303",
+            "0x8081"
+          ],
+          "gloss": 10.0,
+          "specular_strength": 0.6000000238418579
+        },
+        {
+          "type": 1,
+          "flags": [
+            "0x8240038b",
+            "0x20080b1"
+          ],
+          "gloss": 479.0,
+          "specular_strength": 2.200000047683716
+        },
+        {
+          "type": 1,
+          "flags": [
+            "0x8240038b",
+            "0x20080b1"
+          ],
+          "gloss": 479.0,
+          "specular_strength": 2.200000047683716
+        },
+        {
+          "type": 6,
+          "flags": [
+            "0x8e440303",
+            "0x8080"
+          ],
+          "gloss": 10.0,
+          "specular_strength": 0.12999999523162842
+        }
+      ],
+      "names": [
+        "BSFaceGenNiNodeSkinned",
+        "FemaleMouthHumanoidDefault",
+        "FemaleHeadWoodElf",
+        "000GlathrielHair",
+        "000GlathrielHairline",
+        "0000_3DNPCsScalp",
+        "000FemaleEyesHuman",
+        "000FemaleEyesHumanLashes",
+        "FemaleBrowsHuman09"
+      ]
+    }
+  ],
+  "meshes/actors/character/facegendata/facegeom/3dnpc.esp/000dbdaf.nif": [
+    {
+      "mod": "Twisted - NPC Appearance Integration 20260924",
+      "path": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\Twisted - NPC Appearance Integration 20260924\\meshes\\actors\\character\\facegendata\\facegeom\\3dnpc.esp\\000dbdaf.nif",
+      "textures": [
+        [
+          "textures\\twistednpctransfer\\actors\\character\\cuyima\\mouth\\mouthhuman.dds",
+          "textures\\twistednpctransfer\\actors\\character\\cuyima\\mouth\\mouthhuman_n.dds",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "textures\\twistednpctransfer\\actors\\character\\cuyima\\female\\brows\\hellosanta\\femalebrow21.dds",
+          "textures\\twistednpctransfer\\actors\\character\\cuyima\\female\\brows\\femalebrow_n.dds",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "textures\\twistednpctransfer\\actors\\character\\cuyima\\eyes\\humaneyes22.dds",
+          "textures\\twistednpctransfer\\actors\\character\\eyes\\eyebrown_n.dds",
+          "textures\\twistednpctransfer\\actors\\character\\eyes\\eyebrown_sk.dds",
+          "",
+          "textures\\twistednpctransfer\\cubemaps\\eyecubemap.dds",
+          "textures\\twistednpctransfer\\actors\\character\\eyes\\eyeenvironmentmask_m.dds",
+          "",
+          "",
+          ""
+        ],
+        [
+          "textures\\twistednpctransfer\\actors\\character\\cuyima\\eyes\\humaneyes22.dds",
+          "textures\\twistednpctransfer\\actors\\character\\eyes\\eyebrown_n.dds",
+          "textures\\twistednpctransfer\\actors\\character\\eyes\\eyebrown_sk.dds",
+          "",
+          "textures\\twistednpctransfer\\cubemaps\\eyecubemap.dds",
+          "textures\\twistednpctransfer\\actors\\character\\eyes\\eyeenvironmentmask_m.dds",
+          "",
+          "",
+          ""
+        ],
+        [
+          "textures\\twistednpctransfer\\actors\\character\\cuyima\\hair\\naira.dds",
+          "textures\\twistednpctransfer\\actors\\character\\cuyima\\hair\\naira_n.dds",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "textures\\twistednpctransfer\\actors\\character\\cuyima\\hair\\hairline\\hairline01.dds",
+          "textures\\twistednpctransfer\\actors\\character\\cuyima\\hair\\hairline\\hairline01_n.dds",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "textures\\actors\\character\\female\\femalehead.dds",
+          "textures\\twistednpctransfer\\actors\\character\\imperialfemale\\femalehead_msn.dds",
+          "textures\\actors\\character\\female\\femalehead_sk.dds",
+          "textures\\actors\\character\\male\\blankdetailmap.dds",
+          "",
+          "",
+          "textures\\actors\\character\\facegendata\\facetint\\3dnpc.esp\\000dbdaf.dds",
+          "textures\\actors\\character\\female\\femalehead_s.dds",
+          ""
+        ]
+      ],
+      "shaders": [
+        {
+          "type": 0,
+          "flags": [
+            "0x8240030b",
+            "0x208031"
+          ],
+          "gloss": 186.0,
+          "specular_strength": 0.8399999737739563
+        },
+        {
+          "type": 6,
+          "flags": [
+            "0x8e44030b",
+            "0x80a1"
+          ],
+          "gloss": 10.0,
+          "specular_strength": 0.12999999523162842
+        },
+        {
+          "type": 1,
+          "flags": [
+            "0x8240038b",
+            "0x20080b1"
+          ],
+          "gloss": 900.0,
+          "specular_strength": 1.5
+        },
+        {
+          "type": 1,
+          "flags": [
+            "0x8240038b",
+            "0x20080b1"
+          ],
+          "gloss": 900.0,
+          "specular_strength": 1.5
+        },
+        {
+          "type": 6,
+          "flags": [
+            "0x82440303",
+            "0x8081"
+          ],
+          "gloss": 10.0,
+          "specular_strength": 0.6000000238418579
+        },
+        {
+          "type": 6,
+          "flags": [
+            "0x8e440303",
+            "0x80a1"
+          ],
+          "gloss": 10.0,
+          "specular_strength": 0.6000000238418579
+        },
+        {
+          "type": 6,
+          "flags": [
+            "0x82440303",
+            "0x8081"
+          ],
+          "gloss": 10.0,
+          "specular_strength": 0.6000000238418579
+        },
+        {
+          "type": 4,
+          "flags": [
+            "0x82401703",
+            "0x2008021"
+          ],
+          "gloss": 30.0,
+          "specular_strength": 3.0
+        }
+      ],
+      "names": [
+        "BSFaceGenNiNodeSkinned",
+        "FemaleMouthHumanoidDefault",
+        "cuyIsobelBrowsHP",
+        "cuyIsobelEyeLashesHP",
+        "cuyIsobelEyesHP",
+        "cuyIsobelHairLineHP",
+        "cuyFemaleHairLineHP",
+        "cuyIsobelHairHP",
+        "cuyIsobelHeadHP"
+      ]
+    }
+  ],
+  "meshes/actors/character/facegendata/facegeom/l3dnpcfollowerreplacer.esp/00000808.nif": [
+    {
+      "mod": "Local - 3DNPC Follower and Wives Replacer - SkyPatcher 20261006",
+      "path": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\Local - 3DNPC Follower and Wives Replacer - SkyPatcher 20261006\\meshes\\actors\\character\\facegendata\\facegeom\\l3dnpcfollowerreplacer.esp\\00000808.nif",
+      "textures": [
+        [
+          "textures\\actors\\character\\mouth\\MouthHuman.dds",
+          "textures\\actors\\character\\mouth\\MouthHuman_N.dds",
+          "textures\\actors\\character\\mouth\\mouthhuman_sk.dds",
+          "",
+          "textures\\actors\\character\\mouth\\teeth_e.dds",
+          "textures\\actors\\character\\mouth\\mouthhuman_s.dds",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Actors\\Character\\Female\\FemaleHead.dds",
+          "Actors\\Character\\ImperialFemale\\FemaleHead_msn.dds",
+          "Actors\\Character\\Female\\FemaleHead_sk.dds",
+          "Actors\\Character\\Male\\BlankDetailmap.dds",
+          "",
+          "",
+          "textures\\actors\\character\\FaceGenData\\FaceTint\\3DNPC.esp\\000DBDAF.dds",
+          "Actors\\Character\\Female\\FemaleHead_S.dds",
+          ""
+        ],
+        [
+          "Textures\\00Lily\\privatepark.dds",
+          "Textures\\00Lily\\privatepark_n.dds",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Textures\\00Lily\\hairline01.dds",
+          "Textures\\00Lily\\hairline01_n.dds",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Textures\\00Lily\\eyesdarkblue.dds",
+          "Textures\\00Lily\\EyeBrown_n.dds",
+          "Textures\\00Lily\\eyebrown_sk.dds",
+          "",
+          "Textures\\00Lily\\eyecubemap.dds",
+          "Textures\\00Lily\\eyeenvironmentmask_m.dds",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Textures\\00Lily\\00_f_transparent.dds",
+          "Textures\\00Lily\\00_f_transparent_n.dds",
+          "Textures\\00Lily\\eyebrown_sk.dds",
+          "",
+          "Textures\\00Lily\\eyecubemap.dds",
+          "Textures\\00Lily\\00_transparent_m.dds",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Textures\\00Lily\\EMB_13D.dds",
+          "Textures\\00Lily\\EMB_n.dds",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ],
+      "shaders": [
+        {
+          "type": 1,
+          "flags": [
+            "0x82400383",
+            "0x2008111"
+          ],
+          "gloss": 888.0,
+          "specular_strength": 1.0
+        },
+        {
+          "type": 4,
+          "flags": [
+            "0x82401703",
+            "0x2008101"
+          ],
+          "gloss": 30.0,
+          "specular_strength": 3.0
+        },
+        {
+          "type": 6,
+          "flags": [
+            "0x82440303",
+            "0x8181"
+          ],
+          "gloss": 10.0,
+          "specular_strength": 0.6000000238418579
+        },
+        {
+          "type": 6,
+          "flags": [
+            "0x82440303",
+            "0x8181"
+          ],
+          "gloss": 10.0,
+          "specular_strength": 0.6000000238418579
+        },
+        {
+          "type": 6,
+          "flags": [
+            "0x8e440303",
+            "0x8181"
+          ],
+          "gloss": 10.0,
+          "specular_strength": 0.6000000238418579
+        },
+        {
+          "type": 1,
+          "flags": [
+            "0x8240038b",
+            "0x20081b1"
+          ],
+          "gloss": 479.0,
+          "specular_strength": 2.200000047683716
+        },
+        {
+          "type": 1,
+          "flags": [
+            "0x8e40038b",
+            "0x20081b1"
+          ],
+          "gloss": 479.0,
+          "specular_strength": 2.200000047683716
+        },
+        {
+          "type": 6,
+          "flags": [
+            "0x8e440303",
+            "0x8180"
+          ],
+          "gloss": 10.0,
+          "specular_strength": 0.12999999523162842
+        }
+      ],
+      "names": [
+        "BSFaceGenNiNodeSkinned",
+        "FemaleMouthHumanoidDefault",
+        "00KLH_FemaleHeadImperial",
+        "0PrivatePark",
+        "0PrivateParkHL",
+        "0_HAIRLINE_Female_Human_Straight",
+        "FemaleEyesHumanLightBlue_LM_Art",
+        "FemaleEyesTransparent_LM_Art",
+        "EMBrow_13D_HF",
+        "EMBrow",
+        "0Eyes",
+        "0EyesL",
+        "00KLH_FemaleHead"
+      ]
+    }
+  ],
+  "meshes/armor/amuletsandrings/goldamuletgemsf_1.nif": [
+    {
+      "mod": "Local - New Downloads OBody Output 20261006",
+      "path": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\Local - New Downloads OBody Output 20261006\\meshes\\armor\\amuletsandrings\\goldamuletgemsf_1.nif",
+      "textures": [
+        [
+          "textures\\armor\\amuletsandrings\\Genericamulets.dds",
+          "textures\\armor\\amuletsandrings\\Genericamulets_n.dds",
+          "",
+          "",
+          "textures\\cubemaps\\ShinyDull_e.dds",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ],
+      "shaders": [
+        {
+          "type": 1,
+          "flags": [
+            "0x82400383",
+            "0x8021"
+          ],
+          "gloss": 80.0,
+          "specular_strength": 1.0
+        }
+      ],
+      "names": [
+        "Scene Root",
+        "L Breast02",
+        "R Breast02",
+        "GoldAmuletGems",
+        "BODYTRI",
+        "armor\\amuletsandrings\\goldamuletgemsf.tri"
+      ]
+    }
+  ],
+  "meshes/armor/amuletsandrings/silveramuletemeraldf_1.nif": [
+    {
+      "mod": "Local - New Downloads OBody Output 20261006",
+      "path": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\Local - New Downloads OBody Output 20261006\\meshes\\armor\\amuletsandrings\\silveramuletemeraldf_1.nif",
+      "textures": [
+        [
+          "textures\\armor\\amuletsandrings\\Genericamulets.dds",
+          "textures\\armor\\amuletsandrings\\Genericamulets_n.dds",
+          "",
+          "",
+          "textures\\cubemaps\\ShinyDull_e.dds",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ],
+      "shaders": [
+        {
+          "type": 1,
+          "flags": [
+            "0x82400383",
+            "0x8021"
+          ],
+          "gloss": 80.0,
+          "specular_strength": 1.0
+        }
+      ],
+      "names": [
+        "Scene Root",
+        "L Breast02",
+        "R Breast02",
+        "SilverAmuletEmerald",
+        "BODYTRI",
+        "armor\\amuletsandrings\\silveramuletemeraldf.tri"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,134 @@
+## Balimund's Current State
+- Gender: Male, Race: Nord
+- Health: Healthy
+- Magicka: Sufficient
+## Acting Now, or Only Talking
+Where the Guidelines above treat a hint, a suggestion or a first step toward an action as enough to choose it, this rule takes precedence. Choose an action only if Balimund does it now, in their latest line (under Most Recent Exchange): agreeing to a request, obeying an order, or deciding to act this moment. If the line or the intent only talks about it, choose None: a plan or promise for later, a maybe, a suggestion, a question, a joke, a story, getting ready ("prepares to", "readies", "is about to"), or a threat or warning of what will happen later or "if" something else does. Carrying a threat out in the line itself (the attack, the order, the verdict) is acting. So is agreeing now to a deal whose pickup or payment comes later (an order, a tab, a loan, a raise): the agreement is settled in this line. Starting an interrogation now is acting too, though it is done by asking. Money that Balimund chooses to move in that line is acting too, even if nobody asked: handing someone coin (a tip, a reward, settling up, a refund), billing Alawen for something just given or done (a charge on their tab, or collecting what they owe; they are asked to confirm). Billing anyone else still needs their agreement. Naming a price, haggling or saying they will pay later without agreeing a tab or loan now is talk.
+Going somewhere together with Alawen is not a journey of Balimund's own: someone following Alawen right now simply comes along, and agreeing now to come along, or being called along after a wait, is joining, tagging along or following again, not setting off.
+When unsure, choose None.
+## Validate the Operation Before Selecting It
+These checks take precedence over general instructions to act on hints, agreement, or willingness. Read the actual state and the Most Recent Exchange before choosing.
+- For GiveItem or SellItem, identify an actually listed matching item and sufficient quantity in the speaker's inventory or merchant stock. Use its real name. If none matches, choose None in the required response format. Never manufacture an inventory name from the dialogue's description or silently substitute an unrelated item. This check does not prohibit a real quest action from issuing its scripted reward.
+- An agreed-price sale is an Economy transaction. If only Items actions are available for that sale, choose None; GiveItem must not replace SellItem, bypass payment, or split the sale into a second gift.
+- Use confirmed outcomes supplied in the context. Do not repeat a completed transfer or payment unless a genuinely new transaction was explicitly agreed. A failed operation may justify a corrected attempt after its stated obstacle is resolved. A spoken promise, claim, or queued request is not confirmation; missing outcome information is not proof of success.
+- Output exactly one action in the required response format. If no eligible action can perform the grounded operation, choose None.
+## Merchant Inventory
+- Septim: 656 (5 gold)
+- Iron Arrow: 59 (5 gold)
+- Steel Arrow: 35 (9 gold)
+- Hunting Bow: 3 (225 gold)
+- Steel Greatsword: 1 (405 gold)
+- Steel Sword: 1 (203 gold)
+- Pickaxe: 1 (32 gold)
+- Charcoal Stick: 3 (5 gold)
+- Iron Ore: 5 (9 gold)
+- Iron Ingot: 43 (45 gold)
+- Steel Ingot: 7 (90 gold)
+- Corundum Ingot: 17 (180 gold)
+- Leather Strips: 23 (23 gold)
+- Leather: 17 (90 gold)
+- Leather Bracers: 2 (90 gold)
+- Leather Helmet: 1 (270 gold)
+- Iron Reinforced Shield: 1 (450 gold)
+- Hide Shield: 1 (113 gold)
+- Studded Armor: 1 (338 gold)
+- Steel Helmet: 1 (563 gold)
+- Hide Boots of the Minor Footpad: 1 (896 gold)
+- Steel Bolt: 8 (5 gold)
+- Steel Crossbow of Shock: 1 (846 gold)
+- Iron Bolt: 4 (5 gold)
+- Steel Spiked Gauntlets: 1 (315 gold)
+- Steel Soldier Boots: 1 (248 gold)
+- Steel Soldier Helmet: 1 (563 gold)
+- Steel Soldier Gauntlets: 1 (248 gold)
+- Old Nord Sword: 1 (203 gold)
+- Nord Bow: 1 (225 gold)
+- Nord Dagger: 1 (90 gold)
+- Fine Nord Battleaxe: 1 (900 gold)
+- Fine Nord War Axe: 1 (450 gold)
+- Nord Battleaxe: 1 (248 gold)
+- Nord Battleaxe: 1 (248 gold)
+- Nord Battleaxe: 1 (248 gold)
+- Nord Light War Axe: 1 (135 gold)
+- Nord Medium War Axe: 1 (135 gold)
+- Nord Heavy War Axe: 1 (135 gold)
+- Brown Fur Collar (for Pauldrons): 1 (158 gold)
+- Riften Sword: 1 (450 gold)
+- Fine Nord Sword: 1 (450 gold)
+- Berserkir Sword: 1 (203 gold)
+- Brown Fur Collar: 1 (158 gold)
+- Conical Leather Helmet: 1 (248 gold)
+- Leather Gauntlets: 1 (113 gold)
+- Leather Boots: 1 (113 gold)
+- Riften Helmet: 1 (450 gold)
+- Riften Heavy Helmet: 1 (585 gold)
+- Riften Shield: 1 (315 gold)
+- Riften Cloak: 1 (113 gold)
+- Riften Gauntlets: 1 (180 gold)
+- Riften Boots: 1 (180 gold)
+- Riften Light Armor: 1 (990 gold)
+- Riften Heavy Armor: 1 (990 gold)
+- Iron Arrow: 40 (5 gold)
+- Imperial Agent Bracers: 1 (225 gold)
+- Blackened Steel Armor: 1 (1575 gold)
+- Intrigue Light Boots: 1 (810 gold)
+- Intrigue Hood (Masked): 1 (900 gold)
+- Intrigue Heavy Shoulders: 1 (900 gold)
+- Intrigue Chainmail Hood: 1 (900 gold)
+- Intrigue Chainmail Hood (Masked): 1 (900 gold)
+- Intrigue Masterkeys Unenchanted: 1 (68 gold)
+- Intrigue Potions Unenchanted: 1 (450 gold)
+- Intrigue Stilleto Unenchanted: 1 (450 gold)
+- Intrigue Small Bag Unenchanted: 1 (450 gold)
+- Intrigue Light Shoulders: 1 (765 gold)
+- Intrigue Small Bag: 1 (1125 gold)
+- Intrigue Stilleto: 1 (1494 gold)
+- Intrigue Hood: 1 (338 gold)
+- Steel Rapier: 1 (203 gold)
+- Battleworn Mace: 1 (383 gold)
+- Norse War Axe: 1 (248 gold)
+- Orcish Quarterstaff: 1 (495 gold)
+- Glass Spear: 1 (4050 gold)
+- Steel Crossbow: 1 (405 gold)
+- Assorted Buckles: 5 (68 gold)
+- Iron Dagger of Lesser Weakness to Fire: 1 (1112 gold)
+- Iron Mace of Lesser Weakness to Shock: 1 (1224 gold)
+- Ring of the Minor Voice: 1 (2417 gold)
+## Pricing Guidelines
+These are your usual asking prices. Start from them and don't volunteer discounts.
+- A good customer or a bulk purchase may earn 5-15% off, and a member of your own faction 10-20%.
+- If Alawen haggles, charms or leans on you and it works, you may come down by up to 20%; if it doesn't, hold firm.
+- For rare items, low stock or a difficult customer, keep the price high.
+- Never go below 60% of your usual price.
+## Gold
+Balimund currently has 0 gold.
+## Your Workforce
+Working for you: Asbjorn Fire-Tamer (smith).
+- They are your employees — you pay their wages and their labor belongs to your business. You may speak of how they are working out, praise or grumble about them.
+## Nearby Objects
+### Container
+- Barrel (9.0m)
+- Barrel (11.0m)
+- Barrel (12.0m)
+- Barrel (13.0m)
+- Barrel (14.0m)
+### Furniture
+- Table (11.0m) RefID: 1099024
+### Item
+- Mead x2 (11.0m)
+- Riften Guard's Armor x2 (13.0m)
+- Riften Guard's Helmet x3 (13.0m)
+- Steel Sword x3 (13.0m)
+## Container Contents
+**Barrel** (9.0m):
+- Sack of Flour
+**Barrel** (11.0m):
+- Honey x2
+**Barrel** (12.0m):
+- Carrot x4
+## Worn Equipment
+- **Feet**: Blacksmith's Shoes
+- **Intimate area**: TNG GenitalCover
+- **rightHand**: Silverthorn Slasher (sheathed)
+- **Torso**: Blacksmith's Apron
+Nothing else is worn, whatever was said earlier.

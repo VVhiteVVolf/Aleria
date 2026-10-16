@@ -26,7 +26,7 @@ Gildas ist Stufe 6, Gawain Stufe 5 mit 39 Trefferpunkten. Gildas' feste Schadens
 
 Der Lehrhieb lag zuvor bei 3W10 + 5 (Ø 21,5; maximal 35 ohne Krit). Neu erreicht selbst sein maximaler einhändiger Krit 4W8 + 5 = **37**. Lehrhieb plus Gekreuzte Klauen ergeben bei zwei normalen Treffern Ø 23,5 und maximal **34**. Ein Grundangriff plus Bonus- und Reaktionshieb erreicht maximal 35.
 
-Kritische Treffer verdoppeln weiterhin die Würfel, feste Boni gelten einmal. Zweihändige Führung verwendet beim Lehrhieb 1W10 + 1W8 + 5: maximal 23 normal beziehungsweise 41 kritisch. Außergewöhnliche Würfe und zusätzliche äußere Boni können weiterhin sehr gefährlich sein. Die Balance verhindert keine Niederlage durch jede denkbare Kombination.
+Seit dem 15. Oktober 2026 zählt bei kritischen Treffern ein Grundwürfelpool maximal; ein gleicher weiterer Pool wird normal gewürfelt. Feste Boni gelten einmal. Zweihändige Führung verwendet beim Lehrhieb 1W10 + 1W8 + 5: maximal 23 normal beziehungsweise 41 kritisch. Die maximale Spitze bleibt unverändert, die Mindestwirkung eines Krits steigt. Außergewöhnliche Würfe und zusätzliche äußere Boni können weiterhin sehr gefährlich sein. Die Balance verhindert keine Niederlage durch jede denkbare Kombination.
 
 ## Wachstum älterer Attacken
 

@@ -1,0 +1,47 @@
+{
+  "profile": "Nolvus Awakening - SkyrimNet Beta25 Test",
+  "fingerprint": {
+    "modlist.txt": "5317d8d11d11f10cdecd810147e093c1fdb943ec340090d5f2258f2ebcf5f569",
+    "plugins.txt": "b3b4ade93d399caf1d2c3d5e963562cff0646863610a04f9e5f1a9c308c24f63",
+    "loadorder.txt": "2668aaf74afb6ca741402782b4fa5d79f12670e26cc5459f4ecee843c8c33054"
+  },
+  "prompt_providers": [
+    {
+      "mod": "SkyrimNet - Beta 25 Local Compatibility",
+      "path": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\SkyrimNet - Beta 25 Local Compatibility\\SKSE\\Plugins\\SkyrimNet\\external\\local.inworld-audio-tags\\prompts\\submodules\\user_final_instructions\\0650_audio_tags.prompt",
+      "sha256": "d9435fa66895286e44e9926d08652e1202180e8d904f91fd3357c4149ab23a39"
+    },
+    {
+      "mod": "SkyrimNet - Beta 26 RC4",
+      "path": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\SkyrimNet - Beta 26 RC4\\SKSE\\Plugins\\SkyrimNet\\library\\skyrimnet.base\\prompts\\submodules\\user_final_instructions\\0650_audio_tags.prompt",
+      "sha256": "0aa0388cdf57fb729d448dad87446416a28d9ea83452fb1469122b0e4931b044"
+    }
+  ],
+  "settings": {
+    "Inworld.yaml": {
+      "mod": "SkyrimNet - Beta25 Test Runtime 20260927",
+      "path": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\SkyrimNet - Beta25 Test Runtime 20260927\\SKSE\\Plugins\\SkyrimNet\\config\\Inworld.yaml",
+      "public_fields": {
+        "enable_audio_tags": true,
+        "allowed_audio_tags": []
+      }
+    },
+    "SkyrimNet.yaml": {
+      "mod": "SkyrimNet - Beta25 Test Runtime 20260927",
+      "path": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\SkyrimNet - Beta25 Test Runtime 20260927\\SKSE\\Plugins\\SkyrimNet\\config\\SkyrimNet.yaml",
+      "public_fields": {}
+    },
+    "TtsTextFilter.yaml": {
+      "mod": "SkyrimNet - Beta25 Test Runtime 20260927",
+      "path": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\SkyrimNet - Beta25 Test Runtime 20260927\\SKSE\\Plugins\\SkyrimNet\\config\\TtsTextFilter.yaml",
+      "public_fields": {}
+    }
+  },
+  "registry": [
+    {
+      "mod": "SkyrimNet - Beta25 Test Runtime 20260927",
+      "path": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\SkyrimNet - Beta25 Test Runtime 20260927\\SKSE\\Plugins\\SkyrimNet\\content-registry.json",
+      "audio_entries": {}
+    }
+  ]
+}

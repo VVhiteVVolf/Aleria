@@ -1,0 +1,64 @@
+{
+  "activeId": "person--haus-draig--gethin-1722-draig",
+  "archivedId": "6atOllMA637Z2VNAZAxf",
+  "name": "Gethin Draig",
+  "level": 5,
+  "hitPoints": 62,
+  "maximumHitPoints": 62,
+  "armorClass": 15,
+  "weapon": {
+    "name": "Draig Ritterschwert",
+    "oneHanded": "1d8",
+    "twoHanded": "1d10"
+  },
+  "companion": {
+    "id": "companion-gethin-vivian",
+    "name": "Vivian",
+    "owner": "person--haus-draig--gethin-1722-draig"
+  },
+  "avatars": 11,
+  "protectedHistoricalComments": 20,
+  "fields": [
+    {
+      "document": "projects/aleriaprojekt/databases/(default)/documents/characters/person--haus-draig--gethin-1722-draig",
+      "fields": [
+        "activeImageSetId",
+        "inventory",
+        "aliases",
+        "emotes",
+        "profileLink",
+        "emotesOverride",
+        "imageSets",
+        "currentLocation",
+        "updatedAt",
+        "imageSetSchemaVersion",
+        "imageSetsOverride",
+        "combatProfile.weapons",
+        "combatProfile.armorItems",
+        "combatProfile.revision"
+      ]
+    },
+    {
+      "document": "projects/aleriaprojekt/databases/(default)/documents/characters/6atOllMA637Z2VNAZAxf",
+      "fields": [
+        "archived",
+        "updatedAt",
+        "inventory"
+      ]
+    },
+    {
+      "document": "projects/aleriaprojekt/databases/(default)/documents/creatures/companion-gethin-vivian",
+      "fields": [
+        "updatedAt",
+        "itemOrigin"
+      ]
+    },
+    {
+      "document": "projects/aleriaprojekt/databases/(default)/documents/char_tabs/config",
+      "fields": [
+        "map",
+        "subtabMap"
+      ]
+    }
+  ]
+}

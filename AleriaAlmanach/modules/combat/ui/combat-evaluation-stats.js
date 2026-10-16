@@ -3,6 +3,7 @@ import { renderCombatStatIcon } from './combat-presentation-icons.js?v=20261015-
 import { getCombatResourceIconPresentation } from '../combat-resource-icons.js';
 import { getEvaluationScenario } from './combat-evaluation-model.js';
 import { renderEvaluationAttackRows, renderEvaluationDamageInstances } from './combat-evaluation-rolls.js';
+import { describeRecordedDamageRoll } from './combat-damage-presentation.js';
 
 function stat(kind, label, value, note, help) {
   return `<div class="combat-evaluation-stat combat-evaluation-stat--${kind}" ${combatTooltipAttributes(help, { focusable: true })}>${renderCombatStatIcon(kind)}<span>${escape(label)}</span><strong>${escape(value)}</strong><small>${escape(note)}</small></div>`;
@@ -20,7 +21,7 @@ export function renderEvaluationStats(resolution = {}) {
   if (!automatic && !multiple && attack.targetDefense != null) cells.push(stat('defense', saving ? 'Zauber-SG' : 'Verteidigung', attack.targetDefense, saving ? 'Schwierigkeitsgrad' : 'Zum Zeitpunkt des Angriffs', 'Gespeicherter Vergleichswert dieser Auswertung, einschließlich damals wirksamer Modifikatoren.'));
   const selfDamage = scenario.damage.filter(d => d.recipient === 'actor');
   const targetDamage = scenario.damage.filter(d => d.recipient === 'target');
-  const damageNote = multiple ? 'Summe nach verbuchter Abwehr' : `${targetDamage.length > 1 ? targetDamage.map(d=>d.notation).filter(Boolean).join(' + ') : resolution.damage?.notation || ''}${resolution.damage?.halvedBySave ? ' · halbiert' : ''}`;
+  const damageNote = multiple ? 'Summe nach verbuchter Abwehr' : `${targetDamage.length > 1 ? targetDamage.map(d=>d.notation).filter(Boolean).join(' + ') : resolution.damage?.criticalDamage ? describeRecordedDamageRoll(resolution.damage) : resolution.damage?.notation || ''}${resolution.damage?.halvedBySave ? ' · halbiert' : ''}`;
   if (resolution.damage && !(scenario.self && selfDamage.length && !targetDamage.length)) cells.push(stat('damage', multiple || targetDamage.length > 1 ? 'Gesamtschaden' : 'Schaden angewandt', resolution.damage.total ?? '—', damageNote, 'Gespeicherte Schadenssumme nach verbuchter Abwehr. Einzelwürfe und Schadensinstanzen sind separat aufgeführt. Temporäre TP können diesen Schaden auffangen.'));
   if (selfDamage.length) cells.push(stat('damage', 'Eigenschaden', selfDamage.reduce((sum,d)=>sum+Number(d.applied || 0),0), 'Schaden an der handelnden Figur', 'Verbuchter Eigenschaden dieser Handlung.'));
   const hpChanged = snapshot.hitPointsBefore != null && snapshot.hitPointsAfter != null && Number(snapshot.hitPointsBefore) !== Number(snapshot.hitPointsAfter);

@@ -123,7 +123,7 @@ export function renderActionDetails(actor = {}, { open = false } = {}) {
 
 function renderValue(label, value, note = '', className = '') {
   const kind = /Rettung|SG/.test(label) ? 'save' : /Schaden/.test(label) ? 'damage' : /Treffer/.test(label) ? 'attack' : '';
-  const help = label === 'Ø Schaden' ? 'Durchschnitt des normalen Haupttreffers mit aktiven Schadensboni. Ohne Krit, Folgetreffer, zielabhängige Eingriffe, Resistenzen und Schadensminderung.' : ({ attack: 'Bonus auf den W20-Trefferwurf mit der aktuellen Waffenführung.', damage: 'Schadensformel vor Rüstung und Resistenzen. Wirkung und Voraussetzungen stehen darunter.', save: 'Das Ziel besteht den Rettungswurf bei einem Ergebnis mindestens gleich dem SG.' }[kind] || `${label}: ${value}`);
+  const help = label === 'Ø Schaden' ? 'Durchschnitt des normalen Haupttreffers mit aktiven Schadensboni. Ohne Krit, Folgetreffer, zielabhängige Eingriffe, Resistenzen und Schadensminderung.' : ({ attack: 'Bonus auf den W20-Trefferwurf mit der aktuellen Waffenführung.', damage: 'Schadensformel vor Rüstung und Resistenzen. Bei einem kritischen Treffer zählt der Grundwürfelpool maximal; ein gleicher Zusatzpool wird gewürfelt. Feste Boni zählen einmal. Wirkung und Voraussetzungen stehen darunter.', save: 'Das Ziel besteht den Rettungswurf bei einem Ergebnis mindestens gleich dem SG.' }[kind] || `${label}: ${value}`);
   return `<div class="combat-action-value${kind ? ` combat-action-value--${kind}` : ''}${className ? ` ${escapeHtml(className)}` : ''}" ${combatTooltipAttributes(help, { focusable: true })}><span>${kind ? renderCombatStatIcon(kind) : ''}${escapeHtml(label)}</span><strong>${escapeHtml(value)}</strong>${note ? `<small>${escapeHtml(note)}</small>` : ''}</div>`;
 }
 

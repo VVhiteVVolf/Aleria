@@ -136,6 +136,7 @@ export async function resolveFollowUpAttacks({ dice, actor, target, weapon, atta
           notation: followDamage.notation,
           diceResults: Array.isArray(followDamage.keptDice) ? followDamage.keptDice.slice() : [],
           modifier: Number(followDamage.modifier) || 0,
+          ...(followDamage.criticalDamage ? { criticalDamage: followDamage.criticalDamage } : {}),
           total: Number(followDamage.total),
           reductionBypass: followDamage.reductionBypass || 0,
           damageType: followUp.damageType || followWeapon.damageType || 'physisch',

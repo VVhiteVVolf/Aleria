@@ -1,0 +1,15 @@
+SkyrimNet-Umstellung vom 15.10.2026
+
+Profil: Nolvus Awakening - SkyrimNet Beta25 Test
+Dialoge: google/gemma-4-26b-a4b-it
+Aktionsauswahl: google/gemma-4-31b-it
+
+Die Dialogrotation mit DeepSeek ist entfernt. Hintergrundvarianten behalten ihre bisherigen effektiven Modellzuordnungen. Inworld-Audiotags und pers?nliche Texte sind erhalten. Der technische ACTION:-Footer ist ausdr?cklich von reinen Sprachregeln ausgenommen. Keine Profilaktivierungen ver?ndert.
+
+Pr?fung: 108 Inja-Rendervarianten und vier synthetische API-Aufgaben bestanden. Die erste Auszahlungsauswertung wurde wegen eines zu strengen Pr?fprogramms korrigiert: Der Sprecher darf als Zahler implizit bleiben, wenn er eindeutig sagt pay Aldo 50 gold. Die urspr?ngliche Pr?fausgabe ist erhalten. Noch kein Spielstand f?r einen Ingame-Test geladen.
+
+N?chster Schritt: Skyrim starten. Im Dashboard muss das Dialogmodell Gemma 26B A4B und Action Evaluation Gemma 31B anzeigen. Eine tats?chliche ?bergabe, Begleiter-Entlassung und einen verf?gbaren Questdialog pr?fen; blo?e Zusagen reichen als Erfolgskriterium nicht aus.
+
+R?cknahme bei geschlossenem Skyrim: die beiden Dateien aus approved-backup unter Beibehaltung ihrer Unterordner in den Runtime-Mod zur?ckkopieren. Vorher auf zwischenzeitliche eigene ?nderungen achten.
+
+Zusatzpaket f?r den sp?teren Nolvus-Umzug: migration-approved-dialogue-20261015.zip. Es enth?lt nur die zwei ge?nderten Dateien und Belege, keine Zugangsdaten. Es erg?nzt die vorhandene Gesamtsicherung und ersetzt sie nicht.

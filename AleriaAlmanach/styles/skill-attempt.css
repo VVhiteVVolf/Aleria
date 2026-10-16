@@ -1,0 +1,62 @@
+.skill-attempt-header { display: flex; align-items: center; gap: 16px; margin: -11px -11px 18px; padding: 20px; border-bottom: 3px double #b38b51; background: linear-gradient(115deg,#36251f,#5a2928); color: #fff0d5; border-radius: 8px 8px 0 0; }
+.skill-attempt-emblem { flex: none; width: 58px; height: 58px; object-fit: contain; filter: drop-shadow(0 3px 5px #150b0770); }
+.skill-attempt-header > div { flex: 1; min-width: 0; }
+.skill-attempt-header small { color: #e4bd83; font: 11px/1.4 Cinzel,Georgia,serif; letter-spacing: .09em; text-transform: uppercase; }
+.skill-attempt-header h3 { margin: 5px 0 6px; color: inherit; font: 600 23px/1.3 Cinzel,Georgia,serif; overflow-wrap: anywhere; }
+.skill-attempt-header p { margin: 0; font: 15px/1.5 Georgia,serif; color: #ead7bd; }
+.skill-attempt-timing { align-self: start; padding: 7px 10px; border: 1px solid #e2bd8155; border-radius: 30px; color: #f0cfa0; font: 11px/1.4 Georgia,serif; white-space: nowrap; }
+.skill-attempt-context { display: grid; grid-template-columns: minmax(0,1fr) auto minmax(0,1fr); align-items: center; gap: 18px; margin-bottom: 20px; padding: 15px; border: 1px solid #b49b7366; border-radius: 8px; background: #fffaf0b3; }
+.skill-attempt-context > div { display: flex; align-items: center; gap: 11px; min-width: 0; }
+.skill-attempt-context > div > span:last-child { display: grid; gap: 4px; min-width: 0; }
+.skill-attempt-context small { color: #826952; font: 12px/1.4 Georgia,serif; }
+.skill-attempt-context strong { color: #4b3026; font: 600 17px/1.4 Georgia,serif; overflow-wrap: anywhere; }
+.skill-attempt-context-icon, .skill-attempt-context-icon .skill-medallion { width: 48px; height: 48px; object-fit: contain; flex: none; }
+.skill-attempt-target-portrait { border: 2px solid #a67c48; border-radius: 50%; object-fit: cover; flex: none; }
+.skill-attempt-context-arrow { color: #a67c48; font-size: 25px; }
+.skill-check-composer { border-radius: 9px; }
+.skill-check-composer .skill-choice-instruction { margin: 0 0 12px; color: #7b634c; font: 13px/1.5 Georgia,serif; }
+.skill-check-composer .skill-choice-grid { grid-template-columns: repeat(auto-fit,minmax(min(240px,100%),1fr)); gap: 10px; align-items: stretch; }
+.skill-check-composer .skill-choice .skill-choice-face { align-items: start; gap: 12px; height: 100%; min-height: 140px; padding: 14px; border-radius: 8px; }
+.skill-check-composer .skill-choice-face .skill-medallion { width: 42px; height: 42px; }
+.skill-check-composer .skill-choice-copy { gap: 7px; }
+.skill-check-composer .skill-choice-copy strong { font-size: 16px; }
+.skill-check-composer .skill-choice-description { font: 12px/1.5 Georgia,serif; opacity: .9; letter-spacing: 0; }
+.skill-check-composer .skill-choice-status { width: fit-content; padding: 2px 7px; border: 1px solid currentColor; border-radius: 20px; }
+.skill-check-composer .skill-choice-value, .skill-check-composer .skill-choice-penalty-reason { padding-top: 6px; border-top: 1px solid #a67c4833; }
+.skill-check-composer .skill-choice-penalized .skill-choice-face { border-color: #a66623; background: #fbedd2; color: #784819; box-shadow: inset 3px 0 #b77d28; }
+.skill-check-composer .skill-choice-blocked .skill-choice-face { border-color: #9b958b66; background: #e7e3db; color: #68645c; box-shadow: none; }
+.skill-check-composer .skill-choice-blocked .skill-medallion { filter: grayscale(1); opacity: .6; }
+.skill-check-composer .skill-choice-blocked { cursor: not-allowed; }
+.skill-check-composer .skill-choice-blocked-list { margin: 12px 0; padding: 10px 12px; border: 1px solid #aaa08a66; border-radius: 6px; color: #786b59; }
+.skill-check-composer .skill-choice-blocked-list summary { cursor: pointer; font: 13px/1.5 Georgia,serif; }
+.skill-check-composer .skill-choice-blocked-list[open] > div { margin-top: 12px; }
+.skill-attempt-breakdown { margin-top: 18px; overflow: hidden; border: 1px solid #ab8150; border-radius: 8px; background: #fff8e9; color: #493422; }
+.skill-attempt-breakdown-heading { display: flex; align-items: center; gap: 10px; padding: 12px 16px; border-bottom: 1px solid #b49b7344; background: #ead7b84d; }
+.skill-attempt-breakdown-heading img { object-fit: contain; }
+.skill-attempt-breakdown-heading strong { font: 600 15px/1.4 Georgia,serif; }
+.skill-attempt-breakdown-heading > span { margin-left: auto; color: #877052; font: 11px/1.4 Georgia,serif; }
+.skill-attempt-breakdown dl { display: grid; grid-template-columns: repeat(auto-fit,minmax(min(140px,100%),1fr)); margin: 0; }
+.skill-attempt-breakdown dl > div { display: grid; align-content: center; gap: 8px; padding: 16px; border-right: 1px solid #b49b7333; border-bottom: 1px solid #b49b7333; }
+.skill-attempt-breakdown dt { font: 12px/1.5 Georgia,serif; color: #806b53; }
+.skill-attempt-breakdown dd { margin: 0; font: bold 21px/1.3 Georgia,serif; }
+.skill-attempt-breakdown .skill-attempt-total { background: #7b2924; color: #fff2df; }
+.skill-attempt-total dt { color: #f5cfb7; }
+.skill-attempt-breakdown .has-penalty { color: #963321; background: #fae5d6; }
+.skill-attempt-penalty, .skill-attempt-explanation { margin: 0; padding: 12px 16px; font: 12px/1.6 Georgia,serif; color: #7f6950; }
+.skill-attempt-penalty { color: #883b25; background: #fbe9d8; }
+.skill-check-composer .combat-roll-mode { display: grid; align-content: start; gap: 6px; padding: 12px 14px; border: 1px solid #b49b7366; border-radius: 7px; background: #fff8eb; color: #66513b; }
+.skill-check-composer .combat-roll-mode > span { font: 11px/1.4 Georgia,serif; color: #8b755b; }
+.skill-check-composer .combat-roll-mode > strong { font: bold 16px/1.4 Georgia,serif; }
+.skill-check-composer .combat-roll-mode > small { font: 12px/1.5 Georgia,serif; }
+.skill-check-composer .combat-roll-mode[data-roll-mode="advantage"] { border-color: #64794d; background: #eef1e2; }
+.skill-check-composer .combat-roll-mode[data-roll-mode="disadvantage"] { border-color: #a64939; background: #f9e9df; }
+@media (max-width:600px) {
+  .skill-attempt-header { display: grid; grid-template-columns: 46px minmax(0,1fr); align-items: start; gap: 10px; padding: 16px; }
+  .skill-attempt-header h3 { font-size: 19px; }
+  .skill-attempt-emblem { width: 46px; height: 46px; }
+  .skill-attempt-timing { grid-column: 2; margin: 0; white-space: normal; justify-self: start; }
+  .skill-attempt-context { grid-template-columns: minmax(0,1fr); gap: 12px; padding: 12px; }
+  .skill-attempt-context-arrow { display: none; }
+  .skill-attempt-breakdown-heading { flex-wrap: wrap; }
+  .skill-attempt-breakdown-heading > span { margin-left: 38px; }
+}

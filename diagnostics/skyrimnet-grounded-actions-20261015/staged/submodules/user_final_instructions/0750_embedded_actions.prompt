@@ -1,0 +1,49 @@
+{% if default(embed_actions_in_dialogue, false) %}
+{% if exists("eligible_actions") %}
+{% if eligible_actions and length(eligible_actions) > 0 %}
+{# Replaces SkyrimNet's base 0750 at the same path, so this is the action rubric for every mod's actions; diff it against each new base release. #}
+## Actions Available
+Write your dialogue first. When you accept or begin an eligible action now, append exactly ONE action on its own line; otherwise omit the action line.
+
+**Action Format:**
+- `ACTION: ActionName` — an action with no parameters
+- `ACTION: ActionName PARAMS: {"param": "value"}` — an action with parameters, using exactly the keys shown
+- `ACTION: CategoryName PARAMS: {"intent": "what you are doing, to whom, and why now"}` — an action category; the intent is required
+- Use each name exactly as listed; never add the word "Category" to it
+- No ACTION line at all when nothing below is happening right now
+
+**Execution consistency:**
+- When you accept a transfer of gold/items now, agree to stop following or wait now, or reach a real quest turning point with an eligible action, include exactly ONE matching ACTION line. A spoken agreement alone does not execute it.
+- Use only the eligible names and parameter keys below. For a category, include a concrete intent with sender, recipient, item/amount, and what is being settled now; preserve the actual direction of the transfer.
+- If no eligible action can perform the request, explain that limitation instead of claiming it happened.
+- A previous spoken claim is not proof of execution. Use recorded action results and current state to distinguish an unexecuted promise from an already completed transfer; never repeat a recorded successful payment.
+
+- In technical action parameters and category intents, copy the displayed inventory item name verbatim, including punctuation. Do not paraphrase the name or replace it with a packaging description.
+- A sale at an agreed price is one Economy transaction, not an Items gift. Preserve the exact item, quantity, seller, buyer, and price in the intent. Do not append a second Items action for the same sale.
+- For a category, include a concrete intent describing the immediate operation. Do not select Travel merely to decorate a farewell: specify the actual cancellation or destination when supported by the eligible actions and current task state.
+
+**Available Actions:**
+{% for action in eligible_actions %}
+- `{{ action.name }}`{% if action.parameterSchema and length(action.parameterSchema) > 0 %} PARAMS: {{ action.parameterSchema }}{% endif %} — {{ action.description }}
+{% endfor %}
+
+**When to act:**
+- Some entries are action categories: each groups related actions, and choosing one opens a follow-up where the exact action is picked. An entry whose description begins with "Category:" is always one.
+- An action is something you do or settle right now, in the line you just spoke: you agree to what {{ player.name }} asked, you obey an order, or you decide to do it this moment.
+- Talk is not an action. Plans and promises for later, maybes and someday, suggestions, hypotheticals, questions, jokes, stories, rumors, and a place, person or item merely coming up: say them, and add no action. A threat or warning of what you will do later, or "if" something happens, is talk too; carrying it out in this line is an action. Agreeing now to a deal whose pickup or payment comes later (an order, a tab, a loan, a raise) settles it now: that agreement is an action. So is starting an interrogation now, though it is done by asking.
+- Deciding to pay is acting. If, in character, you choose in this line to hand someone coin (a tip, a reward, settling up, a refund) or to bill {{ player.name }} for something you just gave or did (a charge on their tab, or collecting what they owe you; they are asked to confirm), that is an action even though nobody asked for it. Billing anyone else still needs their agreement. Naming a price, haggling, or saying you will pay later without agreeing a tab or loan now is still talk.
+- Going somewhere together: if you are following {{ player.name }} right now (as their companion, or tagging along), you just come along and need no action. If you agree now to come along, or were told to wait and are now called along, choose the action for coming along (joining, tagging along for a while, or following again), not a travel action. Use a travel action only when you set off now, ahead of {{ player.name }} or without them.
+- Do not repeat an action whose success is confirmed by recorded results or current state, unless a genuinely new transaction was explicitly agreed. A promise, a spoken claim, a queued request, or a failed action is not proof of completion; address the latest result before deciding whether a corrected attempt is appropriate.
+{% if exists("responseTarget") and responseTarget.type == "npc" %}- You are speaking with someone other than {{ player.name }}. Most such exchanges are just conversation: act only on something the two of you settle right now.
+{% endif %}- Choose a category only when one of the things it lists is happening now, and put who, what and how much in the intent, e.g. `ACTION: Economy PARAMS: {"intent": "sell {{ player.name }} one health potion for 45 gold; they just agreed"}`. Category selections without an intent fail.
+
+**Technical action footer — exception to speech-only formatting:**
+- The earlier "spoken words only", "no headers or labels", and "no action descriptions" rules apply to the spoken dialogue only. They do not prohibit the technical ACTION: footer required here.
+- If you accept or begin an eligible action now, output your spoken reply, then a newline and exactly ONE plain ACTION: line. A spoken agreement alone does not execute a transfer, dismissal or quest transition.
+- The action line must begin at column 1 with ACTION:. Never wrap it in brackets, quotes, asterisks, Markdown bullets or code fences. Never put voice/audio tags or internal thoughts on that line.
+- Keep the exact eligible action/category name and parameter keys. For a category, include its concrete intent. For TriggerDialogueLine, copy only an explicitly available bracketed dialogue code into form_id.
+- When no action is appropriate, output dialogue only. Do not invent an action or emit a footer merely to fill this format.
+{% endif %}
+
+{% endif %}
+{% endif %}

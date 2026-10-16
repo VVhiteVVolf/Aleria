@@ -74,7 +74,7 @@ test('Entwaffnende Klaue rolls enhanced damage only after a miss, with prepaid c
   const result = await new CombatResolutionService(receipts([2, 19], 1)).resolveAttack({ actor: fighter('Asgeir Wolfshorn'), target: switched });
   const counter = result.counterAttacks[0].resolution;
   assert.equal(counter.damage.diceResults.length, 2);
-  assert.equal(counter.damage.notation, '2d8'); assert.equal(counter.damage.modifier, 1);
+  assert.equal(counter.damage.notation, '2d8+1'); assert.equal(counter.damage.modifier, 1);
   assert.equal(counter.attack.rollMode, 'advantage');
   assert.deepEqual(counter.resourceCosts, []);
   assert.equal(counter.secondarySaves[0].dc, 15);
@@ -87,7 +87,7 @@ test('old prepared counter snapshot retains its ordinary damage and fixed SG 13'
   delete old.counterAttack.damageModel; old.counterAttack.secondarySave = { ...old.counterAttack.secondarySave, fixedDc: 13 };
   const target = overlayCombatHitPointState(defender, { temporaryConditions: [old] });
   const result = await new CombatResolutionService(receipts([2,19], 1)).resolveAttack({ actor: fighter('Asgeir Wolfshorn'), target });
-  assert.equal(result.counterAttacks[0].resolution.damage.notation, '1d12');
+  assert.equal(result.counterAttacks[0].resolution.damage.notation, '1d12+1');
   assert.equal(result.counterAttacks[0].resolution.secondarySaves[0].dc, 13);
 });
 

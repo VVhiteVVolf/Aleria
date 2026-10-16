@@ -1,0 +1,339 @@
+
+{
+  "cache": true,
+  "extra_body": {
+    "extra_body": {
+      "google": {
+        "safety_settings": [
+          {
+            "category": "HARM_CATEGORY_HARASSMENT",
+            "threshold": "BLOCK_NONE"
+          },
+          {
+            "category": "HARM_CATEGORY_HATE_SPEECH",
+            "threshold": "BLOCK_NONE"
+          },
+          {
+            "category": "HARM_CATEGORY_SEXUALLY_EXPLICIT",
+            "threshold": "BLOCK_NONE"
+          },
+          {
+            "category": "HARM_CATEGORY_DANGEROUS_CONTENT",
+            "threshold": "BLOCK_NONE"
+          }
+        ]
+      }
+    }
+  },
+  "max_tokens": 500,
+  "messages": [
+    {
+      "content": "You select the single most appropriate action for Bersi Honey-Hand from a specific action category.
+A broader category was already identified from the dialogue. Now pick the exact action.
+**Guidelines:**
+- Read the exchange. If the speaker asked Bersi Honey-Hand to do something and Bersi Honey-Hand agreed, complied, or showed willingness, select the action that fulfills that request.
+- If Bersi Honey-Hand's dialogue implies, suggests, or leads toward any eligible action — select it.
+- Agreement can be implicit — positive responses or steps toward fulfilling a request count.
+- Do NOT choose dramatic or aggressive actions unless clearly signaled in the dialogue or situation.
+- Consider Bersi Honey-Hand's current physical and emotional state when selecting.
+- For actions with actor parameters, use the actor's display name exactly as shown in Nearby Actors or in the PARAMS choices.
+- Respond with EXACTLY one line. Never output multiple action lines — only the first is processed by the game engine, the rest are discarded.
+**Response format** (exactly one line starting with `ACTION:`, no reasoning):
+- `ACTION: ActionName`
+- `ACTION: ActionName PARAMS: {\"param_name1\": \"value1\", ...}`
+- `ACTION: None`
+## Bersi Honey-Hand's Current State
+- Gender: Male, Race: Nord
+- Health: Healthy
+- Magicka: Sufficient
+## Acting Now, or Only Talking
+Where the Guidelines above treat a hint, a suggestion or a first step toward an action as enough to choose it, this rule takes precedence. Choose an action only if Bersi Honey-Hand does it now, in their latest line (under Most Recent Exchange): agreeing to a request, obeying an order, or deciding to act this moment. If the line or the intent only talks about it, choose None: a plan or promise for later, a maybe, a suggestion, a question, a joke, a story, getting ready (\"prepares to\", \"readies\", \"is about to\"), or a threat or warning of what will happen later or \"if\" something else does. Carrying a threat out in the line itself (the attack, the order, the verdict) is acting. So is agreeing now to a deal whose pickup or payment comes later (an order, a tab, a loan, a raise): the agreement is settled in this line. Starting an interrogation now is acting too, though it is done by asking. Money that Bersi Honey-Hand chooses to move in that line is acting too, even if nobody asked: handing someone coin (a tip, a reward, settling up, a refund), billing Alawen for something just given or done (a charge on their tab, or collecting what they owe; they are asked to confirm). Billing anyone else still needs their agreement. Naming a price, haggling or saying they will pay later without agreeing a tab or loan now is talk.
+Going somewhere together with Alawen is not a journey of Bersi Honey-Hand's own: someone following Alawen right now simply comes along, and agreeing now to come along, or being called along after a wait, is joining, tagging along or following again, not setting off.
+When unsure, choose None.
+## Merchant Inventory
+- Septim: 2700 (5 gold)
+- Lockpick: 18 (9 gold)
+- Honey: 3 (18 gold)
+- Iron Arrow: 23 (5 gold)
+- Steel Arrow: 47 (9 gold)
+- Dwarven Arrow: 39 (14 gold)
+- Elven Arrow: 29 (18 gold)
+- Charcoal Stick: 1 (5 gold)
+- Bear Pelt: 2 (230 gold)
+- Cow Hide: 1 (45 gold)
+- Flawless Amethyst: 1 (1040 gold)
+- Flawless Garnet: 1 (675 gold)
+- Iron Ore: 2 (9 gold)
+- Corundum Ore: 1 (32 gold)
+- Orichalcum Ore: 1 (104 gold)
+- Iron Ingot: 4 (45 gold)
+- Steel Ingot: 3 (90 gold)
+- Corundum Ingot: 1 (180 gold)
+- Orichalcum Ingot: 1 (563 gold)
+- Refined Malachite: 2 (900 gold)
+- Broken Iron Mace Head: 1 (23 gold)
+- Charcoal: 1 (18 gold)
+- Torch: 10 (23 gold)
+- Snowberries: 4 (113 gold)
+- Salt Pile: 8 (59 gold)
+- Garlic: 3 (41 gold)
+- Elves Ear: 4 (135 gold)
+- Frost Mirriam: 2 (41 gold)
+- Fire Salts: 3 (302 gold)
+- Lavender: 1 (59 gold)
+- Juniper Berries: 1 (41 gold)
+- Jazbay Grapes: 2 (32 gold)
+- Chicken's Egg: 2 (45 gold)
+- Biography of Barenziah, Vol. 3: 1 (14 gold)
+- Spirit of Nirn: 1 (27 gold)
+- Yngol and the Sea-Ghosts: 1 (23 gold)
+- Spell Tome: Courage: 1 (1094 gold)
+- Song of the Askelde Men: 1 (23 gold)
+- Alduin is Real: 1 (36 gold)
+- Fox Pelt: 2 (18 gold)
+- Iron Boots: 1 (113 gold)
+- Hide Helmet: 1 (113 gold)
+- Common Cap: 1 (45 gold)
+- Necklace of Minor Magic Resistance: 1 (2219 gold)
+- Necklace of Minor Frost Resistance: 1 (2655 gold)
+- Brown Robes: 1 (68 gold)
+- Necklace of Minor Recovery: 1 (1854 gold)
+- Petty Soul Gem: 2 (81 gold)
+- Common Soul Gem: 1 (405 gold)
+- Greater Soul Gem: 3 (2547 gold)
+- Grand Soul Gem: 2 (1620 gold)
+- Potion of Minor Healing: 1 (104 gold)
+- Potion of Minor Magicka: 2 (104 gold)
+- Potion of Minor Stamina: 1 (104 gold)
+- Potion of Stamina: 1 (225 gold)
+- Weak Magicka Poison: 1 (59 gold)
+- Weak Stamina Poison: 1 (27 gold)
+- Tomato: 5 (14 gold)
+- Raw Beef: 2 (18 gold)
+- Goat Meat: 2 (27 gold)
+- Salmon Meat: 1 (18 gold)
+- Artichoke: 5 (14 gold)
+- Potion of Cure Disease: 1 (104 gold)
+- Red Bitten Apple: 3 (14 gold)
+- Brie Wedge: 4 (14 gold)
+- Cheddar: 6 (14 gold)
+- Raw Chicken Meat: 1 (18 gold)
+- Jug of Milk: 1 (14 gold)
+- Sack of Flour: 1 (18 gold)
+- Butter: 3 (14 gold)
+- Vagrant Robes of Conjuring: 1 (1179 gold)
+- Nordic Circlet: 1 (1463 gold)
+- Nordic Amulet: 1 (1463 gold)
+- Nordic Ring: 1 (1215 gold)
+- Novice Orange Robes of Conjuration & Illusion: 1 (4014 gold)
+- Apprentice Robes of Destruction & Alteration: 1 (5022 gold)
+- Leather Scout Armor: 1 (675 gold)
+- Watermelon Tourmaline: 1 (2880 gold)
+- Aragonite: 1 (1463 gold)
+- Cuprite: 1 (1575 gold)
+- Lapis Lazuli: 1 (1260 gold)
+- Sunstone: 1 (990 gold)
+- Petalite: 1 (923 gold)
+- Peridot: 1 (585 gold)
+- Serpentine: 1 (293 gold)
+- Celestite: 1 (203 gold)
+- Turquoise: 1 (158 gold)
+- Flourite: 1 (54 gold)
+- The Vagaries of Magicka: 1 (36 gold)
+- Ordo Legionis: 1 (23 gold)
+- Legal Basics: 1 (9 gold)
+- Backpack, Brown Fur: 1 (225 gold)
+- Travel Cloak, Burlap: 1 (36 gold)
+-  Small Leather Tent, Bed Roll: 1 (180 gold)
+- Cooking Pot: 1 (41 gold)
+- Imperial Agent Helmet: 1 (450 gold)
+- Nord Raven Battle Hood: 1 (450 gold)
+- Steel Rapier: 2 (203 gold)
+- Iron Rapier: 2 (113 gold)
+- Steelthorn Sword: 1 (450 gold)
+- Noble Black Wolf Skin Cloak: 1 (338 gold)
+- Black Wolf Skin Cloak: 1 (270 gold)
+- Rare Snow Bear Skin Cloak: 1 (1170 gold)
+- Trader's Resource: 1 (450 gold)
+- Rugged Mask: 1 (23 gold)
+- Loose Neck Gaiter: 1 (45 gold)
+- Reinforced Satchel: 1 (180 gold)
+- Dark Witch Gauntlets: 1 (5454 gold)
+- Dark Witch Armor: 1 (8064 gold)
+- Dark Witch Boots: 1 (3132 gold)
+- Iron Claws Left: 1 (45 gold)
+- Iron Claws: 1 (45 gold)
+- Ring of Sneaking (Left): 1 (1301 gold)
+- Spell Tome: Conjure Skeleton: 1 (225 gold)
+- Cooking Recipe: Cabbage and Potato Soup: 1 (180 gold)
+- Cooking Recipe: Mammoth Cheese Fondue: 1 (180 gold)
+- Cooking Recipe: Gourd Soup: 2 (68 gold)
+- Baking Recipe: Boiled Creme Treat: 1 (68 gold)
+- Baking Recipe: Sweet Roll: 2 (68 gold)
+- Baking Recipe: Bread Loaf: 1 (68 gold)
+- Cooking Recipe: Boar Stew: 1 (180 gold)
+- Eastern Vagabond Bracers: 1 (113 gold)
+## Pricing Guidelines
+These are your usual asking prices. Start from them and don't volunteer discounts.
+- A good customer or a bulk purchase may earn 5-15% off, and a member of your own faction 10-20%.
+- If Alawen haggles, charms or leans on you and it works, you may come down by up to 20%; if it doesn't, hold firm.
+- For rare items, low stock or a difficult customer, keep the price high.
+- Never go below 60% of your usual price.
+## Gold
+Bersi Honey-Hand currently has 5 gold.
+## Bersi Honey-Hand's Inventory
+What Bersi Honey-Hand carries besides their gold and the gear they wear; they have nothing else on them.
+- Ale
+- Potion of the Merchant
+- Lockpick
+- Gold Onyx Ring
+- Pawned Prawn Key
+## Alawen's Inventory
+Kept out of sight in Alawen's pack: bring an item up only once Alawen shows or names it, or a trade or a hand-over calls for it.
+**Weapons (3):**
+- Iron Dagger: 10g
+- Orcish Pike: 162g
+- Silver Bow: 100g
+**Armor & Jewelry (8):**
+- Ring of Minor Rejuvenation: 487g
+- Leather Boots: 25g
+- Leather Bracers: 20g
+- Leather Armor: 125g
+- Thieves Guild Boots: 241g
+- Thieves Guild Armor: 685g
+- Thieves Guild Gloves: 222g
+- Thieves Guild Hood: 566g
+**Potions & Consumables (6):**
+- Sack of Flour x3
+- Draught of the Marksman
+- Solution of Extra Health
+- Bread Roll
+- Weak Disintegration Poison
+- Fear Poison
+**Ingredients (3):**
+- Beehive Husk
+- Bee
+- Honeycomb
+**Books (2):**
+- Shooting Stars Leaflet
+- Fairy Info
+**Ammo (1):**
+- Iron Arrow x5
+**Misc (1):**
+- Vampire's Bloodgem
+## Nearby Objects
+### Container
+- Large Sack (1.0m)
+- Sack (1.0m)
+- Sack (1.0m)
+- Large Sack (1.0m)
+- Apothecary's Satchel (2.0m)
+- Large Sack (2.0m)
+### Item
+- Steel War Axe (1.0m)
+- Septim x3 (1.0m)
+- Steel Dagger (1.0m)
+- Steel Ingot x4 (1.0m)
+- Iron Helmet (2.0m)
+- Iron Ingot x6 (2.0m)
+- Iron Gauntlets (2.0m)
+- Spessartine Garnet (2.0m)
+- Potion of Mending (2.0m)
+- Mead x2 (2.0m)
+- Potion of Magic Resistance (2.0m)
+- Potion of Minor Healing (2.0m)
+- An Apology (2.0m)
+- Potion of Magicka (2.0m)
+## Container Contents
+**Large Sack** (1.0m):
+- Frost Mirriam x5
+**Sack** (1.0m):
+- Lavender
+**Sack** (1.0m):
+- Salt Pile x3
+## Worn Equipment
+- **Feet**: Fine Boots
+- **Intimate area**: TNG GenitalCover
+- **rightHand**: Poacher Dagger (Black) [Fine] (sheathed)
+- **Torso**: Fine Clothes
+Nothing else is worn, whatever was said earlier.",
+      "role": "system"
+    },
+    {
+      "content": "## Intent
+Bersi Honey-Hand intends to: Bersi goes to the storage crates in the back of the shop to look for a leather backpack for Alawen
+Pick the specific action that best matches.
+## Most Recent Exchange
+**Alawen:** Would you mind looking and report back to me?
+**Bersi Honey-Hand:** [say with a nod and a determined tone]
+You've got it. Just stay right there, and I'll see if I can dig up something that suits your tastes better. [clear throat]
+ACTION: Travel PARAMS: {\"intent\": \"Bersi goes to the storage crates in the back of the shop to look for a leather backpack for Alawen\"}
+## Nearby Actors
+- Alawen (Female Wood Elf) — THE PLAYER CHARACTER
+- Bersi Honey-Hand (Male Nord, 1.76m away)
+## Eligible Actions
+- ACTION: EscortTarget PARAMS: {\"destination\":\"Where to escort them. Use \\\"home\\\" if taking them home. Otherwise use a specific named place: \\\"Dragonsreach\\\", \\\"The Bannered Mare\\\", \\\"Candlehearth Hall\\\". NEVER use hold/province names (\\\"Eastmarch\\\", \\\"Cyrodiil\\\") or vague descriptions (\\\"the city\\\").\
+\",\"shouldWait\":\"1 if the escorted person should wait at the destination for the player. 0 if they should just stay there and resume normal life. Use 1 when: the player asked for the escort, someone is being taken somewhere for the player to meet. Use 0 when: taking someone home, moving someone away from danger.\
+\",\"targetName\":\"The person to escort. Must be a named NPC or a hold guard. NEVER {{ player.name }} — you cannot escort the player. Valid: \\\"Nazeem\\\", \\\"Adrianne Avenicci\\\", \\\"Whiterun Guard\\\" INVALID: \\\"{{ player.name }}\\\", \\\"Soldier\\\", \\\"Courier\\\", \\\"Messenger\\\", \\\"Bandit\\\", \\\"Traveler\\\". If you cannot name a specific person, do NOT use this action.\
+\"} — Walk WITH someone to a destination. You personally accompany them the entire journey.
+Examples: - \"take Alvor home\", \"walk Ysolda to the inn\", \"escort her to safety\"
+CRITICAL: The target must be a DIFFERENT NPC, NEVER Alawen and NEVER yourself. You escort OTHER people — if Alawen wants YOU to go somewhere, that is GoToLocation, not EscortTarget. If Alawen says \"go to the inn\" or \"head to Dragonsreach\", use GoToLocation. EscortTarget is ONLY for when Alawen explicitly asks you to take/walk/escort ANOTHER NAMED NPC somewhere.
+DECISION RULES: - \"take X to Y\" or \"walk X to Y\" = EscortTarget (X must NOT be Alawen) - \"bring X here\" or \"get X\" = FetchPerson - \"tell X to come\" = DeliverMessage
+- ACTION: CancelCurrentTask — Stop your current active task entirely.
+Use when: - Someone tells you to stop, wait, hold on, come back, or stay - You decide the task is no longer worth doing - You need to follow someone (cancel task first, then follow)
+You don't need this before starting a new task — new tasks replace the current one automatically.
+Does NOT cancel scheduled tasks — those still trigger at their scheduled time. To adjust speed without stopping, use ChangeSpeed instead.
+- ACTION: ChangeSpeed PARAMS: {\"newSpeed\":\"New travel speed as number: 0=walk, 1=jog, 2=run. Choose based on what was requested.\
+\"} — Change your travel speed mid-task WITHOUT canceling it. Only use this if you are CURRENTLY performing a task (fetching someone, delivering a message, traveling somewhere, etc.).
+Use when: - You have an active task AND someone tells you to hurry up, run, go faster, rush, \"start running\", \"pick up the pace\" - You have an active task AND someone tells you to slow down, walk, take it easy, no rush, \"stop running\" - You have an active task AND the urgency changes (e.g. danger ahead, relaxed situation)
+Do NOT use this if you are idle, sandboxing, or have no current task. This changes speed only. To completely stop a task, use CancelCurrentTask instead.
+- ACTION: FetchPerson PARAMS: {\"failReason\":\"Should the target refuse? Set to \\\"none\\\" if they come willingly. If they would refuse, write the reason.\
+\",\"targetName\":\"The person to fetch. Must be a named NPC or hold guard. NEVER {{ player.name }} — you cannot fetch the player. Valid: \\\"Ysolda\\\", \\\"Nazeem\\\", \\\"Whiterun Guard\\\" INVALID: \\\"{{ player.name }}\\\", \\\"Soldier\\\", \\\"Courier\\\", \\\"Messenger\\\", \\\"Bandit\\\", \\\"Traveler\\\". If you cannot name a specific person, do NOT use this action.\
+\"} — PLAYER-INITIATED ONLY. The PLAYER must explicitly ask you to go get someone and bring them back.
+This action means: leave where you are, find a specific person, and bring them to the player.
+ONLY trigger when Alawen says something like: - \"go get Ysolda\" - \"bring Nazeem here\" - \"fetch Alvor for me\" - \"go find the guard and bring him\"
+NEVER trigger on your own initiative. NEVER trigger because: - You think someone should come here - You want to introduce the player to someone - The conversation mentions another NPC - You decide on your own that someone's presence is needed
+If Alawen did not directly ask you to bring someone, do NOT pick this action.
+CRITICAL: The target must be a DIFFERENT NPC, NEVER Alawen. You cannot fetch the person who is standing right in front of you asking you to fetch someone.
+- ACTION: GoToLocation PARAMS: {\"destination\":\"Where to travel. Use ONLY: - A semantic keyword from list A: \\\"home\\\", \\\"upstairs\\\", \\\"downstairs\\\", \\\"outside\\\", \\\"inside\\\",\
+  \\\"the kitchen\\\", \\\"the bedroom\\\", \\\"the cellar\\\", \\\"<Name>'s house\\\"\
+- OR a real Skyrim location name: \\\"Whiterun\\\", \\\"Bannered Mare\\\", \\\"Dragonsreach\\\", etc. NEVER use a person's name alone. NEVER invent locations. NEVER use vague descriptions.\
+\",\"speed\":\"Travel speed: 0=walk, 1=jog, 2=run. Casual=0, normal=1, urgent=2\
+\",\"waitForPlayer\":\"1 if the player asked or told you to go there. 0 if you decided to go on your own.\
+\"} — Leave immediately and travel to a specific place.
+TRIGGER WORDS that indicate travel intent: \"go to\", \"head to\", \"walk to\", \"travel to\", \"make your way to\", \"get to\", \"go home\", \"go back\", \"return to\", \"leave\", \"head out\", \"go outside\", \"go upstairs\", \"go downstairs\", \"go inside\", \"step outside\"
+If the conversation does NOT contain one of these patterns (or similar), do NOT trigger this action. Simply MENTIONING a place name is NOT a travel command.
+DO NOT USE THIS ACTION when the player asks you to deliver a message, tell someone something, warn someone, or relay information. Use DeliverMessage instead. Examples that are NOT travel: \"go tell Alvor...\", \"warn Adrianne...\", \"let Nazeem know...\", \"go find Lydia and tell her...\"
+DESTINATION must be one of these two categories:
+A) SEMANTIC KEYWORDS — use ONLY these exact words (resolved by the engine): - \"home\" or \"my home\" — your own residence - \"<Name>'s home\" or \"<Name>'s house\" — another NPC's residence (e.g., \"Camilla's house\", \"Alvor's home\") - \"upstairs\" or \"downstairs\" — vertical movement within current building - \"outside\" or \"inside\" — enter or exit current building - \"the kitchen\" or \"the bedroom\" or \"the cellar\" — rooms within current building Nothing else from this category is valid. Do NOT improvise semantic keywords.
+B) NAMED SKYRIM LOCATIONS — any real location that exists in the game world. Examples (not exhaustive — any real Skyrim location is valid): - Cities: Whiterun, Solitude, Riften, Markarth, Windhelm, Falkreath, Morthal, Dawnstar, Winterhold - Towns: Riverwood, Rorikstead, Dragon Bridge, Ivarstead, Shor's Stone, Karthwasten - Buildings: Dragonsreach, Bannered Mare, Bee and Barb, Blue Palace, Jorrvaskr, Arcadia's Cauldron The location MUST actually exist in Skyrim. Do NOT invent location names.
+INVALID destinations (NEVER use these): - A person's name by itself (e.g., \"Nazeem\", \"Camilla\") — use FetchPerson or DeliverMessage - Made-up locations that don't exist in Skyrim - Vague descriptions like \"behind the house\", \"near the river\", \"over there\", \"the back room\" - Abstract concepts like \"to work\", \"to the market stall\", \"to the forge\"
+WHEN NOT TO USE: - No travel keyword was spoken — someone just mentioned a place in conversation - You want to go LATER — use ScheduleMeeting instead - The destination is a PERSON — use FetchPerson or DeliverMessage instead - Normal daily routine (going to work, eating, sleeping) — the game handles this - You are already at the destination - You are CURRENTLY fetching someone (FetchPerson), escorting someone (EscortTarget),
+or searching for someone (SearchForActor). Complete or cancel your current task first.
+Do NOT interrupt an active travel task with a new GoToLocation.
+- ACTION: SearchForActor PARAMS: {\"speed\":\"Travel speed: 0=walk (default), 1=jog, 2=run (urgent).\
+\",\"targetName\":\"The person to search for. Must be a named NPC or a hold guard. Valid: \\\"Ysolda\\\", \\\"Faendal\\\", \\\"Riften Guard\\\" INVALID: \\\"Soldier\\\", \\\"Courier\\\", \\\"Messenger\\\", \\\"Bandit\\\", \\\"Traveler\\\". If you cannot name a specific person, do NOT use this action. Examples: \\\"Nazeem\\\", \\\"Jarl Balgruuf\\\", \\\"Adrianne Avenicci\\\"\
+\"} — Lead someone TO a person. You guide, they follow — you travel TOGETHER.
+Examples: - \"take me to Alvor\", \"show me where Ysolda is\", \"help me find Nazeem\"
+DECISION RULES: - Requester COMES WITH YOU = SearchForActor (travel together) - Requester STAYS BEHIND, you go alone = FetchPerson (solo round trip) - You carry words, not guide someone = DeliverMessage
+- ACTION: None — No action matches the dialogue.
+Respond now. One line only, no reasoning.",
+      "role": "user"
+    }
+  ],
+  "model": "google/gemma-4-31b-it",
+  "provider": {
+    "ignore": [
+      "atlas-cloud"
+    ],
+    "sort": "latency"
+  },
+  "reasoning": {
+    "enabled": false
+  },
+  "route": "fallback",
+  "temperature": 0.7,
+  "usage": {
+    "include": true
+  }
+}

@@ -1,0 +1,58 @@
+Gezielter Prompt-Vorschlag, noch nicht im Spiel installiert
+15.10.2026
+
+Ziel: DeepSeek V4 Flash 0731 als Dialogmodell erhalten. Weltbeschreibung,
+Persönlichkeit, Audio-Tags und bestehende Quest-/Aktionssyntax erhalten.
+Die folgenden Regeln ergänzen die zuständigen Dialog- und Aktionsmodule;
+sie gehören nicht in den World-Setting-Prompt.
+
+DIALOG / AUFTRÄGE UND GEGENSTÄNDE
+## Grounded tasks and transfers
+- Ground executable offers in the supplied game state, available quest branches, and eligible actions. A previous spoken claim does not establish that an item, client, order, or quest exists.
+- For an item you offer to hand over or sell now, use its actual listed inventory or merchant-stock name and available quantity. Do not rename a normal item into an invented parcel or special quest object. If the required item is absent or unverified, acknowledge that and ask about a genuinely available alternative before substituting it.
+- Before committing to an errand, establish its real recipient, destination, actual item or objective, and agreed terms from supplied context. Do not present invented contacts, stock, payments, or quest requirements as verified facts. Discuss an uncertain opportunity as tentative rather than promising an executable assignment.
+- Use an explicitly available quest dialogue code or supported task action when starting or advancing a task. Speaking about a job does not create a tracked quest, spawn its items, or establish a reward.
+- A transfer offered now is pending until the action result confirms it. Report failures honestly and address their stated cause. A failed hand-over is not delivery; accepting a price is not payment; an agreed reward is not a paid reward.
+- Answer the latest question first. A newer acceptance replaces an older refusal. A recorded successful transfer closes that transfer; do not re-offer it or charge for it again. Continue from current state rather than repeating the old negotiation.
+
+BESTEHENDE WIDERSPRÜCHLICHE ZEILE ERSETZEN
+In submodules/user_final_instructions/0750_embedded_actions.prompt:
+Alt:
+- Do not repeat what already happened: a hand-over, payment, trip or lesson already in the conversation is done.
+Neu:
+- Do not repeat an action whose success is confirmed by recorded results or current state. A promise, a spoken claim, a queued request, or a failed action is not proof of completion; address the latest result before deciding whether a corrected attempt is appropriate.
+
+DIALOG / AKTIONSZUORDNUNG
+Ergänzung bei den bestehenden Execution-consistency-Regeln in 0750:
+- A sale at an agreed price is one Economy transaction, not an Items gift. Preserve the exact item, quantity, seller, buyer, and price in the intent. Do not append a second Items action for the same sale.
+- For a category, include a concrete intent describing the immediate operation. Do not select Travel merely to decorate a farewell: specify the actual cancellation or destination when supported by the eligible actions and current task state.
+
+KONKRETE AKTIONSAUSWERTUNG / VORRANG VOR ALLGEMEINEM HANDLUNGSDRANG
+## Validate the operation before selecting it
+- Match the requested operation against the actual supplied state. For GiveItem or SellItem, identify an actually listed matching item and sufficient quantity; use its real name. If none matches, choose ACTION: None. Never manufacture an inventory name from the dialogue's description. Do not silently substitute an unrelated item.
+- An agreed-price sale is an Economy transaction. If only Items actions are available for that sale, choose ACTION: None; GiveItem must not replace SellItem or bypass payment.
+- Use the latest confirmed outcome: do not repeat a successful transfer or payment. A failed operation may justify a corrected attempt only after its stated obstacle is resolved. Spoken promises alone are not confirmation.
+- Output exactly one action line. If no available action can perform the grounded operation, output ACTION: None.
+
+PROVIDER / MODELLVORSCHLAG
+- Dialog: vorhandenes deepseek/deepseek-v4-flash-0731 zunächst erhalten.
+- Die im Discord genannten Gemma-Anbieter sind keine geprüfte Empfehlung
+  für DeepSeek. Keine globale Gemma-Anbieterfreigabe über alle Modelle legen.
+- action_evaluation: für einen nachvollziehbaren Gegenversuch nur Gemma 31B
+  statt wechselnd 31B/26B einsetzen; Friendli ist der beste vollständig
+  bestandene Kandidat des kleinen Dialogtests, aber keine belegte Lösung
+  für den weiterhin gescheiterten Verkauf-in-Items-Untertest.
+- Niedrigere Temperatur, etwa 0.2, für die konkrete Aktionsauswahl als
+  kontrollierte Testeinstellung prüfen. Keine Garantie für semantisch
+  richtige Auswahl; die oben genannten Regeln bleiben erforderlich.
+- Einen Anbieter nur modellbezogen einschränken. Falls umgesetzt, im
+  tatsächlich ausgehenden Request provider.only prüfen, nicht nur eine
+  sichtbare Sortierreihenfolge. Bestehende andere Modellrouten erhalten.
+
+VALIDIERUNG VOR EINEM LIVE-EINSATZ
+Echte Übergabe, fehlender Gegenstand, bezahlter Verkauf, falsche Kategorie,
+bereits erfolgte Zahlung und aktuelle Frage nach altem Handel gezielt prüfen.
+Template-Vorrang und Render-Modi bestimmen, damit die Regeln sowohl im
+Dialog als auch beim konkreten Aktionsauswerter wirklich ankommen.
+Prompts senken Fehlerrisiken, ersetzen aber keine technische Parameterprüfung
+oder tatsächlich implementierte Quest-/Auftragsverwaltung.

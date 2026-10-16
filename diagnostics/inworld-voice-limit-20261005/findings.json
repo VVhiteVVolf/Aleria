@@ -1,0 +1,29 @@
+{
+  "checked_on": "2026-10-05",
+  "status": "Cause of TTS cloning failures established; provider quota/list discrepancy unresolved",
+  "verified_findings": [
+    "Existing Inworld TTS works: current game log contains 290 successful syntheses and three successful clones earlier in the session.",
+    "New voice cloning is rejected with HTTP 400: plan maximum number of custom voices is reported as 100.",
+    "Repeated clone attempts are also rejected with HTTP 429: the account permits two cloning operations per minute.",
+    "SkyrimNet reports maxVoices=80 and 63 remotely managed voices, so its cache eviction threshold is not reached.",
+    "Authenticated read-only default and explicitly configured workspace API requests return identical lists: 338 voices, 275 system voices and 63 owned IVC clones. No pagination remains.",
+    "The saved local clone cache contains 96 distinct keys: 59 correspond to the current owned voice list, 37 do not. Four owned SkyrimNet clones are absent from the saved local cache. Saved configuration need not reflect all changes in a running session."
+  ],
+  "not_established": [
+    "Why the provider reports a 100-voice quota violation despite exposing only 63 owned clones in the configured workspace.",
+    "Whether additional account/workspace voices, provider-side quota bookkeeping, or another mechanism accounts for the discrepancy."
+  ],
+  "recommended_next_steps": [
+    "Compare the authenticated Inworld dashboard My Voices total and any other workspaces with the API count before deciding on cleanup.",
+    "If the dashboard also shows only 63 custom voices, provide Inworld support with the limit error and contradictory list count. Credentials must not be included.",
+    "If unneeded custom voices are identified, review the exact voice IDs and obtain authorization before remote deletion.",
+    "Do not increase max_voices or clear the local cache: neither changes the provider quota and clearing may create further clone attempts.",
+    "Prevent repeated clone attempts during provider cooldown; max_parallel_requests is not a requests-per-minute limiter."
+  ],
+  "provider_requests_during_diagnosis": "Read-only voice listing only; no cloning, synthesis or deletion requested by diagnostics",
+  "skyrim_or_account_changes": false,
+  "sources": [
+    "https://inworld.ai/pricing",
+    "https://goncalo22.github.io/SkyrimNet-GamePlugin/blog/2026/04/13/beta19-release/"
+  ]
+}

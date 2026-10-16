@@ -1,0 +1,402 @@
+[
+  {
+    "time": "2026-10-16 00:54:21.753",
+    "event": {
+      "new_state": "Failed",
+      "objective": "Bring the <Alias=QuestItem> to <Alias.ShortName=QuestGiver>",
+      "old_state": "Dormant",
+      "quest": "Some Light Theft"
+    },
+    "matched": false
+  },
+  {
+    "time": "2026-10-16 00:54:21.753",
+    "event": {
+      "new_state": "Failed",
+      "objective": "Steal the <Alias=QuestItem> for <Alias.ShortName=QuestGiver>",
+      "old_state": "Dormant",
+      "quest": "Some Light Theft"
+    },
+    "matched": false
+  },
+  {
+    "time": "2026-10-16 00:54:21.903",
+    "event": {
+      "new_state": "Failed",
+      "objective": "Plant <Alias=QuestItem> in <Alias=TargetHouse>",
+      "old_state": "Dormant",
+      "quest": "That Was Always There"
+    },
+    "matched": false
+  },
+  {
+    "time": "2026-10-16 00:54:21.903",
+    "event": {
+      "new_state": "Failed",
+      "objective": "Tell <Alias.ShortName=Questgiver> <Alias=QuestItem> has been planted",
+      "old_state": "Dormant",
+      "quest": "That Was Always There"
+    },
+    "matched": false
+  },
+  {
+    "time": "2026-10-16 00:54:22.064",
+    "event": {
+      "new_state": "Failed",
+      "objective": "Deliver <Alias=QuestItem> to <Alias.ShortName=Target>",
+      "old_state": "Dormant",
+      "quest": "Delivery"
+    },
+    "matched": false
+  },
+  {
+    "time": "2026-10-16 00:54:22.171",
+    "event": {
+      "new_state": "Failed",
+      "objective": "Talk to <Alias.ShortName=Target> about <Alias.ShortName=Questgiver>",
+      "old_state": "Dormant",
+      "quest": "A Few Words with You"
+    },
+    "matched": false
+  },
+  {
+    "time": "2026-10-16 00:54:22.171",
+    "event": {
+      "new_state": "Failed",
+      "objective": "Tell <Alias.ShortName=Questgiver> that <Alias.ShortName=Target> is taken care of",
+      "old_state": "Dormant",
+      "quest": "A Few Words with You"
+    },
+    "matched": false
+  },
+  {
+    "time": "2026-10-16 00:54:22.345",
+    "event": {
+      "new_state": "Failed",
+      "objective": "Bring one <Alias=QuestItem> to <Alias.ShortName=QuestGiver>",
+      "old_state": "Dormant",
+      "quest": "Rare Gifts"
+    },
+    "matched": false
+  },
+  {
+    "time": "2026-10-16 00:54:22.345",
+    "event": {
+      "new_state": "Failed",
+      "objective": "Purchase a house in Windhelm",
+      "old_state": "Dormant",
+      "quest": "Thane of Eastmarch"
+    },
+    "matched": false
+  },
+  {
+    "time": "2026-10-16 00:54:22.345",
+    "event": {
+      "new_state": "Failed",
+      "objective": "Return to <Alias.ShortName=QuestGiver>",
+      "old_state": "Dormant",
+      "quest": "Thane of Eastmarch"
+    },
+    "matched": false
+  },
+  {
+    "time": "2026-10-16 00:54:22.447",
+    "event": {
+      "new_state": "Failed",
+      "objective": "Return <Alias=QuestItem> to <Alias.ShortName=QuestGiver>",
+      "old_state": "Dormant",
+      "quest": "Dungeon Delving (Bandits)"
+    },
+    "matched": false
+  },
+  {
+    "time": "2026-10-16 00:54:22.447",
+    "event": {
+      "new_state": "Failed",
+      "objective": "Find <Alias=QuestItem> inside <Alias=Dungeon>",
+      "old_state": "Dormant",
+      "quest": "Dungeon Delving (Bandits)"
+    },
+    "matched": false
+  },
+  {
+    "time": "2026-10-16 00:54:22.447",
+    "event": {
+      "new_state": "Failed",
+      "objective": "Find <Alias=QuestItem> inside <Alias=Dungeon>",
+      "old_state": "Dormant",
+      "quest": "Dungeon Delving (Caves)"
+    },
+    "matched": false
+  },
+  {
+    "time": "2026-10-16 00:54:22.447",
+    "event": {
+      "new_state": "Failed",
+      "objective": "Return <Alias=QuestItem> to <Alias.ShortName=QuestGiver>",
+      "old_state": "Dormant",
+      "quest": "Dungeon Delving (Caves)"
+    },
+    "matched": false
+  },
+  {
+    "time": "2026-10-16 00:54:22.546",
+    "event": {
+      "new_state": "Failed",
+      "objective": "Kill the leader of <Alias=Dungeon>",
+      "old_state": "Dormant",
+      "quest": "Kill the Bandit Leader"
+    },
+    "matched": false
+  },
+  {
+    "time": "2026-10-16 00:54:22.546",
+    "event": {
+      "new_state": "Failed",
+      "objective": "Tell <Alias.ShortName=Questgiver> the bandit is dead",
+      "old_state": "Dormant",
+      "quest": "Kill the Bandit Leader"
+    },
+    "matched": false
+  },
+  {
+    "time": "2026-10-16 01:21:56.856",
+    "event": {
+      "new_state": "Displayed",
+      "objective": "Steal Suvaris Atheron's logbook. She works in Windhelm's Clan Shatter-Shield Office.",
+      "old_state": "Dormant",
+      "quest": "Rise in the East"
+    },
+    "matched": true
+  },
+  {
+    "time": "2026-10-16 01:25:56.950",
+    "event": {
+      "new_state": "CompletedDisplayed",
+      "objective": "Steal Suvaris Atheron's logbook. She works in Windhelm's Clan Shatter-Shield Office.",
+      "old_state": "Displayed",
+      "quest": "Rise in the East"
+    },
+    "matched": true
+  },
+  {
+    "time": "2026-10-16 01:25:56.967",
+    "event": {
+      "new_state": "Displayed",
+      "objective": "Give the logbook to Orthus",
+      "old_state": "Dormant",
+      "quest": "Rise in the East"
+    },
+    "matched": true
+  },
+  {
+    "time": "2026-10-16 01:28:38.433",
+    "event": {
+      "new_state": "CompletedDisplayed",
+      "objective": "Give the logbook to Orthus",
+      "old_state": "Displayed",
+      "quest": "Rise in the East"
+    },
+    "matched": true
+  },
+  {
+    "time": "2026-10-16 01:28:38.458",
+    "event": {
+      "new_state": "Displayed",
+      "objective": "Talk to Stig Salt-Plank in Dawnstar",
+      "old_state": "Dormant",
+      "quest": "Rise in the East"
+    },
+    "matched": true
+  },
+  {
+    "time": "2026-10-16 01:38:08.133",
+    "event": {
+      "new_state": "Failed",
+      "objective": "Steal the <Alias=QuestItem> for <Alias.ShortName=QuestGiver>",
+      "old_state": "Dormant",
+      "quest": "Some Light Theft"
+    },
+    "matched": false
+  },
+  {
+    "time": "2026-10-16 01:38:08.133",
+    "event": {
+      "new_state": "Failed",
+      "objective": "Bring the <Alias=QuestItem> to <Alias.ShortName=QuestGiver>",
+      "old_state": "Dormant",
+      "quest": "Some Light Theft"
+    },
+    "matched": false
+  },
+  {
+    "time": "2026-10-16 01:38:08.155",
+    "event": {
+      "new_state": "Failed",
+      "objective": "Talk to <Alias.ShortName=Target> about <Alias.ShortName=Questgiver>",
+      "old_state": "Dormant",
+      "quest": "A Few Words with You"
+    },
+    "matched": false
+  },
+  {
+    "time": "2026-10-16 01:38:08.155",
+    "event": {
+      "new_state": "Failed",
+      "objective": "Tell <Alias.ShortName=Questgiver> that <Alias.ShortName=Target> is taken care of",
+      "old_state": "Dormant",
+      "quest": "A Few Words with You"
+    },
+    "matched": false
+  },
+  {
+    "time": "2026-10-16 01:38:08.321",
+    "event": {
+      "new_state": "Failed",
+      "objective": "Deliver <Alias=QuestItem> to <Alias.ShortName=Target>",
+      "old_state": "Dormant",
+      "quest": "Delivery"
+    },
+    "matched": false
+  },
+  {
+    "time": "2026-10-16 01:38:08.603",
+    "event": {
+      "new_state": "Failed",
+      "objective": "Kill the leader of <Alias=Dungeon>",
+      "old_state": "Dormant",
+      "quest": "Kill the Bandit Leader"
+    },
+    "matched": false
+  },
+  {
+    "time": "2026-10-16 01:38:08.603",
+    "event": {
+      "new_state": "Failed",
+      "objective": "Tell <Alias.ShortName=Questgiver> the bandit is dead",
+      "old_state": "Dormant",
+      "quest": "Kill the Bandit Leader"
+    },
+    "matched": false
+  },
+  {
+    "time": "2026-10-16 01:38:08.683",
+    "event": {
+      "new_state": "Failed",
+      "objective": "Bring one <Alias=QuestItem> to <Alias.ShortName=QuestGiver>",
+      "old_state": "Dormant",
+      "quest": "Rare Gifts"
+    },
+    "matched": false
+  },
+  {
+    "time": "2026-10-16 01:38:08.885",
+    "event": {
+      "new_state": "Failed",
+      "objective": "Find <Alias=QuestItem> inside <Alias=Dungeon>",
+      "old_state": "Dormant",
+      "quest": "Dungeon Delving (Caves)"
+    },
+    "matched": false
+  },
+  {
+    "time": "2026-10-16 01:38:08.885",
+    "event": {
+      "new_state": "Failed",
+      "objective": "Return <Alias=QuestItem> to <Alias.ShortName=QuestGiver>",
+      "old_state": "Dormant",
+      "quest": "Dungeon Delving (Caves)"
+    },
+    "matched": false
+  },
+  {
+    "time": "2026-10-16 01:38:09.342",
+    "event": {
+      "new_state": "Failed",
+      "objective": "Find <Alias=QuestItem> inside <Alias=Dungeon>",
+      "old_state": "Dormant",
+      "quest": "Dungeon Delving (Bandits)"
+    },
+    "matched": false
+  },
+  {
+    "time": "2026-10-16 01:38:09.342",
+    "event": {
+      "new_state": "Failed",
+      "objective": "Return <Alias=QuestItem> to <Alias.ShortName=QuestGiver>",
+      "old_state": "Dormant",
+      "quest": "Dungeon Delving (Bandits)"
+    },
+    "matched": false
+  },
+  {
+    "time": "2026-10-16 01:38:09.364",
+    "event": {
+      "new_state": "Failed",
+      "objective": "Plant <Alias=QuestItem> in <Alias=TargetHouse>",
+      "old_state": "Dormant",
+      "quest": "That Was Always There"
+    },
+    "matched": false
+  },
+  {
+    "time": "2026-10-16 01:38:09.364",
+    "event": {
+      "new_state": "Failed",
+      "objective": "Tell <Alias.ShortName=Questgiver> <Alias=QuestItem> has been planted",
+      "old_state": "Dormant",
+      "quest": "That Was Always There"
+    },
+    "matched": false
+  },
+  {
+    "time": "2026-10-16 01:38:09.364",
+    "event": {
+      "new_state": "Failed",
+      "objective": "Purchase a house in Windhelm",
+      "old_state": "Dormant",
+      "quest": "Thane of Eastmarch"
+    },
+    "matched": false
+  },
+  {
+    "time": "2026-10-16 01:38:09.364",
+    "event": {
+      "new_state": "Failed",
+      "objective": "Return to <Alias.ShortName=QuestGiver>",
+      "old_state": "Dormant",
+      "quest": "Thane of Eastmarch"
+    },
+    "matched": false
+  },
+  {
+    "time": "2026-10-16 02:26:42.565",
+    "event": {
+      "new_state": "Dormant",
+      "objective": "Bring 10 fire salts to Balimund (<Global=FFR10SaltCount>/<Global=FFR10SaltTotal>)",
+      "old_state": "Dormant",
+      "quest": "Stoking the Flames"
+    },
+    "matched": false
+  },
+  {
+    "time": "2026-10-16 02:26:42.635",
+    "event": {
+      "new_state": "Dormant",
+      "objective": "Return to Balimund",
+      "old_state": "Dormant",
+      "quest": "Stoking the Flames"
+    },
+    "matched": false
+  },
+  {
+    "time": "2026-10-16 02:26:42.721",
+    "event": {
+      "new_state": "Displayed",
+      "objective": "Bring 10 fire salts to Balimund (<Global=FFR10SaltCount>/<Global=FFR10SaltTotal>)",
+      "old_state": "Dormant",
+      "quest": "Stoking the Flames"
+    },
+    "matched": true
+  }
+]

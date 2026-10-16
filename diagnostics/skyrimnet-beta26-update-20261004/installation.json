@@ -1,0 +1,21 @@
+{
+  "status": "INSTALLED_FILE_VERIFIED_NOT_GAME_TESTED",
+  "release": "vbeta26-rc4",
+  "profile": "Nolvus Awakening - SkyrimNet Beta25 Test",
+  "new_mod": "SkyrimNet - Beta 26 RC4",
+  "disabled_previous_core": "SkyrimNet - Beta 25.1 Hotfix",
+  "upstream_files_verified": 2321,
+  "personal_files_unchanged": 5608,
+  "preserved_overrides": [
+    {
+      "path": "Scripts/skynet_WheelMenu.pex",
+      "winner": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\SkyrimNet - Beta 25 Local Compatibility\\Scripts\\skynet_WheelMenu.pex"
+    },
+    {
+      "path": "Source/Scripts/skynet_WheelMenu.psc",
+      "winner": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\SkyrimNet - Beta 25 Local Compatibility\\Source\\Scripts\\skynet_WheelMenu.psc"
+    }
+  ],
+  "prisma_version": "1.5.1",
+  "plugins_and_loadorder": "unchanged"
+}

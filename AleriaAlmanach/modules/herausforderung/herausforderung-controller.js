@@ -1,3 +1,6 @@
+import { mountChallengeCheckPolicyEditor } from './herausforderung-check-policy-ui.js?v=20261016-check-policy-v1';
+import { mountChallengeTargetEditor } from './herausforderung-target-ui.js?v=20261016-check-policy-v1';
+import { normalizeChallengeTarget } from './herausforderung-target.js?v=20261016-check-policy-v1';
 import { mountChallengeOutcomesEditor } from './herausforderung-outcomes-ui.js?v=20261015-check-options-v1';
 import {
   collectHerausforderungApproaches,
@@ -6,7 +9,7 @@ import {
   getHerausforderungValidationIssues,
   normalizeHerausforderungApproach,
   normalizeHerausforderungEvent
-} from './herausforderung-model.js?v=20261015-check-options-v1';
+} from './herausforderung-model.js?v=20261016-check-policy-v1';
 import { collectHerausforderungProgress } from './herausforderung-progress.js?v=20261015-graded-challenges-v1';
 import {
   ensureHerausforderungDialog,
@@ -16,16 +19,16 @@ import {
   setHerausforderungSubmitting,
   updateHerausforderungDraft,
   showHerausforderungValidation
-} from './herausforderung-ui.js?v=20261015-check-options-v2';
-import { bindSkillIconTooltips } from '../skill-checks/skill-icon-view.js?v=20261015-check-options-v1';
+} from './herausforderung-ui.js?v=20261016-check-policy-v1';
+import { bindSkillIconTooltips } from '../skill-checks/skill-icon-view.js?v=20261016-check-policy-v1';
 import { mountHerausforderungRewardEditor } from './herausforderung-rewards-ui.js?v=20261015-check-options-v1';
 import { createChallengeCombatContext, normalizeChallengeAudience, getChallengeCombatBindingError, challengeRequiresCombat } from './herausforderung-combat-context.js?v=20261015-check-options-v1';
 import { mountChallengeAudience, refreshChallengeAudience } from './herausforderung-audience-ui.js';
 import { resolveCombatProfile } from '../combat/combat-profile-resolver.js';
 import { deriveCombatStateFromComments, overlayCombatHitPointState } from '../combat/combat-state-model.js';
 import { getActiveCombatEncounter } from '../combat/combat-encounter-model.js';
-import { mountHerausforderungExchange } from './herausforderung-exchange-ui.js?v=20261015-graded-challenges-v1';
-import { createHerausforderungAttemptPicker } from './herausforderung-attempt-dialog.js?v=20261015-check-options-v1';
+import { mountHerausforderungExchange } from './herausforderung-exchange-ui.js?v=20261016-check-policy-v1';
+import { createHerausforderungAttemptPicker } from './herausforderung-attempt-dialog.js?v=20261016-check-policy-v1';
 import { bindChallengeSceneImageEvents, readChallengeSceneImage, setChallengeSceneImage } from './herausforderung-scene-image-ui.js';
 
 bindSkillIconTooltips(document);
@@ -38,6 +41,7 @@ let submitting = false;
 let renderProgress = new Map();
 let operationId = '';
 let submittedDraft = '';
+let draftTargetActor = normalizeChallengeTarget();
 let draftAudience = normalizeChallengeAudience();
 let draftCombatBound = false;
 let dialogCombatContext = { encounterId: '', participants: [] };
@@ -54,6 +58,8 @@ function renderDialog(activeIndex = 0) {
     getCombatRequired: () => challengeRequiresCombat(draftApproaches),
     getCombatBound: () => draftCombatBound || challengeRequiresCombat(draftApproaches), onChange: value => { if (typeof value === 'boolean') draftCombatBound = value; updateHerausforderungDraft(buildDraft(), { actors: globalThis.getAvailableCommentCharacters?.() || [] }); } });
   renderApproachRows(draftApproaches, activeIndex);
+  mountChallengeCheckPolicyEditor(document.getElementById('herausforderung-overlay'), { approaches: draftApproaches, onChange: () => updateHerausforderungDraft(buildDraft(), { actors: globalThis.getAvailableCommentCharacters?.() || [] }) });
+  mountChallengeTargetEditor(document.getElementById('herausforderung-overlay'), { actors: globalThis.getAvailableCommentCharacters?.() || [], getTarget: () => draftTargetActor, setTarget: target => { draftTargetActor = target; updateHerausforderungDraft(buildDraft(), { actors: globalThis.getAvailableCommentCharacters?.() || [] }); } });
   mountChallengeOutcomesEditor(document.getElementById('herausforderung-overlay'), { approaches: draftApproaches, onChange: () => updateHerausforderungDraft(buildDraft(), { actors: globalThis.getAvailableCommentCharacters?.() || [] }) });
   mountHerausforderungRewardEditor(document.getElementById('herausforderung-overlay'), { approaches: draftApproaches,
     getCombatContext: () => dialogCombatContext, onChange: () => { refreshChallengeAudience(document.getElementById('herausforderung-overlay')); updateHerausforderungDraft(buildDraft(), { actors: globalThis.getAvailableCommentCharacters?.() || [] }); } });
@@ -69,6 +75,7 @@ function importDraft(event, issues) {
   setChallengeSceneImage(root, event.sceneImage);
   draftApproaches = event.approaches;
   draftAudience = normalizeChallengeAudience(event.audience);
+  draftTargetActor = normalizeChallengeTarget(event.targetActor);
   draftCombatBound = event.combatBound;
   operationId = crypto.randomUUID();
   submittedDraft = '';
@@ -89,10 +96,11 @@ function openDialog(comment = null) {
   editingComment = comment?.herausforderung ? comment : null;
   draftApproaches = defaultApproaches();
   draftAudience = normalizeChallengeAudience();
+  draftTargetActor = normalizeChallengeTarget();
   const comments = globalThis.getCachedCommentsForThread?.(activeThreadId) || [];
   const states = deriveCombatStateFromComments(comments);
   const profiles = (globalThis.getAvailableCommentCharacters?.() || []).map(actor => overlayCombatHitPointState(resolveCombatProfile(actor), states.get(actor.id)));
-  dialogCombatContext = { ...createChallengeCombatContext(comments, profiles, { encounterId: editingComment?.herausforderung?.combatBound ? editingComment.herausforderung.combatContext?.encounterId : '' }), actors: (globalThis.getAvailableCommentCharacters?.() || []).map(({ id, name }) => ({ actorId: id, name })) };
+  dialogCombatContext = { ...createChallengeCombatContext(comments, profiles, { encounterId: editingComment?.herausforderung?.combatBound ? editingComment.herausforderung.combatContext?.encounterId : '' }), actors: (globalThis.getAvailableCommentCharacters?.() || []).map(actor => ({ actorId: actor.id, name: actor.name, persistence: resolveCombatProfile(actor).persistence })) };
   draftCombatBound = !!dialogCombatContext.encounterId;
   operationId = crypto.randomUUID();
   submittedDraft = '';
@@ -111,6 +119,7 @@ function openDialog(comment = null) {
     title.value = event.title; description.value = event.publicDescription;
     setChallengeSceneImage(root, event.sceneImage);
     draftApproaches = event.approaches; draftAudience = event.audience; draftCombatBound = event.combatBound;
+    draftTargetActor = event.targetActor;
   }
   renderDialog();
   setHerausforderungStatus(editingComment ? 'Änderungen gelten für neue Versuche. Bisherige Würfe und Folgen bleiben erhalten.' : 'Öffentliche Beschreibung sowie mindestens einen Ansatz mit Probe, Schwierigkeit und verdeckter Erkenntnis ausfüllen.');
@@ -157,6 +166,7 @@ function togglePreferredSkill(index, skillId, checked) {
   if (checked) preferred.add(skillId);
   else preferred.delete(skillId);
   approach.preferredSkills = [...preferred];
+  approach.checkPenalties = (approach.checkPenalties || []).filter(entry => preferred.has(entry.checkId));
 }
 
 function buildDraft() {
@@ -165,6 +175,7 @@ function buildDraft() {
     title: root?.querySelector('[data-herausforderung-field="title"]')?.value || 'Herausforderung',
     publicDescription: root?.querySelector('[data-herausforderung-field="publicDescription"]')?.value || '',
     sceneImage: readChallengeSceneImage(root),
+    targetActor: draftTargetActor,
     audience: draftAudience, combatBound: draftCombatBound || draftAudience.mode === 'combatants' || challengeRequiresCombat(draftApproaches),
     approaches: draftApproaches
   };

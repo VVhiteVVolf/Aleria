@@ -24,14 +24,14 @@ async function resolve(actor, natural = 20) {
   return new CombatResolutionService(dice).resolveAttack({ actor, target: fighter('target') });
 }
 
-test('ein kritischer Treffer verdoppelt gegnerische Schadenswürfel, niemals eigene Gesundheitskosten', async () => {
+test('ein kritischer Treffer maximiert den gegnerischen Grundpool, niemals eigene Gesundheitskosten', async () => {
   for (const selfFirst of [false, true]) {
     const effects = [{ type: 'damage', target: 'target', formula: '1d8', on: 'hit' },
       { type: 'damage', target: 'self', formula: '1d6', on: 'always' }];
     if (selfFirst) effects.reverse();
     const result = await resolve(action(effects));
     assert.equal(result.effectResults.find(entry => entry.recipient === 'actor').amount, 4);
-    assert.equal(result.effectResults.find(entry => entry.recipient === 'target').amount, 8);
+    assert.equal(result.effectResults.find(entry => entry.recipient === 'target').amount, 12);
     assert.equal(result.actorHitPointSnapshot.after.current, 96);
   }
 });

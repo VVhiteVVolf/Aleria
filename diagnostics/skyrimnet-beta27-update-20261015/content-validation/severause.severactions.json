@@ -1,0 +1,1176 @@
+{
+  "errors": [],
+  "files": 206,
+  "not_checked": [
+    "decorator names, arities and values (users register their own; every call is listed under unresolved)",
+    "action questEditorId / scriptName / executionFunctionName existence (needs game data)",
+    "eventType membership is a warning only (the game is the only source of the list)"
+  ],
+  "ok": true,
+  "plugin_id": "severause.severactions",
+  "shadows": [
+    {
+      "logical_path": "prompts/submodules/user_final_instructions/0750_embedded_actions.prompt",
+      "shadows": "skyrimnet.base"
+    }
+  ],
+  "unresolved": [
+    {
+      "code": "UNRESOLVED",
+      "col": 4,
+      "file": "sever_action_adjudicator",
+      "line": 6,
+      "message": "variable 'initiator' not found",
+      "original": "{{ initiator }}"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 33,
+      "file": "sever_action_adjudicator",
+      "line": 6,
+      "message": "variable 'addressee' not found",
+      "original": "{{ addressee }}"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 80,
+      "file": "sever_action_adjudicator",
+      "line": 6,
+      "message": "variable 'plan' not found",
+      "original": "{{ plan }}"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 105,
+      "file": "sever_action_adjudicator",
+      "line": 6,
+      "message": "variable 'addressee' not found",
+      "original": "{{ addressee }}"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 7,
+      "file": "sever_action_adjudicator",
+      "line": 7,
+      "message": "variable 'reason' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 61,
+      "file": "sever_action_adjudicator",
+      "line": 26,
+      "message": "variable 'addressee' not found",
+      "original": "{{ addressee }}"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 20,
+      "file": "sever_action_adjudicator",
+      "line": 27,
+      "message": "variable 'addressee' not found",
+      "original": "{{ addressee }}"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 80,
+      "file": "sever_action_adjudicator",
+      "line": 27,
+      "message": "variable 'initiator' not found",
+      "original": "{{ initiator }}"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 110,
+      "file": "sever_action_adjudicator",
+      "line": 27,
+      "message": "variable 'initiator' not found",
+      "original": "{{ initiator }}"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 22,
+      "file": "sever_ambient_action_director",
+      "line": 6,
+      "message": "variable 'location' not found",
+      "original": "{{ location }}"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 10,
+      "file": "sever_ambient_action_director",
+      "line": 7,
+      "message": "variable 'gameTime' not found",
+      "original": "{{ gameTime }}"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 13,
+      "file": "sever_ambient_action_director",
+      "line": 8,
+      "message": "variable 'currentWeather.name' not found",
+      "original": "{{ currentWeather.name }}"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 41,
+      "file": "sever_ambient_action_director",
+      "line": 8,
+      "message": "variable 'currentWeather.isRaining' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 86,
+      "file": "sever_ambient_action_director",
+      "line": 8,
+      "message": "variable 'currentWeather.isSnowing' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 13,
+      "file": "sever_ambient_action_director",
+      "line": 14,
+      "message": "variable 'candidates' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 13,
+      "file": "sever_ambient_action_director",
+      "line": 39,
+      "message": "variable 'candidates' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 17,
+      "file": "sever_ambient_action_director",
+      "line": 43,
+      "message": "variable 'get_recent_events' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 14,
+      "file": "sever_ambient_action_director",
+      "line": 66,
+      "message": "variable 'candidates' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 13,
+      "file": "sever_ambient_banter",
+      "line": 5,
+      "message": "variable 'pairs' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 13,
+      "file": "sever_ambient_banter",
+      "line": 31,
+      "message": "variable 'pairs' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 13,
+      "file": "sever_ambient_banter",
+      "line": 38,
+      "message": "variable 'pairs' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 17,
+      "file": "sever_ambient_banter",
+      "line": 46,
+      "message": "variable 'get_recent_events' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 14,
+      "file": "sever_ambient_banter",
+      "line": 63,
+      "message": "variable 'get_recent_events' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 22,
+      "file": "sever_ambient_banter",
+      "line": 114,
+      "message": "variable 'location' not found",
+      "original": "{{ location }}"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 10,
+      "file": "sever_ambient_banter",
+      "line": 115,
+      "message": "variable 'gameTime' not found",
+      "original": "{{ gameTime }}"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 13,
+      "file": "sever_ambient_banter",
+      "line": 116,
+      "message": "variable 'currentWeather.name' not found",
+      "original": "{{ currentWeather.name }}"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 41,
+      "file": "sever_ambient_banter",
+      "line": 116,
+      "message": "variable 'currentWeather.isRaining' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 86,
+      "file": "sever_ambient_banter",
+      "line": 116,
+      "message": "variable 'currentWeather.isSnowing' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 14,
+      "file": "sever_ambient_banter",
+      "line": 121,
+      "message": "variable 'pairs' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 13,
+      "file": "sever_follower_banter",
+      "line": 7,
+      "message": "variable 'followers' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 13,
+      "file": "sever_follower_banter",
+      "line": 28,
+      "message": "variable 'pairs' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 17,
+      "file": "sever_follower_banter",
+      "line": 40,
+      "message": "variable 'get_recent_events' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 13,
+      "file": "sever_follower_banter",
+      "line": 42,
+      "message": "variable 'followers' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 11,
+      "file": "sever_follower_banter",
+      "line": 52,
+      "message": "object must be an array"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 22,
+      "file": "sever_follower_banter",
+      "line": 118,
+      "message": "variable 'location' not found",
+      "original": "{{ location }}"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 18,
+      "file": "sever_intimacy_assess",
+      "line": 4,
+      "message": "variable 'formid_to_uuid' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 7,
+      "file": "sever_letter_writer",
+      "line": 7,
+      "message": "variable 'npcFormId' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 25,
+      "file": "sever_letter_writer",
+      "line": 19,
+      "message": "variable 'authorDesc' not found",
+      "original": "{{ authorDesc }}"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 4,
+      "file": "sever_letter_writer",
+      "line": 24,
+      "message": "variable 'situation' not found",
+      "original": "{{ situation }}"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 52,
+      "file": "sever_letter_writer",
+      "line": 28,
+      "message": "variable 'recipientName' not found",
+      "original": "{{ recipientName }}"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 39,
+      "file": "sever_letter_writer",
+      "line": 29,
+      "message": "variable 'goal' not found",
+      "original": "{{ goal }}"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 12,
+      "file": "sever_letter_writer",
+      "line": 30,
+      "message": "variable 'tone' not found",
+      "original": "{{ tone }}"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 18,
+      "file": "sever_offscreen_life",
+      "line": 9,
+      "message": "variable 'formid_to_uuid' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 4,
+      "file": "sever_parley_verdict",
+      "line": 6,
+      "message": "variable 'guard' not found",
+      "original": "{{ guard }}"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 34,
+      "file": "sever_parley_verdict",
+      "line": 6,
+      "message": "variable 'suspect' not found",
+      "original": "{{ suspect }}"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 85,
+      "file": "sever_parley_verdict",
+      "line": 6,
+      "message": "variable 'bounty' not found",
+      "original": "{{ bounty }}"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 113,
+      "file": "sever_parley_verdict",
+      "line": 6,
+      "message": "variable 'hold' not found",
+      "original": "{{ hold }}"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 126,
+      "file": "sever_parley_verdict",
+      "line": 6,
+      "message": "variable 'charges' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 7,
+      "file": "sever_parley_verdict",
+      "line": 7,
+      "message": "variable 'bribe' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 17,
+      "file": "sever_parley_verdict",
+      "line": 10,
+      "message": "variable 'cost' not found",
+      "original": "{{ cost }}"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 17,
+      "file": "sever_parley_verdict",
+      "line": 28,
+      "message": "variable 'guard' not found",
+      "original": "{{ guard }}"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 68,
+      "file": "sever_parley_verdict",
+      "line": 28,
+      "message": "variable 'suspect' not found",
+      "original": "{{ suspect }}"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 15,
+      "file": "sever_parley_verdict",
+      "line": 29,
+      "message": "variable 'suspect' not found",
+      "original": "{{ suspect }}"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 69,
+      "file": "sever_parley_verdict",
+      "line": 29,
+      "message": "variable 'guard' not found",
+      "original": "{{ guard }}"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 18,
+      "file": "sever_parley_verdict",
+      "line": 30,
+      "message": "variable 'guard' not found",
+      "original": "{{ guard }}"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 49,
+      "file": "sever_parley_verdict",
+      "line": 30,
+      "message": "variable 'suspect' not found",
+      "original": "{{ suspect }}"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 70,
+      "file": "sever_parley_verdict",
+      "line": 30,
+      "message": "variable 'suspect' not found",
+      "original": "{{ suspect }}"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 18,
+      "file": "sever_parley_verdict",
+      "line": 31,
+      "message": "variable 'suspect' not found",
+      "original": "{{ suspect }}"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 18,
+      "file": "sever_quest_awareness",
+      "line": 6,
+      "message": "variable 'formid_to_uuid' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 11,
+      "file": "sever_quest_awareness",
+      "line": 53,
+      "message": "variable 'questName' not found",
+      "original": "{{ questName }}"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 74,
+      "file": "sever_quest_awareness",
+      "line": 54,
+      "message": "variable 'newObjective' not found",
+      "original": "{{ newObjective }}"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 18,
+      "file": "sever_relationship_assess",
+      "line": 4,
+      "message": "variable 'formid_to_uuid' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 18,
+      "file": "sever_relationship_interfollower",
+      "line": 3,
+      "message": "variable 'formid_to_uuid' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 18,
+      "file": "sever_reputation_assess",
+      "line": 4,
+      "message": "variable 'formid_to_uuid' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 20,
+      "file": "sever_retainer_worklife",
+      "line": 2,
+      "message": "variable 'retainerName' not found",
+      "original": "{{ retainerName }}"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 128,
+      "file": "sever_retainer_worklife",
+      "line": 2,
+      "message": "variable 'playerName' not found",
+      "original": "{{ playerName }}"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 18,
+      "file": "sever_retainer_worklife",
+      "line": 11,
+      "message": "variable 'formid_to_uuid' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 67,
+      "file": "sever_retainer_worklife",
+      "line": 103,
+      "message": "variable 'retainerName' not found",
+      "original": "{{ retainerName }}"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 4,
+      "file": "sever_retainer_worklife",
+      "line": 104,
+      "message": "variable 'weekFacts' not found",
+      "original": "{{ weekFacts }}"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 7,
+      "file": "sever_retainer_worklife",
+      "line": 106,
+      "message": "variable 'previousStory' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 17,
+      "file": "submodules/character_bio/0035_severactions_knownspells",
+      "line": 3,
+      "message": "variable 'get_spell_list' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 21,
+      "file": "submodules/character_bio/0040_severactions_bio_blocks",
+      "line": 5,
+      "message": "variable 'custom_bio_blocks' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 11,
+      "file": "submodules/character_bio/0045_severactions_familiarity",
+      "line": 4,
+      "message": "variable 'is_follower' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 38,
+      "file": "submodules/character_bio/0045_severactions_familiarity",
+      "line": 4,
+      "message": "variable 'is_sever_follower' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 7,
+      "file": "submodules/character_bio/0046_severactions_intimacy_consent",
+      "line": 4,
+      "message": "variable 'isValidActor' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 44,
+      "file": "submodules/character_bio/0075_severactions_merchant",
+      "line": 4,
+      "message": "variable 'is_player' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 7,
+      "file": "submodules/character_bio/0075_severactions_merchant",
+      "line": 5,
+      "message": "variable 'sever_in_scene' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 16,
+      "file": "submodules/character_bio/0085_severactions_gold",
+      "line": 3,
+      "message": "variable 'decnpc' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 4,
+      "file": "submodules/character_bio/0085_severactions_gold",
+      "line": 6,
+      "message": "variable 'actor.name' not found",
+      "original": "{{ actor.name }}"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 35,
+      "file": "submodules/character_bio/0085_severactions_gold",
+      "line": 6,
+      "message": "variable 'actor.goldCount' not found",
+      "original": "{{ actor.goldCount }}"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 11,
+      "file": "submodules/character_bio/0095_severactions_inventory",
+      "line": 3,
+      "message": "variable 'is_player' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 26,
+      "file": "submodules/character_bio/0095_severactions_inventory",
+      "line": 4,
+      "message": "variable 'get_inventory' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 25,
+      "file": "submodules/character_bio/0095_severactions_inventory",
+      "line": 5,
+      "message": "variable 'get_worn_equipment' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 24,
+      "file": "submodules/character_bio/0095_severactions_inventory",
+      "line": 7,
+      "message": "object must be an object"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 11,
+      "file": "submodules/character_bio/0096_severactions_player_inventory",
+      "line": 4,
+      "message": "variable 'is_player' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 21,
+      "file": "submodules/character_bio/0096_severactions_player_inventory",
+      "line": 6,
+      "message": "variable 'get_inventory' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 21,
+      "file": "submodules/character_bio/0096_severactions_player_inventory",
+      "line": 8,
+      "message": "object must be an object"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 18,
+      "file": "submodules/character_bio/0096_severactions_player_inventory",
+      "line": 11,
+      "message": "variable 'group_by' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 21,
+      "file": "submodules/character_bio/0096_severactions_player_inventory",
+      "line": 12,
+      "message": "variable 'papyrus_util' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 20,
+      "file": "submodules/character_bio/0096_severactions_player_inventory",
+      "line": 13,
+      "message": "variable 'papyrus_util' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 21,
+      "file": "submodules/character_bio/0096_severactions_player_inventory",
+      "line": 14,
+      "message": "variable 'papyrus_util' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 25,
+      "file": "submodules/character_bio/0096_severactions_player_inventory",
+      "line": 15,
+      "message": "variable 'papyrus_util' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 19,
+      "file": "submodules/character_bio/0096_severactions_player_inventory",
+      "line": 16,
+      "message": "variable 'papyrus_util' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 21,
+      "file": "submodules/character_bio/0096_severactions_player_inventory",
+      "line": 17,
+      "message": "variable 'papyrus_util' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 19,
+      "file": "submodules/character_bio/0096_severactions_player_inventory",
+      "line": 18,
+      "message": "variable 'papyrus_util' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 18,
+      "file": "submodules/character_bio/0096_severactions_player_inventory",
+      "line": 19,
+      "message": "variable 'papyrus_util' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 19,
+      "file": "submodules/character_bio/0096_severactions_player_inventory",
+      "line": 20,
+      "message": "variable 'papyrus_util' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 16,
+      "file": "submodules/character_bio/0160_severactions_combat",
+      "line": 4,
+      "message": "variable 'decnpc' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 22,
+      "file": "submodules/character_bio/0161_severactions_brawl",
+      "line": 5,
+      "message": "variable 'sever_brawl_state' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 20,
+      "file": "submodules/character_bio/0165_severactions_jailed",
+      "line": 3,
+      "message": "variable 'sever_jail_name' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 17,
+      "file": "submodules/character_bio/0165_severactions_jailed",
+      "line": 5,
+      "message": "variable 'decnpc' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 20,
+      "file": "submodules/character_bio/0168_severactions_retainer",
+      "line": 4,
+      "message": "variable 'retainer_status' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 18,
+      "file": "submodules/character_bio/0168_severactions_retainer",
+      "line": 9,
+      "message": "variable 'is_steward' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 4,
+      "file": "submodules/character_bio/0168_severactions_retainer",
+      "line": 12,
+      "message": "variable 'steward_ledger' not found",
+      "original": "{{ steward_ledger(actorUUID) }}"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 20,
+      "file": "submodules/character_bio/0168_severactions_retainer",
+      "line": 16,
+      "message": "variable 'sever_former_retainer' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 20,
+      "file": "submodules/character_bio/0168_severactions_retainer",
+      "line": 22,
+      "message": "variable 'sever_retainer_letter' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 19,
+      "file": "submodules/character_bio/0168_severactions_retainer",
+      "line": 27,
+      "message": "variable 'steward_visit' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 24,
+      "file": "submodules/character_bio/0168_severactions_retainer",
+      "line": 33,
+      "message": "variable 'retainer_inspection' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 18,
+      "file": "submodules/character_bio/0169_severactions_enterprises_summary",
+      "line": 3,
+      "message": "variable 'player.UUID' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 51,
+      "file": "submodules/character_bio/0169_severactions_retainer_hearing",
+      "line": 4,
+      "message": "variable 'player.UUID' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 17,
+      "file": "submodules/character_bio/0171_severactions_npc_employment",
+      "line": 7,
+      "message": "variable 'npc_employer' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 8,
+      "file": "submodules/character_bio/0171_severactions_npc_employment",
+      "line": 10,
+      "message": "variable 'replace' not found",
+      "original": "{{ replace(npcJob, \"works for \", \"work for \", true, true) }}"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 18,
+      "file": "submodules/character_bio/0171_severactions_npc_employment",
+      "line": 13,
+      "message": "variable 'npc_workforce' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 7,
+      "file": "submodules/character_bio/0172_severactions_hold_taxes",
+      "line": 5,
+      "message": "variable 'isValidActor' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 7,
+      "file": "submodules/character_bio/0173_severactions_final_audit",
+      "line": 3,
+      "message": "variable 'isValidActor' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 7,
+      "file": "submodules/character_bio/0174_severactions_final_audit_court",
+      "line": 3,
+      "message": "variable 'isValidActor' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 16,
+      "file": "submodules/character_bio/0175_severactions_follower",
+      "line": 4,
+      "message": "variable 'decnpc' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 16,
+      "file": "submodules/character_bio/0176_severactions_offscreen_life",
+      "line": 4,
+      "message": "variable 'decnpc' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 7,
+      "file": "submodules/character_bio/0176_severactions_trespass",
+      "line": 4,
+      "message": "variable 'isValidActor' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 20,
+      "file": "submodules/character_bio/0177_severactions_quest_awareness",
+      "line": 5,
+      "message": "variable 'quest_awareness' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 21,
+      "file": "submodules/character_bio/0178_severactions_kidnap",
+      "line": 10,
+      "message": "variable 'kidnap_context' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 7,
+      "file": "submodules/character_bio/0180_severactions_nearbyref",
+      "line": 5,
+      "message": "variable 'sever_in_scene' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 15,
+      "file": "submodules/character_bio/0185_severactions_gossip",
+      "line": 5,
+      "message": "variable 'get_location' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 17,
+      "file": "submodules/character_bio/0185_severactions_gossip",
+      "line": 7,
+      "message": "variable 'papyrus_util' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 7,
+      "file": "submodules/character_bio/0185_seversHearth_camp_context",
+      "line": 5,
+      "message": "variable 'is_follower' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 33,
+      "file": "submodules/character_bio/0185_seversHearth_camp_context",
+      "line": 5,
+      "message": "variable 'is_sever_follower' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 19,
+      "file": "submodules/character_bio/0185_seversHearth_camp_context",
+      "line": 6,
+      "message": "variable 'camp_base' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 19,
+      "file": "submodules/character_bio/0185_seversHearth_camp_context",
+      "line": 7,
+      "message": "variable 'current_camp' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 16,
+      "file": "submodules/character_bio/0186_severactions_truce",
+      "line": 6,
+      "message": "variable 'sever_truce' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 20,
+      "file": "submodules/character_bio/0186_severactions_truce",
+      "line": 8,
+      "message": "variable 'sever_camp_state' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 15,
+      "file": "submodules/character_bio/0186_severactions_truce",
+      "line": 25,
+      "message": "variable 'sever_truce_kind' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 15,
+      "file": "submodules/character_bio/0187_severactions_camp",
+      "line": 6,
+      "message": "variable 'sever_camp' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 15,
+      "file": "submodules/character_bio/0187_severactions_camp",
+      "line": 8,
+      "message": "variable 'sever_truce_kind' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 18,
+      "file": "submodules/character_bio/0187_severactions_camp",
+      "line": 17,
+      "message": "variable 'sever_camp_members' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 7,
+      "file": "submodules/character_bio/0187_severactions_camp",
+      "line": 21,
+      "message": "variable 'camp_challenge_pending' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 9,
+      "file": "submodules/character_bio/0187_severactions_camp",
+      "line": 23,
+      "message": "variable 'sever_camp_is_leader' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 9,
+      "file": "submodules/character_bio/0187_severactions_camp",
+      "line": 25,
+      "message": "variable 'sever_camp_state' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 20,
+      "file": "submodules/character_bio/0187_severactions_camp",
+      "line": 34,
+      "message": "variable 'sever_camp_consensus' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 27,
+      "file": "submodules/character_bio/0187_severactions_camp",
+      "line": 35,
+      "message": "variable 'sever_camp_takeover' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 7,
+      "file": "submodules/character_bio/0187_severactions_camp",
+      "line": 38,
+      "message": "variable 'sever_camp_state' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 18,
+      "file": "submodules/character_bio/0188_severactions_war_band",
+      "line": 6,
+      "message": "variable 'sever_war_band' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 7,
+      "file": "submodules/character_bio/0188_severactions_war_band",
+      "line": 8,
+      "message": "variable 'sever_camp_mustered' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 62,
+      "file": "submodules/character_bio/0188_severactions_war_band",
+      "line": 8,
+      "message": "variable 'player.UUID' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 82,
+      "file": "submodules/character_bio/0188_severactions_war_band",
+      "line": 8,
+      "message": "variable 'is_follower' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 109,
+      "file": "submodules/character_bio/0188_severactions_war_band",
+      "line": 8,
+      "message": "variable 'is_sever_follower' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 7,
+      "file": "submodules/character_bio/0189_severactions_camp_challenge",
+      "line": 7,
+      "message": "variable 'camp_challenge_pending' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 18,
+      "file": "submodules/character_bio/0274_severactions_parley",
+      "line": 8,
+      "message": "variable 'player.UUID' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 18,
+      "file": "submodules/character_bio/0275_severactions_bounty",
+      "line": 6,
+      "message": "variable 'player.UUID' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 18,
+      "file": "submodules/character_bio/0276_severactions_persuasion_active",
+      "line": 6,
+      "message": "variable 'player.UUID' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 18,
+      "file": "submodules/character_bio/0277_severactions_judgment_active",
+      "line": 6,
+      "message": "variable 'player.UUID' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 18,
+      "file": "submodules/character_bio/0278_severactions_dispatch_active",
+      "line": 6,
+      "message": "variable 'player.UUID' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 18,
+      "file": "submodules/character_bio/0279_severactions_arrest_in_progress",
+      "line": 6,
+      "message": "variable 'player.UUID' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 20,
+      "file": "submodules/character_bio/0280_severactions_readbook",
+      "line": 5,
+      "message": "variable 'papyrus_util' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 18,
+      "file": "submodules/character_bio/0411_severactions_worn_equipment",
+      "line": 5,
+      "message": "variable 'get_worn_equipment' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 29,
+      "file": "submodules/character_bio/0411_severactions_worn_equipment",
+      "line": 38,
+      "message": "object must be an object"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 21,
+      "file": "submodules/character_bio/0415_outfit_context",
+      "line": 4,
+      "message": "variable 'outfit_context' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 21,
+      "file": "submodules/system_head/0150_debt_context",
+      "line": 4,
+      "message": "variable 'debt_context' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 7,
+      "file": "submodules/system_head/0152_crafting_commission",
+      "line": 4,
+      "message": "variable 'get_faction_rank' not found"
+    },
+    {
+      "code": "UNRESOLVED",
+      "col": 7,
+      "file": "submodules/system_head/0260_severactions_engaged_participants",
+      "line": 4,
+      "message": "variable 'npc' not found"
+    }
+  ],
+  "warnings": []
+}

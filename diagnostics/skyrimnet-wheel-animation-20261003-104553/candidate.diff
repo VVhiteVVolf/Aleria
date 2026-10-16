@@ -1,0 +1,71 @@
+--- upstream
+
++++ candidate
+
+@@ -1,9 +1,30 @@
+
+ Scriptname skynet_WheelMenu extends ActiveMagicEffect  
+ 
+ Event OnEffectStart(Actor akTarget, Actor akCaster)
+-	
++    ; Local compatibility guard: do not pause a still-running power/shout.
++    ; The direct SkyrimNet wheel hotkey continues to call DisplayWheel normally.
++    if akTarget != Game.GetPlayer() || !akCaster
++        return
++    endif
++
++    Utility.Wait(0.25)
++    int shoutKey = Input.GetMappedKey("Shout")
++    int pendingTicks = 0
++    while akCaster.GetAnimationVariableBool("IsShouting") || (shoutKey >= 0 && Input.IsKeyPressed(shoutKey))
++        if pendingTicks >= 30
++            Debug.Trace("[SkyrimNet Wheel Guard] Power still active; wheel opening cancelled")
++            Debug.Notification("SkyrimNet: Release the power key, then open the wheel again.")
++            return
++        endif
++        Utility.WaitMenuMode(0.1)
++        pendingTicks += 1
++    endwhile
++
++    if akCaster.IsDead() || Utility.IsInMenuMode()
++        return
++    endif
++    Debug.Trace("[SkyrimNet Wheel Guard] Power completed; opening wheel")
+     skynet_WheelMenu.DisplayWheel()
+-
+ EndEvent
+ 
+ ;NOTE - this is the function to call from the DLL
+@@ -28,7 +49,10 @@
+
+ 
+     if result == 0
+         ; Text input — use prefixes for modes: % Think, ' Transform, ! Direct, /silent Silent
+-        SkyrimNetApi.TriggerTextInput()
++        ; Release UIExtensions before PrismaUI acquires its own input focus.
++        if skynet_WheelMenu.WaitForWheelClose()
++            SkyrimNetApi.TriggerTextInput()
++        endif
+     elseif result == 1
+         ; Direct player thought processing
+         SkyrimNetApi.TriggerPlayerThought()
+@@ -179,3 +203,18 @@
+
+         Return None
+ 	EndIf
+ EndFunction
++
++; Bounded handoff: no control toggles or animation-variable resets.
++bool Function WaitForWheelClose() global
++    int pendingTicks = 0
++    while UI.IsMenuOpen("CustomMenu")
++        if pendingTicks >= 20
++            Debug.Trace("[SkyrimNet Wheel Guard] UIExtensions still open; chat handoff cancelled")
++            return false
++        endif
++        Utility.WaitMenuMode(0.1)
++        pendingTicks += 1
++    endwhile
++    Utility.WaitMenuMode(0.15)
++    return true
++EndFunction

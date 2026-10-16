@@ -1,0 +1,72 @@
+SkyrimNet: Faryl Atheron, ausbleibende Aktionen
+Prüfung: 16.10.2026, lokale Protokolle und lesender Konfigurationsabruf.
+Keine Spiel-, Mod-, Prompt- oder Konfigurationsänderungen vorgenommen.
+
+Ergebnis
+Die Übergabe wurde nicht ausgeführt, weil bereits das Dialogmodell keinen
+technischen ACTION:-Befehl erzeugte. Es handelt sich in diesen drei Fällen
+nicht um einen dokumentierten Fehler bei der Ausführung von GiveItem/GiveGold:
+Die Ausführung wurde überhaupt nicht angefordert.
+
+Belege (Zeilennummern in SkyrimNet.snapshot.log)
+01:02:20.679, Zeile 100423: Faryl verspricht Schlüssel, Ring und fünf Septims.
+01:02:20.714, Zeile 100447: No ACTION: line found in response.
+01:02:48.167, Zeile 103726: Wiederholung nach "Hand it over then!".
+01:02:48.189, Zeile 103778: No ACTION: line found in response.
+01:03:11.061, Zeile 106359: Wiederholung nach "Give it!".
+01:03:11.093, Zeile 106379: No ACTION: line found in response.
+Alle drei zugehörigen HTTP-Streams endeten erfolgreich mit Status 200.
+In allen drei Abschnitten: Aktionsregeln und Grounded Tasks gerendert,
+20 verfügbare Aktionen einschließlich Items/Economy; kein Aufruf der
+action_evaluation-Variante für diese Antworten.
+
+Konfiguration und Prompt
+Dialogmodell: deepseek/deepseek-v4-flash-0731.
+Separate Kategorie-Detailauswertung: google/gemma-4-31b-it, Temperatur 0.2,
+nur Friendli, Anbieter-Fallback aus. Konfiguration weiterhin vorhanden.
+dialogue.embedActionsInDialogue: true.
+Die Kategorie-Detailauswertung kann die fehlende initiale Kategorieauswahl
+in diesen protokollierten Abläufen nicht nachholen.
+Zeile 105771: Items, Economy, Scheduling, Travel usw. verfügbar.
+Zeilen 106198-106265: Unsere Regeln sind im tatsächlichen Modellinput
+enthalten, einschließlich expliziter ACTION:-Ausnahme von Sprachformatregeln.
+Ein fehlendes Laden dieser Ergänzungen erklärt diese Vorfälle daher nicht.
+Der Log belegt Modell-Nichtbefolgung; welcher Hosting-Anbieter die jeweiligen
+Dialogantworten lieferte und warum er/das Modell die Anweisung ausließ,
+wurde damit nicht bestimmt.
+
+Inventarprüfung (letzter tatsächlich übermittelter Dialogkontext)
+Zeilen 105844-105850:
+5 Gold; Atheron Residence Key; Lockpick; Silver Onyx Ring.
+Gold und Ring existieren tatsächlich. Der besprochene Bauernhausschlüssel
+ist durch dieses Inventar nicht belegt: Der vorhandene Schlüssel heißt anders.
+Wofür er tatsächlich schließt, wurde nicht anhand des Plugin-Records geprüft.
+Die Übergabeversprechen haben das Inventar nicht geleert: Die Gegenstände
+und fünf Gold stehen auch beim letzten Versuch noch im übermittelten Zustand.
+
+Weitere Grenzen
+Schlüssel/Ring übergeben, Gold zahlen und anschließend fliehen sind mehrere
+Operationen. Das aktuelle Dialogformat erlaubt genau eine Aktion pro Antwort.
+Eine vollständige Ausführung der gesamten Erzählung braucht eine unterstützte
+Sammelaktion oder eine kontrollierte Folge einzelner Aktionen. Das rechtfertigt
+aber nicht, Erledigung ohne irgendeinen Auftrag zu behaupten.
+Das zuvor vereinbarte Treffen hinter der Scheune wurde ebenfalls ohne
+Aktionsfooter beantwortet; Scheduling war im letzten geprüften Prompt vorhanden.
+
+Gegenprobe im selben Spielstart
+00:47:26: Bolfrida Brandy-Mug erzeugt TriggerDialogueLine FE047EEC.
+Zeilen 54448-54451: erfolgreich geparst und eingereiht.
+Zeilen 54896 und 54903: Ausführung und Auslösen der Dialogzeile protokolliert.
+Das belegt einen funktionsfähigen Aktionspfad für diese Aktion, nicht die
+generelle Fehlerfreiheit sämtlicher Transfer-Scripts.
+
+Empfohlener nächster Schritt
+Den initialen Aktionsentscheid vom freiwilligen ACTION:-Footer des Dialogmodells
+entkoppeln: verfügbare getrennte Auswertung bzw. kontrollierten Fallback in
+dieser SkyrimNet-Version prüfen. Gemma nur für die Detailauswahl zu konfigurieren
+reicht nicht, solange DeepSeek schon die Kategorieauswahl vollständig auslässt.
+Keine weiteren pauschalen Prompt-Ergänzungen als vermeintlich gesicherten Fix
+verkaufen: Die explizite Regel wurde hier bereits dreimal ignoriert.
+Danach zuerst genau eine reale Übergabe testen, mit Bestätigung durch
+Aktionsresultat und tatsächliche Inventaränderung; erst dann mehrere Schritte.
+Keine neuen privaten Gesprächskontexte an externe Testanbieter übertragen.

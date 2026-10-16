@@ -1,0 +1,813 @@
+{
+  "config/actions.yaml": {
+    "file": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\SkyrimNet - Beta25 Test Runtime 20260927\\SKSE\\Plugins\\SkyrimNet\\config\\Actions.yaml",
+    "data": {
+      "actions": {
+        "StopPosing": {
+          "enabled": true,
+          "cooldownSeconds": 0
+        },
+        "PoseSeduce": {
+          "enabled": false,
+          "cooldownSeconds": 0
+        },
+        "PosePresent": {
+          "enabled": false,
+          "cooldownSeconds": 0
+        },
+        "StopSex": {
+          "enabled": true,
+          "cooldownSeconds": 0
+        },
+        "StopUsingFurniture": {
+          "enabled": true,
+          "cooldownSeconds": 0
+        },
+        "CastSpell": {
+          "enabled": true,
+          "cooldownSeconds": 0
+        },
+        "SellItem": {
+          "enabled": true,
+          "cooldownSeconds": 0
+        },
+        "CollectPayment": {
+          "enabled": true,
+          "cooldownSeconds": 0
+        },
+        "AcceptBackWash": {
+          "enabled": true,
+          "cooldownSeconds": 5
+        },
+        "StartNewSex": {
+          "enabled": true,
+          "cooldownSeconds": 0
+        },
+        "UnequipArmor": {
+          "enabled": true,
+          "cooldownSeconds": 0
+        },
+        "GiveGold": {
+          "enabled": true,
+          "cooldownSeconds": 0
+        },
+        "ChallengeBrawl": {
+          "enabled": true,
+          "cooldownSeconds": 0
+        },
+        "ChangeSexPace": {
+          "enabled": true,
+          "cooldownSeconds": 0
+        },
+        "SpectatorOfSex": {
+          "enabled": true,
+          "cooldownSeconds": 0
+        },
+        "ACCOMPANYTARGET": {
+          "enabled": true,
+          "cooldownSeconds": 0
+        },
+        "DeliverMessage": {
+          "enabled": true,
+          "cooldownSeconds": 0
+        },
+        "CommandStopPose": {
+          "enabled": true,
+          "cooldownSeconds": 0
+        },
+        "OfferIntimateWash": {
+          "enabled": true,
+          "cooldownSeconds": 5
+        },
+        "OPENTRADE": {
+          "enabled": true,
+          "cooldownSeconds": 0
+        },
+        "GiveItem": {
+          "enabled": true,
+          "cooldownSeconds": 0
+        },
+        "StartFollowing": {
+          "enabled": true,
+          "cooldownSeconds": 0
+        },
+        "SearchContainer": {
+          "enabled": true,
+          "cooldownSeconds": 0
+        },
+        "MoveToWater": {
+          "enabled": true,
+          "cooldownSeconds": 60
+        },
+        "WashSomeonesBack": {
+          "enabled": true,
+          "cooldownSeconds": 30
+        },
+        "PoseSubmission": {
+          "enabled": false,
+          "cooldownSeconds": 0
+        },
+        "StopFollowing": {
+          "enabled": true,
+          "cooldownSeconds": 0
+        },
+        "WashSomeoneIntimately": {
+          "enabled": true,
+          "cooldownSeconds": 30
+        },
+        "LootCorpse": {
+          "enabled": true,
+          "cooldownSeconds": 0
+        },
+        "AttackTarget": {
+          "enabled": true,
+          "cooldownSeconds": 0
+        },
+        "SetCompanion": {
+          "enabled": true,
+          "cooldownSeconds": 0
+        },
+        "TeachSpell": {
+          "enabled": true,
+          "cooldownSeconds": 10
+        },
+        "SeekWater": {
+          "enabled": true,
+          "cooldownSeconds": 30
+        },
+        "LearnSpell": {
+          "enabled": true,
+          "cooldownSeconds": 10
+        },
+        "OfferToWashSomeonesBack": {
+          "enabled": true,
+          "cooldownSeconds": 5
+        },
+        "ChangeSexActivity": {
+          "enabled": true,
+          "cooldownSeconds": 20
+        },
+        "SetCombatStyle": {
+          "enabled": true,
+          "cooldownSeconds": 0
+        },
+        "CeaseFighting": {
+          "enabled": true,
+          "cooldownSeconds": 0
+        },
+        "PoseGroundIdle": {
+          "enabled": false,
+          "cooldownSeconds": 0
+        },
+        "ExtortGold": {
+          "enabled": false,
+          "cooldownSeconds": 0
+        },
+        "PoseDance": {
+          "enabled": false,
+          "cooldownSeconds": 0
+        },
+        "PoseDanceSexy": {
+          "enabled": false,
+          "cooldownSeconds": 0
+        },
+        "BuyItem": {
+          "enabled": true,
+          "cooldownSeconds": 0
+        },
+        "FindClosestWater": {
+          "enabled": true,
+          "cooldownSeconds": 30
+        },
+        "PoseGroundSexy": {
+          "enabled": false,
+          "cooldownSeconds": 0
+        },
+        "PoseIdle": {
+          "enabled": false,
+          "cooldownSeconds": 0
+        },
+        "PosePlead": {
+          "enabled": false,
+          "cooldownSeconds": 0
+        },
+        "PoseSelfTouch": {
+          "enabled": false,
+          "cooldownSeconds": 0
+        },
+        "PoseStretch": {
+          "enabled": false,
+          "cooldownSeconds": 0
+        },
+        "PoseWorkout": {
+          "enabled": false,
+          "cooldownSeconds": 0
+        },
+        "TriggerDialogueLine": {
+          "enabled": true,
+          "cooldownSeconds": 0
+        },
+        "TakeItem": {
+          "enabled": true,
+          "cooldownSeconds": 0
+        },
+        "CommissionItem": {
+          "enabled": true,
+          "cooldownSeconds": 0
+        },
+        "bathe": {
+          "enabled": true,
+          "cooldownSeconds": 60
+        },
+        "GoToLocation": {
+          "enabled": true,
+          "cooldownSeconds": 0
+        },
+        "EquipArmor": {
+          "enabled": true,
+          "cooldownSeconds": 0
+        },
+        "ChangeSexScenePosition": {
+          "enabled": true,
+          "cooldownSeconds": 0
+        },
+        "SpectatorOfSexFlee": {
+          "enabled": true,
+          "cooldownSeconds": 0
+        },
+        "LetThemPass": {
+          "enabled": true,
+          "cooldownSeconds": 0
+        },
+        "AskForBathingHelp": {
+          "enabled": true,
+          "cooldownSeconds": 30
+        },
+        "RequestBackWash": {
+          "enabled": true,
+          "cooldownSeconds": 5
+        },
+        "RequestIntimateWash": {
+          "enabled": true,
+          "cooldownSeconds": 5
+        },
+        "AcceptToWashBack": {
+          "enabled": true,
+          "cooldownSeconds": 5
+        },
+        "DeclineWashing": {
+          "enabled": true,
+          "cooldownSeconds": 5
+        },
+        "BatheTogetherWashTheirBack": {
+          "enabled": true,
+          "cooldownSeconds": 90
+        },
+        "BatheTogetherOfferYourBack": {
+          "enabled": true,
+          "cooldownSeconds": 90
+        },
+        "BatheTogetherIntimate": {
+          "enabled": true,
+          "cooldownSeconds": 180
+        },
+        "SitOrLayDown": {
+          "enabled": true,
+          "cooldownSeconds": 0
+        },
+        "ScheduleDelivery": {
+          "enabled": true,
+          "cooldownSeconds": 0
+        },
+        "CompanionWait": {
+          "enabled": true,
+          "cooldownSeconds": 0
+        },
+        "TransferOwnership": {
+          "enabled": true,
+          "cooldownSeconds": 0
+        },
+        "ScheduleMeeting": {
+          "enabled": true,
+          "cooldownSeconds": 0
+        },
+        "FetchPerson": {
+          "enabled": true,
+          "cooldownSeconds": 0
+        },
+        "CancelCurrentTask": {
+          "enabled": true,
+          "cooldownSeconds": 0
+        },
+        "ArrestNPC": {
+          "enabled": true,
+          "cooldownSeconds": 0
+        },
+        "EscortTarget": {
+          "enabled": true,
+          "cooldownSeconds": 0
+        },
+        "Undress": {
+          "enabled": true,
+          "cooldownSeconds": 0
+        },
+        "AssignHome": {
+          "enabled": true,
+          "cooldownSeconds": 0
+        }
+      }
+    }
+  },
+  "config/agents.yaml": {
+    "file": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\SkyrimNet - Beta25 Test Runtime 20260927\\SKSE\\Plugins\\SkyrimNet\\config\\Agents.yaml",
+    "data": {
+      "agents": {
+        "enable": true,
+        "defaultVariant": "AgentDefault",
+        "maxResponseLength": 2000,
+        "enableMCPTools": true,
+        "executionTimeoutSeconds": 30,
+        "enableDetailedLogging": false
+      }
+    }
+  },
+  "config/dialogueactions.yaml": {
+    "file": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\SkyrimNet - Beta25 Test Runtime 20260927\\SKSE\\Plugins\\SkyrimNet\\config\\DialogueActions.yaml",
+    "data": {
+      "Enabled": true,
+      "FilterMode": "BlacklistExclusion",
+      "EnableQuest": true,
+      "EnableFollower": true,
+      "EnableMerchant": true,
+      "EnableTrainer": true,
+      "EnableCarriage": true,
+      "EnableInnkeeper": true,
+      "EnableBard": true,
+      "EnableMarriage": true,
+      "EnableCrime": true,
+      "EnableOther": true
+    }
+  },
+  "config/openrouter.yaml": {
+    "file": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\SkyrimNet - Beta25 Test Runtime 20260927\\SKSE\\Plugins\\SkyrimNet\\config\\OpenRouter.yaml",
+    "data": {
+      "openrouter": {
+        "model_name": "deepseek/deepseek-v4-flash-0731, google/gemma-4-31b-it",
+        "endpoint": "https://openrouter.ai/api/v1/chat/completions",
+        "api_key": "<redacted>",
+        "timeout": 30,
+        "connect_timeout": 10,
+        "use_caching": false,
+        "support_dynamic_event_caching": false,
+        "event_history_count_dialogue": 50,
+        "use_structured_outputs": false,
+        "reasoning": false,
+        "use_sse": true,
+        "provider_sorting": "price",
+        "max_retries": 1,
+        "rotation_mode": "sequential",
+        "default_params": {
+          "temperature": 0.7,
+          "max_tokens": 4096,
+          "top_p": null,
+          "top_k": null,
+          "frequency_penalty": null,
+          "presence_penalty": null,
+          "stop_sequences": null
+        },
+        "provider_settings": {
+          "cache": true,
+          "provider": {
+            "ignore": [
+              "atlas-cloud"
+            ]
+          },
+          "route": "fallback"
+        },
+        "model_params": [
+          {
+            "provider_id": "openrouter",
+            "request_timeout": 30,
+            "connect_timeout": 10
+          },
+          {
+            "provider_id": "openrouter",
+            "request_timeout": 30,
+            "connect_timeout": 10
+          }
+        ],
+        "variants": {
+          "AgentDefault": {
+            "model_name": "anthropic/claude-haiku-4.5",
+            "timeout": 120,
+            "default_params": {
+              "temperature": 0.7,
+              "max_tokens": 32000,
+              "top_p": null,
+              "top_k": null,
+              "frequency_penalty": null,
+              "presence_penalty": null,
+              "stop_sequences": null
+            },
+            "model_params": [
+              {
+                "provider_id": "openrouter",
+                "temperature": 0.7
+              }
+            ]
+          },
+          "CharacterProfileGeneration": {
+            "model_name": "qwen/qwen3-235b-a22b-2507",
+            "timeout": 300,
+            "default_params": {
+              "temperature": 0.7,
+              "max_tokens": 10000,
+              "top_p": null,
+              "top_k": null,
+              "frequency_penalty": null,
+              "presence_penalty": null,
+              "stop_sequences": null
+            },
+            "model_params": [
+              {
+                "provider_id": "openrouter",
+                "temperature": 0.7
+              }
+            ]
+          },
+          "DiaryGeneration": {
+            "model_name": "qwen/qwen3-235b-a22b-2507",
+            "timeout": 120,
+            "default_params": {
+              "temperature": 0.8,
+              "max_tokens": 12000,
+              "top_p": null,
+              "top_k": null,
+              "frequency_penalty": null,
+              "presence_penalty": null,
+              "stop_sequences": null
+            },
+            "model_params": [
+              {
+                "provider_id": "openrouter",
+                "temperature": 0.8
+              }
+            ]
+          },
+          "UniversalTranslator": {
+            "model_name": "deepseek/deepseek-v4-flash",
+            "default_params": {
+              "temperature": 0.7,
+              "max_tokens": 512,
+              "top_p": null,
+              "top_k": null,
+              "frequency_penalty": null,
+              "presence_penalty": null,
+              "stop_sequences": null
+            },
+            "model_params": [
+              {
+                "provider_id": "openrouter",
+                "temperature": 0.7
+              }
+            ]
+          },
+          "action_evaluation": {
+            "model_name": "google/gemma-4-31b-it",
+            "default_params": {
+              "temperature": 0.7,
+              "max_tokens": 500,
+              "top_p": null,
+              "top_k": null,
+              "frequency_penalty": null,
+              "presence_penalty": null,
+              "stop_sequences": null
+            },
+            "model_params": [
+              {
+                "provider_id": "openrouter",
+                "temperature": 0.7
+              }
+            ]
+          },
+          "combat": {
+            "model_name": "qwen/qwen3-30b-a3b-instruct-2507",
+            "default_params": {
+              "temperature": 0.8,
+              "max_tokens": 2000,
+              "top_p": null,
+              "top_k": null,
+              "frequency_penalty": null,
+              "presence_penalty": null,
+              "stop_sequences": null
+            },
+            "model_params": [
+              {
+                "provider_id": "openrouter",
+                "temperature": 0.8
+              }
+            ]
+          },
+          "decisions": {
+            "model_name": "typesafe/jev-1.13",
+            "timeout": 10,
+            "max_retries": 0,
+            "use_caching": false,
+            "support_dynamic_event_caching": false,
+            "model_params": [
+              {
+                "provider_id": "openrouter_decisions"
+              }
+            ]
+          },
+          "gamemaster_evaluation": {
+            "model_name": "meta-llama/llama-3.3-70b-instruct",
+            "timeout": 30,
+            "default_params": {
+              "temperature": 0.8,
+              "max_tokens": 256,
+              "top_p": null,
+              "top_k": null,
+              "frequency_penalty": null,
+              "presence_penalty": null,
+              "stop_sequences": null
+            },
+            "model_params": [
+              {
+                "provider_id": "openrouter",
+                "temperature": 0.8
+              }
+            ]
+          },
+          "intel_story_dm": {
+            "model_name": "google/gemma-4-31b-it",
+            "default_params": {
+              "temperature": 0.7,
+              "max_tokens": 4096,
+              "top_p": null,
+              "top_k": null,
+              "frequency_penalty": null,
+              "presence_penalty": null,
+              "stop_sequences": null
+            },
+            "model_params": [
+              {
+                "provider_id": "openrouter",
+                "temperature": 0.7
+              }
+            ]
+          },
+          "memory": {
+            "model_name": "qwen/qwen3-235b-a22b-2507",
+            "timeout": 60,
+            "default_params": {
+              "temperature": 0.7,
+              "max_tokens": 4000,
+              "top_p": null,
+              "top_k": null,
+              "frequency_penalty": null,
+              "presence_penalty": null,
+              "stop_sequences": null
+            },
+            "model_params": [
+              {
+                "provider_id": "openrouter",
+                "temperature": 0.7
+              }
+            ]
+          },
+          "meta": {
+            "model_name": "deepseek/deepseek-v4-flash",
+            "default_params": {
+              "temperature": 0.7,
+              "max_tokens": 100,
+              "top_p": null,
+              "top_k": null,
+              "frequency_penalty": null,
+              "presence_penalty": null,
+              "stop_sequences": null
+            },
+            "model_params": [
+              {
+                "provider_id": "openrouter",
+                "temperature": 0.7
+              }
+            ]
+          },
+          "narrative_engine_composer": {
+            "default_params": {
+              "temperature": 0,
+              "max_tokens": 8192,
+              "top_p": null,
+              "top_k": null,
+              "frequency_penalty": null,
+              "presence_penalty": null,
+              "stop_sequences": null
+            }
+          },
+          "narrative_engine_director": {
+            "default_params": {
+              "temperature": 0,
+              "max_tokens": 8192,
+              "top_p": null,
+              "top_k": null,
+              "frequency_penalty": null,
+              "presence_penalty": null,
+              "stop_sequences": null
+            }
+          },
+          "sever_background": {
+            "model_name": "google/gemma-4-31b-it",
+            "default_params": {
+              "temperature": 0.7,
+              "max_tokens": 4096,
+              "top_p": null,
+              "top_k": null,
+              "frequency_penalty": null,
+              "presence_penalty": null,
+              "stop_sequences": null
+            },
+            "model_params": [
+              {
+                "provider_id": "openrouter",
+                "temperature": 0.7
+              }
+            ]
+          },
+          "vision": {
+            "model_name": "google/gemma-4-26b-a4b-it",
+            "default_params": {
+              "temperature": 0.7,
+              "max_tokens": 4000,
+              "top_p": null,
+              "top_k": null,
+              "frequency_penalty": null,
+              "presence_penalty": null,
+              "stop_sequences": null
+            },
+            "model_params": [
+              {
+                "provider_id": "openrouter",
+                "temperature": 0.7
+              }
+            ]
+          }
+        }
+      },
+      "active_preset_id": "",
+      "pending_first_run_preset_id": "",
+      "routing": {
+        "mode": "smart"
+      }
+    }
+  },
+  "config/skyrimnet.yaml": {
+    "file": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\SkyrimNet - Beta25 Test Runtime 20260927\\SKSE\\Plugins\\SkyrimNet\\config\\SkyrimNet.yaml",
+    "data": {
+      "shouldSilenceActors": true,
+      "audio": {
+        "universalMaxVolume": 1,
+        "queueNearCompletionThreshold": 2
+      },
+      "actionManager": {
+        "partialParameterThreshold": 48
+      },
+      "locationAnalysis": {
+        "maxRadius": 8000,
+        "indoorRadius": 2000,
+        "outdoorGridRadius": 2,
+        "indoorGridRadius": 1
+      },
+      "dialogue": {
+        "distanceToDetectBackgroundDialogue": 1000,
+        "embedActionsInDialogue": true,
+        "eligibilityCheckTimeoutMs": 2000,
+        "interruptDialogueOnVoiceStart": false,
+        "speakerSelector": {
+          "silenceChancePercent": 50,
+          "tagCompanion": true,
+          "tagEngaged": true,
+          "tagInScene": true
+        },
+        "enableTransformation": false
+      },
+      "tts": {
+        "engine": "inworld",
+        "enablePlayerThoughtAudioEffect": true,
+        "enableNarratorAudioEffect": false,
+        "useKokoroForNarrator": false,
+        "kokoroNarratorVoice": "af_bella",
+        "kokoroVolumeLevel": 0.45,
+        "kokoroModel": "model_q8f16",
+        "enableNPCNodeUpdates": false,
+        "maxSegmentWords": 0
+      },
+      "dbvo": {
+        "enabled": true,
+        "voiceSilentNPCs": true,
+        "fixSubtitleDuringTTS": false
+      },
+      "diagnostics": {
+        "ignored_critical_signature": "",
+        "ignored_optional_signature": ""
+      },
+      "player": {
+        "voiceId": "femalecommander",
+        "voiceInput": true
+      },
+      "soundeffects": {
+        "enableInputSoundEffects": true,
+        "enableNoTranscriptionSoundEffect": true
+      },
+      "gamemaster": {
+        "enabled": true,
+        "agentEnabled": true,
+        "actionCooldownSeconds": 120,
+        "nearbyActorRadius": 800,
+        "recentEventsCount": 25,
+        "requestTimeoutSeconds": 30,
+        "continuousSceneCooldownSeconds": 30,
+        "excludeActorsInScenes": true,
+        "playerVoiceId": "femalecommander"
+      },
+      "facialAnimation": {
+        "intensity": 0.4,
+        "syncOffset": 5,
+        "initialIntensity": 0.3,
+        "rampRate": 0.01,
+        "decayMultiplier": 1.5
+      },
+      "spatialAudio": {
+        "maxDistance": 4000,
+        "minDistance": 100,
+        "rolloffFactor": 1,
+        "enabled": true,
+        "maxVolume": 1,
+        "minVolume": 0
+      },
+      "interaction": {
+        "maxDistance": 1600,
+        "maxAudioDistance": 5000,
+        "normalMaxDistance": 1600,
+        "whisperMaxDistance": 200,
+        "nearbyNPCAwarenessMultiplier": 2,
+        "pinnedTargetRangeMultiplier": 2
+      },
+      "logging": {
+        "logLevel": "debug",
+        "flushLevel": "info",
+        "maxLogCount": 10000
+      },
+      "events": {
+        "preloadCount": 1000,
+        "enableFiltering": true,
+        "enableOutboundModEvents": true
+      },
+      "telemetry": {
+        "enabled": true,
+        "metrics_enabled": false
+      },
+      "pluginHub": {
+        "adultAttested": true
+      },
+      "papyrus": {
+        "callTimeoutMs": 30000,
+        "decoratorWarmupActorCount": 6
+      },
+      "package": {
+        "defaultPriority": 0,
+        "defaultFlags": 0,
+        "dialoguePackageDurationSeconds": 12
+      },
+      "perception": {
+        "checkLineOfSight": true,
+        "allowActorsToPerceiveOwnDialogue": true
+      },
+      "speech": {
+        "recentSpeechTimeWindowSeconds": 60,
+        "maxRecentSpeechCount": 3,
+        "postPlayerInteractionCooldownSeconds": 2,
+        "shouldApplyTalkToPlayerPackage": true
+      },
+      "subtitles": {
+        "enableNPCSubtitles": true,
+        "enablePlayerSubtitles": true,
+        "enableConsoleOutput": false
+      },
+      "narration": {
+        "enabled": false,
+        "disableDuringCombat": true
+      },
+      "documentation": {
+        "autoGenerate": true
+      },
+      "general": {
+        "showInGameNotifications": true,
+        "globalAIEnabled": true
+      },
+      "books": {
+        "readingMode": "auto"
+      }
+    }
+  }
+}

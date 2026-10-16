@@ -1,0 +1,70 @@
+{
+  "quests": {
+    "SeverActions": {
+      "plugin": "SeverActions.esp",
+      "form": "0x1000d62",
+      "script_attachments": {
+        "SeverActions_Outfit": true,
+        "SeverActions_ArrestJudgment": true,
+        "SeverActions_Ambush": true,
+        "SeverActions_Brawl": true,
+        "SeverActions_Arrest": true,
+        "SeverActions_Enterprises": true,
+        "SeverActions_Crafting": true,
+        "SeverActions_Follow": true,
+        "SeverActions_Loot": true,
+        "SeverActions_Debt": true,
+        "SeverActions_ArrestBounty": true,
+        "SeverActions_Property": true,
+        "SeverActions_ArrestPlayer": true,
+        "SeverActions_FollowerManager": true,
+        "SeverActions_SpellCast": true,
+        "SeverActions_Furniture": true,
+        "SeverActions_Currency": true,
+        "SeverActions_Combat": true,
+        "SeverActions_SpellTeach": true
+      }
+    },
+    "SeversHearth": {
+      "plugin": "SeversHearth.esp",
+      "form": "0x1000800",
+      "script_attachments": {
+        "SeversHearth_Camp": true
+      }
+    },
+    "IntelEngine": {
+      "plugin": "IntelEngine.esp",
+      "form": "0x2000d61",
+      "script_attachments": {
+        "IntelEngine_Core": true,
+        "IntelEngine_NPCTasks": true,
+        "IntelEngine_Politics": true,
+        "IntelEngine_Travel": true,
+        "IntelEngine_Schedule": true
+      }
+    },
+    "SNLeverInteractionQuest": {
+      "plugin": "SNLeverInteraction.esp",
+      "form": "0x1000800",
+      "script_attachments": {
+        "SNLeverInteraction": true
+      }
+    },
+    "TTON_MainController": {
+      "plugin": "TT_OStimNet.esp",
+      "form": "0x1000800",
+      "script_attachments": {
+        "TTON_Actions": true
+      }
+    },
+    "SADirt_BridgeQuest": {
+      "plugin": "SeverActions - Dirtiness.esp",
+      "form": "0x1000801",
+      "script_attachments": {
+        "SADirt_Bridge": true
+      }
+    }
+  },
+  "not_found_in_related_plugins": [],
+  "attachment_errors": []
+}

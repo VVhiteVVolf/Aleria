@@ -1,0 +1,471 @@
+--- before/SKSE/Plugins/SkyrimNet/config/OpenRouter.yaml
++++ after/SKSE/Plugins/SkyrimNet/config/OpenRouter.yaml
+@@ -1,228 +1,241 @@
+-openrouter:
+-  model_name: deepseek/deepseek-v4-flash-0731, google/gemma-4-31b-it
+-  endpoint: https://openrouter.ai/api/v1/chat/completions
+-  api_key: ""
+-  timeout: 30
+-  connect_timeout: 10
+-  use_caching: false
+-  support_dynamic_event_caching: false
+-  event_history_count_dialogue: 50
+-  use_structured_outputs: false
+-  reasoning: false
+-  use_sse: true
+-  provider_sorting: price
+-  max_retries: 1
+-  rotation_mode: sequential
+-  default_params:
+-    temperature: 0.7
+-    max_tokens: 4096
+-    top_p: ~
+-    top_k: ~
+-    frequency_penalty: ~
+-    presence_penalty: ~
+-    stop_sequences: ~
+-  provider_settings:
+-    cache: true
+-    provider:
+-      ignore:
+-        - atlas-cloud
+-    route: fallback
+-  model_params:
+-    - provider_id: openrouter
+-      request_timeout: 30
+-      connect_timeout: 10
+-    - provider_id: openrouter
+-      request_timeout: 30
+-      connect_timeout: 10
+-  variants:
+-    AgentDefault:
+-      model_name: anthropic/claude-haiku-4.5
+-      timeout: 120
+-      default_params:
+-        temperature: 0.7
+-        max_tokens: 32000
+-        top_p: ~
+-        top_k: ~
+-        frequency_penalty: ~
+-        presence_penalty: ~
+-        stop_sequences: ~
+-      model_params:
+-        - provider_id: openrouter
+-          temperature: 0.7
+-    CharacterProfileGeneration:
+-      model_name: qwen/qwen3-235b-a22b-2507
+-      timeout: 300
+-      default_params:
+-        temperature: 0.7
+-        max_tokens: 10000
+-        top_p: ~
+-        top_k: ~
+-        frequency_penalty: ~
+-        presence_penalty: ~
+-        stop_sequences: ~
+-      model_params:
+-        - provider_id: openrouter
+-          temperature: 0.7
+-    DiaryGeneration:
+-      model_name: qwen/qwen3-235b-a22b-2507
+-      timeout: 120
+-      default_params:
+-        temperature: 0.8
+-        max_tokens: 12000
+-        top_p: ~
+-        top_k: ~
+-        frequency_penalty: ~
+-        presence_penalty: ~
+-        stop_sequences: ~
+-      model_params:
+-        - provider_id: openrouter
+-          temperature: 0.8
+-    UniversalTranslator:
+-      model_name: deepseek/deepseek-v4-flash
+-      default_params:
+-        temperature: 0.7
+-        max_tokens: 512
+-        top_p: ~
+-        top_k: ~
+-        frequency_penalty: ~
+-        presence_penalty: ~
+-        stop_sequences: ~
+-      model_params:
+-        - provider_id: openrouter
+-          temperature: 0.7
+-    action_evaluation:
+-      model_name: google/gemma-4-31b-it
+-      default_params:
+-        temperature: 0.7
+-        max_tokens: 500
+-        top_p: ~
+-        top_k: ~
+-        frequency_penalty: ~
+-        presence_penalty: ~
+-        stop_sequences: ~
+-      model_params:
+-        - provider_id: openrouter
+-          temperature: 0.7
+-    combat:
+-      model_name: qwen/qwen3-30b-a3b-instruct-2507
+-      default_params:
+-        temperature: 0.8
+-        max_tokens: 2000
+-        top_p: ~
+-        top_k: ~
+-        frequency_penalty: ~
+-        presence_penalty: ~
+-        stop_sequences: ~
+-      model_params:
+-        - provider_id: openrouter
+-          temperature: 0.8
+-    decisions:
+-      model_name: typesafe/jev-1.13
+-      timeout: 10
+-      max_retries: 0
+-      use_caching: false
+-      support_dynamic_event_caching: false
+-      model_params:
+-        - provider_id: openrouter_decisions
+-    gamemaster_evaluation:
+-      model_name: meta-llama/llama-3.3-70b-instruct
+-      timeout: 30
+-      default_params:
+-        temperature: 0.8
+-        max_tokens: 256
+-        top_p: ~
+-        top_k: ~
+-        frequency_penalty: ~
+-        presence_penalty: ~
+-        stop_sequences: ~
+-      model_params:
+-        - provider_id: openrouter
+-          temperature: 0.8
+-    intel_story_dm:
+-      model_name: google/gemma-4-31b-it
+-      default_params:
+-        temperature: 0.7
+-        max_tokens: 4096
+-        top_p: ~
+-        top_k: ~
+-        frequency_penalty: ~
+-        presence_penalty: ~
+-        stop_sequences: ~
+-      model_params:
+-        - provider_id: openrouter
+-          temperature: 0.7
+-    memory:
+-      model_name: qwen/qwen3-30b-a3b-instruct-2507
+-      timeout: 60
+-      default_params:
+-        temperature: 0.7
+-        max_tokens: 4000
+-        top_p: ~
+-        top_k: ~
+-        frequency_penalty: ~
+-        presence_penalty: ~
+-        stop_sequences: ~
+-      model_params:
+-        - provider_id: openrouter
+-          temperature: 0.7
+-    meta:
+-      model_name: deepseek/deepseek-v4-flash
+-      default_params:
+-        temperature: 0.7
+-        max_tokens: 100
+-        top_p: ~
+-        top_k: ~
+-        frequency_penalty: ~
+-        presence_penalty: ~
+-        stop_sequences: ~
+-      model_params:
+-        - provider_id: openrouter
+-          temperature: 0.7
+-    narrative_engine_composer:
+-      default_params:
+-        temperature: 0
+-        max_tokens: 8192
+-        top_p: ~
+-        top_k: ~
+-        frequency_penalty: ~
+-        presence_penalty: ~
+-        stop_sequences: ~
+-    narrative_engine_director:
+-      default_params:
+-        temperature: 0
+-        max_tokens: 8192
+-        top_p: ~
+-        top_k: ~
+-        frequency_penalty: ~
+-        presence_penalty: ~
+-        stop_sequences: ~
+-    sever_background:
+-      model_name: google/gemma-4-31b-it
+-      default_params:
+-        temperature: 0.7
+-        max_tokens: 4096
+-        top_p: ~
+-        top_k: ~
+-        frequency_penalty: ~
+-        presence_penalty: ~
+-        stop_sequences: ~
+-      model_params:
+-        - provider_id: openrouter
+-          temperature: 0.7
+-    vision:
+-      model_name: google/gemma-4-26b-a4b-it
+-      default_params:
+-        temperature: 0.7
+-        max_tokens: 4000
+-        top_p: ~
+-        top_k: ~
+-        frequency_penalty: ~
+-        presence_penalty: ~
+-        stop_sequences: ~
+-      model_params:
+-        - provider_id: openrouter
+-          temperature: 0.7
+-active_preset_id: ""
+-pending_first_run_preset_id: ""
+-routing:
+-  mode: smart+openrouter:
++  model_name: google/gemma-4-26b-a4b-it
++  endpoint: https://openrouter.ai/api/v1/chat/completions
++  api_key: ''
++  timeout: 30
++  connect_timeout: 10
++  use_caching: false
++  support_dynamic_event_caching: false
++  event_history_count_dialogue: 50
++  use_structured_outputs: false
++  reasoning: false
++  use_sse: true
++  provider_sorting: price
++  max_retries: 1
++  rotation_mode: sequential
++  default_params:
++    temperature: 0.7
++    max_tokens: 4096
++    top_p: null
++    top_k: null
++    frequency_penalty: null
++    presence_penalty: null
++    stop_sequences: null
++  provider_settings:
++    cache: true
++    provider:
++      ignore:
++      - atlas-cloud
++    route: fallback
++  model_params:
++  - provider_id: openrouter
++    request_timeout: 30
++    connect_timeout: 10
++  variants:
++    AgentDefault:
++      model_name: anthropic/claude-haiku-4.5
++      timeout: 120
++      default_params:
++        temperature: 0.7
++        max_tokens: 32000
++        top_p: null
++        top_k: null
++        frequency_penalty: null
++        presence_penalty: null
++        stop_sequences: null
++      model_params:
++      - provider_id: openrouter
++        temperature: 0.7
++    CharacterProfileGeneration:
++      model_name: qwen/qwen3-235b-a22b-2507
++      timeout: 300
++      default_params:
++        temperature: 0.7
++        max_tokens: 10000
++        top_p: null
++        top_k: null
++        frequency_penalty: null
++        presence_penalty: null
++        stop_sequences: null
++      model_params:
++      - provider_id: openrouter
++        temperature: 0.7
++    DiaryGeneration:
++      model_name: qwen/qwen3-235b-a22b-2507
++      timeout: 120
++      default_params:
++        temperature: 0.8
++        max_tokens: 12000
++        top_p: null
++        top_k: null
++        frequency_penalty: null
++        presence_penalty: null
++        stop_sequences: null
++      model_params:
++      - provider_id: openrouter
++        temperature: 0.8
++    UniversalTranslator:
++      model_name: deepseek/deepseek-v4-flash
++      default_params:
++        temperature: 0.7
++        max_tokens: 512
++        top_p: null
++        top_k: null
++        frequency_penalty: null
++        presence_penalty: null
++        stop_sequences: null
++      model_params:
++      - provider_id: openrouter
++        temperature: 0.7
++    action_evaluation:
++      model_name: google/gemma-4-31b-it
++      default_params:
++        temperature: 0.7
++        max_tokens: 500
++        top_p: null
++        top_k: null
++        frequency_penalty: null
++        presence_penalty: null
++        stop_sequences: null
++      model_params:
++      - provider_id: openrouter
++        temperature: 0.7
++    combat:
++      model_name: qwen/qwen3-30b-a3b-instruct-2507
++      default_params:
++        temperature: 0.8
++        max_tokens: 2000
++        top_p: null
++        top_k: null
++        frequency_penalty: null
++        presence_penalty: null
++        stop_sequences: null
++      model_params:
++      - provider_id: openrouter
++        temperature: 0.8
++    decisions:
++      model_name: typesafe/jev-1.13
++      timeout: 10
++      max_retries: 0
++      use_caching: false
++      support_dynamic_event_caching: false
++      model_params:
++      - provider_id: openrouter_decisions
++    gamemaster_evaluation:
++      model_name: meta-llama/llama-3.3-70b-instruct
++      timeout: 30
++      default_params:
++        temperature: 0.8
++        max_tokens: 256
++        top_p: null
++        top_k: null
++        frequency_penalty: null
++        presence_penalty: null
++        stop_sequences: null
++      model_params:
++      - provider_id: openrouter
++        temperature: 0.8
++    intel_story_dm:
++      model_name: google/gemma-4-31b-it
++      default_params:
++        temperature: 0.7
++        max_tokens: 4096
++        top_p: null
++        top_k: null
++        frequency_penalty: null
++        presence_penalty: null
++        stop_sequences: null
++      model_params:
++      - provider_id: openrouter
++        temperature: 0.7
++    memory:
++      model_name: qwen/qwen3-30b-a3b-instruct-2507
++      timeout: 60
++      default_params:
++        temperature: 0.7
++        max_tokens: 4000
++        top_p: null
++        top_k: null
++        frequency_penalty: null
++        presence_penalty: null
++        stop_sequences: null
++      model_params:
++      - provider_id: openrouter
++        temperature: 0.7
++    meta:
++      model_name: deepseek/deepseek-v4-flash
++      default_params:
++        temperature: 0.7
++        max_tokens: 100
++        top_p: null
++        top_k: null
++        frequency_penalty: null
++        presence_penalty: null
++        stop_sequences: null
++      model_params:
++      - provider_id: openrouter
++        temperature: 0.7
++    narrative_engine_composer:
++      default_params:
++        temperature: 0
++        max_tokens: 8192
++        top_p: null
++        top_k: null
++        frequency_penalty: null
++        presence_penalty: null
++        stop_sequences: null
++      model_name: deepseek/deepseek-v4-flash-0731, google/gemma-4-31b-it
++      model_params:
++      - provider_id: openrouter
++        request_timeout: 30
++        connect_timeout: 10
++      - provider_id: openrouter
++        request_timeout: 30
++        connect_timeout: 10
++    narrative_engine_director:
++      default_params:
++        temperature: 0
++        max_tokens: 8192
++        top_p: null
++        top_k: null
++        frequency_penalty: null
++        presence_penalty: null
++        stop_sequences: null
++      model_name: deepseek/deepseek-v4-flash-0731, google/gemma-4-31b-it
++      model_params:
++      - provider_id: openrouter
++        request_timeout: 30
++        connect_timeout: 10
++      - provider_id: openrouter
++        request_timeout: 30
++        connect_timeout: 10
++    sever_background:
++      model_name: google/gemma-4-31b-it
++      default_params:
++        temperature: 0.7
++        max_tokens: 4096
++        top_p: null
++        top_k: null
++        frequency_penalty: null
++        presence_penalty: null
++        stop_sequences: null
++      model_params:
++      - provider_id: openrouter
++        temperature: 0.7
++    vision:
++      model_name: google/gemma-4-26b-a4b-it
++      default_params:
++        temperature: 0.7
++        max_tokens: 4000
++        top_p: null
++        top_k: null
++        frequency_penalty: null
++        presence_penalty: null
++        stop_sequences: null
++      model_params:
++      - provider_id: openrouter
++        temperature: 0.7
++active_preset_id: ''
++pending_first_run_preset_id: ''
++routing:
++  mode: smart

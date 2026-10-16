@@ -1,5 +1,13 @@
 # Kritische Kampfergebnisse und Szenengegenstände
 
+## Kritschaden ab 15. Oktober 2026
+
+Ein normaler Schadenswürfelpool zählt maximal; ein gleicher weiterer Pool wird gewürfelt. Feste Boni zählen einmal: **1W8+3 → 8+1W8+3**, also 12–19 Schaden. **2W6+4 → 12+2W6+4**. Gemischte Würfel und Zusatzwürfel werden entsprechend behandelt. Die bisherige Schadensobergrenze bleibt gleich; niedrige Krits entfallen.
+
+Die Regel gilt für neue kritische Waffen-, Technik- und Zauber-Trefferwürfe, je Angriffsinstanz. Rettungswurf-Zauber, automatische Wirkungen, Heilung und Eigenschaden erhalten keinen Kritaufschlag. Rüstung und Resistenzen greifen anschließend wie bisher. Einmalige besondere Kritboni bleiben einfach. Die unten beschriebene Aktivierung betrifft ausschließlich die zusätzlichen Konsequenzentabellen, nicht diese allgemeine Schadensregel.
+
+`buildDamageRollPlan` ist die gemeinsame Browser-/Serverquelle. Der Server berechnet den gesetzten Anteil selbst und akzeptiert nur den tatsächlich gewürfelten zusätzlichen Pool. Neue Schadensbelege enthalten `criticalDamage` Version 1; Auswertungen zeigen beispielsweise „8 gesetzt + 1W8 [1] + 3“. Historische Belege ohne dieses Feld werden unverändert dargestellt und niemals neu berechnet.
+
 ## Aktivierung und Begrenzung
 
 Neue Kampfphasen erhalten beim serverseitigen Start `criticalEffectsVersion: 1`.

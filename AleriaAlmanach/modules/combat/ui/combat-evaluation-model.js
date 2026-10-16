@@ -35,7 +35,9 @@ export function getEvaluationAttackRows(resolution = {}) {
   });
   const primaryDamage = damages.filter(d => !assigned.has(d) && d.followIndex == null);
   const primaryFallback = !follows.length ? resolution.damage : resolution.damage?.rollSource === 'primary' && resolution.damage.primaryTotal != null
-    ? { notation: resolution.damage.notation, total: resolution.damage.primaryTotal } : null;
+    ? { notation: resolution.damage.notation, total: resolution.damage.primaryTotal,
+      diceResults: resolution.damage.diceResults, modifier: resolution.damage.modifier,
+      ...(resolution.damage.criticalDamage ? { criticalDamage: resolution.damage.criticalDamage } : {}) } : null;
   return [{ number: 1, label: follows.length ? 'Auftakt' : 'Angriff', weaponName: '', attack: resolution.attack || {}, damage: primaryDamage,
     fallbackDamage: primaryDamage.length ? null : primaryFallback || null }, ...followRows];
 }

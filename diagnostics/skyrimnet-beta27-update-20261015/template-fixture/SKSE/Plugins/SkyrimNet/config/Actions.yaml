@@ -1,0 +1,235 @@
+actions:
+  StopPosing:
+    enabled: true
+    cooldownSeconds: 0
+  PoseSeduce:
+    enabled: false
+    cooldownSeconds: 0
+  PosePresent:
+    enabled: false
+    cooldownSeconds: 0
+  StopSex:
+    enabled: true
+    cooldownSeconds: 0
+  StopUsingFurniture:
+    enabled: true
+    cooldownSeconds: 0
+  CastSpell:
+    enabled: true
+    cooldownSeconds: 0
+  SellItem:
+    enabled: true
+    cooldownSeconds: 0
+  CollectPayment:
+    enabled: true
+    cooldownSeconds: 0
+  AcceptBackWash:
+    enabled: true
+    cooldownSeconds: 5
+  StartNewSex:
+    enabled: true
+    cooldownSeconds: 0
+  UnequipArmor:
+    enabled: true
+    cooldownSeconds: 0
+  GiveGold:
+    enabled: true
+    cooldownSeconds: 0
+  ChallengeBrawl:
+    enabled: true
+    cooldownSeconds: 0
+  ChangeSexPace:
+    enabled: true
+    cooldownSeconds: 0
+  SpectatorOfSex:
+    enabled: true
+    cooldownSeconds: 0
+  ACCOMPANYTARGET:
+    enabled: true
+    cooldownSeconds: 0
+  DeliverMessage:
+    enabled: true
+    cooldownSeconds: 0
+  CommandStopPose:
+    enabled: true
+    cooldownSeconds: 0
+  OfferIntimateWash:
+    enabled: true
+    cooldownSeconds: 5
+  OPENTRADE:
+    enabled: true
+    cooldownSeconds: 0
+  GiveItem:
+    enabled: true
+    cooldownSeconds: 0
+  StartFollowing:
+    enabled: true
+    cooldownSeconds: 0
+  SearchContainer:
+    enabled: true
+    cooldownSeconds: 0
+  MoveToWater:
+    enabled: true
+    cooldownSeconds: 60
+  WashSomeonesBack:
+    enabled: true
+    cooldownSeconds: 30
+  PoseSubmission:
+    enabled: false
+    cooldownSeconds: 0
+  StopFollowing:
+    enabled: true
+    cooldownSeconds: 0
+  WashSomeoneIntimately:
+    enabled: true
+    cooldownSeconds: 30
+  LootCorpse:
+    enabled: true
+    cooldownSeconds: 0
+  AttackTarget:
+    enabled: true
+    cooldownSeconds: 0
+  SetCompanion:
+    enabled: true
+    cooldownSeconds: 0
+  TeachSpell:
+    enabled: true
+    cooldownSeconds: 10
+  SeekWater:
+    enabled: true
+    cooldownSeconds: 30
+  LearnSpell:
+    enabled: true
+    cooldownSeconds: 10
+  OfferToWashSomeonesBack:
+    enabled: true
+    cooldownSeconds: 5
+  ChangeSexActivity:
+    enabled: true
+    cooldownSeconds: 20
+  SetCombatStyle:
+    enabled: true
+    cooldownSeconds: 0
+  CeaseFighting:
+    enabled: true
+    cooldownSeconds: 0
+  PoseGroundIdle:
+    enabled: false
+    cooldownSeconds: 0
+  ExtortGold:
+    enabled: false
+    cooldownSeconds: 0
+  PoseDance:
+    enabled: false
+    cooldownSeconds: 0
+  PoseDanceSexy:
+    enabled: false
+    cooldownSeconds: 0
+  BuyItem:
+    enabled: true
+    cooldownSeconds: 0
+  FindClosestWater:
+    enabled: true
+    cooldownSeconds: 30
+  PoseGroundSexy:
+    enabled: false
+    cooldownSeconds: 0
+  PoseIdle:
+    enabled: false
+    cooldownSeconds: 0
+  PosePlead:
+    enabled: false
+    cooldownSeconds: 0
+  PoseSelfTouch:
+    enabled: false
+    cooldownSeconds: 0
+  PoseStretch:
+    enabled: false
+    cooldownSeconds: 0
+  PoseWorkout:
+    enabled: false
+    cooldownSeconds: 0
+  TriggerDialogueLine:
+    enabled: true
+    cooldownSeconds: 0
+  TakeItem:
+    enabled: true
+    cooldownSeconds: 0
+  CommissionItem:
+    enabled: true
+    cooldownSeconds: 0
+  bathe:
+    enabled: true
+    cooldownSeconds: 60
+  GoToLocation:
+    enabled: true
+    cooldownSeconds: 0
+  EquipArmor:
+    enabled: true
+    cooldownSeconds: 0
+  ChangeSexScenePosition:
+    enabled: true
+    cooldownSeconds: 0
+  SpectatorOfSexFlee:
+    enabled: true
+    cooldownSeconds: 0
+  LetThemPass:
+    enabled: true
+    cooldownSeconds: 0
+  AskForBathingHelp:
+    enabled: true
+    cooldownSeconds: 30
+  RequestBackWash:
+    enabled: true
+    cooldownSeconds: 5
+  RequestIntimateWash:
+    enabled: true
+    cooldownSeconds: 5
+  AcceptToWashBack:
+    enabled: true
+    cooldownSeconds: 5
+  DeclineWashing:
+    enabled: true
+    cooldownSeconds: 5
+  BatheTogetherWashTheirBack:
+    enabled: true
+    cooldownSeconds: 90
+  BatheTogetherOfferYourBack:
+    enabled: true
+    cooldownSeconds: 90
+  BatheTogetherIntimate:
+    enabled: true
+    cooldownSeconds: 180
+  SitOrLayDown:
+    enabled: true
+    cooldownSeconds: 0
+  ScheduleDelivery:
+    enabled: true
+    cooldownSeconds: 0
+  WaitForPlayerHere:
+    enabled: true
+    cooldownSeconds: 0
+  TransferOwnership:
+    enabled: true
+    cooldownSeconds: 0
+  ScheduleMeeting:
+    enabled: true
+    cooldownSeconds: 0
+  FetchPerson:
+    enabled: true
+    cooldownSeconds: 0
+  CancelCurrentTask:
+    enabled: true
+    cooldownSeconds: 0
+  ArrestNPC:
+    enabled: true
+    cooldownSeconds: 0
+  EscortTarget:
+    enabled: true
+    cooldownSeconds: 0
+  Undress:
+    enabled: true
+    cooldownSeconds: 0
+  AssignHome:
+    enabled: true
+    cooldownSeconds: 0

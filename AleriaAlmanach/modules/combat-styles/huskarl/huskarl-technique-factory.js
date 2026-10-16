@@ -1,5 +1,6 @@
 import { createDrachentanzDamageProfile } from '../drachentanz/drachentanz-damage-progression.js';
-import { hasWeaponTechniqueControl } from '../weapon-technique-budget.js';
+import { hasWeaponTechniqueControl, getWeaponTechniqueControlTier } from '../weapon-technique-budget.js';
+import { reviseWeaponTechniqueSave } from '../weapon-technique-control.js';
 import { reviseMartialPositionEntry } from '../martial-position-effects.js';
 import { techniqueCost, weaponDamageEffect, temporaryCondition, secondarySave } from '../drachentanz/techniques/drachentanz-technique-factory.js?v=20260909-dragon-parent-v2';
 import { getHuskarlForms, HUSKARL_FORM_IDS as F } from './huskarl-forms.js';
@@ -37,6 +38,8 @@ export function createHuskarlTechnique(classId, formId, spec) {
   if (!form || !weapon || !costIds) throw new Error(`Ungültige Huskarl-Technik: ${classId}/${spec.slug}`);
   const id = `combat-style-huskarl-${classId}-${spec.slug}`;
   const costs = costIds.map((cost, i) => techniqueCost(id, cost, i));
+  const save = spec.slow ? secondarySave(id, 'Gehemmter Schritt', '−2 m Bewegung für einen eigenen Beitrag nach misslungenem KRF-Rettungswurf; nicht additiv.', { movement: -2 }, { tags: 'Huskarl-Waffenlehre' })
+    : spec.penalty ? secondarySave(id, 'Gebundene Waffenführung', '−1 Angriff für einen eigenen Beitrag nach misslungenem KRF-Rettungswurf; nicht additiv.', { attack: -1 }, { tags: 'Huskarl-Waffenlehre' }) : { enabled: false };
   const effects = spec.noDamage ? [] : [weaponDamageEffect(id)];
   if (spec.guard) effects.push(temporaryCondition(id, 'Feste Deckung', `+${spec.guard} RK für einen eigenen Beitrag. Gleichartige Deckung wird erneuert, nicht addiert.`,
     { armorClass: spec.guard }, { target: 'self', on: spec.noDamage ? 'always' : 'hit', tags: 'Huskarl-Waffenlehre' }));
@@ -64,11 +67,11 @@ export function createHuskarlTechnique(classId, formId, spec) {
     weaponLabel: weapon.name, weaponTypes: weapon.types, compatibleWeaponIds: [],
     activationType: costIds[0], costs, auraBypass: { allowed: true, resourceId: 'aura-focus', cost: 1 },
     ...(spec.noDamage ? { damageFormula: '', damageModel: { mode: 'fixed', scalingSteps: [] } }
-      : createDrachentanzDamageProfile({ minimumLevel: spec.level, allowedClassIds: classId === 'hird-maid' ? ['milwr'] : [classId], maximumTargets: 1, damageControl: hasWeaponTechniqueControl(spec) }, costs)),
+      : createDrachentanzDamageProfile({ minimumLevel: spec.level, allowedClassIds: classId === 'hird-maid' ? ['milwr'] : [classId], maximumTargets: 1,
+        damageControl: hasWeaponTechniqueControl(spec), damageControlTier: getWeaponTechniqueControlTier(spec) }, costs)),
     attackBonus: spec.attackBonus || 0, damageBonus: 0, damageType: '', criticalThreshold: 20,
     targetDefenseModifier: 0, maximumTargets: 1, target: spec.noDamage ? 'Selbst' : 'Ein Gegner', range: 'Waffenreichweite', requirements,
-    effects, secondarySave: spec.slow ? secondarySave(id, 'Gehemmter Schritt', '−2 m Bewegung für einen eigenen Beitrag nach misslungenem KRF-Rettungswurf; nicht additiv.', { movement: -2 }, { tags: 'Huskarl-Waffenlehre' })
-      : spec.penalty ? secondarySave(id, 'Gebundene Waffenführung', '−1 Angriff für einen eigenen Beitrag nach misslungenem KRF-Rettungswurf; nicht additiv.', { attack: -1 }, { tags: 'Huskarl-Waffenlehre' }) : { enabled: false },
+    effects, secondarySave: reviseWeaponTechniqueSave(save, costs.some(cost => cost.resourceId === 'special-action')),
     followUpAttack: { enabled: false }, mechanics: {}, triggerRules: [],
     cultureTraining: { schemaVersion: 1, cultureIds: ['aldrimar'], allowedClassIds: [classId],
       branchId: `${classId}-${spec.weapon}`, slotBands: [band], requiresShield: Boolean(weapon.shield),

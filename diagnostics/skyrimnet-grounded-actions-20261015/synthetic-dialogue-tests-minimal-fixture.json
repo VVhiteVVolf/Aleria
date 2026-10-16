@@ -1,0 +1,182 @@
+[
+  {
+    "case": "missing_delivery_parcel",
+    "heuristic_pass": false,
+    "response": "I must correct myself: I have no parcel, and no enchanted robes were ever in my shop. My inventory holds only an Iron Sword and Leather Boots. I cannot hand over something that does not exist, and I have no delivery quest to offer. If you need a delivery errand, I cannot arrange one without a proper client or order. Is there something else I can sell you today, like these boots?\n\nACTION: None",
+    "api_result": {
+      "overall_duration_ms": 1062,
+      "parallel_execution": true,
+      "success": true,
+      "successful_variants": 1,
+      "timestamp": 1792100863908,
+      "total_variants": 1,
+      "variants": [
+        {
+          "duration_ms": 1062,
+          "model": "deepseek/deepseek-v4-flash-0731",
+          "model_index": 0,
+          "request": {
+            "cache": true,
+            "max_tokens": 4096,
+            "messages": [
+              {
+                "content": "Isolated synthetic dialogue test. Do not execute game actions.\n## Grounded Tasks and Transfers\n- Ground executable offers in the supplied game state, available quest branches, and eligible actions. A previous spoken claim does not establish that an item, client, order, or quest exists.\n- For an item you offer to hand over or sell now, use its actual listed inventory or merchant-stock name and available quantity. Do not rename an ordinary item into an invented parcel or special quest object. If the required item is absent or unverified, acknowledge that and ask about a genuinely available alternative before substituting it.\n- Before committing to an errand, establish its recipient, destination, actual item or objective, and agreed terms from supplied context. Do not present invented contacts, stock, payments, or quest requirements as verified facts. An uncertain opportunity can be discussed as tentative, without promising a functioning assignment.\n- Start or advance a quest through an explicitly available quest dialogue code or supported task action. Speaking about a job does not create a tracked quest, spawn its items, or establish a reward. A real quest branch may authorize a scripted reward or item; use its quest action rather than inventing an inventory transfer.\n- A transfer offered now is pending until the action result confirms it. Report failures honestly and address their stated cause. A failed hand-over is not delivery; accepting a price is not payment; an agreed reward is not a paid reward.\n- Answer the latest question first. A newer acceptance replaces an older refusal. A recorded successful transfer closes that transaction; do not re-offer it or charge for it again unless a genuinely new transaction is explicitly agreed. Continue from current state instead of repeating the old negotiation.\nSpeak as the merchant in English, at most 120 words. Append exactly one eligible ACTION line only when doing something now, using ACTION: CategoryName PARAMS: {\"intent\":\"specific operation\"}. No other actions, no multiple action lines. For no action, give dialogue only. A sale is one Economy transaction; do not append a separate Items gift.\n\nYou are an ordinary tailor. Inventory: Iron Sword x1, Leather Boots x1. No robes, parcels, client records, or delivery quest are present. No quest dialogue branches or task-creation actions are available. Eligible categories: Items, Economy. Earlier you incorrectly claimed to have packaged enchanted robes for a client in Windhelm. Player now: Please give me that parcel so I can start the delivery.",
+                "role": "user"
+              }
+            ],
+            "model": "deepseek/deepseek-v4-flash-0731",
+            "model_index": 0,
+            "provider": {
+              "ignore": [
+                "atlas-cloud"
+              ],
+              "quantizations": [
+                "fp8",
+                "fp16",
+                "bf16",
+                "fp32",
+                "unknown"
+              ],
+              "sort": "latency"
+            },
+            "reasoning": {
+              "enabled": false
+            },
+            "reasoning_effort_resolved": "off",
+            "reasoning_resolved": false,
+            "route": "fallback",
+            "temperature": 1.0,
+            "usage": {
+              "include": true
+            },
+            "use_structured_outputs_resolved": false
+          },
+          "response": "I must correct myself: I have no parcel, and no enchanted robes were ever in my shop. My inventory holds only an Iron Sword and Leather Boots. I cannot hand over something that does not exist, and I have no delivery quest to offer. If you need a delivery errand, I cannot arrange one without a proper client or order. Is there something else I can sell you today, like these boots?\n\nACTION: None",
+          "success": true,
+          "variant": "default",
+          "variant_key": ""
+        }
+      ]
+    }
+  },
+  {
+    "case": "accepted_priced_sale",
+    "heuristic_pass": true,
+    "response": "Of course. Here is your Backpack, Brown Fur for 180 gold.\n\nACTION: Economy PARAMS: {\"intent\":\"sell\",\"item\":\"Backpack, Brown Fur\",\"quantity\":1,\"price\":180}",
+    "api_result": {
+      "overall_duration_ms": 567,
+      "parallel_execution": true,
+      "success": true,
+      "successful_variants": 1,
+      "timestamp": 1792100864477,
+      "total_variants": 1,
+      "variants": [
+        {
+          "duration_ms": 567,
+          "model": "deepseek/deepseek-v4-flash-0731",
+          "model_index": 0,
+          "request": {
+            "cache": true,
+            "max_tokens": 4096,
+            "messages": [
+              {
+                "content": "Isolated synthetic dialogue test. Do not execute game actions.\n## Grounded Tasks and Transfers\n- Ground executable offers in the supplied game state, available quest branches, and eligible actions. A previous spoken claim does not establish that an item, client, order, or quest exists.\n- For an item you offer to hand over or sell now, use its actual listed inventory or merchant-stock name and available quantity. Do not rename an ordinary item into an invented parcel or special quest object. If the required item is absent or unverified, acknowledge that and ask about a genuinely available alternative before substituting it.\n- Before committing to an errand, establish its recipient, destination, actual item or objective, and agreed terms from supplied context. Do not present invented contacts, stock, payments, or quest requirements as verified facts. An uncertain opportunity can be discussed as tentative, without promising a functioning assignment.\n- Start or advance a quest through an explicitly available quest dialogue code or supported task action. Speaking about a job does not create a tracked quest, spawn its items, or establish a reward. A real quest branch may authorize a scripted reward or item; use its quest action rather than inventing an inventory transfer.\n- A transfer offered now is pending until the action result confirms it. Report failures honestly and address their stated cause. A failed hand-over is not delivery; accepting a price is not payment; an agreed reward is not a paid reward.\n- Answer the latest question first. A newer acceptance replaces an older refusal. A recorded successful transfer closes that transaction; do not re-offer it or charge for it again unless a genuinely new transaction is explicitly agreed. Continue from current state instead of repeating the old negotiation.\nSpeak as the merchant in English, at most 120 words. Append exactly one eligible ACTION line only when doing something now, using ACTION: CategoryName PARAMS: {\"intent\":\"specific operation\"}. No other actions, no multiple action lines. For no action, give dialogue only. A sale is one Economy transaction; do not append a separate Items gift.\n\nYou are an ordinary merchant. Inventory: Backpack, Brown Fur x1. Player has 1000 gold. Eligible categories: Items, Economy. Earlier the player declined, but you then agreed a price of 180 gold for one Backpack, Brown Fur. No payment or item transfer has happened yet. Player now: I accept the 180 gold price; let us complete the purchase now.",
+                "role": "user"
+              }
+            ],
+            "model": "deepseek/deepseek-v4-flash-0731",
+            "model_index": 0,
+            "provider": {
+              "ignore": [
+                "atlas-cloud"
+              ],
+              "quantizations": [
+                "fp8",
+                "fp16",
+                "bf16",
+                "fp32",
+                "unknown"
+              ],
+              "sort": "latency"
+            },
+            "reasoning": {
+              "enabled": false
+            },
+            "reasoning_effort_resolved": "off",
+            "reasoning_resolved": false,
+            "route": "fallback",
+            "temperature": 1.0,
+            "usage": {
+              "include": true
+            },
+            "use_structured_outputs_resolved": false
+          },
+          "response": "Of course. Here is your Backpack, Brown Fur for 180 gold.\n\nACTION: Economy PARAMS: {\"intent\":\"sell\",\"item\":\"Backpack, Brown Fur\",\"quantity\":1,\"price\":180}",
+          "success": true,
+          "variant": "default",
+          "variant_key": ""
+        }
+      ]
+    }
+  },
+  {
+    "case": "current_question_after_trade",
+    "heuristic_pass": false,
+    "response": "Drifa is well, thank you for asking. She\u2019s out tending to the herb garden behind the shop\u2014says the frost is finally letting up. Between her remedies and my wares, we make a decent pair. She still jokes that I\u2019d sell a customer the very boots off my feet if they asked nicely. But no, she\u2019s strong, sharp-tongued, and keeps me honest. That\u2019s more than most merchants can say.\n\nACTION: None",
+    "api_result": {
+      "overall_duration_ms": 963,
+      "parallel_execution": true,
+      "success": true,
+      "successful_variants": 1,
+      "timestamp": 1792100865442,
+      "total_variants": 1,
+      "variants": [
+        {
+          "duration_ms": 963,
+          "model": "deepseek/deepseek-v4-flash-0731",
+          "model_index": 0,
+          "request": {
+            "cache": true,
+            "max_tokens": 4096,
+            "messages": [
+              {
+                "content": "Isolated synthetic dialogue test. Do not execute game actions.\n## Grounded Tasks and Transfers\n- Ground executable offers in the supplied game state, available quest branches, and eligible actions. A previous spoken claim does not establish that an item, client, order, or quest exists.\n- For an item you offer to hand over or sell now, use its actual listed inventory or merchant-stock name and available quantity. Do not rename an ordinary item into an invented parcel or special quest object. If the required item is absent or unverified, acknowledge that and ask about a genuinely available alternative before substituting it.\n- Before committing to an errand, establish its recipient, destination, actual item or objective, and agreed terms from supplied context. Do not present invented contacts, stock, payments, or quest requirements as verified facts. An uncertain opportunity can be discussed as tentative, without promising a functioning assignment.\n- Start or advance a quest through an explicitly available quest dialogue code or supported task action. Speaking about a job does not create a tracked quest, spawn its items, or establish a reward. A real quest branch may authorize a scripted reward or item; use its quest action rather than inventing an inventory transfer.\n- A transfer offered now is pending until the action result confirms it. Report failures honestly and address their stated cause. A failed hand-over is not delivery; accepting a price is not payment; an agreed reward is not a paid reward.\n- Answer the latest question first. A newer acceptance replaces an older refusal. A recorded successful transfer closes that transaction; do not re-offer it or charge for it again unless a genuinely new transaction is explicitly agreed. Continue from current state instead of repeating the old negotiation.\nSpeak as the merchant in English, at most 120 words. Append exactly one eligible ACTION line only when doing something now, using ACTION: CategoryName PARAMS: {\"intent\":\"specific operation\"}. No other actions, no multiple action lines. For no action, give dialogue only. A sale is one Economy transaction; do not append a separate Items gift.\n\nYou are a merchant whose wife is Drifa. Confirmed result: The previous backpack sale was completed, Player received the item and paid 180 gold. Eligible categories: Items, Economy. There is no new transaction or request to move money or items. Player now: How is your wife Drifa?",
+                "role": "user"
+              }
+            ],
+            "model": "deepseek/deepseek-v4-flash-0731",
+            "model_index": 0,
+            "provider": {
+              "ignore": [
+                "atlas-cloud"
+              ],
+              "quantizations": [
+                "fp8",
+                "fp16",
+                "bf16",
+                "fp32",
+                "unknown"
+              ],
+              "sort": "latency"
+            },
+            "reasoning": {
+              "enabled": false
+            },
+            "reasoning_effort_resolved": "off",
+            "reasoning_resolved": false,
+            "route": "fallback",
+            "temperature": 1.0,
+            "usage": {
+              "include": true
+            },
+            "use_structured_outputs_resolved": false
+          },
+          "response": "Drifa is well, thank you for asking. She\u2019s out tending to the herb garden behind the shop\u2014says the frost is finally letting up. Between her remedies and my wares, we make a decent pair. She still jokes that I\u2019d sell a customer the very boots off my feet if they asked nicely. But no, she\u2019s strong, sharp-tongued, and keeps me honest. That\u2019s more than most merchants can say.\n\nACTION: None",
+          "success": true,
+          "variant": "default",
+          "variant_key": ""
+        }
+      ]
+    }
+  }
+]

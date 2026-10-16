@@ -1,0 +1,148 @@
+{
+  "actionManager": {
+    "partialParameterThreshold": 48
+  },
+  "audio": {
+    "queueNearCompletionThreshold": 2,
+    "universalMaxVolume": 1.0
+  },
+  "books": {
+    "readingMode": "auto"
+  },
+  "dbvo": {
+    "enabled": true,
+    "fixSubtitleDuringTTS": false,
+    "voiceSilentNPCs": true
+  },
+  "diagnostics": {
+    "ignored_critical_signature": "",
+    "ignored_optional_signature": ""
+  },
+  "dialogue": {
+    "distanceToDetectBackgroundDialogue": 1000.0,
+    "eligibilityCheckTimeoutMs": 2000,
+    "embedActionsInDialogue": false,
+    "enableTransformation": false,
+    "interruptDialogueOnVoiceStart": false,
+    "speakerSelector": {
+      "silenceChancePercent": 50,
+      "strictness": "balanced",
+      "tagCompanion": true,
+      "tagEngaged": true,
+      "tagInScene": true
+    }
+  },
+  "documentation": {
+    "autoGenerate": true
+  },
+  "events": {
+    "enableFiltering": true,
+    "enableOutboundModEvents": true,
+    "preloadCount": 1000
+  },
+  "facialAnimation": {
+    "betterFacialAnimations": true,
+    "decayMultiplier": 1.5,
+    "initialIntensity": 0.30000001192092896,
+    "intensity": 0.4000000059604645,
+    "rampRate": 0.009999999776482582,
+    "syncOffset": 5.0
+  },
+  "gamemaster": {
+    "actionCooldownSeconds": 120,
+    "agentEnabled": true,
+    "continuousSceneCooldownSeconds": 30,
+    "enabled": true,
+    "excludeActorsInScenes": true,
+    "nearbyActorRadius": 800.0,
+    "playerVoiceId": "femalecommander",
+    "recentEventsCount": 25,
+    "requestTimeoutSeconds": 30
+  },
+  "general": {
+    "globalAIEnabled": true,
+    "showInGameNotifications": true
+  },
+  "interaction": {
+    "maxAudioDistance": 5000.0,
+    "maxDistance": 1600.0,
+    "nearbyNPCAwarenessMultiplier": 2.0,
+    "normalMaxDistance": 1600.0,
+    "pinnedTargetRangeMultiplier": 2.0,
+    "whisperMaxDistance": 200.0
+  },
+  "locationAnalysis": {
+    "indoorGridRadius": 1,
+    "indoorRadius": 2000.0,
+    "maxRadius": 8000.0,
+    "outdoorGridRadius": 2
+  },
+  "logging": {
+    "flushLevel": "info",
+    "logLevel": "debug",
+    "maxLogCount": 10000
+  },
+  "narration": {
+    "disableDuringCombat": true,
+    "enabled": false
+  },
+  "package": {
+    "defaultFlags": 0,
+    "defaultPriority": 0,
+    "dialoguePackageDurationSeconds": 12
+  },
+  "papyrus": {
+    "callTimeoutMs": 30000,
+    "decoratorWarmupActorCount": 6
+  },
+  "perception": {
+    "allowActorsToPerceiveOwnDialogue": true,
+    "checkLineOfSight": true
+  },
+  "player": {
+    "voiceId": "femalecommander",
+    "voiceInput": true
+  },
+  "pluginHub": {
+    "adultAttested": true
+  },
+  "shouldSilenceActors": true,
+  "soundeffects": {
+    "enableInputSoundEffects": true,
+    "enableNoTranscriptionSoundEffect": true
+  },
+  "spatialAudio": {
+    "enabled": true,
+    "maxDistance": 4000.0,
+    "maxVolume": 1.0,
+    "minDistance": 100.0,
+    "minVolume": 0.0,
+    "rolloffFactor": 1.0
+  },
+  "speech": {
+    "maxRecentSpeechCount": 3,
+    "postPlayerInteractionCooldownSeconds": 2,
+    "recentSpeechTimeWindowSeconds": 60,
+    "shouldApplyTalkToPlayerPackage": false
+  },
+  "subtitles": {
+    "enableConsoleOutput": false,
+    "enableNPCSubtitles": true,
+    "enablePlayerSubtitles": true
+  },
+  "telemetry": {
+    "enabled": true,
+    "metrics_enabled": false
+  },
+  "tts": {
+    "enableNPCNodeUpdates": false,
+    "enableNarratorAudioEffect": false,
+    "enablePlayerThoughtAudioEffect": true,
+    "engine": "inworld",
+    "kokoroModel": "model_q8f16",
+    "kokoroNarratorVoice": "af_bella",
+    "kokoroVolumeLevel": 0.44999998807907104,
+    "maxSegmentWords": 0,
+    "useKokoroForNarrator": false
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "path": "submodules/user_final_instructions/0750_embedded_actions.prompt",
+  "validation": {
+    "decorators": [
+      "length"
+    ],
+    "errors": [],
+    "isValid": true,
+    "variables": [
+      "action.name",
+      "action.parameterSchema",
+      "action.description",
+      "player.name"
+    ],
+    "warnings": []
+  },
+  "sha256": "535ed6758d3565868d3f5efbee700072b57028b6a1bcbb9fa726306d91f8ff4c",
+  "provenance": {
+    "found": true,
+    "orphan": false,
+    "overrides": true,
+    "overriding": {
+      "label": "severause.severactions",
+      "pluginId": "severause.severactions",
+      "priorityIndex": 16,
+      "source": "external",
+      "title": "SeverActions",
+      "version": "4.3.0"
+    },
+    "path": "prompts/submodules/user_final_instructions/0750_embedded_actions.prompt",
+    "shadowed": [
+      {
+        "label": "severause.severactions",
+        "pluginId": "severause.severactions",
+        "priorityIndex": 16,
+        "source": "external",
+        "title": "SeverActions",
+        "version": "4.3.0"
+      },
+      {
+        "label": "skyrimnet.base",
+        "pluginId": "skyrimnet.base",
+        "priorityIndex": -1,
+        "source": "base",
+        "title": "SkyrimNet Base",
+        "version": "0.25.3"
+      }
+    ],
+    "userCopy": true,
+    "winner": {
+      "label": "overlay",
+      "pluginId": "",
+      "priorityIndex": -1,
+      "source": "overlay",
+      "title": "",
+      "version": ""
+    }
+  }
+}

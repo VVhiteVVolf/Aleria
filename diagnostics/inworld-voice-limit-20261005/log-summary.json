@@ -1,0 +1,42 @@
+{
+  "log_path": "C:\\Users\\fhg_r\\OneDrive\\Dokumente\\My Games\\Skyrim Special Edition\\SKSE\\SkyrimNet.log",
+  "counts": {
+    "successful_syntheses": 290,
+    "successful_clones": 3,
+    "clone_http_400": 22,
+    "clone_http_429": 44
+  },
+  "slot_transitions": [
+    {
+      "time": "[2026-10-05 14:07:46.178]",
+      "counts": "maxVoices=80, total=60, managed=60, nonManaged=0"
+    },
+    {
+      "time": "[2026-10-05 14:11:14.051]",
+      "counts": "maxVoices=80, total=61, managed=61, nonManaged=0"
+    },
+    {
+      "time": "[2026-10-05 14:14:35.302]",
+      "counts": "maxVoices=80, total=62, managed=62, nonManaged=0"
+    },
+    {
+      "time": "[2026-10-05 14:37:28.300]",
+      "counts": "maxVoices=80, total=63, managed=63, nonManaged=0"
+    }
+  ],
+  "recent_tts_evidence": [
+    "[2026-10-05 17:14:36.376] [26428] [info] [InworldInterface.cpp:1125] Inworld: Synthesis successful - bytes: 195848",
+    "[2026-10-05 17:14:45.521] [31924] [info] [InworldInterface.cpp:1125] Inworld: Synthesis successful - bytes: 192320",
+    "[2026-10-05 17:14:54.320] [40968] [info] [InworldInterface.cpp:1125] Inworld: Synthesis successful - bytes: 167624",
+    "[2026-10-05 17:15:17.767] [48476] [info] [InworldInterface.cpp:1125] Inworld: Synthesis successful - bytes: 213488",
+    "[2026-10-05 17:15:30.970] [7740] [info] [InworldInterface.cpp:1125] Inworld: Synthesis successful - bytes: 194084",
+    "[2026-10-05 17:15:42.083] [41352] [info] [InworldInterface.cpp:1125] Inworld: Synthesis successful - bytes: 259352",
+    "[2026-10-05 17:15:53.463] [31996] [info] [InworldInterface.cpp:1125] Inworld: Synthesis successful - bytes: 384596",
+    "[2026-10-05 17:15:58.393] [27664] [debug] [InworldInterface.cpp:264] Inworld: Clone response - status: 400, body size: 135 bytes",
+    "[2026-10-05 17:15:59.757] [11592] [debug] [InworldInterface.cpp:264] Inworld: Clone response - status: 400, body size: 135 bytes",
+    "[2026-10-05 17:15:59.934] [48016] [info] [InworldInterface.cpp:1125] Inworld: Synthesis successful - bytes: 532772",
+    "[2026-10-05 17:16:04.447] [8056] [info] [InworldInterface.cpp:1125] Inworld: Synthesis successful - bytes: 135872",
+    "[2026-10-05 17:16:04.660] [6940] [info] [InworldInterface.cpp:1125] Inworld: Synthesis successful - bytes: 188792"
+  ],
+  "mutations": false
+}

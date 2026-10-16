@@ -1,0 +1,49 @@
+{
+  "file_modified_berlin": "2026-10-15T22:43:15.952519+02:00",
+  "default": {
+    "model_name": "google/gemma-4-31b-it, google/gemma-4-26b-a4b-it",
+    "default_params": {
+      "temperature": 1,
+      "max_tokens": 4096,
+      "top_p": null,
+      "top_k": null,
+      "frequency_penalty": null,
+      "presence_penalty": null,
+      "stop_sequences": null
+    },
+    "model_params": [
+      {
+        "provider_id": "openrouter",
+        "temperature": 1
+      },
+      {
+        "provider_id": "openrouter",
+        "temperature": 1
+      }
+    ],
+    "rotation_mode": "sequential",
+    "provider_sorting": "price"
+  },
+  "action_evaluation": {
+    "model_name": "google/gemma-4-31b-it, google/gemma-4-26b-a4b-it",
+    "default_params": {
+      "temperature": 1,
+      "max_tokens": 500,
+      "top_p": null,
+      "top_k": null,
+      "frequency_penalty": null,
+      "presence_penalty": null,
+      "stop_sequences": null
+    },
+    "model_params": [
+      {
+        "provider_id": "openrouter",
+        "temperature": 1
+      },
+      {
+        "provider_id": "openrouter",
+        "temperature": 1
+      }
+    ]
+  }
+}

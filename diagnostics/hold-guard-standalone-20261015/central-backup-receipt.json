@@ -1,0 +1,39 @@
+{
+  "status": "COMPLETE_VERIFIED",
+  "destination": "D:\\Nolvus-Backups\\Awakening-6.0.20-vor-Update-20260930\\updates\\20261015-HoldGuard-Huskarl",
+  "archive_sha256": "68d4ec428c62794e88be36e123546c5b092d96506e0fcd0e8afc830d41708361",
+  "files": [
+    {
+      "name": "migration-hold-guard-huskarl-20261015.zip",
+      "sha256": "68d4ec428c62794e88be36e123546c5b092d96506e0fcd0e8afc830d41708361",
+      "bytes": 193387636
+    },
+    {
+      "name": "migration-receipt.json",
+      "sha256": "41fb1a6d921d6eddcf4f6cc18d679ca106b821087ec5cb4546eeadca448f534d",
+      "bytes": 390
+    },
+    {
+      "name": "installation.json",
+      "sha256": "a16ea5ce7d824a4c5ff9fbc101dfa9249f56b7dfc66a4af67d1a24be7cb63f17",
+      "bytes": 6027
+    },
+    {
+      "name": "validation.json",
+      "sha256": "a0d75cb5eaae4bbe879fd98c66fc1889d0220aae968e39e5e109e07d274613b8",
+      "bytes": 11417
+    },
+    {
+      "name": "INSTALLATIONSBERICHT.txt",
+      "sha256": "f445b1c11da92174888fb2f0a3688b9dcf72f7707966bfcdfedf83a8f12809f3",
+      "bytes": 5057
+    },
+    {
+      "name": "README_HUSKARL.txt",
+      "sha256": "7b17cf464f6e864e07df7dcb635dea277bfedb1e6bd482aa4617ab35a62dcb9a",
+      "bytes": 2673
+    }
+  ],
+  "base_backup_pointers_unchanged": true,
+  "game_tested": false
+}

@@ -1,7 +1,7 @@
 import { collectApplicableCombatRules } from '../combat/combat-trigger-rules.js';
 import { consumeCombatRuleResources, getCombatRuleAbilityUseRequests } from '../combat/combat-rule-consumption.js';
 import { applyCombatAbilityUse } from '../combat/combat-ability-uses.js';
-import { getSkillRollContext } from './skill-resolution-service.js?v=20261016-guided-checks-v1';
+import { getSkillRollContext } from './skill-resolution-service.js?v=20261016-check-policy-v1';
 
 export const skillSupportOptionKey = option => `${option.sourceActorId}:${option.ruleId}`;
 

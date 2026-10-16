@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-10-14",
+  "subject": "Skalli Varulvs Roh-Rhyfel",
+  "status": "selected",
+  "breed": "Roh-Rhyfel",
+  "ancestry": [
+    "Hest",
+    "Ceffyl"
+  ],
+  "owner": "Skalli Varulv",
+  "bestiaryReference": "/Bestiarium/tiere/pferde/zuchtbuch/index.html#kreuzung-ceffyl-mit-hest",
+  "generator": "built-in image_gen",
+  "stylePreset": "anime-scene-portrait",
+  "aspectRatio": "2:3",
+  "references": [
+    {
+      "path": "/AleriaAlmanach/assets/companions/haus-draig/cador.png",
+      "role": "Anime-Stil"
+    },
+    {
+      "path": "/Stammbäume/assets/images/houses/Aldrimar/clan-varulv.png",
+      "role": "Varulv-Wappen auf Rundschild"
+    }
+  ],
+  "prompt": "Use case: illustration-story.\nCreate ONE new, complete 2:3 vertical Aleria companion horse illustration. This is Skalli Varulv's own Roh-Rhyfel, a direct Hest x Ceffyl cross, the less standardized ancestral kind from which the established Rhyfel breed later developed. The HORSE is the clear main subject, no rider or other people.\nInput image 1 is the APPROVED ART STYLE reference only: use its clear anime lineart and clean cel shading, simplified readable anatomy, beautifully designed expressive horse face and quiet composition. Do not copy that beige coat, dragon heraldry, or its exact horse. Input image 2 is the ACTUAL VARULV HERALDRY reference: preserve the ivory-white HOWLING WOLF head profile on the red field, with dark outlines. Adapt this to a practical round wooden riding shield with an iron rim strapped securely to the visible side of the saddle. One shield, realistically scaled, distinctly hanging on leather straps, not printed on the horse and not a blanket.\nRequired style preset: Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nHORSE DESIGN: A striking WHITE-GREY SCHIMMEL, a pale winter-grey horse with subtle soft charcoal-grey dappling on the flanks, pale face, darker grey muzzle and grey hooves. Dense extra winter fur, visible substantial fluffy fetlock feathering and soft thick fur at the chest/jaw/underside, designed in clear large anime tufts rather than rendering thousands of hairs. The raw strength of the northern Hest: muscular haunches, powerful sloping shoulders, deep chest, strong stable legs. Combine it with the noble Ceffyl's refined expressive face, proud arching neck, flowing elegant topline and balanced riding-horse proportions. Strong but NOT a squat boxy cart horse, not a huge barrel torso, not stubby legs; a harmonious capable saddle horse, robust yet agile. A distinctive adult with character.\nMANE: silver-white hair CUT SHORT and tied into a row of compact slightly rustic little knots close to the neck crest; a short tied forelock. No long flowing mane, no giant ornamental braids. A full practical grey-white tail.\nPERSONALITY AND POSE: Proud, self-possessed and alert, slightly wilful. Head held high with a knowing sidelong gaze, one ear tracking a sound to the side and the other forward, mouth closed, still and grounded. Calm standing three-quarter portrait with all four legs and all four hooves clearly visible and anatomically correct. Sense of restrained strength, no rearing or galloping.\nTACK: conservative functional dark brown leather riding saddle and simple bridle, a plain muted red wool saddle pad with a little pale fleece edge, exactly ONE Varulv round shield suspended at the saddle on the visible flank. No overloaded armor, no ribbons, no banners, no luggage, no miscellaneous trinkets. The shield should not conceal the whole torso. All straps are clear, logical, physically attached.\nSCENE: quiet stone-and-timber stable courtyard, a modest patch of grass at the edge, cool clear daylight and a soft blue sky. Background restrained, simple anime shapes, few elements. Horse dominates approximately 85 percent of image height, full ears, hooves and tail inside frame with comfortable margins. Natural eye-level three-quarter composition.\nNo text, labels, watermark, photo realism, 3D render, painterly watercolor, complex props, fantasy anatomy, wings or horns. Keep the look strongly anime and clearly consistent with the supplied approved horse portrait.",
+  "output": "skalli-roh-rhyfel-v1.png",
+  "original": "C:/Users/fhg_r/.codex/generated_images/01a12c74-cdd4-7343-9e68-5feadb413017/exec-0c28128b-511a-4b70-8bf5-1193df0ace34.png",
+  "masterPushed": false,
+  "name": "Astrid",
+  "creatureId": "companion-skalli-astrid",
+  "selectedAt": "2026-10-14T11:36:14.204Z"
+}

@@ -1,0 +1,378 @@
+[
+  {
+    "case": "gift_without_footer",
+    "root_response": "ACTION: Items PARAMS: {\"intent\": \"give Silver Onyx Ring to Test Player\"}",
+    "passed": true,
+    "response": "ACTION: GiveItem PARAMS: {\"count\": 1, \"item\": \"Silver Onyx Ring\", \"recipient\": \"Test Player\"}",
+    "api": {
+      "overall_duration_ms": 309,
+      "parallel_execution": true,
+      "success": true,
+      "successful_variants": 1,
+      "timestamp": 1792106493759,
+      "total_variants": 1,
+      "variants": [
+        {
+          "duration_ms": 309,
+          "model": "google/gemma-4-31b-it",
+          "model_index": 0,
+          "request": {
+            "cache": true,
+            "extra_body": {
+              "extra_body": {
+                "google": {
+                  "safety_settings": [
+                    {
+                      "category": "HARM_CATEGORY_HARASSMENT",
+                      "threshold": "BLOCK_NONE"
+                    },
+                    {
+                      "category": "HARM_CATEGORY_HATE_SPEECH",
+                      "threshold": "BLOCK_NONE"
+                    },
+                    {
+                      "category": "HARM_CATEGORY_SEXUALLY_EXPLICIT",
+                      "threshold": "BLOCK_NONE"
+                    },
+                    {
+                      "category": "HARM_CATEGORY_DANGEROUS_CONTENT",
+                      "threshold": "BLOCK_NONE"
+                    }
+                  ]
+                }
+              }
+            },
+            "max_tokens": 500,
+            "messages": [
+              {
+                "content": "[ system ]\nYou select the single most appropriate action for Test Merchant from a specific action category.\nA broader category was already identified from the dialogue. Now pick the exact action.\n**Guidelines:**\n- Read the exchange. If the speaker asked Test Merchant to do something and Test Merchant agreed, complied, or showed willingness, select the action that fulfills that request.\n- If Test Merchant's dialogue implies, suggests, or leads toward any eligible action — select it.\n- Agreement can be implicit — positive responses or steps toward fulfilling a request count.\n- Do NOT choose dramatic or aggressive actions unless clearly signaled in the dialogue or situation.\n- Consider Test Merchant's current physical and emotional state when selecting.\n- For actions with actor parameters, use the actor's display name exactly as shown in Nearby Actors or in the PARAMS choices.\n- Respond with EXACTLY one line. Never output multiple action lines — only the first is processed by the game engine, the rest are discarded.\n**Response format** (exactly one line starting with `ACTION:`, no reasoning):\n- `ACTION: ActionName`\n- `ACTION: ActionName PARAMS: {\"param_name1\": \"value1\", ...}`\n- `ACTION: None`\n## Merchant State\nSilver Onyx Ring: 1; gold: 5.\n## Validate the Operation Before Selecting It\nThese checks take precedence over general instructions to act on hints, agreement, or willingness. Read the actual state and the Most Recent Exchange before choosing.\n- For GiveItem or SellItem, identify an actually listed matching item and sufficient quantity in the speaker's inventory or merchant stock. Use its real name. If none matches, choose None in the required response format. Never manufacture an inventory name from the dialogue's description or silently substitute an unrelated item. This check does not prohibit a real quest action from issuing its scripted reward.\n- An agreed-price sale is an Economy transaction. If only Items actions are available for that sale, choose None; GiveItem must not replace SellItem, bypass payment, or split the sale into a second gift.\n- Use confirmed outcomes supplied in the context. Do not repeat a completed transfer or payment unless a genuinely new transaction was explicitly agreed. A failed operation may justify a corrected attempt after its stated obstacle is resolved. A spoken promise, claim, or queued request is not confirmation; missing outcome information is not proof of success.\n- Output exactly one action in the required response format. If no eligible action can perform the grounded operation, choose None.\n[ end system ]\n[ user ]\n## Intent\nTest Merchant intends to: give Silver Onyx Ring to Test Player\nPick the specific action that best matches.\n## Most Recent Exchange\n**Test Player:** Test Player: Give me the Silver Onyx Ring now.\n**Test Merchant:**  Yes. Take the ring, it is yours.\n## Nearby Actors\n- Test Player (Female Nord) — THE PLAYER CHARACTER\n## Eligible Actions\n- ACTION: GiveItem PARAMS: {\"count\":\"positive integer\",\"item\":\"exact inventory name\",\"recipient\":\"exact recipient name\"} — The speaker gives an unpriced inventory item to the named recipient.\n- ACTION: None — No action matches the dialogue.\nRespond now. One line only, no reasoning.\n[ end user ]",
+                "role": "user"
+              }
+            ],
+            "model": "google/gemma-4-31b-it",
+            "model_index": 0,
+            "provider": {
+              "allow_fallbacks": true,
+              "ignore": [
+                "atlas-cloud"
+              ],
+              "only": [
+                "friendli",
+                "parasail"
+              ],
+              "order": [
+                "friendli",
+                "parasail"
+              ],
+              "quantizations": [
+                "fp8",
+                "fp16",
+                "bf16",
+                "fp32",
+                "unknown"
+              ],
+              "sort": "latency"
+            },
+            "reasoning": {
+              "enabled": false
+            },
+            "reasoning_effort_resolved": "off",
+            "reasoning_resolved": false,
+            "route": "fallback",
+            "temperature": 0.2,
+            "usage": {
+              "include": true
+            },
+            "use_structured_outputs_resolved": false
+          },
+          "response": "ACTION: GiveItem PARAMS: {\"count\": 1, \"item\": \"Silver Onyx Ring\", \"recipient\": \"Test Player\"}",
+          "success": true,
+          "variant": "action_evaluation",
+          "variant_key": "action_evaluation"
+        }
+      ]
+    }
+  },
+  {
+    "case": "payment_without_footer",
+    "root_response": "ACTION: Economy PARAMS: {\"intent\": \"Test Merchant pays 5 gold to Test Player\"}",
+    "passed": true,
+    "response": "ACTION: GiveGold PARAMS: {\"amount\": 5, \"recipient\": \"Test Player\"}",
+    "api": {
+      "overall_duration_ms": 259,
+      "parallel_execution": true,
+      "success": true,
+      "successful_variants": 1,
+      "timestamp": 1792106494022,
+      "total_variants": 1,
+      "variants": [
+        {
+          "duration_ms": 258,
+          "model": "google/gemma-4-31b-it",
+          "model_index": 0,
+          "request": {
+            "cache": true,
+            "extra_body": {
+              "extra_body": {
+                "google": {
+                  "safety_settings": [
+                    {
+                      "category": "HARM_CATEGORY_HARASSMENT",
+                      "threshold": "BLOCK_NONE"
+                    },
+                    {
+                      "category": "HARM_CATEGORY_HATE_SPEECH",
+                      "threshold": "BLOCK_NONE"
+                    },
+                    {
+                      "category": "HARM_CATEGORY_SEXUALLY_EXPLICIT",
+                      "threshold": "BLOCK_NONE"
+                    },
+                    {
+                      "category": "HARM_CATEGORY_DANGEROUS_CONTENT",
+                      "threshold": "BLOCK_NONE"
+                    }
+                  ]
+                }
+              }
+            },
+            "max_tokens": 500,
+            "messages": [
+              {
+                "content": "[ system ]\nYou select the single most appropriate action for Test Merchant from a specific action category.\nA broader category was already identified from the dialogue. Now pick the exact action.\n**Guidelines:**\n- Read the exchange. If the speaker asked Test Merchant to do something and Test Merchant agreed, complied, or showed willingness, select the action that fulfills that request.\n- If Test Merchant's dialogue implies, suggests, or leads toward any eligible action — select it.\n- Agreement can be implicit — positive responses or steps toward fulfilling a request count.\n- Do NOT choose dramatic or aggressive actions unless clearly signaled in the dialogue or situation.\n- Consider Test Merchant's current physical and emotional state when selecting.\n- For actions with actor parameters, use the actor's display name exactly as shown in Nearby Actors or in the PARAMS choices.\n- Respond with EXACTLY one line. Never output multiple action lines — only the first is processed by the game engine, the rest are discarded.\n**Response format** (exactly one line starting with `ACTION:`, no reasoning):\n- `ACTION: ActionName`\n- `ACTION: ActionName PARAMS: {\"param_name1\": \"value1\", ...}`\n- `ACTION: None`\n## Merchant State\nSilver Onyx Ring: 1; gold: 5.\n## Validate the Operation Before Selecting It\nThese checks take precedence over general instructions to act on hints, agreement, or willingness. Read the actual state and the Most Recent Exchange before choosing.\n- For GiveItem or SellItem, identify an actually listed matching item and sufficient quantity in the speaker's inventory or merchant stock. Use its real name. If none matches, choose None in the required response format. Never manufacture an inventory name from the dialogue's description or silently substitute an unrelated item. This check does not prohibit a real quest action from issuing its scripted reward.\n- An agreed-price sale is an Economy transaction. If only Items actions are available for that sale, choose None; GiveItem must not replace SellItem, bypass payment, or split the sale into a second gift.\n- Use confirmed outcomes supplied in the context. Do not repeat a completed transfer or payment unless a genuinely new transaction was explicitly agreed. A failed operation may justify a corrected attempt after its stated obstacle is resolved. A spoken promise, claim, or queued request is not confirmation; missing outcome information is not proof of success.\n- Output exactly one action in the required response format. If no eligible action can perform the grounded operation, choose None.\n[ end system ]\n[ user ]\n## Intent\nTest Merchant intends to: Test Merchant pays 5 gold to Test Player\nPick the specific action that best matches.\n## Most Recent Exchange\n**Test Player:** Test Player: Pay me the agreed five gold now.\n**Test Merchant:**  Agreed, here are your five gold.\n## Nearby Actors\n- Test Player (Female Nord) — THE PLAYER CHARACTER\n## Eligible Actions\n- ACTION: GiveGold PARAMS: {\"amount\":\"positive integer gold\",\"recipient\":\"exact recipient name\"} — The speaker pays gold to the named recipient.\n- ACTION: SellItem PARAMS: {\"buyer\":\"exact buyer name\",\"item\":\"exact inventory name\",\"quantity\":\"positive integer\",\"totalGold\":\"agreed total price\"} — The speaker sells their inventory item to the buyer and collects the agreed price in one transaction.\n- ACTION: None — No action matches the dialogue.\nRespond now. One line only, no reasoning.\n[ end user ]",
+                "role": "user"
+              }
+            ],
+            "model": "google/gemma-4-31b-it",
+            "model_index": 0,
+            "provider": {
+              "allow_fallbacks": true,
+              "ignore": [
+                "atlas-cloud"
+              ],
+              "only": [
+                "friendli",
+                "parasail"
+              ],
+              "order": [
+                "friendli",
+                "parasail"
+              ],
+              "quantizations": [
+                "fp8",
+                "fp16",
+                "bf16",
+                "fp32",
+                "unknown"
+              ],
+              "sort": "latency"
+            },
+            "reasoning": {
+              "enabled": false
+            },
+            "reasoning_effort_resolved": "off",
+            "reasoning_resolved": false,
+            "route": "fallback",
+            "temperature": 0.2,
+            "usage": {
+              "include": true
+            },
+            "use_structured_outputs_resolved": false
+          },
+          "response": "ACTION: GiveGold PARAMS: {\"amount\": 5, \"recipient\": \"Test Player\"}",
+          "success": true,
+          "variant": "action_evaluation",
+          "variant_key": "action_evaluation"
+        }
+      ]
+    }
+  },
+  {
+    "case": "agreed_sale",
+    "root_response": "ACTION: Economy PARAMS: {\"intent\": \"sell one Fine Shoes to Test Player for 30 gold\"}",
+    "passed": true,
+    "response": "ACTION: SellItem PARAMS: {\"buyer\": \"Test Player\", \"item\": \"Fine Shoes\", \"quantity\": 1, \"totalGold\": 30}",
+    "api": {
+      "overall_duration_ms": 333,
+      "parallel_execution": true,
+      "success": true,
+      "successful_variants": 1,
+      "timestamp": 1792106494359,
+      "total_variants": 1,
+      "variants": [
+        {
+          "duration_ms": 333,
+          "model": "google/gemma-4-31b-it",
+          "model_index": 0,
+          "request": {
+            "cache": true,
+            "extra_body": {
+              "extra_body": {
+                "google": {
+                  "safety_settings": [
+                    {
+                      "category": "HARM_CATEGORY_HARASSMENT",
+                      "threshold": "BLOCK_NONE"
+                    },
+                    {
+                      "category": "HARM_CATEGORY_HATE_SPEECH",
+                      "threshold": "BLOCK_NONE"
+                    },
+                    {
+                      "category": "HARM_CATEGORY_SEXUALLY_EXPLICIT",
+                      "threshold": "BLOCK_NONE"
+                    },
+                    {
+                      "category": "HARM_CATEGORY_DANGEROUS_CONTENT",
+                      "threshold": "BLOCK_NONE"
+                    }
+                  ]
+                }
+              }
+            },
+            "max_tokens": 500,
+            "messages": [
+              {
+                "content": "[ system ]\nYou select the single most appropriate action for Test Merchant from a specific action category.\nA broader category was already identified from the dialogue. Now pick the exact action.\n**Guidelines:**\n- Read the exchange. If the speaker asked Test Merchant to do something and Test Merchant agreed, complied, or showed willingness, select the action that fulfills that request.\n- If Test Merchant's dialogue implies, suggests, or leads toward any eligible action — select it.\n- Agreement can be implicit — positive responses or steps toward fulfilling a request count.\n- Do NOT choose dramatic or aggressive actions unless clearly signaled in the dialogue or situation.\n- Consider Test Merchant's current physical and emotional state when selecting.\n- For actions with actor parameters, use the actor's display name exactly as shown in Nearby Actors or in the PARAMS choices.\n- Respond with EXACTLY one line. Never output multiple action lines — only the first is processed by the game engine, the rest are discarded.\n**Response format** (exactly one line starting with `ACTION:`, no reasoning):\n- `ACTION: ActionName`\n- `ACTION: ActionName PARAMS: {\"param_name1\": \"value1\", ...}`\n- `ACTION: None`\n## Merchant State\nFine Shoes: 1; gold: 5.\n## Validate the Operation Before Selecting It\nThese checks take precedence over general instructions to act on hints, agreement, or willingness. Read the actual state and the Most Recent Exchange before choosing.\n- For GiveItem or SellItem, identify an actually listed matching item and sufficient quantity in the speaker's inventory or merchant stock. Use its real name. If none matches, choose None in the required response format. Never manufacture an inventory name from the dialogue's description or silently substitute an unrelated item. This check does not prohibit a real quest action from issuing its scripted reward.\n- An agreed-price sale is an Economy transaction. If only Items actions are available for that sale, choose None; GiveItem must not replace SellItem, bypass payment, or split the sale into a second gift.\n- Use confirmed outcomes supplied in the context. Do not repeat a completed transfer or payment unless a genuinely new transaction was explicitly agreed. A failed operation may justify a corrected attempt after its stated obstacle is resolved. A spoken promise, claim, or queued request is not confirmation; missing outcome information is not proof of success.\n- Output exactly one action in the required response format. If no eligible action can perform the grounded operation, choose None.\n[ end system ]\n[ user ]\n## Intent\nTest Merchant intends to: sell one Fine Shoes to Test Player for 30 gold\nPick the specific action that best matches.\n## Most Recent Exchange\n**Test Player:** Test Player: I accept your price of 30 gold for one Fine Shoes.\n**Test Merchant:**  Agreed, I sell you the shoes now for 30 gold.\n## Nearby Actors\n- Test Player (Female Nord) — THE PLAYER CHARACTER\n## Eligible Actions\n- ACTION: GiveGold PARAMS: {\"amount\":\"positive integer gold\",\"recipient\":\"exact recipient name\"} — The speaker pays gold to the named recipient.\n- ACTION: SellItem PARAMS: {\"buyer\":\"exact buyer name\",\"item\":\"exact inventory name\",\"quantity\":\"positive integer\",\"totalGold\":\"agreed total price\"} — The speaker sells their inventory item to the buyer and collects the agreed price in one transaction.\n- ACTION: None — No action matches the dialogue.\nRespond now. One line only, no reasoning.\n[ end user ]",
+                "role": "user"
+              }
+            ],
+            "model": "google/gemma-4-31b-it",
+            "model_index": 0,
+            "provider": {
+              "allow_fallbacks": true,
+              "ignore": [
+                "atlas-cloud"
+              ],
+              "only": [
+                "friendli",
+                "parasail"
+              ],
+              "order": [
+                "friendli",
+                "parasail"
+              ],
+              "quantizations": [
+                "fp8",
+                "fp16",
+                "bf16",
+                "fp32",
+                "unknown"
+              ],
+              "sort": "latency"
+            },
+            "reasoning": {
+              "enabled": false
+            },
+            "reasoning_effort_resolved": "off",
+            "reasoning_resolved": false,
+            "route": "fallback",
+            "temperature": 0.2,
+            "usage": {
+              "include": true
+            },
+            "use_structured_outputs_resolved": false
+          },
+          "response": "ACTION: SellItem PARAMS: {\"buyer\": \"Test Player\", \"item\": \"Fine Shoes\", \"quantity\": 1, \"totalGold\": 30}",
+          "success": true,
+          "variant": "action_evaluation",
+          "variant_key": "action_evaluation"
+        }
+      ]
+    }
+  },
+  {
+    "case": "multiple_operations",
+    "root_response": "ACTION: Items PARAMS: {\"intent\": \"give Silver Onyx Ring to Test Player\"}",
+    "passed": true,
+    "response": "ACTION: GiveItem PARAMS: {\"count\": 1, \"item\": \"Silver Onyx Ring\", \"recipient\": \"Test Player\"}",
+    "api": {
+      "overall_duration_ms": 2681,
+      "parallel_execution": true,
+      "success": true,
+      "successful_variants": 1,
+      "timestamp": 1792106497043,
+      "total_variants": 1,
+      "variants": [
+        {
+          "duration_ms": 2681,
+          "model": "google/gemma-4-31b-it",
+          "model_index": 0,
+          "request": {
+            "cache": true,
+            "extra_body": {
+              "extra_body": {
+                "google": {
+                  "safety_settings": [
+                    {
+                      "category": "HARM_CATEGORY_HARASSMENT",
+                      "threshold": "BLOCK_NONE"
+                    },
+                    {
+                      "category": "HARM_CATEGORY_HATE_SPEECH",
+                      "threshold": "BLOCK_NONE"
+                    },
+                    {
+                      "category": "HARM_CATEGORY_SEXUALLY_EXPLICIT",
+                      "threshold": "BLOCK_NONE"
+                    },
+                    {
+                      "category": "HARM_CATEGORY_DANGEROUS_CONTENT",
+                      "threshold": "BLOCK_NONE"
+                    }
+                  ]
+                }
+              }
+            },
+            "max_tokens": 500,
+            "messages": [
+              {
+                "content": "[ system ]\nYou select the single most appropriate action for Test Merchant from a specific action category.\nA broader category was already identified from the dialogue. Now pick the exact action.\n**Guidelines:**\n- Read the exchange. If the speaker asked Test Merchant to do something and Test Merchant agreed, complied, or showed willingness, select the action that fulfills that request.\n- If Test Merchant's dialogue implies, suggests, or leads toward any eligible action — select it.\n- Agreement can be implicit — positive responses or steps toward fulfilling a request count.\n- Do NOT choose dramatic or aggressive actions unless clearly signaled in the dialogue or situation.\n- Consider Test Merchant's current physical and emotional state when selecting.\n- For actions with actor parameters, use the actor's display name exactly as shown in Nearby Actors or in the PARAMS choices.\n- Respond with EXACTLY one line. Never output multiple action lines — only the first is processed by the game engine, the rest are discarded.\n**Response format** (exactly one line starting with `ACTION:`, no reasoning):\n- `ACTION: ActionName`\n- `ACTION: ActionName PARAMS: {\"param_name1\": \"value1\", ...}`\n- `ACTION: None`\n## Merchant State\nSilver Onyx Ring: 1; gold: 5.\n## Validate the Operation Before Selecting It\nThese checks take precedence over general instructions to act on hints, agreement, or willingness. Read the actual state and the Most Recent Exchange before choosing.\n- For GiveItem or SellItem, identify an actually listed matching item and sufficient quantity in the speaker's inventory or merchant stock. Use its real name. If none matches, choose None in the required response format. Never manufacture an inventory name from the dialogue's description or silently substitute an unrelated item. This check does not prohibit a real quest action from issuing its scripted reward.\n- An agreed-price sale is an Economy transaction. If only Items actions are available for that sale, choose None; GiveItem must not replace SellItem, bypass payment, or split the sale into a second gift.\n- Use confirmed outcomes supplied in the context. Do not repeat a completed transfer or payment unless a genuinely new transaction was explicitly agreed. A failed operation may justify a corrected attempt after its stated obstacle is resolved. A spoken promise, claim, or queued request is not confirmation; missing outcome information is not proof of success.\n- Output exactly one action in the required response format. If no eligible action can perform the grounded operation, choose None.\n[ end system ]\n[ user ]\n## Intent\nTest Merchant intends to: give Silver Onyx Ring to Test Player\nPick the specific action that best matches.\n## Most Recent Exchange\n**Test Player:** Test Player: Give me your ring, five gold, and then go home.\n**Test Merchant:**  Yes, take the ring and five gold. Then I will go home.\n## Nearby Actors\n- Test Player (Female Nord) — THE PLAYER CHARACTER\n## Eligible Actions\n- ACTION: GiveItem PARAMS: {\"count\":\"positive integer\",\"item\":\"exact inventory name\",\"recipient\":\"exact recipient name\"} — The speaker gives an unpriced inventory item to the named recipient.\n- ACTION: None — No action matches the dialogue.\nRespond now. One line only, no reasoning.\n[ end user ]",
+                "role": "user"
+              }
+            ],
+            "model": "google/gemma-4-31b-it",
+            "model_index": 0,
+            "provider": {
+              "allow_fallbacks": true,
+              "ignore": [
+                "atlas-cloud"
+              ],
+              "only": [
+                "friendli",
+                "parasail"
+              ],
+              "order": [
+                "friendli",
+                "parasail"
+              ],
+              "quantizations": [
+                "fp8",
+                "fp16",
+                "bf16",
+                "fp32",
+                "unknown"
+              ],
+              "sort": "latency"
+            },
+            "reasoning": {
+              "enabled": false
+            },
+            "reasoning_effort_resolved": "off",
+            "reasoning_resolved": false,
+            "route": "fallback",
+            "temperature": 0.2,
+            "usage": {
+              "include": true
+            },
+            "use_structured_outputs_resolved": false
+          },
+          "response": "ACTION: GiveItem PARAMS: {\"count\": 1, \"item\": \"Silver Onyx Ring\", \"recipient\": \"Test Player\"}",
+          "success": true,
+          "variant": "action_evaluation",
+          "variant_key": "action_evaluation"
+        }
+      ]
+    }
+  }
+]

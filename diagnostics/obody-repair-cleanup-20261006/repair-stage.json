@@ -1,0 +1,946 @@
+{
+  "mod_name": "Local - OBody Outfit Repairs 20261006",
+  "generated_projects": [
+    {
+      "index": 105,
+      "name": "Sorceress Attire  3BA",
+      "family": "female",
+      "provider": "Sorceress Attire",
+      "output": "meshes/ufok/tsorceress/body",
+      "weights": true,
+      "tri_shapes": 13
+    },
+    {
+      "index": 106,
+      "name": "Sorceress Boots  3BA",
+      "family": "female",
+      "provider": "Sorceress Attire",
+      "output": "meshes/ufok/tsorceress/feet",
+      "weights": true,
+      "tri_shapes": 7
+    },
+    {
+      "index": 107,
+      "name": "Sorceress Gloves  3BA",
+      "family": "female",
+      "provider": "Sorceress Attire",
+      "output": "meshes/ufok/tsorceress/hands",
+      "weights": true,
+      "tri_shapes": 2
+    },
+    {
+      "index": 108,
+      "name": "Sorceress Hood  3BA",
+      "family": "female",
+      "provider": "Sorceress Attire",
+      "output": "meshes/ufok/tsorceress/head",
+      "weights": true,
+      "tri_shapes": 2
+    },
+    {
+      "index": 109,
+      "name": "Sorceress Hood  3BA (no hair)",
+      "family": "female",
+      "provider": "Sorceress Attire",
+      "output": "meshes/ufok/tsorceress/headb",
+      "weights": true,
+      "tri_shapes": 2
+    },
+    {
+      "index": 110,
+      "name": "Sorceress Skirt 3BA",
+      "family": "female",
+      "provider": "Sorceress Attire",
+      "output": "meshes/ufok/tsorceress/skirt",
+      "weights": true,
+      "tri_shapes": 2
+    },
+    {
+      "index": 125,
+      "name": "OStim Calyps Strap-On 3BA",
+      "family": "female",
+      "provider": "Twisted - OStim Standalone - Advanced Adult Animation Framework",
+      "output": "meshes/ostim/strapons/calypsstrapon",
+      "weights": true,
+      "tri_shapes": 3
+    },
+    {
+      "index": 126,
+      "name": "OStim Calyps Strap-On Simple 3BA",
+      "family": "female",
+      "provider": "Twisted - OStim Standalone - Advanced Adult Animation Framework",
+      "output": "meshes/ostim/strapons/calypsstraponsimple",
+      "weights": true,
+      "tri_shapes": 2
+    },
+    {
+      "index": 129,
+      "name": "[Amsedillir]_Triumphal_Coat_3BA",
+      "family": "female",
+      "provider": "Twisted - Amsedillir - Triumphal 3BA-BHUNP-UBE",
+      "output": "meshes/[amsedillir]/[amsedillir]triumphal/armor/[amsedillir]_triumphal_coat",
+      "weights": true,
+      "tri_shapes": 6
+    },
+    {
+      "index": 130,
+      "name": "[Amsedillir]_Triumphal_Necklace_3BA",
+      "family": "female",
+      "provider": "Twisted - Amsedillir - Triumphal 3BA-BHUNP-UBE",
+      "output": "meshes/[amsedillir]/[amsedillir]triumphal/armor/[amsedillir]_triumphal_necklace",
+      "weights": true,
+      "tri_shapes": 3
+    },
+    {
+      "index": 131,
+      "name": "[Amsedillir]_Triumphal_HipDetal_3BA",
+      "family": "female",
+      "provider": "Twisted - Amsedillir - Triumphal 3BA-BHUNP-UBE",
+      "output": "meshes/[amsedillir]/[amsedillir]triumphal/armor/[amsedillir]_triumphal_hipdetal",
+      "weights": true,
+      "tri_shapes": 3
+    },
+    {
+      "index": 132,
+      "name": "[Amsedillir]_Triumphal_Torso_3BA",
+      "family": "female",
+      "provider": "Twisted - Amsedillir - Triumphal 3BA-BHUNP-UBE",
+      "output": "meshes/[amsedillir]/[amsedillir]triumphal/armor/[amsedillir]_triumphal_torso2",
+      "weights": true,
+      "tri_shapes": 5
+    },
+    {
+      "index": 133,
+      "name": "[Amsedillir]_Triumphal_Boots_3BA",
+      "family": "female",
+      "provider": "Twisted - Amsedillir - Triumphal 3BA-BHUNP-UBE",
+      "output": "meshes/[amsedillir]/[amsedillir]triumphal/armor/[amsedillir]_triumphal_trousers",
+      "weights": true,
+      "tri_shapes": 2
+    },
+    {
+      "index": 134,
+      "name": "[Amsedillir]_Triumphal_Hairpin_3BA",
+      "family": "female",
+      "provider": "Twisted - Amsedillir - Triumphal 3BA-BHUNP-UBE",
+      "output": "meshes/[amsedillir]/[amsedillir]triumphal/armor/[amsedillir]_triumphal_hairpin",
+      "weights": true,
+      "tri_shapes": 0
+    },
+    {
+      "index": 135,
+      "name": "[Amsedillir]_Triumphal_Shoes_3BA",
+      "family": "female",
+      "provider": "Twisted - Amsedillir - Triumphal 3BA-BHUNP-UBE",
+      "output": "meshes/[amsedillir]/[amsedillir]triumphal/armor/[amsedillir]_triumphal_shoes",
+      "weights": true,
+      "tri_shapes": 4
+    },
+    {
+      "index": 136,
+      "name": "[Amsedillir]_Triumphal_CoatC_3BA",
+      "family": "female",
+      "provider": "Twisted - Amsedillir - Triumphal 3BA-BHUNP-UBE",
+      "output": "meshes/[amsedillir]/[amsedillir]triumphal/armor/[amsedillir]_triumphal_coatc",
+      "weights": true,
+      "tri_shapes": 7
+    },
+    {
+      "index": 949,
+      "name": "Arcane Mage Armour 3BA - Hands",
+      "family": "male",
+      "provider": "Arcane Mage Armor - 3BA",
+      "output": "meshes/armor/elvish/hands",
+      "weights": true,
+      "tri_shapes": 0
+    },
+    {
+      "index": 1574,
+      "name": "Falka Armor Gloves S",
+      "family": "female",
+      "provider": "Kozakowy's Falka Armor - 3BA",
+      "output": "meshes/clothes/kozakowy/falkaarmor/glovess",
+      "weights": true,
+      "tri_shapes": 0
+    },
+    {
+      "index": 3925,
+      "name": "CBBE SE - [COCO] TS Neck [3BA]",
+      "family": "female",
+      "provider": "Twisted - [COCO] Twilight Sorceress",
+      "output": "meshes/coco_cloths/twilight sorceress/ts_neck",
+      "weights": true,
+      "tri_shapes": 0
+    }
+  ],
+  "fixed_accessory_exceptions": [
+    "[Amsedillir]_Triumphal_Hairpin_3BA",
+    "Arcane Mage Armour 3BA - Hands",
+    "Falka Armor Gloves S",
+    "CBBE SE - [COCO] TS Neck [3BA]"
+  ],
+  "nif_link_repairs": [
+    {
+      "relative": "meshes/kziitd/semen_anal_0.nif",
+      "source": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\Twisted - Nolvus OBody BodySlide Output\\meshes\\Kziitd\\semen_anal_0.nif",
+      "source_sha256": "7eddccb5483366e9f8342d48b680e263cae18a1b22d4ee94bfb3bfb482e28a2a",
+      "new_sha256": "f8ed960767c07a93e576bbc012398db112f467c77bed96b76b5f983e56c71aa6",
+      "edits": [
+        {
+          "old": "Kziitd\\cloth\\semen.tri",
+          "new": "kziitd\\semen_anal.tri"
+        },
+        {
+          "old": "Kziitd\\semen_anal.tri",
+          "new": "kziitd\\semen_anal.tri"
+        }
+      ],
+      "geometry_blocks_unchanged": true
+    },
+    {
+      "relative": "meshes/kziitd/semen_anal_1.nif",
+      "source": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\Twisted - Nolvus OBody BodySlide Output\\meshes\\Kziitd\\semen_anal_1.nif",
+      "source_sha256": "7eddccb5483366e9f8342d48b680e263cae18a1b22d4ee94bfb3bfb482e28a2a",
+      "new_sha256": "f8ed960767c07a93e576bbc012398db112f467c77bed96b76b5f983e56c71aa6",
+      "edits": [
+        {
+          "old": "Kziitd\\cloth\\semen.tri",
+          "new": "kziitd\\semen_anal.tri"
+        },
+        {
+          "old": "Kziitd\\semen_anal.tri",
+          "new": "kziitd\\semen_anal.tri"
+        }
+      ],
+      "geometry_blocks_unchanged": true
+    },
+    {
+      "relative": "meshes/armor/errantknight/knighterrantmain1fp_0.nif",
+      "source": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\Twisted - Nolvus OBody BodySlide Output\\meshes\\armor\\errantknight\\knighterrantmain1fp_0.nif",
+      "source_sha256": "54abaf17679f2b4b70bad57f443d818748116b1e31b76b1e08c9adcc6f11fe16",
+      "new_sha256": "391feb768e18035dabcec959b5500119c3c75deb39751387890ebb3f5e4cb3c2",
+      "edits": [
+        {
+          "old": "armor\\knighterrant\\knighterrantmain1fp.tri",
+          "new": "armor\\errantknight\\knighterrantmain1fp.tri"
+        }
+      ],
+      "geometry_blocks_unchanged": true
+    },
+    {
+      "relative": "meshes/armor/errantknight/knighterrantmain1fp_1.nif",
+      "source": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\Twisted - Nolvus OBody BodySlide Output\\meshes\\armor\\errantknight\\knighterrantmain1fp_1.nif",
+      "source_sha256": "a9fe34a676e6be15778983d55b6fe1303fcb996089d35ebbee0fa0a3ea207a8a",
+      "new_sha256": "fd08168e9f4ef20d0eaeb86cbe5d6d7364dd86ad9ec60b9b479d956073659e95",
+      "edits": [
+        {
+          "old": "armor\\knighterrant\\knighterrantmain1fp.tri",
+          "new": "armor\\errantknight\\knighterrantmain1fp.tri"
+        }
+      ],
+      "geometry_blocks_unchanged": true
+    },
+    {
+      "relative": "meshes/armor/errantknight/knighterrantboot_0.nif",
+      "source": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\Twisted - Nolvus OBody BodySlide Output\\meshes\\armor\\errantknight\\knighterrantboot_0.nif",
+      "source_sha256": "ebd5f4255e0863b67eef068ba97d0de4b6b28e3754e9a92e9133d5ba15de4215",
+      "new_sha256": "fc1b6dd4d870cc31ab22542aa47aa070449764a4a171fa8af5653fc28bc6df57",
+      "edits": [
+        {
+          "old": "armor\\knighterrant\\knighterrantboot.tri",
+          "new": "armor\\errantknight\\knighterrantboot.tri"
+        }
+      ],
+      "geometry_blocks_unchanged": true
+    },
+    {
+      "relative": "meshes/armor/errantknight/knighterrantboot_1.nif",
+      "source": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\Twisted - Nolvus OBody BodySlide Output\\meshes\\armor\\errantknight\\knighterrantboot_1.nif",
+      "source_sha256": "d543a6bb2ea149a4c7760dcc3cf3b055d6f44904733fe3454ccaca7db2c169bf",
+      "new_sha256": "80ec44a29b13b1ed5dfeced686a206b1ac74f5beb01fa51c8539f46b632c8067",
+      "edits": [
+        {
+          "old": "armor\\knighterrant\\knighterrantboot.tri",
+          "new": "armor\\errantknight\\knighterrantboot.tri"
+        }
+      ],
+      "geometry_blocks_unchanged": true
+    },
+    {
+      "relative": "meshes/armor/errantknight/knighterrantgauntlet_0.nif",
+      "source": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\Twisted - Nolvus OBody BodySlide Output\\meshes\\armor\\errantknight\\knighterrantgauntlet_0.nif",
+      "source_sha256": "0f99b039117d29aca270ca2ee1243cbe4115f5d88d126252ea80c7aae45212ba",
+      "new_sha256": "a8944053f22ea58edfe04f60c8d328a052c93aade93b7194458376c5f3f12eb2",
+      "edits": [
+        {
+          "old": "armor\\knighterrant\\knighterrantgauntlet.tri",
+          "new": "armor\\errantknight\\knighterrantgauntlet.tri"
+        }
+      ],
+      "geometry_blocks_unchanged": true
+    },
+    {
+      "relative": "meshes/armor/errantknight/knighterrantgauntlet_1.nif",
+      "source": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\Twisted - Nolvus OBody BodySlide Output\\meshes\\armor\\errantknight\\knighterrantgauntlet_1.nif",
+      "source_sha256": "308ba656985ca85471e20a92fd11fc96a33a22c2d77cb38a016c75a479edf172",
+      "new_sha256": "e58ac90067fd398470b01dc219f31d4fdb39ea97dbb5ed36acaf0c7aa94c0fe0",
+      "edits": [
+        {
+          "old": "armor\\knighterrant\\knighterrantgauntlet.tri",
+          "new": "armor\\errantknight\\knighterrantgauntlet.tri"
+        }
+      ],
+      "geometry_blocks_unchanged": true
+    },
+    {
+      "relative": "meshes/armor/errantknight/knighterrantsatchel_0.nif",
+      "source": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\Twisted - Nolvus OBody BodySlide Output\\meshes\\armor\\errantknight\\knighterrantsatchel_0.nif",
+      "source_sha256": "3fd0650666c0773f5c36b8b9349d3010978ee4f6aaf9aed1cd4ce7b1387f4d54",
+      "new_sha256": "2f8da94e1c25919e66b1e4b15fad4b6aa2495ea522bc6ef243c61df83f374ab9",
+      "edits": [
+        {
+          "old": "armor\\knighterrant\\knighterrantsatchel.tri",
+          "new": "armor\\errantknight\\knighterrantsatchel.tri"
+        }
+      ],
+      "geometry_blocks_unchanged": true
+    },
+    {
+      "relative": "meshes/armor/errantknight/knighterrantsatchel_1.nif",
+      "source": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\Twisted - Nolvus OBody BodySlide Output\\meshes\\armor\\errantknight\\knighterrantsatchel_1.nif",
+      "source_sha256": "8e2236a64e93e4b43e8a3151e9519afd3b205bd470e48fa39c2244edd34727a4",
+      "new_sha256": "4eb2f399a1325163dff44abcabb05523242de364d0cd0ee0b2c1b1d3d72513b0",
+      "edits": [
+        {
+          "old": "armor\\knighterrant\\knighterrantsatchel.tri",
+          "new": "armor\\errantknight\\knighterrantsatchel.tri"
+        }
+      ],
+      "geometry_blocks_unchanged": true
+    },
+    {
+      "relative": "meshes/armor/errantknight/knighterrantbootf_0.nif",
+      "source": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\Twisted - Nolvus OBody BodySlide Output\\meshes\\armor\\errantknight\\knighterrantbootf_0.nif",
+      "source_sha256": "f97690b1148899ebfad191793889c5d0d6b4d6db998b70c25aff1d04a228be4f",
+      "new_sha256": "09df3bfff35754259d5cd3b730dc71ad38ea556b2c17e0a9dcb79d5d5d83749e",
+      "edits": [
+        {
+          "old": "armor\\knighterrant\\knighterrantbootf.tri",
+          "new": "armor\\errantknight\\knighterrantbootf.tri"
+        }
+      ],
+      "geometry_blocks_unchanged": true
+    },
+    {
+      "relative": "meshes/armor/errantknight/knighterrantbootf_1.nif",
+      "source": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\Twisted - Nolvus OBody BodySlide Output\\meshes\\armor\\errantknight\\knighterrantbootf_1.nif",
+      "source_sha256": "1a0d59c1cea61b1fd98e1d04e8e9018aadcd81c61e46079540ccd43ea6d38d84",
+      "new_sha256": "7fb47409e4f256414814a01b055afc738e73910fd541e85f91d3ff877c6aaef5",
+      "edits": [
+        {
+          "old": "armor\\knighterrant\\knighterrantbootf.tri",
+          "new": "armor\\errantknight\\knighterrantbootf.tri"
+        }
+      ],
+      "geometry_blocks_unchanged": true
+    },
+    {
+      "relative": "meshes/armor/errantknight/knighterrantmainf_0.nif",
+      "source": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\Twisted - Nolvus OBody BodySlide Output\\meshes\\armor\\errantknight\\knighterrantmainf_0.nif",
+      "source_sha256": "7d45285afdb90ef0bc5d3d2f27c0778c4a41af38bc13fff8faa482bba13aa1b4",
+      "new_sha256": "2b4b07a30d9c9c852515bb11e906ecfdf6162c519261c731a647a80894819a6c",
+      "edits": [
+        {
+          "old": "armor\\knighterrant\\knighterrantmainf2.tri",
+          "new": "armor\\errantknight\\knighterrantmainf.tri"
+        }
+      ],
+      "geometry_blocks_unchanged": true
+    },
+    {
+      "relative": "meshes/armor/errantknight/knighterrantmainf_1.nif",
+      "source": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\Twisted - Nolvus OBody BodySlide Output\\meshes\\armor\\errantknight\\knighterrantmainf_1.nif",
+      "source_sha256": "1cb9a582cf7616c783a8f4e6028c54eeeb42e11318be78849dc7be770ab8d803",
+      "new_sha256": "4f5a8fcf2155964453ac000945255721f56bce18f11e6440fa8b9cbaa066a9c7",
+      "edits": [
+        {
+          "old": "armor\\knighterrant\\knighterrantmainf2.tri",
+          "new": "armor\\errantknight\\knighterrantmainf.tri"
+        }
+      ],
+      "geometry_blocks_unchanged": true
+    },
+    {
+      "relative": "meshes/armor/errantknight/knighterrantsatchelf_0.nif",
+      "source": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\Twisted - Nolvus OBody BodySlide Output\\meshes\\armor\\errantknight\\knighterrantsatchelf_0.nif",
+      "source_sha256": "0a37d322b43b7c5faa65301e039b27e1fee8d607ee7e9b65c40705660d7b88cc",
+      "new_sha256": "ec8abc1f7656fa26101b1d101ffef1401b751dfd1a1155dddd54c17b6c27d94f",
+      "edits": [
+        {
+          "old": "armor\\knighterrant\\knighterrantsatchelf.tri",
+          "new": "armor\\errantknight\\knighterrantsatchelf.tri"
+        }
+      ],
+      "geometry_blocks_unchanged": true
+    },
+    {
+      "relative": "meshes/armor/errantknight/knighterrantsatchelf_1.nif",
+      "source": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\Twisted - Nolvus OBody BodySlide Output\\meshes\\armor\\errantknight\\knighterrantsatchelf_1.nif",
+      "source_sha256": "0a37d322b43b7c5faa65301e039b27e1fee8d607ee7e9b65c40705660d7b88cc",
+      "new_sha256": "ec8abc1f7656fa26101b1d101ffef1401b751dfd1a1155dddd54c17b6c27d94f",
+      "edits": [
+        {
+          "old": "armor\\knighterrant\\knighterrantsatchelf.tri",
+          "new": "armor\\errantknight\\knighterrantsatchelf.tri"
+        }
+      ],
+      "geometry_blocks_unchanged": true
+    },
+    {
+      "relative": "meshes/armor/errantknight/knighterrantmain1fpf_0.nif",
+      "source": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\Twisted - Nolvus OBody BodySlide Output\\meshes\\armor\\errantknight\\knighterrantmain1fpf_0.nif",
+      "source_sha256": "d13f9548fffbee6177d072bbf0d85f415a92f53ad8cee27bccbae2c82a215ec9",
+      "new_sha256": "5b997a85fa7d78aa8b8df18fd65205332f6fdbfe5bd07fad44e8a499e6b04337",
+      "edits": [
+        {
+          "old": "armor\\knighterrant\\knighterrantmain1fpf.tri",
+          "new": "armor\\errantknight\\knighterrantmain1fpf.tri"
+        }
+      ],
+      "geometry_blocks_unchanged": true
+    },
+    {
+      "relative": "meshes/armor/errantknight/knighterrantmain1fpf_1.nif",
+      "source": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\Twisted - Nolvus OBody BodySlide Output\\meshes\\armor\\errantknight\\knighterrantmain1fpf_1.nif",
+      "source_sha256": "5c8e947729b09459d7a3fe4cd6e977e5f8fe97531b07b1b39dd64dc1ea62408f",
+      "new_sha256": "c5914c1b445da08c02f79812efa98347a710baf1f227ee5fe1605923fac7eed1",
+      "edits": [
+        {
+          "old": "armor\\knighterrant\\knighterrantmain1fpf.tri",
+          "new": "armor\\errantknight\\knighterrantmain1fpf.tri"
+        }
+      ],
+      "geometry_blocks_unchanged": true
+    },
+    {
+      "relative": "meshes/armor/errantknight/knighterrantgauntletf_0.nif",
+      "source": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\Twisted - Nolvus OBody BodySlide Output\\meshes\\armor\\errantknight\\knighterrantgauntletf_0.nif",
+      "source_sha256": "eb28ce142244dfdbeb9f5ec3591ff110cb2132a4318d47ebca786bfe2b1b02a7",
+      "new_sha256": "58f70b3ffb5a984e7154e45fd8b61ed51d159071209fca584a179f774676f75e",
+      "edits": [
+        {
+          "old": "armor\\knighterrant\\knighterrantgauntletf.tri",
+          "new": "armor\\errantknight\\knighterrantgauntletf.tri"
+        }
+      ],
+      "geometry_blocks_unchanged": true
+    },
+    {
+      "relative": "meshes/armor/errantknight/knighterrantgauntletf_1.nif",
+      "source": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\Twisted - Nolvus OBody BodySlide Output\\meshes\\armor\\errantknight\\knighterrantgauntletf_1.nif",
+      "source_sha256": "23355b114fd4ddd28629ddeb3f0978f56aabb5d7b6ceb6cb4ab631014de09fb9",
+      "new_sha256": "f6fa82323c19c68406c4f1ea013ec79b59bbb167659733ecebd261fa7e1758a7",
+      "edits": [
+        {
+          "old": "armor\\knighterrant\\knighterrantgauntletf.tri",
+          "new": "armor\\errantknight\\knighterrantgauntletf.tri"
+        }
+      ],
+      "geometry_blocks_unchanged": true
+    },
+    {
+      "relative": "meshes/armor/amuletsandrings/ancientnord/ancientnordamulet_0.nif",
+      "source": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\Twisted - Nolvus OBody BodySlide Output\\meshes\\armor\\amuletsandrings\\ancientnord\\ancientnordamulet_0.nif",
+      "source_sha256": "78d5cc20a76880e86540300a8a244b99b1c5d57fd8a138947a1028800248556c",
+      "new_sha256": "64fe143a870357a0d69147f5af62a09fc34b062b2f7ce8fccac18b727a2eabdc",
+      "edits": [
+        {
+          "old": "armor\\amuletsandrings\\akatosh\\ancientnordamulet.tri",
+          "new": "armor\\amuletsandrings\\ancientnord\\ancientnordamulet.tri"
+        }
+      ],
+      "geometry_blocks_unchanged": true
+    },
+    {
+      "relative": "meshes/armor/amuletsandrings/ancientnord/ancientnordamulet_1.nif",
+      "source": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\Twisted - Nolvus OBody BodySlide Output\\meshes\\armor\\amuletsandrings\\ancientnord\\ancientnordamulet_1.nif",
+      "source_sha256": "aed058d48ec9a61a8d15191b5acb1f83ce5bebf7c30bc3fdb170b95511532538",
+      "new_sha256": "bf9db5f7d296000d95612888554e625edadb769c8b34e29aa8a6d28dfd519273",
+      "edits": [
+        {
+          "old": "armor\\amuletsandrings\\akatosh\\ancientnordamulet.tri",
+          "new": "armor\\amuletsandrings\\ancientnord\\ancientnordamulet.tri"
+        }
+      ],
+      "geometry_blocks_unchanged": true
+    },
+    {
+      "relative": "meshes/armor/amuletsandrings/ancientnord/brokenamuletassembled_0.nif",
+      "source": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\Twisted - Nolvus OBody BodySlide Output\\meshes\\armor\\amuletsandrings\\ancientnord\\brokenamuletassembled_0.nif",
+      "source_sha256": "2d75f2bc30bf0527da478fccb985651d62be0db898847411f520f54618bdfdce",
+      "new_sha256": "5e6d9f1103bf43775f1a12838ca78fc0634626fe028f67b570cdf0b15e664127",
+      "edits": [
+        {
+          "old": "armor\\amuletsandrings\\akatosh\\brokenamuletassembled.tri",
+          "new": "armor\\amuletsandrings\\ancientnord\\brokenamuletassembled.tri"
+        }
+      ],
+      "geometry_blocks_unchanged": true
+    },
+    {
+      "relative": "meshes/armor/amuletsandrings/ancientnord/brokenamuletassembled_1.nif",
+      "source": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\Twisted - Nolvus OBody BodySlide Output\\meshes\\armor\\amuletsandrings\\ancientnord\\brokenamuletassembled_1.nif",
+      "source_sha256": "2fd97d13a8e8faff17a5f3e0e4b77b24f563ea7e4b9ebf8a02a7f4c55af90ab0",
+      "new_sha256": "c0fda973468b18618034e7b7e8fefd9287c964c1cd7a437108e703093536ebae",
+      "edits": [
+        {
+          "old": "armor\\amuletsandrings\\akatosh\\brokenamuletassembled.tri",
+          "new": "armor\\amuletsandrings\\ancientnord\\brokenamuletassembled.tri"
+        }
+      ],
+      "geometry_blocks_unchanged": true
+    },
+    {
+      "relative": "meshes/armor/amuletsandrings/ancientnord/brokenamuletbottom_0.nif",
+      "source": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\Twisted - Nolvus OBody BodySlide Output\\meshes\\armor\\amuletsandrings\\ancientnord\\brokenamuletbottom_0.nif",
+      "source_sha256": "0acdd68d43962270a875f1fd2c01fc4cbc45fce0ee2a1a7a585e8809e638631e",
+      "new_sha256": "58e89944b16c28d250a14de7a79fcdfa5a5d7adfbcc84ce33a46c69ae685f8c9",
+      "edits": [
+        {
+          "old": "armor\\amuletsandrings\\akatosh\\brokenamuletmiddle.tri",
+          "new": "armor\\amuletsandrings\\ancientnord\\brokenamuletbottom.tri"
+        }
+      ],
+      "geometry_blocks_unchanged": true
+    },
+    {
+      "relative": "meshes/armor/amuletsandrings/ancientnord/brokenamuletbottom_1.nif",
+      "source": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\Twisted - Nolvus OBody BodySlide Output\\meshes\\armor\\amuletsandrings\\ancientnord\\brokenamuletbottom_1.nif",
+      "source_sha256": "c5a0925365b87dd9115fee4dbb5e7cd53a4fca7ebb386ab564bbaa351bb6f879",
+      "new_sha256": "4d9442912d16d6d41352dbe319743c1cbacca7c1ec433d00f3b82ba01d6e7e13",
+      "edits": [
+        {
+          "old": "armor\\amuletsandrings\\akatosh\\brokenamuletmiddle.tri",
+          "new": "armor\\amuletsandrings\\ancientnord\\brokenamuletbottom.tri"
+        }
+      ],
+      "geometry_blocks_unchanged": true
+    },
+    {
+      "relative": "meshes/armor/amuletsandrings/ancientnord/brokenamuletmiddle_0.nif",
+      "source": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\Twisted - Nolvus OBody BodySlide Output\\meshes\\armor\\amuletsandrings\\ancientnord\\brokenamuletmiddle_0.nif",
+      "source_sha256": "7c1e1b0d079196caf037ef801f9e29612d1c14d52fdb34366d29cca902c06b97",
+      "new_sha256": "d237d15b6d36446bef72c0294e118d09a104aed503faa40d44757cf9006d1d48",
+      "edits": [
+        {
+          "old": "armor\\amuletsandrings\\akatosh\\brokenamuletmiddle.tri",
+          "new": "armor\\amuletsandrings\\ancientnord\\brokenamuletmiddle.tri"
+        }
+      ],
+      "geometry_blocks_unchanged": true
+    },
+    {
+      "relative": "meshes/armor/amuletsandrings/ancientnord/brokenamuletmiddle_1.nif",
+      "source": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\Twisted - Nolvus OBody BodySlide Output\\meshes\\armor\\amuletsandrings\\ancientnord\\brokenamuletmiddle_1.nif",
+      "source_sha256": "2602aa2628031d32b1115b1e2aea666966bb7c92d36001de6065b850fe4a3e4b",
+      "new_sha256": "8c60ae4cbdf6851d462300aad1efbfa828af202db651165732a38fe0e246c82d",
+      "edits": [
+        {
+          "old": "armor\\amuletsandrings\\akatosh\\brokenamuletmiddle.tri",
+          "new": "armor\\amuletsandrings\\ancientnord\\brokenamuletmiddle.tri"
+        }
+      ],
+      "geometry_blocks_unchanged": true
+    },
+    {
+      "relative": "meshes/armor/amuletsandrings/ancientnord/brokenamulettop_0.nif",
+      "source": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\Twisted - Nolvus OBody BodySlide Output\\meshes\\armor\\amuletsandrings\\ancientnord\\brokenamulettop_0.nif",
+      "source_sha256": "a2cf6908549247e49066ce9a85cb2c199e38ea7becf38815b8b8642ec59bc909",
+      "new_sha256": "1354eb28fd42020dc6d3150808600b56caaea9d79edb8d372522cfc235428a1e",
+      "edits": [
+        {
+          "old": "armor\\amuletsandrings\\akatosh\\brokenamulettop.tri",
+          "new": "armor\\amuletsandrings\\ancientnord\\brokenamulettop.tri"
+        }
+      ],
+      "geometry_blocks_unchanged": true
+    },
+    {
+      "relative": "meshes/armor/amuletsandrings/ancientnord/brokenamulettop_1.nif",
+      "source": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\Twisted - Nolvus OBody BodySlide Output\\meshes\\armor\\amuletsandrings\\ancientnord\\brokenamulettop_1.nif",
+      "source_sha256": "c1ced2b9e255f1f0e979d3049802652ea5cdcf03ed8b7dc2fc65bf0196f032c1",
+      "new_sha256": "b23fbff206f6b08f10941c3014ae5a252a0095b7dbd7b6ad0f379bfc141188e4",
+      "edits": [
+        {
+          "old": "armor\\amuletsandrings\\akatosh\\brokenamulettop.tri",
+          "new": "armor\\amuletsandrings\\ancientnord\\brokenamulettop.tri"
+        }
+      ],
+      "geometry_blocks_unchanged": true
+    }
+  ],
+  "overridden_files_before": [
+    {
+      "relative": "meshes/armor/elvish/hands_0.nif",
+      "provider": {
+        "path": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\Twisted - Nolvus OBody BodySlide Output\\meshes\\armor\\elvish\\hands_0.nif",
+        "mod": "Twisted - Nolvus OBody BodySlide Output",
+        "size": 166531,
+        "mtime_ns": 1791244269861881200
+      },
+      "sha256": "dbf8a8b86b80a4194d0ca8078c95adcc3f53ff18b6fcce4bfef5d2a1eab764bf"
+    },
+    {
+      "relative": "meshes/armor/elvish/hands_1.nif",
+      "provider": {
+        "path": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\Twisted - Nolvus OBody BodySlide Output\\meshes\\armor\\elvish\\hands_1.nif",
+        "mod": "Twisted - Nolvus OBody BodySlide Output",
+        "size": 166531,
+        "mtime_ns": 1791244269861881200
+      },
+      "sha256": "dbf8a8b86b80a4194d0ca8078c95adcc3f53ff18b6fcce4bfef5d2a1eab764bf"
+    },
+    {
+      "relative": "meshes/clothes/kozakowy/falkaarmor/glovess_0.nif",
+      "provider": {
+        "path": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\Twisted - Nolvus OBody BodySlide Output\\meshes\\clothes\\Kozakowy\\FalkaArmor\\glovess_0.nif",
+        "mod": "Twisted - Nolvus OBody BodySlide Output",
+        "size": 213233,
+        "mtime_ns": 1791243979668016600
+      },
+      "sha256": "34c984c09e563e92b1c51c97a16bbb71563be199bb4edbb526ec1d5106cd0278"
+    },
+    {
+      "relative": "meshes/clothes/kozakowy/falkaarmor/glovess_1.nif",
+      "provider": {
+        "path": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\Twisted - Nolvus OBody BodySlide Output\\meshes\\clothes\\Kozakowy\\FalkaArmor\\glovess_1.nif",
+        "mod": "Twisted - Nolvus OBody BodySlide Output",
+        "size": 213233,
+        "mtime_ns": 1791243979668016600
+      },
+      "sha256": "34c984c09e563e92b1c51c97a16bbb71563be199bb4edbb526ec1d5106cd0278"
+    },
+    {
+      "relative": "meshes/coco_cloths/twilight sorceress/ts_neck_0.nif",
+      "provider": {
+        "path": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\Twisted - Nolvus Outfit OBody Output\\meshes\\Coco_Cloths\\Twilight Sorceress\\TS_neck_0.nif",
+        "mod": "Twisted - Nolvus Outfit OBody Output",
+        "size": 153027,
+        "mtime_ns": 1789828324705563000
+      },
+      "sha256": "a9ac8873ed02416357025871c8ac180227d112a904af9f8ff546e5735e18f60e"
+    },
+    {
+      "relative": "meshes/coco_cloths/twilight sorceress/ts_neck_1.nif",
+      "provider": {
+        "path": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\Twisted - Nolvus Outfit OBody Output\\meshes\\Coco_Cloths\\Twilight Sorceress\\TS_neck_1.nif",
+        "mod": "Twisted - Nolvus Outfit OBody Output",
+        "size": 153027,
+        "mtime_ns": 1789828324705563000
+      },
+      "sha256": "a9ac8873ed02416357025871c8ac180227d112a904af9f8ff546e5735e18f60e"
+    },
+    {
+      "relative": "meshes/kziitd/semen_anal_0.nif",
+      "provider": {
+        "path": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\Twisted - Nolvus OBody BodySlide Output\\meshes\\Kziitd\\semen_anal_0.nif",
+        "mod": "Twisted - Nolvus OBody BodySlide Output",
+        "size": 176178,
+        "mtime_ns": 1791243994035783500
+      },
+      "sha256": "7eddccb5483366e9f8342d48b680e263cae18a1b22d4ee94bfb3bfb482e28a2a"
+    },
+    {
+      "relative": "meshes/kziitd/semen_anal_1.nif",
+      "provider": {
+        "path": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\Twisted - Nolvus OBody BodySlide Output\\meshes\\Kziitd\\semen_anal_1.nif",
+        "mod": "Twisted - Nolvus OBody BodySlide Output",
+        "size": 176178,
+        "mtime_ns": 1791243994035783500
+      },
+      "sha256": "7eddccb5483366e9f8342d48b680e263cae18a1b22d4ee94bfb3bfb482e28a2a"
+    },
+    {
+      "relative": "meshes/armor/errantknight/knighterrantmain1fp_0.nif",
+      "provider": {
+        "path": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\Twisted - Nolvus OBody BodySlide Output\\meshes\\armor\\errantknight\\knighterrantmain1fp_0.nif",
+        "mod": "Twisted - Nolvus OBody BodySlide Output",
+        "size": 542078,
+        "mtime_ns": 1791244267674390200
+      },
+      "sha256": "54abaf17679f2b4b70bad57f443d818748116b1e31b76b1e08c9adcc6f11fe16"
+    },
+    {
+      "relative": "meshes/armor/errantknight/knighterrantmain1fp_1.nif",
+      "provider": {
+        "path": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\Twisted - Nolvus OBody BodySlide Output\\meshes\\armor\\errantknight\\knighterrantmain1fp_1.nif",
+        "mod": "Twisted - Nolvus OBody BodySlide Output",
+        "size": 542078,
+        "mtime_ns": 1791244267674390200
+      },
+      "sha256": "a9fe34a676e6be15778983d55b6fe1303fcb996089d35ebbee0fa0a3ea207a8a"
+    },
+    {
+      "relative": "meshes/armor/errantknight/knighterrantboot_0.nif",
+      "provider": {
+        "path": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\Twisted - Nolvus OBody BodySlide Output\\meshes\\armor\\errantknight\\knighterrantboot_0.nif",
+        "mod": "Twisted - Nolvus OBody BodySlide Output",
+        "size": 433941,
+        "mtime_ns": 1791244267852551900
+      },
+      "sha256": "ebd5f4255e0863b67eef068ba97d0de4b6b28e3754e9a92e9133d5ba15de4215"
+    },
+    {
+      "relative": "meshes/armor/errantknight/knighterrantboot_1.nif",
+      "provider": {
+        "path": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\Twisted - Nolvus OBody BodySlide Output\\meshes\\armor\\errantknight\\knighterrantboot_1.nif",
+        "mod": "Twisted - Nolvus OBody BodySlide Output",
+        "size": 433941,
+        "mtime_ns": 1791244267860559300
+      },
+      "sha256": "d543a6bb2ea149a4c7760dcc3cf3b055d6f44904733fe3454ccaca7db2c169bf"
+    },
+    {
+      "relative": "meshes/armor/errantknight/knighterrantgauntlet_0.nif",
+      "provider": {
+        "path": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\Twisted - Nolvus OBody BodySlide Output\\meshes\\armor\\errantknight\\knighterrantgauntlet_0.nif",
+        "mod": "Twisted - Nolvus OBody BodySlide Output",
+        "size": 221380,
+        "mtime_ns": 1791244268901504500
+      },
+      "sha256": "0f99b039117d29aca270ca2ee1243cbe4115f5d88d126252ea80c7aae45212ba"
+    },
+    {
+      "relative": "meshes/armor/errantknight/knighterrantgauntlet_1.nif",
+      "provider": {
+        "path": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\Twisted - Nolvus OBody BodySlide Output\\meshes\\armor\\errantknight\\knighterrantgauntlet_1.nif",
+        "mod": "Twisted - Nolvus OBody BodySlide Output",
+        "size": 221380,
+        "mtime_ns": 1791244268903506600
+      },
+      "sha256": "308ba656985ca85471e20a92fd11fc96a33a22c2d77cb38a016c75a479edf172"
+    },
+    {
+      "relative": "meshes/armor/errantknight/knighterrantsatchel_0.nif",
+      "provider": {
+        "path": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\Twisted - Nolvus OBody BodySlide Output\\meshes\\armor\\errantknight\\knighterrantsatchel_0.nif",
+        "mod": "Twisted - Nolvus OBody BodySlide Output",
+        "size": 200853,
+        "mtime_ns": 1791244269108692700
+      },
+      "sha256": "3fd0650666c0773f5c36b8b9349d3010978ee4f6aaf9aed1cd4ce7b1387f4d54"
+    },
+    {
+      "relative": "meshes/armor/errantknight/knighterrantsatchel_1.nif",
+      "provider": {
+        "path": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\Twisted - Nolvus OBody BodySlide Output\\meshes\\armor\\errantknight\\knighterrantsatchel_1.nif",
+        "mod": "Twisted - Nolvus OBody BodySlide Output",
+        "size": 200853,
+        "mtime_ns": 1791244269108692700
+      },
+      "sha256": "8e2236a64e93e4b43e8a3151e9519afd3b205bd470e48fa39c2244edd34727a4"
+    },
+    {
+      "relative": "meshes/armor/errantknight/knighterrantbootf_0.nif",
+      "provider": {
+        "path": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\Twisted - Nolvus OBody BodySlide Output\\meshes\\armor\\errantknight\\knighterrantbootf_0.nif",
+        "mod": "Twisted - Nolvus OBody BodySlide Output",
+        "size": 433943,
+        "mtime_ns": 1791244013250303700
+      },
+      "sha256": "f97690b1148899ebfad191793889c5d0d6b4d6db998b70c25aff1d04a228be4f"
+    },
+    {
+      "relative": "meshes/armor/errantknight/knighterrantbootf_1.nif",
+      "provider": {
+        "path": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\Twisted - Nolvus OBody BodySlide Output\\meshes\\armor\\errantknight\\knighterrantbootf_1.nif",
+        "mod": "Twisted - Nolvus OBody BodySlide Output",
+        "size": 433943,
+        "mtime_ns": 1791244013250303700
+      },
+      "sha256": "1a0d59c1cea61b1fd98e1d04e8e9018aadcd81c61e46079540ccd43ea6d38d84"
+    },
+    {
+      "relative": "meshes/armor/errantknight/knighterrantmainf_0.nif",
+      "provider": {
+        "path": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\Twisted - Nolvus OBody BodySlide Output\\meshes\\armor\\errantknight\\knighterrantmainf_0.nif",
+        "mod": "Twisted - Nolvus OBody BodySlide Output",
+        "size": 1531829,
+        "mtime_ns": 1791244014248714300
+      },
+      "sha256": "7d45285afdb90ef0bc5d3d2f27c0778c4a41af38bc13fff8faa482bba13aa1b4"
+    },
+    {
+      "relative": "meshes/armor/errantknight/knighterrantmainf_1.nif",
+      "provider": {
+        "path": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\Twisted - Nolvus OBody BodySlide Output\\meshes\\armor\\errantknight\\knighterrantmainf_1.nif",
+        "mod": "Twisted - Nolvus OBody BodySlide Output",
+        "size": 1531829,
+        "mtime_ns": 1791244014254719400
+      },
+      "sha256": "1cb9a582cf7616c783a8f4e6028c54eeeb42e11318be78849dc7be770ab8d803"
+    },
+    {
+      "relative": "meshes/armor/errantknight/knighterrantsatchelf_0.nif",
+      "provider": {
+        "path": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\Twisted - Nolvus OBody BodySlide Output\\meshes\\armor\\errantknight\\knighterrantsatchelf_0.nif",
+        "mod": "Twisted - Nolvus OBody BodySlide Output",
+        "size": 200855,
+        "mtime_ns": 1791244014478923500
+      },
+      "sha256": "0a37d322b43b7c5faa65301e039b27e1fee8d607ee7e9b65c40705660d7b88cc"
+    },
+    {
+      "relative": "meshes/armor/errantknight/knighterrantsatchelf_1.nif",
+      "provider": {
+        "path": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\Twisted - Nolvus OBody BodySlide Output\\meshes\\armor\\errantknight\\knighterrantsatchelf_1.nif",
+        "mod": "Twisted - Nolvus OBody BodySlide Output",
+        "size": 200855,
+        "mtime_ns": 1791244014478923500
+      },
+      "sha256": "0a37d322b43b7c5faa65301e039b27e1fee8d607ee7e9b65c40705660d7b88cc"
+    },
+    {
+      "relative": "meshes/armor/errantknight/knighterrantmain1fpf_0.nif",
+      "provider": {
+        "path": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\Twisted - Nolvus OBody BodySlide Output\\meshes\\armor\\errantknight\\knighterrantmain1fpf_0.nif",
+        "mod": "Twisted - Nolvus OBody BodySlide Output",
+        "size": 543268,
+        "mtime_ns": 1791244013010085600
+      },
+      "sha256": "d13f9548fffbee6177d072bbf0d85f415a92f53ad8cee27bccbae2c82a215ec9"
+    },
+    {
+      "relative": "meshes/armor/errantknight/knighterrantmain1fpf_1.nif",
+      "provider": {
+        "path": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\Twisted - Nolvus OBody BodySlide Output\\meshes\\armor\\errantknight\\knighterrantmain1fpf_1.nif",
+        "mod": "Twisted - Nolvus OBody BodySlide Output",
+        "size": 543268,
+        "mtime_ns": 1791244013010085600
+      },
+      "sha256": "5c8e947729b09459d7a3fe4cd6e977e5f8fe97531b07b1b39dd64dc1ea62408f"
+    },
+    {
+      "relative": "meshes/armor/errantknight/knighterrantgauntletf_0.nif",
+      "provider": {
+        "path": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\Twisted - Nolvus OBody BodySlide Output\\meshes\\armor\\errantknight\\knighterrantgauntletf_0.nif",
+        "mod": "Twisted - Nolvus OBody BodySlide Output",
+        "size": 222154,
+        "mtime_ns": 1791244013113179100
+      },
+      "sha256": "eb28ce142244dfdbeb9f5ec3591ff110cb2132a4318d47ebca786bfe2b1b02a7"
+    },
+    {
+      "relative": "meshes/armor/errantknight/knighterrantgauntletf_1.nif",
+      "provider": {
+        "path": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\Twisted - Nolvus OBody BodySlide Output\\meshes\\armor\\errantknight\\knighterrantgauntletf_1.nif",
+        "mod": "Twisted - Nolvus OBody BodySlide Output",
+        "size": 222154,
+        "mtime_ns": 1791244013114180200
+      },
+      "sha256": "23355b114fd4ddd28629ddeb3f0978f56aabb5d7b6ceb6cb4ab631014de09fb9"
+    },
+    {
+      "relative": "meshes/armor/amuletsandrings/ancientnord/ancientnordamulet_0.nif",
+      "provider": {
+        "path": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\Twisted - Nolvus OBody BodySlide Output\\meshes\\armor\\amuletsandrings\\ancientnord\\ancientnordamulet_0.nif",
+        "mod": "Twisted - Nolvus OBody BodySlide Output",
+        "size": 31858,
+        "mtime_ns": 1791244268595226300
+      },
+      "sha256": "78d5cc20a76880e86540300a8a244b99b1c5d57fd8a138947a1028800248556c"
+    },
+    {
+      "relative": "meshes/armor/amuletsandrings/ancientnord/ancientnordamulet_1.nif",
+      "provider": {
+        "path": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\Twisted - Nolvus OBody BodySlide Output\\meshes\\armor\\amuletsandrings\\ancientnord\\ancientnordamulet_1.nif",
+        "mod": "Twisted - Nolvus OBody BodySlide Output",
+        "size": 31858,
+        "mtime_ns": 1791244268595226300
+      },
+      "sha256": "aed058d48ec9a61a8d15191b5acb1f83ce5bebf7c30bc3fdb170b95511532538"
+    },
+    {
+      "relative": "meshes/armor/amuletsandrings/ancientnord/brokenamuletassembled_0.nif",
+      "provider": {
+        "path": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\Twisted - Nolvus OBody BodySlide Output\\meshes\\armor\\amuletsandrings\\ancientnord\\brokenamuletassembled_0.nif",
+        "mod": "Twisted - Nolvus OBody BodySlide Output",
+        "size": 32726,
+        "mtime_ns": 1791244268745362800
+      },
+      "sha256": "2d75f2bc30bf0527da478fccb985651d62be0db898847411f520f54618bdfdce"
+    },
+    {
+      "relative": "meshes/armor/amuletsandrings/ancientnord/brokenamuletassembled_1.nif",
+      "provider": {
+        "path": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\Twisted - Nolvus OBody BodySlide Output\\meshes\\armor\\amuletsandrings\\ancientnord\\brokenamuletassembled_1.nif",
+        "mod": "Twisted - Nolvus OBody BodySlide Output",
+        "size": 32726,
+        "mtime_ns": 1791244268745362800
+      },
+      "sha256": "2fd97d13a8e8faff17a5f3e0e4b77b24f563ea7e4b9ebf8a02a7f4c55af90ab0"
+    },
+    {
+      "relative": "meshes/armor/amuletsandrings/ancientnord/brokenamuletbottom_0.nif",
+      "provider": {
+        "path": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\Twisted - Nolvus OBody BodySlide Output\\meshes\\armor\\amuletsandrings\\ancientnord\\brokenamuletbottom_0.nif",
+        "mod": "Twisted - Nolvus OBody BodySlide Output",
+        "size": 32602,
+        "mtime_ns": 1791244268778392800
+      },
+      "sha256": "0acdd68d43962270a875f1fd2c01fc4cbc45fce0ee2a1a7a585e8809e638631e"
+    },
+    {
+      "relative": "meshes/armor/amuletsandrings/ancientnord/brokenamuletbottom_1.nif",
+      "provider": {
+        "path": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\Twisted - Nolvus OBody BodySlide Output\\meshes\\armor\\amuletsandrings\\ancientnord\\brokenamuletbottom_1.nif",
+        "mod": "Twisted - Nolvus OBody BodySlide Output",
+        "size": 32602,
+        "mtime_ns": 1791244268778392800
+      },
+      "sha256": "c5a0925365b87dd9115fee4dbb5e7cd53a4fca7ebb386ab564bbaa351bb6f879"
+    },
+    {
+      "relative": "meshes/armor/amuletsandrings/ancientnord/brokenamuletmiddle_0.nif",
+      "provider": {
+        "path": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\Twisted - Nolvus OBody BodySlide Output\\meshes\\armor\\amuletsandrings\\ancientnord\\brokenamuletmiddle_0.nif",
+        "mod": "Twisted - Nolvus OBody BodySlide Output",
+        "size": 32260,
+        "mtime_ns": 1791244268813424500
+      },
+      "sha256": "7c1e1b0d079196caf037ef801f9e29612d1c14d52fdb34366d29cca902c06b97"
+    },
+    {
+      "relative": "meshes/armor/amuletsandrings/ancientnord/brokenamuletmiddle_1.nif",
+      "provider": {
+        "path": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\Twisted - Nolvus OBody BodySlide Output\\meshes\\armor\\amuletsandrings\\ancientnord\\brokenamuletmiddle_1.nif",
+        "mod": "Twisted - Nolvus OBody BodySlide Output",
+        "size": 32260,
+        "mtime_ns": 1791244268813424500
+      },
+      "sha256": "2602aa2628031d32b1115b1e2aea666966bb7c92d36001de6065b850fe4a3e4b"
+    },
+    {
+      "relative": "meshes/armor/amuletsandrings/ancientnord/brokenamulettop_0.nif",
+      "provider": {
+        "path": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\Twisted - Nolvus OBody BodySlide Output\\meshes\\armor\\amuletsandrings\\ancientnord\\brokenamulettop_0.nif",
+        "mod": "Twisted - Nolvus OBody BodySlide Output",
+        "size": 32029,
+        "mtime_ns": 1791244268859466800
+      },
+      "sha256": "a2cf6908549247e49066ce9a85cb2c199e38ea7becf38815b8b8642ec59bc909"
+    },
+    {
+      "relative": "meshes/armor/amuletsandrings/ancientnord/brokenamulettop_1.nif",
+      "provider": {
+        "path": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\Twisted - Nolvus OBody BodySlide Output\\meshes\\armor\\amuletsandrings\\ancientnord\\brokenamulettop_1.nif",
+        "mod": "Twisted - Nolvus OBody BodySlide Output",
+        "size": 32029,
+        "mtime_ns": 1791244268860467400
+      },
+      "sha256": "c1ced2b9e255f1f0e979d3049802652ea5cdcf03ed8b7dc2fc65bf0196f032c1"
+    }
+  ],
+  "xml_group_repaired": "CalienteTools\\BodySlide\\SliderGroups\\HIMBO - 4thunknown's DB.xml",
+  "original_body_meshes_modified": false
+}

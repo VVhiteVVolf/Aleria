@@ -1,0 +1,40 @@
+{
+  "status": "COMPLETE_VERIFIED",
+  "scope": "AI_ONLY_SUPPLEMENT",
+  "destination": "D:\\Nolvus-Backups\\Awakening-6.0.20-vor-Update-20260930\\updates\\20261015-SkyrimNet-Beta27",
+  "archive_sha256": "420d88a7f976d2df897ee288b393fa41779c6096839af8ce7dfae60d9219633b",
+  "files": [
+    {
+      "name": "migration-skyrimnet-beta27-current.zip",
+      "sha256": "420d88a7f976d2df897ee288b393fa41779c6096839af8ce7dfae60d9219633b",
+      "bytes": 1688197709
+    },
+    {
+      "name": "migration-receipt.json",
+      "sha256": "2ee08c8faa4e4d456152531f21f00bd577654ff665f3d2cb0b074ce7086db04c",
+      "bytes": 1156
+    },
+    {
+      "name": "installation.json",
+      "sha256": "f1797df4b6986c55c578bb7cd6a57c3abb41b132ad5a30d7c00616fc5dcd0646",
+      "bytes": 2584
+    },
+    {
+      "name": "ERGEBNIS.txt",
+      "sha256": "26040454960b3d67f566f2b9600cfbec629572f186bbd1bb0abe569865ebd2df",
+      "bytes": 7212
+    },
+    {
+      "name": "installed-validation.json",
+      "sha256": "bd4cfe35e3d2a7b944fa560c1b75784b4b246609394e16975f71bc761a448204",
+      "bytes": 75270
+    },
+    {
+      "name": "installed-quest-attachments.json",
+      "sha256": "75eea2842d224b12a3d4e577806cf652168bd18597d16a5f32024dcd4306154c",
+      "bytes": 2031
+    }
+  ],
+  "base_backup_pointers_unchanged": true,
+  "game_tested": false
+}

@@ -1,0 +1,62 @@
+[
+  {
+    "case": "accepted_priced_sale",
+    "heuristic_pass": true,
+    "response": "A fine choice, friend. This backpack is sturdy and will serve you well on the road. Here it is\u2014one Backpack, Brown Fur, for 180 gold as we agreed.\n\nACTION: Economy PARAMS: {\"intent\": \"Sell player one Backpack, Brown Fur for 180 gold; they just accepted the agreed price.\"}",
+    "api_result": {
+      "overall_duration_ms": 683,
+      "parallel_execution": true,
+      "success": true,
+      "successful_variants": 1,
+      "timestamp": 1792101137934,
+      "total_variants": 1,
+      "variants": [
+        {
+          "duration_ms": 682,
+          "model": "deepseek/deepseek-v4-flash-0731",
+          "model_index": 0,
+          "request": {
+            "cache": true,
+            "max_tokens": 4096,
+            "messages": [
+              {
+                "content": "Isolated synthetic dialogue test. Do not execute game actions. Speak as the merchant in English, at most 120 words.\n## Grounded Tasks and Transfers\n- Ground executable offers in the supplied game state, available quest branches, and eligible actions. A previous spoken claim does not establish that an item, client, order, or quest exists.\n- For an item you offer to hand over or sell now, use its actual listed inventory or merchant-stock name and available quantity. Do not rename an ordinary item into an invented parcel or special quest object. If the required item is absent or unverified, acknowledge that and ask about a genuinely available alternative before substituting it.\n- Before committing to an errand, establish its recipient, destination, actual item or objective, and agreed terms from supplied context. Do not present invented contacts, stock, payments, or quest requirements as verified facts. An uncertain opportunity can be discussed as tentative, without promising a functioning assignment.\n- Start or advance a quest through an explicitly available quest dialogue code or supported task action. Speaking about a job does not create a tracked quest, spawn its items, or establish a reward. A real quest branch may authorize a scripted reward or item; use its quest action rather than inventing an inventory transfer.\n- A transfer offered now is pending until the action result confirms it. Report failures honestly and address their stated cause. A failed hand-over is not delivery; accepting a price is not payment; an agreed reward is not a paid reward.\n- Answer the latest question first. A newer acceptance replaces an older refusal. A recorded successful transfer closes that transaction; do not re-offer it or charge for it again unless a genuinely new transaction is explicitly agreed. Continue from current state instead of repeating the old negotiation.\n## Actions Available\nWrite your dialogue first. When you accept or begin an eligible action now, append exactly ONE action on its own line; otherwise omit the action line.\n**Action Format:**\n- `ACTION: ActionName` \u2014 an action with no parameters\n- `ACTION: ActionName PARAMS: {\"param\": \"value\"}` \u2014 an action with parameters, using exactly the keys shown\n- `ACTION: CategoryName PARAMS: {\"intent\": \"what you are doing, to whom, and why now\"}` \u2014 an action category; the intent is required\n- Use each name exactly as listed; never add the word \"Category\" to it\n- No ACTION line at all when nothing below is happening right now\n**Execution consistency:**\n- When you accept a transfer of gold/items now, agree to stop following or wait now, or reach a real quest turning point with an eligible action, include exactly ONE matching ACTION line. A spoken agreement alone does not execute it.\n- Use only the eligible names and parameter keys below. For a category, include a concrete intent with sender, recipient, item/amount, and what is being settled now; preserve the actual direction of the transfer.\n- If no eligible action can perform the request, explain that limitation instead of claiming it happened.\n- A previous spoken claim is not proof of execution. Use recorded action results and current state to distinguish an unexecuted promise from an already completed transfer; never repeat a recorded successful payment.\n- In technical action parameters and category intents, copy the displayed inventory item name verbatim, including punctuation. Do not paraphrase the name or replace it with a packaging description.\n- A sale at an agreed price is one Economy transaction, not an Items gift. Preserve the exact item, quantity, seller, buyer, and price in the intent. Do not append a second Items action for the same sale.\n- For a category, include a concrete intent describing the immediate operation. Do not select Travel merely to decorate a farewell: specify the actual cancellation or destination when supported by the eligible actions and current task state.\n**Available Actions:**\n- `Items` PARAMS: {\"intent\":\"Immediate operation, item, quantity, sender and recipient\"} \u2014 Category: Give an item as a gift or loan without an agreed sale price\n- `Economy` PARAMS: {\"intent\":\"Immediate operation, exact item, quantity, seller, buyer and agreed price\"} \u2014 Category: Sell an item at an agreed price in one transaction, or move gold\n**When to act:**\n- Some entries are action categories: each groups related actions, and choosing one opens a follow-up where the exact action is picked. An entry whose description begins with \"Category:\" is always one.\n- An action is something you do or settle right now, in the line you just spoke: you agree to what Player asked, you obey an order, or you decide to do it this moment.\n- Talk is not an action. Plans and promises for later, maybes and someday, suggestions, hypotheticals, questions, jokes, stories, rumors, and a place, person or item merely coming up: say them, and add no action. A threat or warning of what you will do later, or \"if\" something happens, is talk too; carrying it out in this line is an action. Agreeing now to a deal whose pickup or payment comes later (an order, a tab, a loan, a raise) settles it now: that agreement is an action. So is starting an interrogation now, though it is done by asking.\n- Deciding to pay is acting. If, in character, you choose in this line to hand someone coin (a tip, a reward, settling up, a refund) or to bill Player for something you just gave or did (a charge on their tab, or collecting what they owe you; they are asked to confirm), that is an action even though nobody asked for it. Billing anyone else still needs their agreement. Naming a price, haggling, or saying you will pay later without agreeing a tab or loan now is still talk.\n- Going somewhere together: if you are following Player right now (as their companion, or tagging along), you just come along and need no action. If you agree now to come along, or were told to wait and are now called along, choose the action for coming along (joining, tagging along for a while, or following again), not a travel action. Use a travel action only when you set off now, ahead of Player or without them.\n- Do not repeat an action whose success is confirmed by recorded results or current state, unless a genuinely new transaction was explicitly agreed. A promise, a spoken claim, a queued request, or a failed action is not proof of completion; address the latest result before deciding whether a corrected attempt is appropriate.\n- Choose a category only when one of the things it lists is happening now, and put who, what and how much in the intent, e.g. `ACTION: Economy PARAMS: {\"intent\": \"sell Player one health potion for 45 gold; they just agreed\"}`. Category selections without an intent fail.\n**Technical action footer \u2014 exception to speech-only formatting:**\n- The earlier \"spoken words only\", \"no headers or labels\", and \"no action descriptions\" rules apply to the spoken dialogue only. They do not prohibit the technical ACTION: footer required here.\n- If you accept or begin an eligible action now, output your spoken reply, then a newline and exactly ONE plain ACTION: line. A spoken agreement alone does not execute a transfer, dismissal or quest transition.\n- The action line must begin at column 1 with ACTION:. Never wrap it in brackets, quotes, asterisks, Markdown bullets or code fences. Never put voice/audio tags or internal thoughts on that line.\n- Keep the exact eligible action/category name and parameter keys. For a category, include its concrete intent. For TriggerDialogueLine, copy only an explicitly available bracketed dialogue code into form_id.\n- When no action is appropriate, output dialogue only. Do not invent an action or emit a footer merely to fill this format.\nYou are an ordinary merchant.\n## Merchant Inventory\n- Backpack, Brown Fur: 1 (180 gold)\nPlayer has 1000 gold. Eligible categories: Items, Economy. Earlier the player declined, but you then agreed a price of 180 gold for one Backpack, Brown Fur. No payment or item transfer has happened yet. Player now: I accept the 180 gold price; let us complete the purchase now.",
+                "role": "user"
+              }
+            ],
+            "model": "deepseek/deepseek-v4-flash-0731",
+            "model_index": 0,
+            "provider": {
+              "ignore": [
+                "atlas-cloud"
+              ],
+              "quantizations": [
+                "fp8",
+                "fp16",
+                "bf16",
+                "fp32",
+                "unknown"
+              ],
+              "sort": "latency"
+            },
+            "reasoning": {
+              "enabled": false
+            },
+            "reasoning_effort_resolved": "off",
+            "reasoning_resolved": false,
+            "route": "fallback",
+            "temperature": 1.0,
+            "usage": {
+              "include": true
+            },
+            "use_structured_outputs_resolved": false
+          },
+          "response": "A fine choice, friend. This backpack is sturdy and will serve you well on the road. Here it is\u2014one Backpack, Brown Fur, for 180 gold as we agreed.\n\nACTION: Economy PARAMS: {\"intent\": \"Sell player one Backpack, Brown Fur for 180 gold; they just accepted the agreed price.\"}",
+          "success": true,
+          "variant": "default",
+          "variant_key": ""
+        }
+      ]
+    }
+  }
+]

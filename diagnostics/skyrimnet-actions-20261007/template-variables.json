@@ -1,0 +1,260 @@
+[
+  {
+    "relative": "library/skyrimnet.base/prompts/characters/lemkil_6ad.prompt",
+    "file": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\SkyrimNet - Beta 26 RC4\\SKSE\\Plugins\\SkyrimNet\\library\\skyrimnet.base\\prompts\\characters\\lemkil_6AD.prompt",
+    "line": 25,
+    "text": "{% block occupation %}Tends his farm daily from dawn to dusk, growing potatoes, leeks, cabbages, gourds, and wheat; occasionally hires help during harvest season and spends evenings drinking at the Frostfruit Inn.{% endblock %}"
+  },
+  {
+    "relative": "library/skyrimnet.base/prompts/decisions/continue_narration_selector.prompt",
+    "file": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\SkyrimNet - Beta 26 RC4\\SKSE\\Plugins\\SkyrimNet\\library\\skyrimnet.base\\prompts\\decisions\\continue_narration_selector.prompt",
+    "line": 48,
+    "text": "{{ cinfo.name }}{% if existsIn(lastSpeaker, \"UUID\") and lastSpeaker.UUID == c.UUID %} [SPOKE LAST]{% endif %}{% if cinfo.isVirtual %} (virtual NPC){% else %} ({{ cinfo.gender }} {{ cinfo.race }}, {{ units_to_meters(c.distance) }}m away){% endif %}{% if tagCompanion and is_follower(c.UUID) %} [COMPANION]{% endif %}{% if tagEngaged and is_in_package(c.UUID, \"SkyrimNet_PlayerFollowPackage\") %} [ENGAGED]{% endif %}{% if tagInScene and ((is_plugin_loaded(\"SexLab.esm\") and is_in_faction(c.UUID, \"SexLabAnimatingFaction\")) or (is_plugin_loaded(\"OStim.e"
+  },
+  {
+    "relative": "library/skyrimnet.base/prompts/decisions/dialogue_speaker_selector.prompt",
+    "file": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\SkyrimNet - Beta 26 RC4\\SKSE\\Plugins\\SkyrimNet\\library\\skyrimnet.base\\prompts\\decisions\\dialogue_speaker_selector.prompt",
+    "line": 46,
+    "text": "{{ cinfo.name }}{% if cinfo.isVirtual %} (virtual NPC){% else %} ({{ cinfo.gender }} {{ cinfo.race }}, {{ units_to_meters(c.distance) }}m away){% endif %}{% if tagCompanion and is_follower(c.UUID) %} [COMPANION]{% endif %}{% if tagEngaged and is_in_package(c.UUID, \"SkyrimNet_PlayerFollowPackage\") %} [ENGAGED]{% endif %}{% if tagInScene and ((is_plugin_loaded(\"SexLab.esm\") and is_in_faction(c.UUID, \"SexLabAnimatingFaction\")) or (is_plugin_loaded(\"OStim.esp\") and is_in_faction(c.UUID, \"OStimExcitementFaction\"))) %} [IN SCENE]{% endif %}"
+  },
+  {
+    "relative": "library/skyrimnet.base/prompts/decisions/dialogue_speaker_selector.prompt",
+    "file": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\SkyrimNet - Beta 26 RC4\\SKSE\\Plugins\\SkyrimNet\\library\\skyrimnet.base\\prompts\\decisions\\dialogue_speaker_selector.prompt",
+    "line": 65,
+    "text": "{{ p.key }}: {{ p.speakerName }}{% if tagCompanion and is_follower(p.speakerUUID) %} [COMPANION]{% endif %}{% if tagEngaged and is_in_package(p.speakerUUID, \"SkyrimNet_PlayerFollowPackage\") %} [ENGAGED]{% endif %}{% if tagInScene and ((is_plugin_loaded(\"SexLab.esm\") and is_in_faction(p.speakerUUID, \"SexLabAnimatingFaction\")) or (is_plugin_loaded(\"OStim.esp\") and is_in_faction(p.speakerUUID, \"OStimExcitementFaction\"))) %} [IN SCENE]{% endif %} speaks to {% if p.targetKind == \"player\" %}the player, {{ p.targetName }}{% else %}{{ p.targetName }}{%"
+  },
+  {
+    "relative": "library/skyrimnet.base/prompts/decisions/player_dialogue_target_selector.prompt",
+    "file": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\SkyrimNet - Beta 26 RC4\\SKSE\\Plugins\\SkyrimNet\\library\\skyrimnet.base\\prompts\\decisions\\player_dialogue_target_selector.prompt",
+    "line": 53,
+    "text": "{{ cinfo.name }}{% if cinfo.isVirtual %} (virtual NPC){% else %} ({{ cinfo.gender }} {{ cinfo.race }}, {{ units_to_meters(c.distance) }}m away){% endif %}{% if tagCompanion and is_follower(c.UUID) %} [COMPANION]{% endif %}{% if tagEngaged and is_in_package(c.UUID, \"SkyrimNet_PlayerFollowPackage\") %} [ENGAGED]{% endif %}{% if tagInScene and ((is_plugin_loaded(\"SexLab.esm\") and is_in_faction(c.UUID, \"SexLabAnimatingFaction\")) or (is_plugin_loaded(\"OStim.esp\") and is_in_faction(c.UUID, \"OStimExcitementFaction\"))) %} [IN SCENE]{% endif %}"
+  },
+  {
+    "relative": "library/skyrimnet.base/prompts/decisions/scene_speaker_selector.prompt",
+    "file": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\SkyrimNet - Beta 26 RC4\\SKSE\\Plugins\\SkyrimNet\\library\\skyrimnet.base\\prompts\\decisions\\scene_speaker_selector.prompt",
+    "line": 45,
+    "text": "{{ cinfo.name }}{% if c.UUID in conversationParticipants %} [IN CONVERSATION]{% endif %}{% if existsIn(lastSpeaker, \"UUID\") and lastSpeaker.UUID == c.UUID %} [SPOKE LAST]{% endif %}{% if cinfo.isVirtual %} (virtual NPC){% else %} ({{ cinfo.gender }} {{ cinfo.race }}, {{ units_to_meters(c.distance) }}m away){% endif %}{% if tagCompanion and is_follower(c.UUID) %} [COMPANION]{% endif %}{% if tagInScene and ((is_plugin_loaded(\"SexLab.esm\") and is_in_faction(c.UUID, \"SexLabAnimatingFaction\")) or (is_plugin_loaded(\"OStim.esp\") and is_in_faction(c.UU"
+  },
+  {
+    "relative": "library/skyrimnet.base/prompts/target_selectors/dialogue_speaker_selector.prompt",
+    "file": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\SkyrimNet - Beta 26 RC4\\SKSE\\Plugins\\SkyrimNet\\library\\skyrimnet.base\\prompts\\target_selectors\\dialogue_speaker_selector.prompt",
+    "line": 84,
+    "text": "{{ candidate.id }}. **{{ cinfo.name }}** ({{ cinfo.gender }} {{ cinfo.race }}, {{ units_to_meters(candidate.distance) }}m){% if tagCompanion and is_follower(candidate.UUID) %} **[COMPANION]**{% endif %}{% if tagEngaged and is_in_package(candidate.UUID, \"SkyrimNet_PlayerFollowPackage\") %} **[ENGAGED]**{% endif %}{% if tagInScene and ((is_plugin_loaded(\"SexLab.esm\") and is_in_faction(candidate.UUID, \"SexLabAnimatingFaction\")) or (is_plugin_loaded(\"OStim.esp\") and is_in_faction(candidate.UUID, \"OStimExcitementFaction\"))) %} **[IN SCENE]**{% endif "
+  },
+  {
+    "relative": "library/skyrimnet.base/prompts/target_selectors/player_dialogue_target_selector.prompt",
+    "file": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\SkyrimNet - Beta 26 RC4\\SKSE\\Plugins\\SkyrimNet\\library\\skyrimnet.base\\prompts\\target_selectors\\player_dialogue_target_selector.prompt",
+    "line": 18,
+    "text": "The player is looking directly at: **{{ crosshairTarget.name }}** ({{ units_to_meters(crosshairTarget.distance) }}m away){% if tagCompanion and is_follower(crosshairTarget.UUID) %} [COMPANION]{% endif %}{% if tagEngaged and is_in_package(crosshairTarget.UUID, \"SkyrimNet_PlayerFollowPackage\") %} [ENGAGED]{% endif %}{% if tagInScene and ((is_plugin_loaded(\"SexLab.esm\") and is_in_faction(crosshairTarget.UUID, \"SexLabAnimatingFaction\")) or (is_plugin_loaded(\"OStim.esp\") and is_in_faction(crosshairTarget.UUID, \"OStimExcitementFaction\"))) %} [IN SCEN"
+  },
+  {
+    "relative": "library/skyrimnet.base/prompts/submodules/character_bio/7100_memories.prompt",
+    "file": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\SkyrimNet - Beta 26 RC4\\SKSE\\Plugins\\SkyrimNet\\library\\skyrimnet.base\\prompts\\submodules\\character_bio\\7100_memories.prompt",
+    "line": 21,
+    "text": "            {{ loop.index }}. {% if not memory.isOwn %}[experienced as {{ memory.originName }}] {% endif %}{{ timeIndicator }}{% if memory.memory.season != season and memory.memory.season != \"unknown\" %}[in {{ memory.memory.season }}] {% endif %}**{{ memory.memory.content }}** ({{ memory.memory.emotion }}, Importance: {{ memory.memory.importance_score }})"
+  },
+  {
+    "relative": "library/skyrimnet.base/prompts/submodules/test_decorators/0300_equipment_decorators.prompt",
+    "file": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\SkyrimNet - Beta 26 RC4\\SKSE\\Plugins\\SkyrimNet\\library\\skyrimnet.base\\prompts\\submodules\\test_decorators\\0300_equipment_decorators.prompt",
+    "line": 35,
+    "text": "{% if equipment.body %}"
+  },
+  {
+    "relative": "library/skyrimnet.base/prompts/submodules/test_decorators/0300_equipment_decorators.prompt",
+    "file": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\SkyrimNet - Beta 26 RC4\\SKSE\\Plugins\\SkyrimNet\\library\\skyrimnet.base\\prompts\\submodules\\test_decorators\\0300_equipment_decorators.prompt",
+    "line": 37,
+    "text": "- Name: {{ equipment.body.name }}"
+  },
+  {
+    "relative": "library/skyrimnet.base/prompts/submodules/test_decorators/0300_equipment_decorators.prompt",
+    "file": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\SkyrimNet - Beta 26 RC4\\SKSE\\Plugins\\SkyrimNet\\library\\skyrimnet.base\\prompts\\submodules\\test_decorators\\0300_equipment_decorators.prompt",
+    "line": 38,
+    "text": "- Type: {{ equipment.body.type }}"
+  },
+  {
+    "relative": "library/skyrimnet.base/prompts/submodules/test_decorators/0300_equipment_decorators.prompt",
+    "file": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\SkyrimNet - Beta 26 RC4\\SKSE\\Plugins\\SkyrimNet\\library\\skyrimnet.base\\prompts\\submodules\\test_decorators\\0300_equipment_decorators.prompt",
+    "line": 39,
+    "text": "- Armor Rating: {{ equipment.body.armorRating }}"
+  },
+  {
+    "relative": "library/skyrimnet.base/prompts/submodules/test_decorators/0300_equipment_decorators.prompt",
+    "file": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\SkyrimNet - Beta 26 RC4\\SKSE\\Plugins\\SkyrimNet\\library\\skyrimnet.base\\prompts\\submodules\\test_decorators\\0300_equipment_decorators.prompt",
+    "line": 40,
+    "text": "- Value: {{ equipment.body.value }}"
+  },
+  {
+    "relative": "library/skyrimnet.base/prompts/submodules/test_decorators/0300_equipment_decorators.prompt",
+    "file": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\SkyrimNet - Beta 26 RC4\\SKSE\\Plugins\\SkyrimNet\\library\\skyrimnet.base\\prompts\\submodules\\test_decorators\\0300_equipment_decorators.prompt",
+    "line": 41,
+    "text": "{% if equipment.body.keywords and length(equipment.body.keywords) > 0 %}"
+  },
+  {
+    "relative": "library/skyrimnet.base/prompts/submodules/test_decorators/0300_equipment_decorators.prompt",
+    "file": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\SkyrimNet - Beta 26 RC4\\SKSE\\Plugins\\SkyrimNet\\library\\skyrimnet.base\\prompts\\submodules\\test_decorators\\0300_equipment_decorators.prompt",
+    "line": 42,
+    "text": "- Keywords: {% for kw in equipment.body.keywords %}{{ kw.editorID }}{% if not loop.is_last %}, {% endif %}{% endfor %}"
+  },
+  {
+    "relative": "library/skyrimnet.base/prompts/submodules/user_final_instructions/8000_recent_state_changes.prompt",
+    "file": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\SkyrimNet - Beta 26 RC4\\SKSE\\Plugins\\SkyrimNet\\library\\skyrimnet.base\\prompts\\submodules\\user_final_instructions\\8000_recent_state_changes.prompt",
+    "line": 15,
+    "text": "{% set hasCuirass = equipment.body %}"
+  },
+  {
+    "relative": "library/skyrimnet.base/prompts/submodules/user_final_instructions/8000_recent_state_changes.prompt",
+    "file": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\SkyrimNet - Beta 26 RC4\\SKSE\\Plugins\\SkyrimNet\\library\\skyrimnet.base\\prompts\\submodules\\user_final_instructions\\8000_recent_state_changes.prompt",
+    "line": 17,
+    "text": "{% set cuirassName = equipment.body.name %}"
+  },
+  {
+    "relative": "original_prompts/characters/battlemage_ancel_vaugier_c21.prompt",
+    "file": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\SeverActions 3.9.14 - Beta 25\\SKSE\\Plugins\\SkyrimNet\\original_prompts\\characters\\battlemage_ancel_vaugier_c21.prompt",
+    "line": 5,
+    "text": "{% block background %}Ancel was born in Wayrest to a family of no particular consequence and grew up among people who settled everything with contracts and none of it with hands. He crossed into Cyrodiil at twenty and took the Legion oath there, and the war college found his ice inside a season - not the biggest talent in the cohort, but the finest, the sort that draws a line exactly where it is told to. That precision is the whole trouble. Frost is not a crude school in his hands; it is a series of decisions made faster than thought, and every"
+  },
+  {
+    "relative": "original_prompts/characters/battlemage_junia_merula_c29.prompt",
+    "file": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\SeverActions 3.9.14 - Beta 25\\SKSE\\Plugins\\SkyrimNet\\original_prompts\\characters\\battlemage_junia_merula_c29.prompt",
+    "line": 5,
+    "text": "{% block background %}Junia grew up on the mole at a Gold Coast anchorage near Anvil, where her mother held a retainer from a shipping house to read the season for its manifests. By nine she could work the weather-glass and call a backing wind; by twelve she was being paid a copper a forecast by fishermen who trusted the daughter over the mother because the daughter was cheaper. The storm talent came out of that trade rather than into it, and it came out large. She went to the Legion's war college in her early twenties, arrived late by the stan"
+  },
+  {
+    "relative": "external/severause.severactions/prompts/sever_retainer_worklife.prompt",
+    "file": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\SeverActions 3.9.14 - Beta 25\\SKSE\\Plugins\\SkyrimNet\\external\\severause.severactions\\prompts\\sever_retainer_worklife.prompt",
+    "line": 56,
+    "text": "What is eating at them (let this color the whole entry — it is the season the week happened in): {{ grievance }}"
+  },
+  {
+    "relative": "external/severause.severactions/prompts/submodules/character_bio/0075_severactions_merchant.prompt",
+    "file": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\SeverActions 3.9.14 - Beta 25\\SKSE\\Plugins\\SkyrimNet\\external\\severause.severactions\\prompts\\submodules\\character_bio\\0075_severactions_merchant.prompt",
+    "line": 4,
+    "text": "{% set _in_sexlab = get_faction_rank(actorUUID, \"SexLabAnimatingFaction\") >= 0 %}"
+  },
+  {
+    "relative": "external/severause.severactions/prompts/submodules/character_bio/0075_severactions_merchant.prompt",
+    "file": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\SeverActions 3.9.14 - Beta 25\\SKSE\\Plugins\\SkyrimNet\\external\\severause.severactions\\prompts\\submodules\\character_bio\\0075_severactions_merchant.prompt",
+    "line": 8,
+    "text": "{% if merchant_inventory.items and length(merchant_inventory.items) > 0 %}"
+  },
+  {
+    "relative": "external/severause.severactions/prompts/submodules/character_bio/0075_severactions_merchant.prompt",
+    "file": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\SeverActions 3.9.14 - Beta 25\\SKSE\\Plugins\\SkyrimNet\\external\\severause.severactions\\prompts\\submodules\\character_bio\\0075_severactions_merchant.prompt",
+    "line": 11,
+    "text": "{% for item in merchant_inventory.items %}"
+  },
+  {
+    "relative": "external/severause.severactions/prompts/submodules/character_bio/0180_severactions_nearbyref.prompt",
+    "file": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\SeverActions 3.9.14 - Beta 25\\SKSE\\Plugins\\SkyrimNet\\external\\severause.severactions\\prompts\\submodules\\character_bio\\0180_severactions_nearbyref.prompt",
+    "line": 9,
+    "text": "{% set _in_sexlab = get_faction_rank(actorUUID, \"SexLabAnimatingFaction\") >= 0 %}"
+  },
+  {
+    "relative": "external/severause.severactions/prompts/submodules/character_bio/0181_severactions_nearbyref_action.prompt",
+    "file": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\SeverActions 3.9.14 - Beta 25\\SKSE\\Plugins\\SkyrimNet\\external\\severause.severactions\\prompts\\submodules\\character_bio\\0181_severactions_nearbyref_action.prompt",
+    "line": 15,
+    "text": "{% set _in_sexlab = get_faction_rank(actorUUID, \"SexLabAnimatingFaction\") >= 0 %}"
+  },
+  {
+    "relative": "external/severause.severactions/prompts/submodules/system_head/0260_severactions_engaged_participants.prompt",
+    "file": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\SeverActions 3.9.14 - Beta 25\\SKSE\\Plugins\\SkyrimNet\\external\\severause.severactions\\prompts\\submodules\\system_head\\0260_severactions_engaged_participants.prompt",
+    "line": 39,
+    "text": "{% if get_faction_rank(_nUUID, \"SexLabAnimatingFaction\") >= 0 or get_faction_rank(_nUUID, \"OStimExcitementFaction\") >= 0 %}"
+  },
+  {
+    "relative": "external/severause.severactions/prompts/submodules/system_head/0260_severactions_engaged_participants.prompt",
+    "file": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\SeverActions 3.9.14 - Beta 25\\SKSE\\Plugins\\SkyrimNet\\external\\severause.severactions\\prompts\\submodules\\system_head\\0260_severactions_engaged_participants.prompt",
+    "line": 47,
+    "text": "{% set _playerOccupied = _playerUUID != 0 and (get_faction_rank(_playerUUID, \"SexLabAnimatingFaction\") >= 0 or get_faction_rank(_playerUUID, \"OStimExcitementFaction\") >= 0) %}"
+  },
+  {
+    "relative": "external/local.legacy-npc-bios/prompts/characters/braste_0d4.prompt",
+    "file": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\SkyrimNet - Beta 25 Local Compatibility\\SKSE\\Plugins\\SkyrimNet\\external\\local.legacy-npc-bios\\prompts\\characters\\braste_0D4.prompt",
+    "line": 5,
+    "text": "{% block background %}Born and raised in Highreach, Braste learned weaving from her mother, a tradition passed through generations of Nord women in her family. She refined her craft during the harsh winters when outdoor work was impossible, developing techniques specifically suited to creating warm, durable fabrics that withstand Skyrim's brutal climate. Her secondary work at the Bread & Mortar bakery began as a favor to the owner during a busy festival season, but her dexterous hands proved so valuable that she became a regular fixture there, "
+  },
+  {
+    "relative": "external/local.legacy-npc-bios/prompts/characters/isobel_322.prompt",
+    "file": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\SkyrimNet - Beta 25 Local Compatibility\\SKSE\\Plugins\\SkyrimNet\\external\\local.legacy-npc-bios\\prompts\\characters\\isobel_322.prompt",
+    "line": 5,
+    "text": "{% block background %}Born in Kvatch after the Great War, Isobel grew up in a city that venerates heroes, particularly the Hero of Kvatch. As the firstborn daughter of the Star-Blood Forge's caretakers, she is destined to inherit this legendary forge built after the Oblivion Crisis. The forge is rumored to be built over a well of Daedric blood and haunted by her ancestor who died crafting weapons during the Daedric invasion. Before coming to Falkreath, she apprenticed in Solitude under Beirand, deliberately concealing her prestigious lineage to"
+  },
+  {
+    "relative": "prompts/dynamic_character_bio.prompt",
+    "file": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\SkyrimNet - Beta25 Test Runtime 20260927\\SKSE\\Plugins\\SkyrimNet\\prompts\\dynamic_character_bio.prompt",
+    "line": 544,
+    "text": "{% set _in_sexlab = get_faction_rank(actorUUID, \"SexLabAnimatingFaction\") >= 0 %}"
+  },
+  {
+    "relative": "prompts/dynamic_character_bio.prompt",
+    "file": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\SkyrimNet - Beta25 Test Runtime 20260927\\SKSE\\Plugins\\SkyrimNet\\prompts\\dynamic_character_bio.prompt",
+    "line": 548,
+    "text": "{% if merchant_inventory.items and length(merchant_inventory.items) > 0 %}"
+  },
+  {
+    "relative": "prompts/dynamic_character_bio.prompt",
+    "file": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\SkyrimNet - Beta25 Test Runtime 20260927\\SKSE\\Plugins\\SkyrimNet\\prompts\\dynamic_character_bio.prompt",
+    "line": 551,
+    "text": "{% for item in merchant_inventory.items %}"
+  },
+  {
+    "relative": "prompts/dynamic_character_bio.prompt",
+    "file": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\SkyrimNet - Beta25 Test Runtime 20260927\\SKSE\\Plugins\\SkyrimNet\\prompts\\dynamic_character_bio.prompt",
+    "line": 1281,
+    "text": "{% set _in_sexlab = get_faction_rank(actorUUID, \"SexLabAnimatingFaction\") >= 0 %}"
+  },
+  {
+    "relative": "prompts/dynamic_character_bio.prompt",
+    "file": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\SkyrimNet - Beta25 Test Runtime 20260927\\SKSE\\Plugins\\SkyrimNet\\prompts\\dynamic_character_bio.prompt",
+    "line": 1356,
+    "text": "{% set _in_sexlab = get_faction_rank(actorUUID, \"SexLabAnimatingFaction\") >= 0 %}"
+  },
+  {
+    "relative": "prompts/characters/battlemage_ancel_vaugier_c21.prompt",
+    "file": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\SkyrimNet - Beta25 Test Runtime 20260927\\SKSE\\Plugins\\SkyrimNet\\prompts\\characters\\battlemage_ancel_vaugier_c21.prompt",
+    "line": 5,
+    "text": "{% block background %}Ancel was born in Wayrest to a family of no particular consequence and grew up among people who settled everything with contracts and none of it with hands. He crossed into Cyrodiil at twenty and took the Legion oath there, and the war college found his ice inside a season - not the biggest talent in the cohort, but the finest, the sort that draws a line exactly where it is told to. That precision is the whole trouble. Frost is not a crude school in his hands; it is a series of decisions made faster than thought, and every"
+  },
+  {
+    "relative": "prompts/characters/battlemage_junia_merula_c29.prompt",
+    "file": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\SkyrimNet - Beta25 Test Runtime 20260927\\SKSE\\Plugins\\SkyrimNet\\prompts\\characters\\battlemage_junia_merula_c29.prompt",
+    "line": 5,
+    "text": "{% block background %}Junia grew up on the mole at a Gold Coast anchorage near Anvil, where her mother held a retainer from a shipping house to read the season for its manifests. By nine she could work the weather-glass and call a backing wind; by twelve she was being paid a copper a forecast by fishermen who trusted the daughter over the mother because the daughter was cheaper. The storm talent came out of that trade rather than into it, and it came out large. She went to the Legion's war college in her early twenties, arrived late by the stan"
+  },
+  {
+    "relative": "prompts/characters/braste_0d4.prompt",
+    "file": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\SkyrimNet - Beta25 Test Runtime 20260927\\SKSE\\Plugins\\SkyrimNet\\prompts\\characters\\braste_0D4.prompt",
+    "line": 5,
+    "text": "{% block background %}Born and raised in Highreach, Braste learned weaving from her mother, a tradition passed through generations of Nord women in her family. She refined her craft during the harsh winters when outdoor work was impossible, developing techniques specifically suited to creating warm, durable fabrics that withstand Skyrim's brutal climate. Her secondary work at the Bread & Mortar bakery began as a favor to the owner during a busy festival season, but her dexterous hands proved so valuable that she became a regular fixture there, "
+  },
+  {
+    "relative": "prompts/characters/isobel_322.prompt",
+    "file": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\SkyrimNet - Beta25 Test Runtime 20260927\\SKSE\\Plugins\\SkyrimNet\\prompts\\characters\\isobel_322.prompt",
+    "line": 5,
+    "text": "{% block background %}Born in Kvatch after the Great War, Isobel grew up in a city that venerates heroes, particularly the Hero of Kvatch. As the firstborn daughter of the Star-Blood Forge's caretakers, she is destined to inherit this legendary forge built after the Oblivion Crisis. The forge is rumored to be built over a well of Daedric blood and haunted by her ancestor who died crafting weapons during the Daedric invasion. Before coming to Falkreath, she apprenticed in Solitude under Beirand, deliberately concealing her prestigious lineage to"
+  },
+  {
+    "relative": "prompts/characters/lemkil_6ad.prompt",
+    "file": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\SkyrimNet - Beta25 Test Runtime 20260927\\SKSE\\Plugins\\SkyrimNet\\prompts\\characters\\lemkil_6AD.prompt",
+    "line": 25,
+    "text": "{% block occupation %}Tends his farm daily from dawn to dusk, growing potatoes, leeks, cabbages, gourds, and wheat; occasionally hires help during harvest season and spends evenings drinking at the Frostfruit Inn.{% endblock %}"
+  },
+  {
+    "relative": "overlay/prompts/characters/battlemage_ancel_vaugier_c21.prompt",
+    "file": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\SkyrimNet - Beta25 Test Runtime 20260927\\SKSE\\Plugins\\SkyrimNet\\overlay\\prompts\\characters\\battlemage_ancel_vaugier_c21.prompt",
+    "line": 5,
+    "text": "{% block background %}Ancel was born in Wayrest to a family of no particular consequence and grew up among people who settled everything with contracts and none of it with hands. He crossed into Cyrodiil at twenty and took the Legion oath there, and the war college found his ice inside a season - not the biggest talent in the cohort, but the finest, the sort that draws a line exactly where it is told to. That precision is the whole trouble. Frost is not a crude school in his hands; it is a series of decisions made faster than thought, and every"
+  },
+  {
+    "relative": "overlay/prompts/characters/battlemage_junia_merula_c29.prompt",
+    "file": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\SkyrimNet - Beta25 Test Runtime 20260927\\SKSE\\Plugins\\SkyrimNet\\overlay\\prompts\\characters\\battlemage_junia_merula_c29.prompt",
+    "line": 5,
+    "text": "{% block background %}Junia grew up on the mole at a Gold Coast anchorage near Anvil, where her mother held a retainer from a shipping house to read the season for its manifests. By nine she could work the weather-glass and call a backing wind; by twelve she was being paid a copper a forecast by fishermen who trusted the daughter over the mother because the daughter was cheaper. The storm talent came out of that trade rather than into it, and it came out large. She went to the Legion's war college in her early twenties, arrived late by the stan"
+  },
+  {
+    "relative": "library/skyrimnet.bios-3dnpc/prompts/characters/isobel_322.prompt",
+    "file": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\SkyrimNet - Beta25 Test Runtime 20260927\\SKSE\\Plugins\\SkyrimNet\\library\\skyrimnet.bios-3dnpc\\prompts\\characters\\isobel_322.prompt",
+    "line": 5,
+    "text": "{% block background %}Born in Kvatch after the Great War, Isobel grew up in a city that venerates heroes, particularly the Hero of Kvatch. As the firstborn daughter of the Star-Blood Forge's caretakers, she is destined to inherit this legendary forge built after the Oblivion Crisis. The forge is rumored to be built over a well of Daedric blood and haunted by her ancestor who died crafting weapons during the Daedric invasion. Before coming to Falkreath, she apprenticed in Solitude under Beirand, deliberately concealing her prestigious lineage to"
+  }
+]

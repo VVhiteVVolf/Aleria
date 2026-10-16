@@ -1,0 +1,21 @@
+{
+  "decorators": [
+    "render_character_profile",
+    "render_template",
+    "decnpc",
+    "units_to_meters",
+    "length"
+  ],
+  "errors": [],
+  "isValid": true,
+  "variables": [
+    "npc.name",
+    "location",
+    "_player_said",
+    "dialogue_response",
+    "action.name",
+    "action.parameterSchema",
+    "action.description"
+  ],
+  "warnings": []
+}

@@ -1,0 +1,26 @@
+{
+  "status": "INSTALLED_AWAITING_IN_GAME_TEST",
+  "installed_at": "2026-10-03T10:55:07.689631",
+  "profile": "Nolvus Awakening - SkyrimNet Beta25 Test",
+  "files": [
+    {
+      "relative_path": "Scripts/skynet_WheelMenu.pex",
+      "previous_winner": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\SkyrimNet - Beta 25.1 Hotfix\\Scripts\\skynet_WheelMenu.pex",
+      "previous_sha256": "4daa33f810895545276f53dc2ed4cb9cce0d0561e4391ac449f3bf3098ed29e8",
+      "target": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\SkyrimNet - Beta 25 Local Compatibility\\Scripts\\skynet_WheelMenu.pex",
+      "target_previously_existed": false,
+      "candidate_sha256": "4fa12f79c598af8c0018a3a8d3fba8c87bd73c27cf43118bc84abd705af26983"
+    },
+    {
+      "relative_path": "Source/Scripts/skynet_WheelMenu.psc",
+      "previous_winner": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\SkyrimNet - Beta 25.1 Hotfix\\Source\\Scripts\\skynet_WheelMenu.psc",
+      "previous_sha256": "6f85eddaeffca7ccec7951a38f3cf0f0eba104a36373c163f709d184bb06094f",
+      "target": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\SkyrimNet - Beta 25 Local Compatibility\\Source\\Scripts\\skynet_WheelMenu.psc",
+      "target_previously_existed": false,
+      "candidate_sha256": "f69279b13c837307a0eb5ead38ef99d72b4817c8058f2a362fa85eb90cd8a056"
+    }
+  ],
+  "profile_files_modified": false,
+  "prompts_modified": false,
+  "restore": "Remove only the two installed overlay files if target_previously_existed=false; otherwise restore backup/overlay."
+}

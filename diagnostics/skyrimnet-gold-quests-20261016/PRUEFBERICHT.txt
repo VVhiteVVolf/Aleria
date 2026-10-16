@@ -1,0 +1,73 @@
+Prüfung Gold und Quests – 16.10.2026
+Grundlage: SkyrimNet.snapshot.log bis 02:06:04 und lesender API-/Script-Abgleich.
+Keine Einstellungen, Quests, Goldbestände oder Spielstände verändert.
+
+GOLD / WIRTSCHAFT
+Korrilan, 01:50:17–29:
+Dialog vereinbart 50 Gold pro Woche für Guild protection and services.
+198070: Root-Auswahl Economy mit korrekter Zahlungsrichtung.
+198501: Detail-Auswahl CreateRecurringDebt, amount=50, creditor=Alawen,
+        debtor=Korrilan, intervalDays=7.
+198540: Aktion tatsächlich ausgeführt.
+198555–198564: SeverActions_Debt::CreateRecurringDebt_Execute aufgerufen.
+198899: Ergebnisereignis debt_created:
+        Korrilan will pay Alawen 50 gold weekly for Guild protection and services.
+Damit ist die Vereinbarung nicht nur Dialog: Die Mechanik wurde aufgerufen
+und meldet die Anlage als erfolgreich. Dies ist kein Nachweis, dass bereits
+50 Gold ausgezahlt wurden oder künftig jede fällige Rate eingeht.
+
+Im untersuchten Zeitraum nach der Umstellung keine ausgeführte Aktion
+GiveGold, CollectPayment, RepayDebt, SellItem oder BuyItem mit bestätigtem
+Goldtransfer gefunden. Die Goldaktionen sind registriert und aktiviert.
+Frühere synthetische Tests bestätigten die Auswahl von GiveGold und SellItem
+mit korrekten Parametern, ersetzen aber keinen realen Goldtransfer.
+Ein sofortiger Transfer von fünf Gold bei Korrilan wurde als Spieltest angefragt.
+
+Ein gespeichertes trade_complete-Ereignis nennt 111 ausgegebene Gold für
+Colovian Brandy. Ohne zugehörigen SkyrimNet-Verkaufsaktionsauftrag ist dies
+kein Beleg für eine KI-gesteuerte Zahlung; es wird hier nicht dafür gewertet.
+
+QUESTS
+Die aktuelle Konfiguration aktiviert DialogueActions und EnableQuest sowie
+die übrigen Dienstekategorien. Questaktionen sind nicht pauschal abgeschaltet.
+
+Rise in the East / MS10 / 0001DBFC:
+133897: 01:25:56 Queststage 20 erreicht.
+136985: 01:28:27 [QUEST-TIF] src=menu, Orthus Endario,
+        info=0001E1B0, TIF__0001E1B0, setsStage=30.
+137241: 01:28:38 Queststage 30 tatsächlich erreicht.
+Der belegte Fortschritt stammt aus dem normalen Dialogmenü. Im Zeitraum
+nach der Umstellung kein TriggerDialogueLine-Aufruf mit zugehörigem echten
+Questfortschritt gefunden. Deshalb noch kein positiver SkyrimNet-Questtest.
+
+Brynjolf / Balimund, 02:02:
+Die Aufforderung, Balimund als Partner für die Gilde zu gewinnen, steht im
+Gespräch. Im vorliegenden Verlauf wird sie durch eine direkte Erzählanweisung
+des Spielers vorgegeben; sie ist kein belegter neu entdeckter Spielquestzweig.
+234817–234829: Die tatsächlich angebotenen TriggerDialogueLine-Einträge sind
+nur zwei andere Interaktionen (gemeinsam trinken / Beziehungsfrage).
+Kein verfügbarer Questcode passt zum Balimund-Partnerschaftsauftrag.
+235039: Aktionsauswertung wählt None. Ein willkürlich gewählter anderer Code
+würde die falsche Interaktion auslösen. Gesprochener Auftrag und echtes
+Journal-/Questscript müssen daher weiterhin unterschieden werden.
+Die Partnerschaft kann als Rollenspielidee verfolgt und gegebenenfalls mit
+passenden Wirtschaftsaktionen umgesetzt werden; ein eigener Journalquest
+entsteht dadurch nicht automatisch.
+
+ZUSÄTZLICHER BEFUND
+Queststage-Änderungen werden im Engine-Log erkannt, aber als SkyrimNet-Ereignis
+verworfen: Event type quest_stage disabled. Das ist von EnableQuest und dem
+Ausführen eines Questdialogs verschieden. Es kann die automatische Reaktion
+auf Questfortschritte beschränken, beweist aber keinen Fehler der Questaktion.
+Nicht pauschal eingeschaltet: Im geprüften Zeitraum enthalten die Stage-
+Meldungen u.a. 30 Wyrmstooth-Starter-Meldungen und 35 unbenannte Meldungen.
+Ungefiltertes Einschalten könnte unnötige Reaktionen und Modellkosten auslösen.
+
+ERGEBNIS
+Wiederkehrende 50-Gold-Vereinbarung: als erfolgreiche Aktion belegt.
+Sofortige Goldübertragung: noch nicht im Spiel belegt.
+Echter Questfortschritt über Standarddialog: belegt.
+Echter Questfortschritt über SkyrimNet nach Umstellung: noch nicht belegt.
+Balimund-Auftrag: ohne angebotenen passenden Questzweig kein ausführbarer
+Journalquest. Für einen belastbaren Test ist ein aktuell verfügbarer echter
+Questdialog eines konkreten NPCs nötig; keine Queststufen künstlich erzwingen.

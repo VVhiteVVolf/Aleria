@@ -4,6 +4,7 @@ import { HttpsError, onCall } from 'firebase-functions/v2/https';
 import { getHerausforderungValidationIssues, normalizeHerausforderungEvent } from '../generated/herausforderung/herausforderung-model.js';
 import { bindHerausforderungCombatContext } from './herausforderung-combat-effects.js';
 import { assertHerausforderungRewardAuthority, prepareHerausforderungRewards } from './herausforderung-rewards.js';
+import { bindHerausforderungTarget } from './herausforderung-target.js';
 
 const MAX_COMMENT_BYTES = 700_000;
 
@@ -51,6 +52,7 @@ async function updateHerausforderung({ database, request, metadata, event, entry
     await bindHerausforderungCombatContext(database, transaction, event, entryId, {
       encounterId: original.herausforderung.combatBound ? original.herausforderung.combatContext?.encounterId : ''
     });
+    await bindHerausforderungTarget(database, transaction, event);
     await prepareHerausforderungRewards(database, transaction, event);
     transaction.update(ref, { herausforderung: event, text, herausforderungFingerprint: fingerprint,
       herausforderungRevision: revision + 1,
@@ -88,6 +90,7 @@ export async function commitHerausforderungOperation(request, { database = getFi
       }
     }
     await bindHerausforderungCombatContext(database, transaction, event, entryId);
+    await bindHerausforderungTarget(database, transaction, event);
     await prepareHerausforderungRewards(database, transaction, event);
     transaction.create(ref, {
       entryId,

@@ -2,7 +2,7 @@ import { getBuiltinCreatureTemplates } from '../creatures/creature-catalog.js?v=
 import { resolveCombatProfile } from './combat-profile-resolver.js?v=20260928-equipment-art-v4';
 import { CombatResolutionService } from './combat-resolution-service.js?v=20260928-equipment-art-v4';
 import { getResolutionHitPointState, overlayCombatHitPointState } from './combat-state-model.js?v=20260928-equipment-art-v4';
-import { parseDamageFormula } from './rules/combat-mvp-rules.js?v=20260905-party-combat-v1';
+import { buildDamageRollPlan } from './rules/combat-mvp-rules.js?v=20260905-party-combat-v1';
 
 const TEAM_EEL = 'Schwarzer Zitteraal';
 const TEAM_DRAIG = 'Draig';
@@ -30,13 +30,13 @@ class DeterministicBrandhofDice {
   }
 
   async rollDamage({ damageFormula, bonus, critical }) {
-    const parsed = parseDamageFormula(damageFormula);
-    const count = parsed.diceCount * (critical ? 2 : 1);
-    const keptDice = Array.from({ length: count }, (_, index) => Math.max(1, parsed.sides - ((this.turn + index) % 3)));
-    const modifier = parsed.fixedModifier + Number(bonus || 0);
+    const plan = buildDamageRollPlan(damageFormula, bonus, critical);
+    const keptDice = plan.terms.flatMap(term => Array.from({ length: term.diceCount }, (_, index) => Math.max(1, term.sides - ((this.turn + index) % 3))));
+    const modifier = plan.modifier;
     return {
       id: `brandhof-damage-${this.turn}`,
-      notation: `${count}d${parsed.sides}${modifier ? `${modifier > 0 ? '+' : ''}${modifier}` : ''}`,
+      notation: plan.notation,
+      ...(plan.criticalDamage ? { criticalDamage: plan.criticalDamage } : {}),
       keptDice,
       modifier,
       total: Math.max(0, keptDice.reduce((sum, value) => sum + value, 0) + modifier),

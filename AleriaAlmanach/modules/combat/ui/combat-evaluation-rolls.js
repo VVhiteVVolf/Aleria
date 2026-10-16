@@ -1,5 +1,6 @@
 import { escapeCombatHtml as escape, combatTooltipAttributes } from './combat-presentation-markup.js';
 import { getEvaluationAttackRows, getRecordedDamageInstances } from './combat-evaluation-model.js';
+import { describeRecordedDamageRoll } from './combat-damage-presentation.js';
 
 export function evaluationRollText(roll = {}, label = 'Angriff') {
   const dice = roll.diceResults?.length ? `W20 [${roll.diceResults.join(', ')}] ${Number(roll.modifier) >= 0 ? '+' : ''}${roll.modifier ?? 0}` : roll.notation || 'Wurf nicht einzeln gespeichert';
@@ -8,7 +9,7 @@ export function evaluationRollText(roll = {}, label = 'Angriff') {
 }
 
 const total = (values, key) => values.length && values.every(v => Number.isFinite(Number(v[key])) && v[key] != null) ? values.reduce((sum,v) => sum+Number(v[key]),0) : null;
-const damageRollText = (roll = {}, notation = '') => `${roll.notation || notation}${(roll.diceResults || roll.keptDice)?.length ? ` · Würfel [${(roll.diceResults || roll.keptDice).join(', ')}]` : ''}`;
+const damageRollText = describeRecordedDamageRoll;
 
 export function renderEvaluationAttackRows(resolution = {}) {
   const rows = getEvaluationAttackRows(resolution);

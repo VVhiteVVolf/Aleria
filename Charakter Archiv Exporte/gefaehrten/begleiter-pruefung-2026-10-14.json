@@ -1,0 +1,1563 @@
+{
+  "checkedAt": "2026-10-14T11:43:07.127Z",
+  "verified": true,
+  "animals": 53,
+  "personallyLinked": 52,
+  "crewCompanion": "Uffel",
+  "imagesVerified": 53,
+  "bestiaryTargetsVerified": 24,
+  "masterPushed": false,
+  "newCreature": {
+    "completedAt": "2026-10-14T11:38:36.268Z",
+    "name": "Astrid",
+    "creatureId": "companion-skalli-astrid",
+    "owner": "Skalli Varulv",
+    "ownerCharacterId": "person--haus-varulv--skalli-varulv",
+    "level": 3,
+    "bestiaryReference": {
+      "id": "tiere/pferde/zuchtbuch/roh-rhyfel",
+      "name": "Roh-Rhyfel",
+      "url": "/Bestiarium/tiere/pferde/zuchtbuch/index.html#kreuzung-ceffyl-mit-hest"
+    },
+    "portrait": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-varulv%2Fc8729937-92ea-482e-961c-9eea55d49798%2Foriginal.png?alt=media",
+    "inventoryLinked": true,
+    "namesakeHistorySaved": true,
+    "originalImageVerified": true,
+    "otherOwnerFieldsUnchanged": true,
+    "masterPushed": false,
+    "verified": true
+  },
+  "pendingPublication": "Der lokale Roh-Rhyfel-Katalogverweis und die ergänzte Zuchtbuchbeschreibung sind noch nicht auf master veröffentlicht. Die aktuelle Onlineoberfläche zeigt Astrids korrekte Abstammungsverweise auf Hest und Ceffyl; Roh-Rhyfel ist als Rasse und kanonischer Zuchtbuchverweis gespeichert.",
+  "assignments": [
+    {
+      "id": "companion-eldfaxi",
+      "name": "Eldfaxi",
+      "ownerId": "ksJQe8Ai4KbRE9jOAvb7",
+      "owner": "Freya Skald",
+      "inventoryCards": 1,
+      "inventoryItems": 1,
+      "portrait": "https://i.imgur.com/kCTOjgJ.png",
+      "bestiaryReference": {
+        "id": "tiere/pferde/hest",
+        "name": "Hest",
+        "url": "/Bestiarium/tiere/pferde/hest/index.html"
+      },
+      "bestiaryAncestry": null
+    },
+    {
+      "id": "companion-gaul",
+      "name": "Gaul",
+      "ownerId": "FKiXsSWVoV74rTgmpPip",
+      "owner": "Fenrir Varulv",
+      "inventoryCards": 1,
+      "inventoryItems": 1,
+      "portrait": "https://i.imgur.com/HyaKYxH.png",
+      "bestiaryReference": {
+        "id": "tiere/pferde/hest",
+        "name": "Hest",
+        "url": "/Bestiarium/tiere/pferde/hest/index.html"
+      },
+      "bestiaryAncestry": null
+    },
+    {
+      "id": "companion-duncan-carreg",
+      "name": "Carreg",
+      "ownerId": "tmfBA2zPTc88EMMGkyyA",
+      "owner": "Duncan Gafyr",
+      "inventoryCards": 1,
+      "inventoryItems": 1,
+      "portrait": "/AleriaAlmanach/assets/companions/haus-gafyr/carreg.png",
+      "bestiaryReference": {
+        "id": "tiere/pferde/zuchtbuch/ritterschimmer",
+        "name": "Ritterschimmer",
+        "url": "/Bestiarium/tiere/pferde/zuchtbuch/index.html#kreuzung-ceffyl-mit-herzogsschimmer"
+      },
+      "bestiaryAncestry": null
+    },
+    {
+      "id": "companion-trevor-bwmbo",
+      "name": "Bwmbo",
+      "ownerId": "0Sku8euk5jhlWebdsskI",
+      "owner": "Trevor Gwyvern",
+      "inventoryCards": 1,
+      "inventoryItems": 1,
+      "portrait": "/AleriaAlmanach/assets/ship-crews/idwals-schiffsmannschaft/companions/bwmbo.png",
+      "bestiaryReference": {
+        "id": "tiere/vieh/haustiere/katzen/cenyric",
+        "name": "Cenyric",
+        "url": "/Bestiarium/tiere/vieh/haustiere/katzen/cenyric/index.html"
+      },
+      "bestiaryAncestry": null
+    },
+    {
+      "id": "companion-trevor-uffel",
+      "name": "Uffel",
+      "ownerId": null,
+      "owner": "Gesamte Mannschaft",
+      "inventoryCards": 0,
+      "inventoryItems": 0,
+      "portrait": "/AleriaAlmanach/assets/ship-crews/idwals-schiffsmannschaft/companions/uffel.png",
+      "bestiaryReference": {
+        "id": "tiere/vieh/haustiere/katzen/cenyric",
+        "name": "Cenyric",
+        "url": "/Bestiarium/tiere/vieh/haustiere/katzen/cenyric/index.html"
+      },
+      "bestiaryAncestry": null
+    },
+    {
+      "id": "companion-trevor-struppi",
+      "name": "Struppi",
+      "ownerId": "0Sku8euk5jhlWebdsskI",
+      "owner": "Trevor Gwyvern",
+      "inventoryCards": 1,
+      "inventoryItems": 1,
+      "portrait": "/AleriaAlmanach/assets/companions/haus-gwyvern/struppi.png",
+      "bestiaryReference": {
+        "id": "tiere/pferde/rhyfel",
+        "name": "Rhyfel",
+        "url": "/Bestiarium/tiere/pferde/rhyfel/index.html"
+      },
+      "bestiaryAncestry": null
+    },
+    {
+      "id": "companion-huw-dyreth",
+      "name": "Dyreth",
+      "ownerId": "person--haus-gwyvern--huw-gwyvern",
+      "owner": "Huw Gwyvern",
+      "inventoryCards": 1,
+      "inventoryItems": 1,
+      "portrait": "/AleriaAlmanach/assets/companions/haus-gwyvern/dyreth.png",
+      "bestiaryReference": {
+        "id": "tiere/pferde/rhyfel",
+        "name": "Rhyfel",
+        "url": "/Bestiarium/tiere/pferde/rhyfel/index.html"
+      },
+      "bestiaryAncestry": null
+    },
+    {
+      "id": "companion-tegwen-uffyrae",
+      "name": "Uffyrae",
+      "ownerId": "person--haus-gwyvern--tegwen-gwyvern",
+      "owner": "Tegwen Gwyvern",
+      "inventoryCards": 1,
+      "inventoryItems": 1,
+      "portrait": "/AleriaAlmanach/assets/companions/haus-gwyvern/uffyrae.png",
+      "bestiaryReference": {
+        "id": "tiere/pferde/rhyfel",
+        "name": "Rhyfel",
+        "url": "/Bestiarium/tiere/pferde/rhyfel/index.html"
+      },
+      "bestiaryAncestry": null
+    },
+    {
+      "id": "companion-hrolf-skarn",
+      "name": "Skarn",
+      "ownerId": "0caPdKpJoVazPUuu2KMu",
+      "owner": "Hrolf Wolfshorn",
+      "inventoryCards": 1,
+      "inventoryItems": 1,
+      "portrait": "/AleriaAlmanach/assets/companions/wolfshorn/skarn.png",
+      "bestiaryReference": {
+        "id": "tiere/raubtiere/woelfe/gramnir",
+        "name": "Gramnir",
+        "url": "/Bestiarium/tiere/raubtiere/woelfe/gramnir/index.html"
+      },
+      "bestiaryAncestry": null
+    },
+    {
+      "id": "companion-hrolf-myrk",
+      "name": "Myrk",
+      "ownerId": "0caPdKpJoVazPUuu2KMu",
+      "owner": "Hrolf Wolfshorn",
+      "inventoryCards": 1,
+      "inventoryItems": 1,
+      "portrait": "/AleriaAlmanach/assets/companions/wolfshorn/myrk.png",
+      "bestiaryReference": {
+        "id": "tiere/pferde/hest",
+        "name": "Hest",
+        "url": "/Bestiarium/tiere/pferde/hest/index.html"
+      },
+      "bestiaryAncestry": null
+    },
+    {
+      "id": "companion-halvar-lund",
+      "name": "Lund",
+      "ownerId": "wvBnM1mHYYXycW9nnza9",
+      "owner": "Halvar Wolfshorn",
+      "inventoryCards": 1,
+      "inventoryItems": 1,
+      "portrait": "/AleriaAlmanach/assets/companions/wolfshorn/lund.png",
+      "bestiaryReference": null,
+      "bestiaryAncestry": {
+        "references": [
+          {
+            "id": "tiere/pferde/hest",
+            "name": "Hest",
+            "url": "/Bestiarium/tiere/pferde/hest/index.html"
+          },
+          {
+            "id": "tiere/pferde/tirashan",
+            "name": "Tirashan",
+            "url": "/Bestiarium/tiere/pferde/tirashan/index.html"
+          }
+        ],
+        "notes": "Hest- und Tirashan-Abstammung; unzuverlässig dokumentierte Linie. Weitere Rassen sind möglich. Mischling, keine fest benannte Zucht."
+      }
+    },
+    {
+      "id": "companion-asgeir-haeppchen",
+      "name": "Häppchen",
+      "ownerId": "oUlhJyX6C4Q69mtLS9u1",
+      "owner": "Asgeir Wolfshorn",
+      "inventoryCards": 1,
+      "inventoryItems": 1,
+      "portrait": "/AleriaAlmanach/assets/companions/wolfshorn/haeppchen.png",
+      "bestiaryReference": {
+        "id": "tiere/pferde/hest",
+        "name": "Hest",
+        "url": "/Bestiarium/tiere/pferde/hest/index.html"
+      },
+      "bestiaryAncestry": null
+    },
+    {
+      "id": "companion-ylva-silberkrone",
+      "name": "Silberkrone",
+      "ownerId": "bSYZYAEOwiRgy44f6OmO",
+      "owner": "Ylva Wolfshorn",
+      "inventoryCards": 1,
+      "inventoryItems": 1,
+      "portrait": "/AleriaAlmanach/assets/companions/wolfshorn/silberkrone.png",
+      "bestiaryReference": {
+        "id": "tiere/pferde/hest",
+        "name": "Hest",
+        "url": "/Bestiarium/tiere/pferde/hest/index.html"
+      },
+      "bestiaryAncestry": null
+    },
+    {
+      "id": "companion-isobel-rhoslyn",
+      "name": "Rhoslyn",
+      "ownerId": "wnS8JOFUR3oS1izRzObH",
+      "owner": "Isobel Draig",
+      "inventoryCards": 1,
+      "inventoryItems": 1,
+      "portrait": "/AleriaAlmanach/assets/companions/haus-draig/rhoslyn.png",
+      "bestiaryReference": {
+        "id": "tiere/pferde/erlenglanz",
+        "name": "Erlenglanz",
+        "url": "/Bestiarium/tiere/pferde/erlenglanz/index.html"
+      },
+      "bestiaryAncestry": null
+    },
+    {
+      "id": "companion-neithon-cador",
+      "name": "Cador",
+      "ownerId": "6Gpz6nJaoL7yo9rFu85H",
+      "owner": "Neithon Draig",
+      "inventoryCards": 1,
+      "inventoryItems": 1,
+      "portrait": "/AleriaAlmanach/assets/companions/haus-draig/cador.png",
+      "bestiaryReference": {
+        "id": "tiere/pferde/zuchtbuch/eidwacht",
+        "name": "Eidwacht",
+        "url": "/Bestiarium/tiere/pferde/zuchtbuch/index.html#kreuzung-ceffyl-mit-equo"
+      },
+      "bestiaryAncestry": null
+    },
+    {
+      "id": "companion-odyar-morcant",
+      "name": "Morcant",
+      "ownerId": "7VjIYgifnq4uqNNfjzcM",
+      "owner": "Odyar Draig",
+      "inventoryCards": 1,
+      "inventoryItems": 1,
+      "portrait": "/AleriaAlmanach/assets/companions/haus-draig/morcant.png",
+      "bestiaryReference": {
+        "id": "tiere/pferde/ceffyl",
+        "name": "Ceffyl",
+        "url": "/Bestiarium/tiere/pferde/ceffyl/index.html"
+      },
+      "bestiaryAncestry": null
+    },
+    {
+      "id": "companion-rhys-lot",
+      "name": "Lot",
+      "ownerId": "9hurPRtv2yMJTYkAARkl",
+      "owner": "Rhys Draig",
+      "inventoryCards": 1,
+      "inventoryItems": 1,
+      "portrait": "/AleriaAlmanach/assets/companions/haus-draig/lot.png",
+      "bestiaryReference": {
+        "id": "tiere/pferde/zuchtbuch/edel-rhyfel",
+        "name": "Edel Rhyfel",
+        "url": "/Bestiarium/tiere/pferde/zuchtbuch/index.html#kreuzung-ceffyl-mit-rhyfel"
+      },
+      "bestiaryAncestry": null
+    },
+    {
+      "id": "companion-kane-aelwyn",
+      "name": "Aelwyn",
+      "ownerId": "HjDXMMexahez1G0rJrBE",
+      "owner": "Kane Draig",
+      "inventoryCards": 1,
+      "inventoryItems": 1,
+      "portrait": "/AleriaAlmanach/assets/companions/haus-draig/aelwyn.png",
+      "bestiaryReference": {
+        "id": "tiere/pferde/rhyfel",
+        "name": "Rhyfel",
+        "url": "/Bestiarium/tiere/pferde/rhyfel/index.html"
+      },
+      "bestiaryAncestry": null
+    },
+    {
+      "id": "companion-carys-alaw",
+      "name": "Alaw",
+      "ownerId": "yLJ0Rr5suTSLa42sL743",
+      "owner": "Carys Draig",
+      "inventoryCards": 1,
+      "inventoryItems": 1,
+      "portrait": "/AleriaAlmanach/assets/companions/haus-draig/alaw.png",
+      "bestiaryReference": {
+        "id": "tiere/pferde/tirashan",
+        "name": "Tirashan",
+        "url": "/Bestiarium/tiere/pferde/tirashan/index.html"
+      },
+      "bestiaryAncestry": null
+    },
+    {
+      "id": "companion-gethin-vivian",
+      "name": "Vivian",
+      "ownerId": "person--haus-draig--gethin-1722-draig",
+      "owner": "Gethin Draig",
+      "inventoryCards": 1,
+      "inventoryItems": 1,
+      "portrait": "/AleriaAlmanach/assets/companions/haus-draig/vivian.png",
+      "bestiaryReference": {
+        "id": "tiere/pferde/zuchtbuch/sonnenlaeufer",
+        "name": "Sonnenläufer",
+        "url": "/Bestiarium/tiere/pferde/zuchtbuch/index.html#kreuzung-aurelianer-mit-ceffyl"
+      },
+      "bestiaryAncestry": null
+    },
+    {
+      "id": "companion-isobel-pompoesa",
+      "name": "Fürstin Pompösa von Samtpfote",
+      "ownerId": "wnS8JOFUR3oS1izRzObH",
+      "owner": "Isobel Draig",
+      "inventoryCards": 1,
+      "inventoryItems": 1,
+      "portrait": "/AleriaAlmanach/assets/companions/haus-draig/pompoesa.png",
+      "bestiaryReference": {
+        "id": "tiere/vieh/haustiere/katzen/lethin",
+        "name": "Lethin",
+        "url": "/Bestiarium/tiere/vieh/haustiere/katzen/lethin/index.html"
+      },
+      "bestiaryAncestry": null
+    },
+    {
+      "id": "companion-carys-roisin",
+      "name": "Roisin",
+      "ownerId": "yLJ0Rr5suTSLa42sL743",
+      "owner": "Carys Draig",
+      "inventoryCards": 1,
+      "inventoryItems": 1,
+      "portrait": "/AleriaAlmanach/assets/companions/haus-draig/roisin.png",
+      "bestiaryReference": null,
+      "bestiaryAncestry": {
+        "references": [
+          {
+            "id": "tiere/vieh/haustiere/hunde/rhedwyr",
+            "name": "Rhedwyr",
+            "url": "/Bestiarium/tiere/vieh/haustiere/hunde/rhedwyr/index.html"
+          },
+          {
+            "id": "tiere/vieh/haustiere/hunde/trywydd",
+            "name": "Trywydd",
+            "url": "/Bestiarium/tiere/vieh/haustiere/hunde/trywydd/index.html"
+          }
+        ],
+        "notes": "Mischling aus Trywydd und Rhedwyr; keine eigenständige benannte Zuchtrasse."
+      }
+    },
+    {
+      "id": "TTi084whHoSwVfIO6lsa",
+      "name": "Betty",
+      "ownerId": "ujMjNxdOs1pnR2jGNus4",
+      "owner": "Myrddin Draig",
+      "inventoryCards": 1,
+      "inventoryItems": 1,
+      "portrait": "https://i.imgur.com/0rL26lF.png",
+      "bestiaryReference": null,
+      "bestiaryAncestry": null
+    },
+    {
+      "id": "companion-ylva-freki",
+      "name": "Freki",
+      "ownerId": "bSYZYAEOwiRgy44f6OmO",
+      "owner": "Ylva Wolfshorn",
+      "inventoryCards": 1,
+      "inventoryItems": 1,
+      "portrait": "https://i.imgur.com/jO6WUgH.png",
+      "bestiaryReference": {
+        "id": "tiere/raubtiere/woelfe/gramnir",
+        "name": "Gramnir",
+        "url": "/Bestiarium/tiere/raubtiere/woelfe/gramnir/index.html"
+      },
+      "bestiaryAncestry": null
+    },
+    {
+      "id": "companion-gais-rabenstolz",
+      "name": "Saithor",
+      "ownerId": "person--haus-wyrm--gais-wyrm",
+      "owner": "Gais Wyrm",
+      "inventoryCards": 1,
+      "inventoryItems": 1,
+      "portrait": "/AleriaAlmanach/assets/companions/gais/rabenstolz.png",
+      "bestiaryReference": {
+        "id": "tiere/pferde/zuchtbuch/edelsale",
+        "name": "Edelsale",
+        "url": "/Bestiarium/tiere/pferde/zuchtbuch/index.html#kreuzung-ceffyl-mit-sale"
+      },
+      "bestiaryAncestry": null
+    },
+    {
+      "id": "companion-armel-argent",
+      "name": "Argent",
+      "ownerId": "person--haus-balchder--armel-balchder",
+      "owner": "Armel Balchder",
+      "inventoryCards": 1,
+      "inventoryItems": 1,
+      "portrait": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-balchder%2F8f76bed3-1856-4677-a138-bdceb664b3c6%2Foriginal.png?alt=media",
+      "bestiaryReference": {
+        "id": "tiere/pferde/herzogsschimmer",
+        "name": "Herzogsschimmer",
+        "url": "/Bestiarium/tiere/pferde/herzogsschimmer/index.html"
+      },
+      "bestiaryAncestry": null
+    },
+    {
+      "id": "companion-skalli-astrid",
+      "name": "Astrid",
+      "ownerId": "person--haus-varulv--skalli-varulv",
+      "owner": "Skalli Varulv",
+      "inventoryCards": 1,
+      "inventoryItems": 1,
+      "portrait": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-varulv%2Fc8729937-92ea-482e-961c-9eea55d49798%2Foriginal.png?alt=media",
+      "bestiaryReference": {
+        "id": "tiere/pferde/zuchtbuch/roh-rhyfel",
+        "name": "Roh-Rhyfel",
+        "url": "/Bestiarium/tiere/pferde/zuchtbuch/index.html#kreuzung-ceffyl-mit-hest"
+      },
+      "bestiaryAncestry": {
+        "references": [
+          {
+            "id": "tiere/pferde/ceffyl",
+            "name": "Ceffyl",
+            "url": "/Bestiarium/tiere/pferde/ceffyl/index.html"
+          },
+          {
+            "id": "tiere/pferde/hest",
+            "name": "Hest",
+            "url": "/Bestiarium/tiere/pferde/hest/index.html"
+          }
+        ],
+        "notes": "Direkte Kreuzung, im Zuchtbuch Roh-Rhyfel genannt. Aus solchen Pferden entwickelte sich später die gefestigte Rhyfel-Linie."
+      }
+    },
+    {
+      "id": "companion-idwal-distry",
+      "name": "Distry",
+      "ownerId": "kJss0DGF1RLuVrrVCBQT",
+      "owner": "Idwal Draig",
+      "inventoryCards": 1,
+      "inventoryItems": 1,
+      "portrait": "https://i.imgur.com/HN7olKF.png",
+      "bestiaryReference": null,
+      "bestiaryAncestry": null
+    },
+    {
+      "id": "companion-idwal-drecksack",
+      "name": "Drecksack",
+      "ownerId": "kJss0DGF1RLuVrrVCBQT",
+      "owner": "Idwal Draig",
+      "inventoryCards": 1,
+      "inventoryItems": 1,
+      "portrait": "https://i.imgur.com/IE01qzQ.png",
+      "bestiaryReference": {
+        "id": "tiere/pferde/equo",
+        "name": "Equo",
+        "url": "/Bestiarium/tiere/pferde/equo/index.html"
+      },
+      "bestiaryAncestry": null
+    },
+    {
+      "id": "companion-anaraut-merfyn",
+      "name": "Merfyn",
+      "ownerId": "fq586i4k2gj5Lg30dUwW",
+      "owner": "Anaraut Draig",
+      "inventoryCards": 1,
+      "inventoryItems": 1,
+      "portrait": "https://i.imgur.com/7PzfM7O.png",
+      "bestiaryReference": {
+        "id": "tiere/pferde/ceffyl",
+        "name": "Ceffyl",
+        "url": "/Bestiarium/tiere/pferde/ceffyl/index.html"
+      },
+      "bestiaryAncestry": null
+    },
+    {
+      "id": "companion-anaraut-gwrgi",
+      "name": "Gwrgi",
+      "ownerId": "fq586i4k2gj5Lg30dUwW",
+      "owner": "Anaraut Draig",
+      "inventoryCards": 1,
+      "inventoryItems": 1,
+      "portrait": "https://i.imgur.com/vLuaqiC.png",
+      "bestiaryReference": {
+        "id": "tiere/vieh/haustiere/hunde/ponter",
+        "name": "Ponter",
+        "url": "/Bestiarium/tiere/vieh/haustiere/hunde/ponter/index.html"
+      },
+      "bestiaryAncestry": null
+    },
+    {
+      "id": "companion-galahad-sturmwind",
+      "name": "Sturmwind",
+      "ownerId": "person--haus-draig--galahad-draig",
+      "owner": "Galahad Draig",
+      "inventoryCards": 1,
+      "inventoryItems": 1,
+      "portrait": "https://dieweltvonaleria.netlify.app/AleriaAlmanach/public/assets/companions/sturmwind-galahad.png",
+      "bestiaryReference": {
+        "id": "tiere/pferde/drake",
+        "name": "Drake",
+        "url": "/Bestiarium/tiere/pferde/drake/index.html"
+      },
+      "bestiaryAncestry": null
+    },
+    {
+      "id": "companion-tegan-alaw",
+      "name": "Alaw",
+      "ownerId": "fklEm9zDR9y1LuCaXeeb",
+      "owner": "Tegan Draig",
+      "inventoryCards": 1,
+      "inventoryItems": 1,
+      "portrait": "https://i.imgur.com/Frc3apc.jpeg",
+      "bestiaryReference": {
+        "id": "tiere/pferde/rhyfel",
+        "name": "Rhyfel",
+        "url": "/Bestiarium/tiere/pferde/rhyfel/index.html"
+      },
+      "bestiaryAncestry": null
+    },
+    {
+      "id": "companion-tegan-twm",
+      "name": "Twm",
+      "ownerId": "fklEm9zDR9y1LuCaXeeb",
+      "owner": "Tegan Draig",
+      "inventoryCards": 1,
+      "inventoryItems": 1,
+      "portrait": "https://i.imgur.com/QzubwXw.jpeg",
+      "bestiaryReference": {
+        "id": "tiere/vieh/haustiere/hunde/brodgi",
+        "name": "Brodgi",
+        "url": "/Bestiarium/tiere/vieh/haustiere/hunde/brodgi/index.html"
+      },
+      "bestiaryAncestry": null
+    },
+    {
+      "id": "companion-gwendolyn-olwen",
+      "name": "Olwen",
+      "ownerId": "15ml9RhSvJPXof7z4qY3",
+      "owner": "Gwendolyn Draig",
+      "inventoryCards": 1,
+      "inventoryItems": 1,
+      "portrait": "https://i.imgur.com/4CNNfEa.png",
+      "bestiaryReference": null,
+      "bestiaryAncestry": null
+    },
+    {
+      "id": "companion-gwendolyn-alwen",
+      "name": "Alwen",
+      "ownerId": "15ml9RhSvJPXof7z4qY3",
+      "owner": "Gwendolyn Draig",
+      "inventoryCards": 1,
+      "inventoryItems": 1,
+      "portrait": "https://i.imgur.com/ISKbqc2.png",
+      "bestiaryReference": null,
+      "bestiaryAncestry": null
+    },
+    {
+      "id": "companion-gwendolyn-flam",
+      "name": "Flam",
+      "ownerId": "15ml9RhSvJPXof7z4qY3",
+      "owner": "Gwendolyn Draig",
+      "inventoryCards": 1,
+      "inventoryItems": 1,
+      "portrait": "https://i.imgur.com/55FbPYH.jpeg",
+      "bestiaryReference": {
+        "id": "tiere/pferde/ceffyl",
+        "name": "Ceffyl",
+        "url": "/Bestiarium/tiere/pferde/ceffyl/index.html"
+      },
+      "bestiaryAncestry": null
+    },
+    {
+      "id": "companion-maredudd-cadarn",
+      "name": "Cadarn",
+      "ownerId": "ZGiDqxIwkkvOHzpnKmyk",
+      "owner": "Maredudd Draig",
+      "inventoryCards": 1,
+      "inventoryItems": 1,
+      "portrait": "https://i.imgur.com/A9eCwvp.jpeg",
+      "bestiaryReference": {
+        "id": "tiere/pferde/ceffyl",
+        "name": "Ceffyl",
+        "url": "/Bestiarium/tiere/pferde/ceffyl/index.html"
+      },
+      "bestiaryAncestry": null
+    },
+    {
+      "id": "companion-maredudd-hari",
+      "name": "Hari",
+      "ownerId": "ZGiDqxIwkkvOHzpnKmyk",
+      "owner": "Maredudd Draig",
+      "inventoryCards": 1,
+      "inventoryItems": 1,
+      "portrait": "https://i.imgur.com/asGrolJ.png",
+      "bestiaryReference": null,
+      "bestiaryAncestry": null
+    },
+    {
+      "id": "companion-tudwal-ceiniog",
+      "name": "Ceiniog",
+      "ownerId": "fcNfoBWpVNvK3ORQUJwX",
+      "owner": "Tudwal Draig",
+      "inventoryCards": 1,
+      "inventoryItems": 1,
+      "portrait": "https://i.imgur.com/hjWBWQN.jpeg",
+      "bestiaryReference": {
+        "id": "tiere/pferde/rhyfel",
+        "name": "Rhyfel",
+        "url": "/Bestiarium/tiere/pferde/rhyfel/index.html"
+      },
+      "bestiaryAncestry": null
+    },
+    {
+      "id": "companion-tudwal-pryderi",
+      "name": "Pryderi",
+      "ownerId": "fcNfoBWpVNvK3ORQUJwX",
+      "owner": "Tudwal Draig",
+      "inventoryCards": 1,
+      "inventoryItems": 1,
+      "portrait": "https://i.imgur.com/HhtmeUx.jpeg",
+      "bestiaryReference": null,
+      "bestiaryAncestry": null
+    },
+    {
+      "id": "companion-cadfan-ciaran",
+      "name": "Cíaran",
+      "ownerId": "hTN74LdJjXUFz7X7ReRr",
+      "owner": "Cadfan Draig",
+      "inventoryCards": 1,
+      "inventoryItems": 1,
+      "portrait": "https://i.imgur.com/TZK9oBa.png",
+      "bestiaryReference": null,
+      "bestiaryAncestry": null
+    },
+    {
+      "id": "companion-cadfan-donn",
+      "name": "Donn",
+      "ownerId": "hTN74LdJjXUFz7X7ReRr",
+      "owner": "Cadfan Draig",
+      "inventoryCards": 1,
+      "inventoryItems": 1,
+      "portrait": "https://i.imgur.com/EDPyiua.jpeg",
+      "bestiaryReference": {
+        "id": "tiere/pferde/tirashan",
+        "name": "Tirashan",
+        "url": "/Bestiarium/tiere/pferde/tirashan/index.html"
+      },
+      "bestiaryAncestry": null
+    },
+    {
+      "id": "companion-meurig-emrys",
+      "name": "Emrys",
+      "ownerId": "E8HXkgi2kdkXaqkxrnRo",
+      "owner": "Meurig Draig",
+      "inventoryCards": 1,
+      "inventoryItems": 1,
+      "portrait": "https://i.imgur.com/DVqEI6P.jpeg",
+      "bestiaryReference": {
+        "id": "tiere/pferde/ceffyl",
+        "name": "Ceffyl",
+        "url": "/Bestiarium/tiere/pferde/ceffyl/index.html"
+      },
+      "bestiaryAncestry": null
+    },
+    {
+      "id": "companion-heledd-mabli",
+      "name": "Mabli",
+      "ownerId": "J4wpNQON98GsdPzsaIUk",
+      "owner": "Heledd (Geb. Gwyvern) Draig",
+      "inventoryCards": 1,
+      "inventoryItems": 1,
+      "portrait": "https://i.imgur.com/twMU1E2.png",
+      "bestiaryReference": {
+        "id": "tiere/vieh/haustiere/katzen/skjarn",
+        "name": "Skjarn",
+        "url": "/Bestiarium/tiere/vieh/haustiere/katzen/skjarn/index.html"
+      },
+      "bestiaryAncestry": null
+    },
+    {
+      "id": "companion-einion-greif",
+      "name": "Greif",
+      "ownerId": "27fN2uvUpVVNICNc4vQU",
+      "owner": "Einion Draig",
+      "inventoryCards": 1,
+      "inventoryItems": 1,
+      "portrait": "https://i.imgur.com/wisnmUi.jpeg",
+      "bestiaryReference": {
+        "id": "tiere/pferde/rhyfel",
+        "name": "Rhyfel",
+        "url": "/Bestiarium/tiere/pferde/rhyfel/index.html"
+      },
+      "bestiaryAncestry": null
+    },
+    {
+      "id": "companion-steffan-guto",
+      "name": "Guto",
+      "ownerId": "93PwKnPytHr0sOc9mNHi",
+      "owner": "Steffan Draig",
+      "inventoryCards": 1,
+      "inventoryItems": 1,
+      "portrait": "https://i.imgur.com/oVaZlbK.jpeg",
+      "bestiaryReference": {
+        "id": "tiere/vieh/haustiere/hunde/ponter",
+        "name": "Ponter",
+        "url": "/Bestiarium/tiere/vieh/haustiere/hunde/ponter/index.html"
+      },
+      "bestiaryAncestry": null
+    },
+    {
+      "id": "companion-steffan-uther",
+      "name": "Uther",
+      "ownerId": "93PwKnPytHr0sOc9mNHi",
+      "owner": "Steffan Draig",
+      "inventoryCards": 1,
+      "inventoryItems": 1,
+      "portrait": "https://i.imgur.com/oS0eJUM.jpeg",
+      "bestiaryReference": {
+        "id": "tiere/pferde/ceffyl",
+        "name": "Ceffyl",
+        "url": "/Bestiarium/tiere/pferde/ceffyl/index.html"
+      },
+      "bestiaryAncestry": null
+    },
+    {
+      "id": "companion-rhiannon-mel",
+      "name": "Mél",
+      "ownerId": "y7MBxDiAaesbWHBtmw5Q",
+      "owner": "Rhiannon Draig",
+      "inventoryCards": 1,
+      "inventoryItems": 1,
+      "portrait": "https://i.imgur.com/VpNVrlU.jpeg",
+      "bestiaryReference": {
+        "id": "tiere/pferde/rhyfel",
+        "name": "Rhyfel",
+        "url": "/Bestiarium/tiere/pferde/rhyfel/index.html"
+      },
+      "bestiaryAncestry": null
+    },
+    {
+      "id": "companion-mair-nia",
+      "name": "Nia",
+      "ownerId": "avZbi5bD7DFcx6XtefJ4",
+      "owner": "Mair Draig",
+      "inventoryCards": 1,
+      "inventoryItems": 1,
+      "portrait": "https://i.imgur.com/8zwFlVG.png",
+      "bestiaryReference": {
+        "id": "tiere/vieh/haustiere/hunde/bugail",
+        "name": "Bugail",
+        "url": "/Bestiarium/tiere/vieh/haustiere/hunde/bugail/index.html"
+      },
+      "bestiaryAncestry": null
+    },
+    {
+      "id": "companion-mair-tiwlip",
+      "name": "Tiwlip",
+      "ownerId": "avZbi5bD7DFcx6XtefJ4",
+      "owner": "Mair Draig",
+      "inventoryCards": 1,
+      "inventoryItems": 1,
+      "portrait": "https://i.imgur.com/DoJ1txs.jpeg",
+      "bestiaryReference": {
+        "id": "tiere/pferde/ceffyl",
+        "name": "Ceffyl",
+        "url": "/Bestiarium/tiere/pferde/ceffyl/index.html"
+      },
+      "bestiaryAncestry": null
+    },
+    {
+      "id": "companion-oweta-heulwen",
+      "name": "Heulwen",
+      "ownerId": "vk0xAa3ZcEhVvGC1CzNq",
+      "owner": "Oweta Draig",
+      "inventoryCards": 1,
+      "inventoryItems": 1,
+      "portrait": "https://i.imgur.com/IQPGIq7.jpeg",
+      "bestiaryReference": {
+        "id": "tiere/pferde/rhyfel",
+        "name": "Rhyfel",
+        "url": "/Bestiarium/tiere/pferde/rhyfel/index.html"
+      },
+      "bestiaryAncestry": null
+    },
+    {
+      "id": "companion-guinevere-scath",
+      "name": "Scath",
+      "ownerId": "person--haus-neidr--guinevere-neidr",
+      "owner": "Guinevere Neidr",
+      "inventoryCards": 1,
+      "inventoryItems": 1,
+      "portrait": "https://i.imgur.com/oofN4OQ.jpeg",
+      "bestiaryReference": {
+        "id": "tiere/vieh/haustiere/hunde/tryw",
+        "name": "Tryw",
+        "url": "/Bestiarium/tiere/vieh/haustiere/hunde/tryw/index.html"
+      },
+      "bestiaryAncestry": null
+    }
+  ],
+  "assets": [
+    {
+      "url": "https://i.imgur.com/kCTOjgJ.png",
+      "type": "image",
+      "status": 200,
+      "contentType": "image/png",
+      "size": [
+        1024,
+        1536
+      ],
+      "ok": true
+    },
+    {
+      "url": "https://i.imgur.com/HyaKYxH.png",
+      "type": "image",
+      "status": 200,
+      "contentType": "image/png",
+      "size": [
+        1024,
+        1536
+      ],
+      "ok": true
+    },
+    {
+      "url": "/AleriaAlmanach/assets/ship-crews/idwals-schiffsmannschaft/companions/bwmbo.png",
+      "type": "image",
+      "status": 200,
+      "contentType": "image/png",
+      "size": [
+        1024,
+        1536
+      ],
+      "ok": true
+    },
+    {
+      "url": "/AleriaAlmanach/assets/companions/haus-gwyvern/dyreth.png",
+      "type": "image",
+      "status": 200,
+      "contentType": "image/png",
+      "size": [
+        1024,
+        1536
+      ],
+      "ok": true
+    },
+    {
+      "url": "/AleriaAlmanach/assets/companions/haus-gwyvern/struppi.png",
+      "type": "image",
+      "status": 200,
+      "contentType": "image/png",
+      "size": [
+        1024,
+        1536
+      ],
+      "ok": true
+    },
+    {
+      "url": "/AleriaAlmanach/assets/companions/haus-gafyr/carreg.png",
+      "type": "image",
+      "status": 200,
+      "contentType": "image/png",
+      "size": [
+        1024,
+        1536
+      ],
+      "ok": true
+    },
+    {
+      "url": "/AleriaAlmanach/assets/companions/haus-gwyvern/uffyrae.png",
+      "type": "image",
+      "status": 200,
+      "contentType": "image/png",
+      "size": [
+        1024,
+        1536
+      ],
+      "ok": true
+    },
+    {
+      "url": "/AleriaAlmanach/assets/ship-crews/idwals-schiffsmannschaft/companions/uffel.png",
+      "type": "image",
+      "status": 200,
+      "contentType": "image/png",
+      "size": [
+        1024,
+        1536
+      ],
+      "ok": true
+    },
+    {
+      "url": "/AleriaAlmanach/assets/companions/wolfshorn/skarn.png",
+      "type": "image",
+      "status": 200,
+      "contentType": "image/png",
+      "size": [
+        1024,
+        1536
+      ],
+      "ok": true
+    },
+    {
+      "url": "/AleriaAlmanach/assets/companions/wolfshorn/haeppchen.png",
+      "type": "image",
+      "status": 200,
+      "contentType": "image/png",
+      "size": [
+        1024,
+        1536
+      ],
+      "ok": true
+    },
+    {
+      "url": "/AleriaAlmanach/assets/companions/wolfshorn/lund.png",
+      "type": "image",
+      "status": 200,
+      "contentType": "image/png",
+      "size": [
+        1024,
+        1536
+      ],
+      "ok": true
+    },
+    {
+      "url": "/AleriaAlmanach/assets/companions/haus-draig/rhoslyn.png",
+      "type": "image",
+      "status": 200,
+      "contentType": "image/png",
+      "size": [
+        1024,
+        1536
+      ],
+      "ok": true
+    },
+    {
+      "url": "/AleriaAlmanach/assets/companions/wolfshorn/myrk.png",
+      "type": "image",
+      "status": 200,
+      "contentType": "image/png",
+      "size": [
+        1024,
+        1536
+      ],
+      "ok": true
+    },
+    {
+      "url": "/AleriaAlmanach/assets/companions/wolfshorn/silberkrone.png",
+      "type": "image",
+      "status": 200,
+      "contentType": "image/png",
+      "size": [
+        1024,
+        1536
+      ],
+      "ok": true
+    },
+    {
+      "url": "/AleriaAlmanach/assets/companions/haus-draig/morcant.png",
+      "type": "image",
+      "status": 200,
+      "contentType": "image/png",
+      "size": [
+        1024,
+        1536
+      ],
+      "ok": true
+    },
+    {
+      "url": "/AleriaAlmanach/assets/companions/haus-draig/aelwyn.png",
+      "type": "image",
+      "status": 200,
+      "contentType": "image/png",
+      "size": [
+        1024,
+        1536
+      ],
+      "ok": true
+    },
+    {
+      "url": "/AleriaAlmanach/assets/companions/haus-draig/lot.png",
+      "type": "image",
+      "status": 200,
+      "contentType": "image/png",
+      "size": [
+        1024,
+        1536
+      ],
+      "ok": true
+    },
+    {
+      "url": "/AleriaAlmanach/assets/companions/haus-draig/alaw.png",
+      "type": "image",
+      "status": 200,
+      "contentType": "image/png",
+      "size": [
+        1024,
+        1536
+      ],
+      "ok": true
+    },
+    {
+      "url": "https://i.imgur.com/0rL26lF.png",
+      "type": "image",
+      "status": 200,
+      "contentType": "image/png",
+      "size": [
+        1365,
+        2048
+      ],
+      "ok": true
+    },
+    {
+      "url": "https://i.imgur.com/jO6WUgH.png",
+      "type": "image",
+      "status": 200,
+      "contentType": "image/png",
+      "size": [
+        1024,
+        1536
+      ],
+      "ok": true
+    },
+    {
+      "url": "/AleriaAlmanach/assets/companions/haus-draig/cador.png",
+      "type": "image",
+      "status": 200,
+      "contentType": "image/png",
+      "size": [
+        1024,
+        1536
+      ],
+      "ok": true
+    },
+    {
+      "url": "/AleriaAlmanach/assets/companions/haus-draig/pompoesa.png",
+      "type": "image",
+      "status": 200,
+      "contentType": "image/png",
+      "size": [
+        1024,
+        1536
+      ],
+      "ok": true
+    },
+    {
+      "url": "/AleriaAlmanach/assets/companions/haus-draig/vivian.png",
+      "type": "image",
+      "status": 200,
+      "contentType": "image/png",
+      "size": [
+        1024,
+        1536
+      ],
+      "ok": true
+    },
+    {
+      "url": "https://i.imgur.com/HN7olKF.png",
+      "type": "image",
+      "status": 200,
+      "contentType": "image/png",
+      "size": [
+        1024,
+        1536
+      ],
+      "ok": true
+    },
+    {
+      "url": "https://i.imgur.com/7PzfM7O.png",
+      "type": "image",
+      "status": 200,
+      "contentType": "image/png",
+      "size": [
+        1024,
+        1536
+      ],
+      "ok": true
+    },
+    {
+      "url": "https://i.imgur.com/IE01qzQ.png",
+      "type": "image",
+      "status": 200,
+      "contentType": "image/png",
+      "size": [
+        1024,
+        1536
+      ],
+      "ok": true
+    },
+    {
+      "url": "/AleriaAlmanach/assets/companions/gais/rabenstolz.png",
+      "type": "image",
+      "status": 200,
+      "contentType": "image/png",
+      "size": [
+        1024,
+        1536
+      ],
+      "ok": true
+    },
+    {
+      "url": "https://i.imgur.com/Frc3apc.jpeg",
+      "type": "image",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "size": null,
+      "ok": true
+    },
+    {
+      "url": "https://i.imgur.com/vLuaqiC.png",
+      "type": "image",
+      "status": 200,
+      "contentType": "image/png",
+      "size": [
+        1024,
+        1536
+      ],
+      "ok": true
+    },
+    {
+      "url": "https://i.imgur.com/QzubwXw.jpeg",
+      "type": "image",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "size": null,
+      "ok": true
+    },
+    {
+      "url": "/AleriaAlmanach/assets/companions/haus-draig/roisin.png",
+      "type": "image",
+      "status": 200,
+      "contentType": "image/png",
+      "size": [
+        1024,
+        1536
+      ],
+      "ok": true
+    },
+    {
+      "url": "https://i.imgur.com/ISKbqc2.png",
+      "type": "image",
+      "status": 200,
+      "contentType": "image/png",
+      "size": [
+        1024,
+        1536
+      ],
+      "ok": true
+    },
+    {
+      "url": "https://i.imgur.com/4CNNfEa.png",
+      "type": "image",
+      "status": 200,
+      "contentType": "image/png",
+      "size": [
+        1024,
+        1536
+      ],
+      "ok": true
+    },
+    {
+      "url": "https://i.imgur.com/55FbPYH.jpeg",
+      "type": "image",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "size": null,
+      "ok": true
+    },
+    {
+      "url": "https://i.imgur.com/asGrolJ.png",
+      "type": "image",
+      "status": 200,
+      "contentType": "image/png",
+      "size": [
+        1024,
+        1536
+      ],
+      "ok": true
+    },
+    {
+      "url": "https://i.imgur.com/A9eCwvp.jpeg",
+      "type": "image",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "size": null,
+      "ok": true
+    },
+    {
+      "url": "https://i.imgur.com/HhtmeUx.jpeg",
+      "type": "image",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "size": null,
+      "ok": true
+    },
+    {
+      "url": "https://i.imgur.com/TZK9oBa.png",
+      "type": "image",
+      "status": 200,
+      "contentType": "image/png",
+      "size": [
+        1024,
+        1536
+      ],
+      "ok": true
+    },
+    {
+      "url": "https://i.imgur.com/hjWBWQN.jpeg",
+      "type": "image",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "size": null,
+      "ok": true
+    },
+    {
+      "url": "https://dieweltvonaleria.netlify.app/AleriaAlmanach/public/assets/companions/sturmwind-galahad.png",
+      "type": "image",
+      "status": 200,
+      "contentType": "image/png",
+      "size": [
+        1024,
+        1536
+      ],
+      "ok": true
+    },
+    {
+      "url": "https://i.imgur.com/wisnmUi.jpeg",
+      "type": "image",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "size": null,
+      "ok": true
+    },
+    {
+      "url": "https://i.imgur.com/DVqEI6P.jpeg",
+      "type": "image",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "size": null,
+      "ok": true
+    },
+    {
+      "url": "https://i.imgur.com/EDPyiua.jpeg",
+      "type": "image",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "size": null,
+      "ok": true
+    },
+    {
+      "url": "https://i.imgur.com/oVaZlbK.jpeg",
+      "type": "image",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "size": null,
+      "ok": true
+    },
+    {
+      "url": "https://i.imgur.com/oS0eJUM.jpeg",
+      "type": "image",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "size": null,
+      "ok": true
+    },
+    {
+      "url": "https://i.imgur.com/VpNVrlU.jpeg",
+      "type": "image",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "size": null,
+      "ok": true
+    },
+    {
+      "url": "https://i.imgur.com/8zwFlVG.png",
+      "type": "image",
+      "status": 200,
+      "contentType": "image/png",
+      "size": [
+        1024,
+        1536
+      ],
+      "ok": true
+    },
+    {
+      "url": "https://i.imgur.com/DoJ1txs.jpeg",
+      "type": "image",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "size": null,
+      "ok": true
+    },
+    {
+      "url": "https://i.imgur.com/IQPGIq7.jpeg",
+      "type": "image",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "size": null,
+      "ok": true
+    },
+    {
+      "url": "https://i.imgur.com/oofN4OQ.jpeg",
+      "type": "image",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "size": null,
+      "ok": true
+    },
+    {
+      "url": "/Bestiarium/tiere/pferde/zuchtbuch/index.html#kreuzung-ceffyl-mit-herzogsschimmer",
+      "type": "reference",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "size": null,
+      "ok": true
+    },
+    {
+      "url": "/Bestiarium/tiere/vieh/haustiere/katzen/cenyric/index.html",
+      "type": "reference",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "size": null,
+      "ok": true
+    },
+    {
+      "url": "/Bestiarium/tiere/pferde/hest/index.html",
+      "type": "reference",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "size": null,
+      "ok": true
+    },
+    {
+      "url": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-varulv%2Fc8729937-92ea-482e-961c-9eea55d49798%2Foriginal.png?alt=media",
+      "type": "image",
+      "status": 200,
+      "contentType": "image/png",
+      "size": [
+        1024,
+        1536
+      ],
+      "ok": true
+    },
+    {
+      "url": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-balchder%2F8f76bed3-1856-4677-a138-bdceb664b3c6%2Foriginal.png?alt=media",
+      "type": "image",
+      "status": 200,
+      "contentType": "image/png",
+      "size": [
+        1024,
+        1536
+      ],
+      "ok": true
+    },
+    {
+      "url": "/Bestiarium/tiere/pferde/rhyfel/index.html",
+      "type": "reference",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "size": null,
+      "ok": true
+    },
+    {
+      "url": "/Bestiarium/tiere/raubtiere/woelfe/gramnir/index.html",
+      "type": "reference",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "size": null,
+      "ok": true
+    },
+    {
+      "url": "/Bestiarium/tiere/pferde/zuchtbuch/index.html#kreuzung-ceffyl-mit-equo",
+      "type": "reference",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "size": null,
+      "ok": true
+    },
+    {
+      "url": "/Bestiarium/tiere/pferde/erlenglanz/index.html",
+      "type": "reference",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "size": null,
+      "ok": true
+    },
+    {
+      "url": "/Bestiarium/tiere/pferde/zuchtbuch/index.html#kreuzung-ceffyl-mit-rhyfel",
+      "type": "reference",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "size": null,
+      "ok": true
+    },
+    {
+      "url": "/Bestiarium/tiere/pferde/zuchtbuch/index.html#kreuzung-aurelianer-mit-ceffyl",
+      "type": "reference",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "size": null,
+      "ok": true
+    },
+    {
+      "url": "/Bestiarium/tiere/pferde/tirashan/index.html",
+      "type": "reference",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "size": null,
+      "ok": true
+    },
+    {
+      "url": "/Bestiarium/tiere/pferde/ceffyl/index.html",
+      "type": "reference",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "size": null,
+      "ok": true
+    },
+    {
+      "url": "/Bestiarium/tiere/vieh/haustiere/katzen/lethin/index.html",
+      "type": "reference",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "size": null,
+      "ok": true
+    },
+    {
+      "url": "/Bestiarium/tiere/vieh/haustiere/hunde/rhedwyr/index.html",
+      "type": "reference",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "size": null,
+      "ok": true
+    },
+    {
+      "url": "/Bestiarium/tiere/pferde/zuchtbuch/index.html#kreuzung-ceffyl-mit-sale",
+      "type": "reference",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "size": null,
+      "ok": true
+    },
+    {
+      "url": "/Bestiarium/tiere/vieh/haustiere/hunde/trywydd/index.html",
+      "type": "reference",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "size": null,
+      "ok": true
+    },
+    {
+      "url": "/Bestiarium/tiere/pferde/zuchtbuch/index.html#kreuzung-ceffyl-mit-hest",
+      "type": "reference",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "size": null,
+      "ok": true
+    },
+    {
+      "url": "/Bestiarium/tiere/pferde/herzogsschimmer/index.html",
+      "type": "reference",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "size": null,
+      "ok": true
+    },
+    {
+      "url": "/Bestiarium/tiere/pferde/equo/index.html",
+      "type": "reference",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "size": null,
+      "ok": true
+    },
+    {
+      "url": "/Bestiarium/tiere/pferde/drake/index.html",
+      "type": "reference",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "size": null,
+      "ok": true
+    },
+    {
+      "url": "/Bestiarium/tiere/vieh/haustiere/hunde/brodgi/index.html",
+      "type": "reference",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "size": null,
+      "ok": true
+    },
+    {
+      "url": "/Bestiarium/tiere/vieh/haustiere/hunde/ponter/index.html",
+      "type": "reference",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "size": null,
+      "ok": true
+    },
+    {
+      "url": "/Bestiarium/tiere/vieh/haustiere/katzen/skjarn/index.html",
+      "type": "reference",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "size": null,
+      "ok": true
+    },
+    {
+      "url": "/Bestiarium/tiere/vieh/haustiere/hunde/tryw/index.html",
+      "type": "reference",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "size": null,
+      "ok": true
+    },
+    {
+      "url": "/Bestiarium/tiere/vieh/haustiere/hunde/bugail/index.html",
+      "type": "reference",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "size": null,
+      "ok": true
+    },
+    {
+      "url": "https://i.imgur.com/twMU1E2.png",
+      "type": "image",
+      "ok": true,
+      "status": 200,
+      "bytes": 1734487,
+      "contentType": "image/png"
+    }
+  ]
+}

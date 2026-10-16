@@ -1,0 +1,83 @@
+{
+  "overall_duration_ms": 700,
+  "parallel_execution": true,
+  "success": true,
+  "successful_variants": 1,
+  "timestamp": 1792100577270,
+  "total_variants": 1,
+  "variants": [
+    {
+      "duration_ms": 700,
+      "model": "google/gemma-4-31b-it",
+      "model_index": 0,
+      "request": {
+        "cache": true,
+        "extra_body": {
+          "extra_body": {
+            "google": {
+              "safety_settings": [
+                {
+                  "category": "HARM_CATEGORY_HARASSMENT",
+                  "threshold": "BLOCK_NONE"
+                },
+                {
+                  "category": "HARM_CATEGORY_HATE_SPEECH",
+                  "threshold": "BLOCK_NONE"
+                },
+                {
+                  "category": "HARM_CATEGORY_SEXUALLY_EXPLICIT",
+                  "threshold": "BLOCK_NONE"
+                },
+                {
+                  "category": "HARM_CATEGORY_DANGEROUS_CONTENT",
+                  "threshold": "BLOCK_NONE"
+                }
+              ]
+            }
+          }
+        },
+        "max_tokens": 500,
+        "messages": [
+          {
+            "content": "This is an isolated API test, not a game command. Reply with exactly this single line and nothing else: ACTION: None",
+            "role": "user"
+          }
+        ],
+        "model": "google/gemma-4-31b-it",
+        "model_index": 0,
+        "provider": {
+          "allow_fallbacks": false,
+          "ignore": [
+            "atlas-cloud"
+          ],
+          "only": [
+            "friendli"
+          ],
+          "quantizations": [
+            "fp8",
+            "fp16",
+            "bf16",
+            "fp32",
+            "unknown"
+          ],
+          "sort": "latency"
+        },
+        "reasoning": {
+          "enabled": false
+        },
+        "reasoning_effort_resolved": "off",
+        "reasoning_resolved": false,
+        "route": "fallback",
+        "temperature": 0.2,
+        "usage": {
+          "include": true
+        },
+        "use_structured_outputs_resolved": false
+      },
+      "response": "ACTION: None",
+      "success": true,
+      "variant": "action_evaluation",
+      "variant_key": "action_evaluation"
+    }
+  ]
+}

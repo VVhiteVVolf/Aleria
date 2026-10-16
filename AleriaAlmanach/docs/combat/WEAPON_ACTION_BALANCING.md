@@ -1,5 +1,7 @@
 # Waffen- und Aktionsschaden – 30. September 2026
 
+Ergänzung vom 15. Oktober: Kontroll-SG gelten nun über alle drei Kampfstile einheitlich mit Waffenattribut und Kompetenz (Grundwert 10, mit Besonderer Aktion 11). Kleine einmalige Stellungseffekte aus früheren Meterwerten bezahlen einen festen Schadenspunkt; stärkere Kontrollen bezahlen den schwächsten zusätzlichen regulären Punkt. Eigene Nachteile zählen nicht als Zusatznutzen. Die Waffenbasis bleibt erhalten. Krits verwenden maximalen Grundpool plus gewürfelten Zusatzpool und einfache feste Boni. Vollständiger aktueller Check: [Balanceprüfung](balance-2026-10-15/README.md).
+
 Diese Überarbeitung setzt die nach dem allgemeinen Checkup freigegebenen Schadensregeln um. Sie gilt für kommende Auswertungen. Bereits gespeicherte Treffer, Würfel, Effekte und Beiträge werden nicht neu berechnet.
 
 ## Gemeinsame Grundlage

@@ -1,0 +1,9 @@
+{
+  "stage": "verified",
+  "format": "tar.zst",
+  "archive": "tar-test.tar.zst",
+  "files": 2,
+  "source_bytes": 72,
+  "archive_bytes": 252,
+  "verification": "Every archived file decompressed and SHA-256 compared to source during capture"
+}

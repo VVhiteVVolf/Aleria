@@ -1,0 +1,53 @@
+{
+  "publishedAt": "2026-10-15T18:59:50.580617Z",
+  "characterId": "OJEmpbD6YWhDFDmitk6R",
+  "biographyPortraits": 5,
+  "inventoryCompanions": [
+    {
+      "name": "Eurwen",
+      "creatureId": "companion-branwen-eurwen",
+      "inventoryItemId": "branwen-eurwen"
+    },
+    {
+      "name": "Mabon",
+      "creatureId": "companion-branwen-mabon",
+      "inventoryItemId": "branwen-mabon"
+    },
+    {
+      "name": "Eira",
+      "creatureId": "companion-branwen-eira",
+      "inventoryItemId": "branwen-eira"
+    }
+  ],
+  "creatures": [
+    {
+      "id": "companion-branwen-eurwen",
+      "name": "Eurwen",
+      "bestiaryReference": {
+        "id": "tiere/pferde/ceffyl",
+        "name": "Ceffyl",
+        "url": "/Bestiarium/tiere/pferde/ceffyl/index.html"
+      }
+    },
+    {
+      "id": "companion-branwen-mabon",
+      "name": "Mabon",
+      "bestiaryReference": {
+        "id": "tiere/vieh/haustiere/hunde/rhedwyr",
+        "name": "Rhedwyr",
+        "url": "/Bestiarium/tiere/vieh/haustiere/hunde/rhedwyr/index.html"
+      }
+    },
+    {
+      "id": "companion-branwen-eira",
+      "name": "Eira",
+      "bestiaryReference": {
+        "id": "tiere/vieh/haustiere/hunde/rhedwyr",
+        "name": "Rhedwyr",
+        "url": "/Bestiarium/tiere/vieh/haustiere/hunde/rhedwyr/index.html"
+      }
+    }
+  ],
+  "originalPortraitAndAvatarsPreserved": true,
+  "unrelatedFieldsPreserved": true
+}

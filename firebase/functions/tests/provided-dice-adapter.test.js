@@ -29,6 +29,22 @@ test('berechnet Schaden ausschließlich aus validen Einzelwürfeln und Serverbon
     .rollDamage({ damageFormula: '2d8', bonus: 0 }));
 });
 
+test('kritischer Maximalanteil wird serverseitig festgesetzt, nicht aus eingereichten Summen übernommen', async () => {
+  const adapter = new ProvidedDiceAdapter({ damage: { diceResults: [1], total: 999,
+    criticalDamage: { maximum: 900, fixedBonus: 99 } } });
+  const result = await adapter.rollDamage({ damageFormula: '1d8', bonus: 3, critical: true });
+  assert.equal(result.total, 12); assert.equal(result.notation, '1d8+11');
+  assert.equal(result.criticalDamage.maximum, 8); assert.equal(result.criticalDamage.fixedBonus, 3);
+  await assert.rejects(new ProvidedDiceAdapter({ damage: { diceResults: [1, 1] } }).rollDamage({ damageFormula: '1d8', critical: true }));
+});
+
+test('kritische gemischte Würfel und negative feste Boni stimmen zwischen Browserregel und Server überein', async () => {
+  const result = await new ProvidedDiceAdapter({ damage: { diceResults: [1, 1, 1] } })
+    .rollDamage({ damageFormula: '2d6+1d4-2', bonus: -1, critical: true });
+  assert.equal(result.total, 16); assert.equal(result.modifier, 13);
+  assert.deepEqual(result.keptDice, [1, 1, 1]); assert.equal(result.criticalDamage.maximum, 16);
+});
+
 test('berechnet Fertigkeitswuerfe aus Einzelwuerfeln und dem serverseitigen Modifikator neu', async () => {
   const adapter = new ProvidedDiceAdapter({ diceResults: [6, 15], natural: 15, total: 999 });
   const result = await adapter.rollSkill({ modifier: 4, rollMode: 'advantage' });

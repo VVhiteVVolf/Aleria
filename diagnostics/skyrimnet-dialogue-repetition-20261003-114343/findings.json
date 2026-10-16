@@ -1,0 +1,50 @@
+{
+  "scope": "Read-only investigation. Game is running; no configs, bios, prompts or memories edited.",
+  "confirmed": {
+    "phrase_generated_in_separate_responses": [
+      {
+        "request_id": "req_55aa2a874d5f82b7_1a101194233",
+        "header": "[2026-10-03 11:29:54.995] [] GenerateStreaming request [req_55aa2a874d5f82b7_1a101194233]:",
+        "model": "google/gemma-4-26b-a4b-it"
+      },
+      {
+        "request_id": "req_ee6f842328e2208d_1a101195cd8",
+        "header": "[2026-10-03 11:30:01.817] [] GenerateStreaming request [req_ee6f842328e2208d_1a101195cd8]:",
+        "model": "google/gemma-4-26b-a4b-it"
+      },
+      {
+        "request_id": "req_e122fefa5c3f4082_1a1011ba77a",
+        "header": "[2026-10-03 11:32:31.995] [] GenerateStreaming request [req_e122fefa5c3f4082_1a1011ba77a]:",
+        "model": "google/gemma-4-26b-a4b-it"
+      },
+      {
+        "request_id": "req_ecf8fd22863431cd_1a1011ea02e",
+        "header": "[2026-10-03 11:35:46.735] [] GenerateStreaming request [req_ecf8fd22863431cd_1a1011ea02e]:",
+        "model": "google/gemma-4-26b-a4b-it"
+      }
+    ],
+    "prior_replies_present_in_subsequent_requests": true,
+    "latest_player_messages_present": true,
+    "dialogue_model": "google/gemma-4-26b-a4b-it",
+    "dialogue_temperature": 0.7,
+    "frequency_penalty_sent": false,
+    "advance_conversation_instruction_already_present": true,
+    "gamemaster_repeat_trigger": "11:40:26 ContinueConversation topic=teasing the prince",
+    "background_noise": "12-18 background messages among 52-56 history messages during observed repeats; many grunts do not match the configured exact-string filter",
+    "history_configuration_count": 50,
+    "personal_bio_bias": "Rendered Mirri speech/personality emphasizes provocation, flirtation and status",
+    "memory_retrieval_operational": true
+  },
+  "interpretation": "Model produces new completions that reproduce earlier dialogue despite seeing prior replies. GameMaster repeated-topic cues, persona/context reinforcement and noisy event history plausibly contribute; individual causal weights require controlled tests.",
+  "recommendations_in_order": [
+    "Temporarily disable GameMaster autonomous conversation to isolate prompted repeats; preserve player-directed dialogue and action features.",
+    "Trial frequency_penalty 0.3 for dialogue only with a supporting provider; keep temperature 0.7 initially.",
+    "Extend exact anchored dialogue filter for observed combat grunts, rather than shortening conversational history.",
+    "If repetition persists, compare dialogue model under otherwise identical conditions before changing character bios or user-authored prompts."
+  ],
+  "references": [
+    "https://goncalo22.github.io/SkyrimNet-GamePlugin/Large%20Language%20Models/openrouter/",
+    "https://goncalo22.github.io/SkyrimNet-GamePlugin/Features/filter-system/",
+    "https://openrouter.ai/api/v1/models/google/gemma-4-26b-a4b-it/endpoints"
+  ]
+}

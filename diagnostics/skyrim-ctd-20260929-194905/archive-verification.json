@@ -1,0 +1,20 @@
+{
+  "IntelEngine": {
+    "SKSE/Plugins/IntelEngine.dll": true,
+    "IntelEngine.esp": true,
+    "Scripts/IntelEngine.pex": true,
+    "Scripts/IntelEngine_Battle.pex": true,
+    "Scripts/IntelEngine_Core.pex": true,
+    "Scripts/IntelEngine_MCM.pex": true,
+    "Scripts/IntelEngine_NPCTasks.pex": true,
+    "Scripts/IntelEngine_PlayerAlias.pex": true,
+    "Scripts/IntelEngine_Politics.pex": true,
+    "Scripts/IntelEngine_Schedule.pex": true,
+    "Scripts/IntelEngine_StoryEngine.pex": true,
+    "Scripts/IntelEngine_Travel.pex": true,
+    "Scripts/QF_IntelEngine_02000D61.pex": true
+  },
+  "SkyrimNet": {
+    "SKSE/Plugins/SkyrimNet.dll": true
+  }
+}

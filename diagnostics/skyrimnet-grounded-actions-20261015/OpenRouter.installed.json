@@ -1,0 +1,361 @@
+{
+  "active_preset_id": "",
+  "active_variants": [
+    "AgentDefault",
+    "CharacterProfileGeneration",
+    "DiaryGeneration",
+    "UniversalTranslator",
+    "action_evaluation",
+    "combat",
+    "decisions",
+    "gamemaster_evaluation",
+    "intel_story_dm",
+    "memory",
+    "meta",
+    "narrative_engine_composer",
+    "narrative_engine_director",
+    "sever_background",
+    "vision"
+  ],
+  "openrouter": {
+    "api_key": "",
+    "connect_timeout": 10,
+    "default_params": {
+      "frequency_penalty": null,
+      "max_tokens": 4096,
+      "presence_penalty": null,
+      "stop_sequences": null,
+      "temperature": 1.0,
+      "top_k": null,
+      "top_p": null
+    },
+    "endpoint": "https://openrouter.ai/api/v1/chat/completions",
+    "event_history_count_dialogue": 50,
+    "max_retries": 1,
+    "model_name": "deepseek/deepseek-v4-flash-0731",
+    "model_params": [
+      {
+        "provider_id": "openrouter",
+        "temperature": 1
+      }
+    ],
+    "provider_settings": {
+      "cache": true,
+      "provider": {
+        "ignore": [
+          "atlas-cloud"
+        ]
+      },
+      "route": "fallback"
+    },
+    "provider_sorting": "price",
+    "reasoning_effort": "off",
+    "rotation_mode": "sequential",
+    "timeout": 30,
+    "use_sse": true,
+    "use_structured_outputs": false,
+    "variants": {
+      "AgentDefault": {
+        "default_params": {
+          "frequency_penalty": null,
+          "max_tokens": 32000,
+          "presence_penalty": null,
+          "stop_sequences": null,
+          "temperature": 0.7,
+          "top_k": null,
+          "top_p": null
+        },
+        "model_name": "anthropic/claude-haiku-4.5",
+        "model_params": [
+          {
+            "provider_id": "openrouter",
+            "temperature": 0.7
+          }
+        ],
+        "timeout": 120
+      },
+      "CharacterProfileGeneration": {
+        "default_params": {
+          "frequency_penalty": null,
+          "max_tokens": 10000,
+          "presence_penalty": null,
+          "stop_sequences": null,
+          "temperature": 0.7,
+          "top_k": null,
+          "top_p": null
+        },
+        "model_name": "qwen/qwen3-235b-a22b-2507",
+        "model_params": [
+          {
+            "provider_id": "openrouter",
+            "temperature": 0.7
+          }
+        ],
+        "timeout": 300
+      },
+      "DiaryGeneration": {
+        "default_params": {
+          "frequency_penalty": null,
+          "max_tokens": 12000,
+          "presence_penalty": null,
+          "stop_sequences": null,
+          "temperature": 0.8,
+          "top_k": null,
+          "top_p": null
+        },
+        "model_name": "qwen/qwen3-235b-a22b-2507",
+        "model_params": [
+          {
+            "provider_id": "openrouter",
+            "temperature": 0.8
+          }
+        ],
+        "timeout": 120
+      },
+      "UniversalTranslator": {
+        "default_params": {
+          "frequency_penalty": null,
+          "max_tokens": 512,
+          "presence_penalty": null,
+          "stop_sequences": null,
+          "temperature": 0.7,
+          "top_k": null,
+          "top_p": null
+        },
+        "model_name": "deepseek/deepseek-v4-flash",
+        "model_params": [
+          {
+            "provider_id": "openrouter",
+            "temperature": 0.7
+          }
+        ]
+      },
+      "action_evaluation": {
+        "default_params": {
+          "frequency_penalty": null,
+          "max_tokens": 500,
+          "presence_penalty": null,
+          "stop_sequences": null,
+          "temperature": 0.2,
+          "top_k": null,
+          "top_p": null
+        },
+        "model_name": "google/gemma-4-31b-it",
+        "model_params": [
+          {
+            "provider_id": "openrouter",
+            "provider_settings": {
+              "cache": true,
+              "provider": {
+                "allow_fallbacks": false,
+                "ignore": [
+                  "atlas-cloud"
+                ],
+                "only": [
+                  "friendli"
+                ]
+              },
+              "route": "fallback"
+            },
+            "temperature": 0.2
+          }
+        ]
+      },
+      "combat": {
+        "default_params": {
+          "frequency_penalty": null,
+          "max_tokens": 2000,
+          "presence_penalty": null,
+          "stop_sequences": null,
+          "temperature": 1,
+          "top_k": null,
+          "top_p": null
+        },
+        "model_name": "deepseek/deepseek-v4-flash-0731",
+        "model_params": [
+          {
+            "provider_id": "openrouter",
+            "temperature": 1
+          }
+        ]
+      },
+      "decisions": {
+        "model_name": "typesafe/jev-1.13",
+        "model_params": [
+          {
+            "max_retries": 0,
+            "provider_id": "openrouter_decisions"
+          }
+        ],
+        "timeout": 10
+      },
+      "gamemaster_evaluation": {
+        "default_params": {
+          "frequency_penalty": null,
+          "max_tokens": 256,
+          "presence_penalty": null,
+          "stop_sequences": null,
+          "temperature": 0.8,
+          "top_k": null,
+          "top_p": null
+        },
+        "model_name": "meta-llama/llama-3.3-70b-instruct",
+        "model_params": [
+          {
+            "provider_id": "openrouter",
+            "temperature": 0.8
+          }
+        ],
+        "timeout": 30
+      },
+      "intel_story_dm": {
+        "default_params": {
+          "frequency_penalty": null,
+          "max_tokens": 4096,
+          "presence_penalty": null,
+          "stop_sequences": null,
+          "temperature": 1,
+          "top_k": null,
+          "top_p": null
+        },
+        "model_name": "google/gemma-4-31b-it, google/gemma-4-26b-a4b-it",
+        "model_params": [
+          {
+            "provider_id": "openrouter",
+            "temperature": 1
+          },
+          {
+            "provider_id": "openrouter",
+            "temperature": 1
+          }
+        ]
+      },
+      "memory": {
+        "default_params": {
+          "frequency_penalty": null,
+          "max_tokens": 4000,
+          "presence_penalty": null,
+          "stop_sequences": null,
+          "temperature": 0.7,
+          "top_k": null,
+          "top_p": null
+        },
+        "model_name": "qwen/qwen3-235b-a22b-2507",
+        "model_params": [
+          {
+            "provider_id": "openrouter",
+            "temperature": 0.7
+          }
+        ],
+        "timeout": 60
+      },
+      "meta": {
+        "default_params": {
+          "frequency_penalty": null,
+          "max_tokens": 100,
+          "presence_penalty": null,
+          "stop_sequences": null,
+          "temperature": 0.7,
+          "top_k": null,
+          "top_p": null
+        },
+        "model_name": "deepseek/deepseek-v4-flash",
+        "model_params": [
+          {
+            "provider_id": "openrouter",
+            "temperature": 0.7
+          }
+        ]
+      },
+      "narrative_engine_composer": {
+        "default_params": {
+          "frequency_penalty": null,
+          "max_tokens": 4096,
+          "presence_penalty": null,
+          "stop_sequences": null,
+          "temperature": 1,
+          "top_k": null,
+          "top_p": null
+        },
+        "model_name": "google/gemma-4-31b-it, google/gemma-4-26b-a4b-it",
+        "model_params": [
+          {
+            "provider_id": "openrouter",
+            "temperature": 1
+          },
+          {
+            "provider_id": "openrouter",
+            "temperature": 1
+          }
+        ]
+      },
+      "narrative_engine_director": {
+        "default_params": {
+          "frequency_penalty": null,
+          "max_tokens": 4096,
+          "presence_penalty": null,
+          "stop_sequences": null,
+          "temperature": 1,
+          "top_k": null,
+          "top_p": null
+        },
+        "model_name": "google/gemma-4-31b-it, google/gemma-4-26b-a4b-it",
+        "model_params": [
+          {
+            "provider_id": "openrouter",
+            "temperature": 1
+          },
+          {
+            "provider_id": "openrouter",
+            "temperature": 1
+          }
+        ]
+      },
+      "sever_background": {
+        "default_params": {
+          "frequency_penalty": null,
+          "max_tokens": 4096,
+          "presence_penalty": null,
+          "stop_sequences": null,
+          "temperature": 1,
+          "top_k": null,
+          "top_p": null
+        },
+        "model_name": "google/gemma-4-31b-it, google/gemma-4-26b-a4b-it",
+        "model_params": [
+          {
+            "provider_id": "openrouter",
+            "temperature": 1
+          },
+          {
+            "provider_id": "openrouter",
+            "temperature": 1
+          }
+        ]
+      },
+      "vision": {
+        "default_params": {
+          "frequency_penalty": null,
+          "max_tokens": 4000,
+          "presence_penalty": null,
+          "stop_sequences": null,
+          "temperature": 0.7,
+          "top_k": null,
+          "top_p": null
+        },
+        "model_name": "google/gemma-4-26b-a4b-it",
+        "model_params": [
+          {
+            "provider_id": "openrouter",
+            "temperature": 0.7
+          }
+        ]
+      }
+    }
+  },
+  "pending_first_run_preset_id": "",
+  "routing": {
+    "mode": "smart",
+    "quantization_floor": "fp8"
+  }
+}

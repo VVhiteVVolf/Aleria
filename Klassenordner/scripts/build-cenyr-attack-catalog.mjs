@@ -3,6 +3,7 @@ import { getCenyrClassDefinitions } from '../../AleriaAlmanach/modules/classes/c
 import { getCenyrClassProgression } from '../../AleriaAlmanach/modules/classes/cenyr/cenyr-class-progression.js';
 import { writeClassPageOutput } from './class-page-output.mjs';
 import { describeTechniqueDamage, resolveTechniqueDamageFormula } from '../../AleriaAlmanach/modules/combat/combat-technique-damage.js';
+import { describeWeaponTechniqueSave } from '../../AleriaAlmanach/modules/combat-styles/weapon-technique-control.js';
 
 const root = new URL('../', import.meta.url);
 const check = process.argv.includes('--check');
@@ -67,11 +68,11 @@ for (const form of forms) {
     '',
     `${parent ? `Unterform von: ${parent.shortName}` : form.kind === 'foundation' ? 'Grundform' : form.kind === 'duelist' ? 'Duellantenform' : 'Pfad'} · Ausbildung Stufe ${form.techniqueLevelBand.minimum}–${form.techniqueLevelBand.maximum} · ${form.techniques.length} Attacken im Gesamtpool.`,
     '',
-    '| Stufe | Attacke | Klassen | Waffenprofile | Schadensmodell | Mit 1W10 bei Freigabe | Mit 1W10 auf Stufe 20 | Kosten | Wirkung | Stand |',
-    '| ---: | --- | --- | --- | --- | --- | --- | --- | --- | --- |'
+    '| Stufe | Attacke | Klassen | Waffenprofile | Schadensmodell | Mit 1W10 bei Freigabe | Mit 1W10 auf Stufe 20 | Kosten | Zusatzrettung | Wirkung | Stand |',
+    '| ---: | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |'
   );
   for (const technique of [...form.techniques].sort((left, right) => left.minimumLevel - right.minimumLevel || left.name.localeCompare(right.name, 'de'))) {
-    lines.push(`| ${technique.minimumLevel} | ${cell(technique.name)} | ${cell(classLabel(technique))} | ${cell(weaponLabel(technique))} | ${cell(damageLabel(technique))} | ${referenceDamage(technique, technique.minimumLevel)} | ${referenceDamage(technique, 20)} | ${cell(costLabel(technique))} | ${cell(technique.effect)} | ${technique.status === 'confirmed' ? 'Bestätigt' : 'Entwurf'} |`);
+    lines.push(`| ${technique.minimumLevel} | ${cell(technique.name)} | ${cell(classLabel(technique))} | ${cell(weaponLabel(technique))} | ${cell(damageLabel(technique))} | ${referenceDamage(technique, technique.minimumLevel)} | ${referenceDamage(technique, 20)} | ${cell(costLabel(technique))} | ${cell(describeWeaponTechniqueSave(technique.secondarySave))} | ${cell(technique.effect)} | ${technique.status === 'confirmed' ? 'Bestätigt' : 'Entwurf'} |`);
   }
 }
 

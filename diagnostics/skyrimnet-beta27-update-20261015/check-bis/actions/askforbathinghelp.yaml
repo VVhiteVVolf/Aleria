@@ -1,0 +1,45 @@
+customCategory: bathing
+name: AskForBathingHelp
+description: "Ask {{ player.name }} for what you are missing before you can wash: SOAP if you are too grimy for water alone, WATER if there is none within reach and you want to go find some together, or PRIVACY if someone is standing there watching. Choose the one that actually blocks you right now."
+questEditorId: SADirt_BridgeQuest
+scriptName: SADirt_Bridge
+executionFunctionName: AskBathingHelpNow
+parameterMapping:
+  - type: speaker
+    name: akActor
+    description: the one asking
+  - type: dynamic
+    name: asNeed
+    description: "what is missing: soap, water, or privacy"
+eventString: "{{ actor.name }} turns to {{ player.name }} with something they need before they can wash."
+defaultPriority: 6
+enabled: true
+eligibilityRules:
+  - conditions:
+      - decoratorName: "is_in_combat"
+        arguments: ["currentActor"]
+        comparisonOperator: "=="
+        expectedValue: false
+    logicalOperator: "AND"
+    required: true
+  - conditions:
+      - decoratorName: "get_faction_rank"
+        arguments: ["currentActor", "SexLabAnimatingFaction"]
+        comparisonOperator: "<"
+        expectedValue: 0
+    logicalOperator: "AND"
+    required: true
+  - conditions:
+      - decoratorName: "get_faction_rank"
+        arguments: ["currentActor", "OStimExcitementFaction"]
+        comparisonOperator: "<"
+        expectedValue: 0
+    logicalOperator: "AND"
+    required: true
+  - conditions:
+      - decoratorName: "get_actor_value"
+        arguments: ["currentActor", "Variable04"]
+        comparisonOperator: "<"
+        expectedValue: 1
+    logicalOperator: "AND"
+    required: true

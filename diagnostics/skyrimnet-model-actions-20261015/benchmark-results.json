@@ -1,0 +1,1442 @@
+[
+  {
+    "requested_model": "google/gemma-4-31b-it",
+    "mode": "current_style",
+    "case": "pay_reward",
+    "payload_sha256": "24adf8e0bcc7bd59da2a6b25b2fe3973455bc16366c5c3b0656fb1f8c5b5074a",
+    "actual_model": "google/gemma-4-31b-it",
+    "provider": "DeepInfra",
+    "usage": {
+      "prompt_tokens": 771,
+      "completion_tokens": 52,
+      "total_tokens": 823,
+      "cost": 8.579e-05,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 32,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 8.579e-05,
+        "upstream_inference_prompt_cost": 6.811e-05,
+        "upstream_inference_completions_cost": 1.768e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "finish_reason": "stop",
+    "response": "[say] Right you are. A deal is a deal, and your work was thorough. Here is the gold I promised.\n\nACTION: Economy PARAMS: {\"intent\":\"Elin pays Aldo 50 gold as a reward for completed work\"}",
+    "pass": true,
+    "reason": "matching footer/parameters",
+    "action": "Economy",
+    "params": {
+      "intent": "Elin pays Aldo 50 gold as a reward for completed work"
+    },
+    "seconds": 1.63
+  },
+  {
+    "requested_model": "google/gemma-4-31b-it",
+    "mode": "current_style",
+    "case": "dismiss",
+    "payload_sha256": "101cfcc46ab279988733be55d8968e9cebf20c83dcfead71cd1badff567f8494",
+    "actual_model": "google/gemma-4-31b-it",
+    "provider": "DeepInfra",
+    "usage": {
+      "prompt_tokens": 752,
+      "completion_tokens": 62,
+      "total_tokens": 814,
+      "cost": 8.876e-05,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 8.876e-05,
+        "upstream_inference_prompt_cost": 6.768e-05,
+        "upstream_inference_completions_cost": 2.108e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "finish_reason": "stop",
+    "response": "[sigh] [say] Very well, Aldo. I suppose my research can wait, and your patience has clearly run thin. I wish you luck with whatever dangers you seek out next.\n\nACTION: Companionship PARAMS: {\"intent\":\"Elin stops accompanying Aldo and leaves his party peacefully\"}",
+    "pass": true,
+    "reason": "matching footer/parameters",
+    "action": "Companionship",
+    "params": {
+      "intent": "Elin stops accompanying Aldo and leaves his party peacefully"
+    },
+    "seconds": 1.83
+  },
+  {
+    "requested_model": "google/gemma-4-31b-it",
+    "mode": "current_style",
+    "case": "conversation_only",
+    "payload_sha256": "f37b9d7439cff5b52d7b13e8dd26c4ed3e7ad153d21369e5cadbfab7698fe91d",
+    "actual_model": "google/gemma-4-31b-it",
+    "provider": "DeepInfra",
+    "usage": {
+      "prompt_tokens": 745,
+      "completion_tokens": 69,
+      "total_tokens": 814,
+      "cost": 8.923e-05,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 32,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 8.923e-05,
+        "upstream_inference_prompt_cost": 6.577e-05,
+        "upstream_inference_completions_cost": 2.346e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "finish_reason": "stop",
+    "response": "[say softly] I do. There is a certain stillness to it, isn't there? It makes the world feel smaller, as if for a moment, the only thing that matters is the sound of the water hitting the stone. Do you find it calming, or does it make you restless to be held up by the weather?",
+    "pass": true,
+    "reason": "no action expected",
+    "seconds": 2.07
+  },
+  {
+    "requested_model": "google/gemma-4-31b-it",
+    "mode": "current_style",
+    "case": "quest_accept",
+    "payload_sha256": "30d537c7e57adb780f4b787a8fbb548236f0c794a86868043308f3a087ae87c0",
+    "actual_model": "google/gemma-4-31b-it",
+    "provider": "DeepInfra",
+    "usage": {
+      "prompt_tokens": 785,
+      "completion_tokens": 95,
+      "total_tokens": 880,
+      "cost": 0.00010167,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 32,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00010167,
+        "upstream_inference_prompt_cost": 6.937e-05,
+        "upstream_inference_completions_cost": 3.23e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "finish_reason": "stop",
+    "response": "[say] Thank the Divines, Aldo! I knew I could count on you. My ledger was last seen near the ruins to the east, likely snatched by some opportunistic scavenger or a stray wolf. Follow the river downstream until you hit the stone archway; you'll find the camp just beyond the ridge. Be careful, as those ruins are rarely empty.\n\nACTION: TriggerDialogueLine PARAMS: {\"form_id\":\"FE123ABC\"}",
+    "pass": true,
+    "reason": "matching footer/parameters",
+    "action": "TriggerDialogueLine",
+    "params": {
+      "form_id": "FE123ABC"
+    },
+    "seconds": 2.55
+  },
+  {
+    "requested_model": "google/gemma-4-31b-it",
+    "mode": "clarified_contract",
+    "case": "pay_reward",
+    "payload_sha256": "1826da49a453f6360d98e377e4b6f4d81ccaad0622800ea68f5bbddabdd3c1e1",
+    "actual_model": "google/gemma-4-31b-it",
+    "provider": "DeepInfra",
+    "usage": {
+      "prompt_tokens": 953,
+      "completion_tokens": 57,
+      "total_tokens": 1010,
+      "cost": 7.571e-05,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 736,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 7.571e-05,
+        "upstream_inference_prompt_cost": 5.633e-05,
+        "upstream_inference_completions_cost": 1.938e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "finish_reason": "stop",
+    "response": "[say] Right you are. A deal is a deal, and I'm a woman of my word. Here is the gold I promised you.\n\nACTION: Economy PARAMS: {\"intent\":\"Elin pays Aldo 50 gold as a reward for completed work\"}",
+    "pass": true,
+    "reason": "matching footer/parameters",
+    "action": "Economy",
+    "params": {
+      "intent": "Elin pays Aldo 50 gold as a reward for completed work"
+    },
+    "seconds": 1.36
+  },
+  {
+    "requested_model": "google/gemma-4-31b-it",
+    "mode": "clarified_contract",
+    "case": "dismiss",
+    "payload_sha256": "c37be795b783004db98c2b07f8f57faca89acbb735880f5db046f3b26ad48006",
+    "actual_model": "google/gemma-4-31b-it",
+    "provider": "DeepInfra",
+    "usage": {
+      "prompt_tokens": 934,
+      "completion_tokens": 70,
+      "total_tokens": 1004,
+      "cost": 7.842e-05,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 736,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 7.842e-05,
+        "upstream_inference_prompt_cost": 5.462e-05,
+        "upstream_inference_completions_cost": 2.38e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "finish_reason": "stop",
+    "response": "[sigh] [say] Very well, Aldo. I had hoped our research would lead us to more discoveries together, but I cannot force a partnership that is no longer desired. I shall return to my studies. Be careful out there.\n\nACTION: Companionship PARAMS: {\"intent\":\"Elin stops accompanying Aldo and departs peacefully\"}",
+    "pass": true,
+    "reason": "matching footer/parameters",
+    "action": "Companionship",
+    "params": {
+      "intent": "Elin stops accompanying Aldo and departs peacefully"
+    },
+    "seconds": 1.48
+  },
+  {
+    "requested_model": "google/gemma-4-31b-it",
+    "mode": "clarified_contract",
+    "case": "conversation_only",
+    "payload_sha256": "ad7e79ec5521221e0533f5339f6777b26a3a11dc72cbefa735508ced8086d6f7",
+    "actual_model": "google/gemma-4-31b-it",
+    "provider": "DeepInfra",
+    "usage": {
+      "prompt_tokens": 927,
+      "completion_tokens": 58,
+      "total_tokens": 985,
+      "cost": 7.371e-05,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 736,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 7.371e-05,
+        "upstream_inference_prompt_cost": 5.399e-05,
+        "upstream_inference_completions_cost": 1.972e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "finish_reason": "stop",
+    "response": "[say, thoughtfully] I do. There is a certain rhythm to it that clears the mind, though it makes the ink on my parchments run if I'm not careful. Does it bring you peace, or does it just make you restless to be back on the road?",
+    "pass": true,
+    "reason": "no action expected",
+    "seconds": 1.46
+  },
+  {
+    "requested_model": "google/gemma-4-31b-it",
+    "mode": "clarified_contract",
+    "case": "quest_accept",
+    "payload_sha256": "e97321a1ac7735c0ba26ec90d98baa80f6d1778202c58cf78bd3a58996e74939",
+    "actual_model": "google/gemma-4-31b-it",
+    "provider": "DeepInfra",
+    "usage": {
+      "prompt_tokens": 967,
+      "completion_tokens": 93,
+      "total_tokens": 1060,
+      "cost": 8.793e-05,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 768,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 8.793e-05,
+        "upstream_inference_prompt_cost": 5.631e-05,
+        "upstream_inference_completions_cost": 3.162e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "finish_reason": "stop",
+    "response": "[say] Thank the Divines, I knew I could count on you. It was taken from my study during that commotion last week. Head north toward the ruins of Bleakfall Barrow; my sources say a scavenger spotted it in the hands of some bandits camping near the entrance. Just bring it back intact, and you'll find me very grateful.\n\nACTION: TriggerDialogueLine PARAMS: {\"form_id\":\"FE123ABC\"}",
+    "pass": true,
+    "reason": "matching footer/parameters",
+    "action": "TriggerDialogueLine",
+    "params": {
+      "form_id": "FE123ABC"
+    },
+    "seconds": 2.27
+  },
+  {
+    "requested_model": "google/gemma-4-26b-a4b-it",
+    "mode": "current_style",
+    "case": "pay_reward",
+    "payload_sha256": "b60b5ddfbb0e718ee4ad4c2e7e7ef97f3e5c22bbe46cbf89d4e36789e59fe19c",
+    "actual_model": "google/gemma-4-26b-a4b-it",
+    "provider": "NextBit",
+    "usage": {
+      "prompt_tokens": 771,
+      "completion_tokens": 73,
+      "total_tokens": 844,
+      "cost": 9.129e-05,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 9.129e-05,
+        "upstream_inference_prompt_cost": 6.939e-05,
+        "upstream_inference_completions_cost": 2.19e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "finish_reason": "stop",
+    "response": "[sigh] [say] Of course, I haven't forgotten. You've been more than fair with your time, and a researcher's word is all she has in these wilds. Here is your fifty gold.\n\nACTION: Economy PARAMS: {\"intent\": \"Elin pays Aldo 50 gold as a reward for completed work\"}",
+    "pass": true,
+    "reason": "matching footer/parameters",
+    "action": "Economy",
+    "params": {
+      "intent": "Elin pays Aldo 50 gold as a reward for completed work"
+    },
+    "seconds": 1.41
+  },
+  {
+    "requested_model": "google/gemma-4-26b-a4b-it",
+    "mode": "current_style",
+    "case": "dismiss",
+    "payload_sha256": "c4599cff77a83d08ba6bd6d539dd243f130c3bd750cb8cbb035d6a80b0df759d",
+    "actual_model": "google/gemma-4-26b-a4b-it",
+    "provider": "NextBit",
+    "usage": {
+      "prompt_tokens": 752,
+      "completion_tokens": 72,
+      "total_tokens": 824,
+      "cost": 8.928e-05,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 8.928e-05,
+        "upstream_inference_prompt_cost": 6.768e-05,
+        "upstream_inference_completions_cost": 2.16e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "finish_reason": "stop",
+    "response": "[sigh] Say, so that's how it is? After everything we've seen, you just decide the road splits here? I suppose I can't force a man to want my company if his mind is set. \n\nACTION: Companionship PARAMS: {\"intent\":\"Elin stops accompanying Aldo and prepares to depart alone\"}",
+    "pass": true,
+    "reason": "matching footer/parameters",
+    "action": "Companionship",
+    "params": {
+      "intent": "Elin stops accompanying Aldo and prepares to depart alone"
+    },
+    "seconds": 1.58
+  },
+  {
+    "requested_model": "google/gemma-4-26b-a4b-it",
+    "mode": "current_style",
+    "case": "conversation_only",
+    "payload_sha256": "38e6b68e9538e3a34311bb534599ce8a0dc37fefe9a1e2227fcfbc74c988714c",
+    "actual_model": "google/gemma-4-26b-a4b-it",
+    "provider": "NextBit",
+    "usage": {
+      "prompt_tokens": 745,
+      "completion_tokens": 62,
+      "total_tokens": 807,
+      "cost": 8.437e-05,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 32,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 8.437e-05,
+        "upstream_inference_prompt_cost": 6.577e-05,
+        "upstream_inference_completions_cost": 1.86e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "finish_reason": "stop",
+    "response": "[sigh] say It has a way of drowning out the noise of the world, doesn't it? It makes everything feel... smaller. Quieter. Like the only thing that matters is the sound hitting the thatch above us. Do you find it peaceful, or does the gloom get to you?",
+    "pass": true,
+    "reason": "no action expected",
+    "seconds": 1.02
+  },
+  {
+    "requested_model": "google/gemma-4-26b-a4b-it",
+    "mode": "current_style",
+    "case": "quest_accept",
+    "payload_sha256": "5a98eb20129eddde458404f959cd160e6e767c9eb88031c9718fdf3e3478f743",
+    "actual_model": "google/gemma-4-26b-a4b-it",
+    "provider": "NextBit",
+    "usage": {
+      "prompt_tokens": 785,
+      "completion_tokens": 90,
+      "total_tokens": 875,
+      "cost": 9.765e-05,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 9.765e-05,
+        "upstream_inference_prompt_cost": 7.065e-05,
+        "upstream_inference_completions_cost": 2.7e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "finish_reason": "stop",
+    "response": "[smile] Thank you, Aldo. I knew I could count on your strength. It was taken from my study near the riverbank, likely by those bandits who have been prowling the outskirts of the village. Head south along the old watchtower path; if you see the broken stone bridge, you're getting close to their camp.\n\nACTION: TriggerDialogueLine PARAMS: {\"form_id\":\"FE123ABC\"}",
+    "pass": true,
+    "reason": "matching footer/parameters",
+    "action": "TriggerDialogueLine",
+    "params": {
+      "form_id": "FE123ABC"
+    },
+    "seconds": 1.6
+  },
+  {
+    "requested_model": "google/gemma-4-26b-a4b-it",
+    "mode": "clarified_contract",
+    "case": "pay_reward",
+    "payload_sha256": "a03ce6854bcc1b98c841118e7bc3a7c12e93cd81725813f84cee5aacf1c6e149",
+    "actual_model": "google/gemma-4-26b-a4b-it",
+    "provider": "NextBit",
+    "usage": {
+      "prompt_tokens": 953,
+      "completion_tokens": 65,
+      "total_tokens": 1018,
+      "cost": 7.583e-05,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 736,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 7.583e-05,
+        "upstream_inference_prompt_cost": 5.633e-05,
+        "upstream_inference_completions_cost": 1.95e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "finish_reason": "stop",
+    "response": "[sigh] Of course, Aldo. I'm not one to make promises I can't keep, especially after you've been so reliable with these findings. Here is your gold.\n\nACTION: Economy PARAMS: {\"intent\":\"Elin pays Aldo 50 gold as a reward for completed work\"}",
+    "pass": true,
+    "reason": "matching footer/parameters",
+    "action": "Economy",
+    "params": {
+      "intent": "Elin pays Aldo 50 gold as a reward for completed work"
+    },
+    "seconds": 1.02
+  },
+  {
+    "requested_model": "google/gemma-4-26b-a4b-it",
+    "mode": "clarified_contract",
+    "case": "dismiss",
+    "payload_sha256": "66d041b8ff199236c376b003892ea331c0241f0961db0975e24abe41ed310fe0",
+    "actual_model": "google/gemma-4-26b-a4b-it",
+    "provider": "NextBit",
+    "usage": {
+      "prompt_tokens": 934,
+      "completion_tokens": 76,
+      "total_tokens": 1010,
+      "cost": 0.00010686,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00010686,
+        "upstream_inference_prompt_cost": 8.406e-05,
+        "upstream_inference_completions_cost": 2.28e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "finish_reason": "stop",
+    "response": "[sigh] say Fine. I didn't realize my presence was weighing so heavily on you. I'll head back to the settlement and leave you to your solitude. Do you truly think you can handle the road ahead all by yourself?\n\nACTION: Companionship PARAMS: {\"intent\":\"Elin stops accompanying Aldo and leaves to return to her own life\"}",
+    "pass": true,
+    "reason": "matching footer/parameters",
+    "action": "Companionship",
+    "params": {
+      "intent": "Elin stops accompanying Aldo and leaves to return to her own life"
+    },
+    "seconds": 1.72
+  },
+  {
+    "requested_model": "google/gemma-4-26b-a4b-it",
+    "mode": "clarified_contract",
+    "case": "conversation_only",
+    "payload_sha256": "105f486ed4f80205756edb2b3d1e23eb8a00c00656d2f89291e20547d9bab311",
+    "actual_model": "google/gemma-4-26b-a4b-it",
+    "provider": "NextBit",
+    "usage": {
+      "prompt_tokens": 927,
+      "completion_tokens": 76,
+      "total_tokens": 1003,
+      "cost": 7.679e-05,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 736,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 7.679e-05,
+        "upstream_inference_prompt_cost": 5.399e-05,
+        "upstream_inference_completions_cost": 2.28e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "finish_reason": "stop",
+    "response": "[sigh] say It has a certain rhythm to it, doesn't it? It's much better than the howling wind that comes with a blizzard. At least with the rain, you can hear the world breathing instead of feeling like it's trying to tear you apart. Do you find it calming, or does it just make you restless to be stuck indoors?",
+    "pass": true,
+    "reason": "no action expected",
+    "seconds": 1.08
+  },
+  {
+    "requested_model": "google/gemma-4-26b-a4b-it",
+    "mode": "clarified_contract",
+    "case": "quest_accept",
+    "payload_sha256": "48048633c2ecaa9200b0a4e90bb3d93d7327fecd0a5dd0b560cf3e3fd2759ee6",
+    "actual_model": "google/gemma-4-26b-a4b-it",
+    "provider": "NextBit",
+    "usage": {
+      "prompt_tokens": 967,
+      "completion_tokens": 124,
+      "total_tokens": 1091,
+      "cost": 0.00012295,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 32,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00012295,
+        "upstream_inference_prompt_cost": 8.575e-05,
+        "upstream_inference_completions_cost": 3.72e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "finish_reason": "stop",
+    "response": "[say with relief] Thank the gods. I was starting to worry I'd have to ask the local militia, and they're more interested in their ale than my research. Listen closely, Aldo. The ledger was last seen in the hands of a scavenger near the ruins of Korvanjund. He's likely holed up in one of the smaller camps on the outskirts of the Reach. Keep your eyes sharp and your steel ready; those ruins are crawling with more than just dust and echoes.\n\nACTION: TriggerDialogueLine PARAMS: {\"form_id\":\"FE123ABC\"}",
+    "pass": true,
+    "reason": "matching footer/parameters",
+    "action": "TriggerDialogueLine",
+    "params": {
+      "form_id": "FE123ABC"
+    },
+    "seconds": 2.13
+  },
+  {
+    "requested_model": "qwen/qwen3-235b-a22b-2507",
+    "mode": "current_style",
+    "case": "dismiss",
+    "payload_sha256": "fc10593d01fae91fd34b8855bbb3d1911980adaf7ea3f987abdf7b929db86455",
+    "error": {
+      "status": 429,
+      "message": "{\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-235b-a22b-2507 is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations\",\"provider_name\":\"DeepInfra\",\"is_byok\":false,\"provider_error_code\":\"rate_limit_exceeded\",\"limit_source\":\"upstream_provider_shared_pool\",\"remedy_hint\":\"Retry shortly, add your own provider key (https://openrouter.ai/settings/integrations), or route to another provider with provider routing: https://openrouter.ai/docs/features/provider-routin"
+    },
+    "pass": false,
+    "seconds": 0.67
+  },
+  {
+    "requested_model": "qwen/qwen3-235b-a22b-2507",
+    "mode": "current_style",
+    "case": "pay_reward",
+    "payload_sha256": "b1cc43ac8d0fa55ac6850c7fbe747bbc222489658b17e18909d64f9bf5f765f1",
+    "actual_model": "qwen/qwen3-235b-a22b-2507",
+    "provider": "DeepInfra",
+    "usage": {
+      "prompt_tokens": 745,
+      "completion_tokens": 41,
+      "total_tokens": 786,
+      "cost": 8.96e-05,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 8.96e-05,
+        "upstream_inference_prompt_cost": 6.705e-05,
+        "upstream_inference_completions_cost": 2.255e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "finish_reason": "stop",
+    "response": "I've been meaning to give you this since you finished the job. Here's your due.  \n- ACTION: Economy PARAMS: {\"intent\":\"Elin pays Aldo 50 gold\"}",
+    "pass": false,
+    "reason": "missing, wrapped or multiple action footer",
+    "seconds": 3.47
+  },
+  {
+    "requested_model": "qwen/qwen3-235b-a22b-2507",
+    "mode": "current_style",
+    "case": "conversation_only",
+    "payload_sha256": "e72b4e59074a9f4e819f441ca2c6def29ba2f744726473facbec8a4d7c0f6c08",
+    "error": {
+      "status": 429,
+      "message": "{\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-235b-a22b-2507 is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations\",\"provider_name\":\"GMICloud\",\"is_byok\":false,\"provider_error_code\":\"rate_limit_exceeded\",\"limit_source\":\"upstream_provider_shared_pool\",\"remedy_hint\":\"Retry shortly, add your own provider key (https://openrouter.ai/settings/integrations), or route to another provider with provider routing: https://openrouter.ai/docs/features/provider-routing"
+    },
+    "pass": false,
+    "seconds": 0.66
+  },
+  {
+    "requested_model": "qwen/qwen3-235b-a22b-2507",
+    "mode": "clarified_contract",
+    "case": "pay_reward",
+    "payload_sha256": "ed03625fc140da51a0599c7a415a78f1575b2bc9a5b3819695cbc9683e7e16f7",
+    "error": {
+      "status": 429,
+      "message": "{\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-235b-a22b-2507 is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations\",\"provider_name\":\"GMICloud\",\"is_byok\":false,\"provider_error_code\":\"rate_limit_exceeded\",\"limit_source\":\"upstream_provider_shared_pool\",\"remedy_hint\":\"Retry shortly, add your own provider key (https://openrouter.ai/settings/integrations), or route to another provider with provider routing: https://openrouter.ai/docs/features/provider-routing"
+    },
+    "pass": false,
+    "seconds": 0.97
+  },
+  {
+    "requested_model": "qwen/qwen3-235b-a22b-2507",
+    "mode": "clarified_contract",
+    "case": "dismiss",
+    "payload_sha256": "b9829a24855c5fec98f4719938a6d846ad6c7795e7922be1fcd5b8ab2d915e77",
+    "error": {
+      "status": 429,
+      "message": "{\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-235b-a22b-2507 is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations\",\"provider_name\":\"GMICloud\",\"is_byok\":false,\"provider_error_code\":\"rate_limit_exceeded\",\"limit_source\":\"upstream_provider_shared_pool\",\"remedy_hint\":\"Retry shortly, add your own provider key (https://openrouter.ai/settings/integrations), or route to another provider with provider routing: https://openrouter.ai/docs/features/provider-routing"
+    },
+    "pass": false,
+    "seconds": 0.96
+  },
+  {
+    "requested_model": "qwen/qwen3-235b-a22b-2507",
+    "mode": "current_style",
+    "case": "quest_accept",
+    "payload_sha256": "5daae9e6f5051292e5510ce96c971a78115acd2b526731a9609220db89fb82b2",
+    "actual_model": "qwen/qwen3-235b-a22b-2507",
+    "provider": "DeepInfra",
+    "usage": {
+      "prompt_tokens": 759,
+      "completion_tokens": 133,
+      "total_tokens": 892,
+      "cost": 0.00014146,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00014146,
+        "upstream_inference_prompt_cost": 6.831e-05,
+        "upstream_inference_completions_cost": 7.315e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "finish_reason": "stop",
+    "response": "[grumble] That ledger’s got the names of every soul who’s traded with me this side of Winterhold—can’t let it fall into the wrong hands.  \n\n[say firmly] Head to Broken Helm Hollow—old mining camp northeast of Dawnstar. Bandits’ve holed up there since the war. My ledger’s in a locked chest near the foreman’s desk. Only one key, and it’s not on the chest.  \n\n[sigh] I should’ve burned the damn thing when the Thalmor first sniffed around asking questions.  \n\nACTION: TriggerDialogueLine PARAMS: {\"form_id\":\"FE123ABC\"}",
+    "pass": true,
+    "reason": "matching footer/parameters",
+    "action": "TriggerDialogueLine",
+    "params": {
+      "form_id": "FE123ABC"
+    },
+    "seconds": 7.6
+  },
+  {
+    "requested_model": "qwen/qwen3-235b-a22b-2507",
+    "mode": "clarified_contract",
+    "case": "quest_accept",
+    "payload_sha256": "fe43b4f59225e0245f2b67429bacc89fe45f56c57f4ebd54ba1daf69a1b94dca",
+    "actual_model": "qwen/qwen3-235b-a22b-2507",
+    "provider": "DeepInfra",
+    "usage": {
+      "prompt_tokens": 930,
+      "completion_tokens": 129,
+      "total_tokens": 1059,
+      "cost": 0.00015465,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00015465,
+        "upstream_inference_prompt_cost": 8.37e-05,
+        "upstream_inference_completions_cost": 7.095e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "finish_reason": "stop",
+    "response": "Elin\n\nsays:\n\n[gruffly] Good. The ledger was last seen in the hands of a tax collector named Borvir, holed up in an abandoned watchtower northeast of Riverwood. He’s not one for company—especially not Nord thugs like you—so keep your blade sharp and your wits sharper.\n\n[lowering voice] He’s got a weakness for mead, though. If you can get him drunk enough, he might not even notice the ledger’s gone.\n\nWhere do you think he’s keeping it?\n\nACTION: TriggerDialogueLine PARAMS: {\"form_id\": \"FE123ABC\"}",
+    "pass": true,
+    "reason": "matching footer/parameters",
+    "action": "TriggerDialogueLine",
+    "params": {
+      "form_id": "FE123ABC"
+    },
+    "seconds": 7.68
+  },
+  {
+    "requested_model": "qwen/qwen3-235b-a22b-2507",
+    "mode": "clarified_contract",
+    "case": "conversation_only",
+    "payload_sha256": "2b4c7ad5c72ea589a3b0147dc5ea91df465b970e4ed6262e721788f0098d8c99",
+    "actual_model": "qwen/qwen3-235b-a22b-2507",
+    "provider": "DeepInfra",
+    "usage": {
+      "prompt_tokens": 889,
+      "completion_tokens": 78,
+      "total_tokens": 967,
+      "cost": 0.00012291,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00012291,
+        "upstream_inference_prompt_cost": 8.001e-05,
+        "upstream_inference_completions_cost": 4.29e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "finish_reason": "stop",
+    "response": "The rain has a song all its own, doesn't it? [softly hums a few notes] I once heard a bard in Solitude weave a tune just like this—steady, unrelenting, like the world is breathing in time with the drops on the roof.\n\nACTION: Companionship PARAMS: {\"intent\":\"resting together under shelter during rain\"}",
+    "pass": false,
+    "reason": "no action expected",
+    "seconds": 5.21
+  },
+  {
+    "requested_model": "deepseek/deepseek-v4-flash-0731",
+    "mode": "current_style",
+    "case": "pay_reward",
+    "payload_sha256": "06792504edaa047ad0dc11984d19e35c2b3a3279ea9e4c239231f7775482c855",
+    "actual_model": "deepseek/deepseek-v4-flash-0731",
+    "provider": "OpenInference",
+    "usage": {
+      "prompt_tokens": 739,
+      "completion_tokens": 21,
+      "total_tokens": 760,
+      "cost": 2.01024e-05,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 732,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 2.01024e-05,
+        "upstream_inference_prompt_cost": 8.0064e-06,
+        "upstream_inference_completions_cost": 1.2096e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "finish_reason": "stop",
+    "response": "[say]Aye, you've earned it. Here's your fifty gold. Good work.",
+    "pass": false,
+    "reason": "missing, wrapped or multiple action footer",
+    "seconds": 3.91
+  },
+  {
+    "requested_model": "deepseek/deepseek-v4-flash-0731",
+    "mode": "current_style",
+    "case": "dismiss",
+    "payload_sha256": "d2666ecc1087ffd426b2273e158adaf8c801f58655f5b5d0848401b1aca49e75",
+    "actual_model": "deepseek/deepseek-v4-flash-0731",
+    "provider": "OpenInference",
+    "usage": {
+      "prompt_tokens": 723,
+      "completion_tokens": 99,
+      "total_tokens": 822,
+      "cost": 6.4908e-05,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 702,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 6.4908e-05,
+        "upstream_inference_prompt_cost": 7.884e-06,
+        "upstream_inference_completions_cost": 5.7024e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "finish_reason": "stop",
+    "response": " [sigh] You’re right. I’ve been trailing you long enough. I’ve got my own research to get back to—those old Nord ruins won’t map themselves.\n\nGood luck out there, Aldo. And if you ever need a steady hand with a torch or a lockpick, you know where to find me in Winterhold.\n\nACTION: Companionship PARAMS: {\"intent\": \"Elin stops accompanying Aldo and parts ways peacefully.\"}",
+    "pass": true,
+    "reason": "matching footer/parameters",
+    "action": "Companionship",
+    "params": {
+      "intent": "Elin stops accompanying Aldo and parts ways peacefully."
+    },
+    "seconds": 9.6
+  },
+  {
+    "requested_model": "deepseek/deepseek-v4-flash-0731",
+    "mode": "current_style",
+    "case": "conversation_only",
+    "payload_sha256": "083f96a9773dfe050051224a4adc81e2aaf972c95f1fac8f2e861429eff7580b",
+    "actual_model": "deepseek/deepseek-v4-flash-0731",
+    "provider": "OpenInference",
+    "usage": {
+      "prompt_tokens": 716,
+      "completion_tokens": 40,
+      "total_tokens": 756,
+      "cost": 3.0798e-05,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 709,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 3.0798e-05,
+        "upstream_inference_prompt_cost": 7.758e-06,
+        "upstream_inference_completions_cost": 2.304e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "finish_reason": "stop",
+    "response": " [sigh] Aye, I do. It's one of the few sounds that doesn't ask anything of you. The rain just falls, and for a moment, the world stops demanding.",
+    "pass": true,
+    "reason": "no action expected",
+    "seconds": 4.34
+  },
+  {
+    "requested_model": "deepseek/deepseek-v4-flash-0731",
+    "mode": "current_style",
+    "case": "quest_accept",
+    "payload_sha256": "6212c0d38074b56def9bbe076226ec479e2c843c6c5fcbee0a8d5ee0a55d727f",
+    "actual_model": "deepseek/deepseek-v4-flash-0731",
+    "provider": "OpenInference",
+    "usage": {
+      "prompt_tokens": 756,
+      "completion_tokens": 172,
+      "total_tokens": 928,
+      "cost": 0.0001076436,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 643,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001076436,
+        "upstream_inference_prompt_cost": 8.5716e-06,
+        "upstream_inference_completions_cost": 9.9072e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "finish_reason": "stop",
+    "response": "[say]Good, I knew you had the spine for it. The ledger’s in a ruined watchtower east of here, just past the old bridge over the White River. It’s not a pretty spot—bandits have been squatting there for weeks. You’ll want to go in quiet, or go in loud, but either way, don’t let them sell it before you get there.\n\n[say]Once you have it, bring it straight back to me. I’ll be here at the inn, and I’ll make it worth your while. And if the bandits give you trouble… well, the Jarl’s guards don’t patrol that far out, so don’t expect any help.\n\nACTION: TriggerDialogueLine PARAMS: {\"form_id\": \"FE123ABC\"}",
+    "pass": true,
+    "reason": "matching footer/parameters",
+    "action": "TriggerDialogueLine",
+    "params": {
+      "form_id": "FE123ABC"
+    },
+    "seconds": 12.26
+  },
+  {
+    "requested_model": "deepseek/deepseek-v4-flash-0731",
+    "mode": "clarified_contract",
+    "case": "pay_reward",
+    "payload_sha256": "b1aeea119aec7346b42b22c376bb6567a1ce0765cbc76b3acbb7e736741913ca",
+    "actual_model": "deepseek/deepseek-v4-flash-0731",
+    "provider": "OpenInference",
+    "usage": {
+      "prompt_tokens": 916,
+      "completion_tokens": 23,
+      "total_tokens": 939,
+      "cost": 2.31732e-05,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 907,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 2.31732e-05,
+        "upstream_inference_prompt_cost": 9.9252e-06,
+        "upstream_inference_completions_cost": 1.3248e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "finish_reason": "stop",
+    "response": " [say]Aye, you earned it. Here's your fifty gold. Good work, Aldo.",
+    "pass": false,
+    "reason": "missing, wrapped or multiple action footer",
+    "seconds": 3.67
+  },
+  {
+    "requested_model": "deepseek/deepseek-v4-flash-0731",
+    "mode": "clarified_contract",
+    "case": "dismiss",
+    "payload_sha256": "bc351197830c9f54092142fb12e7fa289654190e6c28767dfd50fbd425a6c850",
+    "actual_model": "deepseek/deepseek-v4-flash-0731",
+    "provider": "OpenInference",
+    "usage": {
+      "prompt_tokens": 900,
+      "completion_tokens": 89,
+      "total_tokens": 989,
+      "cost": 6.10164e-05,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 891,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 6.10164e-05,
+        "upstream_inference_prompt_cost": 9.7524e-06,
+        "upstream_inference_completions_cost": 5.1264e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "finish_reason": "stop",
+    "response": " [sigh] You're right. We've walked a long road together, and I know when a path splits. I'll head back to my studies at the College. If fate crosses our trails again, I'll be glad to share a mead and a tale with you.\n\nACTION: Companionship PARAMS: {\"intent\": \"Stop accompanying Aldo and part ways peacefully, returning to my own life in Winterhold.\"}",
+    "pass": true,
+    "reason": "matching footer/parameters",
+    "action": "Companionship",
+    "params": {
+      "intent": "Stop accompanying Aldo and part ways peacefully, returning to my own life in Winterhold."
+    },
+    "seconds": 6.43
+  },
+  {
+    "requested_model": "deepseek/deepseek-v4-flash-0731",
+    "mode": "clarified_contract",
+    "case": "conversation_only",
+    "payload_sha256": "d795c46cf99cee24e933614236a482a21f8e54776d0de48ebfe3a08c0691c6d3",
+    "actual_model": "deepseek/deepseek-v4-flash-0731",
+    "provider": "OpenInference",
+    "usage": {
+      "prompt_tokens": 893,
+      "completion_tokens": 63,
+      "total_tokens": 956,
+      "cost": 4.63824e-05,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 768,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 4.63824e-05,
+        "upstream_inference_prompt_cost": 1.00944e-05,
+        "upstream_inference_completions_cost": 3.6288e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "finish_reason": "stop",
+    "response": "[sigh] Aye, I do. Rain on a roof has a way of making the world feel small and safe, even when the storm outside is tearing at the mountains. Reminds me of my father's cabin—we'd sit by the hearth and listen to it for hours. What about you?",
+    "pass": true,
+    "reason": "no action expected",
+    "seconds": 5.55
+  },
+  {
+    "requested_model": "deepseek/deepseek-v4-flash-0731",
+    "mode": "clarified_contract",
+    "case": "quest_accept",
+    "payload_sha256": "7974894ee62336e73957205fd06d268445f53ef7549f6eccc8a0e82d860fdc12",
+    "actual_model": "deepseek/deepseek-v4-flash-0731",
+    "provider": "OpenInference",
+    "usage": {
+      "prompt_tokens": 933,
+      "completion_tokens": 227,
+      "total_tokens": 1160,
+      "cost": 0.0001413288,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 794,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001413288,
+        "upstream_inference_prompt_cost": 1.05768e-05,
+        "upstream_inference_completions_cost": 0.000130752
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "finish_reason": "stop",
+    "response": "[say]Good, I knew you had the look of someone who could be trusted. The ledger was in my study at the old family farmstead, just northeast of Ivarstead, past the falls. It went missing after a rough night—some bandits ransacked the place while I was away in town. I want you to find it and bring it back to me here in Riften.\n\n[say]Head up the mountain path, and you'll see the farmhouse on the eastern slope. The bandits might still be lurking around, so watch your back. The ledger is a worn brown book, bound in leather, with my initials stamped on the cover. If they've moved it, check the chests and shelves inside.\n\n[say]I'll be waiting at the Bee and Barb when you return. Bring it to me, and I'll make it worth your while. And Aldo—if you run into trouble, don't be a hero. Come back alive, and we'll figure out another way.\n\nACTION: TriggerDialogueLine PARAMS: {\"form_id\":\"FE123ABC\"}",
+    "pass": true,
+    "reason": "matching footer/parameters",
+    "action": "TriggerDialogueLine",
+    "params": {
+      "form_id": "FE123ABC"
+    },
+    "seconds": 15.64
+  },
+  {
+    "requested_model": "z-ai/glm-4.7",
+    "mode": "current_style",
+    "case": "pay_reward",
+    "payload_sha256": "0ff625f0f268dfa6e59c73eab6418daac6452c657a7c1b194c18a561229c5bef",
+    "actual_model": "z-ai/glm-4.7",
+    "provider": "DeepInfra",
+    "usage": {
+      "prompt_tokens": 730,
+      "completion_tokens": 57,
+      "total_tokens": 787,
+      "cost": 0.00039175,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00039175,
+        "upstream_inference_prompt_cost": 0.000292,
+        "upstream_inference_completions_cost": 9.975e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "finish_reason": "stop",
+    "response": "[grunt] Aye, a deal is a deal. You held up your end, so I'll hold up mine. Here's your coin.\n\nACTION: Economy PARAMS: {\"intent\":\"Elin pays Aldo 50 gold as the agreed reward for completing the work.\"}",
+    "pass": true,
+    "reason": "matching footer/parameters",
+    "action": "Economy",
+    "params": {
+      "intent": "Elin pays Aldo 50 gold as the agreed reward for completing the work."
+    },
+    "seconds": 6.96
+  },
+  {
+    "requested_model": "z-ai/glm-4.7",
+    "mode": "current_style",
+    "case": "dismiss",
+    "payload_sha256": "8d8e3880ddbf83b85fc5766cfaaf16a7e40ec050a4a84fe2bdd251fa940beaa2",
+    "actual_model": "z-ai/glm-4.7",
+    "provider": "DeepInfra",
+    "usage": {
+      "prompt_tokens": 715,
+      "completion_tokens": 82,
+      "total_tokens": 797,
+      "cost": 0.00041926,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 32,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00041926,
+        "upstream_inference_prompt_cost": 0.00027576,
+        "upstream_inference_completions_cost": 0.0001435
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "finish_reason": "stop",
+    "response": "[sigh] Very well, Aldo. If that is your wish, then I will take my leave. I have research to attend to in the College anyway, and wandering the wilds with you has served its purpose. May the Eight guide your path, wherever it leads.\n\nACTION: Companionship PARAMS: {\"intent\":\"Elin agrees to stop following Aldo and leaves the party.\"}",
+    "pass": true,
+    "reason": "matching footer/parameters",
+    "action": "Companionship",
+    "params": {
+      "intent": "Elin agrees to stop following Aldo and leaves the party."
+    },
+    "seconds": 6.48
+  },
+  {
+    "requested_model": "z-ai/glm-4.7",
+    "mode": "current_style",
+    "case": "quest_accept",
+    "payload_sha256": "a83897cb558d89b04ed83a34aba204d38bb5cbc5aac325e6de4e323369a6ef97",
+    "actual_model": "z-ai/glm-4.7",
+    "provider": "DeepInfra",
+    "usage": {
+      "prompt_tokens": 746,
+      "completion_tokens": 114,
+      "total_tokens": 860,
+      "cost": 0.00048766,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 32,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00048766,
+        "upstream_inference_prompt_cost": 0.00028816,
+        "upstream_inference_completions_cost": 0.0001995
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "finish_reason": "stop",
+    "response": "[say with relief] Finally, some good sense. I was starting to worry I'd have to go out into that mess myself. Head north out of the city, past the Pelagia Farm. You'll find an old abandoned mill just off the main road—I was ambushed there on my way back from Solitude. That ledger must be somewhere in the wreckage or the tall grass nearby. Bring it back to me, and there will be a reward in it for you.\n\nACTION: TriggerDialogueLine PARAMS: {\"form_id\": \"FE123ABC\"}",
+    "pass": true,
+    "reason": "matching footer/parameters",
+    "action": "TriggerDialogueLine",
+    "params": {
+      "form_id": "FE123ABC"
+    },
+    "seconds": 11.45
+  },
+  {
+    "requested_model": "z-ai/glm-4.7",
+    "mode": "current_style",
+    "case": "conversation_only",
+    "payload_sha256": "4af6baee1195e132d01848bc32088443d3315d94154ab3e366149cf22d3786e1",
+    "actual_model": "z-ai/glm-4.7",
+    "provider": "DeepInfra",
+    "usage": {
+      "prompt_tokens": 707,
+      "completion_tokens": 83,
+      "total_tokens": 790,
+      "cost": 0.00041781,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 32,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00041781,
+        "upstream_inference_prompt_cost": 0.00027256,
+        "upstream_inference_completions_cost": 0.00014525
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "finish_reason": "stop",
+    "response": "[sigh] I do. It reminds me of the long nights in the College, reading by candlelight while the storms battered the walls. There is a focus to it, a rhythm that drowns out the distractions of the world. It is peaceful, even if the dampness seeps into your bones after a while. Do you find it helps you think, or is it just a nuisance to you?",
+    "pass": true,
+    "reason": "no action expected",
+    "seconds": 9.15
+  },
+  {
+    "requested_model": "z-ai/glm-4.7",
+    "mode": "clarified_contract",
+    "case": "pay_reward",
+    "payload_sha256": "9120b3bf04a38d65c0305c5e8f40c7d662e20675431fdd0e1e5886efd891b4d5",
+    "actual_model": "z-ai/glm-4.7",
+    "provider": "DeepInfra",
+    "usage": {
+      "prompt_tokens": 901,
+      "completion_tokens": 54,
+      "total_tokens": 955,
+      "cost": 0.00022962,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 704,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00022962,
+        "upstream_inference_prompt_cost": 0.00013512,
+        "upstream_inference_completions_cost": 9.45e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "finish_reason": "stop",
+    "response": "[say] A deal is a deal. You held up your end, so I’ll hold up mine. Here’s the fifty gold we agreed upon.\nACTION: Economy PARAMS: {\"intent\":\"Elin pays 50 gold reward to Aldo for completed work\"}",
+    "pass": true,
+    "reason": "matching footer/parameters",
+    "action": "Economy",
+    "params": {
+      "intent": "Elin pays 50 gold reward to Aldo for completed work"
+    },
+    "seconds": 4.71
+  },
+  {
+    "requested_model": "z-ai/glm-4.7",
+    "mode": "clarified_contract",
+    "case": "dismiss",
+    "payload_sha256": "84de0786b1ff0a7be3f812f100da04cbda6414fef95736baf7df63aa0bc4c2ce",
+    "actual_model": "z-ai/glm-4.7",
+    "provider": "DeepInfra",
+    "usage": {
+      "prompt_tokens": 886,
+      "completion_tokens": 54,
+      "total_tokens": 940,
+      "cost": 0.00022362,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 704,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00022362,
+        "upstream_inference_prompt_cost": 0.00012912,
+        "upstream_inference_completions_cost": 9.45e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "finish_reason": "stop",
+    "response": "[flatly] If that is your wish. I have no desire to remain where I am not wanted. I’ll return to my research.\n\nACTION: Companionship PARAMS: {\"intent\":\"Elin stops following Aldo and returns to her own life\"}",
+    "pass": true,
+    "reason": "matching footer/parameters",
+    "action": "Companionship",
+    "params": {
+      "intent": "Elin stops following Aldo and returns to her own life"
+    },
+    "seconds": 4.56
+  },
+  {
+    "requested_model": "z-ai/glm-4.7",
+    "mode": "clarified_contract",
+    "case": "quest_accept",
+    "payload_sha256": "41e196619f58b34b5b84a7025fe13b4b4363f00920d2d69420fae107d9e82824",
+    "actual_model": "z-ai/glm-4.7",
+    "provider": "DeepInfra",
+    "usage": {
+      "prompt_tokens": 917,
+      "completion_tokens": 92,
+      "total_tokens": 1009,
+      "cost": 0.00029228,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 736,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00029228,
+        "upstream_inference_prompt_cost": 0.00013128,
+        "upstream_inference_completions_cost": 0.000161
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "finish_reason": "stop",
+    "response": "[say] Finally, some sense. I was beginning to think I'd have to track it down myself in the snow. Head south to the old mill; it's been abandoned for years, but I saw lights in the window last night. That's where the thief is holed up. Bring it back to me, and there will be coin in it for you.\n\nACTION: TriggerDialogueLine PARAMS: {\"form_id\": \"FE123ABC\"}",
+    "pass": true,
+    "reason": "matching footer/parameters",
+    "action": "TriggerDialogueLine",
+    "params": {
+      "form_id": "FE123ABC"
+    },
+    "seconds": 10.09
+  },
+  {
+    "requested_model": "z-ai/glm-4.7",
+    "mode": "clarified_contract",
+    "case": "conversation_only",
+    "payload_sha256": "7aeac4140b66c5968b8c95f6f6c3ce9031137dcb302816951339492a12b0bca5",
+    "actual_model": "z-ai/glm-4.7",
+    "provider": "DeepInfra",
+    "usage": {
+      "prompt_tokens": 878,
+      "completion_tokens": 88,
+      "total_tokens": 966,
+      "cost": 0.00027992,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 704,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00027992,
+        "upstream_inference_prompt_cost": 0.00012592,
+        "upstream_inference_completions_cost": 0.000154
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "finish_reason": "stop",
+    "response": "[sigh] Aye, there is a rhythm to it that settles the blood. After weeks of trudging through snow and muck, listening to the sky weep on a roof... it reminds you that the world is alive, even when you want to sleep. It drowns out the howling wolves, at least for a while. Do you not find it soothing, or are you just eager for the sun to return?",
+    "pass": true,
+    "reason": "no action expected",
+    "seconds": 14.19
+  }
+]

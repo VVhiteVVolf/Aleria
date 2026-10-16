@@ -1,0 +1,70 @@
+{
+  "date": "2026-10-15",
+  "profile": "Nolvus Awakening - SkyrimNet Beta25 Test",
+  "live_configuration_changed": false,
+  "game_execution_tested": false,
+  "models": [
+    {
+      "model": "google/gemma-4-31b-it",
+      "requests": 8,
+      "received_answers": 8,
+      "passed_format_and_intent_checks": 8,
+      "api_errors": 0,
+      "median_answer_seconds": 1.73,
+      "reported_usd_cost": 0.00068122,
+      "providers": {
+        "DeepInfra": 8
+      }
+    },
+    {
+      "model": "google/gemma-4-26b-a4b-it",
+      "requests": 8,
+      "received_answers": 8,
+      "passed_format_and_intent_checks": 8,
+      "api_errors": 0,
+      "median_answer_seconds": 1.5,
+      "reported_usd_cost": 0.00074502,
+      "providers": {
+        "NextBit": 8
+      }
+    },
+    {
+      "model": "qwen/qwen3-235b-a22b-2507",
+      "requests": 8,
+      "received_answers": 4,
+      "passed_format_and_intent_checks": 2,
+      "api_errors": 4,
+      "median_answer_seconds": 6.4,
+      "reported_usd_cost": 0.00050862,
+      "providers": {
+        "DeepInfra": 4
+      }
+    },
+    {
+      "model": "deepseek/deepseek-v4-flash-0731",
+      "requests": 8,
+      "received_answers": 8,
+      "passed_format_and_intent_checks": 6,
+      "api_errors": 0,
+      "median_answer_seconds": 5.99,
+      "reported_usd_cost": 0.0004953528,
+      "providers": {
+        "OpenInference": 8
+      }
+    },
+    {
+      "model": "z-ai/glm-4.7",
+      "requests": 8,
+      "received_answers": 8,
+      "passed_format_and_intent_checks": 8,
+      "api_errors": 0,
+      "median_answer_seconds": 8.05,
+      "reported_usd_cost": 0.00274192,
+      "providers": {
+        "DeepInfra": 8
+      }
+    }
+  ],
+  "total_reported_usd_cost": 0.0051721328,
+  "interpretation": "Small synthetic output-contract test, not an in-game or long-context success-rate benchmark."
+}

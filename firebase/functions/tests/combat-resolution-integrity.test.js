@@ -12,12 +12,14 @@ import { withEquippedCombatWeapon } from '../src/generated/combat/combat-equipme
 test('server computes Drachenkerbe and typed armor protection from equipment and raw dice, ignoring submitted damage', async () => {
   const gawain = JSON.parse(await readFile(new URL('../../../Charakter%20Archiv%20Exporte/gawain-draig.json', import.meta.url), 'utf8')).character;
   const opponent = character('target', { hitPoints: { current: 100, maximumOverride: 100 } });
-  const submitted = { attack: { naturalRoll: 20, diceResults: [20] }, damage: { diceResults: [4, 4], total: 999, modifier: 999 } };
+  const submitted = { attack: { naturalRoll: 20, diceResults: [20] }, damage: { diceResults: [4], total: 999, modifier: 999 } };
   const resolve = (actor, target) => new CombatResolutionService(new ProvidedDiceAdapter(submitted))
     .resolveAttack({ actor, target }, { rulePeriods: { comment: 'equipment-test' } });
   const actor = resolveCombatProfile(gawain, { actionId: 'weapon:gawain-draig-knightly-sword' });
   const strike = await resolve(actor, resolveCombatProfile(opponent));
-  assert.equal(strike.damage.total, 8 + actor.damageModifier + 2);
+  assert.equal(strike.damage.total, 8 + 4 + actor.damageModifier + 2);
+  assert.equal(strike.damage.criticalDamage.maximum, 8);
+  assert.equal(strike.damage.criticalDamage.fixedBonus, actor.damageModifier + 2);
   assert.ok(strike.ruleApplications.some(rule => rule.ruleId === 'drachenzahn-drachenkerbe'));
   opponent.combatProfile.weapons[0].damageType = 'Hieb';
   const attacker = resolveCombatProfile(opponent);
@@ -242,12 +244,12 @@ test('critical follow-up shatters a ward without reusing the first deflection ro
     wardResolution: { roll: { natural: 20, rollId: 'ward-1' } },
     followUpAttacks: [{
       attack: { naturalRoll: 20, diceResults: [20], rollId: 'attack-2' },
-      damage: { diceResults: [3, 4], rollId: 'damage-2' }
+      damage: { diceResults: [4], rollId: 'damage-2' }
     }]
   };
   const result = await new CombatResolutionService(new ProvidedDiceAdapter(submitted)).resolveAttack({ actor, target });
   assert.equal(result.followUpAttacks[0].wardResolution.shattered, true);
   assert.equal(result.followUpAttacks[0].wardResolution.roll, null);
-  assert.equal(result.targetSnapshot.hitPointsAfter, 5);
+  assert.equal(result.targetSnapshot.hitPointsAfter, 0);
   assert.equal(result.targetConditionSnapshot.after.length, 0);
 });

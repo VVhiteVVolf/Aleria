@@ -1,0 +1,153 @@
+SKYRIMNET – BERSIS DIALOG- UND AKTIONSSCHLEIFE, 15.10.2026
+
+Umfang
+Lokale Anfrage-/Antwortlogs und SkyrimNet.log, Unterhaltung Alawen/Bersi
+von 22:28 bis 22:37 Uhr. Gesicherte Momentaufnahmen liegen in snapshot/.
+Es wurden keine Spielstände, Erinnerungen, Prompts oder Einstellungen verändert
+und keine zusätzlichen kostenpflichtigen Modellanfragen ausgeführt.
+
+Ergebnis
+Die Wiederholung ist reproduzierbar in den aufgezeichneten Modellantworten
+belegt. Die aktuellen Eingaben fehlen NICHT im übertragenen Gesprächsverlauf.
+Auch erfolgreiche Item-Übergabe und angelegter Rucksack sind als Spielzustand
+enthalten. Trotzdem beantwortet der Dialog mehrere neue Eingaben mit der
+überholten Behauptung, Alawen wolle den Fellrucksack nicht.
+Eine allgemeine Beschädigung der SkyrimNet-Installation ist hierfür nicht belegt.
+
+1. Tatsächlich benutzte Modelle der untersuchten Unterhaltung
+Dialog: google/gemma-4-26b-a4b-it, Temperatur 0.7.
+Konkrete Aktionsauswahl: google/gemma-4-31b-it, Temperatur 0.7.
+Die heute zuvor eingerichtete Trennung war für diese Unterhaltung wirksam.
+Die später auf Platte geänderte Konfiguration wird unten getrennt behandelt.
+
+2. Zeitlicher Ablauf mit Belegen
+22:28:26: Dialog liefert ACTION: Trade. Die Aktion ist nicht in der erlaubten
+Liste; ActionSelectorEmbedded.cpp:47 verwirft sie. "Trade" kommt als Überschrift
+eines verfügbaren Vanilla-Dialogzweigs vor, ist aber kein direkt zulässiger
+Aktionsname. Ein Sprachmodell-/Formatfehler, keine fehlende Questinstallation.
+
+22:29:05 und 22:29:26: Dialog verspricht, einen anderen Rucksack zu holen,
+wählt Items; konkrete Auswahl endet jeweils in None. Die Auswahl enthält
+keine benannten verfügbaren Kisten/Objekte, die durchsucht werden könnten.
+
+22:29:59 und 22:30:16: Dialog wechselt für die angebliche Suche zu Travel.
+Die beiden konkreten Travel-Auswertungen antworten None. In diesen Anfragen
+fehlt ebenfalls eine Nearby-Objects-Liste; beschrieben wird eine nicht konkret
+identifizierte Lagerkiste. Kein Beleg für eine ausgeführte Suche. Die spätere
+Behauptung "No luck" wird nicht durch ein SearchContainer-Ergebnis gestützt.
+
+22:31:04: Economy -> SellItem, Backpack, Brown Fur, 225 Gold.
+Das Script SeverActions_Currency::SellItem_Execute wird erfolgreich aufgerufen.
+Im späteren Verlauf steht: "Alawen declined the trade ...". Das ist ein
+abgelehnter Handelsvorgang, kein Beweis, dass sie dauerhaft keinen Fellrucksack
+mehr möchte. Der Dialog behandelt es später dennoch so.
+
+22:32:06 und 22:32:30: Economy -> SellItem, derselbe Rucksack, 180 Gold.
+Beide Aufrufe werden an das vorhandene Papyrus-Script weitergereicht.
+22:32:36: Tatsächliches Ergebnisereignis item_purchase_failed:
+"Alawen does not have 180 gold". Ein aufgerufenes Script ist daher NICHT
+gleichbedeutend mit einem erfolgreich abgeschlossenen Kauf.
+Spätere Aussagen "hier ist das Gold" ändern für sich genommen den Kontostand
+nicht. Ob Gold danach manuell hinzugefügt wurde, lässt sich hieraus nicht sagen.
+
+22:33:30 und 22:33:59: Nach Zustimmung wiederholt Bersi das 180-Gold-Angebot.
+
+22:34:20: Dialog wählt fälschlich Items statt Economy, obwohl im Intent steht:
+"hand Alawen the Backpack, Brown Fur for 180 septims".
+Dadurch sieht der Aktionsauswerter NUR die Items-Aktionen; SellItem fehlt darin.
+Gemma 31B wählt GiveItem, obwohl dessen eigene Beschreibung Verkäufe ausschließt.
+Das ist ein Fehler in BEIDEN Stufen: falsche Kategorie und fehlende Zurückweisung
+des Verkaufs durch den auf Items beschränkten Auswerter.
+
+22:34:40: Ergebnis item_given bestätigt die Übergabe an Alawen.
+Der spätere Prompt enthält außerdem:
+  - Alawen trägt Backpack, Brown Fur im Back-Slot.
+  - Alawen equipped Backpack, Brown Fur.
+Eine zugehörige Zahlung ist durch GiveItem nicht belegt. Ein späteres
+CollectPayment erscheint in den ausgewerteten Bersi-Aktionsantworten nicht.
+
+22:34:40, 22:34:57 und 22:35:21: Dialog wiederholt trotz Übergabe:
+sinngemäß "Wenn du keinen Pelz möchtest, habe ich nichts anderes".
+Diese Antworten stehen so im LLM-Ausgabelog; es ist nicht nur eine alte
+Sprachdatei, die Inworld wiederholt abspielt.
+
+22:37:44: Im tatsächlichen Modell-Request steht die aktuelle Frage:
+"Alawen (to Bersi Honey-Hand): How is your wife?"
+Antwort: "You're quite welcome. If you ever need anything else, you know
+where to find me."
+Auch ein klarer Themenwechsel wird somit im Dialog nicht sinnvoll beantwortet.
+
+3. Aktionsstatistik dieses Bersi-Ausschnitts
+8 konkrete action_evaluation-Antworten:
+- 4x None für unkonkret versprochenes Holen/Suchen/Bewegen.
+- 3x SellItem, tatsächlich an das zuständige Script weitergereicht.
+- 1x GiveItem, tatsächliche Übergabe durch item_given belegt.
+Die zwei Travel-Anfragen enthalten in der Logdarstellung ungültige Backslash-
+Escapes. Nur für das lokale Einlesen wurden diese normalisiert; die Originale
+sind unverändert gesichert. Die Engine erhielt reguläre Modellantworten;
+dieser Logdarstellungsfehler ist kein belegter HTTP-JSON-Fehler.
+Im Engine-Zeitfenster 22:28–22:38 wurden keine error/critical-Zeilen gefunden.
+
+4. Kontext und mögliche Verstärker
+Der vollständige neue World-Setting-Text ist im Systemprompt vorhanden.
+Die neue Spielerfrage, die Zustimmung zum Kauf und die Übergabe stehen im
+chronologisch geordneten Gespräch. Der Kontext ist also nicht einfach leer
+oder ausschließlich auf das vorherige Gespräch eingefroren.
+
+Die letzte Bersi-Anfrage hat ca. 19.1k Zeichen Systemkontext und 18.7k Zeichen
+abschließende Anweisungen/Aktionsauswahl, zusätzlich zum Gesprächsverlauf.
+Der Kontext ist umfangreich, aber ein Abschneiden der neuen Eingabe ist hier
+nicht belegt. Die vorhandene allgemeine Anti-Wiederholungsregel allein reicht
+in diesem Fall nicht aus.
+
+Wiederkehrender Eindruckstext stellt Alawen weiterhin als wählerisch bei Fell
+dar. Alte Handelsablehnung und Kauf-Fehlschlag bleiben außerdem im Verlauf.
+Das kann den alten Konflikt verstärken; ein isolierter Ursachenbeweis ist es
+nicht. Im Engine-Log wird beim späteren Themenwechsel noch eine zwischengespeicherte
+Erinnerungssuchanfrage zur Rucksacktransaktion verwendet. Das ist eine mögliche
+zusätzliche Verankerung, beweist aber keinen beschädigten Gedächtnisspeicher.
+Es wurden daher keine Erinnerungen oder Dialoge pauschal gelöscht.
+
+5. Während der Prüfung geänderte aktuelle Konfiguration
+Die Datei OpenRouter.yaml wurde um 22:43:15 Uhr Berliner Zeit geändert.
+Zum Prüfende enthält sie IN BEIDEN Bereichen:
+  google/gemma-4-31b-it, google/gemma-4-26b-a4b-it
+und Temperatur 1.0 in den jeweiligen Modellparametern.
+Global ist rotation_mode=sequential eingetragen.
+Die frühere eindeutige Trennung 26B-Dialog / 31B-Aktion ist damit auf Platte
+nicht mehr gegeben. Das lässt sich nicht rückwirkend als Ursache der oben
+analysierten Unterhaltung ausgeben: diese lief nachweislich mit 0.7 und der
+vorherigen Trennung. Die Prüfung hat diese Änderung nicht vorgenommen.
+Nicht geheime Auszüge: current-model-settings-sanitized.json.
+
+6. Sinnvolle nächste Korrekturen / Tests
+- Verkaufsabsicht einschließlich vereinbartem Preis in Economy halten.
+  GiveItem nur für tatsächliche Geschenke/Leihen verwenden; der Unterauswerter
+  muss bei einer bezahlten Übergabe außerhalb Economy None statt Gratisgabe wählen.
+- Angebot, Zustimmung, abgebrochenen Bestätigungsdialog, fehlendes Gold,
+  Item-Übergabe und Zahlung ausdrücklich als verschiedene Zustände behandeln.
+- Neuere Zustimmung ersetzt eine frühere Ablehnung. Die aktuelle Frage zuerst
+  beantworten; keine erneute Preisverhandlung nach eindeutiger Annahme ohne
+  tatsächlich neuen Hinderungsgrund.
+- Für einen aussagekräftigen Gegenversuch Modelle wieder klar trennen und
+  nur Bersi mit 31B im Dialog gegen denselben Fall testen. Ein besseres Ergebnis
+  ist eine zu prüfende Hypothese, hier noch kein durchgeführter A/B-Nachweis.
+- Aktionsauswahl separat mit niedriger Temperatur testen; höhere Temperatur
+  ist keine belegte Lösung für semantische Wiederholung oder Kategoriefehler.
+- Such-/Holversprechen nur für wirklich verfügbare Ziele ausgeben. Kein Ergebnis
+  einer Kistensuche behaupten, die nicht ausgeführt wurde.
+
+Nicht sinnvoll wäre, den World-Prompt mit immer mehr Handels- und Aktionsregeln
+zu überladen. Zustands- und Aktionsanweisungen gehören in ihre eigenen Module.
+
+Belegdaten
+bersi-requests.json / requests-today.json: korrelierte lokale Modellanfragen
+und Antworten; keine zusätzlichen externen Anfragen.
+engine-events.txt: relevante Engine-Ereignisse mit ursprünglichen Zeilennummern.
+engine-errors.json: leerer Fehlerausschnitt des untersuchten Zeitfensters.
+snapshot/: unveränderte lokale Logkopien.
+
+Herstellerreferenz zur Kategoriearchitektur:
+https://github.com/Severause/SeverActions/blob/main/README.md
+Die projektspezifischen Fehler oben werden durch die lokalen Logs belegt;
+es wurde kein identischer bestätigter öffentlicher Bug als Ursache nachgewiesen.

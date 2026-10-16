@@ -1,0 +1,113 @@
+SkyrimNet / Bersi: Prüfung des Provider-Hinweises
+Stand: 15.10.2026. Keine laufenden Einstellungen geändert.
+
+ERGEBNIS
+Der Discord-Hinweis passt zu einem Teil der tatsächlichen Anfragen. Drei
+spätere, wiederholende Bersi-Antworten wurden von Makora ausgeliefert. Das
+ist eine konkrete Spur, aber kein Nachweis eines defekten Providers.
+Frühere festgefahrene Antworten gab es bereits vor diesen drei Anfragen.
+
+VORGEHEN
+19 Bersi-Antworten aus dem gesicherten Engine-Log wurden anhand ihrer
+Generation-ID mit OpenRouters Abrechnungs-/Anbieter-Metadaten abgeglichen.
+Die GET-Abfragen übertrugen nur Generation-IDs, keine Gesprächsprompts.
+10 Metadatenabfragen erfolgreich, 9 mit HTTP 404 nicht verfügbar.
+Ein Metadaten-404 beweist keinen Fehler der ursprünglichen Spielanfrage.
+
+BELEGTE ANBIETER
+7 Antworten: CoreWeave.
+3 Antworten: Makora.
+9 Antworten: Anbieter nicht ermittelbar.
+Alle 10 aufgelösten Antworten: google/gemma-4-26b-a4b-it-20260403.
+Der Screenshot unterscheidet Empfehlungen für 31B und 26B. Die konkrete
+untersuchte Bersi-Unterhaltung wurde mit 26B geführt.
+
+Makora, Ereignis 87, 22:33:59.536: wiederholt das 180-Septim-Angebot.
+Makora, Ereignis 92, 22:34:40.180: alte Ablehnung nach item_given.
+Makora, Ereignis 96, 22:35:21.098: erneut alte Ablehnung.
+CoreWeave, Ereignis 74, 22:31:13.969: Reaktion auf tatsächlich abgelehnten
+Handel im älteren Verlauf; allein noch keine unpassende Wiederholung.
+Bereits die Antwort auf die Anfrage von 22:32:28.882 wiederholt trotz
+gleichzeitigem Verkaufsauftrag die alte Ablehnung. Ihr Provider ist nicht
+ermittelbar. Die fehlerhafte Entwicklung begann damit vor den drei
+nachgewiesenen Makora-Antworten; ihr erster Provider ist unbekannt.
+Für die letzte Antwort auf die Frage nach Bersis Frau sind die Metadaten
+nicht verfügbar. Diese Antwort darf keinem Anbieter zugeschrieben werden.
+
+EINORDNUNG
+Makora ist bei 26B nicht unter den im Screenshot ausdrücklich empfohlenen
+Anbietern. Auch CoreWeave steht nicht in dieser Liste. Das rechtfertigt
+einen kontrollierten Vergleich mit Cloudflare und Parasail. Es rechtfertigt
+nicht die Behauptung, Makora sei sicher die Ursache oder andere Anbieter
+könnten niemals wiederholen. Die Anfrage enthält bereits einen Verlauf mit
+Wiederholungen und widersprüchlichen Handelszuständen.
+
+Prompt-Prefix-Caching ist in den Metadaten teilweise ausgewiesen. Daraus
+folgt nicht, dass komplette alte Antworten wiederverwendet wurden.
+
+VERFÜGBARKEIT / PREISE AUS DER ENDPOINT-API
+Momentaufnahme, Preise in USD je Million Token, ohne Wechselkursannahme:
+26B Cloudflare: Input 0.10, Output 0.30, Cache-Lesen 0.05.
+26B Parasail/bf16: Input 0.13, Output 0.40, Cache-Lesen 0.05.
+26B Novita/bf16: Input 0.13, Output 0.40.
+31B Parasail/fp8: Input 0.15, Output 0.40, Cache-Lesen 0.06.
+31B Friendli: Input 0.14, Output 0.40.
+31B Chutes/fp4: Input 0.12, Output 0.37, Cache-Lesen 0.012.
+Diese Endpoints haben in der abgefragten API status=0.
+Google Vertex/26B und Novita/31B sind ebenfalls gelistet, hatten aber einen
+negativen Statuswert. Dessen genaue Bedeutung wurde hier nicht verifiziert;
+ihre erfolgreiche Erreichbarkeit wird deshalb nicht behauptet.
+Die Fähigkeitsempfehlungen stammen aus dem Nutzer-Screenshot, nicht aus
+einer durchgeführten Zuverlässigkeitsmessung dieser Prüfung.
+
+ROUTING-VORSCHLAG FÜR EINEN VERGLEICH
+Zunächst bei 26B Cloudflare gegen Parasail prüfen; bei 31B Parasail gegen
+Friendli. Je Anfrage genau einen Anbieter über provider.only festlegen
+und allow_fallbacks=false setzen. Nur so lässt sich das Ergebnis eindeutig
+zuordnen. In späterer Nutzung können mehrere freigegebene Anbieter als
+Fallback zugelassen werden. provider.order allein ist keine feste Sperre
+für andere Anbieter bei aktivierten Fallbacks.
+Eine Beschränkung muss zur jeweiligen Gemma-Modellroute passen. Eine globale
+Gemma-Anbieterliste kann andere Modelle oder Erweiterungen ausschließen.
+Die vorhandenen Preis-/Latenzsortierungen ersetzen keine Anbieterfreigabe.
+
+KONFIGURATION WÄHREND DER PRÜFUNG
+Die zuvor erfasste Konfiguration vom 22:43 wurde erneut geändert.
+Bei der zusätzlichen Lesekontrolle: Änderungszeit 22:59:58, Standardmodell
+deepseek/deepseek-v4-flash-0731, Temperatur 1; action_evaluation weiterhin
+31B und 26B, Temperatur 1. Routing-Modus smart, quantization_floor=fp8.
+Diese Prüfung hat keine dieser Änderungen vorgenommen. Die auf Platte
+gespeicherten Werte belegen nicht rückwirkend den Laufzeitpfad der älteren
+Bersi-Anfragen. Vor jeder künftigen Korrektur erneut den Istzustand erfassen.
+
+VERGLEICHSTEST: INZWISCHEN FREIGEGEBEN UND AUSGEFÜHRT
+Nach ausdrücklicher Zustimmung des Nutzers wurde der unten beschriebene
+Test ausgeführt. 14 Anfragen, 12 Antworten, 2 temporäre HTTP-429-Fehler,
+gemeldete Gesamtkosten 0.014544 USD. Keine laufenden Einstellungen geändert.
+Die endgültige Auswertung einschließlich des neuen Korrilan-Gesprächs steht
+in NACHPRUEFUNG_ERGEBNIS.txt.
+Ein vorbereiteter Test umfasst 14 fest zugeordnete Anfragen mit zwei
+Dialogfällen und einer Aktionsauswertung, maximal 256 Ausgabetoken je
+Anfrage und konservativer Gesamtkostengrenze unter 0.10 USD.
+Die automatische Freigabeprüfung hatte die erste Ausführung wegen des
+Exports privater Charakter-/Gesprächs-/Modkontexte abgelehnt. Nach der
+ausdrücklichen Exportzustimmung wurde derselbe Test genehmigt und ausgeführt.
+Ergebnisse: provider-replay-results.json.
+
+WEITERHIN SEPARAT BELEGT
+Die bezahlte Übergabe wurde einmal als Items statt Economy eingeordnet und
+anschließend über GiveItem ausgeführt. Ein Providerwechsel ersetzt die
+gezielte Prüfung dieser Aktionskategorie und des Handelszustands nicht.
+Details: PRUEFBERICHT.txt.
+
+BELEGE
+provider-generation-audit.json: tatsächliche Anbieterzuordnung.
+gemma-4-26b-a4b-it-endpoints.json: abgefragte 26B-Endpunkte.
+gemma-4-31b-it-endpoints.json: abgefragte 31B-Endpunkte.
+test_provider_replays.py: ausgeführter, begrenzter Replay-Test.
+
+OFFIZIELLE REFERENZEN
+https://openrouter.ai/docs/guides/routing/provider-selection
+https://openrouter.ai/docs/api/api-reference/generations/get-request-&-usage-metadata-for-a-generation
+https://openrouter.ai/api/v1/models/google/gemma-4-26b-a4b-it/endpoints
+https://openrouter.ai/api/v1/models/google/gemma-4-31b-it/endpoints

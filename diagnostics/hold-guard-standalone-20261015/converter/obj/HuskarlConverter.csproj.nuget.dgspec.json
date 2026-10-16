@@ -1,0 +1,75 @@
+{
+  "format": 1,
+  "restore": {
+    "E:\\Aleria\\diagnostics\\hold-guard-standalone-20261015\\converter\\HuskarlConverter.csproj": {}
+  },
+  "projects": {
+    "E:\\Aleria\\diagnostics\\hold-guard-standalone-20261015\\converter\\HuskarlConverter.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\Aleria\\diagnostics\\hold-guard-standalone-20261015\\converter\\HuskarlConverter.csproj",
+        "projectName": "HuskarlConverter",
+        "projectPath": "E:\\Aleria\\diagnostics\\hold-guard-standalone-20261015\\converter\\HuskarlConverter.csproj",
+        "packagesPath": "C:\\Users\\fhg_r\\.nuget\\packages\\",
+        "outputPath": "E:\\Aleria\\diagnostics\\hold-guard-standalone-20261015\\converter\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "E:\\Aleria\\diagnostics\\hold-guard-standalone-20261015\\converter\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Mutagen.Bethesda.Core": {
+              "target": "Package",
+              "version": "[0.39.6, )"
+            },
+            "Mutagen.Bethesda.Json": {
+              "target": "Package",
+              "version": "[0.39.5, )"
+            },
+            "Mutagen.Bethesda.Kernel": {
+              "target": "Package",
+              "version": "[0.39.6, )"
+            },
+            "Mutagen.Bethesda.Skyrim": {
+              "target": "Package",
+              "version": "[0.39.6, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

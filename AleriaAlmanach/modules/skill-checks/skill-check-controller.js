@@ -1,8 +1,11 @@
-import { collectSkillSupportOptions, selectSkillSupportDefaults, skillSupportOptionKey } from './skill-support-options.js?v=20261016-guided-checks-v1';
+import { getChallengeCheckRule } from '../herausforderung/herausforderung-check-policy.js?v=20261016-check-policy-v1';
+import { withResolvedChallengeTarget } from '../herausforderung/herausforderung-target.js?v=20261016-check-policy-v1';
+import { renderSkillAttemptHeader, renderSkillAttemptBreakdown } from './skill-attempt-view.js?v=20261016-check-policy-v1';
+import { collectSkillSupportOptions, selectSkillSupportDefaults, skillSupportOptionKey } from './skill-support-options.js?v=20261016-check-policy-v1';
 import { getCheckDescription } from './skill-check-guidance.js?v=20261015-check-options-v1';
 import { describeCheckModifierSource } from './attribute-check-model.js?v=20261015-check-options-v1';
 import { previewChallengeCombatBenefits, collectChallengeGrantKeys } from '../herausforderung/herausforderung-combat-preview.js?v=20261015-graded-challenges-v1';
-import { getChallengeAttemptSettings } from './skill-challenge-attempt.js?v=20261015-check-options-v1';
+import { getChallengeAttemptSettings } from './skill-challenge-attempt.js?v=20261016-check-policy-v1';
 import { getChallengeCombatBindingError } from '../herausforderung/herausforderung-combat-context.js?v=20261015-check-options-v1';
 import { getActiveCombatPartyMap, getEncounterRelationship, getActiveCombatEncounter } from '../combat/combat-encounter-model.js';
 import { sceneDiceService } from '../scene-dice/dice-service.js?v=20261013-performance-v1';
@@ -12,6 +15,8 @@ import { getSceneRecoveryDayKey } from '../scene-time/scene-recovery-day.js';
 import { formatHerausforderungRewardReceipt } from '../herausforderung/herausforderung-rewards.js?v=20261015-graded-challenges-v1';
 import {
   SKILL_DEFINITIONS,
+  CHECK_DEFINITIONS,
+  getCheckCommentKind,
   buildSkillRollNotation,
   classifySkillCheck,
   collectRevealedChallengeIds,
@@ -28,10 +33,10 @@ import {
   resolveSkillModifier
 } from './skill-check-model.js?v=20261016-guided-checks-v1';
 import { narrateSkillResolution } from './skill-check-narration.js?v=20261015-graded-challenges-v1';
-import { SkillResolutionService, getSkillRollContext } from './skill-resolution-service.js?v=20261016-guided-checks-v1';
+import { SkillResolutionService, getSkillRollContext } from './skill-resolution-service.js?v=20261016-check-policy-v1';
 import { collectCombatTriggerRules, deriveCombatRuleFrequencyKeys } from '../combat/combat-trigger-rules.js?v=20260928-equipment-art-v4';
 import { renderAutomaticRollMode } from '../combat/ui/combat-roll-mode-view.js?v=20260906-effect-rolls-v1';
-import { renderSkillIcon, renderSkillChoiceGroup, renderPreferredSkillHints, skillTooltipAttributes, bindSkillIconTooltips } from './skill-icon-view.js?v=20261016-guided-checks-v1';
+import { renderSkillIcon, renderSkillChoiceGroup, renderPreferredSkillHints, skillTooltipAttributes, bindSkillIconTooltips } from './skill-icon-view.js?v=20261016-check-policy-v1';
 
 bindSkillIconTooltips(document);
 
@@ -128,7 +133,7 @@ function buildClientSkillRuleContext(segment, actor, actorProfile, targetChallen
     distanceToTarget: null,
     selectedRuleIds: []
   }];
-  if (targetActor && targetProfile) sources.push({
+  if (targetActor && targetProfile && targetActor.id !== actor.id) sources.push({
     actorId: targetProfile.characterId,
     actorName: targetProfile.name,
     profile: targetProfile,
@@ -303,12 +308,14 @@ function renderSkillComposer(segment, actor, challenges, actors = [], sceneResol
   segment.skillRollMode = 'normal';
   segment.skillTargetChallengeId = settings.targetChallengeId;
   const actorKey = String(actor?.id || '');
-  const availableChallenges = challenges.filter(challenge => !actorKey || challenge.authorKey !== actorKey);
+  const encounter = getActiveCombatEncounter(globalThis.getCachedCommentsForThread?.(latestComposerContext?.threadId || '') || []);
+  const availableChallenges = challenges.map(challenge => withResolvedChallengeTarget(challenge, { encounter, actorId: actorKey }))
+    .filter(challenge => !actorKey || ((challenge.source === 'herausforderung' || challenge.authorId !== actorKey) && !getChallengeCombatBindingError(challenge, encounter, actorKey)));
   const selectedTarget = availableChallenges.find(challenge => challenge.id === settings.targetChallengeId) || null;
   const selectedTargetActorKey = String(segment.skillTargetActorKey || selectedTarget?.authorKey || '');
   const targetActors = [...new Map(availableChallenges.map(challenge => [challenge.authorKey, {
     key: challenge.authorKey,
-    name: challenge.authorName
+    name: challenge.title || challenge.authorName
   }])).values()];
   const actorChallenges = selectedTargetActorKey
     ? availableChallenges.filter(challenge => challenge.authorKey === selectedTargetActorKey)
@@ -318,6 +325,14 @@ function renderSkillComposer(segment, actor, challenges, actors = [], sceneResol
     segment.skillTargetChallengeId = '';
     settings.targetChallengeId = '';
   }
+  if (target && !getChallengeCheckRule(target, segment.skillId).allowed) {
+    segment.skillId = target.preferredSkills.find(id => getCheckDefinition(id)) || '';
+    settings.skillId = segment.skillId;
+    segment.kind = getCheckCommentKind(segment.skillId) || segment.kind;
+  }
+  const checkRule = getChallengeCheckRule(target, segment.skillId);
+  const checkValues = {};
+  let profileModifier = 0, ruleModifier = 0;
   let profileDetail = 'Charakterbogen fehlt';
   let rollModes = [];
   let automaticModifier = null;
@@ -327,44 +342,43 @@ function renderSkillComposer(segment, actor, challenges, actors = [], sceneResol
     const ruleContext = buildClientSkillRuleContext(segment, actor, actorProfile, target, actors, sceneResolver);
     const rollContext = getSkillRollContext({ actor, settings }, { actorProfile, ruleSources: ruleContext.sources, targetProfile: ruleContext.targetProfile });
     const skill = rollContext.skill;
-    automaticModifier = skill.modifier + Number(rollContext.preEffects[rollContext.modifierKey] || 0);
+    profileModifier = skill.modifier;
+    ruleModifier = Number(rollContext.preEffects[rollContext.modifierKey] || 0);
+    automaticModifier = profileModifier + ruleModifier + checkRule.modifier;
+    for (const check of CHECK_DEFINITIONS) checkValues[check.id] = resolveSkillModifier(actorProfile, check.id).modifier;
     rollModes = [...rollContext.profileRollModes, ...rollContext.preApplications.map(application => application.effects?.rollMode)];
     const sign = skill.modifier >= 0 ? '+' : '';
     profileDetail = `${sign}${skill.modifier} aus ${describeCheckModifierSource(skill.source)}`;
   }
   return `
     <section class="skill-check-composer" data-skill-composer>
-      <div class="skill-check-composer-title"><span>Probenauswertung</span><strong>Würfelt erst beim Eintragen</strong></div>
+      ${renderSkillAttemptHeader({ actor, target, targetActor: actors.find(candidate => candidate.id === target?.authorId), skillId: segment.skillId })}
       ${actor ? '' : '<p class="skill-check-warning">Wähle zuerst eine Figur mit Charakter- oder Kreaturenbogen.</p>'}
       <div class="skill-check-fields">
-        ${renderSkillChoiceGroup({ skills: kindSkills, selectedId: segment.skillId, segmentId: segment.id, target, profileDetail })}
-        <label class="skill-check-target-search">Figur durchsuchen
+        ${renderSkillChoiceGroup({ skills: kindSkills, selectedId: segment.skillId, segmentId: segment.id, target, profileDetail, checkValues })}
+        <label class="skill-check-target-search">${target?.source === 'herausforderung' ? 'Herausforderung suchen' : 'Figur durchsuchen'}
           <input type="search" data-skill-target-actor-search placeholder="Name der Figur …" autocomplete="off">
         </label>
-        <label class="${target ? 'skill-check-preset' : ''}">Ziel-Figur
+        <label class="${target ? 'skill-check-preset' : ''}">${target?.source === 'herausforderung' ? 'Herausforderung' : 'Ziel-Figur'}
           <select data-skill-input="targetActorKey">
             <option value="">Freier Versuch ohne verdecktes Ziel</option>
             ${targetActors.map(targetActor => `<option value="${escapeHtml(targetActor.key)}"${targetActor.key === selectedTargetActorKey ? ' selected' : ''}>${escapeHtml(targetActor.name)}</option>`).join('')}
           </select>
         </label>
-        <label class="${target ? 'skill-check-preset' : ''}">Beitrag dieser Figur
+        <label class="${target ? 'skill-check-preset' : ''}">${target?.source === 'herausforderung' ? 'Lösungsweg' : 'Beitrag dieser Figur'}
           <select data-skill-input="targetChallengeId">
             <option value="">${selectedTargetActorKey ? 'Beitrag wählen' : 'Zuerst eine Figur wählen'}</option>
-            ${actorChallenges.map(challenge => `<option value="${escapeHtml(challenge.id)}"${challenge.id === target?.id ? ' selected' : ''}>${escapeHtml(getContributionRankLabel(challenge.contributionRank))} · ${escapeHtml(challenge.visibleText.slice(0, 80) || 'Beitrag ohne Text')}</option>`).join('')}
+            ${actorChallenges.map(challenge => `<option value="${escapeHtml(challenge.id)}"${challenge.id === target?.id ? ' selected' : ''}>${escapeHtml(challenge.source === 'herausforderung' ? challenge.approachLabel || challenge.visibleText : `${getContributionRankLabel(challenge.contributionRank)} · ${challenge.visibleText.slice(0, 80) || 'Beitrag ohne Text'}`)}</option>`).join('')}
           </select>
         </label>
         <label class="${target ? 'skill-check-preset' : ''}">Schwierigkeit
           <input type="number" min="1" max="40" value="${target?.difficulty ?? settings.difficulty}" data-skill-input="difficulty"${target ? ' disabled' : ''}>
           <small>${target ? 'Wird von der Herausforderung vorgegeben' : 'SG 10 ist ein einfacher Standardversuch'}</small>
         </label>
-        <div class="skill-check-automatic-value" data-skill-automatic-value>
-          <span>✓ Automatischer Probenwert</span>
-          <output>${automaticModifier == null ? 'Zuerst Figur wählen' : `W20 ${automaticModifier >= 0 ? '+' : '−'} ${Math.abs(automaticModifier)}`}</output>
-          <small>Bogenwert einschließlich Übung, aktiver Effekte und gewählter Unterstützung. Weitere Regeln werden beim Wurf geprüft.</small>
-        </div>
         ${renderAutomaticRollMode(rollModes)}
       </div>
-      ${target ? `<div class="skill-check-target-note"><b>${escapeHtml(target.authorName)} · ${escapeHtml(getContributionRankLabel(target.contributionRank))}</b>${renderPreferredSkillHints(target)}</div>` : ''}
+      ${target ? `<div class="skill-check-target-note"><b>${target.source === 'herausforderung' ? 'Freigegebene Proben' : `${escapeHtml(target.authorName)} · ${escapeHtml(getContributionRankLabel(target.contributionRank))}`}</b>${renderPreferredSkillHints(target)}</div>` : ''}
+      ${renderSkillAttemptBreakdown({ actor, profileModifier, ruleModifier, checkRule, totalModifier: automaticModifier, difficulty: target?.difficulty ?? settings.difficulty, checkType: getCheckDefinition(segment.skillId)?.checkType })}
       ${renderSkillSupportOptions(segment, supportOptions)}
     </section>`;
 }
@@ -440,7 +454,12 @@ function findComposerSegment(trigger) {
 
 function updateSegmentField(segment, field, value) {
   if (!segment) return;
-  if (field === 'skillId') segment.skillId = String(value || '');
+  if (field === 'skillId') {
+    const challenge = getComposerChallenges(latestComposerContext?.threadId || '').find(item => item.id === segment.skillTargetChallengeId);
+    if (!getCheckDefinition(value) || !getChallengeCheckRule(challenge, value).allowed) return;
+    segment.skillId = String(value);
+    if (challenge?.source === 'herausforderung') segment.kind = getCheckCommentKind(segment.skillId) || segment.kind;
+  }
   if (field === 'targetActorKey') {
     segment.skillTargetActorKey = String(value || '');
     segment.skillTargetChallengeId = '';
@@ -566,7 +585,7 @@ async function resolveSegment(segment, submission, actors, challenges, index, to
   });
   if (!allowed.some(skill => skill.id === settings.skillId)) throw new Error('Wähle für jeden Fertigkeitsversuch eine zur Blase passende Fertigkeit.');
   segment.skillCustomModifier = 0;
-  const targetChallenge = challenges.find(challenge => challenge.id === settings.targetChallengeId) || null;
+  const targetChallenge = withResolvedChallengeTarget(challenges.find(challenge => challenge.id === settings.targetChallengeId) || null, { encounter: getActiveCombatEncounter(resolutionContext.comments || []), actorId: actor.id });
   if (settings.targetChallengeId && !targetChallenge) throw new Error('Die gewählte verdeckte Herausforderung ist nicht mehr verfügbar.');
   const eligibility = targetChallenge && getChallengeCombatBindingError(targetChallenge, getActiveCombatEncounter(resolutionContext.comments || []), actor.id);
   if (eligibility) throw Error(eligibility);
@@ -718,6 +737,7 @@ function renderEvaluation(source = {}) {
   const rewardReceipt = formatHerausforderungRewardReceipt(resolution.herausforderungReward);
   const custom = Number(resolution.customModifier || 0);
   const ruleModifier = Number(resolution.ruleModifier || 0);
+  const challengeModifier = Number(resolution.challengeModifier || 0);
   const ruleLedger = (Array.isArray(resolution.ruleApplications) ? resolution.ruleApplications : []).map(rule => (
     `<span class="skill-rule-ledger"><b>${escapeHtml(rule.sourceActorName || 'Regelquelle')} · ${escapeHtml(rule.ruleName)}</b><small>${escapeHtml(rule.before?.total ?? rule.before?.modifier ?? '')} → ${escapeHtml(rule.after?.total ?? rule.after?.modifier ?? '')}</small></span>`
   )).join('');
@@ -735,6 +755,7 @@ function renderEvaluation(source = {}) {
         <span>gegen <b>SG ${escapeHtml(resolution.difficulty)}</b></span>
         ${opposedDefense}
         <span>Bogen ${Number(resolution.profileModifier) >= 0 ? '+' : ''}${escapeHtml(resolution.profileModifier)}${custom ? ` · frei ${custom >= 0 ? '+' : ''}${escapeHtml(custom)}` : ''}${affinity ? ` · Lösung ${affinity >= 0 ? '+' : ''}${escapeHtml(affinity)}` : ''}${ruleModifier ? ` · Regeln ${ruleModifier >= 0 ? '+' : ''}${escapeHtml(ruleModifier)}` : ''}</span>
+        ${challengeModifier ? `<span>Ansatz-Malus: <b>${escapeHtml(challengeModifier)}</b> · ${escapeHtml(resolution.challengeModifierReason || 'Vom Ersteller festgelegt')}</span>` : ''}
         ${ruleLedger}
         ${ruleCosts}
         ${abilityCosts}
@@ -768,7 +789,9 @@ document.addEventListener('change', event => {
     return;
   }
   if (field?.matches?.('[data-skill-input]')) {
+    const previousKind = segment.kind;
     updateSegmentField(segment, field.dataset.skillInput, field.type === 'checkbox' ? field.checked : field.value);
+    if (field.dataset.skillInput === 'skillId' && previousKind !== segment.kind) { rerenderSegmentEditor(); return; }
     if (field.dataset.skillInput === 'challengeEnabled') rerenderSegmentEditor();
     else if (['skillId', 'targetActorKey', 'targetChallengeId'].includes(field.dataset.skillInput)) {
       remountAll();

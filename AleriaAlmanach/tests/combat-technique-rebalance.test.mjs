@@ -114,15 +114,16 @@ test('aura preserves elite, healing, self damage and secondary effects; ordinary
   assert.equal(empowered.action.effects[1].formula, '1d4');
 });
 
-test('aura damage is rolled and consumes only focus; criticals double dice but never flat bonuses', async () => {
+test('aura damage is rolled and consumes only focus; criticals maximize the base pool but never flat bonuses', async () => {
   const character = await load('gildas-gafyr');
   character.combatProfile = applyManualCharacterLevel(character.combatProfile, 8).profile;
   const actor = resolveCombatProfile(character, { actionId: 'technique:combat-style-drachentanz-jungdrache-06-sechsfacher-lehrhieb', paymentMode: 'aura' });
   const dice = new SeededCombatDice(7);
   dice.rollAttack = async ({ modifier }) => ({ natural: 20, total: 20 + modifier, keptDice: [20] });
   const result = await new CombatResolutionService(dice).resolveAttack({ actor, target: resolveCombatProfile(await load('gawain-draig')) });
-  assert.equal(result.damage.diceResults.length, 12);
-  assert.equal(result.damage.modifier, actor.damageModifier);
+  assert.equal(result.damage.diceResults.length, 6);
+  assert.equal(result.damage.criticalDamage.fixedBonus, actor.damageModifier);
+  assert.equal(result.damage.modifier, actor.damageModifier + result.damage.criticalDamage.maximum);
   assert.equal(result.actorResourceSnapshot.after.find(resource => resource.id === 'aura-focus').current, 0);
   assert.equal(result.actorResourceSnapshot.after.find(resource => resource.id === 'action').current, 1);
 });

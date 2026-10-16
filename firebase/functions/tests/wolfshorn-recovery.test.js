@@ -6,7 +6,7 @@ import { CombatResolutionService as BrowserService } from '../../../AleriaAlmana
 import { resolveCombatProfile as serverProfile } from '../src/generated/combat/combat-profile-resolver.js';
 import { CombatResolutionService as ServerService } from '../src/generated/combat/combat-resolution-service.js';
 import { ProvidedDiceAdapter } from '../src/mechanics/provided-dice-adapter.js';
-import { parseDamageFormula } from '../src/generated/combat/rules/combat-mvp-rules.js';
+import { buildDamageRollPlan } from '../src/generated/combat/rules/combat-mvp-rules.js';
 const read = async name => JSON.parse(await readFile(new URL(`../../../Charakter%20Archiv%20Exporte/${name}-wolfshorn.json`, import.meta.url), 'utf8')).character;
 const ylva = await read('ylva'), asgeir = await read('asgeir');
 function equip(c, right, left = '') {
@@ -22,10 +22,9 @@ function receipts(rolls, save) {
     },
     rollSavingThrow: async ({ modifier }) => ({ id: `save-${++id}`, natural: save, dice: [save], keptDice: [save], total: save + modifier }),
     rollDamage: async ({ damageFormula, bonus = 0, critical }) => {
-      const parsed = parseDamageFormula(damageFormula);
-      const dice = (parsed.terms || [parsed]).flatMap(t => Array(t.diceCount * (critical ? 2 : 1)).fill(2));
-      const modifier = parsed.fixedModifier + bonus;
-      return { id: `damage-${++id}`, notation: damageFormula, keptDice: dice, modifier, total: dice.reduce((a,b) => a+b, modifier) };
+      const plan = buildDamageRollPlan(damageFormula, bonus, critical);
+      const dice = plan.terms.flatMap(t => Array(t.diceCount).fill(2));
+      return { id: `damage-${++id}`, notation: plan.notation, criticalDamage: plan.criticalDamage, keptDice: dice, modifier: plan.modifier, total: dice.reduce((a,b) => a+b, plan.modifier) };
     }
   };
 }

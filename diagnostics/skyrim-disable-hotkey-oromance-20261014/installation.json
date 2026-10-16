@@ -1,0 +1,41 @@
+{
+  "timestamp": "2026-10-14T12:06:38.935465+02:00",
+  "profile": "Nolvus Awakening - SkyrimNet Beta25 Test",
+  "disabled_mods": [
+    "Twisted - ORomance Plus Official Patch Hub",
+    "Twisted - ORomance Plus",
+    "Twisted - ORomance",
+    "Hot Key Skill"
+  ],
+  "disabled_plugins": [
+    "HotKeySkill.esp",
+    "oromance.esp",
+    "ORomancePlus.esp",
+    "ORomancePlus_AIO.esp",
+    "ORomancePlus_OVirginityReflowered_Patch.esp",
+    "OR_ImmersiveRejections_Patch.esp"
+  ],
+  "before": {
+    "full": 255,
+    "light": 3788
+  },
+  "after": {
+    "full": 253,
+    "light": 3784
+  },
+  "missing_masters": [],
+  "protected_files_unchanged": 3143,
+  "backup": "E:\\Aleria\\diagnostics\\skyrim-disable-hotkey-oromance-20261014\\backup\\Nolvus Awakening - SkyrimNet Beta25 Test",
+  "mod_files_deleted": false,
+  "save_files_modified": false,
+  "before_fingerprint": {
+    "modlist.txt": "a6a314fea25218a00b14f1c81b161f4090c9565c2ba54f011009aa2024fa0347",
+    "plugins.txt": "c801eece80bd801513b3879c1f2f1744e9e589deb5c9c52d06fe78c7845fe751",
+    "loadorder.txt": "1975cf85a2071767f41174db0c5a78b49d104103a06c0c6d242bea1afac1bd74"
+  },
+  "after_fingerprint": {
+    "modlist.txt": "bc9fec7f1b241b83c29970b3cfe096e56c48e03ca8ed0ff1e3f236b0c54d7640",
+    "plugins.txt": "e5f8caa22dae42d7db2ed5bc5920d96b665fffe0a2cca5bc631c4aab24f2e256",
+    "loadorder.txt": "1975cf85a2071767f41174db0c5a78b49d104103a06c0c6d242bea1afac1bd74"
+  }
+}

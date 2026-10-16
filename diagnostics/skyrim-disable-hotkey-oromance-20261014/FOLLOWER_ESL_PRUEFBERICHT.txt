@@ -1,0 +1,70 @@
+﻿FOLLOWER – ESL-EIGNUNG, 14.10.2026
+Kein Follower wurde konvertiert. Alle gezählten Datensätze stammen aus den vorhandenen Plugins.
+Kein geprüfter voller Follower bzw. Begleiterpatch ist ohne FormID-Kompaktierung umstellbar.
+Bei Kompaktierung: Formreferenzen, FaceGen-Dateinamen und NIF-Pfade, Sprachdateien, SEQ, Scripts und alle Patches anpassen.
+Bereits in Spielständen benutzte normale Follower nicht still auf neu nummerierte IDs wechseln.
+
+Inigo.esp | aktiv
+  Eigene neue Datensätze: 10819; neue CELL: 1; neue NAVM: 5
+  Befund: Too many new records for a single ESL
+  Geprüfte PSC: 0; mögliche fest codierte Formabfragen: 0
+Lucien.esp | aktiv
+  Eigene neue Datensätze: 18955; neue CELL: 58; neue NAVM: 28
+  Befund: Too many new records for a single ESL
+  Geprüfte PSC: 0; mögliche fest codierte Formabfragen: 0
+018Auri.esp | aktiv
+  Eigene neue Datensätze: 1722; neue CELL: 2; neue NAVM: 3
+  Befund: Potential compacting candidate; verify scripts and external resources
+  Geprüfte PSC: 103; mögliche fest codierte Formabfragen: 4
+HLIORemi.esp | aktiv
+  Eigene neue Datensätze: 13797; neue CELL: 3; neue NAVM: 12
+  Befund: Too many new records for a single ESL
+  Geprüfte PSC: 0; mögliche fest codierte Formabfragen: 0
+Katana.esp | aktiv
+  Eigene neue Datensätze: 11943; neue CELL: 2; neue NAVM: 2
+  Befund: Too many new records for a single ESL
+  Geprüfte PSC: 1631; mögliche fest codierte Formabfragen: 0
+VeronicaFollower.esp | aktiv
+  Eigene neue Datensätze: 25; neue CELL: 0; neue NAVM: 0
+  Befund: Potential compacting candidate; verify scripts and external resources
+  Geprüfte PSC: 0; mögliche fest codierte Formabfragen: 0
+Lucien-AnniversaryEdition-Patch.esp | aktiv
+  Eigene neue Datensätze: 879; neue CELL: 0; neue NAVM: 0
+  Befund: Potential compacting candidate; verify scripts and external resources
+  Geprüfte PSC: 0; mögliche fest codierte Formabfragen: 0
+Lucien-Moonpath-Patch.esp | aktiv
+  Eigene neue Datensätze: 116; neue CELL: 0; neue NAVM: 0
+  Befund: Potential compacting candidate; verify scripts and external resources
+  Geprüfte PSC: 0; mögliche fest codierte Formabfragen: 0
+018AuriVIGILANTpatch.esp | aktiv
+  Eigene neue Datensätze: 311; neue CELL: 0; neue NAVM: 0
+  Befund: Potential compacting candidate; verify scripts and external resources
+  Geprüfte PSC: 0; mögliche fest codierte Formabfragen: 0
+EudoraFernFollwer.esp | nicht aktiv / Download
+  Eigene neue Datensätze: 388; neue CELL: 0; neue NAVM: 0
+  Befund: Potential compacting candidate; verify scripts and external resources
+  Geprüfte PSC: 207; mögliche fest codierte Formabfragen: 0
+SM_Astrid.esp | nicht aktiv / Download
+  Eigene neue Datensätze: 10501; neue CELL: 5; neue NAVM: 10
+  Befund: Too many new records for a single ESL
+  Geprüfte PSC: 0; mögliche fest codierte Formabfragen: 0
+NW04Ivar.esp | nicht aktiv / Download
+  Eigene neue Datensätze: 4404; neue CELL: 2; neue NAVM: 1
+  Befund: Too many new records for a single ESL
+  Geprüfte PSC: 599; mögliche fest codierte Formabfragen: 5
+NV_Eudora.esp | nicht aktiv / Download
+  Eigene neue Datensätze: 508; neue CELL: 0; neue NAVM: 0
+  Befund: Potential compacting candidate; verify scripts and external resources
+  Geprüfte PSC: 0; mögliche fest codierte Formabfragen: 0
+Follower Neisa.esp | nicht aktiv / Download
+  Eigene neue Datensätze: 341; neue CELL: 1; neue NAVM: 0
+  Befund: Potential compacting candidate; verify scripts and external resources
+  Geprüfte PSC: 20; mögliche fest codierte Formabfragen: 0
+
+BEWERTUNG:
+Veronica, Eudora und Neisa liegen unter der alten ESL-Datensatzgrenze. Das macht sie zu Prüfkandidaten, nicht zu bereits validierten ESPFE-Versionen.
+Auri passt zahlenmäßig, ist wegen neuer CELL/NAVM, Dialogen, Scripts und vieler Folgepatches keine einfache Konvertierung.
+Inigo, Lucien, Remiel, Katana, Heart of Ice/Astrid und Ivar überschreiten sogar den erweiterten Bereich von 4096 eigenen Datensätzen.
+Eudoras zusätzliches Naughty-Voice-Plugin muss bei einer Umstellung der Hauptmod passend mit umgebaut werden.
+Auch kleine Lucien-/Auri-Kommentarpatches benötigen Kompaktierung und die Anpassung ihrer Sprach-/Questressourcen.
+Quelle zur FaceGen-/Sprach-/SEQ-Anpassung und bestehenden Spielständen: https://www.nexusmods.com/skyrimspecialedition/mods/56396?tab=description

@@ -1,5 +1,5 @@
-import { getChallengeAttemptChoices } from '../skill-checks/skill-challenge-attempt.js?v=20261015-check-options-v1';
-import { renderSkillIcon } from '../skill-checks/skill-icon-view.js?v=20261015-check-options-v1';
+import { getChallengeAttemptChoices } from '../skill-checks/skill-challenge-attempt.js?v=20261016-check-policy-v1';
+import { renderSkillIcon } from '../skill-checks/skill-icon-view.js?v=20261016-check-policy-v1';
 
 const escape = value => String(value ?? '').replace(/[&<>"']/g, character => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[character]));
 
@@ -57,7 +57,7 @@ export function createHerausforderungAttemptPicker() {
     dialog.querySelector('[data-ha-attempt-target]').textContent = `${challenge.visibleText || challenge.authorName || 'Lösungsweg'} · SG ${challenge.difficulty}`;
     dialog.querySelector('[data-ha-attempt-choices]').innerHTML = choices.map(skill => {
       const detail = skill.checkType === 'saving-throw' ? 'Eigener Rettungswurfwert mit Ausbildung' : skill.checkType === 'attribute' ? 'Attributsmodifikator ohne Übungsbonus' : 'Fertigkeitswert mit Übung';
-      return `<button type="button" class="herausforderung-attempt-choice" data-ha-attempt-action="choose" data-skill-id="${escape(skill.id)}">${renderSkillIcon(skill)}<span><strong>${escape(skill.label)}</strong><small>${detail}</small></span><span aria-hidden="true">→</span></button>`;
+      return `<button type="button" class="herausforderung-attempt-choice${skill.modifier ? ' is-penalized' : ''}" data-ha-attempt-action="choose" data-skill-id="${escape(skill.id)}">${renderSkillIcon(skill)}<span><strong>${escape(skill.label)}</strong><small>${detail}${skill.modifier ? ` · Fester Malus ${escape(skill.modifier)}` : ''}</small>${skill.penaltyReason ? `<small>${escape(skill.penaltyReason)}</small>` : ''}</span><span aria-hidden="true">→</span></button>`;
     }).join('');
     globalThis.activateDialog(dialog.id, { initialFocus: '[data-ha-attempt-action="choose"]' });
     return true;

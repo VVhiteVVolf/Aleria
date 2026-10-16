@@ -1,0 +1,421 @@
+{
+  "section": {
+    "key": "Castell Draig",
+    "tab": "Völker & Kulturen",
+    "desc": "Menschliche Völker, Krieger & Kulturen",
+    "nodeId": "node:volker-kulturen:cenyr/celtigerns-wacht/llamreis-ankunft/gwynthor/castell-draig",
+    "path": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Gwynthor",
+      "Castell Draig"
+    ]
+  },
+  "entries": [
+    {
+      "id": "castell-draig-ratsfluegel",
+      "title": "Castell Draig - Ratsflügel & Amtskammern",
+      "subtitle": "Die Arbeitskammern der Ratsämter",
+      "type": "Interaktive Szene",
+      "category": "Szene",
+      "moduleWidth": 100,
+      "moduleHeight": 100,
+      "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/module-assets%2Fcastell-draig%2Fexpansion-2026-10-15%2Famtskammer-herold-c6d121c55d5b8173.png?alt=media&token=6e8183dc-99b1-4d7e-9f39-6271f804b59a",
+      "stamp": "Celtigerns Wacht · Gwynthor · Aleria",
+      "icon": "",
+      "symbol": null,
+      "locked": false,
+      "appendCommentsPage": false,
+      "enablePageComments": true,
+      "sessionCast": [],
+      "sessionCastDetails": [],
+      "schemaVersion": 1,
+      "multipage": true,
+      "pages": [
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "ratsfluegel-vorraum",
+          "pageTitle": "Vorraum der Amtskammern",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/module-assets%2Fcastell-draig%2F2026-10-15%2Fwohntrakte-korridor-743ede22e14d98d6.png?alt=media&token=d7048899-2cd7-4819-98dd-d0b5c4a402a1",
+          "imageWidth": 20,
+          "sessionPage": true,
+          "sessionIntro": "Ein ruhiger steinerner Gang mit Sitzbänken verbindet die Amtskammern. Hinter schweren Türen liegen die Arbeitsräume der Räte.",
+          "sessionHint": "Schreibe deinen Beitrag zu dieser Szene.",
+          "sessionLocation": "Castell Draig · Vorraum der Amtskammern",
+          "sessionStatus": "active",
+          "sessionParticipants": [],
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          },
+          "sessionEmptyTitle": "Die Szene ist offen",
+          "sessionEmptyText": "Hier kann eine neue Szene beginnen."
+        },
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "ratsfluegel-herold",
+          "pageTitle": "Kammer des Herolds",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/module-assets%2Fcastell-draig%2Fexpansion-2026-10-15%2Famtskammer-herold-c6d121c55d5b8173.png?alt=media&token=6e8183dc-99b1-4d7e-9f39-6271f804b59a",
+          "imageWidth": 20,
+          "sessionPage": true,
+          "sessionIntro": "Schreibtisch, Karten und zwei Besuchersessel geben Raum für diplomatische Gespräche. Eine verschlossene Dokumentenmappe liegt neben einem gesiegelten Schreiben.",
+          "sessionHint": "Schreibe deinen Beitrag zu dieser Szene.",
+          "sessionLocation": "Castell Draig · Kammer des Herolds",
+          "sessionStatus": "active",
+          "sessionParticipants": [],
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          },
+          "sessionEmptyTitle": "Die Szene ist offen",
+          "sessionEmptyText": "Hier kann eine neue Szene beginnen."
+        },
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "ratsfluegel-justiziar",
+          "pageTitle": "Kammer des Justiziars",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/module-assets%2Fcastell-draig%2Fexpansion-2026-10-15%2Famtskammer-justiziar-7ba570c2bec22245.png?alt=media&token=e352c934-6d1a-47de-a910-07ac9105eb0d",
+          "imageWidth": 20,
+          "sessionPage": true,
+          "sessionIntro": "Gesetzesbücher und ein verschlossener Aktenschrank prägen das schlichte Arbeitszimmer. Vor dem schweren Schreibtisch stehen zwei Stühle für Besucher.",
+          "sessionHint": "Schreibe deinen Beitrag zu dieser Szene.",
+          "sessionLocation": "Castell Draig · Kammer des Justiziars",
+          "sessionStatus": "active",
+          "sessionParticipants": [],
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          },
+          "sessionEmptyTitle": "Die Szene ist offen",
+          "sessionEmptyText": "Hier kann eine neue Szene beginnen."
+        },
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "ratsfluegel-kaemmerer",
+          "pageTitle": "Kammer des Kämmerers",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/module-assets%2Fcastell-draig%2Fexpansion-2026-10-15%2Famtskammer-kaemmerer-093a9f28c78afb21.png?alt=media&token=b5f7fd18-a5cd-43ea-a14f-7b2b434b31a7",
+          "imageWidth": 20,
+          "sessionPage": true,
+          "sessionIntro": "Geordnete Rechnungsbücher, ein Zähltablett und eine eisenbeschlagene Truhe stehen im Arbeitsraum des Kämmerers. Durch das hohe Fenster fällt ruhiges Tageslicht.",
+          "sessionHint": "Schreibe deinen Beitrag zu dieser Szene.",
+          "sessionLocation": "Castell Draig · Kammer des Kämmerers",
+          "sessionStatus": "active",
+          "sessionParticipants": [],
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          },
+          "sessionEmptyTitle": "Die Szene ist offen",
+          "sessionEmptyText": "Hier kann eine neue Szene beginnen."
+        },
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "ratsfluegel-vogt",
+          "pageTitle": "Kammer des Vogtes",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/module-assets%2Fcastell-draig%2Fexpansion-2026-10-15%2Famtskammer-vogt-8fd69057be36c8bb.png?alt=media&token=d6241a6f-4317-4d57-a40d-923bd508e5fb",
+          "imageWidth": 20,
+          "sessionPage": true,
+          "sessionIntro": "Landkarten, Eingaben und ein schlichter Arbeitstisch bestimmen die Kammer des Vogtes. Zwei Hocker bieten Platz für kurze Besprechungen.",
+          "sessionHint": "Schreibe deinen Beitrag zu dieser Szene.",
+          "sessionLocation": "Castell Draig · Kammer des Vogtes",
+          "sessionStatus": "active",
+          "sessionParticipants": [],
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          },
+          "sessionEmptyTitle": "Die Szene ist offen",
+          "sessionEmptyText": "Hier kann eine neue Szene beginnen."
+        },
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "ratsfluegel-barde",
+          "pageTitle": "Kammer des Barden",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/module-assets%2Fcastell-draig%2Fexpansion-2026-10-15%2Famtskammer-barde-292b7f724311d0f6.png?alt=media&token=8b6d9710-4104-4698-8320-7fc1511e8808",
+          "imageWidth": 20,
+          "sessionPage": true,
+          "sessionIntro": "Laute und Harfe stehen nahe dem Fenster. Zwischen Schreibpult, Büchern und einer gepolsterten Bank bleibt Platz für Gespräche und leise Musik.",
+          "sessionHint": "Schreibe deinen Beitrag zu dieser Szene.",
+          "sessionLocation": "Castell Draig · Kammer des Barden",
+          "sessionStatus": "active",
+          "sessionParticipants": [],
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          },
+          "sessionEmptyTitle": "Die Szene ist offen",
+          "sessionEmptyText": "Hier kann eine neue Szene beginnen."
+        },
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "ratsfluegel-schatten",
+          "pageTitle": "Kammer des Schattens",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/module-assets%2Fcastell-draig%2Fexpansion-2026-10-15%2Famtskammer-schatten-27ff270b2907753e.png?alt=media&token=31221beb-b094-482c-8fd0-7d28e3bada4c",
+          "imageWidth": 20,
+          "sessionPage": true,
+          "sessionIntro": "Hinter einer schweren Tür liegt ein zurückhaltend eingerichtetes Arbeitszimmer. Ein verschlossener Schrank und ein kleiner Tisch mit zwei Stühlen lassen Raum für vertrauliche Gespräche.",
+          "sessionHint": "Schreibe deinen Beitrag zu dieser Szene.",
+          "sessionLocation": "Castell Draig · Kammer des Schattens",
+          "sessionStatus": "active",
+          "sessionParticipants": [],
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          },
+          "sessionEmptyTitle": "Die Szene ist offen",
+          "sessionEmptyText": "Hier kann eine neue Szene beginnen."
+        },
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "ratsfluegel-marschall",
+          "pageTitle": "Kammer des Marschalls",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/module-assets%2Fcastell-draig%2Fexpansion-2026-10-15%2Famtskammer-marschall-48c3ddbae17f9326.png?alt=media&token=976ec34a-8c04-432c-ada8-f461c6e94dc2",
+          "imageWidth": 20,
+          "sessionPage": true,
+          "sessionIntro": "Eine ausgebreitete Karte liegt auf dem großen Besprechungstisch. Meldetaschen, ein schlichtes Waffenrack und wenige Sitzplätze prägen den militärischen Arbeitsraum.",
+          "sessionHint": "Schreibe deinen Beitrag zu dieser Szene.",
+          "sessionLocation": "Castell Draig · Kammer des Marschalls",
+          "sessionStatus": "active",
+          "sessionParticipants": [],
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          },
+          "sessionEmptyTitle": "Die Szene ist offen",
+          "sessionEmptyText": "Hier kann eine neue Szene beginnen."
+        },
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "ratsfluegel-ratspriester",
+          "pageTitle": "Kammer des Ratspriesters",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/module-assets%2Fcastell-draig%2Fexpansion-2026-10-15%2Famtskammer-ratspriester-ca30eb19c5206415.png?alt=media&token=0c4e9f57-2446-4027-9a52-6da5927aea33",
+          "imageWidth": 20,
+          "sessionPage": true,
+          "sessionIntro": "Ein schlichtes Schreibpult, ein Andachtsbuch und zwei Besucherstühle stehen im hellen Arbeitszimmer. Die Kammer bietet Ruhe für Seelsorge und Gespräche über kirchliche Angelegenheiten.",
+          "sessionHint": "Schreibe deinen Beitrag zu dieser Szene.",
+          "sessionLocation": "Castell Draig · Kammer des Ratspriesters",
+          "sessionStatus": "active",
+          "sessionParticipants": [],
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          },
+          "sessionEmptyTitle": "Die Szene ist offen",
+          "sessionEmptyText": "Hier kann eine neue Szene beginnen."
+        },
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "ratsfluegel-ratskanzler",
+          "pageTitle": "Kammer des Ratskanzlers",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/module-assets%2Fcastell-draig%2Fexpansion-2026-10-15%2Famtskammer-ratskanzler-7809999df057214b.png?alt=media&token=16fb66ec-66ec-439d-87ea-016c783a5ab0",
+          "imageWidth": 20,
+          "sessionPage": true,
+          "sessionIntro": "Geordnete Schriftstücke, eine Siegelpresse und ein Fächerschrank umgeben den langen Schreibtisch. Zwei Stühle stehen für Besprechungen bereit.",
+          "sessionHint": "Schreibe deinen Beitrag zu dieser Szene.",
+          "sessionLocation": "Castell Draig · Kammer des Ratskanzlers",
+          "sessionStatus": "active",
+          "sessionParticipants": [],
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          },
+          "sessionEmptyTitle": "Die Szene ist offen",
+          "sessionEmptyText": "Hier kann eine neue Szene beginnen."
+        },
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "ratsfluegel-regent",
+          "pageTitle": "Kammer des Regenten",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/module-assets%2Fcastell-draig%2F2026-10-15%2Fbergfried-arbeitszimmer-baron-77df5ed0f071544b.png?alt=media&token=6be34704-e1ce-43f1-bec1-fe31332b5aa9",
+          "imageWidth": 20,
+          "sessionPage": true,
+          "sessionIntro": "Ein zurückhaltend eingerichtetes Arbeitszimmer mit Schreibtisch und Besprechungsplatz. Die Kammer steht für die Aufgaben einer eingesetzten Regentschaft bereit.",
+          "sessionHint": "Schreibe deinen Beitrag zu dieser Szene.",
+          "sessionLocation": "Castell Draig · Kammer des Regenten",
+          "sessionStatus": "active",
+          "sessionParticipants": [],
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          },
+          "sessionEmptyTitle": "Die Szene ist offen",
+          "sessionEmptyText": "Hier kann eine neue Szene beginnen."
+        }
+      ]
+    },
+    {
+      "id": "castell-draig-garnison",
+      "title": "Castell Draig - Garnison & Quartiere",
+      "subtitle": "Barracken und Alltag der Burgbesatzung",
+      "type": "Interaktive Szene",
+      "category": "Szene",
+      "moduleWidth": 100,
+      "moduleHeight": 100,
+      "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/module-assets%2Fcastell-draig%2Fexpansion-2026-10-15%2Fgarnisonshof-3ff373ae5ce33254.png?alt=media&token=f45a8a4a-005a-4f04-a92a-d081d87570d1",
+      "stamp": "Celtigerns Wacht · Gwynthor · Aleria",
+      "icon": "",
+      "symbol": null,
+      "locked": false,
+      "appendCommentsPage": false,
+      "enablePageComments": true,
+      "sessionCast": [],
+      "sessionCastDetails": [],
+      "schemaVersion": 1,
+      "multipage": true,
+      "pages": [
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "garnison-hof",
+          "pageTitle": "Garnisonshof",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/module-assets%2Fcastell-draig%2Fexpansion-2026-10-15%2Fgarnisonshof-3ff373ae5ce33254.png?alt=media&token=f45a8a4a-005a-4f04-a92a-d081d87570d1",
+          "imageWidth": 20,
+          "sessionPage": true,
+          "sessionIntro": "Zwischen steinernen Unterkunftsgebäuden liegt ein gepflasterter Hof mit Wassertränke und Bänken. Eine Treppe führt hinauf zum Wehrgang.",
+          "sessionHint": "Schreibe deinen Beitrag zu dieser Szene.",
+          "sessionLocation": "Castell Draig · Garnisonshof",
+          "sessionStatus": "active",
+          "sessionParticipants": [],
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          },
+          "sessionEmptyTitle": "Die Szene ist offen",
+          "sessionEmptyText": "Hier kann eine neue Szene beginnen."
+        },
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "garnison-ritterquartier",
+          "pageTitle": "Ritterquartier",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/module-assets%2Fcastell-draig%2Fexpansion-2026-10-15%2Fgarnison-ritterquartier-a7b65e00f7c9d595.png?alt=media&token=3ac25209-b5bc-48b7-8e89-44034071f88b",
+          "imageWidth": 20,
+          "sessionPage": true,
+          "sessionIntro": "Ein Bett, eine persönliche Truhe und ein kleiner Schreibtisch bilden das private Quartier eines diensthabenden Ritters. Rüstzeug und Schwert haben ihren Platz an der Wand.",
+          "sessionHint": "Schreibe deinen Beitrag zu dieser Szene.",
+          "sessionLocation": "Castell Draig · Ritterquartier",
+          "sessionStatus": "active",
+          "sessionParticipants": [],
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          },
+          "sessionEmptyTitle": "Die Szene ist offen",
+          "sessionEmptyText": "Hier kann eine neue Szene beginnen."
+        },
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "garnison-waffenknechte",
+          "pageTitle": "Barracke der Waffenknechte",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/module-assets%2Fcastell-draig%2Fexpansion-2026-10-15%2Fgarnison-waffenknechte-48949e2b20096595.png?alt=media&token=dda74b70-1a0c-4d25-aa57-59312a79d785",
+          "imageWidth": 20,
+          "sessionPage": true,
+          "sessionIntro": "Einfache Holzbetten mit Wolldecken stehen entlang der Wände. Truhen, eine lange Bank und Haken für Kleidung und Ausrüstung teilen den gemeinsamen Wohnraum.",
+          "sessionHint": "Schreibe deinen Beitrag zu dieser Szene.",
+          "sessionLocation": "Castell Draig · Barracke der Waffenknechte",
+          "sessionStatus": "active",
+          "sessionParticipants": [],
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          },
+          "sessionEmptyTitle": "Die Szene ist offen",
+          "sessionEmptyText": "Hier kann eine neue Szene beginnen."
+        },
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "garnison-gardisten",
+          "pageTitle": "Barracke der Gardisten",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/module-assets%2Fcastell-draig%2Fexpansion-2026-10-15%2Fgarnison-gardisten-88ca773592c85635.png?alt=media&token=ffaf438c-ed3e-4047-93f3-e88c55889ff7",
+          "imageWidth": 20,
+          "sessionPage": true,
+          "sessionIntro": "Zwei geordnete Bettreihen lassen einen schmalen Mittelgang frei. Persönliche Truhen, Helme und Schilde gehören zum Alltag der hier untergebrachten Gardisten.",
+          "sessionHint": "Schreibe deinen Beitrag zu dieser Szene.",
+          "sessionLocation": "Castell Draig · Barracke der Gardisten",
+          "sessionStatus": "active",
+          "sessionParticipants": [],
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          },
+          "sessionEmptyTitle": "Die Szene ist offen",
+          "sessionEmptyText": "Hier kann eine neue Szene beginnen."
+        },
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "garnison-wachstube",
+          "pageTitle": "Wachstube der Garnison",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/module-assets%2Fcastell-draig%2F2026-10-15%2Ftwr-dragwyn-wachraum-4c8a6b98511e1ec9.png?alt=media&token=00ec26fb-6c6d-457f-96bc-2833b5abbf1a",
+          "imageWidth": 20,
+          "sessionPage": true,
+          "sessionIntro": "Ein Arbeitstisch, Bänke und bereitgestelltes Rüstzeug prägen die Wachstube. Hier ist Platz für Wachwechsel, Meldungen und kurze Besprechungen.",
+          "sessionHint": "Schreibe deinen Beitrag zu dieser Szene.",
+          "sessionLocation": "Castell Draig · Wachstube der Garnison",
+          "sessionStatus": "active",
+          "sessionParticipants": [],
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          },
+          "sessionEmptyTitle": "Die Szene ist offen",
+          "sessionEmptyText": "Hier kann eine neue Szene beginnen."
+        },
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "garnison-zeughaus",
+          "pageTitle": "Zeughaus",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/module-assets%2Fcastell-draig%2Fexpansion-2026-10-15%2Fgarnison-zeughaus-d2a371ee65c2a573.png?alt=media&token=b7bbb63a-9cb2-4d7c-bf4a-f24086dcf265",
+          "imageWidth": 20,
+          "sessionPage": true,
+          "sessionIntro": "Waffenständer, Schilde und verschlossene Ausrüstungstruhen stehen geordnet im steinernen Zeughaus. Eine Werkbank dient der Pflege und Ausgabe des Rüstzeugs.",
+          "sessionHint": "Schreibe deinen Beitrag zu dieser Szene.",
+          "sessionLocation": "Castell Draig · Zeughaus",
+          "sessionStatus": "active",
+          "sessionParticipants": [],
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          },
+          "sessionEmptyTitle": "Die Szene ist offen",
+          "sessionEmptyText": "Hier kann eine neue Szene beginnen."
+        },
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "garnison-speisesaal",
+          "pageTitle": "Speise- und Aufenthaltsraum",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/module-assets%2Fcastell-draig%2Fexpansion-2026-10-15%2Fgarnison-speisesaal-6758999c74a4cd4d.png?alt=media&token=042ede88-a301-4952-8c1f-cf560e6aa3bb",
+          "imageWidth": 20,
+          "sessionPage": true,
+          "sessionIntro": "Lange Holztische mit Bänken stehen vor dem offenen Herd. Eine kleine Ausgabe verbindet den Raum mit der Küche; einfaches Geschirr wartet in den Regalen.",
+          "sessionHint": "Schreibe deinen Beitrag zu dieser Szene.",
+          "sessionLocation": "Castell Draig · Speise- und Aufenthaltsraum",
+          "sessionStatus": "active",
+          "sessionParticipants": [],
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          },
+          "sessionEmptyTitle": "Die Szene ist offen",
+          "sessionEmptyText": "Hier kann eine neue Szene beginnen."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,3079 @@
+{
+  "ModHeader": {
+    "Flags": 512,
+    "FormID": 0,
+    "Version": 0,
+    "FormVersion": 43,
+    "Version2": 0,
+    "Stats": {
+      "Version": 1.7,
+      "NumRecords": 26,
+      "NextFormID": 2073
+    },
+    "TypeOffsets": null,
+    "Deleted": null,
+    "Author": "DEFAULT",
+    "Description": null,
+    "MasterReferences": [
+      {
+        "Master": "Skyrim.esm",
+        "FileSize": 0
+      }
+    ],
+    "OverriddenForms": null,
+    "INTV": 1,
+    "INCC": null
+  },
+  "GameSettings": [],
+  "Keywords": [],
+  "LocationReferenceTypes": [],
+  "Actions": [],
+  "TextureSets": [
+    {
+      "$type": "Noggog.KeyValue`2[[Mutagen.Bethesda.Plugins.FormKey, Mutagen.Bethesda.Core],[Mutagen.Bethesda.Skyrim.TextureSet, Mutagen.Bethesda.Skyrim]], Noggog.CSharpExt",
+      "Key": "000804:VeronicaFollower.esp",
+      "Value": {
+        "ObjectBounds": {
+          "First": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          },
+          "Second": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          }
+        },
+        "Diffuse": {
+          "RawPath": "Actors\\Character\\Veronica\\femalehands_1.dds",
+          "DataRelativePath": "Textures\\Actors\\Character\\Veronica\\femalehands_1.dds",
+          "Extension": "dds",
+          "Type": {
+            "$type": "Mutagen.Bethesda.Skyrim.Assets.SkyrimTextureAssetType, Mutagen.Bethesda.Skyrim",
+            "BaseFolder": "Textures",
+            "FileExtensions": {
+              "$type": "System.String[], System.Private.CoreLib",
+              "$values": [
+                "dds",
+                "png"
+              ]
+            }
+          },
+          "IsNull": false
+        },
+        "NormalOrGloss": {
+          "RawPath": "Actors\\Character\\Veronica\\femalehands_1_msn.dds",
+          "DataRelativePath": "Textures\\Actors\\Character\\Veronica\\femalehands_1_msn.dds",
+          "Extension": "dds",
+          "Type": {
+            "$type": "Mutagen.Bethesda.Skyrim.Assets.SkyrimTextureAssetType, Mutagen.Bethesda.Skyrim",
+            "BaseFolder": "Textures",
+            "FileExtensions": {
+              "$type": "System.String[], System.Private.CoreLib",
+              "$values": [
+                "dds",
+                "png"
+              ]
+            }
+          },
+          "IsNull": false
+        },
+        "EnvironmentMaskOrSubsurfaceTint": null,
+        "GlowOrDetailMap": {
+          "RawPath": "Actors\\Character\\Veronica\\femalehands_1_sk.dds",
+          "DataRelativePath": "Textures\\Actors\\Character\\Veronica\\femalehands_1_sk.dds",
+          "Extension": "dds",
+          "Type": {
+            "$type": "Mutagen.Bethesda.Skyrim.Assets.SkyrimTextureAssetType, Mutagen.Bethesda.Skyrim",
+            "BaseFolder": "Textures",
+            "FileExtensions": {
+              "$type": "System.String[], System.Private.CoreLib",
+              "$values": [
+                "dds",
+                "png"
+              ]
+            }
+          },
+          "IsNull": false
+        },
+        "Height": null,
+        "Environment": null,
+        "Multilayer": null,
+        "BacklightMaskOrSpecular": {
+          "RawPath": "Actors\\Character\\Veronica\\femalehands_1_s.dds",
+          "DataRelativePath": "Textures\\Actors\\Character\\Veronica\\femalehands_1_s.dds",
+          "Extension": "dds",
+          "Type": {
+            "$type": "Mutagen.Bethesda.Skyrim.Assets.SkyrimTextureAssetType, Mutagen.Bethesda.Skyrim",
+            "BaseFolder": "Textures",
+            "FileExtensions": {
+              "$type": "System.String[], System.Private.CoreLib",
+              "$values": [
+                "dds",
+                "png"
+              ]
+            }
+          },
+          "IsNull": false
+        },
+        "Decal": null,
+        "Flags": 6,
+        "SkyrimMajorRecordFlags": 0,
+        "FormVersion": 43,
+        "Version2": 0,
+        "EditorID": "VeronicaHandTex",
+        "TitleString": "VeronicaHandTex - 000804:VeronicaFollower.esp",
+        "IsCompressed": false,
+        "IsDeleted": false,
+        "MajorRecordFlagsRaw": 0,
+        "FormKey": "000804:VeronicaFollower.esp",
+        "VersionControl": 0
+      }
+    },
+    {
+      "$type": "Noggog.KeyValue`2[[Mutagen.Bethesda.Plugins.FormKey, Mutagen.Bethesda.Core],[Mutagen.Bethesda.Skyrim.TextureSet, Mutagen.Bethesda.Skyrim]], Noggog.CSharpExt",
+      "Key": "000803:VeronicaFollower.esp",
+      "Value": {
+        "ObjectBounds": {
+          "First": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          },
+          "Second": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          }
+        },
+        "Diffuse": {
+          "RawPath": "Actors\\Character\\Veronica\\EYES\\eyepassion.dds",
+          "DataRelativePath": "Textures\\Actors\\Character\\Veronica\\EYES\\eyepassion.dds",
+          "Extension": "dds",
+          "Type": {
+            "$type": "Mutagen.Bethesda.Skyrim.Assets.SkyrimTextureAssetType, Mutagen.Bethesda.Skyrim",
+            "BaseFolder": "Textures",
+            "FileExtensions": {
+              "$type": "System.String[], System.Private.CoreLib",
+              "$values": [
+                "dds",
+                "png"
+              ]
+            }
+          },
+          "IsNull": false
+        },
+        "NormalOrGloss": {
+          "RawPath": "Actors\\Character\\Veronica\\EYES\\eyebrown_n.dds",
+          "DataRelativePath": "Textures\\Actors\\Character\\Veronica\\EYES\\eyebrown_n.dds",
+          "Extension": "dds",
+          "Type": {
+            "$type": "Mutagen.Bethesda.Skyrim.Assets.SkyrimTextureAssetType, Mutagen.Bethesda.Skyrim",
+            "BaseFolder": "Textures",
+            "FileExtensions": {
+              "$type": "System.String[], System.Private.CoreLib",
+              "$values": [
+                "dds",
+                "png"
+              ]
+            }
+          },
+          "IsNull": false
+        },
+        "EnvironmentMaskOrSubsurfaceTint": {
+          "RawPath": "Actors\\Character\\Veronica\\EYES\\eyeenvironmentmask_m.dds",
+          "DataRelativePath": "Textures\\Actors\\Character\\Veronica\\EYES\\eyeenvironmentmask_m.dds",
+          "Extension": "dds",
+          "Type": {
+            "$type": "Mutagen.Bethesda.Skyrim.Assets.SkyrimTextureAssetType, Mutagen.Bethesda.Skyrim",
+            "BaseFolder": "Textures",
+            "FileExtensions": {
+              "$type": "System.String[], System.Private.CoreLib",
+              "$values": [
+                "dds",
+                "png"
+              ]
+            }
+          },
+          "IsNull": false
+        },
+        "GlowOrDetailMap": null,
+        "Height": null,
+        "Environment": {
+          "RawPath": "Actors\\Character\\Veronica\\EYES\\eyecubemap.dds",
+          "DataRelativePath": "Textures\\Actors\\Character\\Veronica\\EYES\\eyecubemap.dds",
+          "Extension": "dds",
+          "Type": {
+            "$type": "Mutagen.Bethesda.Skyrim.Assets.SkyrimTextureAssetType, Mutagen.Bethesda.Skyrim",
+            "BaseFolder": "Textures",
+            "FileExtensions": {
+              "$type": "System.String[], System.Private.CoreLib",
+              "$values": [
+                "dds",
+                "png"
+              ]
+            }
+          },
+          "IsNull": false
+        },
+        "Multilayer": null,
+        "BacklightMaskOrSpecular": null,
+        "Decal": null,
+        "Flags": 0,
+        "SkyrimMajorRecordFlags": 0,
+        "FormVersion": 43,
+        "Version2": 0,
+        "EditorID": "VeronicaEyeTex",
+        "TitleString": "VeronicaEyeTex - 000803:VeronicaFollower.esp",
+        "IsCompressed": false,
+        "IsDeleted": false,
+        "MajorRecordFlagsRaw": 0,
+        "FormKey": "000803:VeronicaFollower.esp",
+        "VersionControl": 0
+      }
+    },
+    {
+      "$type": "Noggog.KeyValue`2[[Mutagen.Bethesda.Plugins.FormKey, Mutagen.Bethesda.Core],[Mutagen.Bethesda.Skyrim.TextureSet, Mutagen.Bethesda.Skyrim]], Noggog.CSharpExt",
+      "Key": "000802:VeronicaFollower.esp",
+      "Value": {
+        "ObjectBounds": {
+          "First": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          },
+          "Second": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          }
+        },
+        "Diffuse": {
+          "RawPath": "Actors\\Character\\Veronica\\BROWS\\femalebrow_07.dds",
+          "DataRelativePath": "Textures\\Actors\\Character\\Veronica\\BROWS\\femalebrow_07.dds",
+          "Extension": "dds",
+          "Type": {
+            "$type": "Mutagen.Bethesda.Skyrim.Assets.SkyrimTextureAssetType, Mutagen.Bethesda.Skyrim",
+            "BaseFolder": "Textures",
+            "FileExtensions": {
+              "$type": "System.String[], System.Private.CoreLib",
+              "$values": [
+                "dds",
+                "png"
+              ]
+            }
+          },
+          "IsNull": false
+        },
+        "NormalOrGloss": {
+          "RawPath": "Actors\\Character\\Veronica\\BROWS\\femalebrow_n.dds",
+          "DataRelativePath": "Textures\\Actors\\Character\\Veronica\\BROWS\\femalebrow_n.dds",
+          "Extension": "dds",
+          "Type": {
+            "$type": "Mutagen.Bethesda.Skyrim.Assets.SkyrimTextureAssetType, Mutagen.Bethesda.Skyrim",
+            "BaseFolder": "Textures",
+            "FileExtensions": {
+              "$type": "System.String[], System.Private.CoreLib",
+              "$values": [
+                "dds",
+                "png"
+              ]
+            }
+          },
+          "IsNull": false
+        },
+        "EnvironmentMaskOrSubsurfaceTint": null,
+        "GlowOrDetailMap": null,
+        "Height": null,
+        "Environment": null,
+        "Multilayer": null,
+        "BacklightMaskOrSpecular": null,
+        "Decal": null,
+        "Flags": 0,
+        "SkyrimMajorRecordFlags": 0,
+        "FormVersion": 43,
+        "Version2": 0,
+        "EditorID": "VeronicaBrowTex",
+        "TitleString": "VeronicaBrowTex - 000802:VeronicaFollower.esp",
+        "IsCompressed": false,
+        "IsDeleted": false,
+        "MajorRecordFlagsRaw": 0,
+        "FormKey": "000802:VeronicaFollower.esp",
+        "VersionControl": 0
+      }
+    },
+    {
+      "$type": "Noggog.KeyValue`2[[Mutagen.Bethesda.Plugins.FormKey, Mutagen.Bethesda.Core],[Mutagen.Bethesda.Skyrim.TextureSet, Mutagen.Bethesda.Skyrim]], Noggog.CSharpExt",
+      "Key": "000805:VeronicaFollower.esp",
+      "Value": {
+        "ObjectBounds": {
+          "First": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          },
+          "Second": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          }
+        },
+        "Diffuse": {
+          "RawPath": "Actors\\Character\\Veronica\\femalebody_1.dds",
+          "DataRelativePath": "Textures\\Actors\\Character\\Veronica\\femalebody_1.dds",
+          "Extension": "dds",
+          "Type": {
+            "$type": "Mutagen.Bethesda.Skyrim.Assets.SkyrimTextureAssetType, Mutagen.Bethesda.Skyrim",
+            "BaseFolder": "Textures",
+            "FileExtensions": {
+              "$type": "System.String[], System.Private.CoreLib",
+              "$values": [
+                "dds",
+                "png"
+              ]
+            }
+          },
+          "IsNull": false
+        },
+        "NormalOrGloss": {
+          "RawPath": "Actors\\Character\\Veronica\\femalebody_1_msn.dds",
+          "DataRelativePath": "Textures\\Actors\\Character\\Veronica\\femalebody_1_msn.dds",
+          "Extension": "dds",
+          "Type": {
+            "$type": "Mutagen.Bethesda.Skyrim.Assets.SkyrimTextureAssetType, Mutagen.Bethesda.Skyrim",
+            "BaseFolder": "Textures",
+            "FileExtensions": {
+              "$type": "System.String[], System.Private.CoreLib",
+              "$values": [
+                "dds",
+                "png"
+              ]
+            }
+          },
+          "IsNull": false
+        },
+        "EnvironmentMaskOrSubsurfaceTint": null,
+        "GlowOrDetailMap": {
+          "RawPath": "Actors\\Character\\Veronica\\femalebody_1_sk.dds",
+          "DataRelativePath": "Textures\\Actors\\Character\\Veronica\\femalebody_1_sk.dds",
+          "Extension": "dds",
+          "Type": {
+            "$type": "Mutagen.Bethesda.Skyrim.Assets.SkyrimTextureAssetType, Mutagen.Bethesda.Skyrim",
+            "BaseFolder": "Textures",
+            "FileExtensions": {
+              "$type": "System.String[], System.Private.CoreLib",
+              "$values": [
+                "dds",
+                "png"
+              ]
+            }
+          },
+          "IsNull": false
+        },
+        "Height": null,
+        "Environment": null,
+        "Multilayer": null,
+        "BacklightMaskOrSpecular": {
+          "RawPath": "Actors\\Character\\Veronica\\femalebody_1_s.dds",
+          "DataRelativePath": "Textures\\Actors\\Character\\Veronica\\femalebody_1_s.dds",
+          "Extension": "dds",
+          "Type": {
+            "$type": "Mutagen.Bethesda.Skyrim.Assets.SkyrimTextureAssetType, Mutagen.Bethesda.Skyrim",
+            "BaseFolder": "Textures",
+            "FileExtensions": {
+              "$type": "System.String[], System.Private.CoreLib",
+              "$values": [
+                "dds",
+                "png"
+              ]
+            }
+          },
+          "IsNull": false
+        },
+        "Decal": null,
+        "Flags": 6,
+        "SkyrimMajorRecordFlags": 0,
+        "FormVersion": 43,
+        "Version2": 0,
+        "EditorID": "VeronicaTorsoTex",
+        "TitleString": "VeronicaTorsoTex - 000805:VeronicaFollower.esp",
+        "IsCompressed": false,
+        "IsDeleted": false,
+        "MajorRecordFlagsRaw": 0,
+        "FormKey": "000805:VeronicaFollower.esp",
+        "VersionControl": 0
+      }
+    },
+    {
+      "$type": "Noggog.KeyValue`2[[Mutagen.Bethesda.Plugins.FormKey, Mutagen.Bethesda.Core],[Mutagen.Bethesda.Skyrim.TextureSet, Mutagen.Bethesda.Skyrim]], Noggog.CSharpExt",
+      "Key": "000815:VeronicaFollower.esp",
+      "Value": {
+        "ObjectBounds": {
+          "First": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          },
+          "Second": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          }
+        },
+        "Diffuse": {
+          "RawPath": "Actors\\Character\\Veronica\\armor\\barkeepfemaleoutfit.dds",
+          "DataRelativePath": "Textures\\Actors\\Character\\Veronica\\armor\\barkeepfemaleoutfit.dds",
+          "Extension": "dds",
+          "Type": {
+            "$type": "Mutagen.Bethesda.Skyrim.Assets.SkyrimTextureAssetType, Mutagen.Bethesda.Skyrim",
+            "BaseFolder": "Textures",
+            "FileExtensions": {
+              "$type": "System.String[], System.Private.CoreLib",
+              "$values": [
+                "dds",
+                "png"
+              ]
+            }
+          },
+          "IsNull": false
+        },
+        "NormalOrGloss": {
+          "RawPath": "Actors\\Character\\Veronica\\armor\\barkeepfemaleoutfit_n.dds",
+          "DataRelativePath": "Textures\\Actors\\Character\\Veronica\\armor\\barkeepfemaleoutfit_n.dds",
+          "Extension": "dds",
+          "Type": {
+            "$type": "Mutagen.Bethesda.Skyrim.Assets.SkyrimTextureAssetType, Mutagen.Bethesda.Skyrim",
+            "BaseFolder": "Textures",
+            "FileExtensions": {
+              "$type": "System.String[], System.Private.CoreLib",
+              "$values": [
+                "dds",
+                "png"
+              ]
+            }
+          },
+          "IsNull": false
+        },
+        "EnvironmentMaskOrSubsurfaceTint": null,
+        "GlowOrDetailMap": null,
+        "Height": null,
+        "Environment": null,
+        "Multilayer": null,
+        "BacklightMaskOrSpecular": null,
+        "Decal": null,
+        "Flags": 1,
+        "SkyrimMajorRecordFlags": 0,
+        "FormVersion": 43,
+        "Version2": 0,
+        "EditorID": "VeronicaDressTex",
+        "TitleString": "VeronicaDressTex - 000815:VeronicaFollower.esp",
+        "IsCompressed": false,
+        "IsDeleted": false,
+        "MajorRecordFlagsRaw": 0,
+        "FormKey": "000815:VeronicaFollower.esp",
+        "VersionControl": 0
+      }
+    },
+    {
+      "$type": "Noggog.KeyValue`2[[Mutagen.Bethesda.Plugins.FormKey, Mutagen.Bethesda.Core],[Mutagen.Bethesda.Skyrim.TextureSet, Mutagen.Bethesda.Skyrim]], Noggog.CSharpExt",
+      "Key": "000814:VeronicaFollower.esp",
+      "Value": {
+        "ObjectBounds": {
+          "First": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          },
+          "Second": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          }
+        },
+        "Diffuse": {
+          "RawPath": "Actors\\Character\\Veronica\\armor\\stockingsblack.dds",
+          "DataRelativePath": "Textures\\Actors\\Character\\Veronica\\armor\\stockingsblack.dds",
+          "Extension": "dds",
+          "Type": {
+            "$type": "Mutagen.Bethesda.Skyrim.Assets.SkyrimTextureAssetType, Mutagen.Bethesda.Skyrim",
+            "BaseFolder": "Textures",
+            "FileExtensions": {
+              "$type": "System.String[], System.Private.CoreLib",
+              "$values": [
+                "dds",
+                "png"
+              ]
+            }
+          },
+          "IsNull": false
+        },
+        "NormalOrGloss": {
+          "RawPath": "Actors\\Character\\Veronica\\armor\\stockings_n.dds",
+          "DataRelativePath": "Textures\\Actors\\Character\\Veronica\\armor\\stockings_n.dds",
+          "Extension": "dds",
+          "Type": {
+            "$type": "Mutagen.Bethesda.Skyrim.Assets.SkyrimTextureAssetType, Mutagen.Bethesda.Skyrim",
+            "BaseFolder": "Textures",
+            "FileExtensions": {
+              "$type": "System.String[], System.Private.CoreLib",
+              "$values": [
+                "dds",
+                "png"
+              ]
+            }
+          },
+          "IsNull": false
+        },
+        "EnvironmentMaskOrSubsurfaceTint": null,
+        "GlowOrDetailMap": null,
+        "Height": null,
+        "Environment": null,
+        "Multilayer": null,
+        "BacklightMaskOrSpecular": null,
+        "Decal": null,
+        "Flags": 1,
+        "SkyrimMajorRecordFlags": 0,
+        "FormVersion": 43,
+        "Version2": 0,
+        "EditorID": "VeronicaStockingsTex",
+        "TitleString": "VeronicaStockingsTex - 000814:VeronicaFollower.esp",
+        "IsCompressed": false,
+        "IsDeleted": false,
+        "MajorRecordFlagsRaw": 0,
+        "FormKey": "000814:VeronicaFollower.esp",
+        "VersionControl": 0
+      }
+    }
+  ],
+  "Globals": [],
+  "Classes": [],
+  "Factions": [],
+  "HeadParts": [
+    {
+      "$type": "Noggog.KeyValue`2[[Mutagen.Bethesda.Plugins.FormKey, Mutagen.Bethesda.Core],[Mutagen.Bethesda.Skyrim.HeadPart, Mutagen.Bethesda.Skyrim]], Noggog.CSharpExt",
+      "Key": "000806:VeronicaFollower.esp",
+      "Value": {
+        "Name": [
+          {
+            "Key": 0,
+            "Value": "VeronicalBrowHP"
+          }
+        ],
+        "Model": {
+          "AlternateTextures": null,
+          "File": {
+            "RawPath": "Actors\\Character\\Character Assets\\FaceParts\\FemaleBrows.nif",
+            "DataRelativePath": "Meshes\\Actors\\Character\\Character Assets\\FaceParts\\FemaleBrows.nif",
+            "Extension": "nif",
+            "Type": {
+              "$type": "Mutagen.Bethesda.Skyrim.Assets.SkyrimModelAssetType, Mutagen.Bethesda.Skyrim",
+              "BaseFolder": "Meshes",
+              "FileExtensions": {
+                "$type": "System.String[], System.Private.CoreLib",
+                "$values": [
+                  "nif"
+                ]
+              }
+            },
+            "IsNull": false
+          },
+          "Data": [
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "Flags": 4,
+        "Type": 6,
+        "ExtraParts": [],
+        "Parts": [
+          {
+            "PartType": 0,
+            "FileName": {
+              "RawPath": "Actors\\Character\\Character Assets\\FaceParts\\FemaleHeadBrowsRace.tri",
+              "DataRelativePath": "Meshes\\Actors\\Character\\Character Assets\\FaceParts\\FemaleHeadBrowsRace.tri",
+              "Extension": "tri",
+              "Type": {
+                "$type": "Mutagen.Bethesda.Skyrim.Assets.SkyrimDeformedModelAssetType, Mutagen.Bethesda.Skyrim",
+                "BaseFolder": "Meshes",
+                "FileExtensions": {
+                  "$type": "System.String[], System.Private.CoreLib",
+                  "$values": [
+                    "tri"
+                  ]
+                }
+              },
+              "IsNull": false
+            }
+          },
+          {
+            "PartType": 1,
+            "FileName": {
+              "RawPath": "Actors\\Character\\Character Assets\\FaceParts\\FemaleHeadBrows.tri",
+              "DataRelativePath": "Meshes\\Actors\\Character\\Character Assets\\FaceParts\\FemaleHeadBrows.tri",
+              "Extension": "tri",
+              "Type": {
+                "$type": "Mutagen.Bethesda.Skyrim.Assets.SkyrimDeformedModelAssetType, Mutagen.Bethesda.Skyrim",
+                "BaseFolder": "Meshes",
+                "FileExtensions": {
+                  "$type": "System.String[], System.Private.CoreLib",
+                  "$values": [
+                    "tri"
+                  ]
+                }
+              },
+              "IsNull": false
+            }
+          },
+          {
+            "PartType": 2,
+            "FileName": {
+              "RawPath": "actors\\character\\Veronica\\femaleheadbrows.tri",
+              "DataRelativePath": "Meshes\\actors\\character\\Veronica\\femaleheadbrows.tri",
+              "Extension": "tri",
+              "Type": {
+                "$type": "Mutagen.Bethesda.Skyrim.Assets.SkyrimDeformedModelAssetType, Mutagen.Bethesda.Skyrim",
+                "BaseFolder": "Meshes",
+                "FileExtensions": {
+                  "$type": "System.String[], System.Private.CoreLib",
+                  "$values": [
+                    "tri"
+                  ]
+                }
+              },
+              "IsNull": false
+            }
+          }
+        ],
+        "TextureSet": "000802:VeronicaFollower.esp",
+        "Color": null,
+        "ValidRaces": "0A803F:Skyrim.esm",
+        "MajorFlags": 4,
+        "SkyrimMajorRecordFlags": 4,
+        "FormVersion": 43,
+        "Version2": 0,
+        "EditorID": "VeronicalBrowHP",
+        "TitleString": "VeronicalBrowHP - 000806:VeronicaFollower.esp",
+        "IsCompressed": false,
+        "IsDeleted": false,
+        "MajorRecordFlagsRaw": 4,
+        "FormKey": "000806:VeronicaFollower.esp",
+        "VersionControl": 0
+      }
+    },
+    {
+      "$type": "Noggog.KeyValue`2[[Mutagen.Bethesda.Plugins.FormKey, Mutagen.Bethesda.Core],[Mutagen.Bethesda.Skyrim.HeadPart, Mutagen.Bethesda.Skyrim]], Noggog.CSharpExt",
+      "Key": "000807:VeronicaFollower.esp",
+      "Value": {
+        "Name": [
+          {
+            "Key": 0,
+            "Value": "VeronicaHairHP"
+          }
+        ],
+        "Model": {
+          "AlternateTextures": null,
+          "File": {
+            "RawPath": "actors\\character\\Veronica\\Hair\\Elizabeth.nif",
+            "DataRelativePath": "Meshes\\actors\\character\\Veronica\\Hair\\Elizabeth.nif",
+            "Extension": "nif",
+            "Type": {
+              "$type": "Mutagen.Bethesda.Skyrim.Assets.SkyrimModelAssetType, Mutagen.Bethesda.Skyrim",
+              "BaseFolder": "Meshes",
+              "FileExtensions": {
+                "$type": "System.String[], System.Private.CoreLib",
+                "$values": [
+                  "nif"
+                ]
+              }
+            },
+            "IsNull": false
+          },
+          "Data": [
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "Flags": 4,
+        "Type": 3,
+        "ExtraParts": [
+          "000808:VeronicaFollower.esp",
+          "00080A:VeronicaFollower.esp"
+        ],
+        "Parts": [],
+        "TextureSet": null,
+        "Color": null,
+        "ValidRaces": "0A803F:Skyrim.esm",
+        "MajorFlags": 4,
+        "SkyrimMajorRecordFlags": 4,
+        "FormVersion": 43,
+        "Version2": 0,
+        "EditorID": "VeronicaHairHP",
+        "TitleString": "VeronicaHairHP - 000807:VeronicaFollower.esp",
+        "IsCompressed": false,
+        "IsDeleted": false,
+        "MajorRecordFlagsRaw": 4,
+        "FormKey": "000807:VeronicaFollower.esp",
+        "VersionControl": 0
+      }
+    },
+    {
+      "$type": "Noggog.KeyValue`2[[Mutagen.Bethesda.Plugins.FormKey, Mutagen.Bethesda.Core],[Mutagen.Bethesda.Skyrim.HeadPart, Mutagen.Bethesda.Skyrim]], Noggog.CSharpExt",
+      "Key": "000809:VeronicaFollower.esp",
+      "Value": {
+        "Name": [
+          {
+            "Key": 0,
+            "Value": "VeronicalHeadHP"
+          }
+        ],
+        "Model": {
+          "AlternateTextures": null,
+          "File": {
+            "RawPath": "actors\\character\\Veronica\\femalehead.nif",
+            "DataRelativePath": "Meshes\\actors\\character\\Veronica\\femalehead.nif",
+            "Extension": "nif",
+            "Type": {
+              "$type": "Mutagen.Bethesda.Skyrim.Assets.SkyrimModelAssetType, Mutagen.Bethesda.Skyrim",
+              "BaseFolder": "Meshes",
+              "FileExtensions": {
+                "$type": "System.String[], System.Private.CoreLib",
+                "$values": [
+                  "nif"
+                ]
+              }
+            },
+            "IsNull": false
+          },
+          "Data": [
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "Flags": 4,
+        "Type": 1,
+        "ExtraParts": [],
+        "Parts": [
+          {
+            "PartType": 0,
+            "FileName": {
+              "RawPath": "actors\\character\\Veronica\\femalehead.tri",
+              "DataRelativePath": "Meshes\\actors\\character\\Veronica\\femalehead.tri",
+              "Extension": "tri",
+              "Type": {
+                "$type": "Mutagen.Bethesda.Skyrim.Assets.SkyrimDeformedModelAssetType, Mutagen.Bethesda.Skyrim",
+                "BaseFolder": "Meshes",
+                "FileExtensions": {
+                  "$type": "System.String[], System.Private.CoreLib",
+                  "$values": [
+                    "tri"
+                  ]
+                }
+              },
+              "IsNull": false
+            }
+          },
+          {
+            "PartType": 1,
+            "FileName": {
+              "RawPath": "actors\\character\\Veronica\\femalehead.tri",
+              "DataRelativePath": "Meshes\\actors\\character\\Veronica\\femalehead.tri",
+              "Extension": "tri",
+              "Type": {
+                "$type": "Mutagen.Bethesda.Skyrim.Assets.SkyrimDeformedModelAssetType, Mutagen.Bethesda.Skyrim",
+                "BaseFolder": "Meshes",
+                "FileExtensions": {
+                  "$type": "System.String[], System.Private.CoreLib",
+                  "$values": [
+                    "tri"
+                  ]
+                }
+              },
+              "IsNull": false
+            }
+          },
+          {
+            "PartType": 2,
+            "FileName": {
+              "RawPath": "actors\\character\\Veronica\\femalehead.tri",
+              "DataRelativePath": "Meshes\\actors\\character\\Veronica\\femalehead.tri",
+              "Extension": "tri",
+              "Type": {
+                "$type": "Mutagen.Bethesda.Skyrim.Assets.SkyrimDeformedModelAssetType, Mutagen.Bethesda.Skyrim",
+                "BaseFolder": "Meshes",
+                "FileExtensions": {
+                  "$type": "System.String[], System.Private.CoreLib",
+                  "$values": [
+                    "tri"
+                  ]
+                }
+              },
+              "IsNull": false
+            }
+          }
+        ],
+        "TextureSet": null,
+        "Color": null,
+        "ValidRaces": "0A802E:Skyrim.esm",
+        "MajorFlags": 4,
+        "SkyrimMajorRecordFlags": 4,
+        "FormVersion": 43,
+        "Version2": 0,
+        "EditorID": "VeronicalHeadHP",
+        "TitleString": "VeronicalHeadHP - 000809:VeronicaFollower.esp",
+        "IsCompressed": false,
+        "IsDeleted": false,
+        "MajorRecordFlagsRaw": 4,
+        "FormKey": "000809:VeronicaFollower.esp",
+        "VersionControl": 0
+      }
+    },
+    {
+      "$type": "Noggog.KeyValue`2[[Mutagen.Bethesda.Plugins.FormKey, Mutagen.Bethesda.Core],[Mutagen.Bethesda.Skyrim.HeadPart, Mutagen.Bethesda.Skyrim]], Noggog.CSharpExt",
+      "Key": "000808:VeronicaFollower.esp",
+      "Value": {
+        "Name": [
+          {
+            "Key": 0,
+            "Value": "VeronicaHairlineHP"
+          }
+        ],
+        "Model": {
+          "AlternateTextures": null,
+          "File": {
+            "RawPath": "actors\\character\\Veronica\\Hair\\ElizabethHl.nif",
+            "DataRelativePath": "Meshes\\actors\\character\\Veronica\\Hair\\ElizabethHl.nif",
+            "Extension": "nif",
+            "Type": {
+              "$type": "Mutagen.Bethesda.Skyrim.Assets.SkyrimModelAssetType, Mutagen.Bethesda.Skyrim",
+              "BaseFolder": "Meshes",
+              "FileExtensions": {
+                "$type": "System.String[], System.Private.CoreLib",
+                "$values": [
+                  "nif"
+                ]
+              }
+            },
+            "IsNull": false
+          },
+          "Data": [
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "Flags": 12,
+        "Type": 0,
+        "ExtraParts": [],
+        "Parts": [],
+        "TextureSet": null,
+        "Color": null,
+        "ValidRaces": "0A803F:Skyrim.esm",
+        "MajorFlags": 4,
+        "SkyrimMajorRecordFlags": 4,
+        "FormVersion": 43,
+        "Version2": 0,
+        "EditorID": "VeronicaHairlineHP",
+        "TitleString": "VeronicaHairlineHP - 000808:VeronicaFollower.esp",
+        "IsCompressed": false,
+        "IsDeleted": false,
+        "MajorRecordFlagsRaw": 4,
+        "FormKey": "000808:VeronicaFollower.esp",
+        "VersionControl": 0
+      }
+    },
+    {
+      "$type": "Noggog.KeyValue`2[[Mutagen.Bethesda.Plugins.FormKey, Mutagen.Bethesda.Core],[Mutagen.Bethesda.Skyrim.HeadPart, Mutagen.Bethesda.Skyrim]], Noggog.CSharpExt",
+      "Key": "00080A:VeronicaFollower.esp",
+      "Value": {
+        "Name": [
+          {
+            "Key": 0,
+            "Value": "VeronicaHairlineLongHP"
+          }
+        ],
+        "Model": {
+          "AlternateTextures": null,
+          "File": {
+            "RawPath": "actors\\character\\Veronica\\Hair\\straightscalpHUMAN.nif",
+            "DataRelativePath": "Meshes\\actors\\character\\Veronica\\Hair\\straightscalpHUMAN.nif",
+            "Extension": "nif",
+            "Type": {
+              "$type": "Mutagen.Bethesda.Skyrim.Assets.SkyrimModelAssetType, Mutagen.Bethesda.Skyrim",
+              "BaseFolder": "Meshes",
+              "FileExtensions": {
+                "$type": "System.String[], System.Private.CoreLib",
+                "$values": [
+                  "nif"
+                ]
+              }
+            },
+            "IsNull": false
+          },
+          "Data": [
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "Flags": 12,
+        "Type": 0,
+        "ExtraParts": [],
+        "Parts": [],
+        "TextureSet": null,
+        "Color": null,
+        "ValidRaces": "0A803F:Skyrim.esm",
+        "MajorFlags": 4,
+        "SkyrimMajorRecordFlags": 4,
+        "FormVersion": 43,
+        "Version2": 0,
+        "EditorID": "VeronicaHairlineLongHP",
+        "TitleString": "VeronicaHairlineLongHP - 00080A:VeronicaFollower.esp",
+        "IsCompressed": false,
+        "IsDeleted": false,
+        "MajorRecordFlagsRaw": 4,
+        "FormKey": "00080A:VeronicaFollower.esp",
+        "VersionControl": 0
+      }
+    },
+    {
+      "$type": "Noggog.KeyValue`2[[Mutagen.Bethesda.Plugins.FormKey, Mutagen.Bethesda.Core],[Mutagen.Bethesda.Skyrim.HeadPart, Mutagen.Bethesda.Skyrim]], Noggog.CSharpExt",
+      "Key": "000816:VeronicaFollower.esp",
+      "Value": {
+        "Name": [
+          {
+            "Key": 0,
+            "Value": "VeronicaEyeHP"
+          }
+        ],
+        "Model": {
+          "AlternateTextures": null,
+          "File": {
+            "RawPath": "actors\\character\\Veronica\\Eyes\\eyesfemale.nif",
+            "DataRelativePath": "Meshes\\actors\\character\\Veronica\\Eyes\\eyesfemale.nif",
+            "Extension": "nif",
+            "Type": {
+              "$type": "Mutagen.Bethesda.Skyrim.Assets.SkyrimModelAssetType, Mutagen.Bethesda.Skyrim",
+              "BaseFolder": "Meshes",
+              "FileExtensions": {
+                "$type": "System.String[], System.Private.CoreLib",
+                "$values": [
+                  "nif"
+                ]
+              }
+            },
+            "IsNull": false
+          },
+          "Data": [
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "Flags": 4,
+        "Type": 2,
+        "ExtraParts": [],
+        "Parts": [
+          {
+            "PartType": 1,
+            "FileName": {
+              "RawPath": "actors\\character\\Veronica\\Eyes\\eyesfemale.tri",
+              "DataRelativePath": "Meshes\\actors\\character\\Veronica\\Eyes\\eyesfemale.tri",
+              "Extension": "tri",
+              "Type": {
+                "$type": "Mutagen.Bethesda.Skyrim.Assets.SkyrimDeformedModelAssetType, Mutagen.Bethesda.Skyrim",
+                "BaseFolder": "Meshes",
+                "FileExtensions": {
+                  "$type": "System.String[], System.Private.CoreLib",
+                  "$values": [
+                    "tri"
+                  ]
+                }
+              },
+              "IsNull": false
+            }
+          },
+          {
+            "PartType": 2,
+            "FileName": {
+              "RawPath": "actors\\character\\Veronica\\Eyes\\eyesfemalechargen.tri",
+              "DataRelativePath": "Meshes\\actors\\character\\Veronica\\Eyes\\eyesfemalechargen.tri",
+              "Extension": "tri",
+              "Type": {
+                "$type": "Mutagen.Bethesda.Skyrim.Assets.SkyrimDeformedModelAssetType, Mutagen.Bethesda.Skyrim",
+                "BaseFolder": "Meshes",
+                "FileExtensions": {
+                  "$type": "System.String[], System.Private.CoreLib",
+                  "$values": [
+                    "tri"
+                  ]
+                }
+              },
+              "IsNull": false
+            }
+          }
+        ],
+        "TextureSet": "000803:VeronicaFollower.esp",
+        "Color": null,
+        "ValidRaces": "0A8026:Skyrim.esm",
+        "MajorFlags": 4,
+        "SkyrimMajorRecordFlags": 4,
+        "FormVersion": 43,
+        "Version2": 0,
+        "EditorID": "VeronicaEyeHP",
+        "TitleString": "VeronicaEyeHP - 000816:VeronicaFollower.esp",
+        "IsCompressed": false,
+        "IsDeleted": false,
+        "MajorRecordFlagsRaw": 4,
+        "FormKey": "000816:VeronicaFollower.esp",
+        "VersionControl": 0
+      }
+    }
+  ],
+  "Hairs": [],
+  "Eyes": [],
+  "Races": [],
+  "SoundMarkers": [],
+  "AcousticSpaces": [],
+  "MagicEffects": [],
+  "LandscapeTextures": [],
+  "ObjectEffects": [],
+  "Spells": [],
+  "Scrolls": [],
+  "Activators": [],
+  "TalkingActivators": [],
+  "Armors": [
+    {
+      "$type": "Noggog.KeyValue`2[[Mutagen.Bethesda.Plugins.FormKey, Mutagen.Bethesda.Core],[Mutagen.Bethesda.Skyrim.Armor, Mutagen.Bethesda.Skyrim]], Noggog.CSharpExt",
+      "Key": "000812:VeronicaFollower.esp",
+      "Value": {
+        "VirtualMachineAdapter": null,
+        "ObjectBounds": {
+          "First": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          },
+          "Second": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          }
+        },
+        "Name": [
+          {
+            "Key": 0,
+            "Value": "Veronica's Dress"
+          }
+        ],
+        "ObjectEffect": null,
+        "EnchantmentAmount": null,
+        "WorldModel": {
+          "$type": "Mutagen.Bethesda.Plugins.Records.GenderedItem`1[[Mutagen.Bethesda.Skyrim.ArmorModel, Mutagen.Bethesda.Skyrim]], Mutagen.Bethesda.Core",
+          "$values": [
+            {
+              "Model": {
+                "AlternateTextures": [
+                  {
+                    "Name": "BarKeeperFGND:0",
+                    "NewTexture": "000815:VeronicaFollower.esp",
+                    "Index": 0
+                  }
+                ],
+                "File": {
+                  "RawPath": "actors\\character\\Veronica\\armor\\torsognd.nif",
+                  "DataRelativePath": "Meshes\\actors\\character\\Veronica\\armor\\torsognd.nif",
+                  "Extension": "nif",
+                  "Type": {
+                    "$type": "Mutagen.Bethesda.Skyrim.Assets.SkyrimModelAssetType, Mutagen.Bethesda.Skyrim",
+                    "BaseFolder": "Meshes",
+                    "FileExtensions": {
+                      "$type": "System.String[], System.Private.CoreLib",
+                      "$values": [
+                        "nif"
+                      ]
+                    }
+                  },
+                  "IsNull": false
+                },
+                "Data": [
+                  2,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "Icons": null
+            },
+            null
+          ]
+        },
+        "BodyTemplate": {
+          "FirstPersonFlags": 4,
+          "Flags": 0,
+          "ArmorType": 2,
+          "ActsLike44": true
+        },
+        "Destructible": null,
+        "PickUpSound": null,
+        "PutDownSound": null,
+        "RagdollConstraintTemplate": null,
+        "EquipmentType": null,
+        "BashImpactDataSet": null,
+        "AlternateBlockMaterial": null,
+        "Race": "000019:Skyrim.esm",
+        "Keywords": [
+          "06BBE8:Skyrim.esm",
+          "08F95B:Skyrim.esm",
+          "0A8657:Skyrim.esm"
+        ],
+        "Description": [
+          {
+            "Key": 0,
+            "Value": ""
+          }
+        ],
+        "Armature": [
+          "000810:VeronicaFollower.esp"
+        ],
+        "Value": 250,
+        "Weight": 1.0,
+        "ArmorRating": 0.0,
+        "TemplateArmor": null,
+        "DATADataTypeState": 0,
+        "MajorFlags": 0,
+        "SkyrimMajorRecordFlags": 0,
+        "FormVersion": 43,
+        "Version2": 0,
+        "EditorID": "VeronicaDress",
+        "TitleString": "VeronicaDress - 000812:VeronicaFollower.esp",
+        "IsCompressed": false,
+        "IsDeleted": false,
+        "MajorRecordFlagsRaw": 0,
+        "FormKey": "000812:VeronicaFollower.esp",
+        "VersionControl": 0
+      }
+    },
+    {
+      "$type": "Noggog.KeyValue`2[[Mutagen.Bethesda.Plugins.FormKey, Mutagen.Bethesda.Core],[Mutagen.Bethesda.Skyrim.Armor, Mutagen.Bethesda.Skyrim]], Noggog.CSharpExt",
+      "Key": "000811:VeronicaFollower.esp",
+      "Value": {
+        "VirtualMachineAdapter": null,
+        "ObjectBounds": {
+          "First": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          },
+          "Second": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          }
+        },
+        "Name": [
+          {
+            "Key": 0,
+            "Value": "Veronica's Stockings"
+          }
+        ],
+        "ObjectEffect": null,
+        "EnchantmentAmount": null,
+        "WorldModel": {
+          "$type": "Mutagen.Bethesda.Plugins.Records.GenderedItem`1[[Mutagen.Bethesda.Skyrim.ArmorModel, Mutagen.Bethesda.Skyrim]], Mutagen.Bethesda.Core",
+          "$values": [
+            {
+              "Model": {
+                "AlternateTextures": [
+                  {
+                    "Name": "Stockings",
+                    "NewTexture": "000814:VeronicaFollower.esp",
+                    "Index": 0
+                  }
+                ],
+                "File": {
+                  "RawPath": "actors\\character\\Veronica\\armor\\stockings_gnd.nif",
+                  "DataRelativePath": "Meshes\\actors\\character\\Veronica\\armor\\stockings_gnd.nif",
+                  "Extension": "nif",
+                  "Type": {
+                    "$type": "Mutagen.Bethesda.Skyrim.Assets.SkyrimModelAssetType, Mutagen.Bethesda.Skyrim",
+                    "BaseFolder": "Meshes",
+                    "FileExtensions": {
+                      "$type": "System.String[], System.Private.CoreLib",
+                      "$values": [
+                        "nif"
+                      ]
+                    }
+                  },
+                  "IsNull": false
+                },
+                "Data": [
+                  2,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "Icons": null
+            },
+            null
+          ]
+        },
+        "BodyTemplate": {
+          "FirstPersonFlags": 8388608,
+          "Flags": 0,
+          "ArmorType": 2,
+          "ActsLike44": true
+        },
+        "Destructible": null,
+        "PickUpSound": null,
+        "PutDownSound": null,
+        "RagdollConstraintTemplate": null,
+        "EquipmentType": null,
+        "BashImpactDataSet": null,
+        "AlternateBlockMaterial": null,
+        "Race": "000019:Skyrim.esm",
+        "Keywords": [
+          "06BBD3:Skyrim.esm",
+          "06BBD6:Skyrim.esm",
+          "06C0ED:Skyrim.esm",
+          "08F959:Skyrim.esm"
+        ],
+        "Description": [
+          {
+            "Key": 0,
+            "Value": ""
+          }
+        ],
+        "Armature": [
+          "00080F:VeronicaFollower.esp"
+        ],
+        "Value": 300,
+        "Weight": 0.5,
+        "ArmorRating": 0.0,
+        "TemplateArmor": null,
+        "DATADataTypeState": 0,
+        "MajorFlags": 0,
+        "SkyrimMajorRecordFlags": 0,
+        "FormVersion": 43,
+        "Version2": 0,
+        "EditorID": "VeronicasStockings",
+        "TitleString": "VeronicasStockings - 000811:VeronicaFollower.esp",
+        "IsCompressed": false,
+        "IsDeleted": false,
+        "MajorRecordFlagsRaw": 0,
+        "FormKey": "000811:VeronicaFollower.esp",
+        "VersionControl": 0
+      }
+    },
+    {
+      "$type": "Noggog.KeyValue`2[[Mutagen.Bethesda.Plugins.FormKey, Mutagen.Bethesda.Core],[Mutagen.Bethesda.Skyrim.Armor, Mutagen.Bethesda.Skyrim]], Noggog.CSharpExt",
+      "Key": "00080E:VeronicaFollower.esp",
+      "Value": {
+        "VirtualMachineAdapter": null,
+        "ObjectBounds": {
+          "First": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          },
+          "Second": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          }
+        },
+        "Name": null,
+        "ObjectEffect": null,
+        "EnchantmentAmount": null,
+        "WorldModel": null,
+        "BodyTemplate": {
+          "FirstPersonFlags": 141,
+          "Flags": 0,
+          "ArmorType": 2,
+          "ActsLike44": true
+        },
+        "Destructible": null,
+        "PickUpSound": null,
+        "PutDownSound": null,
+        "RagdollConstraintTemplate": null,
+        "EquipmentType": null,
+        "BashImpactDataSet": null,
+        "AlternateBlockMaterial": null,
+        "Race": "013744:Skyrim.esm",
+        "Keywords": null,
+        "Description": [
+          {
+            "Key": 0,
+            "Value": ""
+          }
+        ],
+        "Armature": [
+          "00080B:VeronicaFollower.esp",
+          "00080C:VeronicaFollower.esp",
+          "00080D:VeronicaFollower.esp"
+        ],
+        "Value": 0,
+        "Weight": 0.0,
+        "ArmorRating": 0.0,
+        "TemplateArmor": null,
+        "DATADataTypeState": 0,
+        "MajorFlags": 0,
+        "SkyrimMajorRecordFlags": 0,
+        "FormVersion": 43,
+        "Version2": 0,
+        "EditorID": "VeronicaBodyArmor",
+        "TitleString": "VeronicaBodyArmor - 00080E:VeronicaFollower.esp",
+        "IsCompressed": false,
+        "IsDeleted": false,
+        "MajorRecordFlagsRaw": 0,
+        "FormKey": "00080E:VeronicaFollower.esp",
+        "VersionControl": 0
+      }
+    }
+  ],
+  "Books": [],
+  "Containers": [],
+  "Doors": [],
+  "Ingredients": [],
+  "Lights": [],
+  "MiscItems": [],
+  "AlchemicalApparatuses": [],
+  "Statics": [],
+  "MoveableStatics": [],
+  "Grasses": [],
+  "Trees": [],
+  "Florae": [],
+  "Furniture": [],
+  "Weapons": [],
+  "Ammunitions": [],
+  "Npcs": [
+    {
+      "$type": "Noggog.KeyValue`2[[Mutagen.Bethesda.Plugins.FormKey, Mutagen.Bethesda.Core],[Mutagen.Bethesda.Skyrim.Npc, Mutagen.Bethesda.Skyrim]], Noggog.CSharpExt",
+      "Key": "000800:VeronicaFollower.esp",
+      "Value": {
+        "VirtualMachineAdapter": null,
+        "ObjectBounds": {
+          "First": {
+            "X": -22,
+            "Y": -14,
+            "Z": 0
+          },
+          "Second": {
+            "X": 22,
+            "Y": 14,
+            "Z": 128
+          }
+        },
+        "Configuration": {
+          "Level": {
+            "$type": "Mutagen.Bethesda.Skyrim.PcLevelMult, Mutagen.Bethesda.Skyrim",
+            "LevelMult": 1.0
+          },
+          "Flags": 115,
+          "MagickaOffset": 100,
+          "StaminaOffset": 100,
+          "CalcMinLevel": 5,
+          "CalcMaxLevel": 80,
+          "SpeedMultiplier": 110,
+          "DispositionBase": 100,
+          "TemplateFlags": 0,
+          "HealthOffset": 80,
+          "BleedoutOverride": 0
+        },
+        "Factions": [
+          {
+            "Faction": "019809:Skyrim.esm",
+            "Rank": 0,
+            "Fluff": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "Faction": "05C84D:Skyrim.esm",
+            "Rank": 0,
+            "Fluff": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "Faction": "05C84E:Skyrim.esm",
+            "Rank": 255,
+            "Fluff": [
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "DeathItem": null,
+        "Voice": "013ADD:Skyrim.esm",
+        "Template": null,
+        "Race": "013744:Skyrim.esm",
+        "ActorEffect": [
+          "034C38:Skyrim.esm",
+          "0640B6:Skyrim.esm",
+          "072315:Skyrim.esm",
+          "072316:Skyrim.esm",
+          "072317:Skyrim.esm",
+          "072318:Skyrim.esm",
+          "072319:Skyrim.esm",
+          "07231A:Skyrim.esm",
+          "07231B:Skyrim.esm",
+          "07231C:Skyrim.esm",
+          "0ABDF3:Skyrim.esm",
+          "0BB967:Skyrim.esm",
+          "0BB968:Skyrim.esm",
+          "0C96A0:Skyrim.esm"
+        ],
+        "Destructible": null,
+        "WornArmor": "00080E:VeronicaFollower.esp",
+        "FarAwayModel": null,
+        "AttackRace": null,
+        "Attacks": [],
+        "SpectatorOverridePackageList": null,
+        "ObserveDeadBodyOverridePackageList": null,
+        "GuardWarnOverridePackageList": null,
+        "CombatOverridePackageList": null,
+        "Perks": [
+          {
+            "Perk": "0581F8:Skyrim.esm",
+            "Rank": 1,
+            "Fluff": [
+              201,
+              29,
+              27
+            ]
+          },
+          {
+            "Perk": "0581F9:Skyrim.esm",
+            "Rank": 1,
+            "Fluff": [
+              201,
+              29,
+              27
+            ]
+          },
+          {
+            "Perk": "0640B3:Skyrim.esm",
+            "Rank": 1,
+            "Fluff": [
+              201,
+              29,
+              27
+            ]
+          },
+          {
+            "Perk": "079343:Skyrim.esm",
+            "Rank": 1,
+            "Fluff": [
+              201,
+              29,
+              27
+            ]
+          },
+          {
+            "Perk": "0BABE4:Skyrim.esm",
+            "Rank": 1,
+            "Fluff": [
+              201,
+              29,
+              27
+            ]
+          },
+          {
+            "Perk": "0C44B7:Skyrim.esm",
+            "Rank": 1,
+            "Fluff": [
+              201,
+              29,
+              27
+            ]
+          },
+          {
+            "Perk": "0C44B8:Skyrim.esm",
+            "Rank": 1,
+            "Fluff": [
+              201,
+              29,
+              27
+            ]
+          },
+          {
+            "Perk": "0C44BB:Skyrim.esm",
+            "Rank": 1,
+            "Fluff": [
+              201,
+              29,
+              27
+            ]
+          },
+          {
+            "Perk": "0C44BC:Skyrim.esm",
+            "Rank": 1,
+            "Fluff": [
+              201,
+              29,
+              27
+            ]
+          },
+          {
+            "Perk": "0C44BD:Skyrim.esm",
+            "Rank": 1,
+            "Fluff": [
+              201,
+              29,
+              27
+            ]
+          },
+          {
+            "Perk": "0C44C7:Skyrim.esm",
+            "Rank": 1,
+            "Fluff": [
+              201,
+              29,
+              27
+            ]
+          },
+          {
+            "Perk": "0C44C8:Skyrim.esm",
+            "Rank": 1,
+            "Fluff": [
+              201,
+              29,
+              27
+            ]
+          },
+          {
+            "Perk": "0CB419:Skyrim.esm",
+            "Rank": 1,
+            "Fluff": [
+              201,
+              29,
+              27
+            ]
+          },
+          {
+            "Perk": "0D7999:Skyrim.esm",
+            "Rank": 1,
+            "Fluff": [
+              201,
+              29,
+              27
+            ]
+          },
+          {
+            "Perk": "0D799A:Skyrim.esm",
+            "Rank": 1,
+            "Fluff": [
+              201,
+              29,
+              27
+            ]
+          },
+          {
+            "Perk": "0F2CA6:Skyrim.esm",
+            "Rank": 1,
+            "Fluff": [
+              201,
+              29,
+              27
+            ]
+          },
+          {
+            "Perk": "0F2CA7:Skyrim.esm",
+            "Rank": 1,
+            "Fluff": [
+              201,
+              29,
+              27
+            ]
+          },
+          {
+            "Perk": "0F2CAA:Skyrim.esm",
+            "Rank": 1,
+            "Fluff": [
+              201,
+              29,
+              27
+            ]
+          },
+          {
+            "Perk": "105F30:Skyrim.esm",
+            "Rank": 1,
+            "Fluff": [
+              201,
+              29,
+              27
+            ]
+          }
+        ],
+        "Items": [
+          {
+            "Item": {
+              "Item": "00000F:Skyrim.esm",
+              "Count": 2077
+            },
+            "Data": null
+          },
+          {
+            "Item": {
+              "Item": "0877F1:Skyrim.esm",
+              "Count": 1
+            },
+            "Data": null
+          }
+        ],
+        "AIData": {
+          "Aggression": 0,
+          "Confidence": 4,
+          "EnergyLevel": 50,
+          "Responsibility": 0,
+          "Mood": 0,
+          "Assistance": 2,
+          "AggroRadiusBehavior": false,
+          "Unused": 106,
+          "Warn": 0,
+          "WarnOrAttack": 0,
+          "Attack": 0
+        },
+        "Packages": [
+          "000818:VeronicaFollower.esp",
+          "0317C8:Skyrim.esm"
+        ],
+        "Keywords": null,
+        "Class": "0C969F:Skyrim.esm",
+        "Name": [
+          {
+            "Key": 0,
+            "Value": "Veronica"
+          }
+        ],
+        "ShortName": null,
+        "PlayerSkills": {
+          "SkillValues": {
+            "OneHanded": 26,
+            "TwoHanded": 15,
+            "Archery": 15,
+            "Block": 20,
+            "Smithing": 15,
+            "HeavyArmor": 20,
+            "LightArmor": 15,
+            "Pickpocket": 15,
+            "Lockpicking": 15,
+            "Sneak": 18,
+            "Alchemy": 15,
+            "Speech": 15,
+            "Alteration": 21,
+            "Conjuration": 23,
+            "Destruction": 20,
+            "Illusion": 15,
+            "Restoration": 34,
+            "Enchanting": 20
+          },
+          "SkillOffsets": {
+            "OneHanded": 0,
+            "TwoHanded": 0,
+            "Archery": 0,
+            "Block": 0,
+            "Smithing": 0,
+            "HeavyArmor": 0,
+            "LightArmor": 0,
+            "Pickpocket": 0,
+            "Lockpicking": 0,
+            "Sneak": 0,
+            "Alchemy": 0,
+            "Speech": 0,
+            "Alteration": 0,
+            "Conjuration": 0,
+            "Destruction": 0,
+            "Illusion": 0,
+            "Restoration": 0,
+            "Enchanting": 0
+          },
+          "Health": 164,
+          "Magicka": 176,
+          "Stamina": 150,
+          "Unused": 63521,
+          "FarAwayModelDistance": 0.0,
+          "GearedUpWeapons": 1,
+          "Unused2": [
+            235,
+            84,
+            0
+          ]
+        },
+        "HeadParts": [
+          "0EC1B2:Skyrim.esm",
+          "000806:VeronicaFollower.esp",
+          "000807:VeronicaFollower.esp",
+          "000809:VeronicaFollower.esp",
+          "000816:VeronicaFollower.esp"
+        ],
+        "HairColor": "0A0434:Skyrim.esm",
+        "CombatStyle": "107812:Skyrim.esm",
+        "GiftFilter": null,
+        "NAM5": 255,
+        "Height": 1.0,
+        "Weight": 100.0,
+        "SoundLevel": 1,
+        "Sound": null,
+        "DefaultOutfit": "000813:VeronicaFollower.esp",
+        "SleepingOutfit": null,
+        "DefaultPackageList": null,
+        "CrimeFaction": null,
+        "HeadTexture": null,
+        "TextureLighting": "0, 221, 221, 221",
+        "FaceMorph": {
+          "NoseLongVsShort": 0.0,
+          "NoseUpVsDown": 0.5,
+          "JawUpVsDown": -0.8,
+          "JawNarrowVsWide": 0.0,
+          "JawForwardVsBack": 0.0,
+          "CheeksUpVsDown": -0.2,
+          "CheeksForwardVsBack": -0.2,
+          "EyesUpVsDown": -0.3,
+          "EyesInVsOut": -0.2,
+          "BrowsUpVsDown": -0.1,
+          "BrowsInVsOut": 0.0,
+          "BrowsForwardVsBack": 0.0,
+          "LipsUpVsDown": 0.1,
+          "LipsInVsOut": -0.2,
+          "ChinNarrowVsWide": -0.3,
+          "ChinUpVsDown": -0.2,
+          "ChinUnderbiteVsOverbite": 0.0,
+          "EyesForwardVsBack": -0.2,
+          "Unknown": 3.4028235E+38
+        },
+        "FaceParts": {
+          "Nose": 2,
+          "Unknown": 4294967295,
+          "Eyes": 4,
+          "Mouth": 16
+        },
+        "TintLayers": [
+          {
+            "Index": 13,
+            "Color": "0, 221, 221, 221",
+            "InterpolationValue": 1.0,
+            "Preset": 490
+          },
+          {
+            "Index": 26,
+            "Color": "0, 15, 4, 64",
+            "InterpolationValue": 0.52,
+            "Preset": 505
+          },
+          {
+            "Index": 27,
+            "Color": "0, 33, 43, 82",
+            "InterpolationValue": 0.33,
+            "Preset": 514
+          },
+          {
+            "Index": 33,
+            "Color": "0, 7, 12, 61",
+            "InterpolationValue": 0.68,
+            "Preset": 938
+          },
+          {
+            "Index": 34,
+            "Color": "0, 88, 25, 1",
+            "InterpolationValue": 0.55,
+            "Preset": -1
+          },
+          {
+            "Index": 35,
+            "Color": "0, 169, 84, 82",
+            "InterpolationValue": 0.44,
+            "Preset": 521
+          },
+          {
+            "Index": 36,
+            "Color": "0, 80, 9, 1",
+            "InterpolationValue": 0.75,
+            "Preset": 531
+          }
+        ],
+        "MajorFlags": 0,
+        "SkyrimMajorRecordFlags": 0,
+        "FormVersion": 43,
+        "Version2": 0,
+        "EditorID": "VeronicaFollower",
+        "TitleString": "VeronicaFollower - 000800:VeronicaFollower.esp",
+        "IsCompressed": false,
+        "IsDeleted": false,
+        "MajorRecordFlagsRaw": 0,
+        "FormKey": "000800:VeronicaFollower.esp",
+        "VersionControl": 0
+      }
+    }
+  ],
+  "LeveledNpcs": [],
+  "Keys": [],
+  "Ingestibles": [],
+  "IdleMarkers": [],
+  "ConstructibleObjects": [],
+  "Projectiles": [],
+  "Hazards": [],
+  "SoulGems": [],
+  "LeveledItems": [],
+  "Weathers": [],
+  "Climates": [],
+  "ShaderParticleGeometries": [],
+  "VisualEffects": [],
+  "Regions": [],
+  "NavigationMeshInfoMaps": [],
+  "Cells": {
+    "Type": 0,
+    "LastModified": 7428,
+    "Unknown": 0,
+    "Records": [
+      {
+        "BlockNumber": 4,
+        "GroupType": 2,
+        "LastModified": 7428,
+        "Unknown": 0,
+        "SubBlocks": [
+          {
+            "BlockNumber": 9,
+            "GroupType": 3,
+            "LastModified": 7428,
+            "Unknown": 0,
+            "Cells": [
+              {
+                "Name": [
+                  {
+                    "Key": 0,
+                    "Value": "Silver-Blood Inn"
+                  }
+                ],
+                "Flags": 33,
+                "Grid": null,
+                "Lighting": {
+                  "Versioning": 0,
+                  "AmbientColor": "0, 35, 35, 35",
+                  "DirectionalColor": "0, 92, 87, 75",
+                  "FogNearColor": "0, 61, 72, 78",
+                  "FogNear": 0.0,
+                  "FogFar": 4000.0,
+                  "DirectionalRotationXY": 0,
+                  "DirectionalRotationZ": 90,
+                  "DirectionalFade": 1.0,
+                  "FogClipDistance": 4000.0,
+                  "FogPower": 1.0,
+                  "AmbientColors": {
+                    "Versioning": 0,
+                    "DirectionalXPlus": "0, 38, 35, 36",
+                    "DirectionalXMinus": "0, 31, 35, 33",
+                    "DirectionalYPlus": "0, 35, 36, 35",
+                    "DirectionalYMinus": "0, 35, 33, 35",
+                    "DirectionalZPlus": "0, 16, 16, 15",
+                    "DirectionalZMinus": "0, 53, 53, 54",
+                    "Specular": "0, 89, 106, 115",
+                    "Scale": 1.0
+                  },
+                  "FogFarColor": "0, 89, 106, 115",
+                  "FogMax": 1.0,
+                  "LightFadeBegin": 0.0,
+                  "LightFadeEnd": 0.0,
+                  "Inherits": 1122
+                },
+                "OcclusionData": null,
+                "MaxHeightData": null,
+                "LightingTemplate": "09F281:Skyrim.esm",
+                "LNAM": null,
+                "WaterHeight": 0.0,
+                "WaterNoiseTexture": null,
+                "Regions": null,
+                "Location": "01F30E:Skyrim.esm",
+                "XWCN": null,
+                "XWCS": null,
+                "WaterVelocity": null,
+                "Water": null,
+                "Owner": "06566F:Skyrim.esm",
+                "FactionRank": null,
+                "LockList": null,
+                "WaterEnvironmentMap": null,
+                "SkyAndWeatherFromRegion": null,
+                "AcousticSpace": "0C5B6D:Skyrim.esm",
+                "EncounterZone": null,
+                "Music": "017035:Skyrim.esm",
+                "ImageSpace": "09F282:Skyrim.esm",
+                "Landscape": null,
+                "NavigationMeshes": [],
+                "Timestamp": 7428,
+                "UnknownGroupData": 454936800,
+                "PersistentTimestamp": 0,
+                "PersistentUnknownGroupData": 0,
+                "Persistent": [],
+                "TemporaryTimestamp": 7428,
+                "TemporaryUnknownGroupData": 1065353216,
+                "Temporary": [
+                  {
+                    "$type": "Mutagen.Bethesda.Skyrim.PlacedNpc, Mutagen.Bethesda.Skyrim",
+                    "VirtualMachineAdapter": null,
+                    "Base": "000800:VeronicaFollower.esp",
+                    "EncounterZone": null,
+                    "RagdollData": null,
+                    "RagdollBipedData": null,
+                    "Patrol": null,
+                    "LevelModifier": null,
+                    "MerchantContainer": null,
+                    "Count": null,
+                    "Radius": null,
+                    "Health": null,
+                    "LinkedReferences": [],
+                    "ActivateParents": null,
+                    "LinkedReferenceColor": null,
+                    "PersistentLocation": null,
+                    "LocationReference": null,
+                    "IsIgnoredBySandbox": false,
+                    "LocationRefTypes": null,
+                    "HeadTrackingWeight": null,
+                    "Horse": null,
+                    "FavorCost": null,
+                    "EnableParent": null,
+                    "Owner": null,
+                    "FactionRank": null,
+                    "Emittance": null,
+                    "MultiboundReference": null,
+                    "IsIgnoredBySandbox2": false,
+                    "Scale": null,
+                    "Placement": {
+                      "Position": {
+                        "X": -5713.6387,
+                        "Y": -1160.4648,
+                        "Z": 5.9933777
+                      },
+                      "Rotation": {
+                        "X": 0.0,
+                        "Y": 0.0,
+                        "Z": 0.0
+                      }
+                    },
+                    "MajorFlags": 0,
+                    "SkyrimMajorRecordFlags": 0,
+                    "FormVersion": 43,
+                    "Version2": 0,
+                    "EditorID": null,
+                    "TitleString": " - 000817:VeronicaFollower.esp",
+                    "IsCompressed": false,
+                    "IsDeleted": false,
+                    "MajorRecordFlagsRaw": 0,
+                    "FormKey": "000817:VeronicaFollower.esp",
+                    "VersionControl": 0
+                  }
+                ],
+                "MajorFlags": 0,
+                "SkyrimMajorRecordFlags": 0,
+                "FormVersion": 43,
+                "Version2": 6,
+                "EditorID": "MarkarthSilverBloodInn",
+                "TitleString": "MarkarthSilverBloodInn - 016DFE:Skyrim.esm",
+                "IsCompressed": false,
+                "IsDeleted": false,
+                "MajorRecordFlagsRaw": 0,
+                "FormKey": "016DFE:Skyrim.esm",
+                "VersionControl": 0
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "Worldspaces": [],
+  "DialogTopics": [],
+  "Quests": [],
+  "IdleAnimations": [],
+  "Packages": [
+    {
+      "$type": "Noggog.KeyValue`2[[Mutagen.Bethesda.Plugins.FormKey, Mutagen.Bethesda.Core],[Mutagen.Bethesda.Skyrim.Package, Mutagen.Bethesda.Skyrim]], Noggog.CSharpExt",
+      "Key": "000818:VeronicaFollower.esp",
+      "Value": {
+        "VirtualMachineAdapter": null,
+        "Flags": 0,
+        "Type": 18,
+        "InterruptOverride": 0,
+        "PreferredSpeed": 2,
+        "Unknown": 27,
+        "InteruptFlags": -257,
+        "Unknown2": 0,
+        "ScheduleMonth": -1,
+        "ScheduleDayOfWeek": 255,
+        "ScheduleDate": 0,
+        "ScheduleHour": 10,
+        "ScheduleMinute": -1,
+        "Unknown3": [
+          0,
+          0,
+          0
+        ],
+        "ScheduleDurationInMinutes": 420,
+        "Conditions": [
+          {
+            "$type": "Mutagen.Bethesda.Skyrim.ConditionFloat, Mutagen.Bethesda.Skyrim",
+            "Data": {
+              "$type": "Mutagen.Bethesda.Skyrim.FunctionConditionData, Mutagen.Bethesda.Skyrim",
+              "Function": 59,
+              "Unknown2": 0,
+              "ParameterOneRecord": "0AF75F:Skyrim.esm",
+              "ParameterOneNumber": 718687,
+              "ParameterOneString": null,
+              "ParameterTwoRecord": "0001F4:Skyrim.esm",
+              "ParameterTwoNumber": 500,
+              "ParameterTwoString": null,
+              "RunOnType": 0,
+              "Reference": "Null",
+              "Unknown3": -1
+            },
+            "ComparisonValue": 1.0,
+            "CompareOperator": 0,
+            "Flags": 0,
+            "Unknown1": [
+              15,
+              47,
+              246
+            ]
+          }
+        ],
+        "Unknown4": null,
+        "IdleAnimations": null,
+        "CombatStyle": null,
+        "OwnerQuest": null,
+        "PackageTemplate": "01C254:Skyrim.esm",
+        "DataInputVersion": 10,
+        "Data": {
+          "0": {
+            "$type": "Mutagen.Bethesda.Skyrim.PackageDataLocation, Mutagen.Bethesda.Skyrim",
+            "Location": {
+              "Target": {
+                "$type": "Mutagen.Bethesda.Skyrim.LocationTarget, Mutagen.Bethesda.Skyrim",
+                "Link": "036F9D:Skyrim.esm"
+              },
+              "Radius": 512
+            },
+            "Name": null,
+            "Flags": null
+          },
+          "1": {
+            "$type": "Mutagen.Bethesda.Skyrim.PackageDataBool, Mutagen.Bethesda.Skyrim",
+            "Data": false,
+            "Name": null,
+            "Flags": null
+          },
+          "3": {
+            "$type": "Mutagen.Bethesda.Skyrim.PackageDataBool, Mutagen.Bethesda.Skyrim",
+            "Data": false,
+            "Name": null,
+            "Flags": null
+          },
+          "4": {
+            "$type": "Mutagen.Bethesda.Skyrim.PackageDataBool, Mutagen.Bethesda.Skyrim",
+            "Data": true,
+            "Name": null,
+            "Flags": null
+          },
+          "5": {
+            "$type": "Mutagen.Bethesda.Skyrim.PackageDataBool, Mutagen.Bethesda.Skyrim",
+            "Data": true,
+            "Name": null,
+            "Flags": null
+          },
+          "6": {
+            "$type": "Mutagen.Bethesda.Skyrim.PackageDataBool, Mutagen.Bethesda.Skyrim",
+            "Data": true,
+            "Name": null,
+            "Flags": null
+          },
+          "7": {
+            "$type": "Mutagen.Bethesda.Skyrim.PackageDataBool, Mutagen.Bethesda.Skyrim",
+            "Data": false,
+            "Name": null,
+            "Flags": null
+          },
+          "14": {
+            "$type": "Mutagen.Bethesda.Skyrim.PackageDataBool, Mutagen.Bethesda.Skyrim",
+            "Data": false,
+            "Name": null,
+            "Flags": null
+          },
+          "25": {
+            "$type": "Mutagen.Bethesda.Skyrim.PackageDataBool, Mutagen.Bethesda.Skyrim",
+            "Data": false,
+            "Name": null,
+            "Flags": null
+          },
+          "27": {
+            "$type": "Mutagen.Bethesda.Skyrim.PackageDataBool, Mutagen.Bethesda.Skyrim",
+            "Data": false,
+            "Name": null,
+            "Flags": null
+          },
+          "29": {
+            "$type": "Mutagen.Bethesda.Skyrim.PackageDataFloat, Mutagen.Bethesda.Skyrim",
+            "Data": 50.0,
+            "Name": null,
+            "Flags": null
+          },
+          "31": {
+            "$type": "Mutagen.Bethesda.Skyrim.PackageDataBool, Mutagen.Bethesda.Skyrim",
+            "Data": true,
+            "Name": null,
+            "Flags": null
+          }
+        },
+        "XnamMarker": [
+          32
+        ],
+        "ProcedureTree": [],
+        "OnBegin": {
+          "Idle": "Null",
+          "SCHR": null,
+          "SCDA": null,
+          "SCTX": null,
+          "QNAM": null,
+          "TNAM": null,
+          "Topics": [
+            {
+              "$type": "Mutagen.Bethesda.Skyrim.TopicReference, Mutagen.Bethesda.Skyrim",
+              "Reference": "Null"
+            }
+          ]
+        },
+        "OnEnd": {
+          "Idle": "Null",
+          "SCHR": null,
+          "SCDA": null,
+          "SCTX": null,
+          "QNAM": null,
+          "TNAM": null,
+          "Topics": [
+            {
+              "$type": "Mutagen.Bethesda.Skyrim.TopicReference, Mutagen.Bethesda.Skyrim",
+              "Reference": "Null"
+            }
+          ]
+        },
+        "OnChange": {
+          "Idle": "Null",
+          "SCHR": null,
+          "SCDA": null,
+          "SCTX": null,
+          "QNAM": null,
+          "TNAM": null,
+          "Topics": [
+            {
+              "$type": "Mutagen.Bethesda.Skyrim.TopicReference, Mutagen.Bethesda.Skyrim",
+              "Reference": "Null"
+            }
+          ]
+        },
+        "PKDTDataTypeState": 0,
+        "PSDTDataTypeState": 0,
+        "SkyrimMajorRecordFlags": 0,
+        "FormVersion": 43,
+        "Version2": 0,
+        "EditorID": "VeronicaSandboxMarket9x11Package",
+        "TitleString": "VeronicaSandboxMarket9x11Package - 000818:VeronicaFollower.esp",
+        "IsCompressed": false,
+        "IsDeleted": false,
+        "MajorRecordFlagsRaw": 0,
+        "FormKey": "000818:VeronicaFollower.esp",
+        "VersionControl": 0
+      }
+    }
+  ],
+  "CombatStyles": [],
+  "LoadScreens": [],
+  "LeveledSpells": [],
+  "AnimatedObjects": [],
+  "Waters": [],
+  "EffectShaders": [],
+  "Explosions": [],
+  "Debris": [],
+  "ImageSpaces": [],
+  "ImageSpaceAdapters": [],
+  "FormLists": [],
+  "Perks": [],
+  "BodyParts": [],
+  "AddonNodes": [],
+  "ActorValueInformation": [],
+  "CameraShots": [],
+  "CameraPaths": [],
+  "VoiceTypes": [],
+  "MaterialTypes": [],
+  "Impacts": [],
+  "ImpactDataSets": [],
+  "ArmorAddons": [
+    {
+      "$type": "Noggog.KeyValue`2[[Mutagen.Bethesda.Plugins.FormKey, Mutagen.Bethesda.Core],[Mutagen.Bethesda.Skyrim.ArmorAddon, Mutagen.Bethesda.Skyrim]], Noggog.CSharpExt",
+      "Key": "000810:VeronicaFollower.esp",
+      "Value": {
+        "WeightSliderEnabled": {
+          "$type": "Mutagen.Bethesda.Skyrim.ArmorAddonWeightSliderContainer, Mutagen.Bethesda.Skyrim",
+          "$values": [
+            true,
+            true
+          ]
+        },
+        "BodyTemplate": {
+          "FirstPersonFlags": 276,
+          "Flags": 0,
+          "ArmorType": 2,
+          "ActsLike44": true
+        },
+        "Race": "000019:Skyrim.esm",
+        "Priority": {
+          "$type": "Mutagen.Bethesda.Plugins.Records.GenderedItem`1[[System.Byte, System.Private.CoreLib]], Mutagen.Bethesda.Core",
+          "$values": [
+            5,
+            5
+          ]
+        },
+        "Unknown": 0,
+        "DetectionSoundValue": 0,
+        "Unknown2": 24,
+        "WeaponAdjust": 0.5,
+        "WorldModel": {
+          "$type": "Mutagen.Bethesda.Plugins.Records.GenderedItem`1[[Mutagen.Bethesda.Skyrim.Model, Mutagen.Bethesda.Skyrim]], Mutagen.Bethesda.Core",
+          "$values": [
+            {
+              "AlternateTextures": null,
+              "File": {
+                "RawPath": "Armor\\Bandit\\BodyM_1.nif",
+                "DataRelativePath": "Meshes\\Armor\\Bandit\\BodyM_1.nif",
+                "Extension": "nif",
+                "Type": {
+                  "$type": "Mutagen.Bethesda.Skyrim.Assets.SkyrimModelAssetType, Mutagen.Bethesda.Skyrim",
+                  "BaseFolder": "Meshes",
+                  "FileExtensions": {
+                    "$type": "System.String[], System.Private.CoreLib",
+                    "$values": [
+                      "nif"
+                    ]
+                  }
+                },
+                "IsNull": false
+              },
+              "Data": [
+                2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "AlternateTextures": [
+                {
+                  "Name": "BarKeeperTorso",
+                  "NewTexture": "000815:VeronicaFollower.esp",
+                  "Index": 0
+                }
+              ],
+              "File": {
+                "RawPath": "actors\\character\\Veronica\\armor\\torso_1.nif",
+                "DataRelativePath": "Meshes\\actors\\character\\Veronica\\armor\\torso_1.nif",
+                "Extension": "nif",
+                "Type": {
+                  "$type": "Mutagen.Bethesda.Skyrim.Assets.SkyrimModelAssetType, Mutagen.Bethesda.Skyrim",
+                  "BaseFolder": "Meshes",
+                  "FileExtensions": {
+                    "$type": "System.String[], System.Private.CoreLib",
+                    "$values": [
+                      "nif"
+                    ]
+                  }
+                },
+                "IsNull": false
+              },
+              "Data": [
+                2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "FirstPersonModel": {
+          "$type": "Mutagen.Bethesda.Plugins.Records.GenderedItem`1[[Mutagen.Bethesda.Skyrim.Model, Mutagen.Bethesda.Skyrim]], Mutagen.Bethesda.Core",
+          "$values": [
+            {
+              "AlternateTextures": null,
+              "File": {
+                "RawPath": "Armor\\Bandit\\1stPersonBodyM_1.nif",
+                "DataRelativePath": "Meshes\\Armor\\Bandit\\1stPersonBodyM_1.nif",
+                "Extension": "nif",
+                "Type": {
+                  "$type": "Mutagen.Bethesda.Skyrim.Assets.SkyrimModelAssetType, Mutagen.Bethesda.Skyrim",
+                  "BaseFolder": "Meshes",
+                  "FileExtensions": {
+                    "$type": "System.String[], System.Private.CoreLib",
+                    "$values": [
+                      "nif"
+                    ]
+                  }
+                },
+                "IsNull": false
+              },
+              "Data": [
+                2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "AlternateTextures": null,
+              "File": {
+                "RawPath": "actors\\character\\Veronica\\armor\\torso_1.nif",
+                "DataRelativePath": "Meshes\\actors\\character\\Veronica\\armor\\torso_1.nif",
+                "Extension": "nif",
+                "Type": {
+                  "$type": "Mutagen.Bethesda.Skyrim.Assets.SkyrimModelAssetType, Mutagen.Bethesda.Skyrim",
+                  "BaseFolder": "Meshes",
+                  "FileExtensions": {
+                    "$type": "System.String[], System.Private.CoreLib",
+                    "$values": [
+                      "nif"
+                    ]
+                  }
+                },
+                "IsNull": false
+              },
+              "Data": [
+                2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "SkinTexture": null,
+        "TextureSwapList": null,
+        "AdditionalRaces": [
+          "013740:Skyrim.esm",
+          "08883A:Skyrim.esm",
+          "013741:Skyrim.esm",
+          "08883C:Skyrim.esm",
+          "097A3D:Skyrim.esm",
+          "013742:Skyrim.esm",
+          "08883D:Skyrim.esm",
+          "067CD8:Skyrim.esm",
+          "0A82BA:Skyrim.esm",
+          "013743:Skyrim.esm",
+          "088840:Skyrim.esm",
+          "013744:Skyrim.esm",
+          "088844:Skyrim.esm",
+          "013745:Skyrim.esm",
+          "088845:Skyrim.esm",
+          "10760A:Skyrim.esm",
+          "013746:Skyrim.esm",
+          "088794:Skyrim.esm",
+          "013747:Skyrim.esm",
+          "0A82B9:Skyrim.esm",
+          "013748:Skyrim.esm",
+          "088846:Skyrim.esm",
+          "013749:Skyrim.esm",
+          "088884:Skyrim.esm"
+        ],
+        "FootstepSound": null,
+        "ArtObject": null,
+        "DNAMDataTypeState": 0,
+        "SkyrimMajorRecordFlags": 0,
+        "FormVersion": 43,
+        "Version2": 0,
+        "EditorID": "VeronicaDressAP",
+        "TitleString": "VeronicaDressAP - 000810:VeronicaFollower.esp",
+        "IsCompressed": false,
+        "IsDeleted": false,
+        "MajorRecordFlagsRaw": 0,
+        "FormKey": "000810:VeronicaFollower.esp",
+        "VersionControl": 0
+      }
+    },
+    {
+      "$type": "Noggog.KeyValue`2[[Mutagen.Bethesda.Plugins.FormKey, Mutagen.Bethesda.Core],[Mutagen.Bethesda.Skyrim.ArmorAddon, Mutagen.Bethesda.Skyrim]], Noggog.CSharpExt",
+      "Key": "00080C:VeronicaFollower.esp",
+      "Value": {
+        "WeightSliderEnabled": {
+          "$type": "Mutagen.Bethesda.Skyrim.ArmorAddonWeightSliderContainer, Mutagen.Bethesda.Skyrim",
+          "$values": [
+            false,
+            true
+          ]
+        },
+        "BodyTemplate": {
+          "FirstPersonFlags": 8,
+          "Flags": 0,
+          "ArmorType": 2,
+          "ActsLike44": true
+        },
+        "Race": "013744:Skyrim.esm",
+        "Priority": {
+          "$type": "Mutagen.Bethesda.Plugins.Records.GenderedItem`1[[System.Byte, System.Private.CoreLib]], Mutagen.Bethesda.Core",
+          "$values": [
+            0,
+            0
+          ]
+        },
+        "Unknown": 0,
+        "DetectionSoundValue": 0,
+        "Unknown2": 0,
+        "WeaponAdjust": 0.0,
+        "WorldModel": {
+          "$type": "Mutagen.Bethesda.Plugins.Records.GenderedItem`1[[Mutagen.Bethesda.Skyrim.Model, Mutagen.Bethesda.Skyrim]], Mutagen.Bethesda.Core",
+          "$values": [
+            null,
+            {
+              "AlternateTextures": null,
+              "File": {
+                "RawPath": "actors\\character\\Veronica\\femalehands_1.nif",
+                "DataRelativePath": "Meshes\\actors\\character\\Veronica\\femalehands_1.nif",
+                "Extension": "nif",
+                "Type": {
+                  "$type": "Mutagen.Bethesda.Skyrim.Assets.SkyrimModelAssetType, Mutagen.Bethesda.Skyrim",
+                  "BaseFolder": "Meshes",
+                  "FileExtensions": {
+                    "$type": "System.String[], System.Private.CoreLib",
+                    "$values": [
+                      "nif"
+                    ]
+                  }
+                },
+                "IsNull": false
+              },
+              "Data": [
+                2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "FirstPersonModel": {
+          "$type": "Mutagen.Bethesda.Plugins.Records.GenderedItem`1[[Mutagen.Bethesda.Skyrim.Model, Mutagen.Bethesda.Skyrim]], Mutagen.Bethesda.Core",
+          "$values": [
+            null,
+            {
+              "AlternateTextures": null,
+              "File": {
+                "RawPath": "actors\\character\\Veronica\\1stpersonfemalehands_1.nif",
+                "DataRelativePath": "Meshes\\actors\\character\\Veronica\\1stpersonfemalehands_1.nif",
+                "Extension": "nif",
+                "Type": {
+                  "$type": "Mutagen.Bethesda.Skyrim.Assets.SkyrimModelAssetType, Mutagen.Bethesda.Skyrim",
+                  "BaseFolder": "Meshes",
+                  "FileExtensions": {
+                    "$type": "System.String[], System.Private.CoreLib",
+                    "$values": [
+                      "nif"
+                    ]
+                  }
+                },
+                "IsNull": false
+              },
+              "Data": [
+                2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "SkinTexture": {
+          "$type": "Mutagen.Bethesda.Plugins.Records.GenderedItem`1[[Mutagen.Bethesda.Plugins.IFormLinkNullableGetter`1[[Mutagen.Bethesda.Skyrim.ITextureSetGetter, Mutagen.Bethesda.Skyrim]], Mutagen.Bethesda.Core]], Mutagen.Bethesda.Core",
+          "$values": [
+            null,
+            "000804:VeronicaFollower.esp"
+          ]
+        },
+        "TextureSwapList": null,
+        "AdditionalRaces": [
+          "088844:Skyrim.esm"
+        ],
+        "FootstepSound": null,
+        "ArtObject": null,
+        "DNAMDataTypeState": 0,
+        "SkyrimMajorRecordFlags": 0,
+        "FormVersion": 43,
+        "Version2": 0,
+        "EditorID": "VeronicaHandsAP",
+        "TitleString": "VeronicaHandsAP - 00080C:VeronicaFollower.esp",
+        "IsCompressed": false,
+        "IsDeleted": false,
+        "MajorRecordFlagsRaw": 0,
+        "FormKey": "00080C:VeronicaFollower.esp",
+        "VersionControl": 0
+      }
+    },
+    {
+      "$type": "Noggog.KeyValue`2[[Mutagen.Bethesda.Plugins.FormKey, Mutagen.Bethesda.Core],[Mutagen.Bethesda.Skyrim.ArmorAddon, Mutagen.Bethesda.Skyrim]], Noggog.CSharpExt",
+      "Key": "00080F:VeronicaFollower.esp",
+      "Value": {
+        "WeightSliderEnabled": {
+          "$type": "Mutagen.Bethesda.Skyrim.ArmorAddonWeightSliderContainer, Mutagen.Bethesda.Skyrim",
+          "$values": [
+            true,
+            true
+          ]
+        },
+        "BodyTemplate": {
+          "FirstPersonFlags": 8388608,
+          "Flags": 0,
+          "ArmorType": 2,
+          "ActsLike44": true
+        },
+        "Race": "000019:Skyrim.esm",
+        "Priority": {
+          "$type": "Mutagen.Bethesda.Plugins.Records.GenderedItem`1[[System.Byte, System.Private.CoreLib]], Mutagen.Bethesda.Core",
+          "$values": [
+            5,
+            5
+          ]
+        },
+        "Unknown": 0,
+        "DetectionSoundValue": 0,
+        "Unknown2": 23,
+        "WeaponAdjust": 0.0,
+        "WorldModel": {
+          "$type": "Mutagen.Bethesda.Plugins.Records.GenderedItem`1[[Mutagen.Bethesda.Skyrim.Model, Mutagen.Bethesda.Skyrim]], Mutagen.Bethesda.Core",
+          "$values": [
+            {
+              "AlternateTextures": null,
+              "File": {
+                "RawPath": "Armor\\Dragonscale\\DragonscaleArmorM_1.nif",
+                "DataRelativePath": "Meshes\\Armor\\Dragonscale\\DragonscaleArmorM_1.nif",
+                "Extension": "nif",
+                "Type": {
+                  "$type": "Mutagen.Bethesda.Skyrim.Assets.SkyrimModelAssetType, Mutagen.Bethesda.Skyrim",
+                  "BaseFolder": "Meshes",
+                  "FileExtensions": {
+                    "$type": "System.String[], System.Private.CoreLib",
+                    "$values": [
+                      "nif"
+                    ]
+                  }
+                },
+                "IsNull": false
+              },
+              "Data": [
+                2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "AlternateTextures": [
+                {
+                  "Name": "Stockings_0",
+                  "NewTexture": "000814:VeronicaFollower.esp",
+                  "Index": 0
+                }
+              ],
+              "File": {
+                "RawPath": "actors\\character\\Veronica\\armor\\stockings_1.nif",
+                "DataRelativePath": "Meshes\\actors\\character\\Veronica\\armor\\stockings_1.nif",
+                "Extension": "nif",
+                "Type": {
+                  "$type": "Mutagen.Bethesda.Skyrim.Assets.SkyrimModelAssetType, Mutagen.Bethesda.Skyrim",
+                  "BaseFolder": "Meshes",
+                  "FileExtensions": {
+                    "$type": "System.String[], System.Private.CoreLib",
+                    "$values": [
+                      "nif"
+                    ]
+                  }
+                },
+                "IsNull": false
+              },
+              "Data": [
+                2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "FirstPersonModel": null,
+        "SkinTexture": null,
+        "TextureSwapList": null,
+        "AdditionalRaces": [
+          "013740:Skyrim.esm",
+          "08883A:Skyrim.esm",
+          "013741:Skyrim.esm",
+          "08883C:Skyrim.esm",
+          "097A3D:Skyrim.esm",
+          "013742:Skyrim.esm",
+          "08883D:Skyrim.esm",
+          "067CD8:Skyrim.esm",
+          "0A82BA:Skyrim.esm",
+          "013743:Skyrim.esm",
+          "088840:Skyrim.esm",
+          "013744:Skyrim.esm",
+          "088844:Skyrim.esm",
+          "013745:Skyrim.esm",
+          "088845:Skyrim.esm",
+          "10760A:Skyrim.esm",
+          "013746:Skyrim.esm",
+          "088794:Skyrim.esm",
+          "013747:Skyrim.esm",
+          "0A82B9:Skyrim.esm",
+          "013748:Skyrim.esm",
+          "088846:Skyrim.esm",
+          "013749:Skyrim.esm",
+          "088884:Skyrim.esm"
+        ],
+        "FootstepSound": null,
+        "ArtObject": null,
+        "DNAMDataTypeState": 0,
+        "SkyrimMajorRecordFlags": 0,
+        "FormVersion": 43,
+        "Version2": 0,
+        "EditorID": "VeronicaStockingsAP",
+        "TitleString": "VeronicaStockingsAP - 00080F:VeronicaFollower.esp",
+        "IsCompressed": false,
+        "IsDeleted": false,
+        "MajorRecordFlagsRaw": 0,
+        "FormKey": "00080F:VeronicaFollower.esp",
+        "VersionControl": 0
+      }
+    },
+    {
+      "$type": "Noggog.KeyValue`2[[Mutagen.Bethesda.Plugins.FormKey, Mutagen.Bethesda.Core],[Mutagen.Bethesda.Skyrim.ArmorAddon, Mutagen.Bethesda.Skyrim]], Noggog.CSharpExt",
+      "Key": "00080B:VeronicaFollower.esp",
+      "Value": {
+        "WeightSliderEnabled": {
+          "$type": "Mutagen.Bethesda.Skyrim.ArmorAddonWeightSliderContainer, Mutagen.Bethesda.Skyrim",
+          "$values": [
+            false,
+            true
+          ]
+        },
+        "BodyTemplate": {
+          "FirstPersonFlags": 128,
+          "Flags": 0,
+          "ArmorType": 2,
+          "ActsLike44": true
+        },
+        "Race": "013744:Skyrim.esm",
+        "Priority": {
+          "$type": "Mutagen.Bethesda.Plugins.Records.GenderedItem`1[[System.Byte, System.Private.CoreLib]], Mutagen.Bethesda.Core",
+          "$values": [
+            0,
+            0
+          ]
+        },
+        "Unknown": 0,
+        "DetectionSoundValue": 0,
+        "Unknown2": 0,
+        "WeaponAdjust": 0.0,
+        "WorldModel": {
+          "$type": "Mutagen.Bethesda.Plugins.Records.GenderedItem`1[[Mutagen.Bethesda.Skyrim.Model, Mutagen.Bethesda.Skyrim]], Mutagen.Bethesda.Core",
+          "$values": [
+            null,
+            {
+              "AlternateTextures": null,
+              "File": {
+                "RawPath": "actors\\character\\Veronica\\femalefeet_1.nif",
+                "DataRelativePath": "Meshes\\actors\\character\\Veronica\\femalefeet_1.nif",
+                "Extension": "nif",
+                "Type": {
+                  "$type": "Mutagen.Bethesda.Skyrim.Assets.SkyrimModelAssetType, Mutagen.Bethesda.Skyrim",
+                  "BaseFolder": "Meshes",
+                  "FileExtensions": {
+                    "$type": "System.String[], System.Private.CoreLib",
+                    "$values": [
+                      "nif"
+                    ]
+                  }
+                },
+                "IsNull": false
+              },
+              "Data": [
+                2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "FirstPersonModel": null,
+        "SkinTexture": {
+          "$type": "Mutagen.Bethesda.Plugins.Records.GenderedItem`1[[Mutagen.Bethesda.Plugins.IFormLinkNullableGetter`1[[Mutagen.Bethesda.Skyrim.ITextureSetGetter, Mutagen.Bethesda.Skyrim]], Mutagen.Bethesda.Core]], Mutagen.Bethesda.Core",
+          "$values": [
+            null,
+            "000805:VeronicaFollower.esp"
+          ]
+        },
+        "TextureSwapList": {
+          "$type": "Mutagen.Bethesda.Plugins.Records.GenderedItem`1[[Mutagen.Bethesda.Plugins.IFormLinkNullableGetter`1[[Mutagen.Bethesda.Skyrim.IFormListGetter, Mutagen.Bethesda.Skyrim]], Mutagen.Bethesda.Core]], Mutagen.Bethesda.Core",
+          "$values": [
+            null,
+            "07BBB2:Skyrim.esm"
+          ]
+        },
+        "AdditionalRaces": [
+          "08883C:Skyrim.esm",
+          "097A3D:Skyrim.esm",
+          "088844:Skyrim.esm"
+        ],
+        "FootstepSound": "021468:Skyrim.esm",
+        "ArtObject": null,
+        "DNAMDataTypeState": 0,
+        "SkyrimMajorRecordFlags": 0,
+        "FormVersion": 43,
+        "Version2": 0,
+        "EditorID": "VeronicaFeetAP",
+        "TitleString": "VeronicaFeetAP - 00080B:VeronicaFollower.esp",
+        "IsCompressed": false,
+        "IsDeleted": false,
+        "MajorRecordFlagsRaw": 0,
+        "FormKey": "00080B:VeronicaFollower.esp",
+        "VersionControl": 0
+      }
+    },
+    {
+      "$type": "Noggog.KeyValue`2[[Mutagen.Bethesda.Plugins.FormKey, Mutagen.Bethesda.Core],[Mutagen.Bethesda.Skyrim.ArmorAddon, Mutagen.Bethesda.Skyrim]], Noggog.CSharpExt",
+      "Key": "00080D:VeronicaFollower.esp",
+      "Value": {
+        "WeightSliderEnabled": {
+          "$type": "Mutagen.Bethesda.Skyrim.ArmorAddonWeightSliderContainer, Mutagen.Bethesda.Skyrim",
+          "$values": [
+            false,
+            true
+          ]
+        },
+        "BodyTemplate": {
+          "FirstPersonFlags": 372,
+          "Flags": 0,
+          "ArmorType": 2,
+          "ActsLike44": true
+        },
+        "Race": "013744:Skyrim.esm",
+        "Priority": {
+          "$type": "Mutagen.Bethesda.Plugins.Records.GenderedItem`1[[System.Byte, System.Private.CoreLib]], Mutagen.Bethesda.Core",
+          "$values": [
+            0,
+            0
+          ]
+        },
+        "Unknown": 0,
+        "DetectionSoundValue": 0,
+        "Unknown2": 0,
+        "WeaponAdjust": 0.0,
+        "WorldModel": {
+          "$type": "Mutagen.Bethesda.Plugins.Records.GenderedItem`1[[Mutagen.Bethesda.Skyrim.Model, Mutagen.Bethesda.Skyrim]], Mutagen.Bethesda.Core",
+          "$values": [
+            null,
+            {
+              "AlternateTextures": null,
+              "File": {
+                "RawPath": "actors\\character\\Veronica\\femalebody_1.nif",
+                "DataRelativePath": "Meshes\\actors\\character\\Veronica\\femalebody_1.nif",
+                "Extension": "nif",
+                "Type": {
+                  "$type": "Mutagen.Bethesda.Skyrim.Assets.SkyrimModelAssetType, Mutagen.Bethesda.Skyrim",
+                  "BaseFolder": "Meshes",
+                  "FileExtensions": {
+                    "$type": "System.String[], System.Private.CoreLib",
+                    "$values": [
+                      "nif"
+                    ]
+                  }
+                },
+                "IsNull": false
+              },
+              "Data": [
+                2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "FirstPersonModel": null,
+        "SkinTexture": {
+          "$type": "Mutagen.Bethesda.Plugins.Records.GenderedItem`1[[Mutagen.Bethesda.Plugins.IFormLinkNullableGetter`1[[Mutagen.Bethesda.Skyrim.ITextureSetGetter, Mutagen.Bethesda.Skyrim]], Mutagen.Bethesda.Core]], Mutagen.Bethesda.Core",
+          "$values": [
+            null,
+            "000805:VeronicaFollower.esp"
+          ]
+        },
+        "TextureSwapList": {
+          "$type": "Mutagen.Bethesda.Plugins.Records.GenderedItem`1[[Mutagen.Bethesda.Plugins.IFormLinkNullableGetter`1[[Mutagen.Bethesda.Skyrim.IFormListGetter, Mutagen.Bethesda.Skyrim]], Mutagen.Bethesda.Core]], Mutagen.Bethesda.Core",
+          "$values": [
+            null,
+            "07BBB2:Skyrim.esm"
+          ]
+        },
+        "AdditionalRaces": [
+          "088844:Skyrim.esm"
+        ],
+        "FootstepSound": null,
+        "ArtObject": null,
+        "DNAMDataTypeState": 0,
+        "SkyrimMajorRecordFlags": 0,
+        "FormVersion": 43,
+        "Version2": 0,
+        "EditorID": "VeronicaTorsoAP",
+        "TitleString": "VeronicaTorsoAP - 00080D:VeronicaFollower.esp",
+        "IsCompressed": false,
+        "IsDeleted": false,
+        "MajorRecordFlagsRaw": 0,
+        "FormKey": "00080D:VeronicaFollower.esp",
+        "VersionControl": 0
+      }
+    }
+  ],
+  "EncounterZones": [],
+  "Locations": [],
+  "Messages": [],
+  "DefaultObjectManagers": [],
+  "LightingTemplates": [],
+  "MusicTypes": [],
+  "Footsteps": [],
+  "FootstepSets": [],
+  "StoryManagerBranchNodes": [],
+  "StoryManagerQuestNodes": [],
+  "StoryManagerEventNodes": [],
+  "DialogBranches": [],
+  "MusicTracks": [],
+  "DialogViews": [],
+  "WordsOfPower": [],
+  "Shouts": [],
+  "EquipTypes": [],
+  "Relationships": [
+    {
+      "$type": "Noggog.KeyValue`2[[Mutagen.Bethesda.Plugins.FormKey, Mutagen.Bethesda.Core],[Mutagen.Bethesda.Skyrim.Relationship, Mutagen.Bethesda.Skyrim]], Noggog.CSharpExt",
+      "Key": "000801:VeronicaFollower.esp",
+      "Value": {
+        "Parent": "000800:VeronicaFollower.esp",
+        "Child": "000007:Skyrim.esm",
+        "Rank": 0,
+        "Unknown": 0,
+        "Flags": 0,
+        "AssociationType": "Null",
+        "DATADataTypeState": 0,
+        "MajorFlags": 0,
+        "SkyrimMajorRecordFlags": 0,
+        "FormVersion": 43,
+        "Version2": 0,
+        "EditorID": null,
+        "TitleString": " - 000801:VeronicaFollower.esp",
+        "IsCompressed": false,
+        "IsDeleted": false,
+        "MajorRecordFlagsRaw": 0,
+        "FormKey": "000801:VeronicaFollower.esp",
+        "VersionControl": 0
+      }
+    }
+  ],
+  "Scenes": [],
+  "AssociationTypes": [],
+  "Outfits": [
+    {
+      "$type": "Noggog.KeyValue`2[[Mutagen.Bethesda.Plugins.FormKey, Mutagen.Bethesda.Core],[Mutagen.Bethesda.Skyrim.Outfit, Mutagen.Bethesda.Skyrim]], Noggog.CSharpExt",
+      "Key": "000813:VeronicaFollower.esp",
+      "Value": {
+        "Items": [
+          "000812:VeronicaFollower.esp",
+          "000811:VeronicaFollower.esp",
+          "0D1921:Skyrim.esm"
+        ],
+        "SkyrimMajorRecordFlags": 0,
+        "FormVersion": 43,
+        "Version2": 0,
+        "EditorID": "VeronicaDefaultOutfit",
+        "TitleString": "VeronicaDefaultOutfit - 000813:VeronicaFollower.esp",
+        "IsCompressed": false,
+        "IsDeleted": false,
+        "MajorRecordFlagsRaw": 0,
+        "FormKey": "000813:VeronicaFollower.esp",
+        "VersionControl": 0
+      }
+    }
+  ],
+  "ArtObjects": [],
+  "MaterialObjects": [],
+  "MovementTypes": [],
+  "SoundDescriptors": [],
+  "DualCastData": [],
+  "SoundCategories": [],
+  "SoundOutputModels": [],
+  "CollisionLayers": [],
+  "Colors": [],
+  "ReverbParameters": [],
+  "VolumetricLightings": [],
+  "SkyrimRelease": 2,
+  "GameRelease": 2,
+  "CanUseLocalization": true,
+  "UsingLocalization": false,
+  "ModKey": "VeronicaFollower.esp"
+}

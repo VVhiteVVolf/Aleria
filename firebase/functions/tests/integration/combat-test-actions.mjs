@@ -9,7 +9,7 @@ import { deriveCombatStateFromComments, overlayCombatHitPointState } from '../..
 import { withEquippedCombatWeapon } from '../../../../AleriaAlmanach/modules/combat/combat-equipment-state.js';
 import { getActiveCombatEncounter } from '../../../../AleriaAlmanach/modules/combat/combat-encounter-model.js';
 import { deriveCombatRuleFrequencyKeys } from '../../../../AleriaAlmanach/modules/combat/combat-trigger-rules.js';
-import { buildDamageNotation, parseDamageFormula } from '../../../../AleriaAlmanach/modules/combat/rules/combat-mvp-rules.js';
+import { buildDamageRollPlan } from '../../../../AleriaAlmanach/modules/combat/rules/combat-mvp-rules.js';
 
 // Fixed receipts make regressions exact; a seeded PRNG makes complete fights
 // reproducible while exercising misses, criticals and mixed damage dice.
@@ -28,10 +28,10 @@ export class CheckupDice {
   async rollSavingThrow({ modifier = 0, rollMode = 'normal' }) { return this.rollD20(modifier, rollMode, 12); }
   async rollWardDeflection() { return this.rollD20(0, 'normal', this.natural); }
   async rollDamage({ damageFormula, bonus = 0, critical = false }) {
-    const parsed = parseDamageFormula(damageFormula);
-    const dice = (parsed.terms || [parsed]).flatMap(term => Array.from({ length: term.diceCount * (critical ? 2 : 1) }, () => this.natural == null ? this.die(term.sides) : Math.ceil(term.sides / 2)));
-    const modifier = parsed.fixedModifier + Number(bonus);
-    return { id: randomUUID(), notation: buildDamageNotation(damageFormula, bonus, critical), dice, keptDice: dice, modifier, total: Math.max(0, dice.reduce((a, b) => a + b, 0) + modifier) };
+    const plan = buildDamageRollPlan(damageFormula, bonus, critical);
+    const dice = plan.terms.flatMap(term => Array.from({ length: term.diceCount }, () => this.natural == null ? this.die(term.sides) : Math.ceil(term.sides / 2)));
+    const modifier = plan.modifier;
+    return { id: randomUUID(), notation: plan.notation, criticalDamage: plan.criticalDamage, dice, keptDice: dice, modifier, total: Math.max(0, dice.reduce((a, b) => a + b, 0) + modifier) };
   }
 }
 

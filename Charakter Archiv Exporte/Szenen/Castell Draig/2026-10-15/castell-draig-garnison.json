@@ -1,0 +1,179 @@
+{
+  "type": "aleria-module",
+  "version": 2,
+  "section": {
+    "key": "Castell Draig",
+    "tab": "Völker & Kulturen",
+    "desc": "Menschliche Völker, Krieger & Kulturen",
+    "nodeId": "node:volker-kulturen:cenyr/celtigerns-wacht/llamreis-ankunft/gwynthor/castell-draig",
+    "path": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Gwynthor",
+      "Castell Draig"
+    ]
+  },
+  "entry": {
+    "id": "castell-draig-garnison",
+    "title": "Castell Draig - Garnison & Quartiere",
+    "subtitle": "Barracken und Alltag der Burgbesatzung",
+    "type": "Interaktive Szene",
+    "category": "Szene",
+    "moduleWidth": 100,
+    "moduleHeight": 100,
+    "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/module-assets%2Fcastell-draig%2Fexpansion-2026-10-15%2Fgarnisonshof-3ff373ae5ce33254.png?alt=media&token=f45a8a4a-005a-4f04-a92a-d081d87570d1",
+    "stamp": "Celtigerns Wacht · Gwynthor · Aleria",
+    "icon": "",
+    "symbol": null,
+    "locked": false,
+    "appendCommentsPage": false,
+    "enablePageComments": true,
+    "sessionCast": [],
+    "sessionCastDetails": [],
+    "schemaVersion": 1,
+    "multipage": true,
+    "pages": [
+      {
+        "schemaVersion": 1,
+        "commentThreadKey": "garnison-hof",
+        "pageTitle": "Garnisonshof",
+        "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/module-assets%2Fcastell-draig%2Fexpansion-2026-10-15%2Fgarnisonshof-3ff373ae5ce33254.png?alt=media&token=f45a8a4a-005a-4f04-a92a-d081d87570d1",
+        "imageWidth": 20,
+        "sessionPage": true,
+        "sessionIntro": "Zwischen steinernen Unterkunftsgebäuden liegt ein gepflasterter Hof mit Wassertränke und Bänken. Eine Treppe führt hinauf zum Wehrgang.",
+        "sessionHint": "Schreibe deinen Beitrag zu dieser Szene.",
+        "sessionLocation": "Castell Draig · Garnisonshof",
+        "sessionStatus": "active",
+        "sessionParticipants": [],
+        "sessionDateAleria": {
+          "year": null,
+          "month": null,
+          "day": null
+        },
+        "sessionEmptyTitle": "Die Szene ist offen",
+        "sessionEmptyText": "Hier kann eine neue Szene beginnen."
+      },
+      {
+        "schemaVersion": 1,
+        "commentThreadKey": "garnison-ritterquartier",
+        "pageTitle": "Ritterquartier",
+        "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/module-assets%2Fcastell-draig%2Fexpansion-2026-10-15%2Fgarnison-ritterquartier-a7b65e00f7c9d595.png?alt=media&token=3ac25209-b5bc-48b7-8e89-44034071f88b",
+        "imageWidth": 20,
+        "sessionPage": true,
+        "sessionIntro": "Ein Bett, eine persönliche Truhe und ein kleiner Schreibtisch bilden das private Quartier eines diensthabenden Ritters. Rüstzeug und Schwert haben ihren Platz an der Wand.",
+        "sessionHint": "Schreibe deinen Beitrag zu dieser Szene.",
+        "sessionLocation": "Castell Draig · Ritterquartier",
+        "sessionStatus": "active",
+        "sessionParticipants": [],
+        "sessionDateAleria": {
+          "year": null,
+          "month": null,
+          "day": null
+        },
+        "sessionEmptyTitle": "Die Szene ist offen",
+        "sessionEmptyText": "Hier kann eine neue Szene beginnen."
+      },
+      {
+        "schemaVersion": 1,
+        "commentThreadKey": "garnison-waffenknechte",
+        "pageTitle": "Barracke der Waffenknechte",
+        "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/module-assets%2Fcastell-draig%2Fexpansion-2026-10-15%2Fgarnison-waffenknechte-48949e2b20096595.png?alt=media&token=dda74b70-1a0c-4d25-aa57-59312a79d785",
+        "imageWidth": 20,
+        "sessionPage": true,
+        "sessionIntro": "Einfache Holzbetten mit Wolldecken stehen entlang der Wände. Truhen, eine lange Bank und Haken für Kleidung und Ausrüstung teilen den gemeinsamen Wohnraum.",
+        "sessionHint": "Schreibe deinen Beitrag zu dieser Szene.",
+        "sessionLocation": "Castell Draig · Barracke der Waffenknechte",
+        "sessionStatus": "active",
+        "sessionParticipants": [],
+        "sessionDateAleria": {
+          "year": null,
+          "month": null,
+          "day": null
+        },
+        "sessionEmptyTitle": "Die Szene ist offen",
+        "sessionEmptyText": "Hier kann eine neue Szene beginnen."
+      },
+      {
+        "schemaVersion": 1,
+        "commentThreadKey": "garnison-gardisten",
+        "pageTitle": "Barracke der Gardisten",
+        "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/module-assets%2Fcastell-draig%2Fexpansion-2026-10-15%2Fgarnison-gardisten-88ca773592c85635.png?alt=media&token=ffaf438c-ed3e-4047-93f3-e88c55889ff7",
+        "imageWidth": 20,
+        "sessionPage": true,
+        "sessionIntro": "Zwei geordnete Bettreihen lassen einen schmalen Mittelgang frei. Persönliche Truhen, Helme und Schilde gehören zum Alltag der hier untergebrachten Gardisten.",
+        "sessionHint": "Schreibe deinen Beitrag zu dieser Szene.",
+        "sessionLocation": "Castell Draig · Barracke der Gardisten",
+        "sessionStatus": "active",
+        "sessionParticipants": [],
+        "sessionDateAleria": {
+          "year": null,
+          "month": null,
+          "day": null
+        },
+        "sessionEmptyTitle": "Die Szene ist offen",
+        "sessionEmptyText": "Hier kann eine neue Szene beginnen."
+      },
+      {
+        "schemaVersion": 1,
+        "commentThreadKey": "garnison-wachstube",
+        "pageTitle": "Wachstube der Garnison",
+        "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/module-assets%2Fcastell-draig%2F2026-10-15%2Ftwr-dragwyn-wachraum-4c8a6b98511e1ec9.png?alt=media&token=00ec26fb-6c6d-457f-96bc-2833b5abbf1a",
+        "imageWidth": 20,
+        "sessionPage": true,
+        "sessionIntro": "Ein Arbeitstisch, Bänke und bereitgestelltes Rüstzeug prägen die Wachstube. Hier ist Platz für Wachwechsel, Meldungen und kurze Besprechungen.",
+        "sessionHint": "Schreibe deinen Beitrag zu dieser Szene.",
+        "sessionLocation": "Castell Draig · Wachstube der Garnison",
+        "sessionStatus": "active",
+        "sessionParticipants": [],
+        "sessionDateAleria": {
+          "year": null,
+          "month": null,
+          "day": null
+        },
+        "sessionEmptyTitle": "Die Szene ist offen",
+        "sessionEmptyText": "Hier kann eine neue Szene beginnen."
+      },
+      {
+        "schemaVersion": 1,
+        "commentThreadKey": "garnison-zeughaus",
+        "pageTitle": "Zeughaus",
+        "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/module-assets%2Fcastell-draig%2Fexpansion-2026-10-15%2Fgarnison-zeughaus-d2a371ee65c2a573.png?alt=media&token=b7bbb63a-9cb2-4d7c-bf4a-f24086dcf265",
+        "imageWidth": 20,
+        "sessionPage": true,
+        "sessionIntro": "Waffenständer, Schilde und verschlossene Ausrüstungstruhen stehen geordnet im steinernen Zeughaus. Eine Werkbank dient der Pflege und Ausgabe des Rüstzeugs.",
+        "sessionHint": "Schreibe deinen Beitrag zu dieser Szene.",
+        "sessionLocation": "Castell Draig · Zeughaus",
+        "sessionStatus": "active",
+        "sessionParticipants": [],
+        "sessionDateAleria": {
+          "year": null,
+          "month": null,
+          "day": null
+        },
+        "sessionEmptyTitle": "Die Szene ist offen",
+        "sessionEmptyText": "Hier kann eine neue Szene beginnen."
+      },
+      {
+        "schemaVersion": 1,
+        "commentThreadKey": "garnison-speisesaal",
+        "pageTitle": "Speise- und Aufenthaltsraum",
+        "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/module-assets%2Fcastell-draig%2Fexpansion-2026-10-15%2Fgarnison-speisesaal-6758999c74a4cd4d.png?alt=media&token=042ede88-a301-4952-8c1f-cf560e6aa3bb",
+        "imageWidth": 20,
+        "sessionPage": true,
+        "sessionIntro": "Lange Holztische mit Bänken stehen vor dem offenen Herd. Eine kleine Ausgabe verbindet den Raum mit der Küche; einfaches Geschirr wartet in den Regalen.",
+        "sessionHint": "Schreibe deinen Beitrag zu dieser Szene.",
+        "sessionLocation": "Castell Draig · Speise- und Aufenthaltsraum",
+        "sessionStatus": "active",
+        "sessionParticipants": [],
+        "sessionDateAleria": {
+          "year": null,
+          "month": null,
+          "day": null
+        },
+        "sessionEmptyTitle": "Die Szene ist offen",
+        "sessionEmptyText": "Hier kann eine neue Szene beginnen."
+      }
+    ]
+  }
+}

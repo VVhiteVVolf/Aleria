@@ -3,9 +3,11 @@ import { getCheckDefinition } from '../skill-checks/skill-check-model.js?v=20261
 import { normalizeHerausforderungBenefits, validateHerausforderungBenefits } from './herausforderung-rewards.js?v=20261015-graded-challenges-v1';
 import { normalizeChallengeAudience, validateChallengeAudience } from './herausforderung-combat-context.js?v=20261015-check-options-v1';
 import { normalizeChallengeSceneImage, validateChallengeSceneImage } from './herausforderung-scene-image-model.js';
+import { normalizeChallengeCheckPenalties, validateChallengeCheckPenalties } from './herausforderung-check-policy.js?v=20261016-check-policy-v1';
+import { normalizeChallengeTarget, validateChallengeTarget } from './herausforderung-target.js?v=20261016-check-policy-v1';
 
 export const HERAUSFORDERUNG_EVENT_KIND = 'herausforderung-event';
-export const HERAUSFORDERUNG_SCHEMA_VERSION = 7;
+export const HERAUSFORDERUNG_SCHEMA_VERSION = 8;
 export const MIN_HERAUSFORDERUNG_APPROACHES = 1;
 export const MAX_HERAUSFORDERUNG_APPROACHES = 6;
 export const HERAUSFORDERUNG_NARROW_FAILURE_MARGIN = 3;
@@ -16,6 +18,8 @@ export const HERAUSFORDERUNG_ALTERNATIVE_MODIFIER = 0;
 export function getHerausforderungValidationIssues(event = {}) {
   event = event && typeof event === 'object' ? event : {};
   const issues = [];
+  const targetError = validateChallengeTarget(event.targetActor);
+  if (targetError) issues.push({ field: 'targetActor', message: targetError });
   const imageError = validateChallengeSceneImage(event.sceneImage);
   if (imageError) issues.push({ field: 'sceneImage', message: imageError });
   const audienceError = validateChallengeAudience(event.audience);
@@ -26,6 +30,8 @@ export function getHerausforderungValidationIssues(event = {}) {
   if (approaches.length > MAX_HERAUSFORDERUNG_APPROACHES) issues.push({ field: 'approaches', message: 'Höchstens sechs Ansätze sind erlaubt.' });
   const ids = new Set();
   approaches.forEach((approach, index) => {
+    const penaltyError = validateChallengeCheckPenalties(approach);
+    if (penaltyError) issues.push({ index, field: 'checkPenalty', message: `Ansatz ${index + 1}: ${penaltyError}` });
     if (!Array.isArray(approach?.preferredSkills) || !approach.preferredSkills.some(skill => String(skill || '').trim())) issues.push({ index, field: 'preferredSkill', message: `Ansatz ${index + 1}: Mindestens eine passende Probe wählen.` });
     else if (approach.preferredSkills.some(skill => !getCheckDefinition(skill))) issues.push({ index, field: 'preferredSkill', message: `Ansatz ${index + 1}: Eine gültige Fertigkeit, einen Attributs- oder Rettungswurf wählen.` });
     if (!approach?.outcomeTable?.length && !String(approach?.insight || '').trim()) issues.push({ index, field: 'insight', message: `Ansatz ${index + 1}: Eine verdeckte Erkenntnis eintragen.` });
@@ -70,6 +76,7 @@ export function normalizeHerausforderungApproach(value = {}, index = 0) {
     approachId: text(source.approachId, 40) || makeApproachId(),
     label: text(source.label, 160) || `Ansatz ${index + 1}`,
     preferredSkills,
+    checkPenalties: normalizeChallengeCheckPenalties(source.checkPenalties),
     difficulty: integer(getOutcomeSuccessDifficulty(source.outcomeTable, source.difficulty), 10, 1, 40),
     insight: text(source.insight, 2000),
     partialHint: text(source.partialHint, 2000),
@@ -104,6 +111,7 @@ export function normalizeHerausforderungEvent(value = {}) {
     schemaVersion: HERAUSFORDERUNG_SCHEMA_VERSION,
     title: text(source.title, 180) || 'Herausforderung',
     publicDescription: text(source.publicDescription, 4000),
+    targetActor: normalizeChallengeTarget(source.targetActor),
     sceneImage: normalizeChallengeSceneImage(source.sceneImage),
     audience: normalizeChallengeAudience(source.audience),
     combatBound: source.combatBound === true || source.audience?.mode === 'combatants',
@@ -145,6 +153,10 @@ export function collectHerausforderungApproaches(comments = []) {
         segmentIndex: 0,
         difficulty: approach.difficulty,
         preferredSkills: approach.preferredSkills,
+        checkPenalties: approach.checkPenalties,
+        targetActor: event.targetActor,
+        title: event.title,
+        approachLabel: approach.label,
         preferredModifier: HERAUSFORDERUNG_PREFERRED_MODIFIER,
         alternativeModifier: HERAUSFORDERUNG_ALTERNATIVE_MODIFIER,
         defenseMode: 'fixed',

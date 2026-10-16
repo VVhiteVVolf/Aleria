@@ -1,0 +1,12 @@
+.herausforderung-target-editor { display: grid; gap: 8px; padding: 14px; border: 1px solid #b49b7366; border-radius: 6px; background: #fff8eb; }
+.herausforderung-target-editor small { color: #806b53; font: 12px/1.5 Georgia,serif; }
+.herausforderung-check-option { display: grid; flex: 1 1 230px; gap: 8px; min-width: 0; padding: 8px; border: 1px solid #b49b7344; border-radius: 6px; background: #e9e4d9; }
+.herausforderung-check-option.is-allowed { border-color: #a95b43; background: #fbede2; }
+.herausforderung-check-option .herausforderung-skill-check { width: 100%; }
+.herausforderung-check-option .herausforderung-skill-check > span { width: 100%; }
+.herausforderung-check-option .herausforderung-skill-check input:checked + span { background: #7b2924; border-color: #9b4738; color: #fff1db; }
+.herausforderung-check-adjustment { display: grid; grid-template-columns: 70px minmax(0,1fr); gap: 8px; }
+.herausforderung-check-option:not(.is-allowed) .herausforderung-check-adjustment { display: none; }
+.herausforderung-fields .herausforderung-check-adjustment label { min-width: 0; font-size: 10px; }
+.herausforderung-fields .herausforderung-check-adjustment input { padding: 7px; font-size: 12px; }
+@media(max-width:600px) { .herausforderung-check-option { flex-basis: 100%; } }

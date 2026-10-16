@@ -1,0 +1,16 @@
+{
+  "status": "VERIFIED",
+  "source": "E:\\Nolvus\\Instances\\Nolvus Awakening\\MODS\\mods\\SkyrimNet - Beta25 Test Runtime 20260927\\SKSE\\Plugins\\SkyrimNet\\config\\OpenRouter.yaml",
+  "profile": "Nolvus Awakening - SkyrimNet Beta25 Test",
+  "change": {
+    "provider_sorting": {
+      "before": "latency",
+      "after": "price"
+    }
+  },
+  "before_sha256": "1332ed03b6388dddf6908fdd04cd7cc3995bb468bb636e9065504886ed405eda",
+  "after_sha256": "3a5462c2b3c6f0dc14b364f86ddd216a5c4b55c0e09e999a31dedcf2944e2202",
+  "backup_and_updated_snapshot": "E:\\Aleria\\diagnostics\\skyrimnet-price-routing-20261001-062757",
+  "validation": "Exactly one configuration value changed; YAML structure and byte readback verified.",
+  "runtime_test": "Pending next Skyrim launch; no paid API call issued."
+}

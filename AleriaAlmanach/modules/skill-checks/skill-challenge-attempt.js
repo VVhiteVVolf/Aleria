@@ -1,4 +1,5 @@
 import { getCheckCommentKind, getCheckDefinition } from './skill-check-model.js?v=20261015-check-options-v1';
+import { getChallengeCheckRule } from '../herausforderung/herausforderung-check-policy.js?v=20261016-check-policy-v1';
 
 // The existing contribution catalog remains the owner of skill/kind mapping.
 export function getChallengeAttemptChoices(challenge) {
@@ -6,7 +7,8 @@ export function getChallengeAttemptChoices(challenge) {
   return [...new Set(ids)].flatMap(id => {
     const skill = getCheckDefinition(id);
     const kind = getCheckCommentKind(id);
-    return skill && kind ? [{ ...skill, kind }] : [];
+    const rule = getChallengeCheckRule(challenge, id);
+    return skill && kind && rule.allowed ? [{ ...skill, kind, modifier: rule.modifier, penaltyReason: rule.reason }] : [];
   });
 }
 

@@ -522,9 +522,9 @@ test('aktive Zustände steuern den Angriffswurf und Vorteil und Nachteil heben s
   assert.equal(resolveAttackRollMode(advantage, 'disadvantage'), 'normal');
 });
 
-test('akzeptiert W-Schreibweise und verdoppelt bei kritischem Treffer nur Schadenswürfel', () => {
+test('akzeptiert W-Schreibweise und setzt bei kritischem Treffer den Grundpool maximal', () => {
   assert.deepEqual(parseDamageFormula('1W8+1'), { diceCount: 1, sides: 8, fixedModifier: 1, notation: '1d8+1' });
-  assert.equal(buildDamageNotation('1W8+1', 3, true), '2d8+4');
+  assert.equal(buildDamageNotation('1W8+1', 3, true), '1d8+12');
   assert.deepEqual(parseDamageFormula('1W10+1W4'), {
     diceCount: 2,
     sides: null,
@@ -532,7 +532,7 @@ test('akzeptiert W-Schreibweise und verdoppelt bei kritischem Treffer nur Schade
     notation: '1d10+1d4',
     terms: [{ diceCount: 1, sides: 10 }, { diceCount: 1, sides: 4 }]
   });
-  assert.equal(buildDamageNotation('1W10+1W4', 0, true), '2d10+2d4');
+  assert.equal(buildDamageNotation('1W10+1W4', 0, true), '1d10+1d4+14');
 });
 
 test('wertet Gleichstand, natürliche Eins und natürliche Zwanzig korrekt aus', () => {

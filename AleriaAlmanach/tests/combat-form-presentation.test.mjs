@@ -26,13 +26,14 @@ test('alte und neue Jungdrachen-Techniken erscheinen in beiden Auswahlansichten 
   const techniques = getBalanceCatalog().filter(entry => entry.combatStyleFormId === 'drachentanz-form-i-jungdrache'
     && (!entry.cenyrTraining?.allowedClassIds?.length || entry.cenyrTraining.allowedClassIds.includes('teulu')));
   assert.equal(techniques.length, 26);
-  const actor = { techniques, actions: techniques.map(entry => ({ id: `technique:${entry.id}`, sourceId: entry.id, kind: 'technique', name: entry.name })) };
+  const actor = { templateSelections: { classId: 'teulu' }, techniques, actions: techniques.map(entry => ({ id: `technique:${entry.id}`, sourceId: entry.id, kind: 'technique', name: entry.name })) };
   const groups = getActionGroups(actor);
   assert.equal(groups.size, 1);
   assert.equal([...groups.values()][0].length, 26);
-  assert.equal((renderActionOptions(actor).match(/<optgroup /g) || []).length, 1);
+  const options = renderActionOptions(actor);
+  for (const action of actor.actions) assert.equal(options.split(`value="${action.id}"`).length - 1, 1);
   const picker = renderActionPicker(actor);
-  assert.equal((picker.match(/data-combat-action-group>/g) || []).length, 1);
+  assert.equal((picker.match(/class="combat-action-picker-group"/g) || []).length, 1);
   for (const action of actor.actions) assert.equal(picker.split(`data-combat-action-option="${action.id}"`).length - 1, 1);
 });
 

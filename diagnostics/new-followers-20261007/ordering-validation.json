@@ -1,0 +1,165 @@
+{
+  "anchor": "Beards.esp",
+  "new_base_plugins": [
+    "Amy_follower.esp",
+    "AvengerOfTheLost.esp",
+    "FistsoftheUnyielding.esp",
+    "Brothers of the Wild.esp",
+    "DaedricIndividuals.esp",
+    "DracaniaArmor.esp",
+    "[ELLE] Elven Assasin.esp",
+    "Hyren - New Companion - Follower - High Poly - ESL.esp",
+    "Skogul.esp",
+    "(SDZ21) Lovely Malryn Follower Standalone.esp",
+    "DZ08_Melana.esp",
+    "CS_Visions.esp",
+    "VriTarlFollower.esp",
+    "EolaReplacer.esp",
+    "SN Cicero Replacer.esp",
+    "Blackbeerd's Beards.esp",
+    "milfactory asset hub.esp",
+    "CSV_Karla.esp",
+    "CS_Lyris.esp",
+    "CS_Melana.esp",
+    "Sieglinde Sswayes Mom Companion.esp",
+    "SonOfTheNorth.esp"
+  ],
+  "compatibility_patch_last": "Local New Followers NPC Compatibility.esp",
+  "original_order_preserved": true,
+  "protected_environment_records": {
+    "skyrim.esm:00003c": {
+      "plugin": "Markarth Paper Map for FWMF.esp",
+      "position": 3996,
+      "kind": "WRLD",
+      "deleted": false
+    },
+    "skyrim.esm:000d74": {
+      "plugin": "Markarth Paper Map for FWMF.esp",
+      "position": 3996,
+      "kind": "CELL",
+      "deleted": false
+    },
+    "skyrim.esm:009b7b": {
+      "plugin": "Occlusion.esp",
+      "position": 3990,
+      "kind": "CELL",
+      "deleted": false
+    },
+    "skyrim.esm:009bc0": {
+      "plugin": "Occlusion.esp",
+      "position": 3990,
+      "kind": "CELL",
+      "deleted": false
+    },
+    "skyrim.esm:013814": {
+      "plugin": "SkoomaWhoreReforged.esp",
+      "position": 3965,
+      "kind": "CELL",
+      "deleted": false
+    },
+    "skyrim.esm:0a8b23": {
+      "plugin": "SkoomaWhoreReforged.esp",
+      "position": 3965,
+      "kind": "CELL",
+      "deleted": false
+    },
+    "skyrim.esm:0165a3": {
+      "plugin": "ufokSorceress.esp",
+      "position": 3964,
+      "kind": "CELL",
+      "deleted": false
+    },
+    "skyrim.esm:01605e": {
+      "plugin": "SeverActions.esp",
+      "position": 3906,
+      "kind": "CELL",
+      "deleted": false
+    },
+    "skyrim.esm:016789": {
+      "plugin": "Nolvus Awakening Lighting Patch.esp",
+      "position": 3764,
+      "kind": "CELL",
+      "deleted": false
+    },
+    "skyrim.esm:0138be": {
+      "plugin": "Nolvus Awakening Lighting Patch.esp",
+      "position": 3764,
+      "kind": "CELL",
+      "deleted": false
+    },
+    "skyrim.esm:07947a": {
+      "plugin": "Nolvus Awakening Lighting Patch.esp",
+      "position": 3764,
+      "kind": "CELL",
+      "deleted": false
+    },
+    "skyrim.esm:016dfe": {
+      "plugin": "Nolvus Awakening Lighting Patch.esp",
+      "position": 3764,
+      "kind": "CELL",
+      "deleted": false
+    },
+    "skyrim.esm:016a0e": {
+      "plugin": "Nolvus Awakening Lighting Patch.esp",
+      "position": 3764,
+      "kind": "CELL",
+      "deleted": false
+    },
+    "skyrim.esm:0138ce": {
+      "plugin": "Nolvus Awakening Morthal Patch.esp",
+      "position": 3681,
+      "kind": "CELL",
+      "deleted": false
+    },
+    "skyrim.esm:10fc45": {
+      "plugin": "Northern Roads - Half-Moon Mill COTNed patch.esp",
+      "position": 3500,
+      "kind": "NAVM",
+      "deleted": false
+    },
+    "skyrim.esm:0165a7": {
+      "plugin": "man_kynarethStatue.esp",
+      "position": 3428,
+      "kind": "CELL",
+      "deleted": false
+    },
+    "skyrim.esm:03a184": {
+      "plugin": "Lux - Distinct Interiors patch.esp",
+      "position": 3332,
+      "kind": "CELL",
+      "deleted": false
+    },
+    "skyrim.esm:0336fb": {
+      "plugin": "Lux - Legacy of the Dragonborn patch.esp",
+      "position": 3271,
+      "kind": "CELL",
+      "deleted": false
+    },
+    "skyrim.esm:016786": {
+      "plugin": "Lux - Legacy of the Dragonborn patch.esp",
+      "position": 3271,
+      "kind": "CELL",
+      "deleted": false
+    },
+    "skyrim.esm:0dd216": {
+      "plugin": "Lux.esp",
+      "position": 3242,
+      "kind": "CELL",
+      "deleted": false
+    },
+    "skyrim.esm:016bd5": {
+      "plugin": "Lux.esp",
+      "position": 3242,
+      "kind": "CELL",
+      "deleted": false
+    }
+  },
+  "author_navmesh_retained": {
+    "skyrim.esm:10fc46": {
+      "plugin": "Skyrim.esm",
+      "position": 0,
+      "kind": "NAVM",
+      "deleted": false
+    }
+  }
+}

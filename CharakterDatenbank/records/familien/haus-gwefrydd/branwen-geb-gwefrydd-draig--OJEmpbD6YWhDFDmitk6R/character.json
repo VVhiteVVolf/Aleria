@@ -80,6 +80,9 @@
       "collection": "characters",
       "documentId": "OJEmpbD6YWhDFDmitk6R",
       "documentIds": [
+        "OJEmpbD6YWhDFDmitk6R",
+        "OJEmpbD6YWhDFDmitk6R",
+        "OJEmpbD6YWhDFDmitk6R",
         "OJEmpbD6YWhDFDmitk6R"
       ],
       "documents": [
@@ -87,6 +90,21 @@
           "documentId": "OJEmpbD6YWhDFDmitk6R",
           "createdAt": "",
           "updatedAt": ""
+        },
+        {
+          "documentId": "OJEmpbD6YWhDFDmitk6R",
+          "createdAt": "",
+          "updatedAt": "2026-10-15T18:56:55.771Z"
+        },
+        {
+          "documentId": "OJEmpbD6YWhDFDmitk6R",
+          "createdAt": "",
+          "updatedAt": "2026-10-15T19:14:58.110Z"
+        },
+        {
+          "documentId": "OJEmpbD6YWhDFDmitk6R",
+          "createdAt": "",
+          "updatedAt": "2026-10-15T19:24:10.194Z"
         }
       ]
     },
@@ -108,13 +126,16 @@
   },
   "sync": {
     "strategy": "online-wins-runtime-local-wins-identity",
-    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
-    "sourceExportedAt": "2026-10-12T22:24:41.567Z",
-    "sourceUpdatedAt": "",
+    "sourceArchive": "Charakter Archiv Exporte/Biographien/branwen-draig-2026-10-15/branwen-charakter.json",
+    "sourceExportedAt": "2026-10-15T19:24:10.194Z",
+    "sourceUpdatedAt": "2026-10-15T19:24:10.194Z",
     "sourceDocumentIds": [
+      "OJEmpbD6YWhDFDmitk6R",
+      "OJEmpbD6YWhDFDmitk6R",
+      "OJEmpbD6YWhDFDmitk6R",
       "OJEmpbD6YWhDFDmitk6R"
     ],
-    "contentHash": "1122022ef06399d0ac3dd4f44c9bd902bdcbd9058b30c9f4c29b87bb3d6503d3"
+    "contentHash": "1fda47d3a336c9c60be90a818594bb5376348f965b3bfb98c734f442a3826bc5"
   },
   "local": {
     "notes": "",
@@ -654,119 +675,1978 @@
         "fraktion": "Haus Draig, Celtigerns Wacht",
         "aliases": [],
         "title": "Adjutantin des Herolds des Grafen, Rhosmere"
+      },
+      {
+        "id": "OJEmpbD6YWhDFDmitk6R",
+        "name": "Branwen (Geb. Gwefrydd) Draig",
+        "inventory": {
+          "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+          "moneyNotice": "",
+          "portraitFit": "cover",
+          "categories": [
+            {
+              "id": "weapon",
+              "icon": "https://i.imgur.com/YaUQREQ.png",
+              "label": "Waffen"
+            },
+            {
+              "id": "armor",
+              "icon": "https://i.imgur.com/5qZtUiY.png",
+              "label": "Rüstung"
+            },
+            {
+              "id": "equipment",
+              "label": "Ausrüstung",
+              "icon": "https://i.imgur.com/yMj2CQf.png"
+            },
+            {
+              "id": "potions",
+              "label": "Trinkturen",
+              "icon": "https://i.imgur.com/gwujEaL.png"
+            },
+            {
+              "id": "documents",
+              "icon": "https://i.imgur.com/urdalGm.png",
+              "label": "Dokumente"
+            },
+            {
+              "icon": "https://i.imgur.com/lgeevvn.png",
+              "label": "Sonstiges",
+              "id": "other"
+            }
+          ],
+          "money": "0 Gold, 0 Silber, 0 Kupfer",
+          "revision": 1792090615772,
+          "portrait": "https://i.imgur.com/U6kCjOZ.png",
+          "level": "Haus Draig, Celtigerns Wacht",
+          "equipmentQuiz": {
+            "status": "",
+            "updatedAt": "",
+            "resultText": "",
+            "answers": [
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "step": 0,
+            "open": false
+          },
+          "title": "Charakter-Inventar",
+          "infoRows": [],
+          "role": "Adjutantin des Herolds des Grafen, Rhosmere",
+          "hitpoints": "TP / Zustand",
+          "carryLabel": "Traglast",
+          "attributes": [
+            {
+              "label": "StA",
+              "value": 8
+            },
+            {
+              "value": 6,
+              "label": "Ges"
+            },
+            {
+              "value": 7,
+              "label": "Kon"
+            },
+            {
+              "label": "Int",
+              "value": 5
+            },
+            {
+              "label": "Wei",
+              "value": 6
+            },
+            {
+              "label": "Cha",
+              "value": 5
+            }
+          ],
+          "carryValue": "Noch festlegen",
+          "moneyState": {
+            "totalCopper": 0,
+            "gold": 0,
+            "silver": 0,
+            "copper": 0
+          },
+          "companions": [
+            {
+              "creatureId": "companion-branwen-eurwen",
+              "status": "Gesund",
+              "attributes": [],
+              "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fbranwen-draig%2F2026-10-15%2Feurwen-ceffyl-34cc98dd10c74ba2.png?alt=media&token=a97668ca-5eef-4bc9-a3c3-8c1010f9434b",
+              "id": "companion-mqu1vat2-0-zz2n",
+              "imageFit": "contain",
+              "description": "Eurwen ist Branwen Draigs prächtige beige Ceffyl-Stute. Sie hat eine dichte elfenbeinblonde Mähne und einen ebenso hellen Schweif. Branwen reitet sie im Alltag und beim Lanzentraining.",
+              "role": "Reittier",
+              "statusColor": "#5c7f20",
+              "summary": "Eurwen ist Branwen Draigs prächtige beige Ceffyl-Stute. Sie hat eine dichte elfenbeinblonde Mähne und einen ebenso hellen Schweif. Branwen reitet sie im Alltag und beim Lanzentraining.",
+              "species": "Ceffyl",
+              "imageFormat": "portrait",
+              "imagePosition": "center",
+              "infoRows": [],
+              "name": "Eurwen",
+              "inventoryItemId": "branwen-eurwen"
+            },
+            {
+              "creatureId": "companion-branwen-mabon",
+              "name": "Mabon",
+              "id": "companion-mqu1vat2-1-5e7l",
+              "imageFit": "contain",
+              "imageFormat": "portrait",
+              "inventoryItemId": "branwen-mabon",
+              "imagePosition": "center",
+              "attributes": [],
+              "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fbranwen-draig%2F2026-10-15%2Fmabon-rhedwyr-d7d253ea352cf1bc.png?alt=media&token=1339ca51-4fe7-4cbe-8f41-1e9ad8152c15",
+              "statusColor": "#5c7f20",
+              "status": "Gesund",
+              "description": "Mabon ist Branwen Draigs sandfarbener Rhedwyr-Rüde und Eiras Wurfbruder. Eine alte Trollverletzung hat seine linke Schulter vernarbt; nach längerer Ruhe sind seine ersten Schritte steif.",
+              "role": "Gefährte",
+              "infoRows": [],
+              "species": "Rhedwyr",
+              "summary": "Mabon ist Branwen Draigs sandfarbener Rhedwyr-Rüde und Eiras Wurfbruder. Eine alte Trollverletzung hat seine linke Schulter vernarbt; nach längerer Ruhe sind seine ersten Schritte steif."
+            },
+            {
+              "creatureId": "companion-branwen-eira",
+              "description": "Eira ist Branwen Draigs elfenbeinweiße Rhedwyr-Hündin mit hellsandfarbenen Flecken und Mabons Wurfschwester. Von der Trolljagd blieben eine fehlende rechte Ohrspitze und eine verheilte Narbe am Ohransatz.",
+              "status": "Gesund",
+              "imageFit": "contain",
+              "role": "Gefährte",
+              "id": "card-branwen-eira",
+              "imagePosition": "center",
+              "attributes": [],
+              "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fbranwen-draig%2F2026-10-15%2Feira-rhedwyr-03bed3dd9565345b.png?alt=media&token=c6ba2b59-e5bd-4cee-b414-18e085a8d985",
+              "summary": "Eira ist Branwen Draigs elfenbeinweiße Rhedwyr-Hündin mit hellsandfarbenen Flecken und Mabons Wurfschwester. Von der Trolljagd blieben eine fehlende rechte Ohrspitze und eine verheilte Narbe am Ohransatz.",
+              "species": "Rhedwyr",
+              "inventoryItemId": "branwen-eira",
+              "infoRows": [],
+              "name": "Eira",
+              "imageFormat": "portrait"
+            }
+          ],
+          "status": "Gesund",
+          "portraitFormat": "portrait",
+          "healthColor": "#5c7f20",
+          "portraitPosition": "top",
+          "name": "Branwen (Geb. Gwefrydd) Draig",
+          "items": [
+            {
+              "tags": "",
+              "imageFormat": "square",
+              "id": "item-mqu1vat1-0-w8ef",
+              "category": "weapon",
+              "imageFit": "contain",
+              "name": "Hauptwaffe",
+              "type": "Waffe",
+              "weight": "Noch festlegen",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "quantity": "1",
+              "infoRows": [],
+              "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+              "imagePosition": "center",
+              "icon": "*",
+              "image": ""
+            },
+            {
+              "tags": "",
+              "description": "Rüstung, Kleidung oder magischer Schutz.",
+              "category": "armor",
+              "name": "Rüstung / Schutz",
+              "imageFit": "contain",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "type": "Rüstung",
+              "weight": "Noch festlegen",
+              "quantity": "1",
+              "id": "item-mqu1vat1-1-exvo",
+              "infoRows": [],
+              "imageFormat": "square",
+              "icon": "*",
+              "image": "",
+              "imagePosition": "center"
+            },
+            {
+              "image": "",
+              "weight": "Noch festlegen",
+              "icon": "*",
+              "id": "item-mqu1vat1-2-0fx2",
+              "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "imageFit": "contain",
+              "category": "equipment",
+              "imagePosition": "center",
+              "imageFormat": "square",
+              "type": "Ausrüstung",
+              "tags": "",
+              "infoRows": [],
+              "quantity": "1",
+              "name": "Reiseausrüstung"
+            },
+            {
+              "icon": "*",
+              "image": "",
+              "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+              "infoRows": [],
+              "quantity": "1",
+              "imageFormat": "square",
+              "weight": "Noch festlegen",
+              "id": "item-mqu1vat1-3-2lgm",
+              "type": "Trinktur",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "name": "Heil- oder Verbrauchsgut",
+              "imageFit": "contain",
+              "tags": "",
+              "category": "potions",
+              "imagePosition": "center"
+            },
+            {
+              "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+              "infoRows": [],
+              "quantity": "1",
+              "tags": "",
+              "name": "Dokumente / Urkunden",
+              "type": "Dokument",
+              "id": "item-mqu1vat1-4-ajrj",
+              "category": "documents",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "imageFit": "contain",
+              "weight": "Noch festlegen",
+              "imagePosition": "center",
+              "imageFormat": "square",
+              "image": "",
+              "icon": "*"
+            },
+            {
+              "name": "Persönlicher Gegenstand",
+              "infoRows": [],
+              "tags": "",
+              "image": "",
+              "imagePosition": "center",
+              "quantity": "1",
+              "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "type": "Sonstiges",
+              "weight": "Noch festlegen",
+              "imageFormat": "square",
+              "id": "item-mqu1vat1-5-5kao",
+              "imageFit": "contain",
+              "category": "other",
+              "icon": "*"
+            },
+            {
+              "templateId": "",
+              "individualizedAt": "2026-10-15T18:56:55.780Z",
+              "imageFit": "contain",
+              "category": "companion",
+              "imageFormat": "portrait",
+              "itemStorageMode": "character",
+              "imagePosition": "center",
+              "ownerCharacterId": "OJEmpbD6YWhDFDmitk6R",
+              "originItemDbKey": "",
+              "instanceId": "branwen-eurwen",
+              "name": "Eurwen",
+              "creatureId": "companion-branwen-eurwen",
+              "quantity": "1",
+              "id": "branwen-eurwen",
+              "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fbranwen-draig%2F2026-10-15%2Feurwen-ceffyl-34cc98dd10c74ba2.png?alt=media&token=a97668ca-5eef-4bc9-a3c3-8c1010f9434b",
+              "itemDbKey": "",
+              "infoRows": [],
+              "templateName": "Ceffyl",
+              "ownerCharacterName": "Branwen (Geb. Gwefrydd) Draig",
+              "attributes": [],
+              "registerCategory": "pferde",
+              "description": "Eurwen ist Branwen Draigs prächtige beige Ceffyl-Stute. Sie hat eine dichte elfenbeinblonde Mähne und einen ebenso hellen Schweif. Branwen reitet sie im Alltag und beim Lanzentraining.",
+              "type": "Ceffyl"
+            },
+            {
+              "infoRows": [],
+              "imagePosition": "center",
+              "quantity": "1",
+              "ownerCharacterName": "Branwen (Geb. Gwefrydd) Draig",
+              "itemStorageMode": "character",
+              "id": "branwen-mabon",
+              "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fbranwen-draig%2F2026-10-15%2Fmabon-rhedwyr-d7d253ea352cf1bc.png?alt=media&token=1339ca51-4fe7-4cbe-8f41-1e9ad8152c15",
+              "originItemDbKey": "",
+              "instanceId": "branwen-mabon",
+              "registerCategory": "vieh",
+              "templateId": "",
+              "description": "Mabon ist Branwen Draigs sandfarbener Rhedwyr-Rüde und Eiras Wurfbruder. Eine alte Trollverletzung hat seine linke Schulter vernarbt; nach längerer Ruhe sind seine ersten Schritte steif.",
+              "imageFit": "contain",
+              "templateName": "Rhedwyr",
+              "category": "companion",
+              "name": "Mabon",
+              "attributes": [],
+              "individualizedAt": "2026-10-15T18:56:55.781Z",
+              "imageFormat": "portrait",
+              "ownerCharacterId": "OJEmpbD6YWhDFDmitk6R",
+              "itemDbKey": "",
+              "creatureId": "companion-branwen-mabon",
+              "type": "Rhedwyr"
+            },
+            {
+              "registerCategory": "vieh",
+              "instanceId": "branwen-eira",
+              "description": "Eira ist Branwen Draigs elfenbeinweiße Rhedwyr-Hündin mit hellsandfarbenen Flecken und Mabons Wurfschwester. Von der Trolljagd blieben eine fehlende rechte Ohrspitze und eine verheilte Narbe am Ohransatz.",
+              "templateName": "Rhedwyr",
+              "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fbranwen-draig%2F2026-10-15%2Feira-rhedwyr-03bed3dd9565345b.png?alt=media&token=c6ba2b59-e5bd-4cee-b414-18e085a8d985",
+              "itemDbKey": "",
+              "imagePosition": "center",
+              "quantity": "1",
+              "infoRows": [],
+              "templateId": "",
+              "name": "Eira",
+              "attributes": [],
+              "ownerCharacterId": "OJEmpbD6YWhDFDmitk6R",
+              "originItemDbKey": "",
+              "imageFit": "contain",
+              "itemStorageMode": "character",
+              "creatureId": "companion-branwen-eira",
+              "category": "companion",
+              "imageFormat": "portrait",
+              "individualizedAt": "2026-10-15T18:56:55.781Z",
+              "ownerCharacterName": "Branwen (Geb. Gwefrydd) Draig",
+              "id": "branwen-eira",
+              "type": "Rhedwyr"
+            }
+          ]
+        },
+        "updatedAt": "2026-10-15T18:56:55.771Z",
+        "bio": "Lady Branwen Draig, geborene Gwefrydd (*1700), ist Cadfan Draigs willensstarke Adjutantin. Als Ausbildungsmündel wuchs sie im Haushalt Odyar Draigs und Beibhinn Eirces in Gwynthor auf; Odyar wurde ihr Rittervater. Mit Steffan hat sie die Kinder Gethin und Tegan. Ihre Pferdekenntnis reicht beinahe an Owain Draigs heran. Zu ihr gehören die beige Ceffyl-Stute Eurwen und die Rhedwyr-Geschwister Mabon und Eira, die Steffan vor vielen Jahren bei einer Trolljagd rettete.",
+        "biography": {
+          "schemaVersion": 1,
+          "quote": "",
+          "quoteBy": "",
+          "schema": "aleria.biography-module",
+          "revision": 1792090615772,
+          "stats": [
+            {
+              "label": "Geboren",
+              "value": "1700"
+            },
+            {
+              "label": "Herkunft",
+              "value": "Rhosmere · Artus Streben"
+            },
+            {
+              "label": "Geburtshaus",
+              "value": "Haus Gwefrydd"
+            },
+            {
+              "label": "Eltern",
+              "value": "Stennis Gwefrydd und Morwen Dyngwn"
+            },
+            {
+              "label": "Bruder",
+              "value": "Thomos Gwefrydd"
+            },
+            {
+              "label": "Amt",
+              "value": "Adjutantin des Herolds des Grafen"
+            },
+            {
+              "label": "Ehemann",
+              "value": "Sir Steffan Draig (*1696)"
+            },
+            {
+              "label": "Kinder",
+              "value": "Gethin (*1722) und Tegan (*1725)"
+            },
+            {
+              "label": "Rittervater",
+              "value": "Sir Odyar Draig"
+            }
+          ],
+          "biography": {
+            "biographyTitle": "Lady Branwen Draig, geborene Gwefrydd",
+            "worksTitle": "",
+            "abilities": [
+              {
+                "detail": "Branwen bringt ihre Vorschläge vor und erwartet eine klare Antwort. Ein höflicher Ton hält sie nicht von einem Widerspruch ab.",
+                "title": "Bestimmend"
+              },
+              {
+                "title": "Aufmerksame Gastgeberin",
+                "detail": "Sie bietet Gästen Unterkunft nahe den eigenen Gemächern an und bezieht Steffan mit großer Selbstverständlichkeit in ihre Pläne ein."
+              },
+              {
+                "title": "Gezielte Fragen",
+                "detail": "Sie fragt nach weiteren Gewerben eines Hauses und prüft, welche Auskunft sie tatsächlich erhält. Bereits genannte Gründe wiederholt sie ungern."
+              }
+            ],
+            "extraSections": [
+              {
+                "position": "afterWorks",
+                "mode": "text",
+                "text": "<p>Branwens Ross ist <strong>Eurwen</strong>, eine prächtige beige <strong>Ceffyl-Stute</strong> mit heller, dichter Mähne. Zu ihr gehören außerdem die beiden <strong>Rhedwyr</strong> <strong>Mabon</strong> und <strong>Eira</strong>, Geschwister aus demselben Wurf.</p><p>Früher waren es fünf Hunde. Drei starben bei einer Jagd, als Gethin und Tegan noch sehr klein waren. Fragt man Branwen danach, sagt sie, es sei ein Troll gewesen. <strong>Steffan konnte Mabon und Eira retten.</strong> Mabons linke Schulter blieb vernarbt und ist nach Ruhe steif. Eira verlor ein Stück der rechten Ohrspitze. Branwen kennt die alten Verletzungen und berücksichtigt sie beim Umgang mit beiden Hunden.</p>",
+                "title": "Eurwen, Mabon und Eira"
+              }
+            ],
+            "portraitStages": [
+              "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fbranwen-draig%2F2026-10-15%2Fbranwen-gwefrydd-ruestung-eurwen-e84eb18a4aebe543.png?alt=media&token=d8534964-49d6-4ac5-aaec-07697227e9d0",
+              "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fbranwen-draig%2F2026-10-15%2Fbranwen-20-8c1fa1aae8a89b98.png?alt=media&token=23ea9016-ddd6-49c6-881a-31bf07d79471",
+              "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fbranwen-draig%2F2026-10-15%2Fbranwen-14-bfe6e9194a763c37.png?alt=media&token=4fee1a95-a633-4fbd-835a-b1f5e35f8750",
+              "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fbranwen-draig%2F2026-10-15%2Fbranwen-08-138cb9fc58596825.png?alt=media&token=c100cca4-8638-446e-9bf7-00573eccc3ab"
+            ],
+            "connectionsTitle": "Familie und Ausbildung",
+            "portrait": "https://i.imgur.com/U6kCjOZ.png",
+            "footer": "",
+            "connectionTextOffset": 0,
+            "abilitiesTitle": "Im Umgang mit anderen",
+            "triviaTitle": "Marotten",
+            "quotesTitle": "In ihren Worten",
+            "historyText": "<p>Branwen wurde <strong>1700</strong> als Tochter von <strong>Stennis Gwefrydd</strong> und <strong>Morwen Dyngwn</strong> geboren. Ihr Bruder Thomos ist zwei Jahre älter. In Rhosmere gehörten Pferde, Stallarbeit und Reiten früh zu ihrem Alltag.</p><p><strong>1708</strong>, mit acht Jahren, kam sie als Ausbildungsmündel in den Haushalt <strong>Sir Odyar Draigs</strong> und seiner Frau <strong>Beibhinn Eirce</strong> nach Gwynthor. Ihre Eltern lebten; der Aufenthalt diente ihrer Erziehung und Ausbildung am Hof der Draigs. Dort lernte sie auch deren Sohn Steffan kennen. Beibhinn betreute ihre höfische Erziehung. Odyar wurde ihr Rittervater: Mit vierzehn begann Branwen bei ihm ihre Knappenausbildung, mit besonderem Gewicht auf sicherem Reiten, dem Umgang mit der Lanze und dem Dienst im Haushalt. Mit zwanzig hatte sie diese Ausbildung abgeschlossen.</p><p>Später heiratete sie Steffan. <strong>1722</strong> wurde Gethin geboren, <strong>1725</strong> Tegan. Ihre Verbindung nach Rhosmere blieb eng; am Hof von Gwynthor arbeitet sie heute an Cadfans Seite.</p>",
+            "quotes": [
+              "„Ist es nicht so, Gemahl!?“",
+              "„Verzeiht also, Ritterfürst Huw... aber eine Lektion über Haus Gwefrydd benötige ich nicht.“"
+            ],
+            "connections": [
+              {
+                "type": "connection",
+                "name": "Sir Steffan Draig",
+                "detail": "Ihr Ehemann; rettete Mabon und Eira bei der Jagd. Seine seltenen Machtworte respektiert sie."
+              },
+              {
+                "detail": "Ihr Sohn, geboren 1722, und ihr ganzer Stolz.",
+                "type": "connection",
+                "name": "Gethin Draig"
+              },
+              {
+                "name": "Tegan Draig",
+                "type": "connection",
+                "detail": "Ihre Tochter, geboren 1725. Branwen weiß sie bei Lady Rihanna und Isobel in guter Obhut."
+              },
+              {
+                "name": "Sir Odyar Draig und Beibhinn Eirce",
+                "type": "connection",
+                "detail": "Steffans Eltern. Sie nahmen Branwen als Ausbildungsmündel auf; Odyar wurde ihr Rittervater."
+              }
+            ],
+            "biographyText": "<p>Branwen dient <strong>Sir Cadfan Draig</strong> als Adjutantin des Herolds des Grafen. Sie bereitet Audienzen vor, organisiert Boten und Reiseaufträge und hält Schriftverkehr, Siegelumlauf und Abschriften zusammen. Fehlen ihr Informationen, lässt sie sich den bisherigen Stand knapp erklären und fragt nach. Vor dem Rat spricht sie höflich und bestimmt. Eine Belehrung über ihr eigenes Haus weist sie ebenso höflich zurück.</p><p>Mit <strong>Steffan</strong> ist sie seit vielen Jahren verheiratet. Sie mag ihren Mann, plant gern für beide und setzt seine Zustimmung gelegentlich voraus. Ein wiederholtes „Nicht wahr, Gemahl?“ oder ein Ellenbogen in seine Seite gehört dazu. Wenn Steffan ein Machtwort spricht, respektiert sie es. Er tut es selten genug, dass sie darauf hört. <strong>Gethin</strong> ist ihr ganzer Stolz; sie hält ihn für ausgesprochen gut geraten und lässt andere das wissen. <strong>Tegan</strong> liebt sie ebenso. Bei Lady <strong>Rihanna Draig, geborener Ceirwyn</strong>, und <strong>Isobel</strong> weiß sie ihre Tochter gut aufgehoben. Wenn Tegan den Saal verlässt, bleibt ihrer Mutter ein warmes „Sie ist ja so ein Sonnenschein“.</p><p>Ihre Herkunft aus <strong>Haus Gwefrydd</strong> merkt man Branwen am schnellsten bei Pferden an. Abstammung, Gang, Beschlag und Ausbildung interessieren sie auch dann, wenn sie gerade dienstlich unterwegs ist. Ihre Pferdekenntnis reicht beinahe an die Owain Draigs heran. Zugleich kennt sie die Höfe, Straßen und Grenzverhältnisse ihrer Heimat. Bei der Aufnahme neuer Häuser bedenkt sie bestehende Lehensansprüche und die Belastung der Orte um Rhosmere. Gästen bietet sie bereitwillig Unterkunft an; neue Verpflichtungen sagt sie nach genauer Prüfung zu.</p>",
+            "portraitCaptions": [
+              "Branwen Draig · 1740.",
+              "Mit Eurwen in der Rüstung des Hauses Gwefrydd · 1740.",
+              "Mit 20 Jahren · 1720. Nach ihrer Ausbildung bei Sir Odyar.",
+              "Mit 14 Jahren · 1714. Knappin im Haushalt Odyars und Beibhinns.",
+              "Mit 8 Jahren · 1708. Als Ausbildungsmündel in Gwynthor."
+            ],
+            "sideWidth": 100,
+            "trivia": [
+              "Hat sie für Steffan bereits mitgeplant, folgt gern ein „Nicht wahr, Gemahl?“ Bleibt seine Antwort aus, fragt sie noch einmal nach und hilft gelegentlich mit dem Ellenbogen nach.",
+              "Bei einem fremden Pferd fragt sie nach Abstammung und Ausbildung. Die Antwort kann aus einem kurzen Besuch eine ausgedehnte Stallbesichtigung machen.",
+              "Vor dem Aufsitzen prüft sie Eurwens Sattelgurt selbst, auch wenn gerade erst jemand nachgegurtet hat.",
+              "Gethins Fortschritte bringt sie auch in Gesprächen unter, die ursprünglich ein ganz anderes Thema hatten."
+            ],
+            "connectionPortraitHeight": 68,
+            "documents": [],
+            "documentsTitle": "",
+            "works": [],
+            "historyTitle": "Rhosmere und ihre Ausbildung in Gwynthor"
+          }
+        },
+        "title": "Adjutantin des Herolds des Grafen",
+        "origin": "Rhosmere · Artus Streben"
+      },
+      {
+        "id": "OJEmpbD6YWhDFDmitk6R",
+        "name": "Branwen (Geb. Gwefrydd) Draig",
+        "inventory": {
+          "role": "Adjutantin des Herolds des Grafen, Rhosmere",
+          "revision": 1792090615772,
+          "categories": [
+            {
+              "label": "Waffen",
+              "icon": "https://i.imgur.com/YaUQREQ.png",
+              "id": "weapon"
+            },
+            {
+              "id": "armor",
+              "label": "Rüstung",
+              "icon": "https://i.imgur.com/5qZtUiY.png"
+            },
+            {
+              "label": "Ausrüstung",
+              "icon": "https://i.imgur.com/yMj2CQf.png",
+              "id": "equipment"
+            },
+            {
+              "id": "potions",
+              "label": "Trinkturen",
+              "icon": "https://i.imgur.com/gwujEaL.png"
+            },
+            {
+              "id": "documents",
+              "label": "Dokumente",
+              "icon": "https://i.imgur.com/urdalGm.png"
+            },
+            {
+              "id": "other",
+              "label": "Sonstiges",
+              "icon": "https://i.imgur.com/lgeevvn.png"
+            }
+          ],
+          "moneyNotice": "",
+          "carryLabel": "Traglast",
+          "portraitFormat": "portrait",
+          "healthColor": "#5c7f20",
+          "money": "0 Gold, 0 Silber, 0 Kupfer",
+          "name": "Branwen (Geb. Gwefrydd) Draig",
+          "equipmentQuiz": {
+            "answers": [
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "open": false,
+            "updatedAt": "",
+            "resultText": "",
+            "status": "",
+            "step": 0
+          },
+          "hitpoints": "TP / Zustand",
+          "portraitPosition": "top",
+          "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+          "companions": [
+            {
+              "description": "Eurwen ist Branwen Draigs prächtige beige Ceffyl-Stute. Sie hat eine dichte elfenbeinblonde Mähne und einen ebenso hellen Schweif. Branwen reitet sie im Alltag und beim Lanzentraining.",
+              "infoRows": [],
+              "creatureId": "companion-branwen-eurwen",
+              "name": "Eurwen",
+              "imageFit": "contain",
+              "species": "Ceffyl",
+              "imageFormat": "portrait",
+              "imagePosition": "center",
+              "id": "companion-mqu1vat2-0-zz2n",
+              "role": "Reittier",
+              "inventoryItemId": "branwen-eurwen",
+              "attributes": [],
+              "summary": "Eurwen ist Branwen Draigs prächtige beige Ceffyl-Stute. Sie hat eine dichte elfenbeinblonde Mähne und einen ebenso hellen Schweif. Branwen reitet sie im Alltag und beim Lanzentraining.",
+              "statusColor": "#5c7f20",
+              "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fbranwen-draig%2F2026-10-15%2Feurwen-ceffyl-34cc98dd10c74ba2.png?alt=media&token=a97668ca-5eef-4bc9-a3c3-8c1010f9434b",
+              "status": "Gesund"
+            },
+            {
+              "status": "Gesund",
+              "statusColor": "#5c7f20",
+              "name": "Mabon",
+              "species": "Rhedwyr",
+              "attributes": [],
+              "imagePosition": "center",
+              "creatureId": "companion-branwen-mabon",
+              "role": "Gefährte",
+              "imageFit": "contain",
+              "id": "companion-mqu1vat2-1-5e7l",
+              "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fbranwen-draig%2F2026-10-15%2Fmabon-rhedwyr-d7d253ea352cf1bc.png?alt=media&token=1339ca51-4fe7-4cbe-8f41-1e9ad8152c15",
+              "infoRows": [],
+              "description": "Mabon ist Branwen Draigs sandfarbener Rhedwyr-Rüde und Eiras Wurfbruder. Eine alte Trollverletzung hat seine linke Schulter vernarbt; nach längerer Ruhe sind seine ersten Schritte steif.",
+              "imageFormat": "portrait",
+              "inventoryItemId": "branwen-mabon",
+              "summary": "Mabon ist Branwen Draigs sandfarbener Rhedwyr-Rüde und Eiras Wurfbruder. Eine alte Trollverletzung hat seine linke Schulter vernarbt; nach längerer Ruhe sind seine ersten Schritte steif."
+            },
+            {
+              "species": "Rhedwyr",
+              "name": "Eira",
+              "id": "card-branwen-eira",
+              "role": "Gefährte",
+              "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fbranwen-draig%2F2026-10-15%2Feira-rhedwyr-03bed3dd9565345b.png?alt=media&token=c6ba2b59-e5bd-4cee-b414-18e085a8d985",
+              "infoRows": [],
+              "imageFit": "contain",
+              "attributes": [],
+              "description": "Eira ist Branwen Draigs elfenbeinweiße Rhedwyr-Hündin mit hellsandfarbenen Flecken und Mabons Wurfschwester. Von der Trolljagd blieben eine fehlende rechte Ohrspitze und eine verheilte Narbe am Ohransatz.",
+              "summary": "Eira ist Branwen Draigs elfenbeinweiße Rhedwyr-Hündin mit hellsandfarbenen Flecken und Mabons Wurfschwester. Von der Trolljagd blieben eine fehlende rechte Ohrspitze und eine verheilte Narbe am Ohransatz.",
+              "creatureId": "companion-branwen-eira",
+              "inventoryItemId": "branwen-eira",
+              "status": "Gesund",
+              "imageFormat": "portrait",
+              "imagePosition": "center"
+            }
+          ],
+          "portraitFit": "cover",
+          "carryValue": "Noch festlegen",
+          "items": [
+            {
+              "id": "item-mqu1vat1-0-w8ef",
+              "quantity": "1",
+              "imageFormat": "square",
+              "imageFit": "contain",
+              "weight": "Noch festlegen",
+              "infoRows": [],
+              "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "imagePosition": "center",
+              "name": "Hauptwaffe",
+              "tags": "",
+              "type": "Waffe",
+              "icon": "*",
+              "category": "weapon",
+              "image": ""
+            },
+            {
+              "icon": "*",
+              "type": "Rüstung",
+              "imagePosition": "center",
+              "id": "item-mqu1vat1-1-exvo",
+              "imageFormat": "square",
+              "name": "Rüstung / Schutz",
+              "category": "armor",
+              "description": "Rüstung, Kleidung oder magischer Schutz.",
+              "tags": "",
+              "quantity": "1",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "weight": "Noch festlegen",
+              "imageFit": "contain",
+              "infoRows": [],
+              "image": ""
+            },
+            {
+              "weight": "Noch festlegen",
+              "infoRows": [],
+              "type": "Ausrüstung",
+              "icon": "*",
+              "imageFit": "contain",
+              "id": "item-mqu1vat1-2-0fx2",
+              "quantity": "1",
+              "name": "Reiseausrüstung",
+              "tags": "",
+              "imagePosition": "center",
+              "image": "",
+              "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+              "category": "equipment",
+              "imageFormat": "square",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ]
+            },
+            {
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "category": "potions",
+              "weight": "Noch festlegen",
+              "id": "item-mqu1vat1-3-2lgm",
+              "name": "Heil- oder Verbrauchsgut",
+              "tags": "",
+              "imageFit": "contain",
+              "imageFormat": "square",
+              "infoRows": [],
+              "imagePosition": "center",
+              "image": "",
+              "quantity": "1",
+              "type": "Trinktur",
+              "icon": "*",
+              "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand."
+            },
+            {
+              "icon": "*",
+              "type": "Dokument",
+              "infoRows": [],
+              "imageFit": "contain",
+              "weight": "Noch festlegen",
+              "imagePosition": "center",
+              "image": "",
+              "imageFormat": "square",
+              "quantity": "1",
+              "name": "Dokumente / Urkunden",
+              "tags": "",
+              "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+              "id": "item-mqu1vat1-4-ajrj",
+              "category": "documents",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ]
+            },
+            {
+              "quantity": "1",
+              "imageFit": "contain",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "infoRows": [],
+              "imagePosition": "center",
+              "imageFormat": "square",
+              "image": "",
+              "id": "item-mqu1vat1-5-5kao",
+              "type": "Sonstiges",
+              "icon": "*",
+              "name": "Persönlicher Gegenstand",
+              "category": "other",
+              "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+              "tags": "",
+              "weight": "Noch festlegen"
+            },
+            {
+              "id": "branwen-eurwen",
+              "registerCategory": "pferde",
+              "itemDbKey": "",
+              "description": "Eurwen ist Branwen Draigs prächtige beige Ceffyl-Stute. Sie hat eine dichte elfenbeinblonde Mähne und einen ebenso hellen Schweif. Branwen reitet sie im Alltag und beim Lanzentraining.",
+              "quantity": "1",
+              "individualizedAt": "2026-10-15T18:56:55.780Z",
+              "imageFit": "contain",
+              "ownerCharacterId": "OJEmpbD6YWhDFDmitk6R",
+              "infoRows": [],
+              "imageFormat": "portrait",
+              "imagePosition": "center",
+              "templateId": "",
+              "ownerCharacterName": "Branwen (Geb. Gwefrydd) Draig",
+              "attributes": [],
+              "originItemDbKey": "",
+              "templateName": "Ceffyl",
+              "name": "Eurwen",
+              "instanceId": "branwen-eurwen",
+              "creatureId": "companion-branwen-eurwen",
+              "category": "companion",
+              "type": "Ceffyl",
+              "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fbranwen-draig%2F2026-10-15%2Feurwen-ceffyl-34cc98dd10c74ba2.png?alt=media&token=a97668ca-5eef-4bc9-a3c3-8c1010f9434b",
+              "itemStorageMode": "character"
+            },
+            {
+              "description": "Mabon ist Branwen Draigs sandfarbener Rhedwyr-Rüde und Eiras Wurfbruder. Eine alte Trollverletzung hat seine linke Schulter vernarbt; nach längerer Ruhe sind seine ersten Schritte steif.",
+              "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fbranwen-draig%2F2026-10-15%2Fmabon-rhedwyr-d7d253ea352cf1bc.png?alt=media&token=1339ca51-4fe7-4cbe-8f41-1e9ad8152c15",
+              "templateName": "Rhedwyr",
+              "originItemDbKey": "",
+              "creatureId": "companion-branwen-mabon",
+              "instanceId": "branwen-mabon",
+              "category": "companion",
+              "itemStorageMode": "character",
+              "imageFormat": "portrait",
+              "id": "branwen-mabon",
+              "imagePosition": "center",
+              "attributes": [],
+              "itemDbKey": "",
+              "ownerCharacterId": "OJEmpbD6YWhDFDmitk6R",
+              "templateId": "",
+              "individualizedAt": "2026-10-15T18:56:55.781Z",
+              "name": "Mabon",
+              "quantity": "1",
+              "imageFit": "contain",
+              "infoRows": [],
+              "type": "Rhedwyr",
+              "registerCategory": "vieh",
+              "ownerCharacterName": "Branwen (Geb. Gwefrydd) Draig"
+            },
+            {
+              "itemStorageMode": "character",
+              "templateId": "",
+              "imagePosition": "center",
+              "type": "Rhedwyr",
+              "category": "companion",
+              "id": "branwen-eira",
+              "name": "Eira",
+              "originItemDbKey": "",
+              "itemDbKey": "",
+              "description": "Eira ist Branwen Draigs elfenbeinweiße Rhedwyr-Hündin mit hellsandfarbenen Flecken und Mabons Wurfschwester. Von der Trolljagd blieben eine fehlende rechte Ohrspitze und eine verheilte Narbe am Ohransatz.",
+              "templateName": "Rhedwyr",
+              "ownerCharacterName": "Branwen (Geb. Gwefrydd) Draig",
+              "registerCategory": "vieh",
+              "infoRows": [],
+              "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fbranwen-draig%2F2026-10-15%2Feira-rhedwyr-03bed3dd9565345b.png?alt=media&token=c6ba2b59-e5bd-4cee-b414-18e085a8d985",
+              "imageFit": "contain",
+              "creatureId": "companion-branwen-eira",
+              "instanceId": "branwen-eira",
+              "quantity": "1",
+              "imageFormat": "portrait",
+              "individualizedAt": "2026-10-15T18:56:55.781Z",
+              "ownerCharacterId": "OJEmpbD6YWhDFDmitk6R",
+              "attributes": []
+            }
+          ],
+          "infoRows": [],
+          "portrait": "https://i.imgur.com/U6kCjOZ.png",
+          "title": "Charakter-Inventar",
+          "level": "Haus Draig, Celtigerns Wacht",
+          "status": "Gesund",
+          "attributes": [
+            {
+              "value": 8,
+              "label": "StA"
+            },
+            {
+              "value": 6,
+              "label": "Ges"
+            },
+            {
+              "value": 7,
+              "label": "Kon"
+            },
+            {
+              "label": "Int",
+              "value": 5
+            },
+            {
+              "label": "Wei",
+              "value": 6
+            },
+            {
+              "label": "Cha",
+              "value": 5
+            }
+          ],
+          "moneyState": {
+            "silver": 0,
+            "gold": 0,
+            "totalCopper": 0,
+            "copper": 0
+          }
+        },
+        "updatedAt": "2026-10-15T19:14:58.110Z",
+        "bio": "Lady Branwen Draig, geborene Gwefrydd (*1700), ist Cadfan Draigs willensstarke Adjutantin. Als Ausbildungsmündel wuchs sie im Haushalt Odyar Draigs und Beibhinn Eirces in Gwynthor auf; Odyar wurde ihr Rittervater. Mit Steffan hat sie die Kinder Gethin und Tegan. Ihre Pferdekenntnis reicht beinahe an Owain Draigs heran. Zu ihr gehören die beige Ceffyl-Stute Eurwen und die Rhedwyr-Geschwister Mabon und Eira, die Steffan vor vielen Jahren bei einer Trolljagd rettete.",
+        "biography": {
+          "schemaVersion": 1,
+          "stats": [
+            {
+              "label": "Geboren",
+              "value": "1700"
+            },
+            {
+              "label": "Herkunft",
+              "value": "Rhosmere · Artus Streben"
+            },
+            {
+              "label": "Geburtshaus",
+              "value": "Haus Gwefrydd"
+            },
+            {
+              "value": "Stennis Gwefrydd und Morwen Dyngwn",
+              "label": "Eltern"
+            },
+            {
+              "label": "Bruder",
+              "value": "Thomos Gwefrydd"
+            },
+            {
+              "value": "Adjutantin des Herolds des Grafen",
+              "label": "Amt"
+            },
+            {
+              "label": "Ehemann",
+              "value": "Sir Steffan Draig (*1696)"
+            },
+            {
+              "value": "Gethin (*1722) und Tegan (*1725)",
+              "label": "Kinder"
+            },
+            {
+              "label": "Rittervater",
+              "value": "Sir Odyar Draig"
+            }
+          ],
+          "schema": "aleria.biography-module",
+          "biography": {
+            "documents": [],
+            "sideWidth": 100,
+            "extraSections": [
+              {
+                "position": "afterWorks",
+                "text": "<p>Branwens Ross ist <strong>Eurwen</strong>, eine prächtige beige <strong>Ceffyl-Stute</strong> mit heller, dichter Mähne. Zu ihr gehören außerdem die beiden <strong>Rhedwyr</strong> <strong>Mabon</strong> und <strong>Eira</strong>, Geschwister aus demselben Wurf.</p><p>Früher waren es fünf Hunde. Drei starben bei einer Jagd, als Gethin und Tegan noch sehr klein waren. Fragt man Branwen danach, sagt sie, es sei ein Troll gewesen. <strong>Steffan konnte Mabon und Eira retten.</strong> Mabons linke Schulter blieb vernarbt und ist nach Ruhe steif. Eira verlor ein Stück der rechten Ohrspitze. Branwen kennt die alten Verletzungen und berücksichtigt sie beim Umgang mit beiden Hunden.</p>",
+                "title": "Eurwen, Mabon und Eira",
+                "mode": "text"
+              }
+            ],
+            "abilities": [
+              {
+                "title": "Bestimmend",
+                "icon": "/IconOrdner/Traits%20Icon/Stubborn.png",
+                "detail": "Branwen bringt ihre Vorschläge vor und erwartet eine klare Antwort. Ein höflicher Ton hält sie nicht von einem Widerspruch ab."
+              },
+              {
+                "icon": "/IconOrdner/Traits%20Icon/Gregarious.png",
+                "detail": "Sie bietet Gästen Unterkunft nahe den eigenen Gemächern an und bezieht Steffan mit großer Selbstverständlichkeit in ihre Pläne ein.",
+                "title": "Aufmerksame Gastgeberin"
+              },
+              {
+                "detail": "Sie fragt nach weiteren Gewerben eines Hauses und prüft, welche Auskunft sie tatsächlich erhält. Bereits genannte Gründe wiederholt sie ungern.",
+                "title": "Gezielte Fragen",
+                "icon": "/IconOrdner/Traits%20Icon/Shrewd.png"
+              }
+            ],
+            "biographyText": "<p>Branwen dient <strong>Sir Cadfan Draig</strong> als Adjutantin des Herolds des Grafen. Sie bereitet Audienzen vor, organisiert Boten und Reiseaufträge und hält Schriftverkehr, Siegelumlauf und Abschriften zusammen. Fehlen ihr Informationen, lässt sie sich den bisherigen Stand knapp erklären und fragt nach. Vor dem Rat spricht sie höflich und bestimmt. Eine Belehrung über ihr eigenes Haus weist sie ebenso höflich zurück.</p><p>Mit <strong>Steffan</strong> ist sie seit vielen Jahren verheiratet. Sie mag ihren Mann, plant gern für beide und setzt seine Zustimmung gelegentlich voraus. Ein wiederholtes „Nicht wahr, Gemahl?“ oder ein Ellenbogen in seine Seite gehört dazu. Wenn Steffan ein Machtwort spricht, respektiert sie es. Er tut es selten genug, dass sie darauf hört. <strong>Gethin</strong> ist ihr ganzer Stolz; sie hält ihn für ausgesprochen gut geraten und lässt andere das wissen. <strong>Tegan</strong> liebt sie ebenso. Bei Lady <strong>Rihanna Draig, geborener Ceirwyn</strong>, und <strong>Isobel</strong> weiß sie ihre Tochter gut aufgehoben. Wenn Tegan den Saal verlässt, bleibt ihrer Mutter ein warmes „Sie ist ja so ein Sonnenschein“.</p><p>Ihre Herkunft aus <strong>Haus Gwefrydd</strong> merkt man Branwen am schnellsten bei Pferden an. Abstammung, Gang, Beschlag und Ausbildung interessieren sie auch dann, wenn sie gerade dienstlich unterwegs ist. Ihre Pferdekenntnis reicht beinahe an die Owain Draigs heran. Zugleich kennt sie die Höfe, Straßen und Grenzverhältnisse ihrer Heimat. Bei der Aufnahme neuer Häuser bedenkt sie bestehende Lehensansprüche und die Belastung der Orte um Rhosmere. Gästen bietet sie bereitwillig Unterkunft an; neue Verpflichtungen sagt sie nach genauer Prüfung zu.</p>",
+            "quotes": [
+              "„Ist es nicht so, Gemahl!?“",
+              "„Verzeiht also, Ritterfürst Huw... aber eine Lektion über Haus Gwefrydd benötige ich nicht.“"
+            ],
+            "historyTitle": "Rhosmere und ihre Ausbildung in Gwynthor",
+            "trivia": [
+              "Hat sie für Steffan bereits mitgeplant, folgt gern ein „Nicht wahr, Gemahl?“ Bleibt seine Antwort aus, fragt sie noch einmal nach und hilft gelegentlich mit dem Ellenbogen nach.",
+              "Bei einem fremden Pferd fragt sie nach Abstammung und Ausbildung. Die Antwort kann aus einem kurzen Besuch eine ausgedehnte Stallbesichtigung machen.",
+              "Vor dem Aufsitzen prüft sie Eurwens Sattelgurt selbst, auch wenn gerade erst jemand nachgegurtet hat.",
+              "Gethins Fortschritte bringt sie auch in Gesprächen unter, die ursprünglich ein ganz anderes Thema hatten."
+            ],
+            "historyText": "<p>Branwen wurde <strong>1700</strong> als Tochter von <strong>Stennis Gwefrydd</strong> und <strong>Morwen Dyngwn</strong> geboren. Ihr Bruder Thomos ist zwei Jahre älter. In Rhosmere gehörten Pferde, Stallarbeit und Reiten früh zu ihrem Alltag.</p><p><strong>1708</strong>, mit acht Jahren, kam sie als Ausbildungsmündel in den Haushalt <strong>Sir Odyar Draigs</strong> und seiner Frau <strong>Beibhinn Eirce</strong> nach Gwynthor. Ihre Eltern lebten; der Aufenthalt diente ihrer Erziehung und Ausbildung am Hof der Draigs. Dort lernte sie auch deren Sohn Steffan kennen. Beibhinn betreute ihre höfische Erziehung. Odyar wurde ihr Rittervater: Mit vierzehn begann Branwen bei ihm ihre Knappenausbildung, mit besonderem Gewicht auf sicherem Reiten, dem Umgang mit der Lanze und dem Dienst im Haushalt. Mit zwanzig hatte sie diese Ausbildung abgeschlossen.</p><p>Später heiratete sie Steffan. <strong>1722</strong> wurde Gethin geboren, <strong>1725</strong> Tegan. Ihre Verbindung nach Rhosmere blieb eng; am Hof von Gwynthor arbeitet sie heute an Cadfans Seite.</p>",
+            "connectionTextOffset": 0,
+            "documentsTitle": "",
+            "works": [],
+            "quotesTitle": "In ihren Worten",
+            "abilitiesTitle": "Im Umgang mit anderen",
+            "connections": [
+              {
+                "name": "Sir Steffan Draig",
+                "image": "../Stammbäume/assets/images/portraits/haus-draig/steffan-draig.jpg",
+                "imageFormat": "portrait",
+                "type": "connection",
+                "detail": "Ihr Ehemann; rettete Mabon und Eira bei der Jagd. Seine seltenen Machtworte respektiert sie."
+              },
+              {
+                "image": "../Stammbäume/assets/images/portraits/haus-draig/gethin-1722-draig.jpg",
+                "name": "Gethin Draig",
+                "imageFormat": "portrait",
+                "type": "connection",
+                "detail": "Ihr Sohn, geboren 1722, und ihr ganzer Stolz."
+              },
+              {
+                "detail": "Ihre Tochter, geboren 1725. Branwen weiß sie bei Lady Rihanna und Isobel in guter Obhut.",
+                "imageFormat": "portrait",
+                "type": "connection",
+                "name": "Tegan Draig",
+                "image": "../Stammbäume/assets/images/portraits/haus-draig/tegan-draig.jpg"
+              },
+              {
+                "detail": "Steffans Vater und Branwens Rittervater. Nahm sie als Ausbildungsmündel in seinen Haushalt auf und bildete sie im Reiten und an der Lanze aus.",
+                "type": "connection",
+                "imageFormat": "portrait",
+                "name": "Sir Odyar Draig",
+                "image": "../Stammbäume/assets/images/portraits/haus-draig/odyar-draig.jpg"
+              },
+              {
+                "type": "connection",
+                "image": "../Stammbäume/assets/images/portraits/haus-draig/beibhinn-eirce.jpg",
+                "detail": "Steffans Mutter. Betreute Branwens höfische Erziehung während ihrer Jahre als Ausbildungsmündel in Gwynthor.",
+                "imageFormat": "portrait",
+                "name": "Beibhinn Eirce"
+              },
+              {
+                "imageFormat": "portrait",
+                "detail": "Herold des Grafen. Branwen unterstützt ihn als Adjutantin bei Audienzen, Botenwegen, Schriftverkehr und Siegelumlauf.",
+                "name": "Sir Cadfan Draig",
+                "image": "../Stammbäume/assets/images/portraits/haus-draig/cadfan-draig.jpg",
+                "type": "connection"
+              }
+            ],
+            "worksTitle": "",
+            "connectionsTitle": "Verbindungen",
+            "connectionPortraitHeight": 68,
+            "triviaTitle": "Marotten",
+            "portraitCaptions": [
+              "Branwen Draig · 1740.",
+              "Mit Eurwen in der Rüstung des Hauses Gwefrydd · 1740.",
+              "Mit 20 Jahren · 1720. Nach ihrer Ausbildung bei Sir Odyar.",
+              "Mit 14 Jahren · 1714. Knappin im Haushalt Odyars und Beibhinns.",
+              "Mit 8 Jahren · 1708. Als Ausbildungsmündel in Gwynthor."
+            ],
+            "portraitStages": [
+              "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fbranwen-draig%2F2026-10-15%2Fbranwen-gwefrydd-ruestung-eurwen-e84eb18a4aebe543.png?alt=media&token=d8534964-49d6-4ac5-aaec-07697227e9d0",
+              "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fbranwen-draig%2F2026-10-15%2Fbranwen-20-8c1fa1aae8a89b98.png?alt=media&token=23ea9016-ddd6-49c6-881a-31bf07d79471",
+              "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fbranwen-draig%2F2026-10-15%2Fbranwen-14-bfe6e9194a763c37.png?alt=media&token=4fee1a95-a633-4fbd-835a-b1f5e35f8750",
+              "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fbranwen-draig%2F2026-10-15%2Fbranwen-08-138cb9fc58596825.png?alt=media&token=c100cca4-8638-446e-9bf7-00573eccc3ab"
+            ],
+            "biographyTitle": "Lady Branwen Draig, geborene Gwefrydd",
+            "footer": "",
+            "portrait": "https://i.imgur.com/U6kCjOZ.png"
+          },
+          "quote": "",
+          "revision": 1792091698110,
+          "quoteBy": ""
+        },
+        "title": "Adjutantin des Herolds des Grafen",
+        "origin": "Rhosmere · Artus Streben"
+      },
+      {
+        "id": "OJEmpbD6YWhDFDmitk6R",
+        "name": "Branwen (Geb. Gwefrydd) Draig",
+        "inventory": {
+          "healthColor": "#5c7f20",
+          "infoRows": [],
+          "portrait": "https://i.imgur.com/U6kCjOZ.png",
+          "carryValue": "Noch festlegen",
+          "name": "Branwen (Geb. Gwefrydd) Draig",
+          "revision": 1792090615772,
+          "attributes": [
+            {
+              "value": 8,
+              "label": "StA"
+            },
+            {
+              "label": "Ges",
+              "value": 6
+            },
+            {
+              "value": 7,
+              "label": "Kon"
+            },
+            {
+              "value": 5,
+              "label": "Int"
+            },
+            {
+              "label": "Wei",
+              "value": 6
+            },
+            {
+              "label": "Cha",
+              "value": 5
+            }
+          ],
+          "portraitPosition": "top",
+          "portraitFit": "cover",
+          "level": "Haus Draig, Celtigerns Wacht",
+          "carryLabel": "Traglast",
+          "items": [
+            {
+              "name": "Hauptwaffe",
+              "imageFit": "contain",
+              "type": "Waffe",
+              "tags": "",
+              "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+              "weight": "Noch festlegen",
+              "infoRows": [],
+              "category": "weapon",
+              "image": "",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "imageFormat": "square",
+              "imagePosition": "center",
+              "icon": "*",
+              "id": "item-mqu1vat1-0-w8ef",
+              "quantity": "1"
+            },
+            {
+              "weight": "Noch festlegen",
+              "tags": "",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "description": "Rüstung, Kleidung oder magischer Schutz.",
+              "name": "Rüstung / Schutz",
+              "quantity": "1",
+              "type": "Rüstung",
+              "id": "item-mqu1vat1-1-exvo",
+              "imagePosition": "center",
+              "category": "armor",
+              "infoRows": [],
+              "icon": "*",
+              "image": "",
+              "imageFit": "contain",
+              "imageFormat": "square"
+            },
+            {
+              "tags": "",
+              "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+              "quantity": "1",
+              "name": "Reiseausrüstung",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "type": "Ausrüstung",
+              "imageFit": "contain",
+              "id": "item-mqu1vat1-2-0fx2",
+              "imagePosition": "center",
+              "weight": "Noch festlegen",
+              "category": "equipment",
+              "infoRows": [],
+              "imageFormat": "square",
+              "icon": "*",
+              "image": ""
+            },
+            {
+              "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+              "imageFit": "contain",
+              "icon": "*",
+              "infoRows": [],
+              "category": "potions",
+              "weight": "Noch festlegen",
+              "type": "Trinktur",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "quantity": "1",
+              "name": "Heil- oder Verbrauchsgut",
+              "imageFormat": "square",
+              "imagePosition": "center",
+              "image": "",
+              "tags": "",
+              "id": "item-mqu1vat1-3-2lgm"
+            },
+            {
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+              "category": "documents",
+              "infoRows": [],
+              "tags": "",
+              "imageFit": "contain",
+              "type": "Dokument",
+              "name": "Dokumente / Urkunden",
+              "imagePosition": "center",
+              "image": "",
+              "weight": "Noch festlegen",
+              "id": "item-mqu1vat1-4-ajrj",
+              "quantity": "1",
+              "icon": "*",
+              "imageFormat": "square"
+            },
+            {
+              "icon": "*",
+              "imageFit": "contain",
+              "imageFormat": "square",
+              "imagePosition": "center",
+              "category": "other",
+              "infoRows": [],
+              "image": "",
+              "name": "Persönlicher Gegenstand",
+              "weight": "Noch festlegen",
+              "quantity": "1",
+              "type": "Sonstiges",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "tags": "",
+              "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+              "id": "item-mqu1vat1-5-5kao"
+            },
+            {
+              "instanceId": "branwen-eurwen",
+              "imageFormat": "portrait",
+              "type": "Ceffyl",
+              "templateName": "Ceffyl",
+              "name": "Eurwen",
+              "registerCategory": "pferde",
+              "imageFit": "contain",
+              "originItemDbKey": "",
+              "infoRows": [],
+              "category": "companion",
+              "creatureId": "companion-branwen-eurwen",
+              "id": "branwen-eurwen",
+              "quantity": "1",
+              "ownerCharacterName": "Branwen (Geb. Gwefrydd) Draig",
+              "templateId": "",
+              "imagePosition": "center",
+              "description": "Eurwen ist Branwen Draigs prächtige beige Ceffyl-Stute. Sie hat eine dichte elfenbeinblonde Mähne und einen ebenso hellen Schweif. Branwen reitet sie im Alltag und beim Lanzentraining.",
+              "ownerCharacterId": "OJEmpbD6YWhDFDmitk6R",
+              "individualizedAt": "2026-10-15T18:56:55.780Z",
+              "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fbranwen-draig%2F2026-10-15%2Feurwen-ceffyl-34cc98dd10c74ba2.png?alt=media&token=a97668ca-5eef-4bc9-a3c3-8c1010f9434b",
+              "attributes": [],
+              "itemStorageMode": "character",
+              "itemDbKey": ""
+            },
+            {
+              "category": "companion",
+              "infoRows": [],
+              "itemDbKey": "",
+              "description": "Mabon ist Branwen Draigs sandfarbener Rhedwyr-Rüde und Eiras Wurfbruder. Eine alte Trollverletzung hat seine linke Schulter vernarbt; nach längerer Ruhe sind seine ersten Schritte steif.",
+              "creatureId": "companion-branwen-mabon",
+              "templateName": "Rhedwyr",
+              "originItemDbKey": "",
+              "id": "branwen-mabon",
+              "registerCategory": "vieh",
+              "instanceId": "branwen-mabon",
+              "imageFit": "contain",
+              "name": "Mabon",
+              "type": "Rhedwyr",
+              "imagePosition": "center",
+              "ownerCharacterId": "OJEmpbD6YWhDFDmitk6R",
+              "individualizedAt": "2026-10-15T18:56:55.781Z",
+              "attributes": [],
+              "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fbranwen-draig%2F2026-10-15%2Fmabon-rhedwyr-d7d253ea352cf1bc.png?alt=media&token=1339ca51-4fe7-4cbe-8f41-1e9ad8152c15",
+              "imageFormat": "portrait",
+              "templateId": "",
+              "ownerCharacterName": "Branwen (Geb. Gwefrydd) Draig",
+              "itemStorageMode": "character",
+              "quantity": "1"
+            },
+            {
+              "infoRows": [],
+              "category": "companion",
+              "name": "Eira",
+              "attributes": [],
+              "type": "Rhedwyr",
+              "registerCategory": "vieh",
+              "templateId": "",
+              "imageFormat": "portrait",
+              "templateName": "Rhedwyr",
+              "imagePosition": "center",
+              "ownerCharacterName": "Branwen (Geb. Gwefrydd) Draig",
+              "imageFit": "contain",
+              "id": "branwen-eira",
+              "itemStorageMode": "character",
+              "creatureId": "companion-branwen-eira",
+              "description": "Eira ist Branwen Draigs elfenbeinweiße Rhedwyr-Hündin mit hellsandfarbenen Flecken und Mabons Wurfschwester. Von der Trolljagd blieben eine fehlende rechte Ohrspitze und eine verheilte Narbe am Ohransatz.",
+              "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fbranwen-draig%2F2026-10-15%2Feira-rhedwyr-03bed3dd9565345b.png?alt=media&token=c6ba2b59-e5bd-4cee-b414-18e085a8d985",
+              "originItemDbKey": "",
+              "ownerCharacterId": "OJEmpbD6YWhDFDmitk6R",
+              "individualizedAt": "2026-10-15T18:56:55.781Z",
+              "instanceId": "branwen-eira",
+              "quantity": "1",
+              "itemDbKey": ""
+            }
+          ],
+          "status": "Gesund",
+          "portraitFormat": "portrait",
+          "hitpoints": "TP / Zustand",
+          "title": "Charakter-Inventar",
+          "companions": [
+            {
+              "creatureId": "companion-branwen-eurwen",
+              "role": "Reittier",
+              "imageFormat": "portrait",
+              "species": "Ceffyl",
+              "summary": "Eurwen ist Branwen Draigs prächtige beige Ceffyl-Stute. Sie hat eine dichte elfenbeinblonde Mähne und einen ebenso hellen Schweif. Branwen reitet sie im Alltag und beim Lanzentraining.",
+              "attributes": [],
+              "imageFit": "contain",
+              "description": "Eurwen ist Branwen Draigs prächtige beige Ceffyl-Stute. Sie hat eine dichte elfenbeinblonde Mähne und einen ebenso hellen Schweif. Branwen reitet sie im Alltag und beim Lanzentraining.",
+              "inventoryItemId": "branwen-eurwen",
+              "statusColor": "#5c7f20",
+              "infoRows": [],
+              "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fbranwen-draig%2F2026-10-15%2Feurwen-ceffyl-34cc98dd10c74ba2.png?alt=media&token=a97668ca-5eef-4bc9-a3c3-8c1010f9434b",
+              "imagePosition": "center",
+              "id": "companion-mqu1vat2-0-zz2n",
+              "name": "Eurwen",
+              "status": "Gesund"
+            },
+            {
+              "imageFit": "contain",
+              "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fbranwen-draig%2F2026-10-15%2Fmabon-rhedwyr-d7d253ea352cf1bc.png?alt=media&token=1339ca51-4fe7-4cbe-8f41-1e9ad8152c15",
+              "attributes": [],
+              "role": "Gefährte",
+              "imagePosition": "center",
+              "status": "Gesund",
+              "infoRows": [],
+              "inventoryItemId": "branwen-mabon",
+              "imageFormat": "portrait",
+              "id": "companion-mqu1vat2-1-5e7l",
+              "name": "Mabon",
+              "summary": "Mabon ist Branwen Draigs sandfarbener Rhedwyr-Rüde und Eiras Wurfbruder. Eine alte Trollverletzung hat seine linke Schulter vernarbt; nach längerer Ruhe sind seine ersten Schritte steif.",
+              "description": "Mabon ist Branwen Draigs sandfarbener Rhedwyr-Rüde und Eiras Wurfbruder. Eine alte Trollverletzung hat seine linke Schulter vernarbt; nach längerer Ruhe sind seine ersten Schritte steif.",
+              "species": "Rhedwyr",
+              "creatureId": "companion-branwen-mabon",
+              "statusColor": "#5c7f20"
+            },
+            {
+              "id": "card-branwen-eira",
+              "imagePosition": "center",
+              "status": "Gesund",
+              "imageFit": "contain",
+              "name": "Eira",
+              "imageFormat": "portrait",
+              "species": "Rhedwyr",
+              "infoRows": [],
+              "summary": "Eira ist Branwen Draigs elfenbeinweiße Rhedwyr-Hündin mit hellsandfarbenen Flecken und Mabons Wurfschwester. Von der Trolljagd blieben eine fehlende rechte Ohrspitze und eine verheilte Narbe am Ohransatz.",
+              "attributes": [],
+              "description": "Eira ist Branwen Draigs elfenbeinweiße Rhedwyr-Hündin mit hellsandfarbenen Flecken und Mabons Wurfschwester. Von der Trolljagd blieben eine fehlende rechte Ohrspitze und eine verheilte Narbe am Ohransatz.",
+              "inventoryItemId": "branwen-eira",
+              "role": "Gefährte",
+              "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fbranwen-draig%2F2026-10-15%2Feira-rhedwyr-03bed3dd9565345b.png?alt=media&token=c6ba2b59-e5bd-4cee-b414-18e085a8d985",
+              "creatureId": "companion-branwen-eira"
+            }
+          ],
+          "categories": [
+            {
+              "icon": "https://i.imgur.com/YaUQREQ.png",
+              "label": "Waffen",
+              "id": "weapon"
+            },
+            {
+              "icon": "https://i.imgur.com/5qZtUiY.png",
+              "label": "Rüstung",
+              "id": "armor"
+            },
+            {
+              "label": "Ausrüstung",
+              "icon": "https://i.imgur.com/yMj2CQf.png",
+              "id": "equipment"
+            },
+            {
+              "id": "potions",
+              "label": "Trinkturen",
+              "icon": "https://i.imgur.com/gwujEaL.png"
+            },
+            {
+              "id": "documents",
+              "label": "Dokumente",
+              "icon": "https://i.imgur.com/urdalGm.png"
+            },
+            {
+              "id": "other",
+              "icon": "https://i.imgur.com/lgeevvn.png",
+              "label": "Sonstiges"
+            }
+          ],
+          "moneyNotice": "",
+          "role": "Adjutantin des Herolds des Grafen, Rhosmere",
+          "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+          "money": "0 Gold, 0 Silber, 0 Kupfer",
+          "equipmentQuiz": {
+            "status": "",
+            "updatedAt": "",
+            "open": false,
+            "resultText": "",
+            "step": 0,
+            "answers": [
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ]
+          },
+          "moneyState": {
+            "totalCopper": 0,
+            "copper": 0,
+            "silver": 0,
+            "gold": 0
+          }
+        },
+        "updatedAt": "2026-10-15T19:24:10.194Z",
+        "bio": "Lady Branwen Draig, geborene Gwefrydd (*1700), ist Cadfan Draigs willensstarke Adjutantin und eine bei Odyar Draig ausgebildete Uchelwyr. Ihre Kampfpraxis ist eingerostet; im Reiten gehört sie weiterhin zu den Besten Gwynthors. Mit Steffan hat sie die Kinder Gethin und Tegan. Zu ihr gehören die Ceffyl-Stute Eurwen und die Rhedwyr Mabon und Eira.",
+        "biography": {
+          "revision": 1792092250194,
+          "quote": "",
+          "quoteBy": "",
+          "schema": "aleria.biography-module",
+          "schemaVersion": 1,
+          "stats": [
+            {
+              "label": "Geboren",
+              "value": "1700"
+            },
+            {
+              "label": "Herkunft",
+              "value": "Rhosmere · Artus Streben"
+            },
+            {
+              "value": "Haus Gwefrydd",
+              "label": "Geburtshaus"
+            },
+            {
+              "value": "Stennis Gwefrydd und Morwen Dyngwn",
+              "label": "Eltern"
+            },
+            {
+              "label": "Bruder",
+              "value": "Thomos Gwefrydd"
+            },
+            {
+              "label": "Stand",
+              "value": "Uchelwyr · Ritterin"
+            },
+            {
+              "label": "Amt",
+              "value": "Adjutantin des Herolds des Grafen"
+            },
+            {
+              "label": "Ehemann",
+              "value": "Sir Steffan Draig (*1696)"
+            },
+            {
+              "value": "Gethin (*1722) und Tegan (*1725)",
+              "label": "Kinder"
+            },
+            {
+              "label": "Rittervater",
+              "value": "Sir Odyar Draig"
+            }
+          ],
+          "biography": {
+            "abilitiesTitle": "Im Umgang mit anderen",
+            "trivia": [
+              "Nennt Steffan gern „Gemahl“, besonders wenn sie seine Zustimmung bereits voraussetzt. Ein kurzer Stoß mit dem Ellenbogen gehört gelegentlich dazu.",
+              "Prüft vor dem Aufsitzen den Sattelgurt selbst, auch wenn gerade erst jemand nachgegurtet hat.",
+              "Fragt bei fremden Pferden nach Abstammung und Ausbildung und vergisst darüber gelegentlich die Zeit.",
+              "Findet fast immer einen Anlass, Gethins Fortschritte zu erwähnen."
+            ],
+            "connectionTextOffset": 0,
+            "documentsTitle": "Tiere und Besitz",
+            "portraitStages": [
+              "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fbranwen-draig%2F2026-10-15%2Fbranwen-gwefrydd-ruestung-eurwen-e84eb18a4aebe543.png?alt=media&token=d8534964-49d6-4ac5-aaec-07697227e9d0",
+              "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fbranwen-draig%2F2026-10-15%2Fbranwen-20-8c1fa1aae8a89b98.png?alt=media&token=23ea9016-ddd6-49c6-881a-31bf07d79471",
+              "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fbranwen-draig%2F2026-10-15%2Fbranwen-14-bfe6e9194a763c37.png?alt=media&token=4fee1a95-a633-4fbd-835a-b1f5e35f8750",
+              "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fbranwen-draig%2F2026-10-15%2Fbranwen-08-138cb9fc58596825.png?alt=media&token=c100cca4-8638-446e-9bf7-00573eccc3ab"
+            ],
+            "worksTitle": "Aufgaben am Hof",
+            "extraSections": [
+              {
+                "title": "Fähigkeiten als Uchelwyr",
+                "text": "<p>Odyars Ausbildung hat aus Branwen eine <strong>fähige Ritterin</strong> gemacht. Sie versteht den Umgang mit der Lanze und weiß, wie sie sich in Rüstung zu bewegen hat. Ihre besten Zeiten als Kämpferin liegen allerdings hinter ihr. Einen wirklichen Kampf hat sie seit langer Zeit nicht mehr bestritten. Griff und Haltung sind ihr vertraut, doch Reaktion, Ausdauer und das sichere Abschätzen eines Gegners sind ohne regelmäßige Kampfpraxis eingerostet.</p><p><strong>Im Reiten gehört sie weiterhin zu den Besten Gwynthors.</strong> Ihr Sitz ist sicher, ihre Hilfen sind ruhig und genau. Auch ein anspruchsvolles Pferd kann sie zuverlässig führen und Fehler in seiner Ausbildung erkennen. Den täglichen Umgang mit dem Ross hat sie nie aufgegeben; im Sattel ist sie erheblich geübter als im unmittelbaren Waffengang.</p>",
+                "mode": "text",
+                "position": "afterIntro"
+              },
+              {
+                "position": "afterWorks",
+                "title": "Ihre Tiere",
+                "text": "<p><strong>Eurwen</strong>, ihre prächtige beige <strong>Ceffyl-Stute</strong> mit der dichten hellen Mähne, wird von Branwen sorgfältig gepflegt und regelmäßig geritten. Bei Sattelzeug und Hufen sieht sie lieber selbst noch einmal nach.</p><p>Die <strong>Rhedwyr Mabon und Eira</strong> stammen aus demselben Wurf. Einst waren es fünf Hunde. Drei starben auf einer Jagd, als die Kinder noch klein waren; Branwen sagt, es sei ein Troll gewesen. Steffan konnte die beiden Überlebenden retten. Mabons vernarbte linke Schulter wird nach Ruhe steif, Eira fehlt ein Stück der rechten Ohrspitze. Branwen achtet auf Mabons Anlauf und nimmt ihn bei Beschwerden von längeren Hetzen aus.</p>",
+                "mode": "text"
+              }
+            ],
+            "historyTitle": "Herkunft und Ausbildung",
+            "triviaTitle": "Marotten",
+            "connectionPortraitHeight": 68,
+            "biographyText": "<p>Branwen ist gewohnt, Angelegenheiten selbst in die Hand zu nehmen. Sie entscheidet zügig, spricht deutlich und erwartet, dass Absprachen eingehalten werden. Auch ihren Widerspruch trägt sie mit höflichen Worten vor. Wer ihr ausweicht oder etwas nur halb erklärt, muss mit weiteren Fragen rechnen. Bei neuen Verpflichtungen möchte sie genau wissen, wer wofür einsteht. Als Gastgeberin kümmert sie sich um Unterkunft und Versorgung ihrer Gäste und bezieht den eigenen Haushalt dabei ganz selbstverständlich ein.</p><p>Mit <strong>Steffan</strong> verbindet sie eine lange, vertraute Ehe. Sie hat ihn gern, beansprucht seine Aufmerksamkeit und plant bisweilen für ihn mit, bevor sie ihn gefragt hat. Seine Geduld kennt sie gut. Spricht er jedoch eines seiner seltenen Machtworte, respektiert sie es und lässt die Sache ruhen. Auf <strong>Gethin</strong> ist sie ausgesprochen stolz. Für sie ist ihr Sohn sehr gut geraten; sie verfolgt seine Fortschritte aufmerksam und erzählt gern davon. <strong>Tegan</strong> liebt sie ebenso. Dass ihre Tochter bei Lady <strong>Rihanna Draig, geborener Ceirwyn</strong>, und <strong>Isobel</strong> gut aufgehoben ist, gibt ihr die Sicherheit, sich auch ihren eigenen Aufgaben zu widmen.</p><p>Bei Pferden kommt die <strong>Gwefrydd</strong> in ihr unverkennbar zum Vorschein. Branwen kennt Zuchtlinien, beurteilt Gang und Gebäude und bemerkt schlecht sitzendes Sattelzeug rasch. Ihre Kenntnisse reichen beinahe an die <strong>Owain Draigs</strong> heran. Über Pferde kann sie ausdauernd reden; zum Stall findet sie selbst an einem vollen Tag noch Zeit.</p>",
+            "portraitCaptions": [
+              "Branwen Draig · 1740.",
+              "Mit Eurwen in der Rüstung des Hauses Gwefrydd · 1740.",
+              "Mit 20 Jahren · 1720. Nach ihrer Ausbildung bei Sir Odyar.",
+              "Mit 14 Jahren · 1714. Knappin im Haushalt Odyars und Beibhinns.",
+              "Mit 8 Jahren · 1708. Als Ausbildungsmündel in Gwynthor."
+            ],
+            "documents": [
+              {
+                "link": "",
+                "text": "Beige Ceffyl-Stute; Branwens persönliches Ross.",
+                "title": "Eurwen",
+                "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fbranwen-draig%2F2026-10-15%2Feurwen-ceffyl-34cc98dd10c74ba2.png?alt=media&token=a97668ca-5eef-4bc9-a3c3-8c1010f9434b"
+              },
+              {
+                "title": "Mabon",
+                "text": "Rhedwyr-Rüde; alte Narbe an der linken Schulter.",
+                "link": "",
+                "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fbranwen-draig%2F2026-10-15%2Fmabon-rhedwyr-d7d253ea352cf1bc.png?alt=media&token=1339ca51-4fe7-4cbe-8f41-1e9ad8152c15"
+              },
+              {
+                "text": "Rhedwyr-Hündin; fehlende rechte Ohrspitze.",
+                "link": "",
+                "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fbranwen-draig%2F2026-10-15%2Feira-rhedwyr-03bed3dd9565345b.png?alt=media&token=c6ba2b59-e5bd-4cee-b414-18e085a8d985",
+                "title": "Eira"
+              }
+            ],
+            "historyText": "<p><strong>1700</strong> wurde Branwen als Tochter von <strong>Stennis Gwefrydd</strong> und <strong>Morwen Dyngwn</strong> geboren. Ihr Bruder <strong>Thomos</strong> ist zwei Jahre älter. Ihre Kindheit in Rhosmere war früh vom Umgang mit Pferden geprägt.</p><p>Mit acht Jahren kam sie <strong>1708</strong> als Ausbildungsmündel nach Gwynthor in den Haushalt <strong>Sir Odyar Draigs</strong> und <strong>Beibhinn Eirces</strong>. Beibhinn übernahm ihre höfische Erziehung; Odyar wurde ihr Rittervater. <strong>1714</strong> begann ihre Knappenzeit, <strong>1720</strong> schloss sie ihre Ausbildung ab. Im Haus der beiden lernte sie auch Steffan kennen, den sie später heiratete. Ihr Sohn Gethin wurde <strong>1722</strong> geboren, Tegan <strong>1725</strong>. Die Verbindung zu ihrer Familie in Rhosmere hat Branwen beibehalten.</p>",
+            "connectionsTitle": "Verbindungen",
+            "portrait": "https://i.imgur.com/U6kCjOZ.png",
+            "connections": [
+              {
+                "name": "Sir Steffan Draig",
+                "type": "connection",
+                "detail": "Ihr Ehemann. Mit seiner Geduld rechnet sie fest; seine seltenen Machtworte nimmt sie ernst. Er rettete Mabon und Eira.",
+                "imageFormat": "portrait",
+                "image": "../Stammbäume/assets/images/portraits/haus-draig/steffan-draig.jpg"
+              },
+              {
+                "image": "../Stammbäume/assets/images/portraits/haus-draig/gethin-1722-draig.jpg",
+                "imageFormat": "portrait",
+                "type": "connection",
+                "detail": "Ihr Sohn und ganzer Stolz. Branwen verfolgt seine Entwicklung aufmerksam und hält große Stücke auf ihn.",
+                "name": "Gethin Draig"
+              },
+              {
+                "type": "connection",
+                "image": "../Stammbäume/assets/images/portraits/haus-draig/tegan-draig.jpg",
+                "imageFormat": "portrait",
+                "name": "Tegan Draig",
+                "detail": "Ihre Tochter. Branwen liebt sie und vertraut auf die Fürsorge Lady Rihannas und Isobels."
+              },
+              {
+                "name": "Sir Odyar Draig",
+                "detail": "Steffans Vater und Branwens Rittervater. Nahm sie als Ausbildungsmündel in seinen Haushalt auf und bildete sie im Reiten und an der Lanze aus.",
+                "imageFormat": "portrait",
+                "image": "../Stammbäume/assets/images/portraits/haus-draig/odyar-draig.jpg",
+                "type": "connection"
+              },
+              {
+                "detail": "Steffans Mutter. Betreute Branwens höfische Erziehung während ihrer Jahre als Ausbildungsmündel in Gwynthor.",
+                "type": "connection",
+                "name": "Beibhinn Eirce",
+                "image": "../Stammbäume/assets/images/portraits/haus-draig/beibhinn-eirce.jpg",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "imageFormat": "portrait",
+                "image": "../Stammbäume/assets/images/portraits/haus-draig/cadfan-draig.jpg",
+                "detail": "Herold des Grafen. Branwen unterstützt ihn als Adjutantin bei Audienzen, Botenwegen, Schriftverkehr und Siegelumlauf.",
+                "name": "Sir Cadfan Draig"
+              }
+            ],
+            "quotesTitle": "Typische Worte",
+            "sideWidth": 100,
+            "footer": "",
+            "quotes": [
+              "„Nicht wahr, Gemahl?“"
+            ],
+            "biographyTitle": "Lady Branwen Draig, geborene Gwefrydd",
+            "abilities": [
+              {
+                "icon": "/IconOrdner/Traits%20Icon/Stubborn.png",
+                "title": "Bestimmend",
+                "detail": "Übernimmt gern die Führung und vertritt ihre Entscheidungen mit Nachdruck. Sie kann dabei voraussetzen, dass andere ihre Pläne längst teilen."
+              },
+              {
+                "icon": "/IconOrdner/Traits%20Icon/Gregarious.png",
+                "detail": "Kümmert sich persönlich um ihre Gäste und hält engen Kontakt zur Familie. Für die Menschen ihres Haushalts nimmt sie sich viel heraus, setzt sich aber auch für sie ein.",
+                "title": "Gesellig und zugewandt"
+              },
+              {
+                "detail": "Fragt genau nach und merkt sich Einzelheiten. In vertrauten Dingen lässt sie sich wenig vormachen; eine von oben herab erteilte Belehrung verträgt sie schlecht.",
+                "title": "Wach und sachkundig",
+                "icon": "/IconOrdner/Traits%20Icon/Shrewd.png"
+              }
+            ],
+            "works": [
+              "Als <strong>Adjutantin des Herolds</strong> bereitet sie Cadfans Audienzen vor und stimmt Termine sowie Reiseaufträge ab.",
+              "Sie organisiert Botenwege und koordiniert Schriftverkehr, Siegelumlauf und Abschriften.",
+              "Branwen kennt die höfischen Umgangsformen und achtet darauf, dass Zusagen und Zuständigkeiten eindeutig bleiben."
+            ]
+          }
+        },
+        "title": "Adjutantin des Herolds des Grafen",
+        "origin": "Rhosmere · Artus Streben"
       }
     ]
   },
   "character": {
     "id": "OJEmpbD6YWhDFDmitk6R",
     "inventory": {
-      "portraitFit": "cover",
-      "money": "0 Gold, 0 Silber, 0 Kupfer",
-      "companions": [
-        {
-          "imagePosition": "top",
-          "imageFormat": "landscape",
-          "attributes": [
-            {
-              "label": "Schnelligkeit",
-              "value": 6
-            },
-            {
-              "label": "Ausdauer",
-              "value": 7
-            },
-            {
-              "label": "Staerke",
-              "value": 5
-            },
-            {
-              "value": 6,
-              "label": "Agilitaet"
-            },
-            {
-              "label": "Sozialverhalten",
-              "value": 4
-            },
-            {
-              "label": "Robustheit",
-              "value": 5
-            }
-          ],
-          "summary": "Kurzbeschreibung des Gefährten.",
-          "imageFit": "cover",
-          "image": "",
-          "role": "Begleiter",
-          "statusColor": "#5c7f20",
-          "name": "Reittier / Gefährte",
-          "species": "Tier oder Begleiter",
-          "infoRows": [],
-          "description": "",
-          "id": "companion-mqu1vat2-0-zz2n",
-          "status": "Gesund"
-        },
-        {
-          "description": "",
-          "species": "Tier / Person",
-          "statusColor": "#5c7f20",
-          "id": "companion-mqu1vat2-1-5e7l",
-          "status": "Noch festlegen",
-          "imageFit": "cover",
-          "imageFormat": "landscape",
-          "image": "",
-          "attributes": [
-            {
-              "label": "Schnelligkeit",
-              "value": 6
-            },
-            {
-              "value": 7,
-              "label": "Ausdauer"
-            },
-            {
-              "value": 5,
-              "label": "Staerke"
-            },
-            {
-              "value": 6,
-              "label": "Agilitaet"
-            },
-            {
-              "value": 4,
-              "label": "Sozialverhalten"
-            },
-            {
-              "value": 5,
-              "label": "Robustheit"
-            }
-          ],
-          "infoRows": [],
-          "name": "Treuer Begleiter",
-          "imagePosition": "top",
-          "role": "Gefährte",
-          "summary": "Besonderheit, Nutzen oder Bindung."
-        }
-      ],
+      "healthColor": "#5c7f20",
+      "infoRows": [],
+      "portrait": "https://i.imgur.com/U6kCjOZ.png",
       "carryValue": "Noch festlegen",
-      "level": "Haus Draig, Celtigerns Wacht",
-      "equipmentQuiz": {
-        "step": 0,
-        "resultText": "",
-        "answers": [
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
-        ],
-        "status": "",
-        "open": false,
-        "updatedAt": ""
-      },
+      "name": "Branwen (Geb. Gwefrydd) Draig",
+      "revision": 1792090615772,
       "attributes": [
         {
           "value": 8,
@@ -781,156 +2661,112 @@
           "label": "Kon"
         },
         {
-          "label": "Int",
-          "value": 5
-        },
-        {
-          "value": 6,
-          "label": "Wei"
-        },
-        {
           "value": 5,
-          "label": "Cha"
-        }
-      ],
-      "name": "Branwen (Geb. Gwefrydd) Draig",
-      "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
-      "portraitFormat": "portrait",
-      "role": "Adjutantin des Herolds des Grafen, Rhosmere",
-      "healthColor": "#5c7f20",
-      "title": "Charakter-Inventar",
-      "infoRows": [],
-      "categories": [
-        {
-          "label": "Waffen",
-          "id": "weapon",
-          "icon": "https://i.imgur.com/YaUQREQ.png"
+          "label": "Int"
         },
         {
-          "label": "Rüstung",
-          "id": "armor",
-          "icon": "https://i.imgur.com/5qZtUiY.png"
+          "label": "Wei",
+          "value": 6
         },
         {
-          "id": "equipment",
-          "icon": "https://i.imgur.com/yMj2CQf.png",
-          "label": "Ausrüstung"
-        },
-        {
-          "id": "potions",
-          "icon": "https://i.imgur.com/gwujEaL.png",
-          "label": "Trinkturen"
-        },
-        {
-          "id": "documents",
-          "icon": "https://i.imgur.com/urdalGm.png",
-          "label": "Dokumente"
-        },
-        {
-          "id": "other",
-          "label": "Sonstiges",
-          "icon": "https://i.imgur.com/lgeevvn.png"
+          "label": "Cha",
+          "value": 5
         }
       ],
       "portraitPosition": "top",
-      "portrait": "https://i.imgur.com/U6kCjOZ.png",
-      "status": "Gesund",
-      "hitpoints": "TP / Zustand",
+      "portraitFit": "cover",
+      "level": "Haus Draig, Celtigerns Wacht",
       "carryLabel": "Traglast",
-      "moneyState": {
-        "silver": 0,
-        "totalCopper": 0,
-        "copper": 0,
-        "gold": 0
-      },
-      "moneyNotice": "",
       "items": [
         {
+          "name": "Hauptwaffe",
+          "imageFit": "contain",
           "type": "Waffe",
           "tags": "",
-          "imagePosition": "center",
+          "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+          "weight": "Noch festlegen",
           "infoRows": [],
+          "category": "weapon",
+          "image": "",
           "attributes": [
             {
               "label": "Schaden",
               "value": 5
             },
             {
-              "value": 3,
-              "label": "Schutz"
+              "label": "Schutz",
+              "value": 3
             },
             {
               "value": 4,
               "label": "Wert"
             },
             {
-              "label": "Seltenheit",
-              "value": 2
+              "value": 2,
+              "label": "Seltenheit"
             },
             {
               "value": 6,
               "label": "Zuverlaessigkeit"
             },
             {
-              "label": "Handhabung",
-              "value": 5
+              "value": 5,
+              "label": "Handhabung"
             }
           ],
-          "name": "Hauptwaffe",
           "imageFormat": "square",
-          "imageFit": "contain",
-          "quantity": "1",
+          "imagePosition": "center",
           "icon": "*",
-          "category": "weapon",
           "id": "item-mqu1vat1-0-w8ef",
-          "description": "Beschreibe Material, Zustand und besondere Merkmale.",
-          "image": "",
-          "weight": "Noch festlegen"
+          "quantity": "1"
         },
         {
-          "icon": "*",
-          "description": "Rüstung, Kleidung oder magischer Schutz.",
-          "imagePosition": "center",
-          "category": "armor",
-          "quantity": "1",
-          "id": "item-mqu1vat1-1-exvo",
           "weight": "Noch festlegen",
-          "imageFit": "contain",
-          "type": "Rüstung",
           "tags": "",
-          "imageFormat": "square",
-          "infoRows": [],
           "attributes": [
             {
               "value": 5,
               "label": "Schaden"
             },
             {
-              "value": 3,
-              "label": "Schutz"
+              "label": "Schutz",
+              "value": 3
             },
             {
               "value": 4,
               "label": "Wert"
             },
             {
-              "label": "Seltenheit",
-              "value": 2
+              "value": 2,
+              "label": "Seltenheit"
             },
             {
               "value": 6,
               "label": "Zuverlaessigkeit"
             },
             {
-              "label": "Handhabung",
-              "value": 5
+              "value": 5,
+              "label": "Handhabung"
             }
           ],
+          "description": "Rüstung, Kleidung oder magischer Schutz.",
+          "name": "Rüstung / Schutz",
+          "quantity": "1",
+          "type": "Rüstung",
+          "id": "item-mqu1vat1-1-exvo",
+          "imagePosition": "center",
+          "category": "armor",
+          "infoRows": [],
+          "icon": "*",
           "image": "",
-          "name": "Rüstung / Schutz"
+          "imageFit": "contain",
+          "imageFormat": "square"
         },
         {
-          "imageFormat": "square",
+          "tags": "",
+          "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+          "quantity": "1",
+          "name": "Reiseausrüstung",
           "attributes": [
             {
               "label": "Schaden",
@@ -949,41 +2785,37 @@
               "label": "Seltenheit"
             },
             {
-              "label": "Zuverlaessigkeit",
-              "value": 6
+              "value": 6,
+              "label": "Zuverlaessigkeit"
             },
             {
               "label": "Handhabung",
               "value": 5
             }
           ],
-          "image": "",
+          "type": "Ausrüstung",
+          "imageFit": "contain",
           "id": "item-mqu1vat1-2-0fx2",
           "imagePosition": "center",
           "weight": "Noch festlegen",
           "category": "equipment",
-          "icon": "*",
-          "quantity": "1",
-          "imageFit": "contain",
-          "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
-          "name": "Reiseausrüstung",
           "infoRows": [],
-          "tags": "",
-          "type": "Ausrüstung"
+          "imageFormat": "square",
+          "icon": "*",
+          "image": ""
         },
         {
-          "quantity": "1",
           "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+          "imageFit": "contain",
+          "icon": "*",
+          "infoRows": [],
           "category": "potions",
-          "tags": "",
-          "type": "Trinktur",
-          "image": "",
-          "name": "Heil- oder Verbrauchsgut",
           "weight": "Noch festlegen",
+          "type": "Trinktur",
           "attributes": [
             {
-              "value": 5,
-              "label": "Schaden"
+              "label": "Schaden",
+              "value": 5
             },
             {
               "value": 3,
@@ -1006,20 +2838,15 @@
               "label": "Handhabung"
             }
           ],
+          "quantity": "1",
+          "name": "Heil- oder Verbrauchsgut",
           "imageFormat": "square",
-          "id": "item-mqu1vat1-3-2lgm",
-          "icon": "*",
-          "infoRows": [],
-          "imageFit": "contain",
-          "imagePosition": "center"
+          "imagePosition": "center",
+          "image": "",
+          "tags": "",
+          "id": "item-mqu1vat1-3-2lgm"
         },
         {
-          "imagePosition": "center",
-          "icon": "*",
-          "imageFormat": "square",
-          "infoRows": [],
-          "id": "item-mqu1vat1-4-ajrj",
-          "imageFit": "contain",
           "attributes": [
             {
               "label": "Schaden",
@@ -1046,58 +2873,259 @@
               "value": 5
             }
           ],
-          "quantity": "1",
-          "type": "Dokument",
           "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
-          "tags": "",
           "category": "documents",
-          "image": "",
+          "infoRows": [],
+          "tags": "",
+          "imageFit": "contain",
+          "type": "Dokument",
           "name": "Dokumente / Urkunden",
-          "weight": "Noch festlegen"
+          "imagePosition": "center",
+          "image": "",
+          "weight": "Noch festlegen",
+          "id": "item-mqu1vat1-4-ajrj",
+          "quantity": "1",
+          "icon": "*",
+          "imageFormat": "square"
         },
         {
+          "icon": "*",
+          "imageFit": "contain",
+          "imageFormat": "square",
           "imagePosition": "center",
           "category": "other",
-          "imageFormat": "square",
-          "icon": "*",
+          "infoRows": [],
+          "image": "",
+          "name": "Persönlicher Gegenstand",
+          "weight": "Noch festlegen",
           "quantity": "1",
-          "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+          "type": "Sonstiges",
           "attributes": [
             {
               "label": "Schaden",
               "value": 5
             },
             {
-              "value": 3,
-              "label": "Schutz"
+              "label": "Schutz",
+              "value": 3
             },
             {
               "label": "Wert",
               "value": 4
             },
             {
-              "label": "Seltenheit",
-              "value": 2
+              "value": 2,
+              "label": "Seltenheit"
             },
             {
               "value": 6,
               "label": "Zuverlaessigkeit"
             },
             {
-              "label": "Handhabung",
-              "value": 5
+              "value": 5,
+              "label": "Handhabung"
             }
           ],
-          "type": "Sonstiges",
-          "image": "",
           "tags": "",
+          "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+          "id": "item-mqu1vat1-5-5kao"
+        },
+        {
+          "instanceId": "branwen-eurwen",
+          "imageFormat": "portrait",
+          "type": "Ceffyl",
+          "templateName": "Ceffyl",
+          "name": "Eurwen",
+          "registerCategory": "pferde",
           "imageFit": "contain",
-          "name": "Persönlicher Gegenstand",
-          "id": "item-mqu1vat1-5-5kao",
-          "weight": "Noch festlegen",
-          "infoRows": []
+          "originItemDbKey": "",
+          "infoRows": [],
+          "category": "companion",
+          "creatureId": "companion-branwen-eurwen",
+          "id": "branwen-eurwen",
+          "quantity": "1",
+          "ownerCharacterName": "Branwen (Geb. Gwefrydd) Draig",
+          "templateId": "",
+          "imagePosition": "center",
+          "description": "Eurwen ist Branwen Draigs prächtige beige Ceffyl-Stute. Sie hat eine dichte elfenbeinblonde Mähne und einen ebenso hellen Schweif. Branwen reitet sie im Alltag und beim Lanzentraining.",
+          "ownerCharacterId": "OJEmpbD6YWhDFDmitk6R",
+          "individualizedAt": "2026-10-15T18:56:55.780Z",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fbranwen-draig%2F2026-10-15%2Feurwen-ceffyl-34cc98dd10c74ba2.png?alt=media&token=a97668ca-5eef-4bc9-a3c3-8c1010f9434b",
+          "attributes": [],
+          "itemStorageMode": "character",
+          "itemDbKey": ""
+        },
+        {
+          "category": "companion",
+          "infoRows": [],
+          "itemDbKey": "",
+          "description": "Mabon ist Branwen Draigs sandfarbener Rhedwyr-Rüde und Eiras Wurfbruder. Eine alte Trollverletzung hat seine linke Schulter vernarbt; nach längerer Ruhe sind seine ersten Schritte steif.",
+          "creatureId": "companion-branwen-mabon",
+          "templateName": "Rhedwyr",
+          "originItemDbKey": "",
+          "id": "branwen-mabon",
+          "registerCategory": "vieh",
+          "instanceId": "branwen-mabon",
+          "imageFit": "contain",
+          "name": "Mabon",
+          "type": "Rhedwyr",
+          "imagePosition": "center",
+          "ownerCharacterId": "OJEmpbD6YWhDFDmitk6R",
+          "individualizedAt": "2026-10-15T18:56:55.781Z",
+          "attributes": [],
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fbranwen-draig%2F2026-10-15%2Fmabon-rhedwyr-d7d253ea352cf1bc.png?alt=media&token=1339ca51-4fe7-4cbe-8f41-1e9ad8152c15",
+          "imageFormat": "portrait",
+          "templateId": "",
+          "ownerCharacterName": "Branwen (Geb. Gwefrydd) Draig",
+          "itemStorageMode": "character",
+          "quantity": "1"
+        },
+        {
+          "infoRows": [],
+          "category": "companion",
+          "name": "Eira",
+          "attributes": [],
+          "type": "Rhedwyr",
+          "registerCategory": "vieh",
+          "templateId": "",
+          "imageFormat": "portrait",
+          "templateName": "Rhedwyr",
+          "imagePosition": "center",
+          "ownerCharacterName": "Branwen (Geb. Gwefrydd) Draig",
+          "imageFit": "contain",
+          "id": "branwen-eira",
+          "itemStorageMode": "character",
+          "creatureId": "companion-branwen-eira",
+          "description": "Eira ist Branwen Draigs elfenbeinweiße Rhedwyr-Hündin mit hellsandfarbenen Flecken und Mabons Wurfschwester. Von der Trolljagd blieben eine fehlende rechte Ohrspitze und eine verheilte Narbe am Ohransatz.",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fbranwen-draig%2F2026-10-15%2Feira-rhedwyr-03bed3dd9565345b.png?alt=media&token=c6ba2b59-e5bd-4cee-b414-18e085a8d985",
+          "originItemDbKey": "",
+          "ownerCharacterId": "OJEmpbD6YWhDFDmitk6R",
+          "individualizedAt": "2026-10-15T18:56:55.781Z",
+          "instanceId": "branwen-eira",
+          "quantity": "1",
+          "itemDbKey": ""
         }
-      ]
+      ],
+      "status": "Gesund",
+      "portraitFormat": "portrait",
+      "hitpoints": "TP / Zustand",
+      "title": "Charakter-Inventar",
+      "companions": [
+        {
+          "creatureId": "companion-branwen-eurwen",
+          "role": "Reittier",
+          "imageFormat": "portrait",
+          "species": "Ceffyl",
+          "summary": "Eurwen ist Branwen Draigs prächtige beige Ceffyl-Stute. Sie hat eine dichte elfenbeinblonde Mähne und einen ebenso hellen Schweif. Branwen reitet sie im Alltag und beim Lanzentraining.",
+          "attributes": [],
+          "imageFit": "contain",
+          "description": "Eurwen ist Branwen Draigs prächtige beige Ceffyl-Stute. Sie hat eine dichte elfenbeinblonde Mähne und einen ebenso hellen Schweif. Branwen reitet sie im Alltag und beim Lanzentraining.",
+          "inventoryItemId": "branwen-eurwen",
+          "statusColor": "#5c7f20",
+          "infoRows": [],
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fbranwen-draig%2F2026-10-15%2Feurwen-ceffyl-34cc98dd10c74ba2.png?alt=media&token=a97668ca-5eef-4bc9-a3c3-8c1010f9434b",
+          "imagePosition": "center",
+          "id": "companion-mqu1vat2-0-zz2n",
+          "name": "Eurwen",
+          "status": "Gesund"
+        },
+        {
+          "imageFit": "contain",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fbranwen-draig%2F2026-10-15%2Fmabon-rhedwyr-d7d253ea352cf1bc.png?alt=media&token=1339ca51-4fe7-4cbe-8f41-1e9ad8152c15",
+          "attributes": [],
+          "role": "Gefährte",
+          "imagePosition": "center",
+          "status": "Gesund",
+          "infoRows": [],
+          "inventoryItemId": "branwen-mabon",
+          "imageFormat": "portrait",
+          "id": "companion-mqu1vat2-1-5e7l",
+          "name": "Mabon",
+          "summary": "Mabon ist Branwen Draigs sandfarbener Rhedwyr-Rüde und Eiras Wurfbruder. Eine alte Trollverletzung hat seine linke Schulter vernarbt; nach längerer Ruhe sind seine ersten Schritte steif.",
+          "description": "Mabon ist Branwen Draigs sandfarbener Rhedwyr-Rüde und Eiras Wurfbruder. Eine alte Trollverletzung hat seine linke Schulter vernarbt; nach längerer Ruhe sind seine ersten Schritte steif.",
+          "species": "Rhedwyr",
+          "creatureId": "companion-branwen-mabon",
+          "statusColor": "#5c7f20"
+        },
+        {
+          "id": "card-branwen-eira",
+          "imagePosition": "center",
+          "status": "Gesund",
+          "imageFit": "contain",
+          "name": "Eira",
+          "imageFormat": "portrait",
+          "species": "Rhedwyr",
+          "infoRows": [],
+          "summary": "Eira ist Branwen Draigs elfenbeinweiße Rhedwyr-Hündin mit hellsandfarbenen Flecken und Mabons Wurfschwester. Von der Trolljagd blieben eine fehlende rechte Ohrspitze und eine verheilte Narbe am Ohransatz.",
+          "attributes": [],
+          "description": "Eira ist Branwen Draigs elfenbeinweiße Rhedwyr-Hündin mit hellsandfarbenen Flecken und Mabons Wurfschwester. Von der Trolljagd blieben eine fehlende rechte Ohrspitze und eine verheilte Narbe am Ohransatz.",
+          "inventoryItemId": "branwen-eira",
+          "role": "Gefährte",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fbranwen-draig%2F2026-10-15%2Feira-rhedwyr-03bed3dd9565345b.png?alt=media&token=c6ba2b59-e5bd-4cee-b414-18e085a8d985",
+          "creatureId": "companion-branwen-eira"
+        }
+      ],
+      "categories": [
+        {
+          "icon": "https://i.imgur.com/YaUQREQ.png",
+          "label": "Waffen",
+          "id": "weapon"
+        },
+        {
+          "icon": "https://i.imgur.com/5qZtUiY.png",
+          "label": "Rüstung",
+          "id": "armor"
+        },
+        {
+          "label": "Ausrüstung",
+          "icon": "https://i.imgur.com/yMj2CQf.png",
+          "id": "equipment"
+        },
+        {
+          "id": "potions",
+          "label": "Trinkturen",
+          "icon": "https://i.imgur.com/gwujEaL.png"
+        },
+        {
+          "id": "documents",
+          "label": "Dokumente",
+          "icon": "https://i.imgur.com/urdalGm.png"
+        },
+        {
+          "id": "other",
+          "icon": "https://i.imgur.com/lgeevvn.png",
+          "label": "Sonstiges"
+        }
+      ],
+      "moneyNotice": "",
+      "role": "Adjutantin des Herolds des Grafen, Rhosmere",
+      "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+      "money": "0 Gold, 0 Silber, 0 Kupfer",
+      "equipmentQuiz": {
+        "status": "",
+        "updatedAt": "",
+        "open": false,
+        "resultText": "",
+        "step": 0,
+        "answers": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      },
+      "moneyState": {
+        "totalCopper": 0,
+        "copper": 0,
+        "silver": 0,
+        "gold": 0
+      }
     },
     "emotes": [
       {
@@ -1181,12 +3209,12 @@
     "playerOwner": "erdi",
     "name": "Branwen (Geb. Gwefrydd) Draig",
     "emotesOverride": true,
-    "bio": "",
+    "bio": "Lady Branwen Draig, geborene Gwefrydd (*1700), ist Cadfan Draigs willensstarke Adjutantin und eine bei Odyar Draig ausgebildete Uchelwyr. Ihre Kampfpraxis ist eingerostet; im Reiten gehört sie weiterhin zu den Besten Gwynthors. Mit Steffan hat sie die Kinder Gethin und Tegan. Zu ihr gehören die Ceffyl-Stute Eurwen und die Rhedwyr Mabon und Eira.",
     "portrait": "https://i.imgur.com/U6kCjOZ.png",
     "profileLink": "",
     "fraktion": "Haus Draig, Celtigerns Wacht",
     "aliases": [],
-    "title": "Adjutantin des Herolds des Grafen, Rhosmere",
+    "title": "Adjutantin des Herolds des Grafen",
     "identity": {
       "worldPersonId": "person--haus-gwefrydd--branwen-gwefrydd"
     },
@@ -1255,6 +3283,196 @@
         "children": []
       }
     },
-    "taxonomyPath": "Cenyr > Celtigerns Wacht > Artus Streben > Rhosmere"
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Artus Streben > Rhosmere",
+    "updatedAt": "2026-10-15T19:24:10.194Z",
+    "biography": {
+      "revision": 1792092250194,
+      "quote": "",
+      "quoteBy": "",
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "stats": [
+        {
+          "label": "Geboren",
+          "value": "1700"
+        },
+        {
+          "label": "Herkunft",
+          "value": "Rhosmere · Artus Streben"
+        },
+        {
+          "value": "Haus Gwefrydd",
+          "label": "Geburtshaus"
+        },
+        {
+          "value": "Stennis Gwefrydd und Morwen Dyngwn",
+          "label": "Eltern"
+        },
+        {
+          "label": "Bruder",
+          "value": "Thomos Gwefrydd"
+        },
+        {
+          "label": "Stand",
+          "value": "Uchelwyr · Ritterin"
+        },
+        {
+          "label": "Amt",
+          "value": "Adjutantin des Herolds des Grafen"
+        },
+        {
+          "label": "Ehemann",
+          "value": "Sir Steffan Draig (*1696)"
+        },
+        {
+          "value": "Gethin (*1722) und Tegan (*1725)",
+          "label": "Kinder"
+        },
+        {
+          "label": "Rittervater",
+          "value": "Sir Odyar Draig"
+        }
+      ],
+      "biography": {
+        "abilitiesTitle": "Im Umgang mit anderen",
+        "trivia": [
+          "Nennt Steffan gern „Gemahl“, besonders wenn sie seine Zustimmung bereits voraussetzt. Ein kurzer Stoß mit dem Ellenbogen gehört gelegentlich dazu.",
+          "Prüft vor dem Aufsitzen den Sattelgurt selbst, auch wenn gerade erst jemand nachgegurtet hat.",
+          "Fragt bei fremden Pferden nach Abstammung und Ausbildung und vergisst darüber gelegentlich die Zeit.",
+          "Findet fast immer einen Anlass, Gethins Fortschritte zu erwähnen."
+        ],
+        "connectionTextOffset": 0,
+        "documentsTitle": "Tiere und Besitz",
+        "portraitStages": [
+          "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fbranwen-draig%2F2026-10-15%2Fbranwen-gwefrydd-ruestung-eurwen-e84eb18a4aebe543.png?alt=media&token=d8534964-49d6-4ac5-aaec-07697227e9d0",
+          "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fbranwen-draig%2F2026-10-15%2Fbranwen-20-8c1fa1aae8a89b98.png?alt=media&token=23ea9016-ddd6-49c6-881a-31bf07d79471",
+          "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fbranwen-draig%2F2026-10-15%2Fbranwen-14-bfe6e9194a763c37.png?alt=media&token=4fee1a95-a633-4fbd-835a-b1f5e35f8750",
+          "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fbranwen-draig%2F2026-10-15%2Fbranwen-08-138cb9fc58596825.png?alt=media&token=c100cca4-8638-446e-9bf7-00573eccc3ab"
+        ],
+        "worksTitle": "Aufgaben am Hof",
+        "extraSections": [
+          {
+            "title": "Fähigkeiten als Uchelwyr",
+            "text": "<p>Odyars Ausbildung hat aus Branwen eine <strong>fähige Ritterin</strong> gemacht. Sie versteht den Umgang mit der Lanze und weiß, wie sie sich in Rüstung zu bewegen hat. Ihre besten Zeiten als Kämpferin liegen allerdings hinter ihr. Einen wirklichen Kampf hat sie seit langer Zeit nicht mehr bestritten. Griff und Haltung sind ihr vertraut, doch Reaktion, Ausdauer und das sichere Abschätzen eines Gegners sind ohne regelmäßige Kampfpraxis eingerostet.</p><p><strong>Im Reiten gehört sie weiterhin zu den Besten Gwynthors.</strong> Ihr Sitz ist sicher, ihre Hilfen sind ruhig und genau. Auch ein anspruchsvolles Pferd kann sie zuverlässig führen und Fehler in seiner Ausbildung erkennen. Den täglichen Umgang mit dem Ross hat sie nie aufgegeben; im Sattel ist sie erheblich geübter als im unmittelbaren Waffengang.</p>",
+            "mode": "text",
+            "position": "afterIntro"
+          },
+          {
+            "position": "afterWorks",
+            "title": "Ihre Tiere",
+            "text": "<p><strong>Eurwen</strong>, ihre prächtige beige <strong>Ceffyl-Stute</strong> mit der dichten hellen Mähne, wird von Branwen sorgfältig gepflegt und regelmäßig geritten. Bei Sattelzeug und Hufen sieht sie lieber selbst noch einmal nach.</p><p>Die <strong>Rhedwyr Mabon und Eira</strong> stammen aus demselben Wurf. Einst waren es fünf Hunde. Drei starben auf einer Jagd, als die Kinder noch klein waren; Branwen sagt, es sei ein Troll gewesen. Steffan konnte die beiden Überlebenden retten. Mabons vernarbte linke Schulter wird nach Ruhe steif, Eira fehlt ein Stück der rechten Ohrspitze. Branwen achtet auf Mabons Anlauf und nimmt ihn bei Beschwerden von längeren Hetzen aus.</p>",
+            "mode": "text"
+          }
+        ],
+        "historyTitle": "Herkunft und Ausbildung",
+        "triviaTitle": "Marotten",
+        "connectionPortraitHeight": 68,
+        "biographyText": "<p>Branwen ist gewohnt, Angelegenheiten selbst in die Hand zu nehmen. Sie entscheidet zügig, spricht deutlich und erwartet, dass Absprachen eingehalten werden. Auch ihren Widerspruch trägt sie mit höflichen Worten vor. Wer ihr ausweicht oder etwas nur halb erklärt, muss mit weiteren Fragen rechnen. Bei neuen Verpflichtungen möchte sie genau wissen, wer wofür einsteht. Als Gastgeberin kümmert sie sich um Unterkunft und Versorgung ihrer Gäste und bezieht den eigenen Haushalt dabei ganz selbstverständlich ein.</p><p>Mit <strong>Steffan</strong> verbindet sie eine lange, vertraute Ehe. Sie hat ihn gern, beansprucht seine Aufmerksamkeit und plant bisweilen für ihn mit, bevor sie ihn gefragt hat. Seine Geduld kennt sie gut. Spricht er jedoch eines seiner seltenen Machtworte, respektiert sie es und lässt die Sache ruhen. Auf <strong>Gethin</strong> ist sie ausgesprochen stolz. Für sie ist ihr Sohn sehr gut geraten; sie verfolgt seine Fortschritte aufmerksam und erzählt gern davon. <strong>Tegan</strong> liebt sie ebenso. Dass ihre Tochter bei Lady <strong>Rihanna Draig, geborener Ceirwyn</strong>, und <strong>Isobel</strong> gut aufgehoben ist, gibt ihr die Sicherheit, sich auch ihren eigenen Aufgaben zu widmen.</p><p>Bei Pferden kommt die <strong>Gwefrydd</strong> in ihr unverkennbar zum Vorschein. Branwen kennt Zuchtlinien, beurteilt Gang und Gebäude und bemerkt schlecht sitzendes Sattelzeug rasch. Ihre Kenntnisse reichen beinahe an die <strong>Owain Draigs</strong> heran. Über Pferde kann sie ausdauernd reden; zum Stall findet sie selbst an einem vollen Tag noch Zeit.</p>",
+        "portraitCaptions": [
+          "Branwen Draig · 1740.",
+          "Mit Eurwen in der Rüstung des Hauses Gwefrydd · 1740.",
+          "Mit 20 Jahren · 1720. Nach ihrer Ausbildung bei Sir Odyar.",
+          "Mit 14 Jahren · 1714. Knappin im Haushalt Odyars und Beibhinns.",
+          "Mit 8 Jahren · 1708. Als Ausbildungsmündel in Gwynthor."
+        ],
+        "documents": [
+          {
+            "link": "",
+            "text": "Beige Ceffyl-Stute; Branwens persönliches Ross.",
+            "title": "Eurwen",
+            "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fbranwen-draig%2F2026-10-15%2Feurwen-ceffyl-34cc98dd10c74ba2.png?alt=media&token=a97668ca-5eef-4bc9-a3c3-8c1010f9434b"
+          },
+          {
+            "title": "Mabon",
+            "text": "Rhedwyr-Rüde; alte Narbe an der linken Schulter.",
+            "link": "",
+            "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fbranwen-draig%2F2026-10-15%2Fmabon-rhedwyr-d7d253ea352cf1bc.png?alt=media&token=1339ca51-4fe7-4cbe-8f41-1e9ad8152c15"
+          },
+          {
+            "text": "Rhedwyr-Hündin; fehlende rechte Ohrspitze.",
+            "link": "",
+            "icon": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fbranwen-draig%2F2026-10-15%2Feira-rhedwyr-03bed3dd9565345b.png?alt=media&token=c6ba2b59-e5bd-4cee-b414-18e085a8d985",
+            "title": "Eira"
+          }
+        ],
+        "historyText": "<p><strong>1700</strong> wurde Branwen als Tochter von <strong>Stennis Gwefrydd</strong> und <strong>Morwen Dyngwn</strong> geboren. Ihr Bruder <strong>Thomos</strong> ist zwei Jahre älter. Ihre Kindheit in Rhosmere war früh vom Umgang mit Pferden geprägt.</p><p>Mit acht Jahren kam sie <strong>1708</strong> als Ausbildungsmündel nach Gwynthor in den Haushalt <strong>Sir Odyar Draigs</strong> und <strong>Beibhinn Eirces</strong>. Beibhinn übernahm ihre höfische Erziehung; Odyar wurde ihr Rittervater. <strong>1714</strong> begann ihre Knappenzeit, <strong>1720</strong> schloss sie ihre Ausbildung ab. Im Haus der beiden lernte sie auch Steffan kennen, den sie später heiratete. Ihr Sohn Gethin wurde <strong>1722</strong> geboren, Tegan <strong>1725</strong>. Die Verbindung zu ihrer Familie in Rhosmere hat Branwen beibehalten.</p>",
+        "connectionsTitle": "Verbindungen",
+        "portrait": "https://i.imgur.com/U6kCjOZ.png",
+        "connections": [
+          {
+            "name": "Sir Steffan Draig",
+            "type": "connection",
+            "detail": "Ihr Ehemann. Mit seiner Geduld rechnet sie fest; seine seltenen Machtworte nimmt sie ernst. Er rettete Mabon und Eira.",
+            "imageFormat": "portrait",
+            "image": "../Stammbäume/assets/images/portraits/haus-draig/steffan-draig.jpg"
+          },
+          {
+            "image": "../Stammbäume/assets/images/portraits/haus-draig/gethin-1722-draig.jpg",
+            "imageFormat": "portrait",
+            "type": "connection",
+            "detail": "Ihr Sohn und ganzer Stolz. Branwen verfolgt seine Entwicklung aufmerksam und hält große Stücke auf ihn.",
+            "name": "Gethin Draig"
+          },
+          {
+            "type": "connection",
+            "image": "../Stammbäume/assets/images/portraits/haus-draig/tegan-draig.jpg",
+            "imageFormat": "portrait",
+            "name": "Tegan Draig",
+            "detail": "Ihre Tochter. Branwen liebt sie und vertraut auf die Fürsorge Lady Rihannas und Isobels."
+          },
+          {
+            "name": "Sir Odyar Draig",
+            "detail": "Steffans Vater und Branwens Rittervater. Nahm sie als Ausbildungsmündel in seinen Haushalt auf und bildete sie im Reiten und an der Lanze aus.",
+            "imageFormat": "portrait",
+            "image": "../Stammbäume/assets/images/portraits/haus-draig/odyar-draig.jpg",
+            "type": "connection"
+          },
+          {
+            "detail": "Steffans Mutter. Betreute Branwens höfische Erziehung während ihrer Jahre als Ausbildungsmündel in Gwynthor.",
+            "type": "connection",
+            "name": "Beibhinn Eirce",
+            "image": "../Stammbäume/assets/images/portraits/haus-draig/beibhinn-eirce.jpg",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "imageFormat": "portrait",
+            "image": "../Stammbäume/assets/images/portraits/haus-draig/cadfan-draig.jpg",
+            "detail": "Herold des Grafen. Branwen unterstützt ihn als Adjutantin bei Audienzen, Botenwegen, Schriftverkehr und Siegelumlauf.",
+            "name": "Sir Cadfan Draig"
+          }
+        ],
+        "quotesTitle": "Typische Worte",
+        "sideWidth": 100,
+        "footer": "",
+        "quotes": [
+          "„Nicht wahr, Gemahl?“"
+        ],
+        "biographyTitle": "Lady Branwen Draig, geborene Gwefrydd",
+        "abilities": [
+          {
+            "icon": "/IconOrdner/Traits%20Icon/Stubborn.png",
+            "title": "Bestimmend",
+            "detail": "Übernimmt gern die Führung und vertritt ihre Entscheidungen mit Nachdruck. Sie kann dabei voraussetzen, dass andere ihre Pläne längst teilen."
+          },
+          {
+            "icon": "/IconOrdner/Traits%20Icon/Gregarious.png",
+            "detail": "Kümmert sich persönlich um ihre Gäste und hält engen Kontakt zur Familie. Für die Menschen ihres Haushalts nimmt sie sich viel heraus, setzt sich aber auch für sie ein.",
+            "title": "Gesellig und zugewandt"
+          },
+          {
+            "detail": "Fragt genau nach und merkt sich Einzelheiten. In vertrauten Dingen lässt sie sich wenig vormachen; eine von oben herab erteilte Belehrung verträgt sie schlecht.",
+            "title": "Wach und sachkundig",
+            "icon": "/IconOrdner/Traits%20Icon/Shrewd.png"
+          }
+        ],
+        "works": [
+          "Als <strong>Adjutantin des Herolds</strong> bereitet sie Cadfans Audienzen vor und stimmt Termine sowie Reiseaufträge ab.",
+          "Sie organisiert Botenwege und koordiniert Schriftverkehr, Siegelumlauf und Abschriften.",
+          "Branwen kennt die höfischen Umgangsformen und achtet darauf, dass Zusagen und Zuständigkeiten eindeutig bleiben."
+        ]
+      }
+    },
+    "origin": "Rhosmere · Artus Streben"
   }
 }

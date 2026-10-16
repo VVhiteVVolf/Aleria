@@ -1,0 +1,357 @@
+﻿SKYRIM / NOLVUS – PLUGIN-PRÜFBERICHT
+Stand: 14. Oktober 2026, Europe/Berlin
+Profil: Nolvus Awakening - SkyrimNet Beta25 Test
+
+1. AKTUELL GESPEICHERTES PROFIL
+Aktive Mod-Ordner: 4019
+Aktive Plugins insgesamt: 4043
+Normale Plugins: 255 / 254 (1 über der Grenze)
+Light-Plugins: 3788 / 4096 (308 freie Light-Plätze)
+Gezählt anhand der tatsächlichen TES4-Headerflags, nicht anhand der Dateiendung.
+Basis-ESMs und automatisch geladene Creation-Club-Plugins sind berücksichtigt.
+Keine fehlenden Master unter den erfassten aktiven Plugins.
+
+2. ABGLEICH MIT DEM LETZTEN SKSE-SPIELSTANDPROTOKOLL
+Letzter protokollierter Stand: 253 normale + 3787 Light = 4040 Plugins.
+Log zuletzt geändert am 14.10.2026 um ca. 01:48 Uhr. Das ist ein historischer Stand, keine Live-Sitzungsabfrage.
+Im aktuellen Profil zusätzlich gegenüber diesem Stand:
+  TAL_ThalmorStart.esp: Light, ASP THALMOR
+  VeronicaFollower.esp: normal, Veronica The Flirty Imperial Milf SE
+  [dint999] HairPack02.esp: normal, [Dint999] HairPack02 SSE 1.12 (base)
+VeronicaFollower.esp und [dint999] HairPack02.esp verbrauchen die zwei zusätzlich aktivierten normalen Slots.
+TAL_ThalmorStart.esp ist Light und verursacht den normalen Slotengpass nicht.
+
+3. SLOTS SPAREN, OHNE INHALTE ZU ENTFERNEN
+Erste technische Prüfkandidaten für ein ESL-Flag ohne FormID-Kompaktierung:
+  XPMSE.esp: 11 vorhandene Skyrim-GMST-Overrides, keine eigenen neuen FormIDs, keine Master-abhängigen Plugins.
+  SPERG - ZIA Patch.esp: 5 vorhandene SPEL/FLST-Overrides, keine eigenen neuen FormIDs, keine Master-abhängigen Plugins.
+Beide sind wirksam und sollen nicht als angeblich nutzlos entfernt werden.
+Ein ESL-Flag erhält Namen und Inhalte; die strukturelle Prüfung ist noch keine abgeschlossene xEdit-/Spielvalidierung.
+Nach Umstellung beider: 253 normale / 3790 Light. Dann 1 normaler Platz frei.
+Zusätzlicher struktureller Kandidat: RaceMenuPlugin.esp (1 eigene QUST, ID 0x801, keine neuen CELL/NAVM).
+SkyUI_SE.esp und RaceMenu.esp liegen ebenfalls im Zahlenbereich, sind aber zentrale Grundlagen und nicht erste Wahl.
+Andere kleine Plugins haben neue IDs außerhalb 0x800–0xFFF. Klein bedeutet daher nicht automatisch ohne Kompaktierung ESL-fähig.
+Keine FormIDs bestehender Spielstände ungeprüft neu nummerieren.
+
+4. OPTIONAL ENTFERNBARE FEATURES – NUTZUNG MUSS ENTSCHEIDEN
+Alle nachstehenden Plugins sparen jeweils genau 1 normalen Slot und haben keine aktiven TES4-Master-Nachfolger.
+Dies schließt Laufzeitreferenzen, Scripts, SPID-Dateien, Presets und gespeicherte Gegenstände nicht aus.
+  VeronicaFollower.esp
+    Mod: Veronica The Flirty Imperial Milf SE
+    Bewertung: Erster Kandidat, wenn Veronica nicht gespielt wird. Normaler Slot; entspricht nicht der bisherigen Vorgabe, neue Follower nur ohne normale Slots zu aktivieren.
+  QwibNewLanterns.esp
+    Mod: Simple Wearable Lanterns - Remastered
+    Bewertung: Tragbare Laternen. Quick Light ist ebenfalls aktiv. Optional, wenn dessen Licht genügt; keine vollständige Funktionsgleichheit.
+  WetFunction.esp
+    Mod: Twisted - Wet Function Redux SE
+    Bewertung: Dynamischer Haut-/Nässeglanz. Passt zum früheren Wunsch nach weniger öliger Haut; nur entbehrlich, wenn dieser Effekt nicht gewünscht ist.
+  SkyrimsGotTalent-Bards.esp
+    Mod: Skyrim's Got Talent - Improve As a Bard
+    Bewertung: Spieler-Bardenfortschritt und Musizieren. Entbehrlich, wenn keiner der im Profil gespielten Charaktere dieses System benutzt. Entfernt nicht pauschal alle Vanilla-Barden.
+  HotKeySkill.esp
+    Mod: Hot Key Skill
+    Bewertung: Separates Hot-Key-Skill-System. Nur streichen, wenn seine Fähigkeiten/Tasten nicht verwendet werden. Nicht mit Hotkey Atlas verwechseln.
+  DragonbornShoutPerks.esp
+    Mod: Custom Skills - Dragonborn Shouts Perk Tree
+    Bewertung: Zusätzlicher Schrei-Fertigkeitsbaum. Optional, wenn keiner der Charaktere im Profil ihn nutzt.
+  ODrunkredux.esp
+    Mod: ODrunkRedux
+    Bewertung: Zusätzliche ODrunk-Funktion. Optional, falls dieses Feature nicht benutzt wird; OStim-Abhängigkeiten vor Deinstallation prüfen.
+  DragonboneBarbarianArmor.esp
+    Mod: Local - Dragonbone Barbarian Armor 20261006
+    Bewertung: Ein einzelnes zusätzliches Rüstungspaket. 1 voller Slot; nur streichen, wenn seine Outfits nicht in Gebrauch sind.
+  [FB] Sentinel Knight.esp
+    Mod: Local - Sentinel Knight 3BA 20261006
+    Bewertung: Einzelnes Rüstungspaket mit Waffe. 1 voller Slot; nur streichen, wenn nicht genutzt.
+  [Zynx][MTM] TavernClothes.esp
+    Mod: Local - Tavern Clothes 20261006
+    Bewertung: Zusätzliche Kleidung. 1 voller Slot; nur streichen, wenn nicht genutzt.
+
+5. KOSMETIK NICHT PAUSCHAL ENTFERNEN
+397 wirksame RaceMenu-Presetdateien auf explizite Plugin-Namen geprüft.
+[dint999] HairPack02.esp: in 4 Presetdateien genannt, deshalb kein guter pauschaler Löschkandidat.
+[Dint999] FacePartMod+Mikan_Eyes.esp: in 2 Presetdateien genannt (Astara und Vivienne/Ashe).
+FacePartMod-Basis hat 3 abhängige Augen-Addons. Nicht allein ausschalten.
+EyesMod3.esp, Kala_Orsimer Eyes.esp, Saeri_Khajiit_Hair.esp und NosPiercedEarsAll.esp haben keine Master-Nachfolger und keine Namensreferenzen in den geprüften Presets.
+Das beweist keine Nichtbenutzung: aktuelle Spieler-/NPC-Köpfe und SKSE-CoSaves wurden nicht ausgelesen.
+
+6. NICHT ALS SCHNELLE AUFRÄUMKANDIDATEN BEHANDELN
+SkyrimNet, SeverActions, IntelEngine, Stances und Attack_DXP: gewünschte oder reparierte Funktionen.
+Ordinator, SPERG, Path of Sorcery, Adamant und Vokrii: Teile des eingerichteten Perk-Verbundes, nicht allein wegen ähnlicher Namen Duplikate.
+RaceMenu, UIExtensions, FISS und Skeleton-Dateien: auch ohne TES4-Master-Nachfolger wichtige Laufzeitgrundlagen.
+LOTD, 3DNPC, Bruma, Lux, Northern Roads, Cloaks und NPC-/Körperintegrationspatches: weitreichende Abhängigkeiten.
+Beispiel Cloaks: 28 nachgelagerte Plugins, einschließlich zentraler Nolvus- und Körper-/NPC-Patches. Nicht die komplette Abhängigkeitskette blind deaktivieren.
+SunHelm könnte als ganzes Feature 3 normale + 6 Light sparen, hat aber laufende Quest-/Scriptzustände. Nur bei bewusster Abkehr vom Survival-System planen.
+
+7. EMPFEHLUNG
+Zuerst die beiden reinen Override-Plugins auf eine Flag-only-ESL-Umstellung prüfen.
+Zusätzlich Veronica unaktiv lassen, falls nicht gewünscht: mit beiden Umstellungen wären es 252 normale Plugins und 2 freie Plätze.
+Danach 2–4 tatsächlich ungenutzte Komfort-/Feature-Plugins auswählen, um mehr Reserve zu schaffen.
+Deaktivierung und Löschen getrennt behandeln: Für Slots reicht Deaktivierung; Löschen bringt nur Speicherplatz.
+Eine ESP mit ESL-Flag zählt bereits als Light. Ihre Entfernung schafft keinen normalen Slot.
+Keine pauschale Zusammenführung oder Kompaktierung des vorhandenen Loadouts.
+
+8. PRÜFGRENZEN UND UNVERÄNDERTER ZUSTAND
+Es wurde keine Mod gelöscht, deaktiviert, konvertiert oder neu installiert.
+Profil-Prüfsummen vor/nach dem Audit stimmen überein.
+Geprüft: Pluginflags, Header, Mastergraph, Datensatztypen/FormID-Bereiche der normalen Plugins und ausgewählte Presetreferenzen.
+Nicht geprüft: vollständige xEdit-Konfliktauswertung, persönliche Feature-Nutzung, aktuell im RAM geladene Sitzung und Spielstandbereinigung.
+Referenz zum Engine-Limit: https://dyndolod.info/Messages/Plugin-Limit
+
+9. ALLE NORMALEN PLUGINS
+Slots sind aus dem aktuell gespeicherten Profil berechnet; FE ist hier bereits der reservierte Light-Bereich.
+00 | Skyrim.esm | Skyrim / Creation Club | Nachfolger: 3968
+01 | Update.esm | Skyrim / Creation Club | Nachfolger: 3436
+02 | Dawnguard.esm | Skyrim / Creation Club | Nachfolger: 2880
+03 | HearthFires.esm | Skyrim / Creation Club | Nachfolger: 2602
+04 | Dragonborn.esm | Skyrim / Creation Club | Nachfolger: 2873
+05 | ccasvsse001-almsivi.esm | Skyrim / Creation Club | Nachfolger: 28
+06 | ccbgssse001-fish.esm | Skyrim / Creation Club | Nachfolger: 578
+07 | cctwbsse001-puzzledungeon.esm | Skyrim / Creation Club | Nachfolger: 15
+08 | cceejsse001-hstead.esm | Skyrim / Creation Club | Nachfolger: 18
+09 | ccbgssse016-umbra.esm | Skyrim / Creation Club | Nachfolger: 16
+0A | ccbgssse031-advcyrus.esm | Skyrim / Creation Club | Nachfolger: 12
+0B | ccbgssse067-daedinv.esm | Skyrim / Creation Club | Nachfolger: 34
+0C | ccbgssse025-advdsgs.esm | Skyrim / Creation Club | Nachfolger: 560
+0D | cceejsse005-cave.esm | Skyrim / Creation Club | Nachfolger: 17
+0E | ccafdsse001-dwesanctuary.esm | Skyrim / Creation Club | Nachfolger: 15
+0F | Unofficial Skyrim Special Edition Patch.esp | Unofficial Skyrim Special Edition Patch | Nachfolger: 539
+10 | FISS.esp | FileAccess Interface for Skyrim Scripts - FISSES | Nachfolger: 0
+11 | LegacyoftheDragonborn.esm | Legacy of the Dragonborn | Nachfolger: 415
+12 | BSAssets.esm | Beyond Skyrim - Assets | Nachfolger: 82
+13 | BSHeartland.esm | Beyond Skyrim - Bruma | Nachfolger: 77
+14 | Alpine Forest of Whiterun Valley.esp | Alpine Forest of Whiterun Valley | Nachfolger: 3
+15 | Occ_Skyrim_Tamriel.esp | eFPS - Exterior FPS boost | Nachfolger: 49
+16 | GKBWavesReborn.esp | GKB Waves Reborn | Nachfolger: 1
+17 | Water for ENB.esm | Water for ENB [4K] | Nachfolger: 15
+18 | BS_DLC_patch.esp | Beyond Skyrim - DLC Integration | Nachfolger: 6
+19 | Dwarfsphere.esp | Project AHO - ESM Flag Edition - Clean Patch | Nachfolger: 28
+1A | konahrik_accoutrements.esp | Konahrik's Accoutrements - Fixed Esp | Nachfolger: 19
+1B | DBM_CC_HallOfWonders.esp | Legacy of the Dragonborn - Creation Club Patch | Nachfolger: 146
+1C | Gray Fox Cowl.esm | The Gray Cowl of Nocturnal | Nachfolger: 30
+1D | Vigilant.esm | Vigilant - English Voices Addon | Nachfolger: 45
+1E | WheelsOfLull.esp | The Wheels of Lull | Nachfolger: 13
+1F | Wyrmstooth.esp | Wyrmstooth | Nachfolger: 82
+20 | evgSIRENROOT.esm | SirenRoot - Deluge of Deceit | Nachfolger: 6
+21 | Unslaad.esm | Unslaad - English Voices Addon | Nachfolger: 9
+22 | wraithguardvaultfixer.esp | Legacy of the Dragonborn - Sunder and Wraithguard | Nachfolger: 2
+23 | Lux Via.esp | Lux Via - Update | Nachfolger: 58
+24 | 3DNPC.esp | Interesting NPCs 3DNPC - Update | Nachfolger: 81
+25 | TravellersOfSkyrim.esm | Travellers of Skyrim | Nachfolger: 3
+26 | RSkyrimChildren.esm | RS Children Overhaul | Nachfolger: 28
+27 | Apachii_DivineEleganceStore.esm | Apachii Divine Elegance Store - CBBE Patch | Nachfolger: 23
+28 | Midwood Isle.esp | Midwood Isle - CTD and Main Quest Fixes | Nachfolger: 31
+29 | Falskaar.esm | Falskaar | Nachfolger: 32
+2A | JSwords.esm | JaySuS Swords | Nachfolger: 10
+2B | Haem Projects Goblands.esp | Carved Brink | Nachfolger: 9
+2C | Darkend.esp | Darkend | Nachfolger: 6
+2D | Clockwork.esp | Clockwork | Nachfolger: 21
+2E | moonpath.esp | Moonpath to Elsweyr | Nachfolger: 27
+2F | TSR_TeldrynSerious.esp | Teldryn Serious - A Teldryn Sero Backstory Quest | Nachfolger: 9
+30 | ForgottenCity.esp | The Forgotten City | Nachfolger: 16
+31 | Identity Crisis.esp | Identity Crisis | Nachfolger: 10
+32 | Undeath.esp | Undeath Remastered | Nachfolger: 60
+33 | Campfire.esm | Campfire | Nachfolger: 7
+34 | MoonAndStar_MAS.esp | Moon and Star - Cleaned Plugin Replacer | Nachfolger: 32
+35 | LOTD_HUB.esp | Legacy of the Dragonborn - Hall of Forgotten | Nachfolger: 42
+36 | Natural Waterfalls.esp | Natural Waterfalls | Nachfolger: 9
+37 | myrwatchhomefixer.esp | Myrwatch - Editable Home Cells | Nachfolger: 1
+38 | DynDOLOD.esm | DynDOLOD - Output - Ultimate | Nachfolger: 2
+39 | SkyUI_SE.esp | Sky UI | Nachfolger: 13
+3A | Audio Overhaul Skyrim.esp | Audio Overhaul for Skyrim | Nachfolger: 5
+3B | Immersive Sounds - Compendium.esp | Immersive Sounds - Compendium | Nachfolger: 30
+3C | Resources - The Great Cities.esp | The Great Cities - Resources | Nachfolger: 63
+3D | SMIM-SE-Merged-All.esp | Static Mesh Improvement Mod | Nachfolger: 2
+3E | Relationship Dialogue Overhaul.esp | Relationship Dialogue Overhaul | Nachfolger: 4
+3F | Cutting Room Floor.esp | Cutting Room Floor | Nachfolger: 54
+40 | Guard Dialogue Overhaul.esp | Guard Dialogue Overhaul | Nachfolger: 1
+41 | Weapons Armor Clothing & Clutter Fixes.esp | Weapons Armor Clothing and Clutter Fixes [2K] | Nachfolger: 122
+42 | UIExtensions.esp | UI Extensions | Nachfolger: 0
+43 | Landscape Fixes For Grass Mods.esp | Landscape Fixes For Grass Mods | Nachfolger: 47
+44 | NAT-ENB.esp | Natural Atmospheric Tamriel III | Nachfolger: 6
+45 | Footprints.esp | Footprints - SPID - Fix | Nachfolger: 3
+46 | JRMoonpathtoElsweyrPatch.esp | Moonpath to Elsweyr - Unofficial Patch | Nachfolger: 4
+47 | DBM_RelicNotifications.esp | Legacy of the Dragonborn - The Curators Companion | Nachfolger: 117
+48 | RaceMenu.esp | RaceMenu Special Edition | Nachfolger: 1
+49 | RaceMenuPlugin.esp | RaceMenu Special Edition | Nachfolger: 0
+4A | UndeathFixes.esp | Undeath - Classical Lichdom | Nachfolger: 10
+4B | yumcheese.esp | Cheesemod for Everyone - Clean Patch | Nachfolger: 55
+4C | Tools of Kagrenac.esp | The Tools of Kagrenac | Nachfolger: 16
+4D | CurseOfTheHoundAmulet.esp | Curse of the Hound Amulet | Nachfolger: 6
+4E | TheChoiceIsYours.esp | The Choice is Yours | Nachfolger: 24
+4F | RAEQuestRequirements.esp | Rebalancing Anniversary Edition - Quest Requirements | Nachfolger: 1
+50 | Seasonal Weathers Framework.esp | Seasonal Weathers Framework | Nachfolger: 2
+51 | WetandCold.esp | Wet and Cold - Gear | Nachfolger: 4
+52 | KS Hairdo's.esp | KS Hairdos | Nachfolger: 0
+53 | CitizensComplete.esp | Citizens of Tamriel | Nachfolger: 9
+54 | TravellersOfSkyrim - Light.esp | Travellers of Skyrim | Nachfolger: 1
+55 | Inigo.esp | Inigo - Cleaned Esp | Nachfolger: 18
+56 | Lucien.esp | Lucien | Nachfolger: 10
+57 | Lucien-AnniversaryEdition-Patch.esp | Lucien - Creation Club Patch | Nachfolger: 0
+58 | Lucien-Moonpath-Patch.esp | Lucien - Moonpath to Elsweyr Patch | Nachfolger: 0
+59 | 018Auri.esp | Auri | Nachfolger: 15
+5A | 018AuriVIGILANTpatch.esp | Auri - Vigilant Commentary | Nachfolger: 0
+5B | HLIORemi.esp | Remiel | Nachfolger: 13
+5C | Katana.esp | Katana And Megara | Nachfolger: 11
+5D | NW_Sons_of_Skyrim.esp | RMB SPIDified - Sons of Skyrim | Nachfolger: 25
+5E | nithi npcs - dawnguard dlc - fort dawnguard - men.esp | Twisted - NPC Nolvus Restressourcen 20260924 | Nachfolger: 8
+5F | XPMSE.esp | XP32 Maximum Skeleton Special Extended | Nachfolger: 0
+60 | Dawn of Skyrim.esp | Dawn of Skyrim Director's Cut - Rob's Bug Fixes | Nachfolger: 35
+61 | JK's Whiterun's Outskirts.esp | JK's Whiterun Outskirts | Nachfolger: 31
+62 | Kojaks Whiterun Market.esp | Whiterun Outskirts Market | Nachfolger: 9
+63 | EpicSolitude.esp | Epic Cities - Solitude | Nachfolger: 11
+64 | Deadly Shadows of  Riften.esp | Deadly Shadows in Riften | Nachfolger: 7
+65 | RiftenLaketown.esp | Laketown - A Riften Docks Expansion | Nachfolger: 0
+66 | JK's Markarth Outskirts.esp | JK's Markarth Outskirts | Nachfolger: 12
+67 | Grey_Quarter_Overhaul.esp | Gray Quarter Overhaul | Nachfolger: 4
+68 | Windhelm Lighthouse.esp | Windhelm Lighthouse | Nachfolger: 1
+69 | JKs Skyrim.esp | JK's Skyrim Custom Towns | Nachfolger: 13
+6A | Thuldor's Ivarstead.esp | Thuldor's Ivarstead | Nachfolger: 11
+6B | The Great City of Dawnstar.esp | The Great City of Dawnstar | Nachfolger: 8
+6C | The Great Town of Shor's Stone.esp | The Great Town of Shor's Stone - Rob's Bug Fixes | Nachfolger: 18
+6D | The Great Village of Kynesgrove.esp | The Great Village of Kynesgrove | Nachfolger: 27
+6E | The Great Town of Karthwasten.esp | The Great Town of Karthwasten - Rob's Bug Fixes | Nachfolger: 17
+6F | The Great Village of Old Hroldan.esp | The Great Village of Old Hroldan - Rob's Bug Fixes | Nachfolger: 18
+70 | The Great Village of Mixwater Mill.esp | The Great Village of Mixwater Mill | Nachfolger: 16
+71 | The Great City of Rorikstead.esp | The Great City of Rorikstead - Rob's Bug Fixes | Nachfolger: 6
+72 | The Great City of Winterhold v4.esp | The Great City of Winterhold | Nachfolger: 37
+73 | ClefJ's Dragon Bridge.esp | ClefJ's Dragon Bridge Enhanced | Nachfolger: 8
+74 | Lainalten.esp | Lainalten | Nachfolger: 12
+75 | Sunthgat.esp | Sunthgat | Nachfolger: 7
+76 | AnotherOakwood.esp | Oakwood | Nachfolger: 16
+77 | Reich Corigate.esp | Reich Corigate | Nachfolger: 10
+78 | Granite Hill.esp | Granite Hill Village | Nachfolger: 11
+79 | Amber Guard.esp | Amber Guard | Nachfolger: 16
+7A | Dunpar Wall.esp | Dunpar Wall | Nachfolger: 10
+7B | Vernim Wood.esp | Vernim Wood | Nachfolger: 11
+7C | JK's Riverfall Cottage.esp | JK's Riverfall Cottage Family Edition | Nachfolger: 6
+7D | Eli_Sicarius' Refuge.esp | Sicarius' Refuge | Nachfolger: 4
+7E | Eli_Ruska.esp | Ruska | Nachfolger: 3
+7F | WindPath.esp | Wind Path | Nachfolger: 5
+80 | HearthfireMultiKid.esp | Hearthfire Multiple Adoptions and Custom Home Support | Nachfolger: 2
+81 | This Is Jorrvaskr.esp | This Is Jorrvaskr | Nachfolger: 9
+82 | Missives.esp | Missives | Nachfolger: 22
+83 | Sepolcri.esp | Sepolcri - A Complete Burial Sites Overhaul | Nachfolger: 1
+84 | SkyrimSewers.esp | Skyrim Sewers | Nachfolger: 21
+85 | Distinct Interiors.esp | Distinct Interiors - Fixes | Nachfolger: 46
+86 | EEKs Whiterun Interiors.esp | EEKs Whiterun Interiors | Nachfolger: 40
+87 | JK's Blue Palace.esp | JK's Blue Palace | Nachfolger: 5
+88 | JK's College of Winterhold.esp | JK's College of Winterhold | Nachfolger: 26
+89 | GG's Thieves Guild Headquarters.esp | GG's Thieves Guild Headquarters | Nachfolger: 10
+8A | DIS_Armor_Fractions.esp | Unplayable Faction Armor | Nachfolger: 17
+8B | DIS_Heavy_Legion.esp | New Legion | Nachfolger: 18
+8C | ColovianFurClothes.esp | Colovian Fur Outfit | Nachfolger: 4
+8D | waccf_armor and clothing extension.esp | Armor and Clothing Extension | Nachfolger: 21
+8E | Dr_Bandolier.esp | Bandolier Bags and Pouches Classic | Nachfolger: 1
+8F | Cloaks.esp | Cloaks of Skyrim | Nachfolger: 28
+90 | Cloaks - Dawnguard.esp | Cloaks of Skyrim | Nachfolger: 7
+91 | Faction Crossbows.esp | Faction Crossbows | Nachfolger: 4
+92 | DawnguardArsenal.esp | Dawnguard Arsenal | Nachfolger: 18
+93 | TW3Weaponry.esp | Witcher 3 Weaponry | Nachfolger: 1
+94 | icebladeofthemonarch.esp | Artifacts - The Ice Blade of the Monarch [2K] | Nachfolger: 3
+95 | ktWeaponPackSE.esp | Kthonia's Unique Weapon Pack - Dragonborn Weapons | Nachfolger: 3
+96 | PrvtIRoyalArmory.esp | Royal Armory - New Artifacts | Nachfolger: 10
+97 | ZIA_Complete Pack.esp | Zim's Immersive Artifacts | Nachfolger: 7
+98 | NewArmoury.esp | Animated Armoury - No Whips Edition | Nachfolger: 19
+99 | DiverseDragonsCollectionSE.esp | Diverse Dragons Collection | Nachfolger: 0
+9A | VeronicaFollower.esp | Veronica The Flirty Imperial Milf SE | Nachfolger: 0
+9B | UltimateDragons.esp | Ultimate Dragons | Nachfolger: 1
+9C | ACatsLife.esp | A Cat's Life | Nachfolger: 11
+9D | mihailashgolemexpansion.esp | Mihail - Ash Guardian Expansion | Nachfolger: 7
+9E | mihailbanekins.esp | Mihail - Banekins | Nachfolger: 4
+9F | mihailgiantesses.esp | Mihail - Giantesses | Nachfolger: 1
+A0 | 1Ogres.esp | Ogres - Fixes | Nachfolger: 3
+A1 | AttackoDaedra.esp | Attacko's Daedra 2 | Nachfolger: 2
+A2 | DwemerSpectresLegendary.esp | Dwemer Spectres | Nachfolger: 5
+A3 | LeftHandRings.esp | Left Hand Rings Modified | Nachfolger: 1
+A4 | SL01AmuletsSkyrim.esp | Amulets of Skyrim | Nachfolger: 23
+A5 | SkyrimsUniqueTreasures.esp | Skyrim Unique Treasures | Nachfolger: 32
+A6 | WZOblivionArtifacts.esp | Oblivion Artifact - Hot Fix | Nachfolger: 16
+A7 | ArtifactsOfBoethiah.esp | Artifacts - The Tournament of the Ten Bloods - Sounds Fix | Nachfolger: 6
+A8 | Fossilsyum.esp | Fossil Mining | Nachfolger: 2
+A9 | TreasureHunter.esp | Treasure Hunter - Clean Patch | Nachfolger: 12
+AA | QuickLight.esp | Quick Light | Nachfolger: 2
+AB | QwibNewLanterns.esp | Simple Wearable Lanterns - Remastered | Nachfolger: 0
+AC | ENB Light.esp | ENB Light | Nachfolger: 0
+AD | Embers XD.esp | Embers XD | Nachfolger: 38
+AE | Stances - Dynamic Weapon Movesets SE.esp | Stances - Dynamic Animation Sets | Nachfolger: 4
+AF | ImmersiveInteractions.esp | Immersive Interactions - Animated Actions | Nachfolger: 1
+B0 | TaberuAnimation.esp | Eating Animations and Sounds | Nachfolger: 19
+B1 | Apocalypse - Magic of Skyrim.esp | Apocalypse - Magic of Skyrim | Nachfolger: 10
+B2 | Thunderchild - Epic Shout Package.esp | Thunderchild | Nachfolger: 4
+B3 | MysticismMagic.esp | Mysticism - A Magic Overhaul | Nachfolger: 32
+B4 | SPERG-SSE.esp | SPERG - Skyrim Perk Enhancements and Rebalanced Gameplay | Nachfolger: 11
+B5 | SPERG - ZIA Patch.esp | SPERG - Zim's Immersive Artifacts Compatibility Patch | Nachfolger: 0
+B6 | PathOfSorcery.esp | Path of Sorcery - Magic Perk Overhaul | Nachfolger: 20
+B7 | Ordinator - Perks of Skyrim.esp | Ordinator | Nachfolger: 21
+B8 | Apocalypse - Ordinator Compatibility Patch.esp | Ordinator - Apocalypse Patch | Nachfolger: 1
+B9 | Thaumaturgy.esp | Thaumaturgy - An Enchanting Overhaul | Nachfolger: 7
+BA | Triumvirate - Mage Archetypes.esp | Triumvirate | Nachfolger: 5
+BB | Conduit.esp | Conduit - Short Term Weapon Infusions | Nachfolger: 0
+BC | StrangeRunes.esp | Strange Runes | Nachfolger: 0
+BD | GIST soul trap.esp | GIST Soul Trap | Nachfolger: 1
+BE | DragonbornShoutPerks.esp | Custom Skills - Dragonborn Shouts Perk Tree | Nachfolger: 0
+BF | SunHelmSurvival.esp | SunHelm | Nachfolger: 8
+C0 | SunHelmWyrmstoothPatch.esp | SunHelm | Nachfolger: 0
+C1 | SunHelmCampfireSkill.esp | SunHelm | Nachfolger: 0
+C2 | Complete Crafting Overhaul_Remastered.esp | Complete Crafting Overhaul Remastered | Nachfolger: 57
+C3 | DragonboneBarbarianArmor.esp | Local - Dragonbone Barbarian Armor 20261006 | Nachfolger: 0
+C4 | [FB] Sentinel Knight.esp | Local - Sentinel Knight 3BA 20261006 | Nachfolger: 0
+C5 | [Zynx][MTM] TavernClothes.esp | Local - Tavern Clothes 20261006 | Nachfolger: 0
+C6 | Apothecary.esp | Apothecary - An Alchemy Overhaul | Nachfolger: 14
+C7 | ValhallaCombat.esp | Valhalla Combat | Nachfolger: 2
+C8 | Valravn - Integrated Combat of Skyrim.esp | Valravn - Integrated Combat of Skyrim | Nachfolger: 4
+C9 | SekiroCombat_II.esp | Sekiro Combat S - Sparks Only and Sound Fixes | Nachfolger: 0
+CA | HotKeySkill.esp | Hot Key Skill | Nachfolger: 0
+CB | J42_ArmorRatingRedux.esp | Armor Rating Redux | Nachfolger: 2
+CC | Fanatical Enemies.esp | Fanatical Enemies | Nachfolger: 13
+CD | FlufyFoxAnimObjectsC.esp | FlufyFox OStim | Nachfolger: 0
+CE | The Restless Dead.esp | The Restless Dead | Nachfolger: 11
+CF | Better Vampire NPCs.esp | Better Vampire NPCs | Nachfolger: 13
+D0 | Bandit War.esp | Lawless - A Bandit Overhaul | Nachfolger: 16
+D1 | Madmen.esp | Madmen - A Forsworn Overhaul | Nachfolger: 18
+D2 | VioLens SE.esp | VioLens - A Killmove Mod | Nachfolger: 0
+D3 | 1111VampireKingBoss.esp | Boss Fight - Soul Cairn Boss - Lord Yorma | Nachfolger: 0
+D4 | TrueArmor.esp | True Armor | Nachfolger: 0
+D5 | SimplyBalanced.esp | Simply Balanced | Nachfolger: 1
+D6 | Attack_DXP.esp | Twisted - ADXP MCO Bug Fixes 2.0.6 | Nachfolger: 0
+D7 | Trade & Barter.esp | Trade and Barter | Nachfolger: 4
+D8 | TradeRoutes.esp | Trade Routes - Regional Economy | Nachfolger: 9
+D9 | COINMerchantExchange.esp | COIN - Merchant Exchange | Nachfolger: 0
+DA | AI Overhaul.esp | AI Overhaul | Nachfolger: 50
+DB | run for your lives.esp | Run For Your Lives | Nachfolger: 0
+DC | Wintersun - Faiths of Skyrim.esp | Wintersun | Nachfolger: 37
+DD | nwsFollowerFramework.esp | Nether's Follower Framework | Nachfolger: 1
+DE | SkyrimsGotTalent-Bards.esp | Skyrim's Got Talent - Improve As a Bard | Nachfolger: 0
+DF | Paragliding.esp | Skyrim's Paraglider | Nachfolger: 1
+E0 | Sacrosanct - Vampires of Skyrim.esp | Sacrosanct - Vampires of Skyrim | Nachfolger: 3
+E1 | Better Courier.esp | Better Courier | Nachfolger: 2
+E2 | Water for ENB (Shades of Skyrim).esp | Water for ENB [4K] | Nachfolger: 32
+E3 | AlternatePerspective.esp | Alternate Perspective - Alternate Start | Nachfolger: 13
+E4 | Growl - Werebeasts of Skyrim.esp | Growl - Werebeasts of Skyrim | Nachfolger: 4
+E5 | [dint999] HairPack02.esp | [Dint999] HairPack02 SSE 1.12 (base) | Nachfolger: 0
+E6 | Lux.esp | Lux | Nachfolger: 203
+E7 | Northern Roads.esp | Northern Roads | Nachfolger: 240
+E8 | Atlas Map Markers.esp | Atlas Map Markers | Nachfolger: 13
+E9 | WetFunction.esp | Twisted - Wet Function Redux SE | Nachfolger: 0
+EA | KabuArgonianFins.esp | Twisted - Kabu's Argonian Fins - Flawn's Vanilla Argonians Redux | Nachfolger: 1
+EB | [dint999] bdor_hairstyles.esp | [Dint999] BDOR Hairs SSE 0.24 | Nachfolger: 0
+EC | Saeri_Khajiit_Hair.esp | Twisted - Khajiit Hair by Saerileth | Nachfolger: 0
+ED | MoreHorns.esp | Twisted - More Horn (Vanilla) Styles for Argonians | Nachfolger: 1
+EE | NosPiercedEarsAll.esp | Twisted - Pierced Ears - Earrings SE | Nachfolger: 0
+EF | Kala_Orsimer Eyes.esp | Twisted - Kala's Eyes-Elf Eyes Updated with Orsimer | Nachfolger: 0
+F0 | [Dint999] FacePartMod.esp | Twisted - [Dint999] Face Part Mod | Nachfolger: 3
+F1 | EyesMod3.esp | Twisted - EyesMod | Nachfolger: 0
+F2 | oromance.esp | Twisted - ORomance Plus | Nachfolger: 4
+F3 | SeverActions.esp | SeverActions 4.2.0 | Nachfolger: 1
+F4 | SkyrimNet.esp | SkyrimNet - Beta 26 RC4 | Nachfolger: 0
+F5 | IntelEngine.esp | IntelEngine 3.5.1 - Complete | Nachfolger: 0
+F6 | [Dint999] FacePartMod+Mikan_Eyes.esp | Twisted - [Dint999] Face Part Mod | Nachfolger: 0
+F7 | OStimCommunityResource.esp | Twisted - OStim Community Resource | Nachfolger: 0
+F8 | OStim Lovers.esp | Twisted - OStim Lovers | Nachfolger: 0
+F9 | ODrunkredux.esp | ODrunkRedux | Nachfolger: 0
+FA | SkoomaWhoreReforged.esp | Skooma | Nachfolger: 0
+FB | DaedricArmorRedone.esp | Daedric Armor Redone - Replacer | Nachfolger: 0
+FC | Twisted NPC Appearance Integration.esp | Twisted - NPC Appearance Integration 20260924 | Nachfolger: 2
+FD | DynDOLOD.esp | DynDOLOD - Output - Ultimate (NO SREX) | Nachfolger: 0
+FE | FWMF for Fantasy Paper Maps.esp | Flat World Map Framework | Nachfolger: 1
