@@ -9,7 +9,7 @@ const root = new URL('../../Stammbäume/assets/data/published-families/', import
 const registry = JSON.parse(await readFile(new URL('registry.json', root), 'utf8'));
 const now = new Date().toISOString();
 const records = [];
-for (const id of ['haus-raves','haus-veltrane','haus-maerllys','haus-coeddu']) {
+for (const id of ['haus-raves','haus-veltrane','haus-maerllys','haus-coeddu','haus-trevoryn','haus-svathamar','haus-dubhdarach','haus-tonnarth']) {
   const registered = FAMILY_REGISTRY.find(record => record.id === id);
   assert(registered, id);
   const previous = await readFile(new URL(`${id}.json`,root),'utf8').then(JSON.parse).catch(error => {
@@ -17,13 +17,27 @@ for (const id of ['haus-raves','haus-veltrane','haus-maerllys','haus-coeddu']) {
     return null;
   });
   const family = assertValidFamily(previous ? reconcileFamilyWithProjectOrigin({family:previous.family,projectOriginFamily:registered.family}).family : registered.family).family;
-  if(previous) for(const old of previous.family.persons) {
-    const current = family.persons.find(person => person.id === old.id);
-    assert(current, `${id}: Person entfernt: ${old.id}`);
-    for(const field of ['id','worldPersonId','birth','death','houseId']) assert.equal(current[field],old[field],`${id}/${old.id}/${field}`);
-  }
   records.push({registered,previous,baseFamily:previous?.family,family,
     changed:JSON.stringify(previous?.family) !== JSON.stringify(family)});
+}
+// A removed duplicate must retain its identity and parentage in the named house.
+for (const record of records) for (const old of record.previous?.family.persons || []) {
+  let current = record.family.persons.find(person => person.id === old.id);
+  if (!current) {
+    const transfer = record.family.extensions.registryTransferredPersons?.find(item => item.personId === old.id);
+    assert(transfer && transfer.worldPersonId === old.worldPersonId, `Nicht belegte Personenentfernung: ${old.id}`);
+    assert(record.family.extensions.registryTombstones.persons.includes(old.id));
+    const destination = records.find(item => item.family.document.id === transfer.targetFamilyId)?.family;
+    current = destination?.persons.find(person => person.worldPersonId === old.worldPersonId);
+    assert(current, `Fortgeführte Person fehlt: ${old.id}`);
+    for (const parentage of record.previous.family.parentages.filter(item => item.childId === old.id)) {
+      assert.deepEqual(destination.parentages.find(item => item.id === parentage.id), parentage,
+        `Abstammung der fortgeführten Person: ${old.id}`);
+    }
+  }
+  for (const field of ['id','worldPersonId','birth','death','houseId']) {
+    assert.equal(current[field], old[field], `${record.family.document.id}/${old.id}/${field}`);
+  }
 }
 assertMirroredCrossFamilyBatch(records);
 const changed = records.filter(record => record.changed);

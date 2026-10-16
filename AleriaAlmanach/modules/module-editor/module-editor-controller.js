@@ -52,6 +52,7 @@ function collectModuleEditorPayload() {
     moduleWidth: document.getElementById('me-module-width')?.value || MODULE_SIZE_DEFAULT,
     moduleHeight: document.getElementById('me-module-height')?.value || MODULE_SIZE_DEFAULT,
     image: document.getElementById('me-image')?.value.trim() || pages[0]?.image || '',
+    previewImage: document.getElementById('me-preview-image')?.value.trim() || '',
     stamp: document.getElementById('me-stamp')?.value.trim() || '',
     icon: document.getElementById('me-icon')?.value.trim() || '',
     symbol: document.getElementById('me-symbol')?.value.trim() || '',
@@ -159,6 +160,7 @@ function populateModuleEditor(payload, context, options = {}) {
   document.getElementById('me-module-height').value = clampModuleSizeValue(payload.entry?.moduleHeight, MODULE_SIZE_DEFAULT);
   updateModuleSizeEditorLabels();
   document.getElementById('me-image').value = payload.entry?.image || '';
+  document.getElementById('me-preview-image').value = payload.entry?.previewImage || '';
   document.getElementById('me-stamp').value = payload.entry?.stamp || '';
   document.getElementById('me-icon').value = payload.entry?.icon || '✦';
   document.getElementById('me-symbol').value = payload.entry?.symbol || '';

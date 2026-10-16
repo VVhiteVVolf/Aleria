@@ -38,11 +38,13 @@ const scenes = [
 const manifest = {
   schemaVersion: 2, module: 'Göttliche Eleganz', style: 'Gespeicherter Aleria-Anime-Stil; Nutzerkorrektur: ruhiger, weniger One Piece, stehende unterschiedliche Posen ohne Gegenstände', approvedHeraldry: 'KREISRUNDE Wappen: Anker/Olivenzweig und Nadel/Garnspule/Segelbarke auf Dunkelblau',
   entries: [
-    ...ELEGANZ_PEOPLE.map(p => ({ id: p.key, destination: `AleriaAlmanach/assets/goettliche-eleganz/portraits/${p.key}.png`, transparent: false,
+    ...ELEGANZ_PEOPLE.map(p => ({ id: p.key, destination: `AleriaAlmanach/${p.portrait.slice(2)}`, transparent: false,
       references: ['aurelio','lavinia'].includes(p.key)
         ? ['AleriaAlmanach/assets/goettliche-eleganz/portraits/eleonora.png','AleriaAlmanach/assets/goettliche-eleganz/portraits/luciano.png','AleriaAlmanach/assets/krumme-kanne/portraits/eirian.png']
         : p.key === 'serafina'
-          ? ['AleriaAlmanach/assets/goettliche-eleganz/portraits/tiberian.png','AleriaAlmanach/assets/goettliche-eleganz/portraits/maelwen.png','AleriaAlmanach/assets/krumme-kanne/portraits/eirian.png']
+          ? ['AleriaAlmanach/assets/goettliche-eleganz/portraits/tiberian.png','AleriaAlmanach/assets/goettliche-eleganz/portraits/maelwen-v2.png','AleriaAlmanach/assets/krumme-kanne/portraits/eirian.png']
+          : p.key === 'maelwen'
+            ? ['AleriaAlmanach/assets/goettliche-eleganz/portraits/maelwen.png','Stammbäume/assets/images/portraits/haus-coeddu/llywelyn-coeddu.png']
           : ['AleriaAlmanach/assets/goettliche-eleganz/portraits/eleonora.png','AleriaAlmanach/assets/krumme-kanne/portraits/eirian.png'], prompt: portraitPrompt(p) })),
     { id: 'veltrane', destination: 'Stammbäume/assets/images/houses/Kaiserreich Argentum/Veltrane.png', transparent: true,
       references: ['Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Maerllys.png','Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Trevoryn.png'],

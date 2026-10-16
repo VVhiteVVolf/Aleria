@@ -29,6 +29,8 @@ function getArchiveEntryGuildEmblem(entry) {
 // Returns an HTML-attribute-safe source, matching sanitizeImageSrc.
 // Renderers must insert it directly so query parameters are escaped only once.
 function getArchiveEntryPreviewImage(entry) {
+  const explicitImage = sanitizeImageSrc(entry?.previewImage || '');
+  if (explicitImage) return explicitImage;
   const guildEmblem = getArchiveEntryGuildEmblem(entry);
   if (guildEmblem) return guildEmblem;
 

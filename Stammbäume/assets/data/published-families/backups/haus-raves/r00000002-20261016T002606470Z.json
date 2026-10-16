@@ -1,0 +1,910 @@
+{
+  "schemaVersion": 1,
+  "familyId": "haus-raves",
+  "revision": 2,
+  "updatedAt": "2026-10-16T00:26:06.470Z",
+  "family": {
+    "schema": "aleria.family-tree",
+    "schemaVersion": 1,
+    "document": {
+      "id": "haus-raves",
+      "title": "Haus Raves",
+      "motto": "",
+      "description": "Gwynthorer Zweig der Veltrane aus Tirnara. Aus Matteo Veltranes und Gwenora Maerllys’ Krämerladen entstand die Göttliche Eleganz, heute unter Eleonora Cassia Raves die angesehenste Schneiderei der Innenstadt.",
+      "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Raves.png",
+      "houseProfile": {
+        "rankId": "commoner",
+        "seat": "Gwynthor",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "house-draig",
+        "liegeHouseName": "Haus Draig",
+        "regionEmblems": {
+          "seat": "",
+          "barony": "",
+          "county": "",
+          "kingdom": ""
+        }
+      }
+    },
+    "persons": [
+      {
+        "id": "matteo-veltrane",
+        "worldPersonId": "person--haus-veltrane--matteo-veltrane",
+        "name": "Matteo Septimus Veltrane",
+        "title": "Handelskapitän · Begründer der Gwynthorer Linie",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1633",
+        "death": "1708",
+        "portrait": "../AleriaAlmanach/assets/goettliche-eleganz/portraits/matteo.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-veltrane",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Matteo kam mit Seide und Olivenöl nach Gwynthor und fand in Gwenoras Werkstatt einen Grund zu bleiben. Aus seinem kleinen Krämerladen und ihren Aufträgen wuchs ein Geschäft, das die Schiffe seines Stammhauses nie aus den Augen verlor.",
+        "extensions": {
+          "registryManagedFields": [
+            "title",
+            "notes",
+            "portrait"
+          ]
+        }
+      },
+      {
+        "id": "gwenora-maerllys",
+        "worldPersonId": "person--haus-maerllys--gwenora-maerllys",
+        "name": "Gwenora Maerllys",
+        "title": "Schneidermeisterin · Mitbegründerin des Geschäfts",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1638",
+        "death": "1714",
+        "portrait": "../AleriaAlmanach/assets/goettliche-eleganz/portraits/gwenora-v2.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-maerllys",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Gwenora verstand mehr von Stoff als die meisten Tuchhändler. Sie nähte für Gwynthors Bürger, handelte selbstbewusst mit dem fremden Kapitän und brachte ihm bei, dass ein gutes Geschäft am Saum ebenso leicht scheitert wie auf See.",
+        "extensions": {
+          "registryManagedFields": [
+            "title",
+            "notes",
+            "portrait"
+          ]
+        }
+      },
+      {
+        "id": "lorenzo-raves",
+        "worldPersonId": "person--haus-raves--lorenzo-raves",
+        "name": "Lorenzo Cassian Raves",
+        "title": "Verstorbener Geschäftsinhaber",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1665",
+        "death": "1734",
+        "portrait": "../AleriaAlmanach/assets/goettliche-eleganz/portraits/lorenzo.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-raves",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Lorenzo machte aus dem Krämerladen ein Haus für gute Kleidung. Er gab den Maßstuben feste Werkstätten und ließ lieber eine Lieferung ausfallen, als zweifelhafte Seide unter dem Namen Raves zu verkaufen.",
+        "extensions": {
+          "registryManagedFields": [
+            "title",
+            "notes",
+            "portrait"
+          ]
+        }
+      },
+      {
+        "id": "rhiain-raves",
+        "worldPersonId": "person--haus-raves--rhiain-raves",
+        "name": "Rhiain",
+        "title": "Altmeisterin · Schnittkunde & Ausbildung",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1674",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/goettliche-eleganz/portraits/rhiain.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Rhiain erkennt einen verzogenen Fadenlauf mit einem Blick. Die Witwe des alten Inhabers gibt ihre Schnitte und ihre Geduld an die Lehrlinge weiter; den letzten Stich einer Festgarnitur prüft sie gern noch selbst.",
+        "extensions": {
+          "registryManagedFields": [
+            "title",
+            "notes",
+            "portrait"
+          ]
+        }
+      },
+      {
+        "id": "livia-raves",
+        "worldPersonId": "person--haus-raves--livia-raves",
+        "name": "Livia Aurelia Raves",
+        "title": "Nach Venalys verheiratet",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1669",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/goettliche-eleganz/portraits/livia.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-raves",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Livia lebt seit ihrer Heirat in Venalys. Ihre Briefe sind voll bissiger Bemerkungen über neue Säume, schlechte Festkleider und Menschen, die beides tragen. Gelegentlich reist ein seltenes Muster mit der Post nach Gwynthor.",
+        "extensions": {
+          "registryManagedFields": [
+            "title",
+            "notes",
+            "portrait"
+          ]
+        }
+      },
+      {
+        "id": "flavia-raves",
+        "worldPersonId": "person--haus-raves--flavia-raves",
+        "name": "Flavia Marina Raves",
+        "title": "Nach Tirnara verheiratet",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1674",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/goettliche-eleganz/portraits/flavia.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-raves",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Flavia kehrte durch ihre Heirat in den Süden zurück. Sie hat ein gutes Gedächtnis für Stoffpreise und ein besseres für Gefälligkeiten. In Gwynthor weiß man, dass ihre seltenen Empfehlungen eine Prüfung wert sind.",
+        "extensions": {
+          "registryManagedFields": [
+            "title",
+            "notes",
+            "portrait"
+          ]
+        }
+      },
+      {
+        "id": "eleonora-raves",
+        "worldPersonId": "person--haus-raves--eleonora-raves",
+        "name": "Eleonora Cassia Raves",
+        "title": "Inhaberin · Entwurf & letzte Anprobe",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1701",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/goettliche-eleganz/portraits/eleonora.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-raves",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Eleonora führt die Göttliche Eleganz mit ruhiger Stimme und einem unerbittlichen Auge für den Sitz eines Gewandes. Sie berät selbst, zeichnet die besonderen Entwürfe und lässt keine Festgarnitur gehen, deren Träger sich darin verkleidet fühlt.",
+        "extensions": {
+          "registryManagedFields": [
+            "title",
+            "notes",
+            "portrait"
+          ]
+        }
+      },
+      {
+        "id": "tiberian-raves",
+        "worldPersonId": "person--haus-raves--tiberian-raves",
+        "name": "Tiberian Raves",
+        "title": "Handelsmeister · Seeroute & Fortuna",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1703",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/goettliche-eleganz/portraits/tiberian.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-raves",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Tiberian hält die Verbindung zu den Veltrane und zum Markt der Fortuna. Er reist oft nach Tirnara, prüft Zusagen und sorgt dafür, dass aus einem guten Vertrag auch eine pünktliche Lieferung wird. Einen überladenen Laderaum erkennt er schneller als eine schlechte Ausrede.",
+        "extensions": {
+          "registryManagedFields": [
+            "title",
+            "notes",
+            "portrait"
+          ]
+        }
+      },
+      {
+        "id": "orestian-raves",
+        "worldPersonId": "person--haus-raves--orestian-raves",
+        "name": "Orestian Raves",
+        "title": "Zunftsmeier · Kasse, Löhne & Verträge",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1704",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/goettliche-eleganz/portraits/orestian.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-raves",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Orestian führt die Bücher, zahlt die Löhne und hält Maßbestellung und Rechnung zusammen. Die teuerste Seide beeindruckt ihn weniger als ein sauberer Beleg. Wenn er ein zweites Mal nachfragt, hat er den Fehler meist schon gefunden.",
+        "extensions": {
+          "registryManagedFields": [
+            "title",
+            "notes",
+            "portrait"
+          ]
+        }
+      },
+      {
+        "id": "luciano-veltrane",
+        "worldPersonId": "person--haus-veltrane--luciano-veltrane",
+        "name": "Luciano Marcellus Veltrane",
+        "title": "Stoffmeister · Warenprüfung & Besätze",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1698",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/goettliche-eleganz/portraits/luciano.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-veltrane",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Luciano prüft Seiden, Futter und die feinen Beschläge aus Gwynthors Werkstätten. Eleonoras Gemahl kann an einem Muster lange schweigen, bevor er eine einzige, sehr genaue Frage stellt. Auf zweifelhafte Färbungen reagiert er empfindlicher als auf einen Sturm.",
+        "extensions": {
+          "registryManagedFields": [
+            "title",
+            "notes",
+            "portrait"
+          ]
+        }
+      },
+      {
+        "id": "maelwen-coeddu",
+        "worldPersonId": "person--haus-coeddu--maelwen-coeddu",
+        "name": "Maelwen Coeddu",
+        "title": "Empfangsmeisterin · Kundschaft & Termine",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1713",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/goettliche-eleganz/portraits/maelwen-v2.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-coeddu",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Maelwen empfängt die Kundschaft und hält die Anproben im Takt. Sie kann eine verlegene Braut beruhigen und einem ungeduldigen Herrn höflich seinen Termin nennen. Tiberians Reisebriefe bewahrt sie zwischen den weniger dringlichen Bestellungen auf.",
+        "extensions": {
+          "registryManagedFields": [
+            "title",
+            "notes",
+            "portrait"
+          ]
+        }
+      },
+      {
+        "id": "aurelio-raves",
+        "worldPersonId": "person--haus-raves--aurelio-raves",
+        "name": "Aurelio Raves",
+        "title": "Schneiderlehrling · Schnitt & Heftarbeit",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1725",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/goettliche-eleganz/portraits/aurelio.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-raves",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Aurelio lernt bei seiner Großmutter das Zuschneiden und Heften. Seine eigenen Entwürfe sind schon erstaunlich kühn; Rhiain lässt ihn danach besonders sorgfältig die geraden Nähte üben.",
+        "extensions": {
+          "registryManagedFields": [
+            "title",
+            "notes",
+            "portrait"
+          ]
+        }
+      },
+      {
+        "id": "lavinia-raves",
+        "worldPersonId": "person--haus-raves--lavinia-raves",
+        "name": "Lavinia Raves",
+        "title": "Tochter Eleonoras · Hauskind",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1731",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/goettliche-eleganz/portraits/lavinia.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-raves",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Lavinia sammelt die kleinsten hübschen Stoffreste und näht daraus Kleider für ihre Holzpuppe. Über den Geschmack ihrer Mutter hat sie bereits feste Ansichten, die sie beim Abendessen gern vorträgt.",
+        "extensions": {
+          "registryManagedFields": [
+            "title",
+            "notes",
+            "portrait"
+          ]
+        }
+      },
+      {
+        "id": "serafina-raves",
+        "worldPersonId": "person--haus-raves--serafina-raves",
+        "name": "Serafina Raves",
+        "title": "Tochter Tiberians · Hauskind",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1734",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/goettliche-eleganz/portraits/serafina.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-raves",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Serafina zählt die kleinen Stoffballen im Schaufenster und wartet ungeduldig auf Tiberians Heimkehr. Aus jedem seiner Besuche soll er ihr eine Geschichte und einen besonders schönen Knopf mitbringen.",
+        "extensions": {
+          "registryManagedFields": [
+            "title",
+            "notes",
+            "portrait"
+          ]
+        }
+      },
+      {
+        "id": "unbekannter-gemahl-livia-raves",
+        "worldPersonId": "person--haus-unbekannt-livia-raves--unbekannter-gemahl-livia-raves",
+        "name": "Unbekannter Gemahl",
+        "title": "",
+        "sex": "male",
+        "status": "unknown",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-unbekannt-livia-raves",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "In Venalys verheiratet; sein Name ist nicht überliefert.",
+        "extensions": {}
+      },
+      {
+        "id": "unbekannter-gemahl-flavia-raves",
+        "worldPersonId": "person--haus-unbekannt-flavia-raves--unbekannter-gemahl-flavia-raves",
+        "name": "Unbekannter Gemahl",
+        "title": "",
+        "sex": "male",
+        "status": "unknown",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-unbekannt-flavia-raves",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "In Tirnara verheiratet; sein Name ist nicht überliefert.",
+        "extensions": {}
+      }
+    ],
+    "partnerships": [
+      {
+        "id": "marriage-matteo-gwenora-raves",
+        "participantIds": [
+          "matteo-veltrane",
+          "gwenora-maerllys"
+        ],
+        "type": "marriage",
+        "status": "ended",
+        "start": "1660",
+        "end": "1708",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Matteo blieb bei Gwenora in Gwynthor; ihr Geschäft begründete die Raves-Linie.",
+        "extensions": {
+          "crossFamilyRelationship": {
+            "linkId": "marriage-matteo-gwenora-raves",
+            "counterpartFamilyId": "haus-maerllys"
+          }
+        }
+      },
+      {
+        "id": "marriage-lorenzo-rhiain-raves",
+        "participantIds": [
+          "lorenzo-raves",
+          "rhiain-raves"
+        ],
+        "type": "marriage",
+        "status": "ended",
+        "start": "1698",
+        "end": "1734",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-eleonora-luciano-raves",
+        "participantIds": [
+          "eleonora-raves",
+          "luciano-veltrane"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "1724",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-tiberian-maelwen-raves",
+        "participantIds": [
+          "tiberian-raves",
+          "maelwen-coeddu"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "1733",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Tiberian und Maelwen leben mit ihrer Tochter in Gwynthor.",
+        "extensions": {
+          "crossFamilyRelationship": {
+            "linkId": "marriage-tiberian-maelwen-raves",
+            "counterpartFamilyId": "haus-coeddu"
+          }
+        }
+      },
+      {
+        "id": "marriage-livia-unknown-raves",
+        "participantIds": [
+          "livia-raves",
+          "unbekannter-gemahl-livia-raves"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "1690",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Livia wurde nach Venalys verheiratet; der Gemahl bleibt unbenannt.",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-flavia-unknown-raves",
+        "participantIds": [
+          "flavia-raves",
+          "unbekannter-gemahl-flavia-raves"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "1698",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Flavia wurde nach Tirnara verheiratet; der Gemahl bleibt unbenannt.",
+        "extensions": {}
+      }
+    ],
+    "parentages": [
+      {
+        "id": "parentage-lorenzo-raves",
+        "childId": "lorenzo-raves",
+        "parentIds": [
+          "matteo-veltrane",
+          "gwenora-maerllys"
+        ],
+        "partnershipId": "marriage-matteo-gwenora-raves",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-livia-raves",
+        "childId": "livia-raves",
+        "parentIds": [
+          "matteo-veltrane",
+          "gwenora-maerllys"
+        ],
+        "partnershipId": "marriage-matteo-gwenora-raves",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-flavia-raves",
+        "childId": "flavia-raves",
+        "parentIds": [
+          "matteo-veltrane",
+          "gwenora-maerllys"
+        ],
+        "partnershipId": "marriage-matteo-gwenora-raves",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-eleonora-raves",
+        "childId": "eleonora-raves",
+        "parentIds": [
+          "lorenzo-raves",
+          "rhiain-raves"
+        ],
+        "partnershipId": "marriage-lorenzo-rhiain-raves",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-tiberian-raves",
+        "childId": "tiberian-raves",
+        "parentIds": [
+          "lorenzo-raves",
+          "rhiain-raves"
+        ],
+        "partnershipId": "marriage-lorenzo-rhiain-raves",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-orestian-raves",
+        "childId": "orestian-raves",
+        "parentIds": [
+          "lorenzo-raves",
+          "rhiain-raves"
+        ],
+        "partnershipId": "marriage-lorenzo-rhiain-raves",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-aurelio-raves",
+        "childId": "aurelio-raves",
+        "parentIds": [
+          "eleonora-raves",
+          "luciano-veltrane"
+        ],
+        "partnershipId": "marriage-eleonora-luciano-raves",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-lavinia-raves",
+        "childId": "lavinia-raves",
+        "parentIds": [
+          "eleonora-raves",
+          "luciano-veltrane"
+        ],
+        "partnershipId": "marriage-eleonora-luciano-raves",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-serafina-raves",
+        "childId": "serafina-raves",
+        "parentIds": [
+          "tiberian-raves",
+          "maelwen-coeddu"
+        ],
+        "partnershipId": "marriage-tiberian-maelwen-raves",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      }
+    ],
+    "houses": [
+      {
+        "id": "house-raves",
+        "name": "Haus Raves",
+        "motto": "",
+        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Raves.png",
+        "status": "active",
+        "extensions": {}
+      },
+      {
+        "id": "house-veltrane",
+        "name": "Haus Veltrane",
+        "motto": "",
+        "emblem": "assets/images/houses/Kaiserreich Argentum/Veltrane.png",
+        "status": "active",
+        "extensions": {}
+      },
+      {
+        "id": "house-maerllys",
+        "name": "Haus Maerllys",
+        "motto": "",
+        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Maerllys.png",
+        "status": "active",
+        "extensions": {}
+      },
+      {
+        "id": "house-coeddu",
+        "name": "Haus Coeddu",
+        "motto": "",
+        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Coeddu.png",
+        "status": "active",
+        "extensions": {}
+      },
+      {
+        "id": "house-unbekannt-livia-raves",
+        "name": "Unbekanntes Haus · Venalys",
+        "motto": "",
+        "emblem": "",
+        "status": "active",
+        "extensions": {}
+      },
+      {
+        "id": "house-unbekannt-flavia-raves",
+        "name": "Unbekanntes Haus · Tirnara",
+        "motto": "",
+        "emblem": "",
+        "status": "active",
+        "extensions": {}
+      }
+    ],
+    "cadetBranches": [
+      {
+        "id": "married-away-livia-raves",
+        "name": "Unbekanntes Haus · Venalys",
+        "subtitle": "Wegverheiratete Linie",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-livia-unknown-raves",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-unbekannt-livia-raves",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "iron",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-unbekannt",
+        "notes": "Livia Aurelia Raves lebt in Venalys; der Name ihres Gemahls bleibt offen.",
+        "extensions": {}
+      },
+      {
+        "id": "married-away-flavia-raves",
+        "name": "Unbekanntes Haus · Tirnara",
+        "subtitle": "Wegverheiratete Linie",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-flavia-unknown-raves",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-unbekannt-flavia-raves",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "iron",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-unbekannt",
+        "notes": "Flavia Marina Raves lebt in Tirnara; der Name ihres Gemahls bleibt offen.",
+        "extensions": {}
+      }
+    ],
+    "timeJumps": [],
+    "lineage": {
+      "founderPartnershipId": "marriage-matteo-gwenora-raves",
+      "houseId": "house-raves",
+      "crestSubtitle": "Gwynthorer Schneider- und Handelshaus",
+      "crestEmblemScale": 0.86,
+      "crestFrame": "iron",
+      "crestFrameScale": 1,
+      "timeGap": {
+        "enabled": false,
+        "years": 0,
+        "fromYear": "",
+        "toYear": "",
+        "label": ""
+      },
+      "originHouse": {
+        "enabled": true,
+        "id": "veltrane-origin-raves",
+        "houseId": "house-veltrane",
+        "name": "Haus Veltrane",
+        "subtitle": "Stammhaus aus Tirnara · Kaiserreich Argentum",
+        "emblem": "assets/images/houses/Kaiserreich Argentum/Veltrane.png",
+        "emblemScale": 0.86,
+        "crestFrame": "iron",
+        "frameScale": 1,
+        "childIds": [
+          "matteo-veltrane"
+        ],
+        "targetFamilyId": "haus-veltrane",
+        "notes": "Matteo begründete mit Gwenora Maerllys die in Gwynthor als Raves bekannte Linie.",
+        "timeGap": {
+          "enabled": false,
+          "years": 0,
+          "fromYear": "",
+          "toYear": "",
+          "label": ""
+        }
+      }
+    },
+    "presentation": {
+      "relationshipColors": {
+        "marriage": "#326c4a",
+        "engagement": "#b88b37",
+        "union": "#8e2724",
+        "affair": "#704485",
+        "concubinage": "#704485",
+        "political": "#9d7d48",
+        "forced": "#c7a974",
+        "biological": "#8e2724",
+        "adoptive": "#2f75a8",
+        "foster": "#2f75a8",
+        "step": "#7eb4d7",
+        "magical": "#704485",
+        "claimed": "#62615e"
+      }
+    },
+    "view": {
+      "focusPersonId": "eleonora-raves",
+      "orientation": "vertical",
+      "ancestorDepth": 8,
+      "descendantDepth": 8,
+      "limitGenerations": false,
+      "showSiblings": true
+    },
+    "extensions": {
+      "blankFamily": false,
+      "sourceRevision": 2,
+      "sourceNote": "Nutzervorgaben zur Göttlichen Eleganz vom 16.10.2026. Drei vollständig ausgearbeitete Generationen vom Gründerpaar bis Eleonora, anschließend drei Kinder. Eleonora 39, Tiberian 37, Orestian 36. Tiberians freie Braut ist Maelwen Coeddu; keine Gwyllach-Verbindung. Luciano stammt aus einem anderen, nicht einzeln überlieferten Veltrane-Zweig; eine nahe Verwandtschaft wird nicht behauptet.",
+      "houseBiographyModule": {
+        "schema": "aleria.house-module",
+        "schemaVersion": 1,
+        "pageTitle": "Haus Raves",
+        "housePage": true,
+        "image": "../AleriaAlmanach/assets/goettliche-eleganz/aussenansicht.png",
+        "imageWidth": 30,
+        "imageSquare": true,
+        "description": "Die Raves führen mit der Göttlichen Eleganz Gwynthors wohl beste Schneiderei. Die Familie vereint die südlichen Handelsverbindungen der Veltrane mit der Schneiderkunst der Maerllys.",
+        "quote": "",
+        "quoteBy": "",
+        "commentSequence": [],
+        "stats": [
+          [
+            "Voller Name",
+            "Haus Raves"
+          ],
+          [
+            "Rang",
+            "Bürgerlich"
+          ],
+          [
+            "Stammsitz",
+            "Gwynthor · Innenstadt"
+          ],
+          [
+            "Grafschaft",
+            "Celtigerns Wacht"
+          ],
+          [
+            "Oberhaupt",
+            "Eleonora Cassia Raves · Geschäftsinhaberin"
+          ],
+          [
+            "Erbe",
+            "Nicht festgelegt"
+          ],
+          [
+            "Lehnsherr",
+            "Haus Draig"
+          ],
+          [
+            "Ursprung",
+            "Veltrane aus Tirnara · Maerllys aus Gwynthor"
+          ],
+          [
+            "Schutzpatronin",
+            ""
+          ]
+        ],
+        "house": {
+          "crestImage": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Raves.png",
+          "sideWidth": 100,
+          "connectionPortraitHeight": 80,
+          "connectionTextOffset": 0,
+          "biographyTitle": "Über die Familie",
+          "biographyText": "Die Raves führen mit der Göttlichen Eleganz Gwynthors wohl beste Schneiderei. Die Familie vereint die südlichen Handelsverbindungen der Veltrane mit der Schneiderkunst der Maerllys.",
+          "abilitiesTitle": "Einfluss und Aufgaben",
+          "abilities": [],
+          "historyTitle": "Von zwei Küsten nach Gwynthor",
+          "historyText": "Matteo Septimus Veltrane blieb bei der Schneidermeisterin Gwenora Maerllys in Gwynthor. Ihr 1662 eröffneter Krämerladen entwickelte sich unter ihrem Sohn Lorenzo zum Kleiderhaus. Seit 1734 führt Eleonora Cassia Raves das Geschäft.",
+          "worksTitle": "Hausgeschichte",
+          "works": [],
+          "extraSections": [
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Werte und Stellung",
+              "text": "Eleonora entwirft, Tiberian hält die Warenwege offen und Orestian führt die Bücher. Rhiain gibt ihre Schnittkunde weiter; Luciano prüft die kostbaren Stoffe. Im Haus zählt eine unscheinbare saubere Naht ebenso viel wie ein glänzender Besatz."
+            }
+          ],
+          "triviaTitle": "Besonderheiten",
+          "trivia": [],
+          "quotesTitle": "Hausmotto",
+          "quotes": [],
+          "connectionsTitle": "Verbündete und Kadettenhäuser",
+          "connections": [
+            {
+              "name": "Haus Veltrane",
+              "detail": "Stammhaus und Handelsroute aus Tirnara",
+              "image": "../Stammbäume/assets/images/houses/Kaiserreich Argentum/Veltrane.png",
+              "imageFormat": "square"
+            },
+            {
+              "name": "Haus Maerllys",
+              "detail": "Schneiderfamilie aus Gwynthor",
+              "image": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Maerllys.png",
+              "imageFormat": "square"
+            }
+          ],
+          "documentsTitle": "Mehr über das Haus",
+          "documents": [
+            {
+              "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Raves.png",
+              "title": "Haus Raves · vollständige Hausseite",
+              "text": "Chronik, Besitz, Wappen und Hof mit verlinkten Portraits.",
+              "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-raves"
+            }
+          ],
+          "footer": ""
+        }
+      },
+      "registryTombstones": {},
+      "registryUpgrade": {
+        "fromRevision": 1,
+        "toRevision": 2
+      }
+    }
+  }
+}

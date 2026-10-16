@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "familyId": "haus-trevoryn",
-  "revision": 2,
-  "updatedAt": "2026-10-14T16:37:45.782Z",
+  "revision": 3,
+  "updatedAt": "2026-10-16T00:26:06.470Z",
   "family": {
     "schema": "aleria.family-tree",
     "schemaVersion": 1,
@@ -279,54 +279,6 @@
             "portrait"
           ]
         }
-      },
-      {
-        "id": "styr-svathamar-kanne",
-        "worldPersonId": "person--krumme-kanne--styr-svathamar-kanne",
-        "name": "Styr Svathamar",
-        "title": "Schanklehrling",
-        "sex": "male",
-        "status": "alive",
-        "birth": "1725",
-        "death": "",
-        "portrait": "../AleriaAlmanach/assets/krumme-kanne/portraits/styr.png",
-        "portraitPlaceholder": "auto",
-        "houseId": "house-svathamar",
-        "familyRole": "core",
-        "lineageRole": "branch",
-        "tags": [],
-        "notes": "Styr lernt bei Elidyr Bestellungen und das Rechnen am Tresen. Er möchte längst so gelassen wirken wie sein Vater. Meist verrät ihn das eine Tablett, das er sich zu viel aufgeladen hat.",
-        "extensions": {
-          "registryManagedFields": [
-            "title",
-            "notes",
-            "portrait"
-          ]
-        }
-      },
-      {
-        "id": "heledd-svathamar-kanne",
-        "worldPersonId": "person--krumme-kanne--heledd-svathamar-kanne",
-        "name": "Heledd Svathamar",
-        "title": "Hauskind · Tischblumen",
-        "sex": "female",
-        "status": "alive",
-        "birth": "1730",
-        "death": "",
-        "portrait": "../AleriaAlmanach/assets/krumme-kanne/portraits/heledd.png",
-        "portraitPlaceholder": "auto",
-        "houseId": "house-svathamar",
-        "familyRole": "core",
-        "lineageRole": "branch",
-        "tags": [],
-        "notes": "Heledd stellt gern Blumen auf die Tische und lauscht den Geschichten der Veteranen. In ihrem Heft sammelt sie die glaubwürdigsten davon. Hrolfs Berichte schneiden verdächtig gut ab.",
-        "extensions": {
-          "registryManagedFields": [
-            "title",
-            "notes",
-            "portrait"
-          ]
-        }
       }
     ],
     "partnerships": [
@@ -488,36 +440,6 @@
         "visibility": "public",
         "notes": "",
         "extensions": {}
-      },
-      {
-        "id": "parentage-styr-svathamar-kanne",
-        "childId": "styr-svathamar-kanne",
-        "parentIds": [
-          "hrolf-svathamar-kanne",
-          "eirian-trevoryn-kanne"
-        ],
-        "partnershipId": "marriage-hrolf-eirian-kanne",
-        "type": "biological",
-        "legitimacy": "legitimate",
-        "certainty": "confirmed",
-        "visibility": "public",
-        "notes": "",
-        "extensions": {}
-      },
-      {
-        "id": "parentage-heledd-svathamar-kanne",
-        "childId": "heledd-svathamar-kanne",
-        "parentIds": [
-          "hrolf-svathamar-kanne",
-          "eirian-trevoryn-kanne"
-        ],
-        "partnershipId": "marriage-hrolf-eirian-kanne",
-        "type": "biological",
-        "legitimacy": "legitimate",
-        "certainty": "confirmed",
-        "visibility": "public",
-        "notes": "",
-        "extensions": {}
       }
     ],
     "houses": [
@@ -538,7 +460,26 @@
         "extensions": {}
       }
     ],
-    "cadetBranches": [],
+    "cadetBranches": [
+      {
+        "id": "married-away-eirian-svathamar",
+        "name": "Haus Svathamar",
+        "subtitle": "Wegverheiratete Linie",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-hrolf-eirian-kanne",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-svathamar",
+        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Svathamar.png",
+        "emblemScale": 0.86,
+        "crestFrame": "iron",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-svathamar",
+        "notes": "Eirian heiratete Hrolf Svathamar. Ihre Kinder führen die Svathamar-Linie fort.",
+        "extensions": {}
+      }
+    ],
     "timeJumps": [
       {
         "id": "gap-trevoryn-to-1672",
@@ -621,11 +562,33 @@
     },
     "extensions": {
       "blankFamily": false,
-      "sourceRevision": 2,
+      "sourceRevision": 3,
       "registryManagedDocumentFields": [
         "description"
       ],
       "sourceNote": "Nutzervorgaben zur Krummen Kanne vom 14.10.2026. Bekannte Personen und Porträts werden mit der Hausgemeinschaft geteilt. Unbekannte Gründer und Generationen bleiben ausdrücklich unbekannt; Mair, Gareth und Caradog behalten die bestehenden Tonnarth-Identitäten.",
+      "registryTombstones": {
+        "persons": [
+          "styr-svathamar-kanne",
+          "heledd-svathamar-kanne"
+        ],
+        "parentages": [
+          "parentage-styr-svathamar-kanne",
+          "parentage-heledd-svathamar-kanne"
+        ]
+      },
+      "registryTransferredPersons": [
+        {
+          "personId": "styr-svathamar-kanne",
+          "worldPersonId": "person--krumme-kanne--styr-svathamar-kanne",
+          "targetFamilyId": "haus-svathamar"
+        },
+        {
+          "personId": "heledd-svathamar-kanne",
+          "worldPersonId": "person--krumme-kanne--heledd-svathamar-kanne",
+          "targetFamilyId": "haus-svathamar"
+        }
+      ],
       "houseBiographyModule": {
         "schema": "aleria.house-module",
         "schemaVersion": 1,
@@ -728,10 +691,9 @@
           "footer": ""
         }
       },
-      "registryTombstones": {},
       "registryUpgrade": {
-        "fromRevision": 1,
-        "toRevision": 2
+        "fromRevision": 2,
+        "toRevision": 3
       }
     }
   }

@@ -10,6 +10,10 @@ Redaktionelle Quelle für das Gwynthorer Geschäft und die Familien Raves/Veltra
 
 Die Familienakten liegen unter `Stammbäume/assets/js/data/eleganz-family-records.js` und `eleganz-family-links.js`. Maelwen Coeddu behält ihre bestehende Welt-ID. Die Maerllys-Hauptlinie folgt seriell hinter Gwenoras älterem Schneiderzweig. Luciano gehört einem anderen, nicht einzeln überlieferten Veltrane-Zweig an.
 
+Wegverheiratete Linien enden im Herkunftsbaum am verlinkten Zielhaus. Maelwens Tochter wird nur bei Raves fortgeführt; Eirians Kinder nur bei Svathamar und Mairs jüngere Kinder nur bei Dubhdarach. Caradog bleibt Tonnarth. Eleonora ist die ausdrücklich festgelegte Ausnahme: Ihre Kinder führen Raves fort. `married-away-continuation.js` entfernt die doppelten Projektionen einschließlich alter gespeicherter Fassungen; die Veröffentlichung prüft den Erhalt derselben Weltpersonen und ihrer Abstammung im Zielhaus. Veraltete Charakter-Quellenverweise werden gezielt entfernt.
+
+Die Modulkarte verwendet `previewImage` für die Außenansicht. Ein ausdrückliches Vorschaubild hat Vorrang vor der sonst üblichen Gildenwappen-Auswahl und bleibt im Moduleditor bearbeitbar.
+
 ## Preise
 
 Verglichen mit dem vorhandenen Standardregister (`item-register-standard.js`): einfache Kleidung 10 Kupfertaler, Wollmütze 6 Kupfertaler, Leinenband (5 m) 1 Kupfertaler und Stoffrüstung 50 Kupfertaler. Die günstigsten vollständigen Hausgarnituren beginnen bei 18 Kupfertalern. Seide, Silberstickerei und Maßarbeit steigern den Preis; die Spitzenmodelle enthalten mehrteilige Einzelentwürfe, Weißgoldfassungen und ausgewählte Steine für 48 beziehungsweise 52 Goldtaler. Die Hochzeitsmode reicht von 220/240 Kupfertalern über 2,8/3 Goldtaler bis zu 65/68 Goldtalern für persönliche Einzelentwürfe. Das sind gestalterisch festgelegte Verkaufspreise anhand der vorhandenen Spielökonomie. Die serverseitige Angebotsauflösung prüft die tatsächlichen Kupferwerte aller 26 Angebote ohne Kaufvorgang.
@@ -35,3 +39,5 @@ node firebase/scripts/content/publish-goettliche-eleganz.mjs
 ```
 
 Der letzte Befehl ist zunächst ein lesender Probelauf. Nach Veröffentlichung der statischen Dateien prüft `--apply` die exakte Online-Bildfassung, sichert die ursprünglichen Firestore-Dokumente verschlüsselt und veröffentlicht Modul, Profile und Sammlungszuordnungen atomar mit Versionsvorbedingungen. Keine Käufe, Kämpfe, Kommentare oder Live-Ressourcen werden verändert.
+
+Die Korrektur vom 16. Oktober ersetzt ausdrücklich nur Maelwens und Gwenoras vorhandene Profilporträts; andere Bilder werden nicht überschrieben. Maelwen erhält das orange Haar und die grünen Augen der Coeddu. Gwenoras Gedenkporträt zeigt sie mit 76 Jahren (1638–1714), grauem Haar und blauen Augen. Originalbilder bleiben erhalten; die genauen Bildwerkzeug-Aufträge stehen in `assets/goettliche-eleganz/portrait-corrections-2026-10-16.json`. Nach der statischen Veröffentlichung auch `node firebase/scripts/content/publish-krumme-kanne-characters.mjs --apply` ausführen, damit die alten Herkunftsverweise bei Styr, Heledd, Neifion und Eirlys verschwinden.

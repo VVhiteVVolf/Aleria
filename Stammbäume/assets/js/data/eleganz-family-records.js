@@ -54,7 +54,7 @@ export const HOUSE_RAVES_FAMILY = Object.freeze({
       notes: 'Matteo begründete mit Gwenora Maerllys die in Gwynthor als Raves bekannte Linie.' } },
   presentation: { relationshipColors: { ...DEFAULT_RELATIONSHIP_COLORS } },
   view: { focusPersonId: eleganzPid('eleonora'), orientation: 'vertical', ancestorDepth: 8, descendantDepth: 8, limitGenerations: false, showSiblings: true },
-  extensions: { blankFamily: false, sourceRevision: 1,
+  extensions: { blankFamily: false, sourceRevision: 2,
     sourceNote: 'Nutzervorgaben zur Göttlichen Eleganz vom 16.10.2026. Drei vollständig ausgearbeitete Generationen vom Gründerpaar bis Eleonora, anschließend drei Kinder. Eleonora 39, Tiberian 37, Orestian 36. Tiberians freie Braut ist Maelwen Coeddu; keine Gwyllach-Verbindung. Luciano stammt aus einem anderen, nicht einzeln überlieferten Veltrane-Zweig; eine nahe Verwandtschaft wird nicht behauptet.' }
 });
 
@@ -73,5 +73,5 @@ export const HOUSE_VELTRANE_FAMILY = Object.freeze({
     houseId: 'house-raves', targetFamilyId: 'haus-raves', emblem: ELEGANZ_EMBLEMS.raves, crestFrame: 'iron', founded: '1662',
     notes: 'Matteo blieb bei Gwenora in Gwynthor. Die Nachkommen werden ausschließlich in der Raves-Akte fortgeführt.' })],
   view: { ...veltraneBase.view, limitGenerations: false },
-  extensions: { blankFamily: false, sourceRevision: 1, sourceNote: 'Bürgerliches Stammhaus der Raves, vorläufig unter Kaiserreich Argentum / Unsortiert. Keine ungenannten Häfen, Adelstitel oder vollständige Hauptlinie erfunden. Die Zugehörigkeit Lucianos ist bekannt, seine konkrete Verwandtschaft zu Matteo bleibt offen.' }
+  extensions: { blankFamily: false, sourceRevision: 2, sourceNote: 'Bürgerliches Stammhaus der Raves, vorläufig unter Kaiserreich Argentum / Unsortiert. Keine ungenannten Häfen, Adelstitel oder vollständige Hauptlinie erfunden. Die Zugehörigkeit Lucianos ist bekannt, seine konkrete Verwandtschaft zu Matteo bleibt offen.' }
 });

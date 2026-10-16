@@ -506,6 +506,7 @@ function normalizeEntryForEditor(entry) {
     moduleWidth: clampModuleSizeValue(clone.moduleWidth, MODULE_SIZE_DEFAULT),
     moduleHeight: clampModuleSizeValue(clone.moduleHeight, MODULE_SIZE_DEFAULT),
     image: String(clone.image || (shouldUsePageImageAsEntryImage(pages) ? pages[0]?.image : '') || '').trim(),
+    ...(String(clone.previewImage || '').trim() ? { previewImage: String(clone.previewImage).trim() } : {}),
     stamp: String(clone.stamp || '').trim(),
     icon: String(clone.icon || '').trim(),
     symbol: String(clone.symbol || '').trim(),

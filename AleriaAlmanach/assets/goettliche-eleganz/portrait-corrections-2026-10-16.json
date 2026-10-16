@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "tool": "built-in image_gen",
+  "stylePreset": "anime-scene-portrait",
+  "entries": [
+    {
+      "key": "maelwen",
+      "destination": "AleriaAlmanach/assets/goettliche-eleganz/portraits/maelwen-v2.png",
+      "references": [
+        "AleriaAlmanach/assets/goettliche-eleganz/portraits/maelwen.png",
+        "Stammbäume/assets/images/portraits/haus-coeddu/llywelyn-coeddu.png"
+      ],
+      "prompt": "Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nUse case: identity-preserve. Edit reference 1, Maelwen Coeddu, a 27-year-old woman. Reference 2 is her Coeddu family likeness reference only. Change her current dark copper hair to bright natural ORANGE/GINGER hair like reference 2 and change both irises to distinctly GREEN matching reference 2. Subtly reinforce the sibling resemblance in the brows and cheekbones, while keeping Maelwen recognizably herself, feminine and age 27. Keep her braided updo, freckles, face orientation, relaxed standing upper-body pose, hand at waist, exact elegant navy gown with purple sash and ivory sleeves, same quiet daylight interior. Natural restrained anime proportions. No One Piece exaggeration, no armor or objects from reference 2. No magical hair gradient. One portrait, 2:3, head to upper hips. No text, border, collage or extra hands.",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a13aa1-95e6-76a2-acd8-92f68db11f18\\exec-4c6c9572-9eda-4260-a571-5eed11612208.png"
+    },
+    {
+      "key": "gwenora",
+      "destination": "AleriaAlmanach/assets/goettliche-eleganz/portraits/gwenora-v2.png",
+      "references": [
+        "AleriaAlmanach/assets/goettliche-eleganz/portraits/gwenora.png"
+      ],
+      "prompt": "Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nUse case: identity-preserve. Edit this portrait of Gwenora Maerllys into the SAME WOMAN visibly aged SEVENTY-SIX (76) years old, not a young woman with grey hair. Preserve the underlying recognizable face, dignified confident expression, simple standing relaxed pose and burgundy/ivory/gold medieval tailor's dress. Entire hair now naturally SILVER-GREY in her braided bun, no orange hair left; clearly BLUE eyes instead of green. Prominent but graceful elderly facial lines around eyes and mouth, crow's feet, forehead wrinkles, softened jaw with age, gently hollowed cheeks, mature eyelids, age lines on her neck and visible hand, a few age spots. She is an elegant elderly human artisan of 76, frailness not necessary, no fantasy youthfulness. Keep simple clean anime lineart/cel shading in restrained Tales of Xillia/Frieren style, no realistic skin texture or heavy painterly rendering. Same uncluttered window interior and warm daylight. Crop head to upper hips, upper-body focus, no held objects. No text or border.",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a13aa1-95e6-76a2-acd8-92f68db11f18\\exec-f0e1ee6a-b4d9-47b6-8ae1-0f0600de9c92.png"
+    }
+  ]
+}

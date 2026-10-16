@@ -64,7 +64,7 @@ export function buildGoettlicheEleganz() {
       sessionHint:'Ein Besuch, eine Anprobe oder ein vertrauliches Gespräch beginnt hier.',sessionEmptyTitle:'Die Tür steht offen',sessionEmptyText:'Draußen geht Gwynthor seinem Tag nach. Drinnen wartet der erste Wunsch auf ein aufmerksames Ohr.',sessionDateAleria:{year:null,month:null,day:null}}
   ];
   return {id:ELEGANZ_MODULE_ID,title:'Göttliche Eleganz',subtitle:'Gwynthors feine Schneiderei · Das Haus Raves',type:'Schneiderei & Kleidungshandel',category:'Gwynthor · Geschäfte',
-    image:`${ELEGANZ_ART}/aussenansicht.png`,symbol:`${ELEGANZ_ART}/schild.png`,icon:'✦',stamp:'ARGENTISCH · CENYRISCH',schemaVersion:1,multipage:true,appendCommentsPage:true,enablePageComments:true,
+    image:`${ELEGANZ_ART}/aussenansicht.png`,previewImage:`${ELEGANZ_ART}/aussenansicht.png`,symbol:`${ELEGANZ_ART}/schild.png`,icon:'✦',stamp:'ARGENTISCH · CENYRISCH',schemaVersion:1,multipage:true,appendCommentsPage:true,enablePageComments:true,
     sessionCast:['eleonora','tiberian','orestian','luciano','rhiain','maelwen','aurelio'].map(key=>eleganzPerson(key).worldPersonId),
     pages:pages.map((page,index)=>({schemaVersion:1,commentThreadKey:`eleganz-page-${index+1}`,...page}))};
 }

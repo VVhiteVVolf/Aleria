@@ -1,10 +1,18 @@
 import { buildImportedCharacter } from './genealogy-mapping.js';
-function mergedSources(prior,candidates,now) {
-  let sources=prior.genealogy?.sources || [];
+export function retiredFamilySources(families,worldPersonId) {
+  return families.flatMap(family=>(family.extensions?.registryTransferredPersons || [])
+    .filter(person=>person.worldPersonId===worldPersonId)
+    .map(person=>({familyId:family.document.id,personId:person.personId})));
+}
+function mergedSources(prior,candidates,now,retiredSources=[]) {
+  let sources=(prior.genealogy?.sources || []).filter(source=>!retiredSources.some(retired=>
+    retired.familyId===source.familyId && retired.personId===source.personId));
   for(const candidate of candidates) {
     const source=sources.find(s=>s.familyId===candidate.familyId && s.personId===candidate.personId);
     if(source?.fingerprint===candidate.fingerprint) continue;
-    sources=buildImportedCharacter(candidate,{...prior,genealogy:{...prior.genealogy,sources}},now).genealogy.sources;
+    const updated=buildImportedCharacter(candidate,{...prior,genealogy:{...prior.genealogy,sources}},now)
+      .genealogy.sources.find(item=>item.familyId===candidate.familyId && item.personId===candidate.personId);
+    sources=source?sources.map(item=>item===source?{...item,...updated}:item):[...sources,updated];
   }
   return sources;
 }
@@ -21,7 +29,7 @@ export function planFamilyCharacterGroup({members,existingCharacters=[],config={
     if(identity && identity!==candidate.worldPersonId) throw new Error(`Widersprüchliche Online-Identität: ${member.key}`);
     const base={id:prior?.id || candidate.worldPersonId,key:member.key,group:member.subgroup};
     if(prior) {
-      const sources=mergedSources(prior,member.candidates,now);
+      const sources=mergedSources(prior,member.candidates,now,member.retiredSources);
       return {...base,create:false,patch:JSON.stringify(sources)===JSON.stringify(prior.genealogy?.sources || [])?null:{genealogy:{sources},updatedAt:now}};
     }
     const data=buildImportedCharacter(candidate,null,now);

@@ -26,6 +26,9 @@ try {
   await page.waitForFunction(()=>!document.documentElement.hasAttribute('data-almanach-loading'));
   const inserted=await page.evaluate(id=>SECTIONS.filter(section=>section.entries?.some(entry=>entry.id===id)).map(section=>section.path),entry.id);
   assert.deepEqual(inserted,[['Cenyr','Celtigerns Wacht','Llamreis Ankunft','Gwynthor']]);
+  const preview=await page.evaluate(entry=>getArchiveEntryPreviewImage(entry),entry);
+  assert.equal(preview,entry.pages[0].image);
+  assert.equal(await page.evaluate(entry=>sanitizeModuleEntry(entry).previewImage,entry),preview);
   const show=async index=>{
     await page.evaluate(({entry,index})=>{closeModal();openModal(entry,{pageIndex:index});},{entry,index});
     await page.locator('#modal-overlay').waitFor({state:'visible'});
@@ -53,6 +56,13 @@ try {
     await page.locator(`#modal-overlay [data-trade-filter="${category}"]`).click();
     assert.equal(await page.locator('#modal-overlay .trade-catalog-item:visible').count(),category.endsWith('hochzeit')?3:10);
     assert.equal(await page.locator('#modal-overlay .trade-catalog-item:visible').first().locator('.trade-catalog-description p').count(),2);
+    const dimensions=await page.locator('#modal-overlay .trade-catalog-item:visible').first().evaluate(item=>({
+      text:item.querySelector('.trade-catalog-description').getBoundingClientRect().height,
+      image:item.querySelector('.trade-catalog-image-wrap').getBoundingClientRect().height,
+      row:item.getBoundingClientRect().height
+    }));
+    assert(dimensions.text>dimensions.image+100,`${category}: description uses the lower card area`);
+    assert(dimensions.text<dimensions.row);
     await page.screenshot({path:resolve(output,`05-kollektion-${category}.png`)});
   }
   await show(5);

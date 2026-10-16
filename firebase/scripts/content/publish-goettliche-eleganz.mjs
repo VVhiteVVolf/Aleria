@@ -7,6 +7,7 @@ import { decodeFirestoreFields,encodeFirestoreFields } from '../backup/firestore
 import { createContentPublicationClient,backupContentPublication,assertPublishedLocalArtwork } from './content-publication-client.mjs';
 import { buildGoettlicheEleganz } from '../../../AleriaAlmanach/modules/goettliche-eleganz/eleganz-module.mjs';
 import { planEleganzCharacters } from '../../../AleriaAlmanach/modules/goettliche-eleganz/eleganz-characters.mjs';
+import { beforeEleganzEditorialCorrections,withEleganzPortraitCorrections } from '../../../AleriaAlmanach/modules/goettliche-eleganz/eleganz-editorial-corrections.mjs';
 import { buildModuleOffers } from '../../../AleriaAlmanach/modules/item-register/item-register-module-catalog.js';
 import { resolveModuleProduct } from '../../functions/src/mechanics/item-register-module-source.js';
 import { STANDARD_ITEMS } from '../../functions/src/generated/item-register/item-register-standard.js';
@@ -31,9 +32,10 @@ const previousEntry=JSON.parse(await readFile(new URL('../../../AleriaAlmanach/m
 const config=decodeFirestoreFields(configDocument.fields);
 assert(config.moduleStoreManifest,'Modulmanifest fehlt.');
 assert(!config.moduleStoreManifest.hiddenModuleIds?.[entry.id],'Das Modul ist ausgeblendet.');
-if(moduleDocument) assert([JSON.stringify(entry),JSON.stringify(previousEntry)].includes(moduleDocument.fields.entryJson?.stringValue),'Abweichende Online-Bearbeitung des Moduls.');
+if(moduleDocument) assert([entry,previousEntry,beforeEleganzEditorialCorrections(entry)].map(value=>JSON.stringify(value)).includes(moduleDocument.fields.entryJson?.stringValue),'Abweichende Online-Bearbeitung des Moduls.');
 const moduleChanged=!moduleDocument || moduleDocument.fields.entryJson?.stringValue!==JSON.stringify(entry);
-const plan=planEleganzCharacters(documents.map(raw=>({id:raw.name.split('/').at(-1),...decodeFirestoreFields(raw.fields)})),config,now);
+const existingCharacters=documents.map(raw=>({id:raw.name.split('/').at(-1),...decodeFirestoreFields(raw.fields)}));
+const plan=withEleganzPortraitCorrections(planEleganzCharacters(existingCharacters,config,now),existingCharacters);
 const ids=[...new Set([...(config.moduleStoreManifest.entryOverrideIds || []),entry.id])];
 const prospective=new Map([['char_tabs/config',{moduleStoreManifest:{entryOverrideIds:ids,hiddenModuleIds:{}}}],[`module_store_entries/${entry.id}`,{entryJson:JSON.stringify(entry)}]]);
 const database={doc:path=>path,collection:name=>({doc:id=>`${name}/${id}`})};
@@ -62,12 +64,12 @@ function collect(value) {
   else if(Array.isArray(value)) value.forEach(collect);
   else if(value && typeof value==='object') Object.values(value).forEach(collect);
 }
-collect(entry);plan.entries.filter(item=>item.create).forEach(item=>collect(item.data));
+collect(entry);plan.entries.forEach(item=>collect(item.create?item.data:item.patch));
 await assertPublishedLocalArtwork(artwork);
 await backupContentPublication('goettliche-eleganz',[...documents,configDocument,moduleDocument],plan.entries.filter(item=>item.create).map(item=>item.id),now);
 const writes=changed.map(item=>item.create?{
   update:{name:documentName(`characters/${item.id}`),fields:encodeFirestoreFields(item.data)},currentDocument:{exists:false}
-}:{update:{name:documentName(`characters/${item.id}`),fields:encodeFirestoreFields(item.patch)},updateMask:{fieldPaths:['genealogy.sources','updatedAt']},
+}:{update:{name:documentName(`characters/${item.id}`),fields:encodeFirestoreFields(item.patch)},updateMask:{fieldPaths:[...(item.patch.genealogy?['genealogy.sources']:[]),...(item.patch.updatedAt?['updatedAt']:[]),...(item.patch.portrait?['portrait']:[])]},
   currentDocument:{updateTime:documents.find(raw=>raw.name.endsWith(`/${item.id}`)).updateTime}});
 if(!moduleDocument) writes.push({update:{name:documentName(`module_store_entries/${entry.id}`),fields:encodeFirestoreFields({entryId:entry.id,moduleKind:'override',entry:null,entryJson:JSON.stringify(entry),schemaVersion:1,updatedAtClient:Date.parse(now)})},
   currentDocument:{exists:false},updateTransforms:[{fieldPath:'updatedAt',setToServerValue:'REQUEST_TIME'}]});
@@ -84,11 +86,13 @@ for(const item of plan.entries) {
   else {
     const previous=documents.find(document=>document.name===raw.name);
     const control=structuredClone(raw.fields);
-    if(item.patch) {control.genealogy.mapValue.fields.sources=previous.fields.genealogy?.mapValue?.fields?.sources;control.updatedAt=previous.fields.updatedAt;}
+    if(item.patch?.genealogy) control.genealogy.mapValue.fields.sources=previous.fields.genealogy?.mapValue?.fields?.sources;
+    if(item.patch?.updatedAt) control.updatedAt=previous.fields.updatedAt;
+    if(item.patch?.portrait) {assert.equal(raw.fields.portrait.stringValue,item.patch.portrait);control.portrait=previous.fields.portrait;}
     // Remove absent fields instead of synthesizing null or an undefined REST value.
-    if(item.patch && !previous.fields.genealogy?.mapValue?.fields?.sources) delete control.genealogy.mapValue.fields.sources;
-    if(item.patch && !previous.fields.updatedAt) delete control.updatedAt;
-    if(item.patch && !previous.fields.genealogy) delete control.genealogy;
+    if(item.patch?.genealogy && !previous.fields.genealogy?.mapValue?.fields?.sources) delete control.genealogy.mapValue.fields.sources;
+    if(item.patch?.updatedAt && !previous.fields.updatedAt) delete control.updatedAt;
+    if(item.patch?.genealogy && !previous.fields.genealogy) delete control.genealogy;
     assert.deepEqual(control,previous.fields,`Unbeteiligte Profildaten ${item.key}`);
   }
 }

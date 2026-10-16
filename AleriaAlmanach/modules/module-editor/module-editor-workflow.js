@@ -426,6 +426,7 @@ function validateModulePayload(payload, context = {}) {
   if (isBlank(section.key) && isBlank(section.tab)) errors.push('Bereich fehlt.');
 
   pushInvalidModuleAsset(errors, 'Kartenbild', entry.image);
+  pushInvalidModuleAsset(errors, 'Vorschaubild', entry.previewImage);
   pushInvalidModuleAsset(errors, 'Symbol', entry.symbol);
 
   if (!Array.isArray(entry.pages) || !entry.pages.length) {

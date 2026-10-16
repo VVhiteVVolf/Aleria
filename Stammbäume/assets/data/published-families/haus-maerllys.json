@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "familyId": "haus-maerllys",
-  "revision": 1,
-  "updatedAt": "2026-10-15T22:51:07.134Z",
+  "revision": 2,
+  "updatedAt": "2026-10-16T00:26:06.470Z",
   "family": {
     "schema": "aleria.family-tree",
     "schemaVersion": 1,
@@ -315,7 +315,7 @@
         "status": "dead",
         "birth": "1638",
         "death": "1714",
-        "portrait": "../AleriaAlmanach/assets/goettliche-eleganz/portraits/gwenora.png",
+        "portrait": "../AleriaAlmanach/assets/goettliche-eleganz/portraits/gwenora-v2.png",
         "portraitPlaceholder": "auto",
         "houseId": "house-maerllys",
         "familyRole": "core",
@@ -661,49 +661,56 @@
         "name": "Haus Maerllys",
         "motto": "",
         "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Maerllys.png",
-        "status": "active"
+        "status": "active",
+        "extensions": {}
       },
       {
         "id": "house-swyll",
         "name": "Haus Swyll",
         "motto": "",
         "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Swyll.png",
-        "status": "active"
+        "status": "active",
+        "extensions": {}
       },
       {
         "id": "house-tonnarth",
         "name": "Haus Tonnarth",
         "motto": "",
         "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Tonnarth.png",
-        "status": "active"
+        "status": "active",
+        "extensions": {}
       },
       {
         "id": "house-ysgrif",
         "name": "Haus Ysgrif",
         "motto": "",
         "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Ysgrif.png",
-        "status": "active"
+        "status": "active",
+        "extensions": {}
       },
       {
         "id": "house-falchdyn",
         "name": "Haus Falchdyn",
         "motto": "",
         "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Falchdyn.png",
-        "status": "active"
+        "status": "active",
+        "extensions": {}
       },
       {
         "id": "house-veltrane",
         "name": "Haus Veltrane",
         "motto": "",
         "emblem": "assets/images/houses/Kaiserreich Argentum/Veltrane.png",
-        "status": "active"
+        "status": "active",
+        "extensions": {}
       },
       {
         "id": "house-raves",
         "name": "Haus Raves",
         "motto": "",
         "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Raves.png",
-        "status": "active"
+        "status": "active",
+        "extensions": {}
       }
     ],
     "cadetBranches": [
@@ -856,7 +863,7 @@
       "blankFamily": false,
       "preparedTimeJump": true,
       "pendingDescendantReview": false,
-      "sourceRevision": 6,
+      "sourceRevision": 7,
       "registryManagedViewFields": [
         "focusPersonId",
         "limitGenerations"
@@ -960,6 +967,11 @@
           ],
           "footer": ""
         }
+      },
+      "registryTombstones": {},
+      "registryUpgrade": {
+        "fromRevision": 6,
+        "toRevision": 7
       }
     }
   }

@@ -125,7 +125,7 @@ window.HAEUSER_DATA = {
       "format": "portrait"
     },
     "haus-figur-2": {
-      "src": "../AleriaAlmanach/assets/goettliche-eleganz/portraits/gwenora.png",
+      "src": "../AleriaAlmanach/assets/goettliche-eleganz/portraits/gwenora-v2.png",
       "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-raves&mode=view&person=gwenora-maerllys",
       "alt": "Gwenora Maerllys",
       "format": "portrait"
@@ -179,7 +179,7 @@ window.HAEUSER_DATA = {
       "format": "portrait"
     },
     "haus-figur-11": {
-      "src": "../AleriaAlmanach/assets/goettliche-eleganz/portraits/maelwen.png",
+      "src": "../AleriaAlmanach/assets/goettliche-eleganz/portraits/maelwen-v2.png",
       "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-raves&mode=view&person=maelwen-coeddu",
       "alt": "Maelwen Coeddu",
       "format": "portrait"

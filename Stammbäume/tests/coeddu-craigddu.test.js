@@ -11,9 +11,9 @@ import { auditFamilyChartLayoutPolicy } from '../assets/js/adapters/family-chart
 const records = ['haus-coeddu', 'craigddu'].map(id => FAMILY_REGISTRY.find(record => record.id === id));
 const [coeddu, craigddu] = records.map(record => assertValidFamily(record.family).family);
 
-test('Coeddu behält seinen Ursprung und die Hauptlinie; Maelwens Raves-Zweig ergänzt zwei Personen', () => {
-  assert.equal(coeddu.persons.length, 12);
-  assert.equal(coeddu.persons.filter(person => !['tiberian-raves','serafina-raves'].includes(person.id)).length, 10);
+test('Coeddu behält seinen Ursprung und endet bei Maelwens Ehe mit dem Verweis auf Raves', () => {
+  assert.equal(coeddu.persons.length, 11);
+  assert.equal(coeddu.persons.filter(person => person.id !== 'tiberian-raves').length, 10);
   const jump = coeddu.timeJumps[0];
   assert.deepEqual(jump.childIds, ['brenric-coeddu']);
   const ancestry = coeddu.parentages.find(link => link.childId === 'brenric-coeddu');

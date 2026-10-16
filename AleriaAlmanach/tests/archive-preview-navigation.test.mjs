@@ -42,6 +42,16 @@ test('preview keeps the guild emblem, readable text and actual page/comment capa
   assert.match(context.renderArchiveEntryMeta({appendCommentsPage:false,pages:[{sessionPage:true}]}), /Kommentare möglich/);
 });
 
+test('explicit preview chooses title artwork while automatic guild previews keep their emblem', () => {
+  const context = createContext();
+  const entry = {id:'shop',title:'Göttliche Eleganz',previewImage:'shop-exterior.png',
+    pages:[{image:'shop-exterior.png'},{guildPage:true,guild:{crestImage:'shop-sign.png'}}]};
+  assert.equal(context.getArchiveEntryPreviewImage(entry),'shop-exterior.png');
+  const markup=context.renderArchiveEntryCard(entry,{tab:'Gwynthor'});
+  assert.match(markup,/src="shop-exterior.png"/);
+  assert.doesNotMatch(markup,/src="shop-sign.png"/);
+});
+
 test('selecting parent areas includes their descendants and the root remains selectable', () => {
   const context = createContext();
   const model = context.buildArchiveHierarchyModel([

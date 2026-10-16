@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "familyId": "haus-coeddu",
-  "revision": 4,
-  "updatedAt": "2026-10-15T22:51:07.134Z",
+  "revision": 5,
+  "updatedAt": "2026-10-16T00:26:06.470Z",
   "family": {
     "schema": "aleria.family-tree",
     "schemaVersion": 1,
@@ -337,7 +337,7 @@
         "status": "alive",
         "birth": "1713",
         "death": "",
-        "portrait": "../AleriaAlmanach/assets/goettliche-eleganz/portraits/maelwen.png",
+        "portrait": "../AleriaAlmanach/assets/goettliche-eleganz/portraits/maelwen-v2.png",
         "portraitPlaceholder": "auto",
         "houseId": "house-coeddu",
         "familyRole": "core",
@@ -422,30 +422,6 @@
         "lineageRole": "branch",
         "tags": [],
         "notes": "Tiberian hält die Verbindung zu den Veltrane und zum Markt der Fortuna. Er reist oft nach Tirnara, prüft Zusagen und sorgt dafür, dass aus einem guten Vertrag auch eine pünktliche Lieferung wird. Einen überladenen Laderaum erkennt er schneller als eine schlechte Ausrede.",
-        "extensions": {
-          "registryManagedFields": [
-            "title",
-            "notes",
-            "portrait"
-          ]
-        }
-      },
-      {
-        "id": "serafina-raves",
-        "worldPersonId": "person--haus-raves--serafina-raves",
-        "name": "Serafina Raves",
-        "title": "Tochter Tiberians · Hauskind",
-        "sex": "female",
-        "status": "alive",
-        "birth": "1734",
-        "death": "",
-        "portrait": "../AleriaAlmanach/assets/goettliche-eleganz/portraits/serafina.png",
-        "portraitPlaceholder": "auto",
-        "houseId": "house-raves",
-        "familyRole": "core",
-        "lineageRole": "branch",
-        "tags": [],
-        "notes": "Serafina zählt die kleinen Stoffballen im Schaufenster und wartet ungeduldig auf Tiberians Heimkehr. Aus jedem seiner Besuche soll er ihr eine Geschichte und einen besonders schönen Knopf mitbringen.",
         "extensions": {
           "registryManagedFields": [
             "title",
@@ -619,21 +595,6 @@
         "visibility": "public",
         "notes": "",
         "extensions": {}
-      },
-      {
-        "id": "parentage-serafina-raves",
-        "childId": "serafina-raves",
-        "parentIds": [
-          "tiberian-raves",
-          "maelwen-coeddu"
-        ],
-        "partnershipId": "marriage-tiberian-maelwen-raves",
-        "type": "biological",
-        "legitimacy": "legitimate",
-        "certainty": "confirmed",
-        "visibility": "public",
-        "notes": "",
-        "extensions": {}
       }
     ],
     "houses": [
@@ -658,7 +619,8 @@
         "name": "Haus Raves",
         "motto": "",
         "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Raves.png",
-        "status": "active"
+        "status": "active",
+        "extensions": {}
       }
     ],
     "cadetBranches": [
@@ -763,11 +725,26 @@
     },
     "extensions": {
       "blankFamily": false,
-      "sourceRevision": 3,
+      "sourceRevision": 4,
       "registryManagedDocumentFields": [
         "description"
       ],
       "sourceNote": "Benutzervorgaben vom 27.09.2026. Llywelyn ist 1740 dreißig Jahre alt; Catrin, ihre Lebensdaten und die Ehe stammen aus der bestehenden Craigddu-Akte. Ergänzte Namen Brenric, Gweneth, Rhydian, Maelwen, Thalor und Ellian folgen dem Rheunwaith-Namensarchiv. Ihre Lebensjahre sind erzählerische Ergänzungen. Der historische Ursprung bleibt ausdrücklich unbekannt.",
+      "registryTombstones": {
+        "persons": [
+          "serafina-raves"
+        ],
+        "parentages": [
+          "parentage-serafina-raves"
+        ]
+      },
+      "registryTransferredPersons": [
+        {
+          "personId": "serafina-raves",
+          "worldPersonId": "person--haus-raves--serafina-raves",
+          "targetFamilyId": "haus-raves"
+        }
+      ],
       "houseBiographyModule": {
         "schema": "aleria.house-module",
         "schemaVersion": 1,
@@ -864,10 +841,9 @@
           "footer": ""
         }
       },
-      "registryTombstones": {},
       "registryUpgrade": {
-        "fromRevision": 2,
-        "toRevision": 3
+        "fromRevision": 3,
+        "toRevision": 4
       }
     }
   }

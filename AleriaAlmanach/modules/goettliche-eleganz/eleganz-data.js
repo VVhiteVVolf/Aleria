@@ -7,6 +7,7 @@
   "type": "Schneiderei & Kleidungshandel",
   "category": "Gwynthor · Geschäfte",
   "image": "./assets/goettliche-eleganz/aussenansicht.png",
+  "previewImage": "./assets/goettliche-eleganz/aussenansicht.png",
   "symbol": "./assets/goettliche-eleganz/schild.png",
   "icon": "✦",
   "stamp": "ARGENTISCH · CENYRISCH",
@@ -176,7 +177,7 @@
           {
             "name": "Maelwen Coeddu",
             "detail": "Empfangsmeisterin · Kundschaft & Termine",
-            "image": "./assets/goettliche-eleganz/portraits/maelwen.png",
+            "image": "./assets/goettliche-eleganz/portraits/maelwen-v2.png",
             "imageFormat": "portrait"
           },
           {
@@ -492,7 +493,7 @@
                     "id": "eleganz-person-maelwen",
                     "title": "Maelwen Coeddu",
                     "subtitle": "Empfangsmeisterin · Kundschaft & Termine · 27 Jahre",
-                    "portrait": "./assets/goettliche-eleganz/portraits/maelwen.png",
+                    "portrait": "./assets/goettliche-eleganz/portraits/maelwen-v2.png",
                     "text": "<p>Maelwen empfängt die Kundschaft und hält die Anproben im Takt. Sie kann eine verlegene Braut beruhigen und einem ungeduldigen Herrn höflich seinen Termin nennen. Tiberians Reisebriefe bewahrt sie zwischen den weniger dringlichen Bestellungen auf.</p>"
                   }
                 ]

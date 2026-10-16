@@ -94,7 +94,7 @@
 <link rel="stylesheet" href="./styles/module-page-court.css?v=20260909-template-layout-v1">
 <link rel="stylesheet" href="./styles/module-page-bounty.css?v=20260909-template-layout-v1">
 <link rel="stylesheet" href="./styles/module-page-goods.css?v=20260909-template-layout-v1">
-<link rel="stylesheet" href="./styles/module-page-trade-catalog.css?v=20261007-coin-prices-v1">
+<link rel="stylesheet" href="./styles/module-page-trade-catalog.css?v=20261016-description-height-v1">
 <link rel="stylesheet" href="./styles/module-page-map-template.css?v=20260909-template-layout-v1">
 <link rel="stylesheet" href="./styles/module-page-language.css?v=20260909-template-layout-v1">
 <link rel="stylesheet" href="./styles/module-page-name-list.css?v=20260913-karnrith-v3">
@@ -166,7 +166,7 @@
   <script src="./modules/uisge-beatha-hueter/uisge-beatha-hueter-data.js?v=20260923-hueter-v1" defer></script>
   <script src="./modules/gortach-brauerei/gortach-brewery-data.js?v=20261007-raised-prices-v2" defer></script>
   <script src="./modules/brewer-guilds/brewer-guilds-data.js?v=20261014-aldrimar-brewers-v1" defer></script>
-  <script src="./modules/goettliche-eleganz/eleganz-data.js?v=20261016-eleganz-v1" defer></script>
+  <script src="./modules/goettliche-eleganz/eleganz-data.js?v=20261016-eleganz-corrections-v2" defer></script>
   <script src="./modules/house-retinues/house-retinues-data.js?v=20261007-mercenary-categories-v3" defer></script>
   <script src="./modules/windreiter/windreiter-data.js?v=20261007-windreiter-v2" defer></script>
   <script src="./modules/windreiter/windreiter-section-migration.js?v=20261007-windreiter-v2" defer></script>
@@ -181,7 +181,7 @@
   <script src="./modules/language/language-data.js?v=20260712-language-template-v1" defer></script>
   <script src="./modules/family-tree-embed/family-tree-embed-data.js?v=20260716-family-tree-registry-v1" defer></script>
   <script src="./modules/family-tree-embed/family-tree-embed-catalog.js?v=20260716-family-tree-registry-v1" defer></script>
-  <script src="./modules/core/app-core.js?v=20261007-windreiter-v1" defer></script>
+  <script src="./modules/core/app-core.js?v=20261016-explicit-preview-v1" defer></script>
   <script src="./modules/core/content-safety.js?v=20260806-error-passthrough-v1" defer></script>
   <script src="./modules/core/aleria-calendar.js?v=20260919-play-days-v1" defer></script>
   <script type="module" src="./modules/calendar/calendar-dashboard.mjs?v=20260911-calendar-v2"></script>
@@ -236,7 +236,7 @@
   <script src="./modules/module-editor/module-editor-house-warriors.js?v=20260712-house-warriors-images-v2" defer></script>
   <script src="./modules/family-tree-embed/family-tree-embed-editor.js?v=20260716-family-tree-registry-v1" defer></script>
   <script src="./modules/module-editor/module-editor-templates.js?v=20261007-windreiter-v1" defer></script>
-  <script src="./modules/module-editor/module-editor-workflow.js?v=20261007-windreiter-v1" defer></script>
+  <script src="./modules/module-editor/module-editor-workflow.js?v=20261016-explicit-preview-v1" defer></script>
   <script src="./modules/module-editor/module-editor-drafts.js?v=20260711-module-drafts-v1" defer></script>
   <script src="./modules/module-editor/module-editor-cast-picker.js?v=20260520-cleanup-v1" defer></script>
   <script src="./modules/module-editor/module-editor-simple-lines.js?v=20260809-character-biography-tab-v1" defer></script>
@@ -267,7 +267,7 @@
   <script src="./modules/module-editor/module-editor-family.js?v=20260715-family-workbench-v2" defer></script>
   <script src="./modules/module-editor/module-editor-template-transfer.js?v=20260911-page-comments-v1" defer></script>
   <script src="./modules/module-editor/module-editor-pages.js?v=20260911-page-comments-v1" defer></script>
-  <script src="./modules/module-editor/module-editor-controller.js?v=20261014-module-storage-v2" defer></script>
+  <script src="./modules/module-editor/module-editor-controller.js?v=20261016-explicit-preview-v1" defer></script>
   <script src="./modules/module-editor/module-editor-events.js?v=20260806-clear-comments-v1" defer></script>
   <script src="./modules/backup/almanach-backup.js?v=20261014-module-storage-v2" defer></script>
   <script src="./modules/comments/comments-session-io.js?v=20260613-thread-rescue-v2" defer></script>
@@ -334,7 +334,7 @@
   <script src="./modules/biography/biography-card-rendering.js?v=20260925-creature-biography-v2" defer></script>
   <script src="./modules/story/story-description.js?v=20261006-story-spacing-v1" defer></script>
   <script src="./modules/rendering/module-renderer.js?v=20261015-portrait-captions-v1" defer></script>
-  <script src="./modules/archive/archive-card-meta.js?v=20261015-preview-image-urls-v1" defer></script>
+  <script src="./modules/archive/archive-card-meta.js?v=20261016-explicit-preview-v1" defer></script>
   <script src="./modules/archive/archive-entry-card.js?v=20261015-preview-image-urls-v1" defer></script>
   <script src="./modules/archive/archive-section-ui.js?v=20260703-category-icons-v1" defer></script>
   <script src="./modules/archive/archive-hierarchy-browser.js?v=20261015-preview-image-urls-v1" defer></script>
@@ -1683,6 +1683,10 @@
             <div class="module-editor-field wide">
               <label>Kartenbild</label>
               <input type="url" id="me-image" placeholder="https://i.imgur.com/...">
+            </div>
+            <div class="module-editor-field wide">
+              <label>Vorschaubild im Verzeichnis (optional)</label>
+              <input type="url" id="me-preview-image" placeholder="Leer = automatisch wählen">
             </div>
             <div class="module-editor-field">
               <label>Stempel</label>

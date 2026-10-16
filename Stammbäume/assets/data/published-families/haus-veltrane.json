@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "familyId": "haus-veltrane",
-  "revision": 1,
-  "updatedAt": "2026-10-15T22:51:07.134Z",
+  "revision": 2,
+  "updatedAt": "2026-10-16T00:26:06.470Z",
   "family": {
     "schema": "aleria.family-tree",
     "schemaVersion": 1,
@@ -103,7 +103,7 @@
         "status": "dead",
         "birth": "1638",
         "death": "1714",
-        "portrait": "../AleriaAlmanach/assets/goettliche-eleganz/portraits/gwenora.png",
+        "portrait": "../AleriaAlmanach/assets/goettliche-eleganz/portraits/gwenora-v2.png",
         "portraitPlaceholder": "auto",
         "houseId": "house-maerllys",
         "familyRole": "married",
@@ -176,21 +176,24 @@
         "name": "Haus Veltrane",
         "motto": "",
         "emblem": "assets/images/houses/Kaiserreich Argentum/Veltrane.png",
-        "status": "active"
+        "status": "active",
+        "extensions": {}
       },
       {
         "id": "house-maerllys",
         "name": "Haus Maerllys",
         "motto": "",
         "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Maerllys.png",
-        "status": "active"
+        "status": "active",
+        "extensions": {}
       },
       {
         "id": "house-raves",
         "name": "Haus Raves",
         "motto": "",
         "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Raves.png",
-        "status": "active"
+        "status": "active",
+        "extensions": {}
       }
     ],
     "cadetBranches": [
@@ -295,8 +298,13 @@
     },
     "extensions": {
       "blankFamily": false,
-      "sourceRevision": 1,
-      "sourceNote": "Bürgerliches Stammhaus der Raves, vorläufig unter Kaiserreich Argentum / Unsortiert. Keine ungenannten Häfen, Adelstitel oder vollständige Hauptlinie erfunden. Die Zugehörigkeit Lucianos ist bekannt, seine konkrete Verwandtschaft zu Matteo bleibt offen."
+      "sourceRevision": 2,
+      "sourceNote": "Bürgerliches Stammhaus der Raves, vorläufig unter Kaiserreich Argentum / Unsortiert. Keine ungenannten Häfen, Adelstitel oder vollständige Hauptlinie erfunden. Die Zugehörigkeit Lucianos ist bekannt, seine konkrete Verwandtschaft zu Matteo bleibt offen.",
+      "registryTombstones": {},
+      "registryUpgrade": {
+        "fromRevision": 1,
+        "toRevision": 2
+      }
     }
   }
 }

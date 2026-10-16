@@ -368,9 +368,9 @@
 .trade-catalog-description {
   display: flex;
   flex-direction: column;
-  align-self: start;
+  align-self: stretch;
   min-height: 0;
-  max-height: var(--trade-image-height, 220px);
+  max-height: calc(var(--trade-image-height, 220px) + 12rem);
   box-sizing: border-box;
   border-left: 1px solid rgba(98, 66, 30, 0.2);
   border-right: 1px solid rgba(98, 66, 30, 0.2);

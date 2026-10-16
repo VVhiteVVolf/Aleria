@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "familyId": "haus-raves",
-  "revision": 1,
-  "updatedAt": "2026-10-15T22:51:07.134Z",
+  "revision": 2,
+  "updatedAt": "2026-10-16T00:26:06.470Z",
   "family": {
     "schema": "aleria.family-tree",
     "schemaVersion": 1,
@@ -63,7 +63,7 @@
         "status": "dead",
         "birth": "1638",
         "death": "1714",
-        "portrait": "../AleriaAlmanach/assets/goettliche-eleganz/portraits/gwenora.png",
+        "portrait": "../AleriaAlmanach/assets/goettliche-eleganz/portraits/gwenora-v2.png",
         "portraitPlaceholder": "auto",
         "houseId": "house-maerllys",
         "familyRole": "married",
@@ -279,7 +279,7 @@
         "status": "alive",
         "birth": "1713",
         "death": "",
-        "portrait": "../AleriaAlmanach/assets/goettliche-eleganz/portraits/maelwen.png",
+        "portrait": "../AleriaAlmanach/assets/goettliche-eleganz/portraits/maelwen-v2.png",
         "portraitPlaceholder": "auto",
         "houseId": "house-coeddu",
         "familyRole": "married",
@@ -648,42 +648,48 @@
         "name": "Haus Raves",
         "motto": "",
         "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Raves.png",
-        "status": "active"
+        "status": "active",
+        "extensions": {}
       },
       {
         "id": "house-veltrane",
         "name": "Haus Veltrane",
         "motto": "",
         "emblem": "assets/images/houses/Kaiserreich Argentum/Veltrane.png",
-        "status": "active"
+        "status": "active",
+        "extensions": {}
       },
       {
         "id": "house-maerllys",
         "name": "Haus Maerllys",
         "motto": "",
         "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Maerllys.png",
-        "status": "active"
+        "status": "active",
+        "extensions": {}
       },
       {
         "id": "house-coeddu",
         "name": "Haus Coeddu",
         "motto": "",
         "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Coeddu.png",
-        "status": "active"
+        "status": "active",
+        "extensions": {}
       },
       {
         "id": "house-unbekannt-livia-raves",
         "name": "Unbekanntes Haus · Venalys",
         "motto": "",
         "emblem": "",
-        "status": "active"
+        "status": "active",
+        "extensions": {}
       },
       {
         "id": "house-unbekannt-flavia-raves",
         "name": "Unbekanntes Haus · Tirnara",
         "motto": "",
         "emblem": "",
-        "status": "active"
+        "status": "active",
+        "extensions": {}
       }
     ],
     "cadetBranches": [
@@ -790,7 +796,7 @@
     },
     "extensions": {
       "blankFamily": false,
-      "sourceRevision": 1,
+      "sourceRevision": 2,
       "sourceNote": "Nutzervorgaben zur Göttlichen Eleganz vom 16.10.2026. Drei vollständig ausgearbeitete Generationen vom Gründerpaar bis Eleonora, anschließend drei Kinder. Eleonora 39, Tiberian 37, Orestian 36. Tiberians freie Braut ist Maelwen Coeddu; keine Gwyllach-Verbindung. Luciano stammt aus einem anderen, nicht einzeln überlieferten Veltrane-Zweig; eine nahe Verwandtschaft wird nicht behauptet.",
       "houseBiographyModule": {
         "schema": "aleria.house-module",
@@ -893,6 +899,11 @@
           ],
           "footer": ""
         }
+      },
+      "registryTombstones": {},
+      "registryUpgrade": {
+        "fromRevision": 1,
+        "toRevision": 2
       }
     }
   }

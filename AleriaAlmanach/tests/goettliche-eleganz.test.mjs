@@ -44,7 +44,8 @@ test('three generations, reciprocal marriages and existing identities survive th
     const baseFamily=await readFile(new URL(`../../Stammbäume/assets/data/published-families/haus-${id}.json`,import.meta.url),'utf8').then(JSON.parse).then(envelope=>envelope.family).catch(error=>{if(error.code!=='ENOENT') throw error;});
     records.push({family,baseFamily});
     if(baseFamily && ['maerllys','coeddu'].includes(id)) for(const old of baseFamily.persons) {
-      const current=family.persons.find(person=>person.id===old.id);
+      const current=family.persons.find(person=>person.id===old.id)
+        || registered('raves').family.persons.find(person=>person.worldPersonId===old.worldPersonId);
       for(const field of ['id','worldPersonId','birth','death','houseId']) assert.equal(current[field],old[field]);
     }
   }

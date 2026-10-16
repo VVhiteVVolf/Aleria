@@ -1,5 +1,6 @@
 import { createMarriage, createParentages } from './family-record-builders.js';
 import { kanneFamilyPerson } from './krumme-kanne-family-people.js';
+import { withMarriedAwayContinuation } from './married-away-continuation.js';
 
 // Mair and Caradog retain their existing person and world identities. Gareth's
 // ended relationship and Caradog's original biological parentage stay intact.
@@ -26,6 +27,12 @@ export function withKrummeKanneTonnarthLink(family) {
   if (!next.houses.some(h => h.id === 'house-dubhdarach')) next.houses.push({ id: 'house-dubhdarach', name: 'Haus Dubhdarach', status: 'active', emblem: 'assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Dubhdarach.png' });
   if (!next.partnerships.some(p => p.id === marriage)) next.partnerships.push(createMarriage(marriage, spouse, mair.id, { start: '1724', notes: 'Gemeinsamer Haushalt in der Krummen Kanne, Gwynthor.', extensions: { crossFamilyRelationship: { linkId: marriage, counterpartFamilyId: 'haus-dubhdarach' } } }));
   for (const p of createParentages(additions.slice(1).map(p => p.id), [spouse, mair.id], marriage)) if (!next.parentages.some(existing => existing.id === p.id)) next.parentages.push(p);
-  next.extensions.sourceRevision = Math.max(3, Number(next.extensions.sourceRevision) || 0);
-  return Object.freeze(next);
+  next.extensions.sourceRevision = Math.max(4, Number(next.extensions.sourceRevision) || 0);
+  return Object.freeze(withMarriedAwayContinuation(next, {
+    id: 'married-away-mair-dubhdarach', name: 'Haus Dubhdarach',
+    parentPartnershipId: marriage, childIds: additions.slice(1).map(person => person.id),
+    houseId: 'house-dubhdarach', targetFamilyId: 'haus-dubhdarach',
+    emblem: 'assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Dubhdarach.png', crestFrame: 'iron',
+    notes: 'Mair heiratete Aedan Dubhdarach. Neifion und Eirlys führen seine Linie fort; Caradog bleibt im Haus Tonnarth.'
+  }));
 }
