@@ -2,7 +2,7 @@ import { getAttributeIconPresentation } from './attribute-icon-registry.js?v=202
 import { getCheckDescription } from './skill-check-guidance.js?v=20261015-check-options-v1';
 import { getSkillIconPresentation } from './skill-icon-registry.js';
 import { bindDelegatedTooltips } from '../tooltips/tooltip-controller.js?v=20261015-skill-challenges-v2';
-import { getCheckDefinition } from './skill-check-model.js?v=20261015-check-options-v1';
+import { getCheckDefinition } from './skill-check-model.js?v=20261016-guided-checks-v1';
 
 const escape = value => String(value ?? '').replace(/[&<>"']/g, character => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[character]);
 
@@ -34,7 +34,7 @@ export function renderSkillChoiceGroup({ skills, selectedId, segmentId, target =
   return `<fieldset class="skill-choice-group"><legend>Probe auswählen</legend><div class="skill-choice-grid">${skills.map(skill => {
     const preferred = target ? target.preferredSkills.includes(skill.id) : null;
     const hint = describeSkillChoice(skill, { preferred });
-    return `<label class="skill-choice" ${skillTooltipAttributes(hint)}><input type="radio" name="skill-choice-${escape(segmentId)}" data-skill-input="skillId" value="${escape(skill.id)}"${skill.id === selectedId ? ' checked' : ''}><span class="skill-choice-face">${renderSkillIcon(skill)}<span class="skill-choice-copy"><strong>${escape(skill.label)}</strong>${target ? `<small>${preferred ? 'Passend' : 'Alternative'} · Charakterbogen</small>` : ''}</span></span></label>`;
+    return `<label class="skill-choice${preferred ? ' skill-choice-preferred' : ''}" ${skillTooltipAttributes(hint)}><input type="radio" name="skill-choice-${escape(segmentId)}" data-skill-input="skillId" value="${escape(skill.id)}"${skill.id === selectedId ? ' checked' : ''}><span class="skill-choice-face">${renderSkillIcon(skill)}<span class="skill-choice-copy"><strong>${escape(skill.label)}</strong>${target ? `<small>${preferred ? 'Passend' : 'Alternative'} · Charakterbogen</small>` : ''}${skill.id === selectedId ? '<small class="skill-choice-selected">✓ Für diesen Wurf gewählt</small>' : ''}</span></span></label>`;
   }).join('')}</div><small>${escape(profileDetail)}</small></fieldset>`;
 }
 

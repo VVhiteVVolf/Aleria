@@ -5,7 +5,7 @@ import {
   isSuccessfulSkillOutcome,
   normalizeSkillCheckSettings,
   resolveSkillModifier
-} from './skill-check-model.js?v=20261015-check-options-v1';
+} from './skill-check-model.js?v=20261016-guided-checks-v1';
 import { getAuraTargetMechanics, getActiveRollModes } from '../combat/combat-profile-model.js?v=20260928-equipment-art-v4';
 import { mergeRollModes } from '../combat/combat-roll-mode.js?v=20260906-effect-rolls-v1';
 import {
@@ -16,7 +16,7 @@ import {
 import { consumeCombatRuleResources } from '../combat/combat-rule-consumption.js?v=20260928-equipment-art-v4';
 import { getCheckProfileRollModes } from './attribute-check-model.js?v=20261015-check-options-v1';
 
-export const SKILL_EVALUATION_RULES_VERSION = 'skill-evaluation-4';
+export const SKILL_EVALUATION_RULES_VERSION = 'skill-evaluation-5';
 
 function createResolutionId() {
   return globalThis.crypto?.randomUUID?.() || `skill-evaluation-${Date.now()}-${Math.random().toString(36).slice(2, 9)}`;
@@ -37,8 +37,13 @@ function ledger(applications, before, after) {
   return applications.map(application => ({ ...application, before: { ...before }, after: { ...after } }));
 }
 
-function buildSkillAuraApplications(sources = [], checkType = 'skill') {
+function buildSkillAuraApplications(sources = [], checkType = 'skill', actorProfile = {}) {
   return sources.flatMap(source => {
+    // Self aura mechanics and ongoing encounter auras already belong to the
+    // sheet total. Selecting support must not apply that same aura twice.
+    if (source.sourceRole === 'actor' || (actorProfile.conditions || []).some(condition =>
+      condition.active !== false && condition.encounterAura === true
+      && String(condition.auraSourceActorId) === String(source.actorId))) return [];
     const selected = new Set(Array.isArray(source.selectedRuleIds) ? source.selectedRuleIds : []);
     if (source.sourceRole === 'support' && !selected.has('@aura:actor')) return [];
     const mechanics = getAuraTargetMechanics(source.profile, {
@@ -89,7 +94,7 @@ export function getSkillRollContext({ actor, settings: sourceSettings } = {}, op
   const preApplications = collectApplicableCombatRules({
     phase: 'pre-roll', actionKind, sources, periods,
     usedFrequencyKeys: usedRuleFrequencyKeys, state: skillRuleState
-  }).concat(buildSkillAuraApplications(sources, checkType));
+  }).concat(buildSkillAuraApplications(sources, checkType, skill.profile));
   markCombatRuleApplications(preApplications, usedRuleFrequencyKeys);
   const preEffects = mergeCombatRuleEffects(preApplications);
   const profileRollModes = getCheckProfileRollModes(skill.profile, skill.definition, getActiveRollModes(skill.profile, 'skillRollMode'));

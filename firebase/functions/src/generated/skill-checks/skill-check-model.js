@@ -146,7 +146,9 @@ export function normalizeSkillChallenge(source = {}) {
 export function normalizeSkillCheckSettings(source = {}) {
   return {
     skillId: CHECKS_BY_ID.has(String(source.skillId || '')) ? String(source.skillId) : '',
-    customModifier: clampInteger(source.customModifier, 0, -99, 99),
+    // Retain the wire field for old clients, but never accept a free bonus on
+    // a new roll. Historical resolutions keep their stored audit values.
+    customModifier: 0,
     difficulty: clampInteger(source.difficulty, 10, 1, 40),
     rollMode: ['advantage', 'disadvantage'].includes(source.rollMode) ? source.rollMode : 'normal',
     targetChallengeId: String(source.targetChallengeId || '').trim().slice(0, 120)

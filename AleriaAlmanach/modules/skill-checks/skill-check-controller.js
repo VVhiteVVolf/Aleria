@@ -1,9 +1,10 @@
+import { collectSkillSupportOptions, selectSkillSupportDefaults, skillSupportOptionKey } from './skill-support-options.js?v=20261016-guided-checks-v1';
 import { getCheckDescription } from './skill-check-guidance.js?v=20261015-check-options-v1';
 import { describeCheckModifierSource } from './attribute-check-model.js?v=20261015-check-options-v1';
 import { previewChallengeCombatBenefits, collectChallengeGrantKeys } from '../herausforderung/herausforderung-combat-preview.js?v=20261015-graded-challenges-v1';
 import { getChallengeAttemptSettings } from './skill-challenge-attempt.js?v=20261015-check-options-v1';
 import { getChallengeCombatBindingError } from '../herausforderung/herausforderung-combat-context.js?v=20261015-check-options-v1';
-import { getActiveCombatEncounter } from '../combat/combat-encounter-model.js';
+import { getActiveCombatPartyMap, getEncounterRelationship, getActiveCombatEncounter } from '../combat/combat-encounter-model.js';
 import { sceneDiceService } from '../scene-dice/dice-service.js?v=20261013-performance-v1';
 import { CombatProfileResolver } from '../combat/combat-profile-resolver.js?v=20260928-equipment-art-v4';
 import { createSceneSkillProfileResolver } from './skill-scene-profile.js?v=20260928-equipment-art-v4';
@@ -25,12 +26,12 @@ import {
   normalizeSkillChallenge,
   normalizeSkillCheckSettings,
   resolveSkillModifier
-} from './skill-check-model.js?v=20261015-check-options-v1';
+} from './skill-check-model.js?v=20261016-guided-checks-v1';
 import { narrateSkillResolution } from './skill-check-narration.js?v=20261015-graded-challenges-v1';
-import { SkillResolutionService, getSkillRollContext } from './skill-resolution-service.js?v=20261015-check-options-v1';
+import { SkillResolutionService, getSkillRollContext } from './skill-resolution-service.js?v=20261016-guided-checks-v1';
 import { collectCombatTriggerRules, deriveCombatRuleFrequencyKeys } from '../combat/combat-trigger-rules.js?v=20260928-equipment-art-v4';
 import { renderAutomaticRollMode } from '../combat/ui/combat-roll-mode-view.js?v=20260906-effect-rolls-v1';
-import { renderSkillIcon, renderSkillChoiceGroup, renderPreferredSkillHints, skillTooltipAttributes, bindSkillIconTooltips } from './skill-icon-view.js?v=20261015-check-options-v1';
+import { renderSkillIcon, renderSkillChoiceGroup, renderPreferredSkillHints, skillTooltipAttributes, bindSkillIconTooltips } from './skill-icon-view.js?v=20261016-guided-checks-v1';
 
 bindSkillIconTooltips(document);
 
@@ -44,6 +45,7 @@ const skillResolutionService = new SkillResolutionService({
     });
   }
 });
+const supportDefaults = new WeakMap();
 let latestComposerContext = null;
 let composerRefreshQueued = false;
 for (const name of ['aleria:comments-updated', 'aleria:combat-profile-committed', 'aleria:characters-changed']) document.addEventListener(name, () => {
@@ -101,12 +103,16 @@ function getActorForSegment(segment, fallbackActorId = '', actors = []) {
 }
 
 function relationshipBetweenActors(first = {}, second = {}) {
+  if (String(first.id) === String(second.id)) return 'self';
+  const comments = globalThis.getCachedCommentsForThread?.(latestComposerContext?.threadId || '') || [];
+  const encounterRelation = getEncounterRelationship(first.id, second.id, getActiveCombatPartyMap(comments));
+  if (encounterRelation) return encounterRelation;
   const firstTeam = String(first.combatTeam || first.fraktion || first.faction || '').trim().toLocaleLowerCase('de');
   const secondTeam = String(second.combatTeam || second.fraktion || second.faction || '').trim().toLocaleLowerCase('de');
   return firstTeam && secondTeam && firstTeam === secondTeam ? 'ally' : 'enemy';
 }
 
-function buildClientSkillRuleContext(segment, actor, actorProfile, targetChallenge, actors = [], resolver = profileResolver) {
+function buildClientSkillRuleContext(segment, actor, actorProfile, targetChallenge, actors = [], resolver = profileResolver, selections = segment.skillRuleSelections) {
   const targetActor = targetChallenge
     ? actors.find(candidate => [targetChallenge.authorId, targetChallenge.authorKey].includes(String(candidate?.id || ''))) || null
     : null;
@@ -134,10 +140,11 @@ function buildClientSkillRuleContext(segment, actor, actorProfile, targetChallen
     selectedRuleIds: []
   });
   const groupedSelections = new Map();
-  (Array.isArray(segment.skillRuleSelections) ? segment.skillRuleSelections : []).forEach(selection => {
+  (Array.isArray(selections) ? selections : []).forEach(selection => {
     const actorId = String(selection?.sourceActorId || '');
     if (!actorId) return;
-    const current = groupedSelections.get(actorId) || { actorId, ruleIds: [], distanceMeters: Number(selection?.distanceMeters) || 0 };
+    const distanceMeters = selection?.distanceMeters == null ? null : Number(selection.distanceMeters);
+    const current = groupedSelections.get(actorId) || { actorId, ruleIds: [], distanceMeters };
     current.ruleIds.push(String(selection?.ruleId || ''));
     groupedSelections.set(actorId, current);
   });
@@ -233,25 +240,49 @@ function renderModeControl(segment) {
     </div>`;
 }
 
-function renderSkillSupportOptions(segment, actor, actors = []) {
-  const selected = new Set((Array.isArray(segment.skillRuleSelections) ? segment.skillRuleSelections : [])
-    .map(item => `${item.sourceActorId}:${item.ruleId}`));
-  const options = [];
-  actors.filter(candidate => String(candidate?.id || '') !== String(actor?.id || '')).forEach(candidate => {
-    const profile = profileResolver.resolve(candidate);
-    const rules = collectCombatTriggerRules(profile)
-      .filter(rule => rule.activation === 'reaction' && (!rule.actionKinds.length || rule.actionKinds.includes('skill')));
-    if (profile.aura?.enabled) rules.unshift({ id: '@aura:actor', entryKind: 'aura', entryId: 'aura', entryName: profile.aura.name || 'Aura', name: 'Aura auf Probe' });
-    rules.forEach(rule => options.push({ candidate, profile, rule }));
+function prepareSkillSupport(segment, actor, settings, target, actors, resolver) {
+  if (!actor) return [];
+  const comments = globalThis.getCachedCommentsForThread?.(latestComposerContext?.threadId || '') || [];
+  const encounter = getActiveCombatEncounter(comments);
+  const present = new Set(encounter
+    ? [...encounter.participants.values()].filter(item => item.status === 'active').map(item => item.actorId)
+    : [...(latestComposerContext?.sceneActors || []).map(item => item.id),
+      ...comments.flatMap(comment => [comment.characterId, ...(comment.commentSegments || []).map(item => item.sceneActorId || item.characterId)])].filter(Boolean));
+  present.add(actor.id);
+  const candidates = actors.filter(candidate => present.has(candidate.id) && ['self', 'ally'].includes(relationshipBetweenActors(candidate, actor)));
+  const selections = candidates.flatMap(candidate => {
+    const profile = resolver.resolve(candidate);
+    const rules = collectCombatTriggerRules(profile).filter(rule => rule.activation === 'reaction');
+    return [...rules.map(rule => rule.id), ...(profile.aura?.enabled ? ['@aura:actor'] : [])]
+      .map(ruleId => ({ sourceActorId: candidate.id, ruleId, distanceMeters: candidate.id === actor.id ? 0 : null }));
   });
+  const context = buildClientSkillRuleContext(segment, actor, resolver.resolve(actor), target, actors, resolver, selections);
+  const day = getSceneRecoveryDayKey(latestComposerContext?.threadId, comments);
+  const options = collectSkillSupportOptions({ actor, settings }, {
+    actorProfile: resolver.resolve(actor), ruleSources: context.sources, targetProfile: context.targetProfile,
+    rulePeriods: { scene: latestComposerContext?.threadId || '', day, comment: 'skill-draft' },
+    usedRuleFrequencyKeys: deriveCombatRuleFrequencyKeys(comments)
+  });
+  const contextKey = `${actor.id}:${settings.skillId}:${target?.id || ''}`;
+  let defaults = supportDefaults.get(segment);
+  if (!defaults || defaults.contextKey !== contextKey) {
+    defaults = { contextKey, seen: new Set() };
+    supportDefaults.set(segment, defaults);
+  }
+  segment.skillRuleSelections = selectSkillSupportDefaults(options, segment.skillRuleSelections || [], defaults.seen, day);
+  return options;
+}
+
+function renderSkillSupportOptions(segment, options) {
   if (!options.length) return '';
-  return `<fieldset class="skill-check-support"><legend>Unterstützung & Reaktionen</legend>
-    <p>Nur ausdrücklich gewählte Reaktionen werden verbraucht. Passive Regeln des Gegenspielers prüft der Server automatisch.</p>
-    <div>${options.map(({ candidate, profile, rule }) => {
-      const ruleId = rule.id === '@aura:actor' ? rule.id : (rule.id || `${rule.entryKind}:${rule.entryId}`);
-      const key = `${candidate.id}:${ruleId}`;
-      const persistence = profile.persistence || {};
-      return `<label><input type="checkbox" data-skill-rule-toggle data-source-actor-id="${escapeHtml(candidate.id)}" data-rule-id="${escapeHtml(ruleId)}" data-persistence-kind="${escapeHtml(persistence.kind)}" data-record-id="${escapeHtml(persistence.recordId)}" data-source-creature-id="${escapeHtml(persistence.sourceCreatureId)}"${selected.has(key) ? ' checked' : ''}> <b>${escapeHtml(candidate.name)}</b> · ${escapeHtml(rule.name || rule.entryName)}</label>`;
+  const selected = new Set((segment.skillRuleSelections || []).map(skillSupportOptionKey));
+  return `<fieldset class="skill-check-support"><legend>Passende Unterstützung & Reaktionen</legend>
+    <p>Passende verfügbare Unterstützung ist vorausgewählt. Beim Eintragen werden die angegebenen Kosten fällig, wenn die Regel greift. Du kannst Unterstützung abwählen.</p>
+    <div class="skill-check-support-options">${options.map(option => {
+      const persistence = option.source.profile.persistence || {};
+      const costs = [...option.costs.map(cost => `${cost.amount} ${cost.name || cost.resourceId}`), ...(option.consumesAbilityUse ? ['1 Nutzung'] : [])].join(' · ');
+      const condition = option.condition === 'always' ? '' : ' · nur bei passendem Würfelergebnis';
+      return `<label class="skill-check-support-option"><input type="checkbox" data-skill-rule-toggle data-source-actor-id="${escapeHtml(option.sourceActorId)}" data-rule-id="${escapeHtml(option.ruleId)}" data-persistence-kind="${escapeHtml(persistence.kind)}" data-record-id="${escapeHtml(persistence.recordId)}" data-source-creature-id="${escapeHtml(persistence.sourceCreatureId)}"${selected.has(skillSupportOptionKey(option)) ? ' checked' : ''}><span><b>${escapeHtml(option.sourceActorName)}</b> · ${escapeHtml(option.ruleName)}<small>${escapeHtml(costs || 'Ohne Ressourcenkosten')}${escapeHtml(condition)}</small></span></label>`;
     }).join('')}</div>
   </fieldset>`;
 }
@@ -289,11 +320,14 @@ function renderSkillComposer(segment, actor, challenges, actors = [], sceneResol
   }
   let profileDetail = 'Charakterbogen fehlt';
   let rollModes = [];
+  let automaticModifier = null;
+  const supportOptions = prepareSkillSupport(segment, actor, settings, target, actors, sceneResolver);
   if (actor && segment.skillId) {
     const actorProfile = sceneResolver.resolve(actor);
     const ruleContext = buildClientSkillRuleContext(segment, actor, actorProfile, target, actors, sceneResolver);
     const rollContext = getSkillRollContext({ actor, settings }, { actorProfile, ruleSources: ruleContext.sources, targetProfile: ruleContext.targetProfile });
     const skill = rollContext.skill;
+    automaticModifier = skill.modifier + Number(rollContext.preEffects[rollContext.modifierKey] || 0);
     rollModes = [...rollContext.profileRollModes, ...rollContext.preApplications.map(application => application.effects?.rollMode)];
     const sign = skill.modifier >= 0 ? '+' : '';
     profileDetail = `${sign}${skill.modifier} aus ${describeCheckModifierSource(skill.source)}`;
@@ -307,30 +341,31 @@ function renderSkillComposer(segment, actor, challenges, actors = [], sceneResol
         <label class="skill-check-target-search">Figur durchsuchen
           <input type="search" data-skill-target-actor-search placeholder="Name der Figur …" autocomplete="off">
         </label>
-        <label>Ziel-Figur
+        <label class="${target ? 'skill-check-preset' : ''}">Ziel-Figur
           <select data-skill-input="targetActorKey">
             <option value="">Freier Versuch ohne verdecktes Ziel</option>
             ${targetActors.map(targetActor => `<option value="${escapeHtml(targetActor.key)}"${targetActor.key === selectedTargetActorKey ? ' selected' : ''}>${escapeHtml(targetActor.name)}</option>`).join('')}
           </select>
         </label>
-        <label>Beitrag dieser Figur
+        <label class="${target ? 'skill-check-preset' : ''}">Beitrag dieser Figur
           <select data-skill-input="targetChallengeId">
             <option value="">${selectedTargetActorKey ? 'Beitrag wählen' : 'Zuerst eine Figur wählen'}</option>
             ${actorChallenges.map(challenge => `<option value="${escapeHtml(challenge.id)}"${challenge.id === target?.id ? ' selected' : ''}>${escapeHtml(getContributionRankLabel(challenge.contributionRank))} · ${escapeHtml(challenge.visibleText.slice(0, 80) || 'Beitrag ohne Text')}</option>`).join('')}
           </select>
         </label>
-        <label>Schwierigkeit
+        <label class="${target ? 'skill-check-preset' : ''}">Schwierigkeit
           <input type="number" min="1" max="40" value="${target?.difficulty ?? settings.difficulty}" data-skill-input="difficulty"${target ? ' disabled' : ''}>
           <small>${target ? 'Wird von der Herausforderung vorgegeben' : 'SG 10 ist ein einfacher Standardversuch'}</small>
         </label>
-        <label>Eigener Bonus / Debuff
-          <input type="number" min="-99" max="99" value="${settings.customModifier}" data-skill-input="customModifier">
-          <small>Optional, 0 lässt den Bogenwert unverändert</small>
-        </label>
+        <div class="skill-check-automatic-value" data-skill-automatic-value>
+          <span>✓ Automatischer Probenwert</span>
+          <output>${automaticModifier == null ? 'Zuerst Figur wählen' : `W20 ${automaticModifier >= 0 ? '+' : '−'} ${Math.abs(automaticModifier)}`}</output>
+          <small>Bogenwert einschließlich Übung, aktiver Effekte und gewählter Unterstützung. Weitere Regeln werden beim Wurf geprüft.</small>
+        </div>
         ${renderAutomaticRollMode(rollModes)}
       </div>
       ${target ? `<div class="skill-check-target-note"><b>${escapeHtml(target.authorName)} · ${escapeHtml(getContributionRankLabel(target.contributionRank))}</b>${renderPreferredSkillHints(target)}</div>` : ''}
-      ${renderSkillSupportOptions(segment, actor, actors)}
+      ${renderSkillSupportOptions(segment, supportOptions)}
     </section>`;
 }
 
@@ -374,7 +409,10 @@ function mountComposers(context = {}) {
   const needsSkillComposer = segments.some(segment => normalizeMechanicMode(segment?.mechanicMode, segment) === 'skill');
   const actors = needsSkillComposer ? mergeActors(context.sceneActors || []) : [];
   const challenges = needsSkillComposer ? getComposerChallenges(context.threadId || '') : [];
-  const sceneResolver = needsSkillComposer ? createSceneSkillProfileResolver(globalThis.getCachedCommentsForThread?.(context.threadId || '') || []) : profileResolver;
+  const comments = globalThis.getCachedCommentsForThread?.(context.threadId || '') || [];
+  const sceneResolver = needsSkillComposer ? createSceneSkillProfileResolver(comments, {
+    recoveryDayKey: getSceneRecoveryDayKey(context.threadId, comments)
+  }) : profileResolver;
   segments.forEach(segment => {
     const card = context.list?.querySelector?.(`[data-segment-id="${CSS.escape(String(segment.id || ''))}"]`);
     const host = card?.querySelector?.('[data-segment-mechanics-host]');
@@ -409,7 +447,7 @@ function updateSegmentField(segment, field, value) {
   }
   if (field === 'targetChallengeId') segment.skillTargetChallengeId = String(value || '');
   if (field === 'difficulty') segment.skillDifficulty = clampNumber(value, 10, 1, 40);
-  if (field === 'customModifier') segment.skillCustomModifier = clampNumber(value, 0, -99, 99);
+  if (field === 'customModifier') return;
   if (field === 'rollMode') return;
   if (field === 'challengeEnabled') {
     segment.skillChallengeEnabled = !!value;
@@ -527,6 +565,7 @@ async function resolveSegment(segment, submission, actors, challenges, index, to
     targetChallengeId: segment.skillTargetChallengeId
   });
   if (!allowed.some(skill => skill.id === settings.skillId)) throw new Error('Wähle für jeden Fertigkeitsversuch eine zur Blase passende Fertigkeit.');
+  segment.skillCustomModifier = 0;
   const targetChallenge = challenges.find(challenge => challenge.id === settings.targetChallengeId) || null;
   if (settings.targetChallengeId && !targetChallenge) throw new Error('Die gewählte verdeckte Herausforderung ist nicht mehr verfügbar.');
   const eligibility = targetChallenge && getChallengeCombatBindingError(targetChallenge, getActiveCombatEncounter(resolutionContext.comments || []), actor.id);
@@ -725,6 +764,7 @@ document.addEventListener('change', event => {
   if (!segment) return;
   if (field?.matches?.('[data-skill-rule-toggle]')) {
     updateSkillRuleSelection(segment, field);
+    remountAll();
     return;
   }
   if (field?.matches?.('[data-skill-input]')) {

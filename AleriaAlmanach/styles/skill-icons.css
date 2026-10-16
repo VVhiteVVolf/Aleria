@@ -12,6 +12,8 @@
 .skill-choice-copy { display: grid; gap: 3px; min-width: 0; }
 .skill-choice-copy strong { font: 600 .8rem/1.25 Georgia, serif; overflow-wrap: anywhere; }
 .skill-check-fields .skill-choice-copy small { color: inherit; font: 400 .72rem/1.25 Georgia, serif; letter-spacing: 0; }
-.skill-choice input:checked + .skill-choice-face { border-color: #687a52; background: #435c47; color: #fff2d1; }
+.skill-choice-preferred .skill-choice-face { border-color: #a83d35; background: #f8e4dc; color: #7b2924; box-shadow: inset 3px 0 #a83d35; }
+.skill-choice input:checked + .skill-choice-face { border-color: #8c2f29; background: #7b2924; color: #fff2df; box-shadow: inset 0 0 0 1px #e8b8a6; }
+.skill-choice-selected { font-weight: bold; }
 .skill-choice input:focus-visible + .skill-choice-face { outline: 2px solid #a77538; outline-offset: 2px; }
 .skill-challenge-skills .skill-medallion { width: 26px; height: 26px; }

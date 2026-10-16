@@ -1,0 +1,24 @@
+{
+  "date": "2026-10-16",
+  "changes": [
+    "Kein frei eintragbarer Probenbonus; auch alte Clients und manipulierte Nutzdaten werden bei neuen Würfen auf 0 normalisiert.",
+    "Passende Proben sowie vorgegebene Herausforderung und Schwierigkeit rot; genau eine Probe bleibt wählbar.",
+    "Tatsächlich passende verfügbare Unterstützung vorausgewählt, abwählbar und mit sichtbaren Ressourcenkosten.",
+    "Prüfung von Fertigkeit, Phase, Beziehung, Szenen-/Kampfteilnahme, Reichweite, Häufigkeit, Nutzungen und gemeinsam verfügbaren Ressourcen.",
+    "Eigene und bereits eingerechnete Kampfaura werden nicht nochmals addiert."
+  ],
+  "tests": {
+    "frontend": 110,
+    "server": 213,
+    "newBrowser": "passed",
+    "existingAttributeBrowser": 18,
+    "desktop": true,
+    "mobile390": true,
+    "productionSceneWrites": 0
+  },
+  "limits": [
+    "Ohne bekannte Entfernung werden keine zusätzlichen reichweitenabhängigen Unterstützungsreaktionen vorausgewählt. Bereits aktive Kampfauren bleiben über den Bogenwert wirksam.",
+    "Bei mehreren konkurrierenden Reaktionen wird nur die gemeinsam bezahlbare Auswahl vorausgewählt."
+  ],
+  "history": "Gespeicherte Auswertungen werden nicht neu berechnet; ihre bisherigen freien Boni bleiben im historischen Beleg sichtbar."
+}

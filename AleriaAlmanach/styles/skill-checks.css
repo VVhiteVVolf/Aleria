@@ -1,4 +1,4 @@
-@import url('./skill-icons.css?v=20261015-skill-challenges-v2');
+@import url('./skill-icons.css?v=20261016-guided-checks-v1');
 
 .comment-body.comment-kind-performance,
 .comment-live-preview-body.comment-kind-performance {
@@ -163,6 +163,23 @@
 }
 
 .skill-check-warning { margin: 0 0 0.5rem; color: #8b2d25; }
+
+.skill-check-automatic-value { display: grid; align-content: start; gap: 6px; padding: 10px 12px; border: 1px solid #ab4d40; border-radius: 6px; background: #fae9df; color: #7b2924; }
+.skill-check-automatic-value > span { font: 600 .65rem/1.4 'Cinzel', Georgia, serif; }
+.skill-check-automatic-value output { font: bold 1rem/1.4 Georgia, serif; }
+.skill-check-automatic-value small { color: #743d32; }
+.skill-check-support { min-width: 0; margin: 12px 0 0; padding: 12px; border: 1px solid #a64a3e; border-radius: 6px; }
+.skill-check-support legend { color: #7b2924; font-weight: bold; }
+.skill-check-support p { margin: 0 0 10px; font: 14px/1.4 Georgia, serif; }
+.skill-check-support-options { display: grid; gap: 8px; }
+.skill-check-support-option { display: flex; align-items: start; gap: 9px; padding: 10px; border: 1px solid #b96d5d; border-radius: 5px; background: #f8e4dc; color: #7b2924; cursor: pointer; }
+.skill-check-support-option input { flex: none; width: 18px; height: 18px; margin: 2px 0 0; accent-color: #8c2f29; }
+.skill-check-support-option small { display: block; margin-top: 4px; font-size: 12px; }
+.skill-check-support-option:has(input:checked) { border-color: #8c2f29; background: #7b2924; color: #fff2df; }
+.skill-check-support-option:focus-within { outline: 2px solid #8c2f29; outline-offset: 2px; }
+.skill-check-fields .skill-check-preset { color: #8c2f29; }
+.skill-check-fields .skill-check-preset select,
+.skill-check-fields .skill-check-preset input { border-color: #a83d35; background: #f8e4dc; color: #7b2924; }
 
 .skill-challenge-toggle {
   display: flex;
