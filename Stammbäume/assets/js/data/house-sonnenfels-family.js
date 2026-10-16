@@ -3,7 +3,7 @@ import {createFamilyPerson,createMarriage,createParentages,createMarriedAwayBran
 import {createHouseProfileFromFolderPath} from '../domain/house-profile.js';
 import {NIXE_FAMILY_PEOPLE,nixePerson,SONNENFELS_EMBLEM} from '../../../../AleriaAlmanach/modules/lachende-nixe/nixe-family-people.mjs';
 
-const profile=createHouseProfileFromFolderPath(['Weisenfluh','Südliches Weisenfluh'],{
+const profile=createHouseProfileFromFolderPath(['Weisenfluh'],{
   rankId:'knight',seat:'Burg Sonnenfels',secondarySeats:['Gwynthor · Die Lachende Nixe']
 });
 const base=createFounderTimeJumpPlaceholderHouseFamily({id:'haus-sonnenfels',title:'Haus Sonnenfels',emblem:SONNENFELS_EMBLEM,

@@ -6653,7 +6653,7 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     "regionId": "",
     "children": [
       "weisenfluh/region-ewigensee",
-      "weisenfluh/sudliches-weisenfluh"
+      "weisenfluh/burg-sonnenfels"
     ],
     "houseIds": [
       "haus-weinlaub",
@@ -6696,35 +6696,16 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     ]
   },
   {
-    "id": "weisenfluh/sudliches-weisenfluh",
+    "id": "weisenfluh/burg-sonnenfels",
     "parentId": "weisenfluh",
-    "name": "Südliches Weisenfluh",
-    "path": [
-      "Weisenfluh",
-      "Südliches Weisenfluh"
-    ],
-    "image": "",
-    "countryId": "weisenfluh",
-    "regionId": "sudliches-weisenfluh",
-    "children": [
-      "weisenfluh/sudliches-weisenfluh/burg-sonnenfels"
-    ],
-    "houseIds": [
-      "haus-sonnenfels"
-    ]
-  },
-  {
-    "id": "weisenfluh/sudliches-weisenfluh/burg-sonnenfels",
-    "parentId": "weisenfluh/sudliches-weisenfluh",
     "name": "Burg Sonnenfels",
     "path": [
       "Weisenfluh",
-      "Südliches Weisenfluh",
       "Burg Sonnenfels"
     ],
     "image": "",
     "countryId": "weisenfluh",
-    "regionId": "sudliches-weisenfluh",
+    "regionId": "burg-sonnenfels",
     "children": [],
     "houseIds": [
       "haus-sonnenfels"
@@ -9824,7 +9805,6 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "image": "/Stammb%C3%A4ume/assets/images/houses/Weisenfluh/haus-sonnenfels.png",
     "path": [
       "Weisenfluh",
-      "Südliches Weisenfluh",
       "Burg Sonnenfels"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-sonnenfels&mode=view"

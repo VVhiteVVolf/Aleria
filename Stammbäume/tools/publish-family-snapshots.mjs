@@ -6,7 +6,7 @@ import { reconcileFamilyWithProjectOrigin } from '../assets/js/modules/family-sy
 import { assertValidFamily } from '../assets/js/domain/family-schema.js';
 import { assertMirroredCrossFamilyBatch } from '../assets/js/modules/family-sync/cross-family-sync-invariant.js';
 
-export async function publishFamilySnapshots(familyIds, { apply = false } = {}) {
+export async function publishFamilySnapshots(familyIds, { apply = false, refreshHouseProfiles = false } = {}) {
 assert(familyIds.length && new Set(familyIds).size === familyIds.length, 'Eindeutige Familienauswahl erforderlich.');
 const root = new URL('../assets/data/published-families/', import.meta.url);
 const registry = JSON.parse(await readFile(new URL('registry.json', root), 'utf8'));
@@ -20,6 +20,10 @@ for (const id of familyIds) {
     return null;
   });
   const family = assertValidFamily(previous ? reconcileFamilyWithProjectOrigin({family:previous.family,projectOriginFamily:registered.family}).family : registered.family).family;
+  if (refreshHouseProfiles) {
+    family.document.houseProfile = structuredClone(registered.family.document.houseProfile);
+    assertValidFamily(family);
+  }
   records.push({registered,previous,baseFamily:previous?.family,family,
     changed:JSON.stringify(previous?.family) !== JSON.stringify(family)});
 }
