@@ -19,7 +19,7 @@ export function inferCreatureGenus(creature = {}) {
   if (/katze/.test(species)) return 'Katzen';
   const normalized = breedKey(species);
   for (const [genus, ids] of BREEDS) if (ids.some(id => normalized.includes(breedKey(id)))) return genus;
-  if (/milan|rabe|eule|pfau|vogel|falke|adler/.test(species)) return 'Vögel';
+  if (/milan|rabe|eule|pfau|vogel|falke|habicht|adler/.test(species)) return 'Vögel';
   if (/wolf|wölfe|gramnir/.test(species)) return 'Wölfe';
   if (/troll/.test(species)) return 'Trolle';
   return text(creature.type) || 'Weitere Kreaturen';

@@ -1,4 +1,5 @@
-import { createHouseholdCompanion } from './household-companion-profiles.js?v=20261013-wolfshorn-v1';
+import { createHouseholdCompanion } from './household-companion-profiles.js?v=20261017-varulv-v1';
+import { SLEIPNIR_VARULV_ID, VARULV_GAMIR } from './varulv-gamir.js?v=20261017-varulv-v1';
 
 export const SKALLI_VARULV_ID = 'person--haus-varulv--skalli-varulv';
 export const ASTRID_NAMESAKE_HISTORY = 'Skalli benannte ihr Pferd nach ihrer Vorfahrin Astrid Varulv (1603–1627). Astrid wurde 1627 bei ihrer Hochzeit gemeinsam mit Roger Vaeren, dem König von Aldrimar, vergiftet. Skalli erinnert mit dem Namen an diese beinahe Königin, der man nachsagt, eine große Schildmaid gewesen zu sein.';
@@ -37,3 +38,31 @@ export const ASTRID_CREATURE_SOURCE = {
       { type: 'connection', name: 'Astrid Varulv', image: '/Stammbäume/assets/images/portraits/haus-varulv/astrid-varulv.png', detail: ASTRID_NAMESAKE_HISTORY }]
   }
 };
+
+const SLEIPNIR_ANIMALS = [
+  { slug: 'kappi', name: 'Kappi', profile: 'horse', species: 'Hest-Hengst', level: 3,
+    description: 'Kappi ist Sleipnir Varulvs Hest-Hengst: ein kräftiges graues Nordpferd mit dichter, langer silbergrauer Mähne und ausgeprägtem Fesselbehang. Braunes Sattelzeug, rote Satteldecke und ein weißer Wolf auf rotem Grund kennzeichnen seine Zugehörigkeit zum Clan Varulv.',
+    appearance: 'Breite Brust, starke Schultern, kräftige Beine und dichtes graues Fell. Lange, ungebändigte silbergraue Mähne, graue Augen und dunkle Hufe. Brauner Ledersattel und Zaum mit messingfarbenen Beschlägen; rote Satteldecke und rundes Brustmedaillon mit weißem Wolf auf rotem Grund.',
+    facts: [{ label: 'Rasse', value: 'Hest' }, { label: 'Geschlecht', value: 'Hengst' }]
+  },
+  { slug: 'skuggi', name: 'Skuggi', profile: 'hawk', species: 'Habicht', level: 2,
+    description: 'Skuggi ist Sleipnir Varulvs Habicht. Der graue Greifvogel hat eine helle, dunkel quergebänderte Brust, einen markanten hellen Überaugenstreif, bernsteinfarbene Augen und einen langen gebänderten Schwanz. Er trägt lederne Geschühriemen und sitzt auf dem braunen Falknerhandschuh mit Varulv-Wolfszeichen.',
+    appearance: 'Schiefergrauer Rücken und Kopf, helle Kehle und cremeweiße Unterseite mit dunkler Querbänderung. Heller Überaugenstreif, bernsteinfarbene Augen, gelbe Wachshaut und Fänge, dunkler Hakenschnabel und schwarze Krallen. Langer gebänderter Schwanz; braunes ledernes Geschüh.',
+    facts: [{ label: 'Art', value: 'Habicht' }]
+  }
+];
+
+function createSleipnirCompanion(spec) {
+  const creature = createHouseholdCompanion({
+    ...spec, ownerSlug: 'sleipnir', ownerId: SLEIPNIR_VARULV_ID, ownerName: 'Sleipnir Varulv',
+    location: 'Rorikshall', house: 'Clan Varulv', habitat: 'Rorikshall, Rorikstal, Roriksheim, Aldrimar',
+    portrait: `/AleriaAlmanach/assets/companions/haus-varulv/${spec.slug}.png`
+  });
+  return { ...creature, biography: { ...creature.biography, appearance: spec.appearance,
+    facts: [...creature.biography.facts, ...spec.facts, { label: 'Besitzer', value: 'Sleipnir Varulv' }, { label: 'Clan', value: 'Clan Varulv' }],
+    connections: [{ type: 'connection', name: 'Sleipnir Varulv', image: '/Stammbäume/assets/images/portraits/haus-varulv/sleipnir-varulv.png', detail: 'Besitzer und vertraute Bezugsperson.' }]
+  } };
+}
+
+export const VARULV_NEW_COMPANIONS = Object.freeze([...VARULV_GAMIR, ...SLEIPNIR_ANIMALS.map(createSleipnirCompanion)]);
+export const VARULV_COMPANIONS = Object.freeze([ASTRID_CREATURE_SOURCE, ...VARULV_NEW_COMPANIONS]);

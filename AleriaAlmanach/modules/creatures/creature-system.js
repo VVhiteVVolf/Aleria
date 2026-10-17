@@ -43,7 +43,7 @@ import {
   CREATURE_LEVEL_GUIDELINES,
   getBuiltinCreatureTemplates,
   isBuiltinCreatureId
-} from './creature-catalog.js?v=20261013-palace-pets-v3';
+} from './creature-catalog.js?v=20261017-varulv-v1';
 import { getCreatureClassification } from './creature-classification.js?v=20261013-draig-breeds-v2';
 import { renderCreatureGroups } from './creature-library-view.js?v=20261011-creature-groups-v1';
 import { selectChangedSections } from '../characters/character-save-guard.js?v=20260808-character-storage-audit-v1';

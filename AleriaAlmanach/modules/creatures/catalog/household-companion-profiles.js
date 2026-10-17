@@ -1,5 +1,7 @@
 import { getStandardHitPointProgression } from '../../combat/combat-hit-point-progression.js';
 
+const RAPTOR_PROFILE = { genus: 'Vögel', limit: 2, size: 'Klein', scores: [4, 16, 10, 2, 16, 8], die: 4, movement: 18, attack: 'Krallenhieb', damage: '1d4', damageBonus: -1, damageType: 'Hieb', attribute: 'dexterity', abilities: [['Flug', 'Fliegt bis zu 18 m, am Boden bis zu 3 m. Benötigt freie Luft und nutzbare Flügel.'], ['Scharfer Blick', 'Beobachtet die Umgebung aus der Luft; Entfernung, Deckung und Sichtverhältnisse beeinflussen Wahrnehmungsproben.']] };
+
 // Species-specific starting profiles. Individual level and age remain explicit in the catalog.
 const PROFILES = {
   wolf: { genus: 'Wölfe', limit: 2, size: 'Groß', scores: [14, 12, 12, 3, 14, 10], die: 8, movement: 12, attack: 'Biss', damage: '1d6', damageType: 'Stich', attribute: 'strength', abilities: [['Wölfische Sinne', 'Nimmt Witterung und Geräusche aufmerksam wahr. Wind, Entfernung und Deckung beeinflussen die nötigen Wahrnehmungsproben.']] },
@@ -7,7 +9,8 @@ const PROFILES = {
   dog: { genus: 'Hunde', limit: 4, size: 'Mittel', scores: [12, 14, 12, 3, 14, 10], die: 8, movement: 12, attack: 'Biss', damage: '1d6', damageType: 'Stich', attribute: 'strength', abilities: [['Spürnase', 'Kann vertraute Gerüche aufnehmen und einer Fährte folgen; Wind, Regen und fremde Gerüche beeinflussen die nötigen Proben.']] },
   lapdog: { genus: 'Hunde', limit: 4, size: 'Klein', scores: [6, 14, 10, 3, 12, 14], die: 6, movement: 9, attack: 'Biss', damage: '1d4', damageType: 'Stich', attribute: 'dexterity', abilities: [['Haushund', 'Sucht die Nähe vertrauter Menschen. Reagiert aufmerksam auf Stimmen und Musik.']] },
   cat: { genus: 'Katzen', limit: 2, size: 'Winzig', scores: [3, 16, 10, 3, 14, 10], die: 4, movement: 9, attack: 'Krallen', damage: '1d4', damageBonus: -2, damageType: 'Hieb', attribute: 'dexterity', abilities: [['Kletterin', 'Bewegt sich sicher auf schmalen Vorsprüngen und klettert bis zu 6 m; schwierige Stellen benötigen passende Proben.'], ['Leiser Schritt', 'Schleicht und beobachtet aufmerksam. Heimlichkeit wird gegen die Wahrnehmung der Umgebung geprüft.']] },
-  kite: { genus: 'Vögel', limit: 2, size: 'Klein', scores: [4, 16, 10, 2, 16, 8], die: 4, movement: 18, attack: 'Krallenhieb', damage: '1d4', damageBonus: -1, damageType: 'Hieb', attribute: 'dexterity', abilities: [['Flug', 'Fliegt bis zu 18 m, am Boden bis zu 3 m. Benötigt freie Luft und nutzbare Flügel.'], ['Scharfer Blick', 'Beobachtet die Umgebung aus der Luft; Entfernung, Deckung und Sichtverhältnisse beeinflussen Wahrnehmungsproben.']] },
+  kite: RAPTOR_PROFILE,
+  hawk: RAPTOR_PROFILE,
   peacock: { genus: 'Vögel', limit: 2, size: 'Klein', scores: [4, 12, 10, 2, 12, 14], die: 4, movement: 6, attack: 'Schnabelhieb', damage: '1d4', damageBonus: -2, damageType: 'Stich', attribute: 'dexterity', abilities: [['Kurzer Flug', 'Kann kurze Strecken bis zu 9 m fliegen, um einen erhöhten Sitzplatz oder Schutz zu erreichen.'], ['Lauter Ruf', 'Sein Ruf ist weithin hörbar. Das Rad und die Rufe dienen der Balz und Verständigung.']] }
 };
 
