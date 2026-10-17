@@ -1,6 +1,7 @@
 // Authenticated, bounded REST access for explicit editorial publications.
 // Tokens remain in memory; backups retain the original REST representation.
 import { createRequire } from 'node:module';
+import { createHash, randomUUID } from 'node:crypto';
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { encryptProjectBackup } from '../backup/project-backup-crypto.mjs';
 export async function createContentPublicationClient() {
@@ -19,7 +20,31 @@ export async function createContentPublicationClient() {
     if(!response.ok) throw new Error(`Inhaltsveröffentlichung: HTTP ${response.status}`);
     return response.json();
   }
-  return {request,documentName:path=>`${database}/documents/${path}`};
+  async function publishFamilyArtwork({ familyId, assetId, bytes, contentType = 'image/png', metadata = {} }) {
+    if (!/^haus-[a-z0-9-]+$/.test(familyId) || !/^[a-z0-9-]+$/.test(assetId)
+      || !Buffer.isBuffer(bytes) || !['image/png', 'image/jpeg'].includes(contentType)) throw Error('Ungültige Bildveröffentlichung.');
+    const bucket = 'aleriaprojekt.firebasestorage.app';
+    const storagePath = `family-assets/${familyId}/${assetId}/original.${contentType === 'image/png' ? 'png' : 'jpeg'}`;
+    const sha256 = createHash('sha256').update(bytes).digest('hex');
+    const headers = { Authorization: `Bearer ${token.access_token}` };
+    const existing = await fetch(`https://storage.googleapis.com/storage/v1/b/${bucket}/o/${encodeURIComponent(storagePath)}`, { headers, signal: AbortSignal.timeout(30000) });
+    if (existing.status === 404) {
+      const boundary = `content-artwork-${randomUUID()}`;
+      const description = { name: storagePath, contentType, cacheControl: 'public,max-age=31536000,immutable',
+        metadata: { ...metadata, familyId, assetId, visibility: 'public', sha256 } };
+      const body = Buffer.concat([Buffer.from(`--${boundary}\r\nContent-Type: application/json; charset=UTF-8\r\n\r\n${JSON.stringify(description)}\r\n--${boundary}\r\nContent-Type: ${contentType}\r\n\r\n`), bytes, Buffer.from(`\r\n--${boundary}--\r\n`)]);
+      const response = await fetch(`https://storage.googleapis.com/upload/storage/v1/b/${bucket}/o?uploadType=multipart&ifGenerationMatch=0`, {
+        method: 'POST', headers: { ...headers, 'Content-Type': `multipart/related; boundary=${boundary}` }, body, signal: AbortSignal.timeout(30000)
+      });
+      if (!response.ok) throw Error(`Bildveröffentlichung: HTTP ${response.status}`);
+      await response.json();
+    } else if (!existing.ok) throw Error(`Bildprüfung: HTTP ${existing.status}`);
+    const url = `https://firebasestorage.googleapis.com/v0/b/${bucket}/o/${encodeURIComponent(storagePath)}?alt=media`;
+    const publicImage = await fetch(url, { signal: AbortSignal.timeout(30000) });
+    if (!publicImage.ok || !bytes.equals(Buffer.from(await publicImage.arrayBuffer()))) throw Error('Öffentliches Bild stimmt nicht mit dem Original überein.');
+    return { bucket, storagePath, url, sha256, size: bytes.length };
+  }
+  return {request,publishFamilyArtwork,documentName:path=>`${database}/documents/${path}`};
 }
 export async function backupContentPublication(label,documents,newIds,now) {
   const directory=new URL('../../../.private-backups/',import.meta.url);
