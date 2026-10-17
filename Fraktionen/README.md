@@ -8,11 +8,11 @@ Eigenständiges, statisch erzeugtes Fraktionsregister unter `Fraktionen/index.ht
 | --- | ---: | --- |
 | Gilden | 94 | Wolken der Dämmerung als Aufsichtsorgan; Untergilden bleiben ihren unmittelbaren Verbänden zugeordnet. |
 | Orden | 41 | Kirchliche Gewalt als Rahmen; direkte Kirchenzweige und lokale Unterorden sind gesondert verknüpft. |
-| Organisationen | 42 | Eigenständig oder landesgebunden; Banner der Blauschwingen und die albenische Administration bleiben erkennbar. |
+| Organisationen | 43 | Eigenständig oder landesgebunden; einschließlich der Skaldenakademie von Klangheim. Banner der Blauschwingen und die albenische Administration bleiben erkennbar. |
 | Dunkle Gilden | 19 | Loge der Dämmerung; eigene Zweige und Unterbanner der Blutsegel. |
 | Kulte | 28 | 17 übernommene und 11 ergänzte Einträge; nach Gottheiten geordnet, ohne gemeinsame Führung. |
 
-Die 224 Einträge sind Registereinträge, keine Behauptung über 224 eindeutig verschiedene aktive Organisationen. Unbenannte Wappen, gestrichene Namen und mehrdeutige Doppeleinträge werden bewusst bewahrt.
+Die 225 Einträge sind Registereinträge, keine Behauptung über 225 eindeutig verschiedene aktive Organisationen. Unbenannte Wappen, gestrichene Namen und mehrdeutige Doppeleinträge werden bewusst bewahrt.
 
 ## Zuständigkeiten
 

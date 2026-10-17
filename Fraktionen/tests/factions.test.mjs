@@ -13,9 +13,19 @@ const entries = catalog.flatMap(category => category.entries);
 const byId = new Map(entries.map(entry => [entry.id, entry]));
 const json = path => JSON.parse(readFileSync(new URL(path, import.meta.url), 'utf8'));
 
+test('Klangheims Skaldenakademie is a distinct musical and magical institute with Freya as its known graduate', () => {
+  const academy = byId.get('skaldenakademie-klangheim');
+  assert.equal(academy.groupId, 'musikalische-organisationen');
+  assert.equal(academy.parentId, null);
+  assert.match(academy.summary, /Freya Skald/);
+  assert.match(academy.summary, /musikalisch und magisch/);
+  assert.equal(academy.source.kind, 'user-directed-institution');
+  assert.ok(byId.has('bardenakademie'));
+});
+
 test('all five supplied registers retain their records, provenance, ambiguous names and strike markings', () => {
   assert.deepEqual(catalog.map(category => [category.id, category.entries.length]), [
-    ['gilden', 94], ['orden', 41], ['organisationen', 42], ['dunkle-gilden', 19], ['kulte', 28],
+    ['gilden', 94], ['orden', 41], ['organisationen', 43], ['dunkle-gilden', 19], ['kulte', 28],
   ]);
   for (const source of json('../docs/import-manifest.json')) {
     const original = readFileSync(new URL(`../${source.file}`, import.meta.url));
@@ -79,7 +89,7 @@ test('guild families, order branches and banners share their parent bundle witho
     assert.equal(groups.reduce((sum, group) => sum + group.size, 0), category.entries.length);
     collect(groups);
   });
-  assert.equal(nodes.size, 224);
+  assert.equal(nodes.size, entries.length);
   assert.equal(JSON.stringify(catalog), original);
   const directChildren = id => nodes.get(id).groups.flatMap(group => group.nodes.map(node => node.entry.id));
   assert.deepEqual(directChildren('markt-der-fortuna'), ['mariels-gabe', 'geeinte-haende']);
@@ -124,7 +134,7 @@ test('the generated document keeps all records accessible without JavaScript and
   const ids = [...html.matchAll(/\sid="([^"]+)"/g)].map(match => match[1]);
   assert.equal(new Set(ids).size, ids.length);
   for (const [, id] of html.matchAll(/href="#([^"]+)"/g)) assert.ok(ids.includes(id), id);
-  assert.equal((html.match(/data-faction-id=/g) || []).length, 224);
+  assert.equal((html.match(/data-faction-id=/g) || []).length, entries.length);
   assert.doesNotMatch(html, /\son(?:click|input|change|error)=/);
   assert.doesNotMatch(html, /<img[^>]+src="https?:/);
   assert.doesNotMatch(html, /animexx/i);

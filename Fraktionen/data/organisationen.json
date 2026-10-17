@@ -758,6 +758,21 @@
       "symbol": "assets/emblems/organisationen/cenyrs-ehrengarde.webp"
     },
     {
+      "id": "skaldenakademie-klangheim",
+      "name": "Skaldenakademie von Klangheim",
+      "kind": "Akademisches Institut für Skaldik und Magie",
+      "groupId": "musikalische-organisationen",
+      "parentId": null,
+      "aliases": ["Akademie der Skalden zu Klangheim", "Skaldenakademie Klangheim"],
+      "symbol": "../IconOrdner/Etablissemant Icons/LauteIcon.png",
+      "summary": "In Klangheim im Thanentum Skaldenheim, Roriksheim, werden angehende Skalden und Skaldinnen musikalisch und magisch ausgebildet. Verschiedene Dozenten und Lehrmeister unterrichten Gesang, Instrumentalspiel und die Verbindung der skaldischen Künste mit Magie. Freya Skald erhielt hier ihre Ausbildung zur Skaldin. Ihr Vater Ragnar und ihre Brüder begleiteten ihre Entwicklung zusätzlich innerhalb der Familie; ihre Unterweisung in Schwert und Schild erhielt sie von ihrer Mutter Lagertha Eisenjungfer.",
+      "source": {
+        "kind": "user-directed-institution",
+        "date": "2026-10-17",
+        "note": "Vom Nutzer im Auftrag zu Freya Skald ausdrücklich als Ausbildungsinstitut benannt. Leitung, Gründungsdatum und einzelne Dozentennamen sind nicht festgelegt."
+      }
+    },
+    {
       "id": "naraths-maertyrer",
       "name": "Naraths Märtyrer",
       "kind": "Märtyrer Institut",
