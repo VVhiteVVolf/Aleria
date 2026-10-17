@@ -2,15 +2,17 @@ import { canUseCombatOffHand, isPairedCombatWeapon, getCombatWeaponLoadout } fro
 import { getCombatSupportEquipment } from '../combat-support-equipment.js';
 import { renderCombatSupportEquipment } from './combat-support-equipment-view.js?v=20260928-equipment-art-v4';
 import { hasPairedCombatTraining } from '../combat-paired-weapons.js';
+import { getDroppedCombatWeapon } from '../combat-weapon-availability.js';
 
 const glyphs = Object.freeze({ unarmed: '✦', sword: '⚔', dagger: '†', axe: '⚒', mace: '◆', spear: '↟', polearm: 'Ψ', bow: '➳', crossbow: '⌖', staff: '⌇', shield: '⬙' });
 const escape = value => String(value ?? '').replace(/[&<>"']/g, char => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;' })[char]);
 
-function weaponSlot(weapon, { hand = '', active = false, free = false } = {}) {
+function weaponSlot(weapon, { hand = '', active = false, free = false, actor = {} } = {}) {
   const source = String(weapon.image || '');
   const image = /^(?:https?:\/\/|data:image\/|\/(?!\/)|\.\.?\/)/i.test(source) ? source : '';
-  const label = active ? `${hand} · Aktiv geführt` : free ? 'Als Startwaffe wählen · kostenlos' : 'Wechseln · 1 Bonusaktion';
-  return `<button type="button" class="combat-weapon-slot" data-state="${active ? 'active' : 'stowed'}" data-weapon-id="${escape(weapon.id)}" data-combat-controller-action="${active ? 'keep-weapon' : 'select-weapon'}" aria-pressed="${active}" title="${escape(`${weapon.name} · ${label}`)}">
+  const dropped = !!getDroppedCombatWeapon(actor, weapon);
+  const label = dropped ? 'Entwaffnet · am Boden · zuerst aufheben' : active ? `${hand} · Aktiv geführt` : free ? 'Als Startwaffe wählen · kostenlos' : 'Wechseln · 1 Bonusaktion';
+  return `<button type="button" class="combat-weapon-slot" data-state="${dropped ? 'dropped' : active ? 'active' : 'stowed'}" data-weapon-id="${escape(weapon.id)}" data-combat-controller-action="${active ? 'keep-weapon' : 'select-weapon'}" aria-pressed="${active && !dropped}"${dropped ? ' disabled' : ''} title="${escape(`${weapon.name} · ${label}`)}">
     <span class="combat-weapon-slot-icon" aria-hidden="true"><span>${glyphs[weapon.weaponType] || '•'}</span>${image ? `<img src="${escape(image)}" data-combat-weapon-image alt="" decoding="async">` : ''}</span>
     <span class="combat-weapon-slot-copy"><strong>${escape(weapon.name)}</strong><small>${escape(label)}</small></span>
   </button>`;
@@ -20,7 +22,7 @@ export function renderWeaponLoadout(actor = {}, { freeEquipment = false, request
   if (!(actor.actions || []).some(action => action.kind === 'equipment-switch')) return '';
   const loadout = actor.weaponLoadout || getCombatWeaponLoadout(actor);
   const weapons = (actor.weapons || []).filter(weapon => weapon.name);
-  const leftOptions = weapons.filter(weapon => canUseCombatOffHand(weapon)
+  const leftOptions = weapons.filter(weapon => !getDroppedCombatWeapon(actor, weapon) && canUseCombatOffHand(weapon)
     && (weapon.id !== loadout.rightWeaponId || isPairedCombatWeapon(weapon))
     && hasPairedCombatTraining(actor, loadout.right, weapon));
   const canPair = canUseCombatOffHand(loadout.right || {}) && leftOptions.length > 0;
@@ -31,11 +33,11 @@ export function renderWeaponLoadout(actor = {}, { freeEquipment = false, request
     <div class="combat-weapon-active"><span class="combat-field-caption">Geführte Waffen</span>
       <label class="combat-dual-toggle"><input type="checkbox" data-combat-loadout="dual"${loadout.dualWield ? ' checked' : ''}${canPair || loadout.dualWield ? '' : ' disabled'}> Zwei Waffen · rechts und links</label>
       ${!canPair && !loadout.dualWield ? '<small class="combat-loadout-hint">Zwei passende Waffen und eine erlernte Zweiwaffentechnik erforderlich.</small>' : ''}
-      <div class="combat-active-hands">${loadout.right ? weaponSlot(loadout.right, { hand: 'Rechts', active: true }) : ''}${loadout.left ? weaponSlot(loadout.left, { hand: 'Links', active: true }) : shield ? weaponSlot({ ...shield, weaponType: 'shield' }, { hand: 'Links · Schild', active: true }) : ''}</div>
+      <div class="combat-active-hands">${loadout.right ? weaponSlot(loadout.right, { hand: 'Rechts', active: true, actor }) : ''}${loadout.left ? weaponSlot(loadout.left, { hand: 'Links', active: true, actor }) : shield ? weaponSlot({ ...shield, weaponType: 'shield' }, { hand: 'Links · Schild', active: true }) : ''}</div>
       ${loadout.dualWield ? `<label class="combat-offhand-choice">Linke Hand<select data-combat-loadout="left">${leftOptions.map(weapon => `<option value="${escape(weapon.id)}"${weapon.id === loadout.leftWeaponId ? ' selected' : ''}>${escape(weapon.name)}</option>`).join('')}</select></label><small class="combat-loadout-hint">${canPair ? 'Gemeinsame Angriffe verwenden beide Waffenwürfel und feste Boni einmal. Ausdrückliche Angriffsfolgen würfeln jeden Hieb einzeln.' : 'Keine passende Zweiwaffenausbildung: kein gemeinsamer Angriff.'} Die zweite Waffe ersetzt den Schild.</small>` : ''}
     </div>
     <div class="combat-weapon-alternatives"><span class="combat-field-caption">Waffenwechsel <small>· ${freeEquipment ? 'Startausrüstung kostenlos' : '1 Bonusaktion'}</small></span>
-      <div class="combat-weapon-slots">${weapons.filter(weapon => weapon.id !== loadout.rightWeaponId).map(weapon => weaponSlot(weapon, { free: freeEquipment })).join('')}</div>
+      <div class="combat-weapon-slots">${weapons.filter(weapon => weapon.id !== loadout.rightWeaponId).map(weapon => weaponSlot(weapon, { free: freeEquipment, actor })).join('')}</div>
       ${requestedLoadout ? `<div class="combat-equipment-preparation" role="status"><span>${escape(preparation?.error || (preparation?.free ? 'Startausrüstung gewählt · kostenlos' : preparation ? 'Waffe gewechselt · 1 Bonusaktion im Entwurf verbraucht' : 'Ausrüstung entspricht der vorherigen Auswahl'))}</span><button type="button" data-combat-controller-action="cancel-equipment">Wechsel aufheben</button></div>` : ''}
     </div>
     ${renderCombatSupportEquipment(actor, loadout)}

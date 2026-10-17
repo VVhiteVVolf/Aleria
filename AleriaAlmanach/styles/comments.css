@@ -1434,7 +1434,7 @@
     justify-content: center;
     gap: 0.55rem;
     padding: 0.35rem 1rem;
-    max-width: min(30rem, calc(100% - 2rem));
+    max-width: min(64rem, calc(100% - 2rem));
   }
   .comment-entry-compact .comment-portrait,
   .comment-entry-compact .comment-portrait-placeholder {
@@ -1445,12 +1445,15 @@
   }
   .comment-entry-compact .comment-compact-bubble.comment-body {
     padding: 0.32rem 0.65rem;
-    width: auto;
-    max-width: 26rem;
+    width: max-content;
+    min-width: 0;
+    max-width: 54rem;
+    overflow-wrap: anywhere;
     box-shadow: none;
   }
   .comment-compact-head {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     gap: 0.4rem;
     margin-bottom: 0.15rem;

@@ -64,7 +64,7 @@ export class SceneDiceService {
     if (container) this.container = container;
     if (!this.settings.animationEnabled || this.engineError) return this.fallbackEngine;
     if (this.engine) {
-      if (this.container !== this.engineContainer) {
+      if (this.container !== this.engineContainer || this.engine.isMounted?.(this.container) === false) {
         this.engine.clear();
         this.engine.mount(this.container);
         this.engineContainer = this.container;

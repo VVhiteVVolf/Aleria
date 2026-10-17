@@ -29,6 +29,18 @@ test('concurrent initialization follows the latest board without constructing an
   assert.deepEqual(h.calls, [['mount', 'b']]);
 });
 
+test('a detached canvas is remounted on the same board without recreating physics workers', async () => {
+  const h = harness(), board = { id: 'skill-dice-stage' };
+  await h.service.prepare(board);
+  let mounted = false;
+  h.engine.isMounted = () => mounted;
+  h.engine.mount = container => { mounted = true; h.calls.push(['mount', container.id]); };
+  await h.service.prepare(board);
+  await h.service.prepare(board);
+  assert.equal(h.count(), 1);
+  assert.deepEqual(h.calls, [['clear'], ['mount', 'skill-dice-stage']]);
+});
+
 test('an active roll cannot be cleared or moved by another dialog; completion releases the busy guard', async () => {
   const h = harness(); let finish;
   h.service.parser = { execute: () => new Promise(resolve => { finish = () => resolve({ dice: [15], keptDice: [15], total: 15, notation: '1d20', natural: 15 }); }) };

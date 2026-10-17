@@ -129,6 +129,8 @@
 .herausforderung-result[data-tier="knapp"] { border-left-color: #c6a05b; }
 .herausforderung-result small { color: #c7b696; font-size: 11px; }
 .herausforderung-result p { white-space: pre-wrap; overflow-wrap: anywhere; margin: 5px 0; }
+.herausforderung-result-mechanics { margin-top: 0.6rem; border-top: 1px solid #c7b69644; }
+.herausforderung-result-mechanics > summary { padding-block: 0.45rem; cursor: pointer; color: #c7b696; font-size: 0.8rem; }
 .herausforderung-preview .herausforderung-event { width: 100%; padding: 14px; margin: 12px 0 0; box-shadow: none; }
 .herausforderung-preview .herausforderung-event header { flex-wrap: wrap; gap: 8px; }
 .herausforderung-preview .herausforderung-event header strong { font-size: 15px; }

@@ -75,6 +75,9 @@
 }
 
 .combat-weapon-slot[data-state="pending"] { border-color: #b48332; background: #f7e9c5; box-shadow: inset 3px 0 #b48332; }
+.combat-weapon-slot[data-state="dropped"] { border-color: #9a6553; background: #f1e2d6; box-shadow: inset 3px 0 #9a6553; cursor: not-allowed; }
+.combat-weapon-slot[data-state="dropped"] .combat-weapon-slot-icon { filter: grayscale(1); opacity: 0.6; }
+.combat-weapon-slot[data-state="dropped"] small { color: #854c3b; }
 .combat-weapon-slot-icon {
   position: relative;
   display: grid;

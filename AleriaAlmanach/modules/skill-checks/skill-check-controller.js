@@ -1,6 +1,7 @@
 import { getChallengeCheckRule } from '../herausforderung/herausforderung-check-policy.js?v=20261016-check-policy-v1';
 import { withResolvedChallengeTarget } from '../herausforderung/herausforderung-target.js?v=20261016-check-policy-v1';
 import { renderChallengeManeuverReceipts } from '../herausforderung/herausforderung-maneuver-receipts-view.js';
+import { getChallengeNarration, isChallengeResolution } from '../herausforderung/herausforderung-narration.js';
 import { renderSkillAttemptHeader, renderSkillAttemptBreakdown } from './skill-attempt-view.js?v=20261016-check-policy-v1';
 import { collectSkillSupportOptions, selectSkillSupportDefaults, skillSupportOptionKey } from './skill-support-options.js?v=20261016-check-policy-v1';
 import { getCheckDescription } from './skill-check-guidance.js?v=20261015-check-options-v1';
@@ -545,7 +546,7 @@ function ensureResolutionDialog() {
     <div class="skill-resolution-dialog">
       <span>Probenauswertung</span>
       <h2>Die Würfel entscheiden</h2>
-      <div class="skill-dice-stage" data-skill-dice-stage></div>
+      <div class="skill-dice-stage" id="skill-dice-stage" data-skill-dice-stage></div>
       <p data-skill-resolution-status>Bereit …</p>
     </div>`;
   document.body.appendChild(overlay);
@@ -593,7 +594,7 @@ async function resolveSegment(segment, submission, actors, challenges, index, to
   const profile = resolutionContext.profileResolver.resolve(actor);
   const ruleContext = buildClientSkillRuleContext(segment, actor, profile, targetChallenge, actors, resolutionContext.profileResolver);
   const stage = document.querySelector('[data-skill-dice-stage]');
-  if (stage) stage.innerHTML = '';
+  sceneDiceService.clear();
   const definition = getCheckDefinition(settings.skillId);
   setResolutionStatus(total > 1 ? `Fertigkeitsversuch ${index + 1} von ${total} …` : `${definition?.label || 'Fertigkeit'} wird gewürfelt …`);
   let resolution = await skillResolutionService.resolve({
@@ -707,6 +708,9 @@ async function narrateCommittedMechanics(mechanics = {}) {
         revealedText: resolution.revealedText || '',
         herausforderungTier: resolution.herausforderungTier || '',
         herausforderungLabel: resolution.herausforderungLabel || '',
+        targetChallengeId: resolution.targetChallengeId || '',
+        herausforderungSolved: resolution.herausforderungSolved,
+        herausforderungCombatResults: resolution.herausforderungCombatResults || [],
         actorProfileSnapshot: resolution.actorProfileSnapshot || null,
         ruleApplications: resolution.ruleApplications || []
       })
@@ -736,6 +740,8 @@ function renderEvaluation(source = {}) {
   const sourceLabel = resolution.narration?.source === 'aleria-gpt' ? 'AleriaGPT-Auswertung' : 'Systemauswertung · ohne KI';
   const affinity = Number(resolution.affinityModifier || 0);
   const rewardReceipt = formatHerausforderungRewardReceipt(resolution.herausforderungReward);
+  const challenge = isChallengeResolution(resolution);
+  const narrative = challenge ? getChallengeNarration(resolution) : resolution.narration?.text || '';
   const custom = Number(resolution.customModifier || 0);
   const ruleModifier = Number(resolution.ruleModifier || 0);
   const challengeModifier = Number(resolution.challengeModifier || 0);
@@ -748,9 +754,10 @@ function renderEvaluation(source = {}) {
     ? `<span>Gegenprobe: <b>${escapeHtml(resolution.opposedDefense.actorName)} · passive ${escapeHtml(resolution.opposedDefense.skillName)} ${escapeHtml(resolution.opposedDefense.passiveTotal)}</b></span>`
     : '';
   return `
-    <aside class="skill-evaluation" data-state="${escapeHtml(resolution.herausforderungTier || resolution.outcome || 'failure')}" aria-label="Fertigkeitsauswertung">
+    <aside class="skill-evaluation${challenge ? ' is-challenge' : ''}" data-state="${escapeHtml(resolution.herausforderungTier || resolution.outcome || 'failure')}" aria-label="Fertigkeitsauswertung">
       <div class="skill-evaluation-heading"><span>Probenauswertung</span><strong>${escapeHtml(outcomeLabel)}</strong></div>
-      <p>${escapeHtml(resolution.narration?.text || '')}</p>
+      <p>${escapeHtml(narrative)}</p>
+      ${challenge ? '<details class="skill-evaluation-details"><summary>Wurf &amp; Auswirkungen ansehen</summary>' : ''}
       <div class="skill-evaluation-mechanics">
         <span><b>${escapeHtml(resolution.total)}</b> ${escapeHtml(resolution.skillName)}</span>
         <span>gegen <b>SG ${escapeHtml(resolution.difficulty)}</b></span>
@@ -764,6 +771,7 @@ function renderEvaluation(source = {}) {
       </div>
       ${renderChallengeManeuverReceipts(resolution.herausforderungCombatResults)}
       <div class="skill-evaluation-source">${escapeHtml(sourceLabel)}</div>
+      ${challenge ? '</details>' : ''}
     </aside>`;
 }
 

@@ -59,6 +59,10 @@ export class DiceBoxEngine {
     return this;
   }
 
+  isMounted(container) {
+    return this.box.canvas?.parentElement === container;
+  }
+
   clear() {
     this.box.clear();
   }

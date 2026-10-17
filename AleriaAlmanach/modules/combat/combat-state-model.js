@@ -1,4 +1,5 @@
 import { beginCombatContribution } from './combat-contribution-start.js';
+import { getDroppedCombatWeapon } from './combat-weapon-availability.js';
 // Pure combat-state helpers.
 import { getLightAttackDamageModifier } from './combat-technique-damage.js';
 // This module is the single source of truth for damage application and for
@@ -516,9 +517,7 @@ export function overlayCombatHitPointState(profile = {}, state = null) {
     ...profile,
     droppedWeapons: state.droppedWeapons || [],
     weaponUnavailable: ['weapon', 'technique'].includes(profile.profileActionKind)
-      && (state.droppedWeapons || []).some(entry => entry.weaponId === profile.weapon?.id
-        || profile.weapon?.pairedWeaponIds?.includes(entry.weaponId)
-        || (profile.weapon?.inventoryItemId && entry.item?.id === profile.weapon.inventoryItemId)),
+      && !!getDroppedCombatWeapon({ droppedWeapons: state.droppedWeapons || [] }, profile.weapon || {}),
     currentHitPoints: normalized.current,
     maximumHitPoints: normalized.maximum || profile.maximumHitPoints,
     temporaryHitPoints: normalized.temporary,

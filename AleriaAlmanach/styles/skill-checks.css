@@ -247,6 +247,23 @@
 .skill-evaluation[data-state="deutlich"] .skill-evaluation-heading { background: #7b3a35; }
 .skill-evaluation > p { margin: 0; padding: 0.65rem 0.8rem 0.35rem; text-align: center; font-style: italic; }
 
+.skill-evaluation.is-challenge { width: min(64rem, calc(100% - 2rem)); }
+.skill-evaluation.is-challenge > p {
+  max-width: 75ch;
+  margin-inline: auto;
+  padding: 1rem 1.2rem;
+  text-align: left;
+  line-height: 1.65;
+}
+.skill-evaluation-details > summary {
+  padding: 0.6rem 0.85rem;
+  border-top: 1px solid rgba(85, 64, 15, 0.2);
+  color: #71501e;
+  font-size: 0.78rem;
+  cursor: pointer;
+}
+.skill-evaluation-details[open] > summary { border-bottom: 1px solid rgba(85, 64, 15, 0.14); }
+
 .skill-evaluation-mechanics {
   display: flex;
   flex-wrap: wrap;

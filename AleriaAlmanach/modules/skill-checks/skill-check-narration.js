@@ -1,3 +1,5 @@
+import { getChallengeNarration, isChallengeResolution } from '../herausforderung/herausforderung-narration.js';
+
 function fallbackSkillNarration(facts = {}) {
   const actor = facts.actor || 'Die Figur';
   const skill = facts.skill || 'Fertigkeit';
@@ -79,7 +81,7 @@ function enrichRetrieval(retrieval = {}, facts = {}) {
 
 export async function narrateSkillResolution(facts = {}) {
   const fallback = fallbackSkillNarration(facts);
-  if (facts.herausforderungLabel && facts.revealedText) return { text: cleanNarration(facts.revealedText), source: 'authored-challenge' };
+  if (isChallengeResolution(facts)) return { text: getChallengeNarration(facts), source: 'authored-challenge' };
   if (!globalThis.AleriaGptClient?.isConfigured?.() || !globalThis.AleriaGptRetrieval?.retrieve) {
     return { text: fallback, source: 'deterministic', reason: 'aleria-gpt-unavailable' };
   }

@@ -1,4 +1,5 @@
 import { getSpellLevelLabel } from '../combat-spell-slots.js?v=20260803-character-creation-v1';
+import { withCombatActionWeaponAvailability } from '../combat-weapon-availability.js';
 import { getCombatDamagePreview, getExplicitAttackSequencePreview, getPreparedCounterPreview } from '../combat-action-estimates.js?v=20260928-equipment-art-v4';
 import { getActionCategoryPresentation, compareArsenalChoices, getActionWeaponSections, getArsenalClassIds } from './combat-action-taxonomy.js?v=20261015-scenarios-v2';
 import { renderCombatStatIcon } from './combat-presentation-icons.js?v=20261015-scenarios-v2';
@@ -68,7 +69,8 @@ export function getActionPresentation(actor = {}) {
 export function getActionGroups(actor = {}) {
   const groups = new Map();
   const sourceIndexes = new Map();
-  (actor.actions || []).forEach(action => {
+  (actor.actions || []).forEach(storedAction => {
+    const action = withCombatActionWeaponAvailability(actor, storedAction);
     if (action.kind === 'equipment-switch' && actor.selectedAction?.kind !== 'equipment-switch') return;
     const presentation = describeAction(actor, action, sourceIndexes);
     if (!groups.has(presentation.groupKey)) groups.set(presentation.groupKey, []);
@@ -104,7 +106,7 @@ export function renderActionMetadata(actor = {}) {
 
 export function renderActionDetails(actor = {}, { open = false } = {}) {
   const { entry } = getActionPresentation(actor);
-  const action = actor.selectedAction || {};
+  const action = withCombatActionWeaponAvailability(actor, actor.selectedAction || {});
   const sourceNotes = [entry.description, entry.effect, entry.requirements].filter(Boolean);
   const weaponNotes = String(action.weapon?.notes || entry.notes || '').split('\n')
     .filter(note => note && !sourceNotes.some(value => String(value).split('\n').includes(note))).join('\n');

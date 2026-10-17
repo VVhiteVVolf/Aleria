@@ -1,4 +1,5 @@
 import { getCombatWeaponLoadout } from './combat-weapon-loadout.js';
+import { getDroppedCombatWeapon } from './combat-weapon-availability.js';
 import { getCombatWeaponAttackValues } from './combat-weapon-attack-values.js';
 import { resolveCombatWeaponGrip } from './combat-weapon-grip.js';
 import { combineDamageFormulas, parseDamageFormula } from './rules/combat-mvp-rules.js';
@@ -9,8 +10,7 @@ export function resolvePreparedWeaponAttackProfile(profile, { weaponId = '', rol
   const held = getCombatWeaponLoadout(profile).right;
   if (!held || (weaponId && held.id !== weaponId)) return null;
   const values = getCombatWeaponAttackValues(profile, held), weapon = values.weapon;
-  if ((profile.droppedWeapons || []).some(drop => drop.weaponId === weapon.id || weapon.pairedWeaponIds?.includes(drop.weaponId)
-    || weapon.inventoryItemId && drop.item?.id === weapon.inventoryItemId)) return null;
+  if (getDroppedCombatWeapon(profile, weapon)) return null;
   const baseAction = { id: `weapon:${weapon.id}`, kind: 'weapon', name: weapon.name, weapon,
     attackModifier: values.attackModifier, damageModifier: values.damageModifier,
     baseWeaponFormula: held.damageFormula, versatileWeaponFormula: held.versatileDamageFormula,

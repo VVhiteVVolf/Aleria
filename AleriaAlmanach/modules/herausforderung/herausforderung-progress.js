@@ -1,4 +1,5 @@
 import { getHerausforderungApproachTargetId } from './herausforderung-model.js?v=20261015-check-options-v1';
+import { getChallengeNarration } from './herausforderung-narration.js';
 
 export const HERAUSFORDERUNG_TIER_LABELS = Object.freeze({
   'kritischer-erfolg': 'Kritischer Erfolg', erfolg: 'Erfolg', knapp: 'Teilhinweis', deutlich: 'Gescheitert'
@@ -16,7 +17,7 @@ export function collectHerausforderungProgress(comments = []) {
       // A later failed attempt must never replace an already published insight.
       progress.set(id, {
         ...previous,
-        ...(!previous.solved ? { tier: resolution.herausforderungTier || (solved ? 'erfolg' : 'deutlich'), ...(resolution.herausforderungLabel ? { label: resolution.herausforderungLabel } : {}), actorName: resolution.actorName || '', revealedText: resolution.revealedText || '', reward: resolution.herausforderungReward || null } : {}),
+        ...(!previous.solved ? { tier: resolution.herausforderungTier || (solved ? 'erfolg' : 'deutlich'), ...(resolution.herausforderungLabel ? { label: resolution.herausforderungLabel } : {}), actorName: resolution.actorName || '', revealedText: resolution.revealedText || '', narrativeText: getChallengeNarration(resolution), reward: resolution.herausforderungReward || null } : {}),
         attempts: previous.attempts + 1,
         solved: previous.solved || solved
       });
