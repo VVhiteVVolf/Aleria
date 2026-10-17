@@ -38349,6 +38349,19 @@ test('gliedert Roriksheims vierzehn Huskarlclans an ihren beiden Stammsitzen ein
       assert.equal(family.timeJumps.length, 0);
       assert.equal(family.cadetBranches.length, 2);
       assert.equal(family.extensions.blankFamily, false);
+    } else if (['baerenherz', 'rotstahl', 'unholdbann'].includes(slug)) {
+      const additions = {
+        baerenherz: ['ragna-baerenherz', 'svala-baerenherz'],
+        rotstahl: ['torben-rotstahl', 'kjell-rotstahl'],
+        unholdbann: ['hakon-unholdbann']
+      };
+      assert.deepEqual(family.persons.filter(person => person.name !== '???').map(person => person.id), additions[slug]);
+      assert.equal(family.persons.length, slug === 'baerenherz' ? 6 : slug === 'rotstahl' ? 4 : 3);
+      assert.equal(family.partnerships.length, 1);
+      assert.equal(family.parentages.length, slug === 'baerenherz' ? 2 : 0);
+      assert.equal(family.timeJumps.length, 0);
+      assert.equal(family.cadetBranches.length, 0);
+      assert.equal(family.extensions.blankFamily, false);
     } else {
       assert.equal(family.persons.length, 2);
       assert.equal(family.partnerships.length, 1);
@@ -38461,8 +38474,8 @@ test('ersetzt die unberührte Eisenjungfer-Leerakte durch Stammbaum und Clanmodu
   delete stale.extensions.houseBiographyModule;
 
   const upgraded = resolveRegisteredFamilyUpgrade(HOUSE_EISENJUNGFER_FAMILY, stale);
-  assert.equal(upgraded.extensions.sourceRevision, 2);
-  assert.deepEqual(upgraded.extensions.registryUpgrade, { fromRevision: 1, toRevision: 2 });
+  assert.equal(upgraded.extensions.sourceRevision, 3);
+  assert.deepEqual(upgraded.extensions.registryUpgrade, { fromRevision: 1, toRevision: 3 });
   assert.equal(upgraded.persons.length, 29);
   assert.equal(upgraded.parentages.length, 19);
   assert.ok(getHouseBiographyModule(upgraded));
@@ -39468,7 +39481,7 @@ test('bildet Clan Varulv vollständig vom Stammvater bis zur Generation von 1740
   assert.equal(family.cadetBranches.length, 12);
   assert.equal(family.timeJumps.length, 3);
   assert.equal(family.extensions.blankFamily, false);
-  assert.equal(family.extensions.sourceRevision, 4);
+  assert.equal(family.extensions.sourceRevision, 5);
   assert.equal(family.lineage.founderPartnershipId, 'marriage-rorik-caragh-varulv');
   assert.equal(family.view.focusPersonId, 'rorik-varulv');
   assert.equal(family.view.limitGenerations, false);
@@ -39614,8 +39627,8 @@ test('ersetzt eine lokal gespeicherte Varulv-Leerakte kontrolliert durch den vol
   stale.view.focusPersonId = stale.persons[0].id;
 
   const upgraded = resolveRegisteredFamilyUpgrade(HOUSE_VARULV_FAMILY, stale);
-  assert.equal(upgraded.extensions.sourceRevision, 4);
-  assert.deepEqual(upgraded.extensions.registryUpgrade, { fromRevision: 2, toRevision: 4 });
+  assert.equal(upgraded.extensions.sourceRevision, 5);
+  assert.deepEqual(upgraded.extensions.registryUpgrade, { fromRevision: 2, toRevision: 5 });
   assert.equal(upgraded.persons.length, 73);
   assert.equal(new Set(upgraded.persons.map(personRecord => personRecord.id)).size, 73);
   assert.equal(upgraded.partnerships.length, 29);

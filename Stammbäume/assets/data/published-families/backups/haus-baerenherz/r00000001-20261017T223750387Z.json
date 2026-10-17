@@ -1,0 +1,348 @@
+{
+  "schemaVersion": 1,
+  "familyId": "haus-baerenherz",
+  "revision": 1,
+  "updatedAt": "2026-10-17T22:37:50.387Z",
+  "family": {
+    "schema": "aleria.family-tree",
+    "schemaVersion": 1,
+    "document": {
+      "id": "haus-baerenherz",
+      "title": "Clan Bärenherz",
+      "motto": "",
+      "description": "Huskarlclan aus Rorikshall im Jarltum Roriksheim. Ragna und ihre jüngere Schwester Svala gehören Skallis Gefolge an. Die Bärenherz tragen hellblondes Haar mit einem weißen Verlauf zu den Spitzen. Die weitere Clanfolge ist noch nicht ausgearbeitet.",
+      "emblem": "assets/images/houses/Aldrimar/Roriksheim/clan-baerenherz.png",
+      "houseProfile": {
+        "rankId": "huskarl",
+        "seat": "Rorikshall",
+        "barony": "Rorikstal",
+        "county": "Roriksheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-varulv",
+        "liegeHouseName": "Clan Varulv",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-roriksheim-stadt.png",
+          "barony": "assets/images/regions/aldrimar-rorikstal.png",
+          "county": "assets/images/regions/aldrimar-roriksheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      }
+    },
+    "persons": [
+      {
+        "id": "haus-baerenherz-gruender",
+        "worldPersonId": "person--haus-baerenherz--haus-baerenherz-gruender",
+        "name": "???",
+        "title": "Gründer des Hauses",
+        "sex": "male",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-baerenherz",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Gründerfamilie"
+        ],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "haus-baerenherz-gruenderin",
+        "worldPersonId": "person--haus-baerenherz--haus-baerenherz-gruenderin",
+        "name": "???",
+        "title": "Gründerin des Hauses",
+        "sex": "female",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-baerenherz",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [
+          "Gründerfamilie"
+        ],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "haus-baerenherz-ragna-svala-parent-1",
+        "worldPersonId": "person--haus-baerenherz--haus-baerenherz-ragna-svala-parent-1",
+        "name": "???",
+        "title": "Nicht benanntes Elternteil von Ragna und Svala",
+        "sex": "male",
+        "status": "unknown",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Struktureller Platzhalter für die belegte Geschwisterverbindung. Name, Lebensdaten, Herkunft und eine etwaige Ehe sind nicht festgelegt. Keine Verbindung zum historischen Gründerpaar behauptet.",
+        "extensions": {
+          "structuralPlaceholder": true
+        }
+      },
+      {
+        "id": "haus-baerenherz-ragna-svala-parent-2",
+        "worldPersonId": "person--haus-baerenherz--haus-baerenherz-ragna-svala-parent-2",
+        "name": "???",
+        "title": "Nicht benanntes Elternteil von Ragna und Svala",
+        "sex": "female",
+        "status": "unknown",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Struktureller Platzhalter für die belegte Geschwisterverbindung. Name, Lebensdaten, Herkunft und eine etwaige Ehe sind nicht festgelegt. Keine Verbindung zum historischen Gründerpaar behauptet.",
+        "extensions": {
+          "structuralPlaceholder": true
+        }
+      },
+      {
+        "id": "ragna-baerenherz",
+        "worldPersonId": "person--haus-baerenherz--ragna-baerenherz",
+        "name": "Ragna Bärenherz",
+        "title": "Rechte Hand Skallis · Walküre",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1716",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-baerenherz/ragna-baerenherz.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-baerenherz",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Skallis Gefolge",
+          "Rechte Hand",
+          "Walküre",
+          "Unverheiratet"
+        ],
+        "notes": "Im Jahr 1740 vierundzwanzig Jahre alt und unverheiratet. Rechte Hand Skalli Varulvs in ihrer Kriegerschar. Drittes Kind ihrer Eltern; die älteren Geschwister sind noch nicht ausgearbeitet. Ihre jüngere Schwester Svala wird als zweite Maer von Skalli ausgebildet. Hellblondes Haar mit weißem Verlauf zu den Spitzen.",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "svala-baerenherz",
+        "worldPersonId": "person--haus-baerenherz--svala-baerenherz",
+        "name": "Svala Bärenherz",
+        "title": "Maer von Skalli Varulv",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1724",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-baerenherz/svala-baerenherz-v2.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-baerenherz",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Skallis Gefolge",
+          "Maer",
+          "In Ausbildung",
+          "Unverheiratet"
+        ],
+        "notes": "Ragnas jüngere Schwester; im Jahr 1740 sechzehn Jahre alt und unverheiratet. Zweite Maer von Skalli Varulv neben Gundel Varulv. Maer ist die aldrimarische Bezeichnung für eine weibliche Knappe. Ihre Ausbildung erfolgt unter Skallis Aufsicht. Hellblondes Haar mit weißem Verlauf zu den Spitzen.",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      }
+    ],
+    "partnerships": [
+      {
+        "id": "marriage-haus-baerenherz-founders",
+        "participantIds": [
+          "haus-baerenherz-gruender",
+          "haus-baerenherz-gruenderin"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Gründerehe des Hauses.",
+        "extensions": {}
+      }
+    ],
+    "parentages": [
+      {
+        "id": "parentage-ragna-baerenherz",
+        "childId": "ragna-baerenherz",
+        "parentIds": [
+          "haus-baerenherz-ragna-svala-parent-1",
+          "haus-baerenherz-ragna-svala-parent-2"
+        ],
+        "partnershipId": "",
+        "type": "biological",
+        "legitimacy": "unknown",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Gemeinsame unbenannte Eltern der Schwestern Ragna und Svala; keine darüber hinausgehende Abstammung festgelegt.",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-svala-baerenherz",
+        "childId": "svala-baerenherz",
+        "parentIds": [
+          "haus-baerenherz-ragna-svala-parent-1",
+          "haus-baerenherz-ragna-svala-parent-2"
+        ],
+        "partnershipId": "",
+        "type": "biological",
+        "legitimacy": "unknown",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Gemeinsame unbenannte Eltern der Schwestern Ragna und Svala; keine darüber hinausgehende Abstammung festgelegt.",
+        "extensions": {}
+      }
+    ],
+    "houses": [
+      {
+        "id": "house-baerenherz",
+        "name": "Clan Bärenherz",
+        "motto": "",
+        "emblem": "assets/images/houses/Aldrimar/Roriksheim/clan-baerenherz.png",
+        "status": "active"
+      }
+    ],
+    "cadetBranches": [],
+    "timeJumps": [],
+    "lineage": {
+      "founderPartnershipId": "marriage-haus-baerenherz-founders",
+      "houseId": "house-baerenherz",
+      "crestSubtitle": "",
+      "crestEmblemScale": 0.86,
+      "crestFrame": "silver",
+      "crestFrameScale": 1,
+      "timeGap": {
+        "enabled": false,
+        "years": 0,
+        "fromYear": "",
+        "toYear": "",
+        "label": ""
+      },
+      "originHouse": {
+        "enabled": false,
+        "id": "lineage-origin-house",
+        "houseId": "",
+        "name": "Ursprungshaus",
+        "subtitle": "",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "childIds": [],
+        "targetFamilyId": "",
+        "notes": "",
+        "timeGap": {
+          "enabled": false,
+          "years": 0,
+          "fromYear": "",
+          "toYear": "",
+          "label": ""
+        }
+      }
+    },
+    "presentation": {
+      "relationshipColors": {
+        "marriage": "#326c4a",
+        "engagement": "#b88b37",
+        "union": "#8e2724",
+        "affair": "#704485",
+        "concubinage": "#704485",
+        "political": "#9d7d48",
+        "forced": "#c7a974",
+        "biological": "#8e2724",
+        "adoptive": "#2f75a8",
+        "foster": "#2f75a8",
+        "step": "#7eb4d7",
+        "magical": "#704485",
+        "claimed": "#62615e"
+      }
+    },
+    "view": {
+      "focusPersonId": "ragna-baerenherz",
+      "orientation": "vertical",
+      "ancestorDepth": 8,
+      "descendantDepth": 8,
+      "limitGenerations": false,
+      "showSiblings": true
+    },
+    "extensions": {
+      "blankFamily": false,
+      "preparedMainLine": true,
+      "jarltum": "Roriksheim",
+      "aldrimarRank": "Huskarl",
+      "sourceRevision": 2,
+      "registryManagedHouseProfileFields": [
+        "rankId",
+        "seat",
+        "barony",
+        "county",
+        "kingdom",
+        "secondarySeats",
+        "liegeHouseId",
+        "liegeHouseName",
+        "regionEmblems"
+      ],
+      "registryManagedRecordFields": [
+        "folderPath"
+      ],
+      "sourceNote": "Skallis Gefolge · Nutzervorgaben vom 18.10.2026. Nur die beauftragten jungen Clanangehörigen ergänzt. Bestehende Gründerplatzhalter und ihre IDs bleiben erhalten. Die Verbindung zu diesen Gründern ist unbekannt. Eltern der Bärenherz-Schwestern sind ausschließlich unbenannte Strukturplätze ohne erfundene Ehe oder Lebensdaten; Kjells mögliche Vetternschaft wird nicht als unbelegte Abstammung eingetragen.",
+      "registryManagedDocumentFields": [
+        "description"
+      ],
+      "registryManagedExtensionFields": [
+        "blankFamily",
+        "sourceNote"
+      ],
+      "registryManagedViewFields": [
+        "focusPersonId"
+      ]
+    }
+  }
+}

@@ -369,7 +369,12 @@ export const HOUSE_VARULV_FAMILY = Object.freeze({
     person('hymir-varulv', 'Hymir Varulv', 'male', '1729', ''),
     person('mimir-varulv', 'Mimir Varulv', 'male', '1729', ''),
     person('gunrik-varulv', 'Gunrik Varulv', 'male', '1723', ''),
-    person('gundel-varulv', 'Gundel Varulv', 'female', '1725', ''),
+    person('gundel-varulv', 'Gundel Varulv', 'female', '1725', '', {
+      title: 'Maer von Skalli Varulv',
+      tags: ['Skallis Gefolge', 'Maer', 'In Ausbildung'],
+      notes: 'Gundel gehört als Maer zu Skalli Varulvs Gefolge. Maer ist die aldrimarische Bezeichnung für eine weibliche Knappe. Sie lernt unter Skallis persönlicher Anleitung gemeinsam mit Svala Bärenherz.',
+      extensions: { registryManagedFieldRevisions: { title: 5, tags: 5, notes: 5 } }
+    }),
     person('gunvir-varulv', 'Gunvir Varulv', 'male', '1730', ''),
     spouse('anaraut-draig', 'Anaraut', 'male', '1715', '', 'house-draig')
   ],
@@ -480,7 +485,8 @@ export const HOUSE_VARULV_FAMILY = Object.freeze({
   },
   extensions: {
     blankFamily: false,
-    sourceRevision: 4,
+    sourceRevision: 5,
+    registryManagedEntitySourceRevision: 4,
     sourceModule: "Clan Varulv O'Rorikshall (bereitgestellte Altdaten)",
     sourceNote: 'Genealogie, Lebensdaten, Jarlfolge und Porträtzuordnungen folgen der bereitgestellten Varulv-Hausseite. Rorik und Caragh tragen den Hausknoten; drei Quellenlücken werden als strikt serielle absolute Generationentrenner umgesetzt. Vigulf und Sif begründen Clan Freiwinter, Fannarr und Ingeborg Brathfengr Clan Nachtjäger; beide Kadettenknoten hängen direkt unter dem jeweiligen Gründerpaar und führen die Varulv-Hauptlinie nicht fort. Verheiratete Varulv-Frauen erhalten direkte Zielclanknoten; ihre Kinder werden nur im Zielclan fortgeführt. Skallis Verlobung mit Anaraut Draig verwendet dieselben Weltpersonen, dieselbe Partnerschaft und dieselben Porträts wie die Draig-Gegenakte. Wiederholte Standardsilhouetten und vier namenlose Verlobungsplatzhalter wurden nicht als Individualpersonen importiert. Die später ausgewertete Skald-Hausquelle korrigiert die 1695 geborene Ehefrau Gleipnirs von Antke zu Antje; sie bleibt von der 1696 geborenen Antke der Ceirwyn-Akte getrennt.',
     registryManagedExtensionFields: ['blankFamily', 'sourceNote'],

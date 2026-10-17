@@ -1,0 +1,238 @@
+{
+  "schemaVersion": 1,
+  "familyId": "haus-unholdbann",
+  "revision": 1,
+  "updatedAt": "2026-10-17T22:37:50.387Z",
+  "family": {
+    "schema": "aleria.family-tree",
+    "schemaVersion": 1,
+    "document": {
+      "id": "haus-unholdbann",
+      "title": "Clan Unholdbann",
+      "motto": "",
+      "description": "Huskarlclan aus Rorikshall im Jarltum Roriksheim. Hakon Unholdbann gehört als Reiter und Kundschafter zu Skallis Kriegerschar. Seine Eltern und die übrige Clanfolge sind noch nicht ausgearbeitet.",
+      "emblem": "assets/images/houses/Aldrimar/Roriksheim/clan-unholdbann.png",
+      "houseProfile": {
+        "rankId": "huskarl",
+        "seat": "Rorikshall",
+        "barony": "Rorikstal",
+        "county": "Roriksheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-varulv",
+        "liegeHouseName": "Clan Varulv",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-roriksheim-stadt.png",
+          "barony": "assets/images/regions/aldrimar-rorikstal.png",
+          "county": "assets/images/regions/aldrimar-roriksheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      }
+    },
+    "persons": [
+      {
+        "id": "haus-unholdbann-gruender",
+        "worldPersonId": "person--haus-unholdbann--haus-unholdbann-gruender",
+        "name": "???",
+        "title": "Gründer des Hauses",
+        "sex": "male",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-unholdbann",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Gründerfamilie"
+        ],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "haus-unholdbann-gruenderin",
+        "worldPersonId": "person--haus-unholdbann--haus-unholdbann-gruenderin",
+        "name": "???",
+        "title": "Gründerin des Hauses",
+        "sex": "female",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-unholdbann",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [
+          "Gründerfamilie"
+        ],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "hakon-unholdbann",
+        "worldPersonId": "person--haus-unholdbann--hakon-unholdbann",
+        "name": "Hakon Unholdbann",
+        "title": "Reiter und Kundschafter · Skallis Gefolge",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1717",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-unholdbann/hakon-unholdbann.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-unholdbann",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Skallis Gefolge",
+          "Huskarl",
+          "Reiter",
+          "Kundschafter",
+          "Unverheiratet"
+        ],
+        "notes": "Im Jahr 1740 dreiundzwanzig Jahre alt und unverheiratet. Reiter und Kundschafter in Skalli Varulvs Gefolge. Dunkelblondes Haar und ein frecher kurzer Kinnbart. Eltern, Geschwister und Geburtenfolge sind noch nicht festgelegt.",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      }
+    ],
+    "partnerships": [
+      {
+        "id": "marriage-haus-unholdbann-founders",
+        "participantIds": [
+          "haus-unholdbann-gruender",
+          "haus-unholdbann-gruenderin"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Gründerehe des Hauses.",
+        "extensions": {}
+      }
+    ],
+    "parentages": [],
+    "houses": [
+      {
+        "id": "house-unholdbann",
+        "name": "Clan Unholdbann",
+        "motto": "",
+        "emblem": "assets/images/houses/Aldrimar/Roriksheim/clan-unholdbann.png",
+        "status": "active"
+      }
+    ],
+    "cadetBranches": [],
+    "timeJumps": [],
+    "lineage": {
+      "founderPartnershipId": "marriage-haus-unholdbann-founders",
+      "houseId": "house-unholdbann",
+      "crestSubtitle": "",
+      "crestEmblemScale": 0.86,
+      "crestFrame": "silver",
+      "crestFrameScale": 1,
+      "timeGap": {
+        "enabled": false,
+        "years": 0,
+        "fromYear": "",
+        "toYear": "",
+        "label": ""
+      },
+      "originHouse": {
+        "enabled": false,
+        "id": "lineage-origin-house",
+        "houseId": "",
+        "name": "Ursprungshaus",
+        "subtitle": "",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "childIds": [],
+        "targetFamilyId": "",
+        "notes": "",
+        "timeGap": {
+          "enabled": false,
+          "years": 0,
+          "fromYear": "",
+          "toYear": "",
+          "label": ""
+        }
+      }
+    },
+    "presentation": {
+      "relationshipColors": {
+        "marriage": "#326c4a",
+        "engagement": "#b88b37",
+        "union": "#8e2724",
+        "affair": "#704485",
+        "concubinage": "#704485",
+        "political": "#9d7d48",
+        "forced": "#c7a974",
+        "biological": "#8e2724",
+        "adoptive": "#2f75a8",
+        "foster": "#2f75a8",
+        "step": "#7eb4d7",
+        "magical": "#704485",
+        "claimed": "#62615e"
+      }
+    },
+    "view": {
+      "focusPersonId": "hakon-unholdbann",
+      "orientation": "vertical",
+      "ancestorDepth": 8,
+      "descendantDepth": 8,
+      "limitGenerations": false,
+      "showSiblings": true
+    },
+    "extensions": {
+      "blankFamily": false,
+      "preparedMainLine": true,
+      "jarltum": "Roriksheim",
+      "aldrimarRank": "Huskarl",
+      "sourceRevision": 2,
+      "registryManagedHouseProfileFields": [
+        "rankId",
+        "seat",
+        "barony",
+        "county",
+        "kingdom",
+        "secondarySeats",
+        "liegeHouseId",
+        "liegeHouseName",
+        "regionEmblems"
+      ],
+      "registryManagedRecordFields": [
+        "folderPath"
+      ],
+      "sourceNote": "Skallis Gefolge · Nutzervorgaben vom 18.10.2026. Nur die beauftragten jungen Clanangehörigen ergänzt. Bestehende Gründerplatzhalter und ihre IDs bleiben erhalten. Die Verbindung zu diesen Gründern ist unbekannt. Eltern der Bärenherz-Schwestern sind ausschließlich unbenannte Strukturplätze ohne erfundene Ehe oder Lebensdaten; Kjells mögliche Vetternschaft wird nicht als unbelegte Abstammung eingetragen.",
+      "registryManagedDocumentFields": [
+        "description"
+      ],
+      "registryManagedExtensionFields": [
+        "blankFamily",
+        "sourceNote"
+      ],
+      "registryManagedViewFields": [
+        "focusPersonId"
+      ]
+    }
+  }
+}

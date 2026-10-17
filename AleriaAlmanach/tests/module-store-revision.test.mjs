@@ -237,6 +237,35 @@ test('Windreiter layout repair does not turn an unchanged cache into an unsynced
   assert.equal(saved.length, 0, 'Rendering a repaired layout must not republish the store');
 });
 
+test('Cenyr group classification repair preserves raw cache signatures and does not republish unchanged modules', async () => {
+  const { context, saved } = syncContext();
+  vm.runInContext(readFileSync(new URL('../modules/module-store/group-section-migration.global.js', import.meta.url), 'utf8'), context);
+  const islands = 'node:gruppen:klaueninseln';
+  const arth = `${islands}/haus-arth`;
+  const payload = { ...store(200, 'Unveränderte Mannschaft'), moduleSectionNodes: [
+    { id: 'root:gruppen', parentId: '', tab: 'Gruppen', title: 'Gruppen' },
+    { id: 'node:gruppen:cenyr', parentId: 'root:gruppen', tab: 'Gruppen', title: 'Cenyr' },
+    { id: islands, parentId: 'root:gruppen', tab: 'Gruppen', title: 'Klaueninseln' },
+    { id: arth, parentId: islands, tab: 'Gruppen', title: 'Haus Arth' }
+  ], moduleNodeAssignments: { 'rhydians-schiffsmannschaft': arth } };
+  payload.customSections[0] = { ...payload.customSections[0], path: ['Klaueninseln', 'Haus Arth'], nodeId: arth };
+  context.writeLocalModuleStorePayload(payload);
+  await context.writeModuleStoreSyncMeta(payload);
+  const receipt = context.localStorage.getItem('sync-meta');
+  const signature = context.getModuleStoreContentSignature(context.readLocalModuleStorePayload());
+  context.applyModuleStorePayload(context.readLocalModuleStorePayload());
+  assert.equal(context._moduleSectionNodes.find(node => node.id === islands).parentId, 'node:gruppen:cenyr');
+  assert.deepEqual(clone(context._customSections[0].path), ['Cenyr', 'Klaueninseln', 'Haus Arth']);
+  assert.equal(context._moduleNodeAssignments['rhydians-schiffsmannschaft'], arth);
+  assert.equal(context.getModuleStoreContentSignature(context.readLocalModuleStorePayload()), signature);
+  assert.equal(context.localStorage.getItem('sync-meta'), receipt);
+  assert.equal(await context.isLocalModuleStoreSynced(context.readLocalModuleStorePayload()), true);
+  context._fb.loadModuleStore = async () => payload;
+  await context.setupModuleStoreRemoteSync();
+  assert.equal(context._moduleStoreSyncConflict, null);
+  assert.equal(saved.length, 0);
+});
+
 test('sync receipts remain compact even for a multi-megabyte module store', async () => {
   const { context } = syncContext();
   const payload = store(100, 'Großer Bestand');

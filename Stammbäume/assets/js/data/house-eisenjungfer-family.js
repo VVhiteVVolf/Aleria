@@ -367,14 +367,18 @@ export const HOUSE_EISENJUNGFER_FAMILY = Object.freeze({
       tags: ['Schildmaid in Ausbildung']
     }),
     youngPerson('aslaug-eisenjungfer', 'Aslaug Eisenjungfer', 'female', '1722', {
-      tags: ['Schildmaid in Ausbildung']
+      tags: ['Schildmaid in Ausbildung'],
+      portrait: 'assets/images/portraits/haus-eisenjungfer/aslaug-eisenjungfer-v2.png',
+      extensions: { registryManagedFieldRevisions: { portrait: 3 }, registryManagedFieldFillOnlyRevisions: { portrait: 3 } }
     }),
     youngPerson('leif-eisenjungfer', 'Leif Eisenjungfer', 'male', '1724', {
       title: 'Junger Clanspross · unverheiratet'
     }),
 
     youngPerson('eira-eisenjungfer', 'Eira Eisenjungfer', 'female', '1718', {
-      tags: ['Schildmaid in Ausbildung', 'Forsthain']
+      tags: ['Schildmaid in Ausbildung', 'Forsthain'],
+      portrait: 'assets/images/portraits/haus-eisenjungfer/eira-eisenjungfer.png',
+      extensions: { registryManagedFieldRevisions: { portrait: 3 }, registryManagedFieldFillOnlyRevisions: { portrait: 3 } }
     }),
     youngPerson('yrsa-eisenjungfer', 'Yrsa Eisenjungfer', 'female', '1721', {
       tags: ['Schildmaid in Ausbildung', 'Forsthain']
@@ -514,7 +518,8 @@ export const HOUSE_EISENJUNGFER_FAMILY = Object.freeze({
     preparedMainLine: true,
     jarltum: 'Roriksheim',
     aldrimarRank: 'Huskarl',
-    sourceRevision: 2,
+    sourceRevision: 3,
+    registryManagedEntitySourceRevision: 2,
     sourceModule: 'Clan Eisenjungfer (Ausarbeitung 1740)',
     sourceNote: 'Die Akte wurde um Lagertha Eisenjungfer und ihre bestehende Ehe mit Ragnar Skald aufgebaut. Als matriarchaler Clan führt die weibliche Linie über Sigrun, Hervor, Runa und Solveig; Lagertha und Thrud enden an direkten Wegverheiratet-Knoten. Lagerthas sieben Skald-Kinder werden nicht gedoppelt. Hakon ist als fahrender Söldner mit seiner Affäre Liv und dem eindeutig zugeordneten Bastard Rolf abgebildet. Sämtliche Sprösslinge unter 26 Jahren bleiben unverheiratet. Die genealogische Gegenwart reicht nur bis zu Lagerthas Großeltern zurück; die namensgebende Gründerin und der danach folgende absolute Zeitsprung stehen als historische Herkunft davor. Das eingebettete Häuser-Modul dokumentiert Klangheim, Forsthain, die Skald-Lehensbindung, Matriarchat und Schildmaidtradition.',
     houseBiographyModule: EISENJUNGFER_HOUSE_BIOGRAPHY,

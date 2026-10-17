@@ -1,0 +1,277 @@
+{
+  "schemaVersion": 1,
+  "familyId": "haus-rotstahl",
+  "revision": 1,
+  "updatedAt": "2026-10-17T22:37:50.387Z",
+  "family": {
+    "schema": "aleria.family-tree",
+    "schemaVersion": 1,
+    "document": {
+      "id": "haus-rotstahl",
+      "title": "Clan Rotstahl",
+      "motto": "",
+      "description": "Huskarlclan aus Rorikshall im Jarltum Roriksheim. Torben Rotstahl dient als Skallis Linke Hand; der vierzehnjährige Kjell lernt bei ihm als Drengr. Die ältere Clanfolge und der genaue Verwandtschaftsweg zwischen beiden bleiben offen.",
+      "emblem": "assets/images/houses/Aldrimar/Roriksheim/clan-rotstahl.png",
+      "houseProfile": {
+        "rankId": "huskarl",
+        "seat": "Rorikshall",
+        "barony": "Rorikstal",
+        "county": "Roriksheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-varulv",
+        "liegeHouseName": "Clan Varulv",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-roriksheim-stadt.png",
+          "barony": "assets/images/regions/aldrimar-rorikstal.png",
+          "county": "assets/images/regions/aldrimar-roriksheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      }
+    },
+    "persons": [
+      {
+        "id": "haus-rotstahl-gruender",
+        "worldPersonId": "person--haus-rotstahl--haus-rotstahl-gruender",
+        "name": "???",
+        "title": "Gründer des Hauses",
+        "sex": "male",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-rotstahl",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Gründerfamilie"
+        ],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "haus-rotstahl-gruenderin",
+        "worldPersonId": "person--haus-rotstahl--haus-rotstahl-gruenderin",
+        "name": "???",
+        "title": "Gründerin des Hauses",
+        "sex": "female",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-rotstahl",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [
+          "Gründerfamilie"
+        ],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "torben-rotstahl",
+        "worldPersonId": "person--haus-rotstahl--torben-rotstahl",
+        "name": "Torben Rotstahl",
+        "title": "Linke Hand Skallis · Huskarl",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1714",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-rotstahl/torben-rotstahl.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-rotstahl",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Skallis Gefolge",
+          "Linke Hand",
+          "Huskarl",
+          "Unverheiratet"
+        ],
+        "notes": "Im Jahr 1740 sechsundzwanzig Jahre alt und unverheiratet. Linke Hand Skalli Varulvs in ihrer Kriegerschar. Zweites Kind; Eltern und ältere Geschwister sind noch nicht ausgearbeitet. Bildet Kjell Rotstahl als Drengr aus. Kjell ist als sein Vetter vorgesehen; der genaue Abstammungsweg ist noch nicht festgelegt. Blond und mit stark gelocktem Haar; trägt rotgraue Huskarlrüstung und das Schild des Clans Rotstahl.",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "kjell-rotstahl",
+        "worldPersonId": "person--haus-rotstahl--kjell-rotstahl",
+        "name": "Kjell Rotstahl",
+        "title": "Drengr von Torben Rotstahl",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1726",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-rotstahl/kjell-rotstahl.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-rotstahl",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Skallis Gefolge",
+          "Drengr",
+          "In Ausbildung",
+          "Unverheiratet"
+        ],
+        "notes": "Im Jahr 1740 vierzehn Jahre alt und unverheiratet. Drengr von Torben Rotstahl in Skallis Gefolge; Drengr bezeichnet hier einen männlichen Knappen in Ausbildung. Als Torbens Vetter vorgesehen. Seine Eltern und der genaue Verwandtschaftsweg bleiben bis zur Ausarbeitung der Clanlinie unbenannt; es wird keine Abstammung behauptet.",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      }
+    ],
+    "partnerships": [
+      {
+        "id": "marriage-haus-rotstahl-founders",
+        "participantIds": [
+          "haus-rotstahl-gruender",
+          "haus-rotstahl-gruenderin"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Gründerehe des Hauses.",
+        "extensions": {}
+      }
+    ],
+    "parentages": [],
+    "houses": [
+      {
+        "id": "house-rotstahl",
+        "name": "Clan Rotstahl",
+        "motto": "",
+        "emblem": "assets/images/houses/Aldrimar/Roriksheim/clan-rotstahl.png",
+        "status": "active"
+      }
+    ],
+    "cadetBranches": [],
+    "timeJumps": [],
+    "lineage": {
+      "founderPartnershipId": "marriage-haus-rotstahl-founders",
+      "houseId": "house-rotstahl",
+      "crestSubtitle": "",
+      "crestEmblemScale": 0.86,
+      "crestFrame": "silver",
+      "crestFrameScale": 1,
+      "timeGap": {
+        "enabled": false,
+        "years": 0,
+        "fromYear": "",
+        "toYear": "",
+        "label": ""
+      },
+      "originHouse": {
+        "enabled": false,
+        "id": "lineage-origin-house",
+        "houseId": "",
+        "name": "Ursprungshaus",
+        "subtitle": "",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "childIds": [],
+        "targetFamilyId": "",
+        "notes": "",
+        "timeGap": {
+          "enabled": false,
+          "years": 0,
+          "fromYear": "",
+          "toYear": "",
+          "label": ""
+        }
+      }
+    },
+    "presentation": {
+      "relationshipColors": {
+        "marriage": "#326c4a",
+        "engagement": "#b88b37",
+        "union": "#8e2724",
+        "affair": "#704485",
+        "concubinage": "#704485",
+        "political": "#9d7d48",
+        "forced": "#c7a974",
+        "biological": "#8e2724",
+        "adoptive": "#2f75a8",
+        "foster": "#2f75a8",
+        "step": "#7eb4d7",
+        "magical": "#704485",
+        "claimed": "#62615e"
+      }
+    },
+    "view": {
+      "focusPersonId": "torben-rotstahl",
+      "orientation": "vertical",
+      "ancestorDepth": 8,
+      "descendantDepth": 8,
+      "limitGenerations": false,
+      "showSiblings": true
+    },
+    "extensions": {
+      "blankFamily": false,
+      "preparedMainLine": true,
+      "jarltum": "Roriksheim",
+      "aldrimarRank": "Huskarl",
+      "sourceRevision": 2,
+      "registryManagedHouseProfileFields": [
+        "rankId",
+        "seat",
+        "barony",
+        "county",
+        "kingdom",
+        "secondarySeats",
+        "liegeHouseId",
+        "liegeHouseName",
+        "regionEmblems"
+      ],
+      "registryManagedRecordFields": [
+        "folderPath"
+      ],
+      "sourceNote": "Skallis Gefolge · Nutzervorgaben vom 18.10.2026. Nur die beauftragten jungen Clanangehörigen ergänzt. Bestehende Gründerplatzhalter und ihre IDs bleiben erhalten. Die Verbindung zu diesen Gründern ist unbekannt. Eltern der Bärenherz-Schwestern sind ausschließlich unbenannte Strukturplätze ohne erfundene Ehe oder Lebensdaten; Kjells mögliche Vetternschaft wird nicht als unbelegte Abstammung eingetragen.",
+      "registryManagedDocumentFields": [
+        "description"
+      ],
+      "registryManagedExtensionFields": [
+        "blankFamily",
+        "sourceNote"
+      ],
+      "registryManagedViewFields": [
+        "focusPersonId"
+      ]
+    }
+  }
+}

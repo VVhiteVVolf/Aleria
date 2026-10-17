@@ -442,6 +442,9 @@ function applyModuleStorePayload(payload) {
   if (typeof migrateWindreiterModuleSections === 'function') {
     normalized = migrateWindreiterModuleSections(normalized);
   }
+  if (globalThis.AleriaGroupSectionMigration?.migrateCenyrGroupSections) {
+    normalized = globalThis.AleriaGroupSectionMigration.migrateCenyrGroupSections(normalized);
+  }
   _moduleSectionNodes = normalized.moduleSectionNodes || [];
   _moduleNodeAssignments = normalized.moduleNodeAssignments || {};
   _customSections = normalized.customSections;

@@ -1,0 +1,42 @@
+{
+  "module": "skallis-gefolge",
+  "pages": 5,
+  "newModule": true,
+  "newProfiles": 16,
+  "existingProfiles": [
+    {
+      "name": "Skalli Varulv",
+      "id": "person--haus-varulv--skalli-varulv",
+      "fields": [
+        "biography",
+        "updatedAt"
+      ]
+    },
+    {
+      "name": "Fenrir Varulv",
+      "id": "FKiXsSWVoV74rTgmpPip",
+      "fields": [
+        "genealogy",
+        "updatedAt",
+        "identity"
+      ]
+    },
+    {
+      "name": "Freya Skald",
+      "id": "ksJQe8Ai4KbRE9jOAvb7",
+      "fields": []
+    }
+  ],
+  "configFields": [
+    "subtabMap",
+    "moduleNodeAssignments",
+    "map",
+    "subtabs",
+    "tabs",
+    "moduleStoreManifest",
+    "moduleSectionNodes",
+    "moduleStoreUpdatedAtClient"
+  ],
+  "liveResourceWrites": 0,
+  "creaturesCreated": 0
+}

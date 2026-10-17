@@ -1,0 +1,1890 @@
+{
+  "schemaVersion": 1,
+  "familyId": "haus-eisenjungfer",
+  "revision": 1,
+  "updatedAt": "2026-10-17T22:37:50.387Z",
+  "family": {
+    "schema": "aleria.family-tree",
+    "schemaVersion": 1,
+    "document": {
+      "id": "haus-eisenjungfer",
+      "title": "Clan Eisenjungfer",
+      "motto": "Wer um eine Eisenjungfer wirbt, wirbt zuerst um ihren Schild.",
+      "description": "Matriarchal geführter Huskarlclan aus Klangheim. Die Eisenjungfern dienen Clan Skald, wahren die Schildmaidtradition und verwalten zusätzlich die südliche Lehensstätte Forsthain.",
+      "emblem": "assets/images/houses/Aldrimar/Roriksheim/clan-eisenjungfer.png",
+      "houseProfile": {
+        "rankId": "huskarl",
+        "seat": "Klangheim",
+        "barony": "Skaldenheim",
+        "county": "Roriksheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [
+          "Forsthain"
+        ],
+        "liegeHouseId": "house-skald",
+        "liegeHouseName": "Clan Skald",
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-roriksheim-stadt.png",
+          "barony": "assets/images/regions/aldrimar-skaldenheim.png",
+          "county": "assets/images/regions/aldrimar-roriksheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      }
+    },
+    "persons": [
+      {
+        "id": "lagertha-eisenjungfrau-founder",
+        "worldPersonId": "person--haus-eisenjungfer--lagertha-eisenjungfrau-founder",
+        "name": "Lagertha Eisenjungfrau",
+        "title": "Gründerin des Clans Eisenjungfer",
+        "sex": "female",
+        "status": "dead",
+        "birth": "????",
+        "death": "????",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-eisenjungfer",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [
+          "Gründerin",
+          "Schildmaid"
+        ],
+        "notes": "Namensgebende Stammfrau der matriarchalen Eisenjungfer-Linie.",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "hjalmar-founder-spouse",
+        "worldPersonId": "person--family-tree--hjalmar-founder-spouse",
+        "name": "Hjalmar",
+        "title": "Gemahl der Gründerin",
+        "sex": "male",
+        "status": "dead",
+        "birth": "????",
+        "death": "????",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Überlieferter Gemahl Lagertha Eisenjungfraus; seine Herkunft ist nicht mehr bekannt.",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "sigrun-eisenjungfer",
+        "worldPersonId": "person--haus-eisenjungfer--sigrun-eisenjungfer",
+        "name": "Sigrun Eisenjungfer",
+        "title": "Früheste lückenlos belegte Clanführerin",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1640",
+        "death": "1722",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-eisenjungfer",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "arnulf-grandfather-spouse",
+        "worldPersonId": "person--family-tree--arnulf-grandfather-spouse",
+        "name": "Arnulf",
+        "title": "Lagerthas Großvater · Gemahl Sigruns",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1637",
+        "death": "1708",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Heiratete nach bestandenem Schildmaidenkampf in den Clan ein.",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "hervor-eisenjungfer",
+        "worldPersonId": "person--haus-eisenjungfer--hervor-eisenjungfer",
+        "name": "Hervor Eisenjungfer",
+        "title": "Amtierendes Oberhaupt des Clans Eisenjungfer",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1664",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-eisenjungfer",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [
+          "Oberhaupt",
+          "Schildmaid"
+        ],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "styrbjorn-parent-spouse",
+        "worldPersonId": "person--family-tree--styrbjorn-parent-spouse",
+        "name": "Styrbjorn",
+        "title": "Gemahl Hervors · Vater Lagerthas",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1661",
+        "death": "1720",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Gewann Hervors Brautkampf und diente anschließend im Gefolge der Eisenjungfern.",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "hakon-eisenjungfer",
+        "worldPersonId": "person--haus-eisenjungfer--hakon-eisenjungfer",
+        "name": "Hakon Eisenjungfer",
+        "title": "Fahrender Söldner",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1667",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-eisenjungfer",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Söldner",
+          "Ledig"
+        ],
+        "notes": "Bruder Hervors. Er ging nie einen anerkannten Ehebund ein und verdingte sich außerhalb Klangheims.",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "liv-hakon-affair",
+        "worldPersonId": "person--family-tree--liv-hakon-affair",
+        "name": "Liv",
+        "title": "Affäre Hakons · Mutter Rolfs",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1678",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "affair",
+        "lineageRole": "branch",
+        "tags": [
+          "Affäre"
+        ],
+        "notes": "Aus dieser Verbindung stammt ausschließlich Rolf.",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "rolf-hakon-bastard",
+        "worldPersonId": "person--haus-eisenjungfer--rolf-hakon-bastard",
+        "name": "Rolf Eisenjungfer",
+        "title": "Bastardsohn Hakons · freier Söldner",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1704",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-eisenjungfer",
+        "familyRole": "bastard",
+        "lineageRole": "branch",
+        "tags": [
+          "Bastard",
+          "Söldner",
+          "Ledig"
+        ],
+        "notes": "Unehelicher Sohn Hakons und Livs; besitzt keinen Anspruch auf die matriarchale Erbfolge.",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "thrud-eisenjungfer",
+        "worldPersonId": "person--haus-eisenjungfer--thrud-eisenjungfer",
+        "name": "Thrud Eisenjungfer",
+        "title": "Wegverheiratet an einen unbekannten Clan",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1669",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-eisenjungfer",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Wegverheiratet"
+        ],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "brandr-thrud-spouse",
+        "worldPersonId": "person--haus-unknown-thrud--brandr-thrud-spouse",
+        "name": "Brandr",
+        "title": "Gemahl Thruds · Clan nicht überliefert",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1665",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-unknown-thrud",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "runa-eisenjungfer",
+        "worldPersonId": "person--haus-eisenjungfer--runa-eisenjungfer",
+        "name": "Runa Eisenjungfer",
+        "title": "Älteste Tochter Hervors · Erbin des Clans",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1688",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-eisenjungfer",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [
+          "Erbin",
+          "Schildmaid"
+        ],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "kjartan-runa-spouse",
+        "worldPersonId": "person--family-tree--kjartan-runa-spouse",
+        "name": "Kjartan",
+        "title": "Gemahl Runas",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1686",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Wurde nach bestandenem Schildmaidenkampf in die fortgeführte Linie aufgenommen.",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "lagertha-eisenjungfer",
+        "worldPersonId": "person--haus-eisenjungfer--lagertha-eisenjungfer",
+        "name": "Lagertha Eisenjungfer",
+        "title": "Wegverheiratet an Clan Skald",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1691",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-skald/lagertha-eisenjungfer.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-eisenjungfer",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Wegverheiratet",
+          "Schildmaid"
+        ],
+        "notes": "Tochter Hervors und Ehefrau Ragnar Skalds. Ihre sieben Kinder werden ausschließlich im Stammbaum des Clans Skald fortgeführt.",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "ragnar-skald",
+        "worldPersonId": "person--haus-skald--ragnar-skald",
+        "name": "Ragnar Skald",
+        "title": "Hesir des Clans Skald seit 1720",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1688",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-skald/ragnar-skald.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-skald",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "brynhild-eisenjungfer",
+        "worldPersonId": "person--haus-eisenjungfer--brynhild-eisenjungfer",
+        "name": "Brynhild Eisenjungfer",
+        "title": "Schildmaid und Verwalterin von Forsthain",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1694",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-eisenjungfer",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Schildmaid",
+          "Forsthain"
+        ],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "hemming-brynhild-spouse",
+        "worldPersonId": "person--family-tree--hemming-brynhild-spouse",
+        "name": "Hemming",
+        "title": "Gemahl Brynhilds · Verwalter in Forsthain",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1692",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Bewies sich im Brautkampf als ebenbürtig und trat in Brynhilds Linie ein.",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "skadi-eisenjungfer",
+        "worldPersonId": "person--haus-eisenjungfer--skadi-eisenjungfer",
+        "name": "Skadi Eisenjungfer",
+        "title": "Schildmaid des Clans Eisenjungfer",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1697",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-eisenjungfer",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Schildmaid"
+        ],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "arvid-skadi-spouse",
+        "worldPersonId": "person--family-tree--arvid-skadi-spouse",
+        "name": "Arvid",
+        "title": "Gemahl Skadis",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1695",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Heiratete nach bestandenem Schildmaidenkampf in den Clan ein.",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "solveig-eisenjungfer",
+        "worldPersonId": "person--haus-eisenjungfer--solveig-eisenjungfer",
+        "name": "Solveig Eisenjungfer",
+        "title": "Älteste Tochter Runas · nachfolgende Erbin",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1716",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-eisenjungfer",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [
+          "Erbin",
+          "Schildmaid in Ausbildung",
+          "Unverheiratet"
+        ],
+        "notes": "Gehört zur jüngsten Generation des Clans und ist im Jahr 1740 unverheiratet.",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "hildigunn-eisenjungfer",
+        "worldPersonId": "person--haus-eisenjungfer--hildigunn-eisenjungfer",
+        "name": "Hildigunn Eisenjungfer",
+        "title": "Unverheiratet",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1719",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-eisenjungfer",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Schildmaid in Ausbildung",
+          "Unverheiratet"
+        ],
+        "notes": "Gehört zur jüngsten Generation des Clans und ist im Jahr 1740 unverheiratet.",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "aslaug-eisenjungfer",
+        "worldPersonId": "person--haus-eisenjungfer--aslaug-eisenjungfer",
+        "name": "Aslaug Eisenjungfer",
+        "title": "Unverheiratet",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1722",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-eisenjungfer/aslaug-eisenjungfer-v2.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-eisenjungfer",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Schildmaid in Ausbildung",
+          "Unverheiratet"
+        ],
+        "notes": "Gehört zur jüngsten Generation des Clans und ist im Jahr 1740 unverheiratet.",
+        "extensions": {
+          "registryManagedFieldRevisions": {
+            "portrait": 3
+          },
+          "registryManagedFieldFillOnlyRevisions": {
+            "portrait": 3
+          },
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "leif-eisenjungfer",
+        "worldPersonId": "person--haus-eisenjungfer--leif-eisenjungfer",
+        "name": "Leif Eisenjungfer",
+        "title": "Junger Clanspross · unverheiratet",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1724",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-eisenjungfer",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Unverheiratet"
+        ],
+        "notes": "Gehört zur jüngsten Generation des Clans und ist im Jahr 1740 unverheiratet.",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "eira-eisenjungfer",
+        "worldPersonId": "person--haus-eisenjungfer--eira-eisenjungfer",
+        "name": "Eira Eisenjungfer",
+        "title": "Unverheiratet",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1718",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-eisenjungfer/eira-eisenjungfer.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-eisenjungfer",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Schildmaid in Ausbildung",
+          "Forsthain",
+          "Unverheiratet"
+        ],
+        "notes": "Gehört zur jüngsten Generation des Clans und ist im Jahr 1740 unverheiratet.",
+        "extensions": {
+          "registryManagedFieldRevisions": {
+            "portrait": 3
+          },
+          "registryManagedFieldFillOnlyRevisions": {
+            "portrait": 3
+          },
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "yrsa-eisenjungfer",
+        "worldPersonId": "person--haus-eisenjungfer--yrsa-eisenjungfer",
+        "name": "Yrsa Eisenjungfer",
+        "title": "Unverheiratet",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1721",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-eisenjungfer",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Schildmaid in Ausbildung",
+          "Forsthain",
+          "Unverheiratet"
+        ],
+        "notes": "Gehört zur jüngsten Generation des Clans und ist im Jahr 1740 unverheiratet.",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "gorm-eisenjungfer",
+        "worldPersonId": "person--haus-eisenjungfer--gorm-eisenjungfer",
+        "name": "Gorm Eisenjungfer",
+        "title": "Junger Clanspross · unverheiratet",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1724",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-eisenjungfer",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Unverheiratet"
+        ],
+        "notes": "Gehört zur jüngsten Generation des Clans und ist im Jahr 1740 unverheiratet.",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "thyra-eisenjungfer",
+        "worldPersonId": "person--haus-eisenjungfer--thyra-eisenjungfer",
+        "name": "Thyra Eisenjungfer",
+        "title": "Unverheiratet",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1720",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-eisenjungfer",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Schildmaid in Ausbildung",
+          "Unverheiratet"
+        ],
+        "notes": "Gehört zur jüngsten Generation des Clans und ist im Jahr 1740 unverheiratet.",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "svala-eisenjungfer",
+        "worldPersonId": "person--haus-eisenjungfer--svala-eisenjungfer",
+        "name": "Svala Eisenjungfer",
+        "title": "Unverheiratet",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1723",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-eisenjungfer",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Schildmaid in Ausbildung",
+          "Unverheiratet"
+        ],
+        "notes": "Gehört zur jüngsten Generation des Clans und ist im Jahr 1740 unverheiratet.",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "freydis-eisenjungfer",
+        "worldPersonId": "person--haus-eisenjungfer--freydis-eisenjungfer",
+        "name": "Freydis Eisenjungfer",
+        "title": "Unverheiratet",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1726",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-eisenjungfer",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Schildmaid in Ausbildung",
+          "Unverheiratet"
+        ],
+        "notes": "Gehört zur jüngsten Generation des Clans und ist im Jahr 1740 unverheiratet.",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      }
+    ],
+    "partnerships": [
+      {
+        "id": "marriage-lagertha-hjalmar-eisenjungfer-founders",
+        "participantIds": [
+          "lagertha-eisenjungfrau-founder",
+          "hjalmar-founder-spouse"
+        ],
+        "type": "marriage",
+        "status": "ended",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-sigrun-arnulf-eisenjungfer",
+        "participantIds": [
+          "sigrun-eisenjungfer",
+          "arnulf-grandfather-spouse"
+        ],
+        "type": "marriage",
+        "status": "ended",
+        "start": "",
+        "end": "1708",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-hervor-styrbjorn-eisenjungfer",
+        "participantIds": [
+          "hervor-eisenjungfer",
+          "styrbjorn-parent-spouse"
+        ],
+        "type": "marriage",
+        "status": "widowed",
+        "start": "",
+        "end": "1720",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "affair-hakon-liv-eisenjungfer",
+        "participantIds": [
+          "hakon-eisenjungfer",
+          "liv-hakon-affair"
+        ],
+        "type": "affair",
+        "status": "ended",
+        "start": "",
+        "end": "1705",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Rolf ist das einzige Kind aus Hakons Affäre mit Liv.",
+        "extensions": {
+          "chartAlignPartnerOverChildrenPersonId": "liv-hakon-affair",
+          "registryManagedExtensionFields": [
+            "chartAlignPartnerOverChildrenPersonId"
+          ]
+        }
+      },
+      {
+        "id": "marriage-thrud-brandr-eisenjungfer",
+        "participantIds": [
+          "thrud-eisenjungfer",
+          "brandr-thrud-spouse"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-runa-kjartan-eisenjungfer",
+        "participantIds": [
+          "runa-eisenjungfer",
+          "kjartan-runa-spouse"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-ragnar-lagertha-skald",
+        "participantIds": [
+          "ragnar-skald",
+          "lagertha-eisenjungfer"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Registerübergreifende Ehe. Die sieben gemeinsamen Kinder werden ausschließlich im Stammbaum des Clans Skald dargestellt.",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-brynhild-hemming-eisenjungfer",
+        "participantIds": [
+          "brynhild-eisenjungfer",
+          "hemming-brynhild-spouse"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-skadi-arvid-eisenjungfer",
+        "participantIds": [
+          "skadi-eisenjungfer",
+          "arvid-skadi-spouse"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      }
+    ],
+    "parentages": [
+      {
+        "id": "eisenjungfer-parentage-sigrun-eisenjungfer",
+        "childId": "sigrun-eisenjungfer",
+        "parentIds": [
+          "lagertha-eisenjungfrau-founder",
+          "hjalmar-founder-spouse"
+        ],
+        "partnershipId": "marriage-lagertha-hjalmar-eisenjungfer-founders",
+        "type": "claimed",
+        "legitimacy": "unknown",
+        "certainty": "probable",
+        "visibility": "public",
+        "notes": "Sigrun setzt die belegte Linie nach der Überlieferungslücke fort.",
+        "extensions": {}
+      },
+      {
+        "id": "eisenjungfer-parentage-hervor-eisenjungfer",
+        "childId": "hervor-eisenjungfer",
+        "parentIds": [
+          "sigrun-eisenjungfer",
+          "arnulf-grandfather-spouse"
+        ],
+        "partnershipId": "marriage-sigrun-arnulf-eisenjungfer",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "eisenjungfer-parentage-hakon-eisenjungfer",
+        "childId": "hakon-eisenjungfer",
+        "parentIds": [
+          "sigrun-eisenjungfer",
+          "arnulf-grandfather-spouse"
+        ],
+        "partnershipId": "marriage-sigrun-arnulf-eisenjungfer",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "eisenjungfer-parentage-thrud-eisenjungfer",
+        "childId": "thrud-eisenjungfer",
+        "parentIds": [
+          "sigrun-eisenjungfer",
+          "arnulf-grandfather-spouse"
+        ],
+        "partnershipId": "marriage-sigrun-arnulf-eisenjungfer",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "eisenjungfer-parentage-runa-eisenjungfer",
+        "childId": "runa-eisenjungfer",
+        "parentIds": [
+          "hervor-eisenjungfer",
+          "styrbjorn-parent-spouse"
+        ],
+        "partnershipId": "marriage-hervor-styrbjorn-eisenjungfer",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "eisenjungfer-parentage-lagertha-eisenjungfer",
+        "childId": "lagertha-eisenjungfer",
+        "parentIds": [
+          "hervor-eisenjungfer",
+          "styrbjorn-parent-spouse"
+        ],
+        "partnershipId": "marriage-hervor-styrbjorn-eisenjungfer",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "eisenjungfer-parentage-brynhild-eisenjungfer",
+        "childId": "brynhild-eisenjungfer",
+        "parentIds": [
+          "hervor-eisenjungfer",
+          "styrbjorn-parent-spouse"
+        ],
+        "partnershipId": "marriage-hervor-styrbjorn-eisenjungfer",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "eisenjungfer-parentage-skadi-eisenjungfer",
+        "childId": "skadi-eisenjungfer",
+        "parentIds": [
+          "hervor-eisenjungfer",
+          "styrbjorn-parent-spouse"
+        ],
+        "partnershipId": "marriage-hervor-styrbjorn-eisenjungfer",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "eisenjungfer-parentage-rolf-hakon-bastard",
+        "childId": "rolf-hakon-bastard",
+        "parentIds": [
+          "hakon-eisenjungfer",
+          "liv-hakon-affair"
+        ],
+        "partnershipId": "affair-hakon-liv-eisenjungfer",
+        "type": "biological",
+        "legitimacy": "illegitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Rolf stammt eindeutig aus Hakons Affäre mit Liv.",
+        "extensions": {}
+      },
+      {
+        "id": "eisenjungfer-parentage-solveig-eisenjungfer",
+        "childId": "solveig-eisenjungfer",
+        "parentIds": [
+          "runa-eisenjungfer",
+          "kjartan-runa-spouse"
+        ],
+        "partnershipId": "marriage-runa-kjartan-eisenjungfer",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "eisenjungfer-parentage-hildigunn-eisenjungfer",
+        "childId": "hildigunn-eisenjungfer",
+        "parentIds": [
+          "runa-eisenjungfer",
+          "kjartan-runa-spouse"
+        ],
+        "partnershipId": "marriage-runa-kjartan-eisenjungfer",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "eisenjungfer-parentage-aslaug-eisenjungfer",
+        "childId": "aslaug-eisenjungfer",
+        "parentIds": [
+          "runa-eisenjungfer",
+          "kjartan-runa-spouse"
+        ],
+        "partnershipId": "marriage-runa-kjartan-eisenjungfer",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "eisenjungfer-parentage-leif-eisenjungfer",
+        "childId": "leif-eisenjungfer",
+        "parentIds": [
+          "runa-eisenjungfer",
+          "kjartan-runa-spouse"
+        ],
+        "partnershipId": "marriage-runa-kjartan-eisenjungfer",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "eisenjungfer-parentage-eira-eisenjungfer",
+        "childId": "eira-eisenjungfer",
+        "parentIds": [
+          "brynhild-eisenjungfer",
+          "hemming-brynhild-spouse"
+        ],
+        "partnershipId": "marriage-brynhild-hemming-eisenjungfer",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "eisenjungfer-parentage-yrsa-eisenjungfer",
+        "childId": "yrsa-eisenjungfer",
+        "parentIds": [
+          "brynhild-eisenjungfer",
+          "hemming-brynhild-spouse"
+        ],
+        "partnershipId": "marriage-brynhild-hemming-eisenjungfer",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "eisenjungfer-parentage-gorm-eisenjungfer",
+        "childId": "gorm-eisenjungfer",
+        "parentIds": [
+          "brynhild-eisenjungfer",
+          "hemming-brynhild-spouse"
+        ],
+        "partnershipId": "marriage-brynhild-hemming-eisenjungfer",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "eisenjungfer-parentage-thyra-eisenjungfer",
+        "childId": "thyra-eisenjungfer",
+        "parentIds": [
+          "skadi-eisenjungfer",
+          "arvid-skadi-spouse"
+        ],
+        "partnershipId": "marriage-skadi-arvid-eisenjungfer",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "eisenjungfer-parentage-svala-eisenjungfer",
+        "childId": "svala-eisenjungfer",
+        "parentIds": [
+          "skadi-eisenjungfer",
+          "arvid-skadi-spouse"
+        ],
+        "partnershipId": "marriage-skadi-arvid-eisenjungfer",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "eisenjungfer-parentage-freydis-eisenjungfer",
+        "childId": "freydis-eisenjungfer",
+        "parentIds": [
+          "skadi-eisenjungfer",
+          "arvid-skadi-spouse"
+        ],
+        "partnershipId": "marriage-skadi-arvid-eisenjungfer",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      }
+    ],
+    "houses": [
+      {
+        "id": "house-eisenjungfer",
+        "name": "Clan Eisenjungfer",
+        "motto": "",
+        "emblem": "assets/images/houses/Aldrimar/Roriksheim/clan-eisenjungfer.png",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "emblem"
+          ]
+        }
+      },
+      {
+        "id": "house-skald",
+        "name": "Clan Skald",
+        "motto": "",
+        "emblem": "assets/images/houses/Aldrimar/Roriksheim/clan-skald.png",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "emblem"
+          ]
+        }
+      },
+      {
+        "id": "house-unknown-thrud",
+        "name": "Unbekannter Clan",
+        "motto": "",
+        "emblem": "",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "emblem"
+          ]
+        }
+      }
+    ],
+    "cadetBranches": [
+      {
+        "id": "married-away-thrud-eisenjungfer-unknown",
+        "name": "Unbekannter Clan",
+        "subtitle": "Wegverheiratet an einen unbekannten Clan",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-thrud-brandr-eisenjungfer",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-unknown-thrud",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "silver",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-unbekannt",
+        "notes": "Thrud führt ihre Nachkommen nicht im Clan Eisenjungfer fort.",
+        "extensions": {}
+      },
+      {
+        "id": "married-away-lagertha-eisenjungfer-skald",
+        "name": "Clan Skald",
+        "subtitle": "Wegverheiratet an Clan Skald",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-ragnar-lagertha-skald",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-skald",
+        "emblem": "assets/images/houses/Aldrimar/Roriksheim/clan-skald.png",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-skald",
+        "notes": "Lagerthas sieben Kinder mit Ragnar werden ausschließlich im Stammbaum des Clans Skald fortgeführt.",
+        "extensions": {}
+      }
+    ],
+    "timeJumps": [],
+    "lineage": {
+      "founderPartnershipId": "marriage-lagertha-hjalmar-eisenjungfer-founders",
+      "houseId": "house-eisenjungfer",
+      "crestSubtitle": "Matriarchaler Huskarlclan von Klangheim · Vasallen des Clans Skald",
+      "crestEmblemScale": 0.86,
+      "crestFrame": "silver",
+      "crestFrameScale": 1,
+      "timeGap": {
+        "enabled": true,
+        "years": 0,
+        "fromYear": "????",
+        "toYear": "1640",
+        "label": "Nicht einzeln überlieferte Generationen"
+      },
+      "originHouse": {
+        "enabled": false,
+        "id": "lineage-origin-house",
+        "houseId": "",
+        "name": "Ursprungshaus",
+        "subtitle": "",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "childIds": [],
+        "targetFamilyId": "",
+        "notes": "",
+        "timeGap": {
+          "enabled": false,
+          "years": 0,
+          "fromYear": "",
+          "toYear": "",
+          "label": ""
+        }
+      }
+    },
+    "presentation": {
+      "relationshipColors": {
+        "marriage": "#326c4a",
+        "engagement": "#b88b37",
+        "union": "#8e2724",
+        "affair": "#704485",
+        "concubinage": "#704485",
+        "political": "#9d7d48",
+        "forced": "#c7a974",
+        "biological": "#8e2724",
+        "adoptive": "#2f75a8",
+        "foster": "#2f75a8",
+        "step": "#7eb4d7",
+        "magical": "#704485",
+        "claimed": "#62615e"
+      }
+    },
+    "view": {
+      "focusPersonId": "lagertha-eisenjungfrau-founder",
+      "orientation": "vertical",
+      "ancestorDepth": 12,
+      "descendantDepth": 12,
+      "limitGenerations": false,
+      "showSiblings": true
+    },
+    "extensions": {
+      "blankFamily": false,
+      "preparedMainLine": true,
+      "jarltum": "Roriksheim",
+      "aldrimarRank": "Huskarl",
+      "sourceRevision": 3,
+      "registryManagedEntitySourceRevision": 2,
+      "sourceModule": "Clan Eisenjungfer (Ausarbeitung 1740)",
+      "sourceNote": "Die Akte wurde um Lagertha Eisenjungfer und ihre bestehende Ehe mit Ragnar Skald aufgebaut. Als matriarchaler Clan führt die weibliche Linie über Sigrun, Hervor, Runa und Solveig; Lagertha und Thrud enden an direkten Wegverheiratet-Knoten. Lagerthas sieben Skald-Kinder werden nicht gedoppelt. Hakon ist als fahrender Söldner mit seiner Affäre Liv und dem eindeutig zugeordneten Bastard Rolf abgebildet. Sämtliche Sprösslinge unter 26 Jahren bleiben unverheiratet. Die genealogische Gegenwart reicht nur bis zu Lagerthas Großeltern zurück; die namensgebende Gründerin und der danach folgende absolute Zeitsprung stehen als historische Herkunft davor. Das eingebettete Häuser-Modul dokumentiert Klangheim, Forsthain, die Skald-Lehensbindung, Matriarchat und Schildmaidtradition.",
+      "houseBiographyModule": {
+        "schema": "aleria.house-module",
+        "schemaVersion": 1,
+        "pageTitle": "I — Clan Eisenjungfer",
+        "image": "assets/images/houses/Aldrimar/Roriksheim/clan-eisenjungfer.png",
+        "imageWidth": 30,
+        "imageSquare": true,
+        "housePage": true,
+        "description": "Matriarchal geführter Huskarlclan aus Klangheim, dessen Schildmaiden dem Clan Skald dienen und zusätzlich die südliche Lehensstätte Forsthain verwalten.",
+        "stats": [
+          [
+            "Voller Name",
+            "Clan Eisenjungfer"
+          ],
+          [
+            "Stammsitz",
+            "Klangheim"
+          ],
+          [
+            "Gegründet",
+            "Frühzeit Klangheims"
+          ],
+          [
+            "Oberhaupt",
+            "Hervor Eisenjungfer"
+          ],
+          [
+            "Erbin",
+            "Runa Eisenjungfer"
+          ],
+          [
+            "Lehensherr",
+            "Clan Skald"
+          ],
+          [
+            "Vasallen",
+            "Keine eigenen Vasallen"
+          ],
+          [
+            "Ländereien",
+            "Klangheim · Forsthain · Skaldenheim · Roriksheim · Aldrimar"
+          ],
+          [
+            "Wappen",
+            "Schildmaid mit Hammer und Rundschild im Runenkranz"
+          ],
+          [
+            "Hausfarben",
+            "Stahlgrau · Weiß · Dunkelblau"
+          ],
+          [
+            "Rang",
+            "Huskarlclan"
+          ],
+          [
+            "Status",
+            "Aktiv"
+          ]
+        ],
+        "house": {
+          "biographyTitle": "Über diesen Clan",
+          "biographyText": "Die Eisenjungfern sind ein matriarchal geführter Huskarlclan Klangheims. Die Frauen tragen Namen, Erbe und Waffenrecht der Linie weiter; Männer heiraten gewöhnlich auswärts oder suchen ihr Auskommen als Söldner. Als Gefolge des Clans Skald sichern die Schildmaiden Klangheim und verwalten im Süden des Thanentums die kleine Lehensstätte Forsthain.",
+          "abilitiesTitle": "Einflussbereiche & Zuständigkeiten",
+          "abilities": [
+            {
+              "icon": "../IconOrdner/Organisationsicons/Militär.png",
+              "title": "Schildmaiden",
+              "detail": "Ausbildung schwer bewaffneter Kriegerinnen und bewaffnetes Gefolge des Clans Skald."
+            },
+            {
+              "icon": "../IconOrdner/Organisationsicons/Administration.png",
+              "title": "Forsthain",
+              "detail": "Verwaltung der südlichen Lehensstätte, ihrer Vorräte, Wege und Abgaben."
+            },
+            {
+              "icon": "../IconOrdner/Organisationsicons/Justiz.png",
+              "title": "Brautkampf",
+              "detail": "Wahrung der Schildmaidtradition, nach der ein Freier seine Ebenbürtigkeit im Zweikampf beweisen muss."
+            }
+          ],
+          "extraSections": [
+            {
+              "title": "Die Stätte Forsthain",
+              "text": "Forsthain liegt im Süden Skaldenheims. Die Eisenjungfern halten die kleine Stätte nicht als unabhängige Herrschaft, sondern verwalten sie im Namen ihrer Lehensherren aus dem Clan Skald."
+            }
+          ],
+          "historyTitle": "Geschichte des Clans",
+          "historyText": "Die Überlieferung führt den Clan auf Lagertha Eisenjungfrau zurück. Nach ihr wurde der Name Eisenjungfer zum Namen der matriarchalen Linie. Zwischen der Gründerzeit und Sigrun Eisenjungfer sind die einzelnen Generationen nicht mehr belegt. In der Gegenwart des Jahres 1740 führt Hervor Eisenjungfer den Clan; ihre älteste Tochter Runa gilt als Erbin. Hervors Tochter Lagertha bildet eine seltene Ausnahme der Erbtradition: Sie heiratete Ragnar Skald und führt ihre Nachkommen im Stammbaum des Lehensherrenclans fort.",
+          "worksTitle": "Bekannte Taten & Ereignisse",
+          "works": [
+            "Lagertha Eisenjungfrau begründete die nach Frauen benannte und durch Frauen fortgeführte Clanlinie.",
+            "Die Eisenjungfern übernahmen für Clan Skald die Bewachung und Verwaltung der südlichen Stätte Forsthain.",
+            "Die Ehe Lagertha Eisenjungfers mit Ragnar Skald verband den Huskarlclan unmittelbar mit der heutigen Skald-Linie."
+          ],
+          "triviaTitle": "Besonderheiten",
+          "trivia": [
+            "Die ältesten Töchter führen gewöhnlich die Linie fort; ungefähr eine von drei Frauen wird in einen anderen Clan verheiratet.",
+            "Männer des Clans heiraten meist auswärts, ziehen als Söldner fort oder bleiben ohne festen Ehebund.",
+            "Nur ein als stark und ebenbürtig anerkannter Freier darf eine Eisenjungfer heiraten.",
+            "Traditionell muss der Freier seine erwählte Braut in einem Schildmaidenkampf bezwingen, bevor die Ehe anerkannt wird."
+          ],
+          "quotesTitle": "Clanworte & Aussprüche",
+          "quotes": [
+            "„Kein Name wird getragen, der nicht mit Schild und Stand bewiesen wurde.“",
+            "„Wer um eine Eisenjungfer wirbt, wirbt zuerst um ihren Schild.“"
+          ],
+          "connectionsTitle": "Lehensbindungen & Verwandtschaft",
+          "connections": [
+            {
+              "type": "heading",
+              "title": "Lehensbindungen",
+              "detail": ""
+            },
+            {
+              "type": "connection",
+              "name": "Clan Skald",
+              "detail": "Unmittelbare Lehensherren; die Eisenjungfern dienen ihnen als Huskarlhaus.",
+              "image": "assets/images/houses/Aldrimar/Roriksheim/clan-skald.png",
+              "imageFormat": "square"
+            },
+            {
+              "type": "connection",
+              "name": "Clan Brathfengr",
+              "detail": "Thanen von Skaldenheim und Oberherren Klangheims.",
+              "image": "assets/images/houses/Aldrimar/Roriksheim/clan-brathfengr.png",
+              "imageFormat": "square"
+            },
+            {
+              "type": "heading",
+              "title": "Familienbande",
+              "detail": ""
+            },
+            {
+              "type": "connection",
+              "name": "Lagertha Eisenjungfer & Ragnar Skald",
+              "detail": "Seltene Einheirat einer Eisenjungfer in die fortgeführte Linie des Lehensherrenclans.",
+              "image": "assets/images/portraits/haus-skald/lagertha-eisenjungfer.png",
+              "imageFormat": "portrait"
+            }
+          ],
+          "documentsTitle": "Rechte & Besitz",
+          "documents": [
+            {
+              "icon": "../IconOrdner/Organisationsicons/Administration.png",
+              "title": "Stätte Forsthain",
+              "text": "Südlicher Verwaltungssitz und kleines Lehen im Auftrag des Clans Skald.",
+              "link": ""
+            },
+            {
+              "icon": "../IconOrdner/Organisationsicons/Militär.png",
+              "title": "Schildmaidenrecht",
+              "text": "Überliefertes Waffen-, Erb- und Brautrecht der Frauen des Clans.",
+              "link": ""
+            }
+          ],
+          "footer": "Stahl im Arm. Wahrheit im Stand.",
+          "sideWidth": 100,
+          "connectionPortraitHeight": 68,
+          "connectionTextOffset": 0,
+          "crestImage": "assets/images/houses/Aldrimar/Roriksheim/clan-eisenjungfer.png"
+        },
+        "commentSequence": [],
+        "quote": "„Wer um eine Eisenjungfer wirbt, wirbt zuerst um ihren Schild.“",
+        "quoteBy": "Schildmaidentradition"
+      },
+      "registryManagedExtensionFields": [
+        "blankFamily",
+        "sourceNote"
+      ],
+      "registryManagedHouseProfileFields": [
+        "rankId",
+        "seat",
+        "barony",
+        "county",
+        "kingdom",
+        "liegeHouseId",
+        "liegeHouseName",
+        "secondarySeats",
+        "regionEmblems"
+      ],
+      "registryManagedRecordFields": [
+        "folderPath"
+      ],
+      "registryManagedViewFields": [
+        "focusPersonId",
+        "limitGenerations"
+      ]
+    }
+  }
+}

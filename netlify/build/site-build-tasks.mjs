@@ -65,6 +65,21 @@ export const SITE_BUILD_TASKS = [
       testCommand(almanach('natural-resources'))]
   },
   {
+    id: 'skalli-retinue', label: 'Skallis Gefolge and group classification',
+    inputs: ['AleriaAlmanach/modules/skalli-retinue/', 'AleriaAlmanach/modules/landing/',
+      'AleriaAlmanach/modules/character-genealogy/', 'AleriaAlmanach/modules/module-store/',
+      'AleriaAlmanach/modules/archive/archive-section-registration.mjs',
+      'AleriaAlmanach/modules/module-editor/module-editor-data.js', 'Stammbäume/assets/js/',
+      'Stammbäume/assets/images/portraits/haus-baerenherz/', 'Stammbäume/assets/images/portraits/haus-rotstahl/',
+      'Stammbäume/assets/images/portraits/haus-unholdbann/', 'Stammbäume/assets/images/portraits/haus-eisenjungfer/',
+      'AleriaAlmanach/public/assets/skalli-retinue/',
+      'AleriaAlmanach/scripts/build-skalli-retinue.mjs', 'AleriaAlmanach/scripts/build-group-section-migration.mjs',
+      almanach('skalli-retinue'), almanach('group-section-migration')],
+    commands: [['AleriaAlmanach/scripts/build-skalli-retinue.mjs', '--check'],
+      ['AleriaAlmanach/scripts/build-group-section-migration.mjs', '--check'],
+      testCommand(almanach('skalli-retinue'), almanach('group-section-migration'))]
+  },
+  {
     id: 'regional-equipment', label: 'Regional equipment and item register',
     inputs: ['AleriaAlmanach/modules/regional-equipment/', 'AleriaAlmanach/modules/item-register/',
       'AleriaAlmanach/public/assets/regional-equipment/', 'Stammbäume/assets/js/',

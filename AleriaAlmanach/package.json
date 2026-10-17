@@ -61,7 +61,7 @@
     "test:classes": "node --test ../Klassenordner/tests/*.test.mjs",
     "check:combat-balance": "node tools/audit-combat-balance.mjs",
     "test:critical-damage": "node --test tests/combat-critical-damage.test.mjs tests/combat-global-balance.test.mjs",
-    "prebuild": "npm run build:creature-bestiary && npm run build:landing && npm run build:brewer-guilds && npm run build:house-retinues && npm run build:windreiter && npm run build:albic-hospitality && npm run build:natural-resources && npm run build:albic-clans && npm run build:languages && npm run build:events && npm run build:items && npm run build:equipment-artwork && npm run build:religions && npm run build:factions && npm run build:astrology && npm run build:magic && npm run build:classes && npm run build:gameplay-guides && npm run prepare:dice-runtime",
+    "prebuild": "npm run build:skalli-retinue && npm run build:group-section-migration && npm run build:creature-bestiary && npm run build:landing && npm run build:brewer-guilds && npm run build:house-retinues && npm run build:windreiter && npm run build:albic-hospitality && npm run build:natural-resources && npm run build:albic-clans && npm run build:languages && npm run build:events && npm run build:items && npm run build:equipment-artwork && npm run build:religions && npm run build:factions && npm run build:astrology && npm run build:magic && npm run build:classes && npm run build:gameplay-guides && npm run prepare:dice-runtime",
     "build": "vite build",
     "pretest": "npm run prepare:dice-runtime",
     "test": "node --test tests/*.test.mjs",
@@ -82,7 +82,12 @@
     "sync:class-damage": "node scripts/reconcile-class-damage.mjs",
     "check:class-damage": "node scripts/reconcile-class-damage.mjs --check",
     "build:equipment-artwork": "node scripts/build-equipment-artwork.mjs",
-    "check:equipment-artwork": "node scripts/build-equipment-artwork.mjs --check"
+    "check:equipment-artwork": "node scripts/build-equipment-artwork.mjs --check",
+    "build:skalli-retinue": "node scripts/build-skalli-retinue.mjs",
+    "check:skalli-retinue": "node scripts/build-skalli-retinue.mjs --check",
+    "test:skalli-retinue": "node --test --experimental-test-isolation=none tests/skalli-retinue.test.mjs tests/group-section-migration.test.mjs",
+    "build:group-section-migration": "node scripts/build-group-section-migration.mjs",
+    "check:group-section-migration": "node scripts/build-group-section-migration.mjs --check"
   },
   "dependencies": {
     "@3d-dice/dice-box": "1.1.4",

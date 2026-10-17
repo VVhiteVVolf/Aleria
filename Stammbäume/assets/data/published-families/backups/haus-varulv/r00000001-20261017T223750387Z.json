@@ -1,0 +1,6129 @@
+{
+  "schemaVersion": 1,
+  "familyId": "haus-varulv",
+  "revision": 1,
+  "updatedAt": "2026-10-17T22:37:50.387Z",
+  "family": {
+    "schema": "aleria.family-tree",
+    "schemaVersion": 1,
+    "document": {
+      "id": "haus-varulv",
+      "title": "Clan Varulv",
+      "motto": "",
+      "description": "Jarlsclan von Roriksheim und Herren von Rorikshall. Der Clan führt seine Herkunft auf Rorik zurück; Nachtjäger und Freiwinter gingen als Kadettenzweige aus Fannarr beziehungsweise Vigulf Varulv hervor.",
+      "emblem": "assets/images/houses/Aldrimar/clan-varulv.png",
+      "houseProfile": {
+        "rankId": "jarl",
+        "seat": "Rorikshall",
+        "barony": "Rorikstal",
+        "county": "Roriksheim",
+        "kingdom": "Aldrimar",
+        "secondarySeats": [],
+        "liegeHouseId": "house-vaeren",
+        "liegeHouseName": "Clan Vaeren",
+        "folderIcons": [
+          "assets/images/regions/aldrimar.png",
+          "assets/images/regions/aldrimar-roriksheim.png",
+          "assets/images/regions/aldrimar-rorikstal.png",
+          "assets/images/regions/aldrimar-roriksheim-stadt.png"
+        ],
+        "regionEmblems": {
+          "seat": "assets/images/regions/aldrimar-roriksheim-stadt.png",
+          "barony": "assets/images/regions/aldrimar-rorikstal.png",
+          "county": "assets/images/regions/aldrimar-roriksheim.png",
+          "kingdom": "assets/images/regions/aldrimar.png"
+        }
+      }
+    },
+    "persons": [
+      {
+        "id": "rorik-varulv",
+        "worldPersonId": "person--haus-varulv--rorik-varulv",
+        "name": "Rorik Varulv",
+        "title": "Stammvater und erster Jarl des Clans Varulv",
+        "sex": "male",
+        "status": "dead",
+        "birth": "????",
+        "death": "????",
+        "portrait": "assets/images/portraits/haus-varulv/rorik-varulv.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-varulv",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 4,
+            "name": 4,
+            "title": 4,
+            "sex": 4,
+            "status": 4,
+            "birth": 4,
+            "death": 4,
+            "portrait": 4,
+            "portraitPlaceholder": 4,
+            "houseId": 4,
+            "familyRole": 4,
+            "lineageRole": 4,
+            "tags": 4,
+            "notes": 4
+          }
+        }
+      },
+      {
+        "id": "caragh-varulv",
+        "worldPersonId": "person--family-tree--caragh-varulv",
+        "name": "Caragh",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "????",
+        "death": "????",
+        "portrait": "assets/images/portraits/haus-varulv/caragh-varulv.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 4,
+            "name": 4,
+            "title": 4,
+            "sex": 4,
+            "status": 4,
+            "birth": 4,
+            "death": 4,
+            "portrait": 4,
+            "portraitPlaceholder": 4,
+            "houseId": 4,
+            "familyRole": 4,
+            "lineageRole": 4,
+            "tags": 4,
+            "notes": 4
+          }
+        }
+      },
+      {
+        "id": "thorkell-varulv",
+        "worldPersonId": "person--haus-varulv--thorkell-varulv",
+        "name": "Thorkell Varulv",
+        "title": "Jarl von Roriksheim",
+        "sex": "male",
+        "status": "dead",
+        "birth": "????",
+        "death": "????",
+        "portrait": "assets/images/portraits/haus-varulv/thorkell-varulv.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-varulv",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 4,
+            "name": 4,
+            "title": 4,
+            "sex": 4,
+            "status": 4,
+            "birth": 4,
+            "death": 4,
+            "portrait": 4,
+            "portraitPlaceholder": 4,
+            "houseId": 4,
+            "familyRole": 4,
+            "lineageRole": 4,
+            "tags": 4,
+            "notes": 4
+          }
+        }
+      },
+      {
+        "id": "bjarnhild-vaeren",
+        "worldPersonId": "person--haus-vaeren--bjarnhild-vaeren",
+        "name": "Bjarnhild Vaeren",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "????",
+        "death": "????",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-vaeren",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 4,
+            "name": 4,
+            "title": 4,
+            "sex": 4,
+            "status": 4,
+            "birth": 4,
+            "death": 4,
+            "portrait": 4,
+            "portraitPlaceholder": 4,
+            "houseId": 4,
+            "familyRole": 4,
+            "lineageRole": 4,
+            "tags": 4,
+            "notes": 4
+          }
+        }
+      },
+      {
+        "id": "vigulf-varulv",
+        "worldPersonId": "person--haus-varulv--vigulf-varulv",
+        "name": "Vigulf Varulv",
+        "title": "Begründer des Clans Freiwinter",
+        "sex": "male",
+        "status": "dead",
+        "birth": "????",
+        "death": "????",
+        "portrait": "assets/images/portraits/haus-varulv/vigulf-varulv.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-varulv",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Kadettengründer"
+        ],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 4,
+            "name": 4,
+            "title": 4,
+            "sex": 4,
+            "status": 4,
+            "birth": 4,
+            "death": 4,
+            "portrait": 4,
+            "portraitPlaceholder": 4,
+            "houseId": 4,
+            "familyRole": 4,
+            "lineageRole": 4,
+            "tags": 4,
+            "notes": 4
+          }
+        }
+      },
+      {
+        "id": "sif",
+        "worldPersonId": "person--family-tree--sif",
+        "name": "Sif",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "????",
+        "death": "????",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 4,
+            "name": 4,
+            "title": 4,
+            "sex": 4,
+            "status": 4,
+            "birth": 4,
+            "death": 4,
+            "portrait": 4,
+            "portraitPlaceholder": 4,
+            "houseId": 4,
+            "familyRole": 4,
+            "lineageRole": 4,
+            "tags": 4,
+            "notes": 4
+          }
+        }
+      },
+      {
+        "id": "arnor-varulv",
+        "worldPersonId": "person--haus-varulv--arnor-varulv",
+        "name": "Arnór Varulv",
+        "title": "Jarl von Roriksheim",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1257",
+        "death": "1309",
+        "portrait": "assets/images/portraits/haus-varulv/arnor-varulv.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-varulv",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 4,
+            "name": 4,
+            "title": 4,
+            "sex": 4,
+            "status": 4,
+            "birth": 4,
+            "death": 4,
+            "portrait": 4,
+            "portraitPlaceholder": 4,
+            "houseId": 4,
+            "familyRole": 4,
+            "lineageRole": 4,
+            "tags": 4,
+            "notes": 4
+          }
+        }
+      },
+      {
+        "id": "annegret-wargh",
+        "worldPersonId": "person--haus-wargh--annegret-wargh",
+        "name": "Annegret Wargh",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1262",
+        "death": "1304",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-wargh",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 4,
+            "name": 4,
+            "title": 4,
+            "sex": 4,
+            "status": 4,
+            "birth": 4,
+            "death": 4,
+            "portrait": 4,
+            "portraitPlaceholder": 4,
+            "houseId": 4,
+            "familyRole": 4,
+            "lineageRole": 4,
+            "tags": 4,
+            "notes": 4
+          }
+        }
+      },
+      {
+        "id": "fannarr-varulv",
+        "worldPersonId": "person--haus-varulv--fannarr-varulv",
+        "name": "Fannarr Varulv",
+        "title": "Begründer des Clans Nachtjäger",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1259",
+        "death": "1335",
+        "portrait": "assets/images/portraits/haus-varulv/fannarr-varulv.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-varulv",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Kadettengründer"
+        ],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 4,
+            "name": 4,
+            "title": 4,
+            "sex": 4,
+            "status": 4,
+            "birth": 4,
+            "death": 4,
+            "portrait": 4,
+            "portraitPlaceholder": 4,
+            "houseId": 4,
+            "familyRole": 4,
+            "lineageRole": 4,
+            "tags": 4,
+            "notes": 4
+          }
+        }
+      },
+      {
+        "id": "ingeborg-brathfengr",
+        "worldPersonId": "person--haus-brathfengr--ingeborg-brathfengr",
+        "name": "Ingeborg Brathfengr",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1264",
+        "death": "1361",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-brathfengr",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 4,
+            "name": 4,
+            "title": 4,
+            "sex": 4,
+            "status": 4,
+            "birth": 4,
+            "death": 4,
+            "portrait": 4,
+            "portraitPlaceholder": 4,
+            "houseId": 4,
+            "familyRole": 4,
+            "lineageRole": 4,
+            "tags": 4,
+            "notes": 4
+          }
+        }
+      },
+      {
+        "id": "torger-varulv",
+        "worldPersonId": "person--haus-varulv--torger-varulv",
+        "name": "Torger Varulv",
+        "title": "Jarl von Roriksheim",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1554",
+        "death": "1600",
+        "portrait": "assets/images/portraits/haus-varulv/torger-varulv.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-varulv",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 4,
+            "name": 4,
+            "title": 4,
+            "sex": 4,
+            "status": 4,
+            "birth": 4,
+            "death": 4,
+            "portrait": 4,
+            "portraitPlaceholder": 4,
+            "houseId": 4,
+            "familyRole": 4,
+            "lineageRole": 4,
+            "tags": 4,
+            "notes": 4
+          }
+        }
+      },
+      {
+        "id": "aslaug-ragnulf",
+        "worldPersonId": "person--haus-ragnulf--aslaug-ragnulf",
+        "name": "Aslaug Ragnulf",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1559",
+        "death": "1625",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-ragnulf",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 4,
+            "name": 4,
+            "title": 4,
+            "sex": 4,
+            "status": 4,
+            "birth": 4,
+            "death": 4,
+            "portrait": 4,
+            "portraitPlaceholder": 4,
+            "houseId": 4,
+            "familyRole": 4,
+            "lineageRole": 4,
+            "tags": 4,
+            "notes": 4
+          }
+        }
+      },
+      {
+        "id": "herdis-varulv",
+        "worldPersonId": "person--haus-varulv--herdis-varulv",
+        "name": "Herdis Varulv",
+        "title": "Wegverheiratet an Clan Kampfgeborene",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1579",
+        "death": "1627",
+        "portrait": "assets/images/portraits/haus-varulv/herdis-varulv.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-varulv",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Wegverheiratet"
+        ],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 4,
+            "name": 4,
+            "title": 4,
+            "sex": 4,
+            "status": 4,
+            "birth": 4,
+            "death": 4,
+            "portrait": 4,
+            "portraitPlaceholder": 4,
+            "houseId": 4,
+            "familyRole": 4,
+            "lineageRole": 4,
+            "tags": 4,
+            "notes": 4
+          }
+        }
+      },
+      {
+        "id": "hjolm-kampfgeborene",
+        "worldPersonId": "person--haus-kampfgeborene--hjolm-kampfgeborene",
+        "name": "Hjolm Kampfgeborener",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1579",
+        "death": "1629",
+        "portrait": "assets/images/portraits/haus-varulv/hjolm-kampfgeborene.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-kampfgeborene",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 4,
+            "name": 4,
+            "title": 4,
+            "sex": 4,
+            "status": 4,
+            "birth": 4,
+            "death": 4,
+            "portrait": 4,
+            "portraitPlaceholder": 4,
+            "houseId": 4,
+            "familyRole": 4,
+            "lineageRole": 4,
+            "tags": 4,
+            "notes": 4
+          }
+        }
+      },
+      {
+        "id": "erling-varulv",
+        "worldPersonId": "person--haus-varulv--erling-varulv",
+        "name": "Erling Varulv",
+        "title": "Jarl von Roriksheim",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1577",
+        "death": "1625",
+        "portrait": "assets/images/portraits/haus-varulv/erling-varulv.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-varulv",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 4,
+            "name": 4,
+            "title": 4,
+            "sex": 4,
+            "status": 4,
+            "birth": 4,
+            "death": 4,
+            "portrait": 4,
+            "portraitPlaceholder": 4,
+            "houseId": 4,
+            "familyRole": 4,
+            "lineageRole": 4,
+            "tags": 4,
+            "notes": 4
+          }
+        }
+      },
+      {
+        "id": "dagni-brathfengr",
+        "worldPersonId": "person--haus-brathfengr--dagni-brathfengr",
+        "name": "Dagni Brathfengr",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1579",
+        "death": "1654",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-brathfengr",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 4,
+            "name": 4,
+            "title": 4,
+            "sex": 4,
+            "status": 4,
+            "birth": 4,
+            "death": 4,
+            "portrait": 4,
+            "portraitPlaceholder": 4,
+            "houseId": 4,
+            "familyRole": 4,
+            "lineageRole": 4,
+            "tags": 4,
+            "notes": 4
+          }
+        }
+      },
+      {
+        "id": "edda-varulv",
+        "worldPersonId": "person--haus-varulv--edda-varulv",
+        "name": "Edda Varulv",
+        "title": "Wegverheiratet an Haus Trachwyll O'Talfronwyn",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1583",
+        "death": "1627",
+        "portrait": "assets/images/portraits/haus-varulv/edda-varulv.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-varulv",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Wegverheiratet"
+        ],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 4,
+            "name": 4,
+            "title": 4,
+            "sex": 4,
+            "status": 4,
+            "birth": 4,
+            "death": 4,
+            "portrait": 4,
+            "portraitPlaceholder": 4,
+            "houseId": 4,
+            "familyRole": 4,
+            "lineageRole": 4,
+            "tags": 4,
+            "notes": 4
+          }
+        }
+      },
+      {
+        "id": "macsen-trachwyll",
+        "worldPersonId": "person--haus-trachwyll-talfronwyn--macsen-trachwyll",
+        "name": "Macsen Trachwyll O'Talfronwyn",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1580",
+        "death": "1650",
+        "portrait": "assets/images/portraits/haus-varulv/macsen-trachwyll.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-trachwyll-talfronwyn",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 4,
+            "name": 4,
+            "title": 4,
+            "sex": 4,
+            "status": 4,
+            "birth": 4,
+            "death": 4,
+            "portrait": 4,
+            "portraitPlaceholder": 4,
+            "houseId": 4,
+            "familyRole": 4,
+            "lineageRole": 4,
+            "tags": 4,
+            "notes": 4
+          }
+        }
+      },
+      {
+        "id": "eldgrim-varulv",
+        "worldPersonId": "person--haus-varulv--eldgrim-varulv",
+        "name": "Eldgrim Varulv",
+        "title": "Jarl von Roriksheim",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1580",
+        "death": "1625",
+        "portrait": "assets/images/portraits/haus-varulv/eldgrim-varulv.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-varulv",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 4,
+            "name": 4,
+            "title": 4,
+            "sex": 4,
+            "status": 4,
+            "birth": 4,
+            "death": 4,
+            "portrait": 4,
+            "portraitPlaceholder": 4,
+            "houseId": 4,
+            "familyRole": 4,
+            "lineageRole": 4,
+            "tags": 4,
+            "notes": 4
+          }
+        }
+      },
+      {
+        "id": "saoirse-ard-dubglais",
+        "worldPersonId": "person--haus-ard-dubglais--saoirse-ard-dubglais",
+        "name": "Saoirse Dubglais",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1581",
+        "death": "1635",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-dubglais",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 4,
+            "name": 5,
+            "title": 4,
+            "sex": 4,
+            "status": 4,
+            "birth": 4,
+            "death": 4,
+            "portrait": 4,
+            "portraitPlaceholder": 4,
+            "houseId": 5,
+            "familyRole": 4,
+            "lineageRole": 4,
+            "tags": 4,
+            "notes": 4
+          }
+        }
+      },
+      {
+        "id": "freyja-varulv",
+        "worldPersonId": "person--haus-varulv--freyja-varulv",
+        "name": "Freyja Varulv",
+        "title": "",
+        "sex": "female",
+        "status": "unknown",
+        "birth": "1600",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-varulv/freyja-varulv.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-varulv",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Die Quelle nennt weder Ehe noch Todesjahr; deshalb wird keine Wegverheiratung erfunden.",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 4,
+            "name": 4,
+            "title": 4,
+            "sex": 4,
+            "status": 4,
+            "birth": 4,
+            "death": 4,
+            "portrait": 4,
+            "portraitPlaceholder": 4,
+            "houseId": 4,
+            "familyRole": 4,
+            "lineageRole": 4,
+            "tags": 4,
+            "notes": 4
+          }
+        }
+      },
+      {
+        "id": "eldar-varulv",
+        "worldPersonId": "person--haus-varulv--eldar-varulv",
+        "name": "Eldar Varulv",
+        "title": "Jarl von Roriksheim",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1599",
+        "death": "1667",
+        "portrait": "assets/images/portraits/haus-varulv/eldar-varulv.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-varulv",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 4,
+            "name": 4,
+            "title": 4,
+            "sex": 4,
+            "status": 4,
+            "birth": 4,
+            "death": 4,
+            "portrait": 4,
+            "portraitPlaceholder": 4,
+            "houseId": 4,
+            "familyRole": 4,
+            "lineageRole": 4,
+            "tags": 4,
+            "notes": 4
+          }
+        }
+      },
+      {
+        "id": "svanhild-skald",
+        "worldPersonId": "person--haus-skald--svanhild-skald",
+        "name": "Svanhild Skald",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1628",
+        "death": "1702",
+        "portrait": "assets/images/portraits/haus-varulv/svanhild-skald.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-skald",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 4,
+            "name": 4,
+            "title": 4,
+            "sex": 4,
+            "status": 4,
+            "birth": 4,
+            "death": 4,
+            "portrait": 4,
+            "portraitPlaceholder": 4,
+            "houseId": 4,
+            "familyRole": 4,
+            "lineageRole": 4,
+            "tags": 4,
+            "notes": 4
+          }
+        }
+      },
+      {
+        "id": "astrid-varulv",
+        "worldPersonId": "person--haus-varulv--astrid-varulv",
+        "name": "Astrid Varulv",
+        "title": "Wegverheiratet an Clan Vaeren",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1603",
+        "death": "1627",
+        "portrait": "assets/images/portraits/haus-varulv/astrid-varulv.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-varulv",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Wegverheiratet"
+        ],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 4,
+            "name": 4,
+            "title": 4,
+            "sex": 4,
+            "status": 4,
+            "birth": 4,
+            "death": 4,
+            "portrait": 4,
+            "portraitPlaceholder": 4,
+            "houseId": 4,
+            "familyRole": 4,
+            "lineageRole": 4,
+            "tags": 4,
+            "notes": 4
+          }
+        }
+      },
+      {
+        "id": "roger-vaeren",
+        "worldPersonId": "person--haus-vaeren--roger-vaeren",
+        "name": "Roger Vaeren",
+        "title": "König von Aldrimar",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1606",
+        "death": "1627",
+        "portrait": "assets/images/portraits/haus-varulv/roger-vaeren.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-vaeren",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 4,
+            "name": 4,
+            "title": 4,
+            "sex": 4,
+            "status": 4,
+            "birth": 4,
+            "death": 4,
+            "portrait": 4,
+            "portraitPlaceholder": 4,
+            "houseId": 4,
+            "familyRole": 4,
+            "lineageRole": 4,
+            "tags": 4,
+            "notes": 4
+          }
+        }
+      },
+      {
+        "id": "steinarr-varulv",
+        "worldPersonId": "person--haus-varulv--steinarr-varulv",
+        "name": "Steinarr Varulv",
+        "title": "Jarl von Roriksheim",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1648",
+        "death": "1706",
+        "portrait": "assets/images/portraits/haus-varulv/steinarr-varulv.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-varulv",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 4,
+            "name": 4,
+            "title": 4,
+            "sex": 4,
+            "status": 4,
+            "birth": 4,
+            "death": 4,
+            "portrait": 4,
+            "portraitPlaceholder": 4,
+            "houseId": 4,
+            "familyRole": 4,
+            "lineageRole": 4,
+            "tags": 4,
+            "notes": 4
+          }
+        }
+      },
+      {
+        "id": "aslaug-soekeren",
+        "worldPersonId": "person--haus-soekeren--aslaug-soekeren",
+        "name": "Aslaug Sökeren",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1649",
+        "death": "1731",
+        "portrait": "assets/images/portraits/haus-varulv/aslaug-soekeren.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-soekeren",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Die Quelle schreibt den Clannamen abweichend als „Sökaren“; das Register führt kanonisch Sökeren.",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 4,
+            "name": 4,
+            "title": 4,
+            "sex": 4,
+            "status": 4,
+            "birth": 4,
+            "death": 4,
+            "portrait": 4,
+            "portraitPlaceholder": 4,
+            "houseId": 4,
+            "familyRole": 4,
+            "lineageRole": 4,
+            "tags": 4,
+            "notes": 4
+          }
+        }
+      },
+      {
+        "id": "rannveig-varulv",
+        "worldPersonId": "person--haus-varulv--rannveig-varulv",
+        "name": "Rannveig Varulv",
+        "title": "Wegverheiratet an Clan Sturmgeborene",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1650",
+        "death": "1696",
+        "portrait": "assets/images/portraits/haus-varulv/rannveig-varulv.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-varulv",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Wegverheiratet"
+        ],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 4,
+            "name": 4,
+            "title": 4,
+            "sex": 4,
+            "status": 4,
+            "birth": 4,
+            "death": 4,
+            "portrait": 4,
+            "portraitPlaceholder": 4,
+            "houseId": 4,
+            "familyRole": 4,
+            "lineageRole": 4,
+            "tags": 4,
+            "notes": 4
+          }
+        }
+      },
+      {
+        "id": "torger-sturmgeborene",
+        "worldPersonId": "person--haus-sturmgeborene--torger-sturmgeborene",
+        "name": "Torger Sturmgeborener",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1647",
+        "death": "1693",
+        "portrait": "assets/images/portraits/haus-varulv/torger-sturmgeborene.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-sturmgeborene",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 4,
+            "name": 4,
+            "title": 4,
+            "sex": 4,
+            "status": 4,
+            "birth": 4,
+            "death": 4,
+            "portrait": 4,
+            "portraitPlaceholder": 4,
+            "houseId": 4,
+            "familyRole": 4,
+            "lineageRole": 4,
+            "tags": 4,
+            "notes": 4
+          }
+        }
+      },
+      {
+        "id": "torborg-varulv",
+        "worldPersonId": "person--haus-varulv--torborg-varulv",
+        "name": "Torborg Varulv",
+        "title": "Wegverheiratet an Clan Freiwinter",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1652",
+        "death": "1735",
+        "portrait": "assets/images/portraits/haus-varulv/torborg-varulv.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-varulv",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Wegverheiratet"
+        ],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 4,
+            "name": 4,
+            "title": 4,
+            "sex": 4,
+            "status": 4,
+            "birth": 4,
+            "death": 4,
+            "portrait": 4,
+            "portraitPlaceholder": 4,
+            "houseId": 4,
+            "familyRole": 4,
+            "lineageRole": 4,
+            "tags": 4,
+            "notes": 4
+          }
+        }
+      },
+      {
+        "id": "jakul-freiwinter",
+        "worldPersonId": "person--haus-freiwinter--jakul-freiwinter",
+        "name": "Jakul Freiwinter",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1650",
+        "death": "1701",
+        "portrait": "assets/images/portraits/haus-varulv/jakul-freiwinter.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-freiwinter",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 4,
+            "name": 4,
+            "title": 4,
+            "sex": 4,
+            "status": 4,
+            "birth": 4,
+            "death": 4,
+            "portrait": 4,
+            "portraitPlaceholder": 4,
+            "houseId": 4,
+            "familyRole": 4,
+            "lineageRole": 4,
+            "tags": 4,
+            "notes": 4
+          }
+        }
+      },
+      {
+        "id": "gunnleik-varulv",
+        "worldPersonId": "person--haus-varulv--gunnleik-varulv",
+        "name": "Gunnleik Varulv",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1654",
+        "death": "1691",
+        "portrait": "assets/images/portraits/haus-varulv/gunnleik-varulv.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-varulv",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 4,
+            "name": 4,
+            "title": 4,
+            "sex": 4,
+            "status": 4,
+            "birth": 4,
+            "death": 4,
+            "portrait": 4,
+            "portraitPlaceholder": 4,
+            "houseId": 4,
+            "familyRole": 4,
+            "lineageRole": 4,
+            "tags": 4,
+            "notes": 4
+          }
+        }
+      },
+      {
+        "id": "ormhild-frostauge",
+        "worldPersonId": "person--haus-frostauge--ormhild-frostauge",
+        "name": "Ormhild Frostauge",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1655",
+        "death": "1687",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-frostauge",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 4,
+            "name": 4,
+            "title": 4,
+            "sex": 4,
+            "status": 4,
+            "birth": 4,
+            "death": 4,
+            "portrait": 4,
+            "portraitPlaceholder": 4,
+            "houseId": 4,
+            "familyRole": 4,
+            "lineageRole": 4,
+            "tags": 4,
+            "notes": 4
+          }
+        }
+      },
+      {
+        "id": "sigfast-varulv",
+        "worldPersonId": "person--haus-varulv--sigfast-varulv",
+        "name": "Sigfast Varulv",
+        "title": "Jarl von Roriksheim",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1667",
+        "death": "1720",
+        "portrait": "assets/images/portraits/haus-varulv/sigfast-varulv.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-varulv",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 4,
+            "name": 4,
+            "title": 4,
+            "sex": 4,
+            "status": 4,
+            "birth": 4,
+            "death": 4,
+            "portrait": 4,
+            "portraitPlaceholder": 4,
+            "houseId": 4,
+            "familyRole": 4,
+            "lineageRole": 4,
+            "tags": 4,
+            "notes": 4
+          }
+        }
+      },
+      {
+        "id": "rekka-kampfgeborene",
+        "worldPersonId": "person--haus-kampfgeborene--rekka-kampfgeborene",
+        "name": "Rekka Kampfgeborene",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1674",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-varulv/rekka-kampfgeborene.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-kampfgeborene",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 4,
+            "name": 4,
+            "title": 4,
+            "sex": 4,
+            "status": 4,
+            "birth": 4,
+            "death": 4,
+            "portrait": 4,
+            "portraitPlaceholder": 4,
+            "houseId": 4,
+            "familyRole": 4,
+            "lineageRole": 4,
+            "tags": 4,
+            "notes": 4
+          }
+        }
+      },
+      {
+        "id": "alva-varulv",
+        "worldPersonId": "person--haus-varulv--alva-varulv",
+        "name": "Alva Varulv",
+        "title": "Wegverheiratet an Clan Nachtjäger",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1672",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-varulv/alva-varulv.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-varulv",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Wegverheiratet"
+        ],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 4,
+            "name": 4,
+            "title": 4,
+            "sex": 4,
+            "status": 4,
+            "birth": 4,
+            "death": 4,
+            "portrait": 4,
+            "portraitPlaceholder": 4,
+            "houseId": 4,
+            "familyRole": 4,
+            "lineageRole": 4,
+            "tags": 4,
+            "notes": 4
+          }
+        }
+      },
+      {
+        "id": "torvard-nachtjaeger",
+        "worldPersonId": "person--haus-nachtjaeger--torvard-nachtjaeger",
+        "name": "Torvard Nachtjäger",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1670",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-varulv/torvard-nachtjaeger.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-nachtjaeger",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 4,
+            "name": 4,
+            "title": 4,
+            "sex": 4,
+            "status": 4,
+            "birth": 4,
+            "death": 4,
+            "portrait": 4,
+            "portraitPlaceholder": 4,
+            "houseId": 4,
+            "familyRole": 4,
+            "lineageRole": 4,
+            "tags": 4,
+            "notes": 4
+          }
+        }
+      },
+      {
+        "id": "torygg-varulv",
+        "worldPersonId": "person--haus-varulv--torygg-varulv",
+        "name": "Torygg Varulv",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1674",
+        "death": "1720",
+        "portrait": "assets/images/portraits/haus-varulv/torygg-varulv.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-varulv",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 4,
+            "name": 4,
+            "title": 4,
+            "sex": 4,
+            "status": 4,
+            "birth": 4,
+            "death": 4,
+            "portrait": 4,
+            "portraitPlaceholder": 4,
+            "houseId": 4,
+            "familyRole": 4,
+            "lineageRole": 4,
+            "tags": 4,
+            "notes": 4
+          }
+        }
+      },
+      {
+        "id": "ingrid-schwarzdorn",
+        "worldPersonId": "person--haus-schwarzdorn--ingrid-schwarzdorn",
+        "name": "Ingrid Schwarzdorn",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1675",
+        "death": "1730",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-schwarzdorn",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 4,
+            "name": 4,
+            "title": 4,
+            "sex": 4,
+            "status": 4,
+            "birth": 4,
+            "death": 4,
+            "portrait": 4,
+            "portraitPlaceholder": 4,
+            "houseId": 4,
+            "familyRole": 4,
+            "lineageRole": 4,
+            "tags": 4,
+            "notes": 4
+          }
+        }
+      },
+      {
+        "id": "erla-varulv",
+        "worldPersonId": "person--haus-varulv--erla-varulv",
+        "name": "Erla Varulv",
+        "title": "Wegverheiratet an Clan Sterkr",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1675",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-varulv/erla-varulv.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-varulv",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Wegverheiratet"
+        ],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 4,
+            "name": 4,
+            "title": 4,
+            "sex": 4,
+            "status": 4,
+            "birth": 4,
+            "death": 4,
+            "portrait": 4,
+            "portraitPlaceholder": 4,
+            "houseId": 4,
+            "familyRole": 4,
+            "lineageRole": 4,
+            "tags": 4,
+            "notes": 4
+          }
+        }
+      },
+      {
+        "id": "einarr-sterkr",
+        "worldPersonId": "person--haus-sterkr--einarr-sterkr",
+        "name": "Einarr Sterkr",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1674",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-varulv/einarr-sterkr.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-sterkr",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 4,
+            "name": 4,
+            "title": 4,
+            "sex": 4,
+            "status": 4,
+            "birth": 4,
+            "death": 4,
+            "portrait": 4,
+            "portraitPlaceholder": 4,
+            "houseId": 4,
+            "familyRole": 4,
+            "lineageRole": 4,
+            "tags": 4,
+            "notes": 4
+          }
+        }
+      },
+      {
+        "id": "gunhild-varulv",
+        "worldPersonId": "person--haus-varulv--gunhild-varulv",
+        "name": "Gunhild Varulv",
+        "title": "Wegverheiratet an Clan Brathfengr",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1680",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-varulv/gunhild-varulv.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-varulv",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Wegverheiratet"
+        ],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 4,
+            "name": 4,
+            "title": 4,
+            "sex": 4,
+            "status": 4,
+            "birth": 4,
+            "death": 4,
+            "portrait": 4,
+            "portraitPlaceholder": 4,
+            "houseId": 4,
+            "familyRole": 4,
+            "lineageRole": 4,
+            "tags": 4,
+            "notes": 4
+          }
+        }
+      },
+      {
+        "id": "vorna-brathfengr",
+        "worldPersonId": "person--haus-brathfengr--vorna-brathfengr",
+        "name": "Vorna Brathfengr",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1678",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-varulv/vorna-brathfengr.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-brathfengr",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 4,
+            "name": 4,
+            "title": 4,
+            "sex": 4,
+            "status": 4,
+            "birth": 4,
+            "death": 4,
+            "portrait": 4,
+            "portraitPlaceholder": 4,
+            "houseId": 4,
+            "familyRole": 4,
+            "lineageRole": 4,
+            "tags": 4,
+            "notes": 4
+          }
+        }
+      },
+      {
+        "id": "gunnar-varulv",
+        "worldPersonId": "person--haus-varulv--gunnar-varulv",
+        "name": "Gunnar Varulv",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1687",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-varulv/gunnar-varulv.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-varulv",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 4,
+            "name": 4,
+            "title": 4,
+            "sex": 4,
+            "status": 4,
+            "birth": 4,
+            "death": 4,
+            "portrait": 4,
+            "portraitPlaceholder": 4,
+            "houseId": 4,
+            "familyRole": 4,
+            "lineageRole": 4,
+            "tags": 4,
+            "notes": 4
+          }
+        }
+      },
+      {
+        "id": "olga-eisenbieger",
+        "worldPersonId": "person--haus-eisenbieger--olga-eisenbieger",
+        "name": "Olga Eisenbieger",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1680",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-varulv/olga-eisenbieger.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-eisenbieger",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 4,
+            "name": 4,
+            "title": 4,
+            "sex": 4,
+            "status": 4,
+            "birth": 4,
+            "death": 4,
+            "portrait": 4,
+            "portraitPlaceholder": 4,
+            "houseId": 4,
+            "familyRole": 4,
+            "lineageRole": 4,
+            "tags": 4,
+            "notes": 4
+          }
+        }
+      },
+      {
+        "id": "gleipnir-varulv",
+        "worldPersonId": "person--haus-varulv--gleipnir-varulv",
+        "name": "Gleipnir Varulv",
+        "title": "Jarl von Roriksheim seit 1720",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1694",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-varulv/gleipnir-varulv.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-varulv",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 4,
+            "name": 4,
+            "title": 4,
+            "sex": 4,
+            "status": 4,
+            "birth": 4,
+            "death": 4,
+            "portrait": 4,
+            "portraitPlaceholder": 4,
+            "houseId": 4,
+            "familyRole": 4,
+            "lineageRole": 4,
+            "tags": 4,
+            "notes": 4
+          }
+        }
+      },
+      {
+        "id": "antke-skald-varulv",
+        "worldPersonId": "person--haus-skald--antke-skald-varulv",
+        "name": "Antje Skald",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1695",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-varulv/antke-skald-varulv.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-skald",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Die Skald-Hausquelle belegt die Schreibweise Antje. Sie ist nicht identisch mit der 1696 geborenen Antke Skald der Ceirwyn-Akte; beide Frauen führen zeitgleich verschiedene Ehen.",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 4,
+            "name": 4,
+            "title": 4,
+            "sex": 4,
+            "status": 4,
+            "birth": 4,
+            "death": 4,
+            "portrait": 4,
+            "portraitPlaceholder": 4,
+            "houseId": 4,
+            "familyRole": 4,
+            "lineageRole": 4,
+            "tags": 4,
+            "notes": 4
+          }
+        }
+      },
+      {
+        "id": "sleipnir-varulv",
+        "worldPersonId": "person--haus-varulv--sleipnir-varulv",
+        "name": "Sleipnir Varulv",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1696",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-varulv/sleipnir-varulv.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-varulv",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 4,
+            "name": 4,
+            "title": 4,
+            "sex": 4,
+            "status": 4,
+            "birth": 4,
+            "death": 4,
+            "portrait": 4,
+            "portraitPlaceholder": 4,
+            "houseId": 4,
+            "familyRole": 4,
+            "lineageRole": 4,
+            "tags": 4,
+            "notes": 4
+          }
+        }
+      },
+      {
+        "id": "svantje-skaal",
+        "worldPersonId": "person--haus-skaal--svantje-skaal",
+        "name": "Svantje Skaal",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1698",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-varulv/svantje-skaal.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-skaal",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 4,
+            "name": 4,
+            "title": 4,
+            "sex": 4,
+            "status": 4,
+            "birth": 4,
+            "death": 4,
+            "portrait": 4,
+            "portraitPlaceholder": 4,
+            "houseId": 4,
+            "familyRole": 4,
+            "lineageRole": 4,
+            "tags": 4,
+            "notes": 4
+          }
+        }
+      },
+      {
+        "id": "freyrs-varulv",
+        "worldPersonId": "person--haus-varulv--freyrs-varulv",
+        "name": "Freyrs Varulv",
+        "title": "Wegverheiratet an Clan Wargh",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1698",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-varulv/freyrs-varulv.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-varulv",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Wegverheiratet"
+        ],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 4,
+            "name": 4,
+            "title": 4,
+            "sex": 4,
+            "status": 4,
+            "birth": 4,
+            "death": 4,
+            "portrait": 4,
+            "portraitPlaceholder": 4,
+            "houseId": 4,
+            "familyRole": 4,
+            "lineageRole": 4,
+            "tags": 4,
+            "notes": 4
+          }
+        }
+      },
+      {
+        "id": "ketill-wargh",
+        "worldPersonId": "person--haus-wargh--ketill-wargh",
+        "name": "Ketill Wargh",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1693",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-varulv/ketill-wargh.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-wargh",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 4,
+            "name": 4,
+            "title": 4,
+            "sex": 4,
+            "status": 4,
+            "birth": 4,
+            "death": 4,
+            "portrait": 4,
+            "portraitPlaceholder": 4,
+            "houseId": 4,
+            "familyRole": 4,
+            "lineageRole": 4,
+            "tags": 4,
+            "notes": 4
+          }
+        }
+      },
+      {
+        "id": "tyr-varulv",
+        "worldPersonId": "person--haus-varulv--tyr-varulv",
+        "name": "Tyr Varulv",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1697",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-varulv/tyr-varulv.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-varulv",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 4,
+            "name": 4,
+            "title": 4,
+            "sex": 4,
+            "status": 4,
+            "birth": 4,
+            "death": 4,
+            "portrait": 4,
+            "portraitPlaceholder": 4,
+            "houseId": 4,
+            "familyRole": 4,
+            "lineageRole": 4,
+            "tags": 4,
+            "notes": 4
+          }
+        }
+      },
+      {
+        "id": "dagmar-skjegg",
+        "worldPersonId": "person--haus-skjegg--dagmar-skjegg",
+        "name": "Dagmar Skjegg",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1698",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-varulv/dagmar-skjegg.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-skjegg",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 4,
+            "name": 4,
+            "title": 4,
+            "sex": 4,
+            "status": 4,
+            "birth": 4,
+            "death": 4,
+            "portrait": 4,
+            "portraitPlaceholder": 4,
+            "houseId": 4,
+            "familyRole": 4,
+            "lineageRole": 4,
+            "tags": 4,
+            "notes": 4
+          }
+        }
+      },
+      {
+        "id": "skirnir-varulv",
+        "worldPersonId": "person--haus-varulv--skirnir-varulv",
+        "name": "Skirnir Varulv",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1700",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-varulv/skirnir-varulv.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-varulv",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 4,
+            "name": 4,
+            "title": 4,
+            "sex": 4,
+            "status": 4,
+            "birth": 4,
+            "death": 4,
+            "portrait": 4,
+            "portraitPlaceholder": 4,
+            "houseId": 4,
+            "familyRole": 4,
+            "lineageRole": 4,
+            "tags": 4,
+            "notes": 4
+          }
+        }
+      },
+      {
+        "id": "bodvild-skogg",
+        "worldPersonId": "person--haus-skogg--bodvild-skogg",
+        "name": "Bodvild Skogg",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1700",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-varulv/bodvild-skogg.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-skogg",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 4,
+            "name": 4,
+            "title": 4,
+            "sex": 4,
+            "status": 4,
+            "birth": 4,
+            "death": 4,
+            "portrait": 4,
+            "portraitPlaceholder": 4,
+            "houseId": 4,
+            "familyRole": 4,
+            "lineageRole": 4,
+            "tags": 4,
+            "notes": 4
+          }
+        }
+      },
+      {
+        "id": "gunnvor-varulv",
+        "worldPersonId": "person--haus-varulv--gunnvor-varulv",
+        "name": "Gunnvor Varulv",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1705",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-varulv/gunnvor-varulv.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-varulv",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 4,
+            "name": 4,
+            "title": 4,
+            "sex": 4,
+            "status": 4,
+            "birth": 4,
+            "death": 4,
+            "portrait": 4,
+            "portraitPlaceholder": 4,
+            "houseId": 4,
+            "familyRole": 4,
+            "lineageRole": 4,
+            "tags": 4,
+            "notes": 4
+          }
+        }
+      },
+      {
+        "id": "edda-freiwinter",
+        "worldPersonId": "person--haus-freiwinter--edda-freiwinter",
+        "name": "Edda Freiwinter",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1705",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-varulv/edda-freiwinter.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-freiwinter",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 4,
+            "name": 4,
+            "title": 4,
+            "sex": 4,
+            "status": 4,
+            "birth": 4,
+            "death": 4,
+            "portrait": 4,
+            "portraitPlaceholder": 4,
+            "houseId": 4,
+            "familyRole": 4,
+            "lineageRole": 4,
+            "tags": 4,
+            "notes": 4
+          }
+        }
+      },
+      {
+        "id": "geri-varulv",
+        "worldPersonId": "person--haus-varulv--geri-varulv",
+        "name": "Geri Varulv",
+        "title": "Erster Erbe des Clans Varulv",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1714",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-varulv/geri-varulv.jpeg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-varulv",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 4,
+            "name": 4,
+            "title": 4,
+            "sex": 4,
+            "status": 4,
+            "birth": 4,
+            "death": 4,
+            "portrait": 4,
+            "portraitPlaceholder": 4,
+            "houseId": 4,
+            "familyRole": 4,
+            "lineageRole": 4,
+            "tags": 4,
+            "notes": 4
+          }
+        }
+      },
+      {
+        "id": "freki-varulv",
+        "worldPersonId": "person--haus-varulv--freki-varulv",
+        "name": "Freki Varulv",
+        "title": "Zweiter Erbe des Clans Varulv",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1718",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-varulv/freki-varulv.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-varulv",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 4,
+            "name": 4,
+            "title": 4,
+            "sex": 4,
+            "status": 4,
+            "birth": 4,
+            "death": 4,
+            "portrait": 4,
+            "portraitPlaceholder": 4,
+            "houseId": 4,
+            "familyRole": 4,
+            "lineageRole": 4,
+            "tags": 4,
+            "notes": 4
+          }
+        }
+      },
+      {
+        "id": "floki-varulv",
+        "worldPersonId": "person--haus-varulv--floki-varulv",
+        "name": "Floki Varulv",
+        "title": "Dritter Erbe des Clans Varulv",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1723",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-varulv/floki-varulv.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-varulv",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 4,
+            "name": 4,
+            "title": 4,
+            "sex": 4,
+            "status": 4,
+            "birth": 4,
+            "death": 4,
+            "portrait": 4,
+            "portraitPlaceholder": 4,
+            "houseId": 4,
+            "familyRole": 4,
+            "lineageRole": 4,
+            "tags": 4,
+            "notes": 4
+          }
+        }
+      },
+      {
+        "id": "skadi-varulv",
+        "worldPersonId": "person--haus-varulv--skadi-varulv",
+        "name": "Skadi Varulv",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1719",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-varulv/skadi-varulv.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-varulv",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 4,
+            "name": 4,
+            "title": 4,
+            "sex": 4,
+            "status": 4,
+            "birth": 4,
+            "death": 4,
+            "portrait": 4,
+            "portraitPlaceholder": 4,
+            "houseId": 4,
+            "familyRole": 4,
+            "lineageRole": 4,
+            "tags": 4,
+            "notes": 4
+          }
+        }
+      },
+      {
+        "id": "skalli-varulv",
+        "worldPersonId": "person--haus-varulv--skalli-varulv",
+        "name": "Skalli Varulv",
+        "title": "Wegverlobt an Haus Draig",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1716",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-draig/skalli-varulv.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-varulv",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Wegverlobt",
+          "Wegverheiratet"
+        ],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 4,
+            "name": 4,
+            "title": 4,
+            "sex": 4,
+            "status": 4,
+            "birth": 4,
+            "death": 4,
+            "portrait": 4,
+            "portraitPlaceholder": 4,
+            "houseId": 4,
+            "familyRole": 4,
+            "lineageRole": 4,
+            "tags": 4,
+            "notes": 4
+          }
+        }
+      },
+      {
+        "id": "fenrir-varulv",
+        "worldPersonId": "person--haus-varulv--fenrir-varulv",
+        "name": "Fenrir Varulv",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1718",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-varulv/fenrir-varulv.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-varulv",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 4,
+            "name": 4,
+            "title": 4,
+            "sex": 4,
+            "status": 4,
+            "birth": 4,
+            "death": 4,
+            "portrait": 4,
+            "portraitPlaceholder": 4,
+            "houseId": 4,
+            "familyRole": 4,
+            "lineageRole": 4,
+            "tags": 4,
+            "notes": 4
+          }
+        }
+      },
+      {
+        "id": "hati-varulv",
+        "worldPersonId": "person--haus-varulv--hati-varulv",
+        "name": "Hati Varulv",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1725",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-varulv/hati-varulv.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-varulv",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 4,
+            "name": 4,
+            "title": 4,
+            "sex": 4,
+            "status": 4,
+            "birth": 4,
+            "death": 4,
+            "portrait": 4,
+            "portraitPlaceholder": 4,
+            "houseId": 4,
+            "familyRole": 4,
+            "lineageRole": 4,
+            "tags": 4,
+            "notes": 4
+          }
+        }
+      },
+      {
+        "id": "ask-varulv",
+        "worldPersonId": "person--haus-varulv--ask-varulv",
+        "name": "Ask Varulv",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1721",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-varulv/ask-varulv.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-varulv",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 4,
+            "name": 4,
+            "title": 4,
+            "sex": 4,
+            "status": 4,
+            "birth": 4,
+            "death": 4,
+            "portrait": 4,
+            "portraitPlaceholder": 4,
+            "houseId": 4,
+            "familyRole": 4,
+            "lineageRole": 4,
+            "tags": 4,
+            "notes": 4
+          }
+        }
+      },
+      {
+        "id": "embla-varulv",
+        "worldPersonId": "person--haus-varulv--embla-varulv",
+        "name": "Embla Varulv",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1723",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-varulv/embla-varulv.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-varulv",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 4,
+            "name": 4,
+            "title": 4,
+            "sex": 4,
+            "status": 4,
+            "birth": 4,
+            "death": 4,
+            "portrait": 4,
+            "portraitPlaceholder": 4,
+            "houseId": 4,
+            "familyRole": 4,
+            "lineageRole": 4,
+            "tags": 4,
+            "notes": 4
+          }
+        }
+      },
+      {
+        "id": "jordis-varulv",
+        "worldPersonId": "person--haus-varulv--jordis-varulv",
+        "name": "Jördis Varulv",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1722",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-varulv/jordis-varulv.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-varulv",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 4,
+            "name": 4,
+            "title": 4,
+            "sex": 4,
+            "status": 4,
+            "birth": 4,
+            "death": 4,
+            "portrait": 4,
+            "portraitPlaceholder": 4,
+            "houseId": 4,
+            "familyRole": 4,
+            "lineageRole": 4,
+            "tags": 4,
+            "notes": 4
+          }
+        }
+      },
+      {
+        "id": "hymir-varulv",
+        "worldPersonId": "person--haus-varulv--hymir-varulv",
+        "name": "Hymir Varulv",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1729",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-varulv/hymir-varulv.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-varulv",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 4,
+            "name": 4,
+            "title": 4,
+            "sex": 4,
+            "status": 4,
+            "birth": 4,
+            "death": 4,
+            "portrait": 4,
+            "portraitPlaceholder": 4,
+            "houseId": 4,
+            "familyRole": 4,
+            "lineageRole": 4,
+            "tags": 4,
+            "notes": 4
+          }
+        }
+      },
+      {
+        "id": "mimir-varulv",
+        "worldPersonId": "person--haus-varulv--mimir-varulv",
+        "name": "Mimir Varulv",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1729",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-varulv/mimir-varulv.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-varulv",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 4,
+            "name": 4,
+            "title": 4,
+            "sex": 4,
+            "status": 4,
+            "birth": 4,
+            "death": 4,
+            "portrait": 4,
+            "portraitPlaceholder": 4,
+            "houseId": 4,
+            "familyRole": 4,
+            "lineageRole": 4,
+            "tags": 4,
+            "notes": 4
+          }
+        }
+      },
+      {
+        "id": "gunrik-varulv",
+        "worldPersonId": "person--haus-varulv--gunrik-varulv",
+        "name": "Gunrik Varulv",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1723",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-varulv/gunrik-varulv.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-varulv",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 4,
+            "name": 4,
+            "title": 4,
+            "sex": 4,
+            "status": 4,
+            "birth": 4,
+            "death": 4,
+            "portrait": 4,
+            "portraitPlaceholder": 4,
+            "houseId": 4,
+            "familyRole": 4,
+            "lineageRole": 4,
+            "tags": 4,
+            "notes": 4
+          }
+        }
+      },
+      {
+        "id": "gundel-varulv",
+        "worldPersonId": "person--haus-varulv--gundel-varulv",
+        "name": "Gundel Varulv",
+        "title": "Maer von Skalli Varulv",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1725",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-varulv/gundel-varulv.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-varulv",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Skallis Gefolge",
+          "Maer",
+          "In Ausbildung"
+        ],
+        "notes": "Gundel gehört als Maer zu Skalli Varulvs Gefolge. Maer ist die aldrimarische Bezeichnung für eine weibliche Knappe. Sie lernt unter Skallis persönlicher Anleitung gemeinsam mit Svala Bärenherz.",
+        "extensions": {
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 4,
+            "name": 4,
+            "title": 5,
+            "sex": 4,
+            "status": 4,
+            "birth": 4,
+            "death": 4,
+            "portrait": 4,
+            "portraitPlaceholder": 4,
+            "houseId": 4,
+            "familyRole": 4,
+            "lineageRole": 4,
+            "tags": 5,
+            "notes": 5
+          },
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 4
+        }
+      },
+      {
+        "id": "gunvir-varulv",
+        "worldPersonId": "person--haus-varulv--gunvir-varulv",
+        "name": "Gunvir Varulv",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1730",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-varulv/gunvir-varulv.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-varulv",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 4,
+            "name": 4,
+            "title": 4,
+            "sex": 4,
+            "status": 4,
+            "birth": 4,
+            "death": 4,
+            "portrait": 4,
+            "portraitPlaceholder": 4,
+            "houseId": 4,
+            "familyRole": 4,
+            "lineageRole": 4,
+            "tags": 4,
+            "notes": 4
+          }
+        }
+      },
+      {
+        "id": "anaraut-draig",
+        "worldPersonId": "person--haus-draig--anaraut-draig",
+        "name": "Anaraut",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1715",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-draig/anaraut-draig.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-draig",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 4,
+            "name": 4,
+            "title": 4,
+            "sex": 4,
+            "status": 4,
+            "birth": 4,
+            "death": 4,
+            "portrait": 4,
+            "portraitPlaceholder": 4,
+            "houseId": 4,
+            "familyRole": 4,
+            "lineageRole": 4,
+            "tags": 4,
+            "notes": 4
+          }
+        }
+      }
+    ],
+    "partnerships": [
+      {
+        "id": "marriage-rorik-caragh-varulv",
+        "participantIds": [
+          "rorik-varulv",
+          "caragh-varulv"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "marriage-thorkell-bjarnhild-varulv",
+        "participantIds": [
+          "thorkell-varulv",
+          "bjarnhild-vaeren"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "marriage-vigulf-sif-varulv",
+        "participantIds": [
+          "vigulf-varulv",
+          "sif"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "marriage-arnor-annegret-varulv",
+        "participantIds": [
+          "arnor-varulv",
+          "annegret-wargh"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "marriage-fannarr-ingeborg-varulv",
+        "participantIds": [
+          "fannarr-varulv",
+          "ingeborg-brathfengr"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "marriage-torger-aslaug-varulv",
+        "participantIds": [
+          "torger-varulv",
+          "aslaug-ragnulf"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "marriage-herdis-hjolm-varulv",
+        "participantIds": [
+          "herdis-varulv",
+          "hjolm-kampfgeborene"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "marriage-erling-dagni-varulv",
+        "participantIds": [
+          "erling-varulv",
+          "dagni-brathfengr"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "marriage-edda-macsen-varulv",
+        "participantIds": [
+          "edda-varulv",
+          "macsen-trachwyll"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "marriage-eldgrim-saoirse-varulv",
+        "participantIds": [
+          "eldgrim-varulv",
+          "saoirse-ard-dubglais"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "marriage-eldar-svanhild-varulv",
+        "participantIds": [
+          "eldar-varulv",
+          "svanhild-skald"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "marriage-astrid-roger-varulv",
+        "participantIds": [
+          "astrid-varulv",
+          "roger-vaeren"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "marriage-steinarr-aslaug-varulv",
+        "participantIds": [
+          "steinarr-varulv",
+          "aslaug-soekeren"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "marriage-rannveig-torger-varulv",
+        "participantIds": [
+          "rannveig-varulv",
+          "torger-sturmgeborene"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "marriage-torborg-jakul-varulv",
+        "participantIds": [
+          "torborg-varulv",
+          "jakul-freiwinter"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "marriage-gunnleik-ormhild-varulv",
+        "participantIds": [
+          "gunnleik-varulv",
+          "ormhild-frostauge"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "marriage-sigfast-rekka-varulv",
+        "participantIds": [
+          "sigfast-varulv",
+          "rekka-kampfgeborene"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "marriage-alva-torvard-varulv",
+        "participantIds": [
+          "alva-varulv",
+          "torvard-nachtjaeger"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "marriage-torygg-ingrid-varulv",
+        "participantIds": [
+          "torygg-varulv",
+          "ingrid-schwarzdorn"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "marriage-erla-einarr-varulv",
+        "participantIds": [
+          "erla-varulv",
+          "einarr-sterkr"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "marriage-gunhild-vorna-varulv",
+        "participantIds": [
+          "gunhild-varulv",
+          "vorna-brathfengr"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "marriage-gunnar-olga-varulv",
+        "participantIds": [
+          "gunnar-varulv",
+          "olga-eisenbieger"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "marriage-gleipnir-antke-varulv",
+        "participantIds": [
+          "gleipnir-varulv",
+          "antke-skald-varulv"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "marriage-sleipnir-svantje-varulv",
+        "participantIds": [
+          "sleipnir-varulv",
+          "svantje-skaal"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "marriage-freyrs-ketill-varulv",
+        "participantIds": [
+          "freyrs-varulv",
+          "ketill-wargh"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "marriage-tyr-dagmar-varulv",
+        "participantIds": [
+          "tyr-varulv",
+          "dagmar-skjegg"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "marriage-skirnir-bodvild-varulv",
+        "participantIds": [
+          "skirnir-varulv",
+          "bodvild-skogg"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "marriage-gunnvor-edda-varulv",
+        "participantIds": [
+          "gunnvor-varulv",
+          "edda-freiwinter"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "engagement-anaraut-skalli",
+        "participantIds": [
+          "anaraut-draig",
+          "skalli-varulv"
+        ],
+        "type": "engagement",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
+      }
+    ],
+    "parentages": [
+      {
+        "id": "varulv-parentage-thorkell-varulv",
+        "childId": "thorkell-varulv",
+        "parentIds": [
+          "rorik-varulv",
+          "caragh-varulv"
+        ],
+        "partnershipId": "marriage-rorik-caragh-varulv",
+        "type": "claimed",
+        "legitimacy": "unknown",
+        "certainty": "probable",
+        "visibility": "public",
+        "notes": "Die Abstammung führt über nicht einzeln überlieferte Generationen.",
+        "extensions": {
+          "timeJumpId": "gap-rorik-thorkell-varulv",
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "varulv-parentage-vigulf-varulv",
+        "childId": "vigulf-varulv",
+        "parentIds": [
+          "rorik-varulv",
+          "caragh-varulv"
+        ],
+        "partnershipId": "marriage-rorik-caragh-varulv",
+        "type": "claimed",
+        "legitimacy": "unknown",
+        "certainty": "probable",
+        "visibility": "public",
+        "notes": "Die Abstammung führt über nicht einzeln überlieferte Generationen.",
+        "extensions": {
+          "timeJumpId": "gap-rorik-thorkell-varulv",
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "varulv-parentage-arnor-varulv",
+        "childId": "arnor-varulv",
+        "parentIds": [
+          "thorkell-varulv",
+          "bjarnhild-vaeren"
+        ],
+        "partnershipId": "marriage-thorkell-bjarnhild-varulv",
+        "type": "claimed",
+        "legitimacy": "unknown",
+        "certainty": "probable",
+        "visibility": "public",
+        "notes": "Die Abstammung führt über nicht einzeln überlieferte Generationen.",
+        "extensions": {
+          "timeJumpId": "gap-thorkell-arnor-varulv",
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "varulv-parentage-fannarr-varulv",
+        "childId": "fannarr-varulv",
+        "parentIds": [
+          "thorkell-varulv",
+          "bjarnhild-vaeren"
+        ],
+        "partnershipId": "marriage-thorkell-bjarnhild-varulv",
+        "type": "claimed",
+        "legitimacy": "unknown",
+        "certainty": "probable",
+        "visibility": "public",
+        "notes": "Die Abstammung führt über nicht einzeln überlieferte Generationen.",
+        "extensions": {
+          "timeJumpId": "gap-thorkell-arnor-varulv",
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "varulv-parentage-torger-varulv",
+        "childId": "torger-varulv",
+        "parentIds": [
+          "arnor-varulv",
+          "annegret-wargh"
+        ],
+        "partnershipId": "marriage-arnor-annegret-varulv",
+        "type": "claimed",
+        "legitimacy": "unknown",
+        "certainty": "probable",
+        "visibility": "public",
+        "notes": "Die Abstammung führt über nicht einzeln überlieferte Generationen.",
+        "extensions": {
+          "timeJumpId": "gap-arnor-torger-varulv",
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "varulv-parentage-herdis-varulv",
+        "childId": "herdis-varulv",
+        "parentIds": [
+          "arnor-varulv",
+          "annegret-wargh"
+        ],
+        "partnershipId": "marriage-arnor-annegret-varulv",
+        "type": "claimed",
+        "legitimacy": "unknown",
+        "certainty": "probable",
+        "visibility": "public",
+        "notes": "Die Abstammung führt über nicht einzeln überlieferte Generationen.",
+        "extensions": {
+          "timeJumpId": "gap-arnor-torger-varulv",
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "varulv-parentage-erling-varulv",
+        "childId": "erling-varulv",
+        "parentIds": [
+          "torger-varulv",
+          "aslaug-ragnulf"
+        ],
+        "partnershipId": "marriage-torger-aslaug-varulv",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "varulv-parentage-edda-varulv",
+        "childId": "edda-varulv",
+        "parentIds": [
+          "torger-varulv",
+          "aslaug-ragnulf"
+        ],
+        "partnershipId": "marriage-torger-aslaug-varulv",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "varulv-parentage-eldgrim-varulv",
+        "childId": "eldgrim-varulv",
+        "parentIds": [
+          "torger-varulv",
+          "aslaug-ragnulf"
+        ],
+        "partnershipId": "marriage-torger-aslaug-varulv",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "varulv-parentage-freyja-varulv",
+        "childId": "freyja-varulv",
+        "parentIds": [
+          "erling-varulv",
+          "dagni-brathfengr"
+        ],
+        "partnershipId": "marriage-erling-dagni-varulv",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "varulv-parentage-eldar-varulv",
+        "childId": "eldar-varulv",
+        "parentIds": [
+          "eldgrim-varulv",
+          "saoirse-ard-dubglais"
+        ],
+        "partnershipId": "marriage-eldgrim-saoirse-varulv",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "varulv-parentage-astrid-varulv",
+        "childId": "astrid-varulv",
+        "parentIds": [
+          "eldgrim-varulv",
+          "saoirse-ard-dubglais"
+        ],
+        "partnershipId": "marriage-eldgrim-saoirse-varulv",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "varulv-parentage-steinarr-varulv",
+        "childId": "steinarr-varulv",
+        "parentIds": [
+          "eldar-varulv",
+          "svanhild-skald"
+        ],
+        "partnershipId": "marriage-eldar-svanhild-varulv",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "varulv-parentage-rannveig-varulv",
+        "childId": "rannveig-varulv",
+        "parentIds": [
+          "eldar-varulv",
+          "svanhild-skald"
+        ],
+        "partnershipId": "marriage-eldar-svanhild-varulv",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "varulv-parentage-torborg-varulv",
+        "childId": "torborg-varulv",
+        "parentIds": [
+          "eldar-varulv",
+          "svanhild-skald"
+        ],
+        "partnershipId": "marriage-eldar-svanhild-varulv",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "varulv-parentage-gunnleik-varulv",
+        "childId": "gunnleik-varulv",
+        "parentIds": [
+          "eldar-varulv",
+          "svanhild-skald"
+        ],
+        "partnershipId": "marriage-eldar-svanhild-varulv",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "varulv-parentage-sigfast-varulv",
+        "childId": "sigfast-varulv",
+        "parentIds": [
+          "steinarr-varulv",
+          "aslaug-soekeren"
+        ],
+        "partnershipId": "marriage-steinarr-aslaug-varulv",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "varulv-parentage-alva-varulv",
+        "childId": "alva-varulv",
+        "parentIds": [
+          "steinarr-varulv",
+          "aslaug-soekeren"
+        ],
+        "partnershipId": "marriage-steinarr-aslaug-varulv",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "varulv-parentage-torygg-varulv",
+        "childId": "torygg-varulv",
+        "parentIds": [
+          "steinarr-varulv",
+          "aslaug-soekeren"
+        ],
+        "partnershipId": "marriage-steinarr-aslaug-varulv",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "varulv-parentage-erla-varulv",
+        "childId": "erla-varulv",
+        "parentIds": [
+          "steinarr-varulv",
+          "aslaug-soekeren"
+        ],
+        "partnershipId": "marriage-steinarr-aslaug-varulv",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "varulv-parentage-gunhild-varulv",
+        "childId": "gunhild-varulv",
+        "parentIds": [
+          "gunnleik-varulv",
+          "ormhild-frostauge"
+        ],
+        "partnershipId": "marriage-gunnleik-ormhild-varulv",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "varulv-parentage-gunnar-varulv",
+        "childId": "gunnar-varulv",
+        "parentIds": [
+          "gunnleik-varulv",
+          "ormhild-frostauge"
+        ],
+        "partnershipId": "marriage-gunnleik-ormhild-varulv",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "varulv-parentage-gleipnir-varulv",
+        "childId": "gleipnir-varulv",
+        "parentIds": [
+          "sigfast-varulv",
+          "rekka-kampfgeborene"
+        ],
+        "partnershipId": "marriage-sigfast-rekka-varulv",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "varulv-parentage-sleipnir-varulv",
+        "childId": "sleipnir-varulv",
+        "parentIds": [
+          "sigfast-varulv",
+          "rekka-kampfgeborene"
+        ],
+        "partnershipId": "marriage-sigfast-rekka-varulv",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "varulv-parentage-freyrs-varulv",
+        "childId": "freyrs-varulv",
+        "parentIds": [
+          "sigfast-varulv",
+          "rekka-kampfgeborene"
+        ],
+        "partnershipId": "marriage-sigfast-rekka-varulv",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "varulv-parentage-tyr-varulv",
+        "childId": "tyr-varulv",
+        "parentIds": [
+          "torygg-varulv",
+          "ingrid-schwarzdorn"
+        ],
+        "partnershipId": "marriage-torygg-ingrid-varulv",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "varulv-parentage-skirnir-varulv",
+        "childId": "skirnir-varulv",
+        "parentIds": [
+          "torygg-varulv",
+          "ingrid-schwarzdorn"
+        ],
+        "partnershipId": "marriage-torygg-ingrid-varulv",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "varulv-parentage-gunnvor-varulv",
+        "childId": "gunnvor-varulv",
+        "parentIds": [
+          "gunnar-varulv",
+          "olga-eisenbieger"
+        ],
+        "partnershipId": "marriage-gunnar-olga-varulv",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "varulv-parentage-geri-varulv",
+        "childId": "geri-varulv",
+        "parentIds": [
+          "gleipnir-varulv",
+          "antke-skald-varulv"
+        ],
+        "partnershipId": "marriage-gleipnir-antke-varulv",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "varulv-parentage-freki-varulv",
+        "childId": "freki-varulv",
+        "parentIds": [
+          "gleipnir-varulv",
+          "antke-skald-varulv"
+        ],
+        "partnershipId": "marriage-gleipnir-antke-varulv",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "varulv-parentage-floki-varulv",
+        "childId": "floki-varulv",
+        "parentIds": [
+          "gleipnir-varulv",
+          "antke-skald-varulv"
+        ],
+        "partnershipId": "marriage-gleipnir-antke-varulv",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "varulv-parentage-skadi-varulv",
+        "childId": "skadi-varulv",
+        "parentIds": [
+          "gleipnir-varulv",
+          "antke-skald-varulv"
+        ],
+        "partnershipId": "marriage-gleipnir-antke-varulv",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "varulv-parentage-skalli-varulv",
+        "childId": "skalli-varulv",
+        "parentIds": [
+          "sleipnir-varulv",
+          "svantje-skaal"
+        ],
+        "partnershipId": "marriage-sleipnir-svantje-varulv",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "varulv-parentage-fenrir-varulv",
+        "childId": "fenrir-varulv",
+        "parentIds": [
+          "sleipnir-varulv",
+          "svantje-skaal"
+        ],
+        "partnershipId": "marriage-sleipnir-svantje-varulv",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "varulv-parentage-hati-varulv",
+        "childId": "hati-varulv",
+        "parentIds": [
+          "sleipnir-varulv",
+          "svantje-skaal"
+        ],
+        "partnershipId": "marriage-sleipnir-svantje-varulv",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "varulv-parentage-ask-varulv",
+        "childId": "ask-varulv",
+        "parentIds": [
+          "tyr-varulv",
+          "dagmar-skjegg"
+        ],
+        "partnershipId": "marriage-tyr-dagmar-varulv",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "varulv-parentage-embla-varulv",
+        "childId": "embla-varulv",
+        "parentIds": [
+          "tyr-varulv",
+          "dagmar-skjegg"
+        ],
+        "partnershipId": "marriage-tyr-dagmar-varulv",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "varulv-parentage-jordis-varulv",
+        "childId": "jordis-varulv",
+        "parentIds": [
+          "skirnir-varulv",
+          "bodvild-skogg"
+        ],
+        "partnershipId": "marriage-skirnir-bodvild-varulv",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "varulv-parentage-hymir-varulv",
+        "childId": "hymir-varulv",
+        "parentIds": [
+          "skirnir-varulv",
+          "bodvild-skogg"
+        ],
+        "partnershipId": "marriage-skirnir-bodvild-varulv",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "varulv-parentage-mimir-varulv",
+        "childId": "mimir-varulv",
+        "parentIds": [
+          "skirnir-varulv",
+          "bodvild-skogg"
+        ],
+        "partnershipId": "marriage-skirnir-bodvild-varulv",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "varulv-parentage-gunrik-varulv",
+        "childId": "gunrik-varulv",
+        "parentIds": [
+          "gunnvor-varulv",
+          "edda-freiwinter"
+        ],
+        "partnershipId": "marriage-gunnvor-edda-varulv",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "varulv-parentage-gundel-varulv",
+        "childId": "gundel-varulv",
+        "parentIds": [
+          "gunnvor-varulv",
+          "edda-freiwinter"
+        ],
+        "partnershipId": "marriage-gunnvor-edda-varulv",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "varulv-parentage-gunvir-varulv",
+        "childId": "gunvir-varulv",
+        "parentIds": [
+          "gunnvor-varulv",
+          "edda-freiwinter"
+        ],
+        "partnershipId": "marriage-gunnvor-edda-varulv",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
+      }
+    ],
+    "houses": [
+      {
+        "id": "house-varulv",
+        "name": "Clan Varulv",
+        "motto": "",
+        "emblem": "assets/images/houses/Aldrimar/clan-varulv.png",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "emblem"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "name": 4,
+            "emblem": 4
+          }
+        }
+      },
+      {
+        "id": "house-vaeren",
+        "name": "Clan Vaeren",
+        "motto": "",
+        "emblem": "assets/images/houses/Aldrimar/clan-vaeren.png",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "emblem"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "name": 4,
+            "emblem": 4
+          }
+        }
+      },
+      {
+        "id": "house-wargh",
+        "name": "Clan Wargh",
+        "motto": "",
+        "emblem": "assets/images/houses/Aldrimar/clan-wargh.png",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "emblem"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "name": 4,
+            "emblem": 4
+          }
+        }
+      },
+      {
+        "id": "house-ragnulf",
+        "name": "Clan Ragnulf",
+        "motto": "",
+        "emblem": "assets/images/houses/Aldrimar/clan-ragnulf.png",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "emblem"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "name": 4,
+            "emblem": 4
+          }
+        }
+      },
+      {
+        "id": "house-brathfengr",
+        "name": "Clan Brathfengr",
+        "motto": "",
+        "emblem": "assets/images/houses/Aldrimar/Roriksheim/clan-brathfengr.png",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "emblem"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "name": 4,
+            "emblem": 4
+          }
+        }
+      },
+      {
+        "id": "house-draig",
+        "name": "Haus Draig",
+        "motto": "",
+        "emblem": "assets/images/houses/Llamreis Ankunft/haus-draig.png",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "emblem"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "name": 4,
+            "emblem": 4
+          }
+        }
+      },
+      {
+        "id": "house-freiwinter",
+        "name": "Clan Freiwinter",
+        "motto": "",
+        "emblem": "assets/images/houses/Aldrimar/Roriksheim/clan-freiwinter.png",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "emblem"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "name": 4,
+            "emblem": 4
+          }
+        }
+      },
+      {
+        "id": "house-kampfgeborene",
+        "name": "Clan Kampfgeborene",
+        "motto": "",
+        "emblem": "assets/images/houses/Aldrimar/Roriksheim/clan-kampfgeborene.png",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "emblem"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "name": 4,
+            "emblem": 4
+          }
+        }
+      },
+      {
+        "id": "house-nachtjaeger",
+        "name": "Clan Nachtjäger",
+        "motto": "",
+        "emblem": "assets/images/houses/Aldrimar/Roriksheim/clan-nachtjaeger.png",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "emblem"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "name": 4,
+            "emblem": 4
+          }
+        }
+      },
+      {
+        "id": "house-skaal",
+        "name": "Clan Skaal",
+        "motto": "",
+        "emblem": "assets/images/houses/Aldrimar/Roriksheim/clan-skaal.png",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "emblem"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "name": 4,
+            "emblem": 4
+          }
+        }
+      },
+      {
+        "id": "house-skjegg",
+        "name": "Clan Skjegg",
+        "motto": "",
+        "emblem": "assets/images/houses/Aldrimar/Roriksheim/clan-skjegg.png",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "emblem"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "name": 4,
+            "emblem": 4
+          }
+        }
+      },
+      {
+        "id": "house-skald",
+        "name": "Clan Skald",
+        "motto": "",
+        "emblem": "assets/images/houses/Aldrimar/Roriksheim/clan-skald.png",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "emblem"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "name": 4,
+            "emblem": 4
+          }
+        }
+      },
+      {
+        "id": "house-soekeren",
+        "name": "Clan Sökeren",
+        "motto": "",
+        "emblem": "assets/images/houses/Aldrimar/Roriksheim/clan-soekeren.png",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "emblem"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "name": 4,
+            "emblem": 4
+          }
+        }
+      },
+      {
+        "id": "house-sterkr",
+        "name": "Clan Sterkr",
+        "motto": "",
+        "emblem": "assets/images/houses/Aldrimar/Roriksheim/clan-sterkr.png",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "emblem"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "name": 4,
+            "emblem": 4
+          }
+        }
+      },
+      {
+        "id": "house-schwarzdorn",
+        "name": "Clan Schwarzdorn",
+        "motto": "",
+        "emblem": "assets/images/houses/Aldrimar/Roriksheim/clan-schwarzdorn.png",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "emblem"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "name": 4,
+            "emblem": 4
+          }
+        }
+      },
+      {
+        "id": "house-trachwyll-talfronwyn",
+        "name": "Haus Trachwyll O'Talfronwyn",
+        "motto": "",
+        "emblem": "",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "emblem"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "name": 4,
+            "emblem": 4
+          }
+        }
+      },
+      {
+        "id": "house-ard-dubglais",
+        "name": "Clan Ard Dubglais",
+        "motto": "",
+        "emblem": "",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "emblem"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "name": 4,
+            "emblem": 4
+          }
+        }
+      },
+      {
+        "id": "house-sturmgeborene",
+        "name": "Clan Sturmgeborene",
+        "motto": "",
+        "emblem": "",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "emblem"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "name": 4,
+            "emblem": 4
+          }
+        }
+      },
+      {
+        "id": "house-frostauge",
+        "name": "Clan Frostauge",
+        "motto": "",
+        "emblem": "",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "emblem"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "name": 4,
+            "emblem": 4
+          }
+        }
+      },
+      {
+        "id": "house-eisenbieger",
+        "name": "Clan Eisenbieger",
+        "motto": "",
+        "emblem": "",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "emblem"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "name": 4,
+            "emblem": 4
+          }
+        }
+      },
+      {
+        "id": "house-skogg",
+        "name": "Clan Skogg",
+        "motto": "",
+        "emblem": "",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "emblem"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "name": 4,
+            "emblem": 4
+          }
+        }
+      },
+      {
+        "id": "house-dubglais",
+        "name": "Clan Mac Dubglais",
+        "motto": "",
+        "emblem": "assets/images/houses/Faelaorn/clan-dubglais.png",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "emblem",
+            "motto",
+            "status"
+          ],
+          "registryManagedFieldRevisions": {
+            "name": 5,
+            "emblem": 5,
+            "motto": 5,
+            "status": 5
+          },
+          "registryManagedSourceRevision": 5
+        }
+      }
+    ],
+    "cadetBranches": [
+      {
+        "id": "cadet-freiwinter-vigulf-sif",
+        "name": "Clan Freiwinter",
+        "subtitle": "Kadettenclan der Varulv",
+        "linkType": "cadet-house",
+        "parentPartnershipId": "marriage-vigulf-sif-varulv",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-freiwinter",
+        "emblem": "assets/images/houses/Aldrimar/Roriksheim/clan-freiwinter.png",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-freiwinter",
+        "notes": "Vigulf Varulv und Sif begründen den Clan Freiwinter; der Hausknoten hängt direkt unter ihrem Paar.",
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "cadet-nachtjaeger-fannarr-ingeborg",
+        "name": "Clan Nachtjäger",
+        "subtitle": "Kadettenclan der Varulv",
+        "linkType": "cadet-house",
+        "parentPartnershipId": "marriage-fannarr-ingeborg-varulv",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-nachtjaeger",
+        "emblem": "assets/images/houses/Aldrimar/Roriksheim/clan-nachtjaeger.png",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-nachtjaeger",
+        "notes": "Fannarr Varulv und Ingeborg Brathfengr begründen den Clan Nachtjäger; der Hausknoten hängt direkt unter ihrem Paar.",
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "married-away-herdis-varulv-kampfgeborene",
+        "name": "Clan Kampfgeborene",
+        "subtitle": "Wegverheiratet an Clan Kampfgeborene",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-herdis-hjolm-varulv",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-kampfgeborene",
+        "emblem": "assets/images/houses/Aldrimar/Roriksheim/clan-kampfgeborene.png",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-kampfgeborene",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "parentPartnershipId",
+            "houseId",
+            "targetFamilyId",
+            "emblem",
+            "subtitle"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "name": 4,
+            "parentPartnershipId": 4,
+            "houseId": 4,
+            "targetFamilyId": 4,
+            "emblem": 4,
+            "subtitle": 4
+          }
+        }
+      },
+      {
+        "id": "married-away-edda-varulv-trachwyll",
+        "name": "Haus Trachwyll O'Talfronwyn",
+        "subtitle": "Wegverheiratet an Haus Trachwyll O'Talfronwyn",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-edda-macsen-varulv",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-trachwyll-talfronwyn",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-trachwyll-talfronwyn",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "parentPartnershipId",
+            "houseId",
+            "targetFamilyId",
+            "emblem",
+            "subtitle"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "name": 4,
+            "parentPartnershipId": 4,
+            "houseId": 4,
+            "targetFamilyId": 4,
+            "emblem": 4,
+            "subtitle": 4
+          }
+        }
+      },
+      {
+        "id": "married-away-astrid-varulv-vaeren",
+        "name": "Clan Vaeren",
+        "subtitle": "Wegverheiratet an Clan Vaeren",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-astrid-roger-varulv",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-vaeren",
+        "emblem": "assets/images/houses/Aldrimar/clan-vaeren.png",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-vaeren",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "parentPartnershipId",
+            "houseId",
+            "targetFamilyId",
+            "emblem",
+            "subtitle"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "name": 4,
+            "parentPartnershipId": 4,
+            "houseId": 4,
+            "targetFamilyId": 4,
+            "emblem": 4,
+            "subtitle": 4
+          }
+        }
+      },
+      {
+        "id": "married-away-rannveig-varulv-sturmgeborene",
+        "name": "Clan Sturmgeborene",
+        "subtitle": "Wegverheiratet an Clan Sturmgeborene",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-rannveig-torger-varulv",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-sturmgeborene",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-sturmgeborene",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "parentPartnershipId",
+            "houseId",
+            "targetFamilyId",
+            "emblem",
+            "subtitle"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "name": 4,
+            "parentPartnershipId": 4,
+            "houseId": 4,
+            "targetFamilyId": 4,
+            "emblem": 4,
+            "subtitle": 4
+          }
+        }
+      },
+      {
+        "id": "married-away-torborg-varulv-freiwinter",
+        "name": "Clan Freiwinter",
+        "subtitle": "Wegverheiratet an Clan Freiwinter",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-torborg-jakul-varulv",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-freiwinter",
+        "emblem": "assets/images/houses/Aldrimar/Roriksheim/clan-freiwinter.png",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-freiwinter",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "parentPartnershipId",
+            "houseId",
+            "targetFamilyId",
+            "emblem",
+            "subtitle"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "name": 4,
+            "parentPartnershipId": 4,
+            "houseId": 4,
+            "targetFamilyId": 4,
+            "emblem": 4,
+            "subtitle": 4
+          }
+        }
+      },
+      {
+        "id": "married-away-alva-varulv-nachtjaeger",
+        "name": "Clan Nachtjäger",
+        "subtitle": "Wegverheiratet an Clan Nachtjäger",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-alva-torvard-varulv",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-nachtjaeger",
+        "emblem": "assets/images/houses/Aldrimar/Roriksheim/clan-nachtjaeger.png",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-nachtjaeger",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "parentPartnershipId",
+            "houseId",
+            "targetFamilyId",
+            "emblem",
+            "subtitle"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "name": 4,
+            "parentPartnershipId": 4,
+            "houseId": 4,
+            "targetFamilyId": 4,
+            "emblem": 4,
+            "subtitle": 4
+          }
+        }
+      },
+      {
+        "id": "married-away-erla-varulv-sterkr",
+        "name": "Clan Sterkr",
+        "subtitle": "Wegverheiratet an Clan Sterkr",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-erla-einarr-varulv",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-sterkr",
+        "emblem": "assets/images/houses/Aldrimar/Roriksheim/clan-sterkr.png",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-sterkr",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "parentPartnershipId",
+            "houseId",
+            "targetFamilyId",
+            "emblem",
+            "subtitle"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "name": 4,
+            "parentPartnershipId": 4,
+            "houseId": 4,
+            "targetFamilyId": 4,
+            "emblem": 4,
+            "subtitle": 4
+          }
+        }
+      },
+      {
+        "id": "married-away-gunhild-varulv-brathfengr",
+        "name": "Clan Brathfengr",
+        "subtitle": "Wegverheiratet an Clan Brathfengr",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-gunhild-vorna-varulv",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-brathfengr",
+        "emblem": "assets/images/houses/Aldrimar/Roriksheim/clan-brathfengr.png",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-brathfengr",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "parentPartnershipId",
+            "houseId",
+            "targetFamilyId",
+            "emblem",
+            "subtitle"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "name": 4,
+            "parentPartnershipId": 4,
+            "houseId": 4,
+            "targetFamilyId": 4,
+            "emblem": 4,
+            "subtitle": 4
+          }
+        }
+      },
+      {
+        "id": "married-away-freyrs-varulv-wargh",
+        "name": "Clan Wargh",
+        "subtitle": "Wegverheiratet an Clan Wargh",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-freyrs-ketill-varulv",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-wargh",
+        "emblem": "assets/images/houses/Aldrimar/clan-wargh.png",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-wargh",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "parentPartnershipId",
+            "houseId",
+            "targetFamilyId",
+            "emblem",
+            "subtitle"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "name": 4,
+            "parentPartnershipId": 4,
+            "houseId": 4,
+            "targetFamilyId": 4,
+            "emblem": 4,
+            "subtitle": 4
+          }
+        }
+      },
+      {
+        "id": "engaged-away-skalli-varulv-draig",
+        "name": "Haus Draig",
+        "subtitle": "Wegverlobt an Haus Draig",
+        "linkType": "married-away",
+        "parentPartnershipId": "engagement-anaraut-skalli",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-draig",
+        "emblem": "assets/images/houses/Llamreis Ankunft/haus-draig.png",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-draig",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "parentPartnershipId",
+            "houseId",
+            "targetFamilyId",
+            "emblem",
+            "subtitle"
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "name": 4,
+            "parentPartnershipId": 4,
+            "houseId": 4,
+            "targetFamilyId": 4,
+            "emblem": 4,
+            "subtitle": 4
+          }
+        }
+      }
+    ],
+    "timeJumps": [
+      {
+        "id": "gap-rorik-thorkell-varulv",
+        "parentPartnershipId": "marriage-rorik-caragh-varulv",
+        "sharedParentPartnershipIds": [],
+        "parentPersonId": "",
+        "childIds": [
+          "thorkell-varulv",
+          "vigulf-varulv"
+        ],
+        "years": 0,
+        "fromYear": "????",
+        "toYear": "????",
+        "label": "Nicht einzeln überlieferte Generationen",
+        "notes": "Absoluter serieller Generationentrenner; Seitenzweige und Hausknoten werden nicht parallel als Fortsetzung geführt.",
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "gap-thorkell-arnor-varulv",
+        "parentPartnershipId": "marriage-thorkell-bjarnhild-varulv",
+        "sharedParentPartnershipIds": [],
+        "parentPersonId": "",
+        "childIds": [
+          "arnor-varulv",
+          "fannarr-varulv"
+        ],
+        "years": 0,
+        "fromYear": "????",
+        "toYear": "1257",
+        "label": "Nicht einzeln überlieferte Generationen",
+        "notes": "Absoluter serieller Generationentrenner; Seitenzweige und Hausknoten werden nicht parallel als Fortsetzung geführt.",
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "gap-arnor-torger-varulv",
+        "parentPartnershipId": "marriage-arnor-annegret-varulv",
+        "sharedParentPartnershipIds": [],
+        "parentPersonId": "",
+        "childIds": [
+          "torger-varulv",
+          "herdis-varulv"
+        ],
+        "years": 0,
+        "fromYear": "1309",
+        "toYear": "1554",
+        "label": "Nicht einzeln überlieferte Generationen",
+        "notes": "Absoluter serieller Generationentrenner; Seitenzweige und Hausknoten werden nicht parallel als Fortsetzung geführt.",
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
+      }
+    ],
+    "lineage": {
+      "founderPartnershipId": "marriage-rorik-caragh-varulv",
+      "houseId": "house-varulv",
+      "crestSubtitle": "Jarlsclan von Roriksheim · Sitz Rorikshall",
+      "crestEmblemScale": 0.86,
+      "crestFrame": "gold",
+      "crestFrameScale": 1,
+      "timeGap": {
+        "enabled": false,
+        "years": 0,
+        "fromYear": "",
+        "toYear": "",
+        "label": ""
+      },
+      "originHouse": {
+        "enabled": false,
+        "id": "lineage-origin-house",
+        "houseId": "",
+        "name": "Ursprungshaus",
+        "subtitle": "",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "childIds": [],
+        "targetFamilyId": "",
+        "notes": "",
+        "timeGap": {
+          "enabled": false,
+          "years": 0,
+          "fromYear": "",
+          "toYear": "",
+          "label": ""
+        }
+      }
+    },
+    "presentation": {
+      "relationshipColors": {
+        "marriage": "#326c4a",
+        "engagement": "#b88b37",
+        "union": "#8e2724",
+        "affair": "#704485",
+        "concubinage": "#704485",
+        "political": "#9d7d48",
+        "forced": "#c7a974",
+        "biological": "#8e2724",
+        "adoptive": "#2f75a8",
+        "foster": "#2f75a8",
+        "step": "#7eb4d7",
+        "magical": "#704485",
+        "claimed": "#62615e"
+      }
+    },
+    "view": {
+      "focusPersonId": "rorik-varulv",
+      "orientation": "vertical",
+      "ancestorDepth": 24,
+      "descendantDepth": 24,
+      "limitGenerations": false,
+      "showSiblings": true
+    },
+    "extensions": {
+      "blankFamily": false,
+      "sourceRevision": 5,
+      "registryManagedEntitySourceRevision": 4,
+      "sourceModule": "Clan Varulv O'Rorikshall (bereitgestellte Altdaten)",
+      "sourceNote": "Genealogie, Lebensdaten, Jarlfolge und Porträtzuordnungen folgen der bereitgestellten Varulv-Hausseite. Rorik und Caragh tragen den Hausknoten; drei Quellenlücken werden als strikt serielle absolute Generationentrenner umgesetzt. Vigulf und Sif begründen Clan Freiwinter, Fannarr und Ingeborg Brathfengr Clan Nachtjäger; beide Kadettenknoten hängen direkt unter dem jeweiligen Gründerpaar und führen die Varulv-Hauptlinie nicht fort. Verheiratete Varulv-Frauen erhalten direkte Zielclanknoten; ihre Kinder werden nur im Zielclan fortgeführt. Skallis Verlobung mit Anaraut Draig verwendet dieselben Weltpersonen, dieselbe Partnerschaft und dieselben Porträts wie die Draig-Gegenakte. Wiederholte Standardsilhouetten und vier namenlose Verlobungsplatzhalter wurden nicht als Individualpersonen importiert. Die später ausgewertete Skald-Hausquelle korrigiert die 1695 geborene Ehefrau Gleipnirs von Antke zu Antje; sie bleibt von der 1696 geborenen Antke der Ceirwyn-Akte getrennt.",
+      "registryManagedExtensionFields": [
+        "blankFamily",
+        "sourceNote",
+        "brannSourceCounterInventory"
+      ],
+      "registryManagedHouseProfileFields": [
+        "rankId",
+        "seat",
+        "barony",
+        "county",
+        "kingdom",
+        "liegeHouseId",
+        "liegeHouseName",
+        "secondarySeats",
+        "regionEmblems"
+      ],
+      "registryManagedRecordFields": [
+        "folderPath"
+      ],
+      "registryManagedViewFields": [
+        "focusPersonId",
+        "limitGenerations"
+      ],
+      "brannSourceCounterInventory": "assets/data/source-inventories/brann-families-audit-2026-10-08.json"
+    }
+  }
+}

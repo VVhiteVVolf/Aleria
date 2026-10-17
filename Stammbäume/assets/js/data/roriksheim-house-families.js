@@ -19,6 +19,7 @@ import { HOUSE_SKJEGG_FAMILY } from './house-skjegg-family.js';
 import { HOUSE_SOEKEREN_FAMILY } from './house-soekeren-family.js';
 import { HOUSE_STERKR_FAMILY } from './house-sterkr-family.js';
 import { HOUSE_VANGANDR_FAMILY } from './house-vangandr-family.js';
+import { extendRorikshallSkalliRetinueFamily } from './rorikshall-skalli-retinue-families.js';
 
 export const RORIKSHEIM_ACTIVE_CLAN_DEFINITIONS = Object.freeze([
   Object.freeze({ slug: 'schwarzdorn', title: 'Clan Schwarzdorn', rank: 'Hesire', territory: 'Rorikshall' }),
@@ -153,7 +154,7 @@ export const RORIKSHEIM_DEPENDENT_HOUSE_FAMILIES = Object.freeze([
   ...RORIKSHEIM_HUSKARL_CLAN_DEFINITIONS.map(definition => (
     definition.slug === 'eisenjungfer'
       ? HOUSE_EISENJUNGFER_FAMILY
-      : huskarlClanFamily(definition)
+      : extendRorikshallSkalliRetinueFamily(huskarlClanFamily(definition))
   )),
   ...RORIKSHEIM_CIVIL_HOUSE_DEFINITIONS.map(definition => {
     if (definition.slug === 'frostgeborene') return HOUSE_FROSTGEBORENE_FAMILY;
