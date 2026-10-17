@@ -739,7 +739,7 @@ function moveModuleToSection(entryId, targetSignature, options = {}) {
 
   const targetSection = cleanModuleSectionMove(target);
   const existingCustom = findCustomSectionByEntryId(id);
-  if (existingCustom) {
+  if (existingCustom && !findBuiltinSectionByEntryId(id)) {
     removeCustomModuleById(id);
     upsertCustomModule(targetSection, current.entry);
   } else {

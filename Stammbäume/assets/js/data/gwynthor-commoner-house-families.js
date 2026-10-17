@@ -14,12 +14,16 @@ import { HOUSE_CRAIGDDU_FAMILY } from './house-craigddu-family.js';
 import { KANNE_HOUSE_FAMILIES } from './krumme-kanne-families.js';
 import { KANNE_FAMILY_DEFINITIONS } from './krumme-kanne-family-people.js';
 import { HOUSE_RAVES_FAMILY } from './eleganz-family-records.js';
+import { HOUSE_GOFRANN_FAMILY } from './gofrann-family-records.js';
+import { HOUSE_VANN_FAMILY } from './vann-family-records.js';
 
 const EMBLEM_ROOT = 'assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor';
 
 export const GWYNTHOR_COMMONER_HOUSE_DEFINITIONS = Object.freeze([
   ...KANNE_FAMILY_DEFINITIONS,
   Object.freeze({ slug: 'raves', title: 'Raves', file: 'Raves.png' }),
+  Object.freeze({ slug: 'gofrann', title: 'Gofrann', file: 'Gofrann.png' }),
+  Object.freeze({ slug: 'vann', title: 'Vann', file: 'Vann.png' }),
   Object.freeze({ slug: 'draenmelyn', title: 'Draenmelyn', file: 'Draenmelyn.png' }),
   Object.freeze({ slug: 'pendrwn', title: 'Pendrwn', file: 'Pendrwn.png' }),
   Object.freeze({ slug: 'swyll', title: 'Swyll', file: 'Swyll.png' }),
@@ -35,6 +39,8 @@ export const GWYNTHOR_COMMONER_HOUSE_DEFINITIONS = Object.freeze([
 
 const DEVELOPED_FAMILIES = Object.freeze({
   raves: HOUSE_RAVES_FAMILY,
+  gofrann: HOUSE_GOFRANN_FAMILY,
+  vann: HOUSE_VANN_FAMILY,
   ...Object.fromEntries(KANNE_HOUSE_FAMILIES.map(family => [family.document.id.replace('haus-', ''), family])),
   aelmor: HOUSE_AELMOR_FAMILY,
   braglas: HOUSE_BRAGLAS_FAMILY,

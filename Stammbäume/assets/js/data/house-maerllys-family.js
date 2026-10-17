@@ -1,4 +1,5 @@
 import { DEFAULT_RELATIONSHIP_COLORS } from '../config/family-colors.js';
+import { withVannFamilyLink } from './vann-family-links.js';
 import { createFounderTimeJumpPlaceholderHouseFamily } from './blank-house-family-factory.js';
 import { GWYNTHOR_COMMONER_HOUSE_PROFILES } from './celtigerns-wacht-house-profiles.js';
 import {
@@ -28,7 +29,7 @@ const BASE_FAMILY = createFounderTimeJumpPlaceholderHouseFamily({
   title: 'Haus Maerllys',
   emblem: MAERLLYS_EMBLEM,
   houseProfile: GWYNTHOR_COMMONER_HOUSE_PROFILES.maerllys,
-  description: 'Ein kleines bürgerliches Haus aus Gwynthor, dessen jüngste Generation um Nia Maerllys bewusst unverheiratet bleibt.',
+  description: 'Ein kleines bürgerliches Haus aus Gwynthor um Nia Maerllys; ihre Schwester Elowen ist in das Haus Vann verheiratet.',
   toYear: '1662',
   timeJumpLabel: 'Die belegte Maerllys-Linie setzt mit Cadfan und Owain um 1662 wieder ein',
   pendingDescendantReview: false
@@ -69,7 +70,7 @@ const FOUNDER_IDS = BASE_FAMILY.partnerships[0].participantIds;
 const TIME_JUMP_ID = BASE_FAMILY.timeJumps[0].id;
 const GRANDPARENT_IDS = ['cadfan-maerllys', 'eira-spouse-maerllys'];
 
-export const HOUSE_MAERLLYS_FAMILY = withEleganzMaerllysLink({
+export const HOUSE_MAERLLYS_FAMILY = withVannFamilyLink(withEleganzMaerllysLink({
   ...BASE_FAMILY,
   houses: Object.freeze([
     ...BASE_FAMILY.houses,
@@ -202,6 +203,6 @@ export const HOUSE_MAERLLYS_FAMILY = withEleganzMaerllysLink({
     pendingDescendantReview: false,
     sourceRevision: 4,
     registryManagedViewFields: Object.freeze(['focusPersonId', 'limitGenerations']),
-    sourceNote: 'Die konkrete Maerllys-Linie reicht nur bis zu Nias Großvater Cadfan und dessen Bruder Owain. Owain und Gwenllian Ysgrif haben Geraint sowie Rhoswen, die an Madoc Tonnarth verheiratet ist; ihre Ehe und der direkte Tonnarth-Zielknoten werden in beiden Gegenakten geführt, während die drei Kinder ausschließlich im Zielhaus Tonnarth erscheinen. Geraints Ehe mit Llio Falchdyn wird als dieselbe Weltperson und dieselbe Partnerschaft auch in der neuen Falchdyn-Gegenakte geführt; mangels vorgegebener Kinder entsteht daraus in keiner Akte eine zusätzliche Nachkommenslinie. Nia ist mangels vorgegebener Altersangabe im Jahr 1740 vorläufig vierundzwanzig Jahre alt; sie sowie Elowen und Rhys bleiben unverheiratet und ohne Verlobung. Nias Mutter Bronwen Swyll und Großonkel Owains Ehe mit Gwenllian Ysgrif werden mit gemeinsamen Weltpersonen- und Partnerschafts-IDs in den jeweiligen Gegenstammbäumen geführt. Das vorgegebene Nia-Porträt wurde lokal gesichert.'
+    sourceNote: 'Die konkrete Maerllys-Linie reicht nur bis zu Nias Großvater Cadfan und dessen Bruder Owain. Owain und Gwenllian Ysgrif haben Geraint sowie Rhoswen, die an Madoc Tonnarth verheiratet ist; ihre Ehe und der direkte Tonnarth-Zielknoten werden in beiden Gegenakten geführt, während die drei Kinder ausschließlich im Zielhaus Tonnarth erscheinen. Geraints Ehe mit Llio Falchdyn wird als dieselbe Weltperson und dieselbe Partnerschaft auch in der neuen Falchdyn-Gegenakte geführt; mangels vorgegebener Kinder entsteht daraus in keiner Akte eine zusätzliche Nachkommenslinie. Nia ist mangels vorgegebener Altersangabe im Jahr 1740 vorläufig vierundzwanzig Jahre alt; sie und Rhys bleiben unverheiratet und ohne Verlobung. Elowens Ehe mit Edern Vann wird in beiden Häusern geführt. Nias Mutter Bronwen Swyll und Großonkel Owains Ehe mit Gwenllian Ysgrif werden mit gemeinsamen Weltpersonen- und Partnerschafts-IDs in den jeweiligen Gegenstammbäumen geführt. Das vorgegebene Nia-Porträt wurde lokal gesichert.'
   })
-});
+}));

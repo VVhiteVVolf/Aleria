@@ -1,0 +1,1210 @@
+{
+  "schemaVersion": 1,
+  "familyId": "haus-vann",
+  "revision": 1,
+  "updatedAt": "2026-10-17T00:23:36.950Z",
+  "family": {
+    "schema": "aleria.family-tree",
+    "schemaVersion": 1,
+    "document": {
+      "id": "haus-vann",
+      "title": "Haus Vann",
+      "motto": "Dem Gast das Beste.",
+      "description": "Wohlhabendes Gwynthorer Bürgerhaus und seit 1334 Eigentümer von Celtigerns Letzter Rast. Brenn und Madoc führen das traditionsreiche Gasthaus mit gehobener Küche, Salons und Herberge.",
+      "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Vann.png",
+      "houseProfile": {
+        "rankId": "commoner",
+        "seat": "Gwynthor",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "haus-draig",
+        "liegeHouseName": "Haus Draig",
+        "regionEmblems": {
+          "seat": "",
+          "barony": "",
+          "county": "",
+          "kingdom": ""
+        }
+      }
+    },
+    "persons": [
+      {
+        "id": "iestyn-vann",
+        "worldPersonId": "person--haus-vann--iestyn-vann",
+        "name": "Iestyn Vann",
+        "title": "Erwarb die Letzte Rast 1334",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1303",
+        "death": "1379",
+        "portrait": "../AleriaAlmanach/assets/letzte-rast/portraits/iestyn.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-vann",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Erwarb die Letzte Rast 1334",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "title",
+            "notes",
+            "portrait"
+          ],
+          "portraitAge": 76
+        }
+      },
+      {
+        "id": "efa-vann",
+        "worldPersonId": "person--haus-vann--efa-vann",
+        "name": "Efa",
+        "title": "Mitbegründerin des Vann-Gasthaushalts",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1307",
+        "death": "1381",
+        "portrait": "../AleriaAlmanach/assets/letzte-rast/portraits/efa.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Mitbegründerin des Vann-Gasthaushalts",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "title",
+            "notes",
+            "portrait"
+          ],
+          "portraitAge": 74
+        }
+      },
+      {
+        "id": "tudwal-vann",
+        "worldPersonId": "person--haus-vann--tudwal-vann",
+        "name": "Tudwal Vann",
+        "title": "Brenns und Madocs Vater · früherer Inhaber",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1644",
+        "death": "1720",
+        "portrait": "../AleriaAlmanach/assets/letzte-rast/portraits/tudwal.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-vann",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Brenns und Madocs Vater · früherer Inhaber",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "title",
+            "notes",
+            "portrait"
+          ],
+          "portraitAge": 76
+        }
+      },
+      {
+        "id": "gwenith-vann",
+        "worldPersonId": "person--haus-vann--gwenith-vann",
+        "name": "Gwenith",
+        "title": "Brenns und Madocs Mutter",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1648",
+        "death": "1725",
+        "portrait": "../AleriaAlmanach/assets/letzte-rast/portraits/gwenith.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Brenns und Madocs Mutter",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "title",
+            "notes",
+            "portrait"
+          ],
+          "portraitAge": 77
+        }
+      },
+      {
+        "id": "brenn-vann",
+        "worldPersonId": "person--haus-vann--brenn-vann",
+        "name": "Brenn Vann",
+        "title": "Hausoberhaupt · leitender Inhaber",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1673",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/letzte-rast/references/brenn.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-vann",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [],
+        "notes": "Hausoberhaupt · leitender Inhaber",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "title",
+            "notes",
+            "portrait"
+          ],
+          "portraitAge": 67
+        }
+      },
+      {
+        "id": "seren-vann",
+        "worldPersonId": "person--haus-vann--seren-vann",
+        "name": "Seren",
+        "title": "Hausmutter · Empfang und Festgesellschaften",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1677",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/letzte-rast/portraits/seren.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Hausmutter · Empfang und Festgesellschaften",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "title",
+            "notes",
+            "portrait"
+          ],
+          "portraitAge": 63
+        }
+      },
+      {
+        "id": "madoc-vann",
+        "worldPersonId": "person--haus-vann--madoc-vann",
+        "name": "Madoc Vann",
+        "title": "Mitinhaber · Meier und Rechnungen",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1677",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/letzte-rast/references/madoc.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-vann",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Mitinhaber · Meier und Rechnungen",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "title",
+            "notes",
+            "portrait"
+          ],
+          "portraitAge": 63
+        }
+      },
+      {
+        "id": "lowri-vann",
+        "worldPersonId": "person--haus-vann--lowri-vann",
+        "name": "Lowri",
+        "title": "Hausdame · Kammern und Hauswäsche",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1680",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/letzte-rast/portraits/lowri.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Hausdame · Kammern und Hauswäsche",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "title",
+            "notes",
+            "portrait"
+          ],
+          "portraitAge": 60
+        }
+      },
+      {
+        "id": "cadeyrn-vann",
+        "worldPersonId": "person--haus-vann--cadeyrn-vann",
+        "name": "Cadeyrn Vann",
+        "title": "Erster Erbe · Leitung des Speisebetriebs",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1697",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/letzte-rast/references/cadeyrn.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-vann",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Erster Erbe · Leitung des Speisebetriebs",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "title",
+            "notes",
+            "portrait"
+          ],
+          "portraitAge": 43
+        }
+      },
+      {
+        "id": "angharad-vann",
+        "worldPersonId": "person--haus-vann--angharad-vann",
+        "name": "Angharad",
+        "title": "Speisemeisterin · Tischdienst und Bankette",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1699",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/letzte-rast/portraits/angharad.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Speisemeisterin · Tischdienst und Bankette",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "title",
+            "notes",
+            "portrait"
+          ],
+          "portraitAge": 41
+        }
+      },
+      {
+        "id": "owain-vann",
+        "worldPersonId": "person--haus-vann--owain-vann",
+        "name": "Owain Vann",
+        "title": "Keller und Importbezug",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1701",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/letzte-rast/references/owain.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-vann",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Keller und Importbezug",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "title",
+            "notes",
+            "portrait"
+          ],
+          "portraitAge": 39
+        }
+      },
+      {
+        "id": "meleri-vann",
+        "worldPersonId": "person--haus-vann--meleri-vann",
+        "name": "Meleri",
+        "title": "Kontor · Lieferlisten und Vorräte",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1706",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/letzte-rast/portraits/meleri.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Kontor · Lieferlisten und Vorräte",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "title",
+            "notes",
+            "portrait"
+          ],
+          "portraitAge": 34
+        }
+      },
+      {
+        "id": "edern-vann",
+        "worldPersonId": "person--haus-vann--edern-vann",
+        "name": "Edern Vann",
+        "title": "Herbergsmeister · Zimmer und Buchungen",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1705",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/letzte-rast/references/edern.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-vann",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Herbergsmeister · Zimmer und Buchungen",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "title",
+            "notes",
+            "portrait"
+          ],
+          "portraitAge": 35
+        }
+      },
+      {
+        "id": "elowen-maerllys",
+        "worldPersonId": "person--haus-maerllys--elowen-maerllys",
+        "name": "Elowen Maerllys",
+        "title": "Empfang · Buchungen und Hausleinen",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1713",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/letzte-rast/portraits/elowen.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-maerllys",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Empfang · Buchungen und Hausleinen",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "title",
+            "notes",
+            "portrait"
+          ],
+          "portraitAge": 27
+        }
+      },
+      {
+        "id": "eirlys-vann",
+        "worldPersonId": "person--haus-vann--eirlys-vann",
+        "name": "Eirlys Vann",
+        "title": "Nach Haus Raves verheiratet · Beratung in der Göttlichen Eleganz",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1710",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/letzte-rast/references/eirlys.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-vann",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Nach Haus Raves verheiratet · Beratung in der Göttlichen Eleganz",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "title",
+            "notes",
+            "portrait"
+          ],
+          "portraitAge": 30
+        }
+      },
+      {
+        "id": "orestian-raves",
+        "worldPersonId": "person--haus-raves--orestian-raves",
+        "name": "Orestian Raves",
+        "title": "Zunftsmeier der Göttlichen Eleganz",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1704",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/goettliche-eleganz/portraits/orestian.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-raves",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Zunftsmeier der Göttlichen Eleganz",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "title",
+            "notes",
+            "portrait"
+          ],
+          "portraitAge": 36
+        }
+      },
+      {
+        "id": "aneirin-vann",
+        "worldPersonId": "person--haus-vann--aneirin-vann",
+        "name": "Aneirin Vann",
+        "title": "Kontorgehilfe · Ausbildung zum Gastwirt",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1719",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/letzte-rast/portraits/aneirin.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-vann",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Kontorgehilfe · Ausbildung zum Gastwirt",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "title",
+            "notes",
+            "portrait"
+          ],
+          "portraitAge": 21
+        }
+      },
+      {
+        "id": "enid-pendrwn",
+        "worldPersonId": "person--haus-pendrwn--enid-pendrwn",
+        "name": "Enid Pendrwn",
+        "title": "Empfangsgehilfin · Gästeankünfte",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1720",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/letzte-rast/portraits/enid.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-pendrwn",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Empfangsgehilfin · Gästeankünfte",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "title",
+            "notes",
+            "portrait"
+          ],
+          "portraitAge": 20
+        }
+      },
+      {
+        "id": "gwenna-vann",
+        "worldPersonId": "person--haus-vann--gwenna-vann",
+        "name": "Gwenna Vann",
+        "title": "Schreiblehrling · Reservierungsbuch",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1724",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/letzte-rast/portraits/gwenna.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-vann",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Schreiblehrling · Reservierungsbuch",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "title",
+            "notes",
+            "portrait"
+          ],
+          "portraitAge": 16
+        }
+      },
+      {
+        "id": "rhys-vann",
+        "worldPersonId": "person--haus-vann--rhys-vann",
+        "name": "Rhys Vann",
+        "title": "Schreiblehrling · erste Kontorübungen",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1728",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/letzte-rast/portraits/rhys.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-vann",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Schreiblehrling · erste Kontorübungen",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "title",
+            "notes",
+            "portrait"
+          ],
+          "portraitAge": 12
+        }
+      },
+      {
+        "id": "teleri-vann",
+        "worldPersonId": "person--haus-vann--teleri-vann",
+        "name": "Teleri Vann",
+        "title": "Hauskind",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1734",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/letzte-rast/portraits/teleri.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-vann",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Hauskind",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "title",
+            "notes",
+            "portrait"
+          ],
+          "portraitAge": 6
+        }
+      },
+      {
+        "id": "celyn-vann",
+        "worldPersonId": "person--haus-vann--celyn-vann",
+        "name": "Celyn Vann",
+        "title": "Hauskind",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1735",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/letzte-rast/portraits/celyn.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-vann",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Hauskind",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "title",
+            "notes",
+            "portrait"
+          ],
+          "portraitAge": 5
+        }
+      },
+      {
+        "id": "iolo-vann",
+        "worldPersonId": "person--haus-vann--iolo-vann",
+        "name": "Iolo Vann",
+        "title": "Hauskind",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1738",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/letzte-rast/portraits/iolo.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-vann",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Hauskind",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "title",
+            "notes",
+            "portrait"
+          ],
+          "portraitAge": 2
+        }
+      }
+    ],
+    "partnerships": [
+      {
+        "id": "marriage-iestyn-efa-vann",
+        "participantIds": [
+          "iestyn-vann",
+          "efa-vann"
+        ],
+        "type": "marriage",
+        "status": "ended",
+        "start": "1330",
+        "end": "1379",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-tudwal-gwenith-vann",
+        "participantIds": [
+          "tudwal-vann",
+          "gwenith-vann"
+        ],
+        "type": "marriage",
+        "status": "ended",
+        "start": "1670",
+        "end": "1720",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-brenn-seren-vann",
+        "participantIds": [
+          "brenn-vann",
+          "seren-vann"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "1695",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-madoc-lowri-vann",
+        "participantIds": [
+          "madoc-vann",
+          "lowri-vann"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "1702",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-cadeyrn-angharad-vann",
+        "participantIds": [
+          "cadeyrn-vann",
+          "angharad-vann"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "1717",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-owain-meleri-vann",
+        "participantIds": [
+          "owain-vann",
+          "meleri-vann"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "1726",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-edern-elowen-vann",
+        "participantIds": [
+          "edern-vann",
+          "elowen-maerllys"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "1733",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "crossFamilyRelationship": {
+            "linkId": "marriage-edern-elowen-vann",
+            "counterpartFamilyId": "haus-maerllys"
+          }
+        }
+      },
+      {
+        "id": "marriage-orestian-eirlys-vann",
+        "participantIds": [
+          "orestian-raves",
+          "eirlys-vann"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "1731",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "crossFamilyRelationship": {
+            "linkId": "marriage-orestian-eirlys-vann",
+            "counterpartFamilyId": "haus-raves"
+          }
+        }
+      },
+      {
+        "id": "marriage-aneirin-enid-vann",
+        "participantIds": [
+          "aneirin-vann",
+          "enid-pendrwn"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "1738",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "crossFamilyRelationship": {
+            "linkId": "marriage-aneirin-enid-vann",
+            "counterpartFamilyId": "haus-pendrwn"
+          }
+        }
+      }
+    ],
+    "parentages": [
+      {
+        "id": "parentage-tudwal-vann",
+        "childId": "tudwal-vann",
+        "parentIds": [
+          "iestyn-vann",
+          "efa-vann"
+        ],
+        "partnershipId": "marriage-iestyn-efa-vann",
+        "type": "claimed",
+        "legitimacy": "unknown",
+        "certainty": "unknown",
+        "visibility": "public",
+        "notes": "Abstammung über nicht einzeln überlieferte Generationen; keine unmittelbare Elternschaft.",
+        "extensions": {
+          "timeJumpId": "gap-vann-to-1644"
+        }
+      },
+      {
+        "id": "parentage-brenn-vann",
+        "childId": "brenn-vann",
+        "parentIds": [
+          "tudwal-vann",
+          "gwenith-vann"
+        ],
+        "partnershipId": "marriage-tudwal-gwenith-vann",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-madoc-vann",
+        "childId": "madoc-vann",
+        "parentIds": [
+          "tudwal-vann",
+          "gwenith-vann"
+        ],
+        "partnershipId": "marriage-tudwal-gwenith-vann",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-cadeyrn-vann",
+        "childId": "cadeyrn-vann",
+        "parentIds": [
+          "brenn-vann",
+          "seren-vann"
+        ],
+        "partnershipId": "marriage-brenn-seren-vann",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-owain-vann",
+        "childId": "owain-vann",
+        "parentIds": [
+          "brenn-vann",
+          "seren-vann"
+        ],
+        "partnershipId": "marriage-brenn-seren-vann",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-edern-vann",
+        "childId": "edern-vann",
+        "parentIds": [
+          "madoc-vann",
+          "lowri-vann"
+        ],
+        "partnershipId": "marriage-madoc-lowri-vann",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-eirlys-vann",
+        "childId": "eirlys-vann",
+        "parentIds": [
+          "madoc-vann",
+          "lowri-vann"
+        ],
+        "partnershipId": "marriage-madoc-lowri-vann",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-aneirin-vann",
+        "childId": "aneirin-vann",
+        "parentIds": [
+          "cadeyrn-vann",
+          "angharad-vann"
+        ],
+        "partnershipId": "marriage-cadeyrn-angharad-vann",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-gwenna-vann",
+        "childId": "gwenna-vann",
+        "parentIds": [
+          "cadeyrn-vann",
+          "angharad-vann"
+        ],
+        "partnershipId": "marriage-cadeyrn-angharad-vann",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-rhys-vann",
+        "childId": "rhys-vann",
+        "parentIds": [
+          "owain-vann",
+          "meleri-vann"
+        ],
+        "partnershipId": "marriage-owain-meleri-vann",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-teleri-vann",
+        "childId": "teleri-vann",
+        "parentIds": [
+          "owain-vann",
+          "meleri-vann"
+        ],
+        "partnershipId": "marriage-owain-meleri-vann",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-celyn-vann",
+        "childId": "celyn-vann",
+        "parentIds": [
+          "edern-vann",
+          "elowen-maerllys"
+        ],
+        "partnershipId": "marriage-edern-elowen-vann",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-iolo-vann",
+        "childId": "iolo-vann",
+        "parentIds": [
+          "edern-vann",
+          "elowen-maerllys"
+        ],
+        "partnershipId": "marriage-edern-elowen-vann",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      }
+    ],
+    "houses": [
+      {
+        "id": "house-vann",
+        "name": "Haus Vann",
+        "motto": "Dem Gast das Beste.",
+        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Vann.png",
+        "status": "active"
+      },
+      {
+        "id": "house-maerllys",
+        "name": "Haus Maerllys",
+        "motto": "",
+        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Maerllys.png",
+        "status": "active"
+      },
+      {
+        "id": "house-pendrwn",
+        "name": "Haus Pendrwn",
+        "motto": "",
+        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Pendrwn.png",
+        "status": "active"
+      },
+      {
+        "id": "house-raves",
+        "name": "Haus Raves",
+        "motto": "",
+        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Raves.png",
+        "status": "active"
+      }
+    ],
+    "cadetBranches": [
+      {
+        "id": "married-away-eirlys-raves",
+        "name": "Haus Raves",
+        "subtitle": "Wegverheiratete Linie",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-orestian-eirlys-vann",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-raves",
+        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Raves.png",
+        "emblemScale": 0.86,
+        "crestFrame": "iron",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-raves",
+        "notes": "Eirlys heiratete Orestian Raves und arbeitet in der Göttlichen Eleganz. Cassian und Elena sowie die weitere Linie stehen ausschließlich bei Raves.",
+        "extensions": {}
+      }
+    ],
+    "timeJumps": [
+      {
+        "id": "gap-vann-to-1644",
+        "parentPartnershipId": "marriage-iestyn-efa-vann",
+        "sharedParentPartnershipIds": [],
+        "parentPersonId": "",
+        "childIds": [
+          "tudwal-vann"
+        ],
+        "years": 0,
+        "fromYear": "1334",
+        "toYear": "1644",
+        "label": "Nicht einzeln überlieferte Vann-Generationen bis Tudwal",
+        "notes": "Der Zeitsprung ist der alleinige absolute Generationentrenner unter dem Hauswappen. Bekannte Nachkommen werden später ausschließlich hinter diesem Knoten ergänzt.",
+        "extensions": {
+          "preparedPlaceholder": false
+        }
+      }
+    ],
+    "lineage": {
+      "founderPartnershipId": "marriage-iestyn-efa-vann",
+      "houseId": "house-vann",
+      "crestSubtitle": "Gastwirtsfamilie aus Gwynthor · seit 1334",
+      "crestEmblemScale": 0.86,
+      "crestFrame": "iron",
+      "crestFrameScale": 1,
+      "timeGap": {
+        "enabled": false,
+        "years": 0,
+        "fromYear": "",
+        "toYear": "",
+        "label": ""
+      },
+      "originHouse": {
+        "enabled": false,
+        "id": "lineage-origin-house",
+        "houseId": "",
+        "name": "Ursprungshaus",
+        "subtitle": "",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "childIds": [],
+        "targetFamilyId": "",
+        "notes": "",
+        "timeGap": {
+          "enabled": false,
+          "years": 0,
+          "fromYear": "",
+          "toYear": "",
+          "label": ""
+        }
+      }
+    },
+    "presentation": {
+      "relationshipColors": {
+        "marriage": "#326c4a",
+        "engagement": "#b88b37",
+        "union": "#8e2724",
+        "affair": "#704485",
+        "concubinage": "#704485",
+        "political": "#9d7d48",
+        "forced": "#c7a974",
+        "biological": "#8e2724",
+        "adoptive": "#2f75a8",
+        "foster": "#2f75a8",
+        "step": "#7eb4d7",
+        "magical": "#704485",
+        "claimed": "#62615e"
+      }
+    },
+    "view": {
+      "focusPersonId": "brenn-vann",
+      "orientation": "vertical",
+      "ancestorDepth": 12,
+      "descendantDepth": 12,
+      "limitGenerations": false,
+      "showSiblings": true
+    },
+    "extensions": {
+      "blankFamily": false,
+      "preparedTimeJump": true,
+      "pendingDescendantReview": false,
+      "sourceRevision": 1,
+      "sourceNote": "Nutzerauftrag vom 16.10.2026. Originale sechs Vann-Porträts und bekannte Verwandtschaft erhalten. Die Taverne ist älter als ihr Erwerb durch Iestyn und Efa 1334. Neue Ehen mit freien Bürgerlichen: Elowen Maerllys, Enid Pendrwn und Orestian Raves. Eirlys und ihre Nachkommen leben bei Raves.",
+      "houseBiographyModule": {
+        "schema": "aleria.house-module",
+        "schemaVersion": 1,
+        "pageTitle": "Haus Vann",
+        "housePage": true,
+        "image": "../AleriaAlmanach/assets/letzte-rast/scenes/aussenansicht.png",
+        "imageWidth": 30,
+        "imageSquare": true,
+        "description": "Die Vanns gehören zu Gwynthors wohlhabenden Bürgerhäusern. Brenn und Madoc führen Celtigerns Letzte Rast mit feiner cenyrischer Küche, Weisenfluher Weinen, Gesellschaftssalons und gehobener Herberge.",
+        "quote": "Dem Gast das Beste.",
+        "quoteBy": "",
+        "commentSequence": [],
+        "stats": [
+          [
+            "Voller Name",
+            "Haus Vann"
+          ],
+          [
+            "Rang",
+            "Bürgerlich"
+          ],
+          [
+            "Stammsitz",
+            "Gwynthor · Adelsdistrikt"
+          ],
+          [
+            "Grafschaft",
+            "Celtigerns Wacht"
+          ],
+          [
+            "Oberhaupt",
+            "Brenn Vann · Hausoberhaupt"
+          ],
+          [
+            "Erbe",
+            "Cadeyrn Vann"
+          ],
+          [
+            "Lehnsherr",
+            "Haus Draig"
+          ],
+          [
+            "Ursprung",
+            "Gwynthor"
+          ],
+          [
+            "Schutzpatronin",
+            "Die Glücksmaid"
+          ]
+        ],
+        "house": {
+          "crestImage": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Vann.png",
+          "sideWidth": 100,
+          "connectionPortraitHeight": 80,
+          "connectionTextOffset": 0,
+          "biographyTitle": "Über die Familie",
+          "biographyText": "Die Vanns gehören zu Gwynthors wohlhabenden Bürgerhäusern. Brenn und Madoc führen Celtigerns Letzte Rast mit feiner cenyrischer Küche, Weisenfluher Weinen, Gesellschaftssalons und gehobener Herberge.",
+          "abilitiesTitle": "Einfluss und Aufgaben",
+          "abilities": [],
+          "historyTitle": "Seit 1334 unter dem Dach der Letzten Rast",
+          "historyText": "Iestyn und Efa erwarben 1334 das bereits ältere Gasthaus. Nach nicht einzeln überlieferten Generationen führt die bekannte Linie über Tudwal und Gwenith zu Brenn, Madoc und ihren Nachkommen.",
+          "worksTitle": "Hausgeschichte",
+          "works": [],
+          "extraSections": [
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Werte und Stellung",
+              "text": "Ein gut bereitetes Gericht, eine ruhige Kammer und ein aufmerksamer Empfang tragen den Namen des Hauses."
+            }
+          ],
+          "triviaTitle": "Besonderheiten",
+          "trivia": [],
+          "quotesTitle": "Hausmotto",
+          "quotes": [],
+          "connectionsTitle": "Verbündete und Kadettenhäuser",
+          "connections": [],
+          "documentsTitle": "Mehr über das Haus",
+          "documents": [
+            {
+              "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Vann.png",
+              "title": "Haus Vann · vollständige Hausseite",
+              "text": "Chronik, Besitz, Wappen und Hof mit verlinkten Portraits.",
+              "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-vann"
+            }
+          ],
+          "footer": ""
+        }
+      }
+    }
+  }
+}

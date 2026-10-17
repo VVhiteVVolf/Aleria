@@ -1,4 +1,5 @@
 import { DEFAULT_RELATIONSHIP_COLORS } from '../config/family-colors.js';
+import { withVannFamilyLink } from './vann-family-links.js';
 import { createFounderTimeJumpPlaceholderHouseFamily } from './blank-house-family-factory.js';
 import { GWYNTHOR_COMMONER_HOUSE_PROFILES } from './celtigerns-wacht-house-profiles.js';
 import {
@@ -59,7 +60,7 @@ const FOUNDER_IDS = BASE_FAMILY.partnerships[0].participantIds;
 const TIME_JUMP_ID = BASE_FAMILY.timeJumps[0].id;
 const GRANDPARENT_IDS = ['idwal-pendrwn', 'bronwen-spouse-pendrwn'];
 
-export const HOUSE_PENDRWN_FAMILY = Object.freeze({
+export const HOUSE_PENDRWN_FAMILY = withVannFamilyLink({
   ...BASE_FAMILY,
   houses: Object.freeze([
     ...BASE_FAMILY.houses,
@@ -96,7 +97,7 @@ export const HOUSE_PENDRWN_FAMILY = Object.freeze({
     sharedPerson(PENDRWN_DRAENMELYN_MARRIAGE.first, 'core'),
     sharedPerson(PENDRWN_DRAENMELYN_MARRIAGE.second, 'married'),
 
-    // Jüngste Generation: alle ausdrücklich ohne Ehe oder Verlobung.
+    // Jüngste Generation; Enids Vann-Verbindung wird anschließend gespiegelt.
     person('emyr-pendrwn', 'Emyr Pendrwn', 'male', '1717', PENDRWN_HOUSE_ID, {
       title: 'Dreiundzwanzigjähriger Angehöriger des Hauses Pendrwn',
       tags: ['23 Jahre'],
@@ -187,6 +188,6 @@ export const HOUSE_PENDRWN_FAMILY = Object.freeze({
       persons: Object.freeze(['tudwal-pendrwn']),
       parentages: Object.freeze(['parentage-tudwal-pendrwn'])
     }),
-    sourceNote: 'Die konkrete Pendrwn-Linie reicht nur bis zu Emyrs Großvater Idwal. Emyr ist im Jahr 1740 dreiundzwanzig Jahre alt; er und seine beiden jüngeren Geschwister bleiben unverheiratet und ohne Verlobung. Seine Mutter Eirwen Swyll und seine Tante Gweniths Ehe mit Caradog Draenmelyn werden mit gemeinsamen Weltpersonen- und Partnerschafts-IDs in den jeweiligen Gegenstammbäumen geführt. Das vorgegebene Portrait wurde lokal gesichert.'
+    sourceNote: 'Die konkrete Pendrwn-Linie reicht nur bis zu Emyrs Großvater Idwal. Emyr ist im Jahr 1740 dreiundzwanzig Jahre alt; er und Cadell bleiben unverheiratet und ohne Verlobung. Enid ist mit Aneirin Vann verheiratet; die Ehe wird in beiden Häusern geführt. Seine Mutter Eirwen Swyll und seine Tante Gweniths Ehe mit Caradog Draenmelyn werden mit gemeinsamen Weltpersonen- und Partnerschafts-IDs in den jeweiligen Gegenstammbäumen geführt. Das vorgegebene Portrait wurde lokal gesichert.'
   })
 });

@@ -8,7 +8,9 @@
   background: var(--module-paper);
 }
 .guild-services-header { border-bottom: 1px solid var(--module-line); padding-bottom: 24px; margin-bottom: 24px; }
-.guild-services-header > span { font: .7rem 'Cinzel', serif; letter-spacing: .12em; color: var(--module-bronze); }
+.guild-services-kicker { font: .7rem 'Cinzel', serif; letter-spacing: .12em; color: var(--module-bronze); }
+.guild-services-illustrated-header { display: grid; grid-template-columns: minmax(100px, 150px) minmax(0, 1fr); gap: 28px; align-items: center; }
+.guild-services-scene { width: 100%; aspect-ratio: 2 / 3; object-fit: cover; border: 1px solid var(--module-line); }
 .guild-services-page h2 { font: 600 clamp(1.4rem, 2vw, 2rem) 'Cinzel', serif; }
 .guild-services-page h3 { font: 600 1rem 'Cinzel', serif; margin: 0; }
 .guild-services-copy { font-size: 1.05rem; line-height: 1.75; overflow-wrap: anywhere; }
@@ -32,5 +34,6 @@
   .guild-service-heading img { width: 72px; height: 72px; }
 }
 @media (max-width: 720px) {
+  .guild-services-illustrated-header { grid-template-columns: 100px minmax(0, 1fr); gap: 16px; }
   .guild-services-grid, .guild-services-notes, .guild-services-editor-row { grid-template-columns: minmax(0, 1fr); }
 }

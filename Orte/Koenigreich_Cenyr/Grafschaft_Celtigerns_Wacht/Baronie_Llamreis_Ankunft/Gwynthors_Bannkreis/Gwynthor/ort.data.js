@@ -309,6 +309,8 @@
           commonerHouse("aelmor", "Aelmor"),
           commonerHouse("maerllys", "Maerllys"),
           commonerHouse("raves", "Raves"),
+          commonerHouse("vann", "Vann"),
+          house("haus-gofrann", "Haus Gofrann", "Bürgerliches Haus", "Gwynthor · Zum Dritten Funken", "Haus Tlawd", `${commonerRoot}/Gofrann.png`),
           commonerHouse("braglas", "Braglas"),
           commonerHouse("tonnarth", "Tonnarth"),
           commonerHouse("ysgrif", "Ysgrif"),
@@ -336,14 +338,14 @@
       }),
       Object.freeze({
         name: "Celtigerns Letzte Rast",
-        image: `${establishmentAssetRoot}/celtigerns-letzte-rast.png`,
+        image: "/AleriaAlmanach/assets/letzte-rast/references/schild.png",
         symbolAlt: "Celtigerns Letzte Rast",
         trade: "Taverne & Gasthaus",
         owner: "Brenn Vann",
         wealth: "Gehoben",
         reputation: "Legendär",
         influence: "Cenyrweit",
-        description: "Älteste Taverne Gwynthors, größtes Gasthaus der Stadt und seit über vierhundert Jahren im Besitz der Familie Vann."
+        description: "Älteste Taverne Gwynthors und gehobene Herberge im Besitz der Vanns seit 1334. Feine cenyrische Küche, ausgezeichnete Weisenfluher Weine und private Gesellschaften unter Brenn und Madoc Vann."
       }),
       Object.freeze({
         name: "Die Lachende Nixe",
@@ -366,6 +368,17 @@
         reputation: "Angesehen",
         influence: "Osttor & Hafen",
         description: "Beliebter Treffpunkt für Veteranen, Söldner und Reisende im Osten des Hafenviertels, an der Gasse zum Osttor. 1722 von den drei Feldkameraden Merrik Trevoryn, Hrolf Svathamar aus Rorikshall und Aedan Dubhdarach aus Leitheach gegründet."
+      },
+      {
+        name: "Gwynthorer Theater",
+        image: "/AleriaAlmanach/assets/gwynthor-theater/schild.png",
+        symbolAlt: "Gwynthorer Theater · Schauspiel und Dramatik",
+        trade: "Theater & Schauspielschule",
+        owner: "Elenid Awenfryn · gefördert von Lady Rhianna Draig",
+        wealth: "Großzügig gefördert",
+        reputation: "Überregional bekannt",
+        influence: "Celtigerns Wacht",
+        description: "Aus einer heruntergekommenen Theaterstube entstand durch Lady Rhiannas Förderung und Elenid Awenfryns künstlerische Arbeit ein großes Haus für Kunst und Kultur. Die exzentrische, gebürtige Lynthorer Bardin führt das Theater als Inhaberin und Intendantin und unterrichtet Schauspiel und Dramatik."
       })
     ]),
 
@@ -430,6 +443,7 @@
 
       culture: section(
         paragraph("Gwynthor ist an Wohlstand, Besucher und den Austausch fremder Waren gewöhnt. Musik, Dichtung, bildende Kunst und öffentliche Unterhaltung besitzen einen festen Platz im städtischen Leben. Adelshöfe, Tempel, Schenken und Marktplätze tragen jeweils ihre eigenen Formen von Fest, Vortrag und Aufführung."),
+        paragraph("Das Gwynthorer Theater zählt zu den großen Kulturstätten Celtigerns Wacht. Lady Rhianna Draig, geborene Ceirwyn, förderte gemeinsam mit ihrer Freundin Elenid Awenfryn den Ausbau einer heruntergekommenen Spielstube zu einem bedeutenden Schauspielhaus. Die gebürtige Lynthorer Bardin führt es als Inhaberin und Intendantin; neben Aufführungen gehört ihr Unterricht in Schauspiel und Dramatik zum Leben des Hauses."),
         paragraph("Seinen besonderen Charakter verdankt Gwynthor dem Handel. Weil das Gebirge die großen Routen durch den Norden erschwert, führt ein bedeutender Teil des cenyrischen Fernhandels über den Hafen der Stadt. Kaufleute aus nahen und fernen Ländern prägen damit nicht nur die Märkte, sondern auch Mode, Küche, Sprache und Umgangsformen.")
       ),
 

@@ -688,12 +688,12 @@ function renderAll() {
       const cardSection = hierarchy
         ? (sectionByEntry.get(entry) || section)
         : section;
+      const previewImage = getArchiveEntryPreviewImage(entry);
       const card = document.createElement('article');
       card.className = 'entry-card'
-        + (getArchiveEntryGuildEmblem(entry) ? ' entry-card-emblem' : '')
+        + (previewImage && previewImage === getArchiveEntryGuildEmblem(entry) ? ' entry-card-emblem' : '')
         + (entry.locked ? ' card-locked' : '');
       card.dataset.searchKind = 'entry';
-      const previewImage = getArchiveEntryPreviewImage(entry);
       const usePriorityImage = !!previewImage && priorityCardImageBudget > 0;
       card.innerHTML = renderArchiveEntryCard(entry, cardSection, {
         priorityImage: usePriorityImage, manageMode: _archiveManageMode

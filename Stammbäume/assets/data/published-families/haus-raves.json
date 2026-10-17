@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "familyId": "haus-raves",
-  "revision": 2,
-  "updatedAt": "2026-10-16T00:26:06.470Z",
+  "revision": 3,
+  "updatedAt": "2026-10-17T00:23:36.950Z",
   "family": {
     "schema": "aleria.family-tree",
     "schemaVersion": 1,
@@ -401,6 +401,84 @@
         "tags": [],
         "notes": "In Tirnara verheiratet; sein Name ist nicht überliefert.",
         "extensions": {}
+      },
+      {
+        "id": "eirlys-vann",
+        "worldPersonId": "person--haus-vann--eirlys-vann",
+        "name": "Eirlys Vann",
+        "title": "Nach Haus Raves verheiratet · Beratung in der Göttlichen Eleganz",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1710",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/letzte-rast/references/eirlys.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-vann",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Nach Haus Raves verheiratet · Beratung in der Göttlichen Eleganz",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "title",
+            "notes",
+            "portrait"
+          ],
+          "portraitAge": 30
+        }
+      },
+      {
+        "id": "cassian-raves",
+        "worldPersonId": "person--haus-raves--cassian-raves",
+        "name": "Cassian Raves",
+        "title": "Kind im Haus Raves",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1733",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/letzte-rast/portraits/cassian.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-raves",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Kind im Haus Raves",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "title",
+            "notes",
+            "portrait"
+          ],
+          "portraitAge": 7
+        }
+      },
+      {
+        "id": "elena-raves",
+        "worldPersonId": "person--haus-raves--elena-raves",
+        "name": "Elena Raves",
+        "title": "Kind im Haus Raves",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1736",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/letzte-rast/portraits/elena.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-raves",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Kind im Haus Raves",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "title",
+            "notes",
+            "portrait"
+          ],
+          "portraitAge": 4
+        }
       }
     ],
     "partnerships": [
@@ -503,6 +581,26 @@
         "visibility": "public",
         "notes": "Flavia wurde nach Tirnara verheiratet; der Gemahl bleibt unbenannt.",
         "extensions": {}
+      },
+      {
+        "id": "marriage-orestian-eirlys-vann",
+        "participantIds": [
+          "orestian-raves",
+          "eirlys-vann"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "1731",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "crossFamilyRelationship": {
+            "linkId": "marriage-orestian-eirlys-vann",
+            "counterpartFamilyId": "haus-vann"
+          }
+        }
       }
     ],
     "parentages": [
@@ -640,6 +738,36 @@
         "visibility": "public",
         "notes": "",
         "extensions": {}
+      },
+      {
+        "id": "parentage-cassian-raves",
+        "childId": "cassian-raves",
+        "parentIds": [
+          "orestian-raves",
+          "eirlys-vann"
+        ],
+        "partnershipId": "marriage-orestian-eirlys-vann",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-elena-raves",
+        "childId": "elena-raves",
+        "parentIds": [
+          "orestian-raves",
+          "eirlys-vann"
+        ],
+        "partnershipId": "marriage-orestian-eirlys-vann",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
       }
     ],
     "houses": [
@@ -690,6 +818,13 @@
         "emblem": "",
         "status": "active",
         "extensions": {}
+      },
+      {
+        "id": "house-vann",
+        "name": "Haus Vann",
+        "motto": "",
+        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Vann.png",
+        "status": "active"
       }
     ],
     "cadetBranches": [
@@ -796,7 +931,7 @@
     },
     "extensions": {
       "blankFamily": false,
-      "sourceRevision": 2,
+      "sourceRevision": 3,
       "sourceNote": "Nutzervorgaben zur Göttlichen Eleganz vom 16.10.2026. Drei vollständig ausgearbeitete Generationen vom Gründerpaar bis Eleonora, anschließend drei Kinder. Eleonora 39, Tiberian 37, Orestian 36. Tiberians freie Braut ist Maelwen Coeddu; keine Gwyllach-Verbindung. Luciano stammt aus einem anderen, nicht einzeln überlieferten Veltrane-Zweig; eine nahe Verwandtschaft wird nicht behauptet.",
       "houseBiographyModule": {
         "schema": "aleria.house-module",
@@ -902,8 +1037,8 @@
       },
       "registryTombstones": {},
       "registryUpgrade": {
-        "fromRevision": 1,
-        "toRevision": 2
+        "fromRevision": 2,
+        "toRevision": 3
       }
     }
   }

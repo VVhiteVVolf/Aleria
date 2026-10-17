@@ -2353,6 +2353,14 @@ window.KARTO_MEDIA_ASSETS = Object.freeze([
     "source": "Hauswappen"
   },
   {
+    "id": "a5b4ac820f8e16",
+    "name": "Veltrane",
+    "url": "/Stammbäume/assets/images/houses/Kaiserreich%20Argentum/Veltrane.png",
+    "kind": "crest",
+    "group": "Kaiserreich Argentum",
+    "source": "Hauswappen"
+  },
+  {
     "id": "dd47a6490c01e2",
     "name": "haus ard follmhar",
     "url": "/Stammbäume/assets/images/houses/Klaueninsel/haus-ard-follmhar.png",
@@ -3137,6 +3145,14 @@ window.KARTO_MEDIA_ASSETS = Object.freeze([
     "source": "Hauswappen"
   },
   {
+    "id": "1132fa508594ec",
+    "name": "Dubhdarach",
+    "url": "/Stammbäume/assets/images/houses/Llamreis%20Ankunft/B%C3%BCrgerliche/Gwynthor/Dubhdarach.png",
+    "kind": "crest",
+    "group": "Llamreis Ankunft / Bürgerliche / Gwynthor",
+    "source": "Hauswappen"
+  },
+  {
     "id": "a6ecd7e766dc55",
     "name": "Falchdyn",
     "url": "/Stammbäume/assets/images/houses/Llamreis%20Ankunft/B%C3%BCrgerliche/Gwynthor/Falchdyn.png",
@@ -3148,6 +3164,14 @@ window.KARTO_MEDIA_ASSETS = Object.freeze([
     "id": "c87d00acdf6b01",
     "name": "Falchdyn Hausbild",
     "url": "/Stammbäume/assets/images/houses/Llamreis%20Ankunft/B%C3%BCrgerliche/Gwynthor/Falchdyn-Hausbild.png",
+    "kind": "crest",
+    "group": "Llamreis Ankunft / Bürgerliche / Gwynthor",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "3871909ea82b91",
+    "name": "Gofrann",
+    "url": "/Stammbäume/assets/images/houses/Llamreis%20Ankunft/B%C3%BCrgerliche/Gwynthor/Gofrann.png",
     "kind": "crest",
     "group": "Llamreis Ankunft / Bürgerliche / Gwynthor",
     "source": "Hauswappen"
@@ -3169,6 +3193,22 @@ window.KARTO_MEDIA_ASSETS = Object.freeze([
     "source": "Hauswappen"
   },
   {
+    "id": "ec73311ff5d285",
+    "name": "Raves",
+    "url": "/Stammbäume/assets/images/houses/Llamreis%20Ankunft/B%C3%BCrgerliche/Gwynthor/Raves.png",
+    "kind": "crest",
+    "group": "Llamreis Ankunft / Bürgerliche / Gwynthor",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "22a0e331465bbd",
+    "name": "Svathamar",
+    "url": "/Stammbäume/assets/images/houses/Llamreis%20Ankunft/B%C3%BCrgerliche/Gwynthor/Svathamar.png",
+    "kind": "crest",
+    "group": "Llamreis Ankunft / Bürgerliche / Gwynthor",
+    "source": "Hauswappen"
+  },
+  {
     "id": "9236f1f9612e2f",
     "name": "Swyll",
     "url": "/Stammbäume/assets/images/houses/Llamreis%20Ankunft/B%C3%BCrgerliche/Gwynthor/Swyll.png",
@@ -3180,6 +3220,22 @@ window.KARTO_MEDIA_ASSETS = Object.freeze([
     "id": "24b217641adb9b",
     "name": "Tonnarth",
     "url": "/Stammbäume/assets/images/houses/Llamreis%20Ankunft/B%C3%BCrgerliche/Gwynthor/Tonnarth.png",
+    "kind": "crest",
+    "group": "Llamreis Ankunft / Bürgerliche / Gwynthor",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "3a210ac932ba06",
+    "name": "Trevoryn",
+    "url": "/Stammbäume/assets/images/houses/Llamreis%20Ankunft/B%C3%BCrgerliche/Gwynthor/Trevoryn.png",
+    "kind": "crest",
+    "group": "Llamreis Ankunft / Bürgerliche / Gwynthor",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "c0f6d6fe811ff2",
+    "name": "Vann",
+    "url": "/Stammbäume/assets/images/houses/Llamreis%20Ankunft/B%C3%BCrgerliche/Gwynthor/Vann.png",
     "kind": "crest",
     "group": "Llamreis Ankunft / Bürgerliche / Gwynthor",
     "source": "Hauswappen"
@@ -4358,6 +4414,14 @@ window.KARTO_MEDIA_ASSETS = Object.freeze([
     "url": "/Stammbäume/assets/images/houses/Weidebucht/Melwas%20Au/haus-yllen.png",
     "kind": "crest",
     "group": "Weidebucht / Melwas Au",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "8d17f97675dc7e",
+    "name": "haus sonnenfels",
+    "url": "/Stammbäume/assets/images/houses/Weisenfluh/haus-sonnenfels.png",
+    "kind": "crest",
+    "group": "Weisenfluh",
     "source": "Hauswappen"
   },
   {

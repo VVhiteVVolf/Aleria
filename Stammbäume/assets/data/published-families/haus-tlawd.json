@@ -1,0 +1,1308 @@
+{
+  "schemaVersion": 1,
+  "familyId": "haus-tlawd",
+  "revision": 1,
+  "updatedAt": "2026-10-17T00:23:36.950Z",
+  "family": {
+    "schema": "aleria.family-tree",
+    "schemaVersion": 1,
+    "document": {
+      "id": "haus-tlawd",
+      "title": "Haus Tlawd",
+      "motto": "",
+      "description": "Die belegte Linie des Ritterherrenhauses Tlawd unter Haus Gafyr: von Edric Tlawd bis zur Generation von 1722.",
+      "emblem": "assets/images/houses/Llamreis Ankunft/haus-tlawd.png",
+      "houseProfile": {
+        "rankId": "knight",
+        "seat": "Gwynthor",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "haus-gafyr",
+        "liegeHouseName": "Haus Gafyr",
+        "regionEmblems": {
+          "seat": "assets/images/regions/gwynthor.png",
+          "barony": "assets/images/regions/llamreis-ankunft.png",
+          "county": "assets/images/regions/celtigerns-wacht.png",
+          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+        }
+      }
+    },
+    "persons": [
+      {
+        "id": "edric-tlawd",
+        "worldPersonId": "person--haus-tlawd--edric-tlawd",
+        "name": "Edric Tlawd",
+        "title": "Begründer des Ritterherrenhauses Tlawd",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1264",
+        "death": "1328",
+        "portrait": "assets/images/portraits/haus-tlawd/edric-tlawd.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-tlawd",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "anwen",
+        "worldPersonId": "person--family-tree--anwen",
+        "name": "Anwen",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1268",
+        "death": "1344",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "owain-tlawd",
+        "worldPersonId": "person--haus-tlawd--owain-tlawd",
+        "name": "Owain",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1290",
+        "death": "????",
+        "portrait": "assets/images/portraits/haus-tlawd/owain-tlawd.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-tlawd",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "mair-tlawd",
+        "worldPersonId": "person--haus-tlawd--mair-tlawd",
+        "name": "Mair",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1292",
+        "death": "????",
+        "portrait": "assets/images/portraits/haus-tlawd/mair-tlawd.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-tlawd",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "gwenfri",
+        "worldPersonId": "person--family-tree--gwenfri",
+        "name": "Gwenfri",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "????",
+        "death": "????",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "gavin",
+        "worldPersonId": "person--family-tree--gavin",
+        "name": "Gavin",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "????",
+        "death": "????",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "gareth-tlawd",
+        "worldPersonId": "person--haus-tlawd--gareth-tlawd",
+        "name": "Gareth",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1618",
+        "death": "1690",
+        "portrait": "assets/images/portraits/haus-tlawd/gareth-tlawd.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-tlawd",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "efa",
+        "worldPersonId": "person--family-tree--efa",
+        "name": "Efa",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1623",
+        "death": "1698",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "cadfael-tlawd",
+        "worldPersonId": "person--haus-tlawd--cadfael-tlawd",
+        "name": "Cadfael",
+        "title": "Ritterherr des Hauses Tlawd",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1642",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-tlawd/cadfael-tlawd.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-tlawd",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "lowri-tlawd",
+        "worldPersonId": "person--haus-tlawd--lowri-tlawd",
+        "name": "Lowri",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1645",
+        "death": "1721",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-tlawd",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "aerona",
+        "worldPersonId": "person--family-tree--aerona",
+        "name": "Aerona",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1642",
+        "death": "1726",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "caradoc",
+        "worldPersonId": "person--family-tree--caradoc",
+        "name": "Caradoc",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1643",
+        "death": "1720",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "siarl-tlawd",
+        "worldPersonId": "person--haus-tlawd--siarl-tlawd",
+        "name": "Siarl",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1668",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-tlawd/siarl-tlawd.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-tlawd",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "nedri-tlawd",
+        "worldPersonId": "person--haus-tlawd--nedri-tlawd",
+        "name": "Nedri",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1670",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-tlawd/nedri-tlawd.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-tlawd",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "modlen-tlawd",
+        "worldPersonId": "person--haus-tlawd--modlen-tlawd",
+        "name": "Modlen",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1671",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-tlawd/modlen-tlawd.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-tlawd",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "lloyd-tlawd",
+        "worldPersonId": "person--haus-tlawd--lloyd-tlawd",
+        "name": "Lloyd",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1672",
+        "death": "1720",
+        "portrait": "assets/images/portraits/haus-tlawd/lloyd-tlawd.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-tlawd",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "nerys",
+        "worldPersonId": "person--family-tree--nerys",
+        "name": "Nerys",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1671",
+        "death": "1738",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "adain",
+        "worldPersonId": "person--family-tree--adain",
+        "name": "Adain",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1675",
+        "death": "1720",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "rhyderch-tlawd",
+        "worldPersonId": "person--haus-tlawd--rhyderch-tlawd",
+        "name": "Rhyderch",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1692",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-tlawd/rhyderch-tlawd.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-tlawd",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "renfri-tlawd",
+        "worldPersonId": "person--haus-tlawd--renfri-tlawd",
+        "name": "Renfri",
+        "title": "Empfang und Rüstungsanproben",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1699",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-tlawd/renfri-tlawd.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-tlawd",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Renfri nimmt Maßtermine auf und weiß, wann ein Kunde eine klare Antwort braucht. Die Tochter der Tlawd kennt den Anspruch ihrer ritterlichen Verwandtschaft; in der Werkstatt zählt für sie, ob ein Stück am Ende richtig sitzt.",
+        "extensions": {
+          "registryManagedFields": [
+            "title",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "fflur",
+        "worldPersonId": "person--family-tree--fflur",
+        "name": "Fflur",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1694",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "einion",
+        "worldPersonId": "person--family-tree--einion",
+        "name": "Einion Gofrann",
+        "title": "Werkstattmeier · Organisation und Lieferwege",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1696",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/gofrann-schmiede/portraits/einion.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-gofrann",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Einion bringt Aufträge, Material und verfügbare Hände zusammen. Er geht lieber selbst zur Warenannahme, als eine fehlende Lieferung im Buch schönzureden. Mit Renfri führt er den Teil des Hauses, in dem aus einer Zusage ein verlässlicher Termin wird.",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "houseId",
+            "portrait",
+            "title",
+            "notes"
+          ],
+          "portraitAge": 44
+        }
+      },
+      {
+        "id": "lludd-tlawd",
+        "worldPersonId": "person--haus-tlawd--lludd-tlawd",
+        "name": "Lludd",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1698",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-tlawd/lludd-tlawd.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-tlawd",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "arwel-tlawd",
+        "worldPersonId": "person--haus-tlawd--arwel-tlawd",
+        "name": "Arwel",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1700",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-tlawd/arwel-tlawd.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-tlawd",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "caron-tlawd",
+        "worldPersonId": "person--haus-tlawd--caron-tlawd",
+        "name": "Caron",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1703",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-tlawd/caron-tlawd.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-tlawd",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "ulaena",
+        "worldPersonId": "person--family-tree--ulaena",
+        "name": "Ulaena Gofrann",
+        "title": "Nach Haus Tlawd verheiratet",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1699",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/gofrann-schmiede/portraits/ulaena.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-gofrann",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Ulaena lebt mit Lludd bei den Tlawd. Sie kennt noch den Rhythmus der alten Werkstatt und schaut bei Besuchen zuerst nach ihrem Vater Bleddyn, bevor sie sich nach den Neuigkeiten erkundigt.",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "houseId",
+            "portrait",
+            "title",
+            "notes"
+          ],
+          "portraitAge": 41
+        }
+      },
+      {
+        "id": "edric-tlawd-1716",
+        "worldPersonId": "person--haus-tlawd--edric-tlawd-1716",
+        "name": "Edric",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1716",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-tlawd/edric-tlawd-1716.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-tlawd",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "taran-tlawd",
+        "worldPersonId": "person--haus-tlawd--taran-tlawd",
+        "name": "Taran",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1718",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-tlawd/taran-tlawd.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-tlawd",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "haf-tlawd",
+        "worldPersonId": "person--haus-tlawd--haf-tlawd",
+        "name": "Haf",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1720",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-tlawd/haf-tlawd.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-tlawd",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "owain-tlawd-1720",
+        "worldPersonId": "person--haus-tlawd--owain-tlawd-1720",
+        "name": "Owain",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1720",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-tlawd/owain-tlawd-1720.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-tlawd",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "leisa-tlawd",
+        "worldPersonId": "person--haus-tlawd--leisa-tlawd",
+        "name": "Leisa",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1722",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-tlawd/leisa-tlawd.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-tlawd",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      }
+    ],
+    "partnerships": [
+      {
+        "id": "marriage-edric-anwen",
+        "participantIds": [
+          "edric-tlawd",
+          "anwen"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-owain-gwenfri",
+        "participantIds": [
+          "owain-tlawd",
+          "gwenfri"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-mair-gavin",
+        "participantIds": [
+          "mair-tlawd",
+          "gavin"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-gareth-efa",
+        "participantIds": [
+          "gareth-tlawd",
+          "efa"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-cadfael-aerona",
+        "participantIds": [
+          "cadfael-tlawd",
+          "aerona"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-lowri-caradoc",
+        "participantIds": [
+          "lowri-tlawd",
+          "caradoc"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-siarl-nerys",
+        "participantIds": [
+          "siarl-tlawd",
+          "nerys"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-lloyd-adain",
+        "participantIds": [
+          "lloyd-tlawd",
+          "adain"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-rhyderch-fflur",
+        "participantIds": [
+          "rhyderch-tlawd",
+          "fflur"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-renfri-einion",
+        "participantIds": [
+          "renfri-tlawd",
+          "einion"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "1718",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "start"
+          ],
+          "crossFamilyRelationship": {
+            "linkId": "marriage-renfri-einion",
+            "counterpartFamilyId": "haus-gofrann"
+          }
+        }
+      },
+      {
+        "id": "marriage-lludd-ulaena",
+        "participantIds": [
+          "lludd-tlawd",
+          "ulaena"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "start"
+          ],
+          "crossFamilyRelationship": {
+            "linkId": "marriage-lludd-ulaena",
+            "counterpartFamilyId": "haus-gofrann"
+          }
+        }
+      }
+    ],
+    "parentages": [
+      {
+        "id": "parentage-owain-tlawd",
+        "childId": "owain-tlawd",
+        "parentIds": [
+          "edric-tlawd",
+          "anwen"
+        ],
+        "partnershipId": "marriage-edric-anwen",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-mair-tlawd",
+        "childId": "mair-tlawd",
+        "parentIds": [
+          "edric-tlawd",
+          "anwen"
+        ],
+        "partnershipId": "marriage-edric-anwen",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-gareth-tlawd",
+        "childId": "gareth-tlawd",
+        "parentIds": [
+          "owain-tlawd",
+          "gwenfri"
+        ],
+        "partnershipId": "marriage-owain-gwenfri",
+        "type": "claimed",
+        "legitimacy": "unknown",
+        "certainty": "probable",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "timeJumpId": "gap-owain-gareth"
+        }
+      },
+      {
+        "id": "parentage-cadfael-tlawd",
+        "childId": "cadfael-tlawd",
+        "parentIds": [
+          "gareth-tlawd",
+          "efa"
+        ],
+        "partnershipId": "marriage-gareth-efa",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-lowri-tlawd",
+        "childId": "lowri-tlawd",
+        "parentIds": [
+          "gareth-tlawd",
+          "efa"
+        ],
+        "partnershipId": "marriage-gareth-efa",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-siarl-tlawd",
+        "childId": "siarl-tlawd",
+        "parentIds": [
+          "cadfael-tlawd",
+          "aerona"
+        ],
+        "partnershipId": "marriage-cadfael-aerona",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-nedri-tlawd",
+        "childId": "nedri-tlawd",
+        "parentIds": [
+          "cadfael-tlawd",
+          "aerona"
+        ],
+        "partnershipId": "marriage-cadfael-aerona",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-modlen-tlawd",
+        "childId": "modlen-tlawd",
+        "parentIds": [
+          "cadfael-tlawd",
+          "aerona"
+        ],
+        "partnershipId": "marriage-cadfael-aerona",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-lloyd-tlawd",
+        "childId": "lloyd-tlawd",
+        "parentIds": [
+          "cadfael-tlawd",
+          "aerona"
+        ],
+        "partnershipId": "marriage-cadfael-aerona",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-rhyderch-tlawd",
+        "childId": "rhyderch-tlawd",
+        "parentIds": [
+          "siarl-tlawd",
+          "nerys"
+        ],
+        "partnershipId": "marriage-siarl-nerys",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-renfri-tlawd",
+        "childId": "renfri-tlawd",
+        "parentIds": [
+          "siarl-tlawd",
+          "nerys"
+        ],
+        "partnershipId": "marriage-siarl-nerys",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-lludd-tlawd",
+        "childId": "lludd-tlawd",
+        "parentIds": [
+          "lloyd-tlawd",
+          "adain"
+        ],
+        "partnershipId": "marriage-lloyd-adain",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-arwel-tlawd",
+        "childId": "arwel-tlawd",
+        "parentIds": [
+          "lloyd-tlawd",
+          "adain"
+        ],
+        "partnershipId": "marriage-lloyd-adain",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-caron-tlawd",
+        "childId": "caron-tlawd",
+        "parentIds": [
+          "lloyd-tlawd",
+          "adain"
+        ],
+        "partnershipId": "marriage-lloyd-adain",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-edric-tlawd-1716",
+        "childId": "edric-tlawd-1716",
+        "parentIds": [
+          "rhyderch-tlawd",
+          "fflur"
+        ],
+        "partnershipId": "marriage-rhyderch-fflur",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-taran-tlawd",
+        "childId": "taran-tlawd",
+        "parentIds": [
+          "rhyderch-tlawd",
+          "fflur"
+        ],
+        "partnershipId": "marriage-rhyderch-fflur",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-haf-tlawd",
+        "childId": "haf-tlawd",
+        "parentIds": [
+          "rhyderch-tlawd",
+          "fflur"
+        ],
+        "partnershipId": "marriage-rhyderch-fflur",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-owain-tlawd-1720",
+        "childId": "owain-tlawd-1720",
+        "parentIds": [
+          "lludd-tlawd",
+          "ulaena"
+        ],
+        "partnershipId": "marriage-lludd-ulaena",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-leisa-tlawd",
+        "childId": "leisa-tlawd",
+        "parentIds": [
+          "lludd-tlawd",
+          "ulaena"
+        ],
+        "partnershipId": "marriage-lludd-ulaena",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      }
+    ],
+    "houses": [
+      {
+        "id": "house-tlawd",
+        "name": "Haus Tlawd",
+        "motto": "",
+        "emblem": "assets/images/houses/Llamreis Ankunft/haus-tlawd.png",
+        "status": "active"
+      },
+      {
+        "id": "house-gofrann",
+        "name": "Haus Gofrann",
+        "motto": "",
+        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Gofrann.png",
+        "status": "active"
+      }
+    ],
+    "cadetBranches": [
+      {
+        "id": "married-away-renfri-gofrann",
+        "name": "Haus Gofrann",
+        "subtitle": "Wegverheiratete Linie",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-renfri-einion",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-gofrann",
+        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Gofrann.png",
+        "emblemScale": 0.86,
+        "crestFrame": "iron",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-gofrann",
+        "notes": "Renfri heiratete Einion Gofrann. Cynlas und Eluned sowie die weitere Familienlinie stehen ausschließlich bei Gofrann.",
+        "extensions": {}
+      }
+    ],
+    "timeJumps": [
+      {
+        "id": "gap-owain-gareth",
+        "parentPartnershipId": "marriage-owain-gwenfri",
+        "sharedParentPartnershipIds": [],
+        "parentPersonId": "",
+        "childIds": [
+          "gareth-tlawd"
+        ],
+        "years": 0,
+        "fromYear": "????",
+        "toYear": "1618",
+        "label": "Die datierte Überlieferung setzt 1618 wieder ein",
+        "notes": "",
+        "extensions": {}
+      }
+    ],
+    "lineage": {
+      "founderPartnershipId": "marriage-edric-anwen",
+      "houseId": "house-tlawd",
+      "crestSubtitle": "",
+      "crestEmblemScale": 0.8,
+      "crestFrame": "silver",
+      "crestFrameScale": 1,
+      "timeGap": {
+        "enabled": false,
+        "years": 0,
+        "fromYear": "",
+        "toYear": "",
+        "label": ""
+      },
+      "originHouse": {
+        "enabled": false,
+        "id": "lineage-origin-house",
+        "houseId": "",
+        "name": "Ursprungshaus",
+        "subtitle": "",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "childIds": [],
+        "targetFamilyId": "",
+        "notes": "",
+        "timeGap": {
+          "enabled": false,
+          "years": 0,
+          "fromYear": "",
+          "toYear": "",
+          "label": ""
+        }
+      }
+    },
+    "presentation": {
+      "relationshipColors": {
+        "marriage": "#326c4a",
+        "engagement": "#b88b37",
+        "union": "#8e2724",
+        "affair": "#704485",
+        "concubinage": "#704485",
+        "political": "#9d7d48",
+        "forced": "#c7a974",
+        "biological": "#8e2724",
+        "adoptive": "#2f75a8",
+        "foster": "#2f75a8",
+        "step": "#7eb4d7",
+        "magical": "#704485",
+        "claimed": "#62615e"
+      }
+    },
+    "view": {
+      "focusPersonId": "edric-tlawd",
+      "orientation": "vertical",
+      "ancestorDepth": 10,
+      "descendantDepth": 10,
+      "limitGenerations": false,
+      "showSiblings": true
+    },
+    "extensions": {
+      "sourceNote": "Personen, Lebensdaten und Beziehungsstruktur nach der bereitgestellten Tlawd-Hierarchietabelle und der ergänzenden Stammbaumgrafik. Die eingeheirateten Ehepartner sind in der Quelle ohne Hausnamen überliefert; externe Portraitquellen wurden als lokale Projektdateien gesichert. Als Ritterherrenhaus führt Tlawd den silbernen Wappenrahmen, das Oberhaupt trägt den Titel Ritterherr. Einions und Ulaenas Herkunftsfamilie ist Gofrann. Renfris Nachkommen werden dort fortgeführt; Ulaenas Kinder Owain und Leisa bleiben bei Tlawd.",
+      "blankFamily": false,
+      "sourceRevision": 3,
+      "registryTombstones": {
+        "persons": [],
+        "parentages": []
+      },
+      "registryTransferredPersons": [],
+      "houseBiographyModule": {
+        "schema": "aleria.house-module",
+        "schemaVersion": 1,
+        "pageTitle": "Haus Tlawd",
+        "housePage": true,
+        "image": "../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Tlawd/assets/hausmotiv.png",
+        "imageWidth": 30,
+        "imageSquare": true,
+        "description": "Haus Tlawd ist ein Ritterhaus aus Gwynthor im Dienst der Gafyr. Es ist für zähe Teulu-Schwertkämpfer und verlässliche militärische Führung bekannt. Eine Burg vor den Stadttoren, Erzabbau und Schmieden sichern seinen Wohlstand.",
+        "quote": "",
+        "quoteBy": "",
+        "commentSequence": [],
+        "stats": [
+          [
+            "Voller Name",
+            "Haus Tlawd"
+          ],
+          [
+            "Rang",
+            "Ritterherr"
+          ],
+          [
+            "Stammsitz",
+            "Gwynthor"
+          ],
+          [
+            "Grafschaft",
+            "Celtigerns Wacht"
+          ],
+          [
+            "Oberhaupt",
+            "Cadfael"
+          ],
+          [
+            "Erbe",
+            "Siarl"
+          ],
+          [
+            "Lehnsherr",
+            "Haus Gafyr"
+          ],
+          [
+            "Ursprung",
+            "Sir Edric Tlawd war Knappe von Maldwyn Gafyr und wurde von diesem in den niederen Adelsstand berufen."
+          ],
+          [
+            "Schutzpatronin",
+            "Der Knecht; der Streiter"
+          ]
+        ],
+        "house": {
+          "crestImage": "../Stammbäume/assets/images/houses/Llamreis Ankunft/haus-tlawd.png",
+          "sideWidth": 100,
+          "connectionPortraitHeight": 80,
+          "connectionTextOffset": 0,
+          "biographyTitle": "Über das Haus",
+          "biographyText": "Haus Tlawd ist ein Ritterhaus aus Gwynthor im Dienst der Gafyr. Es ist für zähe Teulu-Schwertkämpfer und verlässliche militärische Führung bekannt. Eine Burg vor den Stadttoren, Erzabbau und Schmieden sichern seinen Wohlstand.",
+          "abilitiesTitle": "Einfluss und Aufgaben",
+          "abilities": [],
+          "historyTitle": "Geschichte",
+          "historyText": "Edric Tlawd diente Maldwyn Gafyr als Page und Knappe und wurde 1285 zum Ritter geschlagen. Das genaue Jahr der anschließenden Hausgründung bleibt offen.",
+          "worksTitle": "Hausgeschichte",
+          "works": [],
+          "extraSections": [
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Werte und Stellung",
+              "text": "Treue, Aufrichtigkeit und Fleiß prägen die Familie. Cadfael führt das Haus; Siarl steht an erster Stelle der Erbfolge."
+            }
+          ],
+          "triviaTitle": "Besonderheiten",
+          "trivia": [],
+          "quotesTitle": "Hausmotto",
+          "quotes": [],
+          "connectionsTitle": "Verbündete und Kadettenhäuser",
+          "connections": [
+            {
+              "name": "Haus Gafyr",
+              "detail": "Lehnsherr",
+              "image": "../Stammbäume/assets/images/houses/Llamreis Ankunft/haus-gafyr.png",
+              "imageFormat": "square"
+            }
+          ],
+          "documentsTitle": "Mehr über das Haus",
+          "documents": [
+            {
+              "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/haus-tlawd.png",
+              "title": "Haus Tlawd · vollständige Hausseite",
+              "text": "Chronik, Besitz, Wappen und Hof mit verlinkten Portraits.",
+              "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-tlawd"
+            }
+          ],
+          "footer": ""
+        }
+      }
+    }
+  }
+}

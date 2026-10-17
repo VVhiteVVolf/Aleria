@@ -1,4 +1,5 @@
 import { createFounderTimeJumpPlaceholderHouseFamily } from './blank-house-family-factory.js';
+import { withVannFamilyLink } from './vann-family-links.js';
 import { createFamilyPerson, createMarriage, createParentages, createMarriedAwayBranch, createMigrationHouseBranch } from './family-record-builders.js';
 import { createHouseProfileFromFolderPath } from '../domain/house-profile.js';
 import { DEFAULT_RELATIONSHIP_COLORS } from '../config/family-colors.js';
@@ -26,7 +27,7 @@ const veltraneProfile = createHouseProfileFromFolderPath(['Kaiserreich Argentum'
 const unknownSpouse = (key, destination) => createFamilyPerson({ id: `unbekannter-gemahl-${key}-raves`, name: 'Unbekannter Gemahl', sex: 'male',
   houseId: `house-unbekannt-${key}-raves`, familyRole: 'married', notes: `In ${destination} verheiratet; sein Name ist nicht überliefert.` });
 
-export const HOUSE_RAVES_FAMILY = Object.freeze({
+export const HOUSE_RAVES_FAMILY = withVannFamilyLink({
   schema: 'aleria.family-tree', schemaVersion: 1,
   document: { id: 'haus-raves', title: 'Haus Raves', motto: '', emblem: ELEGANZ_EMBLEMS.raves, houseProfile: ravesProfile,
     description: 'Gwynthorer Zweig der Veltrane aus Tirnara. Aus Matteo Veltranes und Gwenora Maerllys’ Krämerladen entstand die Göttliche Eleganz, heute unter Eleonora Cassia Raves die angesehenste Schneiderei der Innenstadt.' },

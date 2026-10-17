@@ -49,6 +49,46 @@ test('title sorting is German, numeric, reversible and leaves stored module orde
   assert.equal(run('SECTIONS[1].entries[0].id'), 'zauber-2');
 });
 
+test('saved copies of builtin modules appear once and keep editor overrides and stored records', () => {
+  const { run } = manager();
+  run(`_customSections = [{ key: 'Altbestand', tab: 'Gruppen', entries: [
+    { id: 'zauber-2', title: 'Gespeicherte alte Fassung' },
+    { id: 'eigene-kopie', title: 'Zauber 2' }
+  ] }]; _entryOverrides['zauber-2'] = { id: 'zauber-2', title: 'Aktuelle Editor-Bearbeitung' };`);
+  const before = run('JSON.stringify(_customSections.map(section => section.entries))');
+  assert.equal(run("getAllSections().flatMap(s => s.entries).filter(e => e.id === 'zauber-2').length"), 1);
+  assert.equal(run("findCurrentSectionByEntryId('zauber-2').entry.title"), 'Aktuelle Editor-Bearbeitung');
+  assert.equal(run("findCurrentSectionByEntryId('zauber-2').section.tab"), 'Magie');
+  assert.equal(run("getModuleDeleteKind('zauber-2')"), 'builtin');
+  assert.equal(run("getAllSections().flatMap(s => s.entries).filter(e => e.title === 'Zauber 2' || e.id === 'zauber-2').length"), 2);
+  assert.equal(run('JSON.stringify(_customSections.map(section => section.entries))'), before);
+});
+
+test('moving or hiding a builtin never exposes its old saved copy', () => {
+  const { context, run } = manager();
+  run(`_customSections = [{ key: 'Altbestand', tab: 'Magie', entries: [
+    { id: 'zauber-2', title: 'Gespeicherte alte Fassung' }
+  ] }];`);
+  context.moveModuleToSection('zauber-2', 'node::root:gruppen', { silent: true });
+  assert.equal(run("getAllSections().flatMap(s => s.entries).filter(e => e.id === 'zauber-2').length"), 1);
+  assert.equal(run("findCurrentSectionByEntryId('zauber-2').section.tab"), 'Gruppen');
+  run("_hiddenModuleIds['zauber-2'] = true;");
+  assert.equal(run("getAllSections().flatMap(s => s.entries).filter(e => e.id === 'zauber-2').length"), 0);
+  assert.equal(run('_customSections[0].entries.length'), 1);
+});
+
+test('repeated custom IDs resolve once across sections while distinct copies remain', () => {
+  const { run } = manager();
+  run(`_customSections = [
+    { key: 'Sammlung A', tab: 'Gruppen', entries: [{ id: 'eigen', title: 'Eigenes Modul' }] },
+    { key: 'Sammlung B', tab: 'Gruppen', entries: [{ id: 'eigen', title: 'Doppelte ID' }, { id: 'eigen-kopie', title: 'Eigenes Modul' }] }
+  ];`);
+  assert.equal(run("getAllSections().flatMap(s => s.entries).filter(e => e.id === 'eigen').length"), 1);
+  assert.equal(run("findCurrentSectionByEntryId('eigen').entry.title"), 'Eigenes Modul');
+  assert.equal(run("getAllSections().flatMap(s => s.entries).filter(e => e.title === 'Eigenes Modul').length"), 2);
+  assert.equal(run('_customSections[1].entries.length'), 2);
+});
+
 test('section scoping includes descendants optionally and combines type, words and ID search', () => {
   const { ids, action, change } = manager();
   action('select-section', { sectionSignature: 'node::root:magie' });

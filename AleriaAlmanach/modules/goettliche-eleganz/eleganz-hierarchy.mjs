@@ -1,4 +1,5 @@
 import { eleganzPerson, ELEGANZ_ART } from './eleganz-family-people.mjs';
+import { addRavesHouseholdStaff } from './eleganz-household-connections.mjs';
 const slot = (id, role, text) => ({ id, role, text });
 export const ELEGANZ_VACANCIES = Object.freeze([
   slot('schreiber-rechnungen','Schreibgehilfe · Rechnungen','Überträgt Quittungen, prüft Anzahlen und legt Orestian die offenen Rechnungen vor.'),
@@ -48,5 +49,5 @@ export function buildEleganzHierarchy() {
     chartTitle:'Vom ersten Wunsch bis zum letzten Stich',chartIntro:'Beratung und Anprobe finden in der Innenstadt statt. Die eigenen Werkstätten arbeiten an getrennten Standorten in Gwynthor.',
     layoutMode:'vertical',treeDisplayMode:'tabs',portraitScale:130,cardFontScale:95,
     details:[{icon:'✦',label:'Inhaberin',value:'Eleonora Cassia Raves'},{icon:'✦',label:'Standort',value:'Gwynthor · Innenstadt'},{icon:'✦',label:'Werkstätten',value:'Eigene Schneidereien in Gwynthor'},{icon:'✦',label:'Handel',value:'Haus Veltrane · Markt der Fortuna'}],
-    trees,levels:structuredClone(trees[0].levels) };
+    trees:addRavesHouseholdStaff(trees),levels:structuredClone(trees[0].levels) };
 }

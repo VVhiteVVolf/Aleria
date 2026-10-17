@@ -71,8 +71,8 @@ function unhideModuleEntry(entryId) {
 function getModuleDeleteKind(entryId) {
   const id = String(entryId || '').trim();
   if (!id) return '';
-  if (findCustomSectionByEntryId(id)) return 'custom';
   if (findBuiltinSectionByEntryId(id)) return 'builtin';
+  if (findCustomSectionByEntryId(id)) return 'custom';
   if (_entryOverrides[id] || _moduleSectionMoves[id]) return 'override';
   return '';
 }
@@ -123,12 +123,18 @@ function findSectionBySignature(signature) {
 function getAllSections() {
   ensureKnownModuleSectionNodes();
   const movedEntries = [];
+  // Former custom modules can now also ship with the application. Match the
+  // existing lookup priority (builtin + editor override, then custom), without
+  // changing the stored records or duplicating a module in another section.
+  const includedEntryIds = new Set();
   const builtins = SECTIONS
     .filter(section => section && Array.isArray(section.entries))
     .map(section => ({
       ...deepClone(section),
       entries: (section.entries || []).map(entry => {
         if (!entry?.id) return deepClone(entry);
+        if (includedEntryIds.has(entry.id)) return null;
+        includedEntryIds.add(entry.id);
         if (isModuleEntryHidden(entry.id)) return null;
         const nextEntry = _entryOverrides[entry.id]
           ? deepClone({ ..._entryOverrides[entry.id], id: entry.id })
@@ -150,6 +156,12 @@ function getAllSections() {
   _customSections.forEach(section => {
     const nodeId = section.nodeId || ensureModuleNodeForSection(section);
     const customSection = cleanCustomSection({ ...section, nodeId });
+    customSection.entries = customSection.entries.filter(entry => {
+      if (!entry?.id) return true;
+      if (includedEntryIds.has(entry.id)) return false;
+      includedEntryIds.add(entry.id);
+      return true;
+    });
     const signature = makeSectionSignature(customSection);
     const target = merged.find(existing => makeSectionSignature(existing) === signature);
     if (target) {

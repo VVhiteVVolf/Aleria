@@ -1,0 +1,334 @@
+{
+  "module": "Zum Dritten Funken",
+  "status": "local-only · no publication authorized",
+  "tool": "built-in image_gen",
+  "entries": [
+    {
+      "id": "gofrann-wappen",
+      "destination": "Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Gofrann.png",
+      "references": [
+        "Stammbäume/assets/images/houses/Llamreis Ankunft/haus-tlawd.png",
+        "Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Coeddu.png"
+      ],
+      "transparent": true,
+      "prompt": "# Universeller Wappen-Prompt\n\n**Wappenname:** Haus Gofrann\n\n**Zentrales Symbol:** Ein großer heraldisch stilisierter silberner Amboss. Ein kupferner Schmiedehammer schlägt auf dessen Oberseite: der Stiel zeigt schräg nach rechts oben, die flache Schlagfläche des schweren Hammerkopfes berührt links unten klar erkennbar die Ambossbahn. Drei kleine scharfkantige kupferne Funken sprühen unmittelbar aus diesem Berührungspunkt nach oben und außen. Keine dekorativen Sterne oder Rauten. Dunkle petrolblaue bemalte Holzfläche. Ein geschlossenes schmales kupfernes keltisches Knotenband läuft im geschwärzten Eisenrahmen. Klare großzügige Zwischenräume, keine Hand oder Schrift.\n\n**Farbpalette:** Dunkles Petrolblau · Silber · Kupfer\n\n**Wappenform:** ZIRKULAR – IMMER ein exakter Kreis, damit das Wappen in die vorhandenen Frames passt. Keine Spitzschilde oder ovalen Außenkonturen.\n\n### Gestaltung\n\nEin hochwertiges mittelalterliches Wappen im nordisch-keltischen Fantasy-Heraldikstil. Inspiriert von historischen bemalten Holzschilden, nordischer Ornamentik und traditionellen Clanwappen.\n\nDas zentrale Symbol ist groß, ausdrucksstark und detailliert, gleichzeitig aber klar heraldisch stilisiert. Kräftige dunkle Konturen, sauber getrennte Farbflächen, markante Silhouetten und ausgewogene Proportionen.\n\nDas gesamte Motiv muss vollständig innerhalb des Wappens liegen. Keine abgeschnittenen Figuren, Waffen, Flügel, Hörner oder Ornamente.\n\n### Material und Oberflächen\n\nDie innere Wappenfläche besteht aus bemalten Holzbrettern mit dezenter, sichtbarer Holzmaserung. Die Farben wirken wie auf Holz aufgetragene mittelalterliche Pigmente.\n\nDer Außenrahmen besteht aus GESCHWÄRZTEM EISEN mit leichter Materialstruktur, kleinen Gebrauchsspuren und einer vollständig geschlossenen Außenkontur.\n\nDas Wappen soll handwerklich hochwertig, plastisch und historisch glaubwürdig wirken. Keine moderne, minimalistische Logoästhetik, keine Fotorealistik und keine übertriebenen 3D-Effekte.\n\n### Verzierungen\n\nEin schmales kupfernes keltisches Knotenband innerhalb des geschlossenen Eisenrahmens. Keine Runen oder Schrift.\n\nBei zirkularen Wappen können die Verzierungen gleichmäßig im Außenring verlaufen. Sie dürfen das zentrale Motiv nicht überlagern.\n\n### Komposition\n\nQuadratisches Bildformat 1:1. Das vollständige Wappen steht mittig und wird frontal gezeigt.\n\nDas Wappen nimmt ungefähr 85–90 % der Bildbreite ein. Alle Elemente bleiben vollständig innerhalb seiner äußeren Begrenzung.\n\n### Transparenz – zwingend einhalten\n\n**Der gesamte Bereich außerhalb des äußersten Wappenrahmens muss vollständig transparent sein (Alpha-Kanal = 0).**\n\n- Keine Hintergrundfarbe, kein Weiß, Schwarz oder Magenta außerhalb des Wappens.\n- Kein Hintergrundbild, keine Landschaft, keine Wand und keine dekorativen Elemente außerhalb des Rahmens.\n- Keine Schlagschatten, Glows oder Lichtreflexe außerhalb der Wappenkontur.\n- Keine über den Rahmen hinausragenden Ornamente oder Symbole.\n- Die äußerste Wappenkante muss sauber und geschlossen sein.\n- **Die gesamte Wappenfläche innerhalb des Außenrahmens muss vollständig deckend bleiben (Alpha-Kanal = 255).**\n- Keine transparenten Löcher zwischen Symbolen, Ornamenten oder innerhalb der bemalten Holzfläche.\n- Die Innenfläche des Wappens muss ihre vorgesehene Farbe vollständig behalten.\n\n**WICHTIG:** Ausschließlich der Bereich außerhalb der äußeren Wappenkontur ist transparent. Das Wappen selbst, einschließlich Holzfläche, Rahmen, Symbolen und sämtlichen Zwischenräumen, bleibt vollständig sichtbar und deckend.\n\n### Ausgabe\n\nHochauflösendes PNG mit echtem transparentem Hintergrund (RGBA), quadratisches Format 1:1. Keine simulierte Transparenz und kein Schachbrettmuster als Bildhintergrund."
+    },
+    {
+      "id": "edern",
+      "destination": "AleriaAlmanach/assets/gofrann-schmiede/portraits/edern.png",
+      "transparent": false,
+      "references": [
+        "AleriaAlmanach/assets/gofrann-schmiede/portraits/gethin.png",
+        "Stammbäume/assets/images/portraits/haus-tlawd/rhyderch-tlawd.jpg",
+        "Stammbäume/assets/images/portraits/haus-tlawd/renfri-tlawd.jpg"
+      ],
+      "prompt": "Bildformat 2:3. Tales of Xillia / Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nUse case: stylized-concept. ONE upper-body family portrait of Edern Gofrann, exactly 76 years old at death in 1714, born 1638. Memorial portrait at his actual age of death, 76. Elderly broad-faced man, deep forehead and cheek wrinkles, entirely silver-grey tightly curled hair, a short square curly grey beard, clear blue eyes and a slightly crooked nose. Dark petrol wool work coat, plain cream collar, brown leather shoulder apron. Kindly serious expression, standing with relaxed arms.\nThe attached Tlawd portraits define the specific anime ART STYLE: confident clear dark linework, restrained cel-shaded faces and simple painted-looking anime cloth with NO realistic textures. Match that sober medieval fantasy style closely. Gofrann blood relatives have naturally tightly curled brown hair and blue eyes; old relatives have grey hair, and elderly men grey beards. Different faces, noses, haircuts, beards, outfits and simple standing poses for each person. Frame head through waist or upper hips, 2:3 portrait. Simple quiet medieval wood or pale stone interior, low visual clutter. No held objects, complicated hand gestures, full-body composition, text, border, collage, modern clothing, One Piece exaggeration, photorealism or painterly rendering. Children must look their exact age and wear modest ordinary child clothing in a safe neutral family interior."
+    },
+    {
+      "id": "eirwen",
+      "destination": "AleriaAlmanach/assets/gofrann-schmiede/portraits/eirwen.png",
+      "transparent": false,
+      "references": [
+        "Stammbäume/assets/images/portraits/haus-tlawd/rhyderch-tlawd.jpg",
+        "Stammbäume/assets/images/portraits/haus-tlawd/renfri-tlawd.jpg"
+      ],
+      "prompt": "Bildformat 2:3. Tales of Xillia / Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nUse case: stylized-concept. ONE upper-body family portrait of Eirwen, exactly 77 years old at death in 1720, born 1643. Memorial portrait at her actual age of death, 77. Clearly elderly woman, silver-grey hair in a loose braided bun with small curls at the temples, blue eyes, prominent smile lines and age lines at neck. Modest charcoal gown with petrol apron and cream linen cap, no beard, no held objects. Calm upright pose.\nThe attached Tlawd portraits define the specific anime ART STYLE: confident clear dark linework, restrained cel-shaded faces and simple painted-looking anime cloth with NO realistic textures. Match that sober medieval fantasy style closely. Gofrann blood relatives have naturally tightly curled brown hair and blue eyes; old relatives have grey hair, and elderly men grey beards. Different faces, noses, haircuts, beards, outfits and simple standing poses for each person. Frame head through waist or upper hips, 2:3 portrait. Simple quiet medieval wood or pale stone interior, low visual clutter. No held objects, complicated hand gestures, full-body composition, text, border, collage, modern clothing, One Piece exaggeration, photorealism or painterly rendering. Children must look their exact age and wear modest ordinary child clothing in a safe neutral family interior."
+    },
+    {
+      "id": "caradfan",
+      "destination": "AleriaAlmanach/assets/gofrann-schmiede/portraits/caradfan.png",
+      "transparent": false,
+      "references": [
+        "Stammbäume/assets/images/portraits/haus-tlawd/rhyderch-tlawd.jpg",
+        "Stammbäume/assets/images/portraits/haus-tlawd/renfri-tlawd.jpg"
+      ],
+      "prompt": "Bildformat 2:3. Tales of Xillia / Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nUse case: stylized-concept. ONE upper-body family portrait of Caradfan Gofrann, exactly 70 years old at death in 1712, born 1642. Memorial portrait at his actual age of death, 70. Broad rounded elderly face, large blunt nose with a small healed notch, heavy lower eyelids, vivid blue eyes, deeply etched cheeks and forehead. Bald crown with sparse short tight silver-grey curls at the sides and back. Long grey walrus moustache drooping below the mouth corners, completely clean-shaven chin and jaw. Broad sturdy ageing build with rounded shoulders. Charcoal wool shirt, cream neckcloth and worn dark tan leather apron. Standing slightly toward image right with arms relaxed at his sides, no props. His own face, clearly distinct from his son Bleddyn.\nThe attached Tlawd portraits define the specific anime ART STYLE: confident clear dark linework, restrained cel-shaded faces and simple painted-looking anime cloth with NO realistic textures. Match that sober medieval fantasy style closely. Gofrann blood relatives have naturally tightly curled brown hair and blue eyes; old relatives have grey hair, and elderly men grey beards. Different faces, noses, haircuts, beards, outfits and simple standing poses for each person. Frame head through waist or upper hips, 2:3 portrait. Simple quiet medieval wood or pale stone interior, low visual clutter. No held objects, complicated hand gestures, full-body composition, text, border, collage, modern clothing, One Piece exaggeration, photorealism or painterly rendering. Children must look their exact age and wear modest ordinary child clothing in a safe neutral family interior."
+    },
+    {
+      "id": "neryn-alt",
+      "destination": "AleriaAlmanach/assets/gofrann-schmiede/portraits/neryn-alt.png",
+      "transparent": false,
+      "references": [
+        "Stammbäume/assets/images/portraits/haus-tlawd/rhyderch-tlawd.jpg",
+        "Stammbäume/assets/images/portraits/haus-tlawd/renfri-tlawd.jpg"
+      ],
+      "prompt": "Bildformat 2:3. Tales of Xillia / Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nUse case: stylized-concept. ONE upper-body family portrait of Neryn, exactly 78 years old at death in 1725, born 1647. Memorial portrait at her actual age of death, 78. Elderly woman with a round face, pronounced wrinkles, gentle blue eyes, completely grey hair softly curled around the forehead and gathered at the nape. Muted copper-brown medieval wool dress, charcoal sleeveless overdress, cream scarf. Small amused smile, standing in a simple three-quarter pose, no beard or objects.\nThe attached Tlawd portraits define the specific anime ART STYLE: confident clear dark linework, restrained cel-shaded faces and simple painted-looking anime cloth with NO realistic textures. Match that sober medieval fantasy style closely. Gofrann blood relatives have naturally tightly curled brown hair and blue eyes; old relatives have grey hair, and elderly men grey beards. Different faces, noses, haircuts, beards, outfits and simple standing poses for each person. Frame head through waist or upper hips, 2:3 portrait. Simple quiet medieval wood or pale stone interior, low visual clutter. No held objects, complicated hand gestures, full-body composition, text, border, collage, modern clothing, One Piece exaggeration, photorealism or painterly rendering. Children must look their exact age and wear modest ordinary child clothing in a safe neutral family interior."
+    },
+    {
+      "id": "gethin",
+      "destination": "AleriaAlmanach/assets/gofrann-schmiede/portraits/gethin.png",
+      "transparent": false,
+      "references": [
+        "Stammbäume/assets/images/portraits/haus-tlawd/rhyderch-tlawd.jpg",
+        "Stammbäume/assets/images/portraits/haus-tlawd/renfri-tlawd.jpg"
+      ],
+      "prompt": "Bildformat 2:3. Tales of Xillia / Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nUse case: stylized-concept. ONE upper-body family portrait of Gethin Gofrann, exactly 71 years old in 1740, born 1669. 71-year-old actively working master armourer. Broad stocky shoulders, heavy square jaw, large rounded nose, thick silver-grey tightly curled hair with receding temples, full short curly grey beard, vivid blue eyes, deep age lines and thick brows. Charcoal linen shirt with sleeves simply rolled below elbows, dark petrol leather-edged work waistcoat, worn brown leather apron, a tiny copper anvil clasp. Standing squarely, hands relaxed below the crop, a warm stubborn smile.\nThe attached Tlawd portraits define the specific anime ART STYLE: confident clear dark linework, restrained cel-shaded faces and simple painted-looking anime cloth with NO realistic textures. Match that sober medieval fantasy style closely. Gofrann blood relatives have naturally tightly curled brown hair and blue eyes; old relatives have grey hair, and elderly men grey beards. Different faces, noses, haircuts, beards, outfits and simple standing poses for each person. Frame head through waist or upper hips, 2:3 portrait. Simple quiet medieval wood or pale stone interior, low visual clutter. No held objects, complicated hand gestures, full-body composition, text, border, collage, modern clothing, One Piece exaggeration, photorealism or painterly rendering. Children must look their exact age and wear modest ordinary child clothing in a safe neutral family interior."
+    },
+    {
+      "id": "teleri",
+      "destination": "AleriaAlmanach/assets/gofrann-schmiede/portraits/teleri.png",
+      "transparent": false,
+      "references": [
+        "Stammbäume/assets/images/portraits/haus-tlawd/rhyderch-tlawd.jpg",
+        "Stammbäume/assets/images/portraits/haus-tlawd/renfri-tlawd.jpg"
+      ],
+      "prompt": "Bildformat 2:3. Tales of Xillia / Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nUse case: stylized-concept. ONE upper-body family portrait of Teleri Gofrann, exactly 67 years old in 1740, born 1673. 67-year-old mature woman, clearly elderly with natural wrinkles and softening jaw, entirely grey hair in a neat braided crown, blue eyes, formerly copper-haired Cenyri, composed alert expression. Deep petrol medieval wool gown, cream underdress, narrow copper-brown belt, plain small brooch. Standing with loosely folded hands low at the waist, no beard or props.\nThe attached Tlawd portraits define the specific anime ART STYLE: confident clear dark linework, restrained cel-shaded faces and simple painted-looking anime cloth with NO realistic textures. Match that sober medieval fantasy style closely. Gofrann blood relatives have naturally tightly curled brown hair and blue eyes; old relatives have grey hair, and elderly men grey beards. Different faces, noses, haircuts, beards, outfits and simple standing poses for each person. Frame head through waist or upper hips, 2:3 portrait. Simple quiet medieval wood or pale stone interior, low visual clutter. No held objects, complicated hand gestures, full-body composition, text, border, collage, modern clothing, One Piece exaggeration, photorealism or painterly rendering. Children must look their exact age and wear modest ordinary child clothing in a safe neutral family interior."
+    },
+    {
+      "id": "bleddyn",
+      "destination": "AleriaAlmanach/assets/gofrann-schmiede/portraits/bleddyn.png",
+      "transparent": false,
+      "references": [
+        "Stammbäume/assets/images/portraits/haus-tlawd/rhyderch-tlawd.jpg",
+        "Stammbäume/assets/images/portraits/haus-tlawd/renfri-tlawd.jpg"
+      ],
+      "prompt": "Bildformat 2:3. Tales of Xillia / Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nUse case: stylized-concept. ONE upper-body family portrait of Bleddyn Gofrann, exactly 68 years old in 1740, born 1672. 68-year-old actively working master bladesmith, noticeably different from his cousin Gethin. Tall lean build, long angular face, high cheekbones, narrow aquiline nose, blue eyes, swept-back silver-grey tight curls, long separated grey moustache and a neatly forked curly grey beard. Visible forehead wrinkles and crows feet. Off-white linen shirt, copper-brown leather apron over a muted russet waistcoat, simple dark belt. Standing slightly turned left, one arm resting loosely at the waist, playful restrained smile, no objects.\nThe attached Tlawd portraits define the specific anime ART STYLE: confident clear dark linework, restrained cel-shaded faces and simple painted-looking anime cloth with NO realistic textures. Match that sober medieval fantasy style closely. Gofrann blood relatives have naturally tightly curled brown hair and blue eyes; old relatives have grey hair, and elderly men grey beards. Different faces, noses, haircuts, beards, outfits and simple standing poses for each person. Frame head through waist or upper hips, 2:3 portrait. Simple quiet medieval wood or pale stone interior, low visual clutter. No held objects, complicated hand gestures, full-body composition, text, border, collage, modern clothing, One Piece exaggeration, photorealism or painterly rendering. Children must look their exact age and wear modest ordinary child clothing in a safe neutral family interior."
+    },
+    {
+      "id": "mareda",
+      "destination": "AleriaAlmanach/assets/gofrann-schmiede/portraits/mareda.png",
+      "transparent": false,
+      "references": [
+        "Stammbäume/assets/images/portraits/haus-tlawd/rhyderch-tlawd.jpg",
+        "Stammbäume/assets/images/portraits/haus-tlawd/renfri-tlawd.jpg"
+      ],
+      "prompt": "Bildformat 2:3. Tales of Xillia / Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nUse case: stylized-concept. ONE upper-body family portrait of Mareda Gofrann, exactly 64 years old in 1740, born 1676. 64-year-old older woman with grey wavy hair pinned in a low bun, clear blue eyes, broad kind face with mature lines around mouth and eyes. Dark charcoal medieval dress, petrol bodice, cream sleeves and small copper fastening. Standing with one arm relaxed and the other hand resting simply at the belt, confident welcoming expression. No beard or objects.\nThe attached Tlawd portraits define the specific anime ART STYLE: confident clear dark linework, restrained cel-shaded faces and simple painted-looking anime cloth with NO realistic textures. Match that sober medieval fantasy style closely. Gofrann blood relatives have naturally tightly curled brown hair and blue eyes; old relatives have grey hair, and elderly men grey beards. Different faces, noses, haircuts, beards, outfits and simple standing poses for each person. Frame head through waist or upper hips, 2:3 portrait. Simple quiet medieval wood or pale stone interior, low visual clutter. No held objects, complicated hand gestures, full-body composition, text, border, collage, modern clothing, One Piece exaggeration, photorealism or painterly rendering. Children must look their exact age and wear modest ordinary child clothing in a safe neutral family interior."
+    },
+    {
+      "id": "einion",
+      "destination": "AleriaAlmanach/assets/gofrann-schmiede/portraits/einion.png",
+      "transparent": false,
+      "references": [
+        "AleriaAlmanach/assets/gofrann-schmiede/portraits/gethin.png",
+        "Stammbäume/assets/images/portraits/haus-tlawd/rhyderch-tlawd.jpg",
+        "Stammbäume/assets/images/portraits/haus-tlawd/renfri-tlawd.jpg"
+      ],
+      "prompt": "Bildformat 2:3. Tales of Xillia / Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nUse case: stylized-concept. ONE upper-body family portrait of Einion Gofrann, exactly 44 years old in 1740, born 1696. 44-year-old man, Gethins son. Broad calm face, rounded family nose, vivid blue eyes, dense dark chestnut corkscrew curls cut to ear length, short curly brown beard with the first few grey hairs. Dark petrol medieval wool doublet over a cream shirt, copper buttons, plain brown belt, no apron. Standing three-quarter right with relaxed shoulders and arms at sides, composed approachable expression.\nThe attached Tlawd portraits define the specific anime ART STYLE: confident clear dark linework, restrained cel-shaded faces and simple painted-looking anime cloth with NO realistic textures. Match that sober medieval fantasy style closely. Gofrann blood relatives have naturally tightly curled brown hair and blue eyes; old relatives have grey hair, and elderly men grey beards. Different faces, noses, haircuts, beards, outfits and simple standing poses for each person. Frame head through waist or upper hips, 2:3 portrait. Simple quiet medieval wood or pale stone interior, low visual clutter. No held objects, complicated hand gestures, full-body composition, text, border, collage, modern clothing, One Piece exaggeration, photorealism or painterly rendering. Children must look their exact age and wear modest ordinary child clothing in a safe neutral family interior."
+    },
+    {
+      "id": "idnerth",
+      "destination": "AleriaAlmanach/assets/gofrann-schmiede/portraits/idnerth.png",
+      "transparent": false,
+      "references": [
+        "AleriaAlmanach/assets/gofrann-schmiede/portraits/gethin.png",
+        "Stammbäume/assets/images/portraits/haus-tlawd/rhyderch-tlawd.jpg",
+        "Stammbäume/assets/images/portraits/haus-tlawd/renfri-tlawd.jpg"
+      ],
+      "prompt": "Bildformat 2:3. Tales of Xillia / Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nUse case: stylized-concept. ONE upper-body family portrait of Idnerth Gofrann, exactly 38 years old in 1740, born 1702. 38-year-old adult man, Einions younger brother and Gethins son. Chestnut tight curls cut short at the sides, blue eyes, broad jaw, short curly moustache with clean-shaven chin, slightly uneven eyebrows. Cream rolled-sleeve shirt, charcoal leather work apron, petrol neckcloth. Strong ordinary build, standing slightly turned left, one hand resting low on his belt, thoughtful expression, no held tools.\nThe attached Tlawd portraits define the specific anime ART STYLE: confident clear dark linework, restrained cel-shaded faces and simple painted-looking anime cloth with NO realistic textures. Match that sober medieval fantasy style closely. Gofrann blood relatives have naturally tightly curled brown hair and blue eyes; old relatives have grey hair, and elderly men grey beards. Different faces, noses, haircuts, beards, outfits and simple standing poses for each person. Frame head through waist or upper hips, 2:3 portrait. Simple quiet medieval wood or pale stone interior, low visual clutter. No held objects, complicated hand gestures, full-body composition, text, border, collage, modern clothing, One Piece exaggeration, photorealism or painterly rendering. Children must look their exact age and wear modest ordinary child clothing in a safe neutral family interior."
+    },
+    {
+      "id": "ceryth",
+      "destination": "AleriaAlmanach/assets/gofrann-schmiede/portraits/ceryth.png",
+      "transparent": false,
+      "references": [
+        "Stammbäume/assets/images/portraits/haus-tlawd/rhyderch-tlawd.jpg",
+        "Stammbäume/assets/images/portraits/haus-tlawd/renfri-tlawd.jpg"
+      ],
+      "prompt": "Bildformat 2:3. Tales of Xillia / Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nUse case: stylized-concept. ONE upper-body family portrait of Ceryth Gofrann, exactly 35 years old in 1740, born 1705. 35-year-old adult Cenyri woman, copper-red softly wavy hair braided over one shoulder, blue eyes, fine freckles, oval face with a straight nose. Modest warm grey medieval dress, petrol sleeveless overdress, brown leather belt with a small copper clasp. Standing naturally facing slightly right, arms relaxed, gentle lively smile, no beard or objects.\nThe attached Tlawd portraits define the specific anime ART STYLE: confident clear dark linework, restrained cel-shaded faces and simple painted-looking anime cloth with NO realistic textures. Match that sober medieval fantasy style closely. Gofrann blood relatives have naturally tightly curled brown hair and blue eyes; old relatives have grey hair, and elderly men grey beards. Different faces, noses, haircuts, beards, outfits and simple standing poses for each person. Frame head through waist or upper hips, 2:3 portrait. Simple quiet medieval wood or pale stone interior, low visual clutter. No held objects, complicated hand gestures, full-body composition, text, border, collage, modern clothing, One Piece exaggeration, photorealism or painterly rendering. Children must look their exact age and wear modest ordinary child clothing in a safe neutral family interior."
+    },
+    {
+      "id": "ulaena",
+      "destination": "AleriaAlmanach/assets/gofrann-schmiede/portraits/ulaena.png",
+      "transparent": false,
+      "references": [
+        "AleriaAlmanach/assets/gofrann-schmiede/portraits/bleddyn.png",
+        "Stammbäume/assets/images/portraits/haus-tlawd/rhyderch-tlawd.jpg",
+        "Stammbäume/assets/images/portraits/haus-tlawd/renfri-tlawd.jpg"
+      ],
+      "prompt": "Bildformat 2:3. Tales of Xillia / Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nUse case: stylized-concept. ONE upper-body family portrait of Ulaena Gofrann, exactly 41 years old in 1740, born 1699. 41-year-old adult woman, Bleddyns daughter. Dense dark chestnut naturally tight curls pinned into a loose braided bun, a few curls at the temples, clear blue eyes, long family nose, refined angular face with subtle mature smile lines. Medieval burgundy gown with black fitted bodice and cream sleeves, modest square neckline, a small round copper anvil pendant. Standing three-quarter left with hands loosely together below the crop, poised warm expression, no tools or beard.\nThe attached Tlawd portraits define the specific anime ART STYLE: confident clear dark linework, restrained cel-shaded faces and simple painted-looking anime cloth with NO realistic textures. Match that sober medieval fantasy style closely. Gofrann blood relatives have naturally tightly curled brown hair and blue eyes; old relatives have grey hair, and elderly men grey beards. Different faces, noses, haircuts, beards, outfits and simple standing poses for each person. Frame head through waist or upper hips, 2:3 portrait. Simple quiet medieval wood or pale stone interior, low visual clutter. No held objects, complicated hand gestures, full-body composition, text, border, collage, modern clothing, One Piece exaggeration, photorealism or painterly rendering. Children must look their exact age and wear modest ordinary child clothing in a safe neutral family interior."
+    },
+    {
+      "id": "madoc",
+      "destination": "AleriaAlmanach/assets/gofrann-schmiede/portraits/madoc.png",
+      "transparent": false,
+      "references": [
+        "AleriaAlmanach/assets/gofrann-schmiede/portraits/bleddyn.png",
+        "Stammbäume/assets/images/portraits/haus-tlawd/rhyderch-tlawd.jpg",
+        "Stammbäume/assets/images/portraits/haus-tlawd/renfri-tlawd.jpg"
+      ],
+      "prompt": "Bildformat 2:3. Tales of Xillia / Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nUse case: stylized-concept. ONE upper-body family portrait of Madoc Gofrann, exactly 36 years old in 1740, born 1704. 36-year-old adult man, Bleddyns son and Ulaenas younger brother. Lean face with high cheekbones and narrow family nose, bright blue eyes, medium-length dark brown tight curls tied very loosely at the nape, small curly chin beard and short moustache. Muted rust linen shirt, deep petrol leather-trimmed work vest and plain brown apron. Standing in a relaxed frontal pose, arms low and an easy crooked smile, no held objects.\nThe attached Tlawd portraits define the specific anime ART STYLE: confident clear dark linework, restrained cel-shaded faces and simple painted-looking anime cloth with NO realistic textures. Match that sober medieval fantasy style closely. Gofrann blood relatives have naturally tightly curled brown hair and blue eyes; old relatives have grey hair, and elderly men grey beards. Different faces, noses, haircuts, beards, outfits and simple standing poses for each person. Frame head through waist or upper hips, 2:3 portrait. Simple quiet medieval wood or pale stone interior, low visual clutter. No held objects, complicated hand gestures, full-body composition, text, border, collage, modern clothing, One Piece exaggeration, photorealism or painterly rendering. Children must look their exact age and wear modest ordinary child clothing in a safe neutral family interior."
+    },
+    {
+      "id": "aneira",
+      "destination": "AleriaAlmanach/assets/gofrann-schmiede/portraits/aneira.png",
+      "transparent": false,
+      "references": [
+        "Stammbäume/assets/images/portraits/haus-tlawd/rhyderch-tlawd.jpg",
+        "Stammbäume/assets/images/portraits/haus-tlawd/renfri-tlawd.jpg"
+      ],
+      "prompt": "Bildformat 2:3. Tales of Xillia / Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nUse case: stylized-concept. ONE upper-body family portrait of Aneira Gofrann, exactly 32 years old in 1740, born 1708. 32-year-old adult Cenyri woman, dark auburn curly bob, blue eyes, round face with a small upturned nose and faint freckles, lively attentive expression. Plain cream linen blouse, charcoal medieval fitted wool vest, copper-brown working apron with no visible tools. Standing slightly turned right, one relaxed hand low against the apron seam, no objects or beard.\nThe attached Tlawd portraits define the specific anime ART STYLE: confident clear dark linework, restrained cel-shaded faces and simple painted-looking anime cloth with NO realistic textures. Match that sober medieval fantasy style closely. Gofrann blood relatives have naturally tightly curled brown hair and blue eyes; old relatives have grey hair, and elderly men grey beards. Different faces, noses, haircuts, beards, outfits and simple standing poses for each person. Frame head through waist or upper hips, 2:3 portrait. Simple quiet medieval wood or pale stone interior, low visual clutter. No held objects, complicated hand gestures, full-body composition, text, border, collage, modern clothing, One Piece exaggeration, photorealism or painterly rendering. Children must look their exact age and wear modest ordinary child clothing in a safe neutral family interior."
+    },
+    {
+      "id": "cynlas",
+      "destination": "AleriaAlmanach/assets/gofrann-schmiede/portraits/cynlas.png",
+      "transparent": false,
+      "references": [
+        "AleriaAlmanach/assets/gofrann-schmiede/portraits/einion.png",
+        "Stammbäume/assets/images/portraits/haus-tlawd/rhyderch-tlawd.jpg",
+        "Stammbäume/assets/images/portraits/haus-tlawd/renfri-tlawd.jpg"
+      ],
+      "prompt": "Bildformat 2:3. Tales of Xillia / Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nUse case: stylized-concept. ONE upper-body family portrait of Cynlas Gofrann, exactly 20 years old in 1740, born 1720. 20-year-old young adult man, Einion and Renfris son. Dark chestnut tight curls above the ears, blue eyes, angular brows inherited from his mother, youthful jaw, clean shaven. Simple charcoal work tunic with cream neckline, short petrol leather apron, plain belt. Standing with relaxed arms and a slightly shy proud smile, no tools.\nThe attached Tlawd portraits define the specific anime ART STYLE: confident clear dark linework, restrained cel-shaded faces and simple painted-looking anime cloth with NO realistic textures. Match that sober medieval fantasy style closely. Gofrann blood relatives have naturally tightly curled brown hair and blue eyes; old relatives have grey hair, and elderly men grey beards. Different faces, noses, haircuts, beards, outfits and simple standing poses for each person. Frame head through waist or upper hips, 2:3 portrait. Simple quiet medieval wood or pale stone interior, low visual clutter. No held objects, complicated hand gestures, full-body composition, text, border, collage, modern clothing, One Piece exaggeration, photorealism or painterly rendering. Children must look their exact age and wear modest ordinary child clothing in a safe neutral family interior."
+    },
+    {
+      "id": "eluned",
+      "destination": "AleriaAlmanach/assets/gofrann-schmiede/portraits/eluned.png",
+      "transparent": false,
+      "references": [
+        "AleriaAlmanach/assets/gofrann-schmiede/portraits/einion.png",
+        "Stammbäume/assets/images/portraits/haus-tlawd/rhyderch-tlawd.jpg",
+        "Stammbäume/assets/images/portraits/haus-tlawd/renfri-tlawd.jpg"
+      ],
+      "prompt": "Bildformat 2:3. Tales of Xillia / Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nUse case: stylized-concept. ONE upper-body family portrait of Eluned Gofrann, exactly 15 years old in 1740, born 1725. 15-year-old teenage girl, clearly her actual age, Einion and Renfris daughter. Dark chestnut tightly curled shoulder-length hair gathered with a plain ribbon, clear blue eyes, youthful oval face, modest charcoal wool dress over a cream long-sleeve underdress, small petrol sash. Standing in a quiet daylit room, arms relaxed and an attentive small smile. Modest age-appropriate clothes, no adult styling, beard or objects.\nThe attached Tlawd portraits define the specific anime ART STYLE: confident clear dark linework, restrained cel-shaded faces and simple painted-looking anime cloth with NO realistic textures. Match that sober medieval fantasy style closely. Gofrann blood relatives have naturally tightly curled brown hair and blue eyes; old relatives have grey hair, and elderly men grey beards. Different faces, noses, haircuts, beards, outfits and simple standing poses for each person. Frame head through waist or upper hips, 2:3 portrait. Simple quiet medieval wood or pale stone interior, low visual clutter. No held objects, complicated hand gestures, full-body composition, text, border, collage, modern clothing, One Piece exaggeration, photorealism or painterly rendering. Children must look their exact age and wear modest ordinary child clothing in a safe neutral family interior."
+    },
+    {
+      "id": "tegwyn",
+      "destination": "AleriaAlmanach/assets/gofrann-schmiede/portraits/tegwyn.png",
+      "transparent": false,
+      "references": [
+        "AleriaAlmanach/assets/gofrann-schmiede/portraits/idnerth.png",
+        "AleriaAlmanach/assets/gofrann-schmiede/portraits/ceryth.png",
+        "Stammbäume/assets/images/portraits/haus-tlawd/rhyderch-tlawd.jpg",
+        "Stammbäume/assets/images/portraits/haus-tlawd/renfri-tlawd.jpg"
+      ],
+      "prompt": "Bildformat 2:3. Tales of Xillia / Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nUse case: stylized-concept. ONE upper-body family portrait of Tegwyn Gofrann, exactly 14 years old in 1740, born 1726. 14-year-old teenage boy, clearly young adolescent, Idnerth and Ceryths son. Thick brown corkscrew curls, blue eyes, a few freckles, narrow youthful shoulders and a soft childlike jaw, no facial hair. Modest russet work tunic and simple short dark leather apron. Standing casually in a neutral bright wood interior, arms at sides, earnest curious expression, no tools or active forge.\nThe attached Tlawd portraits define the specific anime ART STYLE: confident clear dark linework, restrained cel-shaded faces and simple painted-looking anime cloth with NO realistic textures. Match that sober medieval fantasy style closely. Gofrann blood relatives have naturally tightly curled brown hair and blue eyes; old relatives have grey hair, and elderly men grey beards. Different faces, noses, haircuts, beards, outfits and simple standing poses for each person. Frame head through waist or upper hips, 2:3 portrait. Simple quiet medieval wood or pale stone interior, low visual clutter. No held objects, complicated hand gestures, full-body composition, text, border, collage, modern clothing, One Piece exaggeration, photorealism or painterly rendering. Children must look their exact age and wear modest ordinary child clothing in a safe neutral family interior."
+    },
+    {
+      "id": "rhoswen",
+      "destination": "AleriaAlmanach/assets/gofrann-schmiede/portraits/rhoswen.png",
+      "transparent": false,
+      "references": [
+        "AleriaAlmanach/assets/gofrann-schmiede/portraits/idnerth.png",
+        "AleriaAlmanach/assets/gofrann-schmiede/portraits/ceryth.png",
+        "Stammbäume/assets/images/portraits/haus-tlawd/rhyderch-tlawd.jpg",
+        "Stammbäume/assets/images/portraits/haus-tlawd/renfri-tlawd.jpg"
+      ],
+      "prompt": "Bildformat 2:3. Tales of Xillia / Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nUse case: stylized-concept. ONE upper-body family portrait of Rhoswen Gofrann, exactly 9 years old in 1740, born 1731. Nine-year-old little girl, Idnerth and Ceryths daughter. Brown tight ringlet curls to shoulder length, blue eyes, freckles and round child cheeks. Modest cream and muted petrol medieval childs dress, plain ribbon. Standing naturally in a safe quiet family room, arms relaxed, curious open smile. Small child proportions, no apron, tools, adult styling or beard.\nThe attached Tlawd portraits define the specific anime ART STYLE: confident clear dark linework, restrained cel-shaded faces and simple painted-looking anime cloth with NO realistic textures. Match that sober medieval fantasy style closely. Gofrann blood relatives have naturally tightly curled brown hair and blue eyes; old relatives have grey hair, and elderly men grey beards. Different faces, noses, haircuts, beards, outfits and simple standing poses for each person. Frame head through waist or upper hips, 2:3 portrait. Simple quiet medieval wood or pale stone interior, low visual clutter. No held objects, complicated hand gestures, full-body composition, text, border, collage, modern clothing, One Piece exaggeration, photorealism or painterly rendering. Children must look their exact age and wear modest ordinary child clothing in a safe neutral family interior."
+    },
+    {
+      "id": "emrys",
+      "destination": "AleriaAlmanach/assets/gofrann-schmiede/portraits/emrys.png",
+      "transparent": false,
+      "references": [
+        "AleriaAlmanach/assets/gofrann-schmiede/portraits/madoc.png",
+        "AleriaAlmanach/assets/gofrann-schmiede/portraits/aneira.png",
+        "Stammbäume/assets/images/portraits/haus-tlawd/rhyderch-tlawd.jpg",
+        "Stammbäume/assets/images/portraits/haus-tlawd/renfri-tlawd.jpg"
+      ],
+      "prompt": "Bildformat 2:3. Tales of Xillia / Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nUse case: stylized-concept. ONE upper-body family portrait of Emrys Gofrann, exactly 12 years old in 1740, born 1728. Twelve-year-old boy, clearly a child, Madoc and Aneiras son. Soft dark brown tight curls, clear blue eyes, youthful round face, no facial hair. Modest cream medieval shirt with a plain charcoal sleeveless wool vest and petrol sash. Standing with relaxed arms in a safe quiet daylight family interior, friendly attentive expression. No tools, forge work or adult proportions.\nThe attached Tlawd portraits define the specific anime ART STYLE: confident clear dark linework, restrained cel-shaded faces and simple painted-looking anime cloth with NO realistic textures. Match that sober medieval fantasy style closely. Gofrann blood relatives have naturally tightly curled brown hair and blue eyes; old relatives have grey hair, and elderly men grey beards. Different faces, noses, haircuts, beards, outfits and simple standing poses for each person. Frame head through waist or upper hips, 2:3 portrait. Simple quiet medieval wood or pale stone interior, low visual clutter. No held objects, complicated hand gestures, full-body composition, text, border, collage, modern clothing, One Piece exaggeration, photorealism or painterly rendering. Children must look their exact age and wear modest ordinary child clothing in a safe neutral family interior."
+    },
+    {
+      "id": "neryn",
+      "destination": "AleriaAlmanach/assets/gofrann-schmiede/portraits/neryn.png",
+      "transparent": false,
+      "references": [
+        "AleriaAlmanach/assets/gofrann-schmiede/portraits/madoc.png",
+        "AleriaAlmanach/assets/gofrann-schmiede/portraits/aneira.png",
+        "Stammbäume/assets/images/portraits/haus-tlawd/rhyderch-tlawd.jpg",
+        "Stammbäume/assets/images/portraits/haus-tlawd/renfri-tlawd.jpg"
+      ],
+      "prompt": "Bildformat 2:3. Tales of Xillia / Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nUse case: stylized-concept. ONE upper-body family portrait of Neryn Gofrann, exactly 6 years old in 1740, born 1734. Six-year-old little girl, unmistakably a small child, Madoc and Aneiras daughter. Short chestnut tight curls, bright blue eyes, round child cheeks and little upturned nose. Modest muted russet medieval childs dress with cream collar. Standing with a slight curious head tilt in a quiet bright family room, tiny relaxed hands below crop. No tools, working apron, adult styling or beard.\nThe attached Tlawd portraits define the specific anime ART STYLE: confident clear dark linework, restrained cel-shaded faces and simple painted-looking anime cloth with NO realistic textures. Match that sober medieval fantasy style closely. Gofrann blood relatives have naturally tightly curled brown hair and blue eyes; old relatives have grey hair, and elderly men grey beards. Different faces, noses, haircuts, beards, outfits and simple standing poses for each person. Frame head through waist or upper hips, 2:3 portrait. Simple quiet medieval wood or pale stone interior, low visual clutter. No held objects, complicated hand gestures, full-body composition, text, border, collage, modern clothing, One Piece exaggeration, photorealism or painterly rendering. Children must look their exact age and wear modest ordinary child clothing in a safe neutral family interior."
+    },
+    {
+      "id": "schild",
+      "destination": "AleriaAlmanach/assets/gofrann-schmiede/schild.png",
+      "transparent": true,
+      "references": [
+        "Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Gofrann.png",
+        "Stammbäume/assets/images/houses/Llamreis Ankunft/haus-tlawd.png"
+      ],
+      "prompt": "Use case: stylized-concept. ONE isolated medieval PAINTED WOODEN SHOP SIGN for the Gwynthor smithy Zum Dritten Funken. This is a physical long KITE-SHAPED sign with rounded shoulders and a pointed lower end, NOT the round family coat of arms. Current explicit user request requires this kite shape. Frontal complete view, two short attached iron hanging chains, closed dark wrought-iron rim with restrained copper knotwork entirely on the sign. The painted sign has TWO CLEARLY SEPARATE heraldic fields: upper field muted red with the exact WHITE GOAT of the Tlawd reference, lower field deep petrol with the exact SILVER ANVIL, COPPER HAMMER AND THREE COPPER SPARKS of Gofrann. Preserve both authentic emblems, do not fuse the goat into tools. A narrow copper dividing bar separates the fields. Small integral dark oak nameboard across the middle with the exact cream painted words \"Zum Dritten Funken\" in readable medieval lettering. Hand-painted medieval fantasy inventory illustration with clear dark outlines, simplified wood and metal texture, readable at thumbnail size, not photorealistic, not glossy CGI. Whole sign centered and large with clear margin, no wall bracket, people, hands, scenery, outer cast shadow or glow. Genuine transparent PNG outside the sign and in the open chain links; the painted wooden sign itself is fully opaque."
+    },
+    {
+      "id": "aussenansicht",
+      "destination": "AleriaAlmanach/assets/gofrann-schmiede/scenes/aussenansicht.png",
+      "transparent": false,
+      "references": [
+        "AleriaAlmanach/assets/gofrann-schmiede/schild.png",
+        "Stammbäume/assets/images/portraits/haus-tlawd/rhyderch-tlawd.jpg",
+        "Stammbäume/assets/images/portraits/haus-tlawd/renfri-tlawd.jpg"
+      ],
+      "prompt": "Bildformat 2:3. Tales of Xillia / Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nUse case: stylized-concept. ONE environmental still life, 2:3 portrait, for the inner-city Gwynthor smithy Zum Dritten Funken. The exterior of an established high-quality arms and armour smithy in the INNER CITY of medieval Gwynthor, warm late-afternoon light. A substantial pale stone and dark oak shop frontage, tall leaded display windows containing one plain steel breastplate and several orderly swords, an open side passage leading to the forge courtyard. In the foreground hangs the EXACT kite-shaped painted wooden sign from the reference, secured by a credible iron wall bracket and two short chains. The sign is large enough to recognize its separated goat and anvil fields. Warm forge light glows deeper inside. No people, no harbor, no ships, no grand palace. Keep architecture plausible and the sign fully visible.\nThe Tlawd portraits define the anime linework and cel-shading only, not the subject or architecture. Restrained medieval fantasy, warm charcoal, pale stone, dark petrol and copper accents. One calm coherent composition with clear perspective and a few readable meaningful objects. No people, extra faces, collage, border, watermark, photorealistic textures, loose painterly strokes, modern machinery or lettering unless the shop sign is explicitly requested."
+    },
+    {
+      "id": "zunftbio",
+      "destination": "AleriaAlmanach/assets/gofrann-schmiede/scenes/zunftbio.png",
+      "transparent": false,
+      "references": [
+        "Stammbäume/assets/images/portraits/haus-tlawd/rhyderch-tlawd.jpg",
+        "Stammbäume/assets/images/portraits/haus-tlawd/renfri-tlawd.jpg",
+        "Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Gofrann.png"
+      ],
+      "prompt": "Bildformat 2:3. Tales of Xillia / Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nUse case: stylized-concept. ONE environmental still life, 2:3 portrait, for the inner-city Gwynthor smithy Zum Dritten Funken. An intimate still life of the smithys old master workbench near a tall small-paned window: one carefully shaped steel shoulder plate, a plain broad forging hammer lying beside it, a few large rivets in a shallow tray, orderly charcoal and warm leather. A small circular Gofrann anvil emblem hangs on the back wall. The emphasis is on patient craftsmanship and old family tools, not a heap of weapons. No lettering or people.\nThe Tlawd portraits define the anime linework and cel-shading only, not the subject or architecture. Restrained medieval fantasy, warm charcoal, pale stone, dark petrol and copper accents. One calm coherent composition with clear perspective and a few readable meaningful objects. No people, extra faces, collage, border, watermark, photorealistic textures, loose painterly strokes, modern machinery or lettering unless the shop sign is explicitly requested."
+    },
+    {
+      "id": "handwerk",
+      "destination": "AleriaAlmanach/assets/gofrann-schmiede/scenes/handwerk.png",
+      "transparent": false,
+      "references": [
+        "Stammbäume/assets/images/portraits/haus-tlawd/rhyderch-tlawd.jpg",
+        "Stammbäume/assets/images/portraits/haus-tlawd/renfri-tlawd.jpg"
+      ],
+      "prompt": "Bildformat 2:3. Tales of Xillia / Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nUse case: stylized-concept. ONE environmental still life, 2:3 portrait, for the inner-city Gwynthor smithy Zum Dritten Funken. A calm overview of three individual workstations in an orderly medieval armour and weapons workshop: an anvil in the foreground, a shaping stake and partly assembled plain steel breastplate to the side, a grinding wheel farther back. Distinct clear silhouettes, stone walls, dark oak roof beams, subdued daylight and warm light from a small contained forge. Empty room, no tools floating or elaborate machinery.\nThe Tlawd portraits define the anime linework and cel-shading only, not the subject or architecture. Restrained medieval fantasy, warm charcoal, pale stone, dark petrol and copper accents. One calm coherent composition with clear perspective and a few readable meaningful objects. No people, extra faces, collage, border, watermark, photorealistic textures, loose painterly strokes, modern machinery or lettering unless the shop sign is explicitly requested."
+    },
+    {
+      "id": "sortiment",
+      "destination": "AleriaAlmanach/assets/gofrann-schmiede/scenes/sortiment.png",
+      "transparent": false,
+      "references": [
+        "Stammbäume/assets/images/portraits/haus-tlawd/rhyderch-tlawd.jpg",
+        "Stammbäume/assets/images/portraits/haus-tlawd/renfri-tlawd.jpg"
+      ],
+      "prompt": "Bildformat 2:3. Tales of Xillia / Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nUse case: stylized-concept. ONE environmental still life, 2:3 portrait, for the inner-city Gwynthor smithy Zum Dritten Funken. A close still life in a medieval armourers display alcove: an empty steel torso cuirass, one mail shirt hanging neatly at the side, one longsword standing securely in a simple rack, a round shield resting on a wooden support. No helmeted wearer or mannequin head, no elaborate heraldry, no labels, no people. Charcoal wood, pale stone, restrained dark petrol cloth and small copper fittings. Enough quiet space around each piece to read the inventory.\nThe Tlawd portraits define the anime linework and cel-shading only, not the subject or architecture. Restrained medieval fantasy, warm charcoal, pale stone, dark petrol and copper accents. One calm coherent composition with clear perspective and a few readable meaningful objects. No people, extra faces, collage, border, watermark, photorealistic textures, loose painterly strokes, modern machinery or lettering unless the shop sign is explicitly requested."
+    },
+    {
+      "id": "dienste",
+      "destination": "AleriaAlmanach/assets/gofrann-schmiede/scenes/dienste.png",
+      "transparent": false,
+      "references": [
+        "Stammbäume/assets/images/portraits/haus-tlawd/rhyderch-tlawd.jpg",
+        "Stammbäume/assets/images/portraits/haus-tlawd/renfri-tlawd.jpg"
+      ],
+      "prompt": "Bildformat 2:3. Tales of Xillia / Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nUse case: stylized-concept. ONE environmental still life, 2:3 portrait, for the inner-city Gwynthor smithy Zum Dritten Funken. An orderly medieval repair bench beside a daylit window. A scratched but intact steel vambrace rests on a leather pad beside a broad file, a small mallet, a leather strap and a shallow rivet dish. The objects form one believable still life, no detached hands, no people, no text. A glimpse of a finished simple sword in its rack behind. Calm warm practical workshop mood.\nThe Tlawd portraits define the anime linework and cel-shading only, not the subject or architecture. Restrained medieval fantasy, warm charcoal, pale stone, dark petrol and copper accents. One calm coherent composition with clear perspective and a few readable meaningful objects. No people, extra faces, collage, border, watermark, photorealistic textures, loose painterly strokes, modern machinery or lettering unless the shop sign is explicitly requested."
+    },
+    {
+      "id": "verkaufsraum",
+      "destination": "AleriaAlmanach/assets/gofrann-schmiede/scenes/verkaufsraum.png",
+      "transparent": false,
+      "references": [
+        "Stammbäume/assets/images/portraits/haus-tlawd/rhyderch-tlawd.jpg",
+        "Stammbäume/assets/images/portraits/haus-tlawd/renfri-tlawd.jpg"
+      ],
+      "prompt": "Bildformat 2:3. Tales of Xillia / Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nUse case: stylized-concept. ONE environmental still life, 2:3 portrait, for the inner-city Gwynthor smithy Zum Dritten Funken. The customer sales room of an established medieval inner-city smithy in Gwynthor. Broad oak counter with one clean leather fitting pad, plain steel armour on torso stands and a few swords in fixed wall racks, dark petrol fabric behind the display, small copper fixtures. A curtained fitting corner and a small wooden bench for waiting customers. Clear afternoon window light, hospitable and practical, empty room, no people, lettering or modern shop furniture.\nThe Tlawd portraits define the anime linework and cel-shading only, not the subject or architecture. Restrained medieval fantasy, warm charcoal, pale stone, dark petrol and copper accents. One calm coherent composition with clear perspective and a few readable meaningful objects. No people, extra faces, collage, border, watermark, photorealistic textures, loose painterly strokes, modern machinery or lettering unless the shop sign is explicitly requested."
+    },
+    {
+      "id": "schmiedewerkstatt",
+      "destination": "AleriaAlmanach/assets/gofrann-schmiede/scenes/schmiedewerkstatt.png",
+      "transparent": false,
+      "references": [
+        "Stammbäume/assets/images/portraits/haus-tlawd/rhyderch-tlawd.jpg",
+        "Stammbäume/assets/images/portraits/haus-tlawd/renfri-tlawd.jpg"
+      ],
+      "prompt": "Bildformat 2:3. Tales of Xillia / Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nUse case: stylized-concept. ONE environmental still life, 2:3 portrait, for the inner-city Gwynthor smithy Zum Dritten Funken. The main medieval stone smithing workshop seen from the safe central aisle: one large solid anvil on its oak block, a contained glowing forge and sturdy bellows at the back, fixed racks for a small number of tongs and hammers, one armour shaping stake and a shallow water trough to the side. Real coherent room layout, orderly floor, warm forge glow meeting cool daylight. No people, showers of sparks, modern machines or writing.\nThe Tlawd portraits define the anime linework and cel-shading only, not the subject or architecture. Restrained medieval fantasy, warm charcoal, pale stone, dark petrol and copper accents. One calm coherent composition with clear perspective and a few readable meaningful objects. No people, extra faces, collage, border, watermark, photorealistic textures, loose painterly strokes, modern machinery or lettering unless the shop sign is explicitly requested."
+    },
+    {
+      "id": "verwaltung",
+      "destination": "AleriaAlmanach/assets/gofrann-schmiede/scenes/verwaltung.png",
+      "transparent": false,
+      "references": [
+        "Stammbäume/assets/images/portraits/haus-tlawd/rhyderch-tlawd.jpg",
+        "Stammbäume/assets/images/portraits/haus-tlawd/renfri-tlawd.jpg"
+      ],
+      "prompt": "Bildformat 2:3. Tales of Xillia / Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nUse case: stylized-concept. ONE environmental still life, 2:3 portrait, for the inner-city Gwynthor smithy Zum Dritten Funken. A modest medieval smithy administration room above the sales floor. A sturdy oak desk under a daylit leaded window, one open account book with indistinct strokes rather than legible text, two sealed delivery packets, a small locked cash chest and neatly stacked cloth-wrapped documents. One plain red Tlawd goat seal and one petrol Gofrann anvil seal lie separately on the desk. Quiet pale plaster walls, dark beams, a simple chair, no people or modern office items.\nThe Tlawd portraits define the anime linework and cel-shading only, not the subject or architecture. Restrained medieval fantasy, warm charcoal, pale stone, dark petrol and copper accents. One calm coherent composition with clear perspective and a few readable meaningful objects. No people, extra faces, collage, border, watermark, photorealistic textures, loose painterly strokes, modern machinery or lettering unless the shop sign is explicitly requested."
+    },
+    {
+      "id": "meister",
+      "destination": "AleriaAlmanach/assets/gofrann-schmiede/scenes/meister.png",
+      "transparent": false,
+      "references": [
+        "AleriaAlmanach/assets/gofrann-schmiede/portraits/gethin.png",
+        "AleriaAlmanach/assets/gofrann-schmiede/portraits/bleddyn.png"
+      ],
+      "prompt": "Bildformat 2:3. Tales of Xillia / Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nUse case: stylized-concept. ONE warm companionable DOUBLE PORTRAIT of the two elderly master smiths and cousins of Zum Dritten Funken. Preserve their exact identities, faces, grey hair, blue eyes, beards and work clothes from the two references. LEFT Gethin aged 71, broad stocky man with a rounded nose and short square curly grey beard, petrol work vest and brown apron. RIGHT Bleddyn aged 68, lean angular man with an aquiline nose, separated moustache and forked grey beard, copper-brown apron and russet vest. They stand comfortably side by side, Bleddyn rests ONE clearly connected hand lightly on Gethins far shoulder, both share an understated amused smile like two old friends who have worked together for decades. Hands otherwise relaxed below the crop, no tools, drinks or complicated gestures. Waist-up TWO-PERSON composition, both heads fully visible with breathing room in 2:3 portrait format. Quiet daylit stone workshop behind, a few soft simple shapes. The exact sober Tlawd anime linework and cel-shading, no photorealism, One Piece exaggeration, full bodies, text, collage or decorative frame."
+    }
+  ]
+}

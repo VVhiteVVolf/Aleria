@@ -1,0 +1,563 @@
+{
+  "family": "Haus Vann",
+  "people": [
+    {
+      "key": "iestyn",
+      "id": "iestyn-vann",
+      "worldPersonId": "person--haus-vann--iestyn-vann",
+      "name": "Iestyn Vann",
+      "sex": "male",
+      "birth": "1303",
+      "death": "1379",
+      "house": "vann",
+      "role": "Erwarb die Letzte Rast 1334",
+      "bio": "Erwarb die Letzte Rast 1334",
+      "portrait": "./assets/letzte-rast/portraits/iestyn.png",
+      "appearance": "Memorial portrait at 76, deeply lined square face, entirely grey formerly copper-red swept hair, long narrow grey beard, blue eyes. Old-fashioned dark green wool merchant robe, simple brass clasp. Standing turned slightly left, arms relaxed.",
+      "resident": false,
+      "staff": false
+    },
+    {
+      "key": "efa",
+      "id": "efa-vann",
+      "worldPersonId": "person--haus-vann--efa-vann",
+      "name": "Efa",
+      "sex": "female",
+      "birth": "1307",
+      "death": "1381",
+      "house": "vann",
+      "role": "Mitbegründerin des Vann-Gasthaushalts",
+      "bio": "Mitbegründerin des Vann-Gasthaushalts",
+      "portrait": "./assets/letzte-rast/portraits/efa.png",
+      "appearance": "Memorial portrait at 74, grey hair in a braided crown, brown eyes, broad expressive face, visible wrinkles, dark red medieval wool gown and cream linen veil. Standing almost frontal with a gentle head tilt.",
+      "resident": false,
+      "staff": false,
+      "unknownOrigin": true
+    },
+    {
+      "key": "tudwal",
+      "id": "tudwal-vann",
+      "worldPersonId": "person--haus-vann--tudwal-vann",
+      "name": "Tudwal Vann",
+      "sex": "male",
+      "birth": "1644",
+      "death": "1720",
+      "house": "vann",
+      "role": "Brenns und Madocs Vater · früherer Inhaber",
+      "bio": "Brenns und Madocs Vater · früherer Inhaber",
+      "portrait": "./assets/letzte-rast/portraits/tudwal.png",
+      "appearance": "Memorial portrait at 76. Broad elderly man, short entirely grey formerly red hair, blue eyes, strong Vann nose, clean shaven face with deep smile lines. Dark burgundy medieval merchant tunic and fur-edged green shoulder mantle. Standing in three-quarter right view.",
+      "resident": false,
+      "staff": false
+    },
+    {
+      "key": "gwenith",
+      "id": "gwenith-vann",
+      "worldPersonId": "person--haus-vann--gwenith-vann",
+      "name": "Gwenith",
+      "sex": "female",
+      "birth": "1648",
+      "death": "1725",
+      "house": "vann",
+      "role": "Brenns und Madocs Mutter",
+      "bio": "Brenns und Madocs Mutter",
+      "portrait": "./assets/letzte-rast/portraits/gwenith.png",
+      "appearance": "Memorial portrait at 77. Entirely silver-grey hair in a neat bun under a fine linen coif, brown eyes, long oval face, dignified natural wrinkles. Deep green medieval gown, cream collar, small brass brooch. Standing with arms naturally down.",
+      "resident": false,
+      "staff": false,
+      "unknownOrigin": true
+    },
+    {
+      "key": "brenn",
+      "id": "brenn-vann",
+      "worldPersonId": "person--haus-vann--brenn-vann",
+      "name": "Brenn Vann",
+      "sex": "male",
+      "birth": "1673",
+      "death": "",
+      "house": "vann",
+      "role": "Hausoberhaupt · leitender Inhaber",
+      "bio": "Hausoberhaupt · leitender Inhaber",
+      "portrait": "./assets/letzte-rast/references/brenn.png",
+      "appearance": "",
+      "resident": true,
+      "staff": true,
+      "head": true
+    },
+    {
+      "key": "seren",
+      "id": "seren-vann",
+      "worldPersonId": "person--haus-vann--seren-vann",
+      "name": "Seren",
+      "sex": "female",
+      "birth": "1677",
+      "death": "",
+      "house": "vann",
+      "role": "Hausmutter · Empfang und Festgesellschaften",
+      "bio": "Hausmutter · Empfang und Festgesellschaften",
+      "portrait": "./assets/letzte-rast/portraits/seren.png",
+      "appearance": "63-year-old Cenyri woman, predominantly grey hair with a few faded auburn strands in a loose braided bun, clear blue eyes, wide warm face, mature smile lines. Burgundy medieval silk-wool gown, cream collar and modest gold trim. Standing gently turned left with relaxed hands low.",
+      "resident": true,
+      "staff": true,
+      "unknownOrigin": true
+    },
+    {
+      "key": "madoc",
+      "id": "madoc-vann",
+      "worldPersonId": "person--haus-vann--madoc-vann",
+      "name": "Madoc Vann",
+      "sex": "male",
+      "birth": "1677",
+      "death": "",
+      "house": "vann",
+      "role": "Mitinhaber · Meier und Rechnungen",
+      "bio": "Mitinhaber · Meier und Rechnungen",
+      "portrait": "./assets/letzte-rast/references/madoc.png",
+      "appearance": "",
+      "resident": true,
+      "staff": true
+    },
+    {
+      "key": "lowri",
+      "id": "lowri-vann",
+      "worldPersonId": "person--haus-vann--lowri-vann",
+      "name": "Lowri",
+      "sex": "female",
+      "birth": "1680",
+      "death": "",
+      "house": "vann",
+      "role": "Hausdame · Kammern und Hauswäsche",
+      "bio": "Hausdame · Kammern und Hauswäsche",
+      "portrait": "./assets/letzte-rast/portraits/lowri.png",
+      "appearance": "60-year-old Cenyri woman, grey hair with copper-red undertones in a compact braided knot, blue eyes, narrow face and strong cheekbones, mature eye lines, quietly amused expression. Deep navy medieval dress, copper-red sleeveless overdress, fine ivory linen collar. Standing three-quarter right, hands resting loosely below waist.",
+      "resident": true,
+      "staff": true,
+      "unknownOrigin": true
+    },
+    {
+      "key": "cadeyrn",
+      "id": "cadeyrn-vann",
+      "worldPersonId": "person--haus-vann--cadeyrn-vann",
+      "name": "Cadeyrn Vann",
+      "sex": "male",
+      "birth": "1697",
+      "death": "",
+      "house": "vann",
+      "role": "Erster Erbe · Leitung des Speisebetriebs",
+      "bio": "Erster Erbe · Leitung des Speisebetriebs",
+      "portrait": "./assets/letzte-rast/references/cadeyrn.png",
+      "appearance": "",
+      "resident": true,
+      "staff": true
+    },
+    {
+      "key": "angharad",
+      "id": "angharad-vann",
+      "worldPersonId": "person--haus-vann--angharad-vann",
+      "name": "Angharad",
+      "sex": "female",
+      "birth": "1699",
+      "death": "",
+      "house": "vann",
+      "role": "Speisemeisterin · Tischdienst und Bankette",
+      "bio": "Speisemeisterin · Tischdienst und Bankette",
+      "portrait": "./assets/letzte-rast/portraits/angharad.png",
+      "appearance": "41-year-old Cenyri woman, dark chestnut hair in a low side braid, green eyes, angular face, slightly hooked nose and mature confident smile. Burgundy fitted medieval gown, cream linen inset, fine brass chain. Standing facing slightly left, one arm loose at side, no objects.",
+      "resident": true,
+      "staff": true,
+      "unknownOrigin": true
+    },
+    {
+      "key": "owain",
+      "id": "owain-vann",
+      "worldPersonId": "person--haus-vann--owain-vann",
+      "name": "Owain Vann",
+      "sex": "male",
+      "birth": "1701",
+      "death": "",
+      "house": "vann",
+      "role": "Keller und Importbezug",
+      "bio": "Keller und Importbezug",
+      "portrait": "./assets/letzte-rast/references/owain.png",
+      "appearance": "",
+      "resident": true,
+      "staff": true
+    },
+    {
+      "key": "meleri",
+      "id": "meleri-vann",
+      "worldPersonId": "person--haus-vann--meleri-vann",
+      "name": "Meleri",
+      "sex": "female",
+      "birth": "1706",
+      "death": "",
+      "house": "vann",
+      "role": "Kontor · Lieferlisten und Vorräte",
+      "bio": "Kontor · Lieferlisten und Vorräte",
+      "portrait": "./assets/letzte-rast/portraits/meleri.png",
+      "appearance": "34-year-old Cenyri woman, warm brown hair in a shoulder-length loose braid, brown eyes, rounded face, freckles and broad smile. Simple elegant forest-green medieval dress, cream undersleeves, russet waist sash. Standing frontal, head gently inclined, arms naturally down.",
+      "resident": true,
+      "staff": true,
+      "unknownOrigin": true
+    },
+    {
+      "key": "edern",
+      "id": "edern-vann",
+      "worldPersonId": "person--haus-vann--edern-vann",
+      "name": "Edern Vann",
+      "sex": "male",
+      "birth": "1705",
+      "death": "",
+      "house": "vann",
+      "role": "Herbergsmeister · Zimmer und Buchungen",
+      "bio": "Herbergsmeister · Zimmer und Buchungen",
+      "portrait": "./assets/letzte-rast/references/edern.png",
+      "appearance": "",
+      "resident": true,
+      "staff": true
+    },
+    {
+      "key": "elowen",
+      "id": "elowen-maerllys",
+      "worldPersonId": "person--haus-maerllys--elowen-maerllys",
+      "name": "Elowen Maerllys",
+      "sex": "female",
+      "birth": "1713",
+      "death": "",
+      "house": "maerllys",
+      "role": "Empfang · Buchungen und Hausleinen",
+      "bio": "Empfang · Buchungen und Hausleinen",
+      "portrait": "./assets/letzte-rast/portraits/elowen.png",
+      "appearance": "27-year-old Cenyri woman, sister of Nia Maerllys. Dark deep red hair and clear blue eyes exactly like the sibling reference. Different face: wider cheekbones, stronger straight nose, mature calm expression. Dark red hair braided across the crown into a low bun. Fine ivory and dark green medieval gown, modest neckline. Standing three-quarter left, arms relaxed, no objects.",
+      "resident": true,
+      "staff": true,
+      "originFamily": "haus-maerllys",
+      "referencePaths": [
+        "Stammbäume/assets/images/portraits/haus-maerllys/nia-maerllys.png"
+      ]
+    },
+    {
+      "key": "eirlys",
+      "id": "eirlys-vann",
+      "worldPersonId": "person--haus-vann--eirlys-vann",
+      "name": "Eirlys Vann",
+      "sex": "female",
+      "birth": "1710",
+      "death": "",
+      "house": "vann",
+      "role": "Nach Haus Raves verheiratet · Beratung in der Göttlichen Eleganz",
+      "bio": "Nach Haus Raves verheiratet · Beratung in der Göttlichen Eleganz",
+      "portrait": "./assets/letzte-rast/references/eirlys.png",
+      "appearance": "",
+      "resident": false,
+      "staff": false,
+      "destinationFamily": "haus-raves"
+    },
+    {
+      "key": "orestian",
+      "id": "orestian-raves",
+      "worldPersonId": "person--haus-raves--orestian-raves",
+      "name": "Orestian Raves",
+      "sex": "male",
+      "birth": "1704",
+      "death": "",
+      "house": "raves",
+      "role": "Zunftsmeier der Göttlichen Eleganz",
+      "bio": "Zunftsmeier der Göttlichen Eleganz",
+      "portrait": "./assets/goettliche-eleganz/portraits/orestian.png",
+      "appearance": "",
+      "resident": false,
+      "staff": false
+    },
+    {
+      "key": "aneirin",
+      "id": "aneirin-vann",
+      "worldPersonId": "person--haus-vann--aneirin-vann",
+      "name": "Aneirin Vann",
+      "sex": "male",
+      "birth": "1719",
+      "death": "",
+      "house": "vann",
+      "role": "Kontorgehilfe · Ausbildung zum Gastwirt",
+      "bio": "Kontorgehilfe · Ausbildung zum Gastwirt",
+      "portrait": "./assets/letzte-rast/portraits/aneirin.png",
+      "appearance": "21-year-old adult son of Cadeyrn and Angharad. Copper-red softly wavy hair, blue eyes, narrow youthful face, his mother's angular nose, clean shaven. Navy medieval doublet with restrained brass buttons, cream shirt, burgundy belt. Standing three-quarter right with one arm loosely behind his back.",
+      "resident": true,
+      "staff": true,
+      "referenceKeys": [
+        "cadeyrn",
+        "angharad"
+      ]
+    },
+    {
+      "key": "enid",
+      "id": "enid-pendrwn",
+      "worldPersonId": "person--haus-pendrwn--enid-pendrwn",
+      "name": "Enid Pendrwn",
+      "sex": "female",
+      "birth": "1720",
+      "death": "",
+      "house": "pendrwn",
+      "role": "Empfangsgehilfin · Gästeankünfte",
+      "bio": "Empfangsgehilfin · Gästeankünfte",
+      "portrait": "./assets/letzte-rast/portraits/enid.png",
+      "appearance": "20-year-old adult Cenyri woman, sister of Emyr Pendrwn. Match Emyr's reddish-brown hair and light green eyes. Own feminine face, broad forehead, small upturned nose, friendly expression. Hair half pinned back with a simple brass clasp. Forest-green and cream modest medieval gown. Standing relaxed turned slightly left, no props.",
+      "resident": true,
+      "staff": true,
+      "originFamily": "haus-pendrwn",
+      "referencePaths": [
+        "Stammbäume/assets/images/portraits/haus-pendrwn/emyr-pendrwn.jpeg"
+      ]
+    },
+    {
+      "key": "gwenna",
+      "id": "gwenna-vann",
+      "worldPersonId": "person--haus-vann--gwenna-vann",
+      "name": "Gwenna Vann",
+      "sex": "female",
+      "birth": "1724",
+      "death": "",
+      "house": "vann",
+      "role": "Schreiblehrling · Reservierungsbuch",
+      "bio": "Schreiblehrling · Reservierungsbuch",
+      "portrait": "./assets/letzte-rast/portraits/gwenna.png",
+      "appearance": "16-year-old adolescent girl, daughter of Cadeyrn and Angharad, chestnut-brown hair in two simple low braids, blue eyes, youthful angular cheeks. Modest burgundy medieval apprentice dress with cream linen collar. Standing frontal, relaxed arms, neutral safe household interior.",
+      "resident": true,
+      "staff": true,
+      "referenceKeys": [
+        "cadeyrn",
+        "angharad"
+      ]
+    },
+    {
+      "key": "rhys",
+      "id": "rhys-vann",
+      "worldPersonId": "person--haus-vann--rhys-vann",
+      "name": "Rhys Vann",
+      "sex": "male",
+      "birth": "1728",
+      "death": "",
+      "house": "vann",
+      "role": "Schreiblehrling · erste Kontorübungen",
+      "bio": "Schreiblehrling · erste Kontorübungen",
+      "portrait": "./assets/letzte-rast/portraits/rhys.png",
+      "appearance": "12-year-old boy, son of Owain and Meleri. Tousled copper-red hair, brown eyes from his mother, round boyish face and freckles. Modest green medieval child tunic, cream collar. Standing relaxed, arms down, no tools or props.",
+      "resident": true,
+      "staff": true,
+      "referenceKeys": [
+        "owain",
+        "meleri"
+      ]
+    },
+    {
+      "key": "teleri",
+      "id": "teleri-vann",
+      "worldPersonId": "person--haus-vann--teleri-vann",
+      "name": "Teleri Vann",
+      "sex": "female",
+      "birth": "1734",
+      "death": "",
+      "house": "vann",
+      "role": "Hauskind",
+      "bio": "Hauskind",
+      "portrait": "./assets/letzte-rast/portraits/teleri.png",
+      "appearance": "Six-year-old little girl, daughter of Owain and Meleri. Soft warm brown hair in two small braids, blue eyes, round little cheeks and curious expression. Modest rust-red medieval child dress and ivory collar. Standing naturally, arms at sides, simple bright family room.",
+      "resident": true,
+      "staff": false,
+      "referenceKeys": [
+        "owain",
+        "meleri"
+      ]
+    },
+    {
+      "key": "celyn",
+      "id": "celyn-vann",
+      "worldPersonId": "person--haus-vann--celyn-vann",
+      "name": "Celyn Vann",
+      "sex": "female",
+      "birth": "1735",
+      "death": "",
+      "house": "vann",
+      "role": "Hauskind",
+      "bio": "Hauskind",
+      "portrait": "./assets/letzte-rast/portraits/celyn.png",
+      "appearance": "Five-year-old little girl, daughter of Edern Vann and Elowen Maerllys. Deep copper-red hair in a short wavy bob, bright blue eyes, round child cheeks and small straight nose. Modest green medieval child dress, cream sleeves. Standing relaxed, arms down, quiet safe family room.",
+      "resident": true,
+      "staff": false,
+      "referenceKeys": [
+        "edern",
+        "elowen"
+      ]
+    },
+    {
+      "key": "iolo",
+      "id": "iolo-vann",
+      "worldPersonId": "person--haus-vann--iolo-vann",
+      "name": "Iolo Vann",
+      "sex": "male",
+      "birth": "1738",
+      "death": "",
+      "house": "vann",
+      "role": "Hauskind",
+      "bio": "Hauskind",
+      "portrait": "./assets/letzte-rast/portraits/iolo.png",
+      "appearance": "Two-year-old toddler boy, son of Edern and Elowen. Soft dark red short curls, blue eyes, unmistakable toddler proportions and chubby cheeks. Simple cream medieval toddler tunic with rust-red sleeveless layer. Standing safely beside a plain low wooden bench, hands relaxed, no props.",
+      "resident": true,
+      "staff": false,
+      "referenceKeys": [
+        "edern",
+        "elowen"
+      ]
+    },
+    {
+      "key": "cassian",
+      "id": "cassian-raves",
+      "worldPersonId": "person--haus-raves--cassian-raves",
+      "name": "Cassian Raves",
+      "sex": "male",
+      "birth": "1733",
+      "death": "",
+      "house": "raves",
+      "role": "Kind im Haus Raves",
+      "bio": "Kind im Haus Raves",
+      "portrait": "./assets/letzte-rast/portraits/cassian.png",
+      "appearance": "Seven-year-old little boy, son of Orestian Raves and Eirlys Vann. Copper-red hair at roots fading clearly into silver-white tips like his father, blue-grey eyes, angular youthful face. Modest burgundy medieval child doublet and cream shirt. Standing relaxed, simple bright family room.",
+      "resident": false,
+      "staff": false,
+      "referenceKeys": [
+        "orestian",
+        "eirlys"
+      ]
+    },
+    {
+      "key": "elena",
+      "id": "elena-raves",
+      "worldPersonId": "person--haus-raves--elena-raves",
+      "name": "Elena Raves",
+      "sex": "female",
+      "birth": "1736",
+      "death": "",
+      "house": "raves",
+      "role": "Kind im Haus Raves",
+      "bio": "Kind im Haus Raves",
+      "portrait": "./assets/letzte-rast/portraits/elena.png",
+      "appearance": "Four-year-old little girl, daughter of Orestian and Eirlys. Soft red hair with a few clearly pale silver-white tips inherited from her father, clear blue eyes, round young cheeks. Modest cream medieval child dress with burgundy apron. Standing gently turned right with arms naturally at sides, safe plain family interior.",
+      "resident": false,
+      "staff": false,
+      "referenceKeys": [
+        "orestian",
+        "eirlys"
+      ]
+    }
+  ],
+  "marriages": [
+    {
+      "id": "marriage-iestyn-efa-vann",
+      "keys": [
+        "iestyn",
+        "efa"
+      ],
+      "start": "1330",
+      "end": "1379",
+      "children": []
+    },
+    {
+      "id": "marriage-tudwal-gwenith-vann",
+      "keys": [
+        "tudwal",
+        "gwenith"
+      ],
+      "start": "1670",
+      "end": "1720",
+      "children": [
+        "brenn",
+        "madoc"
+      ]
+    },
+    {
+      "id": "marriage-brenn-seren-vann",
+      "keys": [
+        "brenn",
+        "seren"
+      ],
+      "start": "1695",
+      "children": [
+        "cadeyrn",
+        "owain"
+      ]
+    },
+    {
+      "id": "marriage-madoc-lowri-vann",
+      "keys": [
+        "madoc",
+        "lowri"
+      ],
+      "start": "1702",
+      "children": [
+        "edern",
+        "eirlys"
+      ]
+    },
+    {
+      "id": "marriage-cadeyrn-angharad-vann",
+      "keys": [
+        "cadeyrn",
+        "angharad"
+      ],
+      "start": "1717",
+      "children": [
+        "aneirin",
+        "gwenna"
+      ]
+    },
+    {
+      "id": "marriage-owain-meleri-vann",
+      "keys": [
+        "owain",
+        "meleri"
+      ],
+      "start": "1726",
+      "children": [
+        "rhys",
+        "teleri"
+      ]
+    },
+    {
+      "id": "marriage-edern-elowen-vann",
+      "keys": [
+        "edern",
+        "elowen"
+      ],
+      "start": "1733",
+      "children": [
+        "celyn",
+        "iolo"
+      ],
+      "counterpart": "haus-maerllys"
+    },
+    {
+      "id": "marriage-orestian-eirlys-vann",
+      "keys": [
+        "orestian",
+        "eirlys"
+      ],
+      "start": "1731",
+      "children": [
+        "cassian",
+        "elena"
+      ],
+      "counterpart": "haus-raves",
+      "destination": true
+    },
+    {
+      "id": "marriage-aneirin-enid-vann",
+      "keys": [
+        "aneirin",
+        "enid"
+      ],
+      "start": "1738",
+      "children": [],
+      "counterpart": "haus-pendrwn"
+    }
+  ]
+}

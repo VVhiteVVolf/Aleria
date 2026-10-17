@@ -1224,6 +1224,23 @@ const MODULE_TEMPLATE_REGISTRY = {
     renderPage: (page, entry, pageIndex, total) => buildMapTemplatePage(page, entry, pageIndex, total),
     renderInlinePage: (page, entry, pageIndex, total) => buildInlineComplexTemplatePage(page, entry, pageIndex, total, 'map-template')
   },
+  'theatre-program': {
+    id: 'theatre-program',
+    pageType: 'theatre-program',
+    pageFlag: 'theatreProgramPage',
+    label: 'Theaterrepertoire - Template',
+    pageLabel: 'Theaterrepertoire',
+    defaultTitle: 'Neues Theaterrepertoire',
+    defaultSubtitle: 'Stücke, Besetzung und Inszenierungen',
+    entryType: 'Theaterrepertoire',
+    typeMatchers: ['theaterrepertoire', 'spielplan'],
+    createPages: () => [createDefaultTheatreProgramPage(0)],
+    createPage: index => createDefaultTheatreProgramPage(index),
+    buildEditorFields: page => buildTheatreProgramModuleEditorFields(page),
+    collectEditorPage: (card, page) => collectTheatreProgramModuleEditorPage(card, page),
+    renderPage: (page, entry, index, total) => buildTheatreProgramPage(page, entry, index, total),
+    renderInlinePage: (page, entry, index, total) => buildInlineComplexTemplatePage(page, entry, index, total, 'theatre-program')
+  },
   'guild-services': {
     id: 'guild-services',
     pageType: 'guild-services',
@@ -1651,6 +1668,7 @@ const MODULE_TEMPLATE_RUNTIME_DEPENDENCIES = {
   'trade-catalog': ['buildTradeCatalogModuleEditorFields', 'collectTradeCatalogModuleEditorPage', 'buildTradeCatalogPage'],
   'map-template': ['buildMapTemplateModuleEditorFields', 'collectMapTemplateModuleEditorPage', 'buildMapTemplatePage'],
   'guild-services': ['buildGuildServicesModuleEditorFields', 'collectGuildServicesModuleEditorPage', 'buildGuildServicesPage'],
+  'theatre-program': ['buildTheatreProgramModuleEditorFields', 'collectTheatreProgramModuleEditorPage', 'buildTheatreProgramPage'],
   'organization-network': ['buildOrganizationNetworkModuleEditorFields', 'collectOrganizationNetworkModuleEditorPage', 'buildOrganizationNetworkPage'],
   language: ['buildLanguageModuleEditorFields', 'collectLanguageModuleEditorPage', 'buildLanguagePage'],
   'name-list': ['buildNameListModuleEditorFields', 'collectNameListModuleEditorPage', 'buildNameListPage'],

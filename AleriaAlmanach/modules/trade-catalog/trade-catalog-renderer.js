@@ -254,7 +254,7 @@ function buildTradeCatalogPage(page, entry, pageIndex, total) {
     <div class="trade-catalog-page">
       <article class="trade-catalog-sheet">
         <header class="trade-catalog-header">
-          ${buildTradeCatalogImage(data.headerIcon || entry.icon, 'trade-catalog-header-icon', 'H')}
+          ${buildTradeCatalogImage(page.image || data.headerIcon || entry.icon, page.image ? 'trade-catalog-header-scene' : 'trade-catalog-header-icon', 'H')}
           <div>
             <h2>${escapeHtml(data.title || entry.title || 'Handelsgut & Tiere')}</h2>
             <p>${escapeHtml(data.subtitle || entry.subtitle || '')}</p>
@@ -272,7 +272,8 @@ function buildTradeCatalogPage(page, entry, pageIndex, total) {
           </label>
         </div>
         <main class="trade-catalog-list">
-          ${data.items.length ? data.items.map(item => buildTradeCatalogItem(item, activeCategory)).join('') : '<div class="trade-catalog-empty">Noch keine Handelsgueter eingetragen.</div>'}
+          ${data.items.map(item => buildTradeCatalogItem(item, activeCategory)).join('')}
+          <div class="trade-catalog-empty" data-trade-empty${data.items.some(item => activeCategory === 'all' || item.category === activeCategory) ? ' hidden' : ''}>Für diese Auswahl sind noch keine Waren eingetragen.</div>
         </main>
       </article>
     </div>`;
@@ -283,11 +284,15 @@ function applyTradeCatalogFilters(root) {
   if (!scope) return;
   const active = scope.querySelector('.trade-catalog-tab.active')?.dataset.tradeFilter || 'all';
   const query = String(scope.querySelector('[data-trade-search-input]')?.value || '').trim().toLowerCase();
+  let visibleCount = 0;
   scope.querySelectorAll('.trade-catalog-item').forEach(item => {
     const matchesCategory = active === 'all' || item.dataset.tradeCategory === active;
     const matchesSearch = !query || String(item.dataset.tradeSearch || '').includes(query);
     item.hidden = !(matchesCategory && matchesSearch);
+    if (!item.hidden) visibleCount++;
   });
+  const empty = scope.querySelector('[data-trade-empty]');
+  if (empty) empty.hidden = visibleCount > 0;
 }
 
 // Preserve the existing template entry point; renderer helpers stay module-local.

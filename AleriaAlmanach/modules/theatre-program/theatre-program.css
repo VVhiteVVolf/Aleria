@@ -1,0 +1,27 @@
+.theatre-program-page { flex:1; min-height:0; min-width:0; display:flex; flex-direction:column; overflow:hidden; container:theatre-program / inline-size; color:var(--ink); background:var(--module-paper); }
+.theatre-program-header { flex:none; padding:20px 28px 14px; border-bottom:1px solid var(--module-line); }
+.theatre-program-header>span,.theatre-program-genre { color:var(--module-bronze); font:.72rem 'Cinzel',serif; letter-spacing:.09em; }
+.theatre-program-header h2 { margin:.45rem 0; font:600 1.7rem 'Cinzel',serif; }
+.theatre-program-header p { margin:.4rem 0; }
+.theatre-program-header small { color:var(--ink-faded); }
+.theatre-program-scroll { flex:1; min-height:0; overflow-y:auto; overscroll-behavior:contain; scrollbar-gutter:stable; padding:24px; }
+.theatre-program-scroll:focus-visible { outline:2px solid var(--module-bronze); outline-offset:-3px; }
+.theatre-program-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px; }
+.theatre-program-card { min-width:0; border:1px solid var(--module-line); background:var(--module-paper-raised); border-radius:6px; overflow:hidden; }
+.theatre-program-art { display:block; width:100%; height:360px; object-fit:contain; padding:14px 14px 0; }
+.theatre-program-copy { padding:20px 24px 24px; }
+.theatre-program-copy h3 { margin:.5rem 0; font:600 1.2rem 'Cinzel',serif; }
+.theatre-program-setting { color:var(--ink-faded); font-style:italic; }
+.theatre-program-synopsis { line-height:1.65; }
+.theatre-program-copy dl { line-height:1.5; font-size:.95rem; }
+.theatre-program-copy dl>div { padding:10px 0; border-top:1px solid var(--module-line); }
+.theatre-program-copy dt { font-weight:700; color:var(--module-bronze); }
+.theatre-program-copy dd { margin:.3rem 0 0; }
+.theatre-program-vacancy { min-height:180px; display:grid; align-content:center; justify-items:center; padding:24px; text-align:center; border-style:dashed; color:var(--ink-faded); }
+.theatre-program-vacancy>span { font-size:2rem; color:var(--module-bronze); }
+.theatre-program-vacancy h3 { font:600 1rem 'Cinzel',serif; margin:.5rem; }
+.theatre-program-scroll>footer { margin:24px 0; padding-top:20px; border-top:1px solid var(--module-line); font-style:italic; }
+.theatre-program-editor-row { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; border:1px solid var(--module-line); padding:14px; margin:12px 0; }
+.theatre-program-editor-row textarea { grid-column:1/-1; }
+@container theatre-program (max-width:720px) { .theatre-program-grid { grid-template-columns:minmax(0,1fr); } }
+@media (max-width:720px) { .theatre-program-grid,.theatre-program-editor-row { grid-template-columns:minmax(0,1fr); } .theatre-program-header { padding:14px 18px; } .theatre-program-scroll { padding:16px; } .theatre-program-art { height:320px; } }

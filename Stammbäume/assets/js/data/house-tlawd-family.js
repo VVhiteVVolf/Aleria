@@ -6,6 +6,7 @@ import {
   createParentages
 } from './family-record-builders.js';
 import { HOUSE_TLAWD_PORTRAITS } from './house-tlawd-portraits.js';
+import { withGofrannTlawdLink } from './gofrann-tlawd-link.js';
 
 const TLAWD_EMBLEM = 'assets/images/houses/Llamreis Ankunft/haus-tlawd.png';
 const TLAWD_HOUSE_ID = 'house-tlawd';
@@ -55,7 +56,7 @@ const LLOYD_IDS = ['lloyd-tlawd', 'adain'];
 const RHYDERCH_IDS = ['rhyderch-tlawd', 'fflur'];
 const LLUDD_IDS = ['lludd-tlawd', 'ulaena'];
 
-export const HOUSE_TLAWD_FAMILY = Object.freeze({
+export const HOUSE_TLAWD_FAMILY = Object.freeze(withGofrannTlawdLink({
   schema: 'aleria.family-tree',
   schemaVersion: 1,
   document: {
@@ -182,4 +183,4 @@ export const HOUSE_TLAWD_FAMILY = Object.freeze({
     blankFamily: false,
     sourceRevision: 1
   }
-});
+}));

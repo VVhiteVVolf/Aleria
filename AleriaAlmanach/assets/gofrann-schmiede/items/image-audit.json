@@ -1,0 +1,845 @@
+{
+  "readOnly": true,
+  "images": [
+    {
+      "id": "stahldolch",
+      "file": "AleriaAlmanach/assets/gofrann-schmiede/items/stahldolch.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "trueAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "maximumCornerAlpha": 0,
+      "cornerTolerance": 1,
+      "solidBounds": [
+        60,
+        54,
+        1193,
+        1207
+      ],
+      "sha256": "21391edd6c275f7a2df7d4b12a1f8138735a8d6dd94228180943e5edd35a1b45"
+    },
+    {
+      "id": "kurzschwert",
+      "file": "AleriaAlmanach/assets/gofrann-schmiede/items/kurzschwert.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "trueAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "maximumCornerAlpha": 0,
+      "cornerTolerance": 1,
+      "solidBounds": [
+        37,
+        38,
+        1219,
+        1221
+      ],
+      "sha256": "195e029324e534746bf8acbdd0449d23e59e022d026ada3e38697e6c11530fd3"
+    },
+    {
+      "id": "langschwert",
+      "file": "AleriaAlmanach/assets/gofrann-schmiede/items/langschwert.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "trueAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "maximumCornerAlpha": 0,
+      "cornerTolerance": 1,
+      "solidBounds": [
+        65,
+        43,
+        1204,
+        1222
+      ],
+      "sha256": "5fa201e0b0c2ab7d9fc7fb7e289c2bc9f613f3e3e73a2d6450816f7c2fa79d92"
+    },
+    {
+      "id": "bastardschwert",
+      "file": "AleriaAlmanach/assets/gofrann-schmiede/items/bastardschwert.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "trueAlpha": true,
+      "cornerAlpha": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "maximumCornerAlpha": 1,
+      "cornerTolerance": 1,
+      "solidBounds": [
+        34,
+        34,
+        1222,
+        1226
+      ],
+      "sha256": "5904d06dceff9172d08f5e65330fa47a96efef41c87694e0b882af743f63db9b"
+    },
+    {
+      "id": "zweihaender",
+      "file": "AleriaAlmanach/assets/gofrann-schmiede/items/zweihaender.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "trueAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "maximumCornerAlpha": 0,
+      "cornerTolerance": 1,
+      "solidBounds": [
+        47,
+        33,
+        1220,
+        1221
+      ],
+      "sha256": "e86168489c5d7722f47ba913f4791f980217ecdb1c091484b77b3d6a3c2800ef"
+    },
+    {
+      "id": "saebel",
+      "file": "AleriaAlmanach/assets/gofrann-schmiede/items/saebel.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "trueAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "maximumCornerAlpha": 0,
+      "cornerTolerance": 1,
+      "solidBounds": [
+        39,
+        31,
+        1212,
+        1203
+      ],
+      "sha256": "31763330c061925be91b4454d608353c4b674e433a4892bfd8d184243fa66d35"
+    },
+    {
+      "id": "handaxt",
+      "file": "AleriaAlmanach/assets/gofrann-schmiede/items/handaxt.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "trueAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "maximumCornerAlpha": 0,
+      "cornerTolerance": 1,
+      "solidBounds": [
+        56,
+        52,
+        1221,
+        1201
+      ],
+      "sha256": "117ccfda6aa736ebeaa40a826232f2966897f57ff3873a287b2f894d0ab2df48"
+    },
+    {
+      "id": "streitaxt",
+      "file": "AleriaAlmanach/assets/gofrann-schmiede/items/streitaxt.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "trueAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "maximumCornerAlpha": 0,
+      "cornerTolerance": 1,
+      "solidBounds": [
+        46,
+        32,
+        1228,
+        1223
+      ],
+      "sha256": "df3c138ad4ba44a5e47d13fbf78e99e1fe5b2cb033a936de3d92fb1ebd52a909"
+    },
+    {
+      "id": "doppelaxt",
+      "file": "AleriaAlmanach/assets/gofrann-schmiede/items/doppelaxt.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "trueAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "maximumCornerAlpha": 0,
+      "cornerTolerance": 1,
+      "solidBounds": [
+        60,
+        53,
+        1219,
+        1208
+      ],
+      "sha256": "06b37af47ef8690f22b8f8c7124fbc12d1339d87ba67db6ef107d03b08d3c781"
+    },
+    {
+      "id": "streitkolben",
+      "file": "AleriaAlmanach/assets/gofrann-schmiede/items/streitkolben.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "trueAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "maximumCornerAlpha": 0,
+      "cornerTolerance": 1,
+      "solidBounds": [
+        51,
+        54,
+        1203,
+        1215
+      ],
+      "sha256": "a57d696173492aea6bf78b27a6eeaee48e435371c01ad20c210f33adaf8585b4"
+    },
+    {
+      "id": "streithammer",
+      "file": "AleriaAlmanach/assets/gofrann-schmiede/items/streithammer.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "trueAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "maximumCornerAlpha": 0,
+      "cornerTolerance": 1,
+      "solidBounds": [
+        97,
+        36,
+        1231,
+        1208
+      ],
+      "sha256": "f2d3da8dfa331f3e61c4ec9b52db3fa3a1275111cbddc79237b97f03593bfb12"
+    },
+    {
+      "id": "kriegshammer",
+      "file": "AleriaAlmanach/assets/gofrann-schmiede/items/kriegshammer.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "trueAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "maximumCornerAlpha": 0,
+      "cornerTolerance": 1,
+      "solidBounds": [
+        24,
+        10,
+        1247,
+        1243
+      ],
+      "sha256": "d5e570042ab281fa6be2966e359a5ecbd8a65dcec7d36da4c42219aa8cc2cec2"
+    },
+    {
+      "id": "speer",
+      "file": "AleriaAlmanach/assets/gofrann-schmiede/items/speer.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "trueAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "maximumCornerAlpha": 0,
+      "cornerTolerance": 1,
+      "solidBounds": [
+        37,
+        27,
+        1232,
+        1222
+      ],
+      "sha256": "e25b4f82f1c88ba6cac32d4931d13a40fd03167077a73365fd78648022a79f88"
+    },
+    {
+      "id": "hellebarde",
+      "file": "AleriaAlmanach/assets/gofrann-schmiede/items/hellebarde.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "trueAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "maximumCornerAlpha": 0,
+      "cornerTolerance": 1,
+      "solidBounds": [
+        51,
+        23,
+        1223,
+        1224
+      ],
+      "sha256": "14d68d6c64a2d85b6593f2964b92cdfee8a8041a469f4742ae4f249120cdfcc3"
+    },
+    {
+      "id": "gleve",
+      "file": "AleriaAlmanach/assets/gofrann-schmiede/items/gleve.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "trueAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "maximumCornerAlpha": 0,
+      "cornerTolerance": 1,
+      "solidBounds": [
+        69,
+        43,
+        1216,
+        1217
+      ],
+      "sha256": "42544adff0e290d012abcc13dfb05495c12825cb8db404189c2a00b0c99133fd"
+    },
+    {
+      "id": "kettenmorgenstern",
+      "file": "AleriaAlmanach/assets/gofrann-schmiede/items/kettenmorgenstern.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "trueAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "maximumCornerAlpha": 0,
+      "cornerTolerance": 1,
+      "solidBounds": [
+        68,
+        57,
+        1244,
+        1201
+      ],
+      "sha256": "6927bcb54c1f1cff8ef7c7608dc52b06a3a078e472990524b13cd086a9eea245"
+    },
+    {
+      "id": "langbogen",
+      "file": "AleriaAlmanach/assets/gofrann-schmiede/items/langbogen.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "trueAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "maximumCornerAlpha": 0,
+      "cornerTolerance": 1,
+      "solidBounds": [
+        41,
+        43,
+        1206,
+        1210
+      ],
+      "sha256": "a9cf91876a635d54ea361feef956b0e51ddb4f116de6b2933f63a97515632cd2"
+    },
+    {
+      "id": "armbrust",
+      "file": "AleriaAlmanach/assets/gofrann-schmiede/items/armbrust.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "trueAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "maximumCornerAlpha": 0,
+      "cornerTolerance": 1,
+      "solidBounds": [
+        38,
+        57,
+        1244,
+        1193
+      ],
+      "sha256": "a09c36e1a9922474a4289702b32eb505df9f9aaa0654a9c5ef6cd7f4c99139fd"
+    },
+    {
+      "id": "plattenharnisch",
+      "file": "AleriaAlmanach/assets/gofrann-schmiede/items/plattenharnisch.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "trueAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "maximumCornerAlpha": 0,
+      "cornerTolerance": 1,
+      "solidBounds": [
+        91,
+        57,
+        1196,
+        1204
+      ],
+      "sha256": "f1e67457d69ab47a6b607e6153a4d751988905c5c6b64a0515bbc4e8bc069245"
+    },
+    {
+      "id": "brigantine",
+      "file": "AleriaAlmanach/assets/gofrann-schmiede/items/brigantine.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "trueAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "maximumCornerAlpha": 0,
+      "cornerTolerance": 1,
+      "solidBounds": [
+        161,
+        38,
+        1103,
+        1223
+      ],
+      "sha256": "862dd981a8f9d3b4316819ac8fe550879495cd9916f5eeecf248bddb892d8fea"
+    },
+    {
+      "id": "kettenharnisch",
+      "file": "AleriaAlmanach/assets/gofrann-schmiede/items/kettenharnisch.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "trueAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "maximumCornerAlpha": 0,
+      "cornerTolerance": 1,
+      "solidBounds": [
+        85,
+        66,
+        1187,
+        1205
+      ],
+      "sha256": "78a2dd443ac89fd0309f9e1725a33684c71366f789429cf1ac2a344b0d601489"
+    },
+    {
+      "id": "lederharnisch",
+      "file": "AleriaAlmanach/assets/gofrann-schmiede/items/lederharnisch.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "trueAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "maximumCornerAlpha": 0,
+      "cornerTolerance": 1,
+      "solidBounds": [
+        88,
+        56,
+        1179,
+        1215
+      ],
+      "sha256": "6731e310dd943f31bf372826f044721bd4d20784aabad434dccc13f2c1548c84"
+    },
+    {
+      "id": "verstaerkter-lederharnisch",
+      "file": "AleriaAlmanach/assets/gofrann-schmiede/items/verstaerkter-lederharnisch.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "trueAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "maximumCornerAlpha": 0,
+      "cornerTolerance": 1,
+      "solidBounds": [
+        89,
+        55,
+        1164,
+        1205
+      ],
+      "sha256": "eefa4c4af7572ea5611447d98a288d9af5a73a9c490d270689f1591a513affb2"
+    },
+    {
+      "id": "wappenrock-petrol-leinen",
+      "file": "AleriaAlmanach/assets/gofrann-schmiede/items/wappenrock-petrol-leinen.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "trueAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "maximumCornerAlpha": 0,
+      "cornerTolerance": 1,
+      "solidBounds": [
+        248,
+        54,
+        1046,
+        1214
+      ],
+      "sha256": "3dc3cfddad932977b99170dd1032a9a6d54488f6de724e4bf336fa1892592032"
+    },
+    {
+      "id": "wappenrock-rot-schwarz",
+      "file": "AleriaAlmanach/assets/gofrann-schmiede/items/wappenrock-rot-schwarz.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "trueAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "maximumCornerAlpha": 0,
+      "cornerTolerance": 1,
+      "solidBounds": [
+        242,
+        42,
+        1036,
+        1211
+      ],
+      "sha256": "84c6be7a657f26627a47e19b4c12674d7e876b86cbdeb5089e1ebaa94e26abdc"
+    },
+    {
+      "id": "kite-schild",
+      "file": "AleriaAlmanach/assets/gofrann-schmiede/items/kite-schild.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "trueAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "maximumCornerAlpha": 0,
+      "cornerTolerance": 1,
+      "solidBounds": [
+        298,
+        49,
+        1011,
+        1198
+      ],
+      "sha256": "df9f05af80cd35f66ccc1a01881108a98618717fd86cd9c5c08607de0993e3ef"
+    },
+    {
+      "id": "rundschild",
+      "file": "AleriaAlmanach/assets/gofrann-schmiede/items/rundschild.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "trueAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "maximumCornerAlpha": 0,
+      "cornerTolerance": 1,
+      "solidBounds": [
+        128,
+        56,
+        1157,
+        1205
+      ],
+      "sha256": "80c87c5e0bbf53c26a667cc4e973b7cf994e557a4b32f49a70525ab9845d3f28"
+    },
+    {
+      "id": "pavese",
+      "file": "AleriaAlmanach/assets/gofrann-schmiede/items/pavese.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "trueAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "maximumCornerAlpha": 0,
+      "cornerTolerance": 1,
+      "solidBounds": [
+        240,
+        19,
+        1042,
+        1211
+      ],
+      "sha256": "f46fc62fbe1add954aace4fa113142335350a94bc5fd81eef4474ef1a9b48983"
+    },
+    {
+      "id": "buckler",
+      "file": "AleriaAlmanach/assets/gofrann-schmiede/items/buckler.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "trueAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "maximumCornerAlpha": 0,
+      "cornerTolerance": 1,
+      "solidBounds": [
+        135,
+        68,
+        1138,
+        1188
+      ],
+      "sha256": "e7667eaac5fc4f2809a880bb36e08e1175364d32ad0bf94495c39da87df2f7e6"
+    },
+    {
+      "id": "tenebron-schwert",
+      "file": "AleriaAlmanach/assets/gofrann-schmiede/items/tenebron-schwert.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "trueAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "maximumCornerAlpha": 0,
+      "cornerTolerance": 1,
+      "solidBounds": [
+        54,
+        22,
+        1231,
+        1227
+      ],
+      "sha256": "782b77b04381dd056fbaef7eef344d528707b5216ed3e7b474fb6d337463fdb2"
+    },
+    {
+      "id": "eid-der-esse",
+      "file": "AleriaAlmanach/assets/gofrann-schmiede/items/eid-der-esse.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "trueAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "maximumCornerAlpha": 0,
+      "cornerTolerance": 1,
+      "solidBounds": [
+        41,
+        28,
+        1224,
+        1222
+      ],
+      "sha256": "7fcc2963bd0b1ce7c4cbb0dd30253e412cbbf548f7e37aacf11379f7eefc4a06"
+    },
+    {
+      "id": "erzbrecher",
+      "file": "AleriaAlmanach/assets/gofrann-schmiede/items/erzbrecher.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "trueAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "maximumCornerAlpha": 0,
+      "cornerTolerance": 1,
+      "solidBounds": [
+        47,
+        20,
+        1237,
+        1234
+      ],
+      "sha256": "2fcc8b2761a724378b3b53157658015ebfd187be58ceb697d69ecb85ca291055"
+    },
+    {
+      "id": "tenebron-plattenharnisch",
+      "file": "AleriaAlmanach/assets/gofrann-schmiede/items/tenebron-plattenharnisch.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "trueAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "maximumCornerAlpha": 0,
+      "cornerTolerance": 1,
+      "solidBounds": [
+        71,
+        19,
+        1184,
+        1199
+      ],
+      "sha256": "279ad3b1646085da82e973eac53439f1a1e693c7128b52f6f080dabc5cc8b041"
+    },
+    {
+      "id": "reitermass",
+      "file": "AleriaAlmanach/assets/gofrann-schmiede/items/reitermass.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "trueAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "maximumCornerAlpha": 0,
+      "cornerTolerance": 1,
+      "solidBounds": [
+        116,
+        54,
+        1141,
+        1206
+      ],
+      "sha256": "a24c694ea40394558d727c45af2f78ed86cfcbd652a90461be6d5dcf2d4f9837"
+    },
+    {
+      "id": "tenebrit-kettenharnisch",
+      "file": "AleriaAlmanach/assets/gofrann-schmiede/items/tenebrit-kettenharnisch.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "trueAlpha": true,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "maximumCornerAlpha": 0,
+      "cornerTolerance": 1,
+      "solidBounds": [
+        54,
+        57,
+        1202,
+        1214
+      ],
+      "sha256": "04ef18a1552cd5b012fe6dcc26195c03dd529486423e9bf71c1a5bc63d6a08f7"
+    }
+  ]
+}

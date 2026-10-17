@@ -40,7 +40,7 @@ export const SITE_BUILD_TASKS = [
       'Familien Häuser und Clans/', 'Bestiarium/modules/',
       ...['character-equipment', 'characters', 'classes', 'combat', 'combat-critical',
         'combat-status', 'combat-styles', 'creatures', 'herausforderung', 'image-library',
-        'krumme-kanne', 'goettliche-eleganz', 'lachende-nixe', 'scene-items', 'scene-rest', 'spell-catalog']
+        'krumme-kanne', 'goettliche-eleganz', 'lachende-nixe', 'gofrann-schmiede', 'letzte-rast', 'scene-items', 'scene-rest', 'spell-catalog']
         .map(feature => `AleriaAlmanach/modules/${feature}/`)],
     excludes: ['Gameplay Guide/assets/'],
     commands: [['netlify/build/verify-task-inputs.mjs', 'gameplay-guides'],
@@ -63,6 +63,7 @@ export const SITE_BUILD_TASKS = [
       'AleriaAlmanach/public/assets/regional-equipment/', 'Stammbäume/assets/js/',
       'Stammbäume/assets/data/family-sources/', 'Familien Häuser und Clans/',
       'AleriaAlmanach/modules/krumme-kanne/krumme-kanne-roster.mjs',
+      'AleriaAlmanach/modules/gofrann-schmiede/', 'AleriaAlmanach/modules/letzte-rast/',
       'AleriaAlmanach/modules/goettliche-eleganz/eleganz-family-people.mjs',
       'AleriaAlmanach/modules/lachende-nixe/nixe-family-people.mjs',
       'AleriaAlmanach/scripts/build-regional-equipment.mjs', almanach('regional-equipment')],
@@ -75,6 +76,7 @@ export const SITE_BUILD_TASKS = [
       'Stammbäume/Stammbaum.html', 'Stammbäume/index.html',
       'Stammbäume/package.json', 'Stammbäume/package-lock.json', 'Familien Häuser und Clans/',
       'AleriaAlmanach/package.json', 'AleriaAlmanach/modules/krumme-kanne/krumme-kanne-roster.mjs',
+      'AleriaAlmanach/modules/gofrann-schmiede/', 'AleriaAlmanach/modules/letzte-rast/',
       'AleriaAlmanach/modules/goettliche-eleganz/eleganz-family-people.mjs',
       'AleriaAlmanach/modules/lachende-nixe/nixe-family-people.mjs'],
     excludes: ['Stammbäume/assets/data/published-families/backups/'],

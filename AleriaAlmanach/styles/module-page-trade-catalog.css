@@ -58,6 +58,15 @@
   border-radius: 0.15rem;
 }
 
+.trade-catalog-header-scene {
+  width: clamp(100px, 9vw, 150px);
+  aspect-ratio: 2 / 3;
+  overflow: hidden;
+  border: 1px solid var(--module-line, #bfa980);
+}
+.trade-catalog-header-scene img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.trade-catalog-empty[hidden] { display: none; }
+
 .trade-catalog-header h2 {
   margin: 0;
   font-family: "Cinzel", Georgia, serif;

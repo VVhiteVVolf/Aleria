@@ -1,0 +1,31 @@
+import { VANN_PEOPLE, VANN_EMBLEM, VANN_MOTTO } from '../../../AleriaAlmanach/modules/letzte-rast/rast-people.mjs';
+
+export const VANN_HOUSE_CONTENT = Object.freeze({
+  contentVersion:'vann-20261016',id:'haus-vann',name:'Haus Vann',type:'Bürgerliches Haus',page:'kleinehaeuser.html',
+  county:'Celtigerns Wacht',liege:'Haus Draig',territoryId:'celtigerns-wacht',territoryName:'Celtigerns Wacht',
+  territoryHref:'../Kontinente/Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Grafschaft Celtigerns Wacht.html',
+  parentHouseId:'',extinct:false,showMotto:true,prepared:false,registerPage:true,biographySourceRevision:1,
+  biographyIntroTitle:'Über die Familie',biographyHistoryTitle:'Seit 1334 unter dem Dach der Letzten Rast',
+  biographySummary:{overview:'Die Vanns gehören zu Gwynthors wohlhabenden Bürgerhäusern. Brenn und Madoc führen Celtigerns Letzte Rast mit feiner cenyrischer Küche, Weisenfluher Weinen, Gesellschaftssalons und gehobener Herberge.',
+    history:'Iestyn und Efa erwarben 1334 das bereits ältere Gasthaus. Nach nicht einzeln überlieferten Generationen führt die bekannte Linie über Tudwal und Gwenith zu Brenn, Madoc und ihren Nachkommen.',
+    character:'Ein gut bereitetes Gericht, eine ruhige Kammer und ein aufmerksamer Empfang tragen den Namen des Hauses.'},
+  hierarchy:[['Sammlung','Familien Häuser und Clans','familien-hauser-und-clans'],['Kontinent','Estryll','estryll'],['Königreich','Cenyr','cenyr'],['Grafschaft','Celtigerns Wacht','celtigerns-wacht'],['Region','Llamreis Ankunft','llamreis-ankunft'],['Sitz','Gwynthor','gwynthor'],['Haus','Haus Vann','haus-vann']].map(([type,name,slug])=>({type,name,slug})),
+  profile:{highestTitle:'Bürgerlich',rank:'Bürgerlich',houseType:'Bürgerliche Gastwirtsfamilie',motto:VANN_MOTTO,seat:'Gwynthor · Adelsdistrikt',affiliation:'Celtigerns Letzte Rast',liege:'Haus Draig',origin:'Gwynthor',founding:'Erwerb des Gasthauses 1334',people:'Cenyri',wealth:'Gehobenes Gasthaus, Herberge und Gesellschaften',patron:'Haus Draig',knightingPatron:'—',milestoneOne:'1334 · Iestyn und Efa erwerben das bestehende Gasthaus',milestoneTwo:'Brenn und Madoc · Ausbau von Tafel, Salons und Herberge',religion:'Alerische Kirche',patronDeities:'Die Glücksmaid',allies:'Markt der Fortuna · Häuser Maerllys, Pendrwn und Raves',enemies:'Geschäftliche Rivalität mit Rebstock, Gaumenfreude und Klingender Münze'},
+  sections:{overview:'Unter dem alten Schild der Letzten Rast empfängt Haus Vann Bürger, Kaufleute, Gelehrte und Adel. Wohlstand und Ansehen beruhen auf Gastfreundschaft und einem seit Jahrhunderten geführten Betrieb.',
+    history:'Die Taverne bestand lange vor den Vanns. Iestyn und Efa übernahmen sie 1334. Zwischen ihnen und Tudwal sind die einzelnen Generationen nicht überliefert; der ununterbrochene Familienbesitz blieb im Hausgedächtnis bewahrt.',
+    traditions:'Vor einer großen Gesellschaft werden Tafel, Kammern und Keller gemeinsam geprüft. Die Herkunft eines besonderen Weins wird beim Einschenken genannt.',
+    knighthood:'Die Vanns sind ein bürgerliches Haus. Ihr Rang erwächst aus dem Betrieb und ihrem Ansehen in Gwynthor.',
+    succession:'Brenn ist Hausoberhaupt und leitender Inhaber, Madoc Mitinhaber und Meier. Cadeyrn ist der vorgesehene erste Erbe. Aneirin lernt als dessen ältester Sohn den Betrieb kennen.',
+    holdings:'Celtigerns Letzte Rast im Adelsdistrikt umfasst Speiseräume, acht Privatsalons, mehr als sechzig Gästezimmer, Küche, Vorratskeller, Stallungen und Lieferhof.',
+    cultureReligion:'Die Vanns leben nach cenyrischen Bräuchen und gehören zur Alerischen Kirche. Gastfreundschaft und das Glück einer guten Reise werden im Haus geschätzt.',
+    conflictsAlliances:'Der Markt der Fortuna ist ein wichtiger Handelspartner. Die Letzte Rast bewahrte ihre Eigenständigkeit gegenüber Übernahmeversuchen. Ehen verbinden die Familie mit Maerllys, Pendrwn und Raves.',
+    values:VANN_MOTTO,
+    court:'Seren betreut Gesellschaften, Angharad den Tischdienst, Edern die Herberge und Lowri die Hauswäsche. Owain prüft den Kellerbezug; Meleri, Elowen und Enid halten Kontor und Empfang besetzt.',
+    familyTree:'Das Übernehmerpaar Iestyn und Efa steht vor der historischen Überlieferungslücke. Die konkrete jüngere Linie beginnt bei Tudwal und Gwenith. Ihre Söhne Brenn und Madoc haben je zwei Kinder. Eirlys heiratete zu Orestian Raves; ihre Kinder werden ausschließlich dort fortgeführt.',
+    historicalFigures:'Iestyn und Efa begründeten den Familienbesitz. Tudwal und Gwenith sind die Eltern der heutigen Inhaber.'},
+  images:{crest:`../Stammbäume/${VANN_EMBLEM}`,scene:'../AleriaAlmanach/assets/letzte-rast/scenes/aussenansicht.png',sceneAlt:'Celtigerns Letzte Rast in Gwynthor',banner:'Estryll/Cenyr/Celtigerns_Wacht/Haus_Draig/assets/gwynthor.png'},
+  placeholders:{male:'../Stammbäume/assets/images/placeholders/male.png',female:'../Stammbäume/assets/images/placeholders/female.png'},
+  allies:[],founder:null,heads:[],heirs:[],offices:[],cadets:[],currentHead:'Brenn Vann · Hausoberhaupt',firstHeir:'Cadeyrn Vann',figuresTitle:'Familie und Haushalt',
+  figures:VANN_PEOPLE.map(person=>({id:person.id,familyId:person.house==='raves'?'haus-raves':person.originFamily||'haus-vann',name:person.name,role:person.role,description:person.bio,image:`../AleriaAlmanach/${person.portrait.slice(2)}`})),
+  trivia:['Die Letzte Rast ist älter als ihr heutiger Besitzername.','Seit 1334 liegen die Schlüssel bei den Vanns.','Eirlys arbeitet nach ihrer Heirat in der Göttlichen Eleganz.']
+});

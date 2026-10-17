@@ -69,6 +69,8 @@
       family("craigddu", "Craigddu", "Llamreis Ankunft/Bürgerliche/Gwynthor/Craigddu.png", { seat: "Gwynthor", liege: "Draig", rank: "Bürgerliches Haus" }),
       family("haus-trevoryn", "Trevoryn", "Llamreis Ankunft/Bürgerliche/Gwynthor/Trevoryn.png", { seat: "Gwynthor · Krumme Kanne", liege: "Draig", rank: "Bürgerliches Haus" }),
       family("haus-raves", "Raves", "Llamreis Ankunft/Bürgerliche/Gwynthor/Raves.png", { seat: "Gwynthor · Göttliche Eleganz", liege: "Draig", rank: "Bürgerliches Haus" }),
+      family("haus-vann", "Vann", "Llamreis Ankunft/Bürgerliche/Gwynthor/Vann.png", { seat: "Gwynthor · Celtigerns Letzte Rast", liege: "Draig", rank: "Bürgerliches Haus" }),
+      family("haus-gofrann", "Gofrann", "Llamreis Ankunft/Bürgerliche/Gwynthor/Gofrann.png", { seat: "Gwynthor · Zum Dritten Funken", liege: "Tlawd", rank: "Bürgerliches Haus" }),
       family("haus-svathamar", "Svathamar", "Llamreis Ankunft/Bürgerliche/Gwynthor/Svathamar.png", { seat: "Gwynthor · Krumme Kanne", liege: "Draig", rank: "Bürgerliches Haus" }),
       family("haus-dubhdarach", "Dubhdarach", "Llamreis Ankunft/Bürgerliche/Gwynthor/Dubhdarach.png", { seat: "Gwynthor · Krumme Kanne", liege: "Draig", rank: "Bürgerliches Haus" }),
       family("haus-argall", "Argall", "Llamreis Ankunft/Bürgerliche/Llysfaen/Argall.png", { seat: "Llysfaen", liege: "Wyrm" }),

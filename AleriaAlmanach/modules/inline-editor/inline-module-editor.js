@@ -309,6 +309,7 @@ function getInlineTemplatePickerType(type, entry) {
     language: 'language',
     'organization-network': 'organization-network',
     'guild-services': 'guild-services',
+    'theatre-program': 'theatre-program',
     'name-list': 'name-list',
     'script-table': 'script-table',
     landing: 'landing',
@@ -487,6 +488,7 @@ function buildInlineComplexEditor(entry, page, type) {
   if (type === 'map-template') return wrapInlineEditor(`${moduleMeta}${buildInlineMapTemplateEditor(page)}`);
   if (type === 'organization-network') return wrapInlineEditor(`${moduleMeta}${buildInlineOrganizationNetworkEditor(page)}`);
   if (type === 'guild-services') return wrapInlineEditor(`${moduleMeta}${buildInlineGuildServicesEditor(page)}`);
+  if (type === 'theatre-program') return wrapInlineEditor(`${moduleMeta}${buildInlineTheatreProgramEditor(page)}`);
   if (type === 'language') return wrapInlineEditor(`${moduleMeta}${buildInlineLanguageEditor(page)}`);
   if (type === 'name-list') return wrapInlineEditor(`${moduleMeta}${buildInlineNameListEditor(page)}`);
   if (type === 'script-table') return wrapInlineEditor(`${moduleMeta}${buildInlineScriptTableEditor(page)}`);

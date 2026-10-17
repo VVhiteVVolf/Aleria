@@ -1,0 +1,23 @@
+import { GOFRANN_ART } from './gofrann-people.mjs';
+import { GOFRANN_STANDARD_ITEMS } from './gofrann-catalog.mjs';
+const itemImage = fragment => GOFRANN_STANDARD_ITEMS.find(item => item.id.endsWith(`:${fragment}`))?.image || `${GOFRANN_ART}/schild.png`;
+const service = (title,icon,description,scope,terms) => ({title,icon,description:`<p>${description}</p>`,clients:'Ritter, Söldner, Gilden und andere Auftraggeber',scope,terms});
+export const GOFRANN_SERVICES = Object.freeze([
+  service('Prüfung von Waffe oder Harnisch',itemImage('stahlschwert'),'Ein Meister prüft das vorgelegte Stück auf sichtbare Schäden, lockere Verbindungen und brauchbaren Sitz. Der Kunde erfährt, welche Arbeit sinnvoll ist und mit welchen Kosten er rechnen muss.','Ein gewöhnliches Stück · kurze Werkstattprüfung','5 Kupfertaler · bei anschließendem Reparaturauftrag angerechnet'),
+  service('Schärfen und Abziehen',itemImage('langschwert'),'Eine gewöhnliche Schneide wird nachgeschärft, abgezogen und gereinigt. Größere Ausbrüche werden vor der Annahme gezeigt und als Reparatur berechnet.','Eine gewöhnliche Klinge ohne größere Ausbrüche','Ab 8 Kupfertalern je Klinge'),
+  service('Klinge richten und ausbessern',itemImage('ritterschwert'),'Bleddyn oder einer seiner Gesellen prüft eine verbogene oder angeschlagene Klinge. Ob das Material eine verlässliche Reparatur zulässt, entscheidet die Untersuchung am Stück.','Eine begrenzte Richt- oder Ausbesserungsarbeit','Ab 35 Kupfertalern · Umfang und Material nach Prüfung'),
+  service('Riemen, Nieten und Verschlüsse',itemImage('brigantine'),'Verschlissene Riemen und gelockerte Nieten werden ersetzt. Dabei prüft die Werkstatt auch die benachbarten Verbindungen, damit der neue Verschluss im Gebrauch hält.','Eine einfache Verbindung einschließlich gewöhnlichem Kleinmaterial','Ab 6 Kupfertalern je Arbeitsstelle'),
+  service('Rüstung ausbeulen und richten',itemImage('stahlkuerass'),'Eine eingedrückte Platte wird geprüft und behutsam zurückgeformt. Gebrochene Teile, starke Materialschäden und größere Gelenkarbeiten erhalten vorab einen eigenen Kostenvoranschlag.','Eine kleine, zugängliche Beschädigung an einer Platte','Ab 40 Kupfertalern je Schadstelle'),
+  service('Harnisch anpassen',itemImage('ritterplatte'),'Gethin prüft Sitz und Beweglichkeit am Träger. Riemenlängen und kleinere Passformarbeiten werden angepasst; das Ersetzen ganzer Platten wird gesondert vereinbart.','Eine Anprobe mit begrenzter Passformkorrektur','Ab 80 Kupfertalern · größere Umbauten nach Aufwand'),
+  service('Griffe, Schäfte und Beschläge',itemImage('hellebarde'),'Ein einfacher Griff oder Schaft wird erneuert und mit passenden Metallteilen verbunden. Besondere Hölzer, aufwendige Fassungen und Zierarbeiten werden vor der Fertigung ausgewählt.','Eine einfache Erneuerung mit gewöhnlichem Material','Ab 20 Kupfertalern · besondere Materialien gesondert'),
+  service('Aufmaß und Entwurf einer Maßarbeit',`${GOFRANN_ART}/schild.png`,'Wünsche, Maße und Gebrauch werden gemeinsam aufgenommen. Danach nennt die Werkstatt Material, Ausführung, Gesamtpreis und einen realistischen Fertigungstermin.','Ein Aufmaß und ein einfacher Arbeitsentwurf','25 Kupfertaler · bei Fertigung angerechnet; das Werkstück wird nach vereinbartem Angebot bezahlt'),
+  service('Lieferung für Gilde oder Gefolge',itemImage('rundschild'),'Einion stimmt Stückzahl, Größen, Abnahme und Lieferfolge ab. Muster und Anproben verhindern, dass ein ganzer Satz mit demselben Fehler gefertigt wird.','Zusammenhängender Mehrstückauftrag nach Vereinbarung','Stückpreise nach Güterregister und gewählter Ausführung; Transport und Sonderarbeiten nach Angebot')
+]);
+export function buildGofrannServices() {
+  return {title:'Dienstleistungen · Ein gutes Stück soll lange dienen',
+    introduction:'<p>Eine stumpfe Schneide oder ein gerissener Riemen gehört noch lange nicht auf den Schrotthaufen. Mareda und Renfri nehmen die Stücke entgegen; die Meister entscheiden, welche Arbeit sich lohnt. Vor der Reparatur stehen Umfang, Preis und Abholtermin fest.</p>',
+    services:structuredClone(GOFRANN_SERVICES),
+    process:'<p>Das Stück wird gezeigt, geprüft und im Auftragsbuch vermerkt. Bei Maßarbeiten folgt die Anprobe; bei größeren Aufträgen kann eine Anzahlung vereinbart werden. Zur Abholung wird die Arbeit gemeinsam angesehen und nötigenfalls noch einmal am Träger geprüft.</p>',
+    conditions:'<p>Die genannten Einstiegspreise gelten für die jeweils beschriebene kleine Arbeit. Besondere Materialien, stark beschädigte Stücke und aufwendige Umbauten erhalten ein eigenes Angebot. Zusätzliche Arbeiten beginnen erst nach Rücksprache mit dem Auftraggeber.</p>',
+    footer:'Zum Dritten Funken · Gwynthors Innenstadt · Haus Gofrann im Dienst der Tlawd'};
+}

@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "familyId": "haus-maerllys",
-  "revision": 2,
-  "updatedAt": "2026-10-16T00:26:06.470Z",
+  "revision": 3,
+  "updatedAt": "2026-10-17T00:23:36.950Z",
   "family": {
     "schema": "aleria.family-tree",
     "schemaVersion": 1,
@@ -254,19 +254,25 @@
         "id": "elowen-maerllys",
         "worldPersonId": "person--haus-maerllys--elowen-maerllys",
         "name": "Elowen Maerllys",
-        "title": "Ältere Schwester Nia Maerllys’",
+        "title": "Empfang · Buchungen und Hausleinen",
         "sex": "female",
         "status": "alive",
         "birth": "1713",
         "death": "",
-        "portrait": "",
+        "portrait": "../AleriaAlmanach/assets/letzte-rast/portraits/elowen.png",
         "portraitPlaceholder": "auto",
         "houseId": "house-maerllys",
         "familyRole": "core",
         "lineageRole": "branch",
         "tags": [],
-        "notes": "Unverheiratet und ohne Verlobung.",
-        "extensions": {}
+        "notes": "Elowen Maerllys heiratete Edern Vann im Jahr 1733 und lebt und arbeitet seither in der Letzten Rast.",
+        "extensions": {
+          "registryManagedFields": [
+            "title",
+            "notes",
+            "portrait"
+          ]
+        }
       },
       {
         "id": "nia-maerllys",
@@ -371,6 +377,32 @@
         "tags": [],
         "notes": "Gwenoras Bruder gehört zur älteren Schneiderfamilie. Die genaue Generationenfolge bis Cadfan und Owain ist nicht überliefert.",
         "extensions": {}
+      },
+      {
+        "id": "edern-vann",
+        "worldPersonId": "person--haus-vann--edern-vann",
+        "name": "Edern Vann",
+        "title": "Herbergsmeister · Zimmer und Buchungen",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1705",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/letzte-rast/references/edern.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-vann",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Herbergsmeister · Zimmer und Buchungen",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "title",
+            "notes",
+            "portrait"
+          ],
+          "portraitAge": 35
+        }
       }
     ],
     "partnerships": [
@@ -481,6 +513,26 @@
           "crossFamilyRelationship": {
             "linkId": "marriage-matteo-gwenora-raves",
             "counterpartFamilyId": "haus-raves"
+          }
+        }
+      },
+      {
+        "id": "marriage-edern-elowen-vann",
+        "participantIds": [
+          "edern-vann",
+          "elowen-maerllys"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "1733",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "crossFamilyRelationship": {
+            "linkId": "marriage-edern-elowen-vann",
+            "counterpartFamilyId": "haus-vann"
           }
         }
       }
@@ -711,6 +763,13 @@
         "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Raves.png",
         "status": "active",
         "extensions": {}
+      },
+      {
+        "id": "house-vann",
+        "name": "Haus Vann",
+        "motto": "",
+        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Vann.png",
+        "status": "active"
       }
     ],
     "cadetBranches": [
@@ -748,6 +807,24 @@
         "founded": "1662",
         "targetFamilyId": "haus-raves",
         "notes": "Gwenora und Matteo begründeten den Raves-Zweig. Dessen Nachkommen werden ausschließlich dort gezeigt.",
+        "extensions": {}
+      },
+      {
+        "id": "married-away-elowen-vann",
+        "name": "Haus Vann",
+        "subtitle": "Wegverheiratete Linie",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-edern-elowen-vann",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-vann",
+        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Vann.png",
+        "emblemScale": 0.86,
+        "crestFrame": "iron",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-vann",
+        "notes": "Nachkommen dieser Ehe werden ausschließlich in der Vann-Akte fortgeführt.",
         "extensions": {}
       }
     ],
@@ -863,7 +940,7 @@
       "blankFamily": false,
       "preparedTimeJump": true,
       "pendingDescendantReview": false,
-      "sourceRevision": 7,
+      "sourceRevision": 8,
       "registryManagedViewFields": [
         "focusPersonId",
         "limitGenerations"
@@ -970,8 +1047,8 @@
       },
       "registryTombstones": {},
       "registryUpgrade": {
-        "fromRevision": 6,
-        "toRevision": 7
+        "fromRevision": 7,
+        "toRevision": 8
       }
     }
   }

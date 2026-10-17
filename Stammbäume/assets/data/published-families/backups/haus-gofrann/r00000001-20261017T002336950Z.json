@@ -1,0 +1,1287 @@
+{
+  "schemaVersion": 1,
+  "familyId": "haus-gofrann",
+  "revision": 1,
+  "updatedAt": "2026-10-17T00:23:36.950Z",
+  "family": {
+    "schema": "aleria.family-tree",
+    "schemaVersion": 1,
+    "document": {
+      "id": "haus-gofrann",
+      "title": "Haus Gofrann",
+      "motto": "Stahl und Wort.",
+      "description": "Bürgerliche Waffen- und Harnischmeister aus Gwynthors Innenstadt. Die Vettern Gethin und Bleddyn führen die Familienschmiede Zum Dritten Funken. Haus Tlawd hält einen bedeutenden Anteil, liefert Erz und erhält den Lehnsanteil; über Tlawd stehen die Gofrann im Gefolge der Gafyr.",
+      "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Gofrann.png",
+      "houseProfile": {
+        "rankId": "commoner",
+        "seat": "Gwynthor",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "haus-tlawd",
+        "liegeHouseName": "Haus Tlawd",
+        "regionEmblems": {
+          "seat": "",
+          "barony": "",
+          "county": "",
+          "kingdom": ""
+        }
+      }
+    },
+    "persons": [
+      {
+        "id": "haus-gofrann-gruender",
+        "worldPersonId": "person--haus-gofrann--haus-gofrann-gruender",
+        "name": "Unbekannter Gründer",
+        "title": "Gründer des Hauses",
+        "sex": "male",
+        "status": "dead",
+        "birth": "",
+        "death": "????",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-gofrann",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Gründerfamilie"
+        ],
+        "notes": "Historische Gründerfigur vor dem Überlieferungssprung; Name und genaue Lebensdaten sind noch nicht belegt.",
+        "extensions": {}
+      },
+      {
+        "id": "haus-gofrann-gruenderin",
+        "worldPersonId": "person--haus-gofrann--haus-gofrann-gruenderin",
+        "name": "Unbekannte Gründerin",
+        "title": "Gründerin des Hauses",
+        "sex": "female",
+        "status": "dead",
+        "birth": "",
+        "death": "????",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-gofrann",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [
+          "Gründerfamilie"
+        ],
+        "notes": "Historische Gründerfigur vor dem Überlieferungssprung; Name und genaue Lebensdaten sind noch nicht belegt.",
+        "extensions": {}
+      },
+      {
+        "id": "edern-gofrann",
+        "worldPersonId": "person--haus-gofrann--edern-gofrann",
+        "name": "Edern Gofrann",
+        "title": "Früherer Harnischmeister",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1638",
+        "death": "1714",
+        "portrait": "../AleriaAlmanach/assets/gofrann-schmiede/portraits/edern.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-gofrann",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Edern machte aus einer engen Esse eine Werkstatt, an deren Tür auch Ritter klopften. Bei ihm begann die Regel, dass ein Harnisch erst fertig ist, wenn sein Träger sich darin frei bewegen kann.",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "houseId",
+            "portrait",
+            "title",
+            "notes"
+          ],
+          "portraitAge": 76
+        }
+      },
+      {
+        "id": "eirwen-gofrann",
+        "worldPersonId": "person--haus-gofrann--eirwen-gofrann",
+        "name": "Eirwen",
+        "title": "Frühere Hüterin von Kasse und Vorräten",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1643",
+        "death": "1720",
+        "portrait": "../AleriaAlmanach/assets/gofrann-schmiede/portraits/eirwen.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Eirwen kannte den Wert eines guten Lederriemens und den Preis jedes Kohlenwagens. Ihre sauberen Bücher machten es möglich, eine schlechte Lieferung zurückzuweisen, ohne die nächste Esse kalt werden zu lassen.",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "houseId",
+            "portrait",
+            "title",
+            "notes"
+          ],
+          "portraitAge": 77
+        }
+      },
+      {
+        "id": "caradfan-gofrann",
+        "worldPersonId": "person--haus-gofrann--caradfan-gofrann",
+        "name": "Caradfan Gofrann",
+        "title": "Früherer Klingenschmied",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1642",
+        "death": "1712",
+        "portrait": "../AleriaAlmanach/assets/gofrann-schmiede/portraits/caradfan.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-gofrann",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Ederns jüngerer Bruder gab lieber einer Klinge den letzten Schliff, als lange über sie zu sprechen. Seine Werkbank blieb am Fenster; dort sah er jede Unebenheit, die das Licht der Esse verborgen hatte.",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "houseId",
+            "portrait",
+            "title",
+            "notes"
+          ],
+          "portraitAge": 70
+        }
+      },
+      {
+        "id": "neryn-alt-gofrann",
+        "worldPersonId": "person--haus-gofrann--neryn-alt-gofrann",
+        "name": "Neryn",
+        "title": "Frühere Vorsteherin der Verkaufsstube",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1647",
+        "death": "1725",
+        "portrait": "../AleriaAlmanach/assets/gofrann-schmiede/portraits/neryn-alt.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Neryn erinnerte sich an die Hand eines Kunden ebenso gut wie an seinen Namen. Sie ließ niemanden mit einem schlecht sitzenden Griff gehen und schickte ungeduldige Besteller mit derselben Freundlichkeit wieder zur Bank.",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "houseId",
+            "portrait",
+            "title",
+            "notes"
+          ],
+          "portraitAge": 78
+        }
+      },
+      {
+        "id": "gethin-gofrann",
+        "worldPersonId": "person--haus-gofrann--gethin-gofrann",
+        "name": "Gethin Gofrann",
+        "title": "Leitender Inhaber · Harnischmeister",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1669",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/gofrann-schmiede/portraits/gethin.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-gofrann",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [],
+        "notes": "Gethin führt die Werkstatt mit einer Stimme, die selten laut werden muss. Er prüft Schulter, Gelenk und Nietung selbst. Einen guten Auftrag nimmt er gern an; einen unmöglichen Termin verspricht er auch einem Ritter nicht.",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "houseId",
+            "portrait",
+            "title",
+            "notes"
+          ],
+          "portraitAge": 71
+        }
+      },
+      {
+        "id": "teleri-gofrann",
+        "worldPersonId": "person--haus-gofrann--teleri-gofrann",
+        "name": "Teleri Gofrann",
+        "title": "Hausmeierin · Kasse und Löhne",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1673",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/gofrann-schmiede/portraits/teleri.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Teleri hält Löhne, offene Rechnungen und den Anteil der Tlawd auseinander, ohne sich in den Zahlen zu verlieren. Wer nach einer langen Woche seinen Lohn abholt, weiß ihre Pünktlichkeit zu schätzen.",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "houseId",
+            "portrait",
+            "title",
+            "notes"
+          ],
+          "portraitAge": 67
+        }
+      },
+      {
+        "id": "bleddyn-gofrann",
+        "worldPersonId": "person--haus-gofrann--bleddyn-gofrann",
+        "name": "Bleddyn Gofrann",
+        "title": "Mitinhaber · Waffenmeister der Schmiede",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1672",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/gofrann-schmiede/portraits/bleddyn.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-gofrann",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Bleddyn hört beim Schleifen, wann eine Klinge seine Aufmerksamkeit verlangt. Er neckt Gethin seit Kindertagen und hält ihm bei schwierigen Entscheidungen den Rücken frei. Den Lehrlingen erklärt er einen Fehler ein zweites Mal, aber er lässt ihn nicht im fertigen Stück stehen.",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "houseId",
+            "portrait",
+            "title",
+            "notes"
+          ],
+          "portraitAge": 68
+        }
+      },
+      {
+        "id": "mareda-gofrann",
+        "worldPersonId": "person--haus-gofrann--mareda-gofrann",
+        "name": "Mareda Gofrann",
+        "title": "Verkaufsmeisterin · Aufträge und Stammkundschaft",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1676",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/gofrann-schmiede/portraits/mareda.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Mareda kennt die Stammkunden und lässt sich vor einer Bestellung erzählen, wofür eine Waffe gebraucht wird. Sie kann einen aufgeregten jungen Söldner beruhigen und einem reichen Käufer freundlich erklären, weshalb sein Harnisch eine weitere Anprobe braucht.",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "houseId",
+            "portrait",
+            "title",
+            "notes"
+          ],
+          "portraitAge": 64
+        }
+      },
+      {
+        "id": "einion",
+        "worldPersonId": "person--family-tree--einion",
+        "name": "Einion Gofrann",
+        "title": "Werkstattmeier · Organisation und Lieferwege",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1696",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/gofrann-schmiede/portraits/einion.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-gofrann",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Einion bringt Aufträge, Material und verfügbare Hände zusammen. Er geht lieber selbst zur Warenannahme, als eine fehlende Lieferung im Buch schönzureden. Mit Renfri führt er den Teil des Hauses, in dem aus einer Zusage ein verlässlicher Termin wird.",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "houseId",
+            "portrait",
+            "title",
+            "notes"
+          ],
+          "portraitAge": 44
+        }
+      },
+      {
+        "id": "renfri-tlawd",
+        "worldPersonId": "person--haus-tlawd--renfri-tlawd",
+        "name": "Renfri Tlawd",
+        "title": "Empfang und Rüstungsanproben",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1699",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-tlawd/renfri-tlawd.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-tlawd",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Renfri nimmt Maßtermine auf und weiß, wann ein Kunde eine klare Antwort braucht. Die Tochter der Tlawd kennt den Anspruch ihrer ritterlichen Verwandtschaft; in der Werkstatt zählt für sie, ob ein Stück am Ende richtig sitzt.",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "houseId",
+            "portrait",
+            "title",
+            "notes"
+          ],
+          "portraitAge": 41
+        }
+      },
+      {
+        "id": "idnerth-gofrann",
+        "worldPersonId": "person--haus-gofrann--idnerth-gofrann",
+        "name": "Idnerth Gofrann",
+        "title": "Harnischgeselle · Platten und Gelenke",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1702",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/gofrann-schmiede/portraits/idnerth.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-gofrann",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Idnerth formt Platten mit Geduld und prüft die Beweglichkeit lieber einmal zu oft. Seinen Vater Gethin überredet er zu neuen Schnitten, indem er ein sauberes Muster vorlegt.",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "houseId",
+            "portrait",
+            "title",
+            "notes"
+          ],
+          "portraitAge": 38
+        }
+      },
+      {
+        "id": "ceryth-gofrann",
+        "worldPersonId": "person--haus-gofrann--ceryth-gofrann",
+        "name": "Ceryth Gofrann",
+        "title": "Verkauf · Abholung und Zubehör",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1705",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/gofrann-schmiede/portraits/ceryth.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Ceryth richtet fertige Bestellungen zur Abholung her und merkt sich, welcher Riemen zu welchem Kunden gehört. Sie erklärt Pflege und Verschlüsse mit einer Geduld, die Idnerth an sich selbst gelegentlich vermisst.",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "houseId",
+            "portrait",
+            "title",
+            "notes"
+          ],
+          "portraitAge": 35
+        }
+      },
+      {
+        "id": "ulaena",
+        "worldPersonId": "person--family-tree--ulaena",
+        "name": "Ulaena Gofrann",
+        "title": "Nach Haus Tlawd verheiratet",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1699",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/gofrann-schmiede/portraits/ulaena.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-gofrann",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Ulaena lebt mit Lludd bei den Tlawd. Sie kennt noch den Rhythmus der alten Werkstatt und schaut bei Besuchen zuerst nach ihrem Vater Bleddyn, bevor sie sich nach den Neuigkeiten erkundigt.",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "houseId",
+            "portrait",
+            "title",
+            "notes"
+          ],
+          "portraitAge": 41
+        }
+      },
+      {
+        "id": "lludd-tlawd",
+        "worldPersonId": "person--haus-tlawd--lludd-tlawd",
+        "name": "Lludd Tlawd",
+        "title": "Ulaenas Gemahl · Haus Tlawd",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1698",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-tlawd/lludd-tlawd.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-tlawd",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "houseId",
+            "portrait",
+            "title",
+            "notes"
+          ],
+          "portraitAge": 42
+        }
+      },
+      {
+        "id": "madoc-gofrann",
+        "worldPersonId": "person--haus-gofrann--madoc-gofrann",
+        "name": "Madoc Gofrann",
+        "title": "Klingengeselle · Härten und Schleifen",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1704",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/gofrann-schmiede/portraits/madoc.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-gofrann",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Madoc arbeitet neben Bleddyn an Klingen und Beschlägen. Er ist schneller im Gespräch als sein Vater, nimmt sich am Schleifstein aber dieselbe Ruhe. Die erste brauchbare Klinge eines Lehrlings legt er gern für den Meister sichtbar hin.",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "houseId",
+            "portrait",
+            "title",
+            "notes"
+          ],
+          "portraitAge": 36
+        }
+      },
+      {
+        "id": "aneira-gofrann",
+        "worldPersonId": "person--haus-gofrann--aneira-gofrann",
+        "name": "Aneira Gofrann",
+        "title": "Warenannahme und Vorräte",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1708",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/gofrann-schmiede/portraits/aneira.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Aneira prüft Leder, Kohlen und Kleinteile, bevor sie ins Lager wandern. Eine sauber verschnürte Lieferung beeindruckt sie erst, wenn auch ihr Inhalt stimmt. Mit Einion hält sie die Wege zu den Zulieferern offen.",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "houseId",
+            "portrait",
+            "title",
+            "notes"
+          ],
+          "portraitAge": 32
+        }
+      },
+      {
+        "id": "cynlas-gofrann",
+        "worldPersonId": "person--haus-gofrann--cynlas-gofrann",
+        "name": "Cynlas Gofrann",
+        "title": "Junger Klingengeselle",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1720",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/gofrann-schmiede/portraits/cynlas.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-gofrann",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Cynlas hat seine Lehrjahre hinter sich und übernimmt einfache Klingen und die gründliche Schlussreinigung. Bei schwierigen Arbeiten sieht Bleddyn noch über seine Schulter; Cynlas lässt ihn gewähren und fragt nach.",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "houseId",
+            "portrait",
+            "title",
+            "notes"
+          ],
+          "portraitAge": 20
+        }
+      },
+      {
+        "id": "eluned-gofrann",
+        "worldPersonId": "person--haus-gofrann--eluned-gofrann",
+        "name": "Eluned Gofrann",
+        "title": "Schreiblehrling · Auftragsbücher",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1725",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/gofrann-schmiede/portraits/eluned.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-gofrann",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Eluned lernt bei Teleri, aus einer hastigen Bestellung einen lesbaren Eintrag zu machen. Sie fragt lieber einmal nach einer Zahl, als sie später aus dem Gedächtnis einzusetzen.",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "houseId",
+            "portrait",
+            "title",
+            "notes"
+          ],
+          "portraitAge": 15
+        }
+      },
+      {
+        "id": "tegwyn-gofrann",
+        "worldPersonId": "person--haus-gofrann--tegwyn-gofrann",
+        "name": "Tegwyn Gofrann",
+        "title": "Schmiedelehrling · Grundarbeiten",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1726",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/gofrann-schmiede/portraits/tegwyn.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-gofrann",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Tegwyn lernt bei Idnerth Werkzeugpflege, saubere Markierungen und die Geduld vor dem nächsten Arbeitsschritt. Einen gelungenen Niet zeigt er seinem Großvater noch am selben Abend.",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "houseId",
+            "portrait",
+            "title",
+            "notes"
+          ],
+          "portraitAge": 14
+        }
+      },
+      {
+        "id": "rhoswen-gofrann",
+        "worldPersonId": "person--haus-gofrann--rhoswen-gofrann",
+        "name": "Rhoswen Gofrann",
+        "title": "Hauskind",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1731",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/gofrann-schmiede/portraits/rhoswen.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-gofrann",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Rhoswen erkennt die Stammkunden an ihren Schritten. Nach dem Unterricht erzählt sie Ceryth, welche Namen sie inzwischen selbst lesen kann.",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "houseId",
+            "portrait",
+            "title",
+            "notes"
+          ],
+          "portraitAge": 9
+        }
+      },
+      {
+        "id": "emrys-gofrann",
+        "worldPersonId": "person--haus-gofrann--emrys-gofrann",
+        "name": "Emrys Gofrann",
+        "title": "Botenlehrling · Kontor und kurze Wege",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1728",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/gofrann-schmiede/portraits/emrys.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-gofrann",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Emrys lernt Lesen, Rechnen und die vertrauten Wege zwischen Kontor und Verkaufsstube. Für einen kurzen Botengang bekommt er eine klare Nachricht und danach Zeit, seine Schriftübungen zu beenden.",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "houseId",
+            "portrait",
+            "title",
+            "notes"
+          ],
+          "portraitAge": 12
+        }
+      },
+      {
+        "id": "neryn-gofrann",
+        "worldPersonId": "person--haus-gofrann--neryn-gofrann",
+        "name": "Neryn Gofrann",
+        "title": "Hauskind",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1734",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/gofrann-schmiede/portraits/neryn.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-gofrann",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Neryn hört am liebsten Bleddyns Geschichten, wenn die Werkstatt geschlossen ist. Den dritten Funken auf dem Hausschild zählt sie jedes Mal mit.",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "houseId",
+            "portrait",
+            "title",
+            "notes"
+          ],
+          "portraitAge": 6
+        }
+      }
+    ],
+    "partnerships": [
+      {
+        "id": "marriage-haus-gofrann-founders",
+        "participantIds": [
+          "haus-gofrann-gruender",
+          "haus-gofrann-gruenderin"
+        ],
+        "type": "marriage",
+        "status": "ended",
+        "start": "",
+        "end": "",
+        "certainty": "unknown",
+        "visibility": "public",
+        "notes": "Gründerehe des Hauses.",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-edern-eirwen-gofrann",
+        "participantIds": [
+          "edern-gofrann",
+          "eirwen-gofrann"
+        ],
+        "type": "marriage",
+        "status": "ended",
+        "start": "1667",
+        "end": "1714",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "start"
+          ]
+        }
+      },
+      {
+        "id": "marriage-caradfan-neryn-gofrann",
+        "participantIds": [
+          "caradfan-gofrann",
+          "neryn-alt-gofrann"
+        ],
+        "type": "marriage",
+        "status": "ended",
+        "start": "1669",
+        "end": "1712",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "start"
+          ]
+        }
+      },
+      {
+        "id": "marriage-gethin-teleri-gofrann",
+        "participantIds": [
+          "gethin-gofrann",
+          "teleri-gofrann"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "1693",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "start"
+          ]
+        }
+      },
+      {
+        "id": "marriage-bleddyn-mareda-gofrann",
+        "participantIds": [
+          "bleddyn-gofrann",
+          "mareda-gofrann"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "1696",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "start"
+          ]
+        }
+      },
+      {
+        "id": "marriage-renfri-einion",
+        "participantIds": [
+          "renfri-tlawd",
+          "einion"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "1718",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "start"
+          ],
+          "crossFamilyRelationship": {
+            "linkId": "marriage-renfri-einion",
+            "counterpartFamilyId": "haus-tlawd"
+          }
+        }
+      },
+      {
+        "id": "marriage-idnerth-ceryth-gofrann",
+        "participantIds": [
+          "idnerth-gofrann",
+          "ceryth-gofrann"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "1724",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "start"
+          ]
+        }
+      },
+      {
+        "id": "marriage-lludd-ulaena",
+        "participantIds": [
+          "lludd-tlawd",
+          "ulaena"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "start"
+          ],
+          "crossFamilyRelationship": {
+            "linkId": "marriage-lludd-ulaena",
+            "counterpartFamilyId": "haus-tlawd"
+          }
+        }
+      },
+      {
+        "id": "marriage-madoc-aneira-gofrann",
+        "participantIds": [
+          "madoc-gofrann",
+          "aneira-gofrann"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "1726",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "start"
+          ]
+        }
+      }
+    ],
+    "parentages": [
+      {
+        "id": "parentage-edern-gofrann",
+        "childId": "edern-gofrann",
+        "parentIds": [
+          "haus-gofrann-gruender",
+          "haus-gofrann-gruenderin"
+        ],
+        "partnershipId": "marriage-haus-gofrann-founders",
+        "type": "claimed",
+        "legitimacy": "unknown",
+        "certainty": "unknown",
+        "visibility": "public",
+        "notes": "Die Brüder gehören zur späteren Gofrann-Linie; die dazwischenliegenden Generationen sind nicht einzeln überliefert.",
+        "extensions": {
+          "timeJumpId": "gap-gofrann-to-1638"
+        }
+      },
+      {
+        "id": "parentage-caradfan-gofrann",
+        "childId": "caradfan-gofrann",
+        "parentIds": [
+          "haus-gofrann-gruender",
+          "haus-gofrann-gruenderin"
+        ],
+        "partnershipId": "marriage-haus-gofrann-founders",
+        "type": "claimed",
+        "legitimacy": "unknown",
+        "certainty": "unknown",
+        "visibility": "public",
+        "notes": "Die Brüder gehören zur späteren Gofrann-Linie; die dazwischenliegenden Generationen sind nicht einzeln überliefert.",
+        "extensions": {
+          "timeJumpId": "gap-gofrann-to-1638"
+        }
+      },
+      {
+        "id": "parentage-gethin-gofrann",
+        "childId": "gethin-gofrann",
+        "parentIds": [
+          "edern-gofrann",
+          "eirwen-gofrann"
+        ],
+        "partnershipId": "marriage-edern-eirwen-gofrann",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-bleddyn-gofrann",
+        "childId": "bleddyn-gofrann",
+        "parentIds": [
+          "caradfan-gofrann",
+          "neryn-alt-gofrann"
+        ],
+        "partnershipId": "marriage-caradfan-neryn-gofrann",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-einion",
+        "childId": "einion",
+        "parentIds": [
+          "gethin-gofrann",
+          "teleri-gofrann"
+        ],
+        "partnershipId": "marriage-gethin-teleri-gofrann",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-idnerth-gofrann",
+        "childId": "idnerth-gofrann",
+        "parentIds": [
+          "gethin-gofrann",
+          "teleri-gofrann"
+        ],
+        "partnershipId": "marriage-gethin-teleri-gofrann",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-ulaena",
+        "childId": "ulaena",
+        "parentIds": [
+          "bleddyn-gofrann",
+          "mareda-gofrann"
+        ],
+        "partnershipId": "marriage-bleddyn-mareda-gofrann",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-madoc-gofrann",
+        "childId": "madoc-gofrann",
+        "parentIds": [
+          "bleddyn-gofrann",
+          "mareda-gofrann"
+        ],
+        "partnershipId": "marriage-bleddyn-mareda-gofrann",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-cynlas-gofrann",
+        "childId": "cynlas-gofrann",
+        "parentIds": [
+          "renfri-tlawd",
+          "einion"
+        ],
+        "partnershipId": "marriage-renfri-einion",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-eluned-gofrann",
+        "childId": "eluned-gofrann",
+        "parentIds": [
+          "renfri-tlawd",
+          "einion"
+        ],
+        "partnershipId": "marriage-renfri-einion",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-tegwyn-gofrann",
+        "childId": "tegwyn-gofrann",
+        "parentIds": [
+          "idnerth-gofrann",
+          "ceryth-gofrann"
+        ],
+        "partnershipId": "marriage-idnerth-ceryth-gofrann",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-rhoswen-gofrann",
+        "childId": "rhoswen-gofrann",
+        "parentIds": [
+          "idnerth-gofrann",
+          "ceryth-gofrann"
+        ],
+        "partnershipId": "marriage-idnerth-ceryth-gofrann",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-emrys-gofrann",
+        "childId": "emrys-gofrann",
+        "parentIds": [
+          "madoc-gofrann",
+          "aneira-gofrann"
+        ],
+        "partnershipId": "marriage-madoc-aneira-gofrann",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-neryn-gofrann",
+        "childId": "neryn-gofrann",
+        "parentIds": [
+          "madoc-gofrann",
+          "aneira-gofrann"
+        ],
+        "partnershipId": "marriage-madoc-aneira-gofrann",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      }
+    ],
+    "houses": [
+      {
+        "id": "house-gofrann",
+        "name": "Haus Gofrann",
+        "motto": "Stahl und Wort.",
+        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Gofrann.png",
+        "status": "active"
+      },
+      {
+        "id": "house-tlawd",
+        "name": "Haus Tlawd",
+        "motto": "",
+        "emblem": "assets/images/houses/Llamreis Ankunft/haus-tlawd.png",
+        "status": "active"
+      }
+    ],
+    "cadetBranches": [
+      {
+        "id": "married-away-ulaena-tlawd",
+        "name": "Haus Tlawd",
+        "subtitle": "Wegverheiratete Linie",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-lludd-ulaena",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-tlawd",
+        "emblem": "assets/images/houses/Llamreis Ankunft/haus-tlawd.png",
+        "emblemScale": 0.86,
+        "crestFrame": "silver",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-tlawd",
+        "notes": "Ulaena heiratete Lludd Tlawd. Owain und Leisa sowie die Fortsetzung dieser Linie stehen ausschließlich in der Tlawd-Akte.",
+        "extensions": {}
+      }
+    ],
+    "timeJumps": [
+      {
+        "id": "gap-gofrann-to-1638",
+        "parentPartnershipId": "marriage-haus-gofrann-founders",
+        "sharedParentPartnershipIds": [],
+        "parentPersonId": "",
+        "childIds": [
+          "edern-gofrann",
+          "caradfan-gofrann"
+        ],
+        "years": 0,
+        "fromYear": "",
+        "toYear": "1638",
+        "label": "Nicht einzeln überlieferte Generationen bis Edern und Caradfan",
+        "notes": "Der Zeitsprung ist der alleinige absolute Generationentrenner unter dem Hauswappen. Bekannte Nachkommen werden später ausschließlich hinter diesem Knoten ergänzt.",
+        "extensions": {
+          "preparedPlaceholder": false
+        }
+      }
+    ],
+    "lineage": {
+      "founderPartnershipId": "marriage-haus-gofrann-founders",
+      "houseId": "house-gofrann",
+      "crestSubtitle": "Bürgerliche Waffen- und Harnischmeister · Gwynthor",
+      "crestEmblemScale": 0.86,
+      "crestFrame": "iron",
+      "crestFrameScale": 1,
+      "timeGap": {
+        "enabled": false,
+        "years": 0,
+        "fromYear": "",
+        "toYear": "",
+        "label": ""
+      },
+      "originHouse": {
+        "enabled": false,
+        "id": "lineage-origin-house",
+        "houseId": "",
+        "name": "Ursprungshaus",
+        "subtitle": "",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "childIds": [],
+        "targetFamilyId": "",
+        "notes": "",
+        "timeGap": {
+          "enabled": false,
+          "years": 0,
+          "fromYear": "",
+          "toYear": "",
+          "label": ""
+        }
+      }
+    },
+    "presentation": {
+      "relationshipColors": {
+        "marriage": "#326c4a",
+        "engagement": "#b88b37",
+        "union": "#8e2724",
+        "affair": "#704485",
+        "concubinage": "#704485",
+        "political": "#9d7d48",
+        "forced": "#c7a974",
+        "biological": "#8e2724",
+        "adoptive": "#2f75a8",
+        "foster": "#2f75a8",
+        "step": "#7eb4d7",
+        "magical": "#704485",
+        "claimed": "#62615e"
+      }
+    },
+    "view": {
+      "focusPersonId": "gethin-gofrann",
+      "orientation": "vertical",
+      "ancestorDepth": 8,
+      "descendantDepth": 8,
+      "limitGenerations": false,
+      "showSiblings": true
+    },
+    "extensions": {
+      "blankFamily": false,
+      "preparedTimeJump": false,
+      "pendingDescendantReview": false,
+      "sourceRevision": 1,
+      "publication": {
+        "allowed": true,
+        "authorizedAt": "2026-10-17",
+        "reason": "Nutzer gibt alle vorbereiteten Module für master frei."
+      },
+      "houseBiographyModule": {
+        "schema": "aleria.house-module",
+        "schemaVersion": 1,
+        "pageTitle": "Haus Gofrann",
+        "housePage": true,
+        "image": "../AleriaAlmanach/assets/gofrann-schmiede/scenes/aussenansicht.png",
+        "imageWidth": 30,
+        "imageSquare": true,
+        "description": "Die Gofrann führen die Waffen- und Harnischschmiede Zum Dritten Funken in Gwynthors Innenstadt. Gethin und sein Vetter Bleddyn stehen selbst am Werkstück; ihre Familie hält Verkauf, Bücher und Lieferwege zusammen.",
+        "quote": "Stahl und Wort.",
+        "quoteBy": "",
+        "commentSequence": [],
+        "stats": [
+          [
+            "Voller Name",
+            "Haus Gofrann"
+          ],
+          [
+            "Rang",
+            "Bürgerlich"
+          ],
+          [
+            "Stammsitz",
+            "Gwynthor · Innenstadt"
+          ],
+          [
+            "Grafschaft",
+            "Celtigerns Wacht"
+          ],
+          [
+            "Oberhaupt",
+            "Gethin Gofrann · leitender Inhaber"
+          ],
+          [
+            "Erbe",
+            "Nicht festgelegt"
+          ],
+          [
+            "Lehnsherr",
+            "Haus Tlawd"
+          ],
+          [
+            "Ursprung",
+            "Gwynthor"
+          ],
+          [
+            "Schutzpatronin",
+            "Der Knecht"
+          ]
+        ],
+        "house": {
+          "crestImage": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Gofrann.png",
+          "sideWidth": 100,
+          "connectionPortraitHeight": 80,
+          "connectionTextOffset": 0,
+          "biographyTitle": "Über die Familie",
+          "biographyText": "Die Gofrann führen die Waffen- und Harnischschmiede Zum Dritten Funken in Gwynthors Innenstadt. Gethin und sein Vetter Bleddyn stehen selbst am Werkstück; ihre Familie hält Verkauf, Bücher und Lieferwege zusammen.",
+          "abilitiesTitle": "Einfluss und Aufgaben",
+          "abilities": [],
+          "historyTitle": "Zwei Werkbänke, ein Haus",
+          "historyText": "Nach den unbekannten Gründern setzt die Überlieferung bei den Brüdern Edern und Caradfan ein. Ihre Söhne Gethin und Bleddyn lernten nebeneinander und führten die Werkstatt gemeinsam weiter.",
+          "worksTitle": "Hausgeschichte",
+          "works": [],
+          "extraSections": [
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Werte und Stellung",
+              "text": "Ein Harnisch soll Bewegung zulassen, eine Klinge zur Hand ihres Trägers passen. Die Meister versprechen keinen unmöglichen Termin und geben ein Stück erst nach ihrer Prüfung heraus."
+            }
+          ],
+          "triviaTitle": "Besonderheiten",
+          "trivia": [],
+          "quotesTitle": "Hausmotto",
+          "quotes": [],
+          "connectionsTitle": "Verbündete und Kadettenhäuser",
+          "connections": [
+            {
+              "name": "Haus Tlawd",
+              "detail": "Lehnsherr, bedeutender Teilhaber und wichtigster Erzlieferant",
+              "image": "../Stammbäume/assets/images/houses/Llamreis Ankunft/haus-tlawd.png",
+              "imageFormat": "square"
+            }
+          ],
+          "documentsTitle": "Mehr über das Haus",
+          "documents": [
+            {
+              "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Gofrann.png",
+              "title": "Haus Gofrann · vollständige Hausseite",
+              "text": "Chronik, Besitz, Wappen und Hof mit verlinkten Portraits.",
+              "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-gofrann"
+            }
+          ],
+          "footer": ""
+        }
+      },
+      "sourceNote": "Lokaler Nutzerentwurf vom 16.10.2026. Gründerpaar → Hauswappen → ein serieller Zeitsprung → Brüder Edern und Caradfan → deren Söhne Gethin und Bleddyn als Vettern. Einion und Ulaena behalten bestehende Identitäten und Ehen. Frauenlinien werden beim jeweiligen Gemahl fortgeführt. Keine Online-Veröffentlichung freigegeben."
+    }
+  }
+}

@@ -15,7 +15,7 @@ export const HOUSE_CONTENT = {
   "showMotto": false,
   "prepared": false,
   "registerPage": true,
-  "biographySourceRevision": 2,
+  "biographySourceRevision": 3,
   "biographyIntroTitle": "Über das Haus",
   "biographyHistoryTitle": "Geschichte",
   "biographySummary": {
@@ -114,6 +114,7 @@ export const HOUSE_CONTENT = {
     "knighthood": "Folgt …",
     "succession": "Folgt …",
     "holdings": [
+      "In Gwynthors Innenstadt führen die Gofrann die Schmiede Zum Dritten Funken. Die Tlawd halten einen bedeutenden Anteil und beliefern die Werkstatt vor allem mit Erz. Die Gofrann besitzen und leiten den Betrieb und leisten ihren Lehnsanteil an das Haus Tlawd.",
       "Das Haus Tlawd residiert auf einer Burg unmittelbar vor den Toren der Hauptstadt Gwynthor, in den Vororten der Stadt des Grafen aus dem Hause Draig. Zu ihren Gütern zählt eine Erzmine in den umliegenden Bergen, deren Ertrag den Tlawd erheblichen Wohlstand sichert. Darüber hinaus unterhalten sie zahlreiche Handwerker, Waffen- und Rüstungsschmiede, die ihren Ruf als versierte Kriegsmänner untermauern. So zählen die Tlawd trotz ihres schlichten Ursprungs zu den wohlhabenderen Ritterhäusern im Gefolge der Gafyr."
     ],
     "cultureReligion": [

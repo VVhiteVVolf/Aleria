@@ -1,0 +1,14 @@
+import { readFile, writeFile, mkdir } from 'node:fs/promises';
+import { createGofrannArtManifest } from '../modules/gofrann-schmiede/gofrann-art.mjs';
+import { createGofrannItemArtManifest } from '../modules/gofrann-schmiede/gofrann-item-art.mjs';
+const presets = JSON.parse(await readFile(new URL('../docs/art/image-style-presets.json', import.meta.url), 'utf8')).presets;
+const manifest = createGofrannArtManifest(presets);
+const directory = new URL('../assets/gofrann-schmiede/', import.meta.url);
+await mkdir(directory, { recursive: true });
+await writeFile(new URL('image-prompts.json', directory), `${JSON.stringify(manifest, null, 2)}\n`);
+console.log(JSON.stringify({ imageJobs: manifest.entries.length, portraits: manifest.entries.filter(p => p.destination.includes('/portraits/')).length }));
+const itemDirectory=new URL('items/',directory);
+const items=createGofrannItemArtManifest(presets);
+await mkdir(itemDirectory,{recursive:true});
+await writeFile(new URL('image-prompts.json',itemDirectory),`${JSON.stringify(items,null,2)}\n`);
+console.log(JSON.stringify({itemImages:items.entries.length}));

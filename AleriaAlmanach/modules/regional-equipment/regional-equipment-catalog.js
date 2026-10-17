@@ -58,6 +58,8 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "haus-svathamar",
       "haus-dubhdarach",
       "haus-raves",
+      "haus-gofrann",
+      "haus-vann",
       "haus-draenmelyn",
       "haus-pendrwn",
       "haus-swyll",
@@ -606,6 +608,8 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "haus-svathamar",
       "haus-dubhdarach",
       "haus-raves",
+      "haus-gofrann",
+      "haus-vann",
       "haus-draenmelyn",
       "haus-pendrwn",
       "haus-swyll",
@@ -877,6 +881,8 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "haus-svathamar",
       "haus-dubhdarach",
       "haus-raves",
+      "haus-gofrann",
+      "haus-vann",
       "haus-draenmelyn",
       "haus-pendrwn",
       "haus-swyll",
@@ -1018,6 +1024,8 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "haus-svathamar",
       "haus-dubhdarach",
       "haus-raves",
+      "haus-gofrann",
+      "haus-vann",
       "haus-draenmelyn",
       "haus-pendrwn",
       "haus-swyll",
@@ -1074,6 +1082,8 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "haus-svathamar",
       "haus-dubhdarach",
       "haus-raves",
+      "haus-gofrann",
+      "haus-vann",
       "haus-draenmelyn",
       "haus-pendrwn",
       "haus-swyll",
@@ -12833,6 +12843,30 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
       "Gwynthor"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-raves&mode=view"
+  },
+  {
+    "id": "haus-gofrann",
+    "name": "Haus Gofrann",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Llamreis%20Ankunft/B%C3%BCrgerliche/Gwynthor/Gofrann.png",
+    "path": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Gwynthor"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-gofrann&mode=view"
+  },
+  {
+    "id": "haus-vann",
+    "name": "Haus Vann",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Llamreis%20Ankunft/B%C3%BCrgerliche/Gwynthor/Vann.png",
+    "path": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Gwynthor"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-vann&mode=view"
   },
   {
     "id": "haus-draenmelyn",

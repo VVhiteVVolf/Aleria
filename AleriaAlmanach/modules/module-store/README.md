@@ -1,5 +1,13 @@
 # Lokale Modulspeicherung
 
+Die Archivansicht führt jede Modul-ID nur einmal. Wird ein früher gespeichertes
+Modul später mit der Anwendung ausgeliefert, gilt dieselbe Priorität wie beim
+Öffnen und Bearbeiten: eingebautes Modul mit etwaigem `entryOverrides`-Eintrag,
+danach ausschließlich gespeicherte Module. Gespeicherte Altstände werden dabei
+nicht gelöscht oder online überschrieben. Eigene Kopien mit anderer ID bleiben
+sichtbar, auch wenn sie denselben Titel haben. Verschieben, Ausblenden und
+Löschbestätigung verwenden dieselbe Zuordnung.
+
 `module-store-local.js` besitzt ausschließlich den lokalen Modulcache und seine
 Synchronisationsbelege. Die Datenbank `aleria-module-store` (IndexedDB, Version 1)
 enthält einen Object Store `records`. Vollständige Modulstände werden nicht mehr

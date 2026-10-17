@@ -1,0 +1,46 @@
+{
+  "corrections": [
+    {
+      "id": "portrait-elenid",
+      "request": "User requested an arrogant eccentric theatrical older owner, voluminous hair, provocative dress and a dramatic pose with an open fan.",
+      "prompt": "Use case: identity-preserve. Edit the attached portrait of Elenid Awenfryn. Preserve her recognizable mature face, green eyes, silver-grey hair color, age 65 and the clear Tales of Xillia/Frieren anime linework and cel shading. CHANGE her styling and pose to a striking extravagant theater grande dame: A striking eccentric 65-year-old Cenyri grande dame, clearly mature but fit and glamorous. Tremendously voluminous silver-grey hair in abundant large sculpted waves and curls, no tight bun, all hair one consistent silver-grey base color. Green eyes, long expressive face, pronounced cheekbones, visible crow feet and mature facial lines. Haughty amused half-smile, one eyebrow raised, chin lifted. A provocative yet fully clothed rich plum-and-burgundy medieval gown, structured low-cut bodice showing tasteful cleavage, bare shoulders, dramatic sleeves and restrained gold trim. Standing in an unmistakably theatrical confident pose, one hand on her hip, the other holding an OPEN large plum-and-gold folding fan beside her cheek. Old but in excellent shape, arrogant, extravagant and artistically magnetic, never frail or demure.  Show her from head through upper hips, with all of the voluminous hair and the entire open fan visible inside the 2:3 frame. Keep the background a quiet pale stone theater corridor. Her mature face must remain visibly 65, with wrinkles and clear facial character. Avoid a shy or demure expression, a tight bun, youthful de-aging, nudity, extra people, text or collage. This is an eccentric accomplished older actress, artist and theater owner.",
+      "previous": {
+        "id": "portrait-elenid",
+        "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-2dab5925-05ca-4a34-a5c2-a48778517cfb.png",
+        "destination": "AleriaAlmanach/assets/gwynthor-theater/portraits/elenid.png",
+        "width": 1024,
+        "height": 1536,
+        "sha256": "86d8236959bfc33e6e9ca06bed87ca73e1b706d6fb45646d402371f7ce504274"
+      },
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-6343ede0-b064-46cc-9b48-5389329e1a30.png"
+    },
+    {
+      "id": "portrait-aelir",
+      "request": "User correction: Keine Elfen. Albic actors are humans.",
+      "prompt": "Edit this existing portrait with a strictly localized correction: replace ALL elongated pointed elf ears with ordinary short rounded HUMAN ears of natural human size and anatomy. This character is HUMAN, of Albic cultural origin, never an elf. Keep the exact same face, hairstyle, hair color, eye color, expression, clothing, pose, background, lighting, framing and clear anime drawing style. Preserve everything except the incorrect ear anatomy. No other additions or changes. Output the complete corrected 2:3 portrait.",
+      "previousSource": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-c65360f4-615d-4c51-ae3d-58e8af032ae1.png",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-d7f8df6e-be4f-42b3-ad6c-79a99988b523.png"
+    },
+    {
+      "id": "portrait-nuala",
+      "request": "User correction: Keine Elfen. Albic actors are humans.",
+      "prompt": "Edit this existing portrait with a strictly localized correction: replace ALL elongated pointed elf ears with ordinary short rounded HUMAN ears of natural human size and anatomy. This character is HUMAN, of Albic cultural origin, never an elf. Keep the exact same face, hairstyle, hair color, eye color, expression, clothing, pose, background, lighting, framing and clear anime drawing style. Preserve everything except the incorrect ear anatomy. No other additions or changes. Output the complete corrected 2:3 portrait.",
+      "previousSource": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-a0448456-cf57-4dee-bf02-9880491cc2fe.png",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-e7b36f6d-d330-47df-acd5-eea58d4cd3de.png"
+    },
+    {
+      "id": "portrait-faelan",
+      "request": "User correction: Keine Elfen. Albic actors are humans.",
+      "prompt": "Edit this existing portrait with a strictly localized correction: replace ALL elongated pointed elf ears with ordinary short rounded HUMAN ears of natural human size and anatomy. This character is HUMAN, of Albic cultural origin, never an elf. Keep the exact same face, hairstyle, hair color, eye color, expression, clothing, pose, background, lighting, framing and clear anime drawing style. Preserve everything except the incorrect ear anatomy. No other additions or changes. Output the complete corrected 2:3 portrait.",
+      "previousSource": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-52906099-47af-4274-9aae-06cd00665815.png",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-20c3b95f-6986-4d50-bb81-09e4b9088fbc.png"
+    },
+    {
+      "id": "production-freydis-pruefungen",
+      "request": "Keep exactly twelve trial tablets in the replacement Freydis scene.",
+      "prompt": "Make ONE strictly localized correction to this stage illustration. The background rail currently has THIRTEEN hanging wooden tablets. Remove ONLY the RIGHTMOST hanging tablet at the far right end of the row, including its little hanging loop, so exactly TWELVE tablets remain. Leave the other twelve existing tablets in their exact original positions; do not add or rearrange any. Fill the small removed tablet area with the existing painted mountain backdrop and curtain. Preserve the entire rest of the image EXACTLY: all three actors, their faces, clothing, blonde hair and the father's blonde wig with brown beard, poses, hands, courtship composition, candle footlights, colors, clear anime linework and the irregular transparent watercolor-blot border. Preserve genuine transparency. No text or other additions.",
+      "previousSource": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-098ae778-8f6c-4c00-a32c-5c6f2ec21b5c.png",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-8ccbfafb-4df2-43c8-901e-2f334b2f5340.png"
+    }
+  ]
+}

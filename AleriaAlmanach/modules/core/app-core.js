@@ -406,6 +406,10 @@ function sanitizeModulePage(page, fallbackTitle = '') {
     next.guildServicesPage = true;
     next.guildServices = sanitizeGuildServicesData(page.guildServices);
   }
+  if (page.theatreProgramPage) {
+    next.theatreProgramPage = true;
+    next.theatreProgram = sanitizeTheatreProgramData(page.theatreProgram);
+  }
   if (page.organizationNetworkPage) {
     next.organizationNetwork = sanitizeOrganizationNetworkData(page.organizationNetwork);
   }

@@ -23,21 +23,22 @@ test('shop uses the existing six page templates, one room and stable family cast
   assert.equal(entry.sessionCast.length,7);
   assert.equal(entry.pages[2].stats.find(row=>row[0]==='Alter')[1],'39 Jahre');
 });
-test('department tabs reserve fifteen individual jobs and assign only working family members',()=>{
+test('department tabs retain fourteen vacancies and include the married-in Eirlys',()=>{
   const hierarchy=entry.pages[3].hierarchy;
   assert.equal(hierarchy.treeDisplayMode,'tabs');
   assert.equal(hierarchy.trees.length,3);
   const nodes=hierarchy.trees.flatMap(tree=>tree.levels.flatMap(level=>level.nodes));
   const vacant=nodes.filter(node=>!node.portrait);
-  assert.equal(vacant.length,15);
-  assert.equal(new Set(vacant.map(node=>node.id)).size,15);
+  assert.equal(vacant.length,14);
+  assert.equal(new Set(vacant.map(node=>node.id)).size,14);
   const working=new Set(ELEGANZ_PEOPLE.filter(person=>person.resident!==false).map(person=>person.name));
+  working.add('Eirlys Vann');
   assert.deepEqual(new Set(nodes.filter(node=>node.portrait).map(node=>node.title)),working);
-  assert.equal(working.size,7);
+  assert.equal(working.size,8);
   for(const person of ELEGANZ_PEOPLE.filter(person=>person.death || person.age<14 || person.destination)) assert(!nodes.some(node=>node.title===person.name));
 });
 test('three generations, reciprocal marriages and existing identities survive the new branches',async()=>{
-  const ids=['raves','veltrane','maerllys','coeddu'];
+  const ids=['raves','veltrane','maerllys','coeddu','vann','pendrwn'];
   const records=[];
   for(const id of ids) {
     const family=assertValidFamily(registered(id).family).family;
