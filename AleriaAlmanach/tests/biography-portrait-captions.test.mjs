@@ -37,3 +37,19 @@ test('portrait captions remain text and never inject markup', async () => {
   assert.ok(html.includes('armor &amp; horse'));
   assert.ok(!html.includes('<img src=x'));
 });
+
+test('full-length biography artwork can fit inside its frame without changing old biographies or other page images', async () => {
+  const scope = await context();
+  assert.equal(Object.hasOwn(scope.sanitizeBiographyData({}), 'portraitFit'), false);
+  assert.equal(Object.hasOwn(scope.sanitizeBiographyData({ portraitFit: 'invalid' }), 'portraitFit'), false);
+  const biography = scope.sanitizeBiographyData({ portrait: '/full-body.png', portraitFit: 'contain', portraitStages: ['/young.png'] });
+  const html = scope.buildBiographyPortrait({ biography, imageFit: 'cover' }, { title: 'Sleipnir' });
+  assert.equal((html.match(/object-fit:contain/g) || []).length, 2);
+  assert.ok(!html.includes('object-fit:cover'));
+  const single = scope.buildBiographyPortrait({ biography: { portrait: '/full-body.png', portraitFit: 'contain' } }, { title: 'Sleipnir' });
+  assert.ok(single.includes('object-fit:contain'));
+  const old = scope.buildBiographyPortrait({ image: '/old.png' }, { title: 'Old' });
+  assert.ok(old.includes('object-fit:cover'));
+  const imported = parseBiographyImportPayload(buildBiographyExportPayload({ biographyModule: { biography } }));
+  assert.equal(imported.biography.portraitFit, 'contain');
+});

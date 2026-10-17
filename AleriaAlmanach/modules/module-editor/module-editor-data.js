@@ -1104,6 +1104,7 @@ function sanitizeBiographyData(data = {}) {
     portraitStages,
     ...(portraitCaptions.some(Boolean) ? { portraitCaptions } : {}),
     portrait: String(data.portrait || '').trim(),
+    ...(['cover', 'contain'].includes(data.portraitFit) ? { portraitFit: data.portraitFit } : {}),
     sideWidth: clampBiographyNumber(data.sideWidth, 100, 35, 100),
     connectionPortraitHeight: clampBiographyNumber(data.connectionPortraitHeight, 68, 44, 140),
     connectionTextOffset: clampBiographyNumber(data.connectionTextOffset, 0, 0, 80),

@@ -9,6 +9,13 @@ function buildBiographyPortraitStagesEditor(biography = {}) {
           <div class="module-editor-field wide">
             <label>Portraits und Altersstufen</label>
             <div class="module-editor-help">[1] verwendet immer das Hauptportrait der Biographie. In [2] bis [5] können weitere Portraits oder Altersstadien hinterlegt werden.</div>
+            <label class="module-editor-field">Bilddarstellung
+              <select class="me-biography-portrait-fit">
+                <option value=""${!biography.portraitFit ? ' selected' : ''}>Wie bisher</option>
+                <option value="cover"${biography.portraitFit === 'cover' ? ' selected' : ''}>Rahmen ausfüllen</option>
+                <option value="contain"${biography.portraitFit === 'contain' ? ' selected' : ''}>Ganzes Bild anzeigen</option>
+              </select>
+            </label>
             <div class="inline-stat-editor biography-portrait-stage-editor">
               <div class="inline-stat-row biography-portrait-stage-row is-default">
                 <strong>[1]</strong>
@@ -581,6 +588,7 @@ function collectBiographyModuleEditorPage(card, page) {
     portrait: getTrimmedFormValue(card, '.me-biography-portrait'),
     portraitStages: collectBiographyPortraitStages(card),
     portraitCaptions: collectBiographyPortraitCaptions(card),
+    portraitFit: getTrimmedFormValue(card, '.me-biography-portrait-fit'),
     biographyTitle: getTrimmedFormValue(card, '.me-biography-title'),
     biographyText: getTrimmedFormValue(card, '.me-biography-text'),
     sideWidth: getFormValue(card, '.me-biography-side-width'),

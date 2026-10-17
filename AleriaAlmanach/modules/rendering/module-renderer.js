@@ -123,6 +123,8 @@ function getBiographyPortraitStages(page) {
 // Hauptbild-Spalte der Biographie-/Häuser-/Gilden-Seiten: ohne Bild-Reiter das bisherige
 // Einzelbild, mit Reitern die Tab-Leiste über den umschaltbaren Bildern.
 function buildBiographyPortrait(page, entry) {
+  const imagePage = ['cover', 'contain'].includes(page?.biography?.portraitFit)
+    ? { ...page, imageFit: page.biography.portraitFit } : page;
   const portraitStages = getBiographyPortraitStages(page);
   const mainPortrait = sanitizeImageSrc(page.image || page.biography?.portrait || entry?.image || entry?.portrait || '');
   const tabs = portraitStages.length
@@ -134,13 +136,13 @@ function buildBiographyPortrait(page, entry) {
   if (tabs.length < 2) {
     const image = tabs.length === 1 ? tabs[0].image : mainPortrait;
     return image
-      ? `<img class="biography-portrait" src="${image}" alt="${escapeHtml(entry.title || '')}" loading="eager" decoding="async" fetchpriority="high"${buildModuleImageElementAttrs(page, 'cover', 'center top')}>${page.biography?.portraitCaptions?.[0] ? `<p class="biography-portrait-caption active">${escapeHtml(page.biography.portraitCaptions[0])}</p>` : ''}`
+      ? `<img class="biography-portrait" src="${image}" alt="${escapeHtml(entry.title || '')}" loading="eager" decoding="async" fetchpriority="high"${buildModuleImageElementAttrs(imagePage, 'cover', 'center top')}>${page.biography?.portraitCaptions?.[0] ? `<p class="biography-portrait-caption active">${escapeHtml(page.biography.portraitCaptions[0])}</p>` : ''}`
       : `<div class="biography-portrait placeholder">${getInitialChar(entry.title)}</div>`;
   }
   return `
         <div class="module-portrait-tabs biography-portrait-tabs" data-portrait-tabs>
           ${buildModulePortraitTabBar(tabs)}
-          ${tabs.map((tab, index) => buildModulePortraitPaneImage(page, tab, index, 'biography-portrait')).join('')}
+          ${tabs.map((tab, index) => buildModulePortraitPaneImage(imagePage, tab, index, 'biography-portrait')).join('')}
           ${tabs.some(tab => tab.caption) ? `<div aria-live="polite">${tabs.map((tab, index) => `<p class="biography-portrait-caption${index === 0 ? ' active' : ''}" data-portrait-caption="${index}">${escapeHtml(tab.caption || '')}</p>`).join('')}</div>` : ''}
         </div>`;
 }
