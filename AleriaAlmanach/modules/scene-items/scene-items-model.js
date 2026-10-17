@@ -1,4 +1,5 @@
 import { getResolutionSceneItemEvents, getCommentCombatResolutionGroups } from '../combat/combat-resolution-tree.js';
+import { resolveEquipmentImage } from '../character-equipment/equipment-artwork.js?v=20260928-equipment-art-v4';
 // Scene circulation is an append-only projection, never a second stock ledger.
 export const PICKUP_RESOURCES = Object.freeze(['bonus-action', 'action', 'reaction', 'special-action', 'aura-focus']);
 const copy = value => JSON.parse(JSON.stringify(value));
@@ -61,7 +62,9 @@ export function createWeaponDrop(profile, { id, encounterId, reason }) {
       category: 'weapon', quantity: '1', combatDefinition: { ...canonical, kind: 'weapon' }, equipmentLink: { kind: 'weapon', combatEntryId: canonical.id } };
   return { operation: 'drop', sceneItemId: `dropped:${id}`, encounterId, sourceActorId: profile.characterId,
     sourcePersistence: copy(profile.persistence || {}), sourceActorName: profile.name, weaponId: canonical.id,
-    item: { ...copy(item), quantity: '1' }, text: disarmNarration(profile.name, canonical, reason) };
+    item: { ...copy(item), quantity: '1', image: resolveEquipmentImage(item, {
+      characterId: profile.characterId, combatEntryId: canonical.id, fallback: canonical.image
+    }) }, text: disarmNarration(profile.name, canonical, reason) };
 }
 
 export function choosePickupResource(resources = [], requested = '') {
