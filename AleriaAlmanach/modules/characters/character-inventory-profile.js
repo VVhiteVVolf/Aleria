@@ -124,10 +124,10 @@ function handleCharacterInventoryProfileEditorRefresh(field) {
   return true;
 }
 
-function initCharacterInventoryProfile(char = {}) {
+function initCharacterInventoryProfile(char = {}, options = {}) {
   _characterInventoryDraft = getCharacterInventoryProfileSource(char);
   setCharacterInventoryProfileMode(false);
-  renderCharacterInventoryProfileEditor();
+  if (options.render !== false) renderCharacterInventoryProfileEditor();
 }
 
 function collectCharacterInventoryProfileData() {

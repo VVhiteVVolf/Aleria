@@ -24,6 +24,7 @@ const CHARACTER_REGISTER_FIXED_BUCKET_ORDER = {
 let _characterRegisterViewMode = 'categories';
 let _characterRegisterSortMode = 'name-asc';
 let _characterRegisterSearch = '';
+let _characterRegisterSearchTimer = null;
 
 function getCharacterRegisterViewMode() {
   return _characterRegisterViewMode;
@@ -259,6 +260,7 @@ function escapeCharacterRegisterMarkup(value) {
 
 function renderCharacterRegisterViewToolbar(grid) {
   if (!grid) return;
+  clearTimeout(_characterRegisterSearchTimer);
   const toolbar = document.createElement('section');
   toolbar.className = 'char-register-view-toolbar';
   toolbar.setAttribute('aria-label', 'Charakteransicht und Sortierung');
@@ -317,11 +319,17 @@ function handleCharacterRegisterSearch(event) {
   if (!input || !grid || !grid.contains(input)) return;
   _characterRegisterSearch = input.value || '';
   if (typeof renderCharGrid !== 'function') return;
-  renderCharGrid();
-  const nextInput = document.querySelector('[data-character-register-action="search"]');
-  if (!nextInput) return;
-  nextInput.focus({ preventScroll: true });
-  nextInput.setSelectionRange(_characterRegisterSearch.length, _characterRegisterSearch.length);
+  clearTimeout(_characterRegisterSearchTimer);
+  _characterRegisterSearchTimer = setTimeout(() => {
+    const hasFocus = document.activeElement === input;
+    const selectionStart = input.selectionStart;
+    const selectionEnd = input.selectionEnd;
+    renderCharGrid();
+    const nextInput = document.querySelector('[data-character-register-action="search"]');
+    if (!nextInput || !hasFocus) return;
+    nextInput.focus({ preventScroll: true });
+    nextInput.setSelectionRange(selectionStart, selectionEnd);
+  }, 140);
 }
 
 if (typeof document !== 'undefined') {

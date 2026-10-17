@@ -68,9 +68,11 @@ const AleriaCharacterCategoryBrowser = (() => {
         <button type="button" data-character-category-action="reset">← Zur Übersicht</button>
       </div>`;
       if (visible.length) {
+        const page = AleriaCharacterResultPages.select(visible, ['category', getCharacterRegisterViewMode(), selected?.key || '', _characterRegisterSearch, _archiveSearchNeedle, _characterDashboardFilter]);
+        AleriaCharacterResultPages.renderNavigation(section, page);
         const cards = document.createElement('div');
         cards.className = 'char-category-characters';
-        visible.forEach(char => cards.appendChild(createCharacterCard(char)));
+        page.entries.forEach(char => cards.appendChild(createCharacterCard(char)));
         section.appendChild(cards);
       } else {
         const empty = document.createElement('p');

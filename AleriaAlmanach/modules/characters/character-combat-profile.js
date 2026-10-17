@@ -1247,16 +1247,16 @@ function equipWeapon(itemId) {
   renderSheet();
 }
 
-function init(character = {}) {
+function init(character = {}, options = {}) {
   activeCharacter = character;
-    draftProfile = upgradeCharacterHitPoints(getAutofilledCenyrCombatProfile(character.combatProfile || {}));
-    activeCharacter = { ...character, combatProfile: structuredClone(draftProfile) };
+  draftProfile = upgradeCharacterHitPoints(getAutofilledCenyrCombatProfile(character.combatProfile || {}));
+  activeCharacter = { ...character, combatProfile: structuredClone(draftProfile) };
   synchronizeDraftFromInventory(character.inventory || {});
-  synchronizeDraftFromCombat({ inventory: character.inventory || {}, renderInventory: true });
+  synchronizeDraftFromCombat({ inventory: character.inventory || {}, renderInventory: options.render !== false });
   levelUpState = null;
   levelUpNotice = '';
   setupNotice = '';
-  renderSheet();
+  if (options.render !== false) renderSheet();
 }
 
 function collect() {

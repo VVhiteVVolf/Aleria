@@ -66,7 +66,7 @@ function renderCharacterBulkToolbar(grid, visibleChars = []) {
   toolbar.innerHTML = `
     <div class="char-bulk-count">${selectedCount} ausgewählt</div>
     <div class="char-bulk-controls">
-      <button type="button" data-character-grid-action="bulk-select-visible"${visibleIds.length ? '' : ' disabled'}>Sichtbare wählen</button>
+      <button type="button" data-character-grid-action="bulk-select-visible"${visibleIds.length ? '' : ' disabled'}>Alle ${visibleIds.length} Treffer wählen</button>
       <button type="button" data-character-grid-action="bulk-clear-selection"${selectedCount ? '' : ' disabled'}>Auswahl leeren</button>
       <select class="char-bulk-group-select" data-character-grid-action="bulk-target-group" aria-label="Zielgruppe">
         ${getBulkMainGroupOptions(defaultGroup)}

@@ -6,6 +6,7 @@ let _selectedImageSetId = CHARACTER_IMAGE_SET_DEFAULT_ID;
 function renderCharPickerInForm() {
   const picker = document.getElementById('cf-char-picker');
   if (!picker) return;
+  if (typeof isCommentFormOpen === 'function' && !isCommentFormOpen()) return;
   const fragment = document.createDocumentFragment();
   const creatureMode = typeof _commentMode !== 'undefined' && _commentMode === 'creature';
   const characters = getAvailableCommentCharacters().filter(char => creatureMode

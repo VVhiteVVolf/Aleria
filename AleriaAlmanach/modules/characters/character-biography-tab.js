@@ -220,11 +220,11 @@ function refreshCharacterBiographyLivePreview() {
   preview.innerHTML = buildCharacterBiographyReadView(pseudoPage, getCharacterBiographyEntryMeta());
 }
 
-function initCharacterBiographyTab(char = {}) {
+function initCharacterBiographyTab(char = {}, options = {}) {
   _characterBiographyDraft = getCharacterBiographyProfileSource(char);
   _characterBiographyEditMode = false;
   _characterBiographyMaximized = false;
-  renderCharacterBiographyPanel();
+  if (options.render !== false) renderCharacterBiographyPanel();
 }
 
 function collectCharacterBiographyData() {

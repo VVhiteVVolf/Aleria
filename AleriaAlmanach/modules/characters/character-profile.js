@@ -13,6 +13,7 @@ let _charProfileSavePromise = null;
 // verhindert, dass z.B. ein reiner Avatar-Upload das Kampfprofil/Inventar anfasst oder - schlimmer -
 // mit einem veralteten Stand überschreibt.
 let _charProfileLoadedSnapshot = null;
+let _charProfileSections = null;
 
 function populateCharacterProfileForm(c = {}) {
   _charPortraitUrl = null;
@@ -37,9 +38,31 @@ function populateCharacterProfileForm(c = {}) {
   syncProfileLinkDisplay(c.profileLink || '', c.name || '');
   syncCharacterGenealogyFields(c);
   initCharacterImageSetEditor(c);
-  if (typeof initCharacterInventoryProfile === 'function') initCharacterInventoryProfile(c);
-  if (typeof initCharacterBiographyTab === 'function') initCharacterBiographyTab(c);
-  window.AleriaCharacterCombatProfile?.init?.(c);
+  // Remove the previous figure's hidden editors before starting this session.
+  ['cp-inventory-editor', 'cp-biography-editor', 'cp-combat-sheet-root'].forEach(id => {
+    document.getElementById(id)?.replaceChildren();
+  });
+  document.querySelector('#char-profile-overlay .char-profile-card')?.classList.remove('cp-biography-maximized');
+  _charProfileSections = AleriaCharacterProfileSections.create({
+    equipment: {
+      initialValue: { inventory: c.inventory || {}, combatProfile: c.combatProfile || {} },
+      initialize() {
+        initCharacterInventoryProfile(c, { render: false });
+        window.AleriaCharacterCombatProfile?.init?.(c, { render: false });
+      },
+      collect: () => collectInitializedCharacterEquipmentProfileData(c)
+    },
+    biography: {
+      initialValue: getCharacterBiographyProfileSource(c),
+      initialize: () => initCharacterBiographyTab(c, { render: false }),
+      collect: () => collectCharacterBiographyData()
+    }
+  }, (section, baseline) => {
+    // Normalizing a newly opened editor is not a user edit. Capture its baseline
+    // here, before the first interaction, preserving the section save guard.
+    Object.assign(_charProfileLoadedSnapshot, section === 'equipment'
+      ? baseline : { biography: baseline });
+  });
 
   const equipmentBaseline = collectCharacterEquipmentProfileData(c);
   _charProfileLoadedSnapshot = {
@@ -47,7 +70,7 @@ function populateCharacterProfileForm(c = {}) {
     images: collectCharacterImageSetEditorData(),
     inventory: equipmentBaseline.inventory,
     combatProfile: equipmentBaseline.combatProfile,
-    biography: collectCharacterBiographyData()
+    biography: collectCharacterProfileBiographyData()
   };
 }
 
@@ -165,6 +188,10 @@ function syncCharacterGenealogyFields(character = {}) {
 }
 
 function switchCharTab(tab) {
+  if (tab === 'inventory' || tab === 'combat') _charProfileSections?.ensure('equipment');
+  if (tab === 'biography' && _charProfileSections?.ensure('biography')) {
+    renderCharacterBiographyPanel();
+  }
   if (tab === 'inventory' && window.AleriaCharacterCombatProfile?.collectLinked) {
     const inventory = typeof collectCharacterInventoryProfileData === 'function'
       ? collectCharacterInventoryProfileData()
@@ -198,7 +225,7 @@ function getUnsavedCharacterProfileSectionLabels() {
     images: collectCharacterImageSetEditorData(),
     inventory: equipment.inventory,
     combatProfile: equipment.combatProfile,
-    biography: collectCharacterBiographyData()
+    biography: collectCharacterProfileBiographyData()
   };
   const labels = {
     profile: 'Profil',
@@ -229,6 +256,7 @@ function closeCharProfile(options = {}) {
   const changedSections = options.skipUnsavedCheck === true ? [] : getUnsavedCharacterProfileSectionLabels();
   const hasPendingImport = options.skipUnsavedCheck !== true && !!_pendingCharacterImport;
   const hasCombatDraftNotice = options.skipUnsavedCheck !== true
+    && _charProfileSections?.isInitialized('equipment')
     && window.AleriaCharacterCombatProfile?.hasUnsavedDraftNotice?.();
   if (changedSections.length || hasPendingImport || hasCombatDraftNotice) {
     const details = changedSections.length ? ` (${changedSections.join(', ')})` : '';
@@ -240,6 +268,7 @@ function closeCharProfile(options = {}) {
   _editingChar = null;
   _charPortraitUrl = null;
   _charProfileLoadedSnapshot = null;
+  _charProfileSections = null;
   _pendingCharacterImport = null;
 }
 
@@ -296,6 +325,15 @@ window.AleriaCharacterProfileMediaPersistence = Object.freeze({
 });
 
 function collectCharacterEquipmentProfileData(existing = {}) {
+  return _charProfileSections?.collect('equipment')
+    || collectInitializedCharacterEquipmentProfileData(existing);
+}
+
+function collectCharacterProfileBiographyData() {
+  return _charProfileSections?.collect('biography') || collectCharacterBiographyData();
+}
+
+function collectInitializedCharacterEquipmentProfileData(existing = {}) {
   const inventory = typeof collectCharacterInventoryProfileData === 'function'
     ? collectCharacterInventoryProfileData()
     : sanitizeCharacterInventoryData(existing.inventory || {});
@@ -342,6 +380,7 @@ function collectCharacterProfileSectionData(existing = {}) {
 }
 
 function collectCharacterProfileDataFromForm() {
+  if (!_editingChar || isBuiltinCharacterId(_editingChar)) _charProfileSections?.ensure('equipment');
   const existing = _editingChar ? (getCharacterById(_editingChar) || {}) : {};
   const now = new Date().toISOString();
   const profile = collectCharacterProfileSectionData(existing);
@@ -355,7 +394,7 @@ function collectCharacterProfileDataFromForm() {
     ...imageSetData,
     inventory: equipmentData.inventory,
     combatProfile: equipmentData.combatProfile,
-    biography: collectCharacterBiographyData()
+    biography: collectCharacterProfileBiographyData()
   };
 }
 
@@ -490,6 +529,7 @@ async function saveCharacterOnce(options = {}) {
 
   const existing = sourceId ? (getCharacterById(sourceId) || {}) : {};
   const saveTargetId = isBuiltin ? null : sourceId;
+  if (!saveTargetId && !replaceExisting) _charProfileSections?.ensure('equipment');
   const now = new Date().toISOString();
   const recordSource = replaceExisting && importedRecord && window.AleriaCharacterSaveGuard?.mergeCharacterImageLibrary
     ? window.AleriaCharacterSaveGuard.mergeCharacterImageLibrary(existing, importedRecord)
@@ -524,7 +564,7 @@ async function saveCharacterOnce(options = {}) {
     images: imageSetData,
     inventory: equipmentData.inventory,
     combatProfile: equipmentData.combatProfile,
-    biography: collectCharacterBiographyData()
+    biography: collectCharacterProfileBiographyData()
   };
   const changedSections = new Set(window.AleriaCharacterSaveGuard.selectChangedSections(
     current,

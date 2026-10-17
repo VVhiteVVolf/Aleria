@@ -282,8 +282,9 @@ function appendCharacterEmptyHint(grid, text) {
 }
 
 function getCharacterGridFilteredEntries() {
-  const archiveFiltered = getCharsForActiveTab()
-    .filter(char => matchesArchiveSearch(buildCharacterSearchText(char)));
+  const entries = getCharsForActiveTab();
+  const archiveFiltered = _archiveSearchNeedle
+    ? entries.filter(char => matchesArchiveSearch(buildCharacterSearchText(char))) : entries;
   const registerFiltered = typeof filterCharacterRegisterEntries === 'function'
     ? filterCharacterRegisterEntries(archiveFiltered)
     : archiveFiltered;
@@ -340,7 +341,9 @@ function renderCharGrid() {
     grid.appendChild(toolbar);
   }
 
-  const archiveFilteredChars = getCharsForActiveTab().filter(c => matchesArchiveSearch(buildCharacterSearchText(c)));
+  const tabChars = getCharsForActiveTab();
+  const archiveFilteredChars = _archiveSearchNeedle
+    ? tabChars.filter(c => matchesArchiveSearch(buildCharacterSearchText(c))) : tabChars;
   const unfilteredChars = typeof filterCharacterRegisterEntries === 'function'
     ? filterCharacterRegisterEntries(archiveFilteredChars)
     : archiveFilteredChars;
@@ -354,10 +357,15 @@ function renderCharGrid() {
   if (typeof renderCharacterBulkToolbar === 'function') renderCharacterBulkToolbar(grid, chars);
   const categoryBrowserRendered = typeof AleriaCharacterCategoryBrowser !== 'undefined'
     && AleriaCharacterCategoryBrowser.render(grid, chars);
+  const resultPage = !categoryBrowserRendered ? AleriaCharacterResultPages.select(chars,
+    [getCharacterRegisterViewMode(), _activeCharTab, _activeCharSubtab, _charOrganizeMode,
+      _characterRegisterSearch, _archiveSearchNeedle, _characterDashboardFilter]) : null;
+  if (resultPage) AleriaCharacterResultPages.renderNavigation(grid, resultPage);
+  const pageChars = resultPage?.entries || chars;
   if (categoryBrowserRendered) {
     // The category browser renders its directory or the focused result cards.
   } else if (facetView && typeof buildCharacterRegisterFacetBuckets === 'function') {
-    const buckets = buildCharacterRegisterFacetBuckets(chars);
+    const buckets = buildCharacterRegisterFacetBuckets(pageChars);
     const isLargeFamilyView = typeof getCharacterRegisterViewMode === 'function'
       && getCharacterRegisterViewMode() === 'families'
       && chars.length >= 120
@@ -376,7 +384,7 @@ function renderCharGrid() {
       }));
     });
   } else if (_activeCharTab === 'Alle') {
-    const groups = buildCharacterGroupBuckets(chars);
+    const groups = buildCharacterGroupBuckets(pageChars);
     groups.forEach(group => {
       grid.appendChild(createCharacterGroupSection(group, {
         emptyLabel: 'Unsortiert',
@@ -384,7 +392,7 @@ function renderCharGrid() {
       }));
     });
   } else if (groupBySubtab) {
-    const subgroups = buildCharacterSubgroupBuckets(chars);
+    const subgroups = buildCharacterSubgroupBuckets(pageChars);
     subgroups.forEach(group => {
       grid.appendChild(createCharacterGroupSection(group, {
         sectionModifier: 'subgroup',
@@ -396,7 +404,7 @@ function renderCharGrid() {
       }));
     });
   } else {
-    chars.forEach(c => grid.appendChild(createCharacterCard(c, { organizeMode: _charOrganizeMode })));
+    pageChars.forEach(c => grid.appendChild(createCharacterCard(c, { organizeMode: _charOrganizeMode })));
   }
 
   const narratorMatches = !_archiveSearchNeedle || matchesArchiveSearch(normalizeSearchText('Erzähler neutrale Stimme kein Portrait'));

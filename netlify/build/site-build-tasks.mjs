@@ -33,7 +33,9 @@ export const SITE_BUILD_TASKS = [
       'firebase-auth-session', 'firebase-account-actions', 'email-action-controller',
       'comment-activity-repository', 'comment-read-reuse', 'dashboard-scene-activity',
       'archive-image-urls', 'archive-preview-navigation', 'dashboard-rendering',
-      'firebase-module-storage', 'module-store-revision', 'loading-screen'
+      'firebase-module-storage', 'module-store-revision', 'loading-screen',
+      'character-performance', 'character-section-integration', 'character-save-guard',
+      'character-register-views', 'character-equipment-sync'
     ].map(almanach), 'firebase/tests/publisher-access.test.mjs')]
   },
   {

@@ -3,6 +3,7 @@ let _charactersLoaded = false;
 let _charTabsLoaded = false;
 const CHARACTER_ARCHIVE_TAB = 'Archiv';
 let _localCharacterDatabaseRequest = null;
+let _characterLoadRequest = null;
 
 let _charTabs = ['Alle'];
 let _charTabMap = {};
@@ -51,7 +52,14 @@ function loadLocalCharacterDatabaseState() {
   return _localCharacterDatabaseRequest;
 }
 
-async function loadCharacters() {
+function loadCharacters() {
+  if (!_characterLoadRequest) {
+    _characterLoadRequest = loadCharacterRegisterData().finally(() => { _characterLoadRequest = null; });
+  }
+  return _characterLoadRequest;
+}
+
+async function loadCharacterRegisterData() {
   const localStateRequest = loadLocalCharacterDatabaseState();
   if (!_fbReady) await waitForFirebaseReady();
   const localState = await localStateRequest;
