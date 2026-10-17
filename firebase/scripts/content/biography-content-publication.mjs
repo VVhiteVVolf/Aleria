@@ -8,6 +8,7 @@ import { buildBiographyExportPayload } from '../../../js/biography/biography-tra
 const save = (url, value) => writeFile(url, JSON.stringify(value, null, 2) + '\n');
 const withoutId = ({ id, ...data }) => data;
 const patchFields = plan => Object.keys(plan.patch).filter(key => key !== 'updatedAt');
+export const countBiographyPortraits = module => [module.biography.portrait, ...(module.biography.portraitStages || [])].filter(Boolean).length;
 
 export function assertBiographyPublicationSource(current, plan, allowedFields) {
   assert.deepEqual(Object.keys(plan.patch).sort(), [...allowedFields].sort(), 'Unerwarteter Feldumfang.');
@@ -26,7 +27,7 @@ async function preparePublication({ current, directory, exportsDirectory, export
   await save(new URL(`${exportName}-charakter.json`, exportsDirectory), { type: 'aleria-character', version: 3,
     mergeStrategy: 'replace-exported-fields', exportedAt: plan.patch.updatedAt, character: { id: plan.id, name: current.name, ...plan.patch } });
   for (const creature of plan.creatures) await save(new URL(`${creature.id}.json`, exportsDirectory), { type: 'aleria-creature', creature });
-  return { ready: true, character: current.name, fields: Object.keys(plan.patch), portraits: 5,
+  return { ready: true, character: current.name, fields: Object.keys(plan.patch), portraits: countBiographyPortraits(plan.patch.biography),
     icons: plan.patch.biography.biography.abilities.length, companions: plan.creatures.map(creature => [creature.name, creature.species]) };
 }
 
@@ -64,7 +65,7 @@ async function applyPublication({ current, document, plan, directory, allowedFie
   for (const [key, value] of Object.entries(plan.patch)) assert.deepEqual(after[key], value, key);
   for (const [key, value] of Object.entries(withoutId(current))) if (!(key in plan.patch)) assert.deepEqual(after[key], value, 'Unbeteiligtes Feld: ' + key);
   for (const creature of creatures) assert.deepEqual(decodeFirestoreFields((await request(`/creatures/${creature.id}`)).fields), withoutId(creature));
-  const verification = { publishedAt: commit.commitTime, characterId: plan.id, biographyPortraits: 5,
+  const verification = { publishedAt: commit.commitTime, characterId: plan.id, biographyPortraits: countBiographyPortraits(plan.patch.biography),
     traitIcons: plan.patch.biography.biography.abilities.length,
     connectionPortraits: plan.patch.biography.biography.connections.filter(connection => connection.type !== 'heading' && connection.image).length,
     fields: Object.keys(plan.patch), createdCreatures: creatures.map(creature => ({ id: creature.id, name: creature.name, species: creature.species,
