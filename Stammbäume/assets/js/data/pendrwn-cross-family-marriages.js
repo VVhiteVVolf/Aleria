@@ -1,5 +1,9 @@
+import { HOUSE_PENDRWN_PORTRAITS } from './house-pendrwn-portraits.js';
+
 function person(definition) {
-  return Object.freeze(definition);
+  const portrait = HOUSE_PENDRWN_PORTRAITS[definition.id];
+  return Object.freeze(portrait ? { ...definition, portrait,
+    extensions: { registryManagedFields: ['portrait'] } } : definition);
 }
 
 function marriage(id, first, second) {

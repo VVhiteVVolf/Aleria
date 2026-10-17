@@ -44,6 +44,8 @@ import { GWENDOLYNS_UFER_HOUSE_FAMILIES } from './gwendolyns-ufer-house-families
 import { GWYNTHOR_COMMONER_HOUSE_FAMILIES } from './gwynthor-commoner-house-families.js?v=20261016-eleganz-v1';
 import { HOUSE_BRADRHITH_FAMILY } from './house-bradrhith-family.js';
 import { HOUSE_VELTRANE_FAMILY } from './eleganz-family-records.js';
+import { HOUSE_FONTANI_FAMILY } from './house-fontani-family.js';
+import { HOUSE_RHWYD_FAMILY } from './house-rhwyd-family.js';
 import { LLYSFAEN_COMMONER_HOUSE_FAMILIES } from './llysfaen-commoner-house-families.js';
 import { RHONWENS_TRAENEN_HOUSE_FAMILIES } from './rhonwens-traenen-house-families.js';
 import { CENYR_COUNTY_HOUSE_FAMILIES } from './cenyr-county-house-families.js';
@@ -367,6 +369,8 @@ export const FAMILY_REGISTRY = Object.freeze([
     type: 'commoner'
   })),
   familyRecord({ id: 'haus-veltrane', title: 'Haus Veltrane', family: HOUSE_VELTRANE_FAMILY, type: 'commoner' }),
+  familyRecord({ id: 'haus-fontani', title: 'Haus Fontani', family: HOUSE_FONTANI_FAMILY, type: 'commoner' }),
+  familyRecord({ id: 'haus-rhwyd', title: 'Haus Rhwyd', family: HOUSE_RHWYD_FAMILY, type: 'commoner' }),
   familyRecord({
     id: 'haus-bradrhith',
     title: 'Haus Bradrhith',

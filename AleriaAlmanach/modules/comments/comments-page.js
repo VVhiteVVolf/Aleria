@@ -98,7 +98,13 @@ function buildSessionPage(page, entry, pageIndex, total) {
   const nav = buildNav(page, pageIndex, total);
   const focusMode = isSessionFocusModeEnabled();
   const intro = page.sessionIntro
-    ? `<div class="session-stage-copy">${sanitizeContentHtml(page.sessionIntro)}</div>`
+    ? `<details class="session-intro" open>
+        <summary class="session-intro-toggle">
+          <span class="session-intro-label-open">Einleitung einklappen</span>
+          <span class="session-intro-label-closed">Einleitung anzeigen</span>
+        </summary>
+        <div class="session-stage-copy">${sanitizeContentHtml(page.sessionIntro)}</div>
+      </details>`
     : '';
   const imgW = page.imageWidth != null && page.imageWidth !== ''
     ? `${Math.max(20, Math.min(70, Number(page.imageWidth) || 38))}%`
@@ -143,9 +149,11 @@ function buildSessionPage(page, entry, pageIndex, total) {
           data-empty-text="${escapeHtml(page.sessionEmptyText || 'Noch ist kein Beitrag eingetragen.')}">
           <div class="comment-empty" id="comments-loading">Lade Sitzung…</div>
         </div>
-        ${buildCommentQuickTools()}
-        ${buildCommentTurnBar(threadId)}
-        ${buildCommentActionBar(page.sessionHint || 'Lass die Anhörung als Szene weiterlaufen.', { allowSceneTime: true })}
+        <div class="session-footer" role="region" aria-label="Szenenwerkzeuge" tabindex="0">
+          ${buildCommentQuickTools()}
+          ${buildCommentTurnBar(threadId)}
+          ${buildCommentActionBar(page.sessionHint || 'Lass die Anhörung als Szene weiterlaufen.', { allowSceneTime: true })}
+        </div>
       </div>
     </div>`;
 }

@@ -1,0 +1,4665 @@
+{
+  "type": "aleria-module-package",
+  "version": 1,
+  "exportedAt": "2026-10-17T00:00:00Z",
+  "module": {
+    "type": "aleria-module",
+    "version": 1,
+    "section": {
+      "key": "Gwynthor",
+      "tab": "Völker & Kulturen",
+      "desc": "",
+      "nodeId": "node:volker-kulturen:cenyr/celtigerns-wacht/llamreis-ankunft/gwynthor",
+      "path": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Gwynthor"
+      ]
+    },
+    "entry": {
+      "id": "gwynthor-zum-vollen-korb",
+      "title": "Zum Vollen Korb",
+      "subtitle": "Gemischtwaren für Haus und Weg · Haus Pendrwn",
+      "type": "Gemischtwarenhandel",
+      "category": "Gwynthor · Werkzeuge und Sonstiges",
+      "icon": "♧",
+      "symbol": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Pendrwn.png",
+      "image": "./assets/pendrwn-general-store/scenes/aussenansicht.png",
+      "previewImage": "./assets/pendrwn-general-store/scenes/aussenansicht.png",
+      "stamp": "ZUM VOLLEN KORB · HAUS PENDRWN",
+      "schemaVersion": 1,
+      "multipage": true,
+      "appendCommentsPage": true,
+      "enablePageComments": true,
+      "sessionCast": [
+        "person--haus-pendrwn--idwal-pendrwn",
+        "person--haus-pendrwn--cadwgan-pendrwn",
+        "person--haus-pendrwn--mabli-spouse-pendrwn",
+        "person--haus-pendrwn--rhun-pendrwn",
+        "person--haus-pendrwn--tesni-pendrwn",
+        "person--gwynthor-voller-korb--elen",
+        "person--gwynthor-voller-korb--iestyn",
+        "person--gwynthor-voller-korb--cadoc"
+      ],
+      "pages": [
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "voller-korb-haus",
+          "pageTitle": "Zum Vollen Korb",
+          "image": "./assets/pendrwn-general-store/scenes/aussenansicht.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "description": "<p>Zwischen den Wegen des Marktes und den Wohnstraßen Gwynthors hängt ein gefüllter Weidenkorb über einer schmalen Ladentür. Im <strong>Vollen Korb</strong> kauft man, was zu Hause fehlt oder auf dem Weg gebraucht wird: Leinen, Lampenöl, Nähzeug, Geschirr, eine neue Bettrolle. Der Raum ist klein, die Regale sind gut gefüllt und hinter dem Tresen wird erst gefragt, wofür ein Gegenstand taugen soll.</p><p><strong>Cadwgan Pendrwn und sein Vater Idwal</strong> führen den Handel gemeinsam. Der Markt der Fortuna liefert ihren regelmäßigen Nachschub. Cadwgan wählt zusätzlich einige nützliche Besonderheiten aus, die zwischen gewöhnlichen Grundwaren leicht übersehen würden. Größere Wünsche werden bestellt und mit der nächsten Fracht mitgebracht.</p><p>Die Pendrwn sind ein bürgerliches Dienerhaus des Hauses Draig. Ihr Geschäft lebt von verlässlichen Lieferungen, sorgfältigen Rechnungen und Kunden, die auch wegen einer einzigen Nadel wiederkommen.</p>",
+          "stats": [
+            [
+              "Ort",
+              "Gwynthor · nahe den Marktwegen"
+            ],
+            [
+              "Inhaber",
+              "Cadwgan und Idwal Pendrwn"
+            ],
+            [
+              "Haus",
+              "Pendrwn · im Dienst des Hauses Draig"
+            ],
+            [
+              "Lieferant",
+              "Markt der Fortuna"
+            ],
+            [
+              "Grundsortiment",
+              "47 Waren · Werkzeuge & Sonstiges"
+            ],
+            [
+              "Eigene Auswahl",
+              "Zehn zusätzliche Alltagswaren"
+            ]
+          ]
+        },
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "voller-korb-cadwgan",
+          "pageTitle": "Cadwgan Pendrwn · Ein guter Vorrat",
+          "biographyPage": true,
+          "image": "./assets/pendrwn-general-store/portraits/cadwgan.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "contain",
+          "stats": [
+            [
+              "Geboren",
+              "1684 · 56 Jahre"
+            ],
+            [
+              "Stellung",
+              "Ältester Sohn Idwals und Bronwens"
+            ],
+            [
+              "Gemahlin",
+              "Mabli · seit 1708"
+            ],
+            [
+              "Kinder",
+              "Rhun und Tesni"
+            ],
+            [
+              "Mitinhaber",
+              "Idwal Pendrwn · 79 Jahre"
+            ]
+          ],
+          "biography": {
+            "crestImage": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Pendrwn.png",
+            "biographyTitle": "Cadwgan Pendrwn",
+            "biographyText": "<p>Cadwgan hat die Geduld eines Mannes, der schon viele Menschen vor einem leeren Regal hat stehen sehen. Er hört zu, stellt eine genaue Rückfrage und holt meist etwas Schlichteres hervor, als der Kunde zuerst im Sinn hatte. Er verkauft gern, aber ungern zweimal denselben ungeeigneten Gegenstand. Mengen prüft er selbst; an eine Zusage erinnert er sich lange.</p>",
+            "historyTitle": "Vater und ältester Sohn",
+            "historyText": "<p>Als ältester Bruder Meilyrs und Gweniths führt Cadwgan einen eigenen Zweig der Familie. Den Laden verantwortet er gemeinsam mit Idwal. Der Vater pflegt die gewachsenen Handelskontakte und prüft größere Rechnungen, der Sohn bestellt die Fracht und führt den Verkauf. Mabli, Rhun und Tesni haben ihre festen Aufgaben im Haus.</p>",
+            "abilitiesTitle": "Seine Art",
+            "abilities": [
+              {
+                "title": "Gründlich",
+                "icon": "../IconOrdner/Big Traits/Trait_diligent.png",
+                "detail": "Prüft Mengen, Nähte und Verschlüsse, bevor eine Lieferung ins Regal gelangt."
+              },
+              {
+                "title": "Geduldig",
+                "icon": "../IconOrdner/Big Traits/Trait_patient.png",
+                "detail": "Hört auch kleinen Anliegen zu und erklärt Unterschiede ohne Eile."
+              },
+              {
+                "title": "Geradeheraus",
+                "icon": "../IconOrdner/Big Traits/Trait_honest.png",
+                "detail": "Sagt offen, wenn eine billige Ware für den gewünschten Zweck nicht genügt."
+              }
+            ],
+            "worksTitle": "Was ihn beschäftigt",
+            "works": [
+              "Der tägliche Verkauf und die Auswahl zehn zusätzlicher, nützlicher Alltagswaren.",
+              "Bestellungen und regelmäßige Sammellieferungen unmittelbar über den Markt der Fortuna."
+            ],
+            "triviaTitle": "Daheim",
+            "trivia": [
+              "Cadwgan und Mabli sind seit 1708 verheiratet. Rhun und Tesni sind unverheiratet und arbeiten im Laden.",
+              "Idwal bleibt Mitinhaber und Oberhaupt des Hauses; Bronwen gehört zur Familie, trägt aber keinen festen Dienstposten."
+            ],
+            "quotesTitle": "Über dem Bestellbuch",
+            "quotes": [
+              "Für Haus und Weg."
+            ],
+            "connectionsTitle": "Haus und Handel",
+            "connections": [
+              {
+                "name": "Idwal Pendrwn",
+                "detail": "Vater und Mitinhaber · Lieferanten und Rechnungsbücher",
+                "image": "../Stammbäume/assets/images/portraits/haus-pendrwn/idwal-pendrwn.png"
+              },
+              {
+                "name": "Markt der Fortuna",
+                "detail": "Unmittelbarer Lieferpartner für die Grundwaren und Cadwgans zusätzliche Auswahl; Nachbestellungen reisen mit den regelmäßigen Sammelfrachten.",
+                "image": "../Fraktionen/assets/emblems/gilden/markt-der-fortuna.webp"
+              },
+              {
+                "name": "Haus Draig",
+                "detail": "Die Pendrwn stehen als bürgerliches Dienerhaus im Dienst des Grafenhauses. Cadwgans Zweig betreibt den Gemischtwarenhandel in Gwynthor.",
+                "image": "../Stammbäume/assets/images/houses/Llamreis Ankunft/haus-draig.png"
+              }
+            ],
+            "documentsTitle": "Die Pendrwn",
+            "documents": [
+              {
+                "title": "Stammbaum des Hauses Pendrwn",
+                "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Pendrwn.png",
+                "text": "Unbekannte Gründer, Überlieferungssprung und Idwals Familie mit Cadwgans ältestem Zweig.",
+                "link": "../Stammbäume/Stammbaum.html?family=haus-pendrwn&mode=view"
+              }
+            ]
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "voller-korb-haende",
+          "pageTitle": "Verkauf, Logistik und Haus",
+          "hierarchyPage": true,
+          "hierarchy": {
+            "organizationTitle": "Die Hände des Vollen Korbs",
+            "eyebrow": "Haus Pendrwn · Gwynthor",
+            "subtitle": "Zwei Inhaber · drei weitere Angehörige des Händlerzweigs · drei Angestellte",
+            "centerLabel": "Cadwgan und Idwal Pendrwn",
+            "emblem": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Pendrwn.png",
+            "sideImage": "./assets/pendrwn-general-store/scenes/verkaufsraum.png",
+            "motto": "Für Haus und Weg.",
+            "description": "<p>Cadwgan und Idwal führen den Laden gemeinsam. Mabli und Tesni übernehmen Kasse und Verkauf, Rhun den Wareneingang. Drei bezahlte Kräfte ergänzen den kleinen Betrieb.</p>",
+            "detailsTitle": "Der Betrieb",
+            "details": [
+              {
+                "label": "Inhaber",
+                "value": "Cadwgan und Idwal Pendrwn"
+              },
+              {
+                "label": "Lieferant",
+                "value": "Markt der Fortuna"
+              },
+              {
+                "label": "Familie im Laden",
+                "value": "Mabli, Rhun und Tesni"
+              },
+              {
+                "label": "Angestellte",
+                "value": "Elen, Iestyn und Cadoc"
+              },
+              {
+                "label": "Sicherheit",
+                "value": "Ein Hauswächter"
+              },
+              {
+                "label": "Haustiere",
+                "value": "Eine Lagerkatze · Fflam"
+              }
+            ],
+            "chartTitle": "Tresen, Fracht und verschlossene Türen",
+            "chartIntro": "Die Führung steht beim Verkauf; Rhun verantwortet die Logistik. Cadoc bewacht das Haus und ist kein Angehöriger der Stadtwache.",
+            "treeDisplayMode": "tabs",
+            "portraitScale": 100,
+            "cardFontScale": 90,
+            "trees": [
+              {
+                "id": "verkauf",
+                "label": "Verkauf",
+                "parentTreeId": "",
+                "levels": [
+                  {
+                    "label": "Gemeinsame Inhaber",
+                    "nodes": [
+                      {
+                        "id": "voller-korb-cadwgan",
+                        "title": "Cadwgan Pendrwn",
+                        "subtitle": "Inhaber · Einkauf und Verkauf",
+                        "portrait": "./assets/pendrwn-general-store/portraits/cadwgan.png",
+                        "text": "<p>56 Jahre. Idwals ältester Sohn und älterer Bruder Meilyrs und Gweniths führt den Vollen Korb gemeinsam mit seinem Vater. Geduldig im Gespräch, gründlich bei Mengen und unbeirrbar bei offenen Rechnungen.</p>"
+                      },
+                      {
+                        "id": "voller-korb-idwal",
+                        "title": "Idwal Pendrwn",
+                        "subtitle": "Mitinhaber · Lieferanten und Rechnungsbücher",
+                        "portrait": "../Stammbäume/assets/images/portraits/haus-pendrwn/idwal-pendrwn.png",
+                        "text": "<p>79 Jahre. Das Familienoberhaupt führt den Laden mit Cadwgan. Er pflegt die Lieferbeziehung zum Markt der Fortuna und prüft größere Bestellungen; den langen Tag am Tresen überlässt er seinem Sohn.</p>"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Kasse und Kunden",
+                    "nodes": [
+                      {
+                        "id": "voller-korb-mabli",
+                        "title": "Mabli",
+                        "subtitle": "Kasse · Haushaltsbedarf",
+                        "portrait": "./assets/pendrwn-general-store/portraits/mabli.png",
+                        "text": "<p>53 Jahre. Cadwgans Gemahlin führt die Tageskasse und prüft die kleinen Hauswaren. Warmherzig, sparsam und schwer durch schöne Verpackung zu beeindrucken. Ihr Herkunftshaus bleibt vorerst offen.</p>"
+                      },
+                      {
+                        "id": "voller-korb-tesni",
+                        "title": "Tesni Pendrwn",
+                        "subtitle": "Verkauf · Bestellungen",
+                        "portrait": "./assets/pendrwn-general-store/portraits/tesni.png",
+                        "text": "<p>25 Jahre, unverheiratet. Cadwgans und Mablis Tochter berät am Tresen und merkt sich ungewöhnliche Kundenwünsche. Wach, neugierig und offen im Umgang, ohne jedes Geschäft schönzureden.</p>"
+                      },
+                      {
+                        "id": "voller-korb-elen",
+                        "title": "Elen",
+                        "subtitle": "Verkäuferin · Kleinteile und Verpackung",
+                        "portrait": "./assets/pendrwn-general-store/portraits/elen.png",
+                        "text": "<p>24 Jahre. Scharf im Kopfrechnen und freundlich zu Unentschlossenen. Legt kleine Bestellungen sorgfältig zusammen und lässt sich selten aus der Ruhe bringen.</p>"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "logistik",
+                "label": "Logistik",
+                "parentTreeId": "verkauf",
+                "levels": [
+                  {
+                    "label": "Wareneingang und Auslieferung",
+                    "nodes": [
+                      {
+                        "id": "voller-korb-rhun",
+                        "title": "Rhun Pendrwn",
+                        "subtitle": "Wareneingang · Auslieferung",
+                        "portrait": "./assets/pendrwn-general-store/portraits/rhun.png",
+                        "text": "<p>30 Jahre, unverheiratet. Cadwgans und Mablis Sohn nimmt Lieferungen an, vergleicht Fracht mit Bestellung und bringt kleinere Einkäufe zu Stammkunden. Wortkarg, kräftig und zuverlässig.</p>"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Lager und Tragearbeit",
+                    "nodes": [
+                      {
+                        "id": "voller-korb-iestyn",
+                        "title": "Iestyn",
+                        "subtitle": "Lagergehilfe · Tragen und Einräumen",
+                        "portrait": "./assets/pendrwn-general-store/portraits/iestyn.png",
+                        "text": "<p>38 Jahre. Behält den Überblick über Kisten und Regalfächer. Redet wenig, packt rasch zu und kennt das Knarren jeder Stufe zur Hintertür.</p>"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "sicherheit",
+                "label": "Sicherheit",
+                "parentTreeId": "verkauf",
+                "levels": [
+                  {
+                    "label": "Tür, Lieferpforte und abendlicher Verschluss",
+                    "nodes": [
+                      {
+                        "id": "voller-korb-cadoc",
+                        "title": "Cadoc",
+                        "subtitle": "Hauswächter · Tür und Lieferhof",
+                        "portrait": "./assets/pendrwn-general-store/portraits/cadoc.png",
+                        "text": "<p>45 Jahre. Ein einzelner bezahlter Wächter für Eingang, Lieferungen und den abendlichen Verschluss. Besonnen und aufmerksam; bei ernstem Ärger ruft er die Stadtwache.</p>"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "haustiere",
+                "label": "Haustiere",
+                "parentTreeId": "verkauf",
+                "levels": [
+                  {
+                    "label": "Zwischen Kisten und Fenstersims",
+                    "nodes": [
+                      {
+                        "id": "voller-korb-fflam",
+                        "title": "Fflam",
+                        "subtitle": "Lagerkatze · Cenyric",
+                        "portrait": "./assets/pendrwn-general-store/portraits/fflam.png",
+                        "text": "<p>Ein vierjähriger rot getigerter Cenyric mit weißer Brust. Durchstreift den Speicher nach Mäusen und beansprucht den sonnigen Platz neben der Warenannahme.</p><p><a href=\"/Bestiarium/tiere/vieh/haustiere/katzen/cenyric/index.html\" target=\"_blank\" rel=\"noopener\">Bestiarium · Cenyric</a></p>"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "levels": [],
+            "footerNote": "Die Lieferleute des Marktes der Fortuna gehören zu ihrem eigenen Handelshaus. Sie werden hier nicht als Pendrwn-Angestellte geführt."
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "voller-korb-standard",
+          "pageTitle": "Werkzeuge & Sonstiges",
+          "tradeCatalogPage": true,
+          "tradeCatalog": {
+            "headerIcon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Pendrwn.png",
+            "title": "Güterregister",
+            "subtitle": "Werkzeuge & Sonstiges · das Standardsortiment",
+            "categories": [
+              {
+                "id": "standard",
+                "label": "Werkzeuge & Sonstiges"
+              }
+            ],
+            "allLabel": "Alles zeigen",
+            "noteIcon": "◈",
+            "noteTitle": "Vom Markt der Fortuna in den Vollen Korb",
+            "noteText": "47 gewöhnliche Waren für Haus, Handwerk und Reise. Auswahl, Verkaufseinheiten und Preise folgen dem Standardsortiment. Cadwgan und Idwal beziehen den Nachschub unmittelbar über den Markt der Fortuna.",
+            "items": [
+              {
+                "status": "available",
+                "imageFormat": "square",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 270,
+                "descriptionTitle": "Beschreibung",
+                "featuresTitle": "Auf einen Blick",
+                "originTitle": "Lieferung",
+                "usageTitle": "Verwendung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Hinweise",
+                "attributes": [
+                  {
+                    "label": "Nutzen",
+                    "value": 9
+                  },
+                  {
+                    "label": "Haltbarkeit",
+                    "value": 7
+                  },
+                  {
+                    "label": "Tragbarkeit",
+                    "value": 5
+                  },
+                  {
+                    "label": "Alltag",
+                    "value": 6
+                  },
+                  {
+                    "label": "Reise",
+                    "value": 10
+                  },
+                  {
+                    "label": "Preiswert",
+                    "value": 8
+                  }
+                ],
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "standard:gemischtwarenhandler:rucksack",
+                "category": "standard",
+                "title": "Rucksack",
+                "subtitle": "Ausrüstung",
+                "unit": "1 Stück",
+                "badge": "Standardsortiment",
+                "image": "./assets/pendrwn-general-store/goods/rucksack.png",
+                "description": "<p>Robuster Rucksack aus Leinen mit Lederträgern, ca. 30 kg Tragkraft.</p>",
+                "features": [
+                  {
+                    "icon": "•",
+                    "text": "1 Stück"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Tragkraft"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Leinen"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Reise"
+                  }
+                ],
+                "origin": "Regelmäßige Sammellieferungen des Marktes der Fortuna nach Gwynthor",
+                "usageTags": [
+                  "Tragkraft",
+                  "Leinen",
+                  "Reise"
+                ],
+                "priceMin": "10",
+                "priceMax": "",
+                "priceNote": "",
+                "conditions": "Nach Ladenbestand. Fehlende Ware kann zur nächsten Sammellieferung angefragt werden."
+              },
+              {
+                "status": "available",
+                "imageFormat": "square",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 270,
+                "descriptionTitle": "Beschreibung",
+                "featuresTitle": "Auf einen Blick",
+                "originTitle": "Lieferung",
+                "usageTitle": "Verwendung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Hinweise",
+                "attributes": [
+                  {
+                    "label": "Nutzen",
+                    "value": 8
+                  },
+                  {
+                    "label": "Haltbarkeit",
+                    "value": 6
+                  },
+                  {
+                    "label": "Tragbarkeit",
+                    "value": 9
+                  },
+                  {
+                    "label": "Alltag",
+                    "value": 8
+                  },
+                  {
+                    "label": "Reise",
+                    "value": 10
+                  },
+                  {
+                    "label": "Preiswert",
+                    "value": 10
+                  }
+                ],
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "standard:gemischtwarenhandler:wasserschlauch",
+                "category": "standard",
+                "title": "Wasserschlauch",
+                "subtitle": "Ausrüstung",
+                "unit": "1 Stück",
+                "badge": "Standardsortiment",
+                "image": "./assets/pendrwn-general-store/goods/wasserschlauch.png",
+                "description": "<p>Ziegenleder-Schlauch für ca. 2 L Wasser.</p>",
+                "features": [
+                  {
+                    "icon": "•",
+                    "text": "1 Stück"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Wasser"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Leder"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Reise"
+                  }
+                ],
+                "origin": "Regelmäßige Sammellieferungen des Marktes der Fortuna nach Gwynthor",
+                "usageTags": [
+                  "Wasser",
+                  "Leder",
+                  "Reise"
+                ],
+                "priceMin": "1",
+                "priceMax": "",
+                "priceNote": "",
+                "conditions": "Nach Ladenbestand. Fehlende Ware kann zur nächsten Sammellieferung angefragt werden."
+              },
+              {
+                "status": "available",
+                "imageFormat": "square",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 270,
+                "descriptionTitle": "Beschreibung",
+                "featuresTitle": "Auf einen Blick",
+                "originTitle": "Lieferung",
+                "usageTitle": "Verwendung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Hinweise",
+                "attributes": [
+                  {
+                    "label": "Nutzen",
+                    "value": 7
+                  },
+                  {
+                    "label": "Haltbarkeit",
+                    "value": 6
+                  },
+                  {
+                    "label": "Tragbarkeit",
+                    "value": 5
+                  },
+                  {
+                    "label": "Alltag",
+                    "value": 4
+                  },
+                  {
+                    "label": "Reise",
+                    "value": 9
+                  },
+                  {
+                    "label": "Preiswert",
+                    "value": 9
+                  }
+                ],
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "standard:gemischtwarenhandler:bettrolle",
+                "category": "standard",
+                "title": "Bettrolle",
+                "subtitle": "Ausrüstung",
+                "unit": "1 Stück",
+                "badge": "Standardsortiment",
+                "image": "./assets/pendrwn-general-store/goods/bettrolle.png",
+                "description": "<p>Wollene Decke und Leinenrolle für unterwegs.</p>",
+                "features": [
+                  {
+                    "icon": "•",
+                    "text": "1 Stück"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Schlaf"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Wolle"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Lager"
+                  }
+                ],
+                "origin": "Regelmäßige Sammellieferungen des Marktes der Fortuna nach Gwynthor",
+                "usageTags": [
+                  "Schlaf",
+                  "Wolle",
+                  "Lager"
+                ],
+                "priceMin": "3",
+                "priceMax": "",
+                "priceNote": "",
+                "conditions": "Nach Ladenbestand. Fehlende Ware kann zur nächsten Sammellieferung angefragt werden."
+              },
+              {
+                "status": "available",
+                "imageFormat": "square",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 270,
+                "descriptionTitle": "Beschreibung",
+                "featuresTitle": "Auf einen Blick",
+                "originTitle": "Lieferung",
+                "usageTitle": "Verwendung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Hinweise",
+                "attributes": [
+                  {
+                    "label": "Nutzen",
+                    "value": 8
+                  },
+                  {
+                    "label": "Haltbarkeit",
+                    "value": 9
+                  },
+                  {
+                    "label": "Tragbarkeit",
+                    "value": 9
+                  },
+                  {
+                    "label": "Alltag",
+                    "value": 6
+                  },
+                  {
+                    "label": "Reise",
+                    "value": 10
+                  },
+                  {
+                    "label": "Preiswert",
+                    "value": 10
+                  }
+                ],
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "standard:gemischtwarenhandler:feuerstein-stahl",
+                "category": "standard",
+                "title": "Feuerstein & Stahl",
+                "subtitle": "Werkzeug",
+                "unit": "1 Set",
+                "badge": "Standardsortiment",
+                "image": "./assets/pendrwn-general-store/goods/feuerstein-stahl.png",
+                "description": "<p>Zum Entzünden von Feuer, langlebig und zuverlässig.</p>",
+                "features": [
+                  {
+                    "icon": "•",
+                    "text": "1 Set"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Feuer"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Werkzeug"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Langlebig"
+                  }
+                ],
+                "origin": "Regelmäßige Sammellieferungen des Marktes der Fortuna nach Gwynthor",
+                "usageTags": [
+                  "Feuer",
+                  "Werkzeug",
+                  "Langlebig"
+                ],
+                "priceMin": "2",
+                "priceMax": "",
+                "priceNote": "",
+                "conditions": "Nach Ladenbestand. Fehlende Ware kann zur nächsten Sammellieferung angefragt werden."
+              },
+              {
+                "status": "available",
+                "imageFormat": "square",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 270,
+                "descriptionTitle": "Beschreibung",
+                "featuresTitle": "Auf einen Blick",
+                "originTitle": "Lieferung",
+                "usageTitle": "Verwendung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Hinweise",
+                "attributes": [
+                  {
+                    "label": "Nutzen",
+                    "value": 6
+                  },
+                  {
+                    "label": "Haltbarkeit",
+                    "value": 3
+                  },
+                  {
+                    "label": "Tragbarkeit",
+                    "value": 8
+                  },
+                  {
+                    "label": "Alltag",
+                    "value": 4
+                  },
+                  {
+                    "label": "Reise",
+                    "value": 8
+                  },
+                  {
+                    "label": "Preiswert",
+                    "value": 10
+                  }
+                ],
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "standard:gemischtwarenhandler:fackel",
+                "category": "standard",
+                "title": "Fackel",
+                "subtitle": "Lichtquelle",
+                "unit": "1 Stück",
+                "badge": "Standardsortiment",
+                "image": "./assets/pendrwn-general-store/goods/fackel.png",
+                "description": "<p>Holzfackel mit Pech, brennt etwa eine Stunde.</p>",
+                "features": [
+                  {
+                    "icon": "•",
+                    "text": "1 Stück"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Licht"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Verbrauch"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Pech"
+                  }
+                ],
+                "origin": "Regelmäßige Sammellieferungen des Marktes der Fortuna nach Gwynthor",
+                "usageTags": [
+                  "Licht",
+                  "Verbrauch",
+                  "Pech"
+                ],
+                "priceMin": "1",
+                "priceMax": "",
+                "priceNote": "",
+                "conditions": "Nach Ladenbestand. Fehlende Ware kann zur nächsten Sammellieferung angefragt werden."
+              },
+              {
+                "status": "available",
+                "imageFormat": "square",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 270,
+                "descriptionTitle": "Beschreibung",
+                "featuresTitle": "Auf einen Blick",
+                "originTitle": "Lieferung",
+                "usageTitle": "Verwendung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Hinweise",
+                "attributes": [
+                  {
+                    "label": "Nutzen",
+                    "value": 8
+                  },
+                  {
+                    "label": "Haltbarkeit",
+                    "value": 7
+                  },
+                  {
+                    "label": "Tragbarkeit",
+                    "value": 5
+                  },
+                  {
+                    "label": "Alltag",
+                    "value": 7
+                  },
+                  {
+                    "label": "Reise",
+                    "value": 8
+                  },
+                  {
+                    "label": "Preiswert",
+                    "value": 7
+                  }
+                ],
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "standard:gemischtwarenhandler:laterne",
+                "category": "standard",
+                "title": "Laterne (einfach)",
+                "subtitle": "Lichtquelle",
+                "unit": "1 Stück",
+                "badge": "Standardsortiment",
+                "image": "./assets/pendrwn-general-store/goods/laterne.png",
+                "description": "<p>Laterne aus Blech mit Glas, Brenndauer etwa sechs Stunden mit Öl.</p>",
+                "features": [
+                  {
+                    "icon": "•",
+                    "text": "1 Stück"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Licht"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Blech"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Glas"
+                  }
+                ],
+                "origin": "Regelmäßige Sammellieferungen des Marktes der Fortuna nach Gwynthor",
+                "usageTags": [
+                  "Licht",
+                  "Blech",
+                  "Glas"
+                ],
+                "priceMin": "8",
+                "priceMax": "",
+                "priceNote": "",
+                "conditions": "Nach Ladenbestand. Fehlende Ware kann zur nächsten Sammellieferung angefragt werden."
+              },
+              {
+                "status": "available",
+                "imageFormat": "square",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 270,
+                "descriptionTitle": "Beschreibung",
+                "featuresTitle": "Auf einen Blick",
+                "originTitle": "Lieferung",
+                "usageTitle": "Verwendung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Hinweise",
+                "attributes": [
+                  {
+                    "label": "Nutzen",
+                    "value": 7
+                  },
+                  {
+                    "label": "Haltbarkeit",
+                    "value": 4
+                  },
+                  {
+                    "label": "Tragbarkeit",
+                    "value": 7
+                  },
+                  {
+                    "label": "Alltag",
+                    "value": 7
+                  },
+                  {
+                    "label": "Reise",
+                    "value": 7
+                  },
+                  {
+                    "label": "Preiswert",
+                    "value": 8
+                  }
+                ],
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "standard:gemischtwarenhandler:lampenoel",
+                "category": "standard",
+                "title": "Lampenöl (Flasche)",
+                "subtitle": "Verbrauchsgut",
+                "unit": "1 Flasche",
+                "badge": "Standardsortiment",
+                "image": "./assets/pendrwn-general-store/goods/lampenoel.png",
+                "description": "<p>Brennstoff für Laternen, reicht etwa sechs Stunden.</p>",
+                "features": [
+                  {
+                    "icon": "•",
+                    "text": "1 Flasche"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Öl"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Brennstoff"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Verbrauch"
+                  }
+                ],
+                "origin": "Regelmäßige Sammellieferungen des Marktes der Fortuna nach Gwynthor",
+                "usageTags": [
+                  "Öl",
+                  "Brennstoff",
+                  "Verbrauch"
+                ],
+                "priceMin": "4",
+                "priceMax": "",
+                "priceNote": "",
+                "conditions": "Nach Ladenbestand. Fehlende Ware kann zur nächsten Sammellieferung angefragt werden."
+              },
+              {
+                "status": "available",
+                "imageFormat": "square",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 270,
+                "descriptionTitle": "Beschreibung",
+                "featuresTitle": "Auf einen Blick",
+                "originTitle": "Lieferung",
+                "usageTitle": "Verwendung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Hinweise",
+                "attributes": [
+                  {
+                    "label": "Nutzen",
+                    "value": 9
+                  },
+                  {
+                    "label": "Haltbarkeit",
+                    "value": 7
+                  },
+                  {
+                    "label": "Tragbarkeit",
+                    "value": 6
+                  },
+                  {
+                    "label": "Alltag",
+                    "value": 5
+                  },
+                  {
+                    "label": "Reise",
+                    "value": 10
+                  },
+                  {
+                    "label": "Preiswert",
+                    "value": 10
+                  }
+                ],
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "standard:gemischtwarenhandler:seil",
+                "category": "standard",
+                "title": "Seil (Hanf, 15m)",
+                "subtitle": "Ausrüstung",
+                "unit": "1 Bündel",
+                "badge": "Standardsortiment",
+                "image": "./assets/pendrwn-general-store/goods/seil.png",
+                "description": "<p>Stabiles Seil aus Hanffasern, belastbar und vielseitig.</p>",
+                "features": [
+                  {
+                    "icon": "•",
+                    "text": "1 Bündel"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Hanf"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Klettern"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Sichern"
+                  }
+                ],
+                "origin": "Regelmäßige Sammellieferungen des Marktes der Fortuna nach Gwynthor",
+                "usageTags": [
+                  "Hanf",
+                  "Klettern",
+                  "Sichern"
+                ],
+                "priceMin": "2",
+                "priceMax": "",
+                "priceNote": "",
+                "conditions": "Nach Ladenbestand. Fehlende Ware kann zur nächsten Sammellieferung angefragt werden."
+              },
+              {
+                "status": "available",
+                "imageFormat": "square",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 270,
+                "descriptionTitle": "Beschreibung",
+                "featuresTitle": "Auf einen Blick",
+                "originTitle": "Lieferung",
+                "usageTitle": "Verwendung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Hinweise",
+                "attributes": [
+                  {
+                    "label": "Nutzen",
+                    "value": 5
+                  },
+                  {
+                    "label": "Haltbarkeit",
+                    "value": 3
+                  },
+                  {
+                    "label": "Tragbarkeit",
+                    "value": 10
+                  },
+                  {
+                    "label": "Alltag",
+                    "value": 8
+                  },
+                  {
+                    "label": "Reise",
+                    "value": 7
+                  },
+                  {
+                    "label": "Preiswert",
+                    "value": 10
+                  }
+                ],
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "standard:gemischtwarenhandler:kreide",
+                "category": "standard",
+                "title": "Kreide (weiß)",
+                "subtitle": "Schreibmaterial",
+                "unit": "1 Stück",
+                "badge": "Standardsortiment",
+                "image": "./assets/pendrwn-general-store/goods/kreide.png",
+                "description": "<p>Zum Markieren, Schreiben oder Zählen.</p>",
+                "features": [
+                  {
+                    "icon": "•",
+                    "text": "1 Stück"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Markieren"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Schreiben"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Billig"
+                  }
+                ],
+                "origin": "Regelmäßige Sammellieferungen des Marktes der Fortuna nach Gwynthor",
+                "usageTags": [
+                  "Markieren",
+                  "Schreiben",
+                  "Billig"
+                ],
+                "priceMin": "1",
+                "priceMax": "",
+                "priceNote": "",
+                "conditions": "Nach Ladenbestand. Fehlende Ware kann zur nächsten Sammellieferung angefragt werden."
+              },
+              {
+                "status": "available",
+                "imageFormat": "square",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 270,
+                "descriptionTitle": "Beschreibung",
+                "featuresTitle": "Auf einen Blick",
+                "originTitle": "Lieferung",
+                "usageTitle": "Verwendung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Hinweise",
+                "attributes": [
+                  {
+                    "label": "Nutzen",
+                    "value": 7
+                  },
+                  {
+                    "label": "Haltbarkeit",
+                    "value": 5
+                  },
+                  {
+                    "label": "Tragbarkeit",
+                    "value": 8
+                  },
+                  {
+                    "label": "Alltag",
+                    "value": 9
+                  },
+                  {
+                    "label": "Reise",
+                    "value": 8
+                  },
+                  {
+                    "label": "Preiswert",
+                    "value": 7
+                  }
+                ],
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "standard:gemischtwarenhandler:notizbuch",
+                "category": "standard",
+                "title": "Notizbuch (klein)",
+                "subtitle": "Schreibmaterial",
+                "unit": "1 Stück",
+                "badge": "Standardsortiment",
+                "image": "./assets/pendrwn-general-store/goods/notizbuch.png",
+                "description": "<p>20 Seiten aus handgeschöpftem Papier, in Leder gebunden.</p>",
+                "features": [
+                  {
+                    "icon": "•",
+                    "text": "1 Stück"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Papier"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Leder"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Notizen"
+                  }
+                ],
+                "origin": "Regelmäßige Sammellieferungen des Marktes der Fortuna nach Gwynthor",
+                "usageTags": [
+                  "Papier",
+                  "Leder",
+                  "Notizen"
+                ],
+                "priceMin": "5",
+                "priceMax": "",
+                "priceNote": "",
+                "conditions": "Nach Ladenbestand. Fehlende Ware kann zur nächsten Sammellieferung angefragt werden."
+              },
+              {
+                "status": "available",
+                "imageFormat": "square",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 270,
+                "descriptionTitle": "Beschreibung",
+                "featuresTitle": "Auf einen Blick",
+                "originTitle": "Lieferung",
+                "usageTitle": "Verwendung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Hinweise",
+                "attributes": [
+                  {
+                    "label": "Nutzen",
+                    "value": 6
+                  },
+                  {
+                    "label": "Haltbarkeit",
+                    "value": 4
+                  },
+                  {
+                    "label": "Tragbarkeit",
+                    "value": 8
+                  },
+                  {
+                    "label": "Alltag",
+                    "value": 9
+                  },
+                  {
+                    "label": "Reise",
+                    "value": 5
+                  },
+                  {
+                    "label": "Preiswert",
+                    "value": 10
+                  }
+                ],
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "standard:gemischtwarenhandler:feder-tinte",
+                "category": "standard",
+                "title": "Feder & Tinte",
+                "subtitle": "Schreibmaterial",
+                "unit": "1 Set",
+                "badge": "Standardsortiment",
+                "image": "./assets/pendrwn-general-store/goods/feder-tinte.png",
+                "description": "<p>Schreibfeder und Tinte aus Ruß und Galläpfeln.</p>",
+                "features": [
+                  {
+                    "icon": "•",
+                    "text": "1 Set"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Tinte"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Feder"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Schreiben"
+                  }
+                ],
+                "origin": "Regelmäßige Sammellieferungen des Marktes der Fortuna nach Gwynthor",
+                "usageTags": [
+                  "Tinte",
+                  "Feder",
+                  "Schreiben"
+                ],
+                "priceMin": "1",
+                "priceMax": "",
+                "priceNote": "",
+                "conditions": "Nach Ladenbestand. Fehlende Ware kann zur nächsten Sammellieferung angefragt werden."
+              },
+              {
+                "status": "available",
+                "imageFormat": "square",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 270,
+                "descriptionTitle": "Beschreibung",
+                "featuresTitle": "Auf einen Blick",
+                "originTitle": "Lieferung",
+                "usageTitle": "Verwendung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Hinweise",
+                "attributes": [
+                  {
+                    "label": "Nutzen",
+                    "value": 6
+                  },
+                  {
+                    "label": "Haltbarkeit",
+                    "value": 4
+                  },
+                  {
+                    "label": "Tragbarkeit",
+                    "value": 9
+                  },
+                  {
+                    "label": "Alltag",
+                    "value": 10
+                  },
+                  {
+                    "label": "Reise",
+                    "value": 6
+                  },
+                  {
+                    "label": "Preiswert",
+                    "value": 10
+                  }
+                ],
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "standard:gemischtwarenhandler:seife",
+                "category": "standard",
+                "title": "Seife",
+                "subtitle": "Hygiene",
+                "unit": "1 Stück",
+                "badge": "Standardsortiment",
+                "image": "./assets/pendrwn-general-store/goods/seife.png",
+                "description": "<p>Einfache Kernseife mit leichtem Kräuterduft.</p>",
+                "features": [
+                  {
+                    "icon": "•",
+                    "text": "1 Stück"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Hygiene"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Kräuter"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Kernseife"
+                  }
+                ],
+                "origin": "Regelmäßige Sammellieferungen des Marktes der Fortuna nach Gwynthor",
+                "usageTags": [
+                  "Hygiene",
+                  "Kräuter",
+                  "Kernseife"
+                ],
+                "priceMin": "1",
+                "priceMax": "",
+                "priceNote": "",
+                "conditions": "Nach Ladenbestand. Fehlende Ware kann zur nächsten Sammellieferung angefragt werden."
+              },
+              {
+                "status": "available",
+                "imageFormat": "square",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 270,
+                "descriptionTitle": "Beschreibung",
+                "featuresTitle": "Auf einen Blick",
+                "originTitle": "Lieferung",
+                "usageTitle": "Verwendung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Hinweise",
+                "attributes": [
+                  {
+                    "label": "Nutzen",
+                    "value": 7
+                  },
+                  {
+                    "label": "Haltbarkeit",
+                    "value": 6
+                  },
+                  {
+                    "label": "Tragbarkeit",
+                    "value": 10
+                  },
+                  {
+                    "label": "Alltag",
+                    "value": 8
+                  },
+                  {
+                    "label": "Reise",
+                    "value": 8
+                  },
+                  {
+                    "label": "Preiswert",
+                    "value": 10
+                  }
+                ],
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "standard:gemischtwarenhandler:nadel-faden",
+                "category": "standard",
+                "title": "Nadel & Faden",
+                "subtitle": "Werkzeug",
+                "unit": "1 Set",
+                "badge": "Standardsortiment",
+                "image": "./assets/pendrwn-general-store/goods/nadel-faden.png",
+                "description": "<p>Set aus Bronze- oder Eisennadel mit Garn.</p>",
+                "features": [
+                  {
+                    "icon": "•",
+                    "text": "1 Set"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Nähen"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Reparatur"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Garn"
+                  }
+                ],
+                "origin": "Regelmäßige Sammellieferungen des Marktes der Fortuna nach Gwynthor",
+                "usageTags": [
+                  "Nähen",
+                  "Reparatur",
+                  "Garn"
+                ],
+                "priceMin": "1",
+                "priceMax": "",
+                "priceNote": "",
+                "conditions": "Nach Ladenbestand. Fehlende Ware kann zur nächsten Sammellieferung angefragt werden."
+              },
+              {
+                "status": "available",
+                "imageFormat": "square",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 270,
+                "descriptionTitle": "Beschreibung",
+                "featuresTitle": "Auf einen Blick",
+                "originTitle": "Lieferung",
+                "usageTitle": "Verwendung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Hinweise",
+                "attributes": [
+                  {
+                    "label": "Nutzen",
+                    "value": 7
+                  },
+                  {
+                    "label": "Haltbarkeit",
+                    "value": 5
+                  },
+                  {
+                    "label": "Tragbarkeit",
+                    "value": 4
+                  },
+                  {
+                    "label": "Alltag",
+                    "value": 10
+                  },
+                  {
+                    "label": "Reise",
+                    "value": 7
+                  },
+                  {
+                    "label": "Preiswert",
+                    "value": 7
+                  }
+                ],
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "standard:gemischtwarenhandler:kleidung-einfach",
+                "category": "standard",
+                "title": "Kleidung (einfach)",
+                "subtitle": "Kleidung",
+                "unit": "1 Garnitur",
+                "badge": "Standardsortiment",
+                "image": "./assets/pendrwn-general-store/goods/kleidung-einfach.png",
+                "description": "<p>Leinenhemd, Hose und schlichter Umhang.</p>",
+                "features": [
+                  {
+                    "icon": "•",
+                    "text": "1 Garnitur"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Leinen"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Alltag"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Umhang"
+                  }
+                ],
+                "origin": "Regelmäßige Sammellieferungen des Marktes der Fortuna nach Gwynthor",
+                "usageTags": [
+                  "Leinen",
+                  "Alltag",
+                  "Umhang"
+                ],
+                "priceMin": "10",
+                "priceMax": "",
+                "priceNote": "",
+                "conditions": "Nach Ladenbestand. Fehlende Ware kann zur nächsten Sammellieferung angefragt werden."
+              },
+              {
+                "status": "available",
+                "imageFormat": "square",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 270,
+                "descriptionTitle": "Beschreibung",
+                "featuresTitle": "Auf einen Blick",
+                "originTitle": "Lieferung",
+                "usageTitle": "Verwendung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Hinweise",
+                "attributes": [
+                  {
+                    "label": "Nutzen",
+                    "value": 6
+                  },
+                  {
+                    "label": "Haltbarkeit",
+                    "value": 6
+                  },
+                  {
+                    "label": "Tragbarkeit",
+                    "value": 10
+                  },
+                  {
+                    "label": "Alltag",
+                    "value": 9
+                  },
+                  {
+                    "label": "Reise",
+                    "value": 8
+                  },
+                  {
+                    "label": "Preiswert",
+                    "value": 9
+                  }
+                ],
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "standard:gemischtwarenhandler:guertelbeutel",
+                "category": "standard",
+                "title": "Gürtelbeutel",
+                "subtitle": "Ausrüstung",
+                "unit": "1 Stück",
+                "badge": "Standardsortiment",
+                "image": "./assets/pendrwn-general-store/goods/guertelbeutel.png",
+                "description": "<p>Kleiner Lederbeutel für Münzen, Kräuter oder Kleinkram.</p>",
+                "features": [
+                  {
+                    "icon": "•",
+                    "text": "1 Stück"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Leder"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Münzen"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Kleinteile"
+                  }
+                ],
+                "origin": "Regelmäßige Sammellieferungen des Marktes der Fortuna nach Gwynthor",
+                "usageTags": [
+                  "Leder",
+                  "Münzen",
+                  "Kleinteile"
+                ],
+                "priceMin": "3",
+                "priceMax": "",
+                "priceNote": "",
+                "conditions": "Nach Ladenbestand. Fehlende Ware kann zur nächsten Sammellieferung angefragt werden."
+              },
+              {
+                "status": "available",
+                "imageFormat": "square",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 270,
+                "descriptionTitle": "Beschreibung",
+                "featuresTitle": "Auf einen Blick",
+                "originTitle": "Lieferung",
+                "usageTitle": "Verwendung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Hinweise",
+                "attributes": [
+                  {
+                    "label": "Nutzen",
+                    "value": 4
+                  },
+                  {
+                    "label": "Haltbarkeit",
+                    "value": 7
+                  },
+                  {
+                    "label": "Tragbarkeit",
+                    "value": 8
+                  },
+                  {
+                    "label": "Alltag",
+                    "value": 7
+                  },
+                  {
+                    "label": "Reise",
+                    "value": 4
+                  },
+                  {
+                    "label": "Preiswert",
+                    "value": 6
+                  }
+                ],
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "standard:gemischtwarenhandler:spiegel",
+                "category": "standard",
+                "title": "Spiegel (Metall)",
+                "subtitle": "Ausrüstung",
+                "unit": "1 Stück",
+                "badge": "Standardsortiment",
+                "image": "./assets/pendrwn-general-store/goods/spiegel.png",
+                "description": "<p>Kleiner polierter Bronzespiegel.</p>",
+                "features": [
+                  {
+                    "icon": "•",
+                    "text": "1 Stück"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Bronze"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Pflege"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Signal"
+                  }
+                ],
+                "origin": "Regelmäßige Sammellieferungen des Marktes der Fortuna nach Gwynthor",
+                "usageTags": [
+                  "Bronze",
+                  "Pflege",
+                  "Signal"
+                ],
+                "priceMin": "5",
+                "priceMax": "",
+                "priceNote": "",
+                "conditions": "Nach Ladenbestand. Fehlende Ware kann zur nächsten Sammellieferung angefragt werden."
+              },
+              {
+                "status": "available",
+                "imageFormat": "square",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 270,
+                "descriptionTitle": "Beschreibung",
+                "featuresTitle": "Auf einen Blick",
+                "originTitle": "Lieferung",
+                "usageTitle": "Verwendung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Hinweise",
+                "attributes": [
+                  {
+                    "label": "Nutzen",
+                    "value": 8
+                  },
+                  {
+                    "label": "Haltbarkeit",
+                    "value": 7
+                  },
+                  {
+                    "label": "Tragbarkeit",
+                    "value": 5
+                  },
+                  {
+                    "label": "Alltag",
+                    "value": 8
+                  },
+                  {
+                    "label": "Reise",
+                    "value": 8
+                  },
+                  {
+                    "label": "Preiswert",
+                    "value": 10
+                  }
+                ],
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "standard:gemischtwarenhandler:kochgeschirr",
+                "category": "standard",
+                "title": "Kochgeschirr",
+                "subtitle": "Küchenausrüstung",
+                "unit": "1 Set",
+                "badge": "Standardsortiment",
+                "image": "./assets/pendrwn-general-store/goods/kochgeschirr.png",
+                "description": "<p>Kupferner Topf, Holzlöffel und kleiner Becher.</p>",
+                "features": [
+                  {
+                    "icon": "•",
+                    "text": "1 Set"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Kochen"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Kupfer"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Lager"
+                  }
+                ],
+                "origin": "Regelmäßige Sammellieferungen des Marktes der Fortuna nach Gwynthor",
+                "usageTags": [
+                  "Kochen",
+                  "Kupfer",
+                  "Lager"
+                ],
+                "priceMin": "2",
+                "priceMax": "",
+                "priceNote": "",
+                "conditions": "Nach Ladenbestand. Fehlende Ware kann zur nächsten Sammellieferung angefragt werden."
+              },
+              {
+                "status": "available",
+                "imageFormat": "square",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 270,
+                "descriptionTitle": "Beschreibung",
+                "featuresTitle": "Auf einen Blick",
+                "originTitle": "Lieferung",
+                "usageTitle": "Verwendung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Hinweise",
+                "attributes": [
+                  {
+                    "label": "Nutzen",
+                    "value": 6
+                  },
+                  {
+                    "label": "Haltbarkeit",
+                    "value": 5
+                  },
+                  {
+                    "label": "Tragbarkeit",
+                    "value": 8
+                  },
+                  {
+                    "label": "Alltag",
+                    "value": 10
+                  },
+                  {
+                    "label": "Reise",
+                    "value": 7
+                  },
+                  {
+                    "label": "Preiswert",
+                    "value": 10
+                  }
+                ],
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "standard:gemischtwarenhandler:essbesteck",
+                "category": "standard",
+                "title": "Essbesteck & Schale",
+                "subtitle": "Küchenausrüstung",
+                "unit": "1 Set",
+                "badge": "Standardsortiment",
+                "image": "./assets/pendrwn-general-store/goods/essbesteck.png",
+                "description": "<p>Holzlöffel und Schale aus Ton.</p>",
+                "features": [
+                  {
+                    "icon": "•",
+                    "text": "1 Set"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Schale"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Löffel"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Ton"
+                  }
+                ],
+                "origin": "Regelmäßige Sammellieferungen des Marktes der Fortuna nach Gwynthor",
+                "usageTags": [
+                  "Schale",
+                  "Löffel",
+                  "Ton"
+                ],
+                "priceMin": "1",
+                "priceMax": "",
+                "priceNote": "",
+                "conditions": "Nach Ladenbestand. Fehlende Ware kann zur nächsten Sammellieferung angefragt werden."
+              },
+              {
+                "status": "available",
+                "imageFormat": "square",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 270,
+                "descriptionTitle": "Beschreibung",
+                "featuresTitle": "Auf einen Blick",
+                "originTitle": "Lieferung",
+                "usageTitle": "Verwendung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Hinweise",
+                "attributes": [
+                  {
+                    "label": "Nutzen",
+                    "value": 9
+                  },
+                  {
+                    "label": "Haltbarkeit",
+                    "value": 4
+                  },
+                  {
+                    "label": "Tragbarkeit",
+                    "value": 6
+                  },
+                  {
+                    "label": "Alltag",
+                    "value": 5
+                  },
+                  {
+                    "label": "Reise",
+                    "value": 10
+                  },
+                  {
+                    "label": "Preiswert",
+                    "value": 8
+                  }
+                ],
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "standard:gemischtwarenhandler:rationen",
+                "category": "standard",
+                "title": "Rationen (1 Tag)",
+                "subtitle": "Proviant",
+                "unit": "1 Tagesration",
+                "badge": "Standardsortiment",
+                "image": "./assets/pendrwn-general-store/goods/rationen.png",
+                "description": "<p>Brot, Trockenfleisch, Käse und getrocknete Früchte.</p>",
+                "features": [
+                  {
+                    "icon": "•",
+                    "text": "1 Tagesration"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Proviant"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Reise"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Haltbar"
+                  }
+                ],
+                "origin": "Regelmäßige Sammellieferungen des Marktes der Fortuna nach Gwynthor",
+                "usageTags": [
+                  "Proviant",
+                  "Reise",
+                  "Haltbar"
+                ],
+                "priceMin": "5",
+                "priceMax": "10",
+                "priceNote": "Je nach Zusammenstellung der Tagesration.",
+                "conditions": "Nach Ladenbestand. Fehlende Ware kann zur nächsten Sammellieferung angefragt werden."
+              },
+              {
+                "status": "available",
+                "imageFormat": "square",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 270,
+                "descriptionTitle": "Beschreibung",
+                "featuresTitle": "Auf einen Blick",
+                "originTitle": "Lieferung",
+                "usageTitle": "Verwendung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Hinweise",
+                "attributes": [
+                  {
+                    "label": "Nutzen",
+                    "value": 10
+                  },
+                  {
+                    "label": "Haltbarkeit",
+                    "value": 6
+                  },
+                  {
+                    "label": "Tragbarkeit",
+                    "value": 2
+                  },
+                  {
+                    "label": "Alltag",
+                    "value": 3
+                  },
+                  {
+                    "label": "Reise",
+                    "value": 10
+                  },
+                  {
+                    "label": "Preiswert",
+                    "value": 3
+                  }
+                ],
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "standard:gemischtwarenhandler:zelt-klein",
+                "category": "standard",
+                "title": "Zelt (klein)",
+                "subtitle": "Ausrüstung",
+                "unit": "1 Stück",
+                "badge": "Standardsortiment",
+                "image": "./assets/pendrwn-general-store/goods/zelt-klein.png",
+                "description": "<p>Leinenzelt für 1-2 Personen mit Holzstangen.</p>",
+                "features": [
+                  {
+                    "icon": "•",
+                    "text": "1 Stück"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Lager"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Schutz"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Leinen"
+                  }
+                ],
+                "origin": "Regelmäßige Sammellieferungen des Marktes der Fortuna nach Gwynthor",
+                "usageTags": [
+                  "Lager",
+                  "Schutz",
+                  "Leinen"
+                ],
+                "priceMin": "100",
+                "priceMax": "",
+                "priceNote": "",
+                "conditions": "Nach Ladenbestand. Fehlende Ware kann zur nächsten Sammellieferung angefragt werden."
+              },
+              {
+                "status": "available",
+                "imageFormat": "square",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 270,
+                "descriptionTitle": "Beschreibung",
+                "featuresTitle": "Auf einen Blick",
+                "originTitle": "Lieferung",
+                "usageTitle": "Verwendung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Hinweise",
+                "attributes": [
+                  {
+                    "label": "Nutzen",
+                    "value": 6
+                  },
+                  {
+                    "label": "Haltbarkeit",
+                    "value": 9
+                  },
+                  {
+                    "label": "Tragbarkeit",
+                    "value": 10
+                  },
+                  {
+                    "label": "Alltag",
+                    "value": 4
+                  },
+                  {
+                    "label": "Reise",
+                    "value": 8
+                  },
+                  {
+                    "label": "Preiswert",
+                    "value": 7
+                  }
+                ],
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "standard:gemischtwarenhandler:signalpfeife",
+                "category": "standard",
+                "title": "Signalpfeife",
+                "subtitle": "Werkzeug",
+                "unit": "1 Stück",
+                "badge": "Standardsortiment",
+                "image": "./assets/pendrwn-general-store/goods/signalpfeife.png",
+                "description": "<p>Metallpfeife, hörbar auf über 100 m.</p>",
+                "features": [
+                  {
+                    "icon": "•",
+                    "text": "1 Stück"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Signal"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Metall"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Warnung"
+                  }
+                ],
+                "origin": "Regelmäßige Sammellieferungen des Marktes der Fortuna nach Gwynthor",
+                "usageTags": [
+                  "Signal",
+                  "Metall",
+                  "Warnung"
+                ],
+                "priceMin": "10",
+                "priceMax": "",
+                "priceNote": "",
+                "conditions": "Nach Ladenbestand. Fehlende Ware kann zur nächsten Sammellieferung angefragt werden."
+              },
+              {
+                "status": "available",
+                "imageFormat": "square",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 270,
+                "descriptionTitle": "Beschreibung",
+                "featuresTitle": "Auf einen Blick",
+                "originTitle": "Lieferung",
+                "usageTitle": "Verwendung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Hinweise",
+                "attributes": [
+                  {
+                    "label": "Nutzen",
+                    "value": 9
+                  },
+                  {
+                    "label": "Haltbarkeit",
+                    "value": 4
+                  },
+                  {
+                    "label": "Tragbarkeit",
+                    "value": 7
+                  },
+                  {
+                    "label": "Alltag",
+                    "value": 6
+                  },
+                  {
+                    "label": "Reise",
+                    "value": 9
+                  },
+                  {
+                    "label": "Preiswert",
+                    "value": 5
+                  }
+                ],
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "standard:gemischtwarenhandler:verbandstoff",
+                "category": "standard",
+                "title": "Verbandstoff (Paket)",
+                "subtitle": "Heilausrüstung",
+                "unit": "1 Set",
+                "badge": "Standardsortiment",
+                "image": "./assets/pendrwn-general-store/goods/verbandstoff.png",
+                "description": "<p>Leinenbinden, Kräuterpaste und Reinigungstücher.</p>",
+                "features": [
+                  {
+                    "icon": "•",
+                    "text": "1 Set"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Heilung"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Leinen"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Kräuter"
+                  }
+                ],
+                "origin": "Regelmäßige Sammellieferungen des Marktes der Fortuna nach Gwynthor",
+                "usageTags": [
+                  "Heilung",
+                  "Leinen",
+                  "Kräuter"
+                ],
+                "priceMin": "25",
+                "priceMax": "",
+                "priceNote": "",
+                "conditions": "Nach Ladenbestand. Fehlende Ware kann zur nächsten Sammellieferung angefragt werden."
+              },
+              {
+                "status": "available",
+                "imageFormat": "square",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 270,
+                "descriptionTitle": "Beschreibung",
+                "featuresTitle": "Auf einen Blick",
+                "originTitle": "Lieferung",
+                "usageTitle": "Verwendung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Hinweise",
+                "attributes": [
+                  {
+                    "label": "Nutzen",
+                    "value": 8
+                  },
+                  {
+                    "label": "Haltbarkeit",
+                    "value": 8
+                  },
+                  {
+                    "label": "Tragbarkeit",
+                    "value": 5
+                  },
+                  {
+                    "label": "Alltag",
+                    "value": 5
+                  },
+                  {
+                    "label": "Reise",
+                    "value": 6
+                  },
+                  {
+                    "label": "Preiswert",
+                    "value": 4
+                  }
+                ],
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "standard:gemischtwarenhandler:kraeutermoerser",
+                "category": "standard",
+                "title": "Kräutermörser (klein)",
+                "subtitle": "Alchemiewerkzeug",
+                "unit": "1 Stück",
+                "badge": "Standardsortiment",
+                "image": "./assets/pendrwn-general-store/goods/kraeutermoerser.png",
+                "description": "<p>Tonmörser mit Stößel für Alchemisten und Heiler.</p>",
+                "features": [
+                  {
+                    "icon": "•",
+                    "text": "1 Stück"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Mörser"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Alchemie"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Ton"
+                  }
+                ],
+                "origin": "Regelmäßige Sammellieferungen des Marktes der Fortuna nach Gwynthor",
+                "usageTags": [
+                  "Mörser",
+                  "Alchemie",
+                  "Ton"
+                ],
+                "priceMin": "35",
+                "priceMax": "",
+                "priceNote": "",
+                "conditions": "Nach Ladenbestand. Fehlende Ware kann zur nächsten Sammellieferung angefragt werden."
+              },
+              {
+                "status": "available",
+                "imageFormat": "square",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 270,
+                "descriptionTitle": "Beschreibung",
+                "featuresTitle": "Auf einen Blick",
+                "originTitle": "Lieferung",
+                "usageTitle": "Verwendung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Hinweise",
+                "attributes": [
+                  {
+                    "label": "Nutzen",
+                    "value": 4
+                  },
+                  {
+                    "label": "Haltbarkeit",
+                    "value": 5
+                  },
+                  {
+                    "label": "Tragbarkeit",
+                    "value": 10
+                  },
+                  {
+                    "label": "Alltag",
+                    "value": 9
+                  },
+                  {
+                    "label": "Reise",
+                    "value": 6
+                  },
+                  {
+                    "label": "Preiswert",
+                    "value": 10
+                  }
+                ],
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "standard:gemischtwarenhandler:holzkamm",
+                "category": "standard",
+                "title": "Holzkamm",
+                "subtitle": "Hygiene",
+                "unit": "1 Stück",
+                "badge": "Standardsortiment",
+                "image": "./assets/pendrwn-general-store/goods/holzkamm.png",
+                "description": "<p>Einfacher Kamm aus geschnitztem Holz.</p>",
+                "features": [
+                  {
+                    "icon": "•",
+                    "text": "1 Stück"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Hygiene"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Holz"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Pflege"
+                  }
+                ],
+                "origin": "Regelmäßige Sammellieferungen des Marktes der Fortuna nach Gwynthor",
+                "usageTags": [
+                  "Hygiene",
+                  "Holz",
+                  "Pflege"
+                ],
+                "priceMin": "1",
+                "priceMax": "",
+                "priceNote": "",
+                "conditions": "Nach Ladenbestand. Fehlende Ware kann zur nächsten Sammellieferung angefragt werden."
+              },
+              {
+                "status": "available",
+                "imageFormat": "square",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 270,
+                "descriptionTitle": "Beschreibung",
+                "featuresTitle": "Auf einen Blick",
+                "originTitle": "Lieferung",
+                "usageTitle": "Verwendung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Hinweise",
+                "attributes": [
+                  {
+                    "label": "Nutzen",
+                    "value": 6
+                  },
+                  {
+                    "label": "Haltbarkeit",
+                    "value": 4
+                  },
+                  {
+                    "label": "Tragbarkeit",
+                    "value": 9
+                  },
+                  {
+                    "label": "Alltag",
+                    "value": 8
+                  },
+                  {
+                    "label": "Reise",
+                    "value": 8
+                  },
+                  {
+                    "label": "Preiswert",
+                    "value": 10
+                  }
+                ],
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "standard:gemischtwarenhandler:leinentasche",
+                "category": "standard",
+                "title": "Leinentasche",
+                "subtitle": "Ausrüstung",
+                "unit": "1 Stück",
+                "badge": "Standardsortiment",
+                "image": "./assets/pendrwn-general-store/goods/leinentasche.png",
+                "description": "<p>Grober Stoffbeutel mit Trägern.</p>",
+                "features": [
+                  {
+                    "icon": "•",
+                    "text": "1 Stück"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Beutel"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Leinen"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Tragen"
+                  }
+                ],
+                "origin": "Regelmäßige Sammellieferungen des Marktes der Fortuna nach Gwynthor",
+                "usageTags": [
+                  "Beutel",
+                  "Leinen",
+                  "Tragen"
+                ],
+                "priceMin": "2",
+                "priceMax": "",
+                "priceNote": "",
+                "conditions": "Nach Ladenbestand. Fehlende Ware kann zur nächsten Sammellieferung angefragt werden."
+              },
+              {
+                "status": "available",
+                "imageFormat": "square",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 270,
+                "descriptionTitle": "Beschreibung",
+                "featuresTitle": "Auf einen Blick",
+                "originTitle": "Lieferung",
+                "usageTitle": "Verwendung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Hinweise",
+                "attributes": [
+                  {
+                    "label": "Nutzen",
+                    "value": 4
+                  },
+                  {
+                    "label": "Haltbarkeit",
+                    "value": 5
+                  },
+                  {
+                    "label": "Tragbarkeit",
+                    "value": 10
+                  },
+                  {
+                    "label": "Alltag",
+                    "value": 10
+                  },
+                  {
+                    "label": "Reise",
+                    "value": 7
+                  },
+                  {
+                    "label": "Preiswert",
+                    "value": 10
+                  }
+                ],
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "standard:gemischtwarenhandler:holzloeffel",
+                "category": "standard",
+                "title": "Holzlöffel",
+                "subtitle": "Küchengerät",
+                "unit": "1 Stück",
+                "badge": "Standardsortiment",
+                "image": "./assets/pendrwn-general-store/goods/holzloeffel.png",
+                "description": "<p>Einfacher geschnitzter Löffel.</p>",
+                "features": [
+                  {
+                    "icon": "•",
+                    "text": "1 Stück"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Holz"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Essen"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Einfach"
+                  }
+                ],
+                "origin": "Regelmäßige Sammellieferungen des Marktes der Fortuna nach Gwynthor",
+                "usageTags": [
+                  "Holz",
+                  "Essen",
+                  "Einfach"
+                ],
+                "priceMin": "1",
+                "priceMax": "",
+                "priceNote": "",
+                "conditions": "Nach Ladenbestand. Fehlende Ware kann zur nächsten Sammellieferung angefragt werden."
+              },
+              {
+                "status": "available",
+                "imageFormat": "square",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 270,
+                "descriptionTitle": "Beschreibung",
+                "featuresTitle": "Auf einen Blick",
+                "originTitle": "Lieferung",
+                "usageTitle": "Verwendung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Hinweise",
+                "attributes": [
+                  {
+                    "label": "Nutzen",
+                    "value": 4
+                  },
+                  {
+                    "label": "Haltbarkeit",
+                    "value": 5
+                  },
+                  {
+                    "label": "Tragbarkeit",
+                    "value": 8
+                  },
+                  {
+                    "label": "Alltag",
+                    "value": 10
+                  },
+                  {
+                    "label": "Reise",
+                    "value": 5
+                  },
+                  {
+                    "label": "Preiswert",
+                    "value": 10
+                  }
+                ],
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "standard:gemischtwarenhandler:tonbecher",
+                "category": "standard",
+                "title": "Tonbecher",
+                "subtitle": "Geschirr",
+                "unit": "1 Stück",
+                "badge": "Standardsortiment",
+                "image": "./assets/pendrwn-general-store/goods/tonbecher.png",
+                "description": "<p>Schlichter Becher aus gebranntem Ton.</p>",
+                "features": [
+                  {
+                    "icon": "•",
+                    "text": "1 Stück"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Ton"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Becher"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Alltag"
+                  }
+                ],
+                "origin": "Regelmäßige Sammellieferungen des Marktes der Fortuna nach Gwynthor",
+                "usageTags": [
+                  "Ton",
+                  "Becher",
+                  "Alltag"
+                ],
+                "priceMin": "1",
+                "priceMax": "",
+                "priceNote": "",
+                "conditions": "Nach Ladenbestand. Fehlende Ware kann zur nächsten Sammellieferung angefragt werden."
+              },
+              {
+                "status": "available",
+                "imageFormat": "square",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 270,
+                "descriptionTitle": "Beschreibung",
+                "featuresTitle": "Auf einen Blick",
+                "originTitle": "Lieferung",
+                "usageTitle": "Verwendung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Hinweise",
+                "attributes": [
+                  {
+                    "label": "Nutzen",
+                    "value": 5
+                  },
+                  {
+                    "label": "Haltbarkeit",
+                    "value": 7
+                  },
+                  {
+                    "label": "Tragbarkeit",
+                    "value": 7
+                  },
+                  {
+                    "label": "Alltag",
+                    "value": 10
+                  },
+                  {
+                    "label": "Reise",
+                    "value": 6
+                  },
+                  {
+                    "label": "Preiswert",
+                    "value": 10
+                  }
+                ],
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "standard:gemischtwarenhandler:holzschuessel",
+                "category": "standard",
+                "title": "Holzschüssel",
+                "subtitle": "Geschirr",
+                "unit": "1 Stück",
+                "badge": "Standardsortiment",
+                "image": "./assets/pendrwn-general-store/goods/holzschuessel.png",
+                "description": "<p>Runde Schüssel aus Eichenholz.</p>",
+                "features": [
+                  {
+                    "icon": "•",
+                    "text": "1 Stück"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Holz"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Schale"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Eiche"
+                  }
+                ],
+                "origin": "Regelmäßige Sammellieferungen des Marktes der Fortuna nach Gwynthor",
+                "usageTags": [
+                  "Holz",
+                  "Schale",
+                  "Eiche"
+                ],
+                "priceMin": "2",
+                "priceMax": "",
+                "priceNote": "",
+                "conditions": "Nach Ladenbestand. Fehlende Ware kann zur nächsten Sammellieferung angefragt werden."
+              },
+              {
+                "status": "available",
+                "imageFormat": "square",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 270,
+                "descriptionTitle": "Beschreibung",
+                "featuresTitle": "Auf einen Blick",
+                "originTitle": "Lieferung",
+                "usageTitle": "Verwendung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Hinweise",
+                "attributes": [
+                  {
+                    "label": "Nutzen",
+                    "value": 6
+                  },
+                  {
+                    "label": "Haltbarkeit",
+                    "value": 5
+                  },
+                  {
+                    "label": "Tragbarkeit",
+                    "value": 9
+                  },
+                  {
+                    "label": "Alltag",
+                    "value": 8
+                  },
+                  {
+                    "label": "Reise",
+                    "value": 9
+                  },
+                  {
+                    "label": "Preiswert",
+                    "value": 10
+                  }
+                ],
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "standard:gemischtwarenhandler:trinkschlauch-klein",
+                "category": "standard",
+                "title": "Trinkschlauch (klein)",
+                "subtitle": "Behälter",
+                "unit": "1 Stück",
+                "badge": "Standardsortiment",
+                "image": "./assets/pendrwn-general-store/goods/trinkschlauch-klein.png",
+                "description": "<p>Fassungsvermögen 0,5 L, gut für Wein oder Wasser.</p>",
+                "features": [
+                  {
+                    "icon": "•",
+                    "text": "1 Stück"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Behälter"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Leder"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Trinken"
+                  }
+                ],
+                "origin": "Regelmäßige Sammellieferungen des Marktes der Fortuna nach Gwynthor",
+                "usageTags": [
+                  "Behälter",
+                  "Leder",
+                  "Trinken"
+                ],
+                "priceMin": "2",
+                "priceMax": "",
+                "priceNote": "",
+                "conditions": "Nach Ladenbestand. Fehlende Ware kann zur nächsten Sammellieferung angefragt werden."
+              },
+              {
+                "status": "available",
+                "imageFormat": "square",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 270,
+                "descriptionTitle": "Beschreibung",
+                "featuresTitle": "Auf einen Blick",
+                "originTitle": "Lieferung",
+                "usageTitle": "Verwendung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Hinweise",
+                "attributes": [
+                  {
+                    "label": "Nutzen",
+                    "value": 6
+                  },
+                  {
+                    "label": "Haltbarkeit",
+                    "value": 4
+                  },
+                  {
+                    "label": "Tragbarkeit",
+                    "value": 10
+                  },
+                  {
+                    "label": "Alltag",
+                    "value": 8
+                  },
+                  {
+                    "label": "Reise",
+                    "value": 8
+                  },
+                  {
+                    "label": "Preiswert",
+                    "value": 10
+                  }
+                ],
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "standard:gemischtwarenhandler:leinenband",
+                "category": "standard",
+                "title": "Leinenband (5m)",
+                "subtitle": "Verbrauchsgut",
+                "unit": "1 Rolle",
+                "badge": "Standardsortiment",
+                "image": "./assets/pendrwn-general-store/goods/leinenband.png",
+                "description": "<p>Vielseitiges Stoffband, zum Binden, Verpacken oder Versorgen.</p>",
+                "features": [
+                  {
+                    "icon": "•",
+                    "text": "1 Rolle"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Leinen"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Binden"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Rolle"
+                  }
+                ],
+                "origin": "Regelmäßige Sammellieferungen des Marktes der Fortuna nach Gwynthor",
+                "usageTags": [
+                  "Leinen",
+                  "Binden",
+                  "Rolle"
+                ],
+                "priceMin": "1",
+                "priceMax": "",
+                "priceNote": "",
+                "conditions": "Nach Ladenbestand. Fehlende Ware kann zur nächsten Sammellieferung angefragt werden."
+              },
+              {
+                "status": "available",
+                "imageFormat": "square",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 270,
+                "descriptionTitle": "Beschreibung",
+                "featuresTitle": "Auf einen Blick",
+                "originTitle": "Lieferung",
+                "usageTitle": "Verwendung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Hinweise",
+                "attributes": [
+                  {
+                    "label": "Nutzen",
+                    "value": 6
+                  },
+                  {
+                    "label": "Haltbarkeit",
+                    "value": 4
+                  },
+                  {
+                    "label": "Tragbarkeit",
+                    "value": 8
+                  },
+                  {
+                    "label": "Alltag",
+                    "value": 8
+                  },
+                  {
+                    "label": "Reise",
+                    "value": 7
+                  },
+                  {
+                    "label": "Preiswert",
+                    "value": 9
+                  }
+                ],
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "standard:gemischtwarenhandler:pergamentrolle",
+                "category": "standard",
+                "title": "Pergamentrolle (leer)",
+                "subtitle": "Schreibmaterial",
+                "unit": "1 Stück",
+                "badge": "Standardsortiment",
+                "image": "./assets/pendrwn-general-store/goods/pergamentrolle.png",
+                "description": "<p>Für Aufzeichnungen, Verträge oder Karten.</p>",
+                "features": [
+                  {
+                    "icon": "•",
+                    "text": "1 Stück"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Pergament"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Vertrag"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Schreiben"
+                  }
+                ],
+                "origin": "Regelmäßige Sammellieferungen des Marktes der Fortuna nach Gwynthor",
+                "usageTags": [
+                  "Pergament",
+                  "Vertrag",
+                  "Schreiben"
+                ],
+                "priceMin": "3",
+                "priceMax": "",
+                "priceNote": "",
+                "conditions": "Nach Ladenbestand. Fehlende Ware kann zur nächsten Sammellieferung angefragt werden."
+              },
+              {
+                "status": "available",
+                "imageFormat": "square",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 270,
+                "descriptionTitle": "Beschreibung",
+                "featuresTitle": "Auf einen Blick",
+                "originTitle": "Lieferung",
+                "usageTitle": "Verwendung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Hinweise",
+                "attributes": [
+                  {
+                    "label": "Nutzen",
+                    "value": 3
+                  },
+                  {
+                    "label": "Haltbarkeit",
+                    "value": 10
+                  },
+                  {
+                    "label": "Tragbarkeit",
+                    "value": 9
+                  },
+                  {
+                    "label": "Alltag",
+                    "value": 5
+                  },
+                  {
+                    "label": "Reise",
+                    "value": 7
+                  },
+                  {
+                    "label": "Preiswert",
+                    "value": 10
+                  }
+                ],
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "standard:gemischtwarenhandler:kieselsteinbeutel",
+                "category": "standard",
+                "title": "Kieselsteinbeutel",
+                "subtitle": "Zubehör",
+                "unit": "1 Beutel",
+                "badge": "Standardsortiment",
+                "image": "./assets/pendrwn-general-store/goods/kieselsteinbeutel.png",
+                "description": "<p>Zehn flache Kiesel zum Markieren, Zählen oder Werfen.</p>",
+                "features": [
+                  {
+                    "icon": "•",
+                    "text": "1 Beutel"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Kiesel"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Markieren"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Zählen"
+                  }
+                ],
+                "origin": "Regelmäßige Sammellieferungen des Marktes der Fortuna nach Gwynthor",
+                "usageTags": [
+                  "Kiesel",
+                  "Markieren",
+                  "Zählen"
+                ],
+                "priceMin": "1",
+                "priceMax": "",
+                "priceNote": "",
+                "conditions": "Nach Ladenbestand. Fehlende Ware kann zur nächsten Sammellieferung angefragt werden."
+              },
+              {
+                "status": "available",
+                "imageFormat": "square",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 270,
+                "descriptionTitle": "Beschreibung",
+                "featuresTitle": "Auf einen Blick",
+                "originTitle": "Lieferung",
+                "usageTitle": "Verwendung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Hinweise",
+                "attributes": [
+                  {
+                    "label": "Nutzen",
+                    "value": 5
+                  },
+                  {
+                    "label": "Haltbarkeit",
+                    "value": 5
+                  },
+                  {
+                    "label": "Tragbarkeit",
+                    "value": 10
+                  },
+                  {
+                    "label": "Alltag",
+                    "value": 5
+                  },
+                  {
+                    "label": "Reise",
+                    "value": 7
+                  },
+                  {
+                    "label": "Preiswert",
+                    "value": 10
+                  }
+                ],
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "standard:gemischtwarenhandler:holzpfeife",
+                "category": "standard",
+                "title": "Holzpfeife",
+                "subtitle": "Werkzeug",
+                "unit": "1 Stück",
+                "badge": "Standardsortiment",
+                "image": "./assets/pendrwn-general-store/goods/holzpfeife.png",
+                "description": "<p>Kleine Signal- oder Hirtenpfeife.</p>",
+                "features": [
+                  {
+                    "icon": "•",
+                    "text": "1 Stück"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Signal"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Hirten"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Holz"
+                  }
+                ],
+                "origin": "Regelmäßige Sammellieferungen des Marktes der Fortuna nach Gwynthor",
+                "usageTags": [
+                  "Signal",
+                  "Hirten",
+                  "Holz"
+                ],
+                "priceMin": "2",
+                "priceMax": "",
+                "priceNote": "",
+                "conditions": "Nach Ladenbestand. Fehlende Ware kann zur nächsten Sammellieferung angefragt werden."
+              },
+              {
+                "status": "available",
+                "imageFormat": "square",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 270,
+                "descriptionTitle": "Beschreibung",
+                "featuresTitle": "Auf einen Blick",
+                "originTitle": "Lieferung",
+                "usageTitle": "Verwendung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Hinweise",
+                "attributes": [
+                  {
+                    "label": "Nutzen",
+                    "value": 7
+                  },
+                  {
+                    "label": "Haltbarkeit",
+                    "value": 9
+                  },
+                  {
+                    "label": "Tragbarkeit",
+                    "value": 9
+                  },
+                  {
+                    "label": "Alltag",
+                    "value": 8
+                  },
+                  {
+                    "label": "Reise",
+                    "value": 9
+                  },
+                  {
+                    "label": "Preiswert",
+                    "value": 9
+                  }
+                ],
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "standard:gemischtwarenhandler:salzbeutel",
+                "category": "standard",
+                "title": "Salzbeutel (klein)",
+                "subtitle": "Proviant",
+                "unit": "1 Beutel",
+                "badge": "Standardsortiment",
+                "image": "./assets/pendrwn-general-store/goods/salzbeutel.png",
+                "description": "<p>Würzmittel und einfache Konservierung.</p>",
+                "features": [
+                  {
+                    "icon": "•",
+                    "text": "1 Beutel"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Salz"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Würze"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Konservierung"
+                  }
+                ],
+                "origin": "Regelmäßige Sammellieferungen des Marktes der Fortuna nach Gwynthor",
+                "usageTags": [
+                  "Salz",
+                  "Würze",
+                  "Konservierung"
+                ],
+                "priceMin": "4",
+                "priceMax": "",
+                "priceNote": "",
+                "conditions": "Nach Ladenbestand. Fehlende Ware kann zur nächsten Sammellieferung angefragt werden."
+              },
+              {
+                "status": "available",
+                "imageFormat": "square",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 270,
+                "descriptionTitle": "Beschreibung",
+                "featuresTitle": "Auf einen Blick",
+                "originTitle": "Lieferung",
+                "usageTitle": "Verwendung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Hinweise",
+                "attributes": [
+                  {
+                    "label": "Nutzen",
+                    "value": 4
+                  },
+                  {
+                    "label": "Haltbarkeit",
+                    "value": 4
+                  },
+                  {
+                    "label": "Tragbarkeit",
+                    "value": 10
+                  },
+                  {
+                    "label": "Alltag",
+                    "value": 7
+                  },
+                  {
+                    "label": "Reise",
+                    "value": 7
+                  },
+                  {
+                    "label": "Preiswert",
+                    "value": 10
+                  }
+                ],
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "standard:gemischtwarenhandler:holznadel",
+                "category": "standard",
+                "title": "Holznadel",
+                "subtitle": "Werkzeug",
+                "unit": "1 Stück",
+                "badge": "Standardsortiment",
+                "image": "./assets/pendrwn-general-store/goods/holznadel.png",
+                "description": "<p>Grobe Nadel für grobe Stoffe wie Leinen.</p>",
+                "features": [
+                  {
+                    "icon": "•",
+                    "text": "1 Stück"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Nadel"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Holz"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Leinen"
+                  }
+                ],
+                "origin": "Regelmäßige Sammellieferungen des Marktes der Fortuna nach Gwynthor",
+                "usageTags": [
+                  "Nadel",
+                  "Holz",
+                  "Leinen"
+                ],
+                "priceMin": "1",
+                "priceMax": "",
+                "priceNote": "",
+                "conditions": "Nach Ladenbestand. Fehlende Ware kann zur nächsten Sammellieferung angefragt werden."
+              },
+              {
+                "status": "available",
+                "imageFormat": "square",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 270,
+                "descriptionTitle": "Beschreibung",
+                "featuresTitle": "Auf einen Blick",
+                "originTitle": "Lieferung",
+                "usageTitle": "Verwendung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Hinweise",
+                "attributes": [
+                  {
+                    "label": "Nutzen",
+                    "value": 5
+                  },
+                  {
+                    "label": "Haltbarkeit",
+                    "value": 3
+                  },
+                  {
+                    "label": "Tragbarkeit",
+                    "value": 9
+                  },
+                  {
+                    "label": "Alltag",
+                    "value": 7
+                  },
+                  {
+                    "label": "Reise",
+                    "value": 7
+                  },
+                  {
+                    "label": "Preiswert",
+                    "value": 10
+                  }
+                ],
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "standard:gemischtwarenhandler:talgkerze",
+                "category": "standard",
+                "title": "Talgkerze",
+                "subtitle": "Lichtquelle",
+                "unit": "1 Stück",
+                "badge": "Standardsortiment",
+                "image": "./assets/pendrwn-general-store/goods/talgkerze.png",
+                "description": "<p>Einfache Kerze, brennt etwa zwei Stunden.</p>",
+                "features": [
+                  {
+                    "icon": "•",
+                    "text": "1 Stück"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Licht"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Talg"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Kerze"
+                  }
+                ],
+                "origin": "Regelmäßige Sammellieferungen des Marktes der Fortuna nach Gwynthor",
+                "usageTags": [
+                  "Licht",
+                  "Talg",
+                  "Kerze"
+                ],
+                "priceMin": "1",
+                "priceMax": "",
+                "priceNote": "",
+                "conditions": "Nach Ladenbestand. Fehlende Ware kann zur nächsten Sammellieferung angefragt werden."
+              },
+              {
+                "status": "available",
+                "imageFormat": "square",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 270,
+                "descriptionTitle": "Beschreibung",
+                "featuresTitle": "Auf einen Blick",
+                "originTitle": "Lieferung",
+                "usageTitle": "Verwendung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Hinweise",
+                "attributes": [
+                  {
+                    "label": "Nutzen",
+                    "value": 3
+                  },
+                  {
+                    "label": "Haltbarkeit",
+                    "value": 6
+                  },
+                  {
+                    "label": "Tragbarkeit",
+                    "value": 9
+                  },
+                  {
+                    "label": "Alltag",
+                    "value": 8
+                  },
+                  {
+                    "label": "Reise",
+                    "value": 5
+                  },
+                  {
+                    "label": "Preiswert",
+                    "value": 9
+                  }
+                ],
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "standard:gemischtwarenhandler:holzspielwuerfel",
+                "category": "standard",
+                "title": "Holzspielwürfel (Set)",
+                "subtitle": "Freizeit",
+                "unit": "1 Set",
+                "badge": "Standardsortiment",
+                "image": "./assets/pendrwn-general-store/goods/holzspielwuerfel.png",
+                "description": "<p>Handgeschnitzte Würfel für Spiele.</p>",
+                "features": [
+                  {
+                    "icon": "•",
+                    "text": "1 Set"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Spiel"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Würfel"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Freizeit"
+                  }
+                ],
+                "origin": "Regelmäßige Sammellieferungen des Marktes der Fortuna nach Gwynthor",
+                "usageTags": [
+                  "Spiel",
+                  "Würfel",
+                  "Freizeit"
+                ],
+                "priceMin": "3",
+                "priceMax": "",
+                "priceNote": "",
+                "conditions": "Nach Ladenbestand. Fehlende Ware kann zur nächsten Sammellieferung angefragt werden."
+              },
+              {
+                "status": "available",
+                "imageFormat": "square",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 270,
+                "descriptionTitle": "Beschreibung",
+                "featuresTitle": "Auf einen Blick",
+                "originTitle": "Lieferung",
+                "usageTitle": "Verwendung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Hinweise",
+                "attributes": [
+                  {
+                    "label": "Nutzen",
+                    "value": 4
+                  },
+                  {
+                    "label": "Haltbarkeit",
+                    "value": 3
+                  },
+                  {
+                    "label": "Tragbarkeit",
+                    "value": 10
+                  },
+                  {
+                    "label": "Alltag",
+                    "value": 8
+                  },
+                  {
+                    "label": "Reise",
+                    "value": 6
+                  },
+                  {
+                    "label": "Preiswert",
+                    "value": 10
+                  }
+                ],
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "standard:gemischtwarenhandler:kraeutersaeckchen",
+                "category": "standard",
+                "title": "Kräutersäckchen",
+                "subtitle": "Duftmittel",
+                "unit": "1 Säckchen",
+                "badge": "Standardsortiment",
+                "image": "./assets/pendrwn-general-store/goods/kraeutersaeckchen.png",
+                "description": "<p>Duftender Beutel gegen Gerüche oder für Gebete.</p>",
+                "features": [
+                  {
+                    "icon": "•",
+                    "text": "1 Säckchen"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Duft"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Kräuter"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Gebet"
+                  }
+                ],
+                "origin": "Regelmäßige Sammellieferungen des Marktes der Fortuna nach Gwynthor",
+                "usageTags": [
+                  "Duft",
+                  "Kräuter",
+                  "Gebet"
+                ],
+                "priceMin": "2",
+                "priceMax": "",
+                "priceNote": "",
+                "conditions": "Nach Ladenbestand. Fehlende Ware kann zur nächsten Sammellieferung angefragt werden."
+              },
+              {
+                "status": "available",
+                "imageFormat": "square",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 270,
+                "descriptionTitle": "Beschreibung",
+                "featuresTitle": "Auf einen Blick",
+                "originTitle": "Lieferung",
+                "usageTitle": "Verwendung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Hinweise",
+                "attributes": [
+                  {
+                    "label": "Nutzen",
+                    "value": 8
+                  },
+                  {
+                    "label": "Haltbarkeit",
+                    "value": 9
+                  },
+                  {
+                    "label": "Tragbarkeit",
+                    "value": 8
+                  },
+                  {
+                    "label": "Alltag",
+                    "value": 6
+                  },
+                  {
+                    "label": "Reise",
+                    "value": 9
+                  },
+                  {
+                    "label": "Preiswert",
+                    "value": 9
+                  }
+                ],
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "standard:gemischtwarenhandler:wetzstein",
+                "category": "standard",
+                "title": "Wetzstein",
+                "subtitle": "Werkzeug",
+                "unit": "1 Stück",
+                "badge": "Standardsortiment",
+                "image": "./assets/pendrwn-general-store/goods/wetzstein.png",
+                "description": "<p>Zum Schärfen von Klingen und Werkzeug.</p>",
+                "features": [
+                  {
+                    "icon": "•",
+                    "text": "1 Stück"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Schärfen"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Klinge"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Werkzeug"
+                  }
+                ],
+                "origin": "Regelmäßige Sammellieferungen des Marktes der Fortuna nach Gwynthor",
+                "usageTags": [
+                  "Schärfen",
+                  "Klinge",
+                  "Werkzeug"
+                ],
+                "priceMin": "4",
+                "priceMax": "",
+                "priceNote": "",
+                "conditions": "Nach Ladenbestand. Fehlende Ware kann zur nächsten Sammellieferung angefragt werden."
+              },
+              {
+                "status": "available",
+                "imageFormat": "square",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 270,
+                "descriptionTitle": "Beschreibung",
+                "featuresTitle": "Auf einen Blick",
+                "originTitle": "Lieferung",
+                "usageTitle": "Verwendung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Hinweise",
+                "attributes": [
+                  {
+                    "label": "Nutzen",
+                    "value": 2
+                  },
+                  {
+                    "label": "Haltbarkeit",
+                    "value": 6
+                  },
+                  {
+                    "label": "Tragbarkeit",
+                    "value": 8
+                  },
+                  {
+                    "label": "Alltag",
+                    "value": 7
+                  },
+                  {
+                    "label": "Reise",
+                    "value": 4
+                  },
+                  {
+                    "label": "Preiswert",
+                    "value": 6
+                  }
+                ],
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "standard:gemischtwarenhandler:holzfigur",
+                "category": "standard",
+                "title": "Holzfigur (klein)",
+                "subtitle": "Dekoration",
+                "unit": "1 Figur",
+                "badge": "Standardsortiment",
+                "image": "./assets/pendrwn-general-store/goods/holzfigur.png",
+                "description": "<p>Geschnitzte Figur, oft religiös oder familiär.</p>",
+                "features": [
+                  {
+                    "icon": "•",
+                    "text": "1 Figur"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Figur"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Holz"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Andenken"
+                  }
+                ],
+                "origin": "Regelmäßige Sammellieferungen des Marktes der Fortuna nach Gwynthor",
+                "usageTags": [
+                  "Figur",
+                  "Holz",
+                  "Andenken"
+                ],
+                "priceMin": "5",
+                "priceMax": "",
+                "priceNote": "",
+                "conditions": "Nach Ladenbestand. Fehlende Ware kann zur nächsten Sammellieferung angefragt werden."
+              },
+              {
+                "status": "available",
+                "imageFormat": "square",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 270,
+                "descriptionTitle": "Beschreibung",
+                "featuresTitle": "Auf einen Blick",
+                "originTitle": "Lieferung",
+                "usageTitle": "Verwendung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Hinweise",
+                "attributes": [
+                  {
+                    "label": "Nutzen",
+                    "value": 6
+                  },
+                  {
+                    "label": "Haltbarkeit",
+                    "value": 3
+                  },
+                  {
+                    "label": "Tragbarkeit",
+                    "value": 9
+                  },
+                  {
+                    "label": "Alltag",
+                    "value": 7
+                  },
+                  {
+                    "label": "Reise",
+                    "value": 8
+                  },
+                  {
+                    "label": "Preiswert",
+                    "value": 10
+                  }
+                ],
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "standard:gemischtwarenhandler:stoffstreifen",
+                "category": "standard",
+                "title": "Stoffstreifen (10 Stk.)",
+                "subtitle": "Verbrauchsgut",
+                "unit": "10 Stück",
+                "badge": "Standardsortiment",
+                "image": "./assets/pendrwn-general-store/goods/stoffstreifen.png",
+                "description": "<p>Saubere Stoffstücke für Verband oder Polsterung.</p>",
+                "features": [
+                  {
+                    "icon": "•",
+                    "text": "10 Stück"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Stoff"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Verband"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Polster"
+                  }
+                ],
+                "origin": "Regelmäßige Sammellieferungen des Marktes der Fortuna nach Gwynthor",
+                "usageTags": [
+                  "Stoff",
+                  "Verband",
+                  "Polster"
+                ],
+                "priceMin": "3",
+                "priceMax": "",
+                "priceNote": "",
+                "conditions": "Nach Ladenbestand. Fehlende Ware kann zur nächsten Sammellieferung angefragt werden."
+              },
+              {
+                "status": "available",
+                "imageFormat": "square",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 270,
+                "descriptionTitle": "Beschreibung",
+                "featuresTitle": "Auf einen Blick",
+                "originTitle": "Lieferung",
+                "usageTitle": "Verwendung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Hinweise",
+                "attributes": [
+                  {
+                    "label": "Nutzen",
+                    "value": 6
+                  },
+                  {
+                    "label": "Haltbarkeit",
+                    "value": 6
+                  },
+                  {
+                    "label": "Tragbarkeit",
+                    "value": 8
+                  },
+                  {
+                    "label": "Alltag",
+                    "value": 8
+                  },
+                  {
+                    "label": "Reise",
+                    "value": 8
+                  },
+                  {
+                    "label": "Preiswert",
+                    "value": 8
+                  }
+                ],
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "standard:gemischtwarenhandler:wollmuetze",
+                "category": "standard",
+                "title": "Wollmütze",
+                "subtitle": "Kleidung",
+                "unit": "1 Stück",
+                "badge": "Standardsortiment",
+                "image": "./assets/pendrwn-general-store/goods/wollmuetze.png",
+                "description": "<p>Gefilzte Mütze gegen Wind und Kälte.</p>",
+                "features": [
+                  {
+                    "icon": "•",
+                    "text": "1 Stück"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Wolle"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Kälte"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Kleidung"
+                  }
+                ],
+                "origin": "Regelmäßige Sammellieferungen des Marktes der Fortuna nach Gwynthor",
+                "usageTags": [
+                  "Wolle",
+                  "Kälte",
+                  "Kleidung"
+                ],
+                "priceMin": "6",
+                "priceMax": "",
+                "priceNote": "",
+                "conditions": "Nach Ladenbestand. Fehlende Ware kann zur nächsten Sammellieferung angefragt werden."
+              },
+              {
+                "status": "available",
+                "imageFormat": "square",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 270,
+                "descriptionTitle": "Beschreibung",
+                "featuresTitle": "Auf einen Blick",
+                "originTitle": "Lieferung",
+                "usageTitle": "Verwendung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Hinweise",
+                "attributes": [
+                  {
+                    "label": "Nutzen",
+                    "value": 5
+                  },
+                  {
+                    "label": "Haltbarkeit",
+                    "value": 6
+                  },
+                  {
+                    "label": "Tragbarkeit",
+                    "value": 10
+                  },
+                  {
+                    "label": "Alltag",
+                    "value": 7
+                  },
+                  {
+                    "label": "Reise",
+                    "value": 8
+                  },
+                  {
+                    "label": "Preiswert",
+                    "value": 10
+                  }
+                ],
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "standard:gemischtwarenhandler:lederflicken",
+                "category": "standard",
+                "title": "Lederflicken",
+                "subtitle": "Werkstoff",
+                "unit": "1 Stück",
+                "badge": "Standardsortiment",
+                "image": "./assets/pendrwn-general-store/goods/lederflicken.png",
+                "description": "<p>Kleines Lederstück zum Reparieren.</p>",
+                "features": [
+                  {
+                    "icon": "•",
+                    "text": "1 Stück"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Leder"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Reparatur"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Werkstoff"
+                  }
+                ],
+                "origin": "Regelmäßige Sammellieferungen des Marktes der Fortuna nach Gwynthor",
+                "usageTags": [
+                  "Leder",
+                  "Reparatur",
+                  "Werkstoff"
+                ],
+                "priceMin": "2",
+                "priceMax": "",
+                "priceNote": "",
+                "conditions": "Nach Ladenbestand. Fehlende Ware kann zur nächsten Sammellieferung angefragt werden."
+              },
+              {
+                "status": "available",
+                "imageFormat": "square",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 270,
+                "descriptionTitle": "Beschreibung",
+                "featuresTitle": "Auf einen Blick",
+                "originTitle": "Lieferung",
+                "usageTitle": "Verwendung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Hinweise",
+                "attributes": [
+                  {
+                    "label": "Nutzen",
+                    "value": 5
+                  },
+                  {
+                    "label": "Haltbarkeit",
+                    "value": 5
+                  },
+                  {
+                    "label": "Tragbarkeit",
+                    "value": 9
+                  },
+                  {
+                    "label": "Alltag",
+                    "value": 8
+                  },
+                  {
+                    "label": "Reise",
+                    "value": 5
+                  },
+                  {
+                    "label": "Preiswert",
+                    "value": 8
+                  }
+                ],
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "standard:gemischtwarenhandler:holznadelspiel",
+                "category": "standard",
+                "title": "Holznadelspiel",
+                "subtitle": "Handwerk",
+                "unit": "1 Set",
+                "badge": "Standardsortiment",
+                "image": "./assets/pendrwn-general-store/goods/holznadelspiel.png",
+                "description": "<p>Vier Nadeln für das Stricken von Socken.</p>",
+                "features": [
+                  {
+                    "icon": "•",
+                    "text": "1 Set"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Stricken"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Handwerk"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Holz"
+                  }
+                ],
+                "origin": "Regelmäßige Sammellieferungen des Marktes der Fortuna nach Gwynthor",
+                "usageTags": [
+                  "Stricken",
+                  "Handwerk",
+                  "Holz"
+                ],
+                "priceMin": "4",
+                "priceMax": "",
+                "priceNote": "",
+                "conditions": "Nach Ladenbestand. Fehlende Ware kann zur nächsten Sammellieferung angefragt werden."
+              },
+              {
+                "status": "available",
+                "imageFormat": "square",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 270,
+                "descriptionTitle": "Beschreibung",
+                "featuresTitle": "Auf einen Blick",
+                "originTitle": "Lieferung",
+                "usageTitle": "Verwendung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Hinweise",
+                "attributes": [
+                  {
+                    "label": "Nutzen",
+                    "value": 7
+                  },
+                  {
+                    "label": "Haltbarkeit",
+                    "value": 5
+                  },
+                  {
+                    "label": "Tragbarkeit",
+                    "value": 7
+                  },
+                  {
+                    "label": "Alltag",
+                    "value": 8
+                  },
+                  {
+                    "label": "Reise",
+                    "value": 7
+                  },
+                  {
+                    "label": "Preiswert",
+                    "value": 8
+                  }
+                ],
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "standard:gemischtwarenhandler:tonlampe",
+                "category": "standard",
+                "title": "Tonlampe",
+                "subtitle": "Lichtquelle",
+                "unit": "1 Stück",
+                "badge": "Standardsortiment",
+                "image": "./assets/pendrwn-general-store/goods/tonlampe.png",
+                "description": "<p>Öllampe aus Ton mit Dochtöffnung.</p>",
+                "features": [
+                  {
+                    "icon": "•",
+                    "text": "1 Stück"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Lampe"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Ton"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Öl"
+                  }
+                ],
+                "origin": "Regelmäßige Sammellieferungen des Marktes der Fortuna nach Gwynthor",
+                "usageTags": [
+                  "Lampe",
+                  "Ton",
+                  "Öl"
+                ],
+                "priceMin": "6",
+                "priceMax": "",
+                "priceNote": "",
+                "conditions": "Nach Ladenbestand. Fehlende Ware kann zur nächsten Sammellieferung angefragt werden."
+              },
+              {
+                "status": "available",
+                "imageFormat": "square",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 270,
+                "descriptionTitle": "Beschreibung",
+                "featuresTitle": "Auf einen Blick",
+                "originTitle": "Lieferung",
+                "usageTitle": "Verwendung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Hinweise",
+                "attributes": [
+                  {
+                    "label": "Nutzen",
+                    "value": 8
+                  },
+                  {
+                    "label": "Haltbarkeit",
+                    "value": 4
+                  },
+                  {
+                    "label": "Tragbarkeit",
+                    "value": 6
+                  },
+                  {
+                    "label": "Alltag",
+                    "value": 8
+                  },
+                  {
+                    "label": "Reise",
+                    "value": 10
+                  },
+                  {
+                    "label": "Preiswert",
+                    "value": 7
+                  }
+                ],
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "standard:gemischtwarenhandler:reisepaket-klein",
+                "category": "standard",
+                "title": "Reisepaket (klein)",
+                "subtitle": "Proviantpaket",
+                "unit": "1 Paket",
+                "badge": "Standardsortiment",
+                "image": "./assets/pendrwn-general-store/goods/reisepaket-klein.png",
+                "description": "<p>Tuchbündel mit Seife, Löffel, Brot und Wasser.</p>",
+                "features": [
+                  {
+                    "icon": "•",
+                    "text": "1 Paket"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Reise"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Paket"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Grundbedarf"
+                  }
+                ],
+                "origin": "Regelmäßige Sammellieferungen des Marktes der Fortuna nach Gwynthor",
+                "usageTags": [
+                  "Reise",
+                  "Paket",
+                  "Grundbedarf"
+                ],
+                "priceMin": "12",
+                "priceMax": "",
+                "priceNote": "",
+                "conditions": "Nach Ladenbestand. Fehlende Ware kann zur nächsten Sammellieferung angefragt werden."
+              },
+              {
+                "status": "available",
+                "imageFormat": "square",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 270,
+                "descriptionTitle": "Beschreibung",
+                "featuresTitle": "Auf einen Blick",
+                "originTitle": "Lieferung",
+                "usageTitle": "Verwendung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Hinweise",
+                "attributes": [
+                  {
+                    "label": "Nutzen",
+                    "value": 6
+                  },
+                  {
+                    "label": "Haltbarkeit",
+                    "value": 6
+                  },
+                  {
+                    "label": "Tragbarkeit",
+                    "value": 7
+                  },
+                  {
+                    "label": "Alltag",
+                    "value": 4
+                  },
+                  {
+                    "label": "Reise",
+                    "value": 8
+                  },
+                  {
+                    "label": "Preiswert",
+                    "value": 10
+                  }
+                ],
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "standard:gemischtwarenhandler:holzstab",
+                "category": "standard",
+                "title": "Holzstab (1m)",
+                "subtitle": "Ausrüstung",
+                "unit": "1 Stück",
+                "badge": "Standardsortiment",
+                "image": "./assets/pendrwn-general-store/goods/holzstab.png",
+                "description": "<p>Stabiler Wanderstab oder einfache Tragehilfe.</p>",
+                "features": [
+                  {
+                    "icon": "•",
+                    "text": "1 Stück"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Wanderstab"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Holz"
+                  },
+                  {
+                    "icon": "•",
+                    "text": "Tragehilfe"
+                  }
+                ],
+                "origin": "Regelmäßige Sammellieferungen des Marktes der Fortuna nach Gwynthor",
+                "usageTags": [
+                  "Wanderstab",
+                  "Holz",
+                  "Tragehilfe"
+                ],
+                "priceMin": "3",
+                "priceMax": "",
+                "priceNote": "",
+                "conditions": "Nach Ladenbestand. Fehlende Ware kann zur nächsten Sammellieferung angefragt werden."
+              }
+            ],
+            "footerCards": [
+              {
+                "icon": "♧",
+                "title": "Bestellen statt suchen",
+                "text": "Was gerade fehlt, lässt Cadwgan bei der nächsten Lieferung anfragen. Preis und Ankunft werden vor einer verbindlichen Bestellung vereinbart."
+              },
+              {
+                "icon": "◈",
+                "title": "Verkauf am Tresen",
+                "text": "Die angegebenen Einheiten gelten pro Stück, Set oder Bündel. Die Waren werden im Laden bezahlt und von Hand ausgegeben."
+              }
+            ]
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "voller-korb-eigenes",
+          "pageTitle": "Eigenes Sortiment",
+          "tradeCatalogPage": true,
+          "tradeCatalog": {
+            "headerIcon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Pendrwn.png",
+            "title": "Güterregister",
+            "subtitle": "Eigenes Sortiment · zehn nützliche Besonderheiten",
+            "categories": [
+              {
+                "id": "haushalt",
+                "label": "Im Haushalt"
+              },
+              {
+                "id": "werkzeug",
+                "label": "Handwerk und Handel"
+              },
+              {
+                "id": "unterwegs",
+                "label": "Unterwegs"
+              }
+            ],
+            "allLabel": "Alles zeigen",
+            "noteIcon": "◈",
+            "noteTitle": "Vom Markt der Fortuna in den Vollen Korb",
+            "noteText": "Zehn zusätzliche Waren außerhalb des Standardsortiments: praktische Lösungen für kleine alltägliche Ärgernisse. Cadwgan wählt sie selbst aus und bestellt nur überschaubare Mengen.",
+            "items": [
+              {
+                "status": "available",
+                "imageFormat": "square",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 270,
+                "descriptionTitle": "Beschreibung",
+                "featuresTitle": "Auf einen Blick",
+                "originTitle": "Lieferung",
+                "usageTitle": "Verwendung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Hinweise",
+                "attributes": [],
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "pendrwn:balkenwaage",
+                "title": "Kleine Balkenwaage mit Gewichten",
+                "category": "werkzeug",
+                "subtitle": "Cadwgans eigene Auswahl",
+                "unit": "Ein Set",
+                "image": "./assets/pendrwn-general-store/goods/balkenwaage.png",
+                "badge": "Eigene Auswahl",
+                "description": "<p>Eine kleine zusammenlegbare Messingwaage mit zwei Schalen und sechs abgestuften Gewichten. Zum Abwiegen kleiner Vorräte und Handelsmengen; keine amtliche Eichung.</p>",
+                "features": [
+                  {
+                    "icon": "•",
+                    "text": "Ein Set"
+                  }
+                ],
+                "origin": "Durch den Markt der Fortuna für den Vollen Korb beschafft",
+                "usageTags": [
+                  "Handwerk und Handel"
+                ],
+                "priceMin": "48",
+                "priceMax": "",
+                "priceNote": "Preis für die beschriebene Einheit.",
+                "conditions": "Kleine Stückzahlen. Maße und passende Größen vor dem Kauf prüfen."
+              },
+              {
+                "status": "available",
+                "imageFormat": "square",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 270,
+                "descriptionTitle": "Beschreibung",
+                "featuresTitle": "Auf einen Blick",
+                "originTitle": "Lieferung",
+                "usageTitle": "Verwendung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Hinweise",
+                "attributes": [],
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "pendrwn:oeltuch",
+                "title": "Gewachstes Abdecktuch",
+                "category": "haushalt",
+                "subtitle": "Cadwgans eigene Auswahl",
+                "unit": "Ein Tuch · etwa 1,5 × 1,5 Schritt",
+                "image": "./assets/pendrwn-general-store/goods/oeltuch.png",
+                "badge": "Eigene Auswahl",
+                "description": "<p>Dichtes mit Wachs behandeltes Leinen schützt Körbe und Gepäck vor Spritzwasser und kurzem Regen. Nach Gebrauch trocken ausbreiten; nicht feuerfest.</p>",
+                "features": [
+                  {
+                    "icon": "•",
+                    "text": "Ein Tuch · etwa 1,5 × 1,5 Schritt"
+                  }
+                ],
+                "origin": "Durch den Markt der Fortuna für den Vollen Korb beschafft",
+                "usageTags": [
+                  "Im Haushalt"
+                ],
+                "priceMin": "16",
+                "priceMax": "",
+                "priceNote": "Preis für die beschriebene Einheit.",
+                "conditions": "Kleine Stückzahlen. Maße und passende Größen vor dem Kauf prüfen."
+              },
+              {
+                "status": "available",
+                "imageFormat": "square",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 270,
+                "descriptionTitle": "Beschreibung",
+                "featuresTitle": "Auf einen Blick",
+                "originTitle": "Lieferung",
+                "usageTitle": "Verwendung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Hinweise",
+                "attributes": [],
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "pendrwn:fasshahn",
+                "title": "Hölzerner Fasshahn",
+                "category": "haushalt",
+                "subtitle": "Cadwgans eigene Auswahl",
+                "unit": "Ein Stück",
+                "image": "./assets/pendrwn-general-store/goods/fasshahn.png",
+                "badge": "Eigene Auswahl",
+                "description": "<p>Ein passgenau gedrechselter Zapfhahn mit Holzriegel für kleine Vorratsfässer. Rhun prüft vor dem Kauf den benötigten Durchmesser; das Fass gehört nicht dazu.</p>",
+                "features": [
+                  {
+                    "icon": "•",
+                    "text": "Ein Stück"
+                  }
+                ],
+                "origin": "Durch den Markt der Fortuna für den Vollen Korb beschafft",
+                "usageTags": [
+                  "Im Haushalt"
+                ],
+                "priceMin": "9",
+                "priceMax": "",
+                "priceNote": "Preis für die beschriebene Einheit.",
+                "conditions": "Kleine Stückzahlen. Maße und passende Größen vor dem Kauf prüfen."
+              },
+              {
+                "status": "available",
+                "imageFormat": "square",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 270,
+                "descriptionTitle": "Beschreibung",
+                "featuresTitle": "Auf einen Blick",
+                "originTitle": "Lieferung",
+                "usageTitle": "Verwendung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Hinweise",
+                "attributes": [],
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "pendrwn:tuerkeil",
+                "title": "Türkeil mit Zugschlaufe",
+                "category": "haushalt",
+                "subtitle": "Cadwgans eigene Auswahl",
+                "unit": "Ein Stück",
+                "image": "./assets/pendrwn-general-store/goods/tuerkeil.png",
+                "badge": "Eigene Auswahl",
+                "description": "<p>Ein breiter Keil aus Buche hält eine leichte Innentür offen. Die feste Lederschlaufe erleichtert das Herausziehen, wenn die Tür sich gesetzt hat.</p>",
+                "features": [
+                  {
+                    "icon": "•",
+                    "text": "Ein Stück"
+                  }
+                ],
+                "origin": "Durch den Markt der Fortuna für den Vollen Korb beschafft",
+                "usageTags": [
+                  "Im Haushalt"
+                ],
+                "priceMin": "3",
+                "priceMax": "",
+                "priceNote": "Preis für die beschriebene Einheit.",
+                "conditions": "Kleine Stückzahlen. Maße und passende Größen vor dem Kauf prüfen."
+              },
+              {
+                "status": "available",
+                "imageFormat": "square",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 270,
+                "descriptionTitle": "Beschreibung",
+                "featuresTitle": "Auf einen Blick",
+                "originTitle": "Lieferung",
+                "usageTitle": "Verwendung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Hinweise",
+                "attributes": [],
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "pendrwn:schnallenkaestchen",
+                "title": "Schnallen- und Riemenbeschläge",
+                "category": "werkzeug",
+                "subtitle": "Cadwgans eigene Auswahl",
+                "unit": "Ein Kästchen",
+                "image": "./assets/pendrwn-general-store/goods/schnallenkaestchen.png",
+                "badge": "Eigene Auswahl",
+                "description": "<p>Drei schlichte Eisenschnallen, sechs Riemennieten und zwei Riemenschlaufen im kleinen Schiebekästchen. Ersatzteile für vorhandene Gurte; Leder und Nähzeug werden getrennt verkauft.</p>",
+                "features": [
+                  {
+                    "icon": "•",
+                    "text": "Ein Kästchen"
+                  }
+                ],
+                "origin": "Durch den Markt der Fortuna für den Vollen Korb beschafft",
+                "usageTags": [
+                  "Handwerk und Handel"
+                ],
+                "priceMin": "18",
+                "priceMax": "",
+                "priceNote": "Preis für die beschriebene Einheit.",
+                "conditions": "Kleine Stückzahlen. Maße und passende Größen vor dem Kauf prüfen."
+              },
+              {
+                "status": "available",
+                "imageFormat": "square",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 270,
+                "descriptionTitle": "Beschreibung",
+                "featuresTitle": "Auf einen Blick",
+                "originTitle": "Lieferung",
+                "usageTitle": "Verwendung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Hinweise",
+                "attributes": [],
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "pendrwn:gewuerzdose",
+                "title": "Reisegewürzdose mit drei Fächern",
+                "category": "unterwegs",
+                "subtitle": "Cadwgans eigene Auswahl",
+                "unit": "Eine gefüllte Dose",
+                "image": "./assets/pendrwn-general-store/goods/gewuerzdose.png",
+                "badge": "Eigene Auswahl",
+                "description": "<p>Eine kleine gut schließende Zinndose mit Kümmel, getrocknetem Thymian und Senfkörnern in drei getrennten Fächern. Für Reisekessel und kleine Küchen.</p>",
+                "features": [
+                  {
+                    "icon": "•",
+                    "text": "Eine gefüllte Dose"
+                  }
+                ],
+                "origin": "Durch den Markt der Fortuna für den Vollen Korb beschafft",
+                "usageTags": [
+                  "Unterwegs"
+                ],
+                "priceMin": "14",
+                "priceMax": "",
+                "priceNote": "Preis für die beschriebene Einheit.",
+                "conditions": "Kleine Stückzahlen. Maße und passende Größen vor dem Kauf prüfen."
+              },
+              {
+                "status": "available",
+                "imageFormat": "square",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 270,
+                "descriptionTitle": "Beschreibung",
+                "featuresTitle": "Auf einen Blick",
+                "originTitle": "Lieferung",
+                "usageTitle": "Verwendung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Hinweise",
+                "attributes": [],
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "pendrwn:klapphocker",
+                "title": "Klapphocker aus Eschenholz",
+                "category": "unterwegs",
+                "subtitle": "Cadwgans eigene Auswahl",
+                "unit": "Ein Stück",
+                "image": "./assets/pendrwn-general-store/goods/klapphocker.png",
+                "badge": "Eigene Auswahl",
+                "description": "<p>Ein niedriger dreibeiniger Klapphocker mit festem Ledersitz. Passt unter den Arm und dient am Marktstand, beim Flicken oder auf einer Rast.</p>",
+                "features": [
+                  {
+                    "icon": "•",
+                    "text": "Ein Stück"
+                  }
+                ],
+                "origin": "Durch den Markt der Fortuna für den Vollen Korb beschafft",
+                "usageTags": [
+                  "Unterwegs"
+                ],
+                "priceMin": "28",
+                "priceMax": "",
+                "priceNote": "Preis für die beschriebene Einheit.",
+                "conditions": "Kleine Stückzahlen. Maße und passende Größen vor dem Kauf prüfen."
+              },
+              {
+                "status": "available",
+                "imageFormat": "square",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 270,
+                "descriptionTitle": "Beschreibung",
+                "featuresTitle": "Auf einen Blick",
+                "originTitle": "Lieferung",
+                "usageTitle": "Verwendung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Hinweise",
+                "attributes": [],
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "pendrwn:flaschenstopfen",
+                "title": "Korken und Flaschenstopfen",
+                "category": "haushalt",
+                "subtitle": "Cadwgans eigene Auswahl",
+                "unit": "Sechs Stück",
+                "image": "./assets/pendrwn-general-store/goods/flaschenstopfen.png",
+                "badge": "Eigene Auswahl",
+                "description": "<p>Sechs saubere Korkstopfen in drei gängigen Größen, mit einem schmalen Band zusammengehalten. Zum erneuten Verschließen von Vorrats- und Ölflaschen.</p>",
+                "features": [
+                  {
+                    "icon": "•",
+                    "text": "Sechs Stück"
+                  }
+                ],
+                "origin": "Durch den Markt der Fortuna für den Vollen Korb beschafft",
+                "usageTags": [
+                  "Im Haushalt"
+                ],
+                "priceMin": "5",
+                "priceMax": "",
+                "priceNote": "Preis für die beschriebene Einheit.",
+                "conditions": "Kleine Stückzahlen. Maße und passende Größen vor dem Kauf prüfen."
+              },
+              {
+                "status": "available",
+                "imageFormat": "square",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 270,
+                "descriptionTitle": "Beschreibung",
+                "featuresTitle": "Auf einen Blick",
+                "originTitle": "Lieferung",
+                "usageTitle": "Verwendung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Hinweise",
+                "attributes": [],
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "pendrwn:schriftroehre",
+                "title": "Wetterfeste Dokumentenröhre",
+                "category": "unterwegs",
+                "subtitle": "Cadwgans eigene Auswahl",
+                "unit": "Ein leeres Etui",
+                "image": "./assets/pendrwn-general-store/goods/schriftroehre.png",
+                "badge": "Eigene Auswahl",
+                "description": "<p>Eine schlanke hölzerne Dokumentenröhre mit gewachster Lederhülle und dicht schließendem Steckdeckel. Hält Briefe und Karten bei Regen trocken; für längeres Untertauchen ungeeignet.</p>",
+                "features": [
+                  {
+                    "icon": "•",
+                    "text": "Ein leeres Etui"
+                  }
+                ],
+                "origin": "Durch den Markt der Fortuna für den Vollen Korb beschafft",
+                "usageTags": [
+                  "Unterwegs"
+                ],
+                "priceMin": "22",
+                "priceMax": "",
+                "priceNote": "Preis für die beschriebene Einheit.",
+                "conditions": "Kleine Stückzahlen. Maße und passende Größen vor dem Kauf prüfen."
+              },
+              {
+                "status": "available",
+                "imageFormat": "square",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 270,
+                "descriptionTitle": "Beschreibung",
+                "featuresTitle": "Auf einen Blick",
+                "originTitle": "Lieferung",
+                "usageTitle": "Verwendung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Hinweise",
+                "attributes": [],
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "pendrwn:vorratsdose",
+                "title": "Dicht schließende Vorratsdose",
+                "category": "haushalt",
+                "subtitle": "Cadwgans eigene Auswahl",
+                "unit": "Eine leere Dose · etwa 2 Liter",
+                "image": "./assets/pendrwn-general-store/goods/vorratsdose.png",
+                "badge": "Eigene Auswahl",
+                "description": "<p>Eine schlichte verzinnte Dose mit übergreifendem Deckel bewahrt trockenes Mehl, Tee oder Saatgut auf. Erschwert Mäusen den Zugriff und hält den Inhalt ordentlich zusammen.</p>",
+                "features": [
+                  {
+                    "icon": "•",
+                    "text": "Eine leere Dose · etwa 2 Liter"
+                  }
+                ],
+                "origin": "Durch den Markt der Fortuna für den Vollen Korb beschafft",
+                "usageTags": [
+                  "Im Haushalt"
+                ],
+                "priceMin": "19",
+                "priceMax": "",
+                "priceNote": "Preis für die beschriebene Einheit.",
+                "conditions": "Kleine Stückzahlen. Maße und passende Größen vor dem Kauf prüfen."
+              }
+            ],
+            "footerCards": [
+              {
+                "icon": "♧",
+                "title": "Bestellen statt suchen",
+                "text": "Was gerade fehlt, lässt Cadwgan bei der nächsten Lieferung anfragen. Preis und Ankunft werden vor einer verbindlichen Bestellung vereinbart."
+              },
+              {
+                "icon": "◈",
+                "title": "Verkauf am Tresen",
+                "text": "Die angegebenen Einheiten gelten pro Stück, Set oder Bündel. Die Waren werden im Laden bezahlt und von Hand ausgegeben."
+              }
+            ]
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "voller-korb-verkaufsraum",
+          "pageTitle": "Der Verkaufsraum · Zwischen Regal und Tresen",
+          "image": "./assets/pendrwn-general-store/scenes/verkaufsraum.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Eine kleine Glocke meldet die Tür. Über dem niedrigen Tresen hängen Laternen und Seilbündel; dahinter stehen Tongefäße, Tücher und beschriftete Holzschübe. Links bleibt ein schmaler Gang zu den Auslagen frei. Am Fenster liegt ein aufgeschlagenes Bestellbuch. Es riecht nach Leinen, Bienenwachs und frischem Holz.</p>",
+          "sessionHint": "Eine Begegnung im Vollen Korb.",
+          "sessionEmptyTitle": "Die Ladenglocke schweigt noch",
+          "sessionEmptyText": "Ein Einkauf, eine Lieferung oder ein Gespräch hinter dem Tresen kann hier beginnen.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "voller-korb-hinterstube",
+          "pageTitle": "Die Hinterstube · Bücher und Bestellungen",
+          "image": "./assets/pendrwn-general-store/scenes/hinterstube.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Hinter dem Vorhang wird es stiller. Auf dem schlichten Schreibtisch liegen Idwals Rechnungsbuch, ein Tintenfass und gebündelte Lieferscheine. Zwei Stühle reichen für ein Gespräch. Ein abschließbarer Schrank nimmt Kasse und Verträge auf; durch die angelehnte Tür sind die Stimmen aus dem Laden zu hören.</p>",
+          "sessionHint": "Eine Begegnung im Vollen Korb.",
+          "sessionEmptyTitle": "Die Ladenglocke schweigt noch",
+          "sessionEmptyText": "Ein Einkauf, eine Lieferung oder ein Gespräch hinter dem Tresen kann hier beginnen.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "voller-korb-warenlager",
+          "pageTitle": "Das Warenlager · An der Lieferpforte",
+          "image": "./assets/pendrwn-general-store/scenes/warenlager.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Die hintere Pforte öffnet sich zu einem engen gepflasterten Liefergang. Drinnen stehen Kisten und Säcke auf niedrigen Holzrosten. Rhun hält die neue Fracht von den bereits gezählten Beständen getrennt. Ein Hakenbrett für Trageriemen hängt neben der Tür; auf dem sonnigen Fenstersims hat Fflam gewöhnlich seinen Platz.</p>",
+          "sessionHint": "Eine Begegnung im Vollen Korb.",
+          "sessionEmptyTitle": "Die Ladenglocke schweigt noch",
+          "sessionEmptyText": "Ein Einkauf, eine Lieferung oder ein Gespräch hinter dem Tresen kann hier beginnen.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "authorization": "User explicitly approved alpha and transparent outer margin correction for the Rhwyd crest on 2026-10-17.",
+  "originalRgbPreserved": true,
+  "shape": "circle",
+  "originalSize": [
+    1254,
+    1254
+  ],
+  "finalSize": [
+    1263,
+    1263
+  ],
+  "originalBounds": [
+    70,
+    67,
+    1184,
+    1177
+  ],
+  "offset": [
+    5,
+    9
+  ],
+  "radius": [
+    545.0,
+    545.0
+  ],
+  "originalSha256": "fe36a7abef3072396c1c1f8f0b90c9ace135bcfa69b23623260634ebd7cca615",
+  "finalSha256": "daf35b1a4570f67b31a247671e2f33f09189cbc60b48bf78ead532cae5f6c21c",
+  "method": "Existing normalize(record, circular=True) from AleriaAlmanach/scripts/normalize-theater-signs-alpha.py; no regeneration or RGB resampling.",
+  "helperSha256": "8b81e7d74bc704facd0574022bca04e57f6ddb61efedc823b4aa75a62496e152",
+  "validation": {
+    "rgbPixelsUnchangedFromNewGeneration": true,
+    "originalPreserved": true,
+    "alphaValues": [
+      0,
+      255
+    ],
+    "circleCentered": true,
+    "silhouetteBounds": [
+      86,
+      86,
+      1177,
+      1177
+    ],
+    "marginPixels": 86,
+    "motifWidthPercent": 86.38,
+    "all23AssetHashesMatch": true,
+    "revision": 2
+  }
+}

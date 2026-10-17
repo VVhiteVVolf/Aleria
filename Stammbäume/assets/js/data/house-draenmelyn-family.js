@@ -223,7 +223,7 @@ export const HOUSE_DRAENMELYN_FAMILY = Object.freeze({
     ...BASE_FAMILY.extensions,
     blankFamily: false,
     pendingDescendantReview: false,
-    sourceRevision: 8,
+    sourceRevision: 9,
     registryManagedViewFields: Object.freeze(['focusPersonId', 'limitGenerations']),
     registryTombstones: Object.freeze({
       persons: Object.freeze(['floyd-ysgrif']),

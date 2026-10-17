@@ -102,8 +102,8 @@ export const HOUSE_ENEINIOG_FAMILY = Object.freeze({
     person('ceridwenog-eneiniog', 'Ceridwenog Eneiniog', 'female', '1637', '1712'),
     unknownSpouse('unknown-spouse-ceridwenog-eneiniog', 'male'),
     person('peredur-eneiniog', 'Peredur Eneiniog', 'male', '1645', '', ENEINIOG_HOUSE_ID, {
-      title: 'Priester des Vaters',
-      notes: 'Hochrangiger Geistlicher und Priester des Vaters aus Gwynthor im direkten Dienst des Patriarchen; bekannt für ruhige Güte und maßvolle Autorität.'
+      title: 'Hoher Prälat · Priester des Vaters',
+      notes: 'Einer der neun hohen Prälaten im persönlichen Kreis des Patriarchen Gwalchgwyn Saethwyr an Gwynthors Großer Kathedrale der Neun; Priester des Vaters, bekannt für ruhige Güte und maßvolle Autorität. Ein besonderes Ressort ist noch nicht festgelegt.'
     }),
     unknownSpouse('unknown-spouse-peredur-eneiniog', 'female'),
     person('tuduryn-eneiniog', 'Tuduryn Eneiniog', 'male', '1648', '1725'),
@@ -132,8 +132,8 @@ export const HOUSE_ENEINIOG_FAMILY = Object.freeze({
 
     // Elterngeneration des Jahres 1740.
     person('angharad-eneiniog', 'Angharad Eneiniog', 'female', '1692', '', ENEINIOG_HOUSE_ID, {
-      title: 'Paladin der Kirche von Gwynthor',
-      notes: 'Möchte eines Tages wie Sir Lywell durch Cenyr ziehen, ist gegenwärtig jedoch unverheiratet.'
+      title: 'Paladin im Stab des Patriarchen von Celtigerns Wacht',
+      notes: 'Gehört an der Großen Kathedrale der Neun in Gwynthor zu den sechs Paladinen unter dem Hochpaladin des Patriarchen Gwalchgwyn Saethwyr. Möchte eines Tages wie Sir Lywell durch Cenyr ziehen, ist gegenwärtig jedoch unverheiratet.'
     }),
     person('owain-eneiniog', 'Owain Eneiniog', 'male', '1695', '', ENEINIOG_HOUSE_ID, {
       title: 'Erster Erbe des Hauses Eneiniog'

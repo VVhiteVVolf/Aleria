@@ -1,0 +1,190 @@
+{
+  "schema": "aleria.family-tree",
+  "schemaVersion": 1,
+  "document": {
+    "id": "haus-fontani",
+    "title": "Haus Fontani",
+    "motto": "Aqua et Quies · Wasser und Ruhe",
+    "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Fontani.png",
+    "description": "Kleine argentische Bürgerfamilie in Gwynthor. Seit mehreren Generationen betreibt sie das von ihren Vorfahren nach argentischer Baukunst errichtete Badehaus. Der Stammbaum zeigt vorerst nur Cassiano, Livia und Terenzio; ältere Angehörige sind noch nicht einzeln ausgearbeitet.",
+    "houseProfile": {
+      "rankId": "commoner",
+      "seat": "Gwynthor",
+      "barony": "Llamreis Ankunft",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "house-draig",
+      "liegeHouseName": "Haus Draig",
+      "regionEmblems": {
+        "seat": "",
+        "barony": "",
+        "county": "",
+        "kingdom": ""
+      }
+    }
+  },
+  "houses": [
+    {
+      "id": "house-fontani",
+      "name": "Haus Fontani",
+      "status": "active",
+      "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Fontani.png"
+    }
+  ],
+  "persons": [
+    {
+      "id": "cassiano-fontani",
+      "worldPersonId": "person--haus-fontani--cassiano-fontani",
+      "name": "Cassiano Lucius Fontani",
+      "title": "Inhaber und Badermeister",
+      "sex": "male",
+      "status": "alive",
+      "birth": "1691",
+      "death": "",
+      "portrait": "../AleriaAlmanach/assets/gwynthor-bathhouse/portraits/cassiano.png",
+      "portraitPlaceholder": "auto",
+      "houseId": "house-fontani",
+      "familyRole": "core",
+      "lineageRole": "branch",
+      "tags": [],
+      "notes": "Aus dem Kaiserreich Argentum gebürtig, kam Cassiano als junger Mann zu seiner bereits seit Generationen in Gwynthor ansässigen Familie. Heute führt er das ererbte Badehaus mit ruhiger Aufmerksamkeit und dem Stolz eines Handwerkers, der sein Haus vom Feuerzug bis zum frischen Leinen kennt.",
+      "extensions": {
+        "registryManagedFields": [
+          "title",
+          "notes",
+          "portrait"
+        ]
+      }
+    },
+    {
+      "id": "livia-fontani",
+      "worldPersonId": "person--haus-fontani--livia-fontani",
+      "name": "Livia",
+      "title": "Hausführung, Empfang und Wäsche",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1694",
+      "death": "",
+      "portrait": "../AleriaAlmanach/assets/gwynthor-bathhouse/portraits/livia.png",
+      "portraitPlaceholder": "auto",
+      "houseId": "",
+      "familyRole": "married",
+      "lineageRole": "branch",
+      "tags": [],
+      "notes": "Cassianos Gemahlin führt den Empfang und den Haushalt des Badehauses. Sie kennt die Wünsche der Stammgäste, behält Vorräte und Wäsche im Blick und setzt die Sauberkeit des Hauses mit freundlicher Bestimmtheit durch. Ihr Herkunftshaus ist noch nicht festgelegt.",
+      "extensions": {
+        "registryManagedFields": [
+          "title",
+          "notes",
+          "portrait"
+        ]
+      }
+    },
+    {
+      "id": "terenzio-fontani",
+      "worldPersonId": "person--haus-fontani--terenzio-fontani",
+      "name": "Terenzio Fontani",
+      "title": "Wasser- und Heizwerk, Bader in Ausbildung",
+      "sex": "male",
+      "status": "alive",
+      "birth": "1716",
+      "death": "",
+      "portrait": "../AleriaAlmanach/assets/gwynthor-bathhouse/portraits/terenzio.png",
+      "portraitPlaceholder": "auto",
+      "houseId": "house-fontani",
+      "familyRole": "core",
+      "lineageRole": "branch",
+      "tags": [],
+      "notes": "Der in Gwynthor geborene Sohn Cassianos und Livias erlernt das Baderhandwerk. Er betreut Brunnen, Vorratsbehälter und Feuerzüge, teilt mit dem Heizer die Arbeit ein und achtet darauf, dass Wärme und Wasser rechtzeitig bereitstehen. Er ist unverheiratet.",
+      "extensions": {
+        "registryManagedFields": [
+          "title",
+          "notes",
+          "portrait"
+        ]
+      }
+    }
+  ],
+  "partnerships": [
+    {
+      "id": "marriage-cassiano-livia-fontani",
+      "participantIds": [
+        "cassiano-fontani",
+        "livia-fontani"
+      ],
+      "type": "marriage",
+      "status": "active",
+      "start": "1714",
+      "end": "",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    }
+  ],
+  "parentages": [
+    {
+      "id": "parentage-terenzio-fontani",
+      "childId": "terenzio-fontani",
+      "parentIds": [
+        "cassiano-fontani",
+        "livia-fontani"
+      ],
+      "partnershipId": "marriage-cassiano-livia-fontani",
+      "type": "biological",
+      "legitimacy": "legitimate",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    }
+  ],
+  "cadetBranches": [],
+  "timeJumps": [],
+  "lineage": {
+    "founderPartnershipId": "marriage-cassiano-livia-fontani",
+    "houseId": "house-fontani",
+    "crestSubtitle": "Argentische Badekunst in Gwynthor",
+    "crestEmblemScale": 0.86,
+    "crestFrame": "iron",
+    "crestFrameScale": 1,
+    "timeGap": {
+      "enabled": false,
+      "years": 0,
+      "fromYear": "",
+      "toYear": "",
+      "label": ""
+    }
+  },
+  "presentation": {
+    "relationshipColors": {
+      "marriage": "#326c4a",
+      "engagement": "#b88b37",
+      "union": "#8e2724",
+      "affair": "#704485",
+      "concubinage": "#704485",
+      "political": "#9d7d48",
+      "forced": "#c7a974",
+      "biological": "#8e2724",
+      "adoptive": "#2f75a8",
+      "foster": "#2f75a8",
+      "step": "#7eb4d7",
+      "magical": "#704485",
+      "claimed": "#62615e"
+    }
+  },
+  "view": {
+    "focusPersonId": "cassiano-fontani",
+    "orientation": "vertical",
+    "ancestorDepth": 4,
+    "descendantDepth": 4,
+    "limitGenerations": false,
+    "showSiblings": true
+  },
+  "extensions": {
+    "blankFamily": false,
+    "sourceRevision": 1,
+    "sourceNote": "Lokaler Badehaus-Entwurf vom 17.10.2026. Der Darstellungsbeginn beim heutigen Ehepaar behauptet keine Betriebsgründung durch Cassiano. Er kam selbst aus Argentum zu seiner bereits in Gwynthor ansässigen Familie. Livias Herkunftshaus bleibt offen; frühere Generationen werden nicht erfunden."
+  }
+}

@@ -310,6 +310,8 @@
           commonerHouse("maerllys", "Maerllys"),
           commonerHouse("raves", "Raves"),
           commonerHouse("vann", "Vann"),
+          commonerHouse("fontani", "Fontani"),
+          commonerHouse("rhwyd", "Rhwyd"),
           house("haus-gofrann", "Haus Gofrann", "Bürgerliches Haus", "Gwynthor · Zum Dritten Funken", "Haus Tlawd", `${commonerRoot}/Gofrann.png`),
           commonerHouse("braglas", "Braglas"),
           commonerHouse("tonnarth", "Tonnarth"),
@@ -325,6 +327,23 @@
     ]),
 
     merchants: Object.freeze([
+      Object.freeze({ name: "Zum Vollen Korb", image: "/Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Pendrwn.png", symbolAlt: "Haus Pendrwn · Der Schlüssel",
+        trade: "Gemischtwaren · Werkzeuge und Sonstiges", owner: "Cadwgan und Idwal Pendrwn", wealth: "Solide", reputation: "Verlässlich und bodenständig", influence: "Gwynthorer Haushalte und Reisende",
+        description: "Cadwgans eigener Pendrwn-Zweig führt mit Idwal den kleinen Gemischtwarenladen. Regelmäßige Lieferungen des Marktes der Fortuna füllen die Regale; zehn eigene Alltagswaren ergänzen das Standardsortiment." }),
+      Object.freeze({ name: "Zum Kleinen Durst", image: "/AleriaAlmanach/assets/kleiner-durst/schild.png", symbolAlt: "Zum Kleinen Durst · Der winzige Becher",
+        trade: "Einfache Hafenkneipe", owner: "Efa und Iorwerth Rhwyd", wealth: "Überschuldet", reputation: "Bei Fischern und Matrosen beliebt", influence: "Die unmittelbaren Docks",
+        description: "Winzige Kneipe direkt am Kai mit billigem Ausschank und einer bescheidenen Fischkarte. Die Rhwyd kommen gerade über die Runden; Zimmer werden nicht vermietet." }),
+      Object.freeze({
+        name: "Badehaus der Fontani",
+        image: "/Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Fontani.png",
+        symbolAlt: "Haus Fontani · Silberner Wasserkrug und goldener Lorbeerzweig",
+        trade: "Badehaus & Baderhandwerk",
+        owner: "Cassiano Lucius Fontani",
+        wealth: "Solide",
+        reputation: "Etabliertes Familienhaus",
+        influence: "Gwynthor",
+        description: "Seit mehreren Generationen bewahrt die aus Argentum stammende Familie ihre Badekunst in Gwynthor. Cassiano, Livia und Terenzio führen die kleine Badehalle und zwei private Wannenstuben."
+      }),
       Object.freeze({
         name: "Göttliche Eleganz",
         image: "/AleriaAlmanach/assets/goettliche-eleganz/schild.png",
@@ -443,6 +462,8 @@
 
       culture: section(
         paragraph("Gwynthor ist an Wohlstand, Besucher und den Austausch fremder Waren gewöhnt. Musik, Dichtung, bildende Kunst und öffentliche Unterhaltung besitzen einen festen Platz im städtischen Leben. Adelshöfe, Tempel, Schenken und Marktplätze tragen jeweils ihre eigenen Formen von Fest, Vortrag und Aufführung."),
+        paragraph("Im Herzen der Stadt steht die Große Kathedrale der Neun. Sie untersteht Gwalchgwyn Saethwyr, dem Patriarchen von Celtigerns Wacht, und vereint Gottesdienst, Seelsorge und den Dienst seines engen kirchlichen Kreises. Neun hohe Prälaten stehen unter ihm; darunter Peredur Eneiniog. Angharad Eneiniog gehört zu den Paladinen seines militärischen Stabes."),
+        paragraph("Die Kampfarena steht im Eigentum der Stadt und des Hauses Draig und ist der örtlichen Kämpfergilde zur Nutzung überlassen. Überwiegend dient sie deren Übungen und Wettkämpfen; gelegentlich richten die Draigs dort Turniere aus. Besonders große Theateraufführungen können das Rund ebenfalls als Spielort nutzen."),
         paragraph("Das Gwynthorer Theater zählt zu den großen Kulturstätten Celtigerns Wacht. Lady Rhianna Draig, geborene Ceirwyn, förderte gemeinsam mit ihrer Freundin Elenid Awenfryn den Ausbau einer heruntergekommenen Spielstube zu einem bedeutenden Schauspielhaus. Die gebürtige Lynthorer Bardin führt es als Inhaberin und Intendantin; neben Aufführungen gehört ihr Unterricht in Schauspiel und Dramatik zum Leben des Hauses."),
         paragraph("Seinen besonderen Charakter verdankt Gwynthor dem Handel. Weil das Gebirge die großen Routen durch den Norden erschwert, führt ein bedeutender Teil des cenyrischen Fernhandels über den Hafen der Stadt. Kaufleute aus nahen und fernen Ländern prägen damit nicht nur die Märkte, sondern auch Mode, Küche, Sprache und Umgangsformen.")
       ),

@@ -1,0 +1,49 @@
+{
+  "authorization": "User explicitly approved alpha and transparent outer margin correction for the Fontani crest on 2026-10-17.",
+  "originalRgbPreserved": true,
+  "shape": "circle",
+  "originalSize": [
+    1254,
+    1254
+  ],
+  "finalSize": [
+    1323,
+    1323
+  ],
+  "originalBounds": [
+    40,
+    32,
+    1213,
+    1202
+  ],
+  "offset": [
+    35,
+    45
+  ],
+  "radius": [
+    575.0,
+    575.0
+  ],
+  "originalSha256": "89e3cdbb4690ffdbcc770cdb141cd6cd9e5f377875cc9acdd5c2755f1b048b0d",
+  "finalSha256": "dbac9391e36a240ea4b1e25280ae1f97cbb9725557c86bdb9c3d09f4b66e84f6",
+  "method": "Existing normalize(record, circular=True) from AleriaAlmanach/scripts/normalize-theater-signs-alpha.py; no regeneration or RGB resampling.",
+  "helperSha256": "0f2b7ce4ebdf47642bd707ef78d7e1b1e956f0c877aafaac3ec84b7956c62cdd",
+  "validation": {
+    "rgbPixelsUnchanged": true,
+    "originalPreserved": true,
+    "alphaValues": [
+      0,
+      255
+    ],
+    "circleCentered": true,
+    "silhouetteBounds": [
+      86,
+      86,
+      1237,
+      1237
+    ],
+    "marginPixels": 86,
+    "motifWidthPercent": 87.0,
+    "allNineAssetHashesMatch": true
+  }
+}

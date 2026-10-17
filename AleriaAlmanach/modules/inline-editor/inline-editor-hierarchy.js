@@ -161,7 +161,7 @@ function addInlineHierarchyNode(treeIndex, levelIndex) {
   if (!page) return;
   const data = getInlineHierarchyDataForEdit(page);
   const level = getInlineHierarchyTree(data, treeIndex).levels[levelIndex];
-  if (!level || level.nodes.length >= 6) return;
+  if (!level || level.nodes.length >= HIERARCHY_MAX_LEVEL_NODES) return;
   level.nodes.push({ portrait: '', title: 'Neuer Rang', subtitle: '', text: '' });
   page.hierarchy = sanitizeHierarchyData(data);
   renderPage(currentPage, 0);
@@ -246,7 +246,7 @@ function buildInlineHierarchyLevelRows(levels = [], treeIndex = 0) {
       <div class="module-card-layout-block-head">
         <div>
           <div class="inline-edit-kicker">Ebene ${levelIndex + 1}</div>
-          <div class="module-editor-help">Bis zu 6 Knoten pro Ebene.</div>
+          <div class="module-editor-help">Bis zu ${HIERARCHY_MAX_LEVEL_NODES} Knoten pro Ebene.</div>
         </div>
         <div class="module-editor-inline">
           <button class="module-editor-mini-btn" type="button" data-inline-action="move-hierarchy-level" data-hierarchy-tree-index="${treeIndex}" data-hierarchy-level-index="${levelIndex}" data-hierarchy-direction="-1">Hoch</button>

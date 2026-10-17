@@ -1,0 +1,808 @@
+{
+  "type": "aleria-module-package",
+  "version": 1,
+  "exportedAt": "2026-10-17T00:00:00Z",
+  "module": {
+    "type": "aleria-module",
+    "version": 1,
+    "section": {
+      "key": "Gwynthor",
+      "tab": "Völker & Kulturen",
+      "desc": "",
+      "nodeId": "node:volker-kulturen:cenyr/celtigerns-wacht/llamreis-ankunft/gwynthor",
+      "path": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Gwynthor"
+      ]
+    },
+    "entry": {
+      "id": "gwynthor-zum-kleinen-durst",
+      "title": "Zum Kleinen Durst",
+      "subtitle": "Ein billiger Becher direkt am Kai · Haus Rhwyd",
+      "type": "Hafenkneipe",
+      "category": "Gwynthor · Fischer und Matrosen",
+      "icon": "♧",
+      "symbol": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Rhwyd.png",
+      "image": "./assets/kleiner-durst/scenes/aussenansicht.png",
+      "previewImage": "./assets/kleiner-durst/scenes/aussenansicht.png",
+      "stamp": "ZUM KLEINEN DURST · DIREKT AM KAI",
+      "schemaVersion": 1,
+      "multipage": true,
+      "appendCommentsPage": true,
+      "enablePageComments": true,
+      "sessionCast": [
+        "person--haus-rhwyd--efa-rhwyd",
+        "person--haus-rhwyd--iorwerth-rhwyd",
+        "person--haus-rhwyd--meleri-rhwyd",
+        "person--haus-rhwyd--nia-rhwyd",
+        "person--haus-rhwyd--dewi-rhwyd",
+        "person--kleiner-durst--carys"
+      ],
+      "pages": [
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "durst-haus",
+          "pageTitle": "Zum Kleinen Durst",
+          "image": "./assets/kleiner-durst/scenes/aussenansicht.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "description": "<p>Von den Fischerkähnen führt der kürzeste Weg zum <strong>Kleinen Durst</strong>. Die niedrige Tür liegt unmittelbar an den Docks. Über ihr hängt ein winziger gemalter Becher; dahinter stehen fünf ungleiche Tische, ein schmaler Tresen und ein Kamin, vor dem der alte Hund schläft. Fischer und Matrosen kommen, weil sie hier billig trinken können und unter sich bleiben, ohne sich in einer volleren Veteranenkneipe mit Rittern oder Söldnern um einen Platz zu drängen.</p><p>Das Haus ist abgenutzt und die Auswahl klein. Nia kocht aus günstigem Fisch, Gerste, Kohl und Wurzeln. Es gibt keine Gästezimmer und keine feine Tafel. Ein trockener Sitz, eine warme Schüssel und ein bezahlbarer Becher müssen genügen.</p><p><strong>Efa und ihr Sohn Iorwerth Rhwyd</strong> führen die überschuldete Kneipe mit Mühe weiter. Die vielen kleinen Zechen bezahlen Fass, Fang, Brennholz und den nächsten dringenden Handgriff. Reich wird hier niemand. Dass die Hafenleute lieber wiederkommen, als anderswo mehr auszugeben, hält die Tür offen.</p>",
+          "stats": [
+            [
+              "Ort",
+              "Direkt an Gwynthors Docks"
+            ],
+            [
+              "Inhaber",
+              "Efa und Iorwerth Rhwyd"
+            ],
+            [
+              "Gäste",
+              "Fischer, Matrosen und kleine Hafenleute"
+            ],
+            [
+              "Plätze",
+              "Etwa zwanzig · fünf kleine Tische"
+            ],
+            [
+              "Küche",
+              "Vier einfache Gerichte · ein seltener Monatsfang"
+            ],
+            [
+              "Übernachtung",
+              "Keine Zimmervermietung"
+            ]
+          ]
+        },
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "durst-erbe",
+          "pageTitle": "Efa und Iorwerth · Das schwere Erbe",
+          "biographyPage": true,
+          "image": "./assets/kleiner-durst/portraits/iorwerth.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "contain",
+          "stats": [
+            [
+              "Iorwerth",
+              "1705 geboren · 35 Jahre"
+            ],
+            [
+              "Efa",
+              "1670 geboren · 70 Jahre"
+            ],
+            [
+              "Vier Brüder",
+              "Alle 1720 gefallen"
+            ],
+            [
+              "Gethin",
+              "1666–1728 · früherer Inhaber"
+            ],
+            [
+              "Heute",
+              "Überschuldet · der Betrieb trägt den Alltag"
+            ]
+          ],
+          "biography": {
+            "crestImage": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Rhwyd.png",
+            "biographyTitle": "Derjenige, der geblieben ist",
+            "biographyText": "<p>1720 wurden vier der fünf Söhne Gethins und Efas in den Krieg geschickt. Aled, Carwyn, Hywel und Dafydd kehrten nicht lebend zurück. Iorwerth war damals erst fünfzehn und blieb zu Hause. Heute säubert er hinter dem Tresen einen Krug nach dem anderen und sieht zum nächsten Gast auf, als hätte der Abend schon vor Stunden enden sollen.</p>",
+            "historyTitle": "Was der Krieg im Haus zurückließ",
+            "historyText": "<p>Gethin fand nach dem Verlust seiner Söhne keinen Halt mehr. Er trank sich über die folgenden Jahre zugrunde und starb 1728. Efa und Iorwerth übernahmen eine verschuldete Kneipe und gerieten selbst immer tiefer in die Verpflichtungen. Die Stammgäste halten das Haus über Wasser; für einen wirklichen Abbau der Schulden bleibt zu wenig übrig.</p><p>Efa ist alt geworden. Ihr Haar ist längst grau, ihre Bewegungen bedächtig, ihr Lächeln schwach. Sie zählt noch immer die Münzen und kennt die Stellen, an denen sich ein wenig sparen lässt. Iorwerth führt Tresen und Einkauf. Beide können auf Nia, Meleri und Dewi zählen; Carys ist die einzige bezahlte Hilfe.</p>",
+            "abilitiesTitle": "Was den Laden offen hält",
+            "abilities": [
+              {
+                "title": "Kleine Rechnungen",
+                "icon": "◈",
+                "detail": "Efa kennt Vorräte und offene Verpflichtungen; Iorwerth kauft, was die Tageskasse erlaubt."
+              },
+              {
+                "title": "Vertraute Gesichter",
+                "icon": "♧",
+                "detail": "Fischer und Matrosen kommen wegen der niedrigen Preise und des unaufgeregten Umgangs wieder."
+              }
+            ],
+            "worksTitle": "Der tägliche Betrieb",
+            "works": [
+              "Schank, Einkauf und Spüle unter Iorwerth; Efa hält Kasse und Haus zusammen.",
+              "Nia kocht, Meleri bedient, Dewi hilft überall; Carys übernimmt die übrige Hausarbeit."
+            ],
+            "triviaTitle": "Familie",
+            "trivia": [
+              "Iorwerth und Nia sind seit 1725 verheiratet. Ihr Sohn Dewi wurde 1726 geboren.",
+              "Meleri ist unverheiratet und arbeitet weiterhin im Haus. Die Herkunftshäuser Efas und Nias bleiben offen."
+            ],
+            "quotesTitle": "Wahlspruch der Rhwyd",
+            "quotes": [
+              "Wir bleiben."
+            ],
+            "connectionsTitle": "Die Lebenden im Haus",
+            "connections": [
+              {
+                "name": "Efa",
+                "detail": "Witwe und Mitinhaberin · Kasse und Haus",
+                "image": "./assets/kleiner-durst/portraits/efa.png"
+              },
+              {
+                "name": "Meleri Rhwyd",
+                "detail": "Schwester · Bedienung",
+                "image": "./assets/kleiner-durst/portraits/meleri.png"
+              },
+              {
+                "name": "Nia",
+                "detail": "Iorwerths Gemahlin · Küche",
+                "image": "./assets/kleiner-durst/portraits/nia.png"
+              },
+              {
+                "name": "Dewi Rhwyd",
+                "detail": "Hausbursche · hilft überall",
+                "image": "./assets/kleiner-durst/portraits/dewi.png"
+              }
+            ],
+            "documentsTitle": "Die Familie",
+            "documents": [
+              {
+                "title": "Haus Rhwyd",
+                "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Rhwyd.png",
+                "text": "Unbekannte Gründer, Überlieferungssprung und die heutige Familie mit den vier gefallenen Brüdern.",
+                "link": "../Stammbäume/Stammbaum.html?family=haus-rhwyd&mode=view"
+              }
+            ]
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "durst-haende",
+          "pageTitle": "Die Hände des Hauses",
+          "hierarchyPage": true,
+          "hierarchy": {
+            "organizationTitle": "Die wenigen Hände des Hauses",
+            "eyebrow": "Zum Kleinen Durst",
+            "subtitle": "Fünf Familienangehörige · eine angestellte Magd",
+            "centerLabel": "Efa und Iorwerth Rhwyd",
+            "emblem": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Rhwyd.png",
+            "sideImage": "./assets/kleiner-durst/scenes/schankstube.png",
+            "motto": "Wir bleiben.",
+            "description": "<p>Hier trägt kaum jemand nur eine Aufgabe. Die Rhwyd halten die Kneipe gemeinsam offen; Carys ist ihre einzige Angestellte. Für einen Wachmann reicht das Geld nicht.</p>",
+            "detailsTitle": "Der ganze Betrieb",
+            "details": [
+              {
+                "label": "Inhaber",
+                "value": "Efa und Iorwerth"
+              },
+              {
+                "label": "Familie im Alltag",
+                "value": "Meleri, Nia und Dewi"
+              },
+              {
+                "label": "Angestellte",
+                "value": "Eine Magd · Carys"
+              },
+              {
+                "label": "Schankraum",
+                "value": "Fünf kleine Tische · etwa zwanzig Plätze"
+              },
+              {
+                "label": "Wachmann",
+                "value": "Keiner"
+              },
+              {
+                "label": "Zimmervermietung",
+                "value": "Keine"
+              }
+            ],
+            "chartTitle": "Tresen, Herd und Hausarbeit",
+            "chartIntro": "Die Bereiche teilen Arbeit ein; sie schaffen keine zusätzlichen Stellen. Bram ist der alte Hund der Hausgemeinschaft und ersetzt längst keine Wache mehr.",
+            "treeDisplayMode": "tabs",
+            "portraitScale": 100,
+            "cardFontScale": 90,
+            "trees": [
+              {
+                "id": "fuehrung",
+                "label": "Führung",
+                "parentTreeId": "",
+                "levels": [
+                  {
+                    "label": "Mutter und Sohn · gemeinsam verantwortlich",
+                    "nodes": [
+                      {
+                        "id": "durst-efa",
+                        "title": "Efa",
+                        "subtitle": "Witwe und Mitinhaberin · Kasse und Haus",
+                        "portrait": "./assets/kleiner-durst/portraits/efa.png",
+                        "text": "<p>Efa ist 70 Jahre alt und hat vier Söhne und ihren Mann verloren. Mit Iorwerth hält sie den Kleinen Durst offen, obwohl das Haus überschuldet ist. Sie zählt die Einnahmen, flickt Leinen und behält die Vorräte im Blick. Die Jahre haben sie abgekämpft; für vertraute Gäste bleibt ein schwaches Lächeln.</p>"
+                      },
+                      {
+                        "id": "durst-iorwerth",
+                        "title": "Iorwerth Rhwyd",
+                        "subtitle": "Mitinhaber · Tresen und Einkauf",
+                        "portrait": "./assets/kleiner-durst/portraits/iorwerth.png",
+                        "text": "<p>Iorwerth war 1720 erst 15 Jahre alt und blieb als einziger der fünf Söhne zu Hause. Heute ist er 35 und führt mit seiner Mutter die überschuldete Kneipe. Er kauft günstigen Tagesfang, zapft und spült. Sein mürrischer, beinahe gleichförmiger Blick täuscht keine Gelassenheit vor: Er ist schlicht müde. Mit Nia hat er den Sohn Dewi.</p>"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "kueche-schank",
+                "label": "Küche und Schank",
+                "parentTreeId": "fuehrung",
+                "levels": [
+                  {
+                    "label": "Am Herd",
+                    "nodes": [
+                      {
+                        "id": "durst-nia",
+                        "title": "Nia",
+                        "subtitle": "Iorwerths Gemahlin · Küche",
+                        "portrait": "./assets/kleiner-durst/portraits/nia.png",
+                        "text": "<p>Nia ist 33 und kocht die kleine Fischkarte des Hauses. Aus günstigem Fang, Wurzeln, Kohl und Gerste macht sie sättigende Portionen. Mit Iorwerth ist sie seit 1725 verheiratet; ihr Sohn Dewi hilft überall mit. Ihr Herkunftshaus bleibt unbekannt.</p>"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "An den Tischen",
+                    "nodes": [
+                      {
+                        "id": "durst-meleri",
+                        "title": "Meleri Rhwyd",
+                        "subtitle": "Schwester · Bedienung",
+                        "portrait": "./assets/kleiner-durst/portraits/meleri.png",
+                        "text": "<p>Iorwerths unverheiratete jüngere Schwester ist 30 und trägt die Becher zu den Tischen. Sie ist munterer als ihr Bruder, hat einen trockenen Scherz für die Stammgäste und kennt deren gewöhnliche Bestellung. Eine Wegheirat ist nicht festgelegt; sie lebt und arbeitet im Familienhaus.</p>"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "hausdienst",
+                "label": "Hausdienst und Kaminplatz",
+                "parentTreeId": "fuehrung",
+                "levels": [
+                  {
+                    "label": "Die einzige Angestellte",
+                    "nodes": [
+                      {
+                        "id": "durst-carys",
+                        "title": "Carys",
+                        "subtitle": "Magd · Reinigung, Wäsche und schwere Handgriffe",
+                        "portrait": "./assets/kleiner-durst/portraits/carys.png",
+                        "text": "<p>Die 27 jährige Carys ist die einzige Angestellte. Sie schrubbt, wäscht, trägt Wasser und packt beim Bewegen der Fässer an. Eine hübsche Frau mit kräftigen Armen, geradem Rücken und wenig Geduld für Gäste, die ihr die Arbeit unnötig schwer machen. Einen Nachnamen führt der Eintrag nicht.</p>"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Hilft überall mit",
+                    "nodes": [
+                      {
+                        "id": "durst-dewi",
+                        "title": "Dewi Rhwyd",
+                        "subtitle": "Hausbursche · hilft überall",
+                        "portrait": "./assets/kleiner-durst/portraits/dewi.png",
+                        "text": "<p>Dewi ist 14, der Sohn Iorwerths und Nias. Er trägt Holz und Wasser, räumt Becher ab, holt kleine Einkäufe und findet auf fast jede Ermahnung eine freche Antwort. Hinter seiner großen Klappe steckt ein Junge, der den erschöpften Erwachsenen mehr Arbeit abnimmt, als er zugibt.</p>"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Der alte Wachhund · kein bezahlter Posten",
+                    "nodes": [
+                      {
+                        "id": "durst-bram",
+                        "title": "Bram",
+                        "subtitle": "Alter Wachhund · meist am Kamin",
+                        "portrait": "./assets/kleiner-durst/portraits/bram.png",
+                        "text": "<p>Bram ist ein 16 jähriger Ponter und seit langem beim Haus. Der frühere Aufpasser ist steif, schwerhörig und fast immer vor dem Kamin zu finden. Meist hebt er beim Öffnen der Tür nur ein Lid. Einen bezahlten Wachmann können sich die Rhwyd nicht leisten; Bram ist längst mehr Familiengefährte als Schutz.</p><p><a href=\"/Bestiarium/tiere/vieh/haustiere/hunde/ponter/index.html\" target=\"_blank\" rel=\"noopener\">Bestiarium · Ponter</a></p>"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "levels": [],
+            "footerNote": "Gethin und die vier 1720 gefallenen Brüder gehören zur Familiengeschichte und zum Stammbaum. Sie tragen keine heutigen Dienstposten."
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "durst-karte",
+          "pageTitle": "Die kleine Karte",
+          "tradeCatalogPage": true,
+          "tradeCatalog": {
+            "headerIcon": "./assets/kleiner-durst/schild.png",
+            "title": "Güterregister",
+            "subtitle": "Die kleine Karte · Zum Kleinen Durst",
+            "categories": [
+              {
+                "id": "vorspeise",
+                "label": "Ein Happen"
+              },
+              {
+                "id": "hauptspeisen",
+                "label": "Aus Nias Topf"
+              },
+              {
+                "id": "monat",
+                "label": "Seltener Monatsfang"
+              },
+              {
+                "id": "getraenke",
+                "label": "Am Tresen"
+              }
+            ],
+            "allLabel": "Die ganze kleine Karte",
+            "noteIcon": "♧",
+            "noteTitle": "Fünf Gerichte, wenig Auswahl",
+            "noteText": "Vier einfache Fischgerichte bilden die gewöhnliche Karte. Der fünfte Platz ist dem seltenen guten Monatsfang vorbehalten. Nia kocht, was der Tagesfang und die wenigen Vorräte hergeben; wenn der Topf leer ist, ist er leer.",
+            "items": [
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 300,
+                "descriptionTitle": "Auf dem Tisch",
+                "featuresTitle": "Portion",
+                "originTitle": "Aus dem Haus",
+                "usageTitle": "Bestellung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Verfügbarkeit",
+                "attributes": [],
+                "priceMin": "0,4",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "matrosenhappen",
+                "title": "Matrosenhappen",
+                "category": "vorspeise",
+                "subtitle": "Vorspeise",
+                "unit": "Eine Portion",
+                "image": "./assets/kleiner-durst/food/matrosenhappen.png",
+                "imageFormat": "portrait",
+                "badge": "Vorspeise",
+                "description": "<p>Eine dicke Scheibe dunkles Brot mit etwas eingelegtem Hering und rohen Zwiebelringen. Salzig, schlicht und schnell auf dem Tisch.</p>",
+                "features": [
+                  "Eine Portion",
+                  "Schlichte Hausküche"
+                ],
+                "origin": "Nias Küche · Fisch vom Gwynthorer Hafen",
+                "usageTags": [
+                  "Am Tisch oder Tresen"
+                ],
+                "priceNote": "Die beschriebenen Beilagen sind enthalten.",
+                "conditions": "Nach Tagesfang und Topfvorrat."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 300,
+                "descriptionTitle": "Auf dem Tisch",
+                "featuresTitle": "Portion",
+                "originTitle": "Aus dem Haus",
+                "usageTitle": "Bestellung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Verfügbarkeit",
+                "attributes": [],
+                "priceMin": "0,9",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "fischgerstentopf",
+                "title": "Fisch-Gerstentopf",
+                "category": "hauptspeisen",
+                "subtitle": "Hauptspeise",
+                "unit": "Eine Portion",
+                "image": "./assets/kleiner-durst/food/fischgerstentopf.png",
+                "imageFormat": "portrait",
+                "badge": "Hauptspeise",
+                "description": "<p>Ein dicker Eintopf aus günstigen Abschnitten vom Tagesfisch, Gerste, Kohl und Wurzelgemüse. Mehr Gerste als Fisch, aber eine warme volle Schüssel.</p>",
+                "features": [
+                  "Eine Portion",
+                  "Schlichte Hausküche"
+                ],
+                "origin": "Nias Küche · Fisch vom Gwynthorer Hafen",
+                "usageTags": [
+                  "Am Tisch oder Tresen"
+                ],
+                "priceNote": "Die beschriebenen Beilagen sind enthalten.",
+                "conditions": "Nach Tagesfang und Topfvorrat."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 300,
+                "descriptionTitle": "Auf dem Tisch",
+                "featuresTitle": "Portion",
+                "originTitle": "Aus dem Haus",
+                "usageTitle": "Bestellung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Verfügbarkeit",
+                "attributes": [],
+                "priceMin": "0,6",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "hafensuppe",
+                "title": "Klare Hafensuppe",
+                "category": "hauptspeisen",
+                "subtitle": "Hauptspeise",
+                "unit": "Eine Portion",
+                "image": "./assets/kleiner-durst/food/hafensuppe.png",
+                "imageFormat": "portrait",
+                "badge": "Hauptspeise",
+                "description": "<p>Ein einfacher Fischsud mit Lauch, Rübenstücken und wenigen ausgelösten Fischflocken. Eine kleine Scheibe Brot gehört dazu.</p>",
+                "features": [
+                  "Eine Portion",
+                  "Schlichte Hausküche"
+                ],
+                "origin": "Nias Küche · Fisch vom Gwynthorer Hafen",
+                "usageTags": [
+                  "Am Tisch oder Tresen"
+                ],
+                "priceNote": "Die beschriebenen Beilagen sind enthalten.",
+                "conditions": "Nach Tagesfang und Topfvorrat."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 300,
+                "descriptionTitle": "Auf dem Tisch",
+                "featuresTitle": "Portion",
+                "originTitle": "Aus dem Haus",
+                "usageTitle": "Bestellung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Verfügbarkeit",
+                "attributes": [],
+                "priceMin": "1,2",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "ganzer-hering",
+                "title": "Ganzer Hering mit Wurzeln",
+                "category": "hauptspeisen",
+                "subtitle": "Hauptspeise",
+                "unit": "Eine Portion",
+                "image": "./assets/kleiner-durst/food/ganzer-hering.png",
+                "imageFormat": "portrait",
+                "badge": "Hauptspeise",
+                "description": "<p>Ein kleiner ganzer Hering aus dem Tagesfang, einfach gegart, mit etwas Kohl und gekochten Wurzeln. Kopf und Gräten bleiben dran; ein bescheidenes Hafenessen.</p>",
+                "features": [
+                  "Eine Portion",
+                  "Schlichte Hausküche"
+                ],
+                "origin": "Nias Küche · Fisch vom Gwynthorer Hafen",
+                "usageTags": [
+                  "Am Tisch oder Tresen"
+                ],
+                "priceNote": "Die beschriebenen Beilagen sind enthalten.",
+                "conditions": "Nach Tagesfang und Topfvorrat."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 300,
+                "descriptionTitle": "Auf dem Tisch",
+                "featuresTitle": "Portion",
+                "originTitle": "Aus dem Haus",
+                "usageTitle": "Bestellung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Verfügbarkeit",
+                "attributes": [],
+                "priceMin": "2,5",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "monatsfang",
+                "title": "Der gute Fang des Monats",
+                "category": "monat",
+                "subtitle": "Monatsspezial",
+                "unit": "Eine Portion",
+                "image": "./assets/kleiner-durst/food/monatsfang.png",
+                "imageFormat": "portrait",
+                "badge": "Monatsspezial",
+                "description": "<p>Ein gutes Stück frischer Scholle, in der Pfanne gebraten, mit etwas Zwiebel und Wurzelgemüse. Höchstens einmal im Monat und nur, wenn Nia einen guten Fisch bezahlbar bekommt. Wenige Portionen; kein tägliches Angebot.</p>",
+                "features": [
+                  "Eine Portion",
+                  "Schlichte Hausküche"
+                ],
+                "origin": "Nias Küche · Fisch vom Gwynthorer Hafen",
+                "usageTags": [
+                  "Am Tisch oder Tresen"
+                ],
+                "priceNote": "Die beschriebenen Beilagen sind enthalten.",
+                "conditions": "Höchstens einmal im Monat, nur bei günstigem gutem Fang; wenige Portionen. Die Eintragung ist keine Zusage täglicher Verfügbarkeit."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 300,
+                "descriptionTitle": "Auf dem Tisch",
+                "featuresTitle": "Portion",
+                "originTitle": "Aus dem Haus",
+                "usageTitle": "Bestellung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Verfügbarkeit",
+                "attributes": [],
+                "priceMin": "0,3",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "duennbier",
+                "title": "Dünnbier",
+                "category": "getraenke",
+                "subtitle": "Einfacher Ausschank",
+                "unit": "Ein Krug",
+                "image": "https://i.imgur.com/mGrMfTt.png",
+                "imageFormat": "square",
+                "badge": "Am Tresen",
+                "description": "<p>Einfaches dünnes Hausbier. Der billigste Krug am Tresen.</p>",
+                "features": [
+                  "Ein Krug"
+                ],
+                "origin": "Gewöhnlicher Ausschank · Gwynthor",
+                "usageTags": [
+                  "Ein Krug"
+                ],
+                "priceNote": "",
+                "conditions": "Nach Fass- und Flaschenvorrat."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 300,
+                "descriptionTitle": "Auf dem Tisch",
+                "featuresTitle": "Portion",
+                "originTitle": "Aus dem Haus",
+                "usageTitle": "Bestellung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Verfügbarkeit",
+                "attributes": [],
+                "priceMin": "1",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "klosterbier",
+                "title": "Klosterbier",
+                "category": "getraenke",
+                "subtitle": "Einfacher Ausschank",
+                "unit": "Ein Krug",
+                "image": "https://i.imgur.com/ZIRrEhf.png",
+                "imageFormat": "square",
+                "badge": "Am Tresen",
+                "description": "<p>Gewöhnliches regionales Klosterbier vom Fass. Ohne besondere Jahrgänge oder Auswahl.</p>",
+                "features": [
+                  "Ein Krug"
+                ],
+                "origin": "Gewöhnlicher Ausschank · Gwynthor",
+                "usageTags": [
+                  "Ein Krug"
+                ],
+                "priceNote": "",
+                "conditions": "Nach Fass- und Flaschenvorrat."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 300,
+                "descriptionTitle": "Auf dem Tisch",
+                "featuresTitle": "Portion",
+                "originTitle": "Aus dem Haus",
+                "usageTitle": "Bestellung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Verfügbarkeit",
+                "attributes": [],
+                "priceMin": "0,03",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "wasser",
+                "title": "Wasser",
+                "category": "getraenke",
+                "subtitle": "Einfacher Ausschank",
+                "unit": "Ein Becher",
+                "image": "https://i.imgur.com/AaDqMUO.png",
+                "imageFormat": "square",
+                "badge": "Am Tresen",
+                "description": "<p>Ein Becher schlichtes Trinkwasser.</p>",
+                "features": [
+                  "Ein Becher"
+                ],
+                "origin": "Gewöhnlicher Ausschank · Gwynthor",
+                "usageTags": [
+                  "Ein Becher"
+                ],
+                "priceNote": "",
+                "conditions": "Nach Fass- und Flaschenvorrat."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 300,
+                "descriptionTitle": "Auf dem Tisch",
+                "featuresTitle": "Portion",
+                "originTitle": "Aus dem Haus",
+                "usageTitle": "Bestellung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Verfügbarkeit",
+                "attributes": [],
+                "priceMin": "1",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "branntwein",
+                "title": "Einfacher Branntwein",
+                "category": "getraenke",
+                "subtitle": "Einfacher Ausschank",
+                "unit": "Ein kleines Glas",
+                "image": "https://i.imgur.com/e1Qv6Ct.png",
+                "imageFormat": "square",
+                "badge": "Am Tresen",
+                "description": "<p>Schlichter Branntwein aus dem gewöhnlichen Ausschank. Eine Sorte, solange die Flasche reicht.</p>",
+                "features": [
+                  "Ein kleines Glas"
+                ],
+                "origin": "Gewöhnlicher Ausschank · Gwynthor",
+                "usageTags": [
+                  "Ein kleines Glas"
+                ],
+                "priceNote": "",
+                "conditions": "Nach Fass- und Flaschenvorrat."
+              }
+            ],
+            "footerCards": [
+              {
+                "icon": "♧",
+                "title": "Kein Zimmer frei",
+                "text": "Hier werden grundsätzlich keine Zimmer vermietet. Die wenigen Räume gehören dem Betrieb und der Familie."
+              },
+              {
+                "icon": "◈",
+                "title": "Der Monatsfang",
+                "text": "Ein guter Fisch kommt nur selten auf die Karte. Nia sagt an, wann er zu haben ist; danach bleibt der Platz bis zum nächsten Mal leer."
+              }
+            ]
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "durst-aussenansicht",
+          "pageTitle": "Vor der Tür · Direkt am Kai",
+          "image": "./assets/kleiner-durst/scenes/aussenansicht.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Von der Gangplanke sind es nur wenige Schritte über den Kai zur niedrigen Tür. Über ihr hängt der kleine gemalte Becher. Zwischen Pollern, Tauwerk und Fischkisten fällt die Kneipe kaum auf; bei geöffneter Tür wehen Biergeruch und warmer Fischsud hinaus.</p>",
+          "sessionHint": "Eine Begegnung im Kleinen Durst.",
+          "sessionEmptyTitle": "Ein Platz ist noch frei",
+          "sessionEmptyText": "Hier beginnt die nächste Begegnung am Hafen.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "durst-schankstube",
+          "pageTitle": "Die kleine Schankstube",
+          "image": "./assets/kleiner-durst/scenes/schankstube.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Fünf ungleiche Tische stehen unter niedrigen Balken. Hinter dem abgewetzten Tresen klackt ein Krug gegen den nächsten; von draußen hört man Taue und Möwen. Vor dem kleinen Kamin liegt Bram. Hier zählen ein billiger Becher und ein trockener Platz mehr als ein klangvoller Name.</p>",
+          "sessionHint": "Eine Begegnung im Kleinen Durst.",
+          "sessionEmptyTitle": "Ein Platz ist noch frei",
+          "sessionEmptyText": "Hier beginnt die nächste Begegnung am Hafen.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "durst-kueche",
+          "pageTitle": "Küche und Spülwinkel",
+          "image": "./assets/kleiner-durst/scenes/kueche.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Ein schwarzer Topf hängt über der Glut. Auf dem schmalen Brett liegen Kohl, Wurzeln und ein paar Stücke Fisch; daneben wartet die große Spülschale. Nia muss hier mit wenig Vorrat auskommen. Die Küche ist klein genug, dass zwei Menschen einander ständig ausweichen.</p>",
+          "sessionHint": "Eine Begegnung im Kleinen Durst.",
+          "sessionEmptyTitle": "Ein Platz ist noch frei",
+          "sessionEmptyText": "Hier beginnt die nächste Begegnung am Hafen.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "durst-hinterhof",
+          "pageTitle": "Vorratsverschlag und Hinterhof",
+          "image": "./assets/kleiner-durst/scenes/hinterhof.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Hinter der Küche liegt ein schmaler Verschlag mit zwei Fässern, einem Sack Gerste und wenigen Kisten. Die Tür führt in einen winzigen Wirtschaftshof. Hier werden Holz gestapelt, Wasser getragen und leere Fischkisten ausgespült; Dewi kennt jede lose Diele auf dem Weg.</p>",
+          "sessionHint": "Eine Begegnung im Kleinen Durst.",
+          "sessionEmptyTitle": "Ein Platz ist noch frei",
+          "sessionEmptyText": "Hier beginnt die nächste Begegnung am Hafen.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        }
+      ]
+    }
+  }
+}

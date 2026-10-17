@@ -1,0 +1,309 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-10-17",
+  "tool": "built-in image_gen",
+  "userBrief": "Zum Kleinen Durst direkt an den Docks. Arme verschuldete Familie Rhwyd mit braunem Haar und braunen Augen, alte graue Witwe, vier1720gefallene ältere Brüder, überlebender Sohn35, Schwester, Frau und Sohn14. Alle Menschen stehend; alter Hund liegt am Kamin. Fünf Fischgerichte, kleines Sortiment.",
+  "entries": [
+    {
+      "id": "wappen",
+      "destination": "Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Rhwyd.png",
+      "transparent": true,
+      "references": [
+        "E:/Aleria/AleriaAlmanach/assets/kleiner-durst/references/rhwyd-wappen-v1.png"
+      ],
+      "prompt": "# Universeller Wappen-Prompt\n\n**Wappenname:** Haus Rhwyd · Zum Kleinen Durst, Gwynthor\n\n**Zentrales Symbol:** Ein einzelner kleiner grauer Hering in klarer Seitenansicht, Kopf nach links und Schwanz nach rechts, hängt QUER aufgespießt an einem kurzen abgebrochenen Speerrest. Der Speerrest verläuft diagonal von links unten nach rechts oben und DURCH DIE MITTE DES FISCHKÖRPERS. Eine schlichte blattförmige eiserne Spitze ragt oberhalb des Fischrückens heraus; unter seinem Bauch ist ein kurzer gesplitterter Schaftrest sichtbar. Das geschlossene Fischmaul ist völlig frei, ohne Haken oder Metall darin. Eindeutig ein heraldisch aufgespießter Fisch, keine Gewalt- oder Blutdarstellung.\n\n**Farbpalette:** stumpfes schlammiges Olivgrau · verwaschenes Graubraun · mattes Fischgrau und dunkles Rostbraun\n\n**Wappenform:** ZIRKULAR – IMMER ein exakter Kreis, damit das Wappen in die vorhandenen Frames passt. Keine Spitzschilde oder ovalen Außenkonturen.\n\n### Gestaltung\n\nEin hochwertiges mittelalterliches Wappen im nordisch-keltischen Fantasy-Heraldikstil. Inspiriert von historischen bemalten Holzschilden, nordischer Ornamentik und traditionellen Clanwappen.\n\nDas zentrale Symbol ist groß, ausdrucksstark und detailliert, gleichzeitig aber klar heraldisch stilisiert. Kräftige dunkle Konturen, sauber getrennte Farbflächen, markante Silhouetten und ausgewogene Proportionen.\n\nDas gesamte Motiv muss vollständig innerhalb des Wappens liegen. Keine abgeschnittenen Figuren, Waffen, Flügel, Hörner oder Ornamente.\n\n### Material und Oberflächen\n\nDie innere Wappenfläche besteht aus bemalten Holzbrettern mit dezenter, sichtbarer Holzmaserung. Die Farben wirken wie auf Holz aufgetragene mittelalterliche Pigmente.\n\nDer Außenrahmen besteht aus schlichtem stumpfem dunklem Eisen mit wenigen Rostspuren mit leichter Materialstruktur, kleinen Gebrauchsspuren und einer vollständig geschlossenen Außenkontur.\n\nDas Wappen soll handwerklich hochwertig, plastisch und historisch glaubwürdig wirken. Keine moderne, minimalistische Logoästhetik, keine Fotorealistik und keine übertriebenen 3D-Effekte.\n\n### Verzierungen\n\nKeine Verzierung, nur ein einfacher schmaler vollständig geschlossener Eisenring mit sechs unauffälligen stumpfen Nieten.\n\nBei zirkularen Wappen können die Verzierungen gleichmäßig im Außenring verlaufen. Sie dürfen das zentrale Motiv nicht überlagern.\n\n### Komposition\n\nQuadratisches Bildformat 1:1. Das vollständige Wappen steht mittig und wird frontal gezeigt.\n\nDas Wappen nimmt ungefähr 85–90 % der Bildbreite ein. Alle Elemente bleiben vollständig innerhalb seiner äußeren Begrenzung.\n\n### Transparenz – zwingend einhalten\n\n**Der gesamte Bereich außerhalb des äußersten Wappenrahmens muss vollständig transparent sein (Alpha-Kanal = 0).**\n\n- Keine Hintergrundfarbe, kein Weiß, Schwarz oder Magenta außerhalb des Wappens.\n- Kein Hintergrundbild, keine Landschaft, keine Wand und keine dekorativen Elemente außerhalb des Rahmens.\n- Keine Schlagschatten, Glows oder Lichtreflexe außerhalb der Wappenkontur.\n- Keine über den Rahmen hinausragenden Ornamente oder Symbole.\n- Die äußerste Wappenkante muss sauber und geschlossen sein.\n- **Die gesamte Wappenfläche innerhalb des Außenrahmens muss vollständig deckend bleiben (Alpha-Kanal = 255).**\n- Keine transparenten Löcher zwischen Symbolen, Ornamenten oder innerhalb der bemalten Holzfläche.\n- Die Innenfläche des Wappens muss ihre vorgesehene Farbe vollständig behalten.\n\n**WICHTIG:** Ausschließlich der Bereich außerhalb der äußeren Wappenkontur ist transparent. Das Wappen selbst, einschließlich Holzfläche, Rahmen, Symbolen und sämtlichen Zwischenräumen, bleibt vollständig sichtbar und deckend.\n\n### Ausgabe\n\nHochauflösendes PNG mit echtem transparentem Hintergrund (RGBA), quadratisches Format 1:1. Keine simulierte Transparenz und kein Schachbrettmuster als Bildhintergrund.\nNEUER ENTWURF, die alte Komposition vollständig ersetzen. Referenz zeigt NUR matte ärmliche Materialfarben und einen billigen abgenutzten Rahmen. Nicht den alten Fisch am Speermaul kopieren. Neue klare Kreuzkomposition: Fisch WAAGERECHT, SPEER DIAGONAL DURCH DIE FLANKE. Der Fisch beißt nicht in die Spitze. Einfache leicht ungeschickte Hausmalerei mit kräftigen dunklen Konturen auf verwaschen olivgrau gestrichenen Holzbrettern. Wenige dezente Gebrauchsspuren, kein feines realistisches Oberflächenrendering. Schlicht, schäbig und unauffällig; kein Prunk, kein Gold, keine weiteren Symbole, KEINE konzentrischen Kreise oder Zielscheibe auf der Innenfläche, keine Schrift, kein Spruchband. Eine ruhige, groß lesbare Silhouette. Exakter vollständiger Kreis frontal und mittig, 87 Prozent der quadratischen Leinwand, mindestens6Prozent transparenter Abstand auf JEDER Seite. Innen komplett deckend, auch alle Zwischenräume, Alpha255. Außerhalb der Kreisform Alpha0; keine Schatten oder Halos. TRUE transparent PNG.",
+      "iterations": [
+        {
+          "prompt": "# Universeller Wappen-Prompt\n\n**Wappenname:** Haus Rhwyd · arme Fischer- und Wirtsfamilie aus Gwynthor\n\n**Zentrales Symbol:** Ein einzelner schlichter grauer Hering hängt seitlich aufgespießt an einer kurzen abgebrochenen eisernen Speerspitze. Der abgebrochene Schaftansatz zeigt deutlich, dass die Waffe zerbrochen ist. Heraldisch klar und unblutig, Fisch und Speer vollständig innerhalb des Kreises.\n\n**Farbpalette:** stumpfes Olivgrau · verwaschenes Graubraun · mattes Schmutziggrau\n\n**Wappenform:** ZIRKULAR – IMMER ein exakter Kreis, damit das Wappen in die vorhandenen Frames passt. Keine Spitzschilde oder ovalen Außenkonturen.\n\n### Gestaltung\n\nEin hochwertiges mittelalterliches Wappen im nordisch-keltischen Fantasy-Heraldikstil. Inspiriert von historischen bemalten Holzschilden, nordischer Ornamentik und traditionellen Clanwappen.\n\nDas zentrale Symbol ist groß, ausdrucksstark und detailliert, gleichzeitig aber klar heraldisch stilisiert. Kräftige dunkle Konturen, sauber getrennte Farbflächen, markante Silhouetten und ausgewogene Proportionen.\n\nDas gesamte Motiv muss vollständig innerhalb des Wappens liegen. Keine abgeschnittenen Figuren, Waffen, Flügel, Hörner oder Ornamente.\n\n### Material und Oberflächen\n\nDie innere Wappenfläche besteht aus bemalten Holzbrettern mit dezenter, sichtbarer Holzmaserung. Die Farben wirken wie auf Holz aufgetragene mittelalterliche Pigmente.\n\nDer Außenrahmen besteht aus schlichtem stumpfem dunklem Eisen mit kleinen Rostspuren mit leichter Materialstruktur, kleinen Gebrauchsspuren und einer vollständig geschlossenen Außenkontur.\n\nDas Wappen soll handwerklich hochwertig, plastisch und historisch glaubwürdig wirken. Keine moderne, minimalistische Logoästhetik, keine Fotorealistik und keine übertriebenen 3D-Effekte.\n\n### Verzierungen\n\nKeine Schmuckverzierung, keine Edelmetalle. Ein schmaler vollständig geschlossener abgenutzter Ring mit wenigen einfachen Nieten.\n\nBei zirkularen Wappen können die Verzierungen gleichmäßig im Außenring verlaufen. Sie dürfen das zentrale Motiv nicht überlagern.\n\n### Komposition\n\nQuadratisches Bildformat 1:1. Das vollständige Wappen steht mittig und wird frontal gezeigt.\n\nDas Wappen nimmt ungefähr 85–90 % der Bildbreite ein. Alle Elemente bleiben vollständig innerhalb seiner äußeren Begrenzung.\n\n### Transparenz – zwingend einhalten\n\n**Der gesamte Bereich außerhalb des äußersten Wappenrahmens muss vollständig transparent sein (Alpha-Kanal = 0).**\n\n- Keine Hintergrundfarbe, kein Weiß, Schwarz oder Magenta außerhalb des Wappens.\n- Kein Hintergrundbild, keine Landschaft, keine Wand und keine dekorativen Elemente außerhalb des Rahmens.\n- Keine Schlagschatten, Glows oder Lichtreflexe außerhalb der Wappenkontur.\n- Keine über den Rahmen hinausragenden Ornamente oder Symbole.\n- Die äußerste Wappenkante muss sauber und geschlossen sein.\n- **Die gesamte Wappenfläche innerhalb des Außenrahmens muss vollständig deckend bleiben (Alpha-Kanal = 255).**\n- Keine transparenten Löcher zwischen Symbolen, Ornamenten oder innerhalb der bemalten Holzfläche.\n- Die Innenfläche des Wappens muss ihre vorgesehene Farbe vollständig behalten.\n\n**WICHTIG:** Ausschließlich der Bereich außerhalb der äußeren Wappenkontur ist transparent. Das Wappen selbst, einschließlich Holzfläche, Rahmen, Symbolen und sämtlichen Zwischenräumen, bleibt vollständig sichtbar und deckend.\n\n### Ausgabe\n\nHochauflösendes PNG mit echtem transparentem Hintergrund (RGBA), quadratisches Format 1:1. Keine simulierte Transparenz und kein Schachbrettmuster als Bildhintergrund.\nAktuelle ausdrückliche Motivvorgabe hat Vorrang vor Prunk: SCHÄBIGES schlicht bemaltes Bürgerwappen, matte langweilige graubraune und olivgraue Farben, abgeplatzter Pigmentauftrag aber keine kaputte Außenkontur. Nicht reich, nicht königlich, kein Gold, keine Silberverzierung, keine Ornamente, keine Schrift, kein Spruchband. Referenz Braglas nur für die regionale runde Bürgerwappenform, NICHT deren Fasssymbol, goldene Farbe oder Knoten übernehmen. Der gesamte einfache geschlossene Kreis frontal und zentriert bei88Prozent Bildbreite. Innen alles Alpha255, nur außerhalb Alpha0. Fisch und gebrochene Speerspitze vollständig innerhalb der deckenden Holzfläche.",
+          "references": [
+            "E:/Aleria/Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Braglas.png"
+          ],
+          "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-874b9a6a-9cbe-4fb2-b069-acfadc1a2506.png",
+          "preservedProjectVersion": "AleriaAlmanach/assets/kleiner-durst/references/rhwyd-wappen-v1.png",
+          "result": {
+            "id": "wappen",
+            "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-874b9a6a-9cbe-4fb2-b069-acfadc1a2506.png",
+            "destination": "Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Rhwyd.png",
+            "width": 1387,
+            "height": 1387,
+            "sha256": "e4dd9aecd845f36087a1c97a284bf7683c557ccb894ef6dc406ad84e8ff94492",
+            "postprocess": {
+              "authorization": "User explicitly approved alpha and transparent outer margin correction for the Rhwyd crest on 2026-10-17.",
+              "originalRgbPreserved": true,
+              "shape": "circle",
+              "originalSize": [
+                1254,
+                1254
+              ],
+              "finalSize": [
+                1387,
+                1387
+              ],
+              "originalBounds": [
+                10,
+                8,
+                1242,
+                1235
+              ],
+              "offset": [
+                67,
+                72
+              ],
+              "radius": [
+                603.5,
+                603.5
+              ],
+              "originalSha256": "27c99ac0d16916227d40477ab8bf27fceb2ad33da17363d697fcb4e06bddd2cd",
+              "finalSha256": "e4dd9aecd845f36087a1c97a284bf7683c557ccb894ef6dc406ad84e8ff94492",
+              "method": "Existing normalize(record, circular=True) from AleriaAlmanach/scripts/normalize-theater-signs-alpha.py; no regeneration or RGB resampling.",
+              "helperSha256": "0f2b7ce4ebdf47642bd707ef78d7e1b1e956f0c877aafaac3ec84b7956c62cdd",
+              "validation": {
+                "rgbPixelsUnchanged": true,
+                "originalPreserved": true,
+                "alphaValues": [
+                  0,
+                  255
+                ],
+                "circleCentered": true,
+                "silhouetteBounds": [
+                  90,
+                  90,
+                  1297,
+                  1297
+                ],
+                "marginPixels": 90,
+                "motifWidthPercent": 87.02,
+                "all23AssetHashesMatch": true
+              }
+            }
+          }
+        }
+      ],
+      "revision": 2
+    },
+    {
+      "id": "schild",
+      "destination": "AleriaAlmanach/assets/kleiner-durst/schild.png",
+      "transparent": false,
+      "references": [
+        "E:/Aleria/AleriaAlmanach/assets/krumme-kanne/rooms/schankraum.png"
+      ],
+      "prompt": "Bildformat 2:3. Tales of Xillia / Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nEin einziges kleines unscheinbares mittelalterliches Hafenkneipenschild an einem kurzen rostigen Eisenhaken vor verwittertem Fachwerk: alte schlichte rechteckige Holztafel, abgeplatzte matte cremebraune Farbe. Darauf ein WINZIGER gemalter Bierbecher und die sauber lesbare schlichte Aufschrift \"Zum Kleinen Durst\". Unaufdringlich und etwas frech, keinerlei Prunk, kein Wappenfisch. Ganze Tafel samt Haken und angenehmem Rand sichtbar,2:3Hochformat. Referenz nur Anime-Zeichenstil. Tageslicht, keine Menschen, keine zweite Tafel, keine weitere Schrift."
+    },
+    {
+      "id": "aussenansicht",
+      "destination": "AleriaAlmanach/assets/kleiner-durst/scenes/aussenansicht.png",
+      "transparent": false,
+      "references": [
+        "E:/Aleria/AleriaAlmanach/assets/kleiner-durst/schild.png",
+        "E:/Aleria/AleriaAlmanach/assets/krumme-kanne/rooms/nachtansicht.png"
+      ],
+      "prompt": "Bildformat 2:3. Tales of Xillia / Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nAußenansicht einer sehr kleinen ärmlichen Hafenkneipe direkt an den Docks, nur eine niedrige Tür und zwei kleine Fenster, schiefes verwittertes Fachwerk, ausgebesserter Putz, kleines Schieferdach. Eingang ebenerdig am Kai. Direkt daneben Poller, Tauwerk und nur zwei Fischkisten; am Bildrand ein festgemachtes Fischerschiff und seine Gangplanke nur wenige Schritte vor der Tür. Ein schlichtes kleines hölzernes Schild zeigt einen winzigen Bierbecher und die lesbare Aufschrift \"Zum Kleinen Durst\". Ganzes kleines Haus im2:3Bild, grauer heller Küstenhimmel, warmes gedämpftes Fensterlicht, keine Menschen, kein Gasthof oder großer Hof. Ruhige übersichtliche Szene, armer kleiner Familienbetrieb und viel schlichter als die Krumme Kanne. Referenzen liefern Ort und Zeichenstil; keine Architektur eines größeren Gasthauses kopieren. Alles aus einfachen gedämpften Farbflächen und Cel-Shading, keine photorealistischen Texturen. Vertikal2:3 von Rand zu Rand, kein Rahmen, kein Wasserzeichen."
+    },
+    {
+      "id": "schankstube",
+      "destination": "AleriaAlmanach/assets/kleiner-durst/scenes/schankstube.png",
+      "transparent": false,
+      "references": [
+        "E:/Aleria/AleriaAlmanach/assets/kleiner-durst/scenes/aussenansicht.png",
+        "E:/Aleria/AleriaAlmanach/assets/krumme-kanne/rooms/schankraum.png"
+      ],
+      "prompt": "Bildformat 2:3. Tales of Xillia / Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nWinzige schäbige aber benutzbare Hafenkneipe, EIN kleiner niedriger Schankraum mit genau fünf kleinen ungleichen Holztischen und einfachen Bänken, niedrige dunkle Balken, ausgebesserter Putz, schmaler abgewetzter Tresen mit wenigen Holzkrügen, ein Bierfass, kleiner gemauerter Kamin. Grobe Dielen, kein Prunk, keine Rüstung oder Ritterschilde, keine Bühne, keine Gästezimmer. Durch ein kleines Fenster sieht man direkt Masten und Tauwerk. Kein Mensch und kein Tier im Raum; vor dem Kamin nur Brams dünnes geflicktes Wolltuch. Nicht so gemütlich oder gepflegt wie die Stilreferenz. Ruhige übersichtliche Szene, armer kleiner Familienbetrieb und viel schlichter als die Krumme Kanne. Referenzen liefern Ort und Zeichenstil; keine Architektur eines größeren Gasthauses kopieren. Alles aus einfachen gedämpften Farbflächen und Cel-Shading, keine photorealistischen Texturen. Vertikal2:3 von Rand zu Rand, kein Rahmen, kein Wasserzeichen."
+    },
+    {
+      "id": "kueche",
+      "destination": "AleriaAlmanach/assets/kleiner-durst/scenes/kueche.png",
+      "transparent": false,
+      "references": [
+        "E:/Aleria/AleriaAlmanach/assets/kleiner-durst/scenes/aussenansicht.png",
+        "E:/Aleria/AleriaAlmanach/assets/krumme-kanne/rooms/schankraum.png"
+      ],
+      "prompt": "Bildformat 2:3. Tales of Xillia / Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nSehr enge arme mittelalterliche Hafenkneipenküche für eine Köchin: kleiner Steinherd mit einem geschwärzten hängenden Topf, eine alte Eisenpfanne, winziges Schneidbrett mit etwas Kohl, Rüben und wenigen Fischstücken. Wenige grobe Tonschüsseln auf einem Regal, daneben Spülwinkel mit Holzschale und Wasserkrug. Geflickter Putz, niedrige Balken, dünnes Tageslicht. Sauber genug zum Kochen aber abgenutzt und knapp, keine volle Speisekammer, keine Menschen. Ruhige übersichtliche Szene, armer kleiner Familienbetrieb und viel schlichter als die Krumme Kanne. Referenzen liefern Ort und Zeichenstil; keine Architektur eines größeren Gasthauses kopieren. Alles aus einfachen gedämpften Farbflächen und Cel-Shading, keine photorealistischen Texturen. Vertikal2:3 von Rand zu Rand, kein Rahmen, kein Wasserzeichen."
+    },
+    {
+      "id": "hinterhof",
+      "destination": "AleriaAlmanach/assets/kleiner-durst/scenes/hinterhof.png",
+      "transparent": false,
+      "references": [
+        "E:/Aleria/AleriaAlmanach/assets/kleiner-durst/scenes/aussenansicht.png",
+        "E:/Aleria/AleriaAlmanach/assets/krumme-kanne/rooms/schankraum.png"
+      ],
+      "prompt": "Bildformat 2:3. Tales of Xillia / Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nWinziger Wirtschaftshof einer armen Hafenkneipe, Blick durch offene Tür auf engen Vorratsverschlag: genau zwei kleine Bierfässer, ein Sack Gerste, zwei Kisten mit wenigen Wurzeln, ein kleines Salzgefäß. Im Hof ein bescheidener Holzstapel, Eimer und alte Fischkisten bei einfacher Abflussrinne. Hohe Nachbarwände, feuchtes Hafenlicht. Wenige Vorräte statt Reichtum, keine Stallungen oder Wagen, keine Menschen. Ruhige übersichtliche Szene, armer kleiner Familienbetrieb und viel schlichter als die Krumme Kanne. Referenzen liefern Ort und Zeichenstil; keine Architektur eines größeren Gasthauses kopieren. Alles aus einfachen gedämpften Farbflächen und Cel-Shading, keine photorealistischen Texturen. Vertikal2:3 von Rand zu Rand, kein Rahmen, kein Wasserzeichen."
+    },
+    {
+      "id": "gethin",
+      "destination": "AleriaAlmanach/assets/kleiner-durst/portraits/gethin.png",
+      "transparent": false,
+      "references": [
+        "E:/Aleria/AleriaAlmanach/assets/gwynthor-bathhouse/portraits/cassiano.png"
+      ],
+      "prompt": "Bildformat 2:3. Tales of Xillia / Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nEinzelfigur Gethin Rhwyd: Menschlicher Mann, dargestellt zu Lebzeiten etwa 1723 mit 57 Jahren. Stämmig, braunes stumpfes Haar, kurzer gleichfarbiger Bart, braune Augen, schwere Lider und vom Trinken gezeichnetes müdes Gesicht. Abgetragenes graubraunes Hemd und alte braune Weste, Gürtel. Stehend, breite Schultern etwas gesunken, Arme seitlich, kein Getränk in der Hand. Die ganze stehende Haltung klar erkennbar, Kopf bis mindestens knapp unter die Knie sichtbar, keine sitzende oder angelehnte Pose. Ruhiger reduzierter Hintergrund: eine abgenutzte niedrige Hafenkneipe mit dunklen Balken und ausgebessertem Putz. Alle menschlich, runde Ohren, KEINE Elfen. Eigene deutlich unterscheidbare Gesichtszüge und unkomplizierte Pose. Referenz nur Zeichenstil, eine neue arme müde Wirtsfigur gestalten. Haarfarbe hier deutlich stumpfer und dunkler braun als die Referenz. Zu Lebzeiten dargestellt, keinerlei Todesszene, Wunden oder Geistereffekte. Kleidung schlicht und abgetragen, keine Fantasy-Hochglanzkostüme, kein Schmuckreichtum, keine Schrift, kein Rahmen, kein Wasserzeichen. Vertikal2:3."
+    },
+    {
+      "id": "efa",
+      "destination": "AleriaAlmanach/assets/kleiner-durst/portraits/efa.png",
+      "transparent": false,
+      "references": [
+        "E:/Aleria/AleriaAlmanach/assets/kleiner-durst/portraits/gethin.png",
+        "E:/Aleria/AleriaAlmanach/assets/gwynthor-bathhouse/portraits/livia.png"
+      ],
+      "prompt": "Bildformat 2:3. Tales of Xillia / Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nEinzelfigur Efa: 70-jährige menschliche Frau, deutlich alt und vom Leben erschöpft, vollständig graues ehemals braunes Haar in schlichtem tiefem Knoten, braune Augen, ausgeprägte Falten und weiche schwere Gesichtszüge. Etwas kräftiger Körperbau, nicht fettleibig. Mattes graubraunes langes Wollkleid, geflickte Schürze. Stehend mit leicht gebeugten Schultern, Hände locker vor der Schürze, schwaches müdes Lächeln. Die ganze stehende Haltung klar erkennbar, Kopf bis mindestens knapp unter die Knie sichtbar, keine sitzende oder angelehnte Pose. Ruhiger reduzierter Hintergrund: eine abgenutzte niedrige Hafenkneipe mit dunklen Balken und ausgebessertem Putz. Alle menschlich, runde Ohren, KEINE Elfen. Eigene deutlich unterscheidbare Gesichtszüge und unkomplizierte Pose. ReferenzGethin bestimmt die natürliche Familienähnlichkeit, stumpfes gewöhnliches BRAUNES Haar und BRAUNE Augen. Nicht seine Kleidung, Pose oder sein Gesicht kopieren. Efa ist die ausdrückliche Ausnahme: ihr Haar ist nun vollständig GRAU.  Kleidung schlicht und abgetragen, keine Fantasy-Hochglanzkostüme, kein Schmuckreichtum, keine Schrift, kein Rahmen, kein Wasserzeichen. Vertikal2:3."
+    },
+    {
+      "id": "iorwerth",
+      "destination": "AleriaAlmanach/assets/kleiner-durst/portraits/iorwerth.png",
+      "transparent": false,
+      "references": [
+        "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-f749813f-c8de-42d6-a4d5-efc804d70e23.png"
+      ],
+      "prompt": "Bearbeite am beigefügten Porträt NUR Iorwerths Gesicht und Bart, damit seine Erschöpfung klar lesbar ist:35jähriger Mensch, deutliche dunkle Augenringe unter BRAUNEN schweren Augen, leicht eingesunkene Wangen, monotoner leerer mürrischer Blick direkt zum Betrachter, keine angedeutete Freundlichkeit. Den dichten gepflegten Vollbart durch unregelmäßige kurze BRAUNE Bartstoppeln ersetzen. Gesicht grundsätzlich erkennbar bewahren, nicht alt wie sein Vater machen. Gleichmäßige stumpfbraune Haarfarbe erhalten. Stehende Pose, Handgriffe beim Krugauswischen, Kleidung, Hintergrund, Licht,2:3Format und Anime-Cel-Shading unverändert.",
+      "iterations": [
+        {
+          "prompt": "Bildformat 2:3. Tales of Xillia / Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nEinzelfigur Iorwerth Rhwyd: 35-jähriger menschlicher Schankwirt, völlig erschöpft, eingefallene Wangen, schwere braune Augen mit deutlichen Augenringen, stumpfes dreckigbraunes strähniges kurzes Haar, ungleichmäßige braune Stoppeln. Altes verwaschenes graues Leinenhemd, fleckige braune Weste, schlichte Schürze. STEHEND hinter einem niedrigen Tresen, hält genau EINEN Holzkrug tief vor der Hüfte und säubert ihn mit einem Tuch, unkomplizierte Hände. Monotoner mürrischer leicht müder Blick direkt zum Betrachter. Die ganze stehende Haltung klar erkennbar, Kopf bis mindestens knapp unter die Knie sichtbar, keine sitzende oder angelehnte Pose. Ruhiger reduzierter Hintergrund: eine abgenutzte niedrige Hafenkneipe mit dunklen Balken und ausgebessertem Putz. Alle menschlich, runde Ohren, KEINE Elfen. Eigene deutlich unterscheidbare Gesichtszüge und unkomplizierte Pose. ReferenzGethin bestimmt die natürliche Familienähnlichkeit, stumpfes gewöhnliches BRAUNES Haar und BRAUNE Augen. Nicht seine Kleidung, Pose oder sein Gesicht kopieren. Efa ist die ausdrückliche Ausnahme: ihr Haar ist nun vollständig GRAU.  Kleidung schlicht und abgetragen, keine Fantasy-Hochglanzkostüme, kein Schmuckreichtum, keine Schrift, kein Rahmen, kein Wasserzeichen. Vertikal2:3.",
+          "references": [
+            "E:/Aleria/AleriaAlmanach/assets/kleiner-durst/portraits/gethin.png"
+          ],
+          "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-f749813f-c8de-42d6-a4d5-efc804d70e23.png"
+        }
+      ]
+    },
+    {
+      "id": "meleri",
+      "destination": "AleriaAlmanach/assets/kleiner-durst/portraits/meleri.png",
+      "transparent": false,
+      "references": [
+        "E:/Aleria/AleriaAlmanach/assets/kleiner-durst/portraits/gethin.png"
+      ],
+      "prompt": "Bildformat 2:3. Tales of Xillia / Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nEinzelfigur Meleri Rhwyd: 30-jährige erwachsene menschliche Frau, vollbusig und kräftig gebaut, stumpfbraunes gewelltes Haar zu lockerem Zopf gebunden, braune Augen, lebhafte runde Gesichtszüge. Abgetragenes moosbraunes mittelalterliches Miederkleid mit cremefarbener Bluse und einfacher Schürze, praktische vollständig bekleidete Wirtshauskleidung. Stehend im Dreiviertelprofil, trägt EINEN kleinen Holzkrug sicher in einer Hand auf Hüfthöhe, andere locker, munteres schiefes Lächeln. Die ganze stehende Haltung klar erkennbar, Kopf bis mindestens knapp unter die Knie sichtbar, keine sitzende oder angelehnte Pose. Ruhiger reduzierter Hintergrund: eine abgenutzte niedrige Hafenkneipe mit dunklen Balken und ausgebessertem Putz. Alle menschlich, runde Ohren, KEINE Elfen. Eigene deutlich unterscheidbare Gesichtszüge und unkomplizierte Pose. ReferenzGethin bestimmt die natürliche Familienähnlichkeit, stumpfes gewöhnliches BRAUNES Haar und BRAUNE Augen. Nicht seine Kleidung, Pose oder sein Gesicht kopieren. Efa ist die ausdrückliche Ausnahme: ihr Haar ist nun vollständig GRAU.  Kleidung schlicht und abgetragen, keine Fantasy-Hochglanzkostüme, kein Schmuckreichtum, keine Schrift, kein Rahmen, kein Wasserzeichen. Vertikal2:3."
+    },
+    {
+      "id": "nia",
+      "destination": "AleriaAlmanach/assets/kleiner-durst/portraits/nia.png",
+      "transparent": false,
+      "references": [
+        "E:/Aleria/AleriaAlmanach/assets/kleiner-durst/portraits/gethin.png"
+      ],
+      "prompt": "Bildformat 2:3. Tales of Xillia / Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nEinzelfigur Nia: 33-jährige menschliche Frau, stumpfbraunes dichtes Haar vollständig in schlichtem losem Knoten, braune Augen, markante Wangenknochen und kleine Sommersprossen, abgearbeitet aber wacher klarer Blick. Einfaches verwaschenes rotbraunes langes Kleid, hochgekrempelte Ärmel, grobe helle Küchenschürze. Stehend seitlich am Herd, Arme locker tief vor dem Körper, kein Gegenstand in den Händen, kleines beherrschtes Lächeln. Die ganze stehende Haltung klar erkennbar, Kopf bis mindestens knapp unter die Knie sichtbar, keine sitzende oder angelehnte Pose. Ruhiger reduzierter Hintergrund: eine abgenutzte niedrige Hafenkneipe mit dunklen Balken und ausgebessertem Putz. Alle menschlich, runde Ohren, KEINE Elfen. Eigene deutlich unterscheidbare Gesichtszüge und unkomplizierte Pose. ReferenzGethin bestimmt die natürliche Familienähnlichkeit, stumpfes gewöhnliches BRAUNES Haar und BRAUNE Augen. Nicht seine Kleidung, Pose oder sein Gesicht kopieren. Efa ist die ausdrückliche Ausnahme: ihr Haar ist nun vollständig GRAU.  Kleidung schlicht und abgetragen, keine Fantasy-Hochglanzkostüme, kein Schmuckreichtum, keine Schrift, kein Rahmen, kein Wasserzeichen. Vertikal2:3."
+    },
+    {
+      "id": "dewi",
+      "destination": "AleriaAlmanach/assets/kleiner-durst/portraits/dewi.png",
+      "transparent": false,
+      "references": [
+        "E:/Aleria/AleriaAlmanach/assets/kleiner-durst/portraits/gethin.png",
+        "E:/Aleria/AleriaAlmanach/assets/kleiner-durst/portraits/nia.png",
+        "E:/Aleria/AleriaAlmanach/assets/kleiner-durst/portraits/iorwerth.png"
+      ],
+      "prompt": "Bildformat 2:3. Tales of Xillia / Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nEinzelfigur Dewi Rhwyd: 14-jähriger menschlicher Junge, eindeutig jugendliches noch kindliches Gesicht und schmale altersgemäße Statur, stumpfbraunes zerzaustes Haar, braune Augen wie seine Eltern, freches Grinsen. Vollständig bekleidet mit geflickter grober graubrauner Tunika, langen Hosen und schlichten Schuhen. Stehend mit einer Hand an der Hüfte und anderer locker, kecker Blick, keine Waffen, kein Alkohol, keine erwachsene Muskulatur. Die ganze stehende Haltung klar erkennbar, Kopf bis mindestens knapp unter die Knie sichtbar, keine sitzende oder angelehnte Pose. Ruhiger reduzierter Hintergrund: eine abgenutzte niedrige Hafenkneipe mit dunklen Balken und ausgebessertem Putz. Alle menschlich, runde Ohren, KEINE Elfen. Eigene deutlich unterscheidbare Gesichtszüge und unkomplizierte Pose. ReferenzGethin bestimmt die natürliche Familienähnlichkeit, stumpfes gewöhnliches BRAUNES Haar und BRAUNE Augen. Nicht seine Kleidung, Pose oder sein Gesicht kopieren. Efa ist die ausdrückliche Ausnahme: ihr Haar ist nun vollständig GRAU.  Kleidung schlicht und abgetragen, keine Fantasy-Hochglanzkostüme, kein Schmuckreichtum, keine Schrift, kein Rahmen, kein Wasserzeichen. Vertikal2:3."
+    },
+    {
+      "id": "aled",
+      "destination": "AleriaAlmanach/assets/kleiner-durst/portraits/aled.png",
+      "transparent": false,
+      "references": [
+        "E:/Aleria/AleriaAlmanach/assets/kleiner-durst/portraits/gethin.png"
+      ],
+      "prompt": "Bildformat 2:3. Tales of Xillia / Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nEinzelfigur Aled Rhwyd: 32-jähriger menschlicher Fischer zu Lebzeiten, breite kantige Kieferpartie, stumpfbraunes kurz geschorenes Haar, braune Augen, dichter kurzer brauner Bart. Wettergraue Wolltunika, schlichter Gürtel. Stehend frontal, Arme locker, ernster ruhiger Blick. Keine Rüstung, kein Heldendenkmal. Die ganze stehende Haltung klar erkennbar, Kopf bis mindestens knapp unter die Knie sichtbar, keine sitzende oder angelehnte Pose. Ruhiger reduzierter Hintergrund: eine abgenutzte niedrige Hafenkneipe mit dunklen Balken und ausgebessertem Putz. Alle menschlich, runde Ohren, KEINE Elfen. Eigene deutlich unterscheidbare Gesichtszüge und unkomplizierte Pose. ReferenzGethin bestimmt die natürliche Familienähnlichkeit, stumpfes gewöhnliches BRAUNES Haar und BRAUNE Augen. Nicht seine Kleidung, Pose oder sein Gesicht kopieren. Efa ist die ausdrückliche Ausnahme: ihr Haar ist nun vollständig GRAU. Zu Lebzeiten dargestellt, keinerlei Todesszene, Wunden oder Geistereffekte. Kleidung schlicht und abgetragen, keine Fantasy-Hochglanzkostüme, kein Schmuckreichtum, keine Schrift, kein Rahmen, kein Wasserzeichen. Vertikal2:3."
+    },
+    {
+      "id": "carwyn",
+      "destination": "AleriaAlmanach/assets/kleiner-durst/portraits/carwyn.png",
+      "transparent": false,
+      "references": [
+        "E:/Aleria/AleriaAlmanach/assets/kleiner-durst/portraits/gethin.png"
+      ],
+      "prompt": "Bildformat 2:3. Tales of Xillia / Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nEinzelfigur Carwyn Rhwyd: 30-jähriger menschlicher Hafenarbeiter zu Lebzeiten, langes schmales Gesicht, stumpfbraunes etwas längeres glattes Haar hinter die Ohren gestrichen, braune Augen, rasiert. Verwaschene olivgraue Tunika und einfache braune Weste. Stehend leicht nach links, ein Daumen am Gürtel, anderer Arm locker, zurückhaltender Blick. Die ganze stehende Haltung klar erkennbar, Kopf bis mindestens knapp unter die Knie sichtbar, keine sitzende oder angelehnte Pose. Ruhiger reduzierter Hintergrund: eine abgenutzte niedrige Hafenkneipe mit dunklen Balken und ausgebessertem Putz. Alle menschlich, runde Ohren, KEINE Elfen. Eigene deutlich unterscheidbare Gesichtszüge und unkomplizierte Pose. ReferenzGethin bestimmt die natürliche Familienähnlichkeit, stumpfes gewöhnliches BRAUNES Haar und BRAUNE Augen. Nicht seine Kleidung, Pose oder sein Gesicht kopieren. Efa ist die ausdrückliche Ausnahme: ihr Haar ist nun vollständig GRAU. Zu Lebzeiten dargestellt, keinerlei Todesszene, Wunden oder Geistereffekte. Kleidung schlicht und abgetragen, keine Fantasy-Hochglanzkostüme, kein Schmuckreichtum, keine Schrift, kein Rahmen, kein Wasserzeichen. Vertikal2:3."
+    },
+    {
+      "id": "hywel",
+      "destination": "AleriaAlmanach/assets/kleiner-durst/portraits/hywel.png",
+      "transparent": false,
+      "references": [
+        "E:/Aleria/AleriaAlmanach/assets/kleiner-durst/portraits/gethin.png"
+      ],
+      "prompt": "Bildformat 2:3. Tales of Xillia / Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nEinzelfigur Hywel Rhwyd: 28-jähriger menschlicher Matrose zu Lebzeiten, runderes kräftiges Gesicht, stumpfbraunes welliges Haar, braune Augen, breiter brauner Schnurrbart ohne Vollbart. Ausgeblichenes blaugrünes Hemd, alte Hüftschärpe. Stehend nach rechts, Hände entspannt tief ineinander, leicht schiefes freundliches Lächeln. Die ganze stehende Haltung klar erkennbar, Kopf bis mindestens knapp unter die Knie sichtbar, keine sitzende oder angelehnte Pose. Ruhiger reduzierter Hintergrund: eine abgenutzte niedrige Hafenkneipe mit dunklen Balken und ausgebessertem Putz. Alle menschlich, runde Ohren, KEINE Elfen. Eigene deutlich unterscheidbare Gesichtszüge und unkomplizierte Pose. ReferenzGethin bestimmt die natürliche Familienähnlichkeit, stumpfes gewöhnliches BRAUNES Haar und BRAUNE Augen. Nicht seine Kleidung, Pose oder sein Gesicht kopieren. Efa ist die ausdrückliche Ausnahme: ihr Haar ist nun vollständig GRAU. Zu Lebzeiten dargestellt, keinerlei Todesszene, Wunden oder Geistereffekte. Kleidung schlicht und abgetragen, keine Fantasy-Hochglanzkostüme, kein Schmuckreichtum, keine Schrift, kein Rahmen, kein Wasserzeichen. Vertikal2:3."
+    },
+    {
+      "id": "dafydd",
+      "destination": "AleriaAlmanach/assets/kleiner-durst/portraits/dafydd.png",
+      "transparent": false,
+      "references": [
+        "E:/Aleria/AleriaAlmanach/assets/kleiner-durst/portraits/gethin.png"
+      ],
+      "prompt": "Bildformat 2:3. Tales of Xillia / Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nEinzelfigur Dafydd Rhwyd: 26-jähriger menschlicher Fischer zu Lebzeiten, schlank, etwas breitere Nase, stumpfbraunes unordentliches kurzes Haar mit seitlichem Scheitel, braune Augen, nur leichter brauner Stoppelbart. Grobes beigebraunes Hemd mit Schnürkragen und kurzer grauer Schulterumhang. Stehend in Dreiviertelansicht, beide Arme locker seitlich, ruhiger aufmerksamer Blick. Die ganze stehende Haltung klar erkennbar, Kopf bis mindestens knapp unter die Knie sichtbar, keine sitzende oder angelehnte Pose. Ruhiger reduzierter Hintergrund: eine abgenutzte niedrige Hafenkneipe mit dunklen Balken und ausgebessertem Putz. Alle menschlich, runde Ohren, KEINE Elfen. Eigene deutlich unterscheidbare Gesichtszüge und unkomplizierte Pose. ReferenzGethin bestimmt die natürliche Familienähnlichkeit, stumpfes gewöhnliches BRAUNES Haar und BRAUNE Augen. Nicht seine Kleidung, Pose oder sein Gesicht kopieren. Efa ist die ausdrückliche Ausnahme: ihr Haar ist nun vollständig GRAU. Zu Lebzeiten dargestellt, keinerlei Todesszene, Wunden oder Geistereffekte. Kleidung schlicht und abgetragen, keine Fantasy-Hochglanzkostüme, kein Schmuckreichtum, keine Schrift, kein Rahmen, kein Wasserzeichen. Vertikal2:3."
+    },
+    {
+      "id": "carys",
+      "destination": "AleriaAlmanach/assets/kleiner-durst/portraits/carys.png",
+      "transparent": false,
+      "references": [
+        "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-95ad85f4-8a71-420e-9733-1ea62f0ff709.png"
+      ],
+      "prompt": "Bearbeite die beigefügte Figur als eigenständige Carys,27jährige menschliche Magd. Sie sieht der Kellnerin Meleri derzeit zu ähnlich. Deutlich andere Identität: hübsches breiteres kantig-ovales Gesicht mit kräftiger gerader Nase, geraden dunklen Brauen und BRAUNEN Augen. Dunkelbraunes glattes Haar fest in einen kleinen tiefen KNOTEN binden, KEIN langer Zopf oder Locken. Sichtbar kräftigere Schultern und kräftige Unterarme durch Arbeit, natürliche weibliche Proportionen. Schlichtes EINTEILIGES graugrünes Arbeitskleid, hochgekrempelte Ärmel und grobe beigegraue Schürze; KEIN geschnürtes Mieder, keinen tiefen Ausschnitt. Stehend nach rechts gedreht mit geradem Rücken, beide Arme locker seitlich, selbstbewusster ruhiger Blick mit geschlossenem Mund. Hintergrund, Anime-Cel-Shading, braune Augen und vertikales2:3Format erhalten. Ganze stehende Haltung bis unter die Knie. Keine Requisiten, keine Elfen.",
+      "iterations": [
+        {
+          "prompt": "Bildformat 2:3. Tales of Xillia / Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\n27-jährige erwachsene menschliche Frau, hübsches kantig-ovales Gesicht, braune Augen, sattbraunes Haar in festem kurzem Zopf, kräftige Schultern und kräftige Unterarme durch körperliche Arbeit, normale natürliche Proportionen. Einfaches graugrünes mittelalterliches Arbeitskleid mit hochgekrempelten Ärmeln und grober Schürze. Stehend frontal mit geradem Rücken, Arme entspannt, selbstbewusster ruhiger Blick und kaum sichtbares Lächeln. Keine Luxuskleidung. EIGENSTÄNDIGE neue Frau, keine Familienangehörige, nicht Meleris Gesicht kopieren. Ganze STEHENDE Haltung bis unter die Knie, einfache Pose ohne Requisiten, runde menschliche Ohren. Hintergrund schlichter abgenutzter Wirtschaftswinkel der Hafenkneipe, weich reduziert. Keine Schrift, keine Elfen, kein Rahmen, vertikal2:3.",
+          "references": [
+            "E:/Aleria/AleriaAlmanach/assets/kleiner-durst/portraits/meleri.png"
+          ],
+          "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-95ad85f4-8a71-420e-9733-1ea62f0ff709.png"
+        }
+      ]
+    },
+    {
+      "id": "bram",
+      "destination": "AleriaAlmanach/assets/kleiner-durst/portraits/bram.png",
+      "transparent": false,
+      "references": [
+        "E:/Aleria/Bestiarium/assets/dog-profiles/ponter.webp",
+        "E:/Aleria/AleriaAlmanach/assets/kleiner-durst/scenes/schankstube.png"
+      ],
+      "prompt": "Bildformat 2:3. Tales of Xillia / Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nEin uralter 16 jähriger mittelgroßer schlanker Ponter-Hund, wetterfestes stumpfes graubraunes Fell, weißgraue Schnauze, große ehemals aufgerichtete nun entspannte Ohren wie im Bestiarium, getrübte braune Augen. LIEGT erschöpft aber lebend auf einem dünnen geflickten Wolltuch vor einem kleinen gemauerten Kneipenkamin, Kopf auf den Pfoten, ein Auge halb offen, zartes Glutlicht. Kein Welpe, kein Kampfhund, keine Wunden, kein Blut, kein Ritter und keine Menschen im Bild. Erste Referenz bestimmt ausschließlich tatsächliche Rasseform und Fellzeichnung; Krieger und Wachposten NICHT übernehmen, keinen neuen Typ erfinden. Zweite Referenz ist die tatsächliche kleine Schankstube, denselben einfachen Kamin zeigen. Einzelner Hund vollständig mit Pfoten und Schwanz sichtbar, ruhige nahe Szene2:3. Keine Schrift."
+    },
+    {
+      "id": "matrosenhappen",
+      "destination": "AleriaAlmanach/assets/kleiner-durst/food/matrosenhappen.png",
+      "transparent": false,
+      "references": [
+        "E:/Aleria/AleriaAlmanach/assets/kleiner-durst/scenes/schankstube.png"
+      ],
+      "prompt": "Bildformat 2:3. Tales of Xillia / Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nEin einziges schlichtes Kneipengericht als ruhiges Stillleben auf einem alten groben Holztisch: Eine einzige dicke grobe dunkle Brotscheibe mit drei kleinen Stücken eingelegtem Hering und ein paar rohen Zwiebelringen auf einem abgenutzten Holzteller. Kleine billige Vorspeise, keine elegante Garnitur. Ganzer Teller beziehungsweise ganze Schüssel vollständig sichtbar. Kleiner Hintergrund mit einfacher Kneipenwand, ruhige Dreiviertelansicht leicht von oben, wenig Zubehör. Günstige Fischer- und Matrosenküche, keine Silberbestecke, keine Kräuterblüten, keine feine Gastronomie. Referenz nur Materialfarben und Anime-Zeichenstil des Hauses. Vertikal2:3 mit angenehmem Rand, keine Menschen, keine Hände, kein Rahmen, keine Schrift, kein Wasserzeichen."
+    },
+    {
+      "id": "fischgerstentopf",
+      "destination": "AleriaAlmanach/assets/kleiner-durst/food/fischgerstentopf.png",
+      "transparent": false,
+      "references": [
+        "E:/Aleria/AleriaAlmanach/assets/kleiner-durst/scenes/schankstube.png"
+      ],
+      "prompt": "Bildformat 2:3. Tales of Xillia / Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nEin einziges schlichtes Kneipengericht als ruhiges Stillleben auf einem alten groben Holztisch: Eine volle grobe braune Tonschüssel mit dickem Eintopf: viel Gerste, heller Kohl, kleine Wurzelstücke und wenige deutlich erkennbare gekochte weiße Fischstücke. Sämig und sättigend, keine Luxusauslage. Ganzer Teller beziehungsweise ganze Schüssel vollständig sichtbar. Kleiner Hintergrund mit einfacher Kneipenwand, ruhige Dreiviertelansicht leicht von oben, wenig Zubehör. Günstige Fischer- und Matrosenküche, keine Silberbestecke, keine Kräuterblüten, keine feine Gastronomie. Referenz nur Materialfarben und Anime-Zeichenstil des Hauses. Vertikal2:3 mit angenehmem Rand, keine Menschen, keine Hände, kein Rahmen, keine Schrift, kein Wasserzeichen."
+    },
+    {
+      "id": "hafensuppe",
+      "destination": "AleriaAlmanach/assets/kleiner-durst/food/hafensuppe.png",
+      "transparent": false,
+      "references": [
+        "E:/Aleria/AleriaAlmanach/assets/kleiner-durst/scenes/schankstube.png"
+      ],
+      "prompt": "Bildformat 2:3. Tales of Xillia / Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nEin einziges schlichtes Kneipengericht als ruhiges Stillleben auf einem alten groben Holztisch: Eine schlichte irdene Suppenschüssel mit dünner klarer bernsteinfarbener Fischbrühe, wenig Lauch, Rübenstückchen und einzelnen weißen Fischflocken. Eine kleine grobe Brotscheibe liegt daneben. Deutlich dünner als ein Eintopf. Ganzer Teller beziehungsweise ganze Schüssel vollständig sichtbar. Kleiner Hintergrund mit einfacher Kneipenwand, ruhige Dreiviertelansicht leicht von oben, wenig Zubehör. Günstige Fischer- und Matrosenküche, keine Silberbestecke, keine Kräuterblüten, keine feine Gastronomie. Referenz nur Materialfarben und Anime-Zeichenstil des Hauses. Vertikal2:3 mit angenehmem Rand, keine Menschen, keine Hände, kein Rahmen, keine Schrift, kein Wasserzeichen."
+    },
+    {
+      "id": "ganzer-hering",
+      "destination": "AleriaAlmanach/assets/kleiner-durst/food/ganzer-hering.png",
+      "transparent": false,
+      "references": [
+        "E:/Aleria/AleriaAlmanach/assets/kleiner-durst/scenes/schankstube.png"
+      ],
+      "prompt": "Bildformat 2:3. Tales of Xillia / Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nEin einziges schlichtes Kneipengericht als ruhiges Stillleben auf einem alten groben Holztisch: Ein kleiner ganzer gegarter Hering mit Kopf und Schwanz, matter silbergrauer Haut, auf einem einfachen abgenutzten ovalen Holzteller, daneben nur wenig gekochter Kohl und zwei kleine Rübenstücke. Kein riesiger Edelfisch, kein Filet, kein reiches Mahl. Ganzer Teller beziehungsweise ganze Schüssel vollständig sichtbar. Kleiner Hintergrund mit einfacher Kneipenwand, ruhige Dreiviertelansicht leicht von oben, wenig Zubehör. Günstige Fischer- und Matrosenküche, keine Silberbestecke, keine Kräuterblüten, keine feine Gastronomie. Referenz nur Materialfarben und Anime-Zeichenstil des Hauses. Vertikal2:3 mit angenehmem Rand, keine Menschen, keine Hände, kein Rahmen, keine Schrift, kein Wasserzeichen."
+    },
+    {
+      "id": "monatsfang",
+      "destination": "AleriaAlmanach/assets/kleiner-durst/food/monatsfang.png",
+      "transparent": false,
+      "references": [
+        "E:/Aleria/AleriaAlmanach/assets/kleiner-durst/scenes/schankstube.png"
+      ],
+      "prompt": "Bildformat 2:3. Tales of Xillia / Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nEin einziges schlichtes Kneipengericht als ruhiges Stillleben auf einem alten groben Holztisch: Ein bescheidenes aber appetitliches goldbraun in der Pfanne gebratenes Schollenfilet, kleine angebratene Zwiebelstücke und wenig Wurzelgemüse auf einem schlichten braunen Keramikteller. Für diese Kneipe ein seltener besonderer Fisch, trotzdem keine feine Restaurantgarnitur. Ganzer Teller beziehungsweise ganze Schüssel vollständig sichtbar. Kleiner Hintergrund mit einfacher Kneipenwand, ruhige Dreiviertelansicht leicht von oben, wenig Zubehör. Günstige Fischer- und Matrosenküche, keine Silberbestecke, keine Kräuterblüten, keine feine Gastronomie. Referenz nur Materialfarben und Anime-Zeichenstil des Hauses. Vertikal2:3 mit angenehmem Rand, keine Menschen, keine Hände, kein Rahmen, keine Schrift, kein Wasserzeichen."
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "tool": "built-in image_gen",
+  "images": [
+    {
+      "id": "terenzio",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-f573d24d-ed98-44f6-9b06-8c1b6b391e66.png",
+      "destination": "AleriaAlmanach/assets/gwynthor-bathhouse/portraits/terenzio.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "20017f1dc28ff8637a2c42daedf54d6b4fc5e53a336591dde3be4d2facdc6994"
+    },
+    {
+      "id": "aussenansicht",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-349a9c32-0e89-4869-b3ce-1622f8330826.png",
+      "destination": "AleriaAlmanach/assets/gwynthor-bathhouse/scenes/aussenansicht.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "d9eb7a757afe1e5cd70cb3e88b6441962e901a0100e9482ec2bf6a6e7331616e"
+    },
+    {
+      "id": "empfang",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-0eeb067b-97b7-4ae1-bf22-940bd9b8f1d7.png",
+      "destination": "AleriaAlmanach/assets/gwynthor-bathhouse/scenes/empfang.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "ede6c7a92a6fa9b5abf10d9dbf7a286742803a9677f99e6b27ea6b3926350016"
+    },
+    {
+      "id": "badehalle",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-adebd021-4b8b-418c-8a0a-8679e29b7fa3.png",
+      "destination": "AleriaAlmanach/assets/gwynthor-bathhouse/scenes/badehalle.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "404994648b4d827ec31bd020213c75f696a21ea8bcf2d862bbab25015eba76a3"
+    },
+    {
+      "id": "wannenstube",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-19025c04-863b-4984-8156-e083e6ee7c7a.png",
+      "destination": "AleriaAlmanach/assets/gwynthor-bathhouse/scenes/wannenstube.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "179abfd70c500455205a9ceea601bbde0163547b112415429ea808b47dca4314"
+    },
+    {
+      "id": "wappen",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-b1ea3c9c-d1d8-466d-8632-fe78d4245ee0.png",
+      "destination": "Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Fontani.png",
+      "width": 1323,
+      "height": 1323,
+      "sha256": "dbac9391e36a240ea4b1e25280ae1f97cbb9725557c86bdb9c3d09f4b66e84f6",
+      "postprocess": {
+        "authorization": "User explicitly approved alpha and transparent outer margin correction for the Fontani crest on 2026-10-17.",
+        "originalRgbPreserved": true,
+        "shape": "circle",
+        "originalSize": [
+          1254,
+          1254
+        ],
+        "finalSize": [
+          1323,
+          1323
+        ],
+        "originalBounds": [
+          40,
+          32,
+          1213,
+          1202
+        ],
+        "offset": [
+          35,
+          45
+        ],
+        "radius": [
+          575.0,
+          575.0
+        ],
+        "originalSha256": "89e3cdbb4690ffdbcc770cdb141cd6cd9e5f377875cc9acdd5c2755f1b048b0d",
+        "finalSha256": "dbac9391e36a240ea4b1e25280ae1f97cbb9725557c86bdb9c3d09f4b66e84f6",
+        "method": "Existing normalize(record, circular=True) from AleriaAlmanach/scripts/normalize-theater-signs-alpha.py; no regeneration or RGB resampling.",
+        "helperSha256": "0f2b7ce4ebdf47642bd707ef78d7e1b1e956f0c877aafaac3ec84b7956c62cdd",
+        "validation": {
+          "rgbPixelsUnchanged": true,
+          "originalPreserved": true,
+          "alphaValues": [
+            0,
+            255
+          ],
+          "circleCentered": true,
+          "silhouetteBounds": [
+            86,
+            86,
+            1237,
+            1237
+          ],
+          "marginPixels": 86,
+          "motifWidthPercent": 87.0,
+          "allNineAssetHashesMatch": true
+        }
+      }
+    },
+    {
+      "id": "cassiano",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-ca5c6176-eee5-4cb9-baf7-16ca8f6ec2c2.png",
+      "destination": "AleriaAlmanach/assets/gwynthor-bathhouse/portraits/cassiano.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "f1db23bfb3efbea6f4fc1fe97004d5234d01afb5320fab1d62d6c01d68d8ddce"
+    },
+    {
+      "id": "livia",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-511b9e2d-fdb5-4db0-bf48-6d87aa7bee11.png",
+      "destination": "AleriaAlmanach/assets/gwynthor-bathhouse/portraits/livia.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "84591916bd25800f438dd10a7ed2e4c437c62dc545d0aef8cf2b9dfb6e307de6"
+    },
+    {
+      "id": "heizhof",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-53acc287-86da-44b4-b807-25847a427b03.png",
+      "destination": "AleriaAlmanach/assets/gwynthor-bathhouse/scenes/heizhof.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "28a28aa5d61338c8cbab25ccd1b3fc8460231a281c9c591498c28a8edddd475c"
+    }
+  ]
+}

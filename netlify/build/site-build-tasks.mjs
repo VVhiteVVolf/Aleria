@@ -1,5 +1,10 @@
 const testCommand = (...files) => ['--test', '--experimental-test-isolation=none', ...files];
 const almanach = name => `AleriaAlmanach/tests/${name}.test.mjs`;
+const gwynthorFamilyInputs = [
+  'AleriaAlmanach/modules/gwynthor-bathhouse/bathhouse-people.mjs',
+  'AleriaAlmanach/modules/kleiner-durst/durst-people.mjs',
+  'AleriaAlmanach/modules/pendrwn-general-store/store-people.mjs'
+];
 
 // Inputs include cross-feature dependencies. Images do not affect the chart audit,
 // which deliberately blocks image requests, but CSS, vendor code and family data do.
@@ -37,7 +42,7 @@ export const SITE_BUILD_TASKS = [
     // dependency audit, including dynamically loaded editorial modules.
     inputs: ['Gameplay Guide/', 'CharakterDatenbank/generated/characters.snapshot.json',
       'AleriaAlmanach/package.json', 'Stammbäume/assets/js/', 'Stammbäume/assets/data/family-sources/',
-      'Familien Häuser und Clans/', 'Bestiarium/modules/',
+      'Familien Häuser und Clans/', 'Bestiarium/modules/', ...gwynthorFamilyInputs,
       ...['character-equipment', 'characters', 'classes', 'combat', 'combat-critical',
         'combat-status', 'combat-styles', 'creatures', 'herausforderung', 'image-library',
         'krumme-kanne', 'goettliche-eleganz', 'lachende-nixe', 'gofrann-schmiede', 'letzte-rast', 'scene-items', 'scene-rest', 'spell-catalog']
@@ -65,7 +70,7 @@ export const SITE_BUILD_TASKS = [
       'AleriaAlmanach/modules/krumme-kanne/krumme-kanne-roster.mjs',
       'AleriaAlmanach/modules/gofrann-schmiede/', 'AleriaAlmanach/modules/letzte-rast/',
       'AleriaAlmanach/modules/goettliche-eleganz/eleganz-family-people.mjs',
-      'AleriaAlmanach/modules/lachende-nixe/nixe-family-people.mjs',
+      'AleriaAlmanach/modules/lachende-nixe/nixe-family-people.mjs', ...gwynthorFamilyInputs,
       'AleriaAlmanach/scripts/build-regional-equipment.mjs', almanach('regional-equipment')],
     commands: [testCommand(almanach('regional-equipment'))]
   },
@@ -78,7 +83,7 @@ export const SITE_BUILD_TASKS = [
       'AleriaAlmanach/package.json', 'AleriaAlmanach/modules/krumme-kanne/krumme-kanne-roster.mjs',
       'AleriaAlmanach/modules/gofrann-schmiede/', 'AleriaAlmanach/modules/letzte-rast/',
       'AleriaAlmanach/modules/goettliche-eleganz/eleganz-family-people.mjs',
-      'AleriaAlmanach/modules/lachende-nixe/nixe-family-people.mjs'],
+      'AleriaAlmanach/modules/lachende-nixe/nixe-family-people.mjs', ...gwynthorFamilyInputs],
     excludes: ['Stammbäume/assets/data/published-families/backups/'],
     commands: [['netlify/build/verify-task-inputs.mjs', 'family-charts'],
       ['Stammbäume/tools/check-release.mjs', '--prepare-browser']]

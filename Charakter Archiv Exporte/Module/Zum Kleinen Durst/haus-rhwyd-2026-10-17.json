@@ -1,0 +1,574 @@
+{
+  "schema": "aleria.family-tree",
+  "schemaVersion": 1,
+  "document": {
+    "id": "haus-rhwyd",
+    "title": "Haus Rhwyd",
+    "motto": "Wir bleiben.",
+    "description": "Arme, überschuldete Gwynthorer Wirtsfamilie des Kleinen Dursts direkt an den Docks. Vier der fünf Söhne Gethins und Efas fielen 1720; der jüngste, Iorwerth, führt die Kneipe heute mit seiner Mutter. Meleri, Nia und Dewi gehören zum kleinen lebenden Familienkreis.",
+    "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Rhwyd.png",
+    "houseProfile": {
+      "rankId": "commoner",
+      "seat": "Gwynthor",
+      "barony": "Llamreis Ankunft",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "house-draig",
+      "liegeHouseName": "Haus Draig",
+      "regionEmblems": {
+        "seat": "",
+        "barony": "",
+        "county": "",
+        "kingdom": ""
+      }
+    }
+  },
+  "houses": [
+    {
+      "id": "house-rhwyd",
+      "name": "Haus Rhwyd",
+      "motto": "Wir bleiben.",
+      "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Rhwyd.png",
+      "status": "active"
+    }
+  ],
+  "persons": [
+    {
+      "id": "haus-rhwyd-gruender",
+      "worldPersonId": "person--haus-rhwyd--haus-rhwyd-gruender",
+      "name": "Unbekannter Gründer",
+      "title": "Gründer des Hauses",
+      "sex": "male",
+      "status": "dead",
+      "birth": "",
+      "death": "????",
+      "portrait": "",
+      "portraitPlaceholder": "auto",
+      "houseId": "house-rhwyd",
+      "familyRole": "core",
+      "lineageRole": "branch",
+      "tags": [
+        "Gründerfamilie"
+      ],
+      "notes": "Historische Gründerfigur vor dem Überlieferungssprung; Name und genaue Lebensdaten sind noch nicht belegt.",
+      "extensions": {}
+    },
+    {
+      "id": "haus-rhwyd-gruenderin",
+      "worldPersonId": "person--haus-rhwyd--haus-rhwyd-gruenderin",
+      "name": "Unbekannte Gründerin",
+      "title": "Gründerin des Hauses",
+      "sex": "female",
+      "status": "dead",
+      "birth": "",
+      "death": "????",
+      "portrait": "",
+      "portraitPlaceholder": "auto",
+      "houseId": "house-rhwyd",
+      "familyRole": "married",
+      "lineageRole": "branch",
+      "tags": [
+        "Gründerfamilie"
+      ],
+      "notes": "Historische Gründerfigur vor dem Überlieferungssprung; Name und genaue Lebensdaten sind noch nicht belegt.",
+      "extensions": {}
+    },
+    {
+      "id": "gethin-rhwyd",
+      "worldPersonId": "person--haus-rhwyd--gethin-rhwyd",
+      "name": "Gethin Rhwyd",
+      "title": "Ehemaliger Inhaber · verstorben",
+      "sex": "male",
+      "status": "dead",
+      "birth": "1666",
+      "death": "1728",
+      "portrait": "../AleriaAlmanach/assets/kleiner-durst/portraits/gethin.png",
+      "portraitPlaceholder": "auto",
+      "houseId": "house-rhwyd",
+      "familyRole": "core",
+      "lineageRole": "branch",
+      "tags": [],
+      "notes": "Gethin führte die Hafenkneipe vor Efa und Iorwerth. Vier seiner fünf Söhne wurden 1720 in den Krieg geschickt; keiner kam lebend zurück. Nach ihrem Tod verfiel er dem Trinken und starb 1728 an dessen Folgen. Die Schulden blieben seiner Witwe und dem jüngsten Sohn.",
+      "extensions": {
+        "registryManagedFields": [
+          "name",
+          "title",
+          "notes",
+          "portrait"
+        ],
+        "portraitAge": 57
+      }
+    },
+    {
+      "id": "efa-rhwyd",
+      "worldPersonId": "person--haus-rhwyd--efa-rhwyd",
+      "name": "Efa",
+      "title": "Witwe und Mitinhaberin · Kasse und Haus",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1670",
+      "death": "",
+      "portrait": "../AleriaAlmanach/assets/kleiner-durst/portraits/efa.png",
+      "portraitPlaceholder": "auto",
+      "houseId": "",
+      "familyRole": "married",
+      "lineageRole": "branch",
+      "tags": [],
+      "notes": "Efa ist 70 Jahre alt und hat vier Söhne und ihren Mann verloren. Mit Iorwerth hält sie den Kleinen Durst offen, obwohl das Haus überschuldet ist. Sie zählt die Einnahmen, flickt Leinen und behält die Vorräte im Blick. Die Jahre haben sie abgekämpft; für vertraute Gäste bleibt ein schwaches Lächeln.",
+      "extensions": {
+        "registryManagedFields": [
+          "name",
+          "title",
+          "notes",
+          "portrait"
+        ],
+        "portraitAge": 70
+      }
+    },
+    {
+      "id": "aled-rhwyd",
+      "worldPersonId": "person--haus-rhwyd--aled-rhwyd",
+      "name": "Aled Rhwyd",
+      "title": "Ältester Sohn · 1720 gefallen",
+      "sex": "male",
+      "status": "dead",
+      "birth": "1688",
+      "death": "1720",
+      "portrait": "../AleriaAlmanach/assets/kleiner-durst/portraits/aled.png",
+      "portraitPlaceholder": "auto",
+      "houseId": "house-rhwyd",
+      "familyRole": "core",
+      "lineageRole": "branch",
+      "tags": [],
+      "notes": "Der älteste der fünf Brüder wurde 1720 in den Krieg geschickt und kehrte nicht lebend zurück. Er starb mit 32 Jahren. Eine eigene Ehe oder Nachkommenschaft ist nicht überliefert.",
+      "extensions": {
+        "registryManagedFields": [
+          "name",
+          "title",
+          "notes",
+          "portrait"
+        ],
+        "portraitAge": 32
+      }
+    },
+    {
+      "id": "carwyn-rhwyd",
+      "worldPersonId": "person--haus-rhwyd--carwyn-rhwyd",
+      "name": "Carwyn Rhwyd",
+      "title": "Zweiter Sohn · 1720 gefallen",
+      "sex": "male",
+      "status": "dead",
+      "birth": "1690",
+      "death": "1720",
+      "portrait": "../AleriaAlmanach/assets/kleiner-durst/portraits/carwyn.png",
+      "portraitPlaceholder": "auto",
+      "houseId": "house-rhwyd",
+      "familyRole": "core",
+      "lineageRole": "branch",
+      "tags": [],
+      "notes": "Carwyn zog 1720 wie seine älteren und jüngeren Brüder in den Krieg. Er starb mit 30 Jahren. Weitere Lebensstationen werden vorerst nicht festgelegt.",
+      "extensions": {
+        "registryManagedFields": [
+          "name",
+          "title",
+          "notes",
+          "portrait"
+        ],
+        "portraitAge": 30
+      }
+    },
+    {
+      "id": "hywel-rhwyd",
+      "worldPersonId": "person--haus-rhwyd--hywel-rhwyd",
+      "name": "Hywel Rhwyd",
+      "title": "Dritter Sohn · 1720 gefallen",
+      "sex": "male",
+      "status": "dead",
+      "birth": "1692",
+      "death": "1720",
+      "portrait": "../AleriaAlmanach/assets/kleiner-durst/portraits/hywel.png",
+      "portraitPlaceholder": "auto",
+      "houseId": "house-rhwyd",
+      "familyRole": "core",
+      "lineageRole": "branch",
+      "tags": [],
+      "notes": "Hywel gehörte zu den vier Rhwyd-Brüdern, die 1720 nicht heimkehrten. Er wurde 28 Jahre alt. Sein Platz in der Familie bleibt erhalten, ohne ihm eine ungesicherte eigene Linie zu geben.",
+      "extensions": {
+        "registryManagedFields": [
+          "name",
+          "title",
+          "notes",
+          "portrait"
+        ],
+        "portraitAge": 28
+      }
+    },
+    {
+      "id": "dafydd-rhwyd",
+      "worldPersonId": "person--haus-rhwyd--dafydd-rhwyd",
+      "name": "Dafydd Rhwyd",
+      "title": "Vierter Sohn · 1720 gefallen",
+      "sex": "male",
+      "status": "dead",
+      "birth": "1694",
+      "death": "1720",
+      "portrait": "../AleriaAlmanach/assets/kleiner-durst/portraits/dafydd.png",
+      "portraitPlaceholder": "auto",
+      "houseId": "house-rhwyd",
+      "familyRole": "core",
+      "lineageRole": "branch",
+      "tags": [],
+      "notes": "Dafydd starb 1720 mit 26 Jahren im Krieg. Nur Iorwerth, der damals 15 jährige jüngste Bruder, blieb zurück. Über eine Gemahlin oder Kinder Dafydds ist nichts festgelegt.",
+      "extensions": {
+        "registryManagedFields": [
+          "name",
+          "title",
+          "notes",
+          "portrait"
+        ],
+        "portraitAge": 26
+      }
+    },
+    {
+      "id": "iorwerth-rhwyd",
+      "worldPersonId": "person--haus-rhwyd--iorwerth-rhwyd",
+      "name": "Iorwerth Rhwyd",
+      "title": "Mitinhaber · Tresen und Einkauf",
+      "sex": "male",
+      "status": "alive",
+      "birth": "1705",
+      "death": "",
+      "portrait": "../AleriaAlmanach/assets/kleiner-durst/portraits/iorwerth.png",
+      "portraitPlaceholder": "auto",
+      "houseId": "house-rhwyd",
+      "familyRole": "core",
+      "lineageRole": "branch",
+      "tags": [],
+      "notes": "Iorwerth war 1720 erst 15 Jahre alt und blieb als einziger der fünf Söhne zu Hause. Heute ist er 35 und führt mit seiner Mutter die überschuldete Kneipe. Er kauft günstigen Tagesfang, zapft und spült. Sein mürrischer, beinahe gleichförmiger Blick täuscht keine Gelassenheit vor: Er ist schlicht müde. Mit Nia hat er den Sohn Dewi.",
+      "extensions": {
+        "registryManagedFields": [
+          "name",
+          "title",
+          "notes",
+          "portrait"
+        ],
+        "portraitAge": 35
+      }
+    },
+    {
+      "id": "meleri-rhwyd",
+      "worldPersonId": "person--haus-rhwyd--meleri-rhwyd",
+      "name": "Meleri Rhwyd",
+      "title": "Schwester · Bedienung",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1710",
+      "death": "",
+      "portrait": "../AleriaAlmanach/assets/kleiner-durst/portraits/meleri.png",
+      "portraitPlaceholder": "auto",
+      "houseId": "house-rhwyd",
+      "familyRole": "core",
+      "lineageRole": "branch",
+      "tags": [],
+      "notes": "Iorwerths unverheiratete jüngere Schwester ist 30 und trägt die Becher zu den Tischen. Sie ist munterer als ihr Bruder, hat einen trockenen Scherz für die Stammgäste und kennt deren gewöhnliche Bestellung. Eine Wegheirat ist nicht festgelegt; sie lebt und arbeitet im Familienhaus.",
+      "extensions": {
+        "registryManagedFields": [
+          "name",
+          "title",
+          "notes",
+          "portrait"
+        ],
+        "portraitAge": 30
+      }
+    },
+    {
+      "id": "nia-rhwyd",
+      "worldPersonId": "person--haus-rhwyd--nia-rhwyd",
+      "name": "Nia",
+      "title": "Iorwerths Gemahlin · Küche",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1707",
+      "death": "",
+      "portrait": "../AleriaAlmanach/assets/kleiner-durst/portraits/nia.png",
+      "portraitPlaceholder": "auto",
+      "houseId": "",
+      "familyRole": "married",
+      "lineageRole": "branch",
+      "tags": [],
+      "notes": "Nia ist 33 und kocht die kleine Fischkarte des Hauses. Aus günstigem Fang, Wurzeln, Kohl und Gerste macht sie sättigende Portionen. Mit Iorwerth ist sie seit 1725 verheiratet; ihr Sohn Dewi hilft überall mit. Ihr Herkunftshaus bleibt unbekannt.",
+      "extensions": {
+        "registryManagedFields": [
+          "name",
+          "title",
+          "notes",
+          "portrait"
+        ],
+        "portraitAge": 33
+      }
+    },
+    {
+      "id": "dewi-rhwyd",
+      "worldPersonId": "person--haus-rhwyd--dewi-rhwyd",
+      "name": "Dewi Rhwyd",
+      "title": "Hausbursche · hilft überall",
+      "sex": "male",
+      "status": "alive",
+      "birth": "1726",
+      "death": "",
+      "portrait": "../AleriaAlmanach/assets/kleiner-durst/portraits/dewi.png",
+      "portraitPlaceholder": "auto",
+      "houseId": "house-rhwyd",
+      "familyRole": "core",
+      "lineageRole": "branch",
+      "tags": [],
+      "notes": "Dewi ist 14, der Sohn Iorwerths und Nias. Er trägt Holz und Wasser, räumt Becher ab, holt kleine Einkäufe und findet auf fast jede Ermahnung eine freche Antwort. Hinter seiner großen Klappe steckt ein Junge, der den erschöpften Erwachsenen mehr Arbeit abnimmt, als er zugibt.",
+      "extensions": {
+        "registryManagedFields": [
+          "name",
+          "title",
+          "notes",
+          "portrait"
+        ],
+        "portraitAge": 14
+      }
+    }
+  ],
+  "partnerships": [
+    {
+      "id": "marriage-haus-rhwyd-founders",
+      "participantIds": [
+        "haus-rhwyd-gruender",
+        "haus-rhwyd-gruenderin"
+      ],
+      "type": "marriage",
+      "status": "ended",
+      "start": "",
+      "end": "",
+      "certainty": "unknown",
+      "visibility": "public",
+      "notes": "Gründerehe des Hauses."
+    },
+    {
+      "id": "marriage-gethin-efa-rhwyd",
+      "participantIds": [
+        "gethin-rhwyd",
+        "efa-rhwyd"
+      ],
+      "type": "marriage",
+      "status": "ended",
+      "start": "1687",
+      "end": "1728",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "marriage-iorwerth-nia-rhwyd",
+      "participantIds": [
+        "iorwerth-rhwyd",
+        "nia-rhwyd"
+      ],
+      "type": "marriage",
+      "status": "active",
+      "start": "1725",
+      "end": "",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    }
+  ],
+  "parentages": [
+    {
+      "id": "parentage-gethin-rhwyd",
+      "childId": "gethin-rhwyd",
+      "parentIds": [
+        "haus-rhwyd-gruender",
+        "haus-rhwyd-gruenderin"
+      ],
+      "partnershipId": "marriage-haus-rhwyd-founders",
+      "type": "claimed",
+      "legitimacy": "unknown",
+      "certainty": "unknown",
+      "visibility": "public",
+      "notes": "Zugehörigkeit über nicht einzeln bekannte Generationen, keine unmittelbare Elternschaft.",
+      "extensions": {
+        "timeJumpId": "gap-rhwyd-to-1666"
+      }
+    },
+    {
+      "id": "parentage-aled-rhwyd",
+      "childId": "aled-rhwyd",
+      "parentIds": [
+        "gethin-rhwyd",
+        "efa-rhwyd"
+      ],
+      "partnershipId": "marriage-gethin-efa-rhwyd",
+      "type": "biological",
+      "legitimacy": "legitimate",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "parentage-carwyn-rhwyd",
+      "childId": "carwyn-rhwyd",
+      "parentIds": [
+        "gethin-rhwyd",
+        "efa-rhwyd"
+      ],
+      "partnershipId": "marriage-gethin-efa-rhwyd",
+      "type": "biological",
+      "legitimacy": "legitimate",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "parentage-hywel-rhwyd",
+      "childId": "hywel-rhwyd",
+      "parentIds": [
+        "gethin-rhwyd",
+        "efa-rhwyd"
+      ],
+      "partnershipId": "marriage-gethin-efa-rhwyd",
+      "type": "biological",
+      "legitimacy": "legitimate",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "parentage-dafydd-rhwyd",
+      "childId": "dafydd-rhwyd",
+      "parentIds": [
+        "gethin-rhwyd",
+        "efa-rhwyd"
+      ],
+      "partnershipId": "marriage-gethin-efa-rhwyd",
+      "type": "biological",
+      "legitimacy": "legitimate",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "parentage-iorwerth-rhwyd",
+      "childId": "iorwerth-rhwyd",
+      "parentIds": [
+        "gethin-rhwyd",
+        "efa-rhwyd"
+      ],
+      "partnershipId": "marriage-gethin-efa-rhwyd",
+      "type": "biological",
+      "legitimacy": "legitimate",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "parentage-meleri-rhwyd",
+      "childId": "meleri-rhwyd",
+      "parentIds": [
+        "gethin-rhwyd",
+        "efa-rhwyd"
+      ],
+      "partnershipId": "marriage-gethin-efa-rhwyd",
+      "type": "biological",
+      "legitimacy": "legitimate",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "parentage-dewi-rhwyd",
+      "childId": "dewi-rhwyd",
+      "parentIds": [
+        "iorwerth-rhwyd",
+        "nia-rhwyd"
+      ],
+      "partnershipId": "marriage-iorwerth-nia-rhwyd",
+      "type": "biological",
+      "legitimacy": "legitimate",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    }
+  ],
+  "lineage": {
+    "founderPartnershipId": "marriage-haus-rhwyd-founders",
+    "houseId": "house-rhwyd",
+    "crestSubtitle": "Zum Kleinen Durst · Gwynthors Docks",
+    "crestEmblemScale": 0.86,
+    "crestFrame": "iron",
+    "crestFrameScale": 1,
+    "timeGap": {
+      "enabled": false,
+      "years": 0,
+      "fromYear": "",
+      "toYear": "",
+      "label": ""
+    }
+  },
+  "cadetBranches": [],
+  "timeJumps": [
+    {
+      "id": "gap-rhwyd-to-1666",
+      "parentPartnershipId": "marriage-haus-rhwyd-founders",
+      "parentPersonId": "",
+      "childIds": [
+        "gethin-rhwyd"
+      ],
+      "years": 0,
+      "fromYear": "????",
+      "toYear": "1666",
+      "label": "Nicht einzeln überlieferte Generationen bis Gethin",
+      "notes": "Der Zeitsprung ist der alleinige absolute Generationentrenner unter dem Hauswappen. Bekannte Nachkommen werden später ausschließlich hinter diesem Knoten ergänzt.",
+      "extensions": {
+        "preparedPlaceholder": false
+      }
+    }
+  ],
+  "presentation": {
+    "relationshipColors": {
+      "marriage": "#326c4a",
+      "engagement": "#b88b37",
+      "union": "#8e2724",
+      "affair": "#704485",
+      "concubinage": "#704485",
+      "political": "#9d7d48",
+      "forced": "#c7a974",
+      "biological": "#8e2724",
+      "adoptive": "#2f75a8",
+      "foster": "#2f75a8",
+      "step": "#7eb4d7",
+      "magical": "#704485",
+      "claimed": "#62615e"
+    }
+  },
+  "view": {
+    "focusPersonId": "iorwerth-rhwyd",
+    "orientation": "vertical",
+    "ancestorDepth": 8,
+    "descendantDepth": 8,
+    "showSiblings": true,
+    "limitGenerations": false
+  },
+  "extensions": {
+    "blankFamily": false,
+    "preparedTimeJump": true,
+    "pendingDescendantReview": false,
+    "sourceRevision": 1,
+    "sourceNote": "Nutzerauftrag vom 17.10.2026. Genau fünf Söhne: vier ältere 1720 gefallen, Iorwerth damals 15. Zusätzlich seine unverheiratete Schwester. Unbekanntes Gründerpaar → Hausverknüpfung → serieller Zeitsprung → Gethin und Efa → Kinder → Iorwerth und Nia → Dewi. Keine erfundenen Ehepartner oder Nachkommen der gefallenen Brüder. Carys und Bram sind keine Familienmitglieder."
+  }
+}

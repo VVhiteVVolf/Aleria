@@ -26,6 +26,9 @@ def normalize(record, circular):
     source.putalpha(mask)
     assert source.convert('RGB').tobytes() == rgb
     size = round(max(rx, ry) * 2 / 0.87)
+    if circular:
+        # Keep every original RGB pixel when the generated margin already fits.
+        size = max(size, 2 * max(cx, cy, source.width - 1 - cx, source.height - 1 - cy) + 1)
     size += (1-size % 2) if circular else size % 2
     offset = (round((size-1)/2-cx), round((size-1)/2-cy))
     result = Image.new('RGBA', (size, size), (0, 0, 0, 0))

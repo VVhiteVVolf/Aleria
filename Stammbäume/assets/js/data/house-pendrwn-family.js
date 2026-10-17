@@ -1,5 +1,6 @@
 import { DEFAULT_RELATIONSHIP_COLORS } from '../config/family-colors.js';
 import { withVannFamilyLink } from './vann-family-links.js';
+import { withPendrwnStoreBranch } from './pendrwn-store-branch.js';
 import { createFounderTimeJumpPlaceholderHouseFamily } from './blank-house-family-factory.js';
 import { GWYNTHOR_COMMONER_HOUSE_PROFILES } from './celtigerns-wacht-house-profiles.js';
 import {
@@ -43,7 +44,9 @@ function person(id, name, sex, birth = '????', houseId = PENDRWN_HOUSE_ID, optio
     title: options.title || '',
     portrait: options.portrait || HOUSE_PENDRWN_PORTRAITS[id] || '',
     tags: options.tags || [],
-    notes: options.notes || ''
+    notes: options.notes || '',
+    extensions: HOUSE_PENDRWN_PORTRAITS[id] && id !== 'emyr-pendrwn'
+      ? { registryManagedFields: ['portrait'] } : {}
   });
 }
 
@@ -60,7 +63,7 @@ const FOUNDER_IDS = BASE_FAMILY.partnerships[0].participantIds;
 const TIME_JUMP_ID = BASE_FAMILY.timeJumps[0].id;
 const GRANDPARENT_IDS = ['idwal-pendrwn', 'bronwen-spouse-pendrwn'];
 
-export const HOUSE_PENDRWN_FAMILY = withVannFamilyLink({
+export const HOUSE_PENDRWN_FAMILY = withPendrwnStoreBranch(withVannFamilyLink({
   ...BASE_FAMILY,
   houses: Object.freeze([
     ...BASE_FAMILY.houses,
@@ -190,4 +193,4 @@ export const HOUSE_PENDRWN_FAMILY = withVannFamilyLink({
     }),
     sourceNote: 'Die konkrete Pendrwn-Linie reicht nur bis zu Emyrs Großvater Idwal. Emyr ist im Jahr 1740 dreiundzwanzig Jahre alt; er und Cadell bleiben unverheiratet und ohne Verlobung. Enid ist mit Aneirin Vann verheiratet; die Ehe wird in beiden Häusern geführt. Seine Mutter Eirwen Swyll und seine Tante Gweniths Ehe mit Caradog Draenmelyn werden mit gemeinsamen Weltpersonen- und Partnerschafts-IDs in den jeweiligen Gegenstammbäumen geführt. Das vorgegebene Portrait wurde lokal gesichert.'
   })
-});
+}));

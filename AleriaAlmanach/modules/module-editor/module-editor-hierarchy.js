@@ -42,14 +42,14 @@ function buildHierarchyNodeEditorMarkup(node = {}, levelIndex = 0, nodeIndex = 0
 
 function buildHierarchyLevelEditorMarkup(level = {}, levelIndex = 0) {
   const nodes = Array.isArray(level.nodes) && level.nodes.length
-    ? level.nodes.slice(0, 6)
+    ? level.nodes.slice(0, HIERARCHY_MAX_LEVEL_NODES)
     : [{ portrait: '', title: 'Neuer Rang', subtitle: '', text: '' }];
   return `
     <div class="module-card-layout-block hierarchy-editor-level-row">
       <div class="module-card-layout-block-head">
         <div>
           <div class="inline-edit-kicker">Ebene ${levelIndex + 1}</div>
-          <div class="module-editor-help">Maximal 6 Knoten pro Ebene. Bei breiten Ebenen bekommt der Aufbau im Modul eine eigene Scrollleiste.</div>
+          <div class="module-editor-help">Maximal ${HIERARCHY_MAX_LEVEL_NODES} Knoten pro Ebene. Gleichrangige Plätze bleiben auf derselben Ebene; breite Reihen können umbrechen.</div>
         </div>
         <div class="module-editor-inline">
           <button class="module-editor-mini-btn" type="button" data-module-editor-action="move-hierarchy-level" data-hierarchy-direction="-1">Hoch</button>
@@ -85,7 +85,7 @@ function collectHierarchyLevelsFromEditor(block) {
       title: getTrimmedFormValue(nodeRow, '.me-hierarchy-node-title'),
       subtitle: getTrimmedFormValue(nodeRow, '.me-hierarchy-node-subtitle'),
       text: getTrimmedFormValue(nodeRow, '.me-hierarchy-node-text')
-    })).filter(node => node.portrait || node.title || node.subtitle || node.text).slice(0, 6)
+    })).filter(node => node.portrait || node.title || node.subtitle || node.text).slice(0, HIERARCHY_MAX_LEVEL_NODES)
   })).filter(level => level.label || level.nodes.length);
 }
 
@@ -270,7 +270,7 @@ function moveModuleHierarchyLevel(button) {
 function addModuleHierarchyNode(button) {
   const levelRow = button.closest('.hierarchy-editor-level-row');
   const wrap = levelRow?.querySelector('.hierarchy-editor-node-list');
-  if (!wrap || wrap.querySelectorAll('.hierarchy-editor-node-row').length >= 6) return;
+  if (!wrap || wrap.querySelectorAll('.hierarchy-editor-node-row').length >= HIERARCHY_MAX_LEVEL_NODES) return;
   wrap.insertAdjacentHTML('beforeend', buildHierarchyNodeEditorMarkup({ title: 'Neuer Rang' }, 0, wrap.querySelectorAll('.hierarchy-editor-node-row').length));
   hydrateModuleRichEditors(wrap.lastElementChild || wrap);
   renumberHierarchyEditor(levelRow.parentElement);

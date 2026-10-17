@@ -1,0 +1,1007 @@
+{
+  "type": "aleria-module-package",
+  "version": 1,
+  "exportedAt": "2026-10-17T00:00:00Z",
+  "module": {
+    "type": "aleria-module",
+    "version": 1,
+    "section": {
+      "key": "Gwynthor",
+      "tab": "Völker & Kulturen",
+      "desc": "",
+      "nodeId": "node:volker-kulturen:cenyr/celtigerns-wacht/llamreis-ankunft/gwynthor",
+      "path": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Gwynthor"
+      ]
+    },
+    "entry": {
+      "id": "gwynthor-kathedrale-der-neun",
+      "title": "Große Kathedrale der Neun",
+      "subtitle": "Geistliches Herz Gwynthors · Unter Patriarch Gwalchgwyn Saethwyr",
+      "type": "Kirchliche Ordnung · Kathedrale",
+      "category": "Gwynthor · Kirche und Glaube",
+      "image": "./assets/gwynthor-cathedral/scenes/kathedrale.png",
+      "previewImage": "./assets/gwynthor-cathedral/scenes/kathedrale.png",
+      "symbol": "../Religionen/assets/symbols/alerische-kirche.webp",
+      "icon": "✦",
+      "stamp": "DIE NEUN · GWYNTHOR · CELTIGERNS WACHT",
+      "schemaVersion": 1,
+      "multipage": true,
+      "appendCommentsPage": true,
+      "enablePageComments": true,
+      "sessionCast": [
+        "person--haus-saethwyr--gwalchgwyn-saethwyr",
+        "person--almanach--nliylooqslgwjusa1fpi",
+        "person--haus-eneiniog--peredur-eneiniog",
+        "person--haus-eneiniog--angharad-eneiniog"
+      ],
+      "pages": [
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "kathedrale-einordnung",
+          "pageTitle": "Die Große Kathedrale der Neun",
+          "image": "./assets/gwynthor-cathedral/scenes/kathedrale.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "stats": [
+            [
+              "Ort",
+              "Im Herzen Gwynthors"
+            ],
+            [
+              "Widmung",
+              "Den Neun Göttlichen"
+            ],
+            [
+              "Kirche",
+              "Alerische Kirche · Cenyr"
+            ],
+            [
+              "Oberste geistliche Leitung",
+              "Patriarch Gwalchgwyn Saethwyr"
+            ],
+            [
+              "Enger Kreis",
+              "Neun hohe Prälaten · persönlicher Stab"
+            ]
+          ],
+          "description": "<p>Über den Dächern im Herzen Gwynthors erhebt sich die <strong>Große Kathedrale der Neun</strong>. Ihre Türme tragen das Geläut über die Stadt, ihre Portale öffnen sich zur Gemeinde. Unter hohen Gewölben kommen die Menschen zum Gebet, zum Gottesdienst und mit jenen Anliegen zusammen, die sich nicht allein durch Münze oder weltliches Recht beantworten lassen.</p><p>Die Kathedrale ist den <strong>Neun Göttlichen</strong> gewidmet und untersteht <strong>Patriarch Gwalchgwyn Saethwyr</strong>. Als oberster Geistlicher Celtigerns Wacht führt er hier die Gemeinde Gwynthors und seinen persönlichen kirchlichen Kreis. Neun hohe Prälaten stehen unmittelbar nach ihm an der Spitze der örtlichen geistlichen Ordnung; aus ihrem Kreis wird nach seinem Tod der nächste Patriarch hervorgehen.</p><p>Gebet und Seelsorge, Beratung und Fürsorge prägen das Haus. Neben den Dienern des Patriarchen stehen Paladine und Kirchritter für Schutz und Geleit bereit. Menschen in Buße finden geistliche Führung mit dem Ziel, eines Tages wieder frei in die Gesellschaft zurückzukehren.</p>"
+        },
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "kathedrale-patriarch",
+          "pageTitle": "Gwalchgwyn · Patriarch von Celtigerns Wacht",
+          "biographyPage": true,
+          "image": "../Stammbäume/assets/images/portraits/haus-saethwyr/gwalchgwyn-saethwyr.jpg",
+          "imageWidth": 34,
+          "imageFit": "contain",
+          "imageTall": true,
+          "stats": [
+            [
+              "Name",
+              "Gwalchgwyn Saethwyr"
+            ],
+            [
+              "Geboren",
+              "1680 · 60 Jahre"
+            ],
+            [
+              "Amt",
+              "Patriarch von Celtigerns Wacht"
+            ],
+            [
+              "Sitz",
+              "Große Kathedrale der Neun · Gwynthor"
+            ],
+            [
+              "Familie",
+              "Haus Saethwyr · Gemahlin Melyn, geb. Arth"
+            ]
+          ],
+          "biography": {
+            "crestImage": "../Stammbäume/assets/images/houses/Llamreis Ankunft/haus-saethwyr.png",
+            "portraitFormat": "square",
+            "biographyTitle": "Ein Hirte mit höfischer Erfahrung",
+            "biographyText": "<p>Gwalchgwyn Saethwyr ist Patriarch von Celtigerns Wacht und der oberste Geistliche der Gemeinde Gwynthors. Von der Großen Kathedrale der Neun aus trägt er Verantwortung für Seelsorge, kirchliche Ordnung und die Menschen, die sich seinem Schutz anvertrauen. Innerhalb der cenyrischen Kirche gehört er zu den hohen Würdenträgern unter Erzpatriarch Yvain Neidr.</p><p>Wer vor ihn tritt, begegnet einem erfahrenen Höfling, der zuhören kann. Er spricht ruhig, lässt Gedanken ausreifen und findet leicht den Weg zu einer Parabel. Mitunter bemerkt er selbst, dass er längst wieder predigt. Ein trockenes Schmunzeln nimmt seinen Worten die Schwere; seine Aufmerksamkeit verlieren sie dadurch selten.</p>",
+            "abilitiesTitle": "Was seinen Dienst prägt",
+            "abilities": [
+              {
+                "title": "Fürsorge, die etwas tut",
+                "icon": "../Religionen/assets/symbols/alerische-kirche.webp",
+                "detail": "Er hört Bedürftige an, sorgt für Beistand und würdige Bestattungen und verlangt, dass zugesagte Hilfe die Menschen erreicht."
+              },
+              {
+                "title": "Geduld mit Haltung",
+                "icon": "../Religionen/assets/symbols/neun-goettliche.webp",
+                "detail": "Er nimmt Schuld ernst, unterscheidet echte Reue von bloßer Furcht und begleitet Menschen auf einem Weg zurück ins Leben."
+              },
+              {
+                "title": "Ordnung im Gespräch",
+                "icon": "../Religionen/assets/symbols/alerische-kirche.webp",
+                "detail": "Er sammelt unterschiedliche Stimmen, fragt nach Ursachen und hält hitzige Wortwechsel bei der gemeinsamen Aufgabe."
+              }
+            ],
+            "historyTitle": "Barmherzigkeit und Verantwortung",
+            "historyText": "<p>Gwalchgwyn hat Krieg und menschliche Grausamkeit erlebt. Er beschönigt Verbrechen nicht und kann eine schwere Strafe befürworten. Doch er duldet ebenso wenig, dass gerechter Zorn in Freude am Leid umschlägt. Wer Waffen trägt oder über andere herrscht, schuldet für ihn gerade in der Wut Selbstbeherrschung.</p><p>Seine Barmherzigkeit verlangt Wahrheit. Vergebung bedeutet ihm nicht, Unrecht gutzuheißen, und Scham ersetzt keine Wiedergutmachung. Ein Mensch muss seine Schuld benennen und Verantwortung übernehmen können. Gelingt dies, soll die Kirche ihn aufrichten. Gwalchgwyn zählt sich selbst zu den Fehlbaren; gerade deshalb erwartet er keine Heiligen, wenn jemand ihre Schwelle überschreitet.</p><p>Im persönlichen Umgang ist er warm, familienverbunden und zu leiser Neckerei bereit. Jungen Menschen rät er zu überlegten Bindungen und zum Blick auf den Menschen hinter Namen und Ansehen. Zugleich kann aus dem freundlichen Ratgeber ein strenger Mahner werden, wenn Eitelkeit, Zorn oder ungezügelte Begierde die Pflichten verdrängen. Eine Einladung zum Gebet ist bei ihm gelegentlich auch die Ankündigung einer sehr gründlichen Aussprache.</p>",
+            "worksTitle": "Seine Verantwortung",
+            "works": [
+              "Die geistliche Führung Gwynthors und Celtigerns Wacht sowie die Zusammenarbeit mit Prälaten und Gemeinden.",
+              "Gottesdienste, Seelsorge, Gelübde und die persönliche Begleitung ihm anvertrauter Bußgänger.",
+              "Die Anhörung kirchlicher Anliegen und der Austausch mit dem Haus Draig, ohne dessen weltliche Rechtsprechung an sich zu ziehen.",
+              "Besuche bei Gemeinden, Armenfürsorge und die Prüfung praktischer Hilfe, Ausbildung und neuer Lebenswege.",
+              "Die Führung seines persönlichen Stabes und die sichere Begleitung kirchlicher Reisen."
+            ],
+            "triviaTitle": "Abseits des Amtes",
+            "trivia": [
+              "Geboren 1680, gehört er dem Haus Saethwyr an. Mit Melyn, geborener Arth, hat er die Kinder Anwyll und Enora.",
+              "Seine höfische Gewandtheit verbindet sich mit einer Vorliebe für bildhafte Vergleiche und einem gelegentlich sehr trockenen Humor.",
+              "Große Berufungen verdienen für ihn Gehör; ihre Träger müssen sich dennoch in den kleinen Pflichten bewähren."
+            ],
+            "quotesTitle": "Gwalchgwyn über den Glauben",
+            "quotes": [
+              "„Man macht sich nicht sauber, bevor man ins Bad geht. Das Bad ist dazu da, einen sauber zu machen.“"
+            ],
+            "connectionsTitle": "In seinem unmittelbaren Kreis",
+            "connections": [
+              {
+                "name": "Peredur Eneiniog",
+                "detail": "Hoher Prälat · Priester des Vaters",
+                "image": "../Stammbäume/assets/images/portraits/haus-eneiniog/peredur-eneiniog.jpg"
+              },
+              {
+                "name": "Angharad Eneiniog",
+                "detail": "Paladin im persönlichen Stab des Patriarchen",
+                "image": "../Stammbäume/assets/images/portraits/haus-eneiniog/angharad-eneiniog.jpg"
+              },
+              {
+                "name": "Arianwen Bradrhith",
+                "detail": "Bußgängerin · unter seiner persönlichen geistlichen Leitung",
+                "image": "../Stammbäume/assets/images/portraits/haus-bradrhith/arianwen-bradrhith.png"
+              }
+            ],
+            "documentsTitle": "Kirche und Herkunft",
+            "documents": [
+              {
+                "title": "Der Alerische Klerus",
+                "icon": "../Religionen/assets/symbols/alerische-kirche.webp",
+                "text": "Berufungen und kirchliche Rangordnungen.",
+                "link": "../Religionen/klerus/index.html"
+              },
+              {
+                "title": "Haus Saethwyr",
+                "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/haus-saethwyr.png",
+                "text": "Gwalchgwyns Herkunft und Familie.",
+                "link": "../Stammbäume/Stammbaum.html?family=haus-saethwyr&mode=view&person=gwalchgwyn-saethwyr"
+              }
+            ],
+            "footer": "Patriarch von Celtigerns Wacht"
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "kathedrale-stab",
+          "pageTitle": "Der enge Kreis des Patriarchen",
+          "hierarchyPage": true,
+          "hierarchy": {
+            "organizationTitle": "Der persönliche Kreis des Patriarchen",
+            "eyebrow": "Kirchliche Ordnung",
+            "subtitle": "Große Kathedrale der Neun · Gwynthor",
+            "centerLabel": "Unter Patriarch Gwalchgwyn Saethwyr",
+            "emblem": "../Religionen/assets/symbols/alerische-kirche.webp",
+            "sideImage": "./assets/gwynthor-cathedral/scenes/kathedrale.png",
+            "motto": "Glaube, Dienst und Verantwortung.",
+            "description": "<p>Dieser Aufbau zeigt den engen Kreis Gwalchgwyns. Die übrigen Gemeinden, Klöster und kirchlichen Häuser Celtigerns Wacht behalten ihre eigene Ordnung.</p>",
+            "detailsTitle": "Auftrag und Zugehörigkeit",
+            "details": [
+              {
+                "label": "Führung",
+                "value": "Patriarch und neun hohe Prälaten"
+              },
+              {
+                "label": "Militärischer Stab",
+                "value": "31 ritterliche Plätze, dazu zwei Militärkapläne"
+              },
+              {
+                "label": "Kirchdiener",
+                "value": "17 persönliche, geistliche und bürokratische Dienste"
+              },
+              {
+                "label": "Buße",
+                "value": "Vier Plätze je Stand · Arianwen in laufender Buße"
+              }
+            ],
+            "chartTitle": "Führung, Schutz und persönlicher Dienst",
+            "chartIntro": "Alle vier Bereiche stehen unter dem Patriarchen. Seine neun hohen Prälaten sind unmittelbar nach ihm die ranghöchsten Geistlichen Celtigerns Wacht und tragen unterschiedliche hohe Aufgaben. Aus ihrem Kreis wird nach seinem Tod der nächste Patriarch bestimmt. Die Zahlen im militärischen Stab sind Gesamtzahlen je Rang; unbenannte Plätze sind vorbereitete Rollen.",
+            "treeDisplayMode": "tabs",
+            "portraitScale": 80,
+            "cardFontScale": 88,
+            "trees": [
+              {
+                "id": "fuehrung",
+                "label": "Führung",
+                "parentTreeId": "",
+                "levels": [
+                  {
+                    "label": "Oberste geistliche Führung",
+                    "nodes": [
+                      {
+                        "id": "kathedrale-patriarch-fuehrung",
+                        "title": "Gwalchgwyn Saethwyr",
+                        "subtitle": "Patriarch von Celtigerns Wacht",
+                        "portrait": "../Stammbäume/assets/images/portraits/haus-saethwyr/gwalchgwyn-saethwyr.jpg",
+                        "text": "Oberster Geistlicher der Grafschaft, der Gemeinde Gwynthors und seines persönlichen Stabes."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Neun hohe Prälaten · gleicher Rang",
+                    "nodes": [
+                      {
+                        "id": "kathedrale-peredur",
+                        "title": "Peredur Eneiniog",
+                        "subtitle": "Hoher Prälat · Priester des Vaters",
+                        "portrait": "../Stammbäume/assets/images/portraits/haus-eneiniog/peredur-eneiniog.jpg",
+                        "text": "Einer der neun hohen Prälaten und ein Priester Ordans. Der erfahrene Geistliche aus Haus Eneiniog dient unmittelbar unter Gwalchgwyn; ruhige Güte und maßvolle Autorität prägen sein Auftreten. Ein besonderes Ressort wird hier noch nicht festgelegt."
+                      },
+                      {
+                        "id": "kathedrale-praelat-1",
+                        "title": "Hoher Prälat",
+                        "subtitle": "Person noch nicht benannt · Platz 1",
+                        "portrait": "",
+                        "text": "Unbenannter hoher Geistlicher im unmittelbaren Kreis des Patriarchen. Ein einzelner Aufgabenbereich ist noch nicht festgelegt."
+                      },
+                      {
+                        "id": "kathedrale-praelat-2",
+                        "title": "Hoher Prälat",
+                        "subtitle": "Person noch nicht benannt · Platz 2",
+                        "portrait": "",
+                        "text": "Unbenannter hoher Geistlicher im unmittelbaren Kreis des Patriarchen. Ein einzelner Aufgabenbereich ist noch nicht festgelegt."
+                      },
+                      {
+                        "id": "kathedrale-praelat-3",
+                        "title": "Hoher Prälat",
+                        "subtitle": "Person noch nicht benannt · Platz 3",
+                        "portrait": "",
+                        "text": "Unbenannter hoher Geistlicher im unmittelbaren Kreis des Patriarchen. Ein einzelner Aufgabenbereich ist noch nicht festgelegt."
+                      },
+                      {
+                        "id": "kathedrale-praelat-4",
+                        "title": "Hoher Prälat",
+                        "subtitle": "Person noch nicht benannt · Platz 4",
+                        "portrait": "",
+                        "text": "Unbenannter hoher Geistlicher im unmittelbaren Kreis des Patriarchen. Ein einzelner Aufgabenbereich ist noch nicht festgelegt."
+                      },
+                      {
+                        "id": "kathedrale-praelat-5",
+                        "title": "Hoher Prälat",
+                        "subtitle": "Person noch nicht benannt · Platz 5",
+                        "portrait": "",
+                        "text": "Unbenannter hoher Geistlicher im unmittelbaren Kreis des Patriarchen. Ein einzelner Aufgabenbereich ist noch nicht festgelegt."
+                      },
+                      {
+                        "id": "kathedrale-praelat-6",
+                        "title": "Hoher Prälat",
+                        "subtitle": "Person noch nicht benannt · Platz 6",
+                        "portrait": "",
+                        "text": "Unbenannter hoher Geistlicher im unmittelbaren Kreis des Patriarchen. Ein einzelner Aufgabenbereich ist noch nicht festgelegt."
+                      },
+                      {
+                        "id": "kathedrale-praelat-7",
+                        "title": "Hoher Prälat",
+                        "subtitle": "Person noch nicht benannt · Platz 7",
+                        "portrait": "",
+                        "text": "Unbenannter hoher Geistlicher im unmittelbaren Kreis des Patriarchen. Ein einzelner Aufgabenbereich ist noch nicht festgelegt."
+                      },
+                      {
+                        "id": "kathedrale-praelat-8",
+                        "title": "Hoher Prälat",
+                        "subtitle": "Person noch nicht benannt · Platz 8",
+                        "portrait": "",
+                        "text": "Unbenannter hoher Geistlicher im unmittelbaren Kreis des Patriarchen. Ein einzelner Aufgabenbereich ist noch nicht festgelegt."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "militaer",
+                "label": "Militärischer Stab",
+                "parentTreeId": "fuehrung",
+                "levels": [
+                  {
+                    "label": "Oberste geistliche Führung",
+                    "nodes": [
+                      {
+                        "id": "kathedrale-patriarch-militaer",
+                        "title": "Gwalchgwyn Saethwyr",
+                        "subtitle": "Patriarch von Celtigerns Wacht",
+                        "portrait": "../Stammbäume/assets/images/portraits/haus-saethwyr/gwalchgwyn-saethwyr.jpg",
+                        "text": "Oberster Geistlicher der Grafschaft, der Gemeinde Gwynthors und seines persönlichen Stabes."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Führung des militärischen Stabes",
+                    "nodes": [
+                      {
+                        "id": "kathedrale-hochpaladin-1",
+                        "title": "Hochpaladin",
+                        "subtitle": "Person noch nicht benannt · Platz 1",
+                        "portrait": "",
+                        "text": "Führt die bewaffneten Begleiter des Patriarchen, ordnet Schutz und Ausbildung und verantwortet die Einsätze des Stabes."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Sechs Paladine",
+                    "nodes": [
+                      {
+                        "id": "kathedrale-angharad",
+                        "title": "Angharad Eneiniog",
+                        "subtitle": "Paladin im persönlichen Stab des Patriarchen",
+                        "portrait": "../Stammbäume/assets/images/portraits/haus-eneiniog/angharad-eneiniog.jpg",
+                        "text": "Die Paladin aus Haus Eneiniog gehört zu den sechs Paladinen unter dem Hochpaladin. Ihr Dienst gilt dem Schutz des Patriarchen, der Gläubigen und der heiligen Stätten."
+                      },
+                      {
+                        "id": "kathedrale-paladin-1",
+                        "title": "Paladin",
+                        "subtitle": "Person noch nicht benannt · Platz 1",
+                        "portrait": "",
+                        "text": "Geweihter Ritter im persönlichen Stab. Schützt den Patriarchen und die Gläubigen, begleitet Reisen und führt die unterstellten Kräfte."
+                      },
+                      {
+                        "id": "kathedrale-paladin-2",
+                        "title": "Paladin",
+                        "subtitle": "Person noch nicht benannt · Platz 2",
+                        "portrait": "",
+                        "text": "Geweihter Ritter im persönlichen Stab. Schützt den Patriarchen und die Gläubigen, begleitet Reisen und führt die unterstellten Kräfte."
+                      },
+                      {
+                        "id": "kathedrale-paladin-3",
+                        "title": "Paladin",
+                        "subtitle": "Person noch nicht benannt · Platz 3",
+                        "portrait": "",
+                        "text": "Geweihter Ritter im persönlichen Stab. Schützt den Patriarchen und die Gläubigen, begleitet Reisen und führt die unterstellten Kräfte."
+                      },
+                      {
+                        "id": "kathedrale-paladin-4",
+                        "title": "Paladin",
+                        "subtitle": "Person noch nicht benannt · Platz 4",
+                        "portrait": "",
+                        "text": "Geweihter Ritter im persönlichen Stab. Schützt den Patriarchen und die Gläubigen, begleitet Reisen und führt die unterstellten Kräfte."
+                      },
+                      {
+                        "id": "kathedrale-paladin-5",
+                        "title": "Paladin",
+                        "subtitle": "Person noch nicht benannt · Platz 5",
+                        "portrait": "",
+                        "text": "Geweihter Ritter im persönlichen Stab. Schützt den Patriarchen und die Gläubigen, begleitet Reisen und führt die unterstellten Kräfte."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Acht Glaubensritter · Templerdienst",
+                    "nodes": [
+                      {
+                        "id": "kathedrale-glaubensritter-1",
+                        "title": "Glaubensritter",
+                        "subtitle": "Person noch nicht benannt · Platz 1",
+                        "portrait": "",
+                        "text": "Kirchritter im Templerdienst. Bewacht heilige Stätten, begleitet Pilger und versieht den bewaffneten Dienst unter den Paladinen."
+                      },
+                      {
+                        "id": "kathedrale-glaubensritter-2",
+                        "title": "Glaubensritter",
+                        "subtitle": "Person noch nicht benannt · Platz 2",
+                        "portrait": "",
+                        "text": "Kirchritter im Templerdienst. Bewacht heilige Stätten, begleitet Pilger und versieht den bewaffneten Dienst unter den Paladinen."
+                      },
+                      {
+                        "id": "kathedrale-glaubensritter-3",
+                        "title": "Glaubensritter",
+                        "subtitle": "Person noch nicht benannt · Platz 3",
+                        "portrait": "",
+                        "text": "Kirchritter im Templerdienst. Bewacht heilige Stätten, begleitet Pilger und versieht den bewaffneten Dienst unter den Paladinen."
+                      },
+                      {
+                        "id": "kathedrale-glaubensritter-4",
+                        "title": "Glaubensritter",
+                        "subtitle": "Person noch nicht benannt · Platz 4",
+                        "portrait": "",
+                        "text": "Kirchritter im Templerdienst. Bewacht heilige Stätten, begleitet Pilger und versieht den bewaffneten Dienst unter den Paladinen."
+                      },
+                      {
+                        "id": "kathedrale-glaubensritter-5",
+                        "title": "Glaubensritter",
+                        "subtitle": "Person noch nicht benannt · Platz 5",
+                        "portrait": "",
+                        "text": "Kirchritter im Templerdienst. Bewacht heilige Stätten, begleitet Pilger und versieht den bewaffneten Dienst unter den Paladinen."
+                      },
+                      {
+                        "id": "kathedrale-glaubensritter-6",
+                        "title": "Glaubensritter",
+                        "subtitle": "Person noch nicht benannt · Platz 6",
+                        "portrait": "",
+                        "text": "Kirchritter im Templerdienst. Bewacht heilige Stätten, begleitet Pilger und versieht den bewaffneten Dienst unter den Paladinen."
+                      },
+                      {
+                        "id": "kathedrale-glaubensritter-7",
+                        "title": "Glaubensritter",
+                        "subtitle": "Person noch nicht benannt · Platz 7",
+                        "portrait": "",
+                        "text": "Kirchritter im Templerdienst. Bewacht heilige Stätten, begleitet Pilger und versieht den bewaffneten Dienst unter den Paladinen."
+                      },
+                      {
+                        "id": "kathedrale-glaubensritter-8",
+                        "title": "Glaubensritter",
+                        "subtitle": "Person noch nicht benannt · Platz 8",
+                        "portrait": "",
+                        "text": "Kirchritter im Templerdienst. Bewacht heilige Stätten, begleitet Pilger und versieht den bewaffneten Dienst unter den Paladinen."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Acht Schwurknechte",
+                    "nodes": [
+                      {
+                        "id": "kathedrale-schwurknecht-1",
+                        "title": "Schwurknecht",
+                        "subtitle": "Person noch nicht benannt · Platz 1",
+                        "portrait": "",
+                        "text": "Eidverpflichteter Waffenknecht des kirchlichen Stabes. Unterstützt die Glaubensritter bei Wache, Geleit und Ausrüstung."
+                      },
+                      {
+                        "id": "kathedrale-schwurknecht-2",
+                        "title": "Schwurknecht",
+                        "subtitle": "Person noch nicht benannt · Platz 2",
+                        "portrait": "",
+                        "text": "Eidverpflichteter Waffenknecht des kirchlichen Stabes. Unterstützt die Glaubensritter bei Wache, Geleit und Ausrüstung."
+                      },
+                      {
+                        "id": "kathedrale-schwurknecht-3",
+                        "title": "Schwurknecht",
+                        "subtitle": "Person noch nicht benannt · Platz 3",
+                        "portrait": "",
+                        "text": "Eidverpflichteter Waffenknecht des kirchlichen Stabes. Unterstützt die Glaubensritter bei Wache, Geleit und Ausrüstung."
+                      },
+                      {
+                        "id": "kathedrale-schwurknecht-4",
+                        "title": "Schwurknecht",
+                        "subtitle": "Person noch nicht benannt · Platz 4",
+                        "portrait": "",
+                        "text": "Eidverpflichteter Waffenknecht des kirchlichen Stabes. Unterstützt die Glaubensritter bei Wache, Geleit und Ausrüstung."
+                      },
+                      {
+                        "id": "kathedrale-schwurknecht-5",
+                        "title": "Schwurknecht",
+                        "subtitle": "Person noch nicht benannt · Platz 5",
+                        "portrait": "",
+                        "text": "Eidverpflichteter Waffenknecht des kirchlichen Stabes. Unterstützt die Glaubensritter bei Wache, Geleit und Ausrüstung."
+                      },
+                      {
+                        "id": "kathedrale-schwurknecht-6",
+                        "title": "Schwurknecht",
+                        "subtitle": "Person noch nicht benannt · Platz 6",
+                        "portrait": "",
+                        "text": "Eidverpflichteter Waffenknecht des kirchlichen Stabes. Unterstützt die Glaubensritter bei Wache, Geleit und Ausrüstung."
+                      },
+                      {
+                        "id": "kathedrale-schwurknecht-7",
+                        "title": "Schwurknecht",
+                        "subtitle": "Person noch nicht benannt · Platz 7",
+                        "portrait": "",
+                        "text": "Eidverpflichteter Waffenknecht des kirchlichen Stabes. Unterstützt die Glaubensritter bei Wache, Geleit und Ausrüstung."
+                      },
+                      {
+                        "id": "kathedrale-schwurknecht-8",
+                        "title": "Schwurknecht",
+                        "subtitle": "Person noch nicht benannt · Platz 8",
+                        "portrait": "",
+                        "text": "Eidverpflichteter Waffenknecht des kirchlichen Stabes. Unterstützt die Glaubensritter bei Wache, Geleit und Ausrüstung."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Vier Knappen",
+                    "nodes": [
+                      {
+                        "id": "kathedrale-knappe-1",
+                        "title": "Knappe",
+                        "subtitle": "Person noch nicht benannt · Platz 1",
+                        "portrait": "",
+                        "text": "Erlernt ritterliche Waffenführung und Glaubenspflichten, begleitet einen Ritter und unterstützt dessen täglichen Dienst."
+                      },
+                      {
+                        "id": "kathedrale-knappe-2",
+                        "title": "Knappe",
+                        "subtitle": "Person noch nicht benannt · Platz 2",
+                        "portrait": "",
+                        "text": "Erlernt ritterliche Waffenführung und Glaubenspflichten, begleitet einen Ritter und unterstützt dessen täglichen Dienst."
+                      },
+                      {
+                        "id": "kathedrale-knappe-3",
+                        "title": "Knappe",
+                        "subtitle": "Person noch nicht benannt · Platz 3",
+                        "portrait": "",
+                        "text": "Erlernt ritterliche Waffenführung und Glaubenspflichten, begleitet einen Ritter und unterstützt dessen täglichen Dienst."
+                      },
+                      {
+                        "id": "kathedrale-knappe-4",
+                        "title": "Knappe",
+                        "subtitle": "Person noch nicht benannt · Platz 4",
+                        "portrait": "",
+                        "text": "Erlernt ritterliche Waffenführung und Glaubenspflichten, begleitet einen Ritter und unterstützt dessen täglichen Dienst."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Vier Pagen",
+                    "nodes": [
+                      {
+                        "id": "kathedrale-page-1",
+                        "title": "Page",
+                        "subtitle": "Person noch nicht benannt · Platz 1",
+                        "portrait": "",
+                        "text": "Erlernt Umgangsformen, Versorgung und die ersten Grundlagen des kirchlichen Ritterdienstes."
+                      },
+                      {
+                        "id": "kathedrale-page-2",
+                        "title": "Page",
+                        "subtitle": "Person noch nicht benannt · Platz 2",
+                        "portrait": "",
+                        "text": "Erlernt Umgangsformen, Versorgung und die ersten Grundlagen des kirchlichen Ritterdienstes."
+                      },
+                      {
+                        "id": "kathedrale-page-3",
+                        "title": "Page",
+                        "subtitle": "Person noch nicht benannt · Platz 3",
+                        "portrait": "",
+                        "text": "Erlernt Umgangsformen, Versorgung und die ersten Grundlagen des kirchlichen Ritterdienstes."
+                      },
+                      {
+                        "id": "kathedrale-page-4",
+                        "title": "Page",
+                        "subtitle": "Person noch nicht benannt · Platz 4",
+                        "portrait": "",
+                        "text": "Erlernt Umgangsformen, Versorgung und die ersten Grundlagen des kirchlichen Ritterdienstes."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Geistliche Begleitung · dem Hochpaladin zugeordnet",
+                    "nodes": [
+                      {
+                        "id": "kathedrale-militaerkaplan-1",
+                        "title": "Militärkaplan",
+                        "subtitle": "Person noch nicht benannt · Platz 1",
+                        "portrait": "",
+                        "text": "Priesterlicher Kleriker für Seelsorge, Gelübde, Gebet und Beistand im militärischen Stab. Dieses Begleitamt ist kein zusätzlicher militärischer Rang."
+                      },
+                      {
+                        "id": "kathedrale-militaerkaplan-2",
+                        "title": "Militärkaplan",
+                        "subtitle": "Person noch nicht benannt · Platz 2",
+                        "portrait": "",
+                        "text": "Priesterlicher Kleriker für Seelsorge, Gelübde, Gebet und Beistand im militärischen Stab. Dieses Begleitamt ist kein zusätzlicher militärischer Rang."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "kirchdiener",
+                "label": "Kirchdiener des Patriarchen",
+                "parentTreeId": "fuehrung",
+                "levels": [
+                  {
+                    "label": "Oberste geistliche Führung",
+                    "nodes": [
+                      {
+                        "id": "kathedrale-patriarch-diener",
+                        "title": "Gwalchgwyn Saethwyr",
+                        "subtitle": "Patriarch von Celtigerns Wacht",
+                        "portrait": "../Stammbäume/assets/images/portraits/haus-saethwyr/gwalchgwyn-saethwyr.jpg",
+                        "text": "Oberster Geistlicher der Grafschaft, der Gemeinde Gwynthors und seines persönlichen Stabes."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Persönliche Leitung der Dienste",
+                    "nodes": [
+                      {
+                        "id": "kathedrale-haushofmeister",
+                        "title": "Haushofmeister",
+                        "subtitle": "Eine Stelle",
+                        "portrait": "",
+                        "text": "Ordnet den persönlichen Haushalt, die Tagesabläufe und die Zusammenarbeit der Diener des Patriarchen."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Kanzlei und Schriftverkehr",
+                    "nodes": [
+                      {
+                        "id": "kathedrale-sekretaer",
+                        "title": "Persönlicher Sekretär",
+                        "subtitle": "Eine Stelle",
+                        "portrait": "",
+                        "text": "Führt Termine, bereitet Audienzen vor und hält dringende Anliegen für Gwalchgwyn bereit."
+                      },
+                      {
+                        "id": "kathedrale-siegler",
+                        "title": "Siegler und Registrator",
+                        "subtitle": "Eine Stelle",
+                        "portrait": "",
+                        "text": "Verwahrt das Amtssiegel, ordnet Ausfertigungen und sorgt für nachvollziehbare Ablage."
+                      },
+                      {
+                        "id": "kathedrale-schreiber-1",
+                        "title": "Schreiber",
+                        "subtitle": "Person noch nicht benannt · Platz 1",
+                        "portrait": "",
+                        "text": "Fertigt Briefe, Berichte, Abschriften und Besuchsvermerke für den persönlichen Stab."
+                      },
+                      {
+                        "id": "kathedrale-schreiber-2",
+                        "title": "Schreiber",
+                        "subtitle": "Person noch nicht benannt · Platz 2",
+                        "portrait": "",
+                        "text": "Fertigt Briefe, Berichte, Abschriften und Besuchsvermerke für den persönlichen Stab."
+                      },
+                      {
+                        "id": "kathedrale-bote",
+                        "title": "Kanzleibote",
+                        "subtitle": "Eine Stelle",
+                        "portrait": "",
+                        "text": "Überbringt Nachrichten zwischen Patriarch, Prälaten, Gemeinden und Hof."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Geistlicher Alltag und Fürsorge",
+                    "nodes": [
+                      {
+                        "id": "kathedrale-hauskaplan-1",
+                        "title": "Hauskaplan",
+                        "subtitle": "Person noch nicht benannt · Platz 1",
+                        "portrait": "",
+                        "text": "Bereitet Gebete und Gottesdienste vor, begleitet Seelsorge und unterstützt die geistlichen Pflichten des Patriarchen."
+                      },
+                      {
+                        "id": "kathedrale-hauskaplan-2",
+                        "title": "Hauskaplan",
+                        "subtitle": "Person noch nicht benannt · Platz 2",
+                        "portrait": "",
+                        "text": "Bereitet Gebete und Gottesdienste vor, begleitet Seelsorge und unterstützt die geistlichen Pflichten des Patriarchen."
+                      },
+                      {
+                        "id": "kathedrale-sakristan",
+                        "title": "Persönlicher Sakristan",
+                        "subtitle": "Eine Stelle",
+                        "portrait": "",
+                        "text": "Hält Amtsgewänder, liturgische Geräte und die Ausstattung der patriarchalen Gottesdienste bereit."
+                      },
+                      {
+                        "id": "kathedrale-almosenpfleger",
+                        "title": "Almosenpfleger",
+                        "subtitle": "Eine Stelle",
+                        "portrait": "",
+                        "text": "Sammelt geprüfte Hilfsgesuche, begleitet die persönliche Armenfürsorge und hält zugesagte Hilfe nach."
+                      },
+                      {
+                        "id": "kathedrale-akolyth-1",
+                        "title": "Akolyth",
+                        "subtitle": "Person noch nicht benannt · Platz 1",
+                        "portrait": "",
+                        "text": "Unterstützt Gebet und Zeremonien und erlernt unter Anleitung den geistlichen Dienst. Akolyth bezeichnet hier eine Aufgabe in Ausbildung, keine zusätzliche Kaste."
+                      },
+                      {
+                        "id": "kathedrale-akolyth-2",
+                        "title": "Akolyth",
+                        "subtitle": "Person noch nicht benannt · Platz 2",
+                        "portrait": "",
+                        "text": "Unterstützt Gebet und Zeremonien und erlernt unter Anleitung den geistlichen Dienst. Akolyth bezeichnet hier eine Aufgabe in Ausbildung, keine zusätzliche Kaste."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Persönlicher Haushalt und Reise",
+                    "nodes": [
+                      {
+                        "id": "kathedrale-kammerdiener-1",
+                        "title": "Kammerdiener",
+                        "subtitle": "Person noch nicht benannt · Platz 1",
+                        "portrait": "",
+                        "text": "Versieht Kleidung, persönliche Räume und die praktische Begleitung des Tages."
+                      },
+                      {
+                        "id": "kathedrale-kammerdiener-2",
+                        "title": "Kammerdiener",
+                        "subtitle": "Person noch nicht benannt · Platz 2",
+                        "portrait": "",
+                        "text": "Versieht Kleidung, persönliche Räume und die praktische Begleitung des Tages."
+                      },
+                      {
+                        "id": "kathedrale-koch",
+                        "title": "Koch",
+                        "subtitle": "Eine Stelle",
+                        "portrait": "",
+                        "text": "Bereitet die Mahlzeiten des persönlichen Haushalts vor und stimmt Versorgung und Reiseproviant ab."
+                      },
+                      {
+                        "id": "kathedrale-reisehelfer-1",
+                        "title": "Reise- und Haushaltsgehilfe",
+                        "subtitle": "Person noch nicht benannt · Platz 1",
+                        "portrait": "",
+                        "text": "Unterstützt Gepäck, Besorgungen, Vorräte und die Vorbereitung kirchlicher Besuchsreisen."
+                      },
+                      {
+                        "id": "kathedrale-reisehelfer-2",
+                        "title": "Reise- und Haushaltsgehilfe",
+                        "subtitle": "Person noch nicht benannt · Platz 2",
+                        "portrait": "",
+                        "text": "Unterstützt Gepäck, Besorgungen, Vorräte und die Vorbereitung kirchlicher Besuchsreisen."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "busse",
+                "label": "Bußgänger & Geläuterte",
+                "parentTreeId": "fuehrung",
+                "levels": [
+                  {
+                    "label": "Oberste geistliche Führung",
+                    "nodes": [
+                      {
+                        "id": "kathedrale-patriarch-busse",
+                        "title": "Gwalchgwyn Saethwyr",
+                        "subtitle": "Patriarch von Celtigerns Wacht",
+                        "portrait": "../Stammbäume/assets/images/portraits/haus-saethwyr/gwalchgwyn-saethwyr.jpg",
+                        "text": "Oberster Geistlicher der Grafschaft, der Gemeinde Gwynthors und seines persönlichen Stabes."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Vier Plätze für Geläuterte · Bußgang abgeschlossen",
+                    "nodes": [
+                      {
+                        "id": "kathedrale-gelaeutert-1",
+                        "title": "Geläuterter",
+                        "subtitle": "Offener Platz · freie Rückkehr in die Gesellschaft · Platz 1",
+                        "portrait": "",
+                        "text": "Hat den Bußgang vollendet und ist von den vereinbarten Diensten und Gelübden befreit. Eine weitere Verbindung zur Kathedrale ist freiwillig; dieser Platz begründet keine neue Dienstpflicht."
+                      },
+                      {
+                        "id": "kathedrale-gelaeutert-2",
+                        "title": "Geläuterter",
+                        "subtitle": "Offener Platz · freie Rückkehr in die Gesellschaft · Platz 2",
+                        "portrait": "",
+                        "text": "Hat den Bußgang vollendet und ist von den vereinbarten Diensten und Gelübden befreit. Eine weitere Verbindung zur Kathedrale ist freiwillig; dieser Platz begründet keine neue Dienstpflicht."
+                      },
+                      {
+                        "id": "kathedrale-gelaeutert-3",
+                        "title": "Geläuterter",
+                        "subtitle": "Offener Platz · freie Rückkehr in die Gesellschaft · Platz 3",
+                        "portrait": "",
+                        "text": "Hat den Bußgang vollendet und ist von den vereinbarten Diensten und Gelübden befreit. Eine weitere Verbindung zur Kathedrale ist freiwillig; dieser Platz begründet keine neue Dienstpflicht."
+                      },
+                      {
+                        "id": "kathedrale-gelaeutert-4",
+                        "title": "Geläuterter",
+                        "subtitle": "Offener Platz · freie Rückkehr in die Gesellschaft · Platz 4",
+                        "portrait": "",
+                        "text": "Hat den Bußgang vollendet und ist von den vereinbarten Diensten und Gelübden befreit. Eine weitere Verbindung zur Kathedrale ist freiwillig; dieser Platz begründet keine neue Dienstpflicht."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Vier Plätze für Bußgänger · laufende Verpflichtung",
+                    "nodes": [
+                      {
+                        "id": "kathedrale-arianwen",
+                        "title": "Arianwen Bradrhith",
+                        "subtitle": "Bußgängerin · Gwalchgwyn ist ihr direkter Bußvater",
+                        "portrait": "../Stammbäume/assets/images/portraits/haus-bradrhith/arianwen-bradrhith.png",
+                        "text": "Nach ihrer Beteiligung am Komplott gegen ihre Schwester bleibt Arianwen in Gwynthor unter unmittelbarer kirchlicher Obhut. Im persönlichen Kreis des Patriarchen erfüllt sie Dienst und Schweigegelübde. Er leitet ihre Buße und begleitet den Weg zur späteren Wiedereingliederung; ihr Bußgang ist noch nicht abgeschlossen."
+                      },
+                      {
+                        "id": "kathedrale-bussgaenger-1",
+                        "title": "Bußgänger",
+                        "subtitle": "Person noch nicht benannt · Platz 1",
+                        "portrait": "",
+                        "text": "Erfüllt den individuell vereinbarten Dienst unter Eid und Schweigegelübde. Aufrichtige Umkehr und Wiedergutmachung sollen die freie Rückkehr ermöglichen."
+                      },
+                      {
+                        "id": "kathedrale-bussgaenger-2",
+                        "title": "Bußgänger",
+                        "subtitle": "Person noch nicht benannt · Platz 2",
+                        "portrait": "",
+                        "text": "Erfüllt den individuell vereinbarten Dienst unter Eid und Schweigegelübde. Aufrichtige Umkehr und Wiedergutmachung sollen die freie Rückkehr ermöglichen."
+                      },
+                      {
+                        "id": "kathedrale-bussgaenger-3",
+                        "title": "Bußgänger",
+                        "subtitle": "Person noch nicht benannt · Platz 3",
+                        "portrait": "",
+                        "text": "Erfüllt den individuell vereinbarten Dienst unter Eid und Schweigegelübde. Aufrichtige Umkehr und Wiedergutmachung sollen die freie Rückkehr ermöglichen."
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "levels": [],
+            "footerNote": "Kleriker ist der gemeinsame Begriff für Angehörige des Klerus. Berufung, Rang und Auftrag bleiben unterschieden. Militärkapläne bilden keine eigene Rangstufe; die beiden Bußstände sind keine Befehlskette. Alle unbenannten Plätze bleiben ohne Namen und Porträts."
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "kathedrale-vorhalle",
+          "pageTitle": "Hauptportal & Vorhalle",
+          "image": "./assets/gwynthor-cathedral/scenes/vorhalle.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Die schweren Portale öffnen sich unter hohen Steinbögen. In der Vorhalle verhallen die Geräusche der Stadt; an den Seiten warten Bänke für Besucher und Bittsteller. Geradeaus führt der Weg ins Kirchenschiff, seitlich zu den Dienern, die ein Anliegen beim Patriarchen vortragen können.</p>",
+          "sessionHint": "Eine Begegnung in der Kathedrale.",
+          "sessionEmptyTitle": "Die Kathedrale wartet auf ihre Stimmen",
+          "sessionEmptyText": "Hier kann die nächste Szene beginnen.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "kathedrale-kirchenschiff",
+          "pageTitle": "Das große Kirchenschiff",
+          "image": "./assets/gwynthor-cathedral/scenes/kirchenschiff.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Das hohe Gewölbe trägt Stimmen und Schritte weit durch den Saal. Zwischen den Pfeilern stehen lange Bänke; farbiges Licht fällt auf den breiten Mittelgang. Hier versammelt sich Gwynthor zur Messe, hört die Worte des Patriarchen und begleitet seine Toten im Gebet.</p>",
+          "sessionHint": "Eine Begegnung in der Kathedrale.",
+          "sessionEmptyTitle": "Die Kathedrale wartet auf ihre Stimmen",
+          "sessionEmptyText": "Hier kann die nächste Szene beginnen.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "kathedrale-altar",
+          "pageTitle": "Chor & Altäre der Neun",
+          "image": "./assets/gwynthor-cathedral/scenes/altar.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Hinter dem Chor öffnet sich der Umgang zu den Andachtsstätten der Neun: Ordan und Mariel, Baldran und Maldras, Sylvana und Lyris, Tharim, Orin und Kharon. Vor dem gemeinsamen Altar werden Segen erbeten, Gelübde gesprochen und die Namen der Verstorbenen genannt. Kleinere Lichter brennen in den seitlichen Nischen.</p>",
+          "sessionHint": "Eine Begegnung in der Kathedrale.",
+          "sessionEmptyTitle": "Die Kathedrale wartet auf ihre Stimmen",
+          "sessionEmptyText": "Hier kann die nächste Szene beginnen.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "kathedrale-kapitelsaal",
+          "pageTitle": "Der Kapitelsaal",
+          "image": "./assets/gwynthor-cathedral/scenes/kapitelsaal.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Zehn Plätze stehen um den großen Beratungstisch: einer für den Patriarchen und neun gleichwertige für die hohen Prälaten. Hier werden Berichte geprüft, gemeinsame Vorhaben beraten und kirchliche Entscheidungen vorbereitet. Die Türen halten den Lärm der Kathedrale fern; auf dem Tisch liegen verschlossene Bücher und noch unbeschriebene Blätter.</p>",
+          "sessionHint": "Eine Begegnung in der Kathedrale.",
+          "sessionEmptyTitle": "Die Kathedrale wartet auf ihre Stimmen",
+          "sessionEmptyText": "Hier kann die nächste Szene beginnen.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "kathedrale-patriarchenzimmer",
+          "pageTitle": "Arbeitszimmer & Audienzen",
+          "image": "./assets/gwynthor-cathedral/scenes/patriarchenzimmer.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Gwalchgwyns Stab lehnt neben dem Schreibtisch. Zwei Besucherstühle stehen nahe genug, dass ein Gespräch ohne erhobene Stimme möglich ist. Briefe aus den Gemeinden warten auf Antwort; ein freier Tisch bleibt für Bittgesuche und die nächste Reiseplanung. Nicht jedes Anliegen, das hier Gehör findet, ist für die Kanzlei bestimmt.</p>",
+          "sessionHint": "Eine Begegnung in der Kathedrale.",
+          "sessionEmptyTitle": "Die Kathedrale wartet auf ihre Stimmen",
+          "sessionEmptyText": "Hier kann die nächste Szene beginnen.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "kathedrale-kreuzgang",
+          "pageTitle": "Kreuzgang & innerer Garten",
+          "image": "./assets/gwynthor-cathedral/scenes/kreuzgang.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Unter den Arkaden führen langsame Schritte um den stillen Garten. Ein niedriger Brunnen, Kräuterbeete und wenige schattige Bänke liegen zwischen den Wegen. Hier lässt sich warten, beten oder ein Gespräch fortsetzen, das unter dem hohen Gewölbe des Kirchenschiffs keinen ruhigen Anfang fand.</p>",
+          "sessionHint": "Eine Begegnung in der Kathedrale.",
+          "sessionEmptyTitle": "Die Kathedrale wartet auf ihre Stimmen",
+          "sessionEmptyText": "Hier kann die nächste Szene beginnen.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "kathedrale-busshaus",
+          "pageTitle": "Bußhaus & stille Kammern",
+          "image": "./assets/gwynthor-cathedral/scenes/busshaus.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Schlichte Kammern und eine gemeinsame Stube liegen abseits des Besucherstroms. Ein Bett, eine Truhe, ein Waschkrug und graue Gewänder genügen für den Alltag der Bußgänger. Dienst und Schweigen gehören zu ihrem vereinbarten Weg; über den Fortschritt wacht die geistliche Begleitung. Arianwen steht unmittelbar unter Gwalchgwyns Obhut.</p>",
+          "sessionHint": "Eine Begegnung in der Kathedrale.",
+          "sessionEmptyTitle": "Die Kathedrale wartet auf ihre Stimmen",
+          "sessionEmptyText": "Hier kann die nächste Szene beginnen.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "kathedrale-wachhof",
+          "pageTitle": "Wachstube & Hof der Kirchritter",
+          "image": "./assets/gwynthor-cathedral/scenes/wachhof.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Vom seitlichen Hof aus gehen die bewaffneten Begleiter ihrem Dienst nach. In der Wachstube werden Ablösungen und Geleitwege besprochen; draußen bleibt Raum für Waffenübungen. Hinter den Toren wartet die Stadt, auf den Wegen der Grafschaft warten Kirchen, Pilger und jene Gemeinden, die der Patriarch besuchen will.</p>",
+          "sessionHint": "Eine Begegnung in der Kathedrale.",
+          "sessionEmptyTitle": "Die Kathedrale wartet auf ihre Stimmen",
+          "sessionEmptyText": "Hier kann die nächste Szene beginnen.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        }
+      ]
+    }
+  }
+}

@@ -608,6 +608,10 @@ function sanitizeCourtData(data = {}) {
   };
 }
 
+// Shared bound for sanitation, rendering and both editors. Columns may wrap
+// without promoting equal-ranking members to a separate hierarchy level.
+const HIERARCHY_MAX_LEVEL_NODES = 12;
+
 function sanitizeHierarchyDetailRows(items = []) {
   return (Array.isArray(items) ? items : [])
     .map(item => ({
@@ -632,7 +636,7 @@ function sanitizeHierarchyLevel(level = {}, index = 0) {
   const nodes = (Array.isArray(level?.nodes) ? level.nodes : [])
     .map((node, nodeIndex) => sanitizeHierarchyNode(node, nodeIndex))
     .filter(node => node.portrait || node.title || node.subtitle || node.text)
-    .slice(0, 6);
+    .slice(0, HIERARCHY_MAX_LEVEL_NODES);
   return {
     label: String(level?.label || '').trim(),
     nodes

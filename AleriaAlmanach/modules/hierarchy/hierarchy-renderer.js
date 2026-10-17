@@ -36,7 +36,7 @@ function buildHierarchyNodeCard(node) {
 }
 
 function buildHierarchyLevel(level, index) {
-  const nodes = Array.isArray(level.nodes) ? level.nodes.slice(0, 6) : [];
+  const nodes = Array.isArray(level.nodes) ? level.nodes.slice(0, HIERARCHY_MAX_LEVEL_NODES) : [];
   if (!nodes.length) return '';
   return `
     <section class="hierarchy-chart-level cols-${Math.max(1, Math.min(6, nodes.length))}" data-hierarchy-level="${index}">

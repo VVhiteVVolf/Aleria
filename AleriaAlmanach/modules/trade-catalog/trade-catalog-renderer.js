@@ -1,4 +1,5 @@
 import { renderTradeMoney } from './trade-catalog-money.js?v=20261007-coin-prices-v1';
+import { installTradeItemCards } from './trade-item-card.js?v=20261017-item-card-v1';
 
 function buildTradeCatalogImage(src, className, fallback = '') {
   const image = sanitizeImageSrc(src || '');
@@ -192,10 +193,10 @@ function buildTradeCatalogItem(item, activeCategory = 'all') {
     <article class="trade-catalog-item" style="${escapeHtml(getTradeCatalogImageStyle(item))}" data-trade-category="${escapeHtml(item.category)}" data-trade-search="${escapeHtml(searchText)}"${hiddenAttr}>
       <aside class="trade-catalog-visual">
         ${item.badge ? `<div class="trade-catalog-badge">${escapeHtml(item.badge)}</div>` : ''}
-        <div class="trade-catalog-image-wrap ${escapeHtml(getTradeCatalogImageClasses(item))}">
+        <button type="button" class="trade-catalog-image-wrap trade-item-card-trigger ${escapeHtml(getTradeCatalogImageClasses(item))}" data-action="open-trade-item-card" aria-haspopup="dialog" aria-label="${escapeHtml(`Itemkarte öffnen: ${item.title}`)}" title="Itemkarte öffnen">
           ${item.sealImage ? `<img class="trade-catalog-seal" src="${sanitizeImageSrc(item.sealImage)}" alt="" aria-hidden="true" loading="lazy" decoding="async">` : ''}
           ${buildTradeCatalogImage(item.image, 'trade-catalog-image', getInitialChar(item.title))}
-        </div>
+        </button>
         <h3>${escapeHtml(item.title)}</h3>
         ${item.subtitle ? `<p>${escapeHtml(item.subtitle)}</p>` : ''}
         ${buildTradeTagList(item.tags)}
@@ -223,9 +224,26 @@ function buildTradeCatalogItem(item, activeCategory = 'all') {
           <h4>${escapeHtml(item.conditionsTitle)}</h4>
           <p>${sanitizeContentHtml(item.conditions)}</p>
         </section>` : ''}
-        ${buildTradeAttributeChart(item)}
       </aside>
+      ${buildTradeItemCardTemplate(item)}
     </article>`;
+}
+
+function buildTradeItemCardTemplate(item) {
+  const chart = buildTradeAttributeChart(item);
+  return `<template data-role="trade-item-card">
+    <header class="trade-item-card-header">
+      <div><h2 id="trade-item-card-title">${escapeHtml(item.title)}</h2>${item.subtitle ? `<p>${escapeHtml(item.subtitle)}</p>` : ''}</div>
+      <button type="button" data-action="close-trade-item-card" aria-label="Itemkarte schließen" autofocus>×</button>
+    </header>
+    <div class="trade-item-card-body">
+      <div class="trade-item-card-summary">
+        ${buildTradeCatalogImage(item.image, 'trade-item-card-image', getInitialChar(item.title))}
+        ${buildTradePrice(item)}
+      </div>
+      <div class="trade-item-card-details">${chart || `<div class="trade-item-card-description">${sanitizeContentHtml(item.description || '')}</div>${buildTradeFeatureList(item)}`}</div>
+    </div>
+  </template>`;
 }
 
 function buildTradeCatalogFooter(data) {
@@ -297,6 +315,7 @@ function applyTradeCatalogFilters(root) {
 
 // Preserve the existing template entry point; renderer helpers stay module-local.
 globalThis.buildTradeCatalogPage = buildTradeCatalogPage;
+installTradeItemCards();
 
 document.addEventListener('click', event => {
   const trigger = event.target?.closest?.('.trade-catalog-tab[data-trade-filter]');

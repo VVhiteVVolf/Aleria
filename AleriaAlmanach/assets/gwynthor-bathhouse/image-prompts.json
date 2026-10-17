@@ -1,0 +1,126 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-10-17",
+  "tool": "built-in image_gen",
+  "userBrief": "Kleines seit Generationen argentisches Badehaus in Gwynthor. Drei Familienbilder mit sehr hellbraunem lockigem Haar und silbrigen Augen; alle weiteren Personalstellen ohne Porträts. Wappenwahl: Silberner Wasserkrug und goldener Lorbeerzweig auf Dunkelblau; Messingrahmen mit römischem Mäander.",
+  "entries": [
+    {
+      "id": "wappen",
+      "destination": "Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Fontani.png",
+      "transparent": true,
+      "references": [
+        "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-8f06eeeb-ce6f-427b-8c07-49c37cfe82a9.png"
+      ],
+      "prompt": "Bearbeite das beigefügte Fontani-Wappen. Motiv, Silberkrug, goldenen Lorbeer, Farben, Messingmäander und Zeichenstil bewahren. Korrigiere ausschließlich die technische Freistellung und Komposition: Der geschlossene kreisrunde Rahmen muss mittig mit rund 6 Prozent transparentem Rand auf JEDER Seite liegen (88 Prozent Motivbreite). Die gesamte innere Kreisfläche muss VOLLSTÄNDIG DECKEND sein, Alpha exakt255, auch Holz und Zwischenräume. Nur außerhalb des äußeren Kreises echte Transparenz Alpha0, keinerlei Schatten oder Farbreste. Keine neuen Symbole, keine Schrift. Quadrat1:1, RGBA.",
+      "iterations": [
+        {
+          "prompt": "# Universeller Wappen-Prompt\n\n**Wappenname:** Haus Fontani · aus dem Kaiserreich Argentum\n\n**Zentrales Symbol:** Ein großer silberner Wasserkrug, leicht seitlich gesehen, mit klarer Tülle und geschwungenem Henkel, daneben ein einzelner goldener Lorbeerzweig. Beide Motive liegen vollständig auf dunkelblau bemalten Holzbrettern.\n\n**Farbpalette:** Dunkelblau · Silber · Gold und warmes Messing\n\n**Wappenform:** ZIRKULAR – IMMER ein exakter Kreis, damit das Wappen in die vorhandenen Frames passt. Keine Spitzschilde oder ovalen Außenkonturen.\n\n### Gestaltung\n\nEin hochwertiges mittelalterliches Wappen im nordisch-keltischen Fantasy-Heraldikstil. Inspiriert von historischen bemalten Holzschilden, nordischer Ornamentik und traditionellen Clanwappen.\n\nDas zentrale Symbol ist groß, ausdrucksstark und detailliert, gleichzeitig aber klar heraldisch stilisiert. Kräftige dunkle Konturen, sauber getrennte Farbflächen, markante Silhouetten und ausgewogene Proportionen.\n\nDas gesamte Motiv muss vollständig innerhalb des Wappens liegen. Keine abgeschnittenen Figuren, Waffen, Flügel, Hörner oder Ornamente.\n\n### Material und Oberflächen\n\nDie innere Wappenfläche besteht aus bemalten Holzbrettern mit dezenter, sichtbarer Holzmaserung. Die Farben wirken wie auf Holz aufgetragene mittelalterliche Pigmente.\n\nDer Außenrahmen besteht aus warmem Messing mit leichter Materialstruktur, kleinen Gebrauchsspuren und einer vollständig geschlossenen Außenkontur.\n\nDas Wappen soll handwerklich hochwertig, plastisch und historisch glaubwürdig wirken. Keine moderne, minimalistische Logoästhetik, keine Fotorealistik und keine übertriebenen 3D-Effekte.\n\n### Verzierungen\n\nEin gleichmäßig umlaufender schlichter römischer Mäander, sauber in den geschlossenen Messingring eingraviert.\n\nBei zirkularen Wappen können die Verzierungen gleichmäßig im Außenring verlaufen. Sie dürfen das zentrale Motiv nicht überlagern.\n\n### Komposition\n\nQuadratisches Bildformat 1:1. Das vollständige Wappen steht mittig und wird frontal gezeigt.\n\nDas Wappen nimmt ungefähr 85–90 % der Bildbreite ein. Alle Elemente bleiben vollständig innerhalb seiner äußeren Begrenzung.\n\n### Transparenz – zwingend einhalten\n\n**Der gesamte Bereich außerhalb des äußersten Wappenrahmens muss vollständig transparent sein (Alpha-Kanal = 0).**\n\n- Keine Hintergrundfarbe, kein Weiß, Schwarz oder Magenta außerhalb des Wappens.\n- Kein Hintergrundbild, keine Landschaft, keine Wand und keine dekorativen Elemente außerhalb des Rahmens.\n- Keine Schlagschatten, Glows oder Lichtreflexe außerhalb der Wappenkontur.\n- Keine über den Rahmen hinausragenden Ornamente oder Symbole.\n- Die äußerste Wappenkante muss sauber und geschlossen sein.\n- **Die gesamte Wappenfläche innerhalb des Außenrahmens muss vollständig deckend bleiben (Alpha-Kanal = 255).**\n- Keine transparenten Löcher zwischen Symbolen, Ornamenten oder innerhalb der bemalten Holzfläche.\n- Die Innenfläche des Wappens muss ihre vorgesehene Farbe vollständig behalten.\n\n**WICHTIG:** Ausschließlich der Bereich außerhalb der äußeren Wappenkontur ist transparent. Das Wappen selbst, einschließlich Holzfläche, Rahmen, Symbolen und sämtlichen Zwischenräumen, bleibt vollständig sichtbar und deckend.\n\n### Ausgabe\n\nHochauflösendes PNG mit echtem transparentem Hintergrund (RGBA), quadratisches Format 1:1. Keine simulierte Transparenz und kein Schachbrettmuster als Bildhintergrund.\nAktuelle ausdrückliche Kulturvorgabe: ARGENTISCH-LATEINISCH, römischer Mäander statt nordischer Runen oder keltischer Knoten. Referenz Veltrane zeigt nur das Material, die kreisrunde Bauform und den heraldischen Detailgrad; KEINEN Anker und KEINE Oliven übernehmen. Neues eigenständiges Symbol: silberner Wasserkrug und goldener Lorbeerzweig. Keine Schrift und kein Spruchband. Exakt kreisrunder äußerer Rand, Kreisgröße 88 Prozent der quadratischen Leinwand. Innen vollständig deckend Alpha255, außerhalb Alpha0, keine halbtransparenten Stellen im Inneren, keine äußeren Schatten. Alle innen sichtbaren Zwischenräume sind dunkelblaue Holzfläche. Frontal und mittig.",
+          "references": [
+            "E:/Aleria/Stammbäume/assets/images/houses/Kaiserreich Argentum/Veltrane.png"
+          ],
+          "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-8f06eeeb-ce6f-427b-8c07-49c37cfe82a9.png"
+        }
+      ]
+    },
+    {
+      "id": "cassiano",
+      "destination": "AleriaAlmanach/assets/gwynthor-bathhouse/portraits/cassiano.png",
+      "transparent": false,
+      "references": [
+        "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-1d31dd9a-9ff0-42f8-94ec-7c9a2541e23b.png"
+      ],
+      "prompt": "Bearbeite ausschließlich Cassianos Augenfarbe im beigefügten Porträt: beide Iris klar SILBERGRAU, ein kühles neutrales Hellgrau, ohne braunen oder grünen Farbstich, natürliche dunkle Pupillen. Kein Leuchten. Alle anderen Details, Gesicht, Alter49, sehr hellbraunes lockiges Haar und gleichfarbigen Bart, Pose, Kleidung, Hintergrund, Beleuchtung und Anime-Cel-Shading exakt erhalten. Format2:3.",
+      "iterations": [
+        {
+          "prompt": "Bildformat 2:3. Tales of Xillia / Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nEinzelporträt Cassiano Lucius Fontani, 49-jähriger menschlicher Mann; sehr hellbraunes, kurz gelocktes Haar und ein kurzer gepflegter Bart in derselben Haarfarbe; silbergraue Augen. Breite Nase, kräftige Brauen, reife Lachfalten. Cremefarbenes Hemd, dunkelblaue Weste und braune Arbeitsschürze. Entspannt stehend, Dreiviertelansicht nach rechts, Arme locker. Die Person steht entspannt, ab Kopf bis Mitte Oberschenkel sichtbar. Vollständig bekleidet, keine Requisiten in den Händen. Hintergrund schlichtes argentisches Badehaus mit cremefarbenem Rundbogen und blauem Mosaikband, weich reduziert. Mensch mit kleinen runden menschlichen Ohren, keine Elfen. Haar und Bart genau EINE sehr hellbraune Grundfarbe, nur normales Cel-Shading; keine Strähnen in anderen Farben, kein weißes oder graues Haar. Silbergraue natürliche Augen ohne Leuchten. Referenz nur als Zeichenstil verwenden, eine NEUE ältere Figur mit eigenem Gesicht und lockigem viel hellerem Haar entwerfen. Keine Schrift, kein Rahmen, kein Wasserzeichen.",
+          "references": [
+            "E:/Aleria/AleriaAlmanach/assets/gwynthor-theater/portraits/cadfan.png"
+          ],
+          "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-1d31dd9a-9ff0-42f8-94ec-7c9a2541e23b.png"
+        }
+      ]
+    },
+    {
+      "id": "livia",
+      "destination": "AleriaAlmanach/assets/gwynthor-bathhouse/portraits/livia.png",
+      "transparent": false,
+      "references": [
+        "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-a7cef500-d9ab-49be-aa56-c5c91fb522ef.png"
+      ],
+      "prompt": "Bearbeite ausschließlich die sichtbaren Altersmerkmale in Livias Gesicht: Sie ist eine attraktive Frau von46, mit dezenten klar gezeichneten Lachfältchen an den Augen und kleinen natürlichen Nasolabiallinien. Kein jugendliches20jähriges Gesicht. Gesichtsidentität, silbergraue Augen, Haarfarbe und Locken, Kleidung, Pose, Hintergrund, Beleuchtung und Anime-Cel-Shading bewahren. Keine grauen Haare hinzufügen. Format2:3.",
+      "iterations": [
+        {
+          "prompt": "Bildformat 2:3. Tales of Xillia / Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nEinzelporträt Livia, 46-jährige menschliche Frau; sehr hellbraunes, voluminös gelocktes Haar, locker halb hochgesteckt, silbergraue Augen. Rundliches Gesicht, lebhafte Augenbrauen, erkennbare reife Lachfältchen. Cremefarbenes und schieferblaues cenyrisch-argentisches Alltagskleid mit langen Ärmeln, schlichte Messingbrosche. Entspannt stehend nach links, eine Hand an der Hüfte, anderer Arm locker. Die Person steht entspannt, ab Kopf bis Mitte Oberschenkel sichtbar. Vollständig bekleidet, keine Requisiten in den Händen. Hintergrund schlichtes argentisches Badehaus mit cremefarbenem Rundbogen und blauem Mosaikband, weich reduziert. Mensch mit kleinen runden menschlichen Ohren, keine Elfen. Haar und Bart genau EINE sehr hellbraune Grundfarbe, nur normales Cel-Shading; keine Strähnen in anderen Farben, kein weißes oder graues Haar. Silbergraue natürliche Augen ohne Leuchten. Referenz ist Cassiano, Familienähnlichkeit durch dieselbe sehr hellbraune Haarfarbe, Locken und silbergraue Augen erhalten. Eigene neue Gesichtszüge, eigenständige Kleidung und eine andere einfache Pose; Alter beachten. Keine Schrift, kein Rahmen, kein Wasserzeichen.",
+          "references": [
+            "E:/Aleria/AleriaAlmanach/assets/gwynthor-bathhouse/portraits/cassiano.png"
+          ],
+          "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-a7cef500-d9ab-49be-aa56-c5c91fb522ef.png"
+        }
+      ]
+    },
+    {
+      "id": "terenzio",
+      "destination": "AleriaAlmanach/assets/gwynthor-bathhouse/portraits/terenzio.png",
+      "transparent": false,
+      "references": [
+        "E:/Aleria/AleriaAlmanach/assets/gwynthor-bathhouse/portraits/cassiano.png"
+      ],
+      "prompt": "Bildformat 2:3. Tales of Xillia / Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nEinzelporträt Terenzio Fontani, 24-jähriger menschlicher Mann; sehr hellbraunes, mittellanges dicht gelocktes Haar, silbergraue Augen, glatt rasiert. Längeres schmaleres Gesicht als sein Vater, jugendlich, kräftige Unterarme. Elfenbeinfarbenes hochgekrempeltes Hemd und dunkelblaue Hüftschürze. Frontal stehend mit Gewicht auf einem Bein, eine Hand am Gürtel, andere locker. Die Person steht entspannt, ab Kopf bis Mitte Oberschenkel sichtbar. Vollständig bekleidet, keine Requisiten in den Händen. Hintergrund schlichtes argentisches Badehaus mit cremefarbenem Rundbogen und blauem Mosaikband, weich reduziert. Mensch mit kleinen runden menschlichen Ohren, keine Elfen. Haar und Bart genau EINE sehr hellbraune Grundfarbe, nur normales Cel-Shading; keine Strähnen in anderen Farben, kein weißes oder graues Haar. Silbergraue natürliche Augen ohne Leuchten. Referenz ist Cassiano, Familienähnlichkeit durch dieselbe sehr hellbraune Haarfarbe, Locken und silbergraue Augen erhalten. Eigene neue Gesichtszüge, eigenständige Kleidung und eine andere einfache Pose; Alter beachten. Keine Schrift, kein Rahmen, kein Wasserzeichen."
+    },
+    {
+      "id": "aussenansicht",
+      "destination": "AleriaAlmanach/assets/gwynthor-bathhouse/scenes/aussenansicht.png",
+      "transparent": false,
+      "references": [
+        "E:/Aleria/AleriaAlmanach/assets/gwynthor-theater/scenes/aussenansicht.png",
+        "E:/Aleria/Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Fontani.png"
+      ],
+      "prompt": "Bildformat 2:3. Tales of Xillia / Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nMittelalterliche Fantasy-Stadt Gwynthor in Cenyr. Kleines seit Generationen bestehendes argentisches Badehaus, helle verputzte Steinwände, einfache Rundbögen, Terrakottaboden und sparsame dunkelblaue Mosaikbänder. Lokales Schieferdach und Holzdetails passen zum kühlen cenyrischen Klima. Ruhige übersichtliche Komposition mit wenigen sorgfältig gewählten Gegenständen. Keine moderne Technik, keine Schrift, keine Wasserzeichen. Bild als gemalte Anime-Szene von Rand zu Rand, kein Rahmen.  Außenansicht eines KLEINEN einstöckigen Badehauses, breite nur drei schmale Achsen, schlichtes Schieferdach, kleiner hinterer Schornstein. Zwei kleine Rundbogenfenster und eine niedrige kräftige Holztür unter einem Rundbogen, über der Tür das runde Fontani-Wappen als kleine Plakette gemäß zweiter Referenz. Terrakottastufe, zwei schlichte Tonpflanzgefäße. Schmale gepflasterte Gasse, angrenzende cenyrische Fachwerkhäuser nur am Rand angedeutet, heller Vormittag. Ganzes Badehaus sichtbar, freundlicher bodennaher Dreiviertelblick. Referenz 1 liefert NUR Anime-Linien, Farbauftrag und örtliche Materialsprache: Theater NICHT kopieren, keine Monumentalarchitektur, keine Türme oder Palastfassade. Keine Menschen."
+    },
+    {
+      "id": "empfang",
+      "destination": "AleriaAlmanach/assets/gwynthor-bathhouse/scenes/empfang.png",
+      "transparent": false,
+      "references": [
+        "E:/Aleria/AleriaAlmanach/assets/gwynthor-bathhouse/scenes/aussenansicht.png"
+      ],
+      "prompt": "Bildformat 2:3. Tales of Xillia / Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nMittelalterliche Fantasy-Stadt Gwynthor in Cenyr. Kleines seit Generationen bestehendes argentisches Badehaus, helle verputzte Steinwände, einfache Rundbögen, Terrakottaboden und sparsame dunkelblaue Mosaikbänder. Lokales Schieferdach und Holzdetails passen zum kühlen cenyrischen Klima. Ruhige übersichtliche Komposition mit wenigen sorgfältig gewählten Gegenständen. Keine moderne Technik, keine Schrift, keine Wasserzeichen. Bild als gemalte Anime-Szene von Rand zu Rand, kein Rahmen. Kleiner Empfang und Umkleide im selben kompakten Raum: niedriger Holztresen, ordentlich gefaltete Leinentücher, zwei mit Holzsichtschirmen abgetrennte Umkleiden, Kleiderhaken und Sitzbank. Ein Rundbogen führt zur warmen Badehalle. Keine Menschen, kein moderner Umkleideschrank. Referenz definiert dasselbe kleine Badehaus, Materialfarben und Zeichenstil erhalten. Ein einziger übersichtlicher Raum beziehungsweise Hof als bespielbare Szene, keine Collage. Vertikales Format 2:3."
+    },
+    {
+      "id": "badehalle",
+      "destination": "AleriaAlmanach/assets/gwynthor-bathhouse/scenes/badehalle.png",
+      "transparent": false,
+      "references": [
+        "E:/Aleria/AleriaAlmanach/assets/gwynthor-bathhouse/scenes/aussenansicht.png"
+      ],
+      "prompt": "Bildformat 2:3. Tales of Xillia / Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nMittelalterliche Fantasy-Stadt Gwynthor in Cenyr. Kleines seit Generationen bestehendes argentisches Badehaus, helle verputzte Steinwände, einfache Rundbögen, Terrakottaboden und sparsame dunkelblaue Mosaikbänder. Lokales Schieferdach und Holzdetails passen zum kühlen cenyrischen Klima. Ruhige übersichtliche Komposition mit wenigen sorgfältig gewählten Gegenständen. Keine moderne Technik, keine Schrift, keine Wasserzeichen. Bild als gemalte Anime-Szene von Rand zu Rand, kein Rahmen. Eine KLEINE intime gewölbte Badehalle, kein Palast: ein einziges kleines warmes gemauertes Becken für nur vier bis sechs Personen mit zwei Stufen, seitlich Waschschalen und Krüge. Eine kleine unmittelbar angrenzende Schwitznische mit zwei erwärmten Steinbänken, kein eigener großer Saal. Sanftes Tageslicht und wenig Dampf, Wasser klar. Keine Menschen. Referenz definiert dasselbe kleine Badehaus, Materialfarben und Zeichenstil erhalten. Ein einziger übersichtlicher Raum beziehungsweise Hof als bespielbare Szene, keine Collage. Vertikales Format 2:3."
+    },
+    {
+      "id": "wannenstube",
+      "destination": "AleriaAlmanach/assets/gwynthor-bathhouse/scenes/wannenstube.png",
+      "transparent": false,
+      "references": [
+        "E:/Aleria/AleriaAlmanach/assets/gwynthor-bathhouse/scenes/aussenansicht.png"
+      ],
+      "prompt": "Bildformat 2:3. Tales of Xillia / Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nMittelalterliche Fantasy-Stadt Gwynthor in Cenyr. Kleines seit Generationen bestehendes argentisches Badehaus, helle verputzte Steinwände, einfache Rundbögen, Terrakottaboden und sparsame dunkelblaue Mosaikbänder. Lokales Schieferdach und Holzdetails passen zum kühlen cenyrischen Klima. Ruhige übersichtliche Komposition mit wenigen sorgfältig gewählten Gegenständen. Keine moderne Technik, keine Schrift, keine Wasserzeichen. Bild als gemalte Anime-Szene von Rand zu Rand, kein Rahmen. Blick in EINE der zwei kleinen privaten Wannenstuben: ein einzelner einfacher ovaler hölzerner Badezuber mit warmem Wasser, Schemel mit gefaltetem Leinen, Tonkrug, kleines Ölfläschchen, Holzbank, geschlossene Tür, hohes schmales Fenster. Schlichte behagliche Handwerksqualität, kein Bett, kein Luxushotel. Keine Menschen. Referenz definiert dasselbe kleine Badehaus, Materialfarben und Zeichenstil erhalten. Ein einziger übersichtlicher Raum beziehungsweise Hof als bespielbare Szene, keine Collage. Vertikales Format 2:3."
+    },
+    {
+      "id": "heizhof",
+      "destination": "AleriaAlmanach/assets/gwynthor-bathhouse/scenes/heizhof.png",
+      "transparent": false,
+      "references": [
+        "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-cc66739f-90d0-459e-b49b-31461401446f.png"
+      ],
+      "prompt": "Korrigiere im beigefügten Heizhofbild ausschließlich die Ofenanlage rechts: Der Behälter DIREKT ÜBER der gemauerten Feuerkammer muss ein großer offener KUPFERKESSEL aus METALL sein, kein hölzerner Badezuber. Sichtbarer Kupferrand und patinierter Kupferkörper, Wasser darin, separate gemauerte Rauchführung zum Schornstein. Rechts daneben ein kleiner ERHÖHTER Wasservorratsbehälter aus Stein mit einfachem hölzernem Zulauf vom Brunnen, ungefährkopfhoch, Wasser fließt durch Gefälle. Brunnen links, trockenes Brennholz, Gebäude, Materialien, Tageslicht, Kamerablick und Anime-Zeichenstil erhalten. Kleiner Wirtschaftshof, keine Industriefabrik. Ein ruhiges übersichtliches Bild, keine Personen, keine Schrift. Format2:3.",
+      "iterations": [
+        {
+          "prompt": "Bildformat 2:3. Tales of Xillia / Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nMittelalterliche Fantasy-Stadt Gwynthor in Cenyr. Kleines seit Generationen bestehendes argentisches Badehaus, helle verputzte Steinwände, einfache Rundbögen, Terrakottaboden und sparsame dunkelblaue Mosaikbänder. Lokales Schieferdach und Holzdetails passen zum kühlen cenyrischen Klima. Ruhige übersichtliche Komposition mit wenigen sorgfältig gewählten Gegenständen. Keine moderne Technik, keine Schrift, keine Wasserzeichen. Bild als gemalte Anime-Szene von Rand zu Rand, kein Rahmen. Kleiner rückwärtiger Wirtschaftshof mit halb offenem Wasserhaus: trockenes gestapeltes Brennholz unter Vordach, hölzerne Brunnenwinde, kleiner erhöht stehender gemauerter Wasservorrat. Auf einer Seite ein gemauerter Holzofen mit geschlossenem Feuerraum und darüber ein offener druckloser Warmwasserkessel; separater gemauerter Schornstein. Einfache kurze Wasserleitung, Abflussrinne am Boden. Verständlich und handwerklich, keine moderne Industrie, keine Maschinen oder Druckrohre, kein Querschnitt, keine Beschriftungen. Keine Menschen. Referenz definiert dasselbe kleine Badehaus, Materialfarben und Zeichenstil erhalten. Ein einziger übersichtlicher Raum beziehungsweise Hof als bespielbare Szene, keine Collage. Vertikales Format 2:3.",
+          "references": [
+            "E:/Aleria/AleriaAlmanach/assets/gwynthor-bathhouse/scenes/aussenansicht.png"
+          ],
+          "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-cc66739f-90d0-459e-b49b-31461401446f.png"
+        }
+      ]
+    }
+  ]
+}
