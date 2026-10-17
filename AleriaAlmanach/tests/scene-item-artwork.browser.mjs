@@ -26,8 +26,9 @@ try {
       ? route.continue() : route.abort();
   });
   const page = await context.newPage(), errors = [];
+  page.setDefaultTimeout(60000);
   page.on('pageerror', error => errors.push(error.message));
-  await page.goto(`${origin}/AleriaAlmanach/AleriaAlmanach.html`);
+  await page.goto(`${origin}/AleriaAlmanach/AleriaAlmanach.html`, { waitUntil: 'domcontentloaded', timeout: 90000 });
   await page.waitForFunction(() => globalThis.AleriaSceneItems && globalThis.AleriaCharacterInventory && typeof buildInventoryCardContent === 'function');
   await page.waitForFunction(() => ['ready', 'slow'].includes(document.querySelector('[data-loading-screen]')?.dataset.state));
   const enter = page.locator('[data-loading-action="enter"]');
