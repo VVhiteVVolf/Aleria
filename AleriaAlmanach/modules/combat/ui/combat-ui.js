@@ -311,7 +311,7 @@ function renderEvaluationActors(actorId, actorName, targetId, targetName) {
   </div>`;
 }
 
-export function renderCombatEvaluation(source = {}) {
+export function renderCombatEvaluation(source = {}, { open = false } = {}) {
   const resolution = source.combatResolution || source.resolution;
   if (!resolution?.attack) return '';
   if (resolution.actionType === 'channeling') {
@@ -346,7 +346,7 @@ export function renderCombatEvaluation(source = {}) {
   const areaLabel = scenario.multipleTargets ? ` · Flächenwirkung · Ziel ${Number(resolution.multiTargetIndex || 0) + 1}/${Number(resolution.multiTargetCount)} · ${resolution.targetName || 'Ziel'}` : '';
 
   return `
-    <details class="combat-evaluation" data-state="${state}" data-narration-source="${narrationSource.key}" aria-label="Kampfauswertung">
+    <details class="combat-evaluation" data-state="${state}" data-narration-source="${narrationSource.key}" aria-label="Kampfauswertung"${open ? ' open' : ''}>
       <summary class="combat-evaluation-summary">
         ${renderEvaluationActors(resolution.actorId, resolution.actorName, resolution.targetId, resolution.targetName)}
         <strong class="combat-evaluation-summary-label">${escapeHtml(getEvaluationLabel(resolution))}${resolution.counterAttacks?.some(counter => counter.resolution) ? ' · Konter' : ''}</strong>

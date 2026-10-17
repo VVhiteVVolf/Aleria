@@ -1,6 +1,6 @@
 import { getChallengeCheckRule } from '../herausforderung/herausforderung-check-policy.js?v=20261016-check-policy-v1';
 import { withResolvedChallengeTarget } from '../herausforderung/herausforderung-target.js?v=20261016-check-policy-v1';
-import { renderChallengeManeuverReceipts } from '../herausforderung/herausforderung-maneuver-receipts-view.js';
+import { renderChallengeManeuverReceipts, formatChallengeStandaloneRewards } from '../herausforderung/herausforderung-maneuver-receipts-view.js';
 import { getChallengeNarration, isChallengeResolution } from '../herausforderung/herausforderung-narration.js';
 import { renderSkillAttemptHeader, renderSkillAttemptBreakdown } from './skill-attempt-view.js?v=20261016-check-policy-v1';
 import { collectSkillSupportOptions, selectSkillSupportDefaults, skillSupportOptionKey } from './skill-support-options.js?v=20261016-check-policy-v1';
@@ -14,7 +14,6 @@ import { sceneDiceService } from '../scene-dice/dice-service.js?v=20261013-perfo
 import { CombatProfileResolver } from '../combat/combat-profile-resolver.js?v=20260928-equipment-art-v4';
 import { createSceneSkillProfileResolver } from './skill-scene-profile.js?v=20260928-equipment-art-v4';
 import { getSceneRecoveryDayKey } from '../scene-time/scene-recovery-day.js';
-import { formatHerausforderungRewardReceipt } from '../herausforderung/herausforderung-rewards.js?v=20261015-graded-challenges-v1';
 import {
   SKILL_DEFINITIONS,
   CHECK_DEFINITIONS,
@@ -739,7 +738,7 @@ function renderEvaluation(source = {}) {
   const outcomeLabel = resolution.herausforderungLabel || HERAUSFORDERUNG_TIER_LABELS[resolution.herausforderungTier] || getOutcomeLabel(resolution.outcome);
   const sourceLabel = resolution.narration?.source === 'aleria-gpt' ? 'AleriaGPT-Auswertung' : 'Systemauswertung · ohne KI';
   const affinity = Number(resolution.affinityModifier || 0);
-  const rewardReceipt = formatHerausforderungRewardReceipt(resolution.herausforderungReward);
+  const rewardReceipt = formatChallengeStandaloneRewards(resolution.herausforderungReward, resolution.herausforderungCombatResults);
   const challenge = isChallengeResolution(resolution);
   const narrative = challenge ? getChallengeNarration(resolution) : resolution.narration?.text || '';
   const custom = Number(resolution.customModifier || 0);

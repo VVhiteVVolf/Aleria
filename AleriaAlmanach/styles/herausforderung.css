@@ -131,6 +131,36 @@
 .herausforderung-result p { white-space: pre-wrap; overflow-wrap: anywhere; margin: 5px 0; }
 .herausforderung-result-mechanics { margin-top: 0.6rem; border-top: 1px solid #c7b69644; }
 .herausforderung-result-mechanics > summary { padding-block: 0.45rem; cursor: pointer; color: #c7b696; font-size: 0.8rem; }
+
+.herausforderung-maneuver-receipt { display: grid; gap: 0.4rem; padding: 0.25rem 0.85rem 0.85rem; }
+.herausforderung-maneuver-step { min-width: 0; border: 1px solid #94743940; border-radius: 5px; background: #fffaf344; }
+.herausforderung-maneuver-step > summary {
+  display: grid;
+  grid-template-columns: 1.7rem minmax(0, 1fr) auto 0.8rem;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.65rem 0.75rem;
+  cursor: pointer;
+  list-style: none;
+}
+.herausforderung-maneuver-step > summary::-webkit-details-marker { display: none; }
+.herausforderung-maneuver-step > summary::after { content: '⌄'; color: #80652e; }
+.herausforderung-maneuver-step[open] > summary::after { transform: rotate(180deg); }
+.herausforderung-maneuver-step > summary > img { width: 1.7rem; height: 1.7rem; }
+.herausforderung-maneuver-copy { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 0.2rem 1rem; min-width: 0; }
+.herausforderung-maneuver-copy strong { font-size: 0.85rem; overflow-wrap: anywhere; }
+.herausforderung-maneuver-copy > span { font-size: 0.82rem; }
+.herausforderung-maneuver-outcome { padding: 0.2rem 0.45rem; border-radius: 3px; font-size: 0.75rem; background: #7d322715; color: #7d3227; }
+.herausforderung-maneuver-step[data-state="success"] .herausforderung-maneuver-outcome { background: #39714c19; color: #315f40; }
+.herausforderung-maneuver-proof { padding: 0.7rem; border-top: 1px solid #94743930; }
+.herausforderung-maneuver-proof > .combat-evaluation { width: 100%; margin: 0; }
+.herausforderung-maneuver-pickup { display: flex; align-items: center; flex-wrap: wrap; gap: 0.55rem; padding: 0.45rem 0.1rem; font-size: 0.82rem; }
+.herausforderung-maneuver-pickup > span { flex: 1; }
+@media (max-width: 640px) {
+  .herausforderung-maneuver-receipt { padding-inline: 0.5rem; }
+  .herausforderung-maneuver-step > summary { gap: 0.4rem; padding: 0.6rem 0.45rem; }
+  .herausforderung-maneuver-outcome { max-width: 6.5rem; overflow-wrap: anywhere; }
+}
 .herausforderung-preview .herausforderung-event { width: 100%; padding: 14px; margin: 12px 0 0; box-shadow: none; }
 .herausforderung-preview .herausforderung-event header { flex-wrap: wrap; gap: 8px; }
 .herausforderung-preview .herausforderung-event header strong { font-size: 15px; }

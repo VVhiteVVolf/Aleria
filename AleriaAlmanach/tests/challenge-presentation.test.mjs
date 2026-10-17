@@ -7,6 +7,7 @@ import { renderChallengeProgressResult } from '../modules/herausforderung/heraus
 import { withCombatActionWeaponAvailability } from '../modules/combat/combat-weapon-availability.js';
 import { getActionGroups, renderActionOptions } from '../modules/combat/ui/combat-action-card.js';
 import { renderWeaponLoadout } from '../modules/combat/ui/combat-weapon-loadout-view.js';
+import { renderChallengeManeuverReceipts, formatChallengeStandaloneRewards } from '../modules/herausforderung/herausforderung-maneuver-receipts-view.js';
 
 const result = patch => ({ type: 'weapon-maneuver', actorId: 'ylva', actorName: 'Ylva',
   resolution: { actorName: 'Ylva', targetName: 'Gais', attack: { hit: false } }, ...patch });
@@ -77,4 +78,29 @@ test('paired weapons and inventory identity share the disarm guard, unrelated ab
   const ability = { id: 'recover', kind: 'ability', name: 'Durchschnaufen', compatible: true };
   assert.equal(withCombatActionWeaponAvailability(actor, ability), ability);
   assert.equal(withCombatActionWeaponAvailability(actor, { ...attack, weapon: sword }).compatible, true);
+});
+
+test('compact receipts show one save and one attack step with the complete proof available on demand', () => {
+  const maneuver = result({ effectId: 'counter', save: { actorName: 'Gais', attributeKey: 'dexterity', total: 4, dc: 15, succeeded: false, diceResults: [3], modifier: 1 },
+    resolution: { actorName: 'Ylva', targetName: 'Gais', attack: { hit: false, total: 10, targetDefense: 15, diceResults: [2], modifier: 8 },
+      targetSnapshot: { hitPointsBefore: 19, hitPointsAfter: 19 }, damage: { total: 0 } } });
+  const before = structuredClone(maneuver), html = renderChallengeManeuverReceipts([maneuver]);
+  assert.equal((html.match(/class="herausforderung-maneuver-step"/g) || []).length, 2);
+  assert.match(html, /4 gegen SG 15/);assert.match(html, /10 gegen RK 15/);
+  assert.match(html, /aria-label="Kampfauswertung" open/);assert.match(html, /Wurfdetails & Wirkungen/);
+  assert.doesNotMatch(html, /<h4>Waffenmanöver/);assert.deepEqual(maneuver, before);
+});
+
+test('deduplication retains other benefits and leaves a fallback when no separate maneuver proof exists', () => {
+  const maneuver = { effectId: 'counter', type: 'weapon-maneuver', actorName: 'Ylva', skipped: 'Dem Gegenangriff entgangen.' };
+  const receipt = { copper: 12, items: [], effects: [], combatEffects: [maneuver, { type: 'spend-resource', actorName: 'Gais', applied: { resourceName: 'Bonusaktion', before: 1, after: 0 } }] };
+  const before = structuredClone(receipt), formatted = formatChallengeStandaloneRewards(receipt, [maneuver]);
+  assert.match(formatted, /12 KT/);assert.match(formatted, /Bonusaktion/);assert.doesNotMatch(formatted, /Gegenangriff/);
+  assert.match(formatChallengeStandaloneRewards(receipt), /Gegenangriff/);assert.deepEqual(receipt, before);
+});
+
+test('a successful save has no empty attack step or duplicate counter summary', () => {
+  const html = renderChallengeManeuverReceipts([result({ resolution: null, save: { actorName: 'Gais', attributeKey: 'dexterity', total: 18, dc: 15, succeeded: true }, skipped: 'Dem Gegenangriff entgangen.' })]);
+  assert.equal((html.match(/class="herausforderung-maneuver-step"/g) || []).length, 1);
+  assert.match(html, /Gelungen/);assert.doesNotMatch(html, /Kampfauswertung|Dem Gegenangriff entgangen/);
 });
