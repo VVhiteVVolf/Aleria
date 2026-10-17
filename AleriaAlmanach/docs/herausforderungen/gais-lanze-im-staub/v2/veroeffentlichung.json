@@ -19,12 +19,28 @@
     ]
   },
   "frontend": {
-    "published": false,
-    "status": "Wartet auf ausdrückliche Freigabe der zuvor ausgesetzten Netlify-Veröffentlichung."
+    "published": true,
+    "commit": "522868cb307a8fe070f055e4e05809d8495d0ae5",
+    "deployId": "6ad382961061fa01fa707930",
+    "url": "https://dieweltvonaleria.netlify.app/AleriaAlmanach/AleriaAlmanach.html",
+    "publishedAt": "2026-10-17T14:23:52.229Z",
+    "filesMatched": 22,
+    "buildReceiptMatches": true,
+    "productionBuilds": 1
   },
   "oldClients": {
     "attemptBlockedBeforeWrites": true,
     "message": "Bitte die Seite vollständig neu laden und den Versuch erneut öffnen."
   },
-  "verifiedAt": "2026-10-17T14:01:50.693Z"
+  "verifiedAt": "2026-10-17T14:24:52.516Z",
+  "onlineVerification": {
+    "editExisting": true,
+    "import": true,
+    "serverManeuverCapability": 1,
+    "serverRollDeferred": true,
+    "desktop": true,
+    "mobile390": true,
+    "browserErrors": [],
+    "productionWrites": 0
+  }
 }
