@@ -1,0 +1,82 @@
+DIE LANZE IM STAUB
+Importfertige Herausforderung für Gais Wyrm gegen Ylva Wolfshorn
+
+IMPORT
+1. Im laufenden Ylva–Gais-Duell eine neue Herausforderung öffnen.
+2. „JSON importieren“ wählen und gais-lanze-im-staub.import.json laden.
+3. Prüfen: Nur Gais darf würfeln; Zielperson ist Ylva; Kampfbindung ist an.
+4. „Eintragen“ veröffentlicht den Entwurf. Der Import allein veröffentlicht nichts.
+
+Das ausgewählte Bild ist bereits als direkter HTTPS-Bildlink eingetragen:
+die drei Schnitte mit Gais’ Augen, der Lanze im Sand und Ylvas Augen.
+Das Bild liegt im GitHub-Repository; es benötigt keinen neuen Netlify-Build.
+Die übrigen drei PNGs im Bildordner sind nur die gewünschten Bildvarianten.
+Es gibt genau eine Importdatei für die ausgewählte Fassung.
+
+WAS GAIS TUT
+Er versucht, unter Ylvas gerade verfehltem Speerstoß hindurch auf die Knie
+abzusinken, zur verlorenen Lanze zu rutschen und den Griff in einen Stoß
+zu überführen. Das Bild zeigt seine Absicht, keinen bereits feststehenden Treffer.
+
+WÜRFE UND KOSTEN
+1. Mit Gais „Versuchen“ wählen: Akrobatik ODER Geschick, ein Versuch insgesamt.
+   Beide Proben verwenden seinen echten Charakterbogen. Im geprüften Stand
+   vom 17.10.2026 ergibt das jeweils W20+1. Der Geschickwurf erhält keine Übung.
+   Kein Rettungswurf: Gais führt die Bewegung selbst aus.
+2. Bei mindestens 11 Gesamtwert bzw. natürlicher 20 kann er nach der vereinbarten
+   Erzählfolge seine vorhandene Lanze über „Interagieren → Aufheben“ aufnehmen.
+   Dafür die Bonusaktion als Zahlung wählen. Es wird keine neue Lanze vergeben.
+3. Anschließend folgt eine normale Kampfbeschreibung mit der Lanze gegen Ylva,
+   bezahlt mit der Aktion. Erst dieser Angriff wird gegen ihre aktuelle RK gewürfelt.
+   Im geprüften Stand beträgt Ylvas RK 16. Treffer, Abwehr, Rüstung und Schaden
+   verwenden vollständig die vorhandene Kampfauswertung und ihre aktuellen Werte.
+
+Der Probenwurf selbst verbraucht nach dem bestehenden Herausforderungssystem
+keine Aktionsressource. Das tatsächliche Aufheben kostet einen verfügbaren
+Aktionspunkt; hier ist die Bonusaktion vorgesehen. Wer sie bereits verbraucht hat,
+muss eine andere zulässige Ressource wählen oder kann die Kombination nicht
+wie beschrieben ausführen. Der Angriff kostet seine regulären Kosten zusätzlich.
+
+ERGEBNISSTAFFEL – IMMER NUR EINE STUFE
+Natürliche 20:       Lanze erreichbar; Vorteil für den nächsten einzelnen Angriff.
+Gesamtwert ab 18:    Lanze erreichbar; +2 für den nächsten einzelnen Angriff.
+Gesamtwert 14–17:    Lanze erreichbar; +1 für den nächsten einzelnen Angriff.
+Gesamtwert 11–13:    Lanze erreichbar; kein Angriffsbonus, erst den Stand ordnen.
+Gesamtwert unter 11: Griff misslingt, Lanze bleibt liegen; Gais erhält −1 RK
+                    ausschließlich gegen Ylvas nächsten einzelnen Angriff.
+Natürliche 1:        Griff misslingt; Gais erhält stattdessen −2 RK ausschließlich
+                    gegen Ylvas nächsten einzelnen Angriff.
+
+Natürliche 1 und 20 haben Vorrang vor der Summe. Die Mali stapeln sich nicht.
+Die Angriffsboni werden auch bei einem Fehlschlag des Angriffs verbraucht und
+verfallen spätestens am Ende von Gais’ nächstem eigenen Beitrag.
+Die RK-Mali enden mit Ylvas nächstem einzelnen Angriff oder dem Kampfende.
+Andere Angreifer profitieren nicht von diesen RK-Mali.
+Es gibt weder freien Schaden noch einen kostenlosen Gegenangriff oder einen
+automatisch vergebenen Zustand „Liegend“. Bestehende Zustände bleiben erhalten.
+
+WAS AUTOMATISCH PASSIERT – UND WAS DU AUSFÜHRST
+Automatisch: erlaubte Proben, echter Probenbonus, Ergebnisstufe, einmaliger
+Angriffsbonus bzw. RK-Malus, Verbrauch beim passenden Angriff, Kampfbindung.
+Du führst aus: die vorhandene Lanze aufheben und den eigentlichen Angriff
+als Kampfbeschreibung eintragen. Bei einem misslungenen Griff führst du für
+diesen Versuch keine Aufnahme und keinen Lanzenstoß aus der Rutschbewegung aus.
+
+Die JSON-Schnittstelle unterstützt keine verschachtelte Transaktion nach dem
+Muster „Probe → bei Erfolg Waffe aufnehmen → Angriffswurf“. Deshalb wird das
+Ergebnis erzählt und die Gegenstandsaufnahme im vorhandenen System ausgeführt.
+Die Herausforderung sperrt nicht jede spätere normale Aufnahme der Waffe.
+Der Buff gilt technisch für den nächsten einzelnen Angriff, unabhängig von
+Waffe und Ziel; vereinbart ist hier der Lanzenstoß gegen Ylva. Ein anderes Ziel
+oder eine andere Waffe würde ihn ebenfalls verbrauchen.
+
+Die Herausforderung verändert beim Import keine TP, keine früheren Würfe und
+keinen Waffenbesitz. Der Kampf wird erst beim Eintragen serverseitig gebunden.
+Ist die Lanze inzwischen aufgehoben oder das Duell beendet, passt dieser
+Entwurf nicht mehr unverändert zur Situation.
+
+BILDHERKUNFT
+Mit dem integrierten image_gen.imagegen-Werkzeug erzeugt, Stilvorlage
+anime-scene-portrait (Tales of Xillia/Frieren), ausdrücklich Breitbild 21:9.
+Die vollständigen Prompts liegen in bildprompt-00.json bis bildprompt-03.json.
+Die vom Nutzer ausgewählte Fassung ist 03-augen-lanze-augen.png.

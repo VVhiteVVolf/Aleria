@@ -1,0 +1,242 @@
+{
+  "format": "aleria.herausforderung",
+  "version": 1,
+  "kind": "draft",
+  "challenge": {
+    "kind": "herausforderung-event",
+    "schemaVersion": 8,
+    "title": "Die Lanze im Staub",
+    "publicDescription": "Der letzte Speerstoß geht ins Leere. Gais weicht seitlich aus, doch sein Blick fällt für einen Herzschlag auf die Lanze zwischen euch. Seine Schulter senkt sich. Ein Stiefel dreht sich im Sand, die freie Hand öffnet sich. Statt weiter zurückzuweichen, verlagert er sein Gewicht nach vorn und unten.\n\nZwischen Ylvas Speerspitze und der verlorenen Waffe liegt nur ein kurzer, gefährlicher Weg.",
+    "targetActor": {
+      "mode": "selected",
+      "actorId": "bSYZYAEOwiRgy44f6OmO",
+      "name": "Ylva Wolfshorn",
+      "persistence": {
+        "kind": "character",
+        "recordId": "bSYZYAEOwiRgy44f6OmO"
+      }
+    },
+    "sceneImage": {
+      "url": "https://raw.githubusercontent.com/VVhiteVVolf/Aleria/master/AleriaAlmanach/public/assets/herausforderung/gais-lanze-im-staub/03-augen-lanze-augen.png",
+      "alt": "Drei Anime-Schnitte: Gais’ verengte Augen, seine Lanze im Sand und Ylvas prüfender Blick.",
+      "caption": "Ein Blick. Eine Lücke. Ein letzter Griff.",
+      "format": "21:9",
+      "fit": "contain"
+    },
+    "audience": {
+      "mode": "selected",
+      "actorIds": [
+        "person--haus-wyrm--gais-wyrm"
+      ]
+    },
+    "combatBound": true,
+    "combatContext": {
+      "encounterId": ""
+    },
+    "approaches": [
+      {
+        "approachId": "lanze-im-staub",
+        "label": "Unter der Speerspitze hindurch",
+        "preferredSkills": [
+          "acrobatics",
+          "attribute:dexterity"
+        ],
+        "checkPenalties": [],
+        "difficulty": 14,
+        "insight": "Gais nutzt die tiefe Bewegung, um an seine verlorene Lanze zu gelangen. Waffenaufnahme und anschließender Angriff werden getrennt über die vorhandene Gegenstands- und Kampfauswertung ausgeführt.",
+        "partialHint": "Er erreicht den Schaft, muss aber zuerst seinen Stand ordnen.",
+        "failureConsequence": "Der Griff misslingt; die Lanze bleibt liegen.",
+        "rewards": {
+          "copper": 0,
+          "combatEffects": [],
+          "items": [],
+          "effects": []
+        },
+        "partialEffects": {
+          "copper": 0,
+          "combatEffects": [],
+          "items": [],
+          "effects": []
+        },
+        "failureEffects": {
+          "copper": 0,
+          "combatEffects": [],
+          "items": [],
+          "effects": []
+        },
+        "outcomeTable": [
+          {
+            "id": "kritischer-erfolg",
+            "label": "Kritischer Erfolg",
+            "natural": 20,
+            "minimumTotal": null,
+            "text": "Gais erkennt den Augenblick zwischen Ylvas Bewegungen und gleitet tief unter ihrer Waffenlinie hindurch. Der Schaft ist in Reichweite seiner Hand. Er kann die Lanze jetzt regulär über „Interagieren → Aufheben“ an sich nehmen und die Bewegung in einen Lanzenstoß überführen. Sein nächster einzelner Angriff hat Vorteil; der Angriff wird regulär gegen Ylvas aktuelle RK ausgewertet. Kein automatischer Treffer und keine zusätzlichen Schadenswürfel.",
+            "success": true,
+            "benefits": {
+              "copper": 0,
+              "combatEffects": [],
+              "items": [],
+              "effects": [
+                {
+                  "effectId": "vollendete-wende",
+                  "presetId": "",
+                  "name": "Vollendete Wende",
+                  "description": "Gilt für Gais’ nächsten einzelnen Angriff und wird auch bei einem verfehlten Angriff verbraucht. Verfällt spätestens am Ende seines nächsten eigenen Beitrags. Für den Lanzenstoß gegen Ylva vorgesehen; der Effekt ist technisch nicht auf eine bestimmte Waffe beschränkt.",
+                  "kind": "buff",
+                  "durationKind": "actor-comments",
+                  "durationAmount": 1,
+                  "mechanics": {
+                    "attackRollMode": "advantage"
+                  },
+                  "usage": {
+                    "scope": "attack",
+                    "actorId": "person--haus-wyrm--gais-wyrm"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "id": "starker-erfolg",
+            "label": "Starker Erfolg · ab 18",
+            "natural": 0,
+            "minimumTotal": 18,
+            "text": "Die Rutschbewegung und der Griff greifen sauber ineinander. Nach dem regulären Aufheben kann Gais aus der tiefen Linie wieder Druck aufbauen. Sein nächster einzelner Angriff erhält +2 auf den Angriffswurf. Er würfelt anschließend mit seiner tatsächlichen Waffe gegen Ylvas aktuelle RK.",
+            "success": true,
+            "benefits": {
+              "copper": 0,
+              "combatEffects": [],
+              "items": [],
+              "effects": [
+                {
+                  "effectId": "tiefe-linie",
+                  "presetId": "",
+                  "name": "Tiefe Linie",
+                  "description": "Gilt für Gais’ nächsten einzelnen Angriff und wird auch bei einem verfehlten Angriff verbraucht. Verfällt spätestens am Ende seines nächsten eigenen Beitrags. Für den Lanzenstoß gegen Ylva vorgesehen; der Effekt ist technisch nicht auf eine bestimmte Waffe beschränkt.",
+                  "kind": "buff",
+                  "durationKind": "actor-comments",
+                  "durationAmount": 1,
+                  "mechanics": {
+                    "attack": 2
+                  },
+                  "usage": {
+                    "scope": "attack",
+                    "actorId": "person--haus-wyrm--gais-wyrm"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "id": "erfolg",
+            "label": "Erfolg · 14–17",
+            "natural": 0,
+            "minimumTotal": 14,
+            "text": "Gais kommt an den Lanzenschaft, bevor Ylva die Lücke ganz schließen kann. Nach dem regulären Aufheben erhält sein nächster einzelner Angriff +1 auf den Angriffswurf. Der Lanzenstoß braucht weiterhin einen eigenen Angriffswurf gegen Ylvas aktuelle RK.",
+            "success": true,
+            "benefits": {
+              "copper": 0,
+              "combatEffects": [],
+              "items": [],
+              "effects": [
+                {
+                  "effectId": "kurze-luecke",
+                  "presetId": "",
+                  "name": "Die kurze Lücke",
+                  "description": "Gilt für Gais’ nächsten einzelnen Angriff und wird auch bei einem verfehlten Angriff verbraucht. Verfällt spätestens am Ende seines nächsten eigenen Beitrags. Für den Lanzenstoß gegen Ylva vorgesehen; der Effekt ist technisch nicht auf eine bestimmte Waffe beschränkt.",
+                  "kind": "buff",
+                  "durationKind": "actor-comments",
+                  "durationAmount": 1,
+                  "mechanics": {
+                    "attack": 1
+                  },
+                  "usage": {
+                    "scope": "attack",
+                    "actorId": "person--haus-wyrm--gais-wyrm"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "id": "teilerfolg",
+            "label": "Teilerfolg · 11–13",
+            "natural": 0,
+            "minimumTotal": 11,
+            "text": "Gais erreicht die Lanze, verliert dabei aber den fließenden Übergang zum Stoß. Er darf sie regulär aufheben, muss seinen Stand neu ordnen und erhält keinen Angriffsbonus. Eine anschließende bezahlbare Kampfaktion ist mit den normalen Figurenwerten möglich. Kein automatischer Zustand „Liegend“. Die Aufnahme ist eine eigene Gegenstandsinteraktion; der Probenwurf allein bewegt die Waffe nicht.",
+            "success": false,
+            "benefits": {
+              "copper": 0,
+              "combatEffects": [],
+              "items": [],
+              "effects": []
+            }
+          },
+          {
+            "id": "fehlschlag",
+            "label": "Fehlschlag · unter 11",
+            "natural": 0,
+            "minimumTotal": null,
+            "text": "Seine Finger streifen über den Sand, ohne den Schaft zu fassen. Die Lanze bleibt liegen; der geplante Lanzenstoß aus dem Rutschen kommt nicht zustande. Die geöffnete Linie gibt Gais −1 RK ausschließlich gegen Ylvas nächsten einzelnen Angriff. Ylva erhält dadurch weder einen kostenlosen Angriff noch automatischen Schaden.",
+            "success": false,
+            "benefits": {
+              "copper": 0,
+              "combatEffects": [],
+              "items": [],
+              "effects": [
+                {
+                  "effectId": "offene-deckung",
+                  "presetId": "",
+                  "name": "Deckung geöffnet",
+                  "description": "Gais erhält -1 RK ausschließlich gegen Ylvas nächsten einzelnen Angriff. Danach oder spätestens am Kampfende endet der Effekt. Kein automatischer Gegenangriff und kein automatischer Schaden.",
+                  "kind": "debuff",
+                  "durationKind": "combat",
+                  "durationAmount": 2,
+                  "mechanics": {
+                    "armorClass": -1
+                  },
+                  "usage": {
+                    "scope": "attack",
+                    "actorId": "bSYZYAEOwiRgy44f6OmO"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "id": "kritischer-fehlschlag",
+            "label": "Kritischer Fehlschlag",
+            "natural": 1,
+            "minimumTotal": null,
+            "text": "Gais setzt sein Gewicht zu früh nach vorn. Die Lanze bleibt außerhalb seines Griffs, während Ylva seine abgesenkte Linie klar erkennt. Er erhält −2 RK ausschließlich gegen Ylvas nächsten einzelnen Angriff. Dieser ersetzt die normale Fehlschlagsfolge; die beiden Mali stapeln sich nicht. Kein automatischer Sturz, kein kostenloser Gegenangriff und kein automatischer Schaden.",
+            "success": false,
+            "benefits": {
+              "copper": 0,
+              "combatEffects": [],
+              "items": [],
+              "effects": [
+                {
+                  "effectId": "offene-deckung",
+                  "presetId": "",
+                  "name": "Im Rutschen festgelegt",
+                  "description": "Gais erhält -2 RK ausschließlich gegen Ylvas nächsten einzelnen Angriff. Danach oder spätestens am Kampfende endet der Effekt. Kein automatischer Gegenangriff und kein automatischer Schaden.",
+                  "kind": "debuff",
+                  "durationKind": "combat",
+                  "durationAmount": 2,
+                  "mechanics": {
+                    "armorClass": -2
+                  },
+                  "usage": {
+                    "scope": "attack",
+                    "actorId": "bSYZYAEOwiRgy44f6OmO"
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "attemptLimit": 1
+      }
+    ]
+  }
+}

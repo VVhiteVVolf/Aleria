@@ -1,0 +1,180 @@
+{
+  "passed": true,
+  "productionWrites": 0,
+  "importRoundTrip": true,
+  "rollCases": 20,
+  "blockedCases": 3,
+  "pickupAttackCases": 5,
+  "thresholdCases": 8,
+  "oldCommentsPreserved": 205,
+  "snapshotAt": "2026-10-17T13:00:25.757Z",
+  "outcomes": [
+    {
+      "skillId": "acrobatics",
+      "natural": 1,
+      "total": 2,
+      "tier": "kritischer-fehlschlag"
+    },
+    {
+      "skillId": "acrobatics",
+      "natural": 2,
+      "total": 3,
+      "tier": "fehlschlag"
+    },
+    {
+      "skillId": "acrobatics",
+      "natural": 9,
+      "total": 10,
+      "tier": "fehlschlag"
+    },
+    {
+      "skillId": "acrobatics",
+      "natural": 10,
+      "total": 11,
+      "tier": "teilerfolg"
+    },
+    {
+      "skillId": "acrobatics",
+      "natural": 12,
+      "total": 13,
+      "tier": "teilerfolg"
+    },
+    {
+      "skillId": "acrobatics",
+      "natural": 13,
+      "total": 14,
+      "tier": "erfolg"
+    },
+    {
+      "skillId": "acrobatics",
+      "natural": 16,
+      "total": 17,
+      "tier": "erfolg"
+    },
+    {
+      "skillId": "acrobatics",
+      "natural": 17,
+      "total": 18,
+      "tier": "starker-erfolg"
+    },
+    {
+      "skillId": "acrobatics",
+      "natural": 19,
+      "total": 20,
+      "tier": "starker-erfolg"
+    },
+    {
+      "skillId": "acrobatics",
+      "natural": 20,
+      "total": 21,
+      "tier": "kritischer-erfolg"
+    },
+    {
+      "skillId": "attribute:dexterity",
+      "natural": 1,
+      "total": 2,
+      "tier": "kritischer-fehlschlag"
+    },
+    {
+      "skillId": "attribute:dexterity",
+      "natural": 2,
+      "total": 3,
+      "tier": "fehlschlag"
+    },
+    {
+      "skillId": "attribute:dexterity",
+      "natural": 9,
+      "total": 10,
+      "tier": "fehlschlag"
+    },
+    {
+      "skillId": "attribute:dexterity",
+      "natural": 10,
+      "total": 11,
+      "tier": "teilerfolg"
+    },
+    {
+      "skillId": "attribute:dexterity",
+      "natural": 12,
+      "total": 13,
+      "tier": "teilerfolg"
+    },
+    {
+      "skillId": "attribute:dexterity",
+      "natural": 13,
+      "total": 14,
+      "tier": "erfolg"
+    },
+    {
+      "skillId": "attribute:dexterity",
+      "natural": 16,
+      "total": 17,
+      "tier": "erfolg"
+    },
+    {
+      "skillId": "attribute:dexterity",
+      "natural": 17,
+      "total": 18,
+      "tier": "starker-erfolg"
+    },
+    {
+      "skillId": "attribute:dexterity",
+      "natural": 19,
+      "total": 20,
+      "tier": "starker-erfolg"
+    },
+    {
+      "skillId": "attribute:dexterity",
+      "natural": 20,
+      "total": 21,
+      "tier": "kritischer-erfolg"
+    }
+  ],
+  "pickups": [
+    {
+      "natural": 13,
+      "attackNatural": 10,
+      "attackTotal": 15,
+      "rk": 16,
+      "hit": false,
+      "pickupBonusActionSpent": true,
+      "attackActionSpent": true
+    },
+    {
+      "natural": 13,
+      "attackNatural": 11,
+      "attackTotal": 16,
+      "rk": 16,
+      "hit": true,
+      "pickupBonusActionSpent": true,
+      "attackActionSpent": true
+    },
+    {
+      "natural": 17,
+      "attackNatural": 10,
+      "attackTotal": 16,
+      "rk": 16,
+      "hit": true,
+      "pickupBonusActionSpent": true,
+      "attackActionSpent": true
+    },
+    {
+      "natural": 20,
+      "attackNatural": 12,
+      "attackTotal": 16,
+      "rk": 16,
+      "hit": true,
+      "pickupBonusActionSpent": true,
+      "attackActionSpent": true
+    },
+    {
+      "natural": 10,
+      "attackNatural": 11,
+      "attackTotal": 15,
+      "rk": 16,
+      "hit": false,
+      "pickupBonusActionSpent": true,
+      "attackActionSpent": true
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "tool": "image_gen.imagegen",
+  "preset": "anime-scene-portrait",
+  "requestedAspectRatio": "21:9",
+  "selected": "03-augen-lanze-augen.png",
+  "selection": "Vom Nutzer ausdrücklich freigegeben: Gais’ Augen / Lanze am Boden / Ylvas Augen.",
+  "references": [
+    "AleriaAlmanach/public/assets/herausforderung/ylva-gais-zug-lesen-v1.png",
+    "AleriaAlmanach/AvatarWerkstatt/Charaktere/Einzelcharaktere/Gais Wyrm/Referenzen/gais-wyrm-nutzerreferenz.png",
+    "AleriaAlmanach/AvatarWerkstatt/Charaktere/Einzelcharaktere/Ylva Wolfshorn/Referenzen/ylva-wolfshorn-nutzerreferenz.png",
+    "AleriaAlmanach/AvatarWerkstatt/Charaktere/Einzelcharaktere/Gais Wyrm/Referenzen/gais-lanze-v4.png",
+    "AleriaAlmanach/AvatarWerkstatt/Charaktere/Einzelcharaktere/Ylva Wolfshorn/Referenzen/ylva-dornwacht-v2.png"
+  ],
+  "images": [
+    {
+      "file": "AleriaAlmanach/public/assets/herausforderung/gais-lanze-im-staub/00-lanze-im-staub.png",
+      "width": 1916,
+      "height": 821,
+      "bytes": 2398464,
+      "sha256": "6106eb40139bb9336a0ab5a7e56f666fbd10659e45a1f3b39bc984a558afc9ef",
+      "promptFile": "bildprompt-00.json",
+      "selected": false
+    },
+    {
+      "file": "AleriaAlmanach/public/assets/herausforderung/gais-lanze-im-staub/01-knierutscher.png",
+      "width": 1916,
+      "height": 821,
+      "bytes": 2452104,
+      "sha256": "fd276b0240e335574abc305ec94065b6f45bd237d6da84fae3dc7ae791e5f747",
+      "promptFile": "bildprompt-01.json",
+      "selected": false
+    },
+    {
+      "file": "AleriaAlmanach/public/assets/herausforderung/gais-lanze-im-staub/02-hand-knie-blick.png",
+      "width": 1916,
+      "height": 821,
+      "bytes": 2313716,
+      "sha256": "b86bc4d06a063036548ffca8abeda26b2eba45c30ea5e4a412c88c6e1f91ed75",
+      "promptFile": "bildprompt-02.json",
+      "selected": false
+    },
+    {
+      "file": "AleriaAlmanach/public/assets/herausforderung/gais-lanze-im-staub/03-augen-lanze-augen.png",
+      "width": 1916,
+      "height": 821,
+      "bytes": 2122278,
+      "sha256": "853f6750ca19970e7f410edc4b9d26f9f276d8ad34ba03ed2dbf63713e4f8ea1",
+      "promptFile": "bildprompt-03.json",
+      "selected": true
+    }
+  ]
+}
