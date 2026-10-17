@@ -28,13 +28,13 @@
     }
   ],
   "configFields": [
-    "subtabMap",
-    "moduleNodeAssignments",
     "map",
+    "moduleSectionNodes",
+    "moduleStoreManifest",
     "subtabs",
     "tabs",
-    "moduleStoreManifest",
-    "moduleSectionNodes",
+    "moduleNodeAssignments",
+    "subtabMap",
     "moduleStoreUpdatedAtClient"
   ],
   "liveResourceWrites": 0,

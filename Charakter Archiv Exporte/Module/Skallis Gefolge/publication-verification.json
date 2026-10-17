@@ -1,0 +1,51 @@
+{
+  "applied": true,
+  "committedAt": "2026-10-17T23:37:19.270040Z",
+  "module": "skallis-gefolge",
+  "pages": 5,
+  "newModule": true,
+  "newProfiles": 16,
+  "existingProfiles": [
+    {
+      "name": "Skalli Varulv",
+      "id": "person--haus-varulv--skalli-varulv",
+      "fields": [
+        "biography",
+        "updatedAt"
+      ]
+    },
+    {
+      "name": "Fenrir Varulv",
+      "id": "FKiXsSWVoV74rTgmpPip",
+      "fields": [
+        "genealogy",
+        "updatedAt",
+        "identity"
+      ]
+    },
+    {
+      "name": "Freya Skald",
+      "id": "ksJQe8Ai4KbRE9jOAvb7",
+      "fields": []
+    }
+  ],
+  "configFields": [
+    "map",
+    "moduleSectionNodes",
+    "moduleStoreManifest",
+    "subtabs",
+    "tabs",
+    "moduleNodeAssignments",
+    "subtabMap",
+    "moduleStoreUpdatedAtClient"
+  ],
+  "liveResourceWrites": 0,
+  "creaturesCreated": 0,
+  "verifiedArtwork": 22,
+  "verifiedProfiles": 19,
+  "preservedCrewModules": [
+    "lynnes-schiffsmannschaft",
+    "rhydians-schiffsmannschaft",
+    "parzifals-schiffsmannschaft"
+  ]
+}
