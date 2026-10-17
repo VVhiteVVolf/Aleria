@@ -38,7 +38,7 @@ function clonePayload(value) {
   }
 }
 
-export async function commitSkillCommentOperation(request, { database = getFirestore(), now = Date.now() } = {}) {
+export async function commitSkillCommentOperation(request, { database = getFirestore(), now = Date.now(), maneuverDice } = {}) {
   if (!request.auth) fail('unauthenticated', 'Eine Firebase-Anmeldung ist erforderlich.');
   const payload = clonePayload(request.data);
   const entryId = clean(payload.entryId, 240);
@@ -73,7 +73,8 @@ export async function commitSkillCommentOperation(request, { database = getFires
       usedRuleFrequencyKeys: deriveCombatRuleFrequencyKeys(trustedHistory, rulePeriods),
       entryId,
       workingStates,
-      persistentUpdates
+      persistentUpdates,
+      maneuverDice
     });
     criticalLifecycle = lifecycle.finish({ ...payload.metadata, commentSegments: validated.commentSegments });
     const criticalUndo = {};

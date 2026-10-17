@@ -1,9 +1,7 @@
-import { getCombatWeaponLoadout } from './combat-weapon-loadout.js';
-import { getCombatWeaponAttackValues } from './combat-weapon-attack-values.js';
+import { resolvePreparedWeaponAttackProfile } from './combat-weapon-response.js';
 import { consumeCombatAmmunition } from './combat-ammunition.js';
 import { validateCombatActorProfile } from './combat-profile-resolver.js';
 import { compactCombatResolution } from './combat-resolution-storage.js';
-import { resolveCombatWeaponGrip } from './combat-weapon-grip.js';
 import { resolveTechniqueDamageFormula } from './combat-technique-damage.js';
 import { resolveTechniqueSaveDc } from './combat-technique-save-dc.js';
 import { getConditionArmorBonus } from './combat-armor-stances.js';
@@ -26,28 +24,14 @@ function afterProfile(profile, result, role) {
 }
 
 export function resolvePreparedCounterProfile(defender, stance) {
-  const heldWeapon = getCombatWeaponLoadout(defender).right;
-  if (!heldWeapon) return null;
-  const values = getCombatWeaponAttackValues(defender, heldWeapon);
-  const weapon = values.weapon;
-  const unavailable = (defender.droppedWeapons || []).some(item => item.weaponId === weapon.id
-    || weapon.pairedWeaponIds?.includes(item.weaponId)
-    || weapon.inventoryItemId && item.item?.id === weapon.inventoryItemId);
-  if (unavailable) return null;
-  const baseAction = { id: `weapon:${weapon.id}`, kind: 'weapon', name: weapon.name, weapon,
-    attackModifier: values.attackModifier, damageModifier: values.damageModifier,
-    baseWeaponFormula: heldWeapon.damageFormula, versatileWeaponFormula: heldWeapon.versatileDamageFormula,
-    compatible: true, costs: [], auraBypass: { allowed: false }, resolutionMode: 'weapon-attack',
-    criticalThreshold: 20, effects: weapon.effects || [], secondarySave: stance.counterAttack.secondarySave
-      ? { ...stance.counterAttack.secondarySave, dc: resolveTechniqueSaveDc(stance.counterAttack.secondarySave, defender, weapon) } : null };
-  const { action: heldAction, weaponGrip } = resolveCombatWeaponGrip(baseAction, defender, defender.weaponGrip);
+  const prepared = resolvePreparedWeaponAttackProfile(defender, { rollMode: 'advantage' });
+  if (!prepared) return null;
+  const heldAction = { ...prepared.selectedAction, secondarySave: stance.counterAttack.secondarySave
+    ? { ...stance.counterAttack.secondarySave, dc: resolveTechniqueSaveDc(stance.counterAttack.secondarySave, defender, prepared.weapon) } : null };
   const model = stance.counterAttack.damageModel;
   const formula = model ? resolveTechniqueDamageFormula({ damageModel: model }, heldAction.weapon, defender) : heldAction.weapon.damageFormula;
   const action = model ? { ...heldAction, formula, weapon: { ...heldAction.weapon, damageFormula: formula } } : heldAction;
-  return { ...defender, weapon: action.weapon, weaponGrip, activeWeaponId: weapon.id, selectedAction: action, profileActionId: action.id,
-    profileActionKind: 'weapon', actionResolutionMode: 'weapon-attack', resourceCosts: [], actionCosts: [],
-    attackModifier: action.attackModifier, damageModifier: action.damageModifier,
-    equipmentPreparation: null, weaponUnavailable: false, forcedRollMode: 'advantage', paymentMode: 'standard' };
+  return { ...prepared, weapon: action.weapon, selectedAction: action };
 }
 
 function mergeCounterResult(result, counter, originalActor) {

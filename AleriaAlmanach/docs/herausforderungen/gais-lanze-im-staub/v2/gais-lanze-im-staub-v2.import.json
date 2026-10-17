@@ -1,0 +1,356 @@
+{
+  "format": "aleria.herausforderung",
+  "version": 1,
+  "kind": "draft",
+  "challenge": {
+    "kind": "herausforderung-event",
+    "schemaVersion": 9,
+    "title": "Die Lanze im Staub",
+    "publicDescription": "Gais’ Blick ruht auf der Lanze im Sand. Ylvas Speerspitze hält den Weg zwischen ihm und seiner Waffe unter Kontrolle. Ein tiefer Rutscher könnte ihn unter dieser Linie hindurch an den Schaft bringen – und vielleicht reicht der Schwung sogar für einen überraschenden Stoß.\n\nDoch wer sich auf diese Nähe einlässt, gibt seine Deckung für einen gefährlichen Augenblick auf. Greift seine Hand rechtzeitig zu, oder liest Ylva seine Bewegung?",
+    "targetActor": {
+      "mode": "selected",
+      "actorId": "bSYZYAEOwiRgy44f6OmO",
+      "name": "Ylva Wolfshorn",
+      "persistence": {
+        "kind": "character",
+        "recordId": "bSYZYAEOwiRgy44f6OmO"
+      }
+    },
+    "sceneImage": {
+      "url": "https://raw.githubusercontent.com/VVhiteVVolf/Aleria/master/AleriaAlmanach/public/assets/herausforderung/gais-lanze-im-staub/03-augen-lanze-augen.png",
+      "alt": "Drei Anime-Schnitte: Gais’ verengte Augen, seine Lanze im Sand und Ylvas prüfender Blick.",
+      "caption": "Ein Blick. Eine Lücke. Ein letzter Griff.",
+      "format": "21:9",
+      "fit": "contain"
+    },
+    "audience": {
+      "mode": "selected",
+      "actorIds": [
+        "person--haus-wyrm--gais-wyrm"
+      ]
+    },
+    "combatBound": true,
+    "combatContext": {
+      "encounterId": ""
+    },
+    "approaches": [
+      {
+        "approachId": "lanze-im-staub-v2",
+        "label": "Im Rutschen zur Lanze",
+        "preferredSkills": [
+          "acrobatics",
+          "attribute:dexterity"
+        ],
+        "checkPenalties": [],
+        "difficulty": 18,
+        "insight": "Guter Erfolg nimmt die vorhandene Lanze auf und führt sofort einen regulären Waffenangriff mit Zusatzwürfel aus. Beides kostet zusammen nur eine Reaktion.",
+        "partialHint": "Die Lanze liegt in Reichweite, muss aber regulär durch Interagieren aufgehoben werden.",
+        "failureConsequence": "Unter 14 droht ein Gegenangriff; Geschick-Rettung SG 15 kann ihn verhindern.",
+        "rewards": {
+          "copper": 0,
+          "combatEffects": [],
+          "items": [],
+          "effects": []
+        },
+        "partialEffects": {
+          "copper": 0,
+          "combatEffects": [],
+          "items": [],
+          "effects": []
+        },
+        "failureEffects": {
+          "copper": 0,
+          "combatEffects": [],
+          "items": [],
+          "effects": []
+        },
+        "outcomeTable": [
+          {
+            "id": "kritischer-erfolg",
+            "label": "Kritischer Erfolg",
+            "natural": 20,
+            "minimumTotal": null,
+            "text": "Gais gleitet unter Ylvas Waffenlinie hindurch, schließt die Hand um seine Lanze und nutzt den Schwung unmittelbar für einen Stoß. Die vorhandene Waffe wird automatisch aufgehoben; der sofortige Angriff hat Vorteil und zwei zusätzliche Waffenwürfel. Aufnahme und Angriff kosten zusammen genau eine Reaktion. Der Angriff muss Ylvas aktuelle RK treffen. Ein tatsächlich kritischer Angriff verwendet die reguläre Kritschadensregel.",
+            "success": true,
+            "benefits": {
+              "copper": 0,
+              "combatEffects": [
+                {
+                  "effectId": "kritischer-lanzenstoss",
+                  "type": "weapon-maneuver",
+                  "targetActorId": "bSYZYAEOwiRgy44f6OmO",
+                  "amount": 0,
+                  "formula": "",
+                  "damageType": "physisch",
+                  "magical": false,
+                  "resourceId": "",
+                  "conditionId": "",
+                  "maneuver": {
+                    "actorId": "person--haus-wyrm--gais-wyrm",
+                    "weaponId": "starter-uchelwyr-lance",
+                    "pickupWeapon": true,
+                    "resourceId": "reaction",
+                    "extraWeaponDice": 2,
+                    "rollMode": "advantage",
+                    "damageMultiplier": 1,
+                    "save": null
+                  }
+                }
+              ],
+              "items": [],
+              "effects": []
+            }
+          },
+          {
+            "id": "guter-erfolg",
+            "label": "Guter Erfolg · ab 18",
+            "natural": 0,
+            "minimumTotal": 18,
+            "text": "Gais erreicht den Schaft im richtigen Augenblick und führt den Rutscher in einen unmittelbaren Lanzenstoß über. Die vorhandene Lanze wird automatisch aufgehoben; anschließend erfolgt ein regulärer Angriff gegen Ylvas aktuelle RK mit einem zusätzlichen Waffenwürfel. Aufnahme und Angriff kosten zusammen nur eine Reaktion. Kein separater Interagieren-Abschnitt erforderlich.",
+            "success": true,
+            "benefits": {
+              "copper": 0,
+              "combatEffects": [
+                {
+                  "effectId": "rutschender-lanzenstoss",
+                  "type": "weapon-maneuver",
+                  "targetActorId": "bSYZYAEOwiRgy44f6OmO",
+                  "amount": 0,
+                  "formula": "",
+                  "damageType": "physisch",
+                  "magical": false,
+                  "resourceId": "",
+                  "conditionId": "",
+                  "maneuver": {
+                    "actorId": "person--haus-wyrm--gais-wyrm",
+                    "weaponId": "starter-uchelwyr-lance",
+                    "pickupWeapon": true,
+                    "resourceId": "reaction",
+                    "extraWeaponDice": 1,
+                    "rollMode": "normal",
+                    "damageMultiplier": 1,
+                    "save": null
+                  }
+                }
+              ],
+              "items": [],
+              "effects": []
+            }
+          },
+          {
+            "id": "neutral",
+            "label": "Neutral · 14–17",
+            "natural": 0,
+            "minimumTotal": 14,
+            "text": "Gais gelangt in Reichweite seiner Lanze, findet aber keinen fließenden Übergang zum Angriff. Er kann sie anschließend über „Interagieren → Aufheben“ regulär aufnehmen und dafür einen verfügbaren Aktionspunkt verwenden. Es gibt keinen automatischen Angriff, keine zusätzliche Strafe und keinen Angriffsbonus.",
+            "success": false,
+            "benefits": {
+              "copper": 0,
+              "combatEffects": [],
+              "items": [],
+              "effects": []
+            }
+          },
+          {
+            "id": "gefaehrliche-naehe",
+            "label": "Gefährliche Nähe · 10–13",
+            "natural": 0,
+            "minimumTotal": 10,
+            "text": "Gais erreicht die Waffe, gerät dabei aber zu nah an Ylva. Er macht sofort einen Geschick-Rettungswurf gegen SG 15 mit seinen tatsächlichen Rettungswurfwerten. Bei Misslingen nutzt Ylva die Öffnung für einen normalen Waffenangriff gegen Gais’ aktuelle RK; ihr ausgelöster Angriff kostet keine zusätzliche Aktionsressource. Danach kann Gais die Lanze weiterhin regulär über Interagieren aufheben, sofern er handlungsfähig bleibt.",
+            "success": false,
+            "benefits": {
+              "copper": 0,
+              "combatEffects": [
+                {
+                  "effectId": "ylvas-gelegenheit",
+                  "type": "weapon-maneuver",
+                  "targetActorId": "person--haus-wyrm--gais-wyrm",
+                  "amount": 0,
+                  "formula": "",
+                  "damageType": "physisch",
+                  "magical": false,
+                  "resourceId": "",
+                  "conditionId": "",
+                  "maneuver": {
+                    "actorId": "bSYZYAEOwiRgy44f6OmO",
+                    "weaponId": "ylva-speer",
+                    "pickupWeapon": false,
+                    "resourceId": "",
+                    "extraWeaponDice": 0,
+                    "rollMode": "normal",
+                    "damageMultiplier": 1,
+                    "save": {
+                      "attribute": "dexterity",
+                      "difficulty": 15
+                    }
+                  }
+                }
+              ],
+              "items": [],
+              "effects": []
+            }
+          },
+          {
+            "id": "schlechter-griff",
+            "label": "Schlechter Griff · 5–9",
+            "natural": 0,
+            "minimumTotal": 5,
+            "text": "Gais erreicht die Lanze, verbraucht durch seine ungeschickte Bewegung jedoch seine Bonusaktion. Zusätzlich folgt die gefährliche Nähe: Geschick-Rettung SG 15, sonst Ylvas normaler Waffenangriff gegen seine RK. Die Bonusaktion ist auch bei gelungener Rettung verbraucht. Danach ist reguläres Aufheben mit einem anderen verfügbaren Aktionspunkt möglich, sofern Gais handlungsfähig bleibt.",
+            "success": false,
+            "benefits": {
+              "copper": 0,
+              "combatEffects": [
+                {
+                  "effectId": "verlust-bonus-action",
+                  "type": "spend-resource",
+                  "targetActorId": "person--haus-wyrm--gais-wyrm",
+                  "amount": 1,
+                  "formula": "",
+                  "damageType": "physisch",
+                  "magical": false,
+                  "resourceId": "bonus-action",
+                  "conditionId": ""
+                },
+                {
+                  "effectId": "ylvas-gelegenheit",
+                  "type": "weapon-maneuver",
+                  "targetActorId": "person--haus-wyrm--gais-wyrm",
+                  "amount": 0,
+                  "formula": "",
+                  "damageType": "physisch",
+                  "magical": false,
+                  "resourceId": "",
+                  "conditionId": "",
+                  "maneuver": {
+                    "actorId": "bSYZYAEOwiRgy44f6OmO",
+                    "weaponId": "ylva-speer",
+                    "pickupWeapon": false,
+                    "resourceId": "",
+                    "extraWeaponDice": 0,
+                    "rollMode": "normal",
+                    "damageMultiplier": 1,
+                    "save": {
+                      "attribute": "dexterity",
+                      "difficulty": 15
+                    }
+                  }
+                }
+              ],
+              "items": [],
+              "effects": []
+            }
+          },
+          {
+            "id": "grosser-fehlschlag",
+            "label": "Großer Fehlschlag · unter 5",
+            "natural": 0,
+            "minimumTotal": null,
+            "text": "Gais erreicht die Waffe, verliert seine Bonusaktion und öffnet Ylva dabei seine Deckung. Geschick-Rettung SG 15: Bei Misslingen führt Ylva einen normalen Waffenangriff gegen seine RK aus, diesmal mit einem zusätzlichen Würfel ihrer tatsächlich geführten Waffe. Die Bonusaktion ist unabhängig vom Rettungsergebnis verbraucht. Danach bleibt reguläres Aufheben mit einer anderen verfügbaren Ressource möglich, sofern Gais handlungsfähig bleibt.",
+            "success": false,
+            "benefits": {
+              "copper": 0,
+              "combatEffects": [
+                {
+                  "effectId": "verlust-bonus-action",
+                  "type": "spend-resource",
+                  "targetActorId": "person--haus-wyrm--gais-wyrm",
+                  "amount": 1,
+                  "formula": "",
+                  "damageType": "physisch",
+                  "magical": false,
+                  "resourceId": "bonus-action",
+                  "conditionId": ""
+                },
+                {
+                  "effectId": "ylvas-gelegenheit",
+                  "type": "weapon-maneuver",
+                  "targetActorId": "person--haus-wyrm--gais-wyrm",
+                  "amount": 0,
+                  "formula": "",
+                  "damageType": "physisch",
+                  "magical": false,
+                  "resourceId": "",
+                  "conditionId": "",
+                  "maneuver": {
+                    "actorId": "bSYZYAEOwiRgy44f6OmO",
+                    "weaponId": "ylva-speer",
+                    "pickupWeapon": false,
+                    "resourceId": "",
+                    "extraWeaponDice": 1,
+                    "rollMode": "normal",
+                    "damageMultiplier": 1,
+                    "save": {
+                      "attribute": "dexterity",
+                      "difficulty": 15
+                    }
+                  }
+                }
+              ],
+              "items": [],
+              "effects": []
+            }
+          },
+          {
+            "id": "kritischer-fehlschlag",
+            "label": "Kritischer Fehlschlag",
+            "natural": 1,
+            "minimumTotal": null,
+            "text": "Gais landet ungedeckt direkt vor Ylva. Er verliert sofort Reaktion und Bonusaktion. Ylva greift ohne vorherigen Rettungswurf mit Vorteil gegen seine aktuelle RK an; bei einem Treffer verursacht sie den doppelten normalen Waffenschaden. Normaler Würfelpool und feste Boni werden einmal verdoppelt, danach gilt der übliche Schutz. Ein zusätzlicher kritischer Angriffswurf erhöht den Faktor nicht nochmals. Die Lanze bleibt bis zu einer späteren regulären Aufnahme am Boden. Es gelten ausschließlich diese Folgen statt der anderen Fehlschlagsstufen.",
+            "success": false,
+            "benefits": {
+              "copper": 0,
+              "combatEffects": [
+                {
+                  "effectId": "verlust-reaction",
+                  "type": "spend-resource",
+                  "targetActorId": "person--haus-wyrm--gais-wyrm",
+                  "amount": 1,
+                  "formula": "",
+                  "damageType": "physisch",
+                  "magical": false,
+                  "resourceId": "reaction",
+                  "conditionId": ""
+                },
+                {
+                  "effectId": "verlust-bonus-action",
+                  "type": "spend-resource",
+                  "targetActorId": "person--haus-wyrm--gais-wyrm",
+                  "amount": 1,
+                  "formula": "",
+                  "damageType": "physisch",
+                  "magical": false,
+                  "resourceId": "bonus-action",
+                  "conditionId": ""
+                },
+                {
+                  "effectId": "ylvas-gelegenheit",
+                  "type": "weapon-maneuver",
+                  "targetActorId": "person--haus-wyrm--gais-wyrm",
+                  "amount": 0,
+                  "formula": "",
+                  "damageType": "physisch",
+                  "magical": false,
+                  "resourceId": "",
+                  "conditionId": "",
+                  "maneuver": {
+                    "actorId": "bSYZYAEOwiRgy44f6OmO",
+                    "weaponId": "ylva-speer",
+                    "pickupWeapon": false,
+                    "resourceId": "",
+                    "extraWeaponDice": 0,
+                    "rollMode": "advantage",
+                    "damageMultiplier": 2,
+                    "save": null
+                  }
+                }
+              ],
+              "items": [],
+              "effects": []
+            }
+          }
+        ],
+        "attemptLimit": 1
+      }
+    ]
+  }
+}

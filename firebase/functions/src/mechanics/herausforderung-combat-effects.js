@@ -8,6 +8,12 @@ import { applyChallengeCombatBenefits, applyChallengeCombatSnapshots } from '../
 import { getChallengeCombatParticipants, challengeCombatTargetIds, getChallengeCombatBindingError, challengeRequiresCombat } from '../generated/herausforderung/herausforderung-combat-context.js';
 import { isTrustedMechanicalComment, sortSceneHistory } from './trusted-scene-history.js';
 import { ProvidedDiceAdapter } from './provided-dice-adapter.js';
+import { ServerCombatDiceAdapter } from './server-combat-dice.js';
+import { resolveChallengeWeaponManeuver } from '../generated/herausforderung/herausforderung-weapon-maneuver.js';
+import { challengeWeaponManeuverActorIds } from '../generated/herausforderung/herausforderung-weapon-maneuver-model.js';
+import { deriveSceneItems } from '../generated/scene-items/scene-items-model.js';
+import { withEquippedCombatWeapon } from '../generated/combat/combat-equipment-state.js';
+import { randomInt } from 'node:crypto';
 
 export async function bindHerausforderungCombatContext(database, transaction, event, entryId, { encounterId = '' } = {}) {
   if (event.audience.mode === 'selected') for (const actorId of event.audience.actorIds) {
@@ -41,24 +47,29 @@ export function challengeCombatDescriptors(challenge, encounter) {
 }
 
 export async function stageHerausforderungCombatBenefits({ challenge, actorId, benefits, identity, encounter, submitted, descriptors,
-  records, recordEntries, workingStates, persistentUpdates, recoveryDayKey }) {
+  records, recordEntries, workingStates, persistentUpdates, recoveryDayKey, history = [], rulePeriods = {}, usedRuleFrequencyKeys = new Set(), usedConsequenceKeys = new Set(), maneuverDice }) {
   const error = getChallengeCombatBindingError(challenge, encounter, actorId);
   if (error) throw new HttpsError('failed-precondition', error);
   const recipients = new Map();
-  for (const id of new Set([actorId, ...[...(benefits.effects || []), ...(benefits.combatEffects || [])].map(effect => effect.targetActorId).filter(Boolean)])) {
+  for (const id of new Set([actorId, ...[...(benefits.effects || []), ...(benefits.combatEffects || [])].flatMap(effect => [effect.targetActorId, ...challengeWeaponManeuverActorIds(effect)]).filter(Boolean)])) {
     const descriptor = descriptors.find(descriptor => descriptor.actorId === id);
     if (!descriptor) throw new HttpsError('failed-precondition', 'Die Profilquelle einer Kampfwirkung fehlt.');
     const key = `${descriptor.persistence.kind}:${descriptor.persistence.recordId}`;
     const record = records.get(key);
     const state = workingStates.get(id) || {};
-    const profile = overlayCombatHitPointState(resolveCombatProfile({ ...record, id }), state);
+    const profile = overlayCombatHitPointState(resolveCombatProfile(withEquippedCombatWeapon({ ...record, id }, state.equippedWeaponId, state.offHandWeaponId, state.supportEquipment)), state);
     profile.resources = recoverDailyCombatResources(profile.resources, recoveryDayKey);
     recipients.set(id, { profile, state: { ...state, resources: profile.resources }, descriptor, key, record });
   }
   let combat;
+  const sceneItems = deriveSceneItems(history);
+  const serverDice = maneuverDice || new ServerCombatDiceAdapter();
   try {
     combat = await applyChallengeCombatBenefits({ actorId, benefits, recipients, identity, encounterId: encounter?.encounterId || '',
-      dice: new ProvidedDiceAdapter({ effectResults: submitted.herausforderungCombatResults || [], secondarySaves: submitted.herausforderungCombatSaves || [] }) });
+      dice: new ProvidedDiceAdapter({ effectResults: submitted.herausforderungCombatResults || [], secondarySaves: submitted.herausforderungCombatSaves || [] }),
+      resolveWeaponManeuver: (effect, getContext) => resolveChallengeWeaponManeuver({ effect, getContext, sceneItems, dice: serverDice,
+        encounter, periods: rulePeriods, usedKeys: usedRuleFrequencyKeys, usedConsequenceKeys,
+        rollCritical: () => serverDice.rollDie ? serverDice.rollDie(20) : randomInt(1, 21), identity }) });
   } catch (error) { throw error instanceof HttpsError ? error : new HttpsError('failed-precondition', error.message); }
   applyChallengeCombatSnapshots(workingStates, combat.snapshots);
   reconcileConcentrationConditions(workingStates);
@@ -69,7 +80,8 @@ export async function stageHerausforderungCombatBenefits({ challenge, actorId, b
     const hp = value => JSON.stringify([value.current, value.maximum, value.temporary]);
     if (hp(snapshot.before) !== hp(snapshot.after)) update.hitPoints = { current: snapshot.after.current, maximum: snapshot.after.maximum, temporary: snapshot.after.temporary };
     if (JSON.stringify(snapshot.before.resources) !== JSON.stringify(snapshot.after.resources)) update.resources = getPersistentCombatResources(recipient.profile.resources, snapshot.after.resources);
-    if (update.hitPoints || update.resources) persistentUpdates.set(recipient.key, update);
+    if (JSON.stringify(snapshot.before.inventory) !== JSON.stringify(snapshot.after.inventory) && snapshot.after.inventory) update.inventory = snapshot.after.inventory;
+    if (update.hitPoints || update.resources || update.inventory) persistentUpdates.set(recipient.key, update);
   }
   return combat;
 }

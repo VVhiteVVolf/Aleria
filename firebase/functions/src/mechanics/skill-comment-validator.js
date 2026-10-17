@@ -1,4 +1,4 @@
-import { applyChallengeOutcome } from '../generated/herausforderung/herausforderung-outcomes.js';
+import { applyChallengeOutcome, challengeBenefitBundles } from '../generated/herausforderung/herausforderung-outcomes.js';
 import { createHash, randomUUID } from 'node:crypto';
 import { HttpsError } from 'firebase-functions/v2/https';
 import { getPersistentCombatResources, recoverDailyCombatResources } from '../generated/combat/combat-action-economy.js';
@@ -111,11 +111,13 @@ export async function validateSkillCommentSegments({
   challengeHistory = [],
   rulePeriods = {},
   usedRuleFrequencyKeys = new Set(),
+  usedConsequenceKeys = new Set(),
   entryId = '',
   workingStates = new Map(),
   persistentUpdates = new Map(),
   workingInventories = new Map(),
   deferClaimWrites = false,
+  maneuverDice,
   segmentIndexes = null,
   locallyClaimed = new Set()
 } = {}) {
@@ -275,6 +277,8 @@ export async function validateSkillCommentSegments({
       source.selectedRuleIds.push(selection.ruleId);
     });
 
+    if (challenge?.source === 'herausforderung' && challengeBenefitBundles(challenge).some(bundle => bundle.combatEffects?.some(effect => effect.type === 'weapon-maneuver'))
+      && entry.submitted.herausforderungManeuverVersion !== 1) fail('failed-precondition', 'Diese Herausforderung verwendet neue Waffenmanöver. Bitte die Seite vollständig neu laden und den Versuch erneut öffnen.');
     const service = new SkillResolutionService(new ProvidedDiceAdapter(entry.submitted));
     const resolution = await service.resolve({
       actor,
@@ -407,7 +411,9 @@ export async function validateSkillCommentSegments({
           equipment: update?.equipment || {}, identity: claimId, encounterId });
         if (grant) {
           const combat = await stageHerausforderungCombatBenefits({ challenge, actorId: actorDescriptor.actorId, benefits, identity: claimId,
-            encounter, submitted: entry.submitted, descriptors, records, recordEntries, workingStates, persistentUpdates, recoveryDayKey: rulePeriods.day });
+            encounter, submitted: entry.submitted, descriptors, records, recordEntries, workingStates, persistentUpdates, recoveryDayKey: rulePeriods.day,
+            history, rulePeriods, usedRuleFrequencyKeys: usedKeys, usedConsequenceKeys, maneuverDice });
+          resolution.usedRuleFrequencyKeys = [...usedKeys];
           resolution.herausforderungCombatResults = combat.results;
           resolution.herausforderungCombatSnapshots = combat.snapshots;
           resolution.herausforderungCombatSaves = combat.saves;

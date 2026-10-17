@@ -477,7 +477,7 @@ export class CombatResolutionService {
         + getCombatEffectAttributeModifier(actor, primaryDamageEffect);
       const fixedDamageBonus = getCombatEffectAttributeModifier(actor, primaryDamageEffect)
         + (primaryDamageEffect.target === 'self' ? 0 : getUniversalDamageBonus(actor));
-      const criticalDamage = primaryDamageEffect.target !== 'self' && attack.criticalSuccess;
+      const criticalDamage = primaryDamageEffect.target !== 'self' && attack.criticalSuccess && options.damageMultiplier !== 2;
       const damageNotation = effectFormula ? buildDamageNotation(effectFormula, primaryDamageBonus, criticalDamage) : '';
       options.onPhase?.({ phase: 'damage', notation: damageNotation, actor, target, weapon });
       damageRoll = effectFormula ? await this.dice.rollDamage({
@@ -498,6 +498,12 @@ export class CombatResolutionService {
       if (primaryDamageEffect.target !== 'self' && !attack.hit && actor.actionHalfDamageOnSave) {
         damageRoll = { ...damageRoll, rawTotal: Number(damageRoll.total), total: Math.floor(Number(damageRoll.total) / 2), halvedBySave: true };
       }
+      // Explicit double-normal-damage maneuvers multiply the ordinary rolled
+      // pool and flat bonus once, before any reduction. A natural critical hit
+      // still hits automatically but cannot turn this into fourfold damage.
+      if (options.damageMultiplier === 2 && primaryDamageEffect.target !== 'self') damageRoll = {
+        ...damageRoll, unmultipliedTotal: damageRoll.total, damageMultiplier: 2, total: damageRoll.total * 2
+      };
       const ruleReduction = primaryDamageEffect.target === 'self' ? 0
         : Math.max(0, postHitEffects.damageReduction + preDamageEffects.damageReduction + hitDamageEffects.damageReduction);
       const reduction = Math.max(0, ruleReduction - reductionBypass);
@@ -953,6 +959,7 @@ export class CombatResolutionService {
         diceResults: Array.isArray(summaryDamageRoll.keptDice) ? summaryDamageRoll.keptDice.slice() : [],
         modifier: Number(summaryDamageRoll.modifier) || 0,
         ...(summaryDamageRoll.criticalDamage ? { criticalDamage: summaryDamageRoll.criticalDamage } : {}),
+        ...(summaryDamageRoll.damageMultiplier ? { damageMultiplier: summaryDamageRoll.damageMultiplier, unmultipliedTotal: summaryDamageRoll.unmultipliedTotal } : {}),
         total: totalDamageApplied,
         primaryTotal: summaryDamageRoll.primaryTotal == null ? Number(summaryDamageRoll.total) : Number(summaryDamageRoll.primaryTotal),
         rawTotal: rawDamageRolled,

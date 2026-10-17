@@ -1,6 +1,8 @@
 import { renderChallengeCombatEffects, renderChallengeRecipientOptions, renderChallengeCombatChoiceOptions, updateChallengeCombatInput } from './herausforderung-combat-effects-ui.js';
 import { renderChallengeEffectUsage, renderChallengeUsageActorOptions, updateChallengeEffectUsage } from './herausforderung-effect-usage-ui.js?v=20261015-check-options-v1';
 import { CHALLENGE_COMBAT_EFFECT_TYPES, MAX_CHALLENGE_COMBAT_EFFECTS } from './herausforderung-combat-effects.js?v=20261015-graded-challenges-v1';
+import { refreshChallengeWeaponManeuverFields } from './herausforderung-weapon-maneuver-ui.js';
+import { describeChallengeWeaponManeuver } from './herausforderung-weapon-maneuver-model.js';
 import { collectRegisterTemplates } from '../item-register/item-register-templates.js';
 import { mountRegisterTemplatePicker, refreshRegisterTemplatePicker, createRegisterTemplatePickerState } from '../item-register/item-register-template-picker.js';
 import { formatCopper } from '../item-register/item-register-money.js';
@@ -62,6 +64,10 @@ function context(root, target) {
 }
 
 function mountPickers(binding) {
+  for (const element of binding.root.querySelectorAll('[data-hr-combat-index]')) {
+    const ctx = context(binding.root, element), effect = ctx?.bundle.combatEffects[Number(element.dataset.hrCombatIndex)];
+    if (effect?.type === 'weapon-maneuver') refreshChallengeWeaponManeuverFields(element, effect, binding.getCombatContext());
+  }
   for (const select of binding.root.querySelectorAll('[data-hr-usage-actor]')) {
     const ctx = context(binding.root, select);
     const effect = ctx.bundle.effects[Number(select.closest('[data-hr-effect-index]').dataset.hrEffectIndex)];
@@ -177,7 +183,7 @@ export function rewardSummary(benefits = {}) {
   if (Number(benefits.copper) > 0) parts.push(formatCopper(benefits.copper));
   for (const item of benefits.items || []) parts.push(`${item.quantity}× ${item.product?.title || item.title || 'Gegenstand'}`);
   for (const effect of benefits.effects || []) parts.push(`${effect.name || 'Effekt'} (${formatStatusDuration({ usage: effect.usage, durationModel: { kind: effect.durationKind, amount: effect.durationAmount } })})`);
-  for (const effect of benefits.combatEffects || []) parts.push(`${CHALLENGE_COMBAT_EFFECT_TYPES.find(([type]) => type === effect.type)?.[1] || effect.type}: ${effect.formula || effect.amount || effect.conditionId}`);
+  for (const effect of benefits.combatEffects || []) parts.push(effect.type === 'weapon-maneuver' ? describeChallengeWeaponManeuver(effect) : `${CHALLENGE_COMBAT_EFFECT_TYPES.find(([type]) => type === effect.type)?.[1] || effect.type}: ${effect.formula || effect.amount || effect.conditionId}`);
   return parts.join(' · ');
 }
 

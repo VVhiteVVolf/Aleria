@@ -2,7 +2,8 @@
 // of their parent's already aggregated damage and must not be counted twice.
 export function getCommentCombatResolutionGroups(comment = {}) {
   const segments = Array.isArray(comment.commentSegments) ? comment.commentSegments : [];
-  const groups = segments.map(segment => (segment.combatResolutions?.length ? segment.combatResolutions : [segment.combatResolution]).filter(Boolean));
+  const groups = segments.map(segment => [...(segment.combatResolutions?.length ? segment.combatResolutions : [segment.combatResolution]),
+    ...(segment.skillResolution?.herausforderungCombatResults || []).map(result => result.type === 'weapon-maneuver' ? result.resolution : null)].filter(Boolean));
   if (groups.some(group => group.length)) return groups.filter(group => group.length);
   return comment.combatResolution ? [[comment.combatResolution]] : [];
 }

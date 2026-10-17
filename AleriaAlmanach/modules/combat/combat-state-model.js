@@ -252,6 +252,91 @@ function getStoredResolutions(comment = {}) {
 
 import { getCombatRulesRelease, applyCombatRulesReleaseToStates } from './combat-rules-release.js';
 
+// Apply a receipt without starting a contribution or advancing any clocks.
+export function applyCombatResolutionState(states, resolution, sceneItems = new Map()) {
+  if (resolution.sceneItemEvent) {
+    applySceneItemEvent(sceneItems, resolution.sceneItemEvent);
+    applyDroppedWeaponsToStates(states, sceneItems);
+  }
+  const state = getResolutionHitPointState(resolution);
+  if (state) {
+    const previous = states.get(String(resolution.targetId)) || {};
+    states.set(String(resolution.targetId), { ...previous, ...state });
+  }
+  const actorResources = getResolutionActorResourceState(resolution);
+  const actorAbilities = getResolutionActorAbilityState(resolution);
+  const actorInventory = getResolutionActorInventoryState(resolution);
+  const actorHitPoints = getResolutionActorHitPointState(resolution);
+  const actorConditions = getResolutionActorConditionState(resolution);
+  const actorEquippedWeaponId = getResolutionActorEquippedWeaponState(resolution);
+  if (actorResources || actorAbilities || actorInventory || actorHitPoints || actorConditions || actorEquippedWeaponId) {
+    const previous = states.get(String(resolution.actorId)) || {};
+    states.set(String(resolution.actorId), {
+      ...previous,
+      ...(actorResources ? { resources: actorResources } : {}),
+      ...(actorAbilities ? { abilities: actorAbilities } : {}),
+      ...(actorInventory ? { inventory: actorInventory } : {}),
+      ...(actorHitPoints || {}),
+      ...(actorConditions ? { temporaryConditions: actorConditions } : {}),
+      ...getResolutionActorLoadoutState(resolution)
+    });
+  }
+  const targetResources = getResolutionTargetResourceState(resolution);
+  if (targetResources) {
+    const targetId = String(resolution.targetId || '');
+    const previous = states.get(targetId) || {};
+    states.set(targetId, { ...previous, resources: targetResources });
+  }
+  const targetConditions = getResolutionTargetConditionState(resolution);
+  const targetInventory = getResolutionTargetInventoryState(resolution);
+  if (targetInventory) states.set(String(resolution.targetId), { ...(states.get(String(resolution.targetId)) || {}), inventory: targetInventory });
+  if (targetConditions) {
+    const targetId = String(resolution.targetId || '');
+    const previous = states.get(targetId) || {};
+    states.set(targetId, { ...previous, temporaryConditions: targetConditions });
+  }
+  const actorChanneling = getResolutionActorChannelingState(resolution);
+  const actorConcentration = getResolutionActorConcentrationState(resolution);
+  if (actorChanneling !== undefined || actorConcentration !== undefined) {
+    const actorId = String(resolution.actorId || '');
+    const previous = states.get(actorId) || {};
+    states.set(actorId, {
+      ...previous,
+      ...(actorChanneling !== undefined ? { channeling: actorChanneling } : {}),
+      ...(actorConcentration !== undefined ? { concentration: actorConcentration } : {})
+    });
+  }
+  const targetConcentration = getResolutionTargetConcentrationState(resolution);
+  if (targetConcentration !== undefined) {
+    const targetId = String(resolution.targetId || '');
+    const previous = states.get(targetId) || {};
+    states.set(targetId, { ...previous, concentration: targetConcentration });
+  }
+  const targetChanneling = getResolutionTargetChannelingState(resolution);
+  if (targetChanneling !== undefined) {
+    const targetId = String(resolution.targetId || '');
+    const previous = states.get(targetId) || {};
+    states.set(targetId, { ...previous, channeling: targetChanneling });
+  }
+  (Array.isArray(resolution.ruleResourceSnapshots) ? resolution.ruleResourceSnapshots : []).forEach(snapshot => {
+    if (!snapshot?.sourceActorId || !Array.isArray(snapshot.after)) return;
+    const sourceId = String(snapshot.sourceActorId);
+    const previous = states.get(sourceId) || {};
+    states.set(sourceId, { ...previous, resources: normalizeCombatResources(snapshot.after) });
+  });
+  (Array.isArray(resolution.ruleAbilitySnapshots) ? resolution.ruleAbilitySnapshots : []).forEach(snapshot => {
+    if (!snapshot?.sourceActorId || !Array.isArray(snapshot.after)) return;
+    const sourceId = String(snapshot.sourceActorId);
+    const previous = states.get(sourceId) || {};
+    states.set(sourceId, { ...previous, abilities: snapshot.after.map(ability => ({ ...ability })) });
+  });
+  applyChallengeCombatSnapshots(states, resolution.herausforderungCombatSnapshots || []);
+  reconcileConcentrationConditions(states);
+  for (const event of resolution.sceneItemEvents || []) applySceneItemEvent(sceneItems, event);
+  if (resolution.sceneItemEvents?.length) applyDroppedWeaponsToStates(states, sceneItems);
+  return states;
+}
+
 export function deriveCombatStateFromComments(comments = [], position = {}) {
   const states = new Map();
   const sceneItems = new Map();
@@ -299,87 +384,7 @@ export function deriveCombatStateFromComments(comments = [], position = {}) {
       : getStoredResolutions(comment).map(resolution => ({ index: 0, resolution }));
     for (const entry of entries) {
       if (isStopComment && stopSegmentIndex != null && entry.index >= stopSegmentIndex) break;
-      const resolution = entry.resolution;
-      if (resolution.sceneItemEvent) {
-        applySceneItemEvent(sceneItems, resolution.sceneItemEvent);
-        applyDroppedWeaponsToStates(states, sceneItems);
-      }
-      const state = getResolutionHitPointState(resolution);
-      if (state) {
-        const previous = states.get(String(resolution.targetId)) || {};
-        states.set(String(resolution.targetId), { ...previous, ...state });
-      }
-      const actorResources = getResolutionActorResourceState(resolution);
-      const actorAbilities = getResolutionActorAbilityState(resolution);
-      const actorInventory = getResolutionActorInventoryState(resolution);
-      const actorHitPoints = getResolutionActorHitPointState(resolution);
-      const actorConditions = getResolutionActorConditionState(resolution);
-      const actorEquippedWeaponId = getResolutionActorEquippedWeaponState(resolution);
-      if (actorResources || actorAbilities || actorInventory || actorHitPoints || actorConditions || actorEquippedWeaponId) {
-        const previous = states.get(String(resolution.actorId)) || {};
-        states.set(String(resolution.actorId), {
-          ...previous,
-          ...(actorResources ? { resources: actorResources } : {}),
-          ...(actorAbilities ? { abilities: actorAbilities } : {}),
-          ...(actorInventory ? { inventory: actorInventory } : {}),
-          ...(actorHitPoints || {}),
-          ...(actorConditions ? { temporaryConditions: actorConditions } : {}),
-          ...getResolutionActorLoadoutState(resolution)
-        });
-      }
-      const targetResources = getResolutionTargetResourceState(resolution);
-      if (targetResources) {
-        const targetId = String(resolution.targetId || '');
-        const previous = states.get(targetId) || {};
-        states.set(targetId, { ...previous, resources: targetResources });
-      }
-      const targetConditions = getResolutionTargetConditionState(resolution);
-      const targetInventory = getResolutionTargetInventoryState(resolution);
-      if (targetInventory) states.set(String(resolution.targetId), { ...(states.get(String(resolution.targetId)) || {}), inventory: targetInventory });
-      if (targetConditions) {
-        const targetId = String(resolution.targetId || '');
-        const previous = states.get(targetId) || {};
-        states.set(targetId, { ...previous, temporaryConditions: targetConditions });
-      }
-      const actorChanneling = getResolutionActorChannelingState(resolution);
-      const actorConcentration = getResolutionActorConcentrationState(resolution);
-      if (actorChanneling !== undefined || actorConcentration !== undefined) {
-        const actorId = String(resolution.actorId || '');
-        const previous = states.get(actorId) || {};
-        states.set(actorId, {
-          ...previous,
-          ...(actorChanneling !== undefined ? { channeling: actorChanneling } : {}),
-          ...(actorConcentration !== undefined ? { concentration: actorConcentration } : {})
-        });
-      }
-      const targetConcentration = getResolutionTargetConcentrationState(resolution);
-      if (targetConcentration !== undefined) {
-        const targetId = String(resolution.targetId || '');
-        const previous = states.get(targetId) || {};
-        states.set(targetId, { ...previous, concentration: targetConcentration });
-      }
-      const targetChanneling = getResolutionTargetChannelingState(resolution);
-      if (targetChanneling !== undefined) {
-        const targetId = String(resolution.targetId || '');
-        const previous = states.get(targetId) || {};
-        states.set(targetId, { ...previous, channeling: targetChanneling });
-      }
-      (Array.isArray(resolution.ruleResourceSnapshots) ? resolution.ruleResourceSnapshots : []).forEach(snapshot => {
-        if (!snapshot?.sourceActorId || !Array.isArray(snapshot.after)) return;
-        const sourceId = String(snapshot.sourceActorId);
-        const previous = states.get(sourceId) || {};
-        states.set(sourceId, { ...previous, resources: normalizeCombatResources(snapshot.after) });
-      });
-      (Array.isArray(resolution.ruleAbilitySnapshots) ? resolution.ruleAbilitySnapshots : []).forEach(snapshot => {
-        if (!snapshot?.sourceActorId || !Array.isArray(snapshot.after)) return;
-        const sourceId = String(snapshot.sourceActorId);
-        const previous = states.get(sourceId) || {};
-        states.set(sourceId, { ...previous, abilities: snapshot.after.map(ability => ({ ...ability })) });
-      });
-      applyChallengeCombatSnapshots(states, resolution.herausforderungCombatSnapshots || []);
-      reconcileConcentrationConditions(states);
-      for (const event of resolution.sceneItemEvents || []) applySceneItemEvent(sceneItems, event);
-      if (resolution.sceneItemEvents?.length) applyDroppedWeaponsToStates(states, sceneItems);
+      applyCombatResolutionState(states, entry.resolution, sceneItems);
     }
     // A historical segment stops before the rest of its contribution. Its
     // clocks and end-of-comment rest/encounter effects have not happened yet.

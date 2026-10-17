@@ -1,0 +1,260 @@
+{
+  "passed": true,
+  "productionWrites": 0,
+  "historicalCommentsPreserved": 206,
+  "snapshotAt": "2026-10-17T13:27:13.831Z",
+  "scenarios": [
+    {
+      "natural": 20,
+      "total": 21,
+      "tier": "kritischer-erfolg",
+      "attack": {
+        "actor": "Gais Wyrm",
+        "total": 16,
+        "rk": 16,
+        "hit": true,
+        "rawDamage": 13,
+        "damage": 12,
+        "dice": [
+          4,
+          4,
+          4
+        ]
+      },
+      "gaisHp": 19,
+      "ylvaHp": 60,
+      "bonus": 1,
+      "reaction": 0,
+      "lanceOnGround": false
+    },
+    {
+      "natural": 19,
+      "total": 20,
+      "tier": "guter-erfolg",
+      "attack": {
+        "actor": "Gais Wyrm",
+        "total": 16,
+        "rk": 16,
+        "hit": true,
+        "rawDamage": 9,
+        "damage": 8,
+        "dice": [
+          4,
+          4
+        ]
+      },
+      "gaisHp": 19,
+      "ylvaHp": 64,
+      "bonus": 1,
+      "reaction": 0,
+      "lanceOnGround": false
+    },
+    {
+      "natural": 17,
+      "total": 18,
+      "tier": "guter-erfolg",
+      "attack": {
+        "actor": "Gais Wyrm",
+        "total": 16,
+        "rk": 16,
+        "hit": true,
+        "rawDamage": 9,
+        "damage": 8,
+        "dice": [
+          4,
+          4
+        ]
+      },
+      "gaisHp": 19,
+      "ylvaHp": 64,
+      "bonus": 1,
+      "reaction": 0,
+      "lanceOnGround": false
+    },
+    {
+      "natural": 16,
+      "total": 17,
+      "tier": "neutral",
+      "gaisHp": 19,
+      "ylvaHp": 72,
+      "bonus": 1,
+      "reaction": 1,
+      "lanceOnGround": true
+    },
+    {
+      "natural": 13,
+      "total": 14,
+      "tier": "neutral",
+      "gaisHp": 19,
+      "ylvaHp": 72,
+      "bonus": 1,
+      "reaction": 1,
+      "lanceOnGround": true
+    },
+    {
+      "natural": 12,
+      "total": 13,
+      "tier": "gefaehrliche-naehe",
+      "save": {
+        "total": 14,
+        "succeeded": false
+      },
+      "attack": {
+        "actor": "Ylva Wolfshorn",
+        "total": 20,
+        "rk": 15,
+        "hit": true,
+        "rawDamage": 9,
+        "damage": 8,
+        "dice": [
+          4
+        ]
+      },
+      "gaisHp": 11,
+      "ylvaHp": 72,
+      "bonus": 1,
+      "reaction": 1,
+      "lanceOnGround": true
+    },
+    {
+      "natural": 12,
+      "total": 13,
+      "tier": "gefaehrliche-naehe",
+      "save": {
+        "total": 15,
+        "succeeded": true
+      },
+      "gaisHp": 19,
+      "ylvaHp": 72,
+      "bonus": 1,
+      "reaction": 1,
+      "lanceOnGround": true
+    },
+    {
+      "natural": 9,
+      "total": 10,
+      "tier": "gefaehrliche-naehe",
+      "save": {
+        "total": 14,
+        "succeeded": false
+      },
+      "attack": {
+        "actor": "Ylva Wolfshorn",
+        "total": 20,
+        "rk": 15,
+        "hit": true,
+        "rawDamage": 9,
+        "damage": 8,
+        "dice": [
+          4
+        ]
+      },
+      "gaisHp": 11,
+      "ylvaHp": 72,
+      "bonus": 1,
+      "reaction": 1,
+      "lanceOnGround": true
+    },
+    {
+      "natural": 8,
+      "total": 9,
+      "tier": "schlechter-griff",
+      "save": {
+        "total": 15,
+        "succeeded": true
+      },
+      "gaisHp": 19,
+      "ylvaHp": 72,
+      "bonus": 0,
+      "reaction": 1,
+      "lanceOnGround": true
+    },
+    {
+      "natural": 4,
+      "total": 5,
+      "tier": "schlechter-griff",
+      "save": {
+        "total": 14,
+        "succeeded": false
+      },
+      "attack": {
+        "actor": "Ylva Wolfshorn",
+        "total": 20,
+        "rk": 15,
+        "hit": true,
+        "rawDamage": 9,
+        "damage": 8,
+        "dice": [
+          4
+        ]
+      },
+      "gaisHp": 11,
+      "ylvaHp": 72,
+      "bonus": 0,
+      "reaction": 1,
+      "lanceOnGround": true
+    },
+    {
+      "natural": 3,
+      "total": 4,
+      "tier": "grosser-fehlschlag",
+      "save": {
+        "total": 15,
+        "succeeded": true
+      },
+      "gaisHp": 19,
+      "ylvaHp": 72,
+      "bonus": 0,
+      "reaction": 1,
+      "lanceOnGround": true
+    },
+    {
+      "natural": 2,
+      "total": 3,
+      "tier": "grosser-fehlschlag",
+      "save": {
+        "total": 14,
+        "succeeded": false
+      },
+      "attack": {
+        "actor": "Ylva Wolfshorn",
+        "total": 20,
+        "rk": 15,
+        "hit": true,
+        "rawDamage": 13,
+        "damage": 12,
+        "dice": [
+          4,
+          4
+        ]
+      },
+      "gaisHp": 7,
+      "ylvaHp": 72,
+      "bonus": 0,
+      "reaction": 1,
+      "lanceOnGround": true
+    },
+    {
+      "natural": 1,
+      "total": 2,
+      "tier": "kritischer-fehlschlag",
+      "attack": {
+        "actor": "Ylva Wolfshorn",
+        "total": 20,
+        "rk": 15,
+        "hit": true,
+        "rawDamage": 18,
+        "damage": 17,
+        "dice": [
+          4
+        ],
+        "multiplier": 2
+      },
+      "gaisHp": 2,
+      "ylvaHp": 72,
+      "bonus": 0,
+      "reaction": 0,
+      "lanceOnGround": true
+    }
+  ]
+}

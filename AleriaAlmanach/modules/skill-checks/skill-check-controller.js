@@ -1,5 +1,6 @@
 import { getChallengeCheckRule } from '../herausforderung/herausforderung-check-policy.js?v=20261016-check-policy-v1';
 import { withResolvedChallengeTarget } from '../herausforderung/herausforderung-target.js?v=20261016-check-policy-v1';
+import { renderChallengeManeuverReceipts } from '../herausforderung/herausforderung-maneuver-receipts-view.js';
 import { renderSkillAttemptHeader, renderSkillAttemptBreakdown } from './skill-attempt-view.js?v=20261016-check-policy-v1';
 import { collectSkillSupportOptions, selectSkillSupportDefaults, skillSupportOptionKey } from './skill-support-options.js?v=20261016-check-policy-v1';
 import { getCheckDescription } from './skill-check-guidance.js?v=20261015-check-options-v1';
@@ -761,6 +762,7 @@ function renderEvaluation(source = {}) {
         ${abilityCosts}
         ${rewardReceipt ? `<span class="skill-reward-receipt">${isSuccessfulSkillOutcome(resolution.outcome) ? 'Belohnung' : 'Folgen'}: <b>${escapeHtml(rewardReceipt)}</b></span>` : ''}
       </div>
+      ${renderChallengeManeuverReceipts(resolution.herausforderungCombatResults)}
       <div class="skill-evaluation-source">${escapeHtml(sourceLabel)}</div>
     </aside>`;
 }

@@ -290,7 +290,7 @@ export async function commitCombatCommentOperation(request, {
       const validated = await validateSkillCommentSegments({ database, transaction, request,
         metadata: { ...metadata, commentSegments: enhancedSegments }, history: trustedHistory,
         challengeHistory: allHistory.filter(comment => isTrustedSkillChallengeComment(comment) || isTrustedHerausforderungComment(comment)),
-        rulePeriods, usedRuleFrequencyKeys, entryId, workingStates, persistentUpdates, workingInventories,
+        rulePeriods, usedRuleFrequencyKeys, usedConsequenceKeys, entryId, workingStates, persistentUpdates, workingInventories,
         deferClaimWrites: true, segmentIndexes: new Set([entry.index]), locallyClaimed: locallyClaimedSkills });
       enhancedSegments = validated.commentSegments;
       usedRuleFrequencyKeys = validated.usedRuleFrequencyKeys;

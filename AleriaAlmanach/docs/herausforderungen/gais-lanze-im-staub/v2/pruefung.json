@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 9,
+  "date": "2026-10-17",
+  "backendTests": 240,
+  "frontendTests": 168,
+  "maneuverTransactionTests": 13,
+  "currentDuelCopyScenarios": 13,
+  "historicalContributionsPreservedInSimulation": 206,
+  "browser": {
+    "importAndEditRoundTrip": true,
+    "maneuverEditors": 6,
+    "desktop1440": true,
+    "mobile390": true,
+    "horizontalPageOverflow": false,
+    "pageErrors": [],
+    "serverManeuverDeferredInPreview": true,
+    "clientCapabilityVersion": 1
+  },
+  "covered": [
+    "Natürliche 1 und 20 sowie Grenzen 5, 10, 14 und 18",
+    "Rettung genau gegen SG 15 und misslungene Rettung",
+    "Treffer und Fehlschlag trotz erfolgreicher Waffenaufnahme",
+    "Aufnahme und Angriff bezahlen gemeinsam nur eine Reaktion",
+    "Bonusaktionsverlust bleibt bei gelungener Rettung bestehen",
+    "Tatsächliche Waffenwürfel und normale Schutzverrechnung",
+    "Doppelter normaler Schaden ohne zusätzlichen kritischen Schadenspool",
+    "Kampfunfähigkeit ohne negative TP",
+    "Einmaliger Versuch und atomare Rücknahme ungültiger Vorgänge",
+    "Bereits aufgenommene Waffe und alte Waffen unbeteiligter Zuschauer",
+    "Manipulierte Gegenangriffsbelege und veraltete Browser",
+    "Beitragsweites Limit kritischer Nebeneffekte",
+    "Kampfverlauf, kompakte Belege und erneute Zustandsableitung"
+  ],
+  "productionRollsDuringTests": 0
+}

@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-17",
+  "schemaVersion": 9,
+  "scene": {
+    "commentId": "challenge-2f2e47f17f359b53c39b26a4a4c25ab949de35b0c376121704f7593912e03735",
+    "afterCommentId": "9MrUiSQmzWPjqiaWn8Ud",
+    "directlyAfterLatestGais": true,
+    "oldCommentsUnchanged": 206,
+    "profilesUnchanged": 2,
+    "attemptRolled": false
+  },
+  "backend": {
+    "active": true,
+    "sourceHash": "3efa1681ddc03c678300007c6b17e163a2e705d8",
+    "functions": [
+      "commitHerausforderung",
+      "commitSkillComment",
+      "commitCombatComment"
+    ]
+  },
+  "frontend": {
+    "published": false,
+    "status": "Wartet auf ausdrückliche Freigabe der zuvor ausgesetzten Netlify-Veröffentlichung."
+  },
+  "oldClients": {
+    "attemptBlockedBeforeWrites": true,
+    "message": "Bitte die Seite vollständig neu laden und den Versuch erneut öffnen."
+  },
+  "verifiedAt": "2026-10-17T14:01:50.693Z"
+}

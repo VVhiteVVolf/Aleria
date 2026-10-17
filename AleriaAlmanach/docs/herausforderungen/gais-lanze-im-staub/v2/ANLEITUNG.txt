@@ -1,0 +1,95 @@
+DIE LANZE IM STAUB – FASSUNG 2
+Freigegebene Werte vom 17.10.2026. Diese Fassung ersetzt die erste Ausarbeitung.
+
+Gais wählt Akrobatik oder Geschick. Ein Versuch, mit den echten Bogenwerten,
+gegen SG 18. Die natürliche 1 und 20 haben Vorrang vor dem Gesamtwert.
+Das ausgewählte Bild mit Augen / Lanze / Augen bleibt erhalten.
+
+ERGEBNISSE
+Natürliche 20: Automatische Aufnahme der eigenen Lanze und sofortiger Angriff
+              mit Vorteil und zwei zusätzlichen Waffenwürfeln. Zusammen genau
+              eine Reaktion, keine Bonusaktion und keine Hauptaktion.
+Ab 18:        Automatische Aufnahme und sofortiger normaler Angriff mit einem
+              zusätzlichen Waffenwürfel. Zusammen genau eine Reaktion.
+14–17:        Keine automatische Aufnahme und kein Angriff. Die Lanze ist
+              erreichbar und kann regulär über Interagieren aufgehoben werden.
+10–13:        Lanze erreichbar, aber Gais steht zu nah an Ylva: Geschick-Rettung
+              SG 15. Nur bei Misslingen greift Ylva sofort normal mit ihrer
+              geführten Waffe gegen seine aktuelle RK an.
+5–9:          Dasselbe wie 10–13; außerdem verliert Gais seine Bonusaktion,
+              unabhängig davon, ob die Rettung gelingt.
+Unter 5:      Dasselbe wie 5–9; Ylvas Angriff erhält bei misslungener Rettung
+              einen zusätzlichen Waffenwürfel.
+Natürliche 1: Kein Rettungswurf. Gais verliert Reaktion und Bonusaktion. Ylva
+              greift mit Vorteil gegen seine RK an und verursacht bei einem
+              Treffer doppelten normalen Waffenschaden.
+
+Die Stufen werden nicht zusätzlich aufeinander angewendet. Die kumulierten
+Folgen der niedrigeren Stufen sind bereits ausdrücklich in ihnen enthalten.
+Die natürliche 1 verwendet ausschließlich ihre eigene Folge; sie erhält nicht
+noch den Zusatzwürfel der Stufe „unter 5“.
+
+ANGRIFF UND SCHADEN
+Jeder ausgelöste Angriff hat einen eigenen echten Angriffswurf gegen aktuelle
+RK. Erfolg beim Rutschen bedeutet keinen garantierten Treffer. Die Aufnahme
+bleibt auch bei einem verfehlten Erfolgsangriff bestehen; die Reaktion ist verbraucht.
+Der Zusatzwürfel verwendet die Größe eines Grundwürfels der tatsächlichen Waffe.
+Feste Boni werden nicht zusätzlich kopiert. Rüstung, Resistenzen, Schutz,
+temporäre TP, passive Figurenregeln und reguläre kritische Folgen gelten weiter.
+
+Beim doppelten normalen Schaden zählt (normaler Würfelpool + feste Boni) × 2,
+danach wirkt der Schutz. Ein natürlicher kritischer Angriffswurf fügt bei dieser
+ausdrücklichen Verdopplung keinen weiteren kritischen Schadenspool hinzu.
+So entsteht keine unbeabsichtigte vierfache Schadenssteigerung.
+
+Ylvas ausgelöster Gegenangriff kostet in dieser Herausforderung keine zusätzliche
+Aktionsressource. Ihre sonst bereits verbrauchten Ressourcen werden nicht aufgefüllt.
+Bei neutralem oder misslungenem Rutschen bleibt eine spätere normale Waffenaufnahme
+möglich. Sie kostet einen verfügbaren Aktionspunkt. Nach Bonusaktionsverlust kann
+dafür eine andere zulässige Ressource verwendet werden. Eine kampfunfähige Figur
+kann die Waffe nicht aufnehmen oder noch einen Angriff ausführen.
+
+BENUTZUNG UND IMPORT
+Die Datei gais-lanze-im-staub-v2.import.json kann über „JSON importieren“ als
+Entwurf geladen werden. Die tatsächliche Kampf-ID bindet der Server beim Eintragen.
+Nur Gais darf den Ansatz versuchen; Ylva ist die feste Zielperson.
+Bei gutem bzw. kritischem Erfolg ist kein zusätzlicher Interagieren-Abschnitt nötig.
+Bei den anderen Stufen wird das reguläre Aufheben anschließend separat ausgewählt.
+
+Neue Waffenmanöver werden beim Eintragen ausschließlich serverseitig gewürfelt.
+Der Fertigkeitswurf und seine Folgen bilden einen gemeinsamen Speichervorgang.
+Angriffe, Rettung, Kosten und Waffenaufnahme erhalten Belege. Ein zweiter Versuch
+ist gesperrt; gefälschte clientseitige Gegenangriffswerte werden ignoriert.
+Bestehende Beiträge, Würfe und Ressourcen ändern sich beim Eintragen der
+Herausforderung nicht. Sie wird noch nicht für Gais ausgewürfelt.
+
+NEUE EXPORTSYNTAX
+Die bekannte Exporthülle bleibt aleria.herausforderung, version 1.
+Die Herausforderung verwendet schemaVersion 9.
+combatEffects unterstützt zusätzlich type: weapon-maneuver.
+
+Beispiel eines erfolgreichen Aufhebens mit Angriff:
+{
+  "effectId": "lanzenstoss",
+  "type": "weapon-maneuver",
+  "targetActorId": "ECHTE-ZIEL-ID",
+  "amount": 0,
+  "maneuver": {
+    "actorId": "ECHTE-ANGREIFER-ID",
+    "weaponId": "VORHANDENE-WAFFEN-ID",
+    "pickupWeapon": true,
+    "resourceId": "reaction",
+    "extraWeaponDice": 1,
+    "rollMode": "normal",
+    "damageMultiplier": 1,
+    "save": null
+  }
+}
+
+Für einen Gegenangriff actorId und targetActorId entsprechend vertauschen,
+pickupWeapon auf false, resourceId auf leer und optional save auf
+{"attribute":"dexterity","difficulty":15} setzen. Das angegriffene Ziel
+würfelt diese Rettung; nur bei Misslingen erfolgt der Angriff.
+Ohne pickupWeapon muss die Waffe tatsächlich geführt werden. Bei pickupWeapon
+muss die angegebene eigene Waffe wirklich noch als fallengelassener Gegenstand
+in der Szene liegen. Eine vorhandene Waffe niemals als Itembelohnung duplizieren.

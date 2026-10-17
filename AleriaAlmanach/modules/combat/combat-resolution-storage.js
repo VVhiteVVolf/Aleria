@@ -31,6 +31,10 @@ export function compactSkillResolution(resolution = {}) {
   const { actorProfileSnapshot, targetProfileSnapshot, ...compact } = resolution;
   return {
     ...compact,
+    ...(compact.herausforderungCombatResults ? { herausforderungCombatResults: compact.herausforderungCombatResults.map(result =>
+      result.resolution ? { ...result, resolution: compactCombatResolution(result.resolution) } : result) } : {}),
+    ...(compact.herausforderungReward?.combatEffects ? { herausforderungReward: { ...compact.herausforderungReward,
+      combatEffects: compact.herausforderungReward.combatEffects.map(result => result.resolution ? { ...result, resolution: compactCombatResolution(result.resolution) } : result) } } : {}),
     profileReferences: {
       actor: {
         actorId: String(resolution.actorId || ''),

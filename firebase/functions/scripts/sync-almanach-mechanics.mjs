@@ -109,6 +109,7 @@ const files = [
   'combat/combat-ward-resolution.js',
   'combat/rules/combat-mvp-rules.js',
   'herausforderung/herausforderung-model.js',
+  'herausforderung/herausforderung-weapon-maneuver.js',
   'inventory-use/inventory-use-model.js',
   'inventory-use/zornkappe-effects.js',
   'loot/loot-model.js',

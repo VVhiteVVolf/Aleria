@@ -7,7 +7,7 @@ import { normalizeChallengeCheckPenalties, validateChallengeCheckPenalties } fro
 import { normalizeChallengeTarget, validateChallengeTarget } from './herausforderung-target.js?v=20261016-check-policy-v1';
 
 export const HERAUSFORDERUNG_EVENT_KIND = 'herausforderung-event';
-export const HERAUSFORDERUNG_SCHEMA_VERSION = 8;
+export const HERAUSFORDERUNG_SCHEMA_VERSION = 9;
 export const MIN_HERAUSFORDERUNG_APPROACHES = 1;
 export const MAX_HERAUSFORDERUNG_APPROACHES = 6;
 export const HERAUSFORDERUNG_NARROW_FAILURE_MARGIN = 3;

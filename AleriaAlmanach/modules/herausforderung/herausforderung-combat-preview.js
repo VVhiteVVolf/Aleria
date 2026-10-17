@@ -1,4 +1,4 @@
-import { applyChallengeOutcome } from './herausforderung-outcomes.js?v=20261015-graded-challenges-v1';
+import { applyChallengeOutcome, challengeBenefitBundles } from './herausforderung-outcomes.js?v=20261015-graded-challenges-v1';
 import { applyChallengeCombatBenefits } from './herausforderung-combat-effects.js?v=20261015-graded-challenges-v1';
 import { getChallengeCombatBindingError } from './herausforderung-combat-context.js?v=20261015-check-options-v1';
 import { getActiveCombatEncounter } from '../combat/combat-encounter-model.js';
@@ -16,6 +16,7 @@ export function collectChallengeGrantKeys(comments = []) {
 
 export async function previewChallengeCombatBenefits({ challenge, resolution, actors, profileResolver, comments, grantedKeys = new Set(), dice, container }) {
   if (challenge?.source !== 'herausforderung') return resolution;
+  if (challengeBenefitBundles(challenge).some(bundle => bundle.combatEffects?.some(effect => effect.type === 'weapon-maneuver'))) resolution.herausforderungManeuverVersion = 1;
   const encounter = getActiveCombatEncounter(comments);
   const error = getChallengeCombatBindingError(challenge, encounter, resolution.actorId);
   if (error) throw Error(error);
@@ -29,7 +30,7 @@ export async function previewChallengeCombatBenefits({ challenge, resolution, ac
     roller: options.actorName, purpose: options.effectType === 'healing' ? 'Heilung durch Herausforderung' : 'Kampfwirkung der Herausforderung', rollType: 'general'
   }) };
   const combat = await applyChallengeCombatBenefits({ actorId: resolution.actorId, benefits, recipients,
-    identity: `preview:${resolution.resolutionId}`, encounterId: encounter?.encounterId || '', dice: adapter });
+    identity: `preview:${resolution.resolutionId}`, encounterId: encounter?.encounterId || '', dice: adapter, deferWeaponManeuvers: true });
   grantedKeys.add(key);
   return { ...resolution, herausforderungCombatResults: combat.results, herausforderungCombatSnapshots: combat.snapshots,
     herausforderungEncounterId: combat.encounterId, herausforderungCombatSaves: combat.saves };

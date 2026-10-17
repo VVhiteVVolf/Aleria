@@ -1,5 +1,6 @@
 import { challengeBenefitBundles } from './herausforderung-outcomes.js?v=20261015-graded-challenges-v1';
 import { getActiveCombatEncounter, deriveCombatEncounterState } from '../combat/combat-encounter-model.js';
+import { challengeWeaponManeuverActorIds } from './herausforderung-weapon-maneuver-model.js';
 
 export function getChallengeCombatParticipants(encounter) {
   return encounter?.participants instanceof Map ? [...encounter.participants.values()].filter(participant => participant.status === 'active') : [];
@@ -7,7 +8,7 @@ export function getChallengeCombatParticipants(encounter) {
 
 export function challengeCombatTargetIds(approach = {}) {
   return [...new Set(challengeBenefitBundles(approach).flatMap(bundle =>
-    [...(bundle.effects || []), ...(bundle.combatEffects || [])].flatMap(effect => [effect.targetActorId, effect.usage?.actorId]).filter(Boolean)))];
+    [...(bundle.effects || []), ...(bundle.combatEffects || [])].flatMap(effect => [effect.targetActorId, effect.usage?.actorId, ...challengeWeaponManeuverActorIds(effect)]).filter(Boolean)))];
 }
 
 export function challengeRequiresCombat(approaches = []) {
@@ -40,7 +41,8 @@ export function createChallengeCombatContext(comments = [], profiles = [], { enc
   const participants = (encounterId && encounter ? [...encounter.participants.values()] : getChallengeCombatParticipants(encounter)).map(participant => {
     const profile = profiles.find(profile => (profile.characterId || profile.id) === participant.actorId);
     return { actorId: participant.actorId, name: participant.name, resources: (profile?.resources || []).map(({ id, name, maximum, scope }) => ({ id, name, maximum, scope })),
-      conditions: (profile?.temporaryConditions || []).map(({ id, name }) => ({ id, name })) };
+      conditions: (profile?.temporaryConditions || []).map(({ id, name }) => ({ id, name })),
+      weapons: (profile?.weapons || []).map(({ id, name }) => ({ id, name })) };
   });
   return { encounterId: encounter?.encounterId || '', participants };
 }
