@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "date": "2026-10-17",
+  "scope": "Challenge presentation, disarmed weapon choices and visible skill dice",
+  "publication": {
+    "commit": "b95357a499beb0692c4561e84fc28f3125359987",
+    "deployId": "6ad390b5f4f501797f8e74de",
+    "publishedAt": "2026-10-17T15:25:42.669Z",
+    "url": "https://dieweltvonaleria.netlify.app/AleriaAlmanach/AleriaAlmanach.html",
+    "sourceFilesMatched": 22,
+    "buildReceiptMatches": true
+  },
+  "tests": {
+    "frontend": {
+      "tests": 177,
+      "passed": 177,
+      "failed": 0
+    },
+    "backend": {
+      "tests": 240,
+      "passed": 240,
+      "failed": 0
+    }
+  },
+  "browser": {
+    "desktopWidth": 1035,
+    "desktopBubbleWidth": 759.421875,
+    "desktopBubbleHeight": 210.421875,
+    "mobileWidth": 390,
+    "mobileOverflow": false,
+    "compactSteps": 2,
+    "compactTechnicalHeight": 207.890625,
+    "narrativeAndTechnicalDetailsSeparated": true,
+    "consecutive3dRolls": 2,
+    "visibleFrames": 509,
+    "reusedCanvas": true,
+    "workers": 2,
+    "boardTransfers": 30,
+    "meanBoardTransferMs": 0.013333333532015483,
+    "disarmedWeapon": {
+      "slotState": "dropped",
+      "slotDisabled": true,
+      "actionDisabled": true
+    },
+    "errors": []
+  },
+  "isolatedSimulation": true,
+  "productionWrites": 0,
+  "verifiedAt": "2026-10-17T15:26:40.358Z"
+}
