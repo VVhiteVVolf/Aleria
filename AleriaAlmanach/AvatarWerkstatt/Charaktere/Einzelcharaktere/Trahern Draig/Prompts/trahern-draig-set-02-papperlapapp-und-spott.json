@@ -1,0 +1,173 @@
+{
+  "version": 1,
+  "createdAt": "2026-10-17",
+  "characterName": "Trahern Draig",
+  "characterId": "CJFC3INTycaqn3tOwZHB",
+  "setId": "set-02",
+  "theme": "Papperlapapp, Spott und Eigensinn",
+  "referenceImage": "Referenzen/trahern-draig-portraet.jpg",
+  "referenceSource": "Stammbäume/assets/images/portraits/haus-draig/trahern-draig.jpg",
+  "referenceSha256": "5e572632e939a49904d62e6822dbec176c3eab654361f8b480b66443d7a878cd",
+  "promptFile": "Prompts/trahern-draig-set-02-papperlapapp-und-spott.txt",
+  "sheetFile": "Sheets/trahern-draig-set-02-papperlapapp-und-spott.png",
+  "sheet": {
+    "aspectRatio": "1:1",
+    "columns": 3,
+    "rows": 3,
+    "actualPixels": [
+      1254,
+      1254
+    ]
+  },
+  "panels": [
+    {
+      "index": 1,
+      "position": "Top Left",
+      "emotion": "Papperlapapp",
+      "gesture": "Impatient dismissive speech, half-lidded eyes and a compressed brow; one hand sweeping sideways in a short brush-off, palm outward and fingers relaxed, other hand low. A clear dismissive wave, not a stop sign."
+    },
+    {
+      "index": 2,
+      "position": "Top Center",
+      "emotion": "Verächtliches Schnauben",
+      "gesture": "Upper lip slightly lifted under the moustache, nostrils subtly flared, narrowed sideways gaze; head tilted away and one wrist loosely turned down at the lower chest. Disdain conveyed through posture, no drawn breath marks."
+    },
+    {
+      "index": 3,
+      "position": "Top Right",
+      "emotion": "Lästerndes Zuflüstern",
+      "gesture": "Dry conspiratorial side glance and small crooked malicious smile; one cupped hand near the side of his mouth without hiding his face, opposite arm tucked near his ribs, only a slight lean."
+    },
+    {
+      "index": 4,
+      "position": "Middle Left",
+      "emotion": "Der aufgeblasene Pfau",
+      "gesture": "Sardonic mocking smile with one arched brow; both hands form a small outward display at chest height, palms facing outward obliquely, as if mimicking another man's pompous manners. No actual bird or other person."
+    },
+    {
+      "index": 5,
+      "position": "Center",
+      "emotion": "Sittliche Entrüstung",
+      "gesture": "Disapproving eyes and pinched mouth, brow deeply creased; one forefinger taps into the opposite open palm to enumerate a breach of etiquette. Hands fully readable with correct fingers."
+    },
+    {
+      "index": 6,
+      "position": "Middle Right",
+      "emotion": "Trotziges Beharren",
+      "gesture": "Stubborn closed mouth and firm narrowed eyes, chin drawn back; one hand grips the opposite forearm low across the torso, shoulders set, refusing to be persuaded without an aggressive combat posture."
+    },
+    {
+      "index": 7,
+      "position": "Bottom Left",
+      "emotion": "Selbstgefällige Korrektur",
+      "gesture": "A tiny smug corner smile, gaze angled down at the listener; one index finger gently lifted horizontally as if correcting one detail, other hand gathering a small fold of his own robe near the waist."
+    },
+    {
+      "index": 8,
+      "position": "Bottom Center",
+      "emotion": "Erwischtes Räuspern",
+      "gesture": "Fleeting awkwardness in the eyes, brows lifted at the center; a loose fist brought just below the mouth for a quiet throat-clear, opposite hand smoothing his robe at the lower chest. He covers a small social blunder and tries to recover dignity."
+    },
+    {
+      "index": 9,
+      "position": "Bottom Right",
+      "emotion": "Ist mir doch einerlei",
+      "gesture": "Impatient resigned half-grimace and slightly raised brow; one hand extended low and loosely outward, palm up, the other resting at his hip. A small dismissive shoulder lift, not a broad surprised shrug."
+    }
+  ],
+  "splitter": {
+    "cols": 3,
+    "rows": 3,
+    "gap_x": 0,
+    "gap_y": 0,
+    "autocrop": false
+  },
+  "generationMode": "built-in image_gen",
+  "status": "erzeugt, mit V3 zerlegt und visuell geprüft",
+  "generatedSource": "C:/Users/fhg_r/.codex/generated_images/01a1351b-508d-74f0-8f8c-9bd18c380250/exec-e3e74b0c-66f4-4e2e-bade-46330b2c3006.png",
+  "cropCorrection": {
+    "reason": "Zellkanten um 2 Pixel nach innen korrigiert, damit keine feinen Übergänge zum Nachbarpanel im Einzelavatar verbleiben. Keine Skalierung.",
+    "gridY": [
+      0,
+      418,
+      836,
+      1254
+    ],
+    "adjustments": [
+      {
+        "left": 2,
+        "top": 2,
+        "right": -2,
+        "bottom": -2
+      },
+      {
+        "left": 2,
+        "top": 2,
+        "right": -2,
+        "bottom": -2
+      },
+      {
+        "left": 2,
+        "top": 2,
+        "right": -2,
+        "bottom": -2
+      },
+      {
+        "left": 2,
+        "top": 2,
+        "right": -2,
+        "bottom": -2
+      },
+      {
+        "left": 2,
+        "top": 2,
+        "right": -2,
+        "bottom": -2
+      },
+      {
+        "left": 2,
+        "top": 2,
+        "right": -2,
+        "bottom": -2
+      },
+      {
+        "left": 2,
+        "top": 2,
+        "right": -2,
+        "bottom": -2
+      },
+      {
+        "left": 2,
+        "top": 2,
+        "right": -2,
+        "bottom": -2
+      },
+      {
+        "left": 2,
+        "top": 2,
+        "right": -2,
+        "bottom": -2
+      }
+    ],
+    "cellSize": 414
+  },
+  "outputFolder": "Output/set-02",
+  "avatarCount": 9,
+  "avatarPixels": [
+    414,
+    414
+  ],
+  "visualReview": {
+    "reviewedAt": "2026-10-17",
+    "passed": true,
+    "reviewedAvatars": 9,
+    "method": "Alle tatsächlich exportierten PNGs in drei Übersichten bei Originalgröße angesehen.",
+    "checks": [
+      "Gesicht, Alter, Haare und Bart gegenüber verbindlichem Porträt",
+      "bestehende Kleidung, Goldschließe, Zeichenstil und Fackelhalle",
+      "abwechslungsreiche Mimik und lesbare Gestik gemäß Bio und Beiträgen",
+      "vollständige Köpfe, natürliche Hände und passende Oberkörperausschnitte",
+      "keine Schrift, Trennlinien oder Nachbarpanels in den finalen PNGs"
+    ]
+  }
+}

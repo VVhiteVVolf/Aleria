@@ -1,0 +1,672 @@
+{
+  "createdAt": "2026-10-17",
+  "character": "Trahern Draig",
+  "generationMode": "built-in image_gen",
+  "splitter": "AleriaAlmanach/AvatarWerkstatt/Werkzeuge/Avatar Splitterer/AvatarSplitterPro_V3.py",
+  "splitterSha256": "d6523dcd145af51ccbcc04d3e51a8a5d6a643531e6beb7bc194bece4a5562ac8",
+  "sourcePortrait": "Referenzen/trahern-draig-portraet.jpg",
+  "settings": {
+    "cols": 3,
+    "rows": 3,
+    "gap_x": 0,
+    "gap_y": 0,
+    "autocrop": false
+  },
+  "sets": [
+    {
+      "setId": "set-01",
+      "theme": "Machtwort und Belehrung",
+      "sheet": "Sheets/trahern-draig-set-01-machtwort-und-belehrung.png",
+      "sheetSha256": "ba3728cbd9111052fb04dc26e796e9800ae541af34356cb9c55cd19ca5cbe792",
+      "sheetSize": [
+        1254,
+        1254
+      ],
+      "cellSize": [
+        414,
+        414
+      ],
+      "avatarCount": 9,
+      "outputs": [
+        {
+          "index": 1,
+          "emotion": "Entrüstete Nachfrage",
+          "file": "Output/set-01/trahern-draig-set-01-machtwort-und-belehrung_Bild01.png",
+          "box": [
+            2,
+            2,
+            416,
+            416
+          ],
+          "sha256": "25fed914aceba7a2029cb766f5c9d51fe3e1bcd60003ef8f3a802b08b9cb8cff",
+          "gesture": "Brows sharply drawn, eyes narrowed, mouth open mid-question; one arm extended toward the unseen listener with an upturned questioning palm, other hand braced at his waist. He has just discovered someone occupying his former office."
+        },
+        {
+          "index": 2,
+          "emotion": "Belehrende Rüge",
+          "file": "Output/set-01/trahern-draig-set-01-machtwort-und-belehrung_Bild02.png",
+          "box": [
+            420,
+            2,
+            834,
+            416
+          ],
+          "sha256": "a50a23362431b15e02dbc3e94585d2320ea4da6685f447cbf2a2e102a3af5ba7",
+          "gesture": "Severe direct eye contact and tightly furrowed brows, lips parted in a reprimand; one index finger raised beside his face, the other hand open below it emphasizing the lesson. This is a pointed lecture to his grandson, not a neutral finger pose."
+        },
+        {
+          "index": 3,
+          "emotion": "Früher war das anders",
+          "file": "Output/set-01/trahern-draig-set-01-machtwort-und-belehrung_Bild03.png",
+          "box": [
+            838,
+            2,
+            1252,
+            416
+          ],
+          "sha256": "da181817bae5698b7f8bc4771dca3c2f1885a91da892778778c170c38afa3a1d",
+          "gesture": "Proud indignant speech with chin slightly lifted; one thumb angled toward his own chest, opposite open hand makes a low horizontal comparison. He insists his own tenure was better."
+        },
+        {
+          "index": 4,
+          "emotion": "Empörung über das Affentheater",
+          "file": "Output/set-01/trahern-draig-set-01-machtwort-und-belehrung_Bild04.png",
+          "box": [
+            2,
+            420,
+            416,
+            834
+          ],
+          "sha256": "a11ad4924454741679b3005b3c8e8904c26f1b9452ee69c51442f8ca68bd53b2",
+          "gesture": "Exasperated disbelief, mouth open in an emphatic complaint; both forearms spread outward asymmetrically, palms up, shoulders tense. Believable elderly facial anatomy, not comic screaming."
+        },
+        {
+          "index": 5,
+          "emotion": "Hier wird Ordnung gehalten",
+          "file": "Output/set-01/trahern-draig-set-01-machtwort-und-belehrung_Bild05.png",
+          "box": [
+            420,
+            420,
+            834,
+            834
+          ],
+          "sha256": "50976df98acf9719c73fa42618a9e81de73cb47f1d44d703061cf98025d3bf07",
+          "gesture": "Hard level gaze, firm jaw, lips parted for a decisive command; one hand makes a compact downward chopping gesture, other forearm held across the lower torso, posture authoritative."
+        },
+        {
+          "index": 6,
+          "emotion": "Ungläubiges Mustern",
+          "file": "Output/set-01/trahern-draig-set-01-machtwort-und-belehrung_Bild06.png",
+          "box": [
+            838,
+            420,
+            1252,
+            834
+          ],
+          "sha256": "cd81333d9a7e9959c4cd8e605a786dffd8db97cd60f47c91e57fd91a37d052e3",
+          "gesture": "One eyebrow lifted and the other furrowed, tightly pursed lips; head inclined slightly forward, arms folded high with one hand resting on the opposite upper arm. He examines a ridiculous explanation."
+        },
+        {
+          "index": 7,
+          "emotion": "Nachdrückliches Machtwort",
+          "file": "Output/set-01/trahern-draig-set-01-machtwort-und-belehrung_Bild07.png",
+          "box": [
+            2,
+            838,
+            416,
+            1252
+          ],
+          "sha256": "b60cfe46b666a6c52a2785826530296953777f1468dfb79e4c457a16a68e047e",
+          "gesture": "Forceful controlled anger, mouth open mid-rebuke; one tightly clenched old hand held near his lower chest, the other palm extended down to insist that the argument is settled. No youthful fighting stance."
+        },
+        {
+          "index": 8,
+          "emotion": "Das kannst du mir glauben",
+          "file": "Output/set-01/trahern-draig-set-01-machtwort-und-belehrung_Bild08.png",
+          "box": [
+            420,
+            838,
+            834,
+            1252
+          ],
+          "sha256": "6e5734d3bc3dc544cf3c5ee80cc8ec40dddd279152644b1b8a61573635e0187e",
+          "gesture": "Unshakable self-certainty, eyes fixed on listener, chin lifted and speaking lips; one hand opens firmly over his heart while the other index finger points obliquely toward the listener, never into the lens."
+        },
+        {
+          "index": 9,
+          "emotion": "Widerwilliges Zugeständnis",
+          "file": "Output/set-01/trahern-draig-set-01-machtwort-und-belehrung_Bild09.png",
+          "box": [
+            838,
+            838,
+            1252,
+            1252
+          ],
+          "sha256": "85d0244161d2f0aea8cef044d7a07f040f59217f3f1415f30845485e0924d0c5",
+          "gesture": "Reluctant slight nod, one brow still raised, corners of mouth tense; one small palm-up concession at the waist, other fingers pinch together near the chest as if allowing exactly one point. He is conceding something useful but remains stern."
+        }
+      ],
+      "cropCorrection": {
+        "reason": "Zellkanten um 2 Pixel nach innen korrigiert, damit keine feinen Übergänge zum Nachbarpanel im Einzelavatar verbleiben. Keine Skalierung.",
+        "gridY": [
+          0,
+          418,
+          836,
+          1254
+        ],
+        "adjustments": [
+          {
+            "left": 2,
+            "top": 2,
+            "right": -2,
+            "bottom": -2
+          },
+          {
+            "left": 2,
+            "top": 2,
+            "right": -2,
+            "bottom": -2
+          },
+          {
+            "left": 2,
+            "top": 2,
+            "right": -2,
+            "bottom": -2
+          },
+          {
+            "left": 2,
+            "top": 2,
+            "right": -2,
+            "bottom": -2
+          },
+          {
+            "left": 2,
+            "top": 2,
+            "right": -2,
+            "bottom": -2
+          },
+          {
+            "left": 2,
+            "top": 2,
+            "right": -2,
+            "bottom": -2
+          },
+          {
+            "left": 2,
+            "top": 2,
+            "right": -2,
+            "bottom": -2
+          },
+          {
+            "left": 2,
+            "top": 2,
+            "right": -2,
+            "bottom": -2
+          },
+          {
+            "left": 2,
+            "top": 2,
+            "right": -2,
+            "bottom": -2
+          }
+        ],
+        "cellSize": 414
+      },
+      "visualReview": {
+        "reviewedAt": "2026-10-17",
+        "passed": true,
+        "reviewedAvatars": 9,
+        "method": "Alle tatsächlich exportierten PNGs in drei Übersichten bei Originalgröße angesehen.",
+        "checks": [
+          "Gesicht, Alter, Haare und Bart gegenüber verbindlichem Porträt",
+          "bestehende Kleidung, Goldschließe, Zeichenstil und Fackelhalle",
+          "abwechslungsreiche Mimik und lesbare Gestik gemäß Bio und Beiträgen",
+          "vollständige Köpfe, natürliche Hände und passende Oberkörperausschnitte",
+          "keine Schrift, Trennlinien oder Nachbarpanels in den finalen PNGs"
+        ]
+      }
+    },
+    {
+      "setId": "set-02",
+      "theme": "Papperlapapp, Spott und Eigensinn",
+      "sheet": "Sheets/trahern-draig-set-02-papperlapapp-und-spott.png",
+      "sheetSha256": "8022e44dfae4c60acc6f18332bd96fd3c7f171bab4bb327771784a77e1b38edc",
+      "sheetSize": [
+        1254,
+        1254
+      ],
+      "cellSize": [
+        414,
+        414
+      ],
+      "avatarCount": 9,
+      "outputs": [
+        {
+          "index": 1,
+          "emotion": "Papperlapapp",
+          "file": "Output/set-02/trahern-draig-set-02-papperlapapp-und-spott_Bild01.png",
+          "box": [
+            2,
+            2,
+            416,
+            416
+          ],
+          "sha256": "d9e89b47bb6bd4c858ab30aed664d0e95201ea9aff8d84f1daaaa52903e54b48",
+          "gesture": "Impatient dismissive speech, half-lidded eyes and a compressed brow; one hand sweeping sideways in a short brush-off, palm outward and fingers relaxed, other hand low. A clear dismissive wave, not a stop sign."
+        },
+        {
+          "index": 2,
+          "emotion": "Verächtliches Schnauben",
+          "file": "Output/set-02/trahern-draig-set-02-papperlapapp-und-spott_Bild02.png",
+          "box": [
+            420,
+            2,
+            834,
+            416
+          ],
+          "sha256": "aaf4fe95a1817246a7dd7de64142ca81789c65ceebb0f267c1452101b0c1fba7",
+          "gesture": "Upper lip slightly lifted under the moustache, nostrils subtly flared, narrowed sideways gaze; head tilted away and one wrist loosely turned down at the lower chest. Disdain conveyed through posture, no drawn breath marks."
+        },
+        {
+          "index": 3,
+          "emotion": "Lästerndes Zuflüstern",
+          "file": "Output/set-02/trahern-draig-set-02-papperlapapp-und-spott_Bild03.png",
+          "box": [
+            838,
+            2,
+            1252,
+            416
+          ],
+          "sha256": "d75300c8abac4e412e37b089521eec8d0d456dd711ec5e61b44b3172368a97f6",
+          "gesture": "Dry conspiratorial side glance and small crooked malicious smile; one cupped hand near the side of his mouth without hiding his face, opposite arm tucked near his ribs, only a slight lean."
+        },
+        {
+          "index": 4,
+          "emotion": "Der aufgeblasene Pfau",
+          "file": "Output/set-02/trahern-draig-set-02-papperlapapp-und-spott_Bild04.png",
+          "box": [
+            2,
+            420,
+            416,
+            834
+          ],
+          "sha256": "f0268e1986b4f8348c9399045913b411a41a07eb30bb32b6dd21ec4db03523c7",
+          "gesture": "Sardonic mocking smile with one arched brow; both hands form a small outward display at chest height, palms facing outward obliquely, as if mimicking another man's pompous manners. No actual bird or other person."
+        },
+        {
+          "index": 5,
+          "emotion": "Sittliche Entrüstung",
+          "file": "Output/set-02/trahern-draig-set-02-papperlapapp-und-spott_Bild05.png",
+          "box": [
+            420,
+            420,
+            834,
+            834
+          ],
+          "sha256": "c37cbb9e615ce15b480c29f6ec85cb7062ebc0922dacfecf95072b7eae38ef18",
+          "gesture": "Disapproving eyes and pinched mouth, brow deeply creased; one forefinger taps into the opposite open palm to enumerate a breach of etiquette. Hands fully readable with correct fingers."
+        },
+        {
+          "index": 6,
+          "emotion": "Trotziges Beharren",
+          "file": "Output/set-02/trahern-draig-set-02-papperlapapp-und-spott_Bild06.png",
+          "box": [
+            838,
+            420,
+            1252,
+            834
+          ],
+          "sha256": "575d166c4f8bb0c4579c86ea9d7b4f0edac30f8ff37af92a39c83f70c1ff8aaa",
+          "gesture": "Stubborn closed mouth and firm narrowed eyes, chin drawn back; one hand grips the opposite forearm low across the torso, shoulders set, refusing to be persuaded without an aggressive combat posture."
+        },
+        {
+          "index": 7,
+          "emotion": "Selbstgefällige Korrektur",
+          "file": "Output/set-02/trahern-draig-set-02-papperlapapp-und-spott_Bild07.png",
+          "box": [
+            2,
+            838,
+            416,
+            1252
+          ],
+          "sha256": "1f6ea99e6a5cc2978926031687d9d694db22c3d074665c9094568c61ec6d2d6c",
+          "gesture": "A tiny smug corner smile, gaze angled down at the listener; one index finger gently lifted horizontally as if correcting one detail, other hand gathering a small fold of his own robe near the waist."
+        },
+        {
+          "index": 8,
+          "emotion": "Erwischtes Räuspern",
+          "file": "Output/set-02/trahern-draig-set-02-papperlapapp-und-spott_Bild08.png",
+          "box": [
+            420,
+            838,
+            834,
+            1252
+          ],
+          "sha256": "e5fe71d277c5efb03bbf4abc497549124b08a1cf83c3e1ea056e0b15ca0c7c27",
+          "gesture": "Fleeting awkwardness in the eyes, brows lifted at the center; a loose fist brought just below the mouth for a quiet throat-clear, opposite hand smoothing his robe at the lower chest. He covers a small social blunder and tries to recover dignity."
+        },
+        {
+          "index": 9,
+          "emotion": "Ist mir doch einerlei",
+          "file": "Output/set-02/trahern-draig-set-02-papperlapapp-und-spott_Bild09.png",
+          "box": [
+            838,
+            838,
+            1252,
+            1252
+          ],
+          "sha256": "92614d8a14067851748b09c66e88b98cce6c83a6d2184d59969eee30b18bad65",
+          "gesture": "Impatient resigned half-grimace and slightly raised brow; one hand extended low and loosely outward, palm up, the other resting at his hip. A small dismissive shoulder lift, not a broad surprised shrug."
+        }
+      ],
+      "cropCorrection": {
+        "reason": "Zellkanten um 2 Pixel nach innen korrigiert, damit keine feinen Übergänge zum Nachbarpanel im Einzelavatar verbleiben. Keine Skalierung.",
+        "gridY": [
+          0,
+          418,
+          836,
+          1254
+        ],
+        "adjustments": [
+          {
+            "left": 2,
+            "top": 2,
+            "right": -2,
+            "bottom": -2
+          },
+          {
+            "left": 2,
+            "top": 2,
+            "right": -2,
+            "bottom": -2
+          },
+          {
+            "left": 2,
+            "top": 2,
+            "right": -2,
+            "bottom": -2
+          },
+          {
+            "left": 2,
+            "top": 2,
+            "right": -2,
+            "bottom": -2
+          },
+          {
+            "left": 2,
+            "top": 2,
+            "right": -2,
+            "bottom": -2
+          },
+          {
+            "left": 2,
+            "top": 2,
+            "right": -2,
+            "bottom": -2
+          },
+          {
+            "left": 2,
+            "top": 2,
+            "right": -2,
+            "bottom": -2
+          },
+          {
+            "left": 2,
+            "top": 2,
+            "right": -2,
+            "bottom": -2
+          },
+          {
+            "left": 2,
+            "top": 2,
+            "right": -2,
+            "bottom": -2
+          }
+        ],
+        "cellSize": 414
+      },
+      "visualReview": {
+        "reviewedAt": "2026-10-17",
+        "passed": true,
+        "reviewedAvatars": 9,
+        "method": "Alle tatsächlich exportierten PNGs in drei Übersichten bei Originalgröße angesehen.",
+        "checks": [
+          "Gesicht, Alter, Haare und Bart gegenüber verbindlichem Porträt",
+          "bestehende Kleidung, Goldschließe, Zeichenstil und Fackelhalle",
+          "abwechslungsreiche Mimik und lesbare Gestik gemäß Bio und Beiträgen",
+          "vollständige Köpfe, natürliche Hände und passende Oberkörperausschnitte",
+          "keine Schrift, Trennlinien oder Nachbarpanels in den finalen PNGs"
+        ]
+      }
+    },
+    {
+      "setId": "set-03",
+      "theme": "Erinnerung, Gelehrsamkeit und persönliche Wärme",
+      "sheet": "Sheets/trahern-draig-set-03-erinnerung-und-waerme.png",
+      "sheetSha256": "f4875d4d9bc3e43be9ab60cf940515b72f1f729d22b5f07da834710a0cc95f05",
+      "sheetSize": [
+        1254,
+        1254
+      ],
+      "cellSize": [
+        414,
+        414
+      ],
+      "avatarCount": 9,
+      "outputs": [
+        {
+          "index": 1,
+          "emotion": "Den Faden verloren",
+          "file": "Output/set-03/trahern-draig-set-03-erinnerung-und-waerme_Bild01.png",
+          "box": [
+            2,
+            2,
+            416,
+            416
+          ],
+          "sha256": "6083d9497798e16bf351c4662c4506278efb765694cda9870f9c89124d89e3b5",
+          "gesture": "Brief genuinely puzzled expression, mouth slightly parted and eyebrows uncertain; one open hand paused halfway through a sentence near his chest, the other relaxed low, gaze searching the listener. Subtle lapse, no caricature or exaggerated vacant stare."
+        },
+        {
+          "index": 2,
+          "emotion": "Nach einem Namen suchen",
+          "file": "Output/set-03/trahern-draig-set-03-erinnerung-und-waerme_Bild02.png",
+          "box": [
+            420,
+            2,
+            834,
+            416
+          ],
+          "sha256": "c03c7f7965c8406c82b8be87162f368265f9434b441628fca742e9879c7d770f",
+          "gesture": "Thoughtful searching eyes glance upward, brows gently drawn; fingertips lightly scratching the beard at the side of his chin, other hand supporting that elbow. He is trying to recall an old herald's name."
+        },
+        {
+          "index": 3,
+          "emotion": "Vertrautes Gesicht verwechseln",
+          "file": "Output/set-03/trahern-draig-set-03-erinnerung-und-waerme_Bild03.png",
+          "box": [
+            838,
+            2,
+            1252,
+            416
+          ],
+          "sha256": "2ebea6b3d4ba470cdf4e18c6840100476ccd78f888e762f104053dbafb39c02d",
+          "gesture": "An almost welcoming recognition followed by a hint of uncertainty in the eyes; one palm offered toward the unseen visitor, the other fingertips touching his own chest, slight head tilt. Preserve all age lines and dignity."
+        },
+        {
+          "index": 4,
+          "emotion": "Unsicherheit überspielen",
+          "file": "Output/set-03/trahern-draig-set-03-erinnerung-und-waerme_Bild04.png",
+          "box": [
+            2,
+            420,
+            416,
+            834
+          ],
+          "sha256": "297854e3c49dcdbcd2481e82dbac091b077fc6292dd6e376c0acb9266d0a132d",
+          "gesture": "Chin lifted to recover poise, one eyebrow arched and mouth forming a brisk matter-of-fact reply; one hand turns outward in a small assured flourish, other hand rests flat over his lower ribs. Pride hiding a momentary mistake."
+        },
+        {
+          "index": 5,
+          "emotion": "Genealogische Gewissheit",
+          "file": "Output/set-03/trahern-draig-set-03-erinnerung-und-waerme_Bild05.png",
+          "box": [
+            420,
+            420,
+            834,
+            834
+          ],
+          "sha256": "09f9341cc7da2f9069ac04763ab1f0b6300d412fc325bc98e7ca196b5ed3a9fb",
+          "gesture": "Suddenly lucid intelligent focus, concentrated but pleased eyes; one forefinger traces a short imaginary connection in the air above the other open palm. No drawn lines, names, diagrams, text, or symbols."
+        },
+        {
+          "index": 6,
+          "emotion": "Stolz auf die Urenkel",
+          "file": "Output/set-03/trahern-draig-set-03-erinnerung-und-waerme_Bild06.png",
+          "box": [
+            838,
+            420,
+            1252,
+            834
+          ],
+          "sha256": "9a2d4521ef1630778d7cd6c869d94c2c610f79806dccc5e9360c1639a39055a9",
+          "gesture": "Warm proud smile that preserves his long angular elderly face, eyes bright and soft; both hands open gently apart near the waist as if describing the children's achievements, shoulders relaxed."
+        },
+        {
+          "index": 7,
+          "emotion": "Wohlwollende Anerkennung",
+          "file": "Output/set-03/trahern-draig-set-03-erinnerung-und-waerme_Bild07.png",
+          "box": [
+            2,
+            838,
+            416,
+            1252
+          ],
+          "sha256": "a632103c88f80502de6d61bc2fb8c1b35872d1d2b2fed9bcad4c950ed3e62230",
+          "gesture": "A restrained sincere appreciative smile and courteous small head incline; one hand placed over the heart, the other open toward the unseen recipient, fingers relaxed. Gratitude for good service rather than a regal command."
+        },
+        {
+          "index": 8,
+          "emotion": "Stille Erinnerung an Cerys",
+          "file": "Output/set-03/trahern-draig-set-03-erinnerung-und-waerme_Bild08.png",
+          "box": [
+            420,
+            838,
+            834,
+            1252
+          ],
+          "sha256": "f289afdcb186f0ac44fee17755066b6c3e2ba6f3ef2f6c10224c70c6d74e1a14",
+          "gesture": "Tender restrained melancholy, eyes lowered slightly sideways, mouth gently closed; fingertips lightly touching the teal fabric near the gold clasp, opposite forearm resting across the lower torso. Grief without tears, sobbing, apparitions, or melodrama."
+        },
+        {
+          "index": 9,
+          "emotion": "Ein seltener friedlicher Augenblick",
+          "file": "Output/set-03/trahern-draig-set-03-erinnerung-und-waerme_Bild09.png",
+          "box": [
+            838,
+            838,
+            1252,
+            1252
+          ],
+          "sha256": "d2ec5b867ae9eaf2bf0ea7d861d63536e5dea5f2a7ecc124cfeee2bb92c5a695",
+          "gesture": "An unusually peaceful soft closed-mouth smile and gently lowered eyelids; hands loosely nested together low at the waist, shoulders unknotted, head inclined slightly. Still the same stern old man in a rare quiet mood, never younger or broadly grinning."
+        }
+      ],
+      "cropCorrection": {
+        "reason": "Zellkanten um 2 Pixel nach innen korrigiert, damit keine feinen Übergänge zum Nachbarpanel im Einzelavatar verbleiben. Keine Skalierung.",
+        "gridY": [
+          0,
+          418,
+          836,
+          1254
+        ],
+        "adjustments": [
+          {
+            "left": 2,
+            "top": 2,
+            "right": -2,
+            "bottom": -2
+          },
+          {
+            "left": 2,
+            "top": 2,
+            "right": -2,
+            "bottom": -2
+          },
+          {
+            "left": 2,
+            "top": 2,
+            "right": -2,
+            "bottom": -2
+          },
+          {
+            "left": 2,
+            "top": 2,
+            "right": -2,
+            "bottom": -2
+          },
+          {
+            "left": 2,
+            "top": 2,
+            "right": -2,
+            "bottom": -2
+          },
+          {
+            "left": 2,
+            "top": 2,
+            "right": -2,
+            "bottom": -2
+          },
+          {
+            "left": 2,
+            "top": 2,
+            "right": -2,
+            "bottom": -2
+          },
+          {
+            "left": 2,
+            "top": 2,
+            "right": -2,
+            "bottom": -2
+          },
+          {
+            "left": 2,
+            "top": 2,
+            "right": -2,
+            "bottom": -2
+          }
+        ],
+        "cellSize": 414
+      },
+      "visualReview": {
+        "reviewedAt": "2026-10-17",
+        "passed": true,
+        "reviewedAvatars": 9,
+        "method": "Alle tatsächlich exportierten PNGs in drei Übersichten bei Originalgröße angesehen.",
+        "checks": [
+          "Gesicht, Alter, Haare und Bart gegenüber verbindlichem Porträt",
+          "bestehende Kleidung, Goldschließe, Zeichenstil und Fackelhalle",
+          "abwechslungsreiche Mimik und lesbare Gestik gemäß Bio und Beiträgen",
+          "vollständige Köpfe, natürliche Hände und passende Oberkörperausschnitte",
+          "keine Schrift, Trennlinien oder Nachbarpanels in den finalen PNGs"
+        ]
+      }
+    }
+  ],
+  "avatarCount": 27,
+  "visualReview": {
+    "reviewedAt": "2026-10-17",
+    "passed": true,
+    "reviewedAvatars": 27,
+    "method": "Alle tatsächlich exportierten PNGs in drei Übersichten bei Originalgröße angesehen.",
+    "checks": [
+      "Gesicht, Alter, Haare und Bart gegenüber verbindlichem Porträt",
+      "bestehende Kleidung, Goldschließe, Zeichenstil und Fackelhalle",
+      "abwechslungsreiche Mimik und lesbare Gestik gemäß Bio und Beiträgen",
+      "vollständige Köpfe, natürliche Hände und passende Oberkörperausschnitte",
+      "keine Schrift, Trennlinien oder Nachbarpanels in den finalen PNGs"
+    ]
+  },
+  "sourcePortraitSha256": "5e572632e939a49904d62e6822dbec176c3eab654361f8b480b66443d7a878cd",
+  "contextSource": "Referenzen/kommentar-und-bio-grundlage.json"
+}

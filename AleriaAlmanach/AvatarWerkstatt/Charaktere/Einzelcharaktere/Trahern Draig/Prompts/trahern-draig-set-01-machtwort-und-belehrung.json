@@ -1,0 +1,173 @@
+{
+  "version": 1,
+  "createdAt": "2026-10-17",
+  "characterName": "Trahern Draig",
+  "characterId": "CJFC3INTycaqn3tOwZHB",
+  "setId": "set-01",
+  "theme": "Machtwort und Belehrung",
+  "referenceImage": "Referenzen/trahern-draig-portraet.jpg",
+  "referenceSource": "Stammbäume/assets/images/portraits/haus-draig/trahern-draig.jpg",
+  "referenceSha256": "5e572632e939a49904d62e6822dbec176c3eab654361f8b480b66443d7a878cd",
+  "promptFile": "Prompts/trahern-draig-set-01-machtwort-und-belehrung.txt",
+  "sheetFile": "Sheets/trahern-draig-set-01-machtwort-und-belehrung.png",
+  "sheet": {
+    "aspectRatio": "1:1",
+    "columns": 3,
+    "rows": 3,
+    "actualPixels": [
+      1254,
+      1254
+    ]
+  },
+  "panels": [
+    {
+      "index": 1,
+      "position": "Top Left",
+      "emotion": "Entrüstete Nachfrage",
+      "gesture": "Brows sharply drawn, eyes narrowed, mouth open mid-question; one arm extended toward the unseen listener with an upturned questioning palm, other hand braced at his waist. He has just discovered someone occupying his former office."
+    },
+    {
+      "index": 2,
+      "position": "Top Center",
+      "emotion": "Belehrende Rüge",
+      "gesture": "Severe direct eye contact and tightly furrowed brows, lips parted in a reprimand; one index finger raised beside his face, the other hand open below it emphasizing the lesson. This is a pointed lecture to his grandson, not a neutral finger pose."
+    },
+    {
+      "index": 3,
+      "position": "Top Right",
+      "emotion": "Früher war das anders",
+      "gesture": "Proud indignant speech with chin slightly lifted; one thumb angled toward his own chest, opposite open hand makes a low horizontal comparison. He insists his own tenure was better."
+    },
+    {
+      "index": 4,
+      "position": "Middle Left",
+      "emotion": "Empörung über das Affentheater",
+      "gesture": "Exasperated disbelief, mouth open in an emphatic complaint; both forearms spread outward asymmetrically, palms up, shoulders tense. Believable elderly facial anatomy, not comic screaming."
+    },
+    {
+      "index": 5,
+      "position": "Center",
+      "emotion": "Hier wird Ordnung gehalten",
+      "gesture": "Hard level gaze, firm jaw, lips parted for a decisive command; one hand makes a compact downward chopping gesture, other forearm held across the lower torso, posture authoritative."
+    },
+    {
+      "index": 6,
+      "position": "Middle Right",
+      "emotion": "Ungläubiges Mustern",
+      "gesture": "One eyebrow lifted and the other furrowed, tightly pursed lips; head inclined slightly forward, arms folded high with one hand resting on the opposite upper arm. He examines a ridiculous explanation."
+    },
+    {
+      "index": 7,
+      "position": "Bottom Left",
+      "emotion": "Nachdrückliches Machtwort",
+      "gesture": "Forceful controlled anger, mouth open mid-rebuke; one tightly clenched old hand held near his lower chest, the other palm extended down to insist that the argument is settled. No youthful fighting stance."
+    },
+    {
+      "index": 8,
+      "position": "Bottom Center",
+      "emotion": "Das kannst du mir glauben",
+      "gesture": "Unshakable self-certainty, eyes fixed on listener, chin lifted and speaking lips; one hand opens firmly over his heart while the other index finger points obliquely toward the listener, never into the lens."
+    },
+    {
+      "index": 9,
+      "position": "Bottom Right",
+      "emotion": "Widerwilliges Zugeständnis",
+      "gesture": "Reluctant slight nod, one brow still raised, corners of mouth tense; one small palm-up concession at the waist, other fingers pinch together near the chest as if allowing exactly one point. He is conceding something useful but remains stern."
+    }
+  ],
+  "splitter": {
+    "cols": 3,
+    "rows": 3,
+    "gap_x": 0,
+    "gap_y": 0,
+    "autocrop": false
+  },
+  "generationMode": "built-in image_gen",
+  "status": "erzeugt, mit V3 zerlegt und visuell geprüft",
+  "generatedSource": "C:/Users/fhg_r/.codex/generated_images/01a1351b-508d-74f0-8f8c-9bd18c380250/exec-3174fa3c-fef6-472c-a00d-829a3b3d611e.png",
+  "cropCorrection": {
+    "reason": "Zellkanten um 2 Pixel nach innen korrigiert, damit keine feinen Übergänge zum Nachbarpanel im Einzelavatar verbleiben. Keine Skalierung.",
+    "gridY": [
+      0,
+      418,
+      836,
+      1254
+    ],
+    "adjustments": [
+      {
+        "left": 2,
+        "top": 2,
+        "right": -2,
+        "bottom": -2
+      },
+      {
+        "left": 2,
+        "top": 2,
+        "right": -2,
+        "bottom": -2
+      },
+      {
+        "left": 2,
+        "top": 2,
+        "right": -2,
+        "bottom": -2
+      },
+      {
+        "left": 2,
+        "top": 2,
+        "right": -2,
+        "bottom": -2
+      },
+      {
+        "left": 2,
+        "top": 2,
+        "right": -2,
+        "bottom": -2
+      },
+      {
+        "left": 2,
+        "top": 2,
+        "right": -2,
+        "bottom": -2
+      },
+      {
+        "left": 2,
+        "top": 2,
+        "right": -2,
+        "bottom": -2
+      },
+      {
+        "left": 2,
+        "top": 2,
+        "right": -2,
+        "bottom": -2
+      },
+      {
+        "left": 2,
+        "top": 2,
+        "right": -2,
+        "bottom": -2
+      }
+    ],
+    "cellSize": 414
+  },
+  "outputFolder": "Output/set-01",
+  "avatarCount": 9,
+  "avatarPixels": [
+    414,
+    414
+  ],
+  "visualReview": {
+    "reviewedAt": "2026-10-17",
+    "passed": true,
+    "reviewedAvatars": 9,
+    "method": "Alle tatsächlich exportierten PNGs in drei Übersichten bei Originalgröße angesehen.",
+    "checks": [
+      "Gesicht, Alter, Haare und Bart gegenüber verbindlichem Porträt",
+      "bestehende Kleidung, Goldschließe, Zeichenstil und Fackelhalle",
+      "abwechslungsreiche Mimik und lesbare Gestik gemäß Bio und Beiträgen",
+      "vollständige Köpfe, natürliche Hände und passende Oberkörperausschnitte",
+      "keine Schrift, Trennlinien oder Nachbarpanels in den finalen PNGs"
+    ]
+  }
+}

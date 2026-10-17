@@ -1,0 +1,173 @@
+{
+  "version": 1,
+  "createdAt": "2026-10-17",
+  "characterName": "Trahern Draig",
+  "characterId": "CJFC3INTycaqn3tOwZHB",
+  "setId": "set-03",
+  "theme": "Erinnerung, Gelehrsamkeit und persönliche Wärme",
+  "referenceImage": "Referenzen/trahern-draig-portraet.jpg",
+  "referenceSource": "Stammbäume/assets/images/portraits/haus-draig/trahern-draig.jpg",
+  "referenceSha256": "5e572632e939a49904d62e6822dbec176c3eab654361f8b480b66443d7a878cd",
+  "promptFile": "Prompts/trahern-draig-set-03-erinnerung-und-waerme.txt",
+  "sheetFile": "Sheets/trahern-draig-set-03-erinnerung-und-waerme.png",
+  "sheet": {
+    "aspectRatio": "1:1",
+    "columns": 3,
+    "rows": 3,
+    "actualPixels": [
+      1254,
+      1254
+    ]
+  },
+  "panels": [
+    {
+      "index": 1,
+      "position": "Top Left",
+      "emotion": "Den Faden verloren",
+      "gesture": "Brief genuinely puzzled expression, mouth slightly parted and eyebrows uncertain; one open hand paused halfway through a sentence near his chest, the other relaxed low, gaze searching the listener. Subtle lapse, no caricature or exaggerated vacant stare."
+    },
+    {
+      "index": 2,
+      "position": "Top Center",
+      "emotion": "Nach einem Namen suchen",
+      "gesture": "Thoughtful searching eyes glance upward, brows gently drawn; fingertips lightly scratching the beard at the side of his chin, other hand supporting that elbow. He is trying to recall an old herald's name."
+    },
+    {
+      "index": 3,
+      "position": "Top Right",
+      "emotion": "Vertrautes Gesicht verwechseln",
+      "gesture": "An almost welcoming recognition followed by a hint of uncertainty in the eyes; one palm offered toward the unseen visitor, the other fingertips touching his own chest, slight head tilt. Preserve all age lines and dignity."
+    },
+    {
+      "index": 4,
+      "position": "Middle Left",
+      "emotion": "Unsicherheit überspielen",
+      "gesture": "Chin lifted to recover poise, one eyebrow arched and mouth forming a brisk matter-of-fact reply; one hand turns outward in a small assured flourish, other hand rests flat over his lower ribs. Pride hiding a momentary mistake."
+    },
+    {
+      "index": 5,
+      "position": "Center",
+      "emotion": "Genealogische Gewissheit",
+      "gesture": "Suddenly lucid intelligent focus, concentrated but pleased eyes; one forefinger traces a short imaginary connection in the air above the other open palm. No drawn lines, names, diagrams, text, or symbols."
+    },
+    {
+      "index": 6,
+      "position": "Middle Right",
+      "emotion": "Stolz auf die Urenkel",
+      "gesture": "Warm proud smile that preserves his long angular elderly face, eyes bright and soft; both hands open gently apart near the waist as if describing the children's achievements, shoulders relaxed."
+    },
+    {
+      "index": 7,
+      "position": "Bottom Left",
+      "emotion": "Wohlwollende Anerkennung",
+      "gesture": "A restrained sincere appreciative smile and courteous small head incline; one hand placed over the heart, the other open toward the unseen recipient, fingers relaxed. Gratitude for good service rather than a regal command."
+    },
+    {
+      "index": 8,
+      "position": "Bottom Center",
+      "emotion": "Stille Erinnerung an Cerys",
+      "gesture": "Tender restrained melancholy, eyes lowered slightly sideways, mouth gently closed; fingertips lightly touching the teal fabric near the gold clasp, opposite forearm resting across the lower torso. Grief without tears, sobbing, apparitions, or melodrama."
+    },
+    {
+      "index": 9,
+      "position": "Bottom Right",
+      "emotion": "Ein seltener friedlicher Augenblick",
+      "gesture": "An unusually peaceful soft closed-mouth smile and gently lowered eyelids; hands loosely nested together low at the waist, shoulders unknotted, head inclined slightly. Still the same stern old man in a rare quiet mood, never younger or broadly grinning."
+    }
+  ],
+  "splitter": {
+    "cols": 3,
+    "rows": 3,
+    "gap_x": 0,
+    "gap_y": 0,
+    "autocrop": false
+  },
+  "generationMode": "built-in image_gen",
+  "status": "erzeugt, mit V3 zerlegt und visuell geprüft",
+  "generatedSource": "C:/Users/fhg_r/.codex/generated_images/01a1351b-508d-74f0-8f8c-9bd18c380250/exec-c17e6ac8-9fcc-45be-9313-bf576c29913e.png",
+  "cropCorrection": {
+    "reason": "Zellkanten um 2 Pixel nach innen korrigiert, damit keine feinen Übergänge zum Nachbarpanel im Einzelavatar verbleiben. Keine Skalierung.",
+    "gridY": [
+      0,
+      418,
+      836,
+      1254
+    ],
+    "adjustments": [
+      {
+        "left": 2,
+        "top": 2,
+        "right": -2,
+        "bottom": -2
+      },
+      {
+        "left": 2,
+        "top": 2,
+        "right": -2,
+        "bottom": -2
+      },
+      {
+        "left": 2,
+        "top": 2,
+        "right": -2,
+        "bottom": -2
+      },
+      {
+        "left": 2,
+        "top": 2,
+        "right": -2,
+        "bottom": -2
+      },
+      {
+        "left": 2,
+        "top": 2,
+        "right": -2,
+        "bottom": -2
+      },
+      {
+        "left": 2,
+        "top": 2,
+        "right": -2,
+        "bottom": -2
+      },
+      {
+        "left": 2,
+        "top": 2,
+        "right": -2,
+        "bottom": -2
+      },
+      {
+        "left": 2,
+        "top": 2,
+        "right": -2,
+        "bottom": -2
+      },
+      {
+        "left": 2,
+        "top": 2,
+        "right": -2,
+        "bottom": -2
+      }
+    ],
+    "cellSize": 414
+  },
+  "outputFolder": "Output/set-03",
+  "avatarCount": 9,
+  "avatarPixels": [
+    414,
+    414
+  ],
+  "visualReview": {
+    "reviewedAt": "2026-10-17",
+    "passed": true,
+    "reviewedAvatars": 9,
+    "method": "Alle tatsächlich exportierten PNGs in drei Übersichten bei Originalgröße angesehen.",
+    "checks": [
+      "Gesicht, Alter, Haare und Bart gegenüber verbindlichem Porträt",
+      "bestehende Kleidung, Goldschließe, Zeichenstil und Fackelhalle",
+      "abwechslungsreiche Mimik und lesbare Gestik gemäß Bio und Beiträgen",
+      "vollständige Köpfe, natürliche Hände und passende Oberkörperausschnitte",
+      "keine Schrift, Trennlinien oder Nachbarpanels in den finalen PNGs"
+    ]
+  }
+}
