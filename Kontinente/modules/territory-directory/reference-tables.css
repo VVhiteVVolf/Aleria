@@ -1,0 +1,52 @@
+/* These tables must remain legible before enhancement and in editor previews.
+   !important only replaces presentation stored inline in the old exports. */
+.kingdom-reference-table {
+  --reference-ink: #30291f;
+  --reference-paper: #faf6ed;
+  --reference-line: #d7c9ad;
+  width: min(100%, 900px) !important;
+  margin: 1rem auto;
+  table-layout: fixed !important;
+  border: 1px solid #b6a17c !important;
+  border-collapse: collapse;
+  border-spacing: 0;
+  background: var(--reference-paper) !important;
+  color: var(--reference-ink);
+  font: 0.82rem/1.6 Verdana, Arial, sans-serif;
+}
+.kingdom-reference-table :is(td, th) {
+  padding: 0.75rem !important;
+  border: 1px solid var(--reference-line) !important;
+  background: var(--reference-paper) !important;
+  color: var(--reference-ink) !important;
+  vertical-align: middle;
+}
+.kingdom-reference-table :is(span, b, strong, a, p) {
+  color: inherit !important;
+  background: transparent !important;
+}
+.kingdom-reference-table :is(.codex-table-section, td[colspan='5']):not(:has(img, a)) {
+  background: #e8dfcc !important;
+  color: #74372d !important;
+  font: 700 1.1rem/1.4 Georgia, serif;
+}
+.kingdom-reference-table img {
+  display: block;
+  width: min(100%, 110px) !important;
+  height: 110px !important;
+  margin: 0 auto;
+  object-fit: contain;
+}
+.kingdom-reference-table td[colspan] > img,
+.kingdom-reference-table td[colspan] > a:not(.cenyr-court-entry) > img {
+  width: min(100%, 365px) !important;
+  height: auto !important;
+  max-height: 300px;
+}
+.kingdom-reference-table p { margin: 0.2rem 0; text-align: center; }
+.kingdom-reference-table .is-reference-spacer { display: none; }
+.kingdom-table-scroll:has(> .kingdom-reference-table) { overflow-x: auto; }
+
+@media (max-width: 760px) {
+  .kingdom-reference-table { min-width: 640px; }
+}

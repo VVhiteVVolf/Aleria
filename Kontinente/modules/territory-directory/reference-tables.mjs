@@ -7,8 +7,9 @@ export function refineReferenceTables(page) {
     // Some exports reuse the region class for the adapter's source table.
     // Its original colors and image sizes are parsing metadata, not decoration.
     if (table.matches('.kingdom-county-geography-table, .kingdom-county-family-table, [data-administration-grid]')) continue;
-    table.classList.add('codex-reference-table');
+    table.classList.add('kingdom-reference-table');
     for (const row of table.rows) {
+      row.classList.toggle('is-reference-spacer', !row.textContent.trim() && !row.querySelector('img, a, button, input'));
       if (row.cells.length !== 1) continue;
       row.cells[0].classList.toggle('codex-table-section', !row.cells[0].querySelector('img'));
     }

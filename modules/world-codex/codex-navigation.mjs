@@ -1,5 +1,4 @@
 import { markTerritoryHeadings } from './codex-territory-headings.mjs?v=20260918a';
-import { refineReferenceTables } from './codex-reference-tables.mjs?v=20261018a';
 
 /** Navigation and presentation semantics; editable document content stays intact. */
 export function mountCodexNavigation(page) {
@@ -31,7 +30,6 @@ export function mountCodexNavigation(page) {
   function refresh() {
     frame = 0;
     markTerritoryHeadings(page);
-    refineReferenceTables(page);
     const title = page.querySelector('.kingdom-title, .haeuser-title, .grossstadt-template-frame > thead .pt-s-0004');
     if (title) {
       title.setAttribute('role', 'heading');

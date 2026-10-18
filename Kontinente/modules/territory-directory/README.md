@@ -13,6 +13,7 @@ Die sichtbare Darstellung gehört diesem Modul. Bestehende Tabellenparser und st
 - `council-directory.mjs` und `council.css`: gemeinsame Portraitübersicht für den Rat und seine Amtsträger, einschließlich vorhandener Navigationszeilen.
 - `legacy-council.mjs`: liest alte Politikstabellen und aktualisiert deren erzeugte Ansicht mit einem Observer je Tabelle. Quelle und Bildreihenfolge bleiben erhalten.
 - `infobox.mjs` und `infobox.css`: klassifizieren bestehende Infoboxzellen, entfernen deren alte visuelle Inline-Formatierung und gestalten die Tabelle an ihrer bisherigen Position.
+- `reference-tables.mjs` und `reference-tables.css`: lesbare Referenztabellen auch ohne Codex-Gestaltung oder Skriptausführung in Editor-Vorschauen. `kingdom-reference-table` markiert die bekannten Tabellen bereits im HTML. Leere Streifen erhalten `is-reference-spacer`, ihre Quellzeilen bleiben erhalten. Inline-Farben aus Alt-Exporten werden gezielt ersetzt; Haus-/Ortsquellen und Verwaltungsraster sind ausgeschlossen.
 
 `assets/js/koenigreich.js` behält die Verantwortung für Hausseiten-Auflösung, Quellenzuordnung und Aktualisierung nach Inhaltsänderungen. Es steuert auch den gekapselten Adapter für alte Ratsübersichten. `assets/js/herrschaft-page.js` übergibt strukturierte Siedlungs- und Ratsdaten und meldet nach dem Aufbau der Seite `aleria:kontinente:content-ready`. Die reinen Renderer besitzen weder Registerzugriffe noch globalen Zustand, Observer oder eigene Firebase-Zugriffe.
 

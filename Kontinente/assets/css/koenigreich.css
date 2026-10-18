@@ -1,6 +1,7 @@
 @import url("../../modules/territory-directory/infobox.css?v=panels-20260911a");
 @import url("../../modules/territory-directory/council.css?v=panels-20260911a");
 @import url("../../modules/territory-directory/directory.css?v=register-20261018a");
+@import url("../../modules/territory-directory/reference-tables.css?v=20261018b");
 
 :root {
   --kingdom-page-bg: #21180f;
@@ -251,7 +252,11 @@ body {
   color: inherit;
 }
 
-/* Visible reference tables are styled by world-codex/codex-territories.css. */
+/* Old editor highlights on chapter numbers are never part of the page design. */
+.kingdom-frame [style*='background-color:rgb(224,224,255)'],
+.kingdom-frame [style*='background-color:rgb(224, 224, 255)'] {
+  background-color: transparent !important;
+}
 
 .kingdom-frame table[style*='height:295px'] {
   height: auto !important;

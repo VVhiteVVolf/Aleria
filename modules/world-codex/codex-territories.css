@@ -75,38 +75,6 @@
 .world-codex .kingdom-frame > tbody > tr:not(:first-child) > td > section { margin-bottom: 2rem; }
 .world-codex .kingdom-table-scroll:has(> .kingdom-frame) { overflow: visible; }
 
-/* Neutral reference tables replace the older gold/grey export palette. */
-.world-codex .codex-reference-table {
-  width: 100%;
-  min-width: 640px;
-  margin-block: 1rem;
-  table-layout: fixed;
-  border: 1px solid var(--codex-line);
-  border-spacing: 0;
-  background: var(--codex-light);
-  font: 0.82rem/1.6 var(--codex-label);
-}
-.world-codex .codex-reference-table td {
-  padding: 0.8rem;
-  border: 1px solid var(--codex-rule);
-  vertical-align: middle;
-}
-.world-codex .codex-reference-table .codex-table-section {
-  background: #e8dfcc;
-  color: var(--codex-rubric);
-  font: 700 1.1rem/1.4 var(--codex-serif);
-}
-.world-codex .codex-reference-table img {
-  display: block;
-  width: 100px;
-  height: 110px;
-  margin: 0 auto;
-  object-fit: contain;
-}
-.world-codex .codex-reference-table td[colspan] img { width: min(100%, 365px); height: auto; max-height: 300px; }
-.world-codex .codex-reference-table p { margin: 0.2rem 0; text-align: center; }
-.world-codex .kingdom-table-scroll:has(> .codex-reference-table) { overflow-x: auto; }
-
 @media (max-width: 960px) {
   .world-codex .kingdom-frame { grid-template-columns: minmax(0, 1fr) 260px; gap: 0 20px; }
   .world-codex .kingdom-frame > tbody > tr { grid-template-columns: minmax(0, 1fr); }

@@ -4,7 +4,7 @@ Gemeinsames Oldschool-Fantasy-Design für Länder, Grafschaften, Herrschaften, O
 
 ## Einbindung und Zuständigkeit
 
-Die aktiven HTML-Einstiege einschließlich ihrer Vorlagen laden `world-codex.css?v=20261018a` und `codex-navigation.mjs?v=20261018a`. Die Body-Klasse `world-codex` aktiviert die Gestaltung. Da die vorhandenen Register weiterhin dieselben Vorlagen öffnen, erhalten auch bestehende und künftige Dateneinträge das Design. Die Hausvorlagen unter `_template/` leiten bereits auf die gemeinsam gestalteten Hausseiten weiter. Kontinentübersichten behalten ihre eigene kompakte Atlasgestaltung in `Kontinente/assets/css/kontinente-overview.css`.
+Die aktiven HTML-Einstiege einschließlich ihrer Vorlagen laden `world-codex.css?v=20261018b` und `codex-navigation.mjs?v=20261018b` über dokumentrelative Pfade, damit die Ressourcen auch unter einem Vorschau-Unterpfad erreichbar sind. Die Body-Klasse `world-codex` aktiviert die Gestaltung. Da die vorhandenen Register weiterhin dieselben Vorlagen öffnen, erhalten auch bestehende und künftige Dateneinträge das Design. Die Hausvorlagen unter `_template/` leiten bereits auf die gemeinsam gestalteten Hausseiten weiter. Kontinentübersichten behalten ihre eigene kompakte Atlasgestaltung in `Kontinente/assets/css/kontinente-overview.css`.
 
 - `codex-foundation.css`: Farben, Schrift, Papier, Überschriften, Seiteneinfassung, Kapitelnavigation und Druckansicht.
 - `codex-territories.css`: Länder und Herrschaften einschließlich der ursprünglichen Tabellenstruktur.
@@ -12,7 +12,7 @@ Die aktiven HTML-Einstiege einschließlich ihrer Vorlagen laden `world-codex.css
 - `codex-houses.css`, `codex-guilds.css`: Besonderheiten der beiden Seitentypen.
 - `codex-navigation.mjs`: zusätzliche Kapitelnavigation außerhalb des bearbeitbaren Inhalts. Native Links und `details`, lokale Listener, keine neuen globalen Zustände.
 - `codex-territory-headings.mjs`: erkennt die bereits im Inhaltsverzeichnis benannten Kapitel älterer Exporte auch nach asynchroner Inhaltsaktualisierung. Ergänzt ausschließlich Klassen, Anker und Überschriftensemantik.
-- `codex-reference-tables.mjs`: entfernt überholte Farb-, Schrift- und Größenformatierungen aus sichtbaren Reichs-, Verwaltungs-, Institutions- und Ahnentabellen. Haus-, Siedlungs- und Verwaltungsquellen sind ausdrücklich ausgenommen: deren Inline-Merkmale sind weiterhin Metadaten für ihre zuständigen Adapter.
+- `Kontinente/modules/territory-directory/reference-tables.mjs` und `.css`: eigenständige Basisdarstellung sichtbarer Reichs-, Verwaltungs-, Institutions- und Ahnentabellen. Der Landesadapter übernimmt die Aktualisierung, unabhängig von der zusätzlichen Codex-Navigation. Statisch markierte Tabellen sind bereits vor der Skriptausführung lesbar. Haus-, Siedlungs- und Verwaltungsquellen sind ausdrücklich ausgenommen: deren Inline-Merkmale bleiben Metadaten für ihre zuständigen Adapter.
 
 Die Quelldokumente behalten alle Inhalte und Datenbindungen. Nur die äußeren Layouttabellen werden über CSS als Raster dargestellt; fachliche Tabellen und Komponenten behalten ihre Aufgaben. Bestehende Listener und alle Firebase-Zuständigkeiten bleiben erhalten. Die wenigen `!important`-Deklarationen ersetzen explizite Pixelmaße und erzwungene Altformatierungen oder sichern das native `hidden`-Verhalten. Die gemeinsame Verwaltungszeile und ihre Dialoge behalten ihr eigenes Modul.
 
@@ -35,6 +35,8 @@ node modules/world-codex/tests/codex.browser.mjs
 Der Test vergleicht 18 Ansichten mit den archivierten Originalen; mit `CODEX_BASELINE=HEAD` stattdessen mit dem Git-Ausgangsstand der aktuellen Änderungen. Geprüft werden vollständiger Text, Linkziele, Bildquellen/Bildbeschreibungen und bisherige Bedienelemente. Neue Register-Bedienelemente werden getrennt behandelt; Stadt-Hausdaten werden vollständig mitverglichen. Er prüft 1440, 768 und 390 Pixel, Kapitelsprünge, Fokus, Escape, den vorhandenen Ortsindex, Zeitungswechsel und Zunftdetails. Externe Bilddienste werden in diesen Tests blockiert; vorhandene Ersatzbilder werden vor dem Vergleich vollständig geladen.
 
 `tests/register-refinement.browser.mjs` benötigt einen lokalen statischen Server (standardmäßig Port 5500). Er prüft die acht Referenzseiten und Haus Wyrm bei 1440, 1024, 768 und 390 Pixeln. Zusätzlich: vollständige Stadt-Hausdaten, keine verdeckten Kapitel 4/5, Suche, Gruppenfilter, Leerzustand, Zurücksetzen, unabhängige Register, Filtererhalt nach Inhaltsaktualisierung, Tastaturfokus und vollständige Druckausgabe. Optional speichert `DIRECTORY_SCREENSHOTS` Vergleichsbilder.
+
+`tests/preview-tables.browser.mjs` prüft die gemeldeten VS-Code-Vorschaufehler zusätzlich ohne Designressourcen, ohne Skriptausführung und unter einem Vorschau-Unterpfad. Alle Referenzzellen benötigen lesbaren Textkontrast; rote Altflächen und die alte farbige Markierung von Kapitelnummern dürfen nicht erscheinen. Leere Tabellenstreifen bleiben als Quellen erhalten, sind aber ausgeblendet. Die Basisgestaltung gehört deshalb nicht ausschließlich in die optionale Codex-Schicht.
 
 Zusätzlich erfolgreich geprüft: `Kontinente/tests/territory-directory.browser.mjs` (alle acht Herrschaften, Hausregister, Ränge, Personenlinks und Vorlagen) und `Kontinente/tests/administration-dialog.browser.mjs` (alle 16 Verwaltungsansichten einschließlich ihrer 316 Personenkarten).
 

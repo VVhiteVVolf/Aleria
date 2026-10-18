@@ -4,7 +4,7 @@
   if (!page) return;
 
   const directoryBase = new URL('../../modules/territory-directory/', document.currentScript.src);
-  const [{ renderFamilySection: renderHouseDirectorySection }, { renderSettlementDomain }, { createLegacyCouncilController }, { enhanceInfoboxes }, { HOUSE_RANKS }, , { mountDirectoryBrowser, directoryState }] = await Promise.all([
+  const [{ renderFamilySection: renderHouseDirectorySection }, { renderSettlementDomain }, { createLegacyCouncilController }, { enhanceInfoboxes }, { HOUSE_RANKS }, , { mountDirectoryBrowser, directoryState }, { refineReferenceTables }] = await Promise.all([
     import(new URL('house-directory.mjs?v=register-20261018a', directoryBase)),
     import(new URL('settlement-directory.mjs?v=register-20261018a', directoryBase)),
     import(new URL('legacy-council.mjs?v=panels-20260911a', directoryBase)),
@@ -14,6 +14,7 @@
       console.warn('Hausseitenregister konnte nicht geladen werden; vorhandene Familienlinks bleiben verfügbar.', error);
     }),
     import(new URL('directory-browser.mjs?v=register-20261018a', directoryBase)),
+    import(new URL('reference-tables.mjs?v=20261018b', directoryBase)),
   ]);
 
   page.querySelectorAll('table').forEach((table) => {
@@ -40,6 +41,7 @@
   enhanceCountyCouncilPortraits();
   councilController.refresh(page);
   enhanceInfoboxes(page);
+  refineReferenceTables(page);
   window.addEventListener('aleria:kontinente:content-ready', scheduleCountyViewsRefresh);
   window.addEventListener('aleria:kontinente:data-ready', scheduleCountyViewsRefresh);
 
@@ -121,6 +123,7 @@
       enhanceCountyCouncilPortraits();
       councilController.refresh(page);
       enhanceInfoboxes(page);
+      refineReferenceTables(page);
     }, 40);
   }
 
