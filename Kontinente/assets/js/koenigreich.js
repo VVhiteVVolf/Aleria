@@ -175,9 +175,11 @@
 
   function syncCountyViewMode() {
     page.querySelectorAll('.kingdom-county-geography-table.is-county-card-source').forEach((table) => {
+      table.hidden = true;
       table.setAttribute('aria-hidden', 'true');
     });
     page.querySelectorAll('.kingdom-county-family-table.is-family-card-source').forEach((table) => {
+      table.hidden = true;
       table.setAttribute('aria-hidden', 'true');
     });
   }

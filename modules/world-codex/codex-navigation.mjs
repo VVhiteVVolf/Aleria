@@ -1,8 +1,10 @@
 import { markTerritoryHeadings } from './codex-territory-headings.mjs?v=20260918a';
+import { mountReadingPanels } from './codex-reading-panels.mjs?v=20261018c';
 
 /** Navigation and presentation semantics; editable document content stays intact. */
 export function mountCodexNavigation(page) {
   if (!page || !document.body.classList.contains('world-codex')) return;
+  const unmountReadingPanels = mountReadingPanels(page);
   const header = document.createElement('header');
   header.className = 'codex-masthead';
   const brand = document.createElement('a');
@@ -74,6 +76,7 @@ export function mountCodexNavigation(page) {
   observer.observe(page, { childList: true, subtree: true, characterData: true, attributes: true, attributeFilter: ['id', 'hidden'] });
   refresh();
   return () => {
+    unmountReadingPanels();
     observer.disconnect();
     cancelAnimationFrame(frame);
     header.remove();

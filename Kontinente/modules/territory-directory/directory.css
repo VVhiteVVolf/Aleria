@@ -206,9 +206,10 @@
 .kingdom-family-crest-placeholder {
   display: grid;
   place-items: center;
-  width: 48px;
+  width: 64px;
   height: 58px;
-  padding: 0.5rem;
+  padding: 0.25rem;
+  overflow-wrap: normal;
   color: var(--directory-muted);
   border: 1px dashed #bbaa8d;
   border-radius: 3px 3px 45% 45%;
@@ -229,7 +230,8 @@
 .kingdom-domain-meta { margin-top: 0.55rem; }
 .kingdom-domain-meta > div { font-size: 0.82rem; }
 .kingdom-place-card { grid-template-columns: 48px minmax(0, 1fr); min-height: 76px; }
-.kingdom-place-card .directory-details > div { grid-template-columns: 5.2rem minmax(0, 1fr); }
+.kingdom-place-card .directory-details > div { grid-template-columns: max-content minmax(0, 1fr); }
+.kingdom-place-card .directory-details dt { white-space: nowrap; overflow-wrap: normal; }
 .kingdom-place-icon-frame { width: 48px; height: 54px; }
 .territory-directory .kingdom-place-icon-frame img {
   display: block;

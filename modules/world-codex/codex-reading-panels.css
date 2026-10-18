@@ -1,0 +1,28 @@
+.world-codex .codex-reading-column {
+  box-sizing: border-box;
+  height: var(--codex-reading-height);
+  max-height: var(--codex-reading-height);
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior-y: auto;
+  scrollbar-gutter: stable;
+  scrollbar-width: thin;
+  scrollbar-color: #96734b #e4dbc8;
+  padding-inline-end: 14px;
+}
+.world-codex .codex-reading-column :is(.orte-introduction-panel, .orte-balanced-text-panel, .orte-place-prose) {
+  height: auto;
+  min-height: 0;
+  max-height: none;
+  overflow: visible;
+}
+.codex-reading-column:focus-visible { outline: 2px solid var(--codex-rubric, #783c30); outline-offset: 3px; }
+@media print {
+  .world-codex .codex-reading-column {
+    height: auto;
+    max-height: none;
+    overflow: visible;
+    scrollbar-gutter: auto;
+    padding-inline-end: 0;
+  }
+}

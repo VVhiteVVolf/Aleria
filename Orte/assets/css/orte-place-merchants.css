@@ -71,4 +71,5 @@
 .merchant-rating--influence { color: #773d35; }
 .merchant-rating svg { width: 17px; height: 20px; flex: 0 0 17px; fill: currentColor; }
 .merchant-rating svg.is-empty { fill: none; stroke: currentColor; stroke-width: 0.85; opacity: 0.48; }
-.merchant-rating--text { gap: 6px; white-space: normal; line-height: 1.4; }
+.merchant-rating--text { max-width: 100%; gap: 6px; white-space: normal; line-height: 1.4; text-align: left; }
+.merchant-rating--text > span { min-width: 0; hyphens: auto; overflow-wrap: anywhere; }

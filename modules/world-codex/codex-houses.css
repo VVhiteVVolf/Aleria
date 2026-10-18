@@ -30,7 +30,7 @@
   max-height: none;
   object-fit: contain;
 }
-/* Chapters follow the document scroll; none are hidden inside a reading pane. */
+/* Chapters 4 onward remain separate rows outside the paired reading columns. */
 .world-codex .house-scene { border: 1px solid var(--codex-line); border-left: 3px solid var(--codex-rubric); background: #f8f2e399; }
 .world-codex .house-scene summary { color: var(--codex-rubric); }
 @media (max-width: 520px) {

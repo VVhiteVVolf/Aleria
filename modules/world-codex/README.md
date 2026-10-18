@@ -4,7 +4,7 @@ Gemeinsames Oldschool-Fantasy-Design für Länder, Grafschaften, Herrschaften, O
 
 ## Einbindung und Zuständigkeit
 
-Die aktiven HTML-Einstiege einschließlich ihrer Vorlagen laden `world-codex.css?v=20261018b` und `codex-navigation.mjs?v=20261018b` über dokumentrelative Pfade, damit die Ressourcen auch unter einem Vorschau-Unterpfad erreichbar sind. Die Body-Klasse `world-codex` aktiviert die Gestaltung. Da die vorhandenen Register weiterhin dieselben Vorlagen öffnen, erhalten auch bestehende und künftige Dateneinträge das Design. Die Hausvorlagen unter `_template/` leiten bereits auf die gemeinsam gestalteten Hausseiten weiter. Kontinentübersichten behalten ihre eigene kompakte Atlasgestaltung in `Kontinente/assets/css/kontinente-overview.css`.
+Die aktiven HTML-Einstiege einschließlich ihrer Vorlagen laden `world-codex.css?v=20261018c` und `codex-navigation.mjs?v=20261018c` über dokumentrelative Pfade, damit die Ressourcen auch unter einem Vorschau-Unterpfad erreichbar sind. Die Body-Klasse `world-codex` aktiviert die Gestaltung. Da die vorhandenen Register weiterhin dieselben Vorlagen öffnen, erhalten auch bestehende und künftige Dateneinträge das Design. Die Hausvorlagen unter `_template/` leiten bereits auf die gemeinsam gestalteten Hausseiten weiter. Kontinentübersichten behalten ihre eigene kompakte Atlasgestaltung in `Kontinente/assets/css/kontinente-overview.css`.
 
 - `codex-foundation.css`: Farben, Schrift, Papier, Überschriften, Seiteneinfassung, Kapitelnavigation und Druckansicht.
 - `codex-territories.css`: Länder und Herrschaften einschließlich der ursprünglichen Tabellenstruktur.
@@ -16,7 +16,7 @@ Die aktiven HTML-Einstiege einschließlich ihrer Vorlagen laden `world-codex.css
 
 Die Quelldokumente behalten alle Inhalte und Datenbindungen. Nur die äußeren Layouttabellen werden über CSS als Raster dargestellt; fachliche Tabellen und Komponenten behalten ihre Aufgaben. Bestehende Listener und alle Firebase-Zuständigkeiten bleiben erhalten. Die wenigen `!important`-Deklarationen ersetzen explizite Pixelmaße und erzwungene Altformatierungen oder sichern das native `hidden`-Verhalten. Die gemeinsame Verwaltungszeile und ihre Dialoge behalten ihr eigenes Modul.
 
-Auf großen und kleinen Hausseiten folgen alle Kapitel dem normalen Seitenscrollen. Geschichte und Traditionen stehen neben der Infotabelle, Kapitel 4 und 5 anschließend als eigene Abschnitte. Die frühere gemeinsame Scrollfläche verbarg diese Kapitel beim gewöhnlichen Seitenscrollen; sie ist einschließlich ihrer Höhenbegrenzungen entfernt. Abschnittsschlüssel, Texte, Nummern und Anker bleiben erhalten. Das Herrschaftsbanner nutzt weiterhin die ganze innere Breite und seine natürliche Höhe ohne Beschnitt.
+Auf großen und kleinen Hausseiten stehen Übersicht und Geschichte/Traditionen neben Bild und Infobox. Auf ausdrücklichen Nutzerwunsch vom 18. Oktober 2026 begrenzen gekoppelte Lesespalten den langen Text auf die Höhe der rechten Seite. Kapitel 4 und 5 bleiben anschließend eigene Abschnitte außerhalb dieser Scrollflächen. Abschnittsschlüssel, Texte, Nummern und Anker bleiben erhalten. Das Herrschaftsbanner nutzt weiterhin die ganze innere Breite und seine natürliche Höhe ohne Beschnitt.
 
 Städte und Herrschaften nutzen dieselben Hauskarten unter `Kontinente/modules/territory-directory/`. Die separate Stadt-Häusertabelle, deren Mobilstyles sowie die alten Beispielzeilen in beiden Ortsvorlagen sind entfernt. `Orte/assets/js/orte-place-houses.js` übersetzt nur die vorhandenen Ortsdaten. Ab acht Einträgen ergänzt `directory-browser.mjs` eine lokale Suche, bei mehreren Gruppen auch einen Gruppenfilter. Text-, Wappen- und Linkquellen bleiben bei den jeweiligen Adaptern. Filterzustände überstehen asynchrone Ansichtsaktualisierungen; Druckansichten zeigen das vollständige Register.
 
@@ -41,3 +41,36 @@ Der Test vergleicht 18 Ansichten mit den archivierten Originalen; mit `CODEX_BAS
 Zusätzlich erfolgreich geprüft: `Kontinente/tests/territory-directory.browser.mjs` (alle acht Herrschaften, Hausregister, Ränge, Personenlinks und Vorlagen) und `Kontinente/tests/administration-dialog.browser.mjs` (alle 16 Verwaltungsansichten einschließlich ihrer 316 Personenkarten).
 
 Stand 18. Oktober 2026: Der Vergleich der 18 Ansichten mit dem Git-Ausgangsstand sowie sämtliche neuen Registerprüfungen bestehen. Die fachliche Suite für Kontinente, Orte und Häuser ergibt 89 erfolgreiche Prüfungen und elf ältere Fehler (unter anderem veraltete Familienzahlen, Bio-Fingerprints und Ortsdaten-Erwartungen). Eine zusätzliche schreibgeschützte HEAD-Ansicht derselben Testeingaben ergibt exakt dieselben elf Fehler. Die Designüberarbeitung verändert diese Daten nicht.
+
+## Text neben Bild oder Infobox
+
+Die Nutzervorgabe vom 18. Oktober 2026 gilt für sämtliche parallelen Textspalten:
+Langer Text erhält eine Scrollfläche, deren Unterkante mit dem rechts stehenden
+Bild beziehungsweise der Infobox abschließt. Für Haus-, Landes- und ältere
+Textspalten sind `codex-reading-panels.mjs` und `codex-reading-panels.css`
+verantwortlich. Die bereits gekoppelten Stadtspalten (`orte-paired-copy`)
+behalten ihr vorhandenes CSS-Containment aus `Orte/modules/layout/`.
+
+- Die vorhandenen zweispaltigen Dokumentzeilen werden verwendet; Inhalte werden
+  weder verschoben noch kopiert. `ResizeObserver` gleicht Bild-, Schrift- und
+  Größenänderungen ab. Es gibt keine seitenweise festgeschriebenen Texthöhen.
+- Scrollbare Spalten sind per Tastatur erreichbar. Kapitelanker öffnen auch
+  Abschnitte innerhalb einer Scrollfläche. Maus-/Touch-Scrolling verwendet das
+  native Browserverhalten und geht am Ende wieder in das Dokument über.
+- Bei untereinander stehenden Spalten und beim Drucken gilt der vollständige
+  normale Textfluss. Vorhandene innere Stadt-Lesepanels erhalten keine zweite
+  Scrollfläche innerhalb derselben Spalte.
+- Hauskapitel 4 und 5 bleiben eigene Zeilen außerhalb der Lesespalten. Die
+  ausführliche Geschichte und die Traditionen behalten ihre Texte und Anker.
+
+## Quellen und Register
+
+Die Darstellung der Häuser und Orte gehört zu
+`Kontinente/modules/territory-directory/`. Beschriftungen wie „Einordnung“ dürfen
+nicht innerhalb des Wortes umbrechen. Nach dem Erzeugen eines Registers blendet
+der Tabellenadapter dessen alte Quelltabelle ausdrücklich mit `hidden` aus;
+dies darf nicht davon abhängen, ob vorher ein Scroll-Wrapper vorhanden war.
+
+`tests/reading-panels.browser.mjs` prüft die gemeldeten vier Fehler einschließlich
+Tastatur, Erreichbarkeit des Textendes, dynamischer Bildhöhe, Kapitelankern,
+Mobil- und Druckansicht sowie verzögertem Aufbau der Herrschaftsseiten.

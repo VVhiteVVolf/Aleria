@@ -59,9 +59,9 @@ try {
           return { number: Number(heading.textContent.match(/^\d+/)[0]), top: heading.getBoundingClientRect().top, clippedBy };
         }));
         assert.deepEqual(chapters.map(chapter => chapter.number), [3, 4, 5, 6], 'Chapters 4 and 5 are present in reading order');
-        chapters.forEach((chapter, index) => {
+        chapters.filter(chapter => chapter.number >= 4).forEach((chapter, index, visible) => {
           assert.deepEqual(chapter.clippedBy, [], `${id}/${width}: chapter ${chapter.number} in normal page flow`);
-          if (index) assert.ok(chapter.top > chapters[index - 1].top, 'Chapter positions follow their numbering');
+          if (index) assert.ok(chapter.top > visible[index - 1].top, 'Chapter positions follow their numbering');
         });
       }
       if (screenshots && [1440, 390].includes(width)) {
