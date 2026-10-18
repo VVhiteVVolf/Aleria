@@ -1,5 +1,300 @@
 window.KONTINENTE_REGISTRY = [
   {
+    "id": "grafschaft-vortigerns-ruh",
+    "slug": "vortigerns-ruh",
+    "aliases": [
+      "mathragon",
+      "koenigliche-grafschaft-mathragon"
+    ],
+    "name": "Grafschaft Vortigerns Ruh – Gorffwysfa Vortigern",
+    "type": "Grafschaft",
+    "page": "Estryll/Königreich Cenyr/Grafschaft Vortigerns Ruh/Grafschaft Vortigerns Ruh.html",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Vortigerns Ruh/grafschaft.data.mjs?v=vortigern-20261018",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Königreich",
+        "name": "Cenyr",
+        "slug": "cenyr"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Vortigerns Ruh",
+        "slug": "vortigerns-ruh"
+      }
+    ]
+  },
+  {
+    "id": "baronie-uthers-aufstieg",
+    "slug": "uthers-aufstieg",
+    "aliases": [],
+    "name": "Baronie Uthers Aufstieg",
+    "type": "Baronie",
+    "page": "Estryll/Königreich Cenyr/Grafschaft Vortigerns Ruh/Baronie Uthers Aufstieg/Baronie Uthers Aufstieg.html",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Vortigerns Ruh/Baronie Uthers Aufstieg/baronie.data.mjs?v=vortigern-20261018",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Königreich",
+        "name": "Cenyr",
+        "slug": "cenyr"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Vortigerns Ruh",
+        "slug": "vortigerns-ruh"
+      },
+      {
+        "type": "Baronie",
+        "name": "Uthers Aufstieg",
+        "slug": "uthers-aufstieg"
+      }
+    ]
+  },
+  {
+    "id": "herrschaft-cath",
+    "slug": "cath",
+    "aliases": [],
+    "name": "Herrschaft der Cath",
+    "type": "Herrschaft",
+    "page": "Estryll/Königreich Cenyr/Grafschaft Vortigerns Ruh/Herrschaft der Cath/Herrschaft der Cath.html",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Vortigerns Ruh/Herrschaft der Cath/herrschaft.data.mjs?v=vortigern-20261018",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Königreich",
+        "name": "Cenyr",
+        "slug": "cenyr"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Vortigerns Ruh",
+        "slug": "vortigerns-ruh"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Cath",
+        "slug": "cath"
+      }
+    ]
+  },
+  {
+    "id": "herrschaft-grael",
+    "slug": "grael",
+    "aliases": [],
+    "name": "Herrschaft der Grael",
+    "type": "Herrschaft",
+    "page": "Estryll/Königreich Cenyr/Grafschaft Vortigerns Ruh/Herrschaft der Grael/Herrschaft der Grael.html",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Vortigerns Ruh/Herrschaft der Grael/herrschaft.data.mjs?v=vortigern-20261018",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Königreich",
+        "name": "Cenyr",
+        "slug": "cenyr"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Vortigerns Ruh",
+        "slug": "vortigerns-ruh"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Grael",
+        "slug": "grael"
+      }
+    ]
+  },
+  {
+    "id": "herrschaft-penderyn",
+    "slug": "penderyn",
+    "aliases": [],
+    "name": "Herrschaft der Penderyn",
+    "type": "Herrschaft",
+    "page": "Estryll/Königreich Cenyr/Grafschaft Vortigerns Ruh/Herrschaft der Penderyn/Herrschaft der Penderyn.html",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Vortigerns Ruh/Herrschaft der Penderyn/herrschaft.data.mjs?v=vortigern-20261018",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Königreich",
+        "name": "Cenyr",
+        "slug": "cenyr"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Vortigerns Ruh",
+        "slug": "vortigerns-ruh"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Penderyn",
+        "slug": "penderyn"
+      }
+    ]
+  },
+  {
+    "id": "herrschaft-dienyddiwr",
+    "slug": "dienyddiwr",
+    "aliases": [],
+    "name": "Herrschaft der Dienyddiwr",
+    "type": "Herrschaft",
+    "page": "Estryll/Königreich Cenyr/Grafschaft Vortigerns Ruh/Herrschaft der Dienyddiwr/Herrschaft der Dienyddiwr.html",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Vortigerns Ruh/Herrschaft der Dienyddiwr/herrschaft.data.mjs?v=vortigern-20261018",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Königreich",
+        "name": "Cenyr",
+        "slug": "cenyr"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Vortigerns Ruh",
+        "slug": "vortigerns-ruh"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Dienyddiwr",
+        "slug": "dienyddiwr"
+      }
+    ]
+  },
+  {
+    "id": "herrschaft-dyngwn",
+    "slug": "dyngwn",
+    "aliases": [],
+    "name": "Herrschaft der Dyngwn",
+    "type": "Herrschaft",
+    "page": "Estryll/Königreich Cenyr/Grafschaft Vortigerns Ruh/Herrschaft der Dyngwn/Herrschaft der Dyngwn.html",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Vortigerns Ruh/Herrschaft der Dyngwn/herrschaft.data.mjs?v=vortigern-20261018",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Königreich",
+        "name": "Cenyr",
+        "slug": "cenyr"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Vortigerns Ruh",
+        "slug": "vortigerns-ruh"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Dyngwn",
+        "slug": "dyngwn"
+      }
+    ]
+  },
+  {
+    "id": "herrschaft-marwolaeth",
+    "slug": "marwolaeth",
+    "aliases": [],
+    "name": "Herrschaft der Marwolaeth",
+    "type": "Herrschaft",
+    "page": "Estryll/Königreich Cenyr/Grafschaft Vortigerns Ruh/Herrschaft der Marwolaeth/Herrschaft der Marwolaeth.html",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Vortigerns Ruh/Herrschaft der Marwolaeth/herrschaft.data.mjs?v=vortigern-20261018",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Königreich",
+        "name": "Cenyr",
+        "slug": "cenyr"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Vortigerns Ruh",
+        "slug": "vortigerns-ruh"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Marwolaeth",
+        "slug": "marwolaeth"
+      }
+    ]
+  },
+
+  {
     id: "kontinente-startseite",
     slug: "kontinente",
     aliases: ["kontinente-uebersicht", "kontinente-start"],

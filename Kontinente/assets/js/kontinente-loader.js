@@ -64,6 +64,18 @@
       return;
     }
 
+    if (entry.dataType === "module") {
+      import(resolveFeaturePath(entry.data)).then(({ default: data }) => {
+        window.KONTINENTE_DATA = data;
+        window.ORT_DATA = data;
+        notifyDataReady(data);
+      }).catch((error) => {
+        console.warn(`Kontinentdaten konnten nicht geladen werden: ${entry.data}`, error);
+        notifyDataReady(null);
+      });
+      return;
+    }
+
     const script = document.createElement("script");
     script.src = resolveFeaturePath(entry.data);
     script.defer = true;

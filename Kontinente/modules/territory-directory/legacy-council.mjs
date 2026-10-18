@@ -1,13 +1,13 @@
-import { renderCouncilGroups } from './council-directory.mjs?v=panels-20260911a';
+import { renderCouncilGroups } from './council-directory.mjs?v=vortigern-20261018';
 
 const imageSelector = 'img[src], .orte-image-slot[data-orte-image-key]';
 
 // Each table retains its own source and observer; generated images never become
 // part of inline-export numbering. This controller is owned by the page adapter.
-export function createLegacyCouncilController({ cleanText, cloneImage }) {
+export function createLegacyCouncilController({ cleanText, cloneImage, resolveGroups = (_table, groups) => groups }) {
   const records = new WeakMap();
   function render(table) {
-    const groups = readCouncilTable(table, { cleanText, cloneImage });
+    const groups = resolveGroups(table, readCouncilTable(table, { cleanText, cloneImage }));
     if (!groups.length) return;
     const next = renderCouncilGroups(groups);
     let record = records.get(table);

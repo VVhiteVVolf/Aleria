@@ -236,18 +236,23 @@
     {
       id: "cenyr-vortigerns-ruh",
       title: "Vortigerns Ruh",
-      status: MAP_STATUS.PLANNED,
+      status: MAP_STATUS.ACTIVE,
       type: MAP_TYPES.COUNTY,
       hierarchy: [
         { level: "kingdom", slug: "cenyr", title: "Cenyr" },
         { level: "county", slug: "vortigerns-ruh", title: "Vortigerns Ruh" },
       ],
       folder: "Cenyr/vortigerns-ruh",
+      config: "Cenyr/vortigerns-ruh/template.config.js",
+      images: {
+        normal: "Cenyr/vortigerns-ruh/Kartenbilder/normal.webp",
+        regions: "Cenyr/vortigerns-ruh/Kartenbilder/regions.webp",
+        pins: "Cenyr/vortigerns-ruh/Kartenbilder/pins.webp",
+      },
       link: "karte.html?map=cenyr-vortigerns-ruh",
       dataPath: "Cenyr/vortigerns-ruh/data.json",
       rulingHouse: "Koenigliche Grafschaft des Hauses Pendrag",
-      editableDraft: true,
-      notes: "Geplante Grafschaftskarte. Bilder/Config werden spaeter ergaenzt.",
+      notes: "Drei Kartenebenen und 47 aus den gelieferten Koordinaten übernommene Ortsmarker.",
     },
     {
       id: "cenyr-tal-der-milane",

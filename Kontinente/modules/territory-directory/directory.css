@@ -229,6 +229,7 @@
 .kingdom-domain-meta { margin-top: 0.55rem; }
 .kingdom-domain-meta > div { font-size: 0.82rem; }
 .kingdom-place-card { grid-template-columns: 48px minmax(0, 1fr); min-height: 76px; }
+.kingdom-place-card .directory-details > div { grid-template-columns: 5.2rem minmax(0, 1fr); }
 .kingdom-place-icon-frame { width: 48px; height: 54px; }
 .territory-directory .kingdom-place-icon-frame img {
   display: block;

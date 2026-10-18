@@ -30,6 +30,7 @@ function renderCouncilMember(member) {
   card.append(element('span', 'herrschaft-person-office', member.office || 'Amt nicht angegeben'));
   const portrait = element('div', 'herrschaft-person-portrait');
   const image = member.image?.tagName === 'IMG' ? member.image : element('img');
+  if (!image.getAttribute('src') && member.imageSrc) image.src = member.imageSrc;
   if (!image.getAttribute('src')) image.src = silhouette;
   image.alt = member.imageAlt || `Porträt: ${member.name || 'Name nicht überliefert'}`;
   image.loading = 'lazy';

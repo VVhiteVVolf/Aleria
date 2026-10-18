@@ -6,7 +6,7 @@
   const directoryUrl = new URL('../../modules/territory-directory/settlement-directory.mjs?v=register-20261018a', document.currentScript.src);
   const { renderSettlementDomain } = await import(directoryUrl);
   const { mountDirectoryBrowser, directoryState } = await import(new URL('directory-browser.mjs?v=register-20261018a', directoryUrl));
-  const { renderCouncilGroups } = await import(new URL('council-directory.mjs?v=panels-20260911a', directoryUrl));
+  const { renderCouncilGroups } = await import(new URL('council-directory.mjs?v=vortigern-20261018', directoryUrl));
 
   renderPageModules();
   window.addEventListener("aleria:kontinente:data-ready", renderPageModules);
@@ -47,7 +47,7 @@
     body.append(
       renderArticleHeader(article),
       renderArticleIntroduction(article),
-      renderArticleBody(article)
+      renderArticleBody(article, view)
     );
     frame.append(caption, body);
     root.replaceChildren(frame);
@@ -103,7 +103,7 @@
     return row;
   }
 
-  function renderArticleBody(article) {
+  function renderArticleBody(article, view) {
     const row = document.createElement("tr");
     const cell = document.createElement("td");
     cell.colSpan = 5;
@@ -114,10 +114,17 @@
     politics.setAttribute("aria-labelledby", "politik");
     politics.append(
       renderSectionHeading("politik", "4.) Politik"),
-      createModuleRoot("herrschaft-person-root", "data-herrschaft-council", "Der Rat des Ritterfürsten wird geladen."),
-      createElement("h3", "herrschaft-subheading", "Vasallen und Amtsträger"),
-      createModuleRoot("herrschaft-person-root", "data-herrschaft-vassals", "Die Vasallenübersicht wird geladen.")
+      createModuleRoot("herrschaft-person-root", "data-herrschaft-council", "Die Ratsübersicht wird geladen.")
     );
+    if (view.vassalGroups?.some(group => group.members?.length)) {
+      politics.append(
+        createElement("h3", "herrschaft-subheading", "Vasallen und Amtsträger"),
+        createModuleRoot("herrschaft-person-root", "data-herrschaft-vassals", "Die Vasallenübersicht wird geladen.")
+      );
+    }
+    if (article.councilNote) {
+      politics.insertBefore(createElement("p", "herrschaft-source-note", article.councilNote), politics.children[1]);
+    }
     cell.append(politics);
 
     const administration = createElement("section", "herrschaft-copy");
@@ -152,7 +159,12 @@
     const geography = renderCopySection("geographie", "7.) Geographie", article.copy?.geography);
     geography.append(createModuleRoot("kingdom-county-card-view", "data-herrschaft-geography", "Die Ortsübersicht wird geladen."));
     cell.append(geography);
-    cell.append(renderCopySection("flora-fauna", "8.) Flora & Fauna", article.copy?.flora, "..."));
+    const flora = renderCopySection("flora-fauna", "8.) Flora & Fauna", article.copy?.flora, article.floraSections ? "" : "...");
+    for (const section of article.floraSections || []) {
+      flora.append(createElement("h3", "herrschaft-subheading", section.title));
+      appendParagraphs(flora, section.paragraphs);
+    }
+    cell.append(flora);
     cell.append(renderCopySection("trivia", "9.) Trivia", article.copy?.trivia, "..."));
 
     row.append(cell);
@@ -312,9 +324,9 @@
       members: (group.members || []).map(person => ({
         ...person,
         image: person.imageSrc ? createImage(person.imageSrc, person.imageAlt) : null,
-        href: person.familyId && familyTreePage
+        href: person.href || (person.familyId && familyTreePage
           ? `${familyTreePage}?family=${encodeURIComponent(person.familyId)}&mode=view`
-          : '',
+          : ''),
       })),
     }));
     root.replaceChildren(renderCouncilGroups(normalized));
@@ -364,12 +376,13 @@
   }
 
   function renderGeography(root, geography) {
-    if (!root || !geography?.domain) return;
+    const domains = geography?.domains || (geography?.domain ? [geography.domain] : []);
+    if (!root || !domains.length) return;
     const state = directoryState(root);
     const fragment = document.createDocumentFragment();
 
     if (geography.map?.imageSrc) fragment.append(renderMapPanel(geography.map));
-    fragment.append(renderDomain(geography.domain));
+    domains.forEach(domain => fragment.append(renderDomain(domain)));
     root.replaceChildren(fragment);
     root.classList.add('territory-directory');
     mountDirectoryBrowser(root, { kind: 'places', state });
@@ -402,7 +415,7 @@
       href: domain.href || '',
       crest: domain.crestSrc ? createImage(domain.crestSrc, domain.crestAlt || 'Banner der Herrschaft') : null,
       center: domain.center,
-      centerHref: getPlaceHref(domain.center),
+      centerHref: domain.centerHref || getPlaceHref(domain.center),
       places: (domain.sections || []).flatMap((section) => [
         { kind: 'separator', title: section.title || 'Orte' },
         ...(section.places || []).map((place) => ({

@@ -4,10 +4,10 @@
   if (!page) return;
 
   const directoryBase = new URL('../../modules/territory-directory/', document.currentScript.src);
-  const [{ renderFamilySection: renderHouseDirectorySection }, { renderSettlementDomain }, { createLegacyCouncilController }, { enhanceInfoboxes }, { HOUSE_RANKS }, , { mountDirectoryBrowser, directoryState }, { refineReferenceTables }] = await Promise.all([
+  const [{ renderFamilySection: renderHouseDirectorySection }, { renderSettlementDomain }, { createLegacyCouncilController }, { enhanceInfoboxes }, { HOUSE_RANKS }, , { mountDirectoryBrowser, directoryState }, { refineReferenceTables }, { resolveRoyalCouncil }] = await Promise.all([
     import(new URL('house-directory.mjs?v=register-20261018a', directoryBase)),
     import(new URL('settlement-directory.mjs?v=register-20261018a', directoryBase)),
-    import(new URL('legacy-council.mjs?v=panels-20260911a', directoryBase)),
+    import(new URL('legacy-council.mjs?v=vortigern-20261018', directoryBase)),
     import(new URL('infobox.mjs?v=panels-20260911a', directoryBase)),
     import(new URL('modules/house-content/house-ranks.generated.mjs?v=panels-20260911a', housePageBase)),
     import(new URL('haeuser.registry.js?v=gwendolyn-20260911h', housePageBase)).catch((error) => {
@@ -15,6 +15,7 @@
     }),
     import(new URL('directory-browser.mjs?v=register-20261018a', directoryBase)),
     import(new URL('reference-tables.mjs?v=20261018b', directoryBase)),
+    import(new URL('../cenyr-court/royal-council.mjs?v=vortigern-20261018', directoryBase)),
   ]);
 
   page.querySelectorAll('table').forEach((table) => {
@@ -32,7 +33,7 @@
   const countyObservers = new WeakMap();
   const familyCardViews = new WeakMap();
   const familyObservers = new WeakMap();
-  const councilController = createLegacyCouncilController({ cleanText: getCleanText, cloneImage });
+  const councilController = createLegacyCouncilController({ cleanText: getCleanText, cloneImage, resolveGroups: resolveRoyalCouncil });
   let geographySourceIndex = 0;
   let familySourceIndex = 0;
 

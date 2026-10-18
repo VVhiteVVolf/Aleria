@@ -1,10 +1,3223 @@
 {
   "schemaVersion": 1,
   "dataPath": "Cenyr/vortigerns-ruh/data.json",
-  "revision": 0,
-  "updatedAt": "2026-08-01T04:59:40.656Z",
+  "revision": 1,
+  "updatedAt": "2026-10-18T20:00:00.000Z",
   "state": {
-    "pins": [],
+    "pins": [
+      {
+        "id": "vortigern-brynthcarreg",
+        "title": "Brynthcarreg",
+        "x": 0.100830078125,
+        "y": 0.5031702898550725,
+        "cat": "mmflt1x3v22o",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/bergbausiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "",
+        "crestLink": "",
+        "banner": "",
+        "bannerLink": "",
+        "region": "Vortigerns Ruh",
+        "house": "Haus Ceirwyn",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Brynthcarreg"
+          },
+          {
+            "k": "Typ",
+            "v": "Bergbausiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": ""
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": ""
+      },
+      {
+        "id": "vortigern-craithfaer",
+        "title": "Craithfaer",
+        "x": 0.552978515625,
+        "y": 0.1499094202898551,
+        "cat": "mmflt1x3v22o",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/bergbausiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "",
+        "crestLink": "",
+        "banner": "",
+        "bannerLink": "",
+        "region": "Vortigerns Ruh",
+        "house": "Haus Dyngwn",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Craithfaer"
+          },
+          {
+            "k": "Typ",
+            "v": "Bergbausiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": ""
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": ""
+      },
+      {
+        "id": "vortigern-llyswellyn",
+        "title": "Llyswellyn",
+        "x": 0.310546875,
+        "y": 0.42889492753623193,
+        "cat": "mmflrqajby8b",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/bauernsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "",
+        "crestLink": "",
+        "banner": "",
+        "bannerLink": "",
+        "region": "Vortigerns Ruh",
+        "house": "Haus Penderyn",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Llyswellyn"
+          },
+          {
+            "k": "Typ",
+            "v": "Bauernsiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": ""
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": ""
+      },
+      {
+        "id": "vortigern-llysglas",
+        "title": "Llysglas",
+        "x": 0.079833984375,
+        "y": 0.09012681159420288,
+        "cat": "mmflrqajby8b",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/bauernsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "",
+        "crestLink": "",
+        "banner": "",
+        "bannerLink": "",
+        "region": "Vortigerns Ruh",
+        "house": "Haus Marwolaeth",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Llysglas"
+          },
+          {
+            "k": "Typ",
+            "v": "Bauernsiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": ""
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": ""
+      },
+      {
+        "id": "vortigern-uathachs-haus",
+        "title": "Uathachs Haus",
+        "x": 0.236572265625,
+        "y": 0.9705615942028986,
+        "cat": "location-wohnhaus",
+        "templateId": "gebaeude",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/druidenh-tte.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "",
+        "crestLink": "",
+        "banner": "",
+        "bannerLink": "",
+        "region": "Vortigerns Ruh",
+        "house": "",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Uathachs Haus"
+          },
+          {
+            "k": "Typ",
+            "v": "Wohnhaus"
+          },
+          {
+            "k": "Besitzer",
+            "v": ""
+          },
+          {
+            "k": "Bewohner",
+            "v": ""
+          },
+          {
+            "k": "Nutzung",
+            "v": ""
+          },
+          {
+            "k": "Gebäude / Räume",
+            "v": ""
+          },
+          {
+            "k": "Nebengebäude",
+            "v": ""
+          },
+          {
+            "k": "Versorgung",
+            "v": ""
+          },
+          {
+            "k": "Zugang",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": ""
+      },
+      {
+        "id": "vortigern-cor-y-gwarchodwr",
+        "title": "Côr y Gwarchodwr",
+        "x": 0.1943359375,
+        "y": 0.4402173913043478,
+        "cat": "location-klostersiedlung",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/klostersiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "",
+        "crestLink": "",
+        "banner": "",
+        "bannerLink": "",
+        "region": "Vortigerns Ruh",
+        "house": "Haus Marwolaeth",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Côr y Gwarchodwr"
+          },
+          {
+            "k": "Typ",
+            "v": "Klostersiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": ""
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": ""
+      },
+      {
+        "id": "vortigern-caorthllyn",
+        "title": "Caorthllyn",
+        "x": 0.072265625,
+        "y": 0.8519021739130435,
+        "cat": "mmflt7uj831y",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/waldsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "",
+        "crestLink": "",
+        "banner": "",
+        "bannerLink": "",
+        "region": "Vortigerns Ruh",
+        "house": "Haus Ceirwyn",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Caorthllyn"
+          },
+          {
+            "k": "Typ",
+            "v": "Waldsiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": ""
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": ""
+      },
+      {
+        "id": "vortigern-llysceffyl",
+        "title": "Llysceffyl",
+        "x": 0.05517578125,
+        "y": 0.22871376811594202,
+        "cat": "location-rosszuchtsiedlung",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/pferdezuchtsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "",
+        "crestLink": "",
+        "banner": "",
+        "bannerLink": "",
+        "region": "Vortigerns Ruh",
+        "house": "",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Llysceffyl"
+          },
+          {
+            "k": "Typ",
+            "v": "Rosszuchtsiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": ""
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": ""
+      },
+      {
+        "id": "vortigern-ahnenbaum-1154-68",
+        "title": "Ahnenbaum",
+        "x": 0.28173828125,
+        "y": 0.9692028985507246,
+        "cat": "location-ahnenbaum",
+        "templateId": "natur",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/ahnenbaum.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "",
+        "crestLink": "",
+        "banner": "",
+        "bannerLink": "",
+        "region": "Vortigerns Ruh",
+        "house": "",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Ahnenbaum"
+          },
+          {
+            "k": "Typ",
+            "v": "Ahnenbaum"
+          },
+          {
+            "k": "Baumart",
+            "v": ""
+          },
+          {
+            "k": "Alter",
+            "v": ""
+          },
+          {
+            "k": "Verehrte Ahnen",
+            "v": ""
+          },
+          {
+            "k": "Hüter",
+            "v": ""
+          },
+          {
+            "k": "Rituale",
+            "v": ""
+          },
+          {
+            "k": "Magische Einflüsse",
+            "v": ""
+          },
+          {
+            "k": "Überlieferungen",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": ""
+      },
+      {
+        "id": "vortigern-llyswynfaen",
+        "title": "Llyswynfaen",
+        "x": 0.419921875,
+        "y": 0.0656702898550725,
+        "cat": "mmflrqajby8b",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/bauernsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "",
+        "crestLink": "",
+        "banner": "",
+        "bannerLink": "",
+        "region": "Vortigerns Ruh",
+        "house": "Haus Penderyn",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Llyswynfaen"
+          },
+          {
+            "k": "Typ",
+            "v": "Bauernsiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": ""
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": ""
+      },
+      {
+        "id": "vortigern-ffynnonbren",
+        "title": "Ffynnonbren",
+        "x": 0.12841796875,
+        "y": 0.6893115942028986,
+        "cat": "mmflt7uj831y",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/waldsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "",
+        "crestLink": "",
+        "banner": "",
+        "bannerLink": "",
+        "region": "Vortigerns Ruh",
+        "house": "Haus Ceirwyn",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Ffynnonbren"
+          },
+          {
+            "k": "Typ",
+            "v": "Waldsiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": ""
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": ""
+      },
+      {
+        "id": "vortigern-ahnenbaum-1537-615",
+        "title": "Ahnenbaum",
+        "x": 0.375244140625,
+        "y": 0.7214673913043479,
+        "cat": "location-ahnenbaum",
+        "templateId": "natur",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/ahnenbaum.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "",
+        "crestLink": "",
+        "banner": "",
+        "bannerLink": "",
+        "region": "Vortigerns Ruh",
+        "house": "",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Ahnenbaum"
+          },
+          {
+            "k": "Typ",
+            "v": "Ahnenbaum"
+          },
+          {
+            "k": "Baumart",
+            "v": ""
+          },
+          {
+            "k": "Alter",
+            "v": ""
+          },
+          {
+            "k": "Verehrte Ahnen",
+            "v": ""
+          },
+          {
+            "k": "Hüter",
+            "v": ""
+          },
+          {
+            "k": "Rituale",
+            "v": ""
+          },
+          {
+            "k": "Magische Einflüsse",
+            "v": ""
+          },
+          {
+            "k": "Überlieferungen",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": ""
+      },
+      {
+        "id": "vortigern-ffyncoed",
+        "title": "Ffyncoed",
+        "x": 0.510009765625,
+        "y": 0.6213768115942029,
+        "cat": "mmflt7uj831y",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/waldsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "",
+        "crestLink": "",
+        "banner": "",
+        "bannerLink": "",
+        "region": "Vortigerns Ruh",
+        "house": "Haus Ceirwyn",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Ffyncoed"
+          },
+          {
+            "k": "Typ",
+            "v": "Waldsiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": ""
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": ""
+      },
+      {
+        "id": "vortigern-bronfaelhir",
+        "title": "Bronfaelhir",
+        "x": 0.602294921875,
+        "y": 0.5471014492753623,
+        "cat": "mmflrqajby8b",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/bauernsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "",
+        "crestLink": "",
+        "banner": "",
+        "bannerLink": "",
+        "region": "Vortigerns Ruh",
+        "house": "Haus Dienyddiwr",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Bronfaelhir"
+          },
+          {
+            "k": "Typ",
+            "v": "Bauernsiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": ""
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": ""
+      },
+      {
+        "id": "vortigern-bronmarw",
+        "title": "Bronmarw",
+        "x": 0.093017578125,
+        "y": 0.36050724637681164,
+        "cat": "mmflrqajby8b",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/bauernsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "",
+        "crestLink": "",
+        "banner": "",
+        "bannerLink": "",
+        "region": "Vortigerns Ruh",
+        "house": "Haus Marwolaeth",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Bronmarw"
+          },
+          {
+            "k": "Typ",
+            "v": "Bauernsiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": ""
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": ""
+      },
+      {
+        "id": "vortigern-carregdyn",
+        "title": "Carregdyn",
+        "x": 0.484130859375,
+        "y": 0.07065217391304346,
+        "cat": "mmflt1x3v22o",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/bergbausiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "",
+        "crestLink": "",
+        "banner": "",
+        "bannerLink": "",
+        "region": "Vortigerns Ruh",
+        "house": "Haus Dyngwn",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Carregdyn"
+          },
+          {
+            "k": "Typ",
+            "v": "Bergbausiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": ""
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": ""
+      },
+      {
+        "id": "vortigern-bronfael",
+        "title": "Bronfael",
+        "x": 0.37841796875,
+        "y": 0.18614130434782605,
+        "cat": "mmflrqajby8b",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/bauernsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "",
+        "crestLink": "",
+        "banner": "",
+        "bannerLink": "",
+        "region": "Vortigerns Ruh",
+        "house": "Haus Penderyn",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Bronfael"
+          },
+          {
+            "k": "Typ",
+            "v": "Bauernsiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": ""
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": ""
+      },
+      {
+        "id": "vortigern-gwaulbryn",
+        "title": "Gwaulbryn",
+        "x": 0.307373046875,
+        "y": 0.27626811594202894,
+        "cat": "mmflrqajby8b",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/bauernsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "",
+        "crestLink": "",
+        "banner": "",
+        "bannerLink": "",
+        "region": "Vortigerns Ruh",
+        "house": "Haus Penderyn",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Gwaulbryn"
+          },
+          {
+            "k": "Typ",
+            "v": "Bauernsiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": ""
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": ""
+      },
+      {
+        "id": "vortigern-garwmor",
+        "title": "Garwmor",
+        "x": 0.20654296875,
+        "y": 0.26721014492753625,
+        "cat": "mmflsfqh3sft",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/marktsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "",
+        "crestLink": "",
+        "banner": "",
+        "bannerLink": "",
+        "region": "Vortigerns Ruh",
+        "house": "Haus Marwolaeth",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Garwmor"
+          },
+          {
+            "k": "Typ",
+            "v": "Handelssiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": ""
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": ""
+      },
+      {
+        "id": "vortigern-drakenburg",
+        "title": "Drakenburg",
+        "x": 0.2724609375,
+        "y": 0.11413043478260865,
+        "cat": "mmfls5afqqpr",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/burgsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "",
+        "crestLink": "",
+        "banner": "",
+        "bannerLink": "",
+        "region": "Vortigerns Ruh",
+        "house": "Haus Penderyn",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Drakenburg"
+          },
+          {
+            "k": "Typ",
+            "v": "Burgsiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": ""
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": ""
+      },
+      {
+        "id": "vortigern-zum-grunen-pfad",
+        "title": "Zum Grünen Pfad",
+        "x": 0.015869140625,
+        "y": 0.5489130434782609,
+        "cat": "mmflvj37jbh2",
+        "templateId": "gastbetrieb",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/taverne.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "",
+        "crestLink": "",
+        "banner": "",
+        "bannerLink": "",
+        "region": "Vortigerns Ruh",
+        "house": "Haus Cath",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Zum Grünen Pfad"
+          },
+          {
+            "k": "Typ",
+            "v": "Taverne"
+          },
+          {
+            "k": "Betreiber",
+            "v": ""
+          },
+          {
+            "k": "Speisen / Getränke",
+            "v": ""
+          },
+          {
+            "k": "Unterkunft",
+            "v": ""
+          },
+          {
+            "k": "Preislage",
+            "v": ""
+          },
+          {
+            "k": "Öffnungszeiten",
+            "v": ""
+          },
+          {
+            "k": "Stammgäste",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": ""
+      },
+      {
+        "id": "vortigern-turnierplatz-feld-der-glorie",
+        "title": "Turnierplatz – Feld der Glorie",
+        "x": 0.528076171875,
+        "y": 0.42028985507246375,
+        "cat": "mmflx4731uj6",
+        "templateId": "institution",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/turnierplatz.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "",
+        "crestLink": "",
+        "banner": "",
+        "bannerLink": "",
+        "region": "Vortigerns Ruh",
+        "house": "",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Turnierplatz – Feld der Glorie"
+          },
+          {
+            "k": "Typ",
+            "v": "Turnierplatz"
+          },
+          {
+            "k": "Betreiber",
+            "v": ""
+          },
+          {
+            "k": "Disziplinen",
+            "v": ""
+          },
+          {
+            "k": "Anlagen",
+            "v": ""
+          },
+          {
+            "k": "Teilnahme",
+            "v": ""
+          },
+          {
+            "k": "Termine",
+            "v": ""
+          },
+          {
+            "k": "Ausrüstung",
+            "v": ""
+          },
+          {
+            "k": "Preise / Gebühren",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": ""
+      },
+      {
+        "id": "vortigern-castell-cath",
+        "title": "Castell Cath",
+        "x": 0.843994140625,
+        "y": 0.49139492753623193,
+        "cat": "mmfls5afqqpr",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/burgsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "",
+        "crestLink": "",
+        "banner": "",
+        "bannerLink": "",
+        "region": "Vortigerns Ruh",
+        "house": "Haus Cath",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Castell Cath"
+          },
+          {
+            "k": "Typ",
+            "v": "Burgsiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": ""
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": ""
+      },
+      {
+        "id": "vortigern-zur-feuerzunge",
+        "title": "Zur Feuerzunge",
+        "x": 0.44970703125,
+        "y": 0.1494565217391305,
+        "cat": "mmflvj37jbh2",
+        "templateId": "gastbetrieb",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/taverne.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "",
+        "crestLink": "",
+        "banner": "",
+        "bannerLink": "",
+        "region": "Vortigerns Ruh",
+        "house": "Haus Penderyn",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Zur Feuerzunge"
+          },
+          {
+            "k": "Typ",
+            "v": "Taverne"
+          },
+          {
+            "k": "Betreiber",
+            "v": ""
+          },
+          {
+            "k": "Speisen / Getränke",
+            "v": ""
+          },
+          {
+            "k": "Unterkunft",
+            "v": ""
+          },
+          {
+            "k": "Preislage",
+            "v": ""
+          },
+          {
+            "k": "Öffnungszeiten",
+            "v": ""
+          },
+          {
+            "k": "Stammgäste",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": ""
+      },
+      {
+        "id": "vortigern-calon",
+        "title": "Calon",
+        "x": 0.2626953125,
+        "y": 0.6707427536231885,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "",
+        "crestLink": "",
+        "banner": "",
+        "bannerLink": "",
+        "region": "Vortigerns Ruh",
+        "house": "Haus Ceirwyn",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Calon"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": ""
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": ""
+      },
+      {
+        "id": "vortigern-zum-konigsweg",
+        "title": "Zum Königsweg",
+        "x": 0.72802734375,
+        "y": 0.4556159420289855,
+        "cat": "mmflvj37jbh2",
+        "templateId": "gastbetrieb",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/taverne.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "",
+        "crestLink": "",
+        "banner": "",
+        "bannerLink": "",
+        "region": "Vortigerns Ruh",
+        "house": "Haus Cath",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Zum Königsweg"
+          },
+          {
+            "k": "Typ",
+            "v": "Taverne"
+          },
+          {
+            "k": "Betreiber",
+            "v": ""
+          },
+          {
+            "k": "Speisen / Getränke",
+            "v": ""
+          },
+          {
+            "k": "Unterkunft",
+            "v": ""
+          },
+          {
+            "k": "Preislage",
+            "v": ""
+          },
+          {
+            "k": "Öffnungszeiten",
+            "v": ""
+          },
+          {
+            "k": "Stammgäste",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": ""
+      },
+      {
+        "id": "vortigern-mathragon",
+        "title": "Mathragon",
+        "x": 0.727783203125,
+        "y": 0.2694746376811594,
+        "cat": "mmflrbzxydg7",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "",
+        "crestLink": "",
+        "banner": "",
+        "bannerLink": "",
+        "region": "Vortigerns Ruh",
+        "house": "",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Mathragon"
+          },
+          {
+            "k": "Typ",
+            "v": "Hauptstadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": ""
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": ""
+      },
+      {
+        "id": "vortigern-des-drachens-ruh",
+        "title": "Des Drachens Ruh",
+        "x": 0.5966796875,
+        "y": 0.7595108695652174,
+        "cat": "mmflvj37jbh2",
+        "templateId": "gastbetrieb",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/taverne.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "",
+        "crestLink": "",
+        "banner": "",
+        "bannerLink": "",
+        "region": "Vortigerns Ruh",
+        "house": "Haus Penderyn",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Des Drachens Ruh"
+          },
+          {
+            "k": "Typ",
+            "v": "Taverne"
+          },
+          {
+            "k": "Betreiber",
+            "v": ""
+          },
+          {
+            "k": "Speisen / Getränke",
+            "v": ""
+          },
+          {
+            "k": "Unterkunft",
+            "v": ""
+          },
+          {
+            "k": "Preislage",
+            "v": ""
+          },
+          {
+            "k": "Öffnungszeiten",
+            "v": ""
+          },
+          {
+            "k": "Stammgäste",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": ""
+      },
+      {
+        "id": "vortigern-garwmathr",
+        "title": "Garwmathr",
+        "x": 0.7177734375,
+        "y": 0.5475543478260869,
+        "cat": "mmflsfqh3sft",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/marktsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "",
+        "crestLink": "",
+        "banner": "",
+        "bannerLink": "",
+        "region": "Vortigerns Ruh",
+        "house": "Haus Dienyddiwr",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Garwmathr"
+          },
+          {
+            "k": "Typ",
+            "v": "Handelssiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": ""
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": ""
+      },
+      {
+        "id": "vortigern-braichgwen",
+        "title": "Braichgwen",
+        "x": 0.191650390625,
+        "y": 0.9035326086956522,
+        "cat": "mmflt7uj831y",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/waldsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "",
+        "crestLink": "",
+        "banner": "",
+        "bannerLink": "",
+        "region": "Vortigerns Ruh",
+        "house": "Haus Ceirwyn",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Braichgwen"
+          },
+          {
+            "k": "Typ",
+            "v": "Waldsiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": ""
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": ""
+      },
+      {
+        "id": "vortigern-ffyndir",
+        "title": "Ffyndir",
+        "x": 0.3212890625,
+        "y": 0.5285326086956521,
+        "cat": "mmflt7uj831y",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/waldsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "",
+        "crestLink": "",
+        "banner": "",
+        "bannerLink": "",
+        "region": "Vortigerns Ruh",
+        "house": "Haus Ceirwyn",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Ffyndir"
+          },
+          {
+            "k": "Typ",
+            "v": "Waldsiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": ""
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": ""
+      },
+      {
+        "id": "vortigern-traethceir",
+        "title": "Traethceir",
+        "x": 0.650390625,
+        "y": 0.8233695652173914,
+        "cat": "mmflry5furso",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/hafensiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "",
+        "crestLink": "",
+        "banner": "",
+        "bannerLink": "",
+        "region": "Vortigerns Ruh",
+        "house": "Haus Ceirwyn",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Traethceir"
+          },
+          {
+            "k": "Typ",
+            "v": "Hafensiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": ""
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": ""
+      },
+      {
+        "id": "vortigern-cor-y-gan",
+        "title": "Côr y Gân",
+        "x": 0.57421875,
+        "y": 0.9089673913043478,
+        "cat": "location-klostersiedlung",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/klostersiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "",
+        "crestLink": "",
+        "banner": "",
+        "bannerLink": "",
+        "region": "Vortigerns Ruh",
+        "house": "Haus Ceirwyn",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Côr y Gân"
+          },
+          {
+            "k": "Typ",
+            "v": "Klostersiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": ""
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": ""
+      },
+      {
+        "id": "vortigern-bronwyn",
+        "title": "Bronwyn",
+        "x": 0.44287109375,
+        "y": 0.39809782608695654,
+        "cat": "mmflrqajby8b",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/bauernsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "",
+        "crestLink": "",
+        "banner": "",
+        "bannerLink": "",
+        "region": "Vortigerns Ruh",
+        "house": "Haus Grael",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Bronwyn"
+          },
+          {
+            "k": "Typ",
+            "v": "Bauernsiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": ""
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": ""
+      },
+      {
+        "id": "vortigern-garwmwyn",
+        "title": "Garwmwyn",
+        "x": 0.076416015625,
+        "y": 0.7454710144927537,
+        "cat": "mmflt1x3v22o",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/bergbausiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "",
+        "crestLink": "",
+        "banner": "",
+        "bannerLink": "",
+        "region": "Vortigerns Ruh",
+        "house": "Haus Ceirwyn",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Garwmwyn"
+          },
+          {
+            "k": "Typ",
+            "v": "Bergbausiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": ""
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": ""
+      },
+      {
+        "id": "vortigern-braichfaer",
+        "title": "Braichfaer",
+        "x": 0.4404296875,
+        "y": 0.707427536231884,
+        "cat": "mmflt7uj831y",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/waldsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "",
+        "crestLink": "",
+        "banner": "",
+        "bannerLink": "",
+        "region": "Vortigerns Ruh",
+        "house": "Haus Ceirwyn",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Braichfaer"
+          },
+          {
+            "k": "Typ",
+            "v": "Waldsiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": ""
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": ""
+      },
+      {
+        "id": "vortigern-cor-y-llawenydd",
+        "title": "Côr y Llawenydd",
+        "x": 0.392822265625,
+        "y": 0.49818840579710144,
+        "cat": "location-klostersiedlung",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/klostersiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "",
+        "crestLink": "",
+        "banner": "",
+        "bannerLink": "",
+        "region": "Vortigerns Ruh",
+        "house": "Haus Ceirwyn",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Côr y Llawenydd"
+          },
+          {
+            "k": "Typ",
+            "v": "Klostersiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": ""
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": ""
+      },
+      {
+        "id": "vortigern-mwyncarreg",
+        "title": "Mwyncarreg",
+        "x": 0.39453125,
+        "y": 0.33559782608695654,
+        "cat": "mmflt1x3v22o",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/bergbausiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "",
+        "crestLink": "",
+        "banner": "",
+        "bannerLink": "",
+        "region": "Vortigerns Ruh",
+        "house": "",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Mwyncarreg"
+          },
+          {
+            "k": "Typ",
+            "v": "Bergbausiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": ""
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": ""
+      },
+      {
+        "id": "vortigern-bragwhislyn",
+        "title": "Bragwhislyn",
+        "x": 0.309326171875,
+        "y": 0.08333333333333337,
+        "cat": "location-brauersiedlung",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/brauersiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "",
+        "crestLink": "",
+        "banner": "",
+        "bannerLink": "",
+        "region": "Vortigerns Ruh",
+        "house": "Haus Penderyn",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Bragwhislyn"
+          },
+          {
+            "k": "Typ",
+            "v": "Brauersiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": ""
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": ""
+      },
+      {
+        "id": "vortigern-gwaulmor",
+        "title": "Gwaulmor",
+        "x": 0.649169921875,
+        "y": 0.6875,
+        "cat": "mmflrqajby8b",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/bauernsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "",
+        "crestLink": "",
+        "banner": "",
+        "bannerLink": "",
+        "region": "Vortigerns Ruh",
+        "house": "Haus Dienyddiwr",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Gwaulmor"
+          },
+          {
+            "k": "Typ",
+            "v": "Bauernsiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": ""
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": ""
+      },
+      {
+        "id": "vortigern-traethglas",
+        "title": "Traethglas",
+        "x": 0.73681640625,
+        "y": 0.661231884057971,
+        "cat": "mmflry5furso",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/hafensiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "",
+        "crestLink": "",
+        "banner": "",
+        "bannerLink": "",
+        "region": "Vortigerns Ruh",
+        "house": "Haus Dienyddiwr",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Traethglas"
+          },
+          {
+            "k": "Typ",
+            "v": "Hafensiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": ""
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": ""
+      },
+      {
+        "id": "vortigern-caorthwyn",
+        "title": "Caorthwyn",
+        "x": 0.550537109375,
+        "y": 0.7151268115942029,
+        "cat": "mmflt7uj831y",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/waldsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "",
+        "crestLink": "",
+        "banner": "",
+        "bannerLink": "",
+        "region": "Vortigerns Ruh",
+        "house": "Haus Ceirwyn",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Caorthwyn"
+          },
+          {
+            "k": "Typ",
+            "v": "Waldsiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": ""
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": ""
+      },
+      {
+        "id": "vortigern-mwynhir",
+        "title": "Mwynhir",
+        "x": 0.584228515625,
+        "y": 0.3002717391304348,
+        "cat": "mmflt1x3v22o",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/bergbausiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "",
+        "crestLink": "",
+        "banner": "",
+        "bannerLink": "",
+        "region": "Vortigerns Ruh",
+        "house": "Haus Dyngwn",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Mwynhir"
+          },
+          {
+            "k": "Typ",
+            "v": "Bergbausiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": ""
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": ""
+      },
+      {
+        "id": "vortigern-llysfaer",
+        "title": "Llysfaer",
+        "x": 0.628662109375,
+        "y": 0.3899456521739131,
+        "cat": "mmflrqajby8b",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/bauernsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "",
+        "crestLink": "",
+        "banner": "",
+        "bannerLink": "",
+        "region": "Vortigerns Ruh",
+        "house": "Haus Dyngwn",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Llysfaer"
+          },
+          {
+            "k": "Typ",
+            "v": "Bauernsiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": ""
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": ""
+      },
+      {
+        "id": "vortigern-mathfaen",
+        "title": "Mathfaen",
+        "x": 0.148681640625,
+        "y": 0.06838768115942029,
+        "cat": "mmflsfqh3sft",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/marktsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "",
+        "crestLink": "",
+        "banner": "",
+        "bannerLink": "",
+        "region": "Vortigerns Ruh",
+        "house": "Haus Marwolaeth",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Mathfaen"
+          },
+          {
+            "k": "Typ",
+            "v": "Handelssiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": ""
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": ""
+      },
+      {
+        "id": "vortigern-garwlyn",
+        "title": "Garwlyn",
+        "x": 0.474853515625,
+        "y": 0.2468297101449275,
+        "cat": "mmflsfqh3sft",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/marktsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "",
+        "crestLink": "",
+        "banner": "",
+        "bannerLink": "",
+        "region": "Vortigerns Ruh",
+        "house": "Haus Grael",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Garwlyn"
+          },
+          {
+            "k": "Typ",
+            "v": "Handelssiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": ""
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": ""
+      },
+      {
+        "id": "vortigern-bronceren",
+        "title": "Bronceren",
+        "x": 0.485595703125,
+        "y": 0.5366847826086957,
+        "cat": "mmflrqajby8b",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/bauernsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "",
+        "crestLink": "",
+        "banner": "",
+        "bannerLink": "",
+        "region": "Vortigerns Ruh",
+        "house": "Haus Ceirwyn",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Bronceren"
+          },
+          {
+            "k": "Typ",
+            "v": "Bauernsiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": ""
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": ""
+      }
+    ],
     "cats": [
       {
         "id": "mmflrbzxydg7",
@@ -105,6 +3318,485 @@
         "id": "mmflxnnhbh4g",
         "label": "Besondere Orte",
         "color": "#6060b0"
+      },
+      {
+        "id": "location-dorf",
+        "label": "Dorf",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/bardensiedlung.png"
+      },
+      {
+        "id": "location-bauernhof",
+        "label": "Bauernhof",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/bauernsiedlung.png"
+      },
+      {
+        "id": "location-landgut",
+        "label": "Landgut",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/landgut.png"
+      },
+      {
+        "id": "location-anwesen",
+        "label": "Anwesen",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/anwesen.png"
+      },
+      {
+        "id": "location-rittergut",
+        "label": "Rittergut",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/kleine-burg.png"
+      },
+      {
+        "id": "location-weingut",
+        "label": "Weingut",
+        "color": "#a45630",
+        "marker": "/Karten/assets/icons/welt/weingut.png"
+      },
+      {
+        "id": "location-obstplantage",
+        "label": "Obstplantage",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/obstplantage.png"
+      },
+      {
+        "id": "location-viehweide",
+        "label": "Viehweide",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/weide.png"
+      },
+      {
+        "id": "location-gestuet",
+        "label": "Gestüt",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/gest-t.png"
+      },
+      {
+        "id": "location-muehle",
+        "label": "Mühle",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/m-hle.png"
+      },
+      {
+        "id": "location-mine",
+        "label": "Mine",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/einzelnemine.png"
+      },
+      {
+        "id": "location-steinbruch",
+        "label": "Steinbruch",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/steinbruch-1.png"
+      },
+      {
+        "id": "location-schmiede",
+        "label": "Schmiede",
+        "color": "#a45630",
+        "marker": "/Karten/assets/icons/welt/schmiede.png"
+      },
+      {
+        "id": "location-brauerei",
+        "label": "Brauerei",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/brauersiedlung.png"
+      },
+      {
+        "id": "location-fischerei",
+        "label": "Fischerei",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/fischerh-tte.png"
+      },
+      {
+        "id": "location-holzfaellerlager",
+        "label": "Holzfällerlager",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/holzf-llerlager.png"
+      },
+      {
+        "id": "location-koehlerei",
+        "label": "Köhlerei",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/k-hler3.png"
+      },
+      {
+        "id": "location-imkerei",
+        "label": "Imkerei",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/imkerhof.png"
+      },
+      {
+        "id": "location-handelskontor",
+        "label": "Handelskontor",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/kontor.png"
+      },
+      {
+        "id": "location-markt",
+        "label": "Markt",
+        "color": "#a45630",
+        "marker": "/Karten/assets/icons/welt/marktstand.png"
+      },
+      {
+        "id": "location-gildenhaus",
+        "label": "Gildenhaus",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/gildenzentrale.png"
+      },
+      {
+        "id": "location-burg",
+        "label": "Burg",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/gro-e-burg.png"
+      },
+      {
+        "id": "location-turm",
+        "label": "Turm",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/turm.png"
+      },
+      {
+        "id": "location-leuchtturm",
+        "label": "Leuchtturm",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/leuchtturm.png"
+      },
+      {
+        "id": "location-aussenposten",
+        "label": "Außenposten",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/au-enposten.png"
+      },
+      {
+        "id": "location-grenzposten",
+        "label": "Grenzposten",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/zoll-grenzposten.png"
+      },
+      {
+        "id": "location-heerlager",
+        "label": "Heerlager",
+        "color": "#a45630",
+        "marker": "/Karten/assets/icons/welt/heereslager.png"
+      },
+      {
+        "id": "location-lagerplatz",
+        "label": "Lagerplatz",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/lager.png"
+      },
+      {
+        "id": "location-jaegerlager",
+        "label": "Jägerlager",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/j-gerlager.png"
+      },
+      {
+        "id": "location-jagdhaus",
+        "label": "Jagdhaus",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/j-gerhaus.png"
+      },
+      {
+        "id": "location-druidenhuette",
+        "label": "Druidenhütte",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/druidenh-tte.png"
+      },
+      {
+        "id": "location-hexenhuette",
+        "label": "Hexenhütte",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/hexenhaus.png"
+      },
+      {
+        "id": "location-schrein",
+        "label": "Schrein",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/wegschrein.png"
+      },
+      {
+        "id": "location-heiligtum",
+        "label": "Heiligtum",
+        "color": "#a45630",
+        "marker": "/Karten/assets/icons/welt/heiligtum.png"
+      },
+      {
+        "id": "location-friedhof",
+        "label": "Friedhof",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/l-ndlicher-friedhof.png"
+      },
+      {
+        "id": "location-grabstaette",
+        "label": "Grabstätte",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/grabmal.png"
+      },
+      {
+        "id": "location-ruine",
+        "label": "Ruine",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/ruine2.png"
+      },
+      {
+        "id": "location-ausgrabung",
+        "label": "Ausgrabung",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/ausgrabung.png"
+      },
+      {
+        "id": "location-hoehle",
+        "label": "Höhle",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/h-hle.png"
+      },
+      {
+        "id": "location-hain",
+        "label": "Hain",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/hain.png"
+      },
+      {
+        "id": "location-ahnenbaum",
+        "label": "Ahnenbaum",
+        "color": "#a45630",
+        "marker": "/Karten/assets/icons/welt/ahnenbaum.png"
+      },
+      {
+        "id": "location-quelle",
+        "label": "Quelle",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/quelle.png"
+      },
+      {
+        "id": "location-berggipfel",
+        "label": "Berggipfel",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/gipfel.png"
+      },
+      {
+        "id": "location-monsterhort",
+        "label": "Monsterhort",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/kreaturenhort.png"
+      },
+      {
+        "id": "location-banditenlager",
+        "label": "Banditenlager",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/banditenlager.png"
+      },
+      {
+        "id": "location-hafen",
+        "label": "Hafen / Steg",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/gro-er-hafen.png"
+      },
+      {
+        "id": "location-werft",
+        "label": "Werft",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/schiffswerft.png"
+      },
+      {
+        "id": "location-poststation",
+        "label": "Poststation",
+        "color": "#a45630",
+        "marker": "/Karten/assets/icons/welt/poststation.png"
+      },
+      {
+        "id": "location-schule",
+        "label": "Schule",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/l-ndliche-universit-t.png"
+      },
+      {
+        "id": "location-zirkus",
+        "label": "Zirkus",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/zirkus3.png"
+      },
+      {
+        "id": "location-wohnhaus",
+        "label": "Wohnhaus",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/b-uerliches-heim.png"
+      },
+      {
+        "id": "location-brauersiedlung",
+        "label": "Brauersiedlung",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/brauersiedlung.png"
+      },
+      {
+        "id": "location-klostersiedlung",
+        "label": "Klostersiedlung",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/klostersiedlung.png"
+      },
+      {
+        "id": "location-rosszuchtsiedlung",
+        "label": "Rosszuchtsiedlung",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/pferdezuchtsiedlung.png"
+      },
+      {
+        "id": "location-sumpfsiedlung",
+        "label": "Sumpfsiedlung",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/sumpfsiedlung.png"
+      },
+      {
+        "id": "location-unterwasserstadt",
+        "label": "Unterwasserstadt",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/unterwasserstadt.png"
+      },
+      {
+        "id": "location-festung",
+        "label": "Festung",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/festung.png"
+      },
+      {
+        "id": "location-magierturm",
+        "label": "Magierturm",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/magierturm.png"
+      },
+      {
+        "id": "location-diebesgilde",
+        "label": "Diebesgilde",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/diebesgilde.png"
+      },
+      {
+        "id": "location-piratenversteck",
+        "label": "Piratenversteck",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/piratenlager.png"
+      },
+      {
+        "id": "location-schmugglerversteck",
+        "label": "Schmugglerversteck",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/schmuggler3.png"
+      },
+      {
+        "id": "location-verwunschener-wald",
+        "label": "Verwunschener Wald",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/waldschrat.png"
+      },
+      {
+        "id": "location-wahrzeichen",
+        "label": "Wahrzeichen",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/wahrzeichen.png"
+      },
+      {
+        "id": "location-dimensionaler-riss",
+        "label": "Dimensionaler Riss",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/dimensionaler-riss.png"
+      },
+      {
+        "id": "location-galgen",
+        "label": "Galgen",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/exekutionsplatz.png"
+      },
+      {
+        "id": "location-muenzpraegestaette",
+        "label": "Münzprägestätte",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/m-nzpr-ger.png"
+      },
+      {
+        "id": "location-bogenschiessstand",
+        "label": "Bogenschießstand",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/schie-stand2.png"
+      },
+      {
+        "id": "location-ziegelei",
+        "label": "Ziegelei",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/ziegelbrenner.png"
+      },
+      {
+        "id": "location-schiff",
+        "label": "Schiff",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/orte/schiff-gut.png"
+      },
+      {
+        "id": "location-kreaturenlager",
+        "label": "Kreaturenlager",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/goblinlager.png"
+      },
+      {
+        "id": "location-heisse-quellen",
+        "label": "Heiße Quellen",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/hei-e-quellen.png"
+      },
+      {
+        "id": "location-brueckenruine",
+        "label": "Brückenruine",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/zerst-rte-br-cke.png"
+      },
+      {
+        "id": "location-kirchenruine",
+        "label": "Kirchenruine",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/zerst-rte-kirche.png"
+      },
+      {
+        "id": "location-hausruine",
+        "label": "Hausruine",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/zerst-rtes-heim.png"
+      },
+      {
+        "id": "location-huegelgrab",
+        "label": "Hügelgrab",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/h-gelgrab.png"
+      },
+      {
+        "id": "location-plantage",
+        "label": "Plantage",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/landgut.png"
+      },
+      {
+        "id": "location-kultstaette",
+        "label": "Kultstätte",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/okkulter-schrein.png"
+      },
+      {
+        "id": "location-zelt",
+        "label": "Zelt",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/ritterlicheszelt.png"
+      },
+      {
+        "id": "location-faehrstelle",
+        "label": "Fährstelle",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/orte/f-hre-steg.png"
+      },
+      {
+        "id": "location-schlachtfeld",
+        "label": "Schlachtfeld",
+        "color": "#6060b0"
       }
     ],
     "dotSize": 18,
@@ -121,6 +3813,7 @@
       "notes": "",
       "groupStatus": {}
     },
-    "markerCatalog": []
+    "markerCatalog": [],
+    "categoryCatalogVersion": 2
   }
 }

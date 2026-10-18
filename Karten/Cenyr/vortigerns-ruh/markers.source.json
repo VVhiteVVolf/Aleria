@@ -1,0 +1,668 @@
+{
+  "mapId": "cenyr-vortigerns-ruh",
+  "imageSize": [
+    4096,
+    2208
+  ],
+  "coordinateOrigin": "bottom-left",
+  "markers": [
+    {
+      "id": "vortigern-brynthcarreg",
+      "title": "Brynthcarreg",
+      "x": 413,
+      "y": 1097,
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "house": "Haus Ceirwyn",
+      "source": {
+        "screenshot": 1,
+        "row": 1
+      }
+    },
+    {
+      "id": "vortigern-craithfaer",
+      "title": "Craithfaer",
+      "x": 2265,
+      "y": 1877,
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "house": "Haus Dyngwn",
+      "source": {
+        "screenshot": 1,
+        "row": 2
+      }
+    },
+    {
+      "id": "vortigern-llyswellyn",
+      "title": "Llyswellyn",
+      "x": 1272,
+      "y": 1261,
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung.png",
+      "house": "Haus Penderyn",
+      "source": {
+        "screenshot": 1,
+        "row": 3
+      }
+    },
+    {
+      "id": "vortigern-llysglas",
+      "title": "Llysglas",
+      "x": 327,
+      "y": 2009,
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung.png",
+      "house": "Haus Marwolaeth",
+      "source": {
+        "screenshot": 1,
+        "row": 4
+      }
+    },
+    {
+      "id": "vortigern-uathachs-haus",
+      "title": "Uathachs Haus",
+      "x": 969,
+      "y": 65,
+      "category": "Wohnhaus",
+      "templateId": "gebaeude",
+      "icon": "/Karten/assets/icons/welt/druidenh-tte.png",
+      "house": "",
+      "source": {
+        "screenshot": 1,
+        "row": 5
+      }
+    },
+    {
+      "id": "vortigern-cor-y-gwarchodwr",
+      "title": "Côr y Gwarchodwr",
+      "x": 796,
+      "y": 1236,
+      "category": "Klostersiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/klostersiedlung.png",
+      "house": "Haus Marwolaeth",
+      "source": {
+        "screenshot": 1,
+        "row": 6
+      }
+    },
+    {
+      "id": "vortigern-caorthllyn",
+      "title": "Caorthllyn",
+      "x": 296,
+      "y": 327,
+      "category": "Waldsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/waldsiedlung.png",
+      "house": "Haus Ceirwyn",
+      "source": {
+        "screenshot": 1,
+        "row": 7
+      }
+    },
+    {
+      "id": "vortigern-llysceffyl",
+      "title": "Llysceffyl",
+      "x": 226,
+      "y": 1703,
+      "category": "Rosszuchtsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/pferdezuchtsiedlung.png",
+      "house": "",
+      "source": {
+        "screenshot": 1,
+        "row": 8
+      }
+    },
+    {
+      "id": "vortigern-ahnenbaum-1154-68",
+      "title": "Ahnenbaum",
+      "x": 1154,
+      "y": 68,
+      "category": "Ahnenbaum",
+      "templateId": "natur",
+      "icon": "/Karten/assets/icons/welt/ahnenbaum.png",
+      "house": "",
+      "source": {
+        "screenshot": 1,
+        "row": 9
+      }
+    },
+    {
+      "id": "vortigern-llyswynfaen",
+      "title": "Llyswynfaen",
+      "x": 1720,
+      "y": 2063,
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung.png",
+      "house": "Haus Penderyn",
+      "source": {
+        "screenshot": 1,
+        "row": 10
+      }
+    },
+    {
+      "id": "vortigern-ffynnonbren",
+      "title": "Ffynnonbren",
+      "x": 526,
+      "y": 686,
+      "category": "Waldsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/waldsiedlung.png",
+      "house": "Haus Ceirwyn",
+      "source": {
+        "screenshot": 1,
+        "row": 11
+      }
+    },
+    {
+      "id": "vortigern-ahnenbaum-1537-615",
+      "title": "Ahnenbaum",
+      "x": 1537,
+      "y": 615,
+      "category": "Ahnenbaum",
+      "templateId": "natur",
+      "icon": "/Karten/assets/icons/welt/ahnenbaum.png",
+      "house": "",
+      "source": {
+        "screenshot": 1,
+        "row": 12
+      }
+    },
+    {
+      "id": "vortigern-ffyncoed",
+      "title": "Ffyncoed",
+      "x": 2089,
+      "y": 836,
+      "category": "Waldsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/waldsiedlung.png",
+      "house": "Haus Ceirwyn",
+      "source": {
+        "screenshot": 1,
+        "row": 13
+      }
+    },
+    {
+      "id": "vortigern-bronfaelhir",
+      "title": "Bronfaelhir",
+      "x": 2467,
+      "y": 1000,
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung.png",
+      "house": "Haus Dienyddiwr",
+      "source": {
+        "screenshot": 1,
+        "row": 14
+      }
+    },
+    {
+      "id": "vortigern-bronmarw",
+      "title": "Bronmarw",
+      "x": 381,
+      "y": 1412,
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung.png",
+      "house": "Haus Marwolaeth",
+      "source": {
+        "screenshot": 1,
+        "row": 15
+      }
+    },
+    {
+      "id": "vortigern-carregdyn",
+      "title": "Carregdyn",
+      "x": 1983,
+      "y": 2052,
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "house": "Haus Dyngwn",
+      "source": {
+        "screenshot": 1,
+        "row": 16
+      }
+    },
+    {
+      "id": "vortigern-bronfael",
+      "title": "Bronfael",
+      "x": 1550,
+      "y": 1797,
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung.png",
+      "house": "Haus Penderyn",
+      "source": {
+        "screenshot": 1,
+        "row": 17
+      }
+    },
+    {
+      "id": "vortigern-gwaulbryn",
+      "title": "Gwaulbryn",
+      "x": 1259,
+      "y": 1598,
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung.png",
+      "house": "Haus Penderyn",
+      "source": {
+        "screenshot": 1,
+        "row": 18
+      }
+    },
+    {
+      "id": "vortigern-garwmor",
+      "title": "Garwmor",
+      "x": 846,
+      "y": 1618,
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "house": "Haus Marwolaeth",
+      "source": {
+        "screenshot": 1,
+        "row": 19
+      }
+    },
+    {
+      "id": "vortigern-drakenburg",
+      "title": "Drakenburg",
+      "x": 1116,
+      "y": 1956,
+      "category": "Burgsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/burgsiedlung.png",
+      "house": "Haus Penderyn",
+      "source": {
+        "screenshot": 2,
+        "row": 1
+      }
+    },
+    {
+      "id": "vortigern-zum-grunen-pfad",
+      "title": "Zum Grünen Pfad",
+      "x": 65,
+      "y": 996,
+      "category": "Taverne",
+      "templateId": "gastbetrieb",
+      "icon": "/Karten/assets/icons/welt/taverne.png",
+      "house": "Haus Cath",
+      "source": {
+        "screenshot": 2,
+        "row": 2
+      }
+    },
+    {
+      "id": "vortigern-turnierplatz-feld-der-glorie",
+      "title": "Turnierplatz – Feld der Glorie",
+      "x": 2163,
+      "y": 1280,
+      "category": "Turnierplatz",
+      "templateId": "institution",
+      "icon": "/Karten/assets/icons/welt/turnierplatz.png",
+      "house": "",
+      "source": {
+        "screenshot": 2,
+        "row": 3
+      }
+    },
+    {
+      "id": "vortigern-castell-cath",
+      "title": "Castell Cath",
+      "x": 3457,
+      "y": 1123,
+      "category": "Burgsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/burgsiedlung.png",
+      "house": "Haus Cath",
+      "source": {
+        "screenshot": 2,
+        "row": 4
+      }
+    },
+    {
+      "id": "vortigern-zur-feuerzunge",
+      "title": "Zur Feuerzunge",
+      "x": 1842,
+      "y": 1878,
+      "category": "Taverne",
+      "templateId": "gastbetrieb",
+      "icon": "/Karten/assets/icons/welt/taverne.png",
+      "house": "Haus Penderyn",
+      "source": {
+        "screenshot": 2,
+        "row": 5
+      }
+    },
+    {
+      "id": "vortigern-calon",
+      "title": "Calon",
+      "x": 1076,
+      "y": 727,
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "house": "Haus Ceirwyn",
+      "source": {
+        "screenshot": 2,
+        "row": 6
+      }
+    },
+    {
+      "id": "vortigern-zum-konigsweg",
+      "title": "Zum Königsweg",
+      "x": 2982,
+      "y": 1202,
+      "category": "Taverne",
+      "templateId": "gastbetrieb",
+      "icon": "/Karten/assets/icons/welt/taverne.png",
+      "house": "Haus Cath",
+      "source": {
+        "screenshot": 2,
+        "row": 7
+      }
+    },
+    {
+      "id": "vortigern-mathragon",
+      "title": "Mathragon",
+      "x": 2981,
+      "y": 1613,
+      "category": "Hauptstadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "house": "",
+      "source": {
+        "screenshot": 2,
+        "row": 8
+      }
+    },
+    {
+      "id": "vortigern-des-drachens-ruh",
+      "title": "Des Drachens Ruh",
+      "x": 2444,
+      "y": 531,
+      "category": "Taverne",
+      "templateId": "gastbetrieb",
+      "icon": "/Karten/assets/icons/welt/taverne.png",
+      "house": "Haus Penderyn",
+      "source": {
+        "screenshot": 2,
+        "row": 9
+      }
+    },
+    {
+      "id": "vortigern-garwmathr",
+      "title": "Garwmathr",
+      "x": 2940,
+      "y": 999,
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "house": "Haus Dienyddiwr",
+      "source": {
+        "screenshot": 2,
+        "row": 10
+      }
+    },
+    {
+      "id": "vortigern-braichgwen",
+      "title": "Braichgwen",
+      "x": 785,
+      "y": 213,
+      "category": "Waldsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/waldsiedlung.png",
+      "house": "Haus Ceirwyn",
+      "source": {
+        "screenshot": 2,
+        "row": 11
+      }
+    },
+    {
+      "id": "vortigern-ffyndir",
+      "title": "Ffyndir",
+      "x": 1316,
+      "y": 1041,
+      "category": "Waldsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/waldsiedlung.png",
+      "house": "Haus Ceirwyn",
+      "source": {
+        "screenshot": 2,
+        "row": 12
+      }
+    },
+    {
+      "id": "vortigern-traethceir",
+      "title": "Traethceir",
+      "x": 2664,
+      "y": 390,
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "house": "Haus Ceirwyn",
+      "source": {
+        "screenshot": 2,
+        "row": 13
+      }
+    },
+    {
+      "id": "vortigern-cor-y-gan",
+      "title": "Côr y Gân",
+      "x": 2352,
+      "y": 201,
+      "category": "Klostersiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/klostersiedlung.png",
+      "house": "Haus Ceirwyn",
+      "source": {
+        "screenshot": 2,
+        "row": 14
+      }
+    },
+    {
+      "id": "vortigern-bronwyn",
+      "title": "Bronwyn",
+      "x": 1814,
+      "y": 1329,
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung.png",
+      "house": "Haus Grael",
+      "source": {
+        "screenshot": 2,
+        "row": 15
+      }
+    },
+    {
+      "id": "vortigern-garwmwyn",
+      "title": "Garwmwyn",
+      "x": 313,
+      "y": 562,
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "house": "Haus Ceirwyn",
+      "source": {
+        "screenshot": 2,
+        "row": 16
+      }
+    },
+    {
+      "id": "vortigern-braichfaer",
+      "title": "Braichfaer",
+      "x": 1804,
+      "y": 646,
+      "category": "Waldsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/waldsiedlung.png",
+      "house": "Haus Ceirwyn",
+      "source": {
+        "screenshot": 2,
+        "row": 17
+      }
+    },
+    {
+      "id": "vortigern-cor-y-llawenydd",
+      "title": "Côr y Llawenydd",
+      "x": 1609,
+      "y": 1108,
+      "category": "Klostersiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/klostersiedlung.png",
+      "house": "Haus Ceirwyn",
+      "source": {
+        "screenshot": 2,
+        "row": 18
+      }
+    },
+    {
+      "id": "vortigern-mwyncarreg",
+      "title": "Mwyncarreg",
+      "x": 1616,
+      "y": 1467,
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "house": "",
+      "source": {
+        "screenshot": 2,
+        "row": 19
+      }
+    },
+    {
+      "id": "vortigern-bragwhislyn",
+      "title": "Bragwhislyn",
+      "x": 1267,
+      "y": 2024,
+      "category": "Brauersiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/brauersiedlung.png",
+      "house": "Haus Penderyn",
+      "source": {
+        "screenshot": 2,
+        "row": 20
+      }
+    },
+    {
+      "id": "vortigern-gwaulmor",
+      "title": "Gwaulmor",
+      "x": 2659,
+      "y": 690,
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung.png",
+      "house": "Haus Dienyddiwr",
+      "source": {
+        "screenshot": 2,
+        "row": 21
+      }
+    },
+    {
+      "id": "vortigern-traethglas",
+      "title": "Traethglas",
+      "x": 3018,
+      "y": 748,
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "house": "Haus Dienyddiwr",
+      "source": {
+        "screenshot": 2,
+        "row": 22
+      }
+    },
+    {
+      "id": "vortigern-caorthwyn",
+      "title": "Caorthwyn",
+      "x": 2255,
+      "y": 629,
+      "category": "Waldsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/waldsiedlung.png",
+      "house": "Haus Ceirwyn",
+      "source": {
+        "screenshot": 2,
+        "row": 23
+      }
+    },
+    {
+      "id": "vortigern-mwynhir",
+      "title": "Mwynhir",
+      "x": 2393,
+      "y": 1545,
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "house": "Haus Dyngwn",
+      "source": {
+        "screenshot": 2,
+        "row": 24
+      }
+    },
+    {
+      "id": "vortigern-llysfaer",
+      "title": "Llysfaer",
+      "x": 2575,
+      "y": 1347,
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung.png",
+      "house": "Haus Dyngwn",
+      "source": {
+        "screenshot": 2,
+        "row": 25
+      }
+    },
+    {
+      "id": "vortigern-mathfaen",
+      "title": "Mathfaen",
+      "x": 609,
+      "y": 2057,
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "house": "Haus Marwolaeth",
+      "source": {
+        "screenshot": 2,
+        "row": 26
+      }
+    },
+    {
+      "id": "vortigern-garwlyn",
+      "title": "Garwlyn",
+      "x": 1945,
+      "y": 1663,
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "house": "Haus Grael",
+      "source": {
+        "screenshot": 2,
+        "row": 27
+      }
+    },
+    {
+      "id": "vortigern-bronceren",
+      "title": "Bronceren",
+      "x": 1989,
+      "y": 1023,
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung.png",
+      "house": "Haus Ceirwyn",
+      "source": {
+        "screenshot": 2,
+        "row": 28
+      }
+    }
+  ]
+}
