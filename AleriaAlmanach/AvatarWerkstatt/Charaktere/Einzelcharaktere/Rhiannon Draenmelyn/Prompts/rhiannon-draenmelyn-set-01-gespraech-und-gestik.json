@@ -1,0 +1,170 @@
+{
+  "version": 1,
+  "createdAt": "2026-10-18",
+  "characterName": "Rhiannon Draenmelyn",
+  "worldPersonId": "person--haus-draenmelyn--rhiannon-draenmelyn",
+  "setId": "set-01",
+  "theme": "Gespräch und Gestik",
+  "referenceImage": "Referenzen/rhiannon-draenmelyn-portraet.png",
+  "referenceSha256": "7d4414e0db56a4d18c94002dd5d42f58cf33f01600a4577a4b319be8d7472e03",
+  "referenceSource": ".tmp\\swyll-family-2026-10-18\\portraits\\rhiannon-draenmelyn.png",
+  "promptFile": "Prompts/rhiannon-draenmelyn-set-01-gespraech-und-gestik.txt",
+  "sheetFile": "Sheets/rhiannon-draenmelyn-set-01-gespraech-und-gestik.png",
+  "sheet": {
+    "aspectRatio": "1:1",
+    "columns": 3,
+    "rows": 3,
+    "actualPixels": [
+      1254,
+      1254
+    ]
+  },
+  "panels": [
+    {
+      "index": 1,
+      "position": "Top Left",
+      "emotion": "Freundliche Begrüßung",
+      "gesture": "A warm welcoming small smile, attentive eyes; one hand raised loosely near shoulder height, palm angled toward the unseen visitor, other hand open low."
+    },
+    {
+      "index": 2,
+      "position": "Top Center",
+      "emotion": "Ruhiges Erklären",
+      "gesture": "Engaged calm speech, lips naturally parted, brows attentive; both hands apart at lower chest height, palms obliquely inward as if carefully explaining a point."
+    },
+    {
+      "index": 3,
+      "position": "Top Right",
+      "emotion": "Nachdenkliches Abwägen",
+      "gesture": "Thoughtful eyes glance slightly aside, brows gently knit; fingertips rest against the chin while the opposite hand lightly supports that elbow."
+    },
+    {
+      "index": 4,
+      "position": "Middle Left",
+      "emotion": "Skeptische Rückfrage",
+      "gesture": "One eyebrow raised, the other slightly lowered, questioning half-open mouth; one forearm folded low and the other palm up near the chest, head tilted a little."
+    },
+    {
+      "index": 5,
+      "position": "Center",
+      "emotion": "Aufmerksames Zuhören",
+      "gesture": "Quiet focused eyes, mouth closed and a slight sympathetic head inclination; hands loosely nested at the lower edge of the frame, shoulders composed, actively listening."
+    },
+    {
+      "index": 6,
+      "position": "Middle Right",
+      "emotion": "Aufrichtiger Dank",
+      "gesture": "Sincere appreciative smile and a small head incline; one flat hand over the heart, the other opened toward the unseen listener."
+    },
+    {
+      "index": 7,
+      "position": "Bottom Left",
+      "emotion": "Höfliche Ablehnung",
+      "gesture": "Polite but firm small closed-mouth expression and a slightly concerned brow; one hand raised palm outward in a restrained gentle refusal, other hand low."
+    },
+    {
+      "index": 8,
+      "position": "Bottom Center",
+      "emotion": "Wegweisendes Deuten",
+      "gesture": "Clear engaged speaking expression; one open hand extends gently to the side to indicate a direction or invite someone to continue, other palm kept near the chest. Do not point straight into the lens."
+    },
+    {
+      "index": 9,
+      "position": "Bottom Right",
+      "emotion": "Vertrauliches Zuflüstern",
+      "gesture": "Quiet intent side glance, lips slightly parted; one cupped hand beside the mouth without covering the face, slight forward incline, opposite forearm relaxed across lower torso."
+    }
+  ],
+  "splitter": {
+    "cols": 3,
+    "rows": 3,
+    "gap_x": 0,
+    "gap_y": 0,
+    "autocrop": false
+  },
+  "outputFolder": "Output",
+  "generationMode": "built-in image_gen",
+  "status": "erzeugt, mit V3 zerlegt und visuell geprüft",
+  "cropCorrection": {
+    "reason": "Inset of 2 pixels per cell edge; no scaling.",
+    "gridY": [
+      0,
+      418,
+      836,
+      1254
+    ],
+    "adjustments": [
+      {
+        "left": 2,
+        "top": 2,
+        "right": -2,
+        "bottom": -2
+      },
+      {
+        "left": 2,
+        "top": 2,
+        "right": -2,
+        "bottom": -2
+      },
+      {
+        "left": 2,
+        "top": 2,
+        "right": -2,
+        "bottom": -2
+      },
+      {
+        "left": 2,
+        "top": 2,
+        "right": -2,
+        "bottom": -2
+      },
+      {
+        "left": 2,
+        "top": 2,
+        "right": -2,
+        "bottom": -2
+      },
+      {
+        "left": 2,
+        "top": 2,
+        "right": -2,
+        "bottom": -2
+      },
+      {
+        "left": 2,
+        "top": 2,
+        "right": -2,
+        "bottom": -2
+      },
+      {
+        "left": 2,
+        "top": 2,
+        "right": -2,
+        "bottom": -2
+      },
+      {
+        "left": 2,
+        "top": 2,
+        "right": -2,
+        "bottom": -2
+      }
+    ],
+    "cellSize": 414
+  },
+  "avatarCount": 9,
+  "avatarPixels": [
+    414,
+    414
+  ],
+  "visualReview": {
+    "reviewedAt": "2026-10-18",
+    "passed": true,
+    "reviewedAvatars": 9,
+    "method": "Alle exportierten PNGs in zwei Übersichten bei Originalgröße angesehen.",
+    "checks": [
+      "Figur, Kleidung, Zeichenstil und Hintergrund gegenüber dem Originalporträt",
+      "Mimik, leere gestikulierende Hände und Oberkörperausschnitt",
+      "saubere Zellkanten ohne Nachbarbilder, Trennlinien und Beschriftungen"
+    ]
+  }
+}

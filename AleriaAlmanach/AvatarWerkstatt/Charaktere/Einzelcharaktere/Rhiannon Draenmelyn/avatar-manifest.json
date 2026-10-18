@@ -1,0 +1,452 @@
+{
+  "createdAt": "2026-10-18",
+  "character": "Rhiannon Draenmelyn",
+  "generationMode": "built-in image_gen",
+  "splitter": "AleriaAlmanach/AvatarWerkstatt/Werkzeuge/Avatar Splitterer/AvatarSplitterPro_V3.py",
+  "splitterSha256": "d6523dcd145af51ccbcc04d3e51a8a5d6a643531e6beb7bc194bece4a5562ac8",
+  "sourcePortrait": "Referenzen/rhiannon-draenmelyn-portraet.png",
+  "settings": {
+    "cols": 3,
+    "rows": 3,
+    "gap_x": 0,
+    "gap_y": 0,
+    "autocrop": false
+  },
+  "sets": [
+    {
+      "setId": "set-01",
+      "theme": "Gespräch und Gestik",
+      "sheet": "Sheets/rhiannon-draenmelyn-set-01-gespraech-und-gestik.png",
+      "sheetSha256": "881c119b84a1d3783088e15a5bd4cf8728d79686e5523ace986173464983c79b",
+      "sheetSize": [
+        1254,
+        1254
+      ],
+      "cellSize": [
+        414,
+        414
+      ],
+      "avatarCount": 9,
+      "outputs": [
+        {
+          "index": 1,
+          "emotion": "Freundliche Begrüßung",
+          "file": "Output/rhiannon-draenmelyn-set-01-gespraech-und-gestik_Bild01.png",
+          "box": [
+            2,
+            2,
+            416,
+            416
+          ],
+          "sha256": "87a731ca93d1a588dc14666a4396d288f4c2daf877b3864d592676d34b882ece",
+          "gesture": "A warm welcoming small smile, attentive eyes; one hand raised loosely near shoulder height, palm angled toward the unseen visitor, other hand open low."
+        },
+        {
+          "index": 2,
+          "emotion": "Ruhiges Erklären",
+          "file": "Output/rhiannon-draenmelyn-set-01-gespraech-und-gestik_Bild02.png",
+          "box": [
+            420,
+            2,
+            834,
+            416
+          ],
+          "sha256": "50538eadfb7e74001949e143392a9405e84298a83de78cdf43227c607dceb92a",
+          "gesture": "Engaged calm speech, lips naturally parted, brows attentive; both hands apart at lower chest height, palms obliquely inward as if carefully explaining a point."
+        },
+        {
+          "index": 3,
+          "emotion": "Nachdenkliches Abwägen",
+          "file": "Output/rhiannon-draenmelyn-set-01-gespraech-und-gestik_Bild03.png",
+          "box": [
+            838,
+            2,
+            1252,
+            416
+          ],
+          "sha256": "0ce05f09b39c226ceab342518a218566c23f2dc6a6d04b16c7fcdc6da7468d37",
+          "gesture": "Thoughtful eyes glance slightly aside, brows gently knit; fingertips rest against the chin while the opposite hand lightly supports that elbow."
+        },
+        {
+          "index": 4,
+          "emotion": "Skeptische Rückfrage",
+          "file": "Output/rhiannon-draenmelyn-set-01-gespraech-und-gestik_Bild04.png",
+          "box": [
+            2,
+            420,
+            416,
+            834
+          ],
+          "sha256": "d1dcdbae7705d150182da032cab336af350a76b6ac9365b9e58349bd2b66de4c",
+          "gesture": "One eyebrow raised, the other slightly lowered, questioning half-open mouth; one forearm folded low and the other palm up near the chest, head tilted a little."
+        },
+        {
+          "index": 5,
+          "emotion": "Aufmerksames Zuhören",
+          "file": "Output/rhiannon-draenmelyn-set-01-gespraech-und-gestik_Bild05.png",
+          "box": [
+            420,
+            420,
+            834,
+            834
+          ],
+          "sha256": "30ea831ed1257b6868be55fbd312c7a15b9aef937895c895b4ff860aacb554e6",
+          "gesture": "Quiet focused eyes, mouth closed and a slight sympathetic head inclination; hands loosely nested at the lower edge of the frame, shoulders composed, actively listening."
+        },
+        {
+          "index": 6,
+          "emotion": "Aufrichtiger Dank",
+          "file": "Output/rhiannon-draenmelyn-set-01-gespraech-und-gestik_Bild06.png",
+          "box": [
+            838,
+            420,
+            1252,
+            834
+          ],
+          "sha256": "91a34aa6ad81b5f4de68c77bbed49ea29cc7ff635549083097d9a4c7ecb40bc9",
+          "gesture": "Sincere appreciative smile and a small head incline; one flat hand over the heart, the other opened toward the unseen listener."
+        },
+        {
+          "index": 7,
+          "emotion": "Höfliche Ablehnung",
+          "file": "Output/rhiannon-draenmelyn-set-01-gespraech-und-gestik_Bild07.png",
+          "box": [
+            2,
+            838,
+            416,
+            1252
+          ],
+          "sha256": "a326f32e8effde9e3e91b2f17cc3fe78d898893a61b6bc3731bbbc3f8fd016f5",
+          "gesture": "Polite but firm small closed-mouth expression and a slightly concerned brow; one hand raised palm outward in a restrained gentle refusal, other hand low."
+        },
+        {
+          "index": 8,
+          "emotion": "Wegweisendes Deuten",
+          "file": "Output/rhiannon-draenmelyn-set-01-gespraech-und-gestik_Bild08.png",
+          "box": [
+            420,
+            838,
+            834,
+            1252
+          ],
+          "sha256": "ab34e8d220a6869092cb150dfd16eb5d8162eb9279c5d5fc4bc10faa96d28705",
+          "gesture": "Clear engaged speaking expression; one open hand extends gently to the side to indicate a direction or invite someone to continue, other palm kept near the chest. Do not point straight into the lens."
+        },
+        {
+          "index": 9,
+          "emotion": "Vertrauliches Zuflüstern",
+          "file": "Output/rhiannon-draenmelyn-set-01-gespraech-und-gestik_Bild09.png",
+          "box": [
+            838,
+            838,
+            1252,
+            1252
+          ],
+          "sha256": "1273ea82bc78bec700d503e4ab4e0d0379777fa9c9b57f7cf0c9cace18a8b07b",
+          "gesture": "Quiet intent side glance, lips slightly parted; one cupped hand beside the mouth without covering the face, slight forward incline, opposite forearm relaxed across lower torso."
+        }
+      ],
+      "cropCorrection": {
+        "reason": "Inset of 2 pixels per cell edge; no scaling.",
+        "gridY": [
+          0,
+          418,
+          836,
+          1254
+        ],
+        "adjustments": [
+          {
+            "left": 2,
+            "top": 2,
+            "right": -2,
+            "bottom": -2
+          },
+          {
+            "left": 2,
+            "top": 2,
+            "right": -2,
+            "bottom": -2
+          },
+          {
+            "left": 2,
+            "top": 2,
+            "right": -2,
+            "bottom": -2
+          },
+          {
+            "left": 2,
+            "top": 2,
+            "right": -2,
+            "bottom": -2
+          },
+          {
+            "left": 2,
+            "top": 2,
+            "right": -2,
+            "bottom": -2
+          },
+          {
+            "left": 2,
+            "top": 2,
+            "right": -2,
+            "bottom": -2
+          },
+          {
+            "left": 2,
+            "top": 2,
+            "right": -2,
+            "bottom": -2
+          },
+          {
+            "left": 2,
+            "top": 2,
+            "right": -2,
+            "bottom": -2
+          },
+          {
+            "left": 2,
+            "top": 2,
+            "right": -2,
+            "bottom": -2
+          }
+        ],
+        "cellSize": 414
+      },
+      "visualReview": {
+        "reviewedAt": "2026-10-18",
+        "passed": true,
+        "reviewedAvatars": 9,
+        "method": "Alle exportierten PNGs in zwei Übersichten bei Originalgröße angesehen.",
+        "checks": [
+          "Figur, Kleidung, Zeichenstil und Hintergrund gegenüber dem Originalporträt",
+          "Mimik, leere gestikulierende Hände und Oberkörperausschnitt",
+          "saubere Zellkanten ohne Nachbarbilder, Trennlinien und Beschriftungen"
+        ]
+      }
+    },
+    {
+      "setId": "set-02",
+      "theme": "Gefühle und Reaktionen",
+      "sheet": "Sheets/rhiannon-draenmelyn-set-02-gefuehle-und-reaktionen.png",
+      "sheetSha256": "f3349bbd74fa781c4a805bd1385bb927307eb6d0cca09f815a81cb063a0c2f4f",
+      "sheetSize": [
+        1254,
+        1254
+      ],
+      "cellSize": [
+        414,
+        414
+      ],
+      "avatarCount": 9,
+      "outputs": [
+        {
+          "index": 1,
+          "emotion": "Herzliches Lachen",
+          "file": "Output/rhiannon-draenmelyn-set-02-gefuehle-und-reaktionen_Bild01.png",
+          "box": [
+            2,
+            2,
+            416,
+            416
+          ],
+          "sha256": "1108eba873f1645b186b2651f2e47932b946819bd2b67dd5818ac973b43dc70d",
+          "gesture": "Genuine warm laughter, eyes narrowed pleasantly, mouth naturally open; one hand resting at the lower ribs and the other hand loosely opened outward. No wild caricature."
+        },
+        {
+          "index": 2,
+          "emotion": "Schelmische Bemerkung",
+          "file": "Output/rhiannon-draenmelyn-set-02-gefuehle-und-reaktionen_Bild02.png",
+          "box": [
+            420,
+            2,
+            834,
+            416
+          ],
+          "sha256": "eac6d66a9b87f000e1935d8c8f3422e9a098daecf3c29993ddbc9b5525bc7ac3",
+          "gesture": "A knowing asymmetric smile and arched brow, eyes glancing sideways; one index finger lightly lifted near the chest as if making a playful observation, other hand at the waist."
+        },
+        {
+          "index": 3,
+          "emotion": "Verblüffte Überraschung",
+          "file": "Output/rhiannon-draenmelyn-set-02-gefuehle-und-reaktionen_Bild03.png",
+          "box": [
+            838,
+            2,
+            1252,
+            416
+          ],
+          "sha256": "1dc779888a34dfea9f6ce53fe7abb67e85c9895683211e420c8b84dcf7ab493e",
+          "gesture": "Eyes widened and mouth slightly open, raised brows; both empty hands spontaneously lifted near the chest with relaxed spread fingers, no exaggerated scream."
+        },
+        {
+          "index": 4,
+          "emotion": "Besorgte Nachfrage",
+          "file": "Output/rhiannon-draenmelyn-set-02-gefuehle-und-reaktionen_Bild04.png",
+          "box": [
+            2,
+            420,
+            416,
+            834
+          ],
+          "sha256": "7bc21decdaad2a0dbf806c05e681d0a7f430567660854f073742c5ca6e117955",
+          "gesture": "Brows raised at the center and drawn together, eyes worried, speaking lips; one hand reaching toward the unseen listener with a gentle upturned palm, other touching own chest."
+        },
+        {
+          "index": 5,
+          "emotion": "Verärgerter Widerspruch",
+          "file": "Output/rhiannon-draenmelyn-set-02-gefuehle-und-reaktionen_Bild05.png",
+          "box": [
+            420,
+            420,
+            834,
+            834
+          ],
+          "sha256": "0d4a732d166b12621124312a500b2ed4769a6e67d78cae4a8baa565e16d58b70",
+          "gesture": "Firm direct gaze, knitted brows and a tense speaking mouth; one forearm makes a compact emphatic downward gesture with a loosely closed hand, opposite hand open low. Controlled civilian anger, no fighting pose."
+        },
+        {
+          "index": 6,
+          "emotion": "Entschlossene Zusage",
+          "file": "Output/rhiannon-draenmelyn-set-02-gefuehle-und-reaktionen_Bild06.png",
+          "box": [
+            838,
+            420,
+            1252,
+            834
+          ],
+          "sha256": "46fe7d721740b1fac20f4fd9634cdbfab561e7287d74e229286141edb7620676",
+          "gesture": "Steady confident direct gaze and resolute mouth, shoulders straight; one closed hand held over the upper chest as a clear promise, other arm relaxed, no weapons."
+        },
+        {
+          "index": 7,
+          "emotion": "Verlegene Reaktion",
+          "file": "Output/rhiannon-draenmelyn-set-02-gefuehle-und-reaktionen_Bild07.png",
+          "box": [
+            2,
+            838,
+            416,
+            1252
+          ],
+          "sha256": "be987d79a3e7768d5c5ff233583ea201a2301bbce9a3803aa0e1ec2122e38107",
+          "gesture": "A shy awkward small smile and eyes glancing downward, faint natural blush; one hand rubbing the back or side of the neck, the other fingers loosely clasping its own wrist low in frame."
+        },
+        {
+          "index": 8,
+          "emotion": "Stille Enttäuschung",
+          "file": "Output/rhiannon-draenmelyn-set-02-gefuehle-und-reaktionen_Bild08.png",
+          "box": [
+            420,
+            838,
+            834,
+            1252
+          ],
+          "sha256": "fdc5f953f7e7662cef7f1ab8bb9680aeb51faea036cdd828088fac4034a84e74",
+          "gesture": "Eyes lowered, brows drawn at the center, mouth gently compressed; one hand holding the opposite forearm across the lower torso, shoulders slightly softened, no crying caricature."
+        },
+        {
+          "index": 9,
+          "emotion": "Beruhigende Zuversicht",
+          "file": "Output/rhiannon-draenmelyn-set-02-gefuehle-und-reaktionen_Bild09.png",
+          "box": [
+            838,
+            838,
+            1252,
+            1252
+          ],
+          "sha256": "05c5d6d0dadae3fab371d83a7be1599a4c00066fc3b33f34891b43e07735fc64",
+          "gesture": "Reassuring gentle smile with calm eye contact; both open palms lowered and angled toward the ground in a soft calming gesture, slightly inclined toward the unseen person."
+        }
+      ],
+      "cropCorrection": {
+        "reason": "Inset of 2 pixels per cell edge; no scaling.",
+        "gridY": [
+          0,
+          418,
+          836,
+          1254
+        ],
+        "adjustments": [
+          {
+            "left": 2,
+            "top": 2,
+            "right": -2,
+            "bottom": -2
+          },
+          {
+            "left": 2,
+            "top": 2,
+            "right": -2,
+            "bottom": -2
+          },
+          {
+            "left": 2,
+            "top": 2,
+            "right": -2,
+            "bottom": -2
+          },
+          {
+            "left": 2,
+            "top": 2,
+            "right": -2,
+            "bottom": -2
+          },
+          {
+            "left": 2,
+            "top": 2,
+            "right": -2,
+            "bottom": -2
+          },
+          {
+            "left": 2,
+            "top": 2,
+            "right": -2,
+            "bottom": -2
+          },
+          {
+            "left": 2,
+            "top": 2,
+            "right": -2,
+            "bottom": -2
+          },
+          {
+            "left": 2,
+            "top": 2,
+            "right": -2,
+            "bottom": -2
+          },
+          {
+            "left": 2,
+            "top": 2,
+            "right": -2,
+            "bottom": -2
+          }
+        ],
+        "cellSize": 414
+      },
+      "visualReview": {
+        "reviewedAt": "2026-10-18",
+        "passed": true,
+        "reviewedAvatars": 9,
+        "method": "Alle exportierten PNGs in zwei Übersichten bei Originalgröße angesehen.",
+        "checks": [
+          "Figur, Kleidung, Zeichenstil und Hintergrund gegenüber dem Originalporträt",
+          "Mimik, leere gestikulierende Hände und Oberkörperausschnitt",
+          "saubere Zellkanten ohne Nachbarbilder, Trennlinien und Beschriftungen"
+        ]
+      }
+    }
+  ],
+  "avatarCount": 18,
+  "outputFolder": "Output",
+  "visualReview": {
+    "reviewedAt": "2026-10-18",
+    "passed": true,
+    "reviewedAvatars": 18,
+    "method": "Alle exportierten PNGs in zwei Übersichten bei Originalgröße angesehen.",
+    "checks": [
+      "Figur, Kleidung, Zeichenstil und Hintergrund gegenüber dem Originalporträt",
+      "Mimik, leere gestikulierende Hände und Oberkörperausschnitt",
+      "saubere Zellkanten ohne Nachbarbilder, Trennlinien und Beschriftungen"
+    ]
+  }
+}

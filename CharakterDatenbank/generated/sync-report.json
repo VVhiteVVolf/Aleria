@@ -2,15 +2,15 @@
   "schema": "aleria.character-sync-report",
   "schemaVersion": 1,
   "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
-  "sourceExportedAt": "2026-10-14T22:04:14.066Z",
+  "sourceExportedAt": "2026-10-18T14:09:06.794Z",
   "summary": {
-    "sourceDocuments": 373,
-    "total": 238,
+    "sourceDocuments": 374,
+    "total": 239,
     "mergedSameNameGroups": 45,
-    "familyLinked": 160,
+    "familyLinked": 161,
     "familyAmbiguous": 0,
     "familyPending": 78,
-    "primaryFamily": 160,
+    "primaryFamily": 161,
     "primaryGroup": 26,
     "primaryPlace": 18,
     "primaryUnassigned": 34,
@@ -1578,6 +1578,28 @@
       "fields": [
         "combatProfile.techniques"
       ]
+    },
+    {
+      "release": "swyll-family-2026-10-18",
+      "exportedAt": "2026-10-18T14:09:06.794Z",
+      "characterIds": [
+        "person--haus-swyll--iestyn-swyll",
+        "person--haus-draenmelyn--rhiannon-draenmelyn",
+        "person--haus-swyll--gareth-swyll",
+        "7ghgdvubmimcJySSkrKH",
+        "person--haus-swyll--rhydwen-swyll"
+      ],
+      "fields": [
+        "identity",
+        "genealogy",
+        "bio",
+        "biography",
+        "role",
+        "portrait",
+        "imageSets"
+      ],
+      "createdProfiles": 1,
+      "unrelatedCharactersUnchanged": true
     }
   ]
 }

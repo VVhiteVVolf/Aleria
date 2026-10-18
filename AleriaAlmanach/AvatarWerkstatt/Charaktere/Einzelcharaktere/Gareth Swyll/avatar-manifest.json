@@ -1,0 +1,452 @@
+{
+  "createdAt": "2026-10-18",
+  "character": "Gareth Swyll",
+  "generationMode": "built-in image_gen",
+  "splitter": "AleriaAlmanach/AvatarWerkstatt/Werkzeuge/Avatar Splitterer/AvatarSplitterPro_V3.py",
+  "splitterSha256": "d6523dcd145af51ccbcc04d3e51a8a5d6a643531e6beb7bc194bece4a5562ac8",
+  "sourcePortrait": "Referenzen/gareth-swyll-portraet.png",
+  "settings": {
+    "cols": 3,
+    "rows": 3,
+    "gap_x": 0,
+    "gap_y": 0,
+    "autocrop": false
+  },
+  "sets": [
+    {
+      "setId": "set-01",
+      "theme": "Gespräch und Gestik",
+      "sheet": "Sheets/gareth-swyll-set-01-gespraech-und-gestik.png",
+      "sheetSha256": "22d5b3a27ec93aeb6232a1528d124a0b4a3f4316cd7af671553230e1a9a288a7",
+      "sheetSize": [
+        1254,
+        1254
+      ],
+      "cellSize": [
+        414,
+        414
+      ],
+      "avatarCount": 9,
+      "outputs": [
+        {
+          "index": 1,
+          "emotion": "Freundliche Begrüßung",
+          "file": "Output/gareth-swyll-set-01-gespraech-und-gestik_Bild01.png",
+          "box": [
+            2,
+            2,
+            416,
+            416
+          ],
+          "sha256": "760495bccae6d4a63e54db419f086b0e27557f80ebce59af91d706f1078d386a",
+          "gesture": "A warm welcoming small smile, attentive eyes; one hand raised loosely near shoulder height, palm angled toward the unseen visitor, other hand open low."
+        },
+        {
+          "index": 2,
+          "emotion": "Ruhiges Erklären",
+          "file": "Output/gareth-swyll-set-01-gespraech-und-gestik_Bild02.png",
+          "box": [
+            420,
+            2,
+            834,
+            416
+          ],
+          "sha256": "ca8b94b7b87867594d59d4ccf89a1c315769563f39d9bac05c641959a304dc4a",
+          "gesture": "Engaged calm speech, lips naturally parted, brows attentive; both hands apart at lower chest height, palms obliquely inward as if carefully explaining a point."
+        },
+        {
+          "index": 3,
+          "emotion": "Nachdenkliches Abwägen",
+          "file": "Output/gareth-swyll-set-01-gespraech-und-gestik_Bild03.png",
+          "box": [
+            838,
+            2,
+            1252,
+            416
+          ],
+          "sha256": "9e22a7fa152f02b42046af840d720b7ea25e2e4fdd376393d92e2986bd905cd7",
+          "gesture": "Thoughtful eyes glance slightly aside, brows gently knit; fingertips rest against the chin while the opposite hand lightly supports that elbow."
+        },
+        {
+          "index": 4,
+          "emotion": "Skeptische Rückfrage",
+          "file": "Output/gareth-swyll-set-01-gespraech-und-gestik_Bild04.png",
+          "box": [
+            2,
+            420,
+            416,
+            834
+          ],
+          "sha256": "516504e428b5815ad8eb45c082ba9932bf1b427d6d2b57fda2cf87232b2372d2",
+          "gesture": "One eyebrow raised, the other slightly lowered, questioning half-open mouth; one forearm folded low and the other palm up near the chest, head tilted a little."
+        },
+        {
+          "index": 5,
+          "emotion": "Aufmerksames Zuhören",
+          "file": "Output/gareth-swyll-set-01-gespraech-und-gestik_Bild05.png",
+          "box": [
+            420,
+            420,
+            834,
+            834
+          ],
+          "sha256": "594c1202c1d7bb22db49d39569af7eb389a2a046e37c87070a8da9150c3ece51",
+          "gesture": "Quiet focused eyes, mouth closed and a slight sympathetic head inclination; hands loosely nested at the lower edge of the frame, shoulders composed, actively listening."
+        },
+        {
+          "index": 6,
+          "emotion": "Aufrichtiger Dank",
+          "file": "Output/gareth-swyll-set-01-gespraech-und-gestik_Bild06.png",
+          "box": [
+            838,
+            420,
+            1252,
+            834
+          ],
+          "sha256": "e6c3e1642cd37455c0d65a424a447cfd620ff464ae7b423360a128c52be39ebc",
+          "gesture": "Sincere appreciative smile and a small head incline; one flat hand over the heart, the other opened toward the unseen listener."
+        },
+        {
+          "index": 7,
+          "emotion": "Höfliche Ablehnung",
+          "file": "Output/gareth-swyll-set-01-gespraech-und-gestik_Bild07.png",
+          "box": [
+            2,
+            838,
+            416,
+            1252
+          ],
+          "sha256": "0c02ff29ddfcfd8914f53c24dff0a12ce59750431d0de0ee6484fbbe22a6aa39",
+          "gesture": "Polite but firm small closed-mouth expression and a slightly concerned brow; one hand raised palm outward in a restrained gentle refusal, other hand low."
+        },
+        {
+          "index": 8,
+          "emotion": "Wegweisendes Deuten",
+          "file": "Output/gareth-swyll-set-01-gespraech-und-gestik_Bild08.png",
+          "box": [
+            420,
+            838,
+            834,
+            1252
+          ],
+          "sha256": "6e80bfb340da8cbb932edf24d74b725d35a02e8254baf41931824a3c7c30c9e5",
+          "gesture": "Clear engaged speaking expression; one open hand extends gently to the side to indicate a direction or invite someone to continue, other palm kept near the chest. Do not point straight into the lens."
+        },
+        {
+          "index": 9,
+          "emotion": "Vertrauliches Zuflüstern",
+          "file": "Output/gareth-swyll-set-01-gespraech-und-gestik_Bild09.png",
+          "box": [
+            838,
+            838,
+            1252,
+            1252
+          ],
+          "sha256": "61113cd41ee469240d3bddc31b826bb553a205e0288f8c2684e8222420676f4b",
+          "gesture": "Quiet intent side glance, lips slightly parted; one cupped hand beside the mouth without covering the face, slight forward incline, opposite forearm relaxed across lower torso."
+        }
+      ],
+      "cropCorrection": {
+        "reason": "Inset of 2 pixels per cell edge; no scaling.",
+        "gridY": [
+          0,
+          418,
+          836,
+          1254
+        ],
+        "adjustments": [
+          {
+            "left": 2,
+            "top": 2,
+            "right": -2,
+            "bottom": -2
+          },
+          {
+            "left": 2,
+            "top": 2,
+            "right": -2,
+            "bottom": -2
+          },
+          {
+            "left": 2,
+            "top": 2,
+            "right": -2,
+            "bottom": -2
+          },
+          {
+            "left": 2,
+            "top": 2,
+            "right": -2,
+            "bottom": -2
+          },
+          {
+            "left": 2,
+            "top": 2,
+            "right": -2,
+            "bottom": -2
+          },
+          {
+            "left": 2,
+            "top": 2,
+            "right": -2,
+            "bottom": -2
+          },
+          {
+            "left": 2,
+            "top": 2,
+            "right": -2,
+            "bottom": -2
+          },
+          {
+            "left": 2,
+            "top": 2,
+            "right": -2,
+            "bottom": -2
+          },
+          {
+            "left": 2,
+            "top": 2,
+            "right": -2,
+            "bottom": -2
+          }
+        ],
+        "cellSize": 414
+      },
+      "visualReview": {
+        "reviewedAt": "2026-10-18",
+        "passed": true,
+        "reviewedAvatars": 9,
+        "method": "Alle exportierten PNGs in zwei Übersichten bei Originalgröße angesehen.",
+        "checks": [
+          "Figur, Kleidung, Zeichenstil und Hintergrund gegenüber dem Originalporträt",
+          "Mimik, leere gestikulierende Hände und Oberkörperausschnitt",
+          "saubere Zellkanten ohne Nachbarbilder, Trennlinien und Beschriftungen"
+        ]
+      }
+    },
+    {
+      "setId": "set-02",
+      "theme": "Gefühle und Reaktionen",
+      "sheet": "Sheets/gareth-swyll-set-02-gefuehle-und-reaktionen.png",
+      "sheetSha256": "fe44baee9dead3e630884cf8631e1ff037dc7fb9f14faf377079cda91707de33",
+      "sheetSize": [
+        1254,
+        1254
+      ],
+      "cellSize": [
+        414,
+        414
+      ],
+      "avatarCount": 9,
+      "outputs": [
+        {
+          "index": 1,
+          "emotion": "Herzliches Lachen",
+          "file": "Output/gareth-swyll-set-02-gefuehle-und-reaktionen_Bild01.png",
+          "box": [
+            2,
+            2,
+            416,
+            416
+          ],
+          "sha256": "2156a78987947dcb79a51ac786a993bf0742840480cade985896757eff1c1cd7",
+          "gesture": "Genuine warm laughter, eyes narrowed pleasantly, mouth naturally open; one hand resting at the lower ribs and the other hand loosely opened outward. No wild caricature."
+        },
+        {
+          "index": 2,
+          "emotion": "Schelmische Bemerkung",
+          "file": "Output/gareth-swyll-set-02-gefuehle-und-reaktionen_Bild02.png",
+          "box": [
+            420,
+            2,
+            834,
+            416
+          ],
+          "sha256": "243069474ea702065fcd650ab1456cb97ad46413402241da2e29a956299deb3c",
+          "gesture": "A knowing asymmetric smile and arched brow, eyes glancing sideways; one index finger lightly lifted near the chest as if making a playful observation, other hand at the waist."
+        },
+        {
+          "index": 3,
+          "emotion": "Verblüffte Überraschung",
+          "file": "Output/gareth-swyll-set-02-gefuehle-und-reaktionen_Bild03.png",
+          "box": [
+            838,
+            2,
+            1252,
+            416
+          ],
+          "sha256": "e261858816886cac999ab84872ea4118989facfa9954a54cd93af684c7fa642c",
+          "gesture": "Eyes widened and mouth slightly open, raised brows; both empty hands spontaneously lifted near the chest with relaxed spread fingers, no exaggerated scream."
+        },
+        {
+          "index": 4,
+          "emotion": "Besorgte Nachfrage",
+          "file": "Output/gareth-swyll-set-02-gefuehle-und-reaktionen_Bild04.png",
+          "box": [
+            2,
+            420,
+            416,
+            834
+          ],
+          "sha256": "d82c02c50a5555a1e4b90ac6477e01daf23741b147aeaf26e7d08cd4c181ad1f",
+          "gesture": "Brows raised at the center and drawn together, eyes worried, speaking lips; one hand reaching toward the unseen listener with a gentle upturned palm, other touching own chest."
+        },
+        {
+          "index": 5,
+          "emotion": "Verärgerter Widerspruch",
+          "file": "Output/gareth-swyll-set-02-gefuehle-und-reaktionen_Bild05.png",
+          "box": [
+            420,
+            420,
+            834,
+            834
+          ],
+          "sha256": "9026e496392055c8c04ecf35235379149d3cc7f424eac922958e97e08b99bb54",
+          "gesture": "Firm direct gaze, knitted brows and a tense speaking mouth; one forearm makes a compact emphatic downward gesture with a loosely closed hand, opposite hand open low. Controlled civilian anger, no fighting pose."
+        },
+        {
+          "index": 6,
+          "emotion": "Entschlossene Zusage",
+          "file": "Output/gareth-swyll-set-02-gefuehle-und-reaktionen_Bild06.png",
+          "box": [
+            838,
+            420,
+            1252,
+            834
+          ],
+          "sha256": "4201b3edfe371b9b5e1327ef1271baa90c38bea563047c439dd3d6069a0b1ab1",
+          "gesture": "Steady confident direct gaze and resolute mouth, shoulders straight; one closed hand held over the upper chest as a clear promise, other arm relaxed, no weapons."
+        },
+        {
+          "index": 7,
+          "emotion": "Verlegene Reaktion",
+          "file": "Output/gareth-swyll-set-02-gefuehle-und-reaktionen_Bild07.png",
+          "box": [
+            2,
+            838,
+            416,
+            1252
+          ],
+          "sha256": "b03afe46b99e2ed6f883e7e51bc4cdbaffe5c355ab59d89e45c4506b9b14c18f",
+          "gesture": "A shy awkward small smile and eyes glancing downward, faint natural blush; one hand rubbing the back or side of the neck, the other fingers loosely clasping its own wrist low in frame."
+        },
+        {
+          "index": 8,
+          "emotion": "Stille Enttäuschung",
+          "file": "Output/gareth-swyll-set-02-gefuehle-und-reaktionen_Bild08.png",
+          "box": [
+            420,
+            838,
+            834,
+            1252
+          ],
+          "sha256": "4db5f569bb51e009491477f3272e52fe802723ca573a18208ce4db26cde961aa",
+          "gesture": "Eyes lowered, brows drawn at the center, mouth gently compressed; one hand holding the opposite forearm across the lower torso, shoulders slightly softened, no crying caricature."
+        },
+        {
+          "index": 9,
+          "emotion": "Beruhigende Zuversicht",
+          "file": "Output/gareth-swyll-set-02-gefuehle-und-reaktionen_Bild09.png",
+          "box": [
+            838,
+            838,
+            1252,
+            1252
+          ],
+          "sha256": "45676116fa59046f5d9f10fab07676544e6b89cbd7acf1535e3db4a4624a1349",
+          "gesture": "Reassuring gentle smile with calm eye contact; both open palms lowered and angled toward the ground in a soft calming gesture, slightly inclined toward the unseen person."
+        }
+      ],
+      "cropCorrection": {
+        "reason": "Inset of 2 pixels per cell edge; no scaling.",
+        "gridY": [
+          0,
+          418,
+          836,
+          1254
+        ],
+        "adjustments": [
+          {
+            "left": 2,
+            "top": 2,
+            "right": -2,
+            "bottom": -2
+          },
+          {
+            "left": 2,
+            "top": 2,
+            "right": -2,
+            "bottom": -2
+          },
+          {
+            "left": 2,
+            "top": 2,
+            "right": -2,
+            "bottom": -2
+          },
+          {
+            "left": 2,
+            "top": 2,
+            "right": -2,
+            "bottom": -2
+          },
+          {
+            "left": 2,
+            "top": 2,
+            "right": -2,
+            "bottom": -2
+          },
+          {
+            "left": 2,
+            "top": 2,
+            "right": -2,
+            "bottom": -2
+          },
+          {
+            "left": 2,
+            "top": 2,
+            "right": -2,
+            "bottom": -2
+          },
+          {
+            "left": 2,
+            "top": 2,
+            "right": -2,
+            "bottom": -2
+          },
+          {
+            "left": 2,
+            "top": 2,
+            "right": -2,
+            "bottom": -2
+          }
+        ],
+        "cellSize": 414
+      },
+      "visualReview": {
+        "reviewedAt": "2026-10-18",
+        "passed": true,
+        "reviewedAvatars": 9,
+        "method": "Alle exportierten PNGs in zwei Übersichten bei Originalgröße angesehen.",
+        "checks": [
+          "Figur, Kleidung, Zeichenstil und Hintergrund gegenüber dem Originalporträt",
+          "Mimik, leere gestikulierende Hände und Oberkörperausschnitt",
+          "saubere Zellkanten ohne Nachbarbilder, Trennlinien und Beschriftungen"
+        ]
+      }
+    }
+  ],
+  "avatarCount": 18,
+  "outputFolder": "Output",
+  "visualReview": {
+    "reviewedAt": "2026-10-18",
+    "passed": true,
+    "reviewedAvatars": 18,
+    "method": "Alle exportierten PNGs in zwei Übersichten bei Originalgröße angesehen.",
+    "checks": [
+      "Figur, Kleidung, Zeichenstil und Hintergrund gegenüber dem Originalporträt",
+      "Mimik, leere gestikulierende Hände und Oberkörperausschnitt",
+      "saubere Zellkanten ohne Nachbarbilder, Trennlinien und Beschriftungen"
+    ]
+  }
+}

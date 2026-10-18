@@ -35,13 +35,12 @@ Charaktere/
       set-01/                  Arbeitskopie genau eines Sheets
         output/                Ergebnis der V3-Ordnerverarbeitung
         Benutzt/               von V3 verschobene Arbeitskopie
-    Output/
-      set-01/                  geprüfte fertige Einzelavatare
+    Output/                    alle geprüften Einzelavatare dieser Figur
 ```
 
 Jeder Gruppenordner besitzt dieselbe Struktur. Bei mehreren benannten Figuren in einer Gruppe dürfen darunter eigene Charakterordner nach der Vorlage angelegt werden. Unterschiedliche Kleidung, Anlässe oder Bildvarianten bekommen bei Bedarf einen eigenen Unterordner, wie `Gawain/Hochzeit`.
 
-Für neue Figuren oder Gruppen [Vorlagen/Charakterordner](Vorlagen/Charakterordner/) an die passende Stelle kopieren und benennen. Pro neuem Set einen eigenen Ordner `set-02`, `set-03` usw. unter `Verarbeitung` und `Output` anlegen. Dateinamen sollen Figur und Set enthalten, beispielsweise `yvain-allgemein-set-01.png`. Bestehende Dateien nicht überschreiben.
+Für neue Figuren oder Gruppen [Vorlagen/Charakterordner](Vorlagen/Charakterordner/) an die passende Stelle kopieren und benennen. Pro neuem Set einen eigenen Arbeitsordner `set-02`, `set-03` usw. unter `Verarbeitung` anlegen. Seit Nutzervorgabe vom 18. Oktober 2026 liegen alle fertigen Avatare einer Figur direkt in ihrem gemeinsamen `Output`-Ordner; jede Figur hat einen eigenen Output. Dateinamen enthalten Figur und Set, beispielsweise `yvain-allgemein-set-01_Bild01.png`. Bestehende Dateien nicht überschreiben.
 
 ## Avatar-Sheets erstellen
 
@@ -71,9 +70,9 @@ python "E:\Aleria\AleriaAlmanach\AvatarWerkstatt\Werkzeuge\Avatar Splitterer\Ava
 1. Mit **Bild laden** das Sheet wählen, anschließend das Raster **3×3** einstellen.
 2. Für randlose Sheets **Lücke X = 0**, **Lücke Y = 0** und **Autocrop aus** wählen. Die dazu passende Vorlage liegt unter `Vorlagen/9er-ohne-Trennlinien.json`.
 3. Raster und jede Zelle prüfen. Falls echte Trennlinien vorhanden sind, nur so viel Lücke wie nötig setzen; bei ungleichmäßiger Teilung die Rasterlinien verschieben. Einzelne Kanten können unabhängig korrigiert werden.
-4. **Aktuelles Bild als 9/alle Avatare exportieren** wählen und den passenden `Output/<set-id>`-Ordner angeben.
+4. **Aktuelles Bild als 9/alle Avatare exportieren** wählen und den `Output`-Ordner dieser Figur angeben. Der Sheetname muss Figur und Set eindeutig enthalten.
 
-Dieser Export lässt das Sheet an seinem Platz. Die PNGs heißen `<Sheetname>_Bild1.png` bis `<Sheetname>_Bild9.png`. Die Reihenfolge verläuft zeilenweise von oben links nach unten rechts. Erneuter Export in denselben Ordner mit demselben Sheetnamen überschreibt diese Dateien; für weitere Varianten einen neuen Set-Ordner verwenden.
+Dieser Export lässt das Sheet an seinem Platz. Die PNGs heißen `<Sheetname>_Bild1.png` bis `<Sheetname>_Bild9.png`. Die Reihenfolge verläuft zeilenweise von oben links nach unten rechts. Erneuter Export in denselben Ordner mit demselben Sheetnamen überschreibt diese Dateien; für weitere Varianten einen neuen eindeutigen Sheetnamen verwenden.
 
 ### Ordnerverarbeitung
 
@@ -81,7 +80,7 @@ Ein Sheet aus `Sheets` **kopieren** und direkt in seinen Arbeitsordner `Verarbei
 
 V3 schreibt die Ausschnitte nach `Verarbeitung/<set-id>/output` und verschiebt die dortige Eingabekopie nach `Verarbeitung/<set-id>/Benutzt`. Die Originale und das gesicherte Sheet bleiben erhalten. Das Werkzeug verarbeitet nur Bilddateien direkt im gewählten Ordner, nicht dessen Unterordner.
 
-Die Batch-Ausgabe verwendet `Bild1.png` bis `Bild9.png` und bei Namenskollisionen zusätzliche Suffixe. Damit die Zuordnung zur Figur und zum Sheet eindeutig bleibt, immer genau ein Sheet pro Arbeitsordner verarbeiten. Die geprüften Ergebnisse anschließend nach `Output/<set-id>` übernehmen und bei Bedarf mit Figur und Set benennen.
+Die Batch-Ausgabe verwendet `Bild1.png` bis `Bild9.png` und bei Namenskollisionen zusätzliche Suffixe. Damit die Zuordnung zur Figur und zum Sheet eindeutig bleibt, immer genau ein Sheet pro Arbeitsordner verarbeiten. Die geprüften Ergebnisse anschließend mit Figur und Set eindeutig benennen und direkt nach `Output` dieser Figur übernehmen.
 
 ### Einstellungen und Kontrolle
 

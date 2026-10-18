@@ -1,0 +1,170 @@
+{
+  "version": 1,
+  "createdAt": "2026-10-18",
+  "characterName": "Rhiannon Draenmelyn",
+  "worldPersonId": "person--haus-draenmelyn--rhiannon-draenmelyn",
+  "setId": "set-02",
+  "theme": "Gefühle und Reaktionen",
+  "referenceImage": "Referenzen/rhiannon-draenmelyn-portraet.png",
+  "referenceSha256": "7d4414e0db56a4d18c94002dd5d42f58cf33f01600a4577a4b319be8d7472e03",
+  "referenceSource": ".tmp\\swyll-family-2026-10-18\\portraits\\rhiannon-draenmelyn.png",
+  "promptFile": "Prompts/rhiannon-draenmelyn-set-02-gefuehle-und-reaktionen.txt",
+  "sheetFile": "Sheets/rhiannon-draenmelyn-set-02-gefuehle-und-reaktionen.png",
+  "sheet": {
+    "aspectRatio": "1:1",
+    "columns": 3,
+    "rows": 3,
+    "actualPixels": [
+      1254,
+      1254
+    ]
+  },
+  "panels": [
+    {
+      "index": 1,
+      "position": "Top Left",
+      "emotion": "Herzliches Lachen",
+      "gesture": "Genuine warm laughter, eyes narrowed pleasantly, mouth naturally open; one hand resting at the lower ribs and the other hand loosely opened outward. No wild caricature."
+    },
+    {
+      "index": 2,
+      "position": "Top Center",
+      "emotion": "Schelmische Bemerkung",
+      "gesture": "A knowing asymmetric smile and arched brow, eyes glancing sideways; one index finger lightly lifted near the chest as if making a playful observation, other hand at the waist."
+    },
+    {
+      "index": 3,
+      "position": "Top Right",
+      "emotion": "Verblüffte Überraschung",
+      "gesture": "Eyes widened and mouth slightly open, raised brows; both empty hands spontaneously lifted near the chest with relaxed spread fingers, no exaggerated scream."
+    },
+    {
+      "index": 4,
+      "position": "Middle Left",
+      "emotion": "Besorgte Nachfrage",
+      "gesture": "Brows raised at the center and drawn together, eyes worried, speaking lips; one hand reaching toward the unseen listener with a gentle upturned palm, other touching own chest."
+    },
+    {
+      "index": 5,
+      "position": "Center",
+      "emotion": "Verärgerter Widerspruch",
+      "gesture": "Firm direct gaze, knitted brows and a tense speaking mouth; one forearm makes a compact emphatic downward gesture with a loosely closed hand, opposite hand open low. Controlled civilian anger, no fighting pose."
+    },
+    {
+      "index": 6,
+      "position": "Middle Right",
+      "emotion": "Entschlossene Zusage",
+      "gesture": "Steady confident direct gaze and resolute mouth, shoulders straight; one closed hand held over the upper chest as a clear promise, other arm relaxed, no weapons."
+    },
+    {
+      "index": 7,
+      "position": "Bottom Left",
+      "emotion": "Verlegene Reaktion",
+      "gesture": "A shy awkward small smile and eyes glancing downward, faint natural blush; one hand rubbing the back or side of the neck, the other fingers loosely clasping its own wrist low in frame."
+    },
+    {
+      "index": 8,
+      "position": "Bottom Center",
+      "emotion": "Stille Enttäuschung",
+      "gesture": "Eyes lowered, brows drawn at the center, mouth gently compressed; one hand holding the opposite forearm across the lower torso, shoulders slightly softened, no crying caricature."
+    },
+    {
+      "index": 9,
+      "position": "Bottom Right",
+      "emotion": "Beruhigende Zuversicht",
+      "gesture": "Reassuring gentle smile with calm eye contact; both open palms lowered and angled toward the ground in a soft calming gesture, slightly inclined toward the unseen person."
+    }
+  ],
+  "splitter": {
+    "cols": 3,
+    "rows": 3,
+    "gap_x": 0,
+    "gap_y": 0,
+    "autocrop": false
+  },
+  "outputFolder": "Output",
+  "generationMode": "built-in image_gen",
+  "status": "erzeugt, mit V3 zerlegt und visuell geprüft",
+  "cropCorrection": {
+    "reason": "Inset of 2 pixels per cell edge; no scaling.",
+    "gridY": [
+      0,
+      418,
+      836,
+      1254
+    ],
+    "adjustments": [
+      {
+        "left": 2,
+        "top": 2,
+        "right": -2,
+        "bottom": -2
+      },
+      {
+        "left": 2,
+        "top": 2,
+        "right": -2,
+        "bottom": -2
+      },
+      {
+        "left": 2,
+        "top": 2,
+        "right": -2,
+        "bottom": -2
+      },
+      {
+        "left": 2,
+        "top": 2,
+        "right": -2,
+        "bottom": -2
+      },
+      {
+        "left": 2,
+        "top": 2,
+        "right": -2,
+        "bottom": -2
+      },
+      {
+        "left": 2,
+        "top": 2,
+        "right": -2,
+        "bottom": -2
+      },
+      {
+        "left": 2,
+        "top": 2,
+        "right": -2,
+        "bottom": -2
+      },
+      {
+        "left": 2,
+        "top": 2,
+        "right": -2,
+        "bottom": -2
+      },
+      {
+        "left": 2,
+        "top": 2,
+        "right": -2,
+        "bottom": -2
+      }
+    ],
+    "cellSize": 414
+  },
+  "avatarCount": 9,
+  "avatarPixels": [
+    414,
+    414
+  ],
+  "visualReview": {
+    "reviewedAt": "2026-10-18",
+    "passed": true,
+    "reviewedAvatars": 9,
+    "method": "Alle exportierten PNGs in zwei Übersichten bei Originalgröße angesehen.",
+    "checks": [
+      "Figur, Kleidung, Zeichenstil und Hintergrund gegenüber dem Originalporträt",
+      "Mimik, leere gestikulierende Hände und Oberkörperausschnitt",
+      "saubere Zellkanten ohne Nachbarbilder, Trennlinien und Beschriftungen"
+    ]
+  }
+}

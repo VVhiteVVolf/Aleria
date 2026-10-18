@@ -150,9 +150,14 @@
     "Charakter Archiv Exporte/ylva-wolfshorn-gefaehrten-2026-10-13.json",
     "Charakter Archiv Exporte/ylva-wolfshorn-weapon-economy-2026-09-30.json",
     "Charakter Archiv Exporte/ylva-wolfshorn.json",
-    "Charakter Archiv Exporte/ZGiDqxIwkkvOHzpnKmyk-tierbegleiter-2026-10-11.json"
+    "Charakter Archiv Exporte/ZGiDqxIwkkvOHzpnKmyk-tierbegleiter-2026-10-11.json",
+    "Charakter Archiv Exporte/iestyn-swyll-familienabgleich-2026-10-18.json",
+    "Charakter Archiv Exporte/rhiannon-draenmelyn-familienabgleich-2026-10-18.json",
+    "Charakter Archiv Exporte/gareth-swyll-familienabgleich-2026-10-18.json",
+    "Charakter Archiv Exporte/meredith-swyll-familienabgleich-2026-10-18.json",
+    "Charakter Archiv Exporte/rhydwen-swyll-familienabgleich-2026-10-18.json"
   ],
-  "sourceExportedAt": "2026-10-15T19:24:10.194Z",
+  "sourceExportedAt": "2026-10-18T14:09:06.794Z",
   "characters": [
     {
       "id": "kCmUm4WvMZDYetqrSWQ0",
@@ -45509,8 +45514,183 @@
       "activeImageSetId": "standard",
       "aliases": [],
       "archived": false,
-      "bio": "",
-      "biography": null,
+      "bio": "Rhiannon Draenmelyn ist eine Bedienstete des Hauses Draig aus Gwynthor. Die 1702 geborene Tochter von Ifor Draenmelyn und Nest ist mit Iestyn Swyll verheiratet und Mutter von Gareth, Meredith und Rhydwen Swyll.",
+      "biography": {
+        "schema": "aleria.biography-module",
+        "revision": 1792332546794,
+        "stats": [
+          {
+            "label": "Vollständiger Name",
+            "value": "Rhiannon Draenmelyn"
+          },
+          {
+            "label": "Geboren / Alter",
+            "value": "1702 · 38 Jahre (1740)"
+          },
+          {
+            "label": "Stand",
+            "value": "Bürgerlich"
+          },
+          {
+            "label": "Herkunft",
+            "value": "Gwynthor · Llamreis Ankunft · Celtigerns Wacht · Cenyr"
+          },
+          {
+            "label": "Haus",
+            "value": "Haus Draenmelyn"
+          },
+          {
+            "label": "Rolle",
+            "value": "Bedienstete des Hauses Draig"
+          },
+          {
+            "label": "Ehepartner",
+            "value": "Iestyn Swyll"
+          },
+          {
+            "label": "Kinder",
+            "value": "Gareth Swyll, Meredith Swyll, Rhydwen Swyll"
+          }
+        ],
+        "schemaVersion": 1,
+        "quoteBy": "",
+        "biography": {
+          "works": [
+            "Bedienstete des Hauses Draig."
+          ],
+          "quotes": [],
+          "historyText": "",
+          "connectionTextOffset": 0,
+          "biographyTitle": "Rhiannon Draenmelyn",
+          "portraitFit": "contain",
+          "sideWidth": 100,
+          "trivia": [],
+          "biographyText": "<p>Rhiannon Draenmelyn wurde 1702 als Tochter von Ifor Draenmelyn und Nest geboren. Im Jahr 1740 ist sie achtunddreißig Jahre alt. Sie entstammt einem bürgerlichen Geschlecht aus Gwynthor, das seit Generationen als Diener- und Bedienstetenfamilie im Haushalt des Hauses Draig steht. Auch Rhiannon dient dem Haus Draig als Bedienstete.</p><p>Durch ihre Ehe mit Iestyn Swyll ist sie mit dem Bürgerhaus Swyll verbunden. Die gemeinsame Linie des Paares wird im Haus Swyll fortgeführt.</p><p>Ihre Kinder sind Gareth Swyll, geboren 1720, Meredith Swyll, geboren 1722, und Rhydwen Swyll, geboren 1725. Meredith ist die persönliche Zofe von Prinzessin Rhiannon; diese Namensvetterin ist von ihrer Mutter Rhiannon Draenmelyn zu unterscheiden.</p><p>Afan, Meurig und Caradog Draenmelyn sind ihre Brüder. Über Afan ist sie die Tante von Sioned, Taliesin und Gethin; über Meurig ist sie die Tante von Owain, Myfanwy und Eleri Draenmelyn.</p>",
+          "extraSections": [
+            {
+              "title": "Noch offene Angaben",
+              "position": "afterWorks",
+              "mode": "text",
+              "text": "<p>Rhiannons genaues Aufgabenfeld im Haushalt, ihre Ausbildung und weitere persönliche Lebensereignisse sind bisher nicht festgelegt.</p>"
+            }
+          ],
+          "connectionPortraitHeight": 74,
+          "abilitiesTitle": "Persönlichkeit",
+          "documentsTitle": "Stammbaum",
+          "documents": [
+            {
+              "title": "Haus Swyll",
+              "link": "/Stammbäume/Stammbaum.html?family=haus-swyll&mode=view&person=rhiannon-draenmelyn",
+              "text": "Familienzweig um Iestyn, Rhiannon und ihre drei Kinder.",
+              "icon": "/Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Swyll.png"
+            },
+            {
+              "title": "Haus Draenmelyn",
+              "link": "/Stammbäume/Stammbaum.html?family=haus-draenmelyn&mode=view&person=rhiannon-draenmelyn",
+              "text": "Rhiannons Herkunftsfamilie.",
+              "icon": "/Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Draenmelyn.png"
+            }
+          ],
+          "connections": [
+            {
+              "type": "heading",
+              "title": "Eltern",
+              "detail": ""
+            },
+            {
+              "type": "connection",
+              "name": "Ifor Draenmelyn",
+              "detail": "Belegtes Elternteil.",
+              "image": "https://i.imgur.com/6YW06jU.png",
+              "imageFormat": "portrait"
+            },
+            {
+              "type": "connection",
+              "name": "Nest",
+              "detail": "Belegtes Elternteil.",
+              "image": "",
+              "imageFormat": "portrait"
+            },
+            {
+              "type": "heading",
+              "title": "Ehepartner",
+              "detail": ""
+            },
+            {
+              "type": "connection",
+              "name": "Iestyn Swyll",
+              "detail": "Eheliche Verbindung zwischen den Häusern Swyll und Draenmelyn.",
+              "image": "https://i.imgur.com/VpjeTe7.png",
+              "imageFormat": "portrait"
+            },
+            {
+              "type": "heading",
+              "title": "Kinder",
+              "detail": ""
+            },
+            {
+              "type": "connection",
+              "name": "Gareth Swyll",
+              "detail": "Gemeinsames Kind von Iestyn Swyll und Rhiannon Draenmelyn.",
+              "image": "https://i.imgur.com/DpqoWhn.png",
+              "imageFormat": "portrait"
+            },
+            {
+              "type": "connection",
+              "name": "Meredith Swyll",
+              "detail": "Gemeinsames Kind von Iestyn Swyll und Rhiannon Draenmelyn.",
+              "image": "https://i.imgur.com/8lLkOwQ.png",
+              "imageFormat": "portrait"
+            },
+            {
+              "type": "connection",
+              "name": "Rhydwen Swyll",
+              "detail": "Gemeinsames Kind von Iestyn Swyll und Rhiannon Draenmelyn.",
+              "image": "https://i.imgur.com/NR8HKxj.png",
+              "imageFormat": "portrait"
+            },
+            {
+              "type": "heading",
+              "title": "Geschwister",
+              "detail": ""
+            },
+            {
+              "type": "connection",
+              "name": "Afan Draenmelyn",
+              "detail": "Geschwister mit denselben belegten Eltern.",
+              "image": "https://i.imgur.com/yu4DXTn.png",
+              "imageFormat": "portrait"
+            },
+            {
+              "type": "connection",
+              "name": "Meurig Draenmelyn",
+              "detail": "Geschwister mit denselben belegten Eltern.",
+              "image": "",
+              "imageFormat": "portrait"
+            },
+            {
+              "type": "connection",
+              "name": "Caradog Draenmelyn",
+              "detail": "Geschwister mit denselben belegten Eltern.",
+              "image": "",
+              "imageFormat": "portrait"
+            }
+          ],
+          "connectionsTitle": "Familie",
+          "abilities": [],
+          "portraitStages": [
+            "",
+            "",
+            "",
+            ""
+          ],
+          "portrait": "https://i.imgur.com/cyJqlDG.png",
+          "historyTitle": "Familie und Herkunft",
+          "footer": "Personenakte · Rhiannon Draenmelyn",
+          "worksTitle": "Belegte Tätigkeit"
+        },
+        "quote": ""
+      },
       "createdAt": "2026-09-03T17:47:36.579Z",
       "currentLocation": "",
       "emotes": [
@@ -45590,69 +45770,94 @@
       "emotesOverride": true,
       "fraktion": "Haus Draenmelyn",
       "genealogy": {
-        "birth": "1702",
-        "death": "",
-        "familyRole": "core",
-        "houseId": "house-draenmelyn",
-        "houseName": "Haus Draenmelyn",
-        "portraitPlaceholder": "auto",
-        "relationships": {
-          "children": [],
-          "parents": [
-            {
-              "certainty": "confirmed",
-              "legitimacy": "legitimate",
-              "name": "Ifor Draenmelyn",
-              "personId": "ifor-draenmelyn",
-              "type": "biological",
-              "worldPersonId": "person--haus-draenmelyn--ifor-draenmelyn"
-            },
-            {
-              "certainty": "confirmed",
-              "legitimacy": "legitimate",
-              "name": "Nest",
-              "personId": "nest-spouse-draenmelyn",
-              "type": "biological",
-              "worldPersonId": "person--family-tree--nest-spouse-draenmelyn"
-            }
-          ],
-          "partners": [
-            {
-              "certainty": "confirmed",
-              "name": "Iestyn Swyll",
-              "personId": "iestyn-swyll",
-              "status": "active",
-              "type": "marriage",
-              "worldPersonId": "person--haus-swyll--iestyn-swyll"
-            }
-          ]
-        },
         "sex": "female",
+        "death": "",
+        "birth": "1702",
+        "familyRole": "core",
+        "portraitPlaceholder": "auto",
         "sources": [
           {
             "familyId": "haus-draenmelyn",
-            "fingerprint": "{\"name\":\"Rhiannon Draenmelyn\",\"title\":\"Bedienstete des Hauses Draig\",\"birth\":\"1702\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-draenmelyn\",\"portrait\":\"https://i.imgur.com/cyJqlDG.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"ifor-draenmelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draenmelyn--ifor-draenmelyn\",\"name\":\"Ifor Draenmelyn\"},{\"personId\":\"nest-spouse-draenmelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--nest-spouse-draenmelyn\",\"name\":\"Nest\"}],\"partners\":[{\"personId\":\"iestyn-swyll\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-swyll--iestyn-swyll\",\"name\":\"Iestyn Swyll\"}],\"children\":[]}}",
+            "personId": "rhiannon-draenmelyn",
+            "releaseId": "",
+            "publishedAt": "",
             "importedAt": "2026-09-03T17:47:36.579Z",
             "lastSyncedAt": "2026-09-03T17:47:36.579Z",
-            "personId": "rhiannon-draenmelyn",
-            "publishedAt": "",
-            "releaseId": "",
-            "url": "../Stammbäume/Stammbaum.html?family=haus-draenmelyn&mode=view&person=rhiannon-draenmelyn"
+            "url": "../Stammbäume/Stammbaum.html?family=haus-draenmelyn&mode=view&person=rhiannon-draenmelyn",
+            "fingerprint": "{\"name\":\"Rhiannon Draenmelyn\",\"title\":\"Bedienstete des Hauses Draig\",\"birth\":\"1702\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-draenmelyn\",\"portrait\":\"https://i.imgur.com/cyJqlDG.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"ifor-draenmelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draenmelyn--ifor-draenmelyn\",\"name\":\"Ifor Draenmelyn\"},{\"personId\":\"nest-spouse-draenmelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--nest-spouse-draenmelyn\",\"name\":\"Nest\"}],\"partners\":[{\"personId\":\"iestyn-swyll\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-swyll--iestyn-swyll\",\"name\":\"Iestyn Swyll\"}],\"children\":[]}}"
           },
           {
             "familyId": "haus-swyll",
             "personId": "rhiannon-draenmelyn",
             "releaseId": "",
             "publishedAt": "",
-            "importedAt": "2026-10-12T22:24:41.567Z",
-            "lastSyncedAt": "2026-10-12T22:24:41.567Z",
+            "importedAt": "2026-10-18T14:09:06.794Z",
+            "lastSyncedAt": "2026-10-18T14:09:06.794Z",
             "url": "../Stammbäume/Stammbaum.html?family=haus-swyll&mode=view&person=rhiannon-draenmelyn",
             "fingerprint": "{\"name\":\"Rhiannon Draenmelyn\",\"title\":\"Bedienstete des Hauses Draig\",\"birth\":\"1702\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-draenmelyn\",\"portrait\":\"https://i.imgur.com/cyJqlDG.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"iestyn-swyll\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-swyll--iestyn-swyll\",\"name\":\"Iestyn Swyll\"}],\"children\":[{\"personId\":\"gareth-swyll\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-swyll--gareth-swyll\",\"name\":\"Gareth Swyll\"},{\"personId\":\"meredith-swyll\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-swyll--meredith-swyll\",\"name\":\"Meredith Swyll\"},{\"personId\":\"rhydwen-swyll\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-swyll--rhydwen-swyll\",\"name\":\"Rhydwen Swyll\"}]}}"
           }
         ],
+        "relationships": {
+          "partners": [
+            {
+              "personId": "iestyn-swyll",
+              "type": "marriage",
+              "status": "active",
+              "certainty": "confirmed",
+              "worldPersonId": "person--haus-swyll--iestyn-swyll",
+              "name": "Iestyn Swyll"
+            }
+          ],
+          "children": [
+            {
+              "personId": "gareth-swyll",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--haus-swyll--gareth-swyll",
+              "name": "Gareth Swyll"
+            },
+            {
+              "personId": "meredith-swyll",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--haus-swyll--meredith-swyll",
+              "name": "Meredith Swyll"
+            },
+            {
+              "personId": "rhydwen-swyll",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--haus-swyll--rhydwen-swyll",
+              "name": "Rhydwen Swyll"
+            }
+          ],
+          "parents": [
+            {
+              "personId": "ifor-draenmelyn",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--haus-draenmelyn--ifor-draenmelyn",
+              "name": "Ifor Draenmelyn"
+            },
+            {
+              "personId": "nest-spouse-draenmelyn",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--family-tree--nest-spouse-draenmelyn",
+              "name": "Nest"
+            }
+          ]
+        },
+        "houseName": "Haus Draenmelyn",
+        "houseId": "house-draenmelyn",
         "status": "alive",
-        "tags": [],
-        "worldPersonId": "person--haus-draenmelyn--rhiannon-draenmelyn"
+        "worldPersonId": "person--haus-draenmelyn--rhiannon-draenmelyn",
+        "tags": []
       },
       "id": "person--haus-draenmelyn--rhiannon-draenmelyn",
       "identity": {
@@ -45660,7 +45865,9 @@
       },
       "imageSets": [
         {
-          "createdAt": "2026-09-03T18:13:39.905Z",
+          "id": "standard",
+          "name": "Standard",
+          "portrait": "https://i.imgur.com/cyJqlDG.png",
           "emotes": [
             {
               "img": "https://i.imgur.com/Y2AM3RQ.png",
@@ -45735,10 +45942,98 @@
               "label": "eFQuc08"
             }
           ],
-          "id": "standard",
-          "name": "Standard",
-          "portrait": "https://i.imgur.com/cyJqlDG.png",
+          "createdAt": "2026-09-03T18:13:39.905Z",
           "updatedAt": "2026-09-03T18:13:39.905Z"
+        },
+        {
+          "id": "swyll-20261018-set-01",
+          "name": "Gespräch & Gestik",
+          "portrait": "https://i.imgur.com/cyJqlDG.png",
+          "emotes": [
+            {
+              "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-draenmelyn%2Favatar-rhiannon-draenmelyn-20261018-set-01-01%2Foriginal.png?alt=media",
+              "label": "Freundliche Begrüßun"
+            },
+            {
+              "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-draenmelyn%2Favatar-rhiannon-draenmelyn-20261018-set-01-02%2Foriginal.png?alt=media",
+              "label": "Ruhiges Erklären"
+            },
+            {
+              "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-draenmelyn%2Favatar-rhiannon-draenmelyn-20261018-set-01-03%2Foriginal.png?alt=media",
+              "label": "Nachdenkliches Abwäg"
+            },
+            {
+              "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-draenmelyn%2Favatar-rhiannon-draenmelyn-20261018-set-01-04%2Foriginal.png?alt=media",
+              "label": "Skeptische Rückfrage"
+            },
+            {
+              "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-draenmelyn%2Favatar-rhiannon-draenmelyn-20261018-set-01-05%2Foriginal.png?alt=media",
+              "label": "Aufmerksames Zuhören"
+            },
+            {
+              "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-draenmelyn%2Favatar-rhiannon-draenmelyn-20261018-set-01-06%2Foriginal.png?alt=media",
+              "label": "Aufrichtiger Dank"
+            },
+            {
+              "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-draenmelyn%2Favatar-rhiannon-draenmelyn-20261018-set-01-07%2Foriginal.png?alt=media",
+              "label": "Höfliche Ablehnung"
+            },
+            {
+              "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-draenmelyn%2Favatar-rhiannon-draenmelyn-20261018-set-01-08%2Foriginal.png?alt=media",
+              "label": "Wegweisendes Deuten"
+            },
+            {
+              "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-draenmelyn%2Favatar-rhiannon-draenmelyn-20261018-set-01-09%2Foriginal.png?alt=media",
+              "label": "Vertrauliches Zuflüs"
+            }
+          ],
+          "createdAt": "2026-10-18T14:09:06.794Z",
+          "updatedAt": "2026-10-18T14:09:06.794Z"
+        },
+        {
+          "id": "swyll-20261018-set-02",
+          "name": "Gefühle & Reaktionen",
+          "portrait": "https://i.imgur.com/cyJqlDG.png",
+          "emotes": [
+            {
+              "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-draenmelyn%2Favatar-rhiannon-draenmelyn-20261018-set-02-01%2Foriginal.png?alt=media",
+              "label": "Herzliches Lachen"
+            },
+            {
+              "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-draenmelyn%2Favatar-rhiannon-draenmelyn-20261018-set-02-02%2Foriginal.png?alt=media",
+              "label": "Schelmische Bemerkun"
+            },
+            {
+              "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-draenmelyn%2Favatar-rhiannon-draenmelyn-20261018-set-02-03%2Foriginal.png?alt=media",
+              "label": "Verblüffte Überrasch"
+            },
+            {
+              "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-draenmelyn%2Favatar-rhiannon-draenmelyn-20261018-set-02-04%2Foriginal.png?alt=media",
+              "label": "Besorgte Nachfrage"
+            },
+            {
+              "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-draenmelyn%2Favatar-rhiannon-draenmelyn-20261018-set-02-05%2Foriginal.png?alt=media",
+              "label": "Verärgerter Widerspr"
+            },
+            {
+              "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-draenmelyn%2Favatar-rhiannon-draenmelyn-20261018-set-02-06%2Foriginal.png?alt=media",
+              "label": "Entschlossene Zusage"
+            },
+            {
+              "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-draenmelyn%2Favatar-rhiannon-draenmelyn-20261018-set-02-07%2Foriginal.png?alt=media",
+              "label": "Verlegene Reaktion"
+            },
+            {
+              "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-draenmelyn%2Favatar-rhiannon-draenmelyn-20261018-set-02-08%2Foriginal.png?alt=media",
+              "label": "Stille Enttäuschung"
+            },
+            {
+              "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-draenmelyn%2Favatar-rhiannon-draenmelyn-20261018-set-02-09%2Foriginal.png?alt=media",
+              "label": "Beruhigende Zuversic"
+            }
+          ],
+          "createdAt": "2026-10-18T14:09:06.794Z",
+          "updatedAt": "2026-10-18T14:09:06.794Z"
         }
       ],
       "imageSetSchemaVersion": 1,
@@ -45751,16 +46046,16 @@
       "portrait": "https://i.imgur.com/cyJqlDG.png",
       "profileLink": "",
       "relevance": "",
-      "role": "",
+      "role": "Bedienstete des Hauses Draig",
       "status": "active",
       "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
       "title": "Bedienstete des Hauses Draig",
-      "updatedAt": "2026-09-03T18:20:15.518Z",
+      "updatedAt": "2026-10-18T14:09:06.794Z",
       "localRecord": {
         "recordId": "character--person--haus-draenmelyn--rhiannon-draenmelyn",
         "path": "records/familien/haus-draenmelyn/rhiannon-draenmelyn--person--haus-draenmelyn--rhiannon-draenmelyn/character.json",
         "schemaVersion": 1,
-        "contentHash": "b3c2bf4f94be1b7cc0f012097e047b7bf0d55129987762ef7130512c0a77bac2",
+        "contentHash": "a45b782ba4920ef67807d82d88bd0d7be5447d17724e1d5cf774f9c8525dda39",
         "firestoreDocumentIds": [
           "person--haus-draenmelyn--rhiannon-draenmelyn"
         ],
@@ -45787,7 +46082,7 @@
                 "Llamreis Ankunft",
                 "Gwynthor"
               ],
-              "url": "../Stammbäume/Stammbaum.html?family=haus-draenmelyn&mode=view&person=rhiannon-draenmelyn",
+              "url": "",
               "fingerprint": "{\"name\":\"Rhiannon Draenmelyn\",\"title\":\"Bedienstete des Hauses Draig\",\"birth\":\"1702\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-draenmelyn\",\"portrait\":\"https://i.imgur.com/cyJqlDG.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"ifor-draenmelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draenmelyn--ifor-draenmelyn\",\"name\":\"Ifor Draenmelyn\"},{\"personId\":\"nest-spouse-draenmelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--nest-spouse-draenmelyn\",\"name\":\"Nest\"}],\"partners\":[{\"personId\":\"iestyn-swyll\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-swyll--iestyn-swyll\",\"name\":\"Iestyn Swyll\"}],\"children\":[]}}",
               "score": 275
             },
@@ -45806,7 +46101,7 @@
                 "Llamreis Ankunft",
                 "Gwynthor"
               ],
-              "url": "../Stammbäume/Stammbaum.html?family=haus-swyll&mode=view&person=rhiannon-draenmelyn",
+              "url": "",
               "fingerprint": "{\"name\":\"Rhiannon Draenmelyn\",\"title\":\"Bedienstete des Hauses Draig\",\"birth\":\"1702\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-draenmelyn\",\"portrait\":\"https://i.imgur.com/cyJqlDG.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"iestyn-swyll\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-swyll--iestyn-swyll\",\"name\":\"Iestyn Swyll\"}],\"children\":[{\"personId\":\"gareth-swyll\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-swyll--gareth-swyll\",\"name\":\"Gareth Swyll\"},{\"personId\":\"meredith-swyll\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-swyll--meredith-swyll\",\"name\":\"Meredith Swyll\"},{\"personId\":\"rhydwen-swyll\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-swyll--rhydwen-swyll\",\"name\":\"Rhydwen Swyll\"}]}}",
               "score": 230
             }
@@ -141489,87 +141784,304 @@
       }
     },
     {
-      "activeImageSetId": "",
+      "activeImageSetId": "standard",
       "aliases": [],
       "archived": false,
-      "bio": "",
-      "biography": null,
+      "bio": "Gareth Swyll wurde 1720 als ältestes Kind von Iestyn Swyll und Rhiannon Draenmelyn geboren. Der zwanzigjährige Angehörige des Bürgerhauses Swyll ist der ältere Bruder von Meredith und Rhydwen. Er ist unverheiratet und nicht verlobt.",
+      "biography": {
+        "revision": 1792332546794,
+        "stats": [
+          {
+            "label": "Vollständiger Name",
+            "value": "Gareth Swyll"
+          },
+          {
+            "label": "Geboren / Alter",
+            "value": "1720 · 20 Jahre (1740)"
+          },
+          {
+            "label": "Stand",
+            "value": "Bürgerlich"
+          },
+          {
+            "label": "Herkunft",
+            "value": "Gwynthor · Llamreis Ankunft · Celtigerns Wacht · Cenyr"
+          },
+          {
+            "label": "Haus",
+            "value": "Haus Swyll"
+          },
+          {
+            "label": "Rolle",
+            "value": "Ältestes Kind von Iestyn und Rhiannon"
+          },
+          {
+            "label": "Familienstand",
+            "value": "Unverheiratet · keine Verlobung"
+          }
+        ],
+        "schemaVersion": 1,
+        "quote": "",
+        "biography": {
+          "worksTitle": "Belegte Tätigkeit",
+          "documentsTitle": "Stammbaum",
+          "extraSections": [
+            {
+              "title": "Noch offene Angaben",
+              "position": "afterWorks",
+              "mode": "text",
+              "text": "<p>Ein eigener Beruf, eine Ausbildung und persönliche Charakterzüge sind für Gareth noch nicht belegt.</p>"
+            }
+          ],
+          "historyTitle": "Familie und Herkunft",
+          "connections": [
+            {
+              "type": "heading",
+              "title": "Eltern",
+              "detail": ""
+            },
+            {
+              "type": "connection",
+              "name": "Rhiannon Draenmelyn",
+              "detail": "Belegtes Elternteil.",
+              "image": "https://i.imgur.com/cyJqlDG.png",
+              "imageFormat": "portrait"
+            },
+            {
+              "type": "connection",
+              "name": "Iestyn Swyll",
+              "detail": "Belegtes Elternteil.",
+              "image": "https://i.imgur.com/VpjeTe7.png",
+              "imageFormat": "portrait"
+            },
+            {
+              "type": "heading",
+              "title": "Geschwister",
+              "detail": ""
+            },
+            {
+              "type": "connection",
+              "name": "Meredith Swyll",
+              "detail": "Geschwister mit denselben belegten Eltern.",
+              "image": "https://i.imgur.com/8lLkOwQ.png",
+              "imageFormat": "portrait"
+            },
+            {
+              "type": "connection",
+              "name": "Rhydwen Swyll",
+              "detail": "Geschwister mit denselben belegten Eltern.",
+              "image": "https://i.imgur.com/NR8HKxj.png",
+              "imageFormat": "portrait"
+            }
+          ],
+          "connectionTextOffset": 0,
+          "connectionsTitle": "Familie",
+          "abilitiesTitle": "Persönlichkeit",
+          "trivia": [],
+          "sideWidth": 100,
+          "portraitFit": "contain",
+          "abilities": [],
+          "works": [],
+          "biographyText": "<p>Gareth Swyll ist das älteste der drei gemeinsamen Kinder von Iestyn Swyll und Rhiannon Draenmelyn. Er wurde 1720 geboren und ist im Jahr 1740 zwanzig Jahre alt. Er gehört zum bürgerlichen Haus Swyll aus Gwynthor.</p><p>Seine jüngeren Schwestern sind Meredith, geboren 1722, und Rhydwen, geboren 1725. Meredith dient als persönliche Zofe von Prinzessin Rhiannon. Über ihre Mutter sind die drei Geschwister zugleich mit der Bedienstetenfamilie Draenmelyn verbunden.</p><p>Gareth ist unverheiratet und ohne Verlobung. Seine weitere Lebenslinie bleibt offen.</p>",
+          "historyText": "",
+          "footer": "Personenakte · Gareth Swyll",
+          "quotes": [],
+          "documents": [
+            {
+              "title": "Haus Swyll",
+              "link": "/Stammbäume/Stammbaum.html?family=haus-swyll&mode=view&person=gareth-swyll",
+              "text": "Familienzweig um Iestyn, Rhiannon und ihre drei Kinder.",
+              "icon": "/Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Swyll.png"
+            }
+          ],
+          "biographyTitle": "Gareth Swyll",
+          "portraitStages": [
+            "",
+            "",
+            "",
+            ""
+          ],
+          "portrait": "https://i.imgur.com/DpqoWhn.png",
+          "connectionPortraitHeight": 74
+        },
+        "schema": "aleria.biography-module",
+        "quoteBy": ""
+      },
       "createdAt": "2026-09-03T17:48:57.673Z",
       "currentLocation": "",
       "emotes": [],
-      "emotesOverride": false,
+      "emotesOverride": true,
       "fraktion": "Haus Swyll",
       "genealogy": {
-        "birth": "1720",
-        "death": "",
+        "portraitPlaceholder": "auto",
+        "tags": [],
+        "status": "alive",
         "familyRole": "core",
         "houseId": "house-swyll",
+        "death": "",
+        "worldPersonId": "person--haus-swyll--gareth-swyll",
+        "sources": [
+          {
+            "familyId": "haus-swyll",
+            "personId": "gareth-swyll",
+            "releaseId": "",
+            "publishedAt": "",
+            "importedAt": "2026-09-03T17:48:57.673Z",
+            "lastSyncedAt": "2026-10-18T14:09:06.794Z",
+            "url": "../Stammbäume/Stammbaum.html?family=haus-swyll&mode=view&person=gareth-swyll",
+            "fingerprint": "{\"name\":\"Gareth Swyll\",\"title\":\"Älterer Bruder Meredith Swylls\",\"birth\":\"1720\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-swyll\",\"portrait\":\"https://i.imgur.com/DpqoWhn.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"rhiannon-draenmelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draenmelyn--rhiannon-draenmelyn\",\"name\":\"Rhiannon Draenmelyn\"},{\"personId\":\"iestyn-swyll\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-swyll--iestyn-swyll\",\"name\":\"Iestyn Swyll\"}],\"partners\":[],\"children\":[]}}"
+          }
+        ],
         "houseName": "Haus Swyll",
-        "portraitPlaceholder": "auto",
         "relationships": {
           "children": [],
           "parents": [
             {
-              "certainty": "confirmed",
-              "legitimacy": "legitimate",
-              "name": "Rhiannon Draenmelyn",
               "personId": "rhiannon-draenmelyn",
               "type": "biological",
-              "worldPersonId": "person--haus-draenmelyn--rhiannon-draenmelyn"
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--haus-draenmelyn--rhiannon-draenmelyn",
+              "name": "Rhiannon Draenmelyn"
             },
             {
-              "certainty": "confirmed",
-              "legitimacy": "legitimate",
-              "name": "Iestyn Swyll",
               "personId": "iestyn-swyll",
               "type": "biological",
-              "worldPersonId": "person--haus-swyll--iestyn-swyll"
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--haus-swyll--iestyn-swyll",
+              "name": "Iestyn Swyll"
             }
           ],
           "partners": []
         },
         "sex": "male",
-        "sources": [
-          {
-            "familyId": "haus-swyll",
-            "fingerprint": "{\"name\":\"Gareth Swyll\",\"title\":\"Älterer Bruder Meredith Swylls\",\"birth\":\"1720\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-swyll\",\"portrait\":\"\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"rhiannon-draenmelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draenmelyn--rhiannon-draenmelyn\",\"name\":\"Rhiannon Draenmelyn\"},{\"personId\":\"iestyn-swyll\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-swyll--iestyn-swyll\",\"name\":\"Iestyn Swyll\"}],\"partners\":[],\"children\":[]}}",
-            "importedAt": "2026-09-03T17:48:57.673Z",
-            "lastSyncedAt": "2026-09-03T17:48:57.673Z",
-            "personId": "gareth-swyll",
-            "publishedAt": "",
-            "releaseId": "",
-            "url": "../Stammbäume/Stammbaum.html?family=haus-swyll&mode=view&person=gareth-swyll"
-          }
-        ],
-        "status": "alive",
-        "tags": [],
-        "worldPersonId": "person--haus-swyll--gareth-swyll"
+        "birth": "1720"
       },
       "id": "person--haus-swyll--gareth-swyll",
       "identity": {
         "worldPersonId": "person--haus-swyll--gareth-swyll"
       },
-      "imageSets": [],
-      "imageSetSchemaVersion": 0,
-      "imageSetsOverride": false,
+      "imageSets": [
+        {
+          "id": "standard",
+          "name": "Standard",
+          "portrait": "https://i.imgur.com/DpqoWhn.png",
+          "emotes": [],
+          "createdAt": "2026-10-18T14:09:06.802Z",
+          "updatedAt": "2026-10-18T14:09:06.802Z"
+        },
+        {
+          "id": "swyll-20261018-set-01",
+          "name": "Gespräch & Gestik",
+          "portrait": "https://i.imgur.com/DpqoWhn.png",
+          "emotes": [
+            {
+              "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-swyll%2Favatar-gareth-swyll-20261018-set-01-01%2Foriginal.png?alt=media",
+              "label": "Freundliche Begrüßun"
+            },
+            {
+              "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-swyll%2Favatar-gareth-swyll-20261018-set-01-02%2Foriginal.png?alt=media",
+              "label": "Ruhiges Erklären"
+            },
+            {
+              "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-swyll%2Favatar-gareth-swyll-20261018-set-01-03%2Foriginal.png?alt=media",
+              "label": "Nachdenkliches Abwäg"
+            },
+            {
+              "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-swyll%2Favatar-gareth-swyll-20261018-set-01-04%2Foriginal.png?alt=media",
+              "label": "Skeptische Rückfrage"
+            },
+            {
+              "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-swyll%2Favatar-gareth-swyll-20261018-set-01-05%2Foriginal.png?alt=media",
+              "label": "Aufmerksames Zuhören"
+            },
+            {
+              "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-swyll%2Favatar-gareth-swyll-20261018-set-01-06%2Foriginal.png?alt=media",
+              "label": "Aufrichtiger Dank"
+            },
+            {
+              "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-swyll%2Favatar-gareth-swyll-20261018-set-01-07%2Foriginal.png?alt=media",
+              "label": "Höfliche Ablehnung"
+            },
+            {
+              "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-swyll%2Favatar-gareth-swyll-20261018-set-01-08%2Foriginal.png?alt=media",
+              "label": "Wegweisendes Deuten"
+            },
+            {
+              "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-swyll%2Favatar-gareth-swyll-20261018-set-01-09%2Foriginal.png?alt=media",
+              "label": "Vertrauliches Zuflüs"
+            }
+          ],
+          "createdAt": "2026-10-18T14:09:06.794Z",
+          "updatedAt": "2026-10-18T14:09:06.794Z"
+        },
+        {
+          "id": "swyll-20261018-set-02",
+          "name": "Gefühle & Reaktionen",
+          "portrait": "https://i.imgur.com/DpqoWhn.png",
+          "emotes": [
+            {
+              "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-swyll%2Favatar-gareth-swyll-20261018-set-02-01%2Foriginal.png?alt=media",
+              "label": "Herzliches Lachen"
+            },
+            {
+              "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-swyll%2Favatar-gareth-swyll-20261018-set-02-02%2Foriginal.png?alt=media",
+              "label": "Schelmische Bemerkun"
+            },
+            {
+              "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-swyll%2Favatar-gareth-swyll-20261018-set-02-03%2Foriginal.png?alt=media",
+              "label": "Verblüffte Überrasch"
+            },
+            {
+              "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-swyll%2Favatar-gareth-swyll-20261018-set-02-04%2Foriginal.png?alt=media",
+              "label": "Besorgte Nachfrage"
+            },
+            {
+              "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-swyll%2Favatar-gareth-swyll-20261018-set-02-05%2Foriginal.png?alt=media",
+              "label": "Verärgerter Widerspr"
+            },
+            {
+              "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-swyll%2Favatar-gareth-swyll-20261018-set-02-06%2Foriginal.png?alt=media",
+              "label": "Entschlossene Zusage"
+            },
+            {
+              "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-swyll%2Favatar-gareth-swyll-20261018-set-02-07%2Foriginal.png?alt=media",
+              "label": "Verlegene Reaktion"
+            },
+            {
+              "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-swyll%2Favatar-gareth-swyll-20261018-set-02-08%2Foriginal.png?alt=media",
+              "label": "Stille Enttäuschung"
+            },
+            {
+              "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-swyll%2Favatar-gareth-swyll-20261018-set-02-09%2Foriginal.png?alt=media",
+              "label": "Beruhigende Zuversic"
+            }
+          ],
+          "createdAt": "2026-10-18T14:09:06.794Z",
+          "updatedAt": "2026-10-18T14:09:06.794Z"
+        }
+      ],
+      "imageSetSchemaVersion": 1,
+      "imageSetsOverride": true,
       "inventory": null,
       "name": "Gareth Swyll",
       "origin": "",
       "playerOwner": "",
       "plotNode": "",
-      "portrait": null,
+      "portrait": "https://i.imgur.com/DpqoWhn.png",
       "profileLink": "",
       "relevance": "",
-      "role": "",
+      "role": "Ältestes Kind von Iestyn und Rhiannon",
       "status": "active",
       "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
       "title": "Älterer Bruder Meredith Swylls",
-      "updatedAt": "2026-09-03T17:48:57.673Z",
+      "updatedAt": "2026-10-18T14:09:06.794Z",
       "localRecord": {
         "recordId": "character--person--haus-swyll--gareth-swyll",
         "path": "records/familien/haus-swyll/gareth-swyll--person--haus-swyll--gareth-swyll/character.json",
         "schemaVersion": 1,
-        "contentHash": "1431bdf6ccfc5ac671b37a31bf9440aae8ba95a17009aa1dbfca1664e69d8735",
+        "contentHash": "9b729e10c51ed71c43db21749b93d2ae0934d41eef2fd9e57acda95c25f246e0",
         "firestoreDocumentIds": [
           "person--haus-swyll--gareth-swyll"
         ],
@@ -141596,8 +142108,8 @@
                 "Llamreis Ankunft",
                 "Gwynthor"
               ],
-              "url": "../Stammbäume/Stammbaum.html?family=haus-swyll&mode=view&person=gareth-swyll",
-              "fingerprint": "{\"name\":\"Gareth Swyll\",\"title\":\"Älterer Bruder Meredith Swylls\",\"birth\":\"1720\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-swyll\",\"portrait\":\"\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"rhiannon-draenmelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draenmelyn--rhiannon-draenmelyn\",\"name\":\"Rhiannon Draenmelyn\"},{\"personId\":\"iestyn-swyll\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-swyll--iestyn-swyll\",\"name\":\"Iestyn Swyll\"}],\"partners\":[],\"children\":[]}}",
+              "url": "",
+              "fingerprint": "{\"name\":\"Gareth Swyll\",\"title\":\"Älterer Bruder Meredith Swylls\",\"birth\":\"1720\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-swyll\",\"portrait\":\"https://i.imgur.com/DpqoWhn.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"rhiannon-draenmelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draenmelyn--rhiannon-draenmelyn\",\"name\":\"Rhiannon Draenmelyn\"},{\"personId\":\"iestyn-swyll\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-swyll--iestyn-swyll\",\"name\":\"Iestyn Swyll\"}],\"partners\":[],\"children\":[]}}",
               "score": 275
             }
           ],
@@ -141610,8 +142122,210 @@
       "activeImageSetId": "standard",
       "aliases": [],
       "archived": false,
-      "bio": "",
-      "biography": null,
+      "bio": "Iestyn Swyll gehört zu einem bürgerlichen Geschlecht aus Gwynthor. Er wurde 1699 geboren und ist mit Rhiannon Draenmelyn verheiratet. Ihre drei Kinder sind Gareth, Meredith und Rhydwen Swyll.",
+      "biography": {
+        "schemaVersion": 1,
+        "stats": [
+          {
+            "label": "Vollständiger Name",
+            "value": "Iestyn Swyll"
+          },
+          {
+            "label": "Geboren / Alter",
+            "value": "1699 · 41 Jahre (1740)"
+          },
+          {
+            "label": "Stand",
+            "value": "Bürgerlich"
+          },
+          {
+            "label": "Herkunft",
+            "value": "Gwynthor · Llamreis Ankunft · Celtigerns Wacht · Cenyr"
+          },
+          {
+            "label": "Haus",
+            "value": "Haus Swyll"
+          },
+          {
+            "label": "Rolle",
+            "value": "Angehöriger des bürgerlichen Hauses Swyll"
+          },
+          {
+            "label": "Ehepartner",
+            "value": "Rhiannon Draenmelyn"
+          },
+          {
+            "label": "Kinder",
+            "value": "Gareth Swyll, Meredith Swyll, Rhydwen Swyll"
+          }
+        ],
+        "revision": 1792332546794,
+        "quote": "",
+        "quoteBy": "",
+        "biography": {
+          "trivia": [],
+          "documents": [
+            {
+              "title": "Haus Swyll",
+              "link": "/Stammbäume/Stammbaum.html?family=haus-swyll&mode=view&person=iestyn-swyll",
+              "text": "Familienzweig um Iestyn, Rhiannon und ihre drei Kinder.",
+              "icon": "/Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Swyll.png"
+            }
+          ],
+          "connections": [
+            {
+              "type": "heading",
+              "title": "Eltern",
+              "detail": ""
+            },
+            {
+              "type": "connection",
+              "name": "Emyr Swyll",
+              "detail": "Belegtes Elternteil.",
+              "image": "https://i.imgur.com/OaeQeCG.png",
+              "imageFormat": "portrait"
+            },
+            {
+              "type": "connection",
+              "name": "Tegwen",
+              "detail": "Belegtes Elternteil.",
+              "image": "",
+              "imageFormat": "portrait"
+            },
+            {
+              "type": "heading",
+              "title": "Ehepartner",
+              "detail": ""
+            },
+            {
+              "type": "connection",
+              "name": "Rhiannon Draenmelyn",
+              "detail": "Eheliche Verbindung zwischen den Häusern Swyll und Draenmelyn.",
+              "image": "https://i.imgur.com/cyJqlDG.png",
+              "imageFormat": "portrait"
+            },
+            {
+              "type": "heading",
+              "title": "Kinder",
+              "detail": ""
+            },
+            {
+              "type": "connection",
+              "name": "Gareth Swyll",
+              "detail": "Gemeinsames Kind von Iestyn Swyll und Rhiannon Draenmelyn.",
+              "image": "https://i.imgur.com/DpqoWhn.png",
+              "imageFormat": "portrait"
+            },
+            {
+              "type": "connection",
+              "name": "Meredith Swyll",
+              "detail": "Gemeinsames Kind von Iestyn Swyll und Rhiannon Draenmelyn.",
+              "image": "https://i.imgur.com/8lLkOwQ.png",
+              "imageFormat": "portrait"
+            },
+            {
+              "type": "connection",
+              "name": "Rhydwen Swyll",
+              "detail": "Gemeinsames Kind von Iestyn Swyll und Rhiannon Draenmelyn.",
+              "image": "https://i.imgur.com/NR8HKxj.png",
+              "imageFormat": "portrait"
+            },
+            {
+              "type": "heading",
+              "title": "Geschwister",
+              "detail": ""
+            },
+            {
+              "type": "connection",
+              "name": "Carys Swyll",
+              "detail": "Geschwister mit denselben belegten Eltern.",
+              "image": "",
+              "imageFormat": "portrait"
+            },
+            {
+              "type": "connection",
+              "name": "Llio Swyll",
+              "detail": "Geschwister mit denselben belegten Eltern.",
+              "image": "",
+              "imageFormat": "portrait"
+            },
+            {
+              "type": "connection",
+              "name": "Nerys Swyll",
+              "detail": "Geschwister mit denselben belegten Eltern.",
+              "image": "",
+              "imageFormat": "portrait"
+            },
+            {
+              "type": "connection",
+              "name": "Eirwen Swyll",
+              "detail": "Geschwister mit denselben belegten Eltern.",
+              "image": "",
+              "imageFormat": "portrait"
+            },
+            {
+              "type": "connection",
+              "name": "Bronwen Swyll",
+              "detail": "Geschwister mit denselben belegten Eltern.",
+              "image": "",
+              "imageFormat": "portrait"
+            },
+            {
+              "type": "connection",
+              "name": "Owain Swyll",
+              "detail": "Geschwister mit denselben belegten Eltern.",
+              "image": "",
+              "imageFormat": "portrait"
+            },
+            {
+              "type": "connection",
+              "name": "Cadfan Swyll",
+              "detail": "Geschwister mit denselben belegten Eltern.",
+              "image": "",
+              "imageFormat": "portrait"
+            },
+            {
+              "type": "connection",
+              "name": "Rhodri Swyll",
+              "detail": "Geschwister mit denselben belegten Eltern.",
+              "image": "",
+              "imageFormat": "portrait"
+            }
+          ],
+          "portraitFit": "contain",
+          "portrait": "https://i.imgur.com/VpjeTe7.png",
+          "footer": "Personenakte · Iestyn Swyll",
+          "quotes": [],
+          "connectionPortraitHeight": 74,
+          "biographyTitle": "Iestyn Swyll",
+          "worksTitle": "Belegte Tätigkeit",
+          "portraitStages": [
+            "",
+            "",
+            "",
+            ""
+          ],
+          "connectionTextOffset": 0,
+          "documentsTitle": "Stammbaum",
+          "connectionsTitle": "Familie",
+          "works": [],
+          "historyText": "",
+          "historyTitle": "Familie und Herkunft",
+          "biographyText": "<p>Iestyn Swyll ist ein Angehöriger des bürgerlichen Hauses Swyll aus Gwynthor. Er wurde 1699 als Sohn von Emyr Swyll und Tegwen geboren und ist im Jahr 1740 einundvierzig Jahre alt. Die Familie Swyll stellt traditionell Knechte, Diener, Mägde und Burschen für den Haushalt des Hauses Draig.</p><p>Seine Ehe mit Rhiannon Draenmelyn verbindet die Bürgerhäuser Swyll und Draenmelyn. Rhiannon stammt ebenfalls aus einer Familie, deren Angehörige seit Generationen im Draig-Haushalt dienen. Das genaue Jahr ihrer Eheschließung ist nicht überliefert.</p><p>Das Paar hat drei gemeinsame Kinder: Gareth, geboren 1720, Meredith, geboren 1722, und Rhydwen, geboren 1725. Meredith arbeitet als persönliche Zofe von Prinzessin Rhiannon. Gareth ist unverheiratet und nicht verlobt.</p><p>Iestyn hat acht Geschwister: Eirwen, Bronwen, Carys, Owain, Cadfan, Rhodri, Llio und Nerys. Sein Bruder Cadfan fiel 1719 im Krieg. Eirwens Ehe mit Meilyr Pendrwn und Bronwens Ehe mit Iorwerth Maerllys verbinden weitere Bürgerhäuser mit der Swyll-Linie.</p>",
+          "sideWidth": 100,
+          "abilities": [],
+          "abilitiesTitle": "Persönlichkeit",
+          "extraSections": [
+            {
+              "title": "Noch offene Angaben",
+              "position": "afterWorks",
+              "mode": "text",
+              "text": "<p>Iestyns eigene Tätigkeit, Ausbildung und persönliche Lebensereignisse sind über die familiären Angaben hinaus noch nicht ausgearbeitet.</p>"
+            }
+          ]
+        },
+        "schema": "aleria.biography-module"
+      },
       "createdAt": "2026-09-03T17:48:38.371Z",
       "currentLocation": "",
       "emotes": [
@@ -141691,94 +142405,94 @@
       "emotesOverride": true,
       "fraktion": "Haus Swyll",
       "genealogy": {
-        "birth": "1699",
-        "death": "",
-        "familyRole": "core",
-        "houseId": "house-swyll",
-        "houseName": "Haus Swyll",
-        "portraitPlaceholder": "auto",
-        "relationships": {
-          "children": [
-            {
-              "certainty": "confirmed",
-              "legitimacy": "legitimate",
-              "name": "Gareth Swyll",
-              "personId": "gareth-swyll",
-              "type": "biological",
-              "worldPersonId": "person--haus-swyll--gareth-swyll"
-            },
-            {
-              "certainty": "confirmed",
-              "legitimacy": "legitimate",
-              "name": "Meredith Swyll",
-              "personId": "meredith-swyll",
-              "type": "biological",
-              "worldPersonId": "person--haus-swyll--meredith-swyll"
-            },
-            {
-              "certainty": "confirmed",
-              "legitimacy": "legitimate",
-              "name": "Rhydwen Swyll",
-              "personId": "rhydwen-swyll",
-              "type": "biological",
-              "worldPersonId": "person--haus-swyll--rhydwen-swyll"
-            }
-          ],
-          "parents": [
-            {
-              "certainty": "confirmed",
-              "legitimacy": "legitimate",
-              "name": "Emyr Swyll",
-              "personId": "emyr-swyll",
-              "type": "biological",
-              "worldPersonId": "person--haus-swyll--emyr-swyll"
-            },
-            {
-              "certainty": "confirmed",
-              "legitimacy": "legitimate",
-              "name": "Tegwen",
-              "personId": "tegwen-spouse-swyll",
-              "type": "biological",
-              "worldPersonId": "person--family-tree--tegwen-spouse-swyll"
-            }
-          ],
-          "partners": [
-            {
-              "certainty": "confirmed",
-              "name": "Rhiannon Draenmelyn",
-              "personId": "rhiannon-draenmelyn",
-              "status": "active",
-              "type": "marriage",
-              "worldPersonId": "person--haus-draenmelyn--rhiannon-draenmelyn"
-            }
-          ]
-        },
+        "tags": [],
+        "worldPersonId": "person--haus-swyll--iestyn-swyll",
         "sex": "male",
+        "death": "",
+        "houseName": "Haus Swyll",
+        "familyRole": "core",
         "sources": [
           {
             "familyId": "haus-swyll",
-            "fingerprint": "{\"name\":\"Iestyn Swyll\",\"title\":\"Angehöriger des Hauses Swyll\",\"birth\":\"1699\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-swyll\",\"portrait\":\"https://i.imgur.com/VpjeTe7.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"emyr-swyll\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-swyll--emyr-swyll\",\"name\":\"Emyr Swyll\"},{\"personId\":\"tegwen-spouse-swyll\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--tegwen-spouse-swyll\",\"name\":\"Tegwen\"}],\"partners\":[{\"personId\":\"rhiannon-draenmelyn\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draenmelyn--rhiannon-draenmelyn\",\"name\":\"Rhiannon Draenmelyn\"}],\"children\":[{\"personId\":\"gareth-swyll\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-swyll--gareth-swyll\",\"name\":\"Gareth Swyll\"},{\"personId\":\"meredith-swyll\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-swyll--meredith-swyll\",\"name\":\"Meredith Swyll\"},{\"personId\":\"rhydwen-swyll\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-swyll--rhydwen-swyll\",\"name\":\"Rhydwen Swyll\"}]}}",
+            "personId": "iestyn-swyll",
+            "releaseId": "",
+            "publishedAt": "",
             "importedAt": "2026-09-03T17:48:38.371Z",
             "lastSyncedAt": "2026-09-03T17:48:38.371Z",
-            "personId": "iestyn-swyll",
-            "publishedAt": "",
-            "releaseId": "",
-            "url": "../Stammbäume/Stammbaum.html?family=haus-swyll&mode=view&person=iestyn-swyll"
+            "url": "../Stammbäume/Stammbaum.html?family=haus-swyll&mode=view&person=iestyn-swyll",
+            "fingerprint": "{\"name\":\"Iestyn Swyll\",\"title\":\"Angehöriger des Hauses Swyll\",\"birth\":\"1699\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-swyll\",\"portrait\":\"https://i.imgur.com/VpjeTe7.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"emyr-swyll\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-swyll--emyr-swyll\",\"name\":\"Emyr Swyll\"},{\"personId\":\"tegwen-spouse-swyll\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--tegwen-spouse-swyll\",\"name\":\"Tegwen\"}],\"partners\":[{\"personId\":\"rhiannon-draenmelyn\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draenmelyn--rhiannon-draenmelyn\",\"name\":\"Rhiannon Draenmelyn\"}],\"children\":[{\"personId\":\"gareth-swyll\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-swyll--gareth-swyll\",\"name\":\"Gareth Swyll\"},{\"personId\":\"meredith-swyll\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-swyll--meredith-swyll\",\"name\":\"Meredith Swyll\"},{\"personId\":\"rhydwen-swyll\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-swyll--rhydwen-swyll\",\"name\":\"Rhydwen Swyll\"}]}}"
           },
           {
             "familyId": "haus-draenmelyn",
             "personId": "iestyn-swyll",
             "releaseId": "",
             "publishedAt": "",
-            "importedAt": "2026-10-12T22:24:41.567Z",
-            "lastSyncedAt": "2026-10-12T22:24:41.567Z",
+            "importedAt": "2026-10-18T14:09:06.794Z",
+            "lastSyncedAt": "2026-10-18T14:09:06.794Z",
             "url": "../Stammbäume/Stammbaum.html?family=haus-draenmelyn&mode=view&person=iestyn-swyll",
             "fingerprint": "{\"name\":\"Iestyn Swyll\",\"title\":\"Angehöriger des Hauses Swyll\",\"birth\":\"1699\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-swyll\",\"portrait\":\"https://i.imgur.com/VpjeTe7.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"rhiannon-draenmelyn\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draenmelyn--rhiannon-draenmelyn\",\"name\":\"Rhiannon Draenmelyn\"}],\"children\":[]}}"
           }
         ],
-        "status": "alive",
-        "tags": [],
-        "worldPersonId": "person--haus-swyll--iestyn-swyll"
+        "birth": "1699",
+        "houseId": "house-swyll",
+        "portraitPlaceholder": "auto",
+        "relationships": {
+          "children": [
+            {
+              "personId": "gareth-swyll",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--haus-swyll--gareth-swyll",
+              "name": "Gareth Swyll"
+            },
+            {
+              "personId": "meredith-swyll",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--haus-swyll--meredith-swyll",
+              "name": "Meredith Swyll"
+            },
+            {
+              "personId": "rhydwen-swyll",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--haus-swyll--rhydwen-swyll",
+              "name": "Rhydwen Swyll"
+            }
+          ],
+          "parents": [
+            {
+              "personId": "emyr-swyll",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--haus-swyll--emyr-swyll",
+              "name": "Emyr Swyll"
+            },
+            {
+              "personId": "tegwen-spouse-swyll",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--family-tree--tegwen-spouse-swyll",
+              "name": "Tegwen"
+            }
+          ],
+          "partners": [
+            {
+              "personId": "rhiannon-draenmelyn",
+              "type": "marriage",
+              "status": "active",
+              "certainty": "confirmed",
+              "worldPersonId": "person--haus-draenmelyn--rhiannon-draenmelyn",
+              "name": "Rhiannon Draenmelyn"
+            }
+          ]
+        },
+        "status": "alive"
       },
       "id": "person--haus-swyll--iestyn-swyll",
       "identity": {
@@ -141786,7 +142500,9 @@
       },
       "imageSets": [
         {
-          "createdAt": "2026-09-03T18:11:37.989Z",
+          "id": "standard",
+          "name": "Standard",
+          "portrait": "https://i.imgur.com/VpjeTe7.png",
           "emotes": [
             {
               "img": "https://i.imgur.com/YyDly7N.png",
@@ -141861,10 +142577,98 @@
               "label": "CBcpAKK"
             }
           ],
-          "id": "standard",
-          "name": "Standard",
-          "portrait": "https://i.imgur.com/VpjeTe7.png",
+          "createdAt": "2026-09-03T18:11:37.989Z",
           "updatedAt": "2026-09-03T18:11:37.989Z"
+        },
+        {
+          "id": "swyll-20261018-set-01",
+          "name": "Gespräch & Gestik",
+          "portrait": "https://i.imgur.com/VpjeTe7.png",
+          "emotes": [
+            {
+              "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-swyll%2Favatar-iestyn-swyll-20261018-set-01-01%2Foriginal.png?alt=media",
+              "label": "Freundliche Begrüßun"
+            },
+            {
+              "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-swyll%2Favatar-iestyn-swyll-20261018-set-01-02%2Foriginal.png?alt=media",
+              "label": "Ruhiges Erklären"
+            },
+            {
+              "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-swyll%2Favatar-iestyn-swyll-20261018-set-01-03%2Foriginal.png?alt=media",
+              "label": "Nachdenkliches Abwäg"
+            },
+            {
+              "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-swyll%2Favatar-iestyn-swyll-20261018-set-01-04%2Foriginal.png?alt=media",
+              "label": "Skeptische Rückfrage"
+            },
+            {
+              "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-swyll%2Favatar-iestyn-swyll-20261018-set-01-05%2Foriginal.png?alt=media",
+              "label": "Aufmerksames Zuhören"
+            },
+            {
+              "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-swyll%2Favatar-iestyn-swyll-20261018-set-01-06%2Foriginal.png?alt=media",
+              "label": "Aufrichtiger Dank"
+            },
+            {
+              "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-swyll%2Favatar-iestyn-swyll-20261018-set-01-07%2Foriginal.png?alt=media",
+              "label": "Höfliche Ablehnung"
+            },
+            {
+              "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-swyll%2Favatar-iestyn-swyll-20261018-set-01-08%2Foriginal.png?alt=media",
+              "label": "Wegweisendes Deuten"
+            },
+            {
+              "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-swyll%2Favatar-iestyn-swyll-20261018-set-01-09%2Foriginal.png?alt=media",
+              "label": "Vertrauliches Zuflüs"
+            }
+          ],
+          "createdAt": "2026-10-18T14:09:06.794Z",
+          "updatedAt": "2026-10-18T14:09:06.794Z"
+        },
+        {
+          "id": "swyll-20261018-set-02",
+          "name": "Gefühle & Reaktionen",
+          "portrait": "https://i.imgur.com/VpjeTe7.png",
+          "emotes": [
+            {
+              "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-swyll%2Favatar-iestyn-swyll-20261018-set-02-01%2Foriginal.png?alt=media",
+              "label": "Herzliches Lachen"
+            },
+            {
+              "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-swyll%2Favatar-iestyn-swyll-20261018-set-02-02%2Foriginal.png?alt=media",
+              "label": "Schelmische Bemerkun"
+            },
+            {
+              "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-swyll%2Favatar-iestyn-swyll-20261018-set-02-03%2Foriginal.png?alt=media",
+              "label": "Verblüffte Überrasch"
+            },
+            {
+              "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-swyll%2Favatar-iestyn-swyll-20261018-set-02-04%2Foriginal.png?alt=media",
+              "label": "Besorgte Nachfrage"
+            },
+            {
+              "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-swyll%2Favatar-iestyn-swyll-20261018-set-02-05%2Foriginal.png?alt=media",
+              "label": "Verärgerter Widerspr"
+            },
+            {
+              "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-swyll%2Favatar-iestyn-swyll-20261018-set-02-06%2Foriginal.png?alt=media",
+              "label": "Entschlossene Zusage"
+            },
+            {
+              "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-swyll%2Favatar-iestyn-swyll-20261018-set-02-07%2Foriginal.png?alt=media",
+              "label": "Verlegene Reaktion"
+            },
+            {
+              "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-swyll%2Favatar-iestyn-swyll-20261018-set-02-08%2Foriginal.png?alt=media",
+              "label": "Stille Enttäuschung"
+            },
+            {
+              "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-swyll%2Favatar-iestyn-swyll-20261018-set-02-09%2Foriginal.png?alt=media",
+              "label": "Beruhigende Zuversic"
+            }
+          ],
+          "createdAt": "2026-10-18T14:09:06.794Z",
+          "updatedAt": "2026-10-18T14:09:06.794Z"
         }
       ],
       "imageSetSchemaVersion": 1,
@@ -141877,16 +142681,16 @@
       "portrait": "https://i.imgur.com/VpjeTe7.png",
       "profileLink": "",
       "relevance": "",
-      "role": "",
+      "role": "Angehöriger des bürgerlichen Hauses Swyll",
       "status": "active",
       "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
       "title": "Angehöriger des Hauses Swyll",
-      "updatedAt": "2026-09-03T18:12:19.571Z",
+      "updatedAt": "2026-10-18T14:09:06.794Z",
       "localRecord": {
         "recordId": "character--person--haus-swyll--iestyn-swyll",
         "path": "records/familien/haus-swyll/iestyn-swyll--person--haus-swyll--iestyn-swyll/character.json",
         "schemaVersion": 1,
-        "contentHash": "426f416e1eda600a80b7402d460b3ddb7a65544bacbab6969d10796bab494536",
+        "contentHash": "0ec1b2aaa6dc75ca4ea8ed6bc2f7a820c21dd6404a3682f77f3a8c155e9057d4",
         "firestoreDocumentIds": [
           "person--haus-swyll--iestyn-swyll"
         ],
@@ -141913,7 +142717,7 @@
                 "Llamreis Ankunft",
                 "Gwynthor"
               ],
-              "url": "../Stammbäume/Stammbaum.html?family=haus-swyll&mode=view&person=iestyn-swyll",
+              "url": "",
               "fingerprint": "{\"name\":\"Iestyn Swyll\",\"title\":\"Angehöriger des Hauses Swyll\",\"birth\":\"1699\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-swyll\",\"portrait\":\"https://i.imgur.com/VpjeTe7.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"emyr-swyll\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-swyll--emyr-swyll\",\"name\":\"Emyr Swyll\"},{\"personId\":\"tegwen-spouse-swyll\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--tegwen-spouse-swyll\",\"name\":\"Tegwen\"}],\"partners\":[{\"personId\":\"rhiannon-draenmelyn\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draenmelyn--rhiannon-draenmelyn\",\"name\":\"Rhiannon Draenmelyn\"}],\"children\":[{\"personId\":\"gareth-swyll\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-swyll--gareth-swyll\",\"name\":\"Gareth Swyll\"},{\"personId\":\"meredith-swyll\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-swyll--meredith-swyll\",\"name\":\"Meredith Swyll\"},{\"personId\":\"rhydwen-swyll\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-swyll--rhydwen-swyll\",\"name\":\"Rhydwen Swyll\"}]}}",
               "score": 275
             },
@@ -141932,7 +142736,7 @@
                 "Llamreis Ankunft",
                 "Gwynthor"
               ],
-              "url": "../Stammbäume/Stammbaum.html?family=haus-draenmelyn&mode=view&person=iestyn-swyll",
+              "url": "",
               "fingerprint": "{\"name\":\"Iestyn Swyll\",\"title\":\"Angehöriger des Hauses Swyll\",\"birth\":\"1699\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-swyll\",\"portrait\":\"https://i.imgur.com/VpjeTe7.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"rhiannon-draenmelyn\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draenmelyn--rhiannon-draenmelyn\",\"name\":\"Rhiannon Draenmelyn\"}],\"children\":[]}}",
               "score": 230
             }
@@ -142396,36 +143200,72 @@
           "img": "https://i.imgur.com/RtlzYBj.png"
         },
         {
-          "img": "https://i.imgur.com/g7HxjXr.png",
-          "label": "Avatar"
+          "label": "Avatar",
+          "img": "https://i.imgur.com/g7HxjXr.png"
         },
         {
           "img": "https://i.imgur.com/slIHt7T.png",
           "label": "Avatar"
         },
         {
-          "img": "https://i.imgur.com/17zRPFh.png",
-          "label": "Avatar"
+          "label": "Avatar",
+          "img": "https://i.imgur.com/17zRPFh.png"
         },
         {
-          "label": "Avatar",
-          "img": "https://i.imgur.com/1j0P0U1.png"
+          "img": "https://i.imgur.com/1j0P0U1.png",
+          "label": "Avatar"
         },
         {
           "label": "Avatar",
           "img": "https://i.imgur.com/LoEAGl1.png"
         },
         {
-          "label": "Avatar",
-          "img": "https://i.imgur.com/z9IELRA.png"
-        },
-        {
-          "label": "Avatar",
-          "img": "https://i.imgur.com/9wsfMIy.png"
-        },
-        {
-          "img": "https://i.imgur.com/UOYwRtw.png",
+          "img": "https://i.imgur.com/z9IELRA.png",
           "label": "Avatar"
+        },
+        {
+          "img": "https://i.imgur.com/9wsfMIy.png",
+          "label": "Avatar"
+        },
+        {
+          "label": "Avatar",
+          "img": "https://i.imgur.com/UOYwRtw.png"
+        },
+        {
+          "img": "https://i.imgur.com/ks5m1vy.png",
+          "label": "ks5m1vy"
+        },
+        {
+          "label": "WxHW4Ak",
+          "img": "https://i.imgur.com/WxHW4Ak.png"
+        },
+        {
+          "img": "https://i.imgur.com/8mFM17m.png",
+          "label": "8mFM17m"
+        },
+        {
+          "label": "XnCF4A3",
+          "img": "https://i.imgur.com/XnCF4A3.png"
+        },
+        {
+          "label": "dGLejh1",
+          "img": "https://i.imgur.com/dGLejh1.png"
+        },
+        {
+          "label": "NnekHbG",
+          "img": "https://i.imgur.com/NnekHbG.png"
+        },
+        {
+          "label": "y3Y911V",
+          "img": "https://i.imgur.com/y3Y911V.png"
+        },
+        {
+          "img": "https://i.imgur.com/Htzzy2M.png",
+          "label": "Htzzy2M"
+        },
+        {
+          "img": "https://i.imgur.com/7DmBxMt.png",
+          "label": "7DmBxMt"
         }
       ],
       "portrait": "https://i.imgur.com/8lLkOwQ.png",
@@ -142436,31 +143276,28 @@
         "worldPersonId": "person--haus-swyll--meredith-swyll"
       },
       "genealogy": {
-        "worldPersonId": "person--haus-swyll--meredith-swyll",
         "sex": "female",
         "status": "alive",
-        "birth": "1722",
-        "death": "",
         "houseId": "house-swyll",
+        "death": "",
         "houseName": "Haus Swyll",
-        "familyRole": "core",
-        "portraitPlaceholder": "auto",
-        "tags": [
-          "18 Jahre"
-        ],
         "sources": [
           {
             "familyId": "haus-swyll",
             "personId": "meredith-swyll",
             "releaseId": "",
             "publishedAt": "",
-            "importedAt": "2026-10-12T22:24:41.567Z",
-            "lastSyncedAt": "2026-10-12T22:24:41.567Z",
+            "importedAt": "2026-10-18T14:09:06.794Z",
+            "lastSyncedAt": "2026-10-18T14:09:06.794Z",
             "url": "../Stammbäume/Stammbaum.html?family=haus-swyll&mode=view&person=meredith-swyll",
             "fingerprint": "{\"name\":\"Meredith Swyll\",\"title\":\"Mittleres Kind Iestyns und Rhiannons\",\"birth\":\"1722\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-swyll\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-swyll/meredith-swyll.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"18 Jahre\"],\"relationships\":{\"parents\":[{\"personId\":\"rhiannon-draenmelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draenmelyn--rhiannon-draenmelyn\",\"name\":\"Rhiannon Draenmelyn\"},{\"personId\":\"iestyn-swyll\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-swyll--iestyn-swyll\",\"name\":\"Iestyn Swyll\"}],\"partners\":[],\"children\":[]}}"
           }
         ],
+        "worldPersonId": "person--haus-swyll--meredith-swyll",
+        "portraitPlaceholder": "auto",
         "relationships": {
+          "children": [],
+          "partners": [],
           "parents": [
             {
               "personId": "rhiannon-draenmelyn",
@@ -142478,17 +143315,306 @@
               "worldPersonId": "person--haus-swyll--iestyn-swyll",
               "name": "Iestyn Swyll"
             }
-          ],
-          "partners": [],
-          "children": []
-        }
+          ]
+        },
+        "birth": "1722",
+        "familyRole": "core",
+        "tags": [
+          "18 Jahre"
+        ]
       },
       "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+      "biography": {
+        "schema": "aleria.biography-module",
+        "schemaVersion": 1,
+        "quoteBy": "",
+        "quote": "",
+        "stats": [
+          {
+            "label": "Vollständiger Name",
+            "value": "Meredith Swyll"
+          },
+          {
+            "label": "Geboren / Alter",
+            "value": "1722 · 18 Jahre (1740)"
+          },
+          {
+            "label": "Stand",
+            "value": "Bürgerlich"
+          },
+          {
+            "label": "Herkunft",
+            "value": "Gwynthor · Llamreis Ankunft · Celtigerns Wacht · Cenyr"
+          },
+          {
+            "label": "Haus",
+            "value": "Haus Swyll"
+          },
+          {
+            "label": "Rolle",
+            "value": "Persönliche Zofe von Prinzessin Rhiannon"
+          }
+        ],
+        "revision": 1792332546794,
+        "biography": {
+          "historyTitle": "Familie und Herkunft",
+          "connections": [
+            {
+              "type": "heading",
+              "title": "Eltern",
+              "detail": ""
+            },
+            {
+              "type": "connection",
+              "name": "Rhiannon Draenmelyn",
+              "detail": "Belegtes Elternteil.",
+              "image": "https://i.imgur.com/cyJqlDG.png",
+              "imageFormat": "portrait"
+            },
+            {
+              "type": "connection",
+              "name": "Iestyn Swyll",
+              "detail": "Belegtes Elternteil.",
+              "image": "https://i.imgur.com/VpjeTe7.png",
+              "imageFormat": "portrait"
+            },
+            {
+              "type": "heading",
+              "title": "Geschwister",
+              "detail": ""
+            },
+            {
+              "type": "connection",
+              "name": "Gareth Swyll",
+              "detail": "Geschwister mit denselben belegten Eltern.",
+              "image": "https://i.imgur.com/DpqoWhn.png",
+              "imageFormat": "portrait"
+            },
+            {
+              "type": "connection",
+              "name": "Rhydwen Swyll",
+              "detail": "Geschwister mit denselben belegten Eltern.",
+              "image": "https://i.imgur.com/NR8HKxj.png",
+              "imageFormat": "portrait"
+            }
+          ],
+          "quotes": [],
+          "footer": "Personenakte · Meredith Swyll",
+          "connectionPortraitHeight": 74,
+          "abilitiesTitle": "Persönlichkeit",
+          "biographyText": "<p>Meredith Swyll wurde 1722 als Tochter von Iestyn Swyll und Rhiannon Draenmelyn geboren. Im Jahr 1740 ist sie achtzehn Jahre alt. Zwischen ihrem älteren Bruder Gareth und ihrer jüngeren Schwester Rhydwen ist sie das mittlere der drei Kinder.</p><p>Sie arbeitet als persönliche Zofe von Prinzessin Rhiannon. Ihre Tätigkeit entspricht der überlieferten Diensttradition des Bürgerhauses Swyll, das dem Haus Draig Knechte, Diener, Mägde und Burschen stellt. Auch die mütterliche Familie Draenmelyn gehört zu den Bedienstetengeschlechtern des Draig-Haushalts.</p><p>Ihre Mutter Rhiannon Draenmelyn stammt aus einer weiteren Bedienstetenfamilie Gwynthors. Merediths familiäre Bindungen verbinden damit die Bürgerhäuser Swyll und Draenmelyn.</p>",
+          "documentsTitle": "Stammbaum",
+          "sideWidth": 100,
+          "portraitFit": "contain",
+          "biographyTitle": "Meredith Swyll",
+          "portraitStages": [
+            "",
+            "",
+            "",
+            ""
+          ],
+          "abilities": [],
+          "extraSections": [
+            {
+              "title": "Noch offene Angaben",
+              "position": "afterWorks",
+              "mode": "text",
+              "text": "<p>Weitere Ausbildungsstationen und persönliche Lebensereignisse sind bisher nicht ausgearbeitet.</p>"
+            }
+          ],
+          "trivia": [],
+          "connectionTextOffset": 0,
+          "connectionsTitle": "Familie",
+          "works": [
+            "Persönliche Zofe von Prinzessin Rhiannon."
+          ],
+          "portrait": "https://i.imgur.com/8lLkOwQ.png",
+          "worksTitle": "Belegte Tätigkeit",
+          "historyText": "",
+          "documents": [
+            {
+              "title": "Haus Swyll",
+              "link": "/Stammbäume/Stammbaum.html?family=haus-swyll&mode=view&person=meredith-swyll",
+              "text": "Familienzweig um Iestyn, Rhiannon und ihre drei Kinder.",
+              "icon": "/Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Swyll.png"
+            }
+          ]
+        }
+      },
+      "role": "Persönliche Zofe von Prinzessin Rhiannon",
+      "updatedAt": "2026-10-18T14:09:06.794Z",
+      "imageSets": [
+        {
+          "id": "standard",
+          "name": "Standard",
+          "portrait": "https://i.imgur.com/8lLkOwQ.png",
+          "emotes": [
+            {
+              "img": "https://i.imgur.com/RtlzYBj.png",
+              "label": "Avatar"
+            },
+            {
+              "img": "https://i.imgur.com/g7HxjXr.png",
+              "label": "Avatar"
+            },
+            {
+              "img": "https://i.imgur.com/slIHt7T.png",
+              "label": "Avatar"
+            },
+            {
+              "img": "https://i.imgur.com/17zRPFh.png",
+              "label": "Avatar"
+            },
+            {
+              "img": "https://i.imgur.com/1j0P0U1.png",
+              "label": "Avatar"
+            },
+            {
+              "img": "https://i.imgur.com/LoEAGl1.png",
+              "label": "Avatar"
+            },
+            {
+              "img": "https://i.imgur.com/z9IELRA.png",
+              "label": "Avatar"
+            },
+            {
+              "img": "https://i.imgur.com/9wsfMIy.png",
+              "label": "Avatar"
+            },
+            {
+              "img": "https://i.imgur.com/UOYwRtw.png",
+              "label": "Avatar"
+            },
+            {
+              "img": "https://i.imgur.com/ks5m1vy.png",
+              "label": "ks5m1vy"
+            },
+            {
+              "img": "https://i.imgur.com/WxHW4Ak.png",
+              "label": "WxHW4Ak"
+            },
+            {
+              "img": "https://i.imgur.com/8mFM17m.png",
+              "label": "8mFM17m"
+            },
+            {
+              "img": "https://i.imgur.com/XnCF4A3.png",
+              "label": "XnCF4A3"
+            },
+            {
+              "img": "https://i.imgur.com/dGLejh1.png",
+              "label": "dGLejh1"
+            },
+            {
+              "img": "https://i.imgur.com/NnekHbG.png",
+              "label": "NnekHbG"
+            },
+            {
+              "img": "https://i.imgur.com/y3Y911V.png",
+              "label": "y3Y911V"
+            },
+            {
+              "img": "https://i.imgur.com/Htzzy2M.png",
+              "label": "Htzzy2M"
+            },
+            {
+              "img": "https://i.imgur.com/7DmBxMt.png",
+              "label": "7DmBxMt"
+            }
+          ],
+          "createdAt": "2026-09-04T16:57:11.972Z",
+          "updatedAt": "2026-09-04T16:57:11.972Z"
+        },
+        {
+          "id": "kleid-set",
+          "name": "Kleid Set",
+          "portrait": "https://i.imgur.com/mQ4DuKP.png",
+          "emotes": [
+            {
+              "img": "https://i.imgur.com/HpIxz49.png",
+              "label": "HpIxz49"
+            },
+            {
+              "img": "https://i.imgur.com/IWNSOh2.png",
+              "label": "IWNSOh2"
+            },
+            {
+              "img": "https://i.imgur.com/0p59fkM.png",
+              "label": "0p59fkM"
+            },
+            {
+              "img": "https://i.imgur.com/ljcwlXX.png",
+              "label": "ljcwlXX"
+            },
+            {
+              "img": "https://i.imgur.com/s9xLJuK.png",
+              "label": "s9xLJuK"
+            },
+            {
+              "img": "https://i.imgur.com/Xsx7qiG.png",
+              "label": "Xsx7qiG"
+            },
+            {
+              "img": "https://i.imgur.com/ZS3sWZZ.png",
+              "label": "ZS3sWZZ"
+            },
+            {
+              "img": "https://i.imgur.com/1m5tGU0.png",
+              "label": "1m5tGU0"
+            },
+            {
+              "img": "https://i.imgur.com/32fT0W0.png",
+              "label": "32fT0W0"
+            },
+            {
+              "img": "https://i.imgur.com/0RBwgDq.png",
+              "label": "0RBwgDq"
+            },
+            {
+              "img": "https://i.imgur.com/OCwk4do.png",
+              "label": "OCwk4do"
+            },
+            {
+              "img": "https://i.imgur.com/FaW0iOh.png",
+              "label": "FaW0iOh"
+            },
+            {
+              "img": "https://i.imgur.com/XBHOboA.png",
+              "label": "XBHOboA"
+            },
+            {
+              "img": "https://i.imgur.com/APfbw1L.png",
+              "label": "APfbw1L"
+            },
+            {
+              "img": "https://i.imgur.com/hGBykKr.png",
+              "label": "hGBykKr"
+            },
+            {
+              "img": "https://i.imgur.com/7s1MFGf.png",
+              "label": "7s1MFGf"
+            },
+            {
+              "img": "https://i.imgur.com/JJj0yyB.png",
+              "label": "JJj0yyB"
+            },
+            {
+              "img": "https://i.imgur.com/h85v2WP.png",
+              "label": "h85v2WP"
+            }
+          ],
+          "createdAt": "2026-09-04T17:02:27.053Z",
+          "updatedAt": "2026-09-04T17:02:28.772Z"
+        }
+      ],
+      "imageSetSchemaVersion": 1,
+      "activeImageSetId": "kleid-set",
+      "imageSetsOverride": true,
       "localRecord": {
         "recordId": "character--7ghgdvubmimcJySSkrKH",
         "path": "records/familien/haus-swyll/meredith-swyll--7ghgdvubmimcJySSkrKH/character.json",
         "schemaVersion": 1,
-        "contentHash": "f650a1afbce064908f751e6f56923f64b6b60301038066bb43f30378dc9d54ff",
+        "contentHash": "eb26db329470e1ec269576562db0009e2481d8013bf0ce00932847da59bc337c",
         "firestoreDocumentIds": [
           "7ghgdvubmimcJySSkrKH"
         ],
@@ -142515,9 +143641,9 @@
                 "Llamreis Ankunft",
                 "Gwynthor"
               ],
-              "url": "../Stammbäume/Stammbaum.html?family=haus-swyll&mode=view&person=meredith-swyll",
+              "url": "",
               "fingerprint": "{\"name\":\"Meredith Swyll\",\"title\":\"Mittleres Kind Iestyns und Rhiannons\",\"birth\":\"1722\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-swyll\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-swyll/meredith-swyll.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"18 Jahre\"],\"relationships\":{\"parents\":[{\"personId\":\"rhiannon-draenmelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draenmelyn--rhiannon-draenmelyn\",\"name\":\"Rhiannon Draenmelyn\"},{\"personId\":\"iestyn-swyll\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-swyll--iestyn-swyll\",\"name\":\"Iestyn Swyll\"}],\"partners\":[],\"children\":[]}}",
-              "score": 185
+              "score": 265
             }
           ],
           "groups": [],
@@ -203152,6 +204278,231 @@
           "places": []
         }
       }
+    },
+    {
+      "inventory": null,
+      "id": "person--haus-swyll--rhydwen-swyll",
+      "name": "Rhydwen Swyll",
+      "title": "Jüngere Schwester Merediths",
+      "fraktion": "Haus Swyll",
+      "bio": "Rhydwen Swyll wurde 1725 als jüngstes Kind von Iestyn Swyll und Rhiannon Draenmelyn geboren. Sie ist fünfzehn Jahre alt und die jüngere Schwester von Gareth und Meredith Swyll.",
+      "biography": {
+        "quoteBy": "",
+        "biography": {
+          "connectionPortraitHeight": 74,
+          "abilities": [],
+          "connectionsTitle": "Familie",
+          "portrait": "https://i.imgur.com/NR8HKxj.png",
+          "trivia": [],
+          "extraSections": [
+            {
+              "title": "Noch offene Angaben",
+              "position": "afterWorks",
+              "mode": "text",
+              "text": "<p>Beruf, Ausbildung und weitere persönliche Lebensdaten sind bislang nicht festgelegt.</p>"
+            }
+          ],
+          "portraitFit": "contain",
+          "connections": [
+            {
+              "type": "heading",
+              "title": "Eltern",
+              "detail": ""
+            },
+            {
+              "type": "connection",
+              "name": "Rhiannon Draenmelyn",
+              "detail": "Belegtes Elternteil.",
+              "image": "https://i.imgur.com/cyJqlDG.png",
+              "imageFormat": "portrait"
+            },
+            {
+              "type": "connection",
+              "name": "Iestyn Swyll",
+              "detail": "Belegtes Elternteil.",
+              "image": "https://i.imgur.com/VpjeTe7.png",
+              "imageFormat": "portrait"
+            },
+            {
+              "type": "heading",
+              "title": "Geschwister",
+              "detail": ""
+            },
+            {
+              "type": "connection",
+              "name": "Gareth Swyll",
+              "detail": "Geschwister mit denselben belegten Eltern.",
+              "image": "https://i.imgur.com/DpqoWhn.png",
+              "imageFormat": "portrait"
+            },
+            {
+              "type": "connection",
+              "name": "Meredith Swyll",
+              "detail": "Geschwister mit denselben belegten Eltern.",
+              "image": "https://i.imgur.com/8lLkOwQ.png",
+              "imageFormat": "portrait"
+            }
+          ],
+          "biographyTitle": "Rhydwen Swyll",
+          "portraitStages": [
+            "",
+            "",
+            "",
+            ""
+          ],
+          "biographyText": "<p>Rhydwen Swyll ist die jüngste Tochter von Iestyn Swyll und Rhiannon Draenmelyn. Sie wurde 1725 geboren und ist im Jahr 1740 fünfzehn Jahre alt. Ihr älterer Bruder Gareth ist zwanzig, ihre Schwester Meredith achtzehn Jahre alt.</p><p>Sie gehört zum Bürgerhaus Swyll aus Gwynthor. Über ihre Mutter ist sie mit dem Haus Draenmelyn verbunden. Beide Familien stehen in der überlieferten Diensttradition des Hauses Draig; daraus ergibt sich jedoch noch keine persönliche Anstellung für Rhydwen.</p><p>Meredith ist die persönliche Zofe von Prinzessin Rhiannon. Rhydwens eigener weiterer Lebensweg ist bisher nicht näher beschrieben.</p>",
+          "historyTitle": "Familie und Herkunft",
+          "connectionTextOffset": 0,
+          "works": [],
+          "footer": "Personenakte · Rhydwen Swyll",
+          "worksTitle": "Belegte Tätigkeit",
+          "quotes": [],
+          "documentsTitle": "Stammbaum",
+          "historyText": "",
+          "documents": [
+            {
+              "title": "Haus Swyll",
+              "link": "/Stammbäume/Stammbaum.html?family=haus-swyll&mode=view&person=rhydwen-swyll",
+              "text": "Familienzweig um Iestyn, Rhiannon und ihre drei Kinder.",
+              "icon": "/Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Swyll.png"
+            }
+          ],
+          "sideWidth": 100,
+          "abilitiesTitle": "Persönlichkeit"
+        },
+        "schema": "aleria.biography-module",
+        "quote": "",
+        "stats": [
+          {
+            "label": "Vollständiger Name",
+            "value": "Rhydwen Swyll"
+          },
+          {
+            "label": "Geboren / Alter",
+            "value": "1725 · 15 Jahre (1740)"
+          },
+          {
+            "label": "Stand",
+            "value": "Bürgerlich"
+          },
+          {
+            "label": "Herkunft",
+            "value": "Gwynthor · Llamreis Ankunft · Celtigerns Wacht · Cenyr"
+          },
+          {
+            "label": "Haus",
+            "value": "Haus Swyll"
+          },
+          {
+            "label": "Rolle",
+            "value": "Jüngstes Kind von Iestyn und Rhiannon"
+          }
+        ],
+        "revision": 1792332546794,
+        "schemaVersion": 1
+      },
+      "role": "Jüngstes Kind von Iestyn und Rhiannon",
+      "portrait": "https://i.imgur.com/NR8HKxj.png",
+      "identity": {
+        "worldPersonId": "person--haus-swyll--rhydwen-swyll"
+      },
+      "genealogy": {
+        "houseId": "house-swyll",
+        "relationships": {
+          "children": [],
+          "partners": [],
+          "parents": [
+            {
+              "personId": "rhiannon-draenmelyn",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--haus-draenmelyn--rhiannon-draenmelyn",
+              "name": "Rhiannon Draenmelyn"
+            },
+            {
+              "personId": "iestyn-swyll",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--haus-swyll--iestyn-swyll",
+              "name": "Iestyn Swyll"
+            }
+          ]
+        },
+        "worldPersonId": "person--haus-swyll--rhydwen-swyll",
+        "sex": "female",
+        "familyRole": "core",
+        "sources": [
+          {
+            "familyId": "haus-swyll",
+            "personId": "rhydwen-swyll",
+            "releaseId": "",
+            "publishedAt": "",
+            "importedAt": "2026-10-18T14:09:06.794Z",
+            "lastSyncedAt": "2026-10-18T14:09:06.794Z",
+            "url": "../Stammbäume/Stammbaum.html?family=haus-swyll&mode=view&person=rhydwen-swyll",
+            "fingerprint": "{\"name\":\"Rhydwen Swyll\",\"title\":\"Jüngere Schwester Merediths\",\"birth\":\"1725\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-swyll\",\"portrait\":\"https://i.imgur.com/NR8HKxj.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"rhiannon-draenmelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draenmelyn--rhiannon-draenmelyn\",\"name\":\"Rhiannon Draenmelyn\"},{\"personId\":\"iestyn-swyll\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-swyll--iestyn-swyll\",\"name\":\"Iestyn Swyll\"}],\"partners\":[],\"children\":[]}}"
+          }
+        ],
+        "death": "",
+        "status": "alive",
+        "houseName": "Haus Swyll",
+        "birth": "1725",
+        "tags": [],
+        "portraitPlaceholder": "auto"
+      },
+      "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+      "createdAt": "2026-10-18T14:09:06.794Z",
+      "updatedAt": "2026-10-18T14:09:06.794Z",
+      "aliases": [],
+      "archived": false,
+      "imageSets": [],
+      "imageSetSchemaVersion": 0,
+      "activeImageSetId": "",
+      "emotes": [],
+      "emotesOverride": false,
+      "imageSetsOverride": false,
+      "localRecord": {
+        "recordId": "character--person--haus-swyll--rhydwen-swyll",
+        "path": "records/familien/haus-swyll/rhydwen-swyll--person--haus-swyll--rhydwen-swyll/character.json",
+        "schemaVersion": 1,
+        "contentHash": "421c3a1aaceacf8deb9a68aa6f75fa9bf8cbb4dc983257619a01711c4a86b3f6",
+        "firestoreDocumentIds": [
+          "person--haus-swyll--rhydwen-swyll"
+        ],
+        "classification": {
+          "primary": {
+            "kind": "family",
+            "id": "haus-swyll",
+            "label": "Haus Swyll"
+          },
+          "familyStatus": "linked",
+          "families": [
+            {
+              "familyId": "haus-swyll",
+              "familyTitle": "Haus Swyll",
+              "personId": "rhydwen-swyll",
+              "worldPersonId": "person--haus-swyll--rhydwen-swyll",
+              "houseId": "house-swyll",
+              "houseName": "Haus Swyll",
+              "familyRole": "core",
+              "source": "project",
+              "folderPath": [
+                "Cenyr",
+                "Celtigerns Wacht",
+                "Llamreis Ankunft",
+                "Gwynthor"
+              ],
+              "url": "",
+              "fingerprint": "{\"name\":\"Rhydwen Swyll\",\"title\":\"Jüngere Schwester Merediths\",\"birth\":\"1725\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-swyll\",\"portrait\":\"https://i.imgur.com/NR8HKxj.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"rhiannon-draenmelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draenmelyn--rhiannon-draenmelyn\",\"name\":\"Rhiannon Draenmelyn\"},{\"personId\":\"iestyn-swyll\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-swyll--iestyn-swyll\",\"name\":\"Iestyn Swyll\"}],\"partners\":[],\"children\":[]}}",
+              "score": 275
+            }
+          ],
+          "groups": [],
+          "places": []
+        }
+      }
     }
   ],
   "charTabs": {
@@ -203303,7 +204654,11 @@
         "2ZIauO2ZQ1sbn8iFhyzH",
         "Dwi7u3D1W7IuOKxsQmKf",
         "enB95CcCzvhA5E0jjN1P",
-        "xuov0RNOnSx050zgte73"
+        "xuov0RNOnSx050zgte73",
+        "person--haus-swyll--iestyn-swyll",
+        "person--haus-draenmelyn--rhiannon-draenmelyn",
+        "person--haus-swyll--gareth-swyll",
+        "person--haus-swyll--rhydwen-swyll"
       ],
       "Dun Athar": [
         "2bCru7S3YGrzjFnYpnN9",
@@ -203437,7 +204792,8 @@
       "Der Ritter der fernen Küster": [],
       "Celtigerns Wacht - Llyfaen": [],
       "Gwynthor": [
-        "Gwynthor - Haus Draig"
+        "Gwynthor - Haus Draig",
+        "Gwynthor - Haus Swyll"
       ],
       "Felsenritter der Treue": [],
       "Wolfshorn": [],
@@ -203491,6 +204847,13 @@
           "CJFC3INTycaqn3tOwZHB",
           "wBW8kfX7wCLLM12kPoW2",
           "XTL39e7WjIwUtoT9Gxml"
+        ],
+        "Gwynthor - Haus Swyll": [
+          "person--haus-swyll--iestyn-swyll",
+          "person--haus-draenmelyn--rhiannon-draenmelyn",
+          "person--haus-swyll--gareth-swyll",
+          "7ghgdvubmimcJySSkrKH",
+          "person--haus-swyll--rhydwen-swyll"
         ]
       },
       "Die kleinen Dubglais": {},

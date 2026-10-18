@@ -1,0 +1,464 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--haus-swyll--rhydwen-swyll",
+  "slug": "rhydwen-swyll",
+  "identity": {
+    "name": "Rhydwen Swyll",
+    "aliases": [],
+    "worldPersonId": "person--haus-swyll--rhydwen-swyll"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "haus-swyll",
+      "label": "Haus Swyll"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-swyll",
+        "familyTitle": "Haus Swyll",
+        "personId": "rhydwen-swyll",
+        "worldPersonId": "person--haus-swyll--rhydwen-swyll",
+        "houseId": "house-swyll",
+        "houseName": "Haus Swyll",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "url": "",
+        "fingerprint": "{\"name\":\"Rhydwen Swyll\",\"title\":\"Jüngere Schwester Merediths\",\"birth\":\"1725\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-swyll\",\"portrait\":\"https://i.imgur.com/NR8HKxj.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"rhiannon-draenmelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draenmelyn--rhiannon-draenmelyn\",\"name\":\"Rhiannon Draenmelyn\"},{\"personId\":\"iestyn-swyll\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-swyll--iestyn-swyll\",\"name\":\"Iestyn Swyll\"}],\"partners\":[],\"children\":[]}}",
+        "score": 275
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [],
+    "legacy": {
+      "tabs": [],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--haus-swyll--rhydwen-swyll",
+      "documentIds": [
+        "person--haus-swyll--rhydwen-swyll"
+      ],
+      "documents": [
+        {
+          "documentId": "person--haus-swyll--rhydwen-swyll",
+          "createdAt": "2026-10-18T14:09:06.794Z",
+          "updatedAt": "2026-10-18T14:09:06.794Z"
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "haus-swyll",
+        "personId": "rhydwen-swyll",
+        "worldPersonId": "person--haus-swyll--rhydwen-swyll",
+        "url": ""
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/rhydwen-swyll-familienabgleich-2026-10-18.json",
+    "sourceExportedAt": "2026-10-18T14:09:06.794Z",
+    "sourceUpdatedAt": "2026-10-18T14:09:06.794Z",
+    "sourceDocumentIds": [
+      "person--haus-swyll--rhydwen-swyll"
+    ],
+    "contentHash": "421c3a1aaceacf8deb9a68aa6f75fa9bf8cbb4dc983257619a01711c4a86b3f6"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "inventory": null,
+        "id": "person--haus-swyll--rhydwen-swyll",
+        "name": "Rhydwen Swyll",
+        "title": "Jüngere Schwester Merediths",
+        "fraktion": "Haus Swyll",
+        "bio": "Rhydwen Swyll wurde 1725 als jüngstes Kind von Iestyn Swyll und Rhiannon Draenmelyn geboren. Sie ist fünfzehn Jahre alt und die jüngere Schwester von Gareth und Meredith Swyll.",
+        "biography": {
+          "quoteBy": "",
+          "biography": {
+            "connectionPortraitHeight": 74,
+            "abilities": [],
+            "connectionsTitle": "Familie",
+            "portrait": "https://i.imgur.com/NR8HKxj.png",
+            "trivia": [],
+            "extraSections": [
+              {
+                "title": "Noch offene Angaben",
+                "position": "afterWorks",
+                "mode": "text",
+                "text": "<p>Beruf, Ausbildung und weitere persönliche Lebensdaten sind bislang nicht festgelegt.</p>"
+              }
+            ],
+            "portraitFit": "contain",
+            "connections": [
+              {
+                "type": "heading",
+                "title": "Eltern",
+                "detail": ""
+              },
+              {
+                "type": "connection",
+                "name": "Rhiannon Draenmelyn",
+                "detail": "Belegtes Elternteil.",
+                "image": "https://i.imgur.com/cyJqlDG.png",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "name": "Iestyn Swyll",
+                "detail": "Belegtes Elternteil.",
+                "image": "https://i.imgur.com/VpjeTe7.png",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "heading",
+                "title": "Geschwister",
+                "detail": ""
+              },
+              {
+                "type": "connection",
+                "name": "Gareth Swyll",
+                "detail": "Geschwister mit denselben belegten Eltern.",
+                "image": "https://i.imgur.com/DpqoWhn.png",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "name": "Meredith Swyll",
+                "detail": "Geschwister mit denselben belegten Eltern.",
+                "image": "https://i.imgur.com/8lLkOwQ.png",
+                "imageFormat": "portrait"
+              }
+            ],
+            "biographyTitle": "Rhydwen Swyll",
+            "portraitStages": [
+              "",
+              "",
+              "",
+              ""
+            ],
+            "biographyText": "<p>Rhydwen Swyll ist die jüngste Tochter von Iestyn Swyll und Rhiannon Draenmelyn. Sie wurde 1725 geboren und ist im Jahr 1740 fünfzehn Jahre alt. Ihr älterer Bruder Gareth ist zwanzig, ihre Schwester Meredith achtzehn Jahre alt.</p><p>Sie gehört zum Bürgerhaus Swyll aus Gwynthor. Über ihre Mutter ist sie mit dem Haus Draenmelyn verbunden. Beide Familien stehen in der überlieferten Diensttradition des Hauses Draig; daraus ergibt sich jedoch noch keine persönliche Anstellung für Rhydwen.</p><p>Meredith ist die persönliche Zofe von Prinzessin Rhiannon. Rhydwens eigener weiterer Lebensweg ist bisher nicht näher beschrieben.</p>",
+            "historyTitle": "Familie und Herkunft",
+            "connectionTextOffset": 0,
+            "works": [],
+            "footer": "Personenakte · Rhydwen Swyll",
+            "worksTitle": "Belegte Tätigkeit",
+            "quotes": [],
+            "documentsTitle": "Stammbaum",
+            "historyText": "",
+            "documents": [
+              {
+                "title": "Haus Swyll",
+                "link": "/Stammbäume/Stammbaum.html?family=haus-swyll&mode=view&person=rhydwen-swyll",
+                "text": "Familienzweig um Iestyn, Rhiannon und ihre drei Kinder.",
+                "icon": "/Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Swyll.png"
+              }
+            ],
+            "sideWidth": 100,
+            "abilitiesTitle": "Persönlichkeit"
+          },
+          "schema": "aleria.biography-module",
+          "quote": "",
+          "stats": [
+            {
+              "label": "Vollständiger Name",
+              "value": "Rhydwen Swyll"
+            },
+            {
+              "label": "Geboren / Alter",
+              "value": "1725 · 15 Jahre (1740)"
+            },
+            {
+              "label": "Stand",
+              "value": "Bürgerlich"
+            },
+            {
+              "label": "Herkunft",
+              "value": "Gwynthor · Llamreis Ankunft · Celtigerns Wacht · Cenyr"
+            },
+            {
+              "label": "Haus",
+              "value": "Haus Swyll"
+            },
+            {
+              "label": "Rolle",
+              "value": "Jüngstes Kind von Iestyn und Rhiannon"
+            }
+          ],
+          "revision": 1792332546794,
+          "schemaVersion": 1
+        },
+        "role": "Jüngstes Kind von Iestyn und Rhiannon",
+        "portrait": "https://i.imgur.com/NR8HKxj.png",
+        "identity": {
+          "worldPersonId": "person--haus-swyll--rhydwen-swyll"
+        },
+        "genealogy": {
+          "houseId": "house-swyll",
+          "relationships": {
+            "children": [],
+            "partners": [],
+            "parents": [
+              {
+                "personId": "rhiannon-draenmelyn",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-draenmelyn--rhiannon-draenmelyn",
+                "name": "Rhiannon Draenmelyn"
+              },
+              {
+                "personId": "iestyn-swyll",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-swyll--iestyn-swyll",
+                "name": "Iestyn Swyll"
+              }
+            ]
+          },
+          "worldPersonId": "person--haus-swyll--rhydwen-swyll",
+          "sex": "female",
+          "familyRole": "core",
+          "sources": [
+            {
+              "familyId": "haus-swyll",
+              "personId": "rhydwen-swyll",
+              "releaseId": "",
+              "publishedAt": "",
+              "importedAt": "2026-10-18T14:09:06.794Z",
+              "lastSyncedAt": "2026-10-18T14:09:06.794Z",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-swyll&mode=view&person=rhydwen-swyll",
+              "fingerprint": "{\"name\":\"Rhydwen Swyll\",\"title\":\"Jüngere Schwester Merediths\",\"birth\":\"1725\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-swyll\",\"portrait\":\"https://i.imgur.com/NR8HKxj.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"rhiannon-draenmelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draenmelyn--rhiannon-draenmelyn\",\"name\":\"Rhiannon Draenmelyn\"},{\"personId\":\"iestyn-swyll\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-swyll--iestyn-swyll\",\"name\":\"Iestyn Swyll\"}],\"partners\":[],\"children\":[]}}"
+            }
+          ],
+          "death": "",
+          "status": "alive",
+          "houseName": "Haus Swyll",
+          "birth": "1725",
+          "tags": [],
+          "portraitPlaceholder": "auto"
+        },
+        "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+        "createdAt": "2026-10-18T14:09:06.794Z",
+        "updatedAt": "2026-10-18T14:09:06.794Z",
+        "aliases": [],
+        "archived": false,
+        "imageSets": [],
+        "imageSetSchemaVersion": 0,
+        "activeImageSetId": "",
+        "emotes": [],
+        "emotesOverride": false,
+        "imageSetsOverride": false
+      }
+    ]
+  },
+  "character": {
+    "inventory": null,
+    "id": "person--haus-swyll--rhydwen-swyll",
+    "name": "Rhydwen Swyll",
+    "title": "Jüngere Schwester Merediths",
+    "fraktion": "Haus Swyll",
+    "bio": "Rhydwen Swyll wurde 1725 als jüngstes Kind von Iestyn Swyll und Rhiannon Draenmelyn geboren. Sie ist fünfzehn Jahre alt und die jüngere Schwester von Gareth und Meredith Swyll.",
+    "biography": {
+      "quoteBy": "",
+      "biography": {
+        "connectionPortraitHeight": 74,
+        "abilities": [],
+        "connectionsTitle": "Familie",
+        "portrait": "https://i.imgur.com/NR8HKxj.png",
+        "trivia": [],
+        "extraSections": [
+          {
+            "title": "Noch offene Angaben",
+            "position": "afterWorks",
+            "mode": "text",
+            "text": "<p>Beruf, Ausbildung und weitere persönliche Lebensdaten sind bislang nicht festgelegt.</p>"
+          }
+        ],
+        "portraitFit": "contain",
+        "connections": [
+          {
+            "type": "heading",
+            "title": "Eltern",
+            "detail": ""
+          },
+          {
+            "type": "connection",
+            "name": "Rhiannon Draenmelyn",
+            "detail": "Belegtes Elternteil.",
+            "image": "https://i.imgur.com/cyJqlDG.png",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Iestyn Swyll",
+            "detail": "Belegtes Elternteil.",
+            "image": "https://i.imgur.com/VpjeTe7.png",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "heading",
+            "title": "Geschwister",
+            "detail": ""
+          },
+          {
+            "type": "connection",
+            "name": "Gareth Swyll",
+            "detail": "Geschwister mit denselben belegten Eltern.",
+            "image": "https://i.imgur.com/DpqoWhn.png",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Meredith Swyll",
+            "detail": "Geschwister mit denselben belegten Eltern.",
+            "image": "https://i.imgur.com/8lLkOwQ.png",
+            "imageFormat": "portrait"
+          }
+        ],
+        "biographyTitle": "Rhydwen Swyll",
+        "portraitStages": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "biographyText": "<p>Rhydwen Swyll ist die jüngste Tochter von Iestyn Swyll und Rhiannon Draenmelyn. Sie wurde 1725 geboren und ist im Jahr 1740 fünfzehn Jahre alt. Ihr älterer Bruder Gareth ist zwanzig, ihre Schwester Meredith achtzehn Jahre alt.</p><p>Sie gehört zum Bürgerhaus Swyll aus Gwynthor. Über ihre Mutter ist sie mit dem Haus Draenmelyn verbunden. Beide Familien stehen in der überlieferten Diensttradition des Hauses Draig; daraus ergibt sich jedoch noch keine persönliche Anstellung für Rhydwen.</p><p>Meredith ist die persönliche Zofe von Prinzessin Rhiannon. Rhydwens eigener weiterer Lebensweg ist bisher nicht näher beschrieben.</p>",
+        "historyTitle": "Familie und Herkunft",
+        "connectionTextOffset": 0,
+        "works": [],
+        "footer": "Personenakte · Rhydwen Swyll",
+        "worksTitle": "Belegte Tätigkeit",
+        "quotes": [],
+        "documentsTitle": "Stammbaum",
+        "historyText": "",
+        "documents": [
+          {
+            "title": "Haus Swyll",
+            "link": "/Stammbäume/Stammbaum.html?family=haus-swyll&mode=view&person=rhydwen-swyll",
+            "text": "Familienzweig um Iestyn, Rhiannon und ihre drei Kinder.",
+            "icon": "/Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Swyll.png"
+          }
+        ],
+        "sideWidth": 100,
+        "abilitiesTitle": "Persönlichkeit"
+      },
+      "schema": "aleria.biography-module",
+      "quote": "",
+      "stats": [
+        {
+          "label": "Vollständiger Name",
+          "value": "Rhydwen Swyll"
+        },
+        {
+          "label": "Geboren / Alter",
+          "value": "1725 · 15 Jahre (1740)"
+        },
+        {
+          "label": "Stand",
+          "value": "Bürgerlich"
+        },
+        {
+          "label": "Herkunft",
+          "value": "Gwynthor · Llamreis Ankunft · Celtigerns Wacht · Cenyr"
+        },
+        {
+          "label": "Haus",
+          "value": "Haus Swyll"
+        },
+        {
+          "label": "Rolle",
+          "value": "Jüngstes Kind von Iestyn und Rhiannon"
+        }
+      ],
+      "revision": 1792332546794,
+      "schemaVersion": 1
+    },
+    "role": "Jüngstes Kind von Iestyn und Rhiannon",
+    "portrait": "https://i.imgur.com/NR8HKxj.png",
+    "identity": {
+      "worldPersonId": "person--haus-swyll--rhydwen-swyll"
+    },
+    "genealogy": {
+      "houseId": "house-swyll",
+      "relationships": {
+        "children": [],
+        "partners": [],
+        "parents": [
+          {
+            "personId": "rhiannon-draenmelyn",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-draenmelyn--rhiannon-draenmelyn",
+            "name": "Rhiannon Draenmelyn"
+          },
+          {
+            "personId": "iestyn-swyll",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-swyll--iestyn-swyll",
+            "name": "Iestyn Swyll"
+          }
+        ]
+      },
+      "worldPersonId": "person--haus-swyll--rhydwen-swyll",
+      "sex": "female",
+      "familyRole": "core",
+      "sources": [
+        {
+          "familyId": "haus-swyll",
+          "personId": "rhydwen-swyll",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-10-18T14:09:06.794Z",
+          "lastSyncedAt": "2026-10-18T14:09:06.794Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-swyll&mode=view&person=rhydwen-swyll",
+          "fingerprint": "{\"name\":\"Rhydwen Swyll\",\"title\":\"Jüngere Schwester Merediths\",\"birth\":\"1725\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-swyll\",\"portrait\":\"https://i.imgur.com/NR8HKxj.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"rhiannon-draenmelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draenmelyn--rhiannon-draenmelyn\",\"name\":\"Rhiannon Draenmelyn\"},{\"personId\":\"iestyn-swyll\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-swyll--iestyn-swyll\",\"name\":\"Iestyn Swyll\"}],\"partners\":[],\"children\":[]}}"
+        }
+      ],
+      "death": "",
+      "status": "alive",
+      "houseName": "Haus Swyll",
+      "birth": "1725",
+      "tags": [],
+      "portraitPlaceholder": "auto"
+    },
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "createdAt": "2026-10-18T14:09:06.794Z",
+    "updatedAt": "2026-10-18T14:09:06.794Z",
+    "aliases": [],
+    "archived": false,
+    "imageSets": [],
+    "imageSetSchemaVersion": 0,
+    "activeImageSetId": "",
+    "emotes": [],
+    "emotesOverride": false,
+    "imageSetsOverride": false
+  }
+}

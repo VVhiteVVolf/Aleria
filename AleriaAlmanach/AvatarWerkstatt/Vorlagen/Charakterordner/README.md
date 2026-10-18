@@ -7,6 +7,6 @@ Diesen gesamten Ordner nach `Charaktere/Einzelcharaktere/<Charaktername>` oder `
 - `Prompts`: ausgefüllte Auftragsdatei und tatsächlich verwendeter Bildprompt.
 - `Sheets`: vollständige 9er-Sheets, im Dateinamen mit Figur und Set bezeichnet.
 - `Verarbeitung/set-01`: Arbeitskopie eines Sheets für die Ordnerverarbeitung. V3 legt seine Ausgabe in `output` und verschiebt die Eingabe nach `Benutzt`.
-- `Output/set-01`: geprüfte fertige Einzelavatare.
+- `Output`: alle geprüften fertigen Einzelavatare dieser Figur, gemeinsam für sämtliche Sets. Keine Unterordner pro Set; Figur und Set im Dateinamen erhalten.
 
-Die `.gitkeep`-Dateien erhalten leere Arbeitsordner in Git. Neue Sets bekommen eigene Ordner, etwa `set-02`; dadurch bleiben frühere Ergebnisse erhalten. Die Auftragsvorlage liegt zentral unter `Vorlagen/Avatar-Auftrag.json`, der vollständige Ablauf in `AvatarWerkstatt/README.md`.
+Die `.gitkeep`-Dateien erhalten leere Arbeitsordner in Git. Nur neue Verarbeitungsläufe bekommen eigene Arbeitsordner, etwa `Verarbeitung/set-02`. Fertige Bilder bleiben gemeinsam unter `Output` und erhalten eindeutige Dateinamen. Die Auftragsvorlage liegt zentral unter `Vorlagen/Avatar-Auftrag.json`, der vollständige Ablauf in `AvatarWerkstatt/README.md`.
