@@ -15,6 +15,13 @@ try {
     assert.equal(await page.locator('#lbl-sl').inputValue(),'50');
     await page.close();
   }
+  const template=await context.newPage();
+  const templateErrors=[];
+  template.on('pageerror',error=>templateErrors.push(error.message));
+  await template.goto(`${origin}/Karten/_template/KartenTemplate.html`,{waitUntil:'networkidle'});
+  assert.deepEqual(await template.evaluate(()=>[window.KartoRuntime.state().dotSize,window.KartoRuntime.state().lblSize]),[80,50]);
+  assert.deepEqual(templateErrors,[],'New-map template also initializes without premature image callbacks');
+  await template.close();
   await context.close();
   const legacy=JSON.parse(await fs.readFile(new URL('../Cenyr/vortigerns-ruh/data.json',import.meta.url),'utf8')).state;
   legacy.dotSize=23;legacy.lblSize=19;
