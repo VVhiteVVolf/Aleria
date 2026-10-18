@@ -3,7 +3,7 @@
 
   const page = document.querySelector("[data-herrschaft-page]");
   if (!page) return;
-  const directoryUrl = new URL('../../modules/territory-directory/settlement-directory.mjs?v=register-20261018a', document.currentScript.src);
+  const directoryUrl = new URL('../../modules/territory-directory/settlement-directory.mjs?v=places-20261018d', document.currentScript.src);
   const { renderSettlementDomain } = await import(directoryUrl);
   const { mountDirectoryBrowser, directoryState } = await import(new URL('directory-browser.mjs?v=register-20261018a', directoryUrl));
   const { renderCouncilGroups } = await import(new URL('council-directory.mjs?v=vortigern-20261018', directoryUrl));

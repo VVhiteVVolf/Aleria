@@ -57,6 +57,12 @@ try {
     await page.setViewportSize({ width: 1440, height: 1000 });
     if (index === 0) {
       assert.equal(await page.locator('[data-herrschaft-geography] [data-directory-entry]').count(), 47, 'Every coordinate appears once in the county register');
+      assert.equal(await page.locator('.directory-place-description').count(), 42, 'All supplied descriptions are reachable in the place register');
+      const place = page.locator('.kingdom-place-card').filter({hasText:'Mwyncarreg'});
+      await place.locator('summary').click();
+      assert.ok((await place.locator('.directory-place-description p').textContent()).includes('Ton und Kalkstein'));
+      assert.equal(await place.locator('a[href*="family=haus-penderyn"]').count(), 1);
+      await place.locator('summary').click();
       await page.locator('[data-herrschaft-council]').screenshot({ path: artifacts + '/council.png' });
       await page.locator('.kingdom-family-card-view').screenshot({ path: artifacts + '/houses.png' });
       await page.locator('[data-herrschaft-geography]').screenshot({ path: artifacts + '/geography.png' });
@@ -79,6 +85,8 @@ try {
   assert.equal(await page.evaluate(() => window.KARTO_BOOT_STATUS), 'active');
   const source = JSON.parse(await fs.readFile(new URL('../../Karten/Cenyr/vortigerns-ruh/markers.source.json', import.meta.url)));
   const pins = await page.evaluate(() => window.KartoRuntime.state().pins);
+  assert.equal(pins.filter(pin=>pin.text).length,42);
+  assert.deepEqual(await page.evaluate(()=>[window.KartoRuntime.state().dotSize,window.KartoRuntime.state().lblSize]),[80,50]);
   for (const marker of source.markers) {
     const pin = pins.find(p => p.id === marker.id);
     assert.ok(Math.abs(pin.x * 4096 - marker.x) < 1e-6);
@@ -95,6 +103,13 @@ try {
   await page.locator('[data-id="vortigern-mathragon"] .pin-marker-img').click();
   await page.locator('#scroll-mo.open').waitFor();
   assert.equal(await page.locator('#pin-detail-title').textContent(), 'Mathragon');
+  await page.evaluate(()=>window.KartoRuntime.openPin('vortigern-mwyncarreg','view'));
+  assert.equal(await page.locator('#pin-detail-title').textContent(),'Mwyncarreg');
+  assert.ok((await page.locator('#scroll-mo .sv-text').textContent()).includes('Ton und Kalkstein'));
+  const heraldry=await page.locator('#scroll-mo .sv-header img').evaluateAll(images=>images.map(image=>image.getAttribute('src')));
+  assert.ok(heraldry.some(src=>src.endsWith('/haus-penderyn.png')));
+  assert.ok(heraldry.some(src=>src.endsWith('/Herrschaft der Penderyn.png')));
+  await page.locator('#scroll-mo .pin-card').screenshot({path:artifacts+'/mwyncarreg-details.png'});
   assert.deepEqual(errors, [], 'No browser exceptions');
   console.log('Shared royal council and all 47 map markers/layers passed');
 } finally { await browser.close(); }

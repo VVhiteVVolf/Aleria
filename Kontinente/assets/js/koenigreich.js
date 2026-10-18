@@ -6,7 +6,7 @@
   const directoryBase = new URL('../../modules/territory-directory/', document.currentScript.src);
   const [{ renderFamilySection: renderHouseDirectorySection }, { renderSettlementDomain }, { createLegacyCouncilController }, { enhanceInfoboxes }, { HOUSE_RANKS }, , { mountDirectoryBrowser, directoryState }, { refineReferenceTables }, { resolveRoyalCouncil }] = await Promise.all([
     import(new URL('house-directory.mjs?v=register-20261018a', directoryBase)),
-    import(new URL('settlement-directory.mjs?v=register-20261018a', directoryBase)),
+    import(new URL('settlement-directory.mjs?v=places-20261018d', directoryBase)),
     import(new URL('legacy-council.mjs?v=vortigern-20261018', directoryBase)),
     import(new URL('infobox.mjs?v=panels-20260911a', directoryBase)),
     import(new URL('modules/house-content/house-ranks.generated.mjs?v=panels-20260911a', housePageBase)),

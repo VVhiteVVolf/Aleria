@@ -48,6 +48,11 @@ try {
       }).map(cell => cell.textContent.trim().slice(0, 80));
     });
     assert.deepEqual(paintErrors, [], `${mode}: no red panels or unreadable text`);
+    const sizes = await page.locator('.kingdom-reference-table img').evaluateAll(images => images
+      .filter(img => img.closest('td').colSpan === 1)
+      .map(img => ({ width: img.getBoundingClientRect().width, height: img.getBoundingClientRect().height })));
+    assert.ok(sizes.length > 30);
+    assert.ok(sizes.every(size => size.width === 110 && size.height === 110), `${mode}: colspan=1 icons and coats of arms use the same 110px frame`);
     const subsection = page.locator('p').filter({ hasText: /^10\.c\) Bedrohliche Tiere$/ });
     assert.equal(await subsection.locator('b').first().evaluate(node => getComputedStyle(node).backgroundColor), 'rgba(0, 0, 0, 0)', 'No editor highlight on chapter 10.c');
     if (screenshots) {

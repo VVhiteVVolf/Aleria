@@ -19,7 +19,7 @@
   border: 1px solid var(--reference-line) !important;
   background: var(--reference-paper) !important;
   color: var(--reference-ink) !important;
-  vertical-align: middle;
+  vertical-align: middle !important;
 }
 .kingdom-reference-table :is(span, b, strong, a, p) {
   color: inherit !important;
@@ -37,8 +37,8 @@
   margin: 0 auto;
   object-fit: contain;
 }
-.kingdom-reference-table td[colspan] > img,
-.kingdom-reference-table td[colspan] > a:not(.cenyr-court-entry) > img {
+.kingdom-reference-table td[colspan='5'] > img,
+.kingdom-reference-table td[colspan='5'] > a:not(.cenyr-court-entry) > img {
   width: min(100%, 365px) !important;
   height: auto !important;
   max-height: 300px;

@@ -50,3 +50,9 @@ node Kontinente/tests/territory-directory.browser.mjs
 ```
 
 Optionale Umgebungsvariablen: `DIRECTORY_TEST_ORIGIN` (standardmäßig `http://127.0.0.1:5500`), `PLAYWRIGHT_MODULE` (Paketname oder Modul-Datei-URL), `PLAYWRIGHT_EXECUTABLE` (vorhandener Chromium-Pfad) und `DIRECTORY_SCREENSHOTS` (Ausgabeordner). Der Test prüft acht Herrschaftsseiten in drei Fensterbreiten, lokale Registerbilder, gleiche Kartenhöhen, die Grafenebene, direkte Links, Tastaturfokus und die alte Grafschaftsvorlage. Externe Ressourcen werden dafür nicht benötigt.
+- Ortskarten können eine Hauszuordnung mit Familienlink und eine aufklappbare
+  Beschreibung aus der verantwortlichen Ortsquelle anzeigen. Die gemeinsame
+  Komponente rendert Quelltexte als Text; es entstehen keine lokalen Sonderrenderer.
+- Referenzbilder in Einzelzellen (auch `colspan="1"`) verwenden einheitliche
+  110×110-Pixel-Flächen mit `object-fit: contain`. Nur ausdrücklich vollbreite
+  Zellen mit `colspan="5"` erhalten die größere Karten-/Abbildungsfläche.

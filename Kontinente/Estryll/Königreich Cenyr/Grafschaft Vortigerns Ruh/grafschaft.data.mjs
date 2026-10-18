@@ -1,12 +1,10 @@
-import { createTerritory } from '../../../modules/vortigerns-ruh/territory-page.mjs';
+import { createTerritory } from '../../../modules/vortigerns-ruh/territory-page.mjs?v=places-20261018d';
 
 export default createTerritory({
   "id": "grafschaft-vortigerns-ruh",
   "title": "Grafschaft Vortigerns Ruh – Gorffwysfa Vortigern",
   "shortTitle": "Vortigerns Ruh",
   "type": "Grafschaft",
-  "crestSrc": "/Stammbäume/assets/images/regions/vortigerns-ruh.png",
-  "crestAlt": "Wappen Vortigerns Ruh",
   "kicker": "Königliche Grafschaft des Hauses Pendrag",
   "parentHref": "../Königreich von Cenyr.html",
   "parentLabel": "Königreich Cenyr",
@@ -425,8 +423,6 @@ export default createTerritory({
     {
       "title": "Gräfische Baronie Mathragon – Tanwens Flamme",
       "page": "Grafschaft Vortigerns Ruh.html",
-      "crestSrc": "/Stammbäume/assets/images/houses/Vortigerns Ruh/haus-pendrag.png",
-      "crestAlt": "Wappen Haus Pendrag",
       "center": "Mathragon",
       "sections": [
         {
@@ -436,22 +432,13 @@ export default createTerritory({
             "vortigern-turnierplatz-feld-der-glorie",
             "vortigern-llysceffyl"
           ]
-        },
-        {
-          "title": "Besondere Orte",
-          "placeIds": [
-            "vortigern-uathachs-haus",
-            "vortigern-ahnenbaum-1154-68",
-            "vortigern-ahnenbaum-1537-615"
-          ]
         }
-      ]
+      ],
+      "territoryId": "baronie-tanwens-flamme"
     },
     {
       "title": "Herrschaft der Marwolaeth",
       "page": "Herrschaft der Marwolaeth/Herrschaft der Marwolaeth.html",
-      "crestSrc": "/Stammbäume/assets/images/houses/Vortigerns Ruh/Tanwens Flamme/haus-marwolaeth.png",
-      "crestAlt": "Wappen Haus Marwolaeth",
       "center": "Mathragon",
       "sections": [
         {
@@ -464,13 +451,12 @@ export default createTerritory({
             "vortigern-garwmor"
           ]
         }
-      ]
+      ],
+      "territoryId": "herrschaft-marwolaeth"
     },
     {
       "title": "Herrschaft der Dyngwn",
       "page": "Herrschaft der Dyngwn/Herrschaft der Dyngwn.html",
-      "crestSrc": "/Stammbäume/assets/images/houses/Vortigerns Ruh/Tanwens Flamme/haus-dyngwn.png",
-      "crestAlt": "Wappen Haus Dyngwn",
       "center": "Mathragon",
       "sections": [
         {
@@ -482,13 +468,12 @@ export default createTerritory({
             "vortigern-llysfaer"
           ]
         }
-      ]
+      ],
+      "territoryId": "herrschaft-dyngwn"
     },
     {
       "title": "Herrschaft der Dienyddiwr",
       "page": "Herrschaft der Dienyddiwr/Herrschaft der Dienyddiwr.html",
-      "crestSrc": "/Stammbäume/assets/images/houses/Vortigerns Ruh/Tanwens Flamme/haus-dienyddiwr.png",
-      "crestAlt": "Wappen Haus Dienyddiwr",
       "center": "Mathragon",
       "sections": [
         {
@@ -500,13 +485,12 @@ export default createTerritory({
             "vortigern-traethglas"
           ]
         }
-      ]
+      ],
+      "territoryId": "herrschaft-dienyddiwr"
     },
     {
       "title": "Herrschaft der Penderyn",
       "page": "Herrschaft der Penderyn/Herrschaft der Penderyn.html",
-      "crestSrc": "/Stammbäume/assets/images/houses/Vortigerns Ruh/Tanwens Flamme/haus-penderyn.png",
-      "crestAlt": "Wappen Haus Penderyn",
       "center": "Mathragon",
       "sections": [
         {
@@ -519,16 +503,16 @@ export default createTerritory({
             "vortigern-bronfael",
             "vortigern-llyswynfaen",
             "vortigern-zur-feuerzunge",
-            "vortigern-des-drachens-ruh"
+            "vortigern-des-drachens-ruh",
+            "vortigern-mwyncarreg"
           ]
         }
-      ]
+      ],
+      "territoryId": "herrschaft-penderyn"
     },
     {
       "title": "Herrschaft der Grael",
       "page": "Herrschaft der Grael/Herrschaft der Grael.html",
-      "crestSrc": "/Stammbäume/assets/images/houses/Vortigerns Ruh/Tanwens Flamme/haus-grael.png",
-      "crestAlt": "Wappen Haus Grael",
       "center": "Mathragon",
       "sections": [
         {
@@ -538,13 +522,12 @@ export default createTerritory({
             "vortigern-bronwyn"
           ]
         }
-      ]
+      ],
+      "territoryId": "herrschaft-grael"
     },
     {
       "title": "Herrschaft der Cath",
       "page": "Herrschaft der Cath/Herrschaft der Cath.html",
-      "crestSrc": "/Stammbäume/assets/images/houses/Vortigerns Ruh/Tanwens Flamme/haus-cath.png",
-      "crestAlt": "Wappen Haus Cath",
       "center": "Mathragon",
       "sections": [
         {
@@ -555,13 +538,12 @@ export default createTerritory({
             "vortigern-zum-grunen-pfad"
           ]
         }
-      ]
+      ],
+      "territoryId": "herrschaft-cath"
     },
     {
       "title": "Baronie Uthers Aufstieg",
       "page": "Baronie Uthers Aufstieg/Baronie Uthers Aufstieg.html",
-      "crestSrc": "/Stammbäume/assets/images/houses/Vortigerns Ruh/Uthers Aufstieg/haus-ceirwyn.png",
-      "crestAlt": "Wappen Haus Ceirwyn",
       "center": "Calon",
       "sections": [
         {
@@ -582,19 +564,17 @@ export default createTerritory({
             "vortigern-traethceir",
             "vortigern-bronceren"
           ]
-        }
-      ]
-    },
-    {
-      "title": "Weitere Orte der Grafschaft",
-      "sections": [
+        },
         {
-          "title": "Siedlungen und Orte",
+          "title": "Besondere Orte",
           "placeIds": [
-            "vortigern-mwyncarreg"
+            "vortigern-uathachs-haus",
+            "vortigern-ahnenbaum-1154-68",
+            "vortigern-ahnenbaum-1537-615"
           ]
         }
-      ]
+      ],
+      "territoryId": "baronie-uthers-aufstieg"
     }
   ],
   "councilNote": "Der Rat von Vortigerns Ruh ist zugleich der Königliche Rat von Cenyr."

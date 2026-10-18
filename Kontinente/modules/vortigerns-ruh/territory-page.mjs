@@ -1,5 +1,6 @@
 import { royalCouncil } from '../cenyr-court/royal-council.mjs?v=vortigern-20261018';
 import { placesById } from './places.mjs';
+import { territoriesById } from '../../../Karten/Cenyr/vortigerns-ruh/places.mjs';
 
 const countyPath = '/Kontinente/Estryll/Königreich Cenyr/Grafschaft Vortigerns Ruh/';
 const map = Object.freeze({
@@ -11,6 +12,8 @@ const map = Object.freeze({
 
 // Only assembly belongs here. Each territory owns its copy, houses and officers.
 export function createTerritory(source, data = globalThis.ALERIA_HERRSCHAFT_DATA) {
+  const heraldry = territoriesById.get(source.id);
+  if (!heraldry) throw new Error(`Unbekannte Herrschaft: ${source.id}`);
   const familySections = source.families.map(section => data.familySection(
     section.title,
     section.houses.map(house => data.family(house.name, house)),
@@ -34,6 +37,8 @@ export function createTerritory(source, data = globalThis.ALERIA_HERRSCHAFT_DATA
         map,
         domains: source.domains.map(domain => ({
           ...domain,
+          crestSrc: territoriesById.get(domain.territoryId).banner,
+          crestAlt: `Banner ${domain.title}`,
           href: domain.page ? countyPath + domain.page : '',
           sections: domain.sections.map(section => ({
             title: section.title,
@@ -48,8 +53,8 @@ export function createTerritory(source, data = globalThis.ALERIA_HERRSCHAFT_DATA
         id: source.id,
         title: source.title,
         shortTitle: source.shortTitle,
-        crestSrc: source.crestSrc,
-        crestAlt: source.crestAlt,
+        crestSrc: heraldry.banner,
+        crestAlt: `Banner ${heraldry.name}`,
         kicker: source.kicker,
         parentHref: source.parentHref,
         parentLabel: source.parentLabel,

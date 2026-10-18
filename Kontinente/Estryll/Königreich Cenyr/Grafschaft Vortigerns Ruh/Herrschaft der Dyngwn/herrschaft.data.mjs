@@ -1,12 +1,10 @@
-import { createTerritory } from '../../../../modules/vortigerns-ruh/territory-page.mjs';
+import { createTerritory } from '../../../../modules/vortigerns-ruh/territory-page.mjs?v=places-20261018d';
 
 export default createTerritory({
   "id": "herrschaft-dyngwn",
   "title": "Herrschaft der Dyngwn",
   "shortTitle": "Dyngwn",
   "type": "Herrschaft",
-  "crestSrc": "/Stammbäume/assets/images/houses/Vortigerns Ruh/Tanwens Flamme/haus-dyngwn.png",
-  "crestAlt": "Wappen Dyngwn",
   "kicker": "Herrschaft in Vortigerns Ruh",
   "parentHref": "../Grafschaft Vortigerns Ruh.html",
   "parentLabel": "Vortigerns Ruh",
@@ -259,8 +257,6 @@ export default createTerritory({
     {
       "title": "Herrschaft der Dyngwn",
       "page": "Herrschaft der Dyngwn/Herrschaft der Dyngwn.html",
-      "crestSrc": "/Stammbäume/assets/images/houses/Vortigerns Ruh/Tanwens Flamme/haus-dyngwn.png",
-      "crestAlt": "Wappen Haus Dyngwn",
       "center": "Mathragon",
       "sections": [
         {
@@ -272,7 +268,8 @@ export default createTerritory({
             "vortigern-llysfaer"
           ]
         }
-      ]
+      ],
+      "territoryId": "herrschaft-dyngwn"
     }
   ]
 });

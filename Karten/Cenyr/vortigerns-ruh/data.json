@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "dataPath": "Cenyr/vortigerns-ruh/data.json",
-  "revision": 1,
-  "updatedAt": "2026-10-18T20:00:00.000Z",
+  "revision": 2,
+  "updatedAt": "2026-10-18T21:14:28.197Z",
   "state": {
     "pins": [
       {
@@ -16,10 +16,10 @@
         "pinMarker": "/Karten/assets/icons/welt/bergbausiedlung.png",
         "img": "",
         "imgLink": "",
-        "crest": "",
-        "crestLink": "",
-        "banner": "",
-        "bannerLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Vortigerns Ruh/Uthers Aufstieg/haus-ceirwyn.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-ceirwyn&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Vortigerns Ruh/Uthers Aufstieg.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Vortigerns Ruh/Baronie Uthers Aufstieg/Baronie Uthers Aufstieg.html",
         "region": "Vortigerns Ruh",
         "house": "Haus Ceirwyn",
         "faction": "",
@@ -34,7 +34,7 @@
           },
           {
             "k": "Gewerbe",
-            "v": ""
+            "v": "Gewinnung von Pigmenten und Farben; Wandteppiche"
           },
           {
             "k": "Regierungstyp",
@@ -46,7 +46,7 @@
           },
           {
             "k": "Lehensherr",
-            "v": ""
+            "v": "Haus Ceirwyn"
           },
           {
             "k": "Bevölkerung",
@@ -69,9 +69,9 @@
             "v": ""
           }
         ],
-        "text": "",
+        "text": "Brynthcarreg ist eine Hügelsiedlung, die sich auf die Gewinnung von Pigmenten und Farben aus natürlichen Quellen in den Hügeln spezialisiert hat. Aus verschiedenen Mineralien und Pflanzen werden hier Farben für Malerei, Färberei und kunstvolle Wandteppiche hergestellt, die in der gesamten Grafschaft und darüber hinaus geschätzt werden. Brynthcarreg ist besonders bekannt für seine seltenen Erdfarben und die satten Pigmente, die von Künstlern und Handwerkern in Tempeln, Adelshäusern und bei großen Festen verwendet werden.",
         "secret": false,
-        "dominionId": ""
+        "dominionId": "baronie-uthers-aufstieg"
       },
       {
         "id": "vortigern-craithfaer",
@@ -84,10 +84,10 @@
         "pinMarker": "/Karten/assets/icons/welt/bergbausiedlung.png",
         "img": "",
         "imgLink": "",
-        "crest": "",
-        "crestLink": "",
-        "banner": "",
-        "bannerLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Vortigerns Ruh/Tanwens Flamme/haus-dyngwn.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-dyngwn&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Vortigerns Ruh/Herrschaft der Dyngwn.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Vortigerns Ruh/Herrschaft der Dyngwn/Herrschaft der Dyngwn.html",
         "region": "Vortigerns Ruh",
         "house": "Haus Dyngwn",
         "faction": "",
@@ -102,7 +102,7 @@
           },
           {
             "k": "Gewerbe",
-            "v": ""
+            "v": "Abbau von Kupfer und Silber; Metallverarbeitung"
           },
           {
             "k": "Regierungstyp",
@@ -114,7 +114,7 @@
           },
           {
             "k": "Lehensherr",
-            "v": ""
+            "v": "Haus Dyngwn"
           },
           {
             "k": "Bevölkerung",
@@ -137,9 +137,9 @@
             "v": ""
           }
         ],
-        "text": "",
+        "text": "Craithfaer liegt weiter nördlich entlang der Linie und ist für den Abbau von Kupfer und Silber bekannt. Das wertvolle Silber wird für Münzprägungen und Kunsthandwerk genutzt, während das Kupfer in der Herstellung von Waffen und Rüstungen Anwendung findet. Die Dyngwn-Schmiede hier sind berühmt für ihre präzise Verarbeitung der Erze, die die Siedlung liefert.",
         "secret": false,
-        "dominionId": ""
+        "dominionId": "herrschaft-dyngwn"
       },
       {
         "id": "vortigern-llyswellyn",
@@ -152,10 +152,10 @@
         "pinMarker": "/Karten/assets/icons/welt/bauernsiedlung.png",
         "img": "",
         "imgLink": "",
-        "crest": "",
-        "crestLink": "",
-        "banner": "",
-        "bannerLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Vortigerns Ruh/Tanwens Flamme/haus-penderyn.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-penderyn&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Vortigerns Ruh/Herrschaft der Penderyn.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Vortigerns Ruh/Herrschaft der Penderyn/Herrschaft der Penderyn.html",
         "region": "Vortigerns Ruh",
         "house": "Haus Penderyn",
         "faction": "",
@@ -170,7 +170,7 @@
           },
           {
             "k": "Gewerbe",
-            "v": ""
+            "v": "Glasflaschenherstellung, Gemüseanbau und Tonverarbeitung"
           },
           {
             "k": "Regierungstyp",
@@ -182,7 +182,7 @@
           },
           {
             "k": "Lehensherr",
-            "v": ""
+            "v": "Haus Penderyn"
           },
           {
             "k": "Bevölkerung",
@@ -205,9 +205,9 @@
             "v": ""
           }
         ],
-        "text": "",
+        "text": "Llyswellyn ist berühmt für die Herstellung von Glasflaschen, die für die Abfüllung des Penderyn-Whiskeys verwendet werden. Die Kunsthandwerker dieser Siedlung produzieren kunstvoll verzierte Flaschen, die den exklusiven Charakter des Whiskeys unterstreichen. Neben der Unterstützung der Destilleriegilde trägt Llyswellyn zur Grafschaft bei, indem es sich auf den Anbau von Gemüse und Tonverarbeitung spezialisiert hat, die für die lokale Versorgung und den Handel von essenzieller Bedeutung sind. Die Siedlung ist somit ein Schlüsselpunkt für sowohl die Whiskeyproduktion als auch die allgemeine Landwirtschaft.",
         "secret": false,
-        "dominionId": ""
+        "dominionId": "herrschaft-penderyn"
       },
       {
         "id": "vortigern-llysglas",
@@ -220,10 +220,10 @@
         "pinMarker": "/Karten/assets/icons/welt/bauernsiedlung.png",
         "img": "",
         "imgLink": "",
-        "crest": "",
-        "crestLink": "",
-        "banner": "",
-        "bannerLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Vortigerns Ruh/Tanwens Flamme/haus-marwolaeth.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-marwolaeth&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Vortigerns Ruh/Herrschaft der Marwolaeth.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Vortigerns Ruh/Herrschaft der Marwolaeth/Herrschaft der Marwolaeth.html",
         "region": "Vortigerns Ruh",
         "house": "Haus Marwolaeth",
         "faction": "",
@@ -238,7 +238,7 @@
           },
           {
             "k": "Gewerbe",
-            "v": ""
+            "v": "Anbau von Weizen und Kräutern"
           },
           {
             "k": "Regierungstyp",
@@ -250,7 +250,7 @@
           },
           {
             "k": "Lehensherr",
-            "v": ""
+            "v": "Haus Marwolaeth"
           },
           {
             "k": "Bevölkerung",
@@ -273,9 +273,9 @@
             "v": ""
           }
         ],
-        "text": "",
+        "text": "Llysglas ist eine Bauernsiedlung an der westlichen Grenze der Grafschaft. Der Schwerpunkt liegt auf dem Anbau von Weizen und Kräutern, die sowohl für die örtliche Bevölkerung als auch für die Klöster in der Region genutzt werden. Haus Marwolaeth legt großen Wert darauf, dass die Erträge von Llysglas auch der Priesterschaft und der Kirche zugutekommen.",
         "secret": false,
-        "dominionId": ""
+        "dominionId": "herrschaft-marwolaeth"
       },
       {
         "id": "vortigern-uathachs-haus",
@@ -288,12 +288,12 @@
         "pinMarker": "/Karten/assets/icons/welt/druidenh-tte.png",
         "img": "",
         "imgLink": "",
-        "crest": "",
-        "crestLink": "",
-        "banner": "",
-        "bannerLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Vortigerns Ruh/Uthers Aufstieg/haus-ceirwyn.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-ceirwyn&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Vortigerns Ruh/Uthers Aufstieg.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Vortigerns Ruh/Baronie Uthers Aufstieg/Baronie Uthers Aufstieg.html",
         "region": "Vortigerns Ruh",
-        "house": "",
+        "house": "Haus Ceirwyn",
         "faction": "",
         "table": [
           {
@@ -310,11 +310,11 @@
           },
           {
             "k": "Bewohner",
-            "v": ""
+            "v": "Erzdruidin Uathach"
           },
           {
             "k": "Nutzung",
-            "v": ""
+            "v": "Behausung der Wächterin des Coed Y Felin"
           },
           {
             "k": "Gebäude / Räume",
@@ -343,11 +343,15 @@
           {
             "k": "Besonderheiten",
             "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Ceirwyn"
           }
         ],
-        "text": "",
+        "text": "Uathachs’ Haus ist die Behausung der Erzdruidin Uathach, der Wächterin des uralten Waldes Coed Y Felin.",
         "secret": false,
-        "dominionId": ""
+        "dominionId": "baronie-uthers-aufstieg"
       },
       {
         "id": "vortigern-cor-y-gwarchodwr",
@@ -360,13 +364,13 @@
         "pinMarker": "/Karten/assets/icons/welt/klostersiedlung.png",
         "img": "",
         "imgLink": "",
-        "crest": "",
-        "crestLink": "",
-        "banner": "",
-        "bannerLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Vortigerns Ruh/Tanwens Flamme/haus-marwolaeth.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-marwolaeth&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Vortigerns Ruh/Herrschaft der Marwolaeth.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Vortigerns Ruh/Herrschaft der Marwolaeth/Herrschaft der Marwolaeth.html",
         "region": "Vortigerns Ruh",
         "house": "Haus Marwolaeth",
-        "faction": "",
+        "faction": "Alerische Kirche – Hüter",
         "table": [
           {
             "k": "Name",
@@ -378,7 +382,7 @@
           },
           {
             "k": "Gewerbe",
-            "v": ""
+            "v": "Pilgerstätte; Ausbildung von Priestern und Paladinen"
           },
           {
             "k": "Regierungstyp",
@@ -390,7 +394,7 @@
           },
           {
             "k": "Lehensherr",
-            "v": ""
+            "v": "Haus Marwolaeth"
           },
           {
             "k": "Bevölkerung",
@@ -413,9 +417,9 @@
             "v": ""
           }
         ],
-        "text": "",
+        "text": "Côr y Gwarchodwr ist eine Klostersiedlung, die dem Hüter geweiht ist und den größten Friedhof der gesamten Grafschaft – und möglicherweise darüber hinaus – beherbergt. Dieser heilige Ort ist eine der wichtigsten Pilgerstätten des Landes, und jedes Jahr strömen Gläubige hierher, um zu beten und ihre Verstorbenen zu ehren. Neben der Bestattung wird hier auch die Ausbildung von Priestern und Paladinen des Hauses Marwolaeth betrieben. Die Klosterbrüder und -schwestern widmen sich dem Glauben und der Bewahrung des ewigen Friedens der Verstorbenen.",
         "secret": false,
-        "dominionId": ""
+        "dominionId": "herrschaft-marwolaeth"
       },
       {
         "id": "vortigern-caorthllyn",
@@ -428,10 +432,10 @@
         "pinMarker": "/Karten/assets/icons/welt/waldsiedlung.png",
         "img": "",
         "imgLink": "",
-        "crest": "",
-        "crestLink": "",
-        "banner": "",
-        "bannerLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Vortigerns Ruh/Uthers Aufstieg/haus-ceirwyn.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-ceirwyn&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Vortigerns Ruh/Uthers Aufstieg.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Vortigerns Ruh/Baronie Uthers Aufstieg/Baronie Uthers Aufstieg.html",
         "region": "Vortigerns Ruh",
         "house": "Haus Ceirwyn",
         "faction": "",
@@ -446,7 +450,7 @@
           },
           {
             "k": "Gewerbe",
-            "v": ""
+            "v": "Bögen, Pfeile und Jagdwaffen"
           },
           {
             "k": "Regierungstyp",
@@ -458,7 +462,7 @@
           },
           {
             "k": "Lehensherr",
-            "v": ""
+            "v": "Haus Ceirwyn"
           },
           {
             "k": "Bevölkerung",
@@ -481,9 +485,9 @@
             "v": ""
           }
         ],
-        "text": "",
+        "text": "Caorthllyn ist eine Waldsiedlung, die sich auf die Herstellung von Bogenschützenbedarf spezialisiert hat. Hier werden Bögen, Pfeile und andere Jagdwaffen gefertigt, die in der gesamten Region bekannt sind.",
         "secret": false,
-        "dominionId": ""
+        "dominionId": "baronie-uthers-aufstieg"
       },
       {
         "id": "vortigern-llysceffyl",
@@ -496,13 +500,13 @@
         "pinMarker": "/Karten/assets/icons/welt/pferdezuchtsiedlung.png",
         "img": "",
         "imgLink": "",
-        "crest": "",
-        "crestLink": "",
-        "banner": "",
-        "bannerLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Vortigerns Ruh/haus-pendrag.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-pendrag&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Vortigerns Ruh/Tanwens Flamme.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Vortigerns Ruh/Grafschaft Vortigerns Ruh.html",
         "region": "Vortigerns Ruh",
-        "house": "",
-        "faction": "",
+        "house": "Haus Pendrag",
+        "faction": "Rhosmeres-Rösser-Gilde",
         "table": [
           {
             "k": "Name",
@@ -514,7 +518,7 @@
           },
           {
             "k": "Gewerbe",
-            "v": ""
+            "v": "Pferdezucht; Schlachtrösser und Kriegspferde"
           },
           {
             "k": "Regierungstyp",
@@ -526,7 +530,7 @@
           },
           {
             "k": "Lehensherr",
-            "v": ""
+            "v": "Haus Pendrag"
           },
           {
             "k": "Bevölkerung",
@@ -549,9 +553,9 @@
             "v": ""
           }
         ],
-        "text": "",
+        "text": "Llysceffyl ist eine bedeutende Pferdezucht-Siedlung, die von der Rhosmeres-Rösser-Gilde gepachtet wurde. Diese Gilde betreibt hier die Pferdezucht für die gesamte Grafschaft und macht den Ort zu einem der größten Zentren dieser Art im gesamten Königreich Cenyr. Vor allem die Schlachtrösser aus Llysceffyl genießen einen exzellenten Ruf; die meisten und besten Kriegspferde des Reiches stammen von hier.",
         "secret": false,
-        "dominionId": ""
+        "dominionId": "baronie-tanwens-flamme"
       },
       {
         "id": "vortigern-ahnenbaum-1154-68",
@@ -564,12 +568,12 @@
         "pinMarker": "/Karten/assets/icons/welt/ahnenbaum.png",
         "img": "",
         "imgLink": "",
-        "crest": "",
-        "crestLink": "",
-        "banner": "",
-        "bannerLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Vortigerns Ruh/Uthers Aufstieg/haus-ceirwyn.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-ceirwyn&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Vortigerns Ruh/Uthers Aufstieg.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Vortigerns Ruh/Baronie Uthers Aufstieg/Baronie Uthers Aufstieg.html",
         "region": "Vortigerns Ruh",
-        "house": "",
+        "house": "Haus Ceirwyn",
         "faction": "",
         "table": [
           {
@@ -619,11 +623,15 @@
           {
             "k": "Besonderheiten",
             "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Ceirwyn"
           }
         ],
         "text": "",
         "secret": false,
-        "dominionId": ""
+        "dominionId": "baronie-uthers-aufstieg"
       },
       {
         "id": "vortigern-llyswynfaen",
@@ -636,10 +644,10 @@
         "pinMarker": "/Karten/assets/icons/welt/bauernsiedlung.png",
         "img": "",
         "imgLink": "",
-        "crest": "",
-        "crestLink": "",
-        "banner": "",
-        "bannerLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Vortigerns Ruh/Tanwens Flamme/haus-penderyn.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-penderyn&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Vortigerns Ruh/Herrschaft der Penderyn.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Vortigerns Ruh/Herrschaft der Penderyn/Herrschaft der Penderyn.html",
         "region": "Vortigerns Ruh",
         "house": "Haus Penderyn",
         "faction": "",
@@ -654,7 +662,7 @@
           },
           {
             "k": "Gewerbe",
-            "v": ""
+            "v": "Anbau von Gerste und Roggen für die Whiskeyherstellung"
           },
           {
             "k": "Regierungstyp",
@@ -666,7 +674,7 @@
           },
           {
             "k": "Lehensherr",
-            "v": ""
+            "v": "Haus Penderyn"
           },
           {
             "k": "Bevölkerung",
@@ -689,9 +697,9 @@
             "v": ""
           }
         ],
-        "text": "",
+        "text": "Llyswynfaen ist eine Bauernsiedlung, die sich auf den Anbau von Gerste und Roggen spezialisiert hat. Diese Getreidesorten sind von höchster Qualität und werden direkt für die Whiskeyherstellung in den berühmten Destillerien des Hauses Penderyn verwendet. Die weiten Felder der Siedlung liefern das Herzstück des Whiskeys und machen Llyswynfaen zu einem unverzichtbaren Teil der regionalen Wirtschaft.",
         "secret": false,
-        "dominionId": ""
+        "dominionId": "herrschaft-penderyn"
       },
       {
         "id": "vortigern-ffynnonbren",
@@ -704,10 +712,10 @@
         "pinMarker": "/Karten/assets/icons/welt/waldsiedlung.png",
         "img": "",
         "imgLink": "",
-        "crest": "",
-        "crestLink": "",
-        "banner": "",
-        "bannerLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Vortigerns Ruh/Uthers Aufstieg/haus-ceirwyn.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-ceirwyn&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Vortigerns Ruh/Uthers Aufstieg.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Vortigerns Ruh/Baronie Uthers Aufstieg/Baronie Uthers Aufstieg.html",
         "region": "Vortigerns Ruh",
         "house": "Haus Ceirwyn",
         "faction": "",
@@ -722,7 +730,7 @@
           },
           {
             "k": "Gewerbe",
-            "v": ""
+            "v": "Holzverarbeitung und Instrumentenbau"
           },
           {
             "k": "Regierungstyp",
@@ -734,7 +742,7 @@
           },
           {
             "k": "Lehensherr",
-            "v": ""
+            "v": "Haus Ceirwyn"
           },
           {
             "k": "Bevölkerung",
@@ -757,9 +765,9 @@
             "v": ""
           }
         ],
-        "text": "",
+        "text": "Ffynnonbren ist eine Waldsiedlung, die für ihre Holzverarbeitung und den Bau von Instrumenten bekannt ist. Die Kunsthandwerker hier stellen hochwertige Lauten, Flöten und Trommeln her, die in den Bardenkreisen der Region hochgeschätzt werden.",
         "secret": false,
-        "dominionId": ""
+        "dominionId": "baronie-uthers-aufstieg"
       },
       {
         "id": "vortigern-ahnenbaum-1537-615",
@@ -772,12 +780,12 @@
         "pinMarker": "/Karten/assets/icons/welt/ahnenbaum.png",
         "img": "",
         "imgLink": "",
-        "crest": "",
-        "crestLink": "",
-        "banner": "",
-        "bannerLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Vortigerns Ruh/Uthers Aufstieg/haus-ceirwyn.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-ceirwyn&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Vortigerns Ruh/Uthers Aufstieg.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Vortigerns Ruh/Baronie Uthers Aufstieg/Baronie Uthers Aufstieg.html",
         "region": "Vortigerns Ruh",
-        "house": "",
+        "house": "Haus Ceirwyn",
         "faction": "",
         "table": [
           {
@@ -827,11 +835,15 @@
           {
             "k": "Besonderheiten",
             "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Ceirwyn"
           }
         ],
         "text": "",
         "secret": false,
-        "dominionId": ""
+        "dominionId": "baronie-uthers-aufstieg"
       },
       {
         "id": "vortigern-ffyncoed",
@@ -844,10 +856,10 @@
         "pinMarker": "/Karten/assets/icons/welt/waldsiedlung.png",
         "img": "",
         "imgLink": "",
-        "crest": "",
-        "crestLink": "",
-        "banner": "",
-        "bannerLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Vortigerns Ruh/Uthers Aufstieg/haus-ceirwyn.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-ceirwyn&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Vortigerns Ruh/Uthers Aufstieg.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Vortigerns Ruh/Baronie Uthers Aufstieg/Baronie Uthers Aufstieg.html",
         "region": "Vortigerns Ruh",
         "house": "Haus Ceirwyn",
         "faction": "",
@@ -862,7 +874,7 @@
           },
           {
             "k": "Gewerbe",
-            "v": ""
+            "v": "Holzkohleproduktion"
           },
           {
             "k": "Regierungstyp",
@@ -874,7 +886,7 @@
           },
           {
             "k": "Lehensherr",
-            "v": ""
+            "v": "Haus Ceirwyn"
           },
           {
             "k": "Bevölkerung",
@@ -897,9 +909,9 @@
             "v": ""
           }
         ],
-        "text": "",
+        "text": "Ffyncoed ist eine Waldsiedlung, die sich auf die Holzkohleproduktion spezialisiert hat. Die Kohle wird in Schmieden und für den Betrieb von Öfen in den umliegenden Städten und Dörfern verwendet.",
         "secret": false,
-        "dominionId": ""
+        "dominionId": "baronie-uthers-aufstieg"
       },
       {
         "id": "vortigern-bronfaelhir",
@@ -912,10 +924,10 @@
         "pinMarker": "/Karten/assets/icons/welt/bauernsiedlung.png",
         "img": "",
         "imgLink": "",
-        "crest": "",
-        "crestLink": "",
-        "banner": "",
-        "bannerLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Vortigerns Ruh/Tanwens Flamme/haus-dienyddiwr.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-dienyddiwr&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Vortigerns Ruh/Herrschaft der Dienyddiwr.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Vortigerns Ruh/Herrschaft der Dienyddiwr/Herrschaft der Dienyddiwr.html",
         "region": "Vortigerns Ruh",
         "house": "Haus Dienyddiwr",
         "faction": "",
@@ -930,7 +942,7 @@
           },
           {
             "k": "Gewerbe",
-            "v": ""
+            "v": "Getreide- und Obstanbau; Weizen und Äpfel"
           },
           {
             "k": "Regierungstyp",
@@ -942,7 +954,7 @@
           },
           {
             "k": "Lehensherr",
-            "v": ""
+            "v": "Haus Dienyddiwr"
           },
           {
             "k": "Bevölkerung",
@@ -965,9 +977,9 @@
             "v": ""
           }
         ],
-        "text": "",
+        "text": "Bronfaelhir ist eine der zwei Bauernsiedlungen des Hauses Dienyddiwr und bekannt für den Anbau von Getreide und Obst, besonders Weizen und Apfelbäume. Die Volksnähe des Hauses zeigt sich in der direkten Beteiligung an der Landwirtschaft, und viele der Bewohner arbeiten Seite an Seite mit dem Adligen. Bronfaelhir ist auch ein wichtiger Lieferant für die umliegenden Siedlungen und die Hauptstadt Mathragon.",
         "secret": false,
-        "dominionId": ""
+        "dominionId": "herrschaft-dienyddiwr"
       },
       {
         "id": "vortigern-bronmarw",
@@ -980,10 +992,10 @@
         "pinMarker": "/Karten/assets/icons/welt/bauernsiedlung.png",
         "img": "",
         "imgLink": "",
-        "crest": "",
-        "crestLink": "",
-        "banner": "",
-        "bannerLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Vortigerns Ruh/Tanwens Flamme/haus-marwolaeth.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-marwolaeth&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Vortigerns Ruh/Herrschaft der Marwolaeth.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Vortigerns Ruh/Herrschaft der Marwolaeth/Herrschaft der Marwolaeth.html",
         "region": "Vortigerns Ruh",
         "house": "Haus Marwolaeth",
         "faction": "",
@@ -998,7 +1010,7 @@
           },
           {
             "k": "Gewerbe",
-            "v": ""
+            "v": "Vieh- und Schafzucht; Wolle und Fleisch"
           },
           {
             "k": "Regierungstyp",
@@ -1010,7 +1022,7 @@
           },
           {
             "k": "Lehensherr",
-            "v": ""
+            "v": "Haus Marwolaeth"
           },
           {
             "k": "Bevölkerung",
@@ -1033,9 +1045,9 @@
             "v": ""
           }
         ],
-        "text": "",
+        "text": "Bronmarw liegt ebenfalls an der westlichen Grenze und ist bekannt für ihre Vieh- und Schafzucht. Die Wolle und das Fleisch der Tiere werden in der gesamten Region genutzt, aber ein Teil der Produktion wird auch regelmäßig an die Alerische Kirche gespendet. Haus Marwolaeth sorgt dafür, dass die landwirtschaftliche Arbeit stets mit dem Glauben im Einklang steht.",
         "secret": false,
-        "dominionId": ""
+        "dominionId": "herrschaft-marwolaeth"
       },
       {
         "id": "vortigern-carregdyn",
@@ -1048,10 +1060,10 @@
         "pinMarker": "/Karten/assets/icons/welt/bergbausiedlung.png",
         "img": "",
         "imgLink": "",
-        "crest": "",
-        "crestLink": "",
-        "banner": "",
-        "bannerLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Vortigerns Ruh/Tanwens Flamme/haus-dyngwn.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-dyngwn&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Vortigerns Ruh/Herrschaft der Dyngwn.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Vortigerns Ruh/Herrschaft der Dyngwn/Herrschaft der Dyngwn.html",
         "region": "Vortigerns Ruh",
         "house": "Haus Dyngwn",
         "faction": "",
@@ -1066,7 +1078,7 @@
           },
           {
             "k": "Gewerbe",
-            "v": ""
+            "v": "Abbau von Kohle und Schiefer"
           },
           {
             "k": "Regierungstyp",
@@ -1078,7 +1090,7 @@
           },
           {
             "k": "Lehensherr",
-            "v": ""
+            "v": "Haus Dyngwn"
           },
           {
             "k": "Bevölkerung",
@@ -1101,9 +1113,9 @@
             "v": ""
           }
         ],
-        "text": "",
+        "text": "Carregdyn ist die nördlichste der Bergbausiedlungen und befindet sich direkt am Fuß des Gebirges. Hier wird vor allem Kohle und Schiefer abgebaut, die für den Betrieb der Schmieden und den Bau von Festungen genutzt werden. Carregdyn beliefert nicht nur die Schmiede des Hauses Dyngwn, sondern auch die gesamte Region mit Baumaterialien und Brennstoffen.",
         "secret": false,
-        "dominionId": ""
+        "dominionId": "herrschaft-dyngwn"
       },
       {
         "id": "vortigern-bronfael",
@@ -1116,10 +1128,10 @@
         "pinMarker": "/Karten/assets/icons/welt/bauernsiedlung.png",
         "img": "",
         "imgLink": "",
-        "crest": "",
-        "crestLink": "",
-        "banner": "",
-        "bannerLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Vortigerns Ruh/Tanwens Flamme/haus-penderyn.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-penderyn&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Vortigerns Ruh/Herrschaft der Penderyn.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Vortigerns Ruh/Herrschaft der Penderyn/Herrschaft der Penderyn.html",
         "region": "Vortigerns Ruh",
         "house": "Haus Penderyn",
         "faction": "",
@@ -1146,7 +1158,7 @@
           },
           {
             "k": "Lehensherr",
-            "v": ""
+            "v": "Haus Penderyn"
           },
           {
             "k": "Bevölkerung",
@@ -1171,7 +1183,7 @@
         ],
         "text": "",
         "secret": false,
-        "dominionId": ""
+        "dominionId": "herrschaft-penderyn"
       },
       {
         "id": "vortigern-gwaulbryn",
@@ -1184,10 +1196,10 @@
         "pinMarker": "/Karten/assets/icons/welt/bauernsiedlung.png",
         "img": "",
         "imgLink": "",
-        "crest": "",
-        "crestLink": "",
-        "banner": "",
-        "bannerLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Vortigerns Ruh/Tanwens Flamme/haus-penderyn.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-penderyn&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Vortigerns Ruh/Herrschaft der Penderyn.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Vortigerns Ruh/Herrschaft der Penderyn/Herrschaft der Penderyn.html",
         "region": "Vortigerns Ruh",
         "house": "Haus Penderyn",
         "faction": "",
@@ -1202,7 +1214,7 @@
           },
           {
             "k": "Gewerbe",
-            "v": ""
+            "v": "Anbau von Kräutern und Gewürzen; Schafzucht und Wollverarbeitung"
           },
           {
             "k": "Regierungstyp",
@@ -1214,7 +1226,7 @@
           },
           {
             "k": "Lehensherr",
-            "v": ""
+            "v": "Haus Penderyn"
           },
           {
             "k": "Bevölkerung",
@@ -1237,9 +1249,9 @@
             "v": ""
           }
         ],
-        "text": "",
+        "text": "Gwaulbryn ist eine wichtige Siedlung für die Destilleriegilde des Hauses Penderyn, spezialisiert auf den Anbau von Kräutern und Gewürzen, die zur Verfeinerung der Whiskeyaromen verwendet werden. Die Vielfalt der Aromen, die hier kultiviert wird, macht Gwaulbryn zu einem bedeutenden Lieferanten für exklusive Whiskeysorten. Zusätzlich ist die Siedlung bekannt für ihre Schafzucht und Wollverarbeitung, wodurch sie nicht nur die Whiskeyproduktion unterstützt, sondern auch die Grafschaft mit Wolle und Kleidung versorgt. Diese Doppelfunktion macht Gwaulbryn unverzichtbar für die Region.",
         "secret": false,
-        "dominionId": ""
+        "dominionId": "herrschaft-penderyn"
       },
       {
         "id": "vortigern-garwmor",
@@ -1252,10 +1264,10 @@
         "pinMarker": "/Karten/assets/icons/welt/marktsiedlung.png",
         "img": "",
         "imgLink": "",
-        "crest": "",
-        "crestLink": "",
-        "banner": "",
-        "bannerLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Vortigerns Ruh/Tanwens Flamme/haus-marwolaeth.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-marwolaeth&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Vortigerns Ruh/Herrschaft der Marwolaeth.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Vortigerns Ruh/Herrschaft der Marwolaeth/Herrschaft der Marwolaeth.html",
         "region": "Vortigerns Ruh",
         "house": "Haus Marwolaeth",
         "faction": "",
@@ -1270,7 +1282,7 @@
           },
           {
             "k": "Gewerbe",
-            "v": ""
+            "v": "Schneiderei, Tuchmacherei, Schuhmacherei und Weberei"
           },
           {
             "k": "Regierungstyp",
@@ -1282,7 +1294,7 @@
           },
           {
             "k": "Lehensherr",
-            "v": ""
+            "v": "Haus Marwolaeth"
           },
           {
             "k": "Bevölkerung",
@@ -1305,9 +1317,9 @@
             "v": ""
           }
         ],
-        "text": "",
+        "text": "Garwmor ist eine Siedlung an der Nordstraße, die sich auf die Herstellung von Gewändern und Kleidung spezialisiert hat. Hier arbeiten Schneider, Tuchmacher, Schuhmacher und Weber, die Kleidung aus Flachs, Wolle und Leder produzieren. Besonders religiöse Gewänder für Priester und Pilger werden hier gefertigt und in der gesamten Grafschaft hoch geschätzt. Die Werkstätten von Garwmor sind bekannt für ihre feinen Stoffe und robusten Lederwaren, die sowohl den Alltag als auch zeremonielle Zwecke bedienen. Haus Marwolaeth unterstützt die Arbeit der Handwerker und stellt sicher, dass die Siedlung eine wichtige Rolle in der Versorgung der Kirche und der Pilger spielt.",
         "secret": false,
-        "dominionId": ""
+        "dominionId": "herrschaft-marwolaeth"
       },
       {
         "id": "vortigern-drakenburg",
@@ -1320,13 +1332,13 @@
         "pinMarker": "/Karten/assets/icons/welt/burgsiedlung.png",
         "img": "",
         "imgLink": "",
-        "crest": "",
-        "crestLink": "",
-        "banner": "",
-        "bannerLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Vortigerns Ruh/Tanwens Flamme/haus-penderyn.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-penderyn&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Vortigerns Ruh/Herrschaft der Penderyn.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Vortigerns Ruh/Herrschaft der Penderyn/Herrschaft der Penderyn.html",
         "region": "Vortigerns Ruh",
         "house": "Haus Penderyn",
-        "faction": "",
+        "faction": "Penderyn-Destillerie; Drakenschluck-Söldner",
         "table": [
           {
             "k": "Name",
@@ -1338,7 +1350,7 @@
           },
           {
             "k": "Gewerbe",
-            "v": ""
+            "v": "Whiskeylagerung; Söldnerausbildung"
           },
           {
             "k": "Regierungstyp",
@@ -1350,7 +1362,7 @@
           },
           {
             "k": "Lehensherr",
-            "v": ""
+            "v": "Haus Penderyn"
           },
           {
             "k": "Bevölkerung",
@@ -1373,9 +1385,9 @@
             "v": ""
           }
         ],
-        "text": "",
+        "text": "Drakenburg ist eine imposante Festung des Hauses Penderyn, die in Zukunft ihr neuer Herrschaftssitz werden könnte. Noch residiert die Familie in der Hauptstadt Mathragon, aber es ist nur eine Frage der Zeit, bis sie nach Drakenburg ziehen und eine separate Herrschaft übernehmen. Derzeit fungiert die Burg als wichtiger Standort für zwei bedeutende Gilden: die Penderyn-Destillerie, wo der berühmte Whiskey gelagert und bewacht wird, sowie die Drakenschluck-Söldner, die hier ausgebildet werden. Die Burg spielt somit eine zentrale Rolle in der Sicherung und Verwaltung der wirtschaftlichen und militärischen Macht des Hauses Penderyn.",
         "secret": false,
-        "dominionId": ""
+        "dominionId": "herrschaft-penderyn"
       },
       {
         "id": "vortigern-zum-grunen-pfad",
@@ -1388,10 +1400,10 @@
         "pinMarker": "/Karten/assets/icons/welt/taverne.png",
         "img": "",
         "imgLink": "",
-        "crest": "",
-        "crestLink": "",
-        "banner": "",
-        "bannerLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Vortigerns Ruh/Tanwens Flamme/haus-cath.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-cath&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Vortigerns Ruh/Herrschaft der Cath.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Vortigerns Ruh/Herrschaft der Cath/Herrschaft der Cath.html",
         "region": "Vortigerns Ruh",
         "house": "Haus Cath",
         "faction": "",
@@ -1439,11 +1451,19 @@
           {
             "k": "Besonderheiten",
             "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Cath"
+          },
+          {
+            "k": "Gewerbe",
+            "v": "Taverne; Unterschlupf und Spionagenetzwerk"
           }
         ],
-        "text": "",
+        "text": "Der Grüne Drache ist eine Taverne, die nach außen hin als gewöhnlicher Treffpunkt für Reisende und Einheimische erscheint. Doch insgeheim gehört sie dem Adelshaus Cath und dient als Unterschlupf und Treffpunkt für seine Mitglieder. Hinter den Kulissen wird die Taverne als ein wichtiges Netzwerk für Spionage genutzt, wobei diskrete Informationen ausgetauscht und Pläne geschmiedet werden. Während die Gäste ahnungslos ihre Getränke genießen, bleibt die wahre Bedeutung des Grünen Drachen den meisten verborgen.",
         "secret": false,
-        "dominionId": ""
+        "dominionId": "herrschaft-cath"
       },
       {
         "id": "vortigern-turnierplatz-feld-der-glorie",
@@ -1456,12 +1476,12 @@
         "pinMarker": "/Karten/assets/icons/welt/turnierplatz.png",
         "img": "",
         "imgLink": "",
-        "crest": "",
-        "crestLink": "",
-        "banner": "",
-        "bannerLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Vortigerns Ruh/haus-pendrag.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-pendrag&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Vortigerns Ruh/Tanwens Flamme.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Vortigerns Ruh/Grafschaft Vortigerns Ruh.html",
         "region": "Vortigerns Ruh",
-        "house": "",
+        "house": "Haus Pendrag",
         "faction": "",
         "table": [
           {
@@ -1474,11 +1494,11 @@
           },
           {
             "k": "Betreiber",
-            "v": ""
+            "v": "Königreich Cenyr"
           },
           {
             "k": "Disziplinen",
-            "v": ""
+            "v": "Ritterliche Turniere; Jungritterturniere"
           },
           {
             "k": "Anlagen",
@@ -1486,7 +1506,7 @@
           },
           {
             "k": "Teilnahme",
-            "v": ""
+            "v": "Regionale Wettbewerbe zwischen den Grafschaften; die besten Ritter treten im großen Turnier an"
           },
           {
             "k": "Termine",
@@ -1511,11 +1531,15 @@
           {
             "k": "Besonderheiten",
             "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Pendrag"
           }
         ],
-        "text": "",
+        "text": "Das Feld der Glorie ist der offizielle Turnierplatz des Königreichs Cenyr, auf dem die größten und bedeutendsten ritterlichen Turniere abgehalten werden. Bevor das große Turnier stattfindet, gibt es regionale Wettbewerbe zwischen den Grafschaften, meist in Form von Jungritterturnieren, bei denen junge Ritter ihre Fähigkeiten unter Beweis stellen. Die besten Ritter aus diesen regionalen Turnieren messen sich schließlich im prestigeträchtigen großen Turnier auf dem Feld der Glorie, wo Ruhm und Ehre winken.",
         "secret": false,
-        "dominionId": ""
+        "dominionId": "baronie-tanwens-flamme"
       },
       {
         "id": "vortigern-castell-cath",
@@ -1528,10 +1552,10 @@
         "pinMarker": "/Karten/assets/icons/welt/burgsiedlung.png",
         "img": "",
         "imgLink": "",
-        "crest": "",
-        "crestLink": "",
-        "banner": "",
-        "bannerLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Vortigerns Ruh/Tanwens Flamme/haus-cath.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-cath&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Vortigerns Ruh/Herrschaft der Cath.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Vortigerns Ruh/Herrschaft der Cath/Herrschaft der Cath.html",
         "region": "Vortigerns Ruh",
         "house": "Haus Cath",
         "faction": "",
@@ -1546,7 +1570,7 @@
           },
           {
             "k": "Gewerbe",
-            "v": ""
+            "v": "Kontrolle der Handelsroute und Brücke zwischen Aldrimar und Cenyr"
           },
           {
             "k": "Regierungstyp",
@@ -1558,7 +1582,7 @@
           },
           {
             "k": "Lehensherr",
-            "v": ""
+            "v": "Haus Cath"
           },
           {
             "k": "Bevölkerung",
@@ -1581,9 +1605,9 @@
             "v": ""
           }
         ],
-        "text": "",
+        "text": "Castell Cath liegt strategisch auf der massiven Brücke, die Aldrimar mit dem Königreich Cenyr im Westen verbindet. Die Cath-Familie hat ihre Burg direkt auf dieser wichtigen Handelsroute errichtet und nutzt sie als ihren offiziellen Sitz. Durch die Kontrolle der Brücke sichern sie nicht nur den Zugang zwischen den beiden Reichen, sondern wahren auch ihre politische Macht. Inoffiziell besitzen die Cath jedoch zahlreiche Tavernen in Cenyr, die sie für ihre Spionage- und Informationsnetzwerke nutzen, um ihren Einfluss in der Region zu festigen.",
         "secret": false,
-        "dominionId": ""
+        "dominionId": "herrschaft-cath"
       },
       {
         "id": "vortigern-zur-feuerzunge",
@@ -1596,10 +1620,10 @@
         "pinMarker": "/Karten/assets/icons/welt/taverne.png",
         "img": "",
         "imgLink": "",
-        "crest": "",
-        "crestLink": "",
-        "banner": "",
-        "bannerLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Vortigerns Ruh/Tanwens Flamme/haus-penderyn.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-penderyn&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Vortigerns Ruh/Herrschaft der Penderyn.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Vortigerns Ruh/Herrschaft der Penderyn/Herrschaft der Penderyn.html",
         "region": "Vortigerns Ruh",
         "house": "Haus Penderyn",
         "faction": "",
@@ -1647,11 +1671,19 @@
           {
             "k": "Besonderheiten",
             "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Penderyn"
+          },
+          {
+            "k": "Gewerbe",
+            "v": "Taverne und Whiskeydestillerie"
           }
         ],
-        "text": "",
+        "text": "Zur Feuerzunge ist eine weitere Taverne im Besitz des Hauses Penderyn, die sowohl als Destilleriestandort als auch als Taverne betrieben wird. In den hinteren Räumen der Taverne wird der berühmte Penderyn-Whiskey destilliert, während die Gäste im Schankraum den Whiskey direkt vor Ort genießen können. So verbindet Zur Feuerzunge die Produktion und den Ausschank von edlem Whiskey und bietet einen einzigartigen Treffpunkt für Reisende und Einheimische gleichermaßen.",
         "secret": false,
-        "dominionId": ""
+        "dominionId": "herrschaft-penderyn"
       },
       {
         "id": "vortigern-calon",
@@ -1664,10 +1696,10 @@
         "pinMarker": "/Karten/assets/icons/welt/stadt.png",
         "img": "",
         "imgLink": "",
-        "crest": "",
-        "crestLink": "",
-        "banner": "",
-        "bannerLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Vortigerns Ruh/Uthers Aufstieg/haus-ceirwyn.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-ceirwyn&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Vortigerns Ruh/Uthers Aufstieg.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Vortigerns Ruh/Baronie Uthers Aufstieg/Baronie Uthers Aufstieg.html",
         "region": "Vortigerns Ruh",
         "house": "Haus Ceirwyn",
         "faction": "",
@@ -1694,7 +1726,7 @@
           },
           {
             "k": "Lehensherr",
-            "v": ""
+            "v": "Haus Ceirwyn"
           },
           {
             "k": "Bevölkerung",
@@ -1719,7 +1751,7 @@
         ],
         "text": "",
         "secret": false,
-        "dominionId": ""
+        "dominionId": "baronie-uthers-aufstieg"
       },
       {
         "id": "vortigern-zum-konigsweg",
@@ -1732,10 +1764,10 @@
         "pinMarker": "/Karten/assets/icons/welt/taverne.png",
         "img": "",
         "imgLink": "",
-        "crest": "",
-        "crestLink": "",
-        "banner": "",
-        "bannerLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Vortigerns Ruh/Tanwens Flamme/haus-cath.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-cath&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Vortigerns Ruh/Herrschaft der Cath.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Vortigerns Ruh/Herrschaft der Cath/Herrschaft der Cath.html",
         "region": "Vortigerns Ruh",
         "house": "Haus Cath",
         "faction": "",
@@ -1783,11 +1815,19 @@
           {
             "k": "Besonderheiten",
             "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Cath"
+          },
+          {
+            "k": "Gewerbe",
+            "v": "Taverne; Treffpunkt und Spionagenetzwerk"
           }
         ],
-        "text": "",
+        "text": "Zum Königsweg ist eine bedeutende Taverne direkt vor den Toren der Hauptstadt. Sie wird von dem Adelshaus Cath kontrolliert und dient als Treffpunkt und Spionagenetzwerk. Von hier aus überwachen die Cath diskret den Ein- und Ausgang von Personen, sammeln Gerüchte und Informationen, die in der Hauptstadt kursieren, und nutzen die Taverne als sicheren Unterschlupf. Über ein verborgenes, unterirdisches Netzwerk ist die Taverne mit den Kanälen der Stadt verbunden, was es den Cath ermöglicht, sich unbemerkt in die Stadt zu bewegen und ihre Operationen vor neugierigen Augen zu verbergen.",
         "secret": false,
-        "dominionId": ""
+        "dominionId": "herrschaft-cath"
       },
       {
         "id": "vortigern-mathragon",
@@ -1800,12 +1840,12 @@
         "pinMarker": "/Karten/assets/icons/welt/stadt.png",
         "img": "",
         "imgLink": "",
-        "crest": "",
-        "crestLink": "",
-        "banner": "",
-        "bannerLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Vortigerns Ruh/haus-pendrag.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-pendrag&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Vortigerns Ruh/Tanwens Flamme.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Vortigerns Ruh/Grafschaft Vortigerns Ruh.html",
         "region": "Vortigerns Ruh",
-        "house": "",
+        "house": "Haus Pendrag",
         "faction": "",
         "table": [
           {
@@ -1830,7 +1870,7 @@
           },
           {
             "k": "Lehensherr",
-            "v": ""
+            "v": "Haus Pendrag"
           },
           {
             "k": "Bevölkerung",
@@ -1855,7 +1895,7 @@
         ],
         "text": "",
         "secret": false,
-        "dominionId": ""
+        "dominionId": "baronie-tanwens-flamme"
       },
       {
         "id": "vortigern-des-drachens-ruh",
@@ -1868,10 +1908,10 @@
         "pinMarker": "/Karten/assets/icons/welt/taverne.png",
         "img": "",
         "imgLink": "",
-        "crest": "",
-        "crestLink": "",
-        "banner": "",
-        "bannerLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Vortigerns Ruh/Tanwens Flamme/haus-penderyn.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-penderyn&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Vortigerns Ruh/Herrschaft der Penderyn.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Vortigerns Ruh/Herrschaft der Penderyn/Herrschaft der Penderyn.html",
         "region": "Vortigerns Ruh",
         "house": "Haus Penderyn",
         "faction": "",
@@ -1919,11 +1959,19 @@
           {
             "k": "Besonderheiten",
             "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Penderyn"
+          },
+          {
+            "k": "Gewerbe",
+            "v": "Taverne und Whiskeyproduktion; Bierausschank der Teyrngarch-Familie"
           }
         ],
-        "text": "",
+        "text": "Des Drachens Ruh ist eine Taverne im Besitz der Penderyn-Familie, die sich nicht nur als beliebter Treffpunkt, sondern auch als Produktionsort von Whiskey etabliert hat. Innerhalb der Taverne befindet sich eine eigene Destillerie, in der der berühmte Penderyn-Whiskey destilliert und gelagert wird. Dank einer Kooperation mit der Teyrngarch-Familie wird hier zudem regelmäßig Bier ausgeschenkt, was der Taverne eine große Anziehungskraft auf Reisende und Einheimische verleiht. So ist Des Drachens Ruh sowohl ein Ort des Genusses als auch der Whiskeyproduktion.",
         "secret": false,
-        "dominionId": ""
+        "dominionId": "herrschaft-penderyn"
       },
       {
         "id": "vortigern-garwmathr",
@@ -1936,10 +1984,10 @@
         "pinMarker": "/Karten/assets/icons/welt/marktsiedlung.png",
         "img": "",
         "imgLink": "",
-        "crest": "",
-        "crestLink": "",
-        "banner": "",
-        "bannerLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Vortigerns Ruh/Tanwens Flamme/haus-dienyddiwr.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-dienyddiwr&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Vortigerns Ruh/Herrschaft der Dienyddiwr.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Vortigerns Ruh/Herrschaft der Dienyddiwr/Herrschaft der Dienyddiwr.html",
         "region": "Vortigerns Ruh",
         "house": "Haus Dienyddiwr",
         "faction": "",
@@ -1954,7 +2002,7 @@
           },
           {
             "k": "Gewerbe",
-            "v": ""
+            "v": "Verkehrsknotenpunkt; Unterkunft, Märkte und Handwerk"
           },
           {
             "k": "Regierungstyp",
@@ -1966,7 +2014,7 @@
           },
           {
             "k": "Lehensherr",
-            "v": ""
+            "v": "Haus Dienyddiwr"
           },
           {
             "k": "Bevölkerung",
@@ -1989,9 +2037,9 @@
             "v": ""
           }
         ],
-        "text": "",
+        "text": "Garwmathr ist eine wichtige Siedlung direkt vor den Toren von Mathragon. Die Siedlung ist ein Verkehrsknotenpunkt, durch den Reisende und Händler auf ihrem Weg in die Hauptstadt passieren. Sie bietet Unterkunft, Märkte und Handwerksbetriebe, die sowohl die Bedürfnisse der Hauptstadt als auch die der Durchreisenden decken. Haus Dienyddiwr ist dafür bekannt, die Bedürfnisse der einfachen Leute zu verstehen, und das zeigt sich deutlich in der Organisation und Verwaltung von Garwmathr.",
         "secret": false,
-        "dominionId": ""
+        "dominionId": "herrschaft-dienyddiwr"
       },
       {
         "id": "vortigern-braichgwen",
@@ -2004,10 +2052,10 @@
         "pinMarker": "/Karten/assets/icons/welt/waldsiedlung.png",
         "img": "",
         "imgLink": "",
-        "crest": "",
-        "crestLink": "",
-        "banner": "",
-        "bannerLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Vortigerns Ruh/Uthers Aufstieg/haus-ceirwyn.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-ceirwyn&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Vortigerns Ruh/Uthers Aufstieg.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Vortigerns Ruh/Baronie Uthers Aufstieg/Baronie Uthers Aufstieg.html",
         "region": "Vortigerns Ruh",
         "house": "Haus Ceirwyn",
         "faction": "",
@@ -2022,7 +2070,7 @@
           },
           {
             "k": "Gewerbe",
-            "v": ""
+            "v": "Jagd und Lederverarbeitung"
           },
           {
             "k": "Regierungstyp",
@@ -2034,7 +2082,7 @@
           },
           {
             "k": "Lehensherr",
-            "v": ""
+            "v": "Haus Ceirwyn"
           },
           {
             "k": "Bevölkerung",
@@ -2057,9 +2105,9 @@
             "v": ""
           }
         ],
-        "text": "",
+        "text": "Braichgwen liegt tief im Herzen des Waldes und spezialisiert sich auf Jagd und die Lederverarbeitung. Die Felle der Tiere werden zu feinen Lederwaren und Kleidung verarbeitet, die in den umliegenden Städten gehandelt werden.",
         "secret": false,
-        "dominionId": ""
+        "dominionId": "baronie-uthers-aufstieg"
       },
       {
         "id": "vortigern-ffyndir",
@@ -2072,10 +2120,10 @@
         "pinMarker": "/Karten/assets/icons/welt/waldsiedlung.png",
         "img": "",
         "imgLink": "",
-        "crest": "",
-        "crestLink": "",
-        "banner": "",
-        "bannerLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Vortigerns Ruh/Uthers Aufstieg/haus-ceirwyn.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-ceirwyn&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Vortigerns Ruh/Uthers Aufstieg.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Vortigerns Ruh/Baronie Uthers Aufstieg/Baronie Uthers Aufstieg.html",
         "region": "Vortigerns Ruh",
         "house": "Haus Ceirwyn",
         "faction": "",
@@ -2090,7 +2138,7 @@
           },
           {
             "k": "Gewerbe",
-            "v": ""
+            "v": "Kräutersammlung und Heilkunde"
           },
           {
             "k": "Regierungstyp",
@@ -2102,7 +2150,7 @@
           },
           {
             "k": "Lehensherr",
-            "v": ""
+            "v": "Haus Ceirwyn"
           },
           {
             "k": "Bevölkerung",
@@ -2125,9 +2173,9 @@
             "v": ""
           }
         ],
-        "text": "",
+        "text": "Ffyndir ist berühmt für seine Kräutersammler und Heilkundige, die seltene Pflanzen und Heilkräuter im Wald ernten. Diese Kräuter werden sowohl für Medizin als auch für kulinarische Zwecke verwendet.",
         "secret": false,
-        "dominionId": ""
+        "dominionId": "baronie-uthers-aufstieg"
       },
       {
         "id": "vortigern-traethceir",
@@ -2140,10 +2188,10 @@
         "pinMarker": "/Karten/assets/icons/welt/hafensiedlung.png",
         "img": "",
         "imgLink": "",
-        "crest": "",
-        "crestLink": "",
-        "banner": "",
-        "bannerLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Vortigerns Ruh/Uthers Aufstieg/haus-ceirwyn.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-ceirwyn&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Vortigerns Ruh/Uthers Aufstieg.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Vortigerns Ruh/Baronie Uthers Aufstieg/Baronie Uthers Aufstieg.html",
         "region": "Vortigerns Ruh",
         "house": "Haus Ceirwyn",
         "faction": "",
@@ -2158,7 +2206,7 @@
           },
           {
             "k": "Gewerbe",
-            "v": ""
+            "v": "Fischerei und Räucherfisch; Kunsthandwerk und musikalische Darbietungen"
           },
           {
             "k": "Regierungstyp",
@@ -2170,7 +2218,7 @@
           },
           {
             "k": "Lehensherr",
-            "v": ""
+            "v": "Haus Ceirwyn"
           },
           {
             "k": "Bevölkerung",
@@ -2193,9 +2241,9 @@
             "v": ""
           }
         ],
-        "text": "",
+        "text": "Traethceir ist eine Hafensiedlung, die vor allem für ihre Fischerei bekannt ist. Die Fischerboote bringen täglich frischen Fisch, der in der gesamten Region hochgeschätzt wird. Besonders der Räucherfisch aus Traethceir gilt als Delikatesse und wird weit über die Grafschaft hinaus gehandelt. Neben der Fischerei hat sich die Siedlung aber auch der Kunst verschrieben: Fischer und Handwerker fertigen kunstvolle Netze, Schnitzereien und Schmuck aus Muscheln und Knochen an, die als beliebte Souvenirs und Handelsgüter gelten. Zudem finden an den Docks regelmäßig musikalische Darbietungen statt, bei denen Fischer und Barden gemeinsam traditionelle Lieder singen, die die Geschichten des Meeres erzählen.",
         "secret": false,
-        "dominionId": ""
+        "dominionId": "baronie-uthers-aufstieg"
       },
       {
         "id": "vortigern-cor-y-gan",
@@ -2208,13 +2256,13 @@
         "pinMarker": "/Karten/assets/icons/welt/klostersiedlung.png",
         "img": "",
         "imgLink": "",
-        "crest": "",
-        "crestLink": "",
-        "banner": "",
-        "bannerLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Vortigerns Ruh/Uthers Aufstieg/haus-ceirwyn.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-ceirwyn&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Vortigerns Ruh/Uthers Aufstieg.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Vortigerns Ruh/Baronie Uthers Aufstieg/Baronie Uthers Aufstieg.html",
         "region": "Vortigerns Ruh",
         "house": "Haus Ceirwyn",
-        "faction": "",
+        "faction": "Alerische Kirche – Maid",
         "table": [
           {
             "k": "Name",
@@ -2226,7 +2274,7 @@
           },
           {
             "k": "Gewerbe",
-            "v": ""
+            "v": "Instrumentenbau, Wandteppiche und Kunsthandwerk"
           },
           {
             "k": "Regierungstyp",
@@ -2238,7 +2286,7 @@
           },
           {
             "k": "Lehensherr",
-            "v": ""
+            "v": "Haus Ceirwyn"
           },
           {
             "k": "Bevölkerung",
@@ -2261,9 +2309,9 @@
             "v": ""
           }
         ],
-        "text": "",
+        "text": "Côr y Gân ist ein Nonnenkloster, das der Maid, der Göttin der Liebe, Musik und Kunst, geweiht ist. Die Nonnen widmen ihr Leben der Herstellung kunstvoller Instrumente, Wandteppiche und anderer Dekorationen, die die Schönheit der göttlichen Schöpfung widerspiegeln. Ihre Instrumente, wie Harfen und Lauten, sind in der gesamten Region begehrt und werden von Barden und Adeligen gleichermaßen geschätzt. Die kunstvollen Wandteppiche und kunsthandwerklichen Dekorationen, die sie weben und fertigen, schmücken Tempel, Adelshäuser und Festsäle in der ganzen Grafschaft. Das Kloster ist auch ein Ort der Ruhe und spirituellen Einkehr, wo Künstler und Musiker Inspiration in der Schönheit und Stille finden.",
         "secret": false,
-        "dominionId": ""
+        "dominionId": "baronie-uthers-aufstieg"
       },
       {
         "id": "vortigern-bronwyn",
@@ -2276,10 +2324,10 @@
         "pinMarker": "/Karten/assets/icons/welt/bauernsiedlung.png",
         "img": "",
         "imgLink": "",
-        "crest": "",
-        "crestLink": "",
-        "banner": "",
-        "bannerLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Vortigerns Ruh/Tanwens Flamme/haus-grael.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-grael&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Vortigerns Ruh/Herrschaft der Grael.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Vortigerns Ruh/Herrschaft der Grael/Herrschaft der Grael.html",
         "region": "Vortigerns Ruh",
         "house": "Haus Grael",
         "faction": "",
@@ -2294,7 +2342,7 @@
           },
           {
             "k": "Gewerbe",
-            "v": ""
+            "v": "Getreide und Hülsenfrüchte; Schaf- und Rinderzucht"
           },
           {
             "k": "Regierungstyp",
@@ -2306,7 +2354,7 @@
           },
           {
             "k": "Lehensherr",
-            "v": ""
+            "v": "Haus Grael"
           },
           {
             "k": "Bevölkerung",
@@ -2329,9 +2377,9 @@
             "v": ""
           }
         ],
-        "text": "",
+        "text": "Bronwyn ist eine Bauernsiedlung, die südlich von Garwlyn an einem Seitenweg liegt. Die Siedlung ist bekannt für den Anbau von Getreide und Hülsenfrüchten, die sowohl für die Region als auch für den Handel mit Garwlyn wichtig sind. Außerdem betreibt Bronwyn Viehzucht, insbesondere Schafe und Rinder, deren Wolle und Fleisch ebenfalls auf den Märkten von Garwlyn verkauft werden. Durch ihre produktive Landwirtschaft ist Bronwyn ein wichtiger Versorger der Region.",
         "secret": false,
-        "dominionId": ""
+        "dominionId": "herrschaft-grael"
       },
       {
         "id": "vortigern-garwmwyn",
@@ -2344,10 +2392,10 @@
         "pinMarker": "/Karten/assets/icons/welt/bergbausiedlung.png",
         "img": "",
         "imgLink": "",
-        "crest": "",
-        "crestLink": "",
-        "banner": "",
-        "bannerLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Vortigerns Ruh/Uthers Aufstieg/haus-ceirwyn.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-ceirwyn&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Vortigerns Ruh/Uthers Aufstieg.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Vortigerns Ruh/Baronie Uthers Aufstieg/Baronie Uthers Aufstieg.html",
         "region": "Vortigerns Ruh",
         "house": "Haus Ceirwyn",
         "faction": "",
@@ -2362,7 +2410,7 @@
           },
           {
             "k": "Gewerbe",
-            "v": ""
+            "v": "Ton- und Lehmabbau; Keramik, Ziegel und Töpferwaren"
           },
           {
             "k": "Regierungstyp",
@@ -2374,7 +2422,7 @@
           },
           {
             "k": "Lehensherr",
-            "v": ""
+            "v": "Haus Ceirwyn"
           },
           {
             "k": "Bevölkerung",
@@ -2397,9 +2445,9 @@
             "v": ""
           }
         ],
-        "text": "",
+        "text": "Garwmwyn ist eine Hügelsiedlung, die für den Abbau von Ton und Lehm bekannt ist. Die reichhaltigen Tonvorkommen in den umliegenden Hügeln bieten das Rohmaterial für Keramik, Ziegel und Töpferwaren, die in der gesamten Grafschaft verwendet und gehandelt werden. Die Handwerker von Garwmwyn sind berühmt für ihre kunstvollen Keramiken, während die Ziegel aus dieser Region oft für den Bau von Gebäuden in den umliegenden Siedlungen genutzt werden.",
         "secret": false,
-        "dominionId": ""
+        "dominionId": "baronie-uthers-aufstieg"
       },
       {
         "id": "vortigern-braichfaer",
@@ -2412,10 +2460,10 @@
         "pinMarker": "/Karten/assets/icons/welt/waldsiedlung.png",
         "img": "",
         "imgLink": "",
-        "crest": "",
-        "crestLink": "",
-        "banner": "",
-        "bannerLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Vortigerns Ruh/Uthers Aufstieg/haus-ceirwyn.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-ceirwyn&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Vortigerns Ruh/Uthers Aufstieg.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Vortigerns Ruh/Baronie Uthers Aufstieg/Baronie Uthers Aufstieg.html",
         "region": "Vortigerns Ruh",
         "house": "Haus Ceirwyn",
         "faction": "",
@@ -2430,7 +2478,7 @@
           },
           {
             "k": "Gewerbe",
-            "v": ""
+            "v": "Holzfällerei und Schreinerkunst"
           },
           {
             "k": "Regierungstyp",
@@ -2442,7 +2490,7 @@
           },
           {
             "k": "Lehensherr",
-            "v": ""
+            "v": "Haus Ceirwyn"
           },
           {
             "k": "Bevölkerung",
@@ -2465,9 +2513,9 @@
             "v": ""
           }
         ],
-        "text": "",
+        "text": "Braichfaer ist eine Siedlung, die tief im Wald liegt und sich auf die Holzfällerei und Schreinerkunst spezialisiert hat. Die Siedlung liefert das beste Holz für den Bau von Häusern und Schiffen in der Region.",
         "secret": false,
-        "dominionId": ""
+        "dominionId": "baronie-uthers-aufstieg"
       },
       {
         "id": "vortigern-cor-y-llawenydd",
@@ -2480,13 +2528,13 @@
         "pinMarker": "/Karten/assets/icons/welt/klostersiedlung.png",
         "img": "",
         "imgLink": "",
-        "crest": "",
-        "crestLink": "",
-        "banner": "",
-        "bannerLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Vortigerns Ruh/Uthers Aufstieg/haus-ceirwyn.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-ceirwyn&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Vortigerns Ruh/Uthers Aufstieg.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Vortigerns Ruh/Baronie Uthers Aufstieg/Baronie Uthers Aufstieg.html",
         "region": "Vortigerns Ruh",
         "house": "Haus Ceirwyn",
-        "faction": "",
+        "faction": "Alerische Kirche – Glücksmaid",
         "table": [
           {
             "k": "Name",
@@ -2498,7 +2546,7 @@
           },
           {
             "k": "Gewerbe",
-            "v": ""
+            "v": "Waisenhäuser, Schulen, Feste und Spiele"
           },
           {
             "k": "Regierungstyp",
@@ -2510,7 +2558,7 @@
           },
           {
             "k": "Lehensherr",
-            "v": ""
+            "v": "Haus Ceirwyn"
           },
           {
             "k": "Bevölkerung",
@@ -2533,9 +2581,9 @@
             "v": ""
           }
         ],
-        "text": "",
+        "text": "Côr y Llawenydd ist ein Kloster, das der Glücksmaid, der Göttin der Kinder, des Frohsinns und des Glücks, geweiht ist. Es ist ein Ort des Lichts und der Freude, an dem die Nonnen das Wohl der Kinder und Familien in den Mittelpunkt ihres Lebens stellen. Das Kloster ist berühmt für seine Waisenhäuser und Schulen, in denen Waisenkinder liebevoll betreut und in Kunst, Musik und Handwerk unterrichtet werden. In Côr y Llawenydd werden auch fröhliche Feste und Spiele organisiert, bei denen Kinder aus der Umgebung zusammenkommen, um gemeinsam zu feiern und zu spielen. Das Kloster ist ein Symbol für Frohsinn und Gemeinschaft in der gesamten Grafschaft.",
         "secret": false,
-        "dominionId": ""
+        "dominionId": "baronie-uthers-aufstieg"
       },
       {
         "id": "vortigern-mwyncarreg",
@@ -2548,12 +2596,12 @@
         "pinMarker": "/Karten/assets/icons/welt/bergbausiedlung.png",
         "img": "",
         "imgLink": "",
-        "crest": "",
-        "crestLink": "",
-        "banner": "",
-        "bannerLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Vortigerns Ruh/Tanwens Flamme/haus-penderyn.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-penderyn&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Vortigerns Ruh/Herrschaft der Penderyn.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Vortigerns Ruh/Herrschaft der Penderyn/Herrschaft der Penderyn.html",
         "region": "Vortigerns Ruh",
-        "house": "",
+        "house": "Haus Penderyn",
         "faction": "",
         "table": [
           {
@@ -2566,7 +2614,7 @@
           },
           {
             "k": "Gewerbe",
-            "v": ""
+            "v": "Abbau von Ton, Kalkstein, Eisenerz und Kupfer"
           },
           {
             "k": "Regierungstyp",
@@ -2578,7 +2626,7 @@
           },
           {
             "k": "Lehensherr",
-            "v": ""
+            "v": "Haus Penderyn"
           },
           {
             "k": "Bevölkerung",
@@ -2601,9 +2649,9 @@
             "v": ""
           }
         ],
-        "text": "",
+        "text": "Mwyncarreg ist eine bedeutende Bergbausiedlung, die sich auf den Abbau von Ton und Kalkstein spezialisiert hat. Diese Rohstoffe werden zur Herstellung von Brennöfen und Destillationsgeräten für die Whiskeyproduktion des Hauses Penderyn verwendet. Darüber hinaus unterstützt die Siedlung die Grafschaft durch den Abbau von Eisenerz und Kupfer, die für Werkzeuge und Fassreifen in den regionalen Schmieden unverzichtbar sind.",
         "secret": false,
-        "dominionId": ""
+        "dominionId": "herrschaft-penderyn"
       },
       {
         "id": "vortigern-bragwhislyn",
@@ -2616,13 +2664,13 @@
         "pinMarker": "/Karten/assets/icons/welt/brauersiedlung.png",
         "img": "",
         "imgLink": "",
-        "crest": "",
-        "crestLink": "",
-        "banner": "",
-        "bannerLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Vortigerns Ruh/Tanwens Flamme/haus-penderyn.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-penderyn&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Vortigerns Ruh/Herrschaft der Penderyn.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Vortigerns Ruh/Herrschaft der Penderyn/Herrschaft der Penderyn.html",
         "region": "Vortigerns Ruh",
         "house": "Haus Penderyn",
-        "faction": "",
+        "faction": "Penderyn-Destillerie",
         "table": [
           {
             "k": "Name",
@@ -2634,7 +2682,7 @@
           },
           {
             "k": "Gewerbe",
-            "v": ""
+            "v": "Whiskeyproduktion"
           },
           {
             "k": "Regierungstyp",
@@ -2646,7 +2694,7 @@
           },
           {
             "k": "Lehensherr",
-            "v": ""
+            "v": "Haus Penderyn"
           },
           {
             "k": "Bevölkerung",
@@ -2669,9 +2717,9 @@
             "v": ""
           }
         ],
-        "text": "",
+        "text": "Bragwhislyn ist das Herzstück der Herrschaft des Hauses Penderyn und liegt direkt an der beeindruckenden Drakenburg, wo auch die hauseigenen Söldnertruppen ausgebildet werden. Diese Siedlung ist der Geburtsort der Penderyn-Destillerie und somit der zentrale Ort für die großflächige Whiskeyproduktion. Hier wird der Whiskey in großem Stil gebrannt und dann in den Kellergewölben der Drakenburg in Holzfässern gelagert und bewacht, während er über Jahre reift. Die Nähe zur Burg gewährleistet eine ständige Überwachung und den Schutz der wertvollen Fässer, die für die Penderyn-Gilde von unschätzbarem Wert sind.",
         "secret": false,
-        "dominionId": ""
+        "dominionId": "herrschaft-penderyn"
       },
       {
         "id": "vortigern-gwaulmor",
@@ -2684,10 +2732,10 @@
         "pinMarker": "/Karten/assets/icons/welt/bauernsiedlung.png",
         "img": "",
         "imgLink": "",
-        "crest": "",
-        "crestLink": "",
-        "banner": "",
-        "bannerLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Vortigerns Ruh/Tanwens Flamme/haus-dienyddiwr.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-dienyddiwr&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Vortigerns Ruh/Herrschaft der Dienyddiwr.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Vortigerns Ruh/Herrschaft der Dienyddiwr/Herrschaft der Dienyddiwr.html",
         "region": "Vortigerns Ruh",
         "house": "Haus Dienyddiwr",
         "faction": "",
@@ -2702,7 +2750,7 @@
           },
           {
             "k": "Gewerbe",
-            "v": ""
+            "v": "Rinder- und Ziegenzucht; Molkereiprodukte"
           },
           {
             "k": "Regierungstyp",
@@ -2714,7 +2762,7 @@
           },
           {
             "k": "Lehensherr",
-            "v": ""
+            "v": "Haus Dienyddiwr"
           },
           {
             "k": "Bevölkerung",
@@ -2737,9 +2785,9 @@
             "v": ""
           }
         ],
-        "text": "",
+        "text": "Gwaulmor ist eine weitere Bauernsiedlung, in der der Schwerpunkt auf Viehzucht (Rinder und Ziegen) und Molkereiprodukten liegt. Die Siedlung ist für ihre hochwertigen Milchprodukte bekannt, die sowohl in der Grafschaft als auch in Mathragon gehandelt werden. Die Einwohner von Gwaulmor schätzen die bodenständige Führung des Hauses Dienyddiwr und pflegen ein enges Verhältnis zu ihren Lehnsherren.",
         "secret": false,
-        "dominionId": ""
+        "dominionId": "herrschaft-dienyddiwr"
       },
       {
         "id": "vortigern-traethglas",
@@ -2752,10 +2800,10 @@
         "pinMarker": "/Karten/assets/icons/welt/hafensiedlung.png",
         "img": "",
         "imgLink": "",
-        "crest": "",
-        "crestLink": "",
-        "banner": "",
-        "bannerLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Vortigerns Ruh/Tanwens Flamme/haus-dienyddiwr.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-dienyddiwr&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Vortigerns Ruh/Herrschaft der Dienyddiwr.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Vortigerns Ruh/Herrschaft der Dienyddiwr/Herrschaft der Dienyddiwr.html",
         "region": "Vortigerns Ruh",
         "house": "Haus Dienyddiwr",
         "faction": "",
@@ -2770,7 +2818,7 @@
           },
           {
             "k": "Gewerbe",
-            "v": ""
+            "v": "Fischfang und Handel; Schiffbau und Schiffsreparatur"
           },
           {
             "k": "Regierungstyp",
@@ -2782,7 +2830,7 @@
           },
           {
             "k": "Lehensherr",
-            "v": ""
+            "v": "Haus Dienyddiwr"
           },
           {
             "k": "Bevölkerung",
@@ -2805,9 +2853,9 @@
             "v": ""
           }
         ],
-        "text": "",
+        "text": "Traethglas ist die Hafensiedlung des Hauses Dienyddiwr, strategisch an der Küste gelegen. Der Hafen ist bekannt für den Fischfang und den Handel mit der Hauptstadt Mathragon. Neben der Fischerei spielt der Bau und die Reparatur von Schiffen eine zentrale Rolle in der Wirtschaft der Siedlung. Die Einwohner schätzen die bodenständige Verwaltung des Hauses Dienyddiwr und sehen die Siedlung als Tor zum Königreich Cenyr.",
         "secret": false,
-        "dominionId": ""
+        "dominionId": "herrschaft-dienyddiwr"
       },
       {
         "id": "vortigern-caorthwyn",
@@ -2820,10 +2868,10 @@
         "pinMarker": "/Karten/assets/icons/welt/waldsiedlung.png",
         "img": "",
         "imgLink": "",
-        "crest": "",
-        "crestLink": "",
-        "banner": "",
-        "bannerLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Vortigerns Ruh/Uthers Aufstieg/haus-ceirwyn.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-ceirwyn&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Vortigerns Ruh/Uthers Aufstieg.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Vortigerns Ruh/Baronie Uthers Aufstieg/Baronie Uthers Aufstieg.html",
         "region": "Vortigerns Ruh",
         "house": "Haus Ceirwyn",
         "faction": "",
@@ -2838,7 +2886,7 @@
           },
           {
             "k": "Gewerbe",
-            "v": ""
+            "v": "Imkerei; Honig und Wachs"
           },
           {
             "k": "Regierungstyp",
@@ -2850,7 +2898,7 @@
           },
           {
             "k": "Lehensherr",
-            "v": ""
+            "v": "Haus Ceirwyn"
           },
           {
             "k": "Bevölkerung",
@@ -2873,9 +2921,9 @@
             "v": ""
           }
         ],
-        "text": "",
+        "text": "Caorthwyn ist bekannt für die Imkerei und die Produktion von Honig und Wachs. Der Honig von Caorthwyn ist in der ganzen Grafschaft geschätzt, und das Wachs wird für die Herstellung von hochwertigen Kerzen verwendet.",
         "secret": false,
-        "dominionId": ""
+        "dominionId": "baronie-uthers-aufstieg"
       },
       {
         "id": "vortigern-mwynhir",
@@ -2888,10 +2936,10 @@
         "pinMarker": "/Karten/assets/icons/welt/bergbausiedlung.png",
         "img": "",
         "imgLink": "",
-        "crest": "",
-        "crestLink": "",
-        "banner": "",
-        "bannerLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Vortigerns Ruh/Tanwens Flamme/haus-dyngwn.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-dyngwn&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Vortigerns Ruh/Herrschaft der Dyngwn.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Vortigerns Ruh/Herrschaft der Dyngwn/Herrschaft der Dyngwn.html",
         "region": "Vortigerns Ruh",
         "house": "Haus Dyngwn",
         "faction": "",
@@ -2906,7 +2954,7 @@
           },
           {
             "k": "Gewerbe",
-            "v": ""
+            "v": "Abbau von Eisen und Zinn; Waffen- und Werkzeugproduktion"
           },
           {
             "k": "Regierungstyp",
@@ -2918,7 +2966,7 @@
           },
           {
             "k": "Lehensherr",
-            "v": ""
+            "v": "Haus Dyngwn"
           },
           {
             "k": "Bevölkerung",
@@ -2941,9 +2989,9 @@
             "v": ""
           }
         ],
-        "text": "",
+        "text": "Mwynhir ist eine Bergbausiedlung, die sich auf den Abbau von Eisen und Zinn spezialisiert hat. Die Metalle werden in den berühmten Schmieden des Hauses Dyngwn weiterverarbeitet, um Waffen und Werkzeuge von höchster Qualität zu fertigen. Mwynhir ist der Ausgangspunkt für die Metallversorgung der Region und spielt eine zentrale Rolle in der Waffenproduktion des Hauses Dyngwn.",
         "secret": false,
-        "dominionId": ""
+        "dominionId": "herrschaft-dyngwn"
       },
       {
         "id": "vortigern-llysfaer",
@@ -2956,10 +3004,10 @@
         "pinMarker": "/Karten/assets/icons/welt/bauernsiedlung.png",
         "img": "",
         "imgLink": "",
-        "crest": "",
-        "crestLink": "",
-        "banner": "",
-        "bannerLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Vortigerns Ruh/Tanwens Flamme/haus-dyngwn.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-dyngwn&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Vortigerns Ruh/Herrschaft der Dyngwn.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Vortigerns Ruh/Herrschaft der Dyngwn/Herrschaft der Dyngwn.html",
         "region": "Vortigerns Ruh",
         "house": "Haus Dyngwn",
         "faction": "",
@@ -2974,7 +3022,7 @@
           },
           {
             "k": "Gewerbe",
-            "v": ""
+            "v": "Getreide- und Gemüseanbau; Rinder- und Schafhaltung"
           },
           {
             "k": "Regierungstyp",
@@ -2986,7 +3034,7 @@
           },
           {
             "k": "Lehensherr",
-            "v": ""
+            "v": "Haus Dyngwn"
           },
           {
             "k": "Bevölkerung",
@@ -3009,9 +3057,9 @@
             "v": ""
           }
         ],
-        "text": "",
+        "text": "Llysfaer ist eine wichtige Bauernsiedlung direkt vor den Toren von Mathragon, der Hauptstadt. Die Siedlung ist bekannt für den Anbau von Getreide und Gemüse, die zur Versorgung der Hauptstadt und der Dyngwn-Familie dienen. Zusätzlich betreibt Llysfaer Viehhaltung, vor allem Rinder und Schafe, um Fleisch und Wolle für die Märkte von Mathragon bereitzustellen. Als Tor zur Hauptstadt spielt Llysfaer eine entscheidende Rolle für die Ernährung und Versorgung der Region.",
         "secret": false,
-        "dominionId": ""
+        "dominionId": "herrschaft-dyngwn"
       },
       {
         "id": "vortigern-mathfaen",
@@ -3024,10 +3072,10 @@
         "pinMarker": "/Karten/assets/icons/welt/marktsiedlung.png",
         "img": "",
         "imgLink": "",
-        "crest": "",
-        "crestLink": "",
-        "banner": "",
-        "bannerLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Vortigerns Ruh/Tanwens Flamme/haus-marwolaeth.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-marwolaeth&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Vortigerns Ruh/Herrschaft der Marwolaeth.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Vortigerns Ruh/Herrschaft der Marwolaeth/Herrschaft der Marwolaeth.html",
         "region": "Vortigerns Ruh",
         "house": "Haus Marwolaeth",
         "faction": "",
@@ -3042,7 +3090,7 @@
           },
           {
             "k": "Gewerbe",
-            "v": ""
+            "v": "Buchdruck, Schriftkunde und Bibliotheken"
           },
           {
             "k": "Regierungstyp",
@@ -3054,7 +3102,7 @@
           },
           {
             "k": "Lehensherr",
-            "v": ""
+            "v": "Haus Marwolaeth"
           },
           {
             "k": "Bevölkerung",
@@ -3077,9 +3125,9 @@
             "v": ""
           }
         ],
-        "text": "",
+        "text": "Mathfaen ist eine Siedlung an der Nordstraße, die als bedeutendes Zentrum für Buchdruck, Schriftkunde und Bibliotheken gilt. Hier befinden sich zahlreiche Druckerpressen und Schreibstuben, in denen religiöse Texte und andere Schriften vervielfältigt werden. Die Siedlung ist auch bekannt für ihre Bibliotheken, die seltene und heilige Schriften der Alerischen Kirche aufbewahren. In Mathfaen werden nicht nur Manuskripte kopiert, sondern auch neue Bücher gedruckt, die in die gesamte Grafschaft und darüber hinaus verbreitet werden. Die enge Verbindung des Hauses Marwolaeth zur Kirche zeigt sich in der Förderung dieser Schriften, die den Glauben verbreiten und Wissen bewahren.",
         "secret": false,
-        "dominionId": ""
+        "dominionId": "herrschaft-marwolaeth"
       },
       {
         "id": "vortigern-garwlyn",
@@ -3092,10 +3140,10 @@
         "pinMarker": "/Karten/assets/icons/welt/marktsiedlung.png",
         "img": "",
         "imgLink": "",
-        "crest": "",
-        "crestLink": "",
-        "banner": "",
-        "bannerLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Vortigerns Ruh/Tanwens Flamme/haus-grael.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-grael&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Vortigerns Ruh/Herrschaft der Grael.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Vortigerns Ruh/Herrschaft der Grael/Herrschaft der Grael.html",
         "region": "Vortigerns Ruh",
         "house": "Haus Grael",
         "faction": "",
@@ -3110,7 +3158,7 @@
           },
           {
             "k": "Gewerbe",
-            "v": ""
+            "v": "Handel, Gastwirtschaft, Wagenbau, Schmiedekunst und Lederverarbeitung"
           },
           {
             "k": "Regierungstyp",
@@ -3122,7 +3170,7 @@
           },
           {
             "k": "Lehensherr",
-            "v": ""
+            "v": "Haus Grael"
           },
           {
             "k": "Bevölkerung",
@@ -3145,9 +3193,9 @@
             "v": ""
           }
         ],
-        "text": "",
+        "text": "Garwlyn ist eine strategisch bedeutende Siedlung des Hauses Grael, die an der Kreuzung von vier wichtigen Handelsrouten liegt. Die Siedlung ist bekannt für ihren Handel und die Gastwirtschaft, da hier Reisende, Händler und Karawanen Rast machen. Zudem florieren in Garwlyn verschiedene Handwerksgilden, die unter anderem Wagenbau, Schmiedekunst und Lederverarbeitung anbieten, um den Bedarf der Reisenden und Händler zu decken. Durch ihre Lage an der Kreuzung ist Garwlyn ein Zentrum des Handels und der Versorgung in der Region.",
         "secret": false,
-        "dominionId": ""
+        "dominionId": "herrschaft-grael"
       },
       {
         "id": "vortigern-bronceren",
@@ -3160,10 +3208,10 @@
         "pinMarker": "/Karten/assets/icons/welt/bauernsiedlung.png",
         "img": "",
         "imgLink": "",
-        "crest": "",
-        "crestLink": "",
-        "banner": "",
-        "bannerLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Vortigerns Ruh/Uthers Aufstieg/haus-ceirwyn.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-ceirwyn&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Vortigerns Ruh/Uthers Aufstieg.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Vortigerns Ruh/Baronie Uthers Aufstieg/Baronie Uthers Aufstieg.html",
         "region": "Vortigerns Ruh",
         "house": "Haus Ceirwyn",
         "faction": "",
@@ -3178,7 +3226,7 @@
           },
           {
             "k": "Gewerbe",
-            "v": ""
+            "v": "Textil- und Farbproduktion; Bardenschulen"
           },
           {
             "k": "Regierungstyp",
@@ -3190,7 +3238,7 @@
           },
           {
             "k": "Lehensherr",
-            "v": ""
+            "v": "Haus Ceirwyn"
           },
           {
             "k": "Bevölkerung",
@@ -3213,9 +3261,9 @@
             "v": ""
           }
         ],
-        "text": "",
+        "text": "Bronceren ist eine Bauernsiedlung, die sich auf den Anbau von Pflanzen für Textil- und Farbproduktion spezialisiert hat. Flachs wird hier zu feinem Leinen verarbeitet, die anschließend in leuchtenden Farben gefärbt werden, oft mit Pigmenten aus Brynthcarreg. Zusätzlich werden hier Färberpflanzen wie Waid (für Blautöne) angebaut, die für das Färben von Stoffen und Garnen genutzt werden. Diese feinen Stoffe werden in ganz Cenyr für die Herstellung von Gewändern und Wandteppichen verwendet. Zudem ist Bronceren für seine Bardenschulen bekannt, in denen junge Musiker und Geschichtenerzähler ausgebildet werden, die ihre Kunst auf Märkten und Festen in der Region darbieten.",
         "secret": false,
-        "dominionId": ""
+        "dominionId": "baronie-uthers-aufstieg"
       }
     ],
     "cats": [
@@ -3801,7 +3849,7 @@
     ],
     "dotSize": 18,
     "lblSize": 13,
-    "regionIcon": "",
+    "regionIcon": "/Stammbäume/assets/images/regions/vortigerns-ruh.png",
     "regionTitle": "Vortigerns Ruh",
     "mapImages": {
       "normal": "",
@@ -3814,6 +3862,89 @@
       "groupStatus": {}
     },
     "markerCatalog": [],
-    "categoryCatalogVersion": 2
+    "categoryCatalogVersion": 2,
+    "dominions": [
+      {
+        "id": "grafschaft-vortigerns-ruh",
+        "name": "Königliche Grafschaft Vortigerns Ruh",
+        "type": "Königliche Grafschaft",
+        "ruler": "Haus Pendrag",
+        "seat": "Mathragon",
+        "parentId": "",
+        "note": ""
+      },
+      {
+        "id": "baronie-tanwens-flamme",
+        "name": "Gräfische Baronie Mathragon – Tanwens Flamme",
+        "type": "Gräfische Baronie",
+        "ruler": "Haus Pendrag",
+        "seat": "Mathragon",
+        "parentId": "grafschaft-vortigerns-ruh",
+        "note": ""
+      },
+      {
+        "id": "baronie-uthers-aufstieg",
+        "name": "Baronie Uthers Aufstieg",
+        "type": "Baronie",
+        "ruler": "Haus Ceirwyn",
+        "seat": "Calon",
+        "parentId": "grafschaft-vortigerns-ruh",
+        "note": ""
+      },
+      {
+        "id": "herrschaft-cath",
+        "name": "Herrschaft der Cath",
+        "type": "Ritterfürstliche Herrschaft",
+        "ruler": "Haus Cath",
+        "seat": "Mathragon",
+        "parentId": "baronie-tanwens-flamme",
+        "note": ""
+      },
+      {
+        "id": "herrschaft-grael",
+        "name": "Herrschaft der Grael",
+        "type": "Ritterfürstliche Herrschaft",
+        "ruler": "Haus Grael",
+        "seat": "Mathragon",
+        "parentId": "baronie-tanwens-flamme",
+        "note": ""
+      },
+      {
+        "id": "herrschaft-penderyn",
+        "name": "Herrschaft der Penderyn",
+        "type": "Ritterfürstliche Herrschaft",
+        "ruler": "Haus Penderyn",
+        "seat": "Mathragon",
+        "parentId": "baronie-tanwens-flamme",
+        "note": ""
+      },
+      {
+        "id": "herrschaft-dienyddiwr",
+        "name": "Herrschaft der Dienyddiwr",
+        "type": "Ritterfürstliche Herrschaft",
+        "ruler": "Haus Dienyddiwr",
+        "seat": "Mathragon",
+        "parentId": "baronie-tanwens-flamme",
+        "note": ""
+      },
+      {
+        "id": "herrschaft-dyngwn",
+        "name": "Herrschaft der Dyngwn",
+        "type": "Ritterfürstliche Herrschaft",
+        "ruler": "Haus Dyngwn",
+        "seat": "Mathragon",
+        "parentId": "baronie-tanwens-flamme",
+        "note": ""
+      },
+      {
+        "id": "herrschaft-marwolaeth",
+        "name": "Herrschaft der Marwolaeth",
+        "type": "Ritterfürstliche Herrschaft",
+        "ruler": "Haus Marwolaeth",
+        "seat": "Mathragon",
+        "parentId": "baronie-tanwens-flamme",
+        "note": ""
+      }
+    ]
   }
 }

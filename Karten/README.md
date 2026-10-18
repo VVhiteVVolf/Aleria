@@ -201,3 +201,12 @@ Diese Bildlinks werden zusammen mit dem restlichen Kartenzustand in `Karten/<kar
 Jede Karte bekommt durch ihren eigenen `dataPath` eine eigene Datei. Pins, Marker und DM-Daten werden daher nicht zwischen Karten geteilt.
 
 Neue Karten sollen nur die gemeinsame Script-Reihenfolge aus dem Template uebernehmen. Feature-Logik wird nicht in Kartenordner kopiert.
+# Einheitliche Anzeigegrößen
+
+`assets/js/map/map-display-settings.js` verwaltet den gemeinsamen Standard: Dot 80,
+Beschriftung 50. Neue Karten sowie veröffentlichte Karten und lokale Entwürfe ohne
+`displaySettingsVersion: 1` übernehmen diese Werte beim Laden. Inhalte, Koordinaten
+und bestehende individuelle Textobjekte bleiben erhalten. Nach der einmaligen
+Migration werden spätere Sliderwerte im regulären Kartenstand gespeichert und beim
+nächsten Laden beibehalten. Die Migration schreibt keine fremden Entwürfe um und
+löst keine automatische Veröffentlichung aus.

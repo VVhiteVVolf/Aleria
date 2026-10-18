@@ -4,6 +4,7 @@ import fs from 'node:fs';
 import vm from 'node:vm';
 import crypto from 'node:crypto';
 import { royalCouncil } from '../modules/cenyr-court/royal-council.mjs?v=vortigern-20261018';
+import { territoriesById, descriptionsById } from '../../Karten/Cenyr/vortigerns-ruh/places.mjs';
 const root = new URL('../../', import.meta.url);
 const read = file => fs.readFileSync(new URL(file, root), 'utf8');
 const context = { window: {} };
@@ -58,4 +59,46 @@ test('Pixel coordinates use the lower-left origin without transposing their axes
   assert.notEqual(trees[0].id, trees[1].id);
   assert.ok(trees.every(pin => pin.templateId === 'natur'));
   assert.equal(map.state.pins.find(pin => pin.title === 'Uathachs Haus').templateId, 'gebaeude');
+});
+
+test('All 42 supplied descriptions are archived and shared by map and territory registers', () => {
+  const sources = JSON.parse(read('Kontinente/docs/vortigerns-ruh/places/sources.json'));
+  const pins = JSON.parse(read('Karten/Cenyr/vortigerns-ruh/data.json')).state.pins;
+  const places = pages[0].view.geography.domains.flatMap(domain => domain.sections.flatMap(section => section.places));
+  assert.equal(sources.length, 42);
+  assert.equal(descriptionsById.size, 42);
+  assert.equal(pins.filter(pin => pin.text).length, 42);
+  for (const source of sources) {
+    const bytes = fs.readFileSync(new URL('Kontinente/docs/vortigerns-ruh/places/' + source.file, root));
+    assert.equal(crypto.createHash('sha256').update(bytes).digest('hex'),source.sha256);
+    const description=descriptionsById.get(source.id);
+    assert.equal(pins.find(pin => pin.id === source.id).text,description.text);
+    assert.equal(places.find(place => place.id === source.id).description,description.text);
+  }
+});
+
+test('Every place uses the correct ruling house and separate territorial banner', () => {
+  const pins = JSON.parse(read('Karten/Cenyr/vortigerns-ruh/data.json')).state.pins;
+  for (const pin of pins) {
+    const territory=territoriesById.get(pin.dominionId);
+    assert.ok(territory,pin.title);
+    assert.equal(pin.house,territory.house);
+    assert.equal(pin.crest,territory.crest);
+    assert.equal(pin.banner,territory.banner);
+    assert.ok(pin.crestLink.includes(territory.familyId));
+    assert.equal(pin.bannerLink,territory.href);
+    for(const asset of [pin.crest,pin.banner]) assert.ok(fs.existsSync(new URL('.'+asset,root)),asset);
+  }
+  for (const page of pages) {
+    const territory=territoriesById.get(page.view.article.id);
+    assert.equal(page.view.article.crestSrc,territory.banner);
+  }
+  assert.equal(pins.find(pin=>pin.title==='Mwyncarreg').house,'Haus Penderyn');
+  assert.ok(pins.filter(pin=>pin.title==='Ahnenbaum'||pin.title==='Uathachs Haus').every(pin=>pin.dominionId==='baronie-uthers-aufstieg'));
+  const penderyn=pages[4].view.geography.domains.flatMap(domain=>domain.sections.flatMap(section=>section.places));
+  assert.ok(penderyn.some(place=>place.name==='Mwyncarreg'));
+  for(const territory of territoriesById.values()) if(territory.bannerSha256) {
+    const bytes=fs.readFileSync(new URL('.'+territory.banner,root));
+    assert.equal(crypto.createHash('sha256').update(bytes).digest('hex'),territory.bannerSha256);
+  }
 });

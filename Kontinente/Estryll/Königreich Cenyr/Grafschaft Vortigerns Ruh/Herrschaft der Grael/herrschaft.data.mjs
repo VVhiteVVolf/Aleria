@@ -1,12 +1,10 @@
-import { createTerritory } from '../../../../modules/vortigerns-ruh/territory-page.mjs';
+import { createTerritory } from '../../../../modules/vortigerns-ruh/territory-page.mjs?v=places-20261018d';
 
 export default createTerritory({
   "id": "herrschaft-grael",
   "title": "Herrschaft der Grael",
   "shortTitle": "Grael",
   "type": "Herrschaft",
-  "crestSrc": "/Stammbäume/assets/images/houses/Vortigerns Ruh/Tanwens Flamme/haus-grael.png",
-  "crestAlt": "Wappen Grael",
   "kicker": "Herrschaft in Vortigerns Ruh",
   "parentHref": "../Grafschaft Vortigerns Ruh.html",
   "parentLabel": "Vortigerns Ruh",
@@ -239,8 +237,6 @@ export default createTerritory({
     {
       "title": "Herrschaft der Grael",
       "page": "Herrschaft der Grael/Herrschaft der Grael.html",
-      "crestSrc": "/Stammbäume/assets/images/houses/Vortigerns Ruh/Tanwens Flamme/haus-grael.png",
-      "crestAlt": "Wappen Haus Grael",
       "center": "Mathragon",
       "sections": [
         {
@@ -250,7 +246,8 @@ export default createTerritory({
             "vortigern-bronwyn"
           ]
         }
-      ]
+      ],
+      "territoryId": "herrschaft-grael"
     }
   ]
 });

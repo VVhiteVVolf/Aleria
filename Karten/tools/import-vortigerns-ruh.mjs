@@ -40,9 +40,12 @@ if (process.argv.includes('--write')) {
   document.updatedAt = '2026-10-18T20:00:00.000Z';
   fs.writeFileSync(new URL('data.json', folder), JSON.stringify(document, null, 2) + '\n');
 } else {
+  // Descriptions and heraldry can be enriched after the initial import.
+  // Keep validating the immutable marker identity, coordinates and templates.
+  const identityFields = ['id','title','x','y','cat','templateId','kind','pinMarker','region','house'];
   for (const expected of pins) {
     const actual = document.state.pins.find(pin => pin.id === expected.id);
-    if (JSON.stringify(actual) !== JSON.stringify(expected)) throw new Error(`Importabweichung: ${expected.id}`);
+    if (!actual || identityFields.some(key => actual[key] !== expected[key])) throw new Error(`Importabweichung: ${expected.id}`);
   }
   if (document.state.pins.length !== pins.length) throw new Error('Unerwartete zusätzliche Marker');
 }

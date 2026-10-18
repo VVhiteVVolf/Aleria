@@ -1,12 +1,10 @@
-import { createTerritory } from '../../../../modules/vortigerns-ruh/territory-page.mjs';
+import { createTerritory } from '../../../../modules/vortigerns-ruh/territory-page.mjs?v=places-20261018d';
 
 export default createTerritory({
   "id": "herrschaft-dienyddiwr",
   "title": "Herrschaft der Dienyddiwr",
   "shortTitle": "Dienyddiwr",
   "type": "Herrschaft",
-  "crestSrc": "/Stammbäume/assets/images/houses/Vortigerns Ruh/Tanwens Flamme/haus-dienyddiwr.png",
-  "crestAlt": "Wappen Dienyddiwr",
   "kicker": "Herrschaft in Vortigerns Ruh",
   "parentHref": "../Grafschaft Vortigerns Ruh.html",
   "parentLabel": "Vortigerns Ruh",
@@ -261,8 +259,6 @@ export default createTerritory({
     {
       "title": "Herrschaft der Dienyddiwr",
       "page": "Herrschaft der Dienyddiwr/Herrschaft der Dienyddiwr.html",
-      "crestSrc": "/Stammbäume/assets/images/houses/Vortigerns Ruh/Tanwens Flamme/haus-dienyddiwr.png",
-      "crestAlt": "Wappen Haus Dienyddiwr",
       "center": "Mathragon",
       "sections": [
         {
@@ -274,7 +270,8 @@ export default createTerritory({
             "vortigern-traethglas"
           ]
         }
-      ]
+      ],
+      "territoryId": "herrschaft-dienyddiwr"
     }
   ]
 });

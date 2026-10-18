@@ -355,3 +355,7 @@
   .kingdom-family-card,
   .kingdom-place-card { transition: none; }
 }
+/* Source descriptions stay with their place without making every card a wall of text. */
+.directory-place-description { margin-top: 0.5rem; }
+.directory-place-description summary { cursor: pointer; color: #74372d; }
+.directory-place-description p { margin: 0.5rem 0 0; line-height: 1.65; overflow-wrap: break-word; }

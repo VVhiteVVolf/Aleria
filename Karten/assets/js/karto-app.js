@@ -74,8 +74,7 @@ function cleanDominions(list){
 let S = {
   pins: [],
   ...window.KartoCategoryCatalog.upgrade({cats:KARTO_CONFIG.defaultCats}),
-  dotSize: 80,
-  lblSize: 40,
+  ...window.KartoDisplaySettings.resolve(),
   showMarkers: false,
   showPinLabels: false,
   alwaysShowLettering: false,
@@ -473,8 +472,7 @@ window.KartoRuntime = {
 function applyState(remote){
   if(remote.pins)       S.pins=remote.pins;
   if(remote.cats)       Object.assign(S, window.KartoCategoryCatalog.upgrade(remote));
-  if(remote.dotSize)    S.dotSize=remote.dotSize;
-  if(remote.lblSize)    S.lblSize=remote.lblSize;
+  Object.assign(S, window.KartoDisplaySettings.resolve(remote));
   S.showMarkers = remote.showMarkers === true;
   S.showPinLabels = remote.showPinLabels === true;
   S.alwaysShowLettering = remote.alwaysShowLettering === true;

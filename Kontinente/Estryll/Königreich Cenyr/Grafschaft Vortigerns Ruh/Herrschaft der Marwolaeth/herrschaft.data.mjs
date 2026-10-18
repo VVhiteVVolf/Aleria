@@ -1,12 +1,10 @@
-import { createTerritory } from '../../../../modules/vortigerns-ruh/territory-page.mjs';
+import { createTerritory } from '../../../../modules/vortigerns-ruh/territory-page.mjs?v=places-20261018d';
 
 export default createTerritory({
   "id": "herrschaft-marwolaeth",
   "title": "Herrschaft der Marwolaeth",
   "shortTitle": "Marwolaeth",
   "type": "Herrschaft",
-  "crestSrc": "/Stammbäume/assets/images/houses/Vortigerns Ruh/Tanwens Flamme/haus-marwolaeth.png",
-  "crestAlt": "Wappen Marwolaeth",
   "kicker": "Herrschaft in Vortigerns Ruh",
   "parentHref": "../Grafschaft Vortigerns Ruh.html",
   "parentLabel": "Vortigerns Ruh",
@@ -263,8 +261,6 @@ export default createTerritory({
     {
       "title": "Herrschaft der Marwolaeth",
       "page": "Herrschaft der Marwolaeth/Herrschaft der Marwolaeth.html",
-      "crestSrc": "/Stammbäume/assets/images/houses/Vortigerns Ruh/Tanwens Flamme/haus-marwolaeth.png",
-      "crestAlt": "Wappen Haus Marwolaeth",
       "center": "Mathragon",
       "sections": [
         {
@@ -277,7 +273,8 @@ export default createTerritory({
             "vortigern-garwmor"
           ]
         }
-      ]
+      ],
+      "territoryId": "herrschaft-marwolaeth"
     }
   ]
 });

@@ -1,12 +1,10 @@
-import { createTerritory } from '../../../../modules/vortigerns-ruh/territory-page.mjs';
+import { createTerritory } from '../../../../modules/vortigerns-ruh/territory-page.mjs?v=places-20261018d';
 
 export default createTerritory({
   "id": "baronie-uthers-aufstieg",
   "title": "Baronie Uthers Aufstieg",
   "shortTitle": "Uthers Aufstieg",
   "type": "Baronie",
-  "crestSrc": "/Stammbäume/assets/images/houses/Vortigerns Ruh/Uthers Aufstieg/haus-ceirwyn.png",
-  "crestAlt": "Wappen Uthers Aufstieg",
   "kicker": "Baronie in Vortigerns Ruh",
   "parentHref": "../Grafschaft Vortigerns Ruh.html",
   "parentLabel": "Vortigerns Ruh",
@@ -352,8 +350,6 @@ export default createTerritory({
     {
       "title": "Baronie Uthers Aufstieg",
       "page": "Baronie Uthers Aufstieg/Baronie Uthers Aufstieg.html",
-      "crestSrc": "/Stammbäume/assets/images/houses/Vortigerns Ruh/Uthers Aufstieg/haus-ceirwyn.png",
-      "crestAlt": "Wappen Haus Ceirwyn",
       "center": "Calon",
       "sections": [
         {
@@ -383,7 +379,8 @@ export default createTerritory({
             "vortigern-ahnenbaum-1537-615"
           ]
         }
-      ]
+      ],
+      "territoryId": "baronie-uthers-aufstieg"
     }
   ]
 });

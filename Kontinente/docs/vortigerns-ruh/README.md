@@ -47,9 +47,9 @@ vorhandenen Kategorienkatalog und `KartoPinTablePresets`, etwa Rosszuchtsiedlung
 Brauersiedlung, Klostersiedlung, Taverne, Turnierplatz und Ahnenbaum.
 
 Alle Symbole wurden an den jeweiligen Koordinaten tatsächlich angesehen. Uathachs
-Behausung verwendet die neutrale Gebäudetabelle; allein aus dem Hüttensymbol wurde
-keine neue magische Zugehörigkeit abgeleitet. Mwyncarreg hat im gelieferten Ortscode
-keine belegte Hauszugehörigkeit und steht deshalb unter weiteren Orten der Grafschaft.
+Behausung verwendet die neutrale Gebäudetabelle. Die nachgereichte Beschreibung
+belegt Uathach als Erzdruidin und Wächterin des Coed Y Felin. Mwyncarreg ist durch
+die neue Beschreibung und den roten Verbund auf der Regionskarte Penderyn zugeordnet.
 Bronnmarw/Bronmarw, Lyswynfaen/Llyswynfaen, Llywellyn/Llyswellyn,
 Carreglyn/Carregdyn und Grauer/Grüner Pfad wurden für die Ortsregister mit den
 Kartenangaben beziehungsweise den übereinstimmenden Geographietabellen abgeglichen.
@@ -59,6 +59,41 @@ Die Grafschaft enthält jeden Marker einmal. Die drei besonderen Orte, die der
 Baronie-Altcode zusätzlich aufführt, bleiben auch auf der Baronieseite sichtbar.
 `modules/vortigerns-ruh/places.mjs` leitet die gemeinsamen Ortsangaben direkt aus
 `markers.source.json` ab; jede Seite bestimmt ihre Auswahl selbst.
+
+### Nachgereichte Ortsbeschreibungen und Heraldik (18. Oktober 2026)
+
+Die 42 Ausschnitte aus `Downloads/Vortigerns Ruh/Orte` sind unter `places/`
+unverändert archiviert; `places/sources.json` dokumentiert Originalnamen und SHA-256.
+`Karten/Cenyr/vortigerns-ruh/places.source.json` enthält die gelesenen Texte sowie
+knappe Gewerbeangaben aus denselben Beschreibungen. Karte und Ortsregister verwenden
+dieselbe Zuordnung über `places.mjs`. Im Register sind Beschreibungen aufklappbar.
+Für Mathragon, Calon, Bronfael und die beiden Ahnenbäume lag kein eigener Textausschnitt
+vor; dafür wurden keine neuen Ortsbeschreibungen erfunden.
+
+Alle 47 Marker besitzen eine Herrschafts- und Hauszuordnung. Uathachs Haus und die
+beiden Ahnenbäume gehören territorial zur grünen Baronie Uthers Aufstieg, Mwyncarreg
+zur roten Herrschaft Penderyn. Die Gilde von Llysceffyl bleibt Pächterin; Gebietsherr
+ist Pendrag. Die Karte führt die Grafschaft, beide Baronien und sechs Herrschaften
+als miteinander verknüpfte Verwaltungsebenen. Die besonderen Orte stehen im
+Grafschaftsregister jetzt unmittelbar unter Uthers Aufstieg.
+
+`territories.source.json` trennt runde Hauswappen von den ursprünglichen
+Herrschaftsbannern. Die sechs Banner aus den identischen Bild-URLs des Altcode-Archivs
+liegen lokal unter `Stammbäume/assets/images/regions/Cenyr/Vortigerns Ruh/`.
+Bildquellen und Prüfsummen stehen in derselben Zuordnung. Kartenköpfe zeigen das
+Hauswappen und das passende Herrschaftsbanner; Herrschaftsseiten und Geographieköpfe
+verwenden die territorialen Banner, Hausregister weiterhin die Hauswappen.
+
+Der Ausschnitt „Zum Grünen Pfad“ bezeichnet den Betrieb im Text als „Der Grüne Drache“.
+Die Zuordnung folgt seiner ausdrücklichen Überschrift; der überlieferte Text bleibt
+erhalten. Drakenburg bleibt ein künftiger Sitz Penderyns. Die neuen Ortsausschnitte
+ändern keine genealogischen Akten oder dort gespeicherten Wohnsitze.
+
+`node Karten/tools/enrich-vortigerns-ruh.mjs` prüft die Übernahme gegen die Quellen.
+Sein einmaliger `--write`-Modus ist auf den leeren Text-/Heraldikstand der Revision 1
+begrenzt. Er überschreibt keine späteren Kartenbearbeitungen. Lokale Browserentwürfe
+bleiben wie bisher erhalten; „Aktuelle Karte laden“ wechselt mit Sicherung zur neuen
+veröffentlichten Fassung.
 
 ## Prüfung
 

@@ -1,12 +1,10 @@
-import { createTerritory } from '../../../../modules/vortigerns-ruh/territory-page.mjs';
+import { createTerritory } from '../../../../modules/vortigerns-ruh/territory-page.mjs?v=places-20261018d';
 
 export default createTerritory({
   "id": "herrschaft-cath",
   "title": "Herrschaft der Cath",
   "shortTitle": "Cath",
   "type": "Herrschaft",
-  "crestSrc": "/Stammbäume/assets/images/houses/Vortigerns Ruh/Tanwens Flamme/haus-cath.png",
-  "crestAlt": "Wappen Cath",
   "kicker": "Herrschaft in Vortigerns Ruh",
   "parentHref": "../Grafschaft Vortigerns Ruh.html",
   "parentLabel": "Vortigerns Ruh",
@@ -243,8 +241,6 @@ export default createTerritory({
     {
       "title": "Herrschaft der Cath",
       "page": "Herrschaft der Cath/Herrschaft der Cath.html",
-      "crestSrc": "/Stammbäume/assets/images/houses/Vortigerns Ruh/Tanwens Flamme/haus-cath.png",
-      "crestAlt": "Wappen Haus Cath",
       "center": "Mathragon",
       "sections": [
         {
@@ -255,7 +251,8 @@ export default createTerritory({
             "vortigern-zum-grunen-pfad"
           ]
         }
-      ]
+      ],
+      "territoryId": "herrschaft-cath"
     }
   ]
 });

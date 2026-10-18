@@ -18,7 +18,8 @@
       "source": {
         "screenshot": 1,
         "row": 1
-      }
+      },
+      "territoryId": "baronie-uthers-aufstieg"
     },
     {
       "id": "vortigern-craithfaer",
@@ -32,7 +33,8 @@
       "source": {
         "screenshot": 1,
         "row": 2
-      }
+      },
+      "territoryId": "herrschaft-dyngwn"
     },
     {
       "id": "vortigern-llyswellyn",
@@ -46,7 +48,8 @@
       "source": {
         "screenshot": 1,
         "row": 3
-      }
+      },
+      "territoryId": "herrschaft-penderyn"
     },
     {
       "id": "vortigern-llysglas",
@@ -60,7 +63,8 @@
       "source": {
         "screenshot": 1,
         "row": 4
-      }
+      },
+      "territoryId": "herrschaft-marwolaeth"
     },
     {
       "id": "vortigern-uathachs-haus",
@@ -70,11 +74,12 @@
       "category": "Wohnhaus",
       "templateId": "gebaeude",
       "icon": "/Karten/assets/icons/welt/druidenh-tte.png",
-      "house": "",
+      "house": "Haus Ceirwyn",
       "source": {
         "screenshot": 1,
         "row": 5
-      }
+      },
+      "territoryId": "baronie-uthers-aufstieg"
     },
     {
       "id": "vortigern-cor-y-gwarchodwr",
@@ -88,7 +93,8 @@
       "source": {
         "screenshot": 1,
         "row": 6
-      }
+      },
+      "territoryId": "herrschaft-marwolaeth"
     },
     {
       "id": "vortigern-caorthllyn",
@@ -102,7 +108,8 @@
       "source": {
         "screenshot": 1,
         "row": 7
-      }
+      },
+      "territoryId": "baronie-uthers-aufstieg"
     },
     {
       "id": "vortigern-llysceffyl",
@@ -112,11 +119,12 @@
       "category": "Rosszuchtsiedlung",
       "templateId": "siedlung",
       "icon": "/Karten/assets/icons/welt/pferdezuchtsiedlung.png",
-      "house": "",
+      "house": "Haus Pendrag",
       "source": {
         "screenshot": 1,
         "row": 8
-      }
+      },
+      "territoryId": "baronie-tanwens-flamme"
     },
     {
       "id": "vortigern-ahnenbaum-1154-68",
@@ -126,11 +134,12 @@
       "category": "Ahnenbaum",
       "templateId": "natur",
       "icon": "/Karten/assets/icons/welt/ahnenbaum.png",
-      "house": "",
+      "house": "Haus Ceirwyn",
       "source": {
         "screenshot": 1,
         "row": 9
-      }
+      },
+      "territoryId": "baronie-uthers-aufstieg"
     },
     {
       "id": "vortigern-llyswynfaen",
@@ -144,7 +153,8 @@
       "source": {
         "screenshot": 1,
         "row": 10
-      }
+      },
+      "territoryId": "herrschaft-penderyn"
     },
     {
       "id": "vortigern-ffynnonbren",
@@ -158,7 +168,8 @@
       "source": {
         "screenshot": 1,
         "row": 11
-      }
+      },
+      "territoryId": "baronie-uthers-aufstieg"
     },
     {
       "id": "vortigern-ahnenbaum-1537-615",
@@ -168,11 +179,12 @@
       "category": "Ahnenbaum",
       "templateId": "natur",
       "icon": "/Karten/assets/icons/welt/ahnenbaum.png",
-      "house": "",
+      "house": "Haus Ceirwyn",
       "source": {
         "screenshot": 1,
         "row": 12
-      }
+      },
+      "territoryId": "baronie-uthers-aufstieg"
     },
     {
       "id": "vortigern-ffyncoed",
@@ -186,7 +198,8 @@
       "source": {
         "screenshot": 1,
         "row": 13
-      }
+      },
+      "territoryId": "baronie-uthers-aufstieg"
     },
     {
       "id": "vortigern-bronfaelhir",
@@ -200,7 +213,8 @@
       "source": {
         "screenshot": 1,
         "row": 14
-      }
+      },
+      "territoryId": "herrschaft-dienyddiwr"
     },
     {
       "id": "vortigern-bronmarw",
@@ -214,7 +228,8 @@
       "source": {
         "screenshot": 1,
         "row": 15
-      }
+      },
+      "territoryId": "herrschaft-marwolaeth"
     },
     {
       "id": "vortigern-carregdyn",
@@ -228,7 +243,8 @@
       "source": {
         "screenshot": 1,
         "row": 16
-      }
+      },
+      "territoryId": "herrschaft-dyngwn"
     },
     {
       "id": "vortigern-bronfael",
@@ -242,7 +258,8 @@
       "source": {
         "screenshot": 1,
         "row": 17
-      }
+      },
+      "territoryId": "herrschaft-penderyn"
     },
     {
       "id": "vortigern-gwaulbryn",
@@ -256,7 +273,8 @@
       "source": {
         "screenshot": 1,
         "row": 18
-      }
+      },
+      "territoryId": "herrschaft-penderyn"
     },
     {
       "id": "vortigern-garwmor",
@@ -270,7 +288,8 @@
       "source": {
         "screenshot": 1,
         "row": 19
-      }
+      },
+      "territoryId": "herrschaft-marwolaeth"
     },
     {
       "id": "vortigern-drakenburg",
@@ -284,7 +303,8 @@
       "source": {
         "screenshot": 2,
         "row": 1
-      }
+      },
+      "territoryId": "herrschaft-penderyn"
     },
     {
       "id": "vortigern-zum-grunen-pfad",
@@ -298,7 +318,8 @@
       "source": {
         "screenshot": 2,
         "row": 2
-      }
+      },
+      "territoryId": "herrschaft-cath"
     },
     {
       "id": "vortigern-turnierplatz-feld-der-glorie",
@@ -308,11 +329,12 @@
       "category": "Turnierplatz",
       "templateId": "institution",
       "icon": "/Karten/assets/icons/welt/turnierplatz.png",
-      "house": "",
+      "house": "Haus Pendrag",
       "source": {
         "screenshot": 2,
         "row": 3
-      }
+      },
+      "territoryId": "baronie-tanwens-flamme"
     },
     {
       "id": "vortigern-castell-cath",
@@ -326,7 +348,8 @@
       "source": {
         "screenshot": 2,
         "row": 4
-      }
+      },
+      "territoryId": "herrschaft-cath"
     },
     {
       "id": "vortigern-zur-feuerzunge",
@@ -340,7 +363,8 @@
       "source": {
         "screenshot": 2,
         "row": 5
-      }
+      },
+      "territoryId": "herrschaft-penderyn"
     },
     {
       "id": "vortigern-calon",
@@ -354,7 +378,8 @@
       "source": {
         "screenshot": 2,
         "row": 6
-      }
+      },
+      "territoryId": "baronie-uthers-aufstieg"
     },
     {
       "id": "vortigern-zum-konigsweg",
@@ -368,7 +393,8 @@
       "source": {
         "screenshot": 2,
         "row": 7
-      }
+      },
+      "territoryId": "herrschaft-cath"
     },
     {
       "id": "vortigern-mathragon",
@@ -378,11 +404,12 @@
       "category": "Hauptstadt",
       "templateId": "siedlung",
       "icon": "/Karten/assets/icons/welt/stadt.png",
-      "house": "",
+      "house": "Haus Pendrag",
       "source": {
         "screenshot": 2,
         "row": 8
-      }
+      },
+      "territoryId": "baronie-tanwens-flamme"
     },
     {
       "id": "vortigern-des-drachens-ruh",
@@ -396,7 +423,8 @@
       "source": {
         "screenshot": 2,
         "row": 9
-      }
+      },
+      "territoryId": "herrschaft-penderyn"
     },
     {
       "id": "vortigern-garwmathr",
@@ -410,7 +438,8 @@
       "source": {
         "screenshot": 2,
         "row": 10
-      }
+      },
+      "territoryId": "herrschaft-dienyddiwr"
     },
     {
       "id": "vortigern-braichgwen",
@@ -424,7 +453,8 @@
       "source": {
         "screenshot": 2,
         "row": 11
-      }
+      },
+      "territoryId": "baronie-uthers-aufstieg"
     },
     {
       "id": "vortigern-ffyndir",
@@ -438,7 +468,8 @@
       "source": {
         "screenshot": 2,
         "row": 12
-      }
+      },
+      "territoryId": "baronie-uthers-aufstieg"
     },
     {
       "id": "vortigern-traethceir",
@@ -452,7 +483,8 @@
       "source": {
         "screenshot": 2,
         "row": 13
-      }
+      },
+      "territoryId": "baronie-uthers-aufstieg"
     },
     {
       "id": "vortigern-cor-y-gan",
@@ -466,7 +498,8 @@
       "source": {
         "screenshot": 2,
         "row": 14
-      }
+      },
+      "territoryId": "baronie-uthers-aufstieg"
     },
     {
       "id": "vortigern-bronwyn",
@@ -480,7 +513,8 @@
       "source": {
         "screenshot": 2,
         "row": 15
-      }
+      },
+      "territoryId": "herrschaft-grael"
     },
     {
       "id": "vortigern-garwmwyn",
@@ -494,7 +528,8 @@
       "source": {
         "screenshot": 2,
         "row": 16
-      }
+      },
+      "territoryId": "baronie-uthers-aufstieg"
     },
     {
       "id": "vortigern-braichfaer",
@@ -508,7 +543,8 @@
       "source": {
         "screenshot": 2,
         "row": 17
-      }
+      },
+      "territoryId": "baronie-uthers-aufstieg"
     },
     {
       "id": "vortigern-cor-y-llawenydd",
@@ -522,7 +558,8 @@
       "source": {
         "screenshot": 2,
         "row": 18
-      }
+      },
+      "territoryId": "baronie-uthers-aufstieg"
     },
     {
       "id": "vortigern-mwyncarreg",
@@ -532,11 +569,12 @@
       "category": "Bergbausiedlung",
       "templateId": "siedlung",
       "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
-      "house": "",
+      "house": "Haus Penderyn",
       "source": {
         "screenshot": 2,
         "row": 19
-      }
+      },
+      "territoryId": "herrschaft-penderyn"
     },
     {
       "id": "vortigern-bragwhislyn",
@@ -550,7 +588,8 @@
       "source": {
         "screenshot": 2,
         "row": 20
-      }
+      },
+      "territoryId": "herrschaft-penderyn"
     },
     {
       "id": "vortigern-gwaulmor",
@@ -564,7 +603,8 @@
       "source": {
         "screenshot": 2,
         "row": 21
-      }
+      },
+      "territoryId": "herrschaft-dienyddiwr"
     },
     {
       "id": "vortigern-traethglas",
@@ -578,7 +618,8 @@
       "source": {
         "screenshot": 2,
         "row": 22
-      }
+      },
+      "territoryId": "herrschaft-dienyddiwr"
     },
     {
       "id": "vortigern-caorthwyn",
@@ -592,7 +633,8 @@
       "source": {
         "screenshot": 2,
         "row": 23
-      }
+      },
+      "territoryId": "baronie-uthers-aufstieg"
     },
     {
       "id": "vortigern-mwynhir",
@@ -606,7 +648,8 @@
       "source": {
         "screenshot": 2,
         "row": 24
-      }
+      },
+      "territoryId": "herrschaft-dyngwn"
     },
     {
       "id": "vortigern-llysfaer",
@@ -620,7 +663,8 @@
       "source": {
         "screenshot": 2,
         "row": 25
-      }
+      },
+      "territoryId": "herrschaft-dyngwn"
     },
     {
       "id": "vortigern-mathfaen",
@@ -634,7 +678,8 @@
       "source": {
         "screenshot": 2,
         "row": 26
-      }
+      },
+      "territoryId": "herrschaft-marwolaeth"
     },
     {
       "id": "vortigern-garwlyn",
@@ -648,7 +693,8 @@
       "source": {
         "screenshot": 2,
         "row": 27
-      }
+      },
+      "territoryId": "herrschaft-grael"
     },
     {
       "id": "vortigern-bronceren",
@@ -662,7 +708,8 @@
       "source": {
         "screenshot": 2,
         "row": 28
-      }
+      },
+      "territoryId": "baronie-uthers-aufstieg"
     }
   ]
 }

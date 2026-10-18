@@ -45,6 +45,12 @@ function renderPlaceCard(place) {
     // Keep that information without presenting every affiliation as a place kind.
     copy.append(detailList('', [{ label: place.typeLabel || 'Einordnung', value: place.type, className: 'kingdom-place-type' }]));
   }
+  if (place.house) copy.append(detailList('', [{ label: 'Haus', value: place.house, href: place.houseHref }]));
+  if (place.description) {
+    const details = element('details', 'directory-place-description');
+    details.append(element('summary', '', 'Beschreibung'), element('p', '', place.description));
+    copy.append(details);
+  }
   card.append(icon, copy);
   return card;
 }

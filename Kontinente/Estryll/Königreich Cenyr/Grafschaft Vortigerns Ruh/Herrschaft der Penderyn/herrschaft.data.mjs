@@ -1,12 +1,10 @@
-import { createTerritory } from '../../../../modules/vortigerns-ruh/territory-page.mjs';
+import { createTerritory } from '../../../../modules/vortigerns-ruh/territory-page.mjs?v=places-20261018d';
 
 export default createTerritory({
   "id": "herrschaft-penderyn",
   "title": "Herrschaft der Penderyn",
   "shortTitle": "Penderyn",
   "type": "Herrschaft",
-  "crestSrc": "/Stammbäume/assets/images/houses/Vortigerns Ruh/Tanwens Flamme/haus-penderyn.png",
-  "crestAlt": "Wappen Penderyn",
   "kicker": "Herrschaft in Vortigerns Ruh",
   "parentHref": "../Grafschaft Vortigerns Ruh.html",
   "parentLabel": "Vortigerns Ruh",
@@ -314,8 +312,6 @@ export default createTerritory({
     {
       "title": "Herrschaft der Penderyn",
       "page": "Herrschaft der Penderyn/Herrschaft der Penderyn.html",
-      "crestSrc": "/Stammbäume/assets/images/houses/Vortigerns Ruh/Tanwens Flamme/haus-penderyn.png",
-      "crestAlt": "Wappen Haus Penderyn",
       "center": "Mathragon",
       "sections": [
         {
@@ -328,10 +324,12 @@ export default createTerritory({
             "vortigern-bronfael",
             "vortigern-llyswynfaen",
             "vortigern-zur-feuerzunge",
-            "vortigern-des-drachens-ruh"
+            "vortigern-des-drachens-ruh",
+            "vortigern-mwyncarreg"
           ]
         }
-      ]
+      ],
+      "territoryId": "herrschaft-penderyn"
     }
   ]
 });
