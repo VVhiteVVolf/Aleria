@@ -4,12 +4,22 @@ import { createServer } from 'node:http';
 import { readFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
+import { execFileSync } from 'node:child_process';
 
 const { chromium } = await import(process.env.PLAYWRIGHT_MODULE || 'playwright');
 const root = fileURLToPath(new URL('../../../', import.meta.url));
 const archive = path.join(root, 'Old Design/2026-09-18-Weltatlas');
 const manifest = JSON.parse(await readFile(path.join(archive, 'manifest.json'), 'utf8'));
 const archivedFiles = new Set(manifest.files.map(file => file.path));
+// HEAD compares a working design change with its actual starting point. The
+// older September archive remains available for the original design migration.
+const headBaseline = process.env.CODEX_BASELINE === 'HEAD';
+const changedFiles = headBaseline ? new Set(execFileSync('git', ['diff', '--name-only', '-z', 'HEAD'], { cwd: root, encoding: 'utf8' }).split('\0').filter(Boolean)) : archivedFiles;
+const headSources = new Map();
+function headSource(relative) {
+  if (!headSources.has(relative)) headSources.set(relative, execFileSync('git', ['show', `HEAD:${relative}`], { cwd: root, maxBuffer: 20 * 1024 * 1024 }));
+  return headSources.get(relative);
+}
 const types = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.mjs': 'text/javascript; charset=utf-8', '.css': 'text/css; charset=utf-8', '.json': 'application/json', '.svg': 'image/svg+xml', '.png': 'image/png', '.jpg': 'image/jpeg', '.woff2': 'font/woff2' };
 const server = createServer(async (request, response) => {
   try {
@@ -35,8 +45,8 @@ try {
     const url = new URL(route.request().url());
     if (url.origin !== origin) return route.abort();
     const relative = decodeURIComponent(url.pathname).slice(1);
-    if (oldDesign && archivedFiles.has(relative)) {
-      return route.fulfill({ body: await readFile(path.join(archive, relative)), contentType: types[path.extname(relative)] });
+    if (oldDesign && changedFiles.has(relative)) {
+      return route.fulfill({ body: headBaseline ? headSource(relative) : await readFile(path.join(archive, relative)), contentType: types[path.extname(relative)] });
     }
     return route.continue();
   });
@@ -50,6 +60,8 @@ try {
     });
     return page.locator('main').first().evaluate(main => {
       const copy = main.cloneNode(true);
+      // Register controls are UI; city house fields are compared separately.
+      copy.querySelectorAll('.directory-toolbar, .directory-empty, [data-orte-houses]').forEach(node => node.remove());
       // House chapters 4–5 now precede the fact sheet in the same row. Compare
       // the unchanged narrative and fact-sheet text in a common reading order.
       const houseFacts = copy.querySelector('.haeuser-infobox-cell');
@@ -58,9 +70,10 @@ try {
       copy.querySelectorAll('[data-rating-source]').forEach(rating => rating.replaceWith(rating.dataset.ratingSource));
       return {
       text: copy.textContent.replace(/\s+/g, ' ').trim(),
-      links: [...main.querySelectorAll('a')].map(a => [a.textContent.trim(), a.getAttribute('href')]),
-      images: [...main.querySelectorAll('img')].map(i => [i.getAttribute('src'), i.alt]),
-      controls: [...main.querySelectorAll('button, input, select, textarea, details, iframe')].filter(e => !e.matches('details.orte-flavor-scene')).map(e => [e.tagName, e.getAttribute('data-action'), e.getAttribute('src'), e.getAttribute('type')]),
+      cityHouses: window.ORT_DATA?.houses || [],
+      links: [...main.querySelectorAll('a')].filter(a => !a.closest('[data-orte-houses]')).map(a => [a.textContent.trim(), a.getAttribute('href')]),
+      images: [...main.querySelectorAll('img')].filter(i => !i.closest('[data-orte-houses]')).map(i => [i.getAttribute('src'), i.alt]),
+      controls: [...main.querySelectorAll('button, input, select, textarea, details, iframe')].filter(e => !e.matches('details.orte-flavor-scene') && !e.closest('.directory-toolbar')).map(e => [e.tagName, e.getAttribute('data-action'), e.getAttribute('src'), e.getAttribute('type')]),
     }; });
   }
   const examples = [
@@ -81,7 +94,14 @@ try {
     oldDesign = false;
     await page.reload({ waitUntil: 'networkidle' });
     const after = await content();
-    for (const key of ['text', 'links', 'images', 'controls']) assert.deepEqual(after[key], before[key], `${name}: unchanged ${key}`);
+    for (const key of ['text', 'cityHouses', 'links', 'images', 'controls']) {
+      if (key === 'text' && after.text !== before.text) {
+        let index = 0;
+        while (after.text[index] === before.text[index] && index < after.text.length) index++;
+        assert.fail(`${name}: text differs at ${index}\nBEFORE: ${before.text.slice(Math.max(0, index - 80), index + 250)}\nAFTER: ${after.text.slice(Math.max(0, index - 80), index + 250)}`);
+      }
+      assert.deepEqual(after[key], before[key], `${name}: unchanged ${key}`);
+    }
     assert.equal(await page.locator('.codex-masthead').count(), 1, `${name}: one navigation`);
     for (const width of [1440, 768, 390]) {
       await page.setViewportSize({ width, height: 1000 });

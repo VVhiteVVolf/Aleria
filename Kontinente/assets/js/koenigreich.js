@@ -4,15 +4,16 @@
   if (!page) return;
 
   const directoryBase = new URL('../../modules/territory-directory/', document.currentScript.src);
-  const [{ renderFamilySection: renderHouseDirectorySection }, { renderSettlementDomain }, { createLegacyCouncilController }, { enhanceInfoboxes }, { HOUSE_RANKS }] = await Promise.all([
-    import(new URL('house-directory.mjs?v=panels-20260911a', directoryBase)),
-    import(new URL('settlement-directory.mjs?v=panels-20260911a', directoryBase)),
+  const [{ renderFamilySection: renderHouseDirectorySection }, { renderSettlementDomain }, { createLegacyCouncilController }, { enhanceInfoboxes }, { HOUSE_RANKS }, , { mountDirectoryBrowser, directoryState }] = await Promise.all([
+    import(new URL('house-directory.mjs?v=register-20261018a', directoryBase)),
+    import(new URL('settlement-directory.mjs?v=register-20261018a', directoryBase)),
     import(new URL('legacy-council.mjs?v=panels-20260911a', directoryBase)),
     import(new URL('infobox.mjs?v=panels-20260911a', directoryBase)),
     import(new URL('modules/house-content/house-ranks.generated.mjs?v=panels-20260911a', housePageBase)),
     import(new URL('haeuser.registry.js?v=gwendolyn-20260911h', housePageBase)).catch((error) => {
       console.warn('Hausseitenregister konnte nicht geladen werden; vorhandene Familienlinks bleiben verfügbar.', error);
     }),
+    import(new URL('directory-browser.mjs?v=register-20261018a', directoryBase)),
   ]);
 
   page.querySelectorAll('table').forEach((table) => {
@@ -153,6 +154,7 @@
 
     const view = buildCountyGeographyView(table);
     if (!view) return;
+    mountDirectoryBrowser(view, { kind: 'places', state: directoryState(existing) });
 
     const wrapper = table.parentElement && table.parentElement.classList.contains('kingdom-table-scroll')
       ? table.parentElement
@@ -275,7 +277,7 @@
     }
 
     const view = document.createElement('div');
-    view.className = 'kingdom-county-card-view';
+    view.className = 'kingdom-county-card-view territory-directory';
 
     if (data.mapCell) {
       const mapPanel = document.createElement('section');
@@ -333,6 +335,7 @@
 
     const view = buildCountyFamilyView(table);
     if (!view) return;
+    mountDirectoryBrowser(view, { state: directoryState(existing) });
 
     const wrapper = table.parentElement && table.parentElement.classList.contains('kingdom-table-scroll')
       ? table.parentElement

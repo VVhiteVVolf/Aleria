@@ -3,8 +3,9 @@
 
   const page = document.querySelector("[data-herrschaft-page]");
   if (!page) return;
-  const directoryUrl = new URL('../../modules/territory-directory/settlement-directory.mjs?v=panels-20260911a', document.currentScript.src);
+  const directoryUrl = new URL('../../modules/territory-directory/settlement-directory.mjs?v=register-20261018a', document.currentScript.src);
   const { renderSettlementDomain } = await import(directoryUrl);
+  const { mountDirectoryBrowser, directoryState } = await import(new URL('directory-browser.mjs?v=register-20261018a', directoryUrl));
   const { renderCouncilGroups } = await import(new URL('council-directory.mjs?v=panels-20260911a', directoryUrl));
 
   renderPageModules();
@@ -364,11 +365,14 @@
 
   function renderGeography(root, geography) {
     if (!root || !geography?.domain) return;
+    const state = directoryState(root);
     const fragment = document.createDocumentFragment();
 
     if (geography.map?.imageSrc) fragment.append(renderMapPanel(geography.map));
     fragment.append(renderDomain(geography.domain));
     root.replaceChildren(fragment);
+    root.classList.add('territory-directory');
+    mountDirectoryBrowser(root, { kind: 'places', state });
   }
 
   function renderMapPanel(map) {

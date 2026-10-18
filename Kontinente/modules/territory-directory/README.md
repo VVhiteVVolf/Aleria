@@ -9,11 +9,14 @@ Die sichtbare Darstellung gehört diesem Modul. Bestehende Tabellenparser und st
 - `directory-elements.mjs`: kleine gemeinsame DOM-Bausteine für Namen, Links und Definitionslisten. Ausschließlich lokale Verwendung innerhalb dieses Features.
 - `directory.css`: vollständige Styles für diese Register und ihre Kartenansicht der Gebietskarte; eingebunden durch `assets/css/koenigreich.css`.
 - `house-rank.mjs`: Beschriftung belegter Rangangaben; ein unbekannter Rang bleibt „Offen“.
+- `directory-browser.mjs`: lokale Suche und Gruppenfilter ab acht Einträgen. `mountDirectoryBrowser(root, { kind, state })` arbeitet nur auf `data-directory-section` und `data-directory-entry` innerhalb des übergebenen Registers. `directoryState(root)` erhält Suchtext und Gruppe bei einer Neuerstellung der Ansicht. Keine Speicherung oder globalen Listener; der Druck zeigt sämtliche Einträge.
 - `council-directory.mjs` und `council.css`: gemeinsame Portraitübersicht für den Rat und seine Amtsträger, einschließlich vorhandener Navigationszeilen.
 - `legacy-council.mjs`: liest alte Politikstabellen und aktualisiert deren erzeugte Ansicht mit einem Observer je Tabelle. Quelle und Bildreihenfolge bleiben erhalten.
 - `infobox.mjs` und `infobox.css`: klassifizieren bestehende Infoboxzellen, entfernen deren alte visuelle Inline-Formatierung und gestalten die Tabelle an ihrer bisherigen Position.
 
 `assets/js/koenigreich.js` behält die Verantwortung für Hausseiten-Auflösung, Quellenzuordnung und Aktualisierung nach Inhaltsänderungen. Es steuert auch den gekapselten Adapter für alte Ratsübersichten. `assets/js/herrschaft-page.js` übergibt strukturierte Siedlungs- und Ratsdaten und meldet nach dem Aufbau der Seite `aleria:kontinente:content-ready`. Die reinen Renderer besitzen weder Registerzugriffe noch globalen Zustand, Observer oder eigene Firebase-Zugriffe.
+
+Auch `Orte/assets/js/orte-place-houses.js` nutzt `renderFamilySection` und dieselben Styles. Der Ortsadapter behält seine eigenen Daten, Wappen-Platzhalter und Linkauflösung. Die früheren separaten Stadt-Tabellen und `orte-houses.css` sind entfernt. Unbelegte Ränge, Sitze oder Lehnsherren werden durch den gemeinsamen Renderer nicht ergänzt.
 
 Die bestehenden `kingdom-family-*`, `kingdom-domain-*` und `kingdom-place-*` Klassen bleiben für die Unterscheidung zwischen erzeugter Ansicht und bearbeitbarer Quelle erhalten. Der Hausregister-Container erhält zusätzlich `territory-directory`; Siedlungssektionen bringen diese Klasse selbst mit. Alte Inline-Exporte dürfen weiterhin ausschließlich ihre ursprünglichen Quellen und Bildnummern bearbeiten.
 

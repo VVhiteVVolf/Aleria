@@ -9,7 +9,7 @@
 }
 
 .continent-page {
-  --continent-paper: #eadcba;
+  --continent-paper: #f0e7d2;
   --continent-ink: #352d22;
   --continent-muted: #6c604b;
   --continent-line: #b6a17a;
@@ -369,8 +369,8 @@
 }
 .realm-grid {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
 }
 .realm-grid--two {
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -386,38 +386,45 @@
 .realm-card {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 1fr);
+  grid-template-columns: 64px minmax(0, 1fr);
   grid-template-rows: auto auto;
-  align-content: start;
-  justify-items: center;
-  gap: 12px;
+  align-content: center;
+  align-items: center;
+  justify-items: start;
+  gap: 4px 16px;
   min-width: 0;
-  padding: 18px 14px;
+  min-height: 108px;
+  padding: 16px;
   border: 1px solid var(--continent-line-soft);
   background: #fff8e324;
-  text-align: center;
+  text-align: left;
 }
 
 .realm-card h3 {
-  grid-row: 2;
+  grid-column: 2;
+  grid-row: 1;
   margin: 0;
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: normal;
   line-height: 1.35;
   overflow-wrap: anywhere;
 }
 .realm-icon-slot {
-  --atlas-image-height: 112px;
-  grid-row: 1;
-  width: min(100%, 112px);
-  height: 112px;
+  --atlas-image-height: 64px;
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  width: 64px;
+  height: 64px;
 }
 .realm-card-meta {
-  grid-row: 3;
-  margin: -5px 0 0;
+  grid-column: 2;
+  grid-row: 2;
+  margin: 0;
   color: var(--continent-muted);
   font-size: 0.8rem;
   font-style: italic;
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 .realm-grid--two .realm-card,
@@ -436,6 +443,9 @@
 .realm-card--wide .realm-icon-slot {
   grid-column: 1;
   grid-row: 1 / 4;
+  --atlas-image-height: 100px;
+  width: 100px;
+  height: 100px;
 }
 .realm-grid--two h3,
 .realm-card--wide h3 {
@@ -544,7 +554,7 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   .realm-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   .realm-grid--two, .realm-grid--featured {
     grid-template-columns: minmax(0, 1fr);
@@ -631,7 +641,7 @@
     gap: 8px;
   }
   .realm-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: minmax(0, 1fr);
   }
   .realm-grid--two, .realm-grid--featured {
     grid-template-columns: minmax(0, 1fr);

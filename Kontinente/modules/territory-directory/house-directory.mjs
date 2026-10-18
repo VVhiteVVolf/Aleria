@@ -4,7 +4,8 @@ import { houseRankLabel } from './house-rank.mjs?v=panels-20260911a';
 // Receives normalized cards from either saved legacy tables or structured data.
 // Link resolution stays with the calling application; no registry or global state here.
 export function renderFamilySection(section, { resolveHref = card => card.href } = {}) {
-  const block = element('section', 'kingdom-family-section');
+  const block = element('section', 'kingdom-family-section territory-directory');
+  block.dataset.directorySection = section.title || 'Häuser';
   if (section.variant) block.dataset.familyVariant = section.variant;
   const header = element('header', 'directory-section-header');
   header.append(element('h3', '', section.title || 'Häuser'));
@@ -27,6 +28,7 @@ export function renderFamilySection(section, { resolveHref = card => card.href }
 
 function renderFamilyCard(card, href) {
   const node = element('article', `kingdom-family-card${card.featured ? ' is-family-featured' : ''}${href ? ' is-linked' : ''}`);
+  node.dataset.directoryEntry = '';
   if (card.id) node.dataset.houseId = card.id;
   const crest = element('div', 'kingdom-family-crest');
   const hasImage = card.image && !card.image.classList.contains('kingdom-card-image-placeholder');

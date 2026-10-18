@@ -5,6 +5,7 @@ export function renderSettlementDomain(domain) {
   const places = domain.places || [];
   const count = places.filter(place => place.kind !== 'separator').length;
   const section = element('section', 'kingdom-domain-card territory-directory');
+  section.dataset.directorySection = domain.title || 'Herrschaft';
   const header = element('header', 'kingdom-domain-header');
   if (domain.crest) {
     const crest = element('div', 'kingdom-domain-crest');
@@ -34,6 +35,7 @@ export function renderSettlementDomain(domain) {
 function renderPlaceCard(place) {
   if (place.kind === 'separator') return element('h4', 'kingdom-place-separator', place.title || 'Orte');
   const card = element('article', `kingdom-place-card${place.href ? ' is-linked' : ''}`);
+  card.dataset.directoryEntry = '';
   const icon = element('div', 'kingdom-place-icon-frame');
   icon.append(place.image || element('span', 'directory-place-placeholder', 'Bild folgt'));
   const copy = element('div', 'directory-entry-copy');

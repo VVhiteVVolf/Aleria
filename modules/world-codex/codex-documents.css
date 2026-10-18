@@ -102,10 +102,6 @@
 .world-codex .place-template-toc { top: auto; bottom: 66px; left: 18px; max-height: calc(100dvh - 100px); border-radius: 0; border-color: var(--codex-line); background: var(--codex-light); }
 .world-codex .place-template-toc h2 { color: var(--codex-rubric); }
 .world-codex .grossstadt-template :is(.haeuser-genealogy-table, .haeuser-historical-table, .zunft-hierarchy-table) { max-width: 100%; }
-.world-codex .grossstadt-template .orte-house-table { width: 100% !important; min-width: 0; table-layout: fixed; background: var(--codex-light); font: 13px/1.65 var(--codex-label); }
-.world-codex .orte-house-table :is(td, th) { border-color: var(--codex-rule); }
-.world-codex .orte-house-table > tbody > tr:first-child > th,
-.world-codex .orte-house-table .orte-house-group > th { color: var(--codex-rubric); background: #e8ddc5; font-family: var(--codex-serif); }
 .world-codex .grossstadt-template :is(.orte-image-placeholder, .orte-image-slot:empty)::before,
 .world-codex .grossstadt-template .orte-image-placeholder { background: #e8dfca; color: var(--codex-muted); border-color: var(--codex-line); }
 .world-codex .grossstadt-template table.pt-s-0067 { width: 100% !important; min-width: 0; table-layout: fixed; background: var(--codex-light); }

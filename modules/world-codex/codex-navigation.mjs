@@ -1,6 +1,7 @@
 import { markTerritoryHeadings } from './codex-territory-headings.mjs?v=20260918a';
+import { refineReferenceTables } from './codex-reference-tables.mjs?v=20261018a';
 
-/** Page chrome only: no copying, rewriting or reparenting of the editable document. */
+/** Navigation and presentation semantics; editable document content stays intact. */
 export function mountCodexNavigation(page) {
   if (!page || !document.body.classList.contains('world-codex')) return;
   const header = document.createElement('header');
@@ -30,6 +31,12 @@ export function mountCodexNavigation(page) {
   function refresh() {
     frame = 0;
     markTerritoryHeadings(page);
+    refineReferenceTables(page);
+    const title = page.querySelector('.kingdom-title, .haeuser-title, .grossstadt-template-frame > thead .pt-s-0004');
+    if (title) {
+      title.setAttribute('role', 'heading');
+      title.setAttribute('aria-level', '1');
+    }
     const headings = [...page.querySelectorAll('h2[id], .kingdom-section-heading[id], .codex-section-heading[id]')]
       .filter(heading => !heading.closest('[hidden], .is-family-card-source, .is-county-card-source'));
     const nextSignature = headings.map(heading => `${heading.id}:${heading.textContent}`).join('|');

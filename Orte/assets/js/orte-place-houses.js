@@ -1,132 +1,48 @@
-(function () {
-  "use strict";
+import { renderFamilySection } from '../../../Kontinente/modules/territory-directory/house-directory.mjs?v=register-20261018a';
+import { mountDirectoryBrowser, directoryState } from '../../../Kontinente/modules/territory-directory/directory-browser.mjs?v=register-20261018a';
 
-  const page = document.querySelector("[data-orte-static-template]");
-  const table = page?.querySelector("[data-orte-houses]");
-  if (!page || !table) return;
+const page = document.querySelector('[data-orte-static-template]');
+const root = page?.querySelector('[data-orte-houses]');
+if (root) {
+  document.addEventListener('aleria:orte:data-ready', event => renderHouseGroups(event.detail?.data || window.ORT_DATA));
+  if (window.ORT_DATA) renderHouseGroups(window.ORT_DATA);
+}
 
-  document.addEventListener("aleria:orte:data-ready", (event) => {
-    renderHouseGroups(event.detail?.data || window.ORT_DATA);
-  });
+// The place module adapts its own data; rendering and filtering have one owner.
+function renderHouseGroups(data) {
+  if (!Array.isArray(data?.houses)) return;
+  const state = directoryState(root);
+  const groups = data.houses.filter(group => Array.isArray(group?.items) && group.items.some(Boolean));
+  root.replaceChildren(...groups.map(group => renderFamilySection({
+    title: String(group.title || 'Häuser'),
+    cards: group.items.filter(Boolean).map(house => ({
+      ...house,
+      id: house.familyId,
+      href: houseHref(house),
+      image: houseImage(house),
+    })),
+  })));
+  root.className = 'kingdom-family-card-view territory-directory';
+  root.closest('tr').hidden = groups.length === 0;
+  mountDirectoryBrowser(root, { state });
+}
 
-  if (window.ORT_DATA) {
-    renderHouseGroups(window.ORT_DATA);
-  }
+function houseHref(house) {
+  if (house.href) return String(house.href);
+  if (!house.familyId) return '';
+  return `/Stammbäume/Stammbaum.html?family=${encodeURIComponent(house.familyId)}&mode=view`;
+}
 
-  function renderHouseGroups(data) {
-    if (!Array.isArray(data?.houses)) return;
-
-    const groups = data.houses
-      .map(normalizeGroup)
-      .filter((group) => group.items.length > 0);
-    const body = table.tBodies[0] || table.createTBody();
-    body.replaceChildren(createHeaderRow());
-
-    groups.forEach((group) => {
-      body.append(createGroupRow(group.title));
-      group.items.forEach((house) => body.append(createHouseRow(house)));
-    });
-
-    table.classList.add("orte-house-table");
-    table.closest("tr").hidden = groups.length === 0;
-  }
-
-  function normalizeGroup(group) {
-    return {
-      title: String(group?.title || "Häuser"),
-      items: Array.isArray(group?.items) ? group.items.filter(Boolean) : []
-    };
-  }
-
-  function createHeaderRow() {
-    const row = document.createElement("tr");
-    ["Wappen", "Haus", "Rang", "Sitz", "Lehnsherr"].forEach((label) => {
-      const cell = document.createElement("th");
-      cell.scope = "col";
-      cell.textContent = label;
-      row.append(cell);
-    });
-    return row;
-  }
-
-  function createGroupRow(title) {
-    const row = document.createElement("tr");
-    row.className = "orte-house-group";
-    const cell = document.createElement("th");
-    cell.colSpan = 5;
-    cell.scope = "colgroup";
-    cell.textContent = title;
-    row.append(cell);
-    return row;
-  }
-
-  function createHouseRow(house) {
-    const row = document.createElement("tr");
-    row.className = "orte-house-entry";
-
-    row.append(
-      createEmblemCell(house),
-      createTextCell(house.name, "Haus", houseHref(house)),
-      createTextCell(house.rank, "Rang"),
-      createTextCell(house.seat, "Sitz"),
-      createTextCell(house.liege, "Lehnsherr")
-    );
-    return row;
-  }
-
-  function createEmblemCell(house) {
-    const cell = document.createElement("td");
-    cell.className = "orte-house-emblem";
-    cell.dataset.label = "Wappen";
-    const href = houseHref(house);
-
-    const rank = String(house.rank || "");
-    const isCommoner = /^bürgerlich$/i.test(rank);
-    const emblem = house.emblem || (isCommoner || !rank
-      ? "/IconOrdner/Neutrale Wappen/Neutrales Bürgerwappen.png"
-      : "/IconOrdner/Neutrale Wappen/Neutrales Adelswappen.png");
-
-    const image = document.createElement("img");
-    image.src = String(emblem);
-    image.alt = house.emblem
-      ? `Wappen ${house.name || "des Hauses"}`
-      : `${isCommoner ? "Bürgerwappen" : "Schild"} als Platzhalter für ${house.name || "die Familie"}`;
-    image.loading = "lazy";
-    image.decoding = "async";
-
-    if (!href) {
-      cell.append(image);
-      return cell;
-    }
-
-    const link = document.createElement("a");
-    link.href = href;
-    link.setAttribute("aria-label", `${house.name} im Stammbaum öffnen`);
-    link.append(image);
-    cell.append(link);
-    return cell;
-  }
-
-  function createTextCell(value, label, href = "") {
-    const cell = document.createElement("td");
-    cell.dataset.label = label;
-    const text = String(value || "…");
-
-    if (!href) {
-      cell.textContent = text;
-      return cell;
-    }
-
-    const link = document.createElement("a");
-    link.href = href;
-    link.textContent = text;
-    cell.append(link);
-    return cell;
-  }
-
-  function houseHref(house) {
-    if (house.href) return String(house.href);
-    if (!house.familyId) return "";
-    return `/Stammbäume/Stammbaum.html?family=${encodeURIComponent(house.familyId)}&mode=view`;
-  }
-})();
+function houseImage(house) {
+  const rank = String(house.rank || '');
+  const isCommoner = /^bürgerlich(?:es Haus)?$/i.test(rank);
+  const image = document.createElement('img');
+  image.src = house.emblem || (isCommoner || !rank
+    ? '/IconOrdner/Neutrale Wappen/Neutrales Bürgerwappen.png'
+    : '/IconOrdner/Neutrale Wappen/Neutrales Adelswappen.png');
+  image.alt = house.emblem ? `Wappen ${house.name || 'des Hauses'}`
+    : `${isCommoner ? 'Bürgerwappen' : 'Schild'} als Platzhalter für ${house.name || 'die Familie'}`;
+  image.loading = 'lazy';
+  image.decoding = 'async';
+  return image;
+}

@@ -30,32 +30,10 @@
   max-height: none;
   object-fit: contain;
 }
-/* The fact sheet sets the height; chapters 2–5 share its left column. */
-.world-codex .haeuser-template-frame .haeuser-history-cell {
-  contain: size;
-  align-self: stretch;
-  min-height: 300px;
-}
-.world-codex .haeuser-history-scroll {
-  height: 100%;
-  overflow: auto;
-  padding-right: 12px;
-  scrollbar-gutter: stable;
-  scrollbar-color: #80654c #dfd3b9;
-}
-.world-codex .haeuser-history-scroll:focus-visible { outline: 2px solid var(--codex-rubric); outline-offset: -2px; }
-.world-codex .haeuser-history-scroll > h2 { scroll-margin-top: 20px; }
+/* Chapters follow the document scroll; none are hidden inside a reading pane. */
 .world-codex .house-scene { border: 1px solid var(--codex-line); border-left: 3px solid var(--codex-rubric); background: #f8f2e399; }
 .world-codex .house-scene summary { color: var(--codex-rubric); }
-@media (max-width: 800px) {
-  .world-codex .haeuser-template-frame .haeuser-history-cell { contain: none; min-height: 0; }
-  .world-codex .haeuser-history-scroll { height: auto; max-height: 65svh; }
-}
 @media (max-width: 520px) {
   .world-codex .haeuser-template-frame > thead p:has(.haeuser-crest-slot) { grid-column: 1; grid-row: auto; margin: 12px 0; }
   .world-codex .haeuser-crest-slot img { max-height: 155px; }
-}
-@media print {
-  .world-codex .haeuser-template-frame .haeuser-history-cell { contain: none; }
-  .world-codex .haeuser-history-scroll { height: auto; max-height: none; overflow: visible; }
 }

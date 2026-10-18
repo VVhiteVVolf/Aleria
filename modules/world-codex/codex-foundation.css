@@ -5,8 +5,8 @@ body.world-codex {
   --codex-rubric: #74372d;
   --codex-line: #b6a17c;
   --codex-rule: #d7c9ad;
-  --codex-paper: #eee5ce;
-  --codex-light: #f8f2e3;
+  --codex-paper: #f1ead9;
+  --codex-light: #faf6ed;
   --codex-serif: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif;
   --codex-label: Verdana, Arial, sans-serif;
   --codex-width: 1280px;
@@ -26,7 +26,7 @@ body.world-codex {
     radial-gradient(ellipse at 10% 0, #fff9e980, transparent 50rem),
     linear-gradient(90deg, #b7a07515, transparent 8%, transparent 92%, #b7a07515),
     var(--codex-paper);
-  box-shadow: 0 18px 65px #0005, inset 5px 0 0 #f8f1df, inset -5px 0 0 #f8f1df;
+  box-shadow: 0 18px 65px #0004;
 }
 
 .world-codex :is(.place-document, .haeuser-document) { overflow: visible; padding: 0; }
