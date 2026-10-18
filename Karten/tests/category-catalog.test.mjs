@@ -96,13 +96,17 @@ test('every reviewed Gwynthor symbol has one corresponding pin', () => {
   assert.equal(result.matches.length,inventory.markings.length);
   assert.equal(result.matches.filter(match => match.added).length,0);
   assert.equal(new Set(result.matches.map(match => match.pin)).size,inventory.markings.length);
-  assert.deepEqual(result.state,state);
+  assert.deepEqual(result.state,{...state,...catalog.upgrade(state)});
   for(const marking of inventory.markings){
     assert.ok(globalThis.KartoPinTemplateCatalog.get(marking.templateId), marking.id);
     const pin = state.pins.find(item => item.id === marking.id);
     if(!pin) continue;
     assert.equal(pin.templateId,marking.templateId,pin.id);
-    assert.deepEqual(pin.table,globalThis.KartoPinTablePresets.createTable(marking.templateId,catalog.definition({id:marking.categoryId})));
+    // Enriched places intentionally have filled or extended tables. The state
+    // comparison above already verifies that the import preserves them.
+    if (pin.table.every(row => !String(row.v || '').trim())) {
+      assert.deepEqual(pin.table,globalThis.KartoPinTablePresets.createTable(marking.templateId,catalog.definition({id:marking.categoryId})));
+    }
   }
 });
 

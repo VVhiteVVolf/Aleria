@@ -1,0 +1,1059 @@
+{
+  "mapId": "cenyr-sonnenkueste",
+  "imageSize": [
+    4096,
+    4049
+  ],
+  "coordinateOrigin": "bottom-left",
+  "markers": [
+    {
+      "id": "sonnenkueste-bronwynn",
+      "title": "Bronwynn",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung.png",
+      "territoryId": "herrschaft-llwynog",
+      "house": "Haus Llwynog",
+      "x": 1608,
+      "y": 1762,
+      "source": {
+        "screenshot": 1,
+        "row": 1
+      }
+    },
+    {
+      "id": "sonnenkueste-ahnenbaum-3381-3140",
+      "title": "Ahnenbaum",
+      "category": "Ahnenbaum",
+      "templateId": "natur",
+      "icon": "/Karten/assets/icons/welt/ahnenbaum.png",
+      "territoryId": "herrschaft-loewenberg",
+      "house": "Haus Illwath",
+      "x": 3381,
+      "y": 3140,
+      "source": {
+        "screenshot": 1,
+        "row": 2
+      }
+    },
+    {
+      "id": "sonnenkueste-craithban",
+      "title": "Craithban",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "baronie-jungferntal",
+      "house": "Haus Morforwyn",
+      "x": 2381,
+      "y": 696,
+      "source": {
+        "screenshot": 1,
+        "row": 3
+      }
+    },
+    {
+      "id": "sonnenkueste-mwyncarreg",
+      "title": "Mwyncarreg",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "baronie-jungferntal",
+      "house": "Haus Morforwyn",
+      "x": 2242,
+      "y": 1064,
+      "source": {
+        "screenshot": 1,
+        "row": 5
+      }
+    },
+    {
+      "id": "sonnenkueste-zum-goldenen-kuss",
+      "title": "Zum Goldenen Kuss",
+      "category": "Taverne",
+      "templateId": "gastbetrieb",
+      "icon": "/Karten/assets/icons/welt/taverne.png",
+      "territoryId": "baronie-jungferntal",
+      "house": "Haus Morforwyn",
+      "x": 3550,
+      "y": 2625,
+      "source": {
+        "screenshot": 1,
+        "row": 6
+      }
+    },
+    {
+      "id": "sonnenkueste-braichfaen",
+      "title": "Braichfaen",
+      "category": "Waldsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/waldsiedlung.png",
+      "territoryId": "herrschaft-loewenberg",
+      "house": "Haus Illwath",
+      "x": 3338,
+      "y": 2728,
+      "source": {
+        "screenshot": 1,
+        "row": 7
+      }
+    },
+    {
+      "id": "sonnenkueste-llyswyth",
+      "title": "Llyswyth",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung.png",
+      "territoryId": "herrschaft-teyrngarch",
+      "house": "Haus Teyrngarch",
+      "x": 1904,
+      "y": 3008,
+      "source": {
+        "screenshot": 1,
+        "row": 8
+      }
+    },
+    {
+      "id": "sonnenkueste-brynthdar",
+      "title": "Brynthdar",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "herrschaft-loewenberg",
+      "house": "Haus Illwath",
+      "x": 2658,
+      "y": 3503,
+      "source": {
+        "screenshot": 1,
+        "row": 9
+      }
+    },
+    {
+      "id": "sonnenkueste-caorthmaen",
+      "title": "Caorthmaen",
+      "category": "Waldsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/waldsiedlung.png",
+      "territoryId": "herrschaft-teyrngarch",
+      "house": "Haus Teyrngarch",
+      "x": 1419,
+      "y": 3104,
+      "source": {
+        "screenshot": 1,
+        "row": 10
+      }
+    },
+    {
+      "id": "sonnenkueste-ffyncairn",
+      "title": "Ffyncairn",
+      "category": "Waldsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/waldsiedlung.png",
+      "territoryId": "baronie-jungferntal",
+      "house": "Haus Morforwyn",
+      "x": 2482,
+      "y": 1564,
+      "source": {
+        "screenshot": 1,
+        "row": 11
+      }
+    },
+    {
+      "id": "sonnenkueste-traethmaur",
+      "title": "Traethmaur",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "herrschaft-blach",
+      "house": "Haus Blach",
+      "x": 513,
+      "y": 349,
+      "source": {
+        "screenshot": 1,
+        "row": 12
+      }
+    },
+    {
+      "id": "sonnenkueste-ffynbraich-2066-3408",
+      "title": "Ffynbraich",
+      "category": "Waldsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/waldsiedlung.png",
+      "territoryId": "herrschaft-teyrngarch",
+      "house": "Haus Teyrngarch",
+      "x": 2066,
+      "y": 3408,
+      "source": {
+        "screenshot": 1,
+        "row": 13
+      }
+    },
+    {
+      "id": "sonnenkueste-garwlannor",
+      "title": "Garwlannor",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "herrschaft-blach",
+      "house": "Haus Blach",
+      "x": 924,
+      "y": 2180,
+      "source": {
+        "screenshot": 1,
+        "row": 14
+      }
+    },
+    {
+      "id": "sonnenkueste-twr-mwynfaen",
+      "title": "Tŵr Mwynfaen",
+      "category": "Turm",
+      "templateId": "militaer",
+      "icon": "/Karten/assets/icons/welt/turm.png",
+      "territoryId": "baronie-jungferntal",
+      "house": "Haus Morforwyn",
+      "x": 3748,
+      "y": 3325,
+      "source": {
+        "screenshot": 1,
+        "row": 15
+      }
+    },
+    {
+      "id": "sonnenkueste-caer-llew",
+      "title": "Caer Llew",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "herrschaft-loewenberg",
+      "house": "Haus Illwath",
+      "x": 3003,
+      "y": 3032,
+      "source": {
+        "screenshot": 1,
+        "row": 16
+      }
+    },
+    {
+      "id": "sonnenkueste-aberon",
+      "title": "Aberon",
+      "category": "Hauptstadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "baronie-gerstekueste",
+      "house": "Haus Illewod",
+      "x": 579,
+      "y": 2925,
+      "source": {
+        "screenshot": 1,
+        "row": 17
+      }
+    },
+    {
+      "id": "sonnenkueste-twr-garthryn",
+      "title": "Tŵr Garthryn",
+      "category": "Turm",
+      "templateId": "militaer",
+      "icon": "/Karten/assets/icons/welt/turm.png",
+      "territoryId": "herrschaft-llwynog",
+      "house": "Haus Llwynog",
+      "x": 1491,
+      "y": 1980,
+      "source": {
+        "screenshot": 1,
+        "row": 18
+      }
+    },
+    {
+      "id": "sonnenkueste-malron",
+      "title": "Malron",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "herrschaft-llwynog",
+      "house": "Haus Llwynog",
+      "x": 2063,
+      "y": 1819,
+      "source": {
+        "screenshot": 1,
+        "row": 19
+      }
+    },
+    {
+      "id": "sonnenkueste-caorthwyll",
+      "title": "Caorthwyll",
+      "category": "Waldsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/waldsiedlung.png",
+      "territoryId": "baronie-jungferntal",
+      "house": "Haus Morforwyn",
+      "x": 3642,
+      "y": 2348,
+      "source": {
+        "screenshot": 1,
+        "row": 20
+      }
+    },
+    {
+      "id": "sonnenkueste-bronwaul",
+      "title": "Bronwaul",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung.png",
+      "territoryId": "baronie-jungferntal",
+      "house": "Haus Morforwyn",
+      "x": 3270,
+      "y": 2192,
+      "source": {
+        "screenshot": 1,
+        "row": 21
+      }
+    },
+    {
+      "id": "sonnenkueste-llysgwaul",
+      "title": "Llysgwaul",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung.png",
+      "territoryId": "herrschaft-loewenberg",
+      "house": "Haus Illwath",
+      "x": 2705,
+      "y": 2565,
+      "source": {
+        "screenshot": 1,
+        "row": 22
+      }
+    },
+    {
+      "id": "sonnenkueste-malrynn",
+      "title": "Malrynn",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "herrschaft-teyrngarch",
+      "house": "Haus Teyrngarch",
+      "x": 1378,
+      "y": 2382,
+      "source": {
+        "screenshot": 1,
+        "row": 23
+      }
+    },
+    {
+      "id": "sonnenkueste-garthfael",
+      "title": "Garthfael",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "baronie-jungferntal",
+      "house": "Haus Morforwyn",
+      "x": 2821,
+      "y": 1317,
+      "source": {
+        "screenshot": 1,
+        "row": 24
+      }
+    },
+    {
+      "id": "sonnenkueste-dammerfelsgrotte",
+      "title": "Dämmerfelsgrotte",
+      "category": "Höhle",
+      "templateId": "natur",
+      "icon": "/Karten/assets/icons/welt/h-hle.png",
+      "territoryId": "baronie-jungferntal",
+      "house": "Haus Morforwyn",
+      "x": 3195,
+      "y": 1301,
+      "source": {
+        "screenshot": 1,
+        "row": 25
+      }
+    },
+    {
+      "id": "sonnenkueste-bronwellyn",
+      "title": "Bronwellyn",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung.png",
+      "territoryId": "herrschaft-blach",
+      "house": "Haus Blach",
+      "x": 971,
+      "y": 907,
+      "source": {
+        "screenshot": 1,
+        "row": 26
+      }
+    },
+    {
+      "id": "sonnenkueste-gwaulmarw",
+      "title": "Gwaulmarw",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung.png",
+      "territoryId": "herrschaft-teyrngarch",
+      "house": "Haus Teyrngarch",
+      "x": 2029,
+      "y": 2619,
+      "source": {
+        "screenshot": 1,
+        "row": 27
+      }
+    },
+    {
+      "id": "sonnenkueste-garwlynn",
+      "title": "Garwlynn",
+      "category": "Brückensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/br-ckensiedlung.png",
+      "territoryId": "herrschaft-llwynog",
+      "house": "Haus Llwynog",
+      "x": 1633,
+      "y": 379,
+      "source": {
+        "screenshot": 1,
+        "row": 28
+      }
+    },
+    {
+      "id": "sonnenkueste-garwmellyn",
+      "title": "Garwmellyn",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "herrschaft-loewenberg",
+      "house": "Haus Illwath",
+      "x": 3342,
+      "y": 3389,
+      "source": {
+        "screenshot": 1,
+        "row": 29
+      }
+    },
+    {
+      "id": "sonnenkueste-caorthlydd",
+      "title": "Caorthlydd",
+      "category": "Waldsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/waldsiedlung.png",
+      "territoryId": "herrschaft-loewenberg",
+      "house": "Haus Illwath",
+      "x": 2433,
+      "y": 3028,
+      "source": {
+        "screenshot": 1,
+        "row": 30
+      }
+    },
+    {
+      "id": "sonnenkueste-ahnenbaum-2789-3181",
+      "title": "Ahnenbaum",
+      "category": "Ahnenbaum",
+      "templateId": "natur",
+      "icon": "/Karten/assets/icons/welt/ahnenbaum.png",
+      "territoryId": "herrschaft-loewenberg",
+      "house": "Haus Illwath",
+      "x": 2789,
+      "y": 3181,
+      "source": {
+        "screenshot": 1,
+        "row": 31
+      }
+    },
+    {
+      "id": "sonnenkueste-glasdrann",
+      "title": "Glasdrann",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "herrschaft-blach",
+      "house": "Haus Blach",
+      "x": 663,
+      "y": 1133,
+      "source": {
+        "screenshot": 2,
+        "row": 1
+      }
+    },
+    {
+      "id": "sonnenkueste-morcarreg",
+      "title": "Morcarreg",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "herrschaft-teyrngarch",
+      "house": "Haus Teyrngarch",
+      "x": 1006,
+      "y": 3198,
+      "source": {
+        "screenshot": 2,
+        "row": 2
+      }
+    },
+    {
+      "id": "sonnenkueste-echoklamm",
+      "title": "Echoklamm",
+      "category": "Höhle",
+      "templateId": "natur",
+      "icon": "/Karten/assets/icons/welt/h-hle.png",
+      "territoryId": "baronie-jungferntal",
+      "house": "Haus Morforwyn",
+      "x": 3783,
+      "y": 1563,
+      "source": {
+        "screenshot": 2,
+        "row": 3
+      }
+    },
+    {
+      "id": "sonnenkueste-morvyneth",
+      "title": "Morvyneth",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "herrschaft-blach",
+      "house": "Haus Blach",
+      "x": 587,
+      "y": 2010,
+      "source": {
+        "screenshot": 2,
+        "row": 4
+      }
+    },
+    {
+      "id": "sonnenkueste-nythlyn",
+      "title": "Nythlyn",
+      "category": "Flusssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/flusssiedlung.png",
+      "territoryId": "baronie-jungferntal",
+      "house": "Haus Morforwyn",
+      "x": 3805,
+      "y": 2854,
+      "source": {
+        "screenshot": 2,
+        "row": 5
+      }
+    },
+    {
+      "id": "sonnenkueste-ffynbraich-1179-1369",
+      "title": "Ffynbraich",
+      "category": "Waldsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/waldsiedlung.png",
+      "territoryId": "herrschaft-llwynog",
+      "house": "Haus Llwynog",
+      "x": 1179,
+      "y": 1369,
+      "source": {
+        "screenshot": 2,
+        "row": 6
+      }
+    },
+    {
+      "id": "sonnenkueste-gwaulbryn",
+      "title": "Gwaulbryn",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung.png",
+      "territoryId": "herrschaft-llwynog",
+      "house": "Haus Llwynog",
+      "x": 1719,
+      "y": 2042,
+      "source": {
+        "screenshot": 2,
+        "row": 7
+      }
+    },
+    {
+      "id": "sonnenkueste-traethglas",
+      "title": "Traethglas",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "herrschaft-blach",
+      "house": "Haus Blach",
+      "x": 598,
+      "y": 1588,
+      "source": {
+        "screenshot": 2,
+        "row": 8
+      }
+    },
+    {
+      "id": "sonnenkueste-carngol",
+      "title": "Carngol",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "baronie-jungferntal",
+      "house": "Haus Morforwyn",
+      "x": 3113,
+      "y": 1878,
+      "source": {
+        "screenshot": 2,
+        "row": 9
+      }
+    },
+    {
+      "id": "sonnenkueste-malgarth",
+      "title": "Malgarth",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "baronie-jungferntal",
+      "house": "Haus Morforwyn",
+      "x": 3180,
+      "y": 2405,
+      "source": {
+        "screenshot": 2,
+        "row": 10
+      }
+    },
+    {
+      "id": "sonnenkueste-brynthpont",
+      "title": "Brynthpont",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "herrschaft-teyrngarch",
+      "house": "Haus Teyrngarch",
+      "x": 2037,
+      "y": 3787,
+      "source": {
+        "screenshot": 2,
+        "row": 11
+      }
+    },
+    {
+      "id": "sonnenkueste-morlithon",
+      "title": "Morlithon",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "herrschaft-blach",
+      "house": "Haus Blach",
+      "x": 497,
+      "y": 825,
+      "source": {
+        "screenshot": 2,
+        "row": 12
+      }
+    },
+    {
+      "id": "sonnenkueste-brynthwaul",
+      "title": "Brynthwaul",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "herrschaft-llwynog",
+      "house": "Haus Llwynog",
+      "x": 1482,
+      "y": 1044,
+      "source": {
+        "screenshot": 2,
+        "row": 13
+      }
+    },
+    {
+      "id": "sonnenkueste-teyrngarch-brauerei-bragwaul",
+      "title": "Teyrngarch Brauerei – Bragwaul",
+      "category": "Brauersiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/brauersiedlung.png",
+      "territoryId": "herrschaft-teyrngarch",
+      "house": "Haus Teyrngarch",
+      "x": 1314,
+      "y": 846,
+      "source": {
+        "screenshot": 2,
+        "row": 14,
+        "confirmation": "Name vom Nutzer am 19.10.2026 für 1314:846 bestätigt.",
+        "territoryConfirmation": "Vom Nutzer am 19.10.2026 als Exklave der Teyrngarch bestätigt."
+      },
+      "exclave": true
+    },
+    {
+      "id": "sonnenkueste-nythwaen",
+      "title": "Nythwaen",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "herrschaft-llwynog",
+      "house": "Haus Llwynog",
+      "x": 2593,
+      "y": 2242,
+      "source": {
+        "screenshot": 2,
+        "row": 15
+      }
+    },
+    {
+      "id": "sonnenkueste-twr-craithban",
+      "title": "Tŵr Craithban",
+      "category": "Turm",
+      "templateId": "militaer",
+      "icon": "/Karten/assets/icons/welt/turm.png",
+      "territoryId": "herrschaft-teyrngarch",
+      "house": "Haus Teyrngarch",
+      "x": 1842,
+      "y": 2801,
+      "source": {
+        "screenshot": 2,
+        "row": 16
+      }
+    },
+    {
+      "id": "sonnenkueste-ffynbrae",
+      "title": "Ffynbrae",
+      "category": "Waldsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/waldsiedlung.png",
+      "territoryId": "herrschaft-loewenberg",
+      "house": "Haus Illwath",
+      "x": 2440,
+      "y": 3285,
+      "source": {
+        "screenshot": 2,
+        "row": 17
+      }
+    },
+    {
+      "id": "sonnenkueste-dunkelgrundhohle",
+      "title": "Dunkelgrundhöhle",
+      "category": "Höhle",
+      "templateId": "natur",
+      "icon": "/Karten/assets/icons/welt/h-hle.png",
+      "territoryId": "baronie-jungferntal",
+      "house": "Haus Morforwyn",
+      "x": 2768,
+      "y": 767,
+      "source": {
+        "screenshot": 2,
+        "row": 18
+      }
+    },
+    {
+      "id": "sonnenkueste-traethwych",
+      "title": "Traethwych",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "herrschaft-teyrngarch",
+      "house": "Haus Teyrngarch",
+      "x": 1295,
+      "y": 3536,
+      "source": {
+        "screenshot": 2,
+        "row": 19
+      }
+    },
+    {
+      "id": "sonnenkueste-carregwyn",
+      "title": "Carregwyn",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "baronie-jungferntal",
+      "house": "Haus Morforwyn",
+      "x": 3833,
+      "y": 2057,
+      "source": {
+        "screenshot": 2,
+        "row": 20
+      }
+    },
+    {
+      "id": "sonnenkueste-ahnenbaum-1666-1528",
+      "title": "Ahnenbaum",
+      "category": "Ahnenbaum",
+      "templateId": "natur",
+      "icon": "/Karten/assets/icons/welt/ahnenbaum.png",
+      "territoryId": "baronie-gerstekueste",
+      "house": "Haus Illewod",
+      "x": 1666,
+      "y": 1528,
+      "source": {
+        "screenshot": 2,
+        "row": 21
+      }
+    },
+    {
+      "id": "sonnenkueste-llysbron",
+      "title": "Llysbron",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung.png",
+      "territoryId": "herrschaft-llwynog",
+      "house": "Haus Llwynog",
+      "x": 2175,
+      "y": 2178,
+      "source": {
+        "screenshot": 2,
+        "row": 22
+      }
+    },
+    {
+      "id": "sonnenkueste-bronmellyn",
+      "title": "Bronmellyn",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung.png",
+      "territoryId": "herrschaft-teyrngarch",
+      "house": "Haus Teyrngarch",
+      "x": 1538,
+      "y": 2733,
+      "source": {
+        "screenshot": 2,
+        "row": 23
+      }
+    },
+    {
+      "id": "sonnenkueste-llysgwaer",
+      "title": "Llysgwaer",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung.png",
+      "territoryId": "herrschaft-llwynog",
+      "house": "Haus Llwynog",
+      "x": 1243,
+      "y": 1894,
+      "source": {
+        "screenshot": 2,
+        "row": 24
+      }
+    },
+    {
+      "id": "sonnenkueste-dun-afalla",
+      "title": "Dun Afalla",
+      "category": "Siedlungsruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/antike-ruine.png",
+      "territoryId": "herrschaft-loewenberg",
+      "house": "Haus Illwath",
+      "x": 3251,
+      "y": 3173,
+      "source": {
+        "screenshot": 2,
+        "row": 25
+      }
+    },
+    {
+      "id": "sonnenkueste-teyrngarch-brauerei-bragmellyn",
+      "title": "Teyrngarch Brauerei – Bragmellyn",
+      "category": "Brauersiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/brauersiedlung.png",
+      "territoryId": "herrschaft-teyrngarch",
+      "house": "Haus Teyrngarch",
+      "x": 1375,
+      "y": 2141,
+      "source": {
+        "screenshot": 3,
+        "row": 1,
+        "territoryConfirmation": "Vom Nutzer am 19.10.2026 als Exklave der Teyrngarch bestätigt."
+      },
+      "exclave": true
+    },
+    {
+      "id": "sonnenkueste-gallochfaen",
+      "title": "Gallochfaen",
+      "category": "Dorf",
+      "templateId": "siedlung",
+      "icon": "/Karten/Cenyr/sonnenkueste/Symbole/familienhof.png",
+      "territoryId": "ritterhaus-grianlaoch",
+      "house": "Haus Grianlaoch",
+      "x": 910,
+      "y": 2606,
+      "source": {
+        "screenshot": 3,
+        "row": 2
+      }
+    },
+    {
+      "id": "sonnenkueste-castell-caerthyn",
+      "title": "Castell Caerthyn",
+      "category": "Burgsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/burgsiedlung.png",
+      "territoryId": "herrschaft-blach",
+      "house": "Haus Blach",
+      "x": 1041,
+      "y": 595,
+      "source": {
+        "screenshot": 3,
+        "row": 3
+      }
+    },
+    {
+      "id": "sonnenkueste-twr-dychwel",
+      "title": "Tŵr Dychwel",
+      "category": "Magierturm",
+      "templateId": "gebaeude",
+      "icon": "/Karten/assets/icons/welt/magierturm.png",
+      "territoryId": "baronie-gerstekueste",
+      "house": "Haus Illewod",
+      "x": 1069,
+      "y": 2907,
+      "source": {
+        "screenshot": 3,
+        "row": 4
+      }
+    },
+    {
+      "id": "sonnenkueste-aviron-bardenstadt",
+      "title": "Aviron – Bardenstadt",
+      "category": "Bardensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bardensiedlung.png",
+      "territoryId": "baronie-gerstekueste",
+      "house": "Haus Illewod",
+      "x": 1922,
+      "y": 2356,
+      "source": {
+        "screenshot": 3,
+        "row": 5
+      }
+    },
+    {
+      "id": "sonnenkueste-teyrngarch-brauerei-braglydd",
+      "title": "Teyrngarch Brauerei – Braglydd",
+      "category": "Brauersiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/brauersiedlung.png",
+      "territoryId": "herrschaft-teyrngarch",
+      "house": "Haus Teyrngarch",
+      "x": 4000,
+      "y": 3087,
+      "source": {
+        "screenshot": 3,
+        "row": 6,
+        "territoryConfirmation": "Vom Nutzer am 19.10.2026 als Exklave der Teyrngarch bestätigt."
+      },
+      "exclave": true
+    },
+    {
+      "id": "sonnenkueste-teyrngarch-taverne-zur-goldhaube",
+      "title": "Teyrngarch Taverne – Zur Goldhaube",
+      "category": "Taverne",
+      "templateId": "gastbetrieb",
+      "icon": "/Karten/assets/icons/welt/taverne.png",
+      "territoryId": "baronie-gerstekueste",
+      "house": "Haus Illewod",
+      "x": 905,
+      "y": 1803,
+      "source": {
+        "screenshot": 3,
+        "row": 7
+      }
+    },
+    {
+      "id": "sonnenkueste-castell-gwaelon",
+      "title": "Castell Gwaelon",
+      "category": "Burgsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/burgsiedlung.png",
+      "territoryId": "herrschaft-teyrngarch",
+      "house": "Haus Teyrngarch",
+      "x": 1687,
+      "y": 3536,
+      "source": {
+        "screenshot": 3,
+        "row": 8
+      }
+    },
+    {
+      "id": "sonnenkueste-melynwyrdd-taverne-zur-letzten-rast",
+      "title": "Melynwyrdd Taverne – Zur Letzten Rast",
+      "category": "Taverne",
+      "templateId": "gastbetrieb",
+      "icon": "/Karten/assets/icons/welt/taverne.png",
+      "territoryId": "baronie-jungferntal",
+      "house": "Haus Morforwyn",
+      "x": 3808,
+      "y": 3541,
+      "source": {
+        "screenshot": 3,
+        "row": 9
+      }
+    },
+    {
+      "id": "sonnenkueste-herberge-zum-alten-weg",
+      "title": "Herberge – Zum alten Weg",
+      "category": "Taverne",
+      "templateId": "gastbetrieb",
+      "icon": "/Karten/assets/icons/welt/taverne.png",
+      "territoryId": "herrschaft-loewenberg",
+      "house": "Haus Illwath",
+      "x": 2863,
+      "y": 3398,
+      "source": {
+        "screenshot": 3,
+        "row": 10
+      }
+    },
+    {
+      "id": "sonnenkueste-teyrngarch-brauerei-bragwynfa",
+      "title": "Teyrngarch Brauerei – Bragwynfa",
+      "category": "Brauersiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/brauersiedlung.png",
+      "territoryId": "herrschaft-teyrngarch",
+      "house": "Haus Teyrngarch",
+      "x": 2427,
+      "y": 2607,
+      "source": {
+        "screenshot": 3,
+        "row": 11,
+        "territoryConfirmation": "Vom Nutzer am 19.10.2026 als Exklave der Teyrngarch bestätigt."
+      },
+      "exclave": true
+    },
+    {
+      "id": "sonnenkueste-rhosmeres-rosser-gwaulderw",
+      "title": "Rhosmeres Rösser – Gwaulderw",
+      "category": "Rosszuchtsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/pferdezuchtsiedlung.png",
+      "territoryId": "baronie-jungferntal",
+      "house": "Haus Morforwyn",
+      "x": 2665,
+      "y": 1977,
+      "source": {
+        "screenshot": 3,
+        "row": 12
+      }
+    },
+    {
+      "id": "sonnenkueste-llwynog-jagdverein-zur-kuhlen-furt",
+      "title": "Llwynog Jagdverein – Zur Kühlen Furt",
+      "category": "Taverne",
+      "templateId": "gastbetrieb",
+      "icon": "/Karten/assets/icons/welt/taverne.png",
+      "territoryId": "baronie-gerstekueste",
+      "house": "Haus Illewod",
+      "x": 1893,
+      "y": 1448,
+      "source": {
+        "screenshot": 3,
+        "row": 13
+      }
+    }
+  ],
+  "unpositionedPlaces": [
+    {
+      "id": "sonnenkueste-hornkluft",
+      "title": "Hornkluft",
+      "category": "Höhle",
+      "templateId": "natur",
+      "icon": "/Karten/assets/icons/welt/h-hle.png",
+      "territoryId": "herrschaft-loewenberg",
+      "house": "Haus Illwath"
+    },
+    {
+      "id": "sonnenkueste-poststation",
+      "title": "Poststation",
+      "category": "Poststation",
+      "templateId": "verwaltung",
+      "icon": "/Karten/assets/icons/welt/poststation.png",
+      "territoryId": "baronie-gerstekueste",
+      "house": "Haus Illewod"
+    }
+  ]
+}

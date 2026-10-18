@@ -1,10 +1,4775 @@
 {
   "schemaVersion": 1,
   "dataPath": "Cenyr/sonnenkueste/data.json",
-  "revision": 0,
-  "updatedAt": "2026-08-01T04:59:40.660Z",
+  "revision": 1,
+  "updatedAt": "2026-10-18T22:13:59.264Z",
   "state": {
-    "pins": [],
+    "pins": [
+      {
+        "id": "sonnenkueste-bronwynn",
+        "title": "Bronwynn",
+        "x": 0.392578125,
+        "y": 0.5648308224252903,
+        "cat": "mmflrqajby8b",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/bauernsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Sonnenküste/Gersteküste/haus-llwynog.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-llwynog&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Sonnenküste/Herrschaft der Llwynog.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Herrschaft der Llwynog/Herrschaft der Llwynog.html",
+        "region": "Sonnenküste",
+        "house": "Haus Llwynog",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Bronwynn"
+          },
+          {
+            "k": "Typ",
+            "v": "Bauernsiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Llwynog"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "Bronwynn ist eine Bauernsiedlung in der Herrschaft Llwynog, die sich auf Landwirtschaft und Viehzucht spezialisiert hat. Die Siedlung nutzt die fruchtbaren Böden für den Anbau von Getreide, Gemüse und die Haltung von Nutztieren, was zur Versorgung der Region beiträgt. Bronwynn ist für die hohe Qualität seiner landwirtschaftlichen Erzeugnisse bekannt und spielt eine wichtige Rolle in der Ernährungssicherheit der Grafschaft.",
+        "secret": false,
+        "dominionId": "herrschaft-llwynog"
+      },
+      {
+        "id": "sonnenkueste-ahnenbaum-3381-3140",
+        "title": "Ahnenbaum",
+        "x": 0.825439453125,
+        "y": 0.2244998765127192,
+        "cat": "location-ahnenbaum",
+        "templateId": "natur",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/ahnenbaum.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Sonnenküste/Löwenberg/haus-illwath.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-illwath&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Sonnenküste/Löwenberg.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Herrschaft Löwenberg/Herrschaft Löwenberg.html",
+        "region": "Sonnenküste",
+        "house": "Haus Illwath",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Ahnenbaum"
+          },
+          {
+            "k": "Typ",
+            "v": "Ahnenbaum"
+          },
+          {
+            "k": "Baumart",
+            "v": ""
+          },
+          {
+            "k": "Alter",
+            "v": ""
+          },
+          {
+            "k": "Verehrte Ahnen",
+            "v": ""
+          },
+          {
+            "k": "Hüter",
+            "v": ""
+          },
+          {
+            "k": "Rituale",
+            "v": ""
+          },
+          {
+            "k": "Magische Einflüsse",
+            "v": ""
+          },
+          {
+            "k": "Überlieferungen",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Illwath"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "herrschaft-loewenberg"
+      },
+      {
+        "id": "sonnenkueste-craithban",
+        "title": "Craithban",
+        "x": 0.581298828125,
+        "y": 0.8281057051123735,
+        "cat": "mmflt1x3v22o",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/bergbausiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Sonnenküste/Jungferntal/haus-morforwyn.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-morforwyn&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Sonnenküste/Jungferntal.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Baronie Jungferntal/Baronie Jungferntal.html",
+        "region": "Sonnenküste",
+        "house": "Haus Morforwyn",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Craithban"
+          },
+          {
+            "k": "Typ",
+            "v": "Bergbausiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Morforwyn"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "Craithban liegt am Fuß des Berges und ist eng mit den Bergbauaktivitäten in der Region verbunden. Die Siedlung dient als Verarbeitungs- und Umschlagplatz für die in den umliegenden Bergen gewonnenen Rohstoffe, insbesondere Erz und Bau- oder Werkstein. Craithban ist bekannt für seine Schmieden und Werkstätten, wo Metalle weiterverarbeitet und Werkzeuge sowie Bauteile hergestellt werden. Zudem fungiert die Siedlung als Handelsknotenpunkt, von dem aus die Rohstoffe in die gesamte Grafschaft transportiert werden.",
+        "secret": false,
+        "dominionId": "baronie-jungferntal"
+      },
+      {
+        "id": "sonnenkueste-mwyncarreg",
+        "title": "Mwyncarreg",
+        "x": 0.54736328125,
+        "y": 0.7372190664361571,
+        "cat": "mmflt1x3v22o",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/bergbausiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Sonnenküste/Jungferntal/haus-morforwyn.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-morforwyn&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Sonnenküste/Jungferntal.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Baronie Jungferntal/Baronie Jungferntal.html",
+        "region": "Sonnenküste",
+        "house": "Haus Morforwyn",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Mwyncarreg"
+          },
+          {
+            "k": "Typ",
+            "v": "Bergbausiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Morforwyn"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "Mwyncarreg ist eine Bergbausiedlung am Berghang, die sich auf den Erzabbau und die Gewinnung von Bau- und Werksteinen spezialisiert hat. Die umliegenden Berge liefern reichhaltige Vorkommen an Eisen und Kupfer, die vor Ort abgebaut und verarbeitet werden, um die Region mit Metallen zu versorgen. Neben dem Erzbergbau betreibt Mwyncarreg einen Steinbruch, in dem hochwertiger Stein wie Schiefer oder Kalkstein für den Bau von Gebäuden und Straßen gewonnen wird. Die Siedlung spielt eine zentrale Rolle in der Versorgung der Grafschaft mit Rohmaterialien für Bau und Handwerk.",
+        "secret": false,
+        "dominionId": "baronie-jungferntal"
+      },
+      {
+        "id": "sonnenkueste-zum-goldenen-kuss",
+        "title": "Zum Goldenen Kuss",
+        "x": 0.86669921875,
+        "y": 0.3516917757470981,
+        "cat": "mmflvj37jbh2",
+        "templateId": "gastbetrieb",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/taverne.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Sonnenküste/Jungferntal/haus-morforwyn.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-morforwyn&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Sonnenküste/Jungferntal.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Baronie Jungferntal/Baronie Jungferntal.html",
+        "region": "Sonnenküste",
+        "house": "Haus Morforwyn",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Zum Goldenen Kuss"
+          },
+          {
+            "k": "Typ",
+            "v": "Taverne"
+          },
+          {
+            "k": "Betreiber",
+            "v": ""
+          },
+          {
+            "k": "Speisen / Getränke",
+            "v": ""
+          },
+          {
+            "k": "Unterkunft",
+            "v": ""
+          },
+          {
+            "k": "Preislage",
+            "v": ""
+          },
+          {
+            "k": "Öffnungszeiten",
+            "v": ""
+          },
+          {
+            "k": "Stammgäste",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Morforwyn"
+          }
+        ],
+        "text": "Zum Goldenen Kuss ist das Hauptquartier der Melynwyrdd Bande, der Diebesgilde des Hauses Teyrngarch. Als räuberischer Arm der Brauereigilde schützt die Gilde die Interessen des Hauses, schaltet Konkurrenten aus und sorgt dafür, dass mächtige Kaufmannsgilden wie die Klingende Münze die Teyrngarch nicht aus dem Geschäft drängen können. Die Taverne fungiert zugleich als Bordell und Treffpunkt der Gilde, wo Gäste das berühmte Nationalbier Cenyrs, die Goldhaube, genießen können. Der zwielichtige Ruf des Ortes zieht jene an, die das Risiko nicht scheuen und ein Interesse an den dunkleren Geschäften der Region haben.",
+        "secret": false,
+        "dominionId": "baronie-jungferntal"
+      },
+      {
+        "id": "sonnenkueste-braichfaen",
+        "title": "Braichfaen",
+        "x": 0.81494140625,
+        "y": 0.3262533959002223,
+        "cat": "mmflt7uj831y",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/waldsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Sonnenküste/Löwenberg/haus-illwath.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-illwath&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Sonnenküste/Löwenberg.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Herrschaft Löwenberg/Herrschaft Löwenberg.html",
+        "region": "Sonnenküste",
+        "house": "Haus Illwath",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Braichfaen"
+          },
+          {
+            "k": "Typ",
+            "v": "Waldsiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Illwath"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "Braichfaen ist eine Waldsiedlung am Rand des Waldes und der Hügel von Löwenberg. Gelegen an der Grenze zwischen dichten Wäldern und offenem Hügelland, ist die Siedlung ein Zentrum für Forstwirtschaft und Wildjagd. Die Bewohner von Braichfaen sind erfahrene Holzfäller und Jäger, die das umliegende Land für die Holzverarbeitung und die Herstellung von hochwertigen Lederwaren nutzen. Die Nähe zur Natur macht die Siedlung auch zu einem beliebten Ort für Reisende, die abseits der größeren Straßen Schutz und Rast suchen.",
+        "secret": false,
+        "dominionId": "herrschaft-loewenberg"
+      },
+      {
+        "id": "sonnenkueste-llyswyth",
+        "title": "Llyswyth",
+        "x": 0.46484375,
+        "y": 0.25710051864657946,
+        "cat": "mmflrqajby8b",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/bauernsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Sonnenküste/Gersteküste/haus-teyrngarch.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-teyrngarch&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Sonnenküste/Herrschaft der Teyrngarch.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Herrschaft der Teyrngarch/Herrschaft der Teyrngarch.html",
+        "region": "Sonnenküste",
+        "house": "Haus Teyrngarch",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Llyswyth"
+          },
+          {
+            "k": "Typ",
+            "v": "Bauernsiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Teyrngarch"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "Llyswyth ist die nördlichste Bauernsiedlung unter der Aufsicht von Tŵr Craithban und spezialisiert sich auf den Anbau von Weizen und Gerste. Ein Teil der Ernte geht an den Grafen, doch ein großer Teil wird an die Brauereigilde der Teyrngarch geliefert, wo die Gerste für die Bierproduktion genutzt wird. Die Felder von Llyswyth sind bekannt für ihre fruchtbaren Böden, die eine wichtige Grundlage für die Braukunst in der Region bilden.",
+        "secret": false,
+        "dominionId": "herrschaft-teyrngarch"
+      },
+      {
+        "id": "sonnenkueste-brynthdar",
+        "title": "Brynthdar",
+        "x": 0.64892578125,
+        "y": 0.13484811064460356,
+        "cat": "mmflsfqh3sft",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/marktsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Sonnenküste/Löwenberg/haus-illwath.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-illwath&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Sonnenküste/Löwenberg.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Herrschaft Löwenberg/Herrschaft Löwenberg.html",
+        "region": "Sonnenküste",
+        "house": "Haus Illwath",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Brynthdar"
+          },
+          {
+            "k": "Typ",
+            "v": "Handelssiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Illwath"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "herrschaft-loewenberg"
+      },
+      {
+        "id": "sonnenkueste-caorthmaen",
+        "title": "Caorthmaen",
+        "x": 0.346435546875,
+        "y": 0.2333909607310447,
+        "cat": "mmflt7uj831y",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/waldsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Sonnenküste/Gersteküste/haus-teyrngarch.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-teyrngarch&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Sonnenküste/Herrschaft der Teyrngarch.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Herrschaft der Teyrngarch/Herrschaft der Teyrngarch.html",
+        "region": "Sonnenküste",
+        "house": "Haus Teyrngarch",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Caorthmaen"
+          },
+          {
+            "k": "Typ",
+            "v": "Waldsiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Teyrngarch"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "Caorthmaen ist eine Waldsiedlung an der nördlichen Hauptstraße, wo sich die Wege nach Osten und Westen gabeln. Die Siedlung ist ein wichtiger Handelsstopp für Reisende und Händler, die die Straßen der Grafschaft nutzen. Neben dem Handel ist Caorthmaen auch für seine Unterhaltungsstätten und Tavernen bekannt, die Rastmöglichkeiten und Vergnügungen bieten. In den umliegenden Wäldern ist die Jagd ein wichtiger Bestandteil des Lebens, und viele Jäger und Waldläufer nutzen die Siedlung als Ausgangspunkt für ihre Streifzüge.",
+        "secret": false,
+        "dominionId": "herrschaft-teyrngarch"
+      },
+      {
+        "id": "sonnenkueste-ffyncairn",
+        "title": "Ffyncairn",
+        "x": 0.60595703125,
+        "y": 0.6137317856260804,
+        "cat": "mmflt7uj831y",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/waldsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Sonnenküste/Jungferntal/haus-morforwyn.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-morforwyn&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Sonnenküste/Jungferntal.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Baronie Jungferntal/Baronie Jungferntal.html",
+        "region": "Sonnenküste",
+        "house": "Haus Morforwyn",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Ffyncairn"
+          },
+          {
+            "k": "Typ",
+            "v": "Waldsiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Morforwyn"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "Ffyncairn ist eine Waldsiedlung in der Baronie Jungferntal, die am Rand eines dichten Waldes liegt. Die Bewohner sind erfahrene Jäger und Sammler, die den Wald für Wild, Beeren und Heilkräuter nutzen, was die Siedlung zu einem wichtigen Versorger für natürliche Ressourcen macht. Die Lage von Ffyncairn bietet zudem Schutz und Abgeschiedenheit, wodurch die Siedlung ein ruhiges Refugium für diejenigen ist, die eng mit der Natur verbunden leben möchten.",
+        "secret": false,
+        "dominionId": "baronie-jungferntal"
+      },
+      {
+        "id": "sonnenkueste-traethmaur",
+        "title": "Traethmaur",
+        "x": 0.125244140625,
+        "y": 0.9138058779945666,
+        "cat": "mmflry5furso",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/hafensiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Sonnenküste/Gersteküste/haus-blach.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-blach&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Sonnenküste/Herrschaft der Blach.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Herrschaft der Blach/Herrschaft der Blach.html",
+        "region": "Sonnenküste",
+        "house": "Haus Blach",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Traethmaur"
+          },
+          {
+            "k": "Typ",
+            "v": "Hafensiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Blach"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "Traethmaur liegt in einer Bucht im Süden, umgeben von Klippen und scharfen Riffen, die die Siedlung von der offenen See trennen. Die Siedlung ist bekannt für die Ernte von Algen und Seetang, die für Medizin, Nahrungsmittel und Dünger genutzt werden, sowie für die Perlenfischerei in den umliegenden Gewässern. Die gefährlichen Riffe bieten reichhaltige Muschelbänke, aus denen wertvolle Perlen gewonnen werden, die Traethmaur zu einem Zentrum für Luxusgüter machen. Die raue Küste und die tückischen Gewässer prägen das Leben und die Wirtschaft der Siedlung.",
+        "secret": false,
+        "dominionId": "herrschaft-blach"
+      },
+      {
+        "id": "sonnenkueste-ffynbraich-2066-3408",
+        "title": "Ffynbraich",
+        "x": 0.50439453125,
+        "y": 0.15831069399851816,
+        "cat": "mmflt7uj831y",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/waldsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Sonnenküste/Gersteküste/haus-teyrngarch.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-teyrngarch&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Sonnenküste/Herrschaft der Teyrngarch.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Herrschaft der Teyrngarch/Herrschaft der Teyrngarch.html",
+        "region": "Sonnenküste",
+        "house": "Haus Teyrngarch",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Ffynbraich"
+          },
+          {
+            "k": "Typ",
+            "v": "Waldsiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Teyrngarch"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "Ffynbraich ist eine Waldsiedlung entlang des Weges, die sich auf den Holzabbau spezialisiert hat. Das Holz aus den umliegenden Wäldern wird vor allem für die Herstellung von Wagen und Holzfässern genutzt, die im Interesse der Brauereigilde der Teyrngarch stehen. Die Siedlung spielt eine wichtige Rolle in der Versorgung der Brauereien mit Fässern für die Bierlagerung und im Handwerk, das für den Transport und Handel in der Region benötigt wird.",
+        "secret": false,
+        "dominionId": "herrschaft-teyrngarch"
+      },
+      {
+        "id": "sonnenkueste-garwlannor",
+        "title": "Garwlannor",
+        "x": 0.2255859375,
+        "y": 0.46159545566806615,
+        "cat": "mmflsfqh3sft",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/marktsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Sonnenküste/Gersteküste/haus-blach.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-blach&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Sonnenküste/Herrschaft der Blach.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Herrschaft der Blach/Herrschaft der Blach.html",
+        "region": "Sonnenküste",
+        "house": "Haus Blach",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Garwlannor"
+          },
+          {
+            "k": "Typ",
+            "v": "Handelssiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Blach"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "Garwlannor liegt direkt unterhalb von Aberon, der Hauptstadt und dem Sitz des Grafen. Die Siedlung ist ein wichtiger Handelsdurchreiseort, an dem Warenströme aus der gesamten Grafschaft zusammenlaufen. Hier werden die Güter der Hafensiedlungen gehandelt, darunter Fisch, Salz, Schiffsausrüstung und landwirtschaftliche Erzeugnisse. Dank seiner Lage nahe der Hauptstadt ist Garwlannor ein lebendiges Handelszentrum, das Kaufleute und Reisende aus nah und fern anzieht und die Wirtschaft der Region fördert.",
+        "secret": false,
+        "dominionId": "herrschaft-blach"
+      },
+      {
+        "id": "sonnenkueste-twr-mwynfaen",
+        "title": "Tŵr Mwynfaen",
+        "x": 0.9150390625,
+        "y": 0.17880958261299085,
+        "cat": "location-turm",
+        "templateId": "militaer",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/turm.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Sonnenküste/Jungferntal/haus-morforwyn.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-morforwyn&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Sonnenküste/Jungferntal.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Baronie Jungferntal/Baronie Jungferntal.html",
+        "region": "Sonnenküste",
+        "house": "Haus Morforwyn",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Tŵr Mwynfaen"
+          },
+          {
+            "k": "Typ",
+            "v": "Turm"
+          },
+          {
+            "k": "Befehlshaber",
+            "v": ""
+          },
+          {
+            "k": "Unterstellung",
+            "v": ""
+          },
+          {
+            "k": "Besatzung",
+            "v": ""
+          },
+          {
+            "k": "Aufgaben",
+            "v": ""
+          },
+          {
+            "k": "Ausrüstung",
+            "v": ""
+          },
+          {
+            "k": "Befestigung",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Morforwyn"
+          }
+        ],
+        "text": "Tŵr Mwynfaen ist ein Wachtturm an der Grenze zur Weidebucht, gelegen am Fluss. Der Turm dient zur Überwachung der Grenze und des umliegenden Waldes, wo die Sprösslinge der Baronesse gerne auf die Jagd gehen. Die strategische Lage ermöglicht eine schnelle Reaktion auf potenzielle Bedrohungen und bietet einen ausgezeichneten Blick auf die Landschaft, um die Sicherheit der Baronie Jungferntal zu gewährleisten.",
+        "secret": false,
+        "dominionId": "baronie-jungferntal"
+      },
+      {
+        "id": "sonnenkueste-caer-llew",
+        "title": "Caer Llew",
+        "x": 0.733154296875,
+        "y": 0.25117312916769574,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Sonnenküste/Löwenberg/haus-illwath.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-illwath&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Sonnenküste/Löwenberg.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Herrschaft Löwenberg/Herrschaft Löwenberg.html",
+        "region": "Sonnenküste",
+        "house": "Haus Illwath",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Caer Llew"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Illwath"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "herrschaft-loewenberg"
+      },
+      {
+        "id": "sonnenkueste-aberon",
+        "title": "Aberon",
+        "x": 0.141357421875,
+        "y": 0.27759940726105214,
+        "cat": "mmflrbzxydg7",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Sonnenküste/haus-illewod.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-illewod&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Sonnenküste/Gersteküste.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Grafschaft Sonnenküste.html",
+        "region": "Sonnenküste",
+        "house": "Haus Illewod",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Aberon"
+          },
+          {
+            "k": "Typ",
+            "v": "Hauptstadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Illewod"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "baronie-gerstekueste"
+      },
+      {
+        "id": "sonnenkueste-twr-garthryn",
+        "title": "Tŵr Garthryn",
+        "x": 0.364013671875,
+        "y": 0.5109903679920969,
+        "cat": "location-turm",
+        "templateId": "militaer",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/turm.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Sonnenküste/Gersteküste/haus-llwynog.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-llwynog&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Sonnenküste/Herrschaft der Llwynog.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Herrschaft der Llwynog/Herrschaft der Llwynog.html",
+        "region": "Sonnenküste",
+        "house": "Haus Llwynog",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Tŵr Garthryn"
+          },
+          {
+            "k": "Typ",
+            "v": "Turm"
+          },
+          {
+            "k": "Befehlshaber",
+            "v": ""
+          },
+          {
+            "k": "Unterstellung",
+            "v": ""
+          },
+          {
+            "k": "Besatzung",
+            "v": ""
+          },
+          {
+            "k": "Aufgaben",
+            "v": ""
+          },
+          {
+            "k": "Ausrüstung",
+            "v": ""
+          },
+          {
+            "k": "Befestigung",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Llwynog"
+          }
+        ],
+        "text": "Tŵr Garthryn ist ein Wachposten und Turm des Hauses Llwynog, der auf einem Hügel liegt und die umliegenden Siedlungen überwacht. Der Turm dient nicht nur als strategischer Beobachtungspunkt, sondern auch als Zentrum für die Zucht und Ausbildung von Jagdhunden, die in den nahe gelegenen Wäldern trainiert werden. Tŵr Garthryn ist somit sowohl ein militärischer Stützpunkt als auch ein wichtiger Ort für das Jagdwesen der Herrschaft, wo Tradition und Schutz eng miteinander verbunden sind.",
+        "secret": false,
+        "dominionId": "herrschaft-llwynog"
+      },
+      {
+        "id": "sonnenkueste-malron",
+        "title": "Malron",
+        "x": 0.503662109375,
+        "y": 0.5507532724129415,
+        "cat": "mmflsfqh3sft",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/marktsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Sonnenküste/Gersteküste/haus-llwynog.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-llwynog&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Sonnenküste/Herrschaft der Llwynog.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Herrschaft der Llwynog/Herrschaft der Llwynog.html",
+        "region": "Sonnenküste",
+        "house": "Haus Llwynog",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Malron"
+          },
+          {
+            "k": "Typ",
+            "v": "Handelssiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Llwynog"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "Malron liegt an der Straße zwischen Nythwaen und Brynthwaul und ist bekannt für die Herstellung von Pfeilen, Bögen und Lederrüstungen. Die Siedlung spielt eine wichtige Rolle bei der Ausrüstung der Jäger und Krieger der Region und versorgt die Grafschaft mit hochwertigen Jagd- und Kampfgeräten. Malron ist für seine geschickten Handwerker und die Verarbeitung von lokalem Leder und Holz bekannt, was die Qualität der produzierten Ausrüstungen sicherstellt.",
+        "secret": false,
+        "dominionId": "herrschaft-llwynog"
+      },
+      {
+        "id": "sonnenkueste-caorthwyll",
+        "title": "Caorthwyll",
+        "x": 0.88916015625,
+        "y": 0.42010372931588047,
+        "cat": "mmflt7uj831y",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/waldsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Sonnenküste/Jungferntal/haus-morforwyn.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-morforwyn&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Sonnenküste/Jungferntal.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Baronie Jungferntal/Baronie Jungferntal.html",
+        "region": "Sonnenküste",
+        "house": "Haus Morforwyn",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Caorthwyll"
+          },
+          {
+            "k": "Typ",
+            "v": "Waldsiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Morforwyn"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "baronie-jungferntal"
+      },
+      {
+        "id": "sonnenkueste-bronwaul",
+        "title": "Bronwaul",
+        "x": 0.79833984375,
+        "y": 0.45863176092862434,
+        "cat": "mmflrqajby8b",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/bauernsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Sonnenküste/Jungferntal/haus-morforwyn.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-morforwyn&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Sonnenküste/Jungferntal.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Baronie Jungferntal/Baronie Jungferntal.html",
+        "region": "Sonnenküste",
+        "house": "Haus Morforwyn",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Bronwaul"
+          },
+          {
+            "k": "Typ",
+            "v": "Bauernsiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Morforwyn"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "Bronwaul ist eine Bauernsiedlung in der Baronie Jungferntal, die eine wichtige Rolle in der Nahrungsversorgung der Region spielt. Die fruchtbaren Felder rund um die Siedlung ermöglichen den Anbau von Getreide, Gemüse und anderen Lebensmitteln, die zur Versorgung der gesamten Baronie beitragen. Bronwaul ist bekannt für seine hochwertigen Erzeugnisse und die effiziente Landwirtschaft, die den Bedarf an Nahrungsmitteln deckt und zur Stabilität der Region beiträgt.",
+        "secret": false,
+        "dominionId": "baronie-jungferntal"
+      },
+      {
+        "id": "sonnenkueste-llysgwaul",
+        "title": "Llysgwaul",
+        "x": 0.660400390625,
+        "y": 0.3665102494443072,
+        "cat": "mmflrqajby8b",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/bauernsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Sonnenküste/Löwenberg/haus-illwath.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-illwath&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Sonnenküste/Löwenberg.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Herrschaft Löwenberg/Herrschaft Löwenberg.html",
+        "region": "Sonnenküste",
+        "house": "Haus Illwath",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Llysgwaul"
+          },
+          {
+            "k": "Typ",
+            "v": "Bauernsiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Illwath"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "Llysgwaul ist eine Bauernsiedlung in der Herrschaft Löwenberg, die sich auf Rinderzucht sowie den Anbau von Getreide und Gemüse spezialisiert hat. Die fruchtbaren Felder und Weiden der Umgebung sorgen für eine reichhaltige Ernte und hochwertige Viehzucht, die die Versorgung der Region sichern. Die Siedlung ist ein wichtiges landwirtschaftliches Zentrum, dessen Produkte nicht nur die umliegenden Ortschaften beliefern, sondern auch zum Handel in der Grafschaft beitragen.",
+        "secret": false,
+        "dominionId": "herrschaft-loewenberg"
+      },
+      {
+        "id": "sonnenkueste-malrynn",
+        "title": "Malrynn",
+        "x": 0.33642578125,
+        "y": 0.41170659422079525,
+        "cat": "mmflsfqh3sft",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/marktsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Sonnenküste/Gersteküste/haus-teyrngarch.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-teyrngarch&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Sonnenküste/Herrschaft der Teyrngarch.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Herrschaft der Teyrngarch/Herrschaft der Teyrngarch.html",
+        "region": "Sonnenküste",
+        "house": "Haus Teyrngarch",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Malrynn"
+          },
+          {
+            "k": "Typ",
+            "v": "Handelssiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Teyrngarch"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "Malrynn liegt an der Hauptstraße nach Osten und ist für seine Tavernen und Unterhaltungsstätten bekannt. Die Siedlung zieht Reisende und Händler gleichermaßen an, die hier Rast machen und das vielfältige Vergnügungsangebot genießen. Besonders berühmt ist Malrynn für seine Kampfarena, in der regelmäßig Schaukämpfe und Wettbewerbe stattfinden. Die Kombination aus Wirtshäusern, Unterhaltung und Kampfgeist macht Malrynn zu einem lebhaften Zentrum des Geschehens in der Region.",
+        "secret": false,
+        "dominionId": "herrschaft-teyrngarch"
+      },
+      {
+        "id": "sonnenkueste-garthfael",
+        "title": "Garthfael",
+        "x": 0.688720703125,
+        "y": 0.6747345023462583,
+        "cat": "mmflt1x3v22o",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/bergbausiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Sonnenküste/Jungferntal/haus-morforwyn.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-morforwyn&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Sonnenküste/Jungferntal.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Baronie Jungferntal/Baronie Jungferntal.html",
+        "region": "Sonnenküste",
+        "house": "Haus Morforwyn",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Garthfael"
+          },
+          {
+            "k": "Typ",
+            "v": "Bergbausiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Morforwyn"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "Garthfael ist eine Bergbausiedlung, die unter einem Wasserfall am Ursprung eines Flusses liegt. Die Siedlung nutzt die Wasserkraft, um Erzwaschen zu betreiben, wobei wertvolle Mineralien und Sedimente aus dem Gestein gelöst werden. Der Wasserfall bietet dafür ideale Bedingungen, um Gold, Silber oder andere Erze zu reinigen. Darüber hinaus wird entlang des Flusses hochwertiger Ton abgebaut, der für die Herstellung von Keramik und Töpferwaren verwendet wird. Garthfael ist daher ein wichtiger Standort für die Mineralienverarbeitung und Töpferei in der Region.",
+        "secret": false,
+        "dominionId": "baronie-jungferntal"
+      },
+      {
+        "id": "sonnenkueste-dammerfelsgrotte",
+        "title": "Dämmerfelsgrotte",
+        "x": 0.780029296875,
+        "y": 0.6786860953321807,
+        "cat": "location-hoehle",
+        "templateId": "natur",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/h-hle.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Sonnenküste/Jungferntal/haus-morforwyn.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-morforwyn&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Sonnenküste/Jungferntal.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Baronie Jungferntal/Baronie Jungferntal.html",
+        "region": "Sonnenküste",
+        "house": "Haus Morforwyn",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Dämmerfelsgrotte"
+          },
+          {
+            "k": "Typ",
+            "v": "Höhle"
+          },
+          {
+            "k": "Gestein",
+            "v": ""
+          },
+          {
+            "k": "Eingänge",
+            "v": ""
+          },
+          {
+            "k": "Ausdehnung / Tiefe",
+            "v": ""
+          },
+          {
+            "k": "Gänge / Kammern",
+            "v": ""
+          },
+          {
+            "k": "Bewohner",
+            "v": ""
+          },
+          {
+            "k": "Wasser / Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Zugang",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Morforwyn"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "baronie-jungferntal"
+      },
+      {
+        "id": "sonnenkueste-bronwellyn",
+        "title": "Bronwellyn",
+        "x": 0.237060546875,
+        "y": 0.7759940726105211,
+        "cat": "mmflrqajby8b",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/bauernsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Sonnenküste/Gersteküste/haus-blach.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-blach&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Sonnenküste/Herrschaft der Blach.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Herrschaft der Blach/Herrschaft der Blach.html",
+        "region": "Sonnenküste",
+        "house": "Haus Blach",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Bronwellyn"
+          },
+          {
+            "k": "Typ",
+            "v": "Bauernsiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Blach"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "Bronwellyn ist eine Bauernsiedlung unter der Herrschaft des Hauses Blach, die sich auf Viehzucht und Landwirtschaft spezialisiert hat. Die fruchtbaren Felder rund um die Siedlung ermöglichen den Anbau verschiedener Gemüsesorten, während die Weiden ideale Bedingungen für die Haltung von Rindern, Schafen und anderen Nutztieren bieten. Bronwellyn spielt eine zentrale Rolle in der Versorgung der Region mit Lebensmitteln und leistet einen wichtigen Beitrag zur Ernährungssicherheit der Grafschaft.",
+        "secret": false,
+        "dominionId": "herrschaft-blach"
+      },
+      {
+        "id": "sonnenkueste-gwaulmarw",
+        "title": "Gwaulmarw",
+        "x": 0.495361328125,
+        "y": 0.353173623116819,
+        "cat": "mmflrqajby8b",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/bauernsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Sonnenküste/Gersteküste/haus-teyrngarch.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-teyrngarch&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Sonnenküste/Herrschaft der Teyrngarch.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Herrschaft der Teyrngarch/Herrschaft der Teyrngarch.html",
+        "region": "Sonnenküste",
+        "house": "Haus Teyrngarch",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Gwaulmarw"
+          },
+          {
+            "k": "Typ",
+            "v": "Bauernsiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Teyrngarch"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "Gwaulmarw liegt weiter südlich unter der Aufsicht von Tŵr Craithban und ist ebenfalls eine Bauernsiedlung, die sich auf den Anbau von Weizen und Gerste konzentriert. Die Erträge aus Gwaulmarw sind wichtig für die Brauereigilde der Teyrngarch, die einen Großteil des Getreides für die Bierherstellung verwendet, während ein Teil der Ernte als Abgabe an den Grafen geht. Die Felder der Siedlung tragen wesentlich zur Versorgung der Brauereien bei und stärken damit die wirtschaftliche Basis der Region.",
+        "secret": false,
+        "dominionId": "herrschaft-teyrngarch"
+      },
+      {
+        "id": "sonnenkueste-garwlynn",
+        "title": "Garwlynn",
+        "x": 0.398681640625,
+        "y": 0.906396641145962,
+        "cat": "mmflsrndeiee",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/br-ckensiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Sonnenküste/Gersteküste/haus-llwynog.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-llwynog&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Sonnenküste/Herrschaft der Llwynog.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Herrschaft der Llwynog/Herrschaft der Llwynog.html",
+        "region": "Sonnenküste",
+        "house": "Haus Llwynog",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Garwlynn"
+          },
+          {
+            "k": "Typ",
+            "v": "Brückensiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Llwynog"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "Garwlynn ist eine Brücken- und Grenzsiedlung im Süden der Herrschaft Llwynog, die den Übergang nach Celtigerns Wacht markiert. Die Siedlung spielt eine wichtige Rolle bei der Überwachung des Grenzverkehrs und dient als Tor zur südlichen Region. Die strategische Lage von Garwlynn macht sie zu einem wichtigen Durchgangspunkt für Handel und Reisen, während die Brücke den Flussübergang erleichtert und die Verbindung zwischen den Regionen stärkt.",
+        "secret": false,
+        "dominionId": "herrschaft-llwynog"
+      },
+      {
+        "id": "sonnenkueste-garwmellyn",
+        "title": "Garwmellyn",
+        "x": 0.81591796875,
+        "y": 0.163003210669301,
+        "cat": "mmflsfqh3sft",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/marktsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Sonnenküste/Löwenberg/haus-illwath.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-illwath&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Sonnenküste/Löwenberg.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Herrschaft Löwenberg/Herrschaft Löwenberg.html",
+        "region": "Sonnenküste",
+        "house": "Haus Illwath",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Garwmellyn"
+          },
+          {
+            "k": "Typ",
+            "v": "Handelssiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Illwath"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "Garwmellyn ist eine strategisch gelegene Siedlung an einer Weggabelung, wo ein Pfad entlang des Flusses nach Westen führt, ein weiterer nach Norden zur Brücke und der dritte nach Süden durch Löwenberg verläuft. Diese Lage macht die Siedlung zu einem wichtigen Verkehrsknotenpunkt innerhalb der Herrschaft. Garwmellyn ist bekannt für seine Jagd- und Lederverarbeitung und bietet Reisenden Rastmöglichkeiten sowie handgefertigte Waren aus der Region. Die Nähe zu den umliegenden Wäldern und der Fluss erleichtern den Handel und den Transport von Gütern, insbesondere Holz und Leder.",
+        "secret": false,
+        "dominionId": "herrschaft-loewenberg"
+      },
+      {
+        "id": "sonnenkueste-caorthlydd",
+        "title": "Caorthlydd",
+        "x": 0.593994140625,
+        "y": 0.25216102741417634,
+        "cat": "mmflt7uj831y",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/waldsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Sonnenküste/Löwenberg/haus-illwath.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-illwath&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Sonnenküste/Löwenberg.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Herrschaft Löwenberg/Herrschaft Löwenberg.html",
+        "region": "Sonnenküste",
+        "house": "Haus Illwath",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Caorthlydd"
+          },
+          {
+            "k": "Typ",
+            "v": "Waldsiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Illwath"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "Caorthlydd ist eine südlich gelegene Waldsiedlung in der Herrschaft Löwenberg, umgeben von üppigen Wäldern. Die Siedlung ist auf Forstwirtschaft und Lederverarbeitung spezialisiert und versorgt die Region mit hochwertigem Bauholz, Jagdbeute und handgefertigten Lederwaren. Dank der südlichen Lage dient Caorthlydd als wichtiger Außenposten, der den Zugang zu den dichten Wäldern und den Handelsrouten der Grafschaft sichert. Viele der Bewohner sind geschickte Jäger und Handwerker, die eng mit der Natur verbunden leben.",
+        "secret": false,
+        "dominionId": "herrschaft-loewenberg"
+      },
+      {
+        "id": "sonnenkueste-ahnenbaum-2789-3181",
+        "title": "Ahnenbaum",
+        "x": 0.680908203125,
+        "y": 0.21437391948629292,
+        "cat": "location-ahnenbaum",
+        "templateId": "natur",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/ahnenbaum.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Sonnenküste/Löwenberg/haus-illwath.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-illwath&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Sonnenküste/Löwenberg.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Herrschaft Löwenberg/Herrschaft Löwenberg.html",
+        "region": "Sonnenküste",
+        "house": "Haus Illwath",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Ahnenbaum"
+          },
+          {
+            "k": "Typ",
+            "v": "Ahnenbaum"
+          },
+          {
+            "k": "Baumart",
+            "v": ""
+          },
+          {
+            "k": "Alter",
+            "v": ""
+          },
+          {
+            "k": "Verehrte Ahnen",
+            "v": ""
+          },
+          {
+            "k": "Hüter",
+            "v": ""
+          },
+          {
+            "k": "Rituale",
+            "v": ""
+          },
+          {
+            "k": "Magische Einflüsse",
+            "v": ""
+          },
+          {
+            "k": "Überlieferungen",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Illwath"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "herrschaft-loewenberg"
+      },
+      {
+        "id": "sonnenkueste-glasdrann",
+        "title": "Glasdrann",
+        "x": 0.161865234375,
+        "y": 0.7201778216843665,
+        "cat": "mmflry5furso",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/hafensiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Sonnenküste/Gersteküste/haus-blach.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-blach&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Sonnenküste/Herrschaft der Blach.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Herrschaft der Blach/Herrschaft der Blach.html",
+        "region": "Sonnenküste",
+        "house": "Haus Blach",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Glasdrann"
+          },
+          {
+            "k": "Typ",
+            "v": "Hafensiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Blach"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "Glasdrann liegt südlich von Traethglas und nördlich von Morlithon und ist eine Hafensiedlung, die sich auf Schiffsbau und Holzverarbeitung spezialisiert hat. Die umliegenden Wälder liefern hochwertiges Holz, das in den örtlichen Werften zu Schiffen und Booten verarbeitet wird. Die Siedlung spielt eine zentrale Rolle in der maritimen Wirtschaft der Region, indem sie nicht nur den Bedarf an Schiffen deckt, sondern auch Ersatzteile und Ausrüstungen für die Seefahrt bereitstellt. Glasdrann ist bekannt für seine geschickten Handwerker, die Tradition und moderne Techniken im Schiffsbau vereinen.",
+        "secret": false,
+        "dominionId": "herrschaft-blach"
+      },
+      {
+        "id": "sonnenkueste-morcarreg",
+        "title": "Morcarreg",
+        "x": 0.24560546875,
+        "y": 0.21017535193875025,
+        "cat": "mmflry5furso",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/hafensiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Sonnenküste/Gersteküste/haus-teyrngarch.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-teyrngarch&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Sonnenküste/Herrschaft der Teyrngarch.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Herrschaft der Teyrngarch/Herrschaft der Teyrngarch.html",
+        "region": "Sonnenküste",
+        "house": "Haus Teyrngarch",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Morcarreg"
+          },
+          {
+            "k": "Typ",
+            "v": "Hafensiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Teyrngarch"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "Morcarreg ist eine Hafensiedlung, die eng mit dem Export der Brauereigilde der Teyrngarch verbunden ist. Die Siedlung ist bekannt für ihre zahlreichen Lagerhallen, in denen Alkohol wie Bier und andere Spirituosen reifen und gelagert werden, bevor sie für den Export vorbereitet werden. Dank seiner Lagerkapazitäten spielt Morcarreg eine zentrale Rolle in der Versorgung der Region und darüber hinaus, indem es die Qualität der gelagerten Produkte sicherstellt und den Handel der Teyrngarch unterstützt.",
+        "secret": false,
+        "dominionId": "herrschaft-teyrngarch"
+      },
+      {
+        "id": "sonnenkueste-echoklamm",
+        "title": "Echoklamm",
+        "x": 0.923583984375,
+        "y": 0.6139787601877007,
+        "cat": "location-hoehle",
+        "templateId": "natur",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/h-hle.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Sonnenküste/Jungferntal/haus-morforwyn.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-morforwyn&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Sonnenküste/Jungferntal.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Baronie Jungferntal/Baronie Jungferntal.html",
+        "region": "Sonnenküste",
+        "house": "Haus Morforwyn",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Echoklamm"
+          },
+          {
+            "k": "Typ",
+            "v": "Höhle"
+          },
+          {
+            "k": "Gestein",
+            "v": ""
+          },
+          {
+            "k": "Eingänge",
+            "v": ""
+          },
+          {
+            "k": "Ausdehnung / Tiefe",
+            "v": ""
+          },
+          {
+            "k": "Gänge / Kammern",
+            "v": ""
+          },
+          {
+            "k": "Bewohner",
+            "v": ""
+          },
+          {
+            "k": "Wasser / Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Zugang",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Morforwyn"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "baronie-jungferntal"
+      },
+      {
+        "id": "sonnenkueste-morvyneth",
+        "title": "Morvyneth",
+        "x": 0.143310546875,
+        "y": 0.5035811311434922,
+        "cat": "mmflry5furso",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/hafensiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Sonnenküste/Gersteküste/haus-blach.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-blach&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Sonnenküste/Herrschaft der Blach.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Herrschaft der Blach/Herrschaft der Blach.html",
+        "region": "Sonnenküste",
+        "house": "Haus Blach",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Morvyneth"
+          },
+          {
+            "k": "Typ",
+            "v": "Hafensiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Blach"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "Morvyneth ist eine Hafensiedlung in der Herrschaft des Hauses Blach und spielt eine zentrale Rolle im Handel und Fischfang der Grafschaft. Der Hafen dient als wichtiger Umschlagplatz für Waren, die über See geliefert oder exportiert werden, sowie für den täglichen Fischfang, der die Region mit frischen Meeresfrüchten versorgt. Dank ihrer Lage ist die Siedlung ein wirtschaftlicher Knotenpunkt, der den Seehandel der Grafschaft stärkt und Schiffe aus nah und fern anzieht. Morvyneth ist auch bekannt für ihre Werften, wo Schiffe gewartet und repariert werden.",
+        "secret": false,
+        "dominionId": "herrschaft-blach"
+      },
+      {
+        "id": "sonnenkueste-nythlyn",
+        "title": "Nythlyn",
+        "x": 0.928955078125,
+        "y": 0.29513460113608303,
+        "cat": "location-flusssiedlung",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/flusssiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Sonnenküste/Jungferntal/haus-morforwyn.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-morforwyn&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Sonnenküste/Jungferntal.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Baronie Jungferntal/Baronie Jungferntal.html",
+        "region": "Sonnenküste",
+        "house": "Haus Morforwyn",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Nythlyn"
+          },
+          {
+            "k": "Typ",
+            "v": "Flusssiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": "Papierherstellung"
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Morforwyn"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "Nythlyn ist eine Flusssiedlung in der Baronie Jungferntal, die sich auf die Papierherstellung spezialisiert hat. Die Siedlung nutzt die Wasserkraft des Flusses, um Papiermühlen anzutreiben und hochwertiges Papier für die gesamte Grafschaft zu produzieren. Dank der umliegenden Wälder verfügt Nythlyn über reichlich Rohstoffe zur Papierproduktion und spielt eine zentrale Rolle in der Versorgung der Region mit Schreibmaterialien und Dokumentationsmitteln.",
+        "secret": false,
+        "dominionId": "baronie-jungferntal"
+      },
+      {
+        "id": "sonnenkueste-ffynbraich-1179-1369",
+        "title": "Ffynbraich",
+        "x": 0.287841796875,
+        "y": 0.6618918251420104,
+        "cat": "mmflt7uj831y",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/waldsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Sonnenküste/Gersteküste/haus-llwynog.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-llwynog&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Sonnenküste/Herrschaft der Llwynog.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Herrschaft der Llwynog/Herrschaft der Llwynog.html",
+        "region": "Sonnenküste",
+        "house": "Haus Llwynog",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Ffynbraich"
+          },
+          {
+            "k": "Typ",
+            "v": "Waldsiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Llwynog"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "Ffynbraich liegt an der Straße nach Süden, umgeben von zwei dichten Wäldern im Osten und Westen. Die Siedlung dient als Jagdrevier des Hauses Llwynog, wo die Wildjagd im Mittelpunkt steht. Ffynbraich ist auch ein wichtiges Zentrum für die Zucht und Ausbildung von Jagdhunden, die in den umliegenden Wäldern trainiert werden. Die enge Verbindung zur Jagdtradition macht die Siedlung zu einem bedeutenden Ort für das Jagdwesen der Herrschaft.",
+        "secret": false,
+        "dominionId": "herrschaft-llwynog"
+      },
+      {
+        "id": "sonnenkueste-gwaulbryn",
+        "title": "Gwaulbryn",
+        "x": 0.419677734375,
+        "y": 0.4956779451716473,
+        "cat": "mmflrqajby8b",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/bauernsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Sonnenküste/Gersteküste/haus-llwynog.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-llwynog&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Sonnenküste/Herrschaft der Llwynog.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Herrschaft der Llwynog/Herrschaft der Llwynog.html",
+        "region": "Sonnenküste",
+        "house": "Haus Llwynog",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Gwaulbryn"
+          },
+          {
+            "k": "Typ",
+            "v": "Bauernsiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Llwynog"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "Gwaulbryn ist eine Bauernsiedlung in der Herrschaft Llwynog, die sich auf Ackerbau und Viehzucht konzentriert. Die fruchtbaren Böden ermöglichen den Anbau von Getreide und Gemüse, während die umliegenden Weiden Platz für die Haltung von Rindern und Schafen bieten. Die Siedlung spielt eine wichtige Rolle in der Versorgung der Region mit Nahrungsmitteln und trägt zur Stabilität der landwirtschaftlichen Wirtschaft in der Grafschaft bei.",
+        "secret": false,
+        "dominionId": "herrschaft-llwynog"
+      },
+      {
+        "id": "sonnenkueste-traethglas",
+        "title": "Traethglas",
+        "x": 0.14599609375,
+        "y": 0.6078043961471968,
+        "cat": "mmflry5furso",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/hafensiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Sonnenküste/Gersteküste/haus-blach.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-blach&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Sonnenküste/Herrschaft der Blach.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Herrschaft der Blach/Herrschaft der Blach.html",
+        "region": "Sonnenküste",
+        "house": "Haus Blach",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Traethglas"
+          },
+          {
+            "k": "Typ",
+            "v": "Hafensiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Blach"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "Traethglas liegt direkt südlich von Morvyneth und ist eine Hafensiedlung, die für ihren Fischfang und die Muschelzucht bekannt ist. Die geschützten Gewässer in der Umgebung eignen sich hervorragend für die Aquakultur, insbesondere die Zucht von Austern und anderen Meeresfrüchten. Die Siedlung spielt eine wichtige Rolle bei der Versorgung der Grafschaft mit frischen Meeresprodukten und ergänzt die Handelsaktivitäten von Morvyneth durch ihre Spezialitäten im maritimen Handwerk, wie Netzflickerei und Bootsbau.",
+        "secret": false,
+        "dominionId": "herrschaft-blach"
+      },
+      {
+        "id": "sonnenkueste-carngol",
+        "title": "Carngol",
+        "x": 0.760009765625,
+        "y": 0.5361817732773524,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Sonnenküste/Jungferntal/haus-morforwyn.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-morforwyn&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Sonnenküste/Jungferntal.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Baronie Jungferntal/Baronie Jungferntal.html",
+        "region": "Sonnenküste",
+        "house": "Haus Morforwyn",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Carngol"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Morforwyn"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "baronie-jungferntal"
+      },
+      {
+        "id": "sonnenkueste-malgarth",
+        "title": "Malgarth",
+        "x": 0.7763671875,
+        "y": 0.4060261793035317,
+        "cat": "mmflsfqh3sft",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/marktsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Sonnenküste/Jungferntal/haus-morforwyn.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-morforwyn&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Sonnenküste/Jungferntal.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Baronie Jungferntal/Baronie Jungferntal.html",
+        "region": "Sonnenküste",
+        "house": "Haus Morforwyn",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Malgarth"
+          },
+          {
+            "k": "Typ",
+            "v": "Handelssiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Morforwyn"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "Malgarth ist eine Siedlung an der Weggabelung einer wichtigen Handelsroute in der Baronie Jungferntal. Die Stadt ist bekannt für die Herstellung von Kutschen, Wagen und landwirtschaftlichen Geräten wie Pflügen und Bauernwerkzeugen. Malgarth spielt eine entscheidende Rolle für die Agrarkultur des Königreichs, da hier innovative Technologie für die Landwirtschaft entwickelt und produziert wird, die den regionalen Handel und die Versorgung der Bauern unterstützt.",
+        "secret": false,
+        "dominionId": "baronie-jungferntal"
+      },
+      {
+        "id": "sonnenkueste-brynthpont",
+        "title": "Brynthpont",
+        "x": 0.497314453125,
+        "y": 0.06470733514448013,
+        "cat": "mmflsfqh3sft",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/marktsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Sonnenküste/Gersteküste/haus-teyrngarch.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-teyrngarch&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Sonnenküste/Herrschaft der Teyrngarch.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Herrschaft der Teyrngarch/Herrschaft der Teyrngarch.html",
+        "region": "Sonnenküste",
+        "house": "Haus Teyrngarch",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Brynthpont"
+          },
+          {
+            "k": "Typ",
+            "v": "Handelssiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Teyrngarch"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "Brynthpont ist eine Grenzsiedlung zur nördlichen Grafschaft Weidebucht und gehört dem Haus Teyrngarch. Die Siedlung dient als strategischer Stützpunkt, von dem aus die Diebesgilde der Teyrngarch die Ein- und Ausgänge in den Norden überwacht. Nichts dringt von Norden in die Grafschaft ein, ohne dass die Teyrngarch davon wissen. Brynthpont spielt somit eine wichtige Rolle bei der Grenzkontrolle und der Sicherstellung der Interessen des Hauses.",
+        "secret": false,
+        "dominionId": "herrschaft-teyrngarch"
+      },
+      {
+        "id": "sonnenkueste-morlithon",
+        "title": "Morlithon",
+        "x": 0.121337890625,
+        "y": 0.7962459866633737,
+        "cat": "mmflry5furso",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/hafensiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Sonnenküste/Gersteküste/haus-blach.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-blach&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Sonnenküste/Herrschaft der Blach.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Herrschaft der Blach/Herrschaft der Blach.html",
+        "region": "Sonnenküste",
+        "house": "Haus Blach",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Morlithon"
+          },
+          {
+            "k": "Typ",
+            "v": "Hafensiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Blach"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "Morlithon ist eine Hafensiedlung in der Herrschaft des Hauses Blach, die sich auf Salzgewinnung, Segel- und Tauwerkherstellung sowie die Produktion von Schiffsausrüstung spezialisiert hat. Die Salinen der Siedlung liefern hochwertiges Meersalz, das für die Konservierung von Fisch und anderen Lebensmitteln in der Region von großer Bedeutung ist. Darüber hinaus werden hier Segel und Tauwerk für die lokale Schifffahrt gefertigt, und es entstehen wetterfeste Kleidung und Rüstungen für Seeleute. Morlithon ist damit ein wichtiges Versorgungszentrum für die maritime Wirtschaft der Grafschaft.",
+        "secret": false,
+        "dominionId": "herrschaft-blach"
+      },
+      {
+        "id": "sonnenkueste-brynthwaul",
+        "title": "Brynthwaul",
+        "x": 0.36181640625,
+        "y": 0.7421585576685601,
+        "cat": "mmflsfqh3sft",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/marktsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Sonnenküste/Gersteküste/haus-llwynog.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-llwynog&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Sonnenküste/Herrschaft der Llwynog.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Herrschaft der Llwynog/Herrschaft der Llwynog.html",
+        "region": "Sonnenküste",
+        "house": "Haus Llwynog",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Brynthwaul"
+          },
+          {
+            "k": "Typ",
+            "v": "Handelssiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Llwynog"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "Brynthwaul liegt an einer Weggabelung und ist ein vielseitiges Zentrum der Herrschaft Llwynog. Die Siedlung ist bekannt für ihre Jagdvereine und Hundezucht, die tief in der örtlichen Tradition verwurzelt sind. Hier werden Jagdhunde gezüchtet und trainiert, um den Anforderungen der Jäger gerecht zu werden. Darüber hinaus spielt die Viehzucht eine wichtige Rolle, und der Handel blüht dank der strategischen Lage an der Weggabelung. Brynthwaul ist somit ein bedeutender Knotenpunkt für Jagd, Landwirtschaft und Wirtschaft.",
+        "secret": false,
+        "dominionId": "herrschaft-llwynog"
+      },
+      {
+        "id": "sonnenkueste-teyrngarch-brauerei-bragwaul",
+        "title": "Teyrngarch Brauerei – Bragwaul",
+        "x": 0.32080078125,
+        "y": 0.7910595208693505,
+        "cat": "location-brauersiedlung",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/brauersiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Sonnenküste/Gersteküste/haus-teyrngarch.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-teyrngarch&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Sonnenküste/Herrschaft der Teyrngarch.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Herrschaft der Teyrngarch/Herrschaft der Teyrngarch.html",
+        "region": "Sonnenküste",
+        "house": "Haus Teyrngarch",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Teyrngarch Brauerei – Bragwaul"
+          },
+          {
+            "k": "Typ",
+            "v": "Brauersiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Teyrngarch"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Betreiber",
+            "v": "Haus Teyrngarch"
+          },
+          {
+            "k": "Gebietsform",
+            "v": "Exklave der Herrschaft Teyrngarch"
+          },
+          {
+            "k": "Lage",
+            "v": "Gerstenküste"
+          }
+        ],
+        "text": "Teyrngarch Brauerei - Bragwaul ist eine weitere gepachtete Siedlung der Teyrngarcher Brauerzunft, die sich auf den Anbau von Hopfen spezialisiert hat. Der hier geerntete Hopfen deckt den Bedarf der verschiedenen Brauereien in der Region und ist essenziell für die Bierproduktion der Gilde. Bragwaul spielt somit eine zentrale Rolle in der Versorgungskette der Brauereien und trägt zur Qualität der Teyrngarch-Biere bei.",
+        "secret": false,
+        "dominionId": "herrschaft-teyrngarch"
+      },
+      {
+        "id": "sonnenkueste-nythwaen",
+        "title": "Nythwaen",
+        "x": 0.633056640625,
+        "y": 0.4462830328476167,
+        "cat": "mmflsfqh3sft",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/marktsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Sonnenküste/Gersteküste/haus-llwynog.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-llwynog&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Sonnenküste/Herrschaft der Llwynog.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Herrschaft der Llwynog/Herrschaft der Llwynog.html",
+        "region": "Sonnenküste",
+        "house": "Haus Llwynog",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Nythwaen"
+          },
+          {
+            "k": "Typ",
+            "v": "Handelssiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Llwynog"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "Nythwaen liegt im Osten an der wichtigsten Kreuzung der Grafschaft und dient als bedeutender Handelsknotenpunkt. Die Siedlung verbindet die wichtigsten Straßen der Region und fördert so den Austausch von Waren und Gütern innerhalb der Grafschaft. Nythwaen ist außerdem berühmt für seine prächtige Rinderzucht, die hochwertige Viehbestände liefert und zur wirtschaftlichen Stärke der Siedlung beiträgt. Die Kombination aus Handel und Landwirtschaft macht Nythwaen zu einem zentralen Ort für die Versorgung der Region.",
+        "secret": false,
+        "dominionId": "herrschaft-llwynog"
+      },
+      {
+        "id": "sonnenkueste-twr-craithban",
+        "title": "Tŵr Craithban",
+        "x": 0.44970703125,
+        "y": 0.3082242529019511,
+        "cat": "location-turm",
+        "templateId": "militaer",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/turm.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Sonnenküste/Gersteküste/haus-teyrngarch.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-teyrngarch&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Sonnenküste/Herrschaft der Teyrngarch.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Herrschaft der Teyrngarch/Herrschaft der Teyrngarch.html",
+        "region": "Sonnenküste",
+        "house": "Haus Teyrngarch",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Tŵr Craithban"
+          },
+          {
+            "k": "Typ",
+            "v": "Turm"
+          },
+          {
+            "k": "Befehlshaber",
+            "v": ""
+          },
+          {
+            "k": "Unterstellung",
+            "v": ""
+          },
+          {
+            "k": "Besatzung",
+            "v": ""
+          },
+          {
+            "k": "Aufgaben",
+            "v": ""
+          },
+          {
+            "k": "Ausrüstung",
+            "v": ""
+          },
+          {
+            "k": "Befestigung",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Teyrngarch"
+          }
+        ],
+        "text": "Tŵr Craithban ist ein Wachtturm des Hauses Teyrngarch, der auf einem Hügel thront und einen weiten Blick über die umliegenden Ländereien bietet. Der Turm überwacht die drei Bauernsiedlungen Llyswyth, Gwaulmarw und Bronmellyn, um die Sicherheit der Region zu gewährleisten. Als Teil der ritterlichen Herrschaft der Teyrngarch dient Tŵr Craithban nicht nur der Verteidigung, sondern auch der Verwaltung und dem Schutz der wirtschaftlich wichtigen Landwirtschaftsgebiete.",
+        "secret": false,
+        "dominionId": "herrschaft-teyrngarch"
+      },
+      {
+        "id": "sonnenkueste-ffynbrae",
+        "title": "Ffynbrae",
+        "x": 0.595703125,
+        "y": 0.18868856507779697,
+        "cat": "mmflt7uj831y",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/waldsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Sonnenküste/Löwenberg/haus-illwath.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-illwath&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Sonnenküste/Löwenberg.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Herrschaft Löwenberg/Herrschaft Löwenberg.html",
+        "region": "Sonnenküste",
+        "house": "Haus Illwath",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Ffynbrae"
+          },
+          {
+            "k": "Typ",
+            "v": "Waldsiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Illwath"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "Ffynbrae ist eine westlich gelegene Waldsiedlung in der Herrschaft Löwenberg, eingebettet in die dichten Wälder der Region. Die Siedlung ist auf Holzernte und Wildjagd spezialisiert und liefert wichtige Rohstoffe wie Bauholz und Tierfelle an die umliegenden Ortschaften. Ffynbrae ist bekannt für seine enge Verbundenheit mit dem Wald, und viele der Bewohner sind erfahrene Jäger, Förster oder Handwerker, die ihre Kenntnisse von Generation zu Generation weitergeben.",
+        "secret": false,
+        "dominionId": "herrschaft-loewenberg"
+      },
+      {
+        "id": "sonnenkueste-dunkelgrundhohle",
+        "title": "Dunkelgrundhöhle",
+        "x": 0.67578125,
+        "y": 0.8105705112373426,
+        "cat": "location-hoehle",
+        "templateId": "natur",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/h-hle.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Sonnenküste/Jungferntal/haus-morforwyn.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-morforwyn&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Sonnenküste/Jungferntal.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Baronie Jungferntal/Baronie Jungferntal.html",
+        "region": "Sonnenküste",
+        "house": "Haus Morforwyn",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Dunkelgrundhöhle"
+          },
+          {
+            "k": "Typ",
+            "v": "Höhle"
+          },
+          {
+            "k": "Gestein",
+            "v": ""
+          },
+          {
+            "k": "Eingänge",
+            "v": ""
+          },
+          {
+            "k": "Ausdehnung / Tiefe",
+            "v": ""
+          },
+          {
+            "k": "Gänge / Kammern",
+            "v": ""
+          },
+          {
+            "k": "Bewohner",
+            "v": ""
+          },
+          {
+            "k": "Wasser / Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Zugang",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Morforwyn"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "baronie-jungferntal"
+      },
+      {
+        "id": "sonnenkueste-traethwych",
+        "title": "Traethwych",
+        "x": 0.316162109375,
+        "y": 0.1266979501111386,
+        "cat": "mmflry5furso",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/hafensiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Sonnenküste/Gersteküste/haus-teyrngarch.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-teyrngarch&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Sonnenküste/Herrschaft der Teyrngarch.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Herrschaft der Teyrngarch/Herrschaft der Teyrngarch.html",
+        "region": "Sonnenküste",
+        "house": "Haus Teyrngarch",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Traethwych"
+          },
+          {
+            "k": "Typ",
+            "v": "Hafensiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Teyrngarch"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "Traethwych ist eine Hafensiedlung, die eine zentrale Rolle im Export der Güter des Hauses Teyrngarch spielt. Der Hafen dient als Handelsdrehscheibe für die Brauereigilde, über die das berühmte Bier und andere Produkte in die umliegenden Regionen und darüber hinaus verschifft werden. Durch die Lage am Meer ist Traethwych ein wichtiger Knotenpunkt für den maritimen Handel, der die wirtschaftlichen Interessen der Teyrngarch unterstützt und den Absatz ihrer Waren sichert.",
+        "secret": false,
+        "dominionId": "herrschaft-teyrngarch"
+      },
+      {
+        "id": "sonnenkueste-carregwyn",
+        "title": "Carregwyn",
+        "x": 0.935791015625,
+        "y": 0.49197332674734506,
+        "cat": "mmflt1x3v22o",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/bergbausiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Sonnenküste/Jungferntal/haus-morforwyn.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-morforwyn&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Sonnenküste/Jungferntal.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Baronie Jungferntal/Baronie Jungferntal.html",
+        "region": "Sonnenküste",
+        "house": "Haus Morforwyn",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Carregwyn"
+          },
+          {
+            "k": "Typ",
+            "v": "Bergbausiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Morforwyn"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "Carregwyn ist eine Bergbausiedlung in der Baronie Jungferntal, die neben dem Abbau von Erz auch für ihren hochwertigen Tonabbau bekannt ist. Der in der Umgebung gewonnene Ton wird für die Herstellung von Keramik, Dachziegeln und Bauziegeln genutzt, wodurch Carregwyn zu einem wichtigen Zentrum für Töpferkunst und Bauwesen wird. Die Siedlung ist berühmt für ihre handgefertigten Tonwaren, die in der ganzen Region geschätzt werden, und verbindet traditionelle Handwerkskunst mit den natürlichen Ressourcen der Umgebung.",
+        "secret": false,
+        "dominionId": "baronie-jungferntal"
+      },
+      {
+        "id": "sonnenkueste-ahnenbaum-1666-1528",
+        "title": "Ahnenbaum",
+        "x": 0.40673828125,
+        "y": 0.6226228698444061,
+        "cat": "location-ahnenbaum",
+        "templateId": "natur",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/ahnenbaum.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Sonnenküste/haus-illewod.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-illewod&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Sonnenküste/Gersteküste.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Grafschaft Sonnenküste.html",
+        "region": "Sonnenküste",
+        "house": "Haus Illewod",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Ahnenbaum"
+          },
+          {
+            "k": "Typ",
+            "v": "Ahnenbaum"
+          },
+          {
+            "k": "Baumart",
+            "v": ""
+          },
+          {
+            "k": "Alter",
+            "v": ""
+          },
+          {
+            "k": "Verehrte Ahnen",
+            "v": ""
+          },
+          {
+            "k": "Hüter",
+            "v": ""
+          },
+          {
+            "k": "Rituale",
+            "v": ""
+          },
+          {
+            "k": "Magische Einflüsse",
+            "v": ""
+          },
+          {
+            "k": "Überlieferungen",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Illewod"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "baronie-gerstekueste"
+      },
+      {
+        "id": "sonnenkueste-llysbron",
+        "title": "Llysbron",
+        "x": 0.531005859375,
+        "y": 0.46208940479130645,
+        "cat": "mmflrqajby8b",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/bauernsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Sonnenküste/Gersteküste/haus-llwynog.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-llwynog&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Sonnenküste/Herrschaft der Llwynog.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Herrschaft der Llwynog/Herrschaft der Llwynog.html",
+        "region": "Sonnenküste",
+        "house": "Haus Llwynog",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Llysbron"
+          },
+          {
+            "k": "Typ",
+            "v": "Bauernsiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Llwynog"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "Llysbron ist eine Bauernsiedlung in der Herrschaft Llwynog, die sich auf Landwirtschaft und Viehzucht spezialisiert hat. Die fruchtbaren Felder und Weiden der Umgebung ermöglichen den Anbau von Getreide, Gemüse und die Haltung von Nutztieren, was die Siedlung zu einem wichtigen Versorgungszentrum für die Region macht. Die Bewohner von Llysbron sind für ihre traditionellen Anbaumethoden und die hohe Qualität ihrer landwirtschaftlichen Erzeugnisse bekannt, die einen wichtigen Beitrag zur Ernährungssicherheit der Grafschaft leisten.",
+        "secret": false,
+        "dominionId": "herrschaft-llwynog"
+      },
+      {
+        "id": "sonnenkueste-bronmellyn",
+        "title": "Bronmellyn",
+        "x": 0.37548828125,
+        "y": 0.32501852309212154,
+        "cat": "mmflrqajby8b",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/bauernsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Sonnenküste/Gersteküste/haus-teyrngarch.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-teyrngarch&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Sonnenküste/Herrschaft der Teyrngarch.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Herrschaft der Teyrngarch/Herrschaft der Teyrngarch.html",
+        "region": "Sonnenküste",
+        "house": "Haus Teyrngarch",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Bronmellyn"
+          },
+          {
+            "k": "Typ",
+            "v": "Bauernsiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Teyrngarch"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "Bronmellyn liegt westlich von Tŵr Craithban und ist eine Bauernsiedlung, die sich wie die anderen umliegenden Siedlungen auf den Anbau von Weizen und Gerste spezialisiert hat. Ein großer Teil der Ernte wird an die Brauereigilde der Teyrngarch geliefert, um die Bierproduktion zu unterstützen, während ein Teil als Abgabe an den Grafen geht. Die Felder von Bronmellyn tragen zur stabilen Versorgung der Brauereien bei und stärken die landwirtschaftliche Basis der Region.",
+        "secret": false,
+        "dominionId": "herrschaft-teyrngarch"
+      },
+      {
+        "id": "sonnenkueste-llysgwaer",
+        "title": "Llysgwaer",
+        "x": 0.303466796875,
+        "y": 0.53223018029143,
+        "cat": "mmflrqajby8b",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/bauernsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Sonnenküste/Gersteküste/haus-llwynog.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-llwynog&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Sonnenküste/Herrschaft der Llwynog.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Herrschaft der Llwynog/Herrschaft der Llwynog.html",
+        "region": "Sonnenküste",
+        "house": "Haus Llwynog",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Llysgwaer"
+          },
+          {
+            "k": "Typ",
+            "v": "Bauernsiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Llwynog"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "Llysgwaer ist eine Bauernsiedlung in der Herrschaft Llwynog, die sich auf Ackerbau und Viehzucht spezialisiert hat. Die Felder und Weiden der Siedlung liefern Getreide, Gemüse und Viehprodukte, die zur Versorgung der umliegenden Ortschaften beitragen. Llysgwaer ist bekannt für seine traditionellen Anbaumethoden und die robuste Qualität seiner landwirtschaftlichen Erzeugnisse, die einen wichtigen Teil der regionalen Wirtschaft ausmachen.",
+        "secret": false,
+        "dominionId": "herrschaft-llwynog"
+      },
+      {
+        "id": "sonnenkueste-dun-afalla",
+        "title": "Dun Afalla",
+        "x": 0.793701171875,
+        "y": 0.21634971597925412,
+        "cat": "mmflvquv2rr3",
+        "templateId": "ruine",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/antike-ruine.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Sonnenküste/Löwenberg/haus-illwath.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-illwath&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Sonnenküste/Löwenberg.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Herrschaft Löwenberg/Herrschaft Löwenberg.html",
+        "region": "Sonnenküste",
+        "house": "Haus Illwath",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Dun Afalla"
+          },
+          {
+            "k": "Ursprung",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Ursache des Verfalls",
+            "v": ""
+          },
+          {
+            "k": "Aktuelle Bewohner",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Schätze / Reliquien",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Typ",
+            "v": "Siedlungsruine"
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Illwath"
+          }
+        ],
+        "text": "Dun Afalla ist die antike Heimat des längst erloschenen Hauses Nic Ríordáin, eines matriarchal geführten Crannath-Albenhauses, das als Schutzpatron der Musik und Kunst galt. Gegründet von einer legendären Bardin, die als \"Königliche Bardin\" bekannt war, soll das Haus von ihr abstammen. Der Legende nach schenkte ein Albenkönig ihr die Sonnenküste, um ihre Kunst zu ehren. Die Stadt diente einst als kulturelles Zentrum der albischen Musik, doch der Glanz verlosch mit dem Einfall der Norrnaigh, die die wehrlosen Nic Ríordáin besiegten und ihre Kultur zum Erliegen brachten.",
+        "secret": false,
+        "dominionId": "herrschaft-loewenberg"
+      },
+      {
+        "id": "sonnenkueste-teyrngarch-brauerei-bragmellyn",
+        "title": "Teyrngarch Brauerei – Bragmellyn",
+        "x": 0.335693359375,
+        "y": 0.4712274635712521,
+        "cat": "location-brauersiedlung",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/brauersiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Sonnenküste/Gersteküste/haus-teyrngarch.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-teyrngarch&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Sonnenküste/Herrschaft der Teyrngarch.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Herrschaft der Teyrngarch/Herrschaft der Teyrngarch.html",
+        "region": "Sonnenküste",
+        "house": "Haus Teyrngarch",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Teyrngarch Brauerei – Bragmellyn"
+          },
+          {
+            "k": "Typ",
+            "v": "Brauersiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Teyrngarch"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Betreiber",
+            "v": "Haus Teyrngarch"
+          },
+          {
+            "k": "Gebietsform",
+            "v": "Exklave der Herrschaft Teyrngarch"
+          },
+          {
+            "k": "Lage",
+            "v": "Gerstenküste"
+          }
+        ],
+        "text": "Teyrngarch Brauerei - Bragmellyn ist eine weitere gepachtete Siedlung der Teyrngarcher Brauerzunft, die sich auf den Anbau von Hopfen sowie die Zucht von Kräutern und Geheimzutaten konzentriert. Diese besonderen Zutaten sind essenziell für die einzigartigen Bierrezepte der Gilde. Bragmellyn spielt eine wichtige Rolle in der Qualitätssicherung der Teyrngarch-Biere und sorgt dafür, dass die Brauereien stets mit den besten Rohstoffen versorgt werden.",
+        "secret": false,
+        "dominionId": "herrschaft-teyrngarch"
+      },
+      {
+        "id": "sonnenkueste-gallochfaen",
+        "title": "Gallochfaen",
+        "x": 0.22216796875,
+        "y": 0.35638429241788094,
+        "cat": "location-dorf",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/Cenyr/sonnenkueste/Symbole/familienhof.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Sonnenküste/Gersteküste/haus-grianlaoch.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-grianlaoch&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Sonnenküste/Gersteküste.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Grafschaft Sonnenküste.html",
+        "region": "Sonnenküste",
+        "house": "Haus Grianlaoch",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Gallochfaen"
+          },
+          {
+            "k": "Typ",
+            "v": "Dorf"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Grianlaoch"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "Gallochfaen ist ein neu gegründeter Vorort von Aberon, der hauptsächlich von Alben aus Dun Laog bewohnt wird. Gegründet von Verwandten der Gräfin, die ebenfalls aus Dun Laog stammt, brachte die Siedlung deren Gefolge als Teil einer Mitgift mit. Gallochfaen ist bekannt für seine Schmiedekunst und das Handwerk, besonders in der Herstellung von albischen Waffen und Rüstungen. Zudem dient die Siedlung als Ausbildungsstätte für Kerns und Galloglaigh-Krieger, die die Grafschaft verteidigen.",
+        "secret": false,
+        "dominionId": "ritterhaus-grianlaoch"
+      },
+      {
+        "id": "sonnenkueste-castell-caerthyn",
+        "title": "Castell Caerthyn",
+        "x": 0.254150390625,
+        "y": 0.8530501358360089,
+        "cat": "mmfls5afqqpr",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/burgsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Sonnenküste/Gersteküste/haus-blach.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-blach&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Sonnenküste/Herrschaft der Blach.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Herrschaft der Blach/Herrschaft der Blach.html",
+        "region": "Sonnenküste",
+        "house": "Haus Blach",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Castell Caerthyn"
+          },
+          {
+            "k": "Typ",
+            "v": "Burgsiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Blach"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "Castell Caerthyn ist der sekundäre Sitz des Hauses Blach und wurde auf einem Hügel an der Grenze zur südlichen Grafschaft errichtet. Die Festung überwacht sowohl den Fluss als auch die Westküste und bietet Schutz für die umliegenden Siedlungen. Vom Hügel aus hat man einen optimalen Blick auf das Meer und den Fluss, was Castell Caerthyn zu einem strategischen Wachposten macht. Hier bildet das Haus Blach auch seine Krieger aus, um die Sicherheit der Region zu gewährleisten.",
+        "secret": false,
+        "dominionId": "herrschaft-blach"
+      },
+      {
+        "id": "sonnenkueste-twr-dychwel",
+        "title": "Tŵr Dychwel",
+        "x": 0.260986328125,
+        "y": 0.28204494937021485,
+        "cat": "location-magierturm",
+        "templateId": "gebaeude",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/magierturm.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Sonnenküste/haus-illewod.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-illewod&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Sonnenküste/Gersteküste.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Grafschaft Sonnenküste.html",
+        "region": "Sonnenküste",
+        "house": "Haus Illewod",
+        "faction": "Arkanum von Avallorn",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Tŵr Dychwel"
+          },
+          {
+            "k": "Typ",
+            "v": "Magierturm"
+          },
+          {
+            "k": "Bewohner",
+            "v": ""
+          },
+          {
+            "k": "Zugehörigkeit",
+            "v": ""
+          },
+          {
+            "k": "Schwerpunkt / Magie",
+            "v": ""
+          },
+          {
+            "k": "Räume / Anlagen",
+            "v": ""
+          },
+          {
+            "k": "Dienste",
+            "v": ""
+          },
+          {
+            "k": "Schutz / Bann",
+            "v": ""
+          },
+          {
+            "k": "Zugang",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Illewod"
+          }
+        ],
+        "text": "Tŵr Dychwel, der Turm der Rückkehr, ist einer der vielen Türme der Institution Arkanum Avallorn, der cenyrischen Magierinstitution. Er dient als Sitz der Zauberin Gwenallarch Morforwyn, die für diesen Turm verantwortlich ist.",
+        "secret": false,
+        "dominionId": "baronie-gerstekueste"
+      },
+      {
+        "id": "sonnenkueste-aviron-bardenstadt",
+        "title": "Aviron – Bardenstadt",
+        "x": 0.46923828125,
+        "y": 0.41812793282291927,
+        "cat": "mmflw73t2e8v",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/bardensiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Sonnenküste/haus-illewod.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-illewod&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Sonnenküste/Gersteküste.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Grafschaft Sonnenküste.html",
+        "region": "Sonnenküste",
+        "house": "Haus Illewod",
+        "faction": "Bewahrer Avallorns",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Aviron – Bardenstadt"
+          },
+          {
+            "k": "Typ",
+            "v": "Bardensiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Illewod"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "Aviron ist eine Bardenstadt, die von der Institution der Bewahrer Avallorns gegründet wurde, um die Kunst der Barden und die Magie zu fördern. Hier erhalten sowohl Adlige als auch das einfache Volk eine Ausbildung in den Künsten der Musik und Poesie. Die Stadt gilt als Zentrum für Kunst und Musik in der Grafschaft und zieht all jene an, die die schönen Künste verehren. Aviron ist somit eine Pilgerstätte für alle, die der Kunst und Musik frönen.",
+        "secret": false,
+        "dominionId": "baronie-gerstekueste"
+      },
+      {
+        "id": "sonnenkueste-teyrngarch-brauerei-braglydd",
+        "title": "Teyrngarch Brauerei – Braglydd",
+        "x": 0.9765625,
+        "y": 0.23758952827858726,
+        "cat": "location-brauersiedlung",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/brauersiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Sonnenküste/Gersteküste/haus-teyrngarch.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-teyrngarch&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Sonnenküste/Herrschaft der Teyrngarch.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Herrschaft der Teyrngarch/Herrschaft der Teyrngarch.html",
+        "region": "Sonnenküste",
+        "house": "Haus Teyrngarch",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Teyrngarch Brauerei – Braglydd"
+          },
+          {
+            "k": "Typ",
+            "v": "Brauersiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Teyrngarch"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Betreiber",
+            "v": "Haus Teyrngarch"
+          },
+          {
+            "k": "Gebietsform",
+            "v": "Exklave der Herrschaft Teyrngarch"
+          },
+          {
+            "k": "Lage",
+            "v": "Jungferntal"
+          }
+        ],
+        "text": "Teyrngarch Brauerei - Braglydd ist eine Brauerei-Siedlung am Fluss im Osten der Grafschaft. Hier wird im Namen der Teyrngarcher Brauerzunft Bier gebraut, das anschließend in die gesamte Region verteilt wird. Die Siedlung spielt eine wichtige Rolle in der Versorgung der Grafschaft und ist bekannt für ihre traditionelle Braukunst, die das Ansehen der Gilde stärkt und ihre wirtschaftlichen Interessen sichert.",
+        "secret": false,
+        "dominionId": "herrschaft-teyrngarch"
+      },
+      {
+        "id": "sonnenkueste-teyrngarch-taverne-zur-goldhaube",
+        "title": "Teyrngarch Taverne – Zur Goldhaube",
+        "x": 0.220947265625,
+        "y": 0.554704865398864,
+        "cat": "mmflvj37jbh2",
+        "templateId": "gastbetrieb",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/taverne.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Sonnenküste/haus-illewod.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-illewod&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Sonnenküste/Gersteküste.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Grafschaft Sonnenküste.html",
+        "region": "Sonnenküste",
+        "house": "Haus Illewod",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Teyrngarch Taverne – Zur Goldhaube"
+          },
+          {
+            "k": "Typ",
+            "v": "Taverne"
+          },
+          {
+            "k": "Betreiber",
+            "v": "Haus Teyrngarch"
+          },
+          {
+            "k": "Speisen / Getränke",
+            "v": ""
+          },
+          {
+            "k": "Unterkunft",
+            "v": ""
+          },
+          {
+            "k": "Preislage",
+            "v": ""
+          },
+          {
+            "k": "Öffnungszeiten",
+            "v": ""
+          },
+          {
+            "k": "Stammgäste",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          },
+          {
+            "k": "Auch im Quelltext genannt",
+            "v": "Zur Goldstube"
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Illewod"
+          }
+        ],
+        "text": "Zur Goldstube ist das Zentrum der Teyrngarcher Brauerzunft, einer Gilde im Besitz des Hauses Teyrngarch, das große Teile der Baronie Gerstenküste kontrolliert. Die Taverne liegt an einer Hauptstraße nahe der Sonnenküste, wo man bei gutem Wetter das Meer erblicken kann. Neben der Taverne gibt es ein Brauhaus, ein Wachhaus und mehrere Wohnhäuser, was den Ort zu einer kleinen Gemeinschaft macht. Als Geburtsstätte der Teyrngarch-Braukunst ist sie für Bierkenner eine Pilgerstätte.",
+        "secret": false,
+        "dominionId": "baronie-gerstekueste"
+      },
+      {
+        "id": "sonnenkueste-castell-gwaelon",
+        "title": "Castell Gwaelon",
+        "x": 0.411865234375,
+        "y": 0.1266979501111386,
+        "cat": "mmfls5afqqpr",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/burgsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Sonnenküste/Gersteküste/haus-teyrngarch.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-teyrngarch&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Sonnenküste/Herrschaft der Teyrngarch.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Herrschaft der Teyrngarch/Herrschaft der Teyrngarch.html",
+        "region": "Sonnenküste",
+        "house": "Haus Teyrngarch",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Castell Gwaelon"
+          },
+          {
+            "k": "Typ",
+            "v": "Burgsiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Teyrngarch"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "Castell Gwaelon ist der sekundäre Sitz des Hauses Teyrngarch und könnte zukünftig zum primären Sitz des Hauses werden, was einen Umzug aus Aberon bedeuten würde. Die Burg sichert den Norden der Grafschaft und die umliegenden Siedlungen, strategisch gelegen auf den Hügeln und eingebettet in den Wald. Die Straßen, die die Burg umkreisen, verbinden den Norden und Süden und machen Castell Gwaelon zu einem wichtigen Knotenpunkt für den Schutz und die Kontrolle der Region.",
+        "secret": false,
+        "dominionId": "herrschaft-teyrngarch"
+      },
+      {
+        "id": "sonnenkueste-melynwyrdd-taverne-zur-letzten-rast",
+        "title": "Melynwyrdd Taverne – Zur Letzten Rast",
+        "x": 0.9296875,
+        "y": 0.12546307730303774,
+        "cat": "mmflvj37jbh2",
+        "templateId": "gastbetrieb",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/taverne.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Sonnenküste/Jungferntal/haus-morforwyn.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-morforwyn&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Sonnenküste/Jungferntal.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Baronie Jungferntal/Baronie Jungferntal.html",
+        "region": "Sonnenküste",
+        "house": "Haus Morforwyn",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Melynwyrdd Taverne – Zur Letzten Rast"
+          },
+          {
+            "k": "Typ",
+            "v": "Taverne"
+          },
+          {
+            "k": "Betreiber",
+            "v": "Melynwyrdd"
+          },
+          {
+            "k": "Speisen / Getränke",
+            "v": ""
+          },
+          {
+            "k": "Unterkunft",
+            "v": ""
+          },
+          {
+            "k": "Preislage",
+            "v": ""
+          },
+          {
+            "k": "Öffnungszeiten",
+            "v": ""
+          },
+          {
+            "k": "Stammgäste",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Morforwyn"
+          }
+        ],
+        "text": "Zur Letzten Rast liegt an der nordöstlichen Grenze der Grafschaft und gehört ebenfalls der Melynwyrdd Bande. Die Taverne dient der Diebesgilde als strategischer Vorposten, um den Ein- und Ausgang von Reisenden zu überwachen und potenzielle Gefahren für die Grafschaft abzufangen. So werden etwa Mitglieder der Klingenden Münze, die gegen die Teyrngarch intrigieren, frühzeitig erkannt. Nach außen hin erscheint die Taverne als gewöhnliches Haus Teyrngarch-Gasthaus, doch die wahre Kontrolle liegt in den Händen der Gilde, die ihre Interessen hier sichert.",
+        "secret": false,
+        "dominionId": "baronie-jungferntal"
+      },
+      {
+        "id": "sonnenkueste-herberge-zum-alten-weg",
+        "title": "Herberge – Zum alten Weg",
+        "x": 0.698974609375,
+        "y": 0.16078043961471966,
+        "cat": "mmflvj37jbh2",
+        "templateId": "gastbetrieb",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/taverne.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Sonnenküste/Löwenberg/haus-illwath.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-illwath&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Sonnenküste/Löwenberg.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Herrschaft Löwenberg/Herrschaft Löwenberg.html",
+        "region": "Sonnenküste",
+        "house": "Haus Illwath",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Herberge – Zum alten Weg"
+          },
+          {
+            "k": "Typ",
+            "v": "Taverne"
+          },
+          {
+            "k": "Betreiber",
+            "v": ""
+          },
+          {
+            "k": "Speisen / Getränke",
+            "v": ""
+          },
+          {
+            "k": "Unterkunft",
+            "v": ""
+          },
+          {
+            "k": "Preislage",
+            "v": ""
+          },
+          {
+            "k": "Öffnungszeiten",
+            "v": ""
+          },
+          {
+            "k": "Stammgäste",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Illwath"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "herrschaft-loewenberg"
+      },
+      {
+        "id": "sonnenkueste-teyrngarch-brauerei-bragwynfa",
+        "title": "Teyrngarch Brauerei – Bragwynfa",
+        "x": 0.592529296875,
+        "y": 0.3561373178562608,
+        "cat": "location-brauersiedlung",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/brauersiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Sonnenküste/Gersteküste/haus-teyrngarch.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-teyrngarch&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Sonnenküste/Herrschaft der Teyrngarch.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Herrschaft der Teyrngarch/Herrschaft der Teyrngarch.html",
+        "region": "Sonnenküste",
+        "house": "Haus Teyrngarch",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Teyrngarch Brauerei – Bragwynfa"
+          },
+          {
+            "k": "Typ",
+            "v": "Brauersiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Teyrngarch"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Betreiber",
+            "v": "Haus Teyrngarch"
+          },
+          {
+            "k": "Gebietsform",
+            "v": "Exklave der Herrschaft Teyrngarch"
+          },
+          {
+            "k": "Lage",
+            "v": "Gerstenküste"
+          }
+        ],
+        "text": "Teyrngarch Brauerei - Bragwynfa ist eine weitere gepachtete Siedlung der Teyrngarcher Brauerzunft, die sich auf die Herstellung von Fässern spezialisiert hat. Die hier produzierten Fässer sind von entscheidender Bedeutung für die Bierlagerung und -verteilung in der gesamten Grafschaft. Bragwynfa unterstützt damit die Brauereien der Gilde und trägt wesentlich zur wirtschaftlichen Stärke des Hauses Teyrngarch bei.",
+        "secret": false,
+        "dominionId": "herrschaft-teyrngarch"
+      },
+      {
+        "id": "sonnenkueste-rhosmeres-rosser-gwaulderw",
+        "title": "Rhosmeres Rösser – Gwaulderw",
+        "x": 0.650634765625,
+        "y": 0.5117312916769573,
+        "cat": "location-rosszuchtsiedlung",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/pferdezuchtsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Sonnenküste/Jungferntal/haus-morforwyn.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-morforwyn&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Sonnenküste/Jungferntal.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Baronie Jungferntal/Baronie Jungferntal.html",
+        "region": "Sonnenküste",
+        "house": "Haus Morforwyn",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Rhosmeres Rösser – Gwaulderw"
+          },
+          {
+            "k": "Typ",
+            "v": "Rosszuchtsiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Morforwyn"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Betreiber",
+            "v": "Rhosmeres Rösser"
+          }
+        ],
+        "text": "Rhosmeres Rösser - Gwaulderw ist eine von der gleichnamigen Gilde gepachtete Siedlung, die sich auf die Zucht von Pferden aller Arten spezialisiert hat. Die hier gezüchteten Rösser werden an kleinere Standorte in der Region verteilt und sind für ihre Qualität und Vielseitigkeit bekannt. Gwaulderw spielt eine zentrale Rolle in der Versorgung der Grafschaft mit erstklassigen Pferden, die sowohl im Alltag als auch im Kriegsdienst geschätzt werden.",
+        "secret": false,
+        "dominionId": "baronie-jungferntal"
+      },
+      {
+        "id": "sonnenkueste-llwynog-jagdverein-zur-kuhlen-furt",
+        "title": "Llwynog Jagdverein – Zur Kühlen Furt",
+        "x": 0.462158203125,
+        "y": 0.6423808347740183,
+        "cat": "mmflvj37jbh2",
+        "templateId": "gastbetrieb",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/taverne.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Sonnenküste/haus-illewod.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-illewod&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Sonnenküste/Gersteküste.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Grafschaft Sonnenküste.html",
+        "region": "Sonnenküste",
+        "house": "Haus Illewod",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Llwynog Jagdverein – Zur Kühlen Furt"
+          },
+          {
+            "k": "Typ",
+            "v": "Taverne"
+          },
+          {
+            "k": "Betreiber",
+            "v": "Llwynog Jagdverein"
+          },
+          {
+            "k": "Speisen / Getränke",
+            "v": ""
+          },
+          {
+            "k": "Unterkunft",
+            "v": ""
+          },
+          {
+            "k": "Preislage",
+            "v": ""
+          },
+          {
+            "k": "Öffnungszeiten",
+            "v": ""
+          },
+          {
+            "k": "Stammgäste",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Illewod"
+          }
+        ],
+        "text": "Zur Kühlen Furt ist eine Taverne im Besitz des Hauses Llwynog und dient als Treffpunkt für Waldläufer und Jäger. Der Jagdverein des Hauses nutzt diesen Ort, um Feiern und Gelage abzuhalten sowie sich auf die Jagd auf Großwild vorzubereiten. Die Taverne spielt eine zentrale Rolle für die Gemeinschaft, da sie als Versammlungsort dient, an dem wichtige Traditionen gepflegt und Abenteuer geplant werden.",
+        "secret": false,
+        "dominionId": "baronie-gerstekueste"
+      }
+    ],
     "cats": [
       {
         "id": "mmflrbzxydg7",
@@ -105,12 +4870,497 @@
         "id": "mmflxnnhbh4g",
         "label": "Besondere Orte",
         "color": "#6060b0"
+      },
+      {
+        "id": "location-dorf",
+        "label": "Dorf",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/bardensiedlung.png"
+      },
+      {
+        "id": "location-flusssiedlung",
+        "label": "Flusssiedlung",
+        "color": "#2a7aaa",
+        "marker": "/Karten/assets/icons/welt/flusssiedlung.png"
+      },
+      {
+        "id": "location-bauernhof",
+        "label": "Bauernhof",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/bauernsiedlung.png"
+      },
+      {
+        "id": "location-landgut",
+        "label": "Landgut",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/landgut.png"
+      },
+      {
+        "id": "location-anwesen",
+        "label": "Anwesen",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/anwesen.png"
+      },
+      {
+        "id": "location-rittergut",
+        "label": "Rittergut",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/kleine-burg.png"
+      },
+      {
+        "id": "location-weingut",
+        "label": "Weingut",
+        "color": "#a45630",
+        "marker": "/Karten/assets/icons/welt/weingut.png"
+      },
+      {
+        "id": "location-obstplantage",
+        "label": "Obstplantage",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/obstplantage.png"
+      },
+      {
+        "id": "location-viehweide",
+        "label": "Viehweide",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/weide.png"
+      },
+      {
+        "id": "location-gestuet",
+        "label": "Gestüt",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/gest-t.png"
+      },
+      {
+        "id": "location-muehle",
+        "label": "Mühle",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/m-hle.png"
+      },
+      {
+        "id": "location-mine",
+        "label": "Mine",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/einzelnemine.png"
+      },
+      {
+        "id": "location-steinbruch",
+        "label": "Steinbruch",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/steinbruch-1.png"
+      },
+      {
+        "id": "location-schmiede",
+        "label": "Schmiede",
+        "color": "#a45630",
+        "marker": "/Karten/assets/icons/welt/schmiede.png"
+      },
+      {
+        "id": "location-brauerei",
+        "label": "Brauerei",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/brauersiedlung.png"
+      },
+      {
+        "id": "location-fischerei",
+        "label": "Fischerei",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/fischerh-tte.png"
+      },
+      {
+        "id": "location-holzfaellerlager",
+        "label": "Holzfällerlager",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/holzf-llerlager.png"
+      },
+      {
+        "id": "location-koehlerei",
+        "label": "Köhlerei",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/k-hler3.png"
+      },
+      {
+        "id": "location-imkerei",
+        "label": "Imkerei",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/imkerhof.png"
+      },
+      {
+        "id": "location-handelskontor",
+        "label": "Handelskontor",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/kontor.png"
+      },
+      {
+        "id": "location-markt",
+        "label": "Markt",
+        "color": "#a45630",
+        "marker": "/Karten/assets/icons/welt/marktstand.png"
+      },
+      {
+        "id": "location-gildenhaus",
+        "label": "Gildenhaus",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/gildenzentrale.png"
+      },
+      {
+        "id": "location-burg",
+        "label": "Burg",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/gro-e-burg.png"
+      },
+      {
+        "id": "location-turm",
+        "label": "Turm",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/turm.png"
+      },
+      {
+        "id": "location-leuchtturm",
+        "label": "Leuchtturm",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/leuchtturm.png"
+      },
+      {
+        "id": "location-aussenposten",
+        "label": "Außenposten",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/au-enposten.png"
+      },
+      {
+        "id": "location-grenzposten",
+        "label": "Grenzposten",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/zoll-grenzposten.png"
+      },
+      {
+        "id": "location-heerlager",
+        "label": "Heerlager",
+        "color": "#a45630",
+        "marker": "/Karten/assets/icons/welt/heereslager.png"
+      },
+      {
+        "id": "location-lagerplatz",
+        "label": "Lagerplatz",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/lager.png"
+      },
+      {
+        "id": "location-jaegerlager",
+        "label": "Jägerlager",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/j-gerlager.png"
+      },
+      {
+        "id": "location-jagdhaus",
+        "label": "Jagdhaus",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/j-gerhaus.png"
+      },
+      {
+        "id": "location-druidenhuette",
+        "label": "Druidenhütte",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/druidenh-tte.png"
+      },
+      {
+        "id": "location-hexenhuette",
+        "label": "Hexenhütte",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/hexenhaus.png"
+      },
+      {
+        "id": "location-schrein",
+        "label": "Schrein",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/wegschrein.png"
+      },
+      {
+        "id": "location-heiligtum",
+        "label": "Heiligtum",
+        "color": "#a45630",
+        "marker": "/Karten/assets/icons/welt/heiligtum.png"
+      },
+      {
+        "id": "location-friedhof",
+        "label": "Friedhof",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/l-ndlicher-friedhof.png"
+      },
+      {
+        "id": "location-grabstaette",
+        "label": "Grabstätte",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/grabmal.png"
+      },
+      {
+        "id": "location-ruine",
+        "label": "Ruine",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/ruine2.png"
+      },
+      {
+        "id": "location-ausgrabung",
+        "label": "Ausgrabung",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/ausgrabung.png"
+      },
+      {
+        "id": "location-hoehle",
+        "label": "Höhle",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/h-hle.png"
+      },
+      {
+        "id": "location-hain",
+        "label": "Hain",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/hain.png"
+      },
+      {
+        "id": "location-ahnenbaum",
+        "label": "Ahnenbaum",
+        "color": "#a45630",
+        "marker": "/Karten/assets/icons/welt/ahnenbaum.png"
+      },
+      {
+        "id": "location-quelle",
+        "label": "Quelle",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/quelle.png"
+      },
+      {
+        "id": "location-berggipfel",
+        "label": "Berggipfel",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/gipfel.png"
+      },
+      {
+        "id": "location-monsterhort",
+        "label": "Monsterhort",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/kreaturenhort.png"
+      },
+      {
+        "id": "location-banditenlager",
+        "label": "Banditenlager",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/banditenlager.png"
+      },
+      {
+        "id": "location-hafen",
+        "label": "Hafen / Steg",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/gro-er-hafen.png"
+      },
+      {
+        "id": "location-werft",
+        "label": "Werft",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/schiffswerft.png"
+      },
+      {
+        "id": "location-poststation",
+        "label": "Poststation",
+        "color": "#a45630",
+        "marker": "/Karten/assets/icons/welt/poststation.png"
+      },
+      {
+        "id": "location-schule",
+        "label": "Schule",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/l-ndliche-universit-t.png"
+      },
+      {
+        "id": "location-zirkus",
+        "label": "Zirkus",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/zirkus3.png"
+      },
+      {
+        "id": "location-wohnhaus",
+        "label": "Wohnhaus",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/b-uerliches-heim.png"
+      },
+      {
+        "id": "location-brauersiedlung",
+        "label": "Brauersiedlung",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/brauersiedlung.png"
+      },
+      {
+        "id": "location-klostersiedlung",
+        "label": "Klostersiedlung",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/klostersiedlung.png"
+      },
+      {
+        "id": "location-rosszuchtsiedlung",
+        "label": "Rosszuchtsiedlung",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/pferdezuchtsiedlung.png"
+      },
+      {
+        "id": "location-sumpfsiedlung",
+        "label": "Sumpfsiedlung",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/sumpfsiedlung.png"
+      },
+      {
+        "id": "location-unterwasserstadt",
+        "label": "Unterwasserstadt",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/unterwasserstadt.png"
+      },
+      {
+        "id": "location-festung",
+        "label": "Festung",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/festung.png"
+      },
+      {
+        "id": "location-magierturm",
+        "label": "Magierturm",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/magierturm.png"
+      },
+      {
+        "id": "location-diebesgilde",
+        "label": "Diebesgilde",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/diebesgilde.png"
+      },
+      {
+        "id": "location-piratenversteck",
+        "label": "Piratenversteck",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/piratenlager.png"
+      },
+      {
+        "id": "location-schmugglerversteck",
+        "label": "Schmugglerversteck",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/schmuggler3.png"
+      },
+      {
+        "id": "location-verwunschener-wald",
+        "label": "Verwunschener Wald",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/waldschrat.png"
+      },
+      {
+        "id": "location-wahrzeichen",
+        "label": "Wahrzeichen",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/wahrzeichen.png"
+      },
+      {
+        "id": "location-dimensionaler-riss",
+        "label": "Dimensionaler Riss",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/dimensionaler-riss.png"
+      },
+      {
+        "id": "location-galgen",
+        "label": "Galgen",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/exekutionsplatz.png"
+      },
+      {
+        "id": "location-muenzpraegestaette",
+        "label": "Münzprägestätte",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/m-nzpr-ger.png"
+      },
+      {
+        "id": "location-bogenschiessstand",
+        "label": "Bogenschießstand",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/schie-stand2.png"
+      },
+      {
+        "id": "location-ziegelei",
+        "label": "Ziegelei",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/ziegelbrenner.png"
+      },
+      {
+        "id": "location-schiff",
+        "label": "Schiff",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/orte/schiff-gut.png"
+      },
+      {
+        "id": "location-kreaturenlager",
+        "label": "Kreaturenlager",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/goblinlager.png"
+      },
+      {
+        "id": "location-heisse-quellen",
+        "label": "Heiße Quellen",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/hei-e-quellen.png"
+      },
+      {
+        "id": "location-brueckenruine",
+        "label": "Brückenruine",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/zerst-rte-br-cke.png"
+      },
+      {
+        "id": "location-kirchenruine",
+        "label": "Kirchenruine",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/zerst-rte-kirche.png"
+      },
+      {
+        "id": "location-hausruine",
+        "label": "Hausruine",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/zerst-rtes-heim.png"
+      },
+      {
+        "id": "location-huegelgrab",
+        "label": "Hügelgrab",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/h-gelgrab.png"
+      },
+      {
+        "id": "location-plantage",
+        "label": "Plantage",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/landgut.png"
+      },
+      {
+        "id": "location-kultstaette",
+        "label": "Kultstätte",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/okkulter-schrein.png"
+      },
+      {
+        "id": "location-zelt",
+        "label": "Zelt",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/ritterlicheszelt.png"
+      },
+      {
+        "id": "location-faehrstelle",
+        "label": "Fährstelle",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/orte/f-hre-steg.png"
+      },
+      {
+        "id": "location-schlachtfeld",
+        "label": "Schlachtfeld",
+        "color": "#6060b0"
       }
     ],
     "dotSize": 18,
     "lblSize": 13,
-    "regionIcon": "",
-    "regionTitle": "Sonnenkueste",
+    "regionIcon": "/Stammbäume/assets/images/regions/sonnenkueste.png",
+    "regionTitle": "Sonnenküste",
     "mapImages": {
       "normal": "",
       "regions": "",
@@ -121,6 +5371,81 @@
       "notes": "",
       "groupStatus": {}
     },
-    "markerCatalog": []
+    "markerCatalog": [],
+    "categoryCatalogVersion": 3,
+    "dominions": [
+      {
+        "id": "grafschaft-sonnenkueste",
+        "name": "Grafschaft Sonnenküste",
+        "type": "Grafschaft",
+        "ruler": "Haus Illewod",
+        "seat": "Aberon",
+        "parentId": "",
+        "note": ""
+      },
+      {
+        "id": "baronie-gerstekueste",
+        "name": "Gräfische Baronie Aberon – Gerstenküste",
+        "type": "Gräfische Baronie",
+        "ruler": "Haus Illewod",
+        "seat": "Aberon",
+        "parentId": "grafschaft-sonnenkueste",
+        "note": ""
+      },
+      {
+        "id": "baronie-jungferntal",
+        "name": "Baronie Jungferntal",
+        "type": "Baronie",
+        "ruler": "Haus Morforwyn",
+        "seat": "Carngol",
+        "parentId": "grafschaft-sonnenkueste",
+        "note": ""
+      },
+      {
+        "id": "herrschaft-loewenberg",
+        "name": "Herrschaft Löwenberg",
+        "type": "Ritterfürstliche Herrschaft",
+        "ruler": "Haus Illwath",
+        "seat": "Caer Llew",
+        "parentId": "grafschaft-sonnenkueste",
+        "note": ""
+      },
+      {
+        "id": "herrschaft-llwynog",
+        "name": "Herrschaft der Llwynog",
+        "type": "Ritterfürstliche Herrschaft",
+        "ruler": "Haus Llwynog",
+        "seat": "Aberon",
+        "parentId": "baronie-gerstekueste",
+        "note": ""
+      },
+      {
+        "id": "herrschaft-blach",
+        "name": "Herrschaft der Blach",
+        "type": "Ritterfürstliche Herrschaft",
+        "ruler": "Haus Blach",
+        "seat": "Aberon",
+        "parentId": "baronie-gerstekueste",
+        "note": ""
+      },
+      {
+        "id": "herrschaft-teyrngarch",
+        "name": "Herrschaft der Teyrngarch",
+        "type": "Ritterfürstliche Herrschaft",
+        "ruler": "Haus Teyrngarch",
+        "seat": "Aberon",
+        "parentId": "baronie-gerstekueste",
+        "note": ""
+      },
+      {
+        "id": "ritterhaus-grianlaoch",
+        "name": "Haus Grianlaoch – Gallochfaen",
+        "type": "Ritterhaus",
+        "ruler": "Haus Grianlaoch",
+        "seat": "Aberon, Gallochfaen",
+        "parentId": "baronie-gerstekueste",
+        "note": ""
+      }
+    ]
   }
 }

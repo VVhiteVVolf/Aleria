@@ -1,5 +1,226 @@
 window.KONTINENTE_REGISTRY = [
   {
+    "id": "grafschaft-sonnenkueste",
+    "slug": "sonnenkueste",
+    "aliases": [
+      "cwm-yr-lleuad",
+      "aberon"
+    ],
+    "name": "Grafschaft Sonnenküste – Cwm yr Lleuad",
+    "type": "Grafschaft",
+    "page": "Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Grafschaft Sonnenküste.html",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Sonnenküste/grafschaft.data.mjs?v=sonnenkueste-20261019",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Königreich",
+        "name": "Cenyr",
+        "slug": "cenyr"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Sonnenküste",
+        "slug": "sonnenkueste"
+      }
+    ]
+  },
+  {
+    "id": "baronie-jungferntal",
+    "slug": "jungferntal",
+    "aliases": [],
+    "name": "Baronie Jungferntal",
+    "type": "Baronie",
+    "page": "Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Baronie Jungferntal/Baronie Jungferntal.html",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Baronie Jungferntal/baronie.data.mjs?v=sonnenkueste-20261019",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Königreich",
+        "name": "Cenyr",
+        "slug": "cenyr"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Sonnenküste",
+        "slug": "sonnenkueste"
+      },
+      {
+        "type": "Baronie",
+        "name": "Baronie Jungferntal",
+        "slug": "baronie-jungferntal"
+      }
+    ]
+  },
+  {
+    "id": "herrschaft-loewenberg",
+    "slug": "loewenberg",
+    "aliases": [],
+    "name": "Herrschaft Löwenberg",
+    "type": "Herrschaft",
+    "page": "Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Herrschaft Löwenberg/Herrschaft Löwenberg.html",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Herrschaft Löwenberg/herrschaft.data.mjs?v=sonnenkueste-20261019",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Königreich",
+        "name": "Cenyr",
+        "slug": "cenyr"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Sonnenküste",
+        "slug": "sonnenkueste"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Herrschaft Löwenberg",
+        "slug": "herrschaft-lowenberg"
+      }
+    ]
+  },
+  {
+    "id": "herrschaft-llwynog",
+    "slug": "llwynog",
+    "aliases": [],
+    "name": "Herrschaft der Llwynog",
+    "type": "Herrschaft",
+    "page": "Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Herrschaft der Llwynog/Herrschaft der Llwynog.html",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Herrschaft der Llwynog/herrschaft.data.mjs?v=sonnenkueste-20261019",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Königreich",
+        "name": "Cenyr",
+        "slug": "cenyr"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Sonnenküste",
+        "slug": "sonnenkueste"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Herrschaft der Llwynog",
+        "slug": "herrschaft-der-llwynog"
+      }
+    ]
+  },
+  {
+    "id": "herrschaft-blach",
+    "slug": "blach",
+    "aliases": [],
+    "name": "Herrschaft der Blach",
+    "type": "Herrschaft",
+    "page": "Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Herrschaft der Blach/Herrschaft der Blach.html",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Herrschaft der Blach/herrschaft.data.mjs?v=sonnenkueste-20261019",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Königreich",
+        "name": "Cenyr",
+        "slug": "cenyr"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Sonnenküste",
+        "slug": "sonnenkueste"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Herrschaft der Blach",
+        "slug": "herrschaft-der-blach"
+      }
+    ]
+  },
+  {
+    "id": "herrschaft-teyrngarch",
+    "slug": "teyrngarch",
+    "aliases": [],
+    "name": "Herrschaft der Teyrngarch",
+    "type": "Herrschaft",
+    "page": "Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Herrschaft der Teyrngarch/Herrschaft der Teyrngarch.html",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Herrschaft der Teyrngarch/herrschaft.data.mjs?v=sonnenkueste-20261019",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Königreich",
+        "name": "Cenyr",
+        "slug": "cenyr"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Sonnenküste",
+        "slug": "sonnenkueste"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Herrschaft der Teyrngarch",
+        "slug": "herrschaft-der-teyrngarch"
+      }
+    ]
+  },
+
+  {
     "id": "grafschaft-vortigerns-ruh",
     "slug": "vortigerns-ruh",
     "aliases": [

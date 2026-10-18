@@ -1,0 +1,106 @@
+{
+  "territories": [
+    {
+      "id": "grafschaft-sonnenkueste",
+      "name": "Grafschaft Sonnenküste",
+      "type": "Grafschaft",
+      "house": "Haus Illewod",
+      "familyId": "haus-illewod",
+      "crest": "/Stammbäume/assets/images/houses/Sonnenküste/haus-illewod.png",
+      "banner": "/Stammbäume/assets/images/regions/sonnenkueste.png",
+      "parentId": "",
+      "seat": "Aberon",
+      "href": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Grafschaft Sonnenküste.html"
+    },
+    {
+      "id": "baronie-gerstekueste",
+      "name": "Gräfische Baronie Aberon – Gerstenküste",
+      "type": "Gräfische Baronie",
+      "house": "Haus Illewod",
+      "familyId": "haus-illewod",
+      "crest": "/Stammbäume/assets/images/houses/Sonnenküste/haus-illewod.png",
+      "banner": "/Stammbäume/assets/images/regions/Cenyr/Sonnenküste/Gersteküste.png",
+      "parentId": "grafschaft-sonnenkueste",
+      "seat": "Aberon",
+      "href": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Grafschaft Sonnenküste.html"
+    },
+    {
+      "id": "baronie-jungferntal",
+      "name": "Baronie Jungferntal",
+      "type": "Baronie",
+      "house": "Haus Morforwyn",
+      "familyId": "haus-morforwyn",
+      "crest": "/Stammbäume/assets/images/houses/Sonnenküste/Jungferntal/haus-morforwyn.png",
+      "banner": "/Stammbäume/assets/images/regions/Cenyr/Sonnenküste/Jungferntal.png",
+      "parentId": "grafschaft-sonnenkueste",
+      "seat": "Carngol",
+      "href": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Baronie Jungferntal/Baronie Jungferntal.html"
+    },
+    {
+      "id": "herrschaft-loewenberg",
+      "name": "Herrschaft Löwenberg",
+      "type": "Ritterfürstliche Herrschaft",
+      "house": "Haus Illwath",
+      "familyId": "haus-illwath",
+      "crest": "/Stammbäume/assets/images/houses/Sonnenküste/Löwenberg/haus-illwath.png",
+      "banner": "/Stammbäume/assets/images/regions/Cenyr/Sonnenküste/Löwenberg.png",
+      "parentId": "grafschaft-sonnenkueste",
+      "seat": "Caer Llew",
+      "href": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Herrschaft Löwenberg/Herrschaft Löwenberg.html"
+    },
+    {
+      "id": "herrschaft-llwynog",
+      "name": "Herrschaft der Llwynog",
+      "type": "Ritterfürstliche Herrschaft",
+      "house": "Haus Llwynog",
+      "familyId": "haus-llwynog",
+      "crest": "/Stammbäume/assets/images/houses/Sonnenküste/Gersteküste/haus-llwynog.png",
+      "banner": "/Stammbäume/assets/images/regions/Cenyr/Sonnenküste/Herrschaft der Llwynog.png",
+      "parentId": "baronie-gerstekueste",
+      "seat": "Aberon",
+      "href": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Herrschaft der Llwynog/Herrschaft der Llwynog.html",
+      "bannerSource": "https://i.imgur.com/AjnCfPn.png",
+      "bannerSha256": "4e8202029ec47a5033ae698ce48d974a581f1977c3d5a5d7d3cc733d3fcb9490"
+    },
+    {
+      "id": "herrschaft-blach",
+      "name": "Herrschaft der Blach",
+      "type": "Ritterfürstliche Herrschaft",
+      "house": "Haus Blach",
+      "familyId": "haus-blach",
+      "crest": "/Stammbäume/assets/images/houses/Sonnenküste/Gersteküste/haus-blach.png",
+      "banner": "/Stammbäume/assets/images/regions/Cenyr/Sonnenküste/Herrschaft der Blach.png",
+      "parentId": "baronie-gerstekueste",
+      "seat": "Aberon",
+      "href": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Herrschaft der Blach/Herrschaft der Blach.html",
+      "bannerSource": "https://i.imgur.com/CnPw218.png",
+      "bannerSha256": "e653ffba8c081f25754a70ac68faa746dac96e8f6882588ba6d7518032dd20b5"
+    },
+    {
+      "id": "herrschaft-teyrngarch",
+      "name": "Herrschaft der Teyrngarch",
+      "type": "Ritterfürstliche Herrschaft",
+      "house": "Haus Teyrngarch",
+      "familyId": "haus-teyrngarch",
+      "crest": "/Stammbäume/assets/images/houses/Sonnenküste/Gersteküste/haus-teyrngarch.png",
+      "banner": "/Stammbäume/assets/images/regions/Cenyr/Sonnenküste/Herrschaft der Teyrngarch.png",
+      "parentId": "baronie-gerstekueste",
+      "seat": "Aberon",
+      "href": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Herrschaft der Teyrngarch/Herrschaft der Teyrngarch.html",
+      "bannerSource": "https://i.imgur.com/Pe325Dj.png",
+      "bannerSha256": "e74ca1ee7e5a3cecb33a8e906bd8a26cfb45e3959f5f2dc8b334e0a010ed877c"
+    },
+    {
+      "id": "ritterhaus-grianlaoch",
+      "name": "Haus Grianlaoch – Gallochfaen",
+      "type": "Ritterhaus",
+      "house": "Haus Grianlaoch",
+      "familyId": "haus-grianlaoch",
+      "crest": "/Stammbäume/assets/images/houses/Sonnenküste/Gersteküste/haus-grianlaoch.png",
+      "banner": "/Stammbäume/assets/images/regions/Cenyr/Sonnenküste/Gersteküste.png",
+      "parentId": "baronie-gerstekueste",
+      "seat": "Aberon, Gallochfaen",
+      "href": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Grafschaft Sonnenküste.html"
+    }
+  ]
+}

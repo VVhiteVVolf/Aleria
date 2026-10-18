@@ -5889,6 +5889,14 @@ window.KARTO_MEDIA_ASSETS = Object.freeze([
     "source": "Kartenzeichen & Map-Pins"
   },
   {
+    "id": "3b17863f985662",
+    "name": "flusssiedlung",
+    "url": "/Karten/assets/icons/welt/flusssiedlung.png",
+    "kind": "marker",
+    "group": "welt",
+    "source": "Kartenzeichen & Map-Pins"
+  },
+  {
     "id": "5bd52c09039aff",
     "name": "gasthof",
     "url": "/Karten/assets/icons/welt/gasthof.png",
@@ -7169,6 +7177,30 @@ window.KARTO_MEDIA_ASSETS = Object.freeze([
     "source": "Orts- & Regionsbanner"
   },
   {
+    "id": "af6bd1f243f107",
+    "name": "Herrschaft der Blach",
+    "url": "/Stammbäume/assets/images/regions/Cenyr/Sonnenk%C3%BCste/Herrschaft%20der%20Blach.png",
+    "kind": "region",
+    "group": "Cenyr / Sonnenküste",
+    "source": "Orts- & Regionsbanner"
+  },
+  {
+    "id": "806031656e04f2",
+    "name": "Herrschaft der Llwynog",
+    "url": "/Stammbäume/assets/images/regions/Cenyr/Sonnenk%C3%BCste/Herrschaft%20der%20Llwynog.png",
+    "kind": "region",
+    "group": "Cenyr / Sonnenküste",
+    "source": "Orts- & Regionsbanner"
+  },
+  {
+    "id": "f6e7d2ccbaafed",
+    "name": "Herrschaft der Teyrngarch",
+    "url": "/Stammbäume/assets/images/regions/Cenyr/Sonnenk%C3%BCste/Herrschaft%20der%20Teyrngarch.png",
+    "kind": "region",
+    "group": "Cenyr / Sonnenküste",
+    "source": "Orts- & Regionsbanner"
+  },
+  {
     "id": "82307e04b86da3",
     "name": "Jungferntal",
     "url": "/Stammbäume/assets/images/regions/Cenyr/Sonnenk%C3%BCste/Jungferntal.png",
@@ -7220,6 +7252,54 @@ window.KARTO_MEDIA_ASSETS = Object.freeze([
     "id": "445fffc81a9527",
     "name": "Calon",
     "url": "/Stammbäume/assets/images/regions/Cenyr/Vortigerns%20Ruh/Calon.png",
+    "kind": "region",
+    "group": "Cenyr / Vortigerns Ruh",
+    "source": "Orts- & Regionsbanner"
+  },
+  {
+    "id": "82cc9b31686a60",
+    "name": "Herrschaft der Cath",
+    "url": "/Stammbäume/assets/images/regions/Cenyr/Vortigerns%20Ruh/Herrschaft%20der%20Cath.png",
+    "kind": "region",
+    "group": "Cenyr / Vortigerns Ruh",
+    "source": "Orts- & Regionsbanner"
+  },
+  {
+    "id": "6f3c226e2c8b59",
+    "name": "Herrschaft der Dienyddiwr",
+    "url": "/Stammbäume/assets/images/regions/Cenyr/Vortigerns%20Ruh/Herrschaft%20der%20Dienyddiwr.png",
+    "kind": "region",
+    "group": "Cenyr / Vortigerns Ruh",
+    "source": "Orts- & Regionsbanner"
+  },
+  {
+    "id": "5e9242939f41d8",
+    "name": "Herrschaft der Dyngwn",
+    "url": "/Stammbäume/assets/images/regions/Cenyr/Vortigerns%20Ruh/Herrschaft%20der%20Dyngwn.png",
+    "kind": "region",
+    "group": "Cenyr / Vortigerns Ruh",
+    "source": "Orts- & Regionsbanner"
+  },
+  {
+    "id": "7f3b7d5fb773ff",
+    "name": "Herrschaft der Grael",
+    "url": "/Stammbäume/assets/images/regions/Cenyr/Vortigerns%20Ruh/Herrschaft%20der%20Grael.png",
+    "kind": "region",
+    "group": "Cenyr / Vortigerns Ruh",
+    "source": "Orts- & Regionsbanner"
+  },
+  {
+    "id": "4f3203f6527879",
+    "name": "Herrschaft der Marwolaeth",
+    "url": "/Stammbäume/assets/images/regions/Cenyr/Vortigerns%20Ruh/Herrschaft%20der%20Marwolaeth.png",
+    "kind": "region",
+    "group": "Cenyr / Vortigerns Ruh",
+    "source": "Orts- & Regionsbanner"
+  },
+  {
+    "id": "e34d6af610f118",
+    "name": "Herrschaft der Penderyn",
+    "url": "/Stammbäume/assets/images/regions/Cenyr/Vortigerns%20Ruh/Herrschaft%20der%20Penderyn.png",
     "kind": "region",
     "group": "Cenyr / Vortigerns Ruh",
     "source": "Orts- & Regionsbanner"

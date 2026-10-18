@@ -1,6 +1,6 @@
 // Shared location taxonomy. Preserve saved map-specific IDs and edits when upgrading.
 (function(root){
-  const VERSION = 2;
+  const VERSION = 3;
   const BASE = '/Karten/assets/images/pin-placeholders/';
   const DEFINITIONS = [
     {"id":"mmflrbzxydg7","label":"Hauptstadt","color":"#ff0000","asset":"settlement-hauptstadt","addedIn":0,"aliases":[]},
@@ -24,6 +24,7 @@
     {"id":"mmflx4731uj6","label":"Turnierplatz","color":"#c49a20","asset":"settlement-turnierplatz","addedIn":0,"aliases":["Turnierfeld","Turnier"]},
     {"id":"mmflxnnhbh4g","label":"Besondere Orte","color":"#6060b0","asset":"settlement-besondere-orte","addedIn":0,"aliases":[]},
     {"id":"location-dorf","label":"Dorf","color":"#7a6040","asset":"template-siedlung","marker":"/Karten/assets/icons/welt/bardensiedlung.png","aliases":["Weiler"],"addedIn":1},
+    {"id":"location-flusssiedlung","label":"Flusssiedlung","color":"#2a7aaa","asset":"template-siedlung","marker":"/Karten/assets/icons/welt/flusssiedlung.png","aliases":[],"addedIn":3},
     {"id":"location-bauernhof","label":"Bauernhof","color":"#3a8a3a","asset":"location-bauernhof","marker":"/Karten/assets/icons/welt/bauernsiedlung.png","aliases":["Bauernhaus","Einfacher Hof"],"addedIn":1},
     {"id":"location-landgut","label":"Landgut","color":"#906438","asset":"location-landgut","marker":"/Karten/assets/icons/welt/landgut.png","aliases":[],"addedIn":1},
     {"id":"location-anwesen","label":"Anwesen","color":"#b08030","asset":"location-anwesen","marker":"/Karten/assets/icons/welt/anwesen.png","aliases":["Herrenhaus"],"addedIn":1},

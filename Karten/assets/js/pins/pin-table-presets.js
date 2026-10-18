@@ -4,7 +4,7 @@
   const templates = root.KartoPinTemplateCatalog;
   // Related types share a field set; explicit, unrelated templates retain their fields.
   const groups = [
-    ['Hauptstadt|Stadt|Dorf|Bauernsiedlung|Hafensiedlung|Burgsiedlung|Handelssiedlung|Brückensiedlung|Bergbausiedlung|Waldsiedlung|Kirchensiedlung|Leuchtturmsiedlung|Festungssiedlung|Bardensiedlung|Brauersiedlung|Klostersiedlung|Rosszuchtsiedlung|Sumpfsiedlung|Unterwasserstadt', 'siedlung'],
+    ['Hauptstadt|Stadt|Dorf|Flusssiedlung|Bauernsiedlung|Hafensiedlung|Burgsiedlung|Handelssiedlung|Brückensiedlung|Bergbausiedlung|Waldsiedlung|Kirchensiedlung|Leuchtturmsiedlung|Festungssiedlung|Bardensiedlung|Brauersiedlung|Klostersiedlung|Rosszuchtsiedlung|Sumpfsiedlung|Unterwasserstadt', 'siedlung'],
     ['Taverne', 'gastbetrieb'],
     ['Siedlungsruine|Stadtruine|Turmruine|Ruine|Brückenruine|Kirchenruine|Hausruine', 'ruine'],
     ['Schiffswrack', 'ruine', 'Schiffstyp|Herkunft|Ehemaliger Kapitän|Untergang|Lage / Tiefe|Zugänglichkeit|Ladung / Fundstücke'],

@@ -11,7 +11,7 @@ Wenn du Imgur nutzt, muss keine lokale Bilddatei in Git liegen. Du kannst die dr
 | Celtigerns Wacht | Haus Draig | active | `cenyr-celtigerns-wacht` | `Karten/karte.html?map=cenyr-celtigerns-wacht` | `Karten/Cenyr/celtigerns-wacht` |
 | Vortigerns Ruh | Koenigliche Grafschaft des Hauses Pendrag | active | `cenyr-vortigerns-ruh` | `Karten/karte.html?map=cenyr-vortigerns-ruh` | `Karten/Cenyr/vortigerns-ruh` |
 | Tal der Milane | Haus Aderyn | planned | `cenyr-tal-der-milane` | `Karten/karte.html?map=cenyr-tal-der-milane` | `Karten/Cenyr/tal-der-milane` |
-| Sonnenkueste | Haus Illewod | planned | `cenyr-sonnenkueste` | `Karten/karte.html?map=cenyr-sonnenkueste` | `Karten/Cenyr/sonnenkueste` |
+| Sonnenküste | Haus Illewod | active | `cenyr-sonnenkueste` | `Karten/karte.html?map=cenyr-sonnenkueste` | `Karten/Cenyr/sonnenkueste` |
 | Graue Weite | Haus Pysgod | planned | `cenyr-graue-weite` | `Karten/karte.html?map=cenyr-graue-weite` | `Karten/Cenyr/graue-weite` |
 | Weidebucht | Haus Wylan | planned | `cenyr-weidebucht` | `Karten/karte.html?map=cenyr-weidebucht` | `Karten/Cenyr/weidebucht` |
 | Aehrental | Haus Grawn | planned | `cenyr-aehrental` | `Karten/karte.html?map=cenyr-aehrental` | `Karten/Cenyr/aehrental` |

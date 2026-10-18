@@ -1,0 +1,438 @@
+{
+  "descriptions": [
+    {
+      "id": "sonnenkueste-twr-dychwel",
+      "screenshots": [
+        1
+      ],
+      "text": "Tŵr Dychwel, der Turm der Rückkehr, ist einer der vielen Türme der Institution Arkanum Avallorn, der cenyrischen Magierinstitution. Er dient als Sitz der Zauberin Gwenallarch Morforwyn, die für diesen Turm verantwortlich ist.",
+      "faction": "Arkanum von Avallorn"
+    },
+    {
+      "id": "sonnenkueste-gallochfaen",
+      "screenshots": [
+        2
+      ],
+      "text": "Gallochfaen ist ein neu gegründeter Vorort von Aberon, der hauptsächlich von Alben aus Dun Laog bewohnt wird. Gegründet von Verwandten der Gräfin, die ebenfalls aus Dun Laog stammt, brachte die Siedlung deren Gefolge als Teil einer Mitgift mit. Gallochfaen ist bekannt für seine Schmiedekunst und das Handwerk, besonders in der Herstellung von albischen Waffen und Rüstungen. Zudem dient die Siedlung als Ausbildungsstätte für Kerns und Galloglaigh-Krieger, die die Grafschaft verteidigen."
+    },
+    {
+      "id": "sonnenkueste-teyrngarch-brauerei-bragmellyn",
+      "screenshots": [
+        3
+      ],
+      "text": "Teyrngarch Brauerei - Bragmellyn ist eine weitere gepachtete Siedlung der Teyrngarcher Brauerzunft, die sich auf den Anbau von Hopfen sowie die Zucht von Kräutern und Geheimzutaten konzentriert. Diese besonderen Zutaten sind essenziell für die einzigartigen Bierrezepte der Gilde. Bragmellyn spielt eine wichtige Rolle in der Qualitätssicherung der Teyrngarch-Biere und sorgt dafür, dass die Brauereien stets mit den besten Rohstoffen versorgt werden.",
+      "fields": {
+        "Betreiber": "Haus Teyrngarch",
+        "Gebietsform": "Exklave der Herrschaft Teyrngarch",
+        "Lage": "Gerstenküste"
+      }
+    },
+    {
+      "id": "sonnenkueste-teyrngarch-taverne-zur-goldhaube",
+      "screenshots": [
+        4
+      ],
+      "text": "Zur Goldstube ist das Zentrum der Teyrngarcher Brauerzunft, einer Gilde im Besitz des Hauses Teyrngarch, das große Teile der Baronie Gerstenküste kontrolliert. Die Taverne liegt an einer Hauptstraße nahe der Sonnenküste, wo man bei gutem Wetter das Meer erblicken kann. Neben der Taverne gibt es ein Brauhaus, ein Wachhaus und mehrere Wohnhäuser, was den Ort zu einer kleinen Gemeinschaft macht. Als Geburtsstätte der Teyrngarch-Braukunst ist sie für Bierkenner eine Pilgerstätte.",
+      "fields": {
+        "Betreiber": "Haus Teyrngarch",
+        "Auch im Quelltext genannt": "Zur Goldstube"
+      }
+    },
+    {
+      "id": "sonnenkueste-aviron-bardenstadt",
+      "screenshots": [
+        5
+      ],
+      "text": "Aviron ist eine Bardenstadt, die von der Institution der Bewahrer Avallorns gegründet wurde, um die Kunst der Barden und die Magie zu fördern. Hier erhalten sowohl Adlige als auch das einfache Volk eine Ausbildung in den Künsten der Musik und Poesie. Die Stadt gilt als Zentrum für Kunst und Musik in der Grafschaft und zieht all jene an, die die schönen Künste verehren. Aviron ist somit eine Pilgerstätte für alle, die der Kunst und Musik frönen.",
+      "faction": "Bewahrer Avallorns"
+    },
+    {
+      "id": "sonnenkueste-teyrngarch-brauerei-bragwynfa",
+      "screenshots": [
+        6,
+        10
+      ],
+      "text": "Teyrngarch Brauerei - Bragwynfa ist eine weitere gepachtete Siedlung der Teyrngarcher Brauerzunft, die sich auf die Herstellung von Fässern spezialisiert hat. Die hier produzierten Fässer sind von entscheidender Bedeutung für die Bierlagerung und -verteilung in der gesamten Grafschaft. Bragwynfa unterstützt damit die Brauereien der Gilde und trägt wesentlich zur wirtschaftlichen Stärke des Hauses Teyrngarch bei.",
+      "fields": {
+        "Betreiber": "Haus Teyrngarch",
+        "Gebietsform": "Exklave der Herrschaft Teyrngarch",
+        "Lage": "Gerstenküste"
+      }
+    },
+    {
+      "id": "sonnenkueste-teyrngarch-brauerei-bragwaul",
+      "screenshots": [
+        7
+      ],
+      "text": "Teyrngarch Brauerei - Bragwaul ist eine weitere gepachtete Siedlung der Teyrngarcher Brauerzunft, die sich auf den Anbau von Hopfen spezialisiert hat. Der hier geerntete Hopfen deckt den Bedarf der verschiedenen Brauereien in der Region und ist essenziell für die Bierproduktion der Gilde. Bragwaul spielt somit eine zentrale Rolle in der Versorgungskette der Brauereien und trägt zur Qualität der Teyrngarch-Biere bei.",
+      "fields": {
+        "Betreiber": "Haus Teyrngarch",
+        "Gebietsform": "Exklave der Herrschaft Teyrngarch",
+        "Lage": "Gerstenküste"
+      }
+    },
+    {
+      "id": "sonnenkueste-llwynog-jagdverein-zur-kuhlen-furt",
+      "screenshots": [
+        8
+      ],
+      "text": "Zur Kühlen Furt ist eine Taverne im Besitz des Hauses Llwynog und dient als Treffpunkt für Waldläufer und Jäger. Der Jagdverein des Hauses nutzt diesen Ort, um Feiern und Gelage abzuhalten sowie sich auf die Jagd auf Großwild vorzubereiten. Die Taverne spielt eine zentrale Rolle für die Gemeinschaft, da sie als Versammlungsort dient, an dem wichtige Traditionen gepflegt und Abenteuer geplant werden.",
+      "fields": {
+        "Betreiber": "Llwynog Jagdverein"
+      }
+    },
+    {
+      "id": "sonnenkueste-rhosmeres-rosser-gwaulderw",
+      "screenshots": [
+        9
+      ],
+      "text": "Rhosmeres Rösser - Gwaulderw ist eine von der gleichnamigen Gilde gepachtete Siedlung, die sich auf die Zucht von Pferden aller Arten spezialisiert hat. Die hier gezüchteten Rösser werden an kleinere Standorte in der Region verteilt und sind für ihre Qualität und Vielseitigkeit bekannt. Gwaulderw spielt eine zentrale Rolle in der Versorgung der Grafschaft mit erstklassigen Pferden, die sowohl im Alltag als auch im Kriegsdienst geschätzt werden.",
+      "fields": {
+        "Betreiber": "Rhosmeres Rösser"
+      }
+    },
+    {
+      "id": "sonnenkueste-teyrngarch-brauerei-braglydd",
+      "screenshots": [
+        11
+      ],
+      "text": "Teyrngarch Brauerei - Braglydd ist eine Brauerei-Siedlung am Fluss im Osten der Grafschaft. Hier wird im Namen der Teyrngarcher Brauerzunft Bier gebraut, das anschließend in die gesamte Region verteilt wird. Die Siedlung spielt eine wichtige Rolle in der Versorgung der Grafschaft und ist bekannt für ihre traditionelle Braukunst, die das Ansehen der Gilde stärkt und ihre wirtschaftlichen Interessen sichert.",
+      "fields": {
+        "Betreiber": "Haus Teyrngarch",
+        "Gebietsform": "Exklave der Herrschaft Teyrngarch",
+        "Lage": "Jungferntal"
+      }
+    },
+    {
+      "id": "sonnenkueste-melynwyrdd-taverne-zur-letzten-rast",
+      "screenshots": [
+        12
+      ],
+      "text": "Zur Letzten Rast liegt an der nordöstlichen Grenze der Grafschaft und gehört ebenfalls der Melynwyrdd Bande. Die Taverne dient der Diebesgilde als strategischer Vorposten, um den Ein- und Ausgang von Reisenden zu überwachen und potenzielle Gefahren für die Grafschaft abzufangen. So werden etwa Mitglieder der Klingenden Münze, die gegen die Teyrngarch intrigieren, frühzeitig erkannt. Nach außen hin erscheint die Taverne als gewöhnliches Haus Teyrngarch-Gasthaus, doch die wahre Kontrolle liegt in den Händen der Gilde, die ihre Interessen hier sichert.",
+      "fields": {
+        "Betreiber": "Melynwyrdd"
+      }
+    },
+    {
+      "id": "sonnenkueste-brynthpont",
+      "screenshots": [
+        13
+      ],
+      "text": "Brynthpont ist eine Grenzsiedlung zur nördlichen Grafschaft Weidebucht und gehört dem Haus Teyrngarch. Die Siedlung dient als strategischer Stützpunkt, von dem aus die Diebesgilde der Teyrngarch die Ein- und Ausgänge in den Norden überwacht. Nichts dringt von Norden in die Grafschaft ein, ohne dass die Teyrngarch davon wissen. Brynthpont spielt somit eine wichtige Rolle bei der Grenzkontrolle und der Sicherstellung der Interessen des Hauses."
+    },
+    {
+      "id": "sonnenkueste-ffynbraich-2066-3408",
+      "screenshots": [
+        14
+      ],
+      "text": "Ffynbraich ist eine Waldsiedlung entlang des Weges, die sich auf den Holzabbau spezialisiert hat. Das Holz aus den umliegenden Wäldern wird vor allem für die Herstellung von Wagen und Holzfässern genutzt, die im Interesse der Brauereigilde der Teyrngarch stehen. Die Siedlung spielt eine wichtige Rolle in der Versorgung der Brauereien mit Fässern für die Bierlagerung und im Handwerk, das für den Transport und Handel in der Region benötigt wird."
+    },
+    {
+      "id": "sonnenkueste-castell-gwaelon",
+      "screenshots": [
+        15
+      ],
+      "text": "Castell Gwaelon ist der sekundäre Sitz des Hauses Teyrngarch und könnte zukünftig zum primären Sitz des Hauses werden, was einen Umzug aus Aberon bedeuten würde. Die Burg sichert den Norden der Grafschaft und die umliegenden Siedlungen, strategisch gelegen auf den Hügeln und eingebettet in den Wald. Die Straßen, die die Burg umkreisen, verbinden den Norden und Süden und machen Castell Gwaelon zu einem wichtigen Knotenpunkt für den Schutz und die Kontrolle der Region."
+    },
+    {
+      "id": "sonnenkueste-traethwych",
+      "screenshots": [
+        16
+      ],
+      "text": "Traethwych ist eine Hafensiedlung, die eine zentrale Rolle im Export der Güter des Hauses Teyrngarch spielt. Der Hafen dient als Handelsdrehscheibe für die Brauereigilde, über die das berühmte Bier und andere Produkte in die umliegenden Regionen und darüber hinaus verschifft werden. Durch die Lage am Meer ist Traethwych ein wichtiger Knotenpunkt für den maritimen Handel, der die wirtschaftlichen Interessen der Teyrngarch unterstützt und den Absatz ihrer Waren sichert."
+    },
+    {
+      "id": "sonnenkueste-morcarreg",
+      "screenshots": [
+        17
+      ],
+      "text": "Morcarreg ist eine Hafensiedlung, die eng mit dem Export der Brauereigilde der Teyrngarch verbunden ist. Die Siedlung ist bekannt für ihre zahlreichen Lagerhallen, in denen Alkohol wie Bier und andere Spirituosen reifen und gelagert werden, bevor sie für den Export vorbereitet werden. Dank seiner Lagerkapazitäten spielt Morcarreg eine zentrale Rolle in der Versorgung der Region und darüber hinaus, indem es die Qualität der gelagerten Produkte sicherstellt und den Handel der Teyrngarch unterstützt."
+    },
+    {
+      "id": "sonnenkueste-caorthmaen",
+      "screenshots": [
+        18
+      ],
+      "text": "Caorthmaen ist eine Waldsiedlung an der nördlichen Hauptstraße, wo sich die Wege nach Osten und Westen gabeln. Die Siedlung ist ein wichtiger Handelsstopp für Reisende und Händler, die die Straßen der Grafschaft nutzen. Neben dem Handel ist Caorthmaen auch für seine Unterhaltungsstätten und Tavernen bekannt, die Rastmöglichkeiten und Vergnügungen bieten. In den umliegenden Wäldern ist die Jagd ein wichtiger Bestandteil des Lebens, und viele Jäger und Waldläufer nutzen die Siedlung als Ausgangspunkt für ihre Streifzüge."
+    },
+    {
+      "id": "sonnenkueste-llyswyth",
+      "screenshots": [
+        19,
+        21
+      ],
+      "text": "Llyswyth ist die nördlichste Bauernsiedlung unter der Aufsicht von Tŵr Craithban und spezialisiert sich auf den Anbau von Weizen und Gerste. Ein Teil der Ernte geht an den Grafen, doch ein großer Teil wird an die Brauereigilde der Teyrngarch geliefert, wo die Gerste für die Bierproduktion genutzt wird. Die Felder von Llyswyth sind bekannt für ihre fruchtbaren Böden, die eine wichtige Grundlage für die Braukunst in der Region bilden."
+    },
+    {
+      "id": "sonnenkueste-bronmellyn",
+      "screenshots": [
+        20,
+        24
+      ],
+      "text": "Bronmellyn liegt westlich von Tŵr Craithban und ist eine Bauernsiedlung, die sich wie die anderen umliegenden Siedlungen auf den Anbau von Weizen und Gerste spezialisiert hat. Ein großer Teil der Ernte wird an die Brauereigilde der Teyrngarch geliefert, um die Bierproduktion zu unterstützen, während ein Teil als Abgabe an den Grafen geht. Die Felder von Bronmellyn tragen zur stabilen Versorgung der Brauereien bei und stärken die landwirtschaftliche Basis der Region."
+    },
+    {
+      "id": "sonnenkueste-twr-craithban",
+      "screenshots": [
+        22
+      ],
+      "text": "Tŵr Craithban ist ein Wachtturm des Hauses Teyrngarch, der auf einem Hügel thront und einen weiten Blick über die umliegenden Ländereien bietet. Der Turm überwacht die drei Bauernsiedlungen Llyswyth, Gwaulmarw und Bronmellyn, um die Sicherheit der Region zu gewährleisten. Als Teil der ritterlichen Herrschaft der Teyrngarch dient Tŵr Craithban nicht nur der Verteidigung, sondern auch der Verwaltung und dem Schutz der wirtschaftlich wichtigen Landwirtschaftsgebiete."
+    },
+    {
+      "id": "sonnenkueste-gwaulmarw",
+      "screenshots": [
+        23
+      ],
+      "text": "Gwaulmarw liegt weiter südlich unter der Aufsicht von Tŵr Craithban und ist ebenfalls eine Bauernsiedlung, die sich auf den Anbau von Weizen und Gerste konzentriert. Die Erträge aus Gwaulmarw sind wichtig für die Brauereigilde der Teyrngarch, die einen Großteil des Getreides für die Bierherstellung verwendet, während ein Teil der Ernte als Abgabe an den Grafen geht. Die Felder der Siedlung tragen wesentlich zur Versorgung der Brauereien bei und stärken damit die wirtschaftliche Basis der Region."
+    },
+    {
+      "id": "sonnenkueste-malrynn",
+      "screenshots": [
+        25
+      ],
+      "text": "Malrynn liegt an der Hauptstraße nach Osten und ist für seine Tavernen und Unterhaltungsstätten bekannt. Die Siedlung zieht Reisende und Händler gleichermaßen an, die hier Rast machen und das vielfältige Vergnügungsangebot genießen. Besonders berühmt ist Malrynn für seine Kampfarena, in der regelmäßig Schaukämpfe und Wettbewerbe stattfinden. Die Kombination aus Wirtshäusern, Unterhaltung und Kampfgeist macht Malrynn zu einem lebhaften Zentrum des Geschehens in der Region."
+    },
+    {
+      "id": "sonnenkueste-garwlannor",
+      "screenshots": [
+        26
+      ],
+      "text": "Garwlannor liegt direkt unterhalb von Aberon, der Hauptstadt und dem Sitz des Grafen. Die Siedlung ist ein wichtiger Handelsdurchreiseort, an dem Warenströme aus der gesamten Grafschaft zusammenlaufen. Hier werden die Güter der Hafensiedlungen gehandelt, darunter Fisch, Salz, Schiffsausrüstung und landwirtschaftliche Erzeugnisse. Dank seiner Lage nahe der Hauptstadt ist Garwlannor ein lebendiges Handelszentrum, das Kaufleute und Reisende aus nah und fern anzieht und die Wirtschaft der Region fördert."
+    },
+    {
+      "id": "sonnenkueste-morvyneth",
+      "screenshots": [
+        27
+      ],
+      "text": "Morvyneth ist eine Hafensiedlung in der Herrschaft des Hauses Blach und spielt eine zentrale Rolle im Handel und Fischfang der Grafschaft. Der Hafen dient als wichtiger Umschlagplatz für Waren, die über See geliefert oder exportiert werden, sowie für den täglichen Fischfang, der die Region mit frischen Meeresfrüchten versorgt. Dank ihrer Lage ist die Siedlung ein wirtschaftlicher Knotenpunkt, der den Seehandel der Grafschaft stärkt und Schiffe aus nah und fern anzieht. Morvyneth ist auch bekannt für ihre Werften, wo Schiffe gewartet und repariert werden."
+    },
+    {
+      "id": "sonnenkueste-traethglas",
+      "screenshots": [
+        28
+      ],
+      "text": "Traethglas liegt direkt südlich von Morvyneth und ist eine Hafensiedlung, die für ihren Fischfang und die Muschelzucht bekannt ist. Die geschützten Gewässer in der Umgebung eignen sich hervorragend für die Aquakultur, insbesondere die Zucht von Austern und anderen Meeresfrüchten. Die Siedlung spielt eine wichtige Rolle bei der Versorgung der Grafschaft mit frischen Meeresprodukten und ergänzt die Handelsaktivitäten von Morvyneth durch ihre Spezialitäten im maritimen Handwerk, wie Netzflickerei und Bootsbau."
+    },
+    {
+      "id": "sonnenkueste-glasdrann",
+      "screenshots": [
+        29,
+        30
+      ],
+      "text": "Glasdrann liegt südlich von Traethglas und nördlich von Morlithon und ist eine Hafensiedlung, die sich auf Schiffsbau und Holzverarbeitung spezialisiert hat. Die umliegenden Wälder liefern hochwertiges Holz, das in den örtlichen Werften zu Schiffen und Booten verarbeitet wird. Die Siedlung spielt eine zentrale Rolle in der maritimen Wirtschaft der Region, indem sie nicht nur den Bedarf an Schiffen deckt, sondern auch Ersatzteile und Ausrüstungen für die Seefahrt bereitstellt. Glasdrann ist bekannt für seine geschickten Handwerker, die Tradition und moderne Techniken im Schiffsbau vereinen."
+    },
+    {
+      "id": "sonnenkueste-bronwellyn",
+      "screenshots": [
+        31
+      ],
+      "text": "Bronwellyn ist eine Bauernsiedlung unter der Herrschaft des Hauses Blach, die sich auf Viehzucht und Landwirtschaft spezialisiert hat. Die fruchtbaren Felder rund um die Siedlung ermöglichen den Anbau verschiedener Gemüsesorten, während die Weiden ideale Bedingungen für die Haltung von Rindern, Schafen und anderen Nutztieren bieten. Bronwellyn spielt eine zentrale Rolle in der Versorgung der Region mit Lebensmitteln und leistet einen wichtigen Beitrag zur Ernährungssicherheit der Grafschaft."
+    },
+    {
+      "id": "sonnenkueste-morlithon",
+      "screenshots": [
+        32
+      ],
+      "text": "Morlithon ist eine Hafensiedlung in der Herrschaft des Hauses Blach, die sich auf Salzgewinnung, Segel- und Tauwerkherstellung sowie die Produktion von Schiffsausrüstung spezialisiert hat. Die Salinen der Siedlung liefern hochwertiges Meersalz, das für die Konservierung von Fisch und anderen Lebensmitteln in der Region von großer Bedeutung ist. Darüber hinaus werden hier Segel und Tauwerk für die lokale Schifffahrt gefertigt, und es entstehen wetterfeste Kleidung und Rüstungen für Seeleute. Morlithon ist damit ein wichtiges Versorgungszentrum für die maritime Wirtschaft der Grafschaft."
+    },
+    {
+      "id": "sonnenkueste-traethmaur",
+      "screenshots": [
+        33
+      ],
+      "text": "Traethmaur liegt in einer Bucht im Süden, umgeben von Klippen und scharfen Riffen, die die Siedlung von der offenen See trennen. Die Siedlung ist bekannt für die Ernte von Algen und Seetang, die für Medizin, Nahrungsmittel und Dünger genutzt werden, sowie für die Perlenfischerei in den umliegenden Gewässern. Die gefährlichen Riffe bieten reichhaltige Muschelbänke, aus denen wertvolle Perlen gewonnen werden, die Traethmaur zu einem Zentrum für Luxusgüter machen. Die raue Küste und die tückischen Gewässer prägen das Leben und die Wirtschaft der Siedlung."
+    },
+    {
+      "id": "sonnenkueste-castell-caerthyn",
+      "screenshots": [
+        34
+      ],
+      "text": "Castell Caerthyn ist der sekundäre Sitz des Hauses Blach und wurde auf einem Hügel an der Grenze zur südlichen Grafschaft errichtet. Die Festung überwacht sowohl den Fluss als auch die Westküste und bietet Schutz für die umliegenden Siedlungen. Vom Hügel aus hat man einen optimalen Blick auf das Meer und den Fluss, was Castell Caerthyn zu einem strategischen Wachposten macht. Hier bildet das Haus Blach auch seine Krieger aus, um die Sicherheit der Region zu gewährleisten."
+    },
+    {
+      "id": "sonnenkueste-garwlynn",
+      "screenshots": [
+        35
+      ],
+      "text": "Garwlynn ist eine Brücken- und Grenzsiedlung im Süden der Herrschaft Llwynog, die den Übergang nach Celtigerns Wacht markiert. Die Siedlung spielt eine wichtige Rolle bei der Überwachung des Grenzverkehrs und dient als Tor zur südlichen Region. Die strategische Lage von Garwlynn macht sie zu einem wichtigen Durchgangspunkt für Handel und Reisen, während die Brücke den Flussübergang erleichtert und die Verbindung zwischen den Regionen stärkt."
+    },
+    {
+      "id": "sonnenkueste-brynthwaul",
+      "screenshots": [
+        36
+      ],
+      "text": "Brynthwaul liegt an einer Weggabelung und ist ein vielseitiges Zentrum der Herrschaft Llwynog. Die Siedlung ist bekannt für ihre Jagdvereine und Hundezucht, die tief in der örtlichen Tradition verwurzelt sind. Hier werden Jagdhunde gezüchtet und trainiert, um den Anforderungen der Jäger gerecht zu werden. Darüber hinaus spielt die Viehzucht eine wichtige Rolle, und der Handel blüht dank der strategischen Lage an der Weggabelung. Brynthwaul ist somit ein bedeutender Knotenpunkt für Jagd, Landwirtschaft und Wirtschaft."
+    },
+    {
+      "id": "sonnenkueste-ffynbraich-1179-1369",
+      "screenshots": [
+        37
+      ],
+      "text": "Ffynbraich liegt an der Straße nach Süden, umgeben von zwei dichten Wäldern im Osten und Westen. Die Siedlung dient als Jagdrevier des Hauses Llwynog, wo die Wildjagd im Mittelpunkt steht. Ffynbraich ist auch ein wichtiges Zentrum für die Zucht und Ausbildung von Jagdhunden, die in den umliegenden Wäldern trainiert werden. Die enge Verbindung zur Jagdtradition macht die Siedlung zu einem bedeutenden Ort für das Jagdwesen der Herrschaft."
+    },
+    {
+      "id": "sonnenkueste-bronwynn",
+      "screenshots": [
+        38
+      ],
+      "text": "Bronwynn ist eine Bauernsiedlung in der Herrschaft Llwynog, die sich auf Landwirtschaft und Viehzucht spezialisiert hat. Die Siedlung nutzt die fruchtbaren Böden für den Anbau von Getreide, Gemüse und die Haltung von Nutztieren, was zur Versorgung der Region beiträgt. Bronwynn ist für die hohe Qualität seiner landwirtschaftlichen Erzeugnisse bekannt und spielt eine wichtige Rolle in der Ernährungssicherheit der Grafschaft."
+    },
+    {
+      "id": "sonnenkueste-llysgwaer",
+      "screenshots": [
+        39
+      ],
+      "text": "Llysgwaer ist eine Bauernsiedlung in der Herrschaft Llwynog, die sich auf Ackerbau und Viehzucht spezialisiert hat. Die Felder und Weiden der Siedlung liefern Getreide, Gemüse und Viehprodukte, die zur Versorgung der umliegenden Ortschaften beitragen. Llysgwaer ist bekannt für seine traditionellen Anbaumethoden und die robuste Qualität seiner landwirtschaftlichen Erzeugnisse, die einen wichtigen Teil der regionalen Wirtschaft ausmachen."
+    },
+    {
+      "id": "sonnenkueste-twr-garthryn",
+      "screenshots": [
+        40
+      ],
+      "text": "Tŵr Garthryn ist ein Wachposten und Turm des Hauses Llwynog, der auf einem Hügel liegt und die umliegenden Siedlungen überwacht. Der Turm dient nicht nur als strategischer Beobachtungspunkt, sondern auch als Zentrum für die Zucht und Ausbildung von Jagdhunden, die in den nahe gelegenen Wäldern trainiert werden. Tŵr Garthryn ist somit sowohl ein militärischer Stützpunkt als auch ein wichtiger Ort für das Jagdwesen der Herrschaft, wo Tradition und Schutz eng miteinander verbunden sind."
+    },
+    {
+      "id": "sonnenkueste-gwaulbryn",
+      "screenshots": [
+        41
+      ],
+      "text": "Gwaulbryn ist eine Bauernsiedlung in der Herrschaft Llwynog, die sich auf Ackerbau und Viehzucht konzentriert. Die fruchtbaren Böden ermöglichen den Anbau von Getreide und Gemüse, während die umliegenden Weiden Platz für die Haltung von Rindern und Schafen bieten. Die Siedlung spielt eine wichtige Rolle in der Versorgung der Region mit Nahrungsmitteln und trägt zur Stabilität der landwirtschaftlichen Wirtschaft in der Grafschaft bei."
+    },
+    {
+      "id": "sonnenkueste-malron",
+      "screenshots": [
+        42
+      ],
+      "text": "Malron liegt an der Straße zwischen Nythwaen und Brynthwaul und ist bekannt für die Herstellung von Pfeilen, Bögen und Lederrüstungen. Die Siedlung spielt eine wichtige Rolle bei der Ausrüstung der Jäger und Krieger der Region und versorgt die Grafschaft mit hochwertigen Jagd- und Kampfgeräten. Malron ist für seine geschickten Handwerker und die Verarbeitung von lokalem Leder und Holz bekannt, was die Qualität der produzierten Ausrüstungen sicherstellt."
+    },
+    {
+      "id": "sonnenkueste-llysbron",
+      "screenshots": [
+        43
+      ],
+      "text": "Llysbron ist eine Bauernsiedlung in der Herrschaft Llwynog, die sich auf Landwirtschaft und Viehzucht spezialisiert hat. Die fruchtbaren Felder und Weiden der Umgebung ermöglichen den Anbau von Getreide, Gemüse und die Haltung von Nutztieren, was die Siedlung zu einem wichtigen Versorgungszentrum für die Region macht. Die Bewohner von Llysbron sind für ihre traditionellen Anbaumethoden und die hohe Qualität ihrer landwirtschaftlichen Erzeugnisse bekannt, die einen wichtigen Beitrag zur Ernährungssicherheit der Grafschaft leisten."
+    },
+    {
+      "id": "sonnenkueste-nythwaen",
+      "screenshots": [
+        44
+      ],
+      "text": "Nythwaen liegt im Osten an der wichtigsten Kreuzung der Grafschaft und dient als bedeutender Handelsknotenpunkt. Die Siedlung verbindet die wichtigsten Straßen der Region und fördert so den Austausch von Waren und Gütern innerhalb der Grafschaft. Nythwaen ist außerdem berühmt für seine prächtige Rinderzucht, die hochwertige Viehbestände liefert und zur wirtschaftlichen Stärke der Siedlung beiträgt. Die Kombination aus Handel und Landwirtschaft macht Nythwaen zu einem zentralen Ort für die Versorgung der Region."
+    },
+    {
+      "id": "sonnenkueste-ffynbrae",
+      "screenshots": [
+        45
+      ],
+      "text": "Ffynbrae ist eine westlich gelegene Waldsiedlung in der Herrschaft Löwenberg, eingebettet in die dichten Wälder der Region. Die Siedlung ist auf Holzernte und Wildjagd spezialisiert und liefert wichtige Rohstoffe wie Bauholz und Tierfelle an die umliegenden Ortschaften. Ffynbrae ist bekannt für seine enge Verbundenheit mit dem Wald, und viele der Bewohner sind erfahrene Jäger, Förster oder Handwerker, die ihre Kenntnisse von Generation zu Generation weitergeben."
+    },
+    {
+      "id": "sonnenkueste-caorthlydd",
+      "screenshots": [
+        46
+      ],
+      "text": "Caorthlydd ist eine südlich gelegene Waldsiedlung in der Herrschaft Löwenberg, umgeben von üppigen Wäldern. Die Siedlung ist auf Forstwirtschaft und Lederverarbeitung spezialisiert und versorgt die Region mit hochwertigem Bauholz, Jagdbeute und handgefertigten Lederwaren. Dank der südlichen Lage dient Caorthlydd als wichtiger Außenposten, der den Zugang zu den dichten Wäldern und den Handelsrouten der Grafschaft sichert. Viele der Bewohner sind geschickte Jäger und Handwerker, die eng mit der Natur verbunden leben."
+    },
+    {
+      "id": "sonnenkueste-llysgwaul",
+      "screenshots": [
+        47
+      ],
+      "text": "Llysgwaul ist eine Bauernsiedlung in der Herrschaft Löwenberg, die sich auf Rinderzucht sowie den Anbau von Getreide und Gemüse spezialisiert hat. Die fruchtbaren Felder und Weiden der Umgebung sorgen für eine reichhaltige Ernte und hochwertige Viehzucht, die die Versorgung der Region sichern. Die Siedlung ist ein wichtiges landwirtschaftliches Zentrum, dessen Produkte nicht nur die umliegenden Ortschaften beliefern, sondern auch zum Handel in der Grafschaft beitragen."
+    },
+    {
+      "id": "sonnenkueste-garwmellyn",
+      "screenshots": [
+        48
+      ],
+      "text": "Garwmellyn ist eine strategisch gelegene Siedlung an einer Weggabelung, wo ein Pfad entlang des Flusses nach Westen führt, ein weiterer nach Norden zur Brücke und der dritte nach Süden durch Löwenberg verläuft. Diese Lage macht die Siedlung zu einem wichtigen Verkehrsknotenpunkt innerhalb der Herrschaft. Garwmellyn ist bekannt für seine Jagd- und Lederverarbeitung und bietet Reisenden Rastmöglichkeiten sowie handgefertigte Waren aus der Region. Die Nähe zu den umliegenden Wäldern und der Fluss erleichtern den Handel und den Transport von Gütern, insbesondere Holz und Leder."
+    },
+    {
+      "id": "sonnenkueste-dun-afalla",
+      "screenshots": [
+        49
+      ],
+      "text": "Dun Afalla ist die antike Heimat des längst erloschenen Hauses Nic Ríordáin, eines matriarchal geführten Crannath-Albenhauses, das als Schutzpatron der Musik und Kunst galt. Gegründet von einer legendären Bardin, die als \"Königliche Bardin\" bekannt war, soll das Haus von ihr abstammen. Der Legende nach schenkte ein Albenkönig ihr die Sonnenküste, um ihre Kunst zu ehren. Die Stadt diente einst als kulturelles Zentrum der albischen Musik, doch der Glanz verlosch mit dem Einfall der Norrnaigh, die die wehrlosen Nic Ríordáin besiegten und ihre Kultur zum Erliegen brachten."
+    },
+    {
+      "id": "sonnenkueste-braichfaen",
+      "screenshots": [
+        50
+      ],
+      "text": "Braichfaen ist eine Waldsiedlung am Rand des Waldes und der Hügel von Löwenberg. Gelegen an der Grenze zwischen dichten Wäldern und offenem Hügelland, ist die Siedlung ein Zentrum für Forstwirtschaft und Wildjagd. Die Bewohner von Braichfaen sind erfahrene Holzfäller und Jäger, die das umliegende Land für die Holzverarbeitung und die Herstellung von hochwertigen Lederwaren nutzen. Die Nähe zur Natur macht die Siedlung auch zu einem beliebten Ort für Reisende, die abseits der größeren Straßen Schutz und Rast suchen."
+    },
+    {
+      "id": "sonnenkueste-twr-mwynfaen",
+      "screenshots": [
+        51
+      ],
+      "text": "Tŵr Mwynfaen ist ein Wachtturm an der Grenze zur Weidebucht, gelegen am Fluss. Der Turm dient zur Überwachung der Grenze und des umliegenden Waldes, wo die Sprösslinge der Baronesse gerne auf die Jagd gehen. Die strategische Lage ermöglicht eine schnelle Reaktion auf potenzielle Bedrohungen und bietet einen ausgezeichneten Blick auf die Landschaft, um die Sicherheit der Baronie Jungferntal zu gewährleisten."
+    },
+    {
+      "id": "sonnenkueste-nythlyn",
+      "screenshots": [
+        52
+      ],
+      "text": "Nythlyn ist eine Flusssiedlung in der Baronie Jungferntal, die sich auf die Papierherstellung spezialisiert hat. Die Siedlung nutzt die Wasserkraft des Flusses, um Papiermühlen anzutreiben und hochwertiges Papier für die gesamte Grafschaft zu produzieren. Dank der umliegenden Wälder verfügt Nythlyn über reichlich Rohstoffe zur Papierproduktion und spielt eine zentrale Rolle in der Versorgung der Region mit Schreibmaterialien und Dokumentationsmitteln.",
+      "fields": {
+        "Gewerbe": "Papierherstellung"
+      }
+    },
+    {
+      "id": "sonnenkueste-zum-goldenen-kuss",
+      "screenshots": [
+        53
+      ],
+      "text": "Zum Goldenen Kuss ist das Hauptquartier der Melynwyrdd Bande, der Diebesgilde des Hauses Teyrngarch. Als räuberischer Arm der Brauereigilde schützt die Gilde die Interessen des Hauses, schaltet Konkurrenten aus und sorgt dafür, dass mächtige Kaufmannsgilden wie die Klingende Münze die Teyrngarch nicht aus dem Geschäft drängen können. Die Taverne fungiert zugleich als Bordell und Treffpunkt der Gilde, wo Gäste das berühmte Nationalbier Cenyrs, die Goldhaube, genießen können. Der zwielichtige Ruf des Ortes zieht jene an, die das Risiko nicht scheuen und ein Interesse an den dunkleren Geschäften der Region haben."
+    },
+    {
+      "id": "sonnenkueste-malgarth",
+      "screenshots": [
+        54
+      ],
+      "text": "Malgarth ist eine Siedlung an der Weggabelung einer wichtigen Handelsroute in der Baronie Jungferntal. Die Stadt ist bekannt für die Herstellung von Kutschen, Wagen und landwirtschaftlichen Geräten wie Pflügen und Bauernwerkzeugen. Malgarth spielt eine entscheidende Rolle für die Agrarkultur des Königreichs, da hier innovative Technologie für die Landwirtschaft entwickelt und produziert wird, die den regionalen Handel und die Versorgung der Bauern unterstützt."
+    },
+    {
+      "id": "sonnenkueste-bronwaul",
+      "screenshots": [
+        55
+      ],
+      "text": "Bronwaul ist eine Bauernsiedlung in der Baronie Jungferntal, die eine wichtige Rolle in der Nahrungsversorgung der Region spielt. Die fruchtbaren Felder rund um die Siedlung ermöglichen den Anbau von Getreide, Gemüse und anderen Lebensmitteln, die zur Versorgung der gesamten Baronie beitragen. Bronwaul ist bekannt für seine hochwertigen Erzeugnisse und die effiziente Landwirtschaft, die den Bedarf an Nahrungsmitteln deckt und zur Stabilität der Region beiträgt."
+    },
+    {
+      "id": "sonnenkueste-carregwyn",
+      "screenshots": [
+        56
+      ],
+      "text": "Carregwyn ist eine Bergbausiedlung in der Baronie Jungferntal, die neben dem Abbau von Erz auch für ihren hochwertigen Tonabbau bekannt ist. Der in der Umgebung gewonnene Ton wird für die Herstellung von Keramik, Dachziegeln und Bauziegeln genutzt, wodurch Carregwyn zu einem wichtigen Zentrum für Töpferkunst und Bauwesen wird. Die Siedlung ist berühmt für ihre handgefertigten Tonwaren, die in der ganzen Region geschätzt werden, und verbindet traditionelle Handwerkskunst mit den natürlichen Ressourcen der Umgebung."
+    },
+    {
+      "id": "sonnenkueste-garthfael",
+      "screenshots": [
+        57
+      ],
+      "text": "Garthfael ist eine Bergbausiedlung, die unter einem Wasserfall am Ursprung eines Flusses liegt. Die Siedlung nutzt die Wasserkraft, um Erzwaschen zu betreiben, wobei wertvolle Mineralien und Sedimente aus dem Gestein gelöst werden. Der Wasserfall bietet dafür ideale Bedingungen, um Gold, Silber oder andere Erze zu reinigen. Darüber hinaus wird entlang des Flusses hochwertiger Ton abgebaut, der für die Herstellung von Keramik und Töpferwaren verwendet wird. Garthfael ist daher ein wichtiger Standort für die Mineralienverarbeitung und Töpferei in der Region."
+    },
+    {
+      "id": "sonnenkueste-ffyncairn",
+      "screenshots": [
+        58
+      ],
+      "text": "Ffyncairn ist eine Waldsiedlung in der Baronie Jungferntal, die am Rand eines dichten Waldes liegt. Die Bewohner sind erfahrene Jäger und Sammler, die den Wald für Wild, Beeren und Heilkräuter nutzen, was die Siedlung zu einem wichtigen Versorger für natürliche Ressourcen macht. Die Lage von Ffyncairn bietet zudem Schutz und Abgeschiedenheit, wodurch die Siedlung ein ruhiges Refugium für diejenigen ist, die eng mit der Natur verbunden leben möchten."
+    },
+    {
+      "id": "sonnenkueste-mwyncarreg",
+      "screenshots": [
+        59
+      ],
+      "text": "Mwyncarreg ist eine Bergbausiedlung am Berghang, die sich auf den Erzabbau und die Gewinnung von Bau- und Werksteinen spezialisiert hat. Die umliegenden Berge liefern reichhaltige Vorkommen an Eisen und Kupfer, die vor Ort abgebaut und verarbeitet werden, um die Region mit Metallen zu versorgen. Neben dem Erzbergbau betreibt Mwyncarreg einen Steinbruch, in dem hochwertiger Stein wie Schiefer oder Kalkstein für den Bau von Gebäuden und Straßen gewonnen wird. Die Siedlung spielt eine zentrale Rolle in der Versorgung der Grafschaft mit Rohmaterialien für Bau und Handwerk."
+    },
+    {
+      "id": "sonnenkueste-craithban",
+      "screenshots": [
+        60
+      ],
+      "text": "Craithban liegt am Fuß des Berges und ist eng mit den Bergbauaktivitäten in der Region verbunden. Die Siedlung dient als Verarbeitungs- und Umschlagplatz für die in den umliegenden Bergen gewonnenen Rohstoffe, insbesondere Erz und Bau- oder Werkstein. Craithban ist bekannt für seine Schmieden und Werkstätten, wo Metalle weiterverarbeitet und Werkzeuge sowie Bauteile hergestellt werden. Zudem fungiert die Siedlung als Handelsknotenpunkt, von dem aus die Rohstoffe in die gesamte Grafschaft transportiert werden."
+    }
+  ]
+}
