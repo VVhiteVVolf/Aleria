@@ -1,0 +1,239 @@
+{
+  "type": "aleria-module-package",
+  "version": 1,
+  "exportedAt": "2026-10-18T00:00:00Z",
+  "module": {
+    "type": "aleria-module",
+    "version": 1,
+    "section": {
+      "key": "Die Klingende Münze - Gwynthor",
+      "tab": "Völker & Kulturen",
+      "desc": "Handelsposten, Interessenbünde und Betriebe des dreifachen Gildenverbunds.",
+      "iconUrl": "../Fraktionen/assets/emblems/gilden/klingende-muenze.webp",
+      "path": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Gwynthor",
+        "Die Klingende Münze - Gwynthor"
+      ]
+    },
+    "entry": {
+      "id": "gwynthor-klingende-muenze-interessenbuende",
+      "title": "Die fünf Interessenbünde",
+      "subtitle": "Falveri · Ergalla · Gwlannor · Halenrhyd · Aurdden & Loer",
+      "type": "Gildenverbund",
+      "category": "Gwynthor · Handelsposten",
+      "icon": "◈",
+      "symbol": "../Fraktionen/assets/emblems/gilden/klingende-muenze.webp",
+      "image": "./assets/klingende-muenze-gwynthor/handelsposten.png",
+      "previewImage": "./assets/klingende-muenze-gwynthor/handelsposten.png",
+      "stamp": "KLINGENDE MÜNZE · CELTIGERNS WACHT",
+      "schemaVersion": 1,
+      "multipage": true,
+      "appendCommentsPage": true,
+      "enablePageComments": true,
+      "sessionCast": [],
+      "pages": [
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "muenze-interessen",
+          "pageTitle": "Fünf Bünde, acht Stimmen",
+          "image": "./assets/klingende-muenze-gwynthor/ratssaal.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "description": "<p>Die örtliche Macht der Klingenden Münze ruht auf fünf Interessenbünden. Die <strong>Falveri</strong> und <strong>Ergalla</strong> bringen ihre venalysischen See- und Bankverbindungen mit. In Gwynthor handeln örtliche Familienzweige für sie; die Hauptlinien bleiben in Venalys. Beide wollen die wirtschaftliche Verantwortung für die Grafschaft gewinnen.</p><p>Die cenyrischen Häuser verfügen über andere Grundlagen. <strong>Gwlannor</strong> baut Schiffe und vertritt Saethwyr-Interessen. <strong>Halenrhyd</strong> verbindet Rossausbildung und Viehhandel mit den Wyrm. <strong>Aurdden &amp; Loer</strong> verzahnen Juwelierhandwerk, Rohmaterial und Bankgeschäft; allein Loer besitzt die genannte Prägelizenz.</p><p>Keines dieser Lager kann den Handelsposten allein betreiben. Sie finanzieren, verfrachten, bewachen und beliefern einander. Die nächste gemeinsame Unternehmung kann eine bestehende Rivalität überdecken, während die Verteilung ihres Gewinns sie erneut aufbrechen lässt.</p><p>Weitere Mitglieder wie die <strong>Gwregysdu</strong>, <strong>Finlay Cneacail</strong> und <strong>Albrecht Sonnenfels</strong> besitzen eigene Geschäfte und Bindungen. Sie gehören zum Verbund, ohne dadurch einen zusätzlichen der fünf führenden Interessenbünde zu bilden.</p>",
+          "stats": [
+            [
+              "Falveri",
+              "2 Ratssitze · Venalysischer Hauptzweig"
+            ],
+            [
+              "Ergalla",
+              "2 Ratssitze · Venalysischer Hauptzweig"
+            ],
+            [
+              "Gwlannor",
+              "1 Ratssitz · Haus Saethwyr"
+            ],
+            [
+              "Halenrhyd",
+              "1 Ratssitz · Haus Wyrm"
+            ],
+            [
+              "Aurdden & Loer",
+              "2 Ratssitze · Aurdden dienen Loer · Loer dienen Wyrm"
+            ]
+          ]
+        },
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "muenze-familie-falveri",
+          "pageTitle": "Falveri · Seefahrt und Einfluss",
+          "image": "./assets/klingende-muenze-gwynthor/ratssaal.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "description": "<p>Die Falveri sind ein venalysisches Haus mit weitreichenden See- und Bankverbindungen. Ihr Hauptzweig bleibt in <strong>Venalys</strong>; in Gwynthor vertritt ein eigener Familienzweig seine Interessen. Verwandtschaft öffnet Türen, doch örtliche Macht muss am Kai und am Ratstisch erworben werden.</p><p>Sie wollen die wirtschaftliche und gildische Verantwortung für <strong>Celtigerns Wacht</strong> an sich ziehen. Zwei Ratssitze geben ihrem Handels- und Kapitalinteresse Gewicht. Außerdem liegt die Kontor-Kommandantur der Roten Kompanie bei einem Falveri. So erhalten Fragen von Geleit, Ankunft und militärischer Bereitstellung besonderen Einfluss auf ihre Verhandlungen.</p><p>Die Ergalla bestreiten ihnen diesen Vorrang. Mit Gwlannor sind Schiffsraum und Werftleistungen zu verhandeln; mit Halenrhyd und Aurdden &amp; Loer Fracht, Kapital und örtliche Bindungen. Die Verbindung der Gwregysdu zu den Falveri ist ein weiterer Zugang zum Hafenumschlag.</p><p><strong>Aldo Falveri</strong> gehört zur Verwandtschaft, ist aber ein ehemaliger Condottiere der Roten Kompanie. Sein heutiger Weg als Ritterherr wird durch die örtliche Kommandantur nicht ersetzt.</p><p><a href=\"../Stammbäume/Stammbaum.html?family=haus-falveri&amp;mode=view\">Den bestehenden Stammbaum Falveri öffnen</a></p>",
+          "stats": [
+            [
+              "Herkunft",
+              "Venalys · örtlicher Vertretungszweig in Gwynthor"
+            ],
+            [
+              "Bindung",
+              "Venalysischer Hauptzweig"
+            ],
+            [
+              "Wirtschaftliche Grundlage",
+              "Seeverbindungen · Handelskapital · örtliche Familienvertretung"
+            ],
+            [
+              "Ziel",
+              "Führende Verantwortung für den Gildenverbund in Celtigerns Wacht"
+            ],
+            [
+              "Achterrat",
+              "2 gleichrangige Ratssitze"
+            ]
+          ]
+        },
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "muenze-familie-ergalla",
+          "pageTitle": "Ergalla · Die andere Hand am Geld",
+          "image": "./assets/klingende-muenze-gwynthor/ratssaal.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "description": "<p>Auch die Ergalla kommen aus <strong>Venalys</strong>. Seefahrt und Bankgeschäfte tragen ihren Wohlstand. Der Hauptzweig sitzt weiterhin in der Heimat; ein örtlicher Familienzweig führt die Interessen in Gwynthor fort.</p><p>Die Ergalla wollen die Falveri verdrängen und sich die wirtschaftliche Vorherrschaft in der Grafschaft sichern. Ihre zwei Ratssitze und die <strong>Leitung der Roten Bank</strong> bilden dafür eine starke Ausgangslage. Wer Einlagen, Sicherheiten und Kreditgesuche kennt, erfährt viel über die Vorhaben der anderen Häuser.</p><p>Dennoch muss die Bank des gesamten Verbunds arbeitsfähig bleiben. Die Ergalla müssen mit Familien verhandeln, deren Waren und Sicherheiten sie verwalten. Streit mit den Falveri kann einzelne Vorhaben blockieren; gemeinsame Seegeschäfte können beide Lager dennoch an denselben Tisch bringen.</p>",
+          "stats": [
+            [
+              "Herkunft",
+              "Venalys · örtlicher Vertretungszweig in Gwynthor"
+            ],
+            [
+              "Bindung",
+              "Venalysischer Hauptzweig"
+            ],
+            [
+              "Wirtschaftliche Grundlage",
+              "Seefahrt · Bankgeschäfte · örtliche Familienvertretung"
+            ],
+            [
+              "Ziel",
+              "Falveri verdrängen und die wirtschaftliche Führung der Grafschaft gewinnen"
+            ],
+            [
+              "Achterrat",
+              "2 gleichrangige Ratssitze"
+            ]
+          ]
+        },
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "muenze-familie-gwlannor",
+          "pageTitle": "Gwlannor · Werften und Fahrwasser",
+          "image": "./assets/klingende-muenze-gwynthor/handelsposten.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "description": "<p>Die reiche cenyrische Schiffsbauerfamilie <strong>Gwlannor</strong> dient dem Haus <strong>Saethwyr</strong>. Sie baut Schiffe verschiedener Art und unterhält Handelsschiffe und Lagerhallen. Im Komplex der Klingenden Münze belegt ihre große <strong>Schiffswerft</strong> einen beträchtlichen Teil der Uferfläche.</p><p>Ihr Vermögen liegt in Holz, Beschlägen, erfahrenen Händen und dem Schiffsraum, den andere Häuser benötigen. Bauaufträge, Ausbesserungen und neue Kunden interessieren sie mehr als jeder Streit um einen Stuhl. Ihr Ratssitz sichert ihnen Gehör bei Hafenfragen und gemeinsamen Investitionen.</p><p>Zurückhaltung bedeutet keine Gleichgültigkeit: Bei Vorhaben, die den Interessen der <strong>Saethwyr</strong> widersprechen, vertreten die Gwlannor ihren Dienstherrn. Falveri und Ergalla können um ihre Unterstützung werben, ohne dass die Familie sich dauerhaft einem venalysischen Lager verschreiben muss.</p>",
+          "stats": [
+            [
+              "Herkunft",
+              "Cenyr · Gwynthor"
+            ],
+            [
+              "Bindung",
+              "Haus Saethwyr"
+            ],
+            [
+              "Wirtschaftliche Grundlage",
+              "Große Werft im Gildenkomplex · Handelsschiffe · Lagerhallen"
+            ],
+            [
+              "Ziel",
+              "Seefahrt, Schiffbau und Kundschaft sichern; Interessen der Saethwyr wahren"
+            ],
+            [
+              "Achterrat",
+              "1 gleichrangige Ratssitz"
+            ]
+          ]
+        },
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "muenze-familie-halenrhyd",
+          "pageTitle": "Halenrhyd · Zucht und Viehhandel",
+          "image": "./assets/klingende-muenze-gwynthor/ratssaal.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "description": "<p>Die Halenrhyd dienen dem Haus <strong>Wyrm</strong>. Ihre große Rosszucht mit Ausbildung und Weiden liegt <strong>auf dem Land in Gwynthors Bannkreis</strong>. Von dort kommen ausgewählte Tiere zum Verkauf in die Stadt. Bei Gwynthor trägt die Familie wesentlich zur Ausbildung von Schlachtrössern bei; daneben handelt sie mit anderem Vieh.</p><p>In Gwynthor besitzt sie ein <strong>Verkaufsgestüt, einen Hufschmied sowie Schlachterei und Metzgerei</strong>. Diese Betriebe sind eigene Anlaufstellen in der Stadt. Im Handelsposten selbst liegen ihre Verwaltungsräume, in denen Verkauf, Fuhren, Verträge und Zahlungen zusammenlaufen.</p><p>Der Ratssitz gibt den ländlichen Lieferwegen, dem Viehhandel und den Bedürfnissen der Rossausbildung Gewicht. Günstige Frachten und verlässliche Vorschüsse sind willkommen; ihre Bindung an die Wyrm bleibt bei der Wahl ihrer Bündnisse spürbar.</p>",
+          "stats": [
+            [
+              "Herkunft",
+              "Cenyr · Gwynthors Bannkreis"
+            ],
+            [
+              "Bindung",
+              "Haus Wyrm"
+            ],
+            [
+              "Wirtschaftliche Grundlage",
+              "Ländliche Rosszucht · städtisches Verkaufsgestüt · Hufschmied · Schlachterei und Metzgerei"
+            ],
+            [
+              "Ziel",
+              "Absatz und Ausbildung sichern; Interessen der Wyrm vertreten"
+            ],
+            [
+              "Achterrat",
+              "1 gleichrangige Ratssitz"
+            ]
+          ]
+        },
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "muenze-familie-aurdden-loer",
+          "pageTitle": "Aurdden & Loer · Stein, Gold und Münze",
+          "image": "./assets/klingende-muenze-gwynthor/ratssaal.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "description": "<p>Die <strong>Aurdden</strong> sind Juweliere, Bänker und Goldschmiede. Mit dem niederen Ritterhaus <strong>Loer</strong> verbinden sie Dienst, Gewinnbeteiligung und häufige Ehen. Die Loer stehen unmittelbar unter den Wyrm; über sie reicht auch die Bindung der Aurdden zu diesem Haus.</p><p>Gwynthors bester Juwelier und Goldschmied gehört zu diesem Geflecht. Die Loer liefern Rohmaterial und erhalten einen Anteil am Ertrag. Handwerk, Bewertung, Weiterverarbeitung und Verkauf machen die Aurdden zum wirtschaftlichen Gegenstück des Ritterhauses.</p><p><strong>Das lizenzierte Münzprägerecht liegt allein bei den Loer.</strong> Die Aurdden erhalten durch ihre Nähe zu ihnen kein eigenes Prägerecht. Ebenso ersetzt die Leitung der Roten Bank durch die Ergalla weder die Loer-Lizenz noch die besondere Stellung der Aurdden im Edelmetallgeschäft.</p><p>Gemeinsam bilden beide Häuser einen Interessenblock mit <strong>zwei Ratssitzen</strong>: einem für Aurdden und einem für Loer. Beim Erwerb von Material, bei Sicherheiten und bei Aufträgen sind sie auf Zusammenarbeit angewiesen, ohne dass ihre Ansprüche vollständig zusammenfallen.</p><p><a href=\"../Stammbäume/Stammbaum.html?family=haus-loer&amp;mode=view\">Den bestehenden Stammbaum Loer öffnen</a></p>",
+          "stats": [
+            [
+              "Herkunft",
+              "Cenyr · Gwynthor und Craithglyn"
+            ],
+            [
+              "Bindung",
+              "Aurdden dienen Loer · Loer dienen Wyrm"
+            ],
+            [
+              "Wirtschaftliche Grundlage",
+              "Juwelier und Goldschmiede · Bankgeschäfte · Loer-Rohstoffe · ausschließlich Loer-Münzprägung"
+            ],
+            [
+              "Ziel",
+              "Material, Veredelung und Kapital verzahnen; Loer- und Wyrm-Interessen sichern"
+            ],
+            [
+              "Achterrat",
+              "2 gleichrangige Ratssitze"
+            ]
+          ]
+        }
+      ]
+    }
+  }
+}

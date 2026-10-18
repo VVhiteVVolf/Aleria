@@ -1,0 +1,1083 @@
+{
+  "type": "aleria-module-package",
+  "version": 1,
+  "exportedAt": "2026-10-18T00:00:00Z",
+  "module": {
+    "type": "aleria-module",
+    "version": 1,
+    "section": {
+      "key": "Die Klingende Münze - Gwynthor",
+      "tab": "Völker & Kulturen",
+      "desc": "Handelsposten, Interessenbünde und Betriebe des dreifachen Gildenverbunds.",
+      "iconUrl": "../Fraktionen/assets/emblems/gilden/klingende-muenze.webp",
+      "path": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Gwynthor",
+        "Die Klingende Münze - Gwynthor"
+      ]
+    },
+    "entry": {
+      "id": "gwynthor-handelsposten-klingende-muenze",
+      "title": "Der Handelsposten der Klingenden Münze",
+      "subtitle": "Handel, Bank und Kompanie · das größte Kontor Celtigerns Wacht",
+      "type": "Gildenverbund",
+      "category": "Gwynthor · Handelsposten",
+      "icon": "◈",
+      "symbol": "../Fraktionen/assets/emblems/gilden/klingende-muenze.webp",
+      "image": "./assets/klingende-muenze-gwynthor/handelsposten.png",
+      "previewImage": "./assets/klingende-muenze-gwynthor/handelsposten.png",
+      "stamp": "KLINGENDE MÜNZE · CELTIGERNS WACHT",
+      "schemaVersion": 1,
+      "multipage": true,
+      "appendCommentsPage": true,
+      "enablePageComments": true,
+      "sessionCast": [],
+      "pages": [
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "muenze-einordnung",
+          "pageTitle": "Drei Gilden an einem Kai",
+          "image": "./assets/klingende-muenze-gwynthor/handelsposten.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "description": "<p>Am Hafen von Gwynthor nimmt die <strong>Klingende Münze</strong> ganze Höfe und Häuserzüge ein. Lagerhallen stehen neben Schreibstuben, hinter den Bankschaltern werden Werte verwahrt, und in der Kommandantur gehen die Meldungen der Geleite ein. Zwischen den Gebäuden verkehren Kaufleute, Schreiber und die Mannschaften der Roten Kompanie. An der großen Werft der Gwlannor wird Schiffsraum gebaut und instand gesetzt.</p><p>Die Unternehmung reicht weit über Cenyr hinaus. In jeder Grafschaft unterhält sie mindestens einen großen Handelsposten. In diesen Kontoren treffen stets <strong>Kaufmannsgilde, Rote Bank und Rote Kompanie gemeinsam</strong> ein. Handel schafft Aufträge, die Bank hält Kapital und Zahlungswege bereit, die Kompanie sichert Waren und Wege nach vereinbartem Auftrag.</p><p>Gwynthor beherbergt den <strong>größten der vier großen Handelsposten Celtigerns Wacht</strong>. Von hier werden die gemeinsamen Belange der Grafschaft koordiniert. Acht mächtige Kaufmannssitze beraten am selben Tisch; fünf Interessenbünde ringen darum, wohin die nächste Fracht, das nächste Darlehen und der nächste Auftrag gehen.</p>",
+          "stats": [
+            [
+              "Ort",
+              "Gwynthor · Hafenkomplex"
+            ],
+            [
+              "Verbund",
+              "Klingende Münze · Rote Bank · Rote Kompanie"
+            ],
+            [
+              "Grafschaft",
+              "Vier große Handelsposten · Gwynthor als größter"
+            ],
+            [
+              "Oberste örtliche Leitung",
+              "Acht gleichrangige kaufmännische Ratssitze"
+            ],
+            [
+              "Bankleitung",
+              "Ergalla"
+            ],
+            [
+              "Kontor-Kommandantur",
+              "Falveri"
+            ]
+          ]
+        },
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "muenze-verbund",
+          "pageTitle": "Mitgliedschaft, Kapital und Grafschaft",
+          "image": "./assets/klingende-muenze-gwynthor/ratssaal.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "description": "<p>Wer der <strong>Klingenden Münze</strong> beitritt, wird zugleich Mitglied der <strong>Roten Bank</strong> und erhält dort ein Konto. Für Unternehmer und Zunftsmeister eröffnet die Mitgliedschaft den Zugang zu Gildenpersonal und zu vertraglichen Diensten der <strong>Roten Kompanie</strong>. Ein Konto ist dabei noch keine Kreditzusage: Finanzierung, Beteiligung, Personal und Wachdienst werden nach dem jeweiligen Vorhaben vereinbart.</p><p>Der Handelsposten verbindet eigenständige Mitgliedsbetriebe mit gemeinsamen Einrichtungen. Waren gelangen über die Seehandelsnetze der Familien, aus dem Umland, aus vertraglich gebundenem Handwerk und über weitere Kontore an den Kai. Ein Teil wird nur gelagert oder vermittelt; ein anderer ist auf Rechnung einzelner Mitglieder eingekauft. Warenbestand, Eigentum und Lagerraum werden getrennt verzeichnet.</p><p>Kapital stammt aus Familienvermögen, Beteiligungen, laufenden Handelsgewinnen und vereinbarten Bankkrediten. Lagerung, Umschlag, Vertrieb, Frachtvermittlung, Bankleistungen und Geleit bringen jeweils eigene Erträge. Dass eine Ware im Gildenkomplex liegt, macht sie noch nicht zum gemeinsamen Besitz aller Mitglieder.</p><p>Der Achterrat bestimmt gemeinsame Vorhaben und Mittel. Die Bank führt ihre Bücher, die Kommandantur ihren militärischen Dienst. Neue regionale Niederlassungen erhalten alle drei Gilden zugleich; ihr zugewiesener Hauptmann arbeitet unter dem örtlichen Geschäftsauftrag und bleibt militärisch mit Gwynthor verbunden.</p>",
+          "stats": [
+            [
+              "Gwynthor",
+              "Größter Handelsposten · Sitz des Grafschaftsrats, der Bankleitung und der Kontor-Kommandantur"
+            ],
+            [
+              "Abergwint",
+              "Großer regionaler Handelsposten des gemeinsamen Verbunds"
+            ],
+            [
+              "Castellbryn",
+              "Großer regionaler Handelsposten des gemeinsamen Verbunds"
+            ],
+            [
+              "Rhosmere",
+              "Großer regionaler Handelsposten des gemeinsamen Verbunds"
+            ]
+          ]
+        },
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "muenze-kaufmannsgilde",
+          "pageTitle": "Klingende Münze · Kaufmannsgilde",
+          "hierarchyPage": true,
+          "hierarchy": {
+            "organizationTitle": "Kaufmannsgilde · Klingende Münze",
+            "eyebrow": "Gwynthor · Celtigerns Wacht",
+            "subtitle": "Acht Ratssitze · fünf Interessenbünde · gemeinsames Grafschaftskontor",
+            "centerLabel": "Kaufmannsgilde · Klingende Münze",
+            "emblem": "../Fraktionen/assets/emblems/gilden/klingende-muenze.webp",
+            "sideImage": "./assets/klingende-muenze-gwynthor/ratssaal.png",
+            "motto": "Handel · Kapital · Geleit",
+            "description": "<p>Der <strong>Achterrat</strong> verbindet die acht mächtigsten kaufmännischen Sitze des örtlichen Verbunds. Kein Kaufmann steht allein über den anderen. Der Rat entscheidet gemeinsam über große Vorhaben, Gildenmittel und die geschäftlichen Aufträge an Bank und Kompanie. Die Köpfe und örtlichen Vertreter der führenden Familien tragen darunter feste Ressorts.</p>",
+            "detailsTitle": "Auftrag und Verantwortung",
+            "details": [
+              {
+                "label": "Oberste Leitung",
+                "value": "Gemeinsamer Achterrat · kein einzelner Gildenherr"
+              },
+              {
+                "label": "Beitritt",
+                "value": "Klingende Münze + Rote Bank und Konto"
+              },
+              {
+                "label": "Unternehmer & Zünfte",
+                "value": "Zugang zu Gildenpersonal und vertraglichen Diensten der Roten Kompanie"
+              }
+            ],
+            "chartTitle": "Die örtliche Ordnung",
+            "chartIntro": "Familiensitze, Ämter und Arbeitsbereiche des Grafschaftskontors.",
+            "treeDisplayMode": "tabs",
+            "portraitScale": 72,
+            "cardFontScale": 90,
+            "trees": [
+              {
+                "id": "rat",
+                "label": "Führung · Achterrat",
+                "parentTreeId": "",
+                "levels": [
+                  {
+                    "label": "Acht gleichrangige Ratssitze",
+                    "nodes": [
+                      {
+                        "id": "falveri-handel",
+                        "title": "Falveri · Handel",
+                        "factionId": "falveri",
+                        "subtitle": "Gleichrangiger Sitz im Achterrat",
+                        "text": "<p>Seefahrt und kaufmännische Interessen des örtlichen Falveri-Zweigs.</p>",
+                        "portrait": "../Stammbäume/assets/images/houses/Venalys/haus-falveri.png"
+                      },
+                      {
+                        "id": "falveri-kapital",
+                        "title": "Falveri · Kapital",
+                        "factionId": "falveri",
+                        "subtitle": "Gleichrangiger Sitz im Achterrat",
+                        "text": "<p>Finanzierung und Beteiligungen des örtlichen Falveri-Zweigs.</p>",
+                        "portrait": "../Stammbäume/assets/images/houses/Venalys/haus-falveri.png"
+                      },
+                      {
+                        "id": "ergalla-handel",
+                        "title": "Ergalla · Handel",
+                        "factionId": "ergalla",
+                        "subtitle": "Gleichrangiger Sitz im Achterrat",
+                        "text": "<p>Seeverbindungen und kaufmännische Interessen des örtlichen Ergalla-Zweigs.</p>",
+                        "portrait": "../Fraktionen/assets/emblems/gilden/klingende-muenze.webp"
+                      },
+                      {
+                        "id": "ergalla-bank",
+                        "title": "Ergalla · Bank",
+                        "factionId": "ergalla",
+                        "subtitle": "Gleichrangiger Sitz im Achterrat",
+                        "text": "<p>Bankinteressen des Ergalla-Zweigs und Abstimmung mit der Roten Bank.</p>",
+                        "portrait": "../Fraktionen/assets/emblems/gilden/klingende-muenze.webp"
+                      },
+                      {
+                        "id": "gwlannor",
+                        "title": "Gwlannor",
+                        "factionId": "gwlannor",
+                        "subtitle": "Gleichrangiger Sitz im Achterrat",
+                        "text": "<p>Schiffbau, Handelsflotte und Interessen der Saethwyr.</p>",
+                        "portrait": "../Fraktionen/assets/emblems/gilden/klingende-muenze.webp"
+                      },
+                      {
+                        "id": "halenrhyd",
+                        "title": "Halenrhyd",
+                        "factionId": "halenrhyd",
+                        "subtitle": "Gleichrangiger Sitz im Achterrat",
+                        "text": "<p>Rossausbildung, Viehhandel und Interessen der Wyrm.</p>",
+                        "portrait": "../Fraktionen/assets/emblems/gilden/klingende-muenze.webp"
+                      },
+                      {
+                        "id": "aurdden",
+                        "title": "Aurdden",
+                        "factionId": "aurdden-loer",
+                        "subtitle": "Gleichrangiger Sitz im Achterrat",
+                        "text": "<p>Juwelierhandwerk, Goldschmiede und Bankgeschäfte.</p>",
+                        "portrait": "../Fraktionen/assets/emblems/gilden/klingende-muenze.webp"
+                      },
+                      {
+                        "id": "loer",
+                        "title": "Loer",
+                        "factionId": "aurdden-loer",
+                        "subtitle": "Gleichrangiger Sitz im Achterrat",
+                        "text": "<p>Rohstoffe, Gewinnbeteiligung und das dem Haus lizenzierte Münzprägewesen.</p>",
+                        "portrait": "../Stammbäume/assets/images/houses/Llamreis Ankunft/haus-loer.png"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "ressorts",
+                "label": "Verwaltungsführung",
+                "parentTreeId": "rat",
+                "levels": [
+                  {
+                    "label": "Familienköpfe und örtliche Vertreter · vom Rat verantwortete Ressorts",
+                    "nodes": [
+                      {
+                        "id": "muenze-ressort-fernhandel",
+                        "title": "Fernhandel & Seeverträge",
+                        "subtitle": "Falveri · Handelssitz",
+                        "text": "<p>Verhandelt Handelsverbindungen, Schiffsraum und große Bezugsverträge; stimmt Geleitbedarf mit der Kommandantur ab.</p>",
+                        "portrait": ""
+                      },
+                      {
+                        "id": "muenze-ressort-beteiligungen",
+                        "title": "Beteiligungen & Niederlassungen",
+                        "subtitle": "Falveri · Kapitalsitz",
+                        "text": "<p>Führt Beteiligungen, unternehmerische Anträge und den Ausbau der Handelsposten zur Entscheidung des Rats.</p>",
+                        "portrait": ""
+                      },
+                      {
+                        "id": "muenze-ressort-bezug",
+                        "title": "Einkauf & Bezugsnetze",
+                        "subtitle": "Ergalla · Handelssitz",
+                        "text": "<p>Koordiniert überregionale Beschaffung und Lieferbindungen, ohne die Bücher der Mitgliedsbetriebe zu übernehmen.</p>",
+                        "portrait": ""
+                      },
+                      {
+                        "id": "muenze-ressort-abrechnung",
+                        "title": "Handelsabrechnung & Bankverkehr",
+                        "subtitle": "Ergalla · Banksitz",
+                        "text": "<p>Stimmt kaufmännische Abrechnung und Finanzierungsbedarf mit der eigenständig geführten Roten Bank ab.</p>",
+                        "portrait": ""
+                      },
+                      {
+                        "id": "muenze-ressort-werften",
+                        "title": "Werften & Schiffsraum",
+                        "subtitle": "Gwlannor · unter Saethwyr",
+                        "text": "<p>Koordiniert Werftaufträge, verfügbare Frachträume, Reparaturen und die Verbindung zum Hafen.</p>",
+                        "portrait": ""
+                      },
+                      {
+                        "id": "muenze-ressort-vieh",
+                        "title": "Landhandel & Vieh",
+                        "subtitle": "Halenrhyd · unter Wyrm",
+                        "text": "<p>Verbindet Viehankauf, Rossausbildung, städtischen Verkauf und ländliche Lieferwege.</p>",
+                        "portrait": ""
+                      },
+                      {
+                        "id": "muenze-ressort-wertwaren",
+                        "title": "Wertwaren & Handwerk",
+                        "subtitle": "Aurdden · im Dienst der Loer",
+                        "text": "<p>Bündelt Goldschmiede-, Juwelier- und Handwerksangelegenheiten sowie die Bewertung wertvoller Waren.</p>",
+                        "portrait": ""
+                      },
+                      {
+                        "id": "muenze-ressort-metall",
+                        "title": "Rohstoffe & Münzlieferungen",
+                        "subtitle": "Loer · unter Wyrm",
+                        "text": "<p>Verantwortet die Loer-Rohstoffbeziehungen und die Abstimmung lizenzierter Prägeaufträge; das Prägerecht verbleibt bei Loer.</p>",
+                        "portrait": ""
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "kontor",
+                "label": "Kontor & Verträge",
+                "parentTreeId": "ressorts",
+                "levels": [
+                  {
+                    "label": "Kanzlei und Mitgliederwesen",
+                    "nodes": [
+                      {
+                        "id": "muenze-kanzleileitung",
+                        "title": "Kanzleileitung",
+                        "subtitle": "1 Stelle",
+                        "text": "<p>Führt Tagesgeschäft, Protokolle und die Ausfertigung von Ratsbeschlüssen.</p>",
+                        "portrait": ""
+                      },
+                      {
+                        "id": "muenze-vertragsschreiber",
+                        "title": "Vertragsschreiber",
+                        "subtitle": "6 Stellen",
+                        "text": "<p>Fertigen Bezugs-, Lager-, Geleit- und Absatzverträge aus.</p>",
+                        "portrait": ""
+                      },
+                      {
+                        "id": "muenze-mitgliederamt",
+                        "title": "Mitgliederschreiber",
+                        "subtitle": "4 Stellen",
+                        "text": "<p>Führen Mitgliedschaften, neue Betriebsanträge und den gemeinsamen Beitritt zur Roten Bank.</p>",
+                        "portrait": ""
+                      },
+                      {
+                        "id": "muenze-archiv",
+                        "title": "Archivare & Siegelschreiber",
+                        "subtitle": "4 Stellen",
+                        "text": "<p>Verwahren Vertragsabschriften, Siegel und nachvollziehbare Beschlussfolgen.</p>",
+                        "portrait": ""
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "umschlag",
+                "label": "Lager, Fracht & Vertrieb",
+                "parentTreeId": "ressorts",
+                "levels": [
+                  {
+                    "label": "Gemeinsame Hafenkoordination",
+                    "nodes": [
+                      {
+                        "id": "muenze-umschlagmeister",
+                        "title": "Umschlagleitung",
+                        "subtitle": "2 Stellen",
+                        "text": "<p>Koordiniert gemeinsame Ladezeiten und Lagerzuteilungen; die vier Gwregysdu-Häuser behalten ihre eigene Leitung.</p>",
+                        "portrait": ""
+                      },
+                      {
+                        "id": "muenze-frachtenschreiber",
+                        "title": "Frachtenschreiber",
+                        "subtitle": "12 Stellen",
+                        "text": "<p>Erfassen Zeichen, Menge, Eigentümer, Frachtziel und Empfang jeder Sendung.</p>",
+                        "portrait": ""
+                      },
+                      {
+                        "id": "muenze-warenpruefer",
+                        "title": "Waagmeister & Warenprüfer",
+                        "subtitle": "6 Stellen",
+                        "text": "<p>Prüfen Gewicht, Zustand und Übereinstimmung mit den Warenbriefen.</p>",
+                        "portrait": ""
+                      },
+                      {
+                        "id": "muenze-frachtvermittler",
+                        "title": "Fracht- & Absatzvermittler",
+                        "subtitle": "8 Stellen",
+                        "text": "<p>Vermitteln Schiffsraum, Landfuhren und gewerbliche Abnehmer.</p>",
+                        "portrait": ""
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Gemeinsamer Hofdienst · zusätzlich zu eigenständigen Mitgliedsbetrieben",
+                    "nodes": [
+                      {
+                        "id": "muenze-lademeister",
+                        "title": "Lademeister",
+                        "subtitle": "4 Stellen",
+                        "text": "<p>Teilen Ladegruppen ein und achten auf sichere Laufwege und Stauung.</p>",
+                        "portrait": ""
+                      },
+                      {
+                        "id": "muenze-traeger",
+                        "title": "Träger & Lagerknechte",
+                        "subtitle": "32 Stellen",
+                        "text": "<p>Arbeiten in wechselnden Gruppen an den gemeinsamen Annahme- und Umschlagflächen.</p>",
+                        "portrait": ""
+                      },
+                      {
+                        "id": "muenze-fuhrleute",
+                        "title": "Fuhrleute & Stallknechte",
+                        "subtitle": "12 Stellen",
+                        "text": "<p>Halten die gemeinsamen Wagen, Zugtiere und städtischen Zubringer bereit.</p>",
+                        "portrait": ""
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "grafschaft",
+                "label": "Grafschaft & Botenwesen",
+                "parentTreeId": "ressorts",
+                "levels": [
+                  {
+                    "label": "Berichte aus den vier Handelsposten",
+                    "nodes": [
+                      {
+                        "id": "muenze-regionalberichte",
+                        "title": "Regionalschreiber",
+                        "subtitle": "3 Stellen · Abergwint, Castellbryn, Rhosmere",
+                        "text": "<p>Halten den Austausch mit den drei weiteren großen Handelsposten; deren örtliche Leitung bleibt bei den dortigen Kaufleuten.</p>",
+                        "portrait": ""
+                      },
+                      {
+                        "id": "muenze-botenmeister",
+                        "title": "Botenmeister",
+                        "subtitle": "1 Stelle",
+                        "text": "<p>Ordnet versiegelte Post, Abfahrten, Ankunftslisten und verlässliche Ersatzwege.</p>",
+                        "portrait": ""
+                      },
+                      {
+                        "id": "muenze-boten",
+                        "title": "Berittene Boten & Laufboten",
+                        "subtitle": "12 Stellen",
+                        "text": "<p>Überbringen Berichte, Vertragsabschriften und dringende Nachrichten zwischen Kontoren und Betrieben.</p>",
+                        "portrait": ""
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "mitglieder",
+                "label": "Mitgliederliste, Inhaber und Zunftsmeister",
+                "parentTreeId": "",
+                "levels": [
+                  {
+                    "label": "Bereits geführte örtliche Geschäftsinhaber",
+                    "nodes": [
+                      {
+                        "id": "muenze-mitglied-finlay",
+                        "title": "Finlay Cneacail",
+                        "subtitle": "Zur Klingenden Krone",
+                        "portrait": "./assets/klingende-krone/portraits/finlay-v2.png",
+                        "text": "<p>Taverne · Brauerei · Destillerie und Cneacail-Vertrieb.</p><p>Mitglied der Klingenden Münze und der Roten Bank; sein Betrieb bleibt eigenständig geführt.</p>",
+                        "memberEntryId": "gwynthor-zur-klingenden-krone",
+                        "worldPersonId": "person--sept-cneacail--finlay-cneacail"
+                      },
+                      {
+                        "id": "muenze-mitglied-bleddyn",
+                        "title": "Bleddyn Gwregysdu",
+                        "subtitle": "Die Lagerhäuser der Gwregysdu",
+                        "portrait": "./assets/gwregysdu-harbor/portraits/bleddyn.png",
+                        "text": "<p>Vier Lagerhäuser · Hafenumschlag und Vertrieb.</p><p>Mitglied der Klingenden Münze und der Roten Bank; sein Betrieb bleibt eigenständig geführt.</p>",
+                        "memberEntryId": "gwynthor-gwregysdu-lagerhaeuser",
+                        "worldPersonId": "person--haus-gwregysdu--bleddyn-gwregysdu"
+                      },
+                      {
+                        "id": "muenze-mitglied-albrecht",
+                        "title": "Albrecht Sonnenfels",
+                        "subtitle": "Die Lachende Nixe",
+                        "portrait": "./assets/lachende-nixe/references/albrecht.png",
+                        "text": "<p>Freudenhaus und Gastbetrieb · eingetragenes Gildenmitglied.</p><p>Mitglied der Klingenden Münze und der Roten Bank; sein Betrieb bleibt eigenständig geführt.</p>",
+                        "memberEntryId": "die-lachende-nixe",
+                        "worldPersonId": "person--haus-sonnenfels--albrecht-sonnenfels"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Weitere Mitgliedschaften und Zünfte",
+                    "nodes": [
+                      {
+                        "id": "muenze-weitere-mitglieder",
+                        "title": "Weitere Inhaber & Zunftsmeister",
+                        "subtitle": "Offenes Mitgliederregister",
+                        "text": "<p>Der Verbund umfasst zahlreiche weitere Kaufleute und Gewerke. Die fünf Interessenbünde bilden seine örtliche Führung; Mitgliedschaft ist nicht auf ihre Familien beschränkt.</p>",
+                        "portrait": ""
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "levels": [],
+            "footerNote": "Alle acht Sitze stehen auf derselben Ratsebene. Ressorts sind Aufgaben der Familiensitze. Alle übrigen Stellen bleiben ohne persönliche Besetzung; die Stellenzahlen beschreiben den gemeinsamen Kontordienst."
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "muenze-rote-bank",
+          "pageTitle": "Rote Bank · Konten und Kapital",
+          "hierarchyPage": true,
+          "hierarchy": {
+            "organizationTitle": "Die Rote Bank · Gwynthor",
+            "eyebrow": "Gwynthor · Celtigerns Wacht",
+            "subtitle": "Grafschaftsbank des Verbunds · Leitung Ergalla",
+            "centerLabel": "Die Rote Bank · Gwynthor",
+            "emblem": "../Fraktionen/assets/emblems/gilden/die-rote-bank.webp",
+            "sideImage": "./assets/klingende-muenze-gwynthor/bankhalle.png",
+            "motto": "Handel · Kapital · Geleit",
+            "description": "<p>Die Rote Bank begleitet jeden Handelsposten der Klingenden Münze. In Gwynthor führt ein <strong>Ergalla</strong> das Bankhaus und den Austausch mit den drei weiteren großen Kontoren Celtigerns Wacht. Der Achterrat setzt die gemeinsamen geschäftlichen Ziele; die Bank führt Konten, Einlagen, Kredite und Abrechnungen unter ihrer eigenen Leitung.</p><p>Jedes Mitglied der Kaufmannsgilde tritt zugleich der Roten Bank bei und erhält ein Konto. Kredit bleibt eine gesonderte Vereinbarung über Betrag, Sicherheiten und Rückzahlung. Auch die vermögenden Familien benötigen Zusagen, wenn ihre Waren und Schiffe mehr Kapital binden, als gerade verfügbar ist.</p>",
+            "detailsTitle": "Auftrag und Verantwortung",
+            "details": [
+              {
+                "label": "Leitung",
+                "value": "Ergalla · Grafschaftsbank in Gwynthor"
+              },
+              {
+                "label": "Bankbeitritt",
+                "value": "Verbindlich mit jeder Münze-Mitgliedschaft"
+              },
+              {
+                "label": "Finanzierung",
+                "value": "Kredit und Beteiligung nach gesonderter Vereinbarung"
+              },
+              {
+                "label": "Prägerecht",
+                "value": "Nur Loer · kein allgemeines Bankrecht"
+              }
+            ],
+            "chartTitle": "Die örtliche Ordnung",
+            "chartIntro": "Familiensitze, Ämter und Arbeitsbereiche des Grafschaftskontors.",
+            "treeDisplayMode": "tabs",
+            "portraitScale": 72,
+            "cardFontScale": 90,
+            "trees": [
+              {
+                "id": "bank-fuehrung",
+                "label": "Führung",
+                "parentTreeId": "",
+                "levels": [
+                  {
+                    "label": "Bankleitung · dem gemeinsamen Kaufmannsrat verantwortlich",
+                    "nodes": [
+                      {
+                        "id": "bank-direktor",
+                        "title": "Leitung der Roten Bank",
+                        "subtitle": "Ergalla · örtlicher Familienvertreter",
+                        "text": "<p>Führt das Gwynthorer Bankhaus und koordiniert die Bankstellen Celtigerns Wacht. Verantwortet Einlagen, Kreditentscheidungen und verfügbare Zahlungsmittel.</p>",
+                        "portrait": ""
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Leitende Ämter",
+                    "nodes": [
+                      {
+                        "id": "bank-kreditvorstand",
+                        "title": "Leitung Kredit & Sicherheiten",
+                        "subtitle": "1 Stelle",
+                        "text": "<p>Bereitet Kreditvorlagen und Beleihungen vor; führt Rückzahlung und gesonderte Vereinbarungen.</p>",
+                        "portrait": ""
+                      },
+                      {
+                        "id": "bank-kassenleitung",
+                        "title": "Hauptkassenleitung",
+                        "subtitle": "1 Stelle",
+                        "text": "<p>Sichert Kassenbestände, Ausgabe und Wechsel zwischen Kassen und Verwahrung.</p>",
+                        "portrait": ""
+                      },
+                      {
+                        "id": "bank-kontofuehrung",
+                        "title": "Leitung Konten & Abrechnung",
+                        "subtitle": "1 Stelle",
+                        "text": "<p>Verantwortet Mitgliederkonten, Buchüberträge und den Abgleich der Kontore.</p>",
+                        "portrait": ""
+                      },
+                      {
+                        "id": "bank-pruefleitung",
+                        "title": "Leitung Bücherprüfung",
+                        "subtitle": "1 Stelle · unmittelbarer Bericht an Bankleitung und Rat",
+                        "text": "<p>Prüft abgeschlossene Bücher und Unstimmigkeiten unabhängig von der täglichen Kasse.</p>",
+                        "portrait": ""
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "bank-konten",
+                "label": "Konten & Zahlungsverkehr",
+                "parentTreeId": "bank-fuehrung",
+                "levels": [
+                  {
+                    "label": "Schalter und Kontobücher",
+                    "nodes": [
+                      {
+                        "id": "bank-kassierer",
+                        "title": "Kassierer",
+                        "subtitle": "8 Stellen",
+                        "text": "<p>Nehmen Ein- und Auszahlungen gegen Beleg an; verwahren weder fremde Siegel noch fremde Vollmachten.</p>",
+                        "portrait": ""
+                      },
+                      {
+                        "id": "bank-kontenschreiber",
+                        "title": "Kontenschreiber",
+                        "subtitle": "8 Stellen",
+                        "text": "<p>Führen Kontobücher, Vollmachten und die Abrechnung der Mitglieder.</p>",
+                        "portrait": ""
+                      },
+                      {
+                        "id": "bank-wechsel",
+                        "title": "Wechsel- & Zahlungsbriefschreiber",
+                        "subtitle": "4 Stellen",
+                        "text": "<p>Stimmen Zahlungsbriefe und Gegenbuchungen mit anderen Bankkontoren ab.</p>",
+                        "portrait": ""
+                      },
+                      {
+                        "id": "bank-regionalabgleich",
+                        "title": "Regionale Abrechnung",
+                        "subtitle": "3 Stellen",
+                        "text": "<p>Halten den Buchabgleich mit Abergwint, Castellbryn und Rhosmere.</p>",
+                        "portrait": ""
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "bank-kredit",
+                "label": "Kredit, Pfand & Bewertung",
+                "parentTreeId": "bank-fuehrung",
+                "levels": [
+                  {
+                    "label": "Verträge und Sicherheiten",
+                    "nodes": [
+                      {
+                        "id": "bank-kreditpruefer",
+                        "title": "Kreditprüfer",
+                        "subtitle": "4 Stellen",
+                        "text": "<p>Prüfen Handel, Ertrag, Verpflichtungen und Sicherheiten eines Antragstellers.</p>",
+                        "portrait": ""
+                      },
+                      {
+                        "id": "bank-pfandmeister",
+                        "title": "Pfandmeister",
+                        "subtitle": "2 Stellen",
+                        "text": "<p>Verzeichnen übergebene Sicherheiten und halten Auslösung und Zugriff schriftlich fest.</p>",
+                        "portrait": ""
+                      },
+                      {
+                        "id": "bank-schaetzer",
+                        "title": "Edelmetall- & Warenbewerter",
+                        "subtitle": "4 Stellen",
+                        "text": "<p>Wiegen und bewerten Münzen, Metall und Wertwaren. Das Münzprägen verbleibt im lizenzierten Loer-Betrieb.</p>",
+                        "portrait": ""
+                      },
+                      {
+                        "id": "bank-vertrag",
+                        "title": "Kreditvertragsschreiber",
+                        "subtitle": "4 Stellen",
+                        "text": "<p>Fertigen Kreditbriefe, Bürgschaften und bestätigte Rückzahlungsvereinbarungen.</p>",
+                        "portrait": ""
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "bank-verwahrung",
+                "label": "Verwahrung & Prüfung",
+                "parentTreeId": "bank-fuehrung",
+                "levels": [
+                  {
+                    "label": "Bestände und Nachweise",
+                    "nodes": [
+                      {
+                        "id": "bank-tresormeister",
+                        "title": "Verwahrmeister",
+                        "subtitle": "2 Stellen",
+                        "text": "<p>Führen gemeinsam beaufsichtigte Übergaben zu den gesicherten Beständen.</p>",
+                        "portrait": ""
+                      },
+                      {
+                        "id": "bank-revisoren",
+                        "title": "Bücherprüfer",
+                        "subtitle": "4 Stellen",
+                        "text": "<p>Vergleichen Kassenbelege, Kontobücher und zugesagte Zahlungen.</p>",
+                        "portrait": ""
+                      },
+                      {
+                        "id": "bank-archiv",
+                        "title": "Bankarchivare",
+                        "subtitle": "4 Stellen",
+                        "text": "<p>Verwahren Kreditbriefe, Sicherheitenverzeichnisse und abgeschlossene Kontobände.</p>",
+                        "portrait": ""
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "bank-mitglieder",
+                "label": "Mitglieder & gewerbliche Konten",
+                "parentTreeId": "",
+                "levels": [
+                  {
+                    "label": "Die führenden Familien · Familien- und Geschäftskonten",
+                    "nodes": [
+                      {
+                        "id": "bank-familie-falveri-handel",
+                        "title": "Falveri",
+                        "factionId": "falveri",
+                        "subtitle": "Mitglied des Verbunds · Rote Bank",
+                        "text": "<p>Die örtliche Familienvertretung führt ihre Bankbeziehungen innerhalb des gemeinsamen Gildenverbunds. Kontostände und einzelne Kreditvereinbarungen bleiben vertraulich.</p>",
+                        "portrait": "../Stammbäume/assets/images/houses/Venalys/haus-falveri.png"
+                      },
+                      {
+                        "id": "bank-familie-ergalla-handel",
+                        "title": "Ergalla",
+                        "factionId": "ergalla",
+                        "subtitle": "Mitglied des Verbunds · Rote Bank",
+                        "text": "<p>Die örtliche Familienvertretung führt ihre Bankbeziehungen innerhalb des gemeinsamen Gildenverbunds. Kontostände und einzelne Kreditvereinbarungen bleiben vertraulich.</p>",
+                        "portrait": "../Fraktionen/assets/emblems/gilden/klingende-muenze.webp"
+                      },
+                      {
+                        "id": "bank-familie-gwlannor",
+                        "title": "Gwlannor",
+                        "factionId": "gwlannor",
+                        "subtitle": "Mitglied des Verbunds · Rote Bank",
+                        "text": "<p>Die örtliche Familienvertretung führt ihre Bankbeziehungen innerhalb des gemeinsamen Gildenverbunds. Kontostände und einzelne Kreditvereinbarungen bleiben vertraulich.</p>",
+                        "portrait": "../Fraktionen/assets/emblems/gilden/klingende-muenze.webp"
+                      },
+                      {
+                        "id": "bank-familie-halenrhyd",
+                        "title": "Halenrhyd",
+                        "factionId": "halenrhyd",
+                        "subtitle": "Mitglied des Verbunds · Rote Bank",
+                        "text": "<p>Die örtliche Familienvertretung führt ihre Bankbeziehungen innerhalb des gemeinsamen Gildenverbunds. Kontostände und einzelne Kreditvereinbarungen bleiben vertraulich.</p>",
+                        "portrait": "../Fraktionen/assets/emblems/gilden/klingende-muenze.webp"
+                      },
+                      {
+                        "id": "bank-familie-aurdden",
+                        "title": "Aurdden",
+                        "factionId": "aurdden-loer",
+                        "subtitle": "Mitglied des Verbunds · Rote Bank",
+                        "text": "<p>Die örtliche Familienvertretung führt ihre Bankbeziehungen innerhalb des gemeinsamen Gildenverbunds. Kontostände und einzelne Kreditvereinbarungen bleiben vertraulich.</p>",
+                        "portrait": "../Fraktionen/assets/emblems/gilden/klingende-muenze.webp"
+                      },
+                      {
+                        "id": "bank-familie-loer",
+                        "title": "Loer",
+                        "factionId": "aurdden-loer",
+                        "subtitle": "Mitglied des Verbunds · Rote Bank",
+                        "text": "<p>Die örtliche Familienvertretung führt ihre Bankbeziehungen innerhalb des gemeinsamen Gildenverbunds. Kontostände und einzelne Kreditvereinbarungen bleiben vertraulich.</p>",
+                        "portrait": "../Stammbäume/assets/images/houses/Llamreis Ankunft/haus-loer.png"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Bekannte Inhaber · verpflichtender Bankbeitritt mit der Kaufmannsgilde",
+                    "nodes": [
+                      {
+                        "id": "bank-mitglied-finlay",
+                        "title": "Finlay Cneacail",
+                        "subtitle": "Zur Klingenden Krone",
+                        "portrait": "./assets/klingende-krone/portraits/finlay-v2.png",
+                        "text": "<p>Taverne · Brauerei · Destillerie und Cneacail-Vertrieb.</p><p>Als Mitglied der Klingenden Münze gehört er zugleich der Roten Bank an und führt dort sein Gildenkonto.</p>",
+                        "memberEntryId": "gwynthor-zur-klingenden-krone",
+                        "worldPersonId": "person--sept-cneacail--finlay-cneacail"
+                      },
+                      {
+                        "id": "bank-mitglied-bleddyn",
+                        "title": "Bleddyn Gwregysdu",
+                        "subtitle": "Die Lagerhäuser der Gwregysdu",
+                        "portrait": "./assets/gwregysdu-harbor/portraits/bleddyn.png",
+                        "text": "<p>Vier Lagerhäuser · Hafenumschlag und Vertrieb.</p><p>Als Mitglied der Klingenden Münze gehört er zugleich der Roten Bank an und führt dort sein Gildenkonto.</p>",
+                        "memberEntryId": "gwynthor-gwregysdu-lagerhaeuser",
+                        "worldPersonId": "person--haus-gwregysdu--bleddyn-gwregysdu"
+                      },
+                      {
+                        "id": "bank-mitglied-albrecht",
+                        "title": "Albrecht Sonnenfels",
+                        "subtitle": "Die Lachende Nixe",
+                        "portrait": "./assets/lachende-nixe/references/albrecht.png",
+                        "text": "<p>Freudenhaus und Gastbetrieb · eingetragenes Gildenmitglied.</p><p>Als Mitglied der Klingenden Münze gehört er zugleich der Roten Bank an und führt dort sein Gildenkonto.</p>",
+                        "memberEntryId": "die-lachende-nixe",
+                        "worldPersonId": "person--haus-sonnenfels--albrecht-sonnenfels"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Weiteres Kontenregister",
+                    "nodes": [
+                      {
+                        "id": "bank-weitere-konten",
+                        "title": "Familien, Inhaber & Zunftsmeister",
+                        "subtitle": "Weitere Mitglieder und Konten",
+                        "text": "<p>Die führenden Familien und weitere Gildenmitglieder führen hier ihre Bankverbindungen. Einzelne Guthaben, Schulden und Kreditlinien bleiben private Vertragsangelegenheiten.</p>",
+                        "portrait": ""
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "levels": [],
+            "footerNote": "Die Bankverwaltung besitzt keine eigene hier ausgeführte Soldatenformation. Gesicherte Transporte und Wachdienste werden mit der Roten Kompanie abgestimmt."
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "muenze-rote-kompanie",
+          "pageTitle": "Rote Kompanie · Grafschaftskommando",
+          "hierarchyPage": true,
+          "hierarchy": {
+            "organizationTitle": "Die Rote Kompanie · Grafschaftskommando",
+            "eyebrow": "Gwynthor · Celtigerns Wacht",
+            "subtitle": "Kontor-Kommandantur Gwynthor · Falveri · ganz Celtigerns Wacht",
+            "centerLabel": "Die Rote Kompanie · Grafschaftskommando",
+            "emblem": "../Fraktionen/assets/emblems/gilden/rote-kompanie.webp",
+            "sideImage": "./assets/klingende-muenze-gwynthor/kommandantur.png",
+            "motto": "Handel · Kapital · Geleit",
+            "description": "<p>Ein <strong>Kontor-Kommandant aus dem Haus Falveri</strong> führt von Gwynthor aus die Kräfte der Roten Kompanie in Celtigerns Wacht. Er ist dem gemeinsamen Kaufmannsrat unterstellt. Er plant Geleit und Ablösungen, entsendet Führungskräfte und hält Mannschaften, Schiffe und Ausrüstung einsatzfähig.</p><p>Wird ein weiterer Handelsposten eröffnet, entsendet er einen <strong>Hauptmann</strong> zu dessen Kaufleuten und Bürokraten. Diese bestimmen den örtlichen Geschäfts- und Schutzauftrag; Ausbildung, Personalführung und militärische Abstimmung laufen über die Kommandantur. Beim Ausbau eines Kontors treffen stets Kaufmannsgilde, Rote Bank und Rote Kompanie gemeinsam ein.</p><p>Zu seinem Auftrag gehören auch die <strong>Handels- und Kriegsschiffe</strong> des Verbunds: Geleitplanung, Meldungen über gefährdete Fahrwasser und die sichere Ansteuerung der Häfen Celtigerns Wacht. Stadtwache und gräfliche Streitkräfte behalten ihre eigene Befehlsgewalt.</p>",
+            "detailsTitle": "Auftrag und Verantwortung",
+            "details": [
+              {
+                "label": "Oberer Auftraggeber",
+                "value": "Gemeinsamer Kaufmannsrat in Gwynthor"
+              },
+              {
+                "label": "Kommandantur",
+                "value": "Falveri · Grafschaft Celtigerns Wacht"
+              },
+              {
+                "label": "Örtlicher Hauptmann",
+                "value": "Dem Geschäftsauftrag des jeweiligen Kontors unterstellt"
+              },
+              {
+                "label": "Seewege",
+                "value": "Handels- und Kriegsschiffe · Geleit · sichere Hafenansteuerung"
+              }
+            ],
+            "chartTitle": "Die örtliche Ordnung",
+            "chartIntro": "Familiensitze, Ämter und Arbeitsbereiche des Grafschaftskontors.",
+            "treeDisplayMode": "tabs",
+            "portraitScale": 72,
+            "cardFontScale": 90,
+            "trees": [
+              {
+                "id": "kompanie-fuehrung",
+                "label": "Führung",
+                "parentTreeId": "",
+                "levels": [
+                  {
+                    "label": "Dem Achterrat geschäftlich unterstellt",
+                    "nodes": [
+                      {
+                        "id": "kompanie-kontorkommandant",
+                        "title": "Kontor-Kommandant",
+                        "subtitle": "Falveri · Celtigerns Wacht",
+                        "text": "<p>Verantwortet den militärischen Dienst des Verbunds in der gesamten Grafschaft, die Entsendung von Hauptleuten sowie Geleit und sichere Hafenansteuerung.</p>",
+                        "portrait": ""
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Führungsstab des Hauptquartiers",
+                    "nodes": [
+                      {
+                        "id": "kompanie-stellvertreter",
+                        "title": "Stellvertretender Kontor-Kommandant",
+                        "subtitle": "1 Stelle",
+                        "text": "<p>Führt Bereitschaft und Ablösung; vertritt den Kommandanten bei Abwesenheit.</p>",
+                        "portrait": ""
+                      },
+                      {
+                        "id": "kompanie-seeleitung",
+                        "title": "Leitung Seegeleit & Hafenansteuerung",
+                        "subtitle": "1 Stelle",
+                        "text": "<p>Koordiniert bewaffnetes Geleit, Schiffsführer, Ankunftsmeldungen und Schutz gefährdeter Zufahrten.</p>",
+                        "portrait": ""
+                      },
+                      {
+                        "id": "kompanie-landleitung",
+                        "title": "Leitung Landgeleit & Kontorwachen",
+                        "subtitle": "1 Stelle",
+                        "text": "<p>Koordiniert Landkonvois und die den örtlichen Betrieben vertraglich zugewiesenen Wachen.</p>",
+                        "portrait": ""
+                      },
+                      {
+                        "id": "kompanie-stabsleitung",
+                        "title": "Stabs- & Quartierleitung",
+                        "subtitle": "1 Stelle",
+                        "text": "<p>Verbindet Einsatzplanung, Personalberichte, Unterbringung und Versorgung.</p>",
+                        "portrait": ""
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "kompanie-verwaltung",
+                "label": "Verwaltung",
+                "parentTreeId": "kompanie-fuehrung",
+                "levels": [
+                  {
+                    "label": "Befehle, Personal und Verträge",
+                    "nodes": [
+                      {
+                        "id": "kompanie-adjutanten",
+                        "title": "Adjutanten & Befehlsschreiber",
+                        "subtitle": "4 Stellen",
+                        "text": "<p>Fertigen Marsch- und Entsendungsbefehle nach dem vereinbarten Auftrag aus.</p>",
+                        "portrait": ""
+                      },
+                      {
+                        "id": "kompanie-muster",
+                        "title": "Muster- & Personalschreiber",
+                        "subtitle": "4 Stellen",
+                        "text": "<p>Führen Musterung, Ablösungen, Dienstverträge und die Zuordnung zu den Kontoren.</p>",
+                        "portrait": ""
+                      },
+                      {
+                        "id": "kompanie-sold",
+                        "title": "Sold- & Vertragsschreiber",
+                        "subtitle": "4 Stellen",
+                        "text": "<p>Gleichen Sold, Geleitverträge und Bereitstellungen mit der Roten Bank und den kaufmännischen Stellen ab.</p>",
+                        "portrait": ""
+                      },
+                      {
+                        "id": "kompanie-proviant",
+                        "title": "Quartier- & Vorratsmeister",
+                        "subtitle": "4 Stellen",
+                        "text": "<p>Planen Proviant, Liegeplätze, Unterkunft und erforderliches Material.</p>",
+                        "portrait": ""
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Fahrwasser, Meldungen und Ausrüstung",
+                    "nodes": [
+                      {
+                        "id": "kompanie-seeberichte",
+                        "title": "See- & Routenschreiber",
+                        "subtitle": "4 Stellen",
+                        "text": "<p>Sammeln Schiffsberichte und führen Karten, Geleitlisten und Ankunftsfolgen.</p>",
+                        "portrait": ""
+                      },
+                      {
+                        "id": "kompanie-kontorverbindung",
+                        "title": "Kontorverbindungsschreiber",
+                        "subtitle": "3 Stellen",
+                        "text": "<p>Halten Verbindung zu den Hauptleuten in Abergwint, Castellbryn und Rhosmere.</p>",
+                        "portrait": ""
+                      },
+                      {
+                        "id": "kompanie-material",
+                        "title": "Zeug- & Ausrüstungsschreiber",
+                        "subtitle": "2 Stellen",
+                        "text": "<p>Führen Ausgabe, Rücknahme und Ersatzanforderungen der Kompanieausrüstung.</p>",
+                        "portrait": ""
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Bereits zugewiesene Betriebsverträge",
+                    "nodes": [
+                      {
+                        "id": "kompanie-vertrag-krone",
+                        "title": "Zur Klingenden Krone",
+                        "subtitle": "Finlay Cneacail · Mitgliedsbetrieb",
+                        "text": "<p>Ein Leutnant und sechzehn Soldaten werden ausschließlich beim Brauereibetrieb ausgeführt.</p>",
+                        "portrait": ""
+                      },
+                      {
+                        "id": "kompanie-vertrag-gwregysdu",
+                        "title": "Lagerhäuser der Gwregysdu",
+                        "subtitle": "Bleddyn Gwregysdu · Mitgliedsbetrieb",
+                        "text": "<p>Optio Pilo, zwei Leutnanten und vierundzwanzig Soldaten stehen in der dortigen Sicherheitshierarchie.</p>",
+                        "portrait": ""
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "kompanie-ehemalige",
+                "label": "Ehemalige Mitglieder",
+                "parentTreeId": "",
+                "levels": [
+                  {
+                    "label": "Früherer Kompaniedienst · außerhalb der heutigen Befehlskette",
+                    "nodes": [
+                      {
+                        "id": "kompanie-aldo",
+                        "title": "Aldo Falveri",
+                        "subtitle": "Ehemaliger Condottiere · heute Ritterherr",
+                        "text": "<p>Früherer Hauptmann der Roten Kompanie und Verwandter der Falveri. Sein heutiges Haus Cymrath O’Traethlan auf Tŵr Traethlan steht neben dieser früheren Laufbahn; er bekleidet hier kein aktives Kommando.</p>",
+                        "portrait": "../Stammbäume/assets/images/portraits/haus-falveri/aldo-falveri.png"
+                      },
+                      {
+                        "id": "kompanie-ehemalig-albrecht",
+                        "title": "Albrecht Sonnenfels",
+                        "subtitle": "Ehemaliges Mitglied · Inhaber der Lachenden Nixe",
+                        "portrait": "./assets/lachende-nixe/references/albrecht.png",
+                        "text": "<p>Albrecht Sonnenfels diente früher in der Roten Kompanie. Heute führt er die Lachende Nixe und gehört der Kaufmannsgilde an; aus seinem früheren Dienst folgt kein aktives Kompanieamt.</p>",
+                        "memberEntryId": "die-lachende-nixe",
+                        "worldPersonId": "person--haus-sonnenfels--albrecht-sonnenfels"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "levels": [],
+            "footerNote": "Das Hauptquartier führt Stab und Verwaltung. Soldatenreihen, Leutnanten und Wachtiere einzelner Betriebe bleiben ausschließlich in deren eigenen Modulen."
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "muenze-szene-kaihof",
+          "pageTitle": "Der Kaihof · Zwischen Tor und Gezeiten",
+          "image": "./assets/klingende-muenze-gwynthor/handelsposten.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Wagen warten vor den Annahmetoren; über den Hof tragen Stimmen von Trägern und Frachtenschreibern. Zum Wasser hin stehen Masten über den Dächern. Ein Warenbrief, ein Besucher oder eine verspätete Ladung wird am Kontorschalter angekündigt.</p>",
+          "sessionHint": "Eine Begegnung im Handelsposten der Klingenden Münze.",
+          "sessionEmptyTitle": "Der nächste Auftrag steht noch aus",
+          "sessionEmptyText": "Ein Handel, eine Beratung oder eine Nachricht kann diese Szene eröffnen.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "muenze-szene-ratssaal",
+          "pageTitle": "Der Ratssaal · Acht Plätze",
+          "image": "./assets/klingende-muenze-gwynthor/ratssaal.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Acht gleichrangige Plätze umstehen den Ratstisch. Durch die hohen Fenster fällt der Blick auf Schiffe und Kais. Bücher, Vertragsrollen und versiegelte Berichte liegen für die nächste Beratung bereit; wer hier spricht, vertritt mehr als seinen eigenen Geldbeutel.</p>",
+          "sessionHint": "Eine Begegnung im Handelsposten der Klingenden Münze.",
+          "sessionEmptyTitle": "Der nächste Auftrag steht noch aus",
+          "sessionEmptyText": "Ein Handel, eine Beratung oder eine Nachricht kann diese Szene eröffnen.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "muenze-szene-bankhalle",
+          "pageTitle": "Die Bankhalle · Hinter dem Schalter",
+          "image": "./assets/klingende-muenze-gwynthor/bankhalle.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Zwischen hohen Fenstern und vergitterten Schaltern wartet man auf den eigenen Aufruf. Münzen werden gewogen, Belege gegengezeichnet und Kontobücher gebracht. Die schweren Türen hinter den Schaltern bleiben verschlossen, bis eine bestätigte Übergabe sie öffnet.</p>",
+          "sessionHint": "Eine Begegnung im Handelsposten der Klingenden Münze.",
+          "sessionEmptyTitle": "Der nächste Auftrag steht noch aus",
+          "sessionEmptyText": "Ein Handel, eine Beratung oder eine Nachricht kann diese Szene eröffnen.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "muenze-szene-kommandantur",
+          "pageTitle": "Die Kommandantur · Wege und Befehle",
+          "image": "./assets/klingende-muenze-gwynthor/kommandantur.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Auf dem Kartentisch stehen kleine Schiffsmarken; daneben liegen versiegelte Berichte aus der Grafschaft. Durch das Fenster sieht man die Hafenmasten. Ein Geleitgesuch, eine Entsendung oder die Nachricht von einem ausgebliebenen Schiff kann hier den nächsten Befehl bestimmen.</p>",
+          "sessionHint": "Eine Begegnung im Handelsposten der Klingenden Münze.",
+          "sessionEmptyTitle": "Der nächste Auftrag steht noch aus",
+          "sessionEmptyText": "Ein Handel, eine Beratung oder eine Nachricht kann diese Szene eröffnen.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        }
+      ]
+    }
+  }
+}

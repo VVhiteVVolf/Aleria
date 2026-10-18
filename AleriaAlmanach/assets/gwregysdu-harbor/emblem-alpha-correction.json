@@ -1,0 +1,49 @@
+{
+  "authorization": "User explicitly approved alpha and transparent outer margin correction for the Gwregysdu crest on 2026-10-18.",
+  "originalRgbPreserved": true,
+  "shape": "circle",
+  "originalSize": [
+    1254,
+    1254
+  ],
+  "finalSize": [
+    1355,
+    1355
+  ],
+  "originalBounds": [
+    24,
+    22,
+    1230,
+    1221
+  ],
+  "offset": [
+    51,
+    56
+  ],
+  "radius": [
+    589.5,
+    589.5
+  ],
+  "originalSha256": "72c0bdcb60f17f4fe46842629172b397c3f1720a87b33d286fe01997801f1fce",
+  "finalSha256": "19d50cac0e8317a115ddd465dca97c5ea94330217d5928cef1cb19b797905402",
+  "method": "Existing normalize(record, circular=True) from AleriaAlmanach/scripts/normalize-theater-signs-alpha.py; no regeneration or RGB resampling.",
+  "helperSha256": "8b81e7d74bc704facd0574022bca04e57f6ddb61efedc823b4aa75a62496e152",
+  "validation": {
+    "rgbPixelsUnchanged": true,
+    "originalPreserved": true,
+    "alphaValues": [
+      0,
+      255
+    ],
+    "circleCentered": true,
+    "silhouetteBounds": [
+      88,
+      88,
+      1267,
+      1267
+    ],
+    "marginPixels": 88,
+    "motifWidthPercent": 87.01,
+    "allOtherEighteenAssetHashesMatch": true
+  }
+}

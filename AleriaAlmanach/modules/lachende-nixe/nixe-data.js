@@ -190,7 +190,7 @@
           {
             "type": "connection",
             "name": "Die Rote Bank",
-            "detail": "Kunde",
+            "detail": "Mitglied · Gildenkonto",
             "image": "https://i.imgur.com/zAwJdmc.png",
             "imageFormat": "square"
           },
@@ -4153,7 +4153,7 @@
   "multipage": true,
   "previewImage": "./assets/lachende-nixe/scenes/aussenansicht.png"
 };
-  const target = {"key":"Gwynthor","tab":"Völker & Kulturen","desc":"","nodeId":"node:volker-kulturen:cenyr/celtigerns-wacht/llamreis-ankunft/gwynthor","path":["Cenyr","Celtigerns Wacht","Llamreis Ankunft","Gwynthor"]};
+  const target = {"key":"Die Klingende Münze - Gwynthor","tab":"Völker & Kulturen","desc":"Handelsposten, Interessenbünde und Betriebe des dreifachen Gildenverbunds.","iconUrl":"../Fraktionen/assets/emblems/gilden/klingende-muenze.webp","path":["Cenyr","Celtigerns Wacht","Llamreis Ankunft","Gwynthor","Die Klingende Münze - Gwynthor"]};
   let section = SECTIONS.find(s => s.tab === target.tab && JSON.stringify(s.path || []) === JSON.stringify(target.path));
   if (!section) { section = { ...target, entries: [] }; SECTIONS.push(section); }
   if (!SECTIONS.some(s => s.entries?.some(e => e.id === entry.id))) section.entries.push(entry);

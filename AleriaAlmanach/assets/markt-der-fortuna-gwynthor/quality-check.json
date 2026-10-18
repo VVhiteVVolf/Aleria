@@ -1,0 +1,42 @@
+{
+  "status": "complete",
+  "date": "2026-10-18",
+  "generator": "built-in image_gen",
+  "stylePreset": "anime-scene-portrait",
+  "selectedImages": 5,
+  "imageDimensions": "1024x1536",
+  "originalBytesPreserved": true,
+  "visualInspection": [
+    "All five generated images inspected individually.",
+    "Desktop archive cards, Mariels Gabe hierarchy and mobile story layout inspected.",
+    "The final partner network contains Vann, Raves, Cadwgans Pendrwn branch and Veltrane only."
+  ],
+  "validation": {
+    "focusedTestsPassed": 56,
+    "generatedPackagesCurrent": true,
+    "browserReport": ".tmp/markt-der-fortuna-gwynthor/browser-1792344657271/report.json",
+    "desktopViewport": "1440x1000",
+    "mobileViewport": "430x900",
+    "pagesIncludingComments": 22,
+    "hierarchyTabs": 14,
+    "scenes": 5,
+    "archiveEntries": 5,
+    "duplicateEntries": 0,
+    "councilPeersAfterImportRoundTrip": 9,
+    "customPlacementPreserved": true,
+    "marielPermanentPosts": 3,
+    "aelmorSnapshotOnlyHouseProfileChanged": true,
+    "externalWrites": false,
+    "widerFamilySuite": {
+      "total": 1246,
+      "passed": 1237,
+      "failed": 9,
+      "baselineFailed": 9,
+      "differentFailingTests": 0,
+      "currentLog": ".tmp/fortuna-family-tests.log",
+      "baselineLog": ".tmp/fortuna-family-baseline.log",
+      "baselineMethod": "Read-only ESM loader reverting only this task's Aelmor profile and matching assertion in memory. No workspace sources reverted. Shell duplicate error lines excluded from name comparison."
+    }
+  },
+  "publication": "Local workspace only; no push or deploy."
+}

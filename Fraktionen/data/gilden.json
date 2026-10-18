@@ -378,7 +378,18 @@
         "image": "https://i.imgur.com/jqR4FUw.png",
         "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=42"
       },
-      "symbol": "assets/emblems/gilden/klingende-muenze.webp"
+      "symbol": "assets/emblems/gilden/klingende-muenze.webp",
+      "summary": "Weltweiter Verbund aus Kaufmannsgilde, Roter Bank und Roter Kompanie, die gemeinsam in jeder Grafschaft mindestens einen großen Handelsposten unterhalten. Mitglieder der Kaufmannsgilde treten zugleich der Roten Bank bei und erhalten ein Konto; Unternehmer und Zunftsmeister können Gildenpersonal und vertragliche Kompaniedienste nutzen.",
+      "affiliations": [
+        {
+          "label": "Gemeinsamer Verbund der Klingenden Münze",
+          "entryIds": [
+            "klingende-muenze",
+            "die-rote-bank",
+            "rote-kompanie"
+          ]
+        }
+      ]
     },
     {
       "id": "markt-der-fortuna",
@@ -394,7 +405,18 @@
         "image": "https://i.imgur.com/ZtwroqK.png",
         "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=86"
       },
-      "symbol": "assets/emblems/gilden/markt-der-fortuna.webp"
+      "symbol": "assets/emblems/gilden/markt-der-fortuna.webp",
+      "summary": "Kaufmannsgilde im Verbund mit der Blauen Bank und der Blauen Kompanie. In Gwynthor prägen seit Jahrhunderten örtlich vertretene Handelshäuser und einheimische Gewerke den Handelshof. Mariels Gabe nutzt als Untergilde den Fortuna-Hafen für Weisenfluher Warenankünfte.",
+      "affiliations": [
+        {
+          "label": "Verbund des Marktes der Fortuna",
+          "entryIds": [
+            "markt-der-fortuna",
+            "die-blaue-bank",
+            "blaue-kompanie"
+          ]
+        }
+      ]
     },
     {
       "id": "ost-kaiserliche-handelsgilde",
@@ -459,7 +481,8 @@
         "image": "https://i.imgur.com/0WfTvSC.png",
         "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=656"
       },
-      "symbol": "assets/emblems/gilden/mariels-gabe.webp"
+      "symbol": "assets/emblems/gilden/mariels-gabe.webp",
+      "summary": "Kaufmannsgilde aus Weisenfluh und Untergilde des Marktes der Fortuna. Sie bringt Weisenfluher Güter nach Estryll und nutzt in Gwynthor den Fortuna-Hafen. Ihre kleine dauerhafte Stelle dort unterhält vor allem die Tafel der Mutter: genießbare Lebensmittelüberschüsse werden rechtzeitig an Bedürftige und kirchliche Stellen verteilt."
     },
     {
       "id": "geeinte-haende",
@@ -635,7 +658,18 @@
         "image": "https://i.imgur.com/zAwJdmc.png",
         "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=742"
       },
-      "symbol": "assets/emblems/gilden/die-rote-bank.webp"
+      "symbol": "assets/emblems/gilden/die-rote-bank.webp",
+      "summary": "Bankgilde im weltweiten Verbund der Klingenden Münze. Sie begleitet Kaufmannsgilde und Rote Kompanie bei jedem Handelsposten; Münze-Mitglieder gehören zugleich der Bank an und führen dort ein Konto. Kredite und Sicherheiten werden gesondert vereinbart.",
+      "affiliations": [
+        {
+          "label": "Gemeinsamer Verbund der Klingenden Münze",
+          "entryIds": [
+            "klingende-muenze",
+            "die-rote-bank",
+            "rote-kompanie"
+          ]
+        }
+      ]
     },
     {
       "id": "die-sand-bank",
@@ -667,7 +701,18 @@
         "image": "https://i.imgur.com/TuHz3M8.png",
         "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1705"
       },
-      "symbol": "assets/emblems/gilden/die-blaue-bank.webp"
+      "symbol": "assets/emblems/gilden/die-blaue-bank.webp",
+      "summary": "Bankgilde im Verbund mit dem Markt der Fortuna und der Blauen Kompanie. Sie führt Einlagen, Zahlungsverkehr und vereinbarte Handelsfinanzierung; die örtliche Leitung in Gwynthor liegt bei Falto.",
+      "affiliations": [
+        {
+          "label": "Verbund des Marktes der Fortuna",
+          "entryIds": [
+            "markt-der-fortuna",
+            "die-blaue-bank",
+            "blaue-kompanie"
+          ]
+        }
+      ]
     },
     {
       "id": "hnoss-kasse",
@@ -1390,7 +1435,18 @@
         "image": "https://i.imgur.com/CqXYCrn.png",
         "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=2528"
       },
-      "symbol": "assets/emblems/gilden/blaue-kompanie.webp"
+      "symbol": "assets/emblems/gilden/blaue-kompanie.webp",
+      "summary": "Söldnergilde im Verbund mit dem Markt der Fortuna und der Blauen Bank. Der örtliche Kontor-Kommandant in Gwynthor kommt aus Haus Nerva und koordiniert Schutz, Seegeleit und sichere Hafenankünfte.",
+      "affiliations": [
+        {
+          "label": "Verbund des Marktes der Fortuna",
+          "entryIds": [
+            "markt-der-fortuna",
+            "die-blaue-bank",
+            "blaue-kompanie"
+          ]
+        }
+      ]
     },
     {
       "id": "rote-kompanie",
@@ -1406,7 +1462,18 @@
         "image": "https://i.imgur.com/QG4mL5M.png",
         "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=2527"
       },
-      "symbol": "assets/emblems/gilden/rote-kompanie.webp"
+      "symbol": "assets/emblems/gilden/rote-kompanie.webp",
+      "summary": "Söldnergilde im weltweiten Verbund der Klingenden Münze. Sie begleitet Kaufmannsgilde und Rote Bank an jeden Handelsposten und stellt nach Vertrag Geleit, Wachen und militärische Führung für Kontore und Mitgliedsbetriebe.",
+      "affiliations": [
+        {
+          "label": "Gemeinsamer Verbund der Klingenden Münze",
+          "entryIds": [
+            "klingende-muenze",
+            "die-rote-bank",
+            "rote-kompanie"
+          ]
+        }
+      ]
     },
     {
       "id": "saatkrieger",

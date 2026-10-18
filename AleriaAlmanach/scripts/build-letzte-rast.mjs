@@ -1,12 +1,13 @@
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { completeLetzteRast } from '../modules/letzte-rast/rast-module.mjs';
 import { VANN_PEOPLE, VANN_MARRIAGES } from '../modules/letzte-rast/rast-people.mjs';
+import { FORTUNA_SECTION } from '../modules/markt-der-fortuna-gwynthor/fortuna-section.mjs';
 const read=async path=>JSON.parse(await readFile(new URL(path,import.meta.url),'utf8'));
 const source=(await read('../modules/letzte-rast/sources/module-before.json')).entry;
 const teyrngarch=await read('../modules/krumme-kanne/source/teyrngarch.json');
 const imports=await read('../modules/lachende-nixe/sources/drink-catalogs.json');
 const entry=completeLetzteRast(source,[teyrngarch.entry||teyrngarch,...imports.map(i=>i.entry||i)]);
-const section={key:'Gwynthor',tab:'Völker & Kulturen',desc:'',nodeId:'node:volker-kulturen:cenyr/celtigerns-wacht/llamreis-ankunft/gwynthor',path:['Cenyr','Celtigerns Wacht','Llamreis Ankunft','Gwynthor']};
+const section=FORTUNA_SECTION;
 const directory=new URL('../../Charakter Archiv Exporte/Module/Celtigerns Letzte Rast/',import.meta.url);
 await mkdir(directory,{recursive:true});
 const outputs=new Map([

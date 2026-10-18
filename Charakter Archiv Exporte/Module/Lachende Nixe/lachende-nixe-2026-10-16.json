@@ -6,15 +6,16 @@
     "type": "aleria-module",
     "version": 1,
     "section": {
-      "key": "Gwynthor",
+      "key": "Die Klingende Münze - Gwynthor",
       "tab": "Völker & Kulturen",
-      "desc": "",
-      "nodeId": "node:volker-kulturen:cenyr/celtigerns-wacht/llamreis-ankunft/gwynthor",
+      "desc": "Handelsposten, Interessenbünde und Betriebe des dreifachen Gildenverbunds.",
+      "iconUrl": "../Fraktionen/assets/emblems/gilden/klingende-muenze.webp",
       "path": [
         "Cenyr",
         "Celtigerns Wacht",
         "Llamreis Ankunft",
-        "Gwynthor"
+        "Gwynthor",
+        "Die Klingende Münze - Gwynthor"
       ]
     },
     "entry": {
@@ -207,7 +208,7 @@
               {
                 "type": "connection",
                 "name": "Die Rote Bank",
-                "detail": "Kunde",
+                "detail": "Mitglied · Gildenkonto",
                 "image": "https://i.imgur.com/zAwJdmc.png",
                 "imageFormat": "square"
               },

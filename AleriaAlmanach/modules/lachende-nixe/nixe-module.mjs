@@ -31,6 +31,8 @@ export function completeLachendeNixe(source, catalogs) {
     if (room.intro) page.sessionIntro = room.intro;
   }
   const bio = entry.pages[1].biography;
+  const bankConnection = bio.connections.find(connection => connection.name === 'Die Rote Bank');
+  if (bankConnection) bankConnection.detail = 'Mitglied · Gildenkonto';
   bio.abilities.forEach((ability, index) => { ability.icon = traitIcons[index]; });
   bio.extraSections.push({ title: 'Das Haus und seine Menschen', text: '<p>Johanna hält den Alltag zusammen, Simon die Unruhe von der Tür fern und David die Bücher in Ordnung. Rosalinde übernimmt Briefe und besondere Empfangstermine; Kaspar kennt die Wege zu den Lieferanten. Über die Verwandtschaft auf Burg Sonnenfels spricht Albrecht seltener als über sein Haus am Hafen.</p>' });
   for (const key of ['rosalinde', 'kaspar']) {

@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-18",
+  "status": "complete",
+  "selectedImages": 26,
+  "allFinalsSavedInWorkspace": true,
+  "uniqueIdsAndHashes": true,
+  "portraitAndSceneAspectRatio": "2:3",
+  "itemAspectRatio": "1:1",
+  "transparentItemsHaveRealPngAlpha": true,
+  "allOriginalPixelsAndAlphaPreserved": true,
+  "browser": {
+    "passed": true,
+    "report": ".tmp/klingende-krone/browser-1792336690543/report.json",
+    "viewports": ["1440 × 1000", "430 × 900"],
+    "visiblePages": 13,
+    "hierarchyTabs": 6,
+    "scenesWithCollapsibleIntros": 5,
+    "itemCards": true,
+    "familyPersons": 15,
+    "familyRenderedCardsIncludingStructure": 17,
+    "familyGeometryIssues": 0,
+    "brokenFamilyImages": 0,
+    "externalWrites": false
+  },
+  "tests": { "module": 6, "relatedRegressionChecks": 35, "passed": true },
+  "publication": { "pushed": false, "deployed": false, "firebaseApplied": false }
+}

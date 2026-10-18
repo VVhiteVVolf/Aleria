@@ -80,7 +80,7 @@ function goodsRows(page, pageIndex) {
 function tradeRows(page, pageIndex) {
   const catalog = page.tradeCatalog || {};
   return (catalog.items || []).flatMap((item, itemIndex) => {
-    if (item.status === 'planned') return [];
+    if (['planned', 'unavailable'].includes(item.status)) return [];
     const category = (catalog.categories || []).find(value => value.id === item.category)?.label || item.category;
     const facts = [
       { label: 'Portion / Einheit', value: text(item.unit) },

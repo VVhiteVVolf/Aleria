@@ -3,7 +3,14 @@ const almanach = name => `AleriaAlmanach/tests/${name}.test.mjs`;
 const gwynthorFamilyInputs = [
   'AleriaAlmanach/modules/gwynthor-bathhouse/bathhouse-people.mjs',
   'AleriaAlmanach/modules/kleiner-durst/durst-people.mjs',
-  'AleriaAlmanach/modules/pendrwn-general-store/store-people.mjs'
+  'AleriaAlmanach/modules/pendrwn-general-store/store-people.mjs',
+  'AleriaAlmanach/modules/gwregysdu-harbor/',
+  'AleriaAlmanach/modules/gestiefelte-muschi/muschi-people.mjs',
+  'AleriaAlmanach/modules/letzter-heller/heller-people.mjs',
+  'AleriaAlmanach/modules/cneacail-family/',
+  'AleriaAlmanach/modules/klingende-muenze-gwynthor/',
+  'AleriaAlmanach/modules/guild-trading-post/',
+  'AleriaAlmanach/modules/markt-der-fortuna-gwynthor/'
 ];
 
 // Inputs include cross-feature dependencies. Images do not affect the chart audit,
@@ -52,6 +59,69 @@ export const SITE_BUILD_TASKS = [
     excludes: ['Gameplay Guide/assets/'],
     commands: [['netlify/build/verify-task-inputs.mjs', 'gameplay-guides'],
       ['Gameplay Guide/scripts/build-guides.mjs', '--check']]
+  },
+  {
+    id: 'gwregysdu-harbor', label: 'Gwregysdu harbor module and family identities',
+    inputs: ['AleriaAlmanach/modules/gwregysdu-harbor/', 'AleriaAlmanach/assets/gwregysdu-harbor/',
+      'AleriaAlmanach/scripts/build-gwregysdu-harbor.mjs', 'Stammbäume/assets/js/',
+      'Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Gwregysdu.png',
+      almanach('gwregysdu-harbor')],
+    commands: [['AleriaAlmanach/scripts/build-gwregysdu-harbor.mjs', '--check'],
+      testCommand(almanach('gwregysdu-harbor'))]
+  },
+  {
+    id: 'gestiefelte-muschi', label: 'Helvianes entertainment house and Brevanor heraldry',
+    inputs: ['AleriaAlmanach/modules/gestiefelte-muschi/', 'AleriaAlmanach/assets/gestiefelte-muschi/',
+      'AleriaAlmanach/scripts/build-gestiefelte-muschi.mjs', 'AleriaAlmanach/modules/brewer-guilds/',
+      'AleriaAlmanach/modules/trade-catalog/', 'AleriaAlmanach/modules/item-register/',
+      'AleriaAlmanach/modules/guest-register/', 'AleriaAlmanach/modules/character-genealogy/',
+      'AleriaAlmanach/modules/creatures/', ...gwynthorFamilyInputs, 'Stammbäume/assets/js/',
+      'Stammbäume/assets/images/houses/Brevanor/', almanach('gestiefelte-muschi')],
+    commands: [['AleriaAlmanach/scripts/build-gestiefelte-muschi.mjs', '--check'], testCommand(almanach('gestiefelte-muschi'))]
+  },
+  {
+    id: 'letzter-heller', label: 'Cneacail family, shabby tavern and unavailable historic beers',
+    inputs: ['AleriaAlmanach/modules/letzter-heller/', 'AleriaAlmanach/assets/letzter-heller/',
+      'AleriaAlmanach/scripts/build-letzter-heller.mjs', 'AleriaAlmanach/modules/trade-catalog/',
+      'AleriaAlmanach/modules/item-register/', 'AleriaAlmanach/modules/module-editor/',
+      'AleriaAlmanach/modules/character-genealogy/', 'AleriaAlmanach/modules/creatures/',
+      'AleriaAlmanach/styles/module-page-trade-catalog.css', ...gwynthorFamilyInputs,
+      'Stammbäume/assets/js/', 'Stammbäume/assets/images/houses/Ceitheach/sept-cneacail.png',
+      almanach('letzter-heller'), almanach('trade-catalog-pricing')],
+    commands: [['AleriaAlmanach/scripts/build-letzter-heller.mjs', '--check'], testCommand(almanach('letzter-heller'), almanach('trade-catalog-pricing'))]
+  },
+  {
+    id: 'markt-der-fortuna-gwynthor', label: 'Fortuna families, banking, blue company and Tafel der Mutter',
+    inputs: ['AleriaAlmanach/modules/markt-der-fortuna-gwynthor/', 'AleriaAlmanach/modules/guild-trading-post/',
+      'AleriaAlmanach/assets/markt-der-fortuna-gwynthor/', 'AleriaAlmanach/scripts/build-markt-der-fortuna-gwynthor.mjs',
+      'AleriaAlmanach/modules/archive/archive-section-registration.mjs', 'AleriaAlmanach/modules/letzte-rast/',
+      'AleriaAlmanach/modules/goettliche-eleganz/', 'AleriaAlmanach/modules/pendrwn-general-store/',
+      'AleriaAlmanach/tests/markt-der-fortuna-gwynthor.test.mjs', 'Fraktionen/data/gilden.json',
+      'Stammbäume/assets/js/', 'Stammbäume/tools/publish-family-snapshots.mjs',
+      'Stammbäume/assets/data/published-families/haus-aelmor.json', 'Stammbäume/assets/data/published-families/registry.json',
+      'Familien Häuser und Clans/', 'AleriaAlmanach/AleriaAlmanach.html'],
+    commands: [['AleriaAlmanach/scripts/build-markt-der-fortuna-gwynthor.mjs', '--check'], testCommand(almanach('markt-der-fortuna-gwynthor'))]
+  },
+  {
+    id: 'klingende-muenze-gwynthor', label: 'Gwynthor trading post, three guilds and member placement',
+    inputs: ['AleriaAlmanach/modules/klingende-muenze-gwynthor/', 'AleriaAlmanach/assets/klingende-muenze-gwynthor/',
+      'AleriaAlmanach/scripts/build-klingende-muenze-gwynthor.mjs', 'AleriaAlmanach/modules/archive/archive-section-registration.mjs',
+      'AleriaAlmanach/modules/klingende-krone/', 'AleriaAlmanach/modules/lachende-nixe/',
+      'AleriaAlmanach/modules/letzter-heller/', ...gwynthorFamilyInputs,
+      'AleriaAlmanach/modules/creatures/', 'AleriaAlmanach/tests/klingende-muenze-gwynthor.test.mjs',
+      'Fraktionen/data/gilden.json', 'Fraktionen/assets/emblems/gilden/', 'Stammbäume/assets/js/',
+      'AleriaAlmanach/AleriaAlmanach.html'],
+    commands: [['AleriaAlmanach/scripts/build-klingende-muenze-gwynthor.mjs', '--check'], testCommand(almanach('klingende-muenze-gwynthor'))]
+  },
+  {
+    id: 'klingende-krone', label: 'Finlays guild brewery and the expanded Cneacail genealogy',
+    inputs: ['AleriaAlmanach/modules/klingende-krone/', 'AleriaAlmanach/assets/klingende-krone/',
+      'AleriaAlmanach/scripts/build-klingende-krone.mjs', 'AleriaAlmanach/modules/letzter-heller/',
+      'AleriaAlmanach/modules/trade-catalog/', 'AleriaAlmanach/modules/item-register/',
+      'AleriaAlmanach/modules/character-genealogy/', 'AleriaAlmanach/modules/creatures/',
+      'AleriaAlmanach/modules/comann-braich-alba/', ...gwynthorFamilyInputs,
+      'Stammbäume/assets/js/', almanach('klingende-krone')],
+    commands: [['AleriaAlmanach/scripts/build-klingende-krone.mjs', '--check'], testCommand(almanach('klingende-krone'))]
   },
   {
     id: 'natural-resources', label: 'Natural resource catalog and artwork',

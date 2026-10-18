@@ -1,0 +1,73 @@
+{
+  "moduleId": "gwynthor-gwregysdu-lagerhaeuser",
+  "contentPages": 7,
+  "automaticCommentsPage": true,
+  "interactiveScenes": 3,
+  "services": 6,
+  "familyMembers": 26,
+  "newFamilyPortraits": 10,
+  "anonymousRankPortraits": 3,
+  "sceneAndStoryImages": 5,
+  "circularEmblems": 1,
+  "totalImages": 19,
+  "guardStrength": {
+    "optioPilo": 1,
+    "lieutenants": 2,
+    "soldiers": 24
+  },
+  "duplicateModules": 0,
+  "browser": {
+    "desktop": "1440 x 1000",
+    "mobile": "430 x 900",
+    "pagesCheckedPerViewport": 8,
+    "hierarchyTabsChecked": 6,
+    "brokenImagePaths": 0,
+    "sceneIntrosCollapsible": true,
+    "browserErrors": [],
+    "houseBiographyCheckedInFamilyContext": true,
+    "externalWritesBlocked": true,
+    "report": ".tmp/gwregysdu-research/browser-1792290505802/report.json"
+  },
+  "familyGeometry": {
+    "familiesChecked": [
+      "haus-gwregysdu",
+      "haus-bradrhith"
+    ],
+    "cards": 46,
+    "failures": 0
+  },
+  "checks": {
+    "moduleAndFamilyTests": 4,
+    "existingBradrhithTests": 4,
+    "archiveImageAndPreviewTests": 8,
+    "buildPolicyTests": 15,
+    "familyDependencyCoverage": true,
+    "guideDependencyCoverage": true,
+    "generatedPackageCurrent": true,
+    "imageFormatsAndHashesValid": true
+  },
+  "emblemAlpha": {
+    "status": "complete",
+    "authorizationDate": "2026-10-18",
+    "generatedRgbaSize": [
+      1254,
+      1254
+    ],
+    "finalRgbaSize": [
+      1355,
+      1355
+    ],
+    "outsideAlpha": 0,
+    "insideAlpha": 255,
+    "rgbUnchanged": true,
+    "circleCentered": true,
+    "motifWidthPercent": 87.01,
+    "audit": "AleriaAlmanach/assets/gwregysdu-harbor/emblem-alpha-correction.json",
+    "browserRechecked": true
+  },
+  "publication": {
+    "pushed": false,
+    "deployed": false,
+    "onlineDataChanged": false
+  }
+}

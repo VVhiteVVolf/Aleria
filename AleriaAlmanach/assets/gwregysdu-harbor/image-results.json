@@ -1,0 +1,292 @@
+{
+  "tool": "built-in image_gen",
+  "images": [
+    {
+      "id": "optio-pilo",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-a05ef306-fb0b-4300-9862-536dceff65c7.png",
+      "destination": "AleriaAlmanach/assets/gwregysdu-harbor/portraits/optio-pilo.png",
+      "prompt": "Use case: stylized-concept. Asset: one anonymous mercenary captain upper-body portrait for Aleria. Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung. Reference: among the supplied images the full-length red-and-gold armored soldier with lion pelt is the ARMOR DESIGN reference only; ignore the circular heraldic reference images. Create ONE Optio Pilo captain of the Red Company: crop from helmet top to waist, standing relaxed three-quarter stance before a simple medieval harbor warehouse wall. Reproduce red lacquered bronze/gold metal cuirass, red-and-gold shoulder plates with curled ornament, crimson cloth and closed angular red-and-gold helmet of that armored soldier. REMOVE THE LION PELT COMPLETELY: no animal head, no fur, no mane, no animal ornament. Helmet has a modest red transverse crest to distinguish captain. Deep opaque shadow conceals every facial feature behind helmet openings, no visible eyes or mouth. One gauntleted hand rests naturally on his sword hilt at the waist, other arm relaxed; clean calm silhouette, generous headroom. No text, no crest badge invented, no framing, no transparent background. Exactly one character.",
+      "tool": "built-in image_gen",
+      "conversationReference": "User-provided Red Company armor without lion pelt; num_last_images_to_include: 4, heraldic images ignored.",
+      "sha256": "1645543d2d60351920c9a51ab01b5af41b4f0c553f93cfe79bb304ec81beba75",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "id": "wappen",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-df032d9f-5b4f-4523-8204-00744068435c.png",
+      "destination": "Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Gwregysdu.png",
+      "prompt": "# Universeller Wappen-Prompt\n\n**Wappenname:** Haus Gwregysdu\n\n**Zentrales Symbol:** Drei große silberne Lagerschlüssel fächerförmig auf Rostrot, gemeinsam von einem geschlossenen schwarzen Ledergürtel mit Messingschnalle umschlossen. Alle drei Schlüssel und die geschlossene Gürtelschlaufe liegen vollständig innerhalb des Kreises.\n\n**Farbpalette:** Rostrot · Schwarz · Silber mit Messingakzent\n\n**Wappenform:** ZIRKULAR – IMMER ein exakter Kreis, damit das Wappen in die vorhandenen Frames passt. Keine Spitzschilde oder ovalen Außenkonturen.\n\n### Gestaltung\n\nEin hochwertiges mittelalterliches Wappen im nordisch-keltischen Fantasy-Heraldikstil. Inspiriert von historischen bemalten Holzschilden, nordischer Ornamentik und traditionellen Clanwappen.\n\nDas zentrale Symbol ist groß, ausdrucksstark und detailliert, gleichzeitig aber klar heraldisch stilisiert. Kräftige dunkle Konturen, sauber getrennte Farbflächen, markante Silhouetten und ausgewogene Proportionen.\n\nDas gesamte Motiv muss vollständig innerhalb des Wappens liegen. Keine abgeschnittenen Figuren, Waffen, Flügel, Hörner oder Ornamente.\n\n### Material und Oberflächen\n\nDie innere Wappenfläche besteht aus bemalten Holzbrettern mit dezenter, sichtbarer Holzmaserung. Die Farben wirken wie auf Holz aufgetragene mittelalterliche Pigmente.\n\nDer Außenrahmen besteht aus dunklem Eisen mit leichter Materialstruktur, kleinen Gebrauchsspuren und einer vollständig geschlossenen Außenkontur.\n\nDas Wappen soll handwerklich hochwertig, plastisch und historisch glaubwürdig wirken. Keine moderne, minimalistische Logoästhetik, keine Fotorealistik und keine übertriebenen 3D-Effekte.\n\n### Verzierungen\n\nSchlichte keltische Knoten im geschlossenen Eisenrahmen\n\nBei zirkularen Wappen können die Verzierungen gleichmäßig im Außenring verlaufen. Sie dürfen das zentrale Motiv nicht überlagern.\n\n### Komposition\n\nQuadratisches Bildformat 1:1. Das vollständige Wappen steht mittig und wird frontal gezeigt.\n\nDas Wappen nimmt ungefähr 85–90 % der Bildbreite ein. Alle Elemente bleiben vollständig innerhalb seiner äußeren Begrenzung.\n\n### Transparenz – zwingend einhalten\n\n**Der gesamte Bereich außerhalb des äußersten Wappenrahmens muss vollständig transparent sein (Alpha-Kanal = 0).**\n\n- Keine Hintergrundfarbe, kein Weiß, Schwarz oder Magenta außerhalb des Wappens.\n- Kein Hintergrundbild, keine Landschaft, keine Wand und keine dekorativen Elemente außerhalb des Rahmens.\n- Keine Schlagschatten, Glows oder Lichtreflexe außerhalb der Wappenkontur.\n- Keine über den Rahmen hinausragenden Ornamente oder Symbole.\n- Die äußerste Wappenkante muss sauber und geschlossen sein.\n- **Die gesamte Wappenfläche innerhalb des Außenrahmens muss vollständig deckend bleiben (Alpha-Kanal = 255).**\n- Keine transparenten Löcher zwischen Symbolen, Ornamenten oder innerhalb der bemalten Holzfläche.\n- Die Innenfläche des Wappens muss ihre vorgesehene Farbe vollständig behalten.\n\n**WICHTIG:** Ausschließlich der Bereich außerhalb der äußeren Wappenkontur ist transparent. Das Wappen selbst, einschließlich Holzfläche, Rahmen, Symbolen und sämtlichen Zwischenräumen, bleibt vollständig sichtbar und deckend.\n\n### Ausgabe\n\nHochauflösendes PNG mit echtem transparentem Hintergrund (RGBA), quadratisches Format 1:1. Keine simulierte Transparenz und kein Schachbrettmuster als Bildhintergrund.\nReference images: use only their circular painted-wood heraldic treatment. Create the selected Gwregysdu emblem; all three keys enclosed by the CLOSED black belt; entire circle interior completely opaque.",
+      "references": [
+        "Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Raves.png",
+        "Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Rhwyd.png"
+      ],
+      "tool": "built-in image_gen",
+      "sha256": "19d50cac0e8317a115ddd465dca97c5ea94330217d5928cef1cb19b797905402",
+      "width": 1355,
+      "height": 1355,
+      "postprocess": {
+        "authorization": "User explicitly approved alpha and transparent outer margin correction for the Gwregysdu crest on 2026-10-18.",
+        "originalRgbPreserved": true,
+        "shape": "circle",
+        "originalSize": [
+          1254,
+          1254
+        ],
+        "finalSize": [
+          1355,
+          1355
+        ],
+        "originalBounds": [
+          24,
+          22,
+          1230,
+          1221
+        ],
+        "offset": [
+          51,
+          56
+        ],
+        "radius": [
+          589.5,
+          589.5
+        ],
+        "originalSha256": "72c0bdcb60f17f4fe46842629172b397c3f1720a87b33d286fe01997801f1fce",
+        "finalSha256": "19d50cac0e8317a115ddd465dca97c5ea94330217d5928cef1cb19b797905402",
+        "method": "Existing normalize(record, circular=True) from AleriaAlmanach/scripts/normalize-theater-signs-alpha.py; no regeneration or RGB resampling.",
+        "helperSha256": "8b81e7d74bc704facd0574022bca04e57f6ddb61efedc823b4aa75a62496e152",
+        "validation": {
+          "rgbPixelsUnchanged": true,
+          "originalPreserved": true,
+          "alphaValues": [
+            0,
+            255
+          ],
+          "circleCentered": true,
+          "silhouetteBounds": [
+            88,
+            88,
+            1267,
+            1267
+          ],
+          "marginPixels": 88,
+          "motifWidthPercent": 87.01,
+          "allOtherEighteenAssetHashesMatch": true
+        }
+      }
+    },
+    {
+      "id": "bleddyn",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-1e24227b-3b9c-495a-9237-aa2cccb86794.png",
+      "destination": "AleriaAlmanach/assets/gwregysdu-harbor/portraits/bleddyn.png",
+      "prompt": "Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nUse case: stylized-concept. Exactly one character portrait for Aleria, upper body to waist, standing naturally. 71-jähriger kräftiger Cenyri-Mann mit breitem kantigem Gesicht, schwerem Kiefer, dunklen braunen Augen, deutlich gealterten Lidern und Falten. Einheitlich eisengraues dichtes nach hinten gekämmtes Haar, gepflegter grauer Schnurrbart und kurzer grauer Kinnbart. Rostroter hochwertiger Wollrock, schwarze Weste, kleine Messingschnalle. Stehend, Brustbild bis zur Hüfte, Kopf leicht geneigt, verschlossenes höfliches Lächeln, rechte Hand locker auf einem schlichten Gehstock. Keine Krone, keine Rüstung. Simple quiet medieval Cenyri harbor counting-house interior in the background, soft daylight. Human rounded ears. No text, watermark or framing. Distinct identity, no copied face or identical clothing.\nGruffudd supplies only family resemblance for blood relatives: sturdy features. Follow this character’s stated age, hair, eyes, pose, clothing and expression. Spouses have independent faces; do not copy Gruffudd or his prison setting.",
+      "references": [
+        "Stammbäume/assets/images/portraits/haus-bradrhith/gruffudd-gwregysdu.png"
+      ],
+      "tool": "built-in image_gen",
+      "sha256": "9b7d7edbd48efa8a2423e11e1c4063656e276e356c207f42f77549a116d17fb4",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "id": "cynan",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-fb395dba-d725-47e9-b506-d4eef291a0f1.png",
+      "destination": "AleriaAlmanach/assets/gwregysdu-harbor/portraits/cynan.png",
+      "prompt": "Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nUse case: stylized-concept. Exactly one character portrait for Aleria, upper body to waist, standing naturally. 46-jähriger stämmiger Cenyri-Mann, breite rechteckige Gesichtsform, dunkle braune Augen, einheitlich dunkelbraunes kurzes seitlich gescheiteltes Haar und dichter kurzer dunkelbrauner Vollbart. Dunkelgrüner gut geschnittener Händlerrock, schlichtes helles Hemd, schwarzer Gürtel. Stehend, halbe Figur, linke Hand hält ein geschlossenes dünnes Rechnungsbuch an der Seite, andere Hand locker am Gürtel. Nüchterner nachdenklicher Blick, eine Augenbraue leicht gehoben. Simple quiet medieval Cenyri harbor counting-house interior in the background, soft daylight. Human rounded ears. No text, watermark or framing. Distinct identity, no copied face or identical clothing.\nGruffudd supplies only family resemblance for blood relatives: sturdy features. Follow this character’s stated age, hair, eyes, pose, clothing and expression. Spouses have independent faces; do not copy Gruffudd or his prison setting.",
+      "references": [
+        "AleriaAlmanach/assets/gwregysdu-harbor/portraits/bleddyn.png",
+        "Stammbäume/assets/images/portraits/haus-bradrhith/gruffudd-gwregysdu.png"
+      ],
+      "tool": "built-in image_gen",
+      "sha256": "131bcf707902dbc17225283d1734b724d26580fa28fb144b8b4b9a72c37f1ad3",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "id": "tudur",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-d6040bbd-2592-4e92-a718-a46e3921c124.png",
+      "destination": "AleriaAlmanach/assets/gwregysdu-harbor/portraits/tudur.png",
+      "prompt": "Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nUse case: stylized-concept. Exactly one character portrait for Aleria, upper body to waist, standing naturally. 40-jähriger hochgewachsener Cenyri-Mann mit kräftigen Schultern, länglicherem Gesicht als sein Bruder, dunklen braunen Augen, einheitlich dunkelbraunem leicht welligem nackenlangem Haar in einem kurzen tiefen Zopf, sauber rasiert. Taubenblauer Reise-Wollrock über sandfarbenem Hemd, lose lederne Schultertasche. Stehend, entspannt in Dreiviertelansicht, rechter Daumen locker am Taschengurt, linke Hand entspannt offen. Selbstsicheres kleines Lächeln, keine Buchhaltungspose. Simple quiet medieval Cenyri harbor counting-house interior in the background, soft daylight. Human rounded ears. No text, watermark or framing. Distinct identity, no copied face or identical clothing.\nGruffudd supplies only family resemblance for blood relatives: sturdy features. Follow this character’s stated age, hair, eyes, pose, clothing and expression. Spouses have independent faces; do not copy Gruffudd or his prison setting.",
+      "references": [
+        "AleriaAlmanach/assets/gwregysdu-harbor/portraits/bleddyn.png",
+        "Stammbäume/assets/images/portraits/haus-bradrhith/gruffudd-gwregysdu.png"
+      ],
+      "tool": "built-in image_gen",
+      "sha256": "408fc2ec2760a6e9ca7091d330a2747da0094120c88b5a3297522abdda691360",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "id": "bethan",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-244616ad-7281-49cb-93d8-bd89bcd7a858.png",
+      "destination": "AleriaAlmanach/assets/gwregysdu-harbor/portraits/bethan.png",
+      "prompt": "Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nUse case: stylized-concept. Exactly one character portrait for Aleria, upper body to waist, standing naturally. 68-jährige Cenyri-Frau, schmales langes Gesicht mit hohen Wangen und sichtbaren Lachfalten, graugrüne Augen. Vollständig silbergraues gewelltes Haar in lockerem tiefem Knoten, zwei weiche Schläfensträhnen. Gedämpft violettes hochgeschlossenes Kleid, cremefarbener Kragen, schlichte bernsteinfarbene Brosche. Stehend, Oberkörper zur anderen Seite gedreht, eine Hand locker am Broschenverschluss, andere entspannt. Ruhiges wissendes Lächeln. Deutlich andere Gesichtsform als die männlichen Gwregysdu. Simple quiet medieval Cenyri harbor counting-house interior in the background, soft daylight. Human rounded ears. No text, watermark or framing. Distinct identity, no copied face or identical clothing.\nSpouse portrait: independent face, no male portrait as identity reference.",
+      "references": [],
+      "tool": "built-in image_gen",
+      "sha256": "68a83b632f6da8516b0e59958cb56ba9d86c5b410388265ce5e6143a487466ac",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "id": "rhosyn",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-afd23cbc-f050-41f6-9d92-389e044d6234.png",
+      "destination": "AleriaAlmanach/assets/gwregysdu-harbor/portraits/rhosyn.png",
+      "prompt": "Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nUse case: stylized-concept. Exactly one character portrait for Aleria, upper body to waist, standing naturally. 43-jährige Cenyri-Frau mit rundlichem Gesicht, Sommersprossen, klaren grünen Augen, kräftigem kupferrotem gewelltem Haar in einer einzelnen langen seitlichen Flechte. Ockerfarbenes Kleid mit cremefarbenen Ärmeln und dunkelbraunem Mieder, kleine silberne Ohrringe. Stehend, Oberkörper frontal, leicht schiefes herzliches Grinsen, eine Hand hält einen gefalteten Brief, andere hängt locker herab. Natürlich reife Gesichtszüge, keine dunklen braunen Augen. Simple quiet medieval Cenyri harbor counting-house interior in the background, soft daylight. Human rounded ears. No text, watermark or framing. Distinct identity, no copied face or identical clothing.\nIndependent spouse identity, do not reuse any previous face.",
+      "references": [],
+      "tool": "built-in image_gen",
+      "sha256": "0e648a90078b5ae5fc3ffa83f2bffd5f4035a61d6dd70784a9e0eb865699ab43",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "id": "heulwen",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-7e318bee-2c04-42d0-bfdb-06e2ced1f48a.png",
+      "destination": "AleriaAlmanach/assets/gwregysdu-harbor/portraits/heulwen.png",
+      "prompt": "Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nUse case: stylized-concept. Exactly one character portrait for Aleria, upper body to waist, standing naturally. 37-jährige Cenyri-Frau mit herzförmigem Gesicht, blauen Augen, einheitlich hellbraunem glattem kinnlangem Haar mit seitlichem Pony. Rostorangefarbenes schlichtes Kleid unter dunkelblauer ärmelloser Überrobe, kleiner Ledergürtel, keine Brosche. Stehend, halbe Figur, Arme locker unterhalb der Brust verschränkt, amüsiertes geschlossenes Lächeln, Kopf leicht zur Seite. Kein rotes Haar, kein Zopf, kein Brief oder Buch. Simple quiet medieval Cenyri harbor counting-house interior in the background, soft daylight. Human rounded ears. No text, watermark or framing. Distinct identity, no copied face or identical clothing.\nIndependent spouse identity; do not copy any previous portrait.",
+      "references": [],
+      "tool": "built-in image_gen",
+      "sha256": "ee7b4e17d52291be4158f2f2eac555246152b37fed52038c11f960f0cee28ca4",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "id": "gethin",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-c8640f27-e28d-45cf-b7ce-56b46e4d2c1e.png",
+      "destination": "AleriaAlmanach/assets/gwregysdu-harbor/portraits/gethin.png",
+      "prompt": "Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nUse case: stylized-concept. Exactly one character portrait for Aleria, upper body to waist, standing naturally. 22-jähriger kräftiger junger Cenyri-Mann, dunkle braune Augen, einheitlich dunkelbraune kurze dichte Locken, breite Nase, glattrasiertes noch junges Gesicht. Einfaches dunkelrotes Arbeitswams über hellem Hemd mit hochgekrempelten Ärmeln. Stehend, Hüftporträt, eine Hand locker im Nacken, andere herab, leicht verlegenes freundliches Lächeln. Kein Bart, kein Zopf, kein gehaltener Gegenstand. Simple quiet medieval Cenyri harbor counting-house interior in the background, soft daylight. Human rounded ears. No text, watermark or framing. Distinct identity, no copied face or identical clothing.\nFamily resemblance only: Cynan is his father, Rhosyn is his mother. Preserve this son's individual face, dark brown hair and dark brown eyes and different pose.",
+      "references": [
+        "AleriaAlmanach/assets/gwregysdu-harbor/portraits/cynan.png",
+        "AleriaAlmanach/assets/gwregysdu-harbor/portraits/rhosyn.png"
+      ],
+      "tool": "built-in image_gen",
+      "sha256": "a282b0f8deb57550938c1d0db7852f992bf2aa6d441320f02e96890dd57a719c",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "id": "elenwen",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-1d8db20f-aa93-4cc9-9f8e-a0050b9cc126.png",
+      "destination": "AleriaAlmanach/assets/gwregysdu-harbor/portraits/elenwen.png",
+      "prompt": "Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nUse case: stylized-concept. Exactly one character portrait for Aleria, upper body to waist, standing naturally. 18-jährige erwachsene Cenyri-Frau mit ovalem Gesicht, dunklen braunen Augen, einheitlich dunkelbraunem langem glattem Haar halb hochgesteckt mit einfacher Haarspange, gerader kurzer Pony. Schlichtes salbeigrünes hochgeschlossenes Kleid mit cremefarbener Bluse. Stehend, Oberkörper leicht seitlich, Hände locker hinter dem Rücken, wacher verschmitzter Blick. Keine verführerische Kleidung, kein Buch, kein Brief. Simple quiet medieval Cenyri harbor counting-house interior in the background, soft daylight. Human rounded ears. No text, watermark or framing. Distinct identity, no copied face or identical clothing.\nFamily resemblance only: Cynan is her father, Rhosyn is her mother. Her own individual face, dark brown hair and dark brown eyes as requested.",
+      "references": [
+        "AleriaAlmanach/assets/gwregysdu-harbor/portraits/cynan.png",
+        "AleriaAlmanach/assets/gwregysdu-harbor/portraits/rhosyn.png"
+      ],
+      "tool": "built-in image_gen",
+      "sha256": "2589a6430c8a6654e844703a7d377c4c18a4fb9ce68c611b8af59cf2076e87dd",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "id": "iorath",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-741e9182-cba7-42f3-86ab-67182b9bb0db.png",
+      "destination": "AleriaAlmanach/assets/gwregysdu-harbor/portraits/iorath.png",
+      "prompt": "Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nUse case: stylized-concept. Exactly one character portrait for Aleria, upper body to waist, standing naturally. 15-jähriger Cenyri-Junge, deutlich jugendliches rundliches Gesicht, dunkle braune Augen, einheitlich dunkelbraunes unordentliches mittellanges Haar mit einer Strähne über der Stirn. Hochgeschlossenes hellgraues Hemd und schlichtes dunkelblaues Wams, vollständig bekleidet. Stehend, Brustbild bis Taille, hält mit einer Hand eine kleine schlichte hölzerne Zähltafel an die Seite, andere Hand locker. Neugieriger ernster Blick. Keine Rüstung, kein Bart, kein erwachsener Körperbau. Simple quiet medieval Cenyri harbor counting-house interior in the background, soft daylight. Human rounded ears. No text, watermark or framing. Distinct identity, no copied face or identical clothing.\nFamily resemblance: Tudur is his father and Heulwen is his mother. A clearly adolescent boy, individual face, dark brown hair and dark brown eyes.",
+      "references": [
+        "AleriaAlmanach/assets/gwregysdu-harbor/portraits/tudur.png",
+        "AleriaAlmanach/assets/gwregysdu-harbor/portraits/heulwen.png"
+      ],
+      "tool": "built-in image_gen",
+      "sha256": "b16feee1a780fb01a1f43250b26d402644e293913e2d6603b4fc4f5b91348aa4",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "id": "mared",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-19843c59-b117-4f43-907b-0a163ba83955.png",
+      "destination": "AleriaAlmanach/assets/gwregysdu-harbor/portraits/mared.png",
+      "prompt": "Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nUse case: stylized-concept. Exactly one character portrait for Aleria, upper body to waist, standing naturally. 12-jähriges Cenyri-Mädchen, eindeutig kindliches weiches Gesicht und kindlicher Körperbau, dunkle braune Augen, einheitlich dunkelbraunes welliges schulterlanges Haar mit zwei kleinen seitlichen Zöpfchen. Einfaches vollständig geschlossenes taubenblaues Kinderkleid mit hellem Kragen. Stehend, Oberkörperporträt, hält eine zusammengerollte kleine Zeichnung locker mit beiden Händen vor dem Bauch. Schüchternes kleines Lächeln. Altersgerecht, keine erwachsene Figur, kein Schmuck. Simple quiet medieval Cenyri harbor counting-house interior in the background, soft daylight. Human rounded ears. No text, watermark or framing. Distinct identity, no copied face or identical clothing.\nFamily resemblance only: Tudur and Heulwen are her parents. Clearly a twelve-year-old child with a small age-appropriate build and soft childish face, her own dark brown hair and dark brown eyes.",
+      "references": [
+        "AleriaAlmanach/assets/gwregysdu-harbor/portraits/tudur.png",
+        "AleriaAlmanach/assets/gwregysdu-harbor/portraits/heulwen.png"
+      ],
+      "tool": "built-in image_gen",
+      "sha256": "0fe047ef159687546d8890cffd3fcc77d979c4085dfa72b3e2f384b5e212cbf2",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "id": "leutnant",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-606edf3c-8ae7-4e8d-8aa6-9236fa12b10c.png",
+      "destination": "AleriaAlmanach/assets/gwregysdu-harbor/portraits/leutnant.png",
+      "prompt": "Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nUse case: stylized-concept. Aleria Red Company rank portrait: one anonymous lieutenant, upper body from helmet to waist, standing almost frontal, arms relaxed behind back. Same red and gold cuirass and shoulder plates as the captain reference. A smaller modest longitudinal crimson helmet crest. Closed helmet openings completely black with deep shadow, absolutely no identifiable face, eyes or mouth. Quiet warehouse gate background. No lion pelt, animal head or fur anywhere. Exactly one figure, no text, no transparent background.\nArmor and anime style reference only; new rank and pose as described.",
+      "references": [
+        "AleriaAlmanach/assets/gwregysdu-harbor/portraits/optio-pilo.png"
+      ],
+      "tool": "built-in image_gen",
+      "sha256": "ad8dd87ee2f1498e5e6fde9aa5f16c1733a9add2708f51efe6c205c8d38fb2cd",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "id": "soldat",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-fc19f02f-b7db-4707-ad23-bb0a4642627a.png",
+      "destination": "AleriaAlmanach/assets/gwregysdu-harbor/portraits/soldat.png",
+      "prompt": "Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nUse case: stylized-concept. Aleria Red Company rank portrait: one anonymous ordinary soldier, upper body from helmet to waist, relaxed three-quarter stance turned the opposite way from the captain. Same red lacquer and brass/gold armor design, somewhat simpler shoulder trim. Plain closed helmet WITHOUT a crest. One gloved hand loosely holds a vertical spear at the edge of the frame, other arm relaxed. Every facial feature concealed by opaque helmet shadow. Quiet stone warehouse wall behind him. No lion pelt, animal head or fur anywhere. Exactly one figure, no text, no transparent background.\nArmor and anime style reference only; new rank and pose as described.",
+      "references": [
+        "AleriaAlmanach/assets/gwregysdu-harbor/portraits/optio-pilo.png"
+      ],
+      "tool": "built-in image_gen",
+      "sha256": "9a86139b75494a5163872d05679dd23138270333f69702dc4c0ce6f80e151f2c",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "id": "hafenansicht",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-ac3a5ac9-0474-420a-b285-248a6d407aa9.png",
+      "destination": "AleriaAlmanach/assets/gwregysdu-harbor/scenes/hafenansicht.png",
+      "prompt": "Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nUse case: illustration-story. Eye-level medieval Cenyri harbor view of exactly four substantial neighboring warehouses belonging to one family within a much larger merchant trading post. Pale stone ground floors, dark timber upper floors, slate roofs, broad loading doors facing a modest cobbled quay. A simple black leather belt with brass buckle painted on a small hanging round sign, no readable lettering. Other trading buildings continue in the distance to make clear these four are only part of the port. Masts and rigging, still water glimpsed at one edge, warm morning light, a few neatly grouped crates, uncluttered composition, no people, no modern industrial machinery, no castle. Portrait 2:3 scene, coherent architectural perspective, no text or watermark.",
+      "references": [],
+      "tool": "built-in image_gen",
+      "sha256": "deabfbbf4a0a25c172ec7c80ad95da717230d313ae9885dce870e992f1a4b897",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "id": "hausgeschichte",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-c5dd4db0-d586-4ab8-9cbb-04a74e1c752e.png",
+      "destination": "AleriaAlmanach/assets/gwregysdu-harbor/scenes/hausgeschichte.png",
+      "prompt": "Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nUse case: illustration-story. Historical medieval Cenyri harbor scene, one adult man Madog aged about 40, dark brown hair, dark brown eyes, sturdy broad face, simple clean linen shirt and dark wool vest with a black belt and brass buckle, standing upper body to waist at the open door of a modest timber-parts warehouse. His wife Gwen, an adult red-haired Cenyri woman with blue eyes and a practical green dress, stands beside him holding one large plain iron warehouse key. Both relaxed but quietly proud, a few neatly stacked wooden ship components behind them. Only these two characters. Clear calm storytelling, no readable writing, no modern equipment. Portrait 2:3 scene, coherent architectural perspective, no text or watermark.",
+      "references": [],
+      "tool": "built-in image_gen",
+      "sha256": "e6f289fb0713f00911c2991864a731ea627c60c7e2e7d7a59c7f9745f9a139dc",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "id": "kaihof",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-0b8d17d1-5e78-481c-9b0b-c6f06d32eeb5.png",
+      "destination": "AleriaAlmanach/assets/gwregysdu-harbor/scenes/kaihof.png",
+      "prompt": "Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nUse case: illustration-story. Medieval Cenyri harbor logistics courtyard at eye level, exactly four distinct substantial warehouse facades around one broad cobbled loading yard, numbered only by simple non-text symbols, stone ground floors, timber upper storeys and slate roofs. A small covered reception hatch, one old wooden platform scale, a handcart, clear cart lane leading to a working waterfront with a mast visible beyond. Calm morning, no crowds, no readable text, no modern equipment, no fantasy castle. Portrait 2:3 scene, coherent architectural perspective, no text or watermark.\nArchitecture reference: preserve the same four-warehouse harbor complex, but show its inward loading courtyard, not the same waterfront viewpoint.",
+      "references": [
+        "AleriaAlmanach/assets/gwregysdu-harbor/scenes/hafenansicht.png"
+      ],
+      "tool": "built-in image_gen",
+      "sha256": "326dc043ddbfff558bf273d3f8bcf8a8c94d16acbf26fc00aff4a2f6686fcbf3",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "id": "lagerhalle",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-4cf82bd6-12e2-4169-a034-f9e524c5367c.png",
+      "destination": "AleriaAlmanach/assets/gwregysdu-harbor/scenes/lagerhalle.png",
+      "prompt": "Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nUse case: illustration-story. Interior of one spacious functional medieval harbor warehouse, heavy timber beams, pale stone walls, tall wooden doors, wide uncluttered central aisle. Separate low storage bays with stacked timber offcuts, two bound hides, cloth bales and a few closed trade chests on wooden pallets. Small weighing station beside door, locked timber partition for sealed consignments. Daylight from high windows, subdued natural colors, no people, no animals, no modern racks, no readable labels. Portrait 2:3 scene, coherent architectural perspective, no text or watermark.",
+      "references": [],
+      "tool": "built-in image_gen",
+      "sha256": "025bfddbb6be56338b1d6c551f36265bd31cfeb7bce0b26a4827d8f442447790",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "id": "kontor",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-2d30002d-ca98-42fd-ab9e-b8738944be19.png",
+      "destination": "AleriaAlmanach/assets/gwregysdu-harbor/scenes/kontor.png",
+      "prompt": "Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nUse case: illustration-story. Quiet prosperous but restrained medieval Cenyri harbor counting office, one broad oak desk by a window overlooking a loading yard, exactly two guest chairs, a narrow side desk, one open ledger, inkpot and three folded sealed letters. Locked iron-grilled document cabinet with a modest key rack, clean limewashed walls, dark beams, warm afternoon light. A small black leather belt with plain brass buckle lies beside the ledger. No people, no readable writing, no modern office furniture, not a palace. Portrait 2:3 scene, coherent architectural perspective, no text or watermark.",
+      "references": [],
+      "tool": "built-in image_gen",
+      "sha256": "1cb1691243a8c0538af77108cf374b0de4a05df54088cecd2c7dd8afb121276a",
+      "width": 1024,
+      "height": 1536
+    }
+  ]
+}

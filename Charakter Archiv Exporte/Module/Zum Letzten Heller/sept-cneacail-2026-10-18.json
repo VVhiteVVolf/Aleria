@@ -1,0 +1,674 @@
+{
+  "schema": "aleria.family-tree",
+  "schemaVersion": 1,
+  "document": {
+    "id": "sept-cneacail",
+    "title": "Sept Cneacail",
+    "motto": "Was bleibt, gehört uns.",
+    "description": "Einst wohlhabende Brauer- und Brennersept aus Bun na h-Aibhne, südlich von Glaennmor in Tir na Dorcha. Diente den Mallacht Seaghda. Die Plünderung durch Dämmergrunder Truppen 1720 überlebten aus der damaligen Sept nur Arran und seine Söhne Alasdair und Finlay. Im Exil zerstritten sich die Brüder. Finlay führt heute die Klingende Krone unter der Klingenden Münze; Alasdair den Letzten Heller. Die später angeheirateten Frauen und in Gwynthor geborenen Kinder gehörten nicht zur 1720 ausgelöschten Heimatlinie.",
+    "emblem": "assets/images/houses/Ceitheach/sept-cneacail.png",
+    "houseProfile": {
+      "rankId": "sept-head",
+      "seat": "Bun na h-Aibhne",
+      "barony": "Glaennmor",
+      "county": "Tir na Dorcha",
+      "kingdom": "Ceitheach",
+      "secondarySeats": [],
+      "liegeHouseId": "house-seaghda",
+      "liegeHouseName": "Mallacht Seaghda",
+      "regionEmblems": {
+        "seat": "",
+        "barony": "",
+        "county": "",
+        "kingdom": ""
+      }
+    }
+  },
+  "houses": [
+    {
+      "id": "sept-cneacail",
+      "name": "Sept Cneacail",
+      "status": "active",
+      "emblem": "assets/images/houses/Ceitheach/sept-cneacail.png"
+    }
+  ],
+  "persons": [
+    {
+      "id": "sept-cneacail-gruender",
+      "worldPersonId": "person--sept-cneacail--sept-cneacail-gruender",
+      "name": "Unbekannter Gründer",
+      "title": "Gründer des Hauses",
+      "sex": "male",
+      "status": "dead",
+      "birth": "",
+      "death": "????",
+      "portrait": "",
+      "portraitPlaceholder": "auto",
+      "houseId": "sept-cneacail",
+      "familyRole": "core",
+      "lineageRole": "branch",
+      "tags": [
+        "Gründerfamilie"
+      ],
+      "notes": "Historische Gründerfigur vor dem Überlieferungssprung; Name und genaue Lebensdaten sind noch nicht belegt.",
+      "extensions": {}
+    },
+    {
+      "id": "sept-cneacail-gruenderin",
+      "worldPersonId": "person--sept-cneacail--sept-cneacail-gruenderin",
+      "name": "Unbekannte Gründerin",
+      "title": "Gründerin des Hauses",
+      "sex": "female",
+      "status": "dead",
+      "birth": "",
+      "death": "????",
+      "portrait": "",
+      "portraitPlaceholder": "auto",
+      "houseId": "sept-cneacail",
+      "familyRole": "married",
+      "lineageRole": "branch",
+      "tags": [
+        "Gründerfamilie"
+      ],
+      "notes": "Historische Gründerfigur vor dem Überlieferungssprung; Name und genaue Lebensdaten sind noch nicht belegt.",
+      "extensions": {}
+    },
+    {
+      "id": "donnchadh-cneacail",
+      "worldPersonId": "person--sept-cneacail--donnchadh-cneacail",
+      "name": "Donnchadh Cneacail",
+      "title": "Arrans älterer Bruder · Brauer",
+      "sex": "male",
+      "status": "dead",
+      "birth": "1670",
+      "death": "1720",
+      "portrait": "",
+      "portraitPlaceholder": "auto",
+      "houseId": "sept-cneacail",
+      "familyRole": "core",
+      "lineageRole": "branch",
+      "tags": [],
+      "notes": "Älterer Bruder Arrans. Bewirtschaftete mit Morna und Sohn Eoghan den Brauteil der Sept. Alle drei kamen bei der Plünderung 1720 ums Leben.",
+      "extensions": {}
+    },
+    {
+      "id": "beathag-cneacail",
+      "worldPersonId": "person--sept-cneacail--beathag-cneacail",
+      "name": "Beathag Cneacail",
+      "title": "Arrans jüngere Schwester · Haus und Vorräte",
+      "sex": "female",
+      "status": "dead",
+      "birth": "1677",
+      "death": "1720",
+      "portrait": "",
+      "portraitPlaceholder": "auto",
+      "houseId": "sept-cneacail",
+      "familyRole": "core",
+      "lineageRole": "branch",
+      "tags": [],
+      "notes": "Arrans unverheiratete jüngere Schwester. Führte Vorräte und Haushalt der Flusssiedlung. 1720 getötet; keine überlebende Nebenlinie.",
+      "extensions": {}
+    },
+    {
+      "id": "maire-cneacail",
+      "worldPersonId": "person--family-tree--maire-cneacail",
+      "name": "Maire",
+      "title": "Arrans Gemahlin · Mutter der Brüder",
+      "sex": "female",
+      "status": "dead",
+      "birth": "1676",
+      "death": "1720",
+      "portrait": "",
+      "portraitPlaceholder": "auto",
+      "houseId": "",
+      "familyRole": "married",
+      "lineageRole": "branch",
+      "tags": [],
+      "notes": "Arrans Frau und Mutter von Alasdair und Finlay. Ihr Geburtshaus bleibt unbekannt. Starb bei der Plünderung 1720.",
+      "extensions": {}
+    },
+    {
+      "id": "morna-cneacail",
+      "worldPersonId": "person--family-tree--morna-cneacail",
+      "name": "Morna",
+      "title": "Donnchadhs Gemahlin",
+      "sex": "female",
+      "status": "dead",
+      "birth": "1674",
+      "death": "1720",
+      "portrait": "",
+      "portraitPlaceholder": "auto",
+      "houseId": "",
+      "familyRole": "married",
+      "lineageRole": "branch",
+      "tags": [],
+      "notes": "Donnchadhs Frau; Herkunftshaus unbekannt. Mit ihrem Mann und Sohn 1720 getötet.",
+      "extensions": {}
+    },
+    {
+      "id": "eoghan-cneacail",
+      "worldPersonId": "person--sept-cneacail--eoghan-cneacail",
+      "name": "Eoghan Cneacail",
+      "title": "Donnchadhs und Mornas Sohn · Brauergehilfe",
+      "sex": "male",
+      "status": "dead",
+      "birth": "1698",
+      "death": "1720",
+      "portrait": "",
+      "portraitPlaceholder": "auto",
+      "houseId": "sept-cneacail",
+      "familyRole": "core",
+      "lineageRole": "branch",
+      "tags": [],
+      "notes": "Vetter der Brüder. Arbeitete im Sudhaus und starb 1720 ohne eigene Kinder.",
+      "extensions": {}
+    },
+    {
+      "id": "alasdair-cneacail",
+      "worldPersonId": "person--sept-cneacail--alasdair-cneacail",
+      "name": "Alasdair Cneacail",
+      "title": "Inhaber · Führung und Ausschank",
+      "sex": "male",
+      "status": "alive",
+      "birth": "1696",
+      "death": "",
+      "portrait": "../AleriaAlmanach/assets/letzter-heller/portraits/alasdair.png",
+      "portraitPlaceholder": "auto",
+      "houseId": "sept-cneacail",
+      "familyRole": "core",
+      "lineageRole": "branch",
+      "tags": [],
+      "notes": "44 Jahre. Arrans älterer Sohn hat die ehemalige Hafentaverne behalten und 1735 zum Bordell umfunktioniert. Stark beleibt, vorzeitig gealtert und misstrauisch. Nessa verließ ihn kurz nach der Umwandlung; die Töchter Eithne und Catriona sind 1740 ebenfalls fortgegangen. Den Bruder nennt er einen Verräter; die vier alten Whiskyflaschen hält er unter Verschluss. Er zählt jede Münze und verschiebt jede Reparatur, die noch eine Woche warten kann.",
+      "extensions": {
+        "registryManagedFields": [
+          "title",
+          "notes",
+          "portrait"
+        ]
+      }
+    },
+    {
+      "id": "arran-cneacail",
+      "worldPersonId": "person--sept-cneacail--arran-cneacail",
+      "name": "Arran Cneacail",
+      "title": "† Früherer Septherr und Tavernenwirt · 1672–1734",
+      "sex": "male",
+      "status": "dead",
+      "birth": "1672",
+      "death": "1734",
+      "portrait": "../AleriaAlmanach/assets/letzter-heller/portraits/arran.png",
+      "portraitPlaceholder": "auto",
+      "houseId": "sept-cneacail",
+      "familyRole": "core",
+      "lineageRole": "branch",
+      "tags": [],
+      "notes": "Starb 1734 mit 62 Jahren. Überlebte 1720 mit seinen beiden Söhnen die Plünderung der Flusssiedlung durch Dämmergrunder Truppen. Gab für den großen Kredit der Klingenden Münze Rezepte und Verwertungsrechte aus der Hand. Die scheiternde Taverne, der Verlust der Familie und sein Trinken zehrten ihn auf.",
+      "extensions": {
+        "registryManagedFields": [
+          "title",
+          "notes",
+          "portrait"
+        ]
+      }
+    },
+    {
+      "id": "finlay-cneacail",
+      "worldPersonId": "person--sept-cneacail--finlay-cneacail",
+      "name": "Finlay Cneacail",
+      "title": "Leiter der Klingenden Krone · Mitglied der Klingenden Münze",
+      "sex": "male",
+      "status": "alive",
+      "birth": "1699",
+      "death": "",
+      "portrait": "../AleriaAlmanach/assets/klingende-krone/portraits/finlay-v2.png",
+      "portraitPlaceholder": "auto",
+      "houseId": "sept-cneacail",
+      "familyRole": "core",
+      "lineageRole": "branch",
+      "tags": [],
+      "notes": "41 Jahre. Mitglied der Klingenden Münze und Leiter der Taverne Zur Klingenden Krone mit Gildenbrauerei und Brennerei im Marktviertel. Vertreibt dort die nach den erworbenen Sept-Rezepten hergestellten Getränke. Mit Lysiane aus Venalys verheiratet; ihr Sohn heißt Aodhan. Sieht darin das Überleben des alten Handwerks, während Alasdair Verrat erkennt. Finlay hat keinen Posten oder Schankdienst im Bordell.",
+      "extensions": {
+        "registryManagedFields": [
+          "title",
+          "notes",
+          "portrait"
+        ]
+      }
+    },
+    {
+      "id": "lysiane-cneacail",
+      "worldPersonId": "person--sept-cneacail--lysiane-cneacail",
+      "name": "Lysiane Cneacail",
+      "title": "Finlays Gemahlin",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1710",
+      "death": "",
+      "portrait": "../AleriaAlmanach/assets/klingende-krone/portraits/lysiane.png",
+      "portraitPlaceholder": "auto",
+      "houseId": "",
+      "familyRole": "married",
+      "lineageRole": "branch",
+      "tags": [],
+      "notes": "30 Jahre. Finlays Gemahlin aus Venalys; Herkunftshaus vorerst offen. Wunderschön, mit langem blauem Haar und klaren blauen Augen. Mutter des kleinen Aodhan. Ein Amt im Betrieb ist ihr nicht zugeordnet.",
+      "extensions": {
+        "registryManagedFields": [
+          "title",
+          "notes",
+          "portrait"
+        ]
+      }
+    },
+    {
+      "id": "aodhan-cneacail",
+      "worldPersonId": "person--sept-cneacail--aodhan-cneacail",
+      "name": "Aodhan Cneacail",
+      "title": "Finlays und Lysianes Sohn",
+      "sex": "male",
+      "status": "alive",
+      "birth": "1734",
+      "death": "",
+      "portrait": "../AleriaAlmanach/assets/klingende-krone/portraits/aodhan.png",
+      "portraitPlaceholder": "auto",
+      "houseId": "sept-cneacail",
+      "familyRole": "core",
+      "lineageRole": "branch",
+      "tags": [],
+      "notes": "Sechs Jahre. Finlays und Lysianes kleiner Sohn, dunkelbraunes Haar wie sein Vater und blaue Augen wie seine Mutter. Gehört zum privaten Haushalt, nicht zum Personal oder zur Szenenbesetzung der Schankwirtschaft.",
+      "extensions": {
+        "registryManagedFields": [
+          "title",
+          "notes",
+          "portrait"
+        ]
+      }
+    },
+    {
+      "id": "nessa-cneacail",
+      "worldPersonId": "person--sept-cneacail--nessa-cneacail",
+      "name": "Nessa",
+      "title": "Alasdairs getrennt lebende Frau",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1698",
+      "death": "",
+      "portrait": "../AleriaAlmanach/assets/klingende-krone/portraits/nessa.png",
+      "portraitPlaceholder": "auto",
+      "houseId": "",
+      "familyRole": "married",
+      "lineageRole": "branch",
+      "tags": [],
+      "notes": "42 Jahre. Heiratete Alasdair 1720 nach seiner Ankunft in Gwynthor; sie gehörte nicht zu den Überlebenden der zerstörten Sept. Verließ ihn 1735 kurz nach der Umwandlung der Taverne zum Bordell. Mutter von Eithne und Catriona. Heutiger Aufenthaltsort offen; keine Mitarbeiterin des Bordells.",
+      "extensions": {
+        "registryManagedFields": [
+          "title",
+          "notes",
+          "portrait"
+        ]
+      }
+    },
+    {
+      "id": "eithne-cneacail",
+      "worldPersonId": "person--sept-cneacail--eithne-cneacail",
+      "name": "Eithne Cneacail",
+      "title": "Alasdairs ältere Tochter · fortgegangen",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1721",
+      "death": "",
+      "portrait": "../AleriaAlmanach/assets/klingende-krone/portraits/eithne.png",
+      "portraitPlaceholder": "auto",
+      "houseId": "sept-cneacail",
+      "familyRole": "core",
+      "lineageRole": "branch",
+      "tags": [],
+      "notes": "19 Jahre. Alasdairs und Nessas ältere Tochter. Ist im laufenden Jahr gemeinsam mit ihrer Schwester aus dem väterlichen Haus fortgegangen. Heutiger Aufenthaltsort und weiterer Lebensweg bleiben offen; arbeitet nicht im Bordell.",
+      "extensions": {
+        "registryManagedFields": [
+          "title",
+          "notes",
+          "portrait"
+        ]
+      }
+    },
+    {
+      "id": "catriona-cneacail",
+      "worldPersonId": "person--sept-cneacail--catriona-cneacail",
+      "name": "Catriona Cneacail",
+      "title": "Alasdairs jüngere Tochter · fortgegangen",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1722",
+      "death": "",
+      "portrait": "../AleriaAlmanach/assets/klingende-krone/portraits/catriona.png",
+      "portraitPlaceholder": "auto",
+      "houseId": "sept-cneacail",
+      "familyRole": "core",
+      "lineageRole": "branch",
+      "tags": [],
+      "notes": "18 Jahre. Alasdairs und Nessas jüngere Tochter. Verließ 1740 mit Eithne das Haus des Vaters. Weiterer Aufenthaltsort und Beruf bleiben unbestimmt; weder dem Bordell noch Finlays Betrieb zugeordnet.",
+      "extensions": {
+        "registryManagedFields": [
+          "title",
+          "notes",
+          "portrait"
+        ]
+      }
+    }
+  ],
+  "partnerships": [
+    {
+      "id": "marriage-sept-cneacail-founders",
+      "participantIds": [
+        "sept-cneacail-gruender",
+        "sept-cneacail-gruenderin"
+      ],
+      "type": "marriage",
+      "status": "ended",
+      "start": "",
+      "end": "",
+      "certainty": "unknown",
+      "visibility": "public",
+      "notes": "Gründerehe des Hauses."
+    },
+    {
+      "id": "marriage-arran-maire",
+      "participantIds": [
+        "arran-cneacail",
+        "maire-cneacail"
+      ],
+      "type": "marriage",
+      "status": "ended",
+      "start": "1695",
+      "end": "1720",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "marriage-donnchadh-morna",
+      "participantIds": [
+        "donnchadh-cneacail",
+        "morna-cneacail"
+      ],
+      "type": "marriage",
+      "status": "ended",
+      "start": "1696",
+      "end": "1720",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "marriage-alasdair-nessa",
+      "participantIds": [
+        "alasdair-cneacail",
+        "nessa-cneacail"
+      ],
+      "type": "marriage",
+      "status": "ended",
+      "start": "1720",
+      "end": "1735",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "Nach der Umwandlung der Taverne zum Bordell getrennt lebend; kein Tod und keine förmliche Scheidung behauptet.",
+      "extensions": {}
+    },
+    {
+      "id": "marriage-finlay-lysiane",
+      "participantIds": [
+        "finlay-cneacail",
+        "lysiane-cneacail"
+      ],
+      "type": "marriage",
+      "status": "active",
+      "start": "1732",
+      "end": "",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    }
+  ],
+  "parentages": [
+    {
+      "id": "parentage-donnchadh-cneacail",
+      "childId": "donnchadh-cneacail",
+      "parentIds": [
+        "sept-cneacail-gruender",
+        "sept-cneacail-gruenderin"
+      ],
+      "partnershipId": "marriage-sept-cneacail-founders",
+      "type": "claimed",
+      "legitimacy": "unknown",
+      "certainty": "unknown",
+      "visibility": "public",
+      "notes": "Zugehörigkeit über den Überlieferungssprung; keine direkte Elternschaft der historischen Gründer.",
+      "extensions": {
+        "timeJumpId": "gap-sept-cneacail-to-1670"
+      }
+    },
+    {
+      "id": "parentage-arran-cneacail",
+      "childId": "arran-cneacail",
+      "parentIds": [
+        "sept-cneacail-gruender",
+        "sept-cneacail-gruenderin"
+      ],
+      "partnershipId": "marriage-sept-cneacail-founders",
+      "type": "claimed",
+      "legitimacy": "unknown",
+      "certainty": "unknown",
+      "visibility": "public",
+      "notes": "Zugehörigkeit über den Überlieferungssprung; keine direkte Elternschaft der historischen Gründer.",
+      "extensions": {
+        "timeJumpId": "gap-sept-cneacail-to-1670"
+      }
+    },
+    {
+      "id": "parentage-beathag-cneacail",
+      "childId": "beathag-cneacail",
+      "parentIds": [
+        "sept-cneacail-gruender",
+        "sept-cneacail-gruenderin"
+      ],
+      "partnershipId": "marriage-sept-cneacail-founders",
+      "type": "claimed",
+      "legitimacy": "unknown",
+      "certainty": "unknown",
+      "visibility": "public",
+      "notes": "Zugehörigkeit über den Überlieferungssprung; keine direkte Elternschaft der historischen Gründer.",
+      "extensions": {
+        "timeJumpId": "gap-sept-cneacail-to-1670"
+      }
+    },
+    {
+      "id": "parentage-alasdair-cneacail",
+      "childId": "alasdair-cneacail",
+      "parentIds": [
+        "arran-cneacail",
+        "maire-cneacail"
+      ],
+      "partnershipId": "marriage-arran-maire",
+      "type": "biological",
+      "legitimacy": "legitimate",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "parentage-finlay-cneacail",
+      "childId": "finlay-cneacail",
+      "parentIds": [
+        "arran-cneacail",
+        "maire-cneacail"
+      ],
+      "partnershipId": "marriage-arran-maire",
+      "type": "biological",
+      "legitimacy": "legitimate",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "parentage-eoghan-cneacail",
+      "childId": "eoghan-cneacail",
+      "parentIds": [
+        "donnchadh-cneacail",
+        "morna-cneacail"
+      ],
+      "partnershipId": "marriage-donnchadh-morna",
+      "type": "biological",
+      "legitimacy": "legitimate",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "parentage-eithne-cneacail",
+      "childId": "eithne-cneacail",
+      "parentIds": [
+        "alasdair-cneacail",
+        "nessa-cneacail"
+      ],
+      "partnershipId": "marriage-alasdair-nessa",
+      "type": "biological",
+      "legitimacy": "legitimate",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "parentage-catriona-cneacail",
+      "childId": "catriona-cneacail",
+      "parentIds": [
+        "alasdair-cneacail",
+        "nessa-cneacail"
+      ],
+      "partnershipId": "marriage-alasdair-nessa",
+      "type": "biological",
+      "legitimacy": "legitimate",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "parentage-aodhan-cneacail",
+      "childId": "aodhan-cneacail",
+      "parentIds": [
+        "finlay-cneacail",
+        "lysiane-cneacail"
+      ],
+      "partnershipId": "marriage-finlay-lysiane",
+      "type": "biological",
+      "legitimacy": "legitimate",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    }
+  ],
+  "lineage": {
+    "founderPartnershipId": "marriage-sept-cneacail-founders",
+    "houseId": "sept-cneacail",
+    "crestSubtitle": "Bun na h-Aibhne · Die beiden Brüder",
+    "crestEmblemScale": 0.87,
+    "crestFrame": "wood",
+    "crestFrameScale": 1,
+    "timeGap": {
+      "enabled": false,
+      "years": 0,
+      "fromYear": "",
+      "toYear": "",
+      "label": ""
+    }
+  },
+  "cadetBranches": [],
+  "timeJumps": [
+    {
+      "id": "gap-sept-cneacail-to-1670",
+      "parentPartnershipId": "marriage-sept-cneacail-founders",
+      "parentPersonId": "",
+      "childIds": [
+        "donnchadh-cneacail",
+        "arran-cneacail",
+        "beathag-cneacail"
+      ],
+      "years": 0,
+      "fromYear": "????",
+      "toYear": "1670",
+      "label": "Nicht einzeln überlieferte Generationen bis zu Arrans Geschwistern",
+      "notes": "Der Zeitsprung ist der alleinige absolute Generationentrenner unter dem Hauswappen. Bekannte Nachkommen werden später ausschließlich hinter diesem Knoten ergänzt.",
+      "extensions": {
+        "preparedPlaceholder": false
+      }
+    }
+  ],
+  "presentation": {
+    "relationshipColors": {
+      "marriage": "#326c4a",
+      "engagement": "#b88b37",
+      "union": "#8e2724",
+      "affair": "#704485",
+      "concubinage": "#704485",
+      "political": "#9d7d48",
+      "forced": "#c7a974",
+      "biological": "#8e2724",
+      "adoptive": "#2f75a8",
+      "foster": "#2f75a8",
+      "step": "#7eb4d7",
+      "magical": "#704485",
+      "claimed": "#62615e"
+    }
+  },
+  "view": {
+    "focusPersonId": "arran-cneacail",
+    "orientation": "vertical",
+    "ancestorDepth": 8,
+    "descendantDepth": 8,
+    "showSiblings": true,
+    "limitGenerations": false
+  },
+  "extensions": {
+    "blankFamily": false,
+    "preparedTimeJump": true,
+    "pendingDescendantReview": false,
+    "sourceRevision": 2,
+    "registryAdditionalPlacements": [
+      {
+        "role": "exile",
+        "label": "Heutiger Aufenthalt · Gwynthor",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "houseProfile": {
+          "rankId": "commoner",
+          "seat": "Gwynthor",
+          "barony": "Llamreis Ankunft",
+          "county": "Celtigerns Wacht",
+          "kingdom": "Cenyr",
+          "secondarySeats": [],
+          "liegeHouseId": "",
+          "liegeHouseName": "",
+          "regionEmblems": {
+            "seat": "",
+            "barony": "",
+            "county": "",
+            "kingdom": ""
+          }
+        }
+      }
+    ],
+    "sourceNote": "Ausbau nach Nutzerauftrag vom 18.10.2026. Bestehende IDs der drei Männer erhalten. Gründerpaar → Hausknoten → serieller Zeitsprung → Arran und zwei Geschwister. Alle übrigen damaligen Angehörigen sterben spätestens 1720. Nessa heiratet erst in Gwynthor ein, Lysiane 1732; alle drei Kinder sind nach der Flucht geboren. Arran stirbt 1734 mit 62. Nessa geht 1735, beide volljährigen Töchter 1740. Keine aktuelle Tätigkeit der getrennten Frau oder Töchter im Bordell. Lysiane und Aodhan erhalten keine Betriebsämter."
+  }
+}

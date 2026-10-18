@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-18",
+  "status": "complete",
+  "selectedImages": 41,
+  "uniqueIdsAndHashes": true,
+  "allFinalsSavedInWorkspace": true,
+  "portraitAndSceneAspectRatio": "2:3",
+  "itemAndHeraldryAspectRatio": "1:1",
+  "transparentImagesHaveRealPngAlpha": true,
+  "heraldryAlpha": {
+    "inside": 255,
+    "outside": 0,
+    "rgbPreserved": true,
+    "audit": "heraldry-alpha-corrections.json"
+  },
+  "unprocessedOriginalsByteIdentical": true,
+  "browser": {
+    "module": "gwynthor-gestiefelte-muschi",
+    "pages": 11,
+    "scenes": 4,
+    "hierarchyTabs": 5,
+    "catalogCategories": 4,
+    "itemCard": true,
+    "guestSlots": 32,
+    "externalWrites": false,
+    "errors": [],
+    "report": ".tmp/gestiefelte-muschi/browser-1792329560786/report.json",
+    "viewports": [
+      "1440×1000",
+      "430×900"
+    ]
+  },
+  "checks": {
+    "moduleContracts": 5,
+    "gwregysduRegression": 4,
+    "buildPolicy": 15,
+    "dependencyCoverage": [
+      "family-charts",
+      "gameplay-guides"
+    ],
+    "generatedPackageCurrent": true
+  },
+  "content": {
+    "pages": 10,
+    "automaticCommentsPage": 1,
+    "goods": 24,
+    "services": 11,
+    "guestSlots": 32,
+    "namedPeople": 15,
+    "anonymousGuards": 6,
+    "pets": 4
+  },
+  "bundleSha256": "ae48902a57c60040d4402a057532e56542247d5bb7efc14bda36bf71159db4a5",
+  "publication": {
+    "localOnly": true,
+    "firebaseWritten": false,
+    "pushed": false,
+    "deployed": false
+  }
+}

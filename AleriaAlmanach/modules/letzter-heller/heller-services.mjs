@@ -1,0 +1,11 @@
+import { HELLER_ART } from './heller-people.mjs';
+const service = (title, scene, description, scope, terms) => ({ title, icon: `${HELLER_ART}/scenes/${scene}.png`, description: `<p>${description}</p>`, clients: '', scope, terms });
+export function buildHellerServices() {
+  return { schemaVersion: 1, commentThreadKey: 'heller-dienste', pageTitle: 'Die kurzen Dienste', guildServicesPage: true, image: `${HELLER_ART}/scenes/kammer.png`, imageWidth: 30, imageTall: true,
+    guildServices: { title: 'Eine Kammer, etwas Zeit und ein billiger Krug', introduction: '<p>Keine Bühne, keine Festgesellschaft und kein großes Versprechen. Im Letzten Heller werden Getränke und einfache Kammerzeiten einzeln bezahlt. Alasdair nennt den Preis, die gewünschte Frau bespricht den Aufenthalt mit dem Gast.</p>',
+      services: [service('Ein kurzer Aufenthalt', 'kammer', 'Eine vereinbarte halbe Stunde intime Gesellschaft in einer der drei einfachen Kammern. Die Kammer ist für diese Zeit enthalten.', 'Eine erwachsene Dame · etwa eine halbe Stunde', '4 Kupfertaler · Getränke gesondert'),
+        service('Eine Stunde hinter der Tür', 'kammer', 'Eine Stunde zu zweit in einer freien Kammer. Wünsche und persönliche Grenzen werden mit der Frau selbst besprochen.', 'Eine erwachsene Dame · eine Stunde', '7 Kupfertaler · Kammer enthalten, Getränke gesondert'),
+        service('Ein Krug am Tisch', 'schankstube', 'Platz an einem der vier Schanktische. Bezahlt werden die bestellten Speisen und Getränke; es gibt kein eigenes Unterhaltungsprogramm.', 'Nach freiem Platz · gewöhnlicher Schankbesuch', 'Kein Eintritt · Preise laut Schankkarte')],
+      process: '<p>Am Tresen nach freier Kammer und gewünschter Gesellschaft fragen. Zeit und Preis vor dem Aufenthalt abstimmen; Sten hält den Flur von unangemeldeten Gästen frei.</p>',
+      conditions: '<p>Die drei Kammern werden für die vereinbarte Zeit genutzt. Übernachtungszimmer, Musikabende und Bankette werden nicht angeboten. Küche und Ausschank richten sich nach den vorhandenen Vorräten. Der alte Whisky wird nur von Alasdair und zu seinem gesonderten Preis ausgegeben.</p>', footer: 'Zum Letzten Heller · Keine große Nacht. Ein bezahlter Aufenthalt.' } };
+}

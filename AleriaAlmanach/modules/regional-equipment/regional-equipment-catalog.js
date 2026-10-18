@@ -24,7 +24,8 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "leitheach",
       "dunfal",
       "aislearneach",
-      "kaiserreich-argentum"
+      "kaiserreich-argentum",
+      "brevanor"
     ],
     "houseIds": [
       "haus-madryn",
@@ -71,6 +72,10 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "haus-falchdyn",
       "haus-coeddu",
       "craigddu",
+      "haus-fontani",
+      "haus-rhwyd",
+      "haus-gwregysdu",
+      "sept-cneacail",
       "haus-bradrhith",
       "haus-cymrath-o-traethlan",
       "haus-sgrechiwr",
@@ -552,7 +557,9 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "haus-uilebheist",
       "haus-cnogan",
       "sept-techtmar",
-      "haus-veltrane"
+      "haus-veltrane",
+      "haus-bielle",
+      "haus-desele"
     ]
   },
   {
@@ -621,6 +628,10 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "haus-falchdyn",
       "haus-coeddu",
       "craigddu",
+      "haus-fontani",
+      "haus-rhwyd",
+      "haus-gwregysdu",
+      "sept-cneacail",
       "haus-bradrhith",
       "haus-cymrath-o-traethlan",
       "haus-sgrechiwr",
@@ -894,6 +905,10 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "haus-falchdyn",
       "haus-coeddu",
       "craigddu",
+      "haus-fontani",
+      "haus-rhwyd",
+      "haus-gwregysdu",
+      "sept-cneacail",
       "haus-bradrhith",
       "haus-cymrath-o-traethlan",
       "haus-sgrechiwr",
@@ -1037,6 +1052,10 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "haus-falchdyn",
       "haus-coeddu",
       "craigddu",
+      "haus-fontani",
+      "haus-rhwyd",
+      "haus-gwregysdu",
+      "sept-cneacail",
       "haus-bradrhith",
       "haus-cymrath-o-traethlan",
       "haus-sgrechiwr",
@@ -1095,6 +1114,10 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "haus-falchdyn",
       "haus-coeddu",
       "craigddu",
+      "haus-fontani",
+      "haus-rhwyd",
+      "haus-gwregysdu",
+      "sept-cneacail",
       "haus-bradrhith"
     ]
   },
@@ -7561,6 +7584,7 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "haus-mac-tuirseach",
       "sept-daire",
       "haus-seaghda",
+      "sept-cneacail",
       "haus-dal-leite",
       "haus-somhairle",
       "haus-nic-holloran",
@@ -7682,7 +7706,8 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     "houseIds": [
       "haus-mac-tuirseach",
       "sept-daire",
-      "haus-seaghda"
+      "haus-seaghda",
+      "sept-cneacail"
     ]
   },
   {
@@ -7751,9 +7776,30 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     "image": "",
     "countryId": "ceitheach",
     "regionId": "tir-na-dorcha",
+    "children": [
+      "ceitheach/tir-na-dorcha/glaennmor/bun-na-h-aibhne"
+    ],
+    "houseIds": [
+      "haus-seaghda",
+      "sept-cneacail"
+    ]
+  },
+  {
+    "id": "ceitheach/tir-na-dorcha/glaennmor/bun-na-h-aibhne",
+    "parentId": "ceitheach/tir-na-dorcha/glaennmor",
+    "name": "Bun na h-Aibhne",
+    "path": [
+      "Ceitheach",
+      "Tir na Dorcha",
+      "Glaennmor",
+      "Bun na h-Aibhne"
+    ],
+    "image": "",
+    "countryId": "ceitheach",
+    "regionId": "tir-na-dorcha",
     "children": [],
     "houseIds": [
-      "haus-seaghda"
+      "sept-cneacail"
     ]
   },
   {
@@ -9592,6 +9638,22 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     "children": [],
     "houseIds": [
       "haus-veltrane"
+    ]
+  },
+  {
+    "id": "brevanor",
+    "parentId": "",
+    "name": "Brevanor",
+    "path": [
+      "Brevanor"
+    ],
+    "image": "",
+    "countryId": "brevanor",
+    "regionId": "",
+    "children": [],
+    "houseIds": [
+      "haus-bielle",
+      "haus-desele"
     ]
   }
 ];
@@ -13009,6 +13071,72 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
       "Unsortiert"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-veltrane&mode=view"
+  },
+  {
+    "id": "haus-fontani",
+    "name": "Haus Fontani",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Llamreis%20Ankunft/B%C3%BCrgerliche/Gwynthor/Fontani.png",
+    "path": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Gwynthor"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-fontani&mode=view"
+  },
+  {
+    "id": "haus-rhwyd",
+    "name": "Haus Rhwyd",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Llamreis%20Ankunft/B%C3%BCrgerliche/Gwynthor/Rhwyd.png",
+    "path": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Gwynthor"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-rhwyd&mode=view"
+  },
+  {
+    "id": "haus-gwregysdu",
+    "name": "Haus Gwregysdu",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Llamreis%20Ankunft/B%C3%BCrgerliche/Gwynthor/Gwregysdu.png",
+    "path": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Gwynthor"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-gwregysdu&mode=view"
+  },
+  {
+    "id": "sept-cneacail",
+    "name": "Sept Cneacail",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Ceitheach/sept-cneacail.png",
+    "path": [
+      "Ceitheach",
+      "Tir na Dorcha",
+      "Glaennmor",
+      "Bun na h-Aibhne"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=sept-cneacail&mode=view"
+  },
+  {
+    "id": "haus-bielle",
+    "name": "Haus Bielle",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Brevanor/Bielle.png",
+    "path": [
+      "Brevanor"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-bielle&mode=view"
+  },
+  {
+    "id": "haus-desele",
+    "name": "Haus Desele",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Brevanor/Desele.png",
+    "path": [
+      "Brevanor"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-desele&mode=view"
   },
   {
     "id": "haus-bradrhith",

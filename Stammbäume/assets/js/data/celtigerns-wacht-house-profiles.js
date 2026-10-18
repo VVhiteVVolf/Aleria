@@ -138,7 +138,10 @@ export const GWYNTHOR_COMMONER_HOUSE_PROFILES = Object.freeze({
   draenmelyn: gwynthorCommonerProfile(),
   pendrwn: gwynthorCommonerProfile(),
   swyll: gwynthorCommonerProfile(),
-  aelmor: gwynthorCommonerProfile(),
+  aelmor: profile('commoner', GWYNTHOR_COMMONER_PATH, {
+    liegeHouseId: 'haus-saethwyr',
+    liegeHouseName: 'Haus Saethwyr'
+  }),
   maerllys: gwynthorCommonerProfile(),
   raves: gwynthorCommonerProfile(),
   braglas: gwynthorCommonerProfile(),

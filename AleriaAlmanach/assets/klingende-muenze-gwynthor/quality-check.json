@@ -1,0 +1,30 @@
+{
+  "status": "complete",
+  "date": "2026-10-18",
+  "generator": "built-in image_gen",
+  "stylePreset": "anime-scene-portrait",
+  "selectedImages": 4,
+  "imageDimensions": "1024x1536",
+  "originalBytesPreserved": true,
+  "visualInspection": [
+    "Harbor compound, council chamber, bank hall and command office inspected individually.",
+    "Desktop archive previews and the corrected single-level peer council inspected.",
+    "No new people, family crests or genealogical branches created."
+  ],
+  "validation": {
+    "unitAndRegressionTestsPassed": 50,
+    "generatedPackagesCurrent": true,
+    "browserReport": ".tmp/klingende-muenze-gwynthor/browser-1792341791309/report.json",
+    "desktopViewport": "1440x1000",
+    "mobileViewport": "430x900",
+    "pagesIncludingComments": 17,
+    "hierarchyTabs": 14,
+    "scenes": 4,
+    "archiveEntries": 5,
+    "duplicateEntries": 0,
+    "councilPeersAfterImportRoundTrip": 8,
+    "editorOverridesAndUserMovesPreserved": true,
+    "externalWrites": false
+  },
+  "publication": "Local workspace only; no push or deploy."
+}

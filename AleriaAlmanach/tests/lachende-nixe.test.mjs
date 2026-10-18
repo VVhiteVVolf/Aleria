@@ -27,7 +27,9 @@ test('Nixe preserves owner prose, portraits, page identities and scene clocks', 
   const before = source.pages[1], after = entry.pages[1];
   for (const field of ['image', 'description', 'quote', 'quoteBy', 'stats']) assert.deepEqual(after[field], before[field]);
   for (const field of ['biographyText', 'historyText', 'works', 'trivia', 'quotes', 'footer']) assert.deepEqual(after.biography[field], before.biography[field]);
-  assert.deepEqual(after.biography.connections.slice(0, before.biography.connections.length), before.biography.connections);
+  const expectedConnections = structuredClone(before.biography.connections);
+  expectedConnections.find(connection => connection.name === 'Die Rote Bank').detail = 'Mitglied · Gildenkonto';
+  assert.deepEqual(after.biography.connections.slice(0, before.biography.connections.length), expectedConnections);
   assert.equal(after.biography.abilities.length, 4);
   assert.ok(after.biography.abilities.every(ability => ability.icon.endsWith('.png')));
   assert.match(entry.image, /scenes\/aussenansicht/);

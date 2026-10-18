@@ -4644,7 +4644,7 @@
     }
   ]
 };
-  const target = {"key":"Gwynthor","tab":"Völker & Kulturen","desc":"","nodeId":"node:volker-kulturen:cenyr/celtigerns-wacht/llamreis-ankunft/gwynthor","path":["Cenyr","Celtigerns Wacht","Llamreis Ankunft","Gwynthor"]};
+  const target = {"key":"Der Markt der Fortuna - Gwynthor","tab":"Völker & Kulturen","desc":"Alter Handelshof, sieben Interessenbünde, Blaue Bank und Blaue Kompanie · Tafel der Mutter.","iconUrl":"../Fraktionen/assets/emblems/gilden/markt-der-fortuna.webp","path":["Cenyr","Celtigerns Wacht","Llamreis Ankunft","Gwynthor","Der Markt der Fortuna - Gwynthor"]};
   let section = SECTIONS.find(s => s.tab === target.tab && JSON.stringify(s.path || []) === JSON.stringify(target.path));
   if (!section) { section = { ...target, entries: [] }; SECTIONS.push(section); }
   if (!SECTIONS.some(s => s.entries?.some(e => e.id === entry.id))) section.entries.push(entry);

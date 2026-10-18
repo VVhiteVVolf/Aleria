@@ -2,9 +2,9 @@ import { STORE_ART, PENDRWN_EMBLEM, DRAIG_EMBLEM, FORTUNA_EMBLEM, STORE_PEOPLE, 
 import { STORE_ROOMS } from './store-rooms.mjs';
 import { buildStoreHierarchy } from './store-hierarchy.mjs';
 import { buildStoreStandardCatalog, buildStoreSpecialCatalog } from './store-catalog.mjs';
+import { FORTUNA_SECTION } from '../markt-der-fortuna-gwynthor/fortuna-section.mjs';
 export const STORE_ID = 'gwynthor-zum-vollen-korb';
-export const STORE_SECTION = Object.freeze({ key: 'Gwynthor', tab: 'Völker & Kulturen', desc: '',
-  nodeId: 'node:volker-kulturen:cenyr/celtigerns-wacht/llamreis-ankunft/gwynthor', path: ['Cenyr', 'Celtigerns Wacht', 'Llamreis Ankunft', 'Gwynthor'] });
+export const STORE_SECTION = FORTUNA_SECTION;
 const scene = id => ({ image: `${STORE_ART}/scenes/${id}.png`, imageWidth: 34, imageTall: true, imageFit: 'cover', imagePosition: 'center' });
 const trait = (name, title, detail) => ({ title, icon: `../IconOrdner/Big Traits/Trait_${name}.png`, detail });
 

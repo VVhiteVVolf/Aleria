@@ -1,0 +1,11 @@
+import { KRONE_ART } from './krone-people.mjs';
+import { kroneSceneImage } from './krone-rooms.mjs';
+export function buildKroneServices() {
+  return { schemaVersion: 1, commentThreadKey: 'krone-dienste', pageTitle: 'Am Tisch und ab Werk', guildServicesPage: true, image: kroneSceneImage('schankstube'), imageWidth: 32, imageTall: true, guildServices: {
+    title: 'Schank, Abholung und vereinbarte Lieferung', introduction: '<p>Finlay verbindet den täglichen Ausschank mit dem Absatz der Gildenbrauerei. Gäste bestellen am Tisch; Händler und Wirte stimmen Gebinde und Liefertermin mit Lucien und der Lagerverwaltung ab.</p>',
+    services: [{ title: 'Ein Tisch in der Krone', icon: kroneSceneImage('schankstube'), description: '<p>Getränke und drei kalte Snacks im gepflegten Schankraum. Gruppen können eine Tischrunde vorab absprechen.</p>', clients: 'Gäste und Marktbesucher', scope: 'Nach freien Plätzen', terms: 'Kein Eintritt · Preise laut Schankkarte' },
+      { title: 'Flaschen und Fässer ab Hof', icon: `${KRONE_ART}/scenes/ladehof.png`, description: '<p>Vorbestellte Gebinde aus dem heutigen Gildensortiment. Die Lagerverwaltung bestätigt verfügbare Sude und ausgereifte Whiskyfässer.</p>', clients: 'Private Käufer, Wirte und Händler', scope: 'Flaschen und 50-Liter-Fässer nach Bestand', terms: 'Gebindepreise laut Güterregister · Pfand gesondert' },
+      { title: 'Lieferung über die Gilde', icon: `${KRONE_ART}/scenes/ladehof.png`, description: '<p>Die Fuhrleute übernehmen vereinbarte Auslieferungen. Fracht, Termin und Rückgabe der Fässer werden bei der Bestellung festgehalten.</p>', clients: 'Vereinbarte Abnehmer', scope: 'Stadt und angeschlossene Gildenwege', terms: 'Fracht nach Strecke und Ladung · Preis vor Auftrag' }],
+    process: '<p>Schankbestellungen bei Ciaran oder der Bedienung aufgeben. Gebindebestellungen werden mit Sorte, Menge, Abhol- oder Liefertermin und Pfand vermerkt. Whisky wird ausschließlich aus vollständig ausgereiften Partien ausgegeben.</p>',
+    conditions: '<p>Der Betrieb führt keine warme Küche und vermietet keine Gästezimmer. Die drei Snacks werden kalt aus fertig bezogenen Vorräten angerichtet. Sudhaus, Brennhaus und Fasslager gehören zum Arbeitsbereich; Zugang wird mit der Leitung abgestimmt.</p>', footer: 'Zur Klingenden Krone · Marktviertel von Gwynthor' } };
+}

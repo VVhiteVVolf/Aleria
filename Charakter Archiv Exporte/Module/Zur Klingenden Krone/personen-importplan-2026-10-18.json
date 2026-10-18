@@ -1,0 +1,1134 @@
+{
+  "type": "aleria-character-publication-plan",
+  "version": 1,
+  "onlineApplied": false,
+  "plan": {
+    "entries": [
+      {
+        "id": "person--sept-cneacail--alasdair-cneacail",
+        "key": "alasdair",
+        "group": "Sept Cneacail · Familie",
+        "create": true,
+        "data": {
+          "name": "Alasdair Cneacail",
+          "title": "Inhaber · Führung und Ausschank",
+          "fraktion": "Zum Letzten Heller",
+          "role": "Inhaber · Führung und Ausschank",
+          "status": "active",
+          "relevance": "minor",
+          "taxonomyPath": "Ceitheach > Tir na Dorcha > Glaennmor > Bun na h-Aibhne",
+          "currentLocation": "Gwynthor",
+          "origin": "Ceitheach · Bun na h-Aibhne",
+          "plotNode": "",
+          "profileLink": "",
+          "playerOwner": "",
+          "bio": "44 Jahre. Arrans älterer Sohn hat die ehemalige Hafentaverne behalten und 1735 zum Bordell umfunktioniert. Stark beleibt, vorzeitig gealtert und misstrauisch. Nessa verließ ihn kurz nach der Umwandlung; die Töchter Eithne und Catriona sind 1740 ebenfalls fortgegangen. Den Bruder nennt er einen Verräter; die vier alten Whiskyflaschen hält er unter Verschluss. Er zählt jede Münze und verschiebt jede Reparatur, die noch eine Woche warten kann.",
+          "aliases": [],
+          "archived": false,
+          "createdAt": "2026-10-18T00:00:00Z",
+          "updatedAt": "2026-10-18T00:00:00Z",
+          "portrait": "./assets/letzter-heller/portraits/alasdair.png",
+          "emotes": [],
+          "emotesOverride": false,
+          "imageSetSchemaVersion": 0,
+          "imageSets": [],
+          "activeImageSetId": "",
+          "imageSetsOverride": false,
+          "inventory": null,
+          "biography": null,
+          "identity": {
+            "worldPersonId": "person--sept-cneacail--alasdair-cneacail"
+          },
+          "genealogy": {
+            "worldPersonId": "person--sept-cneacail--alasdair-cneacail",
+            "sex": "male",
+            "status": "alive",
+            "birth": "1696",
+            "death": "",
+            "houseId": "sept-cneacail",
+            "houseName": "Sept Cneacail",
+            "familyRole": "core",
+            "portraitPlaceholder": "auto",
+            "tags": [],
+            "sources": [
+              {
+                "familyId": "sept-cneacail",
+                "personId": "alasdair-cneacail",
+                "releaseId": "",
+                "publishedAt": "",
+                "importedAt": "2026-10-18T00:00:00Z",
+                "lastSyncedAt": "2026-10-18T00:00:00Z",
+                "url": "../Stammbäume/Stammbaum.html?family=sept-cneacail&mode=view&person=alasdair-cneacail",
+                "fingerprint": "{\"name\":\"Alasdair Cneacail\",\"title\":\"Inhaber · Führung und Ausschank\",\"birth\":\"1696\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"sept-cneacail\",\"portrait\":\"../AleriaAlmanach/assets/letzter-heller/portraits/alasdair.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"arran-cneacail\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--sept-cneacail--arran-cneacail\",\"name\":\"Arran Cneacail\"},{\"personId\":\"maire-cneacail\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--maire-cneacail\",\"name\":\"Maire\"}],\"partners\":[{\"personId\":\"nessa-cneacail\",\"type\":\"marriage\",\"status\":\"ended\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--sept-cneacail--nessa-cneacail\",\"name\":\"Nessa\"}],\"children\":[{\"personId\":\"eithne-cneacail\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--sept-cneacail--eithne-cneacail\",\"name\":\"Eithne Cneacail\"},{\"personId\":\"catriona-cneacail\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--sept-cneacail--catriona-cneacail\",\"name\":\"Catriona Cneacail\"}]}}"
+              }
+            ],
+            "relationships": {
+              "parents": [
+                {
+                  "personId": "arran-cneacail",
+                  "type": "biological",
+                  "legitimacy": "legitimate",
+                  "certainty": "confirmed",
+                  "worldPersonId": "person--sept-cneacail--arran-cneacail",
+                  "name": "Arran Cneacail"
+                },
+                {
+                  "personId": "maire-cneacail",
+                  "type": "biological",
+                  "legitimacy": "legitimate",
+                  "certainty": "confirmed",
+                  "worldPersonId": "person--family-tree--maire-cneacail",
+                  "name": "Maire"
+                }
+              ],
+              "partners": [
+                {
+                  "personId": "nessa-cneacail",
+                  "type": "marriage",
+                  "status": "ended",
+                  "certainty": "confirmed",
+                  "worldPersonId": "person--sept-cneacail--nessa-cneacail",
+                  "name": "Nessa"
+                }
+              ],
+              "children": [
+                {
+                  "personId": "eithne-cneacail",
+                  "type": "biological",
+                  "legitimacy": "legitimate",
+                  "certainty": "confirmed",
+                  "worldPersonId": "person--sept-cneacail--eithne-cneacail",
+                  "name": "Eithne Cneacail"
+                },
+                {
+                  "personId": "catriona-cneacail",
+                  "type": "biological",
+                  "legitimacy": "legitimate",
+                  "certainty": "confirmed",
+                  "worldPersonId": "person--sept-cneacail--catriona-cneacail",
+                  "name": "Catriona Cneacail"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "id": "person--sept-cneacail--arran-cneacail",
+        "key": "arran",
+        "group": "Sept Cneacail · Familie",
+        "create": true,
+        "data": {
+          "name": "Arran Cneacail",
+          "title": "† Früherer Septherr und Tavernenwirt · 1672–1734",
+          "fraktion": "Sept Cneacail",
+          "role": "† Früherer Septherr und Tavernenwirt · 1672–1734",
+          "status": "dead",
+          "relevance": "minor",
+          "taxonomyPath": "Ceitheach > Tir na Dorcha > Glaennmor > Bun na h-Aibhne",
+          "currentLocation": "",
+          "origin": "Ceitheach · Bun na h-Aibhne",
+          "plotNode": "",
+          "profileLink": "",
+          "playerOwner": "",
+          "bio": "Starb 1734 mit 62 Jahren. Überlebte 1720 mit seinen beiden Söhnen die Plünderung der Flusssiedlung durch Dämmergrunder Truppen. Gab für den großen Kredit der Klingenden Münze Rezepte und Verwertungsrechte aus der Hand. Die scheiternde Taverne, der Verlust der Familie und sein Trinken zehrten ihn auf.",
+          "aliases": [],
+          "archived": false,
+          "createdAt": "2026-10-18T00:00:00Z",
+          "updatedAt": "2026-10-18T00:00:00Z",
+          "portrait": "./assets/letzter-heller/portraits/arran.png",
+          "emotes": [],
+          "emotesOverride": false,
+          "imageSetSchemaVersion": 0,
+          "imageSets": [],
+          "activeImageSetId": "",
+          "imageSetsOverride": false,
+          "inventory": null,
+          "biography": null,
+          "identity": {
+            "worldPersonId": "person--sept-cneacail--arran-cneacail"
+          },
+          "genealogy": {
+            "worldPersonId": "person--sept-cneacail--arran-cneacail",
+            "sex": "male",
+            "status": "dead",
+            "birth": "1672",
+            "death": "1734",
+            "houseId": "sept-cneacail",
+            "houseName": "Sept Cneacail",
+            "familyRole": "core",
+            "portraitPlaceholder": "auto",
+            "tags": [],
+            "sources": [
+              {
+                "familyId": "sept-cneacail",
+                "personId": "arran-cneacail",
+                "releaseId": "",
+                "publishedAt": "",
+                "importedAt": "2026-10-18T00:00:00Z",
+                "lastSyncedAt": "2026-10-18T00:00:00Z",
+                "url": "../Stammbäume/Stammbaum.html?family=sept-cneacail&mode=view&person=arran-cneacail",
+                "fingerprint": "{\"name\":\"Arran Cneacail\",\"title\":\"† Früherer Septherr und Tavernenwirt · 1672–1734\",\"birth\":\"1672\",\"death\":\"1734\",\"sex\":\"male\",\"status\":\"dead\",\"houseId\":\"sept-cneacail\",\"portrait\":\"../AleriaAlmanach/assets/letzter-heller/portraits/arran.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"sept-cneacail-gruender\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"unknown\",\"worldPersonId\":\"person--sept-cneacail--sept-cneacail-gruender\",\"name\":\"Unbekannter Gründer\"},{\"personId\":\"sept-cneacail-gruenderin\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"unknown\",\"worldPersonId\":\"person--sept-cneacail--sept-cneacail-gruenderin\",\"name\":\"Unbekannte Gründerin\"}],\"partners\":[{\"personId\":\"maire-cneacail\",\"type\":\"marriage\",\"status\":\"ended\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--maire-cneacail\",\"name\":\"Maire\"}],\"children\":[{\"personId\":\"alasdair-cneacail\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--sept-cneacail--alasdair-cneacail\",\"name\":\"Alasdair Cneacail\"},{\"personId\":\"finlay-cneacail\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--sept-cneacail--finlay-cneacail\",\"name\":\"Finlay Cneacail\"}]}}"
+              }
+            ],
+            "relationships": {
+              "parents": [
+                {
+                  "personId": "sept-cneacail-gruender",
+                  "type": "claimed",
+                  "legitimacy": "unknown",
+                  "certainty": "unknown",
+                  "worldPersonId": "person--sept-cneacail--sept-cneacail-gruender",
+                  "name": "Unbekannter Gründer"
+                },
+                {
+                  "personId": "sept-cneacail-gruenderin",
+                  "type": "claimed",
+                  "legitimacy": "unknown",
+                  "certainty": "unknown",
+                  "worldPersonId": "person--sept-cneacail--sept-cneacail-gruenderin",
+                  "name": "Unbekannte Gründerin"
+                }
+              ],
+              "partners": [
+                {
+                  "personId": "maire-cneacail",
+                  "type": "marriage",
+                  "status": "ended",
+                  "certainty": "confirmed",
+                  "worldPersonId": "person--family-tree--maire-cneacail",
+                  "name": "Maire"
+                }
+              ],
+              "children": [
+                {
+                  "personId": "alasdair-cneacail",
+                  "type": "biological",
+                  "legitimacy": "legitimate",
+                  "certainty": "confirmed",
+                  "worldPersonId": "person--sept-cneacail--alasdair-cneacail",
+                  "name": "Alasdair Cneacail"
+                },
+                {
+                  "personId": "finlay-cneacail",
+                  "type": "biological",
+                  "legitimacy": "legitimate",
+                  "certainty": "confirmed",
+                  "worldPersonId": "person--sept-cneacail--finlay-cneacail",
+                  "name": "Finlay Cneacail"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "id": "person--sept-cneacail--finlay-cneacail",
+        "key": "finlay",
+        "group": "Klingende Krone · Personal",
+        "create": true,
+        "data": {
+          "name": "Finlay Cneacail",
+          "title": "Leiter der Klingenden Krone · Mitglied der Klingenden Münze",
+          "fraktion": "Klingende Münze",
+          "role": "Leiter der Klingenden Krone · Mitglied der Klingenden Münze",
+          "status": "active",
+          "relevance": "supporting",
+          "taxonomyPath": "Ceitheach > Tir na Dorcha > Glaennmor > Bun na h-Aibhne",
+          "currentLocation": "Gwynthor",
+          "origin": "Ceitheach · Bun na h-Aibhne",
+          "plotNode": "",
+          "profileLink": "",
+          "playerOwner": "",
+          "bio": "41 Jahre. Mitglied der Klingenden Münze und Leiter der Taverne Zur Klingenden Krone mit Gildenbrauerei und Brennerei im Marktviertel. Vertreibt dort die nach den erworbenen Sept-Rezepten hergestellten Getränke. Mit Lysiane aus Venalys verheiratet; ihr Sohn heißt Aodhan. Sieht darin das Überleben des alten Handwerks, während Alasdair Verrat erkennt. Finlay hat keinen Posten oder Schankdienst im Bordell.",
+          "aliases": [],
+          "archived": false,
+          "createdAt": "2026-10-18T00:00:00Z",
+          "updatedAt": "2026-10-18T00:00:00Z",
+          "portrait": "./assets/klingende-krone/portraits/finlay-v2.png",
+          "emotes": [],
+          "emotesOverride": false,
+          "imageSetSchemaVersion": 0,
+          "imageSets": [],
+          "activeImageSetId": "",
+          "imageSetsOverride": false,
+          "inventory": null,
+          "biography": null,
+          "identity": {
+            "worldPersonId": "person--sept-cneacail--finlay-cneacail"
+          },
+          "genealogy": {
+            "worldPersonId": "person--sept-cneacail--finlay-cneacail",
+            "sex": "male",
+            "status": "alive",
+            "birth": "1699",
+            "death": "",
+            "houseId": "sept-cneacail",
+            "houseName": "Sept Cneacail",
+            "familyRole": "core",
+            "portraitPlaceholder": "auto",
+            "tags": [],
+            "sources": [
+              {
+                "familyId": "sept-cneacail",
+                "personId": "finlay-cneacail",
+                "releaseId": "",
+                "publishedAt": "",
+                "importedAt": "2026-10-18T00:00:00Z",
+                "lastSyncedAt": "2026-10-18T00:00:00Z",
+                "url": "../Stammbäume/Stammbaum.html?family=sept-cneacail&mode=view&person=finlay-cneacail",
+                "fingerprint": "{\"name\":\"Finlay Cneacail\",\"title\":\"Leiter der Klingenden Krone · Mitglied der Klingenden Münze\",\"birth\":\"1699\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"sept-cneacail\",\"portrait\":\"../AleriaAlmanach/assets/klingende-krone/portraits/finlay-v2.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"arran-cneacail\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--sept-cneacail--arran-cneacail\",\"name\":\"Arran Cneacail\"},{\"personId\":\"maire-cneacail\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--maire-cneacail\",\"name\":\"Maire\"}],\"partners\":[{\"personId\":\"lysiane-cneacail\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--sept-cneacail--lysiane-cneacail\",\"name\":\"Lysiane Cneacail\"}],\"children\":[{\"personId\":\"aodhan-cneacail\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--sept-cneacail--aodhan-cneacail\",\"name\":\"Aodhan Cneacail\"}]}}"
+              }
+            ],
+            "relationships": {
+              "parents": [
+                {
+                  "personId": "arran-cneacail",
+                  "type": "biological",
+                  "legitimacy": "legitimate",
+                  "certainty": "confirmed",
+                  "worldPersonId": "person--sept-cneacail--arran-cneacail",
+                  "name": "Arran Cneacail"
+                },
+                {
+                  "personId": "maire-cneacail",
+                  "type": "biological",
+                  "legitimacy": "legitimate",
+                  "certainty": "confirmed",
+                  "worldPersonId": "person--family-tree--maire-cneacail",
+                  "name": "Maire"
+                }
+              ],
+              "partners": [
+                {
+                  "personId": "lysiane-cneacail",
+                  "type": "marriage",
+                  "status": "active",
+                  "certainty": "confirmed",
+                  "worldPersonId": "person--sept-cneacail--lysiane-cneacail",
+                  "name": "Lysiane Cneacail"
+                }
+              ],
+              "children": [
+                {
+                  "personId": "aodhan-cneacail",
+                  "type": "biological",
+                  "legitimacy": "legitimate",
+                  "certainty": "confirmed",
+                  "worldPersonId": "person--sept-cneacail--aodhan-cneacail",
+                  "name": "Aodhan Cneacail"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "id": "person--sept-cneacail--lysiane-cneacail",
+        "key": "lysiane",
+        "group": "Sept Cneacail · Familie",
+        "create": true,
+        "data": {
+          "name": "Lysiane Cneacail",
+          "title": "Finlays Gemahlin",
+          "fraktion": "Sept Cneacail",
+          "role": "Finlays Gemahlin",
+          "status": "active",
+          "relevance": "minor",
+          "taxonomyPath": "Ceitheach > Tir na Dorcha > Glaennmor > Bun na h-Aibhne",
+          "currentLocation": "Gwynthor",
+          "origin": "Venalys",
+          "plotNode": "",
+          "profileLink": "",
+          "playerOwner": "",
+          "bio": "30 Jahre. Finlays Gemahlin aus Venalys; Herkunftshaus vorerst offen. Wunderschön, mit langem blauem Haar und klaren blauen Augen. Mutter des kleinen Aodhan. Ein Amt im Betrieb ist ihr nicht zugeordnet.",
+          "aliases": [],
+          "archived": false,
+          "createdAt": "2026-10-18T00:00:00Z",
+          "updatedAt": "2026-10-18T00:00:00Z",
+          "portrait": "./assets/klingende-krone/portraits/lysiane.png",
+          "emotes": [],
+          "emotesOverride": false,
+          "imageSetSchemaVersion": 0,
+          "imageSets": [],
+          "activeImageSetId": "",
+          "imageSetsOverride": false,
+          "inventory": null,
+          "biography": null,
+          "identity": {
+            "worldPersonId": "person--sept-cneacail--lysiane-cneacail"
+          },
+          "genealogy": {
+            "worldPersonId": "person--sept-cneacail--lysiane-cneacail",
+            "sex": "female",
+            "status": "alive",
+            "birth": "1710",
+            "death": "",
+            "houseId": "",
+            "houseName": "",
+            "familyRole": "married",
+            "portraitPlaceholder": "auto",
+            "tags": [],
+            "sources": [
+              {
+                "familyId": "sept-cneacail",
+                "personId": "lysiane-cneacail",
+                "releaseId": "",
+                "publishedAt": "",
+                "importedAt": "2026-10-18T00:00:00Z",
+                "lastSyncedAt": "2026-10-18T00:00:00Z",
+                "url": "../Stammbäume/Stammbaum.html?family=sept-cneacail&mode=view&person=lysiane-cneacail",
+                "fingerprint": "{\"name\":\"Lysiane Cneacail\",\"title\":\"Finlays Gemahlin\",\"birth\":\"1710\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"\",\"portrait\":\"../AleriaAlmanach/assets/klingende-krone/portraits/lysiane.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"finlay-cneacail\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--sept-cneacail--finlay-cneacail\",\"name\":\"Finlay Cneacail\"}],\"children\":[{\"personId\":\"aodhan-cneacail\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--sept-cneacail--aodhan-cneacail\",\"name\":\"Aodhan Cneacail\"}]}}"
+              }
+            ],
+            "relationships": {
+              "parents": [],
+              "partners": [
+                {
+                  "personId": "finlay-cneacail",
+                  "type": "marriage",
+                  "status": "active",
+                  "certainty": "confirmed",
+                  "worldPersonId": "person--sept-cneacail--finlay-cneacail",
+                  "name": "Finlay Cneacail"
+                }
+              ],
+              "children": [
+                {
+                  "personId": "aodhan-cneacail",
+                  "type": "biological",
+                  "legitimacy": "legitimate",
+                  "certainty": "confirmed",
+                  "worldPersonId": "person--sept-cneacail--aodhan-cneacail",
+                  "name": "Aodhan Cneacail"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "id": "person--sept-cneacail--aodhan-cneacail",
+        "key": "aodhan",
+        "group": "Sept Cneacail · Familie",
+        "create": true,
+        "data": {
+          "name": "Aodhan Cneacail",
+          "title": "Finlays und Lysianes Sohn",
+          "fraktion": "Sept Cneacail",
+          "role": "Finlays und Lysianes Sohn",
+          "status": "active",
+          "relevance": "minor",
+          "taxonomyPath": "Ceitheach > Tir na Dorcha > Glaennmor > Bun na h-Aibhne",
+          "currentLocation": "Gwynthor",
+          "origin": "Gwynthor",
+          "plotNode": "",
+          "profileLink": "",
+          "playerOwner": "",
+          "bio": "Sechs Jahre. Finlays und Lysianes kleiner Sohn, dunkelbraunes Haar wie sein Vater und blaue Augen wie seine Mutter. Gehört zum privaten Haushalt, nicht zum Personal oder zur Szenenbesetzung der Schankwirtschaft.",
+          "aliases": [],
+          "archived": false,
+          "createdAt": "2026-10-18T00:00:00Z",
+          "updatedAt": "2026-10-18T00:00:00Z",
+          "portrait": "./assets/klingende-krone/portraits/aodhan.png",
+          "emotes": [],
+          "emotesOverride": false,
+          "imageSetSchemaVersion": 0,
+          "imageSets": [],
+          "activeImageSetId": "",
+          "imageSetsOverride": false,
+          "inventory": null,
+          "biography": null,
+          "identity": {
+            "worldPersonId": "person--sept-cneacail--aodhan-cneacail"
+          },
+          "genealogy": {
+            "worldPersonId": "person--sept-cneacail--aodhan-cneacail",
+            "sex": "male",
+            "status": "alive",
+            "birth": "1734",
+            "death": "",
+            "houseId": "sept-cneacail",
+            "houseName": "Sept Cneacail",
+            "familyRole": "core",
+            "portraitPlaceholder": "auto",
+            "tags": [],
+            "sources": [
+              {
+                "familyId": "sept-cneacail",
+                "personId": "aodhan-cneacail",
+                "releaseId": "",
+                "publishedAt": "",
+                "importedAt": "2026-10-18T00:00:00Z",
+                "lastSyncedAt": "2026-10-18T00:00:00Z",
+                "url": "../Stammbäume/Stammbaum.html?family=sept-cneacail&mode=view&person=aodhan-cneacail",
+                "fingerprint": "{\"name\":\"Aodhan Cneacail\",\"title\":\"Finlays und Lysianes Sohn\",\"birth\":\"1734\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"sept-cneacail\",\"portrait\":\"../AleriaAlmanach/assets/klingende-krone/portraits/aodhan.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"finlay-cneacail\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--sept-cneacail--finlay-cneacail\",\"name\":\"Finlay Cneacail\"},{\"personId\":\"lysiane-cneacail\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--sept-cneacail--lysiane-cneacail\",\"name\":\"Lysiane Cneacail\"}],\"partners\":[],\"children\":[]}}"
+              }
+            ],
+            "relationships": {
+              "parents": [
+                {
+                  "personId": "finlay-cneacail",
+                  "type": "biological",
+                  "legitimacy": "legitimate",
+                  "certainty": "confirmed",
+                  "worldPersonId": "person--sept-cneacail--finlay-cneacail",
+                  "name": "Finlay Cneacail"
+                },
+                {
+                  "personId": "lysiane-cneacail",
+                  "type": "biological",
+                  "legitimacy": "legitimate",
+                  "certainty": "confirmed",
+                  "worldPersonId": "person--sept-cneacail--lysiane-cneacail",
+                  "name": "Lysiane Cneacail"
+                }
+              ],
+              "partners": [],
+              "children": []
+            }
+          }
+        }
+      },
+      {
+        "id": "person--sept-cneacail--nessa-cneacail",
+        "key": "nessa",
+        "group": "Sept Cneacail · Familie",
+        "create": true,
+        "data": {
+          "name": "Nessa",
+          "title": "Alasdairs getrennt lebende Frau",
+          "fraktion": "Sept Cneacail",
+          "role": "Alasdairs getrennt lebende Frau",
+          "status": "active",
+          "relevance": "minor",
+          "taxonomyPath": "Ceitheach > Tir na Dorcha > Glaennmor > Bun na h-Aibhne",
+          "currentLocation": "",
+          "origin": "Ceitheach · später Gwynthor",
+          "plotNode": "",
+          "profileLink": "",
+          "playerOwner": "",
+          "bio": "42 Jahre. Heiratete Alasdair 1720 nach seiner Ankunft in Gwynthor; sie gehörte nicht zu den Überlebenden der zerstörten Sept. Verließ ihn 1735 kurz nach der Umwandlung der Taverne zum Bordell. Mutter von Eithne und Catriona. Heutiger Aufenthaltsort offen; keine Mitarbeiterin des Bordells.",
+          "aliases": [],
+          "archived": false,
+          "createdAt": "2026-10-18T00:00:00Z",
+          "updatedAt": "2026-10-18T00:00:00Z",
+          "portrait": "./assets/klingende-krone/portraits/nessa.png",
+          "emotes": [],
+          "emotesOverride": false,
+          "imageSetSchemaVersion": 0,
+          "imageSets": [],
+          "activeImageSetId": "",
+          "imageSetsOverride": false,
+          "inventory": null,
+          "biography": null,
+          "identity": {
+            "worldPersonId": "person--sept-cneacail--nessa-cneacail"
+          },
+          "genealogy": {
+            "worldPersonId": "person--sept-cneacail--nessa-cneacail",
+            "sex": "female",
+            "status": "alive",
+            "birth": "1698",
+            "death": "",
+            "houseId": "",
+            "houseName": "",
+            "familyRole": "married",
+            "portraitPlaceholder": "auto",
+            "tags": [],
+            "sources": [
+              {
+                "familyId": "sept-cneacail",
+                "personId": "nessa-cneacail",
+                "releaseId": "",
+                "publishedAt": "",
+                "importedAt": "2026-10-18T00:00:00Z",
+                "lastSyncedAt": "2026-10-18T00:00:00Z",
+                "url": "../Stammbäume/Stammbaum.html?family=sept-cneacail&mode=view&person=nessa-cneacail",
+                "fingerprint": "{\"name\":\"Nessa\",\"title\":\"Alasdairs getrennt lebende Frau\",\"birth\":\"1698\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"\",\"portrait\":\"../AleriaAlmanach/assets/klingende-krone/portraits/nessa.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"alasdair-cneacail\",\"type\":\"marriage\",\"status\":\"ended\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--sept-cneacail--alasdair-cneacail\",\"name\":\"Alasdair Cneacail\"}],\"children\":[{\"personId\":\"eithne-cneacail\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--sept-cneacail--eithne-cneacail\",\"name\":\"Eithne Cneacail\"},{\"personId\":\"catriona-cneacail\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--sept-cneacail--catriona-cneacail\",\"name\":\"Catriona Cneacail\"}]}}"
+              }
+            ],
+            "relationships": {
+              "parents": [],
+              "partners": [
+                {
+                  "personId": "alasdair-cneacail",
+                  "type": "marriage",
+                  "status": "ended",
+                  "certainty": "confirmed",
+                  "worldPersonId": "person--sept-cneacail--alasdair-cneacail",
+                  "name": "Alasdair Cneacail"
+                }
+              ],
+              "children": [
+                {
+                  "personId": "eithne-cneacail",
+                  "type": "biological",
+                  "legitimacy": "legitimate",
+                  "certainty": "confirmed",
+                  "worldPersonId": "person--sept-cneacail--eithne-cneacail",
+                  "name": "Eithne Cneacail"
+                },
+                {
+                  "personId": "catriona-cneacail",
+                  "type": "biological",
+                  "legitimacy": "legitimate",
+                  "certainty": "confirmed",
+                  "worldPersonId": "person--sept-cneacail--catriona-cneacail",
+                  "name": "Catriona Cneacail"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "id": "person--sept-cneacail--eithne-cneacail",
+        "key": "eithne",
+        "group": "Sept Cneacail · Familie",
+        "create": true,
+        "data": {
+          "name": "Eithne Cneacail",
+          "title": "Alasdairs ältere Tochter · fortgegangen",
+          "fraktion": "Sept Cneacail",
+          "role": "Alasdairs ältere Tochter · fortgegangen",
+          "status": "active",
+          "relevance": "minor",
+          "taxonomyPath": "Ceitheach > Tir na Dorcha > Glaennmor > Bun na h-Aibhne",
+          "currentLocation": "",
+          "origin": "Gwynthor",
+          "plotNode": "",
+          "profileLink": "",
+          "playerOwner": "",
+          "bio": "19 Jahre. Alasdairs und Nessas ältere Tochter. Ist im laufenden Jahr gemeinsam mit ihrer Schwester aus dem väterlichen Haus fortgegangen. Heutiger Aufenthaltsort und weiterer Lebensweg bleiben offen; arbeitet nicht im Bordell.",
+          "aliases": [],
+          "archived": false,
+          "createdAt": "2026-10-18T00:00:00Z",
+          "updatedAt": "2026-10-18T00:00:00Z",
+          "portrait": "./assets/klingende-krone/portraits/eithne.png",
+          "emotes": [],
+          "emotesOverride": false,
+          "imageSetSchemaVersion": 0,
+          "imageSets": [],
+          "activeImageSetId": "",
+          "imageSetsOverride": false,
+          "inventory": null,
+          "biography": null,
+          "identity": {
+            "worldPersonId": "person--sept-cneacail--eithne-cneacail"
+          },
+          "genealogy": {
+            "worldPersonId": "person--sept-cneacail--eithne-cneacail",
+            "sex": "female",
+            "status": "alive",
+            "birth": "1721",
+            "death": "",
+            "houseId": "sept-cneacail",
+            "houseName": "Sept Cneacail",
+            "familyRole": "core",
+            "portraitPlaceholder": "auto",
+            "tags": [],
+            "sources": [
+              {
+                "familyId": "sept-cneacail",
+                "personId": "eithne-cneacail",
+                "releaseId": "",
+                "publishedAt": "",
+                "importedAt": "2026-10-18T00:00:00Z",
+                "lastSyncedAt": "2026-10-18T00:00:00Z",
+                "url": "../Stammbäume/Stammbaum.html?family=sept-cneacail&mode=view&person=eithne-cneacail",
+                "fingerprint": "{\"name\":\"Eithne Cneacail\",\"title\":\"Alasdairs ältere Tochter · fortgegangen\",\"birth\":\"1721\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"sept-cneacail\",\"portrait\":\"../AleriaAlmanach/assets/klingende-krone/portraits/eithne.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"alasdair-cneacail\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--sept-cneacail--alasdair-cneacail\",\"name\":\"Alasdair Cneacail\"},{\"personId\":\"nessa-cneacail\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--sept-cneacail--nessa-cneacail\",\"name\":\"Nessa\"}],\"partners\":[],\"children\":[]}}"
+              }
+            ],
+            "relationships": {
+              "parents": [
+                {
+                  "personId": "alasdair-cneacail",
+                  "type": "biological",
+                  "legitimacy": "legitimate",
+                  "certainty": "confirmed",
+                  "worldPersonId": "person--sept-cneacail--alasdair-cneacail",
+                  "name": "Alasdair Cneacail"
+                },
+                {
+                  "personId": "nessa-cneacail",
+                  "type": "biological",
+                  "legitimacy": "legitimate",
+                  "certainty": "confirmed",
+                  "worldPersonId": "person--sept-cneacail--nessa-cneacail",
+                  "name": "Nessa"
+                }
+              ],
+              "partners": [],
+              "children": []
+            }
+          }
+        }
+      },
+      {
+        "id": "person--sept-cneacail--catriona-cneacail",
+        "key": "catriona",
+        "group": "Sept Cneacail · Familie",
+        "create": true,
+        "data": {
+          "name": "Catriona Cneacail",
+          "title": "Alasdairs jüngere Tochter · fortgegangen",
+          "fraktion": "Sept Cneacail",
+          "role": "Alasdairs jüngere Tochter · fortgegangen",
+          "status": "active",
+          "relevance": "minor",
+          "taxonomyPath": "Ceitheach > Tir na Dorcha > Glaennmor > Bun na h-Aibhne",
+          "currentLocation": "",
+          "origin": "Gwynthor",
+          "plotNode": "",
+          "profileLink": "",
+          "playerOwner": "",
+          "bio": "18 Jahre. Alasdairs und Nessas jüngere Tochter. Verließ 1740 mit Eithne das Haus des Vaters. Weiterer Aufenthaltsort und Beruf bleiben unbestimmt; weder dem Bordell noch Finlays Betrieb zugeordnet.",
+          "aliases": [],
+          "archived": false,
+          "createdAt": "2026-10-18T00:00:00Z",
+          "updatedAt": "2026-10-18T00:00:00Z",
+          "portrait": "./assets/klingende-krone/portraits/catriona.png",
+          "emotes": [],
+          "emotesOverride": false,
+          "imageSetSchemaVersion": 0,
+          "imageSets": [],
+          "activeImageSetId": "",
+          "imageSetsOverride": false,
+          "inventory": null,
+          "biography": null,
+          "identity": {
+            "worldPersonId": "person--sept-cneacail--catriona-cneacail"
+          },
+          "genealogy": {
+            "worldPersonId": "person--sept-cneacail--catriona-cneacail",
+            "sex": "female",
+            "status": "alive",
+            "birth": "1722",
+            "death": "",
+            "houseId": "sept-cneacail",
+            "houseName": "Sept Cneacail",
+            "familyRole": "core",
+            "portraitPlaceholder": "auto",
+            "tags": [],
+            "sources": [
+              {
+                "familyId": "sept-cneacail",
+                "personId": "catriona-cneacail",
+                "releaseId": "",
+                "publishedAt": "",
+                "importedAt": "2026-10-18T00:00:00Z",
+                "lastSyncedAt": "2026-10-18T00:00:00Z",
+                "url": "../Stammbäume/Stammbaum.html?family=sept-cneacail&mode=view&person=catriona-cneacail",
+                "fingerprint": "{\"name\":\"Catriona Cneacail\",\"title\":\"Alasdairs jüngere Tochter · fortgegangen\",\"birth\":\"1722\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"sept-cneacail\",\"portrait\":\"../AleriaAlmanach/assets/klingende-krone/portraits/catriona.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"alasdair-cneacail\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--sept-cneacail--alasdair-cneacail\",\"name\":\"Alasdair Cneacail\"},{\"personId\":\"nessa-cneacail\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--sept-cneacail--nessa-cneacail\",\"name\":\"Nessa\"}],\"partners\":[],\"children\":[]}}"
+              }
+            ],
+            "relationships": {
+              "parents": [
+                {
+                  "personId": "alasdair-cneacail",
+                  "type": "biological",
+                  "legitimacy": "legitimate",
+                  "certainty": "confirmed",
+                  "worldPersonId": "person--sept-cneacail--alasdair-cneacail",
+                  "name": "Alasdair Cneacail"
+                },
+                {
+                  "personId": "nessa-cneacail",
+                  "type": "biological",
+                  "legitimacy": "legitimate",
+                  "certainty": "confirmed",
+                  "worldPersonId": "person--sept-cneacail--nessa-cneacail",
+                  "name": "Nessa"
+                }
+              ],
+              "partners": [],
+              "children": []
+            }
+          }
+        }
+      },
+      {
+        "id": "person--klingende-krone--lucien",
+        "key": "lucien",
+        "group": "Klingende Krone · Personal",
+        "create": true,
+        "data": {
+          "name": "Lucien",
+          "title": "Gildenbevollmächtigter · Verträge und Kasse",
+          "fraktion": "Klingende Münze",
+          "role": "Gildenbevollmächtigter · Verträge und Kasse",
+          "status": "active",
+          "relevance": "minor",
+          "taxonomyPath": "",
+          "currentLocation": "Gwynthor",
+          "origin": "Venalys · Cenyri",
+          "plotNode": "",
+          "profileLink": "",
+          "playerOwner": "",
+          "bio": "34 Jahre. Blauhaariger Cenyri aus Venalys und Angestellter der Klingenden Münze. Zeichnet Bestellungen und Gildenkasse gegen; Finlay führt den Betrieb im vereinbarten Rahmen.",
+          "aliases": [],
+          "archived": false,
+          "createdAt": "2026-10-18T00:00:00Z",
+          "updatedAt": "2026-10-18T00:00:00Z",
+          "portrait": "./assets/klingende-krone/portraits/lucien.png",
+          "emotes": [],
+          "emotesOverride": false,
+          "imageSetSchemaVersion": 0,
+          "imageSets": [],
+          "activeImageSetId": "",
+          "imageSetsOverride": false,
+          "inventory": null,
+          "biography": null,
+          "identity": {
+            "worldPersonId": "person--klingende-krone--lucien"
+          },
+          "genealogy": {
+            "worldPersonId": "person--klingende-krone--lucien",
+            "sex": "male",
+            "status": "alive",
+            "birth": "1706",
+            "death": "",
+            "houseId": "",
+            "houseName": "",
+            "familyRole": "",
+            "portraitPlaceholder": "",
+            "tags": [],
+            "sources": [],
+            "relationships": {
+              "parents": [],
+              "partners": [],
+              "children": []
+            }
+          }
+        }
+      },
+      {
+        "id": "person--klingende-krone--maelle",
+        "key": "maelle",
+        "group": "Klingende Krone · Personal",
+        "create": true,
+        "data": {
+          "name": "Maelle",
+          "title": "Gildenverwalterin · Personal und Abrechnung",
+          "fraktion": "Klingende Münze",
+          "role": "Gildenverwalterin · Personal und Abrechnung",
+          "status": "active",
+          "relevance": "minor",
+          "taxonomyPath": "",
+          "currentLocation": "Gwynthor",
+          "origin": "Venalys",
+          "plotNode": "",
+          "profileLink": "",
+          "playerOwner": "",
+          "bio": "38 Jahre. Aus Venalys entsandte Gildenangestellte. Führt Dienstpläne, Löhne und Monatsabschluss und stimmt die Arbeit zwischen Schankraum und Hinterbetrieb ab.",
+          "aliases": [],
+          "archived": false,
+          "createdAt": "2026-10-18T00:00:00Z",
+          "updatedAt": "2026-10-18T00:00:00Z",
+          "portrait": "./assets/klingende-krone/portraits/maelle.png",
+          "emotes": [],
+          "emotesOverride": false,
+          "imageSetSchemaVersion": 0,
+          "imageSets": [],
+          "activeImageSetId": "",
+          "imageSetsOverride": false,
+          "inventory": null,
+          "biography": null,
+          "identity": {
+            "worldPersonId": "person--klingende-krone--maelle"
+          },
+          "genealogy": {
+            "worldPersonId": "person--klingende-krone--maelle",
+            "sex": "female",
+            "status": "alive",
+            "birth": "1702",
+            "death": "",
+            "houseId": "",
+            "houseName": "",
+            "familyRole": "",
+            "portraitPlaceholder": "",
+            "tags": [],
+            "sources": [],
+            "relationships": {
+              "parents": [],
+              "partners": [],
+              "children": []
+            }
+          }
+        }
+      },
+      {
+        "id": "person--klingende-krone--ciaran",
+        "key": "ciaran",
+        "group": "Klingende Krone · Personal",
+        "create": true,
+        "data": {
+          "name": "Ciaran",
+          "title": "Erster Schank · Tresen und Ausschank",
+          "fraktion": "Zur Klingenden Krone",
+          "role": "Erster Schank · Tresen und Ausschank",
+          "status": "active",
+          "relevance": "minor",
+          "taxonomyPath": "",
+          "currentLocation": "Gwynthor",
+          "origin": "Albische Fürstentümer · Gwynthor",
+          "plotNode": "",
+          "profileLink": "",
+          "playerOwner": "",
+          "bio": "35 Jahre. Von Finlay angeworbener Albe. Hält den Tresen ruhig, kennt die Sude und erklärt Gästen die neue Gwynthorer Abfüllung ohne große Reden.",
+          "aliases": [],
+          "archived": false,
+          "createdAt": "2026-10-18T00:00:00Z",
+          "updatedAt": "2026-10-18T00:00:00Z",
+          "portrait": "./assets/klingende-krone/portraits/ciaran.png",
+          "emotes": [],
+          "emotesOverride": false,
+          "imageSetSchemaVersion": 0,
+          "imageSets": [],
+          "activeImageSetId": "",
+          "imageSetsOverride": false,
+          "inventory": null,
+          "biography": null,
+          "identity": {
+            "worldPersonId": "person--klingende-krone--ciaran"
+          },
+          "genealogy": {
+            "worldPersonId": "person--klingende-krone--ciaran",
+            "sex": "male",
+            "status": "alive",
+            "birth": "1705",
+            "death": "",
+            "houseId": "",
+            "houseName": "",
+            "familyRole": "",
+            "portraitPlaceholder": "",
+            "tags": [],
+            "sources": [],
+            "relationships": {
+              "parents": [],
+              "partners": [],
+              "children": []
+            }
+          }
+        }
+      },
+      {
+        "id": "person--klingende-krone--aoife",
+        "key": "aoife",
+        "group": "Klingende Krone · Personal",
+        "create": true,
+        "data": {
+          "name": "Aoife",
+          "title": "Bedienung · Schankraum",
+          "fraktion": "Zur Klingenden Krone",
+          "role": "Bedienung · Schankraum",
+          "status": "active",
+          "relevance": "minor",
+          "taxonomyPath": "",
+          "currentLocation": "Gwynthor",
+          "origin": "Albische Fürstentümer · Gwynthor",
+          "plotNode": "",
+          "profileLink": "",
+          "playerOwner": "",
+          "bio": "28 Jahre. Eine von Finlay eingestellte Albin. Lebhaft, aufmerksam und gut darin, eine freie Bank zu finden, bevor eine Gruppe im Eingang stehen bleibt.",
+          "aliases": [],
+          "archived": false,
+          "createdAt": "2026-10-18T00:00:00Z",
+          "updatedAt": "2026-10-18T00:00:00Z",
+          "portrait": "./assets/klingende-krone/portraits/aoife.png",
+          "emotes": [],
+          "emotesOverride": false,
+          "imageSetSchemaVersion": 0,
+          "imageSets": [],
+          "activeImageSetId": "",
+          "imageSetsOverride": false,
+          "inventory": null,
+          "biography": null,
+          "identity": {
+            "worldPersonId": "person--klingende-krone--aoife"
+          },
+          "genealogy": {
+            "worldPersonId": "person--klingende-krone--aoife",
+            "sex": "female",
+            "status": "alive",
+            "birth": "1712",
+            "death": "",
+            "houseId": "",
+            "houseName": "",
+            "familyRole": "",
+            "portraitPlaceholder": "",
+            "tags": [],
+            "sources": [],
+            "relationships": {
+              "parents": [],
+              "partners": [],
+              "children": []
+            }
+          }
+        }
+      },
+      {
+        "id": "person--klingende-krone--niall",
+        "key": "niall",
+        "group": "Klingende Krone · Personal",
+        "create": true,
+        "data": {
+          "name": "Niall",
+          "title": "Bedienung · Tische und Gebinde",
+          "fraktion": "Zur Klingenden Krone",
+          "role": "Bedienung · Tische und Gebinde",
+          "status": "active",
+          "relevance": "minor",
+          "taxonomyPath": "",
+          "currentLocation": "Gwynthor",
+          "origin": "Albische Fürstentümer · Gwynthor",
+          "plotNode": "",
+          "profileLink": "",
+          "playerOwner": "",
+          "bio": "24 Jahre. Schlanker albischer Bediensteter. Trägt Krüge, stellt vorbestellte Flaschen bereit und hält die kleinen Snackvorräte am Tresen aufgefüllt.",
+          "aliases": [],
+          "archived": false,
+          "createdAt": "2026-10-18T00:00:00Z",
+          "updatedAt": "2026-10-18T00:00:00Z",
+          "portrait": "./assets/klingende-krone/portraits/niall.png",
+          "emotes": [],
+          "emotesOverride": false,
+          "imageSetSchemaVersion": 0,
+          "imageSets": [],
+          "activeImageSetId": "",
+          "imageSetsOverride": false,
+          "inventory": null,
+          "biography": null,
+          "identity": {
+            "worldPersonId": "person--klingende-krone--niall"
+          },
+          "genealogy": {
+            "worldPersonId": "person--klingende-krone--niall",
+            "sex": "male",
+            "status": "alive",
+            "birth": "1716",
+            "death": "",
+            "houseId": "",
+            "houseName": "",
+            "familyRole": "",
+            "portraitPlaceholder": "",
+            "tags": [],
+            "sources": [],
+            "relationships": {
+              "parents": [],
+              "partners": [],
+              "children": []
+            }
+          }
+        }
+      },
+      {
+        "id": "person--klingende-krone--deirdre",
+        "key": "deirdre",
+        "group": "Klingende Krone · Personal",
+        "create": true,
+        "data": {
+          "name": "Deirdre",
+          "title": "Bedienung · Snacks und Abendablauf",
+          "fraktion": "Zur Klingenden Krone",
+          "role": "Bedienung · Snacks und Abendablauf",
+          "status": "active",
+          "relevance": "minor",
+          "taxonomyPath": "",
+          "currentLocation": "Gwynthor",
+          "origin": "Albische Fürstentümer · Gwynthor",
+          "plotNode": "",
+          "profileLink": "",
+          "playerOwner": "",
+          "bio": "39 Jahre. Erfahrene albische Schankkraft. Portioniert kalte Snacks und hält abends Ordnung zwischen leeren Krügen, offenen Zechen und neuen Bestellungen.",
+          "aliases": [],
+          "archived": false,
+          "createdAt": "2026-10-18T00:00:00Z",
+          "updatedAt": "2026-10-18T00:00:00Z",
+          "portrait": "./assets/klingende-krone/portraits/deirdre.png",
+          "emotes": [],
+          "emotesOverride": false,
+          "imageSetSchemaVersion": 0,
+          "imageSets": [],
+          "activeImageSetId": "",
+          "imageSetsOverride": false,
+          "inventory": null,
+          "biography": null,
+          "identity": {
+            "worldPersonId": "person--klingende-krone--deirdre"
+          },
+          "genealogy": {
+            "worldPersonId": "person--klingende-krone--deirdre",
+            "sex": "female",
+            "status": "alive",
+            "birth": "1701",
+            "death": "",
+            "houseId": "",
+            "houseName": "",
+            "familyRole": "",
+            "portraitPlaceholder": "",
+            "tags": [],
+            "sources": [],
+            "relationships": {
+              "parents": [],
+              "partners": [],
+              "children": []
+            }
+          }
+        }
+      }
+    ],
+    "config": {
+      "tabs": [
+        "Klingende Krone und Sept Cneacail"
+      ],
+      "map": {
+        "Klingende Krone und Sept Cneacail": [
+          "person--sept-cneacail--alasdair-cneacail",
+          "person--sept-cneacail--arran-cneacail",
+          "person--sept-cneacail--finlay-cneacail",
+          "person--sept-cneacail--lysiane-cneacail",
+          "person--sept-cneacail--aodhan-cneacail",
+          "person--sept-cneacail--nessa-cneacail",
+          "person--sept-cneacail--eithne-cneacail",
+          "person--sept-cneacail--catriona-cneacail",
+          "person--klingende-krone--lucien",
+          "person--klingende-krone--maelle",
+          "person--klingende-krone--ciaran",
+          "person--klingende-krone--aoife",
+          "person--klingende-krone--niall",
+          "person--klingende-krone--deirdre"
+        ]
+      },
+      "subtabs": {
+        "Klingende Krone und Sept Cneacail": [
+          "Sept Cneacail · Familie",
+          "Klingende Krone · Personal"
+        ]
+      },
+      "subtabMap": {
+        "Klingende Krone und Sept Cneacail": {
+          "Sept Cneacail · Familie": [
+            "person--sept-cneacail--alasdair-cneacail",
+            "person--sept-cneacail--arran-cneacail",
+            "person--sept-cneacail--lysiane-cneacail",
+            "person--sept-cneacail--aodhan-cneacail",
+            "person--sept-cneacail--nessa-cneacail",
+            "person--sept-cneacail--eithne-cneacail",
+            "person--sept-cneacail--catriona-cneacail"
+          ],
+          "Klingende Krone · Personal": [
+            "person--sept-cneacail--finlay-cneacail",
+            "person--klingende-krone--lucien",
+            "person--klingende-krone--maelle",
+            "person--klingende-krone--ciaran",
+            "person--klingende-krone--aoife",
+            "person--klingende-krone--niall",
+            "person--klingende-krone--deirdre"
+          ]
+        }
+      }
+    }
+  }
+}

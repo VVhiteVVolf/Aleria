@@ -144,6 +144,13 @@ function buildTradeDescriptionLower(item) {
 }
 
 function buildTradePrice(item) {
+  if (item.status === 'unavailable') {
+    return `<section class="trade-catalog-meta-block trade-catalog-unavailable-status">
+      <h4>${escapeHtml(item.priceTitle || 'Verfügbarkeit')}</h4>
+      <strong>Derzeit nicht erhältlich</strong>
+      ${item.priceNote ? `<p>${escapeHtml(item.priceNote)}</p>` : ''}
+    </section>`;
+  }
   if (item.priceOptions?.length) {
     return `<section class="trade-catalog-meta-block trade-catalog-price">
       <h4>${escapeHtml(item.priceTitle || 'Ausschank & Gebinde')}</h4>
@@ -190,7 +197,7 @@ function buildTradeCatalogItem(item, activeCategory = 'all') {
     </article>`;
   }
   return `
-    <article class="trade-catalog-item" style="${escapeHtml(getTradeCatalogImageStyle(item))}" data-trade-category="${escapeHtml(item.category)}" data-trade-search="${escapeHtml(searchText)}"${hiddenAttr}>
+    <article class="trade-catalog-item${item.status === 'unavailable' ? ' trade-catalog-unavailable' : ''}" style="${escapeHtml(getTradeCatalogImageStyle(item))}" data-trade-category="${escapeHtml(item.category)}" data-trade-search="${escapeHtml(searchText)}"${hiddenAttr}>
       <aside class="trade-catalog-visual">
         ${item.badge ? `<div class="trade-catalog-badge">${escapeHtml(item.badge)}</div>` : ''}
         <button type="button" class="trade-catalog-image-wrap trade-item-card-trigger ${escapeHtml(getTradeCatalogImageClasses(item))}" data-action="open-trade-item-card" aria-haspopup="dialog" aria-label="${escapeHtml(`Itemkarte öffnen: ${item.title}`)}" title="Itemkarte öffnen">

@@ -1,0 +1,69 @@
+{
+  "schema": "aleria.family-tree",
+  "schemaVersion": 1,
+  "document": {
+    "id": "haus-bielle",
+    "title": "Haus Bielle",
+    "emblem": "assets/images/houses/Brevanor/Bielle.png",
+    "motto": "",
+    "description": "Brevanorisches Ritter- und Winzerhaus. Helviane Desele wurde als Bielle geboren. Das Wappen zeigt einen Turm mit einer Weinrebe und weißen sowie violetten Trauben; es erinnert an das Rittererbe und die Weingüter der Familie.",
+    "houseProfile": {
+      "rankId": "knight-simple",
+      "seat": "",
+      "barony": "",
+      "county": "",
+      "kingdom": "Brevanor",
+      "secondarySeats": [],
+      "liegeHouseId": "",
+      "liegeHouseName": "",
+      "regionEmblems": {
+        "seat": "",
+        "barony": "",
+        "county": "",
+        "kingdom": ""
+      }
+    }
+  },
+  "houses": [
+    {
+      "id": "house-bielle",
+      "name": "Haus Bielle",
+      "status": "active",
+      "emblem": "assets/images/houses/Brevanor/Bielle.png"
+    }
+  ],
+  "persons": [],
+  "partnerships": [],
+  "parentages": [],
+  "cadetBranches": [],
+  "timeJumps": [],
+  "lineage": {
+    "founderPartnershipId": "",
+    "houseId": "house-bielle",
+    "crestSubtitle": "Brevanor",
+    "crestEmblemScale": 0.87,
+    "crestFrame": "iron",
+    "crestFrameScale": 1,
+    "timeGap": {
+      "enabled": false,
+      "years": 0,
+      "fromYear": "",
+      "toYear": "",
+      "label": ""
+    }
+  },
+  "view": {
+    "focusPersonId": "",
+    "orientation": "vertical",
+    "ancestorDepth": 4,
+    "descendantDepth": 4,
+    "limitGenerations": false,
+    "showSiblings": true
+  },
+  "extensions": {
+    "blankFamily": true,
+    "heraldryOnly": true,
+    "sourceRevision": 1,
+    "sourceNote": "Autorenauftrag vom 18.10.2026: Wappen und Herkunft in Brevanor vermerken. Keine zusätzlichen Angehörigen, Ehen oder ausgearbeitete Familienlinien erfinden."
+  }
+}

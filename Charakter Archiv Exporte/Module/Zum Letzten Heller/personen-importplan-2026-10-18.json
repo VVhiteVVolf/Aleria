@@ -1,0 +1,873 @@
+{
+  "type": "aleria-character-publication-plan",
+  "version": 1,
+  "onlineApplied": false,
+  "plan": {
+    "entries": [
+      {
+        "id": "person--sept-cneacail--alasdair-cneacail",
+        "key": "alasdair",
+        "group": "Hausstand",
+        "create": true,
+        "data": {
+          "name": "Alasdair Cneacail",
+          "title": "Inhaber · Führung und Ausschank",
+          "fraktion": "Zum Letzten Heller",
+          "role": "Inhaber · Führung und Ausschank",
+          "status": "active",
+          "relevance": "supporting",
+          "taxonomyPath": "Ceitheach > Tir na Dorcha > Glaennmor > Bun na h-Aibhne",
+          "currentLocation": "Gwynthor",
+          "origin": "Ceitheach · Bun na h-Aibhne",
+          "plotNode": "",
+          "profileLink": "",
+          "playerOwner": "",
+          "bio": "44 Jahre. Arrans älterer Sohn hat die ehemalige Hafentaverne behalten und 1735 zum Bordell umfunktioniert. Stark beleibt, vorzeitig gealtert und misstrauisch. Nessa verließ ihn kurz nach der Umwandlung; die Töchter Eithne und Catriona sind 1740 ebenfalls fortgegangen. Den Bruder nennt er einen Verräter; die vier alten Whiskyflaschen hält er unter Verschluss. Er zählt jede Münze und verschiebt jede Reparatur, die noch eine Woche warten kann.",
+          "aliases": [],
+          "archived": false,
+          "createdAt": "2026-10-18T00:00:00Z",
+          "updatedAt": "2026-10-18T00:00:00Z",
+          "portrait": "./assets/letzter-heller/portraits/alasdair.png",
+          "emotes": [],
+          "emotesOverride": false,
+          "imageSetSchemaVersion": 0,
+          "imageSets": [],
+          "activeImageSetId": "",
+          "imageSetsOverride": false,
+          "inventory": null,
+          "biography": null,
+          "identity": {
+            "worldPersonId": "person--sept-cneacail--alasdair-cneacail"
+          },
+          "genealogy": {
+            "worldPersonId": "person--sept-cneacail--alasdair-cneacail",
+            "sex": "male",
+            "status": "alive",
+            "birth": "1696",
+            "death": "",
+            "houseId": "sept-cneacail",
+            "houseName": "Sept Cneacail",
+            "familyRole": "core",
+            "portraitPlaceholder": "auto",
+            "tags": [],
+            "sources": [
+              {
+                "familyId": "sept-cneacail",
+                "personId": "alasdair-cneacail",
+                "releaseId": "",
+                "publishedAt": "",
+                "importedAt": "2026-10-18T00:00:00Z",
+                "lastSyncedAt": "2026-10-18T00:00:00Z",
+                "url": "../Stammbäume/Stammbaum.html?family=sept-cneacail&mode=view&person=alasdair-cneacail",
+                "fingerprint": "{\"name\":\"Alasdair Cneacail\",\"title\":\"Inhaber · Führung und Ausschank\",\"birth\":\"1696\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"sept-cneacail\",\"portrait\":\"../AleriaAlmanach/assets/letzter-heller/portraits/alasdair.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"arran-cneacail\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--sept-cneacail--arran-cneacail\",\"name\":\"Arran Cneacail\"},{\"personId\":\"maire-cneacail\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--maire-cneacail\",\"name\":\"Maire\"}],\"partners\":[{\"personId\":\"nessa-cneacail\",\"type\":\"marriage\",\"status\":\"ended\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--sept-cneacail--nessa-cneacail\",\"name\":\"Nessa\"}],\"children\":[{\"personId\":\"eithne-cneacail\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--sept-cneacail--eithne-cneacail\",\"name\":\"Eithne Cneacail\"},{\"personId\":\"catriona-cneacail\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--sept-cneacail--catriona-cneacail\",\"name\":\"Catriona Cneacail\"}]}}"
+              }
+            ],
+            "relationships": {
+              "parents": [
+                {
+                  "personId": "arran-cneacail",
+                  "type": "biological",
+                  "legitimacy": "legitimate",
+                  "certainty": "confirmed",
+                  "worldPersonId": "person--sept-cneacail--arran-cneacail",
+                  "name": "Arran Cneacail"
+                },
+                {
+                  "personId": "maire-cneacail",
+                  "type": "biological",
+                  "legitimacy": "legitimate",
+                  "certainty": "confirmed",
+                  "worldPersonId": "person--family-tree--maire-cneacail",
+                  "name": "Maire"
+                }
+              ],
+              "partners": [
+                {
+                  "personId": "nessa-cneacail",
+                  "type": "marriage",
+                  "status": "ended",
+                  "certainty": "confirmed",
+                  "worldPersonId": "person--sept-cneacail--nessa-cneacail",
+                  "name": "Nessa"
+                }
+              ],
+              "children": [
+                {
+                  "personId": "eithne-cneacail",
+                  "type": "biological",
+                  "legitimacy": "legitimate",
+                  "certainty": "confirmed",
+                  "worldPersonId": "person--sept-cneacail--eithne-cneacail",
+                  "name": "Eithne Cneacail"
+                },
+                {
+                  "personId": "catriona-cneacail",
+                  "type": "biological",
+                  "legitimacy": "legitimate",
+                  "certainty": "confirmed",
+                  "worldPersonId": "person--sept-cneacail--catriona-cneacail",
+                  "name": "Catriona Cneacail"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "id": "person--sept-cneacail--arran-cneacail",
+        "key": "arran",
+        "group": "Sept Cneacail · Angehörige",
+        "create": true,
+        "data": {
+          "name": "Arran Cneacail",
+          "title": "† Früherer Septherr und Tavernenwirt · 1672–1734",
+          "fraktion": "Sept Cneacail · Verstorben",
+          "role": "† Früherer Septherr und Tavernenwirt · 1672–1734",
+          "status": "dead",
+          "relevance": "minor",
+          "taxonomyPath": "Ceitheach > Tir na Dorcha > Glaennmor > Bun na h-Aibhne",
+          "currentLocation": "",
+          "origin": "Ceitheach · Bun na h-Aibhne",
+          "plotNode": "",
+          "profileLink": "",
+          "playerOwner": "",
+          "bio": "Starb 1734 mit 62 Jahren. Überlebte 1720 mit seinen beiden Söhnen die Plünderung der Flusssiedlung durch Dämmergrunder Truppen. Gab für den großen Kredit der Klingenden Münze Rezepte und Verwertungsrechte aus der Hand. Die scheiternde Taverne, der Verlust der Familie und sein Trinken zehrten ihn auf.",
+          "aliases": [],
+          "archived": false,
+          "createdAt": "2026-10-18T00:00:00Z",
+          "updatedAt": "2026-10-18T00:00:00Z",
+          "portrait": "./assets/letzter-heller/portraits/arran.png",
+          "emotes": [],
+          "emotesOverride": false,
+          "imageSetSchemaVersion": 0,
+          "imageSets": [],
+          "activeImageSetId": "",
+          "imageSetsOverride": false,
+          "inventory": null,
+          "biography": null,
+          "identity": {
+            "worldPersonId": "person--sept-cneacail--arran-cneacail"
+          },
+          "genealogy": {
+            "worldPersonId": "person--sept-cneacail--arran-cneacail",
+            "sex": "male",
+            "status": "dead",
+            "birth": "1672",
+            "death": "1734",
+            "houseId": "sept-cneacail",
+            "houseName": "Sept Cneacail",
+            "familyRole": "core",
+            "portraitPlaceholder": "auto",
+            "tags": [],
+            "sources": [
+              {
+                "familyId": "sept-cneacail",
+                "personId": "arran-cneacail",
+                "releaseId": "",
+                "publishedAt": "",
+                "importedAt": "2026-10-18T00:00:00Z",
+                "lastSyncedAt": "2026-10-18T00:00:00Z",
+                "url": "../Stammbäume/Stammbaum.html?family=sept-cneacail&mode=view&person=arran-cneacail",
+                "fingerprint": "{\"name\":\"Arran Cneacail\",\"title\":\"† Früherer Septherr und Tavernenwirt · 1672–1734\",\"birth\":\"1672\",\"death\":\"1734\",\"sex\":\"male\",\"status\":\"dead\",\"houseId\":\"sept-cneacail\",\"portrait\":\"../AleriaAlmanach/assets/letzter-heller/portraits/arran.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"sept-cneacail-gruender\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"unknown\",\"worldPersonId\":\"person--sept-cneacail--sept-cneacail-gruender\",\"name\":\"Unbekannter Gründer\"},{\"personId\":\"sept-cneacail-gruenderin\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"unknown\",\"worldPersonId\":\"person--sept-cneacail--sept-cneacail-gruenderin\",\"name\":\"Unbekannte Gründerin\"}],\"partners\":[{\"personId\":\"maire-cneacail\",\"type\":\"marriage\",\"status\":\"ended\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--maire-cneacail\",\"name\":\"Maire\"}],\"children\":[{\"personId\":\"alasdair-cneacail\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--sept-cneacail--alasdair-cneacail\",\"name\":\"Alasdair Cneacail\"},{\"personId\":\"finlay-cneacail\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--sept-cneacail--finlay-cneacail\",\"name\":\"Finlay Cneacail\"}]}}"
+              }
+            ],
+            "relationships": {
+              "parents": [
+                {
+                  "personId": "sept-cneacail-gruender",
+                  "type": "claimed",
+                  "legitimacy": "unknown",
+                  "certainty": "unknown",
+                  "worldPersonId": "person--sept-cneacail--sept-cneacail-gruender",
+                  "name": "Unbekannter Gründer"
+                },
+                {
+                  "personId": "sept-cneacail-gruenderin",
+                  "type": "claimed",
+                  "legitimacy": "unknown",
+                  "certainty": "unknown",
+                  "worldPersonId": "person--sept-cneacail--sept-cneacail-gruenderin",
+                  "name": "Unbekannte Gründerin"
+                }
+              ],
+              "partners": [
+                {
+                  "personId": "maire-cneacail",
+                  "type": "marriage",
+                  "status": "ended",
+                  "certainty": "confirmed",
+                  "worldPersonId": "person--family-tree--maire-cneacail",
+                  "name": "Maire"
+                }
+              ],
+              "children": [
+                {
+                  "personId": "alasdair-cneacail",
+                  "type": "biological",
+                  "legitimacy": "legitimate",
+                  "certainty": "confirmed",
+                  "worldPersonId": "person--sept-cneacail--alasdair-cneacail",
+                  "name": "Alasdair Cneacail"
+                },
+                {
+                  "personId": "finlay-cneacail",
+                  "type": "biological",
+                  "legitimacy": "legitimate",
+                  "certainty": "confirmed",
+                  "worldPersonId": "person--sept-cneacail--finlay-cneacail",
+                  "name": "Finlay Cneacail"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "id": "person--sept-cneacail--finlay-cneacail",
+        "key": "finlay",
+        "group": "Sept Cneacail · Angehörige",
+        "create": true,
+        "data": {
+          "name": "Finlay Cneacail",
+          "title": "Leiter der Klingenden Krone · Mitglied der Klingenden Münze",
+          "fraktion": "Klingende Münze",
+          "role": "Leiter der Klingenden Krone · Mitglied der Klingenden Münze",
+          "status": "active",
+          "relevance": "minor",
+          "taxonomyPath": "Ceitheach > Tir na Dorcha > Glaennmor > Bun na h-Aibhne",
+          "currentLocation": "Gwynthor",
+          "origin": "Ceitheach · Bun na h-Aibhne",
+          "plotNode": "",
+          "profileLink": "",
+          "playerOwner": "",
+          "bio": "41 Jahre. Mitglied der Klingenden Münze und Leiter der Taverne Zur Klingenden Krone mit Gildenbrauerei und Brennerei im Marktviertel. Vertreibt dort die nach den erworbenen Sept-Rezepten hergestellten Getränke. Mit Lysiane aus Venalys verheiratet; ihr Sohn heißt Aodhan. Sieht darin das Überleben des alten Handwerks, während Alasdair Verrat erkennt. Finlay hat keinen Posten oder Schankdienst im Bordell.",
+          "aliases": [],
+          "archived": false,
+          "createdAt": "2026-10-18T00:00:00Z",
+          "updatedAt": "2026-10-18T00:00:00Z",
+          "portrait": "./assets/letzter-heller/portraits/finlay.png",
+          "emotes": [],
+          "emotesOverride": false,
+          "imageSetSchemaVersion": 0,
+          "imageSets": [],
+          "activeImageSetId": "",
+          "imageSetsOverride": false,
+          "inventory": null,
+          "biography": null,
+          "identity": {
+            "worldPersonId": "person--sept-cneacail--finlay-cneacail"
+          },
+          "genealogy": {
+            "worldPersonId": "person--sept-cneacail--finlay-cneacail",
+            "sex": "male",
+            "status": "alive",
+            "birth": "1699",
+            "death": "",
+            "houseId": "sept-cneacail",
+            "houseName": "Sept Cneacail",
+            "familyRole": "core",
+            "portraitPlaceholder": "auto",
+            "tags": [],
+            "sources": [
+              {
+                "familyId": "sept-cneacail",
+                "personId": "finlay-cneacail",
+                "releaseId": "",
+                "publishedAt": "",
+                "importedAt": "2026-10-18T00:00:00Z",
+                "lastSyncedAt": "2026-10-18T00:00:00Z",
+                "url": "../Stammbäume/Stammbaum.html?family=sept-cneacail&mode=view&person=finlay-cneacail",
+                "fingerprint": "{\"name\":\"Finlay Cneacail\",\"title\":\"Leiter der Klingenden Krone · Mitglied der Klingenden Münze\",\"birth\":\"1699\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"sept-cneacail\",\"portrait\":\"../AleriaAlmanach/assets/klingende-krone/portraits/finlay-v2.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"arran-cneacail\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--sept-cneacail--arran-cneacail\",\"name\":\"Arran Cneacail\"},{\"personId\":\"maire-cneacail\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--maire-cneacail\",\"name\":\"Maire\"}],\"partners\":[{\"personId\":\"lysiane-cneacail\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--sept-cneacail--lysiane-cneacail\",\"name\":\"Lysiane Cneacail\"}],\"children\":[{\"personId\":\"aodhan-cneacail\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--sept-cneacail--aodhan-cneacail\",\"name\":\"Aodhan Cneacail\"}]}}"
+              }
+            ],
+            "relationships": {
+              "parents": [
+                {
+                  "personId": "arran-cneacail",
+                  "type": "biological",
+                  "legitimacy": "legitimate",
+                  "certainty": "confirmed",
+                  "worldPersonId": "person--sept-cneacail--arran-cneacail",
+                  "name": "Arran Cneacail"
+                },
+                {
+                  "personId": "maire-cneacail",
+                  "type": "biological",
+                  "legitimacy": "legitimate",
+                  "certainty": "confirmed",
+                  "worldPersonId": "person--family-tree--maire-cneacail",
+                  "name": "Maire"
+                }
+              ],
+              "partners": [
+                {
+                  "personId": "lysiane-cneacail",
+                  "type": "marriage",
+                  "status": "active",
+                  "certainty": "confirmed",
+                  "worldPersonId": "person--sept-cneacail--lysiane-cneacail",
+                  "name": "Lysiane Cneacail"
+                }
+              ],
+              "children": [
+                {
+                  "personId": "aodhan-cneacail",
+                  "type": "biological",
+                  "legitimacy": "legitimate",
+                  "certainty": "confirmed",
+                  "worldPersonId": "person--sept-cneacail--aodhan-cneacail",
+                  "name": "Aodhan Cneacail"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "id": "person--letzter-heller--fergal",
+        "key": "fergal",
+        "group": "Hausstand",
+        "create": true,
+        "data": {
+          "name": "Fergal",
+          "title": "Schankhilfe · Fässer und Besorgungen",
+          "fraktion": "Zum Letzten Heller",
+          "role": "Schankhilfe · Fässer und Besorgungen",
+          "status": "active",
+          "relevance": "minor",
+          "taxonomyPath": "",
+          "currentLocation": "Gwynthor",
+          "origin": "Ceitheach",
+          "plotNode": "",
+          "profileLink": "",
+          "playerOwner": "",
+          "bio": "39 Jahre. Ein albischer Flüchtling mit wenigen Worten und einem zuverlässigen Gedächtnis für offene Zechen. Hilft am Tresen, holt Fassware und übernimmt kleine Besorgungen. Seinen Lohn braucht er für den nächsten Schlafplatz und die eigene Versorgung.",
+          "aliases": [],
+          "archived": false,
+          "createdAt": "2026-10-18T00:00:00Z",
+          "updatedAt": "2026-10-18T00:00:00Z",
+          "portrait": "./assets/letzter-heller/portraits/fergal.png",
+          "emotes": [],
+          "emotesOverride": false,
+          "imageSetSchemaVersion": 0,
+          "imageSets": [],
+          "activeImageSetId": "",
+          "imageSetsOverride": false,
+          "inventory": null,
+          "biography": null,
+          "identity": {
+            "worldPersonId": "person--letzter-heller--fergal"
+          },
+          "genealogy": {
+            "worldPersonId": "person--letzter-heller--fergal",
+            "sex": "male",
+            "status": "alive",
+            "birth": "1701",
+            "death": "",
+            "houseId": "",
+            "houseName": "",
+            "familyRole": "",
+            "portraitPlaceholder": "",
+            "tags": [],
+            "sources": [],
+            "relationships": {
+              "parents": [],
+              "partners": [],
+              "children": []
+            }
+          }
+        }
+      },
+      {
+        "id": "person--letzter-heller--sorcha",
+        "key": "sorcha",
+        "group": "Hausstand",
+        "create": true,
+        "data": {
+          "name": "Sorcha",
+          "title": "Küche und Vorräte",
+          "fraktion": "Zum Letzten Heller",
+          "role": "Küche und Vorräte",
+          "status": "active",
+          "relevance": "minor",
+          "taxonomyPath": "",
+          "currentLocation": "Gwynthor",
+          "origin": "Ceitheach",
+          "plotNode": "",
+          "profileLink": "",
+          "playerOwner": "",
+          "bio": "47 Jahre. Eine geflohene Albin, die aus den gewöhnlichen Vorräten einfache Tavernenportionen kocht. Führt allein die kleine Küche; deshalb wird nach Bestellung gearbeitet und nicht jedes Gericht steht zu jeder Stunde bereit. Trocken, kräftig und ungeduldig mit verschwendetem Brennholz.",
+          "aliases": [],
+          "archived": false,
+          "createdAt": "2026-10-18T00:00:00Z",
+          "updatedAt": "2026-10-18T00:00:00Z",
+          "portrait": "./assets/letzter-heller/portraits/sorcha.png",
+          "emotes": [],
+          "emotesOverride": false,
+          "imageSetSchemaVersion": 0,
+          "imageSets": [],
+          "activeImageSetId": "",
+          "imageSetsOverride": false,
+          "inventory": null,
+          "biography": null,
+          "identity": {
+            "worldPersonId": "person--letzter-heller--sorcha"
+          },
+          "genealogy": {
+            "worldPersonId": "person--letzter-heller--sorcha",
+            "sex": "female",
+            "status": "alive",
+            "birth": "1693",
+            "death": "",
+            "houseId": "",
+            "houseName": "",
+            "familyRole": "",
+            "portraitPlaceholder": "",
+            "tags": [],
+            "sources": [],
+            "relationships": {
+              "parents": [],
+              "partners": [],
+              "children": []
+            }
+          }
+        }
+      },
+      {
+        "id": "person--letzter-heller--eilidh",
+        "key": "eilidh",
+        "group": "Dirnen",
+        "create": true,
+        "data": {
+          "name": "Eilidh",
+          "title": "Dirne · Einfache Kammer",
+          "fraktion": "Zum Letzten Heller",
+          "role": "Dirne · Einfache Kammer",
+          "status": "active",
+          "relevance": "minor",
+          "taxonomyPath": "",
+          "currentLocation": "Gwynthor",
+          "origin": "Ceitheach",
+          "plotNode": "",
+          "profileLink": "",
+          "playerOwner": "",
+          "bio": "26 Jahre. Eine geflohene Albin, die im Haus Arbeit und ein Dach gefunden hat. Still, übermüdet und vorsichtig mit fremden Versprechen. Spricht erst freier, wenn der Lärm hinter der Kammertür bleibt.",
+          "aliases": [],
+          "archived": false,
+          "createdAt": "2026-10-18T00:00:00Z",
+          "updatedAt": "2026-10-18T00:00:00Z",
+          "portrait": "./assets/letzter-heller/portraits/eilidh.png",
+          "emotes": [],
+          "emotesOverride": false,
+          "imageSetSchemaVersion": 0,
+          "imageSets": [],
+          "activeImageSetId": "",
+          "imageSetsOverride": false,
+          "inventory": null,
+          "biography": null,
+          "identity": {
+            "worldPersonId": "person--letzter-heller--eilidh"
+          },
+          "genealogy": {
+            "worldPersonId": "person--letzter-heller--eilidh",
+            "sex": "female",
+            "status": "alive",
+            "birth": "1714",
+            "death": "",
+            "houseId": "",
+            "houseName": "",
+            "familyRole": "",
+            "portraitPlaceholder": "",
+            "tags": [],
+            "sources": [],
+            "relationships": {
+              "parents": [],
+              "partners": [],
+              "children": []
+            }
+          }
+        }
+      },
+      {
+        "id": "person--letzter-heller--mairead",
+        "key": "mairead",
+        "group": "Dirnen",
+        "create": true,
+        "data": {
+          "name": "Mairead",
+          "title": "Dirne · Gesellschaft auf Zeit",
+          "fraktion": "Zum Letzten Heller",
+          "role": "Dirne · Gesellschaft auf Zeit",
+          "status": "active",
+          "relevance": "minor",
+          "taxonomyPath": "",
+          "currentLocation": "Gwynthor",
+          "origin": "Ceitheach",
+          "plotNode": "",
+          "profileLink": "",
+          "playerOwner": "",
+          "bio": "33 Jahre. Albin aus einer anderen verlorenen Dorfgemeinschaft. Wirkt nüchtern und abgekämpft, kann aber sehr direkt werden. Sie kennt die Abläufe des Hauses und versucht, von jeder Woche etwas für sich zurückzulegen.",
+          "aliases": [],
+          "archived": false,
+          "createdAt": "2026-10-18T00:00:00Z",
+          "updatedAt": "2026-10-18T00:00:00Z",
+          "portrait": "./assets/letzter-heller/portraits/mairead.png",
+          "emotes": [],
+          "emotesOverride": false,
+          "imageSetSchemaVersion": 0,
+          "imageSets": [],
+          "activeImageSetId": "",
+          "imageSetsOverride": false,
+          "inventory": null,
+          "biography": null,
+          "identity": {
+            "worldPersonId": "person--letzter-heller--mairead"
+          },
+          "genealogy": {
+            "worldPersonId": "person--letzter-heller--mairead",
+            "sex": "female",
+            "status": "alive",
+            "birth": "1707",
+            "death": "",
+            "houseId": "",
+            "houseName": "",
+            "familyRole": "",
+            "portraitPlaceholder": "",
+            "tags": [],
+            "sources": [],
+            "relationships": {
+              "parents": [],
+              "partners": [],
+              "children": []
+            }
+          }
+        }
+      },
+      {
+        "id": "person--letzter-heller--fiona",
+        "key": "fiona",
+        "group": "Dirnen",
+        "create": true,
+        "data": {
+          "name": "Fiona",
+          "title": "Dirne · Älteste der Kammern",
+          "fraktion": "Zum Letzten Heller",
+          "role": "Dirne · Älteste der Kammern",
+          "status": "active",
+          "relevance": "minor",
+          "taxonomyPath": "",
+          "currentLocation": "Gwynthor",
+          "origin": "Ceitheach",
+          "plotNode": "",
+          "profileLink": "",
+          "playerOwner": "",
+          "bio": "38 Jahre. Eine Albin, die nach der Flucht lange Gelegenheitsarbeiten annahm. Der Schlafmangel steht ihr im Gesicht. Kennt die anderen Frauen gut und tauscht mit ihnen Dienste, wenn jemand einen Abend nicht durchsteht.",
+          "aliases": [],
+          "archived": false,
+          "createdAt": "2026-10-18T00:00:00Z",
+          "updatedAt": "2026-10-18T00:00:00Z",
+          "portrait": "./assets/letzter-heller/portraits/fiona.png",
+          "emotes": [],
+          "emotesOverride": false,
+          "imageSetSchemaVersion": 0,
+          "imageSets": [],
+          "activeImageSetId": "",
+          "imageSetsOverride": false,
+          "inventory": null,
+          "biography": null,
+          "identity": {
+            "worldPersonId": "person--letzter-heller--fiona"
+          },
+          "genealogy": {
+            "worldPersonId": "person--letzter-heller--fiona",
+            "sex": "female",
+            "status": "alive",
+            "birth": "1702",
+            "death": "",
+            "houseId": "",
+            "houseName": "",
+            "familyRole": "",
+            "portraitPlaceholder": "",
+            "tags": [],
+            "sources": [],
+            "relationships": {
+              "parents": [],
+              "partners": [],
+              "children": []
+            }
+          }
+        }
+      },
+      {
+        "id": "person--letzter-heller--runa",
+        "key": "runa",
+        "group": "Dirnen",
+        "create": true,
+        "data": {
+          "name": "Runa",
+          "title": "Dirne · Kammer am Flur",
+          "fraktion": "Zum Letzten Heller",
+          "role": "Dirne · Kammer am Flur",
+          "status": "active",
+          "relevance": "minor",
+          "taxonomyPath": "",
+          "currentLocation": "Gwynthor",
+          "origin": "Aldrimar",
+          "plotNode": "",
+          "profileLink": "",
+          "playerOwner": "",
+          "bio": "29 Jahre. Blonde Aldrimarin, die sich von kleinen Arbeiten und kurzen Diensten bis nach Gwynthor durchschlug. Hat ein raues Lachen, doch wenig Kraft für lange Abende. Ihre dünne Geldrolle verwahrt sie selbst.",
+          "aliases": [],
+          "archived": false,
+          "createdAt": "2026-10-18T00:00:00Z",
+          "updatedAt": "2026-10-18T00:00:00Z",
+          "portrait": "./assets/letzter-heller/portraits/runa.png",
+          "emotes": [],
+          "emotesOverride": false,
+          "imageSetSchemaVersion": 0,
+          "imageSets": [],
+          "activeImageSetId": "",
+          "imageSetsOverride": false,
+          "inventory": null,
+          "biography": null,
+          "identity": {
+            "worldPersonId": "person--letzter-heller--runa"
+          },
+          "genealogy": {
+            "worldPersonId": "person--letzter-heller--runa",
+            "sex": "female",
+            "status": "alive",
+            "birth": "1711",
+            "death": "",
+            "houseId": "",
+            "houseName": "",
+            "familyRole": "",
+            "portraitPlaceholder": "",
+            "tags": [],
+            "sources": [],
+            "relationships": {
+              "parents": [],
+              "partners": [],
+              "children": []
+            }
+          }
+        }
+      },
+      {
+        "id": "person--letzter-heller--signe",
+        "key": "signe",
+        "group": "Dirnen",
+        "create": true,
+        "data": {
+          "name": "Signe",
+          "title": "Dirne · Kleine Hinterkammer",
+          "fraktion": "Zum Letzten Heller",
+          "role": "Dirne · Kleine Hinterkammer",
+          "status": "active",
+          "relevance": "minor",
+          "taxonomyPath": "",
+          "currentLocation": "Gwynthor",
+          "origin": "Aldrimar",
+          "plotNode": "",
+          "profileLink": "",
+          "playerOwner": "",
+          "bio": "35 Jahre. Blonde Aldrimarin mit sprödem Humor und einem feinen Gespür für die Stimmung an der Tür. Macht ihre Arbeit ohne große Versprechen; nach Dienstschluss möchte sie vor allem ihre Ruhe.",
+          "aliases": [],
+          "archived": false,
+          "createdAt": "2026-10-18T00:00:00Z",
+          "updatedAt": "2026-10-18T00:00:00Z",
+          "portrait": "./assets/letzter-heller/portraits/signe.png",
+          "emotes": [],
+          "emotesOverride": false,
+          "imageSetSchemaVersion": 0,
+          "imageSets": [],
+          "activeImageSetId": "",
+          "imageSetsOverride": false,
+          "inventory": null,
+          "biography": null,
+          "identity": {
+            "worldPersonId": "person--letzter-heller--signe"
+          },
+          "genealogy": {
+            "worldPersonId": "person--letzter-heller--signe",
+            "sex": "female",
+            "status": "alive",
+            "birth": "1705",
+            "death": "",
+            "houseId": "",
+            "houseName": "",
+            "familyRole": "",
+            "portraitPlaceholder": "",
+            "tags": [],
+            "sources": [],
+            "relationships": {
+              "parents": [],
+              "partners": [],
+              "children": []
+            }
+          }
+        }
+      },
+      {
+        "id": "person--letzter-heller--sten",
+        "key": "sten",
+        "group": "Hausstand",
+        "create": true,
+        "data": {
+          "name": "Sten",
+          "title": "Türsteher",
+          "fraktion": "Zum Letzten Heller",
+          "role": "Türsteher",
+          "status": "active",
+          "relevance": "minor",
+          "taxonomyPath": "",
+          "currentLocation": "Gwynthor",
+          "origin": "Aldrimar",
+          "plotNode": "",
+          "profileLink": "",
+          "playerOwner": "",
+          "bio": "51 Jahre. Ein aldrimarischer Flüchtling mit breiten Schultern und müden Knien. Hält Betrunkene von den Kammern fern und holt Alasdair, bevor eine Zeche im Handgemenge endet. Ein einziger Türsteher für das ganze kleine Haus.",
+          "aliases": [],
+          "archived": false,
+          "createdAt": "2026-10-18T00:00:00Z",
+          "updatedAt": "2026-10-18T00:00:00Z",
+          "portrait": "./assets/letzter-heller/portraits/sten.png",
+          "emotes": [],
+          "emotesOverride": false,
+          "imageSetSchemaVersion": 0,
+          "imageSets": [],
+          "activeImageSetId": "",
+          "imageSetsOverride": false,
+          "inventory": null,
+          "biography": null,
+          "identity": {
+            "worldPersonId": "person--letzter-heller--sten"
+          },
+          "genealogy": {
+            "worldPersonId": "person--letzter-heller--sten",
+            "sex": "male",
+            "status": "alive",
+            "birth": "1689",
+            "death": "",
+            "houseId": "",
+            "houseName": "",
+            "familyRole": "",
+            "portraitPlaceholder": "",
+            "tags": [],
+            "sources": [],
+            "relationships": {
+              "parents": [],
+              "partners": [],
+              "children": []
+            }
+          }
+        }
+      },
+      {
+        "id": "person--letzter-heller--maela",
+        "key": "maela",
+        "group": "Hausstand",
+        "create": true,
+        "data": {
+          "name": "Maela",
+          "title": "Magd · Wäsche, Wasser und Reinigung",
+          "fraktion": "Zum Letzten Heller",
+          "role": "Magd · Wäsche, Wasser und Reinigung",
+          "status": "active",
+          "relevance": "minor",
+          "taxonomyPath": "",
+          "currentLocation": "Gwynthor",
+          "origin": "Ceitheach",
+          "plotNode": "",
+          "profileLink": "",
+          "playerOwner": "",
+          "bio": "32 Jahre. Albische Flüchtlingsfrau und die einzige Magd des Hauses. Trägt Wasser, schrubbt die Stuben und wechselt das Leinen. Ihre Arbeit kommt gegen die verschlissenen Böden und die knappen Vorräte kaum an, doch den Waschplatz hält sie ordentlich.",
+          "aliases": [],
+          "archived": false,
+          "createdAt": "2026-10-18T00:00:00Z",
+          "updatedAt": "2026-10-18T00:00:00Z",
+          "portrait": "./assets/letzter-heller/portraits/maela.png",
+          "emotes": [],
+          "emotesOverride": false,
+          "imageSetSchemaVersion": 0,
+          "imageSets": [],
+          "activeImageSetId": "",
+          "imageSetsOverride": false,
+          "inventory": null,
+          "biography": null,
+          "identity": {
+            "worldPersonId": "person--letzter-heller--maela"
+          },
+          "genealogy": {
+            "worldPersonId": "person--letzter-heller--maela",
+            "sex": "female",
+            "status": "alive",
+            "birth": "1708",
+            "death": "",
+            "houseId": "",
+            "houseName": "",
+            "familyRole": "",
+            "portraitPlaceholder": "",
+            "tags": [],
+            "sources": [],
+            "relationships": {
+              "parents": [],
+              "partners": [],
+              "children": []
+            }
+          }
+        }
+      }
+    ],
+    "config": {
+      "tabs": [
+        "Zum Letzten Heller"
+      ],
+      "map": {
+        "Zum Letzten Heller": [
+          "person--sept-cneacail--alasdair-cneacail",
+          "person--sept-cneacail--arran-cneacail",
+          "person--sept-cneacail--finlay-cneacail",
+          "person--letzter-heller--fergal",
+          "person--letzter-heller--sorcha",
+          "person--letzter-heller--eilidh",
+          "person--letzter-heller--mairead",
+          "person--letzter-heller--fiona",
+          "person--letzter-heller--runa",
+          "person--letzter-heller--signe",
+          "person--letzter-heller--sten",
+          "person--letzter-heller--maela"
+        ]
+      },
+      "subtabs": {
+        "Zum Letzten Heller": [
+          "Hausstand",
+          "Sept Cneacail · Angehörige",
+          "Dirnen"
+        ]
+      },
+      "subtabMap": {
+        "Zum Letzten Heller": {
+          "Hausstand": [
+            "person--sept-cneacail--alasdair-cneacail",
+            "person--letzter-heller--fergal",
+            "person--letzter-heller--sorcha",
+            "person--letzter-heller--sten",
+            "person--letzter-heller--maela"
+          ],
+          "Sept Cneacail · Angehörige": [
+            "person--sept-cneacail--arran-cneacail",
+            "person--sept-cneacail--finlay-cneacail"
+          ],
+          "Dirnen": [
+            "person--letzter-heller--eilidh",
+            "person--letzter-heller--mairead",
+            "person--letzter-heller--fiona",
+            "person--letzter-heller--runa",
+            "person--letzter-heller--signe"
+          ]
+        }
+      }
+    }
+  }
+}

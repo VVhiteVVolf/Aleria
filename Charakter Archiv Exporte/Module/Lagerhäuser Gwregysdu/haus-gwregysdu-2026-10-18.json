@@ -1,0 +1,1182 @@
+{
+  "schema": "aleria.family-tree",
+  "schemaVersion": 1,
+  "document": {
+    "id": "haus-gwregysdu",
+    "title": "Haus Gwregysdu",
+    "motto": "Was wir verbinden, trägt.",
+    "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Gwregysdu.png",
+    "description": "Bürgerliches Lager- und Handelshaus im Hafen Gwynthors. Madog Schwarzgurt begründete den Betrieb mit Godwyn Doeths Tochter Gwen. Heute führt Gruffudds Onkel Bleddyn vier Lagerhäuser der Familie im großen Handelsposten der Klingenden Münze.",
+    "houseProfile": {
+      "rankId": "commoner",
+      "seat": "Gwynthor",
+      "barony": "Llamreis Ankunft",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "house-draig",
+      "liegeHouseName": "Haus Draig",
+      "regionEmblems": {
+        "seat": "",
+        "barony": "",
+        "county": "",
+        "kingdom": ""
+      }
+    }
+  },
+  "houses": [
+    {
+      "id": "house-gwregysdu",
+      "name": "Haus Gwregysdu",
+      "motto": "Was wir verbinden, trägt.",
+      "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Gwregysdu.png",
+      "status": "active"
+    },
+    {
+      "id": "house-doeth",
+      "name": "Familie Doeth",
+      "motto": "",
+      "emblem": "",
+      "status": "unknown"
+    },
+    {
+      "id": "house-bradrhith",
+      "name": "Haus Bradrhith",
+      "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Bradrhith.png",
+      "status": "active"
+    }
+  ],
+  "persons": [
+    {
+      "id": "madog-schwarzgurt",
+      "worldPersonId": "person--haus-gwregysdu--madog-schwarzgurt",
+      "name": "Madog Schwarzgurt",
+      "title": "Gründer · vom Waisenkind zum Lagerherrn",
+      "sex": "male",
+      "status": "dead",
+      "birth": "1568",
+      "death": "1647",
+      "portrait": "",
+      "portraitPlaceholder": "auto",
+      "houseId": "house-gwregysdu",
+      "familyRole": "core",
+      "lineageRole": "founder",
+      "tags": [
+        "Unehelich geboren",
+        "Cenyri",
+        "Aldrimarische Wurzeln"
+      ],
+      "notes": "Gründer des Hauses. Unehelich geborener Cenyri mit aldrimarischen Wurzeln; wuchs im Waisenheim Gwynthors auf. Leibliche Eltern und ein möglicher Clananschluss bleiben unbekannt. Arbeitete sich vom Laufburschen zum Facharbeiter, Vorarbeiter, Lagerverwalter und Stellvertreter Godwyn Doeths hoch. Erbte mit dessen Tochter Gwen die Lagerverwaltung und erweiterte sie über die Ehen seiner Söhne.",
+      "extensions": {}
+    },
+    {
+      "id": "gwen-doeth",
+      "worldPersonId": "person--haus-doeth--gwen-doeth",
+      "name": "Gwen Doeth",
+      "title": "Mitbegründerin · Tochter Godwyn Doeths",
+      "sex": "female",
+      "status": "dead",
+      "birth": "1573",
+      "death": "1656",
+      "portrait": "",
+      "portraitPlaceholder": "auto",
+      "houseId": "house-doeth",
+      "familyRole": "married",
+      "lineageRole": "branch",
+      "tags": [],
+      "notes": "Tochter des Lagerherrn Godwyn Doeth. Heiratete Madog 1596; beide erbten die auf Holzteile ausgerichtete Lagerverwaltung und bauten sie gemeinsam aus. Godwyns Lebensdaten sind nicht überliefert.",
+      "extensions": {}
+    },
+    {
+      "id": "dafydd-gwregysdu",
+      "worldPersonId": "person--haus-gwregysdu--dafydd-gwregysdu",
+      "name": "Dafydd Gwregysdu",
+      "title": "Älterer Gründer-Sohn · Jagdverbindungen",
+      "sex": "male",
+      "status": "dead",
+      "birth": "1598",
+      "death": "1671",
+      "portrait": "",
+      "portraitPlaceholder": "auto",
+      "houseId": "house-gwregysdu",
+      "familyRole": "core",
+      "lineageRole": "branch",
+      "tags": [],
+      "notes": "Älterer Sohn Madogs und Gwens. Seine Ehe mit Nest verband das Lagerhaus mit einer Jägerfamilie. Fell- und Pelzlieferungen ergänzten das Holzgeschäft.",
+      "extensions": {}
+    },
+    {
+      "id": "nest-gwregysdu",
+      "worldPersonId": "person--family-tree--nest-gwregysdu",
+      "name": "Nest",
+      "title": "",
+      "sex": "female",
+      "status": "dead",
+      "birth": "1601",
+      "death": "1658",
+      "portrait": "",
+      "portraitPlaceholder": "auto",
+      "houseId": "",
+      "familyRole": "married",
+      "lineageRole": "branch",
+      "tags": [],
+      "notes": "Cenyri aus einer Jägerfamilie; ihr Herkunftshaus bleibt offen. Heiratete Dafydd 1626.",
+      "extensions": {}
+    },
+    {
+      "id": "cynwal-gwregysdu",
+      "worldPersonId": "person--haus-gwregysdu--cynwal-gwregysdu",
+      "name": "Cynwal Gwregysdu",
+      "title": "Jüngerer Gründer-Sohn · Bergbauverbindungen",
+      "sex": "male",
+      "status": "dead",
+      "birth": "1601",
+      "death": "1679",
+      "portrait": "",
+      "portraitPlaceholder": "auto",
+      "houseId": "house-gwregysdu",
+      "familyRole": "core",
+      "lineageRole": "branch",
+      "tags": [],
+      "notes": "Jüngerer Sohn Madogs und Gwens. Die Ehe mit Delyth eröffnete Verbindungen zu Erz und Metall. Weitere Nachkommen dieses frühen Zweigs sind noch nicht ausgearbeitet.",
+      "extensions": {}
+    },
+    {
+      "id": "delyth-gwregysdu",
+      "worldPersonId": "person--family-tree--delyth-gwregysdu",
+      "name": "Delyth",
+      "title": "",
+      "sex": "female",
+      "status": "dead",
+      "birth": "1605",
+      "death": "1667",
+      "portrait": "",
+      "portraitPlaceholder": "auto",
+      "houseId": "",
+      "familyRole": "married",
+      "lineageRole": "branch",
+      "tags": [],
+      "notes": "Cenyri aus einer Bergbaufamilie; ihr Herkunftshaus bleibt offen. Heiratete Cynwal 1630.",
+      "extensions": {}
+    },
+    {
+      "id": "dyfnwal-gwregysdu",
+      "worldPersonId": "person--haus-gwregysdu--dyfnwal-gwregysdu",
+      "name": "Dyfnwal Gwregysdu",
+      "title": "Früheres Oberhaupt · Großvater Gruffudds",
+      "sex": "male",
+      "status": "dead",
+      "birth": "1635",
+      "death": "1710",
+      "portrait": "",
+      "portraitPlaceholder": "auto",
+      "houseId": "house-gwregysdu",
+      "familyRole": "core",
+      "lineageRole": "branch",
+      "tags": [],
+      "notes": "Dafydds und Nests Sohn; führte die Lagerverbindungen in die nächste Generation. Vater Bleddyns und Idris’.",
+      "extensions": {}
+    },
+    {
+      "id": "enfys-gwregysdu",
+      "worldPersonId": "person--family-tree--enfys-gwregysdu",
+      "name": "Enfys",
+      "title": "",
+      "sex": "female",
+      "status": "dead",
+      "birth": "1640",
+      "death": "1716",
+      "portrait": "",
+      "portraitPlaceholder": "auto",
+      "houseId": "",
+      "familyRole": "married",
+      "lineageRole": "branch",
+      "tags": [],
+      "notes": "Gemahlin Dyfnwals seit 1665. Cenyri; ihr Herkunftshaus bleibt offen.",
+      "extensions": {}
+    },
+    {
+      "id": "bleddyn-gwregysdu",
+      "worldPersonId": "person--haus-gwregysdu--bleddyn-gwregysdu",
+      "name": "Bleddyn Gwregysdu",
+      "title": "Herr des Hauses · Mitglied der Klingenden Münze",
+      "sex": "male",
+      "status": "alive",
+      "birth": "1669",
+      "death": "",
+      "portrait": "../AleriaAlmanach/assets/gwregysdu-harbor/portraits/bleddyn.png",
+      "portraitPlaceholder": "auto",
+      "houseId": "house-gwregysdu",
+      "familyRole": "core",
+      "lineageRole": "head",
+      "tags": [],
+      "notes": "71 Jahre. Gruffudds väterlicher Onkel führt die vier Lagerhäuser und vertritt das Haus innerhalb der Klingenden Münze. Höflich, besitzbewusst und geduldig: Er denkt in Verträgen und Generationen. Seit dem aufgedeckten Komplott prüft er jede Nachricht zweimal und gewährt kaum noch Einblick in seine Absichten.",
+      "extensions": {
+        "registryManagedFields": [
+          "title",
+          "notes",
+          "portrait"
+        ]
+      }
+    },
+    {
+      "id": "bethan-gwregysdu",
+      "worldPersonId": "person--haus-gwregysdu--bethan-gwregysdu",
+      "name": "Bethan",
+      "title": "Gemahlin Bleddyns · Haus und Verwandtschaft",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1672",
+      "death": "",
+      "portrait": "../AleriaAlmanach/assets/gwregysdu-harbor/portraits/bethan.png",
+      "portraitPlaceholder": "auto",
+      "houseId": "",
+      "familyRole": "married",
+      "lineageRole": "branch",
+      "tags": [],
+      "notes": "68 Jahre. Cenyri und seit 1692 mit Bleddyn verheiratet. Pflegt die Verwandtschaftsbesuche und kennt die Geschichte jeder größeren Eheverbindung. Ihr Herkunftshaus bleibt offen. Ihre verbindliche Freundlichkeit endet dort, wo jemand über ihre Enkel verfügen möchte.",
+      "extensions": {
+        "registryManagedFields": [
+          "title",
+          "notes",
+          "portrait"
+        ]
+      }
+    },
+    {
+      "id": "cynan-gwregysdu",
+      "worldPersonId": "person--haus-gwregysdu--cynan-gwregysdu",
+      "name": "Cynan Gwregysdu",
+      "title": "Ältester Sohn · Lager und Verträge",
+      "sex": "male",
+      "status": "alive",
+      "birth": "1694",
+      "death": "",
+      "portrait": "../AleriaAlmanach/assets/gwregysdu-harbor/portraits/cynan.png",
+      "portraitPlaceholder": "auto",
+      "houseId": "house-gwregysdu",
+      "familyRole": "core",
+      "lineageRole": "branch",
+      "tags": [],
+      "notes": "46 Jahre. Bleddyns ältester Sohn führt Lagerbelegung, Abrechnungen und die größeren Verträge. Er spricht knapp und lässt Zahlen für sich arbeiten. Seit 1716 mit Rhosyn verheiratet; Vater von Gethin und Elenwen.",
+      "extensions": {
+        "registryManagedFields": [
+          "title",
+          "notes",
+          "portrait"
+        ]
+      }
+    },
+    {
+      "id": "rhosyn-gwregysdu",
+      "worldPersonId": "person--haus-gwregysdu--rhosyn-gwregysdu",
+      "name": "Rhosyn",
+      "title": "Gemahlin Cynans · Korrespondenz des Hauses",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1697",
+      "death": "",
+      "portrait": "../AleriaAlmanach/assets/gwregysdu-harbor/portraits/rhosyn.png",
+      "portraitPlaceholder": "auto",
+      "houseId": "",
+      "familyRole": "married",
+      "lineageRole": "branch",
+      "tags": [],
+      "notes": "43 Jahre. Cenyri aus einer Jägerfamilie des Bannkreises; der Hausname bleibt vorerst offen. Seit 1716 mit Cynan verheiratet. Führt den familiären Briefwechsel und hält Verbindung zu den Fell- und Pelzlieferanten. Direkt, aufmerksam und wenig empfänglich für Drohgebärden.",
+      "extensions": {
+        "registryManagedFields": [
+          "title",
+          "notes",
+          "portrait"
+        ]
+      }
+    },
+    {
+      "id": "tudur-gwregysdu",
+      "worldPersonId": "person--haus-gwregysdu--tudur-gwregysdu",
+      "name": "Tudur Gwregysdu",
+      "title": "Jüngerer Sohn · Fracht und Handelspartner",
+      "sex": "male",
+      "status": "alive",
+      "birth": "1700",
+      "death": "",
+      "portrait": "../AleriaAlmanach/assets/gwregysdu-harbor/portraits/tudur.png",
+      "portraitPlaceholder": "auto",
+      "houseId": "house-gwregysdu",
+      "familyRole": "core",
+      "lineageRole": "branch",
+      "tags": [],
+      "notes": "40 Jahre. Bleddyns zweiter Sohn koordiniert Fuhrleute, Schiffer und die Verbindung zu den Falveri aus Venalys. Zugewandter als sein Bruder, mit gutem Gedächtnis für Gesichter und Gefälligkeiten. Seit 1723 mit Heulwen verheiratet; Vater von Iorath und Mared.",
+      "extensions": {
+        "registryManagedFields": [
+          "title",
+          "notes",
+          "portrait"
+        ]
+      }
+    },
+    {
+      "id": "heulwen-gwregysdu",
+      "worldPersonId": "person--haus-gwregysdu--heulwen-gwregysdu",
+      "name": "Heulwen",
+      "title": "Gemahlin Tudurs · Versorgung und Liefertermine",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1703",
+      "death": "",
+      "portrait": "../AleriaAlmanach/assets/gwregysdu-harbor/portraits/heulwen.png",
+      "portraitPlaceholder": "auto",
+      "houseId": "",
+      "familyRole": "married",
+      "lineageRole": "branch",
+      "tags": [],
+      "notes": "37 Jahre. Cenyri aus einer Familie mit Verbindungen zum Erztransport; ihr Herkunftshaus bleibt offen. Seit 1723 Tudurs Gemahlin. Stimmt die Versorgung der Lagerhöfe ab und kennt die Ankunftszeiten der Fuhrwerke. Besonnen, praktisch und schwer aus der Ruhe zu bringen.",
+      "extensions": {
+        "registryManagedFields": [
+          "title",
+          "notes",
+          "portrait"
+        ]
+      }
+    },
+    {
+      "id": "gethin-gwregysdu",
+      "worldPersonId": "person--haus-gwregysdu--gethin-gwregysdu",
+      "name": "Gethin Gwregysdu",
+      "title": "Enkel · Ausbildung im Lagergeschäft",
+      "sex": "male",
+      "status": "alive",
+      "birth": "1718",
+      "death": "",
+      "portrait": "../AleriaAlmanach/assets/gwregysdu-harbor/portraits/gethin.png",
+      "portraitPlaceholder": "auto",
+      "houseId": "house-gwregysdu",
+      "familyRole": "core",
+      "lineageRole": "branch",
+      "tags": [],
+      "notes": "22 Jahre, unverheiratet. Cynans und Rhosyns ältester Sohn lernt die Lagerführung. Will sich durch verlässliche Arbeit beweisen und reagiert ungehalten, wenn man ihn auf Gruffudd reduziert.",
+      "extensions": {
+        "registryManagedFields": [
+          "title",
+          "notes",
+          "portrait"
+        ]
+      }
+    },
+    {
+      "id": "elenwen-gwregysdu",
+      "worldPersonId": "person--haus-gwregysdu--elenwen-gwregysdu",
+      "name": "Elenwen Gwregysdu",
+      "title": "Enkelin · Lernt Korrespondenz und Rechnung",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1722",
+      "death": "",
+      "portrait": "../AleriaAlmanach/assets/gwregysdu-harbor/portraits/elenwen.png",
+      "portraitPlaceholder": "auto",
+      "houseId": "house-gwregysdu",
+      "familyRole": "core",
+      "lineageRole": "branch",
+      "tags": [],
+      "notes": "18 Jahre, unverheiratet. Cynans und Rhosyns Tochter hilft ihrer Mutter mit Briefen und lernt Rechnungsführung. Wach und schlagfertig; sie hört bei Verwandtschaftsbesuchen genauer zu, als die Älteren vermuten.",
+      "extensions": {
+        "registryManagedFields": [
+          "title",
+          "notes",
+          "portrait"
+        ]
+      }
+    },
+    {
+      "id": "iorath-gwregysdu",
+      "worldPersonId": "person--haus-gwregysdu--iorath-gwregysdu",
+      "name": "Iorath Gwregysdu",
+      "title": "Enkel · Lernt Wege und Warenzeichen",
+      "sex": "male",
+      "status": "alive",
+      "birth": "1725",
+      "death": "",
+      "portrait": "../AleriaAlmanach/assets/gwregysdu-harbor/portraits/iorath.png",
+      "portraitPlaceholder": "auto",
+      "houseId": "house-gwregysdu",
+      "familyRole": "core",
+      "lineageRole": "branch",
+      "tags": [],
+      "notes": "15 Jahre. Tudurs und Heulwens Sohn begleitet seinen Vater auf kurzen Wegen im Handelsposten und lernt Warenzeichen und Gewichte. Neugierig und voller Fragen; er trägt noch keine eigene Führungsverantwortung.",
+      "extensions": {
+        "registryManagedFields": [
+          "title",
+          "notes",
+          "portrait"
+        ]
+      }
+    },
+    {
+      "id": "mared-gwregysdu",
+      "worldPersonId": "person--haus-gwregysdu--mared-gwregysdu",
+      "name": "Mared Gwregysdu",
+      "title": "Enkelin · Jüngstes Kind des Hauses",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1728",
+      "death": "",
+      "portrait": "../AleriaAlmanach/assets/gwregysdu-harbor/portraits/mared.png",
+      "portraitPlaceholder": "auto",
+      "houseId": "house-gwregysdu",
+      "familyRole": "core",
+      "lineageRole": "branch",
+      "tags": [],
+      "notes": "12 Jahre. Tudurs und Heulwens Tochter wächst zwischen Hausunterricht und den Besuchen der weitläufigen Verwandtschaft auf. Beobachtet aufmerksam, zeichnet gern Schiffe und hat keine feste Aufgabe im Betrieb.",
+      "extensions": {
+        "registryManagedFields": [
+          "title",
+          "notes",
+          "portrait"
+        ]
+      }
+    },
+    {
+      "id": "idris-gwregysdu",
+      "worldPersonId": "person--haus-gwregysdu--idris-gwregysdu",
+      "name": "Idris Gwregysdu",
+      "title": "Gruffudds Vater · Nebenlinie",
+      "sex": "male",
+      "status": "dead",
+      "birth": "1671",
+      "death": "1733",
+      "portrait": "",
+      "portraitPlaceholder": "auto",
+      "houseId": "house-gwregysdu",
+      "familyRole": "core",
+      "lineageRole": "branch",
+      "tags": [],
+      "notes": "Jüngerer Bruder Bleddyns und Vater von fünf Kindern. Gruffudd ist sein viertes Kind. Die Nebenlinie führt heute keinen eigenen Posten in der Hafenführung.",
+      "extensions": {}
+    },
+    {
+      "id": "eluned-gwregysdu",
+      "worldPersonId": "person--family-tree--eluned-gwregysdu",
+      "name": "Eluned",
+      "title": "",
+      "sex": "female",
+      "status": "dead",
+      "birth": "1671",
+      "death": "1739",
+      "portrait": "",
+      "portraitPlaceholder": "auto",
+      "houseId": "",
+      "familyRole": "married",
+      "lineageRole": "branch",
+      "tags": [],
+      "notes": "Cenyri und Gemahlin Idris’ seit 1689; Mutter seiner fünf Kinder. Ihr Herkunftshaus bleibt offen.",
+      "extensions": {}
+    },
+    {
+      "id": "heddwyn-gwregysdu",
+      "worldPersonId": "person--haus-gwregysdu--heddwyn-gwregysdu",
+      "name": "Heddwyn Gwregysdu",
+      "title": "Nebenlinie · ältestes Geschwister Gruffudds",
+      "sex": "male",
+      "status": "alive",
+      "birth": "1690",
+      "death": "",
+      "portrait": "",
+      "portraitPlaceholder": "auto",
+      "houseId": "house-gwregysdu",
+      "familyRole": "core",
+      "lineageRole": "branch",
+      "tags": [],
+      "notes": "Ältestes der fünf Kinder Idris’ und Eluneds. Eigener Lebensweg und Familienstand sind noch nicht ausgearbeitet.",
+      "extensions": {}
+    },
+    {
+      "id": "gwenllian-gwregysdu",
+      "worldPersonId": "person--haus-gwregysdu--gwenllian-gwregysdu",
+      "name": "Gwenllian Gwregysdu",
+      "title": "Nebenlinie · ältere Schwester Gruffudds",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1693",
+      "death": "",
+      "portrait": "",
+      "portraitPlaceholder": "auto",
+      "houseId": "house-gwregysdu",
+      "familyRole": "core",
+      "lineageRole": "branch",
+      "tags": [],
+      "notes": "Zweites Kind Idris’ und Eluneds. Eigener Lebensweg und Familienstand sind noch nicht ausgearbeitet.",
+      "extensions": {}
+    },
+    {
+      "id": "rhodri-gwregysdu",
+      "worldPersonId": "person--haus-gwregysdu--rhodri-gwregysdu",
+      "name": "Rhodri Gwregysdu",
+      "title": "Nebenlinie · älterer Bruder Gruffudds",
+      "sex": "male",
+      "status": "alive",
+      "birth": "1695",
+      "death": "",
+      "portrait": "",
+      "portraitPlaceholder": "auto",
+      "houseId": "house-gwregysdu",
+      "familyRole": "core",
+      "lineageRole": "branch",
+      "tags": [],
+      "notes": "Drittes Kind Idris’ und Eluneds. Eigener Lebensweg und Familienstand sind noch nicht ausgearbeitet. Nicht identisch mit dem gefangenen Zitteraal Rhodri.",
+      "extensions": {}
+    },
+    {
+      "id": "gruffudd-gwregysdu",
+      "worldPersonId": "person--almanach--go0d7ciwevxwk1cqvgzz",
+      "name": "Gruffudd Gwregysdu",
+      "title": "Nach Bradrhith verheiratet · in Haft",
+      "sex": "male",
+      "status": "alive",
+      "birth": "1697",
+      "death": "",
+      "portrait": "assets/images/portraits/haus-bradrhith/gruffudd-gwregysdu.png",
+      "portraitPlaceholder": "auto",
+      "houseId": "house-gwregysdu",
+      "familyRole": "core",
+      "lineageRole": "branch",
+      "tags": [
+        "Almanach-Charakter",
+        "Wegverheiratet"
+      ],
+      "notes": "Kaufmann aus der Familie Gwregysdu und Ehemann Arianwens. Veranlasste über einen Mittelsmann das Komplott gegen Mairwen, Llyr und deren Kinder. Sein Todesurteil ist für Ermittlungen ausgesetzt; er befindet sich isoliert im Gewahrsam der Draig. Eine vollzogene Hinrichtung oder Auflösung seiner Ehe ist nicht überliefert. Viertes von fünf Kindern Idris’ und Eluneds; Neffe Bleddyns. Seine Ehe und Kinder werden mit unveränderten Personen-IDs ausschließlich in der Bradrhith-Akte fortgeführt. Keine Führungsaufgabe im Hafenbetrieb.",
+      "extensions": {
+        "sourceCharacterId": "go0D7CiweVxWK1CqVgZz",
+        "registryManagedFields": [
+          "name",
+          "birth",
+          "death",
+          "status",
+          "portrait",
+          "portraitPlaceholder",
+          "notes"
+        ]
+      }
+    },
+    {
+      "id": "esyllt-gwregysdu",
+      "worldPersonId": "person--haus-gwregysdu--esyllt-gwregysdu",
+      "name": "Esyllt Gwregysdu",
+      "title": "Nebenlinie · jüngere Schwester Gruffudds",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1700",
+      "death": "",
+      "portrait": "",
+      "portraitPlaceholder": "auto",
+      "houseId": "house-gwregysdu",
+      "familyRole": "core",
+      "lineageRole": "branch",
+      "tags": [],
+      "notes": "Jüngstes der fünf Kinder Idris’ und Eluneds. Eigener Lebensweg und Familienstand sind noch nicht ausgearbeitet.",
+      "extensions": {}
+    },
+    {
+      "id": "arianwen-bradrhith",
+      "worldPersonId": "person--almanach--nliylooqslgwjusa1fpi",
+      "name": "Arianwen Bradrhith",
+      "title": "Ältere Tochter · in kirchlicher Buße",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1700",
+      "death": "",
+      "portrait": "assets/images/portraits/haus-bradrhith/arianwen-bradrhith.png",
+      "portraitPlaceholder": "auto",
+      "houseId": "house-bradrhith",
+      "familyRole": "married",
+      "lineageRole": "mainline",
+      "tags": [
+        "Almanach-Charakter",
+        "Orden der Geläuterten"
+      ],
+      "notes": "Ältere Tochter Ceredigs und Ehefrau Gruffudd Gwregysdus. Überlebte den Überfall mit ihrem Gemahl und ihren Kindern. Billigte die Einschüchterung Mairwens und Llyrs; das Gericht unterschied ihre Schuld von Gruffudds vorsätzlichem Mordkomplott. Büßt als Schweigende unter persönlicher Aufsicht Gwalchgwyn Saethwyrs. Ob ihre Kinder den Hof weiterführen oder dieser an Llyr Dewrdd ergeht, ist noch ungeklärt.",
+      "extensions": {
+        "sourceCharacterId": "nLIylooQSlgWjUsA1fpI",
+        "registryManagedFields": [
+          "name",
+          "birth",
+          "death",
+          "status",
+          "portrait",
+          "portraitPlaceholder",
+          "notes"
+        ]
+      }
+    }
+  ],
+  "partnerships": [
+    {
+      "id": "marriage-madog-gwen-gwregysdu",
+      "participantIds": [
+        "madog-schwarzgurt",
+        "gwen-doeth"
+      ],
+      "type": "marriage",
+      "status": "ended",
+      "start": "1596",
+      "end": "1647",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "marriage-dafydd-nest-gwregysdu",
+      "participantIds": [
+        "dafydd-gwregysdu",
+        "nest-gwregysdu"
+      ],
+      "type": "marriage",
+      "status": "ended",
+      "start": "1626",
+      "end": "1658",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {
+        "chartAlignParentPairOverChildPersonId": "dyfnwal-gwregysdu"
+      }
+    },
+    {
+      "id": "marriage-cynwal-delyth-gwregysdu",
+      "participantIds": [
+        "cynwal-gwregysdu",
+        "delyth-gwregysdu"
+      ],
+      "type": "marriage",
+      "status": "ended",
+      "start": "1630",
+      "end": "1667",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "marriage-dyfnwal-enfys-gwregysdu",
+      "participantIds": [
+        "dyfnwal-gwregysdu",
+        "enfys-gwregysdu"
+      ],
+      "type": "marriage",
+      "status": "ended",
+      "start": "1665",
+      "end": "1710",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "marriage-bleddyn-bethan-gwregysdu",
+      "participantIds": [
+        "bleddyn-gwregysdu",
+        "bethan-gwregysdu"
+      ],
+      "type": "marriage",
+      "status": "active",
+      "start": "1692",
+      "end": "",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "marriage-idris-eluned-gwregysdu",
+      "participantIds": [
+        "idris-gwregysdu",
+        "eluned-gwregysdu"
+      ],
+      "type": "marriage",
+      "status": "ended",
+      "start": "1689",
+      "end": "1733",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {
+        "chartAlignChildGroupBelowParentPair": true
+      }
+    },
+    {
+      "id": "marriage-cynan-rhosyn-gwregysdu",
+      "participantIds": [
+        "cynan-gwregysdu",
+        "rhosyn-gwregysdu"
+      ],
+      "type": "marriage",
+      "status": "active",
+      "start": "1716",
+      "end": "",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {
+        "chartAlignChildGroupBelowParentPair": true
+      }
+    },
+    {
+      "id": "marriage-tudur-heulwen-gwregysdu",
+      "participantIds": [
+        "tudur-gwregysdu",
+        "heulwen-gwregysdu"
+      ],
+      "type": "marriage",
+      "status": "active",
+      "start": "1723",
+      "end": "",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {
+        "chartAlignChildGroupBelowParentPair": true
+      }
+    },
+    {
+      "id": "marriage-arianwen-gruffudd",
+      "participantIds": [
+        "arianwen-bradrhith",
+        "gruffudd-gwregysdu"
+      ],
+      "type": "marriage",
+      "status": "active",
+      "start": "1720",
+      "end": "",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    }
+  ],
+  "parentages": [
+    {
+      "id": "parentage-dafydd-gwregysdu",
+      "childId": "dafydd-gwregysdu",
+      "parentIds": [
+        "madog-schwarzgurt",
+        "gwen-doeth"
+      ],
+      "partnershipId": "marriage-madog-gwen-gwregysdu",
+      "type": "biological",
+      "legitimacy": "legitimate",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "parentage-cynwal-gwregysdu",
+      "childId": "cynwal-gwregysdu",
+      "parentIds": [
+        "madog-schwarzgurt",
+        "gwen-doeth"
+      ],
+      "partnershipId": "marriage-madog-gwen-gwregysdu",
+      "type": "biological",
+      "legitimacy": "legitimate",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "parentage-dyfnwal-gwregysdu",
+      "childId": "dyfnwal-gwregysdu",
+      "parentIds": [
+        "dafydd-gwregysdu",
+        "nest-gwregysdu"
+      ],
+      "partnershipId": "marriage-dafydd-nest-gwregysdu",
+      "type": "biological",
+      "legitimacy": "legitimate",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "parentage-bleddyn-gwregysdu",
+      "childId": "bleddyn-gwregysdu",
+      "parentIds": [
+        "dyfnwal-gwregysdu",
+        "enfys-gwregysdu"
+      ],
+      "partnershipId": "marriage-dyfnwal-enfys-gwregysdu",
+      "type": "biological",
+      "legitimacy": "legitimate",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "parentage-idris-gwregysdu",
+      "childId": "idris-gwregysdu",
+      "parentIds": [
+        "dyfnwal-gwregysdu",
+        "enfys-gwregysdu"
+      ],
+      "partnershipId": "marriage-dyfnwal-enfys-gwregysdu",
+      "type": "biological",
+      "legitimacy": "legitimate",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "parentage-cynan-gwregysdu",
+      "childId": "cynan-gwregysdu",
+      "parentIds": [
+        "bleddyn-gwregysdu",
+        "bethan-gwregysdu"
+      ],
+      "partnershipId": "marriage-bleddyn-bethan-gwregysdu",
+      "type": "biological",
+      "legitimacy": "legitimate",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "parentage-tudur-gwregysdu",
+      "childId": "tudur-gwregysdu",
+      "parentIds": [
+        "bleddyn-gwregysdu",
+        "bethan-gwregysdu"
+      ],
+      "partnershipId": "marriage-bleddyn-bethan-gwregysdu",
+      "type": "biological",
+      "legitimacy": "legitimate",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "parentage-gethin-gwregysdu",
+      "childId": "gethin-gwregysdu",
+      "parentIds": [
+        "cynan-gwregysdu",
+        "rhosyn-gwregysdu"
+      ],
+      "partnershipId": "marriage-cynan-rhosyn-gwregysdu",
+      "type": "biological",
+      "legitimacy": "legitimate",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "parentage-elenwen-gwregysdu",
+      "childId": "elenwen-gwregysdu",
+      "parentIds": [
+        "cynan-gwregysdu",
+        "rhosyn-gwregysdu"
+      ],
+      "partnershipId": "marriage-cynan-rhosyn-gwregysdu",
+      "type": "biological",
+      "legitimacy": "legitimate",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "parentage-iorath-gwregysdu",
+      "childId": "iorath-gwregysdu",
+      "parentIds": [
+        "tudur-gwregysdu",
+        "heulwen-gwregysdu"
+      ],
+      "partnershipId": "marriage-tudur-heulwen-gwregysdu",
+      "type": "biological",
+      "legitimacy": "legitimate",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "parentage-mared-gwregysdu",
+      "childId": "mared-gwregysdu",
+      "parentIds": [
+        "tudur-gwregysdu",
+        "heulwen-gwregysdu"
+      ],
+      "partnershipId": "marriage-tudur-heulwen-gwregysdu",
+      "type": "biological",
+      "legitimacy": "legitimate",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "parentage-heddwyn-gwregysdu",
+      "childId": "heddwyn-gwregysdu",
+      "parentIds": [
+        "idris-gwregysdu",
+        "eluned-gwregysdu"
+      ],
+      "partnershipId": "marriage-idris-eluned-gwregysdu",
+      "type": "biological",
+      "legitimacy": "legitimate",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "parentage-gwenllian-gwregysdu",
+      "childId": "gwenllian-gwregysdu",
+      "parentIds": [
+        "idris-gwregysdu",
+        "eluned-gwregysdu"
+      ],
+      "partnershipId": "marriage-idris-eluned-gwregysdu",
+      "type": "biological",
+      "legitimacy": "legitimate",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "parentage-rhodri-gwregysdu",
+      "childId": "rhodri-gwregysdu",
+      "parentIds": [
+        "idris-gwregysdu",
+        "eluned-gwregysdu"
+      ],
+      "partnershipId": "marriage-idris-eluned-gwregysdu",
+      "type": "biological",
+      "legitimacy": "legitimate",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "parentage-gruffudd-gwregysdu",
+      "childId": "gruffudd-gwregysdu",
+      "parentIds": [
+        "idris-gwregysdu",
+        "eluned-gwregysdu"
+      ],
+      "partnershipId": "marriage-idris-eluned-gwregysdu",
+      "type": "biological",
+      "legitimacy": "legitimate",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "parentage-esyllt-gwregysdu",
+      "childId": "esyllt-gwregysdu",
+      "parentIds": [
+        "idris-gwregysdu",
+        "eluned-gwregysdu"
+      ],
+      "partnershipId": "marriage-idris-eluned-gwregysdu",
+      "type": "biological",
+      "legitimacy": "legitimate",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    }
+  ],
+  "cadetBranches": [
+    {
+      "id": "gruffudd-nach-bradrhith",
+      "name": "Haus Bradrhith",
+      "subtitle": "Gruffudds Ehe und Kinder · Bradrhith",
+      "linkType": "married-away",
+      "parentPartnershipId": "marriage-arianwen-gruffudd",
+      "parentPersonId": "",
+      "childIds": [],
+      "houseId": "house-bradrhith",
+      "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Bradrhith.png",
+      "emblemScale": 0.86,
+      "crestFrame": "iron",
+      "frameScale": 1,
+      "founded": "",
+      "targetFamilyId": "haus-bradrhith",
+      "notes": "Ehe mit Arianwen seit 1720; Eiludd, Gwrfyw und Creirwy werden in der bestehenden Bradrhith-Akte fortgeführt.",
+      "extensions": {
+        "chartAlignBelowPartnership": true
+      }
+    }
+  ],
+  "timeJumps": [],
+  "lineage": {
+    "founderPartnershipId": "marriage-madog-gwen-gwregysdu",
+    "houseId": "house-gwregysdu",
+    "crestSubtitle": "Vier Lagerhäuser · Klingende Münze",
+    "crestEmblemScale": 0.86,
+    "crestFrame": "iron",
+    "crestFrameScale": 1,
+    "timeGap": {
+      "enabled": false,
+      "years": 0,
+      "fromYear": "",
+      "toYear": "",
+      "label": ""
+    }
+  },
+  "presentation": {
+    "relationshipColors": {
+      "marriage": "#326c4a",
+      "engagement": "#b88b37",
+      "union": "#8e2724",
+      "affair": "#704485",
+      "concubinage": "#704485",
+      "political": "#9d7d48",
+      "forced": "#c7a974",
+      "biological": "#8e2724",
+      "adoptive": "#2f75a8",
+      "foster": "#2f75a8",
+      "step": "#7eb4d7",
+      "magical": "#704485",
+      "claimed": "#62615e"
+    }
+  },
+  "view": {
+    "focusPersonId": "bleddyn-gwregysdu",
+    "orientation": "vertical",
+    "ancestorDepth": 12,
+    "descendantDepth": 12,
+    "limitGenerations": false,
+    "showSiblings": true
+  },
+  "extensions": {
+    "blankFamily": false,
+    "sourceRevision": 1,
+    "chartLayoutPolicy": "strict-v1",
+    "houseBiographyModule": {
+      "schema": "aleria.house-module",
+      "schemaVersion": 1,
+      "pageTitle": "Haus Gwregysdu",
+      "housePage": true,
+      "image": "../AleriaAlmanach/assets/gwregysdu-harbor/scenes/hausgeschichte.png",
+      "imageWidth": 32,
+      "imageTall": true,
+      "description": "Heute besitzt die Familie vier Lagerhäuser im Hafen Gwynthors, innerhalb des großen Handelspostens der Klingenden Münze. Die Gwregysdu sind dort eine von mehreren selbstständigen Parteien. Bleddyn und seine Söhne übernehmen Lagerung, Umschlag und Vertrieb; Verträge mit Höfen und Ressourcenbetrieben des Umlandes bilden die Grundlage. Eine wichtige venalische Verbindung führt zum Haus Falveri, ebenfalls im Umfeld der Klingenden Münze.",
+      "stats": [
+        [
+          "Stand",
+          "Bürgerliches Handelshaus"
+        ],
+        [
+          "Sitz",
+          "Gwynthor · Hafen"
+        ],
+        [
+          "Gründer",
+          "Madog Schwarzgurt"
+        ],
+        [
+          "Oberhaupt",
+          "Bleddyn Gwregysdu"
+        ],
+        [
+          "Gilde",
+          "Klingende Münze"
+        ],
+        [
+          "Besitz",
+          "Vier Lagerhäuser im großen Handelsposten"
+        ]
+      ],
+      "house": {
+        "crestImage": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Gwregysdu.png",
+        "biographyTitle": "Haus Gwregysdu · Vom Schwarzgurt zum Lagerherrn",
+        "biographyText": "<p>Madog Schwarzgurt war ein Cenyri mit aldrimarischen Wurzeln, ein unehelich geborenes Waisenkind aus Gwynthor. Als Laufbursche im Hafen machte er sich durch Verlässlichkeit unentbehrlich. Aus dem Gehilfen wurde ein Facharbeiter, aus dem Vorarbeiter ein Lagerverwalter und schließlich Godwyn Doeths Stellvertreter. Er heiratete dessen Tochter Gwen und erbte mit ihr die Lagerverwaltung, die zunächst vor allem Holzteile aufnahm.</p>",
+        "historyTitle": "Ehen, Waren und Erbansprüche",
+        "historyText": "<p>Madog erweiterte den Betrieb. Die Ehen seiner Söhne erschlossen Beziehungen zu Jäger- und Bergbaufamilien: Pferde, Pelze, Felle, Metalle und Erze kamen zum Holzgeschäft hinzu. Aus Schwarzgurt wurde im cenyrischen Familiennamen Gwregysdu. Über Generationen wurden Ehen bewusst dort gesucht, wo sie Betriebe, Ressourcen und Erbansprüche verbanden. Der gewachsene Warenverkehr führte das Haus in die Klingende Münze.</p><p>Heute besitzt die Familie vier Lagerhäuser im Hafen Gwynthors, innerhalb des großen Handelspostens der Klingenden Münze. Die Gwregysdu sind dort eine von mehreren selbstständigen Parteien. Bleddyn und seine Söhne übernehmen Lagerung, Umschlag und Vertrieb; Verträge mit Höfen und Ressourcenbetrieben des Umlandes bilden die Grundlage. Eine wichtige venalische Verbindung führt zum Haus Falveri, ebenfalls im Umfeld der Klingenden Münze.</p>",
+        "extraSections": [
+          {
+            "position": "afterWorks",
+            "title": "Der Zugriff auf Bradrhith",
+            "text": "Der nach Bradrhith verheiratete Gruffudd sollte dem Haus den Zugang zur Ceffyl-Zucht verschaffen. Sein über Mittelsmänner veranlasstes Mordkomplott wurde aufgedeckt; Mairwen und ihre Kinder starben, Llyr überlebte. Gruffudd sitzt isoliert bei den Draig, sein Todesurteil ist für weitere Ermittlungen ausgesetzt. Die Familie Gwregysdu steht unter Verdacht; die persönliche Beteiligung einzelner Angehöriger des heutigen Führungskreises ist noch nicht geklärt. Bleddyn, Gruffudds väterlicher Onkel, bleibt Herr des Hauses. Seine beiden Söhne Cynan und Tudur tragen die laufende Führung. Gruffudd gehörte als viertes von fünf Kindern zur Nebenlinie seines Vaters Idris und war nicht für das Familienerbe vorgesehen. Die Bradrhith-Nachfolge bleibt nach der jüngsten Autorenfestlegung offen; eine Übernahme des Gestüts durch die Gwregysdu ist nicht erfolgt."
+          },
+          {
+            "position": "afterWorks",
+            "title": "Verbindungen im Schatten",
+            "text": "Gruffudds Verbindung zu den Schwarzen Zitteraalen führte über Selvor, genannt Schattenauge, der als Zeitungsschreiber in Mwynfaen auftrat. Im Hafen reichen die Kontaktwege des Hauses bis zu Mittlern der Gleißenden Hand. Welche dieser Bekanntschaften dem Handel dienen und welche dem Verschieben unverzeichneter Fracht, wird hinter verschlossenen Türen verhandelt. Über Schmuggel und weitere Unterweltgeschäfte wird gesprochen; einzelne Ladungen, Täter und Vereinbarungen sind bisher nicht offengelegt."
+          }
+        ],
+        "worksTitle": "Wovon das Haus lebt",
+        "works": [
+          "Lagergebühren für eigene und anvertraute Fracht; Umschlag, Wiegen und die Zusammenstellung größerer Lieferungen.",
+          "Vertrieb im Auftrag gegen vereinbarten Anteil; ergänzend auf eigene Rechnung erworbene Waren.",
+          "Langjährige Lieferverbindungen zu Holz-, Jagd-, Pferde- und Bergbaubetrieben. Verwandtschaft allein überträgt noch kein Eigentum."
+        ],
+        "triviaTitle": "Das Haus",
+        "trivia": [
+          "Madogs leibliche Eltern sind nicht überliefert. Seine aldrimarischen Wurzeln begründen keinen erfundenen Clananschluss.",
+          "Die Ehefrauen des heutigen Hauptzweigs sind Cenyri; ihre Herkunftshäuser bleiben zunächst offen.",
+          "Die Rote Kompanie stellt vertraglich gebundene Wachleute. Ihre Zugehörigkeit belegt keine Teilnahme an Gruffudds Verbrechen."
+        ],
+        "quotesTitle": "Wahlspruch",
+        "quotes": [
+          "Was wir verbinden, trägt."
+        ],
+        "connectionsTitle": "Handel, Verwandtschaft und gefährliche Wege",
+        "connections": [
+          {
+            "name": "Klingende Münze",
+            "image": "../Fraktionen/assets/emblems/gilden/klingende-muenze.webp",
+            "detail": "Gildenzugehörigkeit und Vertrieb innerhalb ihres großen Gwynthorer Handelspostens. Vier Lagerhäuser gehören den Gwregysdu."
+          },
+          {
+            "name": "Haus Falveri · Venalys",
+            "image": "../Stammbäume/assets/images/houses/Venalys/haus-falveri.png",
+            "detail": "Wichtiger Handelspartner innerhalb der Klingenden Münze. Die Verbindung besteht zwischen den Häusern; sie setzt keine neue Ehe oder politische Unterordnung voraus."
+          },
+          {
+            "name": "Rote Kompanie",
+            "image": "../Fraktionen/assets/emblems/gilden/rote-kompanie.webp",
+            "detail": "Bezahlter Wachdienst an Toren und Lagerhäusern; örtliche Einsatzleitung durch den Optio Pilo."
+          },
+          {
+            "name": "Schwarze Zitteraale",
+            "detail": "Gruffudds belegtes Komplott über den Mittler Selvor, genannt Schattenauge. Ermittlungen gegen Kontaktwege und mögliche Helfer dauern an."
+          },
+          {
+            "name": "Gleißende Hand",
+            "image": "../Fraktionen/assets/emblems/dunkle-gilden/die-gleissende-hand.webp",
+            "detail": "Kontakte über Hafenmittler. Reichweite und Inhalt möglicher illegaler Geschäfte bleiben im Verborgenen."
+          }
+        ],
+        "documentsTitle": "Familie und Nebenlinie",
+        "documents": [
+          {
+            "title": "Stammbaum des Hauses Gwregysdu",
+            "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Gwregysdu.png",
+            "text": "Madog und Gwen, die gewachsenen Linien und Bleddyns heutiger Hauptzweig.",
+            "link": "../Stammbäume/Stammbaum.html?family=haus-gwregysdu&mode=view"
+          },
+          {
+            "title": "Haus Bradrhith · Gruffudds Linie",
+            "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Bradrhith.png",
+            "text": "Gruffudd, Arianwen und ihre bereits angelegten Kinder mit unveränderten Identitäten.",
+            "link": "../Stammbäume/Stammbaum.html?family=haus-bradrhith&mode=view&person=gruffudd-gwregysdu"
+          }
+        ]
+      },
+      "quote": "Was wir verbinden, trägt.",
+      "quoteBy": "Wahlspruch des Hauses"
+    },
+    "sourceNote": "Autorenauftrag vom 18.10.2026: Madog Schwarzgurt und Godwyn Doeth, beruflicher Aufstieg, eheliche Ressourcenverbindungen, vier Lagerhäuser der Klingenden Münze, ein leitender Onkel mit zwei Söhnen, Gruffudd als wegverheiratete Nebenlinie. Namen und Lebensdaten der neuen Generationen sind ergänzende Ausarbeitung; sie stammen nicht aus der Anhörung. Gruffudds bestehende Weltpersonen-ID, Haft, Ehe und Kinder bleiben erhalten. Drei ältere und ein jüngeres Geschwister bewahren seinen bestehenden Rang als viertes von fünf Kindern. Angeheiratete Frauen sind Cenyri mit zunächst offenem Herkunftshaus. Keine behauptete Übernahme des Bradrhith-Hofs."
+  }
+}

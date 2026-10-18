@@ -1,0 +1,233 @@
+{
+  "schemaVersion": 1,
+  "tool": "built-in image_gen",
+  "images": [
+    {
+      "id": "wappen",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-a8297931-0d50-44c5-ac92-aa9b6ab426bb.png",
+      "destination": "Stammbäume/assets/images/houses/Ceitheach/sept-cneacail.png",
+      "width": 1385,
+      "height": 1385,
+      "sha256": "72e80fb99217bd273a2b63d619d897d2e656ff821a567c3e7f30081e5accaa5b",
+      "postprocess": {
+        "authorization": "User explicitly approved alpha and outer margin cleanup for the Cneacail crest on 2026-10-18.",
+        "originalRgbPreserved": true,
+        "shape": "circle",
+        "originalSize": [
+          1254,
+          1254
+        ],
+        "finalSize": [
+          1385,
+          1385
+        ],
+        "originalBounds": [
+          15,
+          5,
+          1240,
+          1235
+        ],
+        "offset": [
+          65,
+          72
+        ],
+        "radius": [
+          602.5,
+          602.5
+        ],
+        "originalSha256": "92dbd378bda2e7d05bd4bb462d57293a7fb7c8e5d8d03d22f4f8d60862a11c3c",
+        "finalSha256": "72e80fb99217bd273a2b63d619d897d2e656ff821a567c3e7f30081e5accaa5b"
+      },
+      "promptId": "wappen"
+    },
+    {
+      "id": "alasdair",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-565791f2-f7b7-430a-9169-72296adc25a2.png",
+      "destination": "AleriaAlmanach/assets/letzter-heller/portraits/alasdair.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "ffe3dabb430001bbde8346116301f730217e7b72ad9275de7c8274a36d6fb811",
+      "promptId": "alasdair"
+    },
+    {
+      "id": "arran",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-a9ad9a3d-a700-466b-885f-e52a52e50b2e.png",
+      "destination": "AleriaAlmanach/assets/letzter-heller/portraits/arran.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "1af40d0888cab5e47749ad9a6f72b78d1ba216153b1485794e0fd51fadbff52b",
+      "promptId": "arran"
+    },
+    {
+      "id": "finlay",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-f8493ea7-5d87-4213-a533-68de3d2ccf1a.png",
+      "destination": "AleriaAlmanach/assets/letzter-heller/portraits/finlay.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "1e1db3b1a1998f0e3a74d38a345d9666c5233b7b81a021ded00fae42c6eb9d19",
+      "promptId": "finlay"
+    },
+    {
+      "id": "fergal",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-066b14ba-7d1f-40c4-8274-a1e225320664.png",
+      "destination": "AleriaAlmanach/assets/letzter-heller/portraits/fergal.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "d49de6ec639fa140d623de8135b163bc55bed1f08c98fa2738f12b07d1bd4005",
+      "promptId": "fergal"
+    },
+    {
+      "id": "sorcha",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-fa3d9782-0375-4700-98d9-2464d758ac7c.png",
+      "destination": "AleriaAlmanach/assets/letzter-heller/portraits/sorcha.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "f205aa9ebf491a0487976648bb1496e870272cd130b2d99efadea898b28c67a7",
+      "promptId": "sorcha"
+    },
+    {
+      "id": "eilidh",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-7d2324b6-579a-49ec-8023-4fab23025ba8.png",
+      "destination": "AleriaAlmanach/assets/letzter-heller/portraits/eilidh.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "f77985e0882f0f212357bc92c06e2ab33a3044560d6774731ddf62818aca9475",
+      "promptId": "eilidh"
+    },
+    {
+      "id": "mairead",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-934c25f2-f9f3-484d-a417-cd60e7681717.png",
+      "destination": "AleriaAlmanach/assets/letzter-heller/portraits/mairead.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "833b80c3b6d508b40b49978e8d913352c393c6cff8e173cdd44ade064deac5d1",
+      "promptId": "mairead"
+    },
+    {
+      "id": "fiona",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-52321c15-1b01-4ed8-a614-60a3e7028f88.png",
+      "destination": "AleriaAlmanach/assets/letzter-heller/portraits/fiona.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "dff142c64c21fad3dfee51e24dba1d2e4a2d7b7e6dc10f21f1bf06974e54eb8d",
+      "promptId": "fiona"
+    },
+    {
+      "id": "runa",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-e1d847b0-5c8b-4f91-a609-8614d66d8a18.png",
+      "destination": "AleriaAlmanach/assets/letzter-heller/portraits/runa.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "0cec64ec0d5a80e651c4f86f2c8ae9fe68305404f4a67256ae699b4971b72671",
+      "promptId": "runa"
+    },
+    {
+      "id": "signe",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-6a1e5539-fa7a-4b82-8a5b-92a0b1b84d4d.png",
+      "destination": "AleriaAlmanach/assets/letzter-heller/portraits/signe.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "887afac8ee0aa99e505b1708efab57c7e88f943450a3fb31515c42b3e16ab117",
+      "promptId": "signe"
+    },
+    {
+      "id": "sten",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-b6d5f1ff-4fb3-43dc-9c4d-fb7cbf25da79.png",
+      "destination": "AleriaAlmanach/assets/letzter-heller/portraits/sten.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "606f71b02238588dbfde6e45018701ac47f9a45b8b24492595ced46f69124f06",
+      "promptId": "sten"
+    },
+    {
+      "id": "maela",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-3aecea8c-a849-4ff1-a1b0-fe82b4533092.png",
+      "destination": "AleriaAlmanach/assets/letzter-heller/portraits/maela.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "4f432b6fd919f4d2b871b271c3ed7973528ea13c7cf7c025730bf492ef541d19",
+      "promptId": "maela"
+    },
+    {
+      "id": "borst",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-34c18c32-c4bf-4b46-a8f5-8f0c5a4d23fb.png",
+      "destination": "AleriaAlmanach/assets/letzter-heller/pets/borst.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "1f4e1d751af16a1985320bbd4a84f971474288afc9d28e226e495c55d7757514",
+      "promptId": "borst"
+    },
+    {
+      "id": "aussenansicht",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-9c7c1910-2537-426b-a6f0-91e4274cc8ca.png",
+      "destination": "AleriaAlmanach/assets/letzter-heller/scenes/aussenansicht.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "5712c305e8dc992b4c9fd613cb29e99e7b5769c7c38e53b4d94d86d6c267fbdb",
+      "promptId": "aussenansicht"
+    },
+    {
+      "id": "schankstube",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-fa230d5d-1628-47b4-9bb6-3a94f2710272.png",
+      "destination": "AleriaAlmanach/assets/letzter-heller/scenes/schankstube.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "1821beddbfc3c1193156f8c9cc107f2dc162e02c0ce73ba22632531fb9957b6c",
+      "promptId": "schankstube"
+    },
+    {
+      "id": "kammerflur",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-d0d9a07f-7d78-4932-b4e3-160b05ebbf20.png",
+      "destination": "AleriaAlmanach/assets/letzter-heller/scenes/kammerflur.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "ed05045126928e2a5047ff1af1274ad4501b8823bc7a0a2876cab0599519f6f8",
+      "promptId": "kammerflur"
+    },
+    {
+      "id": "kammer",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-ed7aa140-01b6-47ac-b6bb-34b5d54c57ae.png",
+      "destination": "AleriaAlmanach/assets/letzter-heller/scenes/kammer.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "1e9052e45340ddc33e909be5b75fe6e73394ceca2defc69fdeb7fe0df732c2f5",
+      "promptId": "kammer"
+    },
+    {
+      "id": "cneacail-flusshell",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-fd3bf10f-77a3-42a3-8642-ba18a256c6fe.png",
+      "destination": "AleriaAlmanach/assets/letzter-heller/goods/cneacail-flusshell.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "121a95f161cfc670045475b291187388a5231b7a310677f705addaa3c7f6a661",
+      "promptId": "cneacail-flusshell"
+    },
+    {
+      "id": "cneacail-huegeldunkel",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-f78af9c7-80e5-44d0-8e86-7f134811a287.png",
+      "destination": "AleriaAlmanach/assets/letzter-heller/goods/cneacail-huegeldunkel.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "e0f5bf5adcb352c973343dfc4ec48dd370ea46f881cef9af6552b0adf3372cef",
+      "promptId": "cneacail-huegeldunkel"
+    },
+    {
+      "id": "bun-na-h-aibhne",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-ec95d464-8940-488c-894c-42f3c1f72fe2.png",
+      "destination": "AleriaAlmanach/assets/letzter-heller/goods/bun-na-h-aibhne.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "148c4cf89b234c9a990fceea3717fc03b79cfafc4e1f6c8a56fd863d21354399",
+      "promptId": "bun-na-h-aibhne"
+    },
+    {
+      "id": "familienerinnerung",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-0c719ff4-9bdc-4b9a-a1b2-e9efba01f15f.png",
+      "destination": "AleriaAlmanach/assets/letzter-heller/scenes/familienerinnerung.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "917f5027b014cd20526cf3de5a8e3ec341296d8bc1b4c8e2657aed502909591f",
+      "promptId": "familienerinnerung"
+    }
+  ]
+}

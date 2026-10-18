@@ -1,0 +1,2358 @@
+{
+  "type": "aleria-module-package",
+  "version": 1,
+  "exportedAt": "2026-10-18T00:00:00Z",
+  "module": {
+    "type": "aleria-module",
+    "version": 1,
+    "section": {
+      "key": "Gwynthor",
+      "tab": "Völker & Kulturen",
+      "desc": "",
+      "nodeId": "node:volker-kulturen:cenyr/celtigerns-wacht/llamreis-ankunft/gwynthor",
+      "path": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Gwynthor"
+      ]
+    },
+    "entry": {
+      "id": "gwynthor-zum-letzten-heller",
+      "title": "Zum Letzten Heller",
+      "subtitle": "Billiger Trunk und dünne Wände · Alasdair Cneacail",
+      "type": "Bordell",
+      "category": "Gwynthor · Hafenviertel",
+      "icon": "♧",
+      "symbol": "../Stammbäume/assets/images/houses/Ceitheach/sept-cneacail.png",
+      "image": "./assets/letzter-heller/scenes/aussenansicht.png",
+      "previewImage": "./assets/letzter-heller/scenes/aussenansicht.png",
+      "stamp": "ZUM LETZTEN HELLER · CNEACAIL",
+      "schemaVersion": 1,
+      "multipage": true,
+      "appendCommentsPage": true,
+      "enablePageComments": true,
+      "sessionCast": [
+        "person--sept-cneacail--alasdair-cneacail",
+        "person--letzter-heller--fergal",
+        "person--letzter-heller--sorcha",
+        "person--letzter-heller--eilidh",
+        "person--letzter-heller--mairead",
+        "person--letzter-heller--fiona",
+        "person--letzter-heller--runa",
+        "person--letzter-heller--signe",
+        "person--letzter-heller--sten",
+        "person--letzter-heller--maela"
+      ],
+      "pages": [
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "heller-einordnung",
+          "pageTitle": "Zum Letzten Heller",
+          "image": "./assets/letzter-heller/scenes/aussenansicht.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "description": "<p>Im Hafenviertel hängt ein dünn bemaltes Holzschild über einer verzogenen Tür: ein Fass, um das sich ein kahler Baum windet. Darunter steht <strong>Zum Letzten Heller</strong>. Salzwind hat den Putz abgeblättert, ein Fenster wurde mit Brettern geflickt. Aus der Schankstube dringen Stimmen und das Schaben schwerer Stühle.</p><p>Alasdair Cneacail führt hier ein billiges Bordell. Unten gibt es gewöhnliche Getränke und einfache Tavernenportionen; oben liegen drei kleine Kammern für kurze Besuche. Die Frauen stammen überwiegend aus Ceitheach und Aldrimar. Viele hat die Flucht nach Gwynthor verschlagen, und der nächste Lohn lässt wenig Raum für große Pläne.</p><p>Hinter dem Tresen stehen die Erinnerungen an ein anderes Leben: zwei leere Bierfässer und vier verschlossene Flaschen <strong>Bun na h-Aibhne</strong>. Vom alten Wohlstand der Cneacail ist hier wenig übrig.</p>",
+          "stats": [
+            [
+              "Ort",
+              "Gwynthor · Hafenviertel"
+            ],
+            [
+              "Inhaber",
+              "Alasdair Cneacail · 44 Jahre"
+            ],
+            [
+              "Angebot",
+              "Billiger Ausschank · einfache Speisen · Zweisamkeit"
+            ],
+            [
+              "Räume",
+              "Schankstube · drei Kammern am Flur"
+            ],
+            [
+              "Herkunft",
+              "Sept Cneacail · Bun na h-Aibhne"
+            ]
+          ]
+        },
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "heller-alasdair",
+          "pageTitle": "Alasdair Cneacail · Was übrig blieb",
+          "biographyPage": true,
+          "image": "./assets/letzter-heller/portraits/alasdair.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "contain",
+          "stats": [
+            [
+              "Geboren",
+              "1696 · Bun na h-Aibhne"
+            ],
+            [
+              "Alter",
+              "44 Jahre · vorzeitig gealtert"
+            ],
+            [
+              "Herkunft",
+              "Ceitheach · Tir na Dorcha"
+            ],
+            [
+              "Besitz",
+              "Zum Letzten Heller"
+            ]
+          ],
+          "biography": {
+            "crestImage": "../Stammbäume/assets/images/houses/Ceitheach/sept-cneacail.png",
+            "biographyTitle": "Alasdair Cneacail",
+            "biographyText": "<p>Alasdair ist Arrans älterer Sohn. Er war vierundzwanzig, als die Plünderung von Bun na h-Aibhne seine Familie auseinanderbrach. Heute ist er stark beleibt, halb kahl und älter anzusehen, als seine vierundvierzig Jahre vermuten lassen. Hinter dem Tresen hört man ihn häufiger rechnen als lachen.</p>",
+            "historyTitle": "Ein Erbe mit fremden Bedingungen",
+            "historyText": "<p>Nach Arrans Tod behielt Alasdair die Hafentaverne. Der Besitz brachte ihm Wände, Schulden und eine Schankwirtschaft, deren Zukunft längst von den Verträgen der Klingenden Münze abhing. Als die Einnahmen weiter sanken, machte er aus den oberen Stuben ein Bordell.</p><p>Sein jüngerer Bruder Finlay nahm Arbeit bei der Münze an. Er vertreibt nun Getränke, die nach den verkauften Rezepten ihrer Sept hergestellt werden. Alasdair sieht darin Verrat an allem, was der Vater retten wollte. Der Streit ist persönlich geworden; ein gemeinsames Geschäft führen sie nicht.</p>",
+            "abilitiesTitle": "Am Tresen",
+            "abilities": [
+              {
+                "title": "Misstrauisch",
+                "icon": "◈",
+                "detail": "Verlangt klare Preise und zählt Münzen nach. Die Erfahrung mit Kredit und Verträgen sitzt tief."
+              },
+              {
+                "title": "Verbittert",
+                "icon": "♜",
+                "detail": "Finlays bezahlte Arbeit bei der Münze ist für ihn eine Entscheidung gegen die Familie."
+              },
+              {
+                "title": "Zäh",
+                "icon": "⚒",
+                "detail": "Hält einen heruntergewirtschafteten Betrieb mit knappen Mitteln und aufgeschobenen Reparaturen offen."
+              }
+            ],
+            "connectionsTitle": "Die Cneacail · Vater, Bruder und verlorener Haushalt",
+            "connections": [
+              {
+                "name": "Arran Cneacail",
+                "image": "./assets/letzter-heller/portraits/arran.png",
+                "imageFormat": "portrait",
+                "detail": "Starb 1734 mit 62 Jahren. Überlebte 1720 mit seinen beiden Söhnen die Plünderung der Flusssiedlung durch Dämmergrunder Truppen. Gab für den großen Kredit der Klingenden Münze Rezepte und Verwertungsrechte aus der Hand. Die scheiternde Taverne, der Verlust der Familie und sein Trinken zehrten ihn auf."
+              },
+              {
+                "name": "Finlay Cneacail",
+                "image": "./assets/klingende-krone/portraits/finlay-v2.png",
+                "imageFormat": "portrait",
+                "detail": "41 Jahre. Mitglied der Klingenden Münze und Leiter der Taverne Zur Klingenden Krone mit Gildenbrauerei und Brennerei im Marktviertel. Vertreibt dort die nach den erworbenen Sept-Rezepten hergestellten Getränke. Mit Lysiane aus Venalys verheiratet; ihr Sohn heißt Aodhan. Sieht darin das Überleben des alten Handwerks, während Alasdair Verrat erkennt. Finlay hat keinen Posten oder Schankdienst im Bordell."
+              },
+              {
+                "name": "Nessa",
+                "image": "./assets/klingende-krone/portraits/nessa.png",
+                "imageFormat": "portrait",
+                "detail": "42 Jahre. Heiratete Alasdair 1720 nach seiner Ankunft in Gwynthor; sie gehörte nicht zu den Überlebenden der zerstörten Sept. Verließ ihn 1735 kurz nach der Umwandlung der Taverne zum Bordell. Mutter von Eithne und Catriona. Heutiger Aufenthaltsort offen; keine Mitarbeiterin des Bordells."
+              },
+              {
+                "name": "Eithne Cneacail",
+                "image": "./assets/klingende-krone/portraits/eithne.png",
+                "imageFormat": "portrait",
+                "detail": "19 Jahre. Alasdairs und Nessas ältere Tochter. Ist im laufenden Jahr gemeinsam mit ihrer Schwester aus dem väterlichen Haus fortgegangen. Heutiger Aufenthaltsort und weiterer Lebensweg bleiben offen; arbeitet nicht im Bordell."
+              },
+              {
+                "name": "Catriona Cneacail",
+                "image": "./assets/klingende-krone/portraits/catriona.png",
+                "imageFormat": "portrait",
+                "detail": "18 Jahre. Alasdairs und Nessas jüngere Tochter. Verließ 1740 mit Eithne das Haus des Vaters. Weiterer Aufenthaltsort und Beruf bleiben unbestimmt; weder dem Bordell noch Finlays Betrieb zugeordnet."
+              }
+            ],
+            "documentsTitle": "Die Sept",
+            "documents": [
+              {
+                "title": "Stammbaum Cneacail",
+                "icon": "../Stammbäume/assets/images/houses/Ceitheach/sept-cneacail.png",
+                "text": "Arran und seine beiden überlebenden Söhne.",
+                "link": "../Stammbäume/Stammbaum.html?family=sept-cneacail&mode=view"
+              }
+            ]
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "heller-familie",
+          "pageTitle": "Arran und seine Söhne",
+          "image": "./assets/letzter-heller/scenes/familienerinnerung.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "description": "<p><strong>Eine Familienerinnerung:</strong> Arran Cneacail erscheint hier so, wie er in seinen letzten Jahren aussah. Er starb 1734 mit zweiundsechzig Jahren. Seine Söhne Alasdair und Finlay leben heute in Gwynthor; zwischen ihnen liegt ein Streit, der mit dem Tod des Vaters nicht endete.</p><p>Vor 1720 führte Arran eine wohlhabende Brauer- und Brennersept in <strong>Bun na h-Aibhne</strong>, einer Flusssiedlung südlich von Glaennmor mit Hügeln im Rücken. Die Cneacail dienten den <strong>Mallacht Seaghda</strong> in Tir na Dorcha. Während des Krieges plünderten Dämmergrunder Truppen die Siedlung. Die spätere Rüge der Plünderer brachte weder die Toten zurück noch die zerstörte Heimat.</p><p>Arran und seine beiden Söhne entkamen mit dem, was sie tragen konnten. In Cenyr übertrug Arran Rezepte und Verwertungsrechte der Brauerei und Brennerei an die <strong>Klingende Münze</strong> und erhielt dafür einen großen Kredit. Davon kaufte er die Hafentaverne. Sein Plan, selbst wieder zu brauen und zu brennen, scheiterte an den Rechten und Bedingungen der Münze. Verlust, Misserfolg und Trinken zehrten ihn auf.</p><p><strong>Finlay</strong> arbeitet heute im Vertrieb der Münze und nennt das ein Auskommen für das erhaltene Handwerk. <strong>Alasdair</strong> blieb im Haus und nennt es Verrat. Arran gehört der Vergangenheit an; Finlay hat im heutigen Bordell keinen Posten.</p>",
+          "stats": [
+            [
+              "Arran",
+              "1672–1734 · † mit 62 Jahren"
+            ],
+            [
+              "Alasdair",
+              "1696 · 44 Jahre · Inhaber"
+            ],
+            [
+              "Finlay",
+              "1699 · 41 Jahre · Vertrieb der Münze"
+            ],
+            [
+              "Verlust",
+              "1720 · Bun na h-Aibhne"
+            ]
+          ]
+        },
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "heller-hausgeschichte",
+          "pageTitle": "Aus der Taverne wurde der Letzte Heller",
+          "image": "./assets/letzter-heller/scenes/schankstube.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "description": "<p>Das Haus war einmal eine ordentliche Hafentaverne. Arran wollte aus ihrem Ausschank den Anfang eines neuen Brau- und Brennbetriebs machen. Doch der Kredit ersetzte keine eigenen Rezeptrechte: Die Klingende Münze mischte sich zunehmend in den Ausschank ein, während Arrans Vorhaben zum Stillstand kam.</p><p>Nach seinem Tod stritten sich die Brüder um Besitz und Zukunft. Alasdair hielt an der Taverne fest. Als gewöhnliche Zechen die laufenden Kosten immer schlechter deckten, stellte er Frauen aus den Flüchtlingsgemeinschaften ein und richtete die oberen Stuben für kurze Besuche her. So entstand <strong>Zum Letzten Heller</strong>.</p><p>Heute teilen sich fünf Frauen drei Kammern. Fergal hilft im Ausschank, Sorcha führt die kleine Küche, Maela trägt Wasser und hält das Leinen so ordentlich, wie es der verschlissene Bestand zulässt. Sten steht an der Tür. Der Hund Borst meldet fremde Schritte im Hinterhof.</p><p>Die beiden Septbiere sind seit Jahren aufgebraucht. Neue Ware nach den verkauften Rezepten darf Alasdair nicht selbst herstellen und unter eigenem Recht ausschenken. Die vier alten Whiskyflaschen hält er als letzten geretteten Bestand unter Verschluss; davon gibt er nur einzelne Gläser gegen sehr viel Geld aus.</p>",
+          "stats": []
+        },
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "heller-personal",
+          "pageTitle": "Wenige Hände · Der Hausstand",
+          "hierarchyPage": true,
+          "hierarchy": {
+            "organizationTitle": "Die wenigen Hände im Letzten Heller",
+            "eyebrow": "Zum Letzten Heller",
+            "subtitle": "Ein Wirt, zwei Hilfen, fünf Dirnen und der Hausdienst",
+            "centerLabel": "Alasdair Cneacail",
+            "emblem": "../Stammbäume/assets/images/houses/Ceitheach/sept-cneacail.png",
+            "sideImage": "./assets/letzter-heller/scenes/schankstube.png",
+            "motto": "Erst die Zeche. Dann die Tür.",
+            "description": "<p>Alasdair hält Kasse und Schlüssel. Fergal hilft am Ausschank, Sorcha steht allein in der Küche. Fünf erwachsene Frauen nehmen die Gäste in den drei Kammern an. Sten hält die Treppe frei; Maela trägt den Hausdienst.</p>",
+            "detailsTitle": "Der kleine Betrieb",
+            "details": [
+              {
+                "label": "Inhaber",
+                "value": "Alasdair Cneacail"
+              },
+              {
+                "label": "Schankhilfe",
+                "value": "Fergal"
+              },
+              {
+                "label": "Küche",
+                "value": "Sorcha"
+              },
+              {
+                "label": "Dirnen",
+                "value": "Fünf erwachsene Frauen · Ceitheach und Aldrimar"
+              },
+              {
+                "label": "Kammern",
+                "value": "Drei kleine Räume · keine Herberge"
+              },
+              {
+                "label": "Hausdienst",
+                "value": "Ein Türsteher · eine Magd · ein Hund"
+              }
+            ],
+            "chartTitle": "Tresen, Kammern und Hausdienst",
+            "chartIntro": "Finlay arbeitet für die Klingende Münze. Im Letzten Heller trägt er keine Aufgabe; Arran gehört zur Geschichte des Hauses.",
+            "treeDisplayMode": "tabs",
+            "portraitScale": 100,
+            "cardFontScale": 90,
+            "trees": [
+              {
+                "id": "fuehrung",
+                "label": "Führung & Ausschank",
+                "parentTreeId": "",
+                "levels": [
+                  {
+                    "label": "Der Wirt",
+                    "nodes": [
+                      {
+                        "id": "heller-post-alasdair",
+                        "title": "Alasdair Cneacail",
+                        "subtitle": "Inhaber · Führung und Ausschank",
+                        "portrait": "./assets/letzter-heller/portraits/alasdair.png",
+                        "text": "<p>44 Jahre. Arrans älterer Sohn hat die ehemalige Hafentaverne behalten und 1735 zum Bordell umfunktioniert. Stark beleibt, vorzeitig gealtert und misstrauisch. Nessa verließ ihn kurz nach der Umwandlung; die Töchter Eithne und Catriona sind 1740 ebenfalls fortgegangen. Den Bruder nennt er einen Verräter; die vier alten Whiskyflaschen hält er unter Verschluss. Er zählt jede Münze und verschiebt jede Reparatur, die noch eine Woche warten kann.</p>"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Zwei Flüchtlinge halten Tresen und Küche in Gang",
+                    "nodes": [
+                      {
+                        "id": "heller-post-fergal",
+                        "title": "Fergal",
+                        "subtitle": "Schankhilfe · Fässer und Besorgungen",
+                        "portrait": "./assets/letzter-heller/portraits/fergal.png",
+                        "text": "<p>39 Jahre. Ein albischer Flüchtling mit wenigen Worten und einem zuverlässigen Gedächtnis für offene Zechen. Hilft am Tresen, holt Fassware und übernimmt kleine Besorgungen. Seinen Lohn braucht er für den nächsten Schlafplatz und die eigene Versorgung.</p>"
+                      },
+                      {
+                        "id": "heller-post-sorcha",
+                        "title": "Sorcha",
+                        "subtitle": "Küche und Vorräte",
+                        "portrait": "./assets/letzter-heller/portraits/sorcha.png",
+                        "text": "<p>47 Jahre. Eine geflohene Albin, die aus den gewöhnlichen Vorräten einfache Tavernenportionen kocht. Führt allein die kleine Küche; deshalb wird nach Bestellung gearbeitet und nicht jedes Gericht steht zu jeder Stunde bereit. Trocken, kräftig und ungeduldig mit verschwendetem Brennholz.</p>"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "dirnen",
+                "label": "Dirnen",
+                "parentTreeId": "fuehrung",
+                "levels": [
+                  {
+                    "label": "Aus Ceitheach",
+                    "nodes": [
+                      {
+                        "id": "heller-post-eilidh",
+                        "title": "Eilidh",
+                        "subtitle": "Dirne · Einfache Kammer",
+                        "portrait": "./assets/letzter-heller/portraits/eilidh.png",
+                        "text": "<p>26 Jahre. Eine geflohene Albin, die im Haus Arbeit und ein Dach gefunden hat. Still, übermüdet und vorsichtig mit fremden Versprechen. Spricht erst freier, wenn der Lärm hinter der Kammertür bleibt.</p>"
+                      },
+                      {
+                        "id": "heller-post-mairead",
+                        "title": "Mairead",
+                        "subtitle": "Dirne · Gesellschaft auf Zeit",
+                        "portrait": "./assets/letzter-heller/portraits/mairead.png",
+                        "text": "<p>33 Jahre. Albin aus einer anderen verlorenen Dorfgemeinschaft. Wirkt nüchtern und abgekämpft, kann aber sehr direkt werden. Sie kennt die Abläufe des Hauses und versucht, von jeder Woche etwas für sich zurückzulegen.</p>"
+                      },
+                      {
+                        "id": "heller-post-fiona",
+                        "title": "Fiona",
+                        "subtitle": "Dirne · Älteste der Kammern",
+                        "portrait": "./assets/letzter-heller/portraits/fiona.png",
+                        "text": "<p>38 Jahre. Eine Albin, die nach der Flucht lange Gelegenheitsarbeiten annahm. Der Schlafmangel steht ihr im Gesicht. Kennt die anderen Frauen gut und tauscht mit ihnen Dienste, wenn jemand einen Abend nicht durchsteht.</p>"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Aus Aldrimar",
+                    "nodes": [
+                      {
+                        "id": "heller-post-runa",
+                        "title": "Runa",
+                        "subtitle": "Dirne · Kammer am Flur",
+                        "portrait": "./assets/letzter-heller/portraits/runa.png",
+                        "text": "<p>29 Jahre. Blonde Aldrimarin, die sich von kleinen Arbeiten und kurzen Diensten bis nach Gwynthor durchschlug. Hat ein raues Lachen, doch wenig Kraft für lange Abende. Ihre dünne Geldrolle verwahrt sie selbst.</p>"
+                      },
+                      {
+                        "id": "heller-post-signe",
+                        "title": "Signe",
+                        "subtitle": "Dirne · Kleine Hinterkammer",
+                        "portrait": "./assets/letzter-heller/portraits/signe.png",
+                        "text": "<p>35 Jahre. Blonde Aldrimarin mit sprödem Humor und einem feinen Gespür für die Stimmung an der Tür. Macht ihre Arbeit ohne große Versprechen; nach Dienstschluss möchte sie vor allem ihre Ruhe.</p>"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "sonstiges",
+                "label": "Sonstiges",
+                "parentTreeId": "fuehrung",
+                "levels": [
+                  {
+                    "label": "Tür und Hausarbeit",
+                    "nodes": [
+                      {
+                        "id": "heller-post-sten",
+                        "title": "Sten",
+                        "subtitle": "Türsteher",
+                        "portrait": "./assets/letzter-heller/portraits/sten.png",
+                        "text": "<p>51 Jahre. Ein aldrimarischer Flüchtling mit breiten Schultern und müden Knien. Hält Betrunkene von den Kammern fern und holt Alasdair, bevor eine Zeche im Handgemenge endet. Ein einziger Türsteher für das ganze kleine Haus.</p>"
+                      },
+                      {
+                        "id": "heller-post-maela",
+                        "title": "Maela",
+                        "subtitle": "Magd · Wäsche, Wasser und Reinigung",
+                        "portrait": "./assets/letzter-heller/portraits/maela.png",
+                        "text": "<p>32 Jahre. Albische Flüchtlingsfrau und die einzige Magd des Hauses. Trägt Wasser, schrubbt die Stuben und wechselt das Leinen. Ihre Arbeit kommt gegen die verschlissenen Böden und die knappen Vorräte kaum an, doch den Waschplatz hält sie ordentlich.</p>"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "An der Hintertür",
+                    "nodes": [
+                      {
+                        "id": "heller-post-borst",
+                        "title": "Borst",
+                        "subtitle": "Wachhund · Meldet die Hintertür",
+                        "portrait": "./assets/letzter-heller/pets/borst.png",
+                        "text": "<p>Ein drahtiger brauner Brág aus örtlicher Herkunft. Schlägt bei fremden Schritten im Hinterhof an und bleibt gewöhnlich in Stens Nähe. Ein aufmerksamer Hofhund, kein ausgebildeter Kampfhund.</p><p><a href=\"/Bestiarium/tiere/vieh/haustiere/hunde/brag/index.html\" target=\"_blank\" rel=\"noopener\">Bestiarium · Brág</a></p>"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "levels": [],
+            "footerNote": "Die Männer der Sept tragen den Familiennamen Cneacail. Die angestellten Flüchtlinge führen im Haus ihre Vornamen."
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "heller-gueter",
+          "pageTitle": "Die kleine Schankwirtschaft",
+          "tradeCatalogPage": true,
+          "tradeCatalog": {
+            "headerIcon": "../Stammbäume/assets/images/houses/Ceitheach/sept-cneacail.png",
+            "title": "Güterregister",
+            "subtitle": "Standardspeisen und Standardgetränke · Das verlorene Septsortiment",
+            "categories": [
+              {
+                "id": "getraenke",
+                "label": "Standardgetränke"
+              },
+              {
+                "id": "speisen",
+                "label": "Standardspeisen"
+              },
+              {
+                "id": "sept",
+                "label": "Das alte Sortiment der Cneacail"
+              }
+            ],
+            "allLabel": "Alle Einträge",
+            "searchPlaceholder": "Gericht, Getränk oder alte Abfüllung suchen …",
+            "filterLabel": "Die alte Schankkarte",
+            "noteIcon": "◈",
+            "noteTitle": "Die guten Zeiten stehen noch auf der Karte",
+            "noteText": "Gewöhnliche Speisen und Getränke werden nach Tagesvorrat angeboten. Die beiden Septbiere sind seit Jahren leer und dürfen hier nicht mehr als eigene Erzeugnisse vertrieben werden. Nur vier alte Whiskyflaschen bewahrt Alasdair noch auf.",
+            "items": [
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 280,
+                "imageFormat": "square",
+                "descriptionTitle": "Auf dem Tisch",
+                "featuresTitle": "Auf einen Blick",
+                "originTitle": "Herkunft",
+                "usageTitle": "Bestellung",
+                "priceTitle": "Preis",
+                "priceFill": 25,
+                "priceOptions": [],
+                "conditionsTitle": "Verfügbarkeit",
+                "attributes": [
+                  {
+                    "label": "Sättigung",
+                    "value": 8
+                  },
+                  {
+                    "label": "Wärme",
+                    "value": 8
+                  },
+                  {
+                    "label": "Frische",
+                    "value": 5
+                  },
+                  {
+                    "label": "Rausch",
+                    "value": 0
+                  },
+                  {
+                    "label": "Reisegut",
+                    "value": 2
+                  },
+                  {
+                    "label": "Preiswert",
+                    "value": 9
+                  }
+                ],
+                "priceMin": "0,9",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "heller-eintopf-des-tages",
+                "canonicalKey": "standard:taverne:eintopf-des-tages",
+                "category": "speisen",
+                "title": "Eintopf des Tages",
+                "subtitle": "Speise",
+                "unit": "Schale",
+                "image": "https://i.imgur.com/V5An4nq.png",
+                "tags": [
+                  "Heiß",
+                  "Sättigend",
+                  "Reisende"
+                ],
+                "features": [
+                  "Schale"
+                ],
+                "description": "<p>Kräftiger Eintopf auf Basis einer dicken Brühe, langsam gekocht mit Wurzelgemüse, Linsen und angebratenen Speckwürfeln. Einfach, nahrhaft und ideal nach einem langen Tag auf der Straße.</p>",
+                "origin": "Standardsortiment der Taverne · gewöhnlicher Marktbezug in Gwynthor",
+                "usageTags": [
+                  "Einfache Küche"
+                ],
+                "priceNote": "Preis für die genannte Einheit.",
+                "conditions": "Sorchas kleine Küche arbeitet nach Bestellung und Tagesvorrat. Aufwendigere Standardgerichte nur nach vorheriger Absprache; der Tresen nennt, was heute zubereitet werden kann."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 280,
+                "imageFormat": "square",
+                "descriptionTitle": "Auf dem Tisch",
+                "featuresTitle": "Auf einen Blick",
+                "originTitle": "Herkunft",
+                "usageTitle": "Bestellung",
+                "priceTitle": "Preis",
+                "priceFill": 25,
+                "priceOptions": [],
+                "conditionsTitle": "Verfügbarkeit",
+                "attributes": [
+                  {
+                    "label": "Sättigung",
+                    "value": 9
+                  },
+                  {
+                    "label": "Wärme",
+                    "value": 7
+                  },
+                  {
+                    "label": "Frische",
+                    "value": 5
+                  },
+                  {
+                    "label": "Rausch",
+                    "value": 0
+                  },
+                  {
+                    "label": "Reisegut",
+                    "value": 2
+                  },
+                  {
+                    "label": "Preiswert",
+                    "value": 5
+                  }
+                ],
+                "priceMin": "4",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "heller-geroestetes-fleisch",
+                "canonicalKey": "standard:taverne:geroestetes-fleisch",
+                "category": "speisen",
+                "title": "Geröstetes Fleisch",
+                "subtitle": "Speise",
+                "unit": "Teller",
+                "image": "https://i.imgur.com/2K4MCGF.png",
+                "tags": [
+                  "Deftig",
+                  "Fleisch",
+                  "Feuer"
+                ],
+                "features": [
+                  "Teller"
+                ],
+                "description": "<p>Saftiges Fleischstück, über offenem Feuer gegart, mit geschmorten Zwiebeln und geröstetem Bauernbrot. Schlicht, kräftig und für hungrige Reisende gedacht.</p>",
+                "origin": "Standardsortiment der Taverne · gewöhnlicher Marktbezug in Gwynthor",
+                "usageTags": [
+                  "Einfache Küche"
+                ],
+                "priceNote": "Preis für die genannte Einheit.",
+                "conditions": "Sorchas kleine Küche arbeitet nach Bestellung und Tagesvorrat. Aufwendigere Standardgerichte nur nach vorheriger Absprache; der Tresen nennt, was heute zubereitet werden kann."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 280,
+                "imageFormat": "square",
+                "descriptionTitle": "Auf dem Tisch",
+                "featuresTitle": "Auf einen Blick",
+                "originTitle": "Herkunft",
+                "usageTitle": "Bestellung",
+                "priceTitle": "Preis",
+                "priceFill": 25,
+                "priceOptions": [],
+                "conditionsTitle": "Verfügbarkeit",
+                "attributes": [
+                  {
+                    "label": "Sättigung",
+                    "value": 6
+                  },
+                  {
+                    "label": "Wärme",
+                    "value": 7
+                  },
+                  {
+                    "label": "Frische",
+                    "value": 4
+                  },
+                  {
+                    "label": "Rausch",
+                    "value": 0
+                  },
+                  {
+                    "label": "Reisegut",
+                    "value": 3
+                  },
+                  {
+                    "label": "Preiswert",
+                    "value": 10
+                  }
+                ],
+                "priceMin": "0,1",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "heller-hafergruetze",
+                "canonicalKey": "standard:taverne:hafergruetze",
+                "category": "speisen",
+                "title": "Hafergrütze mit Schmalz",
+                "subtitle": "Speise",
+                "unit": "Schale",
+                "image": "https://i.imgur.com/ZlFrksC.png",
+                "tags": [
+                  "Einfach",
+                  "Warm",
+                  "Billig"
+                ],
+                "features": [
+                  "Schale"
+                ],
+                "description": "<p>Grob geschroteter Hafer, langsam mit Wasser und Salz zu einer dicken Grütze gekocht. Ein Klecks Schmalz macht sie herzhaft, warm und zuverlässig sättigend.</p>",
+                "origin": "Standardsortiment der Taverne · gewöhnlicher Marktbezug in Gwynthor",
+                "usageTags": [
+                  "Einfache Küche"
+                ],
+                "priceNote": "Preis für die genannte Einheit.",
+                "conditions": "Sorchas kleine Küche arbeitet nach Bestellung und Tagesvorrat. Aufwendigere Standardgerichte nur nach vorheriger Absprache; der Tresen nennt, was heute zubereitet werden kann."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 280,
+                "imageFormat": "square",
+                "descriptionTitle": "Auf dem Tisch",
+                "featuresTitle": "Auf einen Blick",
+                "originTitle": "Herkunft",
+                "usageTitle": "Bestellung",
+                "priceTitle": "Preis",
+                "priceFill": 25,
+                "priceOptions": [],
+                "conditionsTitle": "Verfügbarkeit",
+                "attributes": [
+                  {
+                    "label": "Sättigung",
+                    "value": 8
+                  },
+                  {
+                    "label": "Wärme",
+                    "value": 7
+                  },
+                  {
+                    "label": "Frische",
+                    "value": 4
+                  },
+                  {
+                    "label": "Rausch",
+                    "value": 0
+                  },
+                  {
+                    "label": "Reisegut",
+                    "value": 2
+                  },
+                  {
+                    "label": "Preiswert",
+                    "value": 8
+                  }
+                ],
+                "priceMin": "1,1",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "heller-blutwurst-kraut",
+                "canonicalKey": "standard:taverne:blutwurst-kraut",
+                "category": "speisen",
+                "title": "Blutwurst & Kraut",
+                "subtitle": "Speise",
+                "unit": "Teller",
+                "image": "https://i.imgur.com/508vYQa.png",
+                "tags": [
+                  "Deftig",
+                  "Sauer",
+                  "Brot"
+                ],
+                "features": [
+                  "Teller"
+                ],
+                "description": "<p>Dicke Scheiben Blutwurst, scharf angebraten, mit heißem Sauerkraut, Kümmel, Lorbeer und dunklem Brot. Rustikal, kräftig und beliebt bei ehrlichen Essern.</p>",
+                "origin": "Standardsortiment der Taverne · gewöhnlicher Marktbezug in Gwynthor",
+                "usageTags": [
+                  "Einfache Küche"
+                ],
+                "priceNote": "Preis für die genannte Einheit.",
+                "conditions": "Sorchas kleine Küche arbeitet nach Bestellung und Tagesvorrat. Aufwendigere Standardgerichte nur nach vorheriger Absprache; der Tresen nennt, was heute zubereitet werden kann."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 280,
+                "imageFormat": "square",
+                "descriptionTitle": "Auf dem Tisch",
+                "featuresTitle": "Auf einen Blick",
+                "originTitle": "Herkunft",
+                "usageTitle": "Bestellung",
+                "priceTitle": "Preis",
+                "priceFill": 25,
+                "priceOptions": [],
+                "conditionsTitle": "Verfügbarkeit",
+                "attributes": [
+                  {
+                    "label": "Sättigung",
+                    "value": 9
+                  },
+                  {
+                    "label": "Wärme",
+                    "value": 7
+                  },
+                  {
+                    "label": "Frische",
+                    "value": 5
+                  },
+                  {
+                    "label": "Rausch",
+                    "value": 0
+                  },
+                  {
+                    "label": "Reisegut",
+                    "value": 2
+                  },
+                  {
+                    "label": "Preiswert",
+                    "value": 7
+                  }
+                ],
+                "priceMin": "1,8",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "heller-gebackenes-huhn",
+                "canonicalKey": "standard:taverne:gebackenes-huhn",
+                "category": "speisen",
+                "title": "Gebackenes Huhn",
+                "subtitle": "Speise",
+                "unit": "Halbes Huhn",
+                "image": "https://i.imgur.com/JfVbk6H.png",
+                "tags": [
+                  "Huhn",
+                  "Käse",
+                  "Brot"
+                ],
+                "features": [
+                  "Halbes Huhn"
+                ],
+                "description": "<p>Ein halbes Huhn, über Glut knusprig gebacken, mit Bauernbrot und Hartkäse. Reichhaltig, würzig und seltener als einfache Suppenküche.</p>",
+                "origin": "Standardsortiment der Taverne · gewöhnlicher Marktbezug in Gwynthor",
+                "usageTags": [
+                  "Einfache Küche"
+                ],
+                "priceNote": "Preis für die genannte Einheit.",
+                "conditions": "Sorchas kleine Küche arbeitet nach Bestellung und Tagesvorrat. Aufwendigere Standardgerichte nur nach vorheriger Absprache; der Tresen nennt, was heute zubereitet werden kann."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 280,
+                "imageFormat": "square",
+                "descriptionTitle": "Auf dem Tisch",
+                "featuresTitle": "Auf einen Blick",
+                "originTitle": "Herkunft",
+                "usageTitle": "Bestellung",
+                "priceTitle": "Preis",
+                "priceFill": 25,
+                "priceOptions": [],
+                "conditionsTitle": "Verfügbarkeit",
+                "attributes": [
+                  {
+                    "label": "Sättigung",
+                    "value": 8
+                  },
+                  {
+                    "label": "Wärme",
+                    "value": 8
+                  },
+                  {
+                    "label": "Frische",
+                    "value": 5
+                  },
+                  {
+                    "label": "Rausch",
+                    "value": 0
+                  },
+                  {
+                    "label": "Reisegut",
+                    "value": 2
+                  },
+                  {
+                    "label": "Preiswert",
+                    "value": 9
+                  }
+                ],
+                "priceMin": "0,85",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "heller-bohneneintopf",
+                "canonicalKey": "standard:taverne:bohneneintopf",
+                "category": "speisen",
+                "title": "Bohneneintopf",
+                "subtitle": "Speise",
+                "unit": "Schale",
+                "image": "https://i.imgur.com/Qc6RIks.png",
+                "tags": [
+                  "Bohnen",
+                  "Speck",
+                  "Brot"
+                ],
+                "features": [
+                  "Schale"
+                ],
+                "description": "<p>Sämiger Eintopf aus weißen und braunen Bohnen, Lauch, Thymian und gerösteten Speckwürfeln. Rauchig, wärmend und bis zum letzten Löffel sättigend.</p>",
+                "origin": "Standardsortiment der Taverne · gewöhnlicher Marktbezug in Gwynthor",
+                "usageTags": [
+                  "Einfache Küche"
+                ],
+                "priceNote": "Preis für die genannte Einheit.",
+                "conditions": "Sorchas kleine Küche arbeitet nach Bestellung und Tagesvorrat. Aufwendigere Standardgerichte nur nach vorheriger Absprache; der Tresen nennt, was heute zubereitet werden kann."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 280,
+                "imageFormat": "square",
+                "descriptionTitle": "Auf dem Tisch",
+                "featuresTitle": "Auf einen Blick",
+                "originTitle": "Herkunft",
+                "usageTitle": "Bestellung",
+                "priceTitle": "Preis",
+                "priceFill": 25,
+                "priceOptions": [],
+                "conditionsTitle": "Verfügbarkeit",
+                "attributes": [
+                  {
+                    "label": "Sättigung",
+                    "value": 4
+                  },
+                  {
+                    "label": "Wärme",
+                    "value": 5
+                  },
+                  {
+                    "label": "Frische",
+                    "value": 5
+                  },
+                  {
+                    "label": "Rausch",
+                    "value": 0
+                  },
+                  {
+                    "label": "Reisegut",
+                    "value": 5
+                  },
+                  {
+                    "label": "Preiswert",
+                    "value": 10
+                  }
+                ],
+                "priceMin": "0,35",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "heller-bauernbrot",
+                "canonicalKey": "standard:taverne:bauernbrot",
+                "category": "speisen",
+                "title": "Geröstetes Bauernbrot",
+                "subtitle": "Beilage",
+                "unit": "2 Scheiben",
+                "image": "https://i.imgur.com/nZWyQPa.png",
+                "tags": [
+                  "Brot",
+                  "Beilage",
+                  "Knoblauch"
+                ],
+                "features": [
+                  "2 Scheiben"
+                ],
+                "description": "<p>Dicke Scheiben Landbrot, über Feuer angeröstet und mit Salzschmalz oder Knoblauchfett bestrichen. Einfach, würzig und gut zu Bier.</p>",
+                "origin": "Standardsortiment der Taverne · gewöhnlicher Marktbezug in Gwynthor",
+                "usageTags": [
+                  "Einfache Küche"
+                ],
+                "priceNote": "Preis für die genannte Einheit.",
+                "conditions": "Sorchas kleine Küche arbeitet nach Bestellung und Tagesvorrat. Aufwendigere Standardgerichte nur nach vorheriger Absprache; der Tresen nennt, was heute zubereitet werden kann."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 280,
+                "imageFormat": "square",
+                "descriptionTitle": "Auf dem Tisch",
+                "featuresTitle": "Auf einen Blick",
+                "originTitle": "Herkunft",
+                "usageTitle": "Bestellung",
+                "priceTitle": "Preis",
+                "priceFill": 25,
+                "priceOptions": [],
+                "conditionsTitle": "Verfügbarkeit",
+                "attributes": [
+                  {
+                    "label": "Sättigung",
+                    "value": 6
+                  },
+                  {
+                    "label": "Wärme",
+                    "value": 5
+                  },
+                  {
+                    "label": "Frische",
+                    "value": 6
+                  },
+                  {
+                    "label": "Rausch",
+                    "value": 0
+                  },
+                  {
+                    "label": "Reisegut",
+                    "value": 2
+                  },
+                  {
+                    "label": "Preiswert",
+                    "value": 9
+                  }
+                ],
+                "priceMin": "0,5",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "heller-fruehstuecksteller",
+                "canonicalKey": "standard:taverne:fruehstuecksteller",
+                "category": "speisen",
+                "title": "Frühstücksteller",
+                "subtitle": "Speise",
+                "unit": "Teller",
+                "image": "https://i.imgur.com/wgQVjia.png",
+                "tags": [
+                  "Frühstück",
+                  "Speck",
+                  "Ei"
+                ],
+                "features": [
+                  "Teller"
+                ],
+                "description": "<p>Knusprige Speckstreifen, Spiegelei und gereifter Hartkäse in dicken Streifen. Ein deftiger Start für Reisende, Handwerker und Leute mit frühem Hunger.</p>",
+                "origin": "Standardsortiment der Taverne · gewöhnlicher Marktbezug in Gwynthor",
+                "usageTags": [
+                  "Einfache Küche"
+                ],
+                "priceNote": "Preis für die genannte Einheit.",
+                "conditions": "Sorchas kleine Küche arbeitet nach Bestellung und Tagesvorrat. Aufwendigere Standardgerichte nur nach vorheriger Absprache; der Tresen nennt, was heute zubereitet werden kann."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 280,
+                "imageFormat": "square",
+                "descriptionTitle": "Auf dem Tisch",
+                "featuresTitle": "Auf einen Blick",
+                "originTitle": "Herkunft",
+                "usageTitle": "Bestellung",
+                "priceTitle": "Preis",
+                "priceFill": 25,
+                "priceOptions": [],
+                "conditionsTitle": "Verfügbarkeit",
+                "attributes": [
+                  {
+                    "label": "Sättigung",
+                    "value": 6
+                  },
+                  {
+                    "label": "Wärme",
+                    "value": 2
+                  },
+                  {
+                    "label": "Frische",
+                    "value": 4
+                  },
+                  {
+                    "label": "Rausch",
+                    "value": 0
+                  },
+                  {
+                    "label": "Reisegut",
+                    "value": 9
+                  },
+                  {
+                    "label": "Preiswert",
+                    "value": 6
+                  }
+                ],
+                "priceMin": "2",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "heller-raeucherfleisch",
+                "canonicalKey": "standard:taverne:raeucherfleisch",
+                "category": "speisen",
+                "title": "Räucherfleisch",
+                "subtitle": "Kalte Speise",
+                "unit": "Platte",
+                "image": "https://i.imgur.com/c2XjfdM.png",
+                "tags": [
+                  "Kalt",
+                  "Rauch",
+                  "Haltbar"
+                ],
+                "features": [
+                  "Platte"
+                ],
+                "description": "<p>Dünn geschnittenes Räucherfleisch mit Bohnen, Zwiebeln und Brotscheiben. Kräftig, salzig, haltbar und beliebt bei Jägern und Händlern.</p>",
+                "origin": "Standardsortiment der Taverne · gewöhnlicher Marktbezug in Gwynthor",
+                "usageTags": [
+                  "Einfache Küche"
+                ],
+                "priceNote": "Preis für die genannte Einheit.",
+                "conditions": "Sorchas kleine Küche arbeitet nach Bestellung und Tagesvorrat. Aufwendigere Standardgerichte nur nach vorheriger Absprache; der Tresen nennt, was heute zubereitet werden kann."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 280,
+                "imageFormat": "square",
+                "descriptionTitle": "Auf dem Tisch",
+                "featuresTitle": "Auf einen Blick",
+                "originTitle": "Herkunft",
+                "usageTitle": "Bestellung",
+                "priceTitle": "Preis",
+                "priceFill": 25,
+                "priceOptions": [],
+                "conditionsTitle": "Verfügbarkeit",
+                "attributes": [
+                  {
+                    "label": "Sättigung",
+                    "value": 7
+                  },
+                  {
+                    "label": "Wärme",
+                    "value": 3
+                  },
+                  {
+                    "label": "Frische",
+                    "value": 6
+                  },
+                  {
+                    "label": "Rausch",
+                    "value": 0
+                  },
+                  {
+                    "label": "Reisegut",
+                    "value": 8
+                  },
+                  {
+                    "label": "Preiswert",
+                    "value": 5
+                  }
+                ],
+                "priceMin": "3",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "heller-raeucherfisch",
+                "canonicalKey": "standard:taverne:raeucherfisch",
+                "category": "speisen",
+                "title": "Räucherfisch",
+                "subtitle": "Speise",
+                "unit": "Stück",
+                "image": "https://i.imgur.com/14g3XgA.png",
+                "tags": [
+                  "Fisch",
+                  "Rauch",
+                  "Kräuter"
+                ],
+                "features": [
+                  "Stück"
+                ],
+                "description": "<p>Ganzer Räucherfisch mit Lauch, grünen Bohnen und Kräutersauce. Bodenständig, nahrhaft und besonders in Küstennähe beliebt.</p>",
+                "origin": "Standardsortiment der Taverne · gewöhnlicher Marktbezug in Gwynthor",
+                "usageTags": [
+                  "Einfache Küche"
+                ],
+                "priceNote": "Preis für die genannte Einheit.",
+                "conditions": "Sorchas kleine Küche arbeitet nach Bestellung und Tagesvorrat. Aufwendigere Standardgerichte nur nach vorheriger Absprache; der Tresen nennt, was heute zubereitet werden kann."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 280,
+                "imageFormat": "square",
+                "descriptionTitle": "Auf dem Tisch",
+                "featuresTitle": "Auf einen Blick",
+                "originTitle": "Herkunft",
+                "usageTitle": "Bestellung",
+                "priceTitle": "Preis",
+                "priceFill": 25,
+                "priceOptions": [],
+                "conditionsTitle": "Verfügbarkeit",
+                "attributes": [
+                  {
+                    "label": "Sättigung",
+                    "value": 3
+                  },
+                  {
+                    "label": "Wärme",
+                    "value": 1
+                  },
+                  {
+                    "label": "Frische",
+                    "value": 7
+                  },
+                  {
+                    "label": "Rausch",
+                    "value": 0
+                  },
+                  {
+                    "label": "Reisegut",
+                    "value": 8
+                  },
+                  {
+                    "label": "Preiswert",
+                    "value": 9
+                  }
+                ],
+                "priceMin": "0,3",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "heller-sauergemuese",
+                "canonicalKey": "standard:taverne:sauergemuese",
+                "category": "speisen",
+                "title": "Sauergemüse",
+                "subtitle": "Beilage",
+                "unit": "Schale",
+                "image": "https://i.imgur.com/1sLGAIE.png",
+                "tags": [
+                  "Eingelegt",
+                  "Sauer",
+                  "Haltbar"
+                ],
+                "features": [
+                  "Schale"
+                ],
+                "description": "<p>Auswahl eingelegter Gemüse in würziger Lake, gereicht mit grobem Bauernbrot. Frisch im Geschmack, haltbar in der Vorratskammer.</p>",
+                "origin": "Standardsortiment der Taverne · gewöhnlicher Marktbezug in Gwynthor",
+                "usageTags": [
+                  "Einfache Küche"
+                ],
+                "priceNote": "Preis für die genannte Einheit.",
+                "conditions": "Sorchas kleine Küche arbeitet nach Bestellung und Tagesvorrat. Aufwendigere Standardgerichte nur nach vorheriger Absprache; der Tresen nennt, was heute zubereitet werden kann."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 280,
+                "imageFormat": "square",
+                "descriptionTitle": "Auf dem Tisch",
+                "featuresTitle": "Auf einen Blick",
+                "originTitle": "Herkunft",
+                "usageTitle": "Bestellung",
+                "priceTitle": "Preis",
+                "priceFill": 25,
+                "priceOptions": [],
+                "conditionsTitle": "Verfügbarkeit",
+                "attributes": [
+                  {
+                    "label": "Sättigung",
+                    "value": 7
+                  },
+                  {
+                    "label": "Wärme",
+                    "value": 7
+                  },
+                  {
+                    "label": "Frische",
+                    "value": 5
+                  },
+                  {
+                    "label": "Rausch",
+                    "value": 0
+                  },
+                  {
+                    "label": "Reisegut",
+                    "value": 3
+                  },
+                  {
+                    "label": "Preiswert",
+                    "value": 8
+                  }
+                ],
+                "priceMin": "0,85",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "heller-teigtaschen",
+                "canonicalKey": "standard:taverne:teigtaschen",
+                "category": "speisen",
+                "title": "Teigtaschen",
+                "subtitle": "Speise",
+                "unit": "Portion",
+                "image": "https://i.imgur.com/oAEqS92.png",
+                "tags": [
+                  "Warm",
+                  "Füllung",
+                  "Sättigend"
+                ],
+                "features": [
+                  "Portion"
+                ],
+                "description": "<p>Handgemachte Teigtaschen mit Kraut, Pilzen oder Käse, serviert mit Bratensauce oder Kräuterrahm. Nie ganz gleich, aber fast immer sättigend.</p>",
+                "origin": "Standardsortiment der Taverne · gewöhnlicher Marktbezug in Gwynthor",
+                "usageTags": [
+                  "Einfache Küche"
+                ],
+                "priceNote": "Preis für die genannte Einheit.",
+                "conditions": "Sorchas kleine Küche arbeitet nach Bestellung und Tagesvorrat. Aufwendigere Standardgerichte nur nach vorheriger Absprache; der Tresen nennt, was heute zubereitet werden kann."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 280,
+                "imageFormat": "square",
+                "descriptionTitle": "Auf dem Tisch",
+                "featuresTitle": "Auf einen Blick",
+                "originTitle": "Herkunft",
+                "usageTitle": "Bestellung",
+                "priceTitle": "Preis",
+                "priceFill": 25,
+                "priceOptions": [],
+                "conditionsTitle": "Verfügbarkeit",
+                "attributes": [
+                  {
+                    "label": "Sättigung",
+                    "value": 1
+                  },
+                  {
+                    "label": "Wärme",
+                    "value": 2
+                  },
+                  {
+                    "label": "Frische",
+                    "value": 4
+                  },
+                  {
+                    "label": "Rausch",
+                    "value": 2
+                  },
+                  {
+                    "label": "Reisegut",
+                    "value": 1
+                  },
+                  {
+                    "label": "Preiswert",
+                    "value": 10
+                  }
+                ],
+                "priceMin": "0,15",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "heller-duennes-bier",
+                "canonicalKey": "standard:taverne:duennes-bier",
+                "category": "getraenke",
+                "title": "Dünnes gewässertes Bier",
+                "subtitle": "Alkoholisches Getränk",
+                "unit": "Krug",
+                "image": "https://i.imgur.com/mGrMfTt.png",
+                "tags": [
+                  "Billig",
+                  "Durst",
+                  "Schwach"
+                ],
+                "features": [
+                  "Krug"
+                ],
+                "description": "<p>Helles, stark verdünntes Gerstenbier. Mehr Durstlöscher als Genussmittel, aber sicherer als fragwürdiges Brunnenwasser.</p>",
+                "origin": "Standardsortiment der Taverne · gewöhnlicher Marktbezug in Gwynthor",
+                "usageTags": [
+                  "Am Tresen"
+                ],
+                "priceNote": "Preis für die genannte Einheit.",
+                "conditions": "Nach gewöhnlichem Fass- und Flaschenvorrat."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 280,
+                "imageFormat": "square",
+                "descriptionTitle": "Auf dem Tisch",
+                "featuresTitle": "Auf einen Blick",
+                "originTitle": "Herkunft",
+                "usageTitle": "Bestellung",
+                "priceTitle": "Preis",
+                "priceFill": 25,
+                "priceOptions": [],
+                "conditionsTitle": "Verfügbarkeit",
+                "attributes": [
+                  {
+                    "label": "Sättigung",
+                    "value": 2
+                  },
+                  {
+                    "label": "Wärme",
+                    "value": 4
+                  },
+                  {
+                    "label": "Frische",
+                    "value": 5
+                  },
+                  {
+                    "label": "Rausch",
+                    "value": 6
+                  },
+                  {
+                    "label": "Reisegut",
+                    "value": 1
+                  },
+                  {
+                    "label": "Preiswert",
+                    "value": 8
+                  }
+                ],
+                "priceMin": "0,5",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "heller-starkbier",
+                "canonicalKey": "standard:taverne:starkbier",
+                "category": "getraenke",
+                "title": "Einfaches Starkbier",
+                "subtitle": "Alkoholisches Getränk",
+                "unit": "Krug",
+                "image": "https://i.imgur.com/yh4qIxn.png",
+                "tags": [
+                  "Dunkel",
+                  "Malz",
+                  "Söldner"
+                ],
+                "features": [
+                  "Krug"
+                ],
+                "description": "<p>Dunkles, malzreiches Bier mit kräftigem Körper, Karamellnote und solider Hopfenbasis. Stark, sättigend und ehrlich gebraut.</p>",
+                "origin": "Standardsortiment der Taverne · gewöhnlicher Marktbezug in Gwynthor",
+                "usageTags": [
+                  "Am Tresen"
+                ],
+                "priceNote": "Preis für die genannte Einheit.",
+                "conditions": "Nach gewöhnlichem Fass- und Flaschenvorrat."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 280,
+                "imageFormat": "square",
+                "descriptionTitle": "Auf dem Tisch",
+                "featuresTitle": "Auf einen Blick",
+                "originTitle": "Herkunft",
+                "usageTitle": "Bestellung",
+                "priceTitle": "Preis",
+                "priceFill": 25,
+                "priceOptions": [],
+                "conditionsTitle": "Verfügbarkeit",
+                "attributes": [
+                  {
+                    "label": "Sättigung",
+                    "value": 2
+                  },
+                  {
+                    "label": "Wärme",
+                    "value": 5
+                  },
+                  {
+                    "label": "Frische",
+                    "value": 5
+                  },
+                  {
+                    "label": "Rausch",
+                    "value": 5
+                  },
+                  {
+                    "label": "Reisegut",
+                    "value": 1
+                  },
+                  {
+                    "label": "Preiswert",
+                    "value": 7
+                  }
+                ],
+                "priceMin": "1",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "heller-honigmet",
+                "canonicalKey": "standard:taverne:honigmet",
+                "category": "getraenke",
+                "title": "Schlichter Honigmet",
+                "subtitle": "Alkoholisches Getränk",
+                "unit": "Humpen",
+                "image": "https://i.imgur.com/jvPNRu8.png",
+                "tags": [
+                  "Met",
+                  "Honig",
+                  "Süß"
+                ],
+                "features": [
+                  "Humpen"
+                ],
+                "description": "<p>Goldener Met mit weichem Nachhall von Blütenhonig und leichter Würze. Wärmt Körper und Geist, ohne sich als Luxus aufzuspielen.</p>",
+                "origin": "Standardsortiment der Taverne · gewöhnlicher Marktbezug in Gwynthor",
+                "usageTags": [
+                  "Am Tresen"
+                ],
+                "priceNote": "Preis für die genannte Einheit.",
+                "conditions": "Nach gewöhnlichem Fass- und Flaschenvorrat."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 280,
+                "imageFormat": "square",
+                "descriptionTitle": "Auf dem Tisch",
+                "featuresTitle": "Auf einen Blick",
+                "originTitle": "Herkunft",
+                "usageTitle": "Bestellung",
+                "priceTitle": "Preis",
+                "priceFill": 25,
+                "priceOptions": [],
+                "conditionsTitle": "Verfügbarkeit",
+                "attributes": [
+                  {
+                    "label": "Sättigung",
+                    "value": 1
+                  },
+                  {
+                    "label": "Wärme",
+                    "value": 2
+                  },
+                  {
+                    "label": "Frische",
+                    "value": 7
+                  },
+                  {
+                    "label": "Rausch",
+                    "value": 4
+                  },
+                  {
+                    "label": "Reisegut",
+                    "value": 1
+                  },
+                  {
+                    "label": "Preiswert",
+                    "value": 8
+                  }
+                ],
+                "priceMin": "0,6",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "heller-apfelwein",
+                "canonicalKey": "standard:taverne:apfelwein",
+                "category": "getraenke",
+                "title": "Apfelwein",
+                "subtitle": "Alkoholisches Getränk",
+                "unit": "Becher",
+                "image": "https://i.imgur.com/oFEsIDl.png",
+                "tags": [
+                  "Herb",
+                  "Obst",
+                  "Leicht"
+                ],
+                "features": [
+                  "Becher"
+                ],
+                "description": "<p>Klarer, herber Wein aus Äpfeln, frisch vergoren und in Holzfässern gereift. Trocken, leicht prickelnd und angenehm für lange Abende.</p>",
+                "origin": "Standardsortiment der Taverne · gewöhnlicher Marktbezug in Gwynthor",
+                "usageTags": [
+                  "Am Tresen"
+                ],
+                "priceNote": "Preis für die genannte Einheit.",
+                "conditions": "Nach gewöhnlichem Fass- und Flaschenvorrat."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 280,
+                "imageFormat": "square",
+                "descriptionTitle": "Auf dem Tisch",
+                "featuresTitle": "Auf einen Blick",
+                "originTitle": "Herkunft",
+                "usageTitle": "Bestellung",
+                "priceTitle": "Preis",
+                "priceFill": 25,
+                "priceOptions": [],
+                "conditionsTitle": "Verfügbarkeit",
+                "attributes": [
+                  {
+                    "label": "Sättigung",
+                    "value": 0
+                  },
+                  {
+                    "label": "Wärme",
+                    "value": 0
+                  },
+                  {
+                    "label": "Frische",
+                    "value": 6
+                  },
+                  {
+                    "label": "Rausch",
+                    "value": 0
+                  },
+                  {
+                    "label": "Reisegut",
+                    "value": 1
+                  },
+                  {
+                    "label": "Preiswert",
+                    "value": 10
+                  }
+                ],
+                "priceMin": "0,05",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "heller-wasser",
+                "canonicalKey": "standard:taverne:wasser",
+                "category": "getraenke",
+                "title": "Wasser",
+                "subtitle": "Getränk",
+                "unit": "Krug",
+                "image": "https://i.imgur.com/AaDqMUO.png",
+                "tags": [
+                  "Durst",
+                  "Einfach",
+                  "Brunnen"
+                ],
+                "features": [
+                  "Krug"
+                ],
+                "description": "<p>Klar, kühl und still. Meist aus Brunnen, Quellen oder Regenfässern, in manchen Gegenden mit Eisen oder Kalk im Geschmack.</p>",
+                "origin": "Standardsortiment der Taverne · gewöhnlicher Marktbezug in Gwynthor",
+                "usageTags": [
+                  "Am Tresen"
+                ],
+                "priceNote": "Preis für die genannte Einheit.",
+                "conditions": "Nach gewöhnlichem Fass- und Flaschenvorrat."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 280,
+                "imageFormat": "square",
+                "descriptionTitle": "Auf dem Tisch",
+                "featuresTitle": "Auf einen Blick",
+                "originTitle": "Herkunft",
+                "usageTitle": "Bestellung",
+                "priceTitle": "Preis",
+                "priceFill": 25,
+                "priceOptions": [],
+                "conditionsTitle": "Verfügbarkeit",
+                "attributes": [
+                  {
+                    "label": "Sättigung",
+                    "value": 2
+                  },
+                  {
+                    "label": "Wärme",
+                    "value": 4
+                  },
+                  {
+                    "label": "Frische",
+                    "value": 7
+                  },
+                  {
+                    "label": "Rausch",
+                    "value": 5
+                  },
+                  {
+                    "label": "Reisegut",
+                    "value": 1
+                  },
+                  {
+                    "label": "Preiswert",
+                    "value": 7
+                  }
+                ],
+                "priceMin": "1",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "heller-klosterbier",
+                "canonicalKey": "standard:taverne:klosterbier",
+                "category": "getraenke",
+                "title": "Klosterbier",
+                "subtitle": "Alkoholisches Getränk",
+                "unit": "Krug",
+                "image": "https://i.imgur.com/ZIRrEhf.png",
+                "tags": [
+                  "Kloster",
+                  "Sauber",
+                  "Bier"
+                ],
+                "features": [
+                  "Krug"
+                ],
+                "description": "<p>Bodenständiges Bier aus Klöstern, sauberer und runder als einfaches Kellerbräu. Kein Festbier, aber ein ehrlicher Trunk mit beständigem Ruf.</p>",
+                "origin": "Standardsortiment der Taverne · gewöhnlicher Marktbezug in Gwynthor",
+                "usageTags": [
+                  "Am Tresen"
+                ],
+                "priceNote": "Preis für die genannte Einheit.",
+                "conditions": "Nach gewöhnlichem Fass- und Flaschenvorrat."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 280,
+                "imageFormat": "square",
+                "descriptionTitle": "Auf dem Tisch",
+                "featuresTitle": "Auf einen Blick",
+                "originTitle": "Herkunft",
+                "usageTitle": "Bestellung",
+                "priceTitle": "Preis",
+                "priceFill": 25,
+                "priceOptions": [],
+                "conditionsTitle": "Verfügbarkeit",
+                "attributes": [
+                  {
+                    "label": "Sättigung",
+                    "value": 1
+                  },
+                  {
+                    "label": "Wärme",
+                    "value": 7
+                  },
+                  {
+                    "label": "Frische",
+                    "value": 7
+                  },
+                  {
+                    "label": "Rausch",
+                    "value": 0
+                  },
+                  {
+                    "label": "Reisegut",
+                    "value": 1
+                  },
+                  {
+                    "label": "Preiswert",
+                    "value": 9
+                  }
+                ],
+                "priceMin": "0,25",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "heller-kraeuteraufguss",
+                "canonicalKey": "standard:taverne:kraeuteraufguss",
+                "category": "getraenke",
+                "title": "Kräuteraufguss",
+                "subtitle": "Tee",
+                "unit": "Becher",
+                "image": "https://i.imgur.com/0mkuSb5.png",
+                "tags": [
+                  "Tee",
+                  "Warm",
+                  "Beruhigend"
+                ],
+                "features": [
+                  "Becher"
+                ],
+                "description": "<p>Dampfender Aufguss aus getrockneten Kräutern, je nach Vorrat mit Minze, Kamille, Thymian oder Fenchel. Wohltuend an kalten Morgen und langen Abenden.</p>",
+                "origin": "Standardsortiment der Taverne · gewöhnlicher Marktbezug in Gwynthor",
+                "usageTags": [
+                  "Am Tresen"
+                ],
+                "priceNote": "Preis für die genannte Einheit.",
+                "conditions": "Nach gewöhnlichem Fass- und Flaschenvorrat."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 280,
+                "imageFormat": "square",
+                "descriptionTitle": "Auf dem Tisch",
+                "featuresTitle": "Auf einen Blick",
+                "originTitle": "Herkunft",
+                "usageTitle": "Bestellung",
+                "priceTitle": "Preis",
+                "priceFill": 25,
+                "priceOptions": [],
+                "conditionsTitle": "Verfügbarkeit",
+                "attributes": [
+                  {
+                    "label": "Sättigung",
+                    "value": 0
+                  },
+                  {
+                    "label": "Wärme",
+                    "value": 7
+                  },
+                  {
+                    "label": "Frische",
+                    "value": 2
+                  },
+                  {
+                    "label": "Rausch",
+                    "value": 9
+                  },
+                  {
+                    "label": "Reisegut",
+                    "value": 2
+                  },
+                  {
+                    "label": "Preiswert",
+                    "value": 5
+                  }
+                ],
+                "priceMin": "1",
+                "priceMax": "2",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "heller-branntwein",
+                "canonicalKey": "standard:taverne:branntwein",
+                "category": "getraenke",
+                "title": "Einfacher Branntwein",
+                "subtitle": "Hochprozentiger",
+                "unit": "Glas",
+                "image": "https://i.imgur.com/e1Qv6Ct.png",
+                "tags": [
+                  "Stark",
+                  "Billig",
+                  "Fusel"
+                ],
+                "features": [
+                  "Glas"
+                ],
+                "description": "<p>Lokal gebrannter Branntwein aus allem, was vergoren werden kann. Qualität schwankt stark, Wirkung ist zuverlässig und selten freundlich.</p>",
+                "origin": "Standardsortiment der Taverne · gewöhnlicher Marktbezug in Gwynthor",
+                "usageTags": [
+                  "Am Tresen"
+                ],
+                "priceNote": "Preis für die genannte Einheit.",
+                "conditions": "Nach gewöhnlichem Fass- und Flaschenvorrat."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 280,
+                "imageFormat": "square",
+                "descriptionTitle": "Auf dem Tisch",
+                "featuresTitle": "Auf einen Blick",
+                "originTitle": "Herkunft",
+                "usageTitle": "Bestellung",
+                "priceTitle": "Preis",
+                "priceFill": 25,
+                "priceOptions": [],
+                "conditionsTitle": "Verfügbarkeit",
+                "attributes": [
+                  {
+                    "label": "Sättigung",
+                    "value": 0
+                  },
+                  {
+                    "label": "Wärme",
+                    "value": 7
+                  },
+                  {
+                    "label": "Frische",
+                    "value": 3
+                  },
+                  {
+                    "label": "Rausch",
+                    "value": 8
+                  },
+                  {
+                    "label": "Reisegut",
+                    "value": 2
+                  },
+                  {
+                    "label": "Preiswert",
+                    "value": 4
+                  }
+                ],
+                "priceMin": "2",
+                "priceMax": "3",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "heller-kraeuterschnaps",
+                "canonicalKey": "standard:taverne:kraeuterschnaps",
+                "category": "getraenke",
+                "title": "Lokaler Kräuterschnaps",
+                "subtitle": "Hochprozentiger",
+                "unit": "Glas",
+                "image": "https://i.imgur.com/E2plMP4.png",
+                "tags": [
+                  "Kräuter",
+                  "Bitter",
+                  "Verdauung"
+                ],
+                "features": [
+                  "Glas"
+                ],
+                "description": "<p>Hausgemachter Schnaps mit Beifuß, Wermut, Wacholder oder anderen lokalen Kräutern. Bitter, scharf und angeblich gut gegen fast alles.</p>",
+                "origin": "Standardsortiment der Taverne · gewöhnlicher Marktbezug in Gwynthor",
+                "usageTags": [
+                  "Am Tresen"
+                ],
+                "priceNote": "Preis für die genannte Einheit.",
+                "conditions": "Nach gewöhnlichem Fass- und Flaschenvorrat."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 280,
+                "imageFormat": "square",
+                "descriptionTitle": "Auf dem Tisch",
+                "featuresTitle": "Auf einen Blick",
+                "originTitle": "Herkunft",
+                "usageTitle": "Bestellung",
+                "priceTitle": "Preis",
+                "priceFill": 25,
+                "priceOptions": [],
+                "conditionsTitle": "Verfügbarkeit",
+                "attributes": [
+                  {
+                    "label": "Sättigung",
+                    "value": 0
+                  },
+                  {
+                    "label": "Wärme",
+                    "value": 8
+                  },
+                  {
+                    "label": "Frische",
+                    "value": 5
+                  },
+                  {
+                    "label": "Rausch",
+                    "value": 10
+                  },
+                  {
+                    "label": "Reisegut",
+                    "value": 3
+                  },
+                  {
+                    "label": "Preiswert",
+                    "value": 3
+                  }
+                ],
+                "priceMin": "3",
+                "priceMax": "5",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "heller-kloster-spiritus",
+                "canonicalKey": "standard:taverne:kloster-spiritus",
+                "category": "getraenke",
+                "title": "Kloster \"Spiritus\"",
+                "subtitle": "Hochprozentiger",
+                "unit": "Glas",
+                "image": "https://i.imgur.com/w0pR8co.png",
+                "tags": [
+                  "Kloster",
+                  "Stark",
+                  "Rein"
+                ],
+                "features": [
+                  "Glas"
+                ],
+                "description": "<p>Klarer, starker Spiritus aus klösterlicher Brennkunst. Selten in großen Handelsströmen, aber bei Wirten mit Konvent-Kontakten zu finden.</p>",
+                "origin": "Standardsortiment der Taverne · gewöhnlicher Marktbezug in Gwynthor",
+                "usageTags": [
+                  "Am Tresen"
+                ],
+                "priceNote": "Preis für die genannte Einheit.",
+                "conditions": "Nach gewöhnlichem Fass- und Flaschenvorrat."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 280,
+                "imageFormat": "square",
+                "descriptionTitle": "Auf dem Tisch",
+                "featuresTitle": "Auf einen Blick",
+                "originTitle": "Herkunft",
+                "usageTitle": "Bestellung",
+                "priceTitle": "Preis",
+                "priceFill": 25,
+                "priceOptions": [],
+                "conditionsTitle": "Verfügbarkeit",
+                "attributes": [
+                  {
+                    "label": "Sättigung",
+                    "value": 8
+                  },
+                  {
+                    "label": "Wärme",
+                    "value": 7
+                  },
+                  {
+                    "label": "Frische",
+                    "value": 4
+                  },
+                  {
+                    "label": "Rausch",
+                    "value": 2
+                  },
+                  {
+                    "label": "Reisegut",
+                    "value": 2
+                  },
+                  {
+                    "label": "Preiswert",
+                    "value": 10
+                  }
+                ],
+                "priceMin": "1",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "heller-knechtfrass",
+                "canonicalKey": "standard:taverne:knechtfrass",
+                "category": "speisen",
+                "title": "Knechtfraß",
+                "subtitle": "Menü",
+                "unit": "Menü",
+                "image": "https://i.imgur.com/tWnyDmF.png?1",
+                "tags": [
+                  "Billig",
+                  "Satt",
+                  "Einfach"
+                ],
+                "features": [
+                  "Menü"
+                ],
+                "description": "<p>Ein schlichtes Menü für Leute, die nicht fragen, sondern essen: Eintopf, Brot und ein Krug dünnes Bier. Nicht schön, aber zuverlässig.</p>",
+                "origin": "Standardsortiment der Taverne · gewöhnlicher Marktbezug in Gwynthor",
+                "usageTags": [
+                  "Einfache Küche"
+                ],
+                "priceNote": "Preis für die genannte Einheit.",
+                "conditions": "Sorchas kleine Küche arbeitet nach Bestellung und Tagesvorrat. Aufwendigere Standardgerichte nur nach vorheriger Absprache; der Tresen nennt, was heute zubereitet werden kann."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 280,
+                "imageFormat": "square",
+                "descriptionTitle": "Auf dem Tisch",
+                "featuresTitle": "Auf einen Blick",
+                "originTitle": "Herkunft",
+                "usageTitle": "Bestellung",
+                "priceTitle": "Preis",
+                "priceFill": 25,
+                "priceOptions": [],
+                "conditionsTitle": "Verfügbarkeit",
+                "attributes": [
+                  {
+                    "label": "Sättigung",
+                    "value": 10
+                  },
+                  {
+                    "label": "Wärme",
+                    "value": 8
+                  },
+                  {
+                    "label": "Frische",
+                    "value": 5
+                  },
+                  {
+                    "label": "Rausch",
+                    "value": 6
+                  },
+                  {
+                    "label": "Reisegut",
+                    "value": 2
+                  },
+                  {
+                    "label": "Preiswert",
+                    "value": 6
+                  }
+                ],
+                "priceMin": "3",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "heller-kurgrunden-teller",
+                "canonicalKey": "standard:taverne:kurgrunden-teller",
+                "category": "speisen",
+                "title": "Kurgrunden Teller",
+                "subtitle": "Menü",
+                "unit": "Menü",
+                "image": "https://i.imgur.com/tWnyDmF.png?1",
+                "tags": [
+                  "Fleisch",
+                  "Bier",
+                  "Deftig"
+                ],
+                "features": [
+                  "Menü"
+                ],
+                "description": "<p>Ein kräftiges Tavernenmenü mit geröstetem Fleisch, Käse, Brot und Starkbier. Für Söldner, Fuhrleute und Reisende mit echtem Hunger.</p>",
+                "origin": "Standardsortiment der Taverne · gewöhnlicher Marktbezug in Gwynthor",
+                "usageTags": [
+                  "Einfache Küche"
+                ],
+                "priceNote": "Preis für die genannte Einheit.",
+                "conditions": "Sorchas kleine Küche arbeitet nach Bestellung und Tagesvorrat. Aufwendigere Standardgerichte nur nach vorheriger Absprache; der Tresen nennt, was heute zubereitet werden kann."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 280,
+                "imageFormat": "square",
+                "descriptionTitle": "Auf dem Tisch",
+                "featuresTitle": "Auf einen Blick",
+                "originTitle": "Herkunft",
+                "usageTitle": "Bestellung",
+                "priceTitle": "Preis",
+                "priceFill": 25,
+                "priceOptions": [],
+                "conditionsTitle": "Verfügbarkeit",
+                "attributes": [
+                  {
+                    "label": "Sättigung",
+                    "value": 8
+                  },
+                  {
+                    "label": "Wärme",
+                    "value": 6
+                  },
+                  {
+                    "label": "Frische",
+                    "value": 7
+                  },
+                  {
+                    "label": "Rausch",
+                    "value": 4
+                  },
+                  {
+                    "label": "Reisegut",
+                    "value": 3
+                  },
+                  {
+                    "label": "Preiswert",
+                    "value": 5
+                  }
+                ],
+                "priceMin": "4",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "heller-bardenmahl",
+                "canonicalKey": "standard:taverne:bardenmahl",
+                "category": "speisen",
+                "title": "Bardenmahl",
+                "subtitle": "Menü",
+                "unit": "Menü",
+                "image": "https://i.imgur.com/tWnyDmF.png?1",
+                "tags": [
+                  "Barden",
+                  "Käse",
+                  "Apfelwein"
+                ],
+                "features": [
+                  "Menü"
+                ],
+                "description": "<p>Ein etwas feineres Menü mit Teigtaschen, Käseplatte, Apfelwein und getrockneten Feigen. Guter Stoff für lange Lieder und längere Rechnungen.</p>",
+                "origin": "Standardsortiment der Taverne · gewöhnlicher Marktbezug in Gwynthor",
+                "usageTags": [
+                  "Einfache Küche"
+                ],
+                "priceNote": "Preis für die genannte Einheit.",
+                "conditions": "Sorchas kleine Küche arbeitet nach Bestellung und Tagesvorrat. Aufwendigere Standardgerichte nur nach vorheriger Absprache; der Tresen nennt, was heute zubereitet werden kann."
+              },
+              {
+                "status": "unavailable",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 280,
+                "imageFormat": "square",
+                "descriptionTitle": "Auf dem Tisch",
+                "featuresTitle": "Auf einen Blick",
+                "originTitle": "Herkunft",
+                "usageTitle": "Bestellung",
+                "priceTitle": "Kein Ausschank",
+                "priceFill": 25,
+                "priceOptions": [],
+                "conditionsTitle": "Verfügbarkeit",
+                "attributes": [],
+                "id": "cneacail-flusshell",
+                "category": "sept",
+                "title": "Cneacail · Flusshell",
+                "subtitle": "Ehemaliges helles Septbier",
+                "unit": "Kein Ausschank",
+                "image": "./assets/letzter-heller/goods/cneacail-flusshell.png",
+                "badge": "Leer · Ausschank untersagt",
+                "description": "<p>Ein helles, geradliniges Gerstenbier der Flusssiedlung Bun na h-Aibhne, mit milder Malzsüße und trockenem Ende. Arran rettete einige Fässer nach Gwynthor. Sie sind seit Jahren leer. Nachbrauen und eigener Vertrieb der Rezeptur liegen außerhalb von Alasdairs erworbenen Rechten.</p>",
+                "features": [
+                  "Gerettete Fässer seit Jahren leer",
+                  "Keine eigene Nachbrauung",
+                  "Rezept- und Verwertungsrechte bei der Klingenden Münze"
+                ],
+                "origin": "Bun na h-Aibhne · Sept Cneacail · Ceitheach",
+                "usageTags": [
+                  "Historische Hauskarte"
+                ],
+                "priceNote": "Kein Bestand und kein eigenes Vertriebsrecht. Kein bestellbares Angebot.",
+                "conditions": "Die alten Fässer sind aufgebraucht. Alasdair darf diese Rezepturen weder selbst nachbrauen noch als eigenes Sortiment vertreiben."
+              },
+              {
+                "status": "unavailable",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 280,
+                "imageFormat": "square",
+                "descriptionTitle": "Auf dem Tisch",
+                "featuresTitle": "Auf einen Blick",
+                "originTitle": "Herkunft",
+                "usageTitle": "Bestellung",
+                "priceTitle": "Kein Ausschank",
+                "priceFill": 25,
+                "priceOptions": [],
+                "conditionsTitle": "Verfügbarkeit",
+                "attributes": [],
+                "id": "cneacail-huegeldunkel",
+                "category": "sept",
+                "title": "Cneacail · Hügeldunkel",
+                "subtitle": "Ehemaliges dunkles Septbier",
+                "unit": "Kein Ausschank",
+                "image": "./assets/letzter-heller/goods/cneacail-huegeldunkel.png",
+                "badge": "Leer · Ausschank untersagt",
+                "description": "<p>Das kräftigere dunkle Bier der Cneacail: geröstetes Malz, Brotkruste und ein herber Nachklang. Die wenigen geretteten Fässer wurden während der ersten Tavernenjahre geleert. Es wird weder ausgeschenkt noch nachgebraut; die Klingende Münze besitzt die übertragenen Rezept- und Verwertungsrechte.</p>",
+                "features": [
+                  "Gerettete Fässer seit Jahren leer",
+                  "Keine eigene Nachbrauung",
+                  "Rezept- und Verwertungsrechte bei der Klingenden Münze"
+                ],
+                "origin": "Bun na h-Aibhne · Sept Cneacail · Ceitheach",
+                "usageTags": [
+                  "Historische Hauskarte"
+                ],
+                "priceNote": "Kein Bestand und kein eigenes Vertriebsrecht. Kein bestellbares Angebot.",
+                "conditions": "Die alten Fässer sind aufgebraucht. Alasdair darf diese Rezepturen weder selbst nachbrauen noch als eigenes Sortiment vertreiben."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 280,
+                "imageFormat": "square",
+                "descriptionTitle": "Auf dem Tisch",
+                "featuresTitle": "Auf einen Blick",
+                "originTitle": "Herkunft",
+                "usageTitle": "Bestellung",
+                "priceTitle": "Alasdairs Preis",
+                "priceFill": 25,
+                "priceOptions": [],
+                "conditionsTitle": "Verfügbarkeit",
+                "attributes": [],
+                "priceMin": "80",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "bun-na-h-aibhne",
+                "category": "sept",
+                "title": "Bun na h-Aibhne",
+                "subtitle": "Alter Whisky der Sept Cneacail · Abfüllung 1715",
+                "unit": "Ein kleines Glas · 4 cl",
+                "image": "./assets/letzter-heller/goods/bun-na-h-aibhne.png",
+                "badge": "Nur vier Privatflaschen",
+                "description": "<p>Malz, getrocknete Birne und ein trockener Eichenklang aus der verlorenen Brennerei am Fluss. Dieser Whisky reifte zehn Jahre im Eichenfass und wurde 1715 noch in der Heimat abgefüllt. Alasdair besitzt vier gerettete Privatflaschen. Er verkauft sie nicht als ganze Flaschen und schenkt nur ein kleines Glas zu einem Preis aus, der mit dem übrigen billigen Angebot des Hauses nichts gemein hat.</p>",
+                "features": [
+                  "Vier Flaschen à 0,7 l",
+                  "Zehn Jahre Fassreife · 1715 abgefüllt",
+                  "Ausschließlich glasweise · keine ganze Flasche zu kaufen"
+                ],
+                "origin": "Historischer Privatbestand aus Bun na h-Aibhne · Sept Cneacail",
+                "usageTags": [
+                  "Nur bei Alasdair",
+                  "Kein regulärer Ausschank"
+                ],
+                "priceNote": "80 Kupfertaler je 4 cl. Keine Flaschen- oder Fassbestellung.",
+                "conditions": "Nur nach ausdrücklicher Freigabe durch Alasdair aus seinen vier geretteten Privatflaschen. Keine Nachlieferung aus der zerstörten Brennerei; neue Erzeugnisse nach den verkauften Rezepturen sind ein anderer Bestand."
+              }
+            ],
+            "footerCards": [
+              {
+                "icon": "◈",
+                "title": "Rezepte und Schulden",
+                "text": "Die Klingende Münze besitzt die übertragenen Verwertungsrechte. Finlay vertreibt die nach diesen Rezepturen hergestellten Getränke in ihrem Auftrag."
+              },
+              {
+                "icon": "♧",
+                "title": "Eine kleine Küche",
+                "text": "Sorcha führt den Herd allein. Der Tresen nennt Tagesvorrat, Wartezeit und die Gerichte, die sich vorbestellen lassen."
+              }
+            ]
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "heller-dienste",
+          "pageTitle": "Die kurzen Dienste",
+          "guildServicesPage": true,
+          "image": "./assets/letzter-heller/scenes/kammer.png",
+          "imageWidth": 30,
+          "imageTall": true,
+          "guildServices": {
+            "title": "Eine Kammer, etwas Zeit und ein billiger Krug",
+            "introduction": "<p>Keine Bühne, keine Festgesellschaft und kein großes Versprechen. Im Letzten Heller werden Getränke und einfache Kammerzeiten einzeln bezahlt. Alasdair nennt den Preis, die gewünschte Frau bespricht den Aufenthalt mit dem Gast.</p>",
+            "services": [
+              {
+                "title": "Ein kurzer Aufenthalt",
+                "icon": "./assets/letzter-heller/scenes/kammer.png",
+                "description": "<p>Eine vereinbarte halbe Stunde intime Gesellschaft in einer der drei einfachen Kammern. Die Kammer ist für diese Zeit enthalten.</p>",
+                "clients": "",
+                "scope": "Eine erwachsene Dame · etwa eine halbe Stunde",
+                "terms": "4 Kupfertaler · Getränke gesondert"
+              },
+              {
+                "title": "Eine Stunde hinter der Tür",
+                "icon": "./assets/letzter-heller/scenes/kammer.png",
+                "description": "<p>Eine Stunde zu zweit in einer freien Kammer. Wünsche und persönliche Grenzen werden mit der Frau selbst besprochen.</p>",
+                "clients": "",
+                "scope": "Eine erwachsene Dame · eine Stunde",
+                "terms": "7 Kupfertaler · Kammer enthalten, Getränke gesondert"
+              },
+              {
+                "title": "Ein Krug am Tisch",
+                "icon": "./assets/letzter-heller/scenes/schankstube.png",
+                "description": "<p>Platz an einem der vier Schanktische. Bezahlt werden die bestellten Speisen und Getränke; es gibt kein eigenes Unterhaltungsprogramm.</p>",
+                "clients": "",
+                "scope": "Nach freiem Platz · gewöhnlicher Schankbesuch",
+                "terms": "Kein Eintritt · Preise laut Schankkarte"
+              }
+            ],
+            "process": "<p>Am Tresen nach freier Kammer und gewünschter Gesellschaft fragen. Zeit und Preis vor dem Aufenthalt abstimmen; Sten hält den Flur von unangemeldeten Gästen frei.</p>",
+            "conditions": "<p>Die drei Kammern werden für die vereinbarte Zeit genutzt. Übernachtungszimmer, Musikabende und Bankette werden nicht angeboten. Küche und Ausschank richten sich nach den vorhandenen Vorräten. Der alte Whisky wird nur von Alasdair und zu seinem gesonderten Preis ausgegeben.</p>",
+            "footer": "Zum Letzten Heller · Keine große Nacht. Ein bezahlter Aufenthalt."
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "heller-schankstube",
+          "pageTitle": "Die Schankstube · Noch ein billiger Krug",
+          "image": "./assets/letzter-heller/scenes/schankstube.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Vier kleine Tische, eine fleckige Bank und der alte Tresen füllen die niedrige Stube. Der Geruch von Bier hängt im Holz. Hinter dem Tresen steht Alasdair; durch die Seitentür gelangen Sorchas Portionen in den Raum. Eine schmale Treppe führt zu den Kammern. Neben dem Schank steht ein verschlossener kleiner Schrank, dessen Schlüssel der Wirt bei sich trägt.</p>",
+          "sessionHint": "Ein Besuch im Letzten Heller.",
+          "sessionEmptyTitle": "Die nächste Zeche ist noch offen",
+          "sessionEmptyText": "Ein Gespräch am Tresen oder eine Begegnung am Kammerflur kann hier beginnen.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "heller-kammerflur",
+          "pageTitle": "Der Kammerflur · Dünne Türen",
+          "image": "./assets/letzter-heller/scenes/kammerflur.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Oben knarrt jedes Brett. Drei schmale Türen gehen vom dunklen Flur ab; ein gemeinsamer Waschplatz steht am Ende. Maela trägt frisches Wasser hinauf und nimmt das gebrauchte Leinen mit. Vom Schankraum dringen Stimmen durch den Treppenschacht.</p>",
+          "sessionHint": "Ein Besuch im Letzten Heller.",
+          "sessionEmptyTitle": "Die nächste Zeche ist noch offen",
+          "sessionEmptyText": "Ein Gespräch am Tresen oder eine Begegnung am Kammerflur kann hier beginnen.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "heller-kammer",
+          "pageTitle": "Die kleine Kammer · Ein kurzer Aufenthalt",
+          "image": "./assets/letzter-heller/scenes/kammer.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Ein einfaches ordentlich bezogenes Bett, ein Hocker und zwei Kleiderhaken lassen kaum freien Boden. Der Fensterladen schließt nicht ganz dicht. Die Kammer wird für den vereinbarten Aufenthalt genutzt; danach wechseln Wasser und Leinen, soweit der kleine Hausvorrat reicht. Eine Herberge für Übernachtungsgäste ist das Haus nicht mehr.</p>",
+          "sessionHint": "Ein Besuch im Letzten Heller.",
+          "sessionEmptyTitle": "Die nächste Zeche ist noch offen",
+          "sessionEmptyText": "Ein Gespräch am Tresen oder eine Begegnung am Kammerflur kann hier beginnen.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        }
+      ]
+    }
+  }
+}

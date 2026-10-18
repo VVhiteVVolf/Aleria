@@ -1401,6 +1401,22 @@ window.KARTO_MEDIA_ASSETS = Object.freeze([
     "source": "Hauswappen"
   },
   {
+    "id": "ac227f537b7e54",
+    "name": "Bielle",
+    "url": "/Stammbäume/assets/images/houses/Brevanor/Bielle.png",
+    "kind": "crest",
+    "group": "Brevanor",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "3ebe6abebe9bc2",
+    "name": "Desele",
+    "url": "/Stammbäume/assets/images/houses/Brevanor/Desele.png",
+    "kind": "crest",
+    "group": "Brevanor",
+    "source": "Hauswappen"
+  },
+  {
     "id": "baf860f6a21119",
     "name": "haus garrael",
     "url": "/Stammbäume/assets/images/houses/Camruisge/haus-garrael.png",
@@ -1508,6 +1524,14 @@ window.KARTO_MEDIA_ASSETS = Object.freeze([
     "id": "f3ca9fe60c3930",
     "name": "clan ui rochraide",
     "url": "/Stammbäume/assets/images/houses/Ceitheach/clan-ui-rochraide.png",
+    "kind": "crest",
+    "group": "Ceitheach",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "cac1bcfdd9cacd",
+    "name": "sept cneacail",
+    "url": "/Stammbäume/assets/images/houses/Ceitheach/sept-cneacail.png",
     "kind": "crest",
     "group": "Ceitheach",
     "source": "Hauswappen"
@@ -3169,9 +3193,25 @@ window.KARTO_MEDIA_ASSETS = Object.freeze([
     "source": "Hauswappen"
   },
   {
+    "id": "37a642a13317ad",
+    "name": "Fontani",
+    "url": "/Stammbäume/assets/images/houses/Llamreis%20Ankunft/B%C3%BCrgerliche/Gwynthor/Fontani.png",
+    "kind": "crest",
+    "group": "Llamreis Ankunft / Bürgerliche / Gwynthor",
+    "source": "Hauswappen"
+  },
+  {
     "id": "3871909ea82b91",
     "name": "Gofrann",
     "url": "/Stammbäume/assets/images/houses/Llamreis%20Ankunft/B%C3%BCrgerliche/Gwynthor/Gofrann.png",
+    "kind": "crest",
+    "group": "Llamreis Ankunft / Bürgerliche / Gwynthor",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "3b4ad97b8a8888",
+    "name": "Gwregysdu",
+    "url": "/Stammbäume/assets/images/houses/Llamreis%20Ankunft/B%C3%BCrgerliche/Gwynthor/Gwregysdu.png",
     "kind": "crest",
     "group": "Llamreis Ankunft / Bürgerliche / Gwynthor",
     "source": "Hauswappen"
@@ -3196,6 +3236,14 @@ window.KARTO_MEDIA_ASSETS = Object.freeze([
     "id": "ec73311ff5d285",
     "name": "Raves",
     "url": "/Stammbäume/assets/images/houses/Llamreis%20Ankunft/B%C3%BCrgerliche/Gwynthor/Raves.png",
+    "kind": "crest",
+    "group": "Llamreis Ankunft / Bürgerliche / Gwynthor",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "292013840346db",
+    "name": "Rhwyd",
+    "url": "/Stammbäume/assets/images/houses/Llamreis%20Ankunft/B%C3%BCrgerliche/Gwynthor/Rhwyd.png",
     "kind": "crest",
     "group": "Llamreis Ankunft / Bürgerliche / Gwynthor",
     "source": "Hauswappen"

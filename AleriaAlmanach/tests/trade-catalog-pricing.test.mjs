@@ -34,6 +34,7 @@ test('three sizes remain distinct offers while reserved and malformed options ca
     categories: [{ id: 'beer', label: 'Bier · Getränke' }], items: [
       { id: 'hell', title: 'Helles', category: 'beer', ...buildDrinkPricing('beer', 2) },
       { id: 'reserve', title: 'Freier Sortimentplatz', status: 'planned', category: 'beer', priceMin: '0' },
+      { id: 'empty', title: 'Vergriffenes Bier', status: 'unavailable', category: 'beer', priceMin: '8', priceCurrency: 'KT' },
       { id: 'special', title: 'Sonderabfüllung', category: 'beer', priceOptions: [{ label: 'Fass', unit: '50 l', price: 'auf Anfrage' }] }
     ]
   } }] };

@@ -1,0 +1,100 @@
+{
+  "schema": "aleria.family-tree",
+  "schemaVersion": 1,
+  "document": {
+    "id": "haus-desele",
+    "title": "Haus Desele",
+    "emblem": "assets/images/houses/Brevanor/Desele.png",
+    "motto": "",
+    "description": "Brevanorisches Herstellerhaus für Champagnia und namhafte Parfüme. Helviane, geborene Bielle und angeheiratete Desele, betreibt heute die Gestiefelte Muschi in Gwynthor. Gerettetes Vermögen, Duftrezepte und wenige alte Flaschen gelangten mit ihr über Lothir bis nach Estryll.",
+    "houseProfile": {
+      "rankId": "commoner",
+      "seat": "",
+      "barony": "",
+      "county": "",
+      "kingdom": "Brevanor",
+      "secondarySeats": [],
+      "liegeHouseId": "",
+      "liegeHouseName": "",
+      "regionEmblems": {
+        "seat": "",
+        "barony": "",
+        "county": "",
+        "kingdom": ""
+      }
+    }
+  },
+  "houses": [
+    {
+      "id": "house-desele",
+      "name": "Haus Desele",
+      "status": "active",
+      "emblem": "assets/images/houses/Brevanor/Desele.png"
+    },
+    {
+      "id": "house-bielle",
+      "name": "Haus Bielle",
+      "status": "active",
+      "emblem": "assets/images/houses/Brevanor/Bielle.png"
+    }
+  ],
+  "persons": [
+    {
+      "id": "helviane-desele",
+      "worldPersonId": "person--haus-desele--helviane-desele",
+      "name": "Helviane Desele",
+      "title": "Inhaberin · geborene Bielle",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1668",
+      "death": "",
+      "portrait": "../AleriaAlmanach/assets/gestiefelte-muschi/portraits/helviane.png",
+      "portraitPlaceholder": "auto",
+      "houseId": "house-bielle",
+      "familyRole": "married",
+      "lineageRole": "branch",
+      "tags": [],
+      "notes": "Geborene Bielle. 72 Jahre. Helviane hält Besitz, Kasse und Hausregeln in eigener Hand. Ihr Vermögen hat den Krieg überstanden, ihre ganze Familie nicht denselben Weg genommen. Sie erwartet Haltung selbst beim ausgelassensten Abend und lässt ihre Geringschätzung selten hinter dem Fächer verschwinden.",
+      "extensions": {
+        "registryManagedFields": [
+          "title",
+          "notes",
+          "portrait"
+        ]
+      }
+    }
+  ],
+  "partnerships": [],
+  "parentages": [],
+  "cadetBranches": [],
+  "timeJumps": [],
+  "lineage": {
+    "founderPartnershipId": "",
+    "houseId": "house-desele",
+    "crestSubtitle": "Brevanor",
+    "crestEmblemScale": 0.87,
+    "crestFrame": "iron",
+    "crestFrameScale": 1,
+    "timeGap": {
+      "enabled": false,
+      "years": 0,
+      "fromYear": "",
+      "toYear": "",
+      "label": ""
+    }
+  },
+  "view": {
+    "focusPersonId": "helviane-desele",
+    "orientation": "vertical",
+    "ancestorDepth": 4,
+    "descendantDepth": 4,
+    "limitGenerations": false,
+    "showSiblings": true
+  },
+  "extensions": {
+    "blankFamily": false,
+    "heraldryOnly": true,
+    "sourceRevision": 1,
+    "sourceNote": "Autorenauftrag vom 18.10.2026: Wappen und Herkunft in Brevanor vermerken. Keine zusätzlichen Angehörigen, Ehen oder ausgearbeitete Familienlinien erfinden."
+  }
+}

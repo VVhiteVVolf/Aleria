@@ -1,8 +1,9 @@
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { buildGoettlicheEleganz } from '../modules/goettliche-eleganz/eleganz-module.mjs';
 import { ELEGANZ_COLLECTION } from '../modules/goettliche-eleganz/eleganz-collection.mjs';
+import { FORTUNA_SECTION } from '../modules/markt-der-fortuna-gwynthor/fortuna-section.mjs';
 const entry = buildGoettlicheEleganz();
-const section = {key:'Gwynthor',tab:'Völker & Kulturen',desc:'',nodeId:'node:volker-kulturen:cenyr/celtigerns-wacht/llamreis-ankunft/gwynthor',path:['Cenyr','Celtigerns Wacht','Llamreis Ankunft','Gwynthor']};
+const section = FORTUNA_SECTION;
 const target = new URL('../../Charakter Archiv Exporte/Module/Göttliche Eleganz/',import.meta.url);
 await mkdir(target,{recursive:true});
 const outputs = new Map([

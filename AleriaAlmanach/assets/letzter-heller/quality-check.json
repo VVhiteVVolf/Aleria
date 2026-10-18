@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-18",
+  "status": "complete",
+  "selectedImages": 22,
+  "uniqueIdsAndHashes": true,
+  "allFinalsSavedInWorkspace": true,
+  "portraitAndSceneAspectRatio": "2:3",
+  "itemAndHeraldryAspectRatio": "1:1",
+  "transparentImagesHaveRealPngAlpha": true,
+  "heraldryAlpha": {
+    "inside": 255,
+    "outside": 0,
+    "rgbPreserved": true,
+    "audit": "emblem-alpha-correction.json"
+  },
+  "unprocessedOriginalsByteIdentical": true,
+  "browser": {
+    "passed": true,
+    "report": ".tmp/letzter-heller/browser-1792336755491/report.json",
+    "viewports": ["1440 × 1000", "430 × 900"],
+    "visiblePages": 11,
+    "sceneIntroCollapse": true,
+    "unavailableBeerCards": true,
+    "editorAvailabilityRoundTrip": true,
+    "familyPersons": 15,
+    "familyCardsIncludingStructure": 17,
+    "familyGeometryIssues": 0,
+    "familyBrokenImages": 0,
+    "externalWrites": false
+  },
+  "tests": { "module": 6, "relatedRegressionChecks": 35, "passed": true },
+  "publication": { "pushed": false, "deployed": false, "firebaseApplied": false }
+}

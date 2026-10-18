@@ -1,0 +1,203 @@
+{
+  "tool": "built-in image_gen",
+  "styleSource": "AleriaAlmanach/docs/art/image-style-presets.json",
+  "entries": [
+    {
+      "id": "wappen",
+      "destination": "Stammbäume/assets/images/houses/Ceitheach/sept-cneacail.png",
+      "transparent": true,
+      "references": [
+        "Stammbäume/assets/images/houses/Ceitheach/sept-daire.png",
+        "Stammbäume/assets/images/houses/Ceitheach/clan-mallacht-seaghda.png"
+      ],
+      "prompt": "# Universeller Wappen-Prompt\n\n**Wappenname:** Sept Cneacail\n\n**Zentrales Symbol:** Ein einfaches hölzernes Whiskyfass und ein kahler Baum, dessen krummer Stamm sich seitlich um das Fass windet und dessen kahle Äste darüber greifen. Ein einziges gut lesbares heraldisches Motiv, vollständig innerhalb des Kreises.\n\n**Farbpalette:** Naturholzbraun · Verblasstes Elfenbein · Mattes Holzkohlengrau\n\n**Wappenform:** ZIRKULAR – IMMER ein exakter Kreis, damit das Wappen in die vorhandenen Frames passt. Keine Spitzschilde oder ovalen Außenkonturen.\n\n### Gestaltung\n\nEin hochwertiges mittelalterliches Wappen im nordisch-keltischen Fantasy-Heraldikstil. Inspiriert von historischen bemalten Holzschilden, nordischer Ornamentik und traditionellen Clanwappen.\n\nDas zentrale Symbol ist groß, ausdrucksstark und detailliert, gleichzeitig aber klar heraldisch stilisiert. Kräftige dunkle Konturen, sauber getrennte Farbflächen, markante Silhouetten und ausgewogene Proportionen.\n\nDas gesamte Motiv muss vollständig innerhalb des Wappens liegen. Keine abgeschnittenen Figuren, Waffen, Flügel, Hörner oder Ornamente.\n\n### Material und Oberflächen\n\nDie innere Wappenfläche besteht aus bemalten Holzbrettern mit dezenter, sichtbarer Holzmaserung. Die Farben wirken wie auf Holz aufgetragene mittelalterliche Pigmente.\n\nDer Außenrahmen besteht aus schlichtem dunklem Holz mit leichter Materialstruktur, kleinen Gebrauchsspuren und einer vollständig geschlossenen Außenkontur.\n\nDas Wappen soll handwerklich hochwertig, plastisch und historisch glaubwürdig wirken. Keine moderne, minimalistische Logoästhetik, keine Fotorealistik und keine übertriebenen 3D-Effekte.\n\n### Verzierungen\n\nKeine Verzierung, nur ein schmaler vollständig geschlossener Holzrand\n\nBei zirkularen Wappen können die Verzierungen gleichmäßig im Außenring verlaufen. Sie dürfen das zentrale Motiv nicht überlagern.\n\n### Komposition\n\nQuadratisches Bildformat 1:1. Das vollständige Wappen steht mittig und wird frontal gezeigt.\n\nDas Wappen nimmt ungefähr 85–90 % der Bildbreite ein. Alle Elemente bleiben vollständig innerhalb seiner äußeren Begrenzung.\n\n### Transparenz – zwingend einhalten\n\n**Der gesamte Bereich außerhalb des äußersten Wappenrahmens muss vollständig transparent sein (Alpha-Kanal = 0).**\n\n- Keine Hintergrundfarbe, kein Weiß, Schwarz oder Magenta außerhalb des Wappens.\n- Kein Hintergrundbild, keine Landschaft, keine Wand und keine dekorativen Elemente außerhalb des Rahmens.\n- Keine Schlagschatten, Glows oder Lichtreflexe außerhalb der Wappenkontur.\n- Keine über den Rahmen hinausragenden Ornamente oder Symbole.\n- Die äußerste Wappenkante muss sauber und geschlossen sein.\n- **Die gesamte Wappenfläche innerhalb des Außenrahmens muss vollständig deckend bleiben (Alpha-Kanal = 255).**\n- Keine transparenten Löcher zwischen Symbolen, Ornamenten oder innerhalb der bemalten Holzfläche.\n- Die Innenfläche des Wappens muss ihre vorgesehene Farbe vollständig behalten.\n\n**WICHTIG:** Ausschließlich der Bereich außerhalb der äußeren Wappenkontur ist transparent. Das Wappen selbst, einschließlich Holzfläche, Rahmen, Symbolen und sämtlichen Zwischenräumen, bleibt vollständig sichtbar und deckend.\n\n### Ausgabe\n\nHochauflösendes PNG mit echtem transparentem Hintergrund (RGBA), quadratisches Format 1:1. Keine simulierte Transparenz und kein Schachbrettmuster als Bildhintergrund.\nAKTUELLER MOTIVWUNSCH HAT VORRANG VOR PRACHT: Sehr schäbiges billiges altes dünn bemaltes Holzschild. Flaches Holzobjekt, viel sichtbares mattes Naturholz, grobe eingeritzte Umrisse und nur zwei sehr dünne abgeriebene Pigmente Elfenbein und Holzkohlengrau. Keine satte farbige Fläche, kein Grün, Gold, Rot oder Violett. Keine plastische Posterillustration, kein metallischer Zierrahmen, kein Text, keine Ornamentik. Fass und kahler Baum einfach und flach stilisiert. Gesamte Holzfläche bleibt deckend, Abnutzung ist sichtbares braunes Holz und niemals ein transparentes Loch. Exakter Kreis bei 87% Bildbreite.",
+      "referenceRole": "Ceitheach register references for circular form and wooden sept heraldry only. Do not copy the lord’s boar, gold/green palette, shadow or blank design. Use the explicitly chosen barrel and bare-tree motif."
+    },
+    {
+      "id": "alasdair",
+      "destination": "AleriaAlmanach/assets/letzter-heller/portraits/alasdair.png",
+      "transparent": false,
+      "references": [],
+      "referenceRole": "",
+      "prompt": "Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nUse case: stylized-concept. Exactly one adult character portrait, standing upper body to hips. 44-year-old human-looking Albish man, looks prematurely old and worn, very heavy obese broad torso and large belly, broad sagging face, brown eyes, pronounced half-bald head with ONLY dark brown short smooth hair around sides and back, shiny large bald crown, coarse matching dark brown moustache, tired under-eye bags and deep frown lines. Worn brown linen shirt with loose collar and stretched faded olive waistcoat, plain rope belt, greasy cuffs. Standing upper body to hips, one hand rests heavily on bar edge, other hangs at side, sour suspicious stare toward viewer, pursed mouth. No regal clothing or armor, normal rounded human ears, not an elf. Quiet very shabby medieval dockside tavern room, cracked plaster and old dark beams, simple muted daylight. Poverty and exhaustion without grotesque caricature. Plain worn fully opaque clothes, no nudity or sexual activity, no erotic pose, no pointed elf ears, no text or watermark. Unique individual face, haircut, stance, expression and clothes."
+    },
+    {
+      "id": "arran",
+      "destination": "AleriaAlmanach/assets/letzter-heller/portraits/arran.png",
+      "transparent": false,
+      "references": [
+        "AleriaAlmanach/assets/letzter-heller/portraits/alasdair.png"
+      ],
+      "referenceRole": "Alasdair provides only blood-family resemblance in nose and brow. Preserve this person’s OWN age, build, haircut, clothes, expression and pose; do not copy obesity, balding pattern or his face exactly.",
+      "prompt": "Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nUse case: stylized-concept. Exactly one adult character portrait, standing upper body to hips. 62-year-old visibly elderly human-looking Albish man, exhausted deeply lined face, brown eyes, sparse uniformly gray straight hair at sides of balding crown, gray stubble and drooping moustache. Once sturdy now slumped shoulders, worn faded dark green wool coat over patched shirt. Standing upper body to hips, holds a plain empty wooden tankard loosely low at waist, gaze tired and lowered, defeated unsmiling expression. No ghost effects, no corpse, no injuries, no halo; an ordinary portrait remembered from life. Normal rounded human ears. Quiet very shabby medieval dockside tavern room, cracked plaster and old dark beams, simple muted daylight. Poverty and exhaustion without grotesque caricature. Plain worn fully opaque clothes, no nudity or sexual activity, no erotic pose, no pointed elf ears, no text or watermark. Unique individual face, haircut, stance, expression and clothes."
+    },
+    {
+      "id": "finlay",
+      "destination": "AleriaAlmanach/assets/letzter-heller/portraits/finlay.png",
+      "transparent": false,
+      "references": [
+        "AleriaAlmanach/assets/letzter-heller/portraits/alasdair.png"
+      ],
+      "referenceRole": "Alasdair provides only blood-family resemblance in nose and brow. Preserve this person’s OWN age, build, haircut, clothes, expression and pose; do not copy obesity, balding pattern or his face exactly.",
+      "prompt": "Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nUse case: stylized-concept. Exactly one adult character portrait, standing upper body to hips. 41-year-old human-looking Albish man, brown eyes and unmistakable family resemblance to heavyset brother in nose and brow but slim angular face and lean build. Dark brown straight shoulder-length hair neatly tied into low queue, clean-shaven, slight receding temples. Plain well-kept slate-blue merchant coat, cream shirt, modest brass clasp. Standing turned slightly away from viewer, arms loosely folded below chest, controlled cold expression, jaw set and one eyebrow skeptical. No arrogant smirk, no armor, normal rounded human ears. Quiet very shabby medieval dockside tavern room, cracked plaster and old dark beams, simple muted daylight. Poverty and exhaustion without grotesque caricature. Plain worn fully opaque clothes, no nudity or sexual activity, no erotic pose, no pointed elf ears, no text or watermark. Unique individual face, haircut, stance, expression and clothes."
+    },
+    {
+      "id": "fergal",
+      "destination": "AleriaAlmanach/assets/letzter-heller/portraits/fergal.png",
+      "transparent": false,
+      "references": [],
+      "referenceRole": "",
+      "prompt": "Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nUse case: stylized-concept. Exactly one adult character portrait, standing upper body to hips. 39-year-old adult human-looking Albish man, long narrow face, brown eyes, straight medium brown hair in a rough short uneven cut, thin brown stubble, slightly bent nose. Patched gray-brown shirt with rolled sleeves and worn leather apron. Standing three-quarter, one hand loosely wipes a wooden cup with a rag at waist, flat tired expression, lips slightly crooked. Normal human rounded ears, no fine clothing. Quiet very shabby medieval dockside tavern room, cracked plaster and old dark beams, simple muted daylight. Poverty and exhaustion without grotesque caricature. Plain worn fully opaque clothes, no nudity or sexual activity, no erotic pose, no pointed elf ears, no text or watermark. Unique individual face, haircut, stance, expression and clothes."
+    },
+    {
+      "id": "sorcha",
+      "destination": "AleriaAlmanach/assets/letzter-heller/portraits/sorcha.png",
+      "transparent": false,
+      "references": [],
+      "referenceRole": "",
+      "prompt": "Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nUse case: stylized-concept. Exactly one adult character portrait, standing upper body to hips. 47-year-old adult human-looking Albish woman, square broad face, hazel-brown eyes, straight dark brown hair with a few gray hairs in a rough low knot under a faded linen headscarf. Sturdy arms and ordinary heavy work build, visible lines at mouth. Patched dull ochre dress, gray apron, sleeves rolled. Standing upper body to waist, hands loosely on hips, stern practical tired look. No ladle or food prop, normal rounded human ears. Quiet very shabby medieval dockside tavern room, cracked plaster and old dark beams, simple muted daylight. Poverty and exhaustion without grotesque caricature. Plain worn fully opaque clothes, no nudity or sexual activity, no erotic pose, no pointed elf ears, no text or watermark. Unique individual face, haircut, stance, expression and clothes."
+    },
+    {
+      "id": "eilidh",
+      "destination": "AleriaAlmanach/assets/letzter-heller/portraits/eilidh.png",
+      "transparent": false,
+      "references": [],
+      "referenceRole": "",
+      "prompt": "Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nUse case: stylized-concept. Exactly one adult character portrait, standing upper body to hips. 26-year-old clearly adult human-looking Albish woman, ordinary rather than glamorous face, straight medium brown shoulder-length hair loosely held by a worn cloth ribbon, gray-green eyes, slightly prominent nose, tired under-eye shadows. Simple worn dusty blue low-square-neck dress with opaque linen bodice and repaired sleeve, no expensive jewelry. Standing upper body, arms relaxed, one hand lightly holds her own opposite wrist at waist, small uncertain smile. Dignified ordinary adult proportions, not a child, no pointed ears. Quiet very shabby medieval dockside tavern room, cracked plaster and old dark beams, simple muted daylight. Poverty and exhaustion without grotesque caricature. Plain worn fully opaque clothes, no nudity or sexual activity, no erotic pose, no pointed elf ears, no text or watermark. Unique individual face, haircut, stance, expression and clothes."
+    },
+    {
+      "id": "mairead",
+      "destination": "AleriaAlmanach/assets/letzter-heller/portraits/mairead.png",
+      "transparent": false,
+      "references": [],
+      "referenceRole": "",
+      "prompt": "Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nUse case: stylized-concept. Exactly one adult character portrait, standing upper body to hips. 33-year-old adult human-looking Albish woman, broad round face and nose, brown eyes, brunette short wavy hair cut at jaw with uneven blunt fringe. Ordinary curvy build, worn faded brick-red fitted dress with a modest low neckline, cream sleeves, no jewelry. Standing weight on one hip, arms loosely folded at waist, weary dry half-smile, faint freckles and natural lines. No glamorous makeup, normal rounded ears. Quiet very shabby medieval dockside tavern room, cracked plaster and old dark beams, simple muted daylight. Poverty and exhaustion without grotesque caricature. Plain worn fully opaque clothes, no nudity or sexual activity, no erotic pose, no pointed elf ears, no text or watermark. Unique individual face, haircut, stance, expression and clothes."
+    },
+    {
+      "id": "fiona",
+      "destination": "AleriaAlmanach/assets/letzter-heller/portraits/fiona.png",
+      "transparent": false,
+      "references": [],
+      "referenceRole": "",
+      "prompt": "Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nUse case: stylized-concept. Exactly one adult character portrait, standing upper body to hips. 38-year-old adult human-looking Albish woman with long lean face, slightly crooked nose, deep brown eyes, dark brown straight long hair in a loose side braid, a few stray strands. Faded olive wrap-style cloth dress with opaque low neckline, plain wooden bead bracelet, worn fabric mended at shoulder. Standing slightly turned away, one hand loosely touches braid at chest, other hangs relaxed, guarded serious expression and tired eyelids. Not ugly, ordinary weathered adult face, rounded human ears. Quiet very shabby medieval dockside tavern room, cracked plaster and old dark beams, simple muted daylight. Poverty and exhaustion without grotesque caricature. Plain worn fully opaque clothes, no nudity or sexual activity, no erotic pose, no pointed elf ears, no text or watermark. Unique individual face, haircut, stance, expression and clothes."
+    },
+    {
+      "id": "runa",
+      "destination": "AleriaAlmanach/assets/letzter-heller/portraits/runa.png",
+      "transparent": false,
+      "references": [],
+      "referenceRole": "",
+      "prompt": "Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nUse case: stylized-concept. Exactly one adult character portrait, standing upper body to hips. 29-year-old adult Nordic human woman, broad cheekbones, pale blue eyes, plain attractive mature face with a strong jaw, golden blonde hair in one practical thick shoulder braid. Sturdy full figure, faded brown-and-cream simple dress with low square neckline and opaque bodice, worn wool shawl around upper arms. Standing one hand at hip, other lightly holds shawl, weary lopsided small smile. No extravagant hairstyle or jewelry, no youthful childlike features. Quiet very shabby medieval dockside tavern room, cracked plaster and old dark beams, simple muted daylight. Poverty and exhaustion without grotesque caricature. Plain worn fully opaque clothes, no nudity or sexual activity, no erotic pose, no pointed elf ears, no text or watermark. Unique individual face, haircut, stance, expression and clothes."
+    },
+    {
+      "id": "signe",
+      "destination": "AleriaAlmanach/assets/letzter-heller/portraits/signe.png",
+      "transparent": false,
+      "references": [],
+      "referenceRole": "",
+      "prompt": "Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nUse case: stylized-concept. Exactly one adult character portrait, standing upper body to hips. 35-year-old adult Nordic human woman, narrow oval face, gray-blue eyes, visible small lines at eyes and thin lips, pale ash blonde straight chin-length bob with long side fringe. Ordinary slim adult build, old muted plum dress with repaired lacing and low but fully covered neckline. Standing upper body, hands relaxed behind back, reserved skeptical look with one eyebrow slightly lifted. No cosmetics, luxury accessories or model glamour. Quiet very shabby medieval dockside tavern room, cracked plaster and old dark beams, simple muted daylight. Poverty and exhaustion without grotesque caricature. Plain worn fully opaque clothes, no nudity or sexual activity, no erotic pose, no pointed elf ears, no text or watermark. Unique individual face, haircut, stance, expression and clothes."
+    },
+    {
+      "id": "sten",
+      "destination": "AleriaAlmanach/assets/letzter-heller/portraits/sten.png",
+      "transparent": false,
+      "references": [],
+      "referenceRole": "",
+      "prompt": "Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nUse case: stylized-concept. Exactly one adult character portrait, standing upper body to hips. 51-year-old broad burly Nordic human man with battered square face, blue eyes, short dull blond hair graying naturally at temples, thick sandy blond beard, old healed nose scar. Plain worn dark leather jerkin over coarse gray wool shirt, no plate armor, no emblem, no visible weapon. Standing with arms loosely crossed, head slightly forward, stern tired patient look. Upper body to hips, rounded human ears. Quiet very shabby medieval dockside tavern room, cracked plaster and old dark beams, simple muted daylight. Poverty and exhaustion without grotesque caricature. Plain worn fully opaque clothes, no nudity or sexual activity, no erotic pose, no pointed elf ears, no text or watermark. Unique individual face, haircut, stance, expression and clothes."
+    },
+    {
+      "id": "maela",
+      "destination": "AleriaAlmanach/assets/letzter-heller/portraits/maela.png",
+      "transparent": false,
+      "references": [],
+      "referenceRole": "",
+      "prompt": "Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nUse case: stylized-concept. Exactly one adult character portrait, standing upper body to hips. 32-year-old adult human-looking Albish woman, brown eyes, ordinary heart-shaped face, medium brown hair pulled into a simple high messy bun, practical strong forearms. Worn plain taupe long-sleeved dress, stained off-white apron, sleeves rolled, plain rag loosely held in one hand by side. Standing upper body, other hand rests at back of waist, exhausted but faintly determined expression. No glamour or fine accessories, normal rounded human ears. Quiet very shabby medieval dockside tavern room, cracked plaster and old dark beams, simple muted daylight. Poverty and exhaustion without grotesque caricature. Plain worn fully opaque clothes, no nudity or sexual activity, no erotic pose, no pointed elf ears, no text or watermark. Unique individual face, haircut, stance, expression and clothes."
+    },
+    {
+      "id": "borst",
+      "destination": "AleriaAlmanach/assets/letzter-heller/pets/borst.png",
+      "transparent": false,
+      "references": [
+        "Bestiarium/assets/dog-profiles/brag.webp"
+      ],
+      "referenceRole": "Only the dog breed: small/medium rough-haired brown Brág farm watchdog with floppy ears and alert eyes. Do not reproduce the people, country scene or watercolor style.",
+      "prompt": "Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nUse case: illustration-story. One adult brown rough-haired Brág farm watchdog with scruffy beard, short floppy ears, dark eyes, modest medium-small build, plain worn leather collar, standing alert in three-quarter view beside the back door of a shabby medieval tavern. One forepaw slightly forward, head turned toward a noise off screen. Full dog visible with comfortable margin in portrait2:3 scene. A DOG, no cat or feline ears, no cushion or luxury, no people, no text."
+    },
+    {
+      "id": "aussenansicht",
+      "destination": "AleriaAlmanach/assets/letzter-heller/scenes/aussenansicht.png",
+      "transparent": false,
+      "references": [
+        "Stammbäume/assets/images/houses/Ceitheach/sept-cneacail.png"
+      ],
+      "referenceRole": "Selected faded wooden barrel-and-bare-tree crest appears as the modest old sign beside door, not as a giant poster.",
+      "prompt": "Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nUse case: illustration-story. Exterior of a small shabby CHEAP former medieval Cenyri harbor tavern converted into a poor brothel, in a narrow side lane one street behind Gwynthor docks. Low pale cracked plaster and crooked dark timber building, patched shutters and stained stone doorstep, uneven roof tiles, weak warm light behind small windows, modest open wooden door. One small worn circular wooden barrel-and-bare-tree Cneacail sign matching reference beside entrance, small carved plank reads ZUM LETZTEN HELLER. Masts glimpsed at far street end. No palace, luxurious red velvet, street crowd, modern lights, sexual posters or nudity. Quiet humble portrait2:3 architecture, not grotesquely filthy."
+    },
+    {
+      "id": "schankstube",
+      "destination": "AleriaAlmanach/assets/letzter-heller/scenes/schankstube.png",
+      "transparent": false,
+      "references": [],
+      "prompt": "Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nUse case: illustration-story. Very shabby cheap medieval Cenyri dockside tavern converted into a brothel, low dark beams, cracked plaster and water stains, exactly four small mismatched tables, old narrow bar with chipped wooden mugs, small shuttered kitchen hatch, narrow stair at back, plain locked small cabinet behind bar. Dull brown gray palette, weak daylight and one cheap oil lamp, visibly worn but no disgusting bodily fluids, no people, no red velvet luxury, no stage or dance pole. Portrait2:3, clear simple architectural perspective, no lettering or watermark."
+    },
+    {
+      "id": "kammerflur",
+      "destination": "AleriaAlmanach/assets/letzter-heller/scenes/kammerflur.png",
+      "transparent": false,
+      "references": [],
+      "prompt": "Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nUse case: illustration-story. Narrow upstairs corridor in a shabby cheap medieval brothel, exactly three worn closed plank doors, uneven bare floorboards, cracked beige plaster, small shared washstand at far end with plain ceramic pitcher and basin, one folded rough linen towel, dim small shuttered window. No luxurious drapes, no people, no explicit imagery, no modern objects, restrained simple composition. Portrait2:3, clear simple architectural perspective, no lettering or watermark."
+    },
+    {
+      "id": "kammer",
+      "destination": "AleriaAlmanach/assets/letzter-heller/scenes/kammer.png",
+      "transparent": false,
+      "references": [],
+      "prompt": "Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nUse case: illustration-story. Small very cheap medieval private bedroom, one narrow plain wooden bed with clean coarse patched linen and faded blanket, one rough stool, two wooden clothing pegs, tiny imperfectly closed shuttered window, cracked plaster, worn dark floorboards. Very sparse cheap furnishings, unoccupied, no people or nudity, no sexual props, no bodily fluids, no luxury decor. Somber quiet natural daylight. Portrait2:3, clear simple architectural perspective, no lettering or watermark."
+    },
+    {
+      "id": "cneacail-flusshell",
+      "destination": "AleriaAlmanach/assets/letzter-heller/goods/cneacail-flusshell.png",
+      "transparent": true,
+      "references": [
+        "Stammbäume/assets/images/houses/Ceitheach/sept-cneacail.png",
+        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
+      ],
+      "referenceRole": "Reference1 exact simple barrel-and-bare-tree house emblem, reference2 fantasy inventory painting style only. Never copy armor, foreign house motifs or luxury gold trim.",
+      "prompt": "Use case: stylized-concept. Create ONE square 1:1 fantasy RPG inventory item illustration: ONE old empty wooden beer cask standing upright, faded ivory painted barrel-and-bare-tree Cneacail emblem and simple label FLUSSHELL on its side, very small pale green faded paint stripe, closed wooden tap, visibly exhausted former stock, whole cask centered, no beer pouring, no extra cup.. Reference 1 defines the item's exact DESIGN, materials, colors and any authentic house emblem. Reference 2 defines the ITEM ART STYLE only: hand-painted illustrated fantasy inventory art, painterly textured metal, leather, wood and cloth, crisp dark outlines, soft simplified shading, muted warm colors, gentle illustrated highlights, readable details and a clear silhouette at small thumbnail size. Not photorealistic, not CGI or a glossy 3D render. Preserve the item's design and heraldry from reference 1; never copy the symbols or house colors of the style reference. Show the entire isolated object, centered and large within the square, with about 10% clear margin on all sides. Slight three-quarter view where appropriate; long weapons may run diagonally from lower-left handle to upper-right tip. TRUE transparent PNG alpha background; at most a very faint soft BLACK contact shadow immediately beneath the object. No person, hands, mannequin, scenery, floor, stand, frame, text, watermark or painted checkerboard. Do not add unrelated objects."
+    },
+    {
+      "id": "cneacail-huegeldunkel",
+      "destination": "AleriaAlmanach/assets/letzter-heller/goods/cneacail-huegeldunkel.png",
+      "transparent": true,
+      "references": [
+        "Stammbäume/assets/images/houses/Ceitheach/sept-cneacail.png",
+        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
+      ],
+      "referenceRole": "Reference1 exact simple barrel-and-bare-tree house emblem, reference2 fantasy inventory painting style only. Never copy armor, foreign house motifs or luxury gold trim.",
+      "prompt": "Use case: stylized-concept. Create ONE square 1:1 fantasy RPG inventory item illustration: ONE old empty squat wooden beer cask lying horizontally on two simple attached low wooden feet, worn charcoal painted barrel-and-bare-tree Cneacail emblem and small faded parchment label HUEGELDUNKEL, rusty iron hoops, closed wooden spigot, no spilled liquid or extra cup.. Reference 1 defines the item's exact DESIGN, materials, colors and any authentic house emblem. Reference 2 defines the ITEM ART STYLE only: hand-painted illustrated fantasy inventory art, painterly textured metal, leather, wood and cloth, crisp dark outlines, soft simplified shading, muted warm colors, gentle illustrated highlights, readable details and a clear silhouette at small thumbnail size. Not photorealistic, not CGI or a glossy 3D render. Preserve the item's design and heraldry from reference 1; never copy the symbols or house colors of the style reference. Show the entire isolated object, centered and large within the square, with about 10% clear margin on all sides. Slight three-quarter view where appropriate; long weapons may run diagonally from lower-left handle to upper-right tip. TRUE transparent PNG alpha background; at most a very faint soft BLACK contact shadow immediately beneath the object. No person, hands, mannequin, scenery, floor, stand, frame, text, watermark or painted checkerboard. Do not add unrelated objects."
+    },
+    {
+      "id": "bun-na-h-aibhne",
+      "destination": "AleriaAlmanach/assets/letzter-heller/goods/bun-na-h-aibhne.png",
+      "transparent": true,
+      "references": [
+        "Stammbäume/assets/images/houses/Ceitheach/sept-cneacail.png",
+        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
+      ],
+      "referenceRole": "Reference1 exact simple barrel-and-bare-tree house emblem, reference2 fantasy inventory painting style only. Never copy armor, foreign house motifs or luxury gold trim.",
+      "prompt": "Use case: stylized-concept. Create ONE square 1:1 fantasy RPG inventory item illustration: ONE whole plain antique brown-green glass whisky bottle, amber whisky, rough cork tied with old twine, faded ivory paper label reads BUN NA H-AIBHNE and 1715, small simple authentic Cneacail barrel-and-bare-tree emblem matching reference. Humble old rural distillery bottle with no luxury gold, no modern alcohol percentage or invented certification seal, no glass or extra object.. Reference 1 defines the item's exact DESIGN, materials, colors and any authentic house emblem. Reference 2 defines the ITEM ART STYLE only: hand-painted illustrated fantasy inventory art, painterly textured metal, leather, wood and cloth, crisp dark outlines, soft simplified shading, muted warm colors, gentle illustrated highlights, readable details and a clear silhouette at small thumbnail size. Not photorealistic, not CGI or a glossy 3D render. Preserve the item's design and heraldry from reference 1; never copy the symbols or house colors of the style reference. Show the entire isolated object, centered and large within the square, with about 10% clear margin on all sides. Slight three-quarter view where appropriate; long weapons may run diagonally from lower-left handle to upper-right tip. TRUE transparent PNG alpha background; at most a very faint soft BLACK contact shadow immediately beneath the object. No person, hands, mannequin, scenery, floor, stand, frame, text, watermark or painted checkerboard. Do not add unrelated objects."
+    },
+    {
+      "id": "familienerinnerung",
+      "destination": "AleriaAlmanach/assets/letzter-heller/scenes/familienerinnerung.png",
+      "transparent": false,
+      "references": [
+        "AleriaAlmanach/assets/letzter-heller/portraits/arran.png",
+        "AleriaAlmanach/assets/letzter-heller/portraits/alasdair.png",
+        "AleriaAlmanach/assets/letzter-heller/portraits/finlay.png"
+      ],
+      "referenceRole": "Image1 remembered father Arran age62, image2 heavy balding Alasdair44, image3 slim well-kept Finlay41. Preserve each distinct identity and outfit. Arran is deceased in present canon; this is an illustrative family remembrance, no claim that he is a living staff member.",
+      "prompt": "Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nUse case: illustration-story. EXACTLY THREE adult human-looking Albish men in a restrained family remembrance illustration in a poor old harbor tavern. Their remembered elderly father Arran, visibly62 with gray thinning hair, deeply tired lined face and worn coat, stands slightly behind at center, shoulders slumped and eyes lowered. In front his two middle-aged sons: very obese half-bald dark-haired Alasdair44 at left with worn olive waistcoat, and lean straight dark-haired Finlay41 at right in neat slate-blue merchant coat. The brothers turn shoulders away from one another, each with bitter closed expression, no fighting or touching. Father looks exhausted between them. Standing upper-body to hips, all three faces clearly visible, simple hands relaxed. Historical memory illustration without ghost, halo, dates or lettering. Normal rounded human ears, no elves, no nudity, muted simple tavern background."
+    }
+  ]
+}

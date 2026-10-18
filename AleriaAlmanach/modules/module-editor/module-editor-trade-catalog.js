@@ -136,6 +136,7 @@ function buildTradeCatalogItemRows(items = [], mode = 'module') {
         ${buildTradeCatalogInput('Kategorie-ID', 'category', item.category, index, mode)}
         ${buildTradeCatalogSelect('Sortimentstatus', 'status', item.status, index, mode, [
           { value: 'available', label: 'Sortimenteintrag' },
+          { value: 'unavailable', label: 'Nicht erhältlich (sichtbar, nicht im Warenregister)' },
           { value: 'planned', label: 'Freier Sortimentsplatz (nicht im Warenregister)' }
         ])}
         ${buildTradeCatalogInput('Bild', 'image', item.image, index, mode, 'url')}

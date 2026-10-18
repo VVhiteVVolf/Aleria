@@ -1,0 +1,92 @@
+{
+  "type": "aleria-fortuna-relationship-evidence",
+  "version": 1,
+  "onlineApplied": false,
+  "businesses": [
+    {
+      "family": "Vann",
+      "entryId": "celtigerns-letzte-rast",
+      "business": "Celtigerns Letzte Rast",
+      "status": "member",
+      "relation": "Mitglied und Verbündeter",
+      "bank": "Belegter Kunde der Blauen Bank",
+      "text": "Brenn Vann verbindet seine feine Tafel und Herberge mit dem Markt der Fortuna. Die Letzte Rast bleibt ein selbständig geführter Familienbetrieb.",
+      "source": "modules/letzte-rast/sources/module-before.json",
+      "name": "Brenn Vann",
+      "worldPersonId": "person--haus-vann--brenn-vann",
+      "section": {
+        "key": "Der Markt der Fortuna - Gwynthor",
+        "tab": "Völker & Kulturen",
+        "desc": "Alter Handelshof, sieben Interessenbünde, Blaue Bank und Blaue Kompanie · Tafel der Mutter.",
+        "iconUrl": "../Fraktionen/assets/emblems/gilden/markt-der-fortuna.webp",
+        "path": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor",
+          "Der Markt der Fortuna - Gwynthor"
+        ]
+      }
+    },
+    {
+      "family": "Raves",
+      "entryId": "goettliche-eleganz",
+      "business": "Göttliche Eleganz",
+      "status": "cooperation",
+      "relation": "Handelskooperation",
+      "bank": "",
+      "text": "Eleonora Cassia Raves führt das Schneiderhaus. Tiberian Raves pflegt den Fortuna-Kontakt und die Stoffroute zum Stammhaus Veltrane in Tirnara.",
+      "source": "modules/goettliche-eleganz/eleganz-module.mjs",
+      "name": "Eleonora Cassia Raves",
+      "worldPersonId": "person--haus-raves--eleonora-raves",
+      "section": {
+        "key": "Der Markt der Fortuna - Gwynthor",
+        "tab": "Völker & Kulturen",
+        "desc": "Alter Handelshof, sieben Interessenbünde, Blaue Bank und Blaue Kompanie · Tafel der Mutter.",
+        "iconUrl": "../Fraktionen/assets/emblems/gilden/markt-der-fortuna.webp",
+        "path": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor",
+          "Der Markt der Fortuna - Gwynthor"
+        ]
+      }
+    },
+    {
+      "family": "Pendrwn",
+      "entryId": "gwynthor-zum-vollen-korb",
+      "business": "Zum Vollen Korb",
+      "status": "supply",
+      "relation": "Regelmäßige Lieferbeziehung",
+      "bank": "",
+      "text": "Cadwgan und Idwal Pendrwn beziehen den Nachschub für ihren Gemischtwarenladen über Fortuna. Die Zweige Meilyrs und Gweniths führen diesen Laden nicht.",
+      "source": "modules/pendrwn-general-store/store-module.mjs",
+      "name": "Cadwgan Pendrwn",
+      "worldPersonId": "person--haus-pendrwn--cadwgan-pendrwn",
+      "section": {
+        "key": "Der Markt der Fortuna - Gwynthor",
+        "tab": "Völker & Kulturen",
+        "desc": "Alter Handelshof, sieben Interessenbünde, Blaue Bank und Blaue Kompanie · Tafel der Mutter.",
+        "iconUrl": "../Fraktionen/assets/emblems/gilden/markt-der-fortuna.webp",
+        "path": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor",
+          "Der Markt der Fortuna - Gwynthor"
+        ]
+      }
+    }
+  ],
+  "externalRelations": [
+    {
+      "id": "veltrane",
+      "name": "Haus Veltrane",
+      "region": "Tirnara · Kaiserreich Argentum",
+      "relationship": "Handelspartner · Stammhaus der Raves",
+      "text": "Die Veltrane bringen seit Jahrhunderten Stoffe, Seide, Gewürze und Olivenöl nach Lothir und Estryll. Über Tiberian und die Raves reicht diese Fortuna-Verbindung unmittelbar nach Gwynthor.",
+      "source": "Stammbäume/assets/js/data/eleganz-family-records.js"
+    }
+  ]
+}

@@ -1,0 +1,306 @@
+{
+  "type": "aleria-module-package",
+  "version": 1,
+  "exportedAt": "2026-10-18T00:00:00Z",
+  "module": {
+    "type": "aleria-module",
+    "version": 1,
+    "section": {
+      "key": "Der Markt der Fortuna - Gwynthor",
+      "tab": "Völker & Kulturen",
+      "desc": "Alter Handelshof, sieben Interessenbünde, Blaue Bank und Blaue Kompanie · Tafel der Mutter.",
+      "iconUrl": "../Fraktionen/assets/emblems/gilden/markt-der-fortuna.webp",
+      "path": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Gwynthor",
+        "Der Markt der Fortuna - Gwynthor"
+      ]
+    },
+    "entry": {
+      "id": "gwynthor-fortuna-interessenbuende",
+      "title": "Fortunas Häuser und Verbindungen",
+      "subtitle": "Sieben führende Interessenbünde · die bereits gewachsenen Partner",
+      "type": "Handelsgilde und Gildenverbund",
+      "category": "Gwynthor · Fortuna-Hafen",
+      "icon": "◈",
+      "symbol": "../Fraktionen/assets/emblems/gilden/markt-der-fortuna.webp",
+      "image": "./assets/markt-der-fortuna-gwynthor/handelshof.png",
+      "previewImage": "./assets/markt-der-fortuna-gwynthor/handelshof.png",
+      "stamp": "MARKT DER FORTUNA · GWYNTHOR",
+      "schemaVersion": 1,
+      "multipage": true,
+      "appendCommentsPage": true,
+      "enablePageComments": true,
+      "sessionCast": [],
+      "pages": [
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "fortuna-interessen",
+          "pageTitle": "Sieben Häuser, neun Stimmen",
+          "image": "./assets/markt-der-fortuna-gwynthor/ratssaal.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "description": "<p>Die Vormacht im Gwynthorer Markt der Fortuna wird zwischen den <strong>Falto</strong> und <strong>Nerva</strong> ausgefochten. Beide sind venalysische Magnarierhäuser unter den <strong>Vinicius</strong>; beide verfügen hier über seit Jahrhunderten gewachsene Interessen. Falto ist länger im Hafen verwurzelt, Nerva hat sich durch militärische Seefahrt, Metallhandwerk und Schiffbau groß gemacht.</p><p>Die fünf cenyrischen Häuser halten eigene Sitze. <strong>Tonnarth</strong> steht für Kaufmannschaft, <strong>Braglas</strong> für Böttcherei, <strong>Aelmor</strong> für Handelsschiffe, <strong>Coeddu</strong> für Schmiede und <strong>Maerllys</strong> für Schneiderei. Bei Aelmor wirkt die Bindung an Saethwyr in den Rat hinein.</p><p>Verwandtschaft und Lieferverträge reichen über diesen Kreis hinaus. Vann, Raves und Pendrwn führen bekannte örtliche Betriebe; die Veltrane-Route erschließt den Raves den südlichen Stoffhandel. Daraus entstehen Partner und Ansprechpartner, ohne dass jede Verbindung einen eigenen Ratssitz verlangt.</p>",
+          "stats": [
+            [
+              "Falto",
+              "2 Ratssitze · Magnarierhaus · unter Vinicius"
+            ],
+            [
+              "Nerva",
+              "2 Ratssitze · Magnarierhaus · unter Vinicius"
+            ],
+            [
+              "Tonnarth",
+              "1 Ratssitz · Gwynthorer Bürgerhaus"
+            ],
+            [
+              "Braglas",
+              "1 Ratssitz · Gwynthorer Bürgerhaus"
+            ],
+            [
+              "Aelmor",
+              "1 Ratssitz · Haus Saethwyr"
+            ],
+            [
+              "Coeddu",
+              "1 Ratssitz · Gwynthorer Bürgerhaus"
+            ],
+            [
+              "Maerllys",
+              "1 Ratssitz · Gwynthorer Bürgerhaus"
+            ]
+          ]
+        },
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "fortuna-haus-falto",
+          "pageTitle": "Falto · Bankwesen · Kaufmannschaft · Handelsflotte",
+          "image": "./assets/markt-der-fortuna-gwynthor/bankhalle.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "description": "<p>Die <strong>Falto</strong> sind ein venalysisches Magnarierhaus im Dienst der <strong>Vinicius</strong>. Ihre Kaufleute und Bänker stützen sich auf viele Schiffe und lange gewachsene Verbindungen. Falto-Schiffe liefen Gwynthor bereits an, lange bevor die Klingende Münze hier ihren ersten Eisenpfennig verdiente.</p><p>Die örtliche Vertretung kann auf Generationen von Verträgen, Bekanntschaften und bewährten Fahrten zurückgreifen. Zwei Ratssitze und die Leitung der <strong>Blauen Bank</strong> geben dem Haus Gewicht bei Finanzierung, Zahlungswegen und Fernhandel. Der venalysische Ursprung und die Bindung an Vinicius bleiben dabei erhalten.</p><p>Ihre Hauptgegner innerhalb Fortunas sind die <strong>Nerva</strong>. Dass beide Häuser demselben Dienstherrn unterstehen, beendet den Streit um die örtliche Vormacht nicht. Für Falto zählen verlässlicher Absatz und die Macht über das verfügbare Kapital; die gewachsene Stellung in Gwynthor betrachten sie als ihren stärksten Anspruch.</p>",
+          "stats": [
+            [
+              "Herkunft",
+              "Venalys · seit Jahrhunderten in Gwynthor vertreten"
+            ],
+            [
+              "Bindung",
+              "Magnarierhaus · unter Vinicius"
+            ],
+            [
+              "Wirtschaft",
+              "Bankwesen · Kaufmannschaft · Handelsflotte"
+            ],
+            [
+              "Neunerrat",
+              "2 gleichrangige Ratssitze"
+            ]
+          ]
+        },
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "fortuna-haus-nerva",
+          "pageTitle": "Nerva · Militärische Seefahrt · Kriegsschiffe · Metallhandwerk · Schiffbau",
+          "image": "./assets/markt-der-fortuna-gwynthor/kommandantur.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "description": "<p>Die <strong>Nerva</strong> sind ebenfalls ein venalysisches Magnarierhaus unter den <strong>Vinicius</strong>. Später als Falto gelangten sie nach Gwynthor, doch auch ihre örtliche Geschichte umfasst bereits mehrere Jahrhunderte. Hier wurden sie zu einer großen wirtschaftlichen und militärischen Kraft.</p><p>Kriegsschiffe, Metallhandwerk und Schiffbau tragen ihren Einfluss. Ihre militärische Ausrichtung macht sie zum Träger der örtlichen <strong>Kommandantur der Blauen Kompanie</strong>. Zwei Sitze im Neunerrat geben ihren kaufmännischen und maritimen Interessen eigenes Gewicht.</p><p>Mit den Falto konkurrieren sie um die Vormacht. Bei großen Ausrüstungen und Geleiten brauchen beide einander dennoch: Schiffe müssen finanziert, Ladungen geschützt und Aufträge erfüllt werden. Eine gemeinsame Bindung an Vinicius kann Zusammenarbeit verlangen, ohne den örtlichen Ehrgeiz zu beseitigen.</p>",
+          "stats": [
+            [
+              "Herkunft",
+              "Venalys · seit mehreren Jahrhunderten in Gwynthor vertreten"
+            ],
+            [
+              "Bindung",
+              "Magnarierhaus · unter Vinicius"
+            ],
+            [
+              "Wirtschaft",
+              "Militärische Seefahrt · Kriegsschiffe · Metallhandwerk · Schiffbau"
+            ],
+            [
+              "Neunerrat",
+              "2 gleichrangige Ratssitze"
+            ]
+          ]
+        },
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "fortuna-haus-tonnarth",
+          "pageTitle": "Tonnarth · Kaufmannschaft · Warenbezug · Absatz",
+          "image": "./assets/markt-der-fortuna-gwynthor/handelshof.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "description": "<p>Haus <strong>Tonnarth</strong> vertritt die örtliche Kaufmannschaft. Sein Geschäft verbindet den Bezug von Waren mit deren Absatz in Gwynthor und seinem Umland. Im Rat achtet das Haus darauf, dass neben den großen venalysischen Flotten auch die gewachsenen Beziehungen der einheimischen Händler Gehör finden.</p><p>Die Familie ist mit <strong>Maerllys</strong> verbunden: Madoc Tonnarth heiratete Rhoswen Maerllys. Solche Ehen schaffen Gesprächswege zwischen Kaufleuten und Handwerk und geben einer Zusage oft ein persönliches Gewicht.</p><p>Mit Llewarch und Caradog reichen die Wege der jüngeren Verwandtschaft auch auf See. Am Ratstisch bündelt die kaufmännische Vertretung die Interessen des Hauses: Kundschaft, Lieferzusagen und einen guten Platz für die nächste Ladung.</p><p><a href=\"../Stammbäume/Stammbaum.html?family=haus-tonnarth&amp;mode=view\">Stammbaum des Hauses Tonnarth</a></p>",
+          "stats": [
+            [
+              "Herkunft",
+              "Cenyr · Gwynthor"
+            ],
+            [
+              "Bindung",
+              "Gwynthorer Bürgerhaus"
+            ],
+            [
+              "Wirtschaft",
+              "Kaufmannschaft · Warenbezug · Absatz"
+            ],
+            [
+              "Neunerrat",
+              "1 gleichrangige Ratssitz"
+            ]
+          ]
+        },
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "fortuna-haus-braglas",
+          "pageTitle": "Braglas · Böttcherei · Fässer · Transportgebinde",
+          "image": "./assets/markt-der-fortuna-gwynthor/handelshof.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "description": "<p>Die <strong>Braglas</strong> sind Böttcher. Ein großer Hafenhandel benötigt Fässer und feste Gebinde für Lagerung und Reise; das Haus bringt dieses Handwerk und seine Abnehmer in den Markt der Fortuna ein. Material, Ausbesserung und die pünktliche Bereitstellung von Gebinden sind seine täglichen Anliegen.</p><p>Eine Ehe verbindet es mit <strong>Aelmor</strong>: Bryn Braglas und Anwen Aelmor haben eine gemeinsame Linie. Schiffbau und Böttcherei begegnen sich so auch innerhalb der Verwandtschaft.</p><p>Die Familie kennt den Preis eines schlechten Reifens und einer verspäteten Lieferung. Ihr Ratssitz verschafft diesem alltäglichen, für den Handel unentbehrlichen Handwerk eine eigene Stimme.</p><p><a href=\"../Stammbäume/Stammbaum.html?family=haus-braglas&amp;mode=view\">Stammbaum des Hauses Braglas</a></p>",
+          "stats": [
+            [
+              "Herkunft",
+              "Cenyr · Gwynthor"
+            ],
+            [
+              "Bindung",
+              "Gwynthorer Bürgerhaus"
+            ],
+            [
+              "Wirtschaft",
+              "Böttcherei · Fässer · Transportgebinde"
+            ],
+            [
+              "Neunerrat",
+              "1 gleichrangige Ratssitz"
+            ]
+          ]
+        },
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "fortuna-haus-aelmor",
+          "pageTitle": "Aelmor · Schiffbau · Handelsschiffe",
+          "image": "./assets/markt-der-fortuna-gwynthor/handelshof.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "description": "<p>Die <strong>Aelmor</strong> bauen vor allem <strong>Handelsschiffe, keine Kriegsschiffe</strong>. Frachtraum, verlässliche Fahrt und die Bedürfnisse kaufmännischer Kunden bestimmen ihr Handwerk. Ihre Bindung gilt dem Haus <strong>Saethwyr</strong>.</p><p>Damit stehen sie in unmittelbarer Konkurrenz zu den <strong>Gwlannor</strong> im Komplex der Klingenden Münze. Beide Familien dienen Saethwyr, doch sie werben um eigene Kunden und Aufträge. Die Gwlannor bauen Schiffe verschiedener Art; Aelmor hält den Schwerpunkt im kaufmännischen Schiffbau.</p><p>Innerhalb Fortunas müssen Aelmor und Nerva ihre Interessen abstimmen. Die militärische Seefahrt der Nerva verleiht Aelmor kein eigenes Kriegsschiffprogramm. Die bestehende Eheverbindung mit Braglas bleibt ein zusätzlicher örtlicher Gesprächsweg.</p><p><a href=\"../Stammbäume/Stammbaum.html?family=haus-aelmor&amp;mode=view\">Stammbaum des Hauses Aelmor</a></p>",
+          "stats": [
+            [
+              "Herkunft",
+              "Cenyr · Gwynthor"
+            ],
+            [
+              "Bindung",
+              "Haus Saethwyr"
+            ],
+            [
+              "Wirtschaft",
+              "Schiffbau · Handelsschiffe"
+            ],
+            [
+              "Neunerrat",
+              "1 gleichrangige Ratssitz"
+            ]
+          ]
+        },
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "fortuna-haus-coeddu",
+          "pageTitle": "Coeddu · Schmiede · Waffenhandwerk · Metallwaren",
+          "image": "./assets/markt-der-fortuna-gwynthor/ratssaal.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "description": "<p>Haus <strong>Coeddu</strong> ist ein kriegerisches Bürgerhaus mit beliebter <strong>Waffenschmiede</strong>. Im Fortuna-Rat vertritt es Schmiedehandwerk, Materialbezug und die Interessen seiner örtlichen Werkstatt.</p><p>Brenric kennt das Waffenhandwerk aus den Jahren seines Kriegsdienstes; heute lebt er als Veteran im Ruhestand. Llywelyn dient als Waffenknecht. Dienst und Werkstatt prägen so auf unterschiedliche Weise den Ruf des Hauses.</p><p>Über Maelwen und Tiberian Raves bestehen familiäre Beziehungen zur Göttlichen Eleganz. Am Ratstisch geht es für die Coeddu um gute Materialien, verlässliche Aufträge und den Absatz ihrer Schmiedearbeit.</p><p><a href=\"../Stammbäume/Stammbaum.html?family=haus-coeddu&amp;mode=view\">Stammbaum des Hauses Coeddu</a></p>",
+          "stats": [
+            [
+              "Herkunft",
+              "Cenyr · Gwynthor"
+            ],
+            [
+              "Bindung",
+              "Gwynthorer Bürgerhaus"
+            ],
+            [
+              "Wirtschaft",
+              "Schmiede · Waffenhandwerk · Metallwaren"
+            ],
+            [
+              "Neunerrat",
+              "1 gleichrangige Ratssitz"
+            ]
+          ]
+        },
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "fortuna-haus-maerllys",
+          "pageTitle": "Maerllys · Schneiderei · Stoffverarbeitung · Bekleidung",
+          "image": "./assets/markt-der-fortuna-gwynthor/ratssaal.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "description": "<p>Die <strong>Maerllys</strong> bringen das Schneiderhandwerk in den Markt der Fortuna ein. Für ihren Ratssitz zählen Stoffbezug, verlässliche Lieferungen, Werkstattaufträge und die örtliche Kundschaft. Die Wege des Hauses führen von der Warenannahme bis zur Anprobe.</p><p>Verwandtschaft verbindet sie mit <strong>Tonnarth, Vann und Raves</strong>. Das macht sie zu einem Gesprächspartner zwischen Kaufmannschaft, Kleidung und gehobener Gastlichkeit. Elowen Maerllys lebt nach ihrer Heirat bei Edern Vann und arbeitet in der Letzten Rast.</p><p>Die <strong>Göttliche Eleganz</strong> führt Eleonora Cassia Raves. Die Verbindung beider Familien gehört zur Geschichte des angesehenen Schneiderhauses und hält einen weiteren Gesprächsweg zwischen örtlicher Werkstatt und südlichem Stoffhandel offen.</p><p><a href=\"../Stammbäume/Stammbaum.html?family=haus-maerllys&amp;mode=view\">Stammbaum des Hauses Maerllys</a></p>",
+          "stats": [
+            [
+              "Herkunft",
+              "Cenyr · Gwynthor"
+            ],
+            [
+              "Bindung",
+              "Gwynthorer Bürgerhaus"
+            ],
+            [
+              "Wirtschaft",
+              "Schneiderei · Stoffverarbeitung · Bekleidung"
+            ],
+            [
+              "Neunerrat",
+              "1 gleichrangige Ratssitz"
+            ]
+          ]
+        },
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "fortuna-partnernetz",
+          "pageTitle": "Die gewachsenen Verbindungen",
+          "image": "./assets/markt-der-fortuna-gwynthor/handelshof.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "description": "<p><strong>Vann · Celtigerns Letzte Rast:</strong> Brenn Vann verbindet seine feine Tafel und Herberge mit dem Markt der Fortuna. Die Letzte Rast bleibt ein selbständig geführter Familienbetrieb. Mitglied und Verbündeter. Belegter Kunde der Blauen Bank.</p><p><strong>Raves · Göttliche Eleganz:</strong> Eleonora Cassia Raves führt das Schneiderhaus. Tiberian Raves pflegt den Fortuna-Kontakt und die Stoffroute zum Stammhaus Veltrane in Tirnara. Handelskooperation.</p><p><strong>Pendrwn · Zum Vollen Korb:</strong> Cadwgan und Idwal Pendrwn beziehen den Nachschub für ihren Gemischtwarenladen über Fortuna. Die Zweige Meilyrs und Gweniths führen diesen Laden nicht. Regelmäßige Lieferbeziehung.</p><p><strong>Haus Veltrane · Tirnara · Kaiserreich Argentum:</strong> Die Veltrane bringen seit Jahrhunderten Stoffe, Seide, Gewürze und Olivenöl nach Lothir und Estryll. Über Tiberian und die Raves reicht diese Fortuna-Verbindung unmittelbar nach Gwynthor.</p>",
+          "stats": [
+            [
+              "Örtliche Betriebe",
+              "Vann · Raves · Cadwgans Pendrwn-Zweig"
+            ],
+            [
+              "Anbindung nach Tirnara",
+              "Veltrane · über die Raves"
+            ]
+          ]
+        }
+      ]
+    }
+  }
+}

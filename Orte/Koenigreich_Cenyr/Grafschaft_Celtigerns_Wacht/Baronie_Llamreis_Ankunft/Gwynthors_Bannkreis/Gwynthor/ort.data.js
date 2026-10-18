@@ -30,12 +30,12 @@
     `${houseRoot}/haus-${id}.png`
   );
 
-  const commonerHouse = (id, name, familyId = `haus-${id}`) => house(
+  const commonerHouse = (id, name, familyId = `haus-${id}`, liege = "Haus Draig") => house(
     familyId,
     `Haus ${name}`,
     "Bürgerliches Haus",
     "Gwynthor",
-    "Haus Draig",
+    liege,
     id === "gwyllach" ? `${houseRoot}/haus-gwyllach.png` : `${commonerRoot}/${name}.png`
   );
 
@@ -306,7 +306,7 @@
           commonerHouse("draenmelyn", "Draenmelyn"),
           commonerHouse("pendrwn", "Pendrwn"),
           commonerHouse("swyll", "Swyll"),
-          commonerHouse("aelmor", "Aelmor"),
+          commonerHouse("aelmor", "Aelmor", "haus-aelmor", "Haus Saethwyr"),
           commonerHouse("maerllys", "Maerllys"),
           commonerHouse("raves", "Raves"),
           commonerHouse("vann", "Vann"),
@@ -327,6 +327,24 @@
     ]),
 
     merchants: Object.freeze([
+      Object.freeze({ name: "Der Handelshof des Marktes der Fortuna", image: "/Fraktionen/assets/emblems/gilden/markt-der-fortuna.webp", symbolAlt: "Markt der Fortuna · Handelshof und alter Hafen",
+        trade: "Handel · Handwerk · Blaue Bank · Blaue Kompanie", owner: "Neunerrat der sieben Interessenbünde", wealth: "Sehr vermögend", reputation: "Seit Jahrhunderten verwurzelt", influence: "Gwynthor · Seeverbindungen nach Venalys, Tirnara und Weisenfluh",
+        description: "Falto und Nerva, beide Magnarierhäuser unter Vinicius, ringen um die örtliche Vormacht. Tonnarth, Braglas, Aelmor, Coeddu und Maerllys halten eigene Ratssitze; Aelmor dient Saethwyr und baut Handelsschiffe. Vann, Raves und der Volle Korb haben eigene Verbindungen zu Fortuna. Mariels Gabe unterhält hier die kleine Tafel der Mutter und nutzt den Fortuna-Hafen für ihre Weisenfluher Warenankünfte." }),
+      Object.freeze({ name: "Der Handelsposten der Klingenden Münze", image: "/Fraktionen/assets/emblems/gilden/klingende-muenze.webp", symbolAlt: "Klingende Münze · Kaufmannsgilde, Rote Bank und Rote Kompanie",
+        trade: "Grafschaftskontor · Handel · Bank · Geleit", owner: "Achterrat der fünf Interessenbünde", wealth: "Sehr vermögend", reputation: "Mächtig und von Rivalitäten geprägt", influence: "Ganz Celtigerns Wacht · weltweiter Gildenverbund",
+        description: "Größter der vier großen Handelsposten neben Abergwint, Castellbryn und Rhosmere. Falveri und Ergalla vertreten ihre venalysischen Hauptlinien; Gwlannor dienen Saethwyr, Halenrhyd den Wyrm, Aurdden den Loer und damit ebenfalls Wyrm. Ein Ergalla leitet die Bank, ein Falveri die Kontor-Kommandantur. Die Gwregysdu-Lagerhäuser sind einer der eigenständigen Mitgliedsbetriebe im Hafenkomplex." }),
+      Object.freeze({ name: "Zur Klingenden Krone", image: "/Fraktionen/assets/emblems/gilden/klingende-muenze.webp", symbolAlt: "Klingende Münze · Schirmherrin der Klingenden Krone",
+        trade: "Taverne · Brauerei und Destillerie · Flaschen- und Fassvertrieb", owner: "Gildenbetrieb · Leitung Finlay Cneacail", wealth: "Solide gildenfinanziert", reputation: "Gepflegt und geschäftstüchtig", influence: "Marktviertel und Vertriebswege der Klingenden Münze",
+        description: "Finlays gepflegter Neustart im Marktviertel: Schankraum mit drei kalten Snacks, dahinter Sudhaus, Brennhaus, Fasslager und Ladehof. Die Cneacail-Rezepte werden unter den erworbenen Rechten der Münze in Gwynthor hergestellt. Der fünfjährige Whisky trägt den ehrlichen neuen Betriebsnamen Klingende Krone." }),
+      Object.freeze({ name: "Zum Letzten Heller", image: "/Stammbäume/assets/images/houses/Ceitheach/sept-cneacail.png", symbolAlt: "Sept Cneacail · Fass und kahler Baum auf verwittertem Holz",
+        trade: "Billiges Bordell · einfacher Ausschank und Speisen", owner: "Alasdair Cneacail", wealth: "Knappe Mittel und alte Schulden", reputation: "Schäbig und billig", influence: "Hafenviertel und Flüchtlingsgemeinschaften",
+        description: "Einst Arrans Hafentaverne, heute ein kleiner heruntergekommener Betrieb mit drei Kammern. Die Septbiere sind lange aufgebraucht; vier alte Flaschen Bun na h-Aibhne werden nur gegen horrende Summen glasweise ausgeschenkt. Finlay Cneacail arbeitet im Vertrieb der Klingenden Münze und gehört nicht zum Hauspersonal." }),
+      Object.freeze({ name: "Die Gestiefelte Muschi", image: "/AleriaAlmanach/assets/gestiefelte-muschi/schild-v2.png", symbolAlt: "Geschnitzte Katze in Stiefeln an einer Tanzstange",
+        trade: "Unterhaltungshaus · Ausschank · Gesellschaft · Zimmer", owner: "Helviane Desele, geborene Bielle", wealth: "Gerettetes Vermögen und laufender Betrieb", reputation: "Verrucht und gesellig", influence: "Söldner, Reisende und die Gassen nahe dem Hafen",
+        description: "Von einer alten Brevanorer Geschäftsfrau geführtes Haus für Tanz, Musik, Spiel und private Gesellschaft. Sechs Kammern, keine Küche; gute Importe, Tirnaras Tabak und wenige sehr teure gerettete Flaschen aus den Kellern Bielle und Desele." }),
+      Object.freeze({ name: "Die Lagerhäuser der Gwregysdu", image: "/Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Gwregysdu.png", symbolAlt: "Haus Gwregysdu · Schwarzer Gürtel und drei silberne Lagerschlüssel",
+        trade: "Lagerung · Umschlag · Vertrieb · Frachtvermittlung", owner: "Bleddyn Gwregysdu mit Cynan und Tudur", wealth: "Wohlhabend", reputation: "Etabliert, derzeit unter Verdacht", influence: "Hafen · Umland · Klingende Münze",
+        description: "Vier Lagerhäuser innerhalb des großen Handelspostens der Klingenden Münze, einer von mehreren dortigen Betrieben. Gewachsen durch Lagerverwaltung und Ressourcenverbindungen über Ehen; Handel mit Tirnara und den Falveri aus Venalys. Gruffudds aufgedecktes Komplott belastet den Ruf des Hauses." }),
       Object.freeze({ name: "Zum Vollen Korb", image: "/Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Pendrwn.png", symbolAlt: "Haus Pendrwn · Der Schlüssel",
         trade: "Gemischtwaren · Werkzeuge und Sonstiges", owner: "Cadwgan und Idwal Pendrwn", wealth: "Solide", reputation: "Verlässlich und bodenständig", influence: "Gwynthorer Haushalte und Reisende",
         description: "Cadwgans eigener Pendrwn-Zweig führt mit Idwal den kleinen Gemischtwarenladen. Regelmäßige Lieferungen des Marktes der Fortuna füllen die Regale; zehn eigene Alltagswaren ergänzen das Standardsortiment." }),

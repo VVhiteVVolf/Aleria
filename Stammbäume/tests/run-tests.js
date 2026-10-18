@@ -8224,7 +8224,7 @@ test('bewahrt die ursprünglichen neun Bürgerhäuser aus Gwynthor mit lokalen W
     assert.equal(family.lineage.timeGap.enabled, false);
     assert.equal(family.document.houseProfile.rankId, 'commoner');
     assert.equal(family.document.houseProfile.seat, 'Gwynthor');
-    assert.equal(family.document.houseProfile.liegeHouseId, 'haus-draig');
+    assert.equal(family.document.houseProfile.liegeHouseId, slug === 'aelmor' ? 'haus-saethwyr' : 'haus-draig');
     assert.ok(converted.data.some(node => node.data.nodeKind === 'house-crest'));
     assert.ok(converted.data.some(node => node.data.nodeKind === 'time-jump'));
     assert.deepEqual([...emblem.subarray(0, 4)], [0x89, 0x50, 0x4e, 0x47]);

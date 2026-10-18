@@ -1,5 +1,11 @@
 /* Aleria Almanach - description-heavy trade goods and animals catalogue. */
 
+/* Historic or exhausted stock stays readable without appearing as a live offer. */
+.trade-catalog-unavailable .trade-catalog-image { filter: grayscale(1); opacity: 0.48; }
+.trade-catalog-unavailable .trade-catalog-visual h3 { color: #766f65; text-decoration: line-through; }
+.trade-catalog-unavailable .trade-catalog-badge { background: #756e61; }
+.trade-catalog-unavailable-status { color: #655f55; }
+
 .trade-catalog-page {
   flex: 1;
   min-height: 0;

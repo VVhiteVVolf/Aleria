@@ -1,0 +1,384 @@
+{
+  "tool": "built-in image_gen",
+  "styleSource": "AleriaAlmanach/docs/art/image-style-presets.json",
+  "entries": [
+    {
+      "id": "wappen-bielle",
+      "destination": "Stammbäume/assets/images/houses/Brevanor/Bielle.png",
+      "transparent": true,
+      "prompt": "# Universeller Wappen-Prompt\n\n**Wappenname:** Haus Bielle · Brevanor\n\n**Zentrales Symbol:** Ein großer elfenbeinweißer mittelalterlicher Turm auf weinlaubgrünem Grund. Eine Weinrebe windet sich um den Turm, mit deutlich getrennten weißen und violetten prallen Trauben. Alle Elemente innerhalb des Kreises.\n\n**Farbpalette:** Elfenbeinweiß · Weinlaubgrün · Traubenviolett\n\n**Wappenform:** ZIRKULAR – IMMER ein exakter Kreis, damit das Wappen in die vorhandenen Frames passt. Keine Spitzschilde oder ovalen Außenkonturen.\n\n### Gestaltung\n\nEin hochwertiges mittelalterliches Wappen im nordisch-keltischen Fantasy-Heraldikstil. Inspiriert von historischen bemalten Holzschilden, nordischer Ornamentik und traditionellen Clanwappen.\n\nDas zentrale Symbol ist groß, ausdrucksstark und detailliert, gleichzeitig aber klar heraldisch stilisiert. Kräftige dunkle Konturen, sauber getrennte Farbflächen, markante Silhouetten und ausgewogene Proportionen.\n\nDas gesamte Motiv muss vollständig innerhalb des Wappens liegen. Keine abgeschnittenen Figuren, Waffen, Flügel, Hörner oder Ornamente.\n\n### Material und Oberflächen\n\nDie innere Wappenfläche besteht aus bemalten Holzbrettern mit dezenter, sichtbarer Holzmaserung. Die Farben wirken wie auf Holz aufgetragene mittelalterliche Pigmente.\n\nDer Außenrahmen besteht aus dunklem Eisen mit leichter Materialstruktur, kleinen Gebrauchsspuren und einer vollständig geschlossenen Außenkontur.\n\nDas Wappen soll handwerklich hochwertig, plastisch und historisch glaubwürdig wirken. Keine moderne, minimalistische Logoästhetik, keine Fotorealistik und keine übertriebenen 3D-Effekte.\n\n### Verzierungen\n\nSchlichte Weinranken als geschlossene brevanorische Rahmenornamentik\n\nBei zirkularen Wappen können die Verzierungen gleichmäßig im Außenring verlaufen. Sie dürfen das zentrale Motiv nicht überlagern.\n\n### Komposition\n\nQuadratisches Bildformat 1:1. Das vollständige Wappen steht mittig und wird frontal gezeigt.\n\nDas Wappen nimmt ungefähr 85–90 % der Bildbreite ein. Alle Elemente bleiben vollständig innerhalb seiner äußeren Begrenzung.\n\n### Transparenz – zwingend einhalten\n\n**Der gesamte Bereich außerhalb des äußersten Wappenrahmens muss vollständig transparent sein (Alpha-Kanal = 0).**\n\n- Keine Hintergrundfarbe, kein Weiß, Schwarz oder Magenta außerhalb des Wappens.\n- Kein Hintergrundbild, keine Landschaft, keine Wand und keine dekorativen Elemente außerhalb des Rahmens.\n- Keine Schlagschatten, Glows oder Lichtreflexe außerhalb der Wappenkontur.\n- Keine über den Rahmen hinausragenden Ornamente oder Symbole.\n- Die äußerste Wappenkante muss sauber und geschlossen sein.\n- **Die gesamte Wappenfläche innerhalb des Außenrahmens muss vollständig deckend bleiben (Alpha-Kanal = 255).**\n- Keine transparenten Löcher zwischen Symbolen, Ornamenten oder innerhalb der bemalten Holzfläche.\n- Die Innenfläche des Wappens muss ihre vorgesehene Farbe vollständig behalten.\n\n**WICHTIG:** Ausschließlich der Bereich außerhalb der äußeren Wappenkontur ist transparent. Das Wappen selbst, einschließlich Holzfläche, Rahmen, Symbolen und sämtlichen Zwischenräumen, bleibt vollständig sichtbar und deckend.\n\n### Ausgabe\n\nHochauflösendes PNG mit echtem transparentem Hintergrund (RGBA), quadratisches Format 1:1. Keine simulierte Transparenz und kein Schachbrettmuster als Bildhintergrund.",
+      "references": [
+        "Stammbäume/assets/images/houses/Talyndor/haus-thornwick.png"
+      ],
+      "referenceRole": "Nearby cultural heraldry reference only. Use the specified independent symbols and colors. Follow the written exact-circle contour and opacity rules, never copy protruding wings or transparency flaws."
+    },
+    {
+      "id": "wappen-desele",
+      "destination": "Stammbäume/assets/images/houses/Brevanor/Desele.png",
+      "transparent": true,
+      "prompt": "# Universeller Wappen-Prompt\n\n**Wappenname:** Haus Desele · Brevanor\n\n**Zentrales Symbol:** Ein großer silberner Kelch, unmittelbar daneben ein einzelner Weinrebzweig mit prallen burgunderroten Trauben und dunkelgrünen Blättern. Beide heraldischen Elemente gleichwertig nebeneinander, vollständig innerhalb des Kreises.\n\n**Farbpalette:** Silber · Burgunderrot · Dunkelgrün\n\n**Wappenform:** ZIRKULAR – IMMER ein exakter Kreis, damit das Wappen in die vorhandenen Frames passt. Keine Spitzschilde oder ovalen Außenkonturen.\n\n### Gestaltung\n\nEin hochwertiges mittelalterliches Wappen im nordisch-keltischen Fantasy-Heraldikstil. Inspiriert von historischen bemalten Holzschilden, nordischer Ornamentik und traditionellen Clanwappen.\n\nDas zentrale Symbol ist groß, ausdrucksstark und detailliert, gleichzeitig aber klar heraldisch stilisiert. Kräftige dunkle Konturen, sauber getrennte Farbflächen, markante Silhouetten und ausgewogene Proportionen.\n\nDas gesamte Motiv muss vollständig innerhalb des Wappens liegen. Keine abgeschnittenen Figuren, Waffen, Flügel, Hörner oder Ornamente.\n\n### Material und Oberflächen\n\nDie innere Wappenfläche besteht aus bemalten Holzbrettern mit dezenter, sichtbarer Holzmaserung. Die Farben wirken wie auf Holz aufgetragene mittelalterliche Pigmente.\n\nDer Außenrahmen besteht aus Silber mit leichter Materialstruktur, kleinen Gebrauchsspuren und einer vollständig geschlossenen Außenkontur.\n\nDas Wappen soll handwerklich hochwertig, plastisch und historisch glaubwürdig wirken. Keine moderne, minimalistische Logoästhetik, keine Fotorealistik und keine übertriebenen 3D-Effekte.\n\n### Verzierungen\n\nSchlichte Weinranken als geschlossene brevanorische Rahmenornamentik\n\nBei zirkularen Wappen können die Verzierungen gleichmäßig im Außenring verlaufen. Sie dürfen das zentrale Motiv nicht überlagern.\n\n### Komposition\n\nQuadratisches Bildformat 1:1. Das vollständige Wappen steht mittig und wird frontal gezeigt.\n\nDas Wappen nimmt ungefähr 85–90 % der Bildbreite ein. Alle Elemente bleiben vollständig innerhalb seiner äußeren Begrenzung.\n\n### Transparenz – zwingend einhalten\n\n**Der gesamte Bereich außerhalb des äußersten Wappenrahmens muss vollständig transparent sein (Alpha-Kanal = 0).**\n\n- Keine Hintergrundfarbe, kein Weiß, Schwarz oder Magenta außerhalb des Wappens.\n- Kein Hintergrundbild, keine Landschaft, keine Wand und keine dekorativen Elemente außerhalb des Rahmens.\n- Keine Schlagschatten, Glows oder Lichtreflexe außerhalb der Wappenkontur.\n- Keine über den Rahmen hinausragenden Ornamente oder Symbole.\n- Die äußerste Wappenkante muss sauber und geschlossen sein.\n- **Die gesamte Wappenfläche innerhalb des Außenrahmens muss vollständig deckend bleiben (Alpha-Kanal = 255).**\n- Keine transparenten Löcher zwischen Symbolen, Ornamenten oder innerhalb der bemalten Holzfläche.\n- Die Innenfläche des Wappens muss ihre vorgesehene Farbe vollständig behalten.\n\n**WICHTIG:** Ausschließlich der Bereich außerhalb der äußeren Wappenkontur ist transparent. Das Wappen selbst, einschließlich Holzfläche, Rahmen, Symbolen und sämtlichen Zwischenräumen, bleibt vollständig sichtbar und deckend.\n\n### Ausgabe\n\nHochauflösendes PNG mit echtem transparentem Hintergrund (RGBA), quadratisches Format 1:1. Keine simulierte Transparenz und kein Schachbrettmuster als Bildhintergrund.",
+      "references": [
+        "Stammbäume/assets/images/houses/Talyndor/haus-thornwick.png"
+      ],
+      "referenceRole": "Nearby cultural heraldry reference only. Use the specified independent symbols and colors. Follow the written exact-circle contour and opacity rules, never copy protruding wings or transparency flaws."
+    },
+    {
+      "id": "schild",
+      "destination": "AleriaAlmanach/assets/gestiefelte-muschi/schild-v2.png",
+      "transparent": true,
+      "references": []
+    },
+    {
+      "id": "helviane",
+      "destination": "AleriaAlmanach/assets/gestiefelte-muschi/portraits/helviane.png",
+      "transparent": false,
+      "prompt": "Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nUse case: stylized-concept. Exactly one adult person, standing upper body portrait to hips, 72-year-old human woman, unmistakably elderly, deep age lines around eyes and mouth, soft jowls, mature full cheeks and a slightly stout dignified build, not obese. Clear blue eyes, uniformly gray hair in an extravagant very tall elaborate piled-up coiffure with rolled smooth sections and pearl pins, no loose flowing mane. Black and peacock-teal low-necked silk evening gown, ample but fully covered bust, lace sleeves, silver jewelry. Standing upper body to hips, shoulders turned away, looking back down her nose at viewer as if granting a rare favor, raised eyebrow, lips faintly pursed. One hand holds an opened black lace fan below her cheek, other rests at her waist. Distinct broad elderly face, clearly not a youthful woman. Quiet uncluttered medieval cabaret interior with timber and a muted burgundy curtain, soft warm lantern lighting, normal rounded human ears. No nudity, no sexual activity, no lettering, no watermark, no frame. Distinct individual face, hair and pose; do not make people look related.",
+      "references": [],
+      "referenceRole": ""
+    },
+    {
+      "id": "alain",
+      "destination": "AleriaAlmanach/assets/gestiefelte-muschi/portraits/alain.png",
+      "transparent": false,
+      "prompt": "Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nUse case: stylized-concept. Exactly one adult person, standing upper body portrait to hips, 48-year-old slender human man, long narrow face, dark brown eyes, straight black hair neatly combed back to nape, clean-shaven. Charcoal frock coat, ivory cravat, silver key at belt. Standing slightly sideways, one hand relaxed behind back, other loosely holds a closed ledger at side. Reserved thin smile. Quiet uncluttered medieval cabaret interior with timber and a muted burgundy curtain, soft warm lantern lighting, normal rounded human ears. No nudity, no sexual activity, no lettering, no watermark, no frame. Distinct individual face, hair and pose; do not make people look related.",
+      "references": [],
+      "referenceRole": ""
+    },
+    {
+      "id": "gaston",
+      "destination": "AleriaAlmanach/assets/gestiefelte-muschi/portraits/gaston.png",
+      "transparent": false,
+      "prompt": "Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nUse case: stylized-concept. Exactly one adult person, standing upper body portrait to hips, 44-year-old stocky human man, square nose and round chin, brown eyes, straight dark brown chin-length hair tucked behind rounded ears, short dark moustache. Rolled ivory sleeves, bottle-green waistcoat, leather apron. Standing frontally, one hand on hip, other relaxed holding a single plain cellar key. A skeptical thoughtful squint. Quiet uncluttered medieval cabaret interior with timber and a muted burgundy curtain, soft warm lantern lighting, normal rounded human ears. No nudity, no sexual activity, no lettering, no watermark, no frame. Distinct individual face, hair and pose; do not make people look related.",
+      "references": [],
+      "referenceRole": ""
+    },
+    {
+      "id": "colette",
+      "destination": "AleriaAlmanach/assets/gestiefelte-muschi/portraits/colette.png",
+      "transparent": false,
+      "prompt": "Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nUse case: stylized-concept. Exactly one adult person, standing upper body portrait to hips, 46-year-old human woman with angular face and small sharp chin, hazel eyes, very straight glossy black hair in a sleek tight low bun, single silver hairpin. Slate-blue tailored dress with square modest neckline, cream cuffs. Standing three-quarter, hands loosely clasped at belt, appraising composed expression, no fan or book. Quiet uncluttered medieval cabaret interior with timber and a muted burgundy curtain, soft warm lantern lighting, normal rounded human ears. No nudity, no sexual activity, no lettering, no watermark, no frame. Distinct individual face, hair and pose; do not make people look related.",
+      "references": [],
+      "referenceRole": ""
+    },
+    {
+      "id": "mariette",
+      "destination": "AleriaAlmanach/assets/gestiefelte-muschi/portraits/mariette.png",
+      "transparent": false,
+      "prompt": "Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nUse case: stylized-concept. Exactly one adult person, standing upper body portrait to hips, 38-year-old human woman, heart-shaped face, amber-brown eyes, straight dark brown shoulder-length hair in an asymmetrical smooth bob with one tucked side. Plum-colored fitted gown with a tasteful neckline, small gold chain. Standing relaxed, one arm loosely crossed below waist, other hand making a small welcoming palm-up gesture. Wry bright smile. Quiet uncluttered medieval cabaret interior with timber and a muted burgundy curtain, soft warm lantern lighting, normal rounded human ears. No nudity, no sexual activity, no lettering, no watermark, no frame. Distinct individual face, hair and pose; do not make people look related.",
+      "references": [],
+      "referenceRole": ""
+    },
+    {
+      "id": "rheunwaith",
+      "destination": "AleriaAlmanach/assets/gestiefelte-muschi/portraits/rheunwaith.png",
+      "transparent": false,
+      "prompt": "Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nUse case: stylized-concept. Exactly one adult person, standing upper body portrait to hips, 43-year-old roguish human man with crooked friendly nose, freckles, lively green eyes, tousled short uniformly copper-red hair, short matching red sideburns, clean chin. Loose cream shirt open at collar, worn burgundy waistcoat, single brass earring. Standing casually leaning one elbow against bar, other hand loosely holds empty tankard low at waist, cheeky one-sided grin and raised eyebrow. Quiet uncluttered medieval cabaret interior with timber and a muted burgundy curtain, soft warm lantern lighting, normal rounded human ears. No nudity, no sexual activity, no lettering, no watermark, no frame. Distinct individual face, hair and pose; do not make people look related.",
+      "references": [],
+      "referenceRole": ""
+    },
+    {
+      "id": "aelwen",
+      "destination": "AleriaAlmanach/assets/gestiefelte-muschi/portraits/aelwen.png",
+      "transparent": false,
+      "prompt": "Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nUse case: stylized-concept. Exactly one adult person, standing upper body portrait to hips, 28-year-old adult human-looking Albish woman, normal ROUNDED HUMAN EARS, oval face, moss-green eyes, long chestnut brown hair in one thick high ponytail with a burgundy ribbon. Attractive mature dancer, ivory off-shoulder fitted bodice and burgundy layered dance skirt, fully opaque clothing. Standing hips turned gently, one hand at waist and other loosely lifts a ribbon at shoulder, calm knowing smile. No elf ears. Quiet uncluttered medieval cabaret interior with timber and a muted burgundy curtain, soft warm lantern lighting, normal rounded human ears. No nudity, no sexual activity, no lettering, no watermark, no frame. Distinct individual face, hair and pose; do not make people look related.",
+      "references": [],
+      "referenceRole": ""
+    },
+    {
+      "id": "morwen",
+      "destination": "AleriaAlmanach/assets/gestiefelte-muschi/portraits/morwen.png",
+      "transparent": false,
+      "prompt": "Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nUse case: stylized-concept. Exactly one adult person, standing upper body portrait to hips, 32-year-old adult human-looking Albish woman, normal rounded human ears, broad cheekbones and slightly square face, dark brown eyes, brunette thick wavy hair cut to jaw with short side-swept fringe. Rich amber and dark green opaque dance dress with fitted waist and open shoulders. Standing with relaxed weight shift, arms loosely behind back, broad mischievous laughing smile. Different face and haircut from long-haired dancer, no elf ears. Quiet uncluttered medieval cabaret interior with timber and a muted burgundy curtain, soft warm lantern lighting, normal rounded human ears. No nudity, no sexual activity, no lettering, no watermark, no frame. Distinct individual face, hair and pose; do not make people look related.",
+      "references": [],
+      "referenceRole": ""
+    },
+    {
+      "id": "cerys",
+      "destination": "AleriaAlmanach/assets/gestiefelte-muschi/portraits/cerys.png",
+      "transparent": false,
+      "prompt": "Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nUse case: stylized-concept. Exactly one adult person, standing upper body portrait to hips, 26-year-old clearly adult Cenyri human woman, freckles across round cheeks, blue eyes, vivid red curly shoulder-length hair pinned at one temple. Attractive full figure, opaque dark blue low-necked bodice and cream blouse sleeves, skirt. Standing facing viewer, one hand loosely rests against collarbone, other by side, open amused smile, no held object. Quiet uncluttered medieval cabaret interior with timber and a muted burgundy curtain, soft warm lantern lighting, normal rounded human ears. No nudity, no sexual activity, no lettering, no watermark, no frame. Distinct individual face, hair and pose; do not make people look related.",
+      "references": [],
+      "referenceRole": ""
+    },
+    {
+      "id": "bronwen",
+      "destination": "AleriaAlmanach/assets/gestiefelte-muschi/portraits/bronwen.png",
+      "transparent": false,
+      "prompt": "Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nUse case: stylized-concept. Exactly one adult person, standing upper body portrait to hips, 34-year-old adult Cenyri human woman, long elegant face, warm brown eyes, medium brown straight hair in a loose side braid over shoulder. Opaque wine-red square-neck dress with short lace sleeves and silver belt. Standing slight three-quarter with one hand resting on the back of a chair, other relaxed, subtle crooked smile, mature self-assured gaze. Quiet uncluttered medieval cabaret interior with timber and a muted burgundy curtain, soft warm lantern lighting, normal rounded human ears. No nudity, no sexual activity, no lettering, no watermark, no frame. Distinct individual face, hair and pose; do not make people look related.",
+      "references": [],
+      "referenceRole": ""
+    },
+    {
+      "id": "niawen",
+      "destination": "AleriaAlmanach/assets/gestiefelte-muschi/portraits/niawen.png",
+      "transparent": false,
+      "prompt": "Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nUse case: stylized-concept. Exactly one adult person, standing upper body portrait to hips, 30-year-old adult Cenyri human woman, almond green eyes, slightly olive fair complexion, high cheekbones, dark auburn hair in a short soft pixie cut. Opaque dusky rose wrap-style evening dress with tasteful low neckline, fine bronze necklace. Standing one shoulder toward viewer, hands loosely interlaced low at waist, restrained warm smile and attentive direct gaze. Quiet uncluttered medieval cabaret interior with timber and a muted burgundy curtain, soft warm lantern lighting, normal rounded human ears. No nudity, no sexual activity, no lettering, no watermark, no frame. Distinct individual face, hair and pose; do not make people look related.",
+      "references": [],
+      "referenceRole": ""
+    },
+    {
+      "id": "ysabel",
+      "destination": "AleriaAlmanach/assets/gestiefelte-muschi/portraits/ysabel.png",
+      "transparent": false,
+      "prompt": "Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nUse case: stylized-concept. Exactly one adult person, standing upper body portrait to hips, 49-year-old visibly mature adult human woman, fine lines around eyes and mouth, full soft cheeks, dark brown eyes, straight black hair with a few natural gray strands in a broad low chignon and blunt fringe. Curvy not obese, opaque smoky violet gown with generous but covered neckline and black lace shawl. Standing, one hand loosely drapes shawl over shoulder, other relaxed, languid amused smile. No fan. Quiet uncluttered medieval cabaret interior with timber and a muted burgundy curtain, soft warm lantern lighting, normal rounded human ears. No nudity, no sexual activity, no lettering, no watermark, no frame. Distinct individual face, hair and pose; do not make people look related.",
+      "references": [],
+      "referenceRole": ""
+    },
+    {
+      "id": "svea",
+      "destination": "AleriaAlmanach/assets/gestiefelte-muschi/portraits/svea.png",
+      "transparent": false,
+      "prompt": "Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nUse case: stylized-concept. Exactly one adult person, standing upper body portrait to hips, 29-year-old adult Nordic human woman, broad oval face, bright blue eyes, uniformly golden blonde very voluminous loose waves to shoulders. Tall full-figured attractive build. Opaque forest-green low-necked gown with ivory sleeve inserts, simple amber pendant. Standing frontally, one hand on hip, other raised slightly in a conversational gesture, outgoing laughing expression. Quiet uncluttered medieval cabaret interior with timber and a muted burgundy curtain, soft warm lantern lighting, normal rounded human ears. No nudity, no sexual activity, no lettering, no watermark, no frame. Distinct individual face, hair and pose; do not make people look related.",
+      "references": [],
+      "referenceRole": ""
+    },
+    {
+      "id": "lise",
+      "destination": "AleriaAlmanach/assets/gestiefelte-muschi/portraits/lise.png",
+      "transparent": false,
+      "prompt": "Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nUse case: stylized-concept. Exactly one adult person, standing upper body portrait to hips, 24-year-old clearly adult human woman, narrow delicate face and straight nose, gray-blue eyes, pale ash-blonde straight hair in a neat short chin-length bob, no curls. Opaque ochre-gold fitted dress with cream lace at neckline and short puff sleeves. Standing turned to left, hands loosely behind back, small private smile, head slightly tilted. Slim adult proportions, no youthful childlike features. Quiet uncluttered medieval cabaret interior with timber and a muted burgundy curtain, soft warm lantern lighting, normal rounded human ears. No nudity, no sexual activity, no lettering, no watermark, no frame. Distinct individual face, hair and pose; do not make people look related.",
+      "references": [],
+      "referenceRole": ""
+    },
+    {
+      "id": "daric",
+      "destination": "AleriaAlmanach/assets/gestiefelte-muschi/portraits/daric.png",
+      "transparent": false,
+      "prompt": "Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nUse case: stylized-concept. Exactly one adult person, standing upper body portrait to hips, 60-year-old broad-shouldered human man with weathered square face, deep-set dark brown eyes, uniformly iron-gray straight short hair brushed back, neat gray moustache and short squared beard, visible age lines and small healed brow scar. Unhelmeted noble Brevanor plate armor of polished silver steel with restrained burgundy enamel, dark green cloth and authentic silver chalice plus grape branch chest emblem matching Desele reference. Standing upper body to waist, one gloved hand relaxed on sword pommel at belt, other behind back, stern tired professional expression. No lion pelt, no crown. Quiet uncluttered medieval cabaret interior with timber and a muted burgundy curtain, soft warm lantern lighting, normal rounded human ears. No nudity, no sexual activity, no lettering, no watermark, no frame. Distinct individual face, hair and pose; do not make people look related.",
+      "references": [
+        "Stammbäume/assets/images/houses/Brevanor/Desele.png"
+      ],
+      "referenceRole": "Exact chest heraldry and house colors only, integrate silver chalice and grape branch into noble Brevanor armor."
+    },
+    {
+      "id": "hausgarde",
+      "destination": "AleriaAlmanach/assets/gestiefelte-muschi/portraits/hausgarde.png",
+      "transparent": false,
+      "references": [
+        "AleriaAlmanach/assets/gestiefelte-muschi/portraits/daric.png"
+      ],
+      "referenceRole": "Same Desele armor family, less ornate and helmeted, different pose.",
+      "prompt": "Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nUse case: stylized-concept. Exactly one anonymous adult Brevanor Desele house guard aged about 48. Upper body from closed helmet to waist, standing with one gloved hand loosely holding vertical spear at side. Simplified but impressive polished silver steel plate, restrained burgundy enamel, dark green cloth, authentic silver chalice and grape branch chest emblem from Daric reference. CLOSED HELMET, all face openings completely black with deep opaque shadow, no discernible eyes mouth or facial features. Quiet same cabaret entrance. No lion pelt, no fur, no text, no transparent backdrop."
+    },
+    {
+      "id": "madame-fluff",
+      "destination": "AleriaAlmanach/assets/gestiefelte-muschi/pets/madame-fluff.png",
+      "transparent": false,
+      "prompt": "Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nUse case: illustration-story. One white long-haired Samtlicht luxury cat, light blue eyes, lying stretched sideways with forepaws crossed on a deep violet velvet cushion, chin raised arrogantly, fluffy tail curled around cushion edge. Show the complete animal with its cushion or mat, centered within a vertical 2:3 composition. Quiet simple medieval timber salon corner, soft warm light. No other animals, no people, no text.",
+      "references": [
+        "Bestiarium/assets/cat-profiles/samtlicht.webp"
+      ],
+      "referenceRole": "Only the breed morphology: elegant white longhaired luxury cat. Use the requested individual pose and eye color, no servants and no copying the illustrated room or painting style."
+    },
+    {
+      "id": "prinz-puder",
+      "destination": "AleriaAlmanach/assets/gestiefelte-muschi/pets/prinz-puder.png",
+      "transparent": false,
+      "prompt": "Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nUse case: illustration-story. One white silky long-haired Samtlicht luxury cat, pale green eyes, sitting perfectly upright on a burgundy velvet cushion with small tassels, forepaws together, tail wrapped tightly around front, offended imperious stare. Show the complete animal with its cushion or mat, centered within a vertical 2:3 composition. Quiet simple medieval timber salon corner, soft warm light. No other animals, no people, no text.",
+      "references": [
+        "Bestiarium/assets/cat-profiles/samtlicht.webp"
+      ],
+      "referenceRole": "Only the breed morphology: elegant white longhaired luxury cat. Use the requested individual pose and eye color, no servants and no copying the illustrated room or painting style."
+    },
+    {
+      "id": "graefin-schnurr",
+      "destination": "AleriaAlmanach/assets/gestiefelte-muschi/pets/graefin-schnurr.png",
+      "transparent": false,
+      "prompt": "Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nUse case: illustration-story. One white fluffy long-haired Samtlicht luxury cat, pale gold eyes, reclining half on her back on a forest-green velvet cushion, one forepaw curled loosely above chest, head turned toward viewer with spoiled sleepy expression, fluffy tail spilling to side. Show the complete animal with its cushion or mat, centered within a vertical 2:3 composition. Quiet simple medieval timber salon corner, soft warm light. No other animals, no people, no text.",
+      "references": [
+        "Bestiarium/assets/cat-profiles/samtlicht.webp"
+      ],
+      "referenceRole": "Only the breed morphology: elegant white longhaired luxury cat. Use the requested individual pose and eye color, no servants and no copying the illustrated room or painting style."
+    },
+    {
+      "id": "sir-wuff",
+      "destination": "AleriaAlmanach/assets/gestiefelte-muschi/pets/sir-wuff.png",
+      "transparent": false,
+      "prompt": "Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nUse case: illustration-story. One cream-white adult poodle dog with dense curly coat, groomed rounded head and fluffy ears, burgundy ribbon at neck, standing proudly with one forepaw raised as if greeting a visitor, wagging tail, hilariously smug playful face. Quiet cabaret entrance rug, no human. Show the complete animal with its cushion or mat, centered within a vertical 2:3 composition. Quiet simple medieval timber salon corner, soft warm light. No other animals, no people, no text.",
+      "references": [
+        "Bestiarium/assets/pet-breeds/hunde/pudel.webp"
+      ],
+      "referenceRole": "DOG morphology reference: unmistakable POODLE with a long canine muzzle, large hanging floppy ears, dense tight CURLS, rounded groomed poodle head and pompom tail. Exactly one DOG, no cat, no feline face, no triangular upright ears, no feline whiskers. Retain the stated 2:3 anime scene style, not this reference painting style."
+    },
+    {
+      "id": "aussenansicht",
+      "destination": "AleriaAlmanach/assets/gestiefelte-muschi/scenes/aussenansicht.png",
+      "transparent": false,
+      "prompt": "Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nUse case: illustration-story. Eye-level exterior of a substantial but not palatial medieval Cenyri entertainment house in Gwynthor near the harbor streets at dusk. Pale stone ground floor, dark timber upper floors, warm amber windows behind burgundy drapes, open inviting arched door, neighboring modest urban houses. Prominent painted round hanging business sign accurately based on supplied booted female cat mascot reference, a silly clothed cat dancing at a pole. No other shop sign, no modern neon, no food stall, no people, portrait architectural composition. Coherent medieval architectural perspective, portrait 2:3. No watermark or readable writing except the supplied sign if present.",
+      "references": [
+        "AleriaAlmanach/assets/gestiefelte-muschi/schild-v2.png"
+      ],
+      "referenceRole": "Business-sign motif only. The exterior must have exactly this booted feline dancing mascot, not a mermaid."
+    },
+    {
+      "id": "salon",
+      "destination": "AleriaAlmanach/assets/gestiefelte-muschi/scenes/salon.png",
+      "transparent": false,
+      "prompt": "Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nUse case: illustration-story. Interior of a lively medieval Cenyri cabaret, warm amber lanterns, burgundy curtains, dark timber, several small round drinking tables, bar to right, low empty stage with one polished brass dance pole and tiny booted-cat motif on its front, lute resting beside stage. No food, no modern electric fixtures, no crowded props. Inviting slightly disreputable atmosphere, empty room ready for play, no people. Coherent medieval architectural perspective, portrait 2:3. No watermark or readable writing except the supplied sign if present.",
+      "references": [],
+      "referenceRole": ""
+    },
+    {
+      "id": "spielstube",
+      "destination": "AleriaAlmanach/assets/gestiefelte-muschi/scenes/spielstube.png",
+      "transparent": false,
+      "prompt": "Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nUse case: illustration-story. Small medieval gambling parlor in the same timber cabaret, exactly two green-felt wooden tables, a few ivory dice and a modest deck of hand-painted cards with no legible text, small orderly stacks of copper coins, simple benches and chairs, one curtained window, warm hanging oil lantern. A slightly open door glimpses the burgundy main hall. No roulette wheel, casino machine or modern objects, no people, no food. Coherent medieval architectural perspective, portrait 2:3. No watermark or readable writing except the supplied sign if present.",
+      "references": [],
+      "referenceRole": ""
+    },
+    {
+      "id": "hinterzimmer",
+      "destination": "AleriaAlmanach/assets/gestiefelte-muschi/scenes/hinterzimmer.png",
+      "transparent": false,
+      "prompt": "Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nUse case: illustration-story. Intimate but non-explicit private medieval entertainment salon, deep teal velvet sofa, exactly two burgundy upholstered chairs around one small low table with a plain wine carafe and two empty glasses, heavy drapery, low oil-lamp light, closed wooden door, clean tasteful rich fabrics slightly worn. No people, no nude artwork, no bed, no food, quiet uncluttered interior. Coherent medieval architectural perspective, portrait 2:3. No watermark or readable writing except the supplied sign if present.",
+      "references": [],
+      "referenceRole": ""
+    },
+    {
+      "id": "gaestezimmer",
+      "destination": "AleriaAlmanach/assets/gestiefelte-muschi/scenes/gaestezimmer.png",
+      "transparent": false,
+      "prompt": "Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nUse case: illustration-story. Cozy small medieval rented guest bedroom above a cabaret, one neatly made broad bed with cream linen and muted burgundy coverlet, dark timber ceiling, single small shuttered window, wooden chest at foot of bed, ceramic water pitcher and wash bowl on small stand, one candle lantern. No people, no food, no modern bathroom, no sexually explicit objects, restful simple composition. Coherent medieval architectural perspective, portrait 2:3. No watermark or readable writing except the supplied sign if present.",
+      "references": [],
+      "referenceRole": ""
+    },
+    {
+      "id": "bielle-tour-rouge",
+      "destination": "AleriaAlmanach/assets/gestiefelte-muschi/goods/bielle-tour-rouge.png",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Create ONE square 1:1 fantasy RPG inventory item illustration: ONE whole antique medieval corked wine bottle, containing dark red wine. dark green wax seal, old well-kept bottle rescued from Brevanor. Label reads exactly \"BIELLE · TOUR ROUGE · 1712\", includes authentic miniature Bielle emblem from reference1. No goblet or extra props.. Reference 1 defines the item's exact DESIGN, materials, colors and any authentic house emblem. Reference 2 defines the ITEM ART STYLE only: hand-painted illustrated fantasy inventory art, painterly textured metal, leather, wood and cloth, crisp dark outlines, soft simplified shading, muted warm colors, gentle illustrated highlights, readable details and a clear silhouette at small thumbnail size. Not photorealistic, not CGI or a glossy 3D render. Preserve the item's design and heraldry from reference 1; never copy the symbols or house colors of the style reference. Show the entire isolated object, centered and large within the square, with about 10% clear margin on all sides. Slight three-quarter view where appropriate; long weapons may run diagonally from lower-left handle to upper-right tip. TRUE transparent PNG alpha background; at most a very faint soft BLACK contact shadow immediately beneath the object. No person, hands, mannequin, scenery, floor, stand, frame, text, watermark or painted checkerboard. Do not add unrelated objects.",
+      "references": [
+        "Stammbäume/assets/images/houses/Brevanor/Bielle.png",
+        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
+      ],
+      "referenceRole": "Reference1 house crest for small label motif, reference2 inventory painting style only, no armor motifs."
+    },
+    {
+      "id": "bielle-reserve",
+      "destination": "AleriaAlmanach/assets/gestiefelte-muschi/goods/bielle-reserve.png",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Create ONE square 1:1 fantasy RPG inventory item illustration: ONE whole antique medieval corked wine bottle, containing deep garnet aged red wine. purple wax seal, old well-kept bottle rescued from Brevanor. Label reads exactly \"BIELLE · RESERVE · 1708\", includes authentic miniature Bielle emblem from reference1. No goblet or extra props.. Reference 1 defines the item's exact DESIGN, materials, colors and any authentic house emblem. Reference 2 defines the ITEM ART STYLE only: hand-painted illustrated fantasy inventory art, painterly textured metal, leather, wood and cloth, crisp dark outlines, soft simplified shading, muted warm colors, gentle illustrated highlights, readable details and a clear silhouette at small thumbnail size. Not photorealistic, not CGI or a glossy 3D render. Preserve the item's design and heraldry from reference 1; never copy the symbols or house colors of the style reference. Show the entire isolated object, centered and large within the square, with about 10% clear margin on all sides. Slight three-quarter view where appropriate; long weapons may run diagonally from lower-left handle to upper-right tip. TRUE transparent PNG alpha background; at most a very faint soft BLACK contact shadow immediately beneath the object. No person, hands, mannequin, scenery, floor, stand, frame, text, watermark or painted checkerboard. Do not add unrelated objects.",
+      "references": [
+        "Stammbäume/assets/images/houses/Brevanor/Bielle.png",
+        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
+      ],
+      "referenceRole": "Reference1 house crest for small label motif, reference2 inventory painting style only, no armor motifs."
+    },
+    {
+      "id": "bielle-tour-blanche",
+      "destination": "AleriaAlmanach/assets/gestiefelte-muschi/goods/bielle-tour-blanche.png",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Create ONE square 1:1 fantasy RPG inventory item illustration: ONE whole antique medieval corked wine bottle, containing clear deep golden aged white wine. ivory wax seal, old well-kept bottle rescued from Brevanor. Label reads exactly \"BIELLE · TOUR BLANCHE · 1716\", includes authentic miniature Bielle emblem from reference1. No goblet or extra props.. Reference 1 defines the item's exact DESIGN, materials, colors and any authentic house emblem. Reference 2 defines the ITEM ART STYLE only: hand-painted illustrated fantasy inventory art, painterly textured metal, leather, wood and cloth, crisp dark outlines, soft simplified shading, muted warm colors, gentle illustrated highlights, readable details and a clear silhouette at small thumbnail size. Not photorealistic, not CGI or a glossy 3D render. Preserve the item's design and heraldry from reference 1; never copy the symbols or house colors of the style reference. Show the entire isolated object, centered and large within the square, with about 10% clear margin on all sides. Slight three-quarter view where appropriate; long weapons may run diagonally from lower-left handle to upper-right tip. TRUE transparent PNG alpha background; at most a very faint soft BLACK contact shadow immediately beneath the object. No person, hands, mannequin, scenery, floor, stand, frame, text, watermark or painted checkerboard. Do not add unrelated objects.",
+      "references": [
+        "Stammbäume/assets/images/houses/Brevanor/Bielle.png",
+        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
+      ],
+      "referenceRole": "Reference1 house crest for small label motif, reference2 inventory painting style only, no armor motifs."
+    },
+    {
+      "id": "desele-cuvee",
+      "destination": "AleriaAlmanach/assets/gestiefelte-muschi/goods/desele-cuvee.png",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Create ONE square 1:1 fantasy RPG inventory item illustration: ONE whole antique medieval sparkling-wine bottle with firmly tied cork, containing pale gold sparkling wine. silver wax seal, old well-kept bottle rescued from Brevanor. Label reads exactly \"DESELE · CUVEE D ARGENT · 1715\", includes authentic miniature Desele emblem from reference1. No goblet or extra props.. Reference 1 defines the item's exact DESIGN, materials, colors and any authentic house emblem. Reference 2 defines the ITEM ART STYLE only: hand-painted illustrated fantasy inventory art, painterly textured metal, leather, wood and cloth, crisp dark outlines, soft simplified shading, muted warm colors, gentle illustrated highlights, readable details and a clear silhouette at small thumbnail size. Not photorealistic, not CGI or a glossy 3D render. Preserve the item's design and heraldry from reference 1; never copy the symbols or house colors of the style reference. Show the entire isolated object, centered and large within the square, with about 10% clear margin on all sides. Slight three-quarter view where appropriate; long weapons may run diagonally from lower-left handle to upper-right tip. TRUE transparent PNG alpha background; at most a very faint soft BLACK contact shadow immediately beneath the object. No person, hands, mannequin, scenery, floor, stand, frame, text, watermark or painted checkerboard. Do not add unrelated objects.",
+      "references": [
+        "Stammbäume/assets/images/houses/Brevanor/Desele.png",
+        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
+      ],
+      "referenceRole": "Reference1 house crest for small label motif, reference2 inventory painting style only, no armor motifs."
+    },
+    {
+      "id": "desele-rose",
+      "destination": "AleriaAlmanach/assets/gestiefelte-muschi/goods/desele-rose.png",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Create ONE square 1:1 fantasy RPG inventory item illustration: ONE whole antique medieval sparkling-wine bottle with firmly tied cork, containing rose-pink sparkling wine. burgundy wax seal, old well-kept bottle rescued from Brevanor. Label reads exactly \"DESELE · ROSE DE BREVANOR · 1714\", includes authentic miniature Desele emblem from reference1. No goblet or extra props.. Reference 1 defines the item's exact DESIGN, materials, colors and any authentic house emblem. Reference 2 defines the ITEM ART STYLE only: hand-painted illustrated fantasy inventory art, painterly textured metal, leather, wood and cloth, crisp dark outlines, soft simplified shading, muted warm colors, gentle illustrated highlights, readable details and a clear silhouette at small thumbnail size. Not photorealistic, not CGI or a glossy 3D render. Preserve the item's design and heraldry from reference 1; never copy the symbols or house colors of the style reference. Show the entire isolated object, centered and large within the square, with about 10% clear margin on all sides. Slight three-quarter view where appropriate; long weapons may run diagonally from lower-left handle to upper-right tip. TRUE transparent PNG alpha background; at most a very faint soft BLACK contact shadow immediately beneath the object. No person, hands, mannequin, scenery, floor, stand, frame, text, watermark or painted checkerboard. Do not add unrelated objects.",
+      "references": [
+        "Stammbäume/assets/images/houses/Brevanor/Desele.png",
+        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
+      ],
+      "referenceRole": "Reference1 house crest for small label motif, reference2 inventory painting style only, no armor motifs."
+    },
+    {
+      "id": "rosenstolz",
+      "destination": "AleriaAlmanach/assets/gestiefelte-muschi/goods/rosenstolz.png",
+      "transparent": true,
+      "references": [
+        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
+      ],
+      "referenceRole": "Inventory illustration style only, do not copy any armor or heraldry.",
+      "prompt": "Use case: stylized-concept. Create ONE square 1:1 fantasy RPG inventory item illustration: ONE entire dark green medieval wine bottle containing ruby-red wine from Weisenfluh, burgundy wax cork, ivory label reads ROSENSTOLZ, a single small painted red rose on the label, no separate glass or extra items. Reference1 supplies only inventory art style; the design is the described wine bottle.. Reference 1 defines the item's exact DESIGN, materials, colors and any authentic house emblem. Reference 2 defines the ITEM ART STYLE only: hand-painted illustrated fantasy inventory art, painterly textured metal, leather, wood and cloth, crisp dark outlines, soft simplified shading, muted warm colors, gentle illustrated highlights, readable details and a clear silhouette at small thumbnail size. Not photorealistic, not CGI or a glossy 3D render. Preserve the item's design and heraldry from reference 1; never copy the symbols or house colors of the style reference. Show the entire isolated object, centered and large within the square, with about 10% clear margin on all sides. Slight three-quarter view where appropriate; long weapons may run diagonally from lower-left handle to upper-right tip. TRUE transparent PNG alpha background; at most a very faint soft BLACK contact shadow immediately beneath the object. No person, hands, mannequin, scenery, floor, stand, frame, text, watermark or painted checkerboard. Do not add unrelated objects."
+    },
+    {
+      "id": "tirnara-abendblatt",
+      "destination": "AleriaAlmanach/assets/gestiefelte-muschi/goods/tirnara-abendblatt.png",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Create ONE square 1:1 fantasy RPG inventory item illustration: ONE small folded ochre paper pouch of brown pipe tobacco with a few dry cut tobacco leaves visible at its open top, dark green cord, simple leaf seal, no writing, no loose objects outside pouch. Reference1 provides only inventory painting style, the design is the object described here.. Reference 1 defines the item's exact DESIGN, materials, colors and any authentic house emblem. Reference 2 defines the ITEM ART STYLE only: hand-painted illustrated fantasy inventory art, painterly textured metal, leather, wood and cloth, crisp dark outlines, soft simplified shading, muted warm colors, gentle illustrated highlights, readable details and a clear silhouette at small thumbnail size. Not photorealistic, not CGI or a glossy 3D render. Preserve the item's design and heraldry from reference 1; never copy the symbols or house colors of the style reference. Show the entire isolated object, centered and large within the square, with about 10% clear margin on all sides. Slight three-quarter view where appropriate; long weapons may run diagonally from lower-left handle to upper-right tip. TRUE transparent PNG alpha background; at most a very faint soft BLACK contact shadow immediately beneath the object. No person, hands, mannequin, scenery, floor, stand, frame, text, watermark or painted checkerboard. Do not add unrelated objects.",
+      "references": [
+        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
+      ],
+      "referenceRole": "Inventory style only, never copy armor or house motif."
+    },
+    {
+      "id": "tirnara-dunkelblatt",
+      "destination": "AleriaAlmanach/assets/gestiefelte-muschi/goods/tirnara-dunkelblatt.png",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Create ONE square 1:1 fantasy RPG inventory item illustration: ONE small dark brown leather tobacco pouch with burgundy drawstring, open slightly to show dark shredded tobacco inside, simple brass leaf clasp, no writing. Reference1 provides only inventory painting style, the design is the object described here.. Reference 1 defines the item's exact DESIGN, materials, colors and any authentic house emblem. Reference 2 defines the ITEM ART STYLE only: hand-painted illustrated fantasy inventory art, painterly textured metal, leather, wood and cloth, crisp dark outlines, soft simplified shading, muted warm colors, gentle illustrated highlights, readable details and a clear silhouette at small thumbnail size. Not photorealistic, not CGI or a glossy 3D render. Preserve the item's design and heraldry from reference 1; never copy the symbols or house colors of the style reference. Show the entire isolated object, centered and large within the square, with about 10% clear margin on all sides. Slight three-quarter view where appropriate; long weapons may run diagonally from lower-left handle to upper-right tip. TRUE transparent PNG alpha background; at most a very faint soft BLACK contact shadow immediately beneath the object. No person, hands, mannequin, scenery, floor, stand, frame, text, watermark or painted checkerboard. Do not add unrelated objects.",
+      "references": [
+        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
+      ],
+      "referenceRole": "Inventory style only, never copy armor or house motif."
+    },
+    {
+      "id": "tirnara-zigarre",
+      "destination": "AleriaAlmanach/assets/gestiefelte-muschi/goods/tirnara-zigarre.png",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Create ONE square 1:1 fantasy RPG inventory item illustration: ONE whole hand-rolled brown tobacco cigar, diagonal, clear rolled leaf spiral texture, single narrow dark green paper band with tiny plain gold leaf motif, unlit, no smoke or ash, no separate box. Reference1 provides only inventory painting style, the design is the object described here.. Reference 1 defines the item's exact DESIGN, materials, colors and any authentic house emblem. Reference 2 defines the ITEM ART STYLE only: hand-painted illustrated fantasy inventory art, painterly textured metal, leather, wood and cloth, crisp dark outlines, soft simplified shading, muted warm colors, gentle illustrated highlights, readable details and a clear silhouette at small thumbnail size. Not photorealistic, not CGI or a glossy 3D render. Preserve the item's design and heraldry from reference 1; never copy the symbols or house colors of the style reference. Show the entire isolated object, centered and large within the square, with about 10% clear margin on all sides. Slight three-quarter view where appropriate; long weapons may run diagonally from lower-left handle to upper-right tip. TRUE transparent PNG alpha background; at most a very faint soft BLACK contact shadow immediately beneath the object. No person, hands, mannequin, scenery, floor, stand, frame, text, watermark or painted checkerboard. Do not add unrelated objects.",
+      "references": [
+        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
+      ],
+      "referenceRole": "Inventory style only, never copy armor or house motif."
+    },
+    {
+      "id": "rauchpfeife",
+      "destination": "AleriaAlmanach/assets/gestiefelte-muschi/goods/rauchpfeife.png",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Create ONE square 1:1 fantasy RPG inventory item illustration: ONE small medieval wooden TOBACCO SMOKING PIPE, rounded polished dark briar bowl and gently curved black stem, clearly a pipe for smoking not a whistle, no tobacco, flame or smoke. Reference1 provides only inventory painting style, the design is the object described here.. Reference 1 defines the item's exact DESIGN, materials, colors and any authentic house emblem. Reference 2 defines the ITEM ART STYLE only: hand-painted illustrated fantasy inventory art, painterly textured metal, leather, wood and cloth, crisp dark outlines, soft simplified shading, muted warm colors, gentle illustrated highlights, readable details and a clear silhouette at small thumbnail size. Not photorealistic, not CGI or a glossy 3D render. Preserve the item's design and heraldry from reference 1; never copy the symbols or house colors of the style reference. Show the entire isolated object, centered and large within the square, with about 10% clear margin on all sides. Slight three-quarter view where appropriate; long weapons may run diagonally from lower-left handle to upper-right tip. TRUE transparent PNG alpha background; at most a very faint soft BLACK contact shadow immediately beneath the object. No person, hands, mannequin, scenery, floor, stand, frame, text, watermark or painted checkerboard. Do not add unrelated objects.",
+      "references": [
+        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
+      ],
+      "referenceRole": "Inventory style only, never copy armor or house motif."
+    },
+    {
+      "id": "parfum-velours",
+      "destination": "AleriaAlmanach/assets/gestiefelte-muschi/goods/parfum-velours.png",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Create ONE square 1:1 fantasy RPG inventory item illustration: ONE small squat amethyst glass perfume flacon with silver stopper, burgundy tassel attached at neck, tiny silver chalice and grape-branch seal, label DESELE, warm amber perfume visible, no flowers or spray atomizer. Reference1 provides authentic Desele emblem and house colors.. Reference 1 defines the item's exact DESIGN, materials, colors and any authentic house emblem. Reference 2 defines the ITEM ART STYLE only: hand-painted illustrated fantasy inventory art, painterly textured metal, leather, wood and cloth, crisp dark outlines, soft simplified shading, muted warm colors, gentle illustrated highlights, readable details and a clear silhouette at small thumbnail size. Not photorealistic, not CGI or a glossy 3D render. Preserve the item's design and heraldry from reference 1; never copy the symbols or house colors of the style reference. Show the entire isolated object, centered and large within the square, with about 10% clear margin on all sides. Slight three-quarter view where appropriate; long weapons may run diagonally from lower-left handle to upper-right tip. TRUE transparent PNG alpha background; at most a very faint soft BLACK contact shadow immediately beneath the object. No person, hands, mannequin, scenery, floor, stand, frame, text, watermark or painted checkerboard. Do not add unrelated objects.",
+      "references": [
+        "Stammbäume/assets/images/houses/Brevanor/Desele.png",
+        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
+      ],
+      "referenceRole": "Reference1 authentic house heraldry, reference2 inventory style only."
+    },
+    {
+      "id": "parfum-verger",
+      "destination": "AleriaAlmanach/assets/gestiefelte-muschi/goods/parfum-verger.png",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Create ONE square 1:1 fantasy RPG inventory item illustration: ONE slender pale green glass perfume flacon filled with clear light gold perfume, silver pointed glass stopper, tiny silver chalice and grape-branch seal and label DESELE, simple green neck ribbon, no flowers or atomizer. Reference1 provides authentic Desele emblem and house colors.. Reference 1 defines the item's exact DESIGN, materials, colors and any authentic house emblem. Reference 2 defines the ITEM ART STYLE only: hand-painted illustrated fantasy inventory art, painterly textured metal, leather, wood and cloth, crisp dark outlines, soft simplified shading, muted warm colors, gentle illustrated highlights, readable details and a clear silhouette at small thumbnail size. Not photorealistic, not CGI or a glossy 3D render. Preserve the item's design and heraldry from reference 1; never copy the symbols or house colors of the style reference. Show the entire isolated object, centered and large within the square, with about 10% clear margin on all sides. Slight three-quarter view where appropriate; long weapons may run diagonally from lower-left handle to upper-right tip. TRUE transparent PNG alpha background; at most a very faint soft BLACK contact shadow immediately beneath the object. No person, hands, mannequin, scenery, floor, stand, frame, text, watermark or painted checkerboard. Do not add unrelated objects.",
+      "references": [
+        "Stammbäume/assets/images/houses/Brevanor/Desele.png",
+        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
+      ],
+      "referenceRole": "Reference1 authentic house heraldry, reference2 inventory style only."
+    },
+    {
+      "id": "parfum-nuit",
+      "destination": "AleriaAlmanach/assets/gestiefelte-muschi/goods/parfum-nuit.png",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Create ONE square 1:1 fantasy RPG inventory item illustration: ONE rounded midnight-blue glass perfume flacon with clear crystal stopper and fine silver neck ring, tiny authentic silver chalice and grape branch seal, label DESELE, no flowers, no atomizer, no extra props. Reference1 provides authentic Desele emblem and house colors.. Reference 1 defines the item's exact DESIGN, materials, colors and any authentic house emblem. Reference 2 defines the ITEM ART STYLE only: hand-painted illustrated fantasy inventory art, painterly textured metal, leather, wood and cloth, crisp dark outlines, soft simplified shading, muted warm colors, gentle illustrated highlights, readable details and a clear silhouette at small thumbnail size. Not photorealistic, not CGI or a glossy 3D render. Preserve the item's design and heraldry from reference 1; never copy the symbols or house colors of the style reference. Show the entire isolated object, centered and large within the square, with about 10% clear margin on all sides. Slight three-quarter view where appropriate; long weapons may run diagonally from lower-left handle to upper-right tip. TRUE transparent PNG alpha background; at most a very faint soft BLACK contact shadow immediately beneath the object. No person, hands, mannequin, scenery, floor, stand, frame, text, watermark or painted checkerboard. Do not add unrelated objects.",
+      "references": [
+        "Stammbäume/assets/images/houses/Brevanor/Desele.png",
+        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
+      ],
+      "referenceRole": "Reference1 authentic house heraldry, reference2 inventory style only."
+    }
+  ]
+}

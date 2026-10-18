@@ -1502,7 +1502,7 @@ function sanitizeTradeCatalogItems(items = []) {
     .map((item, index) => ({
       id: slugify(item?.id || item?.title || `handelsgut-${index + 1}`, `handelsgut-${index + 1}`),
       category: slugify(item?.category || item?.categoryId || 'tiere', 'tiere'),
-      status: item?.status === 'planned' ? 'planned' : 'available',
+      status: ['planned', 'unavailable'].includes(item?.status) ? item.status : 'available',
       image: String(item?.image || '').trim(),
       imageFormat: sanitizeTradeCatalogImageFormat(item?.imageFormat),
       imageFit: sanitizeTradeCatalogImageFit(item?.imageFit),

@@ -1,0 +1,904 @@
+{
+  "type": "aleria-character-publication-plan",
+  "version": 1,
+  "onlineApplied": false,
+  "plan": {
+    "entries": [
+      {
+        "id": "person--haus-desele--helviane-desele",
+        "key": "helviane",
+        "group": "Führung & Logistik",
+        "create": true,
+        "data": {
+          "name": "Helviane Desele",
+          "title": "Inhaberin · geborene Bielle",
+          "fraktion": "Die Gestiefelte Muschi",
+          "role": "Inhaberin · geborene Bielle",
+          "status": "active",
+          "relevance": "supporting",
+          "taxonomyPath": "Brevanor",
+          "currentLocation": "Gwynthor · Die Gestiefelte Muschi",
+          "origin": "Brevanor",
+          "plotNode": "",
+          "profileLink": "",
+          "playerOwner": "",
+          "bio": "72 Jahre. Helviane hält Besitz, Kasse und Hausregeln in eigener Hand. Ihr Vermögen hat den Krieg überstanden, ihre ganze Familie nicht denselben Weg genommen. Sie erwartet Haltung selbst beim ausgelassensten Abend und lässt ihre Geringschätzung selten hinter dem Fächer verschwinden.",
+          "aliases": [],
+          "archived": false,
+          "createdAt": "2026-10-18T00:00:00Z",
+          "updatedAt": "2026-10-18T00:00:00Z",
+          "portrait": "./assets/gestiefelte-muschi/portraits/helviane.png",
+          "emotes": [],
+          "emotesOverride": false,
+          "imageSetSchemaVersion": 0,
+          "imageSets": [],
+          "activeImageSetId": "",
+          "imageSetsOverride": false,
+          "inventory": null,
+          "biography": null,
+          "identity": {
+            "worldPersonId": "person--haus-desele--helviane-desele"
+          },
+          "genealogy": {
+            "worldPersonId": "person--haus-desele--helviane-desele",
+            "sex": "female",
+            "status": "alive",
+            "birth": "1668",
+            "death": "",
+            "houseId": "house-bielle",
+            "houseName": "Haus Bielle",
+            "familyRole": "married",
+            "portraitPlaceholder": "auto",
+            "tags": [],
+            "sources": [
+              {
+                "familyId": "haus-desele",
+                "personId": "helviane-desele",
+                "releaseId": "",
+                "publishedAt": "",
+                "importedAt": "2026-10-18T00:00:00Z",
+                "lastSyncedAt": "2026-10-18T00:00:00Z",
+                "url": "../Stammbäume/Stammbaum.html?family=haus-desele&mode=view&person=helviane-desele",
+                "fingerprint": "{\"name\":\"Helviane Desele\",\"title\":\"Inhaberin · geborene Bielle\",\"birth\":\"1668\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-bielle\",\"portrait\":\"../AleriaAlmanach/assets/gestiefelte-muschi/portraits/helviane.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[],\"children\":[]}}"
+              }
+            ],
+            "relationships": {
+              "parents": [],
+              "partners": [],
+              "children": []
+            }
+          }
+        }
+      },
+      {
+        "id": "person--gestiefelte-muschi--alain",
+        "key": "alain",
+        "group": "Führung & Logistik",
+        "create": true,
+        "data": {
+          "name": "Alain",
+          "title": "Hausverwalter · Helvianes Stellvertreter",
+          "fraktion": "Die Gestiefelte Muschi",
+          "role": "Hausverwalter · Helvianes Stellvertreter",
+          "status": "active",
+          "relevance": "minor",
+          "taxonomyPath": "",
+          "currentLocation": "Gwynthor · Die Gestiefelte Muschi",
+          "origin": "Brevanor",
+          "plotNode": "",
+          "profileLink": "",
+          "playerOwner": "",
+          "bio": "48 Jahre. Kam aus dem alten Haushalt mit bis nach Gwynthor. Teilt Dienste ein, hält Handwerker und Hauswirtschaft zusammen und vertritt Helviane nur in den von ihr freigegebenen Geschäften. Förmlich, verschwiegen und erstaunlich geduldig.",
+          "aliases": [],
+          "archived": false,
+          "createdAt": "2026-10-18T00:00:00Z",
+          "updatedAt": "2026-10-18T00:00:00Z",
+          "portrait": "./assets/gestiefelte-muschi/portraits/alain.png",
+          "emotes": [],
+          "emotesOverride": false,
+          "imageSetSchemaVersion": 0,
+          "imageSets": [],
+          "activeImageSetId": "",
+          "imageSetsOverride": false,
+          "inventory": null,
+          "biography": null,
+          "identity": {
+            "worldPersonId": "person--gestiefelte-muschi--alain"
+          },
+          "genealogy": {
+            "worldPersonId": "person--gestiefelte-muschi--alain",
+            "sex": "male",
+            "status": "alive",
+            "birth": "1692",
+            "death": "",
+            "houseId": "",
+            "houseName": "",
+            "familyRole": "",
+            "portraitPlaceholder": "",
+            "tags": [],
+            "sources": [],
+            "relationships": {
+              "parents": [],
+              "partners": [],
+              "children": []
+            }
+          }
+        }
+      },
+      {
+        "id": "person--gestiefelte-muschi--gaston",
+        "key": "gaston",
+        "group": "Führung & Logistik",
+        "create": true,
+        "data": {
+          "name": "Gaston",
+          "title": "Kellermeister · Einkauf und Lieferwege",
+          "fraktion": "Die Gestiefelte Muschi",
+          "role": "Kellermeister · Einkauf und Lieferwege",
+          "status": "active",
+          "relevance": "minor",
+          "taxonomyPath": "",
+          "currentLocation": "Gwynthor · Die Gestiefelte Muschi",
+          "origin": "Brevanor",
+          "plotNode": "",
+          "profileLink": "",
+          "playerOwner": "",
+          "bio": "44 Jahre. Rettete auf der Flucht einen Teil des Kellerbuchs. Prüft Flaschen, bestellt Fassware und stimmt Tirnaras Tabaklieferungen mit den Händlern der Klingenden Münze ab. Die letzten Bielle- und Desele-Flaschen händigt er nur gegen Helvianes Freigabe aus.",
+          "aliases": [],
+          "archived": false,
+          "createdAt": "2026-10-18T00:00:00Z",
+          "updatedAt": "2026-10-18T00:00:00Z",
+          "portrait": "./assets/gestiefelte-muschi/portraits/gaston.png",
+          "emotes": [],
+          "emotesOverride": false,
+          "imageSetSchemaVersion": 0,
+          "imageSets": [],
+          "activeImageSetId": "",
+          "imageSetsOverride": false,
+          "inventory": null,
+          "biography": null,
+          "identity": {
+            "worldPersonId": "person--gestiefelte-muschi--gaston"
+          },
+          "genealogy": {
+            "worldPersonId": "person--gestiefelte-muschi--gaston",
+            "sex": "male",
+            "status": "alive",
+            "birth": "1696",
+            "death": "",
+            "houseId": "",
+            "houseName": "",
+            "familyRole": "",
+            "portraitPlaceholder": "",
+            "tags": [],
+            "sources": [],
+            "relationships": {
+              "parents": [],
+              "partners": [],
+              "children": []
+            }
+          }
+        }
+      },
+      {
+        "id": "person--gestiefelte-muschi--colette",
+        "key": "colette",
+        "group": "Führung & Logistik",
+        "create": true,
+        "data": {
+          "name": "Colette",
+          "title": "Buchhalterin · Empfang und Hausbuch",
+          "fraktion": "Die Gestiefelte Muschi",
+          "role": "Buchhalterin · Empfang und Hausbuch",
+          "status": "active",
+          "relevance": "minor",
+          "taxonomyPath": "",
+          "currentLocation": "Gwynthor · Die Gestiefelte Muschi",
+          "origin": "Brevanor",
+          "plotNode": "",
+          "profileLink": "",
+          "playerOwner": "",
+          "bio": "46 Jahre. Verließ Brevanor mit Helvianes Truhe der Geschäftspapiere. Führt Rechnung, Zimmerbelegung und Gästeverzeichnis. Höflich bis zur Unnahbarkeit; unklare Zusagen lässt sie niemanden auf die Rechnung setzen.",
+          "aliases": [],
+          "archived": false,
+          "createdAt": "2026-10-18T00:00:00Z",
+          "updatedAt": "2026-10-18T00:00:00Z",
+          "portrait": "./assets/gestiefelte-muschi/portraits/colette.png",
+          "emotes": [],
+          "emotesOverride": false,
+          "imageSetSchemaVersion": 0,
+          "imageSets": [],
+          "activeImageSetId": "",
+          "imageSetsOverride": false,
+          "inventory": null,
+          "biography": null,
+          "identity": {
+            "worldPersonId": "person--gestiefelte-muschi--colette"
+          },
+          "genealogy": {
+            "worldPersonId": "person--gestiefelte-muschi--colette",
+            "sex": "female",
+            "status": "alive",
+            "birth": "1694",
+            "death": "",
+            "houseId": "",
+            "houseName": "",
+            "familyRole": "",
+            "portraitPlaceholder": "",
+            "tags": [],
+            "sources": [],
+            "relationships": {
+              "parents": [],
+              "partners": [],
+              "children": []
+            }
+          }
+        }
+      },
+      {
+        "id": "person--gestiefelte-muschi--mariette",
+        "key": "mariette",
+        "group": "Führung & Logistik",
+        "create": true,
+        "data": {
+          "name": "Mariette",
+          "title": "Salonmeisterin · Gesellschaft und Abendfolge",
+          "fraktion": "Die Gestiefelte Muschi",
+          "role": "Salonmeisterin · Gesellschaft und Abendfolge",
+          "status": "active",
+          "relevance": "minor",
+          "taxonomyPath": "",
+          "currentLocation": "Gwynthor · Die Gestiefelte Muschi",
+          "origin": "Brevanor",
+          "plotNode": "",
+          "profileLink": "",
+          "playerOwner": "",
+          "bio": "38 Jahre. Die jüngste der vier alten Vertrauten. Organisiert Auftritte und Tischgesellschaft, vermittelt Wünsche und achtet auf die Absprachen zwischen Gästen und Damen. Warmherzig im Gespräch, unerbittlich bei eigenmächtigen Änderungen.",
+          "aliases": [],
+          "archived": false,
+          "createdAt": "2026-10-18T00:00:00Z",
+          "updatedAt": "2026-10-18T00:00:00Z",
+          "portrait": "./assets/gestiefelte-muschi/portraits/mariette.png",
+          "emotes": [],
+          "emotesOverride": false,
+          "imageSetSchemaVersion": 0,
+          "imageSets": [],
+          "activeImageSetId": "",
+          "imageSetsOverride": false,
+          "inventory": null,
+          "biography": null,
+          "identity": {
+            "worldPersonId": "person--gestiefelte-muschi--mariette"
+          },
+          "genealogy": {
+            "worldPersonId": "person--gestiefelte-muschi--mariette",
+            "sex": "female",
+            "status": "alive",
+            "birth": "1702",
+            "death": "",
+            "houseId": "",
+            "houseName": "",
+            "familyRole": "",
+            "portraitPlaceholder": "",
+            "tags": [],
+            "sources": [],
+            "relationships": {
+              "parents": [],
+              "partners": [],
+              "children": []
+            }
+          }
+        }
+      },
+      {
+        "id": "person--gestiefelte-muschi--rheunwaith",
+        "key": "rheunwaith",
+        "group": "Ausschank",
+        "create": true,
+        "data": {
+          "name": "Rheunwaith",
+          "title": "Oberschank · Tresen und Tischgetränke",
+          "fraktion": "Die Gestiefelte Muschi",
+          "role": "Oberschank · Tresen und Tischgetränke",
+          "status": "active",
+          "relevance": "minor",
+          "taxonomyPath": "",
+          "currentLocation": "Gwynthor · Die Gestiefelte Muschi",
+          "origin": "Gwynthor · Cenyr",
+          "plotNode": "",
+          "profileLink": "",
+          "playerOwner": "",
+          "bio": "43 Jahre. Gwynthorer mit rotem Haar und dem Grinsen eines Mannes, der eine Zeche schon vor dem letzten Würfel kennt. Schenkt schnell ein, merkt sich Gesichter und treibt mit seinen Gästen Spott, ohne Helvianes Regeln aus den Augen zu verlieren.",
+          "aliases": [],
+          "archived": false,
+          "createdAt": "2026-10-18T00:00:00Z",
+          "updatedAt": "2026-10-18T00:00:00Z",
+          "portrait": "./assets/gestiefelte-muschi/portraits/rheunwaith.png",
+          "emotes": [],
+          "emotesOverride": false,
+          "imageSetSchemaVersion": 0,
+          "imageSets": [],
+          "activeImageSetId": "",
+          "imageSetsOverride": false,
+          "inventory": null,
+          "biography": null,
+          "identity": {
+            "worldPersonId": "person--gestiefelte-muschi--rheunwaith"
+          },
+          "genealogy": {
+            "worldPersonId": "person--gestiefelte-muschi--rheunwaith",
+            "sex": "male",
+            "status": "alive",
+            "birth": "1697",
+            "death": "",
+            "houseId": "",
+            "houseName": "",
+            "familyRole": "",
+            "portraitPlaceholder": "",
+            "tags": [],
+            "sources": [],
+            "relationships": {
+              "parents": [],
+              "partners": [],
+              "children": []
+            }
+          }
+        }
+      },
+      {
+        "id": "person--gestiefelte-muschi--aelwen",
+        "key": "aelwen",
+        "group": "Gesellschaft & Unterhaltung",
+        "create": true,
+        "data": {
+          "name": "Aelwen",
+          "title": "Tänzerin · Bühne und Tischdarbietung",
+          "fraktion": "Die Gestiefelte Muschi",
+          "role": "Tänzerin · Bühne und Tischdarbietung",
+          "status": "active",
+          "relevance": "minor",
+          "taxonomyPath": "",
+          "currentLocation": "Gwynthor · Die Gestiefelte Muschi",
+          "origin": "Albische Lande",
+          "plotNode": "",
+          "profileLink": "",
+          "playerOwner": "",
+          "bio": "28 Jahre. Albische Tänzerin mit ruhiger, genau gesetzter Bewegung. Übernimmt die langsameren Soli und behält den Raum im Blick. Für Privatdarbietungen ist sie über Mariette zu buchen.",
+          "aliases": [],
+          "archived": false,
+          "createdAt": "2026-10-18T00:00:00Z",
+          "updatedAt": "2026-10-18T00:00:00Z",
+          "portrait": "./assets/gestiefelte-muschi/portraits/aelwen.png",
+          "emotes": [],
+          "emotesOverride": false,
+          "imageSetSchemaVersion": 0,
+          "imageSets": [],
+          "activeImageSetId": "",
+          "imageSetsOverride": false,
+          "inventory": null,
+          "biography": null,
+          "identity": {
+            "worldPersonId": "person--gestiefelte-muschi--aelwen"
+          },
+          "genealogy": {
+            "worldPersonId": "person--gestiefelte-muschi--aelwen",
+            "sex": "female",
+            "status": "alive",
+            "birth": "1712",
+            "death": "",
+            "houseId": "",
+            "houseName": "",
+            "familyRole": "",
+            "portraitPlaceholder": "",
+            "tags": [],
+            "sources": [],
+            "relationships": {
+              "parents": [],
+              "partners": [],
+              "children": []
+            }
+          }
+        }
+      },
+      {
+        "id": "person--gestiefelte-muschi--morwen",
+        "key": "morwen",
+        "group": "Gesellschaft & Unterhaltung",
+        "create": true,
+        "data": {
+          "name": "Morwen",
+          "title": "Tänzerin · Lebhafte Tanzfolgen",
+          "fraktion": "Die Gestiefelte Muschi",
+          "role": "Tänzerin · Lebhafte Tanzfolgen",
+          "status": "active",
+          "relevance": "minor",
+          "taxonomyPath": "",
+          "currentLocation": "Gwynthor · Die Gestiefelte Muschi",
+          "origin": "Albische Lande",
+          "plotNode": "",
+          "profileLink": "",
+          "playerOwner": "",
+          "bio": "32 Jahre. Albische Tänzerin, die ihre Runden mit Temperament und trockenem Witz gewinnt. Bildet mit Aelwen ein eingespieltes Paar, behält aber ihre eigenen Auftritte und Absprachen.",
+          "aliases": [],
+          "archived": false,
+          "createdAt": "2026-10-18T00:00:00Z",
+          "updatedAt": "2026-10-18T00:00:00Z",
+          "portrait": "./assets/gestiefelte-muschi/portraits/morwen.png",
+          "emotes": [],
+          "emotesOverride": false,
+          "imageSetSchemaVersion": 0,
+          "imageSets": [],
+          "activeImageSetId": "",
+          "imageSetsOverride": false,
+          "inventory": null,
+          "biography": null,
+          "identity": {
+            "worldPersonId": "person--gestiefelte-muschi--morwen"
+          },
+          "genealogy": {
+            "worldPersonId": "person--gestiefelte-muschi--morwen",
+            "sex": "female",
+            "status": "alive",
+            "birth": "1708",
+            "death": "",
+            "houseId": "",
+            "houseName": "",
+            "familyRole": "",
+            "portraitPlaceholder": "",
+            "tags": [],
+            "sources": [],
+            "relationships": {
+              "parents": [],
+              "partners": [],
+              "children": []
+            }
+          }
+        }
+      },
+      {
+        "id": "person--gestiefelte-muschi--cerys",
+        "key": "cerys",
+        "group": "Gesellschaft & Unterhaltung",
+        "create": true,
+        "data": {
+          "name": "Cerys",
+          "title": "Gesellschafterin · Tisch und private Gesellschaft",
+          "fraktion": "Die Gestiefelte Muschi",
+          "role": "Gesellschafterin · Tisch und private Gesellschaft",
+          "status": "active",
+          "relevance": "minor",
+          "taxonomyPath": "",
+          "currentLocation": "Gwynthor · Die Gestiefelte Muschi",
+          "origin": "Cenyr",
+          "plotNode": "",
+          "profileLink": "",
+          "playerOwner": "",
+          "bio": "26 Jahre. Redselig, verspielt und sehr gut darin, aus einer schweigsamen Runde einen lauten Tisch zu machen. Begleitet Gäste im Salon und nach persönlicher Absprache ins Hinterzimmer.",
+          "aliases": [],
+          "archived": false,
+          "createdAt": "2026-10-18T00:00:00Z",
+          "updatedAt": "2026-10-18T00:00:00Z",
+          "portrait": "./assets/gestiefelte-muschi/portraits/cerys.png",
+          "emotes": [],
+          "emotesOverride": false,
+          "imageSetSchemaVersion": 0,
+          "imageSets": [],
+          "activeImageSetId": "",
+          "imageSetsOverride": false,
+          "inventory": null,
+          "biography": null,
+          "identity": {
+            "worldPersonId": "person--gestiefelte-muschi--cerys"
+          },
+          "genealogy": {
+            "worldPersonId": "person--gestiefelte-muschi--cerys",
+            "sex": "female",
+            "status": "alive",
+            "birth": "1714",
+            "death": "",
+            "houseId": "",
+            "houseName": "",
+            "familyRole": "",
+            "portraitPlaceholder": "",
+            "tags": [],
+            "sources": [],
+            "relationships": {
+              "parents": [],
+              "partners": [],
+              "children": []
+            }
+          }
+        }
+      },
+      {
+        "id": "person--gestiefelte-muschi--bronwen",
+        "key": "bronwen",
+        "group": "Gesellschaft & Unterhaltung",
+        "create": true,
+        "data": {
+          "name": "Bronwen",
+          "title": "Gesellschafterin · Spieltisch und Begleitung",
+          "fraktion": "Die Gestiefelte Muschi",
+          "role": "Gesellschafterin · Spieltisch und Begleitung",
+          "status": "active",
+          "relevance": "minor",
+          "taxonomyPath": "",
+          "currentLocation": "Gwynthor · Die Gestiefelte Muschi",
+          "origin": "Cenyr",
+          "plotNode": "",
+          "profileLink": "",
+          "playerOwner": "",
+          "bio": "34 Jahre. Gelassen, scharfzüngig und eine aufmerksame Spielpartnerin. Versteht sich auf lange Gespräche und private Gesellschaft. Ihren eigenen Einsatz am Tisch hält sie von der Hauskasse getrennt.",
+          "aliases": [],
+          "archived": false,
+          "createdAt": "2026-10-18T00:00:00Z",
+          "updatedAt": "2026-10-18T00:00:00Z",
+          "portrait": "./assets/gestiefelte-muschi/portraits/bronwen.png",
+          "emotes": [],
+          "emotesOverride": false,
+          "imageSetSchemaVersion": 0,
+          "imageSets": [],
+          "activeImageSetId": "",
+          "imageSetsOverride": false,
+          "inventory": null,
+          "biography": null,
+          "identity": {
+            "worldPersonId": "person--gestiefelte-muschi--bronwen"
+          },
+          "genealogy": {
+            "worldPersonId": "person--gestiefelte-muschi--bronwen",
+            "sex": "female",
+            "status": "alive",
+            "birth": "1706",
+            "death": "",
+            "houseId": "",
+            "houseName": "",
+            "familyRole": "",
+            "portraitPlaceholder": "",
+            "tags": [],
+            "sources": [],
+            "relationships": {
+              "parents": [],
+              "partners": [],
+              "children": []
+            }
+          }
+        }
+      },
+      {
+        "id": "person--gestiefelte-muschi--niawen",
+        "key": "niawen",
+        "group": "Gesellschaft & Unterhaltung",
+        "create": true,
+        "data": {
+          "name": "Niawen",
+          "title": "Gesellschafterin · Salon und Zweisamkeit",
+          "fraktion": "Die Gestiefelte Muschi",
+          "role": "Gesellschafterin · Salon und Zweisamkeit",
+          "status": "active",
+          "relevance": "minor",
+          "taxonomyPath": "",
+          "currentLocation": "Gwynthor · Die Gestiefelte Muschi",
+          "origin": "Cenyr",
+          "plotNode": "",
+          "profileLink": "",
+          "playerOwner": "",
+          "bio": "30 Jahre. Hört erst zu und setzt dann eine Bemerkung, die genau trifft. Ihre zurückhaltende Art macht sie bei reisemüden Gästen beliebt. Verabredungen führt Mariette, die Wünsche bespricht Niawen selbst.",
+          "aliases": [],
+          "archived": false,
+          "createdAt": "2026-10-18T00:00:00Z",
+          "updatedAt": "2026-10-18T00:00:00Z",
+          "portrait": "./assets/gestiefelte-muschi/portraits/niawen.png",
+          "emotes": [],
+          "emotesOverride": false,
+          "imageSetSchemaVersion": 0,
+          "imageSets": [],
+          "activeImageSetId": "",
+          "imageSetsOverride": false,
+          "inventory": null,
+          "biography": null,
+          "identity": {
+            "worldPersonId": "person--gestiefelte-muschi--niawen"
+          },
+          "genealogy": {
+            "worldPersonId": "person--gestiefelte-muschi--niawen",
+            "sex": "female",
+            "status": "alive",
+            "birth": "1710",
+            "death": "",
+            "houseId": "",
+            "houseName": "",
+            "familyRole": "",
+            "portraitPlaceholder": "",
+            "tags": [],
+            "sources": [],
+            "relationships": {
+              "parents": [],
+              "partners": [],
+              "children": []
+            }
+          }
+        }
+      },
+      {
+        "id": "person--gestiefelte-muschi--ysabel",
+        "key": "ysabel",
+        "group": "Gesellschaft & Unterhaltung",
+        "create": true,
+        "data": {
+          "name": "Ysabel",
+          "title": "Erfahrene Gesellschafterin · Private Abende",
+          "fraktion": "Die Gestiefelte Muschi",
+          "role": "Erfahrene Gesellschafterin · Private Abende",
+          "status": "active",
+          "relevance": "minor",
+          "taxonomyPath": "",
+          "currentLocation": "Gwynthor · Die Gestiefelte Muschi",
+          "origin": "Brevanor",
+          "plotNode": "",
+          "profileLink": "",
+          "playerOwner": "",
+          "bio": "49 Jahre. Eine später hinzugekommene Brevanorerin, keine der vier alten Hausbediensteten. Kennt den verlorenen Klang der Heimat und begegnet großer Geste mit trockenem Spott. Wählt ihre Termine sorgfältig und bleibt eine gefragte Gesellschafterin.",
+          "aliases": [],
+          "archived": false,
+          "createdAt": "2026-10-18T00:00:00Z",
+          "updatedAt": "2026-10-18T00:00:00Z",
+          "portrait": "./assets/gestiefelte-muschi/portraits/ysabel.png",
+          "emotes": [],
+          "emotesOverride": false,
+          "imageSetSchemaVersion": 0,
+          "imageSets": [],
+          "activeImageSetId": "",
+          "imageSetsOverride": false,
+          "inventory": null,
+          "biography": null,
+          "identity": {
+            "worldPersonId": "person--gestiefelte-muschi--ysabel"
+          },
+          "genealogy": {
+            "worldPersonId": "person--gestiefelte-muschi--ysabel",
+            "sex": "female",
+            "status": "alive",
+            "birth": "1691",
+            "death": "",
+            "houseId": "",
+            "houseName": "",
+            "familyRole": "",
+            "portraitPlaceholder": "",
+            "tags": [],
+            "sources": [],
+            "relationships": {
+              "parents": [],
+              "partners": [],
+              "children": []
+            }
+          }
+        }
+      },
+      {
+        "id": "person--gestiefelte-muschi--svea",
+        "key": "svea",
+        "group": "Gesellschaft & Unterhaltung",
+        "create": true,
+        "data": {
+          "name": "Svea",
+          "title": "Gesellschafterin · Gesellige Runden",
+          "fraktion": "Die Gestiefelte Muschi",
+          "role": "Gesellschafterin · Gesellige Runden",
+          "status": "active",
+          "relevance": "minor",
+          "taxonomyPath": "",
+          "currentLocation": "Gwynthor · Die Gestiefelte Muschi",
+          "origin": "Aldrimar",
+          "plotNode": "",
+          "profileLink": "",
+          "playerOwner": "",
+          "bio": "29 Jahre. Blonde Aldrimarin mit ansteckendem Lachen und wenig Geduld für aufgesetzte Vornehmheit. Trinkt langsam, redet freimütig und begleitet Gäste auch in privatem Rahmen.",
+          "aliases": [],
+          "archived": false,
+          "createdAt": "2026-10-18T00:00:00Z",
+          "updatedAt": "2026-10-18T00:00:00Z",
+          "portrait": "./assets/gestiefelte-muschi/portraits/svea.png",
+          "emotes": [],
+          "emotesOverride": false,
+          "imageSetSchemaVersion": 0,
+          "imageSets": [],
+          "activeImageSetId": "",
+          "imageSetsOverride": false,
+          "inventory": null,
+          "biography": null,
+          "identity": {
+            "worldPersonId": "person--gestiefelte-muschi--svea"
+          },
+          "genealogy": {
+            "worldPersonId": "person--gestiefelte-muschi--svea",
+            "sex": "female",
+            "status": "alive",
+            "birth": "1711",
+            "death": "",
+            "houseId": "",
+            "houseName": "",
+            "familyRole": "",
+            "portraitPlaceholder": "",
+            "tags": [],
+            "sources": [],
+            "relationships": {
+              "parents": [],
+              "partners": [],
+              "children": []
+            }
+          }
+        }
+      },
+      {
+        "id": "person--gestiefelte-muschi--lise",
+        "key": "lise",
+        "group": "Gesellschaft & Unterhaltung",
+        "create": true,
+        "data": {
+          "name": "Lise",
+          "title": "Gesellschafterin · Ruhige Gesellschaft",
+          "fraktion": "Die Gestiefelte Muschi",
+          "role": "Gesellschafterin · Ruhige Gesellschaft",
+          "status": "active",
+          "relevance": "minor",
+          "taxonomyPath": "",
+          "currentLocation": "Gwynthor · Die Gestiefelte Muschi",
+          "origin": "Lothir",
+          "plotNode": "",
+          "profileLink": "",
+          "playerOwner": "",
+          "bio": "24 Jahre. Blonde Lothirerin, die den stilleren Tisch dem lauten Auftritt vorzieht. Freundlich, eigensinnig und aufmerksam gegenüber den kleinen Gewohnheiten ihrer Stammgäste.",
+          "aliases": [],
+          "archived": false,
+          "createdAt": "2026-10-18T00:00:00Z",
+          "updatedAt": "2026-10-18T00:00:00Z",
+          "portrait": "./assets/gestiefelte-muschi/portraits/lise.png",
+          "emotes": [],
+          "emotesOverride": false,
+          "imageSetSchemaVersion": 0,
+          "imageSets": [],
+          "activeImageSetId": "",
+          "imageSetsOverride": false,
+          "inventory": null,
+          "biography": null,
+          "identity": {
+            "worldPersonId": "person--gestiefelte-muschi--lise"
+          },
+          "genealogy": {
+            "worldPersonId": "person--gestiefelte-muschi--lise",
+            "sex": "female",
+            "status": "alive",
+            "birth": "1716",
+            "death": "",
+            "houseId": "",
+            "houseName": "",
+            "familyRole": "",
+            "portraitPlaceholder": "",
+            "tags": [],
+            "sources": [],
+            "relationships": {
+              "parents": [],
+              "partners": [],
+              "children": []
+            }
+          }
+        }
+      },
+      {
+        "id": "person--gestiefelte-muschi--daric",
+        "key": "daric",
+        "group": "Sicherheit",
+        "create": true,
+        "data": {
+          "name": "Daric",
+          "title": "Hauptmann der verbliebenen Desele-Hausgarde",
+          "fraktion": "Die Gestiefelte Muschi",
+          "role": "Hauptmann der verbliebenen Desele-Hausgarde",
+          "status": "active",
+          "relevance": "minor",
+          "taxonomyPath": "",
+          "currentLocation": "Gwynthor · Die Gestiefelte Muschi",
+          "origin": "Brevanor",
+          "plotNode": "",
+          "profileLink": "",
+          "playerOwner": "",
+          "bio": "60 Jahre. Bewachte einst das Haus in Brevanor und hat Helviane auf beiden Fluchtwegen begleitet. Graues Haar, alte Verletzungen und tadellose Haltung. Trägt noch immer die edle Desele-Platte; Streit endet gewöhnlich, sobald er neben dem Tisch steht.",
+          "aliases": [],
+          "archived": false,
+          "createdAt": "2026-10-18T00:00:00Z",
+          "updatedAt": "2026-10-18T00:00:00Z",
+          "portrait": "./assets/gestiefelte-muschi/portraits/daric.png",
+          "emotes": [],
+          "emotesOverride": false,
+          "imageSetSchemaVersion": 0,
+          "imageSets": [],
+          "activeImageSetId": "",
+          "imageSetsOverride": false,
+          "inventory": null,
+          "biography": null,
+          "identity": {
+            "worldPersonId": "person--gestiefelte-muschi--daric"
+          },
+          "genealogy": {
+            "worldPersonId": "person--gestiefelte-muschi--daric",
+            "sex": "male",
+            "status": "alive",
+            "birth": "1680",
+            "death": "",
+            "houseId": "",
+            "houseName": "",
+            "familyRole": "",
+            "portraitPlaceholder": "",
+            "tags": [],
+            "sources": [],
+            "relationships": {
+              "parents": [],
+              "partners": [],
+              "children": []
+            }
+          }
+        }
+      }
+    ],
+    "config": {
+      "tabs": [
+        "Die Gestiefelte Muschi"
+      ],
+      "map": {
+        "Die Gestiefelte Muschi": [
+          "person--haus-desele--helviane-desele",
+          "person--gestiefelte-muschi--alain",
+          "person--gestiefelte-muschi--gaston",
+          "person--gestiefelte-muschi--colette",
+          "person--gestiefelte-muschi--mariette",
+          "person--gestiefelte-muschi--rheunwaith",
+          "person--gestiefelte-muschi--aelwen",
+          "person--gestiefelte-muschi--morwen",
+          "person--gestiefelte-muschi--cerys",
+          "person--gestiefelte-muschi--bronwen",
+          "person--gestiefelte-muschi--niawen",
+          "person--gestiefelte-muschi--ysabel",
+          "person--gestiefelte-muschi--svea",
+          "person--gestiefelte-muschi--lise",
+          "person--gestiefelte-muschi--daric"
+        ]
+      },
+      "subtabs": {
+        "Die Gestiefelte Muschi": [
+          "Führung & Logistik",
+          "Ausschank",
+          "Gesellschaft & Unterhaltung",
+          "Sicherheit"
+        ]
+      },
+      "subtabMap": {
+        "Die Gestiefelte Muschi": {
+          "Führung & Logistik": [
+            "person--haus-desele--helviane-desele",
+            "person--gestiefelte-muschi--alain",
+            "person--gestiefelte-muschi--gaston",
+            "person--gestiefelte-muschi--colette",
+            "person--gestiefelte-muschi--mariette"
+          ],
+          "Ausschank": [
+            "person--gestiefelte-muschi--rheunwaith"
+          ],
+          "Gesellschaft & Unterhaltung": [
+            "person--gestiefelte-muschi--aelwen",
+            "person--gestiefelte-muschi--morwen",
+            "person--gestiefelte-muschi--cerys",
+            "person--gestiefelte-muschi--bronwen",
+            "person--gestiefelte-muschi--niawen",
+            "person--gestiefelte-muschi--ysabel",
+            "person--gestiefelte-muschi--svea",
+            "person--gestiefelte-muschi--lise"
+          ],
+          "Sicherheit": [
+            "person--gestiefelte-muschi--daric"
+          ]
+        }
+      }
+    }
+  }
+}

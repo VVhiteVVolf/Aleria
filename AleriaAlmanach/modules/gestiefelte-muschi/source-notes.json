@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-18",
+  "authority": "Current user worldbuilding request and subsequent sign revision",
+  "owner": {"name": "Helviane Desele", "maidenHouse": "Bielle", "birth": 1668, "age": 72, "origin": "Brevanor"},
+  "history": {
+    "flight": ["Brevanor", "Lothir", "Estryll", "Gwynthor"],
+    "triarchy": "Three-witcher alliance which seized Brevanor, Talyndor and Deitheach; individual names and precise dates remain unspecified.",
+    "family": "Children fought against the Triarchy. Individual names, fates, spouse and wider family are not invented.",
+    "financing": "Saved wealth financed purchase of an existing establishment. Current revenue comes from drinks, entertainment, companionship and rooms."
+  },
+  "editorialChoices": {
+    "rooms": 6,
+    "interactiveScenes": ["salon", "spielstube", "hinterzimmer", "gaestezimmer"],
+    "guestWritingSlots": 32,
+    "houseGuard": "Daric aged60 plus six anonymous veteran slots aged40–58; one shared helmeted portrait.",
+    "rarities": "Five pre-flight bottlings, stocks5/4/4/5/4, totaling22 bottles. Explicit former price and current multiplier4–10. No ongoing supply.",
+    "perfumes": "Three Desele formulas mixed and bottled in small new batches in Gwynthor; these are distinct from the finite rescued wines.",
+    "signRevision": "User rejected the colorful poster-like sign. Selected v2: flat carved oak, visible wood, only ivory/charcoal faded pigments.",
+    "ears": "Albish people have normal rounded human ears, following the user's previous explicit no-elves correction.",
+    "poodle": "Reference illustration exists but no individual breed dossier. No fabricated Bestiary link. Three Samtlicht cats link to their existing breed profile."
+  },
+  "sources": [
+    "AleriaAlmanach/docs/art/image-style-presets.json",
+    "AleriaAlmanach/modules/lachende-nixe/nixe-module.mjs",
+    "AleriaAlmanach/modules/item-register/item-register-standard.js",
+    "AleriaAlmanach/modules/brewer-guilds/penderyn-model.mjs",
+    "AleriaAlmanach/modules/brewer-guilds/teyrngarch-model.mjs",
+    "Bestiarium/tiere/vieh/haustiere/katzen/samtlicht/profil.json",
+    "Bestiarium/tiere/vieh/haustiere/hunde/uebersicht.json"
+  ],
+  "publication": {"localOnly": true, "firebaseWritten": false, "pushed": false, "deployed": false}
+}

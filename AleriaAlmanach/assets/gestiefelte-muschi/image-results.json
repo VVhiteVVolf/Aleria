@@ -1,0 +1,474 @@
+{
+  "schemaVersion": 1,
+  "tool": "built-in image_gen",
+  "images": [
+    {
+      "id": "wappen-bielle",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-997f832d-d34d-423c-b1b7-2de9ee4e05a6.png",
+      "destination": "Stammbäume/assets/images/houses/Brevanor/Bielle.png",
+      "width": 1407,
+      "height": 1407,
+      "sha256": "9d6085df79b3da89b03fa90fada027e6a7fbddb2f9828a9fde299dffcd153abe",
+      "postprocess": {
+        "authorization": "User approved alpha and outer margin cleanup for Bielle, Desele and the revised tavern sign on 2026-10-18.",
+        "originalRgbPreserved": true,
+        "shape": "circle",
+        "originalSize": [
+          1254,
+          1254
+        ],
+        "finalSize": [
+          1407,
+          1407
+        ],
+        "originalBounds": [
+          3,
+          1,
+          1250,
+          1245
+        ],
+        "offset": [
+          77,
+          81
+        ],
+        "radius": [
+          612.0,
+          612.0
+        ],
+        "originalSha256": "8b79f90ceed73ac08f69a63838eaf5f006582b83202863284290e7645334785f",
+        "finalSha256": "9d6085df79b3da89b03fa90fada027e6a7fbddb2f9828a9fde299dffcd153abe"
+      },
+      "promptId": "wappen-bielle"
+    },
+    {
+      "id": "wappen-desele",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-6c9b70e8-ca8f-4368-b654-c48fba006988.png",
+      "destination": "Stammbäume/assets/images/houses/Brevanor/Desele.png",
+      "width": 1407,
+      "height": 1407,
+      "sha256": "a0f05dd10d06859fb1c653e5a0963a3bc1627f0e5016d0ee5906ac2f83f0b9d9",
+      "postprocess": {
+        "authorization": "User approved alpha and outer margin cleanup for Bielle, Desele and the revised tavern sign on 2026-10-18.",
+        "originalRgbPreserved": true,
+        "shape": "circle",
+        "originalSize": [
+          1254,
+          1254
+        ],
+        "finalSize": [
+          1407,
+          1407
+        ],
+        "originalBounds": [
+          5,
+          1,
+          1248,
+          1244
+        ],
+        "offset": [
+          77,
+          81
+        ],
+        "radius": [
+          611.5,
+          611.5
+        ],
+        "originalSha256": "dd69a5e55b2ae75b29092de0ae684045085519b41959b76285a8e60557416c67",
+        "finalSha256": "a0f05dd10d06859fb1c653e5a0963a3bc1627f0e5016d0ee5906ac2f83f0b9d9"
+      },
+      "promptId": "wappen-desele"
+    },
+    {
+      "id": "schild",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-28df67db-5468-4c04-b3b5-0bf7f2a56917.png",
+      "destination": "AleriaAlmanach/assets/gestiefelte-muschi/schild-v2.png",
+      "width": 1387,
+      "height": 1387,
+      "sha256": "8739ea48fe94567ea1978110e69bb1758dc26ad2f7d7284a1197e70d37c064e2",
+      "postprocess": {
+        "authorization": "User approved alpha and outer margin cleanup for Bielle, Desele and the revised tavern sign on 2026-10-18.",
+        "originalRgbPreserved": true,
+        "shape": "circle",
+        "originalSize": [
+          1254,
+          1254
+        ],
+        "finalSize": [
+          1387,
+          1387
+        ],
+        "originalBounds": [
+          14,
+          7,
+          1241,
+          1241
+        ],
+        "offset": [
+          66,
+          69
+        ],
+        "radius": [
+          603.5,
+          603.5
+        ],
+        "originalSha256": "def3cf58ebb4782dda1b098dc35f32fa605f24732d0cfa7c07e53904c1225e2f",
+        "finalSha256": "8739ea48fe94567ea1978110e69bb1758dc26ad2f7d7284a1197e70d37c064e2"
+      },
+      "promptId": "schild"
+    },
+    {
+      "id": "helviane",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-67f05aa5-33fa-45b2-b244-68146716dcc9.png",
+      "destination": "AleriaAlmanach/assets/gestiefelte-muschi/portraits/helviane.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "822f9993a40d38ff48f0b023852d344db258b91a38f945984e8e62550da6b179",
+      "promptId": "helviane"
+    },
+    {
+      "id": "alain",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-997ce291-5b10-4946-851f-9542c0d54ec5.png",
+      "destination": "AleriaAlmanach/assets/gestiefelte-muschi/portraits/alain.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "d13169eab676a8fda08c9be7e8c5d66aefe3c7d0eb03fa39899d8e7f640452ce",
+      "promptId": "alain"
+    },
+    {
+      "id": "gaston",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-143ee575-448b-468b-a489-9166e5c79af8.png",
+      "destination": "AleriaAlmanach/assets/gestiefelte-muschi/portraits/gaston.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "15d35e926a011f643cdbbe63d536320fe139edc03b1553eea8e313da600ec4d9",
+      "promptId": "gaston"
+    },
+    {
+      "id": "colette",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-59825d1f-28a4-4b55-9b67-b182aa3a27de.png",
+      "destination": "AleriaAlmanach/assets/gestiefelte-muschi/portraits/colette.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "24903e0bc890dcc4413cfb7832bd791e14a91fc649956336471dcc0d3fa77673",
+      "promptId": "colette"
+    },
+    {
+      "id": "mariette",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-99405d75-84b6-4f60-94ad-421cdb22eb52.png",
+      "destination": "AleriaAlmanach/assets/gestiefelte-muschi/portraits/mariette.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "1148e9ad3683c97381e475eea122703ca57e438c0f59da2453c47ac84f6a8488",
+      "promptId": "mariette"
+    },
+    {
+      "id": "rheunwaith",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-f9161f70-f7e1-4201-81ab-431ef21eb040.png",
+      "destination": "AleriaAlmanach/assets/gestiefelte-muschi/portraits/rheunwaith.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "e6579b8e50c427982852930d7e0d696124a3852725b609fe2a73413d6272f1d7",
+      "promptId": "rheunwaith"
+    },
+    {
+      "id": "aelwen",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-14ce1d9b-5874-4025-9b82-7dd8ae9a4b3a.png",
+      "destination": "AleriaAlmanach/assets/gestiefelte-muschi/portraits/aelwen.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "3c68ea8e67d53080b8ab6307caf4c9b75733e59c437a41ea86590d01b44b8e76",
+      "promptId": "aelwen"
+    },
+    {
+      "id": "morwen",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-fbec6ec6-73f3-434c-b728-7b70b9c1cb68.png",
+      "destination": "AleriaAlmanach/assets/gestiefelte-muschi/portraits/morwen.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "8e49c7e2e1988a9dcb2683946cddf8b9800f39e83ee4a0c9e1c850aecf5156cb",
+      "promptId": "morwen"
+    },
+    {
+      "id": "cerys",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-a71d8161-2a15-42be-ae99-c430a8673e9f.png",
+      "destination": "AleriaAlmanach/assets/gestiefelte-muschi/portraits/cerys.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "8e6acab1cbf62335fa9e0f29309085bfe9684fe1b507117fd7a29a99723c67f8",
+      "promptId": "cerys"
+    },
+    {
+      "id": "bronwen",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-b7b33655-5bef-4e17-8568-c1d89b3c43ef.png",
+      "destination": "AleriaAlmanach/assets/gestiefelte-muschi/portraits/bronwen.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "cf7708d00f3507c6d26bd9840d4491b98b20a2acf3da67e3c4e0ca6a4909a658",
+      "promptId": "bronwen"
+    },
+    {
+      "id": "niawen",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-1baafe17-dd02-46ba-abd6-9b6b871d851e.png",
+      "destination": "AleriaAlmanach/assets/gestiefelte-muschi/portraits/niawen.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "bf652d79a6ebb406662da246247e865f771eb48c53042e0c1ea6dc9808dd4ec3",
+      "promptId": "niawen"
+    },
+    {
+      "id": "ysabel",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-fa1bbef4-5839-4edb-aaf8-1de90b70c757.png",
+      "destination": "AleriaAlmanach/assets/gestiefelte-muschi/portraits/ysabel.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "cc4fc010c213870dbc9d905ebb0ce6ba42d0f06563262b38e4ab5c31af7a9dc6",
+      "promptId": "ysabel"
+    },
+    {
+      "id": "svea",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-d75d678e-1728-4ee7-bd94-8d9a2c959f61.png",
+      "destination": "AleriaAlmanach/assets/gestiefelte-muschi/portraits/svea.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "cda694299e6ae1514455df2328d57584ea111999598ffbdb9f681982562f6a8c",
+      "promptId": "svea"
+    },
+    {
+      "id": "lise",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-22ef3f68-144f-4589-b0c2-1e19b0a2829f.png",
+      "destination": "AleriaAlmanach/assets/gestiefelte-muschi/portraits/lise.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "dbf2ad03b22711debfa7e86f943a94ce8b7255b1869724ba99d1604eddec90df",
+      "promptId": "lise"
+    },
+    {
+      "id": "daric",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-59695fa8-1713-446d-a604-17606ff36d61.png",
+      "destination": "AleriaAlmanach/assets/gestiefelte-muschi/portraits/daric.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "36a9041978b76fba44eb6dcd9e5bb050b99eb314b31f4428345b19c2eed30b0b",
+      "promptId": "daric"
+    },
+    {
+      "id": "hausgarde",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-0203c27b-31c5-43e9-99b8-f342c5d007ba.png",
+      "destination": "AleriaAlmanach/assets/gestiefelte-muschi/portraits/hausgarde.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "f15cb172618901fc868c2386c1700625a3b05d721cb26647890270002b25c991",
+      "promptId": "hausgarde"
+    },
+    {
+      "id": "madame-fluff",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-eac9bae1-522a-4467-b9b4-c592f9f9fdee.png",
+      "destination": "AleriaAlmanach/assets/gestiefelte-muschi/pets/madame-fluff.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "f79f145da726d9d52940082637559d3406bcf6cdec3c9c1e43a79b6e47034118",
+      "promptId": "madame-fluff"
+    },
+    {
+      "id": "prinz-puder",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-1885947d-9ffa-432b-a1dd-78de8793d0aa.png",
+      "destination": "AleriaAlmanach/assets/gestiefelte-muschi/pets/prinz-puder.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "b235001e4536733f1d705b2b1b166beef0a6b6030f7f664dcb396cea1f0c9801",
+      "promptId": "prinz-puder"
+    },
+    {
+      "id": "graefin-schnurr",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-e8f5854b-7abc-449d-a366-78662688eb47.png",
+      "destination": "AleriaAlmanach/assets/gestiefelte-muschi/pets/graefin-schnurr.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "33828038e15efa87f94d4ab7107f454d7f78121aaea5174aba5f3739cdf28181",
+      "promptId": "graefin-schnurr"
+    },
+    {
+      "id": "sir-wuff",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-a501e196-3a85-4cbe-a2df-6dccc7ca4d20.png",
+      "destination": "AleriaAlmanach/assets/gestiefelte-muschi/pets/sir-wuff.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "2000c7a94ff61e2119642b894beb55287c4be34b6634088081180fcdf271d951",
+      "promptId": "sir-wuff"
+    },
+    {
+      "id": "aussenansicht",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-ac4f6296-f2d9-458c-b548-dbba25e47b0e.png",
+      "destination": "AleriaAlmanach/assets/gestiefelte-muschi/scenes/aussenansicht.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "b3cc51b2c2df2f059978d15350ec1d5db981baf1d51a668675e9c87ca1f1f407",
+      "promptId": "aussenansicht"
+    },
+    {
+      "id": "salon",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-1dfe95e7-5c11-47c8-a675-4d1077dc013f.png",
+      "destination": "AleriaAlmanach/assets/gestiefelte-muschi/scenes/salon.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "7b3fa4445249801b0d2781d0cae37d34f1a37171d4ce521e98c9e25234ab2523",
+      "promptId": "salon"
+    },
+    {
+      "id": "spielstube",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-aed8b661-6ecf-4db8-9829-594ef0462456.png",
+      "destination": "AleriaAlmanach/assets/gestiefelte-muschi/scenes/spielstube.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "54bc3e103ac8c95e415e4cd6cb8a7482556d8dfedd0749b9211b1e8a27e5f781",
+      "promptId": "spielstube"
+    },
+    {
+      "id": "hinterzimmer",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-93b928d9-c020-4f65-9b21-bd3484056aba.png",
+      "destination": "AleriaAlmanach/assets/gestiefelte-muschi/scenes/hinterzimmer.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "b1f19a0ba1e989e1c01183d44f58229fa7b31d9d775068e78988092e779a0779",
+      "promptId": "hinterzimmer"
+    },
+    {
+      "id": "gaestezimmer",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-a151e513-3374-49b3-a4a6-5f652d57397a.png",
+      "destination": "AleriaAlmanach/assets/gestiefelte-muschi/scenes/gaestezimmer.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "e77edc1129594167a6fbe3798eba72485288cd9bc7cfb39ab58527705b079c05",
+      "promptId": "gaestezimmer"
+    },
+    {
+      "id": "bielle-tour-rouge",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-8f9f7419-0268-418c-b367-87e6aa2aff54.png",
+      "destination": "AleriaAlmanach/assets/gestiefelte-muschi/goods/bielle-tour-rouge.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "eef7dfc68ecef6769ea7c29002cb2125a3855574c0050cdf535cb6d59ba9a993",
+      "promptId": "bielle-tour-rouge"
+    },
+    {
+      "id": "bielle-reserve",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-bc319065-bc34-4209-86fa-d9ce6300376e.png",
+      "destination": "AleriaAlmanach/assets/gestiefelte-muschi/goods/bielle-reserve.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "a169f2d97c8af2e84fe557b89bcbc162a2e7c02f3f265ace30955b385eb72b82",
+      "promptId": "bielle-reserve"
+    },
+    {
+      "id": "bielle-tour-blanche",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-690e41a7-5762-4c9d-95ff-59ea306b12bf.png",
+      "destination": "AleriaAlmanach/assets/gestiefelte-muschi/goods/bielle-tour-blanche.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "1d491be3086d0d0ef3eab14442dca601f6dc080a6624f06e133f254808a5633e",
+      "promptId": "bielle-tour-blanche"
+    },
+    {
+      "id": "desele-cuvee",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-4a76618d-70dc-4b50-8668-72911e3a6699.png",
+      "destination": "AleriaAlmanach/assets/gestiefelte-muschi/goods/desele-cuvee.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "f66cf11dfe8445ca71f812cc0c8a975c296a991bf6e9b832f8532b18841c3f4d",
+      "promptId": "desele-cuvee"
+    },
+    {
+      "id": "desele-rose",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-08573e70-6132-45c2-a087-ef5869a96410.png",
+      "destination": "AleriaAlmanach/assets/gestiefelte-muschi/goods/desele-rose.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "1f684d8ba57bf32a733134afeb7b0d0b4ffa21eebcfe68068296a86004711e4d",
+      "promptId": "desele-rose"
+    },
+    {
+      "id": "rosenstolz",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-a10ee1fe-15de-4080-8236-15b60d08884f.png",
+      "destination": "AleriaAlmanach/assets/gestiefelte-muschi/goods/rosenstolz.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "3a9a432a68cfe90d1d1e29adc363c7733f069dbcc03a3ed0bdc0857b16e6d7b1",
+      "promptId": "rosenstolz"
+    },
+    {
+      "id": "tirnara-abendblatt",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-857ea564-1257-460a-b762-816599d353a7.png",
+      "destination": "AleriaAlmanach/assets/gestiefelte-muschi/goods/tirnara-abendblatt.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "e8967e757c5a108d98c94d9a749912111ea89b368a4cdf5bf8ce61564398a7cc",
+      "promptId": "tirnara-abendblatt"
+    },
+    {
+      "id": "tirnara-dunkelblatt",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-ed4f11ef-bafa-4155-b747-b03c953088c4.png",
+      "destination": "AleriaAlmanach/assets/gestiefelte-muschi/goods/tirnara-dunkelblatt.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "34079cc5e05024af47c39e29083b32661d78dda1d6f50bee63bc4c60774733da",
+      "promptId": "tirnara-dunkelblatt"
+    },
+    {
+      "id": "tirnara-zigarre",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-2e6cccb5-e4b1-4f70-aa76-1211f89c93b0.png",
+      "destination": "AleriaAlmanach/assets/gestiefelte-muschi/goods/tirnara-zigarre.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "7ae5b9be1b5dcec405ff20d0f8454d23caf98cb0a7457b46c7f401a59101710d",
+      "promptId": "tirnara-zigarre"
+    },
+    {
+      "id": "rauchpfeife",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-07502015-b60c-4d78-82bd-43ade8e2c1d6.png",
+      "destination": "AleriaAlmanach/assets/gestiefelte-muschi/goods/rauchpfeife.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "ca48363e950f1b45a0d1f3ddd252265891fe18a011d6428cda48a2eae427917b",
+      "promptId": "rauchpfeife"
+    },
+    {
+      "id": "parfum-velours",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-c400ff7a-f787-4239-846c-f08ae6872684.png",
+      "destination": "AleriaAlmanach/assets/gestiefelte-muschi/goods/parfum-velours.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "a7c450d9b4844837b63b106a3dd92a082e48d0911e483d081343e1ddcdb62b48",
+      "promptId": "parfum-velours"
+    },
+    {
+      "id": "parfum-verger",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-018f9ad9-94a9-4599-9616-820d678a399f.png",
+      "destination": "AleriaAlmanach/assets/gestiefelte-muschi/goods/parfum-verger.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "8982e0bc38b6439444d9f68da448bbe53eae42456d0befffacbaba8f51b87d9b",
+      "promptId": "parfum-verger"
+    },
+    {
+      "id": "parfum-nuit",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-45855d14-ef3c-4a3d-841b-69d1e60bc951.png",
+      "destination": "AleriaAlmanach/assets/gestiefelte-muschi/goods/parfum-nuit.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "75bc122e4e043e3acb1c1be8f31a2bf3fc312414a0f99c36d1fe8891d2782097",
+      "promptId": "parfum-nuit"
+    }
+  ],
+  "discarded": [
+    {
+      "id": "schild-poster",
+      "reason": "User requested flatter carved wood with fewer pigments.",
+      "reference": "references/schild-abgelehnt-poster.png"
+    },
+    {
+      "id": "pudel-katze",
+      "reason": "Generator returned a feline instead of the requested poodle; replaced with a dog using the existing poodle illustration.",
+      "reference": "references/pudel-abgelehnt-katze.png"
+    }
+  ]
+}

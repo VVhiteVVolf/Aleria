@@ -1,5 +1,6 @@
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { completeLachendeNixe } from '../modules/lachende-nixe/nixe-module.mjs';
+import { POST_SECTION } from '../modules/klingende-muenze-gwynthor/post-section.mjs';
 
 const read = async path => JSON.parse(await readFile(new URL(path, import.meta.url), 'utf8'));
 const source = (await read('../modules/lachende-nixe/sources/module-before-finalization.json')).entry;
@@ -7,9 +8,7 @@ const teyrngarch = await read('../modules/krumme-kanne/source/teyrngarch.json');
 const imports = await read('../modules/lachende-nixe/sources/drink-catalogs.json');
 const catalogs = [teyrngarch.entry || teyrngarch, ...imports.map(item => item.entry || item)];
 const entry = completeLachendeNixe(source, catalogs);
-const section = { key: 'Gwynthor', tab: 'Völker & Kulturen', desc: '',
-  nodeId: 'node:volker-kulturen:cenyr/celtigerns-wacht/llamreis-ankunft/gwynthor',
-  path: ['Cenyr', 'Celtigerns Wacht', 'Llamreis Ankunft', 'Gwynthor'] };
+const section = POST_SECTION;
 const directory = new URL('../../Charakter Archiv Exporte/Module/Lachende Nixe/', import.meta.url);
 await mkdir(directory, { recursive: true });
 const outputs = new Map([
