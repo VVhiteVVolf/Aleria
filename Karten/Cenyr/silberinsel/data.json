@@ -1,10 +1,2239 @@
 {
   "schemaVersion": 1,
   "dataPath": "Cenyr/silberinsel/data.json",
-  "revision": 0,
-  "updatedAt": "2026-08-01T04:59:40.663Z",
+  "revision": 1,
+  "updatedAt": "2026-10-19T14:40:29.703Z",
   "state": {
-    "pins": [],
+    "pins": [
+      {
+        "id": "silberinsel-cor-nantros",
+        "title": "Côr Nantros",
+        "x": 0.643798828125,
+        "y": 0.6566560785446145,
+        "cat": "location-klostersiedlung",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/klostersiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Silberinsel/Silberbucht/haus-canwyll.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-canwyll&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Silberinsel/Herrschaft der Canwyll.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Silberinsel/Herrschaft der Canwyll/Herrschaft der Canwyll.html",
+        "region": "Silberinsel",
+        "house": "Haus Canwyll",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Côr Nantros"
+          },
+          {
+            "k": "Typ",
+            "v": "Klostersiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": "Imkerei und Kerzenherstellung"
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Canwyll"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Weihe",
+            "v": "Jovelyn und Sankt Sieffre"
+          }
+        ],
+        "text": "Côr Nantros liegt im Süden der Insel und gehört zur Herrschaft der Canwyll. Das Kloster ist der Göttin Jovelyn, der Beschützerin des Glücks und der Kinder, sowie Sankt Sieffre, dem Schutzheiligen der Waisen, geweiht. Die Mönche, die hier leben, widmen sich der Imkerei und der Herstellung von Kerzen, die für ihre Reinheit und ihren feinen Duft geschätzt werden. Die Bienenstöcke des Klosters sind in den umliegenden Wiesen verteilt, und die Mönche sorgen sorgfältig für ihre Bienenvölker. Der aus dem Wachs gewonnene Honig wird nicht nur als Nahrung verwendet, sondern auch zur Herstellung von medizinischen Salben, während das Bienenwachs zur Anfertigung hochwertiger Kerzen dient. Diese Kerzen sind sowohl in der Region als auch für religiöse Zeremonien auf der gesamten Insel sehr begehrt. Côr Nantros ist somit ein Ort, an dem Spiritualität, Handwerk und die Fürsorge für Bedürftige Hand in Hand gehen.",
+        "secret": false,
+        "dominionId": "herrschaft-canwyll"
+      },
+      {
+        "id": "silberinsel-nantcarreg",
+        "title": "Nantcarreg",
+        "x": 0.545166015625,
+        "y": 0.6771585330638175,
+        "cat": "mmflt1x3v22o",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/bergbausiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Silberinsel/Silberpfad/haus-pyrth.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-pyrth&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Silberinsel/Silberpfad.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Silberinsel/Herrschaft Silberpfad/Herrschaft Silberpfad.html",
+        "region": "Silberinsel",
+        "house": "Haus Pyrth",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Nantcarreg"
+          },
+          {
+            "k": "Typ",
+            "v": "Bergbausiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": "Ton- und Lehmabbau, Keramik und Handel"
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Pyrth"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "Nantcarreg liegt als erste Siedlung im Gebirgspass, der in den Norden führt, und gehört zur Herrschaft der Pyrth in der Herrschaft Silberpfad. Die Siedlung dient als bedeutender Handelsposten und ist bekannt für ihre lebhaften Tavernen, die Reisenden und Händlern eine willkommene Rast bieten. Dennoch bleibt der Bergbau das Rückgrat von Nantcarreg, wo Ton und Lehm aus den umliegenden Hängen abgebaut werden. Die örtlichen Töpfer haben eine lange Tradition in der Verarbeitung dieser Materialien und stellen kunstvolle Keramikwaren her, die weit über die Grenzen der Herrschaft hinaus geschätzt werden. Dank ihrer Lage im Pass hat sich Nantcarreg zu einem wichtigen Handels- und Produktionszentrum entwickelt, das trotz der rauen Bedingungen floriert.",
+        "secret": false,
+        "dominionId": "herrschaft-silberpfad"
+      },
+      {
+        "id": "silberinsel-cor-bodcaer",
+        "title": "Côr Bodcaer",
+        "x": 0.290771484375,
+        "y": 0.7409760323419001,
+        "cat": "location-klostersiedlung",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/klostersiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Silberinsel/Silberbucht/haus-crefyddol.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-crefyddol&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Silberinsel/Herrschaft der Crefyddol.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Silberinsel/Herrschaft der Crefyddol/Herrschaft der Crefyddol.html",
+        "region": "Silberinsel",
+        "house": "Haus Crefyddol",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Côr Bodcaer"
+          },
+          {
+            "k": "Typ",
+            "v": "Klostersiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": "Laternenherstellung und Paladinausbildung"
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Crefyddol"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Weihe",
+            "v": "Sankt Sieffre und Maelona"
+          }
+        ],
+        "text": "Côr Bodcaer ist ein Kloster unter der Herrschaft des Hauses Crefyddol, geweiht dem Heiligen Sieffre und der Göttin Maelona, der Beschützerin der Liebe und Barmherzigkeit. Das Kloster ist bekannt für seine kunstvolle Herstellung von Laternen, die als Symbole des Lichts und der Hoffnung gelten. Doch Côr Bodcaer ist weit mehr als nur ein Ort der Andacht und des Handwerks; es dient auch als Ausbildungsstätte für Paladine. Die hier lebenden Novizen, oftmals Sprösslinge des Hauses Crefyddol, verbringen ihre frühe Kindheit im Kloster, um als Glaubenskrieger heranzuwachsen, die entweder der Mutter Maelona oder dem Heiligen Sieffre dienen. Unter der strengen, aber barmherzigen Anleitung der Mönche und Ritter erlernen sie die Tugenden des Glaubens und die Kunst des Kampfes. Mit ihrer Volljährigkeit werden sie zu gesalbten Rittern erhoben und verlassen das Kloster als Paladine, bereit, die Lehren der Göttin und des Heiligen in die Welt zu tragen.",
+        "secret": false,
+        "dominionId": "herrschaft-crefyddol"
+      },
+      {
+        "id": "silberinsel-rosaber",
+        "title": "Rosaber",
+        "x": 0.734375,
+        "y": 0.2711521801905862,
+        "cat": "mmflry5furso",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/hafensiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Silberinsel/Silberküste/haus-tiwna.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-tiwna&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Silberinsel/Silberküste.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Silberinsel/Baronie Silberküste/Baronie Silberküste.html",
+        "region": "Silberinsel",
+        "house": "Haus Tiwna",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Rosaber"
+          },
+          {
+            "k": "Typ",
+            "v": "Hafensiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": "Salzproduktion und Fischerei"
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Tiwna"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "Rosaber liegt auf einer kleinen, felsigen Insel vor der Küste der Silberinsel und dient als eine wichtige Hafensiedlung in der Region. Durch die Lage auf dieser abgeschiedenen Insel hat sich die Gemeinde auf die Salzproduktion spezialisiert. Die flachen Küstengewässer rund um Rosaber eignen sich hervorragend für die Anlage von Salzgärten, in denen das Meersalz durch Verdunstung gewonnen wird. Der Hafen spielt eine zentrale Rolle für den Handel mit Salz und Fisch, denn die Siedlung ist ein beliebter Anlaufpunkt für Schiffe, die entlang der Küste von Silberinsel verkehren. Die Bewohner von Rosaber sind für ihre Erfahrung in der Seefahrt bekannt, und viele von ihnen arbeiten sowohl als Fischer als auch als Salzsammler.",
+        "secret": false,
+        "dominionId": "baronie-silberkueste"
+      },
+      {
+        "id": "silberinsel-porthros",
+        "title": "Porthros",
+        "x": 0.294189453125,
+        "y": 0.4715564539416691,
+        "cat": "mmflry5furso",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/hafensiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Silberinsel/Silberbucht/haus-saith.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-saith&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Silberinsel/Herrschaft der Saith.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Silberinsel/Herrschaft der Saith/Herrschaft der Saith.html",
+        "region": "Silberinsel",
+        "house": "Haus Saith",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Porthros"
+          },
+          {
+            "k": "Typ",
+            "v": "Hafensiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": "Fischfang und Fischverarbeitung"
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Saith"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "Porthros liegt an der Westküste der Insel, direkt südlich der Flussmündung und gehört zur Herrschaft des Hauses Saith. Die Siedlung ist ein wichtiger Fischereihafen und profitiert von der Nähe zum Fluss, der Nährstoffe ins Meer trägt und so besonders fischreiche Gewässer schafft. Die Fischer von Porthros sind bekannt für ihre Vielfalt an gefangenem Meeresgetier, das regelmäßig an die umliegenden Märkte geliefert wird. Zusätzlich hat sich der Ort auf die Verarbeitung von Meeresfrüchten spezialisiert, wobei gesalzene und getrocknete Fischwaren einen bedeutenden Teil des Handels ausmachen. Der Hafen von Porthros dient zudem als Ankerplatz für Händler, die entlang der Küste unterwegs sind.",
+        "secret": false,
+        "dominionId": "herrschaft-saith"
+      },
+      {
+        "id": "silberinsel-cor-eglosmor",
+        "title": "Côr Eglosmor",
+        "x": 0.70361328125,
+        "y": 0.4166907305804216,
+        "cat": "location-klostersiedlung",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/klostersiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Silberinsel/Silberküste/haus-tiwna.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-tiwna&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Silberinsel/Silberküste.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Silberinsel/Baronie Silberküste/Baronie Silberküste.html",
+        "region": "Silberinsel",
+        "house": "Haus Tiwna",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Côr Eglosmor"
+          },
+          {
+            "k": "Typ",
+            "v": "Klostersiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": "Steinmetzhandwerk, Grabsteine und Skulpturen"
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Tiwna"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Weihe",
+            "v": "Lokhar"
+          }
+        ],
+        "text": "Côr Eglosmor liegt weiter südlich in der Baronie von Silberküste und gehört zur Herrschaft des Hauses Tiwna. Das Kloster ist dem Gott Lokhar geweiht, der als Herr über Tod und Leben verehrt wird. Die Mönche von Côr Eglosmor haben sich der Kunst des Steinmetzhandwerks verschrieben und fertigen kunstvolle Grabsteine und Skulpturen an, die die Dualität von Leben und Tod widerspiegeln. Der weitläufige Friedhof des Klosters ist der größte auf der Silberinsel und dient als Ruhestätte für viele Generationen. Die dortigen Denkmäler, geschaffen von den geschickten Händen der Mönche, zeugen von der Vergänglichkeit des Lebens und der Unvergänglichkeit der Erinnerungen. Côr Eglosmor ist somit nicht nur ein spiritueller Ort, sondern auch ein kulturelles Zentrum, an dem das Andenken der Verstorbenen bewahrt und die Kunst der Steinmetze hochgeschätzt wird.",
+        "secret": false,
+        "dominionId": "baronie-silberkueste"
+      },
+      {
+        "id": "silberinsel-mwynros",
+        "title": "Mwynros",
+        "x": 0.477294921875,
+        "y": 0.34074501876985275,
+        "cat": "mmflt1x3v22o",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/bergbausiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Silberinsel/Silberpfad/haus-pyrth.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-pyrth&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Silberinsel/Silberpfad.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Silberinsel/Herrschaft Silberpfad/Herrschaft Silberpfad.html",
+        "region": "Silberinsel",
+        "house": "Haus Pyrth",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Mwynros"
+          },
+          {
+            "k": "Typ",
+            "v": "Bergbausiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": "Kupfer- und Eisenbergbau"
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Pyrth"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "Mwynros liegt nördlich von Caer Clwyd und gehört zur Herrschaft der Pyrth in Silberpfad. Die Siedlung ist als Bergbausiedlung bekannt, in der vor allem Kupfer und Eisen aus den umliegenden Bergen abgebaut wird. Diese Rohstoffe sind für die Region von großer Bedeutung, da sie nicht nur für den Handel genutzt werden, sondern auch die Schmieden in den benachbarten Siedlungen mit wertvollem Material versorgen. Mwynros hat sich durch den Bergbau zu einem funktionalen und geschäftigen Ort entwickelt, an dem das Klirren von Werkzeugen und das Poltern von Erz den Alltag bestimmen. Die steinigen Hänge und tiefen Stollen der Siedlung sind Zeugen der harten Arbeit und Ausdauer ihrer Bewohner.",
+        "secret": false,
+        "dominionId": "herrschaft-silberpfad"
+      },
+      {
+        "id": "silberinsel-pencaerglyn",
+        "title": "Pencaerglyn",
+        "x": 0.386474609375,
+        "y": 0.5861969390701705,
+        "cat": "mmflt1x3v22o",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/bergbausiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Silberinsel/Silberbucht/haus-crefyddol.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-crefyddol&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Silberinsel/Herrschaft der Crefyddol.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Silberinsel/Herrschaft der Crefyddol/Herrschaft der Crefyddol.html",
+        "region": "Silberinsel",
+        "house": "Haus Crefyddol",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Pencaerglyn"
+          },
+          {
+            "k": "Typ",
+            "v": "Bergbausiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": "Waffen- und Rüstungsschmiede"
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Crefyddol"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "Pencaerglyn ist eine Bergbausiedlung am Fuße des Gebirges, unterhalb von Tirglyn und unter der Herrschaft des Hauses Crefyddol. Die Siedlung ist vor allem für ihre Waffen- und Rüstungsschmiede bekannt, die hochwertige Metallwaren aus den nahegelegenen Erzvorkommen fertigen. Die Schmiede von Pencaerglyn stellen Schwerter, Rüstungen und andere Kriegsgeräte her, die für ihre herausragende Qualität und Haltbarkeit geschätzt werden. Die Tradition der Schmiedekunst wird hier seit Generationen gepflegt, und die Produkte aus Pencaerglyn finden nicht nur in der Baronie, sondern auch in benachbarten Regionen Abnehmer. Die enge Verbindung zu den Erzminen macht die Siedlung zu einem wichtigen Zentrum für die Herstellung von Kriegsausrüstung.",
+        "secret": false,
+        "dominionId": "herrschaft-crefyddol"
+      },
+      {
+        "id": "silberinsel-rosgwern",
+        "title": "Rosgwern",
+        "x": 0.4189453125,
+        "y": 0.7340456251804793,
+        "cat": "mmflt1x3v22o",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/bergbausiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Silberinsel/Silberbucht/haus-crefyddol.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-crefyddol&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Silberinsel/Herrschaft der Crefyddol.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Silberinsel/Herrschaft der Crefyddol/Herrschaft der Crefyddol.html",
+        "region": "Silberinsel",
+        "house": "Haus Crefyddol",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Rosgwern"
+          },
+          {
+            "k": "Typ",
+            "v": "Bergbausiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": "Metall- und Edelsteinbergbau"
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Crefyddol"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "Rosgwern ist eine Bergbausiedlung im Gebiet des Hauses Crefyddol, die einst für ihren Silberabbau bekannt war. Vor einigen Jahrzehnten waren die Silbervorkommen jedoch erschöpft, und seither haben die Bewohner ihre Aufmerksamkeit auf den Abbau anderer Mineralien verlagert. Heute wird in Rosgwern nach verschiedenen Metallen und Edelsteinen gegraben, die weiterhin wertvolle Einnahmen für die Siedlung und die Baronie generieren. Die einst blühende Silberschmiedetradition hat zwar nachgelassen, doch die alte Mine ist ein ständiges Erinnerungsstück an die glorreiche Vergangenheit der Siedlung. Trotz der Erschöpfung der Silberadern bleibt Rosgwern ein hart arbeitender Ort, dessen Bewohner sich an die neuen Gegebenheiten angepasst haben.",
+        "secret": false,
+        "dominionId": "herrschaft-crefyddol"
+      },
+      {
+        "id": "silberinsel-ath-eryndor-achatorden",
+        "title": "Ath Eryndor – Achatorden",
+        "x": 0.510986328125,
+        "y": 0.13687554143805947,
+        "cat": "mmflvquv2rr3",
+        "templateId": "ruine",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/antike-ruine.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Silberinsel/Silberküste/haus-tiwna.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-tiwna&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Silberinsel/Silberküste.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Silberinsel/Baronie Silberküste/Baronie Silberküste.html",
+        "region": "Silberinsel",
+        "house": "Haus Tiwna",
+        "faction": "Magierorganisation von Cenyr",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Ath Eryndor – Achatorden"
+          },
+          {
+            "k": "Ursprung",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Ursache des Verfalls",
+            "v": ""
+          },
+          {
+            "k": "Aktuelle Bewohner",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Schätze / Reliquien",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Typ",
+            "v": "Siedlungsruine"
+          },
+          {
+            "k": "Ehemalige Zugehörigkeit",
+            "v": "Achatorden"
+          },
+          {
+            "k": "Verwaltung",
+            "v": "Magierorganisation von Cenyr"
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Tiwna"
+          }
+        ],
+        "text": "Ath Eryndor ist eine antike Festung, die einst zum Achatorden gehörte. Während des Druiden-Magier-Konflikts wurde sie von feindlichen Magiern vernichtet, als ein mächtiges Duell zwischen zwei Großmagiern die Hälfte der Festung durch einen Erdrutsch ins Meer stürzen ließ. Es heißt, dass die Überreste der verlorenen Festung noch immer unter den Wellen zu finden sind, ein verfallenes Denkmal an die verheerende Magie, die hier einst entfesselt wurde. Der Achatorden, der sich in diesem Konflikt auf die Seite der Druiden stellte, erlitt das gleiche Schicksal wie die Festung selbst: Er wurde von anderen Magierorden vernichtet und löste sich schließlich auf. Heute ist Ath Eryndor eine Ruine und steht unter der Verwaltung der Magierorganisation von Cenyr, die das Gebiet beansprucht und gelegentlich Forschungen durchführt. Die Legenden um die Festung und die verlorene Magie ziehen immer wieder Forscher und Abenteurer an, die versuchen, die Geheimnisse der Vergangenheit zu ergründen. Die Stätte bleibt ein Symbol für die Macht und die Gefahr, die von der Magie ausgeht, und eine Erinnerung an den katastrophalen Konflikt, der diese Epoche prägte.",
+        "secret": false,
+        "dominionId": "baronie-silberkueste"
+      },
+      {
+        "id": "silberinsel-aberffryd",
+        "title": "Aberffryd",
+        "x": 0.29345703125,
+        "y": 0.6043892578688999,
+        "cat": "mmflry5furso",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/hafensiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Silberinsel/Silberbucht/haus-crefyddol.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-crefyddol&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Silberinsel/Herrschaft der Crefyddol.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Silberinsel/Herrschaft der Crefyddol/Herrschaft der Crefyddol.html",
+        "region": "Silberinsel",
+        "house": "Haus Crefyddol",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Aberffryd"
+          },
+          {
+            "k": "Typ",
+            "v": "Hafensiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": "Fischerei und Fischölherstellung"
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Crefyddol"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "Aberffryd liegt an der Westküste der Insel und gehört zur Herrschaft des Hauses Crefyddol. Die Siedlung ist bekannt für ihre Fischerei und ihre enge Verbindung zum Meer, das den Bewohnern nicht nur Nahrung, sondern auch einen Weg des Handels bietet. Die Küste ist hier von steilen Klippen geprägt, doch ein kleiner natürlicher Hafen bietet Schutz für die Boote. Die Menschen von Aberffryd sind geschickte Fischer, die auch bei rauem Wetter hinausfahren, und sie nutzen die Strömungen, die in der Nähe der Küste verlaufen, um reiche Fischgründe zu erreichen. Der Ort ist zudem für seine Herstellung von Fischöl bekannt, das als wertvolles Handelsgut dient.",
+        "secret": false,
+        "dominionId": "herrschaft-crefyddol"
+      },
+      {
+        "id": "silberinsel-eiddon",
+        "title": "Eiddon",
+        "x": 0.615234375,
+        "y": 0.1842333237077678,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Silberinsel/Silberküste/haus-tiwna.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-tiwna&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Silberinsel/Silberküste.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Silberinsel/Baronie Silberküste/Baronie Silberküste.html",
+        "region": "Silberinsel",
+        "house": "Haus Tiwna",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Eiddon"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Tiwna"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "baronie-silberkueste"
+      },
+      {
+        "id": "silberinsel-castell-nantgraig",
+        "title": "Castell Nantgraig",
+        "x": 0.321044921875,
+        "y": 0.4293964770430263,
+        "cat": "mmfls5afqqpr",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/burgsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Silberinsel/Silberbucht/haus-saith.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-saith&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Silberinsel/Herrschaft der Saith.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Silberinsel/Herrschaft der Saith/Herrschaft der Saith.html",
+        "region": "Silberinsel",
+        "house": "Haus Saith",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Castell Nantgraig"
+          },
+          {
+            "k": "Typ",
+            "v": "Burgsiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": "Grenzfestung"
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Saith"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "Castell Nantgraig ist eine eindrucksvolle Festung des Hauses Saith, die an der Brücke über den Fluss im Norden der Baronie liegt. Die strategisch gelegene Burg bewacht den Zugang zu den darunter liegenden Siedlungen und dient als erste Verteidigungslinie gegen mögliche Bedrohungen aus der Ruine jenseits des Flusses. Errichtet auf einem Felsvorsprung, bietet Castell Nantgraig einen weiten Blick über den Fluss und die umliegenden Ländereien, sodass jede Bewegung von der Ruine aus beobachtet werden kann. Die Garnison ist stets wachsam, und die Bewohner der nahen Dörfer fühlen sich sicher unter dem Schutz der Festung, die für ihre unerschütterlichen Mauern und die tapferen Soldaten bekannt ist.",
+        "secret": false,
+        "dominionId": "herrschaft-saith"
+      },
+      {
+        "id": "silberinsel-pencaermor",
+        "title": "Pencaermor",
+        "x": 0.757080078125,
+        "y": 0.3993647126768698,
+        "cat": "mmflry5furso",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/hafensiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Silberinsel/Silberküste/haus-tiwna.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-tiwna&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Silberinsel/Silberküste.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Silberinsel/Baronie Silberküste/Baronie Silberküste.html",
+        "region": "Silberinsel",
+        "house": "Haus Tiwna",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Pencaermor"
+          },
+          {
+            "k": "Typ",
+            "v": "Hafensiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": "Muschel- und Austernzucht, Fischfang"
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Tiwna"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "Pencaermor liegt auf einer kleinen Insel südlich von Rosaber, ebenfalls vor der Küste der Silberinsel. Diese Hafensiedlung gehört zur Baronie des Hauses Tiwna und hat sich neben dem Fischfang auf die Muschel- und Austernzucht spezialisiert, da die umliegenden Gewässer dafür ideal sind. Pencaermor ist von felsigen Buchten und kleinen Stränden umgeben, die den Muschelzüchtern ideale Bedingungen bieten. Der Hafen dient auch als wichtiger Zwischenstopp für Handelsschiffe, die die Gewässer um die Silberinsel durchqueren. Die Bewohner von Pencaermor sind stolz auf die Qualität der Meeresfrüchte, die sie ernten, und viele behaupten, die besten Austern der gesamten Region anzubieten.",
+        "secret": false,
+        "dominionId": "baronie-silberkueste"
+      },
+      {
+        "id": "silberinsel-tirglyn",
+        "title": "Tirglyn",
+        "x": 0.328857421875,
+        "y": 0.5232457406872654,
+        "cat": "mmflrqajby8b",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/bauernsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Silberinsel/Silberbucht/haus-saith.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-saith&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Silberinsel/Herrschaft der Saith.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Silberinsel/Herrschaft der Saith/Herrschaft der Saith.html",
+        "region": "Silberinsel",
+        "house": "Haus Saith",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Tirglyn"
+          },
+          {
+            "k": "Typ",
+            "v": "Bauernsiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": "Ackerbau und Viehzucht"
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Saith"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "Tirglyn liegt auf einem Landstrich zwischen der rauen Küste und den östlich aufragenden Bergen. Die Siedlung gehört zur Herrschaft des Hauses Saith, das die Region seit Generationen prägt. Obwohl das Klima nicht sonderlich warm ist und der Regen oft über die Felder peitscht, haben die Bewohner robuste Getreidesorten und widerstandsfähige Viehrassen kultiviert, die gut mit den Bedingungen zurechtkommen. Der salzige Wind, der vom Meer her weht, verleiht den hier angebauten Kräutern und Gemüsesorten einen besonderen Geschmack, der geschätzt wird. Die Küstennähe erlaubt es den Bauern zudem, Seetang als natürlichen Dünger zu nutzen, was die Böden fruchtbar hält und die Ernteerträge sichert.",
+        "secret": false,
+        "dominionId": "herrschaft-saith"
+      },
+      {
+        "id": "silberinsel-gwernporth",
+        "title": "Gwernporth",
+        "x": 0.707763671875,
+        "y": 0.5850418712099336,
+        "cat": "mmflry5furso",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/hafensiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Silberinsel/Silberküste/haus-tiwna.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-tiwna&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Silberinsel/Silberküste.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Silberinsel/Baronie Silberküste/Baronie Silberküste.html",
+        "region": "Silberinsel",
+        "house": "Haus Tiwna",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Gwernporth"
+          },
+          {
+            "k": "Typ",
+            "v": "Hafensiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": "Handelshafen, Fischfang, Flusssalz und Fischernetze"
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Tiwna"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "Gwernporth liegt strategisch an der Mündung eines breiten Flusses im Süden der Insel, genau an der Grenze zur Hauptbaronie von Silberbucht. Die Siedlung gehört zur Baronie des Hauses Tiwna und ist ein wichtiger Handelshafen, der den Fluss- und Küstenverkehr miteinander verbindet. Die Lage an der Mündung ermöglicht der Siedlung einen florierenden Fischfang sowie die Herstellung von Flusssalz, das aus den salzhaltigen Marschgebieten gewonnen wird. Gwernporth dient zudem als Umschlagplatz für Güter, die von den Binnenregionen zur Küste transportiert werden, und hat sich dadurch zu einem bedeutenden Handelszentrum der Region entwickelt. Die Bewohner sind bekannt für ihre Seefahrertradition und ihre Kunstfertigkeit im Bau von Fischernetzen.",
+        "secret": false,
+        "dominionId": "baronie-silberkueste"
+      },
+      {
+        "id": "silberinsel-craigffryd",
+        "title": "Craigffryd",
+        "x": 0.5771484375,
+        "y": 0.25469246318221195,
+        "cat": "mmflt1x3v22o",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/bergbausiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Silberinsel/Silberpfad/haus-pyrth.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-pyrth&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Silberinsel/Silberpfad.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Silberinsel/Herrschaft Silberpfad/Herrschaft Silberpfad.html",
+        "region": "Silberinsel",
+        "house": "Haus Pyrth",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Craigffryd"
+          },
+          {
+            "k": "Typ",
+            "v": "Bergbausiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": "Schiefer- und Gesteinsabbau"
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Pyrth"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "Craigffryd liegt nördlich von Mwynros und markiert das Ende des Gebirgspfads der Herrschaft Silberpfad, kurz vor der Stadt Eiddon, die zur Baronie von Silberküste gehört. Diese Bergbausiedlung ist die letzte Station der Pyrth im Norden und spielt eine wichtige Rolle als Versorgungs- und Rastplatz für Reisende und Händler, die die Berge durchqueren. Der Abbau von Schiefer und anderen Gesteinen hat hier eine lange Tradition, und das gewonnene Material wird in der Region für den Bau von Gebäuden und Straßen verwendet. Die Lage von Craigffryd, direkt am Übergang zur Baronie von Silberküste, macht die Siedlung zu einem natürlichen Knotenpunkt für den Handel zwischen den beiden Herrschaften. Trotz der rauen Umgebung ist Craigffryd ein lebhafter Ort, an dem das harte Bergbauleben und der Handel aufeinandertreffen.",
+        "secret": false,
+        "dominionId": "herrschaft-silberpfad"
+      },
+      {
+        "id": "silberinsel-dinasmwyn",
+        "title": "Dinasmwyn",
+        "x": 0.493896484375,
+        "y": 0.5561651747040139,
+        "cat": "mmflt1x3v22o",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/bergbausiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Silberinsel/Silberpfad/haus-pyrth.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-pyrth&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Silberinsel/Silberpfad.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Silberinsel/Herrschaft Silberpfad/Herrschaft Silberpfad.html",
+        "region": "Silberinsel",
+        "house": "Haus Pyrth",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Dinasmwyn"
+          },
+          {
+            "k": "Typ",
+            "v": "Bergbausiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": "Silber- und Edelsteinbergbau"
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Pyrth"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "Dinasmwyn ist die erste Siedlung, die Reisende vom Süden kommend nach Nantcarreg erreichen, und spielt eine entscheidende Rolle für die Herrschaft der Pyrth in Silberpfad. Als Bergbausiedlung ist sie bekannt für ihre reichen Vorkommen an Silber und Edelsteinen, die seit Generationen abgebaut werden und zur Wohlstandssicherung der Region beitragen. Die Minen von Dinasmwyn sind tief in den Bergen verborgen, und ihre Stollen erstrecken sich weit unter die Erde. Die hier geförderten Schätze sind nicht nur für den Handel wertvoll, sondern auch für die Kunsthandwerker und Juweliere in der Herrschaft. Die Siedlung hat sich aufgrund des Bergbaus zu einem wichtigen wirtschaftlichen Zentrum entwickelt, in dem das harte Leben der Minenarbeiter den Alltag prägt.",
+        "secret": false,
+        "dominionId": "herrschaft-silberpfad"
+      },
+      {
+        "id": "silberinsel-bodcarreg",
+        "title": "Bodcarreg",
+        "x": 0.395751953125,
+        "y": 0.4836846664741553,
+        "cat": "mmflt1x3v22o",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/bergbausiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Silberinsel/Silberbucht/haus-saith.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-saith&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Silberinsel/Herrschaft der Saith.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Silberinsel/Herrschaft der Saith/Herrschaft der Saith.html",
+        "region": "Silberinsel",
+        "house": "Haus Saith",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Bodcarreg"
+          },
+          {
+            "k": "Typ",
+            "v": "Bergbausiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": "Salzbergbau"
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Saith"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "Bodcarreg ist eine Bergsiedlung am Rande des Gebirges, östlich von Castell Nantgraig und Tirglyn. Die Siedlung ist bekannt für ihre Salzgewinnung aus den natürlichen Salzvorkommen in den umliegenden Bergen. Seit Generationen bauen die Bewohner von Bodcarreg Salz in tiefen Stollen und Höhlen ab, die sich unter dem felsigen Gelände erstrecken. Das gewonnene Salz ist nicht nur für den Eigenbedarf, sondern auch für den Handel von großer Bedeutung, da es in der gesamten Baronie geschätzt wird. Die schwierigen Bedingungen im Gebirge haben eine widerstandsfähige Gemeinschaft hervorgebracht, die sich durch ihre harte Arbeit und ihre enge Verbundenheit mit den Bergen auszeichnet.",
+        "secret": false,
+        "dominionId": "herrschaft-saith"
+      },
+      {
+        "id": "silberinsel-maesnant",
+        "title": "Maesnant",
+        "x": 0.30810546875,
+        "y": 0.671960727692752,
+        "cat": "mmflrqajby8b",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/bauernsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Silberinsel/Silberbucht/haus-crefyddol.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-crefyddol&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Silberinsel/Herrschaft der Crefyddol.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Silberinsel/Herrschaft der Crefyddol/Herrschaft der Crefyddol.html",
+        "region": "Silberinsel",
+        "house": "Haus Crefyddol",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Maesnant"
+          },
+          {
+            "k": "Typ",
+            "v": "Bauernsiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": "Obst, Gemüse, Heilpflanzen und Kräuter"
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Crefyddol"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "Maesnant liegt auf einem fruchtbaren Landstreifen zwischen der Küste und den Bergen im Osten, unter der Herrschaft des Hauses Crefyddol. Die Siedlung ist bekannt für ihre ausgedehnten Obstgärten und Gemüsefelder, die trotz des oft regnerischen und kühlen Klimas hier gut gedeihen. Die Bauern nutzen geschickt den Schutz, den die Berge vor den stärksten Stürmen bieten, während die Nähe zum Meer frische Brisen bringt, die für die Obstbäume vorteilhaft sind. Maesnant ist besonders berühmt für die Vielfalt seiner Heilpflanzen und Kräuter, die in den feuchten Böden üppig wachsen. Diese Produkte werden nicht nur in der Region geschätzt, sondern auch weit darüber hinaus gehandelt.",
+        "secret": false,
+        "dominionId": "herrschaft-crefyddol"
+      },
+      {
+        "id": "silberinsel-ard-iasgleann",
+        "title": "Ard Iasgleann",
+        "x": 0.341796875,
+        "y": 0.25498123014727114,
+        "cat": "mmflvquv2rr3",
+        "templateId": "ruine",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/antike-ruine.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Silberinsel/Silberküste/haus-tiwna.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-tiwna&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Silberinsel/Silberküste.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Silberinsel/Baronie Silberküste/Baronie Silberküste.html",
+        "region": "Silberinsel",
+        "house": "Haus Tiwna",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Ard Iasgleann"
+          },
+          {
+            "k": "Ursprung",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Ursache des Verfalls",
+            "v": ""
+          },
+          {
+            "k": "Aktuelle Bewohner",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Schätze / Reliquien",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Typ",
+            "v": "Siedlungsruine"
+          },
+          {
+            "k": "Ehemaliges Herrscherhaus",
+            "v": "Tir An Muirghin"
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Tiwna"
+          }
+        ],
+        "text": "Ard Iasgleann ist eine antike Ruine, die einst eine blühende Hafenstadt unter der Herrschaft des Hauses Tir An Muirghin war, lange bevor die Cenyri oder Avallornier die Silberinseln besiedelten. Die hier lebenden Crannath-Alben waren geschickte Seefahrer, Schiffbauer und Bergleute, die zugleich ihrem Glauben und den Traditionen als fromme Inselbewohner nachgingen. Während des Äons der Seefahrer war Ard Iasgleann ein wichtiges Zentrum auf den Silberinseln, bis die Hölle über sie hereinbrach: Die Stadt wurde eine der ersten, die den Angriffen der Norrnaigh zum Opfer fiel. Die Eroberer überrannten die Küsten, und das Haus Tir An Muirghin wurde nahezu vollständig ausgelöscht, ihre einstige Pracht und Macht zerbrach unter der Herrschaft der Norrnaigh. Doch das Erbe des Hauses sollte nicht vollständig vergehen. Durch ein Kadettenhaus, das an der Sonnenküste Zuflucht fand und sich durch eine Ehe mit einem dort ansässigen Clan etablierte, lebten die Tir An Muirghin fort. Es wird erzählt, dass das Haus Blach aus dieser Verbindung hervorging und somit das Blut der Tir An Muirghin weiter in ihren Adern fließt. Heute sind die Überreste von Ard Iasgleann stille Zeugen einer längst vergangenen Ära, ein Ort der Ruinen und Legenden, der die Erinnerung an das verlorene Erbe der Crannath-Alben bewahrt.",
+        "secret": false,
+        "dominionId": "baronie-silberkueste"
+      },
+      {
+        "id": "silberinsel-cor-glynfawr",
+        "title": "Côr Glynfawr",
+        "x": 0.6748046875,
+        "y": 0.29223216863990764,
+        "cat": "location-klostersiedlung",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/klostersiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Silberinsel/Silberküste/haus-tiwna.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-tiwna&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Silberinsel/Silberküste.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Silberinsel/Baronie Silberküste/Baronie Silberküste.html",
+        "region": "Silberinsel",
+        "house": "Haus Tiwna",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Côr Glynfawr"
+          },
+          {
+            "k": "Typ",
+            "v": "Klostersiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": "Forstwirtschaft und Tierpflege"
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Tiwna"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Weihe",
+            "v": "Sylvanaeth"
+          }
+        ],
+        "text": "Côr Glynfawr ist ein Kloster in der Baronie von Silberküste, das unter der Herrschaft des Hauses Tiwna steht. Geweiht der Göttin Sylvanaeth, der Beschützerin der Natur und der Tiere, liegt das Kloster idyllisch zwischen dichten Wäldern, die es zur Linken und Rechten umgeben. Die Nonnen, die hier leben, haben sich der Pflege und dem Schutz der umliegenden Wälder verschrieben und betreiben nachhaltige Forstwirtschaft. Ihre Arbeit umfasst das Anpflanzen neuer Bäume, die Heilung erkrankter Wälder und die Pflege von verletzten Tieren. Obwohl das Kloster unweit der Küste im Westen liegt, bleibt das Gebirge im Osten stets im Blick. Côr Glynfawr ist nicht nur ein Ort der Ruhe und des Glaubens, sondern auch ein Zentrum für die Weitergabe alten Wissens über die Natur und die Tierwelt.",
+        "secret": false,
+        "dominionId": "baronie-silberkueste"
+      },
+      {
+        "id": "silberinsel-nantporth",
+        "title": "Nantporth",
+        "x": 0.3935546875,
+        "y": 0.8065261334103379,
+        "cat": "mmflry5furso",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/hafensiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Silberinsel/Silberbucht/haus-canwyll.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-canwyll&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Silberinsel/Herrschaft der Canwyll.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Silberinsel/Herrschaft der Canwyll/Herrschaft der Canwyll.html",
+        "region": "Silberinsel",
+        "house": "Haus Canwyll",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Nantporth"
+          },
+          {
+            "k": "Typ",
+            "v": "Hafensiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": "Schiffsbau und Fischerei"
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Canwyll"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "Nantporth liegt im Süden der Insel an der rauen Küste, unter der Herrschaft des Hauses Canwyll. Die Siedlung ist für ihre Fischerei und den Schiffsbau bekannt. Dank der tiefen Gewässer vor der Küste können die Bewohner auch größere Schiffe bauen, die für den Handel und die Fischerei gleichermaßen geeignet sind. Die handwerkliche Tradition des Schiffbaus wird von Generation zu Generation weitergegeben, und viele der Boote, die hier gefertigt werden, sind auf den umliegenden Inseln sehr begehrt. Die Fischerei bleibt dennoch ein wichtiger Bestandteil des täglichen Lebens, und die Einwohner nutzen ihre selbstgebauten Boote, um in den fischreichen Gewässern der Region ihren Lebensunterhalt zu verdienen.",
+        "secret": false,
+        "dominionId": "herrschaft-canwyll"
+      },
+      {
+        "id": "silberinsel-caer-clwyd",
+        "title": "Caer Clwyd",
+        "x": 0.50634765625,
+        "y": 0.43950332082009813,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Silberinsel/Silberpfad/haus-pyrth.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-pyrth&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Silberinsel/Silberpfad.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Silberinsel/Herrschaft Silberpfad/Herrschaft Silberpfad.html",
+        "region": "Silberinsel",
+        "house": "Haus Pyrth",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Caer Clwyd"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Pyrth"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "herrschaft-silberpfad"
+      },
+      {
+        "id": "silberinsel-cor-llanberwyn-abtei-von-st-sieffre",
+        "title": "Côr Llanberwyn – Abtei von St. Sieffre",
+        "x": 0.482666015625,
+        "y": 0.6396188276061219,
+        "cat": "location-heiligtum",
+        "templateId": "institution",
+        "kind": "place",
+        "pinMarker": "/Karten/Cenyr/silberinsel/Symbole/abtei-st-sieffre.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Silberinsel/haus-neidr.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-neidr&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Silberinsel/Silberbucht.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Silberinsel/Grafschaft Silberinsel.html",
+        "region": "Silberinsel",
+        "house": "Haus Neidr",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Côr Llanberwyn – Abtei von St. Sieffre"
+          },
+          {
+            "k": "Typ",
+            "v": "Heiligtum"
+          },
+          {
+            "k": "Gottheit / Verehrung",
+            "v": ""
+          },
+          {
+            "k": "Hüter",
+            "v": ""
+          },
+          {
+            "k": "Gemeinschaft",
+            "v": ""
+          },
+          {
+            "k": "Riten",
+            "v": ""
+          },
+          {
+            "k": "Opfergaben",
+            "v": ""
+          },
+          {
+            "k": "Reliquien",
+            "v": ""
+          },
+          {
+            "k": "Zugang",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          },
+          {
+            "k": "Weihe",
+            "v": "Sankt Sieffre"
+          },
+          {
+            "k": "Lage",
+            "v": "Silberbucht, nach der Regionskarte"
+          },
+          {
+            "k": "Träger",
+            "v": "Abtei von St. Sieffre"
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Neidr"
+          },
+          {
+            "k": "Gewerbe",
+            "v": "Waisenheim und Pilgerstätte"
+          }
+        ],
+        "text": "Côr Llanberwyn - Abtei von St. Sieffre ist ein Heiligtum, das dem Schutzheiligen und Namensgeber dieser Abtei, St. Sieffre, geweiht ist. St. Sieffre war ein frommer Bewohner der Insel in ihren dunklen und frühen Tagen, bekannt dafür, Waisen aufzunehmen und sie vor den Ungeheuern und Gefahren zu schützen. Mit seiner Laterne in der Hand tröstete er die Kinder in der Nacht und vertrieb ihre Angst. Diese Laterne ist zum zentralen Symbol der Abtei geworden, und ihre Hallen sind mit Kerzen geschmückt, die das Licht und die Hoffnung verkörpern, die Sieffre den Waisen brachte. Der Heilige gilt auch als Begründer der Häuser Canwyll und Crefyddol, deren Nachfahren sein Erbe fortführen. Heute ist Côr Llanberwyn nicht nur das größte Waisenheim der Welt, sondern auch eine bedeutende Pilgerstätte hoch im Gebirge. Waisen aus allen Ecken der Silberinsel und sogar aus fernen Ländern finden hier ein Zuhause, wo sie in Sicherheit aufwachsen können. Jedes Jahr kommen Geistliche, Gläubige und Pilger hierher, um Gebete zu sprechen, Tribut zu zollen und Eide zu erneuern. Die Abtei steht als Symbol der Barmherzigkeit und des Schutzes, und ihre Rolle als Waisenheim und Ort des Glaubens ehrt das Vermächtnis des Heiligen Sieffre in jeder Hinsicht.",
+        "secret": false,
+        "dominionId": "baronie-silberbucht"
+      },
+      {
+        "id": "silberinsel-ath-eryndor-unterwasserruine",
+        "title": "Ath Eryndor – Unterwasserruine",
+        "x": 0.44677734375,
+        "y": 0.15593416113196645,
+        "cat": "location-unterwasserstadt",
+        "templateId": "ruine",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/unterwasserstadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Silberinsel/Silberküste/haus-tiwna.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-tiwna&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Silberinsel/Silberküste.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Silberinsel/Baronie Silberküste/Baronie Silberküste.html",
+        "region": "Silberinsel",
+        "house": "Haus Tiwna",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Ath Eryndor – Unterwasserruine"
+          },
+          {
+            "k": "Ursprung",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Ursache des Verfalls",
+            "v": ""
+          },
+          {
+            "k": "Aktuelle Bewohner",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Schätze / Reliquien",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Typ",
+            "v": "Unterwasserstadt"
+          },
+          {
+            "k": "Ehemalige Zugehörigkeit",
+            "v": "Achatorden"
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Tiwna"
+          }
+        ],
+        "text": "Ath Eryndor ist nicht nur eine antike Ruine, sondern auch ein Ort großer Gefahr. Nach dem verheerenden Kampf, bei dem die Hälfte der Festung durch einen Erdrutsch ins Meer stürzte, wurde die entstandene Unterwasserruine zu einem gefährlichen Hindernis für vorbeisegelnde Schiffe. Die versunkenen Ruinen sind der Hauptgrund dafür, dass die einst blühende Hafenstadt Ard Iasgleann bis heute nicht wieder aufgebaut wurde. Die Region ist berüchtigt für die Kreaturen, die in den Überresten von Ath Eryndor hausen sollen, darunter die furchterregenden Thraalkin - amphibische Humanoide - sowie die Versunkenen, untote Wasserzombies, die aus den Tiefen auftauchen. Die ständige Bedrohung durch diese Kreaturen hat es der Nordwestregion schwer gemacht, wieder besiedelt zu werden. Viele Seefahrer meiden den nördlichen Teil der Gewässer und nehmen stattdessen die längere Route im Süden, um den Gefahren auszuweichen. Die Thraalkin und Versunkenen sind eine Plage, der man trotz aller Bemühungen bis heute nicht Herr werden konnte. Die Ruinen von Ath Eryndor und die umliegenden Gewässer sind zu einem Ort des Schreckens geworden, der die einstige Pracht und Tragödie dieser Region in sich vereint.",
+        "secret": false,
+        "dominionId": "baronie-silberkueste"
+      },
+      {
+        "id": "silberinsel-trethglyn",
+        "title": "Trethglyn",
+        "x": 0.6748046875,
+        "y": 0.7571469823852152,
+        "cat": "mmflry5furso",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/hafensiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Silberinsel/Silberbucht/haus-canwyll.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-canwyll&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Silberinsel/Herrschaft der Canwyll.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Silberinsel/Herrschaft der Canwyll/Herrschaft der Canwyll.html",
+        "region": "Silberinsel",
+        "house": "Haus Canwyll",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Trethglyn"
+          },
+          {
+            "k": "Typ",
+            "v": "Hafensiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": "Fischerei, Trocknung und Räucherung"
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Canwyll"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "Trethglyn liegt auf einer kleinen, südlich gelegenen Insel vor der Küste der großen Silberinsel. Die Siedlung gehört zur Herrschaft des Hauses Canwyll und ist bekannt für ihre Fischerei. Die umliegenden Gewässer sind reich an Fischbeständen, und die Bewohner von Trethglyn sind erfahrene Fischer, die ihre Boote geschickt durch die teils rauen Meeresströmungen manövrieren. Neben dem Fischfang betreiben die Dorfbewohner auch die Trocknung und Räucherung der gefangenen Fische, wodurch die Produkte länger haltbar gemacht werden. Trethglyn ist für seine geräucherten Fische berühmt, die auf den Märkten der Region sehr geschätzt werden.",
+        "secret": false,
+        "dominionId": "herrschaft-canwyll"
+      },
+      {
+        "id": "silberinsel-bryngwern",
+        "title": "Bryngwern",
+        "x": 0.72607421875,
+        "y": 0.5062084897487727,
+        "cat": "mmflrqajby8b",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/bauernsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Silberinsel/Silberküste/haus-tiwna.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-tiwna&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Silberinsel/Silberküste.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Silberinsel/Baronie Silberküste/Baronie Silberküste.html",
+        "region": "Silberinsel",
+        "house": "Haus Tiwna",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Bryngwern"
+          },
+          {
+            "k": "Typ",
+            "v": "Bauernsiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": "Viehzucht und Landwirtschaft"
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Tiwna"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "Bryngwern liegt im Osten der Insel, auf einem Landstreifen zwischen der Küste zur Rechten und dem Gebirge zur Linken, unter der Baronie von Silberküste, die vom Haus Tiwna regiert wird. Die Siedlung erhebt sich auf einem sanften Hügel und ist umgeben von weiten Weiden und fruchtbaren Feldern, die ideal für die Viehzucht und Landwirtschaft geeignet sind. Die Nähe zu den Bergen bietet natürlichen Schutz vor den stärksten Winden, während die salzhaltige Luft vom Meer den hier angebauten Kräutern einen besonderen Geschmack verleiht. Die Bewohner von Bryngwern sind bekannt für die Haltung widerstandsfähiger Rinder, deren Fleisch und Milch in der gesamten Baronie geschätzt werden.",
+        "secret": false,
+        "dominionId": "baronie-silberkueste"
+      },
+      {
+        "id": "silberinsel-nantbod",
+        "title": "Nantbod",
+        "x": 0.688720703125,
+        "y": 0.3606699393589373,
+        "cat": "mmflrqajby8b",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/bauernsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Silberinsel/Silberküste/haus-tiwna.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-tiwna&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Silberinsel/Silberküste.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Silberinsel/Baronie Silberküste/Baronie Silberküste.html",
+        "region": "Silberinsel",
+        "house": "Haus Tiwna",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Nantbod"
+          },
+          {
+            "k": "Typ",
+            "v": "Bauernsiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": "Imkerei und Getreideanbau"
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Tiwna"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "Nantbod liegt im Norden der Insel, nahe einer wichtigen Handelsstraße, die durch die Baronie von Silberküste verläuft. Die Siedlung gehört zum Haus Tiwna und befindet sich in einer besonderen Lage zwischen den steilen Klippen zur Rechten und dem Gebirge zur Linken. Die exponierte Lage bringt häufig starke Winde mit sich, doch die Bewohner haben sich daran angepasst. Sie betreiben Imkerei und nutzen die wilden Blumen, die auf den kargen Böden entlang der Klippen wachsen, um einzigartigen Honig herzustellen. Darüber hinaus bauen sie robuste Getreidesorten an, die selbst in den windigen und felsigen Bedingungen gut gedeihen. Der Honig aus Nantbod ist in der Region besonders beliebt und wird auch an reisende Händler verkauft, die auf der nahegelegenen Straße unterwegs sind.",
+        "secret": false,
+        "dominionId": "baronie-silberkueste"
+      },
+      {
+        "id": "silberinsel-trethmor",
+        "title": "Trethmor",
+        "x": 0.23095703125,
+        "y": 0.44441235922610456,
+        "cat": "mmflry5furso",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/hafensiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Silberinsel/Silberküste/haus-tiwna.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-tiwna&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Silberinsel/Silberküste.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Silberinsel/Baronie Silberküste/Baronie Silberküste.html",
+        "region": "Silberinsel",
+        "house": "Haus Tiwna",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Trethmor"
+          },
+          {
+            "k": "Typ",
+            "v": "Hafensiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": "Fischerei und Meersalzgewinnung"
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Tiwna"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "Trethmor ist eine kleine Insel im Westen, die zur Baronie des Hauses Tiwna gehört. Die Siedlung liegt nahe der Küste der Hauptinsel und ist von rauen Wellen und felsigen Küsten geprägt. Die Bewohner leben hauptsächlich von der Fischerei, nutzen aber auch die Gezeitenbecken entlang der Küste zur Gewinnung von Meersalz. Die kleine Gemeinschaft von Trethmor ist eng miteinander verbunden, und jeder hilft beim Bau und der Wartung der Fischerboote sowie bei der Salzproduktion. Die Insel mag zwar abgelegen sein, doch die Qualität des hier gewonnenen Meersalzes hat sich in der ganzen Baronie einen Namen gemacht.",
+        "secret": false,
+        "dominionId": "baronie-silberkueste"
+      },
+      {
+        "id": "silberinsel-llanvane",
+        "title": "Llanvane",
+        "x": 0.51416015625,
+        "y": 0.8001732601790355,
+        "cat": "mmflrbzxydg7",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Silberinsel/haus-neidr.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-neidr&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Silberinsel/Silberbucht.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Silberinsel/Grafschaft Silberinsel.html",
+        "region": "Silberinsel",
+        "house": "Haus Neidr",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Llanvane"
+          },
+          {
+            "k": "Typ",
+            "v": "Hauptstadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Neidr"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "baronie-silberbucht"
+      },
+      {
+        "id": "silberinsel-castell-canwyll",
+        "title": "Castell Canwyll",
+        "x": 0.56787109375,
+        "y": 0.8501299451342766,
+        "cat": "location-burg",
+        "templateId": "militaer",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/gro-e-burg.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Silberinsel/Silberbucht/haus-canwyll.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-canwyll&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Silberinsel/Herrschaft der Canwyll.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Silberinsel/Herrschaft der Canwyll/Herrschaft der Canwyll.html",
+        "region": "Silberinsel",
+        "house": "Haus Canwyll",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Castell Canwyll"
+          },
+          {
+            "k": "Typ",
+            "v": "Burg"
+          },
+          {
+            "k": "Befehlshaber",
+            "v": ""
+          },
+          {
+            "k": "Unterstellung",
+            "v": ""
+          },
+          {
+            "k": "Besatzung",
+            "v": ""
+          },
+          {
+            "k": "Aufgaben",
+            "v": ""
+          },
+          {
+            "k": "Ausrüstung",
+            "v": ""
+          },
+          {
+            "k": "Befestigung",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Canwyll"
+          },
+          {
+            "k": "Gewerbe",
+            "v": "Seefestung"
+          }
+        ],
+        "text": "Castell Canwyll ist die Burg und der Sitz des Hauses Canwyll, gelegen auf einer Insel vor der Stadt Llanvane. Ursprünglich residierte das Haus in einer alten Burg innerhalb der Stadt, doch diese wurde für den Ausbau des Marktes der Fortuna aufgegeben. Infolgedessen verlegten die Canwyll ihren Sitz in die alte Festung auf der vorgelagerten Insel, die sie zu einem wehrhaften Herrschaftssitz ausgebaut haben. Castell Canwyll dient heute als erste Verteidigungslinie für Llanvane und überwacht den Zugang zur Stadt über den Seeweg. Die Burg selbst ist von massiven Mauern und Türmen umgeben, und die Garnison ist gut ausgebildet, um Angriffe von See abzuwehren. Castell Canwyll ist nicht nur ein Symbol für die Macht und den Einfluss des Hauses, sondern auch ein wichtiger Schutzwall, der die Sicherheit von Llanvane gewährleistet.",
+        "secret": false,
+        "dominionId": "herrschaft-canwyll"
+      }
+    ],
     "cats": [
       {
         "id": "mmflrbzxydg7",
@@ -105,11 +2334,496 @@
         "id": "mmflxnnhbh4g",
         "label": "Besondere Orte",
         "color": "#6060b0"
+      },
+      {
+        "id": "location-dorf",
+        "label": "Dorf",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/bardensiedlung.png"
+      },
+      {
+        "id": "location-flusssiedlung",
+        "label": "Flusssiedlung",
+        "color": "#2a7aaa",
+        "marker": "/Karten/assets/icons/welt/flusssiedlung.png"
+      },
+      {
+        "id": "location-bauernhof",
+        "label": "Bauernhof",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/bauernsiedlung.png"
+      },
+      {
+        "id": "location-landgut",
+        "label": "Landgut",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/landgut.png"
+      },
+      {
+        "id": "location-anwesen",
+        "label": "Anwesen",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/anwesen.png"
+      },
+      {
+        "id": "location-rittergut",
+        "label": "Rittergut",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/kleine-burg.png"
+      },
+      {
+        "id": "location-weingut",
+        "label": "Weingut",
+        "color": "#a45630",
+        "marker": "/Karten/assets/icons/welt/weingut.png"
+      },
+      {
+        "id": "location-obstplantage",
+        "label": "Obstplantage",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/obstplantage.png"
+      },
+      {
+        "id": "location-viehweide",
+        "label": "Viehweide",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/weide.png"
+      },
+      {
+        "id": "location-gestuet",
+        "label": "Gestüt",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/gest-t.png"
+      },
+      {
+        "id": "location-muehle",
+        "label": "Mühle",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/m-hle.png"
+      },
+      {
+        "id": "location-mine",
+        "label": "Mine",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/einzelnemine.png"
+      },
+      {
+        "id": "location-steinbruch",
+        "label": "Steinbruch",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/steinbruch-1.png"
+      },
+      {
+        "id": "location-schmiede",
+        "label": "Schmiede",
+        "color": "#a45630",
+        "marker": "/Karten/assets/icons/welt/schmiede.png"
+      },
+      {
+        "id": "location-brauerei",
+        "label": "Brauerei",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/brauersiedlung.png"
+      },
+      {
+        "id": "location-fischerei",
+        "label": "Fischerei",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/fischerh-tte.png"
+      },
+      {
+        "id": "location-holzfaellerlager",
+        "label": "Holzfällerlager",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/holzf-llerlager.png"
+      },
+      {
+        "id": "location-koehlerei",
+        "label": "Köhlerei",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/k-hler3.png"
+      },
+      {
+        "id": "location-imkerei",
+        "label": "Imkerei",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/imkerhof.png"
+      },
+      {
+        "id": "location-handelskontor",
+        "label": "Handelskontor",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/kontor.png"
+      },
+      {
+        "id": "location-markt",
+        "label": "Markt",
+        "color": "#a45630",
+        "marker": "/Karten/assets/icons/welt/marktstand.png"
+      },
+      {
+        "id": "location-gildenhaus",
+        "label": "Gildenhaus",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/gildenzentrale.png"
+      },
+      {
+        "id": "location-burg",
+        "label": "Burg",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/gro-e-burg.png"
+      },
+      {
+        "id": "location-turm",
+        "label": "Turm",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/turm.png"
+      },
+      {
+        "id": "location-leuchtturm",
+        "label": "Leuchtturm",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/leuchtturm.png"
+      },
+      {
+        "id": "location-aussenposten",
+        "label": "Außenposten",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/au-enposten.png"
+      },
+      {
+        "id": "location-grenzposten",
+        "label": "Grenzposten",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/zoll-grenzposten.png"
+      },
+      {
+        "id": "location-heerlager",
+        "label": "Heerlager",
+        "color": "#a45630",
+        "marker": "/Karten/assets/icons/welt/heereslager.png"
+      },
+      {
+        "id": "location-lagerplatz",
+        "label": "Lagerplatz",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/lager.png"
+      },
+      {
+        "id": "location-jaegerlager",
+        "label": "Jägerlager",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/j-gerlager.png"
+      },
+      {
+        "id": "location-jagdhaus",
+        "label": "Jagdhaus",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/j-gerhaus.png"
+      },
+      {
+        "id": "location-druidenhuette",
+        "label": "Druidenhütte",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/druidenh-tte.png"
+      },
+      {
+        "id": "location-hexenhuette",
+        "label": "Hexenhütte",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/hexenhaus.png"
+      },
+      {
+        "id": "location-schrein",
+        "label": "Schrein",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/wegschrein.png"
+      },
+      {
+        "id": "location-heiligtum",
+        "label": "Heiligtum",
+        "color": "#a45630",
+        "marker": "/Karten/assets/icons/welt/heiligtum.png"
+      },
+      {
+        "id": "location-friedhof",
+        "label": "Friedhof",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/l-ndlicher-friedhof.png"
+      },
+      {
+        "id": "location-grabstaette",
+        "label": "Grabstätte",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/grabmal.png"
+      },
+      {
+        "id": "location-ruine",
+        "label": "Ruine",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/ruine2.png"
+      },
+      {
+        "id": "location-ausgrabung",
+        "label": "Ausgrabung",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/ausgrabung.png"
+      },
+      {
+        "id": "location-hoehle",
+        "label": "Höhle",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/h-hle.png"
+      },
+      {
+        "id": "location-hain",
+        "label": "Hain",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/hain.png"
+      },
+      {
+        "id": "location-ahnenbaum",
+        "label": "Ahnenbaum",
+        "color": "#a45630",
+        "marker": "/Karten/assets/icons/welt/ahnenbaum.png"
+      },
+      {
+        "id": "location-quelle",
+        "label": "Quelle",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/quelle.png"
+      },
+      {
+        "id": "location-berggipfel",
+        "label": "Berggipfel",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/gipfel.png"
+      },
+      {
+        "id": "location-monsterhort",
+        "label": "Monsterhort",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/kreaturenhort.png"
+      },
+      {
+        "id": "location-banditenlager",
+        "label": "Banditenlager",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/banditenlager.png"
+      },
+      {
+        "id": "location-hafen",
+        "label": "Hafen / Steg",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/gro-er-hafen.png"
+      },
+      {
+        "id": "location-werft",
+        "label": "Werft",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/schiffswerft.png"
+      },
+      {
+        "id": "location-poststation",
+        "label": "Poststation",
+        "color": "#a45630",
+        "marker": "/Karten/assets/icons/welt/poststation.png"
+      },
+      {
+        "id": "location-schule",
+        "label": "Schule",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/l-ndliche-universit-t.png"
+      },
+      {
+        "id": "location-zirkus",
+        "label": "Zirkus",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/zirkus3.png"
+      },
+      {
+        "id": "location-wohnhaus",
+        "label": "Wohnhaus",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/b-uerliches-heim.png"
+      },
+      {
+        "id": "location-brauersiedlung",
+        "label": "Brauersiedlung",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/brauersiedlung.png"
+      },
+      {
+        "id": "location-klostersiedlung",
+        "label": "Klostersiedlung",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/klostersiedlung.png"
+      },
+      {
+        "id": "location-rosszuchtsiedlung",
+        "label": "Rosszuchtsiedlung",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/pferdezuchtsiedlung.png"
+      },
+      {
+        "id": "location-sumpfsiedlung",
+        "label": "Sumpfsiedlung",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/sumpfsiedlung.png"
+      },
+      {
+        "id": "location-unterwasserstadt",
+        "label": "Unterwasserstadt",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/unterwasserstadt.png"
+      },
+      {
+        "id": "location-festung",
+        "label": "Festung",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/festung.png"
+      },
+      {
+        "id": "location-magierturm",
+        "label": "Magierturm",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/magierturm.png"
+      },
+      {
+        "id": "location-diebesgilde",
+        "label": "Diebesgilde",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/diebesgilde.png"
+      },
+      {
+        "id": "location-piratenversteck",
+        "label": "Piratenversteck",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/piratenlager.png"
+      },
+      {
+        "id": "location-schmugglerversteck",
+        "label": "Schmugglerversteck",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/schmuggler3.png"
+      },
+      {
+        "id": "location-verwunschener-wald",
+        "label": "Verwunschener Wald",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/waldschrat.png"
+      },
+      {
+        "id": "location-wahrzeichen",
+        "label": "Wahrzeichen",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/wahrzeichen.png"
+      },
+      {
+        "id": "location-dimensionaler-riss",
+        "label": "Dimensionaler Riss",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/dimensionaler-riss.png"
+      },
+      {
+        "id": "location-galgen",
+        "label": "Galgen",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/exekutionsplatz.png"
+      },
+      {
+        "id": "location-muenzpraegestaette",
+        "label": "Münzprägestätte",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/m-nzpr-ger.png"
+      },
+      {
+        "id": "location-bogenschiessstand",
+        "label": "Bogenschießstand",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/schie-stand2.png"
+      },
+      {
+        "id": "location-ziegelei",
+        "label": "Ziegelei",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/ziegelbrenner.png"
+      },
+      {
+        "id": "location-schiff",
+        "label": "Schiff",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/orte/schiff-gut.png"
+      },
+      {
+        "id": "location-kreaturenlager",
+        "label": "Kreaturenlager",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/goblinlager.png"
+      },
+      {
+        "id": "location-heisse-quellen",
+        "label": "Heiße Quellen",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/hei-e-quellen.png"
+      },
+      {
+        "id": "location-brueckenruine",
+        "label": "Brückenruine",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/zerst-rte-br-cke.png"
+      },
+      {
+        "id": "location-kirchenruine",
+        "label": "Kirchenruine",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/zerst-rte-kirche.png"
+      },
+      {
+        "id": "location-hausruine",
+        "label": "Hausruine",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/zerst-rtes-heim.png"
+      },
+      {
+        "id": "location-huegelgrab",
+        "label": "Hügelgrab",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/h-gelgrab.png"
+      },
+      {
+        "id": "location-plantage",
+        "label": "Plantage",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/landgut.png"
+      },
+      {
+        "id": "location-kultstaette",
+        "label": "Kultstätte",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/okkulter-schrein.png"
+      },
+      {
+        "id": "location-zelt",
+        "label": "Zelt",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/ritterlicheszelt.png"
+      },
+      {
+        "id": "location-faehrstelle",
+        "label": "Fährstelle",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/orte/f-hre-steg.png"
+      },
+      {
+        "id": "location-schlachtfeld",
+        "label": "Schlachtfeld",
+        "color": "#6060b0"
       }
     ],
     "dotSize": 18,
     "lblSize": 13,
-    "regionIcon": "",
+    "regionIcon": "/Stammbäume/assets/images/regions/silberinsel.png",
     "regionTitle": "Silberinsel",
     "mapImages": {
       "normal": "",
@@ -121,6 +2835,72 @@
       "notes": "",
       "groupStatus": {}
     },
-    "markerCatalog": []
+    "markerCatalog": [],
+    "categoryCatalogVersion": 3,
+    "dominions": [
+      {
+        "id": "grafschaft-silberinsel",
+        "name": "Grafschaft Silberinsel",
+        "type": "Grafschaft",
+        "ruler": "Haus Neidr",
+        "seat": "Llanvane",
+        "parentId": "",
+        "note": ""
+      },
+      {
+        "id": "baronie-silberbucht",
+        "name": "Gräfische Baronie Silberbucht",
+        "type": "Gräfische Baronie",
+        "ruler": "Haus Neidr",
+        "seat": "Llanvane",
+        "parentId": "grafschaft-silberinsel",
+        "note": ""
+      },
+      {
+        "id": "herrschaft-saith",
+        "name": "Herrschaft der Saith",
+        "type": "Ritterfürstliche Herrschaft",
+        "ruler": "Haus Saith",
+        "seat": "Llanvane",
+        "parentId": "baronie-silberbucht",
+        "note": ""
+      },
+      {
+        "id": "herrschaft-crefyddol",
+        "name": "Herrschaft der Crefyddol",
+        "type": "Ritterfürstliche Herrschaft",
+        "ruler": "Haus Crefyddol",
+        "seat": "Llanvane",
+        "parentId": "baronie-silberbucht",
+        "note": ""
+      },
+      {
+        "id": "herrschaft-canwyll",
+        "name": "Herrschaft der Canwyll",
+        "type": "Ritterfürstliche Herrschaft",
+        "ruler": "Haus Canwyll",
+        "seat": "Llanvane",
+        "parentId": "baronie-silberbucht",
+        "note": ""
+      },
+      {
+        "id": "herrschaft-silberpfad",
+        "name": "Herrschaft Silberpfad",
+        "type": "Ritterfürstliche Herrschaft",
+        "ruler": "Haus Pyrth",
+        "seat": "Caer Clwyd",
+        "parentId": "grafschaft-silberinsel",
+        "note": ""
+      },
+      {
+        "id": "baronie-silberkueste",
+        "name": "Baronie Silberküste",
+        "type": "Baronie",
+        "ruler": "Haus Tiwna",
+        "seat": "Eiddon",
+        "parentId": "grafschaft-silberinsel",
+        "note": ""
+      }
+    ]
   }
 }

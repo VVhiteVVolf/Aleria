@@ -1,0 +1,136 @@
+{
+  "territories": [
+    {
+      "id": "grafschaft-weidebucht",
+      "name": "Grafschaft Weidebucht",
+      "type": "Grafschaft",
+      "house": "Haus Wylan",
+      "familyId": "haus-wylan",
+      "crest": "/Stammbäume/assets/images/houses/Weidebucht/haus-wylan.png",
+      "banner": "/Stammbäume/assets/images/regions/weidebucht.png",
+      "parentId": "",
+      "seat": "Cerrigarth",
+      "href": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Weidebucht/Grafschaft Weidebucht.html"
+    },
+    {
+      "id": "baronie-melwas-au",
+      "name": "Gräfische Baronie Melwas Au",
+      "type": "Gräfische Baronie",
+      "house": "Haus Wylan",
+      "familyId": "haus-wylan",
+      "crest": "/Stammbäume/assets/images/houses/Weidebucht/haus-wylan.png",
+      "banner": "/Stammbäume/assets/images/regions/Cenyr/Weidebucht/Melwas Au.png",
+      "parentId": "grafschaft-weidebucht",
+      "seat": "Cerrigarth",
+      "href": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Weidebucht/Grafschaft Weidebucht.html"
+    },
+    {
+      "id": "baronie-borkenstein",
+      "name": "Baronie Borkenstein",
+      "type": "Baronie",
+      "house": "Haus Hwyaden",
+      "familyId": "haus-hwyaden",
+      "crest": "/Stammbäume/assets/images/houses/Weidebucht/Borkenstein/haus-hwyaden.png",
+      "banner": "/Stammbäume/assets/images/regions/Cenyr/Weidebucht/Borkenstein.png",
+      "parentId": "grafschaft-weidebucht",
+      "seat": "Trefyddin",
+      "href": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Weidebucht/Baronie Borkenstein/Baronie Borkenstein.html"
+    },
+    {
+      "id": "baronie-hochweide",
+      "name": "Baronie Hochweide",
+      "type": "Baronie",
+      "house": "Haus Tir Addawol",
+      "familyId": "haus-tir-addawol",
+      "crest": "/Stammbäume/assets/images/houses/Weidebucht/Hochweide/haus-tir-addawol.png",
+      "banner": "/Stammbäume/assets/images/regions/Cenyr/Weidebucht/Hochweide.png",
+      "parentId": "grafschaft-weidebucht",
+      "seat": "Glyndale",
+      "href": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Weidebucht/Baronie Hochweide/Baronie Hochweide.html"
+    },
+    {
+      "id": "baronie-dunstholm",
+      "name": "Baronie Dunstholm",
+      "type": "Baronie",
+      "house": "Haus Creyr",
+      "familyId": "haus-creyr",
+      "crest": "/Stammbäume/assets/images/houses/Weidebucht/haus-creyr.png",
+      "banner": "/Stammbäume/assets/images/regions/Cenyr/Weidebucht/Dunstholm.png",
+      "parentId": "grafschaft-weidebucht",
+      "seat": "Esgairmor",
+      "href": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Weidebucht/Baronie Dunstholm/Baronie Dunstholm.html"
+    },
+    {
+      "id": "herrschaft-mochdaer",
+      "name": "Herrschaft der Mochdaer",
+      "type": "Ritterfürstliche Herrschaft",
+      "house": "Haus Mochdaer",
+      "familyId": "haus-mochdaer",
+      "crest": "/Stammbäume/assets/images/houses/Weidebucht/Melwas Au/haus-mochdaer.png",
+      "banner": "/Stammbäume/assets/images/regions/Cenyr/Weidebucht/Herrschaft der Mochdaer.png",
+      "parentId": "baronie-melwas-au",
+      "seat": "Cerrigarth",
+      "href": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Weidebucht/Herrschaft der Mochdaer/Herrschaft der Mochdaer.html",
+      "bannerSource": "https://i.imgur.com/ZnSggG5.png",
+      "bannerSha256": "8a3de6d229f0e371fc229f3a83809c126c7b8bd6474a910a7ed8333226af2c11"
+    },
+    {
+      "id": "herrschaft-dinefwr",
+      "name": "Herrschaft der Dinefwr",
+      "type": "Ritterfürstliche Herrschaft",
+      "house": "Haus Dinefwr",
+      "familyId": "haus-dinefwr",
+      "crest": "/Stammbäume/assets/images/houses/Weidebucht/Melwas Au/haus-dinefwr.png",
+      "banner": "/Stammbäume/assets/images/regions/Cenyr/Weidebucht/Herrschaft der Dinefwr.png",
+      "parentId": "baronie-melwas-au",
+      "seat": "Cerrigarth",
+      "href": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Weidebucht/Herrschaft der Dinefwr/Herrschaft der Dinefwr.html",
+      "bannerSource": "https://i.imgur.com/1jLrdAA.png",
+      "bannerSha256": "7ad6c468a99e65cd968ac97cd4002407dbfbf2ac35ab9987c60ea5c39951199e"
+    },
+    {
+      "id": "weidebucht-teyrngarch-exklaven",
+      "name": "Exklaven der Teyrngarch in der Weidebucht",
+      "type": "Gepachtete Exklaven",
+      "house": "Haus Teyrngarch",
+      "familyId": "haus-teyrngarch",
+      "crest": "/Stammbäume/assets/images/houses/Sonnenküste/Gersteküste/haus-teyrngarch.png",
+      "banner": "/Stammbäume/assets/images/regions/Cenyr/Sonnenküste/Herrschaft der Teyrngarch.png",
+      "parentId": "grafschaft-weidebucht",
+      "seat": "Bragfonnor und Gwellbrwyd",
+      "href": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Herrschaft der Teyrngarch/Herrschaft der Teyrngarch.html",
+      "bannerSource": "https://i.imgur.com/Pe325Dj.png",
+      "bannerSha256": "e74ca1ee7e5a3cecb33a8e906bd8a26cfb45e3959f5f2dc8b334e0a010ed877c",
+      "confirmation": "Gemäß Nutzerklärung vom 19.10.2026: Teyrngarch pachten Siedlungen gebietsübergreifend als Exklaven."
+    },
+    {
+      "id": "erims-hof-gemeinsame-verwaltung",
+      "name": "Erims Hof · gemeinsame Verwaltung",
+      "type": "Gemeinsame Verwaltung",
+      "house": "Haus Dinefwr und Haus Tir Addawol",
+      "familyId": "",
+      "crest": "",
+      "banner": "",
+      "coRulers": [
+        {
+          "house": "Haus Tir Addawol",
+          "familyId": "haus-tir-addawol",
+          "crest": "/Stammbäume/assets/images/houses/Weidebucht/Hochweide/haus-tir-addawol.png",
+          "banner": "/Stammbäume/assets/images/regions/Cenyr/Weidebucht/Hochweide.png",
+          "href": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Weidebucht/Baronie Hochweide/Baronie Hochweide.html"
+        },
+        {
+          "house": "Haus Dinefwr",
+          "familyId": "haus-dinefwr",
+          "crest": "/Stammbäume/assets/images/houses/Weidebucht/Melwas Au/haus-dinefwr.png",
+          "banner": "/Stammbäume/assets/images/regions/Cenyr/Weidebucht/Herrschaft der Dinefwr.png",
+          "href": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Weidebucht/Herrschaft der Dinefwr/Herrschaft der Dinefwr.html"
+        }
+      ],
+      "parentId": "grafschaft-weidebucht",
+      "seat": "Erims Hof",
+      "href": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Weidebucht/Grafschaft Weidebucht.html#geographie",
+      "source": "Ortsbeschreibung: Dinefwr und Tir Addawol teilen Verwaltung und Erträge."
+    }
+  ]
+}

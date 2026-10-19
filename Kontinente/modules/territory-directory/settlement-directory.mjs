@@ -45,7 +45,24 @@ function renderPlaceCard(place) {
     // Keep that information without presenting every affiliation as a place kind.
     copy.append(detailList('', [{ label: place.typeLabel || 'Einordnung', value: place.type, className: 'kingdom-place-type' }]));
   }
-  if (place.house) copy.append(detailList('', [{ label: 'Haus', value: place.house, href: place.houseHref }]));
+  if (place.coRulers?.length) {
+    for (const ruler of place.coRulers) {
+      const href = ruler.familyId ? `/Stammbäume/Stammbaum.html?family=${encodeURIComponent(ruler.familyId)}&mode=view` : '';
+      const list = detailList('', [{ label: 'Haus', value: ruler.house, href }]);
+      const value = list.querySelector('dd');
+      value.classList.add('directory-co-ruler');
+      for (const [src, label, target] of [[ruler.crest, 'Wappen', href], [ruler.banner, 'Banner', ruler.href]]) {
+        if (!src) continue;
+        const image = element('img');
+        image.src = src;
+        image.alt = `${label} ${ruler.house}`;
+        const link = directoryLink(target || href, '', '');
+        link.append(image);
+        value.append(link);
+      }
+      copy.append(list);
+    }
+  } else if (place.house) copy.append(detailList('', [{ label: 'Haus', value: place.house, href: place.houseHref }]));
   if (place.description) {
     const details = element('details', 'directory-place-description');
     details.append(element('summary', '', 'Beschreibung'), element('p', '', place.description));

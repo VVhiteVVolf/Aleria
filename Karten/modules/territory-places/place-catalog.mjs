@@ -10,6 +10,7 @@ export function createPlaceCatalog(territorySource, placeSource) {
       territory, house: territory.house,
       houseHref: territory.familyId ? `/Stammbäume/Stammbaum.html?family=${territory.familyId}&mode=view` : '',
       crest: territory.crest, banner: territory.banner,
+      ...(territory.coRulers?.length ? { coRulers: territory.coRulers } : {}),
       text: description?.text || '', trade: description?.trade || '',
       faction: description?.faction || '', fields: description?.fields || {},
     };
@@ -24,6 +25,7 @@ export function createPlaceRegister(markers, describePlace) {
       id: marker.id, name: marker.title, type: marker.category,
       iconSrc: marker.icon, iconAlt: `${marker.category}: ${marker.title}`,
       house: details.house, houseHref: details.houseHref, description: details.text,
+      ...(details.coRulers?.length ? { coRulers: details.coRulers } : {}),
     })];
   }));
 }

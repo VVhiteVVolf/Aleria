@@ -1,0 +1,2411 @@
+{
+  "schema": "aleria.character-biography-research",
+  "schemaVersion": 1,
+  "status": "character-working-draft",
+  "collectedAt": "2026-10-17T21:25:56.570Z",
+  "publication": {
+    "pushAllowed": false,
+    "deploymentAllowed": false,
+    "onlineWritesPerformed": true,
+    "characterBiographySaved": true,
+    "savedAt": "2026-10-17T21:24:25.504407Z",
+    "characterFieldsWritten": [
+      "biography",
+      "updatedAt"
+    ],
+    "reason": "Der Nutzer möchte die Bio in Skallis Charakteransicht sehen; Speicherung des Arbeitsstands im vorhandenen Bio-Reiter, ohne Git-Push oder Website-Deployment."
+  },
+  "roleplayContext": {
+    "anarautEngagementEstablished": false,
+    "authority": "Ausdrückliche Klarstellung des Nutzers: im Stammbaum korrekt als verlobt eingetragen, im Roleplay noch nicht; diesen Umstand für die Bio ignorieren.",
+    "familyTreeEntryRetained": true
+  },
+  "character": {
+    "id": "person--haus-varulv--skalli-varulv",
+    "name": "Skalli Varulv",
+    "worldPersonId": "person--haus-varulv--skalli-varulv",
+    "birth": 1716,
+    "referenceYear": 1740,
+    "ageByYear": 24,
+    "clan": "Clan Varulv",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-draig/skalli-varulv.jpg",
+    "biographyAtInitialRead": null,
+    "existingImageSets": []
+  },
+  "userEstablishedContent": {
+    "schema": "aleria.character-biography-user-context",
+    "schemaVersion": 1,
+    "source": "Direkte Angaben des Nutzers vom 17. Oktober 2026",
+    "characterName": "Skalli Varulv",
+    "roleplayScope": {
+      "anarautEngagementEstablished": false,
+      "familyTreeEntryRetained": true,
+      "publicationAllowed": false
+    },
+    "martialReputation": {
+      "description": "Taffe aldrimarische Walküre; in ihrem Jahrgang vermutlich die beste Kriegerin weit und breit.",
+      "certainty": "Die Einschätzung als Beste bleibt ausdrücklich eine Vermutung beziehungsweise ihr Ruf.",
+      "exceptionalPhysicalStrength": true,
+      "firstRateCombatSkill": true,
+      "strategicMindSharedWithFather": true,
+      "moreAggressiveThanFather": true,
+      "trainedEarly": true,
+      "differentMartialTrainingFromFather": true,
+      "notThegnar": true,
+      "riding": "Für eine Aldrimarerin recht gute Reiterin, ohne berittene Thegnar-Ausbildung."
+    },
+    "retinue": {
+      "ownRetinueEarlierThanOtherClanScions": true,
+      "earlyStanding": "Trat früh als stärkste Figur unter den Sprösslingen des Clans hervor.",
+      "memberCategories": [
+        "einige Vettern",
+        "Geschwister",
+        "Clanskrieger"
+      ],
+      "namedMembers": [],
+      "purpose": "Schutz ihrer Heimat und Hilfe für die umliegenden Ortschaften.",
+      "dailyLife": "Verbringt die meiste Zeit mit ihrem Gefolge.",
+      "earnedRecognitionThroughDeeds": true,
+      "specificDeedsNotYetNamed": true
+    },
+    "personality": {
+      "manner": "Forsch, direkt, nicht zimperlich; trägt ihr Herz auf der Zunge.",
+      "action": "Handelt entschlossen; kann als ungeduldig oder zielstrebig wahrgenommen werden.",
+      "honesty": "Bevorzugt offene Worte gegenüber gefälliger Nettigkeit aus Angst, jemanden vor den Kopf zu stoßen.",
+      "humor": "Hat guten Humor, aber wenig Geduld mit Narren.",
+      "desires": "Wenn sie etwas wirklich möchte, langt sie zu und fordert es ein.",
+      "protectiveness": "Großer Beschützerinstinkt.",
+      "duty": "Stellt das Wohlergehen ihres Clans über ihr eigenes."
+    },
+    "personalConnections": {
+      "Sleipnir Varulv": "Seine Anerkennung gilt ihrer außergewöhnlichen Kampfkraft; beide teilen strategischen Geist trotz unterschiedlicher Ausbildung und Vorgehensweise.",
+      "Fenrir Varulv": "Seine vom Nutzer so bezeichnete Pferdeblindheit reizt bisweilen ihre geringe Geduld mit Torheit aus. Keine medizinische oder weitere wörtliche Ausdeutung dieses Ausdrucks festgelegt.",
+      "Gleipnir Varulv": "Scherzt gern, Skalli solle seine Nachfolgerin sein, weil sie alle männlichen Varulv-Erben in den Schatten stellt. Das ist kein Erlass zur Änderung der Erbfolge."
+    },
+    "preferences": {
+      "drinking": "Trinkt jeden unter den Tisch.",
+      "alcoholOfChoice": [
+        "Met",
+        "Bier"
+      ],
+      "dislikes": [
+        "albischer Whiskey"
+      ]
+    },
+    "homeAndMarriage": {
+      "attachedToRoriksheim": true,
+      "wantsToLeaveRoriksheim": false,
+      "marriageInPrinciplePossible": true,
+      "clanWelfareAboveOwnWishes": true,
+      "currentPartnerOrEngagementEstablished": false
+    },
+    "writingDirection": "Immersiv, interessant und charakterbezogen schreiben; technische Angaben und nüchterne Listen aus der eigentlichen Biografie heraushalten. Keine benannten Gefolgsleute, Schlachten, Lehrmeister oder aktuellen romantischen Bindungen hinzuerfinden."
+  },
+  "retinue": {
+    "ownRetinueEarlierThanOtherClanScions": true,
+    "earlyStanding": "Trat früh als stärkste Figur unter den Sprösslingen des Clans hervor.",
+    "memberCategories": [
+      "einige Vettern",
+      "Geschwister",
+      "Clanskrieger"
+    ],
+    "namedMembers": [],
+    "purpose": "Schutz ihrer Heimat und Hilfe für die umliegenden Ortschaften.",
+    "dailyLife": "Verbringt die meiste Zeit mit ihrem Gefolge.",
+    "earnedRecognitionThroughDeeds": true,
+    "specificDeedsNotYetNamed": true
+  },
+  "liveRead": {
+    "skalli": {
+      "id": "person--haus-varulv--skalli-varulv",
+      "updateTime": "2026-10-14T11:38:37.235934Z",
+      "source": "Initial read-only Firestore GET"
+    },
+    "anaraut": {
+      "id": "fq586i4k2gj5Lg30dUwW",
+      "updateTime": "2026-09-25T12:33:45.261040Z",
+      "source": "Initial read-only Firestore GET",
+      "genealogyLinked": false
+    }
+  },
+  "sources": [
+    {
+      "id": "user-character-context",
+      "path": "Charakter Archiv Exporte/Biographien/skalli-varulv-vorbereitung-2026-10-17/skalli-nutzervorgaben.json",
+      "use": "Vorrangige direkte Nutzerangaben zu Persönlichkeit, strategischer Begabung, früher Ausbildung, Gefolge, Schutz der Heimat, Familie, Reitkunst und Heiratsvorstellungen."
+    },
+    {
+      "id": "varulv-tree",
+      "path": "Stammbäume/assets/js/data/house-varulv-family.js",
+      "use": "Skallis Eltern, Geschwister und väterliche Familie. Die dortige Verlobung gilt laut Nutzer noch nicht im Roleplay."
+    },
+    {
+      "id": "skaal-tree",
+      "path": "Stammbäume/assets/js/data/house-skaal-family.js",
+      "use": "Mütterliche Großeltern, Onkel und Cousinen und Cousins."
+    },
+    {
+      "id": "draig-tree",
+      "path": "Stammbäume/assets/js/data/house-draig-family.js",
+      "use": "Abweichender Stammbaumkontext zur im Roleplay noch nicht eingetretenen Verlobung; keine gegenwärtige persönliche Bindung daraus ableiten."
+    },
+    {
+      "id": "family-registry",
+      "path": "Stammbäume/assets/js/data/families.registry.js",
+      "use": "Abgleich von Weltpersonen und familienübergreifenden Beziehungen. Hauptakte hat Vorrang."
+    },
+    {
+      "id": "sleipnir-biography",
+      "path": "Charakter Archiv Exporte/Biographien/sleipnir-varulv-2026-10-17/sleipnir-biografie.json",
+      "use": "Skallis kriegerischer Ruf, väterliche Anerkennung, Svantjes Berufung und die Verbindung zu Galahad."
+    },
+    {
+      "id": "freya-biography",
+      "path": "Charakter Archiv Exporte/Biographien/freya-skald-2026-10-17/freya-biografie.json",
+      "use": "Freya als beste Freundin und Love Interest Fenrirs; daraus folgt keine festgelegte eigene Nähe zu Skalli."
+    },
+    {
+      "id": "astrid-companion",
+      "path": "AleriaAlmanach/modules/creatures/catalog/varulv-companions.js",
+      "use": "Astrid als bestehendes Roh-Rhyfel-Reitpferd und Bedeutung des Namens."
+    },
+    {
+      "id": "astrid-export",
+      "path": "Charakter Archiv Exporte/gefaehrten/astrid-2026-10-14/astrid.json",
+      "use": "Bereits bestehender Begleiter, Aussehen, Identität und Bestiariumverweis."
+    },
+    {
+      "id": "wedding-plan",
+      "path": "Ereignisse/Hochzeiten/data/tudwal-revelyn.json",
+      "use": "Nur geplante Teilnahme bei Tudwal und Revelyn am 27. Lichtkehr 1740, kein bereits erlebtes Ereignis."
+    },
+    {
+      "id": "binding-portrait",
+      "path": "Stammbäume/assets/images/portraits/haus-draig/skalli-varulv.jpg",
+      "use": "Tatsächlich angesehenes Hauptporträt; liefert Aussehen, keine gesicherte Persönlichkeitsanalyse."
+    }
+  ],
+  "connections": [
+    {
+      "worldPersonId": "person--haus-varulv--sleipnir-varulv",
+      "name": "Sleipnir Varulv",
+      "relation": "Eltern",
+      "via": [],
+      "birth": "1696",
+      "death": "",
+      "title": "",
+      "sex": "male",
+      "familyId": "haus-varulv",
+      "houseId": "house-varulv",
+      "image": "/Stammbäume/assets/images/portraits/haus-varulv/sleipnir-varulv.png",
+      "notes": "",
+      "parents": [
+        "Sigfast Varulv",
+        "Rekka Kampfgeborene"
+      ],
+      "partners": [
+        {
+          "name": "Svantje Skaal",
+          "type": "marriage",
+          "status": "active"
+        }
+      ],
+      "link": "/Stammbäume/Stammbaum.html?family=haus-varulv&mode=view&person=sleipnir-varulv",
+      "context": "current-roleplay",
+      "personalClosenessEstablished": true,
+      "personalDetail": "Seine Anerkennung gilt ihrer außergewöhnlichen Kampfkraft; beide teilen strategischen Geist trotz unterschiedlicher Ausbildung und Vorgehensweise.",
+      "personalDetailSource": "user-character-context"
+    },
+    {
+      "worldPersonId": "person--haus-skaal--svantje-skaal",
+      "name": "Svantje Skaal",
+      "relation": "Eltern",
+      "via": [],
+      "birth": "1698",
+      "death": "",
+      "title": "Wegverheiratet an Clan Varulv",
+      "sex": "female",
+      "familyId": "haus-skaal",
+      "houseId": "house-skaal",
+      "image": "/Stammbäume/assets/images/portraits/haus-varulv/svantje-skaal.png",
+      "notes": "",
+      "parents": [
+        "Arne Skaal",
+        "Revna Skjegg"
+      ],
+      "partners": [
+        {
+          "name": "Sleipnir Varulv",
+          "type": "marriage",
+          "status": "active"
+        }
+      ],
+      "link": "/Stammbäume/Stammbaum.html?family=haus-skaal&mode=view&person=svantje-skaal",
+      "context": "current-roleplay",
+      "personalClosenessEstablished": false
+    },
+    {
+      "worldPersonId": "person--haus-varulv--fenrir-varulv",
+      "name": "Fenrir Varulv",
+      "relation": "Geschwister",
+      "via": [],
+      "birth": "1718",
+      "death": "",
+      "title": "",
+      "sex": "male",
+      "familyId": "haus-varulv",
+      "houseId": "house-varulv",
+      "image": "/Stammbäume/assets/images/portraits/haus-varulv/fenrir-varulv.png",
+      "notes": "",
+      "parents": [
+        "Sleipnir Varulv",
+        "Svantje Skaal"
+      ],
+      "partners": [],
+      "link": "/Stammbäume/Stammbaum.html?family=haus-varulv&mode=view&person=fenrir-varulv",
+      "context": "current-roleplay",
+      "personalClosenessEstablished": true,
+      "personalDetail": "Seine vom Nutzer so bezeichnete Pferdeblindheit reizt bisweilen ihre geringe Geduld mit Torheit aus. Keine medizinische oder weitere wörtliche Ausdeutung dieses Ausdrucks festgelegt.",
+      "personalDetailSource": "user-character-context"
+    },
+    {
+      "worldPersonId": "person--haus-varulv--hati-varulv",
+      "name": "Hati Varulv",
+      "relation": "Geschwister",
+      "via": [],
+      "birth": "1725",
+      "death": "",
+      "title": "",
+      "sex": "male",
+      "familyId": "haus-varulv",
+      "houseId": "house-varulv",
+      "image": "/Stammbäume/assets/images/portraits/haus-varulv/hati-varulv.png",
+      "notes": "",
+      "parents": [
+        "Sleipnir Varulv",
+        "Svantje Skaal"
+      ],
+      "partners": [],
+      "link": "/Stammbäume/Stammbaum.html?family=haus-varulv&mode=view&person=hati-varulv",
+      "context": "current-roleplay",
+      "personalClosenessEstablished": false
+    },
+    {
+      "worldPersonId": "person--haus-varulv--sigfast-varulv",
+      "name": "Sigfast Varulv",
+      "relation": "Großeltern",
+      "via": [
+        "Sleipnir Varulv"
+      ],
+      "birth": "1667",
+      "death": "1720",
+      "title": "Jarl von Roriksheim",
+      "sex": "male",
+      "familyId": "haus-varulv",
+      "houseId": "house-varulv",
+      "image": "/Stammbäume/assets/images/portraits/haus-varulv/sigfast-varulv.png",
+      "notes": "",
+      "parents": [
+        "Steinarr Varulv",
+        "Aslaug Sökeren"
+      ],
+      "partners": [
+        {
+          "name": "Rekka Kampfgeborene",
+          "type": "marriage",
+          "status": "ended"
+        }
+      ],
+      "link": "/Stammbäume/Stammbaum.html?family=haus-varulv&mode=view&person=sigfast-varulv",
+      "context": "current-roleplay",
+      "personalClosenessEstablished": false
+    },
+    {
+      "worldPersonId": "person--haus-kampfgeborene--rekka-kampfgeborene",
+      "name": "Rekka Kampfgeborene",
+      "relation": "Großeltern",
+      "via": [
+        "Sleipnir Varulv"
+      ],
+      "birth": "1674",
+      "death": "",
+      "title": "Wegverheiratet an Clan Varulv",
+      "sex": "female",
+      "familyId": "haus-kampfgeborene",
+      "houseId": "house-kampfgeborene",
+      "image": "/Stammbäume/assets/images/portraits/haus-varulv/rekka-kampfgeborene.png",
+      "notes": "",
+      "parents": [
+        "Halstein Kampfgeborener",
+        "Ylfrun Brathfengr"
+      ],
+      "partners": [
+        {
+          "name": "Sigfast Varulv",
+          "type": "marriage",
+          "status": "ended"
+        }
+      ],
+      "link": "/Stammbäume/Stammbaum.html?family=haus-kampfgeborene&mode=view&person=rekka-kampfgeborene",
+      "context": "current-roleplay",
+      "personalClosenessEstablished": false
+    },
+    {
+      "worldPersonId": "person--haus-varulv--gleipnir-varulv",
+      "name": "Gleipnir Varulv",
+      "relation": "Tanten und Onkel",
+      "via": [
+        "Sleipnir Varulv"
+      ],
+      "birth": "1694",
+      "death": "",
+      "title": "Jarl von Roriksheim seit 1720",
+      "sex": "male",
+      "familyId": "haus-varulv",
+      "houseId": "house-varulv",
+      "image": "/Stammbäume/assets/images/portraits/haus-varulv/gleipnir-varulv.png",
+      "notes": "",
+      "parents": [
+        "Sigfast Varulv",
+        "Rekka Kampfgeborene"
+      ],
+      "partners": [
+        {
+          "name": "Antje Skald",
+          "type": "marriage",
+          "status": "active"
+        }
+      ],
+      "link": "/Stammbäume/Stammbaum.html?family=haus-varulv&mode=view&person=gleipnir-varulv",
+      "context": "current-roleplay",
+      "personalClosenessEstablished": true,
+      "personalDetail": "Scherzt gern, Skalli solle seine Nachfolgerin sein, weil sie alle männlichen Varulv-Erben in den Schatten stellt. Das ist kein Erlass zur Änderung der Erbfolge.",
+      "personalDetailSource": "user-character-context"
+    },
+    {
+      "worldPersonId": "person--haus-skald--antke-skald-varulv",
+      "name": "Antje Skald",
+      "relation": "Angeheiratete Verwandtschaft",
+      "via": [
+        "Gleipnir Varulv"
+      ],
+      "birth": "1695",
+      "death": "",
+      "title": "Wegverheiratet an Clan Varulv",
+      "sex": "female",
+      "familyId": "haus-skald",
+      "houseId": "house-skald",
+      "image": "/Stammbäume/assets/images/portraits/haus-varulv/antke-skald-varulv.png",
+      "notes": "Die Skald-Quelle unterscheidet Antje (1695, Ehe mit Gleipnir Varulv) ausdrücklich von Antke (1696, Ehe mit Mandon Ceirwyn). Die ältere Varulv-Gegenakte schrieb Antjes Namen fälschlich ebenfalls Antke.",
+      "parents": [
+        "Ulfrik Skald",
+        "Rikke Sökeren"
+      ],
+      "partners": [
+        {
+          "name": "Gleipnir Varulv",
+          "type": "marriage",
+          "status": "active"
+        }
+      ],
+      "link": "/Stammbäume/Stammbaum.html?family=haus-skald&mode=view&person=antke-skald-varulv",
+      "context": "current-roleplay",
+      "personalClosenessEstablished": false
+    },
+    {
+      "worldPersonId": "person--haus-varulv--geri-varulv",
+      "name": "Geri Varulv",
+      "relation": "Cousinen und Cousins",
+      "via": [
+        "Gleipnir Varulv"
+      ],
+      "birth": "1714",
+      "death": "",
+      "title": "Erster Erbe des Clans Varulv",
+      "sex": "male",
+      "familyId": "haus-varulv",
+      "houseId": "house-varulv",
+      "image": "/Stammbäume/assets/images/portraits/haus-varulv/geri-varulv.jpeg",
+      "notes": "",
+      "parents": [
+        "Gleipnir Varulv",
+        "Antje Skald"
+      ],
+      "partners": [],
+      "link": "/Stammbäume/Stammbaum.html?family=haus-varulv&mode=view&person=geri-varulv",
+      "context": "current-roleplay",
+      "personalClosenessEstablished": false
+    },
+    {
+      "worldPersonId": "person--haus-varulv--freki-varulv",
+      "name": "Freki Varulv",
+      "relation": "Cousinen und Cousins",
+      "via": [
+        "Gleipnir Varulv"
+      ],
+      "birth": "1718",
+      "death": "",
+      "title": "Zweiter Erbe des Clans Varulv",
+      "sex": "male",
+      "familyId": "haus-varulv",
+      "houseId": "house-varulv",
+      "image": "/Stammbäume/assets/images/portraits/haus-varulv/freki-varulv.png",
+      "notes": "",
+      "parents": [
+        "Gleipnir Varulv",
+        "Antje Skald"
+      ],
+      "partners": [],
+      "link": "/Stammbäume/Stammbaum.html?family=haus-varulv&mode=view&person=freki-varulv",
+      "context": "current-roleplay",
+      "personalClosenessEstablished": false
+    },
+    {
+      "worldPersonId": "person--haus-varulv--floki-varulv",
+      "name": "Floki Varulv",
+      "relation": "Cousinen und Cousins",
+      "via": [
+        "Gleipnir Varulv"
+      ],
+      "birth": "1723",
+      "death": "",
+      "title": "Dritter Erbe des Clans Varulv",
+      "sex": "male",
+      "familyId": "haus-varulv",
+      "houseId": "house-varulv",
+      "image": "/Stammbäume/assets/images/portraits/haus-varulv/floki-varulv.png",
+      "notes": "",
+      "parents": [
+        "Gleipnir Varulv",
+        "Antje Skald"
+      ],
+      "partners": [],
+      "link": "/Stammbäume/Stammbaum.html?family=haus-varulv&mode=view&person=floki-varulv",
+      "context": "current-roleplay",
+      "personalClosenessEstablished": false
+    },
+    {
+      "worldPersonId": "person--haus-varulv--skadi-varulv",
+      "name": "Skadi Varulv",
+      "relation": "Cousinen und Cousins",
+      "via": [
+        "Gleipnir Varulv"
+      ],
+      "birth": "1719",
+      "death": "",
+      "title": "",
+      "sex": "female",
+      "familyId": "haus-varulv",
+      "houseId": "house-varulv",
+      "image": "/Stammbäume/assets/images/portraits/haus-varulv/skadi-varulv.png",
+      "notes": "",
+      "parents": [
+        "Gleipnir Varulv",
+        "Antje Skald"
+      ],
+      "partners": [],
+      "link": "/Stammbäume/Stammbaum.html?family=haus-varulv&mode=view&person=skadi-varulv",
+      "context": "current-roleplay",
+      "personalClosenessEstablished": false
+    },
+    {
+      "worldPersonId": "person--haus-varulv--freyrs-varulv",
+      "name": "Freyrs Varulv",
+      "relation": "Tanten und Onkel",
+      "via": [
+        "Sleipnir Varulv"
+      ],
+      "birth": "1698",
+      "death": "",
+      "title": "Wegverheiratet an Clan Wargh",
+      "sex": "female",
+      "familyId": "haus-varulv",
+      "houseId": "house-varulv",
+      "image": "/Stammbäume/assets/images/portraits/haus-varulv/freyrs-varulv.png",
+      "notes": "",
+      "parents": [
+        "Sigfast Varulv",
+        "Rekka Kampfgeborene"
+      ],
+      "partners": [
+        {
+          "name": "Ketill Wargh",
+          "type": "marriage",
+          "status": "active"
+        }
+      ],
+      "link": "/Stammbäume/Stammbaum.html?family=haus-varulv&mode=view&person=freyrs-varulv",
+      "context": "current-roleplay",
+      "personalClosenessEstablished": false
+    },
+    {
+      "worldPersonId": "person--haus-wargh--ketill-wargh",
+      "name": "Ketill Wargh",
+      "relation": "Angeheiratete Verwandtschaft",
+      "via": [
+        "Freyrs Varulv"
+      ],
+      "birth": "1693",
+      "death": "",
+      "title": "Jarl von Ivarsheim seit 1734",
+      "sex": "male",
+      "familyId": "haus-wargh",
+      "houseId": "house-wargh",
+      "image": "/Stammbäume/assets/images/portraits/haus-varulv/ketill-wargh.png",
+      "notes": "",
+      "parents": [
+        "Angebroda Skald",
+        "Borg Wargh"
+      ],
+      "partners": [
+        {
+          "name": "Freyrs Varulv",
+          "type": "marriage",
+          "status": "active"
+        }
+      ],
+      "link": "/Stammbäume/Stammbaum.html?family=haus-wargh&mode=view&person=ketill-wargh",
+      "context": "current-roleplay",
+      "personalClosenessEstablished": false
+    },
+    {
+      "worldPersonId": "person--haus-wargh--halskar-wargh",
+      "name": "Halskar Wargh",
+      "relation": "Cousinen und Cousins",
+      "via": [
+        "Freyrs Varulv"
+      ],
+      "birth": "1718",
+      "death": "",
+      "title": "Erster Erbe des Clans Wargh",
+      "sex": "male",
+      "familyId": "haus-wargh",
+      "houseId": "house-wargh",
+      "image": "/Stammbäume/assets/images/portraits/haus-wargh/halskar-wargh.png",
+      "notes": "",
+      "parents": [
+        "Freyrs Varulv",
+        "Ketill Wargh"
+      ],
+      "partners": [],
+      "link": "/Stammbäume/Stammbaum.html?family=haus-wargh&mode=view&person=halskar-wargh",
+      "context": "current-roleplay",
+      "personalClosenessEstablished": false
+    },
+    {
+      "worldPersonId": "person--haus-wargh--hildessa-wargh",
+      "name": "Hildessa Wargh",
+      "relation": "Cousinen und Cousins",
+      "via": [
+        "Freyrs Varulv"
+      ],
+      "birth": "1719",
+      "death": "",
+      "title": "Wegverlobt an Clan Vaeren",
+      "sex": "female",
+      "familyId": "haus-wargh",
+      "houseId": "house-wargh",
+      "image": "/Stammbäume/assets/images/portraits/haus-wargh/hildessa-wargh.png",
+      "notes": "",
+      "parents": [
+        "Freyrs Varulv",
+        "Ketill Wargh"
+      ],
+      "partners": [
+        {
+          "name": "Durathor Vaeren",
+          "type": "engagement",
+          "status": "active"
+        }
+      ],
+      "link": "/Stammbäume/Stammbaum.html?family=haus-wargh&mode=view&person=hildessa-wargh",
+      "context": "current-roleplay",
+      "personalClosenessEstablished": false
+    },
+    {
+      "worldPersonId": "person--haus-wargh--hildegard-wargh",
+      "name": "Hildegard Wargh",
+      "relation": "Cousinen und Cousins",
+      "via": [
+        "Freyrs Varulv"
+      ],
+      "birth": "1724",
+      "death": "",
+      "title": "Wegverlobt an Haus Arth O'Talgarth",
+      "sex": "female",
+      "familyId": "haus-wargh",
+      "houseId": "house-wargh",
+      "image": "/Stammbäume/assets/images/portraits/haus-arth/hildegard-wargh.jpg",
+      "notes": "",
+      "parents": [
+        "Freyrs Varulv",
+        "Ketill Wargh"
+      ],
+      "partners": [
+        {
+          "name": "Denawal Arth",
+          "type": "engagement",
+          "status": "active"
+        }
+      ],
+      "link": "/Stammbäume/Stammbaum.html?family=haus-wargh&mode=view&person=hildegard-wargh",
+      "context": "current-roleplay",
+      "personalClosenessEstablished": false
+    },
+    {
+      "worldPersonId": "person--haus-skaal--arne-skaal",
+      "name": "Arne Skaal",
+      "relation": "Großeltern",
+      "via": [
+        "Svantje Skaal"
+      ],
+      "birth": "1669",
+      "death": "",
+      "title": "",
+      "sex": "male",
+      "familyId": "haus-skaal",
+      "houseId": "house-skaal",
+      "image": "/Stammbäume/assets/images/portraits/haus-skjegg/arne-skaal.png",
+      "notes": "",
+      "parents": [
+        "Sigvard Skaal",
+        "Gudrun Skogg"
+      ],
+      "partners": [
+        {
+          "name": "Revna Skjegg",
+          "type": "marriage",
+          "status": "active"
+        }
+      ],
+      "link": "/Stammbäume/Stammbaum.html?family=haus-skaal&mode=view&person=arne-skaal",
+      "context": "current-roleplay",
+      "personalClosenessEstablished": false
+    },
+    {
+      "worldPersonId": "person--haus-skjegg--revna-skjegg",
+      "name": "Revna Skjegg",
+      "relation": "Großeltern",
+      "via": [
+        "Svantje Skaal"
+      ],
+      "birth": "1673",
+      "death": "",
+      "title": "Wegverheiratet an Clan Skaal",
+      "sex": "female",
+      "familyId": "haus-skjegg",
+      "houseId": "house-skjegg",
+      "image": "/Stammbäume/assets/images/portraits/haus-skjegg/revna-skjegg.png",
+      "notes": "",
+      "parents": [
+        "Valdemar Skjegg",
+        "Ljosdis Kampfgeborene"
+      ],
+      "partners": [
+        {
+          "name": "Arne Skaal",
+          "type": "marriage",
+          "status": "active"
+        }
+      ],
+      "link": "/Stammbäume/Stammbaum.html?family=haus-skjegg&mode=view&person=revna-skjegg",
+      "context": "current-roleplay",
+      "personalClosenessEstablished": false
+    },
+    {
+      "worldPersonId": "person--haus-skaal--sjovald-skaal",
+      "name": "Sjovald Skaal",
+      "relation": "Tanten und Onkel",
+      "via": [
+        "Svantje Skaal"
+      ],
+      "birth": "1692",
+      "death": "1720",
+      "title": "",
+      "sex": "male",
+      "familyId": "haus-skaal",
+      "houseId": "house-skaal",
+      "image": "/Stammbäume/assets/images/portraits/haus-skaal/sjovald-skaal.png",
+      "notes": "",
+      "parents": [
+        "Arne Skaal",
+        "Revna Skjegg"
+      ],
+      "partners": [
+        {
+          "name": "Dagny Helgr",
+          "type": "marriage",
+          "status": "ended"
+        }
+      ],
+      "link": "/Stammbäume/Stammbaum.html?family=haus-skaal&mode=view&person=sjovald-skaal",
+      "context": "current-roleplay",
+      "personalClosenessEstablished": false
+    },
+    {
+      "worldPersonId": "person--haus-helgr--dagny-helgr",
+      "name": "Dagny Helgr",
+      "relation": "Angeheiratete Verwandtschaft",
+      "via": [
+        "Sjovald Skaal"
+      ],
+      "birth": "1695",
+      "death": "",
+      "title": "Wegverheiratet an Clan Skaal",
+      "sex": "female",
+      "familyId": "haus-helgr",
+      "houseId": "house-helgr",
+      "image": "/Stammbäume/assets/images/portraits/haus-skaal/dagny-helgr.png",
+      "notes": "",
+      "parents": [
+        "Torgeir Helgr",
+        "Petka Riesentod"
+      ],
+      "partners": [
+        {
+          "name": "Sjovald Skaal",
+          "type": "marriage",
+          "status": "ended"
+        }
+      ],
+      "link": "/Stammbäume/Stammbaum.html?family=haus-helgr&mode=view&person=dagny-helgr",
+      "context": "current-roleplay",
+      "personalClosenessEstablished": false
+    },
+    {
+      "worldPersonId": "person--haus-skaal--brynja-skaal",
+      "name": "Brynja Skaal",
+      "relation": "Cousinen und Cousins",
+      "via": [
+        "Sjovald Skaal"
+      ],
+      "birth": "1713",
+      "death": "",
+      "title": "",
+      "sex": "female",
+      "familyId": "haus-skaal",
+      "houseId": "house-skaal",
+      "image": "/Stammbäume/assets/images/portraits/haus-skaal/brynja-skaal.png",
+      "notes": "",
+      "parents": [
+        "Sjovald Skaal",
+        "Dagny Helgr"
+      ],
+      "partners": [],
+      "link": "/Stammbäume/Stammbaum.html?family=haus-skaal&mode=view&person=brynja-skaal",
+      "context": "current-roleplay",
+      "personalClosenessEstablished": false
+    },
+    {
+      "worldPersonId": "person--haus-skaal--sven-skaal",
+      "name": "Sven Skaal",
+      "relation": "Tanten und Onkel",
+      "via": [
+        "Svantje Skaal"
+      ],
+      "birth": "1694",
+      "death": "",
+      "title": "",
+      "sex": "male",
+      "familyId": "haus-skaal",
+      "houseId": "house-skaal",
+      "image": "/Stammbäume/assets/images/portraits/haus-skaal/sven-skaal.png",
+      "notes": "",
+      "parents": [
+        "Arne Skaal",
+        "Revna Skjegg"
+      ],
+      "partners": [
+        {
+          "name": "Runa Sökaren",
+          "type": "marriage",
+          "status": "active"
+        }
+      ],
+      "link": "/Stammbäume/Stammbaum.html?family=haus-skaal&mode=view&person=sven-skaal",
+      "context": "current-roleplay",
+      "personalClosenessEstablished": false
+    },
+    {
+      "worldPersonId": "person--haus-soekeren--runa-soekaren",
+      "name": "Runa Sökaren",
+      "relation": "Angeheiratete Verwandtschaft",
+      "via": [
+        "Sven Skaal"
+      ],
+      "birth": "1697",
+      "death": "",
+      "title": "Wegverheiratet an Clan Skaal",
+      "sex": "female",
+      "familyId": "haus-soekeren",
+      "houseId": "house-soekeren",
+      "image": "/Stammbäume/assets/images/portraits/haus-skaal/runa-soekaren.png",
+      "notes": "",
+      "parents": [
+        "Thorlak Sökeren",
+        "Hildegard Sökering"
+      ],
+      "partners": [
+        {
+          "name": "Sven Skaal",
+          "type": "marriage",
+          "status": "active"
+        }
+      ],
+      "link": "/Stammbäume/Stammbaum.html?family=haus-soekeren&mode=view&person=runa-soekaren",
+      "context": "current-roleplay",
+      "personalClosenessEstablished": false
+    },
+    {
+      "worldPersonId": "person--haus-skaal--jorah-skaal",
+      "name": "Jorah Skaal",
+      "relation": "Cousinen und Cousins",
+      "via": [
+        "Sven Skaal"
+      ],
+      "birth": "1718",
+      "death": "",
+      "title": "",
+      "sex": "male",
+      "familyId": "haus-skaal",
+      "houseId": "house-skaal",
+      "image": "/Stammbäume/assets/images/portraits/haus-skaal/jorah-skaal.png",
+      "notes": "",
+      "parents": [
+        "Sven Skaal",
+        "Runa Sökaren"
+      ],
+      "partners": [],
+      "link": "/Stammbäume/Stammbaum.html?family=haus-skaal&mode=view&person=jorah-skaal",
+      "context": "current-roleplay",
+      "personalClosenessEstablished": false
+    },
+    {
+      "worldPersonId": "person--haus-skaal--juna-skaal",
+      "name": "Juna Skaal",
+      "relation": "Cousinen und Cousins",
+      "via": [
+        "Sven Skaal"
+      ],
+      "birth": "1721",
+      "death": "",
+      "title": "",
+      "sex": "female",
+      "familyId": "haus-skaal",
+      "houseId": "house-skaal",
+      "image": "/Stammbäume/assets/images/portraits/haus-skaal/juna-skaal.png",
+      "notes": "",
+      "parents": [
+        "Sven Skaal",
+        "Runa Sökaren"
+      ],
+      "partners": [],
+      "link": "/Stammbäume/Stammbaum.html?family=haus-skaal&mode=view&person=juna-skaal",
+      "context": "current-roleplay",
+      "personalClosenessEstablished": false
+    },
+    {
+      "worldPersonId": "person--haus-skaal--duna-skaal",
+      "name": "Duna Skaal",
+      "relation": "Cousinen und Cousins",
+      "via": [
+        "Sven Skaal"
+      ],
+      "birth": "1722",
+      "death": "",
+      "title": "",
+      "sex": "female",
+      "familyId": "haus-skaal",
+      "houseId": "house-skaal",
+      "image": "/Stammbäume/assets/images/portraits/haus-skaal/duna-skaal.png",
+      "notes": "",
+      "parents": [
+        "Sven Skaal",
+        "Runa Sökaren"
+      ],
+      "partners": [],
+      "link": "/Stammbäume/Stammbaum.html?family=haus-skaal&mode=view&person=duna-skaal",
+      "context": "current-roleplay",
+      "personalClosenessEstablished": false
+    },
+    {
+      "worldPersonId": "person--haus-skaal--dora-skaal",
+      "name": "Dora Skaal",
+      "relation": "Cousinen und Cousins",
+      "via": [
+        "Sven Skaal"
+      ],
+      "birth": "1724",
+      "death": "",
+      "title": "",
+      "sex": "female",
+      "familyId": "haus-skaal",
+      "houseId": "house-skaal",
+      "image": "/Stammbäume/assets/images/portraits/haus-skaal/dora-skaal.png",
+      "notes": "",
+      "parents": [
+        "Sven Skaal",
+        "Runa Sökaren"
+      ],
+      "partners": [],
+      "link": "/Stammbäume/Stammbaum.html?family=haus-skaal&mode=view&person=dora-skaal",
+      "context": "current-roleplay",
+      "personalClosenessEstablished": false
+    },
+    {
+      "worldPersonId": "person--haus-draig--galahad-draig",
+      "name": "Galahad Draig",
+      "relation": "Bekannter ihres Vaters",
+      "via": [],
+      "birth": "1695",
+      "death": "",
+      "title": "Graf von Celtigerns Wacht",
+      "sex": "male",
+      "familyId": "haus-draig",
+      "houseId": "house-draig",
+      "image": "/Stammbäume/assets/images/portraits/haus-draig/galahad-draig.jpg",
+      "notes": "",
+      "parents": [
+        "Rhodri Draig",
+        "Angharad Pendrag"
+      ],
+      "partners": [
+        {
+          "name": "Gwendolyn Aderyn",
+          "type": "marriage",
+          "status": "active"
+        }
+      ],
+      "link": "/Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=galahad-draig",
+      "context": "current-roleplay",
+      "personalClosenessEstablished": false
+    },
+    {
+      "worldPersonId": "person--haus-skald--freya-skald",
+      "name": "Freya Skald",
+      "relation": "Beste Freundin Fenrirs und mögliche Partnerin",
+      "via": [],
+      "birth": "1720",
+      "death": "",
+      "title": "",
+      "sex": "female",
+      "familyId": "haus-skald",
+      "houseId": "house-skald",
+      "image": "/Stammbäume/assets/images/portraits/haus-skald/freya-skald.png",
+      "notes": "",
+      "parents": [
+        "Ragnar Skald",
+        "Lagertha Eisenjungfer"
+      ],
+      "partners": [],
+      "link": "/Stammbäume/Stammbaum.html?family=haus-skald&mode=view&person=freya-skald",
+      "context": "current-roleplay",
+      "personalClosenessEstablished": false
+    },
+    {
+      "worldPersonId": "person--haus-varulv--astrid-varulv",
+      "name": "Astrid Varulv",
+      "relation": "Historische Namenspatin des Pferdes",
+      "via": [],
+      "birth": "1603",
+      "death": "1627",
+      "title": "Wegverheiratet an Clan Vaeren",
+      "sex": "female",
+      "familyId": "haus-varulv",
+      "houseId": "house-varulv",
+      "image": "/Stammbäume/assets/images/portraits/haus-varulv/astrid-varulv.png",
+      "notes": "",
+      "parents": [
+        "Eldgrim Varulv",
+        "Saoirse Dubglais"
+      ],
+      "partners": [
+        {
+          "name": "Roger Vaeren",
+          "type": "marriage",
+          "status": "active"
+        }
+      ],
+      "link": "/Stammbäume/Stammbaum.html?family=haus-varulv&mode=view&person=astrid-varulv",
+      "context": "current-roleplay",
+      "personalClosenessEstablished": false
+    },
+    {
+      "name": "Astrid",
+      "relation": "Reitpferd",
+      "creatureId": "companion-skalli-astrid",
+      "inventoryItemId": "skalli-astrid",
+      "species": "Roh-Rhyfel (Hest × Ceffyl)",
+      "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-varulv%2Fc8729937-92ea-482e-961c-9eea55d49798%2Foriginal.png?alt=media",
+      "localImage": "/AleriaAlmanach/assets/companions/haus-varulv/astrid.png",
+      "bestiaryReference": {
+        "id": "tiere/pferde/zuchtbuch/roh-rhyfel",
+        "url": "/Bestiarium/tiere/pferde/zuchtbuch/index.html#kreuzung-ceffyl-mit-hest"
+      }
+    }
+  ],
+  "familyTreeOnlyConnections": [
+    {
+      "worldPersonId": "person--haus-draig--anaraut-draig",
+      "name": "Anaraut Draig",
+      "relation": "Verlobter",
+      "via": [],
+      "birth": "1715",
+      "death": "",
+      "title": "",
+      "sex": "male",
+      "familyId": "haus-draig",
+      "houseId": "house-draig",
+      "image": "/Stammbäume/assets/images/portraits/haus-draig/anaraut-draig.jpg",
+      "notes": "",
+      "parents": [
+        "Galahad Draig",
+        "Gwendolyn Aderyn"
+      ],
+      "partners": [
+        {
+          "name": "Skalli Varulv",
+          "type": "engagement",
+          "status": "active"
+        }
+      ],
+      "link": "/Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=anaraut-draig",
+      "context": "family-tree-only",
+      "usableInCurrentBiography": false,
+      "reason": "Die Verlobung mit Anaraut ist im aktuellen Roleplay noch nicht eingetreten."
+    },
+    {
+      "worldPersonId": "person--haus-aderyn--gwendolyn-aderyn",
+      "name": "Gwendolyn Aderyn",
+      "relation": "Eltern des Verlobten",
+      "via": [],
+      "birth": "1695",
+      "death": "",
+      "title": "Gräfin von Celtigerns Wacht",
+      "sex": "female",
+      "familyId": "haus-aderyn",
+      "houseId": "house-aderyn",
+      "image": "/Stammbäume/assets/images/portraits/haus-draig/gwendolyn-aderyn.jpg",
+      "notes": "",
+      "parents": [
+        "Mifawi Illewod",
+        "Catel Aderyn"
+      ],
+      "partners": [
+        {
+          "name": "Galahad Draig",
+          "type": "marriage",
+          "status": "active"
+        }
+      ],
+      "link": "/Stammbäume/Stammbaum.html?family=haus-aderyn&mode=view&person=gwendolyn-aderyn",
+      "context": "family-tree-only",
+      "usableInCurrentBiography": false,
+      "reason": "Die Verlobung mit Anaraut ist im aktuellen Roleplay noch nicht eingetreten."
+    },
+    {
+      "worldPersonId": "person--haus-draig--idwal-draig",
+      "name": "Idwal Draig",
+      "relation": "Geschwister des Verlobten",
+      "via": [],
+      "birth": "1716",
+      "death": "",
+      "title": "",
+      "sex": "male",
+      "familyId": "haus-draig",
+      "houseId": "house-draig",
+      "image": "/Stammbäume/assets/images/portraits/haus-draig/idwal-draig.jpg",
+      "notes": "",
+      "parents": [
+        "Galahad Draig",
+        "Gwendolyn Aderyn"
+      ],
+      "partners": [
+        {
+          "name": "Unbekannte Verlobte",
+          "type": "engagement",
+          "status": "active"
+        }
+      ],
+      "link": "/Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=idwal-draig",
+      "context": "family-tree-only",
+      "usableInCurrentBiography": false,
+      "reason": "Die Verlobung mit Anaraut ist im aktuellen Roleplay noch nicht eingetreten."
+    },
+    {
+      "worldPersonId": "person--haus-draig--tudwal-draig",
+      "name": "Tudwal Draig",
+      "relation": "Geschwister des Verlobten",
+      "via": [],
+      "birth": "1717",
+      "death": "",
+      "title": "",
+      "sex": "male",
+      "familyId": "haus-draig",
+      "houseId": "house-draig",
+      "image": "/Stammbäume/assets/images/portraits/haus-draig/tudwal-draig.jpg",
+      "notes": "",
+      "parents": [
+        "Galahad Draig",
+        "Gwendolyn Aderyn"
+      ],
+      "partners": [
+        {
+          "name": "Revelyn Penderyn",
+          "type": "engagement",
+          "status": "active"
+        }
+      ],
+      "link": "/Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=tudwal-draig",
+      "context": "family-tree-only",
+      "usableInCurrentBiography": false,
+      "reason": "Die Verlobung mit Anaraut ist im aktuellen Roleplay noch nicht eingetreten."
+    },
+    {
+      "worldPersonId": "person--haus-penderyn--revelyn-penderyn",
+      "name": "Revelyn Penderyn",
+      "relation": "Angeheiratete Familie des Verlobten",
+      "via": [
+        "Tudwal Draig"
+      ],
+      "birth": "1718",
+      "death": "",
+      "title": "Wegverlobt an Haus Draig",
+      "sex": "female",
+      "familyId": "haus-penderyn",
+      "houseId": "house-penderyn",
+      "image": "/Stammbäume/assets/images/portraits/haus-draig/revelyn-penderyn.jpg",
+      "notes": "",
+      "parents": [
+        "Aneurin Penderyn",
+        "Meinir Sgwarnog"
+      ],
+      "partners": [
+        {
+          "name": "Tudwal Draig",
+          "type": "engagement",
+          "status": "active"
+        }
+      ],
+      "link": "/Stammbäume/Stammbaum.html?family=haus-penderyn&mode=view&person=revelyn-penderyn",
+      "context": "family-tree-only",
+      "usableInCurrentBiography": false,
+      "reason": "Die Verlobung mit Anaraut ist im aktuellen Roleplay noch nicht eingetreten."
+    },
+    {
+      "worldPersonId": "person--haus-draig--neithon-1718-draig",
+      "name": "Neithon Draig",
+      "relation": "Geschwister des Verlobten",
+      "via": [],
+      "birth": "1718",
+      "death": "",
+      "title": "",
+      "sex": "male",
+      "familyId": "haus-draig",
+      "houseId": "house-draig",
+      "image": "/Stammbäume/assets/images/portraits/haus-draig/neithon-1718-draig.jpg",
+      "notes": "",
+      "parents": [
+        "Galahad Draig",
+        "Gwendolyn Aderyn"
+      ],
+      "partners": [
+        {
+          "name": "Alaweyn Grawn",
+          "type": "engagement",
+          "status": "active"
+        }
+      ],
+      "link": "/Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=neithon-1718-draig",
+      "context": "family-tree-only",
+      "usableInCurrentBiography": false,
+      "reason": "Die Verlobung mit Anaraut ist im aktuellen Roleplay noch nicht eingetreten."
+    },
+    {
+      "worldPersonId": "person--haus-grawn--alaweyn-grawn",
+      "name": "Alaweyn Grawn",
+      "relation": "Angeheiratete Familie des Verlobten",
+      "via": [
+        "Neithon Draig"
+      ],
+      "birth": "1716",
+      "death": "",
+      "title": "",
+      "sex": "female",
+      "familyId": "haus-grawn",
+      "houseId": "house-grawn",
+      "image": "/Stammbäume/assets/images/portraits/haus-draig/alaweyn-grawn.jpg",
+      "notes": "",
+      "parents": [
+        "Iorwerth Grawn",
+        "Tarah Draenog"
+      ],
+      "partners": [
+        {
+          "name": "Neithon Draig",
+          "type": "engagement",
+          "status": "active"
+        }
+      ],
+      "link": "/Stammbäume/Stammbaum.html?family=haus-grawn&mode=view&person=alaweyn-grawn",
+      "context": "family-tree-only",
+      "usableInCurrentBiography": false,
+      "reason": "Die Verlobung mit Anaraut ist im aktuellen Roleplay noch nicht eingetreten."
+    },
+    {
+      "worldPersonId": "person--haus-draig--isobel-1719-draig",
+      "name": "Isobel Draig",
+      "relation": "Geschwister des Verlobten",
+      "via": [],
+      "birth": "1719",
+      "death": "",
+      "title": "",
+      "sex": "female",
+      "familyId": "haus-draig",
+      "houseId": "house-draig",
+      "image": "/Stammbäume/assets/images/portraits/haus-draig/isobel-1719-draig.jpg",
+      "notes": "",
+      "parents": [
+        "Galahad Draig",
+        "Gwendolyn Aderyn"
+      ],
+      "partners": [
+        {
+          "name": "Unbekannter Verlobter",
+          "type": "engagement",
+          "status": "active"
+        }
+      ],
+      "link": "/Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=isobel-1719-draig",
+      "context": "family-tree-only",
+      "usableInCurrentBiography": false,
+      "reason": "Die Verlobung mit Anaraut ist im aktuellen Roleplay noch nicht eingetreten."
+    },
+    {
+      "worldPersonId": "person--haus-draig--rhiannon-draig",
+      "name": "Rhiannon Draig",
+      "relation": "Geschwister des Verlobten",
+      "via": [],
+      "birth": "1721",
+      "death": "",
+      "title": "",
+      "sex": "female",
+      "familyId": "haus-draig",
+      "houseId": "house-draig",
+      "image": "/Stammbäume/assets/images/portraits/haus-draig/rhiannon-draig.jpg",
+      "notes": "",
+      "parents": [
+        "Galahad Draig",
+        "Gwendolyn Aderyn"
+      ],
+      "partners": [],
+      "link": "/Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=rhiannon-draig",
+      "context": "family-tree-only",
+      "usableInCurrentBiography": false,
+      "reason": "Die Verlobung mit Anaraut ist im aktuellen Roleplay noch nicht eingetreten."
+    },
+    {
+      "worldPersonId": "person--haus-draig--gawain-draig",
+      "name": "Gawain Draig",
+      "relation": "Geschwister des Verlobten",
+      "via": [],
+      "birth": "1722",
+      "death": "",
+      "title": "",
+      "sex": "male",
+      "familyId": "haus-draig",
+      "houseId": "house-draig",
+      "image": "/Stammbäume/assets/images/portraits/haus-draig/gawain-draig.jpg",
+      "notes": "",
+      "parents": [
+        "Galahad Draig",
+        "Gwendolyn Aderyn"
+      ],
+      "partners": [
+        {
+          "name": "Guinevere Neidr",
+          "type": "engagement",
+          "status": "active"
+        }
+      ],
+      "link": "/Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=gawain-draig",
+      "context": "family-tree-only",
+      "usableInCurrentBiography": false,
+      "reason": "Die Verlobung mit Anaraut ist im aktuellen Roleplay noch nicht eingetreten."
+    },
+    {
+      "worldPersonId": "person--haus-neidr--guinevere-neidr",
+      "name": "Guinevere Neidr",
+      "relation": "Angeheiratete Familie des Verlobten",
+      "via": [
+        "Gawain Draig"
+      ],
+      "birth": "1722",
+      "death": "",
+      "title": "Weggegebenes Mündel bei Haus Draig",
+      "sex": "female",
+      "familyId": "haus-neidr",
+      "houseId": "house-neidr",
+      "image": "/Stammbäume/assets/images/portraits/haus-draig/guinevere-neidr.jpg",
+      "notes": "Guinevere bleibt ein leiblicher Spross des Hauses Neidr, wurde aber als Mündel an Galahad Draig und Gwendolyn Aderyn gegeben.",
+      "parents": [
+        "Yvain Neidr",
+        "Morgana Wylan"
+      ],
+      "partners": [
+        {
+          "name": "Gawain Draig",
+          "type": "engagement",
+          "status": "active"
+        }
+      ],
+      "link": "/Stammbäume/Stammbaum.html?family=haus-neidr&mode=view&person=guinevere-neidr",
+      "context": "family-tree-only",
+      "usableInCurrentBiography": false,
+      "reason": "Die Verlobung mit Anaraut ist im aktuellen Roleplay noch nicht eingetreten."
+    }
+  ],
+  "ancestors": [
+    {
+      "worldPersonId": "person--haus-varulv--sleipnir-varulv",
+      "name": "Sleipnir Varulv",
+      "birth": "1696",
+      "death": "",
+      "generation": 1,
+      "source": "haus-varulv"
+    },
+    {
+      "worldPersonId": "person--haus-skaal--svantje-skaal",
+      "name": "Svantje Skaal",
+      "birth": "1698",
+      "death": "",
+      "generation": 1,
+      "source": "haus-skaal"
+    },
+    {
+      "worldPersonId": "person--haus-varulv--sigfast-varulv",
+      "name": "Sigfast Varulv",
+      "birth": "1667",
+      "death": "1720",
+      "generation": 2,
+      "source": "haus-varulv"
+    },
+    {
+      "worldPersonId": "person--haus-kampfgeborene--rekka-kampfgeborene",
+      "name": "Rekka Kampfgeborene",
+      "birth": "1674",
+      "death": "",
+      "generation": 2,
+      "source": "haus-kampfgeborene"
+    },
+    {
+      "worldPersonId": "person--haus-skaal--arne-skaal",
+      "name": "Arne Skaal",
+      "birth": "1669",
+      "death": "",
+      "generation": 2,
+      "source": "haus-skaal"
+    },
+    {
+      "worldPersonId": "person--haus-skjegg--revna-skjegg",
+      "name": "Revna Skjegg",
+      "birth": "1673",
+      "death": "",
+      "generation": 2,
+      "source": "haus-skjegg"
+    },
+    {
+      "worldPersonId": "person--haus-varulv--steinarr-varulv",
+      "name": "Steinarr Varulv",
+      "birth": "1648",
+      "death": "1706",
+      "generation": 3,
+      "source": "haus-varulv"
+    },
+    {
+      "worldPersonId": "person--haus-soekeren--aslaug-soekeren",
+      "name": "Aslaug Sökeren",
+      "birth": "1649",
+      "death": "1731",
+      "generation": 3,
+      "source": "haus-soekeren"
+    },
+    {
+      "worldPersonId": "person--haus-kampfgeborene--halstein-kampfgeborene",
+      "name": "Halstein Kampfgeborener",
+      "birth": "1649",
+      "death": "1702",
+      "generation": 3,
+      "source": "haus-kampfgeborene"
+    },
+    {
+      "worldPersonId": "person--haus-brathfengr--ylfrun-brathfengr",
+      "name": "Ylfrun Brathfengr",
+      "birth": "1649",
+      "death": "1740",
+      "generation": 3,
+      "source": "haus-brathfengr"
+    },
+    {
+      "worldPersonId": "person--haus-skaal--sigvard-skaal",
+      "name": "Sigvard Skaal",
+      "birth": "1648",
+      "death": "1719",
+      "generation": 3,
+      "source": "haus-skaal"
+    },
+    {
+      "worldPersonId": "person--haus-skogg--gudrun-skogg",
+      "name": "Gudrun Skogg",
+      "birth": "1651",
+      "death": "1725",
+      "generation": 3,
+      "source": "haus-skogg"
+    },
+    {
+      "worldPersonId": "person--haus-skjegg--valdemar-skjegg",
+      "name": "Valdemar Skjegg",
+      "birth": "1648",
+      "death": "1739",
+      "generation": 3,
+      "source": "haus-skjegg"
+    },
+    {
+      "worldPersonId": "person--haus-kampfgeborene--ljosdis-kampfgeborene",
+      "name": "Ljosdis Kampfgeborene",
+      "birth": "1651",
+      "death": "1739",
+      "generation": 3,
+      "source": "haus-kampfgeborene"
+    },
+    {
+      "worldPersonId": "person--haus-varulv--eldar-varulv",
+      "name": "Eldar Varulv",
+      "birth": "1599",
+      "death": "1667",
+      "generation": 4,
+      "source": "haus-varulv"
+    },
+    {
+      "worldPersonId": "person--haus-skald--svanhild-skald",
+      "name": "Svanhild Skald",
+      "birth": "1628",
+      "death": "1702",
+      "generation": 4,
+      "source": "haus-skald"
+    },
+    {
+      "worldPersonId": "person--haus-sterkr--skadi-sterkr",
+      "name": "Skadi Sterkr",
+      "birth": "1631",
+      "death": "",
+      "generation": 4,
+      "source": "haus-sterkr"
+    },
+    {
+      "worldPersonId": "person--haus-soekeren--langarr-soekeren",
+      "name": "Langarr Sökeren",
+      "birth": "1631",
+      "death": "1720",
+      "generation": 4,
+      "source": "haus-soekeren"
+    },
+    {
+      "worldPersonId": "person--haus-kampfgeborene--alrek-kampfgeborene",
+      "name": "Alrek Kampfgeborener",
+      "birth": "1618",
+      "death": "1674",
+      "generation": 4,
+      "source": "haus-kampfgeborene"
+    },
+    {
+      "worldPersonId": "person--haus-schwarzdorn--vorga-schwarzdorn",
+      "name": "Vorga Schwarzdorn",
+      "birth": "1621",
+      "death": "1686",
+      "generation": 4,
+      "source": "haus-schwarzdorn"
+    },
+    {
+      "worldPersonId": "person--haus-brathfengr--skjold-brathfengr",
+      "name": "Skjold Brathfengr",
+      "birth": "1631",
+      "death": "1715",
+      "generation": 4,
+      "source": "haus-brathfengr"
+    },
+    {
+      "worldPersonId": "person--haus-skaal--fridgerd-skaal",
+      "name": "Fridgerd Skaal",
+      "birth": "1633",
+      "death": "1706",
+      "generation": 4,
+      "source": "haus-skaal"
+    },
+    {
+      "worldPersonId": "person--haus-skaal--steinarr-skaal",
+      "name": "Steinarr Skaal",
+      "birth": "1630",
+      "death": "1699",
+      "generation": 4,
+      "source": "haus-skaal"
+    },
+    {
+      "worldPersonId": "person--family-tree--vallgerd-skaal-spouse",
+      "name": "Vallgerd",
+      "birth": "1630",
+      "death": "1702",
+      "generation": 4
+    },
+    {
+      "worldPersonId": "person--haus-skogg--ubbe-skogg",
+      "name": "Ubbe Skogg",
+      "birth": "1624",
+      "death": "1699",
+      "generation": 4,
+      "source": "haus-skogg"
+    },
+    {
+      "worldPersonId": "person--haus-skogg--gundel-skogg-spouse",
+      "name": "Gundel",
+      "birth": "1629",
+      "death": "1674",
+      "generation": 4
+    },
+    {
+      "worldPersonId": "person--haus-skjegg--halfdan-skjegg",
+      "name": "Halfdan Skjegg",
+      "birth": "1619",
+      "death": "1693",
+      "generation": 4,
+      "source": "haus-skjegg"
+    },
+    {
+      "worldPersonId": "person--haus-soekeren--thorhild-soekaren",
+      "name": "Thorhild Sökaren",
+      "birth": "1627",
+      "death": "1726",
+      "generation": 4,
+      "source": "haus-soekeren"
+    },
+    {
+      "worldPersonId": "person--haus-varulv--eldgrim-varulv",
+      "name": "Eldgrim Varulv",
+      "birth": "1580",
+      "death": "1625",
+      "generation": 5,
+      "source": "haus-varulv"
+    },
+    {
+      "worldPersonId": "person--haus-ard-dubglais--saoirse-ard-dubglais",
+      "name": "Saoirse Dubglais",
+      "birth": "1581",
+      "death": "1635",
+      "generation": 5,
+      "source": "haus-dubglais"
+    },
+    {
+      "worldPersonId": "person--haus-skald--eirekr-skald",
+      "name": "Eirekr Skald",
+      "birth": "1608",
+      "death": "1697",
+      "generation": 5,
+      "source": "haus-skald"
+    },
+    {
+      "worldPersonId": "person--haus-grendel--ormrun-grindel",
+      "name": "Ormrún Grendel",
+      "birth": "1608",
+      "death": "1681",
+      "generation": 5
+    },
+    {
+      "worldPersonId": "person--haus-sterkr--einarr-1614-sterkr",
+      "name": "Einarr Sterkr",
+      "birth": "1614",
+      "death": "1705",
+      "generation": 5,
+      "source": "haus-sterkr"
+    },
+    {
+      "worldPersonId": "person--haus-urquhart--muirne-urquhart",
+      "name": "Muirne Urquhart",
+      "birth": "1614",
+      "death": "1706",
+      "generation": 5,
+      "source": "haus-urquhart"
+    },
+    {
+      "worldPersonId": "person--haus-brathfengr--isbjalla-1614-brathfengr",
+      "name": "Ísbjalla Brathfengr",
+      "birth": "1614",
+      "death": "1703",
+      "generation": 5,
+      "source": "haus-brathfengr"
+    },
+    {
+      "worldPersonId": "person--haus-soekeren--hvitserk-soekeren",
+      "name": "Hvitserk Sökeren",
+      "birth": "1614",
+      "death": "1716",
+      "generation": 5,
+      "source": "haus-soekeren"
+    },
+    {
+      "worldPersonId": "person--haus-kampfgeborene--aegir-kampfgeborene",
+      "name": "Aegir Kampfgeborener",
+      "birth": "1599",
+      "death": "1632",
+      "generation": 5,
+      "source": "haus-kampfgeborene"
+    },
+    {
+      "worldPersonId": "person--haus-soekeren--hallgerd-soekeren",
+      "name": "Hallgerd Sökeren",
+      "birth": "1600",
+      "death": "1698",
+      "generation": 5,
+      "source": "haus-soekeren"
+    },
+    {
+      "worldPersonId": "person--haus-schwarzdorn--iormund-schwarzdorn",
+      "name": "Iormund Schwarzdorn",
+      "birth": "1590",
+      "death": "1662",
+      "generation": 5,
+      "source": "haus-schwarzdorn"
+    },
+    {
+      "worldPersonId": "person--haus-feuerhaar--ranveig-feuerhaar",
+      "name": "Ranveig Feuerhaar",
+      "birth": "1598",
+      "death": "1661",
+      "generation": 5,
+      "source": "haus-feuerhaar"
+    },
+    {
+      "worldPersonId": "person--haus-freiwinter--hildigunn-freiwinter",
+      "name": "Hildigunn Freiwinter",
+      "birth": "1603",
+      "death": "1671",
+      "generation": 5,
+      "source": "haus-freiwinter"
+    },
+    {
+      "worldPersonId": "person--haus-brathfengr--halstein-brathfengr",
+      "name": "Halstein Brathfengr",
+      "birth": "1600",
+      "death": "1698",
+      "generation": 5,
+      "source": "haus-brathfengr"
+    },
+    {
+      "worldPersonId": "person--haus-skaal--sveinung-skaal",
+      "name": "Sveinung Skaal",
+      "birth": "1611",
+      "death": "1672",
+      "generation": 5,
+      "source": "haus-skaal"
+    },
+    {
+      "worldPersonId": "person--haus-skjegg--gudlaug-skjegg",
+      "name": "Gudlaug Skjegg",
+      "birth": "1612",
+      "death": "1687",
+      "generation": 5,
+      "source": "haus-skjegg"
+    },
+    {
+      "worldPersonId": "person--haus-skogg--sigurd-skogg",
+      "name": "Sigurd Skogg",
+      "birth": "1600",
+      "death": "1671",
+      "generation": 5,
+      "source": "haus-skogg"
+    },
+    {
+      "worldPersonId": "person--haus-skjegg--finngunn-skjegg",
+      "name": "Finngunn Skjegg",
+      "birth": "1604",
+      "death": "1688",
+      "generation": 5,
+      "source": "haus-skjegg"
+    },
+    {
+      "worldPersonId": "person--haus-skjegg--floki-skjegg",
+      "name": "Floki Skjegg",
+      "birth": "1601",
+      "death": "1654",
+      "generation": 5,
+      "source": "haus-skjegg"
+    },
+    {
+      "worldPersonId": "person--family-tree--hildegard-skjegg-spouse",
+      "name": "Hildegard",
+      "birth": "1602",
+      "death": "1631",
+      "generation": 5
+    },
+    {
+      "worldPersonId": "person--haus-varulv--torger-varulv",
+      "name": "Torger Varulv",
+      "birth": "1554",
+      "death": "1600",
+      "generation": 6
+    },
+    {
+      "worldPersonId": "person--haus-ragnulf--aslaug-ragnulf",
+      "name": "Aslaug Ragnulf",
+      "birth": "1559",
+      "death": "1625",
+      "generation": 6
+    },
+    {
+      "worldPersonId": "person--haus-lachlann--maille-1560-lachlann",
+      "name": "Máille Lachlann",
+      "birth": "1560",
+      "death": "1644",
+      "generation": 6,
+      "source": "haus-lachlann"
+    },
+    {
+      "worldPersonId": "person--haus-dubglais--taranach-1558-dubglais",
+      "name": "Taranach Dubglais",
+      "birth": "1558",
+      "death": "1612",
+      "generation": 6
+    },
+    {
+      "worldPersonId": "person--haus-skald--ragnor-skald",
+      "name": "Ragnor Skald",
+      "birth": "1591",
+      "death": "1687",
+      "generation": 6
+    },
+    {
+      "worldPersonId": "person--haus-sterkr--mistkatla-sterkr",
+      "name": "Mistkatla Sterkr",
+      "birth": "1591",
+      "death": "1690",
+      "generation": 6
+    },
+    {
+      "worldPersonId": "person--haus-sterkr--ubbe-sterkr",
+      "name": "Ubbe Sterkr",
+      "birth": "1594",
+      "death": "1699",
+      "generation": 6
+    },
+    {
+      "worldPersonId": "person--haus-gullvig--rannveig-gullvig",
+      "name": "Rannveig Gullvig",
+      "birth": "1596",
+      "death": "1656",
+      "generation": 6,
+      "source": "haus-gullvig"
+    },
+    {
+      "worldPersonId": "person--haus-ceirwyn--kerrilynn-ceirwyn",
+      "name": "Kerrilynn Ceirwyn",
+      "birth": "1592",
+      "death": "1677",
+      "generation": 6
+    },
+    {
+      "worldPersonId": "person--haus-urquhart--eochaidh-urquhart",
+      "name": "Eochaidh Urquhart",
+      "birth": "1590",
+      "death": "1652",
+      "generation": 6,
+      "source": "haus-urquhart"
+    },
+    {
+      "worldPersonId": "person--haus-brathfengr--sigurd-brathfengr",
+      "name": "Sigurd Brathfengr",
+      "birth": "1582",
+      "death": "1686",
+      "generation": 6,
+      "source": "haus-brathfengr"
+    },
+    {
+      "worldPersonId": "person--haus-todbrand--torgunna-todbrand",
+      "name": "Torgunna Todbrand",
+      "birth": "1582",
+      "death": "1651",
+      "generation": 6,
+      "source": "haus-todbrand"
+    },
+    {
+      "worldPersonId": "person--haus-soekeren--kjartan-soekeren",
+      "name": "Kjartan Sökeren",
+      "birth": "1597",
+      "death": "1686",
+      "generation": 6,
+      "source": "haus-soekeren"
+    },
+    {
+      "worldPersonId": "person--family-tree--bjarnhild-soekeren-spouse",
+      "name": "Bjarnhild",
+      "birth": "1597",
+      "death": "1649",
+      "generation": 6
+    },
+    {
+      "worldPersonId": "person--haus-kampfgeborene--ottnar-kampfgeborene",
+      "name": "Ottnar Kampfgeborener",
+      "birth": "1577",
+      "death": "1626",
+      "generation": 6,
+      "source": "haus-kampfgeborene"
+    },
+    {
+      "worldPersonId": "person--haus-skaal--helga-skaal",
+      "name": "Helga Skaal",
+      "birth": "1580",
+      "death": "1630",
+      "generation": 6
+    },
+    {
+      "worldPersonId": "person--haus-soekeren--sturlaug-soekeren",
+      "name": "Sturlaug Sökeren",
+      "birth": "1578",
+      "death": "1671",
+      "generation": 6
+    },
+    {
+      "worldPersonId": "person--haus-wellenschild--bylgja-wellenschild",
+      "name": "Bylgja Wellenschild",
+      "birth": "1579",
+      "death": "1634",
+      "generation": 6,
+      "source": "haus-wellenschild"
+    },
+    {
+      "worldPersonId": "person--haus-schwarzdorn--inigmund-schwarzdorn",
+      "name": "Inigmund Schwarzdorn",
+      "birth": "1570",
+      "death": "1624",
+      "generation": 6
+    },
+    {
+      "worldPersonId": "person--haus-graumahne--hallbera-graumahne",
+      "name": "Hallbera Graumähne",
+      "birth": "1571",
+      "death": "1640",
+      "generation": 6,
+      "source": "haus-graumahne"
+    },
+    {
+      "worldPersonId": "person--haus-feuerhaar--ormrun-feuerhaar-spouse",
+      "name": "Ormrún",
+      "birth": "1570",
+      "death": "1629",
+      "generation": 6
+    },
+    {
+      "worldPersonId": "person--haus-feuerhaar--skjoldulf-feuerhaar",
+      "name": "Skjoldulf Feuerhaar",
+      "birth": "1569",
+      "death": "1625",
+      "generation": 6,
+      "source": "haus-feuerhaar"
+    },
+    {
+      "worldPersonId": "person--haus-freiwinter--fenrir-freiwinter",
+      "name": "Fenrir Freiwinter",
+      "birth": "1584",
+      "death": "1627",
+      "generation": 6
+    },
+    {
+      "worldPersonId": "person--haus-schattenherz--gelda-schattenherz",
+      "name": "Gelda Schattenherz",
+      "birth": "1585",
+      "death": "1650",
+      "generation": 6
+    },
+    {
+      "worldPersonId": "person--haus-skaal--hjalmar-skaal",
+      "name": "Hjalmar Skaal",
+      "birth": "1575",
+      "death": "1629",
+      "generation": 6
+    },
+    {
+      "worldPersonId": "person--haus-helgr--brynhild-helgr",
+      "name": "Brynhild Helgr",
+      "birth": "1581",
+      "death": "1656",
+      "generation": 6,
+      "source": "haus-helgr"
+    },
+    {
+      "worldPersonId": "person--haus-skjegg--hjorleif-skjegg",
+      "name": "Hjorleif Skjegg",
+      "birth": "1580",
+      "death": "1629",
+      "generation": 6
+    },
+    {
+      "worldPersonId": "person--haus-helgr--dagnhild-helgr",
+      "name": "Dagnhild Helgr",
+      "birth": "1582",
+      "death": "1629",
+      "generation": 6,
+      "source": "haus-helgr"
+    },
+    {
+      "worldPersonId": "person--haus-skogg--kolstein-skogg",
+      "name": "Kolstein Skogg",
+      "birth": "1582",
+      "death": "1629",
+      "generation": 6,
+      "source": "haus-skogg"
+    },
+    {
+      "worldPersonId": "person--haus-windhueter--hati-windhueter",
+      "name": "Hati Windhüter",
+      "birth": "1583",
+      "death": "1629",
+      "generation": 6
+    },
+    {
+      "worldPersonId": "person--haus-skjegg--hakon-skjegg",
+      "name": "Hakon Skjegg",
+      "birth": "1582",
+      "death": "1653",
+      "generation": 6
+    },
+    {
+      "worldPersonId": "person--haus-brathfengr--svanhild-brathfengr",
+      "name": "Svanhild Brathfengr",
+      "birth": "1583",
+      "death": "1668",
+      "generation": 6,
+      "source": "haus-brathfengr"
+    },
+    {
+      "worldPersonId": "person--haus-lachlann--meadhbhan-1530-lachlann",
+      "name": "Meadhbhán Lachlann",
+      "birth": "1530",
+      "death": "1610",
+      "generation": 7,
+      "source": "haus-lachlann"
+    },
+    {
+      "worldPersonId": "person--haus-unbekannt--uathach-unknown-lachlann-101-0",
+      "name": "Uathach Unbekanntes Haus",
+      "birth": "1535",
+      "death": "1619",
+      "generation": 7
+    },
+    {
+      "worldPersonId": "person--haus-gullvig--norrik-gullvig",
+      "name": "Norrik Gullvig",
+      "birth": "1578",
+      "death": "1628",
+      "generation": 7
+    },
+    {
+      "worldPersonId": "person--family-tree--helgard-gullvig-spouse",
+      "name": "Helgard",
+      "birth": "1580",
+      "death": "1615",
+      "generation": 7
+    },
+    {
+      "worldPersonId": "person--haus-urquhart--cainneach-1561-urquhart",
+      "name": "Cainneach Urquhart",
+      "birth": "1561",
+      "death": "1662",
+      "generation": 7,
+      "source": "haus-urquhart"
+    },
+    {
+      "worldPersonId": "person--haus-dubglais--morrigan-1562-dubglais",
+      "name": "Morrigán Dubglais",
+      "birth": "1562",
+      "death": "1644",
+      "generation": 7
+    },
+    {
+      "worldPersonId": "person--haus-brathfengr--ingjald-brathfengr",
+      "name": "Ingjald Brathfengr",
+      "birth": "1563",
+      "death": "1665",
+      "generation": 7,
+      "source": "haus-brathfengr"
+    },
+    {
+      "worldPersonId": "person--haus-hrymgardr--skeggjadis-hrymgardr",
+      "name": "Skeggjadís Hyrmgarthr",
+      "birth": "1563",
+      "death": "1661",
+      "generation": 7,
+      "source": "haus-hyrmgardr"
+    },
+    {
+      "worldPersonId": "person--haus-todbrand--ulfhedin-todbrand",
+      "name": "Ulfhedin Todbrand",
+      "birth": "1549",
+      "death": "1600",
+      "generation": 7
+    },
+    {
+      "worldPersonId": "person--haus-todbrand--hrafnhild",
+      "name": "Hrafnhild",
+      "birth": "1552",
+      "death": "1596",
+      "generation": 7
+    },
+    {
+      "worldPersonId": "person--haus-kampfgeborene--bujold-kampfgeborene",
+      "name": "Bujold Kampfgeborener",
+      "birth": "1556",
+      "death": "1648",
+      "generation": 7
+    },
+    {
+      "worldPersonId": "person--haus-drummond--eithne-drummond",
+      "name": "Eithne Drummond",
+      "birth": "1559",
+      "death": "1630",
+      "generation": 7,
+      "source": "haus-drummond"
+    },
+    {
+      "worldPersonId": "person--haus-vaeren--alfrun-vaeren",
+      "name": "Alfrún Vaeren",
+      "birth": "1563",
+      "death": "1620",
+      "generation": 7,
+      "source": "haus-vaeren"
+    },
+    {
+      "worldPersonId": "person--haus-wellenschild--yrsvard-wellenschild",
+      "name": "Yrsvard Wellenschild",
+      "birth": "1559",
+      "death": "1624",
+      "generation": 7
+    },
+    {
+      "worldPersonId": "person--haus-graumahne--njall-1539-graumahne",
+      "name": "Njall Graumähne",
+      "birth": "1539",
+      "death": "1629",
+      "generation": 7,
+      "source": "haus-graumahne"
+    },
+    {
+      "worldPersonId": "person--haus-schmetterschild--hervor-schmetterschild",
+      "name": "Hervör Schmetterschild",
+      "birth": "1543",
+      "death": "1636",
+      "generation": 7
+    },
+    {
+      "worldPersonId": "person--haus-wargh--geirlaug-wargh",
+      "name": "Geirlaug Wargh",
+      "birth": "1543",
+      "death": "1609",
+      "generation": 7
+    },
+    {
+      "worldPersonId": "person--haus-feuerhaar--thorsleikr-feuerhaar",
+      "name": "Thorsleikr Feuerhaar",
+      "birth": "1541",
+      "death": "1604",
+      "generation": 7
+    },
+    {
+      "worldPersonId": "person--haus-helgr--arvid-helgr",
+      "name": "Arvid Helgr",
+      "birth": "1556",
+      "death": "1666",
+      "generation": 7
+    },
+    {
+      "worldPersonId": "person--haus-arnvild--vefrun-arnvild",
+      "name": "Vefrún Arnvild",
+      "birth": "1555",
+      "death": "1632",
+      "generation": 7,
+      "source": "haus-arnvild"
+    },
+    {
+      "worldPersonId": "person--haus-skogg--edmund-skogg",
+      "name": "Edmund Skogg",
+      "birth": "1561",
+      "death": "1659",
+      "generation": 7
+    },
+    {
+      "worldPersonId": "person--haus-silberzunge--glodis-silberzunge",
+      "name": "Glódís Silberzunge",
+      "birth": "1564",
+      "death": "1630",
+      "generation": 7
+    },
+    {
+      "worldPersonId": "person--haus-ffearnach--maolmorda-1505-ffearnach",
+      "name": "Maolmórda Ffearnach",
+      "birth": "1505",
+      "death": "????",
+      "generation": 8
+    },
+    {
+      "worldPersonId": "person--haus-laga--meabhrog-1510-laga",
+      "name": "Meabhróg Laga",
+      "birth": "1510",
+      "death": "1611",
+      "generation": 8
+    },
+    {
+      "worldPersonId": "person--haus-urquhart--oisin-1539-urquhart",
+      "name": "Oisín Urquhart",
+      "birth": "1539",
+      "death": "1628",
+      "generation": 8
+    },
+    {
+      "worldPersonId": "person--haus-roth--leagha-1541-roth",
+      "name": "Leagha Roth",
+      "birth": "1541",
+      "death": "????",
+      "generation": 8
+    },
+    {
+      "worldPersonId": "person--haus-brathfengr--bjarn-brathfengr",
+      "name": "Bjarn Brathfengr",
+      "birth": "1547",
+      "death": "1663",
+      "generation": 8
+    },
+    {
+      "worldPersonId": "person--haus-blutklinge--ingibjorg-blutklinge",
+      "name": "Ingibjörg Blutklinge",
+      "birth": "1547",
+      "death": "1619",
+      "generation": 8
+    },
+    {
+      "worldPersonId": "person--haus-hyrmgardr--thorlund-hyrmgardr",
+      "name": "Thorlund Hyrmgarthr",
+      "birth": "1543",
+      "death": "1673",
+      "generation": 8,
+      "source": "haus-hyrmgardr"
+    },
+    {
+      "worldPersonId": "person--haus-hyrmgardr--jornhildr-hyrmgardr-spouse",
+      "name": "Jornhildr",
+      "birth": "1545",
+      "death": "1600",
+      "generation": 8
+    },
+    {
+      "worldPersonId": "person--haus-drummond--maelbrigte-1530-drummond",
+      "name": "Maelbrigte Drummond",
+      "birth": "1530",
+      "death": "1611",
+      "generation": 8,
+      "source": "haus-drummond"
+    },
+    {
+      "worldPersonId": "person--haus-unbekannt--scathach-unknown-drummond-101-1",
+      "name": "Scáthach Unbekanntes Haus",
+      "birth": "1535",
+      "death": "1620",
+      "generation": 8
+    },
+    {
+      "worldPersonId": "person--haus-vaeren--thorgest-vaeren",
+      "name": "Thorgest Vaeren",
+      "birth": "1543",
+      "death": "1585",
+      "generation": 8,
+      "source": "haus-vaeren"
+    },
+    {
+      "worldPersonId": "person--haus-vaeren--eamhair-urquhart",
+      "name": "Eamhair Urquhart",
+      "birth": "1545",
+      "death": "1627",
+      "generation": 8
+    },
+    {
+      "worldPersonId": "person--haus-graumahne--thorlak-graumahne",
+      "name": "Thorlak Graumähne",
+      "birth": "1515",
+      "death": "1579",
+      "generation": 8
+    },
+    {
+      "worldPersonId": "person--haus-arnvild--skalli-arnvild",
+      "name": "Skalli Arnvild",
+      "birth": "1520",
+      "death": "1539",
+      "generation": 8
+    },
+    {
+      "worldPersonId": "person--haus-arnvild--lifthrasir-arnvild",
+      "name": "Lifthrasir Arnvild",
+      "birth": "1518",
+      "death": "1571",
+      "generation": 8
+    },
+    {
+      "worldPersonId": "person--haus-helgr--saga-elder-helgr",
+      "name": "Saga Helgr",
+      "birth": "1520",
+      "death": "????",
+      "generation": 8
+    },
+    {
+      "worldPersonId": "person--haus-hyrmgardr--vigdrod-hyrmgardr",
+      "name": "Vigdrod Hyrmgarthr",
+      "birth": "1517",
+      "death": "1629",
+      "generation": 9
+    },
+    {
+      "worldPersonId": "person--haus-hyrmgardr--angreboda-hyrmgardr-spouse",
+      "name": "Angreboda",
+      "birth": "1519",
+      "death": "1600",
+      "generation": 9
+    },
+    {
+      "worldPersonId": "person--haus-vaeren--balgruuf-vaeren",
+      "name": "Balgruuf der Ältere Vaeren",
+      "birth": "????",
+      "death": "????",
+      "generation": 9,
+      "source": "haus-vaeren"
+    },
+    {
+      "worldPersonId": "person--haus-ragnulf--gudrid-ancient-ragnulf",
+      "name": "Gudrid Ragnulf",
+      "birth": "????",
+      "death": "????",
+      "generation": 9
+    },
+    {
+      "worldPersonId": "person--haus-vaeren--oystein-vaeren",
+      "name": "Øystein Vaeren",
+      "birth": "????",
+      "death": "????",
+      "generation": 10,
+      "source": "haus-vaeren"
+    },
+    {
+      "worldPersonId": "person--haus-varangr--fridleif-varangr",
+      "name": "Fridleif Varangr",
+      "birth": "????",
+      "death": "????",
+      "generation": 10
+    },
+    {
+      "worldPersonId": "person--haus-vaeren--odin-vaeren",
+      "name": "Odin Vaeren",
+      "birth": "????",
+      "death": "????",
+      "generation": 11
+    },
+    {
+      "worldPersonId": "person--haus-vaeren--tuilelaith",
+      "name": "Tuilelaith",
+      "birth": "????",
+      "death": "????",
+      "generation": 11
+    }
+  ],
+  "originalImageFolder": "D:/0-KI Generierte/01 Bilder/Charaktere/Skalli",
+  "originalFiles": [
+    {
+      "name": "12aeeafb-4b4d-4232-a1af-b8163aff0ad7.png",
+      "bytes": 2045852,
+      "path": "D:/0-KI Generierte/01 Bilder/Charaktere/Skalli/12aeeafb-4b4d-4232-a1af-b8163aff0ad7.png"
+    },
+    {
+      "name": "47988c1c-ef0f-4ef3-873c-f37d8c99c11a.png",
+      "bytes": 2881063,
+      "path": "D:/0-KI Generierte/01 Bilder/Charaktere/Skalli/47988c1c-ef0f-4ef3-873c-f37d8c99c11a.png"
+    },
+    {
+      "name": "55cbe5b8-dfd4-4d5a-8439-7e7cccae62ea.png",
+      "bytes": 2094672,
+      "path": "D:/0-KI Generierte/01 Bilder/Charaktere/Skalli/55cbe5b8-dfd4-4d5a-8439-7e7cccae62ea.png"
+    },
+    {
+      "name": "68225353-11ce-4434-bd17-9bccb92cbf14.png",
+      "bytes": 2326239,
+      "path": "D:/0-KI Generierte/01 Bilder/Charaktere/Skalli/68225353-11ce-4434-bd17-9bccb92cbf14.png"
+    },
+    {
+      "name": "7356f6bd-391a-4a94-a7a6-4ab8ca062e50.png",
+      "bytes": 2030506,
+      "path": "D:/0-KI Generierte/01 Bilder/Charaktere/Skalli/7356f6bd-391a-4a94-a7a6-4ab8ca062e50.png"
+    },
+    {
+      "name": "c7d53981-c27b-44ec-ae4e-da99fccc50dd.png",
+      "bytes": 1949737,
+      "path": "D:/0-KI Generierte/01 Bilder/Charaktere/Skalli/c7d53981-c27b-44ec-ae4e-da99fccc50dd.png"
+    },
+    {
+      "name": "fc13263f-d329-4865-b25f-71dbbe5c6721.png",
+      "bytes": 2077632,
+      "path": "D:/0-KI Generierte/01 Bilder/Charaktere/Skalli/fc13263f-d329-4865-b25f-71dbbe5c6721.png"
+    },
+    {
+      "name": "ff8ffc2d-74bc-4678-8b13-7886e50a744a.png",
+      "bytes": 2431133,
+      "path": "D:/0-KI Generierte/01 Bilder/Charaktere/Skalli/ff8ffc2d-74bc-4678-8b13-7886e50a744a.png"
+    },
+    {
+      "name": "generated_video.mp4",
+      "bytes": 5944646,
+      "path": "D:/0-KI Generierte/01 Bilder/Charaktere/Skalli/generated_video.mp4"
+    },
+    {
+      "name": "image (1).jpg",
+      "bytes": 214244,
+      "path": "D:/0-KI Generierte/01 Bilder/Charaktere/Skalli/image (1).jpg"
+    },
+    {
+      "name": "image (2).jpg",
+      "bytes": 201295,
+      "path": "D:/0-KI Generierte/01 Bilder/Charaktere/Skalli/image (2).jpg"
+    },
+    {
+      "name": "image.jpg",
+      "bytes": 248372,
+      "path": "D:/0-KI Generierte/01 Bilder/Charaktere/Skalli/image.jpg"
+    }
+  ],
+  "interpretationBoundaries": [
+    "Die ausdrückliche Roleplay-Klarstellung des Nutzers hat Vorrang vor Stammbaum und Online-Genealogie: Skalli ist im aktuellen Roleplay noch nicht mit Anaraut verlobt. Diesen Eintrag weder in die Bio noch als aktuelle Beziehung oder Zukunftsentscheidung übernehmen; Stammbaumquellen unverändert lassen.",
+    "Biologischer Stammbaum und Vormundschaft werden getrennt ausgewertet. Guinevere ist kein leibliches Kind Galahads und Gwendolyns.",
+    "Namenlose Verlobungsplatzhalter werden nicht als ausgearbeitete Personen übernommen.",
+    "Astrid Varulv ist als Namenspatin belegt, nicht als direkte biologische Vorfahrin Skallis. Keine Kinder in ihrer vorhandenen Akte.",
+    "Hatis Geschlechtsangaben widersprechen sich zwischen Stammbaum und bestehender Biografie. Neutrale Formulierungen bis zur Klärung.",
+    "Die vorhandene Familienbeziehung belegt nicht automatisch persönliche Nähe oder gemeinsame Erlebnisse.",
+    "Keine Religion, Waffenwahl, Ausbildung, spezielle Technik, benannte Heldentat oder romantische Bindung für Skalli hinzuerfinden.",
+    "Die frühe und vom Vater verschiedene Ausbildung sowie ihre strategische Begabung sind nun direkt vom Nutzer festgelegt; Namen von Lehrmeistern und konkrete Ausbildungswege bleiben offen.",
+    "Das Gefolge besteht aus einigen Vettern, Geschwistern und Clanskriegern. Keine einzelnen Namen ohne weitere Festlegung zuweisen.",
+    "Die Einschätzung als beste Kriegerin ihres Jahrgangs bleibt ausdrücklich ihr Ruf beziehungsweise eine Vermutung.",
+    "Gleipnirs Nachfolge-Scherz ist Anerkennung ihres Könnens, keine tatsächliche Änderung der Erbfolge und kein festgelegtes Amt.",
+    "Heiratsbereitschaft, Wunsch nach Verbleib in Roriksheim und Vorrang des Clanwohls sind gleichzeitig gültig; daraus keine aktuelle Verlobung oder beschlossene Abreise ableiten.",
+    "Skalli erhält keine bislang zurückgestellte Gamir-Zuordnung.",
+    "Der immersive Entwurf verwendet nur bekannte Zusammenhänge und sichtbare Motive; er enthält keine erfundenen Dialoge oder konkreten neuen Ereignisse."
+  ],
+  "openTopics": [
+    "Namentliche Mitglieder und persönliche Geschichte des Gefolges",
+    "Konkrete Ausbilder und bevorzugte Waffen",
+    "Benannte prägende Taten, Erfolge oder Verluste",
+    "Weitere Bindungen, insbesondere zu Svantje und Hati",
+    "Persönlicher Glaube",
+    "Alltag und gemeinsame Geschichte mit Astrid",
+    "Hatis widersprüchliche Geschlechtsangaben"
+  ]
+}

@@ -34,3 +34,31 @@ function renderArchiveEntryCardActions(entry, section) {
     <button type="button" data-archive-action="open-module-stamp" data-source-entry-id="${escapeHtml(entry.id || '')}">Kopieren</button>
   </div>`;
 }
+
+// One scoped renderer for both a full archive refresh and a folder selection.
+function renderArchiveSectionCards(grid, section, entries, options = {}) {
+  let usedPriorityImages = 0;
+  if (!entries.length) {
+    const hint = document.createElement('div');
+    hint.className = 'archive-section-empty-hint';
+    hint.textContent = 'Noch keine Module in diesem Reiter.';
+    grid.appendChild(hint);
+  }
+  const visible = getArchiveSectionVisibleEntries(section, entries, { searchActive: !!options.searchActive });
+  const fragment = document.createDocumentFragment();
+  for (const entry of visible) {
+    const image = getArchiveEntryPreviewImage(entry), card = document.createElement('article');
+    card.className = 'entry-card' + (image && image === getArchiveEntryGuildEmblem(entry) ? ' entry-card-emblem' : '')
+      + (entry.locked ? ' card-locked' : '');
+    card.dataset.searchKind = 'entry';
+    const priorityImage = !!image && usedPriorityImages < (options.priorityImageBudget ?? 10);
+    card.innerHTML = renderArchiveEntryCard(entry, options.sectionByEntry?.get(entry) || section, {
+      priorityImage, manageMode: !!options.manageMode
+    });
+    if (priorityImage) usedPriorityImages++;
+    fragment.appendChild(card);
+  }
+  grid.appendChild(fragment);
+  grid.insertAdjacentHTML('beforeend', renderArchiveSectionMoreControl(section, entries, visible, { searchActive: !!options.searchActive }));
+  return usedPriorityImages;
+}

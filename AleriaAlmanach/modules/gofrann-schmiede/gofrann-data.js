@@ -937,7 +937,7 @@
               "Stangenwaffe",
               "Stahl"
             ],
-            "priceMin": "800",
+            "priceMin": "350",
             "priceMax": "",
             "currencyCode": "KT",
             "currencyLabel": "Kupfertaler",
@@ -980,7 +980,7 @@
               "Wuchtwaffe",
               "Eisen, Stahl, Holz"
             ],
-            "priceMin": "600",
+            "priceMin": "150",
             "priceMax": "",
             "currencyCode": "KT",
             "currencyLabel": "Kupfertaler",
@@ -1023,7 +1023,7 @@
               "Axt",
               "Stahl, Holz"
             ],
-            "priceMin": "1300",
+            "priceMin": "450",
             "priceMax": "",
             "currencyCode": "KT",
             "currencyLabel": "Kupfertaler",
@@ -1066,7 +1066,7 @@
               "Wuchtwaffe",
               "Holz, Eisen"
             ],
-            "priceMin": "300",
+            "priceMin": "25",
             "priceMax": "",
             "currencyCode": "KT",
             "currencyLabel": "Kupfertaler",
@@ -1152,8 +1152,8 @@
               "Stangenwaffe",
               "Stahl, Holz"
             ],
-            "priceMin": "2000",
-            "priceMax": "3000",
+            "priceMin": "500",
+            "priceMax": "800",
             "currencyCode": "KT",
             "currencyLabel": "Kupfertaler",
             "currencyIcon": "◈",
@@ -1238,7 +1238,7 @@
               "Wuchtwaffe",
               "Stahl, Eisen"
             ],
-            "priceMin": "800",
+            "priceMin": "300",
             "priceMax": "",
             "currencyCode": "KT",
             "currencyLabel": "Kupfertaler",
@@ -1281,7 +1281,7 @@
               "Wuchtwaffe",
               "Stahl, Holz"
             ],
-            "priceMin": "1500",
+            "priceMin": "650",
             "priceMax": "",
             "currencyCode": "KT",
             "currencyLabel": "Kupfertaler",
@@ -1324,7 +1324,7 @@
               "Wuchtwaffe",
               "Stahl, Eisen"
             ],
-            "priceMin": "1000",
+            "priceMin": "400",
             "priceMax": "",
             "currencyCode": "KT",
             "currencyLabel": "Kupfertaler",
@@ -1367,7 +1367,7 @@
               "Stangenwaffe",
               "Stahl, Holz"
             ],
-            "priceMin": "1200",
+            "priceMin": "150",
             "priceMax": "",
             "currencyCode": "KT",
             "currencyLabel": "Kupfertaler",
@@ -1496,7 +1496,7 @@
               "Fernwaffe",
               "Holz, Sehne"
             ],
-            "priceMin": "1000",
+            "priceMin": "500",
             "priceMax": "",
             "currencyCode": "KT",
             "currencyLabel": "Kupfertaler",
@@ -2270,7 +2270,7 @@
               "Schild",
               "Stahl"
             ],
-            "priceMin": "15",
+            "priceMin": "30",
             "priceMax": "",
             "currencyCode": "KT",
             "currencyLabel": "Kupfertaler",
@@ -2358,7 +2358,7 @@
               "Saex · einschneidiges Langmesser",
               "Stahl, Holz"
             ],
-            "priceMin": "400",
+            "priceMin": "250",
             "priceMax": "",
             "currencyCode": "KT",
             "currencyLabel": "Kupfertaler",
@@ -3060,7 +3060,7 @@
               "Speer",
               "Ca. 220 cm"
             ],
-            "priceMin": "650",
+            "priceMin": "350",
             "priceMax": "",
             "currencyCode": "KT",
             "currencyLabel": "Kupfertaler",
@@ -3114,7 +3114,7 @@
               "Hellebarde",
               "Ca. 210 cm"
             ],
-            "priceMin": "3900",
+            "priceMin": "1600",
             "priceMax": "",
             "currencyCode": "KT",
             "currencyLabel": "Kupfertaler",

@@ -509,7 +509,7 @@
               "Leder",
               "Reise"
             ],
-            "priceMin": "1",
+            "priceMin": "3",
             "priceMax": "",
             "priceNote": "",
             "conditions": "Nach Ladenbestand. Fehlende Ware kann zur nächsten Sammellieferung angefragt werden."
@@ -589,7 +589,7 @@
               "Wolle",
               "Lager"
             ],
-            "priceMin": "3",
+            "priceMin": "8",
             "priceMax": "",
             "priceNote": "",
             "conditions": "Nach Ladenbestand. Fehlende Ware kann zur nächsten Sammellieferung angefragt werden."
@@ -749,7 +749,7 @@
               "Verbrauch",
               "Pech"
             ],
-            "priceMin": "1",
+            "priceMin": "0,25",
             "priceMax": "",
             "priceNote": "",
             "conditions": "Nach Ladenbestand. Fehlende Ware kann zur nächsten Sammellieferung angefragt werden."
@@ -909,7 +909,7 @@
               "Brennstoff",
               "Verbrauch"
             ],
-            "priceMin": "4",
+            "priceMin": "0,6",
             "priceMax": "",
             "priceNote": "",
             "conditions": "Nach Ladenbestand. Fehlende Ware kann zur nächsten Sammellieferung angefragt werden."
@@ -989,7 +989,7 @@
               "Klettern",
               "Sichern"
             ],
-            "priceMin": "2",
+            "priceMin": "6",
             "priceMax": "",
             "priceNote": "",
             "conditions": "Nach Ladenbestand. Fehlende Ware kann zur nächsten Sammellieferung angefragt werden."
@@ -1069,7 +1069,7 @@
               "Schreiben",
               "Billig"
             ],
-            "priceMin": "1",
+            "priceMin": "0,05",
             "priceMax": "",
             "priceNote": "",
             "conditions": "Nach Ladenbestand. Fehlende Ware kann zur nächsten Sammellieferung angefragt werden."
@@ -1149,7 +1149,7 @@
               "Leder",
               "Notizen"
             ],
-            "priceMin": "5",
+            "priceMin": "8",
             "priceMax": "",
             "priceNote": "",
             "conditions": "Nach Ladenbestand. Fehlende Ware kann zur nächsten Sammellieferung angefragt werden."
@@ -1309,7 +1309,7 @@
               "Kräuter",
               "Kernseife"
             ],
-            "priceMin": "1",
+            "priceMin": "0,5",
             "priceMax": "",
             "priceNote": "",
             "conditions": "Nach Ladenbestand. Fehlende Ware kann zur nächsten Sammellieferung angefragt werden."
@@ -1709,7 +1709,7 @@
               "Kupfer",
               "Lager"
             ],
-            "priceMin": "2",
+            "priceMin": "12",
             "priceMax": "",
             "priceNote": "",
             "conditions": "Nach Ladenbestand. Fehlende Ware kann zur nächsten Sammellieferung angefragt werden."
@@ -1869,8 +1869,8 @@
               "Reise",
               "Haltbar"
             ],
-            "priceMin": "5",
-            "priceMax": "10",
+            "priceMin": "1,5",
+            "priceMax": "3",
             "priceNote": "Je nach Zusammenstellung der Tagesration.",
             "conditions": "Nach Ladenbestand. Fehlende Ware kann zur nächsten Sammellieferung angefragt werden."
           },
@@ -2029,7 +2029,7 @@
               "Metall",
               "Warnung"
             ],
-            "priceMin": "10",
+            "priceMin": "3",
             "priceMax": "",
             "priceNote": "",
             "conditions": "Nach Ladenbestand. Fehlende Ware kann zur nächsten Sammellieferung angefragt werden."
@@ -2109,7 +2109,7 @@
               "Leinen",
               "Kräuter"
             ],
-            "priceMin": "25",
+            "priceMin": "4",
             "priceMax": "",
             "priceNote": "",
             "conditions": "Nach Ladenbestand. Fehlende Ware kann zur nächsten Sammellieferung angefragt werden."
@@ -2189,7 +2189,7 @@
               "Alchemie",
               "Ton"
             ],
-            "priceMin": "35",
+            "priceMin": "6",
             "priceMax": "",
             "priceNote": "",
             "conditions": "Nach Ladenbestand. Fehlende Ware kann zur nächsten Sammellieferung angefragt werden."
@@ -2429,7 +2429,7 @@
               "Essen",
               "Einfach"
             ],
-            "priceMin": "1",
+            "priceMin": "0,4",
             "priceMax": "",
             "priceNote": "",
             "conditions": "Nach Ladenbestand. Fehlende Ware kann zur nächsten Sammellieferung angefragt werden."
@@ -2509,7 +2509,7 @@
               "Becher",
               "Alltag"
             ],
-            "priceMin": "1",
+            "priceMin": "0,3",
             "priceMax": "",
             "priceNote": "",
             "conditions": "Nach Ladenbestand. Fehlende Ware kann zur nächsten Sammellieferung angefragt werden."
@@ -2669,7 +2669,7 @@
               "Leder",
               "Trinken"
             ],
-            "priceMin": "2",
+            "priceMin": "1,5",
             "priceMax": "",
             "priceNote": "",
             "conditions": "Nach Ladenbestand. Fehlende Ware kann zur nächsten Sammellieferung angefragt werden."
@@ -2909,7 +2909,7 @@
               "Markieren",
               "Zählen"
             ],
-            "priceMin": "1",
+            "priceMin": "0,1",
             "priceMax": "",
             "priceNote": "",
             "conditions": "Nach Ladenbestand. Fehlende Ware kann zur nächsten Sammellieferung angefragt werden."
@@ -3069,7 +3069,7 @@
               "Würze",
               "Konservierung"
             ],
-            "priceMin": "4",
+            "priceMin": "0,5",
             "priceMax": "",
             "priceNote": "",
             "conditions": "Nach Ladenbestand. Fehlende Ware kann zur nächsten Sammellieferung angefragt werden."
@@ -3149,7 +3149,7 @@
               "Holz",
               "Leinen"
             ],
-            "priceMin": "1",
+            "priceMin": "0,15",
             "priceMax": "",
             "priceNote": "",
             "conditions": "Nach Ladenbestand. Fehlende Ware kann zur nächsten Sammellieferung angefragt werden."
@@ -3229,7 +3229,7 @@
               "Talg",
               "Kerze"
             ],
-            "priceMin": "1",
+            "priceMin": "0,2",
             "priceMax": "",
             "priceNote": "",
             "conditions": "Nach Ladenbestand. Fehlende Ware kann zur nächsten Sammellieferung angefragt werden."
@@ -3629,7 +3629,7 @@
               "Verband",
               "Polster"
             ],
-            "priceMin": "3",
+            "priceMin": "1,5",
             "priceMax": "",
             "priceNote": "",
             "conditions": "Nach Ladenbestand. Fehlende Ware kann zur nächsten Sammellieferung angefragt werden."
@@ -3789,7 +3789,7 @@
               "Reparatur",
               "Werkstoff"
             ],
-            "priceMin": "2",
+            "priceMin": "0,5",
             "priceMax": "",
             "priceNote": "",
             "conditions": "Nach Ladenbestand. Fehlende Ware kann zur nächsten Sammellieferung angefragt werden."
@@ -3949,7 +3949,7 @@
               "Ton",
               "Öl"
             ],
-            "priceMin": "6",
+            "priceMin": "2",
             "priceMax": "",
             "priceNote": "",
             "conditions": "Nach Ladenbestand. Fehlende Ware kann zur nächsten Sammellieferung angefragt werden."

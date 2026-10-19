@@ -23,5 +23,366 @@
     "exteriorAlpha": 0,
     "alphaCleanup": "user-authorized-complete"
   },
-  "release": "local-only"
+  "release": "local-only",
+  "date": "2026-10-19",
+  "imageCount": 23,
+  "allAssetHashesMatch": true,
+  "allGeneratedFoodAndPortraitPixelsPreserved": true,
+  "foodStyle": "fantasy-inventory-item",
+  "foodSquareTransparent": true,
+  "generatedAlphaPreserved": true,
+  "assets": [
+    {
+      "id": "schild",
+      "file": "AleriaAlmanach/assets/kleiner-durst/schild.png",
+      "size": [
+        1024,
+        1536
+      ],
+      "mode": "RGB",
+      "sha256": "915e8203c3d195098b577b8b47428ad2c8a3868b6b849092c0665720f3b4ec53",
+      "generatedPixelsPreserved": true
+    },
+    {
+      "id": "aussenansicht",
+      "file": "AleriaAlmanach/assets/kleiner-durst/scenes/aussenansicht.png",
+      "size": [
+        1024,
+        1536
+      ],
+      "mode": "RGB",
+      "sha256": "69da48f40cb973dfb46c7a4ee3e55996cb926050f6592c223b9a4c4a0e44b74e",
+      "generatedPixelsPreserved": true
+    },
+    {
+      "id": "schankstube",
+      "file": "AleriaAlmanach/assets/kleiner-durst/scenes/schankstube.png",
+      "size": [
+        1024,
+        1536
+      ],
+      "mode": "RGB",
+      "sha256": "eb85e8fcf7b64f2cfc0d098f9de5a6c44e606c0bf05f739fc8fdd6ef5723dbcb",
+      "generatedPixelsPreserved": true
+    },
+    {
+      "id": "kueche",
+      "file": "AleriaAlmanach/assets/kleiner-durst/scenes/kueche.png",
+      "size": [
+        1024,
+        1536
+      ],
+      "mode": "RGB",
+      "sha256": "f3bc0a6a064bfb10f0ab9720cad7f66abf3da2c5b7c0532fa3d89525ca79abf4",
+      "generatedPixelsPreserved": true
+    },
+    {
+      "id": "hinterhof",
+      "file": "AleriaAlmanach/assets/kleiner-durst/scenes/hinterhof.png",
+      "size": [
+        1024,
+        1536
+      ],
+      "mode": "RGB",
+      "sha256": "208aa8fb2f473051e17905a7a5610d455b1b2fe019674db19f39e1a7d229851d",
+      "generatedPixelsPreserved": true
+    },
+    {
+      "id": "gethin",
+      "file": "AleriaAlmanach/assets/kleiner-durst/portraits/gethin.png",
+      "size": [
+        1024,
+        1536
+      ],
+      "mode": "RGB",
+      "sha256": "c31829f6d9fa8e16d523f40086aa02a7987975560913f88eeb75e8c0a29f9827",
+      "generatedPixelsPreserved": true
+    },
+    {
+      "id": "efa",
+      "file": "AleriaAlmanach/assets/kleiner-durst/portraits/efa.png",
+      "size": [
+        1024,
+        1536
+      ],
+      "mode": "RGB",
+      "sha256": "ac0fb108d6e99f920f64dde62d00bc8b72cd95e777f8e22224dfc22ff80ec7ab",
+      "generatedPixelsPreserved": true
+    },
+    {
+      "id": "meleri",
+      "file": "AleriaAlmanach/assets/kleiner-durst/portraits/meleri.png",
+      "size": [
+        1024,
+        1536
+      ],
+      "mode": "RGB",
+      "sha256": "382fd659a24186fa3c5586fe8537f5c43b2fc9324c0aa0f259f39bb2907118fa",
+      "generatedPixelsPreserved": true
+    },
+    {
+      "id": "nia",
+      "file": "AleriaAlmanach/assets/kleiner-durst/portraits/nia.png",
+      "size": [
+        1024,
+        1536
+      ],
+      "mode": "RGB",
+      "sha256": "a8a33eab2000867a7bfbf00313a115c5efff3011afc6fc32a94517ba44ffee53",
+      "generatedPixelsPreserved": true
+    },
+    {
+      "id": "dewi",
+      "file": "AleriaAlmanach/assets/kleiner-durst/portraits/dewi.png",
+      "size": [
+        1024,
+        1536
+      ],
+      "mode": "RGB",
+      "sha256": "6e3375773cc5c90d09497e8d32e6ef7e7abbd54d001469eb564435a1f61527cd",
+      "generatedPixelsPreserved": true
+    },
+    {
+      "id": "aled",
+      "file": "AleriaAlmanach/assets/kleiner-durst/portraits/aled.png",
+      "size": [
+        1024,
+        1536
+      ],
+      "mode": "RGB",
+      "sha256": "8123bf1734f409d3b3b118b8f84cdf251f01875508c6747e28f84077bf41f3a2",
+      "generatedPixelsPreserved": true
+    },
+    {
+      "id": "carwyn",
+      "file": "AleriaAlmanach/assets/kleiner-durst/portraits/carwyn.png",
+      "size": [
+        1024,
+        1536
+      ],
+      "mode": "RGB",
+      "sha256": "73a6cfa91048a00175262ea7b7273a24b562b380e813d8d85ff2cf540fcec97c",
+      "generatedPixelsPreserved": true
+    },
+    {
+      "id": "hywel",
+      "file": "AleriaAlmanach/assets/kleiner-durst/portraits/hywel.png",
+      "size": [
+        1024,
+        1536
+      ],
+      "mode": "RGB",
+      "sha256": "367ae587b1f7fcf710dba29eaa2d989fe32fc33d904571e87aabf8573792ab9a",
+      "generatedPixelsPreserved": true
+    },
+    {
+      "id": "dafydd",
+      "file": "AleriaAlmanach/assets/kleiner-durst/portraits/dafydd.png",
+      "size": [
+        1024,
+        1536
+      ],
+      "mode": "RGB",
+      "sha256": "01b40b2f13ad6f188e725d38a61ed32add59a05e2d6c7c8d865ac193405311f7",
+      "generatedPixelsPreserved": true
+    },
+    {
+      "id": "bram",
+      "file": "AleriaAlmanach/assets/kleiner-durst/portraits/bram.png",
+      "size": [
+        1024,
+        1536
+      ],
+      "mode": "RGB",
+      "sha256": "b4536ac78c17fe21f4db920929311bafe8f96a34aaa2fd65dc8d8450aba07100",
+      "generatedPixelsPreserved": true
+    },
+    {
+      "id": "iorwerth",
+      "file": "AleriaAlmanach/assets/kleiner-durst/portraits/iorwerth.png",
+      "size": [
+        1024,
+        1536
+      ],
+      "mode": "RGB",
+      "sha256": "51db386e158fbdf4ff3e55aff0b2c1f5b13fcd7f65cfca410893eaa8ed1376f0",
+      "generatedPixelsPreserved": true
+    },
+    {
+      "id": "carys",
+      "file": "AleriaAlmanach/assets/kleiner-durst/portraits/carys.png",
+      "size": [
+        1024,
+        1536
+      ],
+      "mode": "RGB",
+      "sha256": "b022fb066608c10a7fb216913f649c95388093639a4362b63cb0c186c56e2128",
+      "generatedPixelsPreserved": true
+    },
+    {
+      "id": "wappen",
+      "file": "Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Rhwyd.png",
+      "size": [
+        1263,
+        1263
+      ],
+      "mode": "RGBA",
+      "sha256": "daf35b1a4570f67b31a247671e2f33f09189cbc60b48bf78ead532cae5f6c21c",
+      "generatedPixelsPreserved": true
+    },
+    {
+      "id": "matrosenhappen",
+      "file": "AleriaAlmanach/assets/kleiner-durst/food/matrosenhappen.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "1b5faab45a35eb5d215532a002565f79bacca38aed7f1eeaf41c0de58cf333e4",
+      "generatedPixelsPreserved": true,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "fullyTransparentPixels": 726168,
+      "bounds": [
+        0,
+        20,
+        1238,
+        1218
+      ]
+    },
+    {
+      "id": "fischgerstentopf",
+      "file": "AleriaAlmanach/assets/kleiner-durst/food/fischgerstentopf.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "0eef9c09fb4b190080927ef862c89a5999f62dbbd6efffdb1ee331ded2cd9727",
+      "generatedPixelsPreserved": true,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "fullyTransparentPixels": 678992,
+      "bounds": [
+        0,
+        7,
+        1234,
+        1254
+      ]
+    },
+    {
+      "id": "hafensuppe",
+      "file": "AleriaAlmanach/assets/kleiner-durst/food/hafensuppe.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "48fc27f15794fe8328cea85d3257140e88b15f149cb5502d4553ada25145a11d",
+      "generatedPixelsPreserved": true,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "fullyTransparentPixels": 798911,
+      "bounds": [
+        23,
+        9,
+        1253,
+        1254
+      ]
+    },
+    {
+      "id": "ganzer-hering",
+      "file": "AleriaAlmanach/assets/kleiner-durst/food/ganzer-hering.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "fb7421769f5e1388a0b9a5a1f078f6037c2ca9de608554590f32ef3b0d0c4ac8",
+      "generatedPixelsPreserved": true,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "fullyTransparentPixels": 800715,
+      "bounds": [
+        0,
+        4,
+        1253,
+        1238
+      ]
+    },
+    {
+      "id": "monatsfang",
+      "file": "AleriaAlmanach/assets/kleiner-durst/food/monatsfang.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "c9169589477ecff593e6af6192fdda90817207b2de7cb2bf4bdbeb5cd6d92399",
+      "generatedPixelsPreserved": true,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "fullyTransparentPixels": 768635,
+      "bounds": [
+        0,
+        9,
+        1241,
+        1254
+      ]
+    }
+  ],
+  "foodBrowser": {
+    "desktop": [
+      1440,
+      1000
+    ],
+    "phone": [
+      390,
+      844
+    ],
+    "filtersPassed": true,
+    "itemCardsPassed": true,
+    "javascriptErrors": [],
+    "evidence": ".tmp/penrudd-durst-food-icons/browser-1792433525921/report.json"
+  }
 }

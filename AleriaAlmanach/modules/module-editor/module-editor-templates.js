@@ -1258,6 +1258,19 @@ const MODULE_TEMPLATE_REGISTRY = {
     renderPage: (page, entry, index, total) => buildGuildServicesPage(page, entry, index, total),
     renderInlinePage: (page, entry, index, total) => buildInlineComplexTemplatePage(page, entry, index, total, 'guild-services')
   },
+  'economy-calculation': {
+    id: 'economy-calculation',
+    pageType: 'economy-calculation',
+    pageFlag: 'economyCalculationPage',
+    label: 'Wirtschaftskalkulation - Testtemplate', pageLabel: 'Wirtschaftskalkulation',
+    defaultTitle: 'Neue Wirtschaftskalkulation', defaultSubtitle: 'Einnahmen, Personal, Abgaben und Vermögen', entryType: 'Wirtschaftskalkulation',
+    typeMatchers: ['wirtschaftskalkulation', 'betriebskalkulation'],
+    createPages: () => [AleriaEconomy.createDefaultPage(0)], createPage: index => AleriaEconomy.createDefaultPage(index),
+    buildEditorFields: page => AleriaEconomy.buildEditor(page), collectEditorPage: (card, page) => AleriaEconomy.collectEditor(card, page),
+    renderPage: (page, entry, index, total) => AleriaEconomy.renderPage(page, entry, index, total),
+    renderInlinePage: (page, entry, index, total) => buildInlineComplexTemplatePage(page, entry, index, total, 'economy-calculation'),
+    mountPage: context => AleriaEconomy.mount(context), unmountPage: context => AleriaEconomy.unmount(context)
+  },
   'organization-network': {
     id: 'organization-network',
     pageType: 'organization-network',
@@ -1670,6 +1683,7 @@ const MODULE_TEMPLATE_RUNTIME_DEPENDENCIES = {
   'guild-services': ['buildGuildServicesModuleEditorFields', 'collectGuildServicesModuleEditorPage', 'buildGuildServicesPage'],
   'theatre-program': ['buildTheatreProgramModuleEditorFields', 'collectTheatreProgramModuleEditorPage', 'buildTheatreProgramPage'],
   'organization-network': ['buildOrganizationNetworkModuleEditorFields', 'collectOrganizationNetworkModuleEditorPage', 'buildOrganizationNetworkPage'],
+  'economy-calculation': [],
   language: ['buildLanguageModuleEditorFields', 'collectLanguageModuleEditorPage', 'buildLanguagePage'],
   'name-list': ['buildNameListModuleEditorFields', 'collectNameListModuleEditorPage', 'buildNameListPage'],
   'script-table': ['buildScriptTableModuleEditorFields', 'collectScriptTableModuleEditorPage', 'buildScriptTablePage'],
@@ -2153,7 +2167,7 @@ function createModuleTemplateDraft(templateId = 'story', preferred = getPreferre
     icon: existing.icon || '',
     symbol: existing.symbol || '',
     locked: !!existing.locked,
-    appendCommentsPage: existing.appendCommentsPage !== false,
+    appendCommentsPage: false,
     enablePageComments: !!existing.enablePageComments,
     sessionCast: getModuleCastIdsFromSource(existing),
     sessionCastDetails: getModuleCastDetailsFromSource(existing),

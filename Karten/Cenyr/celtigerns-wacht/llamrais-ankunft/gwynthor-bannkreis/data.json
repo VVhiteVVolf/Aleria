@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "dataPath": "Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/data.json",
-  "revision": 6,
-  "updatedAt": "2026-10-01T18:55:16.075Z",
+  "revision": 7,
+  "updatedAt": "2026-10-19T16:16:51.000Z",
   "state": {
     "pins": [
       {
@@ -3495,69 +3495,69 @@
         "id": "gwynthor-marking-041",
         "x": 0.526123046875,
         "y": 0.18236190476190478,
-        "title": "Bauernhof",
+        "title": "Penrudd-Hof",
         "cat": "muosqiyl9n1p",
         "kind": "place",
         "img": "",
         "imgLink": "",
-        "crest": "/Stammbäume/assets/images/regions/gwynthor.png",
-        "crestLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Bannkreis Gwynthor/Penrudd.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-penrudd&mode=view",
         "banner": "/Stammbäume/assets/images/regions/llamreis-ankunft.png",
         "bannerLink": "",
-        "region": "",
-        "house": "",
+        "region": "Bannkreis Gwynthor · nördliches Umland",
+        "house": "Familie Penrudd",
         "faction": "",
         "table": [
           {
             "k": "Name",
-            "v": ""
+            "v": "Penrudd-Hof"
           },
           {
             "k": "Typ",
-            "v": ""
+            "v": "Gemischter Bauern- und Viehhof"
           },
           {
             "k": "Besitzer",
-            "v": ""
+            "v": "Bewirtschaftet von Familie Penrudd; Grundeigentümer bislang nicht näher vermerkt"
           },
           {
             "k": "Bewirtschaftung",
-            "v": ""
+            "v": "Tudur Penrudd mit Bethan; tägliche Hofarbeit unter Meurig Penrudd"
           },
           {
             "k": "Anbau",
-            "v": ""
+            "v": "Hafer und Futterpflanzen, saisonales Gemüse im Küchengarten"
           },
           {
             "k": "Erzeugnisse",
-            "v": ""
+            "v": "Milch, Butter, einfacher Käse, Eier, Geflügel, Gemüse, Heu und Hafer; gelegentlich Schlachtvieh"
           },
           {
             "k": "Fläche",
-            "v": ""
+            "v": "Bestehender Hof am nördlichen Weg nahe Owains Anwesen, nordnordöstlich der Herberge Zum Roten Tor"
           },
           {
             "k": "Arbeitskräfte",
-            "v": ""
+            "v": "Tudurs und Meurigs Familien sowie wenige nicht namentlich ausgearbeitete Hofkräfte"
           },
           {
             "k": "Versorgung / Abnehmer",
-            "v": ""
+            "v": "Zum Roten Tor und weitere Abnehmer im Umland; getrennte Haushaltskassen und bezahlte Lieferungen"
           },
           {
             "k": "Zustand",
-            "v": ""
+            "v": "Bewirtschaftet und bodenständig geführt"
           },
           {
             "k": "Gefahren",
-            "v": ""
+            "v": "Ernteausfälle, Tierkrankheiten und schlechte Transportbedingungen"
           },
           {
             "k": "Besonderheiten",
-            "v": ""
+            "v": "Tudur ist der jüngere Bruder des alten Wirts Gwilym Penrudd; regelmäßige Versorgung der Herberge Zum Roten Tor"
           }
         ],
-        "text": "",
+        "text": "Der **Penrudd-Hof** liegt am nördlichen Weg nahe Owains Anwesen, nordnordöstlich der Herberge **Zum Roten Tor**. Tudur Penrudd, jüngerer Bruder des alten Wirts Gwilym, bewirtschaftet ihn mit seiner Frau Bethan sowie dem Haushalt seines Sohnes Meurig. Ein überschaubarer Milchviehbestand, einige Schafe, Geflügel, Futteräcker und ein Küchengarten tragen den Betrieb. Die Familie liefert Milch, Butter, einfachen Käse, Eier, Geflügel und saisonales Gemüse an die Herberge; Heu und Hafer versorgen deren Stallungen. Gelegentlich kommt Schlachtvieh hinzu, das ein örtlicher Fleischer verarbeitet. Hof und Herberge führen getrennte Kassen und rechnen regelmäßige Lieferungen zu vereinbarten Preisen ab. Weitere Abnehmer im Umland sichern dem Hof zusätzliche Einnahmen. Der genaue Grundherr und ein möglicher Pachtvertrag sind noch nicht näher vermerkt.",
         "secret": false,
         "templateId": "landwirtschaft"
       },
@@ -6123,12 +6123,12 @@
         "kind": "place",
         "img": "",
         "imgLink": "",
-        "crest": "/Stammbäume/assets/images/regions/gwynthor.png",
-        "crestLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Bannkreis Gwynthor/Penrudd.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-penrudd&mode=view",
         "banner": "/Stammbäume/assets/images/regions/llamreis-ankunft.png",
         "bannerLink": "",
         "region": "Baronie von Llamreis Ankunft",
-        "house": "Haus Penry",
+        "house": "Haus Penrudd",
         "faction": "",
         "table": [
           {
@@ -6141,7 +6141,7 @@
           },
           {
             "k": "Betreiber",
-            "v": "Familie Penry"
+            "v": "Familie Penrudd"
           },
           {
             "k": "Speisen / Getränke",
@@ -6169,14 +6169,14 @@
           },
           {
             "k": "Gerüchte",
-            "v": "Der namensgebende Penry habe einst nach einer durchzechten Nacht das Nordtor Gwynthors rot gestrichen"
+            "v": "Der namensgebende Penrudd habe einst nach einer durchzechten Nacht das Nordtor Gwynthors rot gestrichen"
           },
           {
             "k": "Besonderheiten",
             "v": "Unmittelbar vor dem Nordtor gelegen; wichtiger Übernachtungsplatz für Reisende vor dem Betreten oder nach dem Verlassen Gwynthors"
           }
         ],
-        "text": "Die **Herberge „Zum Roten Tor“** wird seit mehreren Generationen von der Familie Penry unmittelbar vor dem Nordtor Gwynthors betrieben. Sie bietet vor allem Reisenden, Händlern und Fuhrleuten Unterkunft, einfache Mahlzeiten und einen Platz für Pferde und Wagen. Ihren Namen verdankt sie allerdings nicht dem Nordtor selbst, sondern einer alten Familiengeschichte: Ein früher Penry soll nach einer durchzechten Nacht das Nordtor vollständig rot gestrichen haben, weil er überzeugt gewesen sei, der damalige Graf habe genau dies angeordnet. Als die Stadtwache ihn am Morgen zur Rede stellte, soll er lediglich gefragt haben, warum sie ihm dann die ganze Nacht beim Streichen zugesehen habe. Das Tor wurde längst wieder überstrichen, doch die Penrys machten aus der Geschichte ein Geschäft und benannten ihre Herberge danach.",
+        "text": "Die **Herberge „Zum Roten Tor“** wird seit mehreren Generationen von der Familie Penrudd unmittelbar vor dem Nordtor Gwynthors betrieben. Sie bietet vor allem Reisenden, Händlern und Fuhrleuten Unterkunft, einfache Mahlzeiten und einen Platz für Pferde und Wagen. Ihren Namen verdankt sie allerdings nicht dem Nordtor selbst, sondern einer alten Familiengeschichte: Ein früher Penrudd soll nach einer durchzechten Nacht das Nordtor vollständig rot gestrichen haben, weil er überzeugt gewesen sei, der damalige Graf habe genau dies angeordnet. Als die Stadtwache ihn am Morgen zur Rede stellte, soll er lediglich gefragt haben, warum sie ihm dann die ganze Nacht beim Streichen zugesehen habe. Das Tor wurde längst wieder überstrichen, doch die Penrudds machten aus der Geschichte ein Geschäft und benannten ihre Herberge danach. Heute führt Carwyn Penrudd den Gasthof. Die Familie bezieht einen Teil ihrer Lebensmittel und des Stallfutters vom nahen Penrudd-Hof, den Gwilyms jüngerer Bruder Tudur mit seiner Familie bewirtschaftet; beide Haushalte rechnen ihre Lieferungen miteinander ab.",
         "secret": false,
         "templateId": "gastbetrieb",
         "dominionId": ""

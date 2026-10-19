@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-19",
+  "familyId": "haus-penrudd",
+  "people": 26,
+  "living": 22,
+  "marriages": 8,
+  "parentages": 17,
+  "serialTimeJumps": 1,
+  "renderedCardsIncludingHouseAndTimeJump": 28,
+  "schemaIssues": [],
+  "chartLayoutIssues": [],
+  "relatedUnitTestsPassed": 19,
+  "browser": {
+    "desktop": [
+      1720,
+      1100
+    ],
+    "phone": [
+      390,
+      844
+    ],
+    "publicViewPassed": true,
+    "javascriptErrors": [],
+    "expectedUnpublishedFamily404": true,
+    "onlineWritesBlocked": true,
+    "evidence": ".tmp/penrudd/browser-report.json"
+  },
+  "map": {
+    "changedPins": [
+      "gwynthor-marking-041",
+      "gwynthor-marking-080"
+    ],
+    "pinCount": 170,
+    "allPinIdsAndCoordinatesPreserved": true,
+    "allOtherMapStatePreserved": true
+  },
+  "existingTalgarthPenryFilesUnchanged": true,
+  "portraits": {
+    "count": 24,
+    "style": "anime-scene-portrait",
+    "aspectRatio": "2:3",
+    "allLinkedInFamily": true,
+    "generatedPixelsPreserved": true,
+    "sourceRevision": 2
+  },
+  "menu": {
+    "dishes": 8,
+    "drinks": 8,
+    "foodStyle": "fantasy-inventory-item",
+    "foodSquareTransparent": true,
+    "standardDrinkPricesAndPortionsPreserved": true,
+    "noPublicModuleRegisteredYet": true,
+    "browserDesktopAndPhonePassed": true,
+    "itemCardsPassed": true,
+    "javascriptErrors": [],
+    "evidence": ".tmp/penrudd-durst-food-icons/browser-1792433525921/report.json"
+  },
+  "currentChecks": {
+    "menuTests": 3,
+    "familyTests": 5,
+    "buildPolicyTests": 16,
+    "allPassed": true,
+    "imageEvidence": "AleriaAlmanach/assets/rotes-tor/image-validation.json"
+  },
+  "emblem": "complete; user-authorized alpha and transparent margin correction verified",
+  "emblemVisualCheck": {
+    "lightBackground": "passed",
+    "darkBackground": "passed",
+    "evidence": ".tmp/penrudd/crest-light-dark.png"
+  },
+  "published": false,
+  "pushed": false,
+  "deployed": false,
+  "emblemAlpha": {
+    "status": "complete",
+    "authorization": "User explicitly approved on 2026-10-19: Ja, Alpha und Rand bereinigen.",
+    "kind": "alpha-and-transparent-padding",
+    "originalRgbPreserved": true,
+    "originalFilePreserved": true,
+    "originalSize": [
+      1254,
+      1254
+    ],
+    "finalSize": [
+      1329,
+      1329
+    ],
+    "offset": [
+      39,
+      46
+    ],
+    "originalCircleCenter": [
+      625,
+      618
+    ],
+    "finalCircleCenter": [
+      664,
+      664
+    ],
+    "radius": 577,
+    "alphaValues": [
+      0,
+      255
+    ],
+    "insideOpaque": true,
+    "outsideTransparent": true,
+    "occupancy": 0.869074,
+    "originalSha256": "998d8bd7f3302e6c55261fb9a41b3f5b1c76e4fec35d44596ec56d9111b391c9",
+    "finalSha256": "e6062c30b0ac5627cf77e5ed37d93f49c61e9081c52d26f5494927ec76c6653d"
+  }
+}

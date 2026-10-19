@@ -7,7 +7,7 @@ const entry = buildKlingendeKrone(), preview = await openVenueBrowserPreview('kl
 const { page } = preview;
 try {
   assert.equal(await page.evaluate(id => getValidSections().flatMap(s => s.entries).filter(e => e.id === id).length, entry.id), 1);
-  assert.equal(await page.evaluate(e => getPages(e).length, entry), 13);
+  assert.equal(await page.evaluate(e => getPages(e).length, entry), entry.pages.length);
   for (const [layout, viewport] of [['desktop', { width: 1440, height: 1000 }], ['mobile', { width: 430, height: 900 }]]) {
     await page.setViewportSize(viewport);
     for (let index = 0; index < 13; index++) {

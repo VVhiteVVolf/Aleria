@@ -583,7 +583,7 @@
                 "value": 10
               }
             ],
-            "priceMin": "0,1",
+            "priceMin": "0,25",
             "priceMax": "",
             "currencyCode": "KT",
             "currencyLabel": "Kupfertaler",
@@ -719,7 +719,7 @@
                 "value": 7
               }
             ],
-            "priceMin": "1,8",
+            "priceMin": "4,5",
             "priceMax": "",
             "currencyCode": "KT",
             "currencyLabel": "Kupfertaler",
@@ -855,7 +855,7 @@
                 "value": 10
               }
             ],
-            "priceMin": "0,35",
+            "priceMin": "0,2",
             "priceMax": "",
             "currencyCode": "KT",
             "currencyLabel": "Kupfertaler",
@@ -923,7 +923,7 @@
                 "value": 9
               }
             ],
-            "priceMin": "0,5",
+            "priceMin": "1,2",
             "priceMax": "",
             "currencyCode": "KT",
             "currencyLabel": "Kupfertaler",

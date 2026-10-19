@@ -30,7 +30,7 @@ try {
     await preview.capture(`${layout}-archiv-reiter`);
     for (const entry of entries) {
       const count = await page.evaluate(e => getPages(e).length, entry);
-      assert.equal(count, entry.pages.length + 1);
+      assert.equal(count, entry.pages.length);
       for (let index = 0; index < count; index++) {
         await preview.openPage(entry, index);
         await preview.decodeImages('#modal-overlay img[src*="klingende-muenze-gwynthor"]');
@@ -71,6 +71,6 @@ try {
   }, AFFILIATED_ENTRY_IDS[0]);
   assert.ok(overridePreserved);
   assert.deepEqual(preview.errors, []);
-  await writeFile(resolve(preview.output, 'report.json'), JSON.stringify({ passed: true, placement, importRoundTrip, modules: entries.map(e => ({ id: e.id, pages: e.pages.length + 1 })), overridePreserved, externalWrites: false, errors: preview.errors }, null, 2));
+  await writeFile(resolve(preview.output, 'report.json'), JSON.stringify({ passed: true, placement, importRoundTrip, modules: entries.map(e => ({ id: e.id, pages: e.pages.length })), overridePreserved, externalWrites: false, errors: preview.errors }, null, 2));
   console.log(JSON.stringify({ passed: true, output: preview.output, placement }));
 } finally { await preview.close(); }

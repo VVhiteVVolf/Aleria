@@ -28,7 +28,7 @@ try {
     await preview.capture(`${layout}-archiv-reiter`);
     for (const entry of entries) {
       const count = await page.evaluate(e => getPages(e).length, entry);
-      assert.equal(count, entry.pages.length + 1);
+      assert.equal(count, entry.pages.length);
       for (let index = 0; index < count; index++) {
         await preview.openPage(entry, index);
         await preview.decodeImages('#modal-overlay img[src*="markt-der-fortuna-gwynthor"]');
@@ -66,6 +66,6 @@ try {
   }, FORTUNA_AFFILIATED_IDS[0]);
   assert.ok(customPlacementPreserved);
   assert.deepEqual(preview.errors, []);
-  await writeFile(resolve(preview.output, 'report.json'), JSON.stringify({ passed: true, placement, modules: entries.map(e => ({ id: e.id, pages: e.pages.length + 1 })), hierarchyTabs: 14, scenes: 5, councilPeersAfterImport: 9, customPlacementPreserved, externalWrites: false, errors: preview.errors }, null, 2));
+  await writeFile(resolve(preview.output, 'report.json'), JSON.stringify({ passed: true, placement, modules: entries.map(e => ({ id: e.id, pages: e.pages.length })), hierarchyTabs: 14, scenes: 5, councilPeersAfterImport: 9, customPlacementPreserved, externalWrites: false, errors: preview.errors }, null, 2));
   console.log(JSON.stringify({ passed: true, output: preview.output, placement }));
 } finally { await preview.close(); }

@@ -42,6 +42,7 @@ const sources = [
   'modules/family-tree-embed/family-tree-embed-data.js',
   'modules/core/app-core.js',
   'modules/core/aleria-calendar.js',
+  'modules/economy-calculator/economy-runtime.global.js',
   'modules/module-editor/module-editor-data.js',
   'modules/family/family-api.js',
   'modules/family/editor/family-editor-model.js',

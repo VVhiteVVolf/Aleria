@@ -10,8 +10,6 @@ function hasArchiveEntryPageComments(entry) {
 
 function getArchiveEntryCommentLabel(entry) {
   if (!entry) return 'Keine Kommentare';
-  if (entry.appendCommentsPage !== false && hasArchiveEntryPageComments(entry)) return 'Kommentare + Seiten';
-  if (entry.appendCommentsPage !== false) return 'Kommentare';
   if (hasArchiveEntryPageComments(entry)) return 'Seitenkommentare';
   return 'Keine Kommentare';
 }
@@ -68,7 +66,7 @@ function getArchiveEntryPreviewImage(entry) {
 function buildArchiveEntryMetaItems(entry) {
   const pageCount = getArchiveEntryPageCount(entry);
   const items = [{ kind: 'pages', value: `${pageCount} ${pageCount === 1 ? 'Seite' : 'Seiten'}` }];
-  if (entry && (entry.appendCommentsPage !== false || hasArchiveEntryPageComments(entry))) {
+  if (entry && hasArchiveEntryPageComments(entry)) {
     items.push({ kind: 'comments', value: 'Kommentare möglich', description: getArchiveEntryCommentLabel(entry) });
   }
   return items;

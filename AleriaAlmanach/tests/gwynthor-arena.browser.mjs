@@ -60,7 +60,7 @@ try {
   await (await enter.isEnabled() ? enter : page.locator('[data-loading-action="continue"]')).click();
   await page.waitForFunction(() => !document.documentElement.hasAttribute('data-almanach-loading'));
   assert.equal(await page.evaluate(id => getValidSections().flatMap(s => s.entries).filter(e => e.id === id).length, entry.id), 1);
-  assert.equal(await page.evaluate(entry => getPages(entry).length, entry), 5);
+  assert.equal(await page.evaluate(entry => getPages(entry).length, entry), entry.pages.length);
   const threads = await page.evaluate(entry => entry.pages.slice(1).map((p, index) => {
     const thread = getSessionThreadId(entry.id, getPageCommentThreadKey(p, index + 1));
     return { thread, location: parseCommentThreadLocation(thread) };

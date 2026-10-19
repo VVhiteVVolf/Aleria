@@ -58,7 +58,7 @@ function collectModuleEditorPayload() {
     symbol: document.getElementById('me-symbol')?.value.trim() || '',
     locked: !!document.getElementById('me-locked')?.checked,
     multipage: true,
-    appendCommentsPage: !!document.getElementById('me-comments-page')?.checked,
+    appendCommentsPage: false,
     enablePageComments: !!document.getElementById('me-page-comments-enabled')?.checked,
     sessionCast: globalCast,
     sessionCastDetails: globalCastDetails,
@@ -165,7 +165,6 @@ function populateModuleEditor(payload, context, options = {}) {
   document.getElementById('me-icon').value = payload.entry?.icon || '✦';
   document.getElementById('me-symbol').value = payload.entry?.symbol || '';
   document.getElementById('me-locked').checked = !!payload.entry?.locked;
-  document.getElementById('me-comments-page').checked = payload.entry?.appendCommentsPage !== false;
   document.getElementById('me-page-comments-enabled').checked = !!payload.entry?.enablePageComments;
   document.getElementById('me-session-cast-global').value = getModuleCastIdsFromSource(payload.entry).join(', ');
   renderModuleGlobalCastPicker(getModuleCastIdsFromSource(payload.entry), getModuleCastDetailsFromSource(payload.entry));

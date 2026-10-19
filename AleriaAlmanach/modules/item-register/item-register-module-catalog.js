@@ -1,5 +1,6 @@
 import { searchText } from './item-register-model.js?v=20261006-regional-equipment-v2';
 import { parsePrice } from './item-register-money.js?v=20260919-shop-v1';
+import { applyVenuePriceReview } from '../economy-pricing/price-review-model.mjs?v=20261019-prices-v1';
 
 const text = value => String(value ?? '').replace(/[\u200b-\u200d\ufeff]/g, '').trim();
 const key = value => searchText(text(value)).replace(/\s+/g, ' ');
@@ -107,7 +108,8 @@ function tradeRows(page, pageIndex) {
 /** Read-only projection of all actual register rows. No copies are uploaded. */
 export function buildModuleOffers(entries = [], standards = []) {
   const offers = new Map();
-  for (const entry of entries.filter(isShopModule)) {
+  for (const original of entries.filter(isShopModule)) {
+    const entry = applyVenuePriceReview(original);
     const rows = (entry.pages || []).flatMap((page, index) => [
       ...(page.goodsTablePage ? goodsRows(page, index) : []),
       ...(page.tradeCatalogPage ? tradeRows(page, index) : [])

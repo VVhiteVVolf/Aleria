@@ -1,10 +1,3762 @@
 {
   "schemaVersion": 1,
   "dataPath": "Cenyr/klaueninseln/data.json",
-  "revision": 0,
-  "updatedAt": "2026-08-01T04:59:40.663Z",
+  "revision": 1,
+  "updatedAt": "2026-10-19T16:08:01.205Z",
   "state": {
-    "pins": [],
+    "pins": [
+      {
+        "id": "klaueninseln-b61f8f87-3769-45f7-b453-0dc8fab6ad52",
+        "title": "Caer Cryftlawd",
+        "x": 0.69140625,
+        "y": 0.23501362397820158,
+        "cat": "location-burg",
+        "templateId": "militaer",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/gro-e-burg.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Klaueninsel/haus-dyfrgi.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-dyfrgi-caer-cryftlawd&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Klaueninsel/Krallenspitze.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Herrschaft Krallenspitze/Herrschaft Krallenspitze.html",
+        "region": "Klaueninsel",
+        "house": "Haus Dyfrgi O'Caer Cryftlawd",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Caer Cryftlawd"
+          },
+          {
+            "k": "Typ",
+            "v": "Burg"
+          },
+          {
+            "k": "Befehlshaber",
+            "v": ""
+          },
+          {
+            "k": "Unterstellung",
+            "v": ""
+          },
+          {
+            "k": "Besatzung",
+            "v": ""
+          },
+          {
+            "k": "Aufgaben",
+            "v": ""
+          },
+          {
+            "k": "Ausrüstung",
+            "v": ""
+          },
+          {
+            "k": "Befestigung",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Dyfrgi O'Caer Cryftlawd"
+          }
+        ],
+        "text": "Caer Cryftlawd , auch bekannt als \" Der Starke Arm \" oder \" Burg - Starkarm \", ist eine Ritterherrschaft, die von der Dyfrgi-Familie aus dem alten Königreich Vennyr regiert wird. Diese Halbinsel hat sich als Vorposten für Talgarthische Schiffe und Händler etabliert, die aus dem Norden kommen und einen sicheren Hafen auf der Klaueninsel suchen.",
+        "secret": false,
+        "dominionId": "herrschaft-krallenspitze",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "058271b1-8cb9-4584-8eb7-2b413e39b9ad",
+          "markerId": "b61f8f87-3769-45f7-b453-0dc8fab6ad52",
+          "url": "https://www.worldanvil.com/world/map/marker/b61f8f87-3769-45f7-b453-0dc8fab6ad52/edit",
+          "title": "",
+          "coordinates": {
+            "x": 2832,
+            "y": 2246,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          },
+          "nameResolution": "Beschreibungstext beziehungsweise benannter Bezug im Markerformular"
+        }
+      },
+      {
+        "id": "klaueninseln-79b81eb1-fc3c-4445-99a0-f7f65022d1bc",
+        "title": "Tirwen",
+        "x": 0.536376953125,
+        "y": 0.29223433242506813,
+        "cat": "mmflt1x3v22o",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/bergbausiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Klaueninsel/haus-diafol.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-diafol-talgarth&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Klaueninsel/Herrschaft der Diafol.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Herrschaft der Diafol/Herrschaft der Diafol.html",
+        "region": "Klaueninsel",
+        "house": "Haus Diafol O'Talgarth",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Tirwen"
+          },
+          {
+            "k": "Typ",
+            "v": "Bergbausiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Diafol O'Talgarth"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "Tirwen ist eine Bergbausiedlung, die von den Pawen aus reiner Freundschaft an die Diafol übertragen wurde. Dieser Ort versorgt die neuen Diafol mit Eisen und Erzen, die für ihre Rüstungen und Waffenknechte unerlässlich sind. Zudem bietet Tirwen den Diafol eine wichtige Einnahmequelle, da ihnen bislang vor allem Ruinen zugeteilt wurden.",
+        "secret": false,
+        "dominionId": "herrschaft-diafol",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "058271b1-8cb9-4584-8eb7-2b413e39b9ad",
+          "markerId": "79b81eb1-fc3c-4445-99a0-f7f65022d1bc",
+          "url": "https://www.worldanvil.com/world/map/marker/79b81eb1-fc3c-4445-99a0-f7f65022d1bc/edit",
+          "title": "Tirwen",
+          "coordinates": {
+            "x": 2197,
+            "y": 2078,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          }
+        }
+      },
+      {
+        "id": "klaueninseln-7c393676-a194-424c-a2a8-796b2dbcf347",
+        "title": "Zum Bärenblick",
+        "x": 0.26513671875,
+        "y": 0.6062670299727521,
+        "cat": "mmflvj37jbh2",
+        "templateId": "gastbetrieb",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/taverne.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Klaueninsel/haus-arth.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-arth&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Klaueninsel/Sturmklaue.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Grafschaft Klaueninsel.html",
+        "region": "Klaueninsel",
+        "house": "Haus Arth O'Talgarth",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Zum Bärenblick"
+          },
+          {
+            "k": "Typ",
+            "v": "Taverne"
+          },
+          {
+            "k": "Betreiber",
+            "v": ""
+          },
+          {
+            "k": "Speisen / Getränke",
+            "v": ""
+          },
+          {
+            "k": "Unterkunft",
+            "v": ""
+          },
+          {
+            "k": "Preislage",
+            "v": ""
+          },
+          {
+            "k": "Öffnungszeiten",
+            "v": ""
+          },
+          {
+            "k": "Stammgäste",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Arth O'Talgarth"
+          }
+        ],
+        "text": "Die Taverne Zum Bärenblick liegt an der Straße nach Westen und wird zwar weniger besucht als die zentrale Taverne der Insel, ist jedoch ein beliebter Anlaufpunkt für Krieger der Crafanc, Diafol und Pawen , die diese Straße für ihre Patrouillen nutzen. Ihren Namen verdankt die Taverne dem klaren Blick auf die Donnergroll-Höhle, die von dort aus gut zu sehen ist.",
+        "secret": false,
+        "dominionId": "baronie-sturmklaue",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "058271b1-8cb9-4584-8eb7-2b413e39b9ad",
+          "markerId": "7c393676-a194-424c-a2a8-796b2dbcf347",
+          "url": "https://www.worldanvil.com/world/map/marker/7c393676-a194-424c-a2a8-796b2dbcf347/edit",
+          "title": "Zum Bärenblick",
+          "coordinates": {
+            "x": 1086,
+            "y": 1156,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          }
+        }
+      },
+      {
+        "id": "klaueninseln-7d5db1c6-3e2f-446b-b8db-a16569792c1b",
+        "title": "Tewdar",
+        "x": 0.572265625,
+        "y": 0.24148501362397823,
+        "cat": "location-ruine",
+        "templateId": "ruine",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/ruine2.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Klaueninsel/haus-diafol.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-diafol-talgarth&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Klaueninsel/Herrschaft der Diafol.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Herrschaft der Diafol/Herrschaft der Diafol.html",
+        "region": "Klaueninsel",
+        "house": "Haus Diafol O'Talgarth",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Tewdar"
+          },
+          {
+            "k": "Ursprung",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": "Im Wiederaufbau"
+          },
+          {
+            "k": "Ursache des Verfalls",
+            "v": ""
+          },
+          {
+            "k": "Aktuelle Bewohner",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Schätze / Reliquien",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Typ",
+            "v": "Ruine"
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Diafol O'Talgarth"
+          }
+        ],
+        "text": "Tewdar ist eine weitere Ruine, die der Herrschaft der Diafol übertragen wurde. Einst diente sie den Crafanc als kleine Festung und Ausbildungsstätte. Unter den Diafol soll daraus ein Vorposten entstehen, in dem Morwyr-Krieger ausgebildet werden. Dieser Vorposten soll in Zukunft auch für die Sicherheit der Region sorgen, insbesondere weil das ungeschützte Dôrgar in der Nähe liegt.",
+        "secret": false,
+        "dominionId": "herrschaft-diafol",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "058271b1-8cb9-4584-8eb7-2b413e39b9ad",
+          "markerId": "7d5db1c6-3e2f-446b-b8db-a16569792c1b",
+          "url": "https://www.worldanvil.com/world/map/marker/7d5db1c6-3e2f-446b-b8db-a16569792c1b/edit",
+          "title": "Tewdar",
+          "coordinates": {
+            "x": 2344,
+            "y": 2227,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          }
+        }
+      },
+      {
+        "id": "klaueninseln-82004e30-2373-45e0-9b40-0cc97665b396",
+        "title": "Zur Talrast",
+        "x": 0.420166015625,
+        "y": 0.4543596730245232,
+        "cat": "mmflvj37jbh2",
+        "templateId": "gastbetrieb",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/taverne.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Klaueninsel/haus-arth.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-arth&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Klaueninsel/Sturmklaue.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Grafschaft Klaueninsel.html",
+        "region": "Klaueninsel",
+        "house": "Haus Arth O'Talgarth",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Zur Talrast"
+          },
+          {
+            "k": "Typ",
+            "v": "Taverne"
+          },
+          {
+            "k": "Betreiber",
+            "v": ""
+          },
+          {
+            "k": "Speisen / Getränke",
+            "v": ""
+          },
+          {
+            "k": "Unterkunft",
+            "v": ""
+          },
+          {
+            "k": "Preislage",
+            "v": ""
+          },
+          {
+            "k": "Öffnungszeiten",
+            "v": ""
+          },
+          {
+            "k": "Stammgäste",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Arth O'Talgarth"
+          }
+        ],
+        "text": "Die Taverne Zur Talrast liegt strategisch günstig zwischen Talgarth, der Hauptstadt der Klaueninseln, und der Hafenstadt Morea im Süden. Dank ihrer Lage ist sie die am meisten besuchte Taverne der Insel, da Tag und Nacht Karren die Hauptstraße zwischen den beiden Städten entlangfahren. Da es keinen alternativen Weg von Morea nach Talgarth gibt, profitiert die Taverne erheblich von der ständigen Durchreise. Geführt wird die Taverne von einer beliebten Familie aus Talgarth, die zwar nicht adlig ist, aber das Privileg hatte, einige ihrer Mitglieder als Feudalritter der Crafanc oder Pawen geschlagen zu sehen – eine wahrhaft große Ehre!",
+        "secret": false,
+        "dominionId": "baronie-sturmklaue",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "058271b1-8cb9-4584-8eb7-2b413e39b9ad",
+          "markerId": "82004e30-2373-45e0-9b40-0cc97665b396",
+          "url": "https://www.worldanvil.com/world/map/marker/82004e30-2373-45e0-9b40-0cc97665b396/edit",
+          "title": "",
+          "coordinates": {
+            "x": 1721,
+            "y": 1602,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          },
+          "nameResolution": "Beschreibungstext beziehungsweise benannter Bezug im Markerformular"
+        }
+      },
+      {
+        "id": "klaueninseln-8aaeea4a-127b-4b46-b2d6-264c1ce33c68",
+        "title": "Llanvyr",
+        "x": 0.300048828125,
+        "y": 0.3215258855585831,
+        "cat": "location-klostersiedlung",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/klostersiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Klaueninsel/haus-pawen.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-pawen&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Klaueninsel/Herrschaft der Pawen.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Herrschaft der Pawen/Herrschaft der Pawen.html",
+        "region": "Klaueninsel",
+        "house": "Haus Pawen O'Talgarth",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Llanvyr"
+          },
+          {
+            "k": "Typ",
+            "v": "Klostersiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Pawen O'Talgarth"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Gottheit / Verehrung",
+            "v": "Aelrith und Sylvanaeth"
+          }
+        ],
+        "text": "Llanvyr ist ein Nonnenkloster, in dem die Zünfte der Medizin und Kräuterkunde gelehrt und ausgeübt werden. Die dort lebenden Nonnen verehren sowohl Aelrith , die Seemaid , als auch Sylvanaeth , die Göttin der Natur und der Tiere. Das Kloster versorgt die Pawen mit alchemistischen Zutaten und bietet zudem einen Zufluchtsort für Waisenkinder.",
+        "secret": false,
+        "dominionId": "herrschaft-pawen",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "058271b1-8cb9-4584-8eb7-2b413e39b9ad",
+          "markerId": "8aaeea4a-127b-4b46-b2d6-264c1ce33c68",
+          "url": "https://www.worldanvil.com/world/map/marker/8aaeea4a-127b-4b46-b2d6-264c1ce33c68/edit",
+          "title": "Priorei, Kloster",
+          "coordinates": {
+            "x": 1229,
+            "y": 1992,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          },
+          "nameResolution": "Beschreibungstext beziehungsweise benannter Bezug im Markerformular"
+        }
+      },
+      {
+        "id": "klaueninseln-8bd7a238-0db7-4af6-a4c8-74683ae39acf",
+        "title": "Pylach",
+        "x": 0.69873046875,
+        "y": 0.13794277929155319,
+        "cat": "mmflry5furso",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/hafensiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Klaueninsel/haus-morthwyll.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-morthwyll&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Klaueninsel/Wellenklaue.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Herrschaft Wellenklaue/Herrschaft Wellenklaue.html",
+        "region": "Klaueninsel",
+        "house": "Haus Morthwyl O'Caer Morben",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Pylach"
+          },
+          {
+            "k": "Typ",
+            "v": "Hafensiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Morthwyl O'Caer Morben"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "Pylach ist eine Fischersiedlung des Hauses Morthwyl , in der neben Holzabbau und Schiffsbau auch Fischerei und Viehzucht betrieben werden. Die Siedlung ist zudem bekannt für ihre fähigen Handwerker und Zimmermänner, die einen wichtigen Beitrag zur örtlichen Wirtschaft leisten.",
+        "secret": false,
+        "dominionId": "herrschaft-wellenklaue",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "058271b1-8cb9-4584-8eb7-2b413e39b9ad",
+          "markerId": "8bd7a238-0db7-4af6-a4c8-74683ae39acf",
+          "url": "https://www.worldanvil.com/world/map/marker/8bd7a238-0db7-4af6-a4c8-74683ae39acf/edit",
+          "title": "Pylach",
+          "coordinates": {
+            "x": 2862,
+            "y": 2531,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          }
+        }
+      },
+      {
+        "id": "klaueninseln-8bf9ce8e-c2a1-4b56-89a7-0a77749538a4",
+        "title": "Aberdail",
+        "x": 0.1298828125,
+        "y": 0.6658719346049047,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Blütenland/haus-blodyn.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-blodyn-aberdail&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Klaueninsel/Blutklaue.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Baronie Blutklaue/Baronie Blutklaue.html",
+        "region": "Klaueninsel",
+        "house": "Haus Blodyn O'Aberdail",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Aberdail"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Blodyn O'Aberdail"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "Aberdail ist die Hauptstadt der Baronie der Blutklaue, in der sich die Blodyn als neue Herrscher etabliert haben. Einst eine einfache Hafenstadt, dient Aberdail nun den Adligen der Häuser Blodyn, Dianc und Arfordir als Hauptsitz. Von hier aus kontrollieren und sichern sie die gesamte Baronie und die umliegenden Inseln.",
+        "secret": false,
+        "dominionId": "baronie-blutklaue",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "058271b1-8cb9-4584-8eb7-2b413e39b9ad",
+          "markerId": "8bf9ce8e-c2a1-4b56-89a7-0a77749538a4",
+          "url": "https://www.worldanvil.com/world/map/marker/8bf9ce8e-c2a1-4b56-89a7-0a77749538a4/edit",
+          "title": "",
+          "coordinates": {
+            "x": 532,
+            "y": 981,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          },
+          "nameResolution": "Beschreibungstext beziehungsweise benannter Bezug im Markerformular"
+        }
+      },
+      {
+        "id": "klaueninseln-a3c1b53b-93a5-4727-bf07-c1bd138315cc",
+        "title": "Hafod",
+        "x": 0.046142578125,
+        "y": 0.7629427792915531,
+        "cat": "mmflvquv2rr3",
+        "templateId": "ruine",
+        "kind": "place",
+        "pinMarker": "/Karten/Cenyr/weidebucht/Symbole/siedlungsruine.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Klaueninsel/haus-arfordir.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-arfordir-aberdail&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Klaueninsel/Herrschaft der Arfordir.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Herrschaft der Arfordir/Herrschaft der Arfordir.html",
+        "region": "Klaueninsel",
+        "house": "Haus Arfordir O'Aberdail",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Hafod"
+          },
+          {
+            "k": "Ursprung",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": "Im Wiederaufbau"
+          },
+          {
+            "k": "Ursache des Verfalls",
+            "v": ""
+          },
+          {
+            "k": "Aktuelle Bewohner",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Schätze / Reliquien",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Typ",
+            "v": "Siedlungsruine"
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Arfordir O'Aberdail"
+          }
+        ],
+        "text": "Hafod ist eine Ruine, die von der Herrschaft des Hauses Arfordir wieder aufgebaut wird. Hier haben sich Siedler aus Vennyr niedergelassen, und der Ort soll zu einem Zentrum für Agrarkultur und Viehzucht werden.",
+        "secret": false,
+        "dominionId": "herrschaft-arfordir",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "058271b1-8cb9-4584-8eb7-2b413e39b9ad",
+          "markerId": "a3c1b53b-93a5-4727-bf07-c1bd138315cc",
+          "url": "https://www.worldanvil.com/world/map/marker/a3c1b53b-93a5-4727-bf07-c1bd138315cc/edit",
+          "title": "Hafod",
+          "coordinates": {
+            "x": 189,
+            "y": 696,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          }
+        }
+      },
+      {
+        "id": "klaueninseln-a50851fd-6ec6-4756-99d8-3e823b25f5f2",
+        "title": "Caer Morben",
+        "x": 0.843505859375,
+        "y": 0.05756130790190739,
+        "cat": "location-burg",
+        "templateId": "militaer",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/gro-e-burg.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Klaueninsel/haus-morthwyll.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-morthwyll&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Klaueninsel/Wellenklaue.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Herrschaft Wellenklaue/Herrschaft Wellenklaue.html",
+        "region": "Klaueninsel",
+        "house": "Haus Morthwyl O'Caer Morben",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Caer Morben"
+          },
+          {
+            "k": "Typ",
+            "v": "Burg"
+          },
+          {
+            "k": "Befehlshaber",
+            "v": ""
+          },
+          {
+            "k": "Unterstellung",
+            "v": ""
+          },
+          {
+            "k": "Besatzung",
+            "v": ""
+          },
+          {
+            "k": "Aufgaben",
+            "v": ""
+          },
+          {
+            "k": "Ausrüstung",
+            "v": ""
+          },
+          {
+            "k": "Befestigung",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Morthwyl O'Caer Morben"
+          }
+        ],
+        "text": "Caer Morben ist die zweitgrößte der vier kleineren Inseln und wird von den Morthwyl geführt, einem eher unscheinbaren Seefahrerhaus. Sie sind es, die den Großteil der Angriffe durch Piraten und Nordmänner abbekommen und wären die Ersten, die bei einer Invasion auf Feindkontakt stoßen würden. Ihre Burg ist zwar klein, kann aber dank ihrer strategischen Lage lange standhalten.",
+        "secret": false,
+        "dominionId": "herrschaft-wellenklaue",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "058271b1-8cb9-4584-8eb7-2b413e39b9ad",
+          "markerId": "a50851fd-6ec6-4756-99d8-3e823b25f5f2",
+          "url": "https://www.worldanvil.com/world/map/marker/a50851fd-6ec6-4756-99d8-3e823b25f5f2/edit",
+          "title": "",
+          "coordinates": {
+            "x": 3455,
+            "y": 2767,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          },
+          "nameResolution": "Beschreibungstext beziehungsweise benannter Bezug im Markerformular"
+        }
+      },
+      {
+        "id": "klaueninseln-a572b426-78f2-4335-bef3-6d202a0c9ce8",
+        "title": "Brondir",
+        "x": 0.231689453125,
+        "y": 0.3756811989100818,
+        "cat": "mmflvquv2rr3",
+        "templateId": "ruine",
+        "kind": "place",
+        "pinMarker": "/Karten/Cenyr/weidebucht/Symbole/siedlungsruine.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Klaueninsel/haus-pawen.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-pawen&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Klaueninsel/Herrschaft der Pawen.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Herrschaft der Pawen/Herrschaft der Pawen.html",
+        "region": "Klaueninsel",
+        "house": "Haus Pawen O'Talgarth",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Brondir"
+          },
+          {
+            "k": "Ursprung",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Ursache des Verfalls",
+            "v": ""
+          },
+          {
+            "k": "Aktuelle Bewohner",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Schätze / Reliquien",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Typ",
+            "v": "Siedlungsruine"
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Pawen O'Talgarth"
+          }
+        ],
+        "text": "Brondir war einst eine Bauernsiedlung, in der verschiedene Zünfte ansässig waren. Allerdings wurde sie von den Nordmännern überfallen und niedergebrannt. Bisher konnten sich die Pawen noch nicht auf den Wiederaufbau der Siedlung konzentrieren.",
+        "secret": false,
+        "dominionId": "herrschaft-pawen",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "058271b1-8cb9-4584-8eb7-2b413e39b9ad",
+          "markerId": "a572b426-78f2-4335-bef3-6d202a0c9ce8",
+          "url": "https://www.worldanvil.com/world/map/marker/a572b426-78f2-4335-bef3-6d202a0c9ce8/edit",
+          "title": "Brondir",
+          "coordinates": {
+            "x": 949,
+            "y": 1833,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          }
+        }
+      },
+      {
+        "id": "klaueninseln-ac4246c6-46ec-4c09-8cfb-346df41b5471",
+        "title": "Drwyn",
+        "x": 0.828125,
+        "y": 0.4257493188010899,
+        "cat": "mmflt1x3v22o",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/bergbausiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Klaueninsel/haus-eirth.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-eirth&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Klaueninsel/Nebelklaue.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Herrschaft Nebelklaue/Herrschaft Nebelklaue.html",
+        "region": "Klaueninsel",
+        "house": "Haus Eirth O'Caer Glaslyn",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Drwyn"
+          },
+          {
+            "k": "Typ",
+            "v": "Bergbausiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Eirth O'Caer Glaslyn"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "Drwyn ist eine Bergbausiedlung unter der Herrschaft der Eirth , die sich auf den Abbau von Erzen spezialisiert hat, die für die Rüstungen ihrer Krieger verwendet werden. Zwar gibt es auch einige wertvolle Mineralien, doch diese sind nur in begrenzten Mengen vorhanden.",
+        "secret": false,
+        "dominionId": "herrschaft-nebelklaue",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "058271b1-8cb9-4584-8eb7-2b413e39b9ad",
+          "markerId": "ac4246c6-46ec-4c09-8cfb-346df41b5471",
+          "url": "https://www.worldanvil.com/world/map/marker/ac4246c6-46ec-4c09-8cfb-346df41b5471/edit",
+          "title": "Drwyn",
+          "coordinates": {
+            "x": 3392,
+            "y": 1686,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          }
+        }
+      },
+      {
+        "id": "klaueninseln-784281b6-317d-4f89-9d3a-d02e6dc8fee5",
+        "title": "Rhydfa",
+        "x": 0.16162109375,
+        "y": 0.9148501362397821,
+        "cat": "mmflt1x3v22o",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/bergbausiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Klaueninsel/haus-dianc.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-dianc-aberdail&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Klaueninsel/Herrschaft der Dianc.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Herrschaft der Dianc/Herrschaft der Dianc.html",
+        "region": "Klaueninsel",
+        "house": "Haus Dianc O'Aberdail",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Rhydfa"
+          },
+          {
+            "k": "Typ",
+            "v": "Bergbausiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Dianc O'Aberdail"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "Rhydfa ist eine Bergbausiedlung der Dianc , die sich auf die Produktion von Eisen und anderen Erzen spezialisiert hat. Diese Rohstoffe werden anschließend zu Hufeisen, Eisenbarren und letztlich zu Waffen geschmiedet. Der Ort versorgt die Dianc mit wichtigen Mineralien, die für ihre Reiter und Krieger unerlässlich sind, und stellt somit eine kleine, aber wertvolle Siedlung für die Herrschaft der Dianc dar.",
+        "secret": false,
+        "dominionId": "herrschaft-dianc",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "058271b1-8cb9-4584-8eb7-2b413e39b9ad",
+          "markerId": "784281b6-317d-4f89-9d3a-d02e6dc8fee5",
+          "url": "https://www.worldanvil.com/world/map/marker/784281b6-317d-4f89-9d3a-d02e6dc8fee5/edit",
+          "title": "Rhydfa",
+          "coordinates": {
+            "x": 662,
+            "y": 250,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          }
+        }
+      },
+      {
+        "id": "klaueninseln-b9665847-57d3-48b2-a842-7ebd45167a24",
+        "title": "Aelyr",
+        "x": 0.93115234375,
+        "y": 0.3985013623978202,
+        "cat": "mmflry5furso",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/hafensiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Klaueninsel/haus-eirth.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-eirth&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Klaueninsel/Nebelklaue.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Herrschaft Nebelklaue/Herrschaft Nebelklaue.html",
+        "region": "Klaueninsel",
+        "house": "Haus Eirth O'Caer Glaslyn",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Aelyr"
+          },
+          {
+            "k": "Typ",
+            "v": "Hafensiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Eirth O'Caer Glaslyn"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "Aelyr ist eine Fischersiedlung unter der Herrschaft der Eirth , wo neben dem Holzabbau und der Verarbeitung von Holz für den Schiffsbau auch Fischerei betrieben wird. Darüber hinaus gibt es wenig Bemerkenswertes über die Siedlung.",
+        "secret": false,
+        "dominionId": "herrschaft-nebelklaue",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "058271b1-8cb9-4584-8eb7-2b413e39b9ad",
+          "markerId": "b9665847-57d3-48b2-a842-7ebd45167a24",
+          "url": "https://www.worldanvil.com/world/map/marker/b9665847-57d3-48b2-a842-7ebd45167a24/edit",
+          "title": "Aelyr",
+          "coordinates": {
+            "x": 3814,
+            "y": 1766,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          }
+        }
+      },
+      {
+        "id": "klaueninseln-baf80ba4-30be-41f3-b638-bbbdcb198df5",
+        "title": "Maesog",
+        "x": 0.3369140625,
+        "y": 0.5888964577656676,
+        "cat": "mmflry5furso",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/hafensiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Klaueninsel/haus-cwningod.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-cwningod&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Klaueninsel/Talklaue.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Baronie Talklaue/Baronie Talklaue.html",
+        "region": "Klaueninsel",
+        "house": "Haus Cwingod O'Morea",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Maesog"
+          },
+          {
+            "k": "Typ",
+            "v": "Hafensiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Cwingod O'Morea"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "Maesog ist ein kleines Fischerdorf in der Baronie von Morea , das für seine erfahrenen Fischer und die Herstellung hochwertiger Fischernetze bekannt ist. Diese Netze werden in den umliegenden Regionen hoch geschätzt. Das Dorf spielt eine wichtige Rolle bei der Versorgung der Märkte der Baronie und benachbarter Städte mit frischem Fisch.",
+        "secret": false,
+        "dominionId": "baronie-talklaue",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "058271b1-8cb9-4584-8eb7-2b413e39b9ad",
+          "markerId": "baf80ba4-30be-41f3-b638-bbbdcb198df5",
+          "url": "https://www.worldanvil.com/world/map/marker/baf80ba4-30be-41f3-b638-bbbdcb198df5/edit",
+          "title": "Maesog",
+          "coordinates": {
+            "x": 1380,
+            "y": 1207,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          }
+        }
+      },
+      {
+        "id": "klaueninseln-c4902e59-ac1a-4810-a998-4f2165a7425e",
+        "title": "Caer Ebirth",
+        "x": 0.660888671875,
+        "y": 0.590599455040872,
+        "cat": "location-burg",
+        "templateId": "militaer",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/gro-e-burg.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Klaueninsel/haus-selwyn.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-selwyn&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Klaueninsel/Silberklaue.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Herrschaft Silberklaue/Herrschaft Silberklaue.html",
+        "region": "Klaueninsel",
+        "house": "Haus Sélwyn O'Caer Ebirth",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Caer Ebirth"
+          },
+          {
+            "k": "Typ",
+            "v": "Burg"
+          },
+          {
+            "k": "Befehlshaber",
+            "v": ""
+          },
+          {
+            "k": "Unterstellung",
+            "v": ""
+          },
+          {
+            "k": "Besatzung",
+            "v": ""
+          },
+          {
+            "k": "Aufgaben",
+            "v": ""
+          },
+          {
+            "k": "Ausrüstung",
+            "v": ""
+          },
+          {
+            "k": "Befestigung",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Sélwyn O'Caer Ebirth"
+          }
+        ],
+        "text": "Caer Ebirth ist die kleinste der vier Inseln, besitzt jedoch die größte Burg und den höchsten Wohlstand. Sie gehört der Selwyn-Familie , die nicht den Kadetten der Arth angehört und eher als \"gewöhnliches\" Adelshaus betrachtet wird. Die Burg thront hoch oben auf einem Plateau, von dem aus man einen ausgezeichneten Blick auf Morea, die Hauptinsel und anrückende Piraten hat. Aufgrund ihrer strategischen Lage ist die Insel vergleichsweise sicher und wird nur selten, wenn überhaupt, angegriffen.",
+        "secret": false,
+        "dominionId": "herrschaft-silberklaue",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "058271b1-8cb9-4584-8eb7-2b413e39b9ad",
+          "markerId": "c4902e59-ac1a-4810-a998-4f2165a7425e",
+          "url": "https://www.worldanvil.com/world/map/marker/c4902e59-ac1a-4810-a998-4f2165a7425e/edit",
+          "title": "",
+          "coordinates": {
+            "x": 2707,
+            "y": 1202,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          },
+          "nameResolution": "Beschreibungstext beziehungsweise benannter Bezug im Markerformular"
+        }
+      },
+      {
+        "id": "klaueninseln-d2cbedf1-c3ef-45b0-9318-f183a7a14c79",
+        "title": "Dyfnor",
+        "x": 0.447021484375,
+        "y": 0.41144414168937327,
+        "cat": "mmflt1x3v22o",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/bergbausiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Klaueninsel/haus-pawen.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-pawen&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Klaueninsel/Herrschaft der Pawen.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Herrschaft der Pawen/Herrschaft der Pawen.html",
+        "region": "Klaueninsel",
+        "house": "Haus Pawen O'Talgarth",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Dyfnor"
+          },
+          {
+            "k": "Typ",
+            "v": "Bergbausiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Pawen O'Talgarth"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "Dyfnor ist vermutlich die größte Bergbausiedlung, die von den Pawen kontrolliert wird. Die Bewohner schürfen hier nach wertvollen Mineralien, darunter Eisen, Silber, Gold und Edelsteine. Hin und wieder stoßen sie jedoch auf Gewölbe, die von Grimmlingen bevölkert sind. In solchen Fällen müssen die betroffenen Bereiche entweder zugeschüttet oder von den Pawen gesäubert werden. Trotz dieser Herausforderungen bleibt Dyfnor eine äußerst ergiebige Einnahmequelle für die Pawen.",
+        "secret": false,
+        "dominionId": "herrschaft-pawen",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "058271b1-8cb9-4584-8eb7-2b413e39b9ad",
+          "markerId": "d2cbedf1-c3ef-45b0-9318-f183a7a14c79",
+          "url": "https://www.worldanvil.com/world/map/marker/d2cbedf1-c3ef-45b0-9318-f183a7a14c79/edit",
+          "title": "Dyfnor",
+          "coordinates": {
+            "x": 1831,
+            "y": 1728,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          }
+        }
+      },
+      {
+        "id": "klaueninseln-e5da5ddc-019c-4a3b-9cca-3f18cc2aeab9",
+        "title": "Glyff",
+        "x": 0.916748046875,
+        "y": 0.13794277929155319,
+        "cat": "mmfltia1m3s7",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/leuchtturm.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Klaueninsel/haus-morthwyll.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-morthwyll&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Klaueninsel/Wellenklaue.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Herrschaft Wellenklaue/Herrschaft Wellenklaue.html",
+        "region": "Klaueninsel",
+        "house": "Haus Morthwyl O'Caer Morben",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Glyff"
+          },
+          {
+            "k": "Typ",
+            "v": "Leuchtturmsiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Morthwyl O'Caer Morben"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "Glyff ist eine Leuchtturmsiedlung unter der Herrschaft der Morthwyll , in der neben der Fischerei auch der Leuchtturm beschützt wird. Die Morthwyll haben dort einige Schiffe und Krieger stationiert, die den Leuchtturm verteidigen und cenyrischen Schiffen den Weg zu den vier großen Klaueninseln weisen.",
+        "secret": false,
+        "dominionId": "herrschaft-wellenklaue",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "058271b1-8cb9-4584-8eb7-2b413e39b9ad",
+          "markerId": "e5da5ddc-019c-4a3b-9cca-3f18cc2aeab9",
+          "url": "https://www.worldanvil.com/world/map/marker/e5da5ddc-019c-4a3b-9cca-3f18cc2aeab9/edit",
+          "title": "Glyff",
+          "coordinates": {
+            "x": 3755,
+            "y": 2531,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          }
+        }
+      },
+      {
+        "id": "klaueninseln-e8f09972-f802-4552-9225-a780caa56355",
+        "title": "Ard Dunrath",
+        "x": 0.11962890625,
+        "y": 0.8252724795640327,
+        "cat": "mmflvquv2rr3",
+        "templateId": "ruine",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/antike-ruine.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Blütenland/haus-blodyn.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-blodyn-aberdail&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Klaueninsel/Blutklaue.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Baronie Blutklaue/Baronie Blutklaue.html",
+        "region": "Klaueninsel",
+        "house": "Haus Blodyn O'Aberdail",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Ard Dunrath"
+          },
+          {
+            "k": "Ursprung",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Ursache des Verfalls",
+            "v": ""
+          },
+          {
+            "k": "Aktuelle Bewohner",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Schätze / Reliquien",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Typ",
+            "v": "Siedlungsruine"
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Blodyn O'Aberdail"
+          }
+        ],
+        "text": "Ard Dunrath war einst die stolze Hauptstadt der Kralleninseln. Sie wurde jedoch von den Nordmännern während ihrer Eroberung der Inselgruppen vernichtet. Als die Arth die Inseln besiedelten, lag Ard Dunrath bereits seit geraumer Zeit in Trümmern und war desolat.",
+        "secret": false,
+        "dominionId": "baronie-blutklaue",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "058271b1-8cb9-4584-8eb7-2b413e39b9ad",
+          "markerId": "e8f09972-f802-4552-9225-a780caa56355",
+          "url": "https://www.worldanvil.com/world/map/marker/e8f09972-f802-4552-9225-a780caa56355/edit",
+          "title": "",
+          "coordinates": {
+            "x": 490,
+            "y": 513,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          },
+          "nameResolution": "Beschreibungstext beziehungsweise benannter Bezug im Markerformular"
+        }
+      },
+      {
+        "id": "klaueninseln-edec4203-68f1-4f16-9178-5a9be352ca9d",
+        "title": "Caeber",
+        "x": 0.561767578125,
+        "y": 0.4352861035422343,
+        "cat": "mmflt1x3v22o",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/bergbausiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Klaueninsel/haus-cwningod.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-cwningod&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Klaueninsel/Talklaue.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Baronie Talklaue/Baronie Talklaue.html",
+        "region": "Klaueninsel",
+        "house": "Haus Cwingod O'Morea",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Caeber"
+          },
+          {
+            "k": "Typ",
+            "v": "Bergbausiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Cwingod O'Morea"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "Caeber ist eine Bergbausiedlung in der Baronie von Morea , die eine wichtige Rolle bei der Lieferung von Eisenerz und anderen Mineralien spielt.",
+        "secret": false,
+        "dominionId": "baronie-talklaue",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "058271b1-8cb9-4584-8eb7-2b413e39b9ad",
+          "markerId": "edec4203-68f1-4f16-9178-5a9be352ca9d",
+          "url": "https://www.worldanvil.com/world/map/marker/edec4203-68f1-4f16-9178-5a9be352ca9d/edit",
+          "title": "Caeber",
+          "coordinates": {
+            "x": 2301,
+            "y": 1658,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          }
+        }
+      },
+      {
+        "id": "klaueninseln-fa70c780-bd87-409a-afaa-9f1e0f085ad9",
+        "title": "Ffordd",
+        "x": 0.375732421875,
+        "y": 0.48024523160762944,
+        "cat": "mmflt1x3v22o",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/bergbausiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Klaueninsel/haus-crafanc.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-crafanc&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Klaueninsel/Herrschaft der Crafanc.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Herrschaft der Crafanc/Herrschaft der Crafanc.html",
+        "region": "Klaueninsel",
+        "house": "Haus Crafanc O'Talgarth",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Ffordd"
+          },
+          {
+            "k": "Typ",
+            "v": "Bergbausiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Crafanc O'Talgarth"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "Ffordd , die zweitgrößte Bergbausiedlung der Insel, gehört der einflussreichen Crafanc-Familie . In den tiefen Minen der Region werden wertvolle Erze wie Zinn, Kupfer, Eisen und Silber gefördert. Diese Schätze aus dem Herzen der Erde sichern nicht nur den Wohlstand der Crafanc, sondern sind auch ein essenzieller Bestandteil ihrer wirtschaftlichen Macht. Die Mineralien, die in Ffordd abgebaut werden, sind ein zentraler Pfeiler des Erfolgs der Familie und machen die Siedlung zu einem bedeutenden Zentrum des Bergbaus auf der Insel.",
+        "secret": false,
+        "dominionId": "herrschaft-crafanc",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "058271b1-8cb9-4584-8eb7-2b413e39b9ad",
+          "markerId": "fa70c780-bd87-409a-afaa-9f1e0f085ad9",
+          "url": "https://www.worldanvil.com/world/map/marker/fa70c780-bd87-409a-afaa-9f1e0f085ad9/edit",
+          "title": "Ffordd",
+          "coordinates": {
+            "x": 1539,
+            "y": 1526,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          }
+        }
+      },
+      {
+        "id": "klaueninseln-fc1d83c5-7e89-46c6-ba35-17d45162b8c8",
+        "title": "Gwyfla",
+        "x": 0.173828125,
+        "y": 0.7908719346049047,
+        "cat": "mmflrqajby8b",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/bauernsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Klaueninsel/haus-dianc.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-dianc-aberdail&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Klaueninsel/Herrschaft der Dianc.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Herrschaft der Dianc/Herrschaft der Dianc.html",
+        "region": "Klaueninsel",
+        "house": "Haus Dianc O'Aberdail",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Gwyfla"
+          },
+          {
+            "k": "Typ",
+            "v": "Bauernsiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Dianc O'Aberdail"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "Gwyfla ist eine Bauernsiedlung der Dianc , bekannt für die Zucht von Rössern sowie für Agrarkultur und Viehzucht. Die Siedlung versorgt das Haus Dianc mit Reitpferden, Futter und Nahrung und deckt den Eigenbedarf gut, ohne jedoch genug zu erwirtschaften, um Überschüsse für den Export zu erzeugen.",
+        "secret": false,
+        "dominionId": "herrschaft-dianc",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "058271b1-8cb9-4584-8eb7-2b413e39b9ad",
+          "markerId": "fc1d83c5-7e89-46c6-ba35-17d45162b8c8",
+          "url": "https://www.worldanvil.com/world/map/marker/fc1d83c5-7e89-46c6-ba35-17d45162b8c8/edit",
+          "title": "Gwyfla",
+          "coordinates": {
+            "x": 712,
+            "y": 614,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          }
+        }
+      },
+      {
+        "id": "klaueninseln-ff0c00f1-3198-4ed6-9e44-32f42476f65a",
+        "title": "Dôrgar",
+        "x": 0.613525390625,
+        "y": 0.22070844686648505,
+        "cat": "location-ruine",
+        "templateId": "ruine",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/ruine2.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Klaueninsel/haus-diafol.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-diafol-talgarth&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Klaueninsel/Herrschaft der Diafol.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Herrschaft der Diafol/Herrschaft der Diafol.html",
+        "region": "Klaueninsel",
+        "house": "Haus Diafol O'Talgarth",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Dôrgar"
+          },
+          {
+            "k": "Ursprung",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": "Im Wiederaufbau"
+          },
+          {
+            "k": "Ursache des Verfalls",
+            "v": ""
+          },
+          {
+            "k": "Aktuelle Bewohner",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Schätze / Reliquien",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Typ",
+            "v": "Ruine"
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Diafol O'Talgarth"
+          }
+        ],
+        "text": "Dôrgar ist eine Ruine, die der Herrschaft der Diafol übertragen wurde. Dieses alte Fischerdorf wurde einst in einer nächtlichen Überwältigung von den Nordmännern niedergebrannt. Die Diafol und ihr Gefolge aus Vennyr haben begonnen, den Ort neu zu besiedeln. In der Zukunft soll Dôrgar eine wichtige Rolle bei der Produktion von Bauholz und Schiffen spielen, während der Fischfang weiterhin eine zentrale Bedeutung behält.",
+        "secret": false,
+        "dominionId": "herrschaft-diafol",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "058271b1-8cb9-4584-8eb7-2b413e39b9ad",
+          "markerId": "ff0c00f1-3198-4ed6-9e44-32f42476f65a",
+          "url": "https://www.worldanvil.com/world/map/marker/ff0c00f1-3198-4ed6-9e44-32f42476f65a/edit",
+          "title": "Dôrgar",
+          "coordinates": {
+            "x": 2513,
+            "y": 2288,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          }
+        }
+      },
+      {
+        "id": "klaueninseln-35dcf85c-f197-4bd0-bfa5-686ec4bff4e0",
+        "title": "Zum Wandernden Bär",
+        "x": 0.474609375,
+        "y": 0.5323569482288828,
+        "cat": "mmflvj37jbh2",
+        "templateId": "gastbetrieb",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/taverne.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Klaueninsel/haus-cwningod.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-cwningod&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Klaueninsel/Talklaue.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Baronie Talklaue/Baronie Talklaue.html",
+        "region": "Klaueninsel",
+        "house": "Haus Cwingod O'Morea",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Zum Wandernden Bär"
+          },
+          {
+            "k": "Typ",
+            "v": "Taverne"
+          },
+          {
+            "k": "Betreiber",
+            "v": ""
+          },
+          {
+            "k": "Speisen / Getränke",
+            "v": ""
+          },
+          {
+            "k": "Unterkunft",
+            "v": ""
+          },
+          {
+            "k": "Preislage",
+            "v": ""
+          },
+          {
+            "k": "Öffnungszeiten",
+            "v": ""
+          },
+          {
+            "k": "Stammgäste",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Cwingod O'Morea"
+          }
+        ],
+        "text": "Die Taverne \"Zum Wandernden Bär\" befindet sich in der Baronie von Morea und ist ein beliebter Anlaufpunkt für Wanderer, die sich auf die Reise entlang der Nordoststraße nach Caer Cryftlawd begeben.",
+        "secret": false,
+        "dominionId": "baronie-talklaue",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "058271b1-8cb9-4584-8eb7-2b413e39b9ad",
+          "markerId": "35dcf85c-f197-4bd0-bfa5-686ec4bff4e0",
+          "url": "https://www.worldanvil.com/world/map/marker/35dcf85c-f197-4bd0-bfa5-686ec4bff4e0/edit",
+          "title": "Taverne, Gaststätte",
+          "coordinates": {
+            "x": 1944,
+            "y": 1373,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          },
+          "nameResolution": "Beschreibungstext beziehungsweise benannter Bezug im Markerformular"
+        }
+      },
+      {
+        "id": "klaueninseln-0727d7d1-ce60-49e4-84b1-b2fe8b1ffedb",
+        "title": "Maendil",
+        "x": 0.2041015625,
+        "y": 0.4833106267029973,
+        "cat": "mmflt7uj831y",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/waldsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Klaueninsel/haus-crafanc.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-crafanc&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Klaueninsel/Herrschaft der Crafanc.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Herrschaft der Crafanc/Herrschaft der Crafanc.html",
+        "region": "Klaueninsel",
+        "house": "Haus Crafanc O'Talgarth",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Maendil"
+          },
+          {
+            "k": "Typ",
+            "v": "Waldsiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Crafanc O'Talgarth"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "Die Holzfällersiedlung Maendil gehört der Crafanc-Familie und ist für sie von entscheidender Bedeutung, da sie das notwendige Bauholz für den Schiffbau liefert.",
+        "secret": false,
+        "dominionId": "herrschaft-crafanc",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "058271b1-8cb9-4584-8eb7-2b413e39b9ad",
+          "markerId": "0727d7d1-ce60-49e4-84b1-b2fe8b1ffedb",
+          "url": "https://www.worldanvil.com/world/map/marker/0727d7d1-ce60-49e4-84b1-b2fe8b1ffedb/edit",
+          "title": "Maendil",
+          "coordinates": {
+            "x": 836,
+            "y": 1517,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          }
+        }
+      },
+      {
+        "id": "klaueninseln-083595f5-438b-4925-b7a0-e61fcd046c3a",
+        "title": "Talgarth",
+        "x": 0.437744140625,
+        "y": 0.30211171662125336,
+        "cat": "mmflrbzxydg7",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Klaueninsel/haus-arth.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-arth&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Klaueninsel/Sturmklaue.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Grafschaft Klaueninsel.html",
+        "region": "Klaueninsel",
+        "house": "Haus Arth O'Talgarth",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Talgarth"
+          },
+          {
+            "k": "Typ",
+            "v": "Hauptstadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Arth O'Talgarth"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "Talgarth , die Hauptstadt der Grafschaft , wird von der mächtigen Arth-Familie regiert, die uneingeschränkt von ihren Kadettenhäusern wie Crafanc, Pawen, Cwingod und weiteren treu unterstützt wird. Die Stadt gehört zu den bestbefestigten Orten im Königreich Cenyr und ist bekannt für ihren beeindruckenden, buchtförmigen Hafen, der eine ganze Flotte aufnehmen kann. Mit seinen hohen Klippen und den im Hafen liegenden Kriegsschiffen, die das Bild eines bedrohlichen Bärenmauls formen, ist Talgarth ein Symbol für die Macht und Stärke der Region.",
+        "secret": false,
+        "dominionId": "baronie-sturmklaue",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "058271b1-8cb9-4584-8eb7-2b413e39b9ad",
+          "markerId": "083595f5-438b-4925-b7a0-e61fcd046c3a",
+          "url": "https://www.worldanvil.com/world/map/marker/083595f5-438b-4925-b7a0-e61fcd046c3a/edit",
+          "title": "",
+          "coordinates": {
+            "x": 1793,
+            "y": 2049,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          },
+          "nameResolution": "Beschreibungstext beziehungsweise benannter Bezug im Markerformular"
+        }
+      },
+      {
+        "id": "klaueninseln-0931617d-00d1-4b36-8863-3d6a9d490406",
+        "title": "Mynyth",
+        "x": 0.621337890625,
+        "y": 0.2908719346049047,
+        "cat": "location-klostersiedlung",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/klostersiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Klaueninsel/haus-dyfrgi.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-dyfrgi-caer-cryftlawd&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Klaueninsel/Krallenspitze.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Herrschaft Krallenspitze/Herrschaft Krallenspitze.html",
+        "region": "Klaueninsel",
+        "house": "Haus Dyfrgi O'Caer Cryftlawd",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Mynyth"
+          },
+          {
+            "k": "Typ",
+            "v": "Klostersiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Dyfrgi O'Caer Cryftlawd"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Gottheit / Verehrung",
+            "v": "Aldran"
+          }
+        ],
+        "text": "Mynyth ist ein Kloster des Streiters , Aldran , in dem die ansässigen Mönche die Schmiedekunst verfeinert haben. Sie versorgen ihren Lehnsherren, das Haus Dyfrgi , mit hochwertigen Waffen und unterstützen sie durch ihre Gebete.",
+        "secret": false,
+        "dominionId": "herrschaft-krallenspitze",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "058271b1-8cb9-4584-8eb7-2b413e39b9ad",
+          "markerId": "0931617d-00d1-4b36-8863-3d6a9d490406",
+          "url": "https://www.worldanvil.com/world/map/marker/0931617d-00d1-4b36-8863-3d6a9d490406/edit",
+          "title": "Mynyth",
+          "coordinates": {
+            "x": 2545,
+            "y": 2082,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          }
+        }
+      },
+      {
+        "id": "klaueninseln-10b9c0db-8327-4420-a4bd-5b84694011c8",
+        "title": "Caer Marwor",
+        "x": 0.34326171875,
+        "y": 0.12193460490463215,
+        "cat": "location-burg",
+        "templateId": "militaer",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/gro-e-burg.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Klaueninsel/haus-unigol.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-unigol&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Klaueninsel/Frostklaue.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Herrschaft Frostklaue/Herrschaft Frostklaue.html",
+        "region": "Klaueninsel",
+        "house": "Haus Unigol O'Caer Marwor",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Caer Marwor"
+          },
+          {
+            "k": "Typ",
+            "v": "Burg"
+          },
+          {
+            "k": "Befehlshaber",
+            "v": ""
+          },
+          {
+            "k": "Unterstellung",
+            "v": ""
+          },
+          {
+            "k": "Besatzung",
+            "v": ""
+          },
+          {
+            "k": "Aufgaben",
+            "v": ""
+          },
+          {
+            "k": "Ausrüstung",
+            "v": ""
+          },
+          {
+            "k": "Befestigung",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Unigol O'Caer Marwor"
+          }
+        ],
+        "text": "Caer Marwor ist die Heimat der Unigol-Familie , Kadetten der Arth, die als unerschütterliche Krieger bekannt sind und die Insel in einem Akt der Unbesiegbarkeit und Unnachgiebigkeit gehalten haben. Die Burg liegt geschützt im Rücken der Insel, während das Gebirge vor ihr wie ein schützender Panzer wirkt. Durch ihre imposante Robustheit und die Wildheit der Unigol machen Piraten einen weiten Bogen um die nördliche Insel, die von den Unigol beherrscht wird, und überlegen es sich zweimal, ob sie wirklich an Caer Marwor vorbeisegeln wollen.",
+        "secret": false,
+        "dominionId": "herrschaft-frostklaue",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "058271b1-8cb9-4584-8eb7-2b413e39b9ad",
+          "markerId": "10b9c0db-8327-4420-a4bd-5b84694011c8",
+          "url": "https://www.worldanvil.com/world/map/marker/10b9c0db-8327-4420-a4bd-5b84694011c8/edit",
+          "title": "",
+          "coordinates": {
+            "x": 1406,
+            "y": 2578,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          },
+          "nameResolution": "Beschreibungstext beziehungsweise benannter Bezug im Markerformular"
+        }
+      },
+      {
+        "id": "klaueninseln-168e893d-21f0-46c8-8b5e-c69309c75d6c",
+        "title": "Nefgar",
+        "x": 0.46923828125,
+        "y": 0.0463215258855586,
+        "cat": "mmflvquv2rr3",
+        "templateId": "ruine",
+        "kind": "place",
+        "pinMarker": "/Karten/Cenyr/weidebucht/Symbole/siedlungsruine.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Klaueninsel/haus-unigol.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-unigol&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Klaueninsel/Frostklaue.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Herrschaft Frostklaue/Herrschaft Frostklaue.html",
+        "region": "Klaueninsel",
+        "house": "Haus Unigol O'Caer Marwor",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Nefgar"
+          },
+          {
+            "k": "Ursprung",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Ursache des Verfalls",
+            "v": ""
+          },
+          {
+            "k": "Aktuelle Bewohner",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Schätze / Reliquien",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Typ",
+            "v": "Siedlungsruine"
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Unigol O'Caer Marwor"
+          }
+        ],
+        "text": "Nefgar ist eine Ruine der Unigol aus Marwor , die einst eine Fischersiedlung war. In einem verheerenden Überfall wurde die Siedlung ausgeraubt und geschliffen, wobei die Stadtwachen und Waffenknechte der Unigol völlig überrannt wurden. Viele der Bewohner wurden getötet, und diejenigen, die nicht fliehen konnten, fielen dem Axtschlag zum Opfer. Seitdem wurde die Siedlung nicht wieder aufgebaut. Nefgar war früher bekannt für seine guten Zimmermänner und die Kunst der Fischkonservierung.",
+        "secret": false,
+        "dominionId": "herrschaft-frostklaue",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "058271b1-8cb9-4584-8eb7-2b413e39b9ad",
+          "markerId": "168e893d-21f0-46c8-8b5e-c69309c75d6c",
+          "url": "https://www.worldanvil.com/world/map/marker/168e893d-21f0-46c8-8b5e-c69309c75d6c/edit",
+          "title": "Nefgar",
+          "coordinates": {
+            "x": 1922,
+            "y": 2800,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          }
+        }
+      },
+      {
+        "id": "klaueninseln-1ce4f490-532c-409a-b5c3-0f20610c2470",
+        "title": "Garnmor",
+        "x": 0.202880859375,
+        "y": 0.6151226158038148,
+        "cat": "mmflry5furso",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/hafensiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Klaueninsel/haus-crafanc.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-crafanc&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Klaueninsel/Herrschaft der Crafanc.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Herrschaft der Crafanc/Herrschaft der Crafanc.html",
+        "region": "Klaueninsel",
+        "house": "Haus Crafanc O'Talgarth",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Garnmor"
+          },
+          {
+            "k": "Typ",
+            "v": "Hafensiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Crafanc O'Talgarth"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "Garnmor ist eine kleine Hafensiedlung der Crafanc-Familie und spielt eine zentrale Rolle, da hier Schiffe für ihre Flotte gebaut werden. Durch seine Lage im Rücken der Insel ist der Ort leichter zu verteidigen, wird aber dennoch stark geschützt, da die Crafanc auf die Werften und den Hafen von Garnmor angewiesen sind.",
+        "secret": false,
+        "dominionId": "herrschaft-crafanc",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "058271b1-8cb9-4584-8eb7-2b413e39b9ad",
+          "markerId": "1ce4f490-532c-409a-b5c3-0f20610c2470",
+          "url": "https://www.worldanvil.com/world/map/marker/1ce4f490-532c-409a-b5c3-0f20610c2470/edit",
+          "title": "Garnmor",
+          "coordinates": {
+            "x": 831,
+            "y": 1130,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          }
+        }
+      },
+      {
+        "id": "klaueninseln-1eb32b28-5e9f-4a7a-b1a6-d2610ea2b5b6",
+        "title": "Edern",
+        "x": 0.20654296875,
+        "y": 0.8433242506811989,
+        "cat": "location-ruine",
+        "templateId": "ruine",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/ruine2.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Klaueninsel/haus-dianc.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-dianc-aberdail&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Klaueninsel/Herrschaft der Dianc.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Herrschaft der Dianc/Herrschaft der Dianc.html",
+        "region": "Klaueninsel",
+        "house": "Haus Dianc O'Aberdail",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Edern"
+          },
+          {
+            "k": "Ursprung",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": "Im Wiederaufbau"
+          },
+          {
+            "k": "Ursache des Verfalls",
+            "v": ""
+          },
+          {
+            "k": "Aktuelle Bewohner",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Schätze / Reliquien",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Typ",
+            "v": "Ruine"
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Dianc O'Aberdail"
+          }
+        ],
+        "text": "Edern , einst eine Ruine, wurde der Herrschaft der Dianc übertragen und wird derzeit als Bauernsiedlung wiederaufgebaut. Die Siedlung soll sich auf die Zucht von Rössern und die Produktion von Futter spezialisieren. Bereits haben sich Siedler aus Vennyr dort niedergelassen, und es wird erwartet, dass der Wiederaufbau etwa 2-3 Jahre in Anspruch nehmen wird, bevor die Siedlung nennenswerten Profit abwerfen kann.",
+        "secret": false,
+        "dominionId": "herrschaft-dianc",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "058271b1-8cb9-4584-8eb7-2b413e39b9ad",
+          "markerId": "1eb32b28-5e9f-4a7a-b1a6-d2610ea2b5b6",
+          "url": "https://www.worldanvil.com/world/map/marker/1eb32b28-5e9f-4a7a-b1a6-d2610ea2b5b6/edit",
+          "title": "Edern",
+          "coordinates": {
+            "x": 846,
+            "y": 460,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          }
+        }
+      },
+      {
+        "id": "klaueninseln-21655252-3cb2-48b7-9a4f-921f33475480",
+        "title": "Morea",
+        "x": 0.439697265625,
+        "y": 0.6485013623978202,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Klaueninsel/haus-cwningod.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-cwningod&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Klaueninsel/Talklaue.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Baronie Talklaue/Baronie Talklaue.html",
+        "region": "Klaueninsel",
+        "house": "Haus Cwingod O'Morea",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Morea"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Cwingod O'Morea"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "Morea ist eine bedeutende Hafenstadt der Klaueninseln und dient als sicherer Ankerhafen für Händler aus dem Süden. Sie ist entscheidend dafür, dass notwendige Vorräte über die Hauptstraße direkt nach Talgarth gebracht werden können. Ohne Morea müssten die Schiffe die gesamte Insel umsegeln und einen viel beschwerlicheren Weg in Kauf nehmen, was die Stadt essenziell für das Fortbestehen und die Versorgung der Insel macht.",
+        "secret": false,
+        "dominionId": "baronie-talklaue",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "058271b1-8cb9-4584-8eb7-2b413e39b9ad",
+          "markerId": "21655252-3cb2-48b7-9a4f-921f33475480",
+          "url": "https://www.worldanvil.com/world/map/marker/21655252-3cb2-48b7-9a4f-921f33475480/edit",
+          "title": "Morea",
+          "coordinates": {
+            "x": 1801,
+            "y": 1032,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          }
+        }
+      },
+      {
+        "id": "klaueninseln-28734054-3c49-490f-8c96-0b4e86d34d4d",
+        "title": "Corwen",
+        "x": 0.614990234375,
+        "y": 0.6859673024523161,
+        "cat": "mmflry5furso",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/hafensiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Klaueninsel/haus-selwyn.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-selwyn&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Klaueninsel/Silberklaue.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Herrschaft Silberklaue/Herrschaft Silberklaue.html",
+        "region": "Klaueninsel",
+        "house": "Haus Sélwyn O'Caer Ebirth",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Corwen"
+          },
+          {
+            "k": "Typ",
+            "v": "Hafensiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Sélwyn O'Caer Ebirth"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "Corwen ist eine Fischersiedlung in der Region Ebirth , dem Hause Selwyn , die nicht nur für die Versorgung mit Holz und Fisch zuständig ist, sondern auch als Handelsposten für die kleine Insel dient. Dank ihrer geschützten Lage im Rücken der Insel ist sie strategisch ideal positioniert. An klaren Tagen bietet Corwen sogar einen weiten Blick auf Morea und Caer Deheol, was ihre Bedeutung als Handelspunkt und Aussichtspunkt unterstreicht.",
+        "secret": false,
+        "dominionId": "herrschaft-silberklaue",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "058271b1-8cb9-4584-8eb7-2b413e39b9ad",
+          "markerId": "28734054-3c49-490f-8c96-0b4e86d34d4d",
+          "url": "https://www.worldanvil.com/world/map/marker/28734054-3c49-490f-8c96-0b4e86d34d4d/edit",
+          "title": "Corwen",
+          "coordinates": {
+            "x": 2519,
+            "y": 922,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          }
+        }
+      },
+      {
+        "id": "klaueninseln-2d6af505-3790-472b-a898-db2b5b5eecc5",
+        "title": "Llanmor",
+        "x": 0.646484375,
+        "y": 0.37295640326975477,
+        "cat": "mmflry5furso",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/hafensiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Klaueninsel/haus-dyfrgi.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-dyfrgi-caer-cryftlawd&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Klaueninsel/Krallenspitze.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Herrschaft Krallenspitze/Herrschaft Krallenspitze.html",
+        "region": "Klaueninsel",
+        "house": "Haus Dyfrgi O'Caer Cryftlawd",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Llanmor"
+          },
+          {
+            "k": "Typ",
+            "v": "Hafensiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Dyfrgi O'Caer Cryftlawd"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "Llanmor ist ein Fischerdorf, das zur Herrschaft Krallenspitze gehört und unter der Kontrolle des Hauses Dyfrgi steht.",
+        "secret": false,
+        "dominionId": "herrschaft-krallenspitze",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "058271b1-8cb9-4584-8eb7-2b413e39b9ad",
+          "markerId": "2d6af505-3790-472b-a898-db2b5b5eecc5",
+          "url": "https://www.worldanvil.com/world/map/marker/2d6af505-3790-472b-a898-db2b5b5eecc5/edit",
+          "title": "Llanmor",
+          "coordinates": {
+            "x": 2648,
+            "y": 1841,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          }
+        }
+      },
+      {
+        "id": "klaueninseln-352aaf13-5513-4e7d-87f9-4a69b5c47fcc",
+        "title": "Brynth",
+        "x": 0.468505859375,
+        "y": 0.12023160762942775,
+        "cat": "mmflry5furso",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/hafensiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Klaueninsel/haus-unigol.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-unigol&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Klaueninsel/Frostklaue.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Herrschaft Frostklaue/Herrschaft Frostklaue.html",
+        "region": "Klaueninsel",
+        "house": "Haus Unigol O'Caer Marwor",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Brynth"
+          },
+          {
+            "k": "Typ",
+            "v": "Hafensiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Unigol O'Caer Marwor"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "Brynth ist die südliche Fischersiedlung der Unigol , in der neben der Fischerei auch Holzverarbeitung betrieben wird. Sie ist etwas größer als die zerstörte Siedlung Nefgar und mittlerweile weitaus besser bewacht, um zukünftigen Angriffen vorzubeugen.",
+        "secret": false,
+        "dominionId": "herrschaft-frostklaue",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "058271b1-8cb9-4584-8eb7-2b413e39b9ad",
+          "markerId": "352aaf13-5513-4e7d-87f9-4a69b5c47fcc",
+          "url": "https://www.worldanvil.com/world/map/marker/352aaf13-5513-4e7d-87f9-4a69b5c47fcc/edit",
+          "title": "Brynth",
+          "coordinates": {
+            "x": 1919,
+            "y": 2583,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          }
+        }
+      },
+      {
+        "id": "klaueninseln-025490c3-239f-4cae-99f3-a8079c013d3d",
+        "title": "Tylgar",
+        "x": 0.6982421875,
+        "y": 0.6467983651226158,
+        "cat": "mmflt1x3v22o",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/bergbausiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Klaueninsel/haus-selwyn.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-selwyn&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Klaueninsel/Silberklaue.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Herrschaft Silberklaue/Herrschaft Silberklaue.html",
+        "region": "Klaueninsel",
+        "house": "Haus Sélwyn O'Caer Ebirth",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Tylgar"
+          },
+          {
+            "k": "Typ",
+            "v": "Bergbausiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Sélwyn O'Caer Ebirth"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "Tylgar ist eine Bergbausiedlung unter der Herrschaft des Hauses Selwyn , in der Silber, etwas Gold und andere wichtige Mineralien für die gesamte Grafschaft abgebaut werden. Die Siedlung liegt direkt hinter Caer Ebirth und ist durch ein Minennetz mit Caer Ebirth verbunden. Zwar existiert ein Landweg zwischen den beiden Orten, doch ist dieser sehr steil und beschwerlich, was die Minenverbindung zur bevorzugten Route macht.",
+        "secret": false,
+        "dominionId": "herrschaft-silberklaue",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "058271b1-8cb9-4584-8eb7-2b413e39b9ad",
+          "markerId": "025490c3-239f-4cae-99f3-a8079c013d3d",
+          "url": "https://www.worldanvil.com/world/map/marker/025490c3-239f-4cae-99f3-a8079c013d3d/edit",
+          "title": "Tylgar",
+          "coordinates": {
+            "x": 2860,
+            "y": 1037,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          }
+        }
+      },
+      {
+        "id": "klaueninseln-36529126-795e-44dc-8380-72cc01dd5617",
+        "title": "Talycoed",
+        "x": 0.50927734375,
+        "y": 0.6072888283378747,
+        "cat": "mmflrqajby8b",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/bauernsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Klaueninsel/haus-cwningod.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-cwningod&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Klaueninsel/Talklaue.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Baronie Talklaue/Baronie Talklaue.html",
+        "region": "Klaueninsel",
+        "house": "Haus Cwingod O'Morea",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Talycoed"
+          },
+          {
+            "k": "Typ",
+            "v": "Bauernsiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Cwingod O'Morea"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "Talycoed ist eine weitere Bauernsiedlung Moreas , die sich jedoch auf die Viehzucht konzentriert, während die Agrarkultur hier eine geringere Rolle spielt.",
+        "secret": false,
+        "dominionId": "baronie-talklaue",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "058271b1-8cb9-4584-8eb7-2b413e39b9ad",
+          "markerId": "36529126-795e-44dc-8380-72cc01dd5617",
+          "url": "https://www.worldanvil.com/world/map/marker/36529126-795e-44dc-8380-72cc01dd5617/edit",
+          "title": "Talycoed",
+          "coordinates": {
+            "x": 2086,
+            "y": 1153,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          }
+        }
+      },
+      {
+        "id": "klaueninseln-3e139e66-6b6e-434f-a073-d3d71d0f7ee0",
+        "title": "Cilwen",
+        "x": 0.574462890625,
+        "y": 0.548024523160763,
+        "cat": "mmflvquv2rr3",
+        "templateId": "ruine",
+        "kind": "place",
+        "pinMarker": "/Karten/Cenyr/weidebucht/Symbole/siedlungsruine.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Klaueninsel/haus-cwningod.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-cwningod&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Klaueninsel/Talklaue.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Baronie Talklaue/Baronie Talklaue.html",
+        "region": "Klaueninsel",
+        "house": "Haus Cwingod O'Morea",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Cilwen"
+          },
+          {
+            "k": "Ursprung",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Ursache des Verfalls",
+            "v": ""
+          },
+          {
+            "k": "Aktuelle Bewohner",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Schätze / Reliquien",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Typ",
+            "v": "Siedlungsruine"
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Cwingod O'Morea"
+          }
+        ],
+        "text": "Cilwen ist eine Ruine der Region Morea , die unlängst von Marodeuren geplündert und niedergebrannt wurde.",
+        "secret": false,
+        "dominionId": "baronie-talklaue",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "058271b1-8cb9-4584-8eb7-2b413e39b9ad",
+          "markerId": "3e139e66-6b6e-434f-a073-d3d71d0f7ee0",
+          "url": "https://www.worldanvil.com/world/map/marker/3e139e66-6b6e-434f-a073-d3d71d0f7ee0/edit",
+          "title": "Cilwen",
+          "coordinates": {
+            "x": 2353,
+            "y": 1327,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          }
+        }
+      },
+      {
+        "id": "klaueninseln-3fc1956c-32cb-4b6b-be36-be76c51bd367",
+        "title": "Brolyn",
+        "x": 0.840087890625,
+        "y": 0.49148501362397823,
+        "cat": "mmflrqajby8b",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/bauernsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Klaueninsel/haus-eirth.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-eirth&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Klaueninsel/Nebelklaue.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Herrschaft Nebelklaue/Herrschaft Nebelklaue.html",
+        "region": "Klaueninsel",
+        "house": "Haus Eirth O'Caer Glaslyn",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Brolyn"
+          },
+          {
+            "k": "Typ",
+            "v": "Bauernsiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Eirth O'Caer Glaslyn"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "Brolyn ist eine Bauernsiedlung auf der Insel unter der Herrschaft der Eirth , wo hauptsächlich Ziegen, Schafe und Rinder gehalten werden. Obwohl in der Siedlung auch Futter angebaut wird, reicht die Nahrungsproduktion kaum aus, um den Eigenbedarf der Bevölkerung zu decken.",
+        "secret": false,
+        "dominionId": "herrschaft-nebelklaue",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "058271b1-8cb9-4584-8eb7-2b413e39b9ad",
+          "markerId": "3fc1956c-32cb-4b6b-be36-be76c51bd367",
+          "url": "https://www.worldanvil.com/world/map/marker/3fc1956c-32cb-4b6b-be36-be76c51bd367/edit",
+          "title": "Brolyn",
+          "coordinates": {
+            "x": 3441,
+            "y": 1493,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          }
+        }
+      },
+      {
+        "id": "klaueninseln-455774e7-d589-4f8e-a9ee-baca6a4dc373",
+        "title": "Aberth",
+        "x": 0.281005859375,
+        "y": 0.8947547683923706,
+        "cat": "mmflry5furso",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/hafensiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Klaueninsel/haus-walwrs.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-walwrs-caer-deheuol&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Klaueninsel/Blutsturz.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Herrschaft Blutsturz/Herrschaft Blutsturz.html",
+        "region": "Klaueninsel",
+        "house": "Haus Walwrs O'Caer Deheuol",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Aberth"
+          },
+          {
+            "k": "Typ",
+            "v": "Hafensiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Walwrs O'Caer Deheuol"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "Aberth ist ein kleines Fischerdorf unter der Herrschaft der Walwrs , bekannt für seine geschickten Fischer. Es versorgt die Region mit frischem Fisch und Meeresfrüchten und lebt im Einklang mit dem Meer.",
+        "secret": false,
+        "dominionId": "herrschaft-blutsturz",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "058271b1-8cb9-4584-8eb7-2b413e39b9ad",
+          "markerId": "455774e7-d589-4f8e-a9ee-baca6a4dc373",
+          "url": "https://www.worldanvil.com/world/map/marker/455774e7-d589-4f8e-a9ee-baca6a4dc373/edit",
+          "title": "Aberth",
+          "coordinates": {
+            "x": 1151,
+            "y": 309,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          }
+        }
+      },
+      {
+        "id": "klaueninseln-4c3a1b24-825d-4a34-be3f-b69b28ce33dd",
+        "title": "Llifon",
+        "x": 0.11181640625,
+        "y": 0.9438010899182562,
+        "cat": "mmflry5furso",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/hafensiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Klaueninsel/haus-arfordir.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-arfordir-aberdail&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Klaueninsel/Herrschaft der Arfordir.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Herrschaft der Arfordir/Herrschaft der Arfordir.html",
+        "region": "Klaueninsel",
+        "house": "Haus Arfordir O'Aberdail",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Llifon"
+          },
+          {
+            "k": "Typ",
+            "v": "Hafensiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Arfordir O'Aberdail"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "Llifon ist ein weiteres Fischerdorf der Herrschaft des Hauses Arfordir , das eine wichtige Rolle bei der Lieferung von Fisch und Lebensmitteln spielt. Der Ort ist etwas kleiner als Môrfael, erfüllt jedoch eine bedeutende Funktion in der Versorgung der Region.",
+        "secret": false,
+        "dominionId": "herrschaft-arfordir",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "058271b1-8cb9-4584-8eb7-2b413e39b9ad",
+          "markerId": "4c3a1b24-825d-4a34-be3f-b69b28ce33dd",
+          "url": "https://www.worldanvil.com/world/map/marker/4c3a1b24-825d-4a34-be3f-b69b28ce33dd/edit",
+          "title": "Llifon",
+          "coordinates": {
+            "x": 458,
+            "y": 165,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          }
+        }
+      },
+      {
+        "id": "klaueninseln-538b4e6d-545a-4fea-8423-8cfb86e33f81",
+        "title": "Caer Deheuol",
+        "x": 0.235595703125,
+        "y": 0.9502724795640327,
+        "cat": "location-burg",
+        "templateId": "militaer",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/gro-e-burg.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Klaueninsel/haus-walwrs.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-walwrs-caer-deheuol&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Klaueninsel/Blutsturz.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Herrschaft Blutsturz/Herrschaft Blutsturz.html",
+        "region": "Klaueninsel",
+        "house": "Haus Walwrs O'Caer Deheuol",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Caer Deheuol"
+          },
+          {
+            "k": "Typ",
+            "v": "Burg"
+          },
+          {
+            "k": "Befehlshaber",
+            "v": ""
+          },
+          {
+            "k": "Unterstellung",
+            "v": ""
+          },
+          {
+            "k": "Besatzung",
+            "v": ""
+          },
+          {
+            "k": "Aufgaben",
+            "v": ""
+          },
+          {
+            "k": "Ausrüstung",
+            "v": ""
+          },
+          {
+            "k": "Befestigung",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Walwrs O'Caer Deheuol"
+          }
+        ],
+        "text": "Caer Deheuol wurde ursprünglich von Talgarth als Handelsposten gegründet, um der Insel einen sicheren Zugang zu ermöglichen, noch bevor Aberdail erneuert und aufgebaut wurde. Die Bucht, in der Caer Deheuol liegt, wurde mit zwei gegenüberliegenden Festungen und einem Hafen rund um die Bucht herum ausgestattet. Im Laufe der Jahrhunderte wurden die Festungen jedoch schwer beschädigt und schließlich zerstört. Der Ort wechselte mehrfach den Besitz und wurde an verschiedene Gilden verpachtet, bis er schließlich in den Besitz der adligen Familie der Walwrs überging. Die Walwrs , die für ihre herausragenden Baufähigkeiten und Schiffsbaukenntnisse bekannt waren, errichteten hier ihre Burg, siedelten verschiedene Gilden an und begannen mit der Produktion von Schiffen und Bauholz für die Baronie Talgarth.",
+        "secret": false,
+        "dominionId": "herrschaft-blutsturz",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "058271b1-8cb9-4584-8eb7-2b413e39b9ad",
+          "markerId": "538b4e6d-545a-4fea-8423-8cfb86e33f81",
+          "url": "https://www.worldanvil.com/world/map/marker/538b4e6d-545a-4fea-8423-8cfb86e33f81/edit",
+          "title": "",
+          "coordinates": {
+            "x": 965,
+            "y": 146,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          },
+          "nameResolution": "Beschreibungstext beziehungsweise benannter Bezug im Markerformular"
+        }
+      },
+      {
+        "id": "klaueninseln-5cfaa9be-ec9c-4127-aeef-26b81de2ea0a",
+        "title": "Môrfael",
+        "x": 0.044921875,
+        "y": 0.8497956403269755,
+        "cat": "mmflry5furso",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/hafensiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Klaueninsel/haus-arfordir.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-arfordir-aberdail&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Klaueninsel/Herrschaft der Arfordir.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Herrschaft der Arfordir/Herrschaft der Arfordir.html",
+        "region": "Klaueninsel",
+        "house": "Haus Arfordir O'Aberdail",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Môrfael"
+          },
+          {
+            "k": "Typ",
+            "v": "Hafensiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Arfordir O'Aberdail"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "Môrfael ist eine Fischersiedlung der Herrschaft des Hauses Arfordir , in der sie mit Fisch, Holz und Schiffen beliefert werden. Der Ort ist jedoch vor allem für die Produktion von Kriegsschiffen von Bedeutung, weniger für den Fischfang selbst.",
+        "secret": false,
+        "dominionId": "herrschaft-arfordir",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "058271b1-8cb9-4584-8eb7-2b413e39b9ad",
+          "markerId": "5cfaa9be-ec9c-4127-aeef-26b81de2ea0a",
+          "url": "https://www.worldanvil.com/world/map/marker/5cfaa9be-ec9c-4127-aeef-26b81de2ea0a/edit",
+          "title": "Morfael",
+          "coordinates": {
+            "x": 184,
+            "y": 441,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          },
+          "nameResolution": "Beschreibungstext beziehungsweise benannter Bezug im Markerformular"
+        }
+      },
+      {
+        "id": "klaueninseln-60ea3cd3-675d-4a22-be0f-91a38f1980dd",
+        "title": "Glym",
+        "x": 0.809814453125,
+        "y": 0.08106267029972747,
+        "cat": "mmflt1x3v22o",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/bergbausiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Klaueninsel/haus-morthwyll.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-morthwyll&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Klaueninsel/Wellenklaue.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Herrschaft Wellenklaue/Herrschaft Wellenklaue.html",
+        "region": "Klaueninsel",
+        "house": "Haus Morthwyl O'Caer Morben",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Glym"
+          },
+          {
+            "k": "Typ",
+            "v": "Bergbausiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Morthwyl O'Caer Morben"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "Glym ist eine Bergbausiedlung des Hauses Morthwyl , spezialisiert auf den Abbau von Eisen und Erzen. Zwar gibt es hier nur wenige wertvolle Mineralien, doch das Dorf ist auch für seine guten Köhler und Ziegenhirten bekannt, die zur lokalen Wirtschaft beitragen.",
+        "secret": false,
+        "dominionId": "herrschaft-wellenklaue",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "058271b1-8cb9-4584-8eb7-2b413e39b9ad",
+          "markerId": "60ea3cd3-675d-4a22-be0f-91a38f1980dd",
+          "url": "https://www.worldanvil.com/world/map/marker/60ea3cd3-675d-4a22-be0f-91a38f1980dd/edit",
+          "title": "Glym",
+          "coordinates": {
+            "x": 3317,
+            "y": 2698,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          }
+        }
+      },
+      {
+        "id": "klaueninseln-64230578-cb2a-44fc-82f0-b3e2fc4b6d44",
+        "title": "Caer Glaslyn",
+        "x": 0.940185546875,
+        "y": 0.2752043596730245,
+        "cat": "location-burg",
+        "templateId": "militaer",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/gro-e-burg.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Klaueninsel/haus-eirth.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-eirth&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Klaueninsel/Nebelklaue.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Herrschaft Nebelklaue/Herrschaft Nebelklaue.html",
+        "region": "Klaueninsel",
+        "house": "Haus Eirth O'Caer Glaslyn",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Caer Glaslyn"
+          },
+          {
+            "k": "Typ",
+            "v": "Burg"
+          },
+          {
+            "k": "Befehlshaber",
+            "v": ""
+          },
+          {
+            "k": "Unterstellung",
+            "v": ""
+          },
+          {
+            "k": "Besatzung",
+            "v": ""
+          },
+          {
+            "k": "Aufgaben",
+            "v": ""
+          },
+          {
+            "k": "Ausrüstung",
+            "v": ""
+          },
+          {
+            "k": "Befestigung",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Eirth O'Caer Glaslyn"
+          }
+        ],
+        "text": "Caer Glaslyn gehört den Eirth und ist die größte der vier kleineren Inseln. Obwohl ihre Burg eher zu den kleineren zählt, werden die Eirth aufgrund ihrer Stärke oft gemieden. Kein Wunder, denn auch sie sind Kadetten der mächtigen Arth-Familie.",
+        "secret": false,
+        "dominionId": "herrschaft-nebelklaue",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "058271b1-8cb9-4584-8eb7-2b413e39b9ad",
+          "markerId": "64230578-cb2a-44fc-82f0-b3e2fc4b6d44",
+          "url": "https://www.worldanvil.com/world/map/marker/64230578-cb2a-44fc-82f0-b3e2fc4b6d44/edit",
+          "title": "",
+          "coordinates": {
+            "x": 3851,
+            "y": 2128,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          },
+          "nameResolution": "Beschreibungstext beziehungsweise benannter Bezug im Markerformular"
+        }
+      },
+      {
+        "id": "klaueninseln-76173fa7-aac1-4643-aded-b215a73ac384",
+        "title": "Glanog",
+        "x": 0.406005859375,
+        "y": 0.5517711171662125,
+        "cat": "mmflrqajby8b",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/bauernsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Klaueninsel/haus-cwningod.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-cwningod&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Cenyr/Klaueninsel/Talklaue.png",
+        "bannerLink": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Baronie Talklaue/Baronie Talklaue.html",
+        "region": "Klaueninsel",
+        "house": "Haus Cwingod O'Morea",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Glanog"
+          },
+          {
+            "k": "Typ",
+            "v": "Bauernsiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Cwingod O'Morea"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "Glanog ist eine der größten Bauernsiedlungen, die den Großteil des landwirtschaftlichen Ertrags für Morea liefert. Dieser Ertrag reicht jedoch gerade aus, um den Eigenbedarf der Region zu decken, abgesehen von der Versorgung der Truppen.",
+        "secret": false,
+        "dominionId": "baronie-talklaue",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "058271b1-8cb9-4584-8eb7-2b413e39b9ad",
+          "markerId": "76173fa7-aac1-4643-aded-b215a73ac384",
+          "url": "https://www.worldanvil.com/world/map/marker/76173fa7-aac1-4643-aded-b215a73ac384/edit",
+          "title": "Glanog",
+          "coordinates": {
+            "x": 1663,
+            "y": 1316,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          }
+        }
+      }
+    ],
     "cats": [
       {
         "id": "mmflrbzxydg7",
@@ -105,12 +3857,497 @@
         "id": "mmflxnnhbh4g",
         "label": "Besondere Orte",
         "color": "#6060b0"
+      },
+      {
+        "id": "location-dorf",
+        "label": "Dorf",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/bardensiedlung.png"
+      },
+      {
+        "id": "location-flusssiedlung",
+        "label": "Flusssiedlung",
+        "color": "#2a7aaa",
+        "marker": "/Karten/assets/icons/welt/flusssiedlung.png"
+      },
+      {
+        "id": "location-bauernhof",
+        "label": "Bauernhof",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/bauernsiedlung.png"
+      },
+      {
+        "id": "location-landgut",
+        "label": "Landgut",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/landgut.png"
+      },
+      {
+        "id": "location-anwesen",
+        "label": "Anwesen",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/anwesen.png"
+      },
+      {
+        "id": "location-rittergut",
+        "label": "Rittergut",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/kleine-burg.png"
+      },
+      {
+        "id": "location-weingut",
+        "label": "Weingut",
+        "color": "#a45630",
+        "marker": "/Karten/assets/icons/welt/weingut.png"
+      },
+      {
+        "id": "location-obstplantage",
+        "label": "Obstplantage",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/obstplantage.png"
+      },
+      {
+        "id": "location-viehweide",
+        "label": "Viehweide",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/weide.png"
+      },
+      {
+        "id": "location-gestuet",
+        "label": "Gestüt",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/gest-t.png"
+      },
+      {
+        "id": "location-muehle",
+        "label": "Mühle",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/m-hle.png"
+      },
+      {
+        "id": "location-mine",
+        "label": "Mine",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/einzelnemine.png"
+      },
+      {
+        "id": "location-steinbruch",
+        "label": "Steinbruch",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/steinbruch-1.png"
+      },
+      {
+        "id": "location-schmiede",
+        "label": "Schmiede",
+        "color": "#a45630",
+        "marker": "/Karten/assets/icons/welt/schmiede.png"
+      },
+      {
+        "id": "location-brauerei",
+        "label": "Brauerei",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/brauersiedlung.png"
+      },
+      {
+        "id": "location-fischerei",
+        "label": "Fischerei",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/fischerh-tte.png"
+      },
+      {
+        "id": "location-holzfaellerlager",
+        "label": "Holzfällerlager",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/holzf-llerlager.png"
+      },
+      {
+        "id": "location-koehlerei",
+        "label": "Köhlerei",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/k-hler3.png"
+      },
+      {
+        "id": "location-imkerei",
+        "label": "Imkerei",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/imkerhof.png"
+      },
+      {
+        "id": "location-handelskontor",
+        "label": "Handelskontor",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/kontor.png"
+      },
+      {
+        "id": "location-markt",
+        "label": "Markt",
+        "color": "#a45630",
+        "marker": "/Karten/assets/icons/welt/marktstand.png"
+      },
+      {
+        "id": "location-gildenhaus",
+        "label": "Gildenhaus",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/gildenzentrale.png"
+      },
+      {
+        "id": "location-burg",
+        "label": "Burg",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/gro-e-burg.png"
+      },
+      {
+        "id": "location-turm",
+        "label": "Turm",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/turm.png"
+      },
+      {
+        "id": "location-leuchtturm",
+        "label": "Leuchtturm",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/leuchtturm.png"
+      },
+      {
+        "id": "location-aussenposten",
+        "label": "Außenposten",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/au-enposten.png"
+      },
+      {
+        "id": "location-grenzposten",
+        "label": "Grenzposten",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/zoll-grenzposten.png"
+      },
+      {
+        "id": "location-heerlager",
+        "label": "Heerlager",
+        "color": "#a45630",
+        "marker": "/Karten/assets/icons/welt/heereslager.png"
+      },
+      {
+        "id": "location-lagerplatz",
+        "label": "Lagerplatz",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/lager.png"
+      },
+      {
+        "id": "location-jaegerlager",
+        "label": "Jägerlager",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/j-gerlager.png"
+      },
+      {
+        "id": "location-jagdhaus",
+        "label": "Jagdhaus",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/j-gerhaus.png"
+      },
+      {
+        "id": "location-druidenhuette",
+        "label": "Druidenhütte",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/druidenh-tte.png"
+      },
+      {
+        "id": "location-hexenhuette",
+        "label": "Hexenhütte",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/hexenhaus.png"
+      },
+      {
+        "id": "location-schrein",
+        "label": "Schrein",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/wegschrein.png"
+      },
+      {
+        "id": "location-heiligtum",
+        "label": "Heiligtum",
+        "color": "#a45630",
+        "marker": "/Karten/assets/icons/welt/heiligtum.png"
+      },
+      {
+        "id": "location-friedhof",
+        "label": "Friedhof",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/l-ndlicher-friedhof.png"
+      },
+      {
+        "id": "location-grabstaette",
+        "label": "Grabstätte",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/grabmal.png"
+      },
+      {
+        "id": "location-ruine",
+        "label": "Ruine",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/ruine2.png"
+      },
+      {
+        "id": "location-ausgrabung",
+        "label": "Ausgrabung",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/ausgrabung.png"
+      },
+      {
+        "id": "location-hoehle",
+        "label": "Höhle",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/h-hle.png"
+      },
+      {
+        "id": "location-hain",
+        "label": "Hain",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/hain.png"
+      },
+      {
+        "id": "location-ahnenbaum",
+        "label": "Ahnenbaum",
+        "color": "#a45630",
+        "marker": "/Karten/assets/icons/welt/ahnenbaum.png"
+      },
+      {
+        "id": "location-quelle",
+        "label": "Quelle",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/quelle.png"
+      },
+      {
+        "id": "location-berggipfel",
+        "label": "Berggipfel",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/gipfel.png"
+      },
+      {
+        "id": "location-monsterhort",
+        "label": "Monsterhort",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/kreaturenhort.png"
+      },
+      {
+        "id": "location-banditenlager",
+        "label": "Banditenlager",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/banditenlager.png"
+      },
+      {
+        "id": "location-hafen",
+        "label": "Hafen / Steg",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/gro-er-hafen.png"
+      },
+      {
+        "id": "location-werft",
+        "label": "Werft",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/schiffswerft.png"
+      },
+      {
+        "id": "location-poststation",
+        "label": "Poststation",
+        "color": "#a45630",
+        "marker": "/Karten/assets/icons/welt/poststation.png"
+      },
+      {
+        "id": "location-schule",
+        "label": "Schule",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/l-ndliche-universit-t.png"
+      },
+      {
+        "id": "location-zirkus",
+        "label": "Zirkus",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/zirkus3.png"
+      },
+      {
+        "id": "location-wohnhaus",
+        "label": "Wohnhaus",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/b-uerliches-heim.png"
+      },
+      {
+        "id": "location-brauersiedlung",
+        "label": "Brauersiedlung",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/brauersiedlung.png"
+      },
+      {
+        "id": "location-klostersiedlung",
+        "label": "Klostersiedlung",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/klostersiedlung.png"
+      },
+      {
+        "id": "location-rosszuchtsiedlung",
+        "label": "Rosszuchtsiedlung",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/pferdezuchtsiedlung.png"
+      },
+      {
+        "id": "location-sumpfsiedlung",
+        "label": "Sumpfsiedlung",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/sumpfsiedlung.png"
+      },
+      {
+        "id": "location-unterwasserstadt",
+        "label": "Unterwasserstadt",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/unterwasserstadt.png"
+      },
+      {
+        "id": "location-festung",
+        "label": "Festung",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/festung.png"
+      },
+      {
+        "id": "location-magierturm",
+        "label": "Magierturm",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/magierturm.png"
+      },
+      {
+        "id": "location-diebesgilde",
+        "label": "Diebesgilde",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/diebesgilde.png"
+      },
+      {
+        "id": "location-piratenversteck",
+        "label": "Piratenversteck",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/piratenlager.png"
+      },
+      {
+        "id": "location-schmugglerversteck",
+        "label": "Schmugglerversteck",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/schmuggler3.png"
+      },
+      {
+        "id": "location-verwunschener-wald",
+        "label": "Verwunschener Wald",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/waldschrat.png"
+      },
+      {
+        "id": "location-wahrzeichen",
+        "label": "Wahrzeichen",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/wahrzeichen.png"
+      },
+      {
+        "id": "location-dimensionaler-riss",
+        "label": "Dimensionaler Riss",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/dimensionaler-riss.png"
+      },
+      {
+        "id": "location-galgen",
+        "label": "Galgen",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/exekutionsplatz.png"
+      },
+      {
+        "id": "location-muenzpraegestaette",
+        "label": "Münzprägestätte",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/m-nzpr-ger.png"
+      },
+      {
+        "id": "location-bogenschiessstand",
+        "label": "Bogenschießstand",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/schie-stand2.png"
+      },
+      {
+        "id": "location-ziegelei",
+        "label": "Ziegelei",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/ziegelbrenner.png"
+      },
+      {
+        "id": "location-schiff",
+        "label": "Schiff",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/orte/schiff-gut.png"
+      },
+      {
+        "id": "location-kreaturenlager",
+        "label": "Kreaturenlager",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/goblinlager.png"
+      },
+      {
+        "id": "location-heisse-quellen",
+        "label": "Heiße Quellen",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/hei-e-quellen.png"
+      },
+      {
+        "id": "location-brueckenruine",
+        "label": "Brückenruine",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/zerst-rte-br-cke.png"
+      },
+      {
+        "id": "location-kirchenruine",
+        "label": "Kirchenruine",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/zerst-rte-kirche.png"
+      },
+      {
+        "id": "location-hausruine",
+        "label": "Hausruine",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/zerst-rtes-heim.png"
+      },
+      {
+        "id": "location-huegelgrab",
+        "label": "Hügelgrab",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/h-gelgrab.png"
+      },
+      {
+        "id": "location-plantage",
+        "label": "Plantage",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/landgut.png"
+      },
+      {
+        "id": "location-kultstaette",
+        "label": "Kultstätte",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/okkulter-schrein.png"
+      },
+      {
+        "id": "location-zelt",
+        "label": "Zelt",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/ritterlicheszelt.png"
+      },
+      {
+        "id": "location-faehrstelle",
+        "label": "Fährstelle",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/orte/f-hre-steg.png"
+      },
+      {
+        "id": "location-schlachtfeld",
+        "label": "Schlachtfeld",
+        "color": "#6060b0"
       }
     ],
     "dotSize": 18,
     "lblSize": 13,
-    "regionIcon": "",
-    "regionTitle": "Klaueninseln",
+    "regionIcon": "/Stammbäume/assets/images/regions/klaueninsel.png",
+    "regionTitle": "Klaueninsel",
     "mapImages": {
       "normal": "",
       "regions": "",
@@ -121,6 +4358,144 @@
       "notes": "",
       "groupStatus": {}
     },
-    "markerCatalog": []
+    "markerCatalog": [],
+    "categoryCatalogVersion": 3,
+    "dominions": [
+      {
+        "id": "grafschaft-klaueninsel",
+        "name": "Grafschaft Klaueninsel",
+        "type": "Grafschaft",
+        "ruler": "Haus Arth O'Talgarth",
+        "seat": "Talgarth",
+        "parentId": "",
+        "note": ""
+      },
+      {
+        "id": "herrschaft-pawen",
+        "name": "Herrschaft der Pawen",
+        "type": "Ritterfürstliche Herrschaft",
+        "ruler": "Haus Pawen O'Talgarth",
+        "seat": "Talgarth",
+        "parentId": "baronie-sturmklaue",
+        "note": ""
+      },
+      {
+        "id": "herrschaft-crafanc",
+        "name": "Herrschaft der Crafanc",
+        "type": "Ritterfürstliche Herrschaft",
+        "ruler": "Haus Crafanc O'Talgarth",
+        "seat": "Talgarth",
+        "parentId": "baronie-sturmklaue",
+        "note": ""
+      },
+      {
+        "id": "herrschaft-diafol",
+        "name": "Herrschaft der Diafol",
+        "type": "Ritterfürstliche Herrschaft",
+        "ruler": "Haus Diafol O'Talgarth",
+        "seat": "Talgarth",
+        "parentId": "baronie-sturmklaue",
+        "note": ""
+      },
+      {
+        "id": "baronie-talklaue",
+        "name": "Baronie Talklaue",
+        "type": "Baronie",
+        "ruler": "Haus Cwingod O'Morea",
+        "seat": "Morea",
+        "parentId": "grafschaft-klaueninsel",
+        "note": ""
+      },
+      {
+        "id": "herrschaft-krallenspitze",
+        "name": "Herrschaft Krallenspitze",
+        "type": "Ritterfürstliche Herrschaft",
+        "ruler": "Haus Dyfrgi O'Caer Cryftlawd",
+        "seat": "Caer Cryftlawd",
+        "parentId": "baronie-talklaue",
+        "note": ""
+      },
+      {
+        "id": "baronie-blutklaue",
+        "name": "Baronie Blutklaue",
+        "type": "Baronie",
+        "ruler": "Haus Blodyn O'Aberdail",
+        "seat": "Aberdail",
+        "parentId": "grafschaft-klaueninsel",
+        "note": ""
+      },
+      {
+        "id": "herrschaft-dianc",
+        "name": "Herrschaft der Dianc",
+        "type": "Ritterfürstliche Herrschaft",
+        "ruler": "Haus Dianc O'Aberdail",
+        "seat": "Aberdail",
+        "parentId": "baronie-blutklaue",
+        "note": ""
+      },
+      {
+        "id": "herrschaft-arfordir",
+        "name": "Herrschaft der Arfordir",
+        "type": "Ritterfürstliche Herrschaft",
+        "ruler": "Haus Arfordir O'Aberdail",
+        "seat": "Aberdail",
+        "parentId": "baronie-blutklaue",
+        "note": ""
+      },
+      {
+        "id": "herrschaft-blutsturz",
+        "name": "Herrschaft Blutsturz",
+        "type": "Ritterfürstliche Herrschaft",
+        "ruler": "Haus Walwrs O'Caer Deheuol",
+        "seat": "Caer Deheuol",
+        "parentId": "baronie-blutklaue",
+        "note": ""
+      },
+      {
+        "id": "herrschaft-frostklaue",
+        "name": "Herrschaft Frostklaue",
+        "type": "Ritterfürstliche Herrschaft",
+        "ruler": "Haus Unigol O'Caer Marwor",
+        "seat": "Caer Marwor",
+        "parentId": "grafschaft-klaueninsel",
+        "note": ""
+      },
+      {
+        "id": "herrschaft-silberklaue",
+        "name": "Herrschaft Silberklaue",
+        "type": "Ritterfürstliche Herrschaft",
+        "ruler": "Haus Sélwyn O'Caer Ebirth",
+        "seat": "Caer Ebirth",
+        "parentId": "grafschaft-klaueninsel",
+        "note": ""
+      },
+      {
+        "id": "herrschaft-nebelklaue",
+        "name": "Herrschaft Nebelklaue",
+        "type": "Ritterfürstliche Herrschaft",
+        "ruler": "Haus Eirth O'Caer Glaslyn",
+        "seat": "Caer Glaslyn",
+        "parentId": "grafschaft-klaueninsel",
+        "note": ""
+      },
+      {
+        "id": "herrschaft-wellenklaue",
+        "name": "Herrschaft Wellenklaue",
+        "type": "Ritterfürstliche Herrschaft",
+        "ruler": "Haus Morthwyl O'Caer Morben",
+        "seat": "Caer Morben",
+        "parentId": "grafschaft-klaueninsel",
+        "note": ""
+      },
+      {
+        "id": "baronie-sturmklaue",
+        "name": "Gräfische Baronie Sturmklaue",
+        "type": "Gräfische Baronie",
+        "ruler": "Haus Arth O'Talgarth",
+        "seat": "Talgarth",
+        "parentId": "grafschaft-klaueninsel",
+        "note": ""
+      }
+    ]
   }
 }

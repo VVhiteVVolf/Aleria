@@ -20,7 +20,7 @@ function toggleArchiveSectionExpanded(sectionKey) {
 function getArchiveSectionStats(section, entries = []) {
   const moduleCount = entries.length;
   const pageCount = entries.reduce((sum, entry) => sum + getArchiveEntryPageCount(entry), 0);
-  const commentEnabledCount = entries.filter(entry => entry?.appendCommentsPage !== false || hasArchiveEntryPageComments(entry)).length;
+  const commentEnabledCount = entries.filter(entry => hasArchiveEntryPageComments(entry)).length;
   return { moduleCount, pageCount, commentEnabledCount };
 }
 

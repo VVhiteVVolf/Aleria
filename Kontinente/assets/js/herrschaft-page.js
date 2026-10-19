@@ -3,7 +3,7 @@
 
   const page = document.querySelector("[data-herrschaft-page]");
   if (!page) return;
-  const directoryUrl = new URL('../../modules/territory-directory/settlement-directory.mjs?v=places-20261018d', document.currentScript.src);
+  const directoryUrl = new URL('../../modules/territory-directory/settlement-directory.mjs?v=weidebucht-20261019', document.currentScript.src);
   const { renderSettlementDomain } = await import(directoryUrl);
   const { mountDirectoryBrowser, directoryState } = await import(new URL('directory-browser.mjs?v=register-20261018a', directoryUrl));
   const { renderCouncilGroups } = await import(new URL('council-directory.mjs?v=vortigern-20261018', directoryUrl));
@@ -138,6 +138,10 @@
     appendParagraphs(administration, article.copy?.economy);
     administration.append(createElement("h3", "herrschaft-subheading", "5.c) Verteidigung"));
     appendParagraphs(administration, article.copy?.defense);
+    if (article.copy?.banditry?.length) {
+      administration.append(createElement("h3", "herrschaft-subheading", "5.d) Banditentum"));
+      appendParagraphs(administration, article.copy.banditry);
+    }
     cell.append(administration);
 
     const families = createElement("section", "");

@@ -1,0 +1,83 @@
+.economy-calculation {
+  flex: 1; min-height: 0; min-width: 0; overflow: auto;
+  padding: clamp(16px, 2.5vw, 36px); background: var(--module-paper, #f7f1e3); color: var(--ink, #342a20);
+  font: 1rem/1.55 'EB Garamond', Georgia, serif; overscroll-behavior: contain;
+}
+.economy-header { border-bottom: 1px solid var(--module-line, #d9cbb4); margin-bottom: 18px; padding-bottom: 14px; }
+.economy-header h2 { font: 600 clamp(1.3rem, 2vw, 2rem)/1.25 'Cinzel', serif; margin: 8px 0; }
+.economy-header p { max-width: 90ch; margin: 8px 0; }
+.economy-kicker, .economy-metric > span { font: 600 .67rem/1.5 'Cinzel', serif; letter-spacing: .06em; color: var(--ink-faded, #77654c); }
+.economy-calendar { font-size: .87rem; color: var(--ink-faded, #77654c); }
+.economy-calculation details { border: 1px solid var(--module-line, #d9cbb4); border-radius: 5px; padding: 12px 16px; margin: 16px 0; }
+.economy-calculation summary { cursor: pointer; font-weight: 600; }
+.economy-fields, .economy-household-controls { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px 18px; margin-top: 14px; }
+.economy-field { display: flex; flex-direction: column; gap: 5px; min-width: 0; font-size: .91rem; }
+.economy-input { display: flex; align-items: center; gap: 8px; }
+.economy-field :is(input, select), .economy-wage-input input {
+  box-sizing: border-box; width: 100%; min-width: 0; min-height: 38px; border: 1px solid var(--module-line, #d9cbb4);
+  border-radius: 4px; padding: 6px 9px; color: var(--ink, #342a20); background: var(--module-paper-raised, #fffaf0); font: inherit;
+}
+.economy-check { display: flex; align-items: center; gap: 8px; font-size: .9rem; }
+.economy-check input { accent-color: var(--module-bronze, #927348); }
+.economy-toolbar { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin: 14px 0; }
+.economy-toolbar p { flex: 1 1 220px; margin: 0; font-size: .86rem; color: var(--ink-faded, #77654c); }
+.economy-calculation button {
+  border: 1px solid var(--module-line, #d9cbb4); background: var(--module-paper-raised, #fffaf0); color: inherit;
+  border-radius: 4px; padding: 9px 12px; font: 600 .8rem/1.25 'EB Garamond', Georgia, serif; cursor: pointer;
+}
+.economy-tabs { display: flex; gap: 6px; flex-wrap: wrap; border-bottom: 1px solid var(--module-line, #d9cbb4); padding-bottom: 10px; }
+.economy-tabs [aria-selected="true"] { background: var(--module-paper-soft, #e9dfc9); border-color: var(--module-bronze, #927348); }
+.economy-panel { padding-top: 18px; }
+.economy-panel[hidden] { display: none; }
+.economy-panel h3 { font: 600 1.05rem/1.35 'Cinzel', serif; margin: 16px 0 10px; }
+.economy-panel h4 { font-size: 1.05rem; }
+.economy-metrics { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin-bottom: 20px; }
+.economy-metric { border: 1px solid var(--module-line, #d9cbb4); border-top: 3px solid var(--module-bronze, #927348); border-radius: 4px; padding: 14px; display: flex; flex-direction: column; gap: 6px; min-width: 0; background: var(--module-paper-raised, #fffaf0); }
+.economy-metric strong { font-size: clamp(1.1rem, 1.7vw, 1.55rem); line-height: 1.3; overflow-wrap: anywhere; }
+.economy-metric small { font-size: .82rem; color: var(--ink-faded, #77654c); }
+.economy-negative { color: #963e2d; }
+.economy-positive { color: #465c37; }
+.economy-ledger-columns { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 26px; }
+.economy-ledger-columns > section { min-width: 0; }
+.economy-table-scroll { max-width: 100%; overflow-x: auto; scrollbar-gutter: stable; }
+.economy-calculation table { width: 100%; border-collapse: collapse; margin: 10px 0; font-size: .91rem; }
+.economy-calculation :is(th, td) { text-align: left; vertical-align: top; padding: 9px 10px; border-bottom: 1px solid var(--module-line, #d9cbb4); }
+.economy-calculation thead th { font: 600 .68rem/1.5 'Cinzel', serif; letter-spacing: .02em; background: var(--module-paper-soft, #e9dfc9); }
+.economy-calculation tbody th { font-weight: 500; min-width: 140px; }
+.economy-calculation td { font-variant-numeric: tabular-nums; }
+.economy-calculation td:not(:first-child) { white-space: nowrap; }
+.economy-calculation td.economy-context-text { white-space: normal; }
+.economy-calculation :is(td, th) small { display: block; font: .78rem/1.4 'EB Garamond', Georgia, serif; color: var(--ink-faded, #77654c); white-space: normal; margin-top: 4px; }
+.economy-calculation .economy-total-row > :is(th, td) { font-weight: 700; border-top: 2px solid var(--module-bronze, #927348); }
+.economy-money { text-align: right; min-width: 110px; }
+.economy-note { font-size: .9rem; line-height: 1.55; color: var(--ink-faded, #77654c); max-width: 110ch; }
+.economy-warnings { padding: 14px 18px 14px 34px; border-left: 3px solid #aa6841; background: #b67c2910; }
+.economy-warnings li + li { margin-top: 6px; }
+.economy-flow { margin: 22px 0; }
+.economy-flow figcaption { font-weight: 600; margin-bottom: 7px; }
+.economy-flow-track { height: 16px; display: flex; overflow: hidden; background: #d9ddcb; border-radius: 3px; }
+.economy-flow-track > span { flex-shrink: 0; }
+.economy-flow-materials { background: #aa8055; }
+.economy-flow-staff { background: #748a87; }
+.economy-flow-overhead { background: #b8a07b; }
+.economy-flow ul { display: flex; flex-wrap: wrap; gap: 10px 24px; list-style: none; padding: 0; font-size: .82rem; }
+.economy-flow li { display: flex; align-items: center; gap: 7px; }
+.economy-flow i { display: inline-block; width: 9px; height: 9px; border-radius: 2px; }
+.economy-wage-input input { width: 100px; }
+.economy-payroll-totals { display: flex; flex-wrap: wrap; gap: 20px; padding: 12px 0; }
+.economy-assumptions { padding-left: 23px; max-width: 110ch; }
+.economy-assumptions li { padding: 5px 0; }
+.economy-sources small { display: block; color: var(--ink-faded, #77654c); }
+.economy-sources li { margin: 10px 0; }
+.economy-visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+.economy-calculation :is(button, input, select, summary, a, [tabindex]):focus-visible { outline: 2px solid var(--module-bronze, #927348); outline-offset: 3px; }
+@container module-shell (max-width: 900px) {
+  .economy-metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .economy-fields, .economy-household-controls { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .economy-ledger-columns { grid-template-columns: minmax(0, 1fr); gap: 8px; }
+}
+@container module-shell (max-width: 480px) {
+  .economy-fields, .economy-household-controls { grid-template-columns: minmax(0, 1fr); }
+  .economy-metric { padding: 10px; }
+  .economy-calculation :is(th, td) { padding: 8px; }
+}

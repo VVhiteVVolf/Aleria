@@ -1,0 +1,119 @@
+{
+  "territories": [
+    {
+      "id": "grafschaft-tal-der-milane",
+      "name": "Grafschaft Tal der Milane",
+      "type": "Grafschaft",
+      "house": "Haus Aderyn O'Penbryn",
+      "familyId": "haus-aderyn",
+      "crest": "/Stammbäume/assets/images/houses/Tal der Milane/haus-aderyn.png",
+      "banner": "/Stammbäume/assets/images/regions/tal-der-milane.png",
+      "parentId": "",
+      "seat": "Penbryn",
+      "href": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Tal der Milane/Grafschaft Tal der Milane.html"
+    },
+    {
+      "id": "baronie-taubenfurt",
+      "name": "Baronie Taubenfurt",
+      "type": "Baronie",
+      "house": "Haus Gaeth O'Penllyn",
+      "familyId": "haus-gaeth",
+      "crest": "/Stammbäume/assets/images/houses/Tal der Milane/Taubenfurt/haus-gaeth.png",
+      "banner": "/Stammbäume/assets/images/regions/Cenyr/Tal der Milane/Taubenfurt.png",
+      "parentId": "grafschaft-tal-der-milane",
+      "seat": "Penllyn",
+      "href": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Tal der Milane/Baronie Taubenfurt/Baronie Taubenfurt.html"
+    },
+    {
+      "id": "baronie-falkenhoeh",
+      "name": "Baronie Falkenhöh",
+      "type": "Baronie",
+      "house": "Haus Hebog O'Talwyn",
+      "familyId": "haus-hebog",
+      "crest": "/Stammbäume/assets/images/houses/Tal der Milane/Falkenhöh/haus-hebog.png",
+      "banner": "/Stammbäume/assets/images/regions/Cenyr/Tal der Milane/Falkenhöh.png",
+      "parentId": "grafschaft-tal-der-milane",
+      "seat": "Talwyn",
+      "href": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Tal der Milane/Baronie Falkenhöh/Baronie Falkenhöh.html"
+    },
+    {
+      "id": "herrschaft-schwalbenhort",
+      "name": "Herrschaft Schwalbenhort",
+      "type": "Ritterfürstliche Herrschaft",
+      "house": "Haus Ilyuncu O'Caer Gwennol",
+      "familyId": "haus-ilyuncu",
+      "crest": "/Stammbäume/assets/images/houses/Tal der Milane/Schwalbenhort/haus-ilyuncu.png",
+      "banner": "/Stammbäume/assets/images/regions/Cenyr/Tal der Milane/Schwalbenhort.png",
+      "parentId": "baronie-yvains-klamm",
+      "seat": "Caer Gwennol",
+      "href": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Tal der Milane/Herrschaft Schwalbenhort/Herrschaft Schwalbenhort.html"
+    },
+    {
+      "id": "herrschaft-tylluan",
+      "name": "Herrschaft der Tylluan",
+      "type": "Ritterfürstliche Herrschaft",
+      "house": "Haus Tylluan O'Penbryn",
+      "familyId": "haus-tylluan",
+      "crest": "/Stammbäume/assets/images/houses/Tal der Milane/Yvains Klamm/haus-tylluan.png",
+      "banner": "/Stammbäume/assets/images/regions/Cenyr/Tal der Milane/Herrschaft der Tylluan.png",
+      "parentId": "baronie-yvains-klamm",
+      "seat": "Penbryn",
+      "href": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Tal der Milane/Herrschaft der Tylluan/Herrschaft der Tylluan.html",
+      "bannerSource": "https://i.imgur.com/n5InW2O.png",
+      "bannerSha256": "ad26202139df547134efe14cab598957ae4943f9a6f0bf9308cdcec61b47d261"
+    },
+    {
+      "id": "herrschaft-mwyalchen",
+      "name": "Herrschaft der Mwyalchen",
+      "type": "Ritterfürstliche Herrschaft",
+      "house": "Haus Mwyalchen O'Penbryn",
+      "familyId": "haus-mwyalchen",
+      "crest": "/Stammbäume/assets/images/houses/Tal der Milane/Yvains Klamm/haus-mwyalchen.png",
+      "banner": "/Stammbäume/assets/images/regions/Cenyr/Tal der Milane/Herrschaft der Mwyalchen.png",
+      "parentId": "baronie-yvains-klamm",
+      "seat": "Penbryn",
+      "href": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Tal der Milane/Herrschaft der Mwyalchen/Herrschaft der Mwyalchen.html",
+      "bannerSource": "https://i.imgur.com/T9ACv9d.png",
+      "bannerSha256": "564b03b062e2c82735d8419ecf80bf130cac44fc32b329cef2b2addf958e7890"
+    },
+    {
+      "id": "herrschaft-eryr",
+      "name": "Herrschaft der Eryr",
+      "type": "Ritterfürstliche Herrschaft",
+      "house": "Haus Eryr O'Penbryn",
+      "familyId": "haus-eryr",
+      "crest": "/Stammbäume/assets/images/houses/Tal der Milane/Yvains Klamm/haus-eryr.png",
+      "banner": "/Stammbäume/assets/images/regions/Cenyr/Tal der Milane/Herrschaft der Eryr.png",
+      "parentId": "baronie-yvains-klamm",
+      "seat": "Penbryn",
+      "href": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Tal der Milane/Herrschaft der Eryr/Herrschaft der Eryr.html",
+      "bannerSource": "https://i.imgur.com/OqNoIXv.png",
+      "bannerSha256": "8019a134fdcfd5adec01046650217d26855e222aac733c64b000f7648e5f1ed5"
+    },
+    {
+      "id": "baronie-yvains-klamm",
+      "name": "Gräfische Baronie Yvains Klamm",
+      "type": "Gräfische Baronie",
+      "house": "Haus Aderyn O'Penbryn",
+      "familyId": "haus-aderyn",
+      "crest": "/Stammbäume/assets/images/houses/Tal der Milane/haus-aderyn.png",
+      "banner": "/Stammbäume/assets/images/regions/Cenyr/Tal der Milane/Yvains Klamm.png",
+      "parentId": "grafschaft-tal-der-milane",
+      "seat": "Penbryn",
+      "href": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Tal der Milane/Grafschaft Tal der Milane.html"
+    },
+    {
+      "id": "tal-der-milane-hochblick",
+      "name": "Anwesen Hochblick · Persönlicher Besitz der Aderyn",
+      "type": "Gräflicher Eigenbesitz",
+      "house": "Haus Aderyn O'Penbryn",
+      "familyId": "haus-aderyn",
+      "crest": "/Stammbäume/assets/images/houses/Tal der Milane/haus-aderyn.png",
+      "banner": "/Stammbäume/assets/images/regions/tal-der-milane.png",
+      "parentId": "baronie-falkenhoeh",
+      "seat": "Hochblick",
+      "href": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Tal der Milane/Grafschaft Tal der Milane.html",
+      "confirmation": "Der vollständige Markertext bezeichnet Hochblick ausdrücklich als persönlichen Besitz des Grafen innerhalb Falkenhöhs."
+    }
+  ]
+}

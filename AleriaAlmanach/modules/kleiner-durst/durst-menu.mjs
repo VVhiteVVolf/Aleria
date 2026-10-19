@@ -39,7 +39,7 @@ export function buildDurstMenu() {
     items: [
       ...DURST_DISHES.map(d => ({ ...defaults, ...fixedTradePrice(d.price), id: d.id, title: d.name,
         category: d.course === 'Vorspeise' ? 'vorspeise' : d.course === 'Monatsspezial' ? 'monat' : 'hauptspeisen',
-        subtitle: d.course, unit: 'Eine Portion', image: `${DURST_ART}/food/${d.id}.png`, imageFormat: 'portrait',
+        subtitle: d.course, unit: 'Eine Portion', image: `${DURST_ART}/food/${d.id}.png`, imageFormat: 'square',
         badge: d.course, description: `<p>${d.description}</p>`, features: ['Eine Portion', 'Schlichte Hausküche'],
         origin: 'Nias Küche · Fisch vom Gwynthorer Hafen', usageTags: ['Am Tisch oder Tresen'], priceNote: 'Die beschriebenen Beilagen sind enthalten.',
         conditions: d.course === 'Monatsspezial' ? 'Höchstens einmal im Monat, nur bei günstigem gutem Fang; wenige Portionen. Die Eintragung ist keine Zusage täglicher Verfügbarkeit.' : 'Nach Tagesfang und Topfvorrat.' })),

@@ -278,7 +278,7 @@ function sanitizeModulePage(page, fallbackTitle = '') {
   if (typeof page.enableComments === 'boolean') next.enableComments = page.enableComments;
   if (page.commentDivider) next.commentDivider = true;
 
-  ['imageSquare', 'imageLandscape', 'imageSemiLandscape', 'imageTall', 'sessionPage', 'wantedPage', 'profilePage', 'houseWarriorsPage', 'bountyFilePage', 'goodsTablePage', 'tradeCatalogPage', 'mapTemplatePage', 'organizationNetworkPage', 'languagePage', 'nameListPage', 'scriptTablePage', 'landingPage', 'characterInventoryPage', 'guestRegisterPage', 'tournamentPage', 'tournamentLeaguePage', 'castePage', 'courtPage', 'hierarchyPage', 'familyPage', 'familyTreePage', 'housePage', 'guildPage', 'biographyPage', 'bestiaryPage', 'questFilePage', 'artifactPage', 'recipePage']
+  ['imageSquare', 'imageLandscape', 'imageSemiLandscape', 'imageTall', 'sessionPage', 'wantedPage', 'profilePage', 'houseWarriorsPage', 'bountyFilePage', 'goodsTablePage', 'tradeCatalogPage', 'mapTemplatePage', 'organizationNetworkPage', 'economyCalculationPage', 'languagePage', 'nameListPage', 'scriptTablePage', 'landingPage', 'characterInventoryPage', 'guestRegisterPage', 'tournamentPage', 'tournamentLeaguePage', 'castePage', 'courtPage', 'hierarchyPage', 'familyPage', 'familyTreePage', 'housePage', 'guildPage', 'biographyPage', 'bestiaryPage', 'questFilePage', 'artifactPage', 'recipePage']
     .forEach(flag => { if (page[flag]) next[flag] = true; });
 
   if (Array.isArray(page.sessionCast) && page.sessionCast.length) {
@@ -413,6 +413,10 @@ function sanitizeModulePage(page, fallbackTitle = '') {
   if (page.organizationNetworkPage) {
     next.organizationNetwork = sanitizeOrganizationNetworkData(page.organizationNetwork);
   }
+  if (page.economyCalculationPage) {
+    next.economyCalculation = AleriaEconomy.sanitizePageData(page.economyCalculation);
+    next.enableComments = false;
+  }
 
   if (page.languagePage) {
     next.language = sanitizeLanguageData(page.language);
@@ -507,6 +511,7 @@ function normalizeEntryForEditor(entry) {
     subtitle: String(clone.subtitle || '').trim(),
     type: String(clone.type || '').trim(),
     category: String(clone.category || '').trim(),
+    ...(String(clone.economyPriceReview || '').trim() ? { economyPriceReview: String(clone.economyPriceReview).slice(0, 40) } : {}),
     moduleWidth: clampModuleSizeValue(clone.moduleWidth, MODULE_SIZE_DEFAULT),
     moduleHeight: clampModuleSizeValue(clone.moduleHeight, MODULE_SIZE_DEFAULT),
     image: String(clone.image || (shouldUsePageImageAsEntryImage(pages) ? pages[0]?.image : '') || '').trim(),
@@ -515,7 +520,7 @@ function normalizeEntryForEditor(entry) {
     icon: String(clone.icon || '').trim(),
     symbol: String(clone.symbol || '').trim(),
     locked: !!clone.locked,
-    appendCommentsPage: clone.appendCommentsPage !== false,
+    appendCommentsPage: false,
     enablePageComments: !!clone.enablePageComments,
     sessionCast: getModuleCastIdsFromSource(clone),
     sessionCastDetails: getModuleCastDetailsFromSource(clone),

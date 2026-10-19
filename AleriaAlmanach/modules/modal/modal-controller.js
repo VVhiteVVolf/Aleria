@@ -32,8 +32,9 @@ function getPages(entry) {
     commentator: entry.commentator, commentatorMood: entry.commentatorMood,
     commentText: entry.commentText, quote: entry.quote, quoteBy: entry.quoteBy,
   }];
-  if (entry.appendCommentsPage === false) return base;
-  return [...base, { _commentsPage: true }];
+  // The former automatic entry-comments appendix is retired. Keep existing
+  // scene pages and their thread keys at their original positions.
+  return (Array.isArray(base) ? base : []).filter(page => page && !page._commentsPage);
 }
 
 function syncCurlForRenderedPage(entry) {

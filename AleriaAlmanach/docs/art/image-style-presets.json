@@ -20,6 +20,7 @@
       "name": "Fantasy-Items im Stil der Häuser aus Celtigerns Wacht",
       "useFor": [
         "Freigestellte Items und Inventarbilder",
+        "Speisen und Getränke für Güterkarten, Menüs und Warenangebote: immer freigestellte quadratische Item-Icons, keine Szenenbilder",
         "Waffen, Schilde, Rüstungen und Ausrüstung",
         "Haus-Harnische",
         "Einzelne Waren und Gegenstände im Warenregister"
@@ -123,7 +124,7 @@
       "defaultAnimeReference": "Tales of Xillia/Frieren",
       "animeUsage": "Den Platzhalter durch die im Auftrag genannte Anime-Referenz ersetzen. Ohne neue Stilvorgabe die bisher für Aleria vereinbarte Referenz Tales of Xillia/Frieren verwenden.",
       "prompt": "Bildformat 2:3. [ANIME EINTRAGEN] Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.",
-      "compositionPreference": "Die Szene nicht mit Gegenständen überladen; weniger ist mehr. Je nach Motiv sind Stillleben ohne Personen ausdrücklich passend."
+      "compositionPreference": "Die Szene nicht mit Gegenständen überladen; weniger ist mehr. Je nach Motiv sind Stillleben ohne Personen ausdrücklich passend. Speisen und Getränke für Güterkarten, Menüs und Warenangebote sind davon ausgenommen: immer fantasy-inventory-item, 1:1 und echter transparenter PNG-Hintergrund, ohne Tisch, Raum oder Szenenhintergrund. Nutzerkorrektur vom 19. Oktober 2026."
     }
   },
   "applicationRules": [

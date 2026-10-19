@@ -66,7 +66,7 @@ function buildArchiveHierarchyModel(tabSections = [], tab = '') {
   });
 
   finalizeArchiveHierarchyNode(root);
-  return { tab, root };
+  return { tab, root, sections: tabSections };
 }
 
 function findArchiveHierarchyNode(root, path = []) {
@@ -96,7 +96,7 @@ function getArchiveHierarchyNodeStats(node) {
   return {
     moduleCount: entries.length,
     pageCount: entries.reduce((sum, entry) => sum + getArchiveEntryPageCount(entry), 0),
-    dialogCount: entries.filter(entry => entry?.appendCommentsPage !== false || hasArchiveEntryPageComments(entry)).length,
+    dialogCount: entries.filter(entry => hasArchiveEntryPageComments(entry)).length,
     childCount: node?.children?.length || 0
   };
 }
@@ -200,7 +200,7 @@ function renderArchiveHierarchyContentHeading(node, model) {
     ? getArchiveDashboardTabIcon(model.tab, section.iconUrl)
     : sanitizeImageSrc(section.iconUrl || '');
   const image = icon || getArchiveHierarchyNodeImage(node);
-  const description = String(section.desc || (!node.path.length ? getThemeMetaForTab(model.tab).note : '') || '').trim();
+  const description = String(section.desc || (!node.path.length ? getThemeMetaForTab(model.tab, model.sections).note : '') || '').trim();
   return `
     ${renderArchiveHierarchyBreadcrumbs(node, model)}
     <header class="archive-hierarchy-content-heading">

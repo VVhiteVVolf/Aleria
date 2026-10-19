@@ -266,6 +266,32 @@ test('Cenyr group classification repair preserves raw cache signatures and does 
   assert.equal(saved.length, 0);
 });
 
+test('Gwynthor reclassification keeps the raw sync baseline and never republishes unchanged modules', async () => {
+  const { context, saved } = syncContext();
+  context.SECTIONS = []; context.structuredClone = structuredClone;
+  vm.runInContext(readFileSync(new URL('../modules/gwynthor-geography/gwynthor-geography.global.js', import.meta.url), 'utf8'), context);
+  const tab = 'Völker & Kulturen', path = ['Cenyr', 'Celtigerns Wacht', 'Llamreis Ankunft', 'Gwynthor'];
+  const nodes = [{ id: 'root', parentId: '', title: tab, tab }];
+  path.forEach((title, index) => nodes.push({ id: `n${index}`, parentId: index ? `n${index - 1}` : 'root', tab, title }));
+  const payload = { updatedAtClient: 200, customSections: [{ key: 'Gwynthor', tab, path, nodeId: 'n3',
+    entries: [{ id: 'unchanged-gwynthor', title: 'Unverändert', pages: [{ sessionPage: true, commentThreadKey: 'kept-thread' }] }] }],
+    moduleSectionNodes: nodes, moduleNodeAssignments: { 'unchanged-gwynthor': 'n3' } };
+  context.writeLocalModuleStorePayload(payload);
+  await context.writeModuleStoreSyncMeta(payload);
+  const receipt = context.localStorage.getItem('sync-meta');
+  const signature = context.getModuleStoreContentSignature(context.readLocalModuleStorePayload());
+  context.applyModuleStorePayload(context.readLocalModuleStorePayload());
+  assert.equal(context._moduleSectionNodes.find(node => node.id === 'n3').title, 'Gwynthor-Stadt');
+  assert.deepEqual(clone(context._customSections[0].path), [...path.slice(0, -1), 'Bannkreis Gwynthor', 'Gwynthor-Stadt']);
+  assert.equal(context._customSections[0].entries[0].pages[0].commentThreadKey, 'kept-thread');
+  assert.equal(context.getModuleStoreContentSignature(context.readLocalModuleStorePayload()), signature);
+  assert.equal(context.localStorage.getItem('sync-meta'), receipt);
+  assert.equal(await context.isLocalModuleStoreSynced(context.readLocalModuleStorePayload()), true);
+  context._fb.loadModuleStore = async () => payload;
+  await context.setupModuleStoreRemoteSync();
+  assert.equal(context._moduleStoreSyncConflict, null); assert.equal(saved.length, 0);
+});
+
 test('sync receipts remain compact even for a multi-megabyte module store', async () => {
   const { context } = syncContext();
   const payload = store(100, 'Großer Bestand');

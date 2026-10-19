@@ -1,4 +1,4 @@
-import { registerStore } from './item-register-store.js?v=20261018-availability-v1';
+import { registerStore } from './item-register-store.js?v=20261019-prices-v1';
 import { REGISTER_SECTIONS, queryRegister, normalizeOffer, toLegacyItem } from './item-register-model.js?v=20261006-regional-equipment-v2';
 import { mountRegisterNavigation } from './item-register-navigation.js?v=20261006-sidebar-equipment-v1';
 import { shell, navigation, overview, results, detail, escape, safeImage } from './item-register-view.js?v=20261014-aldrimar-brewers-v1';

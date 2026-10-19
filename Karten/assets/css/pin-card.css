@@ -114,6 +114,10 @@
 .sv-affil-lbl { flex-shrink: 0; font: 600 .65rem 'Cinzel', serif; color: #83662e; letter-spacing: .045em; text-transform: uppercase; }
 .sv-banner { flex: 0 0 64px; align-self: stretch; max-height: 100px; }
 .sv-banner img { width: 100%; height: 100%; object-fit: contain; }
+.sv-co-rulers { display: flex; flex-wrap: wrap; gap: .7rem 1.5rem; padding: .8rem 1.2rem; border-bottom: 1px solid #d0bb7a; }
+.sv-co-ruler { display: flex; align-items: center; gap: .6rem; flex: 1 1 220px; min-width: 0; }
+.sv-co-ruler img { width: 40px; height: 52px; object-fit: contain; }
+.sv-co-ruler > a { min-width: 0; }
 
 /* The table sets the row height. Image dimensions cannot create a gap below it. */
 .sv-body { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); }

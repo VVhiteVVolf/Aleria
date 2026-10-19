@@ -368,7 +368,7 @@
             "subtitle": "Vorspeise",
             "unit": "Eine Portion",
             "image": "./assets/kleiner-durst/food/matrosenhappen.png",
-            "imageFormat": "portrait",
+            "imageFormat": "square",
             "badge": "Vorspeise",
             "description": "<p>Eine dicke Scheibe dunkles Brot mit etwas eingelegtem Hering und rohen Zwiebelringen. Salzig, schlicht und schnell auf dem Tisch.</p>",
             "features": [
@@ -407,7 +407,7 @@
             "subtitle": "Hauptspeise",
             "unit": "Eine Portion",
             "image": "./assets/kleiner-durst/food/fischgerstentopf.png",
-            "imageFormat": "portrait",
+            "imageFormat": "square",
             "badge": "Hauptspeise",
             "description": "<p>Ein dicker Eintopf aus günstigen Abschnitten vom Tagesfisch, Gerste, Kohl und Wurzelgemüse. Mehr Gerste als Fisch, aber eine warme volle Schüssel.</p>",
             "features": [
@@ -446,7 +446,7 @@
             "subtitle": "Hauptspeise",
             "unit": "Eine Portion",
             "image": "./assets/kleiner-durst/food/hafensuppe.png",
-            "imageFormat": "portrait",
+            "imageFormat": "square",
             "badge": "Hauptspeise",
             "description": "<p>Ein einfacher Fischsud mit Lauch, Rübenstücken und wenigen ausgelösten Fischflocken. Eine kleine Scheibe Brot gehört dazu.</p>",
             "features": [
@@ -485,7 +485,7 @@
             "subtitle": "Hauptspeise",
             "unit": "Eine Portion",
             "image": "./assets/kleiner-durst/food/ganzer-hering.png",
-            "imageFormat": "portrait",
+            "imageFormat": "square",
             "badge": "Hauptspeise",
             "description": "<p>Ein kleiner ganzer Hering aus dem Tagesfang, einfach gegart, mit etwas Kohl und gekochten Wurzeln. Kopf und Gräten bleiben dran; ein bescheidenes Hafenessen.</p>",
             "features": [
@@ -524,7 +524,7 @@
             "subtitle": "Monatsspezial",
             "unit": "Eine Portion",
             "image": "./assets/kleiner-durst/food/monatsfang.png",
-            "imageFormat": "portrait",
+            "imageFormat": "square",
             "badge": "Monatsspezial",
             "description": "<p>Ein gutes Stück frischer Scholle, in der Pfanne gebraten, mit etwas Zwiebel und Wurzelgemüse. Höchstens einmal im Monat und nur, wenn Nia einen guten Fisch bezahlbar bekommt. Wenige Portionen; kein tägliches Angebot.</p>",
             "features": [

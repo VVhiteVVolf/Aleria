@@ -18,6 +18,9 @@ const tree = [
   'netlify/build/run-site-build.mjs', 'netlify.toml', 'shared/calendar.js',
   'AleriaAlmanach/modules/archive/archive-dashboard.js',
   'AleriaAlmanach/modules/combat/combat-profile-model.js',
+  'AleriaAlmanach/modules/gofrann-schmiede/gofrann-data.js',
+  'AleriaAlmanach/modules/economy-calculator/economy-engine.mjs',
+  'Markt/Taverne/data/tavern-data.js',
   'Stammbäume/assets/js/data/families.registry.js', 'Stammbäume/assets/css/layout.css',
   'Stammbäume/assets/images/portraits/person.png',
   'Familien Häuser und Clans/house/haus.biography.mjs',
@@ -42,6 +45,15 @@ test('unchanged successful inputs reuse checks while every deploy rebuilds its g
 
 test('an archive-only fix checks the archive without checking guides or family charts', () => {
   assert.deepEqual(checks(select(changed('AleriaAlmanach/modules/archive/archive-dashboard.js'))), ['almanach-runtime']);
+});
+
+test('market, venue and calculation changes invalidate economics without coupling archive-only fixes', () => {
+  for (const file of ['Markt/Taverne/data/tavern-data.js',
+    'AleriaAlmanach/modules/gofrann-schmiede/gofrann-data.js',
+    'AleriaAlmanach/modules/economy-calculator/economy-engine.mjs']) {
+    assert.ok(checks(select(changed(file))).includes('economy-calculator'), file);
+  }
+  assert.ok(!checks(select(changed('AleriaAlmanach/modules/archive/archive-dashboard.js'))).includes('economy-calculator'));
 });
 
 test('cross-feature inputs trigger their consumers, including external house biographies and combat profiles', () => {

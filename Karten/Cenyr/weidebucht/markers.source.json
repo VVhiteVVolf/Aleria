@@ -1,0 +1,1228 @@
+{
+  "mapId": "cenyr-weidebucht",
+  "imageSize": [
+    4096,
+    3500
+  ],
+  "coordinateOrigin": "bottom-left",
+  "markers": [
+    {
+      "id": "weidebucht-porcadwyn",
+      "title": "Porcadwyn",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "herrschaft-dinefwr",
+      "house": "Haus Dinefwr",
+      "x": 1161,
+      "y": 819,
+      "source": {
+        "screenshot": 1,
+        "row": 1
+      }
+    },
+    {
+      "id": "weidebucht-esgairmor",
+      "title": "Esgairmor",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "baronie-dunstholm",
+      "house": "Haus Creyr",
+      "x": 951,
+      "y": 2162,
+      "source": {
+        "screenshot": 1,
+        "row": 2
+      }
+    },
+    {
+      "id": "weidebucht-burg-abendglanz-lilienorden",
+      "title": "Burg Abendglanz – Lilienorden",
+      "category": "Burg",
+      "templateId": "militaer",
+      "icon": "/Karten/Cenyr/weidebucht/Symbole/lilienorden.png",
+      "territoryId": "baronie-borkenstein",
+      "house": "Haus Hwyaden",
+      "x": 2895,
+      "y": 1592,
+      "source": {
+        "screenshot": 1,
+        "row": 3
+      }
+    },
+    {
+      "id": "weidebucht-mynfongor",
+      "title": "Mynfongor",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "baronie-borkenstein",
+      "house": "Haus Hwyaden",
+      "x": 3418,
+      "y": 1162,
+      "source": {
+        "screenshot": 1,
+        "row": 4
+      }
+    },
+    {
+      "id": "weidebucht-llynfon",
+      "title": "Llynfon",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "herrschaft-dinefwr",
+      "house": "Haus Dinefwr",
+      "x": 1911,
+      "y": 1970,
+      "source": {
+        "screenshot": 1,
+        "row": 5
+      }
+    },
+    {
+      "id": "weidebucht-steinruh-ausgrabungsstatte-ruinenpforte",
+      "title": "Steinruh – Ausgrabungsstätte Ruinenpforte",
+      "category": "Lagerplatz",
+      "templateId": "institution",
+      "icon": "/Karten/Cenyr/weidebucht/Symbole/ruinenpforte.png",
+      "territoryId": "baronie-borkenstein",
+      "house": "Haus Hwyaden",
+      "x": 3233,
+      "y": 1620,
+      "source": {
+        "screenshot": 1,
+        "row": 6
+      }
+    },
+    {
+      "id": "weidebucht-twr-cadarn",
+      "title": "Tŵr Cadarn",
+      "category": "Magierturm",
+      "templateId": "gebaeude",
+      "icon": "/Karten/assets/icons/welt/magierturm.png",
+      "territoryId": "baronie-borkenstein",
+      "house": "Haus Hwyaden",
+      "x": 3516,
+      "y": 1694,
+      "source": {
+        "screenshot": 1,
+        "row": 7
+      }
+    },
+    {
+      "id": "weidebucht-schiffsbauergilde-cerridreath",
+      "title": "Schiffsbauergilde – Cerridreath",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/Cenyr/aehrental/Symbole/handelsposten.png",
+      "territoryId": "baronie-dunstholm",
+      "house": "Haus Creyr",
+      "x": 700,
+      "y": 2377,
+      "source": {
+        "screenshot": 1,
+        "row": 8
+      }
+    },
+    {
+      "id": "weidebucht-bryngorad",
+      "title": "Bryngorad",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "herrschaft-dinefwr",
+      "house": "Haus Dinefwr",
+      "x": 1603,
+      "y": 1028,
+      "source": {
+        "screenshot": 1,
+        "row": 9
+      }
+    },
+    {
+      "id": "weidebucht-porwynfa",
+      "title": "Porwynfa",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung.png",
+      "territoryId": "herrschaft-mochdaer",
+      "house": "Haus Mochdaer",
+      "x": 1824,
+      "y": 705,
+      "source": {
+        "screenshot": 1,
+        "row": 10
+      }
+    },
+    {
+      "id": "weidebucht-teyrngarch-brauerei-gwellbrwyd",
+      "title": "Teyrngarch Brauerei – Gwellbrwyd",
+      "category": "Brauersiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/brauersiedlung.png",
+      "territoryId": "weidebucht-teyrngarch-exklaven",
+      "house": "Haus Teyrngarch",
+      "x": 2499,
+      "y": 208,
+      "source": {
+        "screenshot": 1,
+        "row": 11
+      },
+      "exclave": true
+    },
+    {
+      "id": "weidebucht-bryngor",
+      "title": "Bryngor",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "baronie-borkenstein",
+      "house": "Haus Hwyaden",
+      "x": 3088,
+      "y": 1889,
+      "source": {
+        "screenshot": 1,
+        "row": 12
+      }
+    },
+    {
+      "id": "weidebucht-twr-gwybodaeth",
+      "title": "Tŵr Gwybodaeth",
+      "category": "Turm",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/turm.png",
+      "territoryId": "baronie-borkenstein",
+      "house": "Haus Hwyaden",
+      "x": 3796,
+      "y": 2060,
+      "source": {
+        "screenshot": 1,
+        "row": 13
+      }
+    },
+    {
+      "id": "weidebucht-erims-hof",
+      "title": "Erims Hof",
+      "category": "Kultstätte",
+      "templateId": "institution",
+      "icon": "/Karten/Cenyr/sonnenkueste/Symbole/familienhof.png",
+      "territoryId": "erims-hof-gemeinsame-verwaltung",
+      "house": "Haus Dinefwr und Haus Tir Addawol",
+      "x": 2455,
+      "y": 2366,
+      "source": {
+        "screenshot": 1,
+        "row": 14
+      }
+    },
+    {
+      "id": "weidebucht-castell-dinefwr",
+      "title": "Castell Dinefwr",
+      "category": "Burg",
+      "templateId": "militaer",
+      "icon": "/Karten/assets/icons/welt/gro-e-burg.png",
+      "territoryId": "herrschaft-dinefwr",
+      "house": "Haus Dinefwr",
+      "x": 2210,
+      "y": 1314,
+      "source": {
+        "screenshot": 1,
+        "row": 15
+      }
+    },
+    {
+      "id": "weidebucht-cor-fonadryn",
+      "title": "Côr Fonadryn",
+      "category": "Klostersiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/klostersiedlung.png",
+      "territoryId": "baronie-dunstholm",
+      "house": "Haus Creyr",
+      "x": 919,
+      "y": 1888,
+      "source": {
+        "screenshot": 1,
+        "row": 16
+      }
+    },
+    {
+      "id": "weidebucht-ynysgor",
+      "title": "Ynysgor",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "baronie-dunstholm",
+      "house": "Haus Creyr",
+      "x": 915,
+      "y": 2419,
+      "source": {
+        "screenshot": 1,
+        "row": 17
+      }
+    },
+    {
+      "id": "weidebucht-tirwyllan",
+      "title": "Tirwyllan",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung.png",
+      "territoryId": "herrschaft-dinefwr",
+      "house": "Haus Dinefwr",
+      "x": 2463,
+      "y": 2056,
+      "source": {
+        "screenshot": 1,
+        "row": 18
+      }
+    },
+    {
+      "id": "weidebucht-cerriwyn-bewahrer-avallorns",
+      "title": "Cerriwyn – Bewahrer Avallorns",
+      "category": "Bardensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bardensiedlung.png",
+      "territoryId": "baronie-melwas-au",
+      "house": "Haus Wylan",
+      "x": 3251,
+      "y": 932,
+      "source": {
+        "screenshot": 1,
+        "row": 19
+      }
+    },
+    {
+      "id": "weidebucht-porthgwelltir",
+      "title": "Porthgwelltir",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "baronie-dunstholm",
+      "house": "Haus Creyr",
+      "x": 1114,
+      "y": 2140,
+      "source": {
+        "screenshot": 1,
+        "row": 20
+      }
+    },
+    {
+      "id": "weidebucht-llanforyn",
+      "title": "Llanforyn",
+      "category": "Flusssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/flusssiedlung.png",
+      "territoryId": "herrschaft-dinefwr",
+      "house": "Haus Dinefwr",
+      "x": 1189,
+      "y": 662,
+      "source": {
+        "screenshot": 1,
+        "row": 21
+      }
+    },
+    {
+      "id": "weidebucht-gorfonad",
+      "title": "Gorfonad",
+      "category": "Flusssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/flusssiedlung.png",
+      "territoryId": "baronie-dunstholm",
+      "house": "Haus Creyr",
+      "x": 738,
+      "y": 2141,
+      "source": {
+        "screenshot": 1,
+        "row": 22
+      }
+    },
+    {
+      "id": "weidebucht-carnwyd",
+      "title": "Carnwyd",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "baronie-hochweide",
+      "house": "Haus Tir Addawol",
+      "x": 2906,
+      "y": 2937,
+      "source": {
+        "screenshot": 1,
+        "row": 23
+      }
+    },
+    {
+      "id": "weidebucht-maesgorn-3067-1136",
+      "title": "Maesgorn",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung.png",
+      "territoryId": "baronie-borkenstein",
+      "house": "Haus Hwyaden",
+      "x": 3067,
+      "y": 1136,
+      "source": {
+        "screenshot": 1,
+        "row": 24
+      }
+    },
+    {
+      "id": "weidebucht-cor-gwellwyth",
+      "title": "Côr Gwellwyth",
+      "category": "Klostersiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/klostersiedlung.png",
+      "territoryId": "herrschaft-dinefwr",
+      "house": "Haus Dinefwr",
+      "x": 2060,
+      "y": 2407,
+      "source": {
+        "screenshot": 1,
+        "row": 25
+      }
+    },
+    {
+      "id": "weidebucht-porthadarn",
+      "title": "Porthadarn",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "herrschaft-dinefwr",
+      "house": "Haus Dinefwr",
+      "x": 1866,
+      "y": 1690,
+      "source": {
+        "screenshot": 1,
+        "row": 26
+      }
+    },
+    {
+      "id": "weidebucht-zur-grunen-laterne",
+      "title": "Zur Grünen Laterne",
+      "category": "Taverne",
+      "templateId": "gastbetrieb",
+      "icon": "/Karten/assets/icons/welt/taverne.png",
+      "territoryId": "baronie-melwas-au",
+      "house": "Haus Wylan",
+      "x": 2527,
+      "y": 756,
+      "source": {
+        "screenshot": 1,
+        "row": 27
+      }
+    },
+    {
+      "id": "weidebucht-fonadwyth",
+      "title": "Fonadwyth",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung.png",
+      "territoryId": "baronie-borkenstein",
+      "house": "Haus Hwyaden",
+      "x": 3785,
+      "y": 1206,
+      "source": {
+        "screenshot": 1,
+        "row": 28
+      }
+    },
+    {
+      "id": "weidebucht-castell-gwellgor",
+      "title": "Castell Gwellgor",
+      "category": "Burgsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/burgsiedlung.png",
+      "territoryId": "baronie-hochweide",
+      "house": "Haus Tir Addawol",
+      "x": 3226,
+      "y": 2721,
+      "source": {
+        "screenshot": 1,
+        "row": 29
+      }
+    },
+    {
+      "id": "weidebucht-llangedarn",
+      "title": "Llangedarn",
+      "category": "Siedlungsruine",
+      "templateId": "ruine",
+      "icon": "/Karten/Cenyr/weidebucht/Symbole/siedlungsruine.png",
+      "territoryId": "baronie-hochweide",
+      "house": "Haus Tir Addawol",
+      "x": 3610,
+      "y": 3021,
+      "source": {
+        "screenshot": 1,
+        "row": 30
+      }
+    },
+    {
+      "id": "weidebucht-abergwell",
+      "title": "Abergwell",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "herrschaft-dinefwr",
+      "house": "Haus Dinefwr",
+      "x": 1441,
+      "y": 1090,
+      "source": {
+        "screenshot": 1,
+        "row": 31
+      }
+    },
+    {
+      "id": "weidebucht-poradlyn",
+      "title": "Poradlyn",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung.png",
+      "territoryId": "baronie-borkenstein",
+      "house": "Haus Hwyaden",
+      "x": 3798,
+      "y": 2610,
+      "source": {
+        "screenshot": 2,
+        "row": 1
+      }
+    },
+    {
+      "id": "weidebucht-rhosmeres-rosser-maesceffyl",
+      "title": "Rhosmeres Rösser – Maesceffyl",
+      "category": "Rosszuchtsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/pferdezuchtsiedlung.png",
+      "territoryId": "baronie-melwas-au",
+      "house": "Haus Wylan",
+      "x": 2967,
+      "y": 344,
+      "source": {
+        "screenshot": 2,
+        "row": 2
+      }
+    },
+    {
+      "id": "weidebucht-zur-schwarzen-eiche",
+      "title": "Zur Schwarzen Eiche",
+      "category": "Taverne",
+      "templateId": "gastbetrieb",
+      "icon": "/Karten/assets/icons/welt/taverne.png",
+      "territoryId": "baronie-melwas-au",
+      "house": "Haus Wylan",
+      "x": 2060,
+      "y": 1867,
+      "source": {
+        "screenshot": 2,
+        "row": 3
+      }
+    },
+    {
+      "id": "weidebucht-bhiorach",
+      "title": "Bhiorach",
+      "category": "Siedlungsruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/antike-ruine.png",
+      "territoryId": "baronie-hochweide",
+      "house": "Haus Tir Addawol",
+      "x": 3269,
+      "y": 3163,
+      "source": {
+        "screenshot": 2,
+        "row": 4
+      }
+    },
+    {
+      "id": "weidebucht-gwelladarn",
+      "title": "Gwelladarn",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung.png",
+      "territoryId": "herrschaft-mochdaer",
+      "house": "Haus Mochdaer",
+      "x": 1429,
+      "y": 627,
+      "source": {
+        "screenshot": 2,
+        "row": 5
+      }
+    },
+    {
+      "id": "weidebucht-abergwelltir",
+      "title": "Abergwelltir",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "baronie-hochweide",
+      "house": "Haus Tir Addawol",
+      "x": 2257,
+      "y": 2435,
+      "source": {
+        "screenshot": 2,
+        "row": 6
+      }
+    },
+    {
+      "id": "weidebucht-penrhydor",
+      "title": "Penrhydor",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "herrschaft-mochdaer",
+      "house": "Haus Mochdaer",
+      "x": 2349,
+      "y": 490,
+      "source": {
+        "screenshot": 2,
+        "row": 7
+      }
+    },
+    {
+      "id": "weidebucht-handelsposten-pastorella-markt-der-fortuna",
+      "title": "Handelsposten Pastorella – Markt der Fortuna",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/Cenyr/aehrental/Symbole/handelsposten.png",
+      "territoryId": "baronie-melwas-au",
+      "house": "Haus Wylan",
+      "x": 1729,
+      "y": 1771,
+      "source": {
+        "screenshot": 2,
+        "row": 8
+      }
+    },
+    {
+      "id": "weidebucht-porcadarn",
+      "title": "Porcadarn",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung.png",
+      "territoryId": "herrschaft-dinefwr",
+      "house": "Haus Dinefwr",
+      "x": 2557,
+      "y": 1280,
+      "source": {
+        "screenshot": 2,
+        "row": 9
+      }
+    },
+    {
+      "id": "weidebucht-fonadryn",
+      "title": "Fonadryn",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "baronie-hochweide",
+      "house": "Haus Tir Addawol",
+      "x": 3965,
+      "y": 2974,
+      "source": {
+        "screenshot": 2,
+        "row": 10
+      }
+    },
+    {
+      "id": "weidebucht-maesad",
+      "title": "Maesad",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung.png",
+      "territoryId": "baronie-hochweide",
+      "house": "Haus Tir Addawol",
+      "x": 2561,
+      "y": 2540,
+      "source": {
+        "screenshot": 2,
+        "row": 11
+      }
+    },
+    {
+      "id": "weidebucht-coedwyth",
+      "title": "Coedwyth",
+      "category": "Waldsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/waldsiedlung.png",
+      "territoryId": "baronie-hochweide",
+      "house": "Haus Tir Addawol",
+      "x": 2710,
+      "y": 3095,
+      "source": {
+        "screenshot": 2,
+        "row": 12
+      }
+    },
+    {
+      "id": "weidebucht-gwellwyth",
+      "title": "Gwellwyth",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung.png",
+      "territoryId": "baronie-hochweide",
+      "house": "Haus Tir Addawol",
+      "x": 3646,
+      "y": 2866,
+      "source": {
+        "screenshot": 2,
+        "row": 13
+      }
+    },
+    {
+      "id": "weidebucht-gwelliryn",
+      "title": "Gwelliryn",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung.png",
+      "territoryId": "herrschaft-mochdaer",
+      "house": "Haus Mochdaer",
+      "x": 2856,
+      "y": 916,
+      "source": {
+        "screenshot": 2,
+        "row": 14
+      }
+    },
+    {
+      "id": "weidebucht-maesfon",
+      "title": "Maesfon",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung.png",
+      "territoryId": "herrschaft-dinefwr",
+      "house": "Haus Dinefwr",
+      "x": 2400,
+      "y": 1612,
+      "source": {
+        "screenshot": 2,
+        "row": 15
+      }
+    },
+    {
+      "id": "weidebucht-porwython",
+      "title": "Porwython",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "baronie-dunstholm",
+      "house": "Haus Creyr",
+      "x": 678,
+      "y": 1979,
+      "source": {
+        "screenshot": 2,
+        "row": 16
+      }
+    },
+    {
+      "id": "weidebucht-talamhard",
+      "title": "Talamhard",
+      "category": "Siedlungsruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/antike-ruine.png",
+      "territoryId": "baronie-borkenstein",
+      "house": "Haus Hwyaden",
+      "x": 3304,
+      "y": 1449,
+      "source": {
+        "screenshot": 2,
+        "row": 17
+      }
+    },
+    {
+      "id": "weidebucht-castell-rhudd",
+      "title": "Castell Rhudd",
+      "category": "Burgsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/burgsiedlung.png",
+      "territoryId": "herrschaft-dinefwr",
+      "house": "Haus Dinefwr",
+      "x": 2724,
+      "y": 1122,
+      "source": {
+        "screenshot": 2,
+        "row": 18
+      }
+    },
+    {
+      "id": "weidebucht-turnierplatz",
+      "title": "Turnierplatz",
+      "category": "Turnierplatz",
+      "templateId": "militaer",
+      "icon": "/Karten/assets/icons/welt/turnierplatz.png",
+      "territoryId": "baronie-melwas-au",
+      "house": "Haus Wylan",
+      "x": 2501,
+      "y": 1833,
+      "source": {
+        "screenshot": 2,
+        "row": 19
+      }
+    },
+    {
+      "id": "weidebucht-glyndale",
+      "title": "Glyndale",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "baronie-hochweide",
+      "house": "Haus Tir Addawol",
+      "x": 2425,
+      "y": 2904,
+      "source": {
+        "screenshot": 2,
+        "row": 20
+      }
+    },
+    {
+      "id": "weidebucht-cadwellyn",
+      "title": "Cadwellyn",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "herrschaft-dinefwr",
+      "house": "Haus Dinefwr",
+      "x": 2172,
+      "y": 2150,
+      "source": {
+        "screenshot": 2,
+        "row": 21
+      }
+    },
+    {
+      "id": "weidebucht-trefyddin",
+      "title": "Trefyddin",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "baronie-borkenstein",
+      "house": "Haus Hwyaden",
+      "x": 3123,
+      "y": 2292,
+      "source": {
+        "screenshot": 2,
+        "row": 22
+      }
+    },
+    {
+      "id": "weidebucht-welltirydd",
+      "title": "Welltirydd",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "baronie-borkenstein",
+      "house": "Haus Hwyaden",
+      "x": 3986,
+      "y": 2309,
+      "source": {
+        "screenshot": 2,
+        "row": 23
+      }
+    },
+    {
+      "id": "weidebucht-carnadwyth",
+      "title": "Carnadwyth",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung.png",
+      "territoryId": "herrschaft-mochdaer",
+      "house": "Haus Mochdaer",
+      "x": 2313,
+      "y": 961,
+      "source": {
+        "screenshot": 2,
+        "row": 24
+      }
+    },
+    {
+      "id": "weidebucht-cor-ffynnon",
+      "title": "Côr Ffynnon",
+      "category": "Klostersiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/klostersiedlung.png",
+      "territoryId": "herrschaft-mochdaer",
+      "house": "Haus Mochdaer",
+      "x": 3162,
+      "y": 745,
+      "source": {
+        "screenshot": 2,
+        "row": 25
+      }
+    },
+    {
+      "id": "weidebucht-kaer-coedlan",
+      "title": "Kaer Coedlan",
+      "category": "Siedlungsruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/antike-ruine.png",
+      "territoryId": "baronie-borkenstein",
+      "house": "Haus Hwyaden",
+      "x": 3352,
+      "y": 2489,
+      "source": {
+        "screenshot": 2,
+        "row": 26
+      }
+    },
+    {
+      "id": "weidebucht-cerrigarth",
+      "title": "Cerrigarth",
+      "category": "Hauptstadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "baronie-melwas-au",
+      "house": "Haus Wylan",
+      "x": 1773,
+      "y": 1370,
+      "source": {
+        "screenshot": 2,
+        "row": 27
+      }
+    },
+    {
+      "id": "weidebucht-cor-gwellwyn",
+      "title": "Côr Gwellwyn",
+      "category": "Klostersiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/klostersiedlung.png",
+      "territoryId": "baronie-dunstholm",
+      "house": "Haus Creyr",
+      "x": 565,
+      "y": 1773,
+      "source": {
+        "screenshot": 2,
+        "row": 28
+      }
+    },
+    {
+      "id": "weidebucht-mowensang-hauptquartier-cerrithmor",
+      "title": "Möwensang Hauptquartier – Cerrithmor",
+      "category": "Gildenhaus",
+      "templateId": "orden",
+      "icon": "/Karten/Cenyr/weidebucht/Symbole/moewensang.png",
+      "territoryId": "baronie-dunstholm",
+      "house": "Haus Creyr",
+      "x": 444,
+      "y": 2200,
+      "source": {
+        "screenshot": 2,
+        "row": 29
+      }
+    },
+    {
+      "id": "weidebucht-porwelltir",
+      "title": "Porwelltir",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung.png",
+      "territoryId": "baronie-hochweide",
+      "house": "Haus Tir Addawol",
+      "x": 2719,
+      "y": 2973,
+      "source": {
+        "screenshot": 2,
+        "row": 30
+      }
+    },
+    {
+      "id": "weidebucht-tiradwyn",
+      "title": "Tiradwyn",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "herrschaft-mochdaer",
+      "house": "Haus Mochdaer",
+      "x": 3504,
+      "y": 689,
+      "source": {
+        "screenshot": 2,
+        "row": 31
+      }
+    },
+    {
+      "id": "weidebucht-abercadarn",
+      "title": "Abercadarn",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "baronie-dunstholm",
+      "house": "Haus Creyr",
+      "x": 747,
+      "y": 1769,
+      "source": {
+        "screenshot": 2,
+        "row": 32
+      }
+    },
+    {
+      "id": "weidebucht-maesgorn-1952-883",
+      "title": "Maesgorn",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung.png",
+      "territoryId": "herrschaft-mochdaer",
+      "house": "Haus Mochdaer",
+      "x": 1952,
+      "y": 883,
+      "source": {
+        "screenshot": 3,
+        "row": 1
+      }
+    },
+    {
+      "id": "weidebucht-teyrngarch-brauerei-bragfonnor",
+      "title": "Teyrngarch Brauerei – Bragfonnor",
+      "category": "Brauersiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/brauersiedlung.png",
+      "territoryId": "weidebucht-teyrngarch-exklaven",
+      "house": "Haus Teyrngarch",
+      "x": 1589,
+      "y": 787,
+      "source": {
+        "screenshot": 3,
+        "row": 2
+      },
+      "exclave": true
+    },
+    {
+      "id": "weidebucht-porfynnon",
+      "title": "Porfynnon",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "baronie-hochweide",
+      "house": "Haus Tir Addawol",
+      "x": 2342,
+      "y": 2680,
+      "source": {
+        "screenshot": 3,
+        "row": 3
+      }
+    },
+    {
+      "id": "weidebucht-carnwelltir",
+      "title": "Carnwelltir",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung.png",
+      "territoryId": "baronie-borkenstein",
+      "house": "Haus Hwyaden",
+      "x": 3794,
+      "y": 1582,
+      "source": {
+        "screenshot": 3,
+        "row": 4
+      }
+    },
+    {
+      "id": "weidebucht-hirschfels-lager-jagdklingen",
+      "title": "Hirschfels-Lager – Jagdklingen",
+      "category": "Jägerlager",
+      "templateId": "orden",
+      "icon": "/Karten/Cenyr/aehrental/Symbole/jagdklingen-lager.png",
+      "territoryId": "baronie-borkenstein",
+      "house": "Haus Hwyaden",
+      "x": 2865,
+      "y": 2144,
+      "source": {
+        "screenshot": 3,
+        "row": 5
+      }
+    },
+    {
+      "id": "weidebucht-mynfonn",
+      "title": "Mynfonn",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "herrschaft-mochdaer",
+      "house": "Haus Mochdaer",
+      "x": 2867,
+      "y": 589,
+      "source": {
+        "screenshot": 3,
+        "row": 6
+      }
+    },
+    {
+      "id": "weidebucht-carnadwyn",
+      "title": "Carnadwyn",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "baronie-borkenstein",
+      "house": "Haus Hwyaden",
+      "x": 3640,
+      "y": 2295,
+      "source": {
+        "screenshot": 3,
+        "row": 7
+      }
+    },
+    {
+      "id": "weidebucht-handelsposten-villano-klingende-munze",
+      "title": "Handelsposten Villano – Klingende Münze",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/Cenyr/aehrental/Symbole/handelsposten.png",
+      "territoryId": "baronie-melwas-au",
+      "house": "Haus Wylan",
+      "x": 1188,
+      "y": 1069,
+      "source": {
+        "screenshot": 3,
+        "row": 8
+      }
+    },
+    {
+      "id": "weidebucht-fonwellyn",
+      "title": "Fonwellyn",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung.png",
+      "territoryId": "herrschaft-mochdaer",
+      "house": "Haus Mochdaer",
+      "x": 2199,
+      "y": 671,
+      "source": {
+        "screenshot": 3,
+        "row": 9
+      }
+    },
+    {
+      "id": "weidebucht-gorwynd",
+      "title": "Gorwynd",
+      "category": "Siedlungsruine",
+      "templateId": "ruine",
+      "icon": "/Karten/Cenyr/weidebucht/Symbole/siedlungsruine.png",
+      "territoryId": "baronie-hochweide",
+      "house": "Haus Tir Addawol",
+      "x": 3227,
+      "y": 2938,
+      "source": {
+        "screenshot": 3,
+        "row": 10
+      }
+    },
+    {
+      "id": "weidebucht-castell-asyn",
+      "title": "Castell Asyn",
+      "category": "Burg",
+      "templateId": "militaer",
+      "icon": "/Karten/assets/icons/welt/gro-e-burg.png",
+      "territoryId": "herrschaft-mochdaer",
+      "house": "Haus Mochdaer",
+      "x": 2110,
+      "y": 1187,
+      "source": {
+        "screenshot": 3,
+        "row": 11
+      }
+    },
+    {
+      "id": "weidebucht-gwelladwyn",
+      "title": "Gwelladwyn",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung.png",
+      "territoryId": "baronie-borkenstein",
+      "house": "Haus Hwyaden",
+      "x": 2974,
+      "y": 1357,
+      "source": {
+        "screenshot": 3,
+        "row": 12
+      }
+    },
+    {
+      "id": "weidebucht-tirfonwll",
+      "title": "Tirfonwll",
+      "category": "Waldsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/waldsiedlung.png",
+      "territoryId": "baronie-borkenstein",
+      "house": "Haus Hwyaden",
+      "x": 3532,
+      "y": 2087,
+      "source": {
+        "screenshot": 3,
+        "row": 13
+      }
+    },
+    {
+      "id": "weidebucht-coedgwell",
+      "title": "Coedgwell",
+      "category": "Waldsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/waldsiedlung.png",
+      "territoryId": "baronie-borkenstein",
+      "house": "Haus Hwyaden",
+      "x": 3367,
+      "y": 1917,
+      "source": {
+        "screenshot": 3,
+        "row": 14
+      }
+    },
+    {
+      "id": "weidebucht-banditenbande-rote-streicher",
+      "title": "Banditenbande – Rote Streicher",
+      "category": "Banditenlager",
+      "templateId": "militaer",
+      "icon": "/Karten/assets/icons/welt/banditenlager.png",
+      "territoryId": "baronie-hochweide",
+      "house": "Haus Tir Addawol",
+      "x": 3502,
+      "y": 3284,
+      "source": {
+        "screenshot": 3,
+        "row": 15
+      }
+    },
+    {
+      "id": "weidebucht-burg-eisenhall-blutbund",
+      "title": "Burg Eisenhall – Blutbund",
+      "category": "Burg",
+      "templateId": "militaer",
+      "icon": "/Karten/Cenyr/weidebucht/Symbole/blutbund.png",
+      "territoryId": "baronie-borkenstein",
+      "house": "Haus Hwyaden",
+      "x": 3691,
+      "y": 1888,
+      "source": {
+        "screenshot": 3,
+        "row": 16
+      }
+    },
+    {
+      "id": "weidebucht-gorfonwyll",
+      "title": "Gorfonwyll",
+      "category": "Waldsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/waldsiedlung.png",
+      "territoryId": "baronie-hochweide",
+      "house": "Haus Tir Addawol",
+      "x": 2916,
+      "y": 2642,
+      "source": {
+        "screenshot": 3,
+        "row": 17
+      }
+    },
+    {
+      "id": "weidebucht-twr-erwyth",
+      "title": "Tŵr Erwyth",
+      "category": "Turm",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/turm.png",
+      "territoryId": "herrschaft-mochdaer",
+      "house": "Haus Mochdaer",
+      "x": 2623,
+      "y": 446,
+      "source": {
+        "screenshot": 3,
+        "row": 18
+      }
+    }
+  ],
+  "unpositionedPlaces": []
+}

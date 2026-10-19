@@ -3,13 +3,13 @@ import {eleganzGarment as model} from './eleganz-garment.mjs';
 import {ELEGANZ_WEDDING} from './eleganz-wedding-collection.mjs';
 export const ELEGANZ_COLLECTION = Object.freeze({
   damen: [
-    model('lichtleinen','Lichtleinen',18,'Cenyrisches Leinen · Wollborte','Hemdgewand mit schmalem Überkleid',
+    model('lichtleinen','Lichtleinen',45,'Cenyrisches Leinen · Wollborte','Hemdgewand mit schmalem Überkleid',
       'Ein helles Leinengewand mit dunkelblauem, schlicht geschnürtem Überkleid. Der cenyrische Schnitt lässt Schultern und Schritte frei; eine schmale argentische Borte gibt dem Ausschnitt seine ruhige Linie.',
       'Die sichtbaren Säume sind sauber gefasst, beanspruchte Stellen innen verstärkt. Gedacht für Frauen, die täglich gut gekleidet sein möchten, ohne eine Festgarnitur zu bezahlen.', ['Leinenuntergewand und Überkleid','Schmale Wollborte','Einfache Anpassung enthalten'],'Guter Alltag'),
-    model('gassenbluete','Gassenblüte',32,'Feines Wolltuch · Leinenfutter','Gegürtetes Tageskleid mit Wechselärmeln',
+    model('gassenbluete','Gassenblüte',75,'Feines Wolltuch · Leinenfutter','Gegürtetes Tageskleid mit Wechselärmeln',
       'Moosgrünes Wolltuch und cremefarbene Ärmel bilden eine Garnitur für Markttag, Besuch und Schenkenabend. Kleine purpurne Einfassungen setzen südliche Akzente, während der weite Rock und das warme Futter cenyrisch bleiben.',
       'Die Ärmel lassen sich zum Reinigen lösen. Eine verdeckte Tasche liegt tief in der Seitennaht; der mitgelieferte Stoffgürtel trägt weder schwere Beschläge noch unnötigen Zierrat.', ['Abnehmbare Ärmel','Verdeckte Seitentasche','Stoffgürtel enthalten'],'Stadtbesuch'),
-    model('kaufmannstochter','Die Kaufmannstochter',65,'Dichtes Wolltuch · Schmale Seidenborte','Tailliertes Besuchskleid mit offenem Überrock',
+    model('kaufmannstochter','Die Kaufmannstochter',130,'Dichtes Wolltuch · Schmale Seidenborte','Tailliertes Besuchskleid mit offenem Überrock',
       'Dunkles Rot liegt über einem elfenbeinfarbenen Untergewand. Ein schmaler, sauber gearbeiteter Ausschnitt und längere Ärmel erinnern an die Kaufmannshäuser Tirnaras; der robuste Überrock verträgt Gwynthors kühlere Tage.',
       'Der Seidenbesatz bleibt bewusst sparsam. Die Wirkung entsteht durch Sitz und Fall des guten Tuches, nicht durch die Menge glänzender Zutaten.', ['Gefüttertes Obergewand','Seidenborte an Ausschnitt und Ärmeln','Einfache Tuchschließe'],'Kontor & Besuch'),
     model('bannkreisabend','Abend im Bannkreis',130,'Feines Wolltuch · Seidenfutter','Langes Kleid mit kurzer Mantelschulter',
@@ -35,13 +35,13 @@ export const ELEGANZ_COLLECTION = Object.freeze({
       'Untergewand, Obergewand, Wechselärmel, schmaler Schmuckgürtel und abnehmbarer Festmantel werden gemeinsam entworfen. Der Preis gilt für diese festgelegte Ausführung mit ihren Besätzen; andere Steine oder umfangreichere Edelmetallarbeiten werden vor der Bestellung gesondert vereinbart.', ['Vollständige fünfteilige Garnitur','Eleonoras persönlicher Einzelentwurf','Eigens gefertigte Weißgoldfassungen'],'Seltene Zeremonie')
   ],
   herren: [
-    model('heller-faden','Heller Faden',18,'Cenyrisches Leinen · Wollborte','Hemd, schmale Hose und schlichtes Wams',
+    model('heller-faden','Heller Faden',45,'Cenyrisches Leinen · Wollborte','Hemd, schmale Hose und schlichtes Wams',
       'Ein helles Hemd, eine dunkelblaue Hose und ein gut geschnittenes, ungefüttertes Wams bilden die preiswerteste Herrengarnitur des Hauses. Kleine argentische Knopfreihen geben ihr eine klare Linie, ohne den alltagstauglichen cenyrischen Schnitt zu verdrängen.',
       'Die Garnitur ist leicht zu pflegen und an beanspruchten Nähten verstärkt. Schmuck und Mantel sind nicht erforderlich, um darin ordentlich vorzusprechen.', ['Dreiteilige Garnitur','Verstärkte Schritt- und Schulternähte','Einfache Anpassung enthalten'],'Guter Alltag'),
-    model('innenstadt','Der Innenstadtgang',35,'Wolltuch · Leinen','Gefüttertes Wams mit Hemd und Hose',
+    model('innenstadt','Der Innenstadtgang',80,'Wolltuch · Leinen','Gefüttertes Wams mit Hemd und Hose',
       'Das dunkelgrüne Wams sitzt etwas länger und fällt über die Hüfte. Ein schmaler purpurner Kragenbesatz erinnert an die südlichen Vorbilder; das helle Hemd und die robuste Hose bleiben bewusst schlicht.',
       'Das Leinenfutter ist angenehm auf der Haut und lässt sich bei späteren Änderungen gut öffnen. Gedacht für den Marktgang ebenso wie für ein ordentliches Abendessen.', ['Gefüttertes Wams','Hemd und Hose enthalten','Schmaler Kontrastkragen'],'Stadt & Besuch'),
-    model('kontorrock','Der Kontorrock',70,'Dichtes Wolltuch · Schmale Seidenborte','Langes Wams mit kurzer Überrobe',
+    model('kontorrock','Der Kontorrock',140,'Dichtes Wolltuch · Schmale Seidenborte','Langes Wams mit kurzer Überrobe',
       'Eine kurze dunkelblaue Überrobe liegt über einem weinroten Wams. Die argentische Knopffront streckt die Silhouette; cenyrische Flechtborten an den Ärmelenden geben dem Gewand eine örtliche Handschrift.',
       'Die Garnitur ist für lange Tage im Kontor gedacht. Eine innenliegende Tasche nimmt einen gefalteten Brief auf; das Futter lässt an den Schultern ausreichend Bewegung.', ['Überrobe und Wams','Hemd und passende Hose','Innenliegende Brieftasche'],'Kontor & Verhandlung'),
     model('nordlicht','Nordlicht',145,'Feines Wolltuch · Seidenfutter','Mantelgarnitur mit standfestem Kragen',

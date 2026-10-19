@@ -1,5 +1,1653 @@
 window.KONTINENTE_REGISTRY = [
   {
+    "id": "grafschaft-tal-der-milane",
+    "slug": "tal-der-milane",
+    "aliases": [
+      "glaenn-nam-muirean",
+      "glaenn-nam-muirenn",
+      "penbryn"
+    ],
+    "name": "Grafschaft Tal der Milane",
+    "type": "Grafschaft",
+    "page": "Estryll/Königreich Cenyr/Grafschaft Tal der Milane/Grafschaft Tal der Milane.html",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Tal der Milane/grafschaft.data.mjs?v=tal-der-milane-20261019",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Königreich",
+        "name": "Cenyr",
+        "slug": "cenyr"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Tal der Milane",
+        "slug": "tal-der-milane"
+      }
+    ]
+  },
+  {
+    "id": "baronie-taubenfurt",
+    "slug": "taubenfurt",
+    "aliases": [],
+    "name": "Baronie Taubenfurt",
+    "type": "Baronie",
+    "page": "Estryll/Königreich Cenyr/Grafschaft Tal der Milane/Baronie Taubenfurt/Baronie Taubenfurt.html",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Tal der Milane/Baronie Taubenfurt/baronie.data.mjs?v=tal-der-milane-20261019",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Königreich",
+        "name": "Cenyr",
+        "slug": "cenyr"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Tal der Milane",
+        "slug": "tal-der-milane"
+      },
+      {
+        "type": "Baronie",
+        "name": "Baronie Taubenfurt",
+        "slug": "baronie-taubenfurt"
+      }
+    ]
+  },
+  {
+    "id": "baronie-falkenhoeh",
+    "slug": "falkenhoeh",
+    "aliases": [],
+    "name": "Baronie Falkenhöh",
+    "type": "Baronie",
+    "page": "Estryll/Königreich Cenyr/Grafschaft Tal der Milane/Baronie Falkenhöh/Baronie Falkenhöh.html",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Tal der Milane/Baronie Falkenhöh/baronie.data.mjs?v=tal-der-milane-20261019",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Königreich",
+        "name": "Cenyr",
+        "slug": "cenyr"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Tal der Milane",
+        "slug": "tal-der-milane"
+      },
+      {
+        "type": "Baronie",
+        "name": "Baronie Falkenhöh",
+        "slug": "baronie-falkenhoh"
+      }
+    ]
+  },
+  {
+    "id": "herrschaft-schwalbenhort",
+    "slug": "schwalbenhort",
+    "aliases": [],
+    "name": "Herrschaft Schwalbenhort",
+    "type": "Herrschaft",
+    "page": "Estryll/Königreich Cenyr/Grafschaft Tal der Milane/Herrschaft Schwalbenhort/Herrschaft Schwalbenhort.html",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Tal der Milane/Herrschaft Schwalbenhort/herrschaft.data.mjs?v=tal-der-milane-20261019",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Königreich",
+        "name": "Cenyr",
+        "slug": "cenyr"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Tal der Milane",
+        "slug": "tal-der-milane"
+      },
+      {
+        "type": "Baronie",
+        "name": "Yvains Klamm",
+        "slug": "yvains-klamm"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Herrschaft Schwalbenhort",
+        "slug": "herrschaft-schwalbenhort"
+      }
+    ]
+  },
+  {
+    "id": "herrschaft-tylluan",
+    "slug": "tylluan",
+    "aliases": [],
+    "name": "Herrschaft der Tylluan",
+    "type": "Herrschaft",
+    "page": "Estryll/Königreich Cenyr/Grafschaft Tal der Milane/Herrschaft der Tylluan/Herrschaft der Tylluan.html",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Tal der Milane/Herrschaft der Tylluan/herrschaft.data.mjs?v=tal-der-milane-20261019",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Königreich",
+        "name": "Cenyr",
+        "slug": "cenyr"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Tal der Milane",
+        "slug": "tal-der-milane"
+      },
+      {
+        "type": "Baronie",
+        "name": "Yvains Klamm",
+        "slug": "yvains-klamm"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Herrschaft der Tylluan",
+        "slug": "herrschaft-der-tylluan"
+      }
+    ]
+  },
+  {
+    "id": "herrschaft-mwyalchen",
+    "slug": "mwyalchen",
+    "aliases": [],
+    "name": "Herrschaft der Mwyalchen",
+    "type": "Herrschaft",
+    "page": "Estryll/Königreich Cenyr/Grafschaft Tal der Milane/Herrschaft der Mwyalchen/Herrschaft der Mwyalchen.html",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Tal der Milane/Herrschaft der Mwyalchen/herrschaft.data.mjs?v=tal-der-milane-20261019",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Königreich",
+        "name": "Cenyr",
+        "slug": "cenyr"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Tal der Milane",
+        "slug": "tal-der-milane"
+      },
+      {
+        "type": "Baronie",
+        "name": "Yvains Klamm",
+        "slug": "yvains-klamm"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Herrschaft der Mwyalchen",
+        "slug": "herrschaft-der-mwyalchen"
+      }
+    ]
+  },
+  {
+    "id": "herrschaft-eryr",
+    "slug": "eryr",
+    "aliases": [],
+    "name": "Herrschaft der Eryr",
+    "type": "Herrschaft",
+    "page": "Estryll/Königreich Cenyr/Grafschaft Tal der Milane/Herrschaft der Eryr/Herrschaft der Eryr.html",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Tal der Milane/Herrschaft der Eryr/herrschaft.data.mjs?v=tal-der-milane-20261019",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Königreich",
+        "name": "Cenyr",
+        "slug": "cenyr"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Tal der Milane",
+        "slug": "tal-der-milane"
+      },
+      {
+        "type": "Baronie",
+        "name": "Yvains Klamm",
+        "slug": "yvains-klamm"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Herrschaft der Eryr",
+        "slug": "herrschaft-der-eryr"
+      }
+    ]
+  },
+
+  {
+    "id": "grafschaft-graue-weite",
+    "slug": "graue-weite",
+    "aliases": [
+      "eangder-llwyd",
+      "tredegar"
+    ],
+    "name": "Grafschaft Graue Weite – Eangder Llwyd",
+    "type": "Grafschaft",
+    "page": "Estryll/Königreich Cenyr/Grafschaft Graue Weite/Grafschaft Graue Weite.html",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Graue Weite/grafschaft.data.mjs?v=graue-weite-20261019",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Königreich",
+        "name": "Cenyr",
+        "slug": "cenyr"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Graue Weite",
+        "slug": "graue-weite"
+      }
+    ]
+  },
+  {
+    "id": "baronie-graukueste",
+    "slug": "graukueste",
+    "aliases": [],
+    "name": "Baronie Grauküste – Glennydd Llwyd",
+    "type": "Baronie",
+    "page": "Estryll/Königreich Cenyr/Grafschaft Graue Weite/Baronie Grauküste/Baronie Grauküste.html",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Graue Weite/Baronie Grauküste/baronie.data.mjs?v=graue-weite-20261019",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Königreich",
+        "name": "Cenyr",
+        "slug": "cenyr"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Graue Weite",
+        "slug": "graue-weite"
+      },
+      {
+        "type": "Baronie",
+        "name": "Baronie Grauküste",
+        "slug": "baronie-graukuste"
+      }
+    ]
+  },
+  {
+    "id": "baronie-eichenlicht",
+    "slug": "eichenlicht",
+    "aliases": [],
+    "name": "Baronie Eichenlicht – Goleu Derw",
+    "type": "Baronie",
+    "page": "Estryll/Königreich Cenyr/Grafschaft Graue Weite/Baronie Eichenlicht/Baronie Eichenlicht.html",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Graue Weite/Baronie Eichenlicht/baronie.data.mjs?v=graue-weite-20261019",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Königreich",
+        "name": "Cenyr",
+        "slug": "cenyr"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Graue Weite",
+        "slug": "graue-weite"
+      },
+      {
+        "type": "Baronie",
+        "name": "Baronie Eichenlicht",
+        "slug": "baronie-eichenlicht"
+      }
+    ]
+  },
+  {
+    "id": "baronie-silberwald",
+    "slug": "silberwald",
+    "aliases": [],
+    "name": "Baronie Silberwald – Coed Arian",
+    "type": "Baronie",
+    "page": "Estryll/Königreich Cenyr/Grafschaft Graue Weite/Baronie Silberwald/Baronie Silberwald.html",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Graue Weite/Baronie Silberwald/baronie.data.mjs?v=graue-weite-20261019",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Königreich",
+        "name": "Cenyr",
+        "slug": "cenyr"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Graue Weite",
+        "slug": "graue-weite"
+      },
+      {
+        "type": "Baronie",
+        "name": "Baronie Silberwald",
+        "slug": "baronie-silberwald"
+      }
+    ]
+  },
+  {
+    "id": "herrschaft-skelettkueste",
+    "slug": "skelettkueste",
+    "aliases": [],
+    "name": "Herrschaft Skelettküste – Glennydd Esgyrn",
+    "type": "Herrschaft",
+    "page": "Estryll/Königreich Cenyr/Grafschaft Graue Weite/Herrschaft Skelettküste/Herrschaft Skelettküste.html",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Graue Weite/Herrschaft Skelettküste/herrschaft.data.mjs?v=graue-weite-20261019",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Königreich",
+        "name": "Cenyr",
+        "slug": "cenyr"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Graue Weite",
+        "slug": "graue-weite"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Herrschaft Skelettküste",
+        "slug": "herrschaft-skelettkuste"
+      }
+    ]
+  },
+  {
+    "id": "baronie-achatsee",
+    "slug": "achatsee",
+    "aliases": [],
+    "name": "Baronie Achatsee – Llyn Agad",
+    "type": "Baronie",
+    "page": "Estryll/Königreich Cenyr/Grafschaft Graue Weite/Baronie Achatsee/Baronie Achatsee.html",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Graue Weite/Baronie Achatsee/baronie.data.mjs?v=graue-weite-20261019",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Königreich",
+        "name": "Cenyr",
+        "slug": "cenyr"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Graue Weite",
+        "slug": "graue-weite"
+      },
+      {
+        "type": "Baronie",
+        "name": "Baronie Achatsee",
+        "slug": "baronie-achatsee"
+      }
+    ]
+  },
+  {
+    "id": "herrschaft-blaidd",
+    "slug": "blaidd",
+    "aliases": [],
+    "name": "Herrschaft der Blaidd",
+    "type": "Herrschaft",
+    "page": "Estryll/Königreich Cenyr/Grafschaft Graue Weite/Herrschaft der Blaidd/Herrschaft der Blaidd.html",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Graue Weite/Herrschaft der Blaidd/herrschaft.data.mjs?v=graue-weite-20261019",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Königreich",
+        "name": "Cenyr",
+        "slug": "cenyr"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Graue Weite",
+        "slug": "graue-weite"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Herrschaft der Blaidd",
+        "slug": "herrschaft-der-blaidd"
+      }
+    ]
+  },
+  {
+    "id": "herrschaft-gwaedlyd",
+    "slug": "gwaedlyd",
+    "aliases": [],
+    "name": "Herrschaft der Gwaedlyd",
+    "type": "Herrschaft",
+    "page": "Estryll/Königreich Cenyr/Grafschaft Graue Weite/Herrschaft der Gwaedlyd/Herrschaft der Gwaedlyd.html",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Graue Weite/Herrschaft der Gwaedlyd/herrschaft.data.mjs?v=graue-weite-20261019",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Königreich",
+        "name": "Cenyr",
+        "slug": "cenyr"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Graue Weite",
+        "slug": "graue-weite"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Herrschaft der Gwaedlyd",
+        "slug": "herrschaft-der-gwaedlyd"
+      }
+    ]
+  },
+  {
+    "id": "herrschaft-illygoden",
+    "slug": "illygoden",
+    "aliases": [],
+    "name": "Herrschaft der Illygoden",
+    "type": "Herrschaft",
+    "page": "Estryll/Königreich Cenyr/Grafschaft Graue Weite/Herrschaft der Illygoden/Herrschaft der Illygoden.html",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Graue Weite/Herrschaft der Illygoden/herrschaft.data.mjs?v=graue-weite-20261019",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Königreich",
+        "name": "Cenyr",
+        "slug": "cenyr"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Graue Weite",
+        "slug": "graue-weite"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Herrschaft der Illygoden",
+        "slug": "herrschaft-der-illygoden"
+      }
+    ]
+  },
+  {
+    "id": "herrschaft-gwialen",
+    "slug": "gwialen",
+    "aliases": [],
+    "name": "Herrschaft der Gwialen",
+    "type": "Herrschaft",
+    "page": "Estryll/Königreich Cenyr/Grafschaft Graue Weite/Herrschaft der Gwialen/Herrschaft der Gwialen.html",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Graue Weite/Herrschaft der Gwialen/herrschaft.data.mjs?v=graue-weite-20261019",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Königreich",
+        "name": "Cenyr",
+        "slug": "cenyr"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Graue Weite",
+        "slug": "graue-weite"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Herrschaft der Gwialen",
+        "slug": "herrschaft-der-gwialen"
+      }
+    ]
+  },
+  {
+    "id": "herrschaft-brithyll",
+    "slug": "brithyll",
+    "aliases": [],
+    "name": "Herrschaft der Brithyll",
+    "type": "Herrschaft",
+    "page": "Estryll/Königreich Cenyr/Grafschaft Graue Weite/Herrschaft der Brithyll/Herrschaft der Brithyll.html",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Graue Weite/Herrschaft der Brithyll/herrschaft.data.mjs?v=graue-weite-20261019",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Königreich",
+        "name": "Cenyr",
+        "slug": "cenyr"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Graue Weite",
+        "slug": "graue-weite"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Herrschaft der Brithyll",
+        "slug": "herrschaft-der-brithyll"
+      }
+    ]
+  },
+
+  {
+    "id": "grafschaft-klaueninsel",
+    "slug": "klaueninsel",
+    "aliases": [
+      "ynys-pawennau",
+      "klaueninseln",
+      "talgarth"
+    ],
+    "name": "Grafschaft Klaueninsel – Ynys Pawennau",
+    "type": "Grafschaft",
+    "page": "Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Grafschaft Klaueninsel.html",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Klaueninsel/grafschaft.data.mjs?v=klaueninseln-20261019",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Königreich",
+        "name": "Cenyr",
+        "slug": "cenyr"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Klaueninsel",
+        "slug": "klaueninsel"
+      }
+    ]
+  },
+  {
+    "id": "herrschaft-pawen",
+    "slug": "pawen",
+    "aliases": [],
+    "name": "Herrschaft der Pawen",
+    "type": "Herrschaft",
+    "page": "Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Herrschaft der Pawen/Herrschaft der Pawen.html",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Herrschaft der Pawen/herrschaft.data.mjs?v=klaueninseln-20261019",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Königreich",
+        "name": "Cenyr",
+        "slug": "cenyr"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Klaueninsel",
+        "slug": "klaueninsel"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Herrschaft der Pawen",
+        "slug": "herrschaft-der-pawen"
+      }
+    ]
+  },
+  {
+    "id": "herrschaft-crafanc",
+    "slug": "crafanc",
+    "aliases": [],
+    "name": "Herrschaft der Crafanc",
+    "type": "Herrschaft",
+    "page": "Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Herrschaft der Crafanc/Herrschaft der Crafanc.html",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Herrschaft der Crafanc/herrschaft.data.mjs?v=klaueninseln-20261019",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Königreich",
+        "name": "Cenyr",
+        "slug": "cenyr"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Klaueninsel",
+        "slug": "klaueninsel"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Herrschaft der Crafanc",
+        "slug": "herrschaft-der-crafanc"
+      }
+    ]
+  },
+  {
+    "id": "herrschaft-diafol",
+    "slug": "diafol",
+    "aliases": [],
+    "name": "Herrschaft der Diafol",
+    "type": "Herrschaft",
+    "page": "Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Herrschaft der Diafol/Herrschaft der Diafol.html",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Herrschaft der Diafol/herrschaft.data.mjs?v=klaueninseln-20261019",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Königreich",
+        "name": "Cenyr",
+        "slug": "cenyr"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Klaueninsel",
+        "slug": "klaueninsel"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Herrschaft der Diafol",
+        "slug": "herrschaft-der-diafol"
+      }
+    ]
+  },
+  {
+    "id": "baronie-talklaue",
+    "slug": "talklaue",
+    "aliases": [],
+    "name": "Baronie Talklaue – Cra Fryn",
+    "type": "Baronie",
+    "page": "Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Baronie Talklaue/Baronie Talklaue.html",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Baronie Talklaue/baronie.data.mjs?v=klaueninseln-20261019",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Königreich",
+        "name": "Cenyr",
+        "slug": "cenyr"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Klaueninsel",
+        "slug": "klaueninsel"
+      },
+      {
+        "type": "Baronie",
+        "name": "Baronie Talklaue",
+        "slug": "baronie-talklaue"
+      }
+    ]
+  },
+  {
+    "id": "herrschaft-krallenspitze",
+    "slug": "krallenspitze",
+    "aliases": [],
+    "name": "Herrschaft Krallenspitze – Pen Ewinedd",
+    "type": "Herrschaft",
+    "page": "Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Herrschaft Krallenspitze/Herrschaft Krallenspitze.html",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Herrschaft Krallenspitze/herrschaft.data.mjs?v=klaueninseln-20261019",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Königreich",
+        "name": "Cenyr",
+        "slug": "cenyr"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Klaueninsel",
+        "slug": "klaueninsel"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Herrschaft Krallenspitze",
+        "slug": "herrschaft-krallenspitze"
+      }
+    ]
+  },
+  {
+    "id": "baronie-blutklaue",
+    "slug": "blutklaue",
+    "aliases": [],
+    "name": "Baronie Blutklaue – Cra Gwaed",
+    "type": "Baronie",
+    "page": "Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Baronie Blutklaue/Baronie Blutklaue.html",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Baronie Blutklaue/baronie.data.mjs?v=klaueninseln-20261019",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Königreich",
+        "name": "Cenyr",
+        "slug": "cenyr"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Klaueninsel",
+        "slug": "klaueninsel"
+      },
+      {
+        "type": "Baronie",
+        "name": "Baronie Blutklaue",
+        "slug": "baronie-blutklaue"
+      }
+    ]
+  },
+  {
+    "id": "herrschaft-dianc",
+    "slug": "dianc",
+    "aliases": [],
+    "name": "Herrschaft der Dianc",
+    "type": "Herrschaft",
+    "page": "Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Herrschaft der Dianc/Herrschaft der Dianc.html",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Herrschaft der Dianc/herrschaft.data.mjs?v=klaueninseln-20261019",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Königreich",
+        "name": "Cenyr",
+        "slug": "cenyr"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Klaueninsel",
+        "slug": "klaueninsel"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Herrschaft der Dianc",
+        "slug": "herrschaft-der-dianc"
+      }
+    ]
+  },
+  {
+    "id": "herrschaft-arfordir",
+    "slug": "arfordir",
+    "aliases": [],
+    "name": "Herrschaft der Arfordir",
+    "type": "Herrschaft",
+    "page": "Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Herrschaft der Arfordir/Herrschaft der Arfordir.html",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Herrschaft der Arfordir/herrschaft.data.mjs?v=klaueninseln-20261019",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Königreich",
+        "name": "Cenyr",
+        "slug": "cenyr"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Klaueninsel",
+        "slug": "klaueninsel"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Herrschaft der Arfordir",
+        "slug": "herrschaft-der-arfordir"
+      }
+    ]
+  },
+  {
+    "id": "herrschaft-blutsturz",
+    "slug": "blutsturz",
+    "aliases": [],
+    "name": "Herrschaft Blutsturz – Cwymp Gwaed",
+    "type": "Herrschaft",
+    "page": "Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Herrschaft Blutsturz/Herrschaft Blutsturz.html",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Herrschaft Blutsturz/herrschaft.data.mjs?v=klaueninseln-20261019",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Königreich",
+        "name": "Cenyr",
+        "slug": "cenyr"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Klaueninsel",
+        "slug": "klaueninsel"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Herrschaft Blutsturz",
+        "slug": "herrschaft-blutsturz"
+      }
+    ]
+  },
+  {
+    "id": "herrschaft-frostklaue",
+    "slug": "frostklaue",
+    "aliases": [],
+    "name": "Herrschaft Frostklaue – Cra Rhew",
+    "type": "Herrschaft",
+    "page": "Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Herrschaft Frostklaue/Herrschaft Frostklaue.html",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Herrschaft Frostklaue/herrschaft.data.mjs?v=klaueninseln-20261019",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Königreich",
+        "name": "Cenyr",
+        "slug": "cenyr"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Klaueninsel",
+        "slug": "klaueninsel"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Herrschaft Frostklaue",
+        "slug": "herrschaft-frostklaue"
+      }
+    ]
+  },
+  {
+    "id": "herrschaft-silberklaue",
+    "slug": "silberklaue",
+    "aliases": [],
+    "name": "Herrschaft Silberklaue – Cra Carreg",
+    "type": "Herrschaft",
+    "page": "Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Herrschaft Silberklaue/Herrschaft Silberklaue.html",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Herrschaft Silberklaue/herrschaft.data.mjs?v=klaueninseln-20261019",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Königreich",
+        "name": "Cenyr",
+        "slug": "cenyr"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Klaueninsel",
+        "slug": "klaueninsel"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Herrschaft Silberklaue",
+        "slug": "herrschaft-silberklaue"
+      }
+    ]
+  },
+  {
+    "id": "herrschaft-nebelklaue",
+    "slug": "nebelklaue",
+    "aliases": [],
+    "name": "Herrschaft Nebelklaue – Cra Niwl",
+    "type": "Herrschaft",
+    "page": "Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Herrschaft Nebelklaue/Herrschaft Nebelklaue.html",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Herrschaft Nebelklaue/herrschaft.data.mjs?v=klaueninseln-20261019",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Königreich",
+        "name": "Cenyr",
+        "slug": "cenyr"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Klaueninsel",
+        "slug": "klaueninsel"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Herrschaft Nebelklaue",
+        "slug": "herrschaft-nebelklaue"
+      }
+    ]
+  },
+  {
+    "id": "herrschaft-wellenklaue",
+    "slug": "wellenklaue",
+    "aliases": [],
+    "name": "Herrschaft Wellenklaue – Cra Tonnau",
+    "type": "Herrschaft",
+    "page": "Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Herrschaft Wellenklaue/Herrschaft Wellenklaue.html",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Klaueninsel/Herrschaft Wellenklaue/herrschaft.data.mjs?v=klaueninseln-20261019",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Königreich",
+        "name": "Cenyr",
+        "slug": "cenyr"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Klaueninsel",
+        "slug": "klaueninsel"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Herrschaft Wellenklaue",
+        "slug": "herrschaft-wellenklaue"
+      }
+    ]
+  },
+
+  {
+    "id": "grafschaft-silberinsel",
+    "slug": "silberinsel",
+    "aliases": [
+      "ynys-arian",
+      "llanvane"
+    ],
+    "name": "Grafschaft Silberinsel – Ynys Arian",
+    "type": "Grafschaft",
+    "page": "Estryll/Königreich Cenyr/Grafschaft Silberinsel/Grafschaft Silberinsel.html",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Silberinsel/grafschaft.data.mjs?v=silberinsel-20261019",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Königreich",
+        "name": "Cenyr",
+        "slug": "cenyr"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Silberinsel",
+        "slug": "silberinsel"
+      }
+    ]
+  },
+  {
+    "id": "herrschaft-saith",
+    "slug": "saith",
+    "aliases": [],
+    "name": "Herrschaft der Saith",
+    "type": "Herrschaft",
+    "page": "Estryll/Königreich Cenyr/Grafschaft Silberinsel/Herrschaft der Saith/Herrschaft der Saith.html",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Silberinsel/Herrschaft der Saith/herrschaft.data.mjs?v=silberinsel-20261019",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Königreich",
+        "name": "Cenyr",
+        "slug": "cenyr"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Silberinsel",
+        "slug": "silberinsel"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Herrschaft der Saith",
+        "slug": "herrschaft-der-saith"
+      }
+    ]
+  },
+  {
+    "id": "herrschaft-crefyddol",
+    "slug": "crefyddol",
+    "aliases": [],
+    "name": "Herrschaft der Crefyddol",
+    "type": "Herrschaft",
+    "page": "Estryll/Königreich Cenyr/Grafschaft Silberinsel/Herrschaft der Crefyddol/Herrschaft der Crefyddol.html",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Silberinsel/Herrschaft der Crefyddol/herrschaft.data.mjs?v=silberinsel-20261019",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Königreich",
+        "name": "Cenyr",
+        "slug": "cenyr"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Silberinsel",
+        "slug": "silberinsel"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Herrschaft der Crefyddol",
+        "slug": "herrschaft-der-crefyddol"
+      }
+    ]
+  },
+  {
+    "id": "herrschaft-canwyll",
+    "slug": "canwyll",
+    "aliases": [],
+    "name": "Herrschaft der Canwyll",
+    "type": "Herrschaft",
+    "page": "Estryll/Königreich Cenyr/Grafschaft Silberinsel/Herrschaft der Canwyll/Herrschaft der Canwyll.html",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Silberinsel/Herrschaft der Canwyll/herrschaft.data.mjs?v=silberinsel-20261019",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Königreich",
+        "name": "Cenyr",
+        "slug": "cenyr"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Silberinsel",
+        "slug": "silberinsel"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Herrschaft der Canwyll",
+        "slug": "herrschaft-der-canwyll"
+      }
+    ]
+  },
+  {
+    "id": "herrschaft-silberpfad",
+    "slug": "silberpfad",
+    "aliases": [
+      "pyrth"
+    ],
+    "name": "Herrschaft Silberpfad",
+    "type": "Herrschaft",
+    "page": "Estryll/Königreich Cenyr/Grafschaft Silberinsel/Herrschaft Silberpfad/Herrschaft Silberpfad.html",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Silberinsel/Herrschaft Silberpfad/herrschaft.data.mjs?v=silberinsel-20261019",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Königreich",
+        "name": "Cenyr",
+        "slug": "cenyr"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Silberinsel",
+        "slug": "silberinsel"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Herrschaft Silberpfad",
+        "slug": "herrschaft-silberpfad"
+      }
+    ]
+  },
+  {
+    "id": "baronie-silberkueste",
+    "slug": "silberkueste",
+    "aliases": [],
+    "name": "Baronie Silberküste",
+    "type": "Baronie",
+    "page": "Estryll/Königreich Cenyr/Grafschaft Silberinsel/Baronie Silberküste/Baronie Silberküste.html",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Silberinsel/Baronie Silberküste/baronie.data.mjs?v=silberinsel-20261019",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Königreich",
+        "name": "Cenyr",
+        "slug": "cenyr"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Silberinsel",
+        "slug": "silberinsel"
+      },
+      {
+        "type": "Baronie",
+        "name": "Baronie Silberküste",
+        "slug": "baronie-silberkuste"
+      }
+    ]
+  },
+
+  {
+    "id": "grafschaft-weidebucht",
+    "slug": "weidebucht",
+    "aliases": [
+      "cerrigarth",
+      "bae-r-porfeydd",
+      "weidenbucht"
+    ],
+    "name": "Grafschaft Weidebucht – Bae’r Porfeydd",
+    "type": "Grafschaft",
+    "page": "Estryll/Königreich Cenyr/Grafschaft Weidebucht/Grafschaft Weidebucht.html",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Weidebucht/grafschaft.data.mjs?v=weidebucht-20261019",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Königreich",
+        "name": "Cenyr",
+        "slug": "cenyr"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Weidebucht",
+        "slug": "weidebucht"
+      }
+    ]
+  },
+  {
+    "id": "baronie-borkenstein",
+    "slug": "borkenstein",
+    "aliases": [],
+    "name": "Baronie Borkenstein",
+    "type": "Baronie",
+    "page": "Estryll/Königreich Cenyr/Grafschaft Weidebucht/Baronie Borkenstein/Baronie Borkenstein.html",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Weidebucht/Baronie Borkenstein/baronie.data.mjs?v=weidebucht-20261019",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Königreich",
+        "name": "Cenyr",
+        "slug": "cenyr"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Weidebucht",
+        "slug": "weidebucht"
+      },
+      {
+        "type": "Baronie",
+        "name": "Baronie Borkenstein",
+        "slug": "baronie-borkenstein"
+      }
+    ]
+  },
+  {
+    "id": "baronie-hochweide",
+    "slug": "hochweide",
+    "aliases": [],
+    "name": "Baronie Hochweide",
+    "type": "Baronie",
+    "page": "Estryll/Königreich Cenyr/Grafschaft Weidebucht/Baronie Hochweide/Baronie Hochweide.html",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Weidebucht/Baronie Hochweide/baronie.data.mjs?v=weidebucht-20261019",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Königreich",
+        "name": "Cenyr",
+        "slug": "cenyr"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Weidebucht",
+        "slug": "weidebucht"
+      },
+      {
+        "type": "Baronie",
+        "name": "Baronie Hochweide",
+        "slug": "baronie-hochweide"
+      }
+    ]
+  },
+  {
+    "id": "baronie-dunstholm",
+    "slug": "dunstholm",
+    "aliases": [],
+    "name": "Baronie Dunstholm",
+    "type": "Baronie",
+    "page": "Estryll/Königreich Cenyr/Grafschaft Weidebucht/Baronie Dunstholm/Baronie Dunstholm.html",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Weidebucht/Baronie Dunstholm/baronie.data.mjs?v=weidebucht-20261019",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Königreich",
+        "name": "Cenyr",
+        "slug": "cenyr"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Weidebucht",
+        "slug": "weidebucht"
+      },
+      {
+        "type": "Baronie",
+        "name": "Baronie Dunstholm",
+        "slug": "baronie-dunstholm"
+      }
+    ]
+  },
+  {
+    "id": "herrschaft-mochdaer",
+    "slug": "mochdaer",
+    "aliases": [],
+    "name": "Herrschaft der Mochdaer",
+    "type": "Herrschaft",
+    "page": "Estryll/Königreich Cenyr/Grafschaft Weidebucht/Herrschaft der Mochdaer/Herrschaft der Mochdaer.html",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Weidebucht/Herrschaft der Mochdaer/herrschaft.data.mjs?v=weidebucht-20261019",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Königreich",
+        "name": "Cenyr",
+        "slug": "cenyr"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Weidebucht",
+        "slug": "weidebucht"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Herrschaft der Mochdaer",
+        "slug": "herrschaft-der-mochdaer"
+      }
+    ]
+  },
+  {
+    "id": "herrschaft-dinefwr",
+    "slug": "dinefwr",
+    "aliases": [],
+    "name": "Herrschaft der Dinefwr",
+    "type": "Herrschaft",
+    "page": "Estryll/Königreich Cenyr/Grafschaft Weidebucht/Herrschaft der Dinefwr/Herrschaft der Dinefwr.html",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Weidebucht/Herrschaft der Dinefwr/herrschaft.data.mjs?v=weidebucht-20261019",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Königreich",
+        "name": "Cenyr",
+        "slug": "cenyr"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Weidebucht",
+        "slug": "weidebucht"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Herrschaft der Dinefwr",
+        "slug": "herrschaft-der-dinefwr"
+      }
+    ]
+  },
+
+  {
     "id": "grafschaft-aehrental",
     "slug": "aehrental",
     "aliases": [

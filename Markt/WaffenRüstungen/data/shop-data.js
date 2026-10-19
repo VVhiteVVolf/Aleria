@@ -46,7 +46,7 @@ window.ARMORY_DATA = {
       enchantment: 'Keine',
       mana: '-',
       material: 'Stahl',
-      price: { min: 800, max: 800, unit: 'K' },
+      price: { min: 350, max: 350, unit: 'K' },
       image: 'https://i.imgur.com/pHC5Rn8.png',
       tags: ['Stangenwaffe', 'Gilde', 'Kontrolle'],
       desc: 'Der Dreizack ist in der Kaempfergilde beliebt und wird von verschiedenen Klassen gefuehrt. Er eignet sich zum Kontrollieren von Abstand, zum Haken, Stossen und zum Abfangen entschlossener Gegner.'
@@ -62,7 +62,7 @@ window.ARMORY_DATA = {
       enchantment: 'Keine',
       mana: '-',
       material: 'Eisen, Stahl, Holz',
-      price: { min: 600, max: 600, unit: 'K' },
+      price: { min: 150, max: 150, unit: 'K' },
       image: 'https://i.imgur.com/rHrQKct.png',
       tags: ['Beritten', 'Wucht', 'Ruestungsbrecher'],
       desc: 'Der Flegel ist besonders bei berittenen Kaempfern beliebt. Im vollen Galopp entfaltet er brachiale Wucht, doch in engen Raeumen verlangt er eine sichere Hand.'
@@ -77,7 +77,7 @@ window.ARMORY_DATA = {
       enchantment: 'Keine',
       mana: '-',
       material: 'Stahl, Holz',
-      price: { min: 1.3, max: 1.3, unit: 'G' },
+      price: { min: 450, max: 450, unit: 'K' },
       image: 'https://i.imgur.com/m8sI75k.png',
       tags: ['Nordisch', 'Wucht', 'Schnitt'],
       desc: 'Die Streitaxt wird von vielen noerdlichen Klassen gefuehrt. Ihre breite Schneide und ihr Gewicht koennen verheerende Wunden verursachen, wenn der Schlag sauber landet.'
@@ -93,7 +93,7 @@ window.ARMORY_DATA = {
       enchantment: 'Keine',
       mana: '-',
       material: 'Holz, Eisen',
-      price: { min: 300, max: 300, unit: 'K' },
+      price: { min: 25, max: 25, unit: 'K' },
       image: 'https://i.imgur.com/zB184e2.png',
       tags: ['Billig', 'Banditen', 'Wucht'],
       desc: 'Der Rattenpruegel ist der beste Freund eines Wegelagerers. Einfach herzustellen, guenstig und laut genug, um Eindruck zu machen, auch wenn er keine Schmiedekunst gewinnt.'
@@ -123,7 +123,7 @@ window.ARMORY_DATA = {
       enchantment: 'Keine',
       mana: '-',
       material: 'Stahl, Holz',
-      price: { min: 2, max: 3, unit: 'G' },
+      price: { min: 500, max: 800, unit: 'K' },
       image: 'https://i.imgur.com/6edJ9lt.png',
       tags: ['Infanterie', 'Krieg', 'Formation'],
       desc: 'Die Hellebarde ist eine Infanteriewaffe fuer Krieg und Stadtwache. Sie hat Reichweite und Autoritaet, ist fuer einzelne Abenteurer aber oft zu sperrig.'
@@ -153,7 +153,7 @@ window.ARMORY_DATA = {
       enchantment: 'Keine',
       mana: '-',
       material: 'Stahl, Eisen',
-      price: { min: 800, max: 800, unit: 'K' },
+      price: { min: 300, max: 300, unit: 'K' },
       image: 'https://i.imgur.com/9ePLjBG.png',
       tags: ['Wucht', 'Einfach', 'Ruestungsbrecher'],
       desc: 'Der Streitkolben ist eine Waffe fuer Kaempfer, die weniger fechten als einschlagen wollen. Gegen Kettenzeug und Knochen ist er deutlich ehrlicher als eine feine Klinge.'
@@ -168,7 +168,7 @@ window.ARMORY_DATA = {
       enchantment: 'Keine',
       mana: '-',
       material: 'Stahl, Holz',
-      price: { min: 1.5, max: 1.5, unit: 'G' },
+      price: { min: 650, max: 650, unit: 'K' },
       image: 'https://i.imgur.com/PmdDJuQ.png',
       tags: ['Zweihand', 'Wucht', 'Schwer'],
       desc: 'Der Kriegshammer bringt Masse, Hebel und brutale Wirkung. Wer ihn fuehrt, plant selten elegante Duelle, sondern will Ruestungen eindellen und Reihen brechen.'
@@ -183,7 +183,7 @@ window.ARMORY_DATA = {
       enchantment: 'Keine',
       mana: '-',
       material: 'Stahl, Eisen',
-      price: { min: 1, max: 1, unit: 'G' },
+      price: { min: 400, max: 400, unit: 'K' },
       image: 'https://i.imgur.com/iRJ3UUf.png',
       tags: ['Ruestungsbrecher', 'Wucht', 'Einschuechterung'],
       desc: 'Der Morgenstern demoliert Ruestungen und Stolz zugleich. Ritter moegen den Kampf gegen solche Waffen nicht, denn selbst ein Sieg kann eine teure Reparatur bedeuten.'
@@ -199,7 +199,7 @@ window.ARMORY_DATA = {
       enchantment: 'Keine',
       mana: '-',
       material: 'Stahl, Holz',
-      price: { min: 1.2, max: 1.2, unit: 'G' },
+      price: { min: 150, max: 150, unit: 'K' },
       image: 'https://i.imgur.com/8FAAa56.png',
       tags: ['Reichweite', 'Krieg', 'Formation'],
       desc: 'Die Lanze ist im Krieg unverzichtbar: einfach herzustellen, leicht zu erlernen und mit gewaltiger Reichweite. In Formation wird aus einfachem Holz eine Mauer aus Spitzen.'
@@ -244,7 +244,7 @@ window.ARMORY_DATA = {
       enchantment: 'Keine',
       mana: '-',
       material: 'Holz, Sehne',
-      price: { min: 1, max: 1, unit: 'G' },
+      price: { min: 500, max: 500, unit: 'K' },
       image: 'https://i.imgur.com/hX1q2xf.png',
       tags: ['Fernkampf', 'Reichweite', 'Durchschlag'],
       desc: 'Der Langbogen bietet bessere Reichweite und Durchschlagskraft als einfache Boegen. Gegen Schuppen, Lamellen und Ketten kann er gefaehrlich werden, an guter Platte scheitert er meist.'
@@ -518,7 +518,7 @@ window.ARMORY_DATA = {
       enchantment: 'Keine',
       mana: '-',
       material: 'Stahl',
-      price: { min: 15, max: 15, unit: 'K' },
+      price: { min: 30, max: 30, unit: 'K' },
       image: 'https://i.imgur.com/19cXHC2.png',
       tags: ['Schild', 'Duell', 'Leicht'],
       desc: 'Der Buckler schuetzt nicht durch Flaeche, sondern durch Timing. Er ist klein, schnell, aggressiv und nur fuer Leute wirklich gut, die wissen, was sie tun.'
@@ -548,7 +548,7 @@ window.ARMORY_DATA = {
       enchantment: 'Keine',
       mana: '-',
       material: 'Stahl, Holz',
-      price: { min: 400, max: 400, unit: 'K' },
+      price: { min: 250, max: 250, unit: 'K' },
       image: '/AleriaAlmanach/public/assets/character-equipment/ylva-saex-v2.png',
       tags: ['Einhändig', 'Nordisch', '1W8 Hieb', 'Sax', 'Seax'],
       desc: 'Ein nordisches Langmesser mit einer Schneide, kräftigem Klingenrücken und kurzem Holzgriff. Die Saex wird einhändig geführt und verursacht standardmäßig 1W8 Hiebschaden. Der Grundangriff verwendet Kraft und kostet eine Aktion.',

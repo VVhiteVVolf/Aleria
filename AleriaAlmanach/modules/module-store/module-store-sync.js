@@ -445,6 +445,9 @@ function applyModuleStorePayload(payload) {
   if (globalThis.AleriaGroupSectionMigration?.migrateCenyrGroupSections) {
     normalized = globalThis.AleriaGroupSectionMigration.migrateCenyrGroupSections(normalized);
   }
+  if (globalThis.AleriaGwynthorGeography?.migrateGwynthorModuleStore) {
+    normalized = globalThis.AleriaGwynthorGeography.migrateGwynthorModuleStore(normalized, SECTIONS);
+  }
   _moduleSectionNodes = normalized.moduleSectionNodes || [];
   _moduleNodeAssignments = normalized.moduleNodeAssignments || {};
   _customSections = normalized.customSections;

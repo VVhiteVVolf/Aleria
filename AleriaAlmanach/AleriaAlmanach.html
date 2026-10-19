@@ -24,7 +24,7 @@
 <link rel="stylesheet" href="./modules/dashboard/dashboard.css?v=20260922-responsive-v1">
 <link rel="stylesheet" href="./modules/archive/archive-navigation.css?v=20261006-sidebar-equipment-v1">
 <link rel="stylesheet" href="./modules/archive/archive-entry-card.css?v=20260910-archive-navigation-v1">
-<link rel="stylesheet" href="./modules/archive/archive-hierarchy.css?v=20260910-archive-navigation-v1">
+<link rel="stylesheet" href="./modules/archive/archive-hierarchy.css?v=20261019-bannkreis-v1">
 <link rel="stylesheet" href="./styles/modal.css?v=20261006-story-spacing-v2">
   <link rel="stylesheet" href="./styles/comments.css?v=20261017-wide-interactions-v1">
   <link rel="stylesheet" href="./styles/scene-backup.css?v=20261012-scene-backup-v1">
@@ -128,6 +128,7 @@
 <link rel="stylesheet" href="./modules/module-editor/module-preview.css?v=20260909-template-layout-v1">
   <link rel="stylesheet" href="./modules/organization-network/organization-network.css?v=20260909-newspaper-guilds-v1">
   <link rel="stylesheet" href="./modules/guild-services/guild-services.css?v=20261016-gofrann-scenes-v1">
+  <link rel="stylesheet" href="./modules/economy-calculator/economy-calculator.css?v=20261019-economy-v2">
   <link rel="stylesheet" href="./modules/theatre-program/theatre-program.css?v=20261017-v1">
   <!-- Firebase -->
   <link rel="stylesheet" href="./styles/account.css?v=20261012-guild-v3">
@@ -148,7 +149,8 @@
   <script src="./modules/language/laerelis/laerelis-tables.js?v=20260919-laerelis-v1" defer></script>
   <script src="./modules/language/laerelis/laerelis-entry.js?v=20260919-laerelis-v1" defer></script>
   <script src="./modules/landing/landing-model.global.js?v=20261005-group-overview-v2" defer></script>
-  <script src="./modules/module-store/module-entry-migrations.js?v=20261005-group-overview-v1" defer></script>
+  <script src="./modules/gwynthor-geography/gwynthor-geography.global.js?v=20261019-bannkreis-v1" defer></script>
+  <script src="./modules/module-store/module-entry-migrations.js?v=20261019-economy-v2" defer></script>
   <script src="./modules/language/language-reference-entries.js?v=20260713-argenti-stoicheia-v1" defer></script>
   <script src="../Fonts/Arkanes-Alphabet/arcane.js?v=2" defer></script>
   <script src="./modules/language/arcane-alphabet-entry.js?v=20260911-arcane-v1" defer></script>
@@ -168,21 +170,21 @@
   <script src="./modules/uisge-beatha-hueter/uisge-beatha-hueter-data.js?v=20260923-hueter-v1" defer></script>
   <script src="./modules/gortach-brauerei/gortach-brewery-data.js?v=20261007-raised-prices-v2" defer></script>
   <script src="./modules/brewer-guilds/brewer-guilds-data.js?v=20261014-aldrimar-brewers-v1" defer></script>
-  <script src="./modules/goettliche-eleganz/eleganz-data.js?v=20261018-fortuna-v3" defer></script>
+  <script src="./modules/goettliche-eleganz/eleganz-data.js?v=20261019-prices-v1" defer></script>
   <script src="./modules/gwynthor-theater/theater-data.js?v=20261017-freydis-v2" defer></script>
   <script src="./modules/gwynthor-arena/arena-data.js?v=20261017-local-v1" defer></script>
   <script src="./modules/gwynthor-cathedral/cathedral-data.js?v=20261017-local-v1" defer></script>
   <script src="./modules/gwynthor-bathhouse/bathhouse-data.js?v=20261017-local-v1" defer></script>
   <script src="./modules/kleiner-durst/durst-data.js?v=20261017-local-v1" defer></script>
-  <script src="./modules/pendrwn-general-store/store-data.js?v=20261018-fortuna-v2" defer></script>
+  <script src="./modules/pendrwn-general-store/store-data.js?v=20261019-prices-v1" defer></script>
   <script src="./modules/gwregysdu-harbor/harbor-data.js?v=20261018-muenze-v2" defer></script>
-  <script src="./modules/gestiefelte-muschi/muschi-data.js?v=20261018-v1" defer></script>
-  <script src="./modules/letzter-heller/heller-data.js?v=20261018-v1" defer></script>
-  <script src="./modules/klingende-krone/krone-data.js?v=20261018-muenze-v2" defer></script>
-  <script src="./modules/lachende-nixe/nixe-data.js?v=20261018-muenze-v2" defer></script>
+  <script src="./modules/gestiefelte-muschi/muschi-data.js?v=20261019-prices-v1" defer></script>
+  <script src="./modules/letzter-heller/heller-data.js?v=20261019-prices-v1" defer></script>
+  <script src="./modules/klingende-krone/krone-data.js?v=20261019-prices-v1" defer></script>
+  <script src="./modules/lachende-nixe/nixe-data.js?v=20261019-prices-v1" defer></script>
   <script src="./modules/klingende-muenze-gwynthor/post-data.js?v=20261018-v1" defer></script>
-  <script src="./modules/gofrann-schmiede/gofrann-data.js?v=20261016-eigensortiment-v2" defer></script>
-  <script src="./modules/letzte-rast/rast-data.js?v=20261018-fortuna-v2" defer></script>
+  <script src="./modules/gofrann-schmiede/gofrann-data.js?v=20261019-prices-v1" defer></script>
+  <script src="./modules/letzte-rast/rast-data.js?v=20261019-prices-v1" defer></script>
   <script src="./modules/markt-der-fortuna-gwynthor/fortuna-data.js?v=20261018-v1" defer></script>
   <script src="./modules/house-retinues/house-retinues-data.js?v=20261007-mercenary-categories-v3" defer></script>
   <script src="./modules/skalli-retinue/retinue-data.js?v=20261018-skalli-v1" defer></script>
@@ -201,9 +203,10 @@
   <script src="./modules/language/language-data.js?v=20260712-language-template-v1" defer></script>
   <script src="./modules/family-tree-embed/family-tree-embed-data.js?v=20260716-family-tree-registry-v1" defer></script>
   <script src="./modules/family-tree-embed/family-tree-embed-catalog.js?v=20260716-family-tree-registry-v1" defer></script>
-  <script src="./modules/core/app-core.js?v=20261017-theatre-program-v1" defer></script>
+  <script src="./modules/core/app-core.js?v=20261019-economy-v2" defer></script>
   <script src="./modules/core/content-safety.js?v=20260806-error-passthrough-v1" defer></script>
   <script src="./modules/core/aleria-calendar.js?v=20260919-play-days-v1" defer></script>
+  <script src="./modules/economy-calculator/economy-runtime.global.js?v=20261019-economy-v5" defer></script>
   <script type="module" src="./modules/calendar/calendar-dashboard.mjs?v=20260911-calendar-v2"></script>
   <script src="./modules/module-editor/module-editor-aleria-date-field.js?v=20260723-aleria-calendar-v1" defer></script>
   <script src="./modules/app/app-status.js?v=20260602-mojibake-fix-v1" defer></script>
@@ -211,10 +214,10 @@
   <script src="./modules/sync/firebase-sync-status.js?v=20260602-mojibake-fix-v1" defer></script>
   <script src="./modules/session/session-focus.js?v=20260908-module-navigation-v1" defer></script>
   <script src="./modules/module-store/module-section-policy.js?v=20260826-section-policy-v1" defer></script>
-  <script src="./modules/module-store/module-store-tree.js?v=20260703-category-icons-v1" defer></script>
+  <script src="./modules/module-store/module-store-tree.js?v=20261019-bannkreis-v1" defer></script>
   <script src="./modules/module-store/module-store-local.js?v=20261014-module-storage-v2" defer></script>
-  <script src="./modules/module-store/module-store-sync.js?v=20261018-cenyr-groups-v1" defer></script>
-  <script src="./modules/module-store/module-store-sections.js?v=20261017-unique-module-ids-v1" defer></script>
+  <script src="./modules/module-store/module-store-sync.js?v=20261019-bannkreis-v1" defer></script>
+  <script src="./modules/module-store/module-store-sections.js?v=20261019-bannkreis-v1" defer></script>
   <script src="./modules/module-store/module-entry-write.js?v=20261005-group-edit-access-v1" defer></script>
   <script src="./modules/world-date/world-date-model.js?v=20260826-world-date-v1" defer></script>
   <script src="./modules/world-date/world-date-store.js?v=20260826-world-date-shared-v4" defer></script>
@@ -238,8 +241,8 @@
   <script src="./modules/family/editor/family-editor-ui.js?v=20260715-family-workbench-v2" defer></script>
   <script src="./modules/family/services/family-presentation-service.js?v=20260715-family-editor-v1" defer></script>
   <script src="./modules/item-database/item-db-normalizer.js?v=20260625-item-db-config-v1" defer></script>
-  <script src="./modules/item-database/item-db-extractors.js?v=20260919-shop-v1" defer></script>
-  <script src="./modules/item-database/item-db-store.js?v=20261018-availability-v1" defer></script>
+  <script src="./modules/item-database/item-db-extractors.js?v=20261019-prices-v1" defer></script>
+  <script src="./modules/item-database/item-db-store.js?v=20261019-prices-v1" defer></script>
   <script src="./modules/item-database/item-db-ui.js?v=20260912-register-v2" defer></script>
   <script src="./modules/item-database/item-db-picker.js?v=20260912-register-v2" defer></script>
   <script src="./modules/caste/caste-editor-schema.js?v=20260712-caste-dossier-v1" defer></script>
@@ -255,7 +258,7 @@
   <script src="./modules/module-editor/module-editor-guest-register.js?v=20260620-guest-register-scroll-size-v1" defer></script>
   <script src="./modules/module-editor/module-editor-house-warriors.js?v=20260712-house-warriors-images-v2" defer></script>
   <script src="./modules/family-tree-embed/family-tree-embed-editor.js?v=20260716-family-tree-registry-v1" defer></script>
-  <script src="./modules/module-editor/module-editor-templates.js?v=20261017-theatre-program-v1" defer></script>
+  <script src="./modules/module-editor/module-editor-templates.js?v=20261019-economy-v1" defer></script>
   <script src="./modules/module-editor/module-editor-workflow.js?v=20261017-theatre-program-v1" defer></script>
   <script src="./modules/module-editor/module-editor-drafts.js?v=20260711-module-drafts-v1" defer></script>
   <script src="./modules/module-editor/module-editor-cast-picker.js?v=20260520-cleanup-v1" defer></script>
@@ -288,7 +291,7 @@
   <script src="./modules/module-editor/module-editor-family.js?v=20260715-family-workbench-v2" defer></script>
   <script src="./modules/module-editor/module-editor-template-transfer.js?v=20260911-page-comments-v1" defer></script>
   <script src="./modules/module-editor/module-editor-pages.js?v=20260911-page-comments-v1" defer></script>
-  <script src="./modules/module-editor/module-editor-controller.js?v=20261016-explicit-preview-v1" defer></script>
+  <script src="./modules/module-editor/module-editor-controller.js?v=20261019-economy-v1" defer></script>
   <script src="./modules/module-editor/module-editor-events.js?v=20260806-clear-comments-v1" defer></script>
   <script src="./modules/backup/almanach-backup.js?v=20261014-module-storage-v2" defer></script>
   <script src="./modules/comments/comments-session-io.js?v=20260613-thread-rescue-v2" defer></script>
@@ -312,7 +315,7 @@
   <script src="./modules/inline-editor/inline-editor-hierarchy.js?v=20261017-hierarchy-twelve-v1" defer></script>
   <script src="./modules/inline-editor/inline-editor-family.js?v=20260715-family-workbench-v2" defer></script>
   <script src="./modules/inline-editor/inline-editor-house-warriors.js?v=20260712-house-warriors-images-v2" defer></script>
-  <script src="./modules/inline-editor/inline-module-editor.js?v=20261017-theatre-program-v1" defer></script>
+  <script src="./modules/inline-editor/inline-module-editor.js?v=20261019-economy-v1" defer></script>
   <script src="./modules/inline-editor/inline-editor-biography.js?v=20260711-doc-title-v1" defer></script>
   <script src="./modules/inline-editor/inline-editor-house.js?v=20260709-row-schema-cutover-v1" defer></script>
   <script src="./modules/inline-editor/inline-editor-guild.js?v=20260711-guild-template-v1" defer></script>
@@ -356,15 +359,16 @@
   <script src="./modules/biography/biography-card-rendering.js?v=20260925-creature-biography-v2" defer></script>
   <script src="./modules/story/story-description.js?v=20261006-story-spacing-v1" defer></script>
   <script src="./modules/rendering/module-renderer.js?v=20261017-biography-portrait-fit-v1" defer></script>
-  <script src="./modules/archive/archive-card-meta.js?v=20261016-explicit-preview-v1" defer></script>
-  <script src="./modules/archive/archive-entry-card.js?v=20261015-preview-image-urls-v1" defer></script>
-  <script src="./modules/archive/archive-section-ui.js?v=20260703-category-icons-v1" defer></script>
-  <script src="./modules/archive/archive-hierarchy-browser.js?v=20261015-preview-image-urls-v1" defer></script>
-  <script src="./modules/dashboard/dashboard-state.js?v=20260712-continuation-v1" defer></script>
-  <script src="./modules/archive/archive-dashboard.js?v=20261015-preview-image-urls-v1" defer></script>
+  <script src="./modules/archive/archive-card-meta.js?v=20261019-economy-v1" defer></script>
+  <script src="./modules/archive/archive-entry-card.js?v=20261019-navigation-v2" defer></script>
+  <script src="./modules/archive/archive-section-ui.js?v=20261019-economy-v1" defer></script>
+  <script src="./modules/archive/archive-hierarchy-browser.js?v=20261019-navigation-v2" defer></script>
+  <script src="./modules/archive/archive-hierarchy-controller.js?v=20261019-navigation-v2" defer></script>
+  <script src="./modules/dashboard/dashboard-state.js?v=20261019-economy-v1" defer></script>
+  <script src="./modules/archive/archive-dashboard.js?v=20261019-navigation-v2" defer></script>
   <script src="./modules/archive/archive-module-stamp.js?v=20260616-module-stamp-v1" defer></script>
-  <script src="./modules/archive/archive-navigation.js?v=20261006-sidebar-equipment-v1" defer></script>
-  <script src="./modules/archive/archive-view.js?v=20261017-preview-image-kind-v1" defer></script>
+  <script src="./modules/archive/archive-navigation.js?v=20261019-navigation-v2" defer></script>
+  <script src="./modules/archive/archive-view.js?v=20261019-navigation-v2" defer></script>
   <script src="./modules/image-library/image-library-model.js?v=20260919-creature-pages-v1" defer></script>
 <script src="./modules/image-library/image-library-import.js?v=20260919-creature-pages-v1" defer></script>
 <script src="./modules/characters/character-image-sets.js?v=20260919-creature-pages-v1" defer></script>
@@ -489,7 +493,7 @@
   <script src="./modules/speaker-profile/speaker-profile-events.js?v=20260710-speaker-choice-v1" defer></script>
   <script src="./modules/modal/modal-layout.js?v=20260908-module-split-v1" defer></script>
   <script src="./modules/modal/modal-curl.js?v=20260611-page-isolation-v1" defer></script>
-  <script src="./modules/modal/modal-controller.js?v=20260908-module-navigation-v1" defer></script>
+  <script src="./modules/modal/modal-controller.js?v=20261019-economy-v1" defer></script>
   <script src="./modules/modal/modal-events.js?v=20261004-biography-export-v1" defer></script>
   <script src="./modules/sidebar/sidebar-feed.js?v=20260622-scene-transition-v1" defer></script>
   <script src="./modules/sidebar/sidebar-registers.js?v=20261006-sidebar-equipment-v2" defer></script>
@@ -1729,7 +1733,6 @@
           </div>
           <div class="module-editor-inline">
             <label class="module-editor-check" data-module-editor-scene-hidden><input type="checkbox" id="me-page-comments-enabled"> Kommentare direkt auf allen Seiten erlauben</label>
-            <label class="module-editor-check" data-module-editor-scene-hidden><input type="checkbox" id="me-comments-page" checked> Zusätzliche Kommentarseite anhängen</label>
             <label class="module-editor-check" data-module-editor-scene-hidden><input type="checkbox" id="me-locked"> Als gesperrten Platzhalter behandeln</label>
           </div>
         </div>

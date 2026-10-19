@@ -35,7 +35,7 @@ try {
   await (await enter.isEnabled() ? enter : page.locator('[data-loading-action="continue"]')).click();
   await page.waitForFunction(() => !document.documentElement.hasAttribute('data-almanach-loading'));
   assert.equal(await page.evaluate(id => getValidSections().flatMap(s => s.entries).filter(e => e.id === id).length, entry.id), 1);
-  assert.equal(await page.evaluate(e => getPages(e).length, entry), 8);
+  assert.equal(await page.evaluate(e => getPages(e).length, entry), entry.pages.length);
   assert.deepEqual(await page.evaluate(h => sanitizeHierarchyData(h).trees.map(t => t.levels.map(l => l.nodes.length)), hierarchy), hierarchy.trees.map(t => t.levels.map(l => l.nodes.length)));
   const imagesLoaded = async selector => {
     const broken = await page.locator(selector).evaluateAll(async images => {

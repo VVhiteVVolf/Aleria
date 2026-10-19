@@ -1,0 +1,94 @@
+{
+  "territories": [
+    {
+      "id": "grafschaft-silberinsel",
+      "name": "Grafschaft Silberinsel",
+      "type": "Grafschaft",
+      "house": "Haus Neidr",
+      "familyId": "haus-neidr",
+      "crest": "/Stammbäume/assets/images/houses/Silberinsel/haus-neidr.png",
+      "banner": "/Stammbäume/assets/images/regions/silberinsel.png",
+      "parentId": "",
+      "seat": "Llanvane",
+      "href": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Silberinsel/Grafschaft Silberinsel.html"
+    },
+    {
+      "id": "baronie-silberbucht",
+      "name": "Gräfische Baronie Silberbucht",
+      "type": "Gräfische Baronie",
+      "house": "Haus Neidr",
+      "familyId": "haus-neidr",
+      "crest": "/Stammbäume/assets/images/houses/Silberinsel/haus-neidr.png",
+      "banner": "/Stammbäume/assets/images/regions/Cenyr/Silberinsel/Silberbucht.png",
+      "parentId": "grafschaft-silberinsel",
+      "seat": "Llanvane",
+      "href": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Silberinsel/Grafschaft Silberinsel.html"
+    },
+    {
+      "id": "herrschaft-saith",
+      "name": "Herrschaft der Saith",
+      "type": "Ritterfürstliche Herrschaft",
+      "house": "Haus Saith",
+      "familyId": "haus-saith",
+      "crest": "/Stammbäume/assets/images/houses/Silberinsel/Silberbucht/haus-saith.png",
+      "banner": "/Stammbäume/assets/images/regions/Cenyr/Silberinsel/Herrschaft der Saith.png",
+      "parentId": "baronie-silberbucht",
+      "seat": "Llanvane",
+      "href": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Silberinsel/Herrschaft der Saith/Herrschaft der Saith.html",
+      "bannerSource": "https://i.imgur.com/ZBaAfPD.png",
+      "bannerSha256": "e6a75f0581f464b42ddb0c89ba850f20725f8ae400defe979dfc6ab6d467b38f"
+    },
+    {
+      "id": "herrschaft-crefyddol",
+      "name": "Herrschaft der Crefyddol",
+      "type": "Ritterfürstliche Herrschaft",
+      "house": "Haus Crefyddol",
+      "familyId": "haus-crefyddol",
+      "crest": "/Stammbäume/assets/images/houses/Silberinsel/Silberbucht/haus-crefyddol.png",
+      "banner": "/Stammbäume/assets/images/regions/Cenyr/Silberinsel/Herrschaft der Crefyddol.png",
+      "parentId": "baronie-silberbucht",
+      "seat": "Llanvane",
+      "href": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Silberinsel/Herrschaft der Crefyddol/Herrschaft der Crefyddol.html",
+      "bannerSource": "https://i.imgur.com/AHHy79w.png",
+      "bannerSha256": "81bdc5ad8191e4370ce3744b03a4c8f2ad905a44350a006b1c8170cdc93505bc"
+    },
+    {
+      "id": "herrschaft-canwyll",
+      "name": "Herrschaft der Canwyll",
+      "type": "Ritterfürstliche Herrschaft",
+      "house": "Haus Canwyll",
+      "familyId": "haus-canwyll",
+      "crest": "/Stammbäume/assets/images/houses/Silberinsel/Silberbucht/haus-canwyll.png",
+      "banner": "/Stammbäume/assets/images/regions/Cenyr/Silberinsel/Herrschaft der Canwyll.png",
+      "parentId": "baronie-silberbucht",
+      "seat": "Llanvane",
+      "href": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Silberinsel/Herrschaft der Canwyll/Herrschaft der Canwyll.html",
+      "bannerSource": "https://i.imgur.com/QKP82x9.png",
+      "bannerSha256": "75a35b542b0e1ab774cbcdc1b277609ca951e240adbdea04a8ae9c601e001a03"
+    },
+    {
+      "id": "herrschaft-silberpfad",
+      "name": "Herrschaft Silberpfad",
+      "type": "Ritterfürstliche Herrschaft",
+      "house": "Haus Pyrth",
+      "familyId": "haus-pyrth",
+      "crest": "/Stammbäume/assets/images/houses/Silberinsel/Silberpfad/haus-pyrth.png",
+      "banner": "/Stammbäume/assets/images/regions/Cenyr/Silberinsel/Silberpfad.png",
+      "parentId": "grafschaft-silberinsel",
+      "seat": "Caer Clwyd",
+      "href": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Silberinsel/Herrschaft Silberpfad/Herrschaft Silberpfad.html"
+    },
+    {
+      "id": "baronie-silberkueste",
+      "name": "Baronie Silberküste",
+      "type": "Baronie",
+      "house": "Haus Tiwna",
+      "familyId": "haus-tiwna",
+      "crest": "/Stammbäume/assets/images/houses/Silberinsel/Silberküste/haus-tiwna.png",
+      "banner": "/Stammbäume/assets/images/regions/Cenyr/Silberinsel/Silberküste.png",
+      "parentId": "grafschaft-silberinsel",
+      "seat": "Eiddon",
+      "href": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Silberinsel/Baronie Silberküste/Baronie Silberküste.html"
+    }
+  ]
+}

@@ -2,6 +2,10 @@
 
 Stand: 2026-07-06
 
+**Aktuelle Umsetzung vom 19. Oktober 2026:** Alle 14 passenden begehbaren Verkaufsorte unter Völker & Kulturen erhalten eine letzte Kalkulationsseite. Die [Preisprüfung](economy/price-review-2026-10-19.html) erfasst 1.113 Preiszeilen, Varianten, Leistungen und unbepreiste Vorlagen; 144 Belege sind angepasst. Sämtliche 50 Pferde- und Viehpreisbereiche bleiben erhalten. Zuständigkeiten, Grenzen und Prüfungen stehen in [Wirtschaftskalkulation](../modules/economy-calculator/README.md). Sie enthält vollständige Lohnlisten, unterschiedliche Betriebsprofile und sechs zusätzliche Haushaltsprofile. Die unten beschriebenen KI-Auswertungen, freie Preisindex-Suche und Online-Szenariospeicherung bleiben ein späteres Zielbild.
+
+**Wirtschaftliche Präzisierung vom selben Tag:** Die [festgehaltenen Weltgrundlagen](../modules/economy-calculator/README.md#präzisierte-weltgrundlagen-vom-19-oktober-2026) und die neue Preis- und Lohnprüfung trennen Gwynthors örtlichen Wohlstand von allgemein verwendbaren Warenwerten. Ein sparsam wirtschaftender Vierpersonenhaushalt soll von einem regulären Hafenlohn leben können. Die soziale Orientierung umfasst sechs Arbeitstage und drei freie Tage; bestehende Verträge bleiben zu prüfen. Sämtliche Kartenpreise und alten Geldannahmen stehen zur Überarbeitung offen. Die Vergleichsskala von 24 KT Bedarf plus 3 KT freien Mitteln ist ausdrücklich unbestätigt, kein neuer allgemeiner Lohnstandard.
+
 Ziel: Ein Werkzeug fuer den Aleria Almanach, das auf Basis vorhandener Gueter-, Tier-, Pferde-, Speisen-, Ausruestungs- und Luxuspreise abschaetzt, wie Personen, Familien, Aemter und Herrschaftstraeger in Aleria wirtschaftlich leben.
 
 Der Kalkulator soll nicht nur einzelne Preise anzeigen, sondern ein plausibles Wirtschaftsbild erzeugen:
@@ -13,7 +17,7 @@ Der Kalkulator soll nicht nur einzelne Preise anzeigen, sondern ein plausibles W
 - Was bedeutet das fuer Lebensstandard, Kaufkraft, Ruecklagen und Risiko?
 - Welche Anschaffungen sind realistisch?
 
-Die Umsetzung erfolgt spaeter. Dieses Dokument legt Zielbild, Datenmodell, Rechenlogik, Architektur und Masterprompt fest.
+Die deterministische Erstfassung ist umgesetzt. Dieses Dokument hält daneben das weitere Zielbild für Datenmodell, Auswertung und spätere Erweiterungen fest.
 
 ## Grundentscheidung
 

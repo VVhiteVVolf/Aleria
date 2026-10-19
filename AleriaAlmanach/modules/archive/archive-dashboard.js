@@ -272,7 +272,7 @@ function buildArchiveDashboardSectionCards(sections = []) {
     const label = section.tab || section.key || 'Archiv';
     const existing = grouped.get(label) || {
       label,
-      theme: getThemeMetaForSection(section),
+      theme: getThemeMetaForSection(section, sections),
       iconUrl: getArchiveDashboardTabIcon(label),
       entries: []
     };

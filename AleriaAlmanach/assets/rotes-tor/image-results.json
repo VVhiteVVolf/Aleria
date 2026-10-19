@@ -1,0 +1,493 @@
+{
+  "schemaVersion": 1,
+  "tool": "built-in image_gen",
+  "images": [
+    {
+      "id": "portrait-gwilym",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-70202546-c5a9-4492-9957-768b018d2f1c.png",
+      "destination": "AleriaAlmanach/assets/rotes-tor/portraits/gwilym.png",
+      "kind": "portrait",
+      "personId": "gwilym-penrudd",
+      "promptId": "portrait-gwilym",
+      "references": [
+        "AleriaAlmanach/assets/kleiner-durst/portraits/efa.png"
+      ],
+      "width": 1024,
+      "height": 1536,
+      "sha256": "6c27148af8219de37146c460bb88eb9abd0b934a9ee8603c642cbc6a40c36157"
+    },
+    {
+      "id": "portrait-enid",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-1e1b1fc0-8ad4-4e84-9bc3-d9f641ea40da.png",
+      "destination": "AleriaAlmanach/assets/rotes-tor/portraits/enid.png",
+      "kind": "portrait",
+      "personId": "enid-penrudd",
+      "promptId": "portrait-enid",
+      "references": [
+        "AleriaAlmanach/assets/kleiner-durst/portraits/efa.png"
+      ],
+      "width": 1024,
+      "height": 1536,
+      "sha256": "675ef1ce740a50395b2b45f4fb984e19c4ec05e7de5c2b5f2daba1f42c013f6f"
+    },
+    {
+      "id": "portrait-carwyn",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-40ea04bc-5392-4b1b-95e0-5c7860426155.png",
+      "destination": "AleriaAlmanach/assets/rotes-tor/portraits/carwyn.png",
+      "kind": "portrait",
+      "personId": "carwyn-penrudd",
+      "promptId": "portrait-carwyn",
+      "references": [
+        "AleriaAlmanach/assets/rotes-tor/portraits/gwilym.png",
+        "AleriaAlmanach/assets/rotes-tor/portraits/enid.png"
+      ],
+      "width": 1024,
+      "height": 1536,
+      "sha256": "6cdb176c3d317e17633f062412c968025c76c8ccfc67f40669e2ca9484a24503"
+    },
+    {
+      "id": "portrait-olwen",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-3e41b156-ec91-484b-886f-12d7ff45fee9.png",
+      "destination": "AleriaAlmanach/assets/rotes-tor/portraits/olwen.png",
+      "kind": "portrait",
+      "personId": "olwen-penrudd",
+      "promptId": "portrait-olwen",
+      "references": [
+        "AleriaAlmanach/assets/kleiner-durst/portraits/efa.png"
+      ],
+      "width": 1024,
+      "height": 1536,
+      "sha256": "d6339e52be8a5ddf6c731fd3ef820dfa5f94da44035e5e3704b456548ef0b3c5"
+    },
+    {
+      "id": "portrait-tudur",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-9ace808d-5661-47fd-8852-d4a16e8f8e55.png",
+      "destination": "AleriaAlmanach/assets/rotes-tor/portraits/tudur.png",
+      "kind": "portrait",
+      "personId": "tudur-penrudd",
+      "promptId": "portrait-tudur",
+      "references": [
+        "AleriaAlmanach/assets/rotes-tor/portraits/gwilym.png"
+      ],
+      "width": 1024,
+      "height": 1536,
+      "sha256": "c5c24037e5c72e86aff7768abe90e7127e858a72ce9ee539db20b35f71d24dda"
+    },
+    {
+      "id": "portrait-bethan",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-deb00d82-c921-4f61-ae4f-bd9f42ca351b.png",
+      "destination": "AleriaAlmanach/assets/rotes-tor/portraits/bethan.png",
+      "kind": "portrait",
+      "personId": "bethan-penrudd",
+      "promptId": "portrait-bethan",
+      "references": [
+        "AleriaAlmanach/assets/kleiner-durst/portraits/efa.png"
+      ],
+      "width": 1024,
+      "height": 1536,
+      "sha256": "9aa21635df29776c89348e082d3d163e56e7eddb94dec1be40d5aeddeb75c565"
+    },
+    {
+      "id": "portrait-meurig",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-b82b232a-35db-4f7e-907e-5c080c2d2277.png",
+      "destination": "AleriaAlmanach/assets/rotes-tor/portraits/meurig.png",
+      "kind": "portrait",
+      "personId": "meurig-penrudd",
+      "promptId": "portrait-meurig",
+      "references": [
+        "AleriaAlmanach/assets/rotes-tor/portraits/tudur.png",
+        "AleriaAlmanach/assets/rotes-tor/portraits/bethan.png"
+      ],
+      "width": 1024,
+      "height": 1536,
+      "sha256": "fabc3ade7fdde498f2d2b189b97b0f3da23e746898a1cc5bf3b663c3590924b4"
+    },
+    {
+      "id": "portrait-nia",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-4aa58648-5f97-4082-bf3f-440835663459.png",
+      "destination": "AleriaAlmanach/assets/rotes-tor/portraits/nia.png",
+      "kind": "portrait",
+      "personId": "nia-penrudd",
+      "promptId": "portrait-nia",
+      "references": [],
+      "width": 1024,
+      "height": 1536,
+      "sha256": "7d8c61a87bb398971fac5b2638d6bc7a07f127ac83999893b062b30eef533afb"
+    },
+    {
+      "id": "portrait-aled",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-214ced01-2d5b-455a-94d5-4cfcfa1ed3dc.png",
+      "destination": "AleriaAlmanach/assets/rotes-tor/portraits/aled.png",
+      "kind": "portrait",
+      "personId": "aled-penrudd",
+      "promptId": "portrait-aled",
+      "references": [
+        "AleriaAlmanach/assets/rotes-tor/portraits/carwyn.png",
+        "AleriaAlmanach/assets/rotes-tor/portraits/olwen.png"
+      ],
+      "width": 1024,
+      "height": 1536,
+      "sha256": "c07e7f4b52826583df69f012c241e8cd13ecfc3531336d1bad5611b28c1abe0a"
+    },
+    {
+      "id": "portrait-cerys",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-5ba48eed-a3f8-42c5-b051-9ad1544b4d64.png",
+      "destination": "AleriaAlmanach/assets/rotes-tor/portraits/cerys.png",
+      "kind": "portrait",
+      "personId": "cerys-penrudd",
+      "promptId": "portrait-cerys",
+      "references": [],
+      "width": 1024,
+      "height": 1536,
+      "sha256": "75d439e5c19a583bec8869be141533f7ecfa2e53acb29fcb25dcc85c7c960508"
+    },
+    {
+      "id": "portrait-mared",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-c922765b-80d9-47db-837a-389158d8fd99.png",
+      "destination": "AleriaAlmanach/assets/rotes-tor/portraits/mared.png",
+      "kind": "portrait",
+      "personId": "mared-penrudd",
+      "promptId": "portrait-mared",
+      "references": [
+        "AleriaAlmanach/assets/rotes-tor/portraits/carwyn.png",
+        "AleriaAlmanach/assets/rotes-tor/portraits/olwen.png"
+      ],
+      "width": 1024,
+      "height": 1536,
+      "sha256": "4b53aa037f8d8811e69dcaf037b7baf6ad8f7ce95e7548ed2d6dc0f4a743467d"
+    },
+    {
+      "id": "portrait-dewi",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-c784c557-a1c2-4413-99db-4cfa3e8ea14a.png",
+      "destination": "AleriaAlmanach/assets/rotes-tor/portraits/dewi.png",
+      "kind": "portrait",
+      "personId": "dewi-penrudd",
+      "promptId": "portrait-dewi",
+      "references": [
+        "AleriaAlmanach/assets/rotes-tor/portraits/carwyn.png",
+        "AleriaAlmanach/assets/rotes-tor/portraits/olwen.png"
+      ],
+      "width": 1024,
+      "height": 1536,
+      "sha256": "71a8e365b6a3a1c56603089132cc60ac362fd2821c2fa26f9e9dc0f6a78eed06"
+    },
+    {
+      "id": "portrait-hywel",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-c49f1213-6405-4742-bee1-fdc3cf56e1ad.png",
+      "destination": "AleriaAlmanach/assets/rotes-tor/portraits/hywel.png",
+      "kind": "portrait",
+      "personId": "hywel-penrudd",
+      "promptId": "portrait-hywel",
+      "references": [
+        "AleriaAlmanach/assets/rotes-tor/portraits/gwilym.png",
+        "AleriaAlmanach/assets/rotes-tor/portraits/enid.png"
+      ],
+      "width": 1024,
+      "height": 1536,
+      "sha256": "934ad7363982ebc25d78c4a8af1aae62690f2594c0b0d0ad3c3d06a940e94e38"
+    },
+    {
+      "id": "portrait-ffion",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-58610be0-f266-43c7-8894-544e0c23be2c.png",
+      "destination": "AleriaAlmanach/assets/rotes-tor/portraits/ffion.png",
+      "kind": "portrait",
+      "personId": "ffion-penrudd",
+      "promptId": "portrait-ffion",
+      "references": [],
+      "width": 1024,
+      "height": 1536,
+      "sha256": "b54ec8fa826772e4f7687673e4bcb347ac518806aba506d543db1922788d48ea"
+    },
+    {
+      "id": "portrait-rhosyn",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-7c597ee9-12c0-4484-bc6f-b3c401421853.png",
+      "destination": "AleriaAlmanach/assets/rotes-tor/portraits/rhosyn.png",
+      "kind": "portrait",
+      "personId": "rhosyn-penrudd",
+      "promptId": "portrait-rhosyn",
+      "references": [
+        "AleriaAlmanach/assets/rotes-tor/portraits/gwilym.png",
+        "AleriaAlmanach/assets/rotes-tor/portraits/enid.png"
+      ],
+      "width": 1024,
+      "height": 1536,
+      "sha256": "9d057d72fa79e1eb80fd8eb66afe008739a44fcedc70a00682906f0f3610965e"
+    },
+    {
+      "id": "portrait-iwan",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-b8f2d57f-759e-4bdf-b3ee-79d3ee36a6e2.png",
+      "destination": "AleriaAlmanach/assets/rotes-tor/portraits/iwan.png",
+      "kind": "portrait",
+      "personId": "iwan-penrudd",
+      "promptId": "portrait-iwan",
+      "references": [
+        "AleriaAlmanach/assets/rotes-tor/portraits/hywel.png",
+        "AleriaAlmanach/assets/rotes-tor/portraits/ffion.png"
+      ],
+      "width": 1024,
+      "height": 1536,
+      "sha256": "e36dafaf672a5d2dd9238d37eda0bc0aab0c4deb18fc4cbdf960af9e53047808"
+    },
+    {
+      "id": "portrait-eleri",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-79da6d4f-12da-48b4-8902-047b6c8586aa.png",
+      "destination": "AleriaAlmanach/assets/rotes-tor/portraits/eleri.png",
+      "kind": "portrait",
+      "personId": "eleri-penrudd",
+      "promptId": "portrait-eleri",
+      "references": [
+        "AleriaAlmanach/assets/rotes-tor/portraits/hywel.png",
+        "AleriaAlmanach/assets/rotes-tor/portraits/ffion.png"
+      ],
+      "width": 1024,
+      "height": 1536,
+      "sha256": "f6dcd123e86bedca7bc90b50b385cd3aa24c39038463672e42fa3587d836183e"
+    },
+    {
+      "id": "portrait-rhys",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-5506e802-3776-409d-8840-81c0d1f2ec18.png",
+      "destination": "AleriaAlmanach/assets/rotes-tor/portraits/rhys.png",
+      "kind": "portrait",
+      "personId": "rhys-penrudd",
+      "promptId": "portrait-rhys",
+      "references": [
+        "AleriaAlmanach/assets/rotes-tor/portraits/aled.png",
+        "AleriaAlmanach/assets/rotes-tor/portraits/cerys.png"
+      ],
+      "width": 1024,
+      "height": 1536,
+      "sha256": "b520937bd9487f3b671159b3c256773945fdd2786db20344052ea5888ba5ad9c"
+    },
+    {
+      "id": "portrait-gethin",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-bc85df97-f353-4883-95e1-f4058270dd80.png",
+      "destination": "AleriaAlmanach/assets/rotes-tor/portraits/gethin.png",
+      "kind": "portrait",
+      "personId": "gethin-penrudd",
+      "promptId": "portrait-gethin",
+      "references": [
+        "AleriaAlmanach/assets/rotes-tor/portraits/meurig.png",
+        "AleriaAlmanach/assets/rotes-tor/portraits/nia.png"
+      ],
+      "width": 1024,
+      "height": 1536,
+      "sha256": "66f9ce48931460034fbfc60377662e5ffd66b9615ca93ff1880b02c81b4d163e"
+    },
+    {
+      "id": "portrait-lowri",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-808b1b3c-5ea5-43a9-bc0d-3b6d941b41e7.png",
+      "destination": "AleriaAlmanach/assets/rotes-tor/portraits/lowri.png",
+      "kind": "portrait",
+      "personId": "lowri-penrudd",
+      "promptId": "portrait-lowri",
+      "references": [
+        "AleriaAlmanach/assets/rotes-tor/portraits/meurig.png",
+        "AleriaAlmanach/assets/rotes-tor/portraits/nia.png"
+      ],
+      "width": 1024,
+      "height": 1536,
+      "sha256": "6ae2eadaf99e3b2d52f6d58e44e3346f201aa11e1385c556e5e9f2bc39d2d0ce"
+    },
+    {
+      "id": "portrait-osian",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-bf63c79c-f00e-4a5f-ad1e-126e3896bc90.png",
+      "destination": "AleriaAlmanach/assets/rotes-tor/portraits/osian.png",
+      "kind": "portrait",
+      "personId": "osian-penrudd",
+      "promptId": "portrait-osian",
+      "references": [
+        "AleriaAlmanach/assets/rotes-tor/portraits/meurig.png",
+        "AleriaAlmanach/assets/rotes-tor/portraits/nia.png"
+      ],
+      "width": 1024,
+      "height": 1536,
+      "sha256": "5acd9f3db07dc57c4e3eb1a973f6b3164e77f0e0eb1978bca93de88747f09bf0"
+    },
+    {
+      "id": "portrait-eluned",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-6e3169bf-7602-45e4-95c5-ca65d8e6f909.png",
+      "destination": "AleriaAlmanach/assets/rotes-tor/portraits/eluned.png",
+      "kind": "portrait",
+      "personId": "eluned-penrudd",
+      "promptId": "portrait-eluned",
+      "references": [
+        "AleriaAlmanach/assets/rotes-tor/portraits/tudur.png",
+        "AleriaAlmanach/assets/rotes-tor/portraits/bethan.png"
+      ],
+      "width": 1024,
+      "height": 1536,
+      "sha256": "a41c30099945bdfa1fec6a0b87486043cbba54c7497c463ad60062f4411025e9"
+    },
+    {
+      "id": "portrait-madoc",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-0f823130-2780-4fe6-af1a-9993cd78f65a.png",
+      "destination": "AleriaAlmanach/assets/rotes-tor/portraits/madoc.png",
+      "kind": "portrait",
+      "personId": "madoc-penrudd",
+      "promptId": "portrait-madoc",
+      "references": [
+        "AleriaAlmanach/assets/rotes-tor/portraits/gwilym.png",
+        "AleriaAlmanach/assets/rotes-tor/portraits/tudur.png"
+      ],
+      "width": 1024,
+      "height": 1536,
+      "sha256": "b8f76f5d83c50413caa9bc8438b2ac788658e5967f2e1a237ad33d615bc336c8"
+    },
+    {
+      "id": "portrait-nest",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-4bbf0181-2906-430b-93df-1c6d83b9bd83.png",
+      "destination": "AleriaAlmanach/assets/rotes-tor/portraits/nest.png",
+      "kind": "portrait",
+      "personId": "nest-penrudd",
+      "promptId": "portrait-nest",
+      "references": [],
+      "width": 1024,
+      "height": 1536,
+      "sha256": "ab9e59e58241e61fa50928df77c333383f8caa7f28af3193a6c9b31d4e680f67"
+    },
+    {
+      "id": "food-hofbrot",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-26133872-780b-47bb-a036-714902192ccf.png",
+      "destination": "AleriaAlmanach/assets/rotes-tor/food/hofbrot.png",
+      "kind": "food",
+      "promptId": "food-hofbrot",
+      "stylePreset": "fantasy-inventory-item",
+      "references": [
+        "AleriaAlmanach/assets/klingende-krone/goods/haferkaese.png",
+        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
+      ],
+      "revision": 1,
+      "width": 1254,
+      "height": 1254,
+      "sha256": "fe5cff9eaf716157d739b7d460370b47a5e3b8e08cd8509b0b549d18a2313278"
+    },
+    {
+      "id": "food-lauchgerstensuppe",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-a2440ca9-de7f-4310-a07e-a41cca084cf6.png",
+      "destination": "AleriaAlmanach/assets/rotes-tor/food/lauchgerstensuppe.png",
+      "kind": "food",
+      "promptId": "food-lauchgerstensuppe",
+      "stylePreset": "fantasy-inventory-item",
+      "references": [
+        "AleriaAlmanach/assets/klingende-krone/goods/haferkaese.png",
+        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
+      ],
+      "revision": 1,
+      "width": 1254,
+      "height": 1254,
+      "sha256": "0d36604f8c96786079e2eb11f2e78a85d704873e6fd549fbe50950d7ffb605e9"
+    },
+    {
+      "id": "food-roter-tortopf",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-8cc8fa57-89b6-42ba-bcb4-cb85b9686d8a.png",
+      "destination": "AleriaAlmanach/assets/rotes-tor/food/roter-tortopf.png",
+      "kind": "food",
+      "promptId": "food-roter-tortopf",
+      "stylePreset": "fantasy-inventory-item",
+      "references": [
+        "AleriaAlmanach/assets/klingende-krone/goods/haferkaese.png",
+        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
+      ],
+      "revision": 1,
+      "width": 1254,
+      "height": 1254,
+      "sha256": "e1497d765687b3ee990c0c1e6d6b1257979fdeabf385bf6bac668a842bbcde44"
+    },
+    {
+      "id": "food-huhn-wurzelsud",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-bd01fe83-d527-44c6-96f8-85c8f026ba9c.png",
+      "destination": "AleriaAlmanach/assets/rotes-tor/food/huhn-wurzelsud.png",
+      "kind": "food",
+      "promptId": "food-huhn-wurzelsud",
+      "stylePreset": "fantasy-inventory-item",
+      "references": [
+        "AleriaAlmanach/assets/klingende-krone/goods/haferkaese.png",
+        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
+      ],
+      "revision": 1,
+      "width": 1254,
+      "height": 1254,
+      "sha256": "9e44ae7c12b7d065d9d9165c75597882251cd56bcf91e095d307609ba30282f7"
+    },
+    {
+      "id": "food-kohlpfanne",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-e9c145ea-609d-44e3-bdd8-be178027a3ec.png",
+      "destination": "AleriaAlmanach/assets/rotes-tor/food/kohlpfanne.png",
+      "kind": "food",
+      "promptId": "food-kohlpfanne",
+      "stylePreset": "fantasy-inventory-item",
+      "references": [
+        "AleriaAlmanach/assets/klingende-krone/goods/haferkaese.png",
+        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
+      ],
+      "revision": 1,
+      "width": 1254,
+      "height": 1254,
+      "sha256": "42eda6582df9b9ab388d2b8bd8157f89208dec9783d7b0369dfeeb24627f40e6"
+    },
+    {
+      "id": "food-rinderbraten",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-1c1fca88-7b0d-4618-8f46-8b13133ada2d.png",
+      "destination": "AleriaAlmanach/assets/rotes-tor/food/rinderbraten.png",
+      "kind": "food",
+      "promptId": "food-rinderbraten",
+      "stylePreset": "fantasy-inventory-item",
+      "references": [
+        "AleriaAlmanach/assets/klingende-krone/goods/haferkaese.png",
+        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
+      ],
+      "revision": 1,
+      "width": 1254,
+      "height": 1254,
+      "sha256": "9a45b04ed43fa019864b8b637e27f482d177febfbe311240c6655a7abd67edd7"
+    },
+    {
+      "id": "food-apfel-haferauflauf",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-b5998a14-9ca6-41b1-b765-0e1aceec62a9.png",
+      "destination": "AleriaAlmanach/assets/rotes-tor/food/apfel-haferauflauf.png",
+      "kind": "food",
+      "promptId": "food-apfel-haferauflauf",
+      "stylePreset": "fantasy-inventory-item",
+      "references": [
+        "AleriaAlmanach/assets/klingende-krone/goods/haferkaese.png",
+        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
+      ],
+      "revision": 1,
+      "width": 1254,
+      "height": 1254,
+      "sha256": "4dee4804129925e687bb5ed3eff2be309779c1c864a8b2b62230ab7b042d2f27"
+    },
+    {
+      "id": "food-fuhrmannsbeutel",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-3b1ceee4-8f99-45b4-866b-d2de76a5119f.png",
+      "destination": "AleriaAlmanach/assets/rotes-tor/food/fuhrmannsbeutel.png",
+      "kind": "food",
+      "promptId": "food-fuhrmannsbeutel",
+      "stylePreset": "fantasy-inventory-item",
+      "references": [
+        "AleriaAlmanach/assets/klingende-krone/goods/haferkaese.png",
+        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
+      ],
+      "revision": 1,
+      "width": 1254,
+      "height": 1254,
+      "sha256": "b8d16582e89580c10cbf8fbfe5943afce478682aa6c60cfa0180c79d25601e09"
+    }
+  ],
+  "rejected": [
+    {
+      "id": "food-hofbrot",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-ebcfc783-39a7-4492-9851-5bbeb85928eb.png",
+      "destination": "AleriaAlmanach/assets/rotes-tor/food/hofbrot.png",
+      "kind": "food",
+      "personId": null,
+      "promptId": "food-hofbrot",
+      "references": [
+        "AleriaAlmanach/assets/kleiner-durst/food/fischgerstentopf.png"
+      ],
+      "rejectedAt": "2026-10-19",
+      "reason": "User correction: replace scene with square transparent inventory icon."
+    }
+  ],
+  "validatedAt": "2026-10-19"
+}

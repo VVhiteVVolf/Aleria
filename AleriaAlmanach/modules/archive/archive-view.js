@@ -103,7 +103,8 @@ function decodeArchivePathData(value) {
 }
 
 function getActiveArchivePath(tab = _activeTab) {
-  return _archivePathByTab.get(tab) || [];
+  const path = _archivePathByTab.get(tab) || [];
+  return globalThis.AleriaGwynthorGeography?.projectGwynthorPath(path, tab) || path;
 }
 
 function setActiveArchivePath(tab, path = []) {
@@ -123,22 +124,23 @@ function getSectionThemeMeta(sectionKey) {
   return SECTION_THEME_META[sectionKey] || SECTION_THEME_META.Archive;
 }
 
-function getThemeMetaForSection(section) {
+function getThemeMetaForSection(section, sections) {
   if (!section) return SECTION_THEME_META.Archive;
   if (SECTION_THEME_META[section.key]) return getSectionThemeMeta(section.key);
   const tab = section.tab || section.key;
-  const topSection = getValidSections().find(item =>
+  const topSection = (sections || getValidSections()).find(item =>
     (item.tab || item.key) === tab && SECTION_THEME_META[item.key]
   );
   return topSection ? getSectionThemeMeta(topSection.key) : SECTION_THEME_META.Archive;
 }
 
-function getThemeMetaForTab(tab) {
+function getThemeMetaForTab(tab, sections) {
   if (tab === 'Alle') return SECTION_THEME_META.Archive;
   if (tab === 'Charaktere') return SECTION_THEME_META.Charaktere;
   if (tab === 'Kreaturen') return SECTION_THEME_META.Kreaturen;
-  const section = getValidSections().find(item => (item.tab || item.key) === tab);
-  return getThemeMetaForSection(section);
+  const source = sections || getValidSections();
+  const section = source.find(item => (item.tab || item.key) === tab);
+  return getThemeMetaForSection(section, source);
 }
 
 function getThemeMetaForEntry(entry) {
@@ -147,13 +149,13 @@ function getThemeMetaForEntry(entry) {
   return getThemeMetaForSection(found?.section);
 }
 
-function updateSidebarCurrentNote(tab = _activeTab) {
+function updateSidebarCurrentNote(tab = _activeTab, sections) {
   const note = document.getElementById('sidebar-current-note');
   if (!note) return;
-  const meta = getThemeMetaForTab(tab);
+  const meta = getThemeMetaForTab(tab, sections);
   const section = tab === 'Alle' || tab === 'Charaktere' || tab === 'Kreaturen'
     ? null
-    : getValidSections().find(item => (item.tab || item.key) === tab);
+    : (sections || getValidSections()).find(item => (item.tab || item.key) === tab);
   const label = tab === 'Alle' ? 'Alle Bereiche' : tab;
   const text = section?.desc || meta.note;
   note.innerHTML = `
@@ -162,12 +164,12 @@ function updateSidebarCurrentNote(tab = _activeTab) {
     <div class="sidebar-shelf-tag">${escapeHtml(label)}</div>`;
 }
 
-function applyArchiveTheme(tab = _activeTab) {
-  const meta = getThemeMetaForTab(tab);
+function applyArchiveTheme(tab = _activeTab, sections) {
+  const meta = getThemeMetaForTab(tab, sections);
   document.body.dataset.activeTheme = meta.slug;
   const sidebar = document.getElementById('sidebar');
   if (sidebar) sidebar.dataset.activeTheme = meta.slug;
-  updateSidebarCurrentNote(tab);
+  updateSidebarCurrentNote(tab, sections);
 }
 
 function applyModalTheme(entry) {
@@ -256,7 +258,7 @@ function handleArchiveActionClick(event) {
     if (_activeTab === 'Alle' || _activeTab === 'Charaktere' || _activeTab === 'Kreaturen') return;
     const path = decodeArchivePathData(trigger.dataset.sectionPath || '');
     toggleArchiveHierarchyNode(_activeTab, path);
-    renderAll();
+    if (!AleriaArchiveHierarchyController.update(trigger.closest('[data-archive-hierarchy-tab]'), path, { toggleOnly: true })) renderAll();
     restoreArchiveHierarchyFocus(path, true);
     return;
   }
@@ -266,7 +268,7 @@ function handleArchiveActionClick(event) {
     const path = decodeArchivePathData(trigger.dataset.sectionPath || '');
     setActiveArchivePath(_activeTab, path);
     expandArchiveHierarchyPath(_activeTab, path);
-    renderAll();
+    if (!AleriaArchiveHierarchyController.update(trigger.closest('[data-archive-hierarchy-tab]'), path)) renderAll();
     restoreArchiveHierarchyFocus(path);
     return;
   }
@@ -516,7 +518,7 @@ function getArchiveRootSection(tabSections = [], tab = _activeTab) {
   return {
     key: tab || 'Archiv',
     tab: tab || 'Archiv',
-    desc: getThemeMetaForTab(tab).note,
+    desc: getThemeMetaForTab(tab, tabSections).note,
     entries: []
   };
 }
@@ -549,7 +551,7 @@ function switchTab(tab, options = {}) {
     const show = hasMatches && ((_archiveSearchNeedle && tab === 'Alle') || blockTab === tab);
     block.classList.toggle('visible', show);
   });
-  applyArchiveTheme(tab);
+  applyArchiveTheme(tab, options.sections);
   updateArchiveSearchUI();
 }
 
@@ -651,13 +653,14 @@ function renderAll() {
 
   // Build section blocks
   renderSections.forEach(section => {
-    const filteredEntries = section.entries.filter(entry => matchesArchiveSearch(buildEntrySearchText(entry, section)));
+    const filteredEntries = _archiveSearchNeedle
+      ? section.entries.filter(entry => matchesArchiveSearch(buildEntrySearchText(entry, section))) : section.entries;
     entryMatchCount += filteredEntries.length;
     const sectionSignature = makeSectionSignature(section);
     const hierarchy = hierarchyBySignature.get(sectionSignature) || null;
     const showEmptySection = !_archiveSearchNeedle && !section.entries.length && !hierarchy;
     if (filteredEntries.length || showEmptySection || hierarchy) sectionMatchCount++;
-    const theme = getThemeMetaForSection(section);
+    const theme = getThemeMetaForSection(section, sections);
     const sectionDepth = getSectionPathParts(section).length;
     const block = document.createElement('div');
     block.className = `section-block visible archive-section-depth-${Math.min(sectionDepth, 4)}`;
@@ -677,31 +680,13 @@ function renderAll() {
       : `${renderArchiveSectionBand(section, filteredEntries, { isCustom: customSectionSignatures.has(sectionSignature) })}<div class="card-grid"></div>`;
     main.appendChild(block);
     const grid = block.querySelector('.card-grid');
-    if (showEmptySection || (hierarchy && !filteredEntries.length)) {
-      const hint = document.createElement('div');
-      hint.className = 'archive-section-empty-hint';
-      hint.textContent = 'Noch keine Module in diesem Reiter.';
-      grid.appendChild(hint);
-    }
-    const visibleEntries = getArchiveSectionVisibleEntries(section, filteredEntries, { searchActive: !!_archiveSearchNeedle });
-    visibleEntries.forEach(entry => {
-      const cardSection = hierarchy
-        ? (sectionByEntry.get(entry) || section)
-        : section;
-      const previewImage = getArchiveEntryPreviewImage(entry);
-      const card = document.createElement('article');
-      card.className = 'entry-card'
-        + (previewImage && previewImage === getArchiveEntryGuildEmblem(entry) ? ' entry-card-emblem' : '')
-        + (entry.locked ? ' card-locked' : '');
-      card.dataset.searchKind = 'entry';
-      const usePriorityImage = !!previewImage && priorityCardImageBudget > 0;
-      card.innerHTML = renderArchiveEntryCard(entry, cardSection, {
-        priorityImage: usePriorityImage, manageMode: _archiveManageMode
-      });
-      if (usePriorityImage) priorityCardImageBudget--;
-      grid.appendChild(card);
+    priorityCardImageBudget -= renderArchiveSectionCards(grid, section, filteredEntries, {
+      sectionByEntry: hierarchy ? sectionByEntry : null, manageMode: _archiveManageMode,
+      priorityImageBudget: priorityCardImageBudget, searchActive: !!_archiveSearchNeedle
     });
-    grid.insertAdjacentHTML('beforeend', renderArchiveSectionMoreControl(section, filteredEntries, visibleEntries, { searchActive: !!_archiveSearchNeedle }));
+    if (hierarchy) AleriaArchiveHierarchyController.mount(block.querySelector('[data-archive-hierarchy-tab]'), {
+      model: hierarchy.model, sectionByEntry, manageMode: _archiveManageMode
+    });
   });
 
   const nextHierarchy = main.querySelector('[data-archive-hierarchy-tab]');
@@ -738,7 +723,7 @@ function renderAll() {
   _archiveSectionMatchCount = sectionMatchCount
     + (charBlock.dataset.hasMatches !== 'false' ? 1 : 0)
     + (creatureBlock.dataset.hasMatches !== 'false' ? 1 : 0);
-  switchTab(_activeTab);
+  switchTab(_activeTab, { sections });
   updateArchiveSearchUI();
 
   if (refocusSearch) {

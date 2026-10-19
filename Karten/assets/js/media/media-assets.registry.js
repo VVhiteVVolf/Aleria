@@ -3113,6 +3113,14 @@ window.KARTO_MEDIA_ASSETS = Object.freeze([
     "source": "Hauswappen"
   },
   {
+    "id": "0965716212df18",
+    "name": "Penrudd",
+    "url": "/Stammbäume/assets/images/houses/Llamreis%20Ankunft/B%C3%BCrgerliche/Bannkreis%20Gwynthor/Penrudd.png",
+    "kind": "crest",
+    "group": "Llamreis Ankunft / Bürgerliche / Bannkreis Gwynthor",
+    "source": "Hauswappen"
+  },
+  {
     "id": "f458363606543b",
     "name": "Aelmor",
     "url": "/Stammbäume/assets/images/houses/Llamreis%20Ankunft/B%C3%BCrgerliche/Gwynthor/Aelmor.png",
@@ -7081,6 +7089,46 @@ window.KARTO_MEDIA_ASSETS = Object.freeze([
     "source": "Orts- & Regionsbanner"
   },
   {
+    "id": "a75cfb08caa987",
+    "name": "Herrschaft der Blaidd",
+    "url": "/Stammbäume/assets/images/regions/Cenyr/Graue%20Weite/Herrschaft%20der%20Blaidd.png",
+    "kind": "region",
+    "group": "Cenyr / Graue Weite",
+    "source": "Orts- & Regionsbanner"
+  },
+  {
+    "id": "9bfcb5b4f497e8",
+    "name": "Herrschaft der Brithyll",
+    "url": "/Stammbäume/assets/images/regions/Cenyr/Graue%20Weite/Herrschaft%20der%20Brithyll.png",
+    "kind": "region",
+    "group": "Cenyr / Graue Weite",
+    "source": "Orts- & Regionsbanner"
+  },
+  {
+    "id": "44c500709d90c5",
+    "name": "Herrschaft der Gwaedlyd",
+    "url": "/Stammbäume/assets/images/regions/Cenyr/Graue%20Weite/Herrschaft%20der%20Gwaedlyd.png",
+    "kind": "region",
+    "group": "Cenyr / Graue Weite",
+    "source": "Orts- & Regionsbanner"
+  },
+  {
+    "id": "afcdc86b8823fe",
+    "name": "Herrschaft der Gwialen",
+    "url": "/Stammbäume/assets/images/regions/Cenyr/Graue%20Weite/Herrschaft%20der%20Gwialen.png",
+    "kind": "region",
+    "group": "Cenyr / Graue Weite",
+    "source": "Orts- & Regionsbanner"
+  },
+  {
+    "id": "686db08fbf3a71",
+    "name": "Herrschaft der Illygoden",
+    "url": "/Stammbäume/assets/images/regions/Cenyr/Graue%20Weite/Herrschaft%20der%20Illygoden.png",
+    "kind": "region",
+    "group": "Cenyr / Graue Weite",
+    "source": "Orts- & Regionsbanner"
+  },
+  {
     "id": "0e55fe221300b9",
     "name": "Schimmerküste",
     "url": "/Stammbäume/assets/images/regions/Cenyr/Graue%20Weite/Schimmerk%C3%BCste.png",
@@ -7113,9 +7161,65 @@ window.KARTO_MEDIA_ASSETS = Object.freeze([
     "source": "Orts- & Regionsbanner"
   },
   {
+    "id": "daa880cfa9777a",
+    "name": "Blutsturz",
+    "url": "/Stammbäume/assets/images/regions/Cenyr/Klaueninsel/Blutsturz.png",
+    "kind": "region",
+    "group": "Cenyr / Klaueninsel",
+    "source": "Orts- & Regionsbanner"
+  },
+  {
     "id": "4db1737a51129d",
     "name": "Frostklaue",
     "url": "/Stammbäume/assets/images/regions/Cenyr/Klaueninsel/Frostklaue.png",
+    "kind": "region",
+    "group": "Cenyr / Klaueninsel",
+    "source": "Orts- & Regionsbanner"
+  },
+  {
+    "id": "2b148c6816d599",
+    "name": "Herrschaft der Arfordir",
+    "url": "/Stammbäume/assets/images/regions/Cenyr/Klaueninsel/Herrschaft%20der%20Arfordir.png",
+    "kind": "region",
+    "group": "Cenyr / Klaueninsel",
+    "source": "Orts- & Regionsbanner"
+  },
+  {
+    "id": "ab5b3daf3adb00",
+    "name": "Herrschaft der Crafanc",
+    "url": "/Stammbäume/assets/images/regions/Cenyr/Klaueninsel/Herrschaft%20der%20Crafanc.png",
+    "kind": "region",
+    "group": "Cenyr / Klaueninsel",
+    "source": "Orts- & Regionsbanner"
+  },
+  {
+    "id": "9079d1f42b914f",
+    "name": "Herrschaft der Diafol",
+    "url": "/Stammbäume/assets/images/regions/Cenyr/Klaueninsel/Herrschaft%20der%20Diafol.png",
+    "kind": "region",
+    "group": "Cenyr / Klaueninsel",
+    "source": "Orts- & Regionsbanner"
+  },
+  {
+    "id": "e301b704806a7e",
+    "name": "Herrschaft der Dianc",
+    "url": "/Stammbäume/assets/images/regions/Cenyr/Klaueninsel/Herrschaft%20der%20Dianc.png",
+    "kind": "region",
+    "group": "Cenyr / Klaueninsel",
+    "source": "Orts- & Regionsbanner"
+  },
+  {
+    "id": "98d64db82b10a3",
+    "name": "Herrschaft der Pawen",
+    "url": "/Stammbäume/assets/images/regions/Cenyr/Klaueninsel/Herrschaft%20der%20Pawen.png",
+    "kind": "region",
+    "group": "Cenyr / Klaueninsel",
+    "source": "Orts- & Regionsbanner"
+  },
+  {
+    "id": "c08ef14f215c7d",
+    "name": "Krallenspitze",
+    "url": "/Stammbäume/assets/images/regions/Cenyr/Klaueninsel/Krallenspitze.png",
     "kind": "region",
     "group": "Cenyr / Klaueninsel",
     "source": "Orts- & Regionsbanner"
@@ -7158,6 +7262,30 @@ window.KARTO_MEDIA_ASSETS = Object.freeze([
     "url": "/Stammbäume/assets/images/regions/Cenyr/Klaueninsel/Wellenklaue.png",
     "kind": "region",
     "group": "Cenyr / Klaueninsel",
+    "source": "Orts- & Regionsbanner"
+  },
+  {
+    "id": "a47328f1a87b36",
+    "name": "Herrschaft der Canwyll",
+    "url": "/Stammbäume/assets/images/regions/Cenyr/Silberinsel/Herrschaft%20der%20Canwyll.png",
+    "kind": "region",
+    "group": "Cenyr / Silberinsel",
+    "source": "Orts- & Regionsbanner"
+  },
+  {
+    "id": "be438a3799d6f5",
+    "name": "Herrschaft der Crefyddol",
+    "url": "/Stammbäume/assets/images/regions/Cenyr/Silberinsel/Herrschaft%20der%20Crefyddol.png",
+    "kind": "region",
+    "group": "Cenyr / Silberinsel",
+    "source": "Orts- & Regionsbanner"
+  },
+  {
+    "id": "729dd1728ca19d",
+    "name": "Herrschaft der Saith",
+    "url": "/Stammbäume/assets/images/regions/Cenyr/Silberinsel/Herrschaft%20der%20Saith.png",
+    "kind": "region",
+    "group": "Cenyr / Silberinsel",
     "source": "Orts- & Regionsbanner"
   },
   {
@@ -7236,6 +7364,30 @@ window.KARTO_MEDIA_ASSETS = Object.freeze([
     "id": "ff4a8051beb39b",
     "name": "Falkenhöh",
     "url": "/Stammbäume/assets/images/regions/Cenyr/Tal%20der%20Milane/Falkenh%C3%B6h.png",
+    "kind": "region",
+    "group": "Cenyr / Tal der Milane",
+    "source": "Orts- & Regionsbanner"
+  },
+  {
+    "id": "7ea8aedfa857a7",
+    "name": "Herrschaft der Eryr",
+    "url": "/Stammbäume/assets/images/regions/Cenyr/Tal%20der%20Milane/Herrschaft%20der%20Eryr.png",
+    "kind": "region",
+    "group": "Cenyr / Tal der Milane",
+    "source": "Orts- & Regionsbanner"
+  },
+  {
+    "id": "d29cd468ddaec5",
+    "name": "Herrschaft der Mwyalchen",
+    "url": "/Stammbäume/assets/images/regions/Cenyr/Tal%20der%20Milane/Herrschaft%20der%20Mwyalchen.png",
+    "kind": "region",
+    "group": "Cenyr / Tal der Milane",
+    "source": "Orts- & Regionsbanner"
+  },
+  {
+    "id": "fff38de78c6056",
+    "name": "Herrschaft der Tylluan",
+    "url": "/Stammbäume/assets/images/regions/Cenyr/Tal%20der%20Milane/Herrschaft%20der%20Tylluan.png",
     "kind": "region",
     "group": "Cenyr / Tal der Milane",
     "source": "Orts- & Regionsbanner"
@@ -7356,6 +7508,22 @@ window.KARTO_MEDIA_ASSETS = Object.freeze([
     "id": "dd25ba3b4bdd2e",
     "name": "Dunstholm",
     "url": "/Stammbäume/assets/images/regions/Cenyr/Weidebucht/Dunstholm.png",
+    "kind": "region",
+    "group": "Cenyr / Weidebucht",
+    "source": "Orts- & Regionsbanner"
+  },
+  {
+    "id": "2be923a7f8a353",
+    "name": "Herrschaft der Dinefwr",
+    "url": "/Stammbäume/assets/images/regions/Cenyr/Weidebucht/Herrschaft%20der%20Dinefwr.png",
+    "kind": "region",
+    "group": "Cenyr / Weidebucht",
+    "source": "Orts- & Regionsbanner"
+  },
+  {
+    "id": "a89cc2db748008",
+    "name": "Herrschaft der Mochdaer",
+    "url": "/Stammbäume/assets/images/regions/Cenyr/Weidebucht/Herrschaft%20der%20Mochdaer.png",
     "kind": "region",
     "group": "Cenyr / Weidebucht",
     "source": "Orts- & Regionsbanner"

@@ -262,48 +262,145 @@
     },
     {
       "id": "matrosenhappen",
+      "key": "matrosenhappen",
+      "kind": "food",
       "destination": "AleriaAlmanach/assets/kleiner-durst/food/matrosenhappen.png",
-      "transparent": false,
+      "stylePreset": "fantasy-inventory-item",
+      "aspectRatio": "1:1",
+      "transparent": true,
       "references": [
-        "E:/Aleria/AleriaAlmanach/assets/kleiner-durst/scenes/schankstube.png"
+        "AleriaAlmanach/assets/klingende-krone/goods/haferkaese.png",
+        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
       ],
-      "prompt": "Bildformat 2:3. Tales of Xillia / Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nEin einziges schlichtes Kneipengericht als ruhiges Stillleben auf einem alten groben Holztisch: Eine einzige dicke grobe dunkle Brotscheibe mit drei kleinen Stücken eingelegtem Hering und ein paar rohen Zwiebelringen auf einem abgenutzten Holzteller. Kleine billige Vorspeise, keine elegante Garnitur. Ganzer Teller beziehungsweise ganze Schüssel vollständig sichtbar. Kleiner Hintergrund mit einfacher Kneipenwand, ruhige Dreiviertelansicht leicht von oben, wenig Zubehör. Günstige Fischer- und Matrosenküche, keine Silberbestecke, keine Kräuterblüten, keine feine Gastronomie. Referenz nur Materialfarben und Anime-Zeichenstil des Hauses. Vertikal2:3 mit angenehmem Rand, keine Menschen, keine Hände, kein Rahmen, keine Schrift, kein Wasserzeichen."
+      "prompt": "Use case: stylized-concept. Create ONE square 1:1 fantasy RPG inventory item illustration: Eine einzige dicke grobe dunkle Brotscheibe mit drei kleinen Stücken eingelegtem Hering und ein paar rohen Zwiebelringen auf einem abgenutzten Holzteller. Kleine billige Vorspeise, keine elegante Garnitur.. Reference 1 defines the item's exact DESIGN, materials, colors and any authentic house emblem. Reference 2 defines the ITEM ART STYLE only: hand-painted illustrated fantasy inventory art, painterly textured metal, leather, wood and cloth, crisp dark outlines, soft simplified shading, muted warm colors, gentle illustrated highlights, readable details and a clear silhouette at small thumbnail size. Not photorealistic, not CGI or a glossy 3D render. Preserve the item's design and heraldry from reference 1; never copy the symbols or house colors of the style reference. Show the entire isolated object, centered and large within the square, with about 10% clear margin on all sides. Slight three-quarter view where appropriate; long weapons may run diagonally from lower-left handle to upper-right tip. TRUE transparent PNG alpha background; at most a very faint soft BLACK contact shadow immediately beneath the object. No person, hands, mannequin, scenery, floor, stand, frame, text, watermark or painted checkerboard. Do not add unrelated objects.\nAsset type: a single medieval meal INVENTORY ICON. Exact food design and portion are defined by the recipe above. The attached food image is reference 1 for the INVENTORY DRAWING STYLE and isolated presentation only, NOT its bread, cheese or ingredient design; reference 2 is an additional rendering-style reference ONLY. Do not copy armor, emblems, ornaments or house colors. Show only the specified serving in its simple plate/bowl, including ONLY the explicitly specified sides, grouped compactly as one inventory item. A food bundle may use its specified linen wrapping instead of a plate. Entire plate/bowl/bundle visible, centered, slight view from above, comfortable clear margin on all sides. Real transparent PNG outside the item and in open gaps. Modest food quantities, rustic worn wood or plain earthenware, no luxury garnish. No table, room, tavern wall, scenery, backdrop, ground, scenery vignette, extra props, cutlery, glasses, people, steam cloud, border, labels or text. Do not illustrate a scene or an anime still life. Use hand-painted fantasy item art with crisp dark outlines and simplified painterly shading.",
+      "revision": 2,
+      "iterations": [
+        {
+          "id": "matrosenhappen",
+          "destination": "AleriaAlmanach/assets/kleiner-durst/food/matrosenhappen.png",
+          "transparent": false,
+          "references": [
+            "E:/Aleria/AleriaAlmanach/assets/kleiner-durst/scenes/schankstube.png"
+          ],
+          "prompt": "Bildformat 2:3. Tales of Xillia / Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nEin einziges schlichtes Kneipengericht als ruhiges Stillleben auf einem alten groben Holztisch: Eine einzige dicke grobe dunkle Brotscheibe mit drei kleinen Stücken eingelegtem Hering und ein paar rohen Zwiebelringen auf einem abgenutzten Holzteller. Kleine billige Vorspeise, keine elegante Garnitur. Ganzer Teller beziehungsweise ganze Schüssel vollständig sichtbar. Kleiner Hintergrund mit einfacher Kneipenwand, ruhige Dreiviertelansicht leicht von oben, wenig Zubehör. Günstige Fischer- und Matrosenküche, keine Silberbestecke, keine Kräuterblüten, keine feine Gastronomie. Referenz nur Materialfarben und Anime-Zeichenstil des Hauses. Vertikal2:3 mit angenehmem Rand, keine Menschen, keine Hände, kein Rahmen, keine Schrift, kein Wasserzeichen.",
+          "status": "rejected",
+          "reason": "User correction: dishes must be isolated inventory icons, never scene illustrations."
+        }
+      ]
     },
     {
       "id": "fischgerstentopf",
+      "key": "fischgerstentopf",
+      "kind": "food",
       "destination": "AleriaAlmanach/assets/kleiner-durst/food/fischgerstentopf.png",
-      "transparent": false,
+      "stylePreset": "fantasy-inventory-item",
+      "aspectRatio": "1:1",
+      "transparent": true,
       "references": [
-        "E:/Aleria/AleriaAlmanach/assets/kleiner-durst/scenes/schankstube.png"
+        "AleriaAlmanach/assets/klingende-krone/goods/haferkaese.png",
+        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
       ],
-      "prompt": "Bildformat 2:3. Tales of Xillia / Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nEin einziges schlichtes Kneipengericht als ruhiges Stillleben auf einem alten groben Holztisch: Eine volle grobe braune Tonschüssel mit dickem Eintopf: viel Gerste, heller Kohl, kleine Wurzelstücke und wenige deutlich erkennbare gekochte weiße Fischstücke. Sämig und sättigend, keine Luxusauslage. Ganzer Teller beziehungsweise ganze Schüssel vollständig sichtbar. Kleiner Hintergrund mit einfacher Kneipenwand, ruhige Dreiviertelansicht leicht von oben, wenig Zubehör. Günstige Fischer- und Matrosenküche, keine Silberbestecke, keine Kräuterblüten, keine feine Gastronomie. Referenz nur Materialfarben und Anime-Zeichenstil des Hauses. Vertikal2:3 mit angenehmem Rand, keine Menschen, keine Hände, kein Rahmen, keine Schrift, kein Wasserzeichen."
+      "prompt": "Use case: stylized-concept. Create ONE square 1:1 fantasy RPG inventory item illustration: Eine volle grobe braune Tonschüssel mit dickem Eintopf: viel Gerste, heller Kohl, kleine Wurzelstücke und wenige deutlich erkennbare gekochte weiße Fischstücke. Sämig und sättigend, keine Luxusauslage.. Reference 1 defines the item's exact DESIGN, materials, colors and any authentic house emblem. Reference 2 defines the ITEM ART STYLE only: hand-painted illustrated fantasy inventory art, painterly textured metal, leather, wood and cloth, crisp dark outlines, soft simplified shading, muted warm colors, gentle illustrated highlights, readable details and a clear silhouette at small thumbnail size. Not photorealistic, not CGI or a glossy 3D render. Preserve the item's design and heraldry from reference 1; never copy the symbols or house colors of the style reference. Show the entire isolated object, centered and large within the square, with about 10% clear margin on all sides. Slight three-quarter view where appropriate; long weapons may run diagonally from lower-left handle to upper-right tip. TRUE transparent PNG alpha background; at most a very faint soft BLACK contact shadow immediately beneath the object. No person, hands, mannequin, scenery, floor, stand, frame, text, watermark or painted checkerboard. Do not add unrelated objects.\nAsset type: a single medieval meal INVENTORY ICON. Exact food design and portion are defined by the recipe above. The attached food image is reference 1 for the INVENTORY DRAWING STYLE and isolated presentation only, NOT its bread, cheese or ingredient design; reference 2 is an additional rendering-style reference ONLY. Do not copy armor, emblems, ornaments or house colors. Show only the specified serving in its simple plate/bowl, including ONLY the explicitly specified sides, grouped compactly as one inventory item. A food bundle may use its specified linen wrapping instead of a plate. Entire plate/bowl/bundle visible, centered, slight view from above, comfortable clear margin on all sides. Real transparent PNG outside the item and in open gaps. Modest food quantities, rustic worn wood or plain earthenware, no luxury garnish. No table, room, tavern wall, scenery, backdrop, ground, scenery vignette, extra props, cutlery, glasses, people, steam cloud, border, labels or text. Do not illustrate a scene or an anime still life. Use hand-painted fantasy item art with crisp dark outlines and simplified painterly shading.",
+      "revision": 2,
+      "iterations": [
+        {
+          "id": "fischgerstentopf",
+          "destination": "AleriaAlmanach/assets/kleiner-durst/food/fischgerstentopf.png",
+          "transparent": false,
+          "references": [
+            "E:/Aleria/AleriaAlmanach/assets/kleiner-durst/scenes/schankstube.png"
+          ],
+          "prompt": "Bildformat 2:3. Tales of Xillia / Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nEin einziges schlichtes Kneipengericht als ruhiges Stillleben auf einem alten groben Holztisch: Eine volle grobe braune Tonschüssel mit dickem Eintopf: viel Gerste, heller Kohl, kleine Wurzelstücke und wenige deutlich erkennbare gekochte weiße Fischstücke. Sämig und sättigend, keine Luxusauslage. Ganzer Teller beziehungsweise ganze Schüssel vollständig sichtbar. Kleiner Hintergrund mit einfacher Kneipenwand, ruhige Dreiviertelansicht leicht von oben, wenig Zubehör. Günstige Fischer- und Matrosenküche, keine Silberbestecke, keine Kräuterblüten, keine feine Gastronomie. Referenz nur Materialfarben und Anime-Zeichenstil des Hauses. Vertikal2:3 mit angenehmem Rand, keine Menschen, keine Hände, kein Rahmen, keine Schrift, kein Wasserzeichen.",
+          "status": "rejected",
+          "reason": "User correction: dishes must be isolated inventory icons, never scene illustrations."
+        }
+      ]
     },
     {
       "id": "hafensuppe",
+      "key": "hafensuppe",
+      "kind": "food",
       "destination": "AleriaAlmanach/assets/kleiner-durst/food/hafensuppe.png",
-      "transparent": false,
+      "stylePreset": "fantasy-inventory-item",
+      "aspectRatio": "1:1",
+      "transparent": true,
       "references": [
-        "E:/Aleria/AleriaAlmanach/assets/kleiner-durst/scenes/schankstube.png"
+        "AleriaAlmanach/assets/klingende-krone/goods/haferkaese.png",
+        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
       ],
-      "prompt": "Bildformat 2:3. Tales of Xillia / Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nEin einziges schlichtes Kneipengericht als ruhiges Stillleben auf einem alten groben Holztisch: Eine schlichte irdene Suppenschüssel mit dünner klarer bernsteinfarbener Fischbrühe, wenig Lauch, Rübenstückchen und einzelnen weißen Fischflocken. Eine kleine grobe Brotscheibe liegt daneben. Deutlich dünner als ein Eintopf. Ganzer Teller beziehungsweise ganze Schüssel vollständig sichtbar. Kleiner Hintergrund mit einfacher Kneipenwand, ruhige Dreiviertelansicht leicht von oben, wenig Zubehör. Günstige Fischer- und Matrosenküche, keine Silberbestecke, keine Kräuterblüten, keine feine Gastronomie. Referenz nur Materialfarben und Anime-Zeichenstil des Hauses. Vertikal2:3 mit angenehmem Rand, keine Menschen, keine Hände, kein Rahmen, keine Schrift, kein Wasserzeichen."
+      "prompt": "Use case: stylized-concept. Create ONE square 1:1 fantasy RPG inventory item illustration: Eine schlichte irdene Suppenschüssel mit dünner klarer bernsteinfarbener Fischbrühe, wenig Lauch, Rübenstückchen und einzelnen weißen Fischflocken. Eine kleine grobe Brotscheibe liegt daneben. Deutlich dünner als ein Eintopf.. Reference 1 defines the item's exact DESIGN, materials, colors and any authentic house emblem. Reference 2 defines the ITEM ART STYLE only: hand-painted illustrated fantasy inventory art, painterly textured metal, leather, wood and cloth, crisp dark outlines, soft simplified shading, muted warm colors, gentle illustrated highlights, readable details and a clear silhouette at small thumbnail size. Not photorealistic, not CGI or a glossy 3D render. Preserve the item's design and heraldry from reference 1; never copy the symbols or house colors of the style reference. Show the entire isolated object, centered and large within the square, with about 10% clear margin on all sides. Slight three-quarter view where appropriate; long weapons may run diagonally from lower-left handle to upper-right tip. TRUE transparent PNG alpha background; at most a very faint soft BLACK contact shadow immediately beneath the object. No person, hands, mannequin, scenery, floor, stand, frame, text, watermark or painted checkerboard. Do not add unrelated objects.\nAsset type: a single medieval meal INVENTORY ICON. Exact food design and portion are defined by the recipe above. The attached food image is reference 1 for the INVENTORY DRAWING STYLE and isolated presentation only, NOT its bread, cheese or ingredient design; reference 2 is an additional rendering-style reference ONLY. Do not copy armor, emblems, ornaments or house colors. Show only the specified serving in its simple plate/bowl, including ONLY the explicitly specified sides, grouped compactly as one inventory item. A food bundle may use its specified linen wrapping instead of a plate. Entire plate/bowl/bundle visible, centered, slight view from above, comfortable clear margin on all sides. Real transparent PNG outside the item and in open gaps. Modest food quantities, rustic worn wood or plain earthenware, no luxury garnish. No table, room, tavern wall, scenery, backdrop, ground, scenery vignette, extra props, cutlery, glasses, people, steam cloud, border, labels or text. Do not illustrate a scene or an anime still life. Use hand-painted fantasy item art with crisp dark outlines and simplified painterly shading.",
+      "revision": 2,
+      "iterations": [
+        {
+          "id": "hafensuppe",
+          "destination": "AleriaAlmanach/assets/kleiner-durst/food/hafensuppe.png",
+          "transparent": false,
+          "references": [
+            "E:/Aleria/AleriaAlmanach/assets/kleiner-durst/scenes/schankstube.png"
+          ],
+          "prompt": "Bildformat 2:3. Tales of Xillia / Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nEin einziges schlichtes Kneipengericht als ruhiges Stillleben auf einem alten groben Holztisch: Eine schlichte irdene Suppenschüssel mit dünner klarer bernsteinfarbener Fischbrühe, wenig Lauch, Rübenstückchen und einzelnen weißen Fischflocken. Eine kleine grobe Brotscheibe liegt daneben. Deutlich dünner als ein Eintopf. Ganzer Teller beziehungsweise ganze Schüssel vollständig sichtbar. Kleiner Hintergrund mit einfacher Kneipenwand, ruhige Dreiviertelansicht leicht von oben, wenig Zubehör. Günstige Fischer- und Matrosenküche, keine Silberbestecke, keine Kräuterblüten, keine feine Gastronomie. Referenz nur Materialfarben und Anime-Zeichenstil des Hauses. Vertikal2:3 mit angenehmem Rand, keine Menschen, keine Hände, kein Rahmen, keine Schrift, kein Wasserzeichen.",
+          "status": "rejected",
+          "reason": "User correction: dishes must be isolated inventory icons, never scene illustrations."
+        }
+      ]
     },
     {
       "id": "ganzer-hering",
+      "key": "ganzer-hering",
+      "kind": "food",
       "destination": "AleriaAlmanach/assets/kleiner-durst/food/ganzer-hering.png",
-      "transparent": false,
+      "stylePreset": "fantasy-inventory-item",
+      "aspectRatio": "1:1",
+      "transparent": true,
       "references": [
-        "E:/Aleria/AleriaAlmanach/assets/kleiner-durst/scenes/schankstube.png"
+        "AleriaAlmanach/assets/klingende-krone/goods/haferkaese.png",
+        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
       ],
-      "prompt": "Bildformat 2:3. Tales of Xillia / Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nEin einziges schlichtes Kneipengericht als ruhiges Stillleben auf einem alten groben Holztisch: Ein kleiner ganzer gegarter Hering mit Kopf und Schwanz, matter silbergrauer Haut, auf einem einfachen abgenutzten ovalen Holzteller, daneben nur wenig gekochter Kohl und zwei kleine Rübenstücke. Kein riesiger Edelfisch, kein Filet, kein reiches Mahl. Ganzer Teller beziehungsweise ganze Schüssel vollständig sichtbar. Kleiner Hintergrund mit einfacher Kneipenwand, ruhige Dreiviertelansicht leicht von oben, wenig Zubehör. Günstige Fischer- und Matrosenküche, keine Silberbestecke, keine Kräuterblüten, keine feine Gastronomie. Referenz nur Materialfarben und Anime-Zeichenstil des Hauses. Vertikal2:3 mit angenehmem Rand, keine Menschen, keine Hände, kein Rahmen, keine Schrift, kein Wasserzeichen."
+      "prompt": "Use case: stylized-concept. Create ONE square 1:1 fantasy RPG inventory item illustration: Ein kleiner ganzer gegarter Hering mit Kopf und Schwanz, matter silbergrauer Haut, auf einem einfachen abgenutzten ovalen Holzteller, daneben nur wenig gekochter Kohl und zwei kleine Rübenstücke. Kein riesiger Edelfisch, kein Filet, kein reiches Mahl.. Reference 1 defines the item's exact DESIGN, materials, colors and any authentic house emblem. Reference 2 defines the ITEM ART STYLE only: hand-painted illustrated fantasy inventory art, painterly textured metal, leather, wood and cloth, crisp dark outlines, soft simplified shading, muted warm colors, gentle illustrated highlights, readable details and a clear silhouette at small thumbnail size. Not photorealistic, not CGI or a glossy 3D render. Preserve the item's design and heraldry from reference 1; never copy the symbols or house colors of the style reference. Show the entire isolated object, centered and large within the square, with about 10% clear margin on all sides. Slight three-quarter view where appropriate; long weapons may run diagonally from lower-left handle to upper-right tip. TRUE transparent PNG alpha background; at most a very faint soft BLACK contact shadow immediately beneath the object. No person, hands, mannequin, scenery, floor, stand, frame, text, watermark or painted checkerboard. Do not add unrelated objects.\nAsset type: a single medieval meal INVENTORY ICON. Exact food design and portion are defined by the recipe above. The attached food image is reference 1 for the INVENTORY DRAWING STYLE and isolated presentation only, NOT its bread, cheese or ingredient design; reference 2 is an additional rendering-style reference ONLY. Do not copy armor, emblems, ornaments or house colors. Show only the specified serving in its simple plate/bowl, including ONLY the explicitly specified sides, grouped compactly as one inventory item. A food bundle may use its specified linen wrapping instead of a plate. Entire plate/bowl/bundle visible, centered, slight view from above, comfortable clear margin on all sides. Real transparent PNG outside the item and in open gaps. Modest food quantities, rustic worn wood or plain earthenware, no luxury garnish. No table, room, tavern wall, scenery, backdrop, ground, scenery vignette, extra props, cutlery, glasses, people, steam cloud, border, labels or text. Do not illustrate a scene or an anime still life. Use hand-painted fantasy item art with crisp dark outlines and simplified painterly shading.",
+      "revision": 2,
+      "iterations": [
+        {
+          "id": "ganzer-hering",
+          "destination": "AleriaAlmanach/assets/kleiner-durst/food/ganzer-hering.png",
+          "transparent": false,
+          "references": [
+            "E:/Aleria/AleriaAlmanach/assets/kleiner-durst/scenes/schankstube.png"
+          ],
+          "prompt": "Bildformat 2:3. Tales of Xillia / Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nEin einziges schlichtes Kneipengericht als ruhiges Stillleben auf einem alten groben Holztisch: Ein kleiner ganzer gegarter Hering mit Kopf und Schwanz, matter silbergrauer Haut, auf einem einfachen abgenutzten ovalen Holzteller, daneben nur wenig gekochter Kohl und zwei kleine Rübenstücke. Kein riesiger Edelfisch, kein Filet, kein reiches Mahl. Ganzer Teller beziehungsweise ganze Schüssel vollständig sichtbar. Kleiner Hintergrund mit einfacher Kneipenwand, ruhige Dreiviertelansicht leicht von oben, wenig Zubehör. Günstige Fischer- und Matrosenküche, keine Silberbestecke, keine Kräuterblüten, keine feine Gastronomie. Referenz nur Materialfarben und Anime-Zeichenstil des Hauses. Vertikal2:3 mit angenehmem Rand, keine Menschen, keine Hände, kein Rahmen, keine Schrift, kein Wasserzeichen.",
+          "status": "rejected",
+          "reason": "User correction: dishes must be isolated inventory icons, never scene illustrations."
+        }
+      ]
     },
     {
       "id": "monatsfang",
+      "key": "monatsfang",
+      "kind": "food",
       "destination": "AleriaAlmanach/assets/kleiner-durst/food/monatsfang.png",
-      "transparent": false,
+      "stylePreset": "fantasy-inventory-item",
+      "aspectRatio": "1:1",
+      "transparent": true,
       "references": [
-        "E:/Aleria/AleriaAlmanach/assets/kleiner-durst/scenes/schankstube.png"
+        "AleriaAlmanach/assets/klingende-krone/goods/haferkaese.png",
+        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
       ],
-      "prompt": "Bildformat 2:3. Tales of Xillia / Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nEin einziges schlichtes Kneipengericht als ruhiges Stillleben auf einem alten groben Holztisch: Ein bescheidenes aber appetitliches goldbraun in der Pfanne gebratenes Schollenfilet, kleine angebratene Zwiebelstücke und wenig Wurzelgemüse auf einem schlichten braunen Keramikteller. Für diese Kneipe ein seltener besonderer Fisch, trotzdem keine feine Restaurantgarnitur. Ganzer Teller beziehungsweise ganze Schüssel vollständig sichtbar. Kleiner Hintergrund mit einfacher Kneipenwand, ruhige Dreiviertelansicht leicht von oben, wenig Zubehör. Günstige Fischer- und Matrosenküche, keine Silberbestecke, keine Kräuterblüten, keine feine Gastronomie. Referenz nur Materialfarben und Anime-Zeichenstil des Hauses. Vertikal2:3 mit angenehmem Rand, keine Menschen, keine Hände, kein Rahmen, keine Schrift, kein Wasserzeichen."
+      "prompt": "Use case: stylized-concept. Create ONE square 1:1 fantasy RPG inventory item illustration: Ein bescheidenes aber appetitliches goldbraun in der Pfanne gebratenes Schollenfilet, kleine angebratene Zwiebelstücke und wenig Wurzelgemüse auf einem schlichten braunen Keramikteller. Für diese Kneipe ein seltener besonderer Fisch, trotzdem keine feine Restaurantgarnitur.. Reference 1 defines the item's exact DESIGN, materials, colors and any authentic house emblem. Reference 2 defines the ITEM ART STYLE only: hand-painted illustrated fantasy inventory art, painterly textured metal, leather, wood and cloth, crisp dark outlines, soft simplified shading, muted warm colors, gentle illustrated highlights, readable details and a clear silhouette at small thumbnail size. Not photorealistic, not CGI or a glossy 3D render. Preserve the item's design and heraldry from reference 1; never copy the symbols or house colors of the style reference. Show the entire isolated object, centered and large within the square, with about 10% clear margin on all sides. Slight three-quarter view where appropriate; long weapons may run diagonally from lower-left handle to upper-right tip. TRUE transparent PNG alpha background; at most a very faint soft BLACK contact shadow immediately beneath the object. No person, hands, mannequin, scenery, floor, stand, frame, text, watermark or painted checkerboard. Do not add unrelated objects.\nAsset type: a single medieval meal INVENTORY ICON. Exact food design and portion are defined by the recipe above. The attached food image is reference 1 for the INVENTORY DRAWING STYLE and isolated presentation only, NOT its bread, cheese or ingredient design; reference 2 is an additional rendering-style reference ONLY. Do not copy armor, emblems, ornaments or house colors. Show only the specified serving in its simple plate/bowl, including ONLY the explicitly specified sides, grouped compactly as one inventory item. A food bundle may use its specified linen wrapping instead of a plate. Entire plate/bowl/bundle visible, centered, slight view from above, comfortable clear margin on all sides. Real transparent PNG outside the item and in open gaps. Modest food quantities, rustic worn wood or plain earthenware, no luxury garnish. No table, room, tavern wall, scenery, backdrop, ground, scenery vignette, extra props, cutlery, glasses, people, steam cloud, border, labels or text. Do not illustrate a scene or an anime still life. Use hand-painted fantasy item art with crisp dark outlines and simplified painterly shading.",
+      "revision": 2,
+      "iterations": [
+        {
+          "id": "monatsfang",
+          "destination": "AleriaAlmanach/assets/kleiner-durst/food/monatsfang.png",
+          "transparent": false,
+          "references": [
+            "E:/Aleria/AleriaAlmanach/assets/kleiner-durst/scenes/schankstube.png"
+          ],
+          "prompt": "Bildformat 2:3. Tales of Xillia / Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nEin einziges schlichtes Kneipengericht als ruhiges Stillleben auf einem alten groben Holztisch: Ein bescheidenes aber appetitliches goldbraun in der Pfanne gebratenes Schollenfilet, kleine angebratene Zwiebelstücke und wenig Wurzelgemüse auf einem schlichten braunen Keramikteller. Für diese Kneipe ein seltener besonderer Fisch, trotzdem keine feine Restaurantgarnitur. Ganzer Teller beziehungsweise ganze Schüssel vollständig sichtbar. Kleiner Hintergrund mit einfacher Kneipenwand, ruhige Dreiviertelansicht leicht von oben, wenig Zubehör. Günstige Fischer- und Matrosenküche, keine Silberbestecke, keine Kräuterblüten, keine feine Gastronomie. Referenz nur Materialfarben und Anime-Zeichenstil des Hauses. Vertikal2:3 mit angenehmem Rand, keine Menschen, keine Hände, kein Rahmen, keine Schrift, kein Wasserzeichen.",
+          "status": "rejected",
+          "reason": "User correction: dishes must be isolated inventory icons, never scene illustrations."
+        }
+      ]
     }
-  ]
+  ],
+  "foodStyleCorrectedAt": "2026-10-19",
+  "foodStylePreset": "fantasy-inventory-item"
 }

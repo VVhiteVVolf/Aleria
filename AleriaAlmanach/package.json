@@ -6,6 +6,13 @@
   "description": "Aleria Almanach mit szenengebundenem 3D-Würfelsystem",
   "scripts": {
     "dev": "vite --host 127.0.0.1",
+    "build:economy": "node scripts/build-economy-calculator.mjs",
+    "build:gwynthor-geography": "node scripts/build-gwynthor-geography.mjs",
+    "check:gwynthor-geography": "node scripts/build-gwynthor-geography.mjs --check",
+    "check:economy": "node scripts/build-economy-calculator.mjs --check",
+    "test:economy": "node --test --experimental-test-isolation=none tests/economy-calculator.test.mjs tests/economy-price-review.test.mjs",
+    "build:prices": "node scripts/build-item-register.mjs && node scripts/build-economy-price-reference.mjs && node scripts/build-economy-price-review.mjs",
+    "check:prices": "node scripts/build-economy-price-reference.mjs --check && node scripts/build-economy-price-review.mjs --check",
     "build:gameplay-guides": "node \"../Gameplay Guide/scripts/build-guides.mjs\"",
     "check:gameplay-guides": "node \"../Gameplay Guide/scripts/build-guides.mjs\" --check",
     "test:gameplay-guides": "node --test tests/ylva-personal-duel.test.mjs \"../Gameplay Guide/tests/guide.test.mjs\"",

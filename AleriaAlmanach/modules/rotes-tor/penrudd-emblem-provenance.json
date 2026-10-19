@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-10-19",
+  "preset": "fantasy-heraldic-emblem",
+  "familyId": "haus-penrudd",
+  "selection": "Rotes offenes Holztor mit cremefarbener Laterne auf dunkelbraunem Grund, dunkler Eisenring mit Nieten und vier schlichten Knotenzierden.",
+  "references": [
+    "Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Vann.png",
+    "Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Raves.png"
+  ],
+  "generator": "image_gen",
+  "original": "C:/Users/fhg_r/.codex/generated_images/01a1464a-a20b-7c00-a9de-c0b8c10e3b32/exec-bb006efb-122e-4c3e-84f8-ace0feeb1e94.png",
+  "asset": "Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Bannkreis Gwynthor/Penrudd.png",
+  "prompt": "# Universeller Wappen-Prompt\n\n**Wappenname:** Haus Penrudd\n\n**Zentrales Symbol:** Ein rotes, offen stehendes hölzernes Hoftor mit zwei klar erkennbar geöffneten Torflügeln. Mittig innerhalb der Toröffnung hängt EINE cremefarbene Laterne, groß und einfach lesbar. Hinter Tor und Laterne bleibt die dunkelbraune bemalte Holzfläche durchgehend sichtbar und vollständig deckend. Flaches, geschnitztes und bemaltes Familienzeichen einer bodenständigen cenyrischen Wirts- und Bauernfamilie, keine Landschaft und keine perspektivische Szene.\n\n**Farbpalette:** gedecktes Ziegelrot · warmes Cremeweiß · Dunkelbraun\n\n**Wappenform:** ZIRKULAR – IMMER ein exakter Kreis, damit das Wappen in die vorhandenen Frames passt. Keine Spitzschilde oder ovalen Außenkonturen.\n\n### Gestaltung\n\nEin hochwertiges mittelalterliches Wappen im nordisch-keltischen Fantasy-Heraldikstil. Inspiriert von historischen bemalten Holzschilden, nordischer Ornamentik und traditionellen Clanwappen.\n\nDas zentrale Symbol ist groß, ausdrucksstark und detailliert, gleichzeitig aber klar heraldisch stilisiert. Kräftige dunkle Konturen, sauber getrennte Farbflächen, markante Silhouetten und ausgewogene Proportionen.\n\nDas gesamte Motiv muss vollständig innerhalb des Wappens liegen. Keine abgeschnittenen Figuren, Waffen, Flügel, Hörner oder Ornamente.\n\n### Material und Oberflächen\n\nDie innere Wappenfläche besteht aus bemalten Holzbrettern mit dezenter, sichtbarer Holzmaserung. Die Farben wirken wie auf Holz aufgetragene mittelalterliche Pigmente.\n\nDer Außenrahmen besteht aus dunklem, matt geschmiedetem EISEN mit kleinen Nieten mit leichter Materialstruktur, kleinen Gebrauchsspuren und einer vollständig geschlossenen Außenkontur.\n\nDas Wappen soll handwerklich hochwertig, plastisch und historisch glaubwürdig wirken. Keine moderne, minimalistische Logoästhetik, keine Fotorealistik und keine übertriebenen 3D-Effekte.\n\n### Verzierungen\n\nGenau vier kleine schlichte keltische Knotenzierden im geschlossenen Eisenring, gleichmäßig oben, rechts, unten und links angeordnet. Kein Gold, Silber, Wappenmantel, Helm, Krone oder Schrift.\n\nBei zirkularen Wappen können die Verzierungen gleichmäßig im Außenring verlaufen. Sie dürfen das zentrale Motiv nicht überlagern.\n\n### Komposition\n\nQuadratisches Bildformat 1:1. Das vollständige Wappen steht mittig und wird frontal gezeigt.\n\nDas Wappen nimmt ungefähr 85–90 % der Bildbreite ein. Alle Elemente bleiben vollständig innerhalb seiner äußeren Begrenzung.\n\n### Transparenz – zwingend einhalten\n\n**Der gesamte Bereich außerhalb des äußersten Wappenrahmens muss vollständig transparent sein (Alpha-Kanal = 0).**\n\n- Keine Hintergrundfarbe, kein Weiß, Schwarz oder Magenta außerhalb des Wappens.\n- Kein Hintergrundbild, keine Landschaft, keine Wand und keine dekorativen Elemente außerhalb des Rahmens.\n- Keine Schlagschatten, Glows oder Lichtreflexe außerhalb der Wappenkontur.\n- Keine über den Rahmen hinausragenden Ornamente oder Symbole.\n- Die äußerste Wappenkante muss sauber und geschlossen sein.\n- **Die gesamte Wappenfläche innerhalb des Außenrahmens muss vollständig deckend bleiben (Alpha-Kanal = 255).**\n- Keine transparenten Löcher zwischen Symbolen, Ornamenten oder innerhalb der bemalten Holzfläche.\n- Die Innenfläche des Wappens muss ihre vorgesehene Farbe vollständig behalten.\n\n**WICHTIG:** Ausschließlich der Bereich außerhalb der äußeren Wappenkontur ist transparent. Das Wappen selbst, einschließlich Holzfläche, Rahmen, Symbolen und sämtlichen Zwischenräumen, bleibt vollständig sichtbar und deckend.\n\n### Ausgabe\n\nHochauflösendes PNG mit echtem transparentem Hintergrund (RGBA), quadratisches Format 1:1. Keine simulierte Transparenz und kein Schachbrettmuster als Bildhintergrund.\n\nReferenzen 1 und 2 sind tatsächlich vorhandene Gwynthorer Bürgerwappen aus der Stammbaum-Liste (Vann und Raves). Nur die bemalte Holzoberfläche, handgefertigte Anmutung, klare heraldische Darstellung und exakte Kreisform übernehmen. Nicht ihre Motive, Goldrahmen oder aufwendige Ornamentik übernehmen. Penrudd bleibt erheblich schlichter: große matte Farbflächen, dezente Holzmaserung und ein dünner, vollständig geschlossener Eisenrahmen. Bitte das gesamte Innere lückenlos deckend rendern. Die Laterne ist als cremefarben bemaltes Holzsymbol dargestellt, ohne Lichtschein, ohne transparente Fensterscheiben. Keine Schrift.",
+  "alphaCleanup": {
+    "status": "complete",
+    "authorization": "User explicitly approved on 2026-10-19: Ja, Alpha und Rand bereinigen.",
+    "kind": "alpha-and-transparent-padding",
+    "originalRgbPreserved": true,
+    "originalFilePreserved": true,
+    "originalSize": [
+      1254,
+      1254
+    ],
+    "finalSize": [
+      1329,
+      1329
+    ],
+    "offset": [
+      39,
+      46
+    ],
+    "originalCircleCenter": [
+      625,
+      618
+    ],
+    "finalCircleCenter": [
+      664,
+      664
+    ],
+    "radius": 577,
+    "alphaValues": [
+      0,
+      255
+    ],
+    "insideOpaque": true,
+    "outsideTransparent": true,
+    "occupancy": 0.869074,
+    "originalSha256": "998d8bd7f3302e6c55261fb9a41b3f5b1c76e4fec35d44596ec56d9111b391c9",
+    "finalSha256": "e6062c30b0ac5627cf77e5ed37d93f49c61e9081c52d26f5494927ec76c6653d"
+  }
+}

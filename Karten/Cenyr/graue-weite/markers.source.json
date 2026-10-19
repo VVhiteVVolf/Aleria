@@ -1,0 +1,2519 @@
+{
+  "mapId": "cenyr-graue-weite",
+  "imageSize": [
+    4096,
+    2492
+  ],
+  "coordinateOrigin": "bottom-left",
+  "sourceMapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+  "markers": [
+    {
+      "id": "graue-weite-085c5b1b-7596-40ef-a7e3-e38a2f093429",
+      "title": "Llyndran",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "baronie-graukueste",
+      "house": "Haus Morfil O'Talsarn",
+      "x": 408,
+      "y": 1072,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "085c5b1b-7596-40ef-a7e3-e38a2f093429",
+        "url": "https://www.worldanvil.com/world/map/marker/085c5b1b-7596-40ef-a7e3-e38a2f093429/edit",
+        "title": "Llyndran",
+        "coordinates": {
+          "x": 408,
+          "y": 1072,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-09d514f0-adc7-4b7c-b8c9-6dd5aae3307e",
+      "title": "Eichenhain Lager",
+      "category": "Jägerlager",
+      "templateId": "militaer",
+      "icon": "/Karten/assets/icons/welt/j-gerlager.png",
+      "territoryId": "baronie-graukueste",
+      "house": "Haus Morfil O'Talsarn",
+      "x": 352,
+      "y": 428,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "09d514f0-adc7-4b7c-b8c9-6dd5aae3307e",
+        "url": "https://www.worldanvil.com/world/map/marker/09d514f0-adc7-4b7c-b8c9-6dd5aae3307e/edit",
+        "title": "Eichenhain Lager",
+        "coordinates": {
+          "x": 352,
+          "y": 428,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-0acb2c1c-8d9a-4487-9b5c-8b14bfe735f5",
+      "title": "Rhygor",
+      "category": "Waldsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/waldsiedlung.png",
+      "territoryId": "herrschaft-gwialen",
+      "house": "Haus Gwialen O'Tredegar",
+      "x": 2488,
+      "y": 2008,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "0acb2c1c-8d9a-4487-9b5c-8b14bfe735f5",
+        "url": "https://www.worldanvil.com/world/map/marker/0acb2c1c-8d9a-4487-9b5c-8b14bfe735f5/edit",
+        "title": "Rhygor",
+        "coordinates": {
+          "x": 2488,
+          "y": 2008,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-0ad4848b-8bc3-4f50-9b98-3175e2d5e2db",
+      "title": "Caern",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung.png",
+      "territoryId": "baronie-achatsee",
+      "house": "Haus Coedwig O'Llanfyn",
+      "x": 1755,
+      "y": 1126,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "0ad4848b-8bc3-4f50-9b98-3175e2d5e2db",
+        "url": "https://www.worldanvil.com/world/map/marker/0ad4848b-8bc3-4f50-9b98-3175e2d5e2db/edit",
+        "title": "Caern",
+        "coordinates": {
+          "x": 1755,
+          "y": 1126,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-0fbfb0b4-c64b-4237-a861-296bf81e3afc",
+      "title": "Eldown",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "herrschaft-blaidd",
+      "house": "Haus Blaidd O'Tredegar",
+      "x": 2264,
+      "y": 1873,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "0fbfb0b4-c64b-4237-a861-296bf81e3afc",
+        "url": "https://www.worldanvil.com/world/map/marker/0fbfb0b4-c64b-4237-a861-296bf81e3afc/edit",
+        "title": "Eldown",
+        "coordinates": {
+          "x": 2264,
+          "y": 1873,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-1169f79f-66dd-47c1-bd2f-96d345806a2c",
+      "title": "Der Schwarze Kelch",
+      "category": "Taverne",
+      "templateId": "gastbetrieb",
+      "icon": "/Karten/assets/icons/welt/taverne.png",
+      "territoryId": "baronie-achatsee",
+      "house": "Haus Coedwig O'Llanfyn",
+      "x": 2067,
+      "y": 1213,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "1169f79f-66dd-47c1-bd2f-96d345806a2c",
+        "url": "https://www.worldanvil.com/world/map/marker/1169f79f-66dd-47c1-bd2f-96d345806a2c/edit",
+        "title": "Der Schwarze Kelch",
+        "coordinates": {
+          "x": 2067,
+          "y": 1213,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-1905a358-d124-47a9-933a-b49b595b064c",
+      "title": "Cefnmor",
+      "category": "Klostersiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/klostersiedlung.png",
+      "territoryId": "baronie-graukueste",
+      "house": "Haus Morfil O'Talsarn",
+      "x": 737,
+      "y": 1766,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "1905a358-d124-47a9-933a-b49b595b064c",
+        "url": "https://www.worldanvil.com/world/map/marker/1905a358-d124-47a9-933a-b49b595b064c/edit",
+        "title": "Cefnmor",
+        "coordinates": {
+          "x": 737,
+          "y": 1766,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-1bd5800a-9dd6-4e00-8f7c-75eeeec103b8",
+      "title": "Vyndar",
+      "category": "Heiligtum",
+      "templateId": "institution",
+      "icon": "/Karten/assets/icons/welt/heiligtum.png",
+      "territoryId": "baronie-silberwald",
+      "house": "Haus Draenog O'Llanforwyn",
+      "x": 2908,
+      "y": 1574,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "1bd5800a-9dd6-4e00-8f7c-75eeeec103b8",
+        "url": "https://www.worldanvil.com/world/map/marker/1bd5800a-9dd6-4e00-8f7c-75eeeec103b8/edit",
+        "title": "Vyndar",
+        "coordinates": {
+          "x": 2908,
+          "y": 1574,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-1ed394cc-cc3b-492d-a0c2-59b5efbfd451",
+      "title": "Caer Asgwrn",
+      "category": "Burg",
+      "templateId": "militaer",
+      "icon": "/Karten/assets/icons/welt/gro-e-burg.png",
+      "territoryId": "herrschaft-skelettkueste",
+      "house": "Haus Lyfant O'Caer Asgwrn",
+      "x": 3856,
+      "y": 1690,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "1ed394cc-cc3b-492d-a0c2-59b5efbfd451",
+        "url": "https://www.worldanvil.com/world/map/marker/1ed394cc-cc3b-492d-a0c2-59b5efbfd451/edit",
+        "title": "Caer Asgwrn",
+        "coordinates": {
+          "x": 3856,
+          "y": 1690,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-228a01cd-ed6f-4917-8394-b0430b59b09d",
+      "title": "Aeronwaith",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "baronie-graukueste",
+      "house": "Haus Morfil O'Talsarn",
+      "x": 659,
+      "y": 503,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "228a01cd-ed6f-4917-8394-b0430b59b09d",
+        "url": "https://www.worldanvil.com/world/map/marker/228a01cd-ed6f-4917-8394-b0430b59b09d/edit",
+        "title": "Aeronwaith",
+        "coordinates": {
+          "x": 659,
+          "y": 503,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-26389bd2-0e7c-4b3a-9e61-c7e4005c550f",
+      "title": "Esgar",
+      "category": "Waldsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/waldsiedlung.png",
+      "territoryId": "baronie-eichenlicht",
+      "house": "Haus Wivern O'Coedlyn",
+      "x": 3516,
+      "y": 565,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "26389bd2-0e7c-4b3a-9e61-c7e4005c550f",
+        "url": "https://www.worldanvil.com/world/map/marker/26389bd2-0e7c-4b3a-9e61-c7e4005c550f/edit",
+        "title": "Esgar",
+        "coordinates": {
+          "x": 3516,
+          "y": 565,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-271f4238-dfc7-4445-8ee6-94549fc2a264",
+      "title": "Drynth",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung.png",
+      "territoryId": "herrschaft-illygoden",
+      "house": "Haus Illygoden O'Tredegar",
+      "x": 1946,
+      "y": 2025,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "271f4238-dfc7-4445-8ee6-94549fc2a264",
+        "url": "https://www.worldanvil.com/world/map/marker/271f4238-dfc7-4445-8ee6-94549fc2a264/edit",
+        "title": "Drynth",
+        "coordinates": {
+          "x": 1946,
+          "y": 2025,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-28df3f49-7efd-4617-9874-bf0fca0a3dc1",
+      "title": "Dynwyn",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "herrschaft-gwialen",
+      "house": "Haus Gwialen O'Tredegar",
+      "x": 1979,
+      "y": 2258,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "28df3f49-7efd-4617-9874-bf0fca0a3dc1",
+        "url": "https://www.worldanvil.com/world/map/marker/28df3f49-7efd-4617-9874-bf0fca0a3dc1/edit",
+        "title": "Dynwyn",
+        "coordinates": {
+          "x": 1979,
+          "y": 2258,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-2c045b60-7e6d-4fcb-ad17-d3d4a8cf0b04",
+      "title": "Castell Lwydfaen",
+      "category": "Burg",
+      "templateId": "militaer",
+      "icon": "/Karten/assets/icons/welt/gro-e-burg.png",
+      "territoryId": "herrschaft-gwialen",
+      "house": "Haus Gwialen O'Tredegar",
+      "x": 2117,
+      "y": 1996,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "2c045b60-7e6d-4fcb-ad17-d3d4a8cf0b04",
+        "url": "https://www.worldanvil.com/world/map/marker/2c045b60-7e6d-4fcb-ad17-d3d4a8cf0b04/edit",
+        "title": "Castell Lwydfaen",
+        "coordinates": {
+          "x": 2117,
+          "y": 1996,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-2e370327-0483-40c4-8330-e8b2d8661f6d",
+      "title": "Cwmyr",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "baronie-achatsee",
+      "house": "Haus Coedwig O'Llanfyn",
+      "x": 1326,
+      "y": 682,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "2e370327-0483-40c4-8330-e8b2d8661f6d",
+        "url": "https://www.worldanvil.com/world/map/marker/2e370327-0483-40c4-8330-e8b2d8661f6d/edit",
+        "title": "Cwmyr",
+        "coordinates": {
+          "x": 1326,
+          "y": 682,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-2feb268b-e6ed-4911-96a7-346499cd37d5",
+      "title": "Llynor",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung.png",
+      "territoryId": "herrschaft-illygoden",
+      "house": "Haus Illygoden O'Tredegar",
+      "x": 1695,
+      "y": 1972,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "2feb268b-e6ed-4911-96a7-346499cd37d5",
+        "url": "https://www.worldanvil.com/world/map/marker/2feb268b-e6ed-4911-96a7-346499cd37d5/edit",
+        "title": "Llynor",
+        "coordinates": {
+          "x": 1695,
+          "y": 1972,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-2fff4b56-85f7-4c1e-84ca-bd2495fdb715",
+      "title": "Coedlyn",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "baronie-eichenlicht",
+      "house": "Haus Wivern O'Coedlyn",
+      "x": 2756,
+      "y": 615,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "2fff4b56-85f7-4c1e-84ca-bd2495fdb715",
+        "url": "https://www.worldanvil.com/world/map/marker/2fff4b56-85f7-4c1e-84ca-bd2495fdb715/edit",
+        "title": "Coedlyn",
+        "coordinates": {
+          "x": 2756,
+          "y": 615,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-3157f4fb-4adb-4e19-960f-b69b0ea97063",
+      "title": "Caelor",
+      "category": "Klostersiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/klostersiedlung.png",
+      "territoryId": "baronie-silberwald",
+      "house": "Haus Draenog O'Llanforwyn",
+      "x": 3149,
+      "y": 811,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "3157f4fb-4adb-4e19-960f-b69b0ea97063",
+        "url": "https://www.worldanvil.com/world/map/marker/3157f4fb-4adb-4e19-960f-b69b0ea97063/edit",
+        "title": "Caelor",
+        "coordinates": {
+          "x": 3149,
+          "y": 811,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-323a80a3-a862-4472-8e2d-cd40e5d4f975",
+      "title": "Cewlyn",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "herrschaft-gwaedlyd",
+      "house": "Haus Gwaedlyd O'Tredegar",
+      "x": 1509,
+      "y": 2108,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "323a80a3-a862-4472-8e2d-cd40e5d4f975",
+        "url": "https://www.worldanvil.com/world/map/marker/323a80a3-a862-4472-8e2d-cd40e5d4f975/edit",
+        "title": "Cewlyn",
+        "coordinates": {
+          "x": 1509,
+          "y": 2108,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-3246899a-6b1d-4a89-b3f4-f348571dbc82",
+      "title": "Ard Ghallon",
+      "category": "Ruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/antike-ruine.png",
+      "territoryId": "baronie-schimmerkueste",
+      "house": "Haus Pysgod O'Tredegar",
+      "x": 1135,
+      "y": 2183,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "3246899a-6b1d-4a89-b3f4-f348571dbc82",
+        "url": "https://www.worldanvil.com/world/map/marker/3246899a-6b1d-4a89-b3f4-f348571dbc82/edit",
+        "title": "Ard Ghallon",
+        "coordinates": {
+          "x": 1135,
+          "y": 2183,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-32a565bd-3330-42a9-9b9e-aa69a614adf8",
+      "title": "Burg Windfeld",
+      "category": "Burg",
+      "templateId": "militaer",
+      "icon": "/Karten/assets/icons/welt/gro-e-burg.png",
+      "territoryId": "baronie-eichenlicht",
+      "house": "Haus Wivern O'Coedlyn",
+      "x": 3020,
+      "y": 371,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "32a565bd-3330-42a9-9b9e-aa69a614adf8",
+        "url": "https://www.worldanvil.com/world/map/marker/32a565bd-3330-42a9-9b9e-aa69a614adf8/edit",
+        "title": "Burg - Windfeld",
+        "coordinates": {
+          "x": 3020,
+          "y": 371,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "nameResolution": "Eigenname im vollständigen Markertext"
+      }
+    },
+    {
+      "id": "graue-weite-35e778c1-17da-4404-80a8-b6e3bba3c42d",
+      "title": "Trennar",
+      "category": "Klostersiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/klostersiedlung.png",
+      "territoryId": "herrschaft-brithyll",
+      "house": "Haus Brithyll O'Tredegar",
+      "x": 1030,
+      "y": 1848,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "35e778c1-17da-4404-80a8-b6e3bba3c42d",
+        "url": "https://www.worldanvil.com/world/map/marker/35e778c1-17da-4404-80a8-b6e3bba3c42d/edit",
+        "title": "Trennar",
+        "coordinates": {
+          "x": 1030,
+          "y": 1848,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-39e9513d-f9eb-4843-a3a5-19eb6c2f18c2",
+      "title": "Tharog",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung.png",
+      "territoryId": "herrschaft-gwialen",
+      "house": "Haus Gwialen O'Tredegar",
+      "x": 2149,
+      "y": 2093,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "39e9513d-f9eb-4843-a3a5-19eb6c2f18c2",
+        "url": "https://www.worldanvil.com/world/map/marker/39e9513d-f9eb-4843-a3a5-19eb6c2f18c2/edit",
+        "title": "Tharog",
+        "coordinates": {
+          "x": 2149,
+          "y": 2093,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-39ee1d5c-dd58-43ef-b8dd-c484b0659985",
+      "title": "Castell Arglwyd",
+      "category": "Burg",
+      "templateId": "militaer",
+      "icon": "/Karten/assets/icons/welt/gro-e-burg.png",
+      "territoryId": "baronie-graukueste",
+      "house": "Haus Morfil O'Talsarn",
+      "x": 886,
+      "y": 834,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "39ee1d5c-dd58-43ef-b8dd-c484b0659985",
+        "url": "https://www.worldanvil.com/world/map/marker/39ee1d5c-dd58-43ef-b8dd-c484b0659985/edit",
+        "title": "Castell Arglwyd",
+        "coordinates": {
+          "x": 886,
+          "y": 834,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-3b036374-5a7c-4f71-a1b2-3ccadefec123",
+      "title": "Erynd",
+      "category": "Klostersiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/klostersiedlung.png",
+      "territoryId": "baronie-silberwald",
+      "house": "Haus Draenog O'Llanforwyn",
+      "x": 3503,
+      "y": 785,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "3b036374-5a7c-4f71-a1b2-3ccadefec123",
+        "url": "https://www.worldanvil.com/world/map/marker/3b036374-5a7c-4f71-a1b2-3ccadefec123/edit",
+        "title": "Erynd",
+        "coordinates": {
+          "x": 3503,
+          "y": 785,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-43a56c7d-cae7-4dc7-8f50-9573d665b7ce",
+      "title": "Dorwyn",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung.png",
+      "territoryId": "herrschaft-illygoden",
+      "house": "Haus Illygoden O'Tredegar",
+      "x": 1851,
+      "y": 1832,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "43a56c7d-cae7-4dc7-8f50-9573d665b7ce",
+        "url": "https://www.worldanvil.com/world/map/marker/43a56c7d-cae7-4dc7-8f50-9573d665b7ce/edit",
+        "title": "Dorwyn",
+        "coordinates": {
+          "x": 1851,
+          "y": 1832,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-459baa26-00e3-4664-85fd-c2cd5ebad0c4",
+      "title": "Dolgan",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "herrschaft-blaidd",
+      "house": "Haus Blaidd O'Tredegar",
+      "x": 1322,
+      "y": 2179,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "459baa26-00e3-4664-85fd-c2cd5ebad0c4",
+        "url": "https://www.worldanvil.com/world/map/marker/459baa26-00e3-4664-85fd-c2cd5ebad0c4/edit",
+        "title": "Fischersiedlung",
+        "coordinates": {
+          "x": 1322,
+          "y": 2179,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "nameResolution": "Eigenname im vollständigen Markertext"
+      }
+    },
+    {
+      "id": "graue-weite-49585258-89e3-497b-896b-c61ac2f31933",
+      "title": "Caerdun",
+      "category": "Waldsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/waldsiedlung.png",
+      "territoryId": "herrschaft-brithyll",
+      "house": "Haus Brithyll O'Tredegar",
+      "x": 1564,
+      "y": 1539,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "49585258-89e3-497b-896b-c61ac2f31933",
+        "url": "https://www.worldanvil.com/world/map/marker/49585258-89e3-497b-896b-c61ac2f31933/edit",
+        "title": "Caerdun",
+        "coordinates": {
+          "x": 1564,
+          "y": 1539,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-4c7e6710-785c-4efc-9937-10cdd0f851dd",
+      "title": "Norrid",
+      "category": "Heiligtum",
+      "templateId": "institution",
+      "icon": "/Karten/assets/icons/welt/heiligtum.png",
+      "territoryId": "baronie-silberwald",
+      "house": "Haus Draenog O'Llanforwyn",
+      "x": 3463,
+      "y": 1514,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "4c7e6710-785c-4efc-9937-10cdd0f851dd",
+        "url": "https://www.worldanvil.com/world/map/marker/4c7e6710-785c-4efc-9937-10cdd0f851dd/edit",
+        "title": "Norrid",
+        "coordinates": {
+          "x": 3463,
+          "y": 1514,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-4ce171a9-b21e-42ce-87ab-414adfa77d8a",
+      "title": "Clywen",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "herrschaft-gwialen",
+      "house": "Haus Gwialen O'Tredegar",
+      "x": 2470,
+      "y": 2192,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "4ce171a9-b21e-42ce-87ab-414adfa77d8a",
+        "url": "https://www.worldanvil.com/world/map/marker/4ce171a9-b21e-42ce-87ab-414adfa77d8a/edit",
+        "title": "Clywen",
+        "coordinates": {
+          "x": 2470,
+          "y": 2192,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-4dbb799b-b8f5-4056-a732-5c88d9db5dc0",
+      "title": "Marwel",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung.png",
+      "territoryId": "baronie-achatsee",
+      "house": "Haus Coedwig O'Llanfyn",
+      "x": 1934,
+      "y": 998,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "4dbb799b-b8f5-4056-a732-5c88d9db5dc0",
+        "url": "https://www.worldanvil.com/world/map/marker/4dbb799b-b8f5-4056-a732-5c88d9db5dc0/edit",
+        "title": "Marwel",
+        "coordinates": {
+          "x": 1934,
+          "y": 998,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-58a2c4eb-032f-42c2-a3bf-3a7aeeadadef",
+      "title": "Dyffor",
+      "category": "Waldsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/waldsiedlung.png",
+      "territoryId": "herrschaft-skelettkueste",
+      "house": "Haus Lyfant O'Caer Asgwrn",
+      "x": 3682,
+      "y": 1822,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "58a2c4eb-032f-42c2-a3bf-3a7aeeadadef",
+        "url": "https://www.worldanvil.com/world/map/marker/58a2c4eb-032f-42c2-a3bf-3a7aeeadadef/edit",
+        "title": "Dyffor",
+        "coordinates": {
+          "x": 3682,
+          "y": 1822,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-597dcaa2-6b5e-454e-8400-7bd724e3d007",
+      "title": "Falwyth",
+      "category": "Waldsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/waldsiedlung.png",
+      "territoryId": "herrschaft-skelettkueste",
+      "house": "Haus Lyfant O'Caer Asgwrn",
+      "x": 3752,
+      "y": 1545,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "597dcaa2-6b5e-454e-8400-7bd724e3d007",
+        "url": "https://www.worldanvil.com/world/map/marker/597dcaa2-6b5e-454e-8400-7bd724e3d007/edit",
+        "title": "Falwyth",
+        "coordinates": {
+          "x": 3752,
+          "y": 1545,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-5a2f0163-5568-4270-aea5-af279fa172d7",
+      "title": "Lyrwen",
+      "category": "Waldsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/waldsiedlung.png",
+      "territoryId": "baronie-silberwald",
+      "house": "Haus Draenog O'Llanforwyn",
+      "x": 2514,
+      "y": 1273,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "5a2f0163-5568-4270-aea5-af279fa172d7",
+        "url": "https://www.worldanvil.com/world/map/marker/5a2f0163-5568-4270-aea5-af279fa172d7/edit",
+        "title": "Lyrwen",
+        "coordinates": {
+          "x": 2514,
+          "y": 1273,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-5b064183-6095-47ad-ba81-6130bdab67fd",
+      "title": "Rynedd",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung.png",
+      "territoryId": "baronie-achatsee",
+      "house": "Haus Coedwig O'Llanfyn",
+      "x": 2388,
+      "y": 909,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "5b064183-6095-47ad-ba81-6130bdab67fd",
+        "url": "https://www.worldanvil.com/world/map/marker/5b064183-6095-47ad-ba81-6130bdab67fd/edit",
+        "title": "Rynedd",
+        "coordinates": {
+          "x": 2388,
+          "y": 909,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-5b629666-40f2-4002-a7bc-a1fcafdf5341",
+      "title": "Mylcar",
+      "category": "Waldsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/waldsiedlung.png",
+      "territoryId": "herrschaft-brithyll",
+      "house": "Haus Brithyll O'Tredegar",
+      "x": 1424,
+      "y": 1834,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "5b629666-40f2-4002-a7bc-a1fcafdf5341",
+        "url": "https://www.worldanvil.com/world/map/marker/5b629666-40f2-4002-a7bc-a1fcafdf5341/edit",
+        "title": "Mylcar",
+        "coordinates": {
+          "x": 1424,
+          "y": 1834,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-5f72c102-a166-45c0-aa71-c403259d7218",
+      "title": "Llanforwyn",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "baronie-silberwald",
+      "house": "Haus Draenog O'Llanforwyn",
+      "x": 3168,
+      "y": 1130,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "5f72c102-a166-45c0-aa71-c403259d7218",
+        "url": "https://www.worldanvil.com/world/map/marker/5f72c102-a166-45c0-aa71-c403259d7218/edit",
+        "title": "Llanforwyn",
+        "coordinates": {
+          "x": 3168,
+          "y": 1130,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-623536ac-9eea-45a5-a615-42f9036910ae",
+      "title": "Llanir",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "baronie-achatsee",
+      "house": "Haus Coedwig O'Llanfyn",
+      "x": 1250,
+      "y": 582,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "623536ac-9eea-45a5-a615-42f9036910ae",
+        "url": "https://www.worldanvil.com/world/map/marker/623536ac-9eea-45a5-a615-42f9036910ae/edit",
+        "title": "Llanir",
+        "coordinates": {
+          "x": 1250,
+          "y": 582,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-6333b93f-b29b-4d11-bdbb-661a4ea88afb",
+      "title": "Handelsposten Ventoria",
+      "category": "Handelskontor",
+      "templateId": "handel",
+      "icon": "/Karten/assets/icons/welt/kontor.png",
+      "territoryId": "baronie-graukueste",
+      "house": "Haus Morfil O'Talsarn",
+      "x": 524,
+      "y": 1650,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "6333b93f-b29b-4d11-bdbb-661a4ea88afb",
+        "url": "https://www.worldanvil.com/world/map/marker/6333b93f-b29b-4d11-bdbb-661a4ea88afb/edit",
+        "title": "Handelsposten Ventoria",
+        "coordinates": {
+          "x": 524,
+          "y": 1650,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-65022051-e0fa-4177-a315-4da2cf64a69d",
+      "title": "Kelwyn",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung.png",
+      "territoryId": "baronie-eichenlicht",
+      "house": "Haus Wivern O'Coedlyn",
+      "x": 3264,
+      "y": 229,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "65022051-e0fa-4177-a315-4da2cf64a69d",
+        "url": "https://www.worldanvil.com/world/map/marker/65022051-e0fa-4177-a315-4da2cf64a69d/edit",
+        "title": "Kelwyn",
+        "coordinates": {
+          "x": 3264,
+          "y": 229,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-674983ac-88e1-4418-ba1a-5217f33a56be",
+      "title": "Poststation - Federkiel",
+      "category": "Poststation",
+      "templateId": "institution",
+      "icon": "/Karten/assets/icons/welt/poststation.png",
+      "territoryId": "baronie-eichenlicht",
+      "house": "Haus Wivern O'Coedlyn",
+      "x": 2737,
+      "y": 407,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "674983ac-88e1-4418-ba1a-5217f33a56be",
+        "url": "https://www.worldanvil.com/world/map/marker/674983ac-88e1-4418-ba1a-5217f33a56be/edit",
+        "title": "Poststation - Federkiel",
+        "coordinates": {
+          "x": 2737,
+          "y": 407,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-6799339b-f147-4e4e-b61e-721af8fae6b5",
+      "title": "Tredegar",
+      "category": "Hauptstadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "baronie-schimmerkueste",
+      "house": "Haus Pysgod O'Tredegar",
+      "x": 1677,
+      "y": 2189,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "6799339b-f147-4e4e-b61e-721af8fae6b5",
+        "url": "https://www.worldanvil.com/world/map/marker/6799339b-f147-4e4e-b61e-721af8fae6b5/edit",
+        "title": "Tredegar",
+        "coordinates": {
+          "x": 1677,
+          "y": 2189,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-69962db7-9ae1-48b1-884a-18bd35170d2b",
+      "title": "Norrnaigh Hügelgrab",
+      "category": "Hügelgrab",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/h-gelgrab.png",
+      "territoryId": "baronie-schimmerkueste",
+      "house": "Haus Pysgod O'Tredegar",
+      "x": 2187,
+      "y": 1707,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "69962db7-9ae1-48b1-884a-18bd35170d2b",
+        "url": "https://www.worldanvil.com/world/map/marker/69962db7-9ae1-48b1-884a-18bd35170d2b/edit",
+        "title": "Norrnaigh Hügelgrab",
+        "coordinates": {
+          "x": 2187,
+          "y": 1707,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-713bd5e8-26f3-4cc2-b0ec-c8830c74dd7c",
+      "title": "Waldschatten Lager",
+      "category": "Jägerlager",
+      "templateId": "militaer",
+      "icon": "/Karten/assets/icons/welt/j-gerlager.png",
+      "territoryId": "baronie-silberwald",
+      "house": "Haus Draenog O'Llanforwyn",
+      "x": 2663,
+      "y": 2040,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "713bd5e8-26f3-4cc2-b0ec-c8830c74dd7c",
+        "url": "https://www.worldanvil.com/world/map/marker/713bd5e8-26f3-4cc2-b0ec-c8830c74dd7c/edit",
+        "title": "Waldschatten Lager",
+        "coordinates": {
+          "x": 2663,
+          "y": 2040,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-71b029ba-f210-4904-86a4-b830820ad879",
+      "title": "Talsarn",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "baronie-graukueste",
+      "house": "Haus Morfil O'Talsarn",
+      "x": 394,
+      "y": 880,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "71b029ba-f210-4904-86a4-b830820ad879",
+        "url": "https://www.worldanvil.com/world/map/marker/71b029ba-f210-4904-86a4-b830820ad879/edit",
+        "title": "Talsarn",
+        "coordinates": {
+          "x": 394,
+          "y": 880,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-7654650c-ccfa-47e9-9179-7e0909c9e9f2",
+      "title": "Tirbryn",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "baronie-graukueste",
+      "house": "Haus Morfil O'Talsarn",
+      "x": 923,
+      "y": 550,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "7654650c-ccfa-47e9-9179-7e0909c9e9f2",
+        "url": "https://www.worldanvil.com/world/map/marker/7654650c-ccfa-47e9-9179-7e0909c9e9f2/edit",
+        "title": "Tirbryn",
+        "coordinates": {
+          "x": 923,
+          "y": 550,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-78d1664c-45bd-430d-8157-e9e1e07ca324",
+      "title": "Castell Cwnch",
+      "category": "Burg",
+      "templateId": "militaer",
+      "icon": "/Karten/assets/icons/welt/gro-e-burg.png",
+      "territoryId": "baronie-eichenlicht",
+      "house": "Haus Wivern O'Coedlyn",
+      "x": 3857,
+      "y": 405,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "78d1664c-45bd-430d-8157-e9e1e07ca324",
+        "url": "https://www.worldanvil.com/world/map/marker/78d1664c-45bd-430d-8157-e9e1e07ca324/edit",
+        "title": "Castell Cwnch",
+        "coordinates": {
+          "x": 3857,
+          "y": 405,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-79b037e9-8a4d-41cc-a0f5-4a8cb78ec883",
+      "title": "Nefrith",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "herrschaft-gwialen",
+      "house": "Haus Gwialen O'Tredegar",
+      "x": 2297,
+      "y": 2238,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "79b037e9-8a4d-41cc-a0f5-4a8cb78ec883",
+        "url": "https://www.worldanvil.com/world/map/marker/79b037e9-8a4d-41cc-a0f5-4a8cb78ec883/edit",
+        "title": "Nefrith",
+        "coordinates": {
+          "x": 2297,
+          "y": 2238,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-79bb2e19-98ba-4908-82bd-48f8a1ece9de",
+      "title": "Cadern",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung.png",
+      "territoryId": "baronie-silberwald",
+      "house": "Haus Draenog O'Llanforwyn",
+      "x": 3617,
+      "y": 984,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "79bb2e19-98ba-4908-82bd-48f8a1ece9de",
+        "url": "https://www.worldanvil.com/world/map/marker/79bb2e19-98ba-4908-82bd-48f8a1ece9de/edit",
+        "title": "Cadern",
+        "coordinates": {
+          "x": 3617,
+          "y": 984,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-7b711b80-44b7-4491-9c60-fbd95a3f6682",
+      "title": "Thalryn",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "baronie-eichenlicht",
+      "house": "Haus Wivern O'Coedlyn",
+      "x": 2285,
+      "y": 216,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "7b711b80-44b7-4491-9c60-fbd95a3f6682",
+        "url": "https://www.worldanvil.com/world/map/marker/7b711b80-44b7-4491-9c60-fbd95a3f6682/edit",
+        "title": "Thalryn",
+        "coordinates": {
+          "x": 2285,
+          "y": 216,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-7cf76fa5-1297-4968-a6f6-7983b0f8b16c",
+      "title": "Ruinenpforte - Universität & Standort",
+      "category": "Schule",
+      "templateId": "institution",
+      "icon": "/Karten/assets/icons/welt/l-ndliche-universit-t.png",
+      "territoryId": "herrschaft-blaidd",
+      "house": "Haus Blaidd O'Tredegar",
+      "x": 2196,
+      "y": 1859,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "7cf76fa5-1297-4968-a6f6-7983b0f8b16c",
+        "url": "https://www.worldanvil.com/world/map/marker/7cf76fa5-1297-4968-a6f6-7983b0f8b16c/edit",
+        "title": "Ruinenpforte - Universität & Standort",
+        "coordinates": {
+          "x": 2196,
+          "y": 1859,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-8a2680b6-0d39-4834-8020-fb80f8575a9c",
+      "title": "Tref Arfor",
+      "category": "Burg",
+      "templateId": "militaer",
+      "icon": "/Karten/assets/icons/welt/gro-e-burg.png",
+      "territoryId": "baronie-graukueste",
+      "house": "Haus Morfil O'Talsarn",
+      "x": 733,
+      "y": 1934,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "8a2680b6-0d39-4834-8020-fb80f8575a9c",
+        "url": "https://www.worldanvil.com/world/map/marker/8a2680b6-0d39-4834-8020-fb80f8575a9c/edit",
+        "title": "Tref Arfor",
+        "coordinates": {
+          "x": 733,
+          "y": 1934,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-8bc2ed54-04e2-44f5-9ad3-6bcc78425343",
+      "title": "Myrddow",
+      "category": "Klostersiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/klostersiedlung.png",
+      "territoryId": "baronie-graukueste",
+      "house": "Haus Morfil O'Talsarn",
+      "x": 699,
+      "y": 1174,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "8bc2ed54-04e2-44f5-9ad3-6bcc78425343",
+        "url": "https://www.worldanvil.com/world/map/marker/8bc2ed54-04e2-44f5-9ad3-6bcc78425343/edit",
+        "title": "Myrddow",
+        "coordinates": {
+          "x": 699,
+          "y": 1174,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-8e5f902e-53d2-4996-944e-1239ed4bf286",
+      "title": "Thrynn",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung.png",
+      "territoryId": "baronie-silberwald",
+      "house": "Haus Draenog O'Llanforwyn",
+      "x": 3653,
+      "y": 1232,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "8e5f902e-53d2-4996-944e-1239ed4bf286",
+        "url": "https://www.worldanvil.com/world/map/marker/8e5f902e-53d2-4996-944e-1239ed4bf286/edit",
+        "title": "Thrynn",
+        "coordinates": {
+          "x": 3653,
+          "y": 1232,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-9a8108eb-36dc-40d4-9725-34947f88bb80",
+      "title": "Prynn",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung.png",
+      "territoryId": "baronie-achatsee",
+      "house": "Haus Coedwig O'Llanfyn",
+      "x": 1493,
+      "y": 1122,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "9a8108eb-36dc-40d4-9725-34947f88bb80",
+        "url": "https://www.worldanvil.com/world/map/marker/9a8108eb-36dc-40d4-9725-34947f88bb80/edit",
+        "title": "Prynn",
+        "coordinates": {
+          "x": 1493,
+          "y": 1122,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-9ca63146-b15b-4b9f-a008-a7c372e8d1fd",
+      "title": "Aldwyn",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "herrschaft-gwaedlyd",
+      "house": "Haus Gwaedlyd O'Tredegar",
+      "x": 1955,
+      "y": 1471,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "9ca63146-b15b-4b9f-a008-a7c372e8d1fd",
+        "url": "https://www.worldanvil.com/world/map/marker/9ca63146-b15b-4b9f-a008-a7c372e8d1fd/edit",
+        "title": "Aldwyn",
+        "coordinates": {
+          "x": 1955,
+          "y": 1471,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-9f058550-1bdb-4d09-af96-f508d33e7a4f",
+      "title": "Gorad",
+      "category": "Waldsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/waldsiedlung.png",
+      "territoryId": "baronie-achatsee",
+      "house": "Haus Coedwig O'Llanfyn",
+      "x": 1210,
+      "y": 1107,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "9f058550-1bdb-4d09-af96-f508d33e7a4f",
+        "url": "https://www.worldanvil.com/world/map/marker/9f058550-1bdb-4d09-af96-f508d33e7a4f/edit",
+        "title": "Gorad",
+        "coordinates": {
+          "x": 1210,
+          "y": 1107,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-a0013057-e1e0-4c86-b59c-641b19e93644",
+      "title": "Branwyl",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "baronie-graukueste",
+      "house": "Haus Morfil O'Talsarn",
+      "x": 588,
+      "y": 1891,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "a0013057-e1e0-4c86-b59c-641b19e93644",
+        "url": "https://www.worldanvil.com/world/map/marker/a0013057-e1e0-4c86-b59c-641b19e93644/edit",
+        "title": "Branwyl",
+        "coordinates": {
+          "x": 588,
+          "y": 1891,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-a2c36f9f-7b21-4140-be47-efad0b73746c",
+      "title": "Tregath",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "herrschaft-skelettkueste",
+      "house": "Haus Lyfant O'Caer Asgwrn",
+      "x": 3934,
+      "y": 1554,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "a2c36f9f-7b21-4140-be47-efad0b73746c",
+        "url": "https://www.worldanvil.com/world/map/marker/a2c36f9f-7b21-4140-be47-efad0b73746c/edit",
+        "title": "Tregath",
+        "coordinates": {
+          "x": 3934,
+          "y": 1554,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-a39054bb-ec54-4463-b63d-55c60772ba59",
+      "title": "Crydd",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung.png",
+      "territoryId": "herrschaft-blaidd",
+      "house": "Haus Blaidd O'Tredegar",
+      "x": 1810,
+      "y": 1629,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "a39054bb-ec54-4463-b63d-55c60772ba59",
+        "url": "https://www.worldanvil.com/world/map/marker/a39054bb-ec54-4463-b63d-55c60772ba59/edit",
+        "title": "Crydd",
+        "coordinates": {
+          "x": 1810,
+          "y": 1629,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-a394fdad-79f5-4098-9921-321509bfaa41",
+      "title": "Melyn",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "baronie-silberwald",
+      "house": "Haus Draenog O'Llanforwyn",
+      "x": 3190,
+      "y": 624,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "a394fdad-79f5-4098-9921-321509bfaa41",
+        "url": "https://www.worldanvil.com/world/map/marker/a394fdad-79f5-4098-9921-321509bfaa41/edit",
+        "title": "Melyn",
+        "coordinates": {
+          "x": 3190,
+          "y": 624,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-a6e1e45a-64df-4a29-ae7f-7a29bb4de27d",
+      "title": "Dunewick",
+      "category": "Waldsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/waldsiedlung.png",
+      "territoryId": "baronie-graukueste",
+      "house": "Haus Morfil O'Talsarn",
+      "x": 1005,
+      "y": 1066,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "a6e1e45a-64df-4a29-ae7f-7a29bb4de27d",
+        "url": "https://www.worldanvil.com/world/map/marker/a6e1e45a-64df-4a29-ae7f-7a29bb4de27d/edit",
+        "title": "Dunewick",
+        "coordinates": {
+          "x": 1005,
+          "y": 1066,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-ab58d3aa-fd70-457a-8cdd-aa74c695172e",
+      "title": "Ryldor",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "baronie-silberwald",
+      "house": "Haus Draenog O'Llanforwyn",
+      "x": 3782,
+      "y": 1031,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "ab58d3aa-fd70-457a-8cdd-aa74c695172e",
+        "url": "https://www.worldanvil.com/world/map/marker/ab58d3aa-fd70-457a-8cdd-aa74c695172e/edit",
+        "title": "Ryldor",
+        "coordinates": {
+          "x": 3782,
+          "y": 1031,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-ad501e04-bfa3-4607-a227-d285264dabfd",
+      "title": "Lorthan",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung.png",
+      "territoryId": "baronie-eichenlicht",
+      "house": "Haus Wivern O'Coedlyn",
+      "x": 2381,
+      "y": 372,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "ad501e04-bfa3-4607-a227-d285264dabfd",
+        "url": "https://www.worldanvil.com/world/map/marker/ad501e04-bfa3-4607-a227-d285264dabfd/edit",
+        "title": "Lorthan",
+        "coordinates": {
+          "x": 2381,
+          "y": 372,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-ae983b98-f9a8-4dfc-94b6-7916cf56578d",
+      "title": "Celyd",
+      "category": "Flusssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/flusssiedlung.png",
+      "territoryId": "baronie-achatsee",
+      "house": "Haus Coedwig O'Llanfyn",
+      "x": 1677,
+      "y": 585,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "ae983b98-f9a8-4dfc-94b6-7916cf56578d",
+        "url": "https://www.worldanvil.com/world/map/marker/ae983b98-f9a8-4dfc-94b6-7916cf56578d/edit",
+        "title": "Celyd",
+        "coordinates": {
+          "x": 1677,
+          "y": 585,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-affacb42-0fef-4e97-b2b6-90a90cfb935c",
+      "title": "Penrhyd",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung.png",
+      "territoryId": "baronie-graukueste",
+      "house": "Haus Morfil O'Talsarn",
+      "x": 791,
+      "y": 670,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "affacb42-0fef-4e97-b2b6-90a90cfb935c",
+        "url": "https://www.worldanvil.com/world/map/marker/affacb42-0fef-4e97-b2b6-90a90cfb935c/edit",
+        "title": "Penrhyd",
+        "coordinates": {
+          "x": 791,
+          "y": 670,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-b216d40c-799a-4ef2-b4f5-d9ad5f2e72e5",
+      "title": "Dunath",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "baronie-achatsee",
+      "house": "Haus Coedwig O'Llanfyn",
+      "x": 1341,
+      "y": 865,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "b216d40c-799a-4ef2-b4f5-d9ad5f2e72e5",
+        "url": "https://www.worldanvil.com/world/map/marker/b216d40c-799a-4ef2-b4f5-d9ad5f2e72e5/edit",
+        "title": "Dunath",
+        "coordinates": {
+          "x": 1341,
+          "y": 865,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-b2443dd8-7284-44cd-91c5-1e685d83d566",
+      "title": "Kavorn",
+      "category": "Waldsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/waldsiedlung.png",
+      "territoryId": "baronie-silberwald",
+      "house": "Haus Draenog O'Llanforwyn",
+      "x": 2612,
+      "y": 1531,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "b2443dd8-7284-44cd-91c5-1e685d83d566",
+        "url": "https://www.worldanvil.com/world/map/marker/b2443dd8-7284-44cd-91c5-1e685d83d566/edit",
+        "title": "Kavorn",
+        "coordinates": {
+          "x": 2612,
+          "y": 1531,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-b2a5293c-f0b6-4dfb-9c4f-461d11561a5a",
+      "title": "Glydor",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "baronie-eichenlicht",
+      "house": "Haus Wivern O'Coedlyn",
+      "x": 2555,
+      "y": 222,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "b2a5293c-f0b6-4dfb-9c4f-461d11561a5a",
+        "url": "https://www.worldanvil.com/world/map/marker/b2a5293c-f0b6-4dfb-9c4f-461d11561a5a/edit",
+        "title": "Glydor",
+        "coordinates": {
+          "x": 2555,
+          "y": 222,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-b2ae0c9b-7c02-4c9e-944e-935a7ce3e447",
+      "title": "Drynth",
+      "category": "Flusssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/flusssiedlung.png",
+      "territoryId": "baronie-achatsee",
+      "house": "Haus Coedwig O'Llanfyn",
+      "x": 2140,
+      "y": 779,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "b2ae0c9b-7c02-4c9e-944e-935a7ce3e447",
+        "url": "https://www.worldanvil.com/world/map/marker/b2ae0c9b-7c02-4c9e-944e-935a7ce3e447/edit",
+        "title": "Drynth",
+        "coordinates": {
+          "x": 2140,
+          "y": 779,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-b7b0ca91-4f93-41f4-b399-304d5a3d1719",
+      "title": "Diebesgilde - Achatjäger",
+      "category": "Diebesgilde",
+      "templateId": "orden",
+      "icon": "/Karten/assets/icons/welt/diebesgilde.png",
+      "territoryId": "baronie-graukueste",
+      "house": "Haus Morfil O'Talsarn",
+      "x": 905,
+      "y": 395,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "b7b0ca91-4f93-41f4-b399-304d5a3d1719",
+        "url": "https://www.worldanvil.com/world/map/marker/b7b0ca91-4f93-41f4-b399-304d5a3d1719/edit",
+        "title": "Diebesgilde - Achatjäger",
+        "coordinates": {
+          "x": 905,
+          "y": 395,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-bda6db1e-fdcb-402b-a392-6b74246ac3ef",
+      "title": "Fynor",
+      "category": "Waldsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/waldsiedlung.png",
+      "territoryId": "baronie-achatsee",
+      "house": "Haus Coedwig O'Llanfyn",
+      "x": 1620,
+      "y": 1323,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "bda6db1e-fdcb-402b-a392-6b74246ac3ef",
+        "url": "https://www.worldanvil.com/world/map/marker/bda6db1e-fdcb-402b-a392-6b74246ac3ef/edit",
+        "title": "Fynor",
+        "coordinates": {
+          "x": 1620,
+          "y": 1323,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-c39035fb-dcc2-4483-93b2-7df6f8495d84",
+      "title": "Brynwylln",
+      "category": "Flusssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/flusssiedlung.png",
+      "territoryId": "baronie-graukueste",
+      "house": "Haus Morfil O'Talsarn",
+      "x": 549,
+      "y": 211,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "c39035fb-dcc2-4483-93b2-7df6f8495d84",
+        "url": "https://www.worldanvil.com/world/map/marker/c39035fb-dcc2-4483-93b2-7df6f8495d84/edit",
+        "title": "Brynwylln",
+        "coordinates": {
+          "x": 549,
+          "y": 211,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-c3c96bfc-8d9f-4310-aee1-5e3d8d746eb1",
+      "title": "Wolken der Dämmerung - Zentrale",
+      "category": "Gildenhaus",
+      "templateId": "orden",
+      "icon": "/Karten/assets/icons/welt/gildenzentrale.png",
+      "territoryId": "baronie-achatsee",
+      "house": "Haus Coedwig O'Llanfyn",
+      "x": 2129,
+      "y": 1190,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "c3c96bfc-8d9f-4310-aee1-5e3d8d746eb1",
+        "url": "https://www.worldanvil.com/world/map/marker/c3c96bfc-8d9f-4310-aee1-5e3d8d746eb1/edit",
+        "title": "Wolken der Dämmerung - Zentrale",
+        "coordinates": {
+          "x": 2129,
+          "y": 1190,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-c8fba5b6-77b8-404f-9e14-114b44070f87",
+      "title": "Golwyn",
+      "category": "Waldsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/waldsiedlung.png",
+      "territoryId": "herrschaft-gwialen",
+      "house": "Haus Gwialen O'Tredegar",
+      "x": 2530,
+      "y": 1668,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "c8fba5b6-77b8-404f-9e14-114b44070f87",
+        "url": "https://www.worldanvil.com/world/map/marker/c8fba5b6-77b8-404f-9e14-114b44070f87/edit",
+        "title": "Golwyn",
+        "coordinates": {
+          "x": 2530,
+          "y": 1668,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-c9c2a98f-9840-4efe-96b3-69709e2457f9",
+      "title": "Llygar",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "herrschaft-gwialen",
+      "house": "Haus Gwialen O'Tredegar",
+      "x": 2135,
+      "y": 2257,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "c9c2a98f-9840-4efe-96b3-69709e2457f9",
+        "url": "https://www.worldanvil.com/world/map/marker/c9c2a98f-9840-4efe-96b3-69709e2457f9/edit",
+        "title": "Llygar",
+        "coordinates": {
+          "x": 2135,
+          "y": 2257,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-c9c9cd3b-880c-4e3d-ad6b-3c5e16026cac",
+      "title": "Tylow",
+      "category": "Flusssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/flusssiedlung.png",
+      "territoryId": "baronie-achatsee",
+      "house": "Haus Coedwig O'Llanfyn",
+      "x": 1862,
+      "y": 758,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "c9c9cd3b-880c-4e3d-ad6b-3c5e16026cac",
+        "url": "https://www.worldanvil.com/world/map/marker/c9c9cd3b-880c-4e3d-ad6b-3c5e16026cac/edit",
+        "title": "Tylow",
+        "coordinates": {
+          "x": 1862,
+          "y": 758,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-cc1f2a10-b8ac-4c9c-a006-c6a18c0683c7",
+      "title": "Ard Bheann",
+      "category": "Ausgrabung",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/ausgrabung.png",
+      "territoryId": "baronie-eichenlicht",
+      "house": "Haus Wivern O'Coedlyn",
+      "x": 1994,
+      "y": 557,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "cc1f2a10-b8ac-4c9c-a006-c6a18c0683c7",
+        "url": "https://www.worldanvil.com/world/map/marker/cc1f2a10-b8ac-4c9c-a006-c6a18c0683c7/edit",
+        "title": "Ard Bheann",
+        "coordinates": {
+          "x": 1994,
+          "y": 557,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-ceb3af9c-d72f-429d-9c54-072861126397",
+      "title": "Gwyvor",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "herrschaft-gwaedlyd",
+      "house": "Haus Gwaedlyd O'Tredegar",
+      "x": 1998,
+      "y": 1660,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "ceb3af9c-d72f-429d-9c54-072861126397",
+        "url": "https://www.worldanvil.com/world/map/marker/ceb3af9c-d72f-429d-9c54-072861126397/edit",
+        "title": "Gwyvor",
+        "coordinates": {
+          "x": 1998,
+          "y": 1660,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-cfa119a9-55a3-47be-89ed-7155aed1fb04",
+      "title": "Llonir",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "herrschaft-brithyll",
+      "house": "Haus Brithyll O'Tredegar",
+      "x": 844,
+      "y": 2025,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "cfa119a9-55a3-47be-89ed-7155aed1fb04",
+        "url": "https://www.worldanvil.com/world/map/marker/cfa119a9-55a3-47be-89ed-7155aed1fb04/edit",
+        "title": "Llonir",
+        "coordinates": {
+          "x": 844,
+          "y": 2025,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-cff3781d-9676-4c52-9e71-66aa3e02e989",
+      "title": "Bragdyddol",
+      "category": "Brauersiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/brauersiedlung.png",
+      "territoryId": "graue-weite-teyrngarch-exklaven",
+      "house": "Haus Teyrngarch",
+      "x": 1110,
+      "y": 855,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "cff3781d-9676-4c52-9e71-66aa3e02e989",
+        "url": "https://www.worldanvil.com/world/map/marker/cff3781d-9676-4c52-9e71-66aa3e02e989/edit",
+        "title": "Teyrngarch Brauerei - Bragdyddol",
+        "coordinates": {
+          "x": 1110,
+          "y": 855,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "nameResolution": "Eigenname im vollständigen Markertext"
+      },
+      "exclave": true
+    },
+    {
+      "id": "graue-weite-d1412bec-e133-4cbd-8b8e-c8c889ffbb9b",
+      "title": "Lethor",
+      "category": "Klostersiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/klostersiedlung.png",
+      "territoryId": "baronie-silberwald",
+      "house": "Haus Draenog O'Llanforwyn",
+      "x": 2663,
+      "y": 928,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "d1412bec-e133-4cbd-8b8e-c8c889ffbb9b",
+        "url": "https://www.worldanvil.com/world/map/marker/d1412bec-e133-4cbd-8b8e-c8c889ffbb9b/edit",
+        "title": "Lethor",
+        "coordinates": {
+          "x": 2663,
+          "y": 928,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-d153ff7e-713a-4c1b-81b8-1dcc5a6f4cfe",
+      "title": "Der Silbergrahl",
+      "category": "Taverne",
+      "templateId": "gastbetrieb",
+      "icon": "/Karten/assets/icons/welt/taverne.png",
+      "territoryId": "baronie-eichenlicht",
+      "house": "Haus Wivern O'Coedlyn",
+      "x": 3476,
+      "y": 63,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "d153ff7e-713a-4c1b-81b8-1dcc5a6f4cfe",
+        "url": "https://www.worldanvil.com/world/map/marker/d153ff7e-713a-4c1b-81b8-1dcc5a6f4cfe/edit",
+        "title": "Der Silbergrahl",
+        "coordinates": {
+          "x": 3476,
+          "y": 63,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-d1d3506e-8c8d-4d39-a128-6a6ebdba859e",
+      "title": "Dalwyn",
+      "category": "Heiligtum",
+      "templateId": "institution",
+      "icon": "/Karten/assets/icons/welt/heiligtum.png",
+      "territoryId": "baronie-silberwald",
+      "house": "Haus Draenog O'Llanforwyn",
+      "x": 2812,
+      "y": 1267,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "d1d3506e-8c8d-4d39-a128-6a6ebdba859e",
+        "url": "https://www.worldanvil.com/world/map/marker/d1d3506e-8c8d-4d39-a128-6a6ebdba859e/edit",
+        "title": "Dalwyn",
+        "coordinates": {
+          "x": 2812,
+          "y": 1267,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-d49951d5-1fa2-4d21-af80-738305ac2d9f",
+      "title": "Fynric",
+      "category": "Heiligtum",
+      "templateId": "institution",
+      "icon": "/Karten/assets/icons/welt/heiligtum.png",
+      "territoryId": "baronie-silberwald",
+      "house": "Haus Draenog O'Llanforwyn",
+      "x": 3533,
+      "y": 1336,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "d49951d5-1fa2-4d21-af80-738305ac2d9f",
+        "url": "https://www.worldanvil.com/world/map/marker/d49951d5-1fa2-4d21-af80-738305ac2d9f/edit",
+        "title": "Fynric",
+        "coordinates": {
+          "x": 3533,
+          "y": 1336,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-d5eb03a4-67df-4908-b0b5-aa76d7170df2",
+      "title": "Herys",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung.png",
+      "territoryId": "baronie-eichenlicht",
+      "house": "Haus Wivern O'Coedlyn",
+      "x": 3523,
+      "y": 331,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "d5eb03a4-67df-4908-b0b5-aa76d7170df2",
+        "url": "https://www.worldanvil.com/world/map/marker/d5eb03a4-67df-4908-b0b5-aa76d7170df2/edit",
+        "title": "Herys",
+        "coordinates": {
+          "x": 3523,
+          "y": 331,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-d8ebf36c-7c44-4d8f-b93a-5611e6c07d52",
+      "title": "Marnor",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "herrschaft-skelettkueste",
+      "house": "Haus Lyfant O'Caer Asgwrn",
+      "x": 3738,
+      "y": 1917,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "d8ebf36c-7c44-4d8f-b93a-5611e6c07d52",
+        "url": "https://www.worldanvil.com/world/map/marker/d8ebf36c-7c44-4d8f-b93a-5611e6c07d52/edit",
+        "title": "Marnor",
+        "coordinates": {
+          "x": 3738,
+          "y": 1917,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-dbcdfd66-a357-42d1-8c93-9f7dd1917b96",
+      "title": "Blynor",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung.png",
+      "territoryId": "baronie-achatsee",
+      "house": "Haus Coedwig O'Llanfyn",
+      "x": 1625,
+      "y": 899,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "dbcdfd66-a357-42d1-8c93-9f7dd1917b96",
+        "url": "https://www.worldanvil.com/world/map/marker/dbcdfd66-a357-42d1-8c93-9f7dd1917b96/edit",
+        "title": "Blynor",
+        "coordinates": {
+          "x": 1625,
+          "y": 899,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-ddb7f1ba-f5a5-4025-81f0-935244fe7154",
+      "title": "Glynharwen",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "baronie-graukueste",
+      "house": "Haus Morfil O'Talsarn",
+      "x": 118,
+      "y": 191,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "ddb7f1ba-f5a5-4025-81f0-935244fe7154",
+        "url": "https://www.worldanvil.com/world/map/marker/ddb7f1ba-f5a5-4025-81f0-935244fe7154/edit",
+        "title": "Glynharwen",
+        "coordinates": {
+          "x": 118,
+          "y": 191,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-e5131aa4-a127-414f-93a8-f1665a649833",
+      "title": "Ceryn",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "baronie-eichenlicht",
+      "house": "Haus Wivern O'Coedlyn",
+      "x": 3930,
+      "y": 158,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "e5131aa4-a127-414f-93a8-f1665a649833",
+        "url": "https://www.worldanvil.com/world/map/marker/e5131aa4-a127-414f-93a8-f1665a649833/edit",
+        "title": "Ceryn",
+        "coordinates": {
+          "x": 3930,
+          "y": 158,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-e89f1f4e-64b3-429a-ac82-79d235d3484c",
+      "title": "Dun Liath",
+      "category": "Ruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/antike-ruine.png",
+      "territoryId": "baronie-silberwald",
+      "house": "Haus Draenog O'Llanforwyn",
+      "x": 3348,
+      "y": 1891,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "e89f1f4e-64b3-429a-ac82-79d235d3484c",
+        "url": "https://www.worldanvil.com/world/map/marker/e89f1f4e-64b3-429a-ac82-79d235d3484c/edit",
+        "title": "Dun Liath",
+        "coordinates": {
+          "x": 3348,
+          "y": 1891,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-ed8fafd0-37fc-4577-966b-8797dda0a46b",
+      "title": "Ruine des Achatordens",
+      "category": "Ruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/ruine2.png",
+      "territoryId": "baronie-achatsee",
+      "house": "Haus Coedwig O'Llanfyn",
+      "x": 1168,
+      "y": 1368,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "ed8fafd0-37fc-4577-966b-8797dda0a46b",
+        "url": "https://www.worldanvil.com/world/map/marker/ed8fafd0-37fc-4577-966b-8797dda0a46b/edit",
+        "title": "Ruine des Achatordens",
+        "coordinates": {
+          "x": 1168,
+          "y": 1368,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-effaf77c-e5cb-4dd7-801f-4ce14a9762be",
+      "title": "Mor Mhachaire",
+      "category": "Ruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/antike-ruine.png",
+      "territoryId": "baronie-schimmerkueste",
+      "house": "Haus Pysgod O'Tredegar",
+      "x": 2194,
+      "y": 1354,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "effaf77c-e5cb-4dd7-801f-4ce14a9762be",
+        "url": "https://www.worldanvil.com/world/map/marker/effaf77c-e5cb-4dd7-801f-4ce14a9762be/edit",
+        "title": "Mor Mhachaire",
+        "coordinates": {
+          "x": 2194,
+          "y": 1354,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-f2822fd9-136a-4a82-b1aa-7a0513d30ee7",
+      "title": "Tref Canwyd",
+      "category": "Burg",
+      "templateId": "militaer",
+      "icon": "/Karten/assets/icons/welt/gro-e-burg.png",
+      "territoryId": "baronie-achatsee",
+      "house": "Haus Coedwig O'Llanfyn",
+      "x": 1846,
+      "y": 1361,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "f2822fd9-136a-4a82-b1aa-7a0513d30ee7",
+        "url": "https://www.worldanvil.com/world/map/marker/f2822fd9-136a-4a82-b1aa-7a0513d30ee7/edit",
+        "title": "Tref Canwyd",
+        "coordinates": {
+          "x": 1846,
+          "y": 1361,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-f559c3ef-89a8-4697-a12b-dc45037dd171",
+      "title": "Die Nebelklingen Banditen",
+      "category": "Banditenlager",
+      "templateId": "militaer",
+      "icon": "/Karten/assets/icons/welt/banditenlager.png",
+      "territoryId": "baronie-eichenlicht",
+      "house": "Haus Wivern O'Coedlyn",
+      "x": 2085,
+      "y": 484,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "f559c3ef-89a8-4697-a12b-dc45037dd171",
+        "url": "https://www.worldanvil.com/world/map/marker/f559c3ef-89a8-4697-a12b-dc45037dd171/edit",
+        "title": "Die Nebelklingen Banditen",
+        "coordinates": {
+          "x": 2085,
+          "y": 484,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-f5dbaaed-ecf9-4b56-abc6-5c7edb111612",
+      "title": "Draeth",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "herrschaft-brithyll",
+      "house": "Haus Brithyll O'Tredegar",
+      "x": 995,
+      "y": 2127,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "f5dbaaed-ecf9-4b56-abc6-5c7edb111612",
+        "url": "https://www.worldanvil.com/world/map/marker/f5dbaaed-ecf9-4b56-abc6-5c7edb111612/edit",
+        "title": "Draeth",
+        "coordinates": {
+          "x": 995,
+          "y": 2127,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-f6e864e8-73fb-4fe2-b984-de78417b250d",
+      "title": "Fenryd",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung.png",
+      "territoryId": "herrschaft-brithyll",
+      "house": "Haus Brithyll O'Tredegar",
+      "x": 1385,
+      "y": 1982,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "f6e864e8-73fb-4fe2-b984-de78417b250d",
+        "url": "https://www.worldanvil.com/world/map/marker/f6e864e8-73fb-4fe2-b984-de78417b250d/edit",
+        "title": "Fenryd",
+        "coordinates": {
+          "x": 1385,
+          "y": 1982,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-f7654376-4671-4a6d-8a37-224357f701e4",
+      "title": "Brathor",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "baronie-eichenlicht",
+      "house": "Haus Wivern O'Coedlyn",
+      "x": 3934,
+      "y": 829,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "f7654376-4671-4a6d-8a37-224357f701e4",
+        "url": "https://www.worldanvil.com/world/map/marker/f7654376-4671-4a6d-8a37-224357f701e4/edit",
+        "title": "Brathor",
+        "coordinates": {
+          "x": 3934,
+          "y": 829,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-f81729e1-1a05-4d26-97bd-8bf63799b5c2",
+      "title": "Fynwyl",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "baronie-eichenlicht",
+      "house": "Haus Wivern O'Coedlyn",
+      "x": 2957,
+      "y": 54,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "f81729e1-1a05-4d26-97bd-8bf63799b5c2",
+        "url": "https://www.worldanvil.com/world/map/marker/f81729e1-1a05-4d26-97bd-8bf63799b5c2/edit",
+        "title": "Fynwyl",
+        "coordinates": {
+          "x": 2957,
+          "y": 54,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-fb311ca9-4d6f-403b-bfa3-835d7f59b1f0",
+      "title": "Llanth",
+      "category": "Klostersiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/klostersiedlung.png",
+      "territoryId": "herrschaft-blaidd",
+      "house": "Haus Blaidd O'Tredegar",
+      "x": 1669,
+      "y": 1673,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "fb311ca9-4d6f-403b-bfa3-835d7f59b1f0",
+        "url": "https://www.worldanvil.com/world/map/marker/fb311ca9-4d6f-403b-bfa3-835d7f59b1f0/edit",
+        "title": "Llanth",
+        "coordinates": {
+          "x": 1669,
+          "y": 1673,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-fd28fa0b-4f09-45fa-9b87-b858271b9eb9",
+      "title": "Velthor",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "baronie-eichenlicht",
+      "house": "Haus Wivern O'Coedlyn",
+      "x": 2808,
+      "y": 234,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "fd28fa0b-4f09-45fa-9b87-b858271b9eb9",
+        "url": "https://www.worldanvil.com/world/map/marker/fd28fa0b-4f09-45fa-9b87-b858271b9eb9/edit",
+        "title": "Velthor",
+        "coordinates": {
+          "x": 2808,
+          "y": 234,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "graue-weite-fec438e1-bbbd-47f9-8657-c5cffccbed7f",
+      "title": "Llanfyn",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "baronie-achatsee",
+      "house": "Haus Coedwig O'Llanfyn",
+      "x": 1308,
+      "y": 1261,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "8da45549-13b9-4411-8bce-1adfdda70984",
+        "markerId": "fec438e1-bbbd-47f9-8657-c5cffccbed7f",
+        "url": "https://www.worldanvil.com/world/map/marker/fec438e1-bbbd-47f9-8657-c5cffccbed7f/edit",
+        "title": "Llanfyn",
+        "coordinates": {
+          "x": 1308,
+          "y": 1261,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    }
+  ],
+  "unpositionedPlaces": [
+    {
+      "id": "graue-weite-brandungsgrotte",
+      "title": "Brandungsgrotte",
+      "category": "Höhle",
+      "templateId": "natur",
+      "icon": "/Karten/assets/icons/welt/h-hle.png",
+      "territoryId": "baronie-graukueste",
+      "house": "Haus Morfil O'Talsarn"
+    },
+    {
+      "id": "graue-weite-ostklippenhohle",
+      "title": "Ostklippenhöhle",
+      "category": "Höhle",
+      "templateId": "natur",
+      "icon": "/Karten/assets/icons/welt/h-hle.png",
+      "territoryId": "baronie-silberwald",
+      "house": "Haus Draenog O'Llanforwyn"
+    },
+    {
+      "id": "graue-weite-seewindhohle",
+      "title": "Seewindhöhle",
+      "category": "Höhle",
+      "templateId": "natur",
+      "icon": "/Karten/assets/icons/welt/h-hle.png",
+      "territoryId": "baronie-schimmerkueste",
+      "house": "Haus Pysgod O'Tredegar"
+    },
+    {
+      "id": "graue-weite-zwielichtszuflucht",
+      "title": "Zwielichtszuflucht",
+      "category": "Lagerplatz",
+      "templateId": "gebaeude",
+      "icon": "/Karten/assets/icons/welt/lager.png",
+      "territoryId": "baronie-schimmerkueste",
+      "house": "Haus Pysgod O'Tredegar"
+    },
+    {
+      "id": "graue-weite-verborgene-lichtung",
+      "title": "Verborgene Lichtung",
+      "category": "Lagerplatz",
+      "templateId": "gebaeude",
+      "icon": "/Karten/assets/icons/welt/lager.png",
+      "territoryId": "baronie-schimmerkueste",
+      "house": "Haus Pysgod O'Tredegar"
+    },
+    {
+      "id": "graue-weite-schattenstieg",
+      "title": "Schattenstieg",
+      "category": "Lagerplatz",
+      "templateId": "gebaeude",
+      "icon": "/Karten/assets/icons/welt/lager.png",
+      "territoryId": "baronie-eichenlicht",
+      "house": "Haus Wivern O'Coedlyn"
+    }
+  ]
+}

@@ -3,6 +3,8 @@ const almanach = name => `AleriaAlmanach/tests/${name}.test.mjs`;
 const gwynthorFamilyInputs = [
   'AleriaAlmanach/modules/gwynthor-bathhouse/bathhouse-people.mjs',
   'AleriaAlmanach/modules/kleiner-durst/durst-people.mjs',
+  'AleriaAlmanach/modules/rotes-tor/penrudd-household.mjs',
+  'AleriaAlmanach/modules/rotes-tor/penrudd-appearances.mjs',
   'AleriaAlmanach/modules/pendrwn-general-store/store-people.mjs',
   'AleriaAlmanach/modules/gwregysdu-harbor/',
   'AleriaAlmanach/modules/gestiefelte-muschi/muschi-people.mjs',
@@ -12,6 +14,16 @@ const gwynthorFamilyInputs = [
   'AleriaAlmanach/modules/guild-trading-post/',
   'AleriaAlmanach/modules/markt-der-fortuna-gwynthor/'
 ];
+
+// Keep calculation checks tied to their sources, rather than every UI or combat
+// change in the Almanach. Add new priced venue features alongside their loader.
+const economySourceInputs = [
+  'economy-calculator', 'economy-pricing', 'item-register', 'trade-catalog', 'gwynthor-geography',
+  'kleiner-durst', 'krumme-kanne', 'letzte-rast', 'goettliche-eleganz',
+  'pendrwn-general-store', 'gwynthor-bathhouse', 'gestiefelte-muschi',
+  'letzter-heller', 'gofrann-schmiede', 'klingende-krone', 'lachende-nixe',
+  'gortach-brauerei', 'brewer-guilds', 'gwregysdu-harbor', 'windreiter'
+].map(feature => `AleriaAlmanach/modules/${feature}/`);
 
 // Inputs include cross-feature dependencies. Images do not affect the chart audit,
 // which deliberately blocks image requests, but CSS, vendor code and family data do.
@@ -34,16 +46,31 @@ export const SITE_BUILD_TASKS = [
     id: 'almanach-runtime', label: 'Archive, authentication and module storage',
     inputs: ['AleriaAlmanach/modules/', 'AleriaAlmanach/tests/',
       'AleriaAlmanach/app.js', 'AleriaAlmanach/firebase.js', 'AleriaAlmanach/AleriaAlmanach.html',
+      'AleriaAlmanach/scripts/build-gwynthor-geography.mjs',
       'AleriaAlmanach/package.json', 'AleriaAlmanach/package-lock.json',
       'netlify/functions/', 'netlify/lib/', 'firebase/tests/publisher-access.test.mjs'],
-    commands: [testCommand(...[
+    commands: [['AleriaAlmanach/scripts/build-gwynthor-geography.mjs', '--check'], testCommand(...[
       'firebase-auth-session', 'firebase-account-actions', 'email-action-controller',
       'comment-activity-repository', 'comment-read-reuse', 'dashboard-scene-activity',
-      'archive-image-urls', 'archive-preview-navigation', 'dashboard-rendering',
+      'archive-image-urls', 'archive-preview-navigation', 'gwynthor-geography', 'dashboard-rendering', 'rotes-tor-menu',
       'firebase-module-storage', 'module-store-revision', 'loading-screen',
       'character-performance', 'character-section-integration', 'character-save-guard',
       'character-register-views', 'character-equipment-sync'
     ].map(almanach), 'firebase/tests/publisher-access.test.mjs')]
+  },
+  {
+    id: 'economy-calculator', label: 'Price review and calculations for purchasable cultural locations',
+    inputs: [...economySourceInputs, 'Markt/', 'AleriaAlmanach/docs/economy/',
+      'AleriaAlmanach/modules/core/aleria-calendar.js', 'AleriaAlmanach/modules/core/app-core.js',
+      'AleriaAlmanach/modules/module-store/module-entry-migrations.js', 'AleriaAlmanach/modules/modal/modal-controller.js',
+      'AleriaAlmanach/modules/module-editor/', 'AleriaAlmanach/modules/inline-editor/',
+      'firebase/functions/src/generated/item-register/', 'firebase/functions/src/generated/economy-pricing/',
+      'AleriaAlmanach/scripts/build-economy-calculator.mjs',
+      'AleriaAlmanach/scripts/build-economy-price-reference.mjs', 'AleriaAlmanach/scripts/build-economy-price-review.mjs',
+      'AleriaAlmanach/tests/economy-calculator.test.mjs', 'AleriaAlmanach/tests/economy-price-review.test.mjs', 'AleriaAlmanach/AleriaAlmanach.html'],
+    commands: [['AleriaAlmanach/scripts/build-economy-price-reference.mjs', '--check'], ['AleriaAlmanach/scripts/build-economy-price-review.mjs', '--check'],
+      ['AleriaAlmanach/scripts/build-economy-calculator.mjs', '--check'], testCommand(almanach('economy-calculator'), almanach('economy-price-review')),
+      ['AleriaAlmanach/scripts/check-module-template-assets.js'], ['AleriaAlmanach/scripts/check-module-template-roundtrip.js']]
   },
   {
     id: 'gameplay-guides', label: 'Gameplay guide consistency',

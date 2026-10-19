@@ -1,0 +1,528 @@
+{
+  "mapId": "cenyr-silberinsel",
+  "imageSize": [
+    4096,
+    3463
+  ],
+  "coordinateOrigin": "bottom-left",
+  "markers": [
+    {
+      "id": "silberinsel-cor-nantros",
+      "title": "Côr Nantros",
+      "category": "Klostersiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/klostersiedlung.png",
+      "territoryId": "herrschaft-canwyll",
+      "house": "Haus Canwyll",
+      "x": 2637,
+      "y": 1189,
+      "source": {
+        "screenshot": 1,
+        "row": 1
+      }
+    },
+    {
+      "id": "silberinsel-nantcarreg",
+      "title": "Nantcarreg",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "herrschaft-silberpfad",
+      "house": "Haus Pyrth",
+      "x": 2233,
+      "y": 1118,
+      "source": {
+        "screenshot": 1,
+        "row": 2
+      }
+    },
+    {
+      "id": "silberinsel-cor-bodcaer",
+      "title": "Côr Bodcaer",
+      "category": "Klostersiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/klostersiedlung.png",
+      "territoryId": "herrschaft-crefyddol",
+      "house": "Haus Crefyddol",
+      "x": 1191,
+      "y": 897,
+      "source": {
+        "screenshot": 1,
+        "row": 3
+      }
+    },
+    {
+      "id": "silberinsel-rosaber",
+      "title": "Rosaber",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "baronie-silberkueste",
+      "house": "Haus Tiwna",
+      "x": 3008,
+      "y": 2524,
+      "source": {
+        "screenshot": 1,
+        "row": 4
+      }
+    },
+    {
+      "id": "silberinsel-porthros",
+      "title": "Porthros",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "herrschaft-saith",
+      "house": "Haus Saith",
+      "x": 1205,
+      "y": 1830,
+      "source": {
+        "screenshot": 1,
+        "row": 5
+      }
+    },
+    {
+      "id": "silberinsel-cor-eglosmor",
+      "title": "Côr Eglosmor",
+      "category": "Klostersiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/klostersiedlung.png",
+      "territoryId": "baronie-silberkueste",
+      "house": "Haus Tiwna",
+      "x": 2882,
+      "y": 2020,
+      "source": {
+        "screenshot": 1,
+        "row": 6
+      }
+    },
+    {
+      "id": "silberinsel-mwynros",
+      "title": "Mwynros",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "herrschaft-silberpfad",
+      "house": "Haus Pyrth",
+      "x": 1955,
+      "y": 2283,
+      "source": {
+        "screenshot": 1,
+        "row": 7
+      }
+    },
+    {
+      "id": "silberinsel-pencaerglyn",
+      "title": "Pencaerglyn",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "herrschaft-crefyddol",
+      "house": "Haus Crefyddol",
+      "x": 1583,
+      "y": 1433,
+      "source": {
+        "screenshot": 1,
+        "row": 8
+      }
+    },
+    {
+      "id": "silberinsel-rosgwern",
+      "title": "Rosgwern",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "herrschaft-crefyddol",
+      "house": "Haus Crefyddol",
+      "x": 1716,
+      "y": 921,
+      "source": {
+        "screenshot": 1,
+        "row": 9
+      }
+    },
+    {
+      "id": "silberinsel-ath-eryndor-achatorden",
+      "title": "Ath Eryndor – Achatorden",
+      "category": "Siedlungsruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/antike-ruine.png",
+      "territoryId": "baronie-silberkueste",
+      "house": "Haus Tiwna",
+      "x": 2093,
+      "y": 2989,
+      "source": {
+        "screenshot": 1,
+        "row": 10
+      }
+    },
+    {
+      "id": "silberinsel-aberffryd",
+      "title": "Aberffryd",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "herrschaft-crefyddol",
+      "house": "Haus Crefyddol",
+      "x": 1202,
+      "y": 1370,
+      "source": {
+        "screenshot": 1,
+        "row": 11
+      }
+    },
+    {
+      "id": "silberinsel-eiddon",
+      "title": "Eiddon",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "baronie-silberkueste",
+      "house": "Haus Tiwna",
+      "x": 2520,
+      "y": 2825,
+      "source": {
+        "screenshot": 1,
+        "row": 12
+      }
+    },
+    {
+      "id": "silberinsel-castell-nantgraig",
+      "title": "Castell Nantgraig",
+      "category": "Burgsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/burgsiedlung.png",
+      "territoryId": "herrschaft-saith",
+      "house": "Haus Saith",
+      "x": 1315,
+      "y": 1976,
+      "source": {
+        "screenshot": 1,
+        "row": 13
+      }
+    },
+    {
+      "id": "silberinsel-pencaermor",
+      "title": "Pencaermor",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "baronie-silberkueste",
+      "house": "Haus Tiwna",
+      "x": 3101,
+      "y": 2080,
+      "source": {
+        "screenshot": 1,
+        "row": 14
+      }
+    },
+    {
+      "id": "silberinsel-tirglyn",
+      "title": "Tirglyn",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung.png",
+      "territoryId": "herrschaft-saith",
+      "house": "Haus Saith",
+      "x": 1347,
+      "y": 1651,
+      "source": {
+        "screenshot": 1,
+        "row": 15
+      }
+    },
+    {
+      "id": "silberinsel-gwernporth",
+      "title": "Gwernporth",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "baronie-silberkueste",
+      "house": "Haus Tiwna",
+      "x": 2899,
+      "y": 1437,
+      "source": {
+        "screenshot": 1,
+        "row": 16
+      }
+    },
+    {
+      "id": "silberinsel-craigffryd",
+      "title": "Craigffryd",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "herrschaft-silberpfad",
+      "house": "Haus Pyrth",
+      "x": 2364,
+      "y": 2581,
+      "source": {
+        "screenshot": 1,
+        "row": 17
+      }
+    },
+    {
+      "id": "silberinsel-dinasmwyn",
+      "title": "Dinasmwyn",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "herrschaft-silberpfad",
+      "house": "Haus Pyrth",
+      "x": 2023,
+      "y": 1537,
+      "source": {
+        "screenshot": 1,
+        "row": 18
+      }
+    },
+    {
+      "id": "silberinsel-bodcarreg",
+      "title": "Bodcarreg",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "herrschaft-saith",
+      "house": "Haus Saith",
+      "x": 1621,
+      "y": 1788,
+      "source": {
+        "screenshot": 1,
+        "row": 19
+      }
+    },
+    {
+      "id": "silberinsel-maesnant",
+      "title": "Maesnant",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung.png",
+      "territoryId": "herrschaft-crefyddol",
+      "house": "Haus Crefyddol",
+      "x": 1262,
+      "y": 1136,
+      "source": {
+        "screenshot": 1,
+        "row": 20
+      }
+    },
+    {
+      "id": "silberinsel-ard-iasgleann",
+      "title": "Ard Iasgleann",
+      "category": "Siedlungsruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/antike-ruine.png",
+      "territoryId": "baronie-silberkueste",
+      "house": "Haus Tiwna",
+      "x": 1400,
+      "y": 2580,
+      "source": {
+        "screenshot": 1,
+        "row": 21
+      }
+    },
+    {
+      "id": "silberinsel-cor-glynfawr",
+      "title": "Côr Glynfawr",
+      "category": "Klostersiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/klostersiedlung.png",
+      "territoryId": "baronie-silberkueste",
+      "house": "Haus Tiwna",
+      "x": 2764,
+      "y": 2451,
+      "source": {
+        "screenshot": 1,
+        "row": 22
+      }
+    },
+    {
+      "id": "silberinsel-nantporth",
+      "title": "Nantporth",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "herrschaft-canwyll",
+      "house": "Haus Canwyll",
+      "x": 1612,
+      "y": 670,
+      "source": {
+        "screenshot": 1,
+        "row": 23
+      }
+    },
+    {
+      "id": "silberinsel-caer-clwyd",
+      "title": "Caer Clwyd",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "herrschaft-silberpfad",
+      "house": "Haus Pyrth",
+      "x": 2074,
+      "y": 1941,
+      "source": {
+        "screenshot": 1,
+        "row": 24
+      }
+    },
+    {
+      "id": "silberinsel-cor-llanberwyn-abtei-von-st-sieffre",
+      "title": "Côr Llanberwyn – Abtei von St. Sieffre",
+      "category": "Heiligtum",
+      "templateId": "institution",
+      "icon": "/Karten/Cenyr/silberinsel/Symbole/abtei-st-sieffre.png",
+      "territoryId": "baronie-silberbucht",
+      "house": "Haus Neidr",
+      "x": 1977,
+      "y": 1248,
+      "source": {
+        "screenshot": 1,
+        "row": 25
+      }
+    },
+    {
+      "id": "silberinsel-ath-eryndor-unterwasserruine",
+      "title": "Ath Eryndor – Unterwasserruine",
+      "category": "Unterwasserstadt",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/unterwasserstadt.png",
+      "territoryId": "baronie-silberkueste",
+      "house": "Haus Tiwna",
+      "x": 1830,
+      "y": 2923,
+      "source": {
+        "screenshot": 1,
+        "row": 26
+      }
+    },
+    {
+      "id": "silberinsel-trethglyn",
+      "title": "Trethglyn",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "herrschaft-canwyll",
+      "house": "Haus Canwyll",
+      "x": 2764,
+      "y": 841,
+      "source": {
+        "screenshot": 1,
+        "row": 27
+      }
+    },
+    {
+      "id": "silberinsel-bryngwern",
+      "title": "Bryngwern",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung.png",
+      "territoryId": "baronie-silberkueste",
+      "house": "Haus Tiwna",
+      "x": 2974,
+      "y": 1710,
+      "source": {
+        "screenshot": 1,
+        "row": 28
+      }
+    },
+    {
+      "id": "silberinsel-nantbod",
+      "title": "Nantbod",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung.png",
+      "territoryId": "baronie-silberkueste",
+      "house": "Haus Tiwna",
+      "x": 2821,
+      "y": 2214,
+      "source": {
+        "screenshot": 1,
+        "row": 29
+      }
+    },
+    {
+      "id": "silberinsel-trethmor",
+      "title": "Trethmor",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "baronie-silberkueste",
+      "house": "Haus Tiwna",
+      "x": 946,
+      "y": 1924,
+      "source": {
+        "screenshot": 1,
+        "row": 30
+      }
+    },
+    {
+      "id": "silberinsel-llanvane",
+      "title": "Llanvane",
+      "category": "Hauptstadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "baronie-silberbucht",
+      "house": "Haus Neidr",
+      "x": 2106,
+      "y": 692,
+      "source": {
+        "screenshot": 1,
+        "row": 31
+      }
+    },
+    {
+      "id": "silberinsel-castell-canwyll",
+      "title": "Castell Canwyll",
+      "category": "Burg",
+      "templateId": "militaer",
+      "icon": "/Karten/assets/icons/welt/gro-e-burg.png",
+      "territoryId": "herrschaft-canwyll",
+      "house": "Haus Canwyll",
+      "x": 2326,
+      "y": 519,
+      "source": {
+        "screenshot": 1,
+        "row": 32
+      }
+    }
+  ],
+  "unpositionedPlaces": [
+    {
+      "id": "silberinsel-silberstollen",
+      "title": "Silberstollen",
+      "category": "Höhle",
+      "templateId": "natur",
+      "icon": "/Karten/assets/icons/welt/h-hle.png",
+      "territoryId": "baronie-silberkueste",
+      "house": "Haus Tiwna"
+    },
+    {
+      "id": "silberinsel-schattenklammhohle",
+      "title": "Schattenklammhöhle",
+      "category": "Höhle",
+      "templateId": "natur",
+      "icon": "/Karten/assets/icons/welt/h-hle.png",
+      "territoryId": "baronie-silberkueste",
+      "house": "Haus Tiwna"
+    },
+    {
+      "id": "silberinsel-donnerfallhohle",
+      "title": "Donnerfallhöhle",
+      "category": "Höhle",
+      "templateId": "natur",
+      "icon": "/Karten/assets/icons/welt/h-hle.png",
+      "territoryId": "baronie-silberkueste",
+      "house": "Haus Tiwna"
+    },
+    {
+      "id": "silberinsel-eisenschlucht",
+      "title": "Eisenschlucht",
+      "category": "Höhle",
+      "templateId": "natur",
+      "icon": "/Karten/assets/icons/welt/h-hle.png",
+      "territoryId": "baronie-silberbucht",
+      "house": "Haus Neidr"
+    }
+  ]
+}

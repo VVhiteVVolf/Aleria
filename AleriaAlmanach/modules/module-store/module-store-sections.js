@@ -120,14 +120,19 @@ function findSectionBySignature(signature) {
   return getValidSections().find(section => makeSectionSignature(section) === signature) || null;
 }
 
+function getBuiltinModuleSections() {
+  return globalThis.AleriaGwynthorGeography?.projectGwynthorSections(SECTIONS, { nodes: _moduleSectionNodes }) || SECTIONS;
+}
+
 function getAllSections() {
-  ensureKnownModuleSectionNodes();
+  const sourceSections = getBuiltinModuleSections();
+  ensureKnownModuleSectionNodes(sourceSections);
   const movedEntries = [];
   // Former custom modules can now also ship with the application. Match the
   // existing lookup priority (builtin + editor override, then custom), without
   // changing the stored records or duplicating a module in another section.
   const includedEntryIds = new Set();
-  const builtins = SECTIONS
+  const builtins = sourceSections
     .filter(section => section && Array.isArray(section.entries))
     .map(section => ({
       ...deepClone(section),
@@ -205,7 +210,7 @@ function getValidSections() {
 }
 
 function findBuiltinSectionByEntryId(entryId) {
-  for (const section of SECTIONS) {
+  for (const section of getBuiltinModuleSections()) {
     const found = (section.entries || []).find(entry => entry?.id === entryId);
     if (found) return { section, entry: found };
   }

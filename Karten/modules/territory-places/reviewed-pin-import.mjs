@@ -20,6 +20,8 @@ export function createReviewedPins(source, { catalog, presets, describePlace, re
       img: '', imgLink: '', crest: details.crest, crestLink: details.houseHref,
       banner: details.banner, bannerLink: details.territory.href, region, house: details.house,
       faction: details.faction, table, text: details.text, secret: false, dominionId: details.territory.id,
+      ...(marker.sourceRef ? { sourceRef: structuredClone(marker.sourceRef) } : {}),
+      ...(details.coRulers?.length ? { coRulers: details.coRulers } : {}),
     };
   });
   if (new Set(pins.map(pin => pin.id)).size !== pins.length) throw new Error('Doppelte Marker-ID');

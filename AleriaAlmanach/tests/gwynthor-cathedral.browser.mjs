@@ -61,7 +61,7 @@ try {
   await (await enter.isEnabled() ? enter : page.locator('[data-loading-action="continue"]')).click();
   await page.waitForFunction(() => !document.documentElement.hasAttribute('data-almanach-loading'));
   assert.equal(await page.evaluate(id => getValidSections().flatMap(section => section.entries).filter(entry => entry.id === id).length, entry.id), 1);
-  assert.equal(await page.evaluate(entry => getPages(entry).length, entry), 12);
+  assert.equal(await page.evaluate(entry => getPages(entry).length, entry), entry.pages.length);
   const runtimeCounts = await page.evaluate(hierarchy => sanitizeHierarchyData(hierarchy).trees.map(tree => tree.levels.map(level => level.nodes.length)), hierarchy);
   assert.deepEqual(runtimeCounts, hierarchy.trees.map(tree => tree.levels.map(level => level.nodes.length)));
   const threads = await page.evaluate(entry => entry.pages.slice(3).map((page, index) => getSessionThreadId(entry.id, getPageCommentThreadKey(page, index + 3))), entry);

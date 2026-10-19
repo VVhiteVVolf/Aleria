@@ -10,13 +10,13 @@ Wenn du Imgur nutzt, muss keine lokale Bilddatei in Git liegen. Du kannst die dr
 | --- | --- | --- | --- | --- | --- |
 | Celtigerns Wacht | Haus Draig | active | `cenyr-celtigerns-wacht` | `Karten/karte.html?map=cenyr-celtigerns-wacht` | `Karten/Cenyr/celtigerns-wacht` |
 | Vortigerns Ruh | Koenigliche Grafschaft des Hauses Pendrag | active | `cenyr-vortigerns-ruh` | `Karten/karte.html?map=cenyr-vortigerns-ruh` | `Karten/Cenyr/vortigerns-ruh` |
-| Tal der Milane | Haus Aderyn | planned | `cenyr-tal-der-milane` | `Karten/karte.html?map=cenyr-tal-der-milane` | `Karten/Cenyr/tal-der-milane` |
+| Tal der Milane | Haus Aderyn | active | `cenyr-tal-der-milane` | `Karten/karte.html?map=cenyr-tal-der-milane` | `Karten/Cenyr/tal-der-milane` |
 | Sonnenküste | Haus Illewod | active | `cenyr-sonnenkueste` | `Karten/karte.html?map=cenyr-sonnenkueste` | `Karten/Cenyr/sonnenkueste` |
-| Graue Weite | Haus Pysgod | planned | `cenyr-graue-weite` | `Karten/karte.html?map=cenyr-graue-weite` | `Karten/Cenyr/graue-weite` |
-| Weidebucht | Haus Wylan | planned | `cenyr-weidebucht` | `Karten/karte.html?map=cenyr-weidebucht` | `Karten/Cenyr/weidebucht` |
+| Graue Weite | Haus Pysgod | active | `cenyr-graue-weite` | `Karten/karte.html?map=cenyr-graue-weite` | `Karten/Cenyr/graue-weite` |
+| Weidebucht | Haus Wylan | active | `cenyr-weidebucht` | `Karten/karte.html?map=cenyr-weidebucht` | `Karten/Cenyr/weidebucht` |
 | Ährental | Haus Grawn | active | `cenyr-aehrental` | `Karten/karte.html?map=cenyr-aehrental` | `Karten/Cenyr/aehrental` |
-| Silberinsel | Haus Neidr | planned | `cenyr-silberinsel` | `Karten/karte.html?map=cenyr-silberinsel` | `Karten/Cenyr/silberinsel` |
-| Klaueninseln | Haus Arth | planned | `cenyr-klaueninseln` | `Karten/karte.html?map=cenyr-klaueninseln` | `Karten/Cenyr/klaueninseln` |
+| Silberinsel | Haus Neidr | active | `cenyr-silberinsel` | `Karten/karte.html?map=cenyr-silberinsel` | `Karten/Cenyr/silberinsel` |
+| Klaueninseln | Haus Arth | active | `cenyr-klaueninseln` | `Karten/karte.html?map=cenyr-klaueninseln` | `Karten/Cenyr/klaueninseln` |
 
 ## Aktivierung einer geplanten Grafschaft
 

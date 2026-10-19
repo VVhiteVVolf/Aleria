@@ -22,7 +22,7 @@
 
     return `<article class="pin-card" aria-labelledby="${esc(titleId)}">
       <header class="sv-header">
-        <div class="sv-crest">
+        <div class="sv-crest"${pin.coRulers?.length ? ' hidden' : ''}>
           ${pin.crest ? media(`<img src="${esc(pin.crest)}" alt="Wappen von ${esc(title)}" data-card-image/>`, pin.crestLink) : ''}
           <span class="sv-crest-placeholder" aria-hidden="true"${pin.crest ? ' hidden' : ''}>✦</span>
         </div>
@@ -41,6 +41,7 @@
         </div>
         ${pin.banner ? `<div class="sv-banner">${media(`<img src="${esc(pin.banner)}" alt="Regionsbanner" data-card-image/>`, pin.bannerLink)}</div>` : ''}
       </header>
+      ${renderCoRulers(pin.coRulers, esc, media)}
       <div class="sv-body${rows.length < 4 ? ' sv-body--compact' : ''}${!rows.length && image.isPlaceholder ? ' sv-body--placeholder-only' : ''}" data-image-position="${imagePosition(pin.imgPosition)}">
         <div class="sv-img-wrap">
           ${image.src ? media(`<img class="sv-location-image" src="${esc(image.src)}" alt="Ansicht von ${esc(title)}" data-card-image/>`, image.link) : ''}
@@ -50,6 +51,18 @@
       </div>
       ${pin.text ? `<section class="sv-lore"><h3 class="sv-section-title">Beschreibung</h3><div class="sv-text">${runtime.formatText(pin.text)}</div></section>` : ''}
     </article>`;
+  }
+
+  function renderCoRulers(rulers, esc, media) {
+    if (!Array.isArray(rulers) || !rulers.length) return '';
+    return `<section class="sv-co-rulers" aria-label="Gemeinsame Verwaltung">${rulers.map(ruler => {
+      const familyHref = ruler.familyId ? `/Stammbäume/Stammbaum.html?family=${encodeURIComponent(ruler.familyId)}&mode=view` : '';
+      return `<div class="sv-co-ruler">
+        ${ruler.crest ? media(`<img src="${esc(ruler.crest)}" alt="Wappen ${esc(ruler.house)}" data-card-image/>`, familyHref) : ''}
+        ${ruler.banner ? media(`<img src="${esc(ruler.banner)}" alt="Banner ${esc(ruler.house)}" data-card-image/>`, ruler.href) : ''}
+        ${media(`<span>${esc(ruler.house)}</span>`, familyHref)}
+      </div>`;
+    }).join('')}</section>`;
   }
 
   // Images can appear inside links; delegate failures without inline handlers.

@@ -1,0 +1,434 @@
+{
+  "images": [
+    {
+      "rect": "{\"bottom\":2398,\"height\":4018,\"left\":-1375,\"right\":2721,\"top\":-1620,\"width\":4096,\"x\":-1375,\"y\":-1620}",
+      "src": "https://wa-cdn.nyc3.cdn.digitaloceanspaces.com/user-data/production/347f15d9-5463-4945-91b1-f4a2b3b98189/uploads/images/cbbdfb1a541b7b937cce9fbde198f896.webp"
+    },
+    {
+      "rect": "{\"bottom\":2398,\"height\":4018,\"left\":-1375,\"right\":2721,\"top\":-1620,\"width\":4096,\"x\":-1375,\"y\":-1620}",
+      "src": "https://wa-cdn.nyc3.cdn.digitaloceanspaces.com/user-data/production/347f15d9-5463-4945-91b1-f4a2b3b98189/uploads/images/fdc5fe3de2795dba9894400a6e479852.webp"
+    }
+  ],
+  "markers": [
+    {
+      "alt": "Neue Positionsmarkierung",
+      "src": "https://wa-cdn.nyc3.cdn.digitaloceanspaces.com/assets/prod/leaflet/images/marker-icon.png",
+      "style": "margin-left: -12px; margin-top: -41px; width: 25px; height: 41px; opacity: 0; transform: translate3d(618px, 389px, 0px); z-index: 389;"
+    },
+    {
+      "alt": "Túr Briste",
+      "src": "https://www.worldanvil.com/images/markers/SettlementsCityBlackWorldAnvil.png",
+      "style": "margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(685px, -999px, 0px); z-index: -999;"
+    },
+    {
+      "alt": "Cwmhirfaen",
+      "src": "https://www.worldanvil.com/images/markers/SettlementsCityBlackWorldAnvil.png",
+      "style": "margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(-397px, 2295px, 0px); z-index: 2295;"
+    },
+    {
+      "alt": "Llanydd",
+      "src": "https://www.worldanvil.com/images/markers/SettlementsCityBlackWorldAnvil.png",
+      "style": "margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(-64px, 1591px, 0px); z-index: 1591;"
+    },
+    {
+      "alt": "Tŵr Drysfaen",
+      "src": "https://www.worldanvil.com/images/markers/SettlementsCityBlackWorldAnvil.png",
+      "style": "margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(1369px, 448px, 0px); z-index: 448;"
+    },
+    {
+      "alt": "Llandelaw",
+      "src": "https://www.worldanvil.com/images/markers/SettlementsCityBlackWorldAnvil.png",
+      "style": "margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(2118px, -1474px, 0px); z-index: -1474;"
+    },
+    {
+      "alt": "Zum Wackelsteg",
+      "src": "https://www.worldanvil.com/images/markers/SettlementsCityBlackWorldAnvil.png",
+      "style": "margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(1559px, -1394px, 0px); z-index: -1394;"
+    },
+    {
+      "alt": "Llanbedryn",
+      "src": "https://www.worldanvil.com/images/markers/SettlementsCityBlackWorldAnvil.png",
+      "style": "margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(-365px, 515px, 0px); z-index: 515;"
+    },
+    {
+      "alt": "Trebanon",
+      "src": "https://www.worldanvil.com/images/markers/SettlementsCityBlackWorldAnvil.png",
+      "style": "margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(1658px, -1469px, 0px); z-index: -1469;"
+    },
+    {
+      "alt": "Penbrynwyd",
+      "src": "https://www.worldanvil.com/images/markers/SettlementsCityBlackWorldAnvil.png",
+      "style": "margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(371px, 1138px, 0px); z-index: 1138;"
+    },
+    {
+      "alt": "Clyndreg",
+      "src": "https://www.worldanvil.com/images/markers/SettlementsCityBlackWorldAnvil.png",
+      "style": "margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(1999px, -952px, 0px); z-index: -952;"
+    },
+    {
+      "alt": "Klingenrast",
+      "src": "https://www.worldanvil.com/images/markers/SettlementsCityBlackWorldAnvil.png",
+      "style": "margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(-975px, 1320px, 0px); z-index: 1320;"
+    },
+    {
+      "alt": "Penllyn",
+      "src": "https://www.worldanvil.com/images/markers/SettlementsCityBlackWorldAnvil.png",
+      "style": "margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(2215px, -1242px, 0px); z-index: -1242;"
+    },
+    {
+      "alt": "Treglynn",
+      "src": "https://www.worldanvil.com/images/markers/SettlementsCityBlackWorldAnvil.png",
+      "style": "margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(1933px, -1145px, 0px); z-index: -1145;"
+    },
+    {
+      "alt": "Penrhydfaen",
+      "src": "https://www.worldanvil.com/images/markers/SettlementsCityBlackWorldAnvil.png",
+      "style": "margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(1387px, 209px, 0px); z-index: 209;"
+    },
+    {
+      "alt": "Windreiter - Burg Kreuzklinge",
+      "src": "https://www.worldanvil.com/images/markers/SettlementsCityBlackWorldAnvil.png",
+      "style": "margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(-834px, 1592px, 0px); z-index: 1592;"
+    },
+    {
+      "alt": "Tregolwyn",
+      "src": "https://www.worldanvil.com/images/markers/SettlementsCityBlackWorldAnvil.png",
+      "style": "margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(1013px, 710px, 0px); z-index: 710;"
+    },
+    {
+      "alt": "Llanpontarth",
+      "src": "https://www.worldanvil.com/images/markers/SettlementsCityBlackWorldAnvil.png",
+      "style": "margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(-1113px, 1127px, 0px); z-index: 1127;"
+    },
+    {
+      "alt": "Llanrhos",
+      "src": "https://www.worldanvil.com/images/markers/SettlementsCityBlackWorldAnvil.png",
+      "style": "margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(1468px, -889px, 0px); z-index: -889;"
+    },
+    {
+      "alt": "Llanwyllog",
+      "src": "https://www.worldanvil.com/images/markers/SettlementsCityBlackWorldAnvil.png",
+      "style": "margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(201px, -404px, 0px); z-index: -404;"
+    },
+    {
+      "alt": "Rhosmeres Rösser - Llanwyllan",
+      "src": "https://www.worldanvil.com/images/markers/SettlementsCityBlackWorldAnvil.png",
+      "style": "margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(-296px, 1786px, 0px); z-index: 1786;"
+    },
+    {
+      "alt": "Penwyn",
+      "src": "https://www.worldanvil.com/images/markers/SettlementsCityBlackWorldAnvil.png",
+      "style": "margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(-540px, 23px, 0px); z-index: 23;"
+    },
+    {
+      "alt": "Glynfaeth",
+      "src": "https://www.worldanvil.com/images/markers/SettlementsCityBlackWorldAnvil.png",
+      "style": "margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(-905px, 1791px, 0px); z-index: 1791;"
+    },
+    {
+      "alt": "Bryncelyn",
+      "src": "https://www.worldanvil.com/images/markers/SettlementsCityBlackWorldAnvil.png",
+      "style": "margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(127px, 975px, 0px); z-index: 975;"
+    },
+    {
+      "alt": "Tregwaun",
+      "src": "https://www.worldanvil.com/images/markers/SettlementsCityBlackWorldAnvil.png",
+      "style": "margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(-1232px, 1343px, 0px); z-index: 1343;"
+    },
+    {
+      "alt": "Trefmaes",
+      "src": "https://www.worldanvil.com/images/markers/SettlementsCityBlackWorldAnvil.png",
+      "style": "margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(-872px, 778px, 0px); z-index: 778;"
+    },
+    {
+      "alt": "Castell Tylluan",
+      "src": "https://www.worldanvil.com/images/markers/SettlementsCityBlackWorldAnvil.png",
+      "style": "margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(186px, 215px, 0px); z-index: 215;"
+    },
+    {
+      "alt": "Llanpontfaen",
+      "src": "https://www.worldanvil.com/images/markers/SettlementsCityBlackWorldAnvil.png",
+      "style": "margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(812px, -584px, 0px); z-index: -584;"
+    },
+    {
+      "alt": "Mynarth",
+      "src": "https://www.worldanvil.com/images/markers/SettlementsCityBlackWorldAnvil.png",
+      "style": "margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(-1180px, 1584px, 0px); z-index: 1584;"
+    },
+    {
+      "alt": "Trefdwy",
+      "src": "https://www.worldanvil.com/images/markers/SettlementsCityBlackWorldAnvil.png",
+      "style": "margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(-219px, -482px, 0px); z-index: -482;"
+    },
+    {
+      "alt": "Castell Eryr",
+      "src": "https://www.worldanvil.com/images/markers/SettlementsCityBlackWorldAnvil.png",
+      "style": "margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(854px, 266px, 0px); z-index: 266;"
+    },
+    {
+      "alt": "Llandregor",
+      "src": "https://www.worldanvil.com/images/markers/SettlementsCityBlackWorldAnvil.png",
+      "style": "margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(855px, -364px, 0px); z-index: -364;"
+    },
+    {
+      "alt": "Bryneth",
+      "src": "https://www.worldanvil.com/images/markers/SettlementsCityBlackWorldAnvil.png",
+      "style": "margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(327px, -1162px, 0px); z-index: -1162;"
+    },
+    {
+      "alt": "Penmorfa",
+      "src": "https://www.worldanvil.com/images/markers/SettlementsCityBlackWorldAnvil.png",
+      "style": "margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(-1157px, 1996px, 0px); z-index: 1996;"
+    },
+    {
+      "alt": "Penwaun",
+      "src": "https://www.worldanvil.com/images/markers/SettlementsCityBlackWorldAnvil.png",
+      "style": "margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(-182px, -974px, 0px); z-index: -974;"
+    },
+    {
+      "alt": "Castell Mwyalchen",
+      "src": "https://www.worldanvil.com/images/markers/SettlementsCityBlackWorldAnvil.png",
+      "style": "margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(-75px, 763px, 0px); z-index: 763;"
+    },
+    {
+      "alt": "Llanbedroc",
+      "src": "https://www.worldanvil.com/images/markers/SettlementsCityBlackWorldAnvil.png",
+      "style": "margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(1392px, -672px, 0px); z-index: -672;"
+    },
+    {
+      "alt": "Tŵr Gwalchgwyn",
+      "src": "https://www.worldanvil.com/images/markers/SettlementsCityBlackWorldAnvil.png",
+      "style": "margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(-749px, 529px, 0px); z-index: 529;"
+    },
+    {
+      "alt": "Caerbrech",
+      "src": "https://www.worldanvil.com/images/markers/SettlementsCityBlackWorldAnvil.png",
+      "style": "margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(1104px, -1146px, 0px); z-index: -1146;"
+    },
+    {
+      "alt": "Cwmgleinion",
+      "src": "https://www.worldanvil.com/images/markers/SettlementsCityBlackWorldAnvil.png",
+      "style": "margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(-787px, 1168px, 0px); z-index: 1168;"
+    },
+    {
+      "alt": "Tŵr Maenhir",
+      "src": "https://www.worldanvil.com/images/markers/SettlementsCityBlackWorldAnvil.png",
+      "style": "margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(456px, -546px, 0px); z-index: -546;"
+    },
+    {
+      "alt": "Coedfaen",
+      "src": "https://www.worldanvil.com/images/markers/SettlementsCityBlackWorldAnvil.png",
+      "style": "margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(-18px, -463px, 0px); z-index: -463;"
+    },
+    {
+      "alt": "Tŵr Llwynban",
+      "src": "https://www.worldanvil.com/images/markers/SettlementsCityBlackWorldAnvil.png",
+      "style": "margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(1336px, -1123px, 0px); z-index: -1123;"
+    },
+    {
+      "alt": "Trefcoed",
+      "src": "https://www.worldanvil.com/images/markers/SettlementsCityBlackWorldAnvil.png",
+      "style": "margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(-224px, 80px, 0px); z-index: 80;"
+    },
+    {
+      "alt": "Trefgwyllt",
+      "src": "https://www.worldanvil.com/images/markers/SettlementsCityBlackWorldAnvil.png",
+      "style": "margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(-75px, 1203px, 0px); z-index: 1203;"
+    },
+    {
+      "alt": "Llanfaes",
+      "src": "https://www.worldanvil.com/images/markers/SettlementsCityBlackWorldAnvil.png",
+      "style": "margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(1362px, -1301px, 0px); z-index: -1301;"
+    },
+    {
+      "alt": "Zum Wanderfalken",
+      "src": "https://www.worldanvil.com/images/markers/SettlementsCityBlackWorldAnvil.png",
+      "style": "margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(-1293px, 1856px, 0px); z-index: 1856;"
+    },
+    {
+      "alt": "Coedrhos",
+      "src": "https://www.worldanvil.com/images/markers/SettlementsCityBlackWorldAnvil.png",
+      "style": "margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(-48px, -1274px, 0px); z-index: -1274;"
+    },
+    {
+      "alt": "Mynyddwyn",
+      "src": "https://www.worldanvil.com/images/markers/SettlementsCityBlackWorldAnvil.png",
+      "style": "margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(1070px, -813px, 0px); z-index: -813;"
+    },
+    {
+      "alt": "Llanfaegor",
+      "src": "https://www.worldanvil.com/images/markers/SettlementsCityBlackWorldAnvil.png",
+      "style": "margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(256px, 1919px, 0px); z-index: 1919;"
+    },
+    {
+      "alt": "Glyncoed",
+      "src": "https://www.worldanvil.com/images/markers/SettlementsCityBlackWorldAnvil.png",
+      "style": "margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(-82px, 348px, 0px); z-index: 348;"
+    },
+    {
+      "alt": "Pendreth",
+      "src": "https://www.worldanvil.com/images/markers/SettlementsCityBlackWorldAnvil.png",
+      "style": "margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(-771px, 1394px, 0px); z-index: 1394;"
+    },
+    {
+      "alt": "Dun Talonach",
+      "src": "https://www.worldanvil.com/images/markers/SettlementsCityBlackWorldAnvil.png",
+      "style": "margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(-640px, 2039px, 0px); z-index: 2039;"
+    },
+    {
+      "alt": "Tremaen",
+      "src": "https://www.worldanvil.com/images/markers/SettlementsCityBlackWorldAnvil.png",
+      "style": "margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(634px, -168px, 0px); z-index: -168;"
+    },
+    {
+      "alt": "Jagdklingen - Dornwacht Lager",
+      "src": "https://www.worldanvil.com/images/markers/SettlementsCityBlackWorldAnvil.png",
+      "style": "margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(212px, -861px, 0px); z-index: -861;"
+    },
+    {
+      "alt": "Zum Eichenkrug",
+      "src": "https://www.worldanvil.com/images/markers/SettlementsCityBlackWorldAnvil.png",
+      "style": "margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(68px, 1892px, 0px); z-index: 1892;"
+    },
+    {
+      "alt": "Llanfyll",
+      "src": "https://www.worldanvil.com/images/markers/SettlementsCityBlackWorldAnvil.png",
+      "style": "margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(-493px, 1523px, 0px); z-index: 1523;"
+    },
+    {
+      "alt": "Trelyddon",
+      "src": "https://www.worldanvil.com/images/markers/SettlementsCityBlackWorldAnvil.png",
+      "style": "margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(291px, -1319px, 0px); z-index: -1319;"
+    },
+    {
+      "alt": "Penrhydd",
+      "src": "https://www.worldanvil.com/images/markers/SettlementsCityBlackWorldAnvil.png",
+      "style": "margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(983px, -134px, 0px); z-index: -134;"
+    },
+    {
+      "alt": "Treffalor",
+      "src": "https://www.worldanvil.com/images/markers/SettlementsCityBlackWorldAnvil.png",
+      "style": "margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(87px, 2206px, 0px); z-index: 2206;"
+    },
+    {
+      "alt": "Trelinon",
+      "src": "https://www.worldanvil.com/images/markers/SettlementsCityBlackWorldAnvil.png",
+      "style": "margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(155px, 1334px, 0px); z-index: 1334;"
+    },
+    {
+      "alt": "Garthlynn",
+      "src": "https://www.worldanvil.com/images/markers/SettlementsCityBlackWorldAnvil.png",
+      "style": "margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(420px, -247px, 0px); z-index: -247;"
+    },
+    {
+      "alt": "Trefdryn",
+      "src": "https://www.worldanvil.com/images/markers/SettlementsCityBlackWorldAnvil.png",
+      "style": "margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(613px, 87px, 0px); z-index: 87;"
+    },
+    {
+      "alt": "Pendderw",
+      "src": "https://www.worldanvil.com/images/markers/SettlementsCityBlackWorldAnvil.png",
+      "style": "margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(1892px, -1433px, 0px); z-index: -1433;"
+    },
+    {
+      "alt": "Caergryn",
+      "src": "https://www.worldanvil.com/images/markers/SettlementsCityBlackWorldAnvil.png",
+      "style": "margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(573px, -723px, 0px); z-index: -723;"
+    },
+    {
+      "alt": "Penbryn",
+      "src": "https://www.worldanvil.com/images/markers/SettlementsCityBlackWorldAnvil.png",
+      "style": "margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(398px, 451px, 0px); z-index: 451;"
+    },
+    {
+      "alt": "Bryngald",
+      "src": "https://www.worldanvil.com/images/markers/SettlementsCityBlackWorldAnvil.png",
+      "style": "margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(-110px, 2290px, 0px); z-index: 2290;"
+    },
+    {
+      "alt": "Bryndolgar",
+      "src": "https://www.worldanvil.com/images/markers/SettlementsCityBlackWorldAnvil.png",
+      "style": "margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(1502px, 638px, 0px); z-index: 638;"
+    },
+    {
+      "alt": "Anwesen Hochblick",
+      "src": "https://www.worldanvil.com/images/markers/SettlementsCityBlackWorldAnvil.png",
+      "style": "margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(-161px, 1373px, 0px); z-index: 1373;"
+    },
+    {
+      "alt": "Tŵr Creigwyn",
+      "src": "https://www.worldanvil.com/images/markers/SettlementsCityBlackWorldAnvil.png",
+      "style": "margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(1855px, -490px, 0px); z-index: -490;"
+    },
+    {
+      "alt": "Mynfaegor",
+      "src": "https://www.worldanvil.com/images/markers/SettlementsCityBlackWorldAnvil.png",
+      "style": "margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(570px, 964px, 0px); z-index: 964;"
+    },
+    {
+      "alt": "Llanferydd",
+      "src": "https://www.worldanvil.com/images/markers/SettlementsCityBlackWorldAnvil.png",
+      "style": "margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(1228px, 856px, 0px); z-index: 856;"
+    },
+    {
+      "alt": "Porthdy",
+      "src": "https://www.worldanvil.com/images/markers/SettlementsCityBlackWorldAnvil.png",
+      "style": "margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(2336px, -993px, 0px); z-index: -993;"
+    },
+    {
+      "alt": "Llanfelen",
+      "src": "https://www.worldanvil.com/images/markers/SettlementsCityBlackWorldAnvil.png",
+      "style": "margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(-410px, -693px, 0px); z-index: -693;"
+    },
+    {
+      "alt": "Trefyscawen",
+      "src": "https://www.worldanvil.com/images/markers/SettlementsCityBlackWorldAnvil.png",
+      "style": "margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(2303px, -803px, 0px); z-index: -803;"
+    },
+    {
+      "alt": "Llangellog",
+      "src": "https://www.worldanvil.com/images/markers/SettlementsCityBlackWorldAnvil.png",
+      "style": "margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(-168px, 2049px, 0px); z-index: 2049;"
+    },
+    {
+      "alt": "Caer Gwennol",
+      "src": "https://www.worldanvil.com/images/markers/SettlementsCityBlackWorldAnvil.png",
+      "style": "margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(1326px, -391px, 0px); z-index: -391;"
+    },
+    {
+      "alt": "Talwyn",
+      "src": "https://www.worldanvil.com/images/markers/SettlementsCityBlackWorldAnvil.png",
+      "style": "margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(579px, 1346px, 0px); z-index: 1346;"
+    },
+    {
+      "alt": "Esgyrn",
+      "src": "https://www.worldanvil.com/images/markers/SettlementsCityBlackWorldAnvil.png",
+      "style": "margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(769px, -1226px, 0px); z-index: -1226;"
+    },
+    {
+      "alt": "Jagdklingen - Falkenwacht",
+      "src": "https://www.worldanvil.com/images/markers/SettlementsCityBlackWorldAnvil.png",
+      "style": "margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(-486px, 973px, 0px); z-index: 973;"
+    },
+    {
+      "alt": "Cwmnarog",
+      "src": "https://www.worldanvil.com/images/markers/SettlementsCityBlackWorldAnvil.png",
+      "style": "margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(1677px, 18px, 0px); z-index: 18;"
+    },
+    {
+      "alt": "Glyndewir",
+      "src": "https://www.worldanvil.com/images/markers/SettlementsCityBlackWorldAnvil.png",
+      "style": "margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(1412px, -182px, 0px); z-index: -182;"
+    },
+    {
+      "alt": "Llanwydden",
+      "src": "https://www.worldanvil.com/images/markers/SettlementsCityBlackWorldAnvil.png",
+      "style": "margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(310px, 9px, 0px); z-index: 9;"
+    },
+    {
+      "alt": "Trefcelyn",
+      "src": "https://www.worldanvil.com/images/markers/SettlementsCityBlackWorldAnvil.png",
+      "style": "margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(-1127px, 846px, 0px); z-index: 846;"
+    }
+  ]
+}

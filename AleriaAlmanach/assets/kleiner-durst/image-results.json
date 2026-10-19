@@ -122,46 +122,6 @@
       "sha256": "b4536ac78c17fe21f4db920929311bafe8f96a34aaa2fd65dc8d8450aba07100"
     },
     {
-      "id": "matrosenhappen",
-      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-aae00253-ff51-4d5c-a907-8397579b354a.png",
-      "destination": "AleriaAlmanach/assets/kleiner-durst/food/matrosenhappen.png",
-      "width": 1024,
-      "height": 1536,
-      "sha256": "3e01d866839b682569e717f892ddaa46644866ad5270bb68495708dd56336eac"
-    },
-    {
-      "id": "fischgerstentopf",
-      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-0d6cd702-5ad7-4140-8a53-f903d60e3e98.png",
-      "destination": "AleriaAlmanach/assets/kleiner-durst/food/fischgerstentopf.png",
-      "width": 1024,
-      "height": 1536,
-      "sha256": "c5291b5463dc2c1d265ef7095776ca55173e0d74ee60a1d6dbf0c95cdfeefc84"
-    },
-    {
-      "id": "hafensuppe",
-      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-054be960-ea24-49e8-b20d-4bec94a02760.png",
-      "destination": "AleriaAlmanach/assets/kleiner-durst/food/hafensuppe.png",
-      "width": 1024,
-      "height": 1536,
-      "sha256": "ba27df1cfd3cbaeab65f7d63b9665b29961310bc110c4023e906d64bf7601eff"
-    },
-    {
-      "id": "ganzer-hering",
-      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-cc1cd802-b7e9-47b2-a2ab-00a87e547cc1.png",
-      "destination": "AleriaAlmanach/assets/kleiner-durst/food/ganzer-hering.png",
-      "width": 1024,
-      "height": 1536,
-      "sha256": "6aa41b823e7ab65d5b3c7ff3080d51497cb00aa0159588e022f35f259cec2024"
-    },
-    {
-      "id": "monatsfang",
-      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-73c5a09c-7ef6-4580-adc8-4428f2ad4913.png",
-      "destination": "AleriaAlmanach/assets/kleiner-durst/food/monatsfang.png",
-      "width": 1024,
-      "height": 1536,
-      "sha256": "5735f7933b6c430329cb5a01fddab2db5fc1cd47a10f62c9399d5e08fce1ba5a"
-    },
-    {
       "id": "iorwerth",
       "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-55148ec5-ed22-4bf1-902b-64dd3b7c9a43.png",
       "destination": "AleriaAlmanach/assets/kleiner-durst/portraits/iorwerth.png",
@@ -207,8 +167,8 @@
           9
         ],
         "radius": [
-          545.0,
-          545.0
+          545,
+          545
         ],
         "originalSha256": "fe36a7abef3072396c1c1f8f0b90c9ace135bcfa69b23623260634ebd7cca615",
         "finalSha256": "daf35b1a4570f67b31a247671e2f33f09189cbc60b48bf78ead532cae5f6c21c",
@@ -234,6 +194,139 @@
           "revision": 2
         }
       }
+    },
+    {
+      "id": "matrosenhappen",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-a849dba2-d945-45c2-baf8-85f52bb2a0d3.png",
+      "destination": "AleriaAlmanach/assets/kleiner-durst/food/matrosenhappen.png",
+      "kind": "food",
+      "promptId": "matrosenhappen",
+      "stylePreset": "fantasy-inventory-item",
+      "references": [
+        "AleriaAlmanach/assets/klingende-krone/goods/haferkaese.png",
+        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
+      ],
+      "revision": 2,
+      "width": 1254,
+      "height": 1254,
+      "sha256": "1b5faab45a35eb5d215532a002565f79bacca38aed7f1eeaf41c0de58cf333e4"
+    },
+    {
+      "id": "fischgerstentopf",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-08fd5a4c-93bf-41dd-a7df-8a4dcc0c09cf.png",
+      "destination": "AleriaAlmanach/assets/kleiner-durst/food/fischgerstentopf.png",
+      "kind": "food",
+      "promptId": "fischgerstentopf",
+      "stylePreset": "fantasy-inventory-item",
+      "references": [
+        "AleriaAlmanach/assets/klingende-krone/goods/haferkaese.png",
+        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
+      ],
+      "revision": 2,
+      "width": 1254,
+      "height": 1254,
+      "sha256": "0eef9c09fb4b190080927ef862c89a5999f62dbbd6efffdb1ee331ded2cd9727"
+    },
+    {
+      "id": "hafensuppe",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-0b57ddec-d74b-49aa-9aca-8ab8c6e5d54d.png",
+      "destination": "AleriaAlmanach/assets/kleiner-durst/food/hafensuppe.png",
+      "kind": "food",
+      "promptId": "hafensuppe",
+      "stylePreset": "fantasy-inventory-item",
+      "references": [
+        "AleriaAlmanach/assets/klingende-krone/goods/haferkaese.png",
+        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
+      ],
+      "revision": 2,
+      "width": 1254,
+      "height": 1254,
+      "sha256": "48fc27f15794fe8328cea85d3257140e88b15f149cb5502d4553ada25145a11d"
+    },
+    {
+      "id": "ganzer-hering",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-b5f51894-c9da-48fe-a759-9de6942c41a3.png",
+      "destination": "AleriaAlmanach/assets/kleiner-durst/food/ganzer-hering.png",
+      "kind": "food",
+      "promptId": "ganzer-hering",
+      "stylePreset": "fantasy-inventory-item",
+      "references": [
+        "AleriaAlmanach/assets/klingende-krone/goods/haferkaese.png",
+        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
+      ],
+      "revision": 2,
+      "width": 1254,
+      "height": 1254,
+      "sha256": "fb7421769f5e1388a0b9a5a1f078f6037c2ca9de608554590f32ef3b0d0c4ac8"
+    },
+    {
+      "id": "monatsfang",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-1ba94d46-47f2-4947-822c-a8848cfdc6c6.png",
+      "destination": "AleriaAlmanach/assets/kleiner-durst/food/monatsfang.png",
+      "kind": "food",
+      "promptId": "monatsfang",
+      "stylePreset": "fantasy-inventory-item",
+      "references": [
+        "AleriaAlmanach/assets/klingende-krone/goods/haferkaese.png",
+        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
+      ],
+      "revision": 2,
+      "width": 1254,
+      "height": 1254,
+      "sha256": "c9169589477ecff593e6af6192fdda90817207b2de7cb2bf4bdbeb5cd6d92399"
     }
-  ]
+  ],
+  "rejected": [
+    {
+      "id": "matrosenhappen",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-aae00253-ff51-4d5c-a907-8397579b354a.png",
+      "destination": "AleriaAlmanach/assets/kleiner-durst/food/matrosenhappen.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "3e01d866839b682569e717f892ddaa46644866ad5270bb68495708dd56336eac",
+      "rejectedAt": "2026-10-19",
+      "reason": "User correction: replace scene with square transparent inventory icon."
+    },
+    {
+      "id": "fischgerstentopf",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-0d6cd702-5ad7-4140-8a53-f903d60e3e98.png",
+      "destination": "AleriaAlmanach/assets/kleiner-durst/food/fischgerstentopf.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "c5291b5463dc2c1d265ef7095776ca55173e0d74ee60a1d6dbf0c95cdfeefc84",
+      "rejectedAt": "2026-10-19",
+      "reason": "User correction: replace scene with square transparent inventory icon."
+    },
+    {
+      "id": "hafensuppe",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-054be960-ea24-49e8-b20d-4bec94a02760.png",
+      "destination": "AleriaAlmanach/assets/kleiner-durst/food/hafensuppe.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "ba27df1cfd3cbaeab65f7d63b9665b29961310bc110c4023e906d64bf7601eff",
+      "rejectedAt": "2026-10-19",
+      "reason": "User correction: replace scene with square transparent inventory icon."
+    },
+    {
+      "id": "ganzer-hering",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-cc1cd802-b7e9-47b2-a2ab-00a87e547cc1.png",
+      "destination": "AleriaAlmanach/assets/kleiner-durst/food/ganzer-hering.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "6aa41b823e7ab65d5b3c7ff3080d51497cb00aa0159588e022f35f259cec2024",
+      "rejectedAt": "2026-10-19",
+      "reason": "User correction: replace scene with square transparent inventory icon."
+    },
+    {
+      "id": "monatsfang",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-73c5a09c-7ef6-4580-adc8-4428f2ad4913.png",
+      "destination": "AleriaAlmanach/assets/kleiner-durst/food/monatsfang.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "5735f7933b6c430329cb5a01fddab2db5fc1cd47a10f62c9399d5e08fce1ba5a",
+      "rejectedAt": "2026-10-19",
+      "reason": "User correction: replace scene with square transparent inventory icon."
+    }
+  ],
+  "validatedAt": "2026-10-19"
 }

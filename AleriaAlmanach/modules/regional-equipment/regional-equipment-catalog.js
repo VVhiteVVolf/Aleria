@@ -79,6 +79,7 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "haus-bradrhith",
       "haus-cymrath-o-traethlan",
       "haus-sgrechiwr",
+      "haus-penrudd",
       "haus-argall",
       "haus-gwefrydd",
       "haus-almarch",
@@ -635,6 +636,7 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "haus-bradrhith",
       "haus-cymrath-o-traethlan",
       "haus-sgrechiwr",
+      "haus-penrudd",
       "haus-argall",
       "haus-gwefrydd",
       "haus-almarch",
@@ -912,6 +914,7 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "haus-bradrhith",
       "haus-cymrath-o-traethlan",
       "haus-sgrechiwr",
+      "haus-penrudd",
       "haus-argall",
       "haus-gwefrydd",
       "haus-almarch",
@@ -1014,6 +1017,7 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "cenyr/celtigerns-wacht/llamreis-ankunft/gwynthor",
       "cenyr/celtigerns-wacht/llamreis-ankunft/twr-traethlan",
       "cenyr/celtigerns-wacht/llamreis-ankunft/lynthor",
+      "cenyr/celtigerns-wacht/llamreis-ankunft/bannkreis-gwynthor",
       "cenyr/celtigerns-wacht/llamreis-ankunft/llysfaen"
     ],
     "houseIds": [
@@ -1059,6 +1063,7 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "haus-bradrhith",
       "haus-cymrath-o-traethlan",
       "haus-sgrechiwr",
+      "haus-penrudd",
       "haus-argall"
     ]
   },
@@ -1174,6 +1179,24 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     "children": [],
     "houseIds": [
       "haus-sgrechiwr"
+    ]
+  },
+  {
+    "id": "cenyr/celtigerns-wacht/llamreis-ankunft/bannkreis-gwynthor",
+    "parentId": "cenyr/celtigerns-wacht/llamreis-ankunft",
+    "name": "Bannkreis Gwynthor",
+    "path": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Bannkreis Gwynthor"
+    ],
+    "image": "",
+    "countryId": "cenyr",
+    "regionId": "celtigerns-wacht",
+    "children": [],
+    "houseIds": [
+      "haus-penrudd"
     ]
   },
   {
@@ -13095,6 +13118,18 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
       "Gwynthor"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-rhwyd&mode=view"
+  },
+  {
+    "id": "haus-penrudd",
+    "name": "Haus Penrudd",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Llamreis%20Ankunft/B%C3%BCrgerliche/Bannkreis%20Gwynthor/Penrudd.png",
+    "path": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Bannkreis Gwynthor"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-penrudd&mode=view"
   },
   {
     "id": "haus-gwregysdu",

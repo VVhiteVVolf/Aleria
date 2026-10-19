@@ -1,0 +1,60 @@
+{
+  "schema": "aleria.character-biography-user-context",
+  "schemaVersion": 1,
+  "source": "Direkte Angaben des Nutzers vom 17. Oktober 2026",
+  "characterName": "Skalli Varulv",
+  "roleplayScope": {
+    "anarautEngagementEstablished": false,
+    "familyTreeEntryRetained": true,
+    "publicationAllowed": false
+  },
+  "martialReputation": {
+    "description": "Taffe aldrimarische Walküre; in ihrem Jahrgang vermutlich die beste Kriegerin weit und breit.",
+    "certainty": "Die Einschätzung als Beste bleibt ausdrücklich eine Vermutung beziehungsweise ihr Ruf.",
+    "exceptionalPhysicalStrength": true,
+    "firstRateCombatSkill": true,
+    "strategicMindSharedWithFather": true,
+    "moreAggressiveThanFather": true,
+    "trainedEarly": true,
+    "differentMartialTrainingFromFather": true,
+    "notThegnar": true,
+    "riding": "Für eine Aldrimarerin recht gute Reiterin, ohne berittene Thegnar-Ausbildung."
+  },
+  "retinue": {
+    "ownRetinueEarlierThanOtherClanScions": true,
+    "earlyStanding": "Trat früh als stärkste Figur unter den Sprösslingen des Clans hervor.",
+    "memberCategories": ["einige Vettern", "Geschwister", "Clanskrieger"],
+    "namedMembers": [],
+    "purpose": "Schutz ihrer Heimat und Hilfe für die umliegenden Ortschaften.",
+    "dailyLife": "Verbringt die meiste Zeit mit ihrem Gefolge.",
+    "earnedRecognitionThroughDeeds": true,
+    "specificDeedsNotYetNamed": true
+  },
+  "personality": {
+    "manner": "Forsch, direkt, nicht zimperlich; trägt ihr Herz auf der Zunge.",
+    "action": "Handelt entschlossen; kann als ungeduldig oder zielstrebig wahrgenommen werden.",
+    "honesty": "Bevorzugt offene Worte gegenüber gefälliger Nettigkeit aus Angst, jemanden vor den Kopf zu stoßen.",
+    "humor": "Hat guten Humor, aber wenig Geduld mit Narren.",
+    "desires": "Wenn sie etwas wirklich möchte, langt sie zu und fordert es ein.",
+    "protectiveness": "Großer Beschützerinstinkt.",
+    "duty": "Stellt das Wohlergehen ihres Clans über ihr eigenes."
+  },
+  "personalConnections": {
+    "Sleipnir Varulv": "Seine Anerkennung gilt ihrer außergewöhnlichen Kampfkraft; beide teilen strategischen Geist trotz unterschiedlicher Ausbildung und Vorgehensweise.",
+    "Fenrir Varulv": "Seine vom Nutzer so bezeichnete Pferdeblindheit reizt bisweilen ihre geringe Geduld mit Torheit aus. Keine medizinische oder weitere wörtliche Ausdeutung dieses Ausdrucks festgelegt.",
+    "Gleipnir Varulv": "Scherzt gern, Skalli solle seine Nachfolgerin sein, weil sie alle männlichen Varulv-Erben in den Schatten stellt. Das ist kein Erlass zur Änderung der Erbfolge."
+  },
+  "preferences": {
+    "drinking": "Trinkt jeden unter den Tisch.",
+    "alcoholOfChoice": ["Met", "Bier"],
+    "dislikes": ["albischer Whiskey"]
+  },
+  "homeAndMarriage": {
+    "attachedToRoriksheim": true,
+    "wantsToLeaveRoriksheim": false,
+    "marriageInPrinciplePossible": true,
+    "clanWelfareAboveOwnWishes": true,
+    "currentPartnerOrEngagementEstablished": false
+  },
+  "writingDirection": "Immersiv, interessant und charakterbezogen schreiben; technische Angaben und nüchterne Listen aus der eigentlichen Biografie heraushalten. Keine benannten Gefolgsleute, Schlachten, Lehrmeister oder aktuellen romantischen Bindungen hinzuerfinden."
+}

@@ -174,10 +174,10 @@ function normalizeModuleTreeState(payload = {}) {
   return { nodes, assignments };
 }
 
-function ensureKnownModuleSectionNodes() {
+function ensureKnownModuleSectionNodes(builtinSections = typeof getBuiltinModuleSections === 'function' ? getBuiltinModuleSections() : SECTIONS) {
   let changed = false;
   const before = _moduleSectionNodes.length;
-  [...(Array.isArray(SECTIONS) ? SECTIONS : []), ..._customSections].forEach(section => {
+  [...(Array.isArray(builtinSections) ? builtinSections : []), ..._customSections].forEach(section => {
     const nodeId = ensureModuleNodeForSection(section);
     if (section && !section.nodeId) section.nodeId = nodeId;
   });

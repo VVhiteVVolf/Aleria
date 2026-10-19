@@ -38,7 +38,7 @@ try {
   await(await enter.isEnabled()?enter:page.locator('[data-loading-action="continue"]')).click();
   await page.waitForFunction(()=>!document.documentElement.hasAttribute('data-almanach-loading'));
   assert.equal(await page.evaluate(id=>getValidSections().flatMap(s=>s.entries).filter(e=>e.id===id).length,entry.id),1);
-  assert.equal(await page.evaluate(entry=>getPages(entry).length,entry),12);
+  assert.equal(await page.evaluate(entry=>getPages(entry).length,entry),entry.pages.length);
 
   for(let index=0;index<entry.pages.length;index++){
     await page.evaluate(({entry,index})=>{closeModal();openModal(entry,{pageIndex:index});},{entry,index});

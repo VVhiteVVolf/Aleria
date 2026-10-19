@@ -359,3 +359,6 @@
 .directory-place-description { margin-top: 0.5rem; }
 .directory-place-description summary { cursor: pointer; color: #74372d; }
 .directory-place-description p { margin: 0.5rem 0 0; line-height: 1.65; overflow-wrap: break-word; }
+.territory-directory .directory-co-ruler { display: flex; align-items: center; gap: .35rem; }
+.territory-directory .directory-co-ruler img { width: 24px; height: 28px; object-fit: contain; }
+.territory-directory .directory-co-ruler > a { min-width: 0; }

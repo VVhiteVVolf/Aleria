@@ -1,0 +1,128 @@
+# Zum Roten Tor – Familie und Lieferhof
+
+Angelegt sind die Familie Penrudd, ihr Lieferhof, das gewählte Familienwappen,
+24 individuelle Porträts und die Hauskarte mit acht Gerichten und acht Getränken.
+Das vollständige Gasthofmodul mit Personal, Szenen, Dienstleistungen und
+Kalkulation wird anschließend ausgearbeitet. Keine Veröffentlichung.
+
+`penrudd-household.mjs` ist die gemeinsame Quelle für Personen, Beziehungen,
+Haushalte und Lieferverbindung. Die Stammbaum-Akte importiert diese Daten;
+ein späteres Gasthofmodul kann dieselben Personen verwenden. Die 24 benannten
+Personen besitzen nun eigene Porträts; nur die unbekannten Gründer behalten
+ihre Platzhalter. `penrudd-appearances.mjs` hält ihr Aussehen fest.
+
+## Familie
+
+Unbekanntes Gründerpaar → Hausknoten → genau ein serieller Zeitsprung →
+**Madoc Penrudd (1642–1718) und Nest (1647–1726)** → deren beide Söhne:
+
+- **Gwilym (70) und Enid (68)**: alter Wirtszweig am Roten Tor.
+  - **Carwyn (46) und Olwen (43)**: heutige Betreiber.
+    - **Aled (24) und Cerys (22)**: Stall und Wagenhof; Sohn **Rhys (2)**.
+    - **Mared (20)**: unverheiratet, Empfang und Rechnungsbuch.
+    - **Dewi (13)**: altersgemäße kleine Hilfen, kein regulärer Knecht.
+  - **Hywel (39) und Ffion (36)**: Keller, Lieferannahme, Zimmer und Wäsche;
+    Kinder **Iwan (10)** und **Eleri (6)**.
+  - **Rhosyn (35)**: unverheiratet, Schankstube.
+- **Tudur (66) und Bethan (64)**: Hofzweig am Penrudd-Hof.
+  - **Meurig (42) und Nia (40)**: Hofnachfolge, Vieh, Feld, Geflügel und Garten;
+    Kinder **Gethin (21)**, **Lowri (16)** und **Osian (11)**, alle unverheiratet.
+  - **Eluned (36)**: unverheiratet, Milchkammer, Butter und einfacher Käse.
+
+Insgesamt 26 Personen: zwei unbekannte Gründer, zwei verstorbene Angehörige
+und 22 Lebende. Sämtliche sieben namentlich ausgearbeiteten Angeheirateten
+tragen ausschließlich Vornamen. Ihre Herkunftshäuser bleiben offen.
+Bestehende Penry-Personen, insbesondere der Talgarther Familie, bleiben unverändert.
+Alle Namen, Daten und Rollen dieser neuen Familie sind ergänzende Ausarbeitung
+nach dem Nutzerauftrag vom 19.10.2026. Niemand wird aus vorhandenen Akten gedoppelt.
+
+## Auswahl des Hofes
+
+Bestehende Bannkreis-Karte:
+`Karten/Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/data.json`.
+Der Pin **gwynthor-marking-041** war ein vollständig unbenannter Bauernhof ohne
+Betreiber, Beschreibung, Waren oder Zuordnung. Unter diesen freien Bauernhöfen
+liegt er nach den normalisierten Kartenkoordinaten dem Gasthof am nächsten.
+Die Markerkarte wurde tatsächlich angesehen: Der Hof liegt am nördlichen Weg,
+nahe Owains Anwesen, mit bereits eingezeichneten Äckern und Viehweiden.
+Aus der Kartennähe werden keine Kilometer oder Reisezeiten abgeleitet.
+
+Der Hof heißt nun **Penrudd-Hof**. Alle Pin-IDs und Koordinaten bleiben erhalten;
+ebenso die bereits belegten Höfe Gwerfil, Afelwyn, Bradrhith und Owains Anwesen.
+Die genaue Grundherrschaft und ein möglicher Pachtvertrag bleiben offen.
+Der allgemeine Dienstbezug des Familienhauses ist Haus Draig; daraus wird keine
+bestimmte Pachtparzelle oder persönliche Hofbelehnung abgeleitet.
+
+Der Bauernzweig liefert Milch, Butter, einfachen Käse, Eier, Geflügel, saisonales
+Gemüse sowie Heu und Hafer. Gelegentliches Schlachtvieh verarbeitet ein örtlicher
+Fleischer. Hof und Herberge führen getrennte Kassen und rechnen ihre Leistungen
+ab. Der Hof hat weitere Abnehmer; die Herberge braucht weitere Lieferanten für
+z. B. Bier, Wein und Brot. Keine kostenlose Vollversorgung und keine magische Kühlung.
+
+## Wappen
+
+Gewählter Entwurf: rotes offenes Holztor mit cremefarbener Laterne auf dunkelbraun
+bemalten Brettern. Exakt kreisrunder, geschlossener dunkler Eisenrahmen mit Nieten
+und vier schlichten Knotenzierden. Wahlspruch: **Ein Platz am Feuer.**
+
+Vor der Generierung wurden die registrierten Gwynthorer Bürgerwappen Vann und
+Raves angesehen und als Stilreferenzen übergeben. Verbindlich ist das vollständige
+Preset `fantasy-heraldic-emblem`; fremde Motive und Goldrahmen werden nicht übernommen.
+
+Die am 19.10.2026 ausdrücklich freigegebene technische Bereinigung ist abgeschlossen:
+innen Alpha 255, außerhalb der exakten Kreisform Alpha 0, mittig mit etwa 87 Prozent
+Bildbreite. Motiv und sämtliche ursprünglichen RGB-Pixel bleiben unverändert;
+ergänzt wurde nur transparenter Rand. Original, Versatz, Kreisparameter und
+Prüfsummen sind in `penrudd-emblem-provenance.json` dokumentiert. Die Darstellung
+wurde auf heller und dunkler Unterlage geprüft.
+
+## Prüfung
+
+```powershell
+node --test --experimental-test-isolation=none Stammbäume/tests/house-penrudd.test.js
+node Stammbäume/tools/check-chart-geometry.mjs --families=haus-penrudd
+```
+
+Die Diagrammprüfung muss genau einen seriellen Übergang hinter dem Hauswappen
+und beide Brüder erst unter Madoc und Nest zeigen. Das Gasthofmodul ist noch
+nicht angelegt; die Hauskarte wird lokal mit der bestehenden Gütervorlage geprüft.
+
+## Aussehen und Porträts
+
+Geborene Penrudds haben braune Haare und braune Augen, ältere Angehörige
+altersgemäß graue Haare. Enid, Nest und die rothaarige Olwen sind Cenyri;
+Bethan und Cerys stammen aus Aldrimar, Nia und Ffion sind menschliche Albinnen
+mit runden Ohren. Alle Personen unterscheiden sich in Gesicht, Frisur, Kleidung,
+Mimik und einer unkomplizierten stehenden Pose. Historische Porträts zeigen
+Madoc mit 70 und Nest mit 72 Jahren zu Lebzeiten. Kinder sind altersgerecht
+und vollständig bekleidet dargestellt.
+
+## Hauskarte
+
+`tor-menu.mjs` ist die Quelle für Portionen, Preise und Herkunft. Der Hof liefert
+einen Teil der Zutaten gegen Bezahlung; weitere Waren werden zugekauft.
+
+| Gericht | Preis |
+| --- | --- |
+| Hofbrot mit Butter und Käse | 70 Pfennig |
+| Lauch- und Gerstensuppe | 60 Pfennig |
+| Roter Tortopf | 1,4 Kupfertaler |
+| Olwens Huhn im Wurzelsud | 2,4 Kupfertaler |
+| Kohlpfanne mit Ei | 1,1 Kupfertaler |
+| Braten vom Hofrind | 4 Kupfertaler |
+| Warmer Apfel-Haferauflauf | 65 Pfennig |
+| Fuhrmannsbeutel | 1,2 Kupfertaler |
+
+Der Braten ist nur an einem angekündigten Bratentag je Neuntagewoche und nach
+Lieferlage erhältlich. Sieben gewöhnliche Getränke übernehmen Preis, Portion,
+Waren-ID und Bild aus dem gemeinsamen Standardsortiment; dazu kommt schlichter
+roter Tischwein zu 80 Pfennig je 0,20-l-Becher.
+
+Alle Gerichte sind quadratische, freigestellte Inventar-Icons mit echtem
+PNG-Alphakanal nach `fantasy-inventory-item`. Der erste Brot-Entwurf im
+Szenenstil wurde nach Nutzerkorrektur verworfen und ersetzt. Die 24 Porträts
+verwenden das 2:3-Preset `anime-scene-portrait` mit Tales of Xillia/Frieren.
+Erzeugung ausschließlich mit dem eingebauten ImageGen; Originale bleiben erhalten.
+Dateien: `assets/rotes-tor/portraits/`, `assets/rotes-tor/food/`.
+Vollständige Prompts, Referenzen und Ergebnisse: `assets/rotes-tor/image-prompts.json`
+und `image-results.json`. Der Prompt-Build trennt Speisen und Figuren ausdrücklich.

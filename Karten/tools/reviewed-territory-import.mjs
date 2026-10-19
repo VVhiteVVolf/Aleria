@@ -16,7 +16,8 @@ export function importReviewedTerritory({ folder, region, countyId, describePlac
   const pins = structuredClone(createReviewedPins(read('markers.source.json'), {
     catalog, presets: context.KartoPinTablePresets, describePlace, region,
   }));
-  for (const pin of pins) for (const asset of [pin.pinMarker, pin.crest, pin.banner]) {
+  for (const pin of pins) for (const asset of [pin.pinMarker, pin.crest, pin.banner,
+    ...(pin.coRulers || []).flatMap(ruler => [ruler.crest, ruler.banner])].filter(Boolean)) {
     assert.ok(fs.existsSync(new URL('..' + asset, root)), `Fehlendes Bild: ${asset}`);
   }
   const dominions = [...territoriesById.values()].map(territory => ({

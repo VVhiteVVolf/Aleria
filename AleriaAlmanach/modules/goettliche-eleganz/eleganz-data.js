@@ -799,7 +799,7 @@
               "Damen",
               "Cenyrisches Leinen · Wollborte"
             ],
-            "priceMin": "18",
+            "priceMin": "45",
             "priceMax": "",
             "currencyCode": "KT",
             "currencyLabel": "Kupfertaler",
@@ -857,7 +857,7 @@
               "Damen",
               "Feines Wolltuch · Leinenfutter"
             ],
-            "priceMin": "32",
+            "priceMin": "75",
             "priceMax": "",
             "currencyCode": "KT",
             "currencyLabel": "Kupfertaler",
@@ -915,10 +915,10 @@
               "Damen",
               "Dichtes Wolltuch · Schmale Seidenborte"
             ],
-            "priceMin": "65",
+            "priceMin": "1,3",
             "priceMax": "",
-            "currencyCode": "KT",
-            "currencyLabel": "Kupfertaler",
+            "currencyCode": "ST",
+            "currencyLabel": "Silbertaler",
             "currencyIcon": "◈",
             "unit": "1 Garnitur",
             "priceTitle": "Preis der beschriebenen Garnitur",
@@ -1379,7 +1379,7 @@
               "Herren",
               "Cenyrisches Leinen · Wollborte"
             ],
-            "priceMin": "18",
+            "priceMin": "45",
             "priceMax": "",
             "currencyCode": "KT",
             "currencyLabel": "Kupfertaler",
@@ -1437,7 +1437,7 @@
               "Herren",
               "Wolltuch · Leinen"
             ],
-            "priceMin": "35",
+            "priceMin": "80",
             "priceMax": "",
             "currencyCode": "KT",
             "currencyLabel": "Kupfertaler",
@@ -1495,10 +1495,10 @@
               "Herren",
               "Dichtes Wolltuch · Schmale Seidenborte"
             ],
-            "priceMin": "70",
+            "priceMin": "1,4",
             "priceMax": "",
-            "currencyCode": "KT",
-            "currencyLabel": "Kupfertaler",
+            "currencyCode": "ST",
+            "currencyLabel": "Silbertaler",
             "currencyIcon": "◈",
             "unit": "1 Garnitur",
             "priceTitle": "Preis der beschriebenen Garnitur",

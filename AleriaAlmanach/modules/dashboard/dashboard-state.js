@@ -57,7 +57,6 @@ function getAlmanachDashboardHistory() {
 
 function getAlmanachDashboardPageLabel(entry, pageIndex) {
   const pages = Array.isArray(entry?.pages) ? entry.pages.filter(Boolean) : [];
-  if (pageIndex >= pages.length && entry?.appendCommentsPage !== false) return 'Kommentare';
   return String(pages[pageIndex]?.pageTitle || '').trim();
 }
 
