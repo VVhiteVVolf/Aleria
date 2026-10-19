@@ -1,0 +1,610 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-19T19:07:22.546Z",
+  "dataRevision": 12,
+  "policy": "Existing house records only; preserve pin IDs and positions. Distinguish family allegiance, local geography and land ownership. Unregistered families keep their existing proven local affiliation.",
+  "sources": [
+    "house-seat-sources.json",
+    "Stammbäume/assets/js/data/families.registry.js",
+    "Familien Häuser und Clans/haeuser.registry.js"
+  ],
+  "pins": [
+    {
+      "pinId": "muoru8isnrnm",
+      "familyId": "haus-arwydd",
+      "familyName": "Haus Arwydd",
+      "liegeHouseId": "",
+      "dominionId": "",
+      "source": "Stammbäume/assets/js/data/families.registry.js",
+      "houseProfile": {
+        "rankId": "knight-prince",
+        "seat": "Castellbryn",
+        "barony": "Rhonwens Tränen",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "assets/images/regions/castellbryn.png",
+          "barony": "assets/images/regions/rhonwens-traenen.png",
+          "county": "assets/images/regions/celtigerns-wacht.png",
+          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+        }
+      },
+      "note": "Örtliches Unterstellungsverhältnis des Turms nicht belegt; keine neue Herrschaftszuordnung erfunden."
+    },
+    {
+      "pinId": "muos3qam395u",
+      "familyId": "haus-draig",
+      "familyName": "Haus Draig",
+      "liegeHouseId": "",
+      "dominionId": "msa3c53vo1h89v",
+      "source": "Stammbäume/assets/js/data/families.registry.js",
+      "houseProfile": {
+        "rankId": "county",
+        "seat": "Gwynthor",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "assets/images/regions/gwynthor.png",
+          "barony": "assets/images/regions/llamreis-ankunft.png",
+          "county": "assets/images/regions/celtigerns-wacht.png",
+          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+        }
+      },
+      "note": ""
+    },
+    {
+      "pinId": "muos7vubkfbt",
+      "familyId": "haus-gafyr",
+      "familyName": "Haus Gafyr",
+      "liegeHouseId": "",
+      "dominionId": "msa3c53vomlanj",
+      "source": "Stammbäume/assets/js/data/families.registry.js",
+      "houseProfile": {
+        "rankId": "knight-prince",
+        "seat": "Gwynthor",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "assets/images/regions/gwynthor.png",
+          "barony": "assets/images/regions/llamreis-ankunft.png",
+          "county": "assets/images/regions/celtigerns-wacht.png",
+          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+        }
+      },
+      "note": ""
+    },
+    {
+      "pinId": "muosfghvgpqg",
+      "familyId": "haus-rhyddid",
+      "familyName": "Haus Rhyddid",
+      "liegeHouseId": "haus-wyrm",
+      "dominionId": "cw-haus-rhyddid",
+      "source": "Stammbäume/assets/js/data/families.registry.js",
+      "houseProfile": {
+        "rankId": "knight",
+        "seat": "Gwynthor",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [
+          "Mwyncraig"
+        ],
+        "liegeHouseId": "haus-wyrm",
+        "liegeHouseName": "Haus Wyrm",
+        "regionEmblems": {
+          "seat": "assets/images/regions/gwynthor.png",
+          "barony": "assets/images/regions/llamreis-ankunft.png",
+          "county": "assets/images/regions/celtigerns-wacht.png",
+          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+        }
+      },
+      "note": ""
+    },
+    {
+      "pinId": "muoshr0dxkjs",
+      "familyId": "haus-gostyn",
+      "familyName": "Haus Gostyn",
+      "liegeHouseId": "haus-gafyr",
+      "dominionId": "cw-haus-gostyn",
+      "source": "Stammbäume/assets/js/data/families.registry.js",
+      "houseProfile": {
+        "rankId": "knight",
+        "seat": "Gwynthor",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [
+          "Bronfelen"
+        ],
+        "liegeHouseId": "haus-gafyr",
+        "liegeHouseName": "Haus Gafyr",
+        "regionEmblems": {
+          "seat": "assets/images/regions/gwynthor.png",
+          "barony": "assets/images/regions/llamreis-ankunft.png",
+          "county": "assets/images/regions/celtigerns-wacht.png",
+          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+        }
+      },
+      "note": ""
+    },
+    {
+      "pinId": "muoshw6frb01",
+      "familyId": "haus-chwedlonol",
+      "familyName": "Haus Chwedonol",
+      "liegeHouseId": "haus-saethwyr",
+      "dominionId": "cw-haus-chwedlonol",
+      "source": "Stammbäume/assets/js/data/families.registry.js",
+      "houseProfile": {
+        "rankId": "knight",
+        "seat": "Gwynthor",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [
+          "Glastraeth"
+        ],
+        "liegeHouseId": "haus-saethwyr",
+        "liegeHouseName": "Haus Saethwyr",
+        "regionEmblems": {
+          "seat": "assets/images/regions/gwynthor.png",
+          "barony": "assets/images/regions/llamreis-ankunft.png",
+          "county": "assets/images/regions/celtigerns-wacht.png",
+          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+        }
+      },
+      "note": ""
+    },
+    {
+      "pinId": "muoshxrtfdti",
+      "familyId": "haus-eneiniog",
+      "familyName": "Haus Eneiniog",
+      "liegeHouseId": "haus-saethwyr",
+      "dominionId": "cw-haus-eneiniog",
+      "source": "Stammbäume/assets/js/data/families.registry.js",
+      "houseProfile": {
+        "rankId": "knight",
+        "seat": "Gwynthor",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "haus-saethwyr",
+        "liegeHouseName": "Haus Saethwyr",
+        "regionEmblems": {
+          "seat": "assets/images/regions/gwynthor.png",
+          "barony": "assets/images/regions/llamreis-ankunft.png",
+          "county": "assets/images/regions/celtigerns-wacht.png",
+          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+        }
+      },
+      "note": ""
+    },
+    {
+      "pinId": "muosmuzhl7re",
+      "familyId": "haus-wyrm",
+      "familyName": "Haus Wyrm",
+      "liegeHouseId": "",
+      "dominionId": "msa3c53viyll7z",
+      "source": "Stammbäume/assets/js/data/families.registry.js",
+      "houseProfile": {
+        "rankId": "knight-prince",
+        "seat": "Gwynthor",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "assets/images/regions/gwynthor.png",
+          "barony": "assets/images/regions/llamreis-ankunft.png",
+          "county": "assets/images/regions/celtigerns-wacht.png",
+          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+        }
+      },
+      "note": ""
+    },
+    {
+      "pinId": "muoso4abb62h",
+      "familyId": "haus-saethwyr",
+      "familyName": "Haus Saethwyr",
+      "liegeHouseId": "",
+      "dominionId": "msa3c53vz3k80p",
+      "source": "Stammbäume/assets/js/data/families.registry.js",
+      "houseProfile": {
+        "rankId": "knight-prince",
+        "seat": "Gwynthor",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "assets/images/regions/gwynthor.png",
+          "barony": "assets/images/regions/llamreis-ankunft.png",
+          "county": "assets/images/regions/celtigerns-wacht.png",
+          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+        }
+      },
+      "note": ""
+    },
+    {
+      "pinId": "muosoghjijjg",
+      "familyId": "haus-awenor",
+      "familyName": "Haus Awenor",
+      "liegeHouseId": "haus-draig",
+      "dominionId": "cw-haus-awenor",
+      "source": "Stammbäume/assets/js/data/families.registry.js",
+      "houseProfile": {
+        "rankId": "knight",
+        "seat": "Gwynthor",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "haus-draig",
+        "liegeHouseName": "Haus Draig",
+        "regionEmblems": {
+          "seat": "assets/images/regions/gwynthor.png",
+          "barony": "assets/images/regions/llamreis-ankunft.png",
+          "county": "assets/images/regions/celtigerns-wacht.png",
+          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+        }
+      },
+      "note": ""
+    },
+    {
+      "pinId": "muosoi8jiiyc",
+      "familyId": "haus-awenydd",
+      "familyName": "Haus Awenydd",
+      "liegeHouseId": "haus-draig",
+      "dominionId": "cw-haus-awenydd",
+      "source": "Stammbäume/assets/js/data/families.registry.js",
+      "houseProfile": {
+        "rankId": "knight",
+        "seat": "Gwynthor",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "haus-draig",
+        "liegeHouseName": "Haus Draig",
+        "regionEmblems": {
+          "seat": "assets/images/regions/gwynthor.png",
+          "barony": "assets/images/regions/llamreis-ankunft.png",
+          "county": "assets/images/regions/celtigerns-wacht.png",
+          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+        }
+      },
+      "note": ""
+    },
+    {
+      "pinId": "muosoo81765w",
+      "familyId": "haus-tlawd",
+      "familyName": "Haus Tlawd",
+      "liegeHouseId": "haus-gafyr",
+      "dominionId": "cw-haus-tlawd",
+      "source": "Stammbäume/assets/js/data/families.registry.js",
+      "houseProfile": {
+        "rankId": "knight",
+        "seat": "Gwynthor",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "haus-gafyr",
+        "liegeHouseName": "Haus Gafyr",
+        "regionEmblems": {
+          "seat": "assets/images/regions/gwynthor.png",
+          "barony": "assets/images/regions/llamreis-ankunft.png",
+          "county": "assets/images/regions/celtigerns-wacht.png",
+          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+        }
+      },
+      "note": ""
+    },
+    {
+      "pinId": "gwynthor-marking-003",
+      "familyId": "haus-bradrhith",
+      "familyName": "Haus Bradrhith",
+      "liegeHouseId": "haus-awenydd",
+      "dominionId": "cw-haus-bradrhith",
+      "source": "Stammbäume/assets/js/data/families.registry.js",
+      "houseProfile": {
+        "rankId": "commoner",
+        "seat": "Bradrhith Hof",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "haus-awenydd",
+        "liegeHouseName": "Haus Awenydd",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor",
+          "Bradrhith Hof"
+        ],
+        "regionEmblems": {
+          "seat": "assets/images/regions/gwynthor.png",
+          "barony": "assets/images/regions/llamreis-ankunft.png",
+          "county": "assets/images/regions/celtigerns-wacht.png",
+          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+        }
+      },
+      "note": ""
+    },
+    {
+      "pinId": "gwynthor-marking-041",
+      "familyId": "haus-penrudd",
+      "familyName": "Haus Penrudd",
+      "liegeHouseId": "haus-draig",
+      "dominionId": "cw-haus-penrudd",
+      "source": "Stammbäume/assets/js/data/families.registry.js",
+      "houseProfile": {
+        "rankId": "commoner",
+        "seat": "Bannkreis Gwynthor",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [
+          "Zum Roten Tor",
+          "Penrudd-Hof"
+        ],
+        "liegeHouseId": "house-draig",
+        "liegeHouseName": "Haus Draig",
+        "regionEmblems": {
+          "seat": "",
+          "barony": "",
+          "county": "",
+          "kingdom": ""
+        }
+      },
+      "note": ""
+    },
+    {
+      "pinId": "gwynthor-marking-048",
+      "familyId": "haus-draig",
+      "familyName": "Haus Draig",
+      "liegeHouseId": "",
+      "dominionId": "msa3c53vo1h89v",
+      "source": "Stammbäume/assets/js/data/families.registry.js",
+      "houseProfile": {
+        "rankId": "county",
+        "seat": "Gwynthor",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "assets/images/regions/gwynthor.png",
+          "barony": "assets/images/regions/llamreis-ankunft.png",
+          "county": "assets/images/regions/celtigerns-wacht.png",
+          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+        }
+      },
+      "note": ""
+    },
+    {
+      "pinId": "gwynthor-marking-080",
+      "familyId": "haus-penrudd",
+      "familyName": "Haus Penrudd",
+      "liegeHouseId": "haus-draig",
+      "dominionId": "cw-haus-penrudd",
+      "source": "Stammbäume/assets/js/data/families.registry.js",
+      "houseProfile": {
+        "rankId": "commoner",
+        "seat": "Bannkreis Gwynthor",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [
+          "Zum Roten Tor",
+          "Penrudd-Hof"
+        ],
+        "liegeHouseId": "house-draig",
+        "liegeHouseName": "Haus Draig",
+        "regionEmblems": {
+          "seat": "",
+          "barony": "",
+          "county": "",
+          "kingdom": ""
+        }
+      },
+      "note": ""
+    },
+    {
+      "pinId": "gwynthor-marking-097",
+      "familyId": "haus-balchder",
+      "familyName": "Haus Balchder",
+      "liegeHouseId": "haus-draig",
+      "dominionId": "cw-haus-balchder",
+      "source": "Stammbäume/assets/js/data/families.registry.js",
+      "houseProfile": {
+        "rankId": "knight",
+        "seat": "Gwynthor",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "haus-draig",
+        "liegeHouseName": "Haus Draig",
+        "regionEmblems": {
+          "seat": "assets/images/regions/gwynthor.png",
+          "barony": "assets/images/regions/llamreis-ankunft.png",
+          "county": "assets/images/regions/celtigerns-wacht.png",
+          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+        }
+      },
+      "note": ""
+    },
+    {
+      "pinId": "gwynthor-marking-112",
+      "familyId": "haus-cludwyr",
+      "familyName": "Haus Cludwyr",
+      "liegeHouseId": "haus-wyrm",
+      "dominionId": "cw-haus-cludwyr",
+      "source": "Stammbäume/assets/js/data/families.registry.js",
+      "houseProfile": {
+        "rankId": "knight",
+        "seat": "Gwynthor",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [
+          "Bronhir"
+        ],
+        "liegeHouseId": "haus-wyrm",
+        "liegeHouseName": "Haus Wyrm",
+        "regionEmblems": {
+          "seat": "assets/images/regions/gwynthor.png",
+          "barony": "assets/images/regions/llamreis-ankunft.png",
+          "county": "assets/images/regions/celtigerns-wacht.png",
+          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+        }
+      },
+      "note": ""
+    },
+    {
+      "pinId": "gwynthor-marking-123",
+      "familyId": "haus-gelyn",
+      "familyName": "Haus Gelyn",
+      "liegeHouseId": "haus-draig",
+      "dominionId": "cw-haus-gelyn",
+      "source": "Stammbäume/assets/js/data/families.registry.js",
+      "houseProfile": {
+        "rankId": "knight",
+        "seat": "Gwynthor",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [
+          "Gwynthstorm"
+        ],
+        "liegeHouseId": "haus-draig",
+        "liegeHouseName": "Haus Draig",
+        "regionEmblems": {
+          "seat": "assets/images/regions/gwynthor.png",
+          "barony": "assets/images/regions/llamreis-ankunft.png",
+          "county": "assets/images/regions/celtigerns-wacht.png",
+          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+        }
+      },
+      "note": ""
+    },
+    {
+      "pinId": "gwynthor-marking-127",
+      "familyId": "haus-loer",
+      "familyName": "Haus Loer",
+      "liegeHouseId": "haus-wyrm",
+      "dominionId": "cw-haus-loer",
+      "source": "Stammbäume/assets/js/data/families.registry.js",
+      "houseProfile": {
+        "rankId": "knight",
+        "seat": "Gwynthor",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [
+          "Craithglyn"
+        ],
+        "liegeHouseId": "haus-wyrm",
+        "liegeHouseName": "Haus Wyrm",
+        "regionEmblems": {
+          "seat": "assets/images/regions/gwynthor.png",
+          "barony": "assets/images/regions/llamreis-ankunft.png",
+          "county": "assets/images/regions/celtigerns-wacht.png",
+          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+        }
+      },
+      "note": ""
+    },
+    {
+      "pinId": "gwynthor-marking-141",
+      "familyId": "haus-draig",
+      "familyName": "Haus Draig",
+      "liegeHouseId": "",
+      "dominionId": "msa3c53vo1h89v",
+      "source": "Stammbäume/assets/js/data/families.registry.js",
+      "houseProfile": {
+        "rankId": "county",
+        "seat": "Gwynthor",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "assets/images/regions/gwynthor.png",
+          "barony": "assets/images/regions/llamreis-ankunft.png",
+          "county": "assets/images/regions/celtigerns-wacht.png",
+          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+        }
+      },
+      "note": ""
+    },
+    {
+      "pinId": "gwynthor-marking-151",
+      "familyId": "haus-gwyllach",
+      "familyName": "Haus Gwyllach",
+      "liegeHouseId": "haus-draig",
+      "dominionId": "cw-haus-gwyllach",
+      "source": "Stammbäume/assets/js/data/families.registry.js",
+      "houseProfile": {
+        "rankId": "commoner",
+        "seat": "Gwynthor",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "haus-draig",
+        "liegeHouseName": "Haus Draig",
+        "regionEmblems": {
+          "seat": "assets/images/regions/gwynthor.png",
+          "barony": "assets/images/regions/llamreis-ankunft.png",
+          "county": "assets/images/regions/celtigerns-wacht.png",
+          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+        }
+      },
+      "note": ""
+    }
+  ],
+  "unreconciledFamilies": [
+    {
+      "pinId": "gwynthor-marking-058",
+      "house": "Haus Gwerfil",
+      "reason": "Keine eigenständige Familienakte gefunden; vorhandene Zuordnung erhalten."
+    },
+    {
+      "pinId": "gwynthor-marking-071",
+      "house": "Familie Afelwyn",
+      "reason": "Keine eigenständige Familienakte gefunden; vorhandene Zuordnung erhalten."
+    },
+    {
+      "pinId": "gwynthor-marking-138",
+      "house": "Familie Twyllod",
+      "reason": "Keine eigenständige Familienakte gefunden; vorhandene Zuordnung erhalten."
+    },
+    {
+      "pinId": "gwynthor-marking-169",
+      "house": "Familie Cyffiniau",
+      "reason": "Keine eigenständige Familienakte gefunden; vorhandene Zuordnung erhalten."
+    }
+  ]
+}

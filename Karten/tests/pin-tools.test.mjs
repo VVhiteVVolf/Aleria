@@ -60,6 +60,25 @@ function fixture(pins = [{ id: 'one', title: 'Klerus', x: .25, y: .3 }]) {
 }
 const mouse = (clientX, clientY) => ({ button: 0, clientX, clientY, preventDefault() {}, stopPropagation() {} });
 
+test('Bildmarker verwenden den Kartenanker ohne Ortskoordinaten oder Entwürfe zu verändern', () => {
+  for (const [markerAnchorY, expected] of [[undefined, 100], [.43, 43], [-.2, 100], [1.2, 100]]) {
+    const f = fixture();
+    const original = JSON.stringify(f.state);
+    f.window.KartoRuntime.pinDisplayOptions = () => ({dotSize:80, labelSize:40, markerAnchorY});
+    f.window.KartoRuntime.categoryForPin = () => ({marker:'/marker.png'});
+    f.load('pin-renderer');
+    f.window.KartoPinRenderer.renderPins();
+    const marker = f.layer.children[0];
+    assert.equal(marker.style['--pin-marker-anchor-y'], `${expected}%`);
+    assert.equal(marker.style['--pin-marker-offset-y'], `${-expected}%`);
+    assert.equal(marker.style.left, '250px');
+    assert.equal(marker.style.top, '300px');
+    assert.ok(marker.innerHTML.includes(`top:calc(100% + ${24+Math.round(176*(1-expected/100))}px)`));
+    assert.equal(JSON.stringify(f.state), original);
+    assert.equal(f.saves(), 0);
+  }
+});
+
 test('Ziehen behält DOM-Knoten, bündelt Frames und speichert die letzte Position mit einem Undo', () => {
   const f = fixture();
   f.load('pin-renderer');

@@ -326,7 +326,7 @@ window.KartoRuntime = {
   mediaLink,
   pinLayer: () => pl,
   pinDisplayOptions(){
-    return {dotSize:S.dotSize, labelSize:S.lblSize};
+    return {dotSize:S.dotSize, labelSize:S.lblSize, markerAnchorY:KARTO_CONFIG.pinMarkerAnchorY};
   },
   visiblePins(){
     return S.pins.filter(p => !p.secret || editMode);

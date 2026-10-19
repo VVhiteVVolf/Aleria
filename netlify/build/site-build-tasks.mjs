@@ -43,6 +43,18 @@ export const SITE_BUILD_TASKS = [
     inputs: ['Karten/tools/build-media-library.mjs'], commands: [['Karten/tools/build-media-library.mjs']]
   },
   {
+    id: 'gwynthor-map', label: 'Gwynthor marker positions and existing house affiliations',
+    inputs: ['Karten/Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/',
+      'Karten/assets/js/pins/', 'Karten/assets/js/map/', 'Karten/assets/js/karto-app.js',
+      'Karten/assets/css/karto-map.css', 'Karten/karte.html', 'Karten/_template/KartenTemplate.html',
+      'Karten/tools/reconcile-gwynthor-affiliations.mjs', 'Karten/tests/',
+      'Stammbäume/assets/js/', 'Familien Häuser und Clans/haeuser.registry.js', ...gwynthorFamilyInputs],
+    commands: [['Karten/tools/reconcile-gwynthor-affiliations.mjs', '--check'],
+      testCommand('Karten/tests/gwynthor-map-review.test.mjs', 'Karten/tests/category-catalog.test.mjs',
+        'Karten/tests/pin-tools.test.mjs', 'Karten/tests/interactive-marker-layer.test.mjs',
+        'Karten/tests/pin-navigation.test.mjs')]
+  },
+  {
     id: 'almanach-runtime', label: 'Archive, authentication and module storage',
     inputs: ['AleriaAlmanach/modules/', 'AleriaAlmanach/tests/',
       'AleriaAlmanach/app.js', 'AleriaAlmanach/firebase.js', 'AleriaAlmanach/AleriaAlmanach.html',

@@ -105,6 +105,23 @@ ihre Tabellen werden aus dem gemeinsamen Vorlagenkatalog erzeugt.
 additiv zusammen und erhält alle bestehenden Pin-Daten. Die Zusammenführung
 läuft nicht automatisch im Browser; die ergänzten Pins stehen in `data.json`.
 
+Gwynthors ursprüngliche Koordinaten liegen im Symbolkopf, bei 43 Prozent der
+jeweiligen Markierungshöhe. `pinMarkerAnchorY: 0.43` in der Kartenkonfiguration
+richtet deshalb auch separate Bildmarker an diesem Punkt aus. Andere Karten
+verwenden weiterhin die untere Spitze als Standardanker. Der Renderer und sein
+Hovereffekt teilen denselben Anker; Ortskoordinaten und bestehende Entwürfe
+werden dabei nicht umgerechnet.
+
+Die Nachprüfung vom 19. Oktober 2026 korrigiert außerdem 21 fehlerhafte
+Importpositionen, darunter Holzfällerlager, Hexenhütten und eine Köhlerei.
+Die tatsächlichen Symbole wurden im Originalbild abgeglichen; die korrigierten
+Grenzen stehen im Inventar, alte und neue Koordinaten mit Bildprüfsumme in
+`marker-position-review.json` neben den Kartendaten. IDs und Ortsinhalte bleiben
+erhalten. `tools/reconcile-gwynthor-affiliations.mjs --check` prüft den separaten
+Abgleich der vorhandenen Hausakten, Wappen und Lehnsketten. Herkunftssitz,
+örtliche Lage und Grundbesitz werden dabei nicht gleichgesetzt; nicht belegte
+Familien und die örtliche Unterstellung des Arwydd-Turms bleiben offen.
+
 Ein älterer lokaler Entwurf bleibt gemäß der bestehenden Speicherlogik erhalten.
 Mit **Aktuelle Karte laden** lässt sich die veröffentlichte Version übernehmen;
 die bestehende Sicherung schützt dabei den vorherigen Entwurf.

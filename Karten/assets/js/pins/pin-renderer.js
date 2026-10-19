@@ -64,16 +64,22 @@
       const color = category.color || '#8a6510';
       const iconUrl = pin.pinMarker || category.marker || '';
       const labelGap = Math.round(options.dotSize * .3);
+      let labelOffset = labelGap;
       element.style.setProperty('--pin-bloom-size', Math.round(options.dotSize * 2.4) + 'px');
 
       let markerHtml;
       if(iconUrl){
         // Custom icon (from the Marker-Katalog, see assets/js/data/default-marker-catalog.js)
-        // rendered permanently, not just on hover - this is the actual "use an icon
-        // as a marker" feature. Anchored bottom-center (these are teardrop pin
-        // graphics - the tip, not the visual center, belongs on the coordinate).
+        // Normally a teardrop's tip belongs on the coordinate. Imported maps can
+        // instead describe a point within the marker head, shared with their
+        // original raster overlay. Rendering uses that map-owned anchor too.
         // Falls back to the plain dot if the image 404s.
         const size = Math.round(options.dotSize * 2.2 * (pin.pinMarkerScale || 1));
+        const anchorY = Number.isFinite(options.markerAnchorY) && options.markerAnchorY >= 0 && options.markerAnchorY <= 1
+          ? options.markerAnchorY : 1;
+        element.style.setProperty('--pin-marker-anchor-y', `${anchorY * 100}%`);
+        element.style.setProperty('--pin-marker-offset-y', `${-anchorY * 100}%`);
+        labelOffset += Math.round(size * (1 - anchorY));
         markerHtml = `<img class="pin-marker-img" src="${runtime.esc(iconUrl)}" alt="" draggable="false" width="${size}" height="${size}"/>`;
       } else {
         markerHtml = `<div class="pin-dot" style="width:${options.dotSize}px;height:${options.dotSize}px;background:${color};border-color:#fff;"></div>`;
@@ -81,7 +87,7 @@
 
       element.innerHTML = `
         ${markerHtml}
-        <div class="pin-label" style="font-size:${options.labelSize}px;top:calc(100% + ${labelGap}px);">${runtime.esc(pin.title)}${pin.secret ? ' 🔒' : ''}</div>`;
+        <div class="pin-label" style="font-size:${options.labelSize}px;top:calc(100% + ${labelOffset}px);">${runtime.esc(pin.title)}${pin.secret ? ' 🔒' : ''}</div>`;
       element.querySelector?.('.pin-marker-img')?.addEventListener('error', event => {
         const dot = document.createElement('div');
         dot.className = 'pin-dot';

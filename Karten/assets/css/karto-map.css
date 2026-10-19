@@ -244,12 +244,13 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9999;
 .pin.edit-mode:hover .pin-dot{transform:scale(1.25);box-shadow:0 2px 10px rgba(0,0,0,.8),0 0 0 2px rgba(255,255,255,.5);}
 /* Marker visibility is controlled by pin-visibility.css. */
 .pin-marker-img{
-  position:absolute;left:0;bottom:0;transform:translate(-50%,0);
+  position:absolute;left:0;top:0;transform:translate(-50%,var(--pin-marker-offset-y,-100%));
+  transform-origin:50% var(--pin-marker-anchor-y,100%);
   object-fit:contain;
   filter:drop-shadow(1px 2px 3px rgba(0,0,0,.55));
   transition:transform .12s;
 }
-.pin.edit-mode:hover .pin-marker-img{transform:translate(-50%,0) scale(1.12);}
+.pin.edit-mode:hover .pin-marker-img{transform:translate(-50%,var(--pin-marker-offset-y,-100%)) scale(1.12);}
 .pin.dragging .pin-marker-img{opacity:.85;}
 /* Multi-select (Strg/Cmd+Klick) - highlight follows whichever marker type
    the pin actually renders, so no separate ring/anchor math is needed. */

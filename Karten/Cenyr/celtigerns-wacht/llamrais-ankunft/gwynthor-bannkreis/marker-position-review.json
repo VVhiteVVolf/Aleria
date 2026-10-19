@@ -1,0 +1,539 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-19T18:59:46.678Z",
+  "sourceImage": "Kartenbilder/GwynthorBannkreisMarker.webp",
+  "imageSize": [
+    8192,
+    6300
+  ],
+  "sourceSha256": "0ab71381441feda8d9a42e7e1f423d2c255b0b79740eaeea885e68577a230361",
+  "method": "170 colored source symbols extracted; 21 misplaced inventory bounds matched by repeated icon design and visually reviewed. Colored bounds padded by 8 pixels for the outer outline. Blue lower tips on shipwreck and harbor symbols deliberately excluded from this correction.",
+  "preserved": "All 170 IDs, category assignments, names, descriptions and relationships retained; only these 21 positions and inventory bounds changed in this pass.",
+  "corrections": [
+    {
+      "id": "gwynthor-marking-006",
+      "title": "Holzfällerlager",
+      "categoryId": "location-holzfaellerlager",
+      "oldBounds": [
+        3600,
+        76,
+        3756,
+        288
+      ],
+      "newBounds": [
+        3706,
+        0,
+        3873,
+        201
+      ],
+      "oldPosition": [
+        0.448974609375,
+        0.026533333333333332
+      ],
+      "newPosition": [
+        0.46258544921875,
+        0.013719047619047619
+      ]
+    },
+    {
+      "id": "gwynthor-marking-007",
+      "title": "Hexenhütte",
+      "categoryId": "location-hexenhuette",
+      "oldBounds": [
+        5996,
+        100,
+        6172,
+        332
+      ],
+      "newBounds": [
+        6037,
+        0,
+        6210,
+        229
+      ],
+      "oldPosition": [
+        0.74267578125,
+        0.031707936507936504
+      ],
+      "newPosition": [
+        0.74749755859375,
+        0.01563015873015873
+      ]
+    },
+    {
+      "id": "gwynthor-marking-015",
+      "title": "Hexenhütte",
+      "categoryId": "location-hexenhuette",
+      "oldBounds": [
+        7104,
+        204,
+        7280,
+        436
+      ],
+      "newBounds": [
+        7397,
+        516,
+        7570,
+        746
+      ],
+      "oldPosition": [
+        0.8779296875,
+        0.04821587301587302
+      ],
+      "newPosition": [
+        0.91351318359375,
+        0.0976031746031746
+      ]
+    },
+    {
+      "id": "gwynthor-marking-018",
+      "title": "Jagdhaus",
+      "categoryId": "location-jagdhaus",
+      "oldBounds": [
+        3952,
+        268,
+        4104,
+        484
+      ],
+      "newBounds": [
+        3810,
+        222,
+        3961,
+        435
+      ],
+      "oldPosition": [
+        0.49169921875,
+        0.057282539682539685
+      ],
+      "newPosition": [
+        0.47430419921875,
+        0.04977619047619048
+      ]
+    },
+    {
+      "id": "gwynthor-marking-023",
+      "title": "Jagdhaus",
+      "categoryId": "location-jagdhaus",
+      "oldBounds": [
+        2232,
+        524,
+        2388,
+        740
+      ],
+      "newBounds": [
+        2186,
+        506,
+        2337,
+        722
+      ],
+      "oldPosition": [
+        0.281982421875,
+        0.09791746031746032
+      ],
+      "newPosition": [
+        0.27606201171875,
+        0.09506031746031746
+      ]
+    },
+    {
+      "id": "gwynthor-marking-026",
+      "title": "Druidenhütte",
+      "categoryId": "location-druidenhuette",
+      "oldBounds": [
+        4536,
+        536,
+        4676,
+        744
+      ],
+      "newBounds": [
+        4565,
+        506,
+        4707,
+        716
+      ],
+      "oldPosition": [
+        0.562255859375,
+        0.09927619047619049
+      ],
+      "newPosition": [
+        0.56591796875,
+        0.09465079365079364
+      ]
+    },
+    {
+      "id": "gwynthor-marking-039",
+      "title": "Holzfällerlager",
+      "categoryId": "location-holzfaellerlager",
+      "oldBounds": [
+        5952,
+        896,
+        6112,
+        1108
+      ],
+      "newBounds": [
+        6752,
+        74,
+        6908,
+        286
+      ],
+      "oldPosition": [
+        0.736328125,
+        0.1566920634920635
+      ],
+      "newPosition": [
+        0.833740234375,
+        0.026215873015873015
+      ]
+    },
+    {
+      "id": "gwynthor-marking-040",
+      "title": "Jägerlager",
+      "categoryId": "location-jaegerlager",
+      "oldBounds": [
+        2452,
+        1020,
+        2616,
+        1252
+      ],
+      "newBounds": [
+        2313,
+        1055,
+        2478,
+        1288
+      ],
+      "oldPosition": [
+        0.309326171875,
+        0.17773968253968253
+      ],
+      "newPosition": [
+        0.29241943359375,
+        0.18336349206349206
+      ]
+    },
+    {
+      "id": "gwynthor-marking-047",
+      "title": "Holzfällerlager",
+      "categoryId": "location-holzfaellerlager",
+      "oldBounds": [
+        7292,
+        1140,
+        7452,
+        1352
+      ],
+      "newBounds": [
+        7112,
+        1111,
+        7268,
+        1321
+      ],
+      "oldPosition": [
+        0.89990234375,
+        0.19542222222222225
+      ],
+      "newPosition": [
+        0.877685546875,
+        0.19068253968253968
+      ]
+    },
+    {
+      "id": "gwynthor-marking-055",
+      "title": "Hexenhütte",
+      "categoryId": "location-hexenhuette",
+      "oldBounds": [
+        4712,
+        1412,
+        4888,
+        1644
+      ],
+      "newBounds": [
+        4775,
+        1385,
+        4948,
+        1641
+      ],
+      "oldPosition": [
+        0.5859375,
+        0.23996190476190477
+      ],
+      "newPosition": [
+        0.59344482421875,
+        0.2373142857142857
+      ]
+    },
+    {
+      "id": "gwynthor-marking-056",
+      "title": "Holzfällerlager",
+      "categoryId": "location-holzfaellerlager",
+      "oldBounds": [
+        3268,
+        1424,
+        3428,
+        1636
+      ],
+      "newBounds": [
+        3057,
+        1395,
+        3213,
+        1605
+      ],
+      "oldPosition": [
+        0.40869140625,
+        0.24050158730158733
+      ],
+      "newPosition": [
+        0.3826904296875,
+        0.23576190476190476
+      ]
+    },
+    {
+      "id": "gwynthor-marking-059",
+      "title": "Hexenhütte",
+      "categoryId": "location-hexenhuette",
+      "oldBounds": [
+        2592,
+        1516,
+        2780,
+        1748
+      ],
+      "newBounds": [
+        2607,
+        805,
+        2780,
+        1035
+      ],
+      "oldPosition": [
+        0.327880859375,
+        0.2564698412698413
+      ],
+      "newPosition": [
+        0.32879638671875,
+        0.14347619047619048
+      ]
+    },
+    {
+      "id": "gwynthor-marking-073",
+      "title": "Jagdhaus",
+      "categoryId": "location-jagdhaus",
+      "oldBounds": [
+        5144,
+        1976,
+        5296,
+        2192
+      ],
+      "newBounds": [
+        5163,
+        1977,
+        5314,
+        2190
+      ],
+      "oldPosition": [
+        0.63720703125,
+        0.3283936507936508
+      ],
+      "newPosition": [
+        0.63946533203125,
+        0.32834761904761905
+      ]
+    },
+    {
+      "id": "gwynthor-marking-079",
+      "title": "Holzfällerlager",
+      "categoryId": "location-holzfaellerlager",
+      "oldBounds": [
+        4420,
+        2236,
+        4580,
+        2448
+      ],
+      "newBounds": [
+        4915,
+        1587,
+        5071,
+        1797
+      ],
+      "oldPosition": [
+        0.54931640625,
+        0.36939047619047616
+      ],
+      "newPosition": [
+        0.6094970703125,
+        0.2662380952380952
+      ]
+    },
+    {
+      "id": "gwynthor-marking-087",
+      "title": "Köhlerei",
+      "categoryId": "location-koehlerei",
+      "oldBounds": [
+        4508,
+        2508,
+        4668,
+        2716
+      ],
+      "newBounds": [
+        4919,
+        2261,
+        5078,
+        2470
+      ],
+      "oldPosition": [
+        0.56005859375,
+        0.4122920634920635
+      ],
+      "newPosition": [
+        0.61016845703125,
+        0.37315396825396824
+      ]
+    },
+    {
+      "id": "gwynthor-marking-088",
+      "title": "Landgut",
+      "categoryId": "location-landgut",
+      "oldBounds": [
+        4852,
+        2528,
+        4996,
+        2732
+      ],
+      "newBounds": [
+        4777,
+        2529,
+        4918,
+        2734
+      ],
+      "oldPosition": [
+        0.60107421875,
+        0.4151936507936508
+      ],
+      "newPosition": [
+        0.59173583984375,
+        0.4154206349206349
+      ]
+    },
+    {
+      "id": "gwynthor-marking-102",
+      "title": "Ruine",
+      "categoryId": "location-ruine",
+      "oldBounds": [
+        1360,
+        2868,
+        1516,
+        3084
+      ],
+      "newBounds": [
+        120,
+        555,
+        271,
+        765
+      ],
+      "oldPosition": [
+        0.175537109375,
+        0.4699809523809524
+      ],
+      "newPosition": [
+        0.02386474609375,
+        0.10242857142857142
+      ]
+    },
+    {
+      "id": "gwynthor-marking-109",
+      "title": "Verwunschener Wald",
+      "categoryId": "location-verwunschener-wald",
+      "oldBounds": [
+        1424,
+        3160,
+        1580,
+        3400
+      ],
+      "newBounds": [
+        1410,
+        2985,
+        1566,
+        3219
+      ],
+      "oldPosition": [
+        0.183349609375,
+        0.517968253968254
+      ],
+      "newPosition": [
+        0.181640625,
+        0.4897809523809524
+      ]
+    },
+    {
+      "id": "gwynthor-marking-115",
+      "title": "Jagdhaus",
+      "categoryId": "location-jagdhaus",
+      "oldBounds": [
+        6672,
+        3292,
+        6824,
+        3508
+      ],
+      "newBounds": [
+        6391,
+        2842,
+        6542,
+        3058
+      ],
+      "oldPosition": [
+        0.82373046875,
+        0.5372825396825397
+      ],
+      "newPosition": [
+        0.78936767578125,
+        0.4658539682539683
+      ]
+    },
+    {
+      "id": "gwynthor-marking-116",
+      "title": "Holzfällerlager",
+      "categoryId": "location-holzfaellerlager",
+      "oldBounds": [
+        6436,
+        3364,
+        6604,
+        3576
+      ],
+      "newBounds": [
+        5715,
+        1734,
+        5871,
+        1944
+      ],
+      "oldPosition": [
+        0.7958984375,
+        0.5484380952380952
+      ],
+      "newPosition": [
+        0.7071533203125,
+        0.2895714285714286
+      ]
+    },
+    {
+      "id": "gwynthor-marking-126",
+      "title": "Grenzposten",
+      "categoryId": "location-grenzposten",
+      "oldBounds": [
+        7932,
+        3664,
+        8112,
+        3924
+      ],
+      "newBounds": [
+        8014,
+        3615,
+        8186,
+        3866
+      ],
+      "oldPosition": [
+        0.979248046875,
+        0.5993333333333334
+      ],
+      "newPosition": [
+        0.98876953125,
+        0.5909412698412698
+      ]
+    }
+  ]
+}
