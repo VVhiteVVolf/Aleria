@@ -1,0 +1,107 @@
+{
+  "territories": [
+    {
+      "id": "grafschaft-aehrental",
+      "name": "Grafschaft Ährental",
+      "type": "Grafschaft",
+      "house": "Haus Grawn",
+      "familyId": "haus-grawn",
+      "crest": "/Stammbäume/assets/images/houses/Ährental/haus-grawn.png",
+      "banner": "/Stammbäume/assets/images/regions/aehrental.png",
+      "parentId": "",
+      "seat": "Glyndraith",
+      "href": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Ährental/Grafschaft Ährental.html"
+    },
+    {
+      "id": "baronie-tristams-ebene",
+      "name": "Gräfische Baronie Tristams Ebene",
+      "type": "Gräfische Baronie",
+      "house": "Haus Grawn",
+      "familyId": "haus-grawn",
+      "crest": "/Stammbäume/assets/images/houses/Ährental/haus-grawn.png",
+      "banner": "/Stammbäume/assets/images/regions/Cenyr/Ährental/Tristams Ebene.png",
+      "parentId": "grafschaft-aehrental",
+      "seat": "Glyndraith",
+      "href": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Ährental/Grafschaft Ährental.html"
+    },
+    {
+      "id": "herrschaft-marchog",
+      "name": "Herrschaft der Marchog",
+      "type": "Ritterfürstliche Herrschaft",
+      "house": "Haus Marchog",
+      "familyId": "haus-marchog",
+      "crest": "/Stammbäume/assets/images/houses/Ährental/Tristams Ebene/haus-marchog.png",
+      "banner": "/Stammbäume/assets/images/regions/Cenyr/Ährental/Herrschaft der Marchog.png",
+      "parentId": "baronie-tristams-ebene",
+      "seat": "Glyndraith",
+      "href": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Ährental/Herrschaft der Marchog/Herrschaft der Marchog.html",
+      "bannerSource": "https://i.imgur.com/sYfqwOB.png",
+      "bannerSha256": "2db937a7b38949d84adea7e09b8e3b747af2d40806aa2e7dbe1a0336e0c65c4e"
+    },
+    {
+      "id": "herrschaft-morcanhuc",
+      "name": "Herrschaft der Morcanhuc",
+      "type": "Ritterfürstliche Herrschaft",
+      "house": "Haus Morcanhuc",
+      "familyId": "haus-morcanhuc",
+      "crest": "/Stammbäume/assets/images/houses/Ährental/Tristams Ebene/haus-morcanhuc.png",
+      "banner": "/Stammbäume/assets/images/regions/Cenyr/Ährental/Herrschaft der Morcanhuc.png",
+      "parentId": "baronie-tristams-ebene",
+      "seat": "Glyndraith",
+      "href": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Ährental/Herrschaft der Morcanhuc/Herrschaft der Morcanhuc.html",
+      "bannerSource": "https://i.imgur.com/QFHXGMP.png",
+      "bannerSha256": "fda3bbff5067380b58fc5bac22f4f3279ea1bca7f185d0371138209f16383a93"
+    },
+    {
+      "id": "herrschaft-ciarog",
+      "name": "Herrschaft der Ciaróg – Die Graue Bucht",
+      "type": "Ritterfürstliche Herrschaft",
+      "house": "Haus Ciaróg",
+      "familyId": "haus-ciarog",
+      "crest": "/Stammbäume/assets/images/houses/Ährental/Graue Bucht/haus-ciarog.png",
+      "banner": "/Stammbäume/assets/images/regions/Cenyr/Ährental/Graue Bucht.png",
+      "parentId": "grafschaft-aehrental",
+      "seat": "Caer Diwedd",
+      "href": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Ährental/Herrschaft Graue Bucht/Herrschaft Graue Bucht.html"
+    },
+    {
+      "id": "baronie-eberkamm",
+      "name": "Baronie Eberkamm",
+      "type": "Baronie",
+      "house": "Haus Baedd",
+      "familyId": "haus-baedd",
+      "crest": "/Stammbäume/assets/images/houses/Ährental/Eberkamm/haus-baedd.png",
+      "banner": "/Stammbäume/assets/images/regions/Cenyr/Ährental/Eberkamm.png",
+      "parentId": "grafschaft-aehrental",
+      "seat": "Eirwyn",
+      "href": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Ährental/Baronie Eberkamm/Baronie Eberkamm.html"
+    },
+    {
+      "id": "baronie-flusstal",
+      "name": "Baronie Flusstal",
+      "type": "Baronie",
+      "house": "Haus Sgwarnog",
+      "familyId": "haus-sgwarnog",
+      "crest": "/Stammbäume/assets/images/houses/Ährental/Flusstal/haus-sgwarnog.png",
+      "banner": "/Stammbäume/assets/images/regions/Cenyr/Ährental/Flusstal.png",
+      "parentId": "grafschaft-aehrental",
+      "seat": "Aldwynd",
+      "href": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Ährental/Baronie Flusstal/Baronie Flusstal.html"
+    },
+    {
+      "id": "aehrental-teyrngarch-exklaven",
+      "name": "Exklaven der Teyrngarch im Flusstal",
+      "type": "Gepachtete Exklaven",
+      "house": "Haus Teyrngarch",
+      "familyId": "haus-teyrngarch",
+      "crest": "/Stammbäume/assets/images/houses/Sonnenküste/Gersteküste/haus-teyrngarch.png",
+      "banner": "/Stammbäume/assets/images/regions/Cenyr/Sonnenküste/Herrschaft der Teyrngarch.png",
+      "parentId": "grafschaft-aehrental",
+      "seat": "Bragdyddolwyn und Trefbrewyn",
+      "href": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Sonnenküste/Herrschaft der Teyrngarch/Herrschaft der Teyrngarch.html",
+      "bannerSource": "https://i.imgur.com/Pe325Dj.png",
+      "bannerSha256": "e74ca1ee7e5a3cecb33a8e906bd8a26cfb45e3959f5f2dc8b334e0a010ed877c",
+      "confirmation": "Vom Nutzer am 19.10.2026 als gebietsübergreifend gepachtete Exklaven bestätigt."
+    }
+  ]
+}

@@ -17,7 +17,7 @@ export function createTerritoryData(source, context, data = globalThis.ALERIA_HE
     if (!territory) throw new Error(`Unbekanntes Gebiet: ${domain.territoryId}`);
     return {
       ...domain, crestSrc: territory.banner, crestAlt: `Banner ${domain.title}`,
-      href: domain.page ? countyPath + domain.page : '',
+      href: domain.href || (domain.page ? countyPath + domain.page : ''),
       sections: domain.sections.map(section => ({
         title: section.title,
         places: section.placeIds.map(id => {
@@ -40,7 +40,7 @@ export function createTerritoryData(source, context, data = globalThis.ALERIA_HE
         crestSrc: heraldry.banner, crestAlt: `Banner ${heraldry.name}`,
         kicker: source.kicker, parentHref: source.parentHref, parentLabel: source.parentLabel,
         councilNote: source.councilNote, map, infobox: source.infobox,
-        copy: source.copy, floraSections: source.floraSections,
+        copy: source.copy, cultureSections: source.cultureSections, floraSections: source.floraSections,
       },
     },
   };

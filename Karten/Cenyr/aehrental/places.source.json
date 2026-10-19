@@ -1,0 +1,462 @@
+{
+  "descriptions": [
+    {
+      "id": "aehrental-dun-clachrath",
+      "screenshots": [
+        1,
+        36
+      ],
+      "text": "Dún Clachráth war eine bedeutende Küstenstadt der alten Crannath, einer damaligen Hochkultur, die ihre Handelsrouten über die Meere erstreckte und für ihre prachtvollen Klippenfestungen bekannt war. Die Stadt thronte majestätisch auf hohen Klippen, mit Blick auf das raue Meer, das einst Schutz und Wohlstand brachte. Doch ihre Glanzzeit endete abrupt, als die Norrnaigh, ein kriegerisches Volk aus dem Norden, die Stadt angriffen. Der Legende nach waren es nicht die Schwerter der Norrnaigh, die die stolze Stadt zu Fall brachten, sondern ihre Hexen, die durch dunkle Magie eine gewaltige Flutwelle heraufbeschworen. Diese Flut war so mächtig, dass sie die untere Hälfte von Dún Clachráth in die Tiefen des Meeres riss, die Stadt im wahrsten Sinne des Wortes ertränkte. Heute liegen die Ruinen von Dún Clachráth teils unter Wasser, nur sichtbar bei Ebbe, während die obere Hälfte der Stadt, auf den Klippen, als stummer Zeuge des einstigen Glanzes und des tragischen Untergangs verbleibt. Diese halb versunkene Stadt erzählt von der Vergangenheit — die verbliebenen Türme und Steinmauern, die sich trotzig gegen den Wind stemmen, erinnern an die einstige Macht der Crannath. Doch die unheilvolle Stille, die über den Ruinen liegt, und die geflüsterten Geschichten von Geistern und verfluchten Wassern lassen keinen Zweifel daran, dass das Erbe der Stadt mit dem Meer verbunden bleibt, das sie einst verschlang.",
+      "fields": {
+        "Historischer Clan": "Cruithenaech"
+      }
+    },
+    {
+      "id": "aehrental-penbrithor",
+      "screenshots": [
+        2
+      ],
+      "text": "Penbrithor, eine Hafensiedlung unter der Herrschaft der Marchog, ist nicht nur ein bedeutender Handelsort, sondern auch ein strategischer militärischer Stützpunkt. Während die Marchog traditionell als Fischer und Händler bekannt sind, haben sie in Penbrithor eine starke militärische Präsenz etabliert. Die Hafenanlagen wurden ausgebaut, um Kriegsschiffe und Marineeinheiten zu beherbergen, die die Küste vor Bedrohungen schützen. Neben dem Handel mit Fischprodukten spielt die militärische Verteidigung der Region eine zentrale Rolle in Penbrithor, das nun sowohl wirtschaftlich als auch militärisch ein entscheidender Knotenpunkt für die Marchog ist."
+    },
+    {
+      "id": "aehrental-dyfrwyn",
+      "screenshots": [
+        3
+      ],
+      "text": "Dyfrwyn, eine weitere Hafensiedlung unter der Herrschaft der Marchog, hat sich von ihren Ursprüngen im Fischfang zu einem bedeutenden Zentrum des Fischhandels entwickelt. Die Marchog, mit ihrem starken Fokus auf den Handel und die Seefahrt, haben Dyfrwyn zu einem wichtigen Hafen für den Export von Meeresfrüchten ausgebaut. Besonders der Handel mit gesalzenem Fisch und Krabben ist in Dyfrwyn stark ausgeprägt. Die Marchog setzen dabei weniger auf Kriegsschiffe, sondern auf gut ausgestattete Handelsschiffe, die den Wohlstand der Region sichern. Dyfrwyn bleibt ein wichtiger Hafen in ihrem Handelsnetzwerk, bekannt für die Verarbeitung von Krabben und den Umschlag von Fischprodukten."
+    },
+    {
+      "id": "aehrental-llynfawr",
+      "screenshots": [
+        4
+      ],
+      "text": "Llynfawr, eine Hafensiedlung unter der Herrschaft der Marchog, war traditionell für den Krabbenfang bekannt, hat sich jedoch im Laufe der Zeit zu einem florierenden Zentrum des Seehandels entwickelt. Die Marchog, einst Fischer, haben ihre maritime Erfahrung genutzt, um die Handelsrouten von Llynfawr zu erweitern. Heute ist die Siedlung ein wichtiger Umschlagplatz für Meeresfrüchte und Handelswaren aus anderen Regionen. Neben dem Krabbenfang exportiert Llynfawr auch Fischprodukte und bietet Hafenplätze für Handelsschiffe, die Waren in die Grafschaft und darüber hinaus transportieren. Die Marchog haben Llynfawr zu einem Schlüsselstandort in ihrem maritimen Handelsnetz gemacht."
+    },
+    {
+      "id": "aehrental-klingende-munze-handelsposten-laurina",
+      "screenshots": [
+        5
+      ],
+      "text": "Handelsposten Laurina ist ein bedeutender Knotenpunkt der Klingenden Münze, der Kaufmannsgilde, und dient als Ankerpunkt für den westlichen Handel des Kontinents. Die Gilde hat das Land gepachtet und den Handelsposten aufgebaut, um ihre Kontrolle über die wichtigen Handelsrouten der Region zu sichern.",
+      "fields": {
+        "Betreiber": "Klingende Münze",
+        "Vertragsform": "Gepachteter Handelsposten"
+      }
+    },
+    {
+      "id": "aehrental-valygarn",
+      "screenshots": [
+        6
+      ],
+      "text": "Valygarn, die Heimat der Familie Marchog, war früher bekannt für ihren Krabbenfang, eine Tradition, die bis heute fortgeführt wird. Obwohl die Marchog nun als Adlige agieren, bleibt Valygarn ein wichtiger Knotenpunkt für den maritimen Handel. Die Siedlung hat sich auf den Export von Meeresfrüchten und Fischprodukten spezialisiert, insbesondere Krabben, die in der gesamten Region beliebt sind. Zusätzlich hat Valygarn eine kleine Schiffswerft, die Handelsschiffe baut und repariert, was die Siedlung zu einem bedeutenden Akteur in der Handelswirtschaft der Marchog macht."
+    },
+    {
+      "id": "aehrental-llanvor",
+      "screenshots": [
+        7
+      ],
+      "text": "Llanvor, einst unter der Herrschaft der Gwarchod und nun von den Morcanhuc kontrolliert, ist eine bedeutende Hafensiedlung an der Küste. Die Siedlung lebt vom Fischfang und dem regen Seehandel, wobei vor allem Meeresfrüchte und Fischprodukte über die Häfen in die Region gelangen. Seit der Übernahme durch die Morcanhuc hat sich Llanvor auch im Schiffbau etabliert, wobei Boote und Schiffe für Fischerei und Handel gefertigt werden. Der Hafen von Llanvor ist ein Dreh- und Angelpunkt für den maritimen Handel der Region, und die Morcanhuc haben ihre Stellung als Herren durch den Ausbau des Handels und der Schiffswerften gestärkt."
+    },
+    {
+      "id": "aehrental-glyndraith",
+      "screenshots": [
+        8
+      ],
+      "text": "Glyndraith, die stolze Küstenstadt und Sitz des Hauses Grawn, ist das Machtzentrum der Grafschaft und Heimat der ritterlichen Häuser Morcanhuc und Marchog."
+    },
+    {
+      "id": "aehrental-twr-malwoden-magierturm",
+      "screenshots": [
+        9
+      ],
+      "text": "Tŵr Malwoden ist ein Turm, der von der cenyrischen Zaubererloge errichtet wurde und im Besitz der Magierin Romney Chiffyddlon steht.",
+      "fields": {
+        "Besitzer": "Romney Chiffyddlon"
+      }
+    },
+    {
+      "id": "aehrental-arllwyn",
+      "screenshots": [
+        10
+      ],
+      "text": "Arllwyn ist eine Bergbausiedlung, die für ihren reichen Abbau von Eisen und Kupfer bekannt ist. Diese Rohstoffe werden in nahegelegenen Schmieden weiterverarbeitet und sind in der gesamten Region gefragt. Die Marchog verwalten die Bergwerke und haben die Infrastruktur der Siedlung verbessert, um die Produktion zu maximieren. Arllwyn spielt eine wichtige Rolle in der Rohstoffversorgung und dem Handel mit Metallen, die sowohl lokal als auch über die Küste verschifft werden."
+    },
+    {
+      "id": "aehrental-bryngalch",
+      "screenshots": [
+        11
+      ],
+      "text": "Bryngalch, eine der beiden Bergbausiedlungen unter der Herrschaft der Ciarog, ist tief in den Bergen gelegen und bekannt für den Abbau von Eisen und Kohle. Die Bewohner der Siedlung sind hartgesottene Bergleute, die die reichen Erzvorkommen der Region nutzen. Seit Jahrhunderten liefert Bryngalch wertvolle Rohstoffe für die umliegenden Regionen. Unter der Führung der Ciarog, einem der ältesten Adelshäuser, wird der Bergbau hier mit einer langen Tradition fortgeführt, die in der Region tief verwurzelt ist."
+    },
+    {
+      "id": "aehrental-caer-diwedd",
+      "screenshots": [
+        12
+      ],
+      "text": "Caer Diwedd, die altehrwürdige Burg des Hauses Ciarog, ist seit jeher ein Zentrum für Schiffbau und maritimen Handel. Strategisch an der Küste gelegen, hat sich die Region um die Burg auf die Konstruktion von Schiffen spezialisiert, die in der gesamten Baronie und darüber hinaus geschätzt werden. Der Hafen von Caer Diwedd ist ein bedeutender Umschlagplatz für Handelsgüter, die über das Meer transportiert werden. Der starke Fokus auf den maritimen Handel hat dem Haus Ciarog Wohlstand und Einfluss verschafft, da ihre Schiffe nicht nur lokale, sondern auch internationale Handelsrouten bedienen."
+    },
+    {
+      "id": "aehrental-abaty-dinasbryn",
+      "screenshots": [
+        13
+      ],
+      "text": "Abaty Dinasbryn, majestätisch auf einer großen Brücke über den Emerlyn-Fluss erbaut, ist eine einzigartige Klostersiedlung, die das Tor zwischen Tristams Ebene und der Baronie von Flusstal bildet. Obwohl sie geographisch zwischen den beiden Regionen liegt, gehört sie zur Baronie von Flusstal und spielt eine wichtige Rolle als religiöses und kulturelles Zentrum. Das Kloster selbst wurde auf den Fundamenten der Brücke errichtet und symbolisiert die Verbindung zwischen den spirituellen und weltlichen Sphären der Baronie. Der primäre wirtschaftliche Schwerpunkt der Siedlung liegt in der Herstellung und dem Handel von Manuskripten, religiösen Texten und illuminierten Schriften. Die Mönche von Abaty Dinasbryn sind für ihre kunstvollen Schriften und kalligrafischen Meisterwerke bekannt, die nicht nur in der Baronie, sondern auch über deren Grenzen hinaus begehrt sind. Diese Manuskripte sind nicht nur religiöser Natur, sondern umfassen auch wissenschaftliche und philosophische Werke, die in den Skriptorien des Klosters gefertigt werden. Zudem betreiben die Mönche eine florierende Fischerei, die als sekundärer Wirtschaftszweig dient. Der Emerlyn-Fluss bietet reichlich Fisch, der nicht nur die Gemeinschaft versorgt, sondern auch auf den Märkten der Baronie verkauft wird. Die Fischerei, zusammen mit der Schriftenherstellung, sorgt dafür, dass Abaty Dinasbryn wirtschaftlich unabhängig ist und die religiöse Gemeinschaft stabil unterstützt wird."
+    },
+    {
+      "id": "aehrental-myrddrion",
+      "screenshots": [
+        14
+      ],
+      "text": "Myrddrion, eine Siedlung am Rande von Tristams Ebene und unter der Herrschaft der Marchog, wurde nach dem legendären Magier Myrddin benannt. Der Ort erlangte Berühmtheit, als Myrddin sich hier auf den Ruinen eines alten Crannath-Tempels der Göttin Lyrentia (auch bekannt als Myrien) mit der Magierin Romney traf, und laut Zeitzeugen „heftig funkte“. Seitdem hat sich Myrddrion zu einem kulturellen Zentrum entwickelt, das vor allem für seine Barden, Künstler und Musik bekannt ist. Obwohl die Siedlung keinen wirtschaftlichen Fokus hat, zieht sie zahlreiche Besucher an, die ihre Tavernen und Unterhaltung schätzen. In der gesamten Region gilt sie als der beste Ort, um gutes Essen, Musik und Kunst zu genießen."
+    },
+    {
+      "id": "aehrental-gorandor",
+      "screenshots": [
+        15
+      ],
+      "text": "Gorandor, eine Siedlung an der Südstraße unweit der Westküste, steht unter der Herrschaft der Marchog. Diese Siedlung hat sich zu einem wichtigen Rast- und Handelsknotenpunkt entwickelt, der den Handel zwischen den Hafenstädten und dem Landesinneren erleichtert. Die weiten Felder um Gorandor werden hauptsächlich für den Weizenanbau genutzt, was die Siedlung zu einem zentralen Getreidelieferanten der Region macht. Zusätzlich betreiben die Bewohner von Gorandor Rinderzucht, wodurch die Siedlung auch Fleisch und Milchprodukte produziert. Gorandor ist ein landwirtschaftlicher Dreh- und Angelpunkt, der die Versorgung der Region unterstützt."
+    },
+    {
+      "id": "aehrental-faldor",
+      "screenshots": [
+        16
+      ],
+      "text": "Faldor, eine weitere Bauernsiedlung, war einst Teil des Herrschaftsgebiets der Gwarchod, bevor die Morcanhuc nach deren Aussterben die Kontrolle übernahmen. Die Siedlung hat sich auf die Milchwirtschaft und Käserei spezialisiert. Die saftigen Wiesen um Faldor bieten ideale Bedingungen für die Viehzucht, insbesondere von Milchvieh. Unter der Leitung der Morcanhuc hat sich Faldor zu einem Zentrum für die Herstellung von Milchprodukten entwickelt, die in der gesamten Region geschätzt werden. Der Käse aus Faldor ist besonders begehrt und ein wichtiger Handelsgut, der die lokale Wirtschaft stärkt und den Einfluss der Morcanhuc in der Region festigt."
+    },
+    {
+      "id": "aehrental-bryn",
+      "screenshots": [
+        17
+      ],
+      "text": "Bryn, eine Siedlung (der Marchog) an der Südstraße unweit der Westküste, dient als wichtiger Handelsumschlagplatz für Waren, die von den Hafensiedlungen ins Landesinnere transportiert werden. Neben ihrer strategischen Lage hat sich Bryn auf den Getreideanbau spezialisiert, insbesondere auf Weizen. Die Felder um die Siedlung liefern reichlich Getreide, das in den umliegenden Mühlen verarbeitet wird. Zusätzlich betreiben die Bewohner von Bryn Imkerei, was die Siedlung für ihren Honig bekannt macht, der in der Region und darüber hinaus geschätzt wird. Bryn ist eine bedeutende landwirtschaftliche Stütze der Marchog-Herrschaft."
+    },
+    {
+      "id": "aehrental-penwyd",
+      "screenshots": [
+        18,
+        24
+      ],
+      "text": "Penwyd, eine Bauernsiedlung, war einst unter der Herrschaft der Gwarchod, bevor das Haus Morcanhuc nach deren Aussterben die Kontrolle übernahm. Die Siedlung konzentriert sich auf Viehzucht und Getreideanbau. Die weiten Felder und Wiesen von Penwyd liefern wichtige Nahrungsmittel für die umliegenden Regionen. Unter der Verwaltung der Morcanhuc hat sich Penwyd zu einem der wichtigsten landwirtschaftlichen Zentren der Region entwickelt. Die Viehzucht, insbesondere von Rindern und Schafen, sowie der Anbau von Weizen und Gerste sind die Hauptpfeiler der Wirtschaft der Siedlung. Die Erzeugnisse von Penwyd tragen maßgeblich zur Versorgung des Gebiets bei."
+    },
+    {
+      "id": "aehrental-tanor",
+      "screenshots": [
+        19
+      ],
+      "text": "Tanor, eine Bauernsiedlung unter der Herrschaft der Marchog, ist bekannt für den Anbau von Weizen auf den fruchtbaren Feldern der Region. Die Siedlung spielt eine zentrale Rolle in der Nahrungsmittelversorgung der Region und ist einer der Hauptlieferanten von Getreide in der Baronie. Neben dem Weizenanbau betreiben die Bewohner von Tanor auch eine bedeutende Viehzucht, insbesondere von Schafen und Rindern. Die Kombination aus Getreideanbau und Viehzucht macht Tanor zu einem wichtigen landwirtschaftlichen Zentrum, das die Versorgung der umliegenden Siedlungen mit Nahrungsmitteln sichert und zum Wohlstand der Marchog beiträgt."
+    },
+    {
+      "id": "aehrental-glynborn",
+      "screenshots": [
+        20
+      ],
+      "text": "Glynborn, eine Bauernsiedlung unter der Herrschaft der Marchog, hat ihren wirtschaftlichen Schwerpunkt auf den Weizenanbau gelegt. Die fruchtbaren Böden von Glynborn ermöglichen eine reiche Ernte, die zur Versorgung der Region und des Handels verwendet wird. Neben dem Weizenanbau hat sich die Siedlung auch auf die Schweinezucht spezialisiert. Die Kombination aus Ackerbau und Viehzucht macht Glynborn zu einem wichtigen landwirtschaftlichen Zentrum, das sowohl für Nahrungsmittelproduktion als auch für den Handel mit Getreide und Fleischprodukten eine Schlüsselrolle spielt. Die Marchog haben die landwirtschaftliche Effizienz von Glynborn gesteigert und sichern so die stabile Versorgung ihrer Herrschaft."
+    },
+    {
+      "id": "aehrental-cynarwen",
+      "screenshots": [
+        21,
+        28
+      ],
+      "text": "Cynarwen, eine Bauernsiedlung unter der Herrschaft der Marchog, ist bekannt für ihren Weizenanbau, der das Rückgrat der lokalen Wirtschaft bildet. Die weitläufigen Felder um Cynarwen liefern große Mengen an Weizen, der in den Mühlen der Region verarbeitet wird. Neben dem Ackerbau hat sich die Siedlung auch auf die Rinderzucht spezialisiert, was Cynarwen zu einem bedeutenden Produzenten von Fleisch und Milchprodukten macht. Die Marchog haben die landwirtschaftlichen Aktivitäten in Cynarwen stark gefördert, um die Nahrungsmittelversorgung für ihre Ländereien zu sichern und den Handel mit Getreide und Viehprodukten in der Region zu stärken."
+    },
+    {
+      "id": "aehrental-castell-yddron",
+      "screenshots": [
+        22
+      ],
+      "text": "Castell Yddrôn ist eine alte Festung im Herzland des Ährentals, einst errichtet vom Haus Gwarchod, um die umliegenden Felder und Dörfer zu schützen. Die Burg dient heute sowohl als Verteidigungsanlage als auch als Kornkammer, in der die Ernte gelagert und für den Transport zu den Küstenhäfen vorbereitet wird. Heute wird Castell Yddrôn vom Haus Morcanhuc verwaltet."
+    },
+    {
+      "id": "aehrental-clydwyn",
+      "screenshots": [
+        23
+      ],
+      "text": "Clydwyn, eine einst von den Gwarchod beherrschte Bauernsiedlung, fiel nach deren Aussterben unter die Herrschaft der Morcanhuc. Die Siedlung ist für ihren fruchtbaren Boden und den erfolgreichen Anbau von Obst und Gemüse bekannt. Die Gärten und Felder von Clydwyn liefern eine Vielzahl frischer Erzeugnisse, die auf den Märkten der umliegenden Städte und Dörfer verkauft werden. Unter der Führung der Morcanhuc hat sich Clydwyn zu einem wichtigen landwirtschaftlichen Zentrum entwickelt, das die Region mit frischen Nahrungsmitteln versorgt. Die Produkte aus Clydwyn tragen maßgeblich zur Ernährung der Bevölkerung bei und sind ein wichtiger Bestandteil der lokalen Wirtschaft."
+    },
+    {
+      "id": "aehrental-castell-gwarchod",
+      "screenshots": [
+        25
+      ],
+      "text": "Burg der Morcanhuc liegt westlich von Glyndraith und über der Burg der Marchog. Ursprünglich war sie der Sitz des Hauses Gwarchod, bevor sie vor 20 Jahren in einem Angriff überrannt wurde. Heute dient die Burg als Residenz des Hauses Morcanhuc und ist ein wichtiger strategischer Punkt in der Region."
+    },
+    {
+      "id": "aehrental-brannor",
+      "screenshots": [
+        26
+      ],
+      "text": "Brannor, eine Siedlung an der Hauptstraße zu Glyndraith, der Hauptstadt, war einst Teil des Herrschaftsgebiets der Gwarchod, bevor das Haus Morcanhuc nach deren Aussterben die Kontrolle übernahm. Brannor hat sich zu einem wichtigen Knotenpunkt für Händler und Reisende entwickelt, die auf dem Weg zur Hauptstadt durch diese Siedlung kommen. Gasthäuser, Werkstätten und Märkte prägen das Bild der Siedlung, die als Rastplatz für Karawanen dient. Unter der Führung der Morcanhuc hat sich Brannor zu einem florierenden Handelszentrum entwickelt, das nicht nur den Verkehr zur Hauptstadt, sondern auch den Austausch von Waren und Informationen fördert."
+    },
+    {
+      "id": "aehrental-kornfeld-windreiter-burg",
+      "screenshots": [
+        27
+      ],
+      "text": "Burg Kornfeld dient als Bastion der Windreiter im Ährental. Sie ist der zentrale Rekrutierungs- und Ausbildungsort für neue Windreiter in der Region. Hier finden regelmäßig Versammlungen statt, in denen wichtige Entscheidungen für die Gilde getroffen werden. Die Festung wird von einem Haudegen, einem Kommandanten der Windreiter, kontrolliert, der die Ausbildung der Rekruten und die Gründung neuer Untergruppen überwacht.",
+      "fields": {
+        "Betreiber": "Windreiter"
+      }
+    },
+    {
+      "id": "aehrental-rhosmeres-rosser-tyrnor",
+      "screenshots": [
+        30
+      ],
+      "text": "Tyrnor ist eine eigenständige Siedlung, die von der Gilde Rhosmeres Rösser von Glyndraith gepachtet wurde. Die Siedlung ist berühmt für ihre erstklassige Zucht von Schlachtrössern und Kurierpferden. Im ganzen Königreich gibt es, abgesehen von Rhosmere selbst, keine Rosszucht, die qualitativ an Tyrnor heranreicht. Die Pferde aus Tyrnor sind besonders wegen ihrer Ausdauer, Stärke und Schnelligkeit geschätzt, und sie spielen eine zentrale Rolle in der Versorgung des Königreichs mit Reit- und Kriegspferden.",
+      "fields": {
+        "Betreiber": "Rhosmeres Rösser",
+        "Vertragsform": "Von Glyndraith gepachtete Siedlung"
+      }
+    },
+    {
+      "id": "aehrental-tynar",
+      "screenshots": [
+        31
+      ],
+      "text": "Tynar, einst unter der Herrschaft der Gwarchod und nun von den Morcanhuc kontrolliert, ist eine Bauernsiedlung, die sich auf die Schafzucht und die Produktion von Wolle spezialisiert hat. Die weiten Weiden rund um Tynar bieten optimale Bedingungen für die Zucht von Schafen, deren Wolle sowohl in der Region als auch darüber hinaus geschätzt wird. Die Wolle aus Tynar wird in den umliegenden Städten von Webern und Handwerkern weiterverarbeitet. Unter der Verwaltung der Morcanhuc hat sich die Siedlung zu einem wichtigen Zentrum der Textilproduktion entwickelt, und ihre Wolle ist ein begehrtes Handelsgut, das zum wirtschaftlichen Wohlstand der Region beiträgt."
+    },
+    {
+      "id": "aehrental-dunwyn",
+      "screenshots": [
+        32
+      ],
+      "text": "Dunwyn, wie auch Caerfyl, war einst Teil des Territoriums der Gwarchod, bevor das Haus Morcanhuc nach deren Aussterben die Herrschaft übernahm. Diese Bergbausiedlung hat sich auf den Abbau von Kohle und Eisen spezialisiert. Die reichen Vorkommen in den Bergen um Dunwyn versorgen nicht nur die Schmieden der Region, sondern sind auch ein bedeutendes Handelsgut. Unter der Führung der Morcanhuc hat sich Dunwyn zu einem unverzichtbaren Lieferanten von Rohstoffen entwickelt, die sowohl für den Bau als auch für die Waffenproduktion der umliegenden Regionen genutzt werden."
+    },
+    {
+      "id": "aehrental-caerfyl",
+      "screenshots": [
+        33
+      ],
+      "text": "Caerfyl, einst unter der Herrschaft der Gwarchod, ist eine Bergbausiedlung, die tief in den Bergen liegt und für ihren reichen Erzabbau bekannt ist. Nach dem Aussterben der Gwarchod wurde die Kontrolle über die Siedlung an das Haus Morcanhuc übergeben, das nun die Aufsicht über den Abbau von Eisen und Mineralien führt. Die Minen von Caerfyl sind eine wichtige Ressource für die Region, und das geförderte Erz wird sowohl für die lokale Schmiedekunst als auch für den Handel genutzt. Die Morcanhuc haben die Bergbauinfrastruktur ausgebaut und sichern so den Wohlstand der Siedlung und ihrer Umgebung."
+    },
+    {
+      "id": "aehrental-caerfynn",
+      "screenshots": [
+        34
+      ],
+      "text": "Caerfynn, die zweite Bergbausiedlung der Ciarog, konzentriert sich auf den Abbau von Kupfer und Zinn. Die Erzvorkommen in Caerfynn sind von hoher Qualität und werden in den umliegenden Schmieden weiterverarbeitet. Die Siedlung liegt am Fuße eines Berges und hat eine strategische Bedeutung für den Handel mit Metallen. Die Ciarog haben es geschafft, den Bergbau in Caerfynn effizient zu organisieren und die Rohstoffversorgung der Region zu sichern."
+    },
+    {
+      "id": "aehrental-llanwedd",
+      "screenshots": [
+        35
+      ],
+      "text": "Llanwedd, das Kloster der Ciarog, liegt idyllisch in einem von Bergen umringten Tal. Geweiht ist es dem Knecht, dem Gott des Handwerks, der Arbeit und des Handels. Die Mönche hier widmen sich nicht nur spirituellen Aufgaben, sondern auch dem Handwerk. Schmiede, Schreiner und Weber sind in den Klostermauern tätig und stellen hochwertige Güter her, die in der Region hoch geschätzt werden. Das Kloster dient als Zentrum für handwerkliches Können und ist ein wichtiger Ort des Handels in der kleinen, aber ehrwürdigen Herrschaft der Ciarog."
+    },
+    {
+      "id": "aehrental-die-graue-hohe",
+      "screenshots": [
+        37
+      ],
+      "text": "Die Graue Höhe ist ein imposantes Gebirge, das die Grenze zwischen dem Ährental und der Grauen Weite markiert. Die schroffen Felswände und steilen Klippen des Gebirges ragen hoch über die umliegenden Landschaften wie die Tristams Ebene, den Eberkamm und das Flusstal hinaus und verleihen der Region eine natürliche Barriere. Die Berghänge sind oft von Nebel umhüllt, was den gesamten Gebirgszug noch geheimnisvoller und gefährlicher erscheinen lässt. Obwohl das Gebirge reich an Mineralien wie Eisen, Kupfer und seltenen Erzen ist, bleibt die Graue Höhe nur spärlich besiedelt. Die Abgeschiedenheit und das raue Terrain haben dazu geführt, dass nur wenige Siedlungen oder Bergwerksbetriebe hier existieren. Dennoch lockt der Reichtum an Rohstoffen immer wieder Abenteurer und Bergleute in die Region. In den Höhen leben Bergtrolle, massive Kreaturen, die für ihre unglaubliche Stärke und ihre grobschlächtige Erscheinung bekannt sind. Diese Trolle gelten als scheu und halten sich meistens in den entlegeneren Teilen des Gebirges auf, doch es kommt hin und wieder zu Sichtungen, wenn sie sich in die Nähe von Bergwerken oder Siedlungen wagen. Menschen, die im Schatten der Grauen Höhe leben, neigen dazu, Trolle mit Ogern zu verwechseln, was zu Gerüchten über die Existenz anderer Kreaturen wie Grimmlingen oder Grimnacks führt. Solche Sichtungen bleiben jedoch unbestätigt, da es in der Regel Missverständnisse und Übertreibungen sind. Die Graue Höhe mag zwar nicht dicht besiedelt sein, doch sie bleibt ein faszinierendes und gefährliches Gebiet. Die schwindenden Wege und die kaum kartierten Pfade bieten Verstecke für die Wildhauer und andere zwielichtige Gestalten, die das unwegsame Gelände zu ihrem Vorteil nutzen."
+    },
+    {
+      "id": "aehrental-banditenlager-wildhauer",
+      "screenshots": [
+        38
+      ],
+      "text": "Die Wildhauer sind eine berüchtigte Räuber- und Banditenbande, die das Ährental seit langem unsicher macht. Ursprünglich versuchten sie ihr Glück auf den offenen Feldern der Tristams Ebene, mussten jedoch feststellen, dass die weiten, flachen Landstriche schwer zu kontrollieren und zu überfallen sind. Daher zogen sich die Wildhauer in die Berge zurück, wo sie bessere Rückzugsmöglichkeiten und natürliche Deckung fanden. Die Wildhauer sind für ihre skrupellosen Überfälle auf Minen und Waldsiedlungen bekannt. Sie haben eine besondere Vorliebe dafür, Siedlungen zu erpressen, indem sie Schutzgelder verlangen und damit drohen, Dörfer zu plündern oder Arbeiter in den Minen zu überfallen. Die Bewohner der betroffenen Regionen wie Eberkamm, Flusstal und die nördlichen Gebiete der Tristams Ebene leben in ständiger Angst vor den wilden Angriffen der Bande. Organisiert und brutal, sind die Wildhauer Meister darin, das schwierige Gelände der Berge zu ihrem Vorteil zu nutzen. Ihre Angriffe kommen oft unerwartet, und sie verschwinden genauso schnell wieder in den unzugänglichen Bergpfaden. Sie sind gut bewaffnet und haben sich im Laufe der Zeit zu einer gefürchteten Kraft entwickelt, die schwer zu fassen ist. Obwohl es bereits mehrere Versuche gab, die Bande zu zerschlagen, haben die Wildhauer ihre Position in den Bergen bisher erfolgreich verteidigt. Die Wildhauer gelten als unbarmherzig und effizient, und sie haben keine Skrupel, Gewalt anzuwenden, um ihre Forderungen durchzusetzen.",
+      "faction": "Wildhauer"
+    },
+    {
+      "id": "aehrental-ri-torraird",
+      "screenshots": [
+        39
+      ],
+      "text": "Ri Torrâird war die uneinnehmbare Hauptstadt des einst fruchtbaren Ährentals, ein Symbol für die Macht und den Stolz der Crannath. Die Stadt erhob sich majestätisch auf einem Klippenvorsprung im Herzen des Gebirges, von wo aus die Crannath über das darunterliegende Tal herrschten. Ihre hohen Mauern und Türme trotzten den Elementen und boten einen unvergleichlichen Blick über das Land, das sie beschützten und regierten. Die Lage der Stadt, auf steilen Felsen errichtet, machte sie fast uneinnehmbar, und sie galt lange als unbezwingbare Bastion des Reiches. Doch während der erbitterten Crannath-Norrnaigh Kriege, in denen die Norrnaigh mit rücksichtsloser Gewalt und schwarzer Magie angriffen, ereignete sich das Unvorstellbare: Ri Torraird wurde durch einen verheerenden Gebirgsrutsch zerstört. Die prächtigen Bauten und die mächtigen Mauern, die die Stadt einst geschützt hatten, wurden unter den herabstürzenden Felsen begraben. Einige sagen, dass die Hexen der Norrnaigh dafür verantwortlich waren, die dunkle Zauber wirkten, um die Stadt zu Fall zu bringen. Andere glauben, es seien die zornigen Götter gewesen, die sich in die Kämpfe der Sterblichen einmischten. Und wieder andere halten es für schlichtes, tragisches Pech, das die Stadt, trotz all ihrer Stärke, an diesem verhängnisvollen Tag traf. Was auch immer die wahre Ursache gewesen sein mag, eines ist sicher: Nach dem Fall von Ri Torrâird war das Ährental verloren. Ohne die mächtige Festung, die es schützte, konnten die Crannath ihre Herrschaft nicht länger aufrechterhalten, und das Tal fiel bald in die Hände der Norrnaigh. Die Ruinen von Ri Torrâird bleiben als stummer Zeuge einer einst mächtigen Stadt, nun begraben unter dem Schutt des Gebirges und den Erzählungen von Magie, Göttern und einem prächtigen, verlorenen Reich.",
+      "fields": {
+        "Historischer Clan": "Warthog"
+      }
+    },
+    {
+      "id": "aehrental-glynnar",
+      "screenshots": [
+        40
+      ],
+      "text": "Glynnar, einst unter der Herrschaft der Gwarchod und nun regiert von den Morcanhuc, ist eine bedeutende Bergbausiedlung, die sich auf den Abbau von Edelmetallen wie Silber und Kupfer spezialisiert hat. Die Minen von Glynnar sind für ihre reichen Vorkommen bekannt, und die hier geförderten Metalle werden sowohl in der Region als auch darüber hinaus hoch geschätzt. Seit der Übernahme durch die Morcanhuc hat die Siedlung weiter an Bedeutung gewonnen, und die Edelmetalle aus Glynnar tragen entscheidend zum Wohlstand der Familie und der gesamten Region bei. Die Morcanhuc haben in die Infrastruktur der Siedlung investiert, um den Abbau effizienter zu gestalten und den Handel zu stärken."
+    },
+    {
+      "id": "aehrental-aldwynd",
+      "screenshots": [
+        41
+      ],
+      "text": "Aldwynd, der Sitz des Hauses Sgwarnog, ist eine wohlhabende Stadt, die für ihr fruchtbares Umland bekannt ist. Die reichen Böden und das milde Klima der Region machen die Stadt zum landwirtschaftlichen Zentrum der Baronie. Die umliegenden Felder liefern eine Fülle an Getreide, Gemüse und Obst, die nicht nur die Stadt selbst versorgen, sondern auch in die umliegenden Siedlungen und Märkte exportiert werden. Aldwynd ist das Herzstück der landwirtschaftlichen Produktion und symbolisiert den Wohlstand, den das Haus Sgwarnog durch die fruchtbaren Ländereien aufgebaut hat."
+    },
+    {
+      "id": "aehrental-llynfaen",
+      "screenshots": [
+        42
+      ],
+      "text": "Llynfaen, weit im Süden der Baronie Flusstal gelegen, ist eine strategisch wichtige Siedlung an der Hauptstraße, die in die angrenzende Grafschaft im Süden führt. Ihre Lage macht sie zu einem bedeutenden Knotenpunkt für den Handel zwischen den beiden Regionen, wobei der primäre wirtschaftliche Schwerpunkt auf dem Warenumschlag und dem Transithandel liegt. Kaufleute und Reisende nutzen Llynfaen als Rast- und Handelspunkt, um Güter zwischen der Baronie Flusstal und der südlichen Grafschaft auszutauschen. Die Märkte der Siedlung sind bekannt für ihre Vielfalt an Produkten, die aus beiden Regionen stammen, darunter landwirtschaftliche Erzeugnisse, Handwerkswaren und exotischere Waren aus dem Süden. Der sekundäre wirtschaftliche Schwerpunkt liegt in der Pferdezucht. Llynfaen hat sich einen Ruf als Zuchtzentrum für robuste und ausdauernde Pferde erarbeitet, die auf den langen Handelsrouten zwischen der Baronie und der Grafschaft unentbehrlich sind. Die Pferde von Llynfaen sind besonders bei Händlern und Reisenden begehrt, da sie sowohl für den Transport als auch für militärische Zwecke geeignet sind."
+    },
+    {
+      "id": "aehrental-pontfaen",
+      "screenshots": [
+        43
+      ],
+      "text": "Pontfaen hat sich auf die Pferdezucht spezialisiert und ist in der gesamten Baronie für seine robusten und ausdauernden Pferde bekannt. Die weitläufigen Weiden und die gute Pflege der Tiere machen Pontfaen zum Hauptlieferanten von Arbeitspferden und Reitpferden, die sowohl in der Landwirtschaft als auch im Militär der Baronie eingesetzt werden. Die Pferde von Pontfaen zeichnen sich durch ihre Stärke und Verlässlichkeit aus, was ihnen einen hervorragenden Ruf in der Region eingebracht hat."
+    },
+    {
+      "id": "aehrental-hafodwen",
+      "screenshots": [
+        44
+      ],
+      "text": "Hafodwen, idyllisch am Fluss gelegen, hat sich ganz auf Viehhaltung und Landwirtschaft spezialisiert. Die weiten, fruchtbaren Felder und die Nähe zum Fluss bieten ideale Bedingungen für den Anbau von Getreide und Futterpflanzen, während die umliegenden Weiden zur Viehzucht genutzt werden. Hafodwen ist bekannt für die Qualität seines Rind- und Schafbestands, und die Produkte aus der Region — insbesondere Fleisch, Wolle und Milch — sind in der gesamten Baronie gefragt."
+    },
+    {
+      "id": "aehrental-glynwedd",
+      "screenshots": [
+        45,
+        48
+      ],
+      "text": "Glynwedd, nördlich von Hafodwen und ebenfalls am Fluss gelegen, konzentriert sich auf den Weizenanbau und die Rinderzucht. Die fruchtbaren Böden entlang des Flusses ermöglichen eine ertragreiche Weizenernte, die in der gesamten Baronie als Grundnahrungsmittel geschätzt wird. Neben dem Ackerbau spielt die Rinderzucht eine zentrale Rolle, wobei Glynwedd für seine kräftigen und widerstandsfähigen Rinder bekannt ist, die sowohl für Fleisch als auch für den Einsatz in der Landwirtschaft genutzt werden."
+    },
+    {
+      "id": "aehrental-llyswen",
+      "screenshots": [
+        46
+      ],
+      "text": "Llyswen, eine ländliche Siedlung, konzentriert sich auf den Weizenanbau und die Schafzucht. Die weitläufigen Felder bieten hervorragende Bedingungen für Weizen, der in der Baronie für Brot und andere Grundnahrungsmittel verwendet wird. Daneben ist die Schafzucht von großer Bedeutung, wobei die Wolle der Schafe von Llyswen besonders begehrt ist. Die Siedlung ist bekannt für ihre hochwertige Wollproduktion, die auf den Märkten der Baronie sehr geschätzt wird."
+    },
+    {
+      "id": "aehrental-trefbrewyn",
+      "screenshots": [
+        47
+      ],
+      "text": "Trefbrewyn, ähnlich wie Bragdyddolwyn, ist eine Brauereisiedlung im Flusstal, die sich auf die Produktion hochwertiger Biere spezialisiert hat. Einst eine kleine, unauffällige Bauernsiedlung, wurde sie vom Haus Teyrngarch übernommen und in ein Zentrum für die Brauereikunst umgewandelt. Der primäre wirtschaftliche Schwerpunkt liegt auf der Herstellung von feinen Bieren, die weit über die Grenzen der Baronie hinaus bekannt sind. Die Gilde der Brauer, die hier ansässig ist, experimentiert nicht nur mit traditionellen Rezepten, sondern auch mit neuen Aromen und Verfahren, die Trefbrewyn zu einem bedeutenden Namen in der Bierherstellung gemacht haben.",
+      "fields": {
+        "Betreiber": "Haus Teyrngarch",
+        "Gebietsform": "Gepachtete Exklave der Teyrngarch",
+        "Lage": "Baronie Flusstal"
+      }
+    },
+    {
+      "id": "aehrental-fforddglas",
+      "screenshots": [
+        49
+      ],
+      "text": "Fforddglas, im ländlichen Süden der Baronie gelegen, hat seinen wirtschaftlichen Schwerpunkt im Anbau von Weizen, Gerste und Gemüse. Die weiten Felder der Region liefern nicht nur Grundnahrungsmittel für die lokale Bevölkerung, sondern versorgen auch die umliegenden Siedlungen mit frischem Getreide und Gemüse. Besonders die Gerste wird aufgrund ihrer Qualität häufig für die Brauereien der Baronie verwendet, während das vielfältige Gemüse aus Fforddglas auf den Märkten der Baronie sehr begehrt ist."
+    },
+    {
+      "id": "aehrental-bragdyddolwyn",
+      "screenshots": [
+        50
+      ],
+      "text": "Bragdyddolwyn, einst eine einfache Bauernsiedlung im Flusstal unter den Sgawrnog-Hügeln aus Aldwynd, hat sich durch das Eingreifen des Hauses Teyrngarch zu einer blühenden Brauereisiedlung entwickelt. Nachdem das Haus die Siedlung gepachtet hat, wurde sie zu einem bedeutenden Zentrum für den Anbau von Gerste und Hopfen sowie für die Herstellung des Biers \"Goldhaube\", das im gesamten Königreich bekannt ist. Die Brauereigilde, die hier ansässig ist, nutzt die fruchtbaren Felder der Umgebung, um hochwertige Zutaten zu kultivieren und in ihren Brauereien zu verarbeiten. Der primäre wirtschaftliche Schwerpunkt liegt daher auf der Bierproduktion, wobei besonders die traditionellen Rezepturen der Gilde für den unverwechselbaren Geschmack sorgen.",
+      "fields": {
+        "Betreiber": "Haus Teyrngarch",
+        "Gebietsform": "Gepachtete Exklave der Teyrngarch",
+        "Lage": "Baronie Flusstal"
+      }
+    },
+    {
+      "id": "aehrental-derwenth",
+      "screenshots": [
+        51
+      ],
+      "text": "Derwenth, eine abgelegene Siedlung an der Grenze zum Süden der Baronie, liegt versteckt am Rande des Eberkamm-Waldes und abseits der belebten Hauptwege. Diese isolierte Lage verleiht Derwenth einen besonderen Charakter und einen anderen wirtschaftlichen Fokus als die größeren, zentral gelegenen Siedlungen. Der primäre wirtschaftliche Schwerpunkt liegt in der Holzwirtschaft und im Wildhandel. Der Eberkamm-Wald ist reich an wertvollem Holz, darunter die robuste Schwarzeibe, sowie an Wildtieren, deren Fleisch und Felle in der Siedlung verarbeitet und in die umliegenden Regionen transportiert werden. Derwenth hat sich durch seine Rolle als Ausgangspunkt für Holzfäller und Jäger, die in die tiefen Wälder des Eberkamms vordringen, einen Namen gemacht. Das gewonnene Holz wird zu Bauholz und Spezialwaren verarbeitet, während das Wildfleisch und die Felle in den nahen Dörfern und Märkten geschätzt sind. Sekundär hat sich Derwenth auf die Herstellung von natürlichen Heilmitteln und Kräutern spezialisiert, die aus den reichen Wäldern des Eberkamms gewonnen werden. Die Bewohner haben eine tiefe Kenntnis der örtlichen Flora und nutzen sie, um Salben, Tinkturen und Heilkräuter zu produzieren, die in der gesamten Baronie geschätzt werden. Heiler und Kräuterkundige aus Derwenth haben sich über die Jahre einen hervorragenden Ruf erarbeitet."
+    },
+    {
+      "id": "aehrental-trefydd",
+      "screenshots": [
+        52
+      ],
+      "text": "Trefydd war ursprünglich keine Siedlung, sondern diente seit Jahrhunderten als der traditionelle Turnierplatz der Grafschaft. Wann immer ein großes Turnier abgehalten wurde, versammelten sich hier Ritter, Adelige und Schaulustige aus der ganzen Region. Der weite, offene Platz, ideal gelegen zwischen den Hauptpfaden der Baronie, war der Schauplatz für ritterliche Wettkämpfe, Feste und Feierlichkeiten, die das gesellschaftliche Leben der Grafschaft prägten. Im Laufe der Jahre, durch die regelmäßigen jährlichen Turniere und das damit verbundene Zusammenkommen von Händlern, Handwerkern und Schaustellern, bildete sich um diesen Turnierplatz allmählich eine Siedlung. Zuerst waren es einfache Lager und Stände, doch mit der Zeit wuchsen diese zu festen Strukturen heran. Händler erkannten das wirtschaftliche Potenzial und ließen sich dauerhaft nieder, um die Besucher und Teilnehmer der Turniere zu versorgen. Handwerker gründeten Werkstätten, um Rüstungen, Waffen und Turnierausrüstung herzustellen und zu reparieren. So entwickelte sich Trefydd, ursprünglich nur ein saisonales Lagerplatz, zu einer blühenden Siedlung, die das ganze Jahr über aktiv blieb. Heute ist Trefydd nicht nur ein lebhafter Handels- und Treffpunkt, sondern trägt immer noch den Geist des Turnierplatzes in sich. Die jährlichen Turniere, die weiterhin abgehalten werden, sind das Herzstück der kulturellen Identität der Siedlung. Rund um das Turnierfeld findet sich ein lebendiger Marktplatz, auf dem Händler und Schausteller ihre Waren anbieten, während sich die Bewohner und Besucher an die Anfänge von Trefydd erinnern, als der Platz noch ausschließlich dem Rittertum gewidmet war. So verkörpert Trefydd eine einzigartige Mischung aus Geschichte, Tradition und wirtschaftlichem Fortschritt, die auf den Grundsteinen des Rittertums aufgebaut ist."
+    },
+    {
+      "id": "aehrental-bryncaer",
+      "screenshots": [
+        53
+      ],
+      "text": "Bryncaer, eine Siedlung an einem wichtigen Kreuzweg, liegt zwischen den westlich gelegenen Stadt Aldwynd, der Residenz des Barons, und den östlich und nördlich angrenzenden Gebieten der Baronie Eberkamm. Diese strategische Lage macht Bryncaer zu einem bedeutenden Verkehrsknotenpunkt und Umschlagplatz für Waren und Reisende, die zwischen Aldwynd und Eberkamm unterwegs sind. Der primäre wirtschaftliche Schwerpunkt der Siedlung liegt im Handel, insbesondere im Austausch von Gütern, die aus Aldwynd in die entlegeneren Gebiete der Baronie Eberkamm transportiert werden. Bryncaer ist ein geschäftiger Handelsplatz, auf dem landwirtschaftliche Erzeugnisse, Holz und handwerkliche Produkte aus den benachbarten Regionen gehandelt werden. Der sekundäre wirtschaftliche Schwerpunkt liegt in der Gasthaus- und Stallwirtschaft. Da Bryncaer als Zwischenstopp für Händler, Reisende und Karawanen dient, hat sich die Siedlung auf die Bereitstellung von Unterkunft und Verpflegung spezialisiert. Zahlreiche Gasthäuser und Tavernen bieten Rast für müde Reisende, während gut ausgestattete Ställe für die Versorgung und Pflege von Reit- und Transporttieren sorgen. Dies hat der Siedlung den Ruf eines idealen Rastpunkts für lange Reisen eingebracht."
+    },
+    {
+      "id": "aehrental-cwmcoed",
+      "screenshots": [
+        54
+      ],
+      "text": "Cwmcoed, eine malerische Waldsiedlung nördlich von Bryncaer, liegt tief in den Wäldern der Baronie und ist primär auf die Forstwirtschaft spezialisiert. Die Siedlung bezieht ihren Wohlstand aus der nachhaltigen Nutzung der umliegenden Wälder, wo hochwertige Hölzer wie die Schwarzeibe gewonnen werden, die in der gesamten Baronie für den Bau und die Herstellung von feinsten Holzwaren geschätzt werden. Besonders die lokale Holzverarbeitung hat sich zu einem wichtigen Wirtschaftszweig entwickelt, da die Holzarbeiter von Cwmcoed für ihre handwerkliche Geschicklichkeit bekannt sind. Der sekundäre wirtschaftliche Schwerpunkt von Cwmcoed liegt in der Jagd und Pelzgewinnung. Die dichten Wälder bieten reiche Beute, und die Jäger der Siedlung liefern nicht nur Fleisch, sondern auch Felle und Pelze, die in Bryncaer und anderen Handelszentren der Baronie einen hohen Wert besitzen. Diese Tätigkeit sichert den Bewohnern eine stabile zusätzliche Einkommensquelle und trägt zur Wirtschaftskraft der Siedlung bei."
+    },
+    {
+      "id": "aehrental-penwyll",
+      "screenshots": [
+        55,
+        65
+      ],
+      "text": "Penwyll, am bedeutenden Kreuzweg der Baronie gelegen, hat sich zu einem lebhaften Knotenpunkt für Handel und Reisende entwickelt. Die Siedlung profitiert von ihrer strategischen Lage und hat sich primär auf den Handel spezialisiert. Hier treffen sich Kaufleute und Reisende aus allen Teilen der Baronie, um Waren auszutauschen oder Rast zu machen, bevor sie weiterziehen. Das Marktwesen ist in Penwyll besonders stark ausgeprägt, und die örtlichen Märkte bieten alles von regionalen Produkten bis hin zu handgefertigten Waren an, die aus den umliegenden Siedlungen kommen. Der sekundäre wirtschaftliche Schwerpunkt liegt im Handwerk und in der Pferdezucht. Penwyll ist bekannt für seine geschickten Schmiede, die vor allem Hufeisen und Wagenräder herstellen, die für die vielen Reisenden unverzichtbar sind. Außerdem ist die Siedlung für die Zucht und Pflege von robusten Arbeitspferden bekannt, die auf den Handelsrouten und Bauernhöfen der Baronie verwendet werden. Kulturell hat Penwyll eine einzigartige Rolle als Treffpunkt verschiedener Traditionen. Durch die vielen Reisenden hat sich hier ein buntes und weltoffenes Dorfleben entwickelt, das durch diverse Feste und Märkte geprägt ist."
+    },
+    {
+      "id": "aehrental-glynhir",
+      "screenshots": [
+        56
+      ],
+      "text": "Glynhir, im Süden der Baronie gelegen, ist eine Waldsiedlung, die sich auf den Bau von Langbögen und Pfeilen spezialisiert hat. Das Holz der Schwarzeibe, das in den umliegenden Wäldern wächst, spielt eine zentrale Rolle in dieser Handwerkskunst. Bekannt für sein tiefes, ebenholzfarbenes Holz und seine außergewöhnliche Robustheit, wird die Schwarzeibe für die Herstellung von besonders langlebigen und präzisen Langbögen genutzt. Diese Bögen sind in der gesamten Baronie und darüber hinaus berühmt für ihre hohe Qualität und werden oft von Jägern und Soldaten gleichermaßen geschätzt. Der sekundäre wirtschaftliche Schwerpunkt von Glynhir liegt in der Pfeilproduktion. Die Pfeilmacher der Siedlung verwenden nicht nur Schwarzeibenholz für die Schäfte, sondern auch spezielle Materialien aus der Region, um besonders langlebige und durchschlagskräftige Pfeile zu fertigen. Diese Pfeile sind bekannt für ihre Reichweite und Genauigkeit und haben Glynhir den Ruf eines bedeutenden Zentrums für Waffenherstellung eingebracht. Kulturell ist Glynhir tief mit der Tradition des Bogenschießens verbunden. Jedes Jahr veranstaltet die Siedlung das \"Schwarzeiben-Fest\", bei dem Bogenschützen aus der gesamten Baronie zusammenkommen, um an Wettkämpfen teilzunehmen und ihre Fähigkeiten im Umgang mit den Langbögen aus Glynhir zu messen. Dieses Fest ist nicht nur ein sportliches Ereignis, sondern auch eine Feier der handwerklichen Tradition der Siedlung, bei der auch die besten Bogenbauer und Pfeilmacher geehrt werden. Der Stolz auf die Schwarzeibe und die damit verbundene Handwerkskunst durchzieht das alltägliche Leben der Bewohner und macht Glynhir zu einem angesehenen Ort in der Baronie."
+    },
+    {
+      "id": "aehrental-grimmforst-lager-jagdklingen",
+      "screenshots": [
+        57
+      ],
+      "text": "Das Grimmforst-Lager, eingebettet im Eberkamm, ist ein wichtiger Stützpunkt der Jagdklingen-Gilde, die im Auftrag der Baronie für die Jagd und den Schutz der Region verantwortlich ist. Die Gilde widmet sich hier der gezielten Jagd auf Wildschweine und Riesenkeiler, um das empfindliche Gleichgewicht der Natur zu bewahren. Ihre Bedeutung geht jedoch weit über die Jagd hinaus. Die zahlreichen Waldsiedlungen und Handelsrouten, die durch das Gebiet führen und bis ins Tal der Milane reichen, sind auf die ständige Präsenz der Jagdklingen angewiesen. Ohne ihren Schutz wären diese Wege trotz der Herrschaft der Baedd wesentlich unsicherer, da die Wildnis, mit ihren versteckten Gefahren, stets droht, die Zivilisation herauszufordern. Die Waldläufer der Gilde spielen eine zentrale Rolle. Sie sichern nicht nur die Wege, sondern übernehmen auch wichtige Aufgaben als Förster, die den Wald pflegen, und als erfahrene Reiseführer, die den Reisenden sicher durch das dichte und oftmals tückische Waldgebiet geleiten. Durch ihre Kenntnisse der lokalen Flora und Fauna sowie ihrer Fähigkeit, potenzielle Gefahren frühzeitig zu erkennen, sind sie unverzichtbare Hüter der Wälder. Auf diese Weise sorgen sie für ein Gleichgewicht zwischen Mensch und Natur, und stellen sicher, dass die Baronie sowohl wirtschaftlich als auch ökologisch im Einklang bleibt.",
+      "fields": {
+        "Betreiber": "Jagdklingen"
+      }
+    },
+    {
+      "id": "aehrental-coedmarw",
+      "screenshots": [
+        58
+      ],
+      "text": "Coedmarw, eine Waldsiedlung an der Hauptstraße zur Stadt Eirwyn, der Baronie Eberkamm, ist primär für ihre Holzproduktion bekannt. Die umliegenden Wälder bieten reichlich Rohstoff, und die Siedlung hat sich auf die Gewinnung und Verarbeitung von Bauholz spezialisiert, das in der Baronie und darüber hinaus geschätzt wird. Der sekundäre wirtschaftliche Schwerpunkt liegt auf der Jagd, da die dichten Wälder um Coedmarw reich an Wild sind. Jäger aus der Region liefern nicht nur Fleisch, sondern auch Felle und Häute, die in den umliegenden Märkten gehandelt werden. Kulturell zeichnet sich Coedmarw durch seine tief verwurzelten Naturrituale aus. Die Dorfbewohner halten jährlich ein Fest zu Ehren der Göttin der Hirtin ab, bei dem sie Tänze und Opfergaben darbringen, um die Harmonie mit dem Wald zu bewahren. Diese Tradition ist tief in ihrem Alltag verankert und spiegelt ihre enge Verbindung zur Natur wider."
+    },
+    {
+      "id": "aehrental-gragwen",
+      "screenshots": [
+        59
+      ],
+      "text": "Graigwen, direkt südlich der Baronenstadt Eirwyn gelegen, ist eine bedeutende Bergbausiedlung, die sich auf den Abbau von Eisen und anderen wertvollen Erzen spezialisiert hat. Der Bergbau bildet das wirtschaftliche Rückgrat der Siedlung, und die reichen Vorkommen in den umliegenden Hügeln haben Graigwen zu einem der wichtigsten Lieferanten von Rohstoffen für die Baronie gemacht. Diese Erze werden nicht nur in der Stadt Eirwyn verarbeitet, sondern auch in die entfernteren Regionen der Baronie exportiert, wo sie für den Bau von Waffen, Werkzeugen und anderen Metallwaren unverzichtbar sind. Neben dem Bergbau hat sich Graigwen auch auf die Schmiedekunst konzentriert. Die Siedlung beherbergt zahlreiche Schmieden, in denen die lokal abgebauten Erze zu hochwertigen Waren weiterverarbeitet werden. Vor allem Werkzeuge und einfache Waffen wie Schwerter, Hämmer und Schaufeln gehören zu den Produkten, die Graigwen in der ganzen Baronie einen Ruf für hervorragende Handwerkskunst eingebracht haben."
+    },
+    {
+      "id": "aehrental-llwynogfawr",
+      "screenshots": [
+        60
+      ],
+      "text": "Llwynogfawr, nordwestlich von Castell Gwyllet und tief in den dichten Wäldern des Herzlands der Baronie gelegen, ist primär für seine Imkerei und die Produktion von Honig bekannt. Die reichen, unberührten Wälder bieten ideale Bedingungen für die Bienenstöcke, und der Honig von Llwynogfawr gilt als besonders hochwertig und wird in der ganzen Baronie geschätzt. Neben der Imkerei konzentriert sich die Siedlung auf die Herstellung von Heilkräutern und Pflanzen, die im Wald gesammelt und als Tinkturen und Salben an die Heiler der Baronie verkauft werden. In kultureller Hinsicht pflegt Llwynogfawr eine Tradition der Kräuterkunde und Heilkunde, die von Generation zu Generation weitergegeben wird. Jedes Frühjahr findet ein Fest zu Ehren der Waldheiligen statt, bei dem die Heilkundigen der Region ihr Wissen austauschen und neue Heilmittel vorstellen. Diese enge Verbindung zur Naturheilkunde hat der Siedlung den Ruf eingebracht, ein Ort des Wissens und der Heilung zu sein."
+    },
+    {
+      "id": "aehrental-castell-gwyllet",
+      "screenshots": [
+        61
+      ],
+      "text": "Castell Gwyllet ist eine stolze Burg und strategische Festung des altehrwürdigen Hauses Baedd. Im Herzen des dichten Waldes gelegen, dient die Burg nicht nur als Schutz vor den rauen Elementen, sondern auch als Zufluchtsort für all jene, die die beschwerlichen und oft gefährlichen Wege des östlichen Waldes durchqueren. Der hier eingesetzte Lehnswart, ein treuer Vasall des Hauses Baedd, sorgt dafür, dass Reisende stets eine sichere Zuflucht finden, sei es vor den Gefahren des Waldes oder vor den drohenden Überfällen durch Wegelagerer. Castell Gwyllet ist mehr als nur eine Burg — sie ist ein Bollwerk gegen die Unordnung in den wilden Wäldern Eirwyns. Ihre hohen Mauern und ihre uneinnehmbare Lage schrecken Banditen und Gesetzlose ab, die die dichten Bäume als Versteck nutzen könnten. In Zeiten des Krieges wird die Burg zur wahren Bastion und kontrolliert den entscheidenden Zugang durch den Wald. Jede feindliche Armee, die es wagt, durch diese engen und gefährlichen Pfade zu marschieren, muss sich den unerbittlichen Verteidigern der Burg stellen. Die dichten Bäume des Waldes und die uneinnehmbaren Mauern von Castell Gwyllet machen sie zu einem unerschütterlichen Schutzwall, der sowohl Reisende als auch das Reich verteidigt."
+    },
+    {
+      "id": "aehrental-trecelyn",
+      "screenshots": [
+        62
+      ],
+      "text": "Trecelyn, die östlichste Siedlung der Baronie, liegt zwar in der Nähe eines dichten Waldes, breitet sich jedoch mehr im offenen Gelände aus. Primär konzentriert sich die Siedlung auf den Holzabbau, wobei große Mengen an Bau- und Brennholz aus den umliegenden Wäldern gewonnen werden. Trecelyn ist bekannt für seine gut organisierten Holzfällerlager, die den Handel mit hochwertigem Holz innerhalb der Baronie und darüber hinaus fördern. Die Siedlung spielt eine wichtige Rolle in der Holzlieferung, die sowohl für den Bau von Gebäuden als auch für den Schiffbau genutzt wird. Der sekundäre wirtschaftliche Schwerpunkt liegt auf der Verarbeitung von Holzprodukten. Vor allem werden in Trecelyn Möbel, Wagen und andere Holzwaren hergestellt, die in den Städten der Baronie und auf Märkten weit verbreitet sind. Die Handwerkskunst der Holzarbeiter ist bekannt für ihre Langlebigkeit und schlichte, aber funktionale Designs. Kulturell zeichnet sich Trecelyn durch sein jährliches \"Fest des Holzwerks\" aus, bei dem die besten Handwerker der Region ihre neuesten Kreationen präsentieren. Dieser Wettbewerb fördert den Gemeinschaftsgeist und das Streben nach Meisterschaft im Holzhandwerk. Darüber hinaus wird das Fest von traditionellen Holzschnitzereien und kunstvollen Vorführungen begleitet, die an die enge Verbindung der Siedlung zum Wald und seinem Reichtum erinnern."
+    },
+    {
+      "id": "aehrental-derwenfaes",
+      "screenshots": [
+        63
+      ],
+      "text": "Derwenfaes, als die nordöstlichste und abgelegenste Siedlung der Baronie, ist tief in den Wäldern verborgen und hat sich primär auf die Holzkohleproduktion spezialisiert. Die dichten Wälder bieten reichlich Holz für die Herstellung hochwertiger Holzkohle, die in den umliegenden Regionen begehrt ist, insbesondere für Schmieden und Brennereien. Der sekundäre wirtschaftliche Schwerpunkt liegt auf der Pelzjagd. Die Wälder um Derwenfaes sind reich an Wildtieren, deren Felle in der gesamten Baronie gehandelt werden, insbesondere für Kleidung und Dekorationen. Kulturell ist Derwenfaes stark von seiner Abgeschiedenheit geprägt. Die Dorfbewohner halten alte, fast mystische Bräuche aufrecht, die von den tiefen Verbindungen zu den Wäldern und den darin lebenden Geistern zeugen. Einmal im Jahr wird ein geheimnisvolles Fest veranstaltet, das „Flüstern der Bäume“ genannt wird, bei dem die Dorfbewohner Geschichten und Legenden über die verborgenen Geheimnisse der Wälder austauschen und rituelle Tänze aufführen, um die Schutzgeister der Wildnis zu ehren. Diese einzigartige kulturelle Komponente macht Derwenfaes zu einem Ort voller Legenden und mystischer Atmosphäre."
+    },
+    {
+      "id": "aehrental-mwynfaen",
+      "screenshots": [
+        64
+      ],
+      "text": "Mwynfaen, am Fuß des Gebirges im Osten der Baronie gelegen, ist eine Siedlung, die sich primär auf den Bergbau von Edelmetallen wie Silber und Kupfer spezialisiert hat. Die reichen Vorkommen in den umliegenden Bergen haben Mwynfaen zu einem bedeutenden Zentrum für den Abbau dieser wertvollen Rohstoffe gemacht, die in der gesamten Baronie und darüber hinaus begehrt sind. Die Minenarbeiter von Mwynfaen sind für ihre Geschicklichkeit und Ausdauer bekannt, und die Siedlung hat sich einen Ruf als zuverlässiger Lieferant hochwertiger Edelmetalle erarbeitet. Der sekundäre wirtschaftliche Schwerpunkt der Siedlung liegt in der Metallverarbeitung. Neben dem Rohstoffabbau wird in Mwynfaen feine Handwerkskunst betrieben, insbesondere in der Herstellung von Schmuck und dekorativen Metallarbeiten. Goldschmiede und Metallhandwerker der Siedlung sind berühmt für ihre filigranen Arbeiten, und ihre Kunstwerke werden in den Märkten der Baronie hoch geschätzt."
+    },
+    {
+      "id": "aehrental-morydd",
+      "screenshots": [],
+      "text": "Morydd ist eine Bauernsiedlung der Morcanhuc in Tristams Ebene. Rund um die Höfe liegen Getreidefelder und kleine Gemüsegärten; die Ernte dient der örtlichen Versorgung und wird über die nahen Wege nach Glyndraith gebracht. Neben dem Ackerbau halten die Familien Hühner und Schweine und lagern Heu und Getreide für den Winter.",
+      "source": "Neue Beschreibung auf ausdrücklichen Nutzerwunsch vom 19.10.2026, anhand des Bauernsiedlungs-Icons und der belegten Herrschaftszuordnung."
+    }
+  ]
+}

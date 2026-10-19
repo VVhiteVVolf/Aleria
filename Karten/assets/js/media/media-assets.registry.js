@@ -6745,6 +6745,22 @@ window.KARTO_MEDIA_ASSETS = Object.freeze([
     "source": "Orts- & Regionsbanner"
   },
   {
+    "id": "a6de62620803b5",
+    "name": "Herrschaft der Marchog",
+    "url": "/Stammbäume/assets/images/regions/Cenyr/%C3%84hrental/Herrschaft%20der%20Marchog.png",
+    "kind": "region",
+    "group": "Cenyr / Ährental",
+    "source": "Orts- & Regionsbanner"
+  },
+  {
+    "id": "20576a5c35ed22",
+    "name": "Herrschaft der Morcanhuc",
+    "url": "/Stammbäume/assets/images/regions/Cenyr/%C3%84hrental/Herrschaft%20der%20Morcanhuc.png",
+    "kind": "region",
+    "group": "Cenyr / Ährental",
+    "source": "Orts- & Regionsbanner"
+  },
+  {
     "id": "a631c4c6545914",
     "name": "Tristams Ebene",
     "url": "/Stammbäume/assets/images/regions/Cenyr/%C3%84hrental/Tristams%20Ebene.png",

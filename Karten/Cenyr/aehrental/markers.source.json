@@ -1,0 +1,945 @@
+{
+  "mapId": "cenyr-aehrental",
+  "imageSize": [
+    4096,
+    2690
+  ],
+  "coordinateOrigin": "bottom-left",
+  "markers": [
+    {
+      "id": "aehrental-rhosmeres-rosser-tyrnor",
+      "title": "Rhosmeres Rösser – Tyrnor",
+      "category": "Rosszuchtsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/pferdezuchtsiedlung.png",
+      "territoryId": "baronie-tristams-ebene",
+      "house": "Haus Grawn",
+      "x": 1243,
+      "y": 1447,
+      "source": {
+        "screenshot": 1,
+        "row": 1
+      }
+    },
+    {
+      "id": "aehrental-trefbrewyn",
+      "title": "Trefbrewyn",
+      "category": "Brauersiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/brauersiedlung.png",
+      "territoryId": "aehrental-teyrngarch-exklaven",
+      "house": "Haus Teyrngarch",
+      "x": 2343,
+      "y": 179,
+      "source": {
+        "screenshot": 1,
+        "row": 2
+      },
+      "exclave": true
+    },
+    {
+      "id": "aehrental-caer-diwedd",
+      "title": "Caer Diwedd",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "herrschaft-ciarog",
+      "house": "Haus Ciaróg",
+      "x": 1317,
+      "y": 2352,
+      "source": {
+        "screenshot": 1,
+        "row": 3
+      }
+    },
+    {
+      "id": "aehrental-clydwyn",
+      "title": "Clydwyn",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung.png",
+      "territoryId": "herrschaft-morcanhuc",
+      "house": "Haus Morcanhuc",
+      "x": 833,
+      "y": 1237,
+      "source": {
+        "screenshot": 1,
+        "row": 4
+      }
+    },
+    {
+      "id": "aehrental-klingende-munze-handelsposten-laurina",
+      "title": "Klingende Münze – Handelsposten Laurina",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/Cenyr/aehrental/Symbole/handelsposten.png",
+      "territoryId": "baronie-tristams-ebene",
+      "house": "Haus Grawn",
+      "x": 280,
+      "y": 904,
+      "source": {
+        "screenshot": 1,
+        "row": 5
+      }
+    },
+    {
+      "id": "aehrental-ri-torraird",
+      "title": "Ri Torrâird",
+      "category": "Siedlungsruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/antike-ruine.png",
+      "territoryId": "baronie-eberkamm",
+      "house": "Haus Baedd",
+      "x": 2217,
+      "y": 1810,
+      "source": {
+        "screenshot": 1,
+        "row": 6
+      }
+    },
+    {
+      "id": "aehrental-eirwyn",
+      "title": "Eirwyn",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "baronie-eberkamm",
+      "house": "Haus Baedd",
+      "x": 2528,
+      "y": 1936,
+      "source": {
+        "screenshot": 1,
+        "row": 7
+      }
+    },
+    {
+      "id": "aehrental-bragdyddolwyn",
+      "title": "Bragdyddolwyn",
+      "category": "Brauersiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/brauersiedlung.png",
+      "territoryId": "aehrental-teyrngarch-exklaven",
+      "house": "Haus Teyrngarch",
+      "x": 2451,
+      "y": 522,
+      "source": {
+        "screenshot": 1,
+        "row": 8
+      },
+      "exclave": true
+    },
+    {
+      "id": "aehrental-glyndraith",
+      "title": "Glyndraith",
+      "category": "Hauptstadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "baronie-tristams-ebene",
+      "house": "Haus Grawn",
+      "x": 321,
+      "y": 1923,
+      "source": {
+        "screenshot": 1,
+        "row": 9
+      }
+    },
+    {
+      "id": "aehrental-arllwyn",
+      "title": "Arllwyn",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "herrschaft-marchog",
+      "house": "Haus Marchog",
+      "x": 805,
+      "y": 2160,
+      "source": {
+        "screenshot": 1,
+        "row": 10
+      }
+    },
+    {
+      "id": "aehrental-glynhir",
+      "title": "Glynhir",
+      "category": "Waldsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/waldsiedlung.png",
+      "territoryId": "baronie-eberkamm",
+      "house": "Haus Baedd",
+      "x": 3232,
+      "y": 436,
+      "source": {
+        "screenshot": 1,
+        "row": 11
+      }
+    },
+    {
+      "id": "aehrental-tanor",
+      "title": "Tanor",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung.png",
+      "territoryId": "herrschaft-marchog",
+      "house": "Haus Marchog",
+      "x": 843,
+      "y": 789,
+      "source": {
+        "screenshot": 1,
+        "row": 12
+      }
+    },
+    {
+      "id": "aehrental-cynarwen",
+      "title": "Cynarwen",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung.png",
+      "territoryId": "herrschaft-marchog",
+      "house": "Haus Marchog",
+      "x": 1146,
+      "y": 909,
+      "source": {
+        "screenshot": 1,
+        "row": 13
+      }
+    },
+    {
+      "id": "aehrental-penwyd",
+      "title": "Penwyd",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung.png",
+      "territoryId": "herrschaft-morcanhuc",
+      "house": "Haus Morcanhuc",
+      "x": 599,
+      "y": 1393,
+      "source": {
+        "screenshot": 1,
+        "row": 14
+      }
+    },
+    {
+      "id": "aehrental-penwyll",
+      "title": "Penwyll",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "baronie-eberkamm",
+      "house": "Haus Baedd",
+      "x": 2750,
+      "y": 832,
+      "source": {
+        "screenshot": 1,
+        "row": 15
+      }
+    },
+    {
+      "id": "aehrental-tynar",
+      "title": "Tynar",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung.png",
+      "territoryId": "herrschaft-morcanhuc",
+      "house": "Haus Morcanhuc",
+      "x": 1050,
+      "y": 1582,
+      "source": {
+        "screenshot": 1,
+        "row": 16
+      }
+    },
+    {
+      "id": "aehrental-castell-yddron",
+      "title": "Castell Yddrôn",
+      "category": "Burgsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/burgsiedlung.png",
+      "territoryId": "herrschaft-morcanhuc",
+      "house": "Haus Morcanhuc",
+      "x": 866,
+      "y": 1038,
+      "source": {
+        "screenshot": 1,
+        "row": 17
+      }
+    },
+    {
+      "id": "aehrental-dunwyn",
+      "title": "Dunwyn",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "herrschaft-morcanhuc",
+      "house": "Haus Morcanhuc",
+      "x": 1572,
+      "y": 1526,
+      "source": {
+        "screenshot": 1,
+        "row": 18
+      }
+    },
+    {
+      "id": "aehrental-penbrithor",
+      "title": "Penbrithor",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "herrschaft-marchog",
+      "house": "Haus Marchog",
+      "x": 1176,
+      "y": 264,
+      "source": {
+        "screenshot": 2,
+        "row": 1
+      }
+    },
+    {
+      "id": "aehrental-faldor",
+      "title": "Faldor",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung.png",
+      "territoryId": "herrschaft-morcanhuc",
+      "house": "Haus Morcanhuc",
+      "x": 573,
+      "y": 1106,
+      "source": {
+        "screenshot": 2,
+        "row": 2
+      }
+    },
+    {
+      "id": "aehrental-derwenfaes",
+      "title": "Derwenfaes",
+      "category": "Waldsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/waldsiedlung.png",
+      "territoryId": "baronie-eberkamm",
+      "house": "Haus Baedd",
+      "x": 3537,
+      "y": 1367,
+      "source": {
+        "screenshot": 2,
+        "row": 3
+      }
+    },
+    {
+      "id": "aehrental-glynnar",
+      "title": "Glynnar",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "herrschaft-morcanhuc",
+      "house": "Haus Morcanhuc",
+      "x": 1734,
+      "y": 1253,
+      "source": {
+        "screenshot": 2,
+        "row": 4
+      }
+    },
+    {
+      "id": "aehrental-die-graue-hohe",
+      "title": "Die Graue Höhe",
+      "category": "Besondere Orte",
+      "templateId": "natur",
+      "icon": "/Karten/assets/icons/welt/gipfel.png",
+      "territoryId": "grafschaft-aehrental",
+      "house": "Haus Grawn",
+      "x": 2652,
+      "y": 2391,
+      "source": {
+        "screenshot": 2,
+        "row": 5
+      }
+    },
+    {
+      "id": "aehrental-cwmcoed",
+      "title": "Cwmcoed",
+      "category": "Waldsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/waldsiedlung.png",
+      "territoryId": "baronie-flusstal",
+      "house": "Haus Sgwarnog",
+      "x": 2340,
+      "y": 1048,
+      "source": {
+        "screenshot": 2,
+        "row": 6
+      }
+    },
+    {
+      "id": "aehrental-llanvor",
+      "title": "Llanvor",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "herrschaft-morcanhuc",
+      "house": "Haus Morcanhuc",
+      "x": 279,
+      "y": 1522,
+      "source": {
+        "screenshot": 2,
+        "row": 7
+      }
+    },
+    {
+      "id": "aehrental-castell-gwyllet",
+      "title": "Castell Gwyllet",
+      "category": "Burgsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/burgsiedlung.png",
+      "territoryId": "baronie-eberkamm",
+      "house": "Haus Baedd",
+      "x": 3155,
+      "y": 1004,
+      "source": {
+        "screenshot": 2,
+        "row": 8
+      }
+    },
+    {
+      "id": "aehrental-abaty-dinasbryn",
+      "title": "Abaty Dinasbryn",
+      "category": "Klostersiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/klostersiedlung.png",
+      "territoryId": "baronie-flusstal",
+      "house": "Haus Sgwarnog",
+      "x": 1365,
+      "y": 426,
+      "source": {
+        "screenshot": 2,
+        "row": 9
+      }
+    },
+    {
+      "id": "aehrental-derwenth",
+      "title": "Derwenth",
+      "category": "Waldsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/waldsiedlung.png",
+      "territoryId": "baronie-flusstal",
+      "house": "Haus Sgwarnog",
+      "x": 2684,
+      "y": 313,
+      "source": {
+        "screenshot": 2,
+        "row": 10
+      }
+    },
+    {
+      "id": "aehrental-morydd",
+      "title": "Morydd",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung.png",
+      "territoryId": "herrschaft-morcanhuc",
+      "house": "Haus Morcanhuc",
+      "x": 1383,
+      "y": 1262,
+      "source": {
+        "screenshot": 2,
+        "row": 11
+      }
+    },
+    {
+      "id": "aehrental-mwynfaen",
+      "title": "Mwynfaen",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "baronie-eberkamm",
+      "house": "Haus Baedd",
+      "x": 3383,
+      "y": 1603,
+      "source": {
+        "screenshot": 2,
+        "row": 12
+      }
+    },
+    {
+      "id": "aehrental-pontfaen",
+      "title": "Pontfaen",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung.png",
+      "territoryId": "baronie-flusstal",
+      "house": "Haus Sgwarnog",
+      "x": 1933,
+      "y": 171,
+      "source": {
+        "screenshot": 2,
+        "row": 13
+      }
+    },
+    {
+      "id": "aehrental-llwynogfawr",
+      "title": "Llwynogfawr",
+      "category": "Waldsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/waldsiedlung.png",
+      "territoryId": "baronie-eberkamm",
+      "house": "Haus Baedd",
+      "x": 3033,
+      "y": 1155,
+      "source": {
+        "screenshot": 2,
+        "row": 14
+      }
+    },
+    {
+      "id": "aehrental-twr-malwoden-magierturm",
+      "title": "Tŵr Malwoden – Magierturm",
+      "category": "Magierturm",
+      "templateId": "gebaeude",
+      "icon": "/Karten/assets/icons/welt/magierturm.png",
+      "territoryId": "baronie-tristams-ebene",
+      "house": "Haus Grawn",
+      "x": 679,
+      "y": 2247,
+      "source": {
+        "screenshot": 2,
+        "row": 15
+      }
+    },
+    {
+      "id": "aehrental-dun-clachrath",
+      "title": "Dun Clachráth",
+      "category": "Siedlungsruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/antike-ruine.png",
+      "territoryId": "baronie-flusstal",
+      "house": "Haus Sgwarnog",
+      "x": 1187,
+      "y": 53,
+      "source": {
+        "screenshot": 2,
+        "row": 16
+      }
+    },
+    {
+      "id": "aehrental-fforddglas",
+      "title": "Fforddglas",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung.png",
+      "territoryId": "baronie-flusstal",
+      "house": "Haus Sgwarnog",
+      "x": 2129,
+      "y": 504,
+      "source": {
+        "screenshot": 2,
+        "row": 17
+      }
+    },
+    {
+      "id": "aehrental-myrddrion",
+      "title": "Myrddrion",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "herrschaft-marchog",
+      "house": "Haus Marchog",
+      "x": 968,
+      "y": 542,
+      "source": {
+        "screenshot": 2,
+        "row": 18
+      }
+    },
+    {
+      "id": "aehrental-coedmarw",
+      "title": "Coedmarw",
+      "category": "Waldsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/waldsiedlung.png",
+      "territoryId": "baronie-eberkamm",
+      "house": "Haus Baedd",
+      "x": 2559,
+      "y": 1337,
+      "source": {
+        "screenshot": 2,
+        "row": 19
+      }
+    },
+    {
+      "id": "aehrental-llanwedd",
+      "title": "Llanwedd",
+      "category": "Klostersiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/klostersiedlung.png",
+      "territoryId": "herrschaft-ciarog",
+      "house": "Haus Ciaróg",
+      "x": 1358,
+      "y": 2045,
+      "source": {
+        "screenshot": 2,
+        "row": 20
+      }
+    },
+    {
+      "id": "aehrental-brannor",
+      "title": "Brannor",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "herrschaft-morcanhuc",
+      "house": "Haus Morcanhuc",
+      "x": 891,
+      "y": 1490,
+      "source": {
+        "screenshot": 2,
+        "row": 21
+      }
+    },
+    {
+      "id": "aehrental-bryn",
+      "title": "Bryn",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "herrschaft-marchog",
+      "house": "Haus Marchog",
+      "x": 395,
+      "y": 1403,
+      "source": {
+        "screenshot": 2,
+        "row": 22
+      }
+    },
+    {
+      "id": "aehrental-hafodwen",
+      "title": "Hafodwen",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung.png",
+      "territoryId": "baronie-flusstal",
+      "house": "Haus Sgwarnog",
+      "x": 1650,
+      "y": 377,
+      "source": {
+        "screenshot": 2,
+        "row": 23
+      }
+    },
+    {
+      "id": "aehrental-trecelyn",
+      "title": "Trecelyn",
+      "category": "Waldsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/waldsiedlung.png",
+      "territoryId": "baronie-eberkamm",
+      "house": "Haus Baedd",
+      "x": 3705,
+      "y": 1072,
+      "source": {
+        "screenshot": 2,
+        "row": 24
+      }
+    },
+    {
+      "id": "aehrental-trefydd",
+      "title": "Trefydd",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "baronie-flusstal",
+      "house": "Haus Sgwarnog",
+      "x": 2015,
+      "y": 699,
+      "source": {
+        "screenshot": 3,
+        "row": 1
+      }
+    },
+    {
+      "id": "aehrental-bryngalch",
+      "title": "Bryngalch",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "herrschaft-ciarog",
+      "house": "Haus Ciaróg",
+      "x": 1170,
+      "y": 2153,
+      "source": {
+        "screenshot": 3,
+        "row": 2
+      }
+    },
+    {
+      "id": "aehrental-gorandor",
+      "title": "Gorandor",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "herrschaft-marchog",
+      "house": "Haus Marchog",
+      "x": 605,
+      "y": 854,
+      "source": {
+        "screenshot": 3,
+        "row": 3
+      }
+    },
+    {
+      "id": "aehrental-banditenlager-wildhauer",
+      "title": "Banditenlager – Wildhauer",
+      "category": "Banditenlager",
+      "templateId": "militaer",
+      "icon": "/Karten/assets/icons/welt/banditenlager.png",
+      "territoryId": "grafschaft-aehrental",
+      "house": "Haus Grawn",
+      "x": 2085,
+      "y": 1597,
+      "source": {
+        "screenshot": 3,
+        "row": 4
+      }
+    },
+    {
+      "id": "aehrental-castell-gwarchod",
+      "title": "Castell Gwarchod – Burg Morcanhuc",
+      "category": "Burg",
+      "templateId": "militaer",
+      "icon": "/Karten/assets/icons/welt/gro-e-burg.png",
+      "territoryId": "herrschaft-morcanhuc",
+      "house": "Haus Morcanhuc",
+      "aliases": [
+        "Castell – Gwarchod",
+        "Burg Morcanhuc"
+      ],
+      "x": 721,
+      "y": 1852,
+      "source": {
+        "screenshot": 3,
+        "row": 5
+      }
+    },
+    {
+      "id": "aehrental-caerfynn",
+      "title": "Caerfynn",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "herrschaft-ciarog",
+      "house": "Haus Ciaróg",
+      "x": 1629,
+      "y": 1881,
+      "source": {
+        "screenshot": 3,
+        "row": 6
+      }
+    },
+    {
+      "id": "aehrental-glynborn",
+      "title": "Glynborn",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung.png",
+      "territoryId": "herrschaft-marchog",
+      "house": "Haus Marchog",
+      "x": 1216,
+      "y": 632,
+      "source": {
+        "screenshot": 3,
+        "row": 7
+      }
+    },
+    {
+      "id": "aehrental-kornfeld-windreiter-burg",
+      "title": "Kornfeld – Windreiter Burg",
+      "category": "Burg",
+      "templateId": "militaer",
+      "icon": "/Karten/Cenyr/aehrental/Symbole/windreiter-burg.png",
+      "territoryId": "baronie-tristams-ebene",
+      "house": "Haus Grawn",
+      "x": 1117,
+      "y": 1229,
+      "source": {
+        "screenshot": 3,
+        "row": 8
+      }
+    },
+    {
+      "id": "aehrental-llynfaen",
+      "title": "Llynfaen",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "baronie-flusstal",
+      "house": "Haus Sgwarnog",
+      "x": 1617,
+      "y": 114,
+      "source": {
+        "screenshot": 3,
+        "row": 9
+      }
+    },
+    {
+      "id": "aehrental-glynwedd",
+      "title": "Glynwedd",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung.png",
+      "territoryId": "baronie-flusstal",
+      "house": "Haus Sgwarnog",
+      "x": 1797,
+      "y": 617,
+      "source": {
+        "screenshot": 3,
+        "row": 10
+      }
+    },
+    {
+      "id": "aehrental-llynfawr",
+      "title": "Llynfawr",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "herrschaft-marchog",
+      "house": "Haus Marchog",
+      "x": 599,
+      "y": 628,
+      "source": {
+        "screenshot": 3,
+        "row": 11
+      }
+    },
+    {
+      "id": "aehrental-grimmforst-lager-jagdklingen",
+      "title": "Grimmforst-Lager – Jagdklingen",
+      "category": "Jägerlager",
+      "templateId": "orden",
+      "icon": "/Karten/Cenyr/aehrental/Symbole/jagdklingen-lager.png",
+      "territoryId": "baronie-eberkamm",
+      "house": "Haus Baedd",
+      "x": 3470,
+      "y": 673,
+      "source": {
+        "screenshot": 3,
+        "row": 12
+      }
+    },
+    {
+      "id": "aehrental-aldwynd",
+      "title": "Aldwynd",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "baronie-flusstal",
+      "house": "Haus Sgwarnog",
+      "x": 1462,
+      "y": 954,
+      "source": {
+        "screenshot": 3,
+        "row": 13
+      }
+    },
+    {
+      "id": "aehrental-gragwen",
+      "title": "Graigwen",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "baronie-eberkamm",
+      "house": "Haus Baedd",
+      "aliases": [
+        "Gragwen"
+      ],
+      "x": 2786,
+      "y": 1567,
+      "source": {
+        "screenshot": 3,
+        "row": 14
+      }
+    },
+    {
+      "id": "aehrental-dyfrwyn",
+      "title": "Dyfrwyn",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "herrschaft-marchog",
+      "house": "Haus Marchog",
+      "x": 825,
+      "y": 357,
+      "source": {
+        "screenshot": 3,
+        "row": 15
+      }
+    },
+    {
+      "id": "aehrental-caerfyl",
+      "title": "Caerfyl",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "herrschaft-morcanhuc",
+      "house": "Haus Morcanhuc",
+      "x": 1262,
+      "y": 1777,
+      "source": {
+        "screenshot": 3,
+        "row": 16
+      }
+    },
+    {
+      "id": "aehrental-valygarn",
+      "title": "Valygarn",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "herrschaft-marchog",
+      "house": "Haus Marchog",
+      "x": 279,
+      "y": 1221,
+      "source": {
+        "screenshot": 3,
+        "row": 17
+      }
+    },
+    {
+      "id": "aehrental-llyswen",
+      "title": "Llyswen",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung.png",
+      "territoryId": "baronie-flusstal",
+      "house": "Haus Sgwarnog",
+      "x": 2065,
+      "y": 334,
+      "source": {
+        "screenshot": 3,
+        "row": 18
+      }
+    },
+    {
+      "id": "aehrental-bryncaer",
+      "title": "Bryncaer",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "baronie-flusstal",
+      "house": "Haus Sgwarnog",
+      "x": 2288,
+      "y": 811,
+      "source": {
+        "screenshot": 3,
+        "row": 19
+      }
+    }
+  ],
+  "unpositionedPlaces": [
+    {
+      "id": "aehrental-castell-chiffyddlon-burg-marchog",
+      "title": "Castell Chiffyddlon – Burg Marchog",
+      "category": "Burg",
+      "templateId": "militaer",
+      "icon": "/Karten/assets/icons/welt/gro-e-burg.png",
+      "territoryId": "herrschaft-marchog",
+      "house": "Haus Marchog"
+    }
+  ]
+}

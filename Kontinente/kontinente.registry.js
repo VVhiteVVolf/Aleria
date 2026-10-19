@@ -1,5 +1,230 @@
 window.KONTINENTE_REGISTRY = [
   {
+    "id": "grafschaft-aehrental",
+    "slug": "aehrental",
+    "aliases": [
+      "dyffryn-ysgall",
+      "glyndraith",
+      "ahrental"
+    ],
+    "name": "Grafschaft Ährental – Dyffryn Ysgall",
+    "type": "Grafschaft",
+    "page": "Estryll/Königreich Cenyr/Grafschaft Ährental/Grafschaft Ährental.html",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Ährental/grafschaft.data.mjs?v=aehrental-20261019",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Königreich",
+        "name": "Cenyr",
+        "slug": "cenyr"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Ährental",
+        "slug": "aehrental"
+      }
+    ]
+  },
+  {
+    "id": "herrschaft-marchog",
+    "slug": "marchog",
+    "aliases": [],
+    "name": "Herrschaft der Marchog",
+    "type": "Herrschaft",
+    "page": "Estryll/Königreich Cenyr/Grafschaft Ährental/Herrschaft der Marchog/Herrschaft der Marchog.html",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Ährental/Herrschaft der Marchog/herrschaft.data.mjs?v=aehrental-20261019",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Königreich",
+        "name": "Cenyr",
+        "slug": "cenyr"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Ährental",
+        "slug": "aehrental"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Herrschaft der Marchog",
+        "slug": "herrschaft-der-marchog"
+      }
+    ]
+  },
+  {
+    "id": "herrschaft-morcanhuc",
+    "slug": "morcanhuc",
+    "aliases": [],
+    "name": "Herrschaft der Morcanhuc",
+    "type": "Herrschaft",
+    "page": "Estryll/Königreich Cenyr/Grafschaft Ährental/Herrschaft der Morcanhuc/Herrschaft der Morcanhuc.html",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Ährental/Herrschaft der Morcanhuc/herrschaft.data.mjs?v=aehrental-20261019",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Königreich",
+        "name": "Cenyr",
+        "slug": "cenyr"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Ährental",
+        "slug": "aehrental"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Herrschaft der Morcanhuc",
+        "slug": "herrschaft-der-morcanhuc"
+      }
+    ]
+  },
+  {
+    "id": "herrschaft-ciarog",
+    "slug": "ciarog",
+    "aliases": [
+      "graue-bucht",
+      "herrschaft-graue-bucht"
+    ],
+    "name": "Herrschaft der Ciaróg – Die Graue Bucht",
+    "type": "Herrschaft",
+    "page": "Estryll/Königreich Cenyr/Grafschaft Ährental/Herrschaft Graue Bucht/Herrschaft Graue Bucht.html",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Ährental/Herrschaft Graue Bucht/herrschaft.data.mjs?v=aehrental-20261019",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Königreich",
+        "name": "Cenyr",
+        "slug": "cenyr"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Ährental",
+        "slug": "aehrental"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Herrschaft der Ciaróg – Die Graue Bucht",
+        "slug": "herrschaft-der-ciarog-die-graue-bucht"
+      }
+    ]
+  },
+  {
+    "id": "baronie-eberkamm",
+    "slug": "eberkamm",
+    "aliases": [],
+    "name": "Baronie Eberkamm – Coed Y Warthog",
+    "type": "Baronie",
+    "page": "Estryll/Königreich Cenyr/Grafschaft Ährental/Baronie Eberkamm/Baronie Eberkamm.html",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Ährental/Baronie Eberkamm/baronie.data.mjs?v=aehrental-20261019",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Königreich",
+        "name": "Cenyr",
+        "slug": "cenyr"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Ährental",
+        "slug": "aehrental"
+      },
+      {
+        "type": "Baronie",
+        "name": "Baronie Eberkamm",
+        "slug": "baronie-eberkamm"
+      }
+    ]
+  },
+  {
+    "id": "baronie-flusstal",
+    "slug": "flusstal",
+    "aliases": [],
+    "name": "Baronie Flusstal – Lyndwynn",
+    "type": "Baronie",
+    "page": "Estryll/Königreich Cenyr/Grafschaft Ährental/Baronie Flusstal/Baronie Flusstal.html",
+    "data": "Estryll/Königreich Cenyr/Grafschaft Ährental/Baronie Flusstal/baronie.data.mjs?v=aehrental-20261019",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Königreich",
+        "name": "Cenyr",
+        "slug": "cenyr"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Ährental",
+        "slug": "aehrental"
+      },
+      {
+        "type": "Baronie",
+        "name": "Baronie Flusstal",
+        "slug": "baronie-flusstal"
+      }
+    ]
+  },
+
+  {
     "id": "grafschaft-sonnenkueste",
     "slug": "sonnenkueste",
     "aliases": [

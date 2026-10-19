@@ -1,38 +1,8 @@
-import fs from 'node:fs';
-import vm from 'node:vm';
-import assert from 'node:assert/strict';
-import { createReviewedPins } from '../modules/territory-places/reviewed-pin-import.mjs';
+import { importReviewedTerritory } from './reviewed-territory-import.mjs';
 import { describePlace, territoriesById } from '../Cenyr/sonnenkueste/places.mjs';
 
-const root = new URL('../', import.meta.url);
-const folder = new URL('Cenyr/sonnenkueste/', root);
-const read = file => JSON.parse(fs.readFileSync(new URL(file, folder), 'utf8'));
-const source = read('markers.source.json');
-const document = read('data.json');
-const context = vm.createContext({});
-for (const file of ['category-catalog.js', 'pin-template-catalog.js', 'pin-table-presets.js']) {
-  vm.runInContext(fs.readFileSync(new URL(`assets/js/pins/${file}`, root), 'utf8'), context);
-}
-const catalog = context.KartoCategoryCatalog;
-const pins = structuredClone(createReviewedPins(source, {
-  catalog, presets: context.KartoPinTablePresets, describePlace, region: 'Sonnenküste',
-}));
-for (const pin of pins) for (const asset of [pin.pinMarker, pin.crest, pin.banner]) {
-  assert.ok(fs.existsSync(new URL('..' + asset, root)), `Fehlendes Bild: ${asset}`);
-}
-const dominions = [...territoriesById.values()].map(territory => ({
-  id: territory.id, name: territory.name, type: territory.type, ruler: territory.house,
-  seat: territory.seat, parentId: territory.parentId, note: '',
-}));
-if (process.argv.includes('--write')) {
-  if (document.revision !== 0 || document.state.pins.length) throw new Error('Karte bereits bearbeitet; vorhandene Änderungen bleiben erhalten.');
-  document.state = { ...document.state, ...catalog.upgrade(document.state), pins, dominions,
-    regionTitle: 'Sonnenküste', regionIcon: territoriesById.get('grafschaft-sonnenkueste').banner };
-  document.revision = 1;
-  document.updatedAt = new Date().toISOString();
-  fs.writeFileSync(new URL('data.json', folder), JSON.stringify(document, null, 2) + '\n');
-} else {
-  assert.deepEqual(document.state.pins, pins);
-  assert.deepEqual(document.state.dominions, dominions);
-}
-console.log(`${pins.length} Marker, ${pins.filter(pin => pin.text).length} Beschreibungen und ${dominions.length} Gebietszuordnungen geprüft.`);
+importReviewedTerritory({
+  folder: new URL('../Cenyr/sonnenkueste/', import.meta.url),
+  region: 'Sonnenküste', countyId: 'grafschaft-sonnenkueste',
+  describePlace, territoriesById, write: process.argv.includes('--write'),
+});

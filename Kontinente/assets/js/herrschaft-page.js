@@ -108,7 +108,7 @@
     const cell = document.createElement("td");
     cell.colSpan = 5;
 
-    cell.append(renderCopySection("kultur", "3.) Kultur", article.copy?.culture));
+    cell.append(renderCopySection("kultur", "3.) Kultur", article.copy?.culture, "", article.cultureSections));
 
     const politics = createElement("section", "");
     politics.setAttribute("aria-labelledby", "politik");
@@ -159,11 +159,7 @@
     const geography = renderCopySection("geographie", "7.) Geographie", article.copy?.geography);
     geography.append(createModuleRoot("kingdom-county-card-view", "data-herrschaft-geography", "Die Ortsübersicht wird geladen."));
     cell.append(geography);
-    const flora = renderCopySection("flora-fauna", "8.) Flora & Fauna", article.copy?.flora, article.floraSections ? "" : "...");
-    for (const section of article.floraSections || []) {
-      flora.append(createElement("h3", "herrschaft-subheading", section.title));
-      appendParagraphs(flora, section.paragraphs);
-    }
+    const flora = renderCopySection("flora-fauna", "8.) Flora & Fauna", article.copy?.flora, article.floraSections ? "" : "...", article.floraSections);
     cell.append(flora);
     cell.append(renderCopySection("trivia", "9.) Trivia", article.copy?.trivia, "..."));
 
@@ -288,11 +284,15 @@
     if (fragment.childNodes.length) root.replaceChildren(fragment);
   }
 
-  function renderCopySection(id, title, paragraphs, emptyText = "") {
+  function renderCopySection(id, title, paragraphs, emptyText = "", subsections = []) {
     const section = createElement("section", "herrschaft-copy");
     section.setAttribute("aria-labelledby", id);
     section.append(renderSectionHeading(id, title));
     appendParagraphs(section, paragraphs, emptyText);
+    for (const subsection of subsections || []) {
+      section.append(createElement("h3", "herrschaft-subheading", subsection.title));
+      appendParagraphs(section, subsection.paragraphs);
+    }
     return section;
   }
 
