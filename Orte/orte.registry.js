@@ -49,7 +49,7 @@ window.ORTE_REGISTRY = [
     name: "Llysfaen",
     status: "draft",
     type: "bauernsiedlung",
-    data: "Koenigreich_Cenyr/Grafschaft_Celtigerns_Wacht/Baronie_Llamreis_Ankunft/Herrschaft_Haus_Wyrm/Lysfaens_Bannkreis/Lysfaen/ort.data.js?v=20260920a",
+    data: "Koenigreich_Cenyr/Grafschaft_Celtigerns_Wacht/Baronie_Llamreis_Ankunft/Herrschaft_Haus_Wyrm/Lysfaens_Bannkreis/Lysfaen/ort.data.js?v=merchant-directory-20261019",
     hierarchy: [
       { type: "Königreich", name: "Cenyr", slug: "cenyr" },
       { type: "Grafschaft", name: "Celtigerns Wacht", slug: "celtigerns-wacht" },

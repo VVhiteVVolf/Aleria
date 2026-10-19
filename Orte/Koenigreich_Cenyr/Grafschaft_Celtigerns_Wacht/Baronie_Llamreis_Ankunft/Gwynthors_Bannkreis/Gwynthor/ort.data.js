@@ -327,32 +327,32 @@
     ]),
 
     merchants: Object.freeze([
-      Object.freeze({ name: "Der Handelshof des Marktes der Fortuna", image: "/Fraktionen/assets/emblems/gilden/markt-der-fortuna.webp", symbolAlt: "Markt der Fortuna · Handelshof und alter Hafen",
+      Object.freeze({ name: "Der Handelshof des Marktes der Fortuna", category: "handel", image: "/Fraktionen/assets/emblems/gilden/markt-der-fortuna.webp", symbolAlt: "Markt der Fortuna · Handelshof und alter Hafen",
         trade: "Handel · Handwerk · Blaue Bank · Blaue Kompanie", owner: "Neunerrat der sieben Interessenbünde", wealth: "Sehr vermögend", reputation: "Seit Jahrhunderten verwurzelt", influence: "Gwynthor · Seeverbindungen nach Venalys, Tirnara und Weisenfluh",
         description: "Falto und Nerva, beide Magnarierhäuser unter Vinicius, ringen um die örtliche Vormacht. Tonnarth, Braglas, Aelmor, Coeddu und Maerllys halten eigene Ratssitze; Aelmor dient Saethwyr und baut Handelsschiffe. Vann, Raves und der Volle Korb haben eigene Verbindungen zu Fortuna. Mariels Gabe unterhält hier die kleine Tafel der Mutter und nutzt den Fortuna-Hafen für ihre Weisenfluher Warenankünfte." }),
-      Object.freeze({ name: "Der Handelsposten der Klingenden Münze", image: "/Fraktionen/assets/emblems/gilden/klingende-muenze.webp", symbolAlt: "Klingende Münze · Kaufmannsgilde, Rote Bank und Rote Kompanie",
+      Object.freeze({ name: "Der Handelsposten der Klingenden Münze", category: "handel", image: "/Fraktionen/assets/emblems/gilden/klingende-muenze.webp", symbolAlt: "Klingende Münze · Kaufmannsgilde, Rote Bank und Rote Kompanie",
         trade: "Grafschaftskontor · Handel · Bank · Geleit", owner: "Achterrat der fünf Interessenbünde", wealth: "Sehr vermögend", reputation: "Mächtig und von Rivalitäten geprägt", influence: "Ganz Celtigerns Wacht · weltweiter Gildenverbund",
         description: "Größter der vier großen Handelsposten neben Abergwint, Castellbryn und Rhosmere. Falveri und Ergalla vertreten ihre venalysischen Hauptlinien; Gwlannor dienen Saethwyr, Halenrhyd den Wyrm, Aurdden den Loer und damit ebenfalls Wyrm. Ein Ergalla leitet die Bank, ein Falveri die Kontor-Kommandantur. Die Gwregysdu-Lagerhäuser sind einer der eigenständigen Mitgliedsbetriebe im Hafenkomplex." }),
-      Object.freeze({ name: "Zur Klingenden Krone", image: "/Fraktionen/assets/emblems/gilden/klingende-muenze.webp", symbolAlt: "Klingende Münze · Schirmherrin der Klingenden Krone",
+      Object.freeze({ name: "Zur Klingenden Krone", category: "gastwirtschaft", image: "/Fraktionen/assets/emblems/gilden/klingende-muenze.webp", symbolAlt: "Klingende Münze · Schirmherrin der Klingenden Krone",
         trade: "Taverne · Brauerei und Destillerie · Flaschen- und Fassvertrieb", owner: "Gildenbetrieb · Leitung Finlay Cneacail", wealth: "Solide gildenfinanziert", reputation: "Gepflegt und geschäftstüchtig", influence: "Marktviertel und Vertriebswege der Klingenden Münze",
         description: "Finlays gepflegter Neustart im Marktviertel: Schankraum mit drei kalten Snacks, dahinter Sudhaus, Brennhaus, Fasslager und Ladehof. Die Cneacail-Rezepte werden unter den erworbenen Rechten der Münze in Gwynthor hergestellt. Der fünfjährige Whisky trägt den ehrlichen neuen Betriebsnamen Klingende Krone." }),
-      Object.freeze({ name: "Zum Letzten Heller", image: "/Stammbäume/assets/images/houses/Ceitheach/sept-cneacail.png", symbolAlt: "Sept Cneacail · Fass und kahler Baum auf verwittertem Holz",
+      Object.freeze({ name: "Zum Letzten Heller", category: "freudenhaus", image: "/Stammbäume/assets/images/houses/Ceitheach/sept-cneacail.png", symbolAlt: "Sept Cneacail · Fass und kahler Baum auf verwittertem Holz",
         trade: "Billiges Bordell · einfacher Ausschank und Speisen", owner: "Alasdair Cneacail", wealth: "Knappe Mittel und alte Schulden", reputation: "Schäbig und billig", influence: "Hafenviertel und Flüchtlingsgemeinschaften",
         description: "Einst Arrans Hafentaverne, heute ein kleiner heruntergekommener Betrieb mit drei Kammern. Die Septbiere sind lange aufgebraucht; vier alte Flaschen Bun na h-Aibhne werden nur gegen horrende Summen glasweise ausgeschenkt. Finlay Cneacail arbeitet im Vertrieb der Klingenden Münze und gehört nicht zum Hauspersonal." }),
-      Object.freeze({ name: "Die Gestiefelte Muschi", image: "/AleriaAlmanach/assets/gestiefelte-muschi/schild-v2.png", symbolAlt: "Geschnitzte Katze in Stiefeln an einer Tanzstange",
+      Object.freeze({ name: "Die Gestiefelte Muschi", category: "freudenhaus", image: "/AleriaAlmanach/assets/gestiefelte-muschi/schild-v2.png", symbolAlt: "Geschnitzte Katze in Stiefeln an einer Tanzstange",
         trade: "Unterhaltungshaus · Ausschank · Gesellschaft · Zimmer", owner: "Helviane Desele, geborene Bielle", wealth: "Gerettetes Vermögen und laufender Betrieb", reputation: "Verrucht und gesellig", influence: "Söldner, Reisende und die Gassen nahe dem Hafen",
         description: "Von einer alten Brevanorer Geschäftsfrau geführtes Haus für Tanz, Musik, Spiel und private Gesellschaft. Sechs Kammern, keine Küche; gute Importe, Tirnaras Tabak und wenige sehr teure gerettete Flaschen aus den Kellern Bielle und Desele." }),
-      Object.freeze({ name: "Die Lagerhäuser der Gwregysdu", image: "/Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Gwregysdu.png", symbolAlt: "Haus Gwregysdu · Schwarzer Gürtel und drei silberne Lagerschlüssel",
+      Object.freeze({ name: "Die Lagerhäuser der Gwregysdu", category: "handel", image: "/Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Gwregysdu.png", symbolAlt: "Haus Gwregysdu · Schwarzer Gürtel und drei silberne Lagerschlüssel",
         trade: "Lagerung · Umschlag · Vertrieb · Frachtvermittlung", owner: "Bleddyn Gwregysdu mit Cynan und Tudur", wealth: "Wohlhabend", reputation: "Etabliert, derzeit unter Verdacht", influence: "Hafen · Umland · Klingende Münze",
         description: "Vier Lagerhäuser innerhalb des großen Handelspostens der Klingenden Münze, einer von mehreren dortigen Betrieben. Gewachsen durch Lagerverwaltung und Ressourcenverbindungen über Ehen; Handel mit Tirnara und den Falveri aus Venalys. Gruffudds aufgedecktes Komplott belastet den Ruf des Hauses." }),
-      Object.freeze({ name: "Zum Vollen Korb", image: "/Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Pendrwn.png", symbolAlt: "Haus Pendrwn · Der Schlüssel",
+      Object.freeze({ name: "Zum Vollen Korb", category: "handwerk", image: "/Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Pendrwn.png", symbolAlt: "Haus Pendrwn · Der Schlüssel",
         trade: "Gemischtwaren · Werkzeuge und Sonstiges", owner: "Cadwgan und Idwal Pendrwn", wealth: "Solide", reputation: "Verlässlich und bodenständig", influence: "Gwynthorer Haushalte und Reisende",
         description: "Cadwgans eigener Pendrwn-Zweig führt mit Idwal den kleinen Gemischtwarenladen. Regelmäßige Lieferungen des Marktes der Fortuna füllen die Regale; zehn eigene Alltagswaren ergänzen das Standardsortiment." }),
-      Object.freeze({ name: "Zum Kleinen Durst", image: "/AleriaAlmanach/assets/kleiner-durst/schild.png", symbolAlt: "Zum Kleinen Durst · Der winzige Becher",
+      Object.freeze({ name: "Zum Kleinen Durst", category: "gastwirtschaft", image: "/AleriaAlmanach/assets/kleiner-durst/schild.png", symbolAlt: "Zum Kleinen Durst · Der winzige Becher",
         trade: "Einfache Hafenkneipe", owner: "Efa und Iorwerth Rhwyd", wealth: "Überschuldet", reputation: "Bei Fischern und Matrosen beliebt", influence: "Die unmittelbaren Docks",
         description: "Winzige Kneipe direkt am Kai mit billigem Ausschank und einer bescheidenen Fischkarte. Die Rhwyd kommen gerade über die Runden; Zimmer werden nicht vermietet." }),
       Object.freeze({
-        name: "Badehaus der Fontani",
+        name: "Badehaus der Fontani", category: "badehaus",
         image: "/Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Fontani.png",
         symbolAlt: "Haus Fontani · Silberner Wasserkrug und goldener Lorbeerzweig",
         trade: "Badehaus & Baderhandwerk",
@@ -363,7 +363,7 @@
         description: "Seit mehreren Generationen bewahrt die aus Argentum stammende Familie ihre Badekunst in Gwynthor. Cassiano, Livia und Terenzio führen die kleine Badehalle und zwei private Wannenstuben."
       }),
       Object.freeze({
-        name: "Göttliche Eleganz",
+        name: "Göttliche Eleganz", category: "handwerk",
         image: "/AleriaAlmanach/assets/goettliche-eleganz/schild.png",
         symbolAlt: "Göttliche Eleganz · Das bemalte Ladenschild",
         trade: "Schneiderei & Kleidungshandel",
@@ -374,7 +374,7 @@
         description: "Die wohl beste Schneiderei der Innenstadt verbindet argentische Mode mit cenyrischem Handwerk. Südliche Stoffe kommen über die Veltrane-Route; das Haus kooperiert mit dem Markt der Fortuna."
       }),
       Object.freeze({
-        name: "Celtigerns Letzte Rast",
+        name: "Celtigerns Letzte Rast", category: "gastwirtschaft",
         image: "/AleriaAlmanach/assets/letzte-rast/references/schild.png",
         symbolAlt: "Celtigerns Letzte Rast",
         trade: "Taverne & Gasthaus",
@@ -385,7 +385,7 @@
         description: "Älteste Taverne Gwynthors und gehobene Herberge im Besitz der Vanns seit 1334. Feine cenyrische Küche, ausgezeichnete Weisenfluher Weine und private Gesellschaften unter Brenn und Madoc Vann."
       }),
       Object.freeze({
-        name: "Die Lachende Nixe",
+        name: "Die Lachende Nixe", category: "freudenhaus",
         image: `${establishmentAssetRoot}/lachende-nixe.png`,
         symbolAlt: "Die Lachende Nixe",
         trade: "Freudenhaus & Salons",
@@ -396,7 +396,7 @@
         description: "Luxuriöses Haus an den südlichen Docks mit privaten Salons, mehr als zehn Zimmern und einem Ruf für Diskretion."
       }),
       Object.freeze({
-        name: "Die Krumme Kanne",
+        name: "Die Krumme Kanne", category: "gastwirtschaft",
         image: `${establishmentAssetRoot}/krumme-kanne.png`,
         symbolAlt: "Die Krumme Kanne",
         trade: "Veteranenschänke",
@@ -405,9 +405,9 @@
         reputation: "Angesehen",
         influence: "Osttor & Hafen",
         description: "Beliebter Treffpunkt für Veteranen, Söldner und Reisende im Osten des Hafenviertels, an der Gasse zum Osttor. 1722 von den drei Feldkameraden Merrik Trevoryn, Hrolf Svathamar aus Rorikshall und Aedan Dubhdarach aus Leitheach gegründet."
-      },
-      {
-        name: "Gwynthorer Theater",
+      }),
+      Object.freeze({
+        name: "Gwynthorer Theater", category: "kultur",
         image: "/AleriaAlmanach/assets/gwynthor-theater/schild.png",
         symbolAlt: "Gwynthorer Theater · Schauspiel und Dramatik",
         trade: "Theater & Schauspielschule",

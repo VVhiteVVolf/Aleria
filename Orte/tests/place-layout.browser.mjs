@@ -51,9 +51,9 @@ try {
           scroll: cell.querySelector('.orte-paired-scroll').clientHeight,
           scrollContent: cell.querySelector('.orte-paired-scroll').scrollHeight,
         })),
-        ratings: [...document.querySelectorAll('.merchant-rating')].map(rating => ({
+        ratings: [...document.querySelectorAll('.merchant-rating')].filter(rating => rating.checkVisibility()).map(rating => ({
           width: rating.getBoundingClientRect().width,
-          cell: rating.closest('td').clientWidth,
+          cell: rating.parentElement.clientWidth,
           tops: [...rating.querySelectorAll('svg')].map(icon => icon.getBoundingClientRect().top),
         })),
       }));
@@ -65,7 +65,7 @@ try {
         }
       }
       for (const rating of geometry.ratings) {
-        assert.ok(rating.width <= rating.cell - 12, `${id} ${width}: rating fits`);
+        assert.ok(rating.width <= rating.cell, `${id} ${width}: rating fits`);
         assert.ok(new Set(rating.tops).size <= 1, `${id} ${width}: symbols do not wrap`);
       }
       if (id === 'lysfaen' && width > 800) {

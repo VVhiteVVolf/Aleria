@@ -392,6 +392,7 @@
     "merchants": [
       {
         "name": "Zur Weißen Drachin",
+        "category": "gastwirtschaft",
         "owner": "Malwyn Brogar",
         "trade": "Gastwirtschaft",
         "wealth": "★★☆☆☆",
@@ -402,6 +403,7 @@
       },
       {
         "name": "Hof Jernigan",
+        "category": "tierzucht",
         "owner": "Bedwyr Jernigan",
         "trade": "Rosszucht",
         "wealth": "★★☆☆☆",
@@ -412,6 +414,7 @@
       },
       {
         "name": "Hof Blevins",
+        "category": "landwirtschaft",
         "owner": "Iestin Blevins",
         "trade": "Bauernhof",
         "wealth": "★★☆☆☆",
@@ -422,6 +425,7 @@
       },
       {
         "name": "Hof Glyn",
+        "category": "landwirtschaft",
         "owner": "Meurig Glyn",
         "trade": "Bauernhof",
         "wealth": "★★☆☆☆",
@@ -432,6 +436,7 @@
       },
       {
         "name": "Hof Talfryn",
+        "category": "landwirtschaft",
         "owner": "Gareth Talfryn",
         "trade": "Bauernhof",
         "wealth": "★★☆☆☆",
@@ -442,6 +447,7 @@
       },
       {
         "name": "Hof Crewe",
+        "category": "landwirtschaft",
         "owner": "Anwen Crewe",
         "trade": "Bauernhof",
         "wealth": "★★☆☆☆",

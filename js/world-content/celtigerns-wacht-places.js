@@ -95,7 +95,7 @@
   const definitions = Object.freeze([
     define("gwynthor", "Gwynthor", "Großstadt", "county", {
       featured: true,
-      dataPath: "Koenigreich_Cenyr/Grafschaft_Celtigerns_Wacht/Baronie_Llamreis_Ankunft/Gwynthors_Bannkreis/Gwynthor/ort.data.js?v=20261014-kanne-v2",
+      dataPath: "Koenigreich_Cenyr/Grafschaft_Celtigerns_Wacht/Baronie_Llamreis_Ankunft/Gwynthors_Bannkreis/Gwynthor/ort.data.js?v=merchant-directory-20261019",
       hierarchy: [
         ...baseHierarchy,
         { type: "Baronie", name: "Llamreis Ankunft", slug: "llamreis-ankunft" },
@@ -206,8 +206,8 @@
 
     define("twr-brynmawr", "Tŵr Brynmawr", "Turm", "wyrm", { dataPath: "Koenigreich_Cenyr/Grafschaft_Celtigerns_Wacht/Baronie_Llamreis_Ankunft/Herrschaft_Haus_Wyrm/Twr_Brynmawr/ort.data.js?v=wyrm-import-20260913a" }),
     define("mwyncreig", "Mwyncreig", "Bergbausiedlung", "wyrm", { ...mappedPlaceOptions("mwyncreig", "Mwyncreig", "Bergbausiedlung", true), dataPath: "Koenigreich_Cenyr/Grafschaft_Celtigerns_Wacht/Baronie_Llamreis_Ankunft/Herrschaft_Haus_Wyrm/Mwyncreigs_Bannkreis/Mwyncreig/ort.data.js?v=wyrm-import-20260913a" }),
-    define("craithglyn", "Craithglyn", "Bergbausiedlung", "wyrm", { dataPath: "Koenigreich_Cenyr/Grafschaft_Celtigerns_Wacht/Baronie_Llamreis_Ankunft/Herrschaft_Haus_Wyrm/Craithglyn/ort.data.js?v=wyrm-region-maps-20260913b" }),
-    define("lysfaen", "Llysfaen", "Bauernsiedlung", "wyrm", { ...mappedPlaceOptions("llysfaen", "Llysfaen", "Bauernsiedlung", true), dataPath: "Koenigreich_Cenyr/Grafschaft_Celtigerns_Wacht/Baronie_Llamreis_Ankunft/Herrschaft_Haus_Wyrm/Lysfaens_Bannkreis/Lysfaen/ort.data.js?v=20260920a" }),
+    define("craithglyn", "Craithglyn", "Bergbausiedlung", "wyrm", { dataPath: "Koenigreich_Cenyr/Grafschaft_Celtigerns_Wacht/Baronie_Llamreis_Ankunft/Herrschaft_Haus_Wyrm/Craithglyn/ort.data.js?v=merchant-directory-20261019" }),
+    define("lysfaen", "Llysfaen", "Bauernsiedlung", "wyrm", { ...mappedPlaceOptions("llysfaen", "Llysfaen", "Bauernsiedlung", true), dataPath: "Koenigreich_Cenyr/Grafschaft_Celtigerns_Wacht/Baronie_Llamreis_Ankunft/Herrschaft_Haus_Wyrm/Lysfaens_Bannkreis/Lysfaen/ort.data.js?v=merchant-directory-20261019" }),
     define("bronhir", "Bronhir", "Bauernsiedlung", "wyrm", { ...mappedPlaceOptions("bronhir", "Bronhir", "Bauernsiedlung", true), dataPath: "Koenigreich_Cenyr/Grafschaft_Celtigerns_Wacht/Baronie_Llamreis_Ankunft/Herrschaft_Haus_Wyrm/Bronhirs_Bannkreis/Bronhir/ort.data.js?v=wyrm-import-20260913a" }),
 
     define("tan-gwaelon", "Tân Gwaelon", "Hafensiedlung", "rhonwen"),

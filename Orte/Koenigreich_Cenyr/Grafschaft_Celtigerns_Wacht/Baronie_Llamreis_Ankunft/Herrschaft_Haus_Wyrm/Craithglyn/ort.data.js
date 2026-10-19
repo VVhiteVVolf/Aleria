@@ -180,6 +180,7 @@
     "merchants": [
       {
         "name": "Klingende Münze",
+        "category": "handel",
         "owner": "Corvus",
         "trade": "Kaufmannsgesellschaft",
         "wealth": "★★☆☆☆",
