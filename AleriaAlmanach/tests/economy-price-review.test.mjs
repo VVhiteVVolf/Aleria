@@ -22,7 +22,7 @@ const records = sections.flatMap(section => section.entries.map(entry => ({ sect
 const eligible = records.filter(({ section, entry }) => evaluateVenueScope(entry, section).eligible);
 const expected = ['gwynthor-zum-kleinen-durst', 'modul-1781474092957', 'celtigerns-letzte-rast', 'goettliche-eleganz', 'gwynthor-zum-vollen-korb',
   'gwynthor-badehaus-fontani', 'gwynthor-gestiefelte-muschi', 'gwynthor-zum-letzten-heller', 'zum-dritten-funken', 'gwynthor-zur-klingenden-krone',
-  'die-lachende-nixe', 'herberge-bei-owains-anwesen', 'modul-1781813764249', 'zum-roten-drachen-taverne'];
+  'die-lachende-nixe', 'herberge-bei-owains-anwesen', 'modul-1781813764249', 'zum-roten-drachen-taverne', 'zum-roten-tor'];
 
 test('only the actual culture-tab sales locations qualify, including legacy Story-tagged shops', () => {
   assert.deepEqual(eligible.map(row => row.entry.id).sort(), expected.sort());
@@ -41,7 +41,7 @@ test('every qualifying module receives exactly one final calculation without cha
   for (const { section, entry } of records) {
     const upgraded = context.AleriaEconomy.upgradeEntry(entry, section), qualifies = evaluateVenueScope(entry, section).eligible;
     assert.equal(upgraded.pages.filter(page => page.economyCalculationPage).length, qualifies ? 1 : 0, entry.title);
-    assert.deepEqual(Array.from(upgraded.pages.filter(page => !page.economyCalculationPage), page => page.commentThreadKey), entry.pages.map(page => page.commentThreadKey));
+    assert.deepEqual(Array.from(upgraded.pages.filter(page => !page.economyCalculationPage), page => page.commentThreadKey), entry.pages.filter(page => !page.economyCalculationPage).map(page => page.commentThreadKey));
     if (qualifies) {
       assert.equal(upgraded.pages.at(-1).economyCalculationPage, true);
       upgraded.pages.at(-1).economyCalculation.scenario.householdWeekly = 456;

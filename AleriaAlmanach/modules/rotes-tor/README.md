@@ -1,13 +1,40 @@
-# Zum Roten Tor – Familie und Lieferhof
+# Zum Roten Tor – Gasthof, Familie und Lieferhof
 
-Angelegt sind die Familie Penrudd, ihr Lieferhof, das gewählte Familienwappen,
-24 individuelle Porträts und die Hauskarte mit acht Gerichten und acht Getränken.
-Das vollständige Gasthofmodul mit Personal, Szenen, Dienstleistungen und
-Kalkulation wird anschließend ausgearbeitet. Keine Veröffentlichung.
+Das vollständige Gasthofmodul ist seit dem 20. Oktober 2026 angelegt und im
+Almanach unter **Cenyr → Celtigerns Wacht → Llamreis Ankunft → Bannkreis
+Gwynthor → Zum Roten Tor** eingebunden. Es verwendet die bestehende Familie,
+deren 24 Porträts, das Wappen und die acht Speisen- und acht Getränkeangebote.
+Fünf neue Ortsbilder ergänzen den Bestand. Der eigenständige Hof bleibt ein
+Karteneintrag und Lieferant; ein separates Hofmodul wurde nicht erstellt.
+
+Der aktuelle Auftrag erlaubt den Push, untersagt jedoch das Deployment.
+Der Release-Commit erhält deshalb `[skip netlify]`. Keine Online-Module,
+Charaktere, Bestände oder Szenen werden über Firebase geschrieben.
+
+## Die zwölf Seiten
+
+1. Der Gasthof unmittelbar vor dem Nordtor.
+2. Carwyns Betreiberbiografie mit Eigenschaften, Beziehungen und Familienlink.
+3. Haus Penrudd, die Torgeschichte und die beiden Haushalte.
+4. Sechs Personalreiter: Führung, Schank/Empfang, Küche, Herberge, Stall/Waren, Sicherheit.
+5. Die vorhandene Hauskarte im Gütertemplate, mit freigestellten Item-Icons.
+6. Sechs bepreiste Dienste für Kammer, Pferd, Wagen, Gepäck und Wäsche.
+7. Ein leeres Gästeverzeichnis mit zwölf Eintragsfeldern, ohne erfundene Gäste.
+8.–11. Schankstube, Küche/Vorrat, Gastkammern und Wagenhof/Stall als interaktive Szenen.
+12. Die veränderbare Betriebskalkulation als letzte Seite.
+
+Der Betrieb hat 36 Schankplätze, zwei Einzel- und vier Doppelkammern mit
+insgesamt zehn Betten, zehn Gastpferdeplätze und vier Wagenplätze. Dies sind
+ergänzende redaktionelle Kapazitäten, keine aus der Karte abgeleiteten Maße.
+Eine Einzelkammer kostet 2,5 KT, eine ganze Doppelkammer 3,5 KT, ein versorgtes
+Gastpferd 1,5 KT und ein Wagenplatz 40 Pfennig je Nacht. Frühstück wird gesondert
+bestellt. Gepäck kostet 20 Pfennig je Stück und Tag, kleine Wäsche 50 Pfennig.
+
+## Quellen und Verantwortlichkeiten
 
 `penrudd-household.mjs` ist die gemeinsame Quelle für Personen, Beziehungen,
-Haushalte und Lieferverbindung. Die Stammbaum-Akte importiert diese Daten;
-ein späteres Gasthofmodul kann dieselben Personen verwenden. Die 24 benannten
+Haushalte und Lieferverbindung. Stammbaum und Gasthof verwenden dieselben
+Personen- und Weltidentitäten; niemand wurde neu angelegt. Die 24 benannten
 Personen besitzen nun eigene Porträts; nur die unbekannten Gründer behalten
 ihre Platzhalter. `penrudd-appearances.mjs` hält ihr Aussehen fest.
 
@@ -84,8 +111,47 @@ node Stammbäume/tools/check-chart-geometry.mjs --families=haus-penrudd
 ```
 
 Die Diagrammprüfung muss genau einen seriellen Übergang hinter dem Hauswappen
-und beide Brüder erst unter Madoc und Nest zeigen. Das Gasthofmodul ist noch
-nicht angelegt; die Hauskarte wird lokal mit der bestehenden Gütervorlage geprüft.
+und beide Brüder erst unter Madoc und Nest zeigen. Das Gasthofmodul verändert
+weder Genealogie noch Porträts. Zusätzliche Prüfungen:
+
+```powershell
+node AleriaAlmanach/scripts/build-rotes-tor.mjs
+node AleriaAlmanach/scripts/build-rotes-tor.mjs --check
+node --test --experimental-test-isolation=none AleriaAlmanach/tests/rotes-tor.test.mjs AleriaAlmanach/tests/rotes-tor-menu.test.mjs
+node AleriaAlmanach/tests/rotes-tor.browser.mjs
+```
+
+`tor-module.mjs` baut die Seiten auf, `tor-biography.mjs` die beiden Biografien,
+`tor-hierarchy.mjs` den Dienstplan, `tor-services.mjs` die Leistungen und
+`tor-rooms.mjs` Räume und Kapazitäten. `tor-people.mjs` ist nur ein Adapter
+auf die vorhandene Familie. Registrierung und JSON-Paket erzeugt der Build
+mit der gemeinsamen Archivregistrierung; wiederholtes Laden dupliziert nichts.
+
+## Kalkulation
+
+`tor-economy.mjs` verwendet das gemeinsame Geld-, Kalender-, Personal- und
+Rechenmodell. Acht arbeitende Erwachsene zählen jeweils einmal; Cerys ist
+mit drei Teilzeittagen angesetzt. Küchenhilfe, Kammermagd und Nachtwache sind
+ausdrücklich unbesetzt. Kinder, Altenteil und der gesamte Hofzweig sind keine
+zusätzlichen Lohnempfänger. Die Haushaltsentnahme trägt den Anteil von Kindern
+und Altenteil; die übrigen arbeitenden Erwachsenen erhalten Familienvergütung
+und persönliche Kost/Logis. Hoflieferungen sind im Einkaufsaufwand enthalten.
+
+Zimmer, Stall und Wagen sind durch tatsächliche Kapazitäten begrenzt; der
+Bratentag durch höchstens 18 Portionen je Neuntagewoche. Mahlzeiten und
+Übernachtung werden getrennt verkauft. Die Buchungsraten, Löhne, Pacht und
+Abgaben bleiben sichtbare Annahmen; Vermögen, Schulden und Grundeigentümer
+sind nicht erhoben. Ein reicher Stadtlebensstandard wird nicht automatisch auf
+den ländlichen Gasthof übertragen. Der gemeinsame Wirtschaftsbericht übernimmt
+die eigene Kalkulation statt sie durch ein generisches Ladenprofil zu ersetzen.
+
+## Ortsbilder
+
+Die fünf neuen PNGs liegen unter `assets/rotes-tor/scenes/`, im 2:3-Preset
+`anime-scene-portrait`. `scene-prompts.json` enthält die vollständigen Prompts
+und tatsächlichen Referenzen, `scene-results.json` die Originalpfade und Hashes.
+Die Originalpixel und Archivdateien bleiben unverändert. Für die vier Raum- und
+Hofbilder wurde die neue Außenansicht als Gebäudereferenz verwendet.
 
 ## Aussehen und Porträts
 

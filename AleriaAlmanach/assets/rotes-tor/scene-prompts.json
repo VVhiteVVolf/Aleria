@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-20",
+  "tool": "built-in image_gen",
+  "entries": [
+    {
+      "id": "scene-aussenansicht",
+      "kind": "scene",
+      "preset": "anime-scene-portrait",
+      "destination": "AleriaAlmanach/assets/rotes-tor/scenes/aussenansicht.png",
+      "references": [
+        "AleriaAlmanach/assets/kleiner-durst/scenes/aussenansicht.png"
+      ],
+      "prompt": "Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\n\nMotiv: Ein gepflegter, bodenständiger mittelalterlicher Landgasthof unmittelbar außerhalb des nördlichen Stadttors einer reichen cenyrischen Handelsstadt. Ganzes Haus in ruhiger Dreiviertelansicht: zweigeschossiges cremefarbenes Fachwerk mit dunklen Eichenbalken, hohes goldenes Strohdach und zwei kleine Dachgauben, gemauerter Schornstein, rote Eingangstür, wenige Blumenkästen. Neben dem Eingang hängt ein kleines flaches geschnitztes Holzschild: ein offenes rotes Tor mit heller Laterne, ohne Schrift. Ein schlichter Wirtschaftsbogen führt seitlich in den Wagenhof. Vorne eine Bank am staubigen Landweg, ganz hinten seitlich ein kurzer Blick auf Gwynthors graue Stadtmauer und ein NICHT rotes Stadttor. Helles spätsommerliches Tageslicht, ruhiger blauer Himmel. Das Haus wirkt verlässlich und gut geführt, weder luxuriös noch heruntergekommen. Keine Menschen, keine zusätzlichen Gebäude im Vordergrund, keine überladene Dekoration.\n\nVerwendung: Ortsillustration und interaktive Rollenspielszene für Zum Roten Tor im Bannkreis Gwynthor, Haus Penrudd. Hochformat 2:3, vollständige Szene ohne Bildrahmen, keine Schrift oder Wasserzeichen. Die beigefügte Hafenkneipe dient ausschließlich als Referenz für Anime-Lineart, Cel-Shading und einfache Materialdarstellung. Weder ihre schäbige Fassade noch ihren Hafen, ihr Schildmotiv oder ihre Architektur kopieren. Das Rote Tor ist ein gepflegter ländlicher Gasthof vor der Stadt, mit goldenem Strohdach, cremefarbenen Wänden, dunklen Eichenbalken und dunkelroten Türen. Keine neue Person erfinden, vorhandene Figurenporträts werden separat verwendet."
+    },
+    {
+      "id": "scene-schankstube",
+      "kind": "scene",
+      "preset": "anime-scene-portrait",
+      "destination": "AleriaAlmanach/assets/rotes-tor/scenes/schankstube.png",
+      "references": [
+        "AleriaAlmanach/assets/kleiner-durst/scenes/aussenansicht.png",
+        "AleriaAlmanach/assets/rotes-tor/scenes/aussenansicht.png"
+      ],
+      "prompt": "Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\n\nMotiv: Die mittelgroße gemütliche Schankstube eines gut geführten ländlichen mittelalterlichen Gasthofs: helle cremefarbene Putzwände, dunkle Eichenbalken, schlichter Steinboden, sechs robuste rechteckige Holztische mit langen Bänken, insgesamt ungefähr sechsunddreißig Sitzplätze. Im Hintergrund kompakter dunkler Eichentresen, wenige Tonkrüge auf Regal und zwei Bierfässer. Links ein breites Fenster mit Blick auf den Landweg, rechts ein kleiner gemauerter Kamin mit Glut. Eine dunkelrote Innentür und einzelne rote Stoffakzente verbinden den Raum mit dem Roten Tor. Warmes Tageslicht, überschaubare offene Komposition, Raum wirkt sauber und benutzt. Keine Personen, keine Tiere, keine Rüstungen, keine edle Restauranttafel, keine überladenen Regale.\n\nVerwendung: Ortsillustration und interaktive Rollenspielszene für Zum Roten Tor im Bannkreis Gwynthor, Haus Penrudd. Hochformat 2:3, vollständige Szene ohne Bildrahmen, keine Schrift oder Wasserzeichen. Die beigefügte Hafenkneipe dient ausschließlich als Referenz für Anime-Lineart, Cel-Shading und einfache Materialdarstellung. Weder ihre schäbige Fassade noch ihren Hafen, ihr Schildmotiv oder ihre Architektur kopieren. Das Rote Tor ist ein gepflegter ländlicher Gasthof vor der Stadt, mit goldenem Strohdach, cremefarbenen Wänden, dunklen Eichenbalken und dunkelroten Türen. Keine neue Person erfinden, vorhandene Figurenporträts werden separat verwendet.\nDie zweite Bildreferenz zeigt die bereits fertige Außenansicht des Roten Tors. Sie definiert die gemeinsame Architektur, Farben und bodenständige Wohlgepflegtheit. Jetzt den ausdrücklich beschriebenen Innenraum beziehungsweise Hof zeichnen, nicht die Außenansicht wiederholen."
+    },
+    {
+      "id": "scene-kueche-vorrat",
+      "kind": "scene",
+      "preset": "anime-scene-portrait",
+      "destination": "AleriaAlmanach/assets/rotes-tor/scenes/kueche-vorrat.png",
+      "references": [
+        "AleriaAlmanach/assets/kleiner-durst/scenes/aussenansicht.png",
+        "AleriaAlmanach/assets/rotes-tor/scenes/aussenansicht.png"
+      ],
+      "prompt": "Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\n\nMotiv: Praktische mittelalterliche Landgasthofküche in cremefarbenem Fachwerk, für eine Köchin und helfende Familienmitglieder. Ein breiter gemauerter Herd mit Abzug und einem schwarzen Hängekessel, eine kleine Eisenpfanne. Ein robuster Arbeitstisch mit einem Brotlaib, etwas Lauch und Wurzelgemüse, einfache Keramikschüsseln und ein Wassereimer. Seitlich eine offene Tür in eine kleine schattige Vorratskammer mit zwei Vorratsfässern, einem Gerstensack und wenigen Gemüsekisten. Sauber und bodenständig, nicht winzig ärmlich und nicht luxuriös. Warmes Feuerlicht und weiches Tageslicht durch ein kleines Fenster. Klarer ruhiger Bildaufbau, keine Personen, keine üppigen Essensarrangements oder magische Kühlung.\n\nVerwendung: Ortsillustration und interaktive Rollenspielszene für Zum Roten Tor im Bannkreis Gwynthor, Haus Penrudd. Hochformat 2:3, vollständige Szene ohne Bildrahmen, keine Schrift oder Wasserzeichen. Die beigefügte Hafenkneipe dient ausschließlich als Referenz für Anime-Lineart, Cel-Shading und einfache Materialdarstellung. Weder ihre schäbige Fassade noch ihren Hafen, ihr Schildmotiv oder ihre Architektur kopieren. Das Rote Tor ist ein gepflegter ländlicher Gasthof vor der Stadt, mit goldenem Strohdach, cremefarbenen Wänden, dunklen Eichenbalken und dunkelroten Türen. Keine neue Person erfinden, vorhandene Figurenporträts werden separat verwendet.\nDie zweite Bildreferenz zeigt die bereits fertige Außenansicht des Roten Tors. Sie definiert die gemeinsame Architektur, Farben und bodenständige Wohlgepflegtheit. Jetzt den ausdrücklich beschriebenen Innenraum beziehungsweise Hof zeichnen, nicht die Außenansicht wiederholen."
+    },
+    {
+      "id": "scene-gaestekammer",
+      "kind": "scene",
+      "preset": "anime-scene-portrait",
+      "destination": "AleriaAlmanach/assets/rotes-tor/scenes/gaestekammer.png",
+      "references": [
+        "AleriaAlmanach/assets/kleiner-durst/scenes/aussenansicht.png",
+        "AleriaAlmanach/assets/rotes-tor/scenes/aussenansicht.png"
+      ],
+      "prompt": "Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\n\nMotiv: Eine einfache aber gepflegte Doppelkammer im Obergeschoss desselben mittelalterlichen Fachwerkgasthofs unter goldenem Strohdach. Zwei separate schmale Eichenbetten mit cremefarbenem Leinen, schlichten rostroten Wolldecken und je einem Kissen; kein Doppelbett. Helle Putzwand, dunkle Dachbalken, ein kleiner Holztisch mit Tonwaschkrug und Schüssel, eine geschlossene Reisekiste, Holzriegel an der Zimmertür. Ein schmales Fenster blickt auf grünes Umland und den Landweg; warmes spätes Nachmittagslicht. Sparsame Einrichtung, ruhiger Bildaufbau, sauberer einfacher Komfort, keine Personen, keine Luxusstoffe, kein Bad, keine modernen Gegenstände.\n\nVerwendung: Ortsillustration und interaktive Rollenspielszene für Zum Roten Tor im Bannkreis Gwynthor, Haus Penrudd. Hochformat 2:3, vollständige Szene ohne Bildrahmen, keine Schrift oder Wasserzeichen. Die beigefügte Hafenkneipe dient ausschließlich als Referenz für Anime-Lineart, Cel-Shading und einfache Materialdarstellung. Weder ihre schäbige Fassade noch ihren Hafen, ihr Schildmotiv oder ihre Architektur kopieren. Das Rote Tor ist ein gepflegter ländlicher Gasthof vor der Stadt, mit goldenem Strohdach, cremefarbenen Wänden, dunklen Eichenbalken und dunkelroten Türen. Keine neue Person erfinden, vorhandene Figurenporträts werden separat verwendet.\nDie zweite Bildreferenz zeigt die bereits fertige Außenansicht des Roten Tors. Sie definiert die gemeinsame Architektur, Farben und bodenständige Wohlgepflegtheit. Jetzt den ausdrücklich beschriebenen Innenraum beziehungsweise Hof zeichnen, nicht die Außenansicht wiederholen."
+    },
+    {
+      "id": "scene-wagenhof-stall",
+      "kind": "scene",
+      "preset": "anime-scene-portrait",
+      "destination": "AleriaAlmanach/assets/rotes-tor/scenes/wagenhof-stall.png",
+      "references": [
+        "AleriaAlmanach/assets/kleiner-durst/scenes/aussenansicht.png",
+        "AleriaAlmanach/assets/rotes-tor/scenes/aussenansicht.png"
+      ],
+      "prompt": "Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\n\nMotiv: Überschaubarer mittelalterlicher Wirtschaftshof hinter einem gut geführten Landgasthof: cremefarbenes Fachwerk mit dunklen Balken und hohen goldenen Strohdächern, breite offene rote Holztorflügel zum Landweg. Links ein offener niedriger Stalltrakt mit einer Reihe von Boxen, nur drei Boxen im Bild sichtbar, darin zwei gewöhnliche braune gesunde Zugpferde mit natürlichen Proportionen; insgesamt ist es ein Stall für zehn Gastpferde. Rechts ein einfacher Wagenschuppen mit einem einzigen leeren hölzernen Fuhrwagen, Platz für vier Wagen im Hof, keine vier Wagen zeigen. Kleine Heuraufe, ein Hafermaß, Wassertränke und eine Mistgabel ordentlich an der Wand. Fester Kiesboden, ruhiges Morgenlicht. Alles praktisch und gepflegt, wenige große Formen, keine Personen, kein Ritterturnier, kein prachtvolles Gestüt, keine zusätzlichen Tiere.\n\nVerwendung: Ortsillustration und interaktive Rollenspielszene für Zum Roten Tor im Bannkreis Gwynthor, Haus Penrudd. Hochformat 2:3, vollständige Szene ohne Bildrahmen, keine Schrift oder Wasserzeichen. Die beigefügte Hafenkneipe dient ausschließlich als Referenz für Anime-Lineart, Cel-Shading und einfache Materialdarstellung. Weder ihre schäbige Fassade noch ihren Hafen, ihr Schildmotiv oder ihre Architektur kopieren. Das Rote Tor ist ein gepflegter ländlicher Gasthof vor der Stadt, mit goldenem Strohdach, cremefarbenen Wänden, dunklen Eichenbalken und dunkelroten Türen. Keine neue Person erfinden, vorhandene Figurenporträts werden separat verwendet.\nDie zweite Bildreferenz zeigt die bereits fertige Außenansicht des Roten Tors. Sie definiert die gemeinsame Architektur, Farben und bodenständige Wohlgepflegtheit. Jetzt den ausdrücklich beschriebenen Innenraum beziehungsweise Hof zeichnen, nicht die Außenansicht wiederholen."
+    }
+  ]
+}

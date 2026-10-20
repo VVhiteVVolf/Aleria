@@ -4,12 +4,12 @@
   "moneyUnit": "Kupfertaler",
   "method": "Interne Konsistenzprüfung einer fiktiven Wirtschaft. Vergleichsskala: 24 KT sparsamer Vierpersonenbedarf + 3 KT freie Mittel; 27 KT Hafenlohn bei sechs Diensttagen. Keine historische Preisstatistik.",
   "summary": {
-    "rows": 1113,
+    "rows": 1135,
     "adjusted": 144,
-    "retained": 762,
+    "retained": 784,
     "notOffered": 205,
     "unavailable": 2,
-    "eligibleVenues": 14,
+    "eligibleVenues": 15,
     "horseAndLivestockPriceChanges": 0
   },
   "limitations": [
@@ -181,6 +181,20 @@
         "Llamreis Ankunft",
         "Bannkreis Gwynthor",
         "Gwynthor-Stadt"
+      ],
+      "eligible": true,
+      "reason": "Begehbarer Verkaufsort mit Güterangebot."
+    },
+    {
+      "id": "zum-roten-tor",
+      "title": "Zum Roten Tor",
+      "tab": "Völker & Kulturen",
+      "path": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Bannkreis Gwynthor",
+        "Zum Roten Tor"
       ],
       "eligible": true,
       "reason": "Begehbarer Verkaufsort mit Güterangebot."
@@ -17875,6 +17889,512 @@
       "after": [
         25,
         25
+      ],
+      "decision": "beibehalten",
+      "reason": "Dienstleistung bleibt erhalten; Umfang, enthaltene Kammer, Zeit und mögliche Anrechnung werden in der Betriebskalkulation getrennt behandelt."
+    },
+    {
+      "source": "Zum Roten Tor",
+      "moduleId": "zum-roten-tor",
+      "pageIndex": 4,
+      "itemIndex": 0,
+      "id": "hofbrot",
+      "optionIndex": 0,
+      "name": "Hofbrot mit Butter und Käse",
+      "unit": "Zwei dicke Brotscheiben mit Belag",
+      "price": {
+        "minCopper": 0.7,
+        "maxCopper": 0.7
+      },
+      "category": "brotzeit",
+      "status": "available",
+      "before": null,
+      "after": [
+        0.7,
+        0.7
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Zum Roten Tor",
+      "moduleId": "zum-roten-tor",
+      "pageIndex": 4,
+      "itemIndex": 1,
+      "id": "lauchgerstensuppe",
+      "optionIndex": 0,
+      "name": "Lauch- und Gerstensuppe",
+      "unit": "Eine Schale mit einer kleinen Scheibe Brot",
+      "price": {
+        "minCopper": 0.6,
+        "maxCopper": 0.6
+      },
+      "category": "topf",
+      "status": "available",
+      "before": null,
+      "after": [
+        0.6,
+        0.6
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Zum Roten Tor",
+      "moduleId": "zum-roten-tor",
+      "pageIndex": 4,
+      "itemIndex": 2,
+      "id": "roter-tortopf",
+      "optionIndex": 0,
+      "name": "Roter Tortopf",
+      "unit": "Eine große Schüssel mit Brot",
+      "price": {
+        "minCopper": 1.4,
+        "maxCopper": 1.4
+      },
+      "category": "topf",
+      "status": "available",
+      "before": null,
+      "after": [
+        1.4,
+        1.4
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Zum Roten Tor",
+      "moduleId": "zum-roten-tor",
+      "pageIndex": 4,
+      "itemIndex": 3,
+      "id": "huhn-wurzelsud",
+      "optionIndex": 0,
+      "name": "Olwens Huhn im Wurzelsud",
+      "unit": "Ein Hühnerschenkel mit Gemüse und Gerste",
+      "price": {
+        "minCopper": 2.4,
+        "maxCopper": 2.4
+      },
+      "category": "hofgerichte",
+      "status": "available",
+      "before": null,
+      "after": [
+        2.4,
+        2.4
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Zum Roten Tor",
+      "moduleId": "zum-roten-tor",
+      "pageIndex": 4,
+      "itemIndex": 4,
+      "id": "kohlpfanne",
+      "optionIndex": 0,
+      "name": "Kohlpfanne mit Ei",
+      "unit": "Ein Teller mit Brot",
+      "price": {
+        "minCopper": 1.1,
+        "maxCopper": 1.1
+      },
+      "category": "hofgerichte",
+      "status": "available",
+      "before": null,
+      "after": [
+        1.1,
+        1.1
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Zum Roten Tor",
+      "moduleId": "zum-roten-tor",
+      "pageIndex": 4,
+      "itemIndex": 5,
+      "id": "rinderbraten",
+      "optionIndex": 0,
+      "name": "Braten vom Hofrind",
+      "unit": "Ein Teller mit Beilagen",
+      "price": {
+        "minCopper": 4,
+        "maxCopper": 4
+      },
+      "category": "bratentag",
+      "status": "available",
+      "before": null,
+      "after": [
+        4,
+        4
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Zum Roten Tor",
+      "moduleId": "zum-roten-tor",
+      "pageIndex": 4,
+      "itemIndex": 6,
+      "id": "apfel-haferauflauf",
+      "optionIndex": 0,
+      "name": "Warmer Apfel-Haferauflauf",
+      "unit": "Eine kleine Schale",
+      "price": {
+        "minCopper": 0.65,
+        "maxCopper": 0.65
+      },
+      "category": "suesses",
+      "status": "available",
+      "before": null,
+      "after": [
+        0.65,
+        0.65
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Zum Roten Tor",
+      "moduleId": "zum-roten-tor",
+      "pageIndex": 4,
+      "itemIndex": 7,
+      "id": "fuhrmannsbeutel",
+      "optionIndex": 0,
+      "name": "Fuhrmannsbeutel",
+      "unit": "Eine Wegzehrung für unterwegs",
+      "price": {
+        "minCopper": 1.2,
+        "maxCopper": 1.2
+      },
+      "category": "reise",
+      "status": "available",
+      "before": null,
+      "after": [
+        1.2,
+        1.2
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Zum Roten Tor",
+      "moduleId": "zum-roten-tor",
+      "pageIndex": 4,
+      "itemIndex": 8,
+      "id": "tor-standard-duennes-bier",
+      "optionIndex": 0,
+      "name": "Dünnes gewässertes Bier",
+      "unit": "Krug",
+      "price": {
+        "minCopper": 0.15,
+        "maxCopper": 0.15
+      },
+      "category": "getraenke",
+      "status": "available",
+      "before": null,
+      "after": [
+        0.15,
+        0.15
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Zum Roten Tor",
+      "moduleId": "zum-roten-tor",
+      "pageIndex": 4,
+      "itemIndex": 9,
+      "id": "tor-standard-starkbier",
+      "optionIndex": 0,
+      "name": "Einfaches Starkbier",
+      "unit": "Krug",
+      "price": {
+        "minCopper": 0.5,
+        "maxCopper": 0.5
+      },
+      "category": "getraenke",
+      "status": "available",
+      "before": null,
+      "after": [
+        0.5,
+        0.5
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Zum Roten Tor",
+      "moduleId": "zum-roten-tor",
+      "pageIndex": 4,
+      "itemIndex": 10,
+      "id": "tor-standard-klosterbier",
+      "optionIndex": 0,
+      "name": "Klosterbier",
+      "unit": "Krug",
+      "price": {
+        "minCopper": 1,
+        "maxCopper": 1
+      },
+      "category": "getraenke",
+      "status": "available",
+      "before": null,
+      "after": [
+        1,
+        1
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Zum Roten Tor",
+      "moduleId": "zum-roten-tor",
+      "pageIndex": 4,
+      "itemIndex": 11,
+      "id": "tor-standard-apfelwein",
+      "optionIndex": 0,
+      "name": "Apfelwein",
+      "unit": "Becher",
+      "price": {
+        "minCopper": 0.6,
+        "maxCopper": 0.6
+      },
+      "category": "getraenke",
+      "status": "available",
+      "before": null,
+      "after": [
+        0.6,
+        0.6
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Zum Roten Tor",
+      "moduleId": "zum-roten-tor",
+      "pageIndex": 4,
+      "itemIndex": 12,
+      "id": "tor-standard-wasser",
+      "optionIndex": 0,
+      "name": "Wasser",
+      "unit": "Krug",
+      "price": {
+        "minCopper": 0.05,
+        "maxCopper": 0.05
+      },
+      "category": "getraenke",
+      "status": "available",
+      "before": null,
+      "after": [
+        0.05,
+        0.05
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Zum Roten Tor",
+      "moduleId": "zum-roten-tor",
+      "pageIndex": 4,
+      "itemIndex": 13,
+      "id": "tor-standard-kraeuteraufguss",
+      "optionIndex": 0,
+      "name": "Kräuteraufguss",
+      "unit": "Becher",
+      "price": {
+        "minCopper": 0.25,
+        "maxCopper": 0.25
+      },
+      "category": "getraenke",
+      "status": "available",
+      "before": null,
+      "after": [
+        0.25,
+        0.25
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Zum Roten Tor",
+      "moduleId": "zum-roten-tor",
+      "pageIndex": 4,
+      "itemIndex": 14,
+      "id": "tor-standard-branntwein",
+      "optionIndex": 0,
+      "name": "Einfacher Branntwein",
+      "unit": "Glas",
+      "price": {
+        "minCopper": 1,
+        "maxCopper": 2
+      },
+      "category": "getraenke",
+      "status": "available",
+      "before": null,
+      "after": [
+        1,
+        2
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Zum Roten Tor",
+      "moduleId": "zum-roten-tor",
+      "pageIndex": 4,
+      "itemIndex": 15,
+      "id": "tischwein-rot",
+      "optionIndex": 0,
+      "name": "Einfacher roter Tischwein",
+      "unit": "Ein Becher · 0,20 l",
+      "price": {
+        "minCopper": 0.8,
+        "maxCopper": 0.8
+      },
+      "category": "getraenke",
+      "status": "available",
+      "before": null,
+      "after": [
+        0.8,
+        0.8
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Zum Roten Tor",
+      "moduleId": "zum-roten-tor",
+      "id": "service-0",
+      "name": "Eine eigene Einzelkammer",
+      "unit": "Eine Kammer · eine Person · eine Nacht",
+      "price": {
+        "minCopper": 2.5,
+        "maxCopper": 2.5
+      },
+      "category": "Dienstleistung",
+      "unchangedService": true,
+      "before": [
+        2.5,
+        2.5
+      ],
+      "after": [
+        2.5,
+        2.5
+      ],
+      "decision": "beibehalten",
+      "reason": "Dienstleistung bleibt erhalten; Umfang, enthaltene Kammer, Zeit und mögliche Anrechnung werden in der Betriebskalkulation getrennt behandelt."
+    },
+    {
+      "source": "Zum Roten Tor",
+      "moduleId": "zum-roten-tor",
+      "id": "service-1",
+      "name": "Eine Doppelkammer für zwei",
+      "unit": "Die ganze Kammer · bis zwei Personen · eine Nacht",
+      "price": {
+        "minCopper": 3.5,
+        "maxCopper": 3.5
+      },
+      "category": "Dienstleistung",
+      "unchangedService": true,
+      "before": [
+        3.5,
+        3.5
+      ],
+      "after": [
+        3.5,
+        3.5
+      ],
+      "decision": "beibehalten",
+      "reason": "Dienstleistung bleibt erhalten; Umfang, enthaltene Kammer, Zeit und mögliche Anrechnung werden in der Betriebskalkulation getrennt behandelt."
+    },
+    {
+      "source": "Zum Roten Tor",
+      "moduleId": "zum-roten-tor",
+      "id": "service-2",
+      "name": "Ein Gastpferd im Stall",
+      "unit": "Ein Pferd · eine Nacht samt gewöhnlicher Versorgung",
+      "price": {
+        "minCopper": 1.5,
+        "maxCopper": 1.5
+      },
+      "category": "Dienstleistung",
+      "unchangedService": true,
+      "before": [
+        1.5,
+        1.5
+      ],
+      "after": [
+        1.5,
+        1.5
+      ],
+      "decision": "beibehalten",
+      "reason": "Dienstleistung bleibt erhalten; Umfang, enthaltene Kammer, Zeit und mögliche Anrechnung werden in der Betriebskalkulation getrennt behandelt."
+    },
+    {
+      "source": "Zum Roten Tor",
+      "moduleId": "zum-roten-tor",
+      "id": "service-3",
+      "name": "Ein Wagenplatz im Hof",
+      "unit": "Ein gewöhnlicher Wagen · eine Nacht",
+      "price": {
+        "minCopper": 0.4,
+        "maxCopper": 0.4
+      },
+      "category": "Dienstleistung",
+      "unchangedService": true,
+      "before": [
+        0.4,
+        0.4
+      ],
+      "after": [
+        0.4,
+        0.4
+      ],
+      "decision": "beibehalten",
+      "reason": "Dienstleistung bleibt erhalten; Umfang, enthaltene Kammer, Zeit und mögliche Anrechnung werden in der Betriebskalkulation getrennt behandelt."
+    },
+    {
+      "source": "Zum Roten Tor",
+      "moduleId": "zum-roten-tor",
+      "id": "service-4",
+      "name": "Gepäck unter Verschluss",
+      "unit": "Eine gewöhnliche Tasche oder kleine Truhe · ein Tag",
+      "price": {
+        "minCopper": 0.2,
+        "maxCopper": 0.2
+      },
+      "category": "Dienstleistung",
+      "unchangedService": true,
+      "before": [
+        0.2,
+        0.2
+      ],
+      "after": [
+        0.2,
+        0.2
+      ],
+      "decision": "beibehalten",
+      "reason": "Dienstleistung bleibt erhalten; Umfang, enthaltene Kammer, Zeit und mögliche Anrechnung werden in der Betriebskalkulation getrennt behandelt."
+    },
+    {
+      "source": "Zum Roten Tor",
+      "moduleId": "zum-roten-tor",
+      "id": "service-5",
+      "name": "Eine kleine Reisewäsche",
+      "unit": "Ein Bündel aus Hemd, Unterzeug und Strümpfen",
+      "price": {
+        "minCopper": 0.5,
+        "maxCopper": 0.5
+      },
+      "category": "Dienstleistung",
+      "unchangedService": true,
+      "before": [
+        0.5,
+        0.5
+      ],
+      "after": [
+        0.5,
+        0.5
       ],
       "decision": "beibehalten",
       "reason": "Dienstleistung bleibt erhalten; Umfang, enthaltene Kammer, Zeit und mögliche Anrechnung werden in der Betriebskalkulation getrennt behandelt."

@@ -37,7 +37,8 @@ Gasthof haben eigene bestehende Kartenzeichen. Die Icons wurden angesehen;
 zusätzliche Bildgenerierung war nicht nötig. Unterbereiche der Gilden behalten
 ihre eigenen Embleme.
 
-Der Bereich Zum Roten Tor ist zunächst leer. Die bestehende Quelle ist der
+Der Bereich Zum Roten Tor enthält seit dem 20.10.2026 das vollständige
+Gasthofmodul mit zwölf Seiten. Die ursprüngliche Ortsquelle ist der
 Eintrag „Gasthof - Zum Roten Tor“ unter
 `Karten/Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/data.json`:
 Ursprünglich Familie Penry, seit der ausdrücklichen Umbenennung vom 19.10.2026
@@ -45,7 +46,8 @@ die eigenständige Familie Penrudd, unmittelbar vor dem Nordtor, einfache bis
 mittlere Preislage, Gastzimmer und Platz für Pferde/Wagen. Die neue Familie und
 der zugeordnete Lieferhof stehen unter `../rotes-tor/`; die vorhandenen
 Penry-Identitäten aus Talgarth bleiben davon unberührt.
-Dieser Schritt erzeugt keine neuen Bewohner oder Tavernenangebote.
+Die geografische Migration selbst erzeugt keine Bewohner oder Angebote;
+das Gasthofmodul verwendet die vorhandene Familie und Hauskarte.
 
 ```powershell
 node AleriaAlmanach/scripts/build-gwynthor-geography.mjs

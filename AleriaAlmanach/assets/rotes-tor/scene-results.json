@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-20",
+  "tool": "built-in image_gen",
+  "images": [
+    {
+      "id": "scene-aussenansicht",
+      "promptId": "scene-aussenansicht",
+      "kind": "scene",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-b13ffc3c-18fa-4292-983d-89aed3810ff5.png",
+      "destination": "AleriaAlmanach/assets/rotes-tor/scenes/aussenansicht.png",
+      "references": [
+        "AleriaAlmanach/assets/kleiner-durst/scenes/aussenansicht.png"
+      ],
+      "width": 1024,
+      "height": 1536,
+      "sha256": "6904a38dddc0b14921878c2ecb61984d941eae3293051f14bdce4e3aac2299af"
+    },
+    {
+      "id": "scene-schankstube",
+      "promptId": "scene-schankstube",
+      "kind": "scene",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-2392131e-13a2-4d0f-b210-1209c5dbdb36.png",
+      "destination": "AleriaAlmanach/assets/rotes-tor/scenes/schankstube.png",
+      "references": [
+        "AleriaAlmanach/assets/kleiner-durst/scenes/aussenansicht.png",
+        "AleriaAlmanach/assets/rotes-tor/scenes/aussenansicht.png"
+      ],
+      "width": 1024,
+      "height": 1536,
+      "sha256": "c3e9f11d025b14683b22862f4345aa5b5204b0a5dd36b77e45d3f865fa25e7ec"
+    },
+    {
+      "id": "scene-kueche-vorrat",
+      "promptId": "scene-kueche-vorrat",
+      "kind": "scene",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-d6e6bcd8-93ce-4354-9218-57e11300aa2f.png",
+      "destination": "AleriaAlmanach/assets/rotes-tor/scenes/kueche-vorrat.png",
+      "references": [
+        "AleriaAlmanach/assets/kleiner-durst/scenes/aussenansicht.png",
+        "AleriaAlmanach/assets/rotes-tor/scenes/aussenansicht.png"
+      ],
+      "width": 1024,
+      "height": 1536,
+      "sha256": "8184eb71636eaed4fdd63c21de4106dd30ea1fd9c74c0f80dddfeb999d912e71"
+    },
+    {
+      "id": "scene-gaestekammer",
+      "promptId": "scene-gaestekammer",
+      "kind": "scene",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-fad8ca3f-add4-4cc2-a3f2-574e4ee4de64.png",
+      "destination": "AleriaAlmanach/assets/rotes-tor/scenes/gaestekammer.png",
+      "references": [
+        "AleriaAlmanach/assets/kleiner-durst/scenes/aussenansicht.png",
+        "AleriaAlmanach/assets/rotes-tor/scenes/aussenansicht.png"
+      ],
+      "width": 1024,
+      "height": 1536,
+      "sha256": "e241e1261526c18722d70de85a636cd263ca29410fc9cd1183bbf192ab281d4e"
+    },
+    {
+      "id": "scene-wagenhof-stall",
+      "promptId": "scene-wagenhof-stall",
+      "kind": "scene",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1464a-a20b-7c00-a9de-c0b8c10e3b32\\exec-29592bd4-be3e-4416-be9c-fcb42fa5686d.png",
+      "destination": "AleriaAlmanach/assets/rotes-tor/scenes/wagenhof-stall.png",
+      "references": [
+        "AleriaAlmanach/assets/kleiner-durst/scenes/aussenansicht.png",
+        "AleriaAlmanach/assets/rotes-tor/scenes/aussenansicht.png"
+      ],
+      "width": 1024,
+      "height": 1536,
+      "sha256": "1752187e183f5bf2684faf9c6bc9ee3fbd46cc2ef333c3271f19ae793d10a0e1"
+    }
+  ]
+}

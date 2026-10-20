@@ -12,7 +12,7 @@ try {
   }, legacy.records);
   const records = await page.evaluate(() => getValidSections().flatMap(section => section.entries.map(entry => ({ section: { tab: section.tab, path: section.path }, entry }))));
   const shops = records.filter(({ entry, section }) => evaluateVenueScope(entry, section).eligible);
-  assert.equal(shops.length, 14);
+  assert.equal(shops.length, 15);
   for (const { entry, section } of records) {
     const calculators = entry.pages?.filter(page => page.economyCalculationPage) || [];
     assert.equal(calculators.length, evaluateVenueScope(entry, section).eligible ? 1 : 0, entry.title);

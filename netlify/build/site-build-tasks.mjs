@@ -22,7 +22,7 @@ const economySourceInputs = [
   'kleiner-durst', 'krumme-kanne', 'letzte-rast', 'goettliche-eleganz',
   'pendrwn-general-store', 'gwynthor-bathhouse', 'gestiefelte-muschi',
   'letzter-heller', 'gofrann-schmiede', 'klingende-krone', 'lachende-nixe',
-  'gortach-brauerei', 'brewer-guilds', 'gwregysdu-harbor', 'windreiter'
+  'gortach-brauerei', 'brewer-guilds', 'gwregysdu-harbor', 'windreiter', 'rotes-tor'
 ].map(feature => `AleriaAlmanach/modules/${feature}/`);
 
 // Inputs include cross-feature dependencies. Images do not affect the chart audit,
@@ -69,6 +69,17 @@ export const SITE_BUILD_TASKS = [
       'character-performance', 'character-section-integration', 'character-save-guard',
       'character-register-views', 'character-equipment-sync'
     ].map(almanach), 'firebase/tests/publisher-access.test.mjs')]
+  },
+  {
+    id: 'rotes-tor', label: 'Penrudd inn, services, rooms and authored economics',
+    inputs: ['AleriaAlmanach/modules/rotes-tor/', 'AleriaAlmanach/assets/rotes-tor/',
+      'AleriaAlmanach/scripts/build-rotes-tor.mjs', 'AleriaAlmanach/modules/guest-register/',
+      'AleriaAlmanach/modules/archive/archive-section-registration.mjs',
+      'AleriaAlmanach/modules/economy-calculator/', 'AleriaAlmanach/modules/item-register/',
+      'AleriaAlmanach/modules/trade-catalog/', 'AleriaAlmanach/AleriaAlmanach.html',
+      almanach('rotes-tor'), almanach('rotes-tor-menu')],
+    commands: [['AleriaAlmanach/scripts/build-rotes-tor.mjs', '--check'],
+      testCommand(almanach('rotes-tor'), almanach('rotes-tor-menu'))]
   },
   {
     id: 'economy-calculator', label: 'Price review and calculations for purchasable cultural locations',

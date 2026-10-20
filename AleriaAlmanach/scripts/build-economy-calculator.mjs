@@ -1,4 +1,5 @@
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
+import { sanitizeScenario } from '../modules/economy-calculator/economy-model.mjs';
 import { fileURLToPath } from 'node:url';
 import { createHash } from 'node:crypto';
 import { readEconomyVenues, readEconomyCalendar, readEconomyModuleSources } from '../modules/economy-calculator/economy-source-venues.mjs';
@@ -17,7 +18,10 @@ const sourceSections = await readEconomyModuleSources(), scope = [];
 for (const section of sourceSections) for (const entry of section.entries) {
   const decision = evaluateVenueScope(entry, section);
   scope.push({ id: entry.id, title: entry.title, tab: section.tab, path: section.path, ...decision });
-  if (decision.eligible && !examples.some(example => example.id === entry.id)) examples.push(buildVenueScenario(entry, section, calendar));
+  if (decision.eligible && !examples.some(example => example.id === entry.id)) {
+    const authored = entry.pages.find(page => page.economyCalculationPage)?.economyCalculation?.scenario;
+    examples.push(authored ? sanitizeScenario(authored) : buildVenueScenario(entry, section, calendar));
+  }
 }
 const catalogPath = new URL('modules/economy-calculator/economy-catalog.generated.mjs', root);
 const catalog = '// Generated from the existing menus and personnel sources. Edit economy-examples.mjs.\nexport const ECONOMY_EXAMPLES = ' + JSON.stringify(examples, null, 2) + ';\n';

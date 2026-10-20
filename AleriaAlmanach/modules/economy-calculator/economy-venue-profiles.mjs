@@ -1,6 +1,9 @@
 // Operating assumptions, not additions to the fictional employee registry.
 // All volumes are per 9-day week. Long-lived luxury stock sells infrequently.
 export const VENUE_PROFILES = {
+  'zum-roten-tor': { kind: 'inn', tier: 'Bodenständiger Landgasthof und Herberge', owners: ['Carwyn Penrudd', 'Olwen'], household: 54, rent: 12, overhead: 36, reserve: 10,
+    seats: 36, turns: 1.65, occupancy: .75, materialRatio: .52,
+    note: 'Der Gasthof besitzt eine eigene ausgearbeitete Kalkulationsseite mit sechs Kammern, zehn Gastpferdeplätzen, bezahlten Hoflieferungen und Teilzeit-Familienarbeit. Der Lieferhof ist kein Teil seiner Belegschaft.' },
   'goettliche-eleganz': { kind: 'tailor', tier: 'Schneiderei und Maßarbeit', owners: ['Eleonora Cassia Raves'], household: 27, rent: 18, overhead: 26, reserve: 12,
     salesPerWeek: 6, materialRatio: .55, luxuryAnnualSales: .25,
     note: 'Sechs gewöhnliche Garnituren pro Woche plus seltene Einzelaufträge sind ein offener Ansatz für die wenigen besetzten Werkstattposten; freie Schneiderstellen werden nicht als kostenlose Produktionskapazität verwendet.' },

@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-20",
+  "moduleId": "zum-roten-tor",
+  "section": ["Cenyr", "Celtigerns Wacht", "Llamreis Ankunft", "Bannkreis Gwynthor", "Zum Roten Tor"],
+  "pages": 12,
+  "interactiveScenes": 4,
+  "newSceneImages": 5,
+  "existingPortraitsPreserved": 24,
+  "foodInventoryIconsPreserved": 8,
+  "goods": 16,
+  "services": 6,
+  "hierarchyTabs": 6,
+  "activeAdults": 8,
+  "vacancies": 3,
+  "guestRegisterSlots": 12,
+  "familyAndFarmWorkforceKeptSeparate": true,
+  "newFarmModuleCreated": false,
+  "finalPage": "economyCalculationPage",
+  "verification": {
+    "relatedTestsPassed": 60,
+    "fullBuildTasksPassed": 18,
+    "fullBuildTestsPassed": 327,
+    "familyChartsChecked": 520,
+    "familyChartFailures": 0,
+    "priorBusinessCalculationsUnchanged": 14,
+    "browserPagesChecked": 24,
+    "browserViewports": [[1440, 1000], [390, 844]],
+    "browserEvidence": ".tmp/rotes-tor/browser-1792485737288/report.json",
+    "javascriptErrors": [],
+    "allReferencedPicturesExist": true,
+    "newImageHashesVerified": true,
+    "goodsFiltersAndSearchPassed": true,
+    "itemCardsPassed": true,
+    "sceneIntroCollapsePassed": true,
+    "importRoundTripPassed": true
+  },
+  "art": {
+    "tool": "built-in image_gen",
+    "preset": "anime-scene-portrait",
+    "aspectRatio": "2:3",
+    "promptManifest": "assets/rotes-tor/scene-prompts.json",
+    "resultsManifest": "assets/rotes-tor/scene-results.json",
+    "originalPixelsPreserved": true
+  },
+  "publication": {
+    "authorized": "Push only; no deployment",
+    "requiredCommitMarker": "[skip netlify]",
+    "firebaseWritesPerformed": false,
+    "deploymentPerformed": false
+  }
+}
