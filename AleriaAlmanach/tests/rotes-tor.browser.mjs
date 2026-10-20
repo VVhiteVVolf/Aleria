@@ -4,8 +4,9 @@ import { resolve } from 'node:path';
 import { openVenueBrowserPreview } from './support/venue-browser-preview.mjs';
 import { buildRotesTor, TOR_SECTION } from '../modules/rotes-tor/tor-module.mjs';
 import { readEconomyCalendar } from '../modules/economy-calculator/economy-source-venues.mjs';
+import { readBreweryCatalogs } from '../modules/brewer-guilds/brewery-catalog-source.mjs';
 
-const entry = buildRotesTor(await readEconomyCalendar()), preview = await openVenueBrowserPreview('rotes-tor');
+const entry = buildRotesTor(await readEconomyCalendar(), await readBreweryCatalogs()), preview = await openVenueBrowserPreview('rotes-tor');
 const { page } = preview, checks = [];
 try {
   const placement = await page.evaluate(id => {
@@ -17,7 +18,7 @@ try {
     type: 'aleria-module', version: 1, section: { tab: 'Völker & Kulturen', key: 'Zum Roten Tor' }, entry
   } }).entry, entry);
   assert.equal(imported.pages.length, 12);
-  assert.equal(imported.pages.find(page => page.tradeCatalogPage).tradeCatalog.items.length, 16);
+  assert.equal(imported.pages.find(page => page.tradeCatalogPage).tradeCatalog.items.length, 26);
   assert.deepEqual(imported.pages.at(-1).economyCalculation.scenario, entry.pages.at(-1).economyCalculation.scenario);
 
   for (const [layout, viewport] of [['desktop', { width: 1440, height: 1000 }], ['mobile', { width: 390, height: 844 }]]) {
@@ -42,7 +43,23 @@ try {
           await page.locator(`[data-trade-filter="${category.id}"]`).click();
           assert.equal(await page.locator('#modal-overlay .trade-catalog-item:visible').count(), model.tradeCatalog.items.filter(item => item.category === category.id).length);
           await preview.decodeImages('#modal-overlay .trade-catalog-item:visible .trade-catalog-image img');
+          if (['fruehstueck', 'importbiere'].includes(category.id)) await preview.capture(`${layout}-karte-${category.id}`);
         }
+        await page.locator('[data-trade-filter="hofgerichte"]').click();
+        const beans = page.locator('#modal-overlay .trade-catalog-item:visible').filter({ hasText: 'Bohnenpfanne mit Tomate und Speck' });
+        await beans.locator('[data-action="open-trade-item-card"]').click();
+        assert.match(await page.locator('dialog.trade-item-card').innerText(), /Bohnenpfanne.*Tomate.*Speck/s);
+        await preview.decodeImages('dialog.trade-item-card img');
+        await preview.capture(`${layout}-bohnenpfanne-itemkarte`);
+        await page.keyboard.press('Escape');
+        await page.locator('dialog.trade-item-card').waitFor({ state: 'detached' });
+        await page.locator('[data-trade-filter="importbiere"]').click();
+        const beer = page.locator('#modal-overlay .trade-catalog-item:visible').filter({ hasText: 'Goldschuppen Bier' });
+        await beer.locator('[data-action="open-trade-item-card"]').click();
+        assert.match(await page.locator('dialog.trade-item-card').innerText(), /0,5 l/);
+        await preview.capture(`${layout}-goldschuppen-itemkarte`);
+        await page.keyboard.press('Escape');
+        await page.locator('dialog.trade-item-card').waitFor({ state: 'detached' });
         await page.locator('[data-trade-filter="topf"]').click();
         await page.locator('#modal-overlay .trade-catalog-item:visible [data-action="open-trade-item-card"]').first().click();
         assert.ok(await page.locator('dialog.trade-item-card').isVisible());

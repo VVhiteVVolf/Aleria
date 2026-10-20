@@ -20,7 +20,7 @@ function torGuestRegister() {
   return { schemaVersion: 1, commentThreadKey: 'tor-gaeste', pageTitle: 'Mareds Gästeverzeichnis', guestRegisterPage: true, guestRegister: register };
 }
 
-export function buildRotesTor(calendar) {
+export function buildRotesTor(calendar, drinkCatalogs) {
   const entry = { id: TOR_ID, title: 'Zum Roten Tor', subtitle: 'Ein Platz am Feuer · Gasthof und Herberge des Hauses Penrudd',
     type: 'Gasthof und Herberge', category: 'Bannkreis Gwynthor · unmittelbar vor dem Nordtor', symbol: TOR_EMBLEM, icon: '♧',
     image: torSceneImage('aussenansicht'), previewImage: torSceneImage('aussenansicht'), stamp: 'ZUM ROTEN TOR · HAUS PENRUDD',
@@ -28,7 +28,7 @@ export function buildRotesTor(calendar) {
     sessionCast: TOR_WORKING_PEOPLE.map(person => person.worldPersonId),
     pages: [
       { schemaVersion: 1, commentThreadKey: 'tor-einordnung', pageTitle: 'Zum Roten Tor', ...scene('aussenansicht'),
-        description: '<p>Unmittelbar vor <strong>Gwynthors Nordtor</strong> steht ein helles Fachwerkhaus unter einem hohen Strohdach. Eine Bank schaut auf den Landweg, ein seitlicher Torbogen führt in den Wagenhof. An der roten Eingangstür schwingt die Laterne im Wind. Wer früh nach Gwynthor hineinwill oder nach der Ausfahrt noch eine Nacht bleiben muss, kennt <strong>Zum Roten Tor</strong>.</p><p>Fuhrleute, Händler, Reisende und Besucher der Stadt teilen die langen Bänke. Olwen kocht Suppe, Haustopf und Hofgerichte; Carwyn schenkt gewöhnliches Bier, Apfelwein und einfachen Tischwein aus. Das Haus bietet verlässliche, einfache bis mittlere Kost, saubere Kammern und einen trockenen Platz für Zugtiere.</p><p>Die <strong>Familie Penrudd</strong> betreibt die Herberge seit mehreren Generationen. Heute führen Carwyn und Olwen den Alltag. Ein Teil der Lebensmittel sowie Heu und Hafer kommen vom nahen Penrudd-Hof. Die Verwandten dort bleiben selbstständige Lieferanten mit eigener Hauskasse.</p>',
+        description: '<p>Unmittelbar vor <strong>Gwynthors Nordtor</strong> steht ein helles Fachwerkhaus unter einem hohen Strohdach. Eine Bank schaut auf den Landweg, ein seitlicher Torbogen führt in den Wagenhof. An der roten Eingangstür schwingt die Laterne im Wind. Wer früh nach Gwynthor hineinwill oder nach der Ausfahrt noch eine Nacht bleiben muss, kennt <strong>Zum Roten Tor</strong>.</p><p>Fuhrleute, Händler, Reisende und Besucher der Stadt teilen die langen Bänke. Morgens gibt es Haferbrei, Dickmilch oder Hofeier mit Speck und Brot. Später kommen Haustopf, Huhn, Bohnenpfanne, geschmorte Schweineschulter und frischer Flussfisch auf den Tisch. Carwyn schenkt gewöhnliches Bier, Apfelwein und einfachen Tischwein sowie ausgewählte erschwingliche Biere von Teyrngarch und Penderyn aus. Das Haus bietet verlässliche, einfache bis mittlere Kost, saubere Kammern und einen trockenen Platz für Zugtiere.</p><p>Die <strong>Familie Penrudd</strong> betreibt die Herberge seit mehreren Generationen. Heute führen Carwyn und Olwen den Alltag. Ein Teil der Lebensmittel sowie Heu und Hafer kommen vom nahen Penrudd-Hof. Die Verwandten dort bleiben selbstständige Lieferanten mit eigener Hauskasse.</p>',
         stats: [['Lage', 'Bannkreis Gwynthor · direkt vor dem Nordtor'], ['Betreiber', 'Carwyn Penrudd und Olwen'], ['Haus', 'Penrudd · im Dienst des Hauses Draig'], ['Gäste', 'Fuhrleute, Händler und Reisende'], ['Umfang', '36 Schankplätze · sechs Kammern · zehn Betten'], ['Hof', 'Zehn Gastpferde · vier Wagenplätze'], ['Öffnung', 'Täglich · einfache bis mittlere Preislage']] },
       { schemaVersion: 1, commentThreadKey: 'tor-carwyn', pageTitle: 'Carwyn Penrudd · Der Wirt am Tor', biographyPage: true,
         image: penruddPerson('carwyn').portrait, imageWidth: 34, imageTall: true, imageFit: 'contain', biography: buildCarwynBiography(),
@@ -37,7 +37,7 @@ export function buildRotesTor(calendar) {
         image: `${TOR_ART}/portraits/gwilym.png`, imageWidth: 34, imageTall: true, imageFit: 'contain', biography: buildPenruddHouseBiography(),
         stats: [['Wappen', 'Rotes offenes Tor · helle Laterne'], ['Ältere Generation', 'Gwilym und Enid · Altenteil im Gasthof'], ['Hofzweig', 'Tudur und Bethan · Penrudd-Hof'], ['Lieferung', 'Bezahlte Waren · getrennte Kassen']] },
       { schemaVersion: 1, commentThreadKey: 'tor-personal', pageTitle: 'Die Hände am Roten Tor', hierarchyPage: true, hierarchy: buildTorHierarchy() },
-      { schemaVersion: 1, commentThreadKey: 'tor-speis-trank', pageTitle: 'Olwens Hauskarte · Speis und Trank', tradeCatalogPage: true, tradeCatalog: buildTorMenu() },
+      { schemaVersion: 1, commentThreadKey: 'tor-speis-trank', pageTitle: 'Olwens Hauskarte · Speis und Trank', tradeCatalogPage: true, tradeCatalog: buildTorMenu(drinkCatalogs) },
       buildTorServices(), torGuestRegister(),
       ...TOR_ROOMS.map(room => ({ schemaVersion: 1, commentThreadKey: `tor-${room.id}`, pageTitle: room.title, ...scene(room.id), sessionPage: true,
         sessionIntro: `<p>${room.intro}</p>`, sessionHint: 'Eine Begegnung vor Gwynthors Toren.', sessionEmptyTitle: 'Ein Platz am Feuer',

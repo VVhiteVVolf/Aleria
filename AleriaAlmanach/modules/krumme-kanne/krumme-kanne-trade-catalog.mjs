@@ -1,6 +1,7 @@
 import { KANNE_DISHES, KANNE_IMPORTS } from './krumme-kanne-menu.mjs';
 import { KANNE_DISH_NOTES } from './krumme-kanne-dish-notes.mjs';
 import { fixedTradePrice as fixedPrice, convertStandardGoods } from '../trade-catalog/standard-goods-conversion.mjs';
+import { selectCatalogServing } from '../trade-catalog/catalog-serving-selection.mjs';
 
 const asset = (folder, id) => `./assets/krumme-kanne/${folder}/${id}.png`;
 const paragraphs = texts => texts.map(text => `<p>${text}</p>`).join('');
@@ -27,13 +28,10 @@ export function buildKanneTradeCatalog(page, catalogs) {
       priceNote: '', conditions: d.availability };
   });
   const imports = KANNE_IMPORTS.map(([moduleId, itemId, serving]) => {
-    const source = catalogs.find(c => c.id === moduleId);
-    const item = source?.pages.flatMap(p => p.tradeCatalog?.items || []).find(i => i.id === itemId);
-    const option = item?.priceOptions?.find(o => o.label === serving);
-    if (!item?.image || !option?.price) throw new Error(`Importquelle fehlt: ${moduleId}/${itemId}`);
-    return { ...structuredClone(item), id: `${moduleId}-${itemId}`, category: 'importierte-getraenke',
+    const { source, item, option } = selectCatalogServing(catalogs, moduleId, itemId, serving);
+    return { ...item, id: `${moduleId}-${itemId}`, category: 'importierte-getraenke',
       subtitle: /whisky/.test(itemId) ? 'Import · Whisky' : 'Import · Bier', priceMin: '', priceMax: '',
-      priceOptions: [structuredClone(option)], priceTitle: 'Ausschank in der Kanne',
+      priceOptions: [option], priceTitle: 'Ausschank in der Kanne',
       priceNote: `Ausschankpreis und Größe aus dem Sortiment: ${source.title}.`,
       conditionsTitle: 'Verfügbarkeit', conditions: 'Reguläres Importsortiment. Ausschank nach Fass- und Flaschenvorrat; Elidyr nennt die aktuell geöffneten Abfüllungen.' };
   });

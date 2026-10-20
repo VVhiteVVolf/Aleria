@@ -1,6 +1,6 @@
 {
-  "date": "2026-10-19",
-  "imageCount": 32,
+  "date": "2026-10-20",
+  "imageCount": 38,
   "allAssetHashesMatch": true,
   "allGeneratedFoodAndPortraitPixelsPreserved": true,
   "foodStyle": "fantasy-inventory-item",
@@ -494,7 +494,175 @@
         1232,
         1254
       ]
+    },
+    {
+      "id": "food-bohnen-speckpfanne",
+      "file": "AleriaAlmanach/assets/rotes-tor/food/bohnen-speckpfanne.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "e899d4fe67dbd19779a005f78a973543e5b6eb0f0967b5991e17541566aa0c72",
+      "generatedPixelsPreserved": true,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "fullyTransparentPixels": 789816,
+      "bounds": [
+        0,
+        20,
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "food-apfel-haferbrei",
+      "file": "AleriaAlmanach/assets/rotes-tor/food/apfel-haferbrei.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "25a8587e7c47363f4cfeb93894a099fa1724292244b43720b32bbf38b4405f18",
+      "generatedPixelsPreserved": true,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "fullyTransparentPixels": 717603,
+      "bounds": [
+        0,
+        0,
+        1251,
+        1254
+      ]
+    },
+    {
+      "id": "food-hofeier-speck",
+      "file": "AleriaAlmanach/assets/rotes-tor/food/hofeier-speck.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "2e4cd7cf84157a7b6612e6db141f45d7bd88c96f8597460dd18ee032e432f4e2",
+      "generatedPixelsPreserved": true,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "fullyTransparentPixels": 678131,
+      "bounds": [
+        17,
+        37,
+        1253,
+        1254
+      ]
+    },
+    {
+      "id": "food-dickmilch-beeren",
+      "file": "AleriaAlmanach/assets/rotes-tor/food/dickmilch-beeren.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "61b47328abaddd514ba1d0aeab9fb7b75ebac210426eb9fd67e328e944e6f51e",
+      "generatedPixelsPreserved": true,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "fullyTransparentPixels": 667792,
+      "bounds": [
+        0,
+        23,
+        1207,
+        1254
+      ]
+    },
+    {
+      "id": "food-schweineschulter",
+      "file": "AleriaAlmanach/assets/rotes-tor/food/schweineschulter.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "bedfc201e83ed035eea405fa0bc322a0e4dc52c9d73b63180e1c8081d133e5a3",
+      "generatedPixelsPreserved": true,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "fullyTransparentPixels": 821450,
+      "bounds": [
+        0,
+        19,
+        1253,
+        1254
+      ]
+    },
+    {
+      "id": "food-flussfisch-wurzeln",
+      "file": "AleriaAlmanach/assets/rotes-tor/food/flussfisch-wurzeln.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "0e52e139c7065b748e5d1abeb911bccb9c370d951d675f5736d9d752dd473fc0",
+      "generatedPixelsPreserved": true,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "fullyTransparentPixels": 759959,
+      "bounds": [
+        0,
+        25,
+        1245,
+        1254
+      ]
     }
   ],
-  "release": "local-only"
+  "release": "push-only; deployment remains on hold"
 }

@@ -6,17 +6,27 @@ import { TOR_CAPACITY } from './tor-rooms.mjs';
 import { TOR_SERVICES } from './tor-services.mjs';
 import { TOR_WORKING_PEOPLE, penruddPerson } from './tor-people.mjs';
 
-const mealShares = Object.freeze({ hofbrot: .18, lauchgerstensuppe: .08, 'roter-tortopf': .22,
-  'huhn-wurzelsud': .10, kohlpfanne: .10, rinderbraten: .03, 'apfel-haferauflauf': .08, fuhrmannsbeutel: .05 });
+// More choice redistributes the same .84 food portions per visit. It does not
+// create additional customers or a full serving of every new dish per guest.
+const mealShares = Object.freeze({ hofbrot: .09, lauchgerstensuppe: .04, 'roter-tortopf': .12,
+  'huhn-wurzelsud': .06, kohlpfanne: .06, rinderbraten: .025, 'apfel-haferauflauf': .055, fuhrmannsbeutel: .05,
+  'apfel-haferbrei': .07, 'hofeier-speck': .07, 'dickmilch-beeren': .04,
+  'bohnen-speckpfanne': .08, schweineschulter: .04, 'flussfisch-wurzeln': .04 });
 
 function torGoodsChannels(entry) {
-  const offers = readVenueOffers(entry), drinks = offers.filter(offer => offer.category === 'getraenke');
-  return offers.map(offer => ({ id: `tor-gut-${offer.itemId}`, label: offer.title, unit: offer.unit, unitCopper: offer.unitCopper,
-    basis: 'visits', quantity: mealShares[offer.itemId] ?? 1.7 / drinks.length,
-    materialRatio: mealShares[offer.itemId] != null ? .52 : .48, lossRate: .05,
+  const offers = readVenueOffers(entry), ordinary = offers.filter(offer => offer.category === 'getraenke'), imports = offers.filter(offer => offer.category === 'importbiere');
+  return offers.map(offer => {
+    const foodShare = mealShares[offer.itemId], imported = offer.category === 'importbiere';
+    if (foodShare == null && !imported && offer.category !== 'getraenke') throw Error(`Absatzansatz fehlt für ${offer.title}`);
+    const quantity = foodShare ?? (imported ? 1.7 * .2 / imports.length : 1.7 * .8 / ordinary.length);
+    return { id: `tor-gut-${offer.itemId}`, label: offer.title, unit: offer.unit, unitCopper: offer.unitCopper,
+    basis: 'visits', quantity,
+    materialRatio: foodShare != null ? .52 : imported ? .62 : .48, lossRate: .05,
     maxWeekly: offer.itemId === 'rinderbraten' ? 18 : null, source: offer.source,
     note: offer.itemId === 'rinderbraten' ? 'Höchstens 18 Portionen an einem angekündigten Bratentag je Neuntagewoche. Ohne Lieferung ist der Absatz auf null zu setzen.'
-      : 'Änderbarer Anteil je Schankbesuch; Hoflieferungen und weitere Einkäufe sind im Wareneinsatz enthalten.' }));
+      : imported ? 'Ein Fünftel des unveränderten Getränkemengenansatzes entfällt auf Zunftbier. Einkauf und Lieferung sind im höheren Materialanteil enthalten.'
+        : 'Änderbarer Anteil je Schankbesuch; Hoflieferungen und weitere Einkäufe sind im Wareneinsatz enthalten.' };
+  });
 }
 
 function torServiceChannels(entry, days) {
@@ -65,6 +75,7 @@ export function buildTorEconomyPage(entry, calendar) {
       'Carwyn und Olwen erhalten keine zusätzliche feste Lohnzeile: ihre gemeinsame Haushaltsentnahme beträgt modellhaft 54 KT pro Woche. Sie umfasst ihren Unterhalt sowie den Anteil der Kinder und des Altenteils. Die sechs übrigen mitarbeitenden Erwachsenen erhalten die ausgewiesene Familienvergütung und persönliche Kost/Logis.',
       'Gwilym, Enid und die vier Kinder sind keine regulären Arbeitskräfte. Tudur, Bethan, Meurig, Nia, Gethin, Eluned und die Hofkinder gehören nicht zur Herbergsbelegschaft. Ihre Lieferungen werden über die Materialkosten bezahlt, nicht über zusätzliche Lohnzeilen.',
       'Die Einkaufsanteile enthalten Lebensmittel und Futter bis zum Haus einschließlich bezahlter Hoflieferungen. Gewöhnlicher Schwund wird beim Ausschank und bei Speisen berücksichtigt; es gibt keinen Magiebonus und keine kostenlose Vollversorgung vom Hof.',
+      'Die größere Karte verteilt weiterhin 0,84 Speisenportionen und 1,7 Getränke je Besuch auf mehr Auswahl. 20 % der Getränkemenge sind günstige Zunftbiere mit höherem Einkaufsanteil. Neue Gerichte und Importe erzeugen weder zusätzliche Gäste noch zusätzliche Dienststellen.',
       'Zwei Einzel- und vier Doppelkammern ergeben sechs vermietbare Kammern beziehungsweise zehn Betten. Frühstück ist ein eigener Speisenkauf. Stalltarif und Wareneinsatz enthalten Heu, gewöhnlichen Hafer, Wasser und Einstreu; kein zweites Futterangebot für dieselbe Nacht.',
       'Der Bratenabsatz ist auf 18 Portionen pro Neuntagewoche begrenzt. Erhält das Haus kein Rind, muss diese Menge auf null gesetzt werden. Die Jahresprojektion kennt noch keine Ernte-, Wetter- oder Festtagssaison.',
       '12 KT Wochenpacht, 36 KT laufende Sachkosten, 10 KT Erneuerungsrücklage und 2 % Betriebsabgabe sind offene Ansätze. Ein Grundstückseigentümer, bestätigter Pachtvertrag, Schuldstand oder vorhandenes Vermögen wird daraus nicht behauptet. Die Kirchenabgabe bleibt optional.',

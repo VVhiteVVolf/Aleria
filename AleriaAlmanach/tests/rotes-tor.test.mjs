@@ -12,8 +12,9 @@ import { readEconomyCalendar } from '../modules/economy-calculator/economy-sourc
 import { calculateBusiness, projectBusiness } from '../modules/economy-calculator/economy-engine.mjs';
 import { readVenueOffers, readVenueServices } from '../modules/economy-calculator/economy-venue-offers.mjs';
 import { evaluateVenueScope } from '../modules/economy-calculator/economy-venue-scope.mjs';
+import { readBreweryCatalogs } from '../modules/brewer-guilds/brewery-catalog-source.mjs';
 
-const calendar = await readEconomyCalendar(), entry = buildRotesTor(calendar), root = new URL('../../', import.meta.url);
+const calendar = await readEconomyCalendar(), drinkCatalogs = await readBreweryCatalogs(), entry = buildRotesTor(calendar, drinkCatalogs), root = new URL('../../', import.meta.url);
 
 test('the complete inn is registered once in the rural folder and exports all twelve pages', async () => {
   assert.equal(entry.id, TOR_ID);
@@ -54,7 +55,7 @@ test('hierarchy reuses existing identities and excludes children, pensioners and
 
 test('meal portions and room or stall tariffs stay separate instead of selling included services twice', () => {
   const menu = entry.pages.find(page => page.tradeCatalogPage).tradeCatalog;
-  assert.equal(menu.items.length, 16);
+  assert.equal(menu.items.length, 26);
   assert.ok(menu.items.filter(item => item.image.includes('/food/')).every(item => item.imageFormat === 'square'));
   assert.equal(TOR_SERVICES.length, 6);
   const scenario = entry.pages.at(-1).economyCalculation.scenario, result = calculateBusiness(scenario, calendar);
@@ -63,6 +64,12 @@ test('meal portions and room or stall tariffs stay separate instead of selling i
   assert.equal(scenario.workers.filter(worker => worker.kind === 'family').length, 6);
   assert.ok(result.workers.filter(worker => worker.kind === 'vacancy').every(worker => worker.cash + worker.board === 0));
   for (const offer of readVenueOffers(entry)) assert.equal(scenario.channels.find(channel => channel.id === `tor-gut-${offer.itemId}`).unitCopper, offer.unitCopper);
+  const foodIds = new Set(menu.items.filter(item => item.image.includes('/food/')).map(item => `tor-gut-${item.id}`));
+  const foodShare = scenario.channels.filter(channel => foodIds.has(channel.id)).reduce((sum, channel) => sum + channel.quantity, 0);
+  const drinkShare = scenario.channels.filter(channel => channel.id.startsWith('tor-gut-') && !foodIds.has(channel.id)).reduce((sum, channel) => sum + channel.quantity, 0);
+  assert.ok(Math.abs(foodShare - .84) < 1e-10, 'a larger menu redistributes meals instead of creating extra visits');
+  assert.ok(Math.abs(drinkShare - 1.7) < 1e-10);
+  assert.ok(scenario.channels.filter(channel => channel.id.startsWith('tor-gut-tor-import-')).every(channel => channel.materialRatio > .48));
   for (const service of readVenueServices(entry)) assert.ok(scenario.channels.some(channel => channel.source === service.source && channel.unitCopper === service.unitCopper));
   assert.equal(scenario.channels.filter(channel => /tor-dienst-.*kammer$/.test(channel.id)).reduce((sum, channel) => sum + channel.quantity, 0), 6);
   assert.equal(TOR_CAPACITY.singleRooms + TOR_CAPACITY.doubleRooms * 2, 10);
@@ -83,7 +90,7 @@ test('the final authored calculator survives normalization and rebuilt instances
   const normalized = context.AleriaEconomy.upgradeEntry(local, TOR_SECTION);
   assert.equal(normalized.pages.filter(page => page.economyCalculationPage).length, 1);
   assert.equal(normalized.pages.at(-1).economyCalculation.scenario.workers.find(worker => worker.name === 'Cerys').days, 2);
-  assert.equal(buildRotesTor(calendar).pages.at(-1).economyCalculation.scenario.workers.find(worker => worker.name === 'Cerys').days, 3);
+  assert.equal(buildRotesTor(calendar, drinkCatalogs).pages.at(-1).economyCalculation.scenario.workers.find(worker => worker.name === 'Cerys').days, 3);
 });
 
 test('the empty guest register and four scenes contain no fabricated guests or inherited scene clocks', () => {

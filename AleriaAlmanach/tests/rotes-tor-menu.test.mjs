@@ -6,11 +6,14 @@ import { STANDARD_ITEMS } from '../modules/item-register/item-register-standard.
 import { buildTorMenu, TOR_DISHES, TOR_STANDARD_DRINK_IDS } from '../modules/rotes-tor/tor-menu.mjs';
 import { PENRUDD_PEOPLE } from '../modules/rotes-tor/penrudd-household.mjs';
 import { PENRUDD_APPEARANCES } from '../modules/rotes-tor/penrudd-appearances.mjs';
+import { readBreweryCatalogs } from '../modules/brewer-guilds/brewery-catalog-source.mjs';
+import { TOR_BEER_SELECTION } from '../modules/rotes-tor/tor-beer.mjs';
+const drinkCatalogs = await readBreweryCatalogs();
 
 test('the inn preserves canonical prices and portions instead of inventing a second standard assortment', () => {
-  const menu = buildTorMenu();
-  assert.equal(menu.items.length, 16);
-  assert.equal(new Set(menu.items.map(item => item.id)).size, 16);
+  const menu = buildTorMenu(drinkCatalogs);
+  assert.equal(menu.items.length, 26);
+  assert.equal(new Set(menu.items.map(item => item.id)).size, 26);
   for (const id of TOR_STANDARD_DRINK_IDS) {
     const source = STANDARD_ITEMS.find(item => item.id === id);
     const serving = menu.items.find(item => item.canonicalKey === id);
@@ -19,13 +22,13 @@ test('the inn preserves canonical prices and portions instead of inventing a sec
     assert.equal(Number(serving.priceMin.replace(',', '.')), source.priceRange.minCopper, id);
     assert.equal(serving.priceMax ? Number(serving.priceMax.replace(',', '.')) : source.priceRange.minCopper, source.priceRange.maxCopper, id);
   }
-  assert.equal(TOR_DISHES.length, 8);
+  assert.equal(TOR_DISHES.length, 14);
   assert.ok(menu.items.filter(item => item.image.includes('/food/')).every(item => item.imageFormat === 'square'));
   assert.equal(menu.items.find(item => item.id === 'roter-tortopf').priceMin, '1,4');
   assert.match(TOR_DISHES.find(item => item.id === 'rinderbraten').availability, /Neuntagewoche/);
   assert.ok(TOR_DISHES.every(item => item.portion && item.supply && item.availability));
   menu.items[0].features.push('Local preview edit');
-  assert.ok(!buildTorMenu().items[0].features.includes('Local preview edit'));
+  assert.ok(!buildTorMenu(drinkCatalogs).items[0].features.includes('Local preview edit'));
 });
 
 test('all born Penrudds have brown eyes and brown or age-gray hair, without changing the genealogy', () => {
@@ -49,8 +52,8 @@ test('all born Penrudds have brown eyes and brown or age-gray hair, without chan
 
 test('every commissioned portrait and dish is saved locally and connected to its consuming data', async () => {
   const results = JSON.parse(await readFile(new URL('../assets/rotes-tor/image-results.json', import.meta.url), 'utf8'));
-  assert.equal(results.images.length, 32);
-  assert.equal(new Set(results.images.map(image => image.destination)).size, 32);
+  assert.equal(results.images.length, 38);
+  assert.equal(new Set(results.images.map(image => image.destination)).size, 38);
   for (const person of PENRUDD_PEOPLE) {
     await access(new URL(`../${person.portrait.replace('./', '')}`, import.meta.url));
     const record = results.images.find(image => image.personId === person.id);
@@ -58,7 +61,32 @@ test('every commissioned portrait and dish is saved locally and connected to its
     assert.equal(fileURLToPath(new URL(`../../${record.destination}`, import.meta.url)),
       fileURLToPath(new URL(`../${person.portrait.replace('./', '')}`, import.meta.url)));
   }
-  for (const item of buildTorMenu().items.filter(item => item.image.startsWith('./'))) {
+  for (const item of buildTorMenu(drinkCatalogs).items.filter(item => item.image.startsWith('./'))) {
     await access(new URL(`../${item.image.replace('./', '')}`, import.meta.url));
   }
+});
+
+test('the larger card adds three breakfasts and the requested complete bean skillet', () => {
+  const breakfasts = TOR_DISHES.filter(item => item.category === 'fruehstueck');
+  assert.equal(breakfasts.length, 3);
+  assert.ok(breakfasts.every(item => /Morgens/.test(item.availability)));
+  const beans = TOR_DISHES.find(item => item.id === 'bohnen-speckpfanne');
+  for (const ingredient of [/Bohnen/, /Tomatensauce/, /speck/i, /Scheibe.*Bauernbrot/]) assert.match(beans.description, ingredient);
+  assert.ok(TOR_DISHES.some(item => item.id === 'schweineschulter'));
+  assert.match(TOR_DISHES.find(item => item.id === 'flussfisch-wurzeln').availability, /frischer Fischlieferung/);
+});
+
+test('affordable imported beer keeps exact source prices, portions, origin and pictures', () => {
+  const imported = buildTorMenu(drinkCatalogs).items.filter(item => item.category === 'importbiere');
+  assert.equal(imported.length, 4);
+  for (const [moduleId, itemId, label] of TOR_BEER_SELECTION) {
+    const source = drinkCatalogs.find(entry => entry.id === moduleId).pages.flatMap(page => page.tradeCatalog?.items || []).find(item => item.id === itemId);
+    const item = imported.find(item => item.id === `tor-import-${itemId}`);
+    assert.equal(item.image, source.image);
+    assert.equal(item.origin, source.origin);
+    assert.deepEqual(item.priceOptions, [source.priceOptions.find(option => option.label === label)]);
+    assert.equal(item.priceOptions[0].unit, '0,5 l');
+    assert.ok(Number(item.priceOptions[0].price.replace(',', '.')) <= 2);
+  }
+  assert.ok(imported.every(item => !/whisky|goldhaube|drachenblut|brandhorn|hakenbraeu/.test(item.id)));
 });

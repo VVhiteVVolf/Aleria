@@ -2,8 +2,9 @@ import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { buildRotesTor, TOR_SECTION } from '../modules/rotes-tor/tor-module.mjs';
 import { readEconomyCalendar } from '../modules/economy-calculator/economy-source-venues.mjs';
 import { renderArchiveSectionRegistration } from '../modules/archive/archive-section-registration.mjs';
+import { readBreweryCatalogs } from '../modules/brewer-guilds/brewery-catalog-source.mjs';
 
-const entry = buildRotesTor(await readEconomyCalendar());
+const entry = buildRotesTor(await readEconomyCalendar(), await readBreweryCatalogs());
 const directory = new URL('../../Charakter Archiv Exporte/Module/Zum Roten Tor/', import.meta.url);
 const packageData = { type: 'aleria-module-package', version: 1, exportedAt: '2026-10-20T00:00:00Z',
   module: { type: 'aleria-module', version: 1, section: TOR_SECTION, entry } };
@@ -17,4 +18,5 @@ for (const [url, content] of outputs) {
     if (await readFile(url, 'utf8') !== content) throw Error(`Veraltetes Rotes-Tor-Paket: ${url}`);
   } else { await mkdir(new URL('.', url), { recursive: true }); await writeFile(url, content); }
 }
-console.log(JSON.stringify({ module: entry.id, pages: entry.pages.length, scenes: 4, goods: 16, services: 6, activeAdults: 8, deployment: 'withheld' }));
+console.log(JSON.stringify({ module: entry.id, pages: entry.pages.length, scenes: 4,
+  goods: entry.pages.find(page => page.tradeCatalogPage).tradeCatalog.items.length, services: 6, activeAdults: 8, deployment: 'withheld' }));

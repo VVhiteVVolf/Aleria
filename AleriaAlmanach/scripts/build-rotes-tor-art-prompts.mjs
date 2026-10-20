@@ -24,7 +24,7 @@ const portraits = PENRUDD_PORTRAIT_ORDER.map(key => {
 const food = TOR_DISHES.map(item => foodInventoryJob({ id: `food-${item.id}`, key: item.id,
   destination: `${art}/food/${item.id}.png`, visual: item.visual,
   preset: presets.presets['fantasy-inventory-item'].prompt }));
-const result = { schemaVersion: 1, date: '2026-10-19', tool: 'built-in image_gen',
+const result = { schemaVersion: 1, date: '2026-10-20', tool: 'built-in image_gen',
   stylePresets: { portraits: 'anime-scene-portrait', food: 'fantasy-inventory-item' }, entries: [...portraits, ...food] };
 await mkdir(new URL(`${art}/portraits/`, root), { recursive: true });
 await mkdir(new URL(`${art}/food/`, root), { recursive: true });

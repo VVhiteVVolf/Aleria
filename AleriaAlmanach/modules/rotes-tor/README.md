@@ -3,7 +3,7 @@
 Das vollständige Gasthofmodul ist seit dem 20. Oktober 2026 angelegt und im
 Almanach unter **Cenyr → Celtigerns Wacht → Llamreis Ankunft → Bannkreis
 Gwynthor → Zum Roten Tor** eingebunden. Es verwendet die bestehende Familie,
-deren 24 Porträts, das Wappen und die acht Speisen- und acht Getränkeangebote.
+deren 24 Porträts, das Wappen und die auf 14 Gerichte und zwölf Getränke erweiterte Karte.
 Fünf neue Ortsbilder ergänzen den Bestand. Der eigenständige Hof bleibt ein
 Karteneintrag und Lieferant; ein separates Hofmodul wurde nicht erstellt.
 
@@ -127,6 +127,13 @@ node AleriaAlmanach/tests/rotes-tor.browser.mjs
 auf die vorhandene Familie. Registrierung und JSON-Paket erzeugt der Build
 mit der gemeinsamen Archivregistrierung; wiederholtes Laden dupliziert nichts.
 
+`tor-dishes.mjs` hält die Rezepte getrennt von der Güterdarstellung in
+`tor-menu.mjs`. `tor-beer.mjs` wählt vier günstige Ausschankbiere aus den
+aktuellen Zunftkatalogen. Der Node-Adapter
+`brewer-guilds/brewery-catalog-source.mjs` liest diese erzeugten Kataloge;
+`trade-catalog/catalog-serving-selection.mjs` übernimmt die jeweilige
+Ausschankeinheit samt Preis und Bild. Auch die Kanne verwendet diese Auswahl.
+
 ## Kalkulation
 
 `tor-economy.mjs` verwendet das gemeinsame Geld-, Kalender-, Personal- und
@@ -144,6 +151,11 @@ Abgaben bleiben sichtbare Annahmen; Vermögen, Schulden und Grundeigentümer
 sind nicht erhoben. Ein reicher Stadtlebensstandard wird nicht automatisch auf
 den ländlichen Gasthof übertragen. Der gemeinsame Wirtschaftsbericht übernimmt
 die eigene Kalkulation statt sie durch ein generisches Ladenprofil zu ersetzen.
+
+Die Kartenerweiterung verteilt dieselben 0,84 Speisen und 1,7 Getränke je
+Schankbesuch auf mehr Auswahl. Ein Fünftel der Getränkemenge entfällt auf
+die vier Zunftbiere; ihr höherer Einkaufsanteil enthält den bezahlten Bezug.
+Mehr Auswahl erhöht weder automatisch die Gästezahl noch die Belegschaft.
 
 ## Ortsbilder
 
@@ -165,16 +177,22 @@ und vollständig bekleidet dargestellt.
 
 ## Hauskarte
 
-`tor-menu.mjs` ist die Quelle für Portionen, Preise und Herkunft. Der Hof liefert
+`tor-dishes.mjs` ist die Quelle für Speisenportionen, Preise und Herkunft. Der Hof liefert
 einen Teil der Zutaten gegen Bezahlung; weitere Waren werden zugekauft.
 
 | Gericht | Preis |
 | --- | --- |
+| Warmer Apfel-Haferbrei | 55 Pfennig |
+| Hofeier mit Speck und Brot | 1,8 Kupfertaler |
+| Dickmilch mit Beeren und Hafer | 75 Pfennig |
 | Hofbrot mit Butter und Käse | 70 Pfennig |
 | Lauch- und Gerstensuppe | 60 Pfennig |
 | Roter Tortopf | 1,4 Kupfertaler |
 | Olwens Huhn im Wurzelsud | 2,4 Kupfertaler |
 | Kohlpfanne mit Ei | 1,1 Kupfertaler |
+| Bohnenpfanne mit Tomate und Speck, dazu Brot | 1,8 Kupfertaler |
+| Geschmorte Schweineschulter mit Gerste | 2,8 Kupfertaler |
+| Gebratener Flussfisch mit Wurzeln | 2,2 Kupfertaler |
 | Braten vom Hofrind | 4 Kupfertaler |
 | Warmer Apfel-Haferauflauf | 65 Pfennig |
 | Fuhrmannsbeutel | 1,2 Kupfertaler |
@@ -183,6 +201,16 @@ Der Braten ist nur an einem angekündigten Bratentag je Neuntagewoche und nach
 Lieferlage erhältlich. Sieben gewöhnliche Getränke übernehmen Preis, Portion,
 Waren-ID und Bild aus dem gemeinsamen Standardsortiment; dazu kommt schlichter
 roter Tischwein zu 80 Pfennig je 0,20-l-Becher.
+
+Als günstiger Zunftbezug ergänzen **Sonnenglanz (0,60 KT), Hopfgold (1,30 KT)
+und Dämmerkrone (1,95 KT)** von Teyrngarch sowie **Goldschuppen (2 KT)** von
+Penderyn den Ausschank. Alle vier Preise gelten für einen Krug mit 0,5 l und
+werden samt Originalbild unverändert aus dem aktuellen Zunftkatalog übernommen.
+Es gibt dadurch keine neue Gildenmitgliedschaft des Gasthofs.
+
+Die drei neuen Frühstücke werden morgens angeboten. Tomaten kommen nach Saison
+oder eingekocht aus regionalem Einkauf, Speck und Schweineschulter vom örtlichen
+Fleischer. Das Fischgericht bleibt ohne passende frische Lieferung aus.
 
 Alle Gerichte sind quadratische, freigestellte Inventar-Icons mit echtem
 PNG-Alphakanal nach `fantasy-inventory-item`. Der erste Brot-Entwurf im

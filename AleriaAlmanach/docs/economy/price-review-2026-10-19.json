@@ -4,9 +4,9 @@
   "moneyUnit": "Kupfertaler",
   "method": "Interne Konsistenzprüfung einer fiktiven Wirtschaft. Vergleichsskala: 24 KT sparsamer Vierpersonenbedarf + 3 KT freie Mittel; 27 KT Hafenlohn bei sechs Diensttagen. Keine historische Preisstatistik.",
   "summary": {
-    "rows": 1135,
+    "rows": 1145,
     "adjusted": 144,
-    "retained": 784,
+    "retained": 794,
     "notOffered": 205,
     "unavailable": 2,
     "eligibleVenues": 15,
@@ -17898,6 +17898,75 @@
       "moduleId": "zum-roten-tor",
       "pageIndex": 4,
       "itemIndex": 0,
+      "id": "apfel-haferbrei",
+      "optionIndex": 0,
+      "name": "Warmer Apfel-Haferbrei",
+      "unit": "Eine Frühstücksschale",
+      "price": {
+        "minCopper": 0.55,
+        "maxCopper": 0.55
+      },
+      "category": "fruehstueck",
+      "status": "available",
+      "before": null,
+      "after": [
+        0.55,
+        0.55
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Zum Roten Tor",
+      "moduleId": "zum-roten-tor",
+      "pageIndex": 4,
+      "itemIndex": 1,
+      "id": "hofeier-speck",
+      "optionIndex": 0,
+      "name": "Hofeier mit Speck und Brot",
+      "unit": "Zwei Eier mit Speck und einer Scheibe Brot",
+      "price": {
+        "minCopper": 1.8,
+        "maxCopper": 1.8
+      },
+      "category": "fruehstueck",
+      "status": "available",
+      "before": null,
+      "after": [
+        1.8,
+        1.8
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Zum Roten Tor",
+      "moduleId": "zum-roten-tor",
+      "pageIndex": 4,
+      "itemIndex": 2,
+      "id": "dickmilch-beeren",
+      "optionIndex": 0,
+      "name": "Dickmilch mit Beeren und Hafer",
+      "unit": "Eine kleine Frühstücksschale",
+      "price": {
+        "minCopper": 0.75,
+        "maxCopper": 0.75
+      },
+      "category": "fruehstueck",
+      "status": "available",
+      "before": null,
+      "after": [
+        0.75,
+        0.75
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Zum Roten Tor",
+      "moduleId": "zum-roten-tor",
+      "pageIndex": 4,
+      "itemIndex": 3,
       "id": "hofbrot",
       "optionIndex": 0,
       "name": "Hofbrot mit Butter und Käse",
@@ -17920,7 +17989,7 @@
       "source": "Zum Roten Tor",
       "moduleId": "zum-roten-tor",
       "pageIndex": 4,
-      "itemIndex": 1,
+      "itemIndex": 4,
       "id": "lauchgerstensuppe",
       "optionIndex": 0,
       "name": "Lauch- und Gerstensuppe",
@@ -17943,7 +18012,7 @@
       "source": "Zum Roten Tor",
       "moduleId": "zum-roten-tor",
       "pageIndex": 4,
-      "itemIndex": 2,
+      "itemIndex": 5,
       "id": "roter-tortopf",
       "optionIndex": 0,
       "name": "Roter Tortopf",
@@ -17966,7 +18035,7 @@
       "source": "Zum Roten Tor",
       "moduleId": "zum-roten-tor",
       "pageIndex": 4,
-      "itemIndex": 3,
+      "itemIndex": 6,
       "id": "huhn-wurzelsud",
       "optionIndex": 0,
       "name": "Olwens Huhn im Wurzelsud",
@@ -17989,7 +18058,7 @@
       "source": "Zum Roten Tor",
       "moduleId": "zum-roten-tor",
       "pageIndex": 4,
-      "itemIndex": 4,
+      "itemIndex": 7,
       "id": "kohlpfanne",
       "optionIndex": 0,
       "name": "Kohlpfanne mit Ei",
@@ -18012,7 +18081,76 @@
       "source": "Zum Roten Tor",
       "moduleId": "zum-roten-tor",
       "pageIndex": 4,
-      "itemIndex": 5,
+      "itemIndex": 8,
+      "id": "bohnen-speckpfanne",
+      "optionIndex": 0,
+      "name": "Bohnenpfanne mit Tomate und Speck",
+      "unit": "Eine kräftige Pfanne mit einer Scheibe Brot",
+      "price": {
+        "minCopper": 1.8,
+        "maxCopper": 1.8
+      },
+      "category": "hofgerichte",
+      "status": "available",
+      "before": null,
+      "after": [
+        1.8,
+        1.8
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Zum Roten Tor",
+      "moduleId": "zum-roten-tor",
+      "pageIndex": 4,
+      "itemIndex": 9,
+      "id": "schweineschulter",
+      "optionIndex": 0,
+      "name": "Geschmorte Schweineschulter mit Gerste",
+      "unit": "Ein Teller mit Gerste und Kraut",
+      "price": {
+        "minCopper": 2.8,
+        "maxCopper": 2.8
+      },
+      "category": "hofgerichte",
+      "status": "available",
+      "before": null,
+      "after": [
+        2.8,
+        2.8
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Zum Roten Tor",
+      "moduleId": "zum-roten-tor",
+      "pageIndex": 4,
+      "itemIndex": 10,
+      "id": "flussfisch-wurzeln",
+      "optionIndex": 0,
+      "name": "Gebratener Flussfisch mit Wurzeln",
+      "unit": "Ein kleiner ganzer Fisch mit Gemüse",
+      "price": {
+        "minCopper": 2.2,
+        "maxCopper": 2.2
+      },
+      "category": "hofgerichte",
+      "status": "available",
+      "before": null,
+      "after": [
+        2.2,
+        2.2
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Zum Roten Tor",
+      "moduleId": "zum-roten-tor",
+      "pageIndex": 4,
+      "itemIndex": 11,
       "id": "rinderbraten",
       "optionIndex": 0,
       "name": "Braten vom Hofrind",
@@ -18035,7 +18173,7 @@
       "source": "Zum Roten Tor",
       "moduleId": "zum-roten-tor",
       "pageIndex": 4,
-      "itemIndex": 6,
+      "itemIndex": 12,
       "id": "apfel-haferauflauf",
       "optionIndex": 0,
       "name": "Warmer Apfel-Haferauflauf",
@@ -18058,7 +18196,7 @@
       "source": "Zum Roten Tor",
       "moduleId": "zum-roten-tor",
       "pageIndex": 4,
-      "itemIndex": 7,
+      "itemIndex": 13,
       "id": "fuhrmannsbeutel",
       "optionIndex": 0,
       "name": "Fuhrmannsbeutel",
@@ -18081,7 +18219,7 @@
       "source": "Zum Roten Tor",
       "moduleId": "zum-roten-tor",
       "pageIndex": 4,
-      "itemIndex": 8,
+      "itemIndex": 14,
       "id": "tor-standard-duennes-bier",
       "optionIndex": 0,
       "name": "Dünnes gewässertes Bier",
@@ -18104,7 +18242,7 @@
       "source": "Zum Roten Tor",
       "moduleId": "zum-roten-tor",
       "pageIndex": 4,
-      "itemIndex": 9,
+      "itemIndex": 15,
       "id": "tor-standard-starkbier",
       "optionIndex": 0,
       "name": "Einfaches Starkbier",
@@ -18127,7 +18265,7 @@
       "source": "Zum Roten Tor",
       "moduleId": "zum-roten-tor",
       "pageIndex": 4,
-      "itemIndex": 10,
+      "itemIndex": 16,
       "id": "tor-standard-klosterbier",
       "optionIndex": 0,
       "name": "Klosterbier",
@@ -18150,7 +18288,7 @@
       "source": "Zum Roten Tor",
       "moduleId": "zum-roten-tor",
       "pageIndex": 4,
-      "itemIndex": 11,
+      "itemIndex": 17,
       "id": "tor-standard-apfelwein",
       "optionIndex": 0,
       "name": "Apfelwein",
@@ -18173,7 +18311,7 @@
       "source": "Zum Roten Tor",
       "moduleId": "zum-roten-tor",
       "pageIndex": 4,
-      "itemIndex": 12,
+      "itemIndex": 18,
       "id": "tor-standard-wasser",
       "optionIndex": 0,
       "name": "Wasser",
@@ -18196,7 +18334,7 @@
       "source": "Zum Roten Tor",
       "moduleId": "zum-roten-tor",
       "pageIndex": 4,
-      "itemIndex": 13,
+      "itemIndex": 19,
       "id": "tor-standard-kraeuteraufguss",
       "optionIndex": 0,
       "name": "Kräuteraufguss",
@@ -18219,7 +18357,7 @@
       "source": "Zum Roten Tor",
       "moduleId": "zum-roten-tor",
       "pageIndex": 4,
-      "itemIndex": 14,
+      "itemIndex": 20,
       "id": "tor-standard-branntwein",
       "optionIndex": 0,
       "name": "Einfacher Branntwein",
@@ -18242,7 +18380,99 @@
       "source": "Zum Roten Tor",
       "moduleId": "zum-roten-tor",
       "pageIndex": 4,
-      "itemIndex": 15,
+      "itemIndex": 21,
+      "id": "tor-import-bier-sonnenglanz",
+      "optionIndex": 0,
+      "name": "Sonnenglanz",
+      "unit": "0,5 l",
+      "price": {
+        "minCopper": 0.6,
+        "maxCopper": 0.6
+      },
+      "category": "importbiere",
+      "status": "available",
+      "before": null,
+      "after": [
+        0.6,
+        0.6
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Zum Roten Tor",
+      "moduleId": "zum-roten-tor",
+      "pageIndex": 4,
+      "itemIndex": 22,
+      "id": "tor-import-bier-hopfgold",
+      "optionIndex": 0,
+      "name": "Hopfgold",
+      "unit": "0,5 l",
+      "price": {
+        "minCopper": 1.3,
+        "maxCopper": 1.3
+      },
+      "category": "importbiere",
+      "status": "available",
+      "before": null,
+      "after": [
+        1.3,
+        1.3
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Zum Roten Tor",
+      "moduleId": "zum-roten-tor",
+      "pageIndex": 4,
+      "itemIndex": 23,
+      "id": "tor-import-bier-daemmerkrone",
+      "optionIndex": 0,
+      "name": "Dämmerkrone",
+      "unit": "0,5 l",
+      "price": {
+        "minCopper": 1.95,
+        "maxCopper": 1.95
+      },
+      "category": "importbiere",
+      "status": "available",
+      "before": null,
+      "after": [
+        1.95,
+        1.95
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Zum Roten Tor",
+      "moduleId": "zum-roten-tor",
+      "pageIndex": 4,
+      "itemIndex": 24,
+      "id": "tor-import-bier-goldschuppen",
+      "optionIndex": 0,
+      "name": "Goldschuppen Bier",
+      "unit": "0,5 l",
+      "price": {
+        "minCopper": 2,
+        "maxCopper": 2
+      },
+      "category": "importbiere",
+      "status": "available",
+      "before": null,
+      "after": [
+        2,
+        2
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Zum Roten Tor",
+      "moduleId": "zum-roten-tor",
+      "pageIndex": 4,
+      "itemIndex": 25,
       "id": "tischwein-rot",
       "optionIndex": 0,
       "name": "Einfacher roter Tischwein",

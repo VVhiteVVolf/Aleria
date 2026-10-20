@@ -74,6 +74,7 @@ export const SITE_BUILD_TASKS = [
     id: 'rotes-tor', label: 'Penrudd inn, services, rooms and authored economics',
     inputs: ['AleriaAlmanach/modules/rotes-tor/', 'AleriaAlmanach/assets/rotes-tor/',
       'AleriaAlmanach/scripts/build-rotes-tor.mjs', 'AleriaAlmanach/modules/guest-register/',
+      'AleriaAlmanach/modules/brewer-guilds/',
       'AleriaAlmanach/modules/archive/archive-section-registration.mjs',
       'AleriaAlmanach/modules/economy-calculator/', 'AleriaAlmanach/modules/item-register/',
       'AleriaAlmanach/modules/trade-catalog/', 'AleriaAlmanach/AleriaAlmanach.html',
