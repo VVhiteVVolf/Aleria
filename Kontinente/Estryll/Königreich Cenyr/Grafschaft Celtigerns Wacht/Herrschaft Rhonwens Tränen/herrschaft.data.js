@@ -27,11 +27,13 @@
       data.family("Rhenna", { familyId: "haus-rhenna", housePage: "kleinehaeuser.html", imageSrc: `${houseRoot}/Ritterliche/Rhenna.png`, seat: "Rhonwens Tränen", liege: "Arwydd" }),
       data.family("Madryn", { familyId: "haus-madryn", housePage: "kleinehaeuser.html", imageSrc: `${houseRoot}/Ritterliche/Madryn.png`, seat: "Rhonwens Tränen", liege: "Arwydd" }),
       data.family("Talinvyr", { familyId: "haus-talinvyr", housePage: "kleinehaeuser.html", imageSrc: `${houseRoot}/Ritterliche/Talinvyr.png`, seat: "Rhonwens Tränen", liege: "Arwydd" }),
-      data.family("Merek", { familyId: "haus-merek", housePage: "kleinehaeuser.html", imageSrc: `${houseRoot}/Ritterliche/Merek.png`, seat: "Rhonwens Tränen", liege: "Arwydd" }),
+      data.family("Merek", { familyId: "haus-merek", housePage: "kleinehaeuser.html", imageSrc: `${houseRoot}/Ritterliche/Merek.png`, seat: "Caer Creigfryn · neu zugesprochen", liege: "Arwydd" }),
+    ]),
+    data.familySection("Entmachtetes Ritterhaus", [
+      data.family("Skellor", { familyId: "haus-skellor", housePage: "kleinehaeuser.html", imageSrc: `${houseRoot}/Ritterliche/Skellor.png`, seat: "Caer Creigfryn · verloren 1720", liege: "Ehemals Illysywen" }),
     ]),
     data.familySection("Ausgestorbene Häuser", [
       data.family("Illysywen", { familyId: "haus-illysywen", housePage: "haus.html", imageSrc: `${houseRoot}/haus-illysywen.png`, seat: "Castellbryn", liege: "..." }),
-      data.family("Skellor", { familyId: "haus-skellor", housePage: "kleinehaeuser.html", imageSrc: `${houseRoot}/Ausgestorben/Skellor.png`, seat: "Rhonwens Tränen", liege: "..." }),
       data.family("Morveth", { familyId: "haus-morveth", housePage: "kleinehaeuser.html", imageSrc: `${houseRoot}/Ausgestorben/Morveth.png`, seat: "Rhonwens Tränen", liege: "..." }),
     ], { variant: "extinct" }),
   ]);
@@ -77,7 +79,7 @@
       data.person("Vasall", "...", { seat: "Ffynnoncoed" }),
       data.person("Vasall", "...", { seat: "Tŵr Dreathmor" }),
       data.person("Vasall", "...", { seat: "Tŵr Bryncarw" }),
-      data.person("Vasall", "...", { seat: "Tŵr Creigfryn" }),
+      data.person("Ritterhaus Merek · neu belehnt", "...", { seat: "Caer Creigfryn" }),
       data.person("Vasall", "...", { seat: "Tŵr Gwaunfaen" }),
     ]),
   ]);
@@ -107,7 +109,7 @@
             data.place("Ffynnoncoed", "Waldsiedlung", "Waldsiedlung.png"),
             data.place("Talheli", "Hafensiedlung", "Hafensiedlung.png"),
             data.place("Tŵr Bryncarw", "Turm", "Turm.png"),
-            data.place("Tŵr Creigfryn", "Turm", "Turm.png"),
+            data.place("Caer Creigfryn", "Inselburg · neu an Merek vergeben", "Kleine Burg.png"),
             data.place("Tŵr Gwaunfaen", "Turm", "Turm.png"),
             data.place("Tŵr Caerlan", "Turm", "Turm.png"),
             data.place("Tŵr Tidemor", "Turm", "Turm.png"),
@@ -194,6 +196,7 @@
           ],
           history: [
             "Ursprünglich einfache Ritter, stiegen die Arwydd während des Krieges gegen das rebellische Haus Illysywen auf, das sich gegen die Draig gestellt hatte. Nach dem Sieg wurden sie für ihre Verdienste belohnt und erhielten die Kontrolle über Rhonwens Tränen, eine bedeutende Inselgruppe vor der Küste.",
+            "Caer Creigfryn war bis 1720 die kleine Inselburg der Skellor. Nach deren Vertreibung lag sie rund zwanzig Jahre verlassen und wurde inzwischen dem Ritterhaus Merek als Lehen zugesprochen. Die Wiederbesiedlung ist noch nicht näher festgelegt. Arvel Skellor überlebte den Untergang; sein Haus ist entmachtet, aber nicht ausgestorben.",
           ],
           culture: [
             "Die Bewohner Rhonwens Tränen sind ein hart arbeitendes und anpassungsfähiges Volk, geprägt von der rauen Küstenlandschaft und dem Inselleben. Viele leben von Fischerei, Schiffbau und Handel. Ihre Verbundenheit zum Meer ist tief im täglichen Leben verankert.",

@@ -22,7 +22,7 @@ export const HOUSE_BIOGRAPHY = {
     ],
     [
       "Stammsitz",
-      ""
+      "Caer Creigfryn · neu zugesprochenes Lehen"
     ],
     [
       "Grafschaft",
@@ -59,7 +59,7 @@ export const HOUSE_BIOGRAPHY = {
     "abilitiesTitle": "Einfluss und Aufgaben",
     "abilities": [],
     "historyTitle": "Geschichte",
-    "historyText": "Folgt …",
+    "historyText": "Haus Merek wurde inzwischen mit Caer Creigfryn belehnt. Die kleine Inselburg gehörte bis 1720 den Skellor und lag nach deren Vertreibung rund zwanzig Jahre verlassen.",
     "worksTitle": "Hausgeschichte",
     "works": [],
     "extraSections": [

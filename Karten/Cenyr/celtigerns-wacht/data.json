@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "dataPath": "Cenyr/celtigerns-wacht/data.json",
-  "revision": 6,
-  "updatedAt": "2026-10-01T23:45:37.336Z",
+  "revision": 7,
+  "updatedAt": "2026-10-21T20:35:11.175Z",
   "state": {
     "pins": [
       {
@@ -4881,29 +4881,29 @@
         "id": "mmgyet0kggqr",
         "x": 0.7438632125981426,
         "y": 0.3773349978544836,
-        "title": "Tŵr Creigfryn",
-        "cat": "mmflxnnhbh4g",
+        "title": "Caer Creigfryn",
+        "cat": "location-burg",
         "img": "",
         "table": [
           {
             "k": "Name",
-            "v": ""
+            "v": "Caer Creigfryn"
           },
           {
             "k": "Ursprung",
-            "v": ""
+            "v": "Inselburg des Hauses Skellor · bis 1720"
           },
           {
             "k": "Zustand",
-            "v": ""
+            "v": "Rund zwanzig Jahre verlassen; neu als Lehen vergeben"
           },
           {
             "k": "Ursache des Verfalls",
-            "v": ""
+            "v": "Fall der Burg und Vertreibung der Skellor 1720"
           },
           {
             "k": "Aktuelle Bewohner",
-            "v": ""
+            "v": "Keine bestätigte Wiederbesiedlung · Lehnsträger Haus Merek"
           },
           {
             "k": "Gefahren",
@@ -4918,13 +4918,13 @@
             "v": ""
           }
         ],
-        "text": "Tŵr Creigfryn ist ein alter Turm, der nach dem Krieg nicht wieder besetzt wurde. Heute steht er verlassen, doch er ist noch in einem einigermaßen guten Zustand. Trotz seiner Einsamkeit hat der Turm die Zeit gut überstanden und könnte bei Bedarf wieder genutzt werden.",
+        "text": "Caer Creigfryn ist eine kleine Burg auf einer felsigen Insel Rhonwens Tränen. Bis 1720 war sie der Sitz des Ritterhauses Skellor, eines Vasallen der Illysywen. Nach deren Niederlage wurden die Skellor von dort vertrieben. Die Burg lag anschließend rund zwanzig Jahre verlassen, blieb aber in einem einigermaßen guten Zustand. Inzwischen wurde sie dem Ritterhaus Merek als Lehen zugesprochen. Eine Wiederbesiedlung oder abgeschlossene Instandsetzung ist noch nicht festgelegt. Arvel Skellor überlebte den Untergang seines Hauses als Einziger des im Sturm gesunkenen Fluchtschiffs.",
         "secret": false,
-        "region": "",
-        "house": "",
+        "region": "Rhonwens Tränen",
+        "house": "Haus Merek",
         "imgLink": "",
-        "crest": "",
-        "crestLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Rhonwens Tränen/Ritterliche/Merek.png",
+        "crestLink": "/Familien Häuser und Clans/kleinehaeuser.html?haus=haus-merek",
         "banner": "https://i.imgur.com/wEvVrHF.png",
         "bannerLink": "",
         "faction": "",

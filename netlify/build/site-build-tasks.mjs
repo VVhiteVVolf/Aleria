@@ -71,9 +71,12 @@ export const SITE_BUILD_TASKS = [
       'AleriaAlmanach/scripts/build-schwarze-zitteraale.mjs', 'CharakterDatenbank/lib/authored-character-import.mjs',
       'CharakterDatenbank/lib/character-export-assignments.mjs', 'CharakterDatenbank/scripts/import-authored-characters.mjs',
       'AleriaAlmanach/modules/creatures/catalog/zitteraal-zunder.js', 'AleriaAlmanach/tests/schwarze-zitteraale.test.mjs',
+      'AleriaAlmanach/tests/arvel-skellor.test.mjs', 'AleriaAlmanach/tests/fixtures/skellor-merek-house-biographies-v2.json',
+      'AleriaAlmanach/assets/biographies/arvel-skellor/', 'Stammbäume/assets/js/data/house-skellor-family.js',
+      'Stammbäume/assets/js/data/rhonwens-traenen-house-families.js',
       'AleriaAlmanach/tests/authored-character-import.test.mjs'],
     commands: [['AleriaAlmanach/scripts/build-schwarze-zitteraale.mjs', '--check'],
-      testCommand(almanach('schwarze-zitteraale'), almanach('authored-character-import'), 'Anzeigetafeln/tests/zitteraale-wanted.test.mjs')]
+      testCommand(almanach('schwarze-zitteraale'), almanach('arvel-skellor'), almanach('authored-character-import'), 'Anzeigetafeln/tests/zitteraale-wanted.test.mjs')]
   },
   {
     id: 'gwynthor-map', label: 'Gwynthor marker positions and existing house affiliations',

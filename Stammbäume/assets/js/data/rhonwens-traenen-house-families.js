@@ -4,19 +4,21 @@ import {
   createFounderPlaceholderHouseFamily
 } from './blank-house-family-factory.js';
 import { HOUSE_GWARED_FAMILY } from './house-gwared-family.js';
+import { HOUSE_SKELLOR_FAMILY } from './house-skellor-family.js?v=20261021-arvel-v1';
 
 // Vorbereitete Hausakten (Juli 2026) für die neu angelegten Wappen unter
 // assets/images/houses/Rhonwens Tränen/. Die lose Datei "Illysywen.png" (kein
 // Unterordner) wurde NICHT übernommen — Haus Illysywen existiert bereits
 // ausgearbeitet (house-illysywen-family.js) und sitzt ebenfalls in Rhonwens Tränen.
-// Morveth und Skellor liegen im "Ausgestorben"-Unterordner und bekommen daher sofort
+// Morveth liegt im "Ausgestorben"-Unterordner und bekommt daher sofort
 // einen Ausgestorben-Knoten an ihrer Gründerehe (siehe
 // createExtinctPlaceholderHouseFamily). "Bürgerliche" ist für diesen Sitz leer.
 //
 // Bereits ausgearbeitete Häuser ersetzen ihre vorbereitete Leerakte — analog zu
 // ELABORATED_KNIGHT_FAMILIES in lower-knight-house-families.js.
 const ELABORATED_RHONWENS_TRAENEN_FAMILIES = Object.freeze({
-  gwared: HOUSE_GWARED_FAMILY
+  gwared: HOUSE_GWARED_FAMILY,
+  skellor: HOUSE_SKELLOR_FAMILY
 });
 
 export const RHONWENS_TRAENEN_HOUSE_DEFINITIONS = Object.freeze([
@@ -26,7 +28,7 @@ export const RHONWENS_TRAENEN_HOUSE_DEFINITIONS = Object.freeze([
   Object.freeze({ slug: 'rhenna', file: 'Rhenna', rankId: 'knight', folder: 'Ritterliche', extinct: false }),
   Object.freeze({ slug: 'talinvyr', file: 'Talinvyr', rankId: 'knight', folder: 'Ritterliche', extinct: false }),
   Object.freeze({ slug: 'morveth', file: 'Morveth', rankId: 'knight', folder: 'Ausgestorben', extinct: true }),
-  Object.freeze({ slug: 'skellor', file: 'Skellor', rankId: 'knight', folder: 'Ausgestorben', extinct: true })
+  Object.freeze({ slug: 'skellor', file: 'Skellor', rankId: 'knight', folder: 'Ritterliche', extinct: false })
 ]);
 
 export const RHONWENS_TRAENEN_HOUSE_FAMILIES = Object.freeze(

@@ -4670,8 +4670,11 @@
     {
       "recordId": "character--zitteraale-schwarzer-zitteraal",
       "name": "Der Schwarze Zitteraal",
-      "aliases": [],
-      "worldPersonId": "",
+      "aliases": [
+        "Arvel Skellor",
+        "Der Schwarze Zitteraal"
+      ],
+      "worldPersonId": "person--haus-skellor--arvel-skellor",
       "firestoreDocumentId": "zitteraale-schwarzer-zitteraal",
       "firestoreDocumentIds": [
         "zitteraale-schwarzer-zitteraal"
@@ -4684,7 +4687,7 @@
       },
       "familyStatus": "pending",
       "path": "records/gruppen/schwarze-zitteraale/der-schwarze-zitteraal--zitteraale-schwarzer-zitteraal/character.json",
-      "contentHash": "bc407d5d4f7135abc894044cbb1d3259bb701b937374d34e0e42a251c978e813"
+      "contentHash": "0ca6ad120ece0816be41d4f7815323242cc9f9f1b34bd14d4e522ce9eb282ea2"
     },
     {
       "recordId": "character--zitteraale-schlickzahn",

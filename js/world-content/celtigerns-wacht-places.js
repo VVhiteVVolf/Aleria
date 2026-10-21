@@ -219,7 +219,7 @@
     define("ffynnoncoed", "Ffynnoncoed", "Waldsiedlung", "rhonwen"),
     define("talheli", "Talheli", "Hafensiedlung", "rhonwen"),
     define("twr-bryncarw", "Tŵr Bryncarw", "Turm", "rhonwen"),
-    define("twr-creigfryn", "Tŵr Creigfryn", "Turm", "rhonwen"),
+    define("twr-creigfryn", "Caer Creigfryn", "Burg", "rhonwen"),
     define("twr-gwaunfaen", "Tŵr Gwaunfaen", "Turm", "rhonwen"),
     define("twr-caerlan", "Tŵr Caerlan", "Turm", "rhonwen"),
     define("twr-tidemor", "Tŵr Tidemor", "Turm", "rhonwen"),

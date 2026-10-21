@@ -1,0 +1,258 @@
+{
+  "schemaVersion": 1,
+  "familyId": "haus-merek",
+  "revision": 1,
+  "updatedAt": "2026-10-21T20:43:40.568Z",
+  "family": {
+    "schema": "aleria.family-tree",
+    "schemaVersion": 1,
+    "document": {
+      "id": "haus-merek",
+      "title": "Haus Merek",
+      "motto": "",
+      "description": "Vorbereitete Familienakte des Hauses Merek aus Rhonwens Tränen.",
+      "emblem": "assets/images/houses/Rhonwens Tränen/Ritterliche/Merek.png",
+      "houseProfile": {
+        "rankId": "knight",
+        "seat": "",
+        "barony": "Rhonwens Tränen",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "",
+          "barony": "assets/images/regions/rhonwens-traenen.png",
+          "county": "assets/images/regions/celtigerns-wacht.png",
+          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+        }
+      }
+    },
+    "persons": [
+      {
+        "id": "haus-merek-gruender",
+        "worldPersonId": "person--haus-merek--haus-merek-gruender",
+        "name": "???",
+        "title": "Gründer des Hauses",
+        "sex": "male",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-merek",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Gründerfamilie"
+        ],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "haus-merek-gruenderin",
+        "worldPersonId": "person--haus-merek--haus-merek-gruenderin",
+        "name": "???",
+        "title": "Gründerin des Hauses",
+        "sex": "female",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-merek",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [
+          "Gründerfamilie"
+        ],
+        "notes": "",
+        "extensions": {}
+      }
+    ],
+    "partnerships": [
+      {
+        "id": "marriage-haus-merek-founders",
+        "participantIds": [
+          "haus-merek-gruender",
+          "haus-merek-gruenderin"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Gründerehe des Hauses.",
+        "extensions": {}
+      }
+    ],
+    "parentages": [],
+    "houses": [
+      {
+        "id": "house-merek",
+        "name": "Haus Merek",
+        "motto": "",
+        "emblem": "assets/images/houses/Rhonwens Tränen/Ritterliche/Merek.png",
+        "status": "active"
+      }
+    ],
+    "cadetBranches": [],
+    "timeJumps": [],
+    "lineage": {
+      "founderPartnershipId": "marriage-haus-merek-founders",
+      "houseId": "house-merek",
+      "crestSubtitle": "",
+      "crestEmblemScale": 0.86,
+      "crestFrame": "silver",
+      "crestFrameScale": 1,
+      "timeGap": {
+        "enabled": false,
+        "years": 0,
+        "fromYear": "",
+        "toYear": "",
+        "label": ""
+      },
+      "originHouse": {
+        "enabled": false,
+        "id": "lineage-origin-house",
+        "houseId": "",
+        "name": "Ursprungshaus",
+        "subtitle": "",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "childIds": [],
+        "targetFamilyId": "",
+        "notes": "",
+        "timeGap": {
+          "enabled": false,
+          "years": 0,
+          "fromYear": "",
+          "toYear": "",
+          "label": ""
+        }
+      }
+    },
+    "presentation": {
+      "relationshipColors": {
+        "marriage": "#326c4a",
+        "engagement": "#b88b37",
+        "union": "#8e2724",
+        "affair": "#704485",
+        "concubinage": "#704485",
+        "political": "#9d7d48",
+        "forced": "#c7a974",
+        "biological": "#8e2724",
+        "adoptive": "#2f75a8",
+        "foster": "#2f75a8",
+        "step": "#7eb4d7",
+        "magical": "#704485",
+        "claimed": "#62615e"
+      }
+    },
+    "view": {
+      "focusPersonId": "haus-merek-gruender",
+      "orientation": "vertical",
+      "ancestorDepth": 8,
+      "descendantDepth": 8,
+      "limitGenerations": false,
+      "showSiblings": true
+    },
+    "extensions": {
+      "blankFamily": true,
+      "sourceRevision": 3,
+      "houseBiographyModule": {
+        "schema": "aleria.house-module",
+        "schemaVersion": 1,
+        "pageTitle": "Haus Merek",
+        "housePage": true,
+        "image": "../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Rhonwens_Traenen/Haus_Merek/assets/krieger.png",
+        "imageWidth": 30,
+        "imageSquare": true,
+        "description": "Haus Merek ist in Rhonwens Tränen in Celtigerns Wacht verzeichnet.",
+        "quote": "",
+        "quoteBy": "",
+        "commentSequence": [],
+        "stats": [
+          [
+            "Voller Name",
+            "Haus Merek"
+          ],
+          [
+            "Rang",
+            "Ritterherr"
+          ],
+          [
+            "Stammsitz",
+            "Caer Creigfryn · neu zugesprochenes Lehen"
+          ],
+          [
+            "Grafschaft",
+            "Celtigerns Wacht"
+          ],
+          [
+            "Oberhaupt",
+            ""
+          ],
+          [
+            "Erbe",
+            ""
+          ],
+          [
+            "Lehnsherr",
+            ""
+          ],
+          [
+            "Ursprung",
+            ""
+          ],
+          [
+            "Schutzpatronin",
+            ""
+          ]
+        ],
+        "house": {
+          "crestImage": "../Stammbäume/assets/images/houses/Rhonwens Tränen/Ritterliche/Merek.png",
+          "sideWidth": 100,
+          "connectionPortraitHeight": 80,
+          "connectionTextOffset": 0,
+          "biographyTitle": "Über das Haus",
+          "biographyText": "Haus Merek ist in Rhonwens Tränen in Celtigerns Wacht verzeichnet.",
+          "abilitiesTitle": "Einfluss und Aufgaben",
+          "abilities": [],
+          "historyTitle": "Geschichte",
+          "historyText": "Haus Merek wurde inzwischen mit Caer Creigfryn belehnt. Die kleine Inselburg gehörte bis 1720 den Skellor und lag nach deren Vertreibung rund zwanzig Jahre verlassen.",
+          "worksTitle": "Hausgeschichte",
+          "works": [],
+          "extraSections": [
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Werte und Stellung",
+              "text": "Folgt …"
+            }
+          ],
+          "triviaTitle": "Besonderheiten",
+          "trivia": [],
+          "quotesTitle": "Hausmotto",
+          "quotes": [],
+          "connectionsTitle": "Verbündete und Kadettenhäuser",
+          "connections": [],
+          "documentsTitle": "Mehr über das Haus",
+          "documents": [
+            {
+              "icon": "../Stammbäume/assets/images/houses/Rhonwens Tränen/Ritterliche/Merek.png",
+              "title": "Haus Merek · vollständige Hausseite",
+              "text": "Wappen und bisher bekannte Angaben. Weitere Inhalte folgen.",
+              "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-merek"
+            }
+          ],
+          "footer": ""
+        }
+      }
+    }
+  }
+}

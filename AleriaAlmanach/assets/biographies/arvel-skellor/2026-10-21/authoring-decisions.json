@@ -1,0 +1,77 @@
+{
+  "date": "2026-10-21",
+  "worldYear": 1740,
+  "userDefined": {
+    "protagonist": "Arvel Skellor",
+    "birth": 1699,
+    "ages": {
+      "squire": 14,
+      "knight": 21,
+      "earlyBandit": 26,
+      "present": 41
+    },
+    "houseExtinct": false,
+    "victims": 3,
+    "illegitimateSons": [
+      {
+        "birth": 1722,
+        "age": 18
+      },
+      {
+        "birth": 1732,
+        "age": 8
+      }
+    ],
+    "sonsLiveWithFather": false,
+    "sonsPortraits": "child silhouettes",
+    "fortress": "Caer Creigfryn · kleine Inselburg · 1720 verloren · rund zwanzig Jahre verlassen · inzwischen neu vergeben",
+    "chronology": "Nutzerfassung: Kriegsausbruch und Fall Creigfryns 1720. Ältere 1718–1720-Chroniken anderer Häuser werden nicht umgeschrieben.",
+    "presentPortrait": "Unverändert aus dem vorhandenen Schwarzen-Zitteraal-Porträt übernommen."
+  },
+  "authoredAdditions": {
+    "wife": "Eirlys Talinvyr · 1700–1720 · Haus Talinvyr bisher unausgearbeitet",
+    "newFortressHolder": "Haus Merek",
+    "grandfather": "Caradog Skellor",
+    "grandmother": "Meirwen",
+    "father": "Rhydan Skellor",
+    "mother": "Enid",
+    "uncle": "Cadfan Skellor",
+    "aunt": "Olwen",
+    "sisters": [
+      "Alys Skellor · 1702–1720",
+      "Nerys Skellor · 1706–1720"
+    ],
+    "cousins": [
+      "Iorren Skellor · 1703–1720",
+      "Catrin Skellor · 1708–1720"
+    ]
+  },
+  "openDetails": [
+    "Grund für die Parteinahme der Skellor",
+    "Arvels Weg vom Treibholz ans Festland",
+    "Namen und Lebensumstände der drei Opfer",
+    "Namen, Aufenthaltsorte und Lebenswege der Söhne",
+    "Eltern und weitere Genealogie Eirlys Talinvyrs",
+    "Wiederbesiedlung und Instandsetzung Creigfryns"
+  ],
+  "verification": {
+    "targetedUnitTests": 13,
+    "houseContentChecks": 3,
+    "territoryScopeChecks": 1,
+    "biographyViewports": [
+      1600,
+      390
+    ],
+    "portraitTabs": 4,
+    "familyPersons": 19,
+    "familyConnections": 8,
+    "familyRenderedCards": 21,
+    "allReferencedImagesDecoded": true,
+    "noExternalWritesDuringBrowserTests": true,
+    "broaderPreexistingFailures": [
+      "territory-scope: veraltete Anzahl bürgerlicher Hauskarten und fehlende Fontani-Karte",
+      "complete-house-inventory: fehlender Registry-Eintrag anderer neuer Familien",
+      "gwendolyn-house-content: veraltete Annwyl-/Gwared-Fingerprints"
+    ]
+  }
+}

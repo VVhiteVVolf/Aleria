@@ -14,7 +14,7 @@ const ZITTERAALE_CANONICAL_ENTRY = {
   "multipage": true,
   "appendCommentsPage": false,
   "enablePageComments": true,
-  "zitteraaleRevision": "20261021-bandenakte-v2",
+  "zitteraaleRevision": "20261021-arvel-v3",
   "sessionCast": [
     "zitteraale-schwarzer-zitteraal",
     "zitteraale-schlickzahn",
@@ -32,7 +32,7 @@ const ZITTERAALE_CANONICAL_ENTRY = {
       "imageTall": true,
       "imageFit": "cover",
       "imagePosition": "center",
-      "description": "<p>Wo der Weg zwischen Böschung und Wasser eng wird, genügt eine umgestürzte Karre. Dann lösen sich Gestalten aus dem Schilf, und ein schwarzer Aal blitzt auf dunklem Tuch. Den Namen der Männer erfährt der Reisende selten. Ihre Forderung versteht er sofort.</p><p>Die <strong>Schwarzen Zitteraale</strong> sind eine Raubritterbande in <strong>Celtigerns Wacht</strong>. Ihre ältesten Gefolgsleute entstammen den versprengten Dienern des Hauses <strong>Illysywen</strong>, das im Krieg von 1720 auf der Seite Ceitheachs stand und unterging. Um 1730 fanden sich Überlebende, Deserteure und Gesetzlose zu einer dauerhaften Bande zusammen.</p><p>Der Schwarze Zitteraal hält sie unter einem Zeichen zusammen, das an die Illysywen erinnert. Was er als fortgesetzte Fehde gegen die Sieger darstellt, bezahlen Bauern, Reisende und Händler mit Vorräten, Besitz und Leben.</p>",
+      "description": "<p>Wo der Weg zwischen Böschung und Wasser eng wird, genügt eine umgestürzte Karre. Dann lösen sich Gestalten aus dem Schilf, und ein schwarzer Aal blitzt auf dunklem Tuch. Den Namen der Männer erfährt der Reisende selten. Ihre Forderung versteht er sofort.</p><p>Die <strong>Schwarzen Zitteraale</strong> sind eine Raubritterbande in <strong>Celtigerns Wacht</strong>. Ihre ältesten Gefolgsleute entstammen den versprengten Dienern des Hauses <strong>Illysywen</strong>, das im Krieg von 1720 auf der Seite Ceitheachs stand und unterging. Seit 1720 sammelte ihr Anführer Überlebende, Deserteure und ehemalige Bannerkrieger um sich. Seit beinahe zwanzig Jahren terrorisiert die Bande die Grafschaft.</p><p>Der Schwarze Zitteraal hält sie unter einem Zeichen zusammen, das an die Illysywen erinnert. Was er als fortgesetzte Fehde gegen die Sieger darstellt, bezahlen Bauern, Reisende und Händler mit Vorräten, Besitz und Leben.</p>",
       "stats": [
         [
           "Art",
@@ -44,7 +44,7 @@ const ZITTERAALE_CANONICAL_ENTRY = {
         ],
         [
           "Ursprung",
-          "Untergang der Illysywen 1720 · Bandenbildung um 1730"
+          "Untergang der Illysywen 1720 · Bandenbildung seit 1720"
         ],
         [
           "Führung",
@@ -52,7 +52,7 @@ const ZITTERAALE_CANONICAL_ENTRY = {
         ],
         [
           "Namen",
-          "Ausschließlich Bandenbeinamen"
+          "Öffentlich vorwiegend Bandenbeinamen"
         ],
         [
           "Fahndung",
@@ -1954,7 +1954,7 @@ const ZITTERAALE_CANONICAL_ENTRY = {
       "imageFit": "cover",
       "imagePosition": "center",
       "sessionPage": true,
-      "sessionIntro": "<p>Zwischen den Resten einer antiken <strong>albischen Ruinenstadt</strong> brennt Licht unter einem halb erhaltenen Gewölbe. Die alten Straßen sind von Wurzeln aufgebrochen; vermauerte Türen, eingestürzte Höfe und Wasserläufe teilen das Gelände in kleine, schlecht einsehbare Winkel.</p><p>Die Zitteraale haben die trockenen Teile besetzt. Unter einem offenen Bogen liegt ihr Versammlungsplatz. Dahinter führen kurze Gänge zu Schlafstellen, Vorratsnischen und einem notdürftig gesicherten Waffenraum. Zunders Anbindestelle liegt im windgeschützten Hof.</p><p>Wer hierher gelangt, ist im inneren Rückzugsraum der Bande. Die Wachen kennen die festen Tritte zwischen den Trümmern; Fremde hören ihre eigenen Schritte lange, bevor sie die erste Stimme zuordnen können.</p>",
+      "sessionIntro": "<p>Hoch in den Bergen Celtigerns Wacht, zwischen den Resten einer antiken <strong>albischen Ruinenstadt</strong>, brennt Licht unter einem halb erhaltenen Gewölbe. Die alten Straßen sind von Wurzeln aufgebrochen; vermauerte Türen, eingestürzte Höfe und Wasserläufe teilen das Gelände in kleine, schlecht einsehbare Winkel.</p><p>Die Zitteraale haben die trockenen Teile besetzt. Unter einem offenen Bogen liegt ihr Versammlungsplatz. Dahinter führen kurze Gänge zu Schlafstellen, Vorratsnischen und einem notdürftig gesicherten Waffenraum. Zunders Anbindestelle liegt im windgeschützten Hof.</p><p>Wer hierher gelangt, ist im inneren Rückzugsraum der Bande. Die Wachen kennen die festen Tritte zwischen den Trümmern; Fremde hören ihre eigenen Schritte lange, bevor sie die erste Stimme zuordnen können.</p>",
       "sessionHint": "Verborgener Bandenstützpunkt · Standort erst durch das Spiel entdecken.",
       "sessionEmptyTitle": "Zwischen den alten Mauern",
       "sessionEmptyText": "Eine Szene im Hauptquartier der Schwarzen Zitteraale.",
@@ -1971,6 +1971,19 @@ function migrateZitteraaleEntry(entry) { return (function upgradeZitteraaleEntry
   const pages = canonical.pages.map(page => structuredClone(
     (entry.pages || []).find(existing => existing.commentThreadKey === page.commentThreadKey) || page
   ));
+  // Correct only known authored wording. Preserve later editor additions and
+  // scene identities; no comments, character resources or past posts are touched.
+  const overview = pages.find(page => page.commentThreadKey === 'zitteraale-uebersicht');
+  if (typeof overview?.description === 'string') overview.description = overview.description.replace(
+    'Um 1730 fanden sich Überlebende, Deserteure und Gesetzlose zu einer dauerhaften Bande zusammen.',
+    'Seit 1720 sammelte ihr Anführer Überlebende, Deserteure und ehemalige Bannerkrieger um sich. Seit beinahe zwanzig Jahren terrorisiert die Bande die Grafschaft.');
+  if (Array.isArray(overview?.stats)) overview.stats = overview.stats.map(row => Array.isArray(row)
+    ? row.map(value => value === 'Untergang der Illysywen 1720 · Bandenbildung um 1730' ? 'Untergang der Illysywen 1720 · Bandenbildung seit 1720'
+      : value === 'Ausschließlich Bandenbeinamen' ? 'Öffentlich vorwiegend Bandenbeinamen' : value) : row);
+  const headquarters = pages.find(page => page.commentThreadKey === 'zitteraale-hauptquartier');
+  if (typeof headquarters?.sessionIntro === 'string') headquarters.sessionIntro = headquarters.sessionIntro.replace(
+    '<p>Zwischen den Resten einer antiken <strong>albischen Ruinenstadt</strong> brennt Licht',
+    '<p>Hoch in den Bergen Celtigerns Wacht, zwischen den Resten einer antiken <strong>albischen Ruinenstadt</strong>, brennt Licht');
   return { ...entry, ...structuredClone(canonical), pages };
 })(entry, ZITTERAALE_CANONICAL_ENTRY); }
 (function registerZitteraaleModule() {

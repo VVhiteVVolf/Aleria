@@ -3131,7 +3131,7 @@ window.KONTINENTE_REGISTRY = [
     name: "Herrschaft Rhonwens Tränen",
     type: "Herrschaft",
     page: "Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Herrschaft Rhonwens Tränen/Herrschaft Rhonwens Tränen.html",
-    data: "Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Herrschaft Rhonwens Tränen/herrschaft.data.js?v=panels-20260911a",
+    data: "Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Herrschaft Rhonwens Tränen/herrschaft.data.js?v=20261021-creigfryn-v1",
     hierarchy: [
       { type: "Sammlung", name: "Kontinente", slug: "kontinente" },
       { type: "Kontinent", name: "Estryll", slug: "estryll" },

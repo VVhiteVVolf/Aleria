@@ -1,7 +1,7 @@
 import {
   needsRegisteredFamilyUpgrade,
   resolveRegisteredFamilyUpgrade
-} from '../../services/family-registry-upgrade.js';
+} from '../../services/family-registry-upgrade.js?v=20261021-arvel-v1';
 
 export function reconcileFamilyWithProjectOrigin({ family, projectOriginFamily }) {
   if (

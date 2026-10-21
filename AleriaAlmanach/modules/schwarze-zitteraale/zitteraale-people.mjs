@@ -1,6 +1,6 @@
 export const ZITTERAALE_ART = '/AleriaAlmanach/assets/schwarze-zitteraale';
 export const ZITTERAALE_ID = 'schwarze-zitteraale';
-export const ZITTERAALE_REVISION = '20261021-bandenakte-v2';
+export const ZITTERAALE_REVISION = '20261021-arvel-v3';
 export const ZITTERAALE_EMBLEM = `${ZITTERAALE_ART}/emblem.png`;
 const art = (kind, id) => `${ZITTERAALE_ART}/${kind}/${id}.png`;
 

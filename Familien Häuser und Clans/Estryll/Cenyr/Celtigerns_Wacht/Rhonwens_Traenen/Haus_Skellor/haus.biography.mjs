@@ -7,7 +7,7 @@ export const HOUSE_BIOGRAPHY = {
   "image": "../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Rhonwens_Traenen/Haus_Skellor/assets/krieger.png",
   "imageWidth": 30,
   "imageSquare": true,
-  "description": "Haus Skellor ist in Rhonwens Tränen in Celtigerns Wacht verzeichnet. Das Haus ist ausgestorben.",
+  "description": "Haus Skellor ist ein 1720 entmachtetes Ritterhaus aus Rhonwens Tränen. Sein früherer Sitz Caer Creigfryn liegt auf einer kleinen Insel. Arvel Skellor lebt als Schwarzer Zitteraal; das Haus ist nicht ausgestorben.",
   "quote": "",
   "quoteBy": "",
   "commentSequence": [],
@@ -22,19 +22,19 @@ export const HOUSE_BIOGRAPHY = {
     ],
     [
       "Stammsitz",
-      ""
+      "Caer Creigfryn · bis 1720; heute kein anerkannter Sitz"
     ],
     [
       "Grafschaft",
       "Celtigerns Wacht"
     ],
     [
-      "Letztes Oberhaupt",
-      ""
+      "Oberhaupt",
+      "Arvel Skellor · entmachtet; kein anerkannter Lehnsherr"
     ],
     [
-      "Status",
-      "Als eigenständiges Haus erloschen · Zeitpunkt offen"
+      "Erbe",
+      ""
     ],
     [
       "Lehnsherr",
@@ -50,16 +50,16 @@ export const HOUSE_BIOGRAPHY = {
     ]
   ],
   "house": {
-    "crestImage": "../Stammbäume/assets/images/houses/Rhonwens Tränen/Ausgestorben/Skellor.png",
+    "crestImage": "../Stammbäume/assets/images/houses/Rhonwens Tränen/Ritterliche/Skellor.png",
     "sideWidth": 100,
     "connectionPortraitHeight": 80,
     "connectionTextOffset": 0,
     "biographyTitle": "Über das Haus",
-    "biographyText": "Haus Skellor ist in Rhonwens Tränen in Celtigerns Wacht verzeichnet. Das Haus ist ausgestorben.",
+    "biographyText": "Haus Skellor ist ein 1720 entmachtetes Ritterhaus aus Rhonwens Tränen. Sein früherer Sitz Caer Creigfryn liegt auf einer kleinen Insel. Arvel Skellor lebt als Schwarzer Zitteraal; das Haus ist nicht ausgestorben.",
     "abilitiesTitle": "Einfluss und Aufgaben",
     "abilities": [],
     "historyTitle": "Geschichte",
-    "historyText": "Folgt …",
+    "historyText": "Als Vasallen der Illysywen folgten die Skellor 1720 deren Aufstand. Rhydan hielt Creigfryn trotz angebotener Kapitulationsbedingungen; die Burg wurde von den Saethwyr erstürmt. Das Fluchtschiff seiner Angehörigen zerschellte währenddessen im Sturm. Nur Arvel überlebte.",
     "worksTitle": "Hausgeschichte",
     "works": [],
     "extraSections": [
@@ -67,7 +67,7 @@ export const HOUSE_BIOGRAPHY = {
         "position": "afterWorks",
         "mode": "text",
         "title": "Werte und Stellung",
-        "text": "Folgt …"
+        "text": "Die frühere Lehnsherrschaft ist verloren. Arvels Anspruch auf den Hausnamen bedeutet keine Anerkennung seiner Banditenherrschaft. Seine beiden unehelichen Söhne leben nicht bei ihm."
       }
     ],
     "triviaTitle": "Besonderheiten",
@@ -79,9 +79,9 @@ export const HOUSE_BIOGRAPHY = {
     "documentsTitle": "Mehr über das Haus",
     "documents": [
       {
-        "icon": "../Stammbäume/assets/images/houses/Rhonwens Tränen/Ausgestorben/Skellor.png",
+        "icon": "../Stammbäume/assets/images/houses/Rhonwens Tränen/Ritterliche/Skellor.png",
         "title": "Haus Skellor · vollständige Hausseite",
-        "text": "Wappen und bisher bekannte Angaben. Weitere Inhalte folgen.",
+        "text": "Chronik, Besitz, Wappen und Hof mit verlinkten Portraits.",
         "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-skellor"
       }
     ],

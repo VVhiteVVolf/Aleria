@@ -14,13 +14,14 @@ export const HOUSE_CONTENT = {
   "extinct": false,
   "showMotto": false,
   "prepared": true,
+  "contentVersion": "20261021-creigfryn-v1",
   "registerPage": true,
-  "biographySourceRevision": 2,
+  "biographySourceRevision": 3,
   "biographyIntroTitle": "Über das Haus",
   "biographyHistoryTitle": "Geschichte",
   "biographySummary": {
     "overview": "Haus Merek ist in Rhonwens Tränen in Celtigerns Wacht verzeichnet.",
-    "history": "Folgt …",
+    "history": "Haus Merek wurde inzwischen mit Caer Creigfryn belehnt. Die kleine Inselburg gehörte bis 1720 den Skellor und lag nach deren Vertreibung rund zwanzig Jahre verlassen.",
     "character": "Folgt …"
   },
   "placeholders": {
@@ -66,7 +67,7 @@ export const HOUSE_CONTENT = {
     "houseType": "Ritterhaus",
     "motto": "",
     "quoteAuthor": "",
-    "seat": "",
+    "seat": "Caer Creigfryn · neu zugesprochenes Lehen",
     "affiliation": "Celtigerns Wacht",
     "liege": "",
     "patron": "",
@@ -93,7 +94,7 @@ export const HOUSE_CONTENT = {
     "traditions": "Folgt …",
     "knighthood": "Folgt …",
     "succession": "Folgt …",
-    "holdings": "Folgt …",
+    "holdings": "Caer Creigfryn, eine kleine Inselburg in Rhonwens Tränen, wurde Haus Merek nach rund zwanzig Jahren Leerstand als Lehen zugesprochen. Bis 1720 saßen dort die Skellor. Wiederbesiedlung und Instandsetzung sind noch nicht näher festgelegt.",
     "cultureReligion": "Folgt …",
     "conflictsAlliances": "Folgt …",
     "values": "Folgt …",
@@ -121,6 +122,7 @@ export const HOUSE_CONTENT = {
   "firstHeir": "",
   "headsNote": "Überlieferte Oberhäupter. Zeitangaben werden nur übernommen, soweit sie belegt sind.",
   "biographyPreviousDefaultFingerprints": [
-    "1529:fdce13f3:deef36f9"
+    "1529:fdce13f3:deef36f9",
+    "1649:80390c7d:fe2b29bf"
   ]
 };

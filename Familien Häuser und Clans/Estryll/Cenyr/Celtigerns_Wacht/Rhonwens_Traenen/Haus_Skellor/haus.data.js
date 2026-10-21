@@ -58,9 +58,9 @@ window.HAEUSER_DATA = {
     "houseType": "Ritterhaus",
     "motto": "",
     "quoteAuthor": "",
-    "seat": "",
+    "seat": "Caer Creigfryn · bis 1720; heute kein anerkannter Sitz",
     "affiliation": "Celtigerns Wacht",
-    "liege": "",
+    "liege": "Bis 1720 Haus Illysywen; gegenwärtig kein anerkanntes Lehen",
     "patron": "",
     "knightingPatron": "",
     "troopStrength": "",
@@ -68,8 +68,8 @@ window.HAEUSER_DATA = {
     "kerns": "",
     "fleet": "",
     "founding": "",
-    "milestoneOne": "",
-    "milestoneTwo": "",
+    "milestoneOne": "1720 · Fall Creigfryns und Verlust des Lehens",
+    "milestoneTwo": "Seit 1720 · Arvel als Schwarzer Zitteraal",
     "people": "",
     "wealth": "",
     "religion": "",
@@ -77,7 +77,7 @@ window.HAEUSER_DATA = {
     "origin": "",
     "cadetBranches": "",
     "allies": "",
-    "enemies": ""
+    "enemies": "Draig und Saethwyr · Arvels persönliche Fehde"
   },
   "profileLabels": {
     "tiarna": "Ritter",
@@ -85,25 +85,25 @@ window.HAEUSER_DATA = {
   },
   "showMotto": false,
   "sections": {
-    "overview": "Haus Skellor ist in Rhonwens Tränen in Celtigerns Wacht verzeichnet. Das Haus ist ausgestorben. Weitere Inhalte folgen.",
-    "history": "Folgt …",
+    "overview": "Die Skellor waren niedere Ritterherren und Vasallen der Illysywen in Rhonwens Tränen. Ihre kleine Inselburg Caer Creigfryn sicherte ihnen einen bescheidenen, aber festen Platz im örtlichen Lehnsverband. Seit 1720 sind sie entmachtet. Arvel Skellor überlebte den Untergang und führt heute die Schwarzen Zitteraale; das Haus ist deshalb ausdrücklich nicht ausgestorben.",
+    "history": "1720 folgten die Skellor dem Banner der Illysywen, nachdem diese sich von den Machtversprechen der aufständischen Rochraide gewinnen ließen. Ihr Beweggrund ist nicht sicher bekannt. Nach dem frühen Sieg der Draig gegen Illysywen sollten die Saethwyr die verbliebenen aufständischen Ritterherren unterwerfen. Rhydan Skellor plante zunächst eine Übergabe Creigfryns und ließ die jüngeren Angehörigen fliehen. Ihr Schiff zerschellte im Sturm an einem Riff; nur sein Sohn Arvel erreichte lebend das Festland. Im Glauben, seine Familie sei gerettet, setzte Rhydan den Widerstand fort. Er schlug die wiederholt angebotenen Kapitulationsbedingungen aus. Schließlich erstürmten die Saethwyr die Burg. Arvel glaubt bis heute an die Tötung bereits kapitulationsbereiter Verteidiger und benutzt diese Legende zur Rechtfertigung seiner Verbrechen.",
     "traditions": "Folgt …",
     "knighthood": "Folgt …",
-    "succession": "Folgt …",
-    "holdings": "Folgt …",
+    "succession": "Auf Caradog folgte dessen älterer Sohn Rhydan. Die jüngere Linie seines Bruders Cadfan endete 1720. Arvel ist der überlebende Namensträger der Hauptlinie, besitzt jedoch keinen anerkannten Anspruch auf das verlorene Lehen. Seine Gemahlin Eirlys Talinvyr ertrank schwanger. Zwei spätere uneheliche Söhne, geboren 1722 und 1732, leben nicht bei ihm; eine Nachfolge wird daraus nicht festgelegt.",
+    "holdings": "Caer Creigfryn ist eine kleine Burg auf einer felsigen Insel Rhonwens Tränen. Die Skellor wurden dort 1720 vertrieben. Die Anlage lag anschließend rund zwanzig Jahre verlassen und wurde inzwischen Haus Merek als Lehen zugesprochen. Eine Wiederbesiedlung oder abgeschlossene Instandsetzung ist nicht festgelegt. Arvels verborgener Ruinenstützpunkt in den Bergen ist kein anerkannter Hausbesitz.",
     "cultureReligion": "Folgt …",
-    "conflictsAlliances": "Folgt …",
+    "conflictsAlliances": "Historische Lehnstreue zu den Illysywen bis 1720. Arvel führt einen persönlichen Rachefeldzug gegen Draig und Saethwyr und macht insbesondere Huw Saethwyr zum Ziel. Seine Schwarze-Zitteraal-Bande begründet keine anerkannte Lehnsherrschaft.",
     "values": "Folgt …",
     "court": "Folgt …",
     "familyTree": "Die Hausbio öffnet sich über das Wappen im Stammbaum. Personen und Verbindungen sind in der Familienakte verzeichnet.",
-    "historicalFigures": "Folgt …"
+    "historicalFigures": "Caradog Skellor, sein Sohn Rhydan und dessen jüngerer Bruder Cadfan stehen vor dem Untergang. Arvel Skellor führt die überlebende Linie als geächteter Bandenführer fort."
   },
   "sectionTitles": {
     "knighthood": "4. Rittertum"
   },
   "images": {
     "haus-wappen": {
-      "src": "../Stammbäume/assets/images/houses/Rhonwens Tränen/Ausgestorben/Skellor.png",
+      "src": "../Stammbäume/assets/images/houses/Rhonwens Tränen/Ritterliche/Skellor.png",
       "alt": "Wappen von Haus Skellor",
       "format": "square"
     },
@@ -134,6 +134,7 @@ window.HAEUSER_DATA = {
     "title": "Stammbaum von Haus Skellor"
   },
   "trivia": [
-    "Folgt …"
+    "Der Schwarze Zitteraal heißt Arvel Skellor. Sein heutiger Aalpanzer ersetzt das alte Hauswappen.",
+    "Die Namen und genauen Lebensdaten der Gründer bleiben unbekannt; die überlieferte Genealogie setzt nach einer Lücke mit Caradog ein."
   ]
 };

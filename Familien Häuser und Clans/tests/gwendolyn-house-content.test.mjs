@@ -47,7 +47,7 @@ test('Die 19 ausdrücklich gelieferten Kriegerbilder ergänzen ihre bestehenden 
     assert.ok(image, name);
     await access(new URL(image.file, url));
     assert.ok(JSON.stringify(content.images).includes(image.file), name);
-    assert.equal(content.prepared, true, name);
+    assert.equal(content.prepared, name !== 'skellor', name);
   }
 });
 

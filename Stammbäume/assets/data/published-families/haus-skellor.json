@@ -1,0 +1,1198 @@
+{
+  "schemaVersion": 1,
+  "familyId": "haus-skellor",
+  "revision": 1,
+  "updatedAt": "2026-10-21T20:43:40.568Z",
+  "family": {
+    "schema": "aleria.family-tree",
+    "schemaVersion": 1,
+    "document": {
+      "id": "haus-skellor",
+      "title": "Haus Skellor",
+      "motto": "",
+      "description": "1720 entmachtetes Ritterhaus von Caer Creigfryn. Arvel Skellor überlebte als Schwarzer Zitteraal; das Haus ist nicht ausgestorben.",
+      "emblem": "/Stammbäume/assets/images/houses/Rhonwens Tränen/Ritterliche/Skellor.png",
+      "houseProfile": {
+        "rankId": "knight",
+        "seat": "",
+        "barony": "Rhonwens Tränen",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "",
+          "barony": "assets/images/regions/rhonwens-traenen.png",
+          "county": "assets/images/regions/celtigerns-wacht.png",
+          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+        }
+      }
+    },
+    "persons": [
+      {
+        "id": "haus-skellor-gruender",
+        "worldPersonId": "person--haus-skellor--haus-skellor-gruender",
+        "name": "Unbekannter Gründer",
+        "title": "Gründer des Hauses",
+        "sex": "male",
+        "status": "dead",
+        "birth": "",
+        "death": "????",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-skellor",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Gründerfamilie"
+        ],
+        "notes": "Historische Gründerfigur vor dem Überlieferungssprung; Name und genaue Lebensdaten sind noch nicht belegt.",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "status",
+            "death",
+            "lineageRole",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "haus-skellor-gruenderin",
+        "worldPersonId": "person--haus-skellor--haus-skellor-gruenderin",
+        "name": "Unbekannte Gründerin",
+        "title": "Gründerin des Hauses",
+        "sex": "female",
+        "status": "dead",
+        "birth": "",
+        "death": "????",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-skellor",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [
+          "Gründerfamilie"
+        ],
+        "notes": "Historische Gründerfigur vor dem Überlieferungssprung; Name und genaue Lebensdaten sind noch nicht belegt.",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "status",
+            "death",
+            "lineageRole",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "caradog-skellor",
+        "worldPersonId": "person--haus-skellor--caradog-skellor",
+        "name": "Caradog Skellor",
+        "title": "Ritterherr von Caer Creigfryn",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1647",
+        "death": "1716",
+        "portrait": "/Stammbäume/assets/images/portraits/haus-skellor/caradog-skellor.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-skellor",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [],
+        "notes": "Arvels Großvater. Führte das niedere Ritterhaus auf seiner kleinen Inselburg unter der Lehnsherrschaft der Illysywen. Starb vor dem Krieg.",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "title",
+            "notes",
+            "portrait"
+          ]
+        }
+      },
+      {
+        "id": "meirwen",
+        "worldPersonId": "person--haus-skellor--meirwen",
+        "name": "Meirwen",
+        "title": "Caradogs Gemahlin",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1650",
+        "death": "1718",
+        "portrait": "/Stammbäume/assets/images/portraits/haus-skellor/meirwen.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Arvels Großmutter. Ihr Herkunftshaus ist nicht überliefert; sie starb vor dem Fall Creigfryns.",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "title",
+            "notes",
+            "portrait"
+          ]
+        }
+      },
+      {
+        "id": "rhydan-skellor",
+        "worldPersonId": "person--haus-skellor--rhydan-skellor",
+        "name": "Rhydan Skellor",
+        "title": "Letzter belehnter Ritterherr von Caer Creigfryn",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1674",
+        "death": "1720",
+        "portrait": "/Stammbäume/assets/images/portraits/haus-skellor/rhydan-skellor.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-skellor",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [],
+        "notes": "Arvels Vater. Folgte 1720 dem Banner der Illysywen. Kündigte zunächst die Kapitulation an, hielt die Burg nach der Flucht seiner Familie jedoch weiter, um deren vermeintlich gelungene Rettung zu sichern. Schlug die angebotenen Bedingungen aus und fiel beim Sturm auf Creigfryn.",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "title",
+            "notes",
+            "portrait"
+          ]
+        }
+      },
+      {
+        "id": "enid",
+        "worldPersonId": "person--haus-skellor--enid",
+        "name": "Enid",
+        "title": "Rhydans Gemahlin · Arvels Mutter",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1677",
+        "death": "1720",
+        "portrait": "/Stammbäume/assets/images/portraits/haus-skellor/enid.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Blieb bei Rhydan in Creigfryn und starb beim Fall der Burg. Ihr Herkunftshaus bleibt unbenannt.",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "title",
+            "notes",
+            "portrait"
+          ]
+        }
+      },
+      {
+        "id": "cadfan-skellor",
+        "worldPersonId": "person--haus-skellor--cadfan-skellor",
+        "name": "Cadfan Skellor",
+        "title": "Rhydans jüngerer Bruder",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1678",
+        "death": "1720",
+        "portrait": "/Stammbäume/assets/images/portraits/haus-skellor/cadfan-skellor.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-skellor",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Arvels Onkel. Blieb 1720 bei seinem Bruder in Creigfryn und fiel bei der Erstürmung. Seine Linie überlebte den Untergang nicht.",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "title",
+            "notes",
+            "portrait"
+          ]
+        }
+      },
+      {
+        "id": "olwen",
+        "worldPersonId": "person--haus-skellor--olwen",
+        "name": "Olwen",
+        "title": "Cadfans Gemahlin",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1681",
+        "death": "1720",
+        "portrait": "/Stammbäume/assets/images/portraits/haus-skellor/olwen.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Begleitete die jüngeren Angehörigen bei der Flucht. Ertrank mit ihren Kindern, als das Schiff im Sturm auf ein Riff lief.",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "title",
+            "notes",
+            "portrait"
+          ]
+        }
+      },
+      {
+        "id": "arvel-skellor",
+        "worldPersonId": "person--haus-skellor--arvel-skellor",
+        "name": "Arvel Skellor",
+        "title": "Der Schwarze Zitteraal · überlebender Namensträger",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1699",
+        "death": "",
+        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/schwarzer-zitteraal.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-skellor",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [],
+        "notes": "Einziger Überlebender des Fluchtschiffs von 1720. Führt seit beinahe zwanzig Jahren die Schwarzen Zitteraale. Besitzt weder Creigfryn noch eine anerkannte Lehnsherrschaft; betrachtet sich selbst als rechtmäßigen Erben.",
+        "extensions": {
+          "characterId": "zitteraale-schwarzer-zitteraal",
+          "biographyModule": {
+            "schema": "aleria.biography-module",
+            "schemaVersion": 1,
+            "stats": [
+              {
+                "label": "Name",
+                "value": "Arvel Skellor"
+              },
+              {
+                "label": "Beiname",
+                "value": "Der Schwarze Zitteraal"
+              },
+              {
+                "label": "Geboren / Alter",
+                "value": "1699 · 41 Jahre (1740)"
+              },
+              {
+                "label": "Herkunft",
+                "value": "Caer Creigfryn · Rhonwens Tränen"
+              },
+              {
+                "label": "Stand",
+                "value": "Entmachteter Ritter · Bandenhaupt"
+              },
+              {
+                "label": "Haus",
+                "value": "Skellor · nicht ausgestorben"
+              },
+              {
+                "label": "Familienstand",
+                "value": "Verwitwet seit 1720"
+              },
+              {
+                "label": "Kinder",
+                "value": "Zwei uneheliche Söhne · 18 und 8 Jahre"
+              }
+            ],
+            "quote": "",
+            "quoteBy": "",
+            "biography": {
+              "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/schwarzer-zitteraal.png",
+              "portraitFit": "cover",
+              "crestImage": "/Stammbäume/assets/images/houses/Rhonwens Tränen/Ritterliche/Skellor.png",
+              "portraitStages": [
+                "/AleriaAlmanach/assets/biographies/arvel-skellor/2026-10-21/arvel-26.png",
+                "/AleriaAlmanach/assets/biographies/arvel-skellor/2026-10-21/arvel-21.png",
+                "/AleriaAlmanach/assets/biographies/arvel-skellor/2026-10-21/arvel-14.png",
+                ""
+              ],
+              "portraitCaptions": [
+                "1740 · Der Schwarze Zitteraal, 41 Jahre",
+                "1725 · Frühes Banditentum, 26 Jahre",
+                "1720 · Ritter von Haus Skellor, 21 Jahre",
+                "1713 · Knappe, 14 Jahre",
+                ""
+              ],
+              "biographyTitle": "Arvel Skellor · Der Schwarze Zitteraal",
+              "biographyText": "<p>Hinter dem Namen des Schwarzen Zitteraals steht <strong>Arvel Skellor</strong>, der überlebende Erbe eines 1720 entmachteten Ritterhauses aus Rhonwens Tränen. Einst stand ihm auf der Inselburg Caer Creigfryn ein Leben als Ehemann, Vater und Ritterherr offen. Heute herrscht er über eine Bande, die Celtigerns Wacht seit beinahe zwanzig Jahren mit Raub, Entführungen und Mord heimsucht.</p><p>Er hat aus dem Untergang seiner Familie eine Legende des Verrats gemacht. Sie liefert ihm die Rechtfertigung für eine Herrschaft, deren eigentlicher Zweck längst sein eigenes Vergnügen an Macht und Unterwerfung ist. Seine Bildung und sein Charme machen ihn dabei gefährlicher: Arvel weiß, wie man Menschen für sich gewinnt, ehe er sie abhängig macht.</p>",
+              "abilitiesTitle": "Wesenszüge",
+              "abilities": [
+                {
+                  "title": "Charisma und Menschenkenntnis",
+                  "detail": "Erkennt Schwächen und Wünsche, spricht gewandt und macht aus gemeinsamer Schuld ein Gefühl der Zugehörigkeit.",
+                  "icon": ""
+                },
+                {
+                  "title": "Selbstherrlichkeit",
+                  "detail": "Verlangt unbedingten Gehorsam und deutet seine eigene Macht als Beweis persönlicher Größe.",
+                  "icon": ""
+                },
+                {
+                  "title": "Berechnende Grausamkeit",
+                  "detail": "Kann freundlich, geduldig und gut gelaunt bleiben, während er anderen bewusst Hoffnung und Würde nimmt.",
+                  "icon": ""
+                },
+                {
+                  "title": "Verweigerte Wahrheit",
+                  "detail": "Widersprechende Berichte über Creigfryn bedrohen seine Rachelegende und werden absichtlich zurückgewiesen.",
+                  "icon": ""
+                }
+              ],
+              "historyTitle": "Persönlichkeit",
+              "historyText": "<p>Arvel Skellor ist ein ebenso charismatischer wie gewissenloser Mann, dessen einstige Ritterlichkeit längst einer maßlosen Selbstherrlichkeit gewichen ist. Hinter seiner kultivierten Sprache, seinem scharfen Verstand und einem bisweilen geradezu einnehmenden Charme verbirgt sich ein grausamer, berechnender Tyrann, der Menschen nicht als seinesgleichen betrachtet, sondern als Werkzeuge, Vergnügungen oder Hindernisse. Er versteht es meisterhaft, die Schwächen, Begierden und Ängste anderer zu erkennen und für sich auszunutzen. Seinen Gefolgsleuten verspricht er Freiheit, Beute und ein Leben ohne die Zwänge ihrer früheren Herren. Tatsächlich duldet er jedoch keinen Widerspruch und verlangt eine Unterwürfigkeit, die selbst jene der strengsten Lehnsherren übertrifft. Dabei besitzt er die gefährliche Gabe, seine Männer selbst für die abscheulichsten Verbrechen zu begeistern, indem er ihnen das Gefühl vermittelt, über den Gesetzen und der Moral gewöhnlicher Menschen zu stehen.</p><p>Sein Hass auf die Häuser Draig und Saethwyr ist aufrichtig, doch längst nicht mehr die eigentliche Triebfeder seines Handelns. Was einst als Rache für den vermeintlichen Verrat an seiner Familie begann, hat sich über beinahe zwanzig Jahre in eine unersättliche Lust an Macht, Erniedrigung und Grausamkeit verwandelt. Arvel genießt es, über das Schicksal anderer zu bestimmen, sie um Gnade flehen zu lassen und ihnen anschließend gerade jene Hoffnung zu nehmen, die er selbst zuvor geweckt hat. Besonders die Angehörigen und Schutzbefohlenen der Saethwyr ziehen seine Aufmerksamkeit auf sich. Ihre Demütigung bereitet ihm eine geradezu persönliche Genugtuung. Frauen betrachtet er dabei mit einer widerwärtigen Mischung aus Besitzgier, Begierde und Verachtung, wobei er gerade an jenen Gefallen findet, deren Stolz oder gesellschaftliche Stellung er brechen kann.</p><p>Trotz seiner Brutalität ist Arvel keineswegs ein unbeherrschter Schlächter. Er kann ausgesprochen geduldig, höflich und sogar großzügig sein, sofern es seinen Launen oder Absichten dient. Er schätzt gute Gesellschaft, geistreiche Unterhaltungen und die Annehmlichkeiten, die ihm sein kleines Banditenreich ermöglicht. Mitunter zeigt er eine beinahe spielerische Heiterkeit, selbst wenn er über das Leben eines Gefangenen entscheidet. Gerade diese Unberechenbarkeit macht ihn so gefürchtet. Eine freundliche Bemerkung kann bei ihm ebenso aufrichtig gemeint sein wie die unmittelbar folgende Todesdrohung. Grausamkeit betrachtet er nicht als notwendiges Übel, sondern zunehmend als persönliches Vorrecht, das er sich durch seine erlittenen Verluste und seine eigene Stärke verdient zu haben glaubt.</p><p>Seine Vergangenheit hat Arvel zu einer sorgfältig gepflegten Legende verklärt, in der er selbst der letzte rechtmäßige Erbe eines verratenen Hauses und die Saethwyr nichts weiter als blutdürstige Usurpatoren sind. Widersprechende Berichte weist er mit beißendem Spott oder offener Feindseligkeit zurück. Nicht weil er unfähig wäre, die Wahrheit zu begreifen, sondern weil er sie längst nicht mehr begreifen will. Die Vorstellung, sein Vater könnte die angebotene Kapitulation ausgeschlagen haben oder seine Familie durch einen unglücklichen Sturm statt durch die Hand seiner Feinde umgekommen sein, würde das Fundament seiner selbstgerechten Weltanschauung erschüttern. Lieber lässt er Unschuldige sterben, als auch nur einen Augenblick an seiner eigenen Geschichte zu zweifeln.</p><p>Arvel ist eitel, nachtragend und von einem geradezu krankhaften Bedürfnis nach Anerkennung und Unterwerfung erfüllt. Er hält sich für einen außergewöhnlichen Menschen, dem gewöhnliche Regeln nicht länger gelten. Seine Männer dürfen rauben, morden und ihren niedersten Gelüsten nachgehen, solange sie seine Autorität anerkennen. Doch wehe dem, der sich Freiheiten herausnimmt, die Arvel als sein ausschließliches Vorrecht betrachtet. Seine Großzügigkeit endet dort, wo sein Stolz beginnt. Besonders empfindlich reagiert er auf Spott über seine Herkunft, seine verlorene Burg oder seine Stellung als selbsternannter Herrscher. Den Titel eines gewöhnlichen Räuberhauptmanns empfindet er als Beleidigung. In seinen Augen hat er sich durch Blut und Entbehrungen eine Herrschaft geschaffen, die ihm kein König und kein Patriarch mehr nehmen kann.</p><p>Seine größte Schwäche ist letztlich nicht sein Hass, sondern seine grenzenlose Selbstüberschätzung. Arvel ist klug genug, seine Feinde zu überlisten, und erfahren genug, um seine Herrschaft über Jahrzehnte zu behaupten. Doch er verwechselt Furcht mit Treue, Gehorsam mit Bewunderung und seine Fähigkeit, andere zu beherrschen, mit persönlicher Größe. Er kann sich kaum noch vorstellen, dass jemand aus freien Stücken gegen ihn handeln könnte, ohne ein Narr, ein Heuchler oder ein Verräter zu sein.</p><p>Huw Saethwyr ist für Arvel schließlich weit mehr als ein persönlicher Feind. Er ist zum Sinnbild all dessen geworden, was ihm seiner Überzeugung nach genommen wurde. Arvel will ihn nicht einfach töten. Er will sein Haus vernichten, seine Angehörigen zugrunde richten und ihn erst dann persönlich töten, wenn von seinem Stolz und seiner Macht nichts mehr übrig ist. Dabei ist kaum anzunehmen, dass selbst diese Rache ihm noch Befriedigung verschaffen würde. Denn der junge Ritter, der einst seine Familie rächen wollte, existiert längst nicht mehr. Was geblieben ist, ist ein Mann, der seine Vergangenheit als Rechtfertigung für jedes Verbrechen benutzt und ohne seine Feinde vermutlich nichts mehr hätte, womit er die eigene Verderbtheit entschuldigen könnte.</p><p>Seine gefährlichste Eigenschaft ist, dass er sich bei seinen schlimmsten Entscheidungen vollkommen im Recht fühlt und dabei sogar ausgezeichnete Laune haben kann. Er wartet nicht insgeheim auf Erlösung. Er hatte zwanzig Jahre Zeit, sich für einen anderen Weg zu entscheiden, und hat sich immer wieder bewusst für den entschieden, der ihm die größte Macht über andere verschafft.</p>",
+              "worksTitle": "Herrschaft und Vorgehen",
+              "works": [
+                "Führt die Schwarzen Zitteraale aus einem verborgenen Ruinenstützpunkt hoch in den Bergen.",
+                "Verbindet genaue Kundschaft, vorbereitete Überfälle und gesicherte Rückzüge mit gezieltem Terror gegen Schutzlose.",
+                "Hält seine Rudelführer durch Beuteverteilung, Abhängigkeit und Furcht zusammen; verspricht den Männern Freiheit und verlangt selbst Unterwerfung.",
+                "Nutzt Hehler und andere Banden zum Tausch von Beute gegen Vorräte und Dienste."
+              ],
+              "extraSections": [
+                {
+                  "title": "1699–1720 · Der Erbe einer Inselburg",
+                  "text": "<p>Arvel wurde 1699 als ältestes Kind Rhydan Skellors und seiner Gemahlin Enid auf <strong>Caer Creigfryn</strong> geboren. Die kleine Burg lag auf einer felsigen Insel in Rhonwens Tränen. Sein Großvater Caradog hatte das niedere Ritterhaus vor ihm geführt; sein Vater hielt es als Vasall der Illysywen. Rhydans jüngerer Bruder Cadfan lebte mit seiner eigenen Familie im selben Hausverband. Für Arvel bedeutete Heimat die Mauern über der Brandung, den Anlegeplatz unterhalb der Burg und die Gewissheit, eines Tages die Verantwortung seines Vaters zu übernehmen.</p><p>Mit vierzehn Jahren war er ein aufmerksamer, ehrgeiziger Knappe. Er besaß schon damals die Leichtigkeit im Umgang mit Menschen, die später zu seiner gefährlichsten Gabe werden sollte. Noch galt sie dem Wunsch, sich zu bewähren und als Ritter Ansehen zu erwerben. Seine jüngeren Schwestern Alys und Nerys wuchsen in derselben geschützten Welt auf.</p><p>1720 schien ihm eine goldene Zukunft offenzustehen. Der einundzwanzigjährige Ritter trug den dunklen, golden eingefassten Harnisch der Skellor und hatte gerade <strong>Eirlys Talinvyr</strong> geheiratet, eine junge Frau aus einem anderen niederen Ritterhaus Celtigerns Wacht. Sie erwartete ihr erstes Kind. Noch dachte Arvel an eine Zukunft in Creigfryn, an eine eigene Familie und an den Platz, den er im Gefolge seines Hauses einnehmen würde.</p>",
+                  "position": "afterWorks",
+                  "mode": "text"
+                },
+                {
+                  "title": "1720 · Der Ruf zu den Bannern",
+                  "text": "<p>Dann brach der Krieg aus. Die Rochraide, Fürsten Ceitheachs, riefen sich zu Königen der Alben aus und behaupteten, die Symbole der Legitimität zu besitzen. Ihr Anspruch beruhte auf Lüge und Täuschung. Einige Clans folgten ihnen; unter den Verbündeten ließen sich auch die <strong>Illysywen</strong> durch Machtversprechen gewinnen. Als diese ihre Vasallen zu den Bannern riefen, folgten die Skellor und weitere niedere Ritterhäuser.</p><p>Warum Rhydan sich für die Sache seiner aufständischen Lehnsherren entschied, blieb ungeklärt. Überzeugung, Lehnstreue, Furcht und eigener Ehrgeiz lassen sich im Nachhinein nicht verlässlich voneinander trennen. Der örtliche Konflikt zwischen Draig und Illysywen entschied sich früh zugunsten der Draig. Während diese gegen Ceitheach mobilmachten, sollten die Saethwyr die verbliebenen rebellischen Ritterherren unterwerfen. Auch Creigfryn konnte ihrer Streitmacht nicht standhalten.</p><p>Rhydan erklärte, er werde die Burg aufgeben und kapitulieren, sobald die Saethwyr anrückten. Zuvor sollten die jüngeren Angehörigen fliehen. Arvel, seine schwangere Frau, beide Schwestern und die jüngeren Mitglieder von Cadfans Linie wurden auf ein Schiff gebracht. Rhydan, Enid und Cadfan blieben zurück.</p>",
+                  "position": "afterWorks",
+                  "mode": "text"
+                },
+                {
+                  "title": "1720 · Das Schiff im Sturm",
+                  "text": "<p>Kurz vor der Ankunft der Saethwyr-Flotte brach ein Sturm über die Inseln herein. Er erschwerte den Angreifern die Anreise und verbarg zugleich das Fluchtschiff vor ihren Blicken. Ohne dieses Unwetter hätten die Flüchtenden womöglich unbemerkt gar nicht entkommen können. Auf dem Weg zum Festland wurde derselbe Sturm ihnen zum Verhängnis: Das Schiff lief auf ein Riff und zerbrach in der Brandung.</p><p><strong>Nur Arvel überlebte.</strong> Er hielt sich an Treibholz über Wasser. Wie er schließlich das Festland erreichte, ist nicht überliefert. Eirlys und das ungeborene Kind, die achtzehnjährige Alys, die vierzehnjährige Nerys, Olwen und ihre Kinder Iorren und Catrin ertranken. Von der Familie, die er auf das Schiff begleitet hatte, kehrte niemand zu ihm zurück.</p><p>Später erfuhr Arvel, dass auch die Verteidiger Creigfryns von den Saethwyr getötet worden waren. Für ihn verbanden sich diese Nachrichten zu einer einzigen Geschichte: Seine Familie sei trotz angekündigter Kapitulation vernichtet worden, und Draig wie Saethwyr hätten ihm alles genommen. Den Sturm behandelte er fortan nur noch als Teil einer Schuld, die allein seine Feinde tragen sollten.</p>",
+                  "position": "afterWorks",
+                  "mode": "text"
+                },
+                {
+                  "title": "Was in Creigfryn tatsächlich geschah",
+                  "text": "<p>Die Saethwyr trafen auf eine Burg, deren Herr seine angekündigte Kapitulation nicht vollzog. Rhydan glaubte, seine Angehörigen hätten das Festland sicher erreicht. Um ihre Flucht weiter abzusichern und den Verfolgern Zeit zu nehmen, setzte er den Widerstand fort. Die Saethwyr belagerten Creigfryn und boten währenddessen wiederholt Bedingungen zur Übergabe an. Rhydan nahm sie nicht an.</p><p>Schließlich wurde die Burg erstürmt. Rhydan, Cadfan und die verbliebenen Verteidiger fielen; auch Enid überlebte den Fall der Burg nicht. Arvels Familie auf dem Schiff war zu diesem Zeitpunkt bereits im Sturm umgekommen. Ein Massaker nach vollzogener Kapitulation fand nicht statt.</p><p>Arvel glaubt diese Fassung bis heute nicht. Wer ihm von ausgeschlagenen Angeboten oder dem fortgesetzten Widerstand seines Vaters erzählt, wird zum Lügner erklärt. Seine Erinnerung lässt Rhydan als Mann erscheinen, der sich ergeben wollte und dafür ermordet wurde. Aus dieser Erzählung leitet er einen Anspruch auf Vergeltung ab, den für ihn weder Zeit noch die Unschuld seiner späteren Opfer begrenzen.</p>",
+                  "position": "afterWorks",
+                  "mode": "text"
+                },
+                {
+                  "title": "Seit 1720 · Der Schwarze Zitteraal",
+                  "text": "<p>Nach dem Untergang sammelte Arvel Deserteure, versprengte Bannerkrieger der Illysywen und ehemalige Gefolgsleute seines eigenen Hauses um sich. Zunächst sollten die Überfälle den Siegern möglichst großen Schaden zufügen. Er kannte die Ausbildung der Männer, sprach ihre Sprache und gab ihrer Niederlage ein Ziel. Bald wurde sein Beiname gefürchteter als der Name seines verlorenen Hauses: <strong>der Schwarze Zitteraal</strong>.</p><p>Aus den ersten Scharen entstanden die Schwarzen Zitteraale. Seit beinahe zwanzig Jahren überfallen sie Wege und Höfe Celtigerns Wacht. Arvel entwickelte aus der Rache eine Herrschaft, die von Abhängigkeit, gemeinsam begangenen Verbrechen und der Aussicht auf straflose Gewalt zusammengehalten wird. Männer, die sich andernorts verantworten müssten, finden bei ihm Schutz, solange sie sich unterwerfen.</p><p>Hoch in den Bergen, zwischen überwucherten Ruinen einer alten albischen Stadt, hat er sich ein kleines Banditenreich geschaffen. Die schwer zugänglichen Trümmer, gemiedenen Wege und trockenen Gewölbe dienen als Rückzugsraum. Von dort schickt er seine Rudel ins Tal: Sie brennen Höfe nieder, plündern Anwesen, verschleppen Menschen und liefern Beute an eingeweihte Abnehmer. Der genaue Standort bleibt den Verfolgern verborgen.</p><p>Münzen bedeuten ihm wenig als bloßer Reichtum. Im abgelegenen Lager lassen sich mit ihnen weder Stand noch Rechtmäßigkeit zurückkaufen. Beute wird gegen Vorräte, Waffen und Dienste anderer krimineller Banden getauscht; ihre Verteilung macht seine Leute von ihm abhängig. Ihm selbst sind Verfügungsmacht, Bequemlichkeit und die Unterwerfung anderer längst wertvoller geworden als eine volle Truhe.</p>",
+                  "position": "afterWorks",
+                  "mode": "text"
+                },
+                {
+                  "title": "Die Opfer und die beiden Söhne",
+                  "text": "<p>Zu seiner Herrschaft gehört sexualisierte Gewalt. Frauen aus dem Dienst oder Schutzbereich der Saethwyr behandelt Arvel mit besonderer Besitzgier; ihre Erniedrigung gilt ihm als persönliche Genugtuung. Drei Frauen sind in seiner Familienakte als <strong>unbekannte Opfer</strong> erfasst. Diese Verbindungen bezeichnen keine einvernehmlichen Partnerschaften. Ihre Namen und heutigen Lebensumstände bleiben offen.</p><p>Mit zwei dieser Frauen hat er je einen unehelichen Sohn: Der ältere wurde 1722 geboren und ist heute achtzehn Jahre alt, der jüngere wurde 1732 geboren und ist acht. <strong>Beide leben nicht bei Arvel.</strong> Ihre Namen, Aufenthaltsorte und weiteren Lebenswege sind noch nicht festgelegt. Für das dritte Opfer sind keine Kinder verzeichnet.</p><p>Sein öffentliches Ziel bleibt der Untergang der Saethwyr. Huw soll die Vernichtung seines Hauses erleben, ehe Arvel ihn eigenhändig tötet. Hinter diesem Racheversprechen steht längst ein Mann, dem jedes neue Opfer die eigene Macht bestätigt. Der Verlust seiner Familie erklärt den Anfang seines Weges; die folgenden zwanzig Jahre hat er selbst gewählt.</p>",
+                  "position": "afterWorks",
+                  "mode": "text"
+                }
+              ],
+              "triviaTitle": "Was ihn verrät",
+              "trivia": [
+                "Empfindet die Bezeichnung als gewöhnlicher Räuberhauptmann als persönliche Herabsetzung.",
+                "Kann über eine Todesdrohung ebenso vergnügt sprechen wie über ein gutes Essen.",
+                "Spott über seine Herkunft, Creigfryn oder seine selbsternannte Herrschaft trifft seine empfindlichsten Stellen.",
+                "Der heutige Aalpanzer ersetzt das alte Hauszeichen; seine verlorene Herkunft beansprucht Arvel dennoch für sich."
+              ],
+              "connectionsTitle": "Familie und Feindschaften",
+              "connections": [
+                {
+                  "name": "Rhydan Skellor",
+                  "image": "/Stammbäume/assets/images/portraits/haus-skellor/rhydan-skellor.png",
+                  "imageFormat": "portrait",
+                  "detail": "Arvels Vater. Folgte 1720 dem Banner der Illysywen. Kündigte zunächst die Kapitulation an, hielt die Burg nach der Flucht seiner Familie jedoch weiter, um deren vermeintlich gelungene Rettung zu sichern. Schlug die angebotenen Bedingungen aus und fiel beim Sturm auf Creigfryn."
+                },
+                {
+                  "name": "Eirlys Talinvyr",
+                  "image": "/Stammbäume/assets/images/portraits/haus-skellor/eirlys-talinvyr.png",
+                  "imageFormat": "portrait",
+                  "detail": "Tochter des bislang nicht weiter ausgearbeiteten Ritterhauses Talinvyr aus Celtigerns Wacht. Heiratete Arvel 1720 und erwartete ihr erstes Kind. Ertrank während der Flucht von Creigfryn; das ungeborene Kind überlebte ebenfalls nicht."
+                },
+                {
+                  "name": "Alys Skellor",
+                  "image": "/Stammbäume/assets/images/portraits/haus-skellor/alys-skellor.png",
+                  "imageFormat": "portrait",
+                  "detail": "Die ältere von Arvels beiden Schwestern war achtzehn Jahre alt. Sie ertrank beim Schiffbruch auf der Flucht von Creigfryn."
+                },
+                {
+                  "name": "Nerys Skellor",
+                  "image": "/Stammbäume/assets/images/portraits/haus-skellor/nerys-skellor.png",
+                  "imageFormat": "portrait",
+                  "detail": "Die jüngste Tochter Rhydans und Enids war vierzehn Jahre alt. Sie ertrank mit den übrigen Flüchtenden; Arvel blieb als Einziger am Leben."
+                },
+                {
+                  "name": "Huw Saethwyr",
+                  "image": "/Stammbäume/assets/images/houses/Llamreis Ankunft/haus-saethwyr.png",
+                  "detail": "Zentrales Feindbild. Arvel will seine Familie und Herrschaft vernichten und ihn anschließend persönlich töten."
+                },
+                {
+                  "name": "Drei unbekannte Opfer",
+                  "image": "/Stammbäume/assets/images/placeholders/female.png",
+                  "detail": "Erzwungene Verbindungen; zwei Frauen sind die Mütter seiner Söhne. Keine einvernehmlichen Beziehungen."
+                },
+                {
+                  "name": "Zwei unbenannte Söhne",
+                  "image": "/Stammbäume/assets/images/placeholders/child.png",
+                  "detail": "Geboren 1722 und 1732 · 18 und 8 Jahre. Beide leben nicht bei Arvel; ihre weitere Geschichte bleibt offen."
+                }
+              ],
+              "documentsTitle": "Haus und Bande",
+              "documents": [
+                {
+                  "title": "Stammbaum der Skellor",
+                  "icon": "/Stammbäume/assets/images/houses/Rhonwens Tränen/Ritterliche/Skellor.png",
+                  "text": "Hauptlinie, Nebenlinie und Arvels Nachkommen.",
+                  "link": "/Stammbäume/Stammbaum.html?family=haus-skellor&mode=view"
+                },
+                {
+                  "title": "Haus Skellor",
+                  "icon": "/Stammbäume/assets/images/houses/Rhonwens Tränen/Ritterliche/Skellor.png",
+                  "text": "Caer Creigfryn und das 1720 entmachtete Ritterhaus.",
+                  "link": "/Familien Häuser und Clans/kleinehaeuser.html?haus=haus-skellor"
+                }
+              ],
+              "footer": "Arvel Skellor · Celtigerns Wacht · Gegenwart 1740"
+            }
+          },
+          "registryManagedFields": [
+            "name",
+            "title",
+            "notes",
+            "portrait"
+          ]
+        }
+      },
+      {
+        "id": "eirlys-talinvyr",
+        "worldPersonId": "person--haus-talinvyr--eirlys-talinvyr",
+        "name": "Eirlys Talinvyr",
+        "title": "Arvels Gemahlin",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1700",
+        "death": "1720",
+        "portrait": "/Stammbäume/assets/images/portraits/haus-skellor/eirlys-talinvyr.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-talinvyr",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Tochter des bislang nicht weiter ausgearbeiteten Ritterhauses Talinvyr aus Celtigerns Wacht. Heiratete Arvel 1720 und erwartete ihr erstes Kind. Ertrank während der Flucht von Creigfryn; das ungeborene Kind überlebte ebenfalls nicht.",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "title",
+            "notes",
+            "portrait"
+          ]
+        }
+      },
+      {
+        "id": "alys-skellor",
+        "worldPersonId": "person--haus-skellor--alys-skellor",
+        "name": "Alys Skellor",
+        "title": "Arvels jüngere Schwester",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1702",
+        "death": "1720",
+        "portrait": "/Stammbäume/assets/images/portraits/haus-skellor/alys-skellor.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-skellor",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Die ältere von Arvels beiden Schwestern war achtzehn Jahre alt. Sie ertrank beim Schiffbruch auf der Flucht von Creigfryn.",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "title",
+            "notes",
+            "portrait"
+          ]
+        }
+      },
+      {
+        "id": "nerys-skellor",
+        "worldPersonId": "person--haus-skellor--nerys-skellor",
+        "name": "Nerys Skellor",
+        "title": "Arvels jüngste Schwester",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1706",
+        "death": "1720",
+        "portrait": "/Stammbäume/assets/images/portraits/haus-skellor/nerys-skellor.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-skellor",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Die jüngste Tochter Rhydans und Enids war vierzehn Jahre alt. Sie ertrank mit den übrigen Flüchtenden; Arvel blieb als Einziger am Leben.",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "title",
+            "notes",
+            "portrait"
+          ]
+        }
+      },
+      {
+        "id": "iorren-skellor",
+        "worldPersonId": "person--haus-skellor--iorren-skellor",
+        "name": "Iorren Skellor",
+        "title": "Cadfans Sohn · Arvels Vetter",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1703",
+        "death": "1720",
+        "portrait": "/Stammbäume/assets/images/portraits/haus-skellor/iorren-skellor.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-skellor",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Siebzehnjähriger Knappe der jüngeren Linie. Ertrank mit seiner Mutter und seiner Schwester auf dem Fluchtschiff.",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "title",
+            "notes",
+            "portrait"
+          ]
+        }
+      },
+      {
+        "id": "catrin-skellor",
+        "worldPersonId": "person--haus-skellor--catrin-skellor",
+        "name": "Catrin Skellor",
+        "title": "Cadfans Tochter · Arvels Cousine",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1708",
+        "death": "1720",
+        "portrait": "/Stammbäume/assets/images/portraits/haus-skellor/catrin-skellor.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-skellor",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Zwölfjährige Tochter Cadfans und Olwens. Ertrank beim Versuch, während des Sturms das Festland zu erreichen.",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "title",
+            "notes",
+            "portrait"
+          ]
+        }
+      },
+      {
+        "id": "unbekannt-opfer-1",
+        "worldPersonId": "person--family-tree--unbekannt-opfer-1",
+        "name": "Unbekannt",
+        "title": "Opfer Arvels · 1",
+        "sex": "female",
+        "status": "unknown",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "female",
+        "houseId": "",
+        "familyRole": "forced",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Opfer sexualisierter Gewalt; Mutter des älteren unehelichen Sohnes. Name, Alter und heutiger Aufenthaltsort bleiben unbekannt.",
+        "extensions": {
+          "relationshipContext": "Opfer sexualisierter Gewalt; keine einvernehmliche Partnerschaft.",
+          "registryManagedFields": [
+            "name",
+            "title",
+            "notes",
+            "portraitPlaceholder",
+            "familyRole"
+          ]
+        }
+      },
+      {
+        "id": "unbekannt-opfer-2",
+        "worldPersonId": "person--family-tree--unbekannt-opfer-2",
+        "name": "Unbekannt",
+        "title": "Opfer Arvels · 2",
+        "sex": "female",
+        "status": "unknown",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "female",
+        "houseId": "",
+        "familyRole": "forced",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Opfer sexualisierter Gewalt; Mutter des jüngeren unehelichen Sohnes. Name, Alter und heutiger Aufenthaltsort bleiben unbekannt.",
+        "extensions": {
+          "relationshipContext": "Opfer sexualisierter Gewalt; keine einvernehmliche Partnerschaft.",
+          "registryManagedFields": [
+            "name",
+            "title",
+            "notes",
+            "portraitPlaceholder",
+            "familyRole"
+          ]
+        }
+      },
+      {
+        "id": "unbekannt-opfer-3",
+        "worldPersonId": "person--family-tree--unbekannt-opfer-3",
+        "name": "Unbekannt",
+        "title": "Opfer Arvels · 3",
+        "sex": "female",
+        "status": "unknown",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "female",
+        "houseId": "",
+        "familyRole": "forced",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Drittes unbekanntes Opfer. Keine Kinder festgelegt.",
+        "extensions": {
+          "relationshipContext": "Opfer sexualisierter Gewalt; keine einvernehmliche Partnerschaft.",
+          "registryManagedFields": [
+            "name",
+            "title",
+            "notes",
+            "portraitPlaceholder",
+            "familyRole"
+          ]
+        }
+      },
+      {
+        "id": "unbenannter-sohn-1722",
+        "worldPersonId": "person--haus-skellor--unbenannter-sohn-1722",
+        "name": "Unbenannter Sohn",
+        "title": "Unehelicher Sohn · 18 Jahre",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1722",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "child",
+        "houseId": "house-skellor",
+        "familyRole": "bastard",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Arvels älterer unehelicher Sohn; lebt nicht bei seinem Vater. Name, Lebensweg und Aufenthaltsort bleiben für die spätere Ausarbeitung offen.",
+        "extensions": {}
+      },
+      {
+        "id": "unbenannter-sohn-1732",
+        "worldPersonId": "person--haus-skellor--unbenannter-sohn-1732",
+        "name": "Unbenannter Sohn",
+        "title": "Unehelicher Sohn · 8 Jahre",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1732",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "child",
+        "houseId": "house-skellor",
+        "familyRole": "bastard",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Arvels jüngerer unehelicher Sohn; lebt nicht bei seinem Vater. Name, Lebensweg und Aufenthaltsort bleiben für die spätere Ausarbeitung offen.",
+        "extensions": {}
+      }
+    ],
+    "partnerships": [
+      {
+        "id": "marriage-haus-skellor-founders",
+        "participantIds": [
+          "haus-skellor-gruender",
+          "haus-skellor-gruenderin"
+        ],
+        "type": "marriage",
+        "status": "ended",
+        "start": "",
+        "end": "",
+        "certainty": "unknown",
+        "visibility": "public",
+        "notes": "Gründerehe des Hauses.",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-skellor-caradog-meirwen",
+        "participantIds": [
+          "caradog-skellor",
+          "meirwen"
+        ],
+        "type": "marriage",
+        "status": "ended",
+        "start": "1672",
+        "end": "1716",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-skellor-rhydan-enid",
+        "participantIds": [
+          "rhydan-skellor",
+          "enid"
+        ],
+        "type": "marriage",
+        "status": "ended",
+        "start": "1697",
+        "end": "1720",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-skellor-cadfan-olwen",
+        "participantIds": [
+          "cadfan-skellor",
+          "olwen"
+        ],
+        "type": "marriage",
+        "status": "ended",
+        "start": "1701",
+        "end": "1720",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-skellor-arvel-eirlys",
+        "participantIds": [
+          "arvel-skellor",
+          "eirlys-talinvyr"
+        ],
+        "type": "marriage",
+        "status": "widowed",
+        "start": "1720",
+        "end": "1720",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Eirlys ertrank schwanger auf der Flucht. Das ungeborene Kind wird ohne erfundenen Namen und ohne erfundenes Geschlecht in ihren Notizen bewahrt.",
+        "extensions": {}
+      },
+      {
+        "id": "forced-arvel-opfer-1",
+        "participantIds": [
+          "arvel-skellor",
+          "unbekannt-opfer-1"
+        ],
+        "type": "forced",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "secret",
+        "notes": "Genealogische Verbindung zu einem Opfer sexualisierter Gewalt. Keine Ehe, keine Affäre und keine Aussage über eine gegenwärtige Gefangenschaft.",
+        "extensions": {}
+      },
+      {
+        "id": "forced-arvel-opfer-2",
+        "participantIds": [
+          "arvel-skellor",
+          "unbekannt-opfer-2"
+        ],
+        "type": "forced",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "secret",
+        "notes": "Genealogische Verbindung zu einem Opfer sexualisierter Gewalt. Keine Ehe, keine Affäre und keine Aussage über eine gegenwärtige Gefangenschaft.",
+        "extensions": {}
+      },
+      {
+        "id": "forced-arvel-opfer-3",
+        "participantIds": [
+          "arvel-skellor",
+          "unbekannt-opfer-3"
+        ],
+        "type": "forced",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "secret",
+        "notes": "Genealogische Verbindung zu einem Opfer sexualisierter Gewalt. Keine Ehe, keine Affäre und keine Aussage über eine gegenwärtige Gefangenschaft.",
+        "extensions": {}
+      }
+    ],
+    "parentages": [
+      {
+        "id": "parentage-caradog-skellor",
+        "childId": "caradog-skellor",
+        "parentIds": [
+          "haus-skellor-gruender",
+          "haus-skellor-gruenderin"
+        ],
+        "partnershipId": "marriage-haus-skellor-founders",
+        "type": "claimed",
+        "legitimacy": "unknown",
+        "certainty": "unknown",
+        "visibility": "public",
+        "notes": "Hauskontinuität über nicht überlieferte Generationen; keine unmittelbare Elternschaft.",
+        "extensions": {
+          "timeJumpId": "gap-skellor-to-1647"
+        }
+      },
+      {
+        "id": "parentage-rhydan-skellor",
+        "childId": "rhydan-skellor",
+        "parentIds": [
+          "caradog-skellor",
+          "meirwen"
+        ],
+        "partnershipId": "marriage-skellor-caradog-meirwen",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-cadfan-skellor",
+        "childId": "cadfan-skellor",
+        "parentIds": [
+          "caradog-skellor",
+          "meirwen"
+        ],
+        "partnershipId": "marriage-skellor-caradog-meirwen",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-arvel-skellor",
+        "childId": "arvel-skellor",
+        "parentIds": [
+          "rhydan-skellor",
+          "enid"
+        ],
+        "partnershipId": "marriage-skellor-rhydan-enid",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-alys-skellor",
+        "childId": "alys-skellor",
+        "parentIds": [
+          "rhydan-skellor",
+          "enid"
+        ],
+        "partnershipId": "marriage-skellor-rhydan-enid",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-nerys-skellor",
+        "childId": "nerys-skellor",
+        "parentIds": [
+          "rhydan-skellor",
+          "enid"
+        ],
+        "partnershipId": "marriage-skellor-rhydan-enid",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-iorren-skellor",
+        "childId": "iorren-skellor",
+        "parentIds": [
+          "cadfan-skellor",
+          "olwen"
+        ],
+        "partnershipId": "marriage-skellor-cadfan-olwen",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-catrin-skellor",
+        "childId": "catrin-skellor",
+        "parentIds": [
+          "cadfan-skellor",
+          "olwen"
+        ],
+        "partnershipId": "marriage-skellor-cadfan-olwen",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-unbenannter-sohn-1722",
+        "childId": "unbenannter-sohn-1722",
+        "parentIds": [
+          "arvel-skellor",
+          "unbekannt-opfer-1"
+        ],
+        "partnershipId": "forced-arvel-opfer-1",
+        "type": "biological",
+        "legitimacy": "illegitimate",
+        "certainty": "confirmed",
+        "visibility": "secret",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-unbenannter-sohn-1732",
+        "childId": "unbenannter-sohn-1732",
+        "parentIds": [
+          "arvel-skellor",
+          "unbekannt-opfer-2"
+        ],
+        "partnershipId": "forced-arvel-opfer-2",
+        "type": "biological",
+        "legitimacy": "illegitimate",
+        "certainty": "confirmed",
+        "visibility": "secret",
+        "notes": "",
+        "extensions": {}
+      }
+    ],
+    "houses": [
+      {
+        "id": "house-skellor",
+        "name": "Haus Skellor",
+        "motto": "",
+        "emblem": "/Stammbäume/assets/images/houses/Rhonwens Tränen/Ritterliche/Skellor.png",
+        "status": "active"
+      },
+      {
+        "id": "house-talinvyr",
+        "name": "Haus Talinvyr",
+        "motto": "",
+        "emblem": "assets/images/houses/Rhonwens Tränen/Ritterliche/Talinvyr.png",
+        "status": "active"
+      }
+    ],
+    "cadetBranches": [],
+    "timeJumps": [
+      {
+        "id": "gap-skellor-to-1647",
+        "parentPartnershipId": "marriage-haus-skellor-founders",
+        "sharedParentPartnershipIds": [],
+        "parentPersonId": "",
+        "childIds": [
+          "caradog-skellor"
+        ],
+        "years": 0,
+        "fromYear": "????",
+        "toYear": "1647",
+        "label": "Nicht einzeln überlieferte Generationen bis Caradog",
+        "notes": "Der Zeitsprung ist der alleinige absolute Generationentrenner unter dem Hauswappen. Bekannte Nachkommen werden später ausschließlich hinter diesem Knoten ergänzt.",
+        "extensions": {
+          "preparedPlaceholder": false
+        }
+      }
+    ],
+    "lineage": {
+      "founderPartnershipId": "marriage-haus-skellor-founders",
+      "houseId": "house-skellor",
+      "crestSubtitle": "Caer Creigfryn · entmachtet 1720",
+      "crestEmblemScale": 0.86,
+      "crestFrame": "silver",
+      "crestFrameScale": 1,
+      "timeGap": {
+        "enabled": false,
+        "years": 0,
+        "fromYear": "",
+        "toYear": "",
+        "label": ""
+      },
+      "originHouse": {
+        "enabled": false,
+        "id": "lineage-origin-house",
+        "houseId": "",
+        "name": "Ursprungshaus",
+        "subtitle": "",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "childIds": [],
+        "targetFamilyId": "",
+        "notes": "",
+        "timeGap": {
+          "enabled": false,
+          "years": 0,
+          "fromYear": "",
+          "toYear": "",
+          "label": ""
+        }
+      }
+    },
+    "presentation": {
+      "relationshipColors": {
+        "marriage": "#326c4a",
+        "engagement": "#b88b37",
+        "union": "#8e2724",
+        "affair": "#704485",
+        "concubinage": "#704485",
+        "political": "#9d7d48",
+        "forced": "#c7a974",
+        "biological": "#8e2724",
+        "adoptive": "#2f75a8",
+        "foster": "#2f75a8",
+        "step": "#7eb4d7",
+        "magical": "#704485",
+        "claimed": "#62615e"
+      }
+    },
+    "view": {
+      "focusPersonId": "caradog-skellor",
+      "orientation": "vertical",
+      "ancestorDepth": 12,
+      "descendantDepth": 12,
+      "limitGenerations": false,
+      "showSiblings": true
+    },
+    "extensions": {
+      "blankFamily": false,
+      "preparedTimeJump": true,
+      "pendingDescendantReview": false,
+      "sourceRevision": 3,
+      "chartLayoutPolicy": "strict-v1",
+      "registryManagedDocumentFields": [
+        "description",
+        "emblem"
+      ],
+      "registryManagedExtensionFields": [
+        "blankFamily",
+        "preparedTimeJump",
+        "pendingDescendantReview",
+        "chartLayoutPolicy"
+      ],
+      "registryManagedViewFields": [
+        "focusPersonId",
+        "ancestorDepth",
+        "descendantDepth"
+      ],
+      "registryManagedLineageFields": [
+        "crestSubtitle",
+        "crestFrame"
+      ],
+      "sourceNote": "Ausarbeitung nach Nutzerauftrag vom 21.10.2026. Unbekannte Gründer, Wappenknoten und eine serielle Überlieferungslücke führen zu Caradog. Zwei Söhne begründen Haupt- und Nebenlinie. Alle benannten Angehörigen sind spätestens 1720 verstorben, außer Arvel. Drei unbekannte Opfer; zwei uneheliche Söhne (1722/1732) leben nicht bei ihm und behalten ausdrücklich Kindersilhouetten. Eirlys stammt aus dem bisher unausgearbeiteten Haus Talinvyr; ihre Eltern und dessen weitere Genealogie sind offen. Der alte Ausgestorben-Knoten wurde auf ausdrücklichen Nutzerwunsch aufgehoben.",
+      "registryTombstones": {
+        "cadetBranches": [
+          "extinct-haus-skellor"
+        ]
+      },
+      "houseBiographyModule": {
+        "schema": "aleria.house-module",
+        "schemaVersion": 1,
+        "pageTitle": "Haus Skellor",
+        "housePage": true,
+        "image": "../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Rhonwens_Traenen/Haus_Skellor/assets/krieger.png",
+        "imageWidth": 30,
+        "imageSquare": true,
+        "description": "Haus Skellor ist ein 1720 entmachtetes Ritterhaus aus Rhonwens Tränen. Sein früherer Sitz Caer Creigfryn liegt auf einer kleinen Insel. Arvel Skellor lebt als Schwarzer Zitteraal; das Haus ist nicht ausgestorben.",
+        "quote": "",
+        "quoteBy": "",
+        "commentSequence": [],
+        "stats": [
+          [
+            "Voller Name",
+            "Haus Skellor"
+          ],
+          [
+            "Rang",
+            "Ritterherr"
+          ],
+          [
+            "Stammsitz",
+            "Caer Creigfryn · bis 1720; heute kein anerkannter Sitz"
+          ],
+          [
+            "Grafschaft",
+            "Celtigerns Wacht"
+          ],
+          [
+            "Oberhaupt",
+            "Arvel Skellor · entmachtet; kein anerkannter Lehnsherr"
+          ],
+          [
+            "Erbe",
+            ""
+          ],
+          [
+            "Lehnsherr",
+            ""
+          ],
+          [
+            "Ursprung",
+            ""
+          ],
+          [
+            "Schutzpatronin",
+            ""
+          ]
+        ],
+        "house": {
+          "crestImage": "../Stammbäume/assets/images/houses/Rhonwens Tränen/Ritterliche/Skellor.png",
+          "sideWidth": 100,
+          "connectionPortraitHeight": 80,
+          "connectionTextOffset": 0,
+          "biographyTitle": "Über das Haus",
+          "biographyText": "Haus Skellor ist ein 1720 entmachtetes Ritterhaus aus Rhonwens Tränen. Sein früherer Sitz Caer Creigfryn liegt auf einer kleinen Insel. Arvel Skellor lebt als Schwarzer Zitteraal; das Haus ist nicht ausgestorben.",
+          "abilitiesTitle": "Einfluss und Aufgaben",
+          "abilities": [],
+          "historyTitle": "Geschichte",
+          "historyText": "Als Vasallen der Illysywen folgten die Skellor 1720 deren Aufstand. Rhydan hielt Creigfryn trotz angebotener Kapitulationsbedingungen; die Burg wurde von den Saethwyr erstürmt. Das Fluchtschiff seiner Angehörigen zerschellte währenddessen im Sturm. Nur Arvel überlebte.",
+          "worksTitle": "Hausgeschichte",
+          "works": [],
+          "extraSections": [
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Werte und Stellung",
+              "text": "Die frühere Lehnsherrschaft ist verloren. Arvels Anspruch auf den Hausnamen bedeutet keine Anerkennung seiner Banditenherrschaft. Seine beiden unehelichen Söhne leben nicht bei ihm."
+            }
+          ],
+          "triviaTitle": "Besonderheiten",
+          "trivia": [],
+          "quotesTitle": "Hausmotto",
+          "quotes": [],
+          "connectionsTitle": "Verbündete und Kadettenhäuser",
+          "connections": [],
+          "documentsTitle": "Mehr über das Haus",
+          "documents": [
+            {
+              "icon": "../Stammbäume/assets/images/houses/Rhonwens Tränen/Ritterliche/Skellor.png",
+              "title": "Haus Skellor · vollständige Hausseite",
+              "text": "Chronik, Besitz, Wappen und Hof mit verlinkten Portraits.",
+              "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-skellor"
+            }
+          ],
+          "footer": ""
+        }
+      }
+    }
+  }
+}

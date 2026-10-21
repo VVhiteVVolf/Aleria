@@ -2,7 +2,7 @@ import {
   FAMILY_REGISTRY,
   getRegisteredFamily,
   RETIRED_FAMILY_IDS
-} from '../data/families.registry.js?v=20261016-eleganz-v1';
+} from '../data/families.registry.js?v=20261021-arvel-v1';
 import { normalizeFamily } from '../domain/family-schema.js';
 import { createHouseProfileFromFolderPath } from '../domain/house-profile.js';
 import {
@@ -15,7 +15,7 @@ import {
   isUntouchedBlankFamily,
   needsRegisteredFamilyUpgrade,
   resolveRegisteredFamilyUpgrade
-} from './family-registry-upgrade.js?v=gwendolyn-20260911h';
+} from './family-registry-upgrade.js?v=20261021-arvel-v1';
 import { resolveCanonicalFamilyId } from '../modules/family-registry/family-id-aliases.js';
 
 export function normalizeFamilyId(value) {

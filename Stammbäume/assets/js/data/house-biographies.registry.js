@@ -68,10 +68,10 @@ import { HOUSE_BIOGRAPHY as haus_vann } from "../../../../Familien Häuser und C
 import { HOUSE_BIOGRAPHY as haus_ysgrif } from "../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Ysgrif/haus.biography.mjs?v=gwendolyn-20260911h";
 import { HOUSE_BIOGRAPHY as haus_gwared } from "../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Rhonwens_Traenen/Haus_Gwared/haus.biography.mjs?v=gwendolyn-20260911h";
 import { HOUSE_BIOGRAPHY as haus_madryn } from "../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Rhonwens_Traenen/Haus_Madryn/haus.biography.mjs?v=gwendolyn-20260911h";
-import { HOUSE_BIOGRAPHY as haus_merek } from "../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Rhonwens_Traenen/Haus_Merek/haus.biography.mjs?v=gwendolyn-20260911h";
+import { HOUSE_BIOGRAPHY as haus_merek } from "../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Rhonwens_Traenen/Haus_Merek/haus.biography.mjs?v=20261021-creigfryn-v1";
 import { HOUSE_BIOGRAPHY as haus_morveth } from "../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Rhonwens_Traenen/Haus_Morveth/haus.biography.mjs?v=gwendolyn-20260911h";
 import { HOUSE_BIOGRAPHY as haus_rhenna } from "../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Rhonwens_Traenen/Haus_Rhenna/haus.biography.mjs?v=gwendolyn-20260911h";
-import { HOUSE_BIOGRAPHY as haus_skellor } from "../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Rhonwens_Traenen/Haus_Skellor/haus.biography.mjs?v=gwendolyn-20260911h";
+import { HOUSE_BIOGRAPHY as haus_skellor } from "../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Rhonwens_Traenen/Haus_Skellor/haus.biography.mjs?v=20261021-arvel-v1";
 import { HOUSE_BIOGRAPHY as haus_talinvyr } from "../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Rhonwens_Traenen/Haus_Talinvyr/haus.biography.mjs?v=gwendolyn-20260911h";
 import { HOUSE_BIOGRAPHY as haus_von_hochreuth } from "../../../../Familien Häuser und Clans/Estryll/Goldmund/Unsortiert/Unsortiert/Haus_von_Hochreuth/haus.biography.mjs?v=gwendolyn-20260911h";
 
@@ -145,10 +145,10 @@ export const HOUSE_BIOGRAPHY_DEFAULTS = Object.freeze({
   "haus-ysgrif": Object.freeze({ sourceRevision: 5, biography: haus_ysgrif, replacedDefaultFingerprints: Object.freeze([]) }),
   "haus-gwared": Object.freeze({ sourceRevision: 5, biography: haus_gwared, replacedDefaultFingerprints: Object.freeze(["1876:8604b629:944893af"]) }),
   "haus-madryn": Object.freeze({ sourceRevision: 2, biography: haus_madryn, replacedDefaultFingerprints: Object.freeze(["1537:d0eca67b:6d663881"]) }),
-  "haus-merek": Object.freeze({ sourceRevision: 2, biography: haus_merek, replacedDefaultFingerprints: Object.freeze(["1529:fdce13f3:deef36f9"]) }),
+  "haus-merek": Object.freeze({ sourceRevision: 3, biography: haus_merek, replacedDefaultFingerprints: Object.freeze(["1529:fdce13f3:deef36f9","1649:80390c7d:fe2b29bf"]) }),
   "haus-morveth": Object.freeze({ sourceRevision: 2, biography: haus_morveth, replacedDefaultFingerprints: Object.freeze(["1662:93e6574e:1a1ae1b4"]) }),
   "haus-rhenna": Object.freeze({ sourceRevision: 2, biography: haus_rhenna, replacedDefaultFingerprints: Object.freeze(["1537:2566a5cd:e35bbf23"]) }),
-  "haus-skellor": Object.freeze({ sourceRevision: 2, biography: haus_skellor, replacedDefaultFingerprints: Object.freeze(["1662:fd381510:e58745e6"]) }),
+  "haus-skellor": Object.freeze({ sourceRevision: 3, biography: haus_skellor, replacedDefaultFingerprints: Object.freeze(["1662:fd381510:e58745e6","1784:bc23d56:4445cbf0"]) }),
   "haus-talinvyr": Object.freeze({ sourceRevision: 2, biography: haus_talinvyr, replacedDefaultFingerprints: Object.freeze(["1553:b9f0423:f80e9971"]) }),
   "haus-von-hochreuth": Object.freeze({ sourceRevision: 4, biography: haus_von_hochreuth, replacedDefaultFingerprints: Object.freeze([]) }),
 });

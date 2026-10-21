@@ -1,5 +1,7 @@
 import { ZITTERAALE_ART, ZITTERAALE_LEADERS } from './zitteraale-people.mjs';
 import { moneyState } from '../item-register/item-register-money.js';
+import { buildArvelBiography } from './arvel-biography.mjs';
+import { ARVEL_WORLD_PERSON_ID } from './skellor-people.mjs';
 export const ZUNDER_CREATURE_ID = 'companion-zitteraal-zunder';
 const chiefId = ZITTERAALE_LEADERS[0].characterId;
 const ownedItem = (id, name, category, description, extra = {}) => ({ id: `zitteraal-${id}`, instanceId: `zitteraal-${id}`, name, category,
@@ -29,5 +31,8 @@ export function buildZitteraaleCharacters() {
     createdAt: '2026-10-21T00:00:00Z', updatedAt: '2026-10-21T00:00:00Z', archived: false,
     genealogy: { sex: person.id === 'nachtkieme' ? 'female' : 'male', birth: String(1740 - person.age), status: 'alive', relationships: { parents: [], partners: [], children: [] } },
     imageSets: [{ id: 'standard', name: 'Standard', portrait: person.portrait, emotes: [] }], activeImageSetId: 'standard', imageSetSchemaVersion: 1,
-    ...(person.id === 'schwarzer-zitteraal' ? { inventory: buildZitteraalInventory() } : {}) }));
+    ...(person.id === 'schwarzer-zitteraal' ? { aliases: ['Arvel Skellor', 'Der Schwarze Zitteraal'], biography: buildArvelBiography(),
+      genealogy: { worldPersonId: ARVEL_WORLD_PERSON_ID, sex: 'male', birth: '1699', status: 'alive', houseId: 'house-skellor', familyId: 'haus-skellor',
+        relationships: { parents: ['person--haus-skellor--rhydan-skellor', 'person--haus-skellor--enid'], partners: ['person--haus-talinvyr--eirlys-talinvyr'],
+          children: ['person--haus-skellor--unbenannter-sohn-1722', 'person--haus-skellor--unbenannter-sohn-1732'] } }, inventory: buildZitteraalInventory() } : {}) }));
 }

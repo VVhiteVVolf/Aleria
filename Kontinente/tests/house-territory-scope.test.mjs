@@ -67,7 +67,9 @@ test('Unterherrschaften führen alle eigenen registrierten Häuser, ohne ihre kl
     }
   }
   const extinct = territories.rhonwens.find(section => section.title === 'Ausgestorbene Häuser');
-  assert.deepEqual(ids(extinct.cards), ['haus-illysywen','haus-morveth','haus-skellor']);
+  assert.deepEqual(ids(extinct.cards), ['haus-illysywen','haus-morveth']);
+  const dispossessed = territories.rhonwens.find(section => section.title === 'Entmachtetes Ritterhaus');
+  assert.deepEqual(ids(dispossessed.cards), ['haus-skellor']);
 });
 
 test('Ritterfürsten zeigen ihre belegten Vasallen direkt auf der eigenen Herrschaftsseite', () => {

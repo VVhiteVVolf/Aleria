@@ -93,11 +93,13 @@ test('Ungeklärte Angaben bleiben leer; ausgestorbene Ritterhäuser bekommen kei
     assert.equal(sources.get('haus-' + id).profile[key], '', id);
   }
   assert.equal(sources.get('haus-ard-conbhron').extinct, false);
-  for (const id of ['haus-morveth', 'haus-skellor', 'haus-ui-talamh']) {
+  for (const id of ['haus-morveth', 'haus-ui-talamh']) {
     const bio = families.find(r => r.id === id).family.extensions.houseBiographyModule;
     assert.ok(!bio.stats.some(([label]) => label === 'Erbe'));
     assert.ok(!JSON.stringify(bio).includes('1720'));
   }
+  assert.equal(sources.get('haus-skellor').extinct, false);
+  assert.match(sources.get('haus-skellor').sections.history, /1720/);
   assert.ok(sources.get('haus-chwedlonol').offices.some(o => o.role === 'Kommandantin' && !o.id && o.silhouette === 'female'));
 });
 

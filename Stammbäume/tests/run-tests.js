@@ -9597,12 +9597,12 @@ test('Neue Vasallenhäuser (Artus Streben/Gwendolyns Ufer/Rhonwens Tränen): sch
   assert.equal(GWENDOLYNS_UFER_HOUSE_DEFINITIONS.length, 17);
   assert.deepEqual(
     RHONWENS_TRAENEN_HOUSE_DEFINITIONS.filter(def => def.extinct).map(def => def.slug).sort(),
-    ['morveth', 'skellor']
+    ['morveth']
   );
 });
 
-test('Ausgestorben-Häuser aus Rhonwens Tränen (Morveth, Skellor) tragen einen Ausgestorben-Knoten, lebende Häuser nicht', () => {
-  const extinctIds = new Set(['haus-morveth', 'haus-skellor']);
+test('Nur das ausgestorbene Haus Morveth trägt in Rhonwens Tränen einen Ausgestorben-Knoten; Skellor lebt fort', () => {
+  const extinctIds = new Set(['haus-morveth']);
   RHONWENS_TRAENEN_HOUSE_FAMILIES.forEach(family => {
     const extinctBranches = family.cadetBranches.filter(branch => branch.linkType === 'line-extinct');
     if (extinctIds.has(family.document.id)) {
