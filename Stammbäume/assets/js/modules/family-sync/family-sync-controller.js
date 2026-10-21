@@ -4,7 +4,7 @@ import {
 } from './family-sync-errors.js';
 import { assertMirroredCrossFamilyBatch } from './cross-family-sync-invariant.js';
 import { createFamilySyncStatusUi } from './family-sync-status-ui.js';
-import { reconcileFamilyWithProjectOrigin } from './project-origin-reconciliation.js?v=20261021-arvel-v1';
+import { reconcileFamilyWithProjectOrigin } from './project-origin-reconciliation.js?v=20261021-arvel-v2';
 import { createWorldPersonPortraitSyncChanges } from './world-person-portrait-sync.js';
 
 const REMOTE_SOURCES = new Set(['repository-sync', 'repository-priority']);

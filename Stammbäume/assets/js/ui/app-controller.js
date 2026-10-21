@@ -21,7 +21,7 @@ import {
   listFamilyRecords,
   loadFamilyById,
   saveFamilyToLibrary
-} from '../services/family-library.js?v=20261021-arvel-v1';
+} from '../services/family-library.js?v=20261021-arvel-v2';
 import { downloadFamilyJson, parseFamilyJson } from '../services/family-transfer.js';
 import { saveFamilyRecordsAtomically } from '../services/family-persistence.js';
 import {

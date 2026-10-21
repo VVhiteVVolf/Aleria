@@ -5,6 +5,11 @@ import { SKELLOR_PEOPLE, SKELLOR_EMBLEM } from '../../../../AleriaAlmanach/modul
 import { buildArvelBiography } from '../../../../AleriaAlmanach/modules/schwarze-zitteraale/arvel-biography.mjs?v=20261021-arvel-v1';
 
 const houseId = 'house-skellor';
+// Keep every relationship in Arvel's local group, including the childless victim.
+const arvelLayout = {
+  chartCenterBetweenPartnerPersonIds: ['unbekannt-opfer-1', 'eirlys-talinvyr', 'unbekannt-opfer-2', 'unbekannt-opfer-3'],
+  chartKeepPartnerGroupTogether: true
+};
 const base = createFounderTimeJumpPlaceholderHouseFamily({ id: 'haus-skellor', title: 'Haus Skellor', emblem: SKELLOR_EMBLEM,
   houseProfile: RHONWENS_TRAENEN_VASSAL_PROFILES.skellor, toYear: '1647', timeJumpLabel: 'Nicht einzeln überlieferte Generationen bis Caradog',
   description: '1720 entmachtetes Ritterhaus von Caer Creigfryn. Arvel Skellor überlebte als Schwarzer Zitteraal; das Haus ist nicht ausgestorben.' });
@@ -20,7 +25,12 @@ const victims = [1, 2, 3].map(number => createFamilyPerson({ id: `unbekannt-opfe
   notes: number < 3 ? `Opfer sexualisierter Gewalt; Mutter des ${number === 1 ? 'älteren' : 'jüngeren'} unehelichen Sohnes. Name, Alter und heutiger Aufenthaltsort bleiben unbekannt.` : 'Drittes unbekanntes Opfer. Keine Kinder festgelegt.',
   extensions: { relationshipContext: 'Opfer sexualisierter Gewalt; keine einvernehmliche Partnerschaft.', registryManagedFields: ['name', 'title', 'notes', 'portraitPlaceholder', 'familyRole'] } }));
 const forced = victims.map((person, index) => createMarriage(`forced-arvel-opfer-${index + 1}`, 'arvel-skellor', person.id, { type: 'forced', status: 'active',
-  visibility: 'secret', notes: 'Genealogische Verbindung zu einem Opfer sexualisierter Gewalt. Keine Ehe, keine Affäre und keine Aussage über eine gegenwärtige Gefangenschaft.' }));
+  visibility: 'secret', notes: 'Genealogische Verbindung zu einem Opfer sexualisierter Gewalt. Keine Ehe, keine Affäre und keine Aussage über eine gegenwärtige Gefangenschaft.',
+  ...(index < 2 ? { extensions: {
+    chartAlignPartnerOverChildrenPersonId: person.id,
+    chartReserveLeafChildLane: true,
+    registryManagedExtensionFields: ['chartAlignPartnerOverChildrenPersonId', 'chartReserveLeafChildLane']
+  } } : {}) }));
 const sons = [
   createFamilyPerson({ id: 'unbenannter-sohn-1722', name: 'Unbenannter Sohn', birth: '1722', sex: 'male', houseId, familyRole: 'bastard', portraitPlaceholder: 'child', title: 'Unehelicher Sohn · 18 Jahre',
     notes: 'Arvels älterer unehelicher Sohn; lebt nicht bei seinem Vater. Name, Lebensweg und Aufenthaltsort bleiben für die spätere Ausarbeitung offen.' }),
@@ -32,7 +42,8 @@ export const HOUSE_SKELLOR_FAMILY = Object.freeze({ ...base,
   persons: [...base.persons.map((p, index) => createFamilyPerson({ ...p, name: index ? 'Unbekannte Gründerin' : 'Unbekannter Gründer', lineageRole: 'founder',
       extensions: { registryManagedFields: ['name', 'status', 'death', 'lineageRole', 'notes'] } })),
     ...SKELLOR_PEOPLE.map(person => createFamilyPerson({ ...person, title: person.role, notes: person.bio, lineageRole: person.lineageRole || 'branch',
-      extensions: { ...(person.characterId ? { characterId: person.characterId, biographyModule: buildArvelBiography() } : {}), registryManagedFields: ['name', 'title', 'notes', 'portrait'] } })), ...victims, ...sons],
+      extensions: { ...(person.characterId ? { characterId: person.characterId, biographyModule: buildArvelBiography(), ...arvelLayout,
+        registryManagedExtensionFields: Object.keys(arvelLayout) } : {}), registryManagedFields: ['name', 'title', 'notes', 'portrait'] } })), ...victims, ...sons],
   houses: [...base.houses, { id: 'house-talinvyr', name: 'Haus Talinvyr', motto: '', emblem: 'assets/images/houses/Rhonwens Tränen/Ritterliche/Talinvyr.png', status: 'active' }],
   partnerships: [{ ...base.partnerships[0], status: 'ended', certainty: 'unknown' }, ...marriages, ...forced],
   parentages: [
@@ -46,7 +57,7 @@ export const HOUSE_SKELLOR_FAMILY = Object.freeze({ ...base,
   timeJumps: [{ ...base.timeJumps[0], childIds: ['caradog-skellor'], extensions: { preparedPlaceholder: false } }],
   lineage: { ...base.lineage, crestSubtitle: 'Caer Creigfryn · entmachtet 1720', crestFrame: 'silver' },
   view: { ...base.view, focusPersonId: 'caradog-skellor', ancestorDepth: 12, descendantDepth: 12, limitGenerations: false },
-  extensions: { ...base.extensions, blankFamily: false, pendingDescendantReview: false, sourceRevision: 1, chartLayoutPolicy: 'strict-v1',
+  extensions: { ...base.extensions, blankFamily: false, pendingDescendantReview: false, sourceRevision: 4, chartLayoutPolicy: 'strict-v1',
     registryManagedDocumentFields: ['description', 'emblem'],
     registryManagedExtensionFields: ['blankFamily', 'preparedTimeJump', 'pendingDescendantReview', 'chartLayoutPolicy'],
     registryManagedViewFields: ['focusPersonId', 'ancestorDepth', 'descendantDepth'],

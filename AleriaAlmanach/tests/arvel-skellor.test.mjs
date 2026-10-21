@@ -10,6 +10,7 @@ import { buildZitteraaleModule } from '../modules/schwarze-zitteraale/zitteraale
 import { upgradeZitteraaleEntry } from '../modules/schwarze-zitteraale/zitteraale-migration.mjs';
 import { ARVEL_CHARACTER_ID, ARVEL_WORLD_PERSON_ID, SKELLOR_PEOPLE } from '../modules/schwarze-zitteraale/skellor-people.mjs';
 import { getRegisteredFamily } from '../../Stammbäume/assets/js/data/families.registry.js';
+import { createFamilyChartPartnerAlignmentPlan } from '../../Stammbäume/assets/js/adapters/family-chart-partner-alignment.js';
 const oldBiographies = JSON.parse(await readFile(new URL('./fixtures/skellor-merek-house-biographies-v2.json', import.meta.url), 'utf8'));
 
 test('Skellor has one serial origin gap, two lines and only Arvel surviving the old household', () => {
@@ -58,6 +59,31 @@ test('old extinct placeholders upgrade without deleting custom additions or rest
   assert.equal(upgraded.cadetBranches.some(b => b.linkType === 'line-extinct'), false);
   assert.equal(upgraded.view.focusPersonId, 'caradog-skellor');
   assert.equal(upgraded.persons.find(p => p.id === family.persons[0].id).status, 'dead');
+});
+
+test('all four relationships stay in Arvel’s local group, including the childless victim', () => {
+  const old = structuredClone(getRegisteredFamily('haus-skellor').family);
+  old.extensions.sourceRevision = 3;
+  const arvel = old.persons.find(person => person.id === 'arvel-skellor');
+  delete arvel.extensions.chartCenterBetweenPartnerPersonIds;
+  delete arvel.extensions.chartKeepPartnerGroupTogether;
+  arvel.extensions.customNote = 'Eigene Ergänzung';
+  old.partnerships.forEach(partnership => {
+    if (!partnership.extensions) return;
+    delete partnership.extensions.chartAlignPartnerOverChildrenPersonId;
+    delete partnership.extensions.chartReserveLeafChildLane;
+  });
+  const upgraded = resolveRegisteredFamilyUpgrade(getRegisteredFamily('haus-skellor').family, old);
+  const plan = createFamilyChartPartnerAlignmentPlan(upgraded);
+  assert.deepEqual(plan.invalidRequests, []);
+  const group = plan.centerBetweenPartnersRoutes.find(route => route.centeredPersonId === 'arvel-skellor');
+  assert.equal(group.keepTogether, true);
+  assert.deepEqual(new Set(group.partnerPersonIds), new Set(['eirlys-talinvyr', 'unbekannt-opfer-1', 'unbekannt-opfer-2', 'unbekannt-opfer-3']));
+  assert.deepEqual(plan.partnerOverChildrenRoutes.map(route => [route.partnerPersonId, route.childIds]), [
+    ['unbekannt-opfer-1', ['unbenannter-sohn-1722']],
+    ['unbekannt-opfer-2', ['unbenannter-sohn-1732']]
+  ]);
+  assert.equal(upgraded.persons.find(person => person.id === arvel.id).extensions.customNote, 'Eigene Ergänzung');
 });
 
 test('biography uses the established character and current portrait with exactly three new age portraits', () => {

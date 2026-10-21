@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "familyId": "haus-skellor",
-  "revision": 1,
-  "updatedAt": "2026-10-21T20:43:40.568Z",
+  "revision": 2,
+  "updatedAt": "2026-10-21T21:13:35.460Z",
   "family": {
     "schema": "aleria.family-tree",
     "schemaVersion": 1,
@@ -449,6 +449,17 @@
               "footer": "Arvel Skellor · Celtigerns Wacht · Gegenwart 1740"
             }
           },
+          "chartCenterBetweenPartnerPersonIds": [
+            "unbekannt-opfer-1",
+            "eirlys-talinvyr",
+            "unbekannt-opfer-2",
+            "unbekannt-opfer-3"
+          ],
+          "chartKeepPartnerGroupTogether": true,
+          "registryManagedExtensionFields": [
+            "chartCenterBetweenPartnerPersonIds",
+            "chartKeepPartnerGroupTogether"
+          ],
           "registryManagedFields": [
             "name",
             "title",
@@ -789,7 +800,14 @@
         "certainty": "confirmed",
         "visibility": "secret",
         "notes": "Genealogische Verbindung zu einem Opfer sexualisierter Gewalt. Keine Ehe, keine Affäre und keine Aussage über eine gegenwärtige Gefangenschaft.",
-        "extensions": {}
+        "extensions": {
+          "chartAlignPartnerOverChildrenPersonId": "unbekannt-opfer-1",
+          "chartReserveLeafChildLane": true,
+          "registryManagedExtensionFields": [
+            "chartAlignPartnerOverChildrenPersonId",
+            "chartReserveLeafChildLane"
+          ]
+        }
       },
       {
         "id": "forced-arvel-opfer-2",
@@ -804,7 +822,14 @@
         "certainty": "confirmed",
         "visibility": "secret",
         "notes": "Genealogische Verbindung zu einem Opfer sexualisierter Gewalt. Keine Ehe, keine Affäre und keine Aussage über eine gegenwärtige Gefangenschaft.",
-        "extensions": {}
+        "extensions": {
+          "chartAlignPartnerOverChildrenPersonId": "unbekannt-opfer-2",
+          "chartReserveLeafChildLane": true,
+          "registryManagedExtensionFields": [
+            "chartAlignPartnerOverChildrenPersonId",
+            "chartReserveLeafChildLane"
+          ]
+        }
       },
       {
         "id": "forced-arvel-opfer-3",
@@ -982,14 +1007,16 @@
         "name": "Haus Skellor",
         "motto": "",
         "emblem": "/Stammbäume/assets/images/houses/Rhonwens Tränen/Ritterliche/Skellor.png",
-        "status": "active"
+        "status": "active",
+        "extensions": {}
       },
       {
         "id": "house-talinvyr",
         "name": "Haus Talinvyr",
         "motto": "",
         "emblem": "assets/images/houses/Rhonwens Tränen/Ritterliche/Talinvyr.png",
-        "status": "active"
+        "status": "active",
+        "extensions": {}
       }
     ],
     "cadetBranches": [],
@@ -1077,7 +1104,7 @@
       "blankFamily": false,
       "preparedTimeJump": true,
       "pendingDescendantReview": false,
-      "sourceRevision": 3,
+      "sourceRevision": 4,
       "chartLayoutPolicy": "strict-v1",
       "registryManagedDocumentFields": [
         "description",
@@ -1192,6 +1219,10 @@
           ],
           "footer": ""
         }
+      },
+      "registryUpgrade": {
+        "fromRevision": 3,
+        "toRevision": 4
       }
     }
   }

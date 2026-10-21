@@ -1,5 +1,5 @@
 import { normalizeHouseBiographyModule } from './house-biography-model.js';
-import { HOUSE_BIOGRAPHY_DEFAULTS } from '../../data/house-biographies.registry.js?v=20261021-arvel-v1';
+import { HOUSE_BIOGRAPHY_DEFAULTS } from '../../data/house-biographies.registry.js?v=20261021-arvel-v2';
 
 // Recognize shipped defaults only. These fingerprints are not security hashes.
 export function houseBiographyDefaultFingerprint(value) {

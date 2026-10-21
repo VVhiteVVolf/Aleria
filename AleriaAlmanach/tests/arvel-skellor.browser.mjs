@@ -32,6 +32,19 @@ try {
   await familyPage.waitForFunction(() => document.body.textContent.includes('Arvel Skellor'));
   await familyPage.getByRole('button', { name: 'Einpassen', exact: true }).click();
   await familyPage.waitForTimeout(500);
+  const groupIds = ['arvel-skellor', 'eirlys-talinvyr', 'unbekannt-opfer-1', 'unbekannt-opfer-2', 'unbekannt-opfer-3'];
+  const localGroup = await familyPage.locator('.card_cont').evaluateAll((cards, ids) => cards
+    .filter(card => ids.includes(card.__data__?.data?.id))
+    .map(card => {
+      const rect = card.getBoundingClientRect();
+      return { id: card.__data__.data.id, x: rect.x, y: rect.y, width: rect.width };
+    }).sort((a, b) => a.x - b.x), groupIds);
+  assert.equal(localGroup.length, 5);
+  for (let index = 1; index < localGroup.length; index++) {
+    assert.ok(Math.abs(localGroup[index].y - localGroup[0].y) < 2, 'Arvel and every partner share one row');
+    assert.ok(localGroup[index].x - localGroup[index - 1].x < localGroup[index].width * 1.7, 'No detached partner card');
+  }
+  assert.equal(await familyPage.locator('.aleria-connection-reference[data-related-card-ids*="unbekannt-opfer-3"]').count(), 0);
   const names = await familyPage.locator('.card_cont').allTextContents();
   assert.ok(names.some(name => name.includes('Arvel')));
   assert.ok(names.some(name => name.includes('Cadfan')));

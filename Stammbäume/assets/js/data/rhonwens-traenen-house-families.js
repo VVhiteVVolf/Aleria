@@ -4,7 +4,7 @@ import {
   createFounderPlaceholderHouseFamily
 } from './blank-house-family-factory.js';
 import { HOUSE_GWARED_FAMILY } from './house-gwared-family.js';
-import { HOUSE_SKELLOR_FAMILY } from './house-skellor-family.js?v=20261021-arvel-v1';
+import { HOUSE_SKELLOR_FAMILY } from './house-skellor-family.js?v=20261021-arvel-v2';
 
 // Vorbereitete Hausakten (Juli 2026) für die neu angelegten Wappen unter
 // assets/images/houses/Rhonwens Tränen/. Die lose Datei "Illysywen.png" (kein
