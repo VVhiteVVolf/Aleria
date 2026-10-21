@@ -68,6 +68,9 @@ test('all four relationships stay in Arvel’s local group, including the childl
   delete arvel.extensions.chartCenterBetweenPartnerPersonIds;
   delete arvel.extensions.chartKeepPartnerGroupTogether;
   arvel.extensions.customNote = 'Eigene Ergänzung';
+  arvel.notes = 'Individuell ergänzte Lebensgeschichte';
+  arvel.portrait = 'custom-arvel.png';
+  old.view.focusPersonId = arvel.id;
   old.partnerships.forEach(partnership => {
     if (!partnership.extensions) return;
     delete partnership.extensions.chartAlignPartnerOverChildrenPersonId;
@@ -84,6 +87,9 @@ test('all four relationships stay in Arvel’s local group, including the childl
     ['unbekannt-opfer-2', ['unbenannter-sohn-1732']]
   ]);
   assert.equal(upgraded.persons.find(person => person.id === arvel.id).extensions.customNote, 'Eigene Ergänzung');
+  assert.equal(upgraded.persons.find(person => person.id === arvel.id).notes, arvel.notes);
+  assert.equal(upgraded.persons.find(person => person.id === arvel.id).portrait, arvel.portrait);
+  assert.equal(upgraded.view.focusPersonId, arvel.id);
 });
 
 test('biography uses the established character and current portrait with exactly three new age portraits', () => {

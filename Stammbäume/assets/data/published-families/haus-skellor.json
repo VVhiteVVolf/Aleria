@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "familyId": "haus-skellor",
-  "revision": 2,
-  "updatedAt": "2026-10-21T21:13:35.460Z",
+  "revision": 3,
+  "updatedAt": "2026-10-21T21:18:54.822Z",
   "family": {
     "schema": "aleria.family-tree",
     "schemaVersion": 1,
@@ -456,6 +456,7 @@
             "unbekannt-opfer-3"
           ],
           "chartKeepPartnerGroupTogether": true,
+          "registryManagedSourceRevision": 5,
           "registryManagedExtensionFields": [
             "chartCenterBetweenPartnerPersonIds",
             "chartKeepPartnerGroupTogether"
@@ -803,6 +804,7 @@
         "extensions": {
           "chartAlignPartnerOverChildrenPersonId": "unbekannt-opfer-1",
           "chartReserveLeafChildLane": true,
+          "registryManagedSourceRevision": 5,
           "registryManagedExtensionFields": [
             "chartAlignPartnerOverChildrenPersonId",
             "chartReserveLeafChildLane"
@@ -825,6 +827,7 @@
         "extensions": {
           "chartAlignPartnerOverChildrenPersonId": "unbekannt-opfer-2",
           "chartReserveLeafChildLane": true,
+          "registryManagedSourceRevision": 5,
           "registryManagedExtensionFields": [
             "chartAlignPartnerOverChildrenPersonId",
             "chartReserveLeafChildLane"
@@ -1104,7 +1107,8 @@
       "blankFamily": false,
       "preparedTimeJump": true,
       "pendingDescendantReview": false,
-      "sourceRevision": 4,
+      "sourceRevision": 5,
+      "registryManagedEntitySourceRevision": 3,
       "chartLayoutPolicy": "strict-v1",
       "registryManagedDocumentFields": [
         "description",
@@ -1221,8 +1225,8 @@
         }
       },
       "registryUpgrade": {
-        "fromRevision": 3,
-        "toRevision": 4
+        "fromRevision": 4,
+        "toRevision": 5
       }
     }
   }

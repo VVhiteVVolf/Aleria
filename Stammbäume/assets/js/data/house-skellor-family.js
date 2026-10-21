@@ -29,6 +29,7 @@ const forced = victims.map((person, index) => createMarriage(`forced-arvel-opfer
   ...(index < 2 ? { extensions: {
     chartAlignPartnerOverChildrenPersonId: person.id,
     chartReserveLeafChildLane: true,
+    registryManagedSourceRevision: 5,
     registryManagedExtensionFields: ['chartAlignPartnerOverChildrenPersonId', 'chartReserveLeafChildLane']
   } } : {}) }));
 const sons = [
@@ -43,6 +44,7 @@ export const HOUSE_SKELLOR_FAMILY = Object.freeze({ ...base,
       extensions: { registryManagedFields: ['name', 'status', 'death', 'lineageRole', 'notes'] } })),
     ...SKELLOR_PEOPLE.map(person => createFamilyPerson({ ...person, title: person.role, notes: person.bio, lineageRole: person.lineageRole || 'branch',
       extensions: { ...(person.characterId ? { characterId: person.characterId, biographyModule: buildArvelBiography(), ...arvelLayout,
+        registryManagedSourceRevision: 5,
         registryManagedExtensionFields: Object.keys(arvelLayout) } : {}), registryManagedFields: ['name', 'title', 'notes', 'portrait'] } })), ...victims, ...sons],
   houses: [...base.houses, { id: 'house-talinvyr', name: 'Haus Talinvyr', motto: '', emblem: 'assets/images/houses/Rhonwens Tränen/Ritterliche/Talinvyr.png', status: 'active' }],
   partnerships: [{ ...base.partnerships[0], status: 'ended', certainty: 'unknown' }, ...marriages, ...forced],
@@ -57,7 +59,7 @@ export const HOUSE_SKELLOR_FAMILY = Object.freeze({ ...base,
   timeJumps: [{ ...base.timeJumps[0], childIds: ['caradog-skellor'], extensions: { preparedPlaceholder: false } }],
   lineage: { ...base.lineage, crestSubtitle: 'Caer Creigfryn · entmachtet 1720', crestFrame: 'silver' },
   view: { ...base.view, focusPersonId: 'caradog-skellor', ancestorDepth: 12, descendantDepth: 12, limitGenerations: false },
-  extensions: { ...base.extensions, blankFamily: false, pendingDescendantReview: false, sourceRevision: 4, chartLayoutPolicy: 'strict-v1',
+  extensions: { ...base.extensions, blankFamily: false, pendingDescendantReview: false, sourceRevision: 5, registryManagedEntitySourceRevision: 3, chartLayoutPolicy: 'strict-v1',
     registryManagedDocumentFields: ['description', 'emblem'],
     registryManagedExtensionFields: ['blankFamily', 'preparedTimeJump', 'pendingDescendantReview', 'chartLayoutPolicy'],
     registryManagedViewFields: ['focusPersonId', 'ancestorDepth', 'descendantDepth'],

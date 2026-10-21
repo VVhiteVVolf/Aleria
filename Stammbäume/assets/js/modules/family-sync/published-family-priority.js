@@ -1,4 +1,4 @@
-import { reconcileFamilyWithProjectOrigin } from './project-origin-reconciliation.js?v=20261021-arvel-v2';
+import { reconcileFamilyWithProjectOrigin } from './project-origin-reconciliation.js?v=20261021-arvel-v3';
 
 /**
  * Loads the public repository release without delaying the local application
