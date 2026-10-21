@@ -1,5 +1,9 @@
 const testCommand = (...files) => ['--test', '--experimental-test-isolation=none', ...files];
 const almanach = name => `AleriaAlmanach/tests/${name}.test.mjs`;
+const skellorFamilyInputs = [
+  'AleriaAlmanach/modules/schwarze-zitteraale/skellor-people.mjs',
+  'AleriaAlmanach/modules/schwarze-zitteraale/arvel-biography.mjs'
+];
 const gwynthorFamilyInputs = [
   'AleriaAlmanach/modules/gwynthor-heime/',
   'AleriaAlmanach/modules/arkaneum/arkaneum-people.mjs',
@@ -161,7 +165,7 @@ export const SITE_BUILD_TASKS = [
     // dependency audit, including dynamically loaded editorial modules.
     inputs: ['Gameplay Guide/', 'CharakterDatenbank/generated/characters.snapshot.json',
       'AleriaAlmanach/package.json', 'Stammbäume/assets/js/', 'Stammbäume/assets/data/family-sources/',
-      'Familien Häuser und Clans/', 'Bestiarium/modules/', ...gwynthorFamilyInputs,
+      'Familien Häuser und Clans/', 'Bestiarium/modules/', ...gwynthorFamilyInputs, ...skellorFamilyInputs,
       ...['character-equipment', 'characters', 'classes', 'combat', 'combat-critical',
         'combat-status', 'combat-styles', 'creatures', 'herausforderung', 'image-library',
         'krumme-kanne', 'goettliche-eleganz', 'lachende-nixe', 'gofrann-schmiede', 'letzte-rast', 'scene-items', 'scene-rest', 'spell-catalog']
@@ -306,7 +310,7 @@ export const SITE_BUILD_TASKS = [
       'AleriaAlmanach/package.json', 'AleriaAlmanach/modules/krumme-kanne/krumme-kanne-roster.mjs',
       'AleriaAlmanach/modules/gofrann-schmiede/', 'AleriaAlmanach/modules/letzte-rast/',
       'AleriaAlmanach/modules/goettliche-eleganz/eleganz-family-people.mjs',
-      'AleriaAlmanach/modules/lachende-nixe/nixe-family-people.mjs', ...gwynthorFamilyInputs],
+      'AleriaAlmanach/modules/lachende-nixe/nixe-family-people.mjs', ...gwynthorFamilyInputs, ...skellorFamilyInputs],
     excludes: ['Stammbäume/assets/data/published-families/backups/'],
     commands: [['netlify/build/verify-task-inputs.mjs', 'family-charts'],
       ['Stammbäume/tools/check-release.mjs', '--prepare-browser']]
