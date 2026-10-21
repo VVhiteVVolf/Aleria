@@ -155,6 +155,7 @@
     const images = Array.from(table.querySelectorAll("img")).map((image) => image.getAttribute("src") || "");
     const grid = document.createElement("div");
     grid.className = "administration-grid";
+    grid.dataset.kontinenteGeneratedView = "";
     grid.setAttribute('role', 'group');
     grid.setAttribute('aria-label', 'Verwaltungsbereiche');
     const scopeId = currentScopeId();
@@ -163,7 +164,13 @@
     const wrapper = table.parentElement?.classList.contains("kingdom-table-scroll")
       ? table.parentElement
       : null;
-    (wrapper || table).replaceWith(grid);
+    // Inline exports address the original tables and images by their order.
+    // Keep the source in place even when the loading fallback renders first.
+    table.dataset.administrationEnhanced = "true";
+    table.hidden = true;
+    const source = wrapper || table;
+    source.hidden = true;
+    source.before(grid);
   }
 
   function enhanceRenderedCards() {

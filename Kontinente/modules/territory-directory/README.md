@@ -21,6 +21,16 @@ Auch `Orte/assets/js/orte-place-houses.js` nutzt `renderFamilySection` und diese
 
 Die bestehenden `kingdom-family-*`, `kingdom-domain-*` und `kingdom-place-*` Klassen bleiben für die Unterscheidung zwischen erzeugter Ansicht und bearbeitbarer Quelle erhalten. Der Hausregister-Container erhält zusätzlich `territory-directory`; Siedlungssektionen bringen diese Klasse selbst mit. Alte Inline-Exporte dürfen weiterhin ausschließlich ihre ursprünglichen Quellen und Bildnummern bearbeiten.
 
+Quelltabellen für Häuser, Orte, Rat und Verwaltung tragen bereits im HTML
+`hidden`. Sie sind ausschließlich Inhaltsquellen und erscheinen auch vor dem
+Start der Renderer oder bei deren Ladefehlern nicht als alte Oberfläche.
+Das gilt ebenfalls für die Königreichs- und Grafschaftsvorlagen.
+Die Verwaltungsansicht behält ihre ursprüngliche Tabelle an derselben Stelle
+und markiert ihr neues Raster mit `data-kontinente-generated-view`.
+Auch der Lade-Fallback nach drei Sekunden darf keine Quelle entfernen:
+Ein später eintreffender Inline-Export muss dieselben Tabellen-, Text- und
+Bildnummern vorfinden. Wiederholte Inhaltsereignisse erzeugen kein zweites Raster.
+
 ## Datenübergabe
 
 `renderFamilySection(section, { resolveHref })` erwartet `title`, optional `variant` und `cards`. Ein Haus enthält `id`, `name`, ein bereits erzeugtes Bild-DOM-Element als `image`, `seat`, `liege`, `rank` und `href`. `resolveHref(card)` bleibt optional und erlaubt dem Adapter, ein vorhandenes Hausseitenregister zu nutzen. Der Seitenadapter ergänzt einen nicht gesetzten Rang aus der vom Hausseiten-Build erzeugten `house-ranks.generated.mjs`.
@@ -47,9 +57,16 @@ Der Browsertest benötigt einen lokalen statischen Server und ein vorhandenes Pl
 
 ```powershell
 node Kontinente/tests/territory-directory.browser.mjs
+node Kontinente/tests/territory-loading.browser.mjs
 ```
 
 Optionale Umgebungsvariablen: `DIRECTORY_TEST_ORIGIN` (standardmäßig `http://127.0.0.1:5500`), `PLAYWRIGHT_MODULE` (Paketname oder Modul-Datei-URL), `PLAYWRIGHT_EXECUTABLE` (vorhandener Chromium-Pfad) und `DIRECTORY_SCREENSHOTS` (Ausgabeordner). Der Test prüft acht Herrschaftsseiten in drei Fensterbreiten, lokale Registerbilder, gleiche Kartenhöhen, die Grafenebene, direkte Links, Tastaturfokus und die alte Grafschaftsvorlage. Externe Ressourcen werden dafür nicht benötigt.
+
+`territory-loading.browser.mjs` startet seinen eigenen lokalen Server und prüft
+die fünf Quellseiten ohne JavaScript sowie beide Lade-Reihenfolgen mit einem
+gezielt verzögerten Inline-Export. Es sichert die ursprünglichen Tabellen- und
+Bildzuordnungen, eindeutige Verwaltungsraster und den tatsächlichen Klick von
+der Grafschaft nach Gwynthor einschließlich dessen Anzeigetafel-Link ab.
 - Ortskarten können eine Hauszuordnung mit Familienlink und eine aufklappbare
   Beschreibung aus der verantwortlichen Ortsquelle anzeigen. Die gemeinsame
   Komponente rendert Quelltexte als Text; es entstehen keine lokalen Sonderrenderer.
