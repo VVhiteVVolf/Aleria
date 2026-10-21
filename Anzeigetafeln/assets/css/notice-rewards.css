@@ -1,11 +1,10 @@
 .notice-money { display: inline-flex; flex-direction: row; align-items: center; justify-content: center; gap: .3rem; white-space: nowrap; font: inherit; color: inherit; letter-spacing: normal; }
 .quest-footer .notice-money { display: inline-flex; flex-direction: row; color: inherit; font: inherit; letter-spacing: normal; }
 .notice-money img { display: inline-block; width: 24px; height: 24px; object-fit: contain; vertical-align: middle; }
-.notice-reward-button { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; border: 1px solid #a07e46; padding: .4rem .65rem; background: #e7d6ad; color: #59401f; font: inherit; cursor: pointer; }
+.notice-reward-button { display: inline-flex; align-items: center; justify-content: center; box-sizing: border-box; flex-shrink: 0; width: 46px; height: 44px; border: 1px solid #a07e46; border-radius: 3px; padding: 4px; background: #e7d6ad; color: #59401f; font: inherit; vertical-align: middle; cursor: pointer; }
 .notice-reward-button:hover { background: #f8eccd; }
 .notice-reward-button:focus-visible { outline: 2px solid #70562d; outline-offset: 3px; }
-.notice-reward-button-icons { display: inline-flex; align-items: center; gap: .15rem; }
-.notice-reward-button-icons img, .notice-reward-button-icon { display: inline-block; width: 28px; height: 28px; object-fit: contain; }
+.notice-reward-button-icon { display: block; width: 34px; height: 34px; object-fit: contain; }
 .notice-reward-editor-row:has([data-field="title"]) { flex-wrap: wrap; }
 .notice-reward-editor-row:has([data-field="title"]) label { flex-basis: 8rem; }
 .notice-reward-editor-list { display: grid; gap: .5rem; margin-top: .65rem; }

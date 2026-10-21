@@ -184,7 +184,9 @@ spätere Anzeige. Bestehende eindeutige Geldangaben in Tabellen werden nur beim
 Rendern erkannt; freie oder mehrdeutige Zusagen bleiben unverändert als Text.
 Geldparsing verwendet die vorhandene Güterregister-Geldlogik. Ein einzelner
 Geldbetrag zeigt Zahl und vorhandenes Münzicon; mehrere Belohnungen oder ein
-Gegenstand öffnen einen eigenen Detaildialog. Die strukturierte Belohnung ist
+Gegenstand öffnen über ein kompaktes Geldbeutel-Icon einen eigenen Detaildialog.
+Die Schaltfläche verrät weder Anzahl noch Namen oder Bilder ihres Inhalts.
+Die strukturierte Belohnung ist
 nach der Bearbeitung die Quelle; die entsprechende Tabellenzeile wird daraus
 angezeigt und im Editor über den Belohnungsabschnitt geändert.
 
@@ -199,6 +201,34 @@ Quest/Auftrag behält sein Pergamentlayout. Die übrigen Vorlagen verwenden Fakt
 Alle Bildplätze verwenden denselben Dialog: Iconverzeichnis (bestehendes `ALERIA_ICON_DIRECTORY` und Karten-Medienregister), alphabetische Charakterliste mit Namens-/Familienfilter, Upload und Bildlink einschließlich Imgur-Einzelbildern. Auch Kommentare und das Tafelsymbol verwenden diesen Dialog. Charakterdaten werden erst bei Bedarf über das bestehende Stammbaumregister und dessen veröffentlichte Familien geladen; Namensbildung, Registerabgleich und Publikations-Repository werden wiederverwendet. Hier gibt es keine eigenen Firebase-Zugriffe.
 
 Die alten Bildfelder `bild`, `portrait` und `verfasser` bleiben Zeichenketten. `emblem`, `siegel` und `unterschrift` ergänzen die Plätze. Optionale Metadaten liegen in `media[field]`; Charakterreferenzen enthalten `familyId`, `personId`, `name` und das zugehörige Bild. Links werden daraus ausschließlich zur Stammbaumansicht erzeugt. Ein manuell ersetztes Bild verliert eine nicht mehr passende Charakterverknüpfung. Alle Plätze haben einen Platzhalter, auch bei Ladefehlern.
+
+`assets/js/seals/` kapselt vier generierte Standardsiegel und ihre Auswahl.
+Ein eigenes `siegel`-Bild hat Vorrang; andernfalls liefert das Bildmodell eine
+lesende Projektion aus `sealPreset` (`auto`, `none` oder eine der vier IDs).
+Hilfsgesuche erhalten automatisch das einfache Ährensiegel, andere gewöhnliche
+Aushänge das bürgerliche Knotensiegel. Gildensiegel benötigen ausdrücklich
+gesetzte Aussteller-/Schreiber-IDs oder eine bewusste Auswahl im Editor; normale
+Gildenaufrufe werden nicht als Erlasse der Aufsehergilde dargestellt. Eigene
+Siegel, Kommentare und übrige Bildmetadaten bleiben beim Anzeigen unverändert.
+Der delegierte Editor verwendet den gemeinsamen Speicherweg. Details und
+Herkunft der PNGs: `assets/js/seals/README.md`.
+
+Bekannte bestehende Anzeigen erhalten fehlende Absenderzeichen über
+`tools/issuers/notice-signoffs.mjs`. Die Haushaltsvorlagen enthalten sie bereits;
+Llysfaen verwendet ein reines Korrekturpaket ohne zusätzliche `zettel`.
+`authored-notices.merge` verarbeitet deshalb auch Pakete nur mit `updates`.
+`fillEmpty` ergänzt ausschließlich fehlende, null oder leere Zeichenketten.
+Vorhandene Bilder, explizite Siegelvorgaben und andere Felder bleiben erhalten.
+Bildmetadaten werden nur ergänzt, wenn das aktuelle Bild genau zur neuen
+Metadatenquelle passt. Die vorhandene Kennung angewandter Aktualisierungen
+verhindert, dass spätere Leerungen oder Löschungen rückgängig gemacht werden.
+
+`assets/js/links/` ergänzt auf Gwynthors Tafel direkte Modulverweise in Texten
+und Fakten. Der Katalog kennt nur vorhandene Ziele; die Darstellung verlinkt
+Textknoten ohne gespeicherte Anzeigen zu verändern. Der Richtext-Filter erhält
+nur sichere lokale Almanach-Eintragslinks. Im Almanach öffnet ein kleines
+Archivmodul den über `entry` angefragten Eintrag erst nach fertigem Start über
+die vorhandene Navigation. Neue Tabs erhalten den offenen Aushang.
 
 Bildmetadaten können `fit` (`contain`/`cover`) und `position`
 (`top`/`center`/`bottom`) pro Bildplatz vorgeben. Ohne diese Angaben gelten die

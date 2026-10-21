@@ -27,18 +27,19 @@
     return `<dl class="notice-facts" data-notice-reference>${filled.map(row => {
       const stars = Math.max(0, Math.min(5, parseInt(row.v, 10) || 0));
       const value = row.type === 'stars' ? `<span class="notice-stars" aria-label="${stars} von 5 Sternen">${'★'.repeat(stars)}${'☆'.repeat(5 - stars)}</span>`
-        : /^(belohnung|kopfgeld|entlohnung|preisgeld)$/i.test(row.k) && window.TafelNoticeRewards ? window.TafelNoticeRewards.render(notice, row.v) : esc(row.v);
+        : /^(belohnung|kopfgeld|entlohnung|preisgeld)$/i.test(row.k) && window.TafelNoticeRewards ? window.TafelNoticeRewards.render(notice, row.v) : window.TafelNoticeModuleLinks ? window.TafelNoticeModuleLinks.text(row.v) : esc(row.v);
       return `<div class="notice-fact"><dt>${esc(row.k || 'Hinweis')}</dt><dd>${value}</dd></div>`;
     }).join('')}</dl>`;
   }
 
   function footer(z) {
+    const seal = window.TafelNoticeMediaModel.selection(z, 'siegel');
     const author = z.verfasserName || (z.table || []).find(row => /^(quelle|kontakt|ausgestellt von|veranstalter|herausgeber|gastgeber|gilde|meldestelle|abzuholen bei)$/i.test(row.k) && row.v)?.v;
     return `<footer class="notice-signoff">
       <div class="notice-author">${hasMedia(z, 'verfasser') ? media(z, 'verfasser', { className: 'notice-author-portrait', label: 'Verfasser', symbol: '♙' }) : ''}
         <div><span class="notice-eyebrow">${author ? 'Ausgegeben von' : 'Am schwarzen Brett'}</span><strong>${esc(author || 'Ohne Namenszeichen')}</strong></div></div>
       ${hasMedia(z, 'unterschrift') ? media(z, 'unterschrift', { className: 'notice-signature', label: 'Unterschrift', fit: 'contain' }) : ''}
-      ${hasMedia(z, 'siegel') || ['erlass','steckbrief','gilde'].includes(z.typ) ? media(z, 'siegel', { className: 'notice-seal', label: 'Siegel', symbol: '⚜', fit: 'contain' }) : '<span class="notice-endmark" aria-hidden="true">❦</span>'}
+      ${!seal.suppressed && (seal.src || ['erlass','steckbrief','gilde'].includes(z.typ)) ? media(z, 'siegel', { className: 'notice-seal', label: 'Siegel', symbol: '⚜', fit: 'contain' }) : '<span class="notice-endmark" aria-hidden="true">❦</span>'}
     </footer>`;
   }
 

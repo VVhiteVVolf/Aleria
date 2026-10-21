@@ -24,7 +24,7 @@
   function infoRows(rows, notice){
     return (rows || []).filter(row => String(row.v ?? '').trim()).map(row => `<tr>
       <th>${esc(row.k)}</th>
-      <td>${row.type === 'stars' ? starValue(row) : /^(belohnung|kopfgeld|entlohnung|preisgeld)$/i.test(row.k) && window.TafelNoticeRewards ? window.TafelNoticeRewards.render(notice, row.v) : esc(row.v)}</td>
+      <td>${row.type === 'stars' ? starValue(row) : /^(belohnung|kopfgeld|entlohnung|preisgeld)$/i.test(row.k) && window.TafelNoticeRewards ? window.TafelNoticeRewards.render(notice, row.v) : window.TafelNoticeModuleLinks ? window.TafelNoticeModuleLinks.text(row.v) : esc(row.v)}</td>
     </tr>`).join('');
   }
 

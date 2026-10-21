@@ -42,6 +42,7 @@
         ${z.typ !== 'steckbrief' ? picker.field(z, 'portrait', 'Portrait / Motiv') : ''}
         ${picker.field(z, 'verfasser', 'Verfasser / Auftraggeber')}
         ${picker.field(z, 'emblem', 'Emblem')}
+        ${window.TafelNoticeSeals.editor(z)}
         ${picker.field(z, 'siegel', 'Wachssiegel')}
         ${picker.field(z, 'unterschrift', 'Unterschrift')}
       </div>

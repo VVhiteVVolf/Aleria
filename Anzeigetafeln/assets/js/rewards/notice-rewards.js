@@ -23,10 +23,7 @@ function render(notice, fallback = '') {
   const rewards = rewardsOf(notice, fallback);
   if (!rewards.length) return esc(fallback);
   if (rewards.length === 1 && rewards[0].kind === 'money') return coinMarkup(rewards[0]);
-  const icons = rewards.slice(0, 4).map(reward => reward.kind === 'money'
-    ? `<img src="${NOTICE_COINS.find(coin => coin.id === reward.currency).icon}" alt="">`
-    : itemImage(reward, 'notice-reward-button-icon')).join('');
-  return `<button class="notice-reward-button" type="button" data-action="notice-reward-open" data-notice-id="${esc(notice.id)}"><span class="notice-reward-button-icons" aria-hidden="true">${icons}</span> ${rewards.length === 1 ? esc(rewardText(rewards[0])) : `${rewards.length} Belohnungen`} <span aria-hidden="true">›</span></button>`;
+  return `<button class="notice-reward-button" type="button" data-action="notice-reward-open" data-notice-id="${esc(notice.id)}" aria-label="Belohnung ansehen" title="Belohnung ansehen"><img class="notice-reward-button-icon" src="/IconOrdner/Geldbeutel.PNG" width="34" height="34" alt="" aria-hidden="true"></button>`;
 }
 
 function editor(notice) {
@@ -37,7 +34,7 @@ function editor(notice) {
       ${reward.kind === 'honor' ? `<label>Ehrung<input class="e-inp" type="text" maxlength="120" value="${esc(reward.title)}" data-input-action="notice-reward-field" data-notice-id="${esc(notice.id)}" data-reward-index="${index}" data-field="title"></label><label>Icon<input class="e-inp" type="text" value="${esc(reward.image || '')}" data-input-action="notice-reward-field" data-notice-id="${esc(notice.id)}" data-reward-index="${index}" data-field="image"></label>` : ''}
       <label>Zusatz / Bedingung<input class="e-inp" type="text" maxlength="300" value="${esc(reward.condition || '')}" data-input-action="notice-reward-field" data-notice-id="${esc(notice.id)}" data-reward-index="${index}" data-field="condition"></label><button type="button" class="s-btn s-cancel" data-action="notice-reward-remove" data-notice-id="${esc(notice.id)}" data-reward-index="${index}" aria-label="Belohnung entfernen">×</button></div>`).join('')}</div>
     <div class="notice-stack-controls"><button type="button" class="s-btn s-cancel" data-action="notice-reward-money" data-notice-id="${esc(notice.id)}">＋ Geld</button><button type="button" class="s-btn s-cancel" data-action="notice-reward-item" data-notice-id="${esc(notice.id)}">＋ Aus Güterregister</button><button type="button" class="s-btn s-cancel" data-action="notice-reward-honor" data-notice-id="${esc(notice.id)}">＋ Ehrung / Zusage</button></div>
-    <p>Eine Geldbelohnung erscheint mit Münzicon. Gegenstände und mehrere Belohnungen öffnen eine eigene Übersicht.</p>
+    <p>Ein einzelner Geldbetrag erscheint mit Münzicon. Alle anderen Belohnungen zeigen einen Geldbeutel; ihr Inhalt wird erst beim Anklicken sichtbar.</p>
   </details>`;
 }
 

@@ -21,6 +21,17 @@ const counts = () => page.evaluate(() => ({
 }));
 const open = id => page.evaluate(id => window.openZettelScroll(id), id);
 const choose = id => page.locator(`#notice-publications [data-notice-id="${id}"]`).click();
+async function concealedRewardButtons() {
+  const buttons = page.locator('#scroll-content .notice-reward-button');
+  assert.ok(await buttons.count());
+  for (const button of await buttons.all()) {
+    assert.equal((await button.innerText()).trim(), '', 'reward contents and counts stay concealed');
+    assert.equal(await button.getAttribute('aria-label'), 'Belohnung ansehen');
+    assert.equal(await button.locator('img').count(), 1);
+    assert.equal(await button.locator('img').getAttribute('src'), '/IconOrdner/Geldbeutel.PNG');
+    await button.locator('img').evaluate(image => image.decode());
+  }
+}
 
 try {
   await page.goto(`${origin}/Anzeigetafeln/tafel.html?tafel=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-anzeigetafel`, { waitUntil: 'networkidle' });
@@ -36,6 +47,8 @@ try {
   await shot('one-nail-two-announcements');
   await nail.click();
   await page.mouse.move(5, 5);
+  assert.equal(await page.locator('.quest-footer .notice-money img').getAttribute('alt'), 'Silbertaler');
+  assert.equal(await page.locator('.quest-footer .notice-reward-button').count(), 0);
   assert.equal(await page.locator('#notice-publications button').count(), 2);
   assert.equal(await page.locator('#notice-stack-nav option').count(), 4);
   assert.match(await page.locator('#scroll-content').innerText(), /Ruine betritt/);
@@ -47,6 +60,7 @@ try {
   }
   await shot('rioneth-parchment-sketch');
   await choose(torvik);
+  await concealedRewardButtons();
   assert.equal(await page.locator('#notice-stack-nav option').count(), 2);
   assert.doesNotMatch(await page.locator('#notice-stack-nav').innerText(), /Cyrwyn|Rioneth/);
   await page.locator('#scroll-content .notice-reward-button').first().click();
@@ -114,6 +128,7 @@ try {
     await page.waitForFunction(() => document.querySelector('#scroll-content [data-lettering-state]')?.dataset.letteringState === 'ready');
     assert.ok(await page.locator('#scroll-content').evaluate(element => element.scrollWidth <= element.clientWidth + 1));
     assert.ok(await page.locator('#notice-publications').evaluate(element => element.scrollWidth <= element.clientWidth + 1));
+    await concealedRewardButtons();
     await page.locator('#scroll-content .notice-reward-button').first().click();
     assert.ok(await page.locator('.notice-reward-dialog').evaluate(element => element.scrollWidth <= element.clientWidth + 1));
     await page.keyboard.press('Escape');

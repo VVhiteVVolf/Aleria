@@ -278,11 +278,24 @@
       "secret": false
     },
     {
-      "id": "gwynthor-fearnan-die-verschwundene-schatulle",
-      "verfasser": "../AleriaAlmanach/assets/gwynthor-heime/fearnan/muireann.png",
       "verfasserName": "Muireann",
-      "emblem": "../AleriaAlmanach/assets/gwynthor-heime/fearnan/wappen.png",
+      "unterschrift": "assets/images/issuers/signatures/muireann/unterschrift-v1.png",
+      "siegel": "assets/images/seals/defaults/baeurlich-v1.png",
       "media": {
+        "unterschrift": {
+          "kind": "image",
+          "name": "Muireann · Unterschrift",
+          "src": "assets/images/issuers/signatures/muireann/unterschrift-v1.png",
+          "fit": "cover",
+          "position": "center"
+        },
+        "siegel": {
+          "kind": "image",
+          "name": "Wachssiegel · Bäuerlich · einfache Leute",
+          "src": "assets/images/seals/defaults/baeurlich-v1.png",
+          "fit": "contain",
+          "position": "center"
+        },
         "verfasser": {
           "kind": "character",
           "name": "Muireann",
@@ -291,6 +304,9 @@
           "src": "../AleriaAlmanach/assets/gwynthor-heime/fearnan/muireann.png"
         }
       },
+      "id": "gwynthor-fearnan-die-verschwundene-schatulle",
+      "verfasser": "../AleriaAlmanach/assets/gwynthor-heime/fearnan/muireann.png",
+      "emblem": "../AleriaAlmanach/assets/gwynthor-heime/fearnan/wappen.png",
       "sideWidth": 220,
       "imageFit": "cover",
       "imagePosition": "top",
@@ -336,11 +352,24 @@
       ]
     },
     {
-      "id": "gwynthor-torvik-seit-lyristag-vermisst",
-      "verfasser": "../AleriaAlmanach/assets/gwynthor-heime/torvik/maonaid.png",
       "verfasserName": "Maonaid",
-      "emblem": "../AleriaAlmanach/assets/gwynthor-heime/torvik/wappen.png",
+      "unterschrift": "assets/images/issuers/signatures/maonaid/unterschrift-v1.png",
+      "siegel": "assets/images/seals/defaults/buergerlich-v1.png",
       "media": {
+        "unterschrift": {
+          "kind": "image",
+          "name": "Maonaid · Unterschrift",
+          "src": "assets/images/issuers/signatures/maonaid/unterschrift-v1.png",
+          "fit": "cover",
+          "position": "center"
+        },
+        "siegel": {
+          "kind": "image",
+          "name": "Wachssiegel · Bürgerlich · mittlere Stände",
+          "src": "assets/images/seals/defaults/buergerlich-v1.png",
+          "fit": "contain",
+          "position": "center"
+        },
         "verfasser": {
           "kind": "character",
           "name": "Maonaid",
@@ -349,6 +378,9 @@
           "src": "../AleriaAlmanach/assets/gwynthor-heime/torvik/maonaid.png"
         }
       },
+      "id": "gwynthor-torvik-seit-lyristag-vermisst",
+      "verfasser": "../AleriaAlmanach/assets/gwynthor-heime/torvik/maonaid.png",
+      "emblem": "../AleriaAlmanach/assets/gwynthor-heime/torvik/wappen.png",
       "sideWidth": 220,
       "imageFit": "cover",
       "imagePosition": "top",
@@ -419,11 +451,24 @@
       ]
     },
     {
-      "id": "gwynthor-torvik-seit-lyristag-vermisst-haldor",
-      "verfasser": "../AleriaAlmanach/assets/gwynthor-heime/torvik/maonaid.png",
       "verfasserName": "Maonaid",
-      "emblem": "../AleriaAlmanach/assets/gwynthor-heime/torvik/wappen.png",
+      "unterschrift": "assets/images/issuers/signatures/maonaid/unterschrift-v1.png",
+      "siegel": "assets/images/seals/defaults/buergerlich-v1.png",
       "media": {
+        "unterschrift": {
+          "kind": "image",
+          "name": "Maonaid · Unterschrift",
+          "src": "assets/images/issuers/signatures/maonaid/unterschrift-v1.png",
+          "fit": "cover",
+          "position": "center"
+        },
+        "siegel": {
+          "kind": "image",
+          "name": "Wachssiegel · Bürgerlich · mittlere Stände",
+          "src": "assets/images/seals/defaults/buergerlich-v1.png",
+          "fit": "contain",
+          "position": "center"
+        },
         "verfasser": {
           "kind": "character",
           "name": "Maonaid",
@@ -432,6 +477,9 @@
           "src": "../AleriaAlmanach/assets/gwynthor-heime/torvik/maonaid.png"
         }
       },
+      "id": "gwynthor-torvik-seit-lyristag-vermisst-haldor",
+      "verfasser": "../AleriaAlmanach/assets/gwynthor-heime/torvik/maonaid.png",
+      "emblem": "../AleriaAlmanach/assets/gwynthor-heime/torvik/wappen.png",
       "sideWidth": 220,
       "imageFit": "cover",
       "imagePosition": "top",
@@ -1859,6 +1907,135 @@
             "kind": "image",
             "name": "Haus Gafyr",
             "src": "../Stammb%C3%A4ume/assets/images/houses/Llamreis%20Ankunft/haus-gafyr.png",
+            "fit": "contain",
+            "position": "center"
+          }
+        }
+      ]
+    },
+    {
+      "id": "gwynthor-fearnan-die-verschwundene-schatulle:20261021-fill-empty-signoff",
+      "noticeId": "gwynthor-fearnan-die-verschwundene-schatulle",
+      "fields": [
+        {
+          "field": "verfasserName",
+          "fillEmpty": true,
+          "to": "Muireann"
+        },
+        {
+          "field": "unterschrift",
+          "fillEmpty": true,
+          "to": "assets/images/issuers/signatures/muireann/unterschrift-v1.png"
+        },
+        {
+          "field": "siegel",
+          "fillEmpty": true,
+          "to": "assets/images/seals/defaults/baeurlich-v1.png"
+        },
+        {
+          "field": "media.unterschrift",
+          "fillEmpty": true,
+          "to": {
+            "kind": "image",
+            "name": "Muireann · Unterschrift",
+            "src": "assets/images/issuers/signatures/muireann/unterschrift-v1.png",
+            "fit": "cover",
+            "position": "center"
+          }
+        },
+        {
+          "field": "media.siegel",
+          "fillEmpty": true,
+          "to": {
+            "kind": "image",
+            "name": "Wachssiegel · Bäuerlich · einfache Leute",
+            "src": "assets/images/seals/defaults/baeurlich-v1.png",
+            "fit": "contain",
+            "position": "center"
+          }
+        }
+      ]
+    },
+    {
+      "id": "gwynthor-torvik-seit-lyristag-vermisst:20261021-fill-empty-signoff",
+      "noticeId": "gwynthor-torvik-seit-lyristag-vermisst",
+      "fields": [
+        {
+          "field": "verfasserName",
+          "fillEmpty": true,
+          "to": "Maonaid"
+        },
+        {
+          "field": "unterschrift",
+          "fillEmpty": true,
+          "to": "assets/images/issuers/signatures/maonaid/unterschrift-v1.png"
+        },
+        {
+          "field": "siegel",
+          "fillEmpty": true,
+          "to": "assets/images/seals/defaults/buergerlich-v1.png"
+        },
+        {
+          "field": "media.unterschrift",
+          "fillEmpty": true,
+          "to": {
+            "kind": "image",
+            "name": "Maonaid · Unterschrift",
+            "src": "assets/images/issuers/signatures/maonaid/unterschrift-v1.png",
+            "fit": "cover",
+            "position": "center"
+          }
+        },
+        {
+          "field": "media.siegel",
+          "fillEmpty": true,
+          "to": {
+            "kind": "image",
+            "name": "Wachssiegel · Bürgerlich · mittlere Stände",
+            "src": "assets/images/seals/defaults/buergerlich-v1.png",
+            "fit": "contain",
+            "position": "center"
+          }
+        }
+      ]
+    },
+    {
+      "id": "gwynthor-torvik-seit-lyristag-vermisst-haldor:20261021-fill-empty-signoff",
+      "noticeId": "gwynthor-torvik-seit-lyristag-vermisst-haldor",
+      "fields": [
+        {
+          "field": "verfasserName",
+          "fillEmpty": true,
+          "to": "Maonaid"
+        },
+        {
+          "field": "unterschrift",
+          "fillEmpty": true,
+          "to": "assets/images/issuers/signatures/maonaid/unterschrift-v1.png"
+        },
+        {
+          "field": "siegel",
+          "fillEmpty": true,
+          "to": "assets/images/seals/defaults/buergerlich-v1.png"
+        },
+        {
+          "field": "media.unterschrift",
+          "fillEmpty": true,
+          "to": {
+            "kind": "image",
+            "name": "Maonaid · Unterschrift",
+            "src": "assets/images/issuers/signatures/maonaid/unterschrift-v1.png",
+            "fit": "cover",
+            "position": "center"
+          }
+        },
+        {
+          "field": "media.siegel",
+          "fillEmpty": true,
+          "to": {
+            "kind": "image",
+            "name": "Wachssiegel · Bürgerlich · mittlere Stände",
+            "src": "assets/images/seals/defaults/buergerlich-v1.png",
             "fit": "contain",
             "position": "center"
           }

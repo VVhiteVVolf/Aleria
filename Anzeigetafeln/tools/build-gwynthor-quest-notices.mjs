@@ -2,6 +2,7 @@ import { readFile, writeFile } from 'node:fs/promises';
 import { buildHerluinMissingNotices } from './quests/herluin-missing.mjs';
 import { buildHouseholdQuestNotices } from './build-household-quests.mjs';
 import { buildZitteraaleWantedNotices } from './quests/zitteraale-wanted.mjs';
+import { buildNoticeSignoffUpdates } from './issuers/notice-signoffs.mjs';
 
 export async function buildGwynthorQuestPack() {
   const herluin = buildHerluinMissingNotices();
@@ -39,6 +40,7 @@ export async function buildGwynthorQuestPack() {
     for (const [slot, to] of Object.entries(current.media || {})) fields.push({ field: `media.${slot}`, missing: true, to });
     updates.push({ id: `${old.id}:20261021-egon-issuer-media`, noticeId: old.id, fields });
   }
+  updates.push(...buildNoticeSignoffUpdates(notices.map(notice => notice.id)));
   return { schemaVersion: 2, zettel: notices, updates };
 }
 

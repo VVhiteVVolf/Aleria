@@ -5,7 +5,7 @@ import { fileURLToPath } from 'node:url';
 import { chromium } from '../../../Stammbäume/node_modules/playwright-core/index.mjs';
 import { startChartQualityServer } from '../../../Stammbäume/tools/chart-quality-server.mjs';
 /** A local preview that blocks all external writes and uses no live account. */
-export async function openVenueBrowserPreview(name) {
+export async function openVenueBrowserPreview(name, { entryId } = {}) {
   const root = fileURLToPath(new URL('../../../', import.meta.url));
   const output = resolve(root, `.tmp/${name}/browser-${Date.now()}`);
   await mkdir(output, { recursive: true });
@@ -25,7 +25,8 @@ export async function openVenueBrowserPreview(name) {
     });
     const page = await context.newPage(), errors = [];
     page.on('pageerror', e => errors.push(e.message));
-    await page.goto(`${server.origin}/AleriaAlmanach/AleriaAlmanach.html`);
+    const query = entryId ? `?${new URLSearchParams({ entry: entryId })}` : '';
+    await page.goto(`${server.origin}/AleriaAlmanach/AleriaAlmanach.html${query}`);
     await page.waitForFunction(() => typeof openModal === 'function' && ['ready', 'slow'].includes(document.querySelector('[data-loading-screen]')?.dataset.state));
     const enter = page.locator('[data-loading-action="enter"]');
     await (await enter.isEnabled() ? enter : page.locator('[data-loading-action="continue"]')).click();

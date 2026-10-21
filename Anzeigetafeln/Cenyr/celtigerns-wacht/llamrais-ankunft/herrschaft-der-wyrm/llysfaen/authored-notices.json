@@ -1,0 +1,479 @@
+{
+  "schemaVersion": 2,
+  "zettel": [],
+  "updates": [
+    {
+      "id": "llysfaen-schwarzer-zitteraal:20261021-fill-empty-signoff",
+      "noticeId": "llysfaen-schwarzer-zitteraal",
+      "fields": [
+        {
+          "field": "verfasserName",
+          "fillEmpty": true,
+          "to": "Sir Egon Gafyr"
+        },
+        {
+          "field": "unterschrift",
+          "fillEmpty": true,
+          "to": "assets/images/issuers/egon-gafyr/unterschrift-v1.png"
+        },
+        {
+          "field": "siegel",
+          "fillEmpty": true,
+          "to": "assets/images/issuers/egon-gafyr/wachssiegel-v1.png"
+        },
+        {
+          "field": "media.unterschrift",
+          "fillEmpty": true,
+          "to": {
+            "kind": "image",
+            "name": "Egon Gafyr · Unterschrift",
+            "src": "assets/images/issuers/egon-gafyr/unterschrift-v1.png",
+            "fit": "cover",
+            "position": "center"
+          }
+        },
+        {
+          "field": "media.siegel",
+          "fillEmpty": true,
+          "to": {
+            "kind": "image",
+            "name": "Wachssiegel des Marschalls · Egon Gafyr",
+            "src": "assets/images/issuers/egon-gafyr/wachssiegel-v1.png",
+            "fit": "contain",
+            "position": "center"
+          }
+        }
+      ]
+    },
+    {
+      "id": "llysfaen-feuerstollen:20261021-fill-empty-signoff",
+      "noticeId": "llysfaen-feuerstollen",
+      "fields": [
+        {
+          "field": "verfasserName",
+          "fillEmpty": true,
+          "to": "Sir Cenwyn Annwyl"
+        },
+        {
+          "field": "unterschrift",
+          "fillEmpty": true,
+          "to": "assets/images/issuers/signatures/cenwyn-annwyl/unterschrift-v1.png"
+        },
+        {
+          "field": "siegel",
+          "fillEmpty": true,
+          "to": "assets/images/seals/defaults/buergerlich-v1.png"
+        },
+        {
+          "field": "media.unterschrift",
+          "fillEmpty": true,
+          "to": {
+            "kind": "image",
+            "name": "Sir Cenwyn Annwyl · Unterschrift",
+            "src": "assets/images/issuers/signatures/cenwyn-annwyl/unterschrift-v1.png",
+            "fit": "cover",
+            "position": "center"
+          }
+        },
+        {
+          "field": "media.siegel",
+          "fillEmpty": true,
+          "to": {
+            "kind": "image",
+            "name": "Wachssiegel · Bürgerlich · mittlere Stände",
+            "src": "assets/images/seals/defaults/buergerlich-v1.png",
+            "fit": "contain",
+            "position": "center"
+          }
+        }
+      ]
+    },
+    {
+      "id": "llysfaen-mabli:20261021-fill-empty-signoff",
+      "noticeId": "llysfaen-mabli",
+      "fields": [
+        {
+          "field": "verfasserName",
+          "fillEmpty": true,
+          "to": "Efa"
+        },
+        {
+          "field": "unterschrift",
+          "fillEmpty": true,
+          "to": "assets/images/issuers/signatures/efa/unterschrift-v1.png"
+        },
+        {
+          "field": "siegel",
+          "fillEmpty": true,
+          "to": "assets/images/seals/defaults/baeurlich-v1.png"
+        },
+        {
+          "field": "media.unterschrift",
+          "fillEmpty": true,
+          "to": {
+            "kind": "image",
+            "name": "Efa · Unterschrift",
+            "src": "assets/images/issuers/signatures/efa/unterschrift-v1.png",
+            "fit": "cover",
+            "position": "center"
+          }
+        },
+        {
+          "field": "media.siegel",
+          "fillEmpty": true,
+          "to": {
+            "kind": "image",
+            "name": "Wachssiegel · Bäuerlich · einfache Leute",
+            "src": "assets/images/seals/defaults/baeurlich-v1.png",
+            "fit": "contain",
+            "position": "center"
+          }
+        }
+      ]
+    },
+    {
+      "id": "llysfaen-hoher-besuch:20261021-fill-empty-signoff",
+      "noticeId": "llysfaen-hoher-besuch",
+      "fields": [
+        {
+          "field": "verfasserName",
+          "fillEmpty": true,
+          "to": "Brinthan Argall"
+        },
+        {
+          "field": "unterschrift",
+          "fillEmpty": true,
+          "to": "assets/images/issuers/signatures/brinthan-argall/unterschrift-v1.png"
+        },
+        {
+          "field": "siegel",
+          "fillEmpty": true,
+          "to": "assets/images/seals/defaults/buergerlich-v1.png"
+        },
+        {
+          "field": "media.unterschrift",
+          "fillEmpty": true,
+          "to": {
+            "kind": "image",
+            "name": "Brinthan Argall · Unterschrift",
+            "src": "assets/images/issuers/signatures/brinthan-argall/unterschrift-v1.png",
+            "fit": "cover",
+            "position": "center"
+          }
+        },
+        {
+          "field": "media.siegel",
+          "fillEmpty": true,
+          "to": {
+            "kind": "image",
+            "name": "Wachssiegel · Bürgerlich · mittlere Stände",
+            "src": "assets/images/seals/defaults/buergerlich-v1.png",
+            "fit": "contain",
+            "position": "center"
+          }
+        }
+      ]
+    },
+    {
+      "id": "llysfaen-hof-glyn:20261021-fill-empty-signoff",
+      "noticeId": "llysfaen-hof-glyn",
+      "fields": [
+        {
+          "field": "verfasserName",
+          "fillEmpty": true,
+          "to": "Meurig Glyn"
+        },
+        {
+          "field": "unterschrift",
+          "fillEmpty": true,
+          "to": "assets/images/issuers/signatures/meurig-glyn/unterschrift-v1.png"
+        },
+        {
+          "field": "siegel",
+          "fillEmpty": true,
+          "to": "assets/images/seals/defaults/baeurlich-v1.png"
+        },
+        {
+          "field": "media.unterschrift",
+          "fillEmpty": true,
+          "to": {
+            "kind": "image",
+            "name": "Meurig Glyn · Unterschrift",
+            "src": "assets/images/issuers/signatures/meurig-glyn/unterschrift-v1.png",
+            "fit": "cover",
+            "position": "center"
+          }
+        },
+        {
+          "field": "media.siegel",
+          "fillEmpty": true,
+          "to": {
+            "kind": "image",
+            "name": "Wachssiegel · Bäuerlich · einfache Leute",
+            "src": "assets/images/seals/defaults/baeurlich-v1.png",
+            "fit": "contain",
+            "position": "center"
+          }
+        }
+      ]
+    },
+    {
+      "id": "llysfaen-pferdediebstahl:20261021-fill-empty-signoff",
+      "noticeId": "llysfaen-pferdediebstahl",
+      "fields": [
+        {
+          "field": "verfasserName",
+          "fillEmpty": true,
+          "to": "Brinthan Argall"
+        },
+        {
+          "field": "unterschrift",
+          "fillEmpty": true,
+          "to": "assets/images/issuers/signatures/brinthan-argall/unterschrift-v1.png"
+        },
+        {
+          "field": "siegel",
+          "fillEmpty": true,
+          "to": "assets/images/seals/defaults/buergerlich-v1.png"
+        },
+        {
+          "field": "media.unterschrift",
+          "fillEmpty": true,
+          "to": {
+            "kind": "image",
+            "name": "Brinthan Argall · Unterschrift",
+            "src": "assets/images/issuers/signatures/brinthan-argall/unterschrift-v1.png",
+            "fit": "cover",
+            "position": "center"
+          }
+        },
+        {
+          "field": "media.siegel",
+          "fillEmpty": true,
+          "to": {
+            "kind": "image",
+            "name": "Wachssiegel · Bürgerlich · mittlere Stände",
+            "src": "assets/images/seals/defaults/buergerlich-v1.png",
+            "fit": "contain",
+            "position": "center"
+          }
+        }
+      ]
+    },
+    {
+      "id": "llysfaen-brogars-hilfe:20261021-fill-empty-signoff",
+      "noticeId": "llysfaen-brogars-hilfe",
+      "fields": [
+        {
+          "field": "verfasserName",
+          "fillEmpty": true,
+          "to": "Malwyn & Marve Brogar"
+        },
+        {
+          "field": "unterschrift",
+          "fillEmpty": true,
+          "to": "assets/images/issuers/signatures/malwyn-marve-brogar/unterschrift-v1.png"
+        },
+        {
+          "field": "siegel",
+          "fillEmpty": true,
+          "to": "assets/images/seals/defaults/buergerlich-v1.png"
+        },
+        {
+          "field": "media.unterschrift",
+          "fillEmpty": true,
+          "to": {
+            "kind": "image",
+            "name": "Malwyn & Marve Brogar · Unterschrift",
+            "src": "assets/images/issuers/signatures/malwyn-marve-brogar/unterschrift-v1.png",
+            "fit": "cover",
+            "position": "center"
+          }
+        },
+        {
+          "field": "media.siegel",
+          "fillEmpty": true,
+          "to": {
+            "kind": "image",
+            "name": "Wachssiegel · Bürgerlich · mittlere Stände",
+            "src": "assets/images/seals/defaults/buergerlich-v1.png",
+            "fit": "contain",
+            "position": "center"
+          }
+        }
+      ]
+    },
+    {
+      "id": "llysfaen-bobi-erlenglanz:20261021-fill-empty-signoff",
+      "noticeId": "llysfaen-bobi-erlenglanz",
+      "fields": [
+        {
+          "field": "verfasserName",
+          "fillEmpty": true,
+          "to": "Bobi"
+        },
+        {
+          "field": "unterschrift",
+          "fillEmpty": true,
+          "to": "assets/images/issuers/signatures/bobi/unterschrift-v1.png"
+        },
+        {
+          "field": "siegel",
+          "fillEmpty": true,
+          "to": "assets/images/seals/defaults/baeurlich-v1.png"
+        },
+        {
+          "field": "media.unterschrift",
+          "fillEmpty": true,
+          "to": {
+            "kind": "image",
+            "name": "Bobi · Unterschrift",
+            "src": "assets/images/issuers/signatures/bobi/unterschrift-v1.png",
+            "fit": "cover",
+            "position": "center"
+          }
+        },
+        {
+          "field": "media.siegel",
+          "fillEmpty": true,
+          "to": {
+            "kind": "image",
+            "name": "Wachssiegel · Bäuerlich · einfache Leute",
+            "src": "assets/images/seals/defaults/baeurlich-v1.png",
+            "fit": "contain",
+            "position": "center"
+          }
+        }
+      ]
+    },
+    {
+      "id": "llysfaen-crewe-hof:20261021-fill-empty-signoff",
+      "noticeId": "llysfaen-crewe-hof",
+      "fields": [
+        {
+          "field": "verfasserName",
+          "fillEmpty": true,
+          "to": "Gareth Talfryn"
+        },
+        {
+          "field": "unterschrift",
+          "fillEmpty": true,
+          "to": "assets/images/issuers/signatures/gareth-talfryn/unterschrift-v1.png"
+        },
+        {
+          "field": "siegel",
+          "fillEmpty": true,
+          "to": "assets/images/seals/defaults/baeurlich-v1.png"
+        },
+        {
+          "field": "media.unterschrift",
+          "fillEmpty": true,
+          "to": {
+            "kind": "image",
+            "name": "Gareth Talfryn · Unterschrift",
+            "src": "assets/images/issuers/signatures/gareth-talfryn/unterschrift-v1.png",
+            "fit": "cover",
+            "position": "center"
+          }
+        },
+        {
+          "field": "media.siegel",
+          "fillEmpty": true,
+          "to": {
+            "kind": "image",
+            "name": "Wachssiegel · Bäuerlich · einfache Leute",
+            "src": "assets/images/seals/defaults/baeurlich-v1.png",
+            "fit": "contain",
+            "position": "center"
+          }
+        }
+      ]
+    },
+    {
+      "id": "llysfaen-gemeinschaft:20261021-fill-empty-signoff",
+      "noticeId": "llysfaen-gemeinschaft",
+      "fields": [
+        {
+          "field": "verfasserName",
+          "fillEmpty": true,
+          "to": "Sir Gwydion Rhyddid"
+        },
+        {
+          "field": "unterschrift",
+          "fillEmpty": true,
+          "to": "assets/images/issuers/signatures/gwydion-rhyddid/unterschrift-v1.png"
+        },
+        {
+          "field": "siegel",
+          "fillEmpty": true,
+          "to": "assets/images/seals/defaults/buergerlich-v1.png"
+        },
+        {
+          "field": "media.unterschrift",
+          "fillEmpty": true,
+          "to": {
+            "kind": "image",
+            "name": "Sir Gwydion Rhyddid · Unterschrift",
+            "src": "assets/images/issuers/signatures/gwydion-rhyddid/unterschrift-v1.png",
+            "fit": "cover",
+            "position": "center"
+          }
+        },
+        {
+          "field": "media.siegel",
+          "fillEmpty": true,
+          "to": {
+            "kind": "image",
+            "name": "Wachssiegel · Bürgerlich · mittlere Stände",
+            "src": "assets/images/seals/defaults/buergerlich-v1.png",
+            "fit": "contain",
+            "position": "center"
+          }
+        }
+      ]
+    },
+    {
+      "id": "llysfaen-wasserloch:20261021-fill-empty-signoff",
+      "noticeId": "llysfaen-wasserloch",
+      "fields": [
+        {
+          "field": "verfasserName",
+          "fillEmpty": true,
+          "to": "Brinthan Argall"
+        },
+        {
+          "field": "unterschrift",
+          "fillEmpty": true,
+          "to": "assets/images/issuers/signatures/brinthan-argall/unterschrift-v1.png"
+        },
+        {
+          "field": "siegel",
+          "fillEmpty": true,
+          "to": "assets/images/seals/defaults/buergerlich-v1.png"
+        },
+        {
+          "field": "media.unterschrift",
+          "fillEmpty": true,
+          "to": {
+            "kind": "image",
+            "name": "Brinthan Argall · Unterschrift",
+            "src": "assets/images/issuers/signatures/brinthan-argall/unterschrift-v1.png",
+            "fit": "cover",
+            "position": "center"
+          }
+        },
+        {
+          "field": "media.siegel",
+          "fillEmpty": true,
+          "to": {
+            "kind": "image",
+            "name": "Wachssiegel · Bürgerlich · mittlere Stände",
+            "src": "assets/images/seals/defaults/buergerlich-v1.png",
+            "fit": "contain",
+            "position": "center"
+          }
+        }
+      ]
+    }
+  ]
+}

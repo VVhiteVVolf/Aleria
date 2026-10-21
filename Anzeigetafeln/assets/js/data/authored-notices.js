@@ -21,7 +21,7 @@
 
   function merge(state, source) {
     const notices = Array.isArray(source) ? source : source?.zettel || [];
-    if (!notices.length) return state;
+    if (!notices.length && !source?.updates?.length) return state;
     const existing = Array.isArray(state?.zettel) ? state.zettel : [];
     const ids = new Set(existing.map(notice => notice.id));
     const applied = new Set(Array.isArray(state?.appliedAuthoredNoticeIds) ? state.appliedAuthoredNoticeIds : []);
@@ -42,11 +42,15 @@
         let updated = zettel[index];
         for (const change of update.fields || []) {
           const mediaKey = /^media\.(verfasser|portrait|emblem|unterschrift|siegel)$/.exec(change.field)?.[1];
-          if (!mediaKey && !['text', 'portrait', 'verfasser', 'emblem', 'unterschrift', 'siegel', 'noticeGroupId'].includes(change.field)) continue;
+          if (!mediaKey && !['text', 'portrait', 'verfasser', 'verfasserName', 'emblem', 'unterschrift', 'siegel', 'noticeGroupId'].includes(change.field)) continue;
           if (!Object.hasOwn(change, 'to')) continue;
           const current = mediaKey ? updated.media?.[mediaKey] : updated[change.field];
-          const matches = change.missing ? current === undefined : current === change.from;
+          const empty = current === undefined || current === null || (typeof current === 'string' && !current.trim());
+          const matches = change.fillEmpty ? empty : change.missing ? current === undefined : current === change.from;
           if (!matches || current === change.to) continue;
+          if (change.fillEmpty && (change.field === 'siegel' || mediaKey === 'siegel') && updated.sealPreset && updated.sealPreset !== 'auto') continue;
+          // Formatting belongs to the replacement image, never to a custom one.
+          if (change.fillEmpty && mediaKey && updated[mediaKey] !== change.to?.src) continue;
           if (updated === zettel[index]) updated = { ...updated };
           if (mediaKey) updated.media = { ...updated.media, [mediaKey]: JSON.parse(JSON.stringify(change.to)) };
           else updated[change.field] = change.to;

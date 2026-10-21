@@ -1,6 +1,7 @@
 window.TAFEL_CONFIG = {
   storage: {
     dataPath: "Cenyr/celtigerns-wacht/llamrais-ankunft/herrschaft-der-wyrm/llysfaen/data.json",
+    authoredNoticesPath: "Cenyr/celtigerns-wacht/llamrais-ankunft/herrschaft-der-wyrm/llysfaen/authored-notices.json",
   },
   boardId: "cenyr-celtigerns-wacht-llamrais-ankunft-wyrm-llysfaen-anzeigetafel",
   title: "Anzeigetafel — Llysfaen",

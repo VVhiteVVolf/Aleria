@@ -2,6 +2,7 @@ import { GWYNTHOR_HOUSEHOLDS } from '../../AleriaAlmanach/modules/gwynthor-heime
 import { STANDARD_ITEMS } from '../../AleriaAlmanach/modules/item-register/item-register-standard.js';
 import { rewardFromItem } from '../assets/js/rewards/notice-rewards-model.mjs';
 import { HERLUIN_MISSING_NOTICE_ID, buildHerluinMissingNotice } from './quests/herluin-missing.mjs';
+import { signoffForNotice } from './issuers/notice-signoffs.mjs';
 
 export const FEARNAN_NOTICE_ID = 'gwynthor-fearnan-die-verschwundene-schatulle';
 export const TORVIK_NOTICE_ID = 'gwynthor-torvik-seit-lyristag-vermisst';
@@ -9,9 +10,9 @@ const art = 'assets/images/quests/torvik-seit-lyristag-vermisst/maonaids-familie
 const portrait = person => `../AleriaAlmanach/${person.portrait.slice(2)}`;
 const home = slug => GWYNTHOR_HOUSEHOLDS.find(item => item.slug === slug);
 const base = (id, family, issuer) => ({
-  id, verfasser: portrait(issuer), verfasserName: issuer.name,
+  ...signoffForNotice(id), id, verfasser: portrait(issuer), verfasserName: issuer.name,
   emblem: `../AleriaAlmanach/assets/gwynthor-heime/${family.slug}/wappen.png`,
-  media: { verfasser: { kind: 'character', name: issuer.name, familyId: `haus-${family.slug}`, personId: issuer.id, src: portrait(issuer) } },
+  media: { ...signoffForNotice(id)?.media, verfasser: { kind: 'character', name: issuer.name, familyId: `haus-${family.slug}`, personId: issuer.id, src: portrait(issuer) } },
   sideWidth: 220, imageFit: 'cover', imagePosition: 'top',
   bild: '', portrait: '', artikel: [], personen: [], comments: [], secret: false,
 });

@@ -64,7 +64,7 @@ function regions(article) {
     const nodes = [];
     while (walker.nextNode()) {
       const node = walker.currentNode;
-      if (!node.parentElement.closest('button, a, .notice-money, .notice-reward-button')) nodes.push([node, node.nodeValue]);
+      if (!node.parentElement.closest('button, a:not(.notice-module-link), .notice-money, .notice-reward-button')) nodes.push([node, node.nodeValue]);
     }
     return { element, heading: element.matches('h2,h3'), nodes,
       fontFamily: element.style.fontFamily, fontWeight: element.style.fontWeight,

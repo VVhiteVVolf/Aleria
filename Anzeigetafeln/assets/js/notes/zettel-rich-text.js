@@ -3,7 +3,7 @@
 
   const ALLOWED_TAGS = new Set([
     'P', 'BR', 'STRONG', 'B', 'EM', 'I', 'U', 'S',
-    'UL', 'OL', 'LI', 'H2', 'H3', 'H4', 'BLOCKQUOTE', 'SPAN'
+    'UL', 'OL', 'LI', 'H2', 'H3', 'H4', 'BLOCKQUOTE', 'SPAN', 'A'
   ]);
   const ALLOWED_COLORS = new Set([
     '#1f1608', '#5a3a08', '#8a641f', '#9b1c1c',
@@ -19,7 +19,7 @@
   }
 
   function looksLikeHtml(value){
-    return /<\/?(p|div|br|strong|b|em|i|u|s|ul|ol|li|h2|h3|h4|blockquote|span|font)\b/i.test(String(value || ''));
+    return /<\/?(p|div|br|strong|b|em|i|u|s|ul|ol|li|h2|h3|h4|blockquote|span|font|a)\b/i.test(String(value || ''));
   }
 
   function plainTextToHtml(value){
@@ -78,12 +78,19 @@
     if(tag === 'SCRIPT' || tag === 'STYLE'){
       return documentRef.createTextNode('');
     }
-    const safeTag = tag === 'DIV'
+    const href = tag === 'A' ? window.TafelNoticeModuleLinks?.href(node.getAttribute('href')) : '';
+    const safeTag = tag === 'A' && !href ? 'span' : tag === 'DIV'
       ? 'p'
       : ALLOWED_TAGS.has(tag)
         ? tag.toLowerCase()
         : 'span';
     const safeNode = documentRef.createElement(safeTag);
+    if (href) {
+      safeNode.setAttribute('href', href);
+      safeNode.setAttribute('class', 'notice-module-link');
+      safeNode.setAttribute('target', '_blank');
+      safeNode.setAttribute('rel', 'noopener');
+    }
 
     const styleParts = [];
     const style = sanitizeStyle(node.getAttribute('style'));
@@ -119,7 +126,7 @@
 
   function renderHtml(value){
     const html = sanitizeHtml(value);
-    return html || '';
+    return window.TafelNoticeModuleLinks ? window.TafelNoticeModuleLinks.html(html) : html || '';
   }
 
   function textPreview(value, maxLength = 200){

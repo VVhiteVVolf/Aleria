@@ -86,6 +86,7 @@
   };
 
   const inputActions = {
+    'notice-seal-preset': element => window.TafelNoticeSeals.setPreset(element.dataset.noticeId, element.value),
     'notice-stack-select': element => window.TafelNoticeReader.select(element.value),
     'notice-reward-field': element => window.TafelNoticeRewards.field(element),
     'notice-typography-field': element => window.TafelNoticeTypography.field(element),

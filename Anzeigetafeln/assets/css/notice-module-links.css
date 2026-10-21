@@ -1,0 +1,10 @@
+.notice-module-link {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: #9c7845;
+  text-underline-offset: .15em;
+  text-decoration-thickness: 1px;
+}
+
+.notice-module-link:hover { color: #7a3e1d; text-decoration-thickness: 2px; }
+.notice-module-link:focus-visible { outline: 2px solid #9c7845; outline-offset: 3px; }

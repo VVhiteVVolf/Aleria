@@ -28,6 +28,11 @@
   function selection(source, field) {
     const reference = source?.media?.[field];
     const src = imageUrl(source?.[field]);
+    if (field === 'siegel' && !src) {
+      const fallback = window.TafelNoticeSeals?.selection(source);
+      if (fallback) return fallback;
+      if (source?.sealPreset === 'none') return { src: '', suppressed: true };
+    }
     // A changed legacy URL must never keep an unrelated character link.
     const matches = reference && (imageUrl(reference.src) === src || (!reference.src && reference.kind !== 'character'));
     return matches ? { ...reference, src } : { src };
@@ -36,6 +41,7 @@
   function render(source, field, { className = '', label = 'Bild', symbol = '◇', fit, position } = {}) {
     const esc = window.TafelRuntime.esc;
     const item = selection(source, field);
+    if (item.suppressed) return `<span class="${esc(className)} notice-seal-empty" aria-hidden="true"></span>`;
     const href = characterLink(item);
     const tag = href ? 'a' : 'span';
     const imageFit = ['contain', 'cover'].includes(item.fit)
@@ -51,6 +57,7 @@
   function apply(source, field, item) {
     const src = imageUrl(item?.src);
     source[field] = src;
+    if (field === 'siegel' && !src) source.sealPreset = 'none';
     source.media = { ...source.media };
     if (item) source.media[field] = item.kind === 'character'
       ? { ...item, src }
