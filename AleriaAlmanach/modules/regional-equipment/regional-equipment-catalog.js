@@ -76,10 +76,14 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "haus-rhwyd",
       "haus-gwregysdu",
       "sept-cneacail",
+      "haus-fearnan",
+      "haus-torvik",
+      "haus-celynfor",
       "haus-bradrhith",
       "haus-cymrath-o-traethlan",
       "haus-sgrechiwr",
       "haus-penrudd",
+      "haus-valerus",
       "haus-argall",
       "haus-gwefrydd",
       "haus-almarch",
@@ -560,7 +564,8 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "sept-techtmar",
       "haus-veltrane",
       "haus-bielle",
-      "haus-desele"
+      "haus-desele",
+      "haus-lothaire"
     ]
   },
   {
@@ -633,10 +638,14 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "haus-rhwyd",
       "haus-gwregysdu",
       "sept-cneacail",
+      "haus-fearnan",
+      "haus-torvik",
+      "haus-celynfor",
       "haus-bradrhith",
       "haus-cymrath-o-traethlan",
       "haus-sgrechiwr",
       "haus-penrudd",
+      "haus-valerus",
       "haus-argall",
       "haus-gwefrydd",
       "haus-almarch",
@@ -911,10 +920,14 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "haus-rhwyd",
       "haus-gwregysdu",
       "sept-cneacail",
+      "haus-fearnan",
+      "haus-torvik",
+      "haus-celynfor",
       "haus-bradrhith",
       "haus-cymrath-o-traethlan",
       "haus-sgrechiwr",
       "haus-penrudd",
+      "haus-valerus",
       "haus-argall",
       "haus-gwefrydd",
       "haus-almarch",
@@ -1018,6 +1031,7 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "cenyr/celtigerns-wacht/llamreis-ankunft/twr-traethlan",
       "cenyr/celtigerns-wacht/llamreis-ankunft/lynthor",
       "cenyr/celtigerns-wacht/llamreis-ankunft/bannkreis-gwynthor",
+      "cenyr/celtigerns-wacht/llamreis-ankunft/burgerliche",
       "cenyr/celtigerns-wacht/llamreis-ankunft/llysfaen"
     ],
     "houseIds": [
@@ -1060,10 +1074,14 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "haus-rhwyd",
       "haus-gwregysdu",
       "sept-cneacail",
+      "haus-fearnan",
+      "haus-torvik",
+      "haus-celynfor",
       "haus-bradrhith",
       "haus-cymrath-o-traethlan",
       "haus-sgrechiwr",
       "haus-penrudd",
+      "haus-valerus",
       "haus-argall"
     ]
   },
@@ -1123,6 +1141,9 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "haus-rhwyd",
       "haus-gwregysdu",
       "sept-cneacail",
+      "haus-fearnan",
+      "haus-torvik",
+      "haus-celynfor",
       "haus-bradrhith"
     ]
   },
@@ -1197,6 +1218,45 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     "children": [],
     "houseIds": [
       "haus-penrudd"
+    ]
+  },
+  {
+    "id": "cenyr/celtigerns-wacht/llamreis-ankunft/burgerliche",
+    "parentId": "cenyr/celtigerns-wacht/llamreis-ankunft",
+    "name": "Bürgerliche",
+    "path": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Bürgerliche"
+    ],
+    "image": "",
+    "countryId": "cenyr",
+    "regionId": "celtigerns-wacht",
+    "children": [
+      "cenyr/celtigerns-wacht/llamreis-ankunft/burgerliche/gwynthor"
+    ],
+    "houseIds": [
+      "haus-valerus"
+    ]
+  },
+  {
+    "id": "cenyr/celtigerns-wacht/llamreis-ankunft/burgerliche/gwynthor",
+    "parentId": "cenyr/celtigerns-wacht/llamreis-ankunft/burgerliche",
+    "name": "Gwynthor",
+    "path": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Bürgerliche",
+      "Gwynthor"
+    ],
+    "image": "",
+    "countryId": "cenyr",
+    "regionId": "celtigerns-wacht",
+    "children": [],
+    "houseIds": [
+      "haus-valerus"
     ]
   },
   {
@@ -9676,7 +9736,8 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     "children": [],
     "houseIds": [
       "haus-bielle",
-      "haus-desele"
+      "haus-desele",
+      "haus-lothaire"
     ]
   }
 ];
@@ -13172,6 +13233,64 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
       "Brevanor"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-desele&mode=view"
+  },
+  {
+    "id": "haus-lothaire",
+    "name": "Haus Lothaire",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Brevanor/Lothaire.png",
+    "path": [
+      "Brevanor"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-lothaire&mode=view"
+  },
+  {
+    "id": "haus-valerus",
+    "name": "Haus Valerus",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Venalys/haus-valerus.png",
+    "path": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Bürgerliche",
+      "Gwynthor"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-valerus&mode=view"
+  },
+  {
+    "id": "haus-fearnan",
+    "name": "Familie Fearnan",
+    "image": "/AleriaAlmanach/assets/gwynthor-heime/fearnan/wappen.png",
+    "path": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Gwynthor"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-fearnan&mode=view"
+  },
+  {
+    "id": "haus-torvik",
+    "name": "Familie Torvik",
+    "image": "/AleriaAlmanach/assets/gwynthor-heime/torvik/wappen.png",
+    "path": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Gwynthor"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-torvik&mode=view"
+  },
+  {
+    "id": "haus-celynfor",
+    "name": "Familie Celynfor",
+    "image": "/AleriaAlmanach/assets/gwynthor-heime/celynfor/wappen.png",
+    "path": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Gwynthor"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-celynfor&mode=view"
   },
   {
     "id": "haus-bradrhith",

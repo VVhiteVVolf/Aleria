@@ -31,6 +31,20 @@ CharakterDatenbank/
 
 ## Synchronisieren
 
+Neue, ausdrücklich ausgearbeitete Einzelfiguren können begrenzt ergänzt werden,
+ohne alle bestehenden Archivexporte erneut auf Inventare und Familien abzubilden:
+
+```powershell
+node CharakterDatenbank/scripts/import-authored-characters.mjs --feature mein-modul --source "Charakter Archiv Exporte/meine-neue-figur.json"
+```
+
+Mehrere `--source`-Argumente sind möglich. Der Import verlangt das Format
+`aleria-character`, berücksichtigt `assignedTab` und verweigert das Überschreiben
+bereits vorhandener fremder Figuren. Nur die eigenen neuen Datensätze und die
+drei Registerprojektionen werden geschrieben. `--check` kontrolliert denselben
+Stand ohne Schreibzugriffe. Die Herkunftskennung bleibt bei späteren vollständigen
+Abgleichen erhalten. Laufzeitdaten aus Firestore werden damit nicht geschrieben.
+
 Einen vollständigen Archivexport in `Charakter Archiv Exporte/` ablegen und im Repository-Stamm ausführen:
 
 ```powershell

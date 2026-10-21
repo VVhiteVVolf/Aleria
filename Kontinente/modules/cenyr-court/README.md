@@ -4,6 +4,11 @@ Die eigenständigen Unterseiten liegen bei der Königreichsseite unter
 `Kontinente/Estryll/Königreich Cenyr/aemter.html` und `kronfolge.html`.
 Der Ämtereinstieg liegt unter Tristan im Königsrat, die Kronfolge in der Ahnengalerie.
 
+Seit dem 20. Oktober 2026 liegen die gemeinsame Seitenschale, Styles,
+Ämterkarten und Suchlogik unter `modules/kingdom-court/`. Die hiesigen
+CSS-/Suchdateien bleiben als kompatible Einstiegspfade erhalten. Cenyrs Daten,
+Begriffe und Königslinie werden weiterhin ausschließlich hier gepflegt.
+
 ## Pflege und Zuständigkeiten
 
 - `offices-data.mjs`: 50 Ämter, Titel und Stände in vier Gruppen sowie der Hofdienst.

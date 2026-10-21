@@ -34,10 +34,19 @@ export function createTerritoryData(source, context, data = globalThis.ALERIA_HE
     view: {
       familyTreePage: data.familyTreePage, familySections, councilGroups,
       vassalGroups: source.vassalGroups, administration: data.administration(),
-      geography: { map, domains },
+      geography: { map, domains, ...(source.territoryLinks?.length ? {
+        links: source.territoryLinks.map(id => {
+          const territory = territoriesById.get(id);
+          if (!territory) throw new Error(`Unbekannte untergeordnete Herrschaft: ${id}`);
+          return { id, title: territory.name, href: territory.href,
+            imageSrc: territory.crest || territory.banner,
+            imageAlt: territory.crest ? `Wappen ${territory.house}` : `Banner ${territory.name}`,
+            house: territory.house, seat: territory.seat };
+        }),
+      } : {}) },
       article: {
         id: source.id, title: source.title, shortTitle: source.shortTitle,
-        crestSrc: heraldry.banner, crestAlt: `Banner ${heraldry.name}`,
+        crestSrc: source.crestSrc || heraldry.banner, crestAlt: source.crestAlt || `Banner ${heraldry.name}`,
         kicker: source.kicker, parentHref: source.parentHref, parentLabel: source.parentLabel,
         councilNote: source.councilNote, map, infobox: source.infobox,
         copy: source.copy, cultureSections: source.cultureSections, floraSections: source.floraSections,

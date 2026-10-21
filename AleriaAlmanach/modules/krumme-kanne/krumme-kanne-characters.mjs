@@ -1,11 +1,12 @@
 import { KANNE_PEOPLE } from './krumme-kanne-roster.mjs';
 import { KANNE_HOUSE_FAMILIES } from '../../../Stammbäume/assets/js/data/krumme-kanne-families.js';
 import { HOUSE_TONNARTH_FAMILY } from '../../../Stammbäume/assets/js/data/house-tonnarth-family.js';
+import { GWYNTHOR_SMALL_HOUSEHOLD_FAMILIES } from '../../../Stammbäume/assets/js/data/gwynthor-small-households.js';
 import { createFamilyCandidates } from '../character-genealogy/genealogy-mapping.js';
 import { planFamilyCharacterGroup, retiredFamilySources } from '../character-genealogy/character-group-import-plan.mjs';
 
 export const KANNE_CHARACTER_GROUP='Die Krumme Kanne';
-const candidates=[...KANNE_HOUSE_FAMILIES,HOUSE_TONNARTH_FAMILY].flatMap(family=>createFamilyCandidates({
+const candidates=[...KANNE_HOUSE_FAMILIES,HOUSE_TONNARTH_FAMILY,...GWYNTHOR_SMALL_HOUSEHOLD_FAMILIES].flatMap(family=>createFamilyCandidates({
   id:family.document.id,title:family.document.title,family,folderPath:['Cenyr','Celtigerns Wacht','Gwynthor','Bürgerliche'],source:'github'
 }));
 const portrait=p=>p.portrait || './assets/krumme-kanne/'+(['merrik','hrolf','aedan'].includes(p.id)?'references':'portraits')+'/'+p.id+'.png';

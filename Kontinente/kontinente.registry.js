@@ -1,4 +1,619 @@
 window.KONTINENTE_REGISTRY = [
+  // BEGIN RORIKSHEIM_GENERATED
+  {
+    "id": "jarltum-roriksheim",
+    "slug": "jarltum-roriksheim",
+    "aliases": [
+      "roriksheim"
+    ],
+    "name": "Jarltum Roriksheim",
+    "type": "Jarltum",
+    "page": "Estryll/Königreich Aldrimar/Jarltum Roriksheim/Jarltum Roriksheim.html",
+    "data": "Estryll/Königreich Aldrimar/Jarltum Roriksheim/jarltum.data.mjs?v=roriksheim-20261020d",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Königreich",
+        "name": "Aldrimar",
+        "slug": "aldrimar"
+      },
+      {
+        "type": "Jarltum",
+        "name": "Jarltum Roriksheim",
+        "slug": "jarltum-roriksheim"
+      }
+    ]
+  },
+  {
+    "id": "thanentum-rorikstal",
+    "slug": "thanentum-rorikstal",
+    "aliases": [],
+    "name": "Thanentum Rorikstal",
+    "type": "Thanentum",
+    "page": "Estryll/Königreich Aldrimar/Jarltum Roriksheim/Thanentum Rorikstal/Thanentum Rorikstal.html",
+    "data": "Estryll/Königreich Aldrimar/Jarltum Roriksheim/Thanentum Rorikstal/herrschaft.data.mjs?v=roriksheim-20261020d",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Königreich",
+        "name": "Aldrimar",
+        "slug": "aldrimar"
+      },
+      {
+        "type": "Jarltum",
+        "name": "Jarltum Roriksheim",
+        "slug": "jarltum-roriksheim"
+      },
+      {
+        "type": "Thanentum",
+        "name": "Thanentum Rorikstal",
+        "slug": "thanentum-rorikstal"
+      }
+    ]
+  },
+  {
+    "id": "hesirentum-schwarzdorn",
+    "slug": "hesirentum-schwarzdorn",
+    "aliases": [],
+    "name": "Hesirentum Schwarzdorn",
+    "type": "Hesirentum",
+    "page": "Estryll/Königreich Aldrimar/Jarltum Roriksheim/Hesirentum Schwarzdorn/Hesirentum Schwarzdorn.html",
+    "data": "Estryll/Königreich Aldrimar/Jarltum Roriksheim/Hesirentum Schwarzdorn/herrschaft.data.mjs?v=roriksheim-20261020d",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Königreich",
+        "name": "Aldrimar",
+        "slug": "aldrimar"
+      },
+      {
+        "type": "Jarltum",
+        "name": "Jarltum Roriksheim",
+        "slug": "jarltum-roriksheim"
+      },
+      {
+        "type": "Thanentum",
+        "name": "Thanentum Rorikstal",
+        "slug": "thanentum-rorikstal"
+      },
+      {
+        "type": "Hesirentum",
+        "name": "Hesirentum Schwarzdorn",
+        "slug": "hesirentum-schwarzdorn"
+      }
+    ]
+  },
+  {
+    "id": "hesirentum-kampfgeborene",
+    "slug": "hesirentum-kampfgeborene",
+    "aliases": [],
+    "name": "Hesirentum der Kampfgeborenen",
+    "type": "Hesirentum",
+    "page": "Estryll/Königreich Aldrimar/Jarltum Roriksheim/Hesirentum der Kampfgeborenen/Hesirentum der Kampfgeborenen.html",
+    "data": "Estryll/Königreich Aldrimar/Jarltum Roriksheim/Hesirentum der Kampfgeborenen/herrschaft.data.mjs?v=roriksheim-20261020d",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Königreich",
+        "name": "Aldrimar",
+        "slug": "aldrimar"
+      },
+      {
+        "type": "Jarltum",
+        "name": "Jarltum Roriksheim",
+        "slug": "jarltum-roriksheim"
+      },
+      {
+        "type": "Thanentum",
+        "name": "Thanentum Rorikstal",
+        "slug": "thanentum-rorikstal"
+      },
+      {
+        "type": "Hesirentum",
+        "name": "Hesirentum der Kampfgeborenen",
+        "slug": "hesirentum-kampfgeborene"
+      }
+    ]
+  },
+  {
+    "id": "hesirentum-winterfaenge",
+    "slug": "hesirentum-winterfaenge",
+    "aliases": [],
+    "name": "Hesirentum Winterfänge",
+    "type": "Hesirentum",
+    "page": "Estryll/Königreich Aldrimar/Jarltum Roriksheim/Hesirentum Winterfänge/Hesirentum Winterfänge.html",
+    "data": "Estryll/Königreich Aldrimar/Jarltum Roriksheim/Hesirentum Winterfänge/herrschaft.data.mjs?v=roriksheim-20261020d",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Königreich",
+        "name": "Aldrimar",
+        "slug": "aldrimar"
+      },
+      {
+        "type": "Jarltum",
+        "name": "Jarltum Roriksheim",
+        "slug": "jarltum-roriksheim"
+      },
+      {
+        "type": "Thanentum",
+        "name": "Thanentum Rorikstal",
+        "slug": "thanentum-rorikstal"
+      },
+      {
+        "type": "Hesirentum",
+        "name": "Hesirentum Winterfänge",
+        "slug": "hesirentum-winterfaenge"
+      }
+    ]
+  },
+  {
+    "id": "thanentum-schwerthohn",
+    "slug": "thanentum-schwerthohn",
+    "aliases": [],
+    "name": "Thanentum Schwerthohn",
+    "type": "Thanentum",
+    "page": "Estryll/Königreich Aldrimar/Jarltum Roriksheim/Thanentum Schwerthohn/Thanentum Schwerthohn.html",
+    "data": "Estryll/Königreich Aldrimar/Jarltum Roriksheim/Thanentum Schwerthohn/herrschaft.data.mjs?v=roriksheim-20261020d",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Königreich",
+        "name": "Aldrimar",
+        "slug": "aldrimar"
+      },
+      {
+        "type": "Jarltum",
+        "name": "Jarltum Roriksheim",
+        "slug": "jarltum-roriksheim"
+      },
+      {
+        "type": "Thanentum",
+        "name": "Thanentum Schwerthohn",
+        "slug": "thanentum-schwerthohn"
+      }
+    ]
+  },
+  {
+    "id": "hesirentum-schwarzacker",
+    "slug": "hesirentum-schwarzacker",
+    "aliases": [],
+    "name": "Hesirentum Schwarzacker",
+    "type": "Hesirentum",
+    "page": "Estryll/Königreich Aldrimar/Jarltum Roriksheim/Hesirentum Schwarzacker/Hesirentum Schwarzacker.html",
+    "data": "Estryll/Königreich Aldrimar/Jarltum Roriksheim/Hesirentum Schwarzacker/herrschaft.data.mjs?v=roriksheim-20261020d",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Königreich",
+        "name": "Aldrimar",
+        "slug": "aldrimar"
+      },
+      {
+        "type": "Jarltum",
+        "name": "Jarltum Roriksheim",
+        "slug": "jarltum-roriksheim"
+      },
+      {
+        "type": "Thanentum",
+        "name": "Thanentum Schwerthohn",
+        "slug": "thanentum-schwerthohn"
+      },
+      {
+        "type": "Hesirentum",
+        "name": "Hesirentum Schwarzacker",
+        "slug": "hesirentum-schwarzacker"
+      }
+    ]
+  },
+  {
+    "id": "thanentum-daemmergrund",
+    "slug": "thanentum-daemmergrund",
+    "aliases": [],
+    "name": "Thanentum Dämmergrund",
+    "type": "Thanentum",
+    "page": "Estryll/Königreich Aldrimar/Jarltum Roriksheim/Thanentum Dämmergrund/Thanentum Dämmergrund.html",
+    "data": "Estryll/Königreich Aldrimar/Jarltum Roriksheim/Thanentum Dämmergrund/herrschaft.data.mjs?v=roriksheim-20261020d",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Königreich",
+        "name": "Aldrimar",
+        "slug": "aldrimar"
+      },
+      {
+        "type": "Jarltum",
+        "name": "Jarltum Roriksheim",
+        "slug": "jarltum-roriksheim"
+      },
+      {
+        "type": "Thanentum",
+        "name": "Thanentum Dämmergrund",
+        "slug": "thanentum-daemmergrund"
+      }
+    ]
+  },
+  {
+    "id": "hesirentum-daemmertal",
+    "slug": "hesirentum-daemmertal",
+    "aliases": [],
+    "name": "Hesirentum Dämmertal",
+    "type": "Hesirentum",
+    "page": "Estryll/Königreich Aldrimar/Jarltum Roriksheim/Hesirentum Dämmertal/Hesirentum Dämmertal.html",
+    "data": "Estryll/Königreich Aldrimar/Jarltum Roriksheim/Hesirentum Dämmertal/herrschaft.data.mjs?v=roriksheim-20261020d",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Königreich",
+        "name": "Aldrimar",
+        "slug": "aldrimar"
+      },
+      {
+        "type": "Jarltum",
+        "name": "Jarltum Roriksheim",
+        "slug": "jarltum-roriksheim"
+      },
+      {
+        "type": "Thanentum",
+        "name": "Thanentum Dämmergrund",
+        "slug": "thanentum-daemmergrund"
+      },
+      {
+        "type": "Hesirentum",
+        "name": "Hesirentum Dämmertal",
+        "slug": "hesirentum-daemmertal"
+      }
+    ]
+  },
+  {
+    "id": "thanentum-klangheim",
+    "slug": "thanentum-klangheim",
+    "aliases": [],
+    "name": "Thanentum Klangheim",
+    "type": "Thanentum",
+    "page": "Estryll/Königreich Aldrimar/Jarltum Roriksheim/Thanentum Klangheim/Thanentum Klangheim.html",
+    "data": "Estryll/Königreich Aldrimar/Jarltum Roriksheim/Thanentum Klangheim/herrschaft.data.mjs?v=roriksheim-20261020d",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Königreich",
+        "name": "Aldrimar",
+        "slug": "aldrimar"
+      },
+      {
+        "type": "Jarltum",
+        "name": "Jarltum Roriksheim",
+        "slug": "jarltum-roriksheim"
+      },
+      {
+        "type": "Thanentum",
+        "name": "Thanentum Klangheim",
+        "slug": "thanentum-klangheim"
+      }
+    ]
+  },
+  {
+    "id": "hesirentum-skald",
+    "slug": "hesirentum-skald",
+    "aliases": [],
+    "name": "Hesirentum der Skald",
+    "type": "Hesirentum",
+    "page": "Estryll/Königreich Aldrimar/Jarltum Roriksheim/Hesirentum der Skald/Hesirentum der Skald.html",
+    "data": "Estryll/Königreich Aldrimar/Jarltum Roriksheim/Hesirentum der Skald/herrschaft.data.mjs?v=roriksheim-20261020d",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Königreich",
+        "name": "Aldrimar",
+        "slug": "aldrimar"
+      },
+      {
+        "type": "Jarltum",
+        "name": "Jarltum Roriksheim",
+        "slug": "jarltum-roriksheim"
+      },
+      {
+        "type": "Thanentum",
+        "name": "Thanentum Klangheim",
+        "slug": "thanentum-klangheim"
+      },
+      {
+        "type": "Hesirentum",
+        "name": "Hesirentum der Skald",
+        "slug": "hesirentum-skald"
+      }
+    ]
+  },
+  {
+    "id": "hesirentum-sterkr",
+    "slug": "hesirentum-sterkr",
+    "aliases": [],
+    "name": "Hesirentum der Sterkr",
+    "type": "Hesirentum",
+    "page": "Estryll/Königreich Aldrimar/Jarltum Roriksheim/Hesirentum der Sterkr/Hesirentum der Sterkr.html",
+    "data": "Estryll/Königreich Aldrimar/Jarltum Roriksheim/Hesirentum der Sterkr/herrschaft.data.mjs?v=roriksheim-20261020d",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Königreich",
+        "name": "Aldrimar",
+        "slug": "aldrimar"
+      },
+      {
+        "type": "Jarltum",
+        "name": "Jarltum Roriksheim",
+        "slug": "jarltum-roriksheim"
+      },
+      {
+        "type": "Thanentum",
+        "name": "Thanentum Klangheim",
+        "slug": "thanentum-klangheim"
+      },
+      {
+        "type": "Hesirentum",
+        "name": "Hesirentum der Sterkr",
+        "slug": "hesirentum-sterkr"
+      }
+    ]
+  },
+  {
+    "id": "hesirentum-soekeren",
+    "slug": "hesirentum-soekeren",
+    "aliases": [],
+    "name": "Hesirentum der Sökeren",
+    "type": "Hesirentum",
+    "page": "Estryll/Königreich Aldrimar/Jarltum Roriksheim/Hesirentum der Sökeren/Hesirentum der Sökeren.html",
+    "data": "Estryll/Königreich Aldrimar/Jarltum Roriksheim/Hesirentum der Sökeren/herrschaft.data.mjs?v=roriksheim-20261020d",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Königreich",
+        "name": "Aldrimar",
+        "slug": "aldrimar"
+      },
+      {
+        "type": "Jarltum",
+        "name": "Jarltum Roriksheim",
+        "slug": "jarltum-roriksheim"
+      },
+      {
+        "type": "Thanentum",
+        "name": "Thanentum Klangheim",
+        "slug": "thanentum-klangheim"
+      },
+      {
+        "type": "Hesirentum",
+        "name": "Hesirentum der Sökeren",
+        "slug": "hesirentum-soekeren"
+      }
+    ]
+  },
+  {
+    "id": "region-roriksheim-dunkelhain",
+    "slug": "region-roriksheim-dunkelhain",
+    "aliases": [],
+    "name": "Dunkelhain",
+    "type": "Region",
+    "page": "Estryll/Königreich Aldrimar/Jarltum Roriksheim/Dunkelhain/Dunkelhain.html",
+    "data": "Estryll/Königreich Aldrimar/Jarltum Roriksheim/Dunkelhain/herrschaft.data.mjs?v=roriksheim-20261020d",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Königreich",
+        "name": "Aldrimar",
+        "slug": "aldrimar"
+      },
+      {
+        "type": "Jarltum",
+        "name": "Jarltum Roriksheim",
+        "slug": "jarltum-roriksheim"
+      },
+      {
+        "type": "Region",
+        "name": "Dunkelhain",
+        "slug": "region-roriksheim-dunkelhain"
+      }
+    ]
+  },
+  {
+    "id": "grenzsitz-hornhall",
+    "slug": "grenzsitz-hornhall",
+    "aliases": [],
+    "name": "Grenzsitz Hornhall",
+    "type": "Huskarllehen",
+    "page": "Estryll/Königreich Aldrimar/Jarltum Roriksheim/Grenzsitz Hornhall/Grenzsitz Hornhall.html",
+    "data": "Estryll/Königreich Aldrimar/Jarltum Roriksheim/Grenzsitz Hornhall/herrschaft.data.mjs?v=roriksheim-20261020d",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Königreich",
+        "name": "Aldrimar",
+        "slug": "aldrimar"
+      },
+      {
+        "type": "Jarltum",
+        "name": "Jarltum Roriksheim",
+        "slug": "jarltum-roriksheim"
+      },
+      {
+        "type": "Thanentum",
+        "name": "Thanentum Dämmergrund",
+        "slug": "thanentum-daemmergrund"
+      },
+      {
+        "type": "Huskarllehen",
+        "name": "Grenzsitz Hornhall",
+        "slug": "grenzsitz-hornhall"
+      }
+    ]
+  },
+  // END RORIKSHEIM_GENERATED
+  {
+    id: "koenigreich-aldrimar",
+    slug: "aldrimar",
+    aliases: ["aldrimar", "koenigreich-aldrimar", "königreich-aldrimar"],
+    name: "Das Königreich Aldrimar",
+    type: "Königreich",
+    page: "Estryll/Königreich Aldrimar/Königreich von Aldrimar.html",
+    data: "Estryll/Königreich Aldrimar/koenigreich.data.mjs?v=aldrimar-20261020",
+    dataType: "module",
+    hierarchy: [
+      { type: "Sammlung", name: "Kontinente", slug: "kontinente" },
+      { type: "Kontinent", name: "Estryll", slug: "estryll" },
+      { type: "Königreich", name: "Aldrimar", slug: "aldrimar" },
+    ],
+  },
+
   {
     "id": "grafschaft-tal-der-milane",
     "slug": "tal-der-milane",

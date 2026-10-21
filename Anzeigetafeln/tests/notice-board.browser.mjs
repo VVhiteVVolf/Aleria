@@ -19,7 +19,7 @@ const shot = async name => { if (shots) await page.screenshot({ path: `${shots}/
 try {
   await page.goto(`${origin}/Anzeigetafeln/tafel.html?tafel=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-anzeigetafel`, { waitUntil: 'networkidle' });
   await page.evaluate(() => {
-    const titles = ['Geleit durch den Dornenwald', 'Der rote Fuchs', 'Der Bote von Gwynthor', 'Wo ist der alte Fährmann?', 'Ein Markt unter den Sternen', 'An meine Nachbarn', 'Feine Klingen & ehrliche Preise', 'Kund und zu wissen', 'Ein Abend bei Kerzenschein', 'Meidet die alte Furt', 'Mit der Karawane nach Norden', 'Die Schmiede sucht geschickte Hände', 'Ein Ring aus hellem Silber'];
+    const titles = ['Geleit durch den Dornenwald', 'Der rote Fuchs', 'Der Bote von Gwynthor', 'Wo ist der alte Fährmann?', 'Ein Markt unter den Sternen', 'An meine Nachbarn', 'Feine Klingen & ehrliche Preise', 'Kund und zu wissen', 'Ein Abend bei Kerzenschein', 'Meidet die alte Furt', 'Mit der Karawane nach Norden', 'Die Schmiede sucht geschickte Hände', 'Ein Ring aus hellem Silber', 'Hilfe beim Holztragen', 'Das große Bogenturnier', 'Aus dem Nachlass des Händlers'];
     const notices = window.ZETTEL_TYPES.map((type, index) => {
       const note = window.TafelZettelConfig.createDraft(type.id, { x: .2 + (index % 4) * .18, y: .25 + Math.floor(index / 4) * .18 }, () => `fixture-${type.id}`);
       note.title = titles[index];
@@ -35,7 +35,7 @@ try {
     window.TafelState.apply({ zettel: [...notices, { ...notices[0], id: 'fixture-secret', title: 'Geheimer Auftrag', secret: true }] });
   });
   await page.locator('.notice-register-entry').first().waitFor();
-  assert.equal(await page.locator('.notice-register-entry').count(), 13);
+  assert.equal(await page.locator('.notice-register-entry').count(), 16);
   await shot('board-desktop');
   await page.locator('#search-inp').fill('ehrliches Wort');
   assert.ok(await page.locator('.notice-register-entry').count() > 0);
@@ -69,7 +69,7 @@ try {
   await page.locator('#btn-edit').click();
   await page.locator('#pw-inp').fill('7777');
   await page.getByRole('button', { name: 'Freischalten', exact: true }).click();
-  assert.equal(await page.locator('.notice-register-entry').count(), 14);
+  assert.equal(await page.locator('.notice-register-entry').count(), 17);
   await page.locator('#title').click();
   assert.equal(await page.locator('#title').isVisible(), false);
   await page.locator('#title-input').fill('Gwynthors schwarzes Brett');
@@ -78,7 +78,7 @@ try {
   assert.equal(await page.locator('#title-input').isVisible(), false);
   await page.locator('#btn-add-zettel').click();
   await page.locator('#board-viewport').click({ position: { x: 35, y: 35 } });
-  assert.equal(await page.locator('#zettel-type-grid .tpl-card').count(), 13);
+  assert.equal(await page.locator('#zettel-type-grid .tpl-card').count(), 16);
   await page.locator('#zettel-type-grid .tpl-artwork img').evaluateAll(images => Promise.all(images.map(image => image.decode())));
   assert.equal(await page.locator('#zettel-type-grid .tpl-artwork img').count(), 13);
   await page.locator('[data-zettel-type="reise"]').click();
@@ -122,7 +122,7 @@ try {
   assert.equal(await page.locator('#sb-editor-col').evaluate(element => element.scrollWidth <= element.clientWidth + 1), true, 'mobile editor overflow');
   await shot('editor-mobile');
   assert.deepEqual(errors, []);
-  console.log('PASS: 13 templates at desktop/mobile widths, full-text search, filtering, hidden notices, comments, paging, creation, editing and draft reload.');
+  console.log('PASS: 16 templates at desktop/mobile widths, full-text search, filtering, hidden notices, comments, paging, creation, editing and draft reload.');
 } finally {
   await browser.close();
 }

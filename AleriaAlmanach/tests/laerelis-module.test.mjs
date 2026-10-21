@@ -30,6 +30,7 @@ function languageContext() {
     '../modules/language/laerelis/laerelis-data.js', '../modules/language/laerelis/laerelis-script.js',
     '../modules/language/laerelis/laerelis-tables.js', '../modules/language/laerelis/laerelis-entry.js',
     '../modules/language/language-script-display.js', '../modules/comments/comments-markup.js',
+    '../modules/language/language-script-registry.js',
     '../modules/comments/comments-spell-fonts.js', '../modules/core/app-core.js',
     '../modules/module-editor/module-editor-cast-picker.js', '../modules/module-store/module-store-tree.js',
     '../modules/module-store/module-store-sections.js', '../modules/module-store/module-store-local.js', '../modules/module-store/module-store-sync.js'

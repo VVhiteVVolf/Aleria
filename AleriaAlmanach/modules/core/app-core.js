@@ -512,6 +512,8 @@ function normalizeEntryForEditor(entry) {
     type: String(clone.type || '').trim(),
     category: String(clone.category || '').trim(),
     ...(String(clone.economyPriceReview || '').trim() ? { economyPriceReview: String(clone.economyPriceReview).slice(0, 40) } : {}),
+    ...(clone.economyCalculationDeferred === true ? { economyCalculationDeferred: true } : {}),
+    ...(clone.zitteraaleRevision ? { zitteraaleRevision: String(clone.zitteraaleRevision) } : {}),
     moduleWidth: clampModuleSizeValue(clone.moduleWidth, MODULE_SIZE_DEFAULT),
     moduleHeight: clampModuleSizeValue(clone.moduleHeight, MODULE_SIZE_DEFAULT),
     image: String(clone.image || (shouldUsePageImageAsEntryImage(pages) ? pages[0]?.image : '') || '').trim(),

@@ -850,7 +850,7 @@ var AleriaEconomy = (() => {
           "label": "",
           "note": "Kost f\xFCr neun Tage und einfacher Schlafplatz zus\xE4tzlich zum Geldlohn; Ansatz zu Selbstkosten.",
           "source": "Hierarchie: Die Krumme Kanne / Zimmer & Versorgung",
-          "name": "Llinos",
+          "name": "Llinos Celynfor",
           "role": "Hausmagd \xB7 Wasser & Lampen",
           "areas": [
             "Zimmer & Versorgung"
@@ -17979,6 +17979,270 @@ var AleriaEconomy = (() => {
       ]
     },
     {
+      "id": "standard:alchemist:kamille",
+      "title": "Kamille",
+      "market": "Alchemist",
+      "category": "alchemie",
+      "unit": "20 g getrocknete Bl\xFCten",
+      "range": [
+        0.8,
+        0.8
+      ]
+    },
+    {
+      "id": "standard:alchemist:salbei",
+      "title": "Salbei",
+      "market": "Alchemist",
+      "category": "alchemie",
+      "unit": "20 g getrocknete Bl\xE4tter",
+      "range": [
+        0.8,
+        0.8
+      ]
+    },
+    {
+      "id": "standard:alchemist:minze",
+      "title": "Minze",
+      "market": "Alchemist",
+      "category": "alchemie",
+      "unit": "20 g getrocknete Bl\xE4tter",
+      "range": [
+        0.6,
+        0.6
+      ]
+    },
+    {
+      "id": "standard:alchemist:lavendel",
+      "title": "Lavendel",
+      "market": "Alchemist",
+      "category": "alchemie",
+      "unit": "20 g getrocknete Bl\xFCten",
+      "range": [
+        1,
+        1
+      ]
+    },
+    {
+      "id": "standard:alchemist:ringelblume",
+      "title": "Ringelblume",
+      "market": "Alchemist",
+      "category": "alchemie",
+      "unit": "20 g getrocknete Bl\xFCten",
+      "range": [
+        1,
+        1
+      ]
+    },
+    {
+      "id": "standard:alchemist:beinwellwurzel",
+      "title": "Beinwellwurzel",
+      "market": "Alchemist",
+      "category": "alchemie",
+      "unit": "50 g getrocknete Wurzel",
+      "range": [
+        1.5,
+        1.5
+      ]
+    },
+    {
+      "id": "standard:alchemist:bienenwachs",
+      "title": "Bienenwachs",
+      "market": "Alchemist",
+      "category": "alchemie",
+      "unit": "100 g",
+      "range": [
+        1.5,
+        1.5
+      ]
+    },
+    {
+      "id": "standard:alchemist:baumharz",
+      "title": "Baumharz",
+      "market": "Alchemist",
+      "category": "alchemie",
+      "unit": "50 g",
+      "range": [
+        1,
+        1
+      ]
+    },
+    {
+      "id": "standard:alchemist:alchemieschatulle",
+      "title": "Alchemie-Zubeh\xF6rschatulle",
+      "market": "Alchemist",
+      "category": "alchemie",
+      "unit": "1 best\xFCckte Schatulle",
+      "range": [
+        28,
+        28
+      ]
+    },
+    {
+      "id": "standard:alchemist:glasflaeschchen",
+      "title": "Glasfl\xE4schchen",
+      "market": "Alchemist",
+      "category": "alchemie",
+      "unit": "1 Fl\xE4schchen \xB7 50 ml",
+      "range": [
+        1.5,
+        1.5
+      ]
+    },
+    {
+      "id": "standard:alchemist:phiolen-holzfassung",
+      "title": "Drei Phiolen in Holzfassung",
+      "market": "Alchemist",
+      "category": "alchemie",
+      "unit": "3 leere Phiolen \xB7 je 20 ml",
+      "range": [
+        6,
+        6
+      ]
+    },
+    {
+      "id": "standard:alchemist:laborpapier",
+      "title": "Papier",
+      "market": "Alchemist",
+      "category": "alchemie",
+      "unit": "10 Blatt",
+      "range": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "standard:alchemist:labortinte",
+      "title": "Tinte",
+      "market": "Alchemist",
+      "category": "alchemie",
+      "unit": "1 Tintenfass \xB7 30 ml",
+      "range": [
+        1,
+        1
+      ]
+    },
+    {
+      "id": "standard:alchemist:feuerstein",
+      "title": "Feuerstein",
+      "market": "Alchemist",
+      "category": "alchemie",
+      "unit": "1 St\xFCck",
+      "range": [
+        1,
+        1
+      ]
+    },
+    {
+      "id": "standard:alchemist:labormoerser",
+      "title": "M\xF6rser & St\xF6\xDFel",
+      "market": "Alchemist",
+      "category": "alchemie",
+      "unit": "1 Satz",
+      "range": [
+        10,
+        10
+      ]
+    },
+    {
+      "id": "standard:alchemist:destillator",
+      "title": "Destillator",
+      "market": "Alchemist",
+      "category": "alchemie",
+      "unit": "1 Aufbau",
+      "range": [
+        85,
+        85
+      ]
+    },
+    {
+      "id": "standard:alchemist:kalzinator",
+      "title": "Kalzinator",
+      "market": "Alchemist",
+      "category": "alchemie",
+      "unit": "1 Reiseger\xE4t \xB7 etwa 10 \xD7 8 cm",
+      "range": [
+        65,
+        65
+      ]
+    },
+    {
+      "id": "standard:alchemist:retorte",
+      "title": "Retorte",
+      "market": "Alchemist",
+      "category": "alchemie",
+      "unit": "1 St\xFCck \xB7 250 ml",
+      "range": [
+        12,
+        12
+      ]
+    },
+    {
+      "id": "standard:alchemist:alembik",
+      "title": "Alembik",
+      "market": "Alchemist",
+      "category": "alchemie",
+      "unit": "1 Aufsatz",
+      "range": [
+        30,
+        30
+      ]
+    },
+    {
+      "id": "standard:alchemist:filtertuch",
+      "title": "Filtertuch",
+      "market": "Alchemist",
+      "category": "alchemie",
+      "unit": "1 Tuch \xB7 30 \xD7 30 cm",
+      "range": [
+        1.5,
+        1.5
+      ]
+    },
+    {
+      "id": "standard:alchemist:labortiegel",
+      "title": "Labortiegel",
+      "market": "Alchemist",
+      "category": "alchemie",
+      "unit": "1 Tiegel \xB7 20 ml",
+      "range": [
+        4,
+        4
+      ]
+    },
+    {
+      "id": "standard:alchemist:trichter",
+      "title": "Glastrichter",
+      "market": "Alchemist",
+      "category": "alchemie",
+      "unit": "1 St\xFCck",
+      "range": [
+        3,
+        3
+      ]
+    },
+    {
+      "id": "standard:alchemist:balkenwaage",
+      "title": "Feine Balkenwaage",
+      "market": "Alchemist",
+      "category": "alchemie",
+      "unit": "1 Waage mit Gewichten",
+      "range": [
+        24,
+        24
+      ]
+    },
+    {
+      "id": "standard:alchemist:trockensieb",
+      "title": "Trockensieb",
+      "market": "Alchemist",
+      "category": "alchemie",
+      "unit": "1 St\xFCck",
+      "range": [
+        5,
+        5
+      ]
+    },
+    {
       "id": "standard:arkanist:zauberstein",
       "title": "Zauberstein",
       "market": "Arkanist",
@@ -18119,6 +18383,358 @@ var AleriaEconomy = (() => {
       "range": [
         1e3,
         1e3
+      ]
+    },
+    {
+      "id": "standard:arkanist:unverzauberter-stab",
+      "title": "Stab \xB7 unverzaubert",
+      "market": "Arkanist",
+      "category": "arkanes",
+      "unit": "1 St\xFCck",
+      "range": [
+        12,
+        12
+      ]
+    },
+    {
+      "id": "standard:arkanist:unverzauberte-zauberkugel",
+      "title": "Zauberkugel \xB7 unverzaubert",
+      "market": "Arkanist",
+      "category": "arkanes",
+      "unit": "1 Kugel \xB7 10 cm",
+      "range": [
+        40,
+        40
+      ]
+    },
+    {
+      "id": "standard:arkanist:leeres-zauberbuch",
+      "title": "Zauberbuch \xB7 leer",
+      "market": "Arkanist",
+      "category": "arkanes",
+      "unit": "1 Buch \xB7 120 Seiten",
+      "range": [
+        18,
+        18
+      ]
+    },
+    {
+      "id": "standard:arkanist:unverzauberter-ring",
+      "title": "Ring \xB7 unverzaubert",
+      "market": "Arkanist",
+      "category": "arkanes",
+      "unit": "1 Silberring",
+      "range": [
+        16,
+        16
+      ]
+    },
+    {
+      "id": "standard:arkanist:unverzaubertes-amulett",
+      "title": "Amulett \xB7 unverzaubert",
+      "market": "Arkanist",
+      "category": "arkanes",
+      "unit": "1 Silberamulett",
+      "range": [
+        24,
+        24
+      ]
+    },
+    {
+      "id": "standard:arkanist:unverzaubertes-diadem",
+      "title": "Diadem \xB7 unverzaubert",
+      "market": "Arkanist",
+      "category": "arkanes",
+      "unit": "1 Silberdiadem",
+      "range": [
+        45,
+        45
+      ]
+    },
+    {
+      "id": "standard:arkanist:unverzauberte-schriftrolle",
+      "title": "Zauberschriftrolle \xB7 unverzaubert",
+      "market": "Arkanist",
+      "category": "arkanes",
+      "unit": "1 leere Pergamentrolle",
+      "range": [
+        4,
+        4
+      ]
+    },
+    {
+      "id": "standard:arkanist:runenkreide",
+      "title": "Runenkreide",
+      "market": "Arkanist",
+      "category": "arkanes",
+      "unit": "5 Stifte",
+      "range": [
+        1,
+        1
+      ]
+    },
+    {
+      "id": "standard:arkanist:gravurstichel",
+      "title": "Gravurstichel",
+      "market": "Arkanist",
+      "category": "arkanes",
+      "unit": "1 St\xFCck",
+      "range": [
+        7,
+        7
+      ]
+    },
+    {
+      "id": "standard:arkanist:fokusfassung",
+      "title": "Leere Fokusfassung",
+      "market": "Arkanist",
+      "category": "arkanes",
+      "unit": "1 Messingfassung",
+      "range": [
+        8,
+        8
+      ]
+    },
+    {
+      "id": "standard:arkanist:kristallbeutel",
+      "title": "Gepolsterter Kristallbeutel",
+      "market": "Arkanist",
+      "category": "arkanes",
+      "unit": "1 Beutel",
+      "range": [
+        3,
+        3
+      ]
+    },
+    {
+      "id": "standard:arkanist:buchschliesse",
+      "title": "Buchschlie\xDFe",
+      "market": "Arkanist",
+      "category": "arkanes",
+      "unit": "1 Beschlagsatz",
+      "range": [
+        5,
+        5
+      ]
+    },
+    {
+      "id": "standard:arkanist:amethyst",
+      "title": "Amethyst",
+      "market": "Arkanist",
+      "category": "arkanes",
+      "unit": "1 kleiner Schmuckstein \xB7 etwa 0,2 g",
+      "range": [
+        18,
+        18
+      ]
+    },
+    {
+      "id": "standard:arkanist:rubin",
+      "title": "Rubin",
+      "market": "Arkanist",
+      "category": "arkanes",
+      "unit": "1 kleiner Schmuckstein \xB7 etwa 0,2 g",
+      "range": [
+        90,
+        90
+      ]
+    },
+    {
+      "id": "standard:arkanist:saphir",
+      "title": "Saphir",
+      "market": "Arkanist",
+      "category": "arkanes",
+      "unit": "1 kleiner Schmuckstein \xB7 etwa 0,2 g",
+      "range": [
+        80,
+        80
+      ]
+    },
+    {
+      "id": "standard:arkanist:smaragd",
+      "title": "Smaragd",
+      "market": "Arkanist",
+      "category": "arkanes",
+      "unit": "1 kleiner Schmuckstein \xB7 etwa 0,2 g",
+      "range": [
+        85,
+        85
+      ]
+    },
+    {
+      "id": "standard:arkanist:diamant",
+      "title": "Diamant",
+      "market": "Arkanist",
+      "category": "arkanes",
+      "unit": "1 kleiner Schmuckstein \xB7 etwa 0,2 g",
+      "range": [
+        160,
+        160
+      ]
+    },
+    {
+      "id": "standard:arkanist:opal",
+      "title": "Opal",
+      "market": "Arkanist",
+      "category": "arkanes",
+      "unit": "1 kleiner Schmuckstein \xB7 etwa 0,2 g",
+      "range": [
+        55,
+        55
+      ]
+    },
+    {
+      "id": "standard:arkanist:topas",
+      "title": "Topas",
+      "market": "Arkanist",
+      "category": "arkanes",
+      "unit": "1 kleiner Schmuckstein \xB7 etwa 0,2 g",
+      "range": [
+        25,
+        25
+      ]
+    },
+    {
+      "id": "standard:arkanist:granat",
+      "title": "Granat",
+      "market": "Arkanist",
+      "category": "arkanes",
+      "unit": "1 kleiner Schmuckstein \xB7 etwa 0,2 g",
+      "range": [
+        20,
+        20
+      ]
+    },
+    {
+      "id": "standard:arkanist:aquamarin",
+      "title": "Aquamarin",
+      "market": "Arkanist",
+      "category": "arkanes",
+      "unit": "1 kleiner Schmuckstein \xB7 etwa 0,2 g",
+      "range": [
+        35,
+        35
+      ]
+    },
+    {
+      "id": "standard:arkanist:turmalin",
+      "title": "Turmalin",
+      "market": "Arkanist",
+      "category": "arkanes",
+      "unit": "1 kleiner Schmuckstein \xB7 etwa 0,2 g",
+      "range": [
+        30,
+        30
+      ]
+    },
+    {
+      "id": "standard:arkanist:jade",
+      "title": "Jade",
+      "market": "Arkanist",
+      "category": "arkanes",
+      "unit": "1 kleiner Schmuckstein \xB7 etwa 0,2 g",
+      "range": [
+        15,
+        15
+      ]
+    },
+    {
+      "id": "standard:arkanist:bergkristall",
+      "title": "Bergkristall",
+      "market": "Arkanist",
+      "category": "arkanes",
+      "unit": "1 kleiner Schmuckstein \xB7 etwa 0,2 g",
+      "range": [
+        5,
+        5
+      ]
+    },
+    {
+      "id": "standard:arkanist:onyx",
+      "title": "Onyx",
+      "market": "Arkanist",
+      "category": "arkanes",
+      "unit": "1 kleiner Schmuckstein \xB7 etwa 0,2 g",
+      "range": [
+        12,
+        12
+      ]
+    },
+    {
+      "id": "standard:arkanist:mondstein",
+      "title": "Mondstein",
+      "market": "Arkanist",
+      "category": "arkanes",
+      "unit": "1 kleiner Schmuckstein \xB7 etwa 0,2 g",
+      "range": [
+        22,
+        22
+      ]
+    },
+    {
+      "id": "standard:arkanist:tuerkis",
+      "title": "T\xFCrkis",
+      "market": "Arkanist",
+      "category": "arkanes",
+      "unit": "1 kleiner Schmuckstein \xB7 etwa 0,2 g",
+      "range": [
+        12,
+        12
+      ]
+    },
+    {
+      "id": "standard:arkanist:bernstein",
+      "title": "Bernstein",
+      "market": "Arkanist",
+      "category": "arkanes",
+      "unit": "1 kleiner Schmuckstein \xB7 etwa 0,2 g",
+      "range": [
+        10,
+        10
+      ]
+    },
+    {
+      "id": "standard:arkanist:perle",
+      "title": "Perle",
+      "market": "Arkanist",
+      "category": "arkanes",
+      "unit": "1 kleiner Schmuckstein \xB7 etwa 0,2 g",
+      "range": [
+        24,
+        24
+      ]
+    },
+    {
+      "id": "standard:arkanist:lapislazuli",
+      "title": "Lapislazuli",
+      "market": "Arkanist",
+      "category": "arkanes",
+      "unit": "1 kleiner Schmuckstein \xB7 etwa 0,2 g",
+      "range": [
+        14,
+        14
+      ]
+    },
+    {
+      "id": "standard:arkanist:malachit",
+      "title": "Malachit",
+      "market": "Arkanist",
+      "category": "arkanes",
+      "unit": "1 kleiner Schmuckstein \xB7 etwa 0,2 g",
+      "range": [
+        8,
+        8
+      ]
+    },
+    {
+      "id": "standard:arkanist:zirkon",
+      "title": "Zirkon",
+      "market": "Arkanist",
+      "category": "arkanes",
+      "unit": "1 kleiner Schmuckstein \xB7 etwa 0,2 g",
+      "range": [
+        28,
+        28
       ]
     },
     {
@@ -19610,6 +20226,7 @@ var AleriaEconomy = (() => {
     })));
   }
   function evaluateVenueScope(entry, section) {
+    if (entry?.economyCalculationDeferred === true) return { eligible: false, reason: "Kalkulation f\xFCr diesen Ort ausdr\xFCcklich zur\xFCckgestellt." };
     if (section?.tab !== cultureTab) return { eligible: false, reason: "Au\xDFerhalb von V\xF6lker & Kulturen." };
     if (!entry?.multipage || !Array.isArray(entry.pages)) return { eligible: false, reason: "Kein begehbares Ortsmodul mit mehreren Seiten." };
     if (excluded.has(entry.id))
@@ -20106,40 +20723,132 @@ var AleriaEconomy = (() => {
     return workers;
   }
 
+  // modules/gwynthor-heime/households.mjs
+  var HOMES_ART = "./assets/gwynthor-heime";
+  var person = (id, name, sex, age, culture, role, bio, appearance, options = {}) => ({
+    id,
+    name,
+    sex,
+    age,
+    birth: String(1740 - age),
+    culture,
+    role,
+    bio,
+    appearance,
+    ...options
+  });
+  var GWYNTHOR_HOUSEHOLDS = [
+    {
+      slug: "fearnan",
+      surname: "Fearnan",
+      district: "Hafenviertel",
+      marriageYear: "1728",
+      summary: "Eine albische Fischerfamilie und ihr bescheidenes Zuhause nahe den Docks.",
+      crestDescription: "Ein fr\xF6hlicher Baum in mattem Gr\xFCn auf braunem Holz; schlichter geschlossener Holzrand.",
+      story: [
+        "Zwischen den schmalen Gassen hinter den Docks steht das kleine Heim der Fearnan. Eoghan und Muireann kamen 1728 aus Leitheach nach Gwynthor. Ihre beiden T\xF6chter sind hier geboren; f\xFCr sie beginnt die Heimat an der Hafentreppe.",
+        "Eoghan arbeitet als Fischer von den Docks aus. Muireann f\xFChrt den Haushalt, flickt Kleidung und teilt den Tagesfang so ein, dass auch morgen etwas auf den Tisch kommt. F\xFCr gro\xDFe Anschaffungen bleibt wenig \xFCbrig. Das niedrige Haus geh\xF6rt der Familie und ist ihr einziger gr\xF6\xDFerer Besitz; es ist sauber gehalten und nur mit dem N\xF6tigsten eingerichtet.",
+        "Den fr\xF6hlichen Baum auf dem kleinen Holzzeichen \xFCber der T\xFCr haben die M\xE4dchen mit ausgemalt. Nessa behauptet, dass er l\xE4chelt, wenn ihr Vater heil vom Wasser zur\xFCckkommt."
+      ],
+      room: "Eine niedrige Wohnstube mit kleinem Herd, grobem Tisch, vier ungleichen Hockern und einer einzigen Truhe. Zwei schmale Schlafnischen liegen hinter Leinent\xFCchern; die M\xE4dchen teilen ihre. Am Haken trocknen Eoghans Mantel und geflickte Netze. Durch das kleine Fenster h\xF6rt man die Rufe von den Docks.",
+      hooks: ["Nach einem Familienausflug fehlt die Metallschatulle unter dem Elternbett: die letzte Kreditrate und s\xE4mtliche Ersparnisse sind gestohlen.", "Der Geld- und Pfandverleiher bietet neue Kreditbedingungen gegen den Verkauf des Hauses an; die Familie bittet vor einer Unterschrift um Nachforschungen."],
+      people: [
+        person("eoghan", "Eoghan Fearnan", "male", 36, "Albe \xB7 Leitheach", "Fischer an den Docks", "Eoghan spricht ruhig und lacht schnell, solange das Wetter mitspielt. Er h\xE4lt seine Netze sorgf\xE4ltiger instand als seinen Mantel und kommt nach dem Anlanden m\xF6glichst direkt nach Hause.", "36-year-old human Alba fisherman, dark brown short wavy hair, hazel-brown eyes, broad nose, short dark beard. Lean weathered face, gentle crooked smile. Faded moss wool tunic and patched grey-brown sleeveless coat, relaxed standing chest-up, one hand loosely holding a folded net over his shoulder. Simple harbor-home doorway."),
+        person("muireann", "Muireann", "female", 34, "Albin \xB7 Leitheach", "Hausfrau", "Muireann f\xFChrt den kleinen Haushalt mit Geduld und einem genauen Blick f\xFCr Vorr\xE4te. Ihre T\xF6chter d\xFCrfen widersprechen, solange sie danach trotzdem die nassen Schuhe vor dem Herd ausziehen.", "34-year-old human Alba woman, deep chestnut brown hair in one low braid, warm brown eyes, narrow nose, oval face. Modest ochre wool dress, off-white linen apron, rolled sleeves. Relaxed standing waist-up, holding folded mended linen, quiet amused expression. Sparse plaster-and-timber room.", { married: true }),
+        person("eithne", "Eithne Fearnan", "female", 9, "Albisch \xB7 in Gwynthor geboren", "\xC4ltere Tochter", "Eithne z\xE4hlt die heimkehrenden Boote und m\xF6chte jede Leine richtig benennen. Ihrer kleinen Schwester erkl\xE4rt sie den Hafen mit gro\xDFer Ernsthaftigkeit, auch wenn sie selbst gerade erst gefragt hat.", "Nine-year-old human Alba girl, clearly childlike proportions, dark brown wavy shoulder-length hair in two loose braids, brown eyes like her parents. Plain faded blue long-sleeved wool dress, cream collar. Standing chest-up holding a tiny homemade wooden boat, earnest curious face. Modest family home. Fully modest ordinary child clothing."),
+        person("nessa", "Nessa Fearnan", "female", 7, "Albisch \xB7 in Gwynthor geboren", "J\xFCngere Tochter", "Nessa redet mit dem Baum auf dem T\xFCrzeichen und sammelt flache Kiesel f\xFCr ihren Vater. Bei Fremden versteckt sie sich zun\xE4chst hinter Muireann; nach wenigen Minuten fragt sie ihnen L\xF6cher in den Bauch.", "Seven-year-old human Alba girl, clearly young child with round cheeks, dark chestnut curly bob, large warm brown eyes, cheerful small tooth-gap smile. Plain russet long-sleeved dress with patched elbows, linen collar. Standing upper-body portrait holding one smooth beach pebble in both hands. Simple warm cottage wall. Fully modest ordinary child clothing.")
+      ]
+    },
+    {
+      slug: "torvik",
+      surname: "Torvik",
+      district: "Marktviertel",
+      marriageYear: "1727",
+      summary: "Ein aldrimarischer Schmiedegehilfe, seine albische Frau und ihr elfj\xE4hriger Sohn.",
+      crestDescription: "Ein kleiner cremefarbener Hammer auf braunem Holz; schlichter geschlossener Holzrand.",
+      story: [
+        "In einer Seitengasse des Marktviertels wohnen Haldor Torvik, seine Frau Maonaid und ihr Sohn Iver. Das schmale Fachwerkhaus hat eine feste Herdstelle, eine gemeinsame Wohnk\xFCche und zwei kleine Schlafkammern unter dem Dach.",
+        "Haldor stammt aus Aldrimar und arbeitet als Schmiedegehilfe in einer der vielen Werkst\xE4tten des Marktviertels. Er tr\xE4gt Material, bereitet das Feuer vor und hilft bei einfachen Arbeiten. Eine eigene Schmiede besitzt er nicht. Maonaid stammt aus Leitheach und f\xFChrt den Haushalt.",
+        "Das Paar richtet sich mit gew\xF6hnlichem Hausrat ein, ersetzt kaputte Dinge nach und nach und legt nach M\xF6glichkeit etwas zur\xFCck. Iver kennt am Klang, wann sein Vater von der Arbeit kommt: Haldor klopft den Ru\xDF stets dreimal an der T\xFCrschwelle von den Stiefeln."
+      ],
+      room: "Die Wohnk\xFCche ist schlicht und ordentlich: ein Herd an der R\xFCckwand, ein geschrubbter Tisch mit Bank, ein Brett f\xFCr Zinngeschirr und ein Wassereimer neben der T\xFCr. Eine schmale Holztreppe f\xFChrt zu den Schlafkammern. Auf dem Fenstersims liegt Ivers angefangene Holzschnitzerei; Arbeitskleidung h\xE4ngt getrennt vom sauberen Hauszeug.",
+      hooks: ["Haldor ist seit dem vergangenen Lyristag vermisst; nach einem Streit um Lohn und \xDCberstunden fand er keinen freien Gesuchsplatz am Grafenhof.", "Im Kleinen Durst erz\xE4hlte er laut dem Wirt von einer neuen Arbeitsstelle und brach auf; Maonaid bietet ihr Familienamulett und n\xF6tigenfalls drei\xDFig Kupfer f\xFCr seine sichere R\xFCckkehr."],
+      people: [
+        person("haldor", "Haldor Torvik", "male", 32, "Aldrimarer", "Schmiedegehilfe im Marktviertel", "Haldor ist kr\xE4ftig, geduldig und stolz auf eine ordentlich erledigte Arbeit. Er spart auf bessere eigene Werkzeuge und bleibt Gehilfe, bis er sich eine wirkliche Ausbildung leisten kann.", "32-year-old human Aldrimar man, broad square jaw, straight flax-blond hair tied in a short low tail, light blue eyes, thick blond moustache with otherwise shaved face. Strong working build, calm reserved half smile. Charcoal wool shirt, worn leather work apron, relaxed standing chest-up, wiping a sooty hand on a rag. Ordinary market-house door."),
+        person("maonaid", "Maonaid", "female", 30, "Albin \xB7 Leitheach", "Hausfrau", "Maonaid kennt die H\xE4ndler der Nachbargassen und l\xE4sst sich weder schlechtes Mehl noch ein falsches Gewicht andrehen. Haldors Sturheit begegnet sie mit trockenem Humor und einem zweiten Teller Eintopf.", "30-year-old human Alba woman, almost black dark-brown sleek hair swept into a low coil, warm hazel eyes, pronounced brows, softly angular face. Muted plum wool dress with simple cream linen kerchief at neck, no jewels. Relaxed standing upper-body portrait, one hand on wooden chair back, raised eyebrow and dry knowing smile. Simple tidy home.", { married: true }),
+        person("iver", "Iver Torvik", "male", 11, "Aldrimarisch-albische Familie", "Sohn", "Iver schnitzt kleine Boote und fragt seinen Vater nach jedem Werkzeug. Ob er sp\xE4ter selbst ein Handwerk lernt, steht noch offen. Vorerst darf er in der Schmiede nur unter Aufsicht zuschauen.", "Eleven-year-old human boy, clearly childlike face, dark sandy-blond straight tousled hair combining blond father and brunette mother, light hazel eyes, square little chin. Plain olive tunic, cream undershirt, no armor. Standing chest-up with a small unfinished wooden toy and delighted sideways smile. Simple timber house interior. Ordinary fully modest child clothing.")
+      ]
+    },
+    {
+      slug: "celynfor",
+      surname: "Celynfor",
+      district: "Zwischen Hafen und Marktviertel",
+      marriageYear: "1739",
+      summary: "Ein jung verheiratetes cenyrisches Paar, zwei Arbeitswege und ein Hund vor dem Herd.",
+      crestDescription: "Ein kleines ockerfarbenes Ruderboot auf braunem Holz; schlichter geschlossener Holzrand.",
+      story: [
+        "Gwydan und Llinos Celynfor haben 1739 geheiratet. Ihr kleines gepachtetes Haus liegt zwischen Hafen und Marktviertel, sodass Gwydan morgens zur Werft und Llinos zur Krummen Kanne gehen kann.",
+        "Gwydan ist Schiffsbaugeselle und arbeitet an Handelsschiffen. Er bessert Planken aus, passt Spanten ein und nimmt die Geduld seines Handwerks mit nach Hause. Llinos arbeitet weiterhin als Hausmagd der Krummen Kanne: Wasser, Lampen und das Sauberhalten der Schankstube geh\xF6ren zu ihrem Dienst.",
+        "Das meiste im Haus ist gebraucht oder selbst zurechtgemacht. Ein Tisch, zwei St\xFChle und eine Bettstatt reichen vorerst. Ihr Hund Spant nimmt die einzige freie Stelle am Herd f\xFCr sich in Anspruch. Kinder haben die beiden noch nicht."
+      ],
+      room: "Die kleine Wohnstube dient zugleich als K\xFCche. Ein einfaches Doppelbett steht hinter einem Leinenvorhang, daneben die gemeinsame Truhe. Gwydans Werkzeug h\xE4ngt trocken an einem Brett; Llinos hat ein blaues Tuch ans Fenster geh\xE4ngt. Vor dem Herd liegt Spants geflickte Decke. Die Dielen sind frisch gescheuert, und durch die angelehnte T\xFCr zieht der Geruch von Holz und Hafenwasser.",
+      hooks: ["Gwydan m\xF6chte wissen, weshalb ein vermeintlich gew\xF6hnliches Reparaturschiff seine neuen Planken nur bei Nacht erh\xE4lt.", "Spant bringt vom Spaziergang einen fremden Handschuh heim; Llinos erkennt die auff\xE4llige Stickerei aus der Kanne."],
+      people: [
+        person("gwydan", "Gwydan Celynfor", "male", 31, "Cenyri \xB7 Gwynthor", "Schiffsbaugeselle", "Gwydan ist gelassen und sorgf\xE4ltig, mit einem leisen Humor, der Llinos zuverl\xE4ssig zum Lachen bringt. Daheim baut er aus erlaubten Holzresten kleine n\xFCtzliche Dinge und pr\xFCft jeden Stuhl, bevor sich jemand daraufsetzt.", "31-year-old human Cenyri journeyman shipwright, chestnut-red slightly wavy hair cut short at sides and swept sideways, warm brown eyes, long face, clean-shaven with only short russet sideburns. Lean strong shoulders. Faded teal wool waistcoat, cream rolled-sleeve shirt, plain leather belt. Relaxed standing waist-up, one hand resting on a small wooden plane held at hip, soft closed-mouth smile. Simple home by harbor, no shipowner finery."),
+        person("llinos", "Llinos Celynfor", "female", 21, "Cenyri \xB7 Gwynthor", "Hausmagd der Krummen Kanne", "Llinos bringt in der Krummen Kanne Wasser, f\xFCllt die Lampen und h\xE4lt die Schankstube sauber. Ihr freches L\xE4cheln hat sie auch nach der Hochzeit behalten. Zuhause schimpft sie mit Spant \xE4hnlich wie bei der Arbeit mit dem Kater.", "Vorhandenes Portr\xE4t: kupferrote hochgesteckte Locken, gr\xFCne Augen, Sommersprossen, blaues Arbeitskleid, braune Sch\xFCrze und \xD6llampe.", { married: true, worldPersonId: "person--krumme-kanne--llinos", portrait: "./assets/krumme-kanne/portraits/llinos.png", workplaceModuleId: "modul-1781474092957" })
+      ],
+      pet: {
+        id: "spant",
+        name: "Spant",
+        age: 2,
+        species: "Br\xE1g",
+        role: "Familienhund",
+        bestiary: "../Bestiarium/tiere/vieh/haustiere/hunde/brag/index.html",
+        bio: "Der kleine Br\xE1g ist neugierig, verspielt und bei bekannten Gesichtern sofort freundlich. Bei Schritten vor der T\xFCr meldet er sich kurz und wartet dann auf seine Menschen. Er ist Familienhund, kein ausgebildeter Wachhund.",
+        appearance: "One two-year-old Br\xE1g family dog, small-to-medium compact robust body, rough weatherproof warm ochre-brown coat, half-upright slightly folded ears, bright friendly dark eyes, short scruffy muzzle. Sitting loosely beside a simple home hearth on a patched wool blanket, head tilted curiously, plain worn leather collar. Full dog visible, quiet sparse room."
+      }
+    }
+  ].map((home) => ({ ...home, people: home.people.map((p) => ({
+    ...p,
+    worldPersonId: p.worldPersonId || `person--haus-${home.slug}--${p.id}`,
+    portrait: p.portrait || `${HOMES_ART}/${home.slug}/${p.id}.png`
+  })) }));
+
   // modules/krumme-kanne/krumme-kanne-roster.mjs
+  var llinos = GWYNTHOR_HOUSEHOLDS.find((home) => home.slug === "celynfor").people.find((person5) => person5.id === "llinos");
   var WOMEN = /* @__PURE__ */ new Set(["eirian", "mair", "celyn", "delyth", "tesni", "tangwystl", "runa", "awenna", "llinos", "nestwen", "alaw", "heledd", "eirlys", "enlli"]);
-  var person = (id, name, age, culture, role, family, biography, appearance, reference2 = "aedan") => ({ id, name, sex: WOMEN.has(id) ? "female" : "male", age, birth: 1740 - age, culture, role, family, biography, appearance, reference: reference2 });
+  var person2 = (id, name, age, culture, role, family, biography, appearance, reference2 = "aedan") => ({ id, name, sex: WOMEN.has(id) ? "female" : "male", age, birth: 1740 - age, culture, role, family, biography, appearance, reference: reference2 });
   var KANNE_PEOPLE = [
-    person("merrik", "Merrik Trevoryn", 44, "Cenyri", "Mitinhaber \xB7 Ortskontakte", "Celyns Mann und Nestwens \xE4ltester Sohn.", "Merrik kennt im Hafenviertel jeden Handwerker und jeden zweiten Gast. Der rothaarige Kriegsveteran h\xE4lt die Verbindung zur Stadt und empf\xE4ngt alte Kameraden gern selbst; bei gepanschtem Bier versteht er keinen Spa\xDF.", "Originalportr\xE4t: rotes zur\xFCckgebundenes Haar, kurzer roter Bart, blaugraue Augen, dunkelroter Rock.", "merrik"),
-    person("hrolf", "Hrolf Svathamar", 46, "Aldrimarer \xB7 Rorikshall", "Mitinhaber \xB7 Hausfrieden", "Eirians Mann; Ketils und Runas \xE4lterer Bruder.", "Hrolfs Lachen tr\xE4gt bis auf die Gasse. Der Veteran aus Rorikshall sorgt daf\xFCr, dass auch ein voller Schankraum friedlich bleibt. Wird es ernst, gen\xFCgt meist sein Aufstehen.", "Originalportr\xE4t: kr\xE4ftig, blondes zur\xFCckgebundenes Haar und voller blonder Bart, hellblaue Augen.", "hrolf"),
-    person("aedan", "Aedan Dubhdarach", 45, "Albe \xB7 Leitheach", "Mitinhaber \xB7 Einkauf & G\xE4ste", "Mairs Mann; seine Heimat liegt in Leitheach.", "Aedan verhandelt mit Lieferanten und empf\xE4ngt G\xE4ste im Hinterzimmer. Der h\xF6fliche Albe h\xF6rt lieber zu, als selbst zu reden, und vergisst weder eine offene Zeche noch einen erwiesenen Gefallen.", "Originalportr\xE4t: dunkelbraunes Haar, braune Augen, kurzer Bart, gr\xFCner Rock.", "aedan"),
-    person("eirian", "Eirian Trevoryn", 42, "Cenyri", "Hausv\xF6gtin \xB7 Personal & Dienstpl\xE4ne", "Merriks Schwester und Hrolfs Frau.", "Eirian teilt die Schichten ein, zahlt die L\xF6hne aus und schlichtet die kleinen Streitigkeiten des Hauses. Wenn ihr Schl\xFCsselbund am Tresen auftaucht, werden selbst die Wirte etwas aufmerksamer.", "42-year-old woman, Merrik-like strong straight nose and slate-blue eyes, red auburn braided bun, freckles, knowing half smile. Olive wool dress, cream linen sleeves, brown fitted waistcoat, brass keys at chest.", "merrik"),
-    person("mair", "Mair", 43, "Cenyri \xB7 Gwynthor", "Rechnungsf\xFChrerin \xB7 Kasse & G\xE4stebuch", "Aedans Frau.", "Mair f\xFChrt Kassenbuch und G\xE4stebuch mit ruhiger Hand. Eine vergessene Zeche entgeht ihr ebenso wenig wie ein Gast, der sein letztes Kupferst\xFCck dreimal umdreht. Ihr trockener Humor kommt meist erst mit der zweiten Rechnung zum Vorschein.", "43-year-old red-haired Cenyri woman, deep green eyes, wavy copper hair tied low, mature round face, calm wry expression. Deep blue wool gown, cream linen collar, ledger and quill near chest.", "aedan"),
-    person("celyn", "Celyn", 41, "Cenyri \xB7 Gwynthor", "Vorratsmeisterin \xB7 Vorr\xE4te & W\xE4sche", "Merriks Frau.", "Celyn h\xE4lt Vorratskammer und W\xE4schetruhe gef\xFCllt. Sie riecht schlechtes Korn, bevor der Sack offen ist, und spart lieber am Schwund als an den Portionen. Wer versp\xE4tet zum Dienst kommt, bekommt erst etwas zu essen und dann seine Standpauke.", "41-year-old Cenyri woman, curly deep copper hair under simple linen kerchief, warm brown eyes, broad friendly face, sturdy build. Russet dress, blue apron, small folded linen cloth held at chest.", "aedan"),
-    { ...person("caradog", "Caradog Tonnarth", 22, "Cenyri", "Schreiber & Adjutant der Tiefenwyrm", "Mairs \xE4ltester Sohn.", "Caradog f\xFChrt Idwals Logbuch und unterst\xFCtzt Cadell Ysgrif bei den Schriftst\xFCcken der Tiefenwyrm. Wenn das Schiff in Gwynthor liegt, schaut er bei seiner Mutter vorbei; Mair h\xE4lt dann gern einen Platz f\xFCr ihn frei.", "22-year-old Cenyri man, auburn curly hair, brown eyes, youthful square face, work-worn hands. Ochre wool vest over linen shirt, carpenter pencil and folded tally slip.", "aedan"), resident: false, portrait: "https://i.imgur.com/LK3q0UI.png" },
-    person("gorwyst", "Gorwyst", 22, "Cenyri", "Meier \xB7 Hof, F\xE4sser & Reparaturen", "", "Gorwyst nimmt die Lieferungen an, l\xE4sst F\xE4sser rollen und h\xE4lt Handwerker und Brennholz im Anmarsch. Er fragt lieber zweimal nach, als eine Last auf die falsche Treppe zu stellen. Cadri darf ihm im Hof zur Hand gehen.", "22-year-old Cenyri man, auburn curly hair, brown eyes, youthful square face, work-worn hands. Ochre wool vest over linen shirt, carpenter pencil and folded tally slip.", "aedan"),
-    person("elidyr", "Elidyr Trevoryn", 35, "Cenyri", "Schankwirtsmeister \xB7 Tresen & Empfang", "Merriks und Eirians j\xFCngerer Bruder.", "Elidyr empf\xE4ngt die G\xE4ste am Tresen und h\xE4lt den Ausschank in Gang. Er beh\xE4lt sechs Bestellungen im Kopf und wird mit jedem vollen Tisch trockener im Ton. Eine Beschwerde h\xF6rt er trotzdem bis zum Ende an.", "35-year-old Cenyri man resembling Merrik: straight nose, blue-grey eyes, red hair shorter and tousled, neat red moustache rather than full beard, leaner face. Dark teal waistcoat, rolled linen sleeves, wooden tankard held at chest.", "merrik"),
-    person("delyth", "Delyth", 27, "Cenyri", "Erste Schankmagd \xB7 Tischdienst", "", "Delyth f\xFChrt die Schankm\xE4gde durch den dichtesten Abendbetrieb. Sie wei\xDF, wer seine Suppe langsam braucht und wer blo\xDF wichtig aussehen m\xF6chte. Ihr keckes L\xE4cheln macht den Anfang, ihre scharfe Zunge n\xF6tigenfalls den Schluss.", "27-year-old adult Cenyri tavern wench, chestnut-red thick braid, green eyes, angular nose, alert amused expression, sturdy voluptuous build and full bust. Wine-red laced bodice over cream blouse with tasteful low square neckline, practical apron, confident teasing smile.", "aedan"),
-    person("tesni", "Tesni", 20, "Cenyri", "Schankmagd \xB7 Kr\xFCge & Tische", "", "Tesni ist schnell mit den Kr\xFCgen und noch schneller mit einem Lachen. Bestellungen merkt sie sich in kleinen Reimen. Beim Aufr\xE4umen singt sie die Feldzuglieder so schief, dass selbst die m\xFCdesten Veteranen grinsen.", "20-year-old clearly adult Cenyri tavern wench, bright copper-red wavy bob, freckles, blue eyes, playful quick smile, petite rounded curvy build. Muted yellow laced bodice over cream blouse with modest sweetheart neckline, green apron, empty tray tucked against upper body.", "aedan"),
-    person("tangwystl", "Tangwystl", 31, "Cenyri", "Schankmagd \xB7 Abendtische", "", "Tangwystl kennt die Stammg\xE4ste und ihre Ausreden auswendig. Mit kupferroten Locken und zweideutigem Witz h\xE4lt sie ganze Tische bei Laune. Bei der Zeche wird ihr Ged\xE4chtnis allerdings sehr genau.", "31-year-old adult Cenyri tavern wench, abundant copper-red curls worn half up, warm brown eyes, rounded cheeks and small beauty mark beside mouth, broad voluptuous curvy figure and generous bust. Forest green laced bodice, ivory blouse with tasteful low neckline, rust apron, one hand on waist, knowing flirtatious grin.", "aedan"),
-    person("fintan", "Fintan", 28, "Albe \xB7 Leitheach", "Schankknecht \xB7 Speisen & Abenddienst", "", "Fintan tr\xE4gt schwere Platten mit stoischer Ruhe durch den vollen Schankraum. Der junge Albe h\xF6rt mehr zu, als er spricht. Nur bei falsch ausgesprochenen Leitheacher Gerichtsnamen wird er hartn\xE4ckig.", "28-year-old Albe man, dark brown curly hair, hazel green eyes, long expressive nose, slender build, clean shaven. Forest green vest over oatmeal shirt, cloth over shoulder.", "aedan"),
-    person("runa", "Runa Svathamar", 34, "Aldrimarerin \xB7 Rorikshall", "Hausmeisterin \xB7 Zimmer & Kammern", "Hrolfs und Ketils j\xFCngere Schwester.", "Runa sorgt f\xFCr ordentliche Kammern, frische Laken und unbesch\xE4digte Riegel. G\xE4ste beurteilt sie zun\xE4chst nach ihrem Umgang mit nassen Stiefeln. Verlorene Geldb\xF6rsen verwahrt sie sorgf\xE4ltiger als schlechte Ausreden.", "34-year-old Aldrimar woman visibly related to Hrolf, strong cheekbones and broad nose, fair blonde braided crown, pale blue eyes, reserved smile. Slate blue wool dress, linen apron, folded room linen.", "hrolf"),
-    person("awenna", "Awenna", 26, "Cenyri", "Zimmermagd \xB7 Obere Kammern", "", "Awenna richtet Betten und Waschkr\xFCge her und entdeckt jeden klemmenden Riegel. Einem Gast mit alten Wunden legt sie wortlos ein zweites Kissen bereit. Nadeln verleiht sie gern, ihren guten Kamm niemals.", "26-year-old Cenyri woman, dark auburn hair in loose plait, brown eyes, long narrow face and thoughtful expression. Sage green dress, off-white apron, linen bundle.", "aedan"),
-    person("llinos", "Llinos", 21, "Cenyri", "Hausmagd \xB7 Wasser & Lampen", "", "Llinos bringt frisches Wasser, f\xFCllt die Lampen und h\xE4lt die Schankstube sauber. Bei der Arbeit schimpft sie mit dem Kater, als w\xE4re er ein fauler Kollege. Nestwen bringt ihr nebenbei das Stopfen bei.", "21-year-old Cenyri woman, copper curls pinned up messily, clear green eyes, round freckled face, mischievous grin. Dusty blue work dress, brown apron, small oil lamp held securely.", "aedan"),
-    person("nestwen", "Nestwen Trevoryn", 68, "Cenyri", "W\xE4scheh\xFCterin \xB7 Flickstube", "Mutter Merriks, Eirians und Elidyrs.", "Nestwen flickt am hellen Fenster W\xE4sche und h\xFCtet die Geschichten der Familie. Seit Merrik aus dem Krieg heimkehrte, hebt sie immer einen Teller mehr auf. Hrolf unterbricht sie bedenkenlos, wenn wieder ein Knopf an seinem Rock h\xE4ngt.", "68-year-old elderly Cenyri woman, silver-grey braided hair with faint red traces, Merrik family straight nose and blue-grey eyes, warm wrinkles, spectacles held rather than worn. Plum wool shawl over linen dress, mending cloth.", "merrik"),
-    person("heilyn", "Heilyn", 18, "Cenyri", "Hausbursche \xB7 Holz, Wasser & Boteng\xE4nge", "", "Heilyn tr\xE4gt Holz, Wasser und alles, wof\xFCr gerade eine Hand fehlt. Er ist noch unentschlossen, welches Handwerk er lernen m\xF6chte. Einen Teil seines Lohns bringt er jede Woche seiner kranken Tante.", "18-year-old Cenyri young man, unruly short red hair, blue eyes, lanky neck, earnest face. Patched brown vest over cream shirt, coil of carrying rope over shoulder.", "aedan"),
-    person("tadhg", "Tadhg", 48, "Albe \xB7 Leitheach", "Meisterkoch \xB7 Herd & Speisekarte", "", "Tadhg verbindet Leitheacher Kr\xE4uter mit nordischem Rauch und cenyrischen Eint\xF6pfen. Seine beiden Gehilfen erkennen am Schimpfen, ob Salz oder Feuer fehlt. Am Bratspie\xDF duldet er keine Zuschauer, auch keine Wirte.", "48-year-old Albe master cook, dark brown wavy hair greying at temples, green-brown eyes, broad nose, heavy brows and short salt-and-pepper beard. Cream linen cook shirt, dark apron, wooden spoon at chest.", "aedan"),
-    person("alaw", "Alaw", 24, "Cenyri", "Kochgehilfin \xB7 Br\xFChen, Gem\xFCse & Brot", "", "Alaw h\xFCtet Suppentopf und Fladenpfanne. Neue Kr\xE4utermischungen probiert sie auf Brotresten und h\xE4lt gelungene Versuche auf alten Lieferscheinen fest. Tadhgs Schimpfen \xFCbersetzt sie meist richtig in Salzbedarf.", "24-year-old Cenyri woman, dark copper-red braided hair, brown eyes, strong eyebrows, focused smile. Faded green dress, linen cap and cream kitchen apron, small herb bunch.", "aedan"),
-    person("iorath", "Iorath", 19, "Cenyri", "Kochgehilfe \xB7 Bratfeuer & Sp\xFClbank", "", "Iorath h\xE4lt die Glut am Leben und die Sp\xFClbank frei. Er tr\xE4umt von einem eigenen Gericht auf der Karte. Bis dahin erkl\xE4rt er jeden angebrannten Rand zu einer nordischen Spezialit\xE4t.", "19-year-old Cenyri young man, short curly russet hair, green eyes, broad youthful cheeks, hopeful grin. Rolled linen sleeves, charcoal-grey apron, clean wooden ladle.", "aedan"),
-    person("ketil", "Ketil Svathamar", 38, "Aldrimarer \xB7 Rorikshall", "Wachf\xFChrer \xB7 T\xFCr & Nachtwache", "Hrolfs j\xFCngerer Bruder.", "Ketil f\xFChrt die Hauswache und geht mit Carreg durch den Hof. Er spricht leise und greift sp\xE4t, dann aber entschlossen ein. Schreckt ein alter Soldat aus dem Schlaf, holt er zuerst einen Stuhl.", "38-year-old Aldrimar man resembling Hrolf, broad jaw and pale blue eyes, ash blonde hair tied short, blond stubble, serious calm expression, small old eyebrow scar. Grey wool tunic, brown leather jerkin, no drawn weapon.", "hrolf"),
-    person("gwern", "Gwern", 32, "Cenyri", "T\xFCrw\xE4chter \xB7 Fr\xFChe Schicht", "", "Gwern beh\xE4lt den Eingang im Blick und begleitet Raufbolde bis zur Gasse. Die H\xE4nde des ehemaligen Hafenarbeiters wirken bedrohlicher als seine Stimme. In ruhigen Stunden schnitzt er winzige Tiere aus Holz.", "32-year-old burly Cenyri man, short red hair, brown eyes, wide nose, thick red beard, gentle serious face. Dark green wool tunic and worn brown leather shoulder vest.", "aedan"),
-    person("rhunel", "Rhunel", 29, "Cenyri", "Nachtw\xE4chter \xB7 Hof & Hintert\xFCr", "", "Rhunel bewacht Lieferhof und Hintert\xFCr. Ungewohnte Ger\xE4usche h\xF6rt er sofort; seinen eigenen Becher sucht er dagegen st\xE4ndig. Meldet Carreg etwas, schaut er selbst nach.", "29-year-old Cenyri man, long auburn fringe tied back, grey-green eyes, thin face, clean shaven, watchful expression. Navy wool hood folded back, plain leather vest, unlit lantern held at chest.", "aedan"),
-    person("styr", "Styr Svathamar", 15, "Aldrimarisch-cenyrische Familie", "Schanklehrling", "Hrolfs und Eirians Sohn.", "Styr lernt bei Elidyr Bestellungen und das Rechnen am Tresen. Er m\xF6chte l\xE4ngst so gelassen wirken wie sein Vater. Meist verr\xE4t ihn das eine Tablett, das er sich zu viel aufgeladen hat.", "15-year-old adolescent boy, son of blonde broad-jawed Hrolf and red-haired Eirian; strawberry-blonde short hair, light blue eyes, youthful broad face, no beard. Simple muted teal tunic, clean linen collar, shy proud smile.", "hrolf"),
-    person("heledd", "Heledd Svathamar", 10, "Aldrimarisch-cenyrische Familie", "Hauskind \xB7 Tischblumen", "Hrolfs und Eirians Tochter.", "Heledd stellt gern Blumen auf die Tische und lauscht den Geschichten der Veteranen. In ihrem Heft sammelt sie die glaubw\xFCrdigsten davon. Hrolfs Berichte schneiden verd\xE4chtig gut ab.", "10-year-old girl, daughter of Hrolf and Eirian; golden blonde hair in two braids, blue-grey eyes, round childish face, light freckles. Modest blue wool dress, cream collar, small dried flowers held at chest, innocent curious expression.", "hrolf"),
-    person("neifion", "Neifion Dubhdarach", 14, "Albisch-cenyrische Familie", "Schreiberlehrling", "Aedans und Mairs Sohn.", "Neifion \xFCbt bei Mair Lieferlisten und Rechnungen. Hinter seinem braven Blick stecken bissige kleine Beschreibungen der Stammg\xE4ste. Er nennt sie Schreib\xFCbungen und h\xE4lt sie lieber unter Verschluss.", "14-year-old adolescent boy, Aedan-like face and dark brown curls, clear green eyes from red-haired mother, slender youthful features, no facial hair. Brown vest and cream linen shirt, small notebook held at chest.", "aedan"),
-    person("eirlys", "Eirlys Dubhdarach", 9, "Albisch-cenyrische Familie", "Hauskind \xB7 Geschichtenh\xF6rerin", "Aedans und Mairs Tochter.", "Eirlys faltet aus Nestwens Servietten lieber Boote als ordentliche Rechtecke. Die Veteranen fragt sie nach ihren Pferden und dem Essen im Lager. Ihre Schlachtensiege findet sie deutlich weniger interessant.", "9-year-old girl resembling Aedan, dark chestnut brown curly hair, warm brown eyes, round childish cheeks, shy delighted smile. Modest moss green wool dress, cream blouse, folded linen napkin at chest.", "aedan"),
-    person("cadri", "Cadri Trevoryn", 12, "Cenyri", "Hauskind \xB7 Kleine Werkstatt", "Merriks und Celyns Sohn.", "Cadri verbringt freie Nachmittage bei Gorwyst im Hof und baut lieber, als G\xE4ste zu bedienen. Seine neueste Erfindung soll den Kater von den Lieferscheinen fernhalten. Briwsion schl\xE4ft bereits darauf.", "12-year-old Cenyri boy resembling Merrik and Celyn, curly auburn-red hair, blue-grey eyes, straight small nose, freckled youthful face. Simple mustard tunic, little wooden peg held at chest, thoughtful expression.", "merrik"),
-    person("enlli", "Enlli Trevoryn", 6, "Cenyri", "Hauskind \xB7 Katerfreundin", "Merriks und Celyns Tochter.", "Enlli hat einen eigenen Hocker in Nestwens Flickstube und h\xE4lt Briwsion f\xFCr den wichtigsten Bewohner der Kanne. Abends erz\xE4hlt sie ihm, welche G\xE4ste freundlich waren. Der Kater h\xF6rt mit geschlossenen Augen zu.", "6-year-old little Cenyri girl, Merrik family nose, bright copper red soft curls, warm brown eyes like mother Celyn, rounded child proportions, a missing baby tooth in cheerful smile. Modest russet wool dress over cream blouse, small cloth cat toy held close.", "merrik")
+    person2("merrik", "Merrik Trevoryn", 44, "Cenyri", "Mitinhaber \xB7 Ortskontakte", "Celyns Mann und Nestwens \xE4ltester Sohn.", "Merrik kennt im Hafenviertel jeden Handwerker und jeden zweiten Gast. Der rothaarige Kriegsveteran h\xE4lt die Verbindung zur Stadt und empf\xE4ngt alte Kameraden gern selbst; bei gepanschtem Bier versteht er keinen Spa\xDF.", "Originalportr\xE4t: rotes zur\xFCckgebundenes Haar, kurzer roter Bart, blaugraue Augen, dunkelroter Rock.", "merrik"),
+    person2("hrolf", "Hrolf Svathamar", 46, "Aldrimarer \xB7 Rorikshall", "Mitinhaber \xB7 Hausfrieden", "Eirians Mann; Ketils und Runas \xE4lterer Bruder.", "Hrolfs Lachen tr\xE4gt bis auf die Gasse. Der Veteran aus Rorikshall sorgt daf\xFCr, dass auch ein voller Schankraum friedlich bleibt. Wird es ernst, gen\xFCgt meist sein Aufstehen.", "Originalportr\xE4t: kr\xE4ftig, blondes zur\xFCckgebundenes Haar und voller blonder Bart, hellblaue Augen.", "hrolf"),
+    person2("aedan", "Aedan Dubhdarach", 45, "Albe \xB7 Leitheach", "Mitinhaber \xB7 Einkauf & G\xE4ste", "Mairs Mann; seine Heimat liegt in Leitheach.", "Aedan verhandelt mit Lieferanten und empf\xE4ngt G\xE4ste im Hinterzimmer. Der h\xF6fliche Albe h\xF6rt lieber zu, als selbst zu reden, und vergisst weder eine offene Zeche noch einen erwiesenen Gefallen.", "Originalportr\xE4t: dunkelbraunes Haar, braune Augen, kurzer Bart, gr\xFCner Rock.", "aedan"),
+    person2("eirian", "Eirian Trevoryn", 42, "Cenyri", "Hausv\xF6gtin \xB7 Personal & Dienstpl\xE4ne", "Merriks Schwester und Hrolfs Frau.", "Eirian teilt die Schichten ein, zahlt die L\xF6hne aus und schlichtet die kleinen Streitigkeiten des Hauses. Wenn ihr Schl\xFCsselbund am Tresen auftaucht, werden selbst die Wirte etwas aufmerksamer.", "42-year-old woman, Merrik-like strong straight nose and slate-blue eyes, red auburn braided bun, freckles, knowing half smile. Olive wool dress, cream linen sleeves, brown fitted waistcoat, brass keys at chest.", "merrik"),
+    person2("mair", "Mair", 43, "Cenyri \xB7 Gwynthor", "Rechnungsf\xFChrerin \xB7 Kasse & G\xE4stebuch", "Aedans Frau.", "Mair f\xFChrt Kassenbuch und G\xE4stebuch mit ruhiger Hand. Eine vergessene Zeche entgeht ihr ebenso wenig wie ein Gast, der sein letztes Kupferst\xFCck dreimal umdreht. Ihr trockener Humor kommt meist erst mit der zweiten Rechnung zum Vorschein.", "43-year-old red-haired Cenyri woman, deep green eyes, wavy copper hair tied low, mature round face, calm wry expression. Deep blue wool gown, cream linen collar, ledger and quill near chest.", "aedan"),
+    person2("celyn", "Celyn", 41, "Cenyri \xB7 Gwynthor", "Vorratsmeisterin \xB7 Vorr\xE4te & W\xE4sche", "Merriks Frau.", "Celyn h\xE4lt Vorratskammer und W\xE4schetruhe gef\xFCllt. Sie riecht schlechtes Korn, bevor der Sack offen ist, und spart lieber am Schwund als an den Portionen. Wer versp\xE4tet zum Dienst kommt, bekommt erst etwas zu essen und dann seine Standpauke.", "41-year-old Cenyri woman, curly deep copper hair under simple linen kerchief, warm brown eyes, broad friendly face, sturdy build. Russet dress, blue apron, small folded linen cloth held at chest.", "aedan"),
+    { ...person2("caradog", "Caradog Tonnarth", 22, "Cenyri", "Schreiber & Adjutant der Tiefenwyrm", "Mairs \xE4ltester Sohn.", "Caradog f\xFChrt Idwals Logbuch und unterst\xFCtzt Cadell Ysgrif bei den Schriftst\xFCcken der Tiefenwyrm. Wenn das Schiff in Gwynthor liegt, schaut er bei seiner Mutter vorbei; Mair h\xE4lt dann gern einen Platz f\xFCr ihn frei.", "22-year-old Cenyri man, auburn curly hair, brown eyes, youthful square face, work-worn hands. Ochre wool vest over linen shirt, carpenter pencil and folded tally slip.", "aedan"), resident: false, portrait: "https://i.imgur.com/LK3q0UI.png" },
+    person2("gorwyst", "Gorwyst", 22, "Cenyri", "Meier \xB7 Hof, F\xE4sser & Reparaturen", "", "Gorwyst nimmt die Lieferungen an, l\xE4sst F\xE4sser rollen und h\xE4lt Handwerker und Brennholz im Anmarsch. Er fragt lieber zweimal nach, als eine Last auf die falsche Treppe zu stellen. Cadri darf ihm im Hof zur Hand gehen.", "22-year-old Cenyri man, auburn curly hair, brown eyes, youthful square face, work-worn hands. Ochre wool vest over linen shirt, carpenter pencil and folded tally slip.", "aedan"),
+    person2("elidyr", "Elidyr Trevoryn", 35, "Cenyri", "Schankwirtsmeister \xB7 Tresen & Empfang", "Merriks und Eirians j\xFCngerer Bruder.", "Elidyr empf\xE4ngt die G\xE4ste am Tresen und h\xE4lt den Ausschank in Gang. Er beh\xE4lt sechs Bestellungen im Kopf und wird mit jedem vollen Tisch trockener im Ton. Eine Beschwerde h\xF6rt er trotzdem bis zum Ende an.", "35-year-old Cenyri man resembling Merrik: straight nose, blue-grey eyes, red hair shorter and tousled, neat red moustache rather than full beard, leaner face. Dark teal waistcoat, rolled linen sleeves, wooden tankard held at chest.", "merrik"),
+    person2("delyth", "Delyth", 27, "Cenyri", "Erste Schankmagd \xB7 Tischdienst", "", "Delyth f\xFChrt die Schankm\xE4gde durch den dichtesten Abendbetrieb. Sie wei\xDF, wer seine Suppe langsam braucht und wer blo\xDF wichtig aussehen m\xF6chte. Ihr keckes L\xE4cheln macht den Anfang, ihre scharfe Zunge n\xF6tigenfalls den Schluss.", "27-year-old adult Cenyri tavern wench, chestnut-red thick braid, green eyes, angular nose, alert amused expression, sturdy voluptuous build and full bust. Wine-red laced bodice over cream blouse with tasteful low square neckline, practical apron, confident teasing smile.", "aedan"),
+    person2("tesni", "Tesni", 20, "Cenyri", "Schankmagd \xB7 Kr\xFCge & Tische", "", "Tesni ist schnell mit den Kr\xFCgen und noch schneller mit einem Lachen. Bestellungen merkt sie sich in kleinen Reimen. Beim Aufr\xE4umen singt sie die Feldzuglieder so schief, dass selbst die m\xFCdesten Veteranen grinsen.", "20-year-old clearly adult Cenyri tavern wench, bright copper-red wavy bob, freckles, blue eyes, playful quick smile, petite rounded curvy build. Muted yellow laced bodice over cream blouse with modest sweetheart neckline, green apron, empty tray tucked against upper body.", "aedan"),
+    person2("tangwystl", "Tangwystl", 31, "Cenyri", "Schankmagd \xB7 Abendtische", "", "Tangwystl kennt die Stammg\xE4ste und ihre Ausreden auswendig. Mit kupferroten Locken und zweideutigem Witz h\xE4lt sie ganze Tische bei Laune. Bei der Zeche wird ihr Ged\xE4chtnis allerdings sehr genau.", "31-year-old adult Cenyri tavern wench, abundant copper-red curls worn half up, warm brown eyes, rounded cheeks and small beauty mark beside mouth, broad voluptuous curvy figure and generous bust. Forest green laced bodice, ivory blouse with tasteful low neckline, rust apron, one hand on waist, knowing flirtatious grin.", "aedan"),
+    person2("fintan", "Fintan", 28, "Albe \xB7 Leitheach", "Schankknecht \xB7 Speisen & Abenddienst", "", "Fintan tr\xE4gt schwere Platten mit stoischer Ruhe durch den vollen Schankraum. Der junge Albe h\xF6rt mehr zu, als er spricht. Nur bei falsch ausgesprochenen Leitheacher Gerichtsnamen wird er hartn\xE4ckig.", "28-year-old Albe man, dark brown curly hair, hazel green eyes, long expressive nose, slender build, clean shaven. Forest green vest over oatmeal shirt, cloth over shoulder.", "aedan"),
+    person2("runa", "Runa Svathamar", 34, "Aldrimarerin \xB7 Rorikshall", "Hausmeisterin \xB7 Zimmer & Kammern", "Hrolfs und Ketils j\xFCngere Schwester.", "Runa sorgt f\xFCr ordentliche Kammern, frische Laken und unbesch\xE4digte Riegel. G\xE4ste beurteilt sie zun\xE4chst nach ihrem Umgang mit nassen Stiefeln. Verlorene Geldb\xF6rsen verwahrt sie sorgf\xE4ltiger als schlechte Ausreden.", "34-year-old Aldrimar woman visibly related to Hrolf, strong cheekbones and broad nose, fair blonde braided crown, pale blue eyes, reserved smile. Slate blue wool dress, linen apron, folded room linen.", "hrolf"),
+    person2("awenna", "Awenna", 26, "Cenyri", "Zimmermagd \xB7 Obere Kammern", "", "Awenna richtet Betten und Waschkr\xFCge her und entdeckt jeden klemmenden Riegel. Einem Gast mit alten Wunden legt sie wortlos ein zweites Kissen bereit. Nadeln verleiht sie gern, ihren guten Kamm niemals.", "26-year-old Cenyri woman, dark auburn hair in loose plait, brown eyes, long narrow face and thoughtful expression. Sage green dress, off-white apron, linen bundle.", "aedan"),
+    { ...person2("llinos", llinos.name, llinos.age, "Cenyri", "Hausmagd \xB7 Wasser & Lampen", "Seit 1739 mit Gwydan Celynfor verheiratet; eigener Haushalt zwischen Hafen und Marktviertel.", llinos.bio, llinos.appearance, "aedan"), worldPersonId: llinos.worldPersonId, portrait: llinos.portrait, livesOffsite: true },
+    person2("nestwen", "Nestwen Trevoryn", 68, "Cenyri", "W\xE4scheh\xFCterin \xB7 Flickstube", "Mutter Merriks, Eirians und Elidyrs.", "Nestwen flickt am hellen Fenster W\xE4sche und h\xFCtet die Geschichten der Familie. Seit Merrik aus dem Krieg heimkehrte, hebt sie immer einen Teller mehr auf. Hrolf unterbricht sie bedenkenlos, wenn wieder ein Knopf an seinem Rock h\xE4ngt.", "68-year-old elderly Cenyri woman, silver-grey braided hair with faint red traces, Merrik family straight nose and blue-grey eyes, warm wrinkles, spectacles held rather than worn. Plum wool shawl over linen dress, mending cloth.", "merrik"),
+    person2("heilyn", "Heilyn", 18, "Cenyri", "Hausbursche \xB7 Holz, Wasser & Boteng\xE4nge", "", "Heilyn tr\xE4gt Holz, Wasser und alles, wof\xFCr gerade eine Hand fehlt. Er ist noch unentschlossen, welches Handwerk er lernen m\xF6chte. Einen Teil seines Lohns bringt er jede Woche seiner kranken Tante.", "18-year-old Cenyri young man, unruly short red hair, blue eyes, lanky neck, earnest face. Patched brown vest over cream shirt, coil of carrying rope over shoulder.", "aedan"),
+    person2("tadhg", "Tadhg", 48, "Albe \xB7 Leitheach", "Meisterkoch \xB7 Herd & Speisekarte", "", "Tadhg verbindet Leitheacher Kr\xE4uter mit nordischem Rauch und cenyrischen Eint\xF6pfen. Seine beiden Gehilfen erkennen am Schimpfen, ob Salz oder Feuer fehlt. Am Bratspie\xDF duldet er keine Zuschauer, auch keine Wirte.", "48-year-old Albe master cook, dark brown wavy hair greying at temples, green-brown eyes, broad nose, heavy brows and short salt-and-pepper beard. Cream linen cook shirt, dark apron, wooden spoon at chest.", "aedan"),
+    person2("alaw", "Alaw", 24, "Cenyri", "Kochgehilfin \xB7 Br\xFChen, Gem\xFCse & Brot", "", "Alaw h\xFCtet Suppentopf und Fladenpfanne. Neue Kr\xE4utermischungen probiert sie auf Brotresten und h\xE4lt gelungene Versuche auf alten Lieferscheinen fest. Tadhgs Schimpfen \xFCbersetzt sie meist richtig in Salzbedarf.", "24-year-old Cenyri woman, dark copper-red braided hair, brown eyes, strong eyebrows, focused smile. Faded green dress, linen cap and cream kitchen apron, small herb bunch.", "aedan"),
+    person2("iorath", "Iorath", 19, "Cenyri", "Kochgehilfe \xB7 Bratfeuer & Sp\xFClbank", "", "Iorath h\xE4lt die Glut am Leben und die Sp\xFClbank frei. Er tr\xE4umt von einem eigenen Gericht auf der Karte. Bis dahin erkl\xE4rt er jeden angebrannten Rand zu einer nordischen Spezialit\xE4t.", "19-year-old Cenyri young man, short curly russet hair, green eyes, broad youthful cheeks, hopeful grin. Rolled linen sleeves, charcoal-grey apron, clean wooden ladle.", "aedan"),
+    person2("ketil", "Ketil Svathamar", 38, "Aldrimarer \xB7 Rorikshall", "Wachf\xFChrer \xB7 T\xFCr & Nachtwache", "Hrolfs j\xFCngerer Bruder.", "Ketil f\xFChrt die Hauswache und geht mit Carreg durch den Hof. Er spricht leise und greift sp\xE4t, dann aber entschlossen ein. Schreckt ein alter Soldat aus dem Schlaf, holt er zuerst einen Stuhl.", "38-year-old Aldrimar man resembling Hrolf, broad jaw and pale blue eyes, ash blonde hair tied short, blond stubble, serious calm expression, small old eyebrow scar. Grey wool tunic, brown leather jerkin, no drawn weapon.", "hrolf"),
+    person2("gwern", "Gwern", 32, "Cenyri", "T\xFCrw\xE4chter \xB7 Fr\xFChe Schicht", "", "Gwern beh\xE4lt den Eingang im Blick und begleitet Raufbolde bis zur Gasse. Die H\xE4nde des ehemaligen Hafenarbeiters wirken bedrohlicher als seine Stimme. In ruhigen Stunden schnitzt er winzige Tiere aus Holz.", "32-year-old burly Cenyri man, short red hair, brown eyes, wide nose, thick red beard, gentle serious face. Dark green wool tunic and worn brown leather shoulder vest.", "aedan"),
+    person2("rhunel", "Rhunel", 29, "Cenyri", "Nachtw\xE4chter \xB7 Hof & Hintert\xFCr", "", "Rhunel bewacht Lieferhof und Hintert\xFCr. Ungewohnte Ger\xE4usche h\xF6rt er sofort; seinen eigenen Becher sucht er dagegen st\xE4ndig. Meldet Carreg etwas, schaut er selbst nach.", "29-year-old Cenyri man, long auburn fringe tied back, grey-green eyes, thin face, clean shaven, watchful expression. Navy wool hood folded back, plain leather vest, unlit lantern held at chest.", "aedan"),
+    person2("styr", "Styr Svathamar", 15, "Aldrimarisch-cenyrische Familie", "Schanklehrling", "Hrolfs und Eirians Sohn.", "Styr lernt bei Elidyr Bestellungen und das Rechnen am Tresen. Er m\xF6chte l\xE4ngst so gelassen wirken wie sein Vater. Meist verr\xE4t ihn das eine Tablett, das er sich zu viel aufgeladen hat.", "15-year-old adolescent boy, son of blonde broad-jawed Hrolf and red-haired Eirian; strawberry-blonde short hair, light blue eyes, youthful broad face, no beard. Simple muted teal tunic, clean linen collar, shy proud smile.", "hrolf"),
+    person2("heledd", "Heledd Svathamar", 10, "Aldrimarisch-cenyrische Familie", "Hauskind \xB7 Tischblumen", "Hrolfs und Eirians Tochter.", "Heledd stellt gern Blumen auf die Tische und lauscht den Geschichten der Veteranen. In ihrem Heft sammelt sie die glaubw\xFCrdigsten davon. Hrolfs Berichte schneiden verd\xE4chtig gut ab.", "10-year-old girl, daughter of Hrolf and Eirian; golden blonde hair in two braids, blue-grey eyes, round childish face, light freckles. Modest blue wool dress, cream collar, small dried flowers held at chest, innocent curious expression.", "hrolf"),
+    person2("neifion", "Neifion Dubhdarach", 14, "Albisch-cenyrische Familie", "Schreiberlehrling", "Aedans und Mairs Sohn.", "Neifion \xFCbt bei Mair Lieferlisten und Rechnungen. Hinter seinem braven Blick stecken bissige kleine Beschreibungen der Stammg\xE4ste. Er nennt sie Schreib\xFCbungen und h\xE4lt sie lieber unter Verschluss.", "14-year-old adolescent boy, Aedan-like face and dark brown curls, clear green eyes from red-haired mother, slender youthful features, no facial hair. Brown vest and cream linen shirt, small notebook held at chest.", "aedan"),
+    person2("eirlys", "Eirlys Dubhdarach", 9, "Albisch-cenyrische Familie", "Hauskind \xB7 Geschichtenh\xF6rerin", "Aedans und Mairs Tochter.", "Eirlys faltet aus Nestwens Servietten lieber Boote als ordentliche Rechtecke. Die Veteranen fragt sie nach ihren Pferden und dem Essen im Lager. Ihre Schlachtensiege findet sie deutlich weniger interessant.", "9-year-old girl resembling Aedan, dark chestnut brown curly hair, warm brown eyes, round childish cheeks, shy delighted smile. Modest moss green wool dress, cream blouse, folded linen napkin at chest.", "aedan"),
+    person2("cadri", "Cadri Trevoryn", 12, "Cenyri", "Hauskind \xB7 Kleine Werkstatt", "Merriks und Celyns Sohn.", "Cadri verbringt freie Nachmittage bei Gorwyst im Hof und baut lieber, als G\xE4ste zu bedienen. Seine neueste Erfindung soll den Kater von den Lieferscheinen fernhalten. Briwsion schl\xE4ft bereits darauf.", "12-year-old Cenyri boy resembling Merrik and Celyn, curly auburn-red hair, blue-grey eyes, straight small nose, freckled youthful face. Simple mustard tunic, little wooden peg held at chest, thoughtful expression.", "merrik"),
+    person2("enlli", "Enlli Trevoryn", 6, "Cenyri", "Hauskind \xB7 Katerfreundin", "Merriks und Celyns Tochter.", "Enlli hat einen eigenen Hocker in Nestwens Flickstube und h\xE4lt Briwsion f\xFCr den wichtigsten Bewohner der Kanne. Abends erz\xE4hlt sie ihm, welche G\xE4ste freundlich waren. Der Kater h\xF6rt mit geschlossenen Augen zu.", "6-year-old little Cenyri girl, Merrik family nose, bright copper red soft curls, warm brown eyes like mother Celyn, rounded child proportions, a missing baby tooth in cheerful smile. Modest russet wool dress over cream blouse, small cloth cat toy held close.", "merrik")
   ];
   var KANNE_PETS = [
     { id: "carreg", name: "Carreg", age: 5, role: "Ponter \xB7 Cenyrischer Wachhund", bestiary: "../Bestiarium/tiere/vieh/haustiere/hunde/ponter/index.html", reference: "ponter", biography: "Carreg bewacht mit Ketil Hof und Hintert\xFCr. Der aufmerksame Ponter meldet Fremde mit einem einzigen Bellen und wartet dann auf seinen Hundef\xFChrer. Bei den Kindern l\xE4sst er sich erstaunlich viel gefallen.", appearance: "One five-year-old male Ponter dog, exact breed from reference: medium-sized lean alert cenyrish watchdog, upright ears, weatherproof muted grey-brown coat, amber eyes. Chest-up animal portrait by a wooden tavern back door, plain leather collar, calm attentive expression." },
@@ -20148,7 +20857,7 @@ var AleriaEconomy = (() => {
 
   // modules/kleiner-durst/durst-people.mjs
   var DURST_ART = "./assets/kleiner-durst";
-  var person2 = (key, name, sex, birth, role, bio, appearance, extra = {}) => Object.freeze({
+  var person3 = (key, name, sex, birth, role, bio, appearance, extra = {}) => Object.freeze({
     key,
     id: `${key}-rhwyd`,
     worldPersonId: `person--haus-rhwyd--${key}-rhwyd`,
@@ -20163,7 +20872,7 @@ var AleriaEconomy = (() => {
     ...extra
   });
   var RHWYD_PEOPLE = Object.freeze([
-    person2(
+    person3(
       "gethin",
       "Gethin Rhwyd",
       "male",
@@ -20173,7 +20882,7 @@ var AleriaEconomy = (() => {
       "Menschlicher Mann, dargestellt zu Lebzeiten etwa 1723 mit 57 Jahren. St\xE4mmig, braunes stumpfes Haar, kurzer gleichfarbiger Bart, braune Augen, schwere Lider und vom Trinken gezeichnetes m\xFCdes Gesicht. Abgetragenes graubraunes Hemd und alte braune Weste, G\xFCrtel. Stehend, breite Schultern etwas gesunken, Arme seitlich, kein Getr\xE4nk in der Hand.",
       { death: "1728", portraitAge: 57 }
     ),
-    person2(
+    person3(
       "efa",
       "Efa",
       "female",
@@ -20183,7 +20892,7 @@ var AleriaEconomy = (() => {
       "70-j\xE4hrige menschliche Frau, deutlich alt und vom Leben ersch\xF6pft, vollst\xE4ndig graues ehemals braunes Haar in schlichtem tiefem Knoten, braune Augen, ausgepr\xE4gte Falten und weiche schwere Gesichtsz\xFCge. Etwas kr\xE4ftiger K\xF6rperbau, nicht fettleibig. Mattes graubraunes langes Wollkleid, geflickte Sch\xFCrze. Stehend mit leicht gebeugten Schultern, H\xE4nde locker vor der Sch\xFCrze, schwaches m\xFCdes L\xE4cheln.",
       { unknownOrigin: true }
     ),
-    person2(
+    person3(
       "aled",
       "Aled Rhwyd",
       "male",
@@ -20193,7 +20902,7 @@ var AleriaEconomy = (() => {
       "32-j\xE4hriger menschlicher Fischer zu Lebzeiten, breite kantige Kieferpartie, stumpfbraunes kurz geschorenes Haar, braune Augen, dichter kurzer brauner Bart. Wettergraue Wolltunika, schlichter G\xFCrtel. Stehend frontal, Arme locker, ernster ruhiger Blick. Keine R\xFCstung, kein Heldendenkmal.",
       { death: "1720", portraitAge: 32 }
     ),
-    person2(
+    person3(
       "carwyn",
       "Carwyn Rhwyd",
       "male",
@@ -20203,7 +20912,7 @@ var AleriaEconomy = (() => {
       "30-j\xE4hriger menschlicher Hafenarbeiter zu Lebzeiten, langes schmales Gesicht, stumpfbraunes etwas l\xE4ngeres glattes Haar hinter die Ohren gestrichen, braune Augen, rasiert. Verwaschene olivgraue Tunika und einfache braune Weste. Stehend leicht nach links, ein Daumen am G\xFCrtel, anderer Arm locker, zur\xFCckhaltender Blick.",
       { death: "1720", portraitAge: 30 }
     ),
-    person2(
+    person3(
       "hywel",
       "Hywel Rhwyd",
       "male",
@@ -20213,7 +20922,7 @@ var AleriaEconomy = (() => {
       "28-j\xE4hriger menschlicher Matrose zu Lebzeiten, runderes kr\xE4ftiges Gesicht, stumpfbraunes welliges Haar, braune Augen, breiter brauner Schnurrbart ohne Vollbart. Ausgeblichenes blaugr\xFCnes Hemd, alte H\xFCftsch\xE4rpe. Stehend nach rechts, H\xE4nde entspannt tief ineinander, leicht schiefes freundliches L\xE4cheln.",
       { death: "1720", portraitAge: 28 }
     ),
-    person2(
+    person3(
       "dafydd",
       "Dafydd Rhwyd",
       "male",
@@ -20223,7 +20932,7 @@ var AleriaEconomy = (() => {
       "26-j\xE4hriger menschlicher Fischer zu Lebzeiten, schlank, etwas breitere Nase, stumpfbraunes unordentliches kurzes Haar mit seitlichem Scheitel, braune Augen, nur leichter brauner Stoppelbart. Grobes beigebraunes Hemd mit Schn\xFCrkragen und kurzer grauer Schulterumhang. Stehend in Dreiviertelansicht, beide Arme locker seitlich, ruhiger aufmerksamer Blick.",
       { death: "1720", portraitAge: 26 }
     ),
-    person2(
+    person3(
       "iorwerth",
       "Iorwerth Rhwyd",
       "male",
@@ -20232,7 +20941,7 @@ var AleriaEconomy = (() => {
       "Iorwerth war 1720 erst 15 Jahre alt und blieb als einziger der f\xFCnf S\xF6hne zu Hause. Heute ist er 35 und f\xFChrt mit seiner Mutter die \xFCberschuldete Kneipe. Er kauft g\xFCnstigen Tagesfang, zapft und sp\xFClt. Sein m\xFCrrischer, beinahe gleichf\xF6rmiger Blick t\xE4uscht keine Gelassenheit vor: Er ist schlicht m\xFCde. Mit Nia hat er den Sohn Dewi.",
       "35-j\xE4hriger menschlicher Schankwirt, v\xF6llig ersch\xF6pft, eingefallene Wangen, schwere braune Augen mit deutlichen Augenringen, stumpfes dreckigbraunes str\xE4hniges kurzes Haar, ungleichm\xE4\xDFige braune Stoppeln. Altes verwaschenes graues Leinenhemd, fleckige braune Weste, schlichte Sch\xFCrze. STEHEND hinter einem niedrigen Tresen, h\xE4lt genau EINEN Holzkrug tief vor der H\xFCfte und s\xE4ubert ihn mit einem Tuch, unkomplizierte H\xE4nde. Monotoner m\xFCrrischer leicht m\xFCder Blick direkt zum Betrachter."
     ),
-    person2(
+    person3(
       "meleri",
       "Meleri Rhwyd",
       "female",
@@ -20241,7 +20950,7 @@ var AleriaEconomy = (() => {
       "Iorwerths unverheiratete j\xFCngere Schwester ist 30 und tr\xE4gt die Becher zu den Tischen. Sie ist munterer als ihr Bruder, hat einen trockenen Scherz f\xFCr die Stammg\xE4ste und kennt deren gew\xF6hnliche Bestellung. Eine Wegheirat ist nicht festgelegt; sie lebt und arbeitet im Familienhaus.",
       "30-j\xE4hrige erwachsene menschliche Frau, vollbusig und kr\xE4ftig gebaut, stumpfbraunes gewelltes Haar zu lockerem Zopf gebunden, braune Augen, lebhafte runde Gesichtsz\xFCge. Abgetragenes moosbraunes mittelalterliches Miederkleid mit cremefarbener Bluse und einfacher Sch\xFCrze, praktische vollst\xE4ndig bekleidete Wirtshauskleidung. Stehend im Dreiviertelprofil, tr\xE4gt EINEN kleinen Holzkrug sicher in einer Hand auf H\xFCfth\xF6he, andere locker, munteres schiefes L\xE4cheln."
     ),
-    person2(
+    person3(
       "nia",
       "Nia",
       "female",
@@ -20251,7 +20960,7 @@ var AleriaEconomy = (() => {
       "33-j\xE4hrige menschliche Frau, stumpfbraunes dichtes Haar vollst\xE4ndig in schlichtem losem Knoten, braune Augen, markante Wangenknochen und kleine Sommersprossen, abgearbeitet aber wacher klarer Blick. Einfaches verwaschenes rotbraunes langes Kleid, hochgekrempelte \xC4rmel, grobe helle K\xFCchensch\xFCrze. Stehend seitlich am Herd, Arme locker tief vor dem K\xF6rper, kein Gegenstand in den H\xE4nden, kleines beherrschtes L\xE4cheln.",
       { unknownOrigin: true }
     ),
-    person2(
+    person3(
       "dewi",
       "Dewi Rhwyd",
       "male",
@@ -20285,12 +20994,12 @@ var AleriaEconomy = (() => {
     bio: "Bram ist ein 16 j\xE4hriger Ponter und seit langem beim Haus. Der fr\xFChere Aufpasser ist steif, schwerh\xF6rig und fast immer vor dem Kamin zu finden. Meist hebt er beim \xD6ffnen der T\xFCr nur ein Lid. Einen bezahlten Wachmann k\xF6nnen sich die Rhwyd nicht leisten; Bram ist l\xE4ngst mehr Familiengef\xE4hrte als Schutz.",
     appearance: "Ein uralter 16 j\xE4hriger mittelgro\xDFer schlanker Ponter-Hund, wetterfestes stumpfes graubraunes Fell, wei\xDFgraue Schnauze, gro\xDFe ehemals aufgerichtete nun entspannte Ohren wie im Bestiarium, getr\xFCbte braune Augen. LIEGT ersch\xF6pft aber lebend auf einem d\xFCnnen geflickten Wolltuch vor einem kleinen gemauerten Kneipenkamin, Kopf auf den Pfoten, ein Auge halb offen, zartes Glutlicht. Kein Welpe, kein Kampfhund, keine Wunden, kein Blut, kein Ritter und keine Menschen im Bild."
   });
-  var DURST_LIVING = Object.freeze([...RHWYD_PEOPLE.filter((person4) => !person4.death), DURST_MAID]);
+  var DURST_LIVING = Object.freeze([...RHWYD_PEOPLE.filter((person5) => !person5.death), DURST_MAID]);
 
   // modules/letzte-rast/rast-people.mjs
   var RAST_ART = "./assets/letzte-rast";
   var reference = (key) => `${RAST_ART}/references/${key}.png`;
-  var person3 = (key, name, sex, birth, role, appearance, options = {}) => Object.freeze({
+  var person4 = (key, name, sex, birth, role, appearance, options = {}) => Object.freeze({
     key,
     id: `${key}-vann`,
     worldPersonId: `person--haus-vann--${key}-vann`,
@@ -20308,7 +21017,7 @@ var AleriaEconomy = (() => {
     ...options
   });
   var VANN_PEOPLE = Object.freeze([
-    person3(
+    person4(
       "iestyn",
       "Iestyn Vann",
       "male",
@@ -20317,7 +21026,7 @@ var AleriaEconomy = (() => {
       "Memorial portrait at 76, deeply lined square face, entirely grey formerly copper-red swept hair, long narrow grey beard, blue eyes. Old-fashioned dark green wool merchant robe, simple brass clasp. Standing turned slightly left, arms relaxed.",
       { death: "1379", resident: false, staff: false }
     ),
-    person3(
+    person4(
       "efa",
       "Efa",
       "female",
@@ -20326,7 +21035,7 @@ var AleriaEconomy = (() => {
       "Memorial portrait at 74, grey hair in a braided crown, brown eyes, broad expressive face, visible wrinkles, dark red medieval wool gown and cream linen veil. Standing almost frontal with a gentle head tilt.",
       { death: "1381", resident: false, staff: false, unknownOrigin: true }
     ),
-    person3(
+    person4(
       "tudwal",
       "Tudwal Vann",
       "male",
@@ -20335,7 +21044,7 @@ var AleriaEconomy = (() => {
       "Memorial portrait at 76. Broad elderly man, short entirely grey formerly red hair, blue eyes, strong Vann nose, clean shaven face with deep smile lines. Dark burgundy medieval merchant tunic and fur-edged green shoulder mantle. Standing in three-quarter right view.",
       { death: "1720", resident: false, staff: false }
     ),
-    person3(
+    person4(
       "gwenith",
       "Gwenith",
       "female",
@@ -20344,8 +21053,8 @@ var AleriaEconomy = (() => {
       "Memorial portrait at 77. Entirely silver-grey hair in a neat bun under a fine linen coif, brown eyes, long oval face, dignified natural wrinkles. Deep green medieval gown, cream collar, small brass brooch. Standing with arms naturally down.",
       { death: "1725", resident: false, staff: false, unknownOrigin: true }
     ),
-    person3("brenn", "Brenn Vann", "male", 1673, "Hausoberhaupt \xB7 leitender Inhaber", "", { portrait: reference("brenn"), head: true }),
-    person3(
+    person4("brenn", "Brenn Vann", "male", 1673, "Hausoberhaupt \xB7 leitender Inhaber", "", { portrait: reference("brenn"), head: true }),
+    person4(
       "seren",
       "Seren",
       "female",
@@ -20354,8 +21063,8 @@ var AleriaEconomy = (() => {
       "63-year-old Cenyri woman, predominantly grey hair with a few faded auburn strands in a loose braided bun, clear blue eyes, wide warm face, mature smile lines. Burgundy medieval silk-wool gown, cream collar and modest gold trim. Standing gently turned left with relaxed hands low.",
       { unknownOrigin: true }
     ),
-    person3("madoc", "Madoc Vann", "male", 1677, "Mitinhaber \xB7 Meier und Rechnungen", "", { portrait: reference("madoc") }),
-    person3(
+    person4("madoc", "Madoc Vann", "male", 1677, "Mitinhaber \xB7 Meier und Rechnungen", "", { portrait: reference("madoc") }),
+    person4(
       "lowri",
       "Lowri",
       "female",
@@ -20364,8 +21073,8 @@ var AleriaEconomy = (() => {
       "60-year-old Cenyri woman, grey hair with copper-red undertones in a compact braided knot, blue eyes, narrow face and strong cheekbones, mature eye lines, quietly amused expression. Deep navy medieval dress, copper-red sleeveless overdress, fine ivory linen collar. Standing three-quarter right, hands resting loosely below waist.",
       { unknownOrigin: true }
     ),
-    person3("cadeyrn", "Cadeyrn Vann", "male", 1697, "Erster Erbe \xB7 Leitung des Speisebetriebs", "", { portrait: reference("cadeyrn") }),
-    person3(
+    person4("cadeyrn", "Cadeyrn Vann", "male", 1697, "Erster Erbe \xB7 Leitung des Speisebetriebs", "", { portrait: reference("cadeyrn") }),
+    person4(
       "angharad",
       "Angharad",
       "female",
@@ -20374,8 +21083,8 @@ var AleriaEconomy = (() => {
       "41-year-old Cenyri woman, dark chestnut hair in a low side braid, green eyes, angular face, slightly hooked nose and mature confident smile. Burgundy fitted medieval gown, cream linen inset, fine brass chain. Standing facing slightly left, one arm loose at side, no objects.",
       { unknownOrigin: true }
     ),
-    person3("owain", "Owain Vann", "male", 1701, "Keller und Importbezug", "", { portrait: reference("owain") }),
-    person3(
+    person4("owain", "Owain Vann", "male", 1701, "Keller und Importbezug", "", { portrait: reference("owain") }),
+    person4(
       "meleri",
       "Meleri",
       "female",
@@ -20384,8 +21093,8 @@ var AleriaEconomy = (() => {
       "34-year-old Cenyri woman, warm brown hair in a shoulder-length loose braid, brown eyes, rounded face, freckles and broad smile. Simple elegant forest-green medieval dress, cream undersleeves, russet waist sash. Standing frontal, head gently inclined, arms naturally down.",
       { unknownOrigin: true }
     ),
-    person3("edern", "Edern Vann", "male", 1705, "Herbergsmeister \xB7 Zimmer und Buchungen", "", { portrait: reference("edern") }),
-    person3(
+    person4("edern", "Edern Vann", "male", 1705, "Herbergsmeister \xB7 Zimmer und Buchungen", "", { portrait: reference("edern") }),
+    person4(
       "elowen",
       "Elowen Maerllys",
       "female",
@@ -20394,8 +21103,8 @@ var AleriaEconomy = (() => {
       "27-year-old Cenyri woman, sister of Nia Maerllys. Dark deep red hair and clear blue eyes exactly like the sibling reference. Different face: wider cheekbones, stronger straight nose, mature calm expression. Dark red hair braided across the crown into a low bun. Fine ivory and dark green medieval gown, modest neckline. Standing three-quarter left, arms relaxed, no objects.",
       { id: "elowen-maerllys", worldPersonId: "person--haus-maerllys--elowen-maerllys", house: "maerllys", originFamily: "haus-maerllys", referencePaths: ["Stammb\xE4ume/assets/images/portraits/haus-maerllys/nia-maerllys.png"] }
     ),
-    person3("eirlys", "Eirlys Vann", "female", 1710, "Nach Haus Raves verheiratet \xB7 Beratung in der G\xF6ttlichen Eleganz", "", { portrait: reference("eirlys"), resident: false, staff: false, destinationFamily: "haus-raves" }),
-    person3(
+    person4("eirlys", "Eirlys Vann", "female", 1710, "Nach Haus Raves verheiratet \xB7 Beratung in der G\xF6ttlichen Eleganz", "", { portrait: reference("eirlys"), resident: false, staff: false, destinationFamily: "haus-raves" }),
+    person4(
       "orestian",
       "Orestian Raves",
       "male",
@@ -20404,7 +21113,7 @@ var AleriaEconomy = (() => {
       "",
       { id: "orestian-raves", worldPersonId: "person--haus-raves--orestian-raves", house: "raves", resident: false, staff: false, portrait: "./assets/goettliche-eleganz/portraits/orestian.png" }
     ),
-    person3(
+    person4(
       "aneirin",
       "Aneirin Vann",
       "male",
@@ -20413,7 +21122,7 @@ var AleriaEconomy = (() => {
       "21-year-old adult son of Cadeyrn and Angharad. Copper-red softly wavy hair, blue eyes, narrow youthful face, his mother's angular nose, clean shaven. Navy medieval doublet with restrained brass buttons, cream shirt, burgundy belt. Standing three-quarter right with one arm loosely behind his back.",
       { referenceKeys: ["cadeyrn", "angharad"] }
     ),
-    person3(
+    person4(
       "enid",
       "Enid Pendrwn",
       "female",
@@ -20422,7 +21131,7 @@ var AleriaEconomy = (() => {
       "20-year-old adult Cenyri woman, sister of Emyr Pendrwn. Match Emyr's reddish-brown hair and light green eyes. Own feminine face, broad forehead, small upturned nose, friendly expression. Hair half pinned back with a simple brass clasp. Forest-green and cream modest medieval gown. Standing relaxed turned slightly left, no props.",
       { id: "enid-pendrwn", worldPersonId: "person--haus-pendrwn--enid-pendrwn", house: "pendrwn", originFamily: "haus-pendrwn", referencePaths: ["Stammb\xE4ume/assets/images/portraits/haus-pendrwn/emyr-pendrwn.jpeg"] }
     ),
-    person3(
+    person4(
       "gwenna",
       "Gwenna Vann",
       "female",
@@ -20431,7 +21140,7 @@ var AleriaEconomy = (() => {
       "16-year-old adolescent girl, daughter of Cadeyrn and Angharad, chestnut-brown hair in two simple low braids, blue eyes, youthful angular cheeks. Modest burgundy medieval apprentice dress with cream linen collar. Standing frontal, relaxed arms, neutral safe household interior.",
       { referenceKeys: ["cadeyrn", "angharad"] }
     ),
-    person3(
+    person4(
       "rhys",
       "Rhys Vann",
       "male",
@@ -20440,7 +21149,7 @@ var AleriaEconomy = (() => {
       "12-year-old boy, son of Owain and Meleri. Tousled copper-red hair, brown eyes from his mother, round boyish face and freckles. Modest green medieval child tunic, cream collar. Standing relaxed, arms down, no tools or props.",
       { referenceKeys: ["owain", "meleri"] }
     ),
-    person3(
+    person4(
       "teleri",
       "Teleri Vann",
       "female",
@@ -20449,7 +21158,7 @@ var AleriaEconomy = (() => {
       "Six-year-old little girl, daughter of Owain and Meleri. Soft warm brown hair in two small braids, blue eyes, round little cheeks and curious expression. Modest rust-red medieval child dress and ivory collar. Standing naturally, arms at sides, simple bright family room.",
       { staff: false, referenceKeys: ["owain", "meleri"] }
     ),
-    person3(
+    person4(
       "celyn",
       "Celyn Vann",
       "female",
@@ -20458,7 +21167,7 @@ var AleriaEconomy = (() => {
       "Five-year-old little girl, daughter of Edern Vann and Elowen Maerllys. Deep copper-red hair in a short wavy bob, bright blue eyes, round child cheeks and small straight nose. Modest green medieval child dress, cream sleeves. Standing relaxed, arms down, quiet safe family room.",
       { staff: false, referenceKeys: ["edern", "elowen"] }
     ),
-    person3(
+    person4(
       "iolo",
       "Iolo Vann",
       "male",
@@ -20467,7 +21176,7 @@ var AleriaEconomy = (() => {
       "Two-year-old toddler boy, son of Edern and Elowen. Soft dark red short curls, blue eyes, unmistakable toddler proportions and chubby cheeks. Simple cream medieval toddler tunic with rust-red sleeveless layer. Standing safely beside a plain low wooden bench, hands relaxed, no props.",
       { staff: false, referenceKeys: ["edern", "elowen"] }
     ),
-    person3(
+    person4(
       "cassian",
       "Cassian Raves",
       "male",
@@ -20476,7 +21185,7 @@ var AleriaEconomy = (() => {
       "Seven-year-old little boy, son of Orestian Raves and Eirlys Vann. Copper-red hair at roots fading clearly into silver-white tips like his father, blue-grey eyes, angular youthful face. Modest burgundy medieval child doublet and cream shirt. Standing relaxed, simple bright family room.",
       { id: "cassian-raves", worldPersonId: "person--haus-raves--cassian-raves", house: "raves", resident: false, staff: false, referenceKeys: ["orestian", "eirlys"] }
     ),
-    person3(
+    person4(
       "elena",
       "Elena Raves",
       "female",
@@ -20560,23 +21269,23 @@ var AleriaEconomy = (() => {
   }
   function buildWorkforce(entry) {
     const { people: people2, wages, board } = metadataFor(entry.id);
-    const lookup = new Map(people2.map((person4) => [person4.name, person4]));
-    const owners = people2.filter((person4) => wages[person4.key || person4.id]?.kind === "owner").map((person4) => person4.name);
+    const lookup = new Map(people2.map((person5) => [person5.name, person5]));
+    const owners = people2.filter((person5) => wages[person5.key || person5.id]?.kind === "owner").map((person5) => person5.name);
     const workers = /* @__PURE__ */ new Map();
     for (const baseWorker of buildVenueWorkforce(entry, { owners })) {
-      const person4 = lookup.get(baseWorker.name), key = person4?.key || person4?.id;
-      if (!person4) {
+      const person5 = lookup.get(baseWorker.name), key = person5?.key || person5?.id;
+      if (!person5) {
         workers.set(baseWorker.id, baseWorker);
         continue;
       }
       const id = `person-${key}`, wage = wages[key] || rolePay(baseWorker.role, baseWorker.areas.join(" "));
-      const family = person4 && (entry.id === "gwynthor-zum-kleinen-durst" ? key !== "carys" && key !== "bram" : entry.id === "celtigerns-letzte-rast" ? VANN_PEOPLE.includes(person4) : ["merrik", "hrolf", "aedan", "styr", "neifion", "cadri", "heledd", "eirlys", "enlli"].includes(key));
+      const family = person5 && (entry.id === "gwynthor-zum-kleinen-durst" ? key !== "carys" && key !== "bram" : entry.id === "celtigerns-letzte-rast" ? VANN_PEOPLE.includes(person5) : ["merrik", "hrolf", "aedan", "styr", "neifion", "cadri", "heledd", "eirlys", "enlli"].includes(key));
       const furnished = !family && !["vacancy", "animal", "dependent"].includes(wage.kind);
       workers.set(id, {
         ...baseWorker,
         id,
         name: baseWorker.name,
-        role: person4?.role || baseWorker.role,
+        role: person5?.role || baseWorker.role,
         count: 1,
         kind: "employee",
         days: 6,

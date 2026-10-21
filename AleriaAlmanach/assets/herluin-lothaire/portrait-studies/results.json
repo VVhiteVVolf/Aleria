@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-20",
+  "character": "Herluin Lothaire",
+  "tool": "built-in image_gen",
+  "preset": "anime-scene-portrait",
+  "promptSet": "AleriaAlmanach/assets/herluin-lothaire/portrait-studies/prompts.json",
+  "selectedVariant": null,
+  "moduleCreated": false,
+  "published": false,
+  "pushed": false,
+  "images": [
+    {
+      "id": "01-experimentator",
+      "label": "Der begeisterte Experimentator",
+      "destination": "AleriaAlmanach/assets/herluin-lothaire/portrait-studies/01-experimentator.png",
+      "original": "C:/Users/fhg_r/.codex/generated_images/01a1464a-a20b-7c00-a9de-c0b8c10e3b32/exec-60e4c807-7945-4cf6-9abb-d5cb8d116a84.png",
+      "originalRetained": true,
+      "width": 1024,
+      "height": 1536,
+      "sha256": "dd3d24f985c8d3a270b746e3670cada2754a4398c4eef0c60288d25cd99dfe17",
+      "generatedPixelsPreserved": true,
+      "visualReview": {
+        "singleAdultHuman": true,
+        "silverNaturalEye": true,
+        "amethystProsthesis": true,
+        "violetVeinsContinueDownNeck": true,
+        "spikyGrayHairWithWhiteTips": true,
+        "goateeWithoutMustache": true,
+        "enthusiasticGrin": true,
+        "orbAndBothHandsVisible": true,
+        "noRecognizableVisionInOrb": true,
+        "framing": "Uppermost hair spikes meet the upper edge; retained as an exploratory variant."
+      }
+    },
+    {
+      "id": "02-arkanist",
+      "label": "Der theatralische Arkanist",
+      "destination": "AleriaAlmanach/assets/herluin-lothaire/portrait-studies/02-arkanist.png",
+      "original": "C:/Users/fhg_r/.codex/generated_images/01a1464a-a20b-7c00-a9de-c0b8c10e3b32/exec-07e4d5cc-c02c-47f5-9500-f43587fbdcce.png",
+      "originalRetained": true,
+      "width": 1024,
+      "height": 1536,
+      "sha256": "e7fc771cc4c614a7297dbdc81c2abdb79154efaa997a20dcb4875b552c7bb905",
+      "generatedPixelsPreserved": true,
+      "visualReview": {
+        "singleAdultHuman": true,
+        "silverNaturalEye": true,
+        "amethystProsthesis": true,
+        "violetVeinsContinueDownNeck": true,
+        "spikyGrayHairWithWhiteTips": true,
+        "goateeWithoutMustache": true,
+        "enthusiasticGrin": true,
+        "orbAndBothHandsVisible": true,
+        "noRecognizableVisionInOrb": true,
+        "framing": "Hair, face, orb and hands fit within the frame."
+      }
+    },
+    {
+      "id": "03-kraeutermagier",
+      "label": "Der verschmitzte Kräutermagier",
+      "destination": "AleriaAlmanach/assets/herluin-lothaire/portrait-studies/03-kraeutermagier.png",
+      "original": "C:/Users/fhg_r/.codex/generated_images/01a1464a-a20b-7c00-a9de-c0b8c10e3b32/exec-93f8da26-0652-49ae-b65c-9f2b7b6aacb5.png",
+      "originalRetained": true,
+      "width": 1024,
+      "height": 1536,
+      "sha256": "f424453edebaacb0006e274ea1fefea6e693aaaf9d4490abe1ca83ee5e0be90c",
+      "generatedPixelsPreserved": true,
+      "visualReview": {
+        "singleAdultHuman": true,
+        "silverNaturalEye": true,
+        "amethystProsthesis": true,
+        "violetVeinsContinueDownNeck": true,
+        "spikyGrayHairWithWhiteTips": true,
+        "goateeWithoutMustache": true,
+        "enthusiasticGrin": true,
+        "orbAndBothHandsVisible": true,
+        "noRecognizableVisionInOrb": true,
+        "framing": "Hair, face, orb and hands fit within the frame."
+      }
+    }
+  ]
+}

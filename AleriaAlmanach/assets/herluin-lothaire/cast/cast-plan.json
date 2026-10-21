@@ -1,0 +1,265 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-20",
+  "status": "Archived portrait planning; canonical roster is modules/arkaneum/arkaneum-people.mjs",
+  "location": "Gwynthor-Stadt · Park von Gwynthor · nahe dem Badehaus",
+  "nameSource": "AleriaAlmanach/modules/name-list/name-list-data.js",
+  "nameNotes": [
+    "Rhydian = Rhyd + ian; Maelwyn = Mael + wyn; Cyrwyn = Cyr + wyn, nach Rheunwaith-Namensarchiv.",
+    "Rioneth = Rion + eth, nach Ogham-Namensarchiv.",
+    "Beiname O'Cenyr für Sohn und Enkel gemäß Nutzeranweisung; Mütter Helygyn und Perdella wurden am 20.10.2026 in der Familienakte ergänzt.",
+    "Saithen = Saith + en; Neddric = Nedd + ric; Perban = Per + ban, nach Rheunwaith-Namensarchiv.",
+    "Jeradis = Jera + dis; Nauthagerd = Nautha + gerd, nach Futhark-Namensarchiv."
+  ],
+  "herluin": {
+    "id": "herluin-lothaire",
+    "name": "Herluin Lothaire",
+    "age": 163,
+    "apparentAge": 33,
+    "selectedPortrait": "./assets/herluin-lothaire/portrait-studies/02-arkanist.png",
+    "referenceStudyForKinship": "02-arkanist",
+    "referenceIsNotFinalSelection": false
+  },
+  "people": [
+    {
+      "id": "rhydian-o-cenyr",
+      "name": "Rhydian O'Cenyr",
+      "age": 72,
+      "apparentAge": 72,
+      "culture": "Cenyr · Rheunwaith-Name",
+      "role": "Herluins Sohn und Gehilfe",
+      "parentId": "herluin-lothaire",
+      "magicGifted": false,
+      "personality": "Erfahren, müde und kritisch; prüft die Qualität der Kräuter, bevor sein Vater damit experimentiert.",
+      "tasks": [
+        "Kräuter prüfen und sortieren",
+        "Trockenvorräte und gewöhnliche Zubereitungen betreuen",
+        "Herluin im Laden zur Hand gehen"
+      ],
+      "appearance": "Sehr betagt; langer weißer Bart, trübe silbergraue Augen, lange Fingernägel, Kapuze und schlichte Robe.",
+      "portrait": "./assets/herluin-lothaire/cast/portraits/rhydian-o-cenyr.png"
+    },
+    {
+      "id": "maelwyn-o-cenyr",
+      "name": "Maelwyn O'Cenyr",
+      "age": 43,
+      "apparentAge": 28,
+      "culture": "Cenyr · Rheunwaith-Name",
+      "role": "Herluins Enkel und magiebegabter Lehrling",
+      "parentId": "rhydian-o-cenyr",
+      "magicGifted": true,
+      "personality": "Freundlich, ordentlich und selbstsicher; begeistert vom Unterricht, aber weniger theatralisch als sein Großvater.",
+      "tasks": [
+        "Arkaner Unterricht bei Herluin",
+        "Geordnete Mitschriften und Arbeitsvorbereitung",
+        "Hilfe bei alchemistischen und arkanen Vorführungen"
+      ],
+      "appearance": "Wirkt 28; ordentliches rotes Haar mit helleren kupfergoldenen Spitzen, silbergraue Augen und kurzer frecher Kinnbart.",
+      "portrait": "./assets/herluin-lothaire/cast/portraits/maelwyn-o-cenyr.png"
+    },
+    {
+      "id": "cyrwyn",
+      "name": "Cyrwyn",
+      "age": 45,
+      "apparentAge": 45,
+      "culture": "Cenyr",
+      "role": "Jäger, Söldner und Beschaffer",
+      "magicGifted": false,
+      "personality": "Zäh, wortkarg und erfahren; kennt Jagdpfade und erkennt brauchbare tierische Bestandteile.",
+      "tasks": [
+        "Tierische Zutaten und Jagdfunde beschaffen",
+        "Herluins Besorgungsgänge außerhalb der Stadt absichern",
+        "Gewöhnliche Lieferungen aus dem Umland einholen"
+      ],
+      "appearance": "Rothaarig, roter Bart, braune Kapuze, gebrauchte Lederrüstung, Köcher auf dem Rücken und Schwert am Gürtel.",
+      "portrait": "./assets/herluin-lothaire/cast/portraits/cyrwyn.png"
+    },
+    {
+      "id": "torvald",
+      "name": "Torvald",
+      "age": 41,
+      "apparentAge": 41,
+      "culture": "Aldrimar",
+      "role": "Krieger und Beschaffer",
+      "magicGifted": false,
+      "personality": "Ruhig, standfest und vorsichtig; übernimmt schwere Lasten und gefährlichere Wege.",
+      "tasks": [
+        "Schwere und unhandliche Fundstücke transportieren",
+        "Die Beschaffung auf unsicheren Wegen begleiten",
+        "Besorgungen übernehmen, bei denen körperliche Durchsetzung zählt"
+      ],
+      "appearance": "Breit gebaut; blondes Haar am Hinterkopf gebunden, kurzer voller blonder Bart, blaue Augen, Kettenzeug und schlichter Wollmantel.",
+      "portrait": "./assets/herluin-lothaire/cast/portraits/torvald.png"
+    },
+    {
+      "id": "rioneth",
+      "name": "Rioneth",
+      "age": 36,
+      "apparentAge": 36,
+      "culture": "Alba · Ogham-Name",
+      "role": "Albische Waldläuferin und Beschafferin",
+      "magicGifted": false,
+      "personality": "Geduldig, trocken humorvoll und sehr genau; kennt unscheinbare Fundorte und hält wenig von Herluins großspurigen Mengenangaben.",
+      "tasks": [
+        "Pilze, Wurzeln und Harze fachgerecht sammeln",
+        "Moorige und schwer zugängliche Fundstellen aufsuchen",
+        "Giftige oder verdorbene Funde aussortieren"
+      ],
+      "appearance": "Brünettes Haar mit langem seitlichem Zopf und kurz geschnittener Schläfenseite; bernsteinbraune Augen, waldgrüner Mantel und praktische Lederkleidung.",
+      "portrait": "./assets/herluin-lothaire/cast/portraits/rioneth.png"
+    },
+    {
+      "id": "saithen",
+      "name": "Saithen",
+      "age": 17,
+      "apparentAge": 17,
+      "culture": "Cenyr",
+      "role": "Jüngerer Laufbursche",
+      "magicGifted": false,
+      "personality": "Munter, neugierig und gelegentlich vorschnell; merkt sich die Wege besser als lange Bestelllisten.",
+      "tasks": [
+        "Kleine Besorgungen im Stadtgebiet",
+        "Päckchen und Nachrichten zustellen",
+        "Leere Gefäße und Verbrauchsmaterial abholen"
+      ],
+      "appearance": "Braunes, zerzaustes Haar mit kurzer Stirnfranse, braune Augen und einige Sommersprossen; einfache ockerfarbene Kleidung.",
+      "portrait": "./assets/herluin-lothaire/cast/portraits/saithen.png"
+    },
+    {
+      "id": "neddric",
+      "name": "Neddric",
+      "age": 20,
+      "apparentAge": 20,
+      "culture": "Cenyr",
+      "role": "Älterer Laufbursche",
+      "magicGifted": false,
+      "personality": "Besonnener als sein Bruder, zuverlässig und trocken humorvoll; kontrolliert die Lieferung lieber ein zweites Mal.",
+      "tasks": [
+        "Einkäufe nach Liste abholen",
+        "Lieferungen und Rückgaben im Stadtgebiet erledigen",
+        "Saithen bei größeren Besorgungen begleiten"
+      ],
+      "appearance": "Braunes glattes Haar mit sauberem Seitenscheitel, braune Augen; länglicheres Gesicht als sein Bruder, schlichter ziegelroter Überrock.",
+      "portrait": "./assets/herluin-lothaire/cast/portraits/neddric.png"
+    },
+    {
+      "id": "jeradis",
+      "name": "Jeradis",
+      "age": 27,
+      "apparentAge": 27,
+      "culture": "Aldrimar",
+      "role": "Magd · Reinigung und Hausarbeit",
+      "magicGifted": false,
+      "personality": "Freundlich, tüchtig und wenig beeindruckt von Herluins Ausreden für neue Flecken auf dem Boden.",
+      "tasks": [
+        "Laden und Arbeitsräume reinigen",
+        "Wäsche und Putzvorräte versorgen",
+        "Nach gewöhnlichen Arbeiten im Haus aufräumen"
+      ],
+      "appearance": "Blondes lockiges Haar, deutliche Sommersprossen und blaue Augen; vollbusige erwachsene Figur, schlichtes Arbeitskleid und Schürze.",
+      "portrait": "./assets/herluin-lothaire/cast/portraits/jeradis.png"
+    },
+    {
+      "id": "nauthagerd",
+      "name": "Nauthagerd",
+      "age": 46,
+      "apparentAge": 46,
+      "culture": "Aldrimar",
+      "role": "Vorratsverwalterin · Logistik und Lager",
+      "magicGifted": false,
+      "personality": "Kräftig, sachlich und durchsetzungsfähig; duldet unbeschriftete Lieferungen und verschwendete Vorräte nur sehr ungern.",
+      "tasks": [
+        "Warenannahme und Lagerordnung",
+        "Vorräte, Haltbarkeit und Nachbestellungen überwachen",
+        "Besorgungslisten für Laufburschen und Beschaffer zusammenstellen"
+      ],
+      "appearance": "Groß und kräftig, blonde Flechtfrisur, blaue Augen und breite Gesichtszüge; praktische Weste, Leinenhemd und Arbeitsschürze.",
+      "portrait": "./assets/herluin-lothaire/cast/portraits/nauthagerd.png"
+    },
+    {
+      "id": "perban",
+      "name": "Perban",
+      "age": 64,
+      "apparentAge": 64,
+      "culture": "Cenyr",
+      "role": "Meier · Buchführung und Geschäftsverwaltung",
+      "magicGifted": false,
+      "personality": "Streng, sparsam und penibel; hält Löhne, Rechnungen und Herluins Ausgaben auseinander.",
+      "tasks": [
+        "Rechnungen, Kasse und Bücher führen",
+        "Löhne, Termine und gewöhnliche Korrespondenz verwalten",
+        "Ausgaben mit Herluin und Vorratsbedarf mit Nauthagerd abstimmen"
+      ],
+      "appearance": "Dürrer älterer Cenyri mit Halbglatze, grauem Haarkranz, braunen Augen und schmalen Lippen; führt ein aufgeschlagenes Buch.",
+      "portrait": "./assets/herluin-lothaire/cast/portraits/perban.png"
+    }
+  ],
+  "familyConnections": [
+    {
+      "parentId": "herluin-lothaire",
+      "childId": "rhydian-o-cenyr",
+      "motherId": "helygyn"
+    },
+    {
+      "parentId": "rhydian-o-cenyr",
+      "childId": "maelwyn-o-cenyr",
+      "motherId": "perdella"
+    }
+  ],
+  "sourcing": {
+    "ordinaryHerbs": "Anbau im Hinterhof",
+    "fieldTeam": [
+      "cyrwyn",
+      "torvald",
+      "rioneth"
+    ],
+    "frequency": "Tägliche Beschaffung im Umland nach Herluins Bedarf",
+    "magicNotRequiredForGathering": true
+  },
+  "moduleCreated": true,
+  "pushed": false,
+  "deployed": false,
+  "staffConnections": [
+    {
+      "type": "siblings",
+      "personIds": [
+        "neddric",
+        "saithen"
+      ],
+      "unrelatedToHerluinFamily": true
+    },
+    {
+      "type": "siblings",
+      "personIds": [
+        "nauthagerd",
+        "torvald"
+      ],
+      "unrelatedToHerluinFamily": true
+    }
+  ],
+  "nameAvailabilityCheck": "staff-name-check.json",
+  "shopNameProposals": [
+    {
+      "name": "Die dreizehnte Essenz",
+      "tone": "Geheimnisvoll und selbstbewusst; passt zu Herluins Anspruch, über gewöhnliche Kräuterkunde hinauszugehen."
+    },
+    {
+      "name": "Lothaires Wunderkammer",
+      "tone": "Persönlich und großspurig; Arkanes, Alchemie und wechselnde Kuriositäten unter seinem Namen."
+    },
+    {
+      "name": "Zum schielenden Amethyst",
+      "tone": "Frech und einprägsam; spielt auf das auffällige Amethystauge an."
+    },
+    {
+      "name": "Wurzel und Widerspruch",
+      "tone": "Eigenwillig und gelehrt; verbindet Kräuterkunde mit seiner streitbaren Art."
+    },
+    {
+      "name": "Zum verbannten Stern",
+      "tone": "Stolz und etwas dramatisch; macht aus dem Gildenausschluss eine eigene Identität."
+    }
+  ],
+  "selectedShopName": "Lothaires Arkaneum",
+  "moduleSource": "AleriaAlmanach/modules/arkaneum/"
+}

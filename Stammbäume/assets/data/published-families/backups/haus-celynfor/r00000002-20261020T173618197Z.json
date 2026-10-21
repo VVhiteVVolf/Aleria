@@ -1,0 +1,214 @@
+{
+  "schemaVersion": 1,
+  "familyId": "haus-celynfor",
+  "revision": 2,
+  "updatedAt": "2026-10-20T17:36:18.197Z",
+  "family": {
+    "schema": "aleria.family-tree",
+    "schemaVersion": 1,
+    "document": {
+      "id": "haus-celynfor",
+      "title": "Familie Celynfor",
+      "motto": "",
+      "description": "Ein jung verheiratetes cenyrisches Paar, zwei Arbeitswege und ein Hund vor dem Herd.",
+      "emblem": "../AleriaAlmanach/assets/gwynthor-heime/celynfor/wappen.png",
+      "houseProfile": {
+        "rankId": "commoner",
+        "seat": "Gwynthor",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "house-draig",
+        "liegeHouseName": "Haus Draig",
+        "regionEmblems": {
+          "seat": "",
+          "barony": "",
+          "county": "",
+          "kingdom": ""
+        }
+      }
+    },
+    "persons": [
+      {
+        "id": "gwydan",
+        "worldPersonId": "person--haus-celynfor--gwydan",
+        "name": "Gwydan Celynfor",
+        "title": "Schiffsbaugeselle",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1709",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/gwynthor-heime/celynfor/gwydan.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-celynfor",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "Gwydan ist gelassen und sorgfältig, mit einem leisen Humor, der Llinos zuverlässig zum Lachen bringt. Daheim baut er aus erlaubten Holzresten kleine nützliche Dinge und prüft jeden Stuhl, bevor sich jemand daraufsetzt.",
+        "extensions": {
+          "appearance": "31-year-old human Cenyri journeyman shipwright, chestnut-red slightly wavy hair cut short at sides and swept sideways, warm brown eyes, long face, clean-shaven with only short russet sideburns. Lean strong shoulders. Faded teal wool waistcoat, cream rolled-sleeve shirt, plain leather belt. Relaxed standing waist-up, one hand resting on a small wooden plane held at hip, soft closed-mouth smile. Simple home by harbor, no shipowner finery.",
+          "culture": "Cenyri · Gwynthor",
+          "portraitAge": 31,
+          "registryManagedFields": [
+            "name",
+            "title",
+            "portrait",
+            "notes"
+          ],
+          "registryManagedExtensionFields": [
+            "appearance",
+            "culture",
+            "portraitAge"
+          ]
+        }
+      },
+      {
+        "id": "llinos",
+        "worldPersonId": "person--krumme-kanne--llinos",
+        "name": "Llinos Celynfor",
+        "title": "Hausmagd der Krummen Kanne",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1719",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/krumme-kanne/portraits/llinos.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Llinos bringt in der Krummen Kanne Wasser, füllt die Lampen und hält die Schankstube sauber. Ihr freches Lächeln hat sie auch nach der Hochzeit behalten. Zuhause schimpft sie mit Spant ähnlich wie bei der Arbeit mit dem Kater.",
+        "extensions": {
+          "appearance": "Vorhandenes Porträt: kupferrote hochgesteckte Locken, grüne Augen, Sommersprossen, blaues Arbeitskleid, braune Schürze und Öllampe.",
+          "culture": "Cenyri · Gwynthor",
+          "portraitAge": 21,
+          "registryManagedFields": [
+            "name",
+            "title",
+            "portrait",
+            "notes"
+          ],
+          "registryManagedExtensionFields": [
+            "appearance",
+            "culture",
+            "portraitAge"
+          ],
+          "workplaceModuleId": "modul-1781474092957",
+          "sourcePersonId": "llinos",
+          "sourceGroup": "Die Krumme Kanne"
+        }
+      }
+    ],
+    "partnerships": [
+      {
+        "id": "marriage-celynfor",
+        "participantIds": [
+          "gwydan",
+          "llinos"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "1739",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Gemeinsamer Haushalt im Zwischen Hafen und Marktviertel von Gwynthor.",
+        "extensions": {
+          "registryManagedExtensionFields": [
+            "chartAlignParentPairOverChildPersonId",
+            "chartAlignChildGroupBelowParentPair"
+          ]
+        }
+      }
+    ],
+    "parentages": [],
+    "houses": [
+      {
+        "id": "house-celynfor",
+        "name": "Familie Celynfor",
+        "motto": "",
+        "emblem": "../AleriaAlmanach/assets/gwynthor-heime/celynfor/wappen.png",
+        "status": "active",
+        "extensions": {}
+      }
+    ],
+    "cadetBranches": [],
+    "timeJumps": [],
+    "lineage": {
+      "founderPartnershipId": "marriage-celynfor",
+      "houseId": "house-celynfor",
+      "crestSubtitle": "Zwischen Hafen und Marktviertel",
+      "crestEmblemScale": 0.86,
+      "crestFrame": "iron",
+      "crestFrameScale": 1,
+      "timeGap": {
+        "enabled": false,
+        "years": 0,
+        "fromYear": "",
+        "toYear": "",
+        "label": ""
+      },
+      "originHouse": {
+        "enabled": false,
+        "id": "lineage-origin-house",
+        "houseId": "",
+        "name": "Ursprungshaus",
+        "subtitle": "",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "childIds": [],
+        "targetFamilyId": "",
+        "notes": "",
+        "timeGap": {
+          "enabled": false,
+          "years": 0,
+          "fromYear": "",
+          "toYear": "",
+          "label": ""
+        }
+      }
+    },
+    "presentation": {
+      "relationshipColors": {
+        "marriage": "#326c4a",
+        "engagement": "#b88b37",
+        "union": "#8e2724",
+        "affair": "#704485",
+        "concubinage": "#704485",
+        "political": "#9d7d48",
+        "forced": "#c7a974",
+        "biological": "#8e2724",
+        "adoptive": "#2f75a8",
+        "foster": "#2f75a8",
+        "step": "#7eb4d7",
+        "magical": "#704485",
+        "claimed": "#62615e"
+      }
+    },
+    "view": {
+      "focusPersonId": "gwydan",
+      "orientation": "vertical",
+      "ancestorDepth": 2,
+      "descendantDepth": 2,
+      "limitGenerations": false,
+      "showSiblings": true
+    },
+    "extensions": {
+      "blankFamily": false,
+      "sourceRevision": 2,
+      "chartLayoutPolicy": "strict-v1",
+      "registryManagedExtensionFields": [
+        "chartLayoutPolicy"
+      ],
+      "sourceNote": "Drei kleine private Haushalte aus dem Nutzerauftrag vom 20.10.2026. Nur der derzeitige Familienkreis; keine erfundene ältere Dynastie. Llinos ist dieselbe Person wie die Hausmagd der Krummen Kanne und behält ihre Identität und ihr Porträt.",
+      "registryTombstones": {},
+      "registryUpgrade": {
+        "fromRevision": 1,
+        "toRevision": 2
+      }
+    }
+  }
+}

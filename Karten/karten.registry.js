@@ -402,6 +402,27 @@
       notes: "Drei lokal gelieferte Kartenebenen und 46 über Chrome erfasste Marker mit vollständigen Texten und dauerhaften World-Anvil-Quell-IDs.",
     },
     {
+      id: "aldrimar-roriksheim",
+      title: "Jarltum Roriksheim",
+      status: MAP_STATUS.ACTIVE,
+      type: MAP_TYPES.COUNTY,
+      hierarchy: [
+        { level: "kingdom", slug: "aldrimar", title: "Aldrimar" },
+        { level: "county", slug: "roriksheim", title: "Roriksheim" },
+      ],
+      folder: "Aldrimar/roriksheim",
+      config: "Aldrimar/roriksheim/template.config.js",
+      images: {
+        normal: "Aldrimar/roriksheim/Kartenbilder/normal.webp",
+        regions: "Aldrimar/roriksheim/Kartenbilder/regions.webp",
+        pins: "",
+      },
+      link: "karte.html?map=aldrimar-roriksheim",
+      dataPath: "Aldrimar/roriksheim/data.json",
+      rulingHouse: "Clan Varulv",
+      notes: "168 Marker auf den drei neuen Kartenbildern; World-Anvil-Quellkennungen, überarbeitete Ortszuordnungen und Schwarzdorn-Exklaven erhalten.",
+    },
+    {
       id: "cenyr-celtigerns-wacht-gwendolyns-ufer",
       title: "Gwendolyns Ufer",
       status: MAP_STATUS.PLANNED,

@@ -1,0 +1,9 @@
+import { ARKANEUM_ART } from './arkaneum-people.mjs';
+export const ARKANEUM_ROOMS = Object.freeze([
+  { id: 'verkaufsraum', title: 'Der Verkaufsraum · Unter dem Amethystblick', intro: 'Die Türglocke klingt zwischen dunklen Regalen. Auf dem Tresen stehen leere Glasgefäße und eine kleine Waage; hinter Glas liegen einzelne Steine. Durch die Fenster fällt das Grün des Parks. Eine Tür hinter dem Verkauf führt tiefer ins Haus.' },
+  { id: 'labor', title: 'Das Labor · Was diesmal wohl gelingt', intro: 'Über einer gemauerten Feuerstelle hängt ein breiter Abzug. Retorten, Mörser und kupferne Geräte teilen sich den schweren Arbeitstisch. Ein angefangener Ansatz wartet neben Rhydians sauber geordneten Kräutern. Für Besucher bleibt ein freies Stück Tisch.' },
+  { id: 'vorratskammer', title: 'Die Vorratskammer · Nauthagerds Ordnung', intro: 'Kräuterbündel hängen unter den Balken, trockene Vorräte stehen in Tonkrügen und Holzkästen. Leere Flaschen lagern getrennt von befüllten Gefäßen. Nauthagerds Annahmebrett lehnt an der Tür; die besonderen Ansätze stehen im verschlossenen Schrank.' },
+  { id: 'kraeutergarten', title: 'Der Hinterhof · Zwischen Blatt und Wurzel', intro: 'Hinter der niedrigen Mauer wächst, was der Laden regelmäßig braucht: Minze, Salbei, Kamille und andere gewöhnliche Kräuter. Zwischen den Beeten führt ein schmaler Weg zur Hintertür. Körbe und ein Wasserfass warten auf die nächste Hand.' },
+  { id: 'studierzimmer', title: 'Das Studierzimmer · Bücher und Widersprüche', intro: 'Unter der Dachschräge liegen Herluins Notizbücher neben Perbans Rechnungen. Zwei ungleiche Stühle stehen am Fenster. Die purpurne Kugel auf dem Seitentisch zeigt keinen klaren Blick in eine andere Welt; das offene Buch davor immerhin eine lesbare Seite.' }
+]);
+export const arkaneumSceneImage = id => `${ARKANEUM_ART}/${id}.png`;

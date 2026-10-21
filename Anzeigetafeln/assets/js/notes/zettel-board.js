@@ -35,18 +35,19 @@
     zl.innerHTML = '';
 
     const S = state();
-    (S.zettel || []).forEach(z => {
-      if(z.secret && !rt().isEditMode()) return;
+    window.TafelNoticeStacks.groups(S.zettel || [], { includeSecret: rt().isEditMode() }).forEach(group => {
+      const z = group.notices[0];
       const type = typeById(z.typ);
       const el = document.createElement('button');
-      const pinImage = pinImageFor(z.id);
+      const pinImage = pinImageFor(group.key);
       el.type = 'button';
       el.dataset.id = z.id;
       el.dataset.noticeId = z.id;
       el.dataset.noticeType = z.typ;
+      el.dataset.stackSize = String(group.notices.length);
       el.dataset.pinVariant = String(pinImage.variant);
       el.className = 'tafel-notice-marker' + (rt().canEditZettel() ? ' edit-mode' : '') + (z.secret ? ' secret' : '');
-      el.setAttribute('aria-label', `${type?.label || 'Aushang'}: ${z.title || 'Ohne Titel'}`);
+      el.setAttribute('aria-label', `${type?.label || 'Aushang'}: ${z.title || 'Ohne Titel'}${group.notices.length > 1 ? ` · ${group.notices.length} Blätter` : ''}`);
       el.style.cssText = `position:absolute;left:${z.x * size.w}px;top:${z.y * size.h}px;
         transform:translate(-50%,-50%);pointer-events:all;
         cursor:${rt().canEditZettel() ? 'grab' : 'pointer'};`;
@@ -55,7 +56,7 @@
       let downX = 0;
       let downY = 0;
       el.addEventListener('mouseenter', e => {
-        if(!rt().isEditMode()) showTooltip(z, e.clientX, e.clientY);
+        if(!rt().isEditMode()) showTooltip(z, e.clientX, e.clientY, group.notices);
       });
       el.addEventListener('mousemove', e => {
         if(!rt().isEditMode()) moveTooltip(e.clientX, e.clientY);
@@ -64,7 +65,7 @@
       el.addEventListener('focus', () => {
         if (!rt().isEditMode()) {
           const rect = el.getBoundingClientRect();
-          showTooltip(z, rect.right, rect.top + rect.height / 2);
+          showTooltip(z, rect.right, rect.top + rect.height / 2, group.notices);
         }
       });
       el.addEventListener('blur', hideTooltip);
@@ -106,15 +107,16 @@
     });
   }
 
-  function showTooltip(z, cx, cy){
-    const tdef = typeById(z.typ);
+  function showTooltip(z, cx, cy, members = [z]){
     const tt = document.getElementById('notice-tooltip');
     if(!tt) return;
-    const previewText = window.TafelZettelRichText.textPreview(z.text || '', 200);
-    tt.innerHTML = `<div class="notice-tooltip-head">
-      <span>${tdef?.icon || '📜'} ${esc(tdef?.label || 'Aushang')}</span>
-      <strong>${esc(z.title || tdef?.label || 'Aushang')}</strong>
-    </div>${previewText ? `<p>${esc(previewText)}</p>` : ''}`;
+    const entries = window.TafelNoticeStacks.publications(members, { includeSecret: rt().isEditMode() });
+    tt.innerHTML = entries.map(entry => {
+      const notice = entry.primary;
+      const tdef = typeById(notice.typ);
+      const previewText = window.TafelZettelRichText.textPreview(notice.text || '', 150);
+      return `<section class="notice-tooltip-publication"><div class="notice-tooltip-head"><span>${tdef?.icon || '📜'} ${esc(tdef?.label || 'Aushang')}</span><strong>${esc(notice.title || 'Ohne Titel')}</strong></div>${previewText ? `<p>${esc(previewText)}</p>` : ''}${entry.notices.length > 1 ? `<small>Mit ${entry.notices.length - 1} zugehörigen ${entry.notices.length === 2 ? 'Beiblatt' : 'Beiblättern'}</small>` : ''}</section>`;
+    }).join('');
     tt.style.display = 'block';
     tt.classList.add('show');
     moveTooltip(cx, cy);
@@ -152,8 +154,7 @@
       const z = S.zettel.find(x => x.id === dragId);
       if(!z || !size.w) return;
       const point = rt().boardPointFromClient(e.clientX, e.clientY);
-      z.x = Math.max(0, Math.min(1, (point.x - dragOffsetX) / size.w));
-      z.y = Math.max(0, Math.min(1, (point.y - dragOffsetY) / size.h));
+      window.TafelNoticeStacks.position(S.zettel, z.id, (point.x - dragOffsetX) / size.w, (point.y - dragOffsetY) / size.h);
       render();
     });
     boardViewport().addEventListener('mouseup', () => {

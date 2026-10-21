@@ -1,0 +1,229 @@
+{
+  "type": "aleria-module-package",
+  "version": 1,
+  "exportedAt": "2026-10-20T00:00:00Z",
+  "module": {
+    "type": "aleria-module",
+    "version": 1,
+    "section": {
+      "key": "Gwynthor-Stadt",
+      "tab": "Völker & Kulturen",
+      "path": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Bannkreis Gwynthor",
+        "Gwynthor-Stadt"
+      ],
+      "desc": "Orte und Wohnhäuser innerhalb Gwynthors."
+    },
+    "entry": {
+      "id": "heim-der-fearnan",
+      "title": "Heim der Fearnan",
+      "subtitle": "Eine albische Fischerfamilie und ihr bescheidenes Zuhause nahe den Docks.",
+      "type": "Privates Wohnhaus",
+      "category": "Gwynthor-Stadt · Hafenviertel",
+      "icon": "⌂",
+      "symbol": "./assets/gwynthor-heime/fearnan/wappen.png",
+      "image": "./assets/gwynthor-heime/fearnan/aussenansicht.png",
+      "previewImage": "./assets/gwynthor-heime/fearnan/aussenansicht.png",
+      "schemaVersion": 1,
+      "multipage": true,
+      "appendCommentsPage": false,
+      "enablePageComments": true,
+      "sessionCast": [
+        "person--haus-fearnan--eoghan",
+        "person--haus-fearnan--muireann",
+        "person--haus-fearnan--eithne",
+        "person--haus-fearnan--nessa"
+      ],
+      "pages": [
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Heim der Fearnan",
+          "commentThreadKey": "fearnan-heim",
+          "image": "./assets/gwynthor-heime/fearnan/aussenansicht.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "description": "<p>Zwischen den schmalen Gassen hinter den Docks steht das kleine Heim der Fearnan. Eoghan und Muireann kamen 1728 aus Leitheach nach Gwynthor. Ihre beiden Töchter sind hier geboren; für sie beginnt die Heimat an der Hafentreppe.</p><p>Eoghan arbeitet als Fischer von den Docks aus. Muireann führt den Haushalt, flickt Kleidung und teilt den Tagesfang so ein, dass auch morgen etwas auf den Tisch kommt. Für große Anschaffungen bleibt wenig übrig. Das niedrige Haus gehört der Familie und ist ihr einziger größerer Besitz; es ist sauber gehalten und nur mit dem Nötigsten eingerichtet.</p><p>Den fröhlichen Baum auf dem kleinen Holzzeichen über der Tür haben die Mädchen mit ausgemalt. Nessa behauptet, dass er lächelt, wenn ihr Vater heil vom Wasser zurückkommt.</p>",
+          "stats": [
+            [
+              "Ort",
+              "Gwynthor-Stadt · Hafenviertel"
+            ],
+            [
+              "Bewohner",
+              "Eoghan Fearnan (36) · Muireann (34) · Eithne Fearnan (9) · Nessa Fearnan (7)"
+            ],
+            [
+              "Lebensunterhalt",
+              "Eoghan Fearnan: Fischer an den Docks"
+            ],
+            [
+              "Haushalt",
+              "Muireann"
+            ],
+            [
+              "Wohnverhältnis",
+              "Gepachtetes privates Wohnhaus"
+            ],
+            [
+              "Hauszeichen",
+              "Ein fröhlicher Baum in mattem Grün auf braunem Holz; schlichter geschlossener Holzrand."
+            ]
+          ]
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Die Fearnan · Familienbio",
+          "commentThreadKey": "fearnan-familienbio",
+          "biographyPage": true,
+          "image": "./assets/gwynthor-heime/fearnan/familienbild.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "stats": [
+            [
+              "Familie",
+              "Eoghan Fearnan (36) · Muireann (34) · Eithne Fearnan (9) · Nessa Fearnan (7)"
+            ],
+            [
+              "Wohnort",
+              "Gwynthor-Stadt · Hafenviertel"
+            ],
+            [
+              "Gemeinsamer Haushalt",
+              "Seit 1728"
+            ]
+          ],
+          "biography": {
+            "portraitFit": "contain",
+            "biographyTitle": "Heimat an der Hafentreppe",
+            "biographyText": "<p>Eoghan und Muireann bilden mit ihren Töchtern Eithne und Nessa einen kleinen, eng verbundenen Haushalt. Der Vater bringt die Nachrichten vom Wasser mit, die Mutter hält den Tagesablauf zusammen. Eithne möchte alles richtig machen; Nessa findet auch in einem Kiesel eine wichtige Entdeckung.</p><p>Am Abend rücken vier Hocker um denselben Tisch. Wenn Eoghan spät zurückkommt, wartet Muireann mit dem Essen, während die Mädchen am Fenster nach ihm Ausschau halten. Der fröhliche Baum an der Tür gehört zu ihren wenigen gemeinsamen Verschönerungen.</p>",
+            "abilitiesTitle": "Persönlichkeit der Familie",
+            "abilities": [
+              {
+                "title": "Zusammenhalt",
+                "detail": "Was einer vom Tag mitbringt, wird am Familientisch geteilt. Eithne passt auf Nessa auf; Muireann merkt schnell, wenn Eoghan seine Sorgen verschweigt.",
+                "icon": "../IconOrdner/Cktraits/Trait_family_first.png"
+              },
+              {
+                "title": "Genügsamkeit",
+                "detail": "Geflickte Kleidung, gebrauchte Möbel und einfaches Essen gehören zum Alltag. Für eine Anschaffung muss zuerst ein wirklicher Bedarf bestehen.",
+                "icon": "../IconOrdner/Big Traits/Trait_content.png"
+              },
+              {
+                "title": "Geduld",
+                "detail": "Netze werden Masche für Masche geflickt, Vorräte sorgfältig eingeteilt und Kinderfragen meist bis zum Ende angehört.",
+                "icon": "../IconOrdner/Big Traits/Trait_patient.png"
+              },
+              {
+                "title": "Fleiß",
+                "detail": "Eoghans Arbeit auf dem Wasser und Muireanns Haushaltsführung greifen ineinander. Kleine Reparaturen werden erledigt, bevor aus ihnen große Ausgaben werden.",
+                "icon": "../IconOrdner/Big Traits/Trait_diligent.png"
+              },
+              {
+                "title": "Offenheit im Viertel",
+                "detail": "Eoghan kommt mit anderen Hafenleuten leicht ins Gespräch. Seine Töchter wachsen mit den Booten, Rufen und vertrauten Gesichtern der Docks auf.",
+                "icon": "../IconOrdner/Big Traits/Trait_trusting.png"
+              }
+            ],
+            "historyTitle": "Aufbau & Hintergrund",
+            "historyText": "<p>Eoghan und Muireann kamen 1728 aus Leitheach nach Gwynthor und richteten sich im Hafenviertel ein. Hier wuchsen Arbeit, Ehe und Zuhause allmählich zusammen. Ihre Töchter wurden bereits in Gwynthor geboren und kennen die alte Heimat vor allem aus den Erzählungen der Eltern.</p><p>Der Familienkreis besteht aus den vier Bewohnern dieses Hauses. Ihr Name hat im Viertel vor allem mit Eoghans Arbeit und Muireanns verlässlichem Haushalt zu tun. Der Baum auf dem Holzzeichen macht ihre Tür auch für jemanden erkennbar, der die Fearnan erst einmal besucht hat.</p>",
+            "worksTitle": "Im Alltag",
+            "works": [
+              "Vier Personen leben von Fischerei und sorgfältiger Haushaltsführung.",
+              "Das bescheidene Haus liegt im Hafenviertel, nahe Eoghans Arbeitswegen."
+            ],
+            "extraSections": [
+              {
+                "position": "afterWorks",
+                "mode": "text",
+                "title": "Lebensunterhalt & Wirtschaftlichkeit",
+                "text": "<p>Eoghans Fischerei trägt den Lebensunterhalt. Wie viel davon übrig bleibt, hängt von Fang, Wetter und den notwendigen Arbeitsausgaben ab. Reparaturen an Netzen und Kleidung lassen sich aufschieben, bis sie dringend werden; Muireann versucht, genau das zu vermeiden.</p><p>Das kleine Haus ist ihr Eigentum und der einzige größere Besitz. Essen, Abgaben, Brennstoff und gewöhnlicher Hausrat haben Vorrang. Ein Kredit eines örtlichen Geld- und Pfandverleihers half ihnen über eine knappe Zeit; sie trugen die Raten regelmäßig ab und legten die letzte Tilgung zusammen mit einer kleinen Rücklage zurück. Nach einem Einbruch fehlt die Schatulle mit diesem Geld. Der Verleiher bietet ihnen nun neue Bedingungen gegen den Verkauf des Hauses an, in dem sie anschließend zur Miete wohnen dürften. Bevor sie zustimmen, bitten sie um Nachforschungen.</p>"
+              }
+            ],
+            "triviaTitle": "Kleine Gewohnheiten",
+            "trivia": [
+              "Eithne ist die ältere, Nessa die jüngere der beiden Töchter.",
+              "Beide Mädchen haben am fröhlichen Baum des Türzeichens mitgemalt."
+            ],
+            "quotesTitle": "Am Familientisch",
+            "quotes": [
+              "„Erst sehen, ob alle da sind. Dann sehen wir nach dem Rest.“ — Muireann"
+            ],
+            "connectionsTitle": "Verbindungen & Kontakte",
+            "connections": [
+              {
+                "type": "connection",
+                "name": "Fischer und Hafenleute an den Docks",
+                "detail": "Eoghans tägliches Arbeitsumfeld: andere Fischer, bekannte Anlandestellen und die Menschen, die den Fang übernehmen.",
+                "image": "./assets/gwynthor-heime/fearnan/eoghan.png",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "name": "Leitheach",
+                "detail": "Die alte Heimat beider Eltern. Ihre Erzählungen halten diese Verbindung auch für Eithne und Nessa lebendig.",
+                "image": "",
+                "imageFormat": "square"
+              },
+              {
+                "type": "connection",
+                "name": "Die rote Klaue · Lucan und Camilla Valerus",
+                "detail": "Geldgeber der Familie. Nach dem Diebstahl der Kreditrate und der Ersparnisse bieten die Zwillinge Schuldverrechnung gegen Hausverkauf und anschließende Miete an. Die Familie lässt die Umstände prüfen; eine Beteiligung am Diebstahl ist nicht bewiesen.",
+                "image": "./assets/rote-klaue/portraits/lucan.png",
+                "imageFormat": "portrait"
+              }
+            ],
+            "documentsTitle": "Familienakte",
+            "documents": [
+              {
+                "title": "Familie Fearnan",
+                "icon": "./assets/gwynthor-heime/fearnan/wappen.png",
+                "text": "Der gemeinsame Haushalt und seine Verwandtschaft im kleinen Stammbaum.",
+                "link": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-fearnan&mode=view"
+              }
+            ]
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Familie Fearnan",
+          "commentThreadKey": "fearnan-familie",
+          "familyTreePage": true,
+          "familyTree": {
+            "familyId": "haus-fearnan",
+            "source": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-fearnan&mode=view",
+            "title": "Familie Fearnan · Ein kleiner Haushalt",
+            "height": 640,
+            "intro": "Eoghan Fearnan, 36 Jahre, fischer an den docks · Muireann, 34 Jahre, hausfrau · Eithne Fearnan, 9 Jahre, ältere tochter · Nessa Fearnan, 7 Jahre, jüngere tochter."
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Die Wohnstube",
+          "commentThreadKey": "fearnan-wohnstube",
+          "image": "./assets/gwynthor-heime/fearnan/wohnstube.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Eine niedrige Wohnstube mit kleinem Herd, grobem Tisch, vier ungleichen Hockern und einer einzigen Truhe. Zwei schmale Schlafnischen liegen hinter Leinentüchern; die Mädchen teilen ihre. Am Haken trocknen Eoghans Mantel und geflickte Netze. Durch das kleine Fenster hört man die Rufe von den Docks.</p>",
+          "sessionHint": "Ein Besuch bei einer Gwynthorer Familie.",
+          "sessionEmptyTitle": "Ein gewöhnlicher Tag zu Hause",
+          "sessionEmptyText": "Ein Klopfen an der Tür, ein Gespräch am Herd oder eine Nachricht aus dem Viertel.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        }
+      ]
+    }
+  }
+}

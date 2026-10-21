@@ -62,11 +62,11 @@ test('bank is led by Ergalla and county command by Falveri; Aldo is former only'
 });
 
 test('existing operating members retain their identities; suppliers and debtors are not promoted', () => {
-  assert.deepEqual(OPERATING_MEMBERS.map(m => m.person.name), ['Finlay Cneacail', 'Bleddyn Gwregysdu', 'Albrecht Sonnenfels']);
-  assert.equal(new Set(OPERATING_MEMBERS.map(m => m.person.worldPersonId)).size, 3);
+  assert.deepEqual(OPERATING_MEMBERS.map(m => m.person.name), ['Lucan Valerus', 'Finlay Cneacail', 'Bleddyn Gwregysdu', 'Albrecht Sonnenfels']);
+  assert.equal(new Set(OPERATING_MEMBERS.map(m => m.person.worldPersonId)).size, 4);
   assert.ok(!OPERATING_MEMBERS.some(m => /Alasdair|Helviane|Brenn/.test(m.person.name)));
   for (const hierarchy of post.pages.filter(p => p.hierarchyPage).slice(0, 2).map(p => p.hierarchy)) {
-    for (const member of OPERATING_MEMBERS) assert.ok(nodes(hierarchy).some(n => n.title === member.person.name && n.worldPersonId === member.person.worldPersonId));
+    for (const member of OPERATING_MEMBERS) for (const person of member.owners || [member.person]) assert.ok(nodes(hierarchy).some(n => n.title === person.name && n.worldPersonId === person.worldPersonId));
   }
 });
 
@@ -77,16 +77,16 @@ test('archive relocation preserves original objects and thread keys and is repea
   const script = await readFile(new URL('AleriaAlmanach/modules/klingende-muenze-gwynthor/post-data.js', root), 'utf8');
   vm.runInContext(script, context); vm.runInContext(script, context);
   const target = context.SECTIONS.find(s => s.path.at(-1) === POST_SECTION.key);
-  assert.equal(target.entries.length, 5);
+  assert.equal(target.entries.length, 2 + AFFILIATED_ENTRY_IDS.length);
   for (const entry of existing) assert.equal(target.entries.find(e => e.id === entry.id), entry);
   assert.equal(context.SECTIONS[0].entries[0], rival);
-  assert.equal(context.SECTIONS.flatMap(s => s.entries).length, 6);
+  assert.equal(context.SECTIONS.flatMap(s => s.entries).length, 3 + AFFILIATED_ENTRY_IDS.length);
   for (const id of [POST_ID, FACTIONS_ID, ...AFFILIATED_ENTRY_IDS]) assert.equal(context.SECTIONS.flatMap(s => s.entries).filter(e => e.id === id).length, 1);
 });
 
 test('entry registration runs after member scripts and sources share one archive destination', async () => {
   const html = await readFile(new URL('AleriaAlmanach/AleriaAlmanach.html', root), 'utf8');
-  for (const path of ['gwregysdu-harbor/harbor-data', 'klingende-krone/krone-data', 'lachende-nixe/nixe-data']) assert.ok(html.indexOf(path) < html.indexOf('klingende-muenze-gwynthor/post-data'));
+  for (const path of ['gwregysdu-harbor/harbor-data', 'klingende-krone/krone-data', 'lachende-nixe/nixe-data', 'rote-klaue/klaue-data']) assert.ok(html.indexOf(path) < html.indexOf('klingende-muenze-gwynthor/post-data'));
   const { KRONE_SECTION } = await import('../modules/klingende-krone/krone-module.mjs');
   const { HARBOR_SECTION } = await import('../modules/gwregysdu-harbor/harbor-module.mjs');
   assert.equal(KRONE_SECTION, POST_SECTION); assert.equal(HARBOR_SECTION, POST_SECTION);

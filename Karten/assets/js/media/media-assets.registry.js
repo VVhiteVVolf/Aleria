@@ -1417,6 +1417,14 @@ window.KARTO_MEDIA_ASSETS = Object.freeze([
     "source": "Hauswappen"
   },
   {
+    "id": "9dc4038d696fbe",
+    "name": "Lothaire",
+    "url": "/Stammbäume/assets/images/houses/Brevanor/Lothaire.png",
+    "kind": "crest",
+    "group": "Brevanor",
+    "source": "Hauswappen"
+  },
+  {
     "id": "baf860f6a21119",
     "name": "haus garrael",
     "url": "/Stammbäume/assets/images/houses/Camruisge/haus-garrael.png",
@@ -4068,6 +4076,14 @@ window.KARTO_MEDIA_ASSETS = Object.freeze([
     "id": "f1a8585bc63781",
     "name": "haus falveri",
     "url": "/Stammbäume/assets/images/houses/Venalys/haus-falveri.png",
+    "kind": "crest",
+    "group": "Venalys",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "32f489072c2128",
+    "name": "haus valerus",
+    "url": "/Stammbäume/assets/images/houses/Venalys/haus-valerus.png",
     "kind": "crest",
     "group": "Venalys",
     "source": "Hauswappen"

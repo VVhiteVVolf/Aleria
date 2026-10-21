@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-20",
+  "tool": "built-in image_gen",
+  "preset": "anime-scene-portrait",
+  "promptSet": "AleriaAlmanach/assets/herluin-lothaire/cast/staff-prompts.json",
+  "castPlan": "AleriaAlmanach/assets/herluin-lothaire/cast/cast-plan.json",
+  "moduleCreated": false,
+  "pushed": false,
+  "deployed": false,
+  "images": [
+    {
+      "id": "saithen",
+      "name": "Saithen",
+      "destination": "AleriaAlmanach/assets/herluin-lothaire/cast/portraits/saithen.png",
+      "original": "C:/Users/fhg_r/.codex/generated_images/01a1464a-a20b-7c00-a9de-c0b8c10e3b32/exec-84ecdb16-61ae-47da-8812-a5ce4776ca0c.png",
+      "originalRetained": true,
+      "width": 1024,
+      "height": 1536,
+      "sha256": "1d8b6b2ee152b1b69d0fdab98441f89e29400ca11cd9697ca8ab9099143e0174",
+      "generatedPixelsPreserved": true,
+      "visualReview": {
+        "completed": true,
+        "singleHumanCharacter": true,
+        "ordinaryNonmagicalStaff": true,
+        "distinctivePoseAndClothing": true,
+        "requiredTraitsPresent": true,
+        "notes": "Youthful brown-haired boy with brown eyes, cheerful expression, parcel and shoulder bag."
+      }
+    },
+    {
+      "id": "neddric",
+      "name": "Neddric",
+      "destination": "AleriaAlmanach/assets/herluin-lothaire/cast/portraits/neddric.png",
+      "original": "C:/Users/fhg_r/.codex/generated_images/01a1464a-a20b-7c00-a9de-c0b8c10e3b32/exec-5ae4d9b6-c6a7-49a6-95e9-6e39f8e46083.png",
+      "originalRetained": true,
+      "width": 1024,
+      "height": 1536,
+      "sha256": "77766962fd61ee3cd3838aa8fcf93656663d271b53e030eda8bb8f7aa714ba60",
+      "generatedPixelsPreserved": true,
+      "visualReview": {
+        "completed": true,
+        "singleHumanCharacter": true,
+        "ordinaryNonmagicalStaff": true,
+        "distinctivePoseAndClothing": true,
+        "requiredTraitsPresent": true,
+        "notes": "Older brown-haired brother, calmer expression, different haircut and clothing; carries a small crate with three empty bottles."
+      }
+    },
+    {
+      "id": "jeradis",
+      "name": "Jeradis",
+      "destination": "AleriaAlmanach/assets/herluin-lothaire/cast/portraits/jeradis.png",
+      "original": "C:/Users/fhg_r/.codex/generated_images/01a1464a-a20b-7c00-a9de-c0b8c10e3b32/exec-718df528-70d7-4f4d-9ca8-0450e54a9da9.png",
+      "originalRetained": true,
+      "width": 1024,
+      "height": 1536,
+      "sha256": "b4c132ec13bece6d879ab74152b9df6e95715da46efe86d0c0372227fa90d944",
+      "generatedPixelsPreserved": true,
+      "visualReview": {
+        "completed": true,
+        "singleHumanCharacter": true,
+        "ordinaryNonmagicalStaff": true,
+        "distinctivePoseAndClothing": true,
+        "requiredTraitsPresent": true,
+        "notes": "Adult blond curly-haired freckled maid, full bust, working dress and apron, bucket and cleaning cloth."
+      }
+    },
+    {
+      "id": "nauthagerd",
+      "name": "Nauthagerd",
+      "destination": "AleriaAlmanach/assets/herluin-lothaire/cast/portraits/nauthagerd.png",
+      "original": "C:/Users/fhg_r/.codex/generated_images/01a1464a-a20b-7c00-a9de-c0b8c10e3b32/exec-02a092c2-b326-4b27-afa6-97768426a319.png",
+      "originalRetained": true,
+      "width": 1024,
+      "height": 1536,
+      "sha256": "a77bd703ac1805635f042b9798e13bef29c282b0e51eb59e8679d9d86aed4108",
+      "generatedPixelsPreserved": true,
+      "visualReview": {
+        "completed": true,
+        "singleHumanCharacter": true,
+        "ordinaryNonmagicalStaff": true,
+        "distinctivePoseAndClothing": true,
+        "requiredTraitsPresent": true,
+        "notes": "Strongly built mature blond woman, blue eyes, braided hair, family likeness to Torvald; tally board and keys."
+      }
+    },
+    {
+      "id": "perban",
+      "name": "Perban",
+      "destination": "AleriaAlmanach/assets/herluin-lothaire/cast/portraits/perban.png",
+      "original": "C:/Users/fhg_r/.codex/generated_images/01a1464a-a20b-7c00-a9de-c0b8c10e3b32/exec-a1400769-7712-4266-a35e-a79ec338b1d8.png",
+      "originalRetained": true,
+      "width": 1024,
+      "height": 1536,
+      "sha256": "b41dea5f82146357db979094837884fb3b28a092326ca0b15f616ba652e8f5ab",
+      "generatedPixelsPreserved": true,
+      "visualReview": {
+        "completed": true,
+        "singleHumanCharacter": true,
+        "ordinaryNonmagicalStaff": true,
+        "distinctivePoseAndClothing": true,
+        "requiredTraitsPresent": true,
+        "notes": "Thin older balding man, gray hair fringe, stern gaze; open account book and quill."
+      }
+    }
+  ],
+  "verification": {
+    "previousPortraitsUnchanged": 5,
+    "siblingConnectionsPreserved": true,
+    "fiveNewNamesUnusedInCheckedLocalSources": true,
+    "fiveShopNameProposalsUnusedInCheckedLocalSources": true
+  }
+}

@@ -103,7 +103,7 @@
     translateX = wrap.clientWidth / 2 - notice.x * width * zoom;
     translateY = wrap.clientHeight / 2 - notice.y * height * zoom;
     applyTransform();
-    const marker = document.querySelector(`[data-notice-id="${CSS.escape(notice.id)}"]`);
+    const marker = document.querySelector(`#zettel-layer .tafel-notice-marker[data-notice-id="${CSS.escape(notice.id)}"]`);
     marker?.classList.add('is-highlighted');
     window.setTimeout(() => marker?.classList.remove('is-highlighted'), 900);
   }

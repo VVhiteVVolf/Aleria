@@ -1,0 +1,39 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-10-21T00:00:00Z",
+  "assignedTab": "Schwarze Zitteraale",
+  "character": {
+    "id": "zitteraale-donnerkiefer",
+    "name": "Donnerkiefer",
+    "aliases": [],
+    "title": "Innerer Kreis · Waffen und Rudeldisziplin",
+    "fraktion": "Schwarze Zitteraale",
+    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/donnerkiefer.png",
+    "bio": "Ein ehemaliger Kriegsknecht, der nach Jahren wechselnder Dienste bei den Zitteraalen blieb. Er ordnet das erbeutete Gerät und übt mit den Komplizen, bis aus einem Überfall ein eingeübter Griff wird.\n\nDiszipliniert, nachtragend und stolz auf seine Härte. Hält Furcht für eine zuverlässigere Bindung als Freundschaft.\n\nÜberwacht Waffen und Wachen, setzt Befehle im Lager durch und übernimmt die Nachhut bei Rückzügen. Sein Beiname meint die donnernde Stimme hinter dem vernarbten Kiefer.",
+    "status": "Gesucht",
+    "createdAt": "2026-10-21T00:00:00Z",
+    "updatedAt": "2026-10-21T00:00:00Z",
+    "archived": false,
+    "genealogy": {
+      "sex": "male",
+      "birth": "1697",
+      "status": "alive",
+      "relationships": {
+        "parents": [],
+        "partners": [],
+        "children": []
+      }
+    },
+    "imageSets": [
+      {
+        "id": "standard",
+        "name": "Standard",
+        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/donnerkiefer.png",
+        "emotes": []
+      }
+    ],
+    "activeImageSetId": "standard",
+    "imageSetSchemaVersion": 1
+  }
+}

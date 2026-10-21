@@ -1,0 +1,44 @@
+/* Reader owns bounded text and the navigation of independently stored sheets. */
+.notice-text-window { min-width: 0; }
+.notice-scroll-copy { max-height: var(--notice-text-height, min(420px, 60dvh)); overflow-y: auto; overflow-x: hidden; scrollbar-gutter: stable; padding-right: .65rem; overflow-wrap: anywhere; }
+.notice-scroll-copy:focus-visible { outline: 1px solid #9d7a3f; outline-offset: 4px; }
+.notice-scroll-copy::-webkit-scrollbar { width: 8px; }
+.notice-scroll-copy::-webkit-scrollbar-track { background: #a7864e2d; border-radius: 5px; }
+.notice-scroll-copy::-webkit-scrollbar-thumb { background: #82602f; border: 1px solid #e0ceac; border-radius: 5px; }
+.notice-text-scroll-hint { display: none; margin-top: .35rem; color: #77603f; font: italic .83rem/1.4 Georgia, serif; text-align: right; }
+.notice-text-window.is-overflowing .notice-text-scroll-hint { display: block; }
+.quest-layout { align-items: start; }
+.quest-copy { min-width: 0; }
+.quest-copy > .notice-signature { margin-top: .75rem; }
+.notice-stack-nav { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: .5rem; align-items: center; flex-shrink: 0; padding: .7rem 3.4rem .7rem 1rem; background: #ded0ae; border-bottom: 1px solid #ad935f; }
+.notice-stack-nav[hidden] { display: none; }
+.notice-stack-nav button { cursor: pointer; border: 1px solid #b0986c; color: #493920; background: #f2e6c9; padding: .45rem .7rem; font: .8rem/1.3 Georgia, serif; }
+.notice-stack-nav button:disabled { opacity: .4; cursor: default; }
+.notice-stack-select { min-width: 0; display: grid; gap: .2rem; }
+.notice-stack-select > span { font: .65rem/1.2 'Cinzel', serif; color: #6d5733; letter-spacing: .07em; }
+.notice-stack-select select { width: 100%; min-width: 0; padding: .35rem; border: 1px solid #b59d74; background: #f6ecd5; color: #382d1e; font: 1rem/1.2 'EB Garamond', Georgia, serif; }
+.scroll-card.is-stacked { box-shadow: 4px 5px 0 #c3ae81, 7px 8px 0 #785e36, 10px 11px 0 #e2cda1, 0 28px 100px #000a; }
+.notice-tooltip-publication + .notice-tooltip-publication { margin-top: .7rem; padding-top: .7rem; border-top: 1px solid #b49a69; }
+.notice-tooltip-publication small { font: italic .85rem/1.4 Georgia, serif; }
+.notice-tooltip { max-height: min(70dvh, 620px); overflow-y: auto; }
+.notice-publications { display: flex; flex-wrap: wrap; gap: .35rem; padding: .65rem 3.4rem .65rem .8rem; background: #d6c39e; border-bottom: 1px solid #ad935f; }
+.notice-publications button { flex: 1 1 190px; cursor: pointer; padding: .5rem .7rem; border: 1px solid #ad935f; background: #ede0c0; color: #493920; text-align: left; font: .9rem/1.3 Georgia, serif; }
+.notice-publications button[aria-pressed="true"] { background: #f9efd8; border-color: #76562b; box-shadow: inset 0 -2px #76562b; }
+.notice-publications[hidden] { display: none; }
+.notice-stack-publication { border-left: 2px solid #af9468; padding-left: .6rem; margin-block: .8rem; }
+.notice-stack-publication > strong { font: .9rem/1.4 Georgia, serif; }
+.notice-stack-editor, .notice-reward-editor { margin-block: .8rem; border-block: 1px solid #c5b58d; padding-block: .7rem; }
+.notice-stack-editor summary, .notice-reward-editor summary { cursor: pointer; font: 600 .8rem/1.5 'Cinzel', serif; color: #655031; }
+.notice-stack-editor p, .notice-reward-editor p { margin-block: .5rem; font: .92rem/1.4 Georgia, serif; color: #6b5d43; }
+.notice-stack-editor ul { list-style: none; padding: 0; margin-block: .5rem; }
+.notice-stack-editor li { display: flex; align-items: center; gap: .35rem; padding: .4rem; border-bottom: 1px solid #cabb973f; }
+.notice-stack-editor li > button:first-child { flex: 1; text-align: left; }
+.notice-stack-editor li.is-current { background: #d7c49455; }
+.notice-stack-controls { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: .55rem; }
+.notice-stack-controls select { flex: 1 1 180px; min-width: 0; }
+@media (max-width: 600px) {
+  .notice-stack-nav { padding-left: .5rem; gap: .3rem; }
+  .notice-stack-nav > button { padding: .4rem; }
+  .notice-stack-nav > button span { display: none; }
+  .notice-scroll-copy { max-height: var(--notice-text-height, 48dvh); }
+}

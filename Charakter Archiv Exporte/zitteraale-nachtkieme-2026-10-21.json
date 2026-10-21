@@ -1,0 +1,39 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-10-21T00:00:00Z",
+  "assignedTab": "Schwarze Zitteraale",
+  "character": {
+    "id": "zitteraale-nachtkieme",
+    "name": "Nachtkieme",
+    "aliases": [],
+    "title": "Linke Hand · Kundschaft und Verbindungen",
+    "fraktion": "Schwarze Zitteraale",
+    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/nachtkieme.png",
+    "bio": "Sie kannte die Straßen der Grafschaft bereits, bevor die Bande ihre Wege nutzte. Aus kleinen Botengängen wurden bezahlte Hinweise und schließlich die Planung von Hinterhalten. Niemand in der Bande verwendet einen anderen Namen für sie.\n\nAufmerksam, misstrauisch und wortkarg. Merkt sich Stimmen und kleine Unstimmigkeiten; antwortet selten auf die eigentliche Frage.\n\nBeobachtet Reisegewohnheiten, stellt Kontakte zu Abnehmern her und prüft fremde Nachrichten. Nur wenige erfahren von ihr mehr als ihren nächsten Treffpunkt.",
+    "status": "Gesucht",
+    "createdAt": "2026-10-21T00:00:00Z",
+    "updatedAt": "2026-10-21T00:00:00Z",
+    "archived": false,
+    "genealogy": {
+      "sex": "female",
+      "birth": "1703",
+      "status": "alive",
+      "relationships": {
+        "parents": [],
+        "partners": [],
+        "children": []
+      }
+    },
+    "imageSets": [
+      {
+        "id": "standard",
+        "name": "Standard",
+        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/nachtkieme.png",
+        "emotes": []
+      }
+    ],
+    "activeImageSetId": "standard",
+    "imageSetSchemaVersion": 1
+  }
+}

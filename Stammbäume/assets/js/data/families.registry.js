@@ -49,6 +49,9 @@ import { HOUSE_RHWYD_FAMILY } from './house-rhwyd-family.js';
 import { HOUSE_PENRUDD_FAMILY } from './house-penrudd-family.js';
 import { HOUSE_GWREGYSDU_FAMILY } from './house-gwregysdu-family.js';
 import { HOUSE_BIELLE_FAMILY, HOUSE_DESELE_FAMILY } from './brevanor-desele-bielle-records.js';
+import { HOUSE_LOTHAIRE_FAMILY } from './house-lothaire-family.js';
+import { HOUSE_VALERUS_FAMILY } from './house-valerus-family.js';
+import { GWYNTHOR_SMALL_HOUSEHOLD_FAMILIES } from './gwynthor-small-households.js';
 import { SEPT_CNEACAIL_FAMILY } from './sept-cneacail-family.js';
 import { LLYSFAEN_COMMONER_HOUSE_FAMILIES } from './llysfaen-commoner-house-families.js';
 import { RHONWENS_TRAENEN_HOUSE_FAMILIES } from './rhonwens-traenen-house-families.js';
@@ -380,6 +383,9 @@ export const FAMILY_REGISTRY = Object.freeze([
   familyRecord({ id: 'sept-cneacail', title: 'Sept Cneacail', family: SEPT_CNEACAIL_FAMILY, type: 'commoner' }),
   familyRecord({ id: 'haus-bielle', title: 'Haus Bielle', family: HOUSE_BIELLE_FAMILY }),
   familyRecord({ id: 'haus-desele', title: 'Haus Desele', family: HOUSE_DESELE_FAMILY, type: 'commoner' }),
+  familyRecord({ id: 'haus-lothaire', title: 'Haus Lothaire', family: HOUSE_LOTHAIRE_FAMILY, type: 'commoner' }),
+  familyRecord({ id: 'haus-valerus', title: 'Haus Valerus', family: HOUSE_VALERUS_FAMILY, type: 'commoner' }),
+  ...GWYNTHOR_SMALL_HOUSEHOLD_FAMILIES.map(family => familyRecord({ id: family.document.id, title: family.document.title, family, type: 'commoner' })),
   familyRecord({
     id: 'haus-bradrhith',
     title: 'Haus Bradrhith',

@@ -1,13 +1,6 @@
 import { OFFICE_GROUPS, HOUSEHOLD_SERVICE } from './offices-data.mjs';
 import { courtPage, escapeHtml, paragraphs } from './court-template.mjs';
-
-function officeCard(office) {
-  return `<article class="court-office" id="${office.id}" data-court-office>
-    ${office.category ? `<p class="court-label">${escapeHtml(office.category)}</p>` : ''}
-    <h3><a href="#${office.id}">${escapeHtml(office.title)}</a></h3>
-    ${paragraphs(office.description)}
-  </article>`;
-}
+import { officeCard } from '../kingdom-court/office-directory.mjs';
 
 export function renderOfficesPage() {
   const count = OFFICE_GROUPS.reduce((total, group) => total + group.offices.length, 0);

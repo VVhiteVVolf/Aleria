@@ -7,6 +7,7 @@ const BLEIDDORN_HOUSE_ID = 'house-bleiddorn';
 const WOLFSHORN_HOUSE_ID = 'house-wolfshorn';
 const BLEIDDORN_EMBLEM = 'assets/images/houses/Llamreis Ankunft/haus-bleiddorn.png';
 const FOUNDER_PARTNERSHIP_ID = 'marriage-hrolf-liv';
+const BLEIDDORN_SOURCE_REVISION = 2;
 
 export const BLEIDDORN_MIGRANT_PERSON_IDS = Object.freeze([
   'hrolf-wolfshorn',
@@ -19,6 +20,15 @@ export const BLEIDDORN_MIGRANT_PERSON_IDS = Object.freeze([
 const BLEIDDORN_CHILD_IDS = Object.freeze(['ylva-wolfshorn', 'asgeir-wolfshorn']);
 const wolfshornSource = createMigrationHouseSource(HOUSE_WOLFSHORN_FAMILY);
 const wolfshornHouse = wolfshornSource.house(WOLFSHORN_HOUSE_ID);
+
+// Die Teilakte besitzt ihre eigene Revision; die Herkunftsrevision darf hier
+// keine spaeteren lokalen Notizen wiederholt ueberschreiben.
+function exilePerson(id, options) {
+  const migrant = wolfshornSource.person(id, options);
+  return { ...migrant, extensions: { ...migrant.extensions,
+    registryManagedFieldRevisions: { ...migrant.extensions?.registryManagedFieldRevisions, notes: BLEIDDORN_SOURCE_REVISION }
+  } };
+}
 
 export const HOUSE_BLEIDDORN_FAMILY = Object.freeze({
   schema: 'aleria.family-tree',
@@ -42,31 +52,31 @@ export const HOUSE_BLEIDDORN_FAMILY = Object.freeze({
     }
   ],
   persons: [
-    wolfshornSource.person('hrolf-wolfshorn', {
+    exilePerson('hrolf-wolfshorn', {
       houseId: BLEIDDORN_HOUSE_ID,
       familyRole: 'core',
       lineageRole: 'head',
       title: 'Oberherr und Gründer',
-      notes: 'Hrolf verließ Aldrimar und gründete in Gwynthor das Ritterherrenhaus Bleiddorn. In der Herkunftsakte bleibt er zugleich als Wolfshorn verzeichnet.'
+      notes: 'Hrolf wurde mit seinen beiden ältesten Kindern Ylva und Asgeir sowie seinem Bruder Halvar aus Aldrimar ins Exil geschickt. Hornhall ging an seinen Bruder Bjoern. In Gwynthor gründete Hrolf das Ritterherrenhaus Bleiddorn; in der Herkunftsakte bleibt er als Wolfshorn verzeichnet.'
     }),
     wolfshornSource.person('liv', {
       familyRole: 'married',
       lineageRole: 'branch'
     }),
-    wolfshornSource.person('halvar-wolfshorn', {
+    exilePerson('halvar-wolfshorn', {
       houseId: BLEIDDORN_HOUSE_ID,
       familyRole: 'core',
       lineageRole: 'branch',
       title: 'Jüngster Bruder Hrolfs',
-      notes: 'Halvar folgte seinem Bruder Hrolf aus Aldrimar nach Cenyr.'
+      notes: 'Halvar wurde gemeinsam mit seinem Bruder Hrolf und dessen beiden ältesten Kindern Ylva und Asgeir ins Exil geschickt und zog mit ihnen nach Cenyr.'
     }),
-    wolfshornSource.person('ylva-wolfshorn', {
+    exilePerson('ylva-wolfshorn', {
       houseId: BLEIDDORN_HOUSE_ID,
       familyRole: 'core',
       lineageRole: 'mainline',
       title: 'Erstgeborene Tochter Hrolfs'
     }),
-    wolfshornSource.person('asgeir-wolfshorn', {
+    exilePerson('asgeir-wolfshorn', {
       houseId: BLEIDDORN_HOUSE_ID,
       familyRole: 'core',
       lineageRole: 'mainline',
@@ -99,7 +109,7 @@ export const HOUSE_BLEIDDORN_FAMILY = Object.freeze({
       frameScale: 1,
       childIds: ['hrolf-wolfshorn', 'halvar-wolfshorn'],
       targetFamilyId: 'haus-wolfshorn',
-      notes: 'Nur Hrolf mit seiner Frau Liv, sein Bruder Halvar sowie Hrolfs Kinder Ylva und Asgeir werden in dieser Auswanderungsakte gezeigt. Die vollständige Herkunftslinie bleibt in Clan Wolfshorn erhalten.'
+      notes: 'Die Exilgruppe besteht aus Hrolf, seinem Bruder Halvar sowie Hrolfs beiden ältesten Kindern Ylva und Asgeir. Liv wird als Mutter der Kinder und frühere Ehefrau in der Abstammung gezeigt; sie gehört nicht zur Exilgruppe. Die vollständige Herkunftslinie und Bjoerns Nachfolge in Hornhall bleiben in Clan Wolfshorn erhalten.'
     }
   },
   presentation: { relationshipColors: { ...DEFAULT_RELATIONSHIP_COLORS } },
@@ -113,7 +123,7 @@ export const HOUSE_BLEIDDORN_FAMILY = Object.freeze({
   },
   extensions: {
     blankFamily: false,
-    sourceRevision: 1,
+    sourceRevision: BLEIDDORN_SOURCE_REVISION,
     sourceNote: 'Bewusste Auswanderungs-Teilakte des Clan Wolfshorn: Die fünf ausgewählten Personen, Hrolfs Ehe und die Abstammungen von Ylva und Asgeir verwenden dieselben stabilen IDs und Weltidentitäten wie die unverändert fortbestehende Herkunftsakte. Andere Wolfshorn werden nicht nach Bleiddorn übernommen.'
   }
 });

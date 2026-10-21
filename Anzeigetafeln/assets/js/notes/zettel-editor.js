@@ -121,10 +121,11 @@
     const brd = window.ZETTEL_BORDER[z.typ] || '#c8a040';
     const tblRows = (z.table || []).map((r, i) => {
       const isSt = r.type === 'stars';
+      const rewardManaged = Array.isArray(z.rewards) && /^(belohnung|kopfgeld|entlohnung|preisgeld)$/i.test(r.k);
       const sv = parseInt(r.v, 10) || 0;
       const valEl = isSt
         ? `<div class="star-pick" id="gsp-${i}">${[1,2,3,4,5].map(n => `<span class="${n <= sv ? 'on' : ''}" data-action="zettel-star-set" data-mouseover-action="zettel-star-hover" data-mouseout-action="zettel-star-out" data-row-index="${i}" data-value="${n}">${n <= sv ? '\u2605' : '\u2606'}</span>`).join('')}</div>`
-        : `<input class="tv" value="${esc(r.v)}" placeholder="Wert\u2026" data-input-action="zettel-table-value" data-row-index="${i}"/>`;
+        : `<input class="tv" value="${esc(r.v)}" placeholder="Wert\u2026" ${rewardManaged ? 'readonly title="Über Geld & Gegenstände als Belohnung ändern"' : ''} data-input-action="zettel-table-value" data-row-index="${i}"/>`;
       return `<div class="tbl-row">
     <input class="tk" value="${esc(r.k)}" placeholder="Feld\u2026" data-input-action="zettel-table-key" data-row-index="${i}"/>
     ${valEl}
@@ -153,6 +154,8 @@
       <input class="e-inp" value="${esc(z.title || '')}" placeholder="${tdef.label}…" data-input-action="zettel-field" data-field="title"/></div>
     <div class="e-group"><label class="lml">Untertitel</label>
       <input class="e-inp" value="${esc(z.untertitel || '')}" placeholder="Zusatz, Datum…" data-input-action="zettel-field" data-field="untertitel"/></div>
+    ${window.TafelNoticeTypography.controls(z)}
+    ${window.TafelNoticeStackEditor.render(z)}
     ${mediaFields(z)}
     ${['vermisst','steckbrief'].includes(z.typ) ? `<div class="zettel-layout-controls"><label class="lml">Porträtbreite</label><div class="zettel-range-row"><input type="range" min="120" max="320" step="10" value="${Number(z.sideWidth) || 180}" data-input-action="zettel-field" data-field="sideWidth"><span>${Number(z.sideWidth) || 180}px</span></div></div>` : ''}
     <div class="e-group"><label class="lml">Verfasser / Unterschrift</label>
@@ -174,6 +177,7 @@
     <div id="ze-table-rows">${tblRows}</div>
     <div style="display:flex;gap:.3rem;"><button class="add-row" style="flex:1;" data-action="zettel-table-add">＋ Zeile</button><button class="add-row" style="flex:1;border-style:solid;opacity:.8;" data-action="zettel-star-add">☆ Sternzeile</button></div>
     `}
+    ${window.TafelNoticeRewards.editor(z)}
     <div class="e-group" style="display:flex;align-items:center;gap:.5rem;margin-top:.5rem;">
       <input type="checkbox" id="ze-secret" ${z.secret ? 'checked' : ''} data-input-action="zettel-field" data-field="secret"/>
       <label for="ze-secret" class="lml" style="margin:0;cursor:pointer;">🔒 Geheim</label>
@@ -192,6 +196,7 @@
     <button class="s-btn" style="margin-left:auto;color:var(--red);border-color:var(--red);" data-action="zettel-delete" data-zettel-id="${z.id}">🗑</button>
   </div>`;
     rt().openEditorShell('zettel', z.id);
+    window.TafelNoticeTypography.updateSample(document.querySelector('#sidebar [data-notice-font-sample]'), z);
   }
 
   function zettelField(k, v){

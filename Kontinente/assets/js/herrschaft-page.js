@@ -7,6 +7,7 @@
   const { renderSettlementDomain } = await import(directoryUrl);
   const { mountDirectoryBrowser, directoryState } = await import(new URL('directory-browser.mjs?v=register-20261018a', directoryUrl));
   const { renderCouncilGroups } = await import(new URL('council-directory.mjs?v=vortigern-20261018', directoryUrl));
+  const { renderTerritoryNavigation } = await import(new URL('../territory-page/territory-navigation.mjs?v=roriksheim-20261020c', directoryUrl));
 
   renderPageModules();
   window.addEventListener("aleria:kontinente:data-ready", renderPageModules);
@@ -381,11 +382,12 @@
 
   function renderGeography(root, geography) {
     const domains = geography?.domains || (geography?.domain ? [geography.domain] : []);
-    if (!root || !domains.length) return;
+    if (!root || (!domains.length && !geography?.links?.length)) return;
     const state = directoryState(root);
     const fragment = document.createDocumentFragment();
 
     if (geography.map?.imageSrc) fragment.append(renderMapPanel(geography.map));
+    if (geography.links?.length) fragment.append(renderTerritoryNavigation(geography.links));
     domains.forEach(domain => fragment.append(renderDomain(domain)));
     root.replaceChildren(fragment);
     root.classList.add('territory-directory');

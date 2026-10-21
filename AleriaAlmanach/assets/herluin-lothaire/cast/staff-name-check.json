@@ -1,0 +1,38 @@
+{
+  "date": "2026-10-20",
+  "scope": [
+    "AleriaAlmanach",
+    "Stammbäume",
+    "Karten/Cenyr",
+    "Kontinente"
+  ],
+  "extensions": [
+    "js",
+    "mjs",
+    "json",
+    "html",
+    "md"
+  ],
+  "excludesOwnHerluinDraft": true,
+  "people": {
+    "labels": [
+      "Saithen",
+      "Neddric",
+      "Jeradis",
+      "Nauthagerd",
+      "Perban"
+    ],
+    "matchingFiles": []
+  },
+  "shopNames": {
+    "labels": [
+      "Die dreizehnte Essenz",
+      "Lothaires Wunderkammer",
+      "Zum schielenden Amethyst",
+      "Wurzel und Widerspruch",
+      "Zum verbannten Stern"
+    ],
+    "matchingFiles": []
+  },
+  "limitation": "Checks the available local project sources, not unsynchronized external data."
+}

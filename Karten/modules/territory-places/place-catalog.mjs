@@ -6,10 +6,12 @@ export function createPlaceCatalog(territorySource, placeSource) {
     const territory = territoriesById.get(marker.territoryId);
     if (!territory) throw new Error(`Unbekannte Herrschaft für ${marker.id}`);
     const description = descriptionsById.get(marker.id);
+    const ruler = description?.ruler || territory;
     return {
-      territory, house: territory.house,
-      houseHref: territory.familyId ? `/Stammbäume/Stammbaum.html?family=${territory.familyId}&mode=view` : '',
-      crest: territory.crest, banner: territory.banner,
+      territory, house: ruler.house,
+      houseHref: ruler.familyId ? `/Stammbäume/Stammbaum.html?family=${ruler.familyId}&mode=view` : '',
+      crest: ruler.crest, banner: ruler.banner,
+      bannerHref: ruler.bannerHref || territory.bannerHref || territory.href,
       ...(territory.coRulers?.length ? { coRulers: territory.coRulers } : {}),
       text: description?.text || '', trade: description?.trade || '',
       faction: description?.faction || '', fields: description?.fields || {},

@@ -6,7 +6,8 @@
   let editMode = false;
   let pendingPosition = null;
   let selectedType = null;
-  let scrollOpener = null;
+  let stopPreviewLayout = () => {};
+  let stopPreviewTypography = () => {};
 
   const rt = () => window.TafelRuntime;
   const state = () => window.TafelState.get();
@@ -248,30 +249,17 @@
     const notice = state().zettel.find(item => item.id === id);
     if (!notice) return;
 
-    window.TafelBoard.focusNotice(notice);
+    const anchor = window.TafelNoticeStacks.members(state().zettel, id, { includeSecret: editMode })[0] || notice;
+    window.TafelBoard.focusNotice(anchor);
     window.setTimeout(() => openZettelScroll(id), 220);
   }
 
   function openZettelScroll(id) {
-    const notice = state().zettel.find(item => item.id === id);
-    if (!notice || (notice.secret && !editMode)) return;
-    if (!document.getElementById('scroll-mo').classList.contains('open')) scrollOpener = document.activeElement;
-    document.getElementById('scroll-content').innerHTML = window.TafelZettelViews.renderLive(notice);
-    document.getElementById('scroll-actions').innerHTML = editMode
-      ? `<button class="s-btn s-edit" type="button" data-action="zettel-open-edit" data-zettel-id="${rt().esc(id)}">Bearbeiten</button><button class="s-btn s-cancel" type="button" data-action="close-scroll">Schließen</button>`
-      : '<button class="s-btn s-cancel" type="button" data-action="close-scroll">Schließen</button>';
-    document.getElementById('scroll-card').style.width = `min(${notice.cardWidth || state().cardWidth || 1100}px, calc(100vw - 32px))`;
-    document.getElementById('scroll-card').setAttribute('aria-label', notice.title || 'Aushang');
-    document.getElementById('scroll-content').scrollTop = 0;
-    modal('scroll-mo', true);
-    document.querySelector('#scroll-card .scroll-close').focus();
+    window.TafelNoticeReader.open(id);
   }
 
   function closeScroll() {
-    const wasOpen = document.getElementById('scroll-mo').classList.contains('open');
-    modal('scroll-mo', false);
-    if (wasOpen && scrollOpener?.isConnected) scrollOpener.focus();
-    scrollOpener = null;
+    window.TafelNoticeReader.close();
   }
 
   function clampEditorWidth(value) {
@@ -325,12 +313,18 @@
     const content = document.getElementById('sb-preview-content');
     if (!content || sidebar.dataset.editorKind !== 'zettel') return;
     const notice = state().zettel.find(item => item.id === sidebar.dataset.editorId);
+    stopPreviewLayout();
+    stopPreviewTypography();
     content.innerHTML = notice
       ? `<div class="editor-preview-card">${window.TafelZettelViews.renderByType(notice)}</div>`
       : '<div class="editor-preview-empty">Kein Aushang gewählt.</div>';
+    stopPreviewTypography = notice ? window.TafelNoticeTypography.mount(content, notice) : () => {};
+    stopPreviewLayout = window.TafelNoticeTextLayout.observe(content);
   }
 
   function closeSidebar() {
+    stopPreviewLayout();
+    stopPreviewTypography();
     const sidebar = document.getElementById('sidebar');
     sidebar.classList.remove('open', 'editor-fullscreen');
     sidebar.replaceChildren();

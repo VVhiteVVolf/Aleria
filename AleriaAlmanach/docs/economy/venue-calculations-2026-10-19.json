@@ -286,6 +286,20 @@
       "reason": "Begehbarer Verkaufsort mit Güterangebot."
     },
     {
+      "id": "lothaires-arkaneum",
+      "title": "Lothaires Arkaneum",
+      "tab": "Völker & Kulturen",
+      "path": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Bannkreis Gwynthor",
+        "Gwynthor-Stadt"
+      ],
+      "eligible": false,
+      "reason": "Kalkulation für diesen Ort ausdrücklich zurückgestellt."
+    },
+    {
       "id": "gwynthor-gwregysdu-lagerhaeuser",
       "title": "Die Lagerhäuser der Gwregysdu",
       "tab": "Völker & Kulturen",
@@ -329,6 +343,21 @@
       ],
       "eligible": true,
       "reason": "Begehbarer Verkaufsort mit Güterangebot."
+    },
+    {
+      "id": "gwynthor-die-rote-klaue",
+      "title": "Die rote Klaue",
+      "tab": "Völker & Kulturen",
+      "path": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Bannkreis Gwynthor",
+        "Gwynthor-Stadt",
+        "Die Klingende Münze - Gwynthor"
+      ],
+      "eligible": false,
+      "reason": "Kalkulation für diesen Ort ausdrücklich zurückgestellt."
     },
     {
       "id": "windreiter",
@@ -3422,7 +3451,7 @@
             "label": "",
             "note": "Kost für neun Tage und einfacher Schlafplatz zusätzlich zum Geldlohn; Ansatz zu Selbstkosten.",
             "source": "Hierarchie: Die Krumme Kanne / Zimmer & Versorgung",
-            "name": "Llinos",
+            "name": "Llinos Celynfor",
             "role": "Hausmagd · Wasser & Lampen",
             "areas": [
               "Zimmer & Versorgung"
@@ -4965,7 +4994,7 @@
             "label": "",
             "note": "Kost für neun Tage und einfacher Schlafplatz zusätzlich zum Geldlohn; Ansatz zu Selbstkosten.",
             "source": "Hierarchie: Die Krumme Kanne / Zimmer & Versorgung",
-            "name": "Llinos",
+            "name": "Llinos Celynfor",
             "role": "Hausmagd · Wasser & Lampen",
             "areas": [
               "Zimmer & Versorgung"
@@ -6353,7 +6382,7 @@
               "label": "",
               "note": "Kost für neun Tage und einfacher Schlafplatz zusätzlich zum Geldlohn; Ansatz zu Selbstkosten.",
               "source": "Hierarchie: Die Krumme Kanne / Zimmer & Versorgung",
-              "name": "Llinos",
+              "name": "Llinos Celynfor",
               "role": "Hausmagd · Wasser & Lampen",
               "areas": [
                 "Zimmer & Versorgung"
@@ -7742,7 +7771,7 @@
               "label": "",
               "note": "Kost für neun Tage und einfacher Schlafplatz zusätzlich zum Geldlohn; Ansatz zu Selbstkosten.",
               "source": "Hierarchie: Die Krumme Kanne / Zimmer & Versorgung",
-              "name": "Llinos",
+              "name": "Llinos Celynfor",
               "role": "Hausmagd · Wasser & Lampen",
               "areas": [
                 "Zimmer & Versorgung"
@@ -9129,7 +9158,7 @@
               "label": "",
               "note": "Kost für neun Tage und einfacher Schlafplatz zusätzlich zum Geldlohn; Ansatz zu Selbstkosten.",
               "source": "Hierarchie: Die Krumme Kanne / Zimmer & Versorgung",
-              "name": "Llinos",
+              "name": "Llinos Celynfor",
               "role": "Hausmagd · Wasser & Lampen",
               "areas": [
                 "Zimmer & Versorgung"
@@ -9954,7 +9983,7 @@
           },
           {
             "id": "person-llinos",
-            "name": "Llinos",
+            "name": "Llinos Celynfor",
             "role": "Hausmagd · Wasser & Lampen",
             "count": 1,
             "days": 6,

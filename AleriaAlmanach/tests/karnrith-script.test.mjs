@@ -17,6 +17,7 @@ function loadKarnrith() {
   for (const file of [
     '../../Fonts/Karnrith-Font-2.000/karnrith.js', '../../Fonts/Rheunwaith-Font-1.000/rheunwaith.js',
     '../modules/language/language-script-display.js', '../modules/core/content-safety.js',
+    '../modules/language/language-script-registry.js',
     '../modules/name-list/name-list-data.js', '../modules/name-list/name-list-renderer.js',
     '../modules/script-table/script-table-data.js', '../modules/script-table/script-table-renderer.js',
     '../modules/script-table/script-table-module-editor.js',

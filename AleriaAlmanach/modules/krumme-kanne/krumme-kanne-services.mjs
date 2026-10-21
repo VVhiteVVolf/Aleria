@@ -1,9 +1,10 @@
 import { applyVenuePriceReview } from '../economy-pricing/price-review-model.mjs';
+import { withHouseholdWorkplaceLinks } from '../gwynthor-heime/household-workplaces.mjs';
 const art = './assets/krumme-kanne/services';
 const service = (title, icon, description, scope, terms) => ({ title, icon: `${art}/${icon}.png`, description: `<p>${description}</p>`, clients: '', scope, terms });
 
 export function withKanneServices(source) {
-  const entry = applyVenuePriceReview(structuredClone(source));
+  const entry = withHouseholdWorkplaceLinks(applyVenuePriceReview(structuredClone(source)));
   if (entry.pages.some(page => page.commentThreadKey === 'kanne-services-20261016')) return entry;
   entry.pages.splice(4, 0, { schemaVersion: 1, commentThreadKey: 'kanne-services-20261016',
     pageTitle: '✦ — Services — ✦', guildServicesPage: true, guildServices: {

@@ -1,0 +1,5895 @@
+{
+  "imageSize": [
+    4096,
+    2734
+  ],
+  "coordinateOrigin": "top-left",
+  "pins": [
+    {
+      "x": 2570,
+      "y": 13,
+      "width": 74,
+      "height": 99,
+      "area": 4849,
+      "tipX": 2607.0,
+      "tipY": 112,
+      "id": "new-pin-001",
+      "iconCandidates": [
+        {
+          "icon": "hafensiedlung.png",
+          "score": 0.83
+        },
+        {
+          "icon": "fischerh-tte.png",
+          "score": 0.477
+        },
+        {
+          "icon": "poststation.png",
+          "score": 0.456
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "classification": "image-match",
+      "geographicZoneId": "rorikstal",
+      "territoryId": "schwarzdorn",
+      "territoryEvidence": "Farbiger Kreis und Verbindung zur benannten Herrschaft auf der neuen Zonenkarte.",
+      "position": {
+        "x": 2607.0,
+        "y": 109,
+        "origin": "top-left",
+        "unit": "pixel"
+      },
+      "exclave": false
+    },
+    {
+      "x": 2373,
+      "y": 16,
+      "width": 74,
+      "height": 99,
+      "area": 4767,
+      "tipX": 2410.0,
+      "tipY": 115,
+      "id": "new-pin-002",
+      "iconCandidates": [
+        {
+          "icon": "bauernsiedlung-2.png",
+          "score": 0.86
+        },
+        {
+          "icon": "kontor.png",
+          "score": 0.426
+        },
+        {
+          "icon": "l-ndlicher-friedhof.png",
+          "score": 0.419
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "classification": "image-match",
+      "geographicZoneId": "rorikstal",
+      "territoryId": "schwarzdorn",
+      "territoryEvidence": "Farbiger Kreis und Verbindung zur benannten Herrschaft auf der neuen Zonenkarte.",
+      "position": {
+        "x": 2410.0,
+        "y": 112,
+        "origin": "top-left",
+        "unit": "pixel"
+      },
+      "exclave": false
+    },
+    {
+      "x": 1573,
+      "y": 17,
+      "width": 111,
+      "height": 146,
+      "area": 10850,
+      "tipX": 1628.5,
+      "tipY": 163,
+      "id": "new-pin-003",
+      "iconCandidates": [
+        {
+          "icon": "stadt.png",
+          "score": 0.51
+        },
+        {
+          "icon": "waldsiedlung.png",
+          "score": 0.499
+        },
+        {
+          "icon": "l-ndliche-universit-t.png",
+          "score": 0.391
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "classification": "visual-review",
+      "geographicZoneId": "schwerthohn",
+      "territoryId": "schwerthohn",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 1628.5,
+        "y": 160,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 2193,
+      "y": 17,
+      "width": 73,
+      "height": 98,
+      "area": 4819,
+      "tipX": 2229.5,
+      "tipY": 115,
+      "id": "new-pin-004",
+      "iconCandidates": [
+        {
+          "icon": "marktsiedlung.png",
+          "score": 0.746
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.535
+        },
+        {
+          "icon": "kreaturenhort.png",
+          "score": 0.479
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "classification": "image-match",
+      "geographicZoneId": "schwerthohn",
+      "territoryId": "schwerthohn",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 2229.5,
+        "y": 112,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 3280,
+      "y": 32,
+      "width": 88,
+      "height": 119,
+      "area": 7002,
+      "tipX": 3324.0,
+      "tipY": 151,
+      "id": "new-pin-005",
+      "iconCandidates": [
+        {
+          "icon": "schmuggler3.png",
+          "score": 0.459
+        },
+        {
+          "icon": "methalle.png",
+          "score": 0.422
+        },
+        {
+          "icon": "zerst-rtes-heim.png",
+          "score": 0.41
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/flusssiedlung.png",
+      "classification": "visual-review",
+      "geographicZoneId": "rorikstal",
+      "territoryId": "rorikstal",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 3324.0,
+        "y": 148,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 3516,
+      "y": 37,
+      "width": 88,
+      "height": 120,
+      "area": 6953,
+      "tipX": 3560.0,
+      "tipY": 157,
+      "id": "new-pin-006",
+      "iconCandidates": [
+        {
+          "icon": "turm.png",
+          "score": 0.637
+        },
+        {
+          "icon": "magierturm.png",
+          "score": 0.486
+        },
+        {
+          "icon": "leuchtturm.png",
+          "score": 0.431
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/turm.png",
+      "classification": "visual-review",
+      "geographicZoneId": "rorikstal",
+      "territoryId": "rorikstal",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 3560.0,
+        "y": 154,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 1864,
+      "y": 53,
+      "width": 88,
+      "height": 119,
+      "area": 6981,
+      "tipX": 1908.0,
+      "tipY": 172,
+      "id": "new-pin-007",
+      "iconCandidates": [
+        {
+          "icon": "waldsiedlung.png",
+          "score": 0.859
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.647
+        },
+        {
+          "icon": "gildenzentrale.png",
+          "score": 0.646
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/waldsiedlung.png",
+      "classification": "image-match",
+      "geographicZoneId": "schwerthohn",
+      "territoryId": "schwerthohn",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 1908.0,
+        "y": 169,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 2853,
+      "y": 65,
+      "width": 74,
+      "height": 100,
+      "area": 4860,
+      "tipX": 2890.0,
+      "tipY": 165,
+      "id": "new-pin-008",
+      "iconCandidates": [
+        {
+          "icon": "hafensiedlung.png",
+          "score": 0.86
+        },
+        {
+          "icon": "fischerh-tte.png",
+          "score": 0.501
+        },
+        {
+          "icon": "poststation.png",
+          "score": 0.486
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "classification": "image-match",
+      "geographicZoneId": "rorikstal",
+      "territoryId": "schwarzdorn",
+      "territoryEvidence": "Farbiger Kreis und Verbindung zur benannten Herrschaft auf der neuen Zonenkarte.",
+      "position": {
+        "x": 2890.0,
+        "y": 162,
+        "origin": "top-left",
+        "unit": "pixel"
+      },
+      "exclave": false
+    },
+    {
+      "x": 1711,
+      "y": 88,
+      "width": 89,
+      "height": 119,
+      "area": 6881,
+      "tipX": 1755.5,
+      "tipY": 207,
+      "id": "new-pin-009",
+      "iconCandidates": [
+        {
+          "icon": "festung.png",
+          "score": 0.428
+        },
+        {
+          "icon": "gildenzentrale.png",
+          "score": 0.341
+        },
+        {
+          "icon": "occulter-schrein.png",
+          "score": 0.326
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/festung.png",
+      "classification": "visual-review",
+      "geographicZoneId": "schwerthohn",
+      "territoryId": "schwerthohn",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 1755.5,
+        "y": 204,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 3047,
+      "y": 92,
+      "width": 74,
+      "height": 98,
+      "area": 4801,
+      "tipX": 3084.0,
+      "tipY": 190,
+      "id": "new-pin-010",
+      "iconCandidates": [
+        {
+          "icon": "bauernsiedlung-2.png",
+          "score": 0.831
+        },
+        {
+          "icon": "l-ndlicher-friedhof.png",
+          "score": 0.441
+        },
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.437
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "classification": "image-match",
+      "geographicZoneId": "rorikstal",
+      "territoryId": "kampfgeborene",
+      "territoryEvidence": "Farbiger Kreis und Verbindung zur benannten Herrschaft auf der neuen Zonenkarte.",
+      "position": {
+        "x": 3084.0,
+        "y": 187,
+        "origin": "top-left",
+        "unit": "pixel"
+      },
+      "exclave": false
+    },
+    {
+      "x": 2467,
+      "y": 93,
+      "width": 74,
+      "height": 99,
+      "area": 4926,
+      "tipX": 2504.0,
+      "tipY": 192,
+      "id": "new-pin-011",
+      "iconCandidates": [
+        {
+          "icon": "burgsiedlung.png",
+          "score": 0.735
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.547
+        },
+        {
+          "icon": "antikes-grab.png",
+          "score": 0.511
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/burgsiedlung.png",
+      "classification": "image-match",
+      "geographicZoneId": "rorikstal",
+      "territoryId": "schwarzdorn",
+      "territoryEvidence": "Farbiger Kreis und Verbindung zur benannten Herrschaft auf der neuen Zonenkarte.",
+      "position": {
+        "x": 2504.0,
+        "y": 189,
+        "origin": "top-left",
+        "unit": "pixel"
+      },
+      "exclave": false
+    },
+    {
+      "x": 1224,
+      "y": 99,
+      "width": 74,
+      "height": 98,
+      "area": 4809,
+      "tipX": 1261.0,
+      "tipY": 197,
+      "id": "new-pin-012",
+      "iconCandidates": [
+        {
+          "icon": "turm.png",
+          "score": 0.794
+        },
+        {
+          "icon": "magierturm.png",
+          "score": 0.486
+        },
+        {
+          "icon": "leuchtturm.png",
+          "score": 0.461
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/turm.png",
+      "classification": "image-match",
+      "geographicZoneId": "schwerthohn",
+      "territoryId": "schwerthohn",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 1261.0,
+        "y": 194,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 2048,
+      "y": 102,
+      "width": 75,
+      "height": 100,
+      "area": 4901,
+      "tipX": 2085.5,
+      "tipY": 202,
+      "id": "new-pin-013",
+      "iconCandidates": [
+        {
+          "icon": "bauernsiedlung-2.png",
+          "score": 0.92
+        },
+        {
+          "icon": "l-ndlicher-friedhof.png",
+          "score": 0.446
+        },
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.428
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "classification": "image-match",
+      "geographicZoneId": "schwerthohn",
+      "territoryId": "schwerthohn",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 2085.5,
+        "y": 199,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 2659,
+      "y": 133,
+      "width": 75,
+      "height": 99,
+      "area": 4910,
+      "tipX": 2696.5,
+      "tipY": 232,
+      "id": "new-pin-014",
+      "iconCandidates": [
+        {
+          "icon": "bauernsiedlung-2.png",
+          "score": 0.799
+        },
+        {
+          "icon": "l-ndlicher-friedhof.png",
+          "score": 0.446
+        },
+        {
+          "icon": "kontor.png",
+          "score": 0.44
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "classification": "image-match",
+      "geographicZoneId": "rorikstal",
+      "territoryId": "schwarzdorn",
+      "territoryEvidence": "Farbiger Kreis und Verbindung zur benannten Herrschaft auf der neuen Zonenkarte.",
+      "position": {
+        "x": 2696.5,
+        "y": 229,
+        "origin": "top-left",
+        "unit": "pixel"
+      },
+      "exclave": false
+    },
+    {
+      "x": 2382,
+      "y": 145,
+      "width": 90,
+      "height": 120,
+      "area": 7112,
+      "tipX": 2427.0,
+      "tipY": 265,
+      "id": "new-pin-015",
+      "iconCandidates": [
+        {
+          "icon": "brauersiedlung.png",
+          "score": 0.562
+        },
+        {
+          "icon": "h-gelgrab.png",
+          "score": 0.4
+        },
+        {
+          "icon": "kreaturenhort.png",
+          "score": 0.356
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/brauersiedlung.png",
+      "classification": "visual-review",
+      "geographicZoneId": "rorikstal",
+      "territoryId": "schwarzdorn",
+      "territoryEvidence": "Farbiger Kreis und Verbindung zur benannten Herrschaft auf der neuen Zonenkarte.",
+      "position": {
+        "x": 2427.0,
+        "y": 262,
+        "origin": "top-left",
+        "unit": "pixel"
+      },
+      "exclave": false
+    },
+    {
+      "x": 1383,
+      "y": 155,
+      "width": 74,
+      "height": 100,
+      "area": 4809,
+      "tipX": 1420.0,
+      "tipY": 255,
+      "id": "new-pin-016",
+      "iconCandidates": [
+        {
+          "icon": "hafensiedlung.png",
+          "score": 0.787
+        },
+        {
+          "icon": "fischerh-tte.png",
+          "score": 0.511
+        },
+        {
+          "icon": "poststation.png",
+          "score": 0.481
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "classification": "image-match",
+      "geographicZoneId": "schwerthohn",
+      "territoryId": "schwerthohn",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 1420.0,
+        "y": 252,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 2940,
+      "y": 163,
+      "width": 75,
+      "height": 99,
+      "area": 4917,
+      "tipX": 2977.5,
+      "tipY": 262,
+      "id": "new-pin-017",
+      "iconCandidates": [
+        {
+          "icon": "marktsiedlung.png",
+          "score": 0.723
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.555
+        },
+        {
+          "icon": "waldsiedlung.png",
+          "score": 0.494
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "classification": "image-match",
+      "geographicZoneId": "rorikstal",
+      "territoryId": "kampfgeborene",
+      "territoryEvidence": "Farbiger Kreis und Verbindung zur benannten Herrschaft auf der neuen Zonenkarte.",
+      "position": {
+        "x": 2977.5,
+        "y": 259,
+        "origin": "top-left",
+        "unit": "pixel"
+      },
+      "exclave": false
+    },
+    {
+      "x": 1897,
+      "y": 178,
+      "width": 74,
+      "height": 97,
+      "area": 4879,
+      "tipX": 1934.0,
+      "tipY": 275,
+      "id": "new-pin-018",
+      "iconCandidates": [
+        {
+          "icon": "bauernsiedlung-2.png",
+          "score": 0.894
+        },
+        {
+          "icon": "l-ndlicher-friedhof.png",
+          "score": 0.432
+        },
+        {
+          "icon": "kontor.png",
+          "score": 0.427
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "classification": "image-match",
+      "geographicZoneId": "schwerthohn",
+      "territoryId": "schwerthohn",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 1934.0,
+        "y": 272,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 1555,
+      "y": 192,
+      "width": 90,
+      "height": 120,
+      "area": 7113,
+      "tipX": 1600.0,
+      "tipY": 312,
+      "id": "new-pin-019",
+      "iconCandidates": [
+        {
+          "icon": "marktsiedlung.png",
+          "score": 0.643
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.531
+        },
+        {
+          "icon": "waldsiedlung.png",
+          "score": 0.483
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "classification": "visual-review",
+      "geographicZoneId": "schwerthohn",
+      "territoryId": "schwerthohn",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 1600.0,
+        "y": 309,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 3153,
+      "y": 216,
+      "width": 75,
+      "height": 99,
+      "area": 4919,
+      "tipX": 3190.5,
+      "tipY": 315,
+      "id": "new-pin-020",
+      "iconCandidates": [
+        {
+          "icon": "bergbausiedlung.png",
+          "score": 0.784
+        },
+        {
+          "icon": "antikes-grab.png",
+          "score": 0.526
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.517
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "classification": "image-match",
+      "geographicZoneId": "rorikstal",
+      "territoryId": "kampfgeborene",
+      "territoryEvidence": "Farbiger Kreis und Verbindung zur benannten Herrschaft auf der neuen Zonenkarte.",
+      "position": {
+        "x": 3190.5,
+        "y": 312,
+        "origin": "top-left",
+        "unit": "pixel"
+      },
+      "exclave": false
+    },
+    {
+      "x": 2235,
+      "y": 240,
+      "width": 74,
+      "height": 99,
+      "area": 4902,
+      "tipX": 2272.0,
+      "tipY": 339,
+      "id": "new-pin-021",
+      "iconCandidates": [
+        {
+          "icon": "bauernsiedlung-2.png",
+          "score": 0.885
+        },
+        {
+          "icon": "l-ndlicher-friedhof.png",
+          "score": 0.447
+        },
+        {
+          "icon": "kontor.png",
+          "score": 0.437
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "classification": "image-match",
+      "geographicZoneId": "rorikstal",
+      "territoryId": "schwarzdorn",
+      "territoryEvidence": "Farbiger Kreis und Verbindung zur benannten Herrschaft auf der neuen Zonenkarte.",
+      "position": {
+        "x": 2272.0,
+        "y": 336,
+        "origin": "top-left",
+        "unit": "pixel"
+      },
+      "exclave": false
+    },
+    {
+      "x": 3640,
+      "y": 252,
+      "width": 74,
+      "height": 100,
+      "area": 4790,
+      "tipX": 3677.0,
+      "tipY": 352,
+      "id": "new-pin-022",
+      "iconCandidates": [
+        {
+          "icon": "hafensiedlung.png",
+          "score": 0.773
+        },
+        {
+          "icon": "fischerh-tte.png",
+          "score": 0.493
+        },
+        {
+          "icon": "poststation.png",
+          "score": 0.424
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "classification": "image-match",
+      "geographicZoneId": "winterfaenge",
+      "territoryId": "winterfaenge",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 3677.0,
+        "y": 349,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 3353,
+      "y": 254,
+      "width": 75,
+      "height": 100,
+      "area": 4941,
+      "tipX": 3390.5,
+      "tipY": 354,
+      "id": "new-pin-023",
+      "iconCandidates": [
+        {
+          "icon": "bergbausiedlung.png",
+          "score": 0.846
+        },
+        {
+          "icon": "antikes-grab.png",
+          "score": 0.538
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.494
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "classification": "image-match",
+      "geographicZoneId": "rorikstal",
+      "territoryId": "kampfgeborene",
+      "territoryEvidence": "Farbiger Kreis und Verbindung zur benannten Herrschaft auf der neuen Zonenkarte.",
+      "position": {
+        "x": 3390.5,
+        "y": 351,
+        "origin": "top-left",
+        "unit": "pixel"
+      },
+      "exclave": false
+    },
+    {
+      "x": 2506,
+      "y": 263,
+      "width": 75,
+      "height": 100,
+      "area": 4940,
+      "tipX": 2543.5,
+      "tipY": 363,
+      "id": "new-pin-024",
+      "iconCandidates": [
+        {
+          "icon": "marktsiedlung.png",
+          "score": 0.684
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.528
+        },
+        {
+          "icon": "waldsiedlung.png",
+          "score": 0.486
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "classification": "image-match",
+      "geographicZoneId": "rorikstal",
+      "territoryId": "schwarzdorn",
+      "territoryEvidence": "Farbiger Kreis und Verbindung zur benannten Herrschaft auf der neuen Zonenkarte.",
+      "position": {
+        "x": 2543.5,
+        "y": 360,
+        "origin": "top-left",
+        "unit": "pixel"
+      },
+      "exclave": false
+    },
+    {
+      "x": 1639,
+      "y": 266,
+      "width": 75,
+      "height": 99,
+      "area": 4906,
+      "tipX": 1676.5,
+      "tipY": 365,
+      "id": "new-pin-025",
+      "iconCandidates": [
+        {
+          "icon": "waldsiedlung.png",
+          "score": 0.82
+        },
+        {
+          "icon": "gildenzentrale.png",
+          "score": 0.661
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.659
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/waldsiedlung.png",
+      "classification": "image-match",
+      "geographicZoneId": "schwerthohn",
+      "territoryId": "schwerthohn",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 1676.5,
+        "y": 362,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 1744,
+      "y": 276,
+      "width": 75,
+      "height": 99,
+      "area": 4900,
+      "tipX": 1781.5,
+      "tipY": 375,
+      "id": "new-pin-026",
+      "iconCandidates": [
+        {
+          "icon": "h-gelgrab.png",
+          "score": 0.859
+        },
+        {
+          "icon": "zerst-rte-kirche.png",
+          "score": 0.625
+        },
+        {
+          "icon": "kutscher.png",
+          "score": 0.553
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/h-gelgrab.png",
+      "classification": "image-match",
+      "geographicZoneId": "schwerthohn",
+      "territoryId": "schwerthohn",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 1781.5,
+        "y": 372,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 2682,
+      "y": 283,
+      "width": 90,
+      "height": 119,
+      "area": 7041,
+      "tipX": 2727.0,
+      "tipY": 402,
+      "id": "new-pin-027",
+      "iconCandidates": [
+        {
+          "icon": "h-gelgrab.png",
+          "score": 0.866
+        },
+        {
+          "icon": "zerst-rte-kirche.png",
+          "score": 0.605
+        },
+        {
+          "icon": "zerst-rtes-heim.png",
+          "score": 0.531
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/h-gelgrab.png",
+      "classification": "image-match",
+      "geographicZoneId": "rorikstal",
+      "territoryId": "rorikstal",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 2727.0,
+        "y": 399,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 1479,
+      "y": 287,
+      "width": 90,
+      "height": 120,
+      "area": 7098,
+      "tipX": 1524.0,
+      "tipY": 407,
+      "id": "new-pin-028",
+      "iconCandidates": [
+        {
+          "icon": "bauernsiedlung-2.png",
+          "score": 0.859
+        },
+        {
+          "icon": "l-ndlicher-friedhof.png",
+          "score": 0.446
+        },
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.423
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "classification": "image-match",
+      "geographicZoneId": "schwerthohn",
+      "territoryId": "schwerthohn",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 1524.0,
+        "y": 404,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 2910,
+      "y": 295,
+      "width": 74,
+      "height": 99,
+      "area": 4920,
+      "tipX": 2947.0,
+      "tipY": 394,
+      "id": "new-pin-029",
+      "iconCandidates": [
+        {
+          "icon": "bergbausiedlung.png",
+          "score": 0.911
+        },
+        {
+          "icon": "antikes-grab.png",
+          "score": 0.553
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.51
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "classification": "image-match",
+      "geographicZoneId": "rorikstal",
+      "territoryId": "kampfgeborene",
+      "territoryEvidence": "Farbiger Kreis und Verbindung zur benannten Herrschaft auf der neuen Zonenkarte.",
+      "position": {
+        "x": 2947.0,
+        "y": 391,
+        "origin": "top-left",
+        "unit": "pixel"
+      },
+      "exclave": false
+    },
+    {
+      "x": 1322,
+      "y": 317,
+      "width": 74,
+      "height": 100,
+      "area": 4743,
+      "tipX": 1359.0,
+      "tipY": 417,
+      "id": "new-pin-030",
+      "iconCandidates": [
+        {
+          "icon": "hafensiedlung.png",
+          "score": 0.752
+        },
+        {
+          "icon": "fischerh-tte.png",
+          "score": 0.502
+        },
+        {
+          "icon": "poststation.png",
+          "score": 0.46
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "classification": "image-match",
+      "geographicZoneId": "schwerthohn",
+      "territoryId": "schwerthohn",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 1359.0,
+        "y": 414,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 2076,
+      "y": 348,
+      "width": 75,
+      "height": 99,
+      "area": 4655,
+      "tipX": 2113.5,
+      "tipY": 447,
+      "id": "new-pin-031",
+      "iconCandidates": [
+        {
+          "icon": "festung.png",
+          "score": 0.554
+        },
+        {
+          "icon": "gildenzentrale.png",
+          "score": 0.376
+        },
+        {
+          "icon": "kutscher.png",
+          "score": 0.352
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/festung.png",
+      "classification": "visual-review",
+      "geographicZoneId": "schwerthohn",
+      "territoryId": "schwerthohn",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 2113.5,
+        "y": 444,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 1912,
+      "y": 352,
+      "width": 75,
+      "height": 99,
+      "area": 4923,
+      "tipX": 1949.5,
+      "tipY": 451,
+      "id": "new-pin-032",
+      "iconCandidates": [
+        {
+          "icon": "marktsiedlung.png",
+          "score": 0.682
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.534
+        },
+        {
+          "icon": "nordische-ruine.png",
+          "score": 0.479
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "classification": "image-match",
+      "geographicZoneId": "schwerthohn",
+      "territoryId": "schwerthohn",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 1949.5,
+        "y": 448,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 2996,
+      "y": 352,
+      "width": 75,
+      "height": 99,
+      "area": 4909,
+      "tipX": 3033.5,
+      "tipY": 451,
+      "id": "new-pin-033",
+      "iconCandidates": [
+        {
+          "icon": "h-gelgrab.png",
+          "score": 0.854
+        },
+        {
+          "icon": "zerst-rte-kirche.png",
+          "score": 0.609
+        },
+        {
+          "icon": "ziegelbrenner.png",
+          "score": 0.537
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/h-gelgrab.png",
+      "classification": "image-match",
+      "geographicZoneId": "rorikstal",
+      "territoryId": "rorikstal",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 3033.5,
+        "y": 448,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 2286,
+      "y": 379,
+      "width": 74,
+      "height": 99,
+      "area": 4906,
+      "tipX": 2323.0,
+      "tipY": 478,
+      "id": "new-pin-034",
+      "iconCandidates": [
+        {
+          "icon": "klostersiedlung.png",
+          "score": 0.837
+        },
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.582
+        },
+        {
+          "icon": "gasthof.png",
+          "score": 0.545
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/klostersiedlung.png",
+      "classification": "image-match",
+      "geographicZoneId": "rorikstal",
+      "territoryId": "schwarzdorn",
+      "territoryEvidence": "Farbiger Kreis und Verbindung zur benannten Herrschaft auf der neuen Zonenkarte.",
+      "position": {
+        "x": 2323.0,
+        "y": 475,
+        "origin": "top-left",
+        "unit": "pixel"
+      },
+      "exclave": false
+    },
+    {
+      "x": 1192,
+      "y": 395,
+      "width": 89,
+      "height": 120,
+      "area": 7020,
+      "tipX": 1236.5,
+      "tipY": 515,
+      "id": "new-pin-035",
+      "iconCandidates": [
+        {
+          "icon": "hafensiedlung.png",
+          "score": 0.776
+        },
+        {
+          "icon": "fischerh-tte.png",
+          "score": 0.505
+        },
+        {
+          "icon": "poststation.png",
+          "score": 0.46
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "classification": "image-match",
+      "geographicZoneId": "schwarzacker",
+      "territoryId": "schwarzacker",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 1236.5,
+        "y": 512,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 3487,
+      "y": 396,
+      "width": 75,
+      "height": 99,
+      "area": 4840,
+      "tipX": 3524.5,
+      "tipY": 495,
+      "id": "new-pin-036",
+      "iconCandidates": [
+        {
+          "icon": "zerst-rte-siedlung.png",
+          "score": 0.864
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.487
+        },
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.471
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/zerst-rte-siedlung.png",
+      "classification": "image-match",
+      "geographicZoneId": "winterfaenge",
+      "territoryId": "winterfaenge",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 3524.5,
+        "y": 492,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 2781,
+      "y": 407,
+      "width": 75,
+      "height": 99,
+      "area": 4676,
+      "tipX": 2818.5,
+      "tipY": 506,
+      "id": "new-pin-037",
+      "iconCandidates": [
+        {
+          "icon": "bergbausiedlung.png",
+          "score": 0.788
+        },
+        {
+          "icon": "antikes-grab.png",
+          "score": 0.53
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.503
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "classification": "image-match",
+      "geographicZoneId": "rorikstal",
+      "territoryId": "kampfgeborene",
+      "territoryEvidence": "Farbiger Kreis und Verbindung zur benannten Herrschaft auf der neuen Zonenkarte.",
+      "position": {
+        "x": 2818.5,
+        "y": 503,
+        "origin": "top-left",
+        "unit": "pixel"
+      },
+      "exclave": false
+    },
+    {
+      "x": 2455,
+      "y": 415,
+      "width": 75,
+      "height": 99,
+      "area": 4934,
+      "tipX": 2492.5,
+      "tipY": 514,
+      "id": "new-pin-038",
+      "iconCandidates": [
+        {
+          "icon": "brauersiedlung.png",
+          "score": 0.668
+        },
+        {
+          "icon": "h-gelgrab.png",
+          "score": 0.401
+        },
+        {
+          "icon": "zerst-rte-kirche.png",
+          "score": 0.33
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/brauersiedlung.png",
+      "classification": "image-match",
+      "geographicZoneId": "rorikstal",
+      "territoryId": "schwarzdorn",
+      "territoryEvidence": "Farbiger Kreis und Verbindung zur benannten Herrschaft auf der neuen Zonenkarte.",
+      "position": {
+        "x": 2492.5,
+        "y": 511,
+        "origin": "top-left",
+        "unit": "pixel"
+      },
+      "exclave": false
+    },
+    {
+      "x": 1626,
+      "y": 436,
+      "width": 75,
+      "height": 100,
+      "area": 4920,
+      "tipX": 1663.5,
+      "tipY": 536,
+      "id": "new-pin-039",
+      "iconCandidates": [
+        {
+          "icon": "marktsiedlung.png",
+          "score": 0.684
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.511
+        },
+        {
+          "icon": "waldsiedlung.png",
+          "score": 0.508
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "classification": "image-match",
+      "geographicZoneId": "schwerthohn",
+      "territoryId": "schwerthohn",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 1663.5,
+        "y": 533,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 2629,
+      "y": 440,
+      "width": 75,
+      "height": 100,
+      "area": 4893,
+      "tipX": 2666.5,
+      "tipY": 540,
+      "id": "new-pin-040",
+      "iconCandidates": [
+        {
+          "icon": "bauernsiedlung-2.png",
+          "score": 0.857
+        },
+        {
+          "icon": "l-ndlicher-friedhof.png",
+          "score": 0.452
+        },
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.44
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "classification": "image-match",
+      "geographicZoneId": "rorikstal",
+      "territoryId": "kampfgeborene",
+      "territoryEvidence": "Farbiger Kreis und Verbindung zur benannten Herrschaft auf der neuen Zonenkarte.",
+      "position": {
+        "x": 2666.5,
+        "y": 537,
+        "origin": "top-left",
+        "unit": "pixel"
+      },
+      "exclave": false
+    },
+    {
+      "x": 1799,
+      "y": 455,
+      "width": 75,
+      "height": 99,
+      "area": 4900,
+      "tipX": 1836.5,
+      "tipY": 554,
+      "id": "new-pin-041",
+      "iconCandidates": [
+        {
+          "icon": "bauernsiedlung-2.png",
+          "score": 0.896
+        },
+        {
+          "icon": "l-ndlicher-friedhof.png",
+          "score": 0.448
+        },
+        {
+          "icon": "kontor.png",
+          "score": 0.429
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "classification": "image-match",
+      "geographicZoneId": "schwerthohn",
+      "territoryId": "schwerthohn",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 1836.5,
+        "y": 551,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 2164,
+      "y": 473,
+      "width": 75,
+      "height": 98,
+      "area": 4911,
+      "tipX": 2201.5,
+      "tipY": 571,
+      "id": "new-pin-042",
+      "iconCandidates": [
+        {
+          "icon": "bauernsiedlung-2.png",
+          "score": 0.925
+        },
+        {
+          "icon": "l-ndlicher-friedhof.png",
+          "score": 0.429
+        },
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.424
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "classification": "image-match",
+      "geographicZoneId": "rorikstal",
+      "territoryId": "schwarzdorn",
+      "territoryEvidence": "Farbiger Kreis und Verbindung zur benannten Herrschaft auf der neuen Zonenkarte.",
+      "position": {
+        "x": 2201.5,
+        "y": 568,
+        "origin": "top-left",
+        "unit": "pixel"
+      },
+      "exclave": false
+    },
+    {
+      "x": 3541,
+      "y": 535,
+      "width": 75,
+      "height": 99,
+      "area": 4913,
+      "tipX": 3578.5,
+      "tipY": 634,
+      "id": "new-pin-043",
+      "iconCandidates": [
+        {
+          "icon": "zerst-rte-siedlung.png",
+          "score": 0.851
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.489
+        },
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.478
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/zerst-rte-siedlung.png",
+      "classification": "image-match",
+      "geographicZoneId": "winterfaenge",
+      "territoryId": "winterfaenge",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 3578.5,
+        "y": 631,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 1138,
+      "y": 546,
+      "width": 89,
+      "height": 120,
+      "area": 7020,
+      "tipX": 1182.5,
+      "tipY": 666,
+      "id": "new-pin-044",
+      "iconCandidates": [
+        {
+          "icon": "bergbausiedlung.png",
+          "score": 0.873
+        },
+        {
+          "icon": "antikes-grab.png",
+          "score": 0.566
+        },
+        {
+          "icon": "grabmal.png",
+          "score": 0.531
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "classification": "image-match",
+      "geographicZoneId": "schwarzacker",
+      "territoryId": "schwarzacker",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 1182.5,
+        "y": 663,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 3374,
+      "y": 553,
+      "width": 89,
+      "height": 119,
+      "area": 7073,
+      "tipX": 3418.5,
+      "tipY": 672,
+      "id": "new-pin-045",
+      "iconCandidates": [
+        {
+          "icon": "finstere-burg.png",
+          "score": 0.803
+        },
+        {
+          "icon": "occulter-schrein.png",
+          "score": 0.456
+        },
+        {
+          "icon": "quelle.png",
+          "score": 0.437
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/finstere-burg.png",
+      "classification": "image-match",
+      "geographicZoneId": "winterfaenge",
+      "territoryId": "winterfaenge",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 3418.5,
+        "y": 669,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 1398,
+      "y": 557,
+      "width": 113,
+      "height": 149,
+      "area": 11056,
+      "tipX": 1454.5,
+      "tipY": 706,
+      "id": "new-pin-046",
+      "iconCandidates": [
+        {
+          "icon": "stadt.png",
+          "score": 0.524
+        },
+        {
+          "icon": "waldsiedlung.png",
+          "score": 0.508
+        },
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.439
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "classification": "visual-review",
+      "geographicZoneId": "schwarzacker",
+      "territoryId": "schwarzacker",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 1454.5,
+        "y": 703,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 2003,
+      "y": 583,
+      "width": 74,
+      "height": 99,
+      "area": 4933,
+      "tipX": 2040.0,
+      "tipY": 682,
+      "id": "new-pin-047",
+      "iconCandidates": [
+        {
+          "icon": "klostersiedlung.png",
+          "score": 0.811
+        },
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.567
+        },
+        {
+          "icon": "gasthof.png",
+          "score": 0.544
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/klostersiedlung.png",
+      "classification": "image-match",
+      "geographicZoneId": "schwerthohn",
+      "territoryId": "schwerthohn",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 2040.0,
+        "y": 679,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 2407,
+      "y": 605,
+      "width": 74,
+      "height": 100,
+      "area": 4924,
+      "tipX": 2444.0,
+      "tipY": 705,
+      "id": "new-pin-048",
+      "iconCandidates": [
+        {
+          "icon": "marktsiedlung.png",
+          "score": 0.727
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.547
+        },
+        {
+          "icon": "ziegelbrenner.png",
+          "score": 0.486
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "classification": "image-match",
+      "geographicZoneId": "rorikstal",
+      "territoryId": "schwarzdorn",
+      "territoryEvidence": "Farbiger Kreis und Verbindung zur benannten Herrschaft auf der neuen Zonenkarte.",
+      "position": {
+        "x": 2444.0,
+        "y": 702,
+        "origin": "top-left",
+        "unit": "pixel"
+      },
+      "exclave": false
+    },
+    {
+      "x": 2905,
+      "y": 611,
+      "width": 112,
+      "height": 149,
+      "area": 11049,
+      "tipX": 2961.0,
+      "tipY": 760,
+      "id": "new-pin-049",
+      "iconCandidates": [
+        {
+          "icon": "stadt.png",
+          "score": 0.524
+        },
+        {
+          "icon": "waldsiedlung.png",
+          "score": 0.501
+        },
+        {
+          "icon": "l-ndliche-universit-t.png",
+          "score": 0.431
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "classification": "visual-review",
+      "geographicZoneId": "rorikstal",
+      "territoryId": "rorikstal",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 2961.0,
+        "y": 757,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 1820,
+      "y": 621,
+      "width": 75,
+      "height": 98,
+      "area": 4892,
+      "tipX": 1857.5,
+      "tipY": 719,
+      "id": "new-pin-050",
+      "iconCandidates": [
+        {
+          "icon": "bauernsiedlung-2.png",
+          "score": 0.832
+        },
+        {
+          "icon": "l-ndlicher-friedhof.png",
+          "score": 0.443
+        },
+        {
+          "icon": "kontor.png",
+          "score": 0.436
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "classification": "image-match",
+      "geographicZoneId": "schwerthohn",
+      "territoryId": "schwerthohn",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 1857.5,
+        "y": 716,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 2606,
+      "y": 629,
+      "width": 75,
+      "height": 98,
+      "area": 4905,
+      "tipX": 2643.5,
+      "tipY": 727,
+      "id": "new-pin-051",
+      "iconCandidates": [
+        {
+          "icon": "bauernsiedlung-2.png",
+          "score": 0.843
+        },
+        {
+          "icon": "l-ndlicher-friedhof.png",
+          "score": 0.452
+        },
+        {
+          "icon": "kontor.png",
+          "score": 0.446
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "classification": "image-match",
+      "geographicZoneId": "rorikstal",
+      "territoryId": "schwarzdorn",
+      "territoryEvidence": "Farbiger Kreis und Verbindung zur benannten Herrschaft auf der neuen Zonenkarte.",
+      "position": {
+        "x": 2643.5,
+        "y": 724,
+        "origin": "top-left",
+        "unit": "pixel"
+      },
+      "exclave": false
+    },
+    {
+      "x": 3678,
+      "y": 632,
+      "width": 73,
+      "height": 99,
+      "area": 4805,
+      "tipX": 3714.5,
+      "tipY": 731,
+      "id": "new-pin-052",
+      "iconCandidates": [
+        {
+          "icon": "marktsiedlung.png",
+          "score": 0.758
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.545
+        },
+        {
+          "icon": "waldsiedlung.png",
+          "score": 0.498
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "classification": "image-match",
+      "geographicZoneId": "winterfaenge",
+      "territoryId": "winterfaenge",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 3714.5,
+        "y": 728,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 3172,
+      "y": 646,
+      "width": 90,
+      "height": 120,
+      "area": 7064,
+      "tipX": 3217.0,
+      "tipY": 766,
+      "id": "new-pin-053",
+      "iconCandidates": [
+        {
+          "icon": "antike-ruine.png",
+          "score": 0.597
+        },
+        {
+          "icon": "burgsiedlung.png",
+          "score": 0.407
+        },
+        {
+          "icon": "marktstand.png",
+          "score": 0.376
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/antike-ruine.png",
+      "classification": "visual-review",
+      "geographicZoneId": "rorikstal",
+      "territoryId": "rorikstal",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 3217.0,
+        "y": 763,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 2206,
+      "y": 669,
+      "width": 75,
+      "height": 100,
+      "area": 4925,
+      "tipX": 2243.5,
+      "tipY": 769,
+      "id": "new-pin-054",
+      "iconCandidates": [
+        {
+          "icon": "brauersiedlung.png",
+          "score": 0.657
+        },
+        {
+          "icon": "h-gelgrab.png",
+          "score": 0.423
+        },
+        {
+          "icon": "zerst-rte-kirche.png",
+          "score": 0.334
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/brauersiedlung.png",
+      "classification": "image-match",
+      "geographicZoneId": "rorikstal",
+      "territoryId": "schwarzdorn",
+      "territoryEvidence": "Farbiger Kreis und Verbindung zur benannten Herrschaft auf der neuen Zonenkarte.",
+      "position": {
+        "x": 2243.5,
+        "y": 766,
+        "origin": "top-left",
+        "unit": "pixel"
+      },
+      "exclave": false
+    },
+    {
+      "x": 3527,
+      "y": 722,
+      "width": 75,
+      "height": 99,
+      "area": 4928,
+      "tipX": 3564.5,
+      "tipY": 821,
+      "id": "new-pin-055",
+      "iconCandidates": [
+        {
+          "icon": "zerst-rte-siedlung.png",
+          "score": 0.874
+        },
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.487
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.479
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/zerst-rte-siedlung.png",
+      "classification": "image-match",
+      "geographicZoneId": "winterfaenge",
+      "territoryId": "winterfaenge",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 3564.5,
+        "y": 818,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 2037,
+      "y": 723,
+      "width": 75,
+      "height": 98,
+      "area": 4912,
+      "tipX": 2074.5,
+      "tipY": 821,
+      "id": "new-pin-056",
+      "iconCandidates": [
+        {
+          "icon": "bauernsiedlung-2.png",
+          "score": 0.837
+        },
+        {
+          "icon": "l-ndlicher-friedhof.png",
+          "score": 0.455
+        },
+        {
+          "icon": "kontor.png",
+          "score": 0.452
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "classification": "image-match",
+      "geographicZoneId": "schwerthohn",
+      "territoryId": "schwerthohn",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 2074.5,
+        "y": 818,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 1158,
+      "y": 736,
+      "width": 75,
+      "height": 99,
+      "area": 4924,
+      "tipX": 1195.5,
+      "tipY": 835,
+      "id": "new-pin-057",
+      "iconCandidates": [
+        {
+          "icon": "bergbausiedlung.png",
+          "score": 0.852
+        },
+        {
+          "icon": "antikes-grab.png",
+          "score": 0.55
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.516
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "classification": "image-match",
+      "geographicZoneId": "schwarzacker",
+      "territoryId": "schwarzacker",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 1195.5,
+        "y": 832,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 2403,
+      "y": 746,
+      "width": 75,
+      "height": 99,
+      "area": 4904,
+      "tipX": 2440.5,
+      "tipY": 845,
+      "id": "new-pin-058",
+      "iconCandidates": [
+        {
+          "icon": "bauernsiedlung-2.png",
+          "score": 0.869
+        },
+        {
+          "icon": "l-ndlicher-friedhof.png",
+          "score": 0.447
+        },
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.438
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "classification": "image-match",
+      "geographicZoneId": "rorikstal",
+      "territoryId": "schwarzdorn",
+      "territoryEvidence": "Farbiger Kreis und Verbindung zur benannten Herrschaft auf der neuen Zonenkarte.",
+      "position": {
+        "x": 2440.5,
+        "y": 842,
+        "origin": "top-left",
+        "unit": "pixel"
+      },
+      "exclave": false
+    },
+    {
+      "x": 2757,
+      "y": 779,
+      "width": 74,
+      "height": 99,
+      "area": 4896,
+      "tipX": 2794.0,
+      "tipY": 878,
+      "id": "new-pin-060",
+      "iconCandidates": [
+        {
+          "icon": "bauernsiedlung-2.png",
+          "score": 0.876
+        },
+        {
+          "icon": "l-ndlicher-friedhof.png",
+          "score": 0.434
+        },
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.429
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "classification": "image-match",
+      "geographicZoneId": "rorikstal",
+      "territoryId": "kampfgeborene",
+      "territoryEvidence": "Farbiger Kreis und Verbindung zur benannten Herrschaft auf der neuen Zonenkarte.",
+      "position": {
+        "x": 2794.0,
+        "y": 875,
+        "origin": "top-left",
+        "unit": "pixel"
+      },
+      "exclave": false
+    },
+    {
+      "x": 1524,
+      "y": 824,
+      "width": 75,
+      "height": 99,
+      "area": 4883,
+      "tipX": 1561.5,
+      "tipY": 923,
+      "id": "new-pin-061",
+      "iconCandidates": [
+        {
+          "icon": "bauernsiedlung-2.png",
+          "score": 0.88
+        },
+        {
+          "icon": "l-ndlicher-friedhof.png",
+          "score": 0.436
+        },
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.43
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "classification": "image-match",
+      "geographicZoneId": "schwerthohn",
+      "territoryId": "schwerthohn",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 1561.5,
+        "y": 920,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 2514,
+      "y": 828,
+      "width": 74,
+      "height": 99,
+      "area": 4855,
+      "tipX": 2551.0,
+      "tipY": 927,
+      "id": "new-pin-062",
+      "iconCandidates": [
+        {
+          "icon": "bauernsiedlung-2.png",
+          "score": 0.877
+        },
+        {
+          "icon": "kontor.png",
+          "score": 0.455
+        },
+        {
+          "icon": "l-ndlicher-friedhof.png",
+          "score": 0.453
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "classification": "image-match",
+      "geographicZoneId": "rorikstal",
+      "territoryId": "schwarzdorn",
+      "territoryEvidence": "Farbiger Kreis und Verbindung zur benannten Herrschaft auf der neuen Zonenkarte.",
+      "position": {
+        "x": 2551.0,
+        "y": 924,
+        "origin": "top-left",
+        "unit": "pixel"
+      },
+      "exclave": false
+    },
+    {
+      "x": 3233,
+      "y": 830,
+      "width": 75,
+      "height": 99,
+      "area": 4924,
+      "tipX": 3270.5,
+      "tipY": 929,
+      "id": "new-pin-063",
+      "iconCandidates": [
+        {
+          "icon": "bergbausiedlung.png",
+          "score": 0.827
+        },
+        {
+          "icon": "antikes-grab.png",
+          "score": 0.545
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.51
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "classification": "image-match",
+      "geographicZoneId": "winterfaenge",
+      "territoryId": "winterfaenge",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 3270.5,
+        "y": 926,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 1714,
+      "y": 832,
+      "width": 75,
+      "height": 99,
+      "area": 4930,
+      "tipX": 1751.5,
+      "tipY": 931,
+      "id": "new-pin-064",
+      "iconCandidates": [
+        {
+          "icon": "marktsiedlung.png",
+          "score": 0.652
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.532
+        },
+        {
+          "icon": "waldsiedlung.png",
+          "score": 0.472
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "classification": "image-match",
+      "geographicZoneId": "schwerthohn",
+      "territoryId": "schwerthohn",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 1751.5,
+        "y": 928,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 3550,
+      "y": 837,
+      "width": 75,
+      "height": 99,
+      "area": 4925,
+      "tipX": 3587.5,
+      "tipY": 936,
+      "id": "new-pin-065",
+      "iconCandidates": [
+        {
+          "icon": "zerst-rte-siedlung.png",
+          "score": 0.855
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.494
+        },
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.47
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/zerst-rte-siedlung.png",
+      "classification": "image-match",
+      "geographicZoneId": "winterfaenge",
+      "territoryId": "winterfaenge",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 3587.5,
+        "y": 933,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 3067,
+      "y": 849,
+      "width": 74,
+      "height": 99,
+      "area": 4880,
+      "tipX": 3104.0,
+      "tipY": 948,
+      "id": "new-pin-066",
+      "iconCandidates": [
+        {
+          "icon": "h-gelgrab.png",
+          "score": 0.848
+        },
+        {
+          "icon": "zerst-rte-kirche.png",
+          "score": 0.602
+        },
+        {
+          "icon": "kreaturenhort.png",
+          "score": 0.531
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/h-gelgrab.png",
+      "classification": "image-match",
+      "geographicZoneId": "rorikstal",
+      "territoryId": "rorikstal",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 3104.0,
+        "y": 945,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 2103,
+      "y": 865,
+      "width": 75,
+      "height": 99,
+      "area": 4933,
+      "tipX": 2140.5,
+      "tipY": 964,
+      "id": "new-pin-067",
+      "iconCandidates": [
+        {
+          "icon": "marktsiedlung.png",
+          "score": 0.677
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.548
+        },
+        {
+          "icon": "waldsiedlung.png",
+          "score": 0.471
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "classification": "image-match",
+      "geographicZoneId": "schwerthohn",
+      "territoryId": "schwerthohn",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 2140.5,
+        "y": 961,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 1045,
+      "y": 897,
+      "width": 74,
+      "height": 100,
+      "area": 4909,
+      "tipX": 1082.0,
+      "tipY": 997,
+      "id": "new-pin-068",
+      "iconCandidates": [
+        {
+          "icon": "bergbausiedlung.png",
+          "score": 0.886
+        },
+        {
+          "icon": "antikes-grab.png",
+          "score": 0.548
+        },
+        {
+          "icon": "grabmal.png",
+          "score": 0.519
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "classification": "image-match",
+      "geographicZoneId": "schwarzacker",
+      "territoryId": "schwarzacker",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 1082.0,
+        "y": 994,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 1269,
+      "y": 904,
+      "width": 75,
+      "height": 99,
+      "area": 4937,
+      "tipX": 1306.5,
+      "tipY": 1003,
+      "id": "new-pin-069",
+      "iconCandidates": [
+        {
+          "icon": "marktsiedlung.png",
+          "score": 0.697
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.534
+        },
+        {
+          "icon": "waldsiedlung.png",
+          "score": 0.484
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "classification": "image-match",
+      "geographicZoneId": "schwarzacker",
+      "territoryId": "schwarzacker",
+      "territoryEvidence": "Grenzlage anhand eines vergrößerten Ausschnitts der neuen Zonenkarte geprüft.",
+      "position": {
+        "x": 1306.5,
+        "y": 1000,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 2651,
+      "y": 938,
+      "width": 75,
+      "height": 99,
+      "area": 4918,
+      "tipX": 2688.5,
+      "tipY": 1037,
+      "id": "new-pin-070",
+      "iconCandidates": [
+        {
+          "icon": "klostersiedlung.png",
+          "score": 0.808
+        },
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.573
+        },
+        {
+          "icon": "quelle.png",
+          "score": 0.541
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/klostersiedlung.png",
+      "classification": "image-match",
+      "geographicZoneId": "daemmergrund",
+      "territoryId": "kampfgeborene",
+      "territoryEvidence": "Farbiger Kreis und Verbindung zur benannten Herrschaft auf der neuen Zonenkarte.",
+      "position": {
+        "x": 2688.5,
+        "y": 1034,
+        "origin": "top-left",
+        "unit": "pixel"
+      },
+      "exclave": false
+    },
+    {
+      "x": 1431,
+      "y": 941,
+      "width": 75,
+      "height": 99,
+      "area": 4895,
+      "tipX": 1468.5,
+      "tipY": 1040,
+      "id": "new-pin-071",
+      "iconCandidates": [
+        {
+          "icon": "h-gelgrab.png",
+          "score": 0.855
+        },
+        {
+          "icon": "zerst-rte-kirche.png",
+          "score": 0.606
+        },
+        {
+          "icon": "kreaturenhort.png",
+          "score": 0.528
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/h-gelgrab.png",
+      "classification": "image-match",
+      "geographicZoneId": "schwerthohn",
+      "territoryId": "schwerthohn",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 1468.5,
+        "y": 1037,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 3644,
+      "y": 951,
+      "width": 111,
+      "height": 149,
+      "area": 10972,
+      "tipX": 3699.5,
+      "tipY": 1100,
+      "id": "new-pin-072",
+      "iconCandidates": [
+        {
+          "icon": "stadt.png",
+          "score": 0.532
+        },
+        {
+          "icon": "waldsiedlung.png",
+          "score": 0.503
+        },
+        {
+          "icon": "druidenh-tte.png",
+          "score": 0.419
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "classification": "visual-review",
+      "geographicZoneId": "winterfaenge",
+      "territoryId": "winterfaenge",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 3699.5,
+        "y": 1097,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 2519,
+      "y": 974,
+      "width": 74,
+      "height": 99,
+      "area": 4855,
+      "tipX": 2556.0,
+      "tipY": 1073,
+      "id": "new-pin-073",
+      "iconCandidates": [
+        {
+          "icon": "marktsiedlung.png",
+          "score": 0.694
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.533
+        },
+        {
+          "icon": "ziegelbrenner.png",
+          "score": 0.474
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "classification": "image-match",
+      "geographicZoneId": "daemmergrund",
+      "territoryId": "daemmergrund",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 2556.0,
+        "y": 1070,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 3284,
+      "y": 978,
+      "width": 75,
+      "height": 99,
+      "area": 4914,
+      "tipX": 3321.5,
+      "tipY": 1077,
+      "id": "new-pin-074",
+      "iconCandidates": [
+        {
+          "icon": "festung.png",
+          "score": 0.621
+        },
+        {
+          "icon": "gildenzentrale.png",
+          "score": 0.386
+        },
+        {
+          "icon": "zerst-rter-turm.png",
+          "score": 0.383
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/festung.png",
+      "classification": "visual-review",
+      "geographicZoneId": "winterfaenge",
+      "territoryId": "winterfaenge",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 3321.5,
+        "y": 1074,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 3455,
+      "y": 979,
+      "width": 75,
+      "height": 99,
+      "area": 4923,
+      "tipX": 3492.5,
+      "tipY": 1078,
+      "id": "new-pin-075",
+      "iconCandidates": [
+        {
+          "icon": "marktsiedlung.png",
+          "score": 0.686
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.554
+        },
+        {
+          "icon": "waldsiedlung.png",
+          "score": 0.483
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "classification": "image-match",
+      "geographicZoneId": "winterfaenge",
+      "territoryId": "winterfaenge",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 3492.5,
+        "y": 1075,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 1622,
+      "y": 984,
+      "width": 74,
+      "height": 99,
+      "area": 4923,
+      "tipX": 1659.0,
+      "tipY": 1083,
+      "id": "new-pin-076",
+      "iconCandidates": [
+        {
+          "icon": "brauersiedlung.png",
+          "score": 0.685
+        },
+        {
+          "icon": "h-gelgrab.png",
+          "score": 0.39
+        },
+        {
+          "icon": "zerst-rte-kirche.png",
+          "score": 0.336
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/brauersiedlung.png",
+      "classification": "image-match",
+      "geographicZoneId": "schwerthohn",
+      "territoryId": "schwarzdorn",
+      "territoryEvidence": "Farbiger Kreis und Verbindung zur benannten Herrschaft auf der neuen Zonenkarte. Drei Schwarzdorn-Exklaven ausdrücklich vom Nutzer bestätigt.",
+      "position": {
+        "x": 1659.0,
+        "y": 1080,
+        "origin": "top-left",
+        "unit": "pixel"
+      },
+      "exclave": true,
+      "preferredSourceId": "50c088a0-501c-48ac-91a0-1bf3a223676f"
+    },
+    {
+      "x": 2870,
+      "y": 1040,
+      "width": 75,
+      "height": 100,
+      "area": 4906,
+      "tipX": 2907.5,
+      "tipY": 1140,
+      "id": "new-pin-077",
+      "iconCandidates": [
+        {
+          "icon": "bauernsiedlung-2.png",
+          "score": 0.85
+        },
+        {
+          "icon": "l-ndlicher-friedhof.png",
+          "score": 0.446
+        },
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.434
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "classification": "image-match",
+      "geographicZoneId": "rorikstal",
+      "territoryId": "kampfgeborene",
+      "territoryEvidence": "Farbiger Kreis und Verbindung zur benannten Herrschaft auf der neuen Zonenkarte.",
+      "position": {
+        "x": 2907.5,
+        "y": 1137,
+        "origin": "top-left",
+        "unit": "pixel"
+      },
+      "exclave": false
+    },
+    {
+      "x": 1884,
+      "y": 1064,
+      "width": 74,
+      "height": 98,
+      "area": 4759,
+      "tipX": 1921.0,
+      "tipY": 1162,
+      "id": "new-pin-078",
+      "iconCandidates": [
+        {
+          "icon": "bauernsiedlung-2.png",
+          "score": 0.896
+        },
+        {
+          "icon": "kontor.png",
+          "score": 0.457
+        },
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.451
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "classification": "image-match",
+      "geographicZoneId": "daemmergrund",
+      "territoryId": "daemmergrund",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 1921.0,
+        "y": 1159,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 1355,
+      "y": 1071,
+      "width": 75,
+      "height": 99,
+      "area": 4905,
+      "tipX": 1392.5,
+      "tipY": 1170,
+      "id": "new-pin-079",
+      "iconCandidates": [
+        {
+          "icon": "bauernsiedlung-2.png",
+          "score": 0.902
+        },
+        {
+          "icon": "l-ndlicher-friedhof.png",
+          "score": 0.437
+        },
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.434
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "classification": "image-match",
+      "geographicZoneId": "schwerthohn",
+      "territoryId": "schwerthohn",
+      "territoryEvidence": "Grenzlage anhand eines vergrößerten Ausschnitts der neuen Zonenkarte geprüft.",
+      "position": {
+        "x": 1392.5,
+        "y": 1167,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 3114,
+      "y": 1095,
+      "width": 74,
+      "height": 99,
+      "area": 4886,
+      "tipX": 3151.0,
+      "tipY": 1194,
+      "id": "new-pin-080",
+      "iconCandidates": [
+        {
+          "icon": "marktsiedlung.png",
+          "score": 0.698
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.541
+        },
+        {
+          "icon": "kreaturenhort.png",
+          "score": 0.472
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "classification": "image-match",
+      "geographicZoneId": "winterfaenge",
+      "territoryId": "winterfaenge",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 3151.0,
+        "y": 1191,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 3445,
+      "y": 1116,
+      "width": 75,
+      "height": 100,
+      "area": 4911,
+      "tipX": 3482.5,
+      "tipY": 1216,
+      "id": "new-pin-081",
+      "iconCandidates": [
+        {
+          "icon": "brauersiedlung.png",
+          "score": 0.639
+        },
+        {
+          "icon": "h-gelgrab.png",
+          "score": 0.416
+        },
+        {
+          "icon": "schmiede.png",
+          "score": 0.334
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/brauersiedlung.png",
+      "classification": "visual-review",
+      "geographicZoneId": "winterfaenge",
+      "territoryId": "schwarzdorn",
+      "territoryEvidence": "Farbiger Kreis und Verbindung zur benannten Herrschaft auf der neuen Zonenkarte. Drei Schwarzdorn-Exklaven ausdrücklich vom Nutzer bestätigt.",
+      "position": {
+        "x": 3482.5,
+        "y": 1213,
+        "origin": "top-left",
+        "unit": "pixel"
+      },
+      "exclave": true,
+      "preferredSourceId": "a5b36c66-3983-45d2-913f-d15a6274d476"
+    },
+    {
+      "x": 3297,
+      "y": 1119,
+      "width": 75,
+      "height": 98,
+      "area": 4907,
+      "tipX": 3334.5,
+      "tipY": 1217,
+      "id": "new-pin-082",
+      "iconCandidates": [
+        {
+          "icon": "bauernsiedlung-2.png",
+          "score": 0.853
+        },
+        {
+          "icon": "l-ndlicher-friedhof.png",
+          "score": 0.446
+        },
+        {
+          "icon": "kontor.png",
+          "score": 0.445
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "classification": "image-match",
+      "geographicZoneId": "winterfaenge",
+      "territoryId": "winterfaenge",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 3334.5,
+        "y": 1214,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 3672,
+      "y": 1131,
+      "width": 75,
+      "height": 98,
+      "area": 4912,
+      "tipX": 3709.5,
+      "tipY": 1229,
+      "id": "new-pin-083",
+      "iconCandidates": [
+        {
+          "icon": "bauernsiedlung-2.png",
+          "score": 0.907
+        },
+        {
+          "icon": "l-ndlicher-friedhof.png",
+          "score": 0.44
+        },
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.438
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "classification": "image-match",
+      "geographicZoneId": "winterfaenge",
+      "territoryId": "winterfaenge",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 3709.5,
+        "y": 1226,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 2352,
+      "y": 1136,
+      "width": 74,
+      "height": 99,
+      "area": 4919,
+      "tipX": 2389.0,
+      "tipY": 1235,
+      "id": "new-pin-084",
+      "iconCandidates": [
+        {
+          "icon": "marktsiedlung.png",
+          "score": 0.771
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.556
+        },
+        {
+          "icon": "burgsiedlung.png",
+          "score": 0.485
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "classification": "image-match",
+      "geographicZoneId": "daemmergrund",
+      "territoryId": "daemmergrund",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 2389.0,
+        "y": 1232,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 1231,
+      "y": 1143,
+      "width": 75,
+      "height": 99,
+      "area": 4841,
+      "tipX": 1268.5,
+      "tipY": 1242,
+      "id": "new-pin-085",
+      "iconCandidates": [
+        {
+          "icon": "marktsiedlung.png",
+          "score": 0.687
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.558
+        },
+        {
+          "icon": "waldsiedlung.png",
+          "score": 0.493
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "classification": "image-match",
+      "geographicZoneId": "klangheim",
+      "territoryId": "sterkr",
+      "territoryEvidence": "Farbiger Kreis und Verbindung zur benannten Herrschaft auf der neuen Zonenkarte.",
+      "position": {
+        "x": 1268.5,
+        "y": 1239,
+        "origin": "top-left",
+        "unit": "pixel"
+      },
+      "exclave": false
+    },
+    {
+      "x": 2727,
+      "y": 1147,
+      "width": 75,
+      "height": 98,
+      "area": 4768,
+      "tipX": 2764.5,
+      "tipY": 1245,
+      "id": "new-pin-086",
+      "iconCandidates": [
+        {
+          "icon": "au-enposten.png",
+          "score": 0.412
+        },
+        {
+          "icon": "zerst-rter-turm.png",
+          "score": 0.409
+        },
+        {
+          "icon": "befestigte-siedlung.png",
+          "score": 0.4
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/zerst-rter-turm.png",
+      "classification": "visual-review",
+      "geographicZoneId": "daemmergrund",
+      "territoryId": "daemmergrund",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 2764.5,
+        "y": 1242,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 2936,
+      "y": 1179,
+      "width": 73,
+      "height": 99,
+      "area": 4806,
+      "tipX": 2972.5,
+      "tipY": 1278,
+      "id": "new-pin-087",
+      "iconCandidates": [
+        {
+          "icon": "waldsiedlung.png",
+          "score": 0.834
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.651
+        },
+        {
+          "icon": "gildenzentrale.png",
+          "score": 0.649
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/waldsiedlung.png",
+      "classification": "image-match",
+      "geographicZoneId": "daemmertal",
+      "territoryId": "daemmertal",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 2972.5,
+        "y": 1275,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 1032,
+      "y": 1182,
+      "width": 75,
+      "height": 100,
+      "area": 4937,
+      "tipX": 1069.5,
+      "tipY": 1282,
+      "id": "new-pin-088",
+      "iconCandidates": [
+        {
+          "icon": "bergbausiedlung.png",
+          "score": 0.822
+        },
+        {
+          "icon": "antikes-grab.png",
+          "score": 0.536
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.513
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "classification": "image-match",
+      "geographicZoneId": "klangheim",
+      "territoryId": "sterkr",
+      "territoryEvidence": "Farbiger Kreis und Verbindung zur benannten Herrschaft auf der neuen Zonenkarte.",
+      "position": {
+        "x": 1069.5,
+        "y": 1279,
+        "origin": "top-left",
+        "unit": "pixel"
+      },
+      "exclave": false
+    },
+    {
+      "x": 1692,
+      "y": 1193,
+      "width": 74,
+      "height": 98,
+      "area": 4866,
+      "tipX": 1729.0,
+      "tipY": 1291,
+      "id": "new-pin-089",
+      "iconCandidates": [
+        {
+          "icon": "bauernsiedlung-2.png",
+          "score": 0.828
+        },
+        {
+          "icon": "l-ndlicher-friedhof.png",
+          "score": 0.442
+        },
+        {
+          "icon": "kontor.png",
+          "score": 0.438
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "classification": "image-match",
+      "geographicZoneId": "daemmergrund",
+      "territoryId": "daemmergrund",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 1729.0,
+        "y": 1288,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 2545,
+      "y": 1199,
+      "width": 75,
+      "height": 98,
+      "area": 4912,
+      "tipX": 2582.5,
+      "tipY": 1297,
+      "id": "new-pin-090",
+      "iconCandidates": [
+        {
+          "icon": "waldsiedlung.png",
+          "score": 0.817
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.623
+        },
+        {
+          "icon": "gildenzentrale.png",
+          "score": 0.619
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/waldsiedlung.png",
+      "classification": "image-match",
+      "geographicZoneId": "daemmergrund",
+      "territoryId": "daemmergrund",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 2582.5,
+        "y": 1294,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 3124,
+      "y": 1206,
+      "width": 74,
+      "height": 99,
+      "area": 4867,
+      "tipX": 3161.0,
+      "tipY": 1305,
+      "id": "new-pin-091",
+      "iconCandidates": [
+        {
+          "icon": "marktsiedlung.png",
+          "score": 0.723
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.539
+        },
+        {
+          "icon": "waldsiedlung.png",
+          "score": 0.487
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "classification": "image-match",
+      "geographicZoneId": "daemmertal",
+      "territoryId": "daemmertal",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 3161.0,
+        "y": 1302,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 3425,
+      "y": 1223,
+      "width": 74,
+      "height": 99,
+      "area": 4906,
+      "tipX": 3462.0,
+      "tipY": 1322,
+      "id": "new-pin-092",
+      "iconCandidates": [
+        {
+          "icon": "bauernsiedlung-2.png",
+          "score": 0.842
+        },
+        {
+          "icon": "l-ndlicher-friedhof.png",
+          "score": 0.438
+        },
+        {
+          "icon": "kontor.png",
+          "score": 0.43
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "classification": "image-match",
+      "geographicZoneId": "daemmertal",
+      "territoryId": "daemmertal",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 3462.0,
+        "y": 1319,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 2282,
+      "y": 1224,
+      "width": 113,
+      "height": 149,
+      "area": 11056,
+      "tipX": 2338.5,
+      "tipY": 1373,
+      "id": "new-pin-093",
+      "iconCandidates": [
+        {
+          "icon": "stadt.png",
+          "score": 0.518
+        },
+        {
+          "icon": "waldsiedlung.png",
+          "score": 0.505
+        },
+        {
+          "icon": "druidenh-tte.png",
+          "score": 0.451
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "classification": "visual-review",
+      "geographicZoneId": "daemmergrund",
+      "territoryId": "daemmergrund",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 2338.5,
+        "y": 1370,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 3685,
+      "y": 1253,
+      "width": 75,
+      "height": 99,
+      "area": 4928,
+      "tipX": 3722.5,
+      "tipY": 1352,
+      "id": "new-pin-094",
+      "iconCandidates": [
+        {
+          "icon": "marktsiedlung.png",
+          "score": 0.699
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.536
+        },
+        {
+          "icon": "burgsiedlung.png",
+          "score": 0.483
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "classification": "image-match",
+      "geographicZoneId": "winterfaenge",
+      "territoryId": "winterfaenge",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 3722.5,
+        "y": 1349,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 2101,
+      "y": 1268,
+      "width": 78,
+      "height": 101,
+      "area": 5199,
+      "tipX": 2140.0,
+      "tipY": 1369,
+      "id": "new-pin-095",
+      "iconCandidates": [
+        {
+          "icon": "waldsiedlung.png",
+          "score": 0.722
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.633
+        },
+        {
+          "icon": "gildenzentrale.png",
+          "score": 0.621
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/waldsiedlung.png",
+      "classification": "image-match",
+      "geographicZoneId": "daemmergrund",
+      "territoryId": "daemmergrund",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 2140.0,
+        "y": 1366,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 3349,
+      "y": 1304,
+      "width": 75,
+      "height": 98,
+      "area": 4803,
+      "tipX": 3386.5,
+      "tipY": 1402,
+      "id": "new-pin-096",
+      "iconCandidates": [
+        {
+          "icon": "bauernsiedlung-2.png",
+          "score": 0.829
+        },
+        {
+          "icon": "l-ndlicher-friedhof.png",
+          "score": 0.425
+        },
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.418
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "classification": "image-match",
+      "geographicZoneId": "daemmertal",
+      "territoryId": "daemmertal",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 3386.5,
+        "y": 1399,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 657,
+      "y": 1335,
+      "width": 90,
+      "height": 120,
+      "area": 7109,
+      "tipX": 702.0,
+      "tipY": 1455,
+      "id": "new-pin-097",
+      "iconCandidates": [
+        {
+          "icon": "methalle.png",
+          "score": 0.842
+        },
+        {
+          "icon": "schiffswerft.png",
+          "score": 0.683
+        },
+        {
+          "icon": "schmuggler2.png",
+          "score": 0.66
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/methalle.png",
+      "classification": "image-match",
+      "geographicZoneId": "klangheim",
+      "territoryId": "klangheim",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 702.0,
+        "y": 1452,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 1499,
+      "y": 1341,
+      "width": 90,
+      "height": 119,
+      "area": 6973,
+      "tipX": 1544.0,
+      "tipY": 1460,
+      "id": "new-pin-098",
+      "iconCandidates": [
+        {
+          "icon": "klostersiedlung.png",
+          "score": 0.719
+        },
+        {
+          "icon": "gasthof.png",
+          "score": 0.556
+        },
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.554
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/klostersiedlung.png",
+      "classification": "image-match",
+      "geographicZoneId": "klangheim",
+      "territoryId": "sterkr",
+      "territoryEvidence": "Farbiger Kreis und Verbindung zur benannten Herrschaft auf der neuen Zonenkarte.",
+      "position": {
+        "x": 1544.0,
+        "y": 1457,
+        "origin": "top-left",
+        "unit": "pixel"
+      },
+      "exclave": false
+    },
+    {
+      "x": 3708,
+      "y": 1367,
+      "width": 74,
+      "height": 99,
+      "area": 4839,
+      "tipX": 3745.0,
+      "tipY": 1466,
+      "id": "new-pin-099",
+      "iconCandidates": [
+        {
+          "icon": "marktsiedlung.png",
+          "score": 0.708
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.534
+        },
+        {
+          "icon": "antikes-grab.png",
+          "score": 0.469
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "classification": "image-match",
+      "geographicZoneId": "daemmertal",
+      "territoryId": "daemmertal",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 3745.0,
+        "y": 1463,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 909,
+      "y": 1376,
+      "width": 75,
+      "height": 99,
+      "area": 4932,
+      "tipX": 946.5,
+      "tipY": 1475,
+      "id": "new-pin-100",
+      "iconCandidates": [
+        {
+          "icon": "bergbausiedlung.png",
+          "score": 0.864
+        },
+        {
+          "icon": "antikes-grab.png",
+          "score": 0.543
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.509
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "classification": "image-match",
+      "geographicZoneId": "klangheim",
+      "territoryId": "sterkr",
+      "territoryEvidence": "Farbiger Kreis und Verbindung zur benannten Herrschaft auf der neuen Zonenkarte.",
+      "position": {
+        "x": 946.5,
+        "y": 1472,
+        "origin": "top-left",
+        "unit": "pixel"
+      },
+      "exclave": false
+    },
+    {
+      "x": 1929,
+      "y": 1387,
+      "width": 75,
+      "height": 99,
+      "area": 4917,
+      "tipX": 1966.5,
+      "tipY": 1486,
+      "id": "new-pin-101",
+      "iconCandidates": [
+        {
+          "icon": "marktsiedlung.png",
+          "score": 0.701
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.565
+        },
+        {
+          "icon": "waldsiedlung.png",
+          "score": 0.493
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "classification": "image-match",
+      "geographicZoneId": "daemmergrund",
+      "territoryId": "daemmergrund",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 1966.5,
+        "y": 1483,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 3129,
+      "y": 1387,
+      "width": 75,
+      "height": 98,
+      "area": 4902,
+      "tipX": 3166.5,
+      "tipY": 1485,
+      "id": "new-pin-102",
+      "iconCandidates": [
+        {
+          "icon": "bauernsiedlung-2.png",
+          "score": 0.926
+        },
+        {
+          "icon": "l-ndlicher-friedhof.png",
+          "score": 0.431
+        },
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.423
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "classification": "image-match",
+      "geographicZoneId": "daemmertal",
+      "territoryId": "daemmertal",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 3166.5,
+        "y": 1482,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 1171,
+      "y": 1394,
+      "width": 75,
+      "height": 100,
+      "area": 4805,
+      "tipX": 1208.5,
+      "tipY": 1494,
+      "id": "new-pin-103",
+      "iconCandidates": [
+        {
+          "icon": "marktsiedlung.png",
+          "score": 0.695
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.538
+        },
+        {
+          "icon": "waldsiedlung.png",
+          "score": 0.482
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "classification": "image-match",
+      "geographicZoneId": "klangheim",
+      "territoryId": "sterkr",
+      "territoryEvidence": "Farbiger Kreis und Verbindung zur benannten Herrschaft auf der neuen Zonenkarte.",
+      "position": {
+        "x": 1208.5,
+        "y": 1491,
+        "origin": "top-left",
+        "unit": "pixel"
+      },
+      "exclave": false
+    },
+    {
+      "x": 2160,
+      "y": 1438,
+      "width": 75,
+      "height": 99,
+      "area": 4923,
+      "tipX": 2197.5,
+      "tipY": 1537,
+      "id": "new-pin-104",
+      "iconCandidates": [
+        {
+          "icon": "waldsiedlung.png",
+          "score": 0.824
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.651
+        },
+        {
+          "icon": "gildenzentrale.png",
+          "score": 0.634
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/waldsiedlung.png",
+      "classification": "image-match",
+      "geographicZoneId": "daemmergrund",
+      "territoryId": "daemmergrund",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 2197.5,
+        "y": 1534,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 3365,
+      "y": 1440,
+      "width": 75,
+      "height": 99,
+      "area": 4886,
+      "tipX": 3402.5,
+      "tipY": 1539,
+      "id": "new-pin-105",
+      "iconCandidates": [
+        {
+          "icon": "h-gelgrab.png",
+          "score": 0.883
+        },
+        {
+          "icon": "zerst-rte-kirche.png",
+          "score": 0.608
+        },
+        {
+          "icon": "ziegelbrenner.png",
+          "score": 0.53
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/h-gelgrab.png",
+      "classification": "image-match",
+      "geographicZoneId": "daemmertal",
+      "territoryId": "daemmertal",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 3402.5,
+        "y": 1536,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 2669,
+      "y": 1479,
+      "width": 75,
+      "height": 99,
+      "area": 4923,
+      "tipX": 2706.5,
+      "tipY": 1578,
+      "id": "new-pin-106",
+      "iconCandidates": [
+        {
+          "icon": "marktsiedlung.png",
+          "score": 0.676
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.544
+        },
+        {
+          "icon": "waldsiedlung.png",
+          "score": 0.482
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "classification": "image-match",
+      "geographicZoneId": "daemmergrund",
+      "territoryId": "daemmergrund",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 2706.5,
+        "y": 1575,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 3515,
+      "y": 1482,
+      "width": 75,
+      "height": 100,
+      "area": 4915,
+      "tipX": 3552.5,
+      "tipY": 1582,
+      "id": "new-pin-107",
+      "iconCandidates": [
+        {
+          "icon": "bauernsiedlung-2.png",
+          "score": 0.861
+        },
+        {
+          "icon": "l-ndlicher-friedhof.png",
+          "score": 0.448
+        },
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.423
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "classification": "image-match",
+      "geographicZoneId": "daemmertal",
+      "territoryId": "daemmertal",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 3552.5,
+        "y": 1579,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 3807,
+      "y": 1483,
+      "width": 90,
+      "height": 119,
+      "area": 7021,
+      "tipX": 3852.0,
+      "tipY": 1602,
+      "id": "new-pin-108",
+      "iconCandidates": [
+        {
+          "icon": "zerst-rter-turm.png",
+          "score": 0.472
+        },
+        {
+          "icon": "au-enposten.png",
+          "score": 0.431
+        },
+        {
+          "icon": "turm.png",
+          "score": 0.416
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/zerst-rter-turm.png",
+      "classification": "visual-review",
+      "geographicZoneId": "daemmertal",
+      "territoryId": "daemmertal",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 3852.0,
+        "y": 1599,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 2834,
+      "y": 1496,
+      "width": 74,
+      "height": 99,
+      "area": 4808,
+      "tipX": 2871.0,
+      "tipY": 1595,
+      "id": "new-pin-109",
+      "iconCandidates": [
+        {
+          "icon": "marktsiedlung.png",
+          "score": 0.741
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.524
+        },
+        {
+          "icon": "waldsiedlung.png",
+          "score": 0.491
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "classification": "image-match",
+      "geographicZoneId": "daemmergrund",
+      "territoryId": "daemmergrund",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 2871.0,
+        "y": 1592,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 3165,
+      "y": 1534,
+      "width": 75,
+      "height": 99,
+      "area": 4931,
+      "tipX": 3202.5,
+      "tipY": 1633,
+      "id": "new-pin-110",
+      "iconCandidates": [
+        {
+          "icon": "marktsiedlung.png",
+          "score": 0.677
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.517
+        },
+        {
+          "icon": "waldsiedlung.png",
+          "score": 0.49
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "classification": "image-match",
+      "geographicZoneId": "daemmertal",
+      "territoryId": "daemmertal",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 3202.5,
+        "y": 1630,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 932,
+      "y": 1542,
+      "width": 124,
+      "height": 164,
+      "area": 13383,
+      "tipX": 994.0,
+      "tipY": 1706,
+      "id": "new-pin-111",
+      "iconCandidates": [
+        {
+          "icon": "stadt.png",
+          "score": 0.509
+        },
+        {
+          "icon": "waldsiedlung.png",
+          "score": 0.501
+        },
+        {
+          "icon": "druidenh-tte.png",
+          "score": 0.426
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "classification": "visual-review",
+      "geographicZoneId": "klangheim",
+      "territoryId": "klangheim",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 994.0,
+        "y": 1703,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 2978,
+      "y": 1547,
+      "width": 74,
+      "height": 99,
+      "area": 4904,
+      "tipX": 3015.0,
+      "tipY": 1646,
+      "id": "new-pin-112",
+      "iconCandidates": [
+        {
+          "icon": "turm.png",
+          "score": 0.689
+        },
+        {
+          "icon": "magierturm.png",
+          "score": 0.479
+        },
+        {
+          "icon": "leuchtturm.png",
+          "score": 0.439
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/turm.png",
+      "classification": "image-match",
+      "geographicZoneId": "daemmertal",
+      "territoryId": "daemmertal",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 3015.0,
+        "y": 1643,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 1412,
+      "y": 1561,
+      "width": 75,
+      "height": 99,
+      "area": 4921,
+      "tipX": 1449.5,
+      "tipY": 1660,
+      "id": "new-pin-113",
+      "iconCandidates": [
+        {
+          "icon": "bauernsiedlung-2.png",
+          "score": 0.795
+        },
+        {
+          "icon": "l-ndlicher-friedhof.png",
+          "score": 0.441
+        },
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.439
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "classification": "image-match",
+      "geographicZoneId": "klangheim",
+      "territoryId": "sterkr",
+      "territoryEvidence": "Farbiger Kreis und Verbindung zur benannten Herrschaft auf der neuen Zonenkarte.",
+      "position": {
+        "x": 1449.5,
+        "y": 1657,
+        "origin": "top-left",
+        "unit": "pixel"
+      },
+      "exclave": false
+    },
+    {
+      "x": 3340,
+      "y": 1584,
+      "width": 75,
+      "height": 99,
+      "area": 4916,
+      "tipX": 3377.5,
+      "tipY": 1683,
+      "id": "new-pin-114",
+      "iconCandidates": [
+        {
+          "icon": "zerst-rte-siedlung.png",
+          "score": 0.859
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.489
+        },
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.472
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/zerst-rte-siedlung.png",
+      "classification": "image-match",
+      "geographicZoneId": "daemmertal",
+      "territoryId": "daemmertal",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 3377.5,
+        "y": 1680,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 2404,
+      "y": 1639,
+      "width": 75,
+      "height": 99,
+      "area": 4922,
+      "tipX": 2441.5,
+      "tipY": 1738,
+      "id": "new-pin-115",
+      "iconCandidates": [
+        {
+          "icon": "waldsiedlung.png",
+          "score": 0.814
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.648
+        },
+        {
+          "icon": "gildenzentrale.png",
+          "score": 0.645
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/waldsiedlung.png",
+      "classification": "image-match",
+      "geographicZoneId": "daemmergrund",
+      "territoryId": "daemmergrund",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 2441.5,
+        "y": 1735,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 3656,
+      "y": 1658,
+      "width": 112,
+      "height": 149,
+      "area": 11078,
+      "tipX": 3712.0,
+      "tipY": 1807,
+      "id": "new-pin-116",
+      "iconCandidates": [
+        {
+          "icon": "waldsiedlung.png",
+          "score": 0.5
+        },
+        {
+          "icon": "stadt.png",
+          "score": 0.496
+        },
+        {
+          "icon": "l-ndliche-universit-t.png",
+          "score": 0.422
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "classification": "visual-review",
+      "geographicZoneId": "daemmertal",
+      "territoryId": "daemmertal",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 3712.0,
+        "y": 1804,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 1513,
+      "y": 1660,
+      "width": 74,
+      "height": 99,
+      "area": 4810,
+      "tipX": 1550.0,
+      "tipY": 1759,
+      "id": "new-pin-117",
+      "iconCandidates": [
+        {
+          "icon": "zerst-rte-siedlung.png",
+          "score": 0.915
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.489
+        },
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.476
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/zerst-rte-siedlung.png",
+      "classification": "image-match",
+      "geographicZoneId": "daemmergrund",
+      "territoryId": "daemmergrund",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 1550.0,
+        "y": 1756,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 3944,
+      "y": 1678,
+      "width": 75,
+      "height": 100,
+      "area": 4916,
+      "tipX": 3981.5,
+      "tipY": 1778,
+      "id": "new-pin-118",
+      "iconCandidates": [
+        {
+          "icon": "zerst-rte-siedlung.png",
+          "score": 0.845
+        },
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.481
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.479
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/zerst-rte-siedlung.png",
+      "classification": "image-match",
+      "geographicZoneId": "daemmertal",
+      "territoryId": "daemmertal",
+      "territoryEvidence": "Grenzlage anhand eines vergrößerten Ausschnitts der neuen Zonenkarte geprüft.",
+      "position": {
+        "x": 3981.5,
+        "y": 1775,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 2783,
+      "y": 1694,
+      "width": 75,
+      "height": 98,
+      "area": 4730,
+      "tipX": 2820.5,
+      "tipY": 1792,
+      "id": "new-pin-119",
+      "iconCandidates": [
+        {
+          "icon": "zerst-rter-turm.png",
+          "score": 0.453
+        },
+        {
+          "icon": "au-enposten.png",
+          "score": 0.433
+        },
+        {
+          "icon": "befestigte-siedlung.png",
+          "score": 0.397
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/zerst-rter-turm.png",
+      "classification": "visual-review",
+      "geographicZoneId": "daemmergrund",
+      "territoryId": "daemmergrund",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 2820.5,
+        "y": 1789,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 3203,
+      "y": 1700,
+      "width": 74,
+      "height": 99,
+      "area": 4926,
+      "tipX": 3240.0,
+      "tipY": 1799,
+      "id": "new-pin-120",
+      "iconCandidates": [
+        {
+          "icon": "zerst-rte-siedlung.png",
+          "score": 0.893
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.489
+        },
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.474
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/zerst-rte-siedlung.png",
+      "classification": "image-match",
+      "geographicZoneId": "daemmertal",
+      "territoryId": "daemmertal",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 3240.0,
+        "y": 1796,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 1989,
+      "y": 1723,
+      "width": 75,
+      "height": 99,
+      "area": 4916,
+      "tipX": 2026.5,
+      "tipY": 1822,
+      "id": "new-pin-121",
+      "iconCandidates": [
+        {
+          "icon": "waldsiedlung.png",
+          "score": 0.805
+        },
+        {
+          "icon": "gildenzentrale.png",
+          "score": 0.651
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.649
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/waldsiedlung.png",
+      "classification": "image-match",
+      "geographicZoneId": "daemmergrund",
+      "territoryId": "daemmergrund",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 2026.5,
+        "y": 1819,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 3011,
+      "y": 1729,
+      "width": 75,
+      "height": 99,
+      "area": 4921,
+      "tipX": 3048.5,
+      "tipY": 1828,
+      "id": "new-pin-122",
+      "iconCandidates": [
+        {
+          "icon": "waldsiedlung.png",
+          "score": 0.822
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.645
+        },
+        {
+          "icon": "gildenzentrale.png",
+          "score": 0.631
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/waldsiedlung.png",
+      "classification": "image-match",
+      "geographicZoneId": "daemmertal",
+      "territoryId": "daemmertal",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 3048.5,
+        "y": 1825,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 3460,
+      "y": 1735,
+      "width": 75,
+      "height": 99,
+      "area": 4933,
+      "tipX": 3497.5,
+      "tipY": 1834,
+      "id": "new-pin-123",
+      "iconCandidates": [
+        {
+          "icon": "zerst-rte-siedlung.png",
+          "score": 0.823
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.5
+        },
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.464
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/zerst-rte-siedlung.png",
+      "classification": "image-match",
+      "geographicZoneId": "daemmertal",
+      "territoryId": "daemmertal",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 3497.5,
+        "y": 1831,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 2577,
+      "y": 1768,
+      "width": 75,
+      "height": 99,
+      "area": 4892,
+      "tipX": 2614.5,
+      "tipY": 1867,
+      "id": "new-pin-124",
+      "iconCandidates": [
+        {
+          "icon": "h-gelgrab.png",
+          "score": 0.875
+        },
+        {
+          "icon": "zerst-rte-kirche.png",
+          "score": 0.617
+        },
+        {
+          "icon": "kreaturenhort.png",
+          "score": 0.534
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/h-gelgrab.png",
+      "classification": "image-match",
+      "geographicZoneId": "daemmergrund",
+      "territoryId": "daemmergrund",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 2614.5,
+        "y": 1864,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 1035,
+      "y": 1790,
+      "width": 75,
+      "height": 100,
+      "area": 4903,
+      "tipX": 1072.5,
+      "tipY": 1890,
+      "id": "new-pin-125",
+      "iconCandidates": [
+        {
+          "icon": "bauernsiedlung-2.png",
+          "score": 0.842
+        },
+        {
+          "icon": "l-ndlicher-friedhof.png",
+          "score": 0.45
+        },
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.438
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "classification": "image-match",
+      "geographicZoneId": "klangheim",
+      "territoryId": "soekeren",
+      "territoryEvidence": "Farbiger Kreis und Verbindung zur benannten Herrschaft auf der neuen Zonenkarte.",
+      "position": {
+        "x": 1072.5,
+        "y": 1887,
+        "origin": "top-left",
+        "unit": "pixel"
+      },
+      "exclave": false
+    },
+    {
+      "x": 2267,
+      "y": 1807,
+      "width": 75,
+      "height": 100,
+      "area": 4937,
+      "tipX": 2304.5,
+      "tipY": 1907,
+      "id": "new-pin-126",
+      "iconCandidates": [
+        {
+          "icon": "zerst-rte-siedlung.png",
+          "score": 0.834
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.498
+        },
+        {
+          "icon": "kreaturenhort.png",
+          "score": 0.462
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/zerst-rte-siedlung.png",
+      "classification": "image-match",
+      "geographicZoneId": "daemmergrund",
+      "territoryId": "daemmergrund",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 2304.5,
+        "y": 1904,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 1776,
+      "y": 1813,
+      "width": 75,
+      "height": 99,
+      "area": 4924,
+      "tipX": 1813.5,
+      "tipY": 1912,
+      "id": "new-pin-127",
+      "iconCandidates": [
+        {
+          "icon": "festung.png",
+          "score": 0.636
+        },
+        {
+          "icon": "zerst-rter-turm.png",
+          "score": 0.4
+        },
+        {
+          "icon": "gildenzentrale.png",
+          "score": 0.39
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/festung.png",
+      "classification": "visual-review",
+      "geographicZoneId": "daemmergrund",
+      "territoryId": "daemmergrund",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 1813.5,
+        "y": 1909,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 1360,
+      "y": 1833,
+      "width": 75,
+      "height": 99,
+      "area": 4932,
+      "tipX": 1397.5,
+      "tipY": 1932,
+      "id": "new-pin-128",
+      "iconCandidates": [
+        {
+          "icon": "brauersiedlung.png",
+          "score": 0.659
+        },
+        {
+          "icon": "h-gelgrab.png",
+          "score": 0.395
+        },
+        {
+          "icon": "schmiede.png",
+          "score": 0.325
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/brauersiedlung.png",
+      "classification": "image-match",
+      "geographicZoneId": "klangheim",
+      "territoryId": "schwarzdorn",
+      "territoryEvidence": "Farbiger Kreis und Verbindung zur benannten Herrschaft auf der neuen Zonenkarte. Drei Schwarzdorn-Exklaven ausdrücklich vom Nutzer bestätigt. Zusätzlicher Standort in Klangheim; Name bleibt offen.",
+      "position": {
+        "x": 1397.5,
+        "y": 1929,
+        "origin": "top-left",
+        "unit": "pixel"
+      },
+      "exclave": true,
+      "reservedUnassigned": true
+    },
+    {
+      "x": 801,
+      "y": 1884,
+      "width": 74,
+      "height": 99,
+      "area": 4908,
+      "tipX": 838.0,
+      "tipY": 1983,
+      "id": "new-pin-129",
+      "iconCandidates": [
+        {
+          "icon": "klostersiedlung.png",
+          "score": 0.779
+        },
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.57
+        },
+        {
+          "icon": "gasthof.png",
+          "score": 0.546
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/klostersiedlung.png",
+      "classification": "image-match",
+      "geographicZoneId": "klangheim",
+      "territoryId": "soekeren",
+      "territoryEvidence": "Farbiger Kreis und Verbindung zur benannten Herrschaft auf der neuen Zonenkarte.",
+      "position": {
+        "x": 838.0,
+        "y": 1980,
+        "origin": "top-left",
+        "unit": "pixel"
+      },
+      "exclave": false
+    },
+    {
+      "x": 3013,
+      "y": 1887,
+      "width": 75,
+      "height": 99,
+      "area": 4891,
+      "tipX": 3050.5,
+      "tipY": 1986,
+      "id": "new-pin-130",
+      "iconCandidates": [
+        {
+          "icon": "zerst-rter-turm.png",
+          "score": 0.462
+        },
+        {
+          "icon": "au-enposten.png",
+          "score": 0.414
+        },
+        {
+          "icon": "exekutionsplatz.png",
+          "score": 0.398
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/zerst-rter-turm.png",
+      "classification": "visual-review",
+      "geographicZoneId": "daemmergrund",
+      "territoryId": "daemmergrund",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 3050.5,
+        "y": 1983,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 2592,
+      "y": 1899,
+      "width": 75,
+      "height": 99,
+      "area": 4940,
+      "tipX": 2629.5,
+      "tipY": 1998,
+      "id": "new-pin-131",
+      "iconCandidates": [
+        {
+          "icon": "zerst-rte-siedlung.png",
+          "score": 0.824
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.5
+        },
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.468
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/zerst-rte-siedlung.png",
+      "classification": "image-match",
+      "geographicZoneId": "daemmergrund",
+      "territoryId": "daemmergrund",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 2629.5,
+        "y": 1995,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 1923,
+      "y": 1930,
+      "width": 75,
+      "height": 99,
+      "area": 4906,
+      "tipX": 1960.5,
+      "tipY": 2029,
+      "id": "new-pin-132",
+      "iconCandidates": [
+        {
+          "icon": "h-gelgrab.png",
+          "score": 0.832
+        },
+        {
+          "icon": "zerst-rte-kirche.png",
+          "score": 0.606
+        },
+        {
+          "icon": "ziegelbrenner.png",
+          "score": 0.544
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/h-gelgrab.png",
+      "classification": "image-match",
+      "geographicZoneId": "daemmergrund",
+      "territoryId": "daemmergrund",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 1960.5,
+        "y": 2026,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 1141,
+      "y": 1940,
+      "width": 75,
+      "height": 99,
+      "area": 4933,
+      "tipX": 1178.5,
+      "tipY": 2039,
+      "id": "new-pin-133",
+      "iconCandidates": [
+        {
+          "icon": "zerst-rte-siedlung.png",
+          "score": 0.883
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.486
+        },
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.472
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/zerst-rte-siedlung.png",
+      "classification": "image-match",
+      "geographicZoneId": "klangheim",
+      "territoryId": "soekeren",
+      "territoryEvidence": "Farbiger Kreis und Verbindung zur benannten Herrschaft auf der neuen Zonenkarte.",
+      "position": {
+        "x": 1178.5,
+        "y": 2036,
+        "origin": "top-left",
+        "unit": "pixel"
+      },
+      "exclave": false
+    },
+    {
+      "x": 1552,
+      "y": 1959,
+      "width": 73,
+      "height": 100,
+      "area": 4857,
+      "tipX": 1588.5,
+      "tipY": 2059,
+      "id": "new-pin-134",
+      "iconCandidates": [
+        {
+          "icon": "klostersiedlung.png",
+          "score": 0.812
+        },
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.57
+        },
+        {
+          "icon": "gasthof.png",
+          "score": 0.532
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/klostersiedlung.png",
+      "classification": "image-match",
+      "geographicZoneId": "daemmergrund",
+      "territoryId": "soekeren",
+      "territoryEvidence": "Farbiger Kreis und Verbindung zur benannten Herrschaft auf der neuen Zonenkarte.",
+      "position": {
+        "x": 1588.5,
+        "y": 2056,
+        "origin": "top-left",
+        "unit": "pixel"
+      },
+      "exclave": false
+    },
+    {
+      "x": 600,
+      "y": 1967,
+      "width": 74,
+      "height": 99,
+      "area": 4794,
+      "tipX": 637.0,
+      "tipY": 2066,
+      "id": "new-pin-135",
+      "iconCandidates": [
+        {
+          "icon": "bergbausiedlung.png",
+          "score": 0.856
+        },
+        {
+          "icon": "antikes-grab.png",
+          "score": 0.545
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.512
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "classification": "image-match",
+      "geographicZoneId": "klangheim",
+      "territoryId": "skald",
+      "territoryEvidence": "Farbiger Kreis und Verbindung zur benannten Herrschaft auf der neuen Zonenkarte.",
+      "position": {
+        "x": 637.0,
+        "y": 2063,
+        "origin": "top-left",
+        "unit": "pixel"
+      },
+      "exclave": false
+    },
+    {
+      "x": 2092,
+      "y": 1973,
+      "width": 75,
+      "height": 99,
+      "area": 4922,
+      "tipX": 2129.5,
+      "tipY": 2072,
+      "id": "new-pin-136",
+      "iconCandidates": [
+        {
+          "icon": "zerst-rte-siedlung.png",
+          "score": 0.854
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.484
+        },
+        {
+          "icon": "bauernh-tte.png",
+          "score": 0.458
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/zerst-rte-siedlung.png",
+      "classification": "image-match",
+      "geographicZoneId": "daemmergrund",
+      "territoryId": "daemmergrund",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 2129.5,
+        "y": 2069,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 2431,
+      "y": 2024,
+      "width": 75,
+      "height": 99,
+      "area": 4882,
+      "tipX": 2468.5,
+      "tipY": 2123,
+      "id": "new-pin-137",
+      "iconCandidates": [
+        {
+          "icon": "zerst-rte-siedlung.png",
+          "score": 0.786
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.486
+        },
+        {
+          "icon": "bauernh-tte.png",
+          "score": 0.461
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/zerst-rte-siedlung.png",
+      "classification": "image-match",
+      "geographicZoneId": "daemmergrund",
+      "territoryId": "daemmergrund",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 2468.5,
+        "y": 2120,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 982,
+      "y": 2038,
+      "width": 75,
+      "height": 99,
+      "area": 4922,
+      "tipX": 1019.5,
+      "tipY": 2137,
+      "id": "new-pin-138",
+      "iconCandidates": [
+        {
+          "icon": "zerst-rter-turm.png",
+          "score": 0.433
+        },
+        {
+          "icon": "exekutionsplatz.png",
+          "score": 0.406
+        },
+        {
+          "icon": "m-hle.png",
+          "score": 0.402
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/zerst-rter-turm.png",
+      "classification": "visual-review",
+      "geographicZoneId": "klangheim",
+      "territoryId": "soekeren",
+      "territoryEvidence": "Farbiger Kreis und Verbindung zur benannten Herrschaft auf der neuen Zonenkarte.",
+      "position": {
+        "x": 1019.5,
+        "y": 2134,
+        "origin": "top-left",
+        "unit": "pixel"
+      },
+      "exclave": false
+    },
+    {
+      "x": 1379,
+      "y": 2073,
+      "width": 90,
+      "height": 119,
+      "area": 7121,
+      "tipX": 1424.0,
+      "tipY": 2192,
+      "id": "new-pin-139",
+      "iconCandidates": [
+        {
+          "icon": "j-gerlager.png",
+          "score": 0.531
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.453
+        },
+        {
+          "icon": "einzelnemine.png",
+          "score": 0.441
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/j-gerlager.png",
+      "classification": "visual-review",
+      "geographicZoneId": "klangheim",
+      "territoryId": "klangheim",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 1424.0,
+        "y": 2189,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 2229,
+      "y": 2080,
+      "width": 74,
+      "height": 98,
+      "area": 4804,
+      "tipX": 2266.0,
+      "tipY": 2178,
+      "id": "new-pin-140",
+      "iconCandidates": [
+        {
+          "icon": "zerst-rter-turm.png",
+          "score": 0.496
+        },
+        {
+          "icon": "gipfel.png",
+          "score": 0.413
+        },
+        {
+          "icon": "befestigte-siedlung.png",
+          "score": 0.409
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/zerst-rter-turm.png",
+      "classification": "visual-review",
+      "geographicZoneId": "dunkelhain",
+      "territoryId": "dunkelhain",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 2266.0,
+        "y": 2175,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 2657,
+      "y": 2083,
+      "width": 75,
+      "height": 99,
+      "area": 4928,
+      "tipX": 2694.5,
+      "tipY": 2182,
+      "id": "new-pin-141",
+      "iconCandidates": [
+        {
+          "icon": "zerst-rter-turm.png",
+          "score": 0.465
+        },
+        {
+          "icon": "au-enposten.png",
+          "score": 0.415
+        },
+        {
+          "icon": "exekutionsplatz.png",
+          "score": 0.399
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/zerst-rter-turm.png",
+      "classification": "visual-review",
+      "geographicZoneId": "daemmergrund",
+      "territoryId": "daemmergrund",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 2694.5,
+        "y": 2179,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 1870,
+      "y": 2096,
+      "width": 74,
+      "height": 99,
+      "area": 4803,
+      "tipX": 1907.0,
+      "tipY": 2195,
+      "id": "new-pin-142",
+      "iconCandidates": [
+        {
+          "icon": "zerst-rte-siedlung.png",
+          "score": 0.842
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.512
+        },
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.473
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/zerst-rte-siedlung.png",
+      "classification": "image-match",
+      "geographicZoneId": "dunkelhain",
+      "territoryId": "dunkelhain",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 1907.0,
+        "y": 2192,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 467,
+      "y": 2150,
+      "width": 75,
+      "height": 99,
+      "area": 4863,
+      "tipX": 504.5,
+      "tipY": 2249,
+      "id": "new-pin-143",
+      "iconCandidates": [
+        {
+          "icon": "bauernsiedlung-2.png",
+          "score": 0.883
+        },
+        {
+          "icon": "l-ndlicher-friedhof.png",
+          "score": 0.459
+        },
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.441
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "classification": "image-match",
+      "geographicZoneId": "klangheim",
+      "territoryId": "skald",
+      "territoryEvidence": "Farbiger Kreis und Verbindung zur benannten Herrschaft auf der neuen Zonenkarte.",
+      "position": {
+        "x": 504.5,
+        "y": 2246,
+        "origin": "top-left",
+        "unit": "pixel"
+      },
+      "exclave": false
+    },
+    {
+      "x": 819,
+      "y": 2191,
+      "width": 74,
+      "height": 100,
+      "area": 4916,
+      "tipX": 856.0,
+      "tipY": 2291,
+      "id": "new-pin-144",
+      "iconCandidates": [
+        {
+          "icon": "marktsiedlung.png",
+          "score": 0.763
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.566
+        },
+        {
+          "icon": "waldsiedlung.png",
+          "score": 0.502
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "classification": "image-match",
+      "geographicZoneId": "klangheim",
+      "territoryId": "skald",
+      "territoryEvidence": "Farbiger Kreis und Verbindung zur benannten Herrschaft auf der neuen Zonenkarte.",
+      "position": {
+        "x": 856.0,
+        "y": 2288,
+        "origin": "top-left",
+        "unit": "pixel"
+      },
+      "exclave": false
+    },
+    {
+      "x": 2601,
+      "y": 2192,
+      "width": 75,
+      "height": 99,
+      "area": 4841,
+      "tipX": 2638.5,
+      "tipY": 2291,
+      "id": "new-pin-145",
+      "iconCandidates": [
+        {
+          "icon": "zerst-rte-siedlung.png",
+          "score": 0.75
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.502
+        },
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.451
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/zerst-rte-siedlung.png",
+      "classification": "image-match",
+      "geographicZoneId": "dunkelhain",
+      "territoryId": "dunkelhain",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 2638.5,
+        "y": 2288,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 637,
+      "y": 2219,
+      "width": 74,
+      "height": 99,
+      "area": 4859,
+      "tipX": 674.0,
+      "tipY": 2318,
+      "id": "new-pin-146",
+      "iconCandidates": [
+        {
+          "icon": "marktsiedlung.png",
+          "score": 0.731
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.549
+        },
+        {
+          "icon": "waldsiedlung.png",
+          "score": 0.488
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "classification": "image-match",
+      "geographicZoneId": "klangheim",
+      "territoryId": "skald",
+      "territoryEvidence": "Farbiger Kreis und Verbindung zur benannten Herrschaft auf der neuen Zonenkarte.",
+      "position": {
+        "x": 674.0,
+        "y": 2315,
+        "origin": "top-left",
+        "unit": "pixel"
+      },
+      "exclave": false
+    },
+    {
+      "x": 1202,
+      "y": 2228,
+      "width": 75,
+      "height": 99,
+      "area": 4840,
+      "tipX": 1239.5,
+      "tipY": 2327,
+      "id": "new-pin-147",
+      "iconCandidates": [
+        {
+          "icon": "zerst-rte-siedlung.png",
+          "score": 0.877
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.479
+        },
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.476
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/zerst-rte-siedlung.png",
+      "classification": "image-match",
+      "geographicZoneId": "klangheim",
+      "territoryId": "soekeren",
+      "territoryEvidence": "Farbiger Kreis und Verbindung zur benannten Herrschaft auf der neuen Zonenkarte.",
+      "position": {
+        "x": 1239.5,
+        "y": 2324,
+        "origin": "top-left",
+        "unit": "pixel"
+      },
+      "exclave": false
+    },
+    {
+      "x": 1757,
+      "y": 2260,
+      "width": 75,
+      "height": 99,
+      "area": 4915,
+      "tipX": 1794.5,
+      "tipY": 2359,
+      "id": "new-pin-148",
+      "iconCandidates": [
+        {
+          "icon": "zerst-rter-turm.png",
+          "score": 0.493
+        },
+        {
+          "icon": "au-enposten.png",
+          "score": 0.406
+        },
+        {
+          "icon": "exekutionsplatz.png",
+          "score": 0.401
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/zerst-rter-turm.png",
+      "classification": "visual-review",
+      "geographicZoneId": "dunkelhain",
+      "territoryId": "dunkelhain",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 1794.5,
+        "y": 2356,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 2443,
+      "y": 2262,
+      "width": 75,
+      "height": 99,
+      "area": 4932,
+      "tipX": 2480.5,
+      "tipY": 2361,
+      "id": "new-pin-149",
+      "iconCandidates": [
+        {
+          "icon": "zerst-rte-siedlung.png",
+          "score": 0.796
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.491
+        },
+        {
+          "icon": "bauernh-tte.png",
+          "score": 0.461
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/zerst-rte-siedlung.png",
+      "classification": "image-match",
+      "geographicZoneId": "dunkelhain",
+      "territoryId": "dunkelhain",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 2480.5,
+        "y": 2358,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 1940,
+      "y": 2275,
+      "width": 75,
+      "height": 99,
+      "area": 4930,
+      "tipX": 1977.5,
+      "tipY": 2374,
+      "id": "new-pin-150",
+      "iconCandidates": [
+        {
+          "icon": "zerst-rte-siedlung.png",
+          "score": 0.813
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.492
+        },
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.481
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/zerst-rte-siedlung.png",
+      "classification": "image-match",
+      "geographicZoneId": "dunkelhain",
+      "territoryId": "dunkelhain",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 1977.5,
+        "y": 2371,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 855,
+      "y": 2314,
+      "width": 75,
+      "height": 100,
+      "area": 4837,
+      "tipX": 892.5,
+      "tipY": 2414,
+      "id": "new-pin-151",
+      "iconCandidates": [
+        {
+          "icon": "turm.png",
+          "score": 0.654
+        },
+        {
+          "icon": "magierturm.png",
+          "score": 0.484
+        },
+        {
+          "icon": "leuchtturm.png",
+          "score": 0.438
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/turm.png",
+      "classification": "image-match",
+      "geographicZoneId": "klangheim",
+      "territoryId": "skald",
+      "territoryEvidence": "Farbiger Kreis und Verbindung zur benannten Herrschaft auf der neuen Zonenkarte.",
+      "position": {
+        "x": 892.5,
+        "y": 2411,
+        "origin": "top-left",
+        "unit": "pixel"
+      },
+      "exclave": false
+    },
+    {
+      "x": 2300,
+      "y": 2327,
+      "width": 74,
+      "height": 99,
+      "area": 4696,
+      "tipX": 2337.0,
+      "tipY": 2426,
+      "id": "new-pin-152",
+      "iconCandidates": [
+        {
+          "icon": "festung.png",
+          "score": 0.544
+        },
+        {
+          "icon": "exekutionsplatz.png",
+          "score": 0.38
+        },
+        {
+          "icon": "m-hle.png",
+          "score": 0.368
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/festung.png",
+      "classification": "visual-review",
+      "geographicZoneId": "dunkelhain",
+      "territoryId": "dunkelhain",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 2337.0,
+        "y": 2423,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 227,
+      "y": 2336,
+      "width": 75,
+      "height": 99,
+      "area": 4912,
+      "tipX": 264.5,
+      "tipY": 2435,
+      "id": "new-pin-153",
+      "iconCandidates": [
+        {
+          "icon": "marktsiedlung.png",
+          "score": 0.731
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.545
+        },
+        {
+          "icon": "waldsiedlung.png",
+          "score": 0.489
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "classification": "image-match",
+      "geographicZoneId": "klangheim",
+      "territoryId": "skald",
+      "territoryEvidence": "Farbiger Kreis und Verbindung zur benannten Herrschaft auf der neuen Zonenkarte.",
+      "position": {
+        "x": 264.5,
+        "y": 2432,
+        "origin": "top-left",
+        "unit": "pixel"
+      },
+      "exclave": false
+    },
+    {
+      "x": 974,
+      "y": 2356,
+      "width": 75,
+      "height": 99,
+      "area": 4909,
+      "tipX": 1011.5,
+      "tipY": 2455,
+      "id": "new-pin-154",
+      "iconCandidates": [
+        {
+          "icon": "zerst-rte-siedlung.png",
+          "score": 0.817
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.49
+        },
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.475
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/zerst-rte-siedlung.png",
+      "classification": "image-match",
+      "geographicZoneId": "klangheim",
+      "territoryId": "soekeren",
+      "territoryEvidence": "Farbiger Kreis und Verbindung zur benannten Herrschaft auf der neuen Zonenkarte.",
+      "position": {
+        "x": 1011.5,
+        "y": 2452,
+        "origin": "top-left",
+        "unit": "pixel"
+      },
+      "exclave": false
+    },
+    {
+      "x": 2614,
+      "y": 2360,
+      "width": 75,
+      "height": 100,
+      "area": 4929,
+      "tipX": 2651.5,
+      "tipY": 2460,
+      "id": "new-pin-155",
+      "iconCandidates": [
+        {
+          "icon": "zerst-rte-siedlung.png",
+          "score": 0.791
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.487
+        },
+        {
+          "icon": "bauernh-tte.png",
+          "score": 0.453
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/zerst-rte-siedlung.png",
+      "classification": "image-match",
+      "geographicZoneId": "dunkelhain",
+      "territoryId": "dunkelhain",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 2651.5,
+        "y": 2457,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 1173,
+      "y": 2375,
+      "width": 74,
+      "height": 100,
+      "area": 4928,
+      "tipX": 1210.0,
+      "tipY": 2475,
+      "id": "new-pin-156",
+      "iconCandidates": [
+        {
+          "icon": "zerst-rte-siedlung.png",
+          "score": 0.875
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.492
+        },
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.478
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/zerst-rte-siedlung.png",
+      "classification": "image-match",
+      "geographicZoneId": "klangheim",
+      "territoryId": "soekeren",
+      "territoryEvidence": "Farbiger Kreis und Verbindung zur benannten Herrschaft auf der neuen Zonenkarte.",
+      "position": {
+        "x": 1210.0,
+        "y": 2472,
+        "origin": "top-left",
+        "unit": "pixel"
+      },
+      "exclave": false
+    },
+    {
+      "x": 2039,
+      "y": 2404,
+      "width": 73,
+      "height": 99,
+      "area": 4858,
+      "tipX": 2075.5,
+      "tipY": 2503,
+      "id": "new-pin-157",
+      "iconCandidates": [
+        {
+          "icon": "zerst-rte-siedlung.png",
+          "score": 0.888
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.494
+        },
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.487
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/zerst-rte-siedlung.png",
+      "classification": "image-match",
+      "geographicZoneId": "dunkelhain",
+      "territoryId": "dunkelhain",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 2075.5,
+        "y": 2500,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 1784,
+      "y": 2418,
+      "width": 74,
+      "height": 100,
+      "area": 4909,
+      "tipX": 1821.0,
+      "tipY": 2518,
+      "id": "new-pin-158",
+      "iconCandidates": [
+        {
+          "icon": "zerst-rter-turm.png",
+          "score": 0.633
+        },
+        {
+          "icon": "gipfel.png",
+          "score": 0.491
+        },
+        {
+          "icon": "leuchtturm.png",
+          "score": 0.484
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/zerst-rter-turm.png",
+      "classification": "visual-review",
+      "geographicZoneId": "dunkelhain",
+      "territoryId": "dunkelhain",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 1821.0,
+        "y": 2515,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 555,
+      "y": 2423,
+      "width": 75,
+      "height": 99,
+      "area": 4898,
+      "tipX": 592.5,
+      "tipY": 2522,
+      "id": "new-pin-159",
+      "iconCandidates": [
+        {
+          "icon": "zerst-rte-siedlung.png",
+          "score": 0.877
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.488
+        },
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.485
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/zerst-rte-siedlung.png",
+      "classification": "image-match",
+      "geographicZoneId": "klangheim",
+      "territoryId": "skald",
+      "territoryEvidence": "Farbiger Kreis und Verbindung zur benannten Herrschaft auf der neuen Zonenkarte.",
+      "position": {
+        "x": 592.5,
+        "y": 2519,
+        "origin": "top-left",
+        "unit": "pixel"
+      },
+      "exclave": false
+    },
+    {
+      "x": 2386,
+      "y": 2471,
+      "width": 75,
+      "height": 100,
+      "area": 4852,
+      "tipX": 2423.5,
+      "tipY": 2571,
+      "id": "new-pin-160",
+      "iconCandidates": [
+        {
+          "icon": "zerst-rte-siedlung.png",
+          "score": 0.816
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.492
+        },
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.471
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/zerst-rte-siedlung.png",
+      "classification": "image-match",
+      "geographicZoneId": "dunkelhain",
+      "territoryId": "dunkelhain",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 2423.5,
+        "y": 2568,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 751,
+      "y": 2474,
+      "width": 74,
+      "height": 100,
+      "area": 4914,
+      "tipX": 788.0,
+      "tipY": 2574,
+      "id": "new-pin-161",
+      "iconCandidates": [
+        {
+          "icon": "zerst-rte-siedlung.png",
+          "score": 0.812
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.5
+        },
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.458
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/zerst-rte-siedlung.png",
+      "classification": "image-match",
+      "geographicZoneId": "dunkelhain",
+      "territoryId": "dunkelhain",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 788.0,
+        "y": 2571,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 970,
+      "y": 2480,
+      "width": 75,
+      "height": 100,
+      "area": 4924,
+      "tipX": 1007.5,
+      "tipY": 2580,
+      "id": "new-pin-162",
+      "iconCandidates": [
+        {
+          "icon": "zerst-rter-turm.png",
+          "score": 0.489
+        },
+        {
+          "icon": "au-enposten.png",
+          "score": 0.443
+        },
+        {
+          "icon": "turm.png",
+          "score": 0.425
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/zerst-rter-turm.png",
+      "classification": "visual-review",
+      "geographicZoneId": "dunkelhain",
+      "territoryId": "dunkelhain",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 1007.5,
+        "y": 2577,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 113,
+      "y": 2532,
+      "width": 74,
+      "height": 99,
+      "area": 4857,
+      "tipX": 150.0,
+      "tipY": 2631,
+      "id": "new-pin-163",
+      "iconCandidates": [
+        {
+          "icon": "zerst-rte-siedlung.png",
+          "score": 0.856
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.485
+        },
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.471
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/zerst-rte-siedlung.png",
+      "classification": "image-match",
+      "geographicZoneId": "dunkelhain",
+      "territoryId": "dunkelhain",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 150.0,
+        "y": 2628,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "x": 635,
+      "y": 2555,
+      "width": 74,
+      "height": 99,
+      "area": 4919,
+      "tipX": 672.0,
+      "tipY": 2654,
+      "id": "new-pin-164",
+      "iconCandidates": [
+        {
+          "icon": "zerst-rte-siedlung.png",
+          "score": 0.905
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.495
+        },
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.466
+        }
+      ],
+      "icon": "/Karten/assets/icons/welt/zerst-rte-siedlung.png",
+      "classification": "image-match",
+      "geographicZoneId": "dunkelhain",
+      "territoryId": "dunkelhain",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 672.0,
+        "y": 2651,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "id": "new-pin-059a",
+      "x": 1882,
+      "y": 758,
+      "width": 88,
+      "height": 120,
+      "tipX": 1926.0,
+      "tipY": 878,
+      "icon": "/Karten/assets/icons/welt/burgsiedlung.png",
+      "classification": "visual-review",
+      "geographicZoneId": "schwerthohn",
+      "territoryId": "schwerthohn",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 1926.0,
+        "y": 875,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "id": "new-pin-059b",
+      "x": 1910,
+      "y": 868,
+      "width": 77,
+      "height": 98,
+      "tipX": 1948.5,
+      "tipY": 966,
+      "icon": "/Karten/assets/icons/welt/taverne.png",
+      "classification": "visual-review",
+      "geographicZoneId": "schwerthohn",
+      "territoryId": "schwerthohn",
+      "territoryEvidence": "Neue Zonenkarte; Lage des eingezeichneten Pins.",
+      "position": {
+        "x": 1948.5,
+        "y": 963,
+        "origin": "top-left",
+        "unit": "pixel"
+      }
+    },
+    {
+      "id": "roriksheim-wrack-9de53d77-6e93-46a5-9140-c8aa5a84c593",
+      "x": 1111,
+      "y": 37,
+      "width": 78,
+      "height": 78,
+      "tipX": 1150,
+      "tipY": 118,
+      "position": {
+        "x": 1150,
+        "y": 115,
+        "origin": "top-left",
+        "unit": "pixel"
+      },
+      "icon": "/Karten/assets/icons/welt/schiffswrackpin.png",
+      "geographicZoneId": "schwerthohn",
+      "territoryId": "schwerthohn",
+      "classification": "user-placement",
+      "preferredSourceId": "9de53d77-6e93-46a5-9140-c8aa5a84c593",
+      "userPlacement": true,
+      "territoryEvidence": "Nutzervorgabe: locker im Meer um die Insel Hohenwacht platzieren. Seegebiet vor Schwerthohn; Lage im neuen Normalbild geprüft."
+    },
+    {
+      "id": "roriksheim-wrack-2d57ae12-3b3e-4733-a19e-83347510610d",
+      "x": 1331,
+      "y": 92,
+      "width": 78,
+      "height": 78,
+      "tipX": 1370,
+      "tipY": 173,
+      "position": {
+        "x": 1370,
+        "y": 170,
+        "origin": "top-left",
+        "unit": "pixel"
+      },
+      "icon": "/Karten/assets/icons/welt/schiffswrackpin.png",
+      "geographicZoneId": "schwerthohn",
+      "territoryId": "schwerthohn",
+      "classification": "user-placement",
+      "preferredSourceId": "2d57ae12-3b3e-4733-a19e-83347510610d",
+      "userPlacement": true,
+      "territoryEvidence": "Nutzervorgabe: locker im Meer um die Insel Hohenwacht platzieren. Seegebiet vor Schwerthohn; Lage im neuen Normalbild geprüft."
+    },
+    {
+      "id": "roriksheim-wrack-1bba9337-131a-4fb6-b70c-142f71647f6a",
+      "x": 1181,
+      "y": 247,
+      "width": 78,
+      "height": 78,
+      "tipX": 1220,
+      "tipY": 328,
+      "position": {
+        "x": 1220,
+        "y": 325,
+        "origin": "top-left",
+        "unit": "pixel"
+      },
+      "icon": "/Karten/assets/icons/welt/schiffswrackpin.png",
+      "geographicZoneId": "schwerthohn",
+      "territoryId": "schwerthohn",
+      "classification": "user-placement",
+      "preferredSourceId": "1bba9337-131a-4fb6-b70c-142f71647f6a",
+      "userPlacement": true,
+      "territoryEvidence": "Nutzervorgabe: locker im Meer um die Insel Hohenwacht platzieren. Seegebiet vor Schwerthohn; Lage im neuen Normalbild geprüft."
+    },
+    {
+      "id": "roriksheim-wrack-58ffda9c-51d0-489f-91f1-6d62199716d6",
+      "x": 1241,
+      "y": 337,
+      "width": 78,
+      "height": 78,
+      "tipX": 1280,
+      "tipY": 418,
+      "position": {
+        "x": 1280,
+        "y": 415,
+        "origin": "top-left",
+        "unit": "pixel"
+      },
+      "icon": "/Karten/assets/icons/welt/schiffswrackpin.png",
+      "geographicZoneId": "schwerthohn",
+      "territoryId": "schwerthohn",
+      "classification": "user-placement",
+      "preferredSourceId": "58ffda9c-51d0-489f-91f1-6d62199716d6",
+      "userPlacement": true,
+      "territoryEvidence": "Nutzervorgabe: locker im Meer um die Insel Hohenwacht platzieren. Seegebiet vor Schwerthohn; Lage im neuen Normalbild geprüft."
+    }
+  ]
+}

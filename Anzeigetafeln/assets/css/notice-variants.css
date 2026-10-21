@@ -1,0 +1,43 @@
+/* Different print and handwriting traditions, beyond changing accent colors. */
+.notice-document--hilfsgesuch { --notice-paper: #e7d5ae; --notice-accent: #675b37; border: 0; box-shadow: inset 0 0 35px #77502020; background: repeating-linear-gradient(transparent 0 33px, #826b3c16 33px 34px), #e7d5ae; }
+.notice-document--hilfsgesuch::before { inset: 14px; border: 1px dashed #9e885b; }
+.notice-document--hilfsgesuch .notice-heading { display: block; text-align: left; padding-bottom: .6rem; }
+.notice-document--hilfsgesuch .notice-heading h2 { font-family: 'EB Garamond', Georgia, serif; font-style: italic; font-size: clamp(2rem, 5cqi, 3rem); transform: rotate(-1deg); }
+.notice-document--hilfsgesuch .notice-emblem { float: right; border: 0; width: 42px; height: 42px; }
+.notice-document--hilfsgesuch .notice-edition { display: none; }
+.notice-document--hilfsgesuch .notice-copy { font-style: italic; }
+.notice-document--hilfsgesuch .notice-facts { border-style: dashed; }
+.notice-document--turnier { --notice-accent: #742f38; --notice-paper: #f2e6c9; --notice-tint: #cdb58c; border: 5px double #8f713a; }
+.notice-document--turnier .notice-heading { display: flex; flex-direction: column; text-align: center; margin: 12px 12px 1rem; padding: 1.7rem 1.6rem 2.3rem; background: linear-gradient(90deg, #54232c, #873c46 50%, #54232c); color: #f6e3b9; clip-path: polygon(0 0,100% 0,100% 88%,50% 100%,0 88%); }
+.notice-document--turnier .notice-heading h2, .notice-document--turnier .notice-heading .notice-eyebrow { color: #f7e2b8; }
+.notice-document--turnier .notice-subtitle, .notice-document--turnier .notice-edition { color: #dec59a; }
+.notice-document--turnier .notice-emblem { border: 3px double #d3b577; background: #e4cf9b; color: #6e3339; }
+.notice-document--turnier .notice-edition { border-color: #bc9761; }
+.notice-document--turnier .notice-highlight .notice-facts { border: 4px double #98723e; background: #d6bd8055; }
+.notice-document--auktion { --notice-accent: #335961; --notice-paper: #f1ecdb; --notice-line: #a6aba0; background: repeating-linear-gradient(90deg, transparent 0 63px, #6b82760a 63px 64px), #f1ecdb; }
+.notice-document--auktion::before { inset: 9px; border: 2px solid #a0a69a; }
+.notice-document--auktion .notice-heading { border-bottom: 5px double #708581; margin: 0 1.7rem; padding-inline: 1.5rem; }
+.notice-document--auktion .notice-heading h2 { text-transform: uppercase; font-weight: 900; letter-spacing: .03em; }
+.notice-document--auktion .notice-emblem { border-radius: 0; border: 2px solid #6b8079; transform: rotate(-7deg); }
+.notice-document--auktion .notice-edition { justify-self: end; width: auto; padding: .5rem 1rem; border: 1px dashed #73857c; }
+.notice-document--auktion .notice-highlight .notice-facts { border: 0; }
+.notice-document--auktion .notice-highlight .notice-fact { border: 1px solid #8f9b8e; }
+.notice-document--auktion .notice-highlight dd { font-family: 'Cinzel', Georgia, serif; }
+.notice-document--notiz .notice-copy { background: repeating-linear-gradient(transparent 0 2.1em, #7c81631a 2.1em calc(2.1em + 1px)); }
+.notice-document--warnung .notice-edition { border-block: 4px solid #783527; letter-spacing: .22em; }
+.notice-document--warnung .notice-highlight { border-inline: 8px solid #783527; }
+.notice-document--einladung .notice-heading h2 { font-style: italic; }
+.notice-document--einladung .notice-emblem { border: 4px double #a78a99; }
+.notice-document--handel .notice-facts { background: #b08b4820; }
+.notice-wording > .notice-facts { margin-top: 0; }
+.tpl-paper-preview { position: relative; background: #e9d7ad; border: 7px solid #c7ae7a; }
+.tpl-paper-preview .tpl-icon-fallback { position: absolute; inset: 12% 20% 35%; display: grid; place-items: center; font-size: 3.5rem; color: var(--template-ink); }
+.tpl-paper-lines { position: absolute; inset: 65% 17% 15%; background: repeating-linear-gradient(transparent 0 8px, var(--template-ink) 8px 9px); opacity: .55; }
+.tpl-paper-preview--hilfsgesuch { transform: rotate(-2deg); border: 7px dashed #b39a67; }
+.tpl-paper-preview--turnier { background: #73303a; border-color: #c6a66a; clip-path: polygon(0 0,100% 0,100% 86%,50% 100%,0 86%); }
+.tpl-paper-preview--turnier .tpl-icon-fallback { color: #ead6aa; }
+.tpl-paper-preview--turnier .tpl-paper-lines { background: repeating-linear-gradient(transparent 0 8px, #ead6aa 8px 9px); }
+.tpl-paper-preview--auktion { background: #eee9d7; border: 7px double #5c7977; }
+@container (max-width: 580px) {
+  .notice-document--auktion .notice-heading { margin-inline: .7rem; padding-inline: 1rem; }
+}

@@ -848,6 +848,270 @@ export const STANDARD_PRICE_REFERENCE = [
     ]
   },
   {
+    "id": "standard:alchemist:kamille",
+    "title": "Kamille",
+    "market": "Alchemist",
+    "category": "alchemie",
+    "unit": "20 g getrocknete Blüten",
+    "range": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "id": "standard:alchemist:salbei",
+    "title": "Salbei",
+    "market": "Alchemist",
+    "category": "alchemie",
+    "unit": "20 g getrocknete Blätter",
+    "range": [
+      0.8,
+      0.8
+    ]
+  },
+  {
+    "id": "standard:alchemist:minze",
+    "title": "Minze",
+    "market": "Alchemist",
+    "category": "alchemie",
+    "unit": "20 g getrocknete Blätter",
+    "range": [
+      0.6,
+      0.6
+    ]
+  },
+  {
+    "id": "standard:alchemist:lavendel",
+    "title": "Lavendel",
+    "market": "Alchemist",
+    "category": "alchemie",
+    "unit": "20 g getrocknete Blüten",
+    "range": [
+      1,
+      1
+    ]
+  },
+  {
+    "id": "standard:alchemist:ringelblume",
+    "title": "Ringelblume",
+    "market": "Alchemist",
+    "category": "alchemie",
+    "unit": "20 g getrocknete Blüten",
+    "range": [
+      1,
+      1
+    ]
+  },
+  {
+    "id": "standard:alchemist:beinwellwurzel",
+    "title": "Beinwellwurzel",
+    "market": "Alchemist",
+    "category": "alchemie",
+    "unit": "50 g getrocknete Wurzel",
+    "range": [
+      1.5,
+      1.5
+    ]
+  },
+  {
+    "id": "standard:alchemist:bienenwachs",
+    "title": "Bienenwachs",
+    "market": "Alchemist",
+    "category": "alchemie",
+    "unit": "100 g",
+    "range": [
+      1.5,
+      1.5
+    ]
+  },
+  {
+    "id": "standard:alchemist:baumharz",
+    "title": "Baumharz",
+    "market": "Alchemist",
+    "category": "alchemie",
+    "unit": "50 g",
+    "range": [
+      1,
+      1
+    ]
+  },
+  {
+    "id": "standard:alchemist:alchemieschatulle",
+    "title": "Alchemie-Zubehörschatulle",
+    "market": "Alchemist",
+    "category": "alchemie",
+    "unit": "1 bestückte Schatulle",
+    "range": [
+      28,
+      28
+    ]
+  },
+  {
+    "id": "standard:alchemist:glasflaeschchen",
+    "title": "Glasfläschchen",
+    "market": "Alchemist",
+    "category": "alchemie",
+    "unit": "1 Fläschchen · 50 ml",
+    "range": [
+      1.5,
+      1.5
+    ]
+  },
+  {
+    "id": "standard:alchemist:phiolen-holzfassung",
+    "title": "Drei Phiolen in Holzfassung",
+    "market": "Alchemist",
+    "category": "alchemie",
+    "unit": "3 leere Phiolen · je 20 ml",
+    "range": [
+      6,
+      6
+    ]
+  },
+  {
+    "id": "standard:alchemist:laborpapier",
+    "title": "Papier",
+    "market": "Alchemist",
+    "category": "alchemie",
+    "unit": "10 Blatt",
+    "range": [
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "id": "standard:alchemist:labortinte",
+    "title": "Tinte",
+    "market": "Alchemist",
+    "category": "alchemie",
+    "unit": "1 Tintenfass · 30 ml",
+    "range": [
+      1,
+      1
+    ]
+  },
+  {
+    "id": "standard:alchemist:feuerstein",
+    "title": "Feuerstein",
+    "market": "Alchemist",
+    "category": "alchemie",
+    "unit": "1 Stück",
+    "range": [
+      1,
+      1
+    ]
+  },
+  {
+    "id": "standard:alchemist:labormoerser",
+    "title": "Mörser & Stößel",
+    "market": "Alchemist",
+    "category": "alchemie",
+    "unit": "1 Satz",
+    "range": [
+      10,
+      10
+    ]
+  },
+  {
+    "id": "standard:alchemist:destillator",
+    "title": "Destillator",
+    "market": "Alchemist",
+    "category": "alchemie",
+    "unit": "1 Aufbau",
+    "range": [
+      85,
+      85
+    ]
+  },
+  {
+    "id": "standard:alchemist:kalzinator",
+    "title": "Kalzinator",
+    "market": "Alchemist",
+    "category": "alchemie",
+    "unit": "1 Reisegerät · etwa 10 × 8 cm",
+    "range": [
+      65,
+      65
+    ]
+  },
+  {
+    "id": "standard:alchemist:retorte",
+    "title": "Retorte",
+    "market": "Alchemist",
+    "category": "alchemie",
+    "unit": "1 Stück · 250 ml",
+    "range": [
+      12,
+      12
+    ]
+  },
+  {
+    "id": "standard:alchemist:alembik",
+    "title": "Alembik",
+    "market": "Alchemist",
+    "category": "alchemie",
+    "unit": "1 Aufsatz",
+    "range": [
+      30,
+      30
+    ]
+  },
+  {
+    "id": "standard:alchemist:filtertuch",
+    "title": "Filtertuch",
+    "market": "Alchemist",
+    "category": "alchemie",
+    "unit": "1 Tuch · 30 × 30 cm",
+    "range": [
+      1.5,
+      1.5
+    ]
+  },
+  {
+    "id": "standard:alchemist:labortiegel",
+    "title": "Labortiegel",
+    "market": "Alchemist",
+    "category": "alchemie",
+    "unit": "1 Tiegel · 20 ml",
+    "range": [
+      4,
+      4
+    ]
+  },
+  {
+    "id": "standard:alchemist:trichter",
+    "title": "Glastrichter",
+    "market": "Alchemist",
+    "category": "alchemie",
+    "unit": "1 Stück",
+    "range": [
+      3,
+      3
+    ]
+  },
+  {
+    "id": "standard:alchemist:balkenwaage",
+    "title": "Feine Balkenwaage",
+    "market": "Alchemist",
+    "category": "alchemie",
+    "unit": "1 Waage mit Gewichten",
+    "range": [
+      24,
+      24
+    ]
+  },
+  {
+    "id": "standard:alchemist:trockensieb",
+    "title": "Trockensieb",
+    "market": "Alchemist",
+    "category": "alchemie",
+    "unit": "1 Stück",
+    "range": [
+      5,
+      5
+    ]
+  },
+  {
     "id": "standard:arkanist:zauberstein",
     "title": "Zauberstein",
     "market": "Arkanist",
@@ -988,6 +1252,358 @@ export const STANDARD_PRICE_REFERENCE = [
     "range": [
       1000,
       1000
+    ]
+  },
+  {
+    "id": "standard:arkanist:unverzauberter-stab",
+    "title": "Stab · unverzaubert",
+    "market": "Arkanist",
+    "category": "arkanes",
+    "unit": "1 Stück",
+    "range": [
+      12,
+      12
+    ]
+  },
+  {
+    "id": "standard:arkanist:unverzauberte-zauberkugel",
+    "title": "Zauberkugel · unverzaubert",
+    "market": "Arkanist",
+    "category": "arkanes",
+    "unit": "1 Kugel · 10 cm",
+    "range": [
+      40,
+      40
+    ]
+  },
+  {
+    "id": "standard:arkanist:leeres-zauberbuch",
+    "title": "Zauberbuch · leer",
+    "market": "Arkanist",
+    "category": "arkanes",
+    "unit": "1 Buch · 120 Seiten",
+    "range": [
+      18,
+      18
+    ]
+  },
+  {
+    "id": "standard:arkanist:unverzauberter-ring",
+    "title": "Ring · unverzaubert",
+    "market": "Arkanist",
+    "category": "arkanes",
+    "unit": "1 Silberring",
+    "range": [
+      16,
+      16
+    ]
+  },
+  {
+    "id": "standard:arkanist:unverzaubertes-amulett",
+    "title": "Amulett · unverzaubert",
+    "market": "Arkanist",
+    "category": "arkanes",
+    "unit": "1 Silberamulett",
+    "range": [
+      24,
+      24
+    ]
+  },
+  {
+    "id": "standard:arkanist:unverzaubertes-diadem",
+    "title": "Diadem · unverzaubert",
+    "market": "Arkanist",
+    "category": "arkanes",
+    "unit": "1 Silberdiadem",
+    "range": [
+      45,
+      45
+    ]
+  },
+  {
+    "id": "standard:arkanist:unverzauberte-schriftrolle",
+    "title": "Zauberschriftrolle · unverzaubert",
+    "market": "Arkanist",
+    "category": "arkanes",
+    "unit": "1 leere Pergamentrolle",
+    "range": [
+      4,
+      4
+    ]
+  },
+  {
+    "id": "standard:arkanist:runenkreide",
+    "title": "Runenkreide",
+    "market": "Arkanist",
+    "category": "arkanes",
+    "unit": "5 Stifte",
+    "range": [
+      1,
+      1
+    ]
+  },
+  {
+    "id": "standard:arkanist:gravurstichel",
+    "title": "Gravurstichel",
+    "market": "Arkanist",
+    "category": "arkanes",
+    "unit": "1 Stück",
+    "range": [
+      7,
+      7
+    ]
+  },
+  {
+    "id": "standard:arkanist:fokusfassung",
+    "title": "Leere Fokusfassung",
+    "market": "Arkanist",
+    "category": "arkanes",
+    "unit": "1 Messingfassung",
+    "range": [
+      8,
+      8
+    ]
+  },
+  {
+    "id": "standard:arkanist:kristallbeutel",
+    "title": "Gepolsterter Kristallbeutel",
+    "market": "Arkanist",
+    "category": "arkanes",
+    "unit": "1 Beutel",
+    "range": [
+      3,
+      3
+    ]
+  },
+  {
+    "id": "standard:arkanist:buchschliesse",
+    "title": "Buchschließe",
+    "market": "Arkanist",
+    "category": "arkanes",
+    "unit": "1 Beschlagsatz",
+    "range": [
+      5,
+      5
+    ]
+  },
+  {
+    "id": "standard:arkanist:amethyst",
+    "title": "Amethyst",
+    "market": "Arkanist",
+    "category": "arkanes",
+    "unit": "1 kleiner Schmuckstein · etwa 0,2 g",
+    "range": [
+      18,
+      18
+    ]
+  },
+  {
+    "id": "standard:arkanist:rubin",
+    "title": "Rubin",
+    "market": "Arkanist",
+    "category": "arkanes",
+    "unit": "1 kleiner Schmuckstein · etwa 0,2 g",
+    "range": [
+      90,
+      90
+    ]
+  },
+  {
+    "id": "standard:arkanist:saphir",
+    "title": "Saphir",
+    "market": "Arkanist",
+    "category": "arkanes",
+    "unit": "1 kleiner Schmuckstein · etwa 0,2 g",
+    "range": [
+      80,
+      80
+    ]
+  },
+  {
+    "id": "standard:arkanist:smaragd",
+    "title": "Smaragd",
+    "market": "Arkanist",
+    "category": "arkanes",
+    "unit": "1 kleiner Schmuckstein · etwa 0,2 g",
+    "range": [
+      85,
+      85
+    ]
+  },
+  {
+    "id": "standard:arkanist:diamant",
+    "title": "Diamant",
+    "market": "Arkanist",
+    "category": "arkanes",
+    "unit": "1 kleiner Schmuckstein · etwa 0,2 g",
+    "range": [
+      160,
+      160
+    ]
+  },
+  {
+    "id": "standard:arkanist:opal",
+    "title": "Opal",
+    "market": "Arkanist",
+    "category": "arkanes",
+    "unit": "1 kleiner Schmuckstein · etwa 0,2 g",
+    "range": [
+      55,
+      55
+    ]
+  },
+  {
+    "id": "standard:arkanist:topas",
+    "title": "Topas",
+    "market": "Arkanist",
+    "category": "arkanes",
+    "unit": "1 kleiner Schmuckstein · etwa 0,2 g",
+    "range": [
+      25,
+      25
+    ]
+  },
+  {
+    "id": "standard:arkanist:granat",
+    "title": "Granat",
+    "market": "Arkanist",
+    "category": "arkanes",
+    "unit": "1 kleiner Schmuckstein · etwa 0,2 g",
+    "range": [
+      20,
+      20
+    ]
+  },
+  {
+    "id": "standard:arkanist:aquamarin",
+    "title": "Aquamarin",
+    "market": "Arkanist",
+    "category": "arkanes",
+    "unit": "1 kleiner Schmuckstein · etwa 0,2 g",
+    "range": [
+      35,
+      35
+    ]
+  },
+  {
+    "id": "standard:arkanist:turmalin",
+    "title": "Turmalin",
+    "market": "Arkanist",
+    "category": "arkanes",
+    "unit": "1 kleiner Schmuckstein · etwa 0,2 g",
+    "range": [
+      30,
+      30
+    ]
+  },
+  {
+    "id": "standard:arkanist:jade",
+    "title": "Jade",
+    "market": "Arkanist",
+    "category": "arkanes",
+    "unit": "1 kleiner Schmuckstein · etwa 0,2 g",
+    "range": [
+      15,
+      15
+    ]
+  },
+  {
+    "id": "standard:arkanist:bergkristall",
+    "title": "Bergkristall",
+    "market": "Arkanist",
+    "category": "arkanes",
+    "unit": "1 kleiner Schmuckstein · etwa 0,2 g",
+    "range": [
+      5,
+      5
+    ]
+  },
+  {
+    "id": "standard:arkanist:onyx",
+    "title": "Onyx",
+    "market": "Arkanist",
+    "category": "arkanes",
+    "unit": "1 kleiner Schmuckstein · etwa 0,2 g",
+    "range": [
+      12,
+      12
+    ]
+  },
+  {
+    "id": "standard:arkanist:mondstein",
+    "title": "Mondstein",
+    "market": "Arkanist",
+    "category": "arkanes",
+    "unit": "1 kleiner Schmuckstein · etwa 0,2 g",
+    "range": [
+      22,
+      22
+    ]
+  },
+  {
+    "id": "standard:arkanist:tuerkis",
+    "title": "Türkis",
+    "market": "Arkanist",
+    "category": "arkanes",
+    "unit": "1 kleiner Schmuckstein · etwa 0,2 g",
+    "range": [
+      12,
+      12
+    ]
+  },
+  {
+    "id": "standard:arkanist:bernstein",
+    "title": "Bernstein",
+    "market": "Arkanist",
+    "category": "arkanes",
+    "unit": "1 kleiner Schmuckstein · etwa 0,2 g",
+    "range": [
+      10,
+      10
+    ]
+  },
+  {
+    "id": "standard:arkanist:perle",
+    "title": "Perle",
+    "market": "Arkanist",
+    "category": "arkanes",
+    "unit": "1 kleiner Schmuckstein · etwa 0,2 g",
+    "range": [
+      24,
+      24
+    ]
+  },
+  {
+    "id": "standard:arkanist:lapislazuli",
+    "title": "Lapislazuli",
+    "market": "Arkanist",
+    "category": "arkanes",
+    "unit": "1 kleiner Schmuckstein · etwa 0,2 g",
+    "range": [
+      14,
+      14
+    ]
+  },
+  {
+    "id": "standard:arkanist:malachit",
+    "title": "Malachit",
+    "market": "Arkanist",
+    "category": "arkanes",
+    "unit": "1 kleiner Schmuckstein · etwa 0,2 g",
+    "range": [
+      8,
+      8
+    ]
+  },
+  {
+    "id": "standard:arkanist:zirkon",
+    "title": "Zirkon",
+    "market": "Arkanist",
+    "category": "arkanes",
+    "unit": "1 kleiner Schmuckstein · etwa 0,2 g",
+    "range": [
+      28,
+      28
     ]
   },
   {

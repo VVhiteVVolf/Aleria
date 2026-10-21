@@ -15,6 +15,9 @@ import { HOUSE_WOLFSHORN_PORTRAITS } from './house-wolfshorn-portraits.js';
 // widerspricht der strukturierten Verbindungsliste ("Halvar = juengster Bruder, Asgeir =
 // aeltester Sohn") und den ausdruecklichen Nutzerangaben (Halvar 39, Asgeir/Ylva 25+); nach
 // DATENPFLEGE-Quellenhierarchie gilt die strukturierte Liste, nicht der Fliesstext.
+// Nutzerkorrektur vom 20. Oktober 2026: Hrolf, seine beiden aeltesten Kinder Ylva
+// und Asgeir sowie sein Bruder Halvar wurden ins Exil geschickt. Hornhall ging
+// an Hrolfs Bruder Bjoern; der Clan als Ganzes wurde nicht vertrieben.
 const HOUSE_EMBLEMS = Object.freeze({
   wolfshorn: 'assets/images/houses/Aldrimar/clan-wolfshorn.png',
   vangandr: 'https://i.imgur.com/A9WNWtf.png',
@@ -28,6 +31,16 @@ const REGION_EMBLEMS = Object.freeze({
 });
 
 const WOLFSHORN_HOUSE_ID = 'house-wolfshorn';
+const WOLFSHORN_SOURCE_REVISION = 5;
+
+// Die gezielte Lorekorrektur gilt einmalig auch fuer bereits geladene Akten.
+// Andere Personenfelder und spaetere lokale Anmerkungen bleiben erhalten.
+function loreCorrection(fields, retainedFields = []) {
+  return {
+    registryManagedFields: [...retainedFields, ...fields],
+    registryManagedFieldRevisions: Object.fromEntries(fields.map(field => [field, WOLFSHORN_SOURCE_REVISION]))
+  };
+}
 
 function person(id, name, sex, birth = '????', death = '', houseId = '', options = {}) {
   return createFamilyPerson({ id, name, sex, birth, death, houseId, ...options });
@@ -66,7 +79,7 @@ export const HOUSE_WOLFSHORN_FAMILY = Object.freeze({
     id: 'haus-wolfshorn',
     title: 'Clan Wolfshorn',
     motto: 'Lieber fallen als weichen.',
-    description: 'Clan Wolfshorn, ein aldrimarisches Huskarlgeschlecht, diente Generationen lang dem Clan Vangandr als Grenzwaechter der Wehrhalle Hornhall in Dämmergrund. Als der Dunkelhain ihre Grenzlande verschlang, hielten sie ihre Feste ueber Jahre gegen Hunger und Verfall, ehe Huskarlherr Hrolf Wolfshorn sie schliesslich aufgab. Die Vangandr werteten dies als Bruch des Lehnseides und verbannten den Clan aus ihrem Thanentum. Hrolf fuehrt die letzten Wolfshorn nun nach Cenyr, um Haus Draig einen neuen Eid anzubieten.',
+    description: 'Clan Wolfshorn ist ein aldrimarisches Huskarlgeschlecht und dient dem Clan Vangandr seit Generationen als Grenzwaechter der Wehrhalle Hornhall im Dämmertal des Thanentums Dämmergrund. Als der Dunkelhain die Grenzlande bedrohte, geriet der bisherige Herr Hrolf Wolfshorn mit seinen Lehnsherren in Konflikt. Hrolf wurde mit seinen beiden aeltesten Kindern Ylva und Asgeir sowie seinem Bruder Halvar ins Exil geschickt. Hornhall ging an seinen Bruder Bjoern Wolfshorn; der Clan blieb dort unter den Vangandr bestehen. Hrolf und seine Begleiter zogen nach Cenyr, wo aus diesem Familienzweig Haus Bleiddorn hervorging.',
     emblem: HOUSE_EMBLEMS.wolfshorn,
     houseProfile: createHouseProfileFromFolderPath(
       ['Aldrimar', 'Roriksheim', 'Dämmergrund', 'Hornhall'],
@@ -140,8 +153,8 @@ export const HOUSE_WOLFSHORN_FAMILY = Object.freeze({
       lineageRole: 'head',
       title: 'Huskarlherr (Ritterherr), vormals Herr von Hornhall',
       portrait: HOUSE_WOLFSHORN_PORTRAITS['hrolf-wolfshorn'],
-      notes: 'Gab Hornhall auf und fuehrt die letzten Wolfshorn nach Cenyr, um Haus Draig einen neuen Eid anzubieten.',
-      extensions: { registryManagedFields: ['portrait'] }
+      notes: 'Wurde mit seinen beiden aeltesten Kindern Ylva und Asgeir sowie seinem Bruder Halvar ins Exil geschickt. Sein Sitz Hornhall ging an seinen Bruder Bjoern. Aus Hrolfs nach Cenyr ausgewandertem Familienzweig ging Haus Bleiddorn hervor.',
+      extensions: loreCorrection(['notes'], ['portrait'])
     }),
     person('ivar-wolfshorn', 'Ivar Wolfshorn', 'male', '1684', '1730', WOLFSHORN_HOUSE_ID, {
       familyRole: 'core',
@@ -158,8 +171,9 @@ export const HOUSE_WOLFSHORN_FAMILY = Object.freeze({
     person('bjorn-wolfshorn', 'Bjoern Wolfshorn', 'male', '1687', '', WOLFSHORN_HOUSE_ID, {
       familyRole: 'core',
       lineageRole: 'branch',
-      title: 'Huskarl der Wolfshorn',
-      notes: 'Ging nie eine Ehe ein, unterhielt aber gleichzeitig zwei Verhaeltnisse, mit Vigdis und mit Halla, aus denen zusammen vier Kinder hervorgingen.'
+      title: 'Huskarlherr von Hornhall',
+      notes: 'Uebernahm Hornhall nach dem Exil seines Bruders Hrolf und dient dort den Vangandr. Ging nie eine Ehe ein, unterhielt aber gleichzeitig zwei Verhaeltnisse, mit Vigdis und mit Halla, aus denen zusammen vier Kinder hervorgingen.',
+      extensions: loreCorrection(['title', 'notes'])
     }),
     person('vigdis', 'Vigdis', 'female', '1691', '', '', {
       familyRole: 'affair',
@@ -205,8 +219,8 @@ export const HOUSE_WOLFSHORN_FAMILY = Object.freeze({
       lineageRole: 'branch',
       title: 'Juengster Bruder Hrolfs, Huskarl der Wolfshorn',
       portrait: HOUSE_WOLFSHORN_PORTRAITS['halvar-wolfshorn'],
-      notes: 'Begleitet Hrolf nach Cenyr.',
-      extensions: { registryManagedFields: ['portrait'] }
+      notes: 'Wurde gemeinsam mit seinem Bruder Hrolf sowie dessen beiden aeltesten Kindern Ylva und Asgeir ins Exil geschickt und begleitet sie nach Cenyr.',
+      extensions: loreCorrection(['notes'], ['portrait'])
     }),
 
     // Bjoerns uneheliche Kinder. Als Bastarde tragen sie nicht den Hausnamen Wolfshorn,
@@ -247,33 +261,36 @@ export const HOUSE_WOLFSHORN_FAMILY = Object.freeze({
       notes: 'Hrolfs Frau; verliess ihn und kehrte mit einem Teil ihrer Kinder zu ihrem eigenen Clan im Norden Aldrimars zurueck. Lebt noch.'
     }),
 
-    // Hrolfs und Livs elf Kinder: die aeltesten Ylva und Asgeir sowie vier weitere blieben bei
-    // Hrolf, fuenf juengere zogen mit Liv fort und sind seither verschollen.
+    // Hrolfs und Livs elf Kinder: Die aeltesten Ylva und Asgeir gehoeren zur benannten
+    // Exilgruppe. Vier weitere Kinder werden nicht als Exilbegleiter gefuehrt;
+    // fuenf juengere zogen mit Liv fort und sind seither verschollen.
     person('ylva-wolfshorn', 'Ylva Wolfshorn', 'female', '1710', '', WOLFSHORN_HOUSE_ID, {
       familyRole: 'core',
       lineageRole: 'mainline',
       title: 'Erstgeborene Tochter',
       portrait: HOUSE_WOLFSHORN_PORTRAITS['ylva-wolfshorn'],
-      notes: 'Blieb bei Hrolf und begleitet ihn nach Cenyr.',
-      extensions: { registryManagedFields: ['portrait'] }
+      notes: 'Wurde als eines von Hrolfs beiden aeltesten Kindern gemeinsam mit ihm, Asgeir und Halvar ins Exil geschickt und begleitet sie nach Cenyr.',
+      extensions: loreCorrection(['notes'], ['portrait'])
     }),
     person('asgeir-wolfshorn', 'Asgeir Wolfshorn', 'male', '1712', '', WOLFSHORN_HOUSE_ID, {
       familyRole: 'core',
       lineageRole: 'mainline',
       title: 'Aeltester Sohn',
       portrait: HOUSE_WOLFSHORN_PORTRAITS['asgeir-wolfshorn'],
-      notes: 'Blieb bei Hrolf und begleitet ihn nach Cenyr.',
-      extensions: { registryManagedFields: ['portrait'] }
+      notes: 'Wurde als eines von Hrolfs beiden aeltesten Kindern gemeinsam mit ihm, Ylva und Halvar ins Exil geschickt und begleitet sie nach Cenyr.',
+      extensions: loreCorrection(['notes'], ['portrait'])
     }),
     person('bodil-wolfshorn', 'Bodil Wolfshorn', 'female', '1714', '', WOLFSHORN_HOUSE_ID, {
       familyRole: 'core',
       lineageRole: 'mainline',
-      notes: 'Blieb bei Hrolf und begleitet ihn nach Cenyr.'
+      notes: 'Gehoert nicht zur benannten Exilgruppe Hrolfs; weiterer Aufenthalt nicht geklaert.',
+      extensions: loreCorrection(['notes'])
     }),
     person('kettil-wolfshorn', 'Kettil Wolfshorn', 'male', '1716', '', WOLFSHORN_HOUSE_ID, {
       familyRole: 'core',
       lineageRole: 'mainline',
-      notes: 'Blieb bei Hrolf und begleitet ihn nach Cenyr.'
+      notes: 'Gehoert nicht zur benannten Exilgruppe Hrolfs; weiterer Aufenthalt nicht geklaert.',
+      extensions: loreCorrection(['notes'])
     }),
     person('eirik-wolfshorn', 'Eirik Wolfshorn', 'male', '1718', '', WOLFSHORN_HOUSE_ID, {
       status: 'missing',
@@ -284,7 +301,8 @@ export const HOUSE_WOLFSHORN_FAMILY = Object.freeze({
     person('sigrun-wolfshorn', 'Sigrun Wolfshorn', 'female', '1720', '', WOLFSHORN_HOUSE_ID, {
       familyRole: 'core',
       lineageRole: 'mainline',
-      notes: 'Blieb bei Hrolf und begleitet ihn nach Cenyr.'
+      notes: 'Gehoert nicht zur benannten Exilgruppe Hrolfs; weiterer Aufenthalt nicht geklaert.',
+      extensions: loreCorrection(['notes'])
     }),
     person('dagny-wolfshorn', 'Dagny Wolfshorn', 'female', '1722', '', WOLFSHORN_HOUSE_ID, {
       status: 'missing',
@@ -295,7 +313,8 @@ export const HOUSE_WOLFSHORN_FAMILY = Object.freeze({
     person('torstein-wolfshorn', 'Torstein Wolfshorn', 'male', '1724', '', WOLFSHORN_HOUSE_ID, {
       familyRole: 'core',
       lineageRole: 'mainline',
-      notes: 'Blieb bei Hrolf und begleitet ihn nach Cenyr.'
+      notes: 'Gehoert nicht zur benannten Exilgruppe Hrolfs; weiterer Aufenthalt nicht geklaert.',
+      extensions: loreCorrection(['notes'])
     }),
     person('vibeke-wolfshorn', 'Vibeke Wolfshorn', 'female', '1726', '', WOLFSHORN_HOUSE_ID, {
       status: 'missing',
@@ -466,7 +485,8 @@ export const HOUSE_WOLFSHORN_FAMILY = Object.freeze({
     showSiblings: true
   },
   extensions: {
-    sourceRevision: 4,
+    sourceRevision: WOLFSHORN_SOURCE_REVISION,
+    registryManagedDocumentFields: ['description'],
     registryManagedHouseProfileFields: [
       'rankId',
       'seat',

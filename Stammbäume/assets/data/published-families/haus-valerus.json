@@ -1,0 +1,453 @@
+{
+  "schemaVersion": 1,
+  "familyId": "haus-valerus",
+  "revision": 1,
+  "updatedAt": "2026-10-21T01:03:34.012Z",
+  "family": {
+    "schema": "aleria.family-tree",
+    "schemaVersion": 1,
+    "document": {
+      "id": "haus-valerus",
+      "title": "Haus Valerus",
+      "motto": "Was bleibt, hat Wert.",
+      "description": "Venalysisch geprägte Bürgerfamilie in Gwynthor. Decians Pension und Ersparnisse gründeten die Rote Klaue; seine Zwillinge Lucan und Camilla führen sie gemeinsam als Kooperationsbetrieb der Klingenden Münze.",
+      "emblem": "assets/images/houses/Venalys/haus-valerus.png",
+      "houseProfile": {
+        "rankId": "commoner",
+        "seat": "Gwynthor",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [
+          "Die rote Klaue · Marktviertel Gwynthors"
+        ],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Bürgerliche",
+          "Gwynthor"
+        ],
+        "regionEmblems": {
+          "seat": "",
+          "barony": "",
+          "county": "",
+          "kingdom": ""
+        }
+      }
+    },
+    "persons": [
+      {
+        "id": "haus-valerus-gruender",
+        "worldPersonId": "person--haus-valerus--haus-valerus-gruender",
+        "name": "Unbekannter Gründer",
+        "title": "Gründer des Hauses",
+        "sex": "male",
+        "status": "dead",
+        "birth": "",
+        "death": "????",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-valerus",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Gründerfamilie"
+        ],
+        "notes": "Historische Gründerfigur vor dem Überlieferungssprung; Name und genaue Lebensdaten sind noch nicht belegt.",
+        "extensions": {}
+      },
+      {
+        "id": "haus-valerus-gruenderin",
+        "worldPersonId": "person--haus-valerus--haus-valerus-gruenderin",
+        "name": "Unbekannte Gründerin",
+        "title": "Gründerin des Hauses",
+        "sex": "female",
+        "status": "dead",
+        "birth": "",
+        "death": "????",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-valerus",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [
+          "Gründerfamilie"
+        ],
+        "notes": "Historische Gründerfigur vor dem Überlieferungssprung; Name und genaue Lebensdaten sind noch nicht belegt.",
+        "extensions": {}
+      },
+      {
+        "id": "klaue-decian",
+        "worldPersonId": "person--rote-klaue--decian",
+        "name": "Decian Valerus",
+        "title": "Gründer · ehemaliger Söldner der Roten Kompanie",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1667",
+        "death": "1736",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-valerus",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [
+          "Venalys",
+          "Haus Valerus"
+        ],
+        "notes": "1667–1736. Nach langen Dienstjahren bei der Roten Kompanie gründete Decian 1712 mit seinem angesparten Sold und seiner Pension die Rote Klaue in Gwynthor. Er starb an einer Lebensmittelvergiftung. Einzelne Nachlassforderungen und die abschließende Teilung seines Vermögens sind weiterhin ungeklärt.",
+        "extensions": {
+          "appearance": "Verstorbener Vater der Zwillinge; sein Harnisch wird im Laden auf einer Büste verwahrt.",
+          "twinGroupId": "",
+          "registryManagedFields": [
+            "name",
+            "title",
+            "notes",
+            "portrait"
+          ],
+          "registryManagedExtensionFields": [
+            "appearance",
+            "twinGroupId"
+          ]
+        }
+      },
+      {
+        "id": "klaue-severina",
+        "worldPersonId": "person--rote-klaue--severina",
+        "name": "Severina",
+        "title": "Mutter der Zwillinge · verstorben",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1678",
+        "death": "1729",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [
+          "Venalys",
+          "Haus Valerus"
+        ],
+        "notes": "1678–1729. Decians Gemahlin und Mutter von Lucan und Camilla. Ihre Herkunftsfamilie ist nicht ausgearbeitet.",
+        "extensions": {
+          "appearance": "Keine individuelle Bildüberlieferung.",
+          "twinGroupId": "",
+          "registryManagedFields": [
+            "name",
+            "title",
+            "notes",
+            "portrait"
+          ],
+          "registryManagedExtensionFields": [
+            "appearance",
+            "twinGroupId"
+          ]
+        }
+      },
+      {
+        "id": "klaue-lucan",
+        "worldPersonId": "person--rote-klaue--lucan",
+        "name": "Lucan Valerus",
+        "title": "Mitinhaber · Darlehen und Kundenverträge",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1707",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/rote-klaue/portraits/lucan.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-valerus",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Venalys · in Gwynthor aufgewachsen",
+          "Haus Valerus"
+        ],
+        "notes": "Lucan nennt den Betrag zuerst, den ein Kunde heute erhalten könnte. Über den Preis des nächsten Monats spricht er erst, wenn der andere bereits erleichtert auf die Münzen schaut. Er und Camilla führen den geerbten Laden gemeinsam; ihre Einigkeit wiegt für beide schwerer als jede offene Frage im väterlichen Nachlass. Seit 1735 mit Aerwen verheiratet.",
+        "extensions": {
+          "appearance": "Navyblaues lockiges Haar mit etwas helleren blauen Spitzen, dichter lockiger Bart, türkisgrüne Augen. Weinroter Händlerrock, Waage in einer Hand, selbstgefälliges Lächeln.",
+          "twinGroupId": "valerus-twins-1707",
+          "registryManagedFields": [
+            "name",
+            "title",
+            "notes",
+            "portrait"
+          ],
+          "registryManagedExtensionFields": [
+            "appearance",
+            "twinGroupId"
+          ]
+        }
+      },
+      {
+        "id": "klaue-camilla",
+        "worldPersonId": "person--rote-klaue--camilla",
+        "name": "Camilla Valerus",
+        "title": "Mitinhaberin · Bewertung und Pfandfreigaben",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1707",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/rote-klaue/portraits/camilla.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-valerus",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Venalys · in Gwynthor aufgewachsen",
+          "Haus Valerus"
+        ],
+        "notes": "Camilla legt Schmuck auf das Tuch, nennt jede Kerbe und wartet, bis der Besitzer selbst einen niedrigeren Wert für vernünftig hält. Sie teilt mit ihrem Zwillingsbruder Kasse und Entscheidungen. Aerwens Ansprüche duldet sie um Lucans willen; eine Stimme über seine Hälfte des Geschäfts räumt sie ihr deshalb noch lange nicht ein. Unverheiratet.",
+        "extensions": {
+          "appearance": "Navyblaue Locken im hohen lockeren Knoten, an den Enden etwas heller blau; türkisgrüne Augen. Petrolfarbenes Kleid mit pflaumenfarbenen Ärmeln, geschlossenes Pfandbuch im Arm, prüfendes schiefes Lächeln.",
+          "twinGroupId": "valerus-twins-1707",
+          "registryManagedFields": [
+            "name",
+            "title",
+            "notes",
+            "portrait"
+          ],
+          "registryManagedExtensionFields": [
+            "appearance",
+            "twinGroupId"
+          ]
+        }
+      },
+      {
+        "id": "klaue-aerwen",
+        "worldPersonId": "person--rote-klaue--aerwen",
+        "name": "Aerwen",
+        "title": "Lucans Gemahlin · Empfang und vermögende Kundschaft",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1712",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/rote-klaue/portraits/aerwen.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [
+          "Cenyr · Aberon, Sonnenküste",
+          "Haus Valerus"
+        ],
+        "notes": "Eine Cenyri aus Aberon in der benachbarten Grafschaft Sonnenküste. Gute Gesellschaft, kostbare Kleidung und aufmerksame Bedienung hält sie für selbstverständliche Lebensumstände. Lucan gefällt ihr Auftreten; er erwartet von ihr keine Hausarbeit. Sie empfängt ausgewählte Kunden und pflegt Einladungen. Gegenüber Camilla wahrt sie eine kühle Höflichkeit.",
+        "extensions": {
+          "appearance": "Aufwendige kupferrote Hochfrisur, grüne Augen, pompöses elfenbeinfarbenes und altgoldenes Kleid, Perlen und auffällige Schmuckstücke. Hebt das Kinn und betrachtet einen Ring an ihrer Hand; würdigt den Betrachter keines Blickes.",
+          "twinGroupId": "",
+          "registryManagedFields": [
+            "name",
+            "title",
+            "notes",
+            "portrait"
+          ],
+          "registryManagedExtensionFields": [
+            "appearance",
+            "twinGroupId"
+          ]
+        }
+      }
+    ],
+    "partnerships": [
+      {
+        "id": "marriage-haus-valerus-founders",
+        "participantIds": [
+          "haus-valerus-gruender",
+          "haus-valerus-gruenderin"
+        ],
+        "type": "marriage",
+        "status": "ended",
+        "start": "",
+        "end": "",
+        "certainty": "unknown",
+        "visibility": "public",
+        "notes": "Gründerehe des Hauses.",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-valerus-decian-severina",
+        "participantIds": [
+          "klaue-decian",
+          "klaue-severina"
+        ],
+        "type": "marriage",
+        "status": "ended",
+        "start": "1704",
+        "end": "1729",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "chartAlignChildGroupBelowParentPair": true,
+          "registryManagedExtensionFields": [
+            "chartAlignChildGroupBelowParentPair"
+          ]
+        }
+      },
+      {
+        "id": "marriage-valerus-lucan-aerwen",
+        "participantIds": [
+          "klaue-lucan",
+          "klaue-aerwen"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "1735",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      }
+    ],
+    "parentages": [
+      {
+        "id": "parentage-klaue-decian",
+        "childId": "klaue-decian",
+        "parentIds": [
+          "haus-valerus-gruender",
+          "haus-valerus-gruenderin"
+        ],
+        "partnershipId": "marriage-haus-valerus-founders",
+        "type": "claimed",
+        "legitimacy": "unknown",
+        "certainty": "unknown",
+        "visibility": "public",
+        "notes": "Hauszugehörigkeit über nicht einzeln überlieferte Generationen; keine unmittelbare Elternschaft.",
+        "extensions": {
+          "timeJumpId": "gap-valerus-to-1667"
+        }
+      },
+      {
+        "id": "parentage-klaue-lucan",
+        "childId": "klaue-lucan",
+        "parentIds": [
+          "klaue-decian",
+          "klaue-severina"
+        ],
+        "partnershipId": "marriage-valerus-decian-severina",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-klaue-camilla",
+        "childId": "klaue-camilla",
+        "parentIds": [
+          "klaue-decian",
+          "klaue-severina"
+        ],
+        "partnershipId": "marriage-valerus-decian-severina",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      }
+    ],
+    "houses": [
+      {
+        "id": "house-valerus",
+        "name": "Haus Valerus",
+        "motto": "Was bleibt, hat Wert.",
+        "emblem": "assets/images/houses/Venalys/haus-valerus.png",
+        "status": "active"
+      }
+    ],
+    "cadetBranches": [],
+    "timeJumps": [
+      {
+        "id": "gap-valerus-to-1667",
+        "parentPartnershipId": "marriage-haus-valerus-founders",
+        "sharedParentPartnershipIds": [],
+        "parentPersonId": "",
+        "childIds": [
+          "klaue-decian"
+        ],
+        "years": 0,
+        "fromYear": "????",
+        "toYear": "1667",
+        "label": "Nicht einzeln überlieferte Generationen bis Decian",
+        "notes": "Der Zeitsprung ist der alleinige absolute Generationentrenner unter dem Hauswappen. Bekannte Nachkommen werden später ausschließlich hinter diesem Knoten ergänzt.",
+        "extensions": {
+          "preparedPlaceholder": false
+        }
+      }
+    ],
+    "lineage": {
+      "founderPartnershipId": "marriage-haus-valerus-founders",
+      "houseId": "house-valerus",
+      "crestSubtitle": "Pfandhaus in Gwynthor",
+      "crestEmblemScale": 0.86,
+      "crestFrame": "iron",
+      "crestFrameScale": 1,
+      "timeGap": {
+        "enabled": false,
+        "years": 0,
+        "fromYear": "",
+        "toYear": "",
+        "label": ""
+      },
+      "originHouse": {
+        "enabled": false,
+        "id": "lineage-origin-house",
+        "houseId": "",
+        "name": "Ursprungshaus",
+        "subtitle": "",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "childIds": [],
+        "targetFamilyId": "",
+        "notes": "",
+        "timeGap": {
+          "enabled": false,
+          "years": 0,
+          "fromYear": "",
+          "toYear": "",
+          "label": ""
+        }
+      }
+    },
+    "presentation": {
+      "relationshipColors": {
+        "marriage": "#326c4a",
+        "engagement": "#b88b37",
+        "union": "#8e2724",
+        "affair": "#704485",
+        "concubinage": "#704485",
+        "political": "#9d7d48",
+        "forced": "#c7a974",
+        "biological": "#8e2724",
+        "adoptive": "#2f75a8",
+        "foster": "#2f75a8",
+        "step": "#7eb4d7",
+        "magical": "#704485",
+        "claimed": "#62615e"
+      }
+    },
+    "view": {
+      "focusPersonId": "klaue-decian",
+      "orientation": "vertical",
+      "ancestorDepth": 12,
+      "descendantDepth": 12,
+      "limitGenerations": false,
+      "showSiblings": true
+    },
+    "extensions": {
+      "blankFamily": false,
+      "preparedTimeJump": true,
+      "pendingDescendantReview": false,
+      "sourceRevision": 1,
+      "chartLayoutPolicy": "strict-v1",
+      "sourceNote": "Ausarbeitung vom 21.10.2026. Unbekannte Gründer → Hausknoten → ein serieller Zeitsprung → Decian und Severina → die Zwillinge. Camilla ist unverheiratet; nur Lucan hat eine Gemahlin. Keine Kinder oder weiteren Geschwister angelegt. Decian starb an Lebensmittelvergiftung; daraus folgt keine bestätigte Mordgeschichte. Die Erbteilung bleibt ungeklärt, die gemeinsame Betriebsführung der Zwillinge besteht dennoch. Aerwen trägt vorerst nur ihren Vornamen; ihr Herkunftshaus in Aberon bleibt offen."
+    }
+  }
+}

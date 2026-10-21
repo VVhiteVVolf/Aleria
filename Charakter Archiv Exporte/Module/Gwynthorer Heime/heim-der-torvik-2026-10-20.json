@@ -1,0 +1,221 @@
+{
+  "type": "aleria-module-package",
+  "version": 1,
+  "exportedAt": "2026-10-20T00:00:00Z",
+  "module": {
+    "type": "aleria-module",
+    "version": 1,
+    "section": {
+      "key": "Gwynthor-Stadt",
+      "tab": "Völker & Kulturen",
+      "path": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Bannkreis Gwynthor",
+        "Gwynthor-Stadt"
+      ],
+      "desc": "Orte und Wohnhäuser innerhalb Gwynthors."
+    },
+    "entry": {
+      "id": "heim-der-torvik",
+      "title": "Heim der Torvik",
+      "subtitle": "Ein aldrimarischer Schmiedegehilfe, seine albische Frau und ihr elfjähriger Sohn.",
+      "type": "Privates Wohnhaus",
+      "category": "Gwynthor-Stadt · Marktviertel",
+      "icon": "⌂",
+      "symbol": "./assets/gwynthor-heime/torvik/wappen.png",
+      "image": "./assets/gwynthor-heime/torvik/aussenansicht.png",
+      "previewImage": "./assets/gwynthor-heime/torvik/aussenansicht.png",
+      "schemaVersion": 1,
+      "multipage": true,
+      "appendCommentsPage": false,
+      "enablePageComments": true,
+      "sessionCast": [
+        "person--haus-torvik--haldor",
+        "person--haus-torvik--maonaid",
+        "person--haus-torvik--iver"
+      ],
+      "pages": [
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Heim der Torvik",
+          "commentThreadKey": "torvik-heim",
+          "image": "./assets/gwynthor-heime/torvik/aussenansicht.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "description": "<p>In einer Seitengasse des Marktviertels wohnen Haldor Torvik, seine Frau Maonaid und ihr Sohn Iver. Das schmale Fachwerkhaus hat eine feste Herdstelle, eine gemeinsame Wohnküche und zwei kleine Schlafkammern unter dem Dach.</p><p>Haldor stammt aus Aldrimar und arbeitet als Schmiedegehilfe in einer der vielen Werkstätten des Marktviertels. Er trägt Material, bereitet das Feuer vor und hilft bei einfachen Arbeiten. Eine eigene Schmiede besitzt er nicht. Maonaid stammt aus Leitheach und führt den Haushalt.</p><p>Das Paar richtet sich mit gewöhnlichem Hausrat ein, ersetzt kaputte Dinge nach und nach und legt nach Möglichkeit etwas zurück. Iver kennt am Klang, wann sein Vater von der Arbeit kommt: Haldor klopft den Ruß stets dreimal an der Türschwelle von den Stiefeln.</p>",
+          "stats": [
+            [
+              "Ort",
+              "Gwynthor-Stadt · Marktviertel"
+            ],
+            [
+              "Bewohner",
+              "Haldor Torvik (32) · Maonaid (30) · Iver Torvik (11)"
+            ],
+            [
+              "Lebensunterhalt",
+              "Haldor Torvik: Schmiedegehilfe im Marktviertel"
+            ],
+            [
+              "Haushalt",
+              "Maonaid"
+            ],
+            [
+              "Wohnverhältnis",
+              "Gepachtetes privates Wohnhaus"
+            ],
+            [
+              "Hauszeichen",
+              "Ein kleiner cremefarbener Hammer auf braunem Holz; schlichter geschlossener Holzrand."
+            ]
+          ]
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Die Torvik · Familienbio",
+          "commentThreadKey": "torvik-familienbio",
+          "biographyPage": true,
+          "image": "./assets/gwynthor-heime/torvik/familienbild.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "stats": [
+            [
+              "Familie",
+              "Haldor Torvik (32) · Maonaid (30) · Iver Torvik (11)"
+            ],
+            [
+              "Wohnort",
+              "Gwynthor-Stadt · Marktviertel"
+            ],
+            [
+              "Gemeinsamer Haushalt",
+              "Seit 1727"
+            ]
+          ],
+          "biography": {
+            "portraitFit": "contain",
+            "biographyTitle": "Ein ordentlicher Platz im Marktviertel",
+            "biographyText": "<p>Haldor Torvik, Maonaid und ihr Sohn Iver teilen ein einfaches Haus in einer Seitengasse des Marktviertels. Haldor bringt Ruhe und eine gewisse Sturheit mit; Maonaid hält mit trockenem Humor dagegen. Iver hört beiden aufmerksam zu, bis ihm die nächste Frage zu einem Werkzeug einfällt.</p><p>Nach Haldors Arbeit werden erst die rußigen Sachen abgelegt. Am geschrubbten Tisch erzählt Iver dann von seinen Holzschnitzereien, während Maonaid prüft, was für den nächsten Tag noch besorgt werden muss. Ordnung ist ihnen wichtig, ohne dass das Haus deswegen still wäre.</p>",
+            "abilitiesTitle": "Persönlichkeit der Familie",
+            "abilities": [
+              {
+                "title": "Sorgfalt",
+                "detail": "Haldor erledigt auch einfache Handgriffe ordentlich. Maonaid hält Hauszeug und Vorräte in Schuss; Iver soll seine angefangenen Arbeiten zu Ende bringen.",
+                "icon": "../IconOrdner/Big Traits/Trait_diligent.png"
+              },
+              {
+                "title": "Gerader Umgang",
+                "detail": "Auf ein gegebenes Wort soll Verlass sein. Fehler werden zu Hause angesprochen, auch wenn Haldor dafür manchmal einen zweiten Anlauf braucht.",
+                "icon": "../IconOrdner/Big Traits/Trait_honest.png"
+              },
+              {
+                "title": "Eigensinn",
+                "detail": "Haldor hält an einer bewährten Lösung gern etwas länger fest. Maonaid weicht bei schlechtem Mehl oder falschem Gewicht ebenso wenig zurück.",
+                "icon": "../IconOrdner/Big Traits/Trait_stubborn.png"
+              },
+              {
+                "title": "Maßhalten",
+                "detail": "Der Haushalt lebt nach seinen Mitteln. Brauchbarer Hausrat wird repariert, und vor einem Kauf wird überlegt, ob das alte Stück noch eine Weile hält.",
+                "icon": "../IconOrdner/Big Traits/Trait_temperate.png"
+              },
+              {
+                "title": "Sinn für Fairness",
+                "detail": "Ordentliche Arbeit verdient ordentlichen Lohn, und ein ehrlicher Einkauf das richtige Gewicht. Diesen einfachen Maßstab bekommt auch Iver mit auf den Weg.",
+                "icon": "../IconOrdner/Big Traits/Trait_just.png"
+              }
+            ],
+            "historyTitle": "Aufbau & Hintergrund",
+            "historyText": "<p>Haldor stammt aus Aldrimar, Maonaid aus Leitheach. Seit ihrer Heirat 1727 führen sie einen gemeinsamen Haushalt. Im Marktviertel haben die beiden einen Alltag gefunden, der von Haldors Arbeit und Maonaids Wegen zu den Händlern geprägt ist.</p><p>Iver ist ihr einziges Kind. Er kennt die Werkzeuge seines Vaters und schaut gelegentlich unter Aufsicht in der Schmiede zu. Welches Handwerk er später erlernen wird, ist noch offen; seine kleinen Schnitzereien liefern bislang reichlich Gesprächsstoff.</p>",
+            "worksTitle": "Im Alltag",
+            "works": [
+              "Drei Personen leben von Haldors Gehilfenlohn und Maonaids Haushaltsführung.",
+              "Für Werkzeug, Ausbildung und Anschaffungen wird nach Möglichkeit gespart."
+            ],
+            "extraSections": [
+              {
+                "position": "afterWorks",
+                "mode": "text",
+                "title": "Lebensunterhalt & Wirtschaftlichkeit",
+                "text": "<p>Haldors Gehilfenlohn bildet die Grundlage. Sein derzeitiger Meister ist launisch, zahlt schlecht und verlangt Überstunden, die er kaum oder gar nicht vergütet. Nach einem heftigen Streit am vergangenen Lyristag wollte Haldor beim Grafenhof vorsprechen, erhielt aber keinen freien Gesuchsplatz mehr. Anschließend ging er zum Kleinen Durst und ist seither nicht heimgekehrt. Nach Auskunft des Wirtes sprach er von einer neuen Arbeitsstelle, bevor er aufbrach.</p><p>Das gepachtete Haus, Lebensmittel, Brennstoff und Kleidung werden aus seinem Einkommen bezahlt. Maonaid hat die Stadt um Hilfe gebeten und wegen der ausstehenden Suche ein eigenes Gesuch angeschlagen. Für Haldors sichere Rückkehr würde sie ihr altes Familienamulett hergeben und nötigenfalls dreißig Kupfertaler dazugeben. Ohne ihn fehlen dem Haushalt sein Angehöriger und sein Lebensunterhalt.</p>"
+              }
+            ],
+            "triviaTitle": "Kleine Gewohnheiten",
+            "trivia": [
+              "Haldor klopft den Ruß dreimal an der Türschwelle von den Stiefeln.",
+              "Auf dem Fenstersims steht häufig eine angefangene Schnitzerei Ivers."
+            ],
+            "quotesTitle": "Am Familientisch",
+            "quotes": [
+              "„Ordentlich soll es sein. Teuer muss es nicht sein.“ — Maonaid"
+            ],
+            "connectionsTitle": "Verbindungen & Kontakte",
+            "connections": [
+              {
+                "type": "connection",
+                "name": "Eine Schmiedewerkstatt im Marktviertel",
+                "detail": "Haldors Arbeitsstelle und sein täglicher Kontakt zu Schmieden und anderen Gehilfen.",
+                "image": "./assets/gwynthor-heime/torvik/haldor.png",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "name": "Händler der Nachbargassen",
+                "detail": "Maonaid kennt die örtlichen Einkaufswege und achtet auf brauchbare Ware und richtige Gewichte.",
+                "image": "./assets/gwynthor-heime/torvik/maonaid.png",
+                "imageFormat": "portrait"
+              }
+            ],
+            "documentsTitle": "Familienakte",
+            "documents": [
+              {
+                "title": "Familie Torvik",
+                "icon": "./assets/gwynthor-heime/torvik/wappen.png",
+                "text": "Der gemeinsame Haushalt und seine Verwandtschaft im kleinen Stammbaum.",
+                "link": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-torvik&mode=view"
+              }
+            ]
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Familie Torvik",
+          "commentThreadKey": "torvik-familie",
+          "familyTreePage": true,
+          "familyTree": {
+            "familyId": "haus-torvik",
+            "source": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-torvik&mode=view",
+            "title": "Familie Torvik · Ein kleiner Haushalt",
+            "height": 640,
+            "intro": "Haldor Torvik, 32 Jahre, schmiedegehilfe im marktviertel · Maonaid, 30 Jahre, hausfrau · Iver Torvik, 11 Jahre, sohn."
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Die Wohnstube",
+          "commentThreadKey": "torvik-wohnstube",
+          "image": "./assets/gwynthor-heime/torvik/wohnstube.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Die Wohnküche ist schlicht und ordentlich: ein Herd an der Rückwand, ein geschrubbter Tisch mit Bank, ein Brett für Zinngeschirr und ein Wassereimer neben der Tür. Eine schmale Holztreppe führt zu den Schlafkammern. Auf dem Fenstersims liegt Ivers angefangene Holzschnitzerei; Arbeitskleidung hängt getrennt vom sauberen Hauszeug.</p>",
+          "sessionHint": "Ein Besuch bei einer Gwynthorer Familie.",
+          "sessionEmptyTitle": "Ein gewöhnlicher Tag zu Hause",
+          "sessionEmptyText": "Ein Klopfen an der Tür, ein Gespräch am Herd oder eine Nachricht aus dem Viertel.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        }
+      ]
+    }
+  }
+}

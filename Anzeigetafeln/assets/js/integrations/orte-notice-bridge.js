@@ -23,12 +23,12 @@
   }
 
   function publishNotices() {
-    const pois = publicNotices().map(notice => ({
-      id: String(notice.id || ""),
-      name: String(notice.title || "Ohne Titel"),
-      type: String(window.TafelZettelConfig.typeById(notice.typ)?.label || "Aushang"),
-      description: text(notice.text),
-      searchText: window.TafelNoticeSearch.fields(notice).join(" "),
+    const pois = window.TafelNoticeStacks.publications(publicNotices()).map(entry => ({
+      id: String(entry.id),
+      name: String(entry.primary.title || "Ohne Titel"),
+      type: String(window.TafelZettelConfig.typeById(entry.primary.typ)?.label || "Aushang"),
+      description: text(entry.primary.text),
+      searchText: entry.notices.flatMap(notice => window.TafelNoticeSearch.fields(notice)).join(" "),
     }));
     window.parent.postMessage(
       { type: "aleria:map-pois", mapId, pois },

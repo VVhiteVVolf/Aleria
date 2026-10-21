@@ -1,0 +1,1982 @@
+{
+  "type": "aleria-module-package",
+  "version": 1,
+  "exportedAt": "2026-10-21T00:00:00Z",
+  "module": {
+    "type": "aleria-module",
+    "version": 1,
+    "section": {
+      "key": "Kriminalität",
+      "tab": "Kriminalität",
+      "path": [],
+      "desc": "Banden, Räuber und organisiertes Verbrechen"
+    },
+    "entry": {
+      "id": "schwarze-zitteraale",
+      "title": "Die Schwarzen Zitteraale",
+      "subtitle": "Raubritter und Rudel · Celtigerns Wacht",
+      "type": "Raubritterbande",
+      "category": "Kriminalität · Celtigerns Wacht",
+      "icon": "⚔",
+      "symbol": "/AleriaAlmanach/assets/schwarze-zitteraale/emblem.png",
+      "image": "/AleriaAlmanach/assets/schwarze-zitteraale/scenes/hohlweg.png",
+      "previewImage": "/AleriaAlmanach/assets/schwarze-zitteraale/scenes/hohlweg.png",
+      "stamp": "CELTIGERNS WACHT",
+      "schemaVersion": 1,
+      "multipage": true,
+      "appendCommentsPage": false,
+      "enablePageComments": true,
+      "zitteraaleRevision": "20261021-bandenakte-v2",
+      "sessionCast": [
+        "zitteraale-schwarzer-zitteraal",
+        "zitteraale-schlickzahn",
+        "zitteraale-nachtkieme",
+        "zitteraale-donnerkiefer",
+        "zitteraale-netznadel"
+      ],
+      "pages": [
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Die Schwarzen Zitteraale",
+          "commentThreadKey": "zitteraale-uebersicht",
+          "image": "/AleriaAlmanach/assets/schwarze-zitteraale/scenes/hohlweg.png",
+          "imageWidth": 36,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "description": "<p>Wo der Weg zwischen Böschung und Wasser eng wird, genügt eine umgestürzte Karre. Dann lösen sich Gestalten aus dem Schilf, und ein schwarzer Aal blitzt auf dunklem Tuch. Den Namen der Männer erfährt der Reisende selten. Ihre Forderung versteht er sofort.</p><p>Die <strong>Schwarzen Zitteraale</strong> sind eine Raubritterbande in <strong>Celtigerns Wacht</strong>. Ihre ältesten Gefolgsleute entstammen den versprengten Dienern des Hauses <strong>Illysywen</strong>, das im Krieg von 1720 auf der Seite Ceitheachs stand und unterging. Um 1730 fanden sich Überlebende, Deserteure und Gesetzlose zu einer dauerhaften Bande zusammen.</p><p>Der Schwarze Zitteraal hält sie unter einem Zeichen zusammen, das an die Illysywen erinnert. Was er als fortgesetzte Fehde gegen die Sieger darstellt, bezahlen Bauern, Reisende und Händler mit Vorräten, Besitz und Leben.</p>",
+          "stats": [
+            [
+              "Art",
+              "Raubritterbande"
+            ],
+            [
+              "Gebiet",
+              "Celtigerns Wacht · Straßen, Küstenwege und Umland"
+            ],
+            [
+              "Ursprung",
+              "Untergang der Illysywen 1720 · Bandenbildung um 1730"
+            ],
+            [
+              "Führung",
+              "Der Schwarze Zitteraal und vier Vertraute"
+            ],
+            [
+              "Namen",
+              "Ausschließlich Bandenbeinamen"
+            ],
+            [
+              "Fahndung",
+              "35 Goldtaler auf das Bandenhaupt"
+            ]
+          ]
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Machenschaften · Druck und Beute",
+          "commentThreadKey": "zitteraale-vorgehen",
+          "image": "/AleriaAlmanach/assets/schwarze-zitteraale/scenes/hohlweg.png",
+          "imageWidth": 36,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "description": "<p>Die Rudel beobachten Wege und Gewohnheiten, bevor sie zugreifen. Sie überfallen Frachtzüge, erpressen Gehöfte und treiben gestohlenes Vieh über Nebenwege fort. Einzelne treten als Reisende oder Kriegsknechte auf. Erst beim Zugriff werden aus unauffälligen Männern eine gemeinsame Schar.</p><p>Beute allein hält die Bande nicht am Leben. Nahrung, Futter, brauchbare Waffen und Menschen, die eine Übergabe nicht hinterfragen, sind ebenso wichtig. Die Führung verteilt diese Mittel und damit auch die Abhängigkeit ihrer Leute. Verbindungen zu Hehlern und Schmugglern bleiben absichtlich in einzelne Wege und Treffen aufgeteilt.</p><p>Der Überfall auf den <strong>Bradrhith-Hof</strong> brachte einen Teil dieses Geflechts vor das gräfliche Gericht. Acht Angreifer fielen bei der Verfolgung durch Sir Rhys Draig; drei ergaben sich. Ihre frühere Schar ist beim Hohlwegrudel vermerkt. Aussagen über Auftraggeber und mögliche Kontakte zu den Gwregysdu bleiben vom bloßen Verdacht gegen das ganze Haus getrennt.</p>",
+          "stats": [
+            [
+              "Ziele",
+              "Reisende, Karawanen, abgelegene Höfe"
+            ],
+            [
+              "Vorgehen",
+              "Kundschaft · Hinterhalt · Erpressung · Hehlerei"
+            ],
+            [
+              "Beutewege",
+              "Getrennte Übergaben und eingeweihte Mittelsleute"
+            ],
+            [
+              "Bradrhith-Hof",
+              "Acht Angreifer gefallen · drei gefangen"
+            ],
+            [
+              "Öffentlicher Stand",
+              "Bandenhauptquartier nicht lokalisiert"
+            ]
+          ]
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Bandenordnung · Führung und Gruppen",
+          "commentThreadKey": "zitteraale-hierarchie",
+          "hierarchyPage": true,
+          "hierarchy": {
+            "organizationTitle": "Die Schwarzen Zitteraale",
+            "eyebrow": "Bande · Befehle und Abhängigkeiten",
+            "subtitle": "Ein Bandenhaupt · vier Köpfe des inneren Kreises · sechs Rudel",
+            "centerLabel": "Der Schwarze Zitteraal",
+            "emblem": "/AleriaAlmanach/assets/schwarze-zitteraale/emblem.png",
+            "sideImage": "/AleriaAlmanach/assets/schwarze-zitteraale/scenes/hauptquartier.png",
+            "motto": "Im trüben Wasser bleibt kein Name.",
+            "description": "<p>Der Schwarze Zitteraal entscheidet über Ziele, Beuteanteile und Strafen. Unter ihm stehen seine beiden Hände; zwei weitere Vertraute verwalten Waffen und Vorräte. Die Rudelführer empfangen begrenzte Aufträge. Kein Komplize soll mehr Wege und Kontakte kennen, als er für seinen nächsten Gang braucht.</p>",
+            "detailsTitle": "Zusammensetzung",
+            "details": [
+              {
+                "label": "Führung",
+                "value": "Fünf Rädelsführer, pyramidenartig geordnet"
+              },
+              {
+                "label": "Rudel",
+                "value": "Sechs Rudelführer mit jeweils zwölf aktiven Komplizen"
+              },
+              {
+                "label": "Dargestellte aktive Stärke",
+                "value": "83 Köpfe · Führung und sechs vollständige Rudel"
+              },
+              {
+                "label": "Frühere Hofschar",
+                "value": "Elf Ausgeschiedene gesondert beim Hohlwegrudel; nicht Teil der aktiven Stärke"
+              }
+            ],
+            "chartTitle": "Führung und Gruppen",
+            "treeDisplayMode": "tabs",
+            "portraitScale": 78,
+            "cardFontScale": 88,
+            "chartIntro": "Die Führungsriege steht über allen Rudeln. Jedes Rudel zeigt seinen Führer und darunter drei Reihen zu vier Komplizen. Ausgeschiedene gehören in eine eigene letzte Reihe.",
+            "trees": [
+              {
+                "id": "fuehrung",
+                "label": "Führung",
+                "parentTreeId": "",
+                "levels": [
+                  {
+                    "label": "Bandenhaupt",
+                    "nodes": [
+                      {
+                        "id": "zitteraale-schwarzer-zitteraal",
+                        "title": "Der Schwarze Zitteraal",
+                        "subtitle": "Bandenhaupt · letzter Befehl",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/schwarzer-zitteraal.png",
+                        "text": "Beherrscht, charismatisch und berechnend. Spricht leise und lässt andere auf seine Antwort warten. Abmachungen gelten ihm, solange sie seinem Anspruch dienen."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Rechte und linke Hand",
+                    "nodes": [
+                      {
+                        "id": "zitteraale-schlickzahn",
+                        "title": "Schlickzahn",
+                        "subtitle": "Rechte Hand · Überfälle und Einschüchterung",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/schlickzahn.png",
+                        "text": "Reizbar, besitzergreifend und geduldig, wenn Angst ihm nützt. Lacht über kleine Demütigungen und merkt sich jeden Widerspruch."
+                      },
+                      {
+                        "id": "zitteraale-nachtkieme",
+                        "title": "Nachtkieme",
+                        "subtitle": "Linke Hand · Kundschaft und Verbindungen",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/nachtkieme.png",
+                        "text": "Aufmerksam, misstrauisch und wortkarg. Merkt sich Stimmen und kleine Unstimmigkeiten; antwortet selten auf die eigentliche Frage."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Innerer Kreis",
+                    "nodes": [
+                      {
+                        "id": "zitteraale-donnerkiefer",
+                        "title": "Donnerkiefer",
+                        "subtitle": "Innerer Kreis · Waffen und Rudeldisziplin",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/donnerkiefer.png",
+                        "text": "Diszipliniert, nachtragend und stolz auf seine Härte. Hält Furcht für eine zuverlässigere Bindung als Freundschaft."
+                      },
+                      {
+                        "id": "zitteraale-netznadel",
+                        "title": "Netznadel",
+                        "subtitle": "Innerer Kreis · Beute, Vorräte und Schleusung",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/netznadel.png",
+                        "text": "Geschäftig, habgierig und ausweichend. Zählt selbst beim Reden mit und macht aus jeder Gefälligkeit eine offene Schuld."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "gruppen",
+                "label": "Gruppen",
+                "parentTreeId": "fuehrung",
+                "levels": [
+                  {
+                    "label": "Sechs Rudel unter der Führungsriege",
+                    "nodes": [
+                      {
+                        "id": "zitteraale-gruppe-hohlweg",
+                        "title": "Hohlwegrudel",
+                        "subtitle": "Überfälle auf Straßen und Gehöfte",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/rudelfuehrer.png",
+                        "text": "Ein Rudelführer und zwölf Komplizen; die Mitglieder kennen einander unter Beinamen."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-ufer",
+                        "title": "Uferschatten",
+                        "subtitle": "Anlegeplätze und Übergaben",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/rudelfuehrer.png",
+                        "text": "Ein Rudelführer und zwölf Komplizen; die Mitglieder kennen einander unter Beinamen."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-schilf",
+                        "title": "Schilfmesser",
+                        "subtitle": "Kundschaft und heimliche Wege",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/rudelfuehrer.png",
+                        "text": "Ein Rudelführer und zwölf Komplizen; die Mitglieder kennen einander unter Beinamen."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-fracht",
+                        "title": "Nachtfracht",
+                        "subtitle": "Beute und Vorratstransporte",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/rudelfuehrer.png",
+                        "text": "Ein Rudelführer und zwölf Komplizen; die Mitglieder kennen einander unter Beinamen."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-bruch",
+                        "title": "Bruchzähne",
+                        "subtitle": "Gewaltsamer Zugriff und Rückendeckung",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/rudelfuehrer.png",
+                        "text": "Ein Rudelführer und zwölf Komplizen; die Mitglieder kennen einander unter Beinamen."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-ruine",
+                        "title": "Grundwache",
+                        "subtitle": "Wachen und Laufwege in der Ruinenstadt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/rudelfuehrer.png",
+                        "text": "Ein Rudelführer und zwölf Komplizen; die Mitglieder kennen einander unter Beinamen."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "hohlweg",
+                "label": "Hohlwegrudel",
+                "parentTreeId": "gruppen",
+                "levels": [
+                  {
+                    "label": "Rudelführer",
+                    "nodes": [
+                      {
+                        "id": "zitteraale-hohlweg-rudelfuehrer",
+                        "title": "Rudelführer",
+                        "subtitle": "Überfälle auf Straßen und Gehöfte",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/rudelfuehrer.png",
+                        "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Komplizen · Reihe 1",
+                    "nodes": [
+                      {
+                        "id": "zitteraale-hohlweg-1-1",
+                        "title": "Komplize",
+                        "subtitle": "Rudel Hohlwegrudel",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
+                      },
+                      {
+                        "id": "zitteraale-hohlweg-1-2",
+                        "title": "Komplize",
+                        "subtitle": "Rudel Hohlwegrudel",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
+                      },
+                      {
+                        "id": "zitteraale-hohlweg-1-3",
+                        "title": "Komplize",
+                        "subtitle": "Rudel Hohlwegrudel",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
+                      },
+                      {
+                        "id": "zitteraale-hohlweg-1-4",
+                        "title": "Komplize",
+                        "subtitle": "Rudel Hohlwegrudel",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Komplizen · Reihe 2",
+                    "nodes": [
+                      {
+                        "id": "zitteraale-hohlweg-2-1",
+                        "title": "Komplize",
+                        "subtitle": "Rudel Hohlwegrudel",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
+                      },
+                      {
+                        "id": "zitteraale-hohlweg-2-2",
+                        "title": "Komplize",
+                        "subtitle": "Rudel Hohlwegrudel",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
+                      },
+                      {
+                        "id": "zitteraale-hohlweg-2-3",
+                        "title": "Komplize",
+                        "subtitle": "Rudel Hohlwegrudel",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
+                      },
+                      {
+                        "id": "zitteraale-hohlweg-2-4",
+                        "title": "Komplize",
+                        "subtitle": "Rudel Hohlwegrudel",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Komplizen · Reihe 3",
+                    "nodes": [
+                      {
+                        "id": "zitteraale-hohlweg-3-1",
+                        "title": "Komplize",
+                        "subtitle": "Rudel Hohlwegrudel",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
+                      },
+                      {
+                        "id": "zitteraale-hohlweg-3-2",
+                        "title": "Komplize",
+                        "subtitle": "Rudel Hohlwegrudel",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
+                      },
+                      {
+                        "id": "zitteraale-hohlweg-3-3",
+                        "title": "Komplize",
+                        "subtitle": "Rudel Hohlwegrudel",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
+                      },
+                      {
+                        "id": "zitteraale-hohlweg-3-4",
+                        "title": "Komplize",
+                        "subtitle": "Rudel Hohlwegrudel",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Ehemalige / Tote · Schar vom Bradrhith-Hof",
+                    "nodes": [
+                      {
+                        "id": "zitteraale-hoffuehrer-gefallen",
+                        "title": "Alter Rudelführer",
+                        "subtitle": "Im Zweikampf gegen Sir Rhys Draig gefallen",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/rudelfuehrer.png",
+                        "text": "Führte die frühere Hofschar; im Gefecht getötet. Der heutige Rudelführer ist sein Nachfolger."
+                      },
+                      {
+                        "id": "01OfFXeScnCoL2eNMPAM",
+                        "title": "Jungaal",
+                        "subtitle": "Gefangen · zum Tod verurteilt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Überlebte den Überfall auf das Gestüt und wurde vor den gräflichen Hof gebracht. Gehört nicht zu den aktiven Reihen."
+                      },
+                      {
+                        "id": "2UgcQTdEEpSJDTNKxx0U",
+                        "title": "Riffbrecher",
+                        "subtitle": "Gefangen · für Verhöre zurückgehalten",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Überlebte den Überfall auf das Gestüt und wurde vor den gräflichen Hof gebracht. Gehört nicht zu den aktiven Reihen."
+                      },
+                      {
+                        "id": "ax26chmgvtaURnzC0n0l",
+                        "title": "Grubenschlick",
+                        "subtitle": "Gefangen · zum Tod verurteilt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Überlebte den Überfall auf das Gestüt und wurde vor den gräflichen Hof gebracht. Gehört nicht zu den aktiven Reihen."
+                      },
+                      {
+                        "id": "zitteraale-hofschar-gefallen-1",
+                        "title": "Gefallener Komplize",
+                        "subtitle": "Bei der Verfolgung durch Sir Rhys Draig gefallen",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Einer der sieben weiteren gefallenen Komplizen. Mit dem Truppführer starben acht Angreifer; drei ergaben sich."
+                      },
+                      {
+                        "id": "zitteraale-hofschar-gefallen-2",
+                        "title": "Gefallener Komplize",
+                        "subtitle": "Bei der Verfolgung durch Sir Rhys Draig gefallen",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Einer der sieben weiteren gefallenen Komplizen. Mit dem Truppführer starben acht Angreifer; drei ergaben sich."
+                      },
+                      {
+                        "id": "zitteraale-hofschar-gefallen-3",
+                        "title": "Gefallener Komplize",
+                        "subtitle": "Bei der Verfolgung durch Sir Rhys Draig gefallen",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Einer der sieben weiteren gefallenen Komplizen. Mit dem Truppführer starben acht Angreifer; drei ergaben sich."
+                      },
+                      {
+                        "id": "zitteraale-hofschar-gefallen-4",
+                        "title": "Gefallener Komplize",
+                        "subtitle": "Bei der Verfolgung durch Sir Rhys Draig gefallen",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Einer der sieben weiteren gefallenen Komplizen. Mit dem Truppführer starben acht Angreifer; drei ergaben sich."
+                      },
+                      {
+                        "id": "zitteraale-hofschar-gefallen-5",
+                        "title": "Gefallener Komplize",
+                        "subtitle": "Bei der Verfolgung durch Sir Rhys Draig gefallen",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Einer der sieben weiteren gefallenen Komplizen. Mit dem Truppführer starben acht Angreifer; drei ergaben sich."
+                      },
+                      {
+                        "id": "zitteraale-hofschar-gefallen-6",
+                        "title": "Gefallener Komplize",
+                        "subtitle": "Bei der Verfolgung durch Sir Rhys Draig gefallen",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Einer der sieben weiteren gefallenen Komplizen. Mit dem Truppführer starben acht Angreifer; drei ergaben sich."
+                      },
+                      {
+                        "id": "zitteraale-hofschar-gefallen-7",
+                        "title": "Gefallener Komplize",
+                        "subtitle": "Bei der Verfolgung durch Sir Rhys Draig gefallen",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Einer der sieben weiteren gefallenen Komplizen. Mit dem Truppführer starben acht Angreifer; drei ergaben sich."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "ufer",
+                "label": "Uferschatten",
+                "parentTreeId": "gruppen",
+                "levels": [
+                  {
+                    "label": "Rudelführer",
+                    "nodes": [
+                      {
+                        "id": "zitteraale-ufer-rudelfuehrer",
+                        "title": "Rudelführer",
+                        "subtitle": "Anlegeplätze und Übergaben",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/rudelfuehrer.png",
+                        "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Komplizen · Reihe 1",
+                    "nodes": [
+                      {
+                        "id": "zitteraale-ufer-1-1",
+                        "title": "Komplize",
+                        "subtitle": "Rudel Uferschatten",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
+                      },
+                      {
+                        "id": "zitteraale-ufer-1-2",
+                        "title": "Komplize",
+                        "subtitle": "Rudel Uferschatten",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
+                      },
+                      {
+                        "id": "zitteraale-ufer-1-3",
+                        "title": "Komplize",
+                        "subtitle": "Rudel Uferschatten",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
+                      },
+                      {
+                        "id": "zitteraale-ufer-1-4",
+                        "title": "Komplize",
+                        "subtitle": "Rudel Uferschatten",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Komplizen · Reihe 2",
+                    "nodes": [
+                      {
+                        "id": "zitteraale-ufer-2-1",
+                        "title": "Komplize",
+                        "subtitle": "Rudel Uferschatten",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
+                      },
+                      {
+                        "id": "zitteraale-ufer-2-2",
+                        "title": "Komplize",
+                        "subtitle": "Rudel Uferschatten",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
+                      },
+                      {
+                        "id": "zitteraale-ufer-2-3",
+                        "title": "Komplize",
+                        "subtitle": "Rudel Uferschatten",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
+                      },
+                      {
+                        "id": "zitteraale-ufer-2-4",
+                        "title": "Komplize",
+                        "subtitle": "Rudel Uferschatten",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Komplizen · Reihe 3",
+                    "nodes": [
+                      {
+                        "id": "zitteraale-ufer-3-1",
+                        "title": "Komplize",
+                        "subtitle": "Rudel Uferschatten",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
+                      },
+                      {
+                        "id": "zitteraale-ufer-3-2",
+                        "title": "Komplize",
+                        "subtitle": "Rudel Uferschatten",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
+                      },
+                      {
+                        "id": "zitteraale-ufer-3-3",
+                        "title": "Komplize",
+                        "subtitle": "Rudel Uferschatten",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
+                      },
+                      {
+                        "id": "zitteraale-ufer-3-4",
+                        "title": "Komplize",
+                        "subtitle": "Rudel Uferschatten",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "schilf",
+                "label": "Schilfmesser",
+                "parentTreeId": "gruppen",
+                "levels": [
+                  {
+                    "label": "Rudelführer",
+                    "nodes": [
+                      {
+                        "id": "zitteraale-schilf-rudelfuehrer",
+                        "title": "Rudelführer",
+                        "subtitle": "Kundschaft und heimliche Wege",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/rudelfuehrer.png",
+                        "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Komplizen · Reihe 1",
+                    "nodes": [
+                      {
+                        "id": "zitteraale-schilf-1-1",
+                        "title": "Komplize",
+                        "subtitle": "Rudel Schilfmesser",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
+                      },
+                      {
+                        "id": "zitteraale-schilf-1-2",
+                        "title": "Komplize",
+                        "subtitle": "Rudel Schilfmesser",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
+                      },
+                      {
+                        "id": "zitteraale-schilf-1-3",
+                        "title": "Komplize",
+                        "subtitle": "Rudel Schilfmesser",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
+                      },
+                      {
+                        "id": "zitteraale-schilf-1-4",
+                        "title": "Komplize",
+                        "subtitle": "Rudel Schilfmesser",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Komplizen · Reihe 2",
+                    "nodes": [
+                      {
+                        "id": "zitteraale-schilf-2-1",
+                        "title": "Komplize",
+                        "subtitle": "Rudel Schilfmesser",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
+                      },
+                      {
+                        "id": "zitteraale-schilf-2-2",
+                        "title": "Komplize",
+                        "subtitle": "Rudel Schilfmesser",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
+                      },
+                      {
+                        "id": "zitteraale-schilf-2-3",
+                        "title": "Komplize",
+                        "subtitle": "Rudel Schilfmesser",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
+                      },
+                      {
+                        "id": "zitteraale-schilf-2-4",
+                        "title": "Komplize",
+                        "subtitle": "Rudel Schilfmesser",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Komplizen · Reihe 3",
+                    "nodes": [
+                      {
+                        "id": "zitteraale-schilf-3-1",
+                        "title": "Komplize",
+                        "subtitle": "Rudel Schilfmesser",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
+                      },
+                      {
+                        "id": "zitteraale-schilf-3-2",
+                        "title": "Komplize",
+                        "subtitle": "Rudel Schilfmesser",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
+                      },
+                      {
+                        "id": "zitteraale-schilf-3-3",
+                        "title": "Komplize",
+                        "subtitle": "Rudel Schilfmesser",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
+                      },
+                      {
+                        "id": "zitteraale-schilf-3-4",
+                        "title": "Komplize",
+                        "subtitle": "Rudel Schilfmesser",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "fracht",
+                "label": "Nachtfracht",
+                "parentTreeId": "gruppen",
+                "levels": [
+                  {
+                    "label": "Rudelführer",
+                    "nodes": [
+                      {
+                        "id": "zitteraale-fracht-rudelfuehrer",
+                        "title": "Rudelführer",
+                        "subtitle": "Beute und Vorratstransporte",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/rudelfuehrer.png",
+                        "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Komplizen · Reihe 1",
+                    "nodes": [
+                      {
+                        "id": "zitteraale-fracht-1-1",
+                        "title": "Komplize",
+                        "subtitle": "Rudel Nachtfracht",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
+                      },
+                      {
+                        "id": "zitteraale-fracht-1-2",
+                        "title": "Komplize",
+                        "subtitle": "Rudel Nachtfracht",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
+                      },
+                      {
+                        "id": "zitteraale-fracht-1-3",
+                        "title": "Komplize",
+                        "subtitle": "Rudel Nachtfracht",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
+                      },
+                      {
+                        "id": "zitteraale-fracht-1-4",
+                        "title": "Komplize",
+                        "subtitle": "Rudel Nachtfracht",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Komplizen · Reihe 2",
+                    "nodes": [
+                      {
+                        "id": "zitteraale-fracht-2-1",
+                        "title": "Komplize",
+                        "subtitle": "Rudel Nachtfracht",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
+                      },
+                      {
+                        "id": "zitteraale-fracht-2-2",
+                        "title": "Komplize",
+                        "subtitle": "Rudel Nachtfracht",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
+                      },
+                      {
+                        "id": "zitteraale-fracht-2-3",
+                        "title": "Komplize",
+                        "subtitle": "Rudel Nachtfracht",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
+                      },
+                      {
+                        "id": "zitteraale-fracht-2-4",
+                        "title": "Komplize",
+                        "subtitle": "Rudel Nachtfracht",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Komplizen · Reihe 3",
+                    "nodes": [
+                      {
+                        "id": "zitteraale-fracht-3-1",
+                        "title": "Komplize",
+                        "subtitle": "Rudel Nachtfracht",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
+                      },
+                      {
+                        "id": "zitteraale-fracht-3-2",
+                        "title": "Komplize",
+                        "subtitle": "Rudel Nachtfracht",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
+                      },
+                      {
+                        "id": "zitteraale-fracht-3-3",
+                        "title": "Komplize",
+                        "subtitle": "Rudel Nachtfracht",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
+                      },
+                      {
+                        "id": "zitteraale-fracht-3-4",
+                        "title": "Komplize",
+                        "subtitle": "Rudel Nachtfracht",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "bruch",
+                "label": "Bruchzähne",
+                "parentTreeId": "gruppen",
+                "levels": [
+                  {
+                    "label": "Rudelführer",
+                    "nodes": [
+                      {
+                        "id": "zitteraale-bruch-rudelfuehrer",
+                        "title": "Rudelführer",
+                        "subtitle": "Gewaltsamer Zugriff und Rückendeckung",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/rudelfuehrer.png",
+                        "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Komplizen · Reihe 1",
+                    "nodes": [
+                      {
+                        "id": "zitteraale-bruch-1-1",
+                        "title": "Komplize",
+                        "subtitle": "Rudel Bruchzähne",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
+                      },
+                      {
+                        "id": "zitteraale-bruch-1-2",
+                        "title": "Komplize",
+                        "subtitle": "Rudel Bruchzähne",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
+                      },
+                      {
+                        "id": "zitteraale-bruch-1-3",
+                        "title": "Komplize",
+                        "subtitle": "Rudel Bruchzähne",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
+                      },
+                      {
+                        "id": "zitteraale-bruch-1-4",
+                        "title": "Komplize",
+                        "subtitle": "Rudel Bruchzähne",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Komplizen · Reihe 2",
+                    "nodes": [
+                      {
+                        "id": "zitteraale-bruch-2-1",
+                        "title": "Komplize",
+                        "subtitle": "Rudel Bruchzähne",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
+                      },
+                      {
+                        "id": "zitteraale-bruch-2-2",
+                        "title": "Komplize",
+                        "subtitle": "Rudel Bruchzähne",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
+                      },
+                      {
+                        "id": "zitteraale-bruch-2-3",
+                        "title": "Komplize",
+                        "subtitle": "Rudel Bruchzähne",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
+                      },
+                      {
+                        "id": "zitteraale-bruch-2-4",
+                        "title": "Komplize",
+                        "subtitle": "Rudel Bruchzähne",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Komplizen · Reihe 3",
+                    "nodes": [
+                      {
+                        "id": "zitteraale-bruch-3-1",
+                        "title": "Komplize",
+                        "subtitle": "Rudel Bruchzähne",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
+                      },
+                      {
+                        "id": "zitteraale-bruch-3-2",
+                        "title": "Komplize",
+                        "subtitle": "Rudel Bruchzähne",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
+                      },
+                      {
+                        "id": "zitteraale-bruch-3-3",
+                        "title": "Komplize",
+                        "subtitle": "Rudel Bruchzähne",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
+                      },
+                      {
+                        "id": "zitteraale-bruch-3-4",
+                        "title": "Komplize",
+                        "subtitle": "Rudel Bruchzähne",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "ruine",
+                "label": "Grundwache",
+                "parentTreeId": "gruppen",
+                "levels": [
+                  {
+                    "label": "Rudelführer",
+                    "nodes": [
+                      {
+                        "id": "zitteraale-ruine-rudelfuehrer",
+                        "title": "Rudelführer",
+                        "subtitle": "Wachen und Laufwege in der Ruinenstadt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/rudelfuehrer.png",
+                        "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Komplizen · Reihe 1",
+                    "nodes": [
+                      {
+                        "id": "zitteraale-ruine-1-1",
+                        "title": "Komplize",
+                        "subtitle": "Rudel Grundwache",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
+                      },
+                      {
+                        "id": "zitteraale-ruine-1-2",
+                        "title": "Komplize",
+                        "subtitle": "Rudel Grundwache",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
+                      },
+                      {
+                        "id": "zitteraale-ruine-1-3",
+                        "title": "Komplize",
+                        "subtitle": "Rudel Grundwache",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
+                      },
+                      {
+                        "id": "zitteraale-ruine-1-4",
+                        "title": "Komplize",
+                        "subtitle": "Rudel Grundwache",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Komplizen · Reihe 2",
+                    "nodes": [
+                      {
+                        "id": "zitteraale-ruine-2-1",
+                        "title": "Komplize",
+                        "subtitle": "Rudel Grundwache",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
+                      },
+                      {
+                        "id": "zitteraale-ruine-2-2",
+                        "title": "Komplize",
+                        "subtitle": "Rudel Grundwache",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
+                      },
+                      {
+                        "id": "zitteraale-ruine-2-3",
+                        "title": "Komplize",
+                        "subtitle": "Rudel Grundwache",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
+                      },
+                      {
+                        "id": "zitteraale-ruine-2-4",
+                        "title": "Komplize",
+                        "subtitle": "Rudel Grundwache",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Komplizen · Reihe 3",
+                    "nodes": [
+                      {
+                        "id": "zitteraale-ruine-3-1",
+                        "title": "Komplize",
+                        "subtitle": "Rudel Grundwache",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
+                      },
+                      {
+                        "id": "zitteraale-ruine-3-2",
+                        "title": "Komplize",
+                        "subtitle": "Rudel Grundwache",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
+                      },
+                      {
+                        "id": "zitteraale-ruine-3-3",
+                        "title": "Komplize",
+                        "subtitle": "Rudel Grundwache",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
+                      },
+                      {
+                        "id": "zitteraale-ruine-3-4",
+                        "title": "Komplize",
+                        "subtitle": "Rudel Grundwache",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "levels": [],
+            "footerNote": "Die amtliche Fahndung kennt weder die vollständige Stärke noch den Standort der Ruinenstadt. Diese Übersicht zeigt die tatsächliche Bandenordnung. Die drei Gefangenen sind nicht als bereits hingerichtet geführt."
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "zitteraale-akte-schwarzer-zitteraal",
+          "pageTitle": "Krimi-Bio · Der Schwarze Zitteraal",
+          "bountyFilePage": true,
+          "image": "/AleriaAlmanach/assets/schwarze-zitteraale/sketches/schwarzer-zitteraal.png",
+          "description": "<p>Einst ein Krieger im Dienst der Illysywen. Er überlebte deren Untergang im Krieg von 1720 und sammelte später Versprengte und Deserteure. Aus der verlorenen Gefolgschaft formte er eine Bande, deren Beutezüge seinen eigenen Machtanspruch nähren.</p><p><strong>Persönlichkeit:</strong> Beherrscht, charismatisch und berechnend. Spricht leise und lässt andere auf seine Antwort warten. Abmachungen gelten ihm, solange sie seinem Anspruch dienen.</p><p><strong>Vorgehen:</strong> Wählt Ziele und Rückzugswege, verteilt Beute und hält die Rudelführer durch Abhängigkeit und Furcht zusammen. Sein Morgenstern Donnergrollen und der Hengst Zunder machen ihn im offenen Gefecht erkennbar.</p>",
+          "bountyFile": {
+            "archiveTitle": "Der Schwarze Zitteraal",
+            "archiveSubtitle": "Marschallamt · Grafschaft Celtigerns Wacht",
+            "targetName": "Der Schwarze Zitteraal",
+            "aliases": "Bandenbeiname · wirklicher Name unbekannt",
+            "regionalBanner": "/IconOrdner/Fazit%20Icons/Krone.png",
+            "portraitImage": "/AleriaAlmanach/assets/schwarze-zitteraale/sketches/schwarzer-zitteraal.png",
+            "portraitScale": 100,
+            "portraitX": 50,
+            "portraitY": 30,
+            "status": "Gesucht",
+            "statusNote": "Tot oder lebendig",
+            "threatLevel": 5,
+            "threatText": "Bewaffnet · nicht allein stellen",
+            "bountyAmount": "35",
+            "bountyCurrency": "Goldtaler",
+            "coinImage": "/AleriaAlmanach/public/assets/inventory/coins/goldtaler.png",
+            "descriptionTitle": "Personenbeschreibung",
+            "descriptionRows": [
+              {
+                "label": "Alter",
+                "value": "Etwa 41 Jahre"
+              },
+              {
+                "label": "Größe",
+                "value": "1,86 Schritt"
+              },
+              {
+                "label": "Erkennungszeichen",
+                "value": "Dunkelbraunes Haar unter schwarzer Kapuze, graugrüne Augen, gepflegter kurzer Bart; hochgewachsen und sehnig. Dunkler Panzer mit goldenen Kanten und Aalzeichen."
+              }
+            ],
+            "descriptionNote": "Zeichnung nach Personenbeschreibungen. Kleidung und Auftreten können abweichen.",
+            "chargesTitle": "Tatvorwürfe",
+            "charges": [
+              {
+                "title": "Mord und Plünderung",
+                "icon": "/IconOrdner/Fazit%20Icons/Schwert.png",
+                "text": ""
+              },
+              {
+                "title": "Raub und Erpressung",
+                "icon": "/IconOrdner/Fazit%20Icons/Schwert.png",
+                "text": ""
+              },
+              {
+                "title": "Brandstiftung",
+                "icon": "/IconOrdner/Fazit%20Icons/Schwert.png",
+                "text": ""
+              },
+              {
+                "title": "Anführung einer Raubritterbande",
+                "icon": "/IconOrdner/Fazit%20Icons/Schwert.png",
+                "text": ""
+              },
+              {
+                "title": "Schändung und Gewalt gegen Schutzlose",
+                "icon": "/IconOrdner/Fazit%20Icons/Schwert.png",
+                "text": ""
+              }
+            ],
+            "traitsTitle": "Verhalten",
+            "traits": [
+              {
+                "title": "Berechnend",
+                "icon": "",
+                "text": ""
+              },
+              {
+                "title": "Charismatisch",
+                "icon": "",
+                "text": ""
+              },
+              {
+                "title": "Grausam",
+                "icon": "",
+                "text": ""
+              }
+            ],
+            "companionsTitle": "Erkennbare Gefährten und Ausrüstung",
+            "companions": [
+              {
+                "title": "Zunder",
+                "subtitle": "Rhyfel-Hengst",
+                "image": "/AleriaAlmanach/assets/schwarze-zitteraale/zunder.png",
+                "text": "Breitschultriger dunkelbrauner Hengst mit schwarzer Mähne und dichtem Fesselbehang."
+              },
+              {
+                "title": "Donnergrollen",
+                "subtitle": "Starrer Morgenstern",
+                "image": "/AleriaAlmanach/assets/schwarze-zitteraale/items/donnergrollen.png",
+                "text": "Dunkler Stachelkopf auf langem starren Schaft; kein Kettenflegel. Berichte über Funken sind unbestätigt."
+              }
+            ],
+            "sightingsTitle": "Bekannter Fahndungsraum",
+            "sightings": [
+              {
+                "place": "Lysfaen",
+                "date": "1739 · letzter überlieferter Stand",
+                "observer": "Ältere Fahndungsakte"
+              }
+            ],
+            "connectionsTitle": "Verbindungen und Zugehörigkeit",
+            "factionTitle": "Bande",
+            "factionBanner": "/AleriaAlmanach/assets/schwarze-zitteraale/emblem.png",
+            "factionName": "Die Schwarzen Zitteraale",
+            "factionText": "Bandenhaupt · letzter Befehl",
+            "alliesTitle": "Gesuchte Mitbeschuldigte",
+            "allies": [
+              {
+                "title": "Schlickzahn",
+                "subtitle": "Rechte Hand · Überfälle und Einschüchterung",
+                "image": "/AleriaAlmanach/assets/schwarze-zitteraale/sketches/schlickzahn.png",
+                "text": ""
+              },
+              {
+                "title": "Nachtkieme",
+                "subtitle": "Linke Hand · Kundschaft und Verbindungen",
+                "image": "/AleriaAlmanach/assets/schwarze-zitteraale/sketches/nachtkieme.png",
+                "text": ""
+              },
+              {
+                "title": "Donnerkiefer",
+                "subtitle": "Innerer Kreis · Waffen und Rudeldisziplin",
+                "image": "/AleriaAlmanach/assets/schwarze-zitteraale/sketches/donnerkiefer.png",
+                "text": ""
+              },
+              {
+                "title": "Netznadel",
+                "subtitle": "Innerer Kreis · Beute, Vorräte und Schleusung",
+                "image": "/AleriaAlmanach/assets/schwarze-zitteraale/sketches/netznadel.png",
+                "text": ""
+              }
+            ],
+            "enemiesTitle": "Verfolgende Obrigkeit",
+            "enemies": [
+              {
+                "title": "Sir Egon Gafyr",
+                "subtitle": "Marschall der Grafschaft",
+                "image": "/IconOrdner/Fazit%20Icons/Ritter.png",
+                "text": "Entgegennahme und Prüfung beim Marschallamt."
+              }
+            ],
+            "supportersTitle": "Ermittlungsstand",
+            "supporters": [
+              {
+                "title": "Verdacht ist kein Nachweis",
+                "image": "/IconOrdner/ReiterIcons/Weltpfade/kriminalitaet.png",
+                "text": "Die Anhörung zum Bradrhith-Hof berührt Kontakte zur Familie Gwregysdu. Daraus folgt keine festgestellte Beteiligung aller Familienangehörigen."
+              }
+            ],
+            "dangerTitle": "Gefährdungsprofil",
+            "dangerProfiles": [
+              {
+                "label": "Kampfkraft",
+                "value": 5,
+                "icon": ""
+              },
+              {
+                "label": "Planung",
+                "value": 5,
+                "icon": ""
+              },
+              {
+                "label": "Tarnung",
+                "value": 4,
+                "icon": ""
+              },
+              {
+                "label": "Gefolgschaft",
+                "value": 4,
+                "icon": ""
+              },
+              {
+                "label": "Fluchtgefahr",
+                "value": 5,
+                "icon": ""
+              }
+            ],
+            "handoverNote": "35 Goldtaler nach bestätigter Ergreifung oder zweifelsfreiem Todesnachweis. Als weitere Belohnung ist ein Ritterschlag ausgeschrieben; Verleihung durch die zuständige Herrschaft.",
+            "footer": "Marschallamt · Fahndungsakten · Kein bestätigter Aufenthaltsort"
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "zitteraale-akte-schlickzahn",
+          "pageTitle": "Krimi-Bio · Schlickzahn",
+          "bountyFilePage": true,
+          "image": "/AleriaAlmanach/assets/schwarze-zitteraale/sketches/schlickzahn.png",
+          "description": "<p>Unter wechselnden Feldzeichen lernte er, dass bewaffnete Männer von den Vorräten anderer leben können. Beim Zitteraal fand er einen Herrn, der diese Gewohnheit belohnt. Seinen Beinamen verdankt er der Zahnlücke und den schlammigen Hohlwegen seiner Überfälle.</p><p><strong>Persönlichkeit:</strong> Reizbar, besitzergreifend und geduldig, wenn Angst ihm nützt. Lacht über kleine Demütigungen und merkt sich jeden Widerspruch.</p><p><strong>Vorgehen:</strong> Führt den ersten Zugriff, schüchtert Gehöfte ein und treibt Forderungen ein. Er bindet Opfer im Gespräch, bis Komplizen die Ausgänge besetzt haben.</p>",
+          "bountyFile": {
+            "archiveTitle": "Schlickzahn",
+            "archiveSubtitle": "Marschallamt · Grafschaft Celtigerns Wacht",
+            "targetName": "Schlickzahn",
+            "aliases": "Bandenbeiname · wirklicher Name unbekannt",
+            "regionalBanner": "/IconOrdner/Fazit%20Icons/Krone.png",
+            "portraitImage": "/AleriaAlmanach/assets/schwarze-zitteraale/sketches/schlickzahn.png",
+            "portraitScale": 100,
+            "portraitX": 50,
+            "portraitY": 30,
+            "status": "Gesucht",
+            "statusNote": "Lebendig bevorzugt",
+            "threatLevel": 4,
+            "threatText": "Bewaffnet · nicht allein stellen",
+            "bountyAmount": "13",
+            "bountyCurrency": "Goldtaler",
+            "coinImage": "/AleriaAlmanach/public/assets/inventory/coins/goldtaler.png",
+            "descriptionTitle": "Personenbeschreibung",
+            "descriptionRows": [
+              {
+                "label": "Alter",
+                "value": "Etwa 46 Jahre"
+              },
+              {
+                "label": "Größe",
+                "value": "1,93 Schritt"
+              },
+              {
+                "label": "Erkennungszeichen",
+                "value": "Breiter Cenyri mit kahl rasiertem Kopf, kurzem rostbraunem Kinnbart und einer Lücke zwischen den oberen Schneidezähnen. Gebrochene Nase, schwere dunkle Lederweste über Kettenzeug."
+              }
+            ],
+            "descriptionNote": "Zeichnung nach Personenbeschreibungen. Kleidung und Auftreten können abweichen.",
+            "chargesTitle": "Tatvorwürfe",
+            "charges": [
+              {
+                "title": "Bewaffneter Raub",
+                "icon": "/IconOrdner/Fazit%20Icons/Schwert.png",
+                "text": ""
+              },
+              {
+                "title": "Schwere Körperverletzung und Mord",
+                "icon": "/IconOrdner/Fazit%20Icons/Schwert.png",
+                "text": ""
+              },
+              {
+                "title": "Erpressung",
+                "icon": "/IconOrdner/Fazit%20Icons/Schwert.png",
+                "text": ""
+              },
+              {
+                "title": "Brandstiftung",
+                "icon": "/IconOrdner/Fazit%20Icons/Schwert.png",
+                "text": ""
+              }
+            ],
+            "traitsTitle": "Verhalten",
+            "traits": [
+              {
+                "title": "Jähzornig",
+                "icon": "",
+                "text": ""
+              },
+              {
+                "title": "Grausam",
+                "icon": "",
+                "text": ""
+              },
+              {
+                "title": "Beharrlich",
+                "icon": "",
+                "text": ""
+              }
+            ],
+            "companionsTitle": "Weitere gesuchte Köpfe",
+            "companions": [
+              {
+                "title": "Der Schwarze Zitteraal",
+                "subtitle": "Bandenhaupt",
+                "image": "/AleriaAlmanach/assets/schwarze-zitteraale/sketches/schwarzer-zitteraal.png",
+                "text": "Die übrigen Köpfe sind in eigenen Akten verzeichnet."
+              }
+            ],
+            "sightingsTitle": "Bekannter Fahndungsraum",
+            "sightings": [
+              {
+                "place": "Celtigerns Wacht",
+                "date": "Gegenwärtiger Aufenthaltsort unbekannt",
+                "observer": "Marschallamt"
+              }
+            ],
+            "connectionsTitle": "Verbindungen und Zugehörigkeit",
+            "factionTitle": "Bande",
+            "factionBanner": "/AleriaAlmanach/assets/schwarze-zitteraale/emblem.png",
+            "factionName": "Die Schwarzen Zitteraale",
+            "factionText": "Rechte Hand · Überfälle und Einschüchterung",
+            "alliesTitle": "Gesuchte Mitbeschuldigte",
+            "allies": [
+              {
+                "title": "Der Schwarze Zitteraal",
+                "subtitle": "Bandenhaupt · letzter Befehl",
+                "image": "/AleriaAlmanach/assets/schwarze-zitteraale/sketches/schwarzer-zitteraal.png",
+                "text": ""
+              },
+              {
+                "title": "Nachtkieme",
+                "subtitle": "Linke Hand · Kundschaft und Verbindungen",
+                "image": "/AleriaAlmanach/assets/schwarze-zitteraale/sketches/nachtkieme.png",
+                "text": ""
+              },
+              {
+                "title": "Donnerkiefer",
+                "subtitle": "Innerer Kreis · Waffen und Rudeldisziplin",
+                "image": "/AleriaAlmanach/assets/schwarze-zitteraale/sketches/donnerkiefer.png",
+                "text": ""
+              },
+              {
+                "title": "Netznadel",
+                "subtitle": "Innerer Kreis · Beute, Vorräte und Schleusung",
+                "image": "/AleriaAlmanach/assets/schwarze-zitteraale/sketches/netznadel.png",
+                "text": ""
+              }
+            ],
+            "enemiesTitle": "Verfolgende Obrigkeit",
+            "enemies": [
+              {
+                "title": "Sir Egon Gafyr",
+                "subtitle": "Marschall der Grafschaft",
+                "image": "/IconOrdner/Fazit%20Icons/Ritter.png",
+                "text": "Entgegennahme und Prüfung beim Marschallamt."
+              }
+            ],
+            "supportersTitle": "Ermittlungsstand",
+            "supporters": [
+              {
+                "title": "Verdacht ist kein Nachweis",
+                "image": "/IconOrdner/ReiterIcons/Weltpfade/kriminalitaet.png",
+                "text": "Die Anhörung zum Bradrhith-Hof berührt Kontakte zur Familie Gwregysdu. Daraus folgt keine festgestellte Beteiligung aller Familienangehörigen."
+              }
+            ],
+            "dangerTitle": "Gefährdungsprofil",
+            "dangerProfiles": [
+              {
+                "label": "Kampfkraft",
+                "value": 5,
+                "icon": ""
+              },
+              {
+                "label": "Planung",
+                "value": 3,
+                "icon": ""
+              },
+              {
+                "label": "Tarnung",
+                "value": 2,
+                "icon": ""
+              },
+              {
+                "label": "Gefolgschaft",
+                "value": 4,
+                "icon": ""
+              },
+              {
+                "label": "Fluchtgefahr",
+                "value": 4,
+                "icon": ""
+              }
+            ],
+            "handoverNote": "Lebendige Übergabe an die zuständige Obrigkeit bevorzugt. Identität und Tatbeteiligung werden vor Auszahlung geprüft.",
+            "footer": "Marschallamt · Fahndungsakten · Kein bestätigter Aufenthaltsort"
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "zitteraale-akte-nachtkieme",
+          "pageTitle": "Krimi-Bio · Nachtkieme",
+          "bountyFilePage": true,
+          "image": "/AleriaAlmanach/assets/schwarze-zitteraale/sketches/nachtkieme.png",
+          "description": "<p>Sie kannte die Straßen der Grafschaft bereits, bevor die Bande ihre Wege nutzte. Aus kleinen Botengängen wurden bezahlte Hinweise und schließlich die Planung von Hinterhalten. Niemand in der Bande verwendet einen anderen Namen für sie.</p><p><strong>Persönlichkeit:</strong> Aufmerksam, misstrauisch und wortkarg. Merkt sich Stimmen und kleine Unstimmigkeiten; antwortet selten auf die eigentliche Frage.</p><p><strong>Vorgehen:</strong> Beobachtet Reisegewohnheiten, stellt Kontakte zu Abnehmern her und prüft fremde Nachrichten. Nur wenige erfahren von ihr mehr als ihren nächsten Treffpunkt.</p>",
+          "bountyFile": {
+            "archiveTitle": "Nachtkieme",
+            "archiveSubtitle": "Marschallamt · Grafschaft Celtigerns Wacht",
+            "targetName": "Nachtkieme",
+            "aliases": "Bandenbeiname · wirklicher Name unbekannt",
+            "regionalBanner": "/IconOrdner/Fazit%20Icons/Krone.png",
+            "portraitImage": "/AleriaAlmanach/assets/schwarze-zitteraale/sketches/nachtkieme.png",
+            "portraitScale": 100,
+            "portraitX": 50,
+            "portraitY": 30,
+            "status": "Gesucht",
+            "statusNote": "Lebendig bevorzugt",
+            "threatLevel": 3,
+            "threatText": "Bewaffnet · nicht allein stellen",
+            "bountyAmount": "11",
+            "bountyCurrency": "Goldtaler",
+            "coinImage": "/AleriaAlmanach/public/assets/inventory/coins/goldtaler.png",
+            "descriptionTitle": "Personenbeschreibung",
+            "descriptionRows": [
+              {
+                "label": "Alter",
+                "value": "Etwa 37 Jahre"
+              },
+              {
+                "label": "Größe",
+                "value": "1,71 Schritt"
+              },
+              {
+                "label": "Erkennungszeichen",
+                "value": "Schmale braunhaarige Frau mit graubraunen Augen, tiefem seitlichem Zopf und kurz geschnittener rechter Schläfe. Dunkler Reisemantel, schmales Gesicht, Kerbe in der linken Braue."
+              }
+            ],
+            "descriptionNote": "Zeichnung nach Personenbeschreibungen. Kleidung und Auftreten können abweichen.",
+            "chargesTitle": "Tatvorwürfe",
+            "charges": [
+              {
+                "title": "Vorbereitung bewaffneter Überfälle",
+                "icon": "/IconOrdner/Fazit%20Icons/Schwert.png",
+                "text": ""
+              },
+              {
+                "title": "Beihilfe zu Mord und Raub",
+                "icon": "/IconOrdner/Fazit%20Icons/Schwert.png",
+                "text": ""
+              },
+              {
+                "title": "Erpressung",
+                "icon": "/IconOrdner/Fazit%20Icons/Schwert.png",
+                "text": ""
+              },
+              {
+                "title": "Hehlerei",
+                "icon": "/IconOrdner/Fazit%20Icons/Schwert.png",
+                "text": ""
+              }
+            ],
+            "traitsTitle": "Verhalten",
+            "traits": [
+              {
+                "title": "Geduldig",
+                "icon": "",
+                "text": ""
+              },
+              {
+                "title": "Misstrauisch",
+                "icon": "",
+                "text": ""
+              },
+              {
+                "title": "Verschwiegen",
+                "icon": "",
+                "text": ""
+              }
+            ],
+            "companionsTitle": "Weitere gesuchte Köpfe",
+            "companions": [
+              {
+                "title": "Der Schwarze Zitteraal",
+                "subtitle": "Bandenhaupt",
+                "image": "/AleriaAlmanach/assets/schwarze-zitteraale/sketches/schwarzer-zitteraal.png",
+                "text": "Die übrigen Köpfe sind in eigenen Akten verzeichnet."
+              }
+            ],
+            "sightingsTitle": "Bekannter Fahndungsraum",
+            "sightings": [
+              {
+                "place": "Celtigerns Wacht",
+                "date": "Gegenwärtiger Aufenthaltsort unbekannt",
+                "observer": "Marschallamt"
+              }
+            ],
+            "connectionsTitle": "Verbindungen und Zugehörigkeit",
+            "factionTitle": "Bande",
+            "factionBanner": "/AleriaAlmanach/assets/schwarze-zitteraale/emblem.png",
+            "factionName": "Die Schwarzen Zitteraale",
+            "factionText": "Linke Hand · Kundschaft und Verbindungen",
+            "alliesTitle": "Gesuchte Mitbeschuldigte",
+            "allies": [
+              {
+                "title": "Der Schwarze Zitteraal",
+                "subtitle": "Bandenhaupt · letzter Befehl",
+                "image": "/AleriaAlmanach/assets/schwarze-zitteraale/sketches/schwarzer-zitteraal.png",
+                "text": ""
+              },
+              {
+                "title": "Schlickzahn",
+                "subtitle": "Rechte Hand · Überfälle und Einschüchterung",
+                "image": "/AleriaAlmanach/assets/schwarze-zitteraale/sketches/schlickzahn.png",
+                "text": ""
+              },
+              {
+                "title": "Donnerkiefer",
+                "subtitle": "Innerer Kreis · Waffen und Rudeldisziplin",
+                "image": "/AleriaAlmanach/assets/schwarze-zitteraale/sketches/donnerkiefer.png",
+                "text": ""
+              },
+              {
+                "title": "Netznadel",
+                "subtitle": "Innerer Kreis · Beute, Vorräte und Schleusung",
+                "image": "/AleriaAlmanach/assets/schwarze-zitteraale/sketches/netznadel.png",
+                "text": ""
+              }
+            ],
+            "enemiesTitle": "Verfolgende Obrigkeit",
+            "enemies": [
+              {
+                "title": "Sir Egon Gafyr",
+                "subtitle": "Marschall der Grafschaft",
+                "image": "/IconOrdner/Fazit%20Icons/Ritter.png",
+                "text": "Entgegennahme und Prüfung beim Marschallamt."
+              }
+            ],
+            "supportersTitle": "Ermittlungsstand",
+            "supporters": [
+              {
+                "title": "Verdacht ist kein Nachweis",
+                "image": "/IconOrdner/ReiterIcons/Weltpfade/kriminalitaet.png",
+                "text": "Die Anhörung zum Bradrhith-Hof berührt Kontakte zur Familie Gwregysdu. Daraus folgt keine festgestellte Beteiligung aller Familienangehörigen."
+              }
+            ],
+            "dangerTitle": "Gefährdungsprofil",
+            "dangerProfiles": [
+              {
+                "label": "Kampfkraft",
+                "value": 3,
+                "icon": ""
+              },
+              {
+                "label": "Planung",
+                "value": 5,
+                "icon": ""
+              },
+              {
+                "label": "Tarnung",
+                "value": 5,
+                "icon": ""
+              },
+              {
+                "label": "Gefolgschaft",
+                "value": 4,
+                "icon": ""
+              },
+              {
+                "label": "Fluchtgefahr",
+                "value": 5,
+                "icon": ""
+              }
+            ],
+            "handoverNote": "Lebendige Übergabe an die zuständige Obrigkeit bevorzugt. Identität und Tatbeteiligung werden vor Auszahlung geprüft.",
+            "footer": "Marschallamt · Fahndungsakten · Kein bestätigter Aufenthaltsort"
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "zitteraale-akte-donnerkiefer",
+          "pageTitle": "Krimi-Bio · Donnerkiefer",
+          "bountyFilePage": true,
+          "image": "/AleriaAlmanach/assets/schwarze-zitteraale/sketches/donnerkiefer.png",
+          "description": "<p>Ein ehemaliger Kriegsknecht, der nach Jahren wechselnder Dienste bei den Zitteraalen blieb. Er ordnet das erbeutete Gerät und übt mit den Komplizen, bis aus einem Überfall ein eingeübter Griff wird.</p><p><strong>Persönlichkeit:</strong> Diszipliniert, nachtragend und stolz auf seine Härte. Hält Furcht für eine zuverlässigere Bindung als Freundschaft.</p><p><strong>Vorgehen:</strong> Überwacht Waffen und Wachen, setzt Befehle im Lager durch und übernimmt die Nachhut bei Rückzügen. Sein Beiname meint die donnernde Stimme hinter dem vernarbten Kiefer.</p>",
+          "bountyFile": {
+            "archiveTitle": "Donnerkiefer",
+            "archiveSubtitle": "Marschallamt · Grafschaft Celtigerns Wacht",
+            "targetName": "Donnerkiefer",
+            "aliases": "Bandenbeiname · wirklicher Name unbekannt",
+            "regionalBanner": "/IconOrdner/Fazit%20Icons/Krone.png",
+            "portraitImage": "/AleriaAlmanach/assets/schwarze-zitteraale/sketches/donnerkiefer.png",
+            "portraitScale": 100,
+            "portraitX": 50,
+            "portraitY": 30,
+            "status": "Gesucht",
+            "statusNote": "Lebendig bevorzugt",
+            "threatLevel": 5,
+            "threatText": "Bewaffnet · nicht allein stellen",
+            "bountyAmount": "5",
+            "bountyCurrency": "Goldtaler",
+            "coinImage": "/AleriaAlmanach/public/assets/inventory/coins/goldtaler.png",
+            "descriptionTitle": "Personenbeschreibung",
+            "descriptionRows": [
+              {
+                "label": "Alter",
+                "value": "Etwa 43 Jahre"
+              },
+              {
+                "label": "Größe",
+                "value": "1,90 Schritt"
+              },
+              {
+                "label": "Erkennungszeichen",
+                "value": "Kräftiger Aldrimarer mit langem strohblondem Haar, einem straffen Nackenzopf und breitem geflochtenem Bart. Alte helle Narbe vom rechten Mundwinkel zum Kiefer; dunkles Eisen und grauer Wollkragen."
+              }
+            ],
+            "descriptionNote": "Zeichnung nach Personenbeschreibungen. Kleidung und Auftreten können abweichen.",
+            "chargesTitle": "Tatvorwürfe",
+            "charges": [
+              {
+                "title": "Bewaffneter Raub",
+                "icon": "/IconOrdner/Fazit%20Icons/Schwert.png",
+                "text": ""
+              },
+              {
+                "title": "Beihilfe zu Mord",
+                "icon": "/IconOrdner/Fazit%20Icons/Schwert.png",
+                "text": ""
+              },
+              {
+                "title": "Gewaltsame Einschüchterung",
+                "icon": "/IconOrdner/Fazit%20Icons/Schwert.png",
+                "text": ""
+              },
+              {
+                "title": "Beteiligung an Plünderungen",
+                "icon": "/IconOrdner/Fazit%20Icons/Schwert.png",
+                "text": ""
+              }
+            ],
+            "traitsTitle": "Verhalten",
+            "traits": [
+              {
+                "title": "Diszipliniert",
+                "icon": "",
+                "text": ""
+              },
+              {
+                "title": "Rachsüchtig",
+                "icon": "",
+                "text": ""
+              },
+              {
+                "title": "Hochmütig",
+                "icon": "",
+                "text": ""
+              }
+            ],
+            "companionsTitle": "Weitere gesuchte Köpfe",
+            "companions": [
+              {
+                "title": "Der Schwarze Zitteraal",
+                "subtitle": "Bandenhaupt",
+                "image": "/AleriaAlmanach/assets/schwarze-zitteraale/sketches/schwarzer-zitteraal.png",
+                "text": "Die übrigen Köpfe sind in eigenen Akten verzeichnet."
+              }
+            ],
+            "sightingsTitle": "Bekannter Fahndungsraum",
+            "sightings": [
+              {
+                "place": "Celtigerns Wacht",
+                "date": "Gegenwärtiger Aufenthaltsort unbekannt",
+                "observer": "Marschallamt"
+              }
+            ],
+            "connectionsTitle": "Verbindungen und Zugehörigkeit",
+            "factionTitle": "Bande",
+            "factionBanner": "/AleriaAlmanach/assets/schwarze-zitteraale/emblem.png",
+            "factionName": "Die Schwarzen Zitteraale",
+            "factionText": "Innerer Kreis · Waffen und Rudeldisziplin",
+            "alliesTitle": "Gesuchte Mitbeschuldigte",
+            "allies": [
+              {
+                "title": "Der Schwarze Zitteraal",
+                "subtitle": "Bandenhaupt · letzter Befehl",
+                "image": "/AleriaAlmanach/assets/schwarze-zitteraale/sketches/schwarzer-zitteraal.png",
+                "text": ""
+              },
+              {
+                "title": "Schlickzahn",
+                "subtitle": "Rechte Hand · Überfälle und Einschüchterung",
+                "image": "/AleriaAlmanach/assets/schwarze-zitteraale/sketches/schlickzahn.png",
+                "text": ""
+              },
+              {
+                "title": "Nachtkieme",
+                "subtitle": "Linke Hand · Kundschaft und Verbindungen",
+                "image": "/AleriaAlmanach/assets/schwarze-zitteraale/sketches/nachtkieme.png",
+                "text": ""
+              },
+              {
+                "title": "Netznadel",
+                "subtitle": "Innerer Kreis · Beute, Vorräte und Schleusung",
+                "image": "/AleriaAlmanach/assets/schwarze-zitteraale/sketches/netznadel.png",
+                "text": ""
+              }
+            ],
+            "enemiesTitle": "Verfolgende Obrigkeit",
+            "enemies": [
+              {
+                "title": "Sir Egon Gafyr",
+                "subtitle": "Marschall der Grafschaft",
+                "image": "/IconOrdner/Fazit%20Icons/Ritter.png",
+                "text": "Entgegennahme und Prüfung beim Marschallamt."
+              }
+            ],
+            "supportersTitle": "Ermittlungsstand",
+            "supporters": [
+              {
+                "title": "Verdacht ist kein Nachweis",
+                "image": "/IconOrdner/ReiterIcons/Weltpfade/kriminalitaet.png",
+                "text": "Die Anhörung zum Bradrhith-Hof berührt Kontakte zur Familie Gwregysdu. Daraus folgt keine festgestellte Beteiligung aller Familienangehörigen."
+              }
+            ],
+            "dangerTitle": "Gefährdungsprofil",
+            "dangerProfiles": [
+              {
+                "label": "Kampfkraft",
+                "value": 5,
+                "icon": ""
+              },
+              {
+                "label": "Planung",
+                "value": 3,
+                "icon": ""
+              },
+              {
+                "label": "Tarnung",
+                "value": 2,
+                "icon": ""
+              },
+              {
+                "label": "Gefolgschaft",
+                "value": 3,
+                "icon": ""
+              },
+              {
+                "label": "Fluchtgefahr",
+                "value": 4,
+                "icon": ""
+              }
+            ],
+            "handoverNote": "Lebendige Übergabe an die zuständige Obrigkeit bevorzugt. Identität und Tatbeteiligung werden vor Auszahlung geprüft.",
+            "footer": "Marschallamt · Fahndungsakten · Kein bestätigter Aufenthaltsort"
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "zitteraale-akte-netznadel",
+          "pageTitle": "Krimi-Bio · Netznadel",
+          "bountyFilePage": true,
+          "image": "/AleriaAlmanach/assets/schwarze-zitteraale/sketches/netznadel.png",
+          "description": "<p>Er begann als Gelegenheitshehler an wechselnden Anlegeplätzen. Im inneren Kreis der Bande zählt sein Gedächtnis für Gebinde, Schulden und brauchbare Namen mehr als ein sauberer Hieb.</p><p><strong>Persönlichkeit:</strong> Geschäftig, habgierig und ausweichend. Zählt selbst beim Reden mit und macht aus jeder Gefälligkeit eine offene Schuld.</p><p><strong>Vorgehen:</strong> Verteilt Vorräte, trennt auffällige Beute von gewöhnlicher Fracht und organisiert Übergaben. Er kennt die Vorratswege, aber seine Abnehmer erhalten nur einzelne Lieferungen zu sehen.</p>",
+          "bountyFile": {
+            "archiveTitle": "Netznadel",
+            "archiveSubtitle": "Marschallamt · Grafschaft Celtigerns Wacht",
+            "targetName": "Netznadel",
+            "aliases": "Bandenbeiname · wirklicher Name unbekannt",
+            "regionalBanner": "/IconOrdner/Fazit%20Icons/Krone.png",
+            "portraitImage": "/AleriaAlmanach/assets/schwarze-zitteraale/sketches/netznadel.png",
+            "portraitScale": 100,
+            "portraitX": 50,
+            "portraitY": 30,
+            "status": "Gesucht",
+            "statusNote": "Lebendig bevorzugt",
+            "threatLevel": 4,
+            "threatText": "Bewaffnet · nicht allein stellen",
+            "bountyAmount": "3,4",
+            "bountyCurrency": "Goldtaler",
+            "coinImage": "/AleriaAlmanach/public/assets/inventory/coins/goldtaler.png",
+            "descriptionTitle": "Personenbeschreibung",
+            "descriptionRows": [
+              {
+                "label": "Alter",
+                "value": "Etwa 34 Jahre"
+              },
+              {
+                "label": "Größe",
+                "value": "1,79 Schritt"
+              },
+              {
+                "label": "Erkennungszeichen",
+                "value": "Dünner rothaariger Cenyri mit grünen Augen, ungleichmäßig kurzem Pony, schmalem Schnurrbart und schiefer dunkler Kappe. Brauner Arbeitsrock, geflickte schwarze Schulterdecke, drahtige Hände."
+              }
+            ],
+            "descriptionNote": "Zeichnung nach Personenbeschreibungen. Kleidung und Auftreten können abweichen.",
+            "chargesTitle": "Tatvorwürfe",
+            "charges": [
+              {
+                "title": "Hehlerei",
+                "icon": "/IconOrdner/Fazit%20Icons/Schwert.png",
+                "text": ""
+              },
+              {
+                "title": "Schmuggel",
+                "icon": "/IconOrdner/Fazit%20Icons/Schwert.png",
+                "text": ""
+              },
+              {
+                "title": "Beihilfe zu Raub und Erpressung",
+                "icon": "/IconOrdner/Fazit%20Icons/Schwert.png",
+                "text": ""
+              },
+              {
+                "title": "Versorgung einer Raubritterbande",
+                "icon": "/IconOrdner/Fazit%20Icons/Schwert.png",
+                "text": ""
+              }
+            ],
+            "traitsTitle": "Verhalten",
+            "traits": [
+              {
+                "title": "Habgierig",
+                "icon": "",
+                "text": ""
+              },
+              {
+                "title": "Gewieft",
+                "icon": "",
+                "text": ""
+              },
+              {
+                "title": "Feige",
+                "icon": "",
+                "text": ""
+              }
+            ],
+            "companionsTitle": "Weitere gesuchte Köpfe",
+            "companions": [
+              {
+                "title": "Der Schwarze Zitteraal",
+                "subtitle": "Bandenhaupt",
+                "image": "/AleriaAlmanach/assets/schwarze-zitteraale/sketches/schwarzer-zitteraal.png",
+                "text": "Die übrigen Köpfe sind in eigenen Akten verzeichnet."
+              }
+            ],
+            "sightingsTitle": "Bekannter Fahndungsraum",
+            "sightings": [
+              {
+                "place": "Celtigerns Wacht",
+                "date": "Gegenwärtiger Aufenthaltsort unbekannt",
+                "observer": "Marschallamt"
+              }
+            ],
+            "connectionsTitle": "Verbindungen und Zugehörigkeit",
+            "factionTitle": "Bande",
+            "factionBanner": "/AleriaAlmanach/assets/schwarze-zitteraale/emblem.png",
+            "factionName": "Die Schwarzen Zitteraale",
+            "factionText": "Innerer Kreis · Beute, Vorräte und Schleusung",
+            "alliesTitle": "Gesuchte Mitbeschuldigte",
+            "allies": [
+              {
+                "title": "Der Schwarze Zitteraal",
+                "subtitle": "Bandenhaupt · letzter Befehl",
+                "image": "/AleriaAlmanach/assets/schwarze-zitteraale/sketches/schwarzer-zitteraal.png",
+                "text": ""
+              },
+              {
+                "title": "Schlickzahn",
+                "subtitle": "Rechte Hand · Überfälle und Einschüchterung",
+                "image": "/AleriaAlmanach/assets/schwarze-zitteraale/sketches/schlickzahn.png",
+                "text": ""
+              },
+              {
+                "title": "Nachtkieme",
+                "subtitle": "Linke Hand · Kundschaft und Verbindungen",
+                "image": "/AleriaAlmanach/assets/schwarze-zitteraale/sketches/nachtkieme.png",
+                "text": ""
+              },
+              {
+                "title": "Donnerkiefer",
+                "subtitle": "Innerer Kreis · Waffen und Rudeldisziplin",
+                "image": "/AleriaAlmanach/assets/schwarze-zitteraale/sketches/donnerkiefer.png",
+                "text": ""
+              }
+            ],
+            "enemiesTitle": "Verfolgende Obrigkeit",
+            "enemies": [
+              {
+                "title": "Sir Egon Gafyr",
+                "subtitle": "Marschall der Grafschaft",
+                "image": "/IconOrdner/Fazit%20Icons/Ritter.png",
+                "text": "Entgegennahme und Prüfung beim Marschallamt."
+              }
+            ],
+            "supportersTitle": "Ermittlungsstand",
+            "supporters": [
+              {
+                "title": "Verdacht ist kein Nachweis",
+                "image": "/IconOrdner/ReiterIcons/Weltpfade/kriminalitaet.png",
+                "text": "Die Anhörung zum Bradrhith-Hof berührt Kontakte zur Familie Gwregysdu. Daraus folgt keine festgestellte Beteiligung aller Familienangehörigen."
+              }
+            ],
+            "dangerTitle": "Gefährdungsprofil",
+            "dangerProfiles": [
+              {
+                "label": "Kampfkraft",
+                "value": 2,
+                "icon": ""
+              },
+              {
+                "label": "Planung",
+                "value": 4,
+                "icon": ""
+              },
+              {
+                "label": "Tarnung",
+                "value": 4,
+                "icon": ""
+              },
+              {
+                "label": "Gefolgschaft",
+                "value": 5,
+                "icon": ""
+              },
+              {
+                "label": "Fluchtgefahr",
+                "value": 4,
+                "icon": ""
+              }
+            ],
+            "handoverNote": "Lebendige Übergabe an die zuständige Obrigkeit bevorzugt. Identität und Tatbeteiligung werden vor Auszahlung geprüft.",
+            "footer": "Marschallamt · Fahndungsakten · Kein bestätigter Aufenthaltsort"
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Hauptquartier · Die versunkene Stadt",
+          "commentThreadKey": "zitteraale-hauptquartier",
+          "image": "/AleriaAlmanach/assets/schwarze-zitteraale/scenes/hauptquartier.png",
+          "imageWidth": 36,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Zwischen den Resten einer antiken <strong>albischen Ruinenstadt</strong> brennt Licht unter einem halb erhaltenen Gewölbe. Die alten Straßen sind von Wurzeln aufgebrochen; vermauerte Türen, eingestürzte Höfe und Wasserläufe teilen das Gelände in kleine, schlecht einsehbare Winkel.</p><p>Die Zitteraale haben die trockenen Teile besetzt. Unter einem offenen Bogen liegt ihr Versammlungsplatz. Dahinter führen kurze Gänge zu Schlafstellen, Vorratsnischen und einem notdürftig gesicherten Waffenraum. Zunders Anbindestelle liegt im windgeschützten Hof.</p><p>Wer hierher gelangt, ist im inneren Rückzugsraum der Bande. Die Wachen kennen die festen Tritte zwischen den Trümmern; Fremde hören ihre eigenen Schritte lange, bevor sie die erste Stimme zuordnen können.</p>",
+          "sessionHint": "Verborgener Bandenstützpunkt · Standort erst durch das Spiel entdecken.",
+          "sessionEmptyTitle": "Zwischen den alten Mauern",
+          "sessionEmptyText": "Eine Szene im Hauptquartier der Schwarzen Zitteraale.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        }
+      ]
+    }
+  }
+}

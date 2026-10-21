@@ -27,6 +27,8 @@ const nameAliases = new Map([
   [key('Kräuteraufguss (Tee)'), key('Kräuteraufguss')]
 ]);
 function standardFor(row, standards) {
+  const canonical = row.canonicalKey && standards.find(item => item.id === row.canonicalKey || item.canonicalKey === row.canonicalKey);
+  if (canonical) return canonical;
   const name = nameAliases.get(key(row.title)) || key(row.title);
   const matches = standards.filter(item => key(item.title) === name);
   // Ambiguous variants are deliberately not collapsed into a guessed template.
@@ -91,7 +93,7 @@ function tradeRows(page, pageIndex) {
       { label: item.conditionsTitle || 'Kaufbedingungen', value: text(item.conditions) },
       { label: 'Preishinweis', value: text(item.priceNote) }
     ].filter(fact => fact.value);
-    const row = { title: text(item.title), type: text(item.subtitle), category, description: text(item.description), details: '',
+    const row = { canonicalKey: text(item.canonicalKey), title: text(item.title), type: text(item.subtitle), category, description: text(item.description), details: '',
       image: text(item.image), unit: text(item.unit), availability: '', price: unique([text(item.priceMin), text(item.priceMax)]).join(' - '),
       currency: text(item.currencyLabel || item.currencyCode), tags: unique([...(item.tags || []), ...(item.usageTags || [])]),
       attributes: item.attributes || [], facts, source: { kind: 'trade-catalog', pageIndex, pageTitle: text(page.pageTitle || page.title), itemId: text(item.id), itemIndex }

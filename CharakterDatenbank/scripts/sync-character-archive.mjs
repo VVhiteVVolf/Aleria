@@ -12,6 +12,7 @@ import {
   createFamilyCandidates
 } from '../../AleriaAlmanach/modules/character-genealogy/genealogy-mapping.js';
 import { FAMILY_REGISTRY } from '../../Stammbäume/assets/js/data/families.registry.js';
+import { mergeCharacterExportAssignments } from '../lib/character-export-assignments.mjs';
 
 const scriptDirectory = dirname(fileURLToPath(import.meta.url));
 const databaseRoot = resolve(scriptDirectory, '..');
@@ -59,6 +60,7 @@ async function readCharacterExportOverlays(sourcePath) {
       if (exported?.type !== 'aleria-character' || !exported.character || typeof exported.character !== 'object') continue;
       overlays.push({
         path,
+        assignedTab: exported.assignedTab,
         exportedAt: String(exported.exportedAt || exported.character.updatedAt || ''),
         character: markCharacterDatabaseOverlay(exported.character, {
           replaceExportedFields: exported.mergeStrategy === 'replace-exported-fields',
@@ -207,6 +209,7 @@ async function main() {
   const overlays = await readCharacterExportOverlays(sourcePath);
   const archive = {
     ...baseArchive,
+    charTabs: mergeCharacterExportAssignments(baseArchive.charTabs, overlays),
     exportedAt: latestExportTimestamp([baseArchive.exportedAt, ...overlays.map(item => item.exportedAt)]) || baseArchive.exportedAt,
     characters: [...baseArchive.characters, ...overlays.map(item => item.character)]
   };
@@ -216,7 +219,10 @@ async function main() {
   const database = buildCharacterDatabase(archive, buildFamilyCandidates(), { sourcePath: sourceArchive });
   database.records.forEach(item => {
     const previousLocal = previousRecords.get(item.record.recordId)?.local;
-    if (previousLocal && typeof previousLocal === 'object') item.record.local = previousLocal;
+    if (previousLocal && typeof previousLocal === 'object') {
+      item.record.local = previousLocal;
+      if (previousLocal.authoredFeature) item.snapshotCharacter.localRecord.authoredFeature = previousLocal.authoredFeature;
+    }
   });
   const registry = {
     schema: 'aleria.character-registry',

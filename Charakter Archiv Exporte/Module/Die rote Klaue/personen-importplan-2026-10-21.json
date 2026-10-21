@@ -1,0 +1,642 @@
+{
+  "type": "aleria-character-publication-plan",
+  "version": 1,
+  "onlineApplied": false,
+  "plan": {
+    "entries": [
+      {
+        "id": "person--rote-klaue--lucan",
+        "key": "lucan",
+        "group": "Haus Valerus",
+        "create": true,
+        "data": {
+          "name": "Lucan Valerus",
+          "title": "Mitinhaber · Darlehen und Kundenverträge",
+          "fraktion": "Klingende Münze",
+          "role": "Mitinhaber · Darlehen und Kundenverträge",
+          "status": "active",
+          "relevance": "supporting",
+          "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+          "currentLocation": "Die rote Klaue · Gwynthor",
+          "origin": "Venalys · in Gwynthor aufgewachsen",
+          "plotNode": "",
+          "profileLink": "",
+          "playerOwner": "",
+          "bio": "Lucan nennt den Betrag zuerst, den ein Kunde heute erhalten könnte. Über den Preis des nächsten Monats spricht er erst, wenn der andere bereits erleichtert auf die Münzen schaut. Er und Camilla führen den geerbten Laden gemeinsam; ihre Einigkeit wiegt für beide schwerer als jede offene Frage im väterlichen Nachlass. Seit 1735 mit Aerwen verheiratet.",
+          "aliases": [],
+          "archived": false,
+          "createdAt": "2026-10-21T00:00:00Z",
+          "updatedAt": "2026-10-21T00:00:00Z",
+          "portrait": "./assets/rote-klaue/portraits/lucan.png",
+          "emotes": [],
+          "emotesOverride": false,
+          "imageSetSchemaVersion": 0,
+          "imageSets": [],
+          "activeImageSetId": "",
+          "imageSetsOverride": false,
+          "inventory": null,
+          "biography": null,
+          "identity": {
+            "worldPersonId": "person--rote-klaue--lucan"
+          },
+          "genealogy": {
+            "worldPersonId": "person--rote-klaue--lucan",
+            "sex": "male",
+            "status": "alive",
+            "birth": "1707",
+            "death": "",
+            "houseId": "house-valerus",
+            "houseName": "Haus Valerus",
+            "familyRole": "core",
+            "portraitPlaceholder": "auto",
+            "tags": [
+              "Venalys · in Gwynthor aufgewachsen",
+              "Haus Valerus"
+            ],
+            "sources": [
+              {
+                "familyId": "haus-valerus",
+                "personId": "klaue-lucan",
+                "releaseId": "",
+                "publishedAt": "",
+                "importedAt": "2026-10-21T00:00:00Z",
+                "lastSyncedAt": "2026-10-21T00:00:00Z",
+                "url": "../Stammbäume/Stammbaum.html?family=haus-valerus&mode=view&person=klaue-lucan",
+                "fingerprint": "{\"name\":\"Lucan Valerus\",\"title\":\"Mitinhaber · Darlehen und Kundenverträge\",\"birth\":\"1707\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-valerus\",\"portrait\":\"../AleriaAlmanach/assets/rote-klaue/portraits/lucan.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"Venalys · in Gwynthor aufgewachsen\",\"Haus Valerus\"],\"relationships\":{\"parents\":[{\"personId\":\"klaue-decian\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--rote-klaue--decian\",\"name\":\"Decian Valerus\"},{\"personId\":\"klaue-severina\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--rote-klaue--severina\",\"name\":\"Severina\"}],\"partners\":[{\"personId\":\"klaue-aerwen\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--rote-klaue--aerwen\",\"name\":\"Aerwen\"}],\"children\":[]}}"
+              }
+            ],
+            "relationships": {
+              "parents": [
+                {
+                  "personId": "klaue-decian",
+                  "type": "biological",
+                  "legitimacy": "legitimate",
+                  "certainty": "confirmed",
+                  "worldPersonId": "person--rote-klaue--decian",
+                  "name": "Decian Valerus"
+                },
+                {
+                  "personId": "klaue-severina",
+                  "type": "biological",
+                  "legitimacy": "legitimate",
+                  "certainty": "confirmed",
+                  "worldPersonId": "person--rote-klaue--severina",
+                  "name": "Severina"
+                }
+              ],
+              "partners": [
+                {
+                  "personId": "klaue-aerwen",
+                  "type": "marriage",
+                  "status": "active",
+                  "certainty": "confirmed",
+                  "worldPersonId": "person--rote-klaue--aerwen",
+                  "name": "Aerwen"
+                }
+              ],
+              "children": []
+            }
+          }
+        }
+      },
+      {
+        "id": "person--rote-klaue--camilla",
+        "key": "camilla",
+        "group": "Haus Valerus",
+        "create": true,
+        "data": {
+          "name": "Camilla Valerus",
+          "title": "Mitinhaberin · Bewertung und Pfandfreigaben",
+          "fraktion": "Klingende Münze",
+          "role": "Mitinhaberin · Bewertung und Pfandfreigaben",
+          "status": "active",
+          "relevance": "supporting",
+          "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+          "currentLocation": "Die rote Klaue · Gwynthor",
+          "origin": "Venalys · in Gwynthor aufgewachsen",
+          "plotNode": "",
+          "profileLink": "",
+          "playerOwner": "",
+          "bio": "Camilla legt Schmuck auf das Tuch, nennt jede Kerbe und wartet, bis der Besitzer selbst einen niedrigeren Wert für vernünftig hält. Sie teilt mit ihrem Zwillingsbruder Kasse und Entscheidungen. Aerwens Ansprüche duldet sie um Lucans willen; eine Stimme über seine Hälfte des Geschäfts räumt sie ihr deshalb noch lange nicht ein. Unverheiratet.",
+          "aliases": [],
+          "archived": false,
+          "createdAt": "2026-10-21T00:00:00Z",
+          "updatedAt": "2026-10-21T00:00:00Z",
+          "portrait": "./assets/rote-klaue/portraits/camilla.png",
+          "emotes": [],
+          "emotesOverride": false,
+          "imageSetSchemaVersion": 0,
+          "imageSets": [],
+          "activeImageSetId": "",
+          "imageSetsOverride": false,
+          "inventory": null,
+          "biography": null,
+          "identity": {
+            "worldPersonId": "person--rote-klaue--camilla"
+          },
+          "genealogy": {
+            "worldPersonId": "person--rote-klaue--camilla",
+            "sex": "female",
+            "status": "alive",
+            "birth": "1707",
+            "death": "",
+            "houseId": "house-valerus",
+            "houseName": "Haus Valerus",
+            "familyRole": "core",
+            "portraitPlaceholder": "auto",
+            "tags": [
+              "Venalys · in Gwynthor aufgewachsen",
+              "Haus Valerus"
+            ],
+            "sources": [
+              {
+                "familyId": "haus-valerus",
+                "personId": "klaue-camilla",
+                "releaseId": "",
+                "publishedAt": "",
+                "importedAt": "2026-10-21T00:00:00Z",
+                "lastSyncedAt": "2026-10-21T00:00:00Z",
+                "url": "../Stammbäume/Stammbaum.html?family=haus-valerus&mode=view&person=klaue-camilla",
+                "fingerprint": "{\"name\":\"Camilla Valerus\",\"title\":\"Mitinhaberin · Bewertung und Pfandfreigaben\",\"birth\":\"1707\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-valerus\",\"portrait\":\"../AleriaAlmanach/assets/rote-klaue/portraits/camilla.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"Venalys · in Gwynthor aufgewachsen\",\"Haus Valerus\"],\"relationships\":{\"parents\":[{\"personId\":\"klaue-decian\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--rote-klaue--decian\",\"name\":\"Decian Valerus\"},{\"personId\":\"klaue-severina\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--rote-klaue--severina\",\"name\":\"Severina\"}],\"partners\":[],\"children\":[]}}"
+              }
+            ],
+            "relationships": {
+              "parents": [
+                {
+                  "personId": "klaue-decian",
+                  "type": "biological",
+                  "legitimacy": "legitimate",
+                  "certainty": "confirmed",
+                  "worldPersonId": "person--rote-klaue--decian",
+                  "name": "Decian Valerus"
+                },
+                {
+                  "personId": "klaue-severina",
+                  "type": "biological",
+                  "legitimacy": "legitimate",
+                  "certainty": "confirmed",
+                  "worldPersonId": "person--rote-klaue--severina",
+                  "name": "Severina"
+                }
+              ],
+              "partners": [],
+              "children": []
+            }
+          }
+        }
+      },
+      {
+        "id": "person--rote-klaue--aerwen",
+        "key": "aerwen",
+        "group": "Haus Valerus",
+        "create": true,
+        "data": {
+          "name": "Aerwen",
+          "title": "Lucans Gemahlin · Empfang und vermögende Kundschaft",
+          "fraktion": "Die rote Klaue",
+          "role": "Lucans Gemahlin · Empfang und vermögende Kundschaft",
+          "status": "active",
+          "relevance": "supporting",
+          "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+          "currentLocation": "Die rote Klaue · Gwynthor",
+          "origin": "Cenyr · Aberon, Sonnenküste",
+          "plotNode": "",
+          "profileLink": "",
+          "playerOwner": "",
+          "bio": "Eine Cenyri aus Aberon in der benachbarten Grafschaft Sonnenküste. Gute Gesellschaft, kostbare Kleidung und aufmerksame Bedienung hält sie für selbstverständliche Lebensumstände. Lucan gefällt ihr Auftreten; er erwartet von ihr keine Hausarbeit. Sie empfängt ausgewählte Kunden und pflegt Einladungen. Gegenüber Camilla wahrt sie eine kühle Höflichkeit.",
+          "aliases": [],
+          "archived": false,
+          "createdAt": "2026-10-21T00:00:00Z",
+          "updatedAt": "2026-10-21T00:00:00Z",
+          "portrait": "./assets/rote-klaue/portraits/aerwen.png",
+          "emotes": [],
+          "emotesOverride": false,
+          "imageSetSchemaVersion": 0,
+          "imageSets": [],
+          "activeImageSetId": "",
+          "imageSetsOverride": false,
+          "inventory": null,
+          "biography": null,
+          "identity": {
+            "worldPersonId": "person--rote-klaue--aerwen"
+          },
+          "genealogy": {
+            "worldPersonId": "person--rote-klaue--aerwen",
+            "sex": "female",
+            "status": "alive",
+            "birth": "1712",
+            "death": "",
+            "houseId": "",
+            "houseName": "",
+            "familyRole": "married",
+            "portraitPlaceholder": "auto",
+            "tags": [
+              "Cenyr · Aberon, Sonnenküste",
+              "Haus Valerus"
+            ],
+            "sources": [
+              {
+                "familyId": "haus-valerus",
+                "personId": "klaue-aerwen",
+                "releaseId": "",
+                "publishedAt": "",
+                "importedAt": "2026-10-21T00:00:00Z",
+                "lastSyncedAt": "2026-10-21T00:00:00Z",
+                "url": "../Stammbäume/Stammbaum.html?family=haus-valerus&mode=view&person=klaue-aerwen",
+                "fingerprint": "{\"name\":\"Aerwen\",\"title\":\"Lucans Gemahlin · Empfang und vermögende Kundschaft\",\"birth\":\"1712\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"\",\"portrait\":\"../AleriaAlmanach/assets/rote-klaue/portraits/aerwen.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"Cenyr · Aberon, Sonnenküste\",\"Haus Valerus\"],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"klaue-lucan\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--rote-klaue--lucan\",\"name\":\"Lucan Valerus\"}],\"children\":[]}}"
+              }
+            ],
+            "relationships": {
+              "parents": [],
+              "partners": [
+                {
+                  "personId": "klaue-lucan",
+                  "type": "marriage",
+                  "status": "active",
+                  "certainty": "confirmed",
+                  "worldPersonId": "person--rote-klaue--lucan",
+                  "name": "Lucan Valerus"
+                }
+              ],
+              "children": []
+            }
+          }
+        }
+      },
+      {
+        "id": "person--rote-klaue--cadwyst",
+        "key": "cadwyst",
+        "group": "Angestellte",
+        "create": true,
+        "data": {
+          "name": "Cadwyst",
+          "title": "Meier · Bücher, Fälligkeiten und Personal",
+          "fraktion": "Die rote Klaue",
+          "role": "Meier · Bücher, Fälligkeiten und Personal",
+          "status": "active",
+          "relevance": "minor",
+          "taxonomyPath": "",
+          "currentLocation": "Die rote Klaue · Gwynthor",
+          "origin": "Cenyr",
+          "plotNode": "",
+          "profileLink": "",
+          "playerOwner": "",
+          "bio": "Führt Schuldbriefe, Quittungen, Löhne und Fristen. Er beantwortet Einwände mit der Stelle im Vertrag, die er bereits aufgeschlagen hat.",
+          "aliases": [],
+          "archived": false,
+          "createdAt": "2026-10-21T00:00:00Z",
+          "updatedAt": "2026-10-21T00:00:00Z",
+          "portrait": "./assets/rote-klaue/portraits/cadwyst.png",
+          "emotes": [],
+          "emotesOverride": false,
+          "imageSetSchemaVersion": 0,
+          "imageSets": [],
+          "activeImageSetId": "",
+          "imageSetsOverride": false,
+          "inventory": null,
+          "biography": null,
+          "identity": {
+            "worldPersonId": "person--rote-klaue--cadwyst"
+          },
+          "genealogy": {
+            "worldPersonId": "person--rote-klaue--cadwyst",
+            "sex": "male",
+            "status": "alive",
+            "birth": "1688",
+            "death": "",
+            "houseId": "",
+            "houseName": "",
+            "familyRole": "",
+            "portraitPlaceholder": "",
+            "tags": [],
+            "sources": [],
+            "relationships": {
+              "parents": [],
+              "partners": [],
+              "children": []
+            }
+          }
+        }
+      },
+      {
+        "id": "person--rote-klaue--dewrys",
+        "key": "dewrys",
+        "group": "Angestellte",
+        "create": true,
+        "data": {
+          "name": "Dewrys",
+          "title": "Pfandwart · Annahme, Lagerzeichen und Auslösung",
+          "fraktion": "Die rote Klaue",
+          "role": "Pfandwart · Annahme, Lagerzeichen und Auslösung",
+          "status": "active",
+          "relevance": "minor",
+          "taxonomyPath": "",
+          "currentLocation": "Die rote Klaue · Gwynthor",
+          "origin": "Cenyr",
+          "plotNode": "",
+          "profileLink": "",
+          "playerOwner": "",
+          "bio": "Prüft die Übereinstimmung von Pfandzettel, Zeichen und hinterlegtem Gegenstand. Holt Pfänder aus dem Magazin und führt die Listen anstehender Verwertungen; die Bewertung unterschreibt Camilla.",
+          "aliases": [],
+          "archived": false,
+          "createdAt": "2026-10-21T00:00:00Z",
+          "updatedAt": "2026-10-21T00:00:00Z",
+          "portrait": "./assets/rote-klaue/portraits/dewrys.png",
+          "emotes": [],
+          "emotesOverride": false,
+          "imageSetSchemaVersion": 0,
+          "imageSets": [],
+          "activeImageSetId": "",
+          "imageSetsOverride": false,
+          "inventory": null,
+          "biography": null,
+          "identity": {
+            "worldPersonId": "person--rote-klaue--dewrys"
+          },
+          "genealogy": {
+            "worldPersonId": "person--rote-klaue--dewrys",
+            "sex": "male",
+            "status": "alive",
+            "birth": "1696",
+            "death": "",
+            "houseId": "",
+            "houseName": "",
+            "familyRole": "",
+            "portraitPlaceholder": "",
+            "tags": [],
+            "sources": [],
+            "relationships": {
+              "parents": [],
+              "partners": [],
+              "children": []
+            }
+          }
+        }
+      },
+      {
+        "id": "person--rote-klaue--hroald",
+        "key": "hroald",
+        "group": "Rote Kompanie",
+        "create": true,
+        "data": {
+          "name": "Hroald",
+          "title": "Legionär der Roten Kompanie · Tür und Schalter",
+          "fraktion": "Rote Kompanie",
+          "role": "Legionär der Roten Kompanie · Tür und Schalter",
+          "status": "active",
+          "relevance": "minor",
+          "taxonomyPath": "",
+          "currentLocation": "Die rote Klaue · Gwynthor",
+          "origin": "Aldrimar",
+          "plotNode": "",
+          "profileLink": "",
+          "playerOwner": "",
+          "bio": "Ein grinsender Grobian mit gutem Gedächtnis für Gesichter. Hält sich am Eingang auf und lässt die Hand gern etwas zu lange auf einer Schulter liegen. Einer von drei dem Pfandhaus zugewiesenen Kompaniesöldnern.",
+          "aliases": [],
+          "archived": false,
+          "createdAt": "2026-10-21T00:00:00Z",
+          "updatedAt": "2026-10-21T00:00:00Z",
+          "portrait": "./assets/rote-klaue/portraits/hroald.png",
+          "emotes": [],
+          "emotesOverride": false,
+          "imageSetSchemaVersion": 0,
+          "imageSets": [],
+          "activeImageSetId": "",
+          "imageSetsOverride": false,
+          "inventory": null,
+          "biography": null,
+          "identity": {
+            "worldPersonId": "person--rote-klaue--hroald"
+          },
+          "genealogy": {
+            "worldPersonId": "person--rote-klaue--hroald",
+            "sex": "male",
+            "status": "alive",
+            "birth": "1701",
+            "death": "",
+            "houseId": "",
+            "houseName": "",
+            "familyRole": "",
+            "portraitPlaceholder": "",
+            "tags": [],
+            "sources": [],
+            "relationships": {
+              "parents": [],
+              "partners": [],
+              "children": []
+            }
+          }
+        }
+      },
+      {
+        "id": "person--rote-klaue--kettil",
+        "key": "kettil",
+        "group": "Rote Kompanie",
+        "create": true,
+        "data": {
+          "name": "Kettil",
+          "title": "Legionär der Roten Kompanie · Magazin und Hinterhof",
+          "fraktion": "Rote Kompanie",
+          "role": "Legionär der Roten Kompanie · Magazin und Hinterhof",
+          "status": "active",
+          "relevance": "minor",
+          "taxonomyPath": "",
+          "currentLocation": "Die rote Klaue · Gwynthor",
+          "origin": "Aldrimar",
+          "plotNode": "",
+          "profileLink": "",
+          "playerOwner": "",
+          "bio": "Spricht leise und lacht zuerst, wenn ein Kunde nervös wird. Kontrolliert Hintertür und Magazin. Er hat keinen Offiziersrang und untersteht beim Wachdienst dem örtlichen Auftrag der Kompanie.",
+          "aliases": [],
+          "archived": false,
+          "createdAt": "2026-10-21T00:00:00Z",
+          "updatedAt": "2026-10-21T00:00:00Z",
+          "portrait": "./assets/rote-klaue/portraits/kettil.png",
+          "emotes": [],
+          "emotesOverride": false,
+          "imageSetSchemaVersion": 0,
+          "imageSets": [],
+          "activeImageSetId": "",
+          "imageSetsOverride": false,
+          "inventory": null,
+          "biography": null,
+          "identity": {
+            "worldPersonId": "person--rote-klaue--kettil"
+          },
+          "genealogy": {
+            "worldPersonId": "person--rote-klaue--kettil",
+            "sex": "male",
+            "status": "alive",
+            "birth": "1705",
+            "death": "",
+            "houseId": "",
+            "houseName": "",
+            "familyRole": "",
+            "portraitPlaceholder": "",
+            "tags": [],
+            "sources": [],
+            "relationships": {
+              "parents": [],
+              "partners": [],
+              "children": []
+            }
+          }
+        }
+      },
+      {
+        "id": "person--rote-klaue--rhydog",
+        "key": "rhydog",
+        "group": "Rote Kompanie",
+        "create": true,
+        "data": {
+          "name": "Rhydog",
+          "title": "Legionär der Roten Kompanie · Begleitung und Hunde",
+          "fraktion": "Rote Kompanie",
+          "role": "Legionär der Roten Kompanie · Begleitung und Hunde",
+          "status": "active",
+          "relevance": "minor",
+          "taxonomyPath": "",
+          "currentLocation": "Die rote Klaue · Gwynthor",
+          "origin": "Cenyr",
+          "plotNode": "",
+          "profileLink": "",
+          "playerOwner": "",
+          "bio": "Begleitet Geld- und Pfandtransporte und führt die Hunde. Seine spöttischen Bemerkungen beendet er sofort, wenn Camilla den Raum betritt.",
+          "aliases": [],
+          "archived": false,
+          "createdAt": "2026-10-21T00:00:00Z",
+          "updatedAt": "2026-10-21T00:00:00Z",
+          "portrait": "./assets/rote-klaue/portraits/rhydog.png",
+          "emotes": [],
+          "emotesOverride": false,
+          "imageSetSchemaVersion": 0,
+          "imageSets": [],
+          "activeImageSetId": "",
+          "imageSetsOverride": false,
+          "inventory": null,
+          "biography": null,
+          "identity": {
+            "worldPersonId": "person--rote-klaue--rhydog"
+          },
+          "genealogy": {
+            "worldPersonId": "person--rote-klaue--rhydog",
+            "sex": "male",
+            "status": "alive",
+            "birth": "1698",
+            "death": "",
+            "houseId": "",
+            "houseName": "",
+            "familyRole": "",
+            "portraitPlaceholder": "",
+            "tags": [],
+            "sources": [],
+            "relationships": {
+              "parents": [],
+              "partners": [],
+              "children": []
+            }
+          }
+        }
+      },
+      {
+        "id": "person--rote-klaue--eneth",
+        "key": "eneth",
+        "group": "Angestellte",
+        "create": true,
+        "data": {
+          "name": "Eneth",
+          "title": "Magd · Reinigung und Hausdienst",
+          "fraktion": "Die rote Klaue",
+          "role": "Magd · Reinigung und Hausdienst",
+          "status": "active",
+          "relevance": "minor",
+          "taxonomyPath": "",
+          "currentLocation": "Die rote Klaue · Gwynthor",
+          "origin": "Cenyr",
+          "plotNode": "",
+          "profileLink": "",
+          "playerOwner": "",
+          "bio": "Hält Schalter, Stufen und die oberen Zimmer sauber. An den verschlossenen Pfandschränken arbeitet sie nur, wenn Dewrys danebensteht. Sie weiß, welcher Legionär seine Stiefel nie abtritt.",
+          "aliases": [],
+          "archived": false,
+          "createdAt": "2026-10-21T00:00:00Z",
+          "updatedAt": "2026-10-21T00:00:00Z",
+          "portrait": "./assets/rote-klaue/portraits/eneth.png",
+          "emotes": [],
+          "emotesOverride": false,
+          "imageSetSchemaVersion": 0,
+          "imageSets": [],
+          "activeImageSetId": "",
+          "imageSetsOverride": false,
+          "inventory": null,
+          "biography": null,
+          "identity": {
+            "worldPersonId": "person--rote-klaue--eneth"
+          },
+          "genealogy": {
+            "worldPersonId": "person--rote-klaue--eneth",
+            "sex": "female",
+            "status": "alive",
+            "birth": "1709",
+            "death": "",
+            "houseId": "",
+            "houseName": "",
+            "familyRole": "",
+            "portraitPlaceholder": "",
+            "tags": [],
+            "sources": [],
+            "relationships": {
+              "parents": [],
+              "partners": [],
+              "children": []
+            }
+          }
+        }
+      }
+    ],
+    "config": {
+      "tabs": [
+        "Die rote Klaue"
+      ],
+      "map": {
+        "Die rote Klaue": [
+          "person--rote-klaue--lucan",
+          "person--rote-klaue--camilla",
+          "person--rote-klaue--aerwen",
+          "person--rote-klaue--cadwyst",
+          "person--rote-klaue--dewrys",
+          "person--rote-klaue--hroald",
+          "person--rote-klaue--kettil",
+          "person--rote-klaue--rhydog",
+          "person--rote-klaue--eneth"
+        ]
+      },
+      "subtabs": {
+        "Die rote Klaue": [
+          "Haus Valerus",
+          "Angestellte",
+          "Rote Kompanie"
+        ]
+      },
+      "subtabMap": {
+        "Die rote Klaue": {
+          "Haus Valerus": [
+            "person--rote-klaue--lucan",
+            "person--rote-klaue--camilla",
+            "person--rote-klaue--aerwen"
+          ],
+          "Angestellte": [
+            "person--rote-klaue--cadwyst",
+            "person--rote-klaue--dewrys",
+            "person--rote-klaue--eneth"
+          ],
+          "Rote Kompanie": [
+            "person--rote-klaue--hroald",
+            "person--rote-klaue--kettil",
+            "person--rote-klaue--rhydog"
+          ]
+        }
+      }
+    }
+  }
+}

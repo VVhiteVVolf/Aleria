@@ -27,7 +27,7 @@ for (const kind of ["map", "board"]) {
     const file = kind === "map"
       ? "../../Karten/assets/js/integrations/orte-poi-bridge.js"
       : "../../Anzeigetafeln/assets/js/integrations/orte-notice-bridge.js";
-    if (kind === "board") vm.runInNewContext(readFileSync(new URL("../../Anzeigetafeln/assets/js/notes/notice-search.js", import.meta.url), "utf8"), { window });
+    if (kind === "board") for (const feature of ['notice-search', 'notice-stacks']) vm.runInNewContext(readFileSync(new URL(`../../Anzeigetafeln/assets/js/notes/${feature}.js`, import.meta.url), "utf8"), { window });
     vm.runInNewContext(readFileSync(new URL(file, import.meta.url), "utf8"), { window });
     const message = (type, extra = {}, event = {}) => listeners.get("message")({
       source: parent, origin: window.location.origin, data: { type, mapId: "example", ...extra }, ...event,
@@ -52,6 +52,13 @@ for (const kind of ["map", "board"]) {
       state.zettel[0].title = "Updated";
       listeners.get("aleria:tafel:state-applied")();
       assert.equal(sent.at(-1).payload.pois[0].name, "Updated");
+      state.zettel[0].noticeGroupId = 'public';
+      state.zettel.push({ id: 'attachment', title: 'Personenblatt', typ: 'vermisst', text: 'Rioneths Beschreibung', stackId: 'public', noticeGroupId: 'public' });
+      listeners.get("aleria:tafel:state-applied")();
+      assert.equal(sent.at(-1).payload.pois.length, 1, 'one logical notice crosses the embedded index');
+      assert.match(sent.at(-1).payload.pois[0].searchText, /Rioneths Beschreibung/);
+      message("aleria:map-poi-open", { id: "attachment" });
+      assert.equal(opened.at(-1), 'attachment', 'old direct links to public attachments remain valid');
     }
   });
 }

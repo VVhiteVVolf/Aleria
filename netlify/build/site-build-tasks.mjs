@@ -1,11 +1,14 @@
 const testCommand = (...files) => ['--test', '--experimental-test-isolation=none', ...files];
 const almanach = name => `AleriaAlmanach/tests/${name}.test.mjs`;
 const gwynthorFamilyInputs = [
+  'AleriaAlmanach/modules/gwynthor-heime/',
+  'AleriaAlmanach/modules/arkaneum/arkaneum-people.mjs',
   'AleriaAlmanach/modules/gwynthor-bathhouse/bathhouse-people.mjs',
   'AleriaAlmanach/modules/kleiner-durst/durst-people.mjs',
   'AleriaAlmanach/modules/rotes-tor/penrudd-household.mjs',
   'AleriaAlmanach/modules/rotes-tor/penrudd-appearances.mjs',
   'AleriaAlmanach/modules/pendrwn-general-store/store-people.mjs',
+  'AleriaAlmanach/modules/rote-klaue/klaue-people.mjs',
   'AleriaAlmanach/modules/gwregysdu-harbor/',
   'AleriaAlmanach/modules/gestiefelte-muschi/muschi-people.mjs',
   'AleriaAlmanach/modules/letzter-heller/heller-people.mjs',
@@ -22,7 +25,7 @@ const economySourceInputs = [
   'kleiner-durst', 'krumme-kanne', 'letzte-rast', 'goettliche-eleganz',
   'pendrwn-general-store', 'gwynthor-bathhouse', 'gestiefelte-muschi',
   'letzter-heller', 'gofrann-schmiede', 'klingende-krone', 'lachende-nixe',
-  'gortach-brauerei', 'brewer-guilds', 'gwregysdu-harbor', 'windreiter', 'rotes-tor'
+  'gortach-brauerei', 'brewer-guilds', 'gwregysdu-harbor', 'windreiter', 'rotes-tor', 'arkaneum', 'gwynthor-heime'
 ].map(feature => `AleriaAlmanach/modules/${feature}/`);
 
 // Inputs include cross-feature dependencies. Images do not affect the chart audit,
@@ -41,6 +44,35 @@ export const SITE_BUILD_TASKS = [
   {
     id: 'map-media', label: 'Generate map media index', always: true,
     inputs: ['Karten/tools/build-media-library.mjs'], commands: [['Karten/tools/build-media-library.mjs']]
+  },
+  {
+    id: 'notice-boards', label: 'Notice templates, typography, stacks, bounded text and goods rewards',
+    inputs: ['Anzeigetafeln/', 'Orte/assets/js/orte-notice-board.js', 'Orte/tests/poi-bridges.test.mjs',
+      'Fonts/', 'AleriaAlmanach/modules/language/', 'AleriaAlmanach/DokumentenWerkstatt/js/fonts/',
+      'AleriaAlmanach/modules/comments/comments-spell-fonts.js',
+      'AleriaAlmanach/scripts/check-comment-language-bubbles.js',
+      ...['arcane-alphabet', 'rheunwaith-script', 'karnrith-script', 'laerelis-module'].map(almanach),
+      'AleriaAlmanach/AleriaAlmanach.html', 'AleriaAlmanach/modules/schwarze-zitteraale/', ...economySourceInputs],
+    commands: [['Anzeigetafeln/tools/build-notice-reward-catalog.mjs'],
+      ['Anzeigetafeln/tools/vendor-notice-handwriting.mjs', '--check'],
+      ['Anzeigetafeln/tools/build-gwynthor-quest-notices.mjs', '--check'],
+      ['Anzeigetafeln/tools/validate-tafeln-structure.mjs'],
+      ['AleriaAlmanach/scripts/check-comment-language-bubbles.js'],
+      testCommand('Anzeigetafeln/tests/authored-notices.test.mjs', 'Anzeigetafeln/tests/gwynthor-board.test.mjs',
+        'Anzeigetafeln/tests/notice-documents.test.mjs', 'Anzeigetafeln/tests/notice-search.test.mjs',
+        'Anzeigetafeln/tests/notice-stacks-rewards.test.mjs', 'Anzeigetafeln/tests/notice-publications.test.mjs', 'Anzeigetafeln/tests/notice-typography.test.mjs',
+        'Anzeigetafeln/tests/single-layer-board.test.mjs', 'Anzeigetafeln/tests/zitteraale-wanted.test.mjs', 'Orte/tests/poi-bridges.test.mjs',
+        ...['arcane-alphabet', 'rheunwaith-script', 'karnrith-script', 'laerelis-module'].map(almanach))]
+  },
+  {
+    id: 'schwarze-zitteraale', label: 'Bandit hierarchy, five dossiers, bounded character import and wanted notice',
+    inputs: ['AleriaAlmanach/modules/schwarze-zitteraale/', 'AleriaAlmanach/assets/schwarze-zitteraale/',
+      'AleriaAlmanach/scripts/build-schwarze-zitteraale.mjs', 'CharakterDatenbank/lib/authored-character-import.mjs',
+      'CharakterDatenbank/lib/character-export-assignments.mjs', 'CharakterDatenbank/scripts/import-authored-characters.mjs',
+      'AleriaAlmanach/modules/creatures/catalog/zitteraal-zunder.js', 'AleriaAlmanach/tests/schwarze-zitteraale.test.mjs',
+      'AleriaAlmanach/tests/authored-character-import.test.mjs'],
+    commands: [['AleriaAlmanach/scripts/build-schwarze-zitteraale.mjs', '--check'],
+      testCommand(almanach('schwarze-zitteraale'), almanach('authored-character-import'), 'Anzeigetafeln/tests/zitteraale-wanted.test.mjs')]
   },
   {
     id: 'gwynthor-map', label: 'Gwynthor marker positions and existing house affiliations',
@@ -81,6 +113,29 @@ export const SITE_BUILD_TASKS = [
       almanach('rotes-tor'), almanach('rotes-tor-menu')],
     commands: [['AleriaAlmanach/scripts/build-rotes-tor.mjs', '--check'],
       testCommand(almanach('rotes-tor'), almanach('rotes-tor-menu'))]
+  },
+  {
+    id: 'arkaneum', label: 'Lothaire family, alchemy, arcane goods and rooms',
+    inputs: ['AleriaAlmanach/modules/arkaneum/', 'AleriaAlmanach/assets/herluin-lothaire/',
+      'AleriaAlmanach/scripts/build-arkaneum.mjs', 'AleriaAlmanach/modules/item-register/',
+      'AleriaAlmanach/modules/trade-catalog/', 'Markt/Alchemist/', 'Markt/Arkanist/',
+      'AleriaAlmanach/modules/economy-calculator/', 'AleriaAlmanach/modules/core/app-core.js',
+      'AleriaAlmanach/AleriaAlmanach.html', almanach('arkaneum'),
+      'Stammbäume/assets/js/data/house-lothaire-family.js'],
+    commands: [['AleriaAlmanach/scripts/build-arkaneum.mjs', '--check'], testCommand(almanach('arkaneum'))]
+  },
+  {
+    id: 'gwynthor-heime', label: 'Three private households and their workplace connections',
+    inputs: ['AleriaAlmanach/modules/gwynthor-heime/', 'AleriaAlmanach/assets/gwynthor-heime/',
+      'AleriaAlmanach/scripts/build-gwynthor-heime.mjs', 'AleriaAlmanach/modules/krumme-kanne/',
+      'AleriaAlmanach/modules/family-tree-embed/', 'AleriaAlmanach/scripts/check-family-tree-template.js',
+      'AleriaAlmanach/modules/module-store/module-entry-migrations.js',
+      'Stammbäume/assets/js/modules/family-embed/', 'Stammbäume/assets/css/family-embed.css',
+      'Stammbäume/assets/js/app.js', 'Stammbäume/Stammbaum.html',
+      'Stammbäume/assets/js/data/gwynthor-small-households.js', 'Stammbäume/assets/js/data/families.registry.js',
+      'AleriaAlmanach/AleriaAlmanach.html', almanach('gwynthor-heime')],
+    commands: [['AleriaAlmanach/scripts/build-gwynthor-heime.mjs', '--check'],
+      ['AleriaAlmanach/scripts/check-family-tree-template.js'], testCommand(almanach('gwynthor-heime'))]
   },
   {
     id: 'economy-calculator', label: 'Price review and calculations for purchasable cultural locations',
@@ -158,11 +213,21 @@ export const SITE_BUILD_TASKS = [
     inputs: ['AleriaAlmanach/modules/klingende-muenze-gwynthor/', 'AleriaAlmanach/assets/klingende-muenze-gwynthor/',
       'AleriaAlmanach/scripts/build-klingende-muenze-gwynthor.mjs', 'AleriaAlmanach/modules/archive/archive-section-registration.mjs',
       'AleriaAlmanach/modules/klingende-krone/', 'AleriaAlmanach/modules/lachende-nixe/',
-      'AleriaAlmanach/modules/letzter-heller/', ...gwynthorFamilyInputs,
+      'AleriaAlmanach/modules/letzter-heller/', 'AleriaAlmanach/modules/rote-klaue/', ...gwynthorFamilyInputs,
       'AleriaAlmanach/modules/creatures/', 'AleriaAlmanach/tests/klingende-muenze-gwynthor.test.mjs',
       'Fraktionen/data/gilden.json', 'Fraktionen/assets/emblems/gilden/', 'Stammbäume/assets/js/',
       'AleriaAlmanach/AleriaAlmanach.html'],
     commands: [['AleriaAlmanach/scripts/build-klingende-muenze-gwynthor.mjs', '--check'], testCommand(almanach('klingende-muenze-gwynthor'))]
+  },
+  {
+    id: 'rote-klaue', label: 'Valerus pawnshop, family, services and scene module',
+    inputs: ['AleriaAlmanach/modules/rote-klaue/', 'AleriaAlmanach/assets/rote-klaue/',
+      'AleriaAlmanach/scripts/build-rote-klaue.mjs', 'AleriaAlmanach/modules/klingende-muenze-gwynthor/',
+      'AleriaAlmanach/modules/archive/archive-section-registration.mjs', 'AleriaAlmanach/modules/guild-services/',
+      'AleriaAlmanach/modules/family-tree-embed/', 'Stammbäume/assets/js/',
+      'Stammbäume/assets/data/published-families/haus-valerus.json', 'Stammbäume/assets/images/houses/Venalys/haus-valerus.png',
+      'AleriaAlmanach/AleriaAlmanach.html', almanach('rote-klaue')],
+    commands: [['AleriaAlmanach/scripts/build-rote-klaue.mjs', '--check'], testCommand(almanach('rote-klaue'))]
   },
   {
     id: 'klingende-krone', label: 'Finlays guild brewery and the expanded Cneacail genealogy',
@@ -212,6 +277,21 @@ export const SITE_BUILD_TASKS = [
       'AleriaAlmanach/modules/lachende-nixe/nixe-family-people.mjs', ...gwynthorFamilyInputs,
       'AleriaAlmanach/scripts/build-regional-equipment.mjs', almanach('regional-equipment')],
     commands: [testCommand(almanach('regional-equipment'))]
+  },
+  {
+    id: 'aldrimar-roriksheim', label: 'Aldrimar kingdom, Roriksheim territories and reviewed map transfer',
+    inputs: ['Kontinente/modules/', 'Kontinente/Estryll/', 'Kontinente/assets/js/',
+      'Kontinente/assets/images/aldrimar/', 'Kontinente/kontinente.registry.js', 'Kontinente/index.html',
+      'Kontinente/scripts/build-aldrimar.mjs', 'Kontinente/scripts/build-roriksheim.mjs',
+      'Kontinente/tests/', 'Karten/Aldrimar/', 'Karten/modules/territory-transfer/',
+      'Karten/assets/js/pins/', 'Karten/karten.registry.js', 'Karten/karte.html',
+      'Karten/tools/build-roriksheim-transfer.mjs', 'Karten/tools/import-roriksheim.mjs',
+      'Karten/tests/roriksheim-transfer.test.mjs',
+      'Stammbäume/assets/js/data/house-bleiddorn-family.js', 'Stammbäume/assets/js/data/house-wolfshorn-family.js'],
+    commands: [['Kontinente/scripts/build-aldrimar.mjs', '--check'],
+      ['Kontinente/scripts/build-roriksheim.mjs', '--check'],
+      ['Karten/tools/build-roriksheim-transfer.mjs', '--check'],
+      testCommand('Kontinente/tests/aldrimar.test.mjs', 'Kontinente/tests/roriksheim.test.mjs', 'Karten/tests/roriksheim-transfer.test.mjs')]
   },
   {
     id: 'family-charts', label: 'Family chart release and browser geometry',

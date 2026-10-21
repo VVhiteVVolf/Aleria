@@ -425,6 +425,24 @@
                     "label": "Bereits geführte örtliche Geschäftsinhaber",
                     "nodes": [
                       {
+                        "id": "muenze-mitglied-lucan",
+                        "title": "Lucan Valerus",
+                        "subtitle": "Die rote Klaue",
+                        "portrait": "./assets/rote-klaue/portraits/lucan.png",
+                        "text": "<p>Pfandhaus · Darlehen, Münzwechsel und Wertschätzung.</p><p>Mitglied der Klingenden Münze und der Roten Bank; sein Betrieb bleibt eigenständig geführt.</p>",
+                        "memberEntryId": "gwynthor-die-rote-klaue",
+                        "worldPersonId": "person--rote-klaue--lucan"
+                      },
+                      {
+                        "id": "muenze-mitglied-camilla",
+                        "title": "Camilla Valerus",
+                        "subtitle": "Die rote Klaue",
+                        "portrait": "./assets/rote-klaue/portraits/camilla.png",
+                        "text": "<p>Pfandhaus · Darlehen, Münzwechsel und Wertschätzung.</p><p>Mitglied der Klingenden Münze und der Roten Bank; sein Betrieb bleibt eigenständig geführt.</p>",
+                        "memberEntryId": "gwynthor-die-rote-klaue",
+                        "worldPersonId": "person--rote-klaue--camilla"
+                      },
+                      {
                         "id": "muenze-mitglied-finlay",
                         "title": "Finlay Cneacail",
                         "subtitle": "Zur Klingenden Krone",
@@ -737,6 +755,24 @@
                   {
                     "label": "Bekannte Inhaber · verpflichtender Bankbeitritt mit der Kaufmannsgilde",
                     "nodes": [
+                      {
+                        "id": "bank-mitglied-lucan",
+                        "title": "Lucan Valerus",
+                        "subtitle": "Die rote Klaue",
+                        "portrait": "./assets/rote-klaue/portraits/lucan.png",
+                        "text": "<p>Pfandhaus · Darlehen, Münzwechsel und Wertschätzung.</p><p>Als Mitglied der Klingenden Münze gehört er zugleich der Roten Bank an und führt dort sein Gildenkonto.</p>",
+                        "memberEntryId": "gwynthor-die-rote-klaue",
+                        "worldPersonId": "person--rote-klaue--lucan"
+                      },
+                      {
+                        "id": "bank-mitglied-camilla",
+                        "title": "Camilla Valerus",
+                        "subtitle": "Die rote Klaue",
+                        "portrait": "./assets/rote-klaue/portraits/camilla.png",
+                        "text": "<p>Pfandhaus · Darlehen, Münzwechsel und Wertschätzung.</p><p>Als Mitglied der Klingenden Münze gehört er zugleich der Roten Bank an und führt dort sein Gildenkonto.</p>",
+                        "memberEntryId": "gwynthor-die-rote-klaue",
+                        "worldPersonId": "person--rote-klaue--camilla"
+                      },
                       {
                         "id": "bank-mitglied-finlay",
                         "title": "Finlay Cneacail",
@@ -1308,6 +1344,20 @@
         }
       ]
     }
+  },
+  {
+    "key": "Die Klingende Münze - Gwynthor",
+    "tab": "Völker & Kulturen",
+    "desc": "Handelsposten, Interessenbünde und Betriebe des dreifachen Gildenverbunds.",
+    "iconUrl": "../Fraktionen/assets/emblems/gilden/klingende-muenze.webp",
+    "path": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Gwynthor",
+      "Die Klingende Münze - Gwynthor"
+    ],
+    "entryId": "gwynthor-die-rote-klaue"
   },
   {
     "key": "Die Klingende Münze - Gwynthor",

@@ -1,0 +1,51 @@
+.territory-navigation {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 270px), 1fr));
+  gap: 12px;
+  margin-block: 20px;
+}
+
+.territory-navigation-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+  padding: 16px;
+  border: 1px solid #cbb78e;
+  border-radius: 3px;
+  background: #fffdf7;
+  color: #813e32;
+  text-decoration: none;
+}
+
+.territory-navigation-card:hover,
+.territory-navigation-card:focus-visible {
+  background: #f4ecda;
+  outline: 2px solid #a17c45;
+  outline-offset: 2px;
+}
+
+.territory-navigation-card img {
+  flex: 0 0 64px;
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+}
+
+.territory-navigation-card > span {
+  display: grid;
+  gap: 3px;
+  min-width: 0;
+}
+
+.territory-navigation-card strong {
+  font-size: 1rem;
+  hyphens: none;
+  overflow-wrap: normal;
+  word-break: normal;
+}
+
+.territory-navigation-card span span {
+  font: 0.82rem/1.4 var(--font-sans, Arial, sans-serif);
+  color: #665c4c;
+}

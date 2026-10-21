@@ -18,6 +18,7 @@ function loadRheunwaith() {
   for (const source of [
     '../../Fonts/Rheunwaith-Font-1.000/rheunwaith.js',
     '../modules/language/language-script-display.js',
+    '../modules/language/language-script-registry.js',
     '../modules/core/content-safety.js',
     '../modules/script-table/script-table-data.js',
     '../modules/script-table/script-table-renderer.js',

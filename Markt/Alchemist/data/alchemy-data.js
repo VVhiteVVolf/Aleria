@@ -406,3 +406,605 @@ window.ALCHEMY_DATA = {
     }
   ]
 };
+
+// Standardzubehör · Arkaneum-Erweiterung 2026-10-20
+window.ALCHEMY_DATA.items.push({
+  "id": "kamille",
+  "name": "Kamille",
+  "category": "Gewöhnliche Zutaten",
+  "type": "Gewöhnliche Zutaten",
+  "unit": "20 g getrocknete Blüten",
+  "price": {
+    "min": 0.8,
+    "max": 0.8,
+    "unit": "K"
+  },
+  "image": "/AleriaAlmanach/assets/herluin-lothaire/goods/kamille.png",
+  "tags": [
+    "Gewöhnliche Zutaten"
+  ],
+  "desc": "Getrocknete Blüten für gewöhnliche Aufgüsse und milde Kräutermischungen.",
+  "stats": [
+    0,
+    0,
+    0,
+    0,
+    1,
+    0
+  ]
+},
+{
+  "id": "salbei",
+  "name": "Salbei",
+  "category": "Gewöhnliche Zutaten",
+  "type": "Gewöhnliche Zutaten",
+  "unit": "20 g getrocknete Blätter",
+  "price": {
+    "min": 0.8,
+    "max": 0.8,
+    "unit": "K"
+  },
+  "image": "/AleriaAlmanach/assets/herluin-lothaire/goods/salbei.png",
+  "tags": [
+    "Gewöhnliche Zutaten"
+  ],
+  "desc": "Aromatische Blätter für Aufgüsse, Räucherungen und gewöhnliche Zubereitungen.",
+  "stats": [
+    0,
+    0,
+    0,
+    0,
+    1,
+    0
+  ]
+},
+{
+  "id": "minze",
+  "name": "Minze",
+  "category": "Gewöhnliche Zutaten",
+  "type": "Gewöhnliche Zutaten",
+  "unit": "20 g getrocknete Blätter",
+  "price": {
+    "min": 0.6,
+    "max": 0.6,
+    "unit": "K"
+  },
+  "image": "/AleriaAlmanach/assets/herluin-lothaire/goods/minze.png",
+  "tags": [
+    "Gewöhnliche Zutaten"
+  ],
+  "desc": "Duftende Minzblätter für Aufgüsse und einfache Mischungen.",
+  "stats": [
+    0,
+    0,
+    0,
+    0,
+    1,
+    0
+  ]
+},
+{
+  "id": "lavendel",
+  "name": "Lavendel",
+  "category": "Gewöhnliche Zutaten",
+  "type": "Gewöhnliche Zutaten",
+  "unit": "20 g getrocknete Blüten",
+  "price": {
+    "min": 1,
+    "max": 1,
+    "unit": "K"
+  },
+  "image": "/AleriaAlmanach/assets/herluin-lothaire/goods/lavendel.png",
+  "tags": [
+    "Gewöhnliche Zutaten"
+  ],
+  "desc": "Duftende Blüten für Kräutersäckchen, Waschwasser und einfache Öle.",
+  "stats": [
+    0,
+    0,
+    0,
+    0,
+    1,
+    0
+  ]
+},
+{
+  "id": "ringelblume",
+  "name": "Ringelblume",
+  "category": "Gewöhnliche Zutaten",
+  "type": "Gewöhnliche Zutaten",
+  "unit": "20 g getrocknete Blüten",
+  "price": {
+    "min": 1,
+    "max": 1,
+    "unit": "K"
+  },
+  "image": "/AleriaAlmanach/assets/herluin-lothaire/goods/ringelblume-v2.png",
+  "tags": [
+    "Gewöhnliche Zutaten"
+  ],
+  "desc": "Blüten für einfache Salbengrundlagen und Kräutermischungen.",
+  "stats": [
+    0,
+    0,
+    0,
+    0,
+    1,
+    0
+  ]
+},
+{
+  "id": "beinwellwurzel",
+  "name": "Beinwellwurzel",
+  "category": "Gewöhnliche Zutaten",
+  "type": "Gewöhnliche Zutaten",
+  "unit": "50 g getrocknete Wurzel",
+  "price": {
+    "min": 1.5,
+    "max": 1.5,
+    "unit": "K"
+  },
+  "image": "/AleriaAlmanach/assets/herluin-lothaire/goods/beinwellwurzel.png",
+  "tags": [
+    "Gewöhnliche Zutaten"
+  ],
+  "desc": "Geschnittene Wurzel für äußerliche Kräuterzubereitungen; keine Speisezutat.",
+  "stats": [
+    0,
+    0,
+    0,
+    0,
+    1,
+    0
+  ]
+},
+{
+  "id": "bienenwachs",
+  "name": "Bienenwachs",
+  "category": "Gewöhnliche Zutaten",
+  "type": "Gewöhnliche Zutaten",
+  "unit": "100 g",
+  "price": {
+    "min": 1.5,
+    "max": 1.5,
+    "unit": "K"
+  },
+  "image": "/AleriaAlmanach/assets/herluin-lothaire/goods/bienenwachs.png",
+  "tags": [
+    "Gewöhnliche Zutaten"
+  ],
+  "desc": "Gereinigtes Wachs für Salben, Verschlüsse und kleine Laborarbeiten.",
+  "stats": [
+    0,
+    0,
+    0,
+    0,
+    1,
+    0
+  ]
+},
+{
+  "id": "baumharz",
+  "name": "Baumharz",
+  "category": "Gewöhnliche Zutaten",
+  "type": "Gewöhnliche Zutaten",
+  "unit": "50 g",
+  "price": {
+    "min": 1,
+    "max": 1,
+    "unit": "K"
+  },
+  "image": "/AleriaAlmanach/assets/herluin-lothaire/goods/baumharz.png",
+  "tags": [
+    "Gewöhnliche Zutaten"
+  ],
+  "desc": "Gereinigte Harzstücke für Räuchermischungen, Kitte und einfache Bindemittel.",
+  "stats": [
+    0,
+    0,
+    0,
+    0,
+    1,
+    0
+  ]
+},
+{
+  "id": "alchemieschatulle",
+  "name": "Alchemie-Zubehörschatulle",
+  "category": "Laborzubehör",
+  "type": "Laborzubehör",
+  "unit": "1 bestückte Schatulle",
+  "price": {
+    "min": 28,
+    "max": 28,
+    "unit": "K"
+  },
+  "image": "/AleriaAlmanach/assets/herluin-lothaire/goods/alchemieschatulle.png",
+  "tags": [
+    "Laborzubehör"
+  ],
+  "desc": "Eine gepolsterte Holzschatulle mit Spatel, Pinzette, Löffel und zwei kleinen leeren Gefäßen; Zutaten und Feuerquelle sind nicht enthalten.",
+  "stats": [
+    0,
+    0,
+    0,
+    0,
+    1,
+    0
+  ]
+},
+{
+  "id": "glasflaeschchen",
+  "name": "Glasfläschchen",
+  "category": "Laborzubehör",
+  "type": "Laborzubehör",
+  "unit": "1 Fläschchen · 50 ml",
+  "price": {
+    "min": 1.5,
+    "max": 1.5,
+    "unit": "K"
+  },
+  "image": "/AleriaAlmanach/assets/herluin-lothaire/goods/glasflaeschchen.png",
+  "tags": [
+    "Laborzubehör"
+  ],
+  "desc": "Ein leeres klares Glasgefäß mit Korken.",
+  "stats": [
+    0,
+    0,
+    0,
+    0,
+    1,
+    0
+  ]
+},
+{
+  "id": "phiolen-holzfassung",
+  "name": "Drei Phiolen in Holzfassung",
+  "category": "Laborzubehör",
+  "type": "Laborzubehör",
+  "unit": "3 leere Phiolen · je 20 ml",
+  "price": {
+    "min": 6,
+    "max": 6,
+    "unit": "K"
+  },
+  "image": "/AleriaAlmanach/assets/herluin-lothaire/goods/phiolen-holzfassung.png",
+  "tags": [
+    "Laborzubehör"
+  ],
+  "desc": "Drei leere Glasphiolen mit Korken in einer einfachen schützenden Holzfassung.",
+  "stats": [
+    0,
+    0,
+    0,
+    0,
+    1,
+    0
+  ]
+},
+{
+  "id": "laborpapier",
+  "name": "Papier",
+  "category": "Laborzubehör",
+  "type": "Laborzubehör",
+  "unit": "10 Blatt",
+  "price": {
+    "min": 0.5,
+    "max": 0.5,
+    "unit": "K"
+  },
+  "image": "/AleriaAlmanach/assets/herluin-lothaire/goods/laborpapier.png",
+  "tags": [
+    "Laborzubehör"
+  ],
+  "desc": "Einfaches unbeschriebenes Hadernpapier für Notizen und Versuchsprotokolle.",
+  "stats": [
+    0,
+    0,
+    0,
+    0,
+    1,
+    0
+  ]
+},
+{
+  "id": "labortinte",
+  "name": "Tinte",
+  "category": "Laborzubehör",
+  "type": "Laborzubehör",
+  "unit": "1 Tintenfass · 30 ml",
+  "price": {
+    "min": 1,
+    "max": 1,
+    "unit": "K"
+  },
+  "image": "/AleriaAlmanach/assets/herluin-lothaire/goods/labortinte.png",
+  "tags": [
+    "Laborzubehör"
+  ],
+  "desc": "Gewöhnliche schwarze Schreibtinte; Feder und Papier werden gesondert verkauft.",
+  "stats": [
+    0,
+    0,
+    0,
+    0,
+    1,
+    0
+  ]
+},
+{
+  "id": "feuerstein",
+  "name": "Feuerstein",
+  "category": "Laborzubehör",
+  "type": "Laborzubehör",
+  "unit": "1 Stück",
+  "price": {
+    "min": 1,
+    "max": 1,
+    "unit": "K"
+  },
+  "image": "/AleriaAlmanach/assets/herluin-lothaire/goods/feuerstein.png",
+  "tags": [
+    "Laborzubehör"
+  ],
+  "desc": "Ein kantiger Feuerstein; Zunder und Schlagstahl sind nicht enthalten.",
+  "stats": [
+    0,
+    0,
+    0,
+    0,
+    1,
+    0
+  ]
+},
+{
+  "id": "labormoerser",
+  "name": "Mörser & Stößel",
+  "category": "Laborzubehör",
+  "type": "Laborzubehör",
+  "unit": "1 Satz",
+  "price": {
+    "min": 10,
+    "max": 10,
+    "unit": "K"
+  },
+  "image": "/AleriaAlmanach/assets/herluin-lothaire/goods/labormoerser.png",
+  "tags": [
+    "Laborzubehör"
+  ],
+  "desc": "Ein mittelgroßer Steinmörser mit passendem Stößel für Laborarbeiten.",
+  "stats": [
+    0,
+    0,
+    0,
+    0,
+    1,
+    0
+  ]
+},
+{
+  "id": "destillator",
+  "name": "Destillator",
+  "category": "Laborzubehör",
+  "type": "Laborzubehör",
+  "unit": "1 Aufbau",
+  "price": {
+    "min": 85,
+    "max": 85,
+    "unit": "K"
+  },
+  "image": "/AleriaAlmanach/assets/herluin-lothaire/goods/destillator.png",
+  "tags": [
+    "Laborzubehör"
+  ],
+  "desc": "Ein einfacher kupferner Destillieraufbau mit Kessel, Kühlrohr und Auffanggefäß; Brennstoff gesondert.",
+  "stats": [
+    0,
+    0,
+    0,
+    0,
+    1,
+    0
+  ]
+},
+{
+  "id": "kalzinator",
+  "name": "Kalzinator",
+  "category": "Laborzubehör",
+  "type": "Laborzubehör",
+  "unit": "1 Reisegerät · etwa 10 × 8 cm",
+  "price": {
+    "min": 65,
+    "max": 65,
+    "unit": "K"
+  },
+  "image": "/AleriaAlmanach/assets/herluin-lothaire/goods/kalzinator-v2.png",
+  "tags": [
+    "Laborzubehör"
+  ],
+  "desc": "Ein handgroßer Reisekalzinator aus Eisen mit keramischer Tiegelkammer, Klappdeckel und Tragebügel. Für kleinste Laborproben; passender Miniaturtiegel und Brennstoff gesondert.",
+  "stats": [
+    0,
+    0,
+    0,
+    0,
+    1,
+    0
+  ]
+},
+{
+  "id": "retorte",
+  "name": "Retorte",
+  "category": "Laborzubehör",
+  "type": "Laborzubehör",
+  "unit": "1 Stück · 250 ml",
+  "price": {
+    "min": 12,
+    "max": 12,
+    "unit": "K"
+  },
+  "image": "/AleriaAlmanach/assets/herluin-lothaire/goods/retorte.png",
+  "tags": [
+    "Laborzubehör"
+  ],
+  "desc": "Ein gläsernes Gefäß mit langem abwärts gebogenem Hals für kleine Laboransätze.",
+  "stats": [
+    0,
+    0,
+    0,
+    0,
+    1,
+    0
+  ]
+},
+{
+  "id": "alembik",
+  "name": "Alembik",
+  "category": "Laborzubehör",
+  "type": "Laborzubehör",
+  "unit": "1 Aufsatz",
+  "price": {
+    "min": 30,
+    "max": 30,
+    "unit": "K"
+  },
+  "image": "/AleriaAlmanach/assets/herluin-lothaire/goods/alembik.png",
+  "tags": [
+    "Laborzubehör"
+  ],
+  "desc": "Ein kupferner Destillierhelm mit seitlichem Ablaufrohr; passend zu einem kleinen Kessel, ohne vollständigen Kühlaufbau.",
+  "stats": [
+    0,
+    0,
+    0,
+    0,
+    1,
+    0
+  ]
+},
+{
+  "id": "filtertuch",
+  "name": "Filtertuch",
+  "category": "Laborzubehör",
+  "type": "Laborzubehör",
+  "unit": "1 Tuch · 30 × 30 cm",
+  "price": {
+    "min": 1.5,
+    "max": 1.5,
+    "unit": "K"
+  },
+  "image": "/AleriaAlmanach/assets/herluin-lothaire/goods/filtertuch.png",
+  "tags": [
+    "Laborzubehör"
+  ],
+  "desc": "Dicht gewebtes Leinen zum Abseihen und Filtern gewöhnlicher Mischungen.",
+  "stats": [
+    0,
+    0,
+    0,
+    0,
+    1,
+    0
+  ]
+},
+{
+  "id": "labortiegel",
+  "name": "Labortiegel",
+  "category": "Laborzubehör",
+  "type": "Laborzubehör",
+  "unit": "1 Tiegel · 20 ml",
+  "price": {
+    "min": 4,
+    "max": 4,
+    "unit": "K"
+  },
+  "image": "/AleriaAlmanach/assets/herluin-lothaire/goods/labortiegel.png",
+  "tags": [
+    "Laborzubehör"
+  ],
+  "desc": "Ein kleiner feuerfester Tontiegel für den Kalzinator.",
+  "stats": [
+    0,
+    0,
+    0,
+    0,
+    1,
+    0
+  ]
+},
+{
+  "id": "trichter",
+  "name": "Glastrichter",
+  "category": "Laborzubehör",
+  "type": "Laborzubehör",
+  "unit": "1 Stück",
+  "price": {
+    "min": 3,
+    "max": 3,
+    "unit": "K"
+  },
+  "image": "/AleriaAlmanach/assets/herluin-lothaire/goods/trichter.png",
+  "tags": [
+    "Laborzubehör"
+  ],
+  "desc": "Ein kleiner Glastrichter zum sauberen Umfüllen.",
+  "stats": [
+    0,
+    0,
+    0,
+    0,
+    1,
+    0
+  ]
+},
+{
+  "id": "balkenwaage",
+  "name": "Feine Balkenwaage",
+  "category": "Laborzubehör",
+  "type": "Laborzubehör",
+  "unit": "1 Waage mit Gewichten",
+  "price": {
+    "min": 24,
+    "max": 24,
+    "unit": "K"
+  },
+  "image": "/AleriaAlmanach/assets/herluin-lothaire/goods/balkenwaage.png",
+  "tags": [
+    "Laborzubehör"
+  ],
+  "desc": "Eine kleine Messingwaage mit Gewichten für gewöhnliche Zutatenmengen.",
+  "stats": [
+    0,
+    0,
+    0,
+    0,
+    1,
+    0
+  ]
+},
+{
+  "id": "trockensieb",
+  "name": "Trockensieb",
+  "category": "Laborzubehör",
+  "type": "Laborzubehör",
+  "unit": "1 Stück",
+  "price": {
+    "min": 5,
+    "max": 5,
+    "unit": "K"
+  },
+  "image": "/AleriaAlmanach/assets/herluin-lothaire/goods/trockensieb.png",
+  "tags": [
+    "Laborzubehör"
+  ],
+  "desc": "Ein flaches Holzsieb mit feinem Gewebe für getrocknete Kräuter.",
+  "stats": [
+    0,
+    0,
+    0,
+    0,
+    1,
+    0
+  ]
+});

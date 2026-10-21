@@ -1,8 +1,6 @@
 (function(){
   'use strict';
 
-  let steckbriefPage = 0;
-
   function rt(){
     return window.TafelRuntime;
   }
@@ -23,10 +21,10 @@
     return '<span style="color:#c8a84b;letter-spacing:1px;">' + '\u2605'.repeat(value) + '</span><span style="opacity:.3;">' + '\u2605'.repeat(5 - value) + '</span>';
   }
 
-  function infoRows(rows){
+  function infoRows(rows, notice){
     return (rows || []).filter(row => String(row.v ?? '').trim()).map(row => `<tr>
       <th>${esc(row.k)}</th>
-      <td>${row.type === 'stars' ? starValue(row) : esc(row.v)}</td>
+      <td>${row.type === 'stars' ? starValue(row) : /^(belohnung|kopfgeld|entlohnung|preisgeld)$/i.test(row.k) && window.TafelNoticeRewards ? window.TafelNoticeRewards.render(notice, row.v) : esc(row.v)}</td>
     </tr>`).join('');
   }
 
@@ -37,11 +35,11 @@
 
   function renderQuest(z){
     const txt = richHtml(z.text || '');
-    const rows = infoRows(z.table);
+    const rows = infoRows(z.table, z);
     const reward = valueFor(z.table, 'belohnung');
     const deadline = valueFor(z.table, 'frist');
     const client = z.verfasserName || valueFor(z.table, 'auftraggeber');
-    return `<article class="zettel-rich-content medieval-notice medieval-notice--quest">
+    return `<article class="zettel-rich-content medieval-notice medieval-notice--quest" data-notice-layout>
       <div class="medieval-notice-corner medieval-notice-corner--left"></div>
       <div class="medieval-notice-corner medieval-notice-corner--right"></div>
       <header class="quest-header">
@@ -51,20 +49,19 @@
       </header>
       ${z.bild || z.media?.bild ? `<figure class="quest-scene">${window.TafelNoticeMediaModel.render(z, 'bild', {label:'Illustration'})}</figure>` : ''}
       <div class="quest-layout">
-        <aside class="quest-docket">
+        <aside class="quest-docket" data-notice-reference>
           ${window.TafelNoticeMediaModel.render(z, 'verfasser', {className:'quest-patron', label:'Auftraggeber', symbol:'⚜'})}
           ${client ? `<div class="quest-patron-name"><span>Ausgegeben von</span><strong>${esc(client)}</strong></div>` : ''}
           ${rows ? `<table class="medieval-info-table">${rows}</table>` : ''}
         </aside>
         <section class="quest-copy">
           <div class="quest-copy-ornament">${window.TafelNoticeMediaModel.render(z, 'emblem', {className:'quest-emblem', label:'Emblem', symbol:'❧', fit:'contain'})}</div>
-          ${z.portrait || z.media?.portrait ? window.TafelNoticeMediaModel.render(z, 'portrait', {className:'quest-subject', label:'Porträt'}) : ''}
-          ${txt || '<p class="medieval-empty">Der genaue Wortlaut des Auftrags wurde noch nicht angeschlagen.</p>'}
+          ${window.TafelNoticeTextLayout.markup(`${z.portrait || z.media?.portrait ? window.TafelNoticeMediaModel.render(z, 'portrait', {className:'quest-subject', label:'Porträt'}) : ''}${txt || '<p class="medieval-empty">Der genaue Wortlaut des Auftrags wurde noch nicht angeschlagen.</p>'}`, 'Auftragstext')}
           ${z.unterschrift || z.media?.unterschrift ? window.TafelNoticeMediaModel.render(z, 'unterschrift', {className:'notice-signature', label:'Unterschrift', fit:'contain'}) : ''}
         </section>
       </div>
       <footer class="quest-footer">
-        <div><span>Belohnung</span><strong>${esc(reward || 'nach Vereinbarung')}</strong></div>
+        <div><span>Belohnung</span><strong>${window.TafelNoticeRewards ? window.TafelNoticeRewards.render(z, reward || 'nach Vereinbarung') : esc(reward || 'nach Vereinbarung')}</strong></div>
         ${window.TafelNoticeMediaModel.render(z, 'siegel', {className:'quest-seal', label:'Siegel', symbol:'⚔', fit:'contain'})}
         <div><span>Frist</span><strong>${esc(deadline || 'offen')}</strong></div>
       </footer>
@@ -72,11 +69,7 @@
   }
 
   function setSteckbriefPage(zid, page){
-    const z = state().zettel.find(x => x.id === zid);
-    if(!z) return;
-    const pers = z.personen && z.personen.length ? z.personen : [{portrait:'', title:'', untertitel:'', text:'', table:[]}];
-    steckbriefPage = Math.max(0, Math.min(pers.length - 1, page));
-    document.getElementById('scroll-content').innerHTML = steckbriefPageHTML(z, steckbriefPage) + renderComments(z);
+    window.TafelNoticeReader.setPersonPage(zid, page);
   }
 
   function steckbriefPageHTML(z, page){
@@ -93,16 +86,16 @@
     return window.TafelZettelComments ? window.TafelZettelComments.render(z) : '';
   }
 
-  function renderByType(z){
+  function renderByType(z, { personPage = 0 } = {}){
     if(z.typ === 'quest') return renderQuest(z);
-    if(z.typ === 'steckbrief') return renderSteckbrief(z);
+    if(z.typ === 'steckbrief') return steckbriefPageHTML(z, Math.max(0, Math.min((z.personen?.length || 1) - 1, personPage)));
     if(z.typ === 'zeitung') return renderZeitung(z);
     if(z.typ === 'vermisst') return renderVermisst(z);
     return renderGeneric(z);
   }
 
-  function renderLive(z){
-    return renderByType(z) + renderComments(z);
+  function renderLive(z, options){
+    return renderByType(z, options) + renderComments(z);
   }
 
   function handleImageError(image){

@@ -1,0 +1,261 @@
+{
+  "schemaVersion": 1,
+  "familyId": "haus-torvik",
+  "revision": 2,
+  "updatedAt": "2026-10-20T17:36:18.197Z",
+  "family": {
+    "schema": "aleria.family-tree",
+    "schemaVersion": 1,
+    "document": {
+      "id": "haus-torvik",
+      "title": "Familie Torvik",
+      "motto": "",
+      "description": "Ein aldrimarischer Schmiedegehilfe, seine albische Frau und ihr elfjähriger Sohn.",
+      "emblem": "../AleriaAlmanach/assets/gwynthor-heime/torvik/wappen.png",
+      "houseProfile": {
+        "rankId": "commoner",
+        "seat": "Gwynthor",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "house-draig",
+        "liegeHouseName": "Haus Draig",
+        "regionEmblems": {
+          "seat": "",
+          "barony": "",
+          "county": "",
+          "kingdom": ""
+        }
+      }
+    },
+    "persons": [
+      {
+        "id": "haldor",
+        "worldPersonId": "person--haus-torvik--haldor",
+        "name": "Haldor Torvik",
+        "title": "Schmiedegehilfe im Marktviertel",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1708",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/gwynthor-heime/torvik/haldor.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-torvik",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "Haldor ist kräftig, geduldig und stolz auf eine ordentlich erledigte Arbeit. Er spart auf bessere eigene Werkzeuge und bleibt Gehilfe, bis er sich eine wirkliche Ausbildung leisten kann.",
+        "extensions": {
+          "appearance": "32-year-old human Aldrimar man, broad square jaw, straight flax-blond hair tied in a short low tail, light blue eyes, thick blond moustache with otherwise shaved face. Strong working build, calm reserved half smile. Charcoal wool shirt, worn leather work apron, relaxed standing chest-up, wiping a sooty hand on a rag. Ordinary market-house door.",
+          "culture": "Aldrimarer",
+          "portraitAge": 32,
+          "registryManagedFields": [
+            "name",
+            "title",
+            "portrait",
+            "notes"
+          ],
+          "registryManagedExtensionFields": [
+            "appearance",
+            "culture",
+            "portraitAge"
+          ]
+        }
+      },
+      {
+        "id": "maonaid",
+        "worldPersonId": "person--haus-torvik--maonaid",
+        "name": "Maonaid",
+        "title": "Hausfrau",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1710",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/gwynthor-heime/torvik/maonaid.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Maonaid kennt die Händler der Nachbargassen und lässt sich weder schlechtes Mehl noch ein falsches Gewicht andrehen. Haldors Sturheit begegnet sie mit trockenem Humor und einem zweiten Teller Eintopf.",
+        "extensions": {
+          "appearance": "30-year-old human Alba woman, almost black dark-brown sleek hair swept into a low coil, warm hazel eyes, pronounced brows, softly angular face. Muted plum wool dress with simple cream linen kerchief at neck, no jewels. Relaxed standing upper-body portrait, one hand on wooden chair back, raised eyebrow and dry knowing smile. Simple tidy home.",
+          "culture": "Albin · Leitheach",
+          "portraitAge": 30,
+          "registryManagedFields": [
+            "name",
+            "title",
+            "portrait",
+            "notes"
+          ],
+          "registryManagedExtensionFields": [
+            "appearance",
+            "culture",
+            "portraitAge"
+          ]
+        }
+      },
+      {
+        "id": "iver",
+        "worldPersonId": "person--haus-torvik--iver",
+        "name": "Iver Torvik",
+        "title": "Sohn",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1729",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/gwynthor-heime/torvik/iver.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-torvik",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Iver schnitzt kleine Boote und fragt seinen Vater nach jedem Werkzeug. Ob er später selbst ein Handwerk lernt, steht noch offen. Vorerst darf er in der Schmiede nur unter Aufsicht zuschauen.",
+        "extensions": {
+          "appearance": "Eleven-year-old human boy, clearly childlike face, dark sandy-blond straight tousled hair combining blond father and brunette mother, light hazel eyes, square little chin. Plain olive tunic, cream undershirt, no armor. Standing chest-up with a small unfinished wooden toy and delighted sideways smile. Simple timber house interior. Ordinary fully modest child clothing.",
+          "culture": "Aldrimarisch-albische Familie",
+          "portraitAge": 11,
+          "registryManagedFields": [
+            "name",
+            "title",
+            "portrait",
+            "notes"
+          ],
+          "registryManagedExtensionFields": [
+            "appearance",
+            "culture",
+            "portraitAge"
+          ]
+        }
+      }
+    ],
+    "partnerships": [
+      {
+        "id": "marriage-torvik",
+        "participantIds": [
+          "haldor",
+          "maonaid"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "1727",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Gemeinsamer Haushalt im Marktviertel von Gwynthor.",
+        "extensions": {
+          "chartAlignParentPairOverChildPersonId": "iver",
+          "registryManagedExtensionFields": [
+            "chartAlignParentPairOverChildPersonId",
+            "chartAlignChildGroupBelowParentPair"
+          ]
+        }
+      }
+    ],
+    "parentages": [
+      {
+        "id": "parentage-iver",
+        "childId": "iver",
+        "parentIds": [
+          "haldor",
+          "maonaid"
+        ],
+        "partnershipId": "marriage-torvik",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      }
+    ],
+    "houses": [
+      {
+        "id": "house-torvik",
+        "name": "Familie Torvik",
+        "motto": "",
+        "emblem": "../AleriaAlmanach/assets/gwynthor-heime/torvik/wappen.png",
+        "status": "active",
+        "extensions": {}
+      }
+    ],
+    "cadetBranches": [],
+    "timeJumps": [],
+    "lineage": {
+      "founderPartnershipId": "marriage-torvik",
+      "houseId": "house-torvik",
+      "crestSubtitle": "Marktviertel",
+      "crestEmblemScale": 0.86,
+      "crestFrame": "iron",
+      "crestFrameScale": 1,
+      "timeGap": {
+        "enabled": false,
+        "years": 0,
+        "fromYear": "",
+        "toYear": "",
+        "label": ""
+      },
+      "originHouse": {
+        "enabled": false,
+        "id": "lineage-origin-house",
+        "houseId": "",
+        "name": "Ursprungshaus",
+        "subtitle": "",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "childIds": [],
+        "targetFamilyId": "",
+        "notes": "",
+        "timeGap": {
+          "enabled": false,
+          "years": 0,
+          "fromYear": "",
+          "toYear": "",
+          "label": ""
+        }
+      }
+    },
+    "presentation": {
+      "relationshipColors": {
+        "marriage": "#326c4a",
+        "engagement": "#b88b37",
+        "union": "#8e2724",
+        "affair": "#704485",
+        "concubinage": "#704485",
+        "political": "#9d7d48",
+        "forced": "#c7a974",
+        "biological": "#8e2724",
+        "adoptive": "#2f75a8",
+        "foster": "#2f75a8",
+        "step": "#7eb4d7",
+        "magical": "#704485",
+        "claimed": "#62615e"
+      }
+    },
+    "view": {
+      "focusPersonId": "haldor",
+      "orientation": "vertical",
+      "ancestorDepth": 2,
+      "descendantDepth": 2,
+      "limitGenerations": false,
+      "showSiblings": true
+    },
+    "extensions": {
+      "blankFamily": false,
+      "sourceRevision": 2,
+      "chartLayoutPolicy": "strict-v1",
+      "registryManagedExtensionFields": [
+        "chartLayoutPolicy"
+      ],
+      "sourceNote": "Drei kleine private Haushalte aus dem Nutzerauftrag vom 20.10.2026. Nur der derzeitige Familienkreis; keine erfundene ältere Dynastie. Llinos ist dieselbe Person wie die Hausmagd der Krummen Kanne und behält ihre Identität und ihr Porträt.",
+      "registryTombstones": {},
+      "registryUpgrade": {
+        "fromRevision": 1,
+        "toRevision": 2
+      }
+    }
+  }
+}

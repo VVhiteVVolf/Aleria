@@ -1,0 +1,1869 @@
+{
+  "schemaVersion": 2,
+  "zettel": [
+    {
+      "id": "gwynthor-herluin-angestellte-vermisst",
+      "typ": "quest",
+      "stackId": "gwynthor-herluin-angestellte-vermisst",
+      "stackOrder": 0,
+      "noticeGroupId": "gwynthor-herluin-angestellte-vermisst",
+      "rewards": [
+        {
+          "kind": "money",
+          "currency": "silver",
+          "amount": 5
+        }
+      ],
+      "x": 0.703857421875,
+      "y": 0.4912109375,
+      "title": "Angestellte Vermisst!",
+      "untertitel": "Dringendes Ersuchen aus Lothaires Arkaneum",
+      "text": "<p>An ruinenerfahrene Abenteurer und Söldner von belastbarer Urteilskraft.</p><p>Ich ersuche um <strong>unverzügliche Hilfe bei der Bergung dreier vermisster Mitarbeiter</strong>. <strong>Cyrwyn, Torvald und Rioneth</strong> wurden von mir zur Untersuchung und Sicherstellung möglicher Artefakte nach <strong>Glannadeor</strong> entsandt. Der vereinbarte Rückkehrtermin ist längst verstrichen. Es liegt weder eine Nachricht noch irgendeine anderweitige Erklärung für ihr Ausbleiben vor.</p><p>Ich habe die Verzögerung zunächst der üblichen Diskrepanz zwischen meiner Zeitplanung und Cyrwyns Auffassung von Eile zugeschrieben. Diese Erklärung ist erschöpft. Ebenso meine Bereitschaft, Angehörigen an meiner Tür noch einmal zu versichern, man müsse vernünftigerweise abwarten. Diese Reise erfolgte auf meine Weisung.</p><p>Ich benötige eine befähigte Gruppe, die <strong>nach Glannadeor aufbricht, die Ruine betritt und meine Leute nach Hause bringt</strong>. Die beigefügten Zeichnungen und Beschreibungen dienen ihrer Wiedererkennung. Etwaige Altertümer sind zurückzulassen, sobald sie die Bergung behindern. Ich bin durchaus imstande, den Verlust einer einzigartigen Inschrift zu verwinden. Über die erforderliche Dauer werde ich mich gegebenenfalls später beklagen.</p><p>Für die <strong>sichere Rückführung aller drei Vermissten</strong> zahle ich <strong>insgesamt fünf Silbertaler</strong>. Zur Übernahme des Auftrags erscheint unverzüglich in <strong>Lothaires Arkaneum, am Park von Gwynthor nahe dem Badehaus</strong>. Ich werde Euch persönlich darlegen, welche Anweisungen sie erhielten und was mir über ihren Aufbruch bekannt ist. Sollte jemand von ihnen verletzt sein, hat dessen Versorgung selbstverständlich Vorrang vor der Vollständigkeit meines Berichts.</p><p><strong>Bringt brauchbare Ausrüstung mit.</strong> Ich werde mich von ihrer Eignung überzeugen. Der Besitz eines Schwertes ist eine erfreuliche Voraussetzung, aber noch kein Bergungskonzept. Wer lediglich beabsichtigt, am Ruineneingang dreimal ihre Namen zu rufen, möge bitte einer anderen Beschäftigung nachgehen; dazu wäre ich selbst noch hinreichend qualifiziert.</p><p>Und sollte Euch Rioneth erklären, ich hätte sie mit einer unvernünftig langen Sammelliste losgeschickt, widersprecht ihr meinetwegen nicht. Teilt ihr mit, dass ich die Liste persönlich kürzen werde. Darüber können wir uns streiten, sobald sie wieder hier ist.</p><p><strong>Kommt heute. Ich benötige meine Leute zurück. Alle drei.</strong></p>",
+      "bild": "",
+      "portrait": "",
+      "verfasser": "../AleriaAlmanach/assets/herluin-lothaire/portrait-studies/02-arkanist.png",
+      "verfasserName": "Herluin Lothaire",
+      "emblem": "../Stammb%C3%A4ume/assets/images/houses/Brevanor/Lothaire.png",
+      "unterschrift": "assets/images/quests/herluin-angestellte-vermisst/unterschrift-v1.png",
+      "siegel": "assets/images/quests/herluin-angestellte-vermisst/wachssiegel-v1.png",
+      "media": {
+        "verfasser": {
+          "kind": "character",
+          "familyId": "haus-lothaire",
+          "personId": "herluin-lothaire",
+          "name": "Herluin Lothaire",
+          "src": "../AleriaAlmanach/assets/herluin-lothaire/portrait-studies/02-arkanist.png"
+        },
+        "unterschrift": {
+          "kind": "image",
+          "name": "Herluin Lothaire – Unterschrift",
+          "src": "assets/images/quests/herluin-angestellte-vermisst/unterschrift-v1.png",
+          "fit": "cover",
+          "position": "center"
+        }
+      },
+      "sideWidth": 180,
+      "imageFit": "cover",
+      "imagePosition": "top",
+      "table": [
+        {
+          "k": "Auftraggeber",
+          "v": "Herluin Lothaire"
+        },
+        {
+          "k": "Belohnung",
+          "v": "5 Silbertaler"
+        },
+        {
+          "k": "Frist",
+          "v": "Dringend, offen"
+        },
+        {
+          "k": "Zielort",
+          "v": "Glannadeor · Suche in der Ruine und Rückführung"
+        },
+        {
+          "k": "Gesucht",
+          "v": "Cyrwyn · Torvald · Rioneth"
+        },
+        {
+          "k": "Kontakt",
+          "v": "Lothaires Arkaneum · am Park, nahe dem Badehaus"
+        }
+      ],
+      "artikel": [],
+      "personen": [],
+      "comments": [],
+      "secret": false
+    },
+    {
+      "id": "gwynthor-herluin-angestellte-vermisst-cyrwyn",
+      "typ": "vermisst",
+      "stackId": "gwynthor-herluin-angestellte-vermisst",
+      "stackOrder": 1,
+      "noticeGroupId": "gwynthor-herluin-angestellte-vermisst",
+      "x": 0.703857421875,
+      "y": 0.4912109375,
+      "title": "Vermisst: Cyrwyn",
+      "untertitel": "Personenbeschreibung zum Gesuch „Angestellte Vermisst!“",
+      "portrait": "assets/images/missing-sketches/cyrwyn-v1.png",
+      "verfasser": "../AleriaAlmanach/assets/herluin-lothaire/portrait-studies/02-arkanist.png",
+      "verfasserName": "Herluin Lothaire",
+      "emblem": "../Stammb%C3%A4ume/assets/images/houses/Brevanor/Lothaire.png",
+      "unterschrift": "assets/images/quests/herluin-angestellte-vermisst/unterschrift-v1.png",
+      "siegel": "assets/images/quests/herluin-angestellte-vermisst/wachssiegel-v1.png",
+      "media": {
+        "verfasser": {
+          "kind": "character",
+          "familyId": "haus-lothaire",
+          "personId": "herluin-lothaire",
+          "name": "Herluin Lothaire",
+          "src": "../AleriaAlmanach/assets/herluin-lothaire/portrait-studies/02-arkanist.png"
+        },
+        "unterschrift": {
+          "kind": "image",
+          "name": "Herluin Lothaire – Unterschrift",
+          "src": "assets/images/quests/herluin-angestellte-vermisst/unterschrift-v1.png",
+          "fit": "cover",
+          "position": "center"
+        }
+      },
+      "imageFit": "cover",
+      "imagePosition": "top",
+      "sideWidth": 240,
+      "text": "<p><strong>Cyrwyn</strong>, Cenyri, fünfundvierzig Jahre. Rotes Haar und roter Bart, gewöhnlich unter beziehungsweise vor einer braunen Kapuze. Er trägt eine gebrauchte Lederrüstung, einen Köcher auf dem Rücken und ein Schwert am Gürtel; dazu einen Bogen.</p><p>Das Leder ist an den Kanten abgeschabt und von jenem stumpfen Braun, das sein Träger als „noch vollkommen brauchbar“ bezeichnet. Ich würde „museumswürdig“ vorziehen. Achtet zur Wiedererkennung auf die Verbindung von brauner Kapuze und rotem Bart; eine ungepflegte Lederrüstung allein dürfte im Hafenviertel leider wenig eingrenzen.</p><p>Herluin Lothaire<br>Arkaneum am Park, nahe dem Badehaus</p>",
+      "table": [
+        {
+          "k": "Name",
+          "v": "Cyrwyn"
+        },
+        {
+          "k": "Alter",
+          "v": "45 Jahre"
+        },
+        {
+          "k": "Herkunft",
+          "v": "Cenyr"
+        },
+        {
+          "k": "Tätigkeit",
+          "v": "Jäger, Söldner und Beschaffer"
+        },
+        {
+          "k": "Auftragsziel",
+          "v": "Glannadeor"
+        },
+        {
+          "k": "Kontakt",
+          "v": "Herluin Lothaire · Lothaires Arkaneum"
+        }
+      ],
+      "artikel": [],
+      "personen": [],
+      "comments": [],
+      "secret": false
+    },
+    {
+      "id": "gwynthor-herluin-angestellte-vermisst-torvald",
+      "typ": "vermisst",
+      "stackId": "gwynthor-herluin-angestellte-vermisst",
+      "stackOrder": 2,
+      "noticeGroupId": "gwynthor-herluin-angestellte-vermisst",
+      "x": 0.703857421875,
+      "y": 0.4912109375,
+      "title": "Vermisst: Torvald",
+      "untertitel": "Personenbeschreibung zum Gesuch „Angestellte Vermisst!“",
+      "portrait": "assets/images/missing-sketches/torvald-v1.png",
+      "verfasser": "../AleriaAlmanach/assets/herluin-lothaire/portrait-studies/02-arkanist.png",
+      "verfasserName": "Herluin Lothaire",
+      "emblem": "../Stammb%C3%A4ume/assets/images/houses/Brevanor/Lothaire.png",
+      "unterschrift": "assets/images/quests/herluin-angestellte-vermisst/unterschrift-v1.png",
+      "siegel": "assets/images/quests/herluin-angestellte-vermisst/wachssiegel-v1.png",
+      "media": {
+        "verfasser": {
+          "kind": "character",
+          "familyId": "haus-lothaire",
+          "personId": "herluin-lothaire",
+          "name": "Herluin Lothaire",
+          "src": "../AleriaAlmanach/assets/herluin-lothaire/portrait-studies/02-arkanist.png"
+        },
+        "unterschrift": {
+          "kind": "image",
+          "name": "Herluin Lothaire – Unterschrift",
+          "src": "assets/images/quests/herluin-angestellte-vermisst/unterschrift-v1.png",
+          "fit": "cover",
+          "position": "center"
+        }
+      },
+      "imageFit": "cover",
+      "imagePosition": "top",
+      "sideWidth": 240,
+      "text": "<p><strong>Torvald</strong>, Aldrimarer, einundvierzig Jahre. Sehr breite Schultern, kräftiger Hals, ausgeprägt kantige Gesichtszüge. Blaue Augen, blondes Haar, am Hinterkopf zusammengebunden, und ein kurzer, voller blonder Bart. Zuletzt trug er Kettenzeug unter einem schlichten Wollmantel.</p><p>Die Schulterbreite auf der Zeichnung ist kein perspektivischer Fehler. Der Mann ist tatsächlich so beschaffen. Überhaupt zeigt seine Anatomie eine bemerkenswerte Vorliebe für rechte Winkel; solltet Ihr zwischen zwei Beschreibungen schwanken, wählt die kantigere.</p><p>Herluin Lothaire<br>Am Park von Gwynthor, nahe dem Badehaus</p>",
+      "table": [
+        {
+          "k": "Name",
+          "v": "Torvald"
+        },
+        {
+          "k": "Alter",
+          "v": "41 Jahre"
+        },
+        {
+          "k": "Herkunft",
+          "v": "Aldrimar"
+        },
+        {
+          "k": "Tätigkeit",
+          "v": "Krieger und Beschaffer"
+        },
+        {
+          "k": "Auftragsziel",
+          "v": "Glannadeor"
+        },
+        {
+          "k": "Kontakt",
+          "v": "Herluin Lothaire · Lothaires Arkaneum"
+        }
+      ],
+      "artikel": [],
+      "personen": [],
+      "comments": [],
+      "secret": false
+    },
+    {
+      "id": "gwynthor-herluin-angestellte-vermisst-rioneth",
+      "typ": "vermisst",
+      "stackId": "gwynthor-herluin-angestellte-vermisst",
+      "stackOrder": 3,
+      "noticeGroupId": "gwynthor-herluin-angestellte-vermisst",
+      "x": 0.703857421875,
+      "y": 0.4912109375,
+      "title": "Vermisst: Rioneth",
+      "untertitel": "Personenbeschreibung zum Gesuch „Angestellte Vermisst!“",
+      "portrait": "assets/images/missing-sketches/rioneth-v1.png",
+      "verfasser": "../AleriaAlmanach/assets/herluin-lothaire/portrait-studies/02-arkanist.png",
+      "verfasserName": "Herluin Lothaire",
+      "emblem": "../Stammb%C3%A4ume/assets/images/houses/Brevanor/Lothaire.png",
+      "unterschrift": "assets/images/quests/herluin-angestellte-vermisst/unterschrift-v1.png",
+      "siegel": "assets/images/quests/herluin-angestellte-vermisst/wachssiegel-v1.png",
+      "media": {
+        "verfasser": {
+          "kind": "character",
+          "familyId": "haus-lothaire",
+          "personId": "herluin-lothaire",
+          "name": "Herluin Lothaire",
+          "src": "../AleriaAlmanach/assets/herluin-lothaire/portrait-studies/02-arkanist.png"
+        },
+        "unterschrift": {
+          "kind": "image",
+          "name": "Herluin Lothaire – Unterschrift",
+          "src": "assets/images/quests/herluin-angestellte-vermisst/unterschrift-v1.png",
+          "fit": "cover",
+          "position": "center"
+        }
+      },
+      "imageFit": "cover",
+      "imagePosition": "top",
+      "sideWidth": 240,
+      "text": "<p><strong>Rioneth</strong>, Albin, sechsunddreißig Jahre. Brünette Haare, zu einem langen seitlichen Zopf geflochten; an einer Schläfe deutlich kürzer geschnitten. Bernsteinbraune Augen. Waldgrüner Mantel über praktischer Lederkleidung.</p><p>Die ungleiche Haarlänge ist beabsichtigt und sollte Euch die Zuordnung erleichtern. Ferner eine ausgesprochen ansehnliche Frau. Diese Feststellung dient ausschließlich der Präzision der Personenbeschreibung; ich ersuche darum, sie Rioneth gegenüber nicht als wörtliche Äußerung meinerseits anzuführen.</p><p>Herluin Lothaire<br>Arkaneum am Park, nahe dem Badehaus</p>",
+      "table": [
+        {
+          "k": "Name",
+          "v": "Rioneth"
+        },
+        {
+          "k": "Alter",
+          "v": "36 Jahre"
+        },
+        {
+          "k": "Herkunft",
+          "v": "Alba · Ogham-Name"
+        },
+        {
+          "k": "Tätigkeit",
+          "v": "Albische Waldläuferin und Beschafferin"
+        },
+        {
+          "k": "Auftragsziel",
+          "v": "Glannadeor"
+        },
+        {
+          "k": "Kontakt",
+          "v": "Herluin Lothaire · Lothaires Arkaneum"
+        }
+      ],
+      "artikel": [],
+      "personen": [],
+      "comments": [],
+      "secret": false
+    },
+    {
+      "id": "gwynthor-fearnan-die-verschwundene-schatulle",
+      "verfasser": "../AleriaAlmanach/assets/gwynthor-heime/fearnan/muireann.png",
+      "verfasserName": "Muireann",
+      "emblem": "../AleriaAlmanach/assets/gwynthor-heime/fearnan/wappen.png",
+      "media": {
+        "verfasser": {
+          "kind": "character",
+          "name": "Muireann",
+          "familyId": "haus-fearnan",
+          "personId": "muireann",
+          "src": "../AleriaAlmanach/assets/gwynthor-heime/fearnan/muireann.png"
+        }
+      },
+      "sideWidth": 220,
+      "imageFit": "cover",
+      "imagePosition": "top",
+      "bild": "",
+      "portrait": "",
+      "artikel": [],
+      "personen": [],
+      "comments": [],
+      "secret": false,
+      "typ": "hilfsgesuch",
+      "x": 0.705078125,
+      "y": 0.17317708333333334,
+      "title": "Wer hilft uns, die Wahrheit zu finden?",
+      "untertitel": "Ein dringendes Gesuch der Familie Fearnan",
+      "typography": {
+        "font": "caveat",
+        "heading": "inherit",
+        "script": "common"
+      },
+      "text": "<p><strong>Wir hatten die letzte Rate schon abgezählt.</strong></p><p>Mein Mann Eoghan und ich mussten uns beim Geld- und Pfandverleiher Geld borgen, weil es anders nicht mehr ging. Seitdem haben wir jede Rate rechtzeitig bezahlt. Auch die letzte lag bereit. Danach wären wir endlich mit den Schulden fertig gewesen.</p><p>Wir waren mit unseren beiden Mädchen fort, einen Tag zusammen, und als wir heimkamen, lagen unsere Bettdecken auf dem Boden. Jemand hatte alles durchwühlt. Die <strong>Metallschatulle unter unserem Bett</strong> war weg. Darin waren die letzte Rate und alles, was wir sonst noch gespart hatten.</p><p>Ich habe sogar zwischen den Kleidern nachgesehen. Als könnte ich sie selbst irgendwo anders hingestellt haben. Geschirr, Wäsche, alles war noch da. Nur unser Geld war fort.</p><p>Der Verleiher hat uns nun angeboten, den Kredit zu verlängern. Dafür sollen wir ihm unser <strong>Haus verkaufen</strong>. Er würde die Schuld verrechnen und uns weiter darin wohnen lassen, zur Miete. Eoghan liest das Angebot immer wieder. Ich frage ihn, wovon wir dann die Miete bezahlen sollen.</p><p>Vielleicht hat der Einbrecher uns fortgehen sehen. Vielleicht wusste jemand, wo wir das Geld aufbewahren. Ich weiß es nicht. Aber ich kann dieses Papier nicht unterschreiben, ohne dass jemand nachgesehen hat. <strong>Bitte helft uns herauszufinden, wer die Schatulle genommen hat.</strong> Die Zettel über unsere Raten haben wir noch.</p><p>Ich kann euch kein Geld versprechen. Es fällt mir schwer genug, das hier hinzuschreiben. Bitte kommt trotzdem, ehe wir unser Zuhause hergeben müssen. Die Mädchen fragen schon, ob wir wieder fortziehen.</p><p>Wir wohnen im <strong>Hafenviertel, im kleinen Haus mit dem fröhlichen Baum an der Tür</strong>. Fragt nach Muireann oder Eoghan Fearnan. Ich bin da.</p><p>Muireann</p>",
+      "rewards": [],
+      "table": [
+        {
+          "k": "Gesucht",
+          "v": "Verlässliche Nachforscher"
+        },
+        {
+          "k": "Ort",
+          "v": "Gwynthor · Hafenviertel · Heim der Fearnan"
+        },
+        {
+          "k": "Dringlichkeit",
+          "v": "Dringend · vor einer Unterschrift über das Haus"
+        },
+        {
+          "k": "Belohnung",
+          "v": "Derzeit keine Geldmittel · aufrichtiger Dank"
+        },
+        {
+          "k": "Kontakt",
+          "v": "Muireann und Eoghan Fearnan · Haus mit dem fröhlichen Baum"
+        }
+      ]
+    },
+    {
+      "id": "gwynthor-torvik-seit-lyristag-vermisst",
+      "verfasser": "../AleriaAlmanach/assets/gwynthor-heime/torvik/maonaid.png",
+      "verfasserName": "Maonaid",
+      "emblem": "../AleriaAlmanach/assets/gwynthor-heime/torvik/wappen.png",
+      "media": {
+        "verfasser": {
+          "kind": "character",
+          "name": "Maonaid",
+          "familyId": "haus-torvik",
+          "personId": "maonaid",
+          "src": "../AleriaAlmanach/assets/gwynthor-heime/torvik/maonaid.png"
+        }
+      },
+      "sideWidth": 220,
+      "imageFit": "cover",
+      "imagePosition": "top",
+      "bild": "",
+      "portrait": "",
+      "artikel": [],
+      "personen": [],
+      "comments": [],
+      "secret": false,
+      "typ": "quest",
+      "stackId": "gwynthor-herluin-angestellte-vermisst",
+      "stackOrder": 4,
+      "noticeGroupId": "gwynthor-torvik-seit-lyristag-vermisst",
+      "x": 0.703857421875,
+      "y": 0.4912109375,
+      "title": "Seit Lyristag vermisst",
+      "untertitel": "Bitte helft mir, Haldor Torvik zu finden und heimzubringen",
+      "typography": {
+        "font": "kalam",
+        "heading": "template",
+        "script": "common"
+      },
+      "rewards": [
+        {
+          "kind": "item",
+          "itemId": "standard:arkanist:unverzaubertes-amulett",
+          "quantity": 1,
+          "title": "Maonaids Familienamulett",
+          "image": "assets/images/quests/torvik-seit-lyristag-vermisst/maonaids-familienamulett-v1.png",
+          "description": "Ein altes silbernes Amulett mit mattem grünem Glas und schlichten eingeritzten Blättern. Die Kette wurde einmal ausgebessert. Maonaid würde das Erbstück ihrer Familie für die sichere Rückkehr ihres Mannes hergeben.",
+          "details": "Persönliches Familienerbstück · unverzaubert · ein einzelnes Stück. Eine Belohnung für Haldors sichere Rückkehr; kein laufendes Handelsangebot.",
+          "type": "Unverzaubertes Zubehör",
+          "category": "arkanes"
+        },
+        {
+          "kind": "money",
+          "currency": "copper",
+          "amount": 30,
+          "condition": "Nur falls das Familienamulett als Belohnung nicht ausreicht, lege ich diese 30 Kupfertaler dazu."
+        }
+      ],
+      "text": "<p><strong>Hat jemand meinen Haldor gesehen?</strong></p><p>Er ist seit dem vergangenen Lyristag nicht nach Hause gekommen. <strong>Haldor Torvik</strong>, zweiunddreißig, blond, kräftig, mit einem dichten Schnurrbart. Auf dem Blatt dahinter ist eine Zeichnung von ihm.</p><p>Er hatte wieder Streit mit seinem Meister. Ständig soll er länger in der Schmiede bleiben, und wenn Zahltag ist, weiß der Mann von den Stunden nichts mehr. Diesmal wollte Haldor beim Hof des Grafen vorsprechen. Aber die Gesuchsplätze waren schon vergeben. Danach ist er zum <strong>Kleinen Durst</strong> gegangen.</p><p>Ich dachte erst, er hätte sich dort wieder festgetrunken. Ich war sogar wütend auf ihn. Als er am Morgen noch immer nicht da war, bin ich selbst zu den Docks. Der Wirt sagte, Haldor habe von einer <strong>neuen Arbeitsstelle</strong> geredet und sei aufgebrochen. Ich wusste nichts von dieser Stelle. Bei mir war er seitdem nicht.</p><p>Die Stadt weiß Bescheid. Aber noch hat mir niemand sagen können, wo er ist. Iver fährt bei jedem Schritt vor dem Haus hoch. Ich sage ihm immer, dass ich nach seinem Vater suche. Langsam weiß ich nicht mehr, wohin ich noch gehen soll.</p><p><strong>Bitte findet ihn und bringt ihn heim.</strong> Vielleicht hat jemand gehört, wer ihm die Arbeit angeboten hat. Vielleicht hat ihn jemand nach dem Kleinen Durst noch gesehen. Falls er glaubt, ich sei böse auf ihn, sagt ihm bitte, dass er heimkommen soll. Einfach heimkommen.</p><p>Ich gebe euch <strong>mein Familienamulett</strong> für seine sichere Rückkehr. Es ist das silberne mit dem grünen Glas. Ich habe es nie verkaufen wollen. Wenn es euch nicht genügt, habe ich noch <strong>dreißig Kupfertaler</strong>, die ich dazulegen kann. Mehr habe ich nicht.</p><p>Fragt nach <strong>Maonaid im Marktviertel, in der Seitengasse am Haus mit dem kleinen Hammerzeichen</strong>. Bitte schiebt es nicht auf. Ohne Haldors Lohn kommen wir nicht lange aus, und ich kann Iver nicht noch einmal sagen, dass ich nichts weiß.</p><p>Maonaid</p>",
+      "table": [
+        {
+          "k": "Auftraggeber",
+          "v": "Maonaid · Familie Torvik"
+        },
+        {
+          "k": "Belohnung",
+          "v": "Familienamulett · nötigenfalls zusätzlich 30 Kupfertaler"
+        },
+        {
+          "k": "Frist",
+          "v": "Dringend, offen"
+        },
+        {
+          "k": "Gesucht",
+          "v": "Haldor Torvik · 32 Jahre"
+        },
+        {
+          "k": "Letzte Spur",
+          "v": "Zum Kleinen Durst · vergangener Lyristag · angeblich neue Arbeitsstelle"
+        },
+        {
+          "k": "Kontakt",
+          "v": "Heim der Torvik · Marktviertel · kleines Hammerzeichen"
+        }
+      ]
+    },
+    {
+      "id": "gwynthor-torvik-seit-lyristag-vermisst-haldor",
+      "verfasser": "../AleriaAlmanach/assets/gwynthor-heime/torvik/maonaid.png",
+      "verfasserName": "Maonaid",
+      "emblem": "../AleriaAlmanach/assets/gwynthor-heime/torvik/wappen.png",
+      "media": {
+        "verfasser": {
+          "kind": "character",
+          "name": "Maonaid",
+          "familyId": "haus-torvik",
+          "personId": "maonaid",
+          "src": "../AleriaAlmanach/assets/gwynthor-heime/torvik/maonaid.png"
+        }
+      },
+      "sideWidth": 220,
+      "imageFit": "cover",
+      "imagePosition": "top",
+      "bild": "",
+      "portrait": "assets/images/missing-sketches/haldor-v1.png",
+      "artikel": [],
+      "personen": [],
+      "comments": [],
+      "secret": false,
+      "typ": "vermisst",
+      "stackId": "gwynthor-herluin-angestellte-vermisst",
+      "stackOrder": 5,
+      "noticeGroupId": "gwynthor-torvik-seit-lyristag-vermisst",
+      "x": 0.703857421875,
+      "y": 0.4912109375,
+      "title": "Vermisst: Haldor Torvik",
+      "untertitel": "Personenblatt zum Gesuch „Seit Lyristag vermisst“",
+      "text": "<p>Das ist mein Mann, <strong>Haldor Torvik</strong>. Er ist zweiunddreißig und stammt aus Aldrimar. Er hat blaue Augen, einen dichten blonden Schnurrbart und bindet sein Haar hinten zu einem kurzen Zopf. Von der Schmiede hat er oft noch Ruß an den Händen, auch wenn er sie schon gewaschen hat.</p><p>Auf der Zeichnung sieht er streng aus. Unser Sohn bringt ihn sonst leicht zum Lachen.</p><p>Seit dem vergangenen Lyristag fehlt er. Der Wirt im <strong>Kleinen Durst an den Docks</strong> hat ihn noch gesehen. Er sagt, Haldor habe von einer neuen Arbeitsstelle gesprochen. Bitte fragt dort nach, wenn ihr meinem Gesuch nachgehen könnt.</p><p>Und wenn ihr ihn findet: Sagt ihm, dass Iver und ich auf ihn warten. Ich möchte ihn wieder vor unserer Tür sehen.</p><p>Maonaid<br>Marktviertel, Seitengasse beim Haus mit dem kleinen Hammerzeichen</p>",
+      "table": [
+        {
+          "k": "Name",
+          "v": "Haldor Torvik"
+        },
+        {
+          "k": "Alter",
+          "v": "32 Jahre"
+        },
+        {
+          "k": "Herkunft",
+          "v": "Aldrimar"
+        },
+        {
+          "k": "Kennzeichen",
+          "v": "Kräftig · blond · kurzer gebundener Zopf · dichter Schnurrbart · blaue Augen"
+        },
+        {
+          "k": "Vermisst seit",
+          "v": "Vergangener Lyristag"
+        },
+        {
+          "k": "Zuletzt gesehen",
+          "v": "Zum Kleinen Durst · Docks"
+        },
+        {
+          "k": "Kontakt",
+          "v": "Maonaid · Heim der Torvik im Marktviertel"
+        }
+      ]
+    },
+    {
+      "noticeGroupId": "gwynthor-egon-schwarze-zitteraale-gesucht",
+      "stackId": "gwynthor-egon-schwarze-zitteraale-gesucht",
+      "x": 0.5712890625,
+      "y": 0.556640625,
+      "verfasserName": "Sir Egon Gafyr · Marschall der Grafschaft Celtigerns Wacht",
+      "verfasser": "../Stammb%C3%A4ume/assets/images/portraits/haus-gafyr/egon-gafyr.jpg",
+      "emblem": "../Stammb%C3%A4ume/assets/images/houses/Llamreis%20Ankunft/haus-gafyr.png",
+      "unterschrift": "assets/images/issuers/egon-gafyr/unterschrift-v1.png",
+      "siegel": "assets/images/issuers/egon-gafyr/wachssiegel-v1.png",
+      "media": {
+        "verfasser": {
+          "kind": "character",
+          "familyId": "haus-gafyr",
+          "personId": "egon-gafyr",
+          "name": "Sir Egon Gafyr",
+          "src": "../Stammb%C3%A4ume/assets/images/portraits/haus-gafyr/egon-gafyr.jpg",
+          "fit": "cover",
+          "position": "top"
+        },
+        "unterschrift": {
+          "kind": "image",
+          "name": "Egon Gafyr · Unterschrift",
+          "src": "assets/images/issuers/egon-gafyr/unterschrift-v1.png",
+          "fit": "cover",
+          "position": "center"
+        },
+        "siegel": {
+          "kind": "image",
+          "name": "Wachssiegel des Marschalls · Egon Gafyr",
+          "src": "assets/images/issuers/egon-gafyr/wachssiegel-v1.png",
+          "fit": "contain",
+          "position": "center"
+        },
+        "emblem": {
+          "kind": "image",
+          "name": "Haus Gafyr",
+          "src": "../Stammb%C3%A4ume/assets/images/houses/Llamreis%20Ankunft/haus-gafyr.png",
+          "fit": "contain",
+          "position": "center"
+        }
+      },
+      "typography": {
+        "font": "kalam",
+        "heading": "print",
+        "script": ""
+      },
+      "imageFit": "cover",
+      "imagePosition": "top",
+      "sideWidth": 260,
+      "artikel": [],
+      "personen": [],
+      "comments": [],
+      "secret": false,
+      "id": "gwynthor-egon-schwarze-zitteraale-gesucht",
+      "stackOrder": 0,
+      "typ": "quest",
+      "title": "Gesucht · Die Schwarzen Zitteraale",
+      "untertitel": "Anordnung des Marschallamtes · Celtigerns Wacht",
+      "portrait": "",
+      "rewards": [
+        {
+          "kind": "money",
+          "currency": "gold",
+          "amount": 35
+        },
+        {
+          "kind": "honor",
+          "id": "ritterschlag",
+          "title": "Ein Ritterschlag",
+          "image": "/IconOrdner/Fazit%20Icons/Ritter.png",
+          "description": "Zusätzliche ausgesetzte Ehrung für die Überwältigung des Schwarzen Zitteraals.",
+          "condition": "Für die Überwältigung des Schwarzen Zitteraals; Verleihung durch die zuständige Herrschaft nach Prüfung der Tat."
+        }
+      ],
+      "table": [
+        {
+          "k": "Angeordnet von",
+          "v": "Sir Egon Gafyr · Marschall"
+        },
+        {
+          "k": "Bandenhaupt",
+          "v": "35 Goldtaler und ein Ritterschlag"
+        },
+        {
+          "k": "Weitere Köpfe",
+          "v": "13 · 11 · 5 · 3,4 Goldtaler · siehe Personenblätter"
+        },
+        {
+          "k": "Niedere Mitglieder",
+          "v": "1 Silbertaler je identifiziertem Mitglied"
+        },
+        {
+          "k": "Frist",
+          "v": "Offen · bis zur Aufhebung der Fahndung"
+        },
+        {
+          "k": "Meldestelle",
+          "v": "Marschallamt in Castell Rhewglyn · Gwynthor"
+        }
+      ],
+      "text": "<p><strong>Im Namen der Grafschaft Celtigerns Wacht.</strong></p><p>Die Raubritterbande der <strong>Schwarzen Zitteraale</strong> wird wegen Mordes, Plünderung, Erpressung und weiterer schwerer Gewalttaten verfolgt. Ich fordere geeignete, bewaffnete Helfer auf, die auf den beigefügten Blättern bezeichneten Rädelsführer zu stellen und der gräflichen Obrigkeit zu übergeben.</p><p>Auf das Bandenhaupt, den <strong>Schwarzen Zitteraal</strong>, sind <strong>35 Goldtaler</strong> ausgesetzt. Als weitere Belohnung ist ein <strong>Ritterschlag</strong> ausgeschrieben. Die vier weiteren Köpfe sind mit ihren eigenen Kopfgeldern verzeichnet. Für jedes zweifelsfrei identifizierte niedere Mitglied beträgt die Belohnung <strong>einen Silbertaler</strong>.</p><p>Lebendige Gefangene sind sicher zu überstellen. Beim Bandenhaupt gilt die Fahndung tot oder lebendig; ein Todesnachweis muss zweifelsfrei sein. Auszahlung und etwaige Ehrung erfolgen nach amtlicher Prüfung. Für dieselbe Person wird ein Kopfgeld nur einmal gezahlt; die Belohnung für ein niederes Mitglied wird nicht zusätzlich zum Kopfgeld eines Rädelsführers ausgezahlt.</p><p>Ein behaupteter Beiname oder bloßes Tragen dunkler Kleidung genügt nicht als Beweis. Belastbare Hinweise und Gefangene sind dem <strong>Marschallamt in Castell Rhewglyn zu Gwynthor</strong> zuzuführen. Der derzeitige Sitz der Bande ist nicht bestätigt. Niemand erhält durch dieses Schreiben das Recht, Unbeteiligte zu bedrängen.</p><p><em>Sir Egon Gafyr<br>Marschall des Grafen zu Celtigerns Wacht</em></p>"
+    },
+    {
+      "noticeGroupId": "gwynthor-egon-schwarze-zitteraale-gesucht",
+      "stackId": "gwynthor-egon-schwarze-zitteraale-gesucht",
+      "x": 0.5712890625,
+      "y": 0.556640625,
+      "verfasserName": "Sir Egon Gafyr · Marschall der Grafschaft Celtigerns Wacht",
+      "verfasser": "../Stammb%C3%A4ume/assets/images/portraits/haus-gafyr/egon-gafyr.jpg",
+      "emblem": "../Stammb%C3%A4ume/assets/images/houses/Llamreis%20Ankunft/haus-gafyr.png",
+      "unterschrift": "assets/images/issuers/egon-gafyr/unterschrift-v1.png",
+      "siegel": "assets/images/issuers/egon-gafyr/wachssiegel-v1.png",
+      "media": {
+        "verfasser": {
+          "kind": "character",
+          "familyId": "haus-gafyr",
+          "personId": "egon-gafyr",
+          "name": "Sir Egon Gafyr",
+          "src": "../Stammb%C3%A4ume/assets/images/portraits/haus-gafyr/egon-gafyr.jpg",
+          "fit": "cover",
+          "position": "top"
+        },
+        "unterschrift": {
+          "kind": "image",
+          "name": "Egon Gafyr · Unterschrift",
+          "src": "assets/images/issuers/egon-gafyr/unterschrift-v1.png",
+          "fit": "cover",
+          "position": "center"
+        },
+        "siegel": {
+          "kind": "image",
+          "name": "Wachssiegel des Marschalls · Egon Gafyr",
+          "src": "assets/images/issuers/egon-gafyr/wachssiegel-v1.png",
+          "fit": "contain",
+          "position": "center"
+        },
+        "emblem": {
+          "kind": "image",
+          "name": "Haus Gafyr",
+          "src": "../Stammb%C3%A4ume/assets/images/houses/Llamreis%20Ankunft/haus-gafyr.png",
+          "fit": "contain",
+          "position": "center"
+        }
+      },
+      "typography": {
+        "font": "kalam",
+        "heading": "print",
+        "script": ""
+      },
+      "imageFit": "cover",
+      "imagePosition": "top",
+      "sideWidth": 260,
+      "artikel": [],
+      "personen": [],
+      "comments": [],
+      "secret": false,
+      "id": "gwynthor-egon-schwarze-zitteraale-gesucht-schwarzer-zitteraal",
+      "stackOrder": 1,
+      "typ": "steckbrief",
+      "title": "Der Schwarze Zitteraal",
+      "untertitel": "Personenblatt zur gemeinsamen Fahndung „Die Schwarzen Zitteraale“",
+      "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/sketches/schwarzer-zitteraal.png",
+      "rewards": [
+        {
+          "kind": "money",
+          "currency": "gold",
+          "amount": 35
+        },
+        {
+          "kind": "honor",
+          "id": "ritterschlag",
+          "title": "Ein Ritterschlag",
+          "image": "/IconOrdner/Fazit%20Icons/Ritter.png",
+          "description": "Zusätzliche ausgesetzte Ehrung für die Überwältigung des Schwarzen Zitteraals.",
+          "condition": "Für die Überwältigung des Schwarzen Zitteraals; Verleihung durch die zuständige Herrschaft nach Prüfung der Tat."
+        }
+      ],
+      "table": [
+        {
+          "k": "Beiname",
+          "v": "Der Schwarze Zitteraal"
+        },
+        {
+          "k": "Stellung",
+          "v": "Bandenhaupt · letzter Befehl"
+        },
+        {
+          "k": "Kopfgeld",
+          "v": "35 Goldtaler und ein Ritterschlag"
+        },
+        {
+          "k": "Alter",
+          "v": "Etwa 41 Jahre"
+        },
+        {
+          "k": "Größe",
+          "v": "1,86 Schritt"
+        },
+        {
+          "k": "Fahndung",
+          "v": "Tot oder lebendig"
+        }
+      ],
+      "text": "<p><strong>Kennzeichen:</strong> Dunkelbraunes Haar unter schwarzer Kapuze, graugrüne Augen, gepflegter kurzer Bart; hochgewachsen und sehnig. Dunkler Panzer mit goldenen Kanten und Aalzeichen.</p><p><strong>Zur Last gelegt:</strong> Mord und Plünderung, Raub und Erpressung, Brandstiftung, Anführung einer Raubritterbande, Schändung und Gewalt gegen Schutzlose.</p><p>Wählt Ziele und Rückzugswege, verteilt Beute und hält die Rudelführer durch Abhängigkeit und Furcht zusammen. Sein Morgenstern Donnergrollen und der Hengst Zunder machen ihn im offenen Gefecht erkennbar.</p><p>Die Zeichnung dient der Wiedererkennung und ersetzt keinen Identitätsnachweis. Dieses Blatt gehört zur Anordnung des Marschallamtes. Die dort genannten Bedingungen gelten auch für dieses Kopfgeld.</p>"
+    },
+    {
+      "noticeGroupId": "gwynthor-egon-schwarze-zitteraale-gesucht",
+      "stackId": "gwynthor-egon-schwarze-zitteraale-gesucht",
+      "x": 0.5712890625,
+      "y": 0.556640625,
+      "verfasserName": "Sir Egon Gafyr · Marschall der Grafschaft Celtigerns Wacht",
+      "verfasser": "../Stammb%C3%A4ume/assets/images/portraits/haus-gafyr/egon-gafyr.jpg",
+      "emblem": "../Stammb%C3%A4ume/assets/images/houses/Llamreis%20Ankunft/haus-gafyr.png",
+      "unterschrift": "assets/images/issuers/egon-gafyr/unterschrift-v1.png",
+      "siegel": "assets/images/issuers/egon-gafyr/wachssiegel-v1.png",
+      "media": {
+        "verfasser": {
+          "kind": "character",
+          "familyId": "haus-gafyr",
+          "personId": "egon-gafyr",
+          "name": "Sir Egon Gafyr",
+          "src": "../Stammb%C3%A4ume/assets/images/portraits/haus-gafyr/egon-gafyr.jpg",
+          "fit": "cover",
+          "position": "top"
+        },
+        "unterschrift": {
+          "kind": "image",
+          "name": "Egon Gafyr · Unterschrift",
+          "src": "assets/images/issuers/egon-gafyr/unterschrift-v1.png",
+          "fit": "cover",
+          "position": "center"
+        },
+        "siegel": {
+          "kind": "image",
+          "name": "Wachssiegel des Marschalls · Egon Gafyr",
+          "src": "assets/images/issuers/egon-gafyr/wachssiegel-v1.png",
+          "fit": "contain",
+          "position": "center"
+        },
+        "emblem": {
+          "kind": "image",
+          "name": "Haus Gafyr",
+          "src": "../Stammb%C3%A4ume/assets/images/houses/Llamreis%20Ankunft/haus-gafyr.png",
+          "fit": "contain",
+          "position": "center"
+        }
+      },
+      "typography": {
+        "font": "kalam",
+        "heading": "print",
+        "script": ""
+      },
+      "imageFit": "cover",
+      "imagePosition": "top",
+      "sideWidth": 260,
+      "artikel": [],
+      "personen": [],
+      "comments": [],
+      "secret": false,
+      "id": "gwynthor-egon-schwarze-zitteraale-gesucht-schlickzahn",
+      "stackOrder": 2,
+      "typ": "steckbrief",
+      "title": "Schlickzahn",
+      "untertitel": "Personenblatt zur gemeinsamen Fahndung „Die Schwarzen Zitteraale“",
+      "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/sketches/schlickzahn.png",
+      "rewards": [
+        {
+          "kind": "money",
+          "currency": "gold",
+          "amount": 13
+        }
+      ],
+      "table": [
+        {
+          "k": "Beiname",
+          "v": "Schlickzahn"
+        },
+        {
+          "k": "Stellung",
+          "v": "Rechte Hand · Überfälle und Einschüchterung"
+        },
+        {
+          "k": "Kopfgeld",
+          "v": "13 Goldtaler"
+        },
+        {
+          "k": "Alter",
+          "v": "Etwa 46 Jahre"
+        },
+        {
+          "k": "Größe",
+          "v": "1,93 Schritt"
+        },
+        {
+          "k": "Fahndung",
+          "v": "Lebendig bevorzugt"
+        }
+      ],
+      "text": "<p><strong>Kennzeichen:</strong> Breiter Cenyri mit kahl rasiertem Kopf, kurzem rostbraunem Kinnbart und einer Lücke zwischen den oberen Schneidezähnen. Gebrochene Nase, schwere dunkle Lederweste über Kettenzeug.</p><p><strong>Zur Last gelegt:</strong> Bewaffneter Raub, Schwere Körperverletzung und Mord, Erpressung, Brandstiftung.</p><p>Führt den ersten Zugriff, schüchtert Gehöfte ein und treibt Forderungen ein. Er bindet Opfer im Gespräch, bis Komplizen die Ausgänge besetzt haben.</p><p>Die Zeichnung dient der Wiedererkennung und ersetzt keinen Identitätsnachweis. Dieses Blatt gehört zur Anordnung des Marschallamtes. Die dort genannten Bedingungen gelten auch für dieses Kopfgeld.</p>"
+    },
+    {
+      "noticeGroupId": "gwynthor-egon-schwarze-zitteraale-gesucht",
+      "stackId": "gwynthor-egon-schwarze-zitteraale-gesucht",
+      "x": 0.5712890625,
+      "y": 0.556640625,
+      "verfasserName": "Sir Egon Gafyr · Marschall der Grafschaft Celtigerns Wacht",
+      "verfasser": "../Stammb%C3%A4ume/assets/images/portraits/haus-gafyr/egon-gafyr.jpg",
+      "emblem": "../Stammb%C3%A4ume/assets/images/houses/Llamreis%20Ankunft/haus-gafyr.png",
+      "unterschrift": "assets/images/issuers/egon-gafyr/unterschrift-v1.png",
+      "siegel": "assets/images/issuers/egon-gafyr/wachssiegel-v1.png",
+      "media": {
+        "verfasser": {
+          "kind": "character",
+          "familyId": "haus-gafyr",
+          "personId": "egon-gafyr",
+          "name": "Sir Egon Gafyr",
+          "src": "../Stammb%C3%A4ume/assets/images/portraits/haus-gafyr/egon-gafyr.jpg",
+          "fit": "cover",
+          "position": "top"
+        },
+        "unterschrift": {
+          "kind": "image",
+          "name": "Egon Gafyr · Unterschrift",
+          "src": "assets/images/issuers/egon-gafyr/unterschrift-v1.png",
+          "fit": "cover",
+          "position": "center"
+        },
+        "siegel": {
+          "kind": "image",
+          "name": "Wachssiegel des Marschalls · Egon Gafyr",
+          "src": "assets/images/issuers/egon-gafyr/wachssiegel-v1.png",
+          "fit": "contain",
+          "position": "center"
+        },
+        "emblem": {
+          "kind": "image",
+          "name": "Haus Gafyr",
+          "src": "../Stammb%C3%A4ume/assets/images/houses/Llamreis%20Ankunft/haus-gafyr.png",
+          "fit": "contain",
+          "position": "center"
+        }
+      },
+      "typography": {
+        "font": "kalam",
+        "heading": "print",
+        "script": ""
+      },
+      "imageFit": "cover",
+      "imagePosition": "top",
+      "sideWidth": 260,
+      "artikel": [],
+      "personen": [],
+      "comments": [],
+      "secret": false,
+      "id": "gwynthor-egon-schwarze-zitteraale-gesucht-nachtkieme",
+      "stackOrder": 3,
+      "typ": "steckbrief",
+      "title": "Nachtkieme",
+      "untertitel": "Personenblatt zur gemeinsamen Fahndung „Die Schwarzen Zitteraale“",
+      "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/sketches/nachtkieme.png",
+      "rewards": [
+        {
+          "kind": "money",
+          "currency": "gold",
+          "amount": 11
+        }
+      ],
+      "table": [
+        {
+          "k": "Beiname",
+          "v": "Nachtkieme"
+        },
+        {
+          "k": "Stellung",
+          "v": "Linke Hand · Kundschaft und Verbindungen"
+        },
+        {
+          "k": "Kopfgeld",
+          "v": "11 Goldtaler"
+        },
+        {
+          "k": "Alter",
+          "v": "Etwa 37 Jahre"
+        },
+        {
+          "k": "Größe",
+          "v": "1,71 Schritt"
+        },
+        {
+          "k": "Fahndung",
+          "v": "Lebendig bevorzugt"
+        }
+      ],
+      "text": "<p><strong>Kennzeichen:</strong> Schmale braunhaarige Frau mit graubraunen Augen, tiefem seitlichem Zopf und kurz geschnittener rechter Schläfe. Dunkler Reisemantel, schmales Gesicht, Kerbe in der linken Braue.</p><p><strong>Zur Last gelegt:</strong> Vorbereitung bewaffneter Überfälle, Beihilfe zu Mord und Raub, Erpressung, Hehlerei.</p><p>Beobachtet Reisegewohnheiten, stellt Kontakte zu Abnehmern her und prüft fremde Nachrichten. Nur wenige erfahren von ihr mehr als ihren nächsten Treffpunkt.</p><p>Die Zeichnung dient der Wiedererkennung und ersetzt keinen Identitätsnachweis. Dieses Blatt gehört zur Anordnung des Marschallamtes. Die dort genannten Bedingungen gelten auch für dieses Kopfgeld.</p>"
+    },
+    {
+      "noticeGroupId": "gwynthor-egon-schwarze-zitteraale-gesucht",
+      "stackId": "gwynthor-egon-schwarze-zitteraale-gesucht",
+      "x": 0.5712890625,
+      "y": 0.556640625,
+      "verfasserName": "Sir Egon Gafyr · Marschall der Grafschaft Celtigerns Wacht",
+      "verfasser": "../Stammb%C3%A4ume/assets/images/portraits/haus-gafyr/egon-gafyr.jpg",
+      "emblem": "../Stammb%C3%A4ume/assets/images/houses/Llamreis%20Ankunft/haus-gafyr.png",
+      "unterschrift": "assets/images/issuers/egon-gafyr/unterschrift-v1.png",
+      "siegel": "assets/images/issuers/egon-gafyr/wachssiegel-v1.png",
+      "media": {
+        "verfasser": {
+          "kind": "character",
+          "familyId": "haus-gafyr",
+          "personId": "egon-gafyr",
+          "name": "Sir Egon Gafyr",
+          "src": "../Stammb%C3%A4ume/assets/images/portraits/haus-gafyr/egon-gafyr.jpg",
+          "fit": "cover",
+          "position": "top"
+        },
+        "unterschrift": {
+          "kind": "image",
+          "name": "Egon Gafyr · Unterschrift",
+          "src": "assets/images/issuers/egon-gafyr/unterschrift-v1.png",
+          "fit": "cover",
+          "position": "center"
+        },
+        "siegel": {
+          "kind": "image",
+          "name": "Wachssiegel des Marschalls · Egon Gafyr",
+          "src": "assets/images/issuers/egon-gafyr/wachssiegel-v1.png",
+          "fit": "contain",
+          "position": "center"
+        },
+        "emblem": {
+          "kind": "image",
+          "name": "Haus Gafyr",
+          "src": "../Stammb%C3%A4ume/assets/images/houses/Llamreis%20Ankunft/haus-gafyr.png",
+          "fit": "contain",
+          "position": "center"
+        }
+      },
+      "typography": {
+        "font": "kalam",
+        "heading": "print",
+        "script": ""
+      },
+      "imageFit": "cover",
+      "imagePosition": "top",
+      "sideWidth": 260,
+      "artikel": [],
+      "personen": [],
+      "comments": [],
+      "secret": false,
+      "id": "gwynthor-egon-schwarze-zitteraale-gesucht-donnerkiefer",
+      "stackOrder": 4,
+      "typ": "steckbrief",
+      "title": "Donnerkiefer",
+      "untertitel": "Personenblatt zur gemeinsamen Fahndung „Die Schwarzen Zitteraale“",
+      "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/sketches/donnerkiefer.png",
+      "rewards": [
+        {
+          "kind": "money",
+          "currency": "gold",
+          "amount": 5
+        }
+      ],
+      "table": [
+        {
+          "k": "Beiname",
+          "v": "Donnerkiefer"
+        },
+        {
+          "k": "Stellung",
+          "v": "Innerer Kreis · Waffen und Rudeldisziplin"
+        },
+        {
+          "k": "Kopfgeld",
+          "v": "5 Goldtaler"
+        },
+        {
+          "k": "Alter",
+          "v": "Etwa 43 Jahre"
+        },
+        {
+          "k": "Größe",
+          "v": "1,90 Schritt"
+        },
+        {
+          "k": "Fahndung",
+          "v": "Lebendig bevorzugt"
+        }
+      ],
+      "text": "<p><strong>Kennzeichen:</strong> Kräftiger Aldrimarer mit langem strohblondem Haar, einem straffen Nackenzopf und breitem geflochtenem Bart. Alte helle Narbe vom rechten Mundwinkel zum Kiefer; dunkles Eisen und grauer Wollkragen.</p><p><strong>Zur Last gelegt:</strong> Bewaffneter Raub, Beihilfe zu Mord, Gewaltsame Einschüchterung, Beteiligung an Plünderungen.</p><p>Überwacht Waffen und Wachen, setzt Befehle im Lager durch und übernimmt die Nachhut bei Rückzügen. Sein Beiname meint die donnernde Stimme hinter dem vernarbten Kiefer.</p><p>Die Zeichnung dient der Wiedererkennung und ersetzt keinen Identitätsnachweis. Dieses Blatt gehört zur Anordnung des Marschallamtes. Die dort genannten Bedingungen gelten auch für dieses Kopfgeld.</p>"
+    },
+    {
+      "noticeGroupId": "gwynthor-egon-schwarze-zitteraale-gesucht",
+      "stackId": "gwynthor-egon-schwarze-zitteraale-gesucht",
+      "x": 0.5712890625,
+      "y": 0.556640625,
+      "verfasserName": "Sir Egon Gafyr · Marschall der Grafschaft Celtigerns Wacht",
+      "verfasser": "../Stammb%C3%A4ume/assets/images/portraits/haus-gafyr/egon-gafyr.jpg",
+      "emblem": "../Stammb%C3%A4ume/assets/images/houses/Llamreis%20Ankunft/haus-gafyr.png",
+      "unterschrift": "assets/images/issuers/egon-gafyr/unterschrift-v1.png",
+      "siegel": "assets/images/issuers/egon-gafyr/wachssiegel-v1.png",
+      "media": {
+        "verfasser": {
+          "kind": "character",
+          "familyId": "haus-gafyr",
+          "personId": "egon-gafyr",
+          "name": "Sir Egon Gafyr",
+          "src": "../Stammb%C3%A4ume/assets/images/portraits/haus-gafyr/egon-gafyr.jpg",
+          "fit": "cover",
+          "position": "top"
+        },
+        "unterschrift": {
+          "kind": "image",
+          "name": "Egon Gafyr · Unterschrift",
+          "src": "assets/images/issuers/egon-gafyr/unterschrift-v1.png",
+          "fit": "cover",
+          "position": "center"
+        },
+        "siegel": {
+          "kind": "image",
+          "name": "Wachssiegel des Marschalls · Egon Gafyr",
+          "src": "assets/images/issuers/egon-gafyr/wachssiegel-v1.png",
+          "fit": "contain",
+          "position": "center"
+        },
+        "emblem": {
+          "kind": "image",
+          "name": "Haus Gafyr",
+          "src": "../Stammb%C3%A4ume/assets/images/houses/Llamreis%20Ankunft/haus-gafyr.png",
+          "fit": "contain",
+          "position": "center"
+        }
+      },
+      "typography": {
+        "font": "kalam",
+        "heading": "print",
+        "script": ""
+      },
+      "imageFit": "cover",
+      "imagePosition": "top",
+      "sideWidth": 260,
+      "artikel": [],
+      "personen": [],
+      "comments": [],
+      "secret": false,
+      "id": "gwynthor-egon-schwarze-zitteraale-gesucht-netznadel",
+      "stackOrder": 5,
+      "typ": "steckbrief",
+      "title": "Netznadel",
+      "untertitel": "Personenblatt zur gemeinsamen Fahndung „Die Schwarzen Zitteraale“",
+      "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/sketches/netznadel.png",
+      "rewards": [
+        {
+          "kind": "money",
+          "currency": "gold",
+          "amount": 3.4
+        }
+      ],
+      "table": [
+        {
+          "k": "Beiname",
+          "v": "Netznadel"
+        },
+        {
+          "k": "Stellung",
+          "v": "Innerer Kreis · Beute, Vorräte und Schleusung"
+        },
+        {
+          "k": "Kopfgeld",
+          "v": "3,4 Goldtaler"
+        },
+        {
+          "k": "Alter",
+          "v": "Etwa 34 Jahre"
+        },
+        {
+          "k": "Größe",
+          "v": "1,79 Schritt"
+        },
+        {
+          "k": "Fahndung",
+          "v": "Lebendig bevorzugt"
+        }
+      ],
+      "text": "<p><strong>Kennzeichen:</strong> Dünner rothaariger Cenyri mit grünen Augen, ungleichmäßig kurzem Pony, schmalem Schnurrbart und schiefer dunkler Kappe. Brauner Arbeitsrock, geflickte schwarze Schulterdecke, drahtige Hände.</p><p><strong>Zur Last gelegt:</strong> Hehlerei, Schmuggel, Beihilfe zu Raub und Erpressung, Versorgung einer Raubritterbande.</p><p>Verteilt Vorräte, trennt auffällige Beute von gewöhnlicher Fracht und organisiert Übergaben. Er kennt die Vorratswege, aber seine Abnehmer erhalten nur einzelne Lieferungen zu sehen.</p><p>Die Zeichnung dient der Wiedererkennung und ersetzt keinen Identitätsnachweis. Dieses Blatt gehört zur Anordnung des Marschallamtes. Die dort genannten Bedingungen gelten auch für dieses Kopfgeld.</p>"
+    },
+    {
+      "noticeGroupId": "gwynthor-egon-schwarze-zitteraale-gesucht",
+      "stackId": "gwynthor-egon-schwarze-zitteraale-gesucht",
+      "x": 0.5712890625,
+      "y": 0.556640625,
+      "verfasserName": "Sir Egon Gafyr · Marschall der Grafschaft Celtigerns Wacht",
+      "verfasser": "../Stammb%C3%A4ume/assets/images/portraits/haus-gafyr/egon-gafyr.jpg",
+      "emblem": "../Stammb%C3%A4ume/assets/images/houses/Llamreis%20Ankunft/haus-gafyr.png",
+      "unterschrift": "assets/images/issuers/egon-gafyr/unterschrift-v1.png",
+      "siegel": "assets/images/issuers/egon-gafyr/wachssiegel-v1.png",
+      "media": {
+        "verfasser": {
+          "kind": "character",
+          "familyId": "haus-gafyr",
+          "personId": "egon-gafyr",
+          "name": "Sir Egon Gafyr",
+          "src": "../Stammb%C3%A4ume/assets/images/portraits/haus-gafyr/egon-gafyr.jpg",
+          "fit": "cover",
+          "position": "top"
+        },
+        "unterschrift": {
+          "kind": "image",
+          "name": "Egon Gafyr · Unterschrift",
+          "src": "assets/images/issuers/egon-gafyr/unterschrift-v1.png",
+          "fit": "cover",
+          "position": "center"
+        },
+        "siegel": {
+          "kind": "image",
+          "name": "Wachssiegel des Marschalls · Egon Gafyr",
+          "src": "assets/images/issuers/egon-gafyr/wachssiegel-v1.png",
+          "fit": "contain",
+          "position": "center"
+        },
+        "emblem": {
+          "kind": "image",
+          "name": "Haus Gafyr",
+          "src": "../Stammb%C3%A4ume/assets/images/houses/Llamreis%20Ankunft/haus-gafyr.png",
+          "fit": "contain",
+          "position": "center"
+        }
+      },
+      "typography": {
+        "font": "kalam",
+        "heading": "print",
+        "script": ""
+      },
+      "imageFit": "cover",
+      "imagePosition": "top",
+      "sideWidth": 260,
+      "artikel": [],
+      "personen": [],
+      "comments": [],
+      "secret": false,
+      "id": "gwynthor-egon-schwarze-zitteraale-gesucht-komplizen",
+      "stackOrder": 6,
+      "typ": "steckbrief",
+      "title": "Niedere Mitglieder der Schwarzen Zitteraale",
+      "untertitel": "Allgemeines Fahndungsblatt · Silhouette ohne individuelle Identität",
+      "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/sketches/komplize.png",
+      "rewards": [
+        {
+          "kind": "money",
+          "currency": "silver",
+          "amount": 1
+        }
+      ],
+      "table": [
+        {
+          "k": "Gesucht",
+          "v": "Reguläre Komplizen der Schwarzen Zitteraale"
+        },
+        {
+          "k": "Kopfgeld",
+          "v": "1 Silbertaler je identifiziertem niederen Mitglied"
+        },
+        {
+          "k": "Übergabe",
+          "v": "Lebendig an die Obrigkeit"
+        },
+        {
+          "k": "Nachweis",
+          "v": "Tatbeteiligung und Bandenbindung müssen geprüft werden"
+        }
+      ],
+      "text": "<p>Gesucht werden die niederen Komplizen der Schwarzen Zitteraale. Für jedes identifizierte und überstellte Mitglied wird nach Prüfung <strong>ein Silbertaler</strong> ausgezahlt.</p><p>Die Silhouette zeigt keine bestimmte Person. Kapuzen, alte Waffen oder ein ähnliches Kleidungsstück allein begründen keinen Verdacht. Erforderlich sind belastbare Umstände, die Bandenbindung und Beteiligung nachweisen.</p><p>Dieses Kopfgeld gilt nicht zusätzlich zu einem der fünf Rädelsführer-Kopfgelder. Gefangene sind dem Marschallamt oder der zuständigen Wache sicher zu übergeben.</p>"
+    }
+  ],
+  "updates": [
+    {
+      "id": "gwynthor-herluin-angestellte-vermisst:20261021-search-return-sketch-group",
+      "noticeId": "gwynthor-herluin-angestellte-vermisst",
+      "fields": [
+        {
+          "field": "text",
+          "from": "<p>An beherzte Abenteurer, verlässliche Söldner und sonstige Personen mit hinreichendem Urteilsvermögen.</p><p>Hiermit gebe ich bekannt, dass meine drei im Außendienst beschäftigten Beschaffer <strong>Cyrwyn, Torvald und Rioneth</strong> seit geraumer Zeit vermisst werden. Sie erhielten von mir den Auftrag, <strong>Glannadeor nach Artefakten zu durchsuchen</strong>. Seither ist keine Rückmeldung eingegangen. Die Dauer dieses Schweigens überschreitet das Maß einer gewöhnlichen Verzögerung erheblich.</p><p>Gesucht werden geeignete Personen, welche den Weg der Vermissten aufnehmen, ihren Verbleib feststellen und sie auffinden. Die Suche nach meinen Angestellten hat Vorrang vor der Fortsetzung ihres ursprünglichen Sammelauftrags. Ein bemerkenswerter Scherbenhaufen besitzt, bei aller fachlichen Würdigung, derzeit geringere Dringlichkeit.</p><p><strong>Zur eindeutigen Erkennung:</strong></p><ul><li><strong>Cyrwyn, 45 Jahre:</strong> Rothaarig, roter Bart, braune Kapuze, gebrauchte Lederrüstung, Köcher auf dem Rücken und Schwert am Gürtel.</li><li><strong>Torvald, 41 Jahre:</strong> Breit gebaut; blondes Haar am Hinterkopf gebunden, kurzer voller blonder Bart, blaue Augen, Kettenzeug und schlichter Wollmantel.</li><li><strong>Rioneth, 36 Jahre:</strong> Brünettes Haar mit langem seitlichem Zopf und kurz geschnittener Schläfenseite; bernsteinbraune Augen, waldgrüner Mantel und praktische Lederkleidung.</li></ul><p>Für das Auffinden meiner drei Angestellten setze ich eine Belohnung von <strong>insgesamt fünf Silbertalern</strong> aus. Die Auszahlung erfolgt nach überprüfbarer Feststellung ihres Aufenthalts. Sachdienliche Hinweise sind mir unverzüglich mitzuteilen.</p><p>Meldungen und die Übernahme des Auftrags erfolgen persönlich bei <strong>Herluin Lothaire, Lothaires Arkaneum, am Park von Gwynthor nahe dem Badehaus</strong>. Ort, Zeitpunkt und Umstände einer Beobachtung sind möglichst genau festzuhalten. Auskünfte wie „irgendwo zwischen einigen alten Steinen“ sind für eine zielgerichtete Suche bedauerlicherweise unzureichend.</p><p><strong>Die Angelegenheit ist dringend.</strong> Das Gesuch bleibt bis zu meiner ausdrücklichen Rücknahme offen. Ich erwarte Sorgfalt, eine zeitnahe Rückmeldung und insbesondere die Rückkehr jener Personen, die sich zu dieser Suche bereit erklären.</p>",
+          "to": "<p>An ruinenerfahrene Abenteurer und Söldner von belastbarer Urteilskraft.</p><p>Ich ersuche um <strong>unverzügliche Hilfe bei der Bergung dreier vermisster Mitarbeiter</strong>. <strong>Cyrwyn, Torvald und Rioneth</strong> wurden von mir zur Untersuchung und Sicherstellung möglicher Artefakte nach <strong>Glannadeor</strong> entsandt. Der vereinbarte Rückkehrtermin ist längst verstrichen. Es liegt weder eine Nachricht noch irgendeine anderweitige Erklärung für ihr Ausbleiben vor.</p><p>Ich habe die Verzögerung zunächst der üblichen Diskrepanz zwischen meiner Zeitplanung und Cyrwyns Auffassung von Eile zugeschrieben. Diese Erklärung ist erschöpft. Ebenso meine Bereitschaft, Angehörigen an meiner Tür noch einmal zu versichern, man müsse vernünftigerweise abwarten. Diese Reise erfolgte auf meine Weisung.</p><p>Ich benötige eine befähigte Gruppe, die <strong>nach Glannadeor aufbricht, die Ruine betritt und meine Leute nach Hause bringt</strong>. Die beigefügten Zeichnungen und Beschreibungen dienen ihrer Wiedererkennung. Etwaige Altertümer sind zurückzulassen, sobald sie die Bergung behindern. Ich bin durchaus imstande, den Verlust einer einzigartigen Inschrift zu verwinden. Über die erforderliche Dauer werde ich mich gegebenenfalls später beklagen.</p><p>Für die <strong>sichere Rückführung aller drei Vermissten</strong> zahle ich <strong>insgesamt fünf Silbertaler</strong>. Zur Übernahme des Auftrags erscheint unverzüglich in <strong>Lothaires Arkaneum, am Park von Gwynthor nahe dem Badehaus</strong>. Ich werde Euch persönlich darlegen, welche Anweisungen sie erhielten und was mir über ihren Aufbruch bekannt ist. Sollte jemand von ihnen verletzt sein, hat dessen Versorgung selbstverständlich Vorrang vor der Vollständigkeit meines Berichts.</p><p><strong>Bringt brauchbare Ausrüstung mit.</strong> Ich werde mich von ihrer Eignung überzeugen. Der Besitz eines Schwertes ist eine erfreuliche Voraussetzung, aber noch kein Bergungskonzept. Wer lediglich beabsichtigt, am Ruineneingang dreimal ihre Namen zu rufen, möge bitte einer anderen Beschäftigung nachgehen; dazu wäre ich selbst noch hinreichend qualifiziert.</p><p>Und sollte Euch Rioneth erklären, ich hätte sie mit einer unvernünftig langen Sammelliste losgeschickt, widersprecht ihr meinetwegen nicht. Teilt ihr mit, dass ich die Liste persönlich kürzen werde. Darüber können wir uns streiten, sobald sie wieder hier ist.</p><p><strong>Kommt heute. Ich benötige meine Leute zurück. Alle drei.</strong></p>"
+        },
+        {
+          "field": "noticeGroupId",
+          "missing": true,
+          "to": "gwynthor-herluin-angestellte-vermisst"
+        }
+      ]
+    },
+    {
+      "id": "gwynthor-herluin-angestellte-vermisst-cyrwyn:20261021-search-return-sketch-group",
+      "noticeId": "gwynthor-herluin-angestellte-vermisst-cyrwyn",
+      "fields": [
+        {
+          "field": "text",
+          "from": "<p><strong>Cyrwyn</strong> gehört zu meinen drei vermissten Angestellten. Die Gruppe erhielt den Auftrag, <strong>Glannadeor nach Artefakten zu durchsuchen</strong>. Über ihren derzeitigen Aufenthalt liegen mir keine bestätigten Angaben vor.</p><p><strong>Kennzeichen:</strong> Rothaarig, roter Bart, braune Kapuze, gebrauchte Lederrüstung, Köcher auf dem Rücken und Schwert am Gürtel.</p><p>Wer die beschriebene Person gesehen hat, möge mir Ort, Zeitpunkt und Umstände seiner Beobachtung möglichst genau mitteilen. Hinweise nehme ich persönlich in <strong>Lothaires Arkaneum am Park von Gwynthor nahe dem Badehaus</strong> entgegen.</p><p>Dieses Blatt gehört zum Hauptgesuch am selben Nagel. Die dort ausgesetzten <strong>insgesamt fünf Silbertaler</strong> gelten für das Auffinden aller drei Angestellten.</p>",
+          "to": "<p><strong>Cyrwyn</strong>, Cenyri, fünfundvierzig Jahre. Rotes Haar und roter Bart, gewöhnlich unter beziehungsweise vor einer braunen Kapuze. Er trägt eine gebrauchte Lederrüstung, einen Köcher auf dem Rücken und ein Schwert am Gürtel; dazu einen Bogen.</p><p>Das Leder ist an den Kanten abgeschabt und von jenem stumpfen Braun, das sein Träger als „noch vollkommen brauchbar“ bezeichnet. Ich würde „museumswürdig“ vorziehen. Achtet zur Wiedererkennung auf die Verbindung von brauner Kapuze und rotem Bart; eine ungepflegte Lederrüstung allein dürfte im Hafenviertel leider wenig eingrenzen.</p><p>Herluin Lothaire<br>Arkaneum am Park, nahe dem Badehaus</p>"
+        },
+        {
+          "field": "portrait",
+          "from": "../AleriaAlmanach/assets/herluin-lothaire/cast/portraits/cyrwyn.png",
+          "to": "assets/images/missing-sketches/cyrwyn-v1.png"
+        },
+        {
+          "field": "noticeGroupId",
+          "missing": true,
+          "to": "gwynthor-herluin-angestellte-vermisst"
+        }
+      ]
+    },
+    {
+      "id": "gwynthor-herluin-angestellte-vermisst-torvald:20261021-search-return-sketch-group",
+      "noticeId": "gwynthor-herluin-angestellte-vermisst-torvald",
+      "fields": [
+        {
+          "field": "text",
+          "from": "<p><strong>Torvald</strong> gehört zu meinen drei vermissten Angestellten. Die Gruppe erhielt den Auftrag, <strong>Glannadeor nach Artefakten zu durchsuchen</strong>. Über ihren derzeitigen Aufenthalt liegen mir keine bestätigten Angaben vor.</p><p><strong>Kennzeichen:</strong> Breit gebaut; blondes Haar am Hinterkopf gebunden, kurzer voller blonder Bart, blaue Augen, Kettenzeug und schlichter Wollmantel.</p><p>Wer die beschriebene Person gesehen hat, möge mir Ort, Zeitpunkt und Umstände seiner Beobachtung möglichst genau mitteilen. Hinweise nehme ich persönlich in <strong>Lothaires Arkaneum am Park von Gwynthor nahe dem Badehaus</strong> entgegen.</p><p>Dieses Blatt gehört zum Hauptgesuch am selben Nagel. Die dort ausgesetzten <strong>insgesamt fünf Silbertaler</strong> gelten für das Auffinden aller drei Angestellten.</p>",
+          "to": "<p><strong>Torvald</strong>, Aldrimarer, einundvierzig Jahre. Sehr breite Schultern, kräftiger Hals, ausgeprägt kantige Gesichtszüge. Blaue Augen, blondes Haar, am Hinterkopf zusammengebunden, und ein kurzer, voller blonder Bart. Zuletzt trug er Kettenzeug unter einem schlichten Wollmantel.</p><p>Die Schulterbreite auf der Zeichnung ist kein perspektivischer Fehler. Der Mann ist tatsächlich so beschaffen. Überhaupt zeigt seine Anatomie eine bemerkenswerte Vorliebe für rechte Winkel; solltet Ihr zwischen zwei Beschreibungen schwanken, wählt die kantigere.</p><p>Herluin Lothaire<br>Am Park von Gwynthor, nahe dem Badehaus</p>"
+        },
+        {
+          "field": "portrait",
+          "from": "../AleriaAlmanach/assets/herluin-lothaire/cast/portraits/torvald.png",
+          "to": "assets/images/missing-sketches/torvald-v1.png"
+        },
+        {
+          "field": "noticeGroupId",
+          "missing": true,
+          "to": "gwynthor-herluin-angestellte-vermisst"
+        }
+      ]
+    },
+    {
+      "id": "gwynthor-herluin-angestellte-vermisst-rioneth:20261021-search-return-sketch-group",
+      "noticeId": "gwynthor-herluin-angestellte-vermisst-rioneth",
+      "fields": [
+        {
+          "field": "text",
+          "from": "<p><strong>Rioneth</strong> gehört zu meinen drei vermissten Angestellten. Die Gruppe erhielt den Auftrag, <strong>Glannadeor nach Artefakten zu durchsuchen</strong>. Über ihren derzeitigen Aufenthalt liegen mir keine bestätigten Angaben vor.</p><p><strong>Kennzeichen:</strong> Brünettes Haar mit langem seitlichem Zopf und kurz geschnittener Schläfenseite; bernsteinbraune Augen, waldgrüner Mantel und praktische Lederkleidung.</p><p>Wer die beschriebene Person gesehen hat, möge mir Ort, Zeitpunkt und Umstände seiner Beobachtung möglichst genau mitteilen. Hinweise nehme ich persönlich in <strong>Lothaires Arkaneum am Park von Gwynthor nahe dem Badehaus</strong> entgegen.</p><p>Dieses Blatt gehört zum Hauptgesuch am selben Nagel. Die dort ausgesetzten <strong>insgesamt fünf Silbertaler</strong> gelten für das Auffinden aller drei Angestellten.</p>",
+          "to": "<p><strong>Rioneth</strong>, Albin, sechsunddreißig Jahre. Brünette Haare, zu einem langen seitlichen Zopf geflochten; an einer Schläfe deutlich kürzer geschnitten. Bernsteinbraune Augen. Waldgrüner Mantel über praktischer Lederkleidung.</p><p>Die ungleiche Haarlänge ist beabsichtigt und sollte Euch die Zuordnung erleichtern. Ferner eine ausgesprochen ansehnliche Frau. Diese Feststellung dient ausschließlich der Präzision der Personenbeschreibung; ich ersuche darum, sie Rioneth gegenüber nicht als wörtliche Äußerung meinerseits anzuführen.</p><p>Herluin Lothaire<br>Arkaneum am Park, nahe dem Badehaus</p>"
+        },
+        {
+          "field": "portrait",
+          "from": "../AleriaAlmanach/assets/herluin-lothaire/cast/portraits/rioneth.png",
+          "to": "assets/images/missing-sketches/rioneth-v1.png"
+        },
+        {
+          "field": "noticeGroupId",
+          "missing": true,
+          "to": "gwynthor-herluin-angestellte-vermisst"
+        }
+      ]
+    },
+    {
+      "id": "gwynthor-herluin-angestellte-vermisst:20261021-personal-voice",
+      "noticeId": "gwynthor-herluin-angestellte-vermisst",
+      "fields": [
+        {
+          "field": "text",
+          "from": "<p>An beherzte Abenteurer, verlässliche Söldner und sonstige Personen mit hinreichendem Urteilsvermögen.</p><p>Hiermit gebe ich bekannt, dass meine drei im Außendienst beschäftigten Beschaffer <strong>Cyrwyn, Torvald und Rioneth</strong> seit geraumer Zeit vermisst werden. Sie erhielten von mir den Auftrag, <strong>Glannadeor nach Artefakten zu durchsuchen</strong>. Seither ist keine Rückmeldung eingegangen. Die Dauer dieses Schweigens überschreitet das Maß einer gewöhnlichen Verzögerung erheblich.</p><p>Ich suche eine verlässliche Gruppe, die <strong>nach Glannadeor aufbricht, die Ruine betritt, meine drei Angestellten dort sucht und sie nach Gwynthor zurückbringt</strong>. Das Ziel ihrer Reise ist bekannt. Gefragt ist eine Suche vor Ort samt Bergung und sicherer Rückkehr. Das bloße Sammeln von Gerüchten in Gwynthor erfüllt diesen Auftrag nicht. Ihre Rettung hat Vorrang vor jedem Fundstück. Ein bemerkenswerter Scherbenhaufen besitzt, bei aller fachlichen Würdigung, derzeit geringere Dringlichkeit.</p><p><strong>Zur eindeutigen Erkennung:</strong></p><ul><li><strong>Cyrwyn, 45 Jahre:</strong> Rothaarig, roter Bart, braune Kapuze, gebrauchte Lederrüstung, Köcher auf dem Rücken und Schwert am Gürtel.</li><li><strong>Torvald, 41 Jahre:</strong> Breit gebaut; blondes Haar am Hinterkopf gebunden, kurzer voller blonder Bart, blaue Augen, Kettenzeug und schlichter Wollmantel.</li><li><strong>Rioneth, 36 Jahre:</strong> Brünettes Haar mit langem seitlichem Zopf und kurz geschnittener Schläfenseite; bernsteinbraune Augen, waldgrüner Mantel und praktische Lederkleidung.</li></ul><p>Für das Auffinden und die <strong>sichere Rückführung meiner drei Angestellten</strong> setze ich eine Belohnung von <strong>insgesamt fünf Silbertalern</strong> aus. Diese Summe gilt für den gemeinsamen Auftrag, nicht für jedes einzelne Personenblatt. Die Auszahlung erfolgt nach ihrer Rückkehr. Sollte eine Rückführung nachweislich unmöglich sein, erwarte ich genaue Feststellungen und unverzügliche persönliche Meldung.</p><p>Zur Übernahme des Auftrags ist persönlich bei <strong>Herluin Lothaire, Lothaires Arkaneum, am Park von Gwynthor nahe dem Badehaus</strong> vorzusprechen. Dort erläutere ich den erteilten Sammelauftrag und die mir bekannten Umstände ihres Aufbruchs. Anschließend ist nach Glannadeor aufzubrechen. Die Beiblätter dienen der eindeutigen Erkennung meiner Leute.</p><p><strong>Die Angelegenheit ist dringend.</strong> Das Gesuch bleibt bis zu meiner ausdrücklichen Rücknahme offen. Ich erwarte Sorgfalt, eine zeitnahe Rückmeldung und vor allem die Rückkehr meiner vermissten Angestellten. Gehen Sie vorbereitet. Drei weitere Vermisste wären eine ausgesprochen unwillkommene Erweiterung dieses Schreibens.</p>",
+          "to": "<p>An ruinenerfahrene Abenteurer und Söldner von belastbarer Urteilskraft.</p><p>Ich ersuche um <strong>unverzügliche Hilfe bei der Bergung dreier vermisster Mitarbeiter</strong>. <strong>Cyrwyn, Torvald und Rioneth</strong> wurden von mir zur Untersuchung und Sicherstellung möglicher Artefakte nach <strong>Glannadeor</strong> entsandt. Der vereinbarte Rückkehrtermin ist längst verstrichen. Es liegt weder eine Nachricht noch irgendeine anderweitige Erklärung für ihr Ausbleiben vor.</p><p>Ich habe die Verzögerung zunächst der üblichen Diskrepanz zwischen meiner Zeitplanung und Cyrwyns Auffassung von Eile zugeschrieben. Diese Erklärung ist erschöpft. Ebenso meine Bereitschaft, Angehörigen an meiner Tür noch einmal zu versichern, man müsse vernünftigerweise abwarten. Diese Reise erfolgte auf meine Weisung.</p><p>Ich benötige eine befähigte Gruppe, die <strong>nach Glannadeor aufbricht, die Ruine betritt und meine Leute nach Hause bringt</strong>. Die beigefügten Zeichnungen und Beschreibungen dienen ihrer Wiedererkennung. Etwaige Altertümer sind zurückzulassen, sobald sie die Bergung behindern. Ich bin durchaus imstande, den Verlust einer einzigartigen Inschrift zu verwinden. Über die erforderliche Dauer werde ich mich gegebenenfalls später beklagen.</p><p>Für die <strong>sichere Rückführung aller drei Vermissten</strong> zahle ich <strong>insgesamt fünf Silbertaler</strong>. Zur Übernahme des Auftrags erscheint unverzüglich in <strong>Lothaires Arkaneum, am Park von Gwynthor nahe dem Badehaus</strong>. Ich werde Euch persönlich darlegen, welche Anweisungen sie erhielten und was mir über ihren Aufbruch bekannt ist. Sollte jemand von ihnen verletzt sein, hat dessen Versorgung selbstverständlich Vorrang vor der Vollständigkeit meines Berichts.</p><p><strong>Bringt brauchbare Ausrüstung mit.</strong> Ich werde mich von ihrer Eignung überzeugen. Der Besitz eines Schwertes ist eine erfreuliche Voraussetzung, aber noch kein Bergungskonzept. Wer lediglich beabsichtigt, am Ruineneingang dreimal ihre Namen zu rufen, möge bitte einer anderen Beschäftigung nachgehen; dazu wäre ich selbst noch hinreichend qualifiziert.</p><p>Und sollte Euch Rioneth erklären, ich hätte sie mit einer unvernünftig langen Sammelliste losgeschickt, widersprecht ihr meinetwegen nicht. Teilt ihr mit, dass ich die Liste persönlich kürzen werde. Darüber können wir uns streiten, sobald sie wieder hier ist.</p><p><strong>Kommt heute. Ich benötige meine Leute zurück. Alle drei.</strong></p>"
+        }
+      ]
+    },
+    {
+      "id": "gwynthor-herluin-angestellte-vermisst-cyrwyn:20261021-personal-voice",
+      "noticeId": "gwynthor-herluin-angestellte-vermisst-cyrwyn",
+      "fields": [
+        {
+          "field": "text",
+          "from": "<p><strong>Cyrwyn</strong> gehört zu meinen drei vermissten Angestellten. Die Gruppe wurde von mir nach <strong>Glannadeor</strong> entsandt, um dort nach Artefakten zu suchen, und ist nicht zurückgekehrt.</p><p><strong>Kennzeichen:</strong> Rothaarig, roter Bart, braune Kapuze, gebrauchte Lederrüstung, Köcher auf dem Rücken und Schwert am Gürtel.</p><p>Gesucht werden Helfer, die <strong>die Ruine von Glannadeor aufsuchen, meine Leute dort finden und nach Gwynthor zurückbringen</strong>. Dieses Blatt dient ihrer Erkennung während der Suche. Zur Auftragsübernahme sprechen Sie persönlich in <strong>Lothaires Arkaneum am Park von Gwynthor nahe dem Badehaus</strong> vor.</p><p>Dieses Personenblatt ist Teil des Gesuchs „Angestellte Vermisst!“. Die <strong>insgesamt fünf Silbertaler</strong> gelten gemeinsam für das Auffinden und die sichere Rückführung aller drei Angestellten.</p>",
+          "to": "<p><strong>Cyrwyn</strong>, Cenyri, fünfundvierzig Jahre. Rotes Haar und roter Bart, gewöhnlich unter beziehungsweise vor einer braunen Kapuze. Er trägt eine gebrauchte Lederrüstung, einen Köcher auf dem Rücken und ein Schwert am Gürtel; dazu einen Bogen.</p><p>Das Leder ist an den Kanten abgeschabt und von jenem stumpfen Braun, das sein Träger als „noch vollkommen brauchbar“ bezeichnet. Ich würde „museumswürdig“ vorziehen. Achtet zur Wiedererkennung auf die Verbindung von brauner Kapuze und rotem Bart; eine ungepflegte Lederrüstung allein dürfte im Hafenviertel leider wenig eingrenzen.</p><p>Herluin Lothaire<br>Arkaneum am Park, nahe dem Badehaus</p>"
+        }
+      ]
+    },
+    {
+      "id": "gwynthor-herluin-angestellte-vermisst-torvald:20261021-personal-voice",
+      "noticeId": "gwynthor-herluin-angestellte-vermisst-torvald",
+      "fields": [
+        {
+          "field": "text",
+          "from": "<p><strong>Torvald</strong> gehört zu meinen drei vermissten Angestellten. Die Gruppe wurde von mir nach <strong>Glannadeor</strong> entsandt, um dort nach Artefakten zu suchen, und ist nicht zurückgekehrt.</p><p><strong>Kennzeichen:</strong> Breit gebaut; blondes Haar am Hinterkopf gebunden, kurzer voller blonder Bart, blaue Augen, Kettenzeug und schlichter Wollmantel.</p><p>Gesucht werden Helfer, die <strong>die Ruine von Glannadeor aufsuchen, meine Leute dort finden und nach Gwynthor zurückbringen</strong>. Dieses Blatt dient ihrer Erkennung während der Suche. Zur Auftragsübernahme sprechen Sie persönlich in <strong>Lothaires Arkaneum am Park von Gwynthor nahe dem Badehaus</strong> vor.</p><p>Dieses Personenblatt ist Teil des Gesuchs „Angestellte Vermisst!“. Die <strong>insgesamt fünf Silbertaler</strong> gelten gemeinsam für das Auffinden und die sichere Rückführung aller drei Angestellten.</p>",
+          "to": "<p><strong>Torvald</strong>, Aldrimarer, einundvierzig Jahre. Sehr breite Schultern, kräftiger Hals, ausgeprägt kantige Gesichtszüge. Blaue Augen, blondes Haar, am Hinterkopf zusammengebunden, und ein kurzer, voller blonder Bart. Zuletzt trug er Kettenzeug unter einem schlichten Wollmantel.</p><p>Die Schulterbreite auf der Zeichnung ist kein perspektivischer Fehler. Der Mann ist tatsächlich so beschaffen. Überhaupt zeigt seine Anatomie eine bemerkenswerte Vorliebe für rechte Winkel; solltet Ihr zwischen zwei Beschreibungen schwanken, wählt die kantigere.</p><p>Herluin Lothaire<br>Am Park von Gwynthor, nahe dem Badehaus</p>"
+        }
+      ]
+    },
+    {
+      "id": "gwynthor-herluin-angestellte-vermisst-rioneth:20261021-personal-voice",
+      "noticeId": "gwynthor-herluin-angestellte-vermisst-rioneth",
+      "fields": [
+        {
+          "field": "text",
+          "from": "<p><strong>Rioneth</strong> gehört zu meinen drei vermissten Angestellten. Die Gruppe wurde von mir nach <strong>Glannadeor</strong> entsandt, um dort nach Artefakten zu suchen, und ist nicht zurückgekehrt.</p><p><strong>Kennzeichen:</strong> Brünettes Haar mit langem seitlichem Zopf und kurz geschnittener Schläfenseite; bernsteinbraune Augen, waldgrüner Mantel und praktische Lederkleidung.</p><p>Gesucht werden Helfer, die <strong>die Ruine von Glannadeor aufsuchen, meine Leute dort finden und nach Gwynthor zurückbringen</strong>. Dieses Blatt dient ihrer Erkennung während der Suche. Zur Auftragsübernahme sprechen Sie persönlich in <strong>Lothaires Arkaneum am Park von Gwynthor nahe dem Badehaus</strong> vor.</p><p>Dieses Personenblatt ist Teil des Gesuchs „Angestellte Vermisst!“. Die <strong>insgesamt fünf Silbertaler</strong> gelten gemeinsam für das Auffinden und die sichere Rückführung aller drei Angestellten.</p>",
+          "to": "<p><strong>Rioneth</strong>, Albin, sechsunddreißig Jahre. Brünette Haare, zu einem langen seitlichen Zopf geflochten; an einer Schläfe deutlich kürzer geschnitten. Bernsteinbraune Augen. Waldgrüner Mantel über praktischer Lederkleidung.</p><p>Die ungleiche Haarlänge ist beabsichtigt und sollte Euch die Zuordnung erleichtern. Ferner eine ausgesprochen ansehnliche Frau. Diese Feststellung dient ausschließlich der Präzision der Personenbeschreibung; ich ersuche darum, sie Rioneth gegenüber nicht als wörtliche Äußerung meinerseits anzuführen.</p><p>Herluin Lothaire<br>Arkaneum am Park, nahe dem Badehaus</p>"
+        }
+      ]
+    },
+    {
+      "id": "gwynthor-fearnan-die-verschwundene-schatulle:20261021-personal-voice",
+      "noticeId": "gwynthor-fearnan-die-verschwundene-schatulle",
+      "fields": [
+        {
+          "field": "text",
+          "from": "<p>An ehrliche Leute, die sich auf Nachforschungen verstehen.</p><p>Mein Mann Eoghan und ich haben einen Kredit bei einem Geld- und Pfandverleiher hier in Gwynthor aufgenommen, als wir sonst nicht über die Runden gekommen wären. Wir haben unsere Raten bezahlt. <strong>Mit der letzten, rechtzeitigen Zahlung wäre die Schuld erledigt gewesen.</strong> Das Geld dafür lag bereit, zusammen mit dem Wenigen, das wir wieder hatten zurücklegen können.</p><p>Als wir mit unseren beiden Töchtern von einem Familienausflug heimkamen, fanden wir unser Haus durchwühlt vor. <strong>Fort war nur die Metallschatulle unter unserem Bett.</strong> Darin lagen die letzte Rate und unsere ganzen Ersparnisse. Kleidung, Geschirr und die anderen Sachen waren noch da.</p><p>Nun fehlt uns das Geld zum Leben und für die fällige Zahlung. Der Verleiher hat uns angeboten, den Kredit zu verlängern und neue Bedingungen zu gewähren, wenn wir ihm unser Haus verkaufen. Er würde die Schulden mit dem Kaufpreis verrechnen und uns anschließend als seine Mieter darin wohnen lassen.</p><p>Vielleicht ist es wirklich ein hilfreiches Angebot. Aber jemand hat ausgerechnet die Schatulle gefunden, als wir alle fort waren. <strong>Wir möchten wissen, wer bei uns eingebrochen ist und wo unser Geld geblieben ist, bevor wir unterschreiben.</strong> Wir beschuldigen niemanden ohne Beweis. Wer helfen kann, soll sich bitte die Spuren und unsere Zahlungsbelege ansehen und mit uns sprechen.</p><p>Wir haben gerade kaum etwas anzubieten. Bitte kommt trotzdem, wenn ihr uns helfen könnt. Meldet euch bei <strong>Muireann und Eoghan Fearnan im Hafenviertel, im kleinen Haus mit dem fröhlichen Baum an der Tür</strong>. Unsere Mädchen sollen ihr Zuhause behalten.</p><p>Muireann</p>",
+          "to": "<p><strong>Wir hatten die letzte Rate schon abgezählt.</strong></p><p>Mein Mann Eoghan und ich mussten uns beim Geld- und Pfandverleiher Geld borgen, weil es anders nicht mehr ging. Seitdem haben wir jede Rate rechtzeitig bezahlt. Auch die letzte lag bereit. Danach wären wir endlich mit den Schulden fertig gewesen.</p><p>Wir waren mit unseren beiden Mädchen fort, einen Tag zusammen, und als wir heimkamen, lagen unsere Bettdecken auf dem Boden. Jemand hatte alles durchwühlt. Die <strong>Metallschatulle unter unserem Bett</strong> war weg. Darin waren die letzte Rate und alles, was wir sonst noch gespart hatten.</p><p>Ich habe sogar zwischen den Kleidern nachgesehen. Als könnte ich sie selbst irgendwo anders hingestellt haben. Geschirr, Wäsche, alles war noch da. Nur unser Geld war fort.</p><p>Der Verleiher hat uns nun angeboten, den Kredit zu verlängern. Dafür sollen wir ihm unser <strong>Haus verkaufen</strong>. Er würde die Schuld verrechnen und uns weiter darin wohnen lassen, zur Miete. Eoghan liest das Angebot immer wieder. Ich frage ihn, wovon wir dann die Miete bezahlen sollen.</p><p>Vielleicht hat der Einbrecher uns fortgehen sehen. Vielleicht wusste jemand, wo wir das Geld aufbewahren. Ich weiß es nicht. Aber ich kann dieses Papier nicht unterschreiben, ohne dass jemand nachgesehen hat. <strong>Bitte helft uns herauszufinden, wer die Schatulle genommen hat.</strong> Die Zettel über unsere Raten haben wir noch.</p><p>Ich kann euch kein Geld versprechen. Es fällt mir schwer genug, das hier hinzuschreiben. Bitte kommt trotzdem, ehe wir unser Zuhause hergeben müssen. Die Mädchen fragen schon, ob wir wieder fortziehen.</p><p>Wir wohnen im <strong>Hafenviertel, im kleinen Haus mit dem fröhlichen Baum an der Tür</strong>. Fragt nach Muireann oder Eoghan Fearnan. Ich bin da.</p><p>Muireann</p>"
+        }
+      ]
+    },
+    {
+      "id": "gwynthor-torvik-seit-lyristag-vermisst:20261021-personal-voice",
+      "noticeId": "gwynthor-torvik-seit-lyristag-vermisst",
+      "fields": [
+        {
+          "field": "text",
+          "from": "<p>Mein Mann <strong>Haldor Torvik</strong> ist seit dem vergangenen Lyristag nicht heimgekommen. Er ist zweiunddreißig, kräftig, blond und trägt einen dichten Schnurrbart. Er hat blaue Augen und bindet sein Haar hinten zu einem kurzen Zopf. Das beigefügte Blatt zeigt sein Aussehen.</p><p>Haldor arbeitet als Schmiedegehilfe im Marktviertel. Sein Lohn ist schlecht, sein Meister sehr launisch. Immer wieder muss er länger bleiben, und diese Stunden werden schlecht oder gar nicht bezahlt. <strong>Am Lyristag gab es deshalb einen heftigen Streit.</strong> Haldor wollte anschließend beim Hof des Grafen vorsprechen. Die freien Gesuchsplätze waren an diesem Tag aber schon alle vergeben.</p><p>Danach ging er zum <strong>Kleinen Durst an den Docks</strong>. Das tut er manchmal, wenn er seinen Ärger herunterschlucken will. Er kommt dann spät heim. Diesmal kam er gar nicht. Als ich beim Wirt nachfragte, sagte er, Haldor habe <strong>etwas von einer neuen Arbeitsstelle erzählt und sei dann aufgebrochen</strong>. Wohin er gegangen ist und bei wem er anfangen wollte, weiß ich nicht.</p><p>Ich habe die Stadt um Hilfe gebeten. Man hat derzeit viele andere Aufgaben, und auf eine Suche kann ich mich nicht rechtzeitig verlassen. Darum bitte ich hier: <strong>Sprecht mit dem Wirt, geht der Nachricht von der neuen Stelle nach, findet meinen Mann und bringt ihn zu uns zurück.</strong> Wenn ihm etwas zugestoßen ist, will ich es wissen. Wir können nicht weiter nur warten.</p><p>Viel Geld habe ich nicht. Ich würde aber <strong>mein altes Familienamulett</strong> für seine sichere Rückkehr hergeben. Wenn das nicht reicht, lege ich <strong>dreißig Kupfertaler</strong> dazu. Es ist mir ernst.</p><p>Bitte meldet euch bei <strong>Maonaid im Heim der Torvik, in der Seitengasse des Marktviertels, am Haus mit dem kleinen Hammerzeichen</strong>. Unser Sohn Iver wartet auf seinen Vater. Ohne Haldor sind wir aufgeschmissen.</p><p>Maonaid</p>",
+          "to": "<p><strong>Hat jemand meinen Haldor gesehen?</strong></p><p>Er ist seit dem vergangenen Lyristag nicht nach Hause gekommen. <strong>Haldor Torvik</strong>, zweiunddreißig, blond, kräftig, mit einem dichten Schnurrbart. Auf dem Blatt dahinter ist eine Zeichnung von ihm.</p><p>Er hatte wieder Streit mit seinem Meister. Ständig soll er länger in der Schmiede bleiben, und wenn Zahltag ist, weiß der Mann von den Stunden nichts mehr. Diesmal wollte Haldor beim Hof des Grafen vorsprechen. Aber die Gesuchsplätze waren schon vergeben. Danach ist er zum <strong>Kleinen Durst</strong> gegangen.</p><p>Ich dachte erst, er hätte sich dort wieder festgetrunken. Ich war sogar wütend auf ihn. Als er am Morgen noch immer nicht da war, bin ich selbst zu den Docks. Der Wirt sagte, Haldor habe von einer <strong>neuen Arbeitsstelle</strong> geredet und sei aufgebrochen. Ich wusste nichts von dieser Stelle. Bei mir war er seitdem nicht.</p><p>Die Stadt weiß Bescheid. Aber noch hat mir niemand sagen können, wo er ist. Iver fährt bei jedem Schritt vor dem Haus hoch. Ich sage ihm immer, dass ich nach seinem Vater suche. Langsam weiß ich nicht mehr, wohin ich noch gehen soll.</p><p><strong>Bitte findet ihn und bringt ihn heim.</strong> Vielleicht hat jemand gehört, wer ihm die Arbeit angeboten hat. Vielleicht hat ihn jemand nach dem Kleinen Durst noch gesehen. Falls er glaubt, ich sei böse auf ihn, sagt ihm bitte, dass er heimkommen soll. Einfach heimkommen.</p><p>Ich gebe euch <strong>mein Familienamulett</strong> für seine sichere Rückkehr. Es ist das silberne mit dem grünen Glas. Ich habe es nie verkaufen wollen. Wenn es euch nicht genügt, habe ich noch <strong>dreißig Kupfertaler</strong>, die ich dazulegen kann. Mehr habe ich nicht.</p><p>Fragt nach <strong>Maonaid im Marktviertel, in der Seitengasse am Haus mit dem kleinen Hammerzeichen</strong>. Bitte schiebt es nicht auf. Ohne Haldors Lohn kommen wir nicht lange aus, und ich kann Iver nicht noch einmal sagen, dass ich nichts weiß.</p><p>Maonaid</p>"
+        }
+      ]
+    },
+    {
+      "id": "gwynthor-torvik-seit-lyristag-vermisst-haldor:20261021-personal-voice",
+      "noticeId": "gwynthor-torvik-seit-lyristag-vermisst-haldor",
+      "fields": [
+        {
+          "field": "text",
+          "from": "<p><strong>Haldor Torvik</strong> ist seit dem vergangenen Lyristag vermisst. Zuletzt wurde er im <strong>Kleinen Durst an den Docks</strong> gesehen. Nach Auskunft des Wirtes sprach er vor seinem Aufbruch von einer neuen Arbeitsstelle. Wo diese sein soll, ist nicht bekannt.</p><p>Bitte helft, ihn zu finden und nach Hause zu bringen. Seine Frau <strong>Maonaid</strong> und sein Sohn <strong>Iver</strong> warten im Heim der Torvik im Marktviertel. Das Haus trägt ein kleines Hammerzeichen.</p><p>Dieses Blatt gehört zu Maonaids Gesuch. Das dort angebotene Familienamulett und die nötigenfalls zusätzlichen dreißig Kupfertaler sind eine gemeinsame Belohnung für Haldors sichere Rückkehr.</p>",
+          "to": "<p>Das ist mein Mann, <strong>Haldor Torvik</strong>. Er ist zweiunddreißig und stammt aus Aldrimar. Er hat blaue Augen, einen dichten blonden Schnurrbart und bindet sein Haar hinten zu einem kurzen Zopf. Von der Schmiede hat er oft noch Ruß an den Händen, auch wenn er sie schon gewaschen hat.</p><p>Auf der Zeichnung sieht er streng aus. Unser Sohn bringt ihn sonst leicht zum Lachen.</p><p>Seit dem vergangenen Lyristag fehlt er. Der Wirt im <strong>Kleinen Durst an den Docks</strong> hat ihn noch gesehen. Er sagt, Haldor habe von einer neuen Arbeitsstelle gesprochen. Bitte fragt dort nach, wenn ihr meinem Gesuch nachgehen könnt.</p><p>Und wenn ihr ihn findet: Sagt ihm, dass Iver und ich auf ihn warten. Ich möchte ihn wieder vor unserer Tür sehen.</p><p>Maonaid<br>Marktviertel, Seitengasse beim Haus mit dem kleinen Hammerzeichen</p>"
+        }
+      ]
+    },
+    {
+      "id": "gwynthor-herluin-angestellte-vermisst:20261021-academic-ihr-voice",
+      "noticeId": "gwynthor-herluin-angestellte-vermisst",
+      "fields": [
+        {
+          "field": "text",
+          "from": "<p>An zuverlässige Abenteurer und Söldner mit Erfahrung in alten Ruinen.</p><p>Meine Beschaffer <strong>Cyrwyn, Torvald und Rioneth</strong> sind überfällig. Ich schickte sie nach <strong>Glannadeor</strong>, um dort nach Artefakten zu suchen. Der vereinbarte Rückkehrtag ist längst verstrichen. Von keinem der drei kam seither eine Nachricht.</p><p>Cyrwyn lässt sich gewöhnlich weder vom Wetter noch von meinen Zeitvorgaben sonderlich beeindrucken. Darauf habe ich mich zunächst berufen, wenn nach den Dreien gefragt wurde. Inzwischen kann ich diese Antwort niemandem mehr zumuten.</p><p>Ich benötige eine verlässliche Gruppe, die <strong>nach Glannadeor aufbricht, die Ruine betritt und meine Leute nach Hause bringt</strong>. Ihre Beschreibungen habe ich beigefügt. Etwaige Funde sind zurückzulassen, sobald sie die Bergung behindern. Über den Wert einer Scherbe diskutiere ich gern nach der Rückkehr meiner Angestellten.</p><p>Im Arkaneum werden die Vorratsfächer leer. Rhydian muss Kundschaft fortschicken, und an meiner Tür stehen Menschen, denen ich erklären soll, weshalb ihre Angehörigen noch immer fehlen. Ich habe diese Reise angeordnet. Ich werde mich darum kümmern, dass jemand nach ihnen sieht.</p><p>Für die <strong>sichere Rückführung meiner drei Leute</strong> zahle ich <strong>insgesamt fünf Silbertaler</strong>. Wer den Auftrag übernimmt, spricht unverzüglich bei mir vor: <strong>Lothaires Arkaneum, am Park von Gwynthor nahe dem Badehaus</strong>. Die Sammelliste liegt bereit; ich werde erläutern, was vor ihrem Aufbruch besprochen wurde.</p><p>Bringen Sie brauchbare Ausrüstung mit. Ich werde mich davon überzeugen. Und sollten Sie Rioneth begegnen, die Ihnen erklärt, ich hätte sie mit einer unvernünftig langen Liste losgeschickt: Widersprechen Sie ihr meinetwegen nicht.</p><p><strong>Ich erwarte meine Leute zurück. Alle drei.</strong></p>",
+          "to": "<p>An ruinenerfahrene Abenteurer und Söldner von belastbarer Urteilskraft.</p><p>Ich ersuche um <strong>unverzügliche Hilfe bei der Bergung dreier vermisster Mitarbeiter</strong>. <strong>Cyrwyn, Torvald und Rioneth</strong> wurden von mir zur Untersuchung und Sicherstellung möglicher Artefakte nach <strong>Glannadeor</strong> entsandt. Der vereinbarte Rückkehrtermin ist längst verstrichen. Es liegt weder eine Nachricht noch irgendeine anderweitige Erklärung für ihr Ausbleiben vor.</p><p>Ich habe die Verzögerung zunächst der üblichen Diskrepanz zwischen meiner Zeitplanung und Cyrwyns Auffassung von Eile zugeschrieben. Diese Erklärung ist erschöpft. Ebenso meine Bereitschaft, Angehörigen an meiner Tür noch einmal zu versichern, man müsse vernünftigerweise abwarten. Diese Reise erfolgte auf meine Weisung.</p><p>Ich benötige eine befähigte Gruppe, die <strong>nach Glannadeor aufbricht, die Ruine betritt und meine Leute nach Hause bringt</strong>. Die beigefügten Zeichnungen und Beschreibungen dienen ihrer Wiedererkennung. Etwaige Altertümer sind zurückzulassen, sobald sie die Bergung behindern. Ich bin durchaus imstande, den Verlust einer einzigartigen Inschrift zu verwinden. Über die erforderliche Dauer werde ich mich gegebenenfalls später beklagen.</p><p>Für die <strong>sichere Rückführung aller drei Vermissten</strong> zahle ich <strong>insgesamt fünf Silbertaler</strong>. Zur Übernahme des Auftrags erscheint unverzüglich in <strong>Lothaires Arkaneum, am Park von Gwynthor nahe dem Badehaus</strong>. Ich werde Euch persönlich darlegen, welche Anweisungen sie erhielten und was mir über ihren Aufbruch bekannt ist. Sollte jemand von ihnen verletzt sein, hat dessen Versorgung selbstverständlich Vorrang vor der Vollständigkeit meines Berichts.</p><p><strong>Bringt brauchbare Ausrüstung mit.</strong> Ich werde mich von ihrer Eignung überzeugen. Der Besitz eines Schwertes ist eine erfreuliche Voraussetzung, aber noch kein Bergungskonzept. Wer lediglich beabsichtigt, am Ruineneingang dreimal ihre Namen zu rufen, möge bitte einer anderen Beschäftigung nachgehen; dazu wäre ich selbst noch hinreichend qualifiziert.</p><p>Und sollte Euch Rioneth erklären, ich hätte sie mit einer unvernünftig langen Sammelliste losgeschickt, widersprecht ihr meinetwegen nicht. Teilt ihr mit, dass ich die Liste persönlich kürzen werde. Darüber können wir uns streiten, sobald sie wieder hier ist.</p><p><strong>Kommt heute. Ich benötige meine Leute zurück. Alle drei.</strong></p>"
+        }
+      ]
+    },
+    {
+      "id": "gwynthor-herluin-angestellte-vermisst-cyrwyn:20261021-academic-ihr-voice",
+      "noticeId": "gwynthor-herluin-angestellte-vermisst-cyrwyn",
+      "fields": [
+        {
+          "field": "text",
+          "from": "<p><strong>Cyrwyn</strong> trägt eine braune Kapuze über rotem Haar und rotem Bart. Seine Lederrüstung hat bessere Tage gesehen; Bogen und Schwert hält er in weit besserem Zustand. Den Köcher trägt er auf dem Rücken.</p><p>Er macht gewöhnlich wenig Worte. Wenn ich einen Fund ausgiebiger würdige, als ihm ratsam erscheint, räuspert er sich. Einmal. Das bedeutet, dass wir gehen sollten. Ich habe darüber oft genug ungehalten reagiert.</p><p>Er ist ein erfahrener Jäger. Dass ausgerechnet er aus <strong>Glannadeor</strong> keinerlei Nachricht schickt, lässt sich mit einem schlecht gewählten Pfad kaum noch erklären.</p><p>Wer mit meinem Gesuch aufbricht, soll auch nach ihm suchen und ihn heimbringen. Sollte er sich über den Aufwand beschweren, verweisen Sie ihn an mich. Ich wäre außerordentlich erleichtert, wieder eine Beschwerde von ihm entgegennehmen zu müssen.</p><p>Herluin Lothaire<br>Arkaneum am Park, nahe dem Badehaus</p>",
+          "to": "<p><strong>Cyrwyn</strong>, Cenyri, fünfundvierzig Jahre. Rotes Haar und roter Bart, gewöhnlich unter beziehungsweise vor einer braunen Kapuze. Er trägt eine gebrauchte Lederrüstung, einen Köcher auf dem Rücken und ein Schwert am Gürtel; dazu einen Bogen.</p><p>Das Leder ist an den Kanten abgeschabt und von jenem stumpfen Braun, das sein Träger als „noch vollkommen brauchbar“ bezeichnet. Ich würde „museumswürdig“ vorziehen. Achtet zur Wiedererkennung auf die Verbindung von brauner Kapuze und rotem Bart; eine ungepflegte Lederrüstung allein dürfte im Hafenviertel leider wenig eingrenzen.</p><p>Herluin Lothaire<br>Arkaneum am Park, nahe dem Badehaus</p>"
+        }
+      ]
+    },
+    {
+      "id": "gwynthor-herluin-angestellte-vermisst-torvald:20261021-academic-ihr-voice",
+      "noticeId": "gwynthor-herluin-angestellte-vermisst-torvald",
+      "fields": [
+        {
+          "field": "text",
+          "from": "<p><strong>Torvald</strong> ist breit gebaut, blond und blauäugig. Das Haar bindet er am Hinterkopf zusammen; dazu trägt er einen kurzen, vollen Bart. Kettenzeug unter einem schlichten Wollmantel. Die Zeichnung trifft ihn leidlich, wenngleich er gewöhnlich weniger finster dreinblickt.</p><p>Er spricht ruhig, auch wenn ringsum längst jeder die Geduld verloren hat. Empfindliche Gefäße nimmt er anderen aus der Hand und trägt sie selbst. Ich pflege ihm zu sagen, dass meine Flaschen keine Neugeborenen sind. Bislang hat er mir keine einzige zerbrochen.</p><p>Er zog mit Cyrwyn und Rioneth nach <strong>Glannadeor</strong>. Die drei sind überfällig. Wenn Sie Torvald finden und er versichert, er könne noch selbst laufen, sehen Sie bitte trotzdem nach seinen Verletzungen. Er bemüht sich bisweilen zu sehr, niemandem Umstände zu machen.</p><p>Ich erwarte ihn zurück im Arkaneum. Nauthagerd fragt inzwischen bei jedem Türläuten, ob er es ist.</p><p>Herluin Lothaire<br>Am Park von Gwynthor, nahe dem Badehaus</p>",
+          "to": "<p><strong>Torvald</strong>, Aldrimarer, einundvierzig Jahre. Sehr breite Schultern, kräftiger Hals, ausgeprägt kantige Gesichtszüge. Blaue Augen, blondes Haar, am Hinterkopf zusammengebunden, und ein kurzer, voller blonder Bart. Zuletzt trug er Kettenzeug unter einem schlichten Wollmantel.</p><p>Die Schulterbreite auf der Zeichnung ist kein perspektivischer Fehler. Der Mann ist tatsächlich so beschaffen. Überhaupt zeigt seine Anatomie eine bemerkenswerte Vorliebe für rechte Winkel; solltet Ihr zwischen zwei Beschreibungen schwanken, wählt die kantigere.</p><p>Herluin Lothaire<br>Am Park von Gwynthor, nahe dem Badehaus</p>"
+        }
+      ]
+    },
+    {
+      "id": "gwynthor-herluin-angestellte-vermisst-rioneth:20261021-academic-ihr-voice",
+      "noticeId": "gwynthor-herluin-angestellte-vermisst-rioneth",
+      "fields": [
+        {
+          "field": "text",
+          "from": "<p><strong>Rioneth</strong> ist Albin, sechsunddreißig Jahre alt. Braunes Haar in einem langen seitlichen Zopf, eine Schläfenseite kurz geschnitten, bernsteinbraune Augen. Meist trägt sie ihren waldgrünen Mantel über Lederkleidung.</p><p>Sie betrachtet einen erst eine Weile, ehe sie antwortet. Lassen Sie sich davon nicht beirren. Meist hat sie längst etwas bemerkt, das einem selbst entgangen ist.</p><p>Vor der Abreise hat sie wieder meine Sammelliste beanstandet. Zu viele Fundwünsche für drei Paar Hände, wie sie meinte. Ich erklärte ihr die fachliche Notwendigkeit. Sie strich trotzdem zwei Zeilen.</p><p>Rioneth kennt sich mit Pflanzen und unwegsamem Gelände aus. Ich habe mich darauf verlassen, als ich sie mit den beiden Männern nach <strong>Glannadeor</strong> schickte. Nun bitte ich Sie, dort nach ihr zu suchen und sie zurückzubringen.</p><p>Richten Sie ihr aus, dass ich ihre Einwände zur nächsten Bestellung persönlich entgegennehmen werde. Auch die ungebetenen. Sie muss dazu lediglich wieder vor meinem Tisch stehen.</p><p>Herluin Lothaire<br>Arkaneum am Park, nahe dem Badehaus</p>",
+          "to": "<p><strong>Rioneth</strong>, Albin, sechsunddreißig Jahre. Brünette Haare, zu einem langen seitlichen Zopf geflochten; an einer Schläfe deutlich kürzer geschnitten. Bernsteinbraune Augen. Waldgrüner Mantel über praktischer Lederkleidung.</p><p>Die ungleiche Haarlänge ist beabsichtigt und sollte Euch die Zuordnung erleichtern. Ferner eine ausgesprochen ansehnliche Frau. Diese Feststellung dient ausschließlich der Präzision der Personenbeschreibung; ich ersuche darum, sie Rioneth gegenüber nicht als wörtliche Äußerung meinerseits anzuführen.</p><p>Herluin Lothaire<br>Arkaneum am Park, nahe dem Badehaus</p>"
+        }
+      ]
+    },
+    {
+      "id": "gwynthor-egon-schwarze-zitteraale-gesucht:20261021-egon-issuer-media",
+      "noticeId": "gwynthor-egon-schwarze-zitteraale-gesucht",
+      "fields": [
+        {
+          "field": "verfasser",
+          "from": "https://i.imgur.com/70phuep.png",
+          "to": "../Stammb%C3%A4ume/assets/images/portraits/haus-gafyr/egon-gafyr.jpg"
+        },
+        {
+          "field": "portrait",
+          "from": "https://i.imgur.com/70phuep.png",
+          "to": ""
+        },
+        {
+          "field": "emblem",
+          "missing": true,
+          "to": "../Stammb%C3%A4ume/assets/images/houses/Llamreis%20Ankunft/haus-gafyr.png"
+        },
+        {
+          "field": "unterschrift",
+          "missing": true,
+          "to": "assets/images/issuers/egon-gafyr/unterschrift-v1.png"
+        },
+        {
+          "field": "siegel",
+          "missing": true,
+          "to": "assets/images/issuers/egon-gafyr/wachssiegel-v1.png"
+        },
+        {
+          "field": "media.verfasser",
+          "missing": true,
+          "to": {
+            "kind": "character",
+            "familyId": "haus-gafyr",
+            "personId": "egon-gafyr",
+            "name": "Sir Egon Gafyr",
+            "src": "../Stammb%C3%A4ume/assets/images/portraits/haus-gafyr/egon-gafyr.jpg",
+            "fit": "cover",
+            "position": "top"
+          }
+        },
+        {
+          "field": "media.unterschrift",
+          "missing": true,
+          "to": {
+            "kind": "image",
+            "name": "Egon Gafyr · Unterschrift",
+            "src": "assets/images/issuers/egon-gafyr/unterschrift-v1.png",
+            "fit": "cover",
+            "position": "center"
+          }
+        },
+        {
+          "field": "media.siegel",
+          "missing": true,
+          "to": {
+            "kind": "image",
+            "name": "Wachssiegel des Marschalls · Egon Gafyr",
+            "src": "assets/images/issuers/egon-gafyr/wachssiegel-v1.png",
+            "fit": "contain",
+            "position": "center"
+          }
+        },
+        {
+          "field": "media.emblem",
+          "missing": true,
+          "to": {
+            "kind": "image",
+            "name": "Haus Gafyr",
+            "src": "../Stammb%C3%A4ume/assets/images/houses/Llamreis%20Ankunft/haus-gafyr.png",
+            "fit": "contain",
+            "position": "center"
+          }
+        }
+      ]
+    },
+    {
+      "id": "gwynthor-egon-schwarze-zitteraale-gesucht-schwarzer-zitteraal:20261021-egon-issuer-media",
+      "noticeId": "gwynthor-egon-schwarze-zitteraale-gesucht-schwarzer-zitteraal",
+      "fields": [
+        {
+          "field": "verfasser",
+          "from": "https://i.imgur.com/70phuep.png",
+          "to": "../Stammb%C3%A4ume/assets/images/portraits/haus-gafyr/egon-gafyr.jpg"
+        },
+        {
+          "field": "emblem",
+          "missing": true,
+          "to": "../Stammb%C3%A4ume/assets/images/houses/Llamreis%20Ankunft/haus-gafyr.png"
+        },
+        {
+          "field": "unterschrift",
+          "missing": true,
+          "to": "assets/images/issuers/egon-gafyr/unterschrift-v1.png"
+        },
+        {
+          "field": "siegel",
+          "missing": true,
+          "to": "assets/images/issuers/egon-gafyr/wachssiegel-v1.png"
+        },
+        {
+          "field": "media.verfasser",
+          "missing": true,
+          "to": {
+            "kind": "character",
+            "familyId": "haus-gafyr",
+            "personId": "egon-gafyr",
+            "name": "Sir Egon Gafyr",
+            "src": "../Stammb%C3%A4ume/assets/images/portraits/haus-gafyr/egon-gafyr.jpg",
+            "fit": "cover",
+            "position": "top"
+          }
+        },
+        {
+          "field": "media.unterschrift",
+          "missing": true,
+          "to": {
+            "kind": "image",
+            "name": "Egon Gafyr · Unterschrift",
+            "src": "assets/images/issuers/egon-gafyr/unterschrift-v1.png",
+            "fit": "cover",
+            "position": "center"
+          }
+        },
+        {
+          "field": "media.siegel",
+          "missing": true,
+          "to": {
+            "kind": "image",
+            "name": "Wachssiegel des Marschalls · Egon Gafyr",
+            "src": "assets/images/issuers/egon-gafyr/wachssiegel-v1.png",
+            "fit": "contain",
+            "position": "center"
+          }
+        },
+        {
+          "field": "media.emblem",
+          "missing": true,
+          "to": {
+            "kind": "image",
+            "name": "Haus Gafyr",
+            "src": "../Stammb%C3%A4ume/assets/images/houses/Llamreis%20Ankunft/haus-gafyr.png",
+            "fit": "contain",
+            "position": "center"
+          }
+        }
+      ]
+    },
+    {
+      "id": "gwynthor-egon-schwarze-zitteraale-gesucht-schlickzahn:20261021-egon-issuer-media",
+      "noticeId": "gwynthor-egon-schwarze-zitteraale-gesucht-schlickzahn",
+      "fields": [
+        {
+          "field": "verfasser",
+          "from": "https://i.imgur.com/70phuep.png",
+          "to": "../Stammb%C3%A4ume/assets/images/portraits/haus-gafyr/egon-gafyr.jpg"
+        },
+        {
+          "field": "emblem",
+          "missing": true,
+          "to": "../Stammb%C3%A4ume/assets/images/houses/Llamreis%20Ankunft/haus-gafyr.png"
+        },
+        {
+          "field": "unterschrift",
+          "missing": true,
+          "to": "assets/images/issuers/egon-gafyr/unterschrift-v1.png"
+        },
+        {
+          "field": "siegel",
+          "missing": true,
+          "to": "assets/images/issuers/egon-gafyr/wachssiegel-v1.png"
+        },
+        {
+          "field": "media.verfasser",
+          "missing": true,
+          "to": {
+            "kind": "character",
+            "familyId": "haus-gafyr",
+            "personId": "egon-gafyr",
+            "name": "Sir Egon Gafyr",
+            "src": "../Stammb%C3%A4ume/assets/images/portraits/haus-gafyr/egon-gafyr.jpg",
+            "fit": "cover",
+            "position": "top"
+          }
+        },
+        {
+          "field": "media.unterschrift",
+          "missing": true,
+          "to": {
+            "kind": "image",
+            "name": "Egon Gafyr · Unterschrift",
+            "src": "assets/images/issuers/egon-gafyr/unterschrift-v1.png",
+            "fit": "cover",
+            "position": "center"
+          }
+        },
+        {
+          "field": "media.siegel",
+          "missing": true,
+          "to": {
+            "kind": "image",
+            "name": "Wachssiegel des Marschalls · Egon Gafyr",
+            "src": "assets/images/issuers/egon-gafyr/wachssiegel-v1.png",
+            "fit": "contain",
+            "position": "center"
+          }
+        },
+        {
+          "field": "media.emblem",
+          "missing": true,
+          "to": {
+            "kind": "image",
+            "name": "Haus Gafyr",
+            "src": "../Stammb%C3%A4ume/assets/images/houses/Llamreis%20Ankunft/haus-gafyr.png",
+            "fit": "contain",
+            "position": "center"
+          }
+        }
+      ]
+    },
+    {
+      "id": "gwynthor-egon-schwarze-zitteraale-gesucht-nachtkieme:20261021-egon-issuer-media",
+      "noticeId": "gwynthor-egon-schwarze-zitteraale-gesucht-nachtkieme",
+      "fields": [
+        {
+          "field": "verfasser",
+          "from": "https://i.imgur.com/70phuep.png",
+          "to": "../Stammb%C3%A4ume/assets/images/portraits/haus-gafyr/egon-gafyr.jpg"
+        },
+        {
+          "field": "emblem",
+          "missing": true,
+          "to": "../Stammb%C3%A4ume/assets/images/houses/Llamreis%20Ankunft/haus-gafyr.png"
+        },
+        {
+          "field": "unterschrift",
+          "missing": true,
+          "to": "assets/images/issuers/egon-gafyr/unterschrift-v1.png"
+        },
+        {
+          "field": "siegel",
+          "missing": true,
+          "to": "assets/images/issuers/egon-gafyr/wachssiegel-v1.png"
+        },
+        {
+          "field": "media.verfasser",
+          "missing": true,
+          "to": {
+            "kind": "character",
+            "familyId": "haus-gafyr",
+            "personId": "egon-gafyr",
+            "name": "Sir Egon Gafyr",
+            "src": "../Stammb%C3%A4ume/assets/images/portraits/haus-gafyr/egon-gafyr.jpg",
+            "fit": "cover",
+            "position": "top"
+          }
+        },
+        {
+          "field": "media.unterschrift",
+          "missing": true,
+          "to": {
+            "kind": "image",
+            "name": "Egon Gafyr · Unterschrift",
+            "src": "assets/images/issuers/egon-gafyr/unterschrift-v1.png",
+            "fit": "cover",
+            "position": "center"
+          }
+        },
+        {
+          "field": "media.siegel",
+          "missing": true,
+          "to": {
+            "kind": "image",
+            "name": "Wachssiegel des Marschalls · Egon Gafyr",
+            "src": "assets/images/issuers/egon-gafyr/wachssiegel-v1.png",
+            "fit": "contain",
+            "position": "center"
+          }
+        },
+        {
+          "field": "media.emblem",
+          "missing": true,
+          "to": {
+            "kind": "image",
+            "name": "Haus Gafyr",
+            "src": "../Stammb%C3%A4ume/assets/images/houses/Llamreis%20Ankunft/haus-gafyr.png",
+            "fit": "contain",
+            "position": "center"
+          }
+        }
+      ]
+    },
+    {
+      "id": "gwynthor-egon-schwarze-zitteraale-gesucht-donnerkiefer:20261021-egon-issuer-media",
+      "noticeId": "gwynthor-egon-schwarze-zitteraale-gesucht-donnerkiefer",
+      "fields": [
+        {
+          "field": "verfasser",
+          "from": "https://i.imgur.com/70phuep.png",
+          "to": "../Stammb%C3%A4ume/assets/images/portraits/haus-gafyr/egon-gafyr.jpg"
+        },
+        {
+          "field": "emblem",
+          "missing": true,
+          "to": "../Stammb%C3%A4ume/assets/images/houses/Llamreis%20Ankunft/haus-gafyr.png"
+        },
+        {
+          "field": "unterschrift",
+          "missing": true,
+          "to": "assets/images/issuers/egon-gafyr/unterschrift-v1.png"
+        },
+        {
+          "field": "siegel",
+          "missing": true,
+          "to": "assets/images/issuers/egon-gafyr/wachssiegel-v1.png"
+        },
+        {
+          "field": "media.verfasser",
+          "missing": true,
+          "to": {
+            "kind": "character",
+            "familyId": "haus-gafyr",
+            "personId": "egon-gafyr",
+            "name": "Sir Egon Gafyr",
+            "src": "../Stammb%C3%A4ume/assets/images/portraits/haus-gafyr/egon-gafyr.jpg",
+            "fit": "cover",
+            "position": "top"
+          }
+        },
+        {
+          "field": "media.unterschrift",
+          "missing": true,
+          "to": {
+            "kind": "image",
+            "name": "Egon Gafyr · Unterschrift",
+            "src": "assets/images/issuers/egon-gafyr/unterschrift-v1.png",
+            "fit": "cover",
+            "position": "center"
+          }
+        },
+        {
+          "field": "media.siegel",
+          "missing": true,
+          "to": {
+            "kind": "image",
+            "name": "Wachssiegel des Marschalls · Egon Gafyr",
+            "src": "assets/images/issuers/egon-gafyr/wachssiegel-v1.png",
+            "fit": "contain",
+            "position": "center"
+          }
+        },
+        {
+          "field": "media.emblem",
+          "missing": true,
+          "to": {
+            "kind": "image",
+            "name": "Haus Gafyr",
+            "src": "../Stammb%C3%A4ume/assets/images/houses/Llamreis%20Ankunft/haus-gafyr.png",
+            "fit": "contain",
+            "position": "center"
+          }
+        }
+      ]
+    },
+    {
+      "id": "gwynthor-egon-schwarze-zitteraale-gesucht-netznadel:20261021-egon-issuer-media",
+      "noticeId": "gwynthor-egon-schwarze-zitteraale-gesucht-netznadel",
+      "fields": [
+        {
+          "field": "verfasser",
+          "from": "https://i.imgur.com/70phuep.png",
+          "to": "../Stammb%C3%A4ume/assets/images/portraits/haus-gafyr/egon-gafyr.jpg"
+        },
+        {
+          "field": "emblem",
+          "missing": true,
+          "to": "../Stammb%C3%A4ume/assets/images/houses/Llamreis%20Ankunft/haus-gafyr.png"
+        },
+        {
+          "field": "unterschrift",
+          "missing": true,
+          "to": "assets/images/issuers/egon-gafyr/unterschrift-v1.png"
+        },
+        {
+          "field": "siegel",
+          "missing": true,
+          "to": "assets/images/issuers/egon-gafyr/wachssiegel-v1.png"
+        },
+        {
+          "field": "media.verfasser",
+          "missing": true,
+          "to": {
+            "kind": "character",
+            "familyId": "haus-gafyr",
+            "personId": "egon-gafyr",
+            "name": "Sir Egon Gafyr",
+            "src": "../Stammb%C3%A4ume/assets/images/portraits/haus-gafyr/egon-gafyr.jpg",
+            "fit": "cover",
+            "position": "top"
+          }
+        },
+        {
+          "field": "media.unterschrift",
+          "missing": true,
+          "to": {
+            "kind": "image",
+            "name": "Egon Gafyr · Unterschrift",
+            "src": "assets/images/issuers/egon-gafyr/unterschrift-v1.png",
+            "fit": "cover",
+            "position": "center"
+          }
+        },
+        {
+          "field": "media.siegel",
+          "missing": true,
+          "to": {
+            "kind": "image",
+            "name": "Wachssiegel des Marschalls · Egon Gafyr",
+            "src": "assets/images/issuers/egon-gafyr/wachssiegel-v1.png",
+            "fit": "contain",
+            "position": "center"
+          }
+        },
+        {
+          "field": "media.emblem",
+          "missing": true,
+          "to": {
+            "kind": "image",
+            "name": "Haus Gafyr",
+            "src": "../Stammb%C3%A4ume/assets/images/houses/Llamreis%20Ankunft/haus-gafyr.png",
+            "fit": "contain",
+            "position": "center"
+          }
+        }
+      ]
+    },
+    {
+      "id": "gwynthor-egon-schwarze-zitteraale-gesucht-komplizen:20261021-egon-issuer-media",
+      "noticeId": "gwynthor-egon-schwarze-zitteraale-gesucht-komplizen",
+      "fields": [
+        {
+          "field": "verfasser",
+          "from": "https://i.imgur.com/70phuep.png",
+          "to": "../Stammb%C3%A4ume/assets/images/portraits/haus-gafyr/egon-gafyr.jpg"
+        },
+        {
+          "field": "emblem",
+          "missing": true,
+          "to": "../Stammb%C3%A4ume/assets/images/houses/Llamreis%20Ankunft/haus-gafyr.png"
+        },
+        {
+          "field": "unterschrift",
+          "missing": true,
+          "to": "assets/images/issuers/egon-gafyr/unterschrift-v1.png"
+        },
+        {
+          "field": "siegel",
+          "missing": true,
+          "to": "assets/images/issuers/egon-gafyr/wachssiegel-v1.png"
+        },
+        {
+          "field": "media.verfasser",
+          "missing": true,
+          "to": {
+            "kind": "character",
+            "familyId": "haus-gafyr",
+            "personId": "egon-gafyr",
+            "name": "Sir Egon Gafyr",
+            "src": "../Stammb%C3%A4ume/assets/images/portraits/haus-gafyr/egon-gafyr.jpg",
+            "fit": "cover",
+            "position": "top"
+          }
+        },
+        {
+          "field": "media.unterschrift",
+          "missing": true,
+          "to": {
+            "kind": "image",
+            "name": "Egon Gafyr · Unterschrift",
+            "src": "assets/images/issuers/egon-gafyr/unterschrift-v1.png",
+            "fit": "cover",
+            "position": "center"
+          }
+        },
+        {
+          "field": "media.siegel",
+          "missing": true,
+          "to": {
+            "kind": "image",
+            "name": "Wachssiegel des Marschalls · Egon Gafyr",
+            "src": "assets/images/issuers/egon-gafyr/wachssiegel-v1.png",
+            "fit": "contain",
+            "position": "center"
+          }
+        },
+        {
+          "field": "media.emblem",
+          "missing": true,
+          "to": {
+            "kind": "image",
+            "name": "Haus Gafyr",
+            "src": "../Stammb%C3%A4ume/assets/images/houses/Llamreis%20Ankunft/haus-gafyr.png",
+            "fit": "contain",
+            "position": "center"
+          }
+        }
+      ]
+    }
+  ]
+}

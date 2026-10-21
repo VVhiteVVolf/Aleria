@@ -1,7 +1,7 @@
 {
   "version": 1,
   "inputs": {
-    "modules/economy-calculator/economy-catalog.generated.mjs": "25e8e1a0dd4f5b576c5054949f5a8007b61b89f61793c59527d4e162444bcd92",
+    "modules/economy-calculator/economy-catalog.generated.mjs": "005e104672ca883f306a9d4f4d2bdf64fedde47bb386b0984dd837cd11fbcee4",
     "modules/economy-calculator/economy-classic-api.mjs": "745cd84bbfa8635667f65a1f8b6cdd9d357c1fc54c5c3ce7cfbda80cefcb02ce",
     "modules/economy-calculator/economy-editor.mjs": "4fcda4e2cbfdbdd53d98b9d79fefeeefa00876e3cbcca6e5f6a23863c6afcca0",
     "modules/economy-calculator/economy-engine.mjs": "45ee3bfe2891fd1bd703b2c7ca2effdcecc46607975e9a2c9449e72cb2981d1b",
@@ -23,19 +23,20 @@
     "modules/economy-calculator/economy-venue-offers.mjs": "d81fc484301f2d8d18c8592e08f5bbcbb01f41ccfdde74bcfcdaa0c8a217b530",
     "modules/economy-calculator/economy-venue-profiles.mjs": "b5f8666a163baf4a766e9d308f61cd343596fb90f39a041322c8f6dee59f555b",
     "modules/economy-calculator/economy-venue-scenario.mjs": "a0c00f35e67397b6abfd00a0cb299e1730be1cea81c7bb120b70ca330ab63d91",
-    "modules/economy-calculator/economy-venue-scope.mjs": "e07672db86a189d8b7c5a0dd5e993d64f9c341ca0223aa1fb4b1b37ef2089df2",
+    "modules/economy-calculator/economy-venue-scope.mjs": "f8a77b5bc39468aa899a063c8801828b80d8c5f3319c10180abe697da964649c",
     "modules/economy-calculator/economy-venue-workforce.mjs": "0a9bcac515ba1d94937cb65fc8eaf7f561e59da608f9d2046a32237a6f15106c",
     "modules/economy-calculator/economy-watch-service.mjs": "d0d349ebcdbb76bd77c58a7daef71e7e0d8e17dfcc258e7abd97db3afac2abc5",
     "modules/economy-calculator/economy-workforce.mjs": "aae76de7e04cd3e78cf201d5f7da925c3f50ac1d6cca1ecdf1e48b5d94ba363b",
     "modules/economy-calculator/economy-world-context.mjs": "662a6c4fa8f5f4b55fa2da5eca46a6e161a5901c227b878f9a1c364b222820e8",
-    "modules/economy-pricing/price-reference.generated.mjs": "d106fa3cb649f2a4955b23a1abd0ca7a6f31691ddf6a5a0555427870cbe6cb78",
+    "modules/economy-pricing/price-reference.generated.mjs": "a7dd293b9ea6a284b9537dbe6e02be7b3a77f33140c69e6901c79992a3fa0f40",
     "modules/economy-pricing/price-review-model.mjs": "be3a36a13ae4cf71ec0fb927a3120e4333e35c3fb5c81e3a84851698e792975a",
     "modules/economy-pricing/price-review-rules.mjs": "4078dc4c6e79c36999520c2a673867a8226fbeab538479d8e53553e24500e581",
+    "modules/gwynthor-heime/households.mjs": "eaf97edc5984cd9b6c5412da51f0d0cec6a3c091fadaa590608f0376c24d0626",
     "modules/item-register/item-register-money.js": "74072874bfa746872b59fc14c7ccc0b15e84259742f1f76372fa6a8411db4fe5",
     "modules/kleiner-durst/durst-people.mjs": "52d143430efea6aeddf459e3d4671603853c93a97dd8eaa0d80687ba1fb72019",
-    "modules/krumme-kanne/krumme-kanne-roster.mjs": "85614903d2ea2224d8d9be8d5af46213630022afa0175d90b00cbd6c42961e06",
+    "modules/krumme-kanne/krumme-kanne-roster.mjs": "78560fbc69a92eeebe71e38e13212290e3e5346ddf3cc3b5dd0862fc26067b85",
     "modules/letzte-rast/rast-people.mjs": "f0e5c0ac101ffe7cb826364514efe9a41d4128fcd134643c841c4e0c262dca82",
     "modules/letzte-rast/rast-staff.mjs": "db5a5c456d27e5bba6bf2e0ceab28749b05668b8b9dd45166346394e03133540"
   },
-  "output": "2c1f89ab8d2dbac7fba016371c766fc23c9aca30a6f83948f88850478e3e1b8d"
+  "output": "63583553ead37fbad63b7301ddd01885363e6d1b14ae44bd328316572f8f3aed"
 }

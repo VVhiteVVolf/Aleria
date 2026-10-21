@@ -12,6 +12,10 @@
   <link rel="stylesheet" href="assets/css/notice-theme.css?v=20261002">
   <link rel="stylesheet" href="assets/css/notice-register.css?v=20261002">
   <link rel="stylesheet" href="assets/css/notice-templates.css?v=20261002-icons1">
+  <link rel="stylesheet" href="assets/css/notice-reader.css?v=20261021-wanted-v1">
+  <link rel="stylesheet" href="assets/css/notice-rewards.css?v=20261021-wanted-v1">
+  <link rel="stylesheet" href="assets/css/notice-variants.css?v=20261020-notices-v2">
+  <link rel="stylesheet" href="assets/css/notice-typography.css?v=20261020-notice-fonts-v1">
 
   <script src="tafeln.registry.js"></script>
   <script>
@@ -73,8 +77,8 @@
     }
   })();
   </script>
-  <script src="assets/js/tafel-storage.js?v=20261002"></script>
-  <script src="assets/js/notes/zettel-config.js?v=20261002-icons1"></script>
+  <script src="assets/js/tafel-storage.js?v=20261021-wanted-v1"></script>
+  <script src="assets/js/notes/zettel-config.js?v=20261020-notices-v2"></script>
 </head>
 <body>
   <div class="tafel-app-shell">
@@ -261,6 +265,8 @@
   <div class="mo scroll-mo" id="scroll-mo">
     <section class="scroll-card" id="scroll-card" role="dialog" aria-modal="true" aria-label="Aushang">
       <button class="scroll-close" type="button" data-action="close-scroll" aria-label="Schließen">×</button>
+      <nav id="notice-publications" class="notice-publications" aria-label="Getrennte Aushänge an diesem Nagel" hidden></nav>
+      <nav id="notice-stack-nav" class="notice-stack-nav" aria-label="Aushänge an diesem Nagel" hidden></nav>
       <div id="scroll-content"></div>
       <footer id="scroll-actions"></footer>
     </section>
@@ -270,27 +276,34 @@
   <div id="hint"></div>
   <div id="toast"></div>
 
-  <script src="assets/js/core/tafel-state.js?v=20261002"></script>
-  <script src="assets/js/board/notice-board.js?v=20261002"></script>
+  <script src="assets/js/core/tafel-state.js?v=20261021-wanted-v1"></script>
+  <script src="assets/js/data/authored-notices.js?v=20261021-egon-media-v1"></script>
+  <script src="assets/js/board/notice-board.js?v=20261021-wanted-v1"></script>
   <script src="assets/js/tafel-app.js?v=20261002"></script>
   <script src="assets/js/notes/zettel-rich-text.js?v=20261002"></script>
-  <script src="assets/js/notes/notice-search.js?v=20261002"></script>
-  <script src="assets/js/board/notice-register.js?v=20261002"></script>
+  <script src="assets/js/notes/notice-search.js?v=20261021-wanted-v1"></script>
+  <script src="assets/js/board/notice-register.js?v=20261021-wanted-v1"></script>
   <script src="assets/js/notes/zettel-comments.js?v=20261002"></script>
   <script src="../AleriaAlmanach/modules/icon-directory/icon-directory-data.js"></script>
   <script src="../Karten/assets/js/media/media-assets.registry.js"></script>
-  <script src="assets/js/media/notice-media-model.js?v=20261002"></script>
+  <script src="assets/js/media/notice-media-model.js?v=20261020-image-framing-v1"></script>
   <script src="assets/js/media/notice-media-upload.js?v=20261002"></script>
   <script src="assets/js/media/notice-media-picker.js?v=20261002"></script>
-  <script src="assets/js/notes/zettel-document-views.js?v=20261002"></script>
-  <script src="assets/js/notes/zettel-scroll-views.js?v=20261002"></script>
-  <script src="assets/js/notes/zettel-editor.js?v=20261002"></script>
-  <script src="assets/js/notes/zettel-board.js?v=20261002"></script>
+  <script src="assets/js/notes/notice-stacks.js?v=20261021-wanted-v1"></script>
+  <script src="assets/js/notes/notice-text-layout.js?v=20261020-notices-v2"></script>
+  <script src="../AleriaAlmanach/modules/language/language-script-display.js?v=20260919-laerelis-v1"></script>
+  <script src="../AleriaAlmanach/modules/language/language-script-registry.js?v=20261020-notice-fonts-v1"></script>
+  <script src="assets/js/notes/zettel-document-views.js?v=20261020-notices-v2"></script>
+  <script src="assets/js/notes/zettel-scroll-views.js?v=20261020-notices-v2"></script>
+  <script src="assets/js/notes/notice-reader.js?v=20261021-wanted-v1"></script>
+  <script src="assets/js/editor/notice-stack-editor.js?v=20261021-wanted-v1"></script>
+  <script src="assets/js/notes/zettel-editor.js?v=20261020-notice-fonts-v1"></script>
+  <script src="assets/js/notes/zettel-board.js?v=20261021-wanted-v1"></script>
   <script src="assets/js/data/notice-data-manager.js?v=20261002"></script>
-  <script src="assets/js/editor/notice-editor.js?v=20261002"></script>
+  <script src="assets/js/editor/notice-editor.js?v=20261021-wanted-v1"></script>
   <script src="assets/js/core/tafel-publish-ui.js?v=20261002"></script>
-  <script src="assets/js/core/tafel-actions.js?v=20261002"></script>
-  <script src="assets/js/integrations/orte-notice-bridge.js?v=20261002"></script>
-  <script src="assets/js/core/tafel-bootstrap.js?v=20261002"></script>
+  <script src="assets/js/core/tafel-actions.js?v=20261021-wanted-v1"></script>
+  <script src="assets/js/integrations/orte-notice-bridge.js?v=20261021-wanted-v1"></script>
+  <script type="module" src="assets/js/core/tafel-bootstrap.js?v=20261021-wanted-v1"></script>
 </body>
 </html>

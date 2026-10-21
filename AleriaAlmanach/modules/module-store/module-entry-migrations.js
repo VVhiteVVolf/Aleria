@@ -7,12 +7,18 @@ function migrateModuleEntryContent(entry) {
   const landing = typeof AleriaLandingModel !== 'undefined'
     ? AleriaLandingModel.migrateGroupLandingEntry(migrated)
     : migrated;
-  return globalThis.AleriaEconomy?.applyPriceReview(landing) || landing;
+  const gang = typeof migrateZitteraaleEntry === 'function' ? migrateZitteraaleEntry(landing) : landing;
+  const household = typeof migrateHouseholdWorkplaceEntry === 'function'
+    ? migrateHouseholdWorkplaceEntry(gang) : gang;
+  return globalThis.AleriaEconomy?.applyPriceReview(household) || household;
 }
 
 function migrateModuleEntryForSection(entry, section) {
   const migrated = typeof AleriaLandingModel !== 'undefined'
     ? AleriaLandingModel.migrateGroupLandingEntry(entry, { tab: section?.tab || section?.key || '' })
     : entry;
-  return globalThis.AleriaEconomy?.upgradeEntry(migrated, section) || migrated;
+  const gang = typeof migrateZitteraaleEntry === 'function' ? migrateZitteraaleEntry(migrated) : migrated;
+  const household = typeof migrateHouseholdWorkplaceEntry === 'function'
+    ? migrateHouseholdWorkplaceEntry(gang) : gang;
+  return globalThis.AleriaEconomy?.upgradeEntry(household, section) || household;
 }

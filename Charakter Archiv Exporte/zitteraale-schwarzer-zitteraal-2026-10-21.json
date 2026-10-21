@@ -1,0 +1,176 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-10-21T00:00:00Z",
+  "assignedTab": "Schwarze Zitteraale",
+  "character": {
+    "id": "zitteraale-schwarzer-zitteraal",
+    "name": "Der Schwarze Zitteraal",
+    "aliases": [],
+    "title": "Bandenhaupt · letzter Befehl",
+    "fraktion": "Schwarze Zitteraale",
+    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/schwarzer-zitteraal.png",
+    "bio": "Einst ein Krieger im Dienst der Illysywen. Er überlebte deren Untergang im Krieg von 1720 und sammelte später Versprengte und Deserteure. Aus der verlorenen Gefolgschaft formte er eine Bande, deren Beutezüge seinen eigenen Machtanspruch nähren.\n\nBeherrscht, charismatisch und berechnend. Spricht leise und lässt andere auf seine Antwort warten. Abmachungen gelten ihm, solange sie seinem Anspruch dienen.\n\nWählt Ziele und Rückzugswege, verteilt Beute und hält die Rudelführer durch Abhängigkeit und Furcht zusammen. Sein Morgenstern Donnergrollen und der Hengst Zunder machen ihn im offenen Gefecht erkennbar.",
+    "status": "Gesucht",
+    "createdAt": "2026-10-21T00:00:00Z",
+    "updatedAt": "2026-10-21T00:00:00Z",
+    "archived": false,
+    "genealogy": {
+      "sex": "male",
+      "birth": "1699",
+      "status": "alive",
+      "relationships": {
+        "parents": [],
+        "partners": [],
+        "children": []
+      }
+    },
+    "imageSets": [
+      {
+        "id": "standard",
+        "name": "Standard",
+        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/schwarzer-zitteraal.png",
+        "emotes": []
+      }
+    ],
+    "activeImageSetId": "standard",
+    "imageSetSchemaVersion": 1,
+    "inventory": {
+      "title": "Ausrüstung des Schwarzen Zitteraals",
+      "name": "Der Schwarze Zitteraal",
+      "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/schwarzer-zitteraal.png",
+      "portraitFormat": "portrait",
+      "portraitFit": "cover",
+      "money": {
+        "gold": 0,
+        "silver": 0,
+        "copper": 0,
+        "pfennig": 0,
+        "totalCopper": 0
+      },
+      "moneyNotice": "Kein frei verfügbarer Münzbestand festgelegt.",
+      "categories": [
+        {
+          "id": "weapon",
+          "label": "Waffen"
+        },
+        {
+          "id": "armor",
+          "label": "Rüstungen"
+        },
+        {
+          "id": "companion",
+          "label": "Reittier"
+        }
+      ],
+      "items": [
+        {
+          "id": "zitteraal-donnergrollen",
+          "instanceId": "zitteraal-donnergrollen",
+          "name": "Donnergrollen",
+          "category": "weapon",
+          "type": "Morgenstern",
+          "quantity": "1",
+          "description": "Ein starrer dunkler Morgenstern mit schwerem Stachelkopf. Aus dem Besitz eines Illysywen-Ritters überliefert; Erzählungen über Funken belegen keine verlässliche Verzauberung.",
+          "image": "/AleriaAlmanach/assets/schwarze-zitteraale/items/donnergrollen.png",
+          "imageFormat": "square",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "ownerCharacterId": "zitteraale-schwarzer-zitteraal",
+          "ownerCharacterName": "Der Schwarze Zitteraal",
+          "itemStorageMode": "character",
+          "equipped": true,
+          "templateId": "",
+          "itemDbKey": "",
+          "attributes": [],
+          "infoRows": [
+            {
+              "label": "Herkunft",
+              "value": "Illysywen · überlieferte Beutewaffe"
+            },
+            {
+              "label": "Magie",
+              "value": "Nicht bestätigt"
+            },
+            {
+              "label": "Alter Schadensvermerk",
+              "value": "8"
+            }
+          ]
+        },
+        {
+          "id": "zitteraal-zitteraal-panzer",
+          "instanceId": "zitteraal-zitteraal-panzer",
+          "name": "Zitteraal-Plattenpanzer",
+          "category": "armor",
+          "type": "Plattenpanzer",
+          "quantity": "1",
+          "description": "Dunkler Plattenpanzer mit goldenen Kanten und Aalzeichen. Der behauptete Tenebrium-Anteil ist nicht belegt; daraus wird kein magischer Schutz abgeleitet.",
+          "image": "/AleriaAlmanach/assets/schwarze-zitteraale/items/zitteraal-panzer.png",
+          "imageFormat": "square",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "ownerCharacterId": "zitteraale-schwarzer-zitteraal",
+          "ownerCharacterName": "Der Schwarze Zitteraal",
+          "itemStorageMode": "character",
+          "equipped": true,
+          "templateId": "",
+          "itemDbKey": "",
+          "attributes": [],
+          "infoRows": [
+            {
+              "label": "Material",
+              "value": "Dunkle Legierung · Zusammensetzung unbestätigt"
+            },
+            {
+              "label": "Alter Schutzvermerk",
+              "value": "25"
+            }
+          ]
+        },
+        {
+          "id": "zitteraal-zunder",
+          "instanceId": "zitteraal-zunder",
+          "name": "Zunder",
+          "category": "companion",
+          "type": "Rhyfel-Hengst",
+          "quantity": "1",
+          "description": "Das Reittier des Schwarzen Zitteraals. Kommt auf den gerufenen Namen Zunder; an Lärm und bewaffnete Reiter gewöhnt.",
+          "image": "/AleriaAlmanach/assets/schwarze-zitteraale/zunder.png",
+          "imageFormat": "portrait",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "ownerCharacterId": "zitteraale-schwarzer-zitteraal",
+          "ownerCharacterName": "Der Schwarze Zitteraal",
+          "itemStorageMode": "character",
+          "equipped": false,
+          "templateId": "",
+          "itemDbKey": "",
+          "attributes": [],
+          "infoRows": [],
+          "creatureId": "companion-zitteraal-zunder",
+          "registerCategory": "pferde"
+        }
+      ],
+      "companions": [
+        {
+          "id": "companion-zitteraal-zunder",
+          "creatureId": "companion-zitteraal-zunder",
+          "inventoryItemId": "zitteraal-zunder",
+          "name": "Zunder",
+          "species": "Rhyfel-Hengst",
+          "role": "Reittier",
+          "image": "/AleriaAlmanach/assets/schwarze-zitteraale/zunder.png",
+          "imageFormat": "portrait",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "summary": "Breitschultriger dunkelbrauner Rhyfel-Hengst mit schwarzer Mähne und dichtem Fesselbehang.",
+          "description": "Das Reittier des Schwarzen Zitteraals. Kommt auf den gerufenen Namen Zunder; an Lärm und bewaffnete Reiter gewöhnt.",
+          "status": "Gesund",
+          "attributes": [],
+          "infoRows": []
+        }
+      ]
+    }
+  }
+}

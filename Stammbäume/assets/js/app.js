@@ -1,4 +1,5 @@
 import { HOUSE_ARWYDD_FAMILY } from './data/house-arwydd-family.js';
+import { configureFamilyEmbedView } from './modules/family-embed/family-embed-view.js';
 import { RETIRED_FAMILY_IDS } from './data/families.registry.js?v=20261016-eleganz-v1';
 import { createFirebaseClient } from './modules/firebase-platform/firebase-client.js';
 import { createLocalImageDraftRepository } from './modules/family-assets/local-image-draft-repository.js';
@@ -23,6 +24,7 @@ import { createFamilyStore } from './state/family-store.js';
 import { createAppController } from './ui/app-controller.js?v=20261016-eleganz-v1';
 
 const requestedQuery = new URLSearchParams(globalThis.location.search);
+configureFamilyEmbedView({ documentRef: document, locationRef: globalThis.location });
 const requestedFamilyId = normalizeFamilyId(requestedQuery.get('family'));
 const requestedPersonId = requestedQuery.get('person');
 

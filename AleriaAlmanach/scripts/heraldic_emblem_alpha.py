@@ -8,7 +8,7 @@ import numpy as np
 from PIL import Image, ImageDraw
 
 ROOT = Path(__file__).resolve().parents[2]
-def normalize_emblem_alpha(path):
+def normalize_emblem_alpha(path, *, fill_enclosed=True):
     path = Path(path).resolve()
     path.relative_to(ROOT)
     source = Image.open(path).convert('RGBA')
@@ -20,8 +20,12 @@ def normalize_emblem_alpha(path):
         raise ValueError(f'Wappenmitte unerwartet transparent: {path.name}')
     ImageDraw.floodfill(mask, center, 127)
     connected = Image.fromarray(np.where(np.array(mask) == 127, 255, 0).astype('uint8')).copy()
-    ImageDraw.floodfill(connected, (0, 0), 128)
-    alpha = np.where(np.array(connected) == 128, 0, 255).astype('uint8')
+    if fill_enclosed:
+        ImageDraw.floodfill(connected, (0, 0), 128)
+        alpha = np.where(np.array(connected) == 128, 0, 255).astype('uint8')
+    else:
+        # Hanging signs retain the open spaces inside their iron suspension.
+        alpha = np.array(connected).astype('uint8')
     pixels[:, :, 3] = alpha
     assert np.array_equal(pixels[:, :, :3], rgb)
     assert set(np.unique(alpha)) == {0, 255}

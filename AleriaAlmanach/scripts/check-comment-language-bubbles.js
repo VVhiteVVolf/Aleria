@@ -69,6 +69,7 @@ function loadScript(relativePath) {
 loadScript('../Fonts/Rheunwaith-Font-1.000/rheunwaith.js');
 loadScript('../Fonts/Karnrith-Font-2.000/karnrith.js');
 loadScript('modules/language/language-script-display.js');
+loadScript('modules/language/language-script-registry.js');
 loadScript('modules/comments/comments-markup.js');
 loadScript('modules/comments/comments-spell-fonts.js');
 loadScript('modules/comments/comments-render.js');

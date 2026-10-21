@@ -16,14 +16,18 @@
     reise: { kicker: 'Auf den Straßen Alerias', label: 'Reise & Geleit', symbol: '✥' },
     gilde: { kicker: 'Handwerk, Ehre und Gemeinschaft', label: 'Gildenaufruf', symbol: '⚒' },
     fund: { kicker: 'Dem rechtmäßigen Eigentümer', label: 'Fundanzeige', symbol: '🗝︎' },
+    hilfsgesuch: { kicker: 'An die guten Leute nebenan', label: 'Hilfe erbeten', symbol: '✎' },
+    turnier: { kicker: 'Ehre dem besten Streiter', label: 'Turnier & Wettstreit', symbol: '♜' },
+    auktion: { kicker: 'Zum Zuschlag ausgerufen', label: 'Öffentliche Versteigerung', symbol: '⚖' },
   };
 
-  function facts(rows) {
+  function facts(rows, notice = {}) {
     const filled = (rows || []).filter(row => String(row.v ?? '').trim());
     if (!filled.length) return '';
-    return `<dl class="notice-facts">${filled.map(row => {
+    return `<dl class="notice-facts" data-notice-reference>${filled.map(row => {
       const stars = Math.max(0, Math.min(5, parseInt(row.v, 10) || 0));
-      const value = row.type === 'stars' ? `<span class="notice-stars" aria-label="${stars} von 5 Sternen">${'★'.repeat(stars)}${'☆'.repeat(5 - stars)}</span>` : esc(row.v);
+      const value = row.type === 'stars' ? `<span class="notice-stars" aria-label="${stars} von 5 Sternen">${'★'.repeat(stars)}${'☆'.repeat(5 - stars)}</span>`
+        : /^(belohnung|kopfgeld|entlohnung|preisgeld)$/i.test(row.k) && window.TafelNoticeRewards ? window.TafelNoticeRewards.render(notice, row.v) : esc(row.v);
       return `<div class="notice-fact"><dt>${esc(row.k || 'Hinweis')}</dt><dd>${value}</dd></div>`;
     }).join('')}</dl>`;
   }
@@ -46,8 +50,9 @@
     </header>`;
   }
 
-  function copy(text) {
-    return `<div class="notice-copy">${rich(text) || '<p class="notice-empty">Der Wortlaut wird noch ergänzt.</p>'}</div>`;
+  function copy(text, bounded = true) {
+    const html = rich(text) || '<p class="notice-empty">Der Wortlaut wird noch ergänzt.</p>';
+    return `<div class="notice-copy">${bounded && window.TafelNoticeTextLayout ? window.TafelNoticeTextLayout.markup(html) : html}</div>`;
   }
 
   function illustration(z, field = 'bild') {
@@ -63,14 +68,15 @@
       handel: ['Preis'], warnung: ['Gefahr', 'Gebiet'], reise: ['Aufbruch', 'Ziel'],
       gilde: ['Gesucht'], fund: ['Fundstück'], einladung: ['Wann', 'Wo'],
       ankuendigung: ['Datum', 'Ort'], erlass: ['Gültig ab', 'Geltungsbereich'],
+      turnier: ['Wann', 'Preisgeld'], auktion: ['Losnummer', 'Mindestgebot'],
     }[z.typ] || [];
     const prominent = row => keyFields.some(key => key.toLocaleLowerCase('de') === String(row.k).trim().toLocaleLowerCase('de'));
     const rows = z.table || [];
-    const highlight = facts(rows.filter(prominent));
+    const highlight = facts(rows.filter(prominent), z);
     return `${highlight ? `<div class="notice-highlight">${highlight}</div>` : ''}
       <div class="notice-proclamation${hasMedia(z, 'bild') || hasMedia(z, 'portrait') ? ' has-illustration' : ''}">
         ${hasMedia(z, 'bild') || hasMedia(z, 'portrait') ? `<div class="notice-artwork">${illustration(z)}${illustration(z, 'portrait')}</div>` : ''}
-        <div class="notice-wording">${copy(z.text)}${facts(rows.filter(row => !prominent(row)))}</div>
+        <div class="notice-wording">${facts(rows.filter(row => !prominent(row)), z)}${copy(z.text, rows.some(row => row.v))}</div>
       </div>`;
   }
 
@@ -78,13 +84,13 @@
     const name = (z.table || []).find(row => /^name$/i.test(row.k))?.v;
     return `<section class="notice-subject">
       <figure class="notice-subject-portrait">${media(z, 'portrait', { label: name || 'Gesuchte Person, Tier oder Gegenstand', symbol: '♙' })}<figcaption>${esc(name || 'Hinweise erbeten')}</figcaption></figure>
-      <div><span class="notice-eyebrow">Auf einen Blick</span>${facts(z.table) || '<p class="notice-empty">Kennzeichen und Hinweise folgen.</p>'}</div>
+      <div><span class="notice-eyebrow">Auf einen Blick</span>${facts(z.table, z) || '<p class="notice-empty">Kennzeichen und Hinweise folgen.</p>'}</div>
     </section>${illustration(z)}${copy(z.text)}`;
   }
 
   function newspaper(z) {
     const articles = z.artikel?.length ? z.artikel : [{ titel: z.title, text: z.text }];
-    return `${facts(z.table)}${z.datum ? `<p class="notice-news-date">${esc(z.datum)}</p>` : ''}${illustration(z)}${illustration(z, 'portrait')}
+    return `${facts(z.table, z)}${z.datum ? `<p class="notice-news-date">${esc(z.datum)}</p>` : ''}${illustration(z)}${illustration(z, 'portrait')}
       <div class="notice-news-articles">${articles.map((article, index) => `<section class="notice-news-article"><span class="notice-eyebrow">${String(index + 1).padStart(2, '0')} / ${esc(z.verlag || 'Der Stadtbote')}</span><h3>${esc(article.titel || `Artikel ${index + 1}`)}</h3>${copy(article.text)}</section>`).join('')}</div>`;
   }
 
@@ -94,7 +100,7 @@
     const title = type === 'zeitung' ? z.verlag || z.verfasserName || z.title : z.title;
     const body = type === 'vermisst' ? missing(z) : type === 'zeitung' ? newspaper(z)
       : proclamation(z);
-    return `<article class="zettel-rich-content notice-document notice-document--${type}" style="--notice-portrait-width:${portraitWidth(z)}px">
+    return `<article class="zettel-rich-content notice-document notice-document--${type}" data-notice-layout style="--notice-portrait-width:${portraitWidth(z)}px">
       ${header(z, style, title)}<div class="notice-document-body">${body}</div>${footer(z)}</article>`;
   }
 
@@ -102,13 +108,13 @@
 
   function wanted(z, person, page, total) {
     const bounty = (person.table || []).find(row => /kopfgeld/i.test(row.k))?.v;
-    return `<article class="zettel-rich-content notice-document notice-document--steckbrief" style="--notice-portrait-width:${portraitWidth(z)}px">
+    return `<article class="zettel-rich-content notice-document notice-document--steckbrief" data-notice-layout style="--notice-portrait-width:${portraitWidth(z)}px">
       ${header({ ...z, title: 'Gesucht', untertitel: person.untertitel || z.untertitel }, styles.steckbrief)}
       <div class="notice-document-body"><section class="notice-subject">
         <figure class="notice-subject-portrait">${media(person, 'portrait', { label: person.title || z.title || 'Gesuchte Person', symbol: '♙' })}<figcaption>Zur Ergreifung ausgeschrieben</figcaption></figure>
-        <div><h3 class="notice-person-name">${esc(person.title || z.title || 'Unbekannte Person')}</h3>${facts(person.table)}</div>
+        <div><h3 class="notice-person-name">${esc(person.title || z.title || 'Unbekannte Person')}</h3>${facts(person.table, z)}</div>
       </section>${illustration(z)}${copy(person.text || z.text)}
-      <div class="notice-reward"><span class="notice-eyebrow">Ausgesetztes Kopfgeld</span><strong>${esc(bounty || 'nach Maßgabe der Obrigkeit')}</strong></div></div>
+      <div class="notice-reward"><span class="notice-eyebrow">Ausgesetztes Kopfgeld</span><strong>${window.TafelNoticeRewards ? window.TafelNoticeRewards.render(z, bounty || 'nach Maßgabe der Obrigkeit') : esc(bounty || 'nach Maßgabe der Obrigkeit')}</strong></div></div>
       ${footer(z)}${total > 1 ? `<nav class="wanted-pages" aria-label="Gesuchte Personen"><button type="button" data-action="zettel-set-page" data-zettel-id="${esc(z.id)}" data-page="${page - 1}" ${page === 0 ? 'disabled' : ''}>Zurück</button><span>Steckbrief ${page + 1} von ${total}</span><button type="button" data-action="zettel-set-page" data-zettel-id="${esc(z.id)}" data-page="${page + 1}" ${page === total - 1 ? 'disabled' : ''}>Weiter</button></nav>` : ''}</article>`;
   }
 

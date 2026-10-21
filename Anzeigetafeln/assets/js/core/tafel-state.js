@@ -10,6 +10,8 @@
   const state = {
     schemaVersion: 2,
     zettel: [],
+    appliedAuthoredNoticeIds: [],
+    appliedAuthoredUpdateIds: [],
     regionIcon: config.regionIcon || '',
     regionTitle: config.title || 'Anzeigetafel',
     boardImages: {},
@@ -22,8 +24,12 @@
 
   function normalizeNotice(notice) {
     if (!notice || typeof notice !== 'object') return null;
+    const { stackId, stackOrder, noticeGroupId, ...fields } = notice;
     return {
-      ...notice,
+      ...fields,
+      ...(typeof stackId === 'string' && stackId.trim() ? { stackId: stackId.trim().slice(0, 200) } : {}),
+      ...(typeof noticeGroupId === 'string' && noticeGroupId.trim() ? { noticeGroupId: noticeGroupId.trim().slice(0, 200) } : {}),
+      ...(Number.isFinite(Number(stackOrder)) ? { stackOrder: Math.max(0, Math.trunc(Number(stackOrder))) } : {}),
       id: String(notice.id || ''),
       typ: String(notice.typ || 'notiz'),
       x: Math.max(0, Math.min(1, Number(notice.x) || 0)),
@@ -41,6 +47,8 @@
     return clone({
       schemaVersion: 2,
       zettel: state.zettel,
+      ...(state.appliedAuthoredNoticeIds.length ? { appliedAuthoredNoticeIds: state.appliedAuthoredNoticeIds } : {}),
+      ...(state.appliedAuthoredUpdateIds.length ? { appliedAuthoredUpdateIds: state.appliedAuthoredUpdateIds } : {}),
       regionIcon: state.regionIcon,
       regionTitle: state.regionTitle,
       boardImages: state.boardImages,
@@ -52,6 +60,10 @@
     if (!incoming || typeof incoming !== 'object') return;
     if (Array.isArray(incoming.zettel)) {
       state.zettel = incoming.zettel.map(normalizeNotice).filter(notice => notice?.id);
+      state.appliedAuthoredNoticeIds = Array.isArray(incoming.appliedAuthoredNoticeIds)
+        ? [...new Set(incoming.appliedAuthoredNoticeIds.filter(id => typeof id === 'string' && id))] : [];
+      state.appliedAuthoredUpdateIds = Array.isArray(incoming.appliedAuthoredUpdateIds)
+        ? [...new Set(incoming.appliedAuthoredUpdateIds.filter(id => typeof id === 'string' && id))] : [];
     }
     if (incoming.regionIcon !== undefined) state.regionIcon = String(incoming.regionIcon || '');
     if (incoming.regionTitle) state.regionTitle = String(incoming.regionTitle);

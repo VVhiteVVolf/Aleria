@@ -4,9 +4,9 @@
   "moneyUnit": "Kupfertaler",
   "method": "Interne Konsistenzprüfung einer fiktiven Wirtschaft. Vergleichsskala: 24 KT sparsamer Vierpersonenbedarf + 3 KT freie Mittel; 27 KT Hafenlohn bei sechs Diensttagen. Keine historische Preisstatistik.",
   "summary": {
-    "rows": 1145,
+    "rows": 1278,
     "adjusted": 144,
-    "retained": 794,
+    "retained": 927,
     "notOffered": 205,
     "unavailable": 2,
     "eligibleVenues": 15,
@@ -200,6 +200,20 @@
       "reason": "Begehbarer Verkaufsort mit Güterangebot."
     },
     {
+      "id": "lothaires-arkaneum",
+      "title": "Lothaires Arkaneum",
+      "tab": "Völker & Kulturen",
+      "path": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Bannkreis Gwynthor",
+        "Gwynthor-Stadt"
+      ],
+      "eligible": false,
+      "reason": "Kalkulation für diesen Ort ausdrücklich zurückgestellt."
+    },
+    {
       "id": "gwynthor-gwregysdu-lagerhaeuser",
       "title": "Die Lagerhäuser der Gwregysdu",
       "tab": "Völker & Kulturen",
@@ -243,6 +257,21 @@
       ],
       "eligible": true,
       "reason": "Begehbarer Verkaufsort mit Güterangebot."
+    },
+    {
+      "id": "gwynthor-die-rote-klaue",
+      "title": "Die rote Klaue",
+      "tab": "Völker & Kulturen",
+      "path": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Bannkreis Gwynthor",
+        "Gwynthor-Stadt",
+        "Die Klingende Münze - Gwynthor"
+      ],
+      "eligible": false,
+      "reason": "Kalkulation für diesen Ort ausdrücklich zurückgestellt."
     },
     {
       "id": "windreiter",
@@ -1959,6 +1988,438 @@
       "reason": "Seltene Wirkung, Material, Beschaffung oder Rechtslage begründen starke Abstände. Mengen und Qualität müssen für direkte Vergleiche übereinstimmen."
     },
     {
+      "source": "Alchemist",
+      "id": "standard:alchemist:kamille",
+      "name": "Kamille",
+      "unit": "20 g getrocknete Blüten",
+      "price": {
+        "minCopper": 0.8,
+        "maxCopper": 0.8
+      },
+      "category": "alchemie",
+      "before": null,
+      "after": [
+        0.8,
+        0.8
+      ],
+      "decision": "beibehalten",
+      "reason": "Seltene Wirkung, Material, Beschaffung oder Rechtslage begründen starke Abstände. Mengen und Qualität müssen für direkte Vergleiche übereinstimmen."
+    },
+    {
+      "source": "Alchemist",
+      "id": "standard:alchemist:salbei",
+      "name": "Salbei",
+      "unit": "20 g getrocknete Blätter",
+      "price": {
+        "minCopper": 0.8,
+        "maxCopper": 0.8
+      },
+      "category": "alchemie",
+      "before": null,
+      "after": [
+        0.8,
+        0.8
+      ],
+      "decision": "beibehalten",
+      "reason": "Seltene Wirkung, Material, Beschaffung oder Rechtslage begründen starke Abstände. Mengen und Qualität müssen für direkte Vergleiche übereinstimmen."
+    },
+    {
+      "source": "Alchemist",
+      "id": "standard:alchemist:minze",
+      "name": "Minze",
+      "unit": "20 g getrocknete Blätter",
+      "price": {
+        "minCopper": 0.6,
+        "maxCopper": 0.6
+      },
+      "category": "alchemie",
+      "before": null,
+      "after": [
+        0.6,
+        0.6
+      ],
+      "decision": "beibehalten",
+      "reason": "Seltene Wirkung, Material, Beschaffung oder Rechtslage begründen starke Abstände. Mengen und Qualität müssen für direkte Vergleiche übereinstimmen."
+    },
+    {
+      "source": "Alchemist",
+      "id": "standard:alchemist:lavendel",
+      "name": "Lavendel",
+      "unit": "20 g getrocknete Blüten",
+      "price": {
+        "minCopper": 1,
+        "maxCopper": 1
+      },
+      "category": "alchemie",
+      "before": null,
+      "after": [
+        1,
+        1
+      ],
+      "decision": "beibehalten",
+      "reason": "Seltene Wirkung, Material, Beschaffung oder Rechtslage begründen starke Abstände. Mengen und Qualität müssen für direkte Vergleiche übereinstimmen."
+    },
+    {
+      "source": "Alchemist",
+      "id": "standard:alchemist:ringelblume",
+      "name": "Ringelblume",
+      "unit": "20 g getrocknete Blüten",
+      "price": {
+        "minCopper": 1,
+        "maxCopper": 1
+      },
+      "category": "alchemie",
+      "before": null,
+      "after": [
+        1,
+        1
+      ],
+      "decision": "beibehalten",
+      "reason": "Seltene Wirkung, Material, Beschaffung oder Rechtslage begründen starke Abstände. Mengen und Qualität müssen für direkte Vergleiche übereinstimmen."
+    },
+    {
+      "source": "Alchemist",
+      "id": "standard:alchemist:beinwellwurzel",
+      "name": "Beinwellwurzel",
+      "unit": "50 g getrocknete Wurzel",
+      "price": {
+        "minCopper": 1.5,
+        "maxCopper": 1.5
+      },
+      "category": "alchemie",
+      "before": null,
+      "after": [
+        1.5,
+        1.5
+      ],
+      "decision": "beibehalten",
+      "reason": "Seltene Wirkung, Material, Beschaffung oder Rechtslage begründen starke Abstände. Mengen und Qualität müssen für direkte Vergleiche übereinstimmen."
+    },
+    {
+      "source": "Alchemist",
+      "id": "standard:alchemist:bienenwachs",
+      "name": "Bienenwachs",
+      "unit": "100 g",
+      "price": {
+        "minCopper": 1.5,
+        "maxCopper": 1.5
+      },
+      "category": "alchemie",
+      "before": null,
+      "after": [
+        1.5,
+        1.5
+      ],
+      "decision": "beibehalten",
+      "reason": "Seltene Wirkung, Material, Beschaffung oder Rechtslage begründen starke Abstände. Mengen und Qualität müssen für direkte Vergleiche übereinstimmen."
+    },
+    {
+      "source": "Alchemist",
+      "id": "standard:alchemist:baumharz",
+      "name": "Baumharz",
+      "unit": "50 g",
+      "price": {
+        "minCopper": 1,
+        "maxCopper": 1
+      },
+      "category": "alchemie",
+      "before": null,
+      "after": [
+        1,
+        1
+      ],
+      "decision": "beibehalten",
+      "reason": "Seltene Wirkung, Material, Beschaffung oder Rechtslage begründen starke Abstände. Mengen und Qualität müssen für direkte Vergleiche übereinstimmen."
+    },
+    {
+      "source": "Alchemist",
+      "id": "standard:alchemist:alchemieschatulle",
+      "name": "Alchemie-Zubehörschatulle",
+      "unit": "1 bestückte Schatulle",
+      "price": {
+        "minCopper": 28,
+        "maxCopper": 28
+      },
+      "category": "alchemie",
+      "before": null,
+      "after": [
+        28,
+        28
+      ],
+      "decision": "beibehalten",
+      "reason": "Seltene Wirkung, Material, Beschaffung oder Rechtslage begründen starke Abstände. Mengen und Qualität müssen für direkte Vergleiche übereinstimmen."
+    },
+    {
+      "source": "Alchemist",
+      "id": "standard:alchemist:glasflaeschchen",
+      "name": "Glasfläschchen",
+      "unit": "1 Fläschchen · 50 ml",
+      "price": {
+        "minCopper": 1.5,
+        "maxCopper": 1.5
+      },
+      "category": "alchemie",
+      "before": null,
+      "after": [
+        1.5,
+        1.5
+      ],
+      "decision": "beibehalten",
+      "reason": "Seltene Wirkung, Material, Beschaffung oder Rechtslage begründen starke Abstände. Mengen und Qualität müssen für direkte Vergleiche übereinstimmen."
+    },
+    {
+      "source": "Alchemist",
+      "id": "standard:alchemist:phiolen-holzfassung",
+      "name": "Drei Phiolen in Holzfassung",
+      "unit": "3 leere Phiolen · je 20 ml",
+      "price": {
+        "minCopper": 6,
+        "maxCopper": 6
+      },
+      "category": "alchemie",
+      "before": null,
+      "after": [
+        6,
+        6
+      ],
+      "decision": "beibehalten",
+      "reason": "Seltene Wirkung, Material, Beschaffung oder Rechtslage begründen starke Abstände. Mengen und Qualität müssen für direkte Vergleiche übereinstimmen."
+    },
+    {
+      "source": "Alchemist",
+      "id": "standard:alchemist:laborpapier",
+      "name": "Papier",
+      "unit": "10 Blatt",
+      "price": {
+        "minCopper": 0.5,
+        "maxCopper": 0.5
+      },
+      "category": "alchemie",
+      "before": null,
+      "after": [
+        0.5,
+        0.5
+      ],
+      "decision": "beibehalten",
+      "reason": "Seltene Wirkung, Material, Beschaffung oder Rechtslage begründen starke Abstände. Mengen und Qualität müssen für direkte Vergleiche übereinstimmen."
+    },
+    {
+      "source": "Alchemist",
+      "id": "standard:alchemist:labortinte",
+      "name": "Tinte",
+      "unit": "1 Tintenfass · 30 ml",
+      "price": {
+        "minCopper": 1,
+        "maxCopper": 1
+      },
+      "category": "alchemie",
+      "before": null,
+      "after": [
+        1,
+        1
+      ],
+      "decision": "beibehalten",
+      "reason": "Seltene Wirkung, Material, Beschaffung oder Rechtslage begründen starke Abstände. Mengen und Qualität müssen für direkte Vergleiche übereinstimmen."
+    },
+    {
+      "source": "Alchemist",
+      "id": "standard:alchemist:feuerstein",
+      "name": "Feuerstein",
+      "unit": "1 Stück",
+      "price": {
+        "minCopper": 1,
+        "maxCopper": 1
+      },
+      "category": "alchemie",
+      "before": null,
+      "after": [
+        1,
+        1
+      ],
+      "decision": "beibehalten",
+      "reason": "Seltene Wirkung, Material, Beschaffung oder Rechtslage begründen starke Abstände. Mengen und Qualität müssen für direkte Vergleiche übereinstimmen."
+    },
+    {
+      "source": "Alchemist",
+      "id": "standard:alchemist:labormoerser",
+      "name": "Mörser & Stößel",
+      "unit": "1 Satz",
+      "price": {
+        "minCopper": 10,
+        "maxCopper": 10
+      },
+      "category": "alchemie",
+      "before": null,
+      "after": [
+        10,
+        10
+      ],
+      "decision": "beibehalten",
+      "reason": "Seltene Wirkung, Material, Beschaffung oder Rechtslage begründen starke Abstände. Mengen und Qualität müssen für direkte Vergleiche übereinstimmen."
+    },
+    {
+      "source": "Alchemist",
+      "id": "standard:alchemist:destillator",
+      "name": "Destillator",
+      "unit": "1 Aufbau",
+      "price": {
+        "minCopper": 85,
+        "maxCopper": 85
+      },
+      "category": "alchemie",
+      "before": null,
+      "after": [
+        85,
+        85
+      ],
+      "decision": "beibehalten",
+      "reason": "Seltene Wirkung, Material, Beschaffung oder Rechtslage begründen starke Abstände. Mengen und Qualität müssen für direkte Vergleiche übereinstimmen."
+    },
+    {
+      "source": "Alchemist",
+      "id": "standard:alchemist:kalzinator",
+      "name": "Kalzinator",
+      "unit": "1 Reisegerät · etwa 10 × 8 cm",
+      "price": {
+        "minCopper": 65,
+        "maxCopper": 65
+      },
+      "category": "alchemie",
+      "before": null,
+      "after": [
+        65,
+        65
+      ],
+      "decision": "beibehalten",
+      "reason": "Seltene Wirkung, Material, Beschaffung oder Rechtslage begründen starke Abstände. Mengen und Qualität müssen für direkte Vergleiche übereinstimmen."
+    },
+    {
+      "source": "Alchemist",
+      "id": "standard:alchemist:retorte",
+      "name": "Retorte",
+      "unit": "1 Stück · 250 ml",
+      "price": {
+        "minCopper": 12,
+        "maxCopper": 12
+      },
+      "category": "alchemie",
+      "before": null,
+      "after": [
+        12,
+        12
+      ],
+      "decision": "beibehalten",
+      "reason": "Seltene Wirkung, Material, Beschaffung oder Rechtslage begründen starke Abstände. Mengen und Qualität müssen für direkte Vergleiche übereinstimmen."
+    },
+    {
+      "source": "Alchemist",
+      "id": "standard:alchemist:alembik",
+      "name": "Alembik",
+      "unit": "1 Aufsatz",
+      "price": {
+        "minCopper": 30,
+        "maxCopper": 30
+      },
+      "category": "alchemie",
+      "before": null,
+      "after": [
+        30,
+        30
+      ],
+      "decision": "beibehalten",
+      "reason": "Seltene Wirkung, Material, Beschaffung oder Rechtslage begründen starke Abstände. Mengen und Qualität müssen für direkte Vergleiche übereinstimmen."
+    },
+    {
+      "source": "Alchemist",
+      "id": "standard:alchemist:filtertuch",
+      "name": "Filtertuch",
+      "unit": "1 Tuch · 30 × 30 cm",
+      "price": {
+        "minCopper": 1.5,
+        "maxCopper": 1.5
+      },
+      "category": "alchemie",
+      "before": null,
+      "after": [
+        1.5,
+        1.5
+      ],
+      "decision": "beibehalten",
+      "reason": "Seltene Wirkung, Material, Beschaffung oder Rechtslage begründen starke Abstände. Mengen und Qualität müssen für direkte Vergleiche übereinstimmen."
+    },
+    {
+      "source": "Alchemist",
+      "id": "standard:alchemist:labortiegel",
+      "name": "Labortiegel",
+      "unit": "1 Tiegel · 20 ml",
+      "price": {
+        "minCopper": 4,
+        "maxCopper": 4
+      },
+      "category": "alchemie",
+      "before": null,
+      "after": [
+        4,
+        4
+      ],
+      "decision": "beibehalten",
+      "reason": "Seltene Wirkung, Material, Beschaffung oder Rechtslage begründen starke Abstände. Mengen und Qualität müssen für direkte Vergleiche übereinstimmen."
+    },
+    {
+      "source": "Alchemist",
+      "id": "standard:alchemist:trichter",
+      "name": "Glastrichter",
+      "unit": "1 Stück",
+      "price": {
+        "minCopper": 3,
+        "maxCopper": 3
+      },
+      "category": "alchemie",
+      "before": null,
+      "after": [
+        3,
+        3
+      ],
+      "decision": "beibehalten",
+      "reason": "Seltene Wirkung, Material, Beschaffung oder Rechtslage begründen starke Abstände. Mengen und Qualität müssen für direkte Vergleiche übereinstimmen."
+    },
+    {
+      "source": "Alchemist",
+      "id": "standard:alchemist:balkenwaage",
+      "name": "Feine Balkenwaage",
+      "unit": "1 Waage mit Gewichten",
+      "price": {
+        "minCopper": 24,
+        "maxCopper": 24
+      },
+      "category": "alchemie",
+      "before": null,
+      "after": [
+        24,
+        24
+      ],
+      "decision": "beibehalten",
+      "reason": "Seltene Wirkung, Material, Beschaffung oder Rechtslage begründen starke Abstände. Mengen und Qualität müssen für direkte Vergleiche übereinstimmen."
+    },
+    {
+      "source": "Alchemist",
+      "id": "standard:alchemist:trockensieb",
+      "name": "Trockensieb",
+      "unit": "1 Stück",
+      "price": {
+        "minCopper": 5,
+        "maxCopper": 5
+      },
+      "category": "alchemie",
+      "before": null,
+      "after": [
+        5,
+        5
+      ],
+      "decision": "beibehalten",
+      "reason": "Seltene Wirkung, Material, Beschaffung oder Rechtslage begründen starke Abstände. Mengen und Qualität müssen für direkte Vergleiche übereinstimmen."
+    },
+    {
       "source": "Arkanist",
       "id": "standard:arkanist:zauberstein",
       "name": "Zauberstein",
@@ -2227,6 +2688,582 @@
       "after": [
         1000,
         1000
+      ],
+      "decision": "beibehalten",
+      "reason": "Seltene Wirkung, Material, Beschaffung oder Rechtslage begründen starke Abstände. Mengen und Qualität müssen für direkte Vergleiche übereinstimmen."
+    },
+    {
+      "source": "Arkanist",
+      "id": "standard:arkanist:unverzauberter-stab",
+      "name": "Stab · unverzaubert",
+      "unit": "1 Stück",
+      "price": {
+        "minCopper": 12,
+        "maxCopper": 12
+      },
+      "category": "arkanes",
+      "before": null,
+      "after": [
+        12,
+        12
+      ],
+      "decision": "beibehalten",
+      "reason": "Seltene Wirkung, Material, Beschaffung oder Rechtslage begründen starke Abstände. Mengen und Qualität müssen für direkte Vergleiche übereinstimmen."
+    },
+    {
+      "source": "Arkanist",
+      "id": "standard:arkanist:unverzauberte-zauberkugel",
+      "name": "Zauberkugel · unverzaubert",
+      "unit": "1 Kugel · 10 cm",
+      "price": {
+        "minCopper": 40,
+        "maxCopper": 40
+      },
+      "category": "arkanes",
+      "before": null,
+      "after": [
+        40,
+        40
+      ],
+      "decision": "beibehalten",
+      "reason": "Seltene Wirkung, Material, Beschaffung oder Rechtslage begründen starke Abstände. Mengen und Qualität müssen für direkte Vergleiche übereinstimmen."
+    },
+    {
+      "source": "Arkanist",
+      "id": "standard:arkanist:leeres-zauberbuch",
+      "name": "Zauberbuch · leer",
+      "unit": "1 Buch · 120 Seiten",
+      "price": {
+        "minCopper": 18,
+        "maxCopper": 18
+      },
+      "category": "arkanes",
+      "before": null,
+      "after": [
+        18,
+        18
+      ],
+      "decision": "beibehalten",
+      "reason": "Seltene Wirkung, Material, Beschaffung oder Rechtslage begründen starke Abstände. Mengen und Qualität müssen für direkte Vergleiche übereinstimmen."
+    },
+    {
+      "source": "Arkanist",
+      "id": "standard:arkanist:unverzauberter-ring",
+      "name": "Ring · unverzaubert",
+      "unit": "1 Silberring",
+      "price": {
+        "minCopper": 16,
+        "maxCopper": 16
+      },
+      "category": "arkanes",
+      "before": null,
+      "after": [
+        16,
+        16
+      ],
+      "decision": "beibehalten",
+      "reason": "Seltene Wirkung, Material, Beschaffung oder Rechtslage begründen starke Abstände. Mengen und Qualität müssen für direkte Vergleiche übereinstimmen."
+    },
+    {
+      "source": "Arkanist",
+      "id": "standard:arkanist:unverzaubertes-amulett",
+      "name": "Amulett · unverzaubert",
+      "unit": "1 Silberamulett",
+      "price": {
+        "minCopper": 24,
+        "maxCopper": 24
+      },
+      "category": "arkanes",
+      "before": null,
+      "after": [
+        24,
+        24
+      ],
+      "decision": "beibehalten",
+      "reason": "Seltene Wirkung, Material, Beschaffung oder Rechtslage begründen starke Abstände. Mengen und Qualität müssen für direkte Vergleiche übereinstimmen."
+    },
+    {
+      "source": "Arkanist",
+      "id": "standard:arkanist:unverzaubertes-diadem",
+      "name": "Diadem · unverzaubert",
+      "unit": "1 Silberdiadem",
+      "price": {
+        "minCopper": 45,
+        "maxCopper": 45
+      },
+      "category": "arkanes",
+      "before": null,
+      "after": [
+        45,
+        45
+      ],
+      "decision": "beibehalten",
+      "reason": "Seltene Wirkung, Material, Beschaffung oder Rechtslage begründen starke Abstände. Mengen und Qualität müssen für direkte Vergleiche übereinstimmen."
+    },
+    {
+      "source": "Arkanist",
+      "id": "standard:arkanist:unverzauberte-schriftrolle",
+      "name": "Zauberschriftrolle · unverzaubert",
+      "unit": "1 leere Pergamentrolle",
+      "price": {
+        "minCopper": 4,
+        "maxCopper": 4
+      },
+      "category": "arkanes",
+      "before": null,
+      "after": [
+        4,
+        4
+      ],
+      "decision": "beibehalten",
+      "reason": "Seltene Wirkung, Material, Beschaffung oder Rechtslage begründen starke Abstände. Mengen und Qualität müssen für direkte Vergleiche übereinstimmen."
+    },
+    {
+      "source": "Arkanist",
+      "id": "standard:arkanist:runenkreide",
+      "name": "Runenkreide",
+      "unit": "5 Stifte",
+      "price": {
+        "minCopper": 1,
+        "maxCopper": 1
+      },
+      "category": "arkanes",
+      "before": null,
+      "after": [
+        1,
+        1
+      ],
+      "decision": "beibehalten",
+      "reason": "Seltene Wirkung, Material, Beschaffung oder Rechtslage begründen starke Abstände. Mengen und Qualität müssen für direkte Vergleiche übereinstimmen."
+    },
+    {
+      "source": "Arkanist",
+      "id": "standard:arkanist:gravurstichel",
+      "name": "Gravurstichel",
+      "unit": "1 Stück",
+      "price": {
+        "minCopper": 7,
+        "maxCopper": 7
+      },
+      "category": "arkanes",
+      "before": null,
+      "after": [
+        7,
+        7
+      ],
+      "decision": "beibehalten",
+      "reason": "Seltene Wirkung, Material, Beschaffung oder Rechtslage begründen starke Abstände. Mengen und Qualität müssen für direkte Vergleiche übereinstimmen."
+    },
+    {
+      "source": "Arkanist",
+      "id": "standard:arkanist:fokusfassung",
+      "name": "Leere Fokusfassung",
+      "unit": "1 Messingfassung",
+      "price": {
+        "minCopper": 8,
+        "maxCopper": 8
+      },
+      "category": "arkanes",
+      "before": null,
+      "after": [
+        8,
+        8
+      ],
+      "decision": "beibehalten",
+      "reason": "Seltene Wirkung, Material, Beschaffung oder Rechtslage begründen starke Abstände. Mengen und Qualität müssen für direkte Vergleiche übereinstimmen."
+    },
+    {
+      "source": "Arkanist",
+      "id": "standard:arkanist:kristallbeutel",
+      "name": "Gepolsterter Kristallbeutel",
+      "unit": "1 Beutel",
+      "price": {
+        "minCopper": 3,
+        "maxCopper": 3
+      },
+      "category": "arkanes",
+      "before": null,
+      "after": [
+        3,
+        3
+      ],
+      "decision": "beibehalten",
+      "reason": "Seltene Wirkung, Material, Beschaffung oder Rechtslage begründen starke Abstände. Mengen und Qualität müssen für direkte Vergleiche übereinstimmen."
+    },
+    {
+      "source": "Arkanist",
+      "id": "standard:arkanist:buchschliesse",
+      "name": "Buchschließe",
+      "unit": "1 Beschlagsatz",
+      "price": {
+        "minCopper": 5,
+        "maxCopper": 5
+      },
+      "category": "arkanes",
+      "before": null,
+      "after": [
+        5,
+        5
+      ],
+      "decision": "beibehalten",
+      "reason": "Seltene Wirkung, Material, Beschaffung oder Rechtslage begründen starke Abstände. Mengen und Qualität müssen für direkte Vergleiche übereinstimmen."
+    },
+    {
+      "source": "Arkanist",
+      "id": "standard:arkanist:amethyst",
+      "name": "Amethyst",
+      "unit": "1 kleiner Schmuckstein · etwa 0,2 g",
+      "price": {
+        "minCopper": 18,
+        "maxCopper": 18
+      },
+      "category": "arkanes",
+      "before": null,
+      "after": [
+        18,
+        18
+      ],
+      "decision": "beibehalten",
+      "reason": "Seltene Wirkung, Material, Beschaffung oder Rechtslage begründen starke Abstände. Mengen und Qualität müssen für direkte Vergleiche übereinstimmen."
+    },
+    {
+      "source": "Arkanist",
+      "id": "standard:arkanist:rubin",
+      "name": "Rubin",
+      "unit": "1 kleiner Schmuckstein · etwa 0,2 g",
+      "price": {
+        "minCopper": 90,
+        "maxCopper": 90
+      },
+      "category": "arkanes",
+      "before": null,
+      "after": [
+        90,
+        90
+      ],
+      "decision": "beibehalten",
+      "reason": "Seltene Wirkung, Material, Beschaffung oder Rechtslage begründen starke Abstände. Mengen und Qualität müssen für direkte Vergleiche übereinstimmen."
+    },
+    {
+      "source": "Arkanist",
+      "id": "standard:arkanist:saphir",
+      "name": "Saphir",
+      "unit": "1 kleiner Schmuckstein · etwa 0,2 g",
+      "price": {
+        "minCopper": 80,
+        "maxCopper": 80
+      },
+      "category": "arkanes",
+      "before": null,
+      "after": [
+        80,
+        80
+      ],
+      "decision": "beibehalten",
+      "reason": "Seltene Wirkung, Material, Beschaffung oder Rechtslage begründen starke Abstände. Mengen und Qualität müssen für direkte Vergleiche übereinstimmen."
+    },
+    {
+      "source": "Arkanist",
+      "id": "standard:arkanist:smaragd",
+      "name": "Smaragd",
+      "unit": "1 kleiner Schmuckstein · etwa 0,2 g",
+      "price": {
+        "minCopper": 85,
+        "maxCopper": 85
+      },
+      "category": "arkanes",
+      "before": null,
+      "after": [
+        85,
+        85
+      ],
+      "decision": "beibehalten",
+      "reason": "Seltene Wirkung, Material, Beschaffung oder Rechtslage begründen starke Abstände. Mengen und Qualität müssen für direkte Vergleiche übereinstimmen."
+    },
+    {
+      "source": "Arkanist",
+      "id": "standard:arkanist:diamant",
+      "name": "Diamant",
+      "unit": "1 kleiner Schmuckstein · etwa 0,2 g",
+      "price": {
+        "minCopper": 160,
+        "maxCopper": 160
+      },
+      "category": "arkanes",
+      "before": null,
+      "after": [
+        160,
+        160
+      ],
+      "decision": "beibehalten",
+      "reason": "Seltene Wirkung, Material, Beschaffung oder Rechtslage begründen starke Abstände. Mengen und Qualität müssen für direkte Vergleiche übereinstimmen."
+    },
+    {
+      "source": "Arkanist",
+      "id": "standard:arkanist:opal",
+      "name": "Opal",
+      "unit": "1 kleiner Schmuckstein · etwa 0,2 g",
+      "price": {
+        "minCopper": 55,
+        "maxCopper": 55
+      },
+      "category": "arkanes",
+      "before": null,
+      "after": [
+        55,
+        55
+      ],
+      "decision": "beibehalten",
+      "reason": "Seltene Wirkung, Material, Beschaffung oder Rechtslage begründen starke Abstände. Mengen und Qualität müssen für direkte Vergleiche übereinstimmen."
+    },
+    {
+      "source": "Arkanist",
+      "id": "standard:arkanist:topas",
+      "name": "Topas",
+      "unit": "1 kleiner Schmuckstein · etwa 0,2 g",
+      "price": {
+        "minCopper": 25,
+        "maxCopper": 25
+      },
+      "category": "arkanes",
+      "before": null,
+      "after": [
+        25,
+        25
+      ],
+      "decision": "beibehalten",
+      "reason": "Seltene Wirkung, Material, Beschaffung oder Rechtslage begründen starke Abstände. Mengen und Qualität müssen für direkte Vergleiche übereinstimmen."
+    },
+    {
+      "source": "Arkanist",
+      "id": "standard:arkanist:granat",
+      "name": "Granat",
+      "unit": "1 kleiner Schmuckstein · etwa 0,2 g",
+      "price": {
+        "minCopper": 20,
+        "maxCopper": 20
+      },
+      "category": "arkanes",
+      "before": null,
+      "after": [
+        20,
+        20
+      ],
+      "decision": "beibehalten",
+      "reason": "Seltene Wirkung, Material, Beschaffung oder Rechtslage begründen starke Abstände. Mengen und Qualität müssen für direkte Vergleiche übereinstimmen."
+    },
+    {
+      "source": "Arkanist",
+      "id": "standard:arkanist:aquamarin",
+      "name": "Aquamarin",
+      "unit": "1 kleiner Schmuckstein · etwa 0,2 g",
+      "price": {
+        "minCopper": 35,
+        "maxCopper": 35
+      },
+      "category": "arkanes",
+      "before": null,
+      "after": [
+        35,
+        35
+      ],
+      "decision": "beibehalten",
+      "reason": "Seltene Wirkung, Material, Beschaffung oder Rechtslage begründen starke Abstände. Mengen und Qualität müssen für direkte Vergleiche übereinstimmen."
+    },
+    {
+      "source": "Arkanist",
+      "id": "standard:arkanist:turmalin",
+      "name": "Turmalin",
+      "unit": "1 kleiner Schmuckstein · etwa 0,2 g",
+      "price": {
+        "minCopper": 30,
+        "maxCopper": 30
+      },
+      "category": "arkanes",
+      "before": null,
+      "after": [
+        30,
+        30
+      ],
+      "decision": "beibehalten",
+      "reason": "Seltene Wirkung, Material, Beschaffung oder Rechtslage begründen starke Abstände. Mengen und Qualität müssen für direkte Vergleiche übereinstimmen."
+    },
+    {
+      "source": "Arkanist",
+      "id": "standard:arkanist:jade",
+      "name": "Jade",
+      "unit": "1 kleiner Schmuckstein · etwa 0,2 g",
+      "price": {
+        "minCopper": 15,
+        "maxCopper": 15
+      },
+      "category": "arkanes",
+      "before": null,
+      "after": [
+        15,
+        15
+      ],
+      "decision": "beibehalten",
+      "reason": "Seltene Wirkung, Material, Beschaffung oder Rechtslage begründen starke Abstände. Mengen und Qualität müssen für direkte Vergleiche übereinstimmen."
+    },
+    {
+      "source": "Arkanist",
+      "id": "standard:arkanist:bergkristall",
+      "name": "Bergkristall",
+      "unit": "1 kleiner Schmuckstein · etwa 0,2 g",
+      "price": {
+        "minCopper": 5,
+        "maxCopper": 5
+      },
+      "category": "arkanes",
+      "before": null,
+      "after": [
+        5,
+        5
+      ],
+      "decision": "beibehalten",
+      "reason": "Seltene Wirkung, Material, Beschaffung oder Rechtslage begründen starke Abstände. Mengen und Qualität müssen für direkte Vergleiche übereinstimmen."
+    },
+    {
+      "source": "Arkanist",
+      "id": "standard:arkanist:onyx",
+      "name": "Onyx",
+      "unit": "1 kleiner Schmuckstein · etwa 0,2 g",
+      "price": {
+        "minCopper": 12,
+        "maxCopper": 12
+      },
+      "category": "arkanes",
+      "before": null,
+      "after": [
+        12,
+        12
+      ],
+      "decision": "beibehalten",
+      "reason": "Seltene Wirkung, Material, Beschaffung oder Rechtslage begründen starke Abstände. Mengen und Qualität müssen für direkte Vergleiche übereinstimmen."
+    },
+    {
+      "source": "Arkanist",
+      "id": "standard:arkanist:mondstein",
+      "name": "Mondstein",
+      "unit": "1 kleiner Schmuckstein · etwa 0,2 g",
+      "price": {
+        "minCopper": 22,
+        "maxCopper": 22
+      },
+      "category": "arkanes",
+      "before": null,
+      "after": [
+        22,
+        22
+      ],
+      "decision": "beibehalten",
+      "reason": "Seltene Wirkung, Material, Beschaffung oder Rechtslage begründen starke Abstände. Mengen und Qualität müssen für direkte Vergleiche übereinstimmen."
+    },
+    {
+      "source": "Arkanist",
+      "id": "standard:arkanist:tuerkis",
+      "name": "Türkis",
+      "unit": "1 kleiner Schmuckstein · etwa 0,2 g",
+      "price": {
+        "minCopper": 12,
+        "maxCopper": 12
+      },
+      "category": "arkanes",
+      "before": null,
+      "after": [
+        12,
+        12
+      ],
+      "decision": "beibehalten",
+      "reason": "Seltene Wirkung, Material, Beschaffung oder Rechtslage begründen starke Abstände. Mengen und Qualität müssen für direkte Vergleiche übereinstimmen."
+    },
+    {
+      "source": "Arkanist",
+      "id": "standard:arkanist:bernstein",
+      "name": "Bernstein",
+      "unit": "1 kleiner Schmuckstein · etwa 0,2 g",
+      "price": {
+        "minCopper": 10,
+        "maxCopper": 10
+      },
+      "category": "arkanes",
+      "before": null,
+      "after": [
+        10,
+        10
+      ],
+      "decision": "beibehalten",
+      "reason": "Seltene Wirkung, Material, Beschaffung oder Rechtslage begründen starke Abstände. Mengen und Qualität müssen für direkte Vergleiche übereinstimmen."
+    },
+    {
+      "source": "Arkanist",
+      "id": "standard:arkanist:perle",
+      "name": "Perle",
+      "unit": "1 kleiner Schmuckstein · etwa 0,2 g",
+      "price": {
+        "minCopper": 24,
+        "maxCopper": 24
+      },
+      "category": "arkanes",
+      "before": null,
+      "after": [
+        24,
+        24
+      ],
+      "decision": "beibehalten",
+      "reason": "Seltene Wirkung, Material, Beschaffung oder Rechtslage begründen starke Abstände. Mengen und Qualität müssen für direkte Vergleiche übereinstimmen."
+    },
+    {
+      "source": "Arkanist",
+      "id": "standard:arkanist:lapislazuli",
+      "name": "Lapislazuli",
+      "unit": "1 kleiner Schmuckstein · etwa 0,2 g",
+      "price": {
+        "minCopper": 14,
+        "maxCopper": 14
+      },
+      "category": "arkanes",
+      "before": null,
+      "after": [
+        14,
+        14
+      ],
+      "decision": "beibehalten",
+      "reason": "Seltene Wirkung, Material, Beschaffung oder Rechtslage begründen starke Abstände. Mengen und Qualität müssen für direkte Vergleiche übereinstimmen."
+    },
+    {
+      "source": "Arkanist",
+      "id": "standard:arkanist:malachit",
+      "name": "Malachit",
+      "unit": "1 kleiner Schmuckstein · etwa 0,2 g",
+      "price": {
+        "minCopper": 8,
+        "maxCopper": 8
+      },
+      "category": "arkanes",
+      "before": null,
+      "after": [
+        8,
+        8
+      ],
+      "decision": "beibehalten",
+      "reason": "Seltene Wirkung, Material, Beschaffung oder Rechtslage begründen starke Abstände. Mengen und Qualität müssen für direkte Vergleiche übereinstimmen."
+    },
+    {
+      "source": "Arkanist",
+      "id": "standard:arkanist:zirkon",
+      "name": "Zirkon",
+      "unit": "1 kleiner Schmuckstein · etwa 0,2 g",
+      "price": {
+        "minCopper": 28,
+        "maxCopper": 28
+      },
+      "category": "arkanes",
+      "before": null,
+      "after": [
+        28,
+        28
       ],
       "decision": "beibehalten",
       "reason": "Seltene Wirkung, Material, Beschaffung oder Rechtslage begründen starke Abstände. Mengen und Qualität müssen für direkte Vergleiche übereinstimmen."
@@ -18630,6 +19667,1685 @@
       "reason": "Dienstleistung bleibt erhalten; Umfang, enthaltene Kammer, Zeit und mögliche Anrechnung werden in der Betriebskalkulation getrennt behandelt."
     },
     {
+      "source": "Lothaires Arkaneum",
+      "moduleId": "lothaires-arkaneum",
+      "pageIndex": 5,
+      "itemIndex": 0,
+      "id": "arkaneum-standard-kamille",
+      "optionIndex": 0,
+      "name": "Kamille",
+      "unit": "20 g getrocknete Blüten",
+      "price": {
+        "minCopper": 0.8,
+        "maxCopper": 0.8
+      },
+      "category": "zutaten",
+      "status": "available",
+      "before": null,
+      "after": [
+        0.8,
+        0.8
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Lothaires Arkaneum",
+      "moduleId": "lothaires-arkaneum",
+      "pageIndex": 5,
+      "itemIndex": 1,
+      "id": "arkaneum-standard-salbei",
+      "optionIndex": 0,
+      "name": "Salbei",
+      "unit": "20 g getrocknete Blätter",
+      "price": {
+        "minCopper": 0.8,
+        "maxCopper": 0.8
+      },
+      "category": "zutaten",
+      "status": "available",
+      "before": null,
+      "after": [
+        0.8,
+        0.8
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Lothaires Arkaneum",
+      "moduleId": "lothaires-arkaneum",
+      "pageIndex": 5,
+      "itemIndex": 2,
+      "id": "arkaneum-standard-minze",
+      "optionIndex": 0,
+      "name": "Minze",
+      "unit": "20 g getrocknete Blätter",
+      "price": {
+        "minCopper": 0.6,
+        "maxCopper": 0.6
+      },
+      "category": "zutaten",
+      "status": "available",
+      "before": null,
+      "after": [
+        0.6,
+        0.6
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Lothaires Arkaneum",
+      "moduleId": "lothaires-arkaneum",
+      "pageIndex": 5,
+      "itemIndex": 3,
+      "id": "arkaneum-standard-lavendel",
+      "optionIndex": 0,
+      "name": "Lavendel",
+      "unit": "20 g getrocknete Blüten",
+      "price": {
+        "minCopper": 1,
+        "maxCopper": 1
+      },
+      "category": "zutaten",
+      "status": "available",
+      "before": null,
+      "after": [
+        1,
+        1
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Lothaires Arkaneum",
+      "moduleId": "lothaires-arkaneum",
+      "pageIndex": 5,
+      "itemIndex": 4,
+      "id": "arkaneum-standard-ringelblume",
+      "optionIndex": 0,
+      "name": "Ringelblume",
+      "unit": "20 g getrocknete Blüten",
+      "price": {
+        "minCopper": 1,
+        "maxCopper": 1
+      },
+      "category": "zutaten",
+      "status": "available",
+      "before": null,
+      "after": [
+        1,
+        1
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Lothaires Arkaneum",
+      "moduleId": "lothaires-arkaneum",
+      "pageIndex": 5,
+      "itemIndex": 5,
+      "id": "arkaneum-standard-beinwellwurzel",
+      "optionIndex": 0,
+      "name": "Beinwellwurzel",
+      "unit": "50 g getrocknete Wurzel",
+      "price": {
+        "minCopper": 1.5,
+        "maxCopper": 1.5
+      },
+      "category": "zutaten",
+      "status": "available",
+      "before": null,
+      "after": [
+        1.5,
+        1.5
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Lothaires Arkaneum",
+      "moduleId": "lothaires-arkaneum",
+      "pageIndex": 5,
+      "itemIndex": 6,
+      "id": "arkaneum-standard-bienenwachs",
+      "optionIndex": 0,
+      "name": "Bienenwachs",
+      "unit": "100 g",
+      "price": {
+        "minCopper": 1.5,
+        "maxCopper": 1.5
+      },
+      "category": "zutaten",
+      "status": "available",
+      "before": null,
+      "after": [
+        1.5,
+        1.5
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Lothaires Arkaneum",
+      "moduleId": "lothaires-arkaneum",
+      "pageIndex": 5,
+      "itemIndex": 7,
+      "id": "arkaneum-standard-baumharz",
+      "optionIndex": 0,
+      "name": "Baumharz",
+      "unit": "50 g",
+      "price": {
+        "minCopper": 1,
+        "maxCopper": 1
+      },
+      "category": "zutaten",
+      "status": "available",
+      "before": null,
+      "after": [
+        1,
+        1
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Lothaires Arkaneum",
+      "moduleId": "lothaires-arkaneum",
+      "pageIndex": 5,
+      "itemIndex": 8,
+      "id": "arkaneum-standard-alchemieschatulle",
+      "optionIndex": 0,
+      "name": "Alchemie-Zubehörschatulle",
+      "unit": "1 bestückte Schatulle",
+      "price": {
+        "minCopper": 28,
+        "maxCopper": 28
+      },
+      "category": "labor",
+      "status": "available",
+      "before": null,
+      "after": [
+        28,
+        28
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Lothaires Arkaneum",
+      "moduleId": "lothaires-arkaneum",
+      "pageIndex": 5,
+      "itemIndex": 9,
+      "id": "arkaneum-standard-glasflaeschchen",
+      "optionIndex": 0,
+      "name": "Glasfläschchen",
+      "unit": "1 Fläschchen · 50 ml",
+      "price": {
+        "minCopper": 1.5,
+        "maxCopper": 1.5
+      },
+      "category": "labor",
+      "status": "available",
+      "before": null,
+      "after": [
+        1.5,
+        1.5
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Lothaires Arkaneum",
+      "moduleId": "lothaires-arkaneum",
+      "pageIndex": 5,
+      "itemIndex": 10,
+      "id": "arkaneum-standard-phiolen-holzfassung",
+      "optionIndex": 0,
+      "name": "Drei Phiolen in Holzfassung",
+      "unit": "3 leere Phiolen · je 20 ml",
+      "price": {
+        "minCopper": 6,
+        "maxCopper": 6
+      },
+      "category": "labor",
+      "status": "available",
+      "before": null,
+      "after": [
+        6,
+        6
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Lothaires Arkaneum",
+      "moduleId": "lothaires-arkaneum",
+      "pageIndex": 5,
+      "itemIndex": 11,
+      "id": "arkaneum-standard-laborpapier",
+      "optionIndex": 0,
+      "name": "Papier",
+      "unit": "10 Blatt",
+      "price": {
+        "minCopper": 0.5,
+        "maxCopper": 0.5
+      },
+      "category": "labor",
+      "status": "available",
+      "before": null,
+      "after": [
+        0.5,
+        0.5
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Lothaires Arkaneum",
+      "moduleId": "lothaires-arkaneum",
+      "pageIndex": 5,
+      "itemIndex": 12,
+      "id": "arkaneum-standard-labortinte",
+      "optionIndex": 0,
+      "name": "Tinte",
+      "unit": "1 Tintenfass · 30 ml",
+      "price": {
+        "minCopper": 1,
+        "maxCopper": 1
+      },
+      "category": "labor",
+      "status": "available",
+      "before": null,
+      "after": [
+        1,
+        1
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Lothaires Arkaneum",
+      "moduleId": "lothaires-arkaneum",
+      "pageIndex": 5,
+      "itemIndex": 13,
+      "id": "arkaneum-standard-feuerstein",
+      "optionIndex": 0,
+      "name": "Feuerstein",
+      "unit": "1 Stück",
+      "price": {
+        "minCopper": 1,
+        "maxCopper": 1
+      },
+      "category": "labor",
+      "status": "available",
+      "before": null,
+      "after": [
+        1,
+        1
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Lothaires Arkaneum",
+      "moduleId": "lothaires-arkaneum",
+      "pageIndex": 5,
+      "itemIndex": 14,
+      "id": "arkaneum-standard-labormoerser",
+      "optionIndex": 0,
+      "name": "Mörser & Stößel",
+      "unit": "1 Satz",
+      "price": {
+        "minCopper": 10,
+        "maxCopper": 10
+      },
+      "category": "labor",
+      "status": "available",
+      "before": null,
+      "after": [
+        10,
+        10
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Lothaires Arkaneum",
+      "moduleId": "lothaires-arkaneum",
+      "pageIndex": 5,
+      "itemIndex": 15,
+      "id": "arkaneum-standard-destillator",
+      "optionIndex": 0,
+      "name": "Destillator",
+      "unit": "1 Aufbau",
+      "price": {
+        "minCopper": 85,
+        "maxCopper": 85
+      },
+      "category": "labor",
+      "status": "available",
+      "before": null,
+      "after": [
+        85,
+        85
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Lothaires Arkaneum",
+      "moduleId": "lothaires-arkaneum",
+      "pageIndex": 5,
+      "itemIndex": 16,
+      "id": "arkaneum-standard-kalzinator",
+      "optionIndex": 0,
+      "name": "Kalzinator",
+      "unit": "1 Reisegerät · etwa 10 × 8 cm",
+      "price": {
+        "minCopper": 65,
+        "maxCopper": 65
+      },
+      "category": "labor",
+      "status": "available",
+      "before": null,
+      "after": [
+        65,
+        65
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Lothaires Arkaneum",
+      "moduleId": "lothaires-arkaneum",
+      "pageIndex": 5,
+      "itemIndex": 17,
+      "id": "arkaneum-standard-retorte",
+      "optionIndex": 0,
+      "name": "Retorte",
+      "unit": "1 Stück · 250 ml",
+      "price": {
+        "minCopper": 12,
+        "maxCopper": 12
+      },
+      "category": "labor",
+      "status": "available",
+      "before": null,
+      "after": [
+        12,
+        12
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Lothaires Arkaneum",
+      "moduleId": "lothaires-arkaneum",
+      "pageIndex": 5,
+      "itemIndex": 18,
+      "id": "arkaneum-standard-alembik",
+      "optionIndex": 0,
+      "name": "Alembik",
+      "unit": "1 Aufsatz",
+      "price": {
+        "minCopper": 30,
+        "maxCopper": 30
+      },
+      "category": "labor",
+      "status": "available",
+      "before": null,
+      "after": [
+        30,
+        30
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Lothaires Arkaneum",
+      "moduleId": "lothaires-arkaneum",
+      "pageIndex": 5,
+      "itemIndex": 19,
+      "id": "arkaneum-standard-filtertuch",
+      "optionIndex": 0,
+      "name": "Filtertuch",
+      "unit": "1 Tuch · 30 × 30 cm",
+      "price": {
+        "minCopper": 1.5,
+        "maxCopper": 1.5
+      },
+      "category": "labor",
+      "status": "available",
+      "before": null,
+      "after": [
+        1.5,
+        1.5
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Lothaires Arkaneum",
+      "moduleId": "lothaires-arkaneum",
+      "pageIndex": 5,
+      "itemIndex": 20,
+      "id": "arkaneum-standard-labortiegel",
+      "optionIndex": 0,
+      "name": "Labortiegel",
+      "unit": "1 Tiegel · 20 ml",
+      "price": {
+        "minCopper": 4,
+        "maxCopper": 4
+      },
+      "category": "labor",
+      "status": "available",
+      "before": null,
+      "after": [
+        4,
+        4
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Lothaires Arkaneum",
+      "moduleId": "lothaires-arkaneum",
+      "pageIndex": 5,
+      "itemIndex": 21,
+      "id": "arkaneum-standard-trichter",
+      "optionIndex": 0,
+      "name": "Glastrichter",
+      "unit": "1 Stück",
+      "price": {
+        "minCopper": 3,
+        "maxCopper": 3
+      },
+      "category": "labor",
+      "status": "available",
+      "before": null,
+      "after": [
+        3,
+        3
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Lothaires Arkaneum",
+      "moduleId": "lothaires-arkaneum",
+      "pageIndex": 5,
+      "itemIndex": 22,
+      "id": "arkaneum-standard-balkenwaage",
+      "optionIndex": 0,
+      "name": "Feine Balkenwaage",
+      "unit": "1 Waage mit Gewichten",
+      "price": {
+        "minCopper": 24,
+        "maxCopper": 24
+      },
+      "category": "labor",
+      "status": "available",
+      "before": null,
+      "after": [
+        24,
+        24
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Lothaires Arkaneum",
+      "moduleId": "lothaires-arkaneum",
+      "pageIndex": 5,
+      "itemIndex": 23,
+      "id": "arkaneum-standard-trockensieb",
+      "optionIndex": 0,
+      "name": "Trockensieb",
+      "unit": "1 Stück",
+      "price": {
+        "minCopper": 5,
+        "maxCopper": 5
+      },
+      "category": "labor",
+      "status": "available",
+      "before": null,
+      "after": [
+        5,
+        5
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Lothaires Arkaneum",
+      "moduleId": "lothaires-arkaneum",
+      "pageIndex": 6,
+      "itemIndex": 0,
+      "id": "arkaneum-standard-manatrank",
+      "optionIndex": 0,
+      "name": "Manatrank",
+      "unit": "Flasche",
+      "price": {
+        "minCopper": 20,
+        "maxCopper": 100
+      },
+      "category": "grundbedarf",
+      "status": "available",
+      "before": null,
+      "after": [
+        20,
+        100
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Lothaires Arkaneum",
+      "moduleId": "lothaires-arkaneum",
+      "pageIndex": 6,
+      "itemIndex": 1,
+      "id": "arkaneum-standard-heiltrank",
+      "optionIndex": 0,
+      "name": "Heiltrank",
+      "unit": "Flasche",
+      "price": {
+        "minCopper": 20,
+        "maxCopper": 100
+      },
+      "category": "grundbedarf",
+      "status": "available",
+      "before": null,
+      "after": [
+        20,
+        100
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Lothaires Arkaneum",
+      "moduleId": "lothaires-arkaneum",
+      "pageIndex": 6,
+      "itemIndex": 2,
+      "id": "arkaneum-standard-seelenstein",
+      "optionIndex": 0,
+      "name": "Seelenstein",
+      "unit": "Stück",
+      "price": {
+        "minCopper": 1000,
+        "maxCopper": 10000
+      },
+      "category": "grundbedarf",
+      "status": "available",
+      "before": null,
+      "after": [
+        1000,
+        10000
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Lothaires Arkaneum",
+      "moduleId": "lothaires-arkaneum",
+      "pageIndex": 6,
+      "itemIndex": 3,
+      "id": "arkaneum-standard-tenebrium-ketten",
+      "optionIndex": 0,
+      "name": "Tenebrit-Ketten",
+      "unit": "Satz",
+      "price": {
+        "minCopper": 5000,
+        "maxCopper": 5000
+      },
+      "category": "grundbedarf",
+      "status": "available",
+      "before": null,
+      "after": [
+        5000,
+        5000
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Lothaires Arkaneum",
+      "moduleId": "lothaires-arkaneum",
+      "pageIndex": 6,
+      "itemIndex": 4,
+      "id": "arkaneum-standard-zaubergrimoire",
+      "optionIndex": 0,
+      "name": "Zaubergrimoire",
+      "unit": "Buch",
+      "price": {
+        "minCopper": 1000,
+        "maxCopper": 1000
+      },
+      "category": "grundbedarf",
+      "status": "available",
+      "before": null,
+      "after": [
+        1000,
+        1000
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Lothaires Arkaneum",
+      "moduleId": "lothaires-arkaneum",
+      "pageIndex": 6,
+      "itemIndex": 5,
+      "id": "arkaneum-standard-zauberstein",
+      "optionIndex": 0,
+      "name": "Zauberstein",
+      "unit": "Stück",
+      "price": {
+        "minCopper": 1000,
+        "maxCopper": 10000
+      },
+      "category": "grundbedarf",
+      "status": "available",
+      "before": null,
+      "after": [
+        1000,
+        10000
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Lothaires Arkaneum",
+      "moduleId": "lothaires-arkaneum",
+      "pageIndex": 6,
+      "itemIndex": 6,
+      "id": "arkaneum-standard-unverzauberter-stab",
+      "optionIndex": 0,
+      "name": "Stab · unverzaubert",
+      "unit": "1 Stück",
+      "price": {
+        "minCopper": 12,
+        "maxCopper": 12
+      },
+      "category": "rohlinge",
+      "status": "available",
+      "before": null,
+      "after": [
+        12,
+        12
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Lothaires Arkaneum",
+      "moduleId": "lothaires-arkaneum",
+      "pageIndex": 6,
+      "itemIndex": 7,
+      "id": "arkaneum-standard-unverzauberte-zauberkugel",
+      "optionIndex": 0,
+      "name": "Zauberkugel · unverzaubert",
+      "unit": "1 Kugel · 10 cm",
+      "price": {
+        "minCopper": 40,
+        "maxCopper": 40
+      },
+      "category": "rohlinge",
+      "status": "available",
+      "before": null,
+      "after": [
+        40,
+        40
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Lothaires Arkaneum",
+      "moduleId": "lothaires-arkaneum",
+      "pageIndex": 6,
+      "itemIndex": 8,
+      "id": "arkaneum-standard-leeres-zauberbuch",
+      "optionIndex": 0,
+      "name": "Zauberbuch · leer",
+      "unit": "1 Buch · 120 Seiten",
+      "price": {
+        "minCopper": 18,
+        "maxCopper": 18
+      },
+      "category": "rohlinge",
+      "status": "available",
+      "before": null,
+      "after": [
+        18,
+        18
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Lothaires Arkaneum",
+      "moduleId": "lothaires-arkaneum",
+      "pageIndex": 6,
+      "itemIndex": 9,
+      "id": "arkaneum-standard-unverzauberter-ring",
+      "optionIndex": 0,
+      "name": "Ring · unverzaubert",
+      "unit": "1 Silberring",
+      "price": {
+        "minCopper": 16,
+        "maxCopper": 16
+      },
+      "category": "rohlinge",
+      "status": "available",
+      "before": null,
+      "after": [
+        16,
+        16
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Lothaires Arkaneum",
+      "moduleId": "lothaires-arkaneum",
+      "pageIndex": 6,
+      "itemIndex": 10,
+      "id": "arkaneum-standard-unverzaubertes-amulett",
+      "optionIndex": 0,
+      "name": "Amulett · unverzaubert",
+      "unit": "1 Silberamulett",
+      "price": {
+        "minCopper": 24,
+        "maxCopper": 24
+      },
+      "category": "rohlinge",
+      "status": "available",
+      "before": null,
+      "after": [
+        24,
+        24
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Lothaires Arkaneum",
+      "moduleId": "lothaires-arkaneum",
+      "pageIndex": 6,
+      "itemIndex": 11,
+      "id": "arkaneum-standard-unverzaubertes-diadem",
+      "optionIndex": 0,
+      "name": "Diadem · unverzaubert",
+      "unit": "1 Silberdiadem",
+      "price": {
+        "minCopper": 45,
+        "maxCopper": 45
+      },
+      "category": "rohlinge",
+      "status": "available",
+      "before": null,
+      "after": [
+        45,
+        45
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Lothaires Arkaneum",
+      "moduleId": "lothaires-arkaneum",
+      "pageIndex": 6,
+      "itemIndex": 12,
+      "id": "arkaneum-standard-unverzauberte-schriftrolle",
+      "optionIndex": 0,
+      "name": "Zauberschriftrolle · unverzaubert",
+      "unit": "1 leere Pergamentrolle",
+      "price": {
+        "minCopper": 4,
+        "maxCopper": 4
+      },
+      "category": "rohlinge",
+      "status": "available",
+      "before": null,
+      "after": [
+        4,
+        4
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Lothaires Arkaneum",
+      "moduleId": "lothaires-arkaneum",
+      "pageIndex": 6,
+      "itemIndex": 13,
+      "id": "arkaneum-standard-runenkreide",
+      "optionIndex": 0,
+      "name": "Runenkreide",
+      "unit": "5 Stifte",
+      "price": {
+        "minCopper": 1,
+        "maxCopper": 1
+      },
+      "category": "rohlinge",
+      "status": "available",
+      "before": null,
+      "after": [
+        1,
+        1
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Lothaires Arkaneum",
+      "moduleId": "lothaires-arkaneum",
+      "pageIndex": 6,
+      "itemIndex": 14,
+      "id": "arkaneum-standard-gravurstichel",
+      "optionIndex": 0,
+      "name": "Gravurstichel",
+      "unit": "1 Stück",
+      "price": {
+        "minCopper": 7,
+        "maxCopper": 7
+      },
+      "category": "rohlinge",
+      "status": "available",
+      "before": null,
+      "after": [
+        7,
+        7
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Lothaires Arkaneum",
+      "moduleId": "lothaires-arkaneum",
+      "pageIndex": 6,
+      "itemIndex": 15,
+      "id": "arkaneum-standard-fokusfassung",
+      "optionIndex": 0,
+      "name": "Leere Fokusfassung",
+      "unit": "1 Messingfassung",
+      "price": {
+        "minCopper": 8,
+        "maxCopper": 8
+      },
+      "category": "rohlinge",
+      "status": "available",
+      "before": null,
+      "after": [
+        8,
+        8
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Lothaires Arkaneum",
+      "moduleId": "lothaires-arkaneum",
+      "pageIndex": 6,
+      "itemIndex": 16,
+      "id": "arkaneum-standard-kristallbeutel",
+      "optionIndex": 0,
+      "name": "Gepolsterter Kristallbeutel",
+      "unit": "1 Beutel",
+      "price": {
+        "minCopper": 3,
+        "maxCopper": 3
+      },
+      "category": "rohlinge",
+      "status": "available",
+      "before": null,
+      "after": [
+        3,
+        3
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Lothaires Arkaneum",
+      "moduleId": "lothaires-arkaneum",
+      "pageIndex": 6,
+      "itemIndex": 17,
+      "id": "arkaneum-standard-buchschliesse",
+      "optionIndex": 0,
+      "name": "Buchschließe",
+      "unit": "1 Beschlagsatz",
+      "price": {
+        "minCopper": 5,
+        "maxCopper": 5
+      },
+      "category": "rohlinge",
+      "status": "available",
+      "before": null,
+      "after": [
+        5,
+        5
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Lothaires Arkaneum",
+      "moduleId": "lothaires-arkaneum",
+      "pageIndex": 6,
+      "itemIndex": 18,
+      "id": "arkaneum-standard-amethyst",
+      "optionIndex": 0,
+      "name": "Amethyst",
+      "unit": "1 kleiner Schmuckstein · etwa 0,2 g",
+      "price": {
+        "minCopper": 18,
+        "maxCopper": 18
+      },
+      "category": "steine",
+      "status": "available",
+      "before": null,
+      "after": [
+        18,
+        18
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Lothaires Arkaneum",
+      "moduleId": "lothaires-arkaneum",
+      "pageIndex": 6,
+      "itemIndex": 19,
+      "id": "arkaneum-standard-rubin",
+      "optionIndex": 0,
+      "name": "Rubin",
+      "unit": "1 kleiner Schmuckstein · etwa 0,2 g",
+      "price": {
+        "minCopper": 90,
+        "maxCopper": 90
+      },
+      "category": "steine",
+      "status": "available",
+      "before": null,
+      "after": [
+        90,
+        90
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Lothaires Arkaneum",
+      "moduleId": "lothaires-arkaneum",
+      "pageIndex": 6,
+      "itemIndex": 20,
+      "id": "arkaneum-standard-saphir",
+      "optionIndex": 0,
+      "name": "Saphir",
+      "unit": "1 kleiner Schmuckstein · etwa 0,2 g",
+      "price": {
+        "minCopper": 80,
+        "maxCopper": 80
+      },
+      "category": "steine",
+      "status": "available",
+      "before": null,
+      "after": [
+        80,
+        80
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Lothaires Arkaneum",
+      "moduleId": "lothaires-arkaneum",
+      "pageIndex": 6,
+      "itemIndex": 21,
+      "id": "arkaneum-standard-smaragd",
+      "optionIndex": 0,
+      "name": "Smaragd",
+      "unit": "1 kleiner Schmuckstein · etwa 0,2 g",
+      "price": {
+        "minCopper": 85,
+        "maxCopper": 85
+      },
+      "category": "steine",
+      "status": "available",
+      "before": null,
+      "after": [
+        85,
+        85
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Lothaires Arkaneum",
+      "moduleId": "lothaires-arkaneum",
+      "pageIndex": 6,
+      "itemIndex": 22,
+      "id": "arkaneum-standard-diamant",
+      "optionIndex": 0,
+      "name": "Diamant",
+      "unit": "1 kleiner Schmuckstein · etwa 0,2 g",
+      "price": {
+        "minCopper": 160,
+        "maxCopper": 160
+      },
+      "category": "steine",
+      "status": "available",
+      "before": null,
+      "after": [
+        160,
+        160
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Lothaires Arkaneum",
+      "moduleId": "lothaires-arkaneum",
+      "pageIndex": 6,
+      "itemIndex": 23,
+      "id": "arkaneum-standard-opal",
+      "optionIndex": 0,
+      "name": "Opal",
+      "unit": "1 kleiner Schmuckstein · etwa 0,2 g",
+      "price": {
+        "minCopper": 55,
+        "maxCopper": 55
+      },
+      "category": "steine",
+      "status": "available",
+      "before": null,
+      "after": [
+        55,
+        55
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Lothaires Arkaneum",
+      "moduleId": "lothaires-arkaneum",
+      "pageIndex": 6,
+      "itemIndex": 24,
+      "id": "arkaneum-standard-topas",
+      "optionIndex": 0,
+      "name": "Topas",
+      "unit": "1 kleiner Schmuckstein · etwa 0,2 g",
+      "price": {
+        "minCopper": 25,
+        "maxCopper": 25
+      },
+      "category": "steine",
+      "status": "available",
+      "before": null,
+      "after": [
+        25,
+        25
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Lothaires Arkaneum",
+      "moduleId": "lothaires-arkaneum",
+      "pageIndex": 6,
+      "itemIndex": 25,
+      "id": "arkaneum-standard-granat",
+      "optionIndex": 0,
+      "name": "Granat",
+      "unit": "1 kleiner Schmuckstein · etwa 0,2 g",
+      "price": {
+        "minCopper": 20,
+        "maxCopper": 20
+      },
+      "category": "steine",
+      "status": "available",
+      "before": null,
+      "after": [
+        20,
+        20
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Lothaires Arkaneum",
+      "moduleId": "lothaires-arkaneum",
+      "pageIndex": 6,
+      "itemIndex": 26,
+      "id": "arkaneum-standard-aquamarin",
+      "optionIndex": 0,
+      "name": "Aquamarin",
+      "unit": "1 kleiner Schmuckstein · etwa 0,2 g",
+      "price": {
+        "minCopper": 35,
+        "maxCopper": 35
+      },
+      "category": "steine",
+      "status": "available",
+      "before": null,
+      "after": [
+        35,
+        35
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Lothaires Arkaneum",
+      "moduleId": "lothaires-arkaneum",
+      "pageIndex": 6,
+      "itemIndex": 27,
+      "id": "arkaneum-standard-turmalin",
+      "optionIndex": 0,
+      "name": "Turmalin",
+      "unit": "1 kleiner Schmuckstein · etwa 0,2 g",
+      "price": {
+        "minCopper": 30,
+        "maxCopper": 30
+      },
+      "category": "steine",
+      "status": "available",
+      "before": null,
+      "after": [
+        30,
+        30
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Lothaires Arkaneum",
+      "moduleId": "lothaires-arkaneum",
+      "pageIndex": 6,
+      "itemIndex": 28,
+      "id": "arkaneum-standard-jade",
+      "optionIndex": 0,
+      "name": "Jade",
+      "unit": "1 kleiner Schmuckstein · etwa 0,2 g",
+      "price": {
+        "minCopper": 15,
+        "maxCopper": 15
+      },
+      "category": "steine",
+      "status": "available",
+      "before": null,
+      "after": [
+        15,
+        15
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Lothaires Arkaneum",
+      "moduleId": "lothaires-arkaneum",
+      "pageIndex": 6,
+      "itemIndex": 29,
+      "id": "arkaneum-standard-bergkristall",
+      "optionIndex": 0,
+      "name": "Bergkristall",
+      "unit": "1 kleiner Schmuckstein · etwa 0,2 g",
+      "price": {
+        "minCopper": 5,
+        "maxCopper": 5
+      },
+      "category": "steine",
+      "status": "available",
+      "before": null,
+      "after": [
+        5,
+        5
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Lothaires Arkaneum",
+      "moduleId": "lothaires-arkaneum",
+      "pageIndex": 6,
+      "itemIndex": 30,
+      "id": "arkaneum-standard-onyx",
+      "optionIndex": 0,
+      "name": "Onyx",
+      "unit": "1 kleiner Schmuckstein · etwa 0,2 g",
+      "price": {
+        "minCopper": 12,
+        "maxCopper": 12
+      },
+      "category": "steine",
+      "status": "available",
+      "before": null,
+      "after": [
+        12,
+        12
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Lothaires Arkaneum",
+      "moduleId": "lothaires-arkaneum",
+      "pageIndex": 6,
+      "itemIndex": 31,
+      "id": "arkaneum-standard-mondstein",
+      "optionIndex": 0,
+      "name": "Mondstein",
+      "unit": "1 kleiner Schmuckstein · etwa 0,2 g",
+      "price": {
+        "minCopper": 22,
+        "maxCopper": 22
+      },
+      "category": "steine",
+      "status": "available",
+      "before": null,
+      "after": [
+        22,
+        22
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Lothaires Arkaneum",
+      "moduleId": "lothaires-arkaneum",
+      "pageIndex": 6,
+      "itemIndex": 32,
+      "id": "arkaneum-standard-tuerkis",
+      "optionIndex": 0,
+      "name": "Türkis",
+      "unit": "1 kleiner Schmuckstein · etwa 0,2 g",
+      "price": {
+        "minCopper": 12,
+        "maxCopper": 12
+      },
+      "category": "steine",
+      "status": "available",
+      "before": null,
+      "after": [
+        12,
+        12
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Lothaires Arkaneum",
+      "moduleId": "lothaires-arkaneum",
+      "pageIndex": 6,
+      "itemIndex": 33,
+      "id": "arkaneum-standard-bernstein",
+      "optionIndex": 0,
+      "name": "Bernstein",
+      "unit": "1 kleiner Schmuckstein · etwa 0,2 g",
+      "price": {
+        "minCopper": 10,
+        "maxCopper": 10
+      },
+      "category": "steine",
+      "status": "available",
+      "before": null,
+      "after": [
+        10,
+        10
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Lothaires Arkaneum",
+      "moduleId": "lothaires-arkaneum",
+      "pageIndex": 6,
+      "itemIndex": 34,
+      "id": "arkaneum-standard-perle",
+      "optionIndex": 0,
+      "name": "Perle",
+      "unit": "1 kleiner Schmuckstein · etwa 0,2 g",
+      "price": {
+        "minCopper": 24,
+        "maxCopper": 24
+      },
+      "category": "steine",
+      "status": "available",
+      "before": null,
+      "after": [
+        24,
+        24
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Lothaires Arkaneum",
+      "moduleId": "lothaires-arkaneum",
+      "pageIndex": 6,
+      "itemIndex": 35,
+      "id": "arkaneum-standard-lapislazuli",
+      "optionIndex": 0,
+      "name": "Lapislazuli",
+      "unit": "1 kleiner Schmuckstein · etwa 0,2 g",
+      "price": {
+        "minCopper": 14,
+        "maxCopper": 14
+      },
+      "category": "steine",
+      "status": "available",
+      "before": null,
+      "after": [
+        14,
+        14
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Lothaires Arkaneum",
+      "moduleId": "lothaires-arkaneum",
+      "pageIndex": 6,
+      "itemIndex": 36,
+      "id": "arkaneum-standard-malachit",
+      "optionIndex": 0,
+      "name": "Malachit",
+      "unit": "1 kleiner Schmuckstein · etwa 0,2 g",
+      "price": {
+        "minCopper": 8,
+        "maxCopper": 8
+      },
+      "category": "steine",
+      "status": "available",
+      "before": null,
+      "after": [
+        8,
+        8
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Lothaires Arkaneum",
+      "moduleId": "lothaires-arkaneum",
+      "pageIndex": 6,
+      "itemIndex": 37,
+      "id": "arkaneum-standard-zirkon",
+      "optionIndex": 0,
+      "name": "Zirkon",
+      "unit": "1 kleiner Schmuckstein · etwa 0,2 g",
+      "price": {
+        "minCopper": 28,
+        "maxCopper": 28
+      },
+      "category": "steine",
+      "status": "available",
+      "before": null,
+      "after": [
+        28,
+        28
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Lothaires Arkaneum",
+      "moduleId": "lothaires-arkaneum",
+      "pageIndex": 7,
+      "itemIndex": 0,
+      "id": "arkaneum-eigen-aleriawurz",
+      "optionIndex": 0,
+      "name": "Aleriawurz",
+      "unit": "1 kleine Wurzel",
+      "price": {
+        "minCopper": 1000,
+        "maxCopper": 1000
+      },
+      "category": "eigenes",
+      "status": "available",
+      "before": null,
+      "after": [
+        1000,
+        1000
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Lothaires Arkaneum",
+      "moduleId": "lothaires-arkaneum",
+      "pageIndex": 7,
+      "itemIndex": 1,
+      "id": "arkaneum-eigen-frostgarngift",
+      "optionIndex": 0,
+      "name": "Gift der Frostgarn",
+      "unit": "1 versiegelte Phiole · 10 ml",
+      "price": {
+        "minCopper": 200,
+        "maxCopper": 200
+      },
+      "category": "eigenes",
+      "status": "available",
+      "before": null,
+      "after": [
+        200,
+        200
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Lothaires Arkaneum",
+      "moduleId": "lothaires-arkaneum",
+      "pageIndex": 7,
+      "itemIndex": 2,
+      "id": "arkaneum-eigen-infernales-blut",
+      "optionIndex": 0,
+      "name": "Infernales Blut",
+      "unit": "1 versiegelte Phiole · 10 ml",
+      "price": {
+        "minCopper": 5000,
+        "maxCopper": 5000
+      },
+      "category": "eigenes",
+      "status": "available",
+      "before": null,
+      "after": [
+        5000,
+        5000
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Lothaires Arkaneum",
+      "moduleId": "lothaires-arkaneum",
+      "pageIndex": 7,
+      "itemIndex": 3,
+      "id": "arkaneum-eigen-tenebrit-splitterbombe",
+      "optionIndex": 0,
+      "name": "Tenebrit-Splitterbombe",
+      "unit": "1 Stück",
+      "price": {
+        "minCopper": 2500,
+        "maxCopper": 2500
+      },
+      "category": "eigenes",
+      "status": "available",
+      "before": null,
+      "after": [
+        2500,
+        2500
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Lothaires Arkaneum",
+      "moduleId": "lothaires-arkaneum",
+      "pageIndex": 7,
+      "itemIndex": 4,
+      "id": "arkaneum-eigen-trollblut",
+      "optionIndex": 0,
+      "name": "Trollblut",
+      "unit": "1 versiegelte Phiole · 20 ml",
+      "price": {
+        "minCopper": 1000,
+        "maxCopper": 1000
+      },
+      "category": "eigenes",
+      "status": "available",
+      "before": null,
+      "after": [
+        1000,
+        1000
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Lothaires Arkaneum",
+      "moduleId": "lothaires-arkaneum",
+      "pageIndex": 8,
+      "itemIndex": 0,
+      "id": "arkaneum-eigen-glutversprechen",
+      "optionIndex": 0,
+      "name": "Glutversprechen",
+      "unit": "1 verzaubertes Schwert",
+      "price": {
+        "minCopper": 6500,
+        "maxCopper": 6500
+      },
+      "category": "eigenes",
+      "status": "available",
+      "before": null,
+      "after": [
+        6500,
+        6500
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Lothaires Arkaneum",
+      "moduleId": "lothaires-arkaneum",
+      "pageIndex": 8,
+      "itemIndex": 1,
+      "id": "arkaneum-eigen-silberner-widerspruch",
+      "optionIndex": 0,
+      "name": "Silberner Widerspruch",
+      "unit": "1 verzauberter Rabenschnabel",
+      "price": {
+        "minCopper": 5800,
+        "maxCopper": 5800
+      },
+      "category": "eigenes",
+      "status": "available",
+      "before": null,
+      "after": [
+        5800,
+        5800
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Lothaires Arkaneum",
+      "moduleId": "lothaires-arkaneum",
+      "pageIndex": 8,
+      "itemIndex": 2,
+      "id": "arkaneum-eigen-violetter-schleier",
+      "optionIndex": 0,
+      "name": "Violetter Schleier",
+      "unit": "1 verzauberter Kapuzenumhang",
+      "price": {
+        "minCopper": 4200,
+        "maxCopper": 4200
+      },
+      "category": "eigenes",
+      "status": "available",
+      "before": null,
+      "after": [
+        4200,
+        4200
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Lothaires Arkaneum",
+      "moduleId": "lothaires-arkaneum",
+      "pageIndex": 8,
+      "itemIndex": 3,
+      "id": "arkaneum-eigen-rotglyphen-pfeilspitzen",
+      "optionIndex": 0,
+      "name": "Rotglyphen-Pfeilspitzen",
+      "unit": "5 verzauberte Pfeilspitzen",
+      "price": {
+        "minCopper": 600,
+        "maxCopper": 600
+      },
+      "category": "eigenes",
+      "status": "available",
+      "before": null,
+      "after": [
+        600,
+        600
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Lothaires Arkaneum",
+      "moduleId": "lothaires-arkaneum",
+      "pageIndex": 8,
+      "itemIndex": 4,
+      "id": "arkaneum-eigen-elementarismus-band-1",
+      "optionIndex": 0,
+      "name": "Grundlagen des Elementarismus · Band I",
+      "unit": "1 Buch",
+      "price": {
+        "minCopper": 1200,
+        "maxCopper": 1200
+      },
+      "category": "eigenes",
+      "status": "available",
+      "before": null,
+      "after": [
+        1200,
+        1200
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Lothaires Arkaneum",
+      "moduleId": "lothaires-arkaneum",
+      "pageIndex": 8,
+      "itemIndex": 5,
+      "id": "arkaneum-eigen-magie-band-1",
+      "optionIndex": 0,
+      "name": "Grundlagen der Magie · Band I",
+      "unit": "1 Buch",
+      "price": {
+        "minCopper": 1000,
+        "maxCopper": 1000
+      },
+      "category": "eigenes",
+      "status": "available",
+      "before": null,
+      "after": [
+        1000,
+        1000
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
       "source": "Zur Klingenden Krone",
       "moduleId": "gwynthor-zur-klingenden-krone",
       "pageIndex": 5,
@@ -20689,6 +23405,98 @@
       "after": [
         10,
         10
+      ],
+      "decision": "beibehalten",
+      "reason": "Dienstleistung bleibt erhalten; Umfang, enthaltene Kammer, Zeit und mögliche Anrechnung werden in der Betriebskalkulation getrennt behandelt."
+    },
+    {
+      "source": "Die rote Klaue",
+      "moduleId": "gwynthor-die-rote-klaue",
+      "id": "service-0",
+      "name": "Geld gegen Pfand",
+      "unit": "Meist bis zur Hälfte des vorsichtig geschätzten Wiederverkaufswerts",
+      "price": {
+        "minCopper": 3,
+        "maxCopper": 3
+      },
+      "category": "Dienstleistung",
+      "unchangedService": true,
+      "before": [
+        3,
+        3
+      ],
+      "after": [
+        3,
+        3
+      ],
+      "decision": "beibehalten",
+      "reason": "Dienstleistung bleibt erhalten; Umfang, enthaltene Kammer, Zeit und mögliche Anrechnung werden in der Betriebskalkulation getrennt behandelt."
+    },
+    {
+      "source": "Die rote Klaue",
+      "moduleId": "gwynthor-die-rote-klaue",
+      "id": "service-1",
+      "name": "Darlehen auf Schuldbrief",
+      "unit": "Summe und Laufzeit nach Prüfung der Rückzahlung",
+      "price": {
+        "minCopper": 2,
+        "maxCopper": 2
+      },
+      "category": "Dienstleistung",
+      "unchangedService": true,
+      "before": [
+        2,
+        2
+      ],
+      "after": [
+        2,
+        2
+      ],
+      "decision": "beibehalten",
+      "reason": "Dienstleistung bleibt erhalten; Umfang, enthaltene Kammer, Zeit und mögliche Anrechnung werden in der Betriebskalkulation getrennt behandelt."
+    },
+    {
+      "source": "Die rote Klaue",
+      "moduleId": "gwynthor-die-rote-klaue",
+      "id": "service-2",
+      "name": "Münzen prüfen und wechseln",
+      "unit": "Gewöhnliche Münzen in vorrätige örtliche Sorten",
+      "price": {
+        "minCopper": 2,
+        "maxCopper": 2
+      },
+      "category": "Dienstleistung",
+      "unchangedService": true,
+      "before": [
+        2,
+        2
+      ],
+      "after": [
+        2,
+        2
+      ],
+      "decision": "beibehalten",
+      "reason": "Dienstleistung bleibt erhalten; Umfang, enthaltene Kammer, Zeit und mögliche Anrechnung werden in der Betriebskalkulation getrennt behandelt."
+    },
+    {
+      "source": "Die rote Klaue",
+      "moduleId": "gwynthor-die-rote-klaue",
+      "id": "service-4",
+      "name": "Wertschätzung und Vermittlung",
+      "unit": "Sichtung eines gewöhnlichen Gegenstands; besondere Fachprüfung nach Absprache",
+      "price": {
+        "minCopper": 2,
+        "maxCopper": 2
+      },
+      "category": "Dienstleistung",
+      "unchangedService": true,
+      "before": [
+        2,
+        2
+      ],
+      "after": [
+        2,
+        2
       ],
       "decision": "beibehalten",
       "reason": "Dienstleistung bleibt erhalten; Umfang, enthaltene Kammer, Zeit und mögliche Anrechnung werden in der Betriebskalkulation getrennt behandelt."

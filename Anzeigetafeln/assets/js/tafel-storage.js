@@ -107,27 +107,33 @@
     },
     sub(callback) {
       (async () => {
-        const published = await fetchPublished();
+        const [published, authored] = await Promise.all([
+          fetchPublished(), window.TafelAuthoredNotices.load(storageConfig.authoredNoticesPath),
+        ]);
+        const withAuthored = state => window.TafelAuthoredNotices.merge(state, authored);
         publishedRevision = Math.max(0, Number(published?.revision || 0));
         const draft = readDraft();
         if (draft?.state) {
           if (published && Number(draft.basedOnRevision || 0) < publishedRevision) {
             window.setTimeout(() => window.TafelRuntime?.toast?.('Auf GitHub liegt eine neuere Fassung als dein lokaler Entwurf.'), 0);
           }
-          callback(draft.state);
+          callback(withAuthored(draft.state));
           setStatus('');
           return;
         }
         if (published?.state) {
-          callback(published.state);
+          callback(withAuthored(published.state));
           setStatus('');
           return;
         }
         const legacyState = await fetchLegacyFirebase();
         if (legacyState) {
-          writeDraft(legacyState);
-          callback(legacyState);
+          const merged = withAuthored(legacyState);
+          writeDraft(merged);
+          callback(merged);
           window.setTimeout(() => window.TafelRuntime?.toast?.('Firebase-Altstand lokal gesichert · bitte online veröffentlichen'), 0);
+        } else if (authored.zettel.length) {
+          callback(withAuthored(null));
         }
       })();
     },

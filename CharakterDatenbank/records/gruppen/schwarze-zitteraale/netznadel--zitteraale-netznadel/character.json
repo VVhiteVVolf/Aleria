@@ -1,0 +1,154 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--zitteraale-netznadel",
+  "slug": "netznadel",
+  "identity": {
+    "name": "Netznadel",
+    "aliases": [],
+    "worldPersonId": ""
+  },
+  "classification": {
+    "primary": {
+      "kind": "group",
+      "id": "schwarze-zitteraale",
+      "label": "Schwarze Zitteraale",
+      "source": "archive-tab"
+    },
+    "familyStatus": "pending",
+    "families": [],
+    "familyAlternatives": [],
+    "groups": [
+      {
+        "id": "schwarze-zitteraale",
+        "label": "Schwarze Zitteraale",
+        "source": "archive-tab"
+      }
+    ],
+    "places": [],
+    "legacy": {
+      "tabs": [
+        "Schwarze Zitteraale"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "zitteraale-netznadel",
+      "documentIds": [
+        "zitteraale-netznadel"
+      ],
+      "documents": [
+        {
+          "documentId": "zitteraale-netznadel",
+          "createdAt": "2026-10-21T00:00:00Z",
+          "updatedAt": "2026-10-21T00:00:00Z"
+        }
+      ]
+    },
+    "familyTree": [],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/zitteraale-netznadel-2026-10-21.json",
+    "sourceExportedAt": "2026-10-21T00:00:00Z",
+    "sourceUpdatedAt": "2026-10-21T00:00:00Z",
+    "sourceDocumentIds": [
+      "zitteraale-netznadel"
+    ],
+    "contentHash": "bc95a02e9c6eb94afd76c348c1e27a780ec572a5282bb190af353ade01a5d58f"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null,
+    "authoredFeature": "schwarze-zitteraale"
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "zitteraale-netznadel",
+        "name": "Netznadel",
+        "aliases": [],
+        "title": "Innerer Kreis · Beute, Vorräte und Schleusung",
+        "fraktion": "Schwarze Zitteraale",
+        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/netznadel.png",
+        "bio": "Er begann als Gelegenheitshehler an wechselnden Anlegeplätzen. Im inneren Kreis der Bande zählt sein Gedächtnis für Gebinde, Schulden und brauchbare Namen mehr als ein sauberer Hieb.\n\nGeschäftig, habgierig und ausweichend. Zählt selbst beim Reden mit und macht aus jeder Gefälligkeit eine offene Schuld.\n\nVerteilt Vorräte, trennt auffällige Beute von gewöhnlicher Fracht und organisiert Übergaben. Er kennt die Vorratswege, aber seine Abnehmer erhalten nur einzelne Lieferungen zu sehen.",
+        "status": "Gesucht",
+        "createdAt": "2026-10-21T00:00:00Z",
+        "updatedAt": "2026-10-21T00:00:00Z",
+        "archived": false,
+        "genealogy": {
+          "sex": "male",
+          "birth": "1706",
+          "status": "alive",
+          "relationships": {
+            "parents": [],
+            "partners": [],
+            "children": []
+          }
+        },
+        "imageSets": [
+          {
+            "id": "standard",
+            "name": "Standard",
+            "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/netznadel.png",
+            "emotes": []
+          }
+        ],
+        "activeImageSetId": "standard",
+        "imageSetSchemaVersion": 1
+      }
+    ]
+  },
+  "character": {
+    "id": "zitteraale-netznadel",
+    "name": "Netznadel",
+    "aliases": [],
+    "title": "Innerer Kreis · Beute, Vorräte und Schleusung",
+    "fraktion": "Schwarze Zitteraale",
+    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/netznadel.png",
+    "bio": "Er begann als Gelegenheitshehler an wechselnden Anlegeplätzen. Im inneren Kreis der Bande zählt sein Gedächtnis für Gebinde, Schulden und brauchbare Namen mehr als ein sauberer Hieb.\n\nGeschäftig, habgierig und ausweichend. Zählt selbst beim Reden mit und macht aus jeder Gefälligkeit eine offene Schuld.\n\nVerteilt Vorräte, trennt auffällige Beute von gewöhnlicher Fracht und organisiert Übergaben. Er kennt die Vorratswege, aber seine Abnehmer erhalten nur einzelne Lieferungen zu sehen.",
+    "status": "Gesucht",
+    "createdAt": "2026-10-21T00:00:00Z",
+    "updatedAt": "2026-10-21T00:00:00Z",
+    "archived": false,
+    "genealogy": {
+      "sex": "male",
+      "birth": "1706",
+      "status": "alive",
+      "relationships": {
+        "parents": [],
+        "partners": [],
+        "children": []
+      },
+      "worldPersonId": "",
+      "death": "",
+      "houseId": "",
+      "houseName": "",
+      "familyRole": "",
+      "portraitPlaceholder": "",
+      "tags": [],
+      "sources": []
+    },
+    "imageSets": [
+      {
+        "id": "standard",
+        "name": "Standard",
+        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/netznadel.png",
+        "emotes": []
+      }
+    ],
+    "activeImageSetId": "standard",
+    "imageSetSchemaVersion": 1,
+    "identity": {
+      "worldPersonId": ""
+    }
+  }
+}

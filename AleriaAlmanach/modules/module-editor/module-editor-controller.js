@@ -59,6 +59,8 @@ function collectModuleEditorPayload() {
     locked: !!document.getElementById('me-locked')?.checked,
     multipage: true,
     appendCommentsPage: false,
+    ...(document.getElementById('me-entry-id')?.dataset.economyCalculationDeferred === 'true' ? { economyCalculationDeferred: true } : {}),
+    ...(document.getElementById('me-entry-id')?.dataset.zitteraaleRevision ? { zitteraaleRevision: document.getElementById('me-entry-id').dataset.zitteraaleRevision } : {}),
     enablePageComments: !!document.getElementById('me-page-comments-enabled')?.checked,
     sessionCast: globalCast,
     sessionCastDetails: globalCastDetails,
@@ -148,6 +150,8 @@ function populateModuleEditor(payload, context, options = {}) {
   document.getElementById('me-new-section-desc').value = effectiveSignature === '__new__' ? (payload.section?.desc || '') : '';
 
   document.getElementById('me-entry-id').value = payload.entry?.id || '';
+  document.getElementById('me-entry-id').dataset.economyCalculationDeferred = String(payload.entry?.economyCalculationDeferred === true);
+  document.getElementById('me-entry-id').dataset.zitteraaleRevision = payload.entry?.zitteraaleRevision || '';
   document.getElementById('me-entry-id').disabled = context?.mode === 'edit';
   document.getElementById('me-title').value = payload.entry?.title || '';
   document.getElementById('me-subtitle').value = payload.entry?.subtitle || '';

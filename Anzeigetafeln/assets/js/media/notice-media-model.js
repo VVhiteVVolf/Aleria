@@ -38,8 +38,10 @@
     const item = selection(source, field);
     const href = characterLink(item);
     const tag = href ? 'a' : 'span';
-    const imageFit = fit || (source?.imageFit === 'contain' ? 'contain' : 'cover');
-    const imagePosition = position || (['top', 'bottom'].includes(source?.imagePosition) ? source.imagePosition : 'center');
+    const imageFit = ['contain', 'cover'].includes(item.fit)
+      ? item.fit : fit || (source?.imageFit === 'contain' ? 'contain' : 'cover');
+    const imagePosition = ['top', 'center', 'bottom'].includes(item.position)
+      ? item.position : position || (['top', 'bottom'].includes(source?.imagePosition) ? source.imagePosition : 'center');
     return `<${tag} class="notice-media ${className}${item.src ? ' has-image' : ''}"${href ? ` href="${esc(href)}" target="_blank" rel="noopener" title="${esc(item.name || label)} im Stammbaum öffnen"` : ''}>
       <span class="notice-media-placeholder" role="img" aria-label="${esc(item.name || label)}"><span aria-hidden="true">${symbol}</span></span>
       ${item.src ? `<img src="${esc(item.src)}" alt="${esc(item.name || label)}" loading="lazy" data-image-fallback="notice-media" style="object-fit:${imageFit};object-position:${imagePosition}">` : ''}

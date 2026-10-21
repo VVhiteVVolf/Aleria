@@ -1,0 +1,57 @@
+{
+  "count": 3,
+  "images": [
+    {
+      "id": "fearnan-familienbild",
+      "destination": "AleriaAlmanach/assets/gwynthor-heime/fearnan/familienbild.png",
+      "size": [
+        1024,
+        1536
+      ],
+      "ratio": "2:3",
+      "mode": "built-in ImageGen",
+      "references": [
+        "E:/Aleria/AleriaAlmanach/assets/gwynthor-heime/fearnan/eoghan.png",
+        "E:/Aleria/AleriaAlmanach/assets/gwynthor-heime/fearnan/muireann.png",
+        "E:/Aleria/AleriaAlmanach/assets/gwynthor-heime/fearnan/eithne.png",
+        "E:/Aleria/AleriaAlmanach/assets/gwynthor-heime/fearnan/nessa.png"
+      ],
+      "sha256": "1795ac40259d5701ef29f8a62d78525cb7bf2cf3f9f82292e9ead57b011c7244",
+      "visualReview": "All specified household members present; standing; existing appearance and clothing preserved"
+    },
+    {
+      "id": "torvik-familienbild",
+      "destination": "AleriaAlmanach/assets/gwynthor-heime/torvik/familienbild.png",
+      "size": [
+        1024,
+        1536
+      ],
+      "ratio": "2:3",
+      "mode": "built-in ImageGen",
+      "references": [
+        "E:/Aleria/AleriaAlmanach/assets/gwynthor-heime/torvik/haldor.png",
+        "E:/Aleria/AleriaAlmanach/assets/gwynthor-heime/torvik/maonaid.png",
+        "E:/Aleria/AleriaAlmanach/assets/gwynthor-heime/torvik/iver.png"
+      ],
+      "sha256": "30da5f781a0779ce8e635bba1e8cfd2f6b0a74d496e35f554e97b184006e24ba",
+      "visualReview": "All specified household members present; standing; existing appearance and clothing preserved"
+    },
+    {
+      "id": "celynfor-familienbild",
+      "destination": "AleriaAlmanach/assets/gwynthor-heime/celynfor/familienbild.png",
+      "size": [
+        1024,
+        1536
+      ],
+      "ratio": "2:3",
+      "mode": "built-in ImageGen",
+      "references": [
+        "E:/Aleria/AleriaAlmanach/assets/gwynthor-heime/celynfor/gwydan.png",
+        "E:/Aleria/AleriaAlmanach/assets/krumme-kanne/portraits/llinos.png",
+        "E:/Aleria/AleriaAlmanach/assets/gwynthor-heime/celynfor/spant.png"
+      ],
+      "sha256": "529e0b8a245aa64fa34090969a6c8a18ec1c5f63b11adbb312990a11e38b5dbb",
+      "visualReview": "All specified household members present; standing; existing appearance and clothing preserved"
+    }
+  ]
+}

@@ -7,7 +7,7 @@ function buildFamilyTreeEmbedPage(page, entry, pageIndex, total) {
     ? `<div class="family-tree-embed-frame-shell">
         <iframe
           class="family-tree-embed-frame"
-          src="${escapeHtml(data.source)}"
+          src="${escapeHtml(`${data.source}&embed=1`)}"
           title="${escapeHtml(data.title)}"
           loading="eager"
           sandbox="allow-scripts allow-same-origin allow-forms allow-downloads allow-modals"

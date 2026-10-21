@@ -1,13 +1,12 @@
 #!/usr/bin/env node
 
-'use strict';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import path from 'node:path';
+import vm from 'node:vm';
+import { fileURLToPath } from 'node:url';
 
-const assert = require('node:assert/strict');
-const fs = require('node:fs');
-const path = require('node:path');
-const vm = require('node:vm');
-
-const root = path.resolve(__dirname, '..');
+const root = fileURLToPath(new URL('../', import.meta.url));
 const projectRoot = path.resolve(root, '..');
 const html = fs.readFileSync(path.join(root, 'AleriaAlmanach.html'), 'utf8');
 const catalogSource = fs.readFileSync(path.join(root, 'modules/family-tree-embed/family-tree-embed-catalog.js'), 'utf8');
@@ -99,7 +98,7 @@ assert.doesNotMatch(checks.moduleEditor, /me-family-tree-source/);
 assert.match(checks.inlineEditor, /data-family-tree-field="familyId"/);
 assert.match(checks.rendered, /<iframe/);
 assert.match(checks.rendered, /sandbox="allow-scripts allow-same-origin allow-forms allow-downloads allow-modals"/);
-assert.match(checks.rendered, /src="\.\.\/Stammb%C3%A4ume\/Stammbaum\.html\?family=haus-arwydd&amp;mode=view"/);
+assert.match(checks.rendered, /src="\.\.\/Stammb%C3%A4ume\/Stammbaum\.html\?family=haus-arwydd&amp;mode=view&amp;embed=1"/);
 assert.doesNotMatch(checks.emptyRendered, /<iframe/);
 assert.match(checks.emptyRendered, /Noch kein Stammbaum ausgewählt/);
 

@@ -13,6 +13,7 @@ export function hasPurchasableGoods(entry) {
 }
 
 export function evaluateVenueScope(entry, section) {
+  if (entry?.economyCalculationDeferred === true) return { eligible: false, reason: 'Kalkulation für diesen Ort ausdrücklich zurückgestellt.' };
   if (section?.tab !== cultureTab) return { eligible: false, reason: 'Außerhalb von Völker & Kulturen.' };
   if (!entry?.multipage || !Array.isArray(entry.pages)) return { eligible: false, reason: 'Kein begehbares Ortsmodul mit mehreren Seiten.' };
   if (excluded.has(entry.id))

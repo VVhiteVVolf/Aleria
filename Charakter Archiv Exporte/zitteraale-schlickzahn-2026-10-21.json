@@ -1,0 +1,39 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-10-21T00:00:00Z",
+  "assignedTab": "Schwarze Zitteraale",
+  "character": {
+    "id": "zitteraale-schlickzahn",
+    "name": "Schlickzahn",
+    "aliases": [],
+    "title": "Rechte Hand · Überfälle und Einschüchterung",
+    "fraktion": "Schwarze Zitteraale",
+    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/schlickzahn.png",
+    "bio": "Unter wechselnden Feldzeichen lernte er, dass bewaffnete Männer von den Vorräten anderer leben können. Beim Zitteraal fand er einen Herrn, der diese Gewohnheit belohnt. Seinen Beinamen verdankt er der Zahnlücke und den schlammigen Hohlwegen seiner Überfälle.\n\nReizbar, besitzergreifend und geduldig, wenn Angst ihm nützt. Lacht über kleine Demütigungen und merkt sich jeden Widerspruch.\n\nFührt den ersten Zugriff, schüchtert Gehöfte ein und treibt Forderungen ein. Er bindet Opfer im Gespräch, bis Komplizen die Ausgänge besetzt haben.",
+    "status": "Gesucht",
+    "createdAt": "2026-10-21T00:00:00Z",
+    "updatedAt": "2026-10-21T00:00:00Z",
+    "archived": false,
+    "genealogy": {
+      "sex": "male",
+      "birth": "1694",
+      "status": "alive",
+      "relationships": {
+        "parents": [],
+        "partners": [],
+        "children": []
+      }
+    },
+    "imageSets": [
+      {
+        "id": "standard",
+        "name": "Standard",
+        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/schlickzahn.png",
+        "emotes": []
+      }
+    ],
+    "activeImageSetId": "standard",
+    "imageSetSchemaVersion": 1
+  }
+}

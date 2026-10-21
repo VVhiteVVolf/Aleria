@@ -1,0 +1,483 @@
+{
+  "schemaVersion": 1,
+  "familyId": "haus-lothaire",
+  "revision": 1,
+  "updatedAt": "2026-10-20T16:22:50.044Z",
+  "family": {
+    "schema": "aleria.family-tree",
+    "schemaVersion": 1,
+    "document": {
+      "id": "haus-lothaire",
+      "title": "Haus Lothaire",
+      "motto": "Erkenntnis wächst aus Widerspruch.",
+      "description": "Brevanorische Alchemistenfamilie. Herluin führt das Arkaneum am Park von Gwynthor. Sein Sohn Rhydian und Enkel Maelwyn tragen als Angehörige der nicht legitimierten Nebenlinie den Beinamen O’Cenyr.",
+      "emblem": "assets/images/houses/Brevanor/Lothaire.png",
+      "houseProfile": {
+        "rankId": "commoner",
+        "seat": "",
+        "barony": "",
+        "county": "",
+        "kingdom": "Brevanor",
+        "secondarySeats": [
+          "Lothaires Arkaneum · Gwynthor-Stadt"
+        ],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "",
+          "barony": "",
+          "county": "",
+          "kingdom": ""
+        }
+      }
+    },
+    "persons": [
+      {
+        "id": "haus-lothaire-gruender",
+        "worldPersonId": "person--haus-lothaire--haus-lothaire-gruender",
+        "name": "Unbekannter Gründer",
+        "title": "Gründer des Hauses",
+        "sex": "male",
+        "status": "dead",
+        "birth": "",
+        "death": "????",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-lothaire",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Gründerfamilie"
+        ],
+        "notes": "Historische Gründerfigur vor dem Überlieferungssprung; Name und genaue Lebensdaten sind noch nicht belegt.",
+        "extensions": {}
+      },
+      {
+        "id": "haus-lothaire-gruenderin",
+        "worldPersonId": "person--haus-lothaire--haus-lothaire-gruenderin",
+        "name": "Unbekannte Gründerin",
+        "title": "Gründerin des Hauses",
+        "sex": "female",
+        "status": "dead",
+        "birth": "",
+        "death": "????",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-lothaire",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [
+          "Gründerfamilie"
+        ],
+        "notes": "Historische Gründerfigur vor dem Überlieferungssprung; Name und genaue Lebensdaten sind noch nicht belegt.",
+        "extensions": {}
+      },
+      {
+        "id": "herluin-lothaire",
+        "worldPersonId": "person--haus-lothaire--herluin-lothaire",
+        "name": "Herluin Lothaire",
+        "title": "Inhaber · Arkanist und Alchemist",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1577",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/herluin-lothaire/portrait-studies/02-arkanist.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-lothaire",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [
+          "Brevanor",
+          "Familie Lothaire"
+        ],
+        "notes": "Enthusiastisch, exzentrisch und eigenwillig. Betrachtet Einwände zuerst als Einladung, seinen Versuch ausführlicher zu erklären.",
+        "extensions": {
+          "appearance": "Wild abstehendes dunkelgraues Haar mit weißlichen Spitzen, ein silbernes Auge, ein eingesetzter Amethyst mit violetten Äderchen bis zum Nacken, kleiner Ziegenbart.",
+          "apparentAge": 33,
+          "magicGifted": true,
+          "registryManagedFields": [
+            "name",
+            "title",
+            "notes",
+            "portrait"
+          ],
+          "registryManagedExtensionFields": [
+            "appearance",
+            "apparentAge",
+            "magicGifted"
+          ]
+        }
+      },
+      {
+        "id": "rhydian-o-cenyr",
+        "worldPersonId": "person--haus-lothaire--rhydian-o-cenyr",
+        "name": "Rhydian O'Cenyr",
+        "title": "Herluins Sohn und Gehilfe",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1668",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/herluin-lothaire/cast/portraits/rhydian-o-cenyr.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-lothaire-bastardlinie",
+        "familyRole": "bastard",
+        "lineageRole": "branch",
+        "tags": [
+          "Cenyr · Rheunwaith-Name",
+          "Bastardlinie"
+        ],
+        "notes": "Erfahren, müde und kritisch; prüft die Qualität der Kräuter, bevor sein Vater damit experimentiert.",
+        "extensions": {
+          "appearance": "Sehr betagt; langer weißer Bart, trübe silbergraue Augen, lange Fingernägel, Kapuze und schlichte Robe.",
+          "apparentAge": 72,
+          "magicGifted": false,
+          "registryManagedFields": [
+            "name",
+            "title",
+            "notes",
+            "portrait"
+          ],
+          "registryManagedExtensionFields": [
+            "appearance",
+            "apparentAge",
+            "magicGifted"
+          ]
+        }
+      },
+      {
+        "id": "maelwyn-o-cenyr",
+        "worldPersonId": "person--haus-lothaire--maelwyn-o-cenyr",
+        "name": "Maelwyn O'Cenyr",
+        "title": "Herluins Enkel und magiebegabter Lehrling",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1697",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/herluin-lothaire/cast/portraits/maelwyn-o-cenyr.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-lothaire-bastardlinie",
+        "familyRole": "bastard",
+        "lineageRole": "branch",
+        "tags": [
+          "Cenyr · Rheunwaith-Name",
+          "Bastardlinie"
+        ],
+        "notes": "Freundlich, ordentlich und selbstsicher; begeistert vom Unterricht, aber weniger theatralisch als sein Großvater. Ehelich geboren; gehört zur nicht legitimierten O’Cenyr-Linie seines Vaters.",
+        "extensions": {
+          "appearance": "Wirkt 28; ordentliches rotes Haar mit helleren kupfergoldenen Spitzen, silbergraue Augen und kurzer frecher Kinnbart.",
+          "apparentAge": 28,
+          "magicGifted": true,
+          "registryManagedFields": [
+            "name",
+            "title",
+            "notes",
+            "portrait"
+          ],
+          "registryManagedExtensionFields": [
+            "appearance",
+            "apparentAge",
+            "magicGifted"
+          ]
+        }
+      },
+      {
+        "id": "helygyn",
+        "worldPersonId": "person--haus-lothaire--helygyn",
+        "name": "Helygyn",
+        "title": "Herluins frühere Gefährtin · Rhydians Mutter",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1640",
+        "death": "1701",
+        "portrait": "../AleriaAlmanach/assets/herluin-lothaire/module-art/helygyn.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [
+          "Cenyr",
+          "Familie Lothaire"
+        ],
+        "notes": "Geduldig und schlagfertig; ließ sich von Herluins Begeisterung anstecken, ohne jeden seiner Einfälle gutzuheißen.",
+        "extensions": {
+          "appearance": "Grüne Augen, graues Haar mit verbliebenen kupferroten Strähnen, seitlich geflochtener Zopf.",
+          "apparentAge": 61,
+          "magicGifted": false,
+          "registryManagedFields": [
+            "name",
+            "title",
+            "notes",
+            "portrait"
+          ],
+          "registryManagedExtensionFields": [
+            "appearance",
+            "apparentAge",
+            "magicGifted"
+          ]
+        }
+      },
+      {
+        "id": "perdella",
+        "worldPersonId": "person--haus-lothaire--perdella",
+        "name": "Perdella",
+        "title": "Rhydians verstorbene Gemahlin · Maelwyns Mutter",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1672",
+        "death": "1729",
+        "portrait": "../AleriaAlmanach/assets/herluin-lothaire/module-art/perdella.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [
+          "Cenyr",
+          "Familie Lothaire"
+        ],
+        "notes": "Ruhig, praktisch und aufmerksam. Behielt im gemeinsamen Haushalt den Überblick und bestand auf verständlichen Antworten.",
+        "extensions": {
+          "appearance": "Grüne Augen, kastanienbraunes Haar mit grauen Schläfen, ordentlich im Nacken gebunden.",
+          "apparentAge": 57,
+          "magicGifted": false,
+          "registryManagedFields": [
+            "name",
+            "title",
+            "notes",
+            "portrait"
+          ],
+          "registryManagedExtensionFields": [
+            "appearance",
+            "apparentAge",
+            "magicGifted"
+          ]
+        }
+      }
+    ],
+    "partnerships": [
+      {
+        "id": "marriage-haus-lothaire-founders",
+        "participantIds": [
+          "haus-lothaire-gruender",
+          "haus-lothaire-gruenderin"
+        ],
+        "type": "marriage",
+        "status": "ended",
+        "start": "",
+        "end": "",
+        "certainty": "unknown",
+        "visibility": "public",
+        "notes": "Gründerehe des Hauses.",
+        "extensions": {}
+      },
+      {
+        "id": "affair-herluin-helygyn",
+        "participantIds": [
+          "herluin-lothaire",
+          "helygyn"
+        ],
+        "type": "affair",
+        "status": "ended",
+        "start": "",
+        "end": "1701",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Frühere außereheliche Verbindung; ihr einziger Sohn ist Rhydian.",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-rhydian-perdella",
+        "participantIds": [
+          "rhydian-o-cenyr",
+          "perdella"
+        ],
+        "type": "marriage",
+        "status": "ended",
+        "start": "1695",
+        "end": "1729",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "chartAlignParentPairOverChildPersonId": "maelwyn-o-cenyr"
+        }
+      }
+    ],
+    "parentages": [
+      {
+        "id": "parentage-herluin-lothaire",
+        "childId": "herluin-lothaire",
+        "parentIds": [
+          "haus-lothaire-gruender",
+          "haus-lothaire-gruenderin"
+        ],
+        "partnershipId": "marriage-haus-lothaire-founders",
+        "type": "claimed",
+        "legitimacy": "unknown",
+        "certainty": "unknown",
+        "visibility": "public",
+        "notes": "Hauszugehörigkeit über nicht einzeln überlieferte Generationen, keine unmittelbare Elternschaft.",
+        "extensions": {
+          "timeJumpId": "gap-lothaire-to-1577"
+        }
+      },
+      {
+        "id": "parentage-rhydian-o-cenyr",
+        "childId": "rhydian-o-cenyr",
+        "parentIds": [
+          "herluin-lothaire",
+          "helygyn"
+        ],
+        "partnershipId": "affair-herluin-helygyn",
+        "type": "biological",
+        "legitimacy": "illegitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-maelwyn-o-cenyr",
+        "childId": "maelwyn-o-cenyr",
+        "parentIds": [
+          "rhydian-o-cenyr",
+          "perdella"
+        ],
+        "partnershipId": "marriage-rhydian-perdella",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Ehelich geboren innerhalb der nicht legitimierten Bastardlinie.",
+        "extensions": {}
+      }
+    ],
+    "houses": [
+      {
+        "id": "house-lothaire",
+        "name": "Haus Lothaire",
+        "motto": "Erkenntnis wächst aus Widerspruch.",
+        "emblem": "assets/images/houses/Brevanor/Lothaire.png",
+        "status": "active"
+      },
+      {
+        "id": "house-lothaire-bastardlinie",
+        "name": "O’Cenyr · Lothaires Bastardlinie",
+        "motto": "",
+        "emblem": "assets/images/placeholders/neutral-crest.png",
+        "status": "active"
+      }
+    ],
+    "cadetBranches": [
+      {
+        "id": "branch-lothaire-o-cenyr",
+        "name": "O’Cenyr",
+        "subtitle": "Nicht legitimierte Bastardlinie",
+        "linkType": "cadet-house",
+        "parentPartnershipId": "affair-herluin-helygyn",
+        "parentPersonId": "",
+        "childIds": [
+          "rhydian-o-cenyr"
+        ],
+        "houseId": "house-lothaire-bastardlinie",
+        "emblem": "assets/images/placeholders/neutral-crest.png",
+        "emblemScale": 0.86,
+        "crestFrame": "iron",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-lothaire",
+        "notes": "Motivloser Wappenknoten. Rhydian und Maelwyn führen keinen Anspruch auf Namen oder Wappen der Lothaire.",
+        "extensions": {
+          "chartAlignBelowPartnership": true
+        }
+      }
+    ],
+    "timeJumps": [
+      {
+        "id": "gap-lothaire-to-1577",
+        "parentPartnershipId": "marriage-haus-lothaire-founders",
+        "sharedParentPartnershipIds": [],
+        "parentPersonId": "",
+        "childIds": [
+          "herluin-lothaire"
+        ],
+        "years": 0,
+        "fromYear": "????",
+        "toYear": "1577",
+        "label": "Nicht einzeln überlieferte Generationen bis Herluin",
+        "notes": "Der Zeitsprung ist der alleinige absolute Generationentrenner unter dem Hauswappen. Bekannte Nachkommen werden später ausschließlich hinter diesem Knoten ergänzt.",
+        "extensions": {
+          "preparedPlaceholder": false
+        }
+      }
+    ],
+    "lineage": {
+      "founderPartnershipId": "marriage-haus-lothaire-founders",
+      "houseId": "house-lothaire",
+      "crestSubtitle": "Alchemisten aus Brevanor",
+      "crestEmblemScale": 0.86,
+      "crestFrame": "silver",
+      "crestFrameScale": 1,
+      "timeGap": {
+        "enabled": false,
+        "years": 0,
+        "fromYear": "",
+        "toYear": "",
+        "label": ""
+      },
+      "originHouse": {
+        "enabled": false,
+        "id": "lineage-origin-house",
+        "houseId": "",
+        "name": "Ursprungshaus",
+        "subtitle": "",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "childIds": [],
+        "targetFamilyId": "",
+        "notes": "",
+        "timeGap": {
+          "enabled": false,
+          "years": 0,
+          "fromYear": "",
+          "toYear": "",
+          "label": ""
+        }
+      }
+    },
+    "presentation": {
+      "relationshipColors": {
+        "marriage": "#326c4a",
+        "engagement": "#b88b37",
+        "union": "#8e2724",
+        "affair": "#704485",
+        "concubinage": "#704485",
+        "political": "#9d7d48",
+        "forced": "#c7a974",
+        "biological": "#8e2724",
+        "adoptive": "#2f75a8",
+        "foster": "#2f75a8",
+        "step": "#7eb4d7",
+        "magical": "#704485",
+        "claimed": "#62615e"
+      }
+    },
+    "view": {
+      "focusPersonId": "herluin-lothaire",
+      "orientation": "vertical",
+      "ancestorDepth": 12,
+      "descendantDepth": 12,
+      "limitGenerations": false,
+      "showSiblings": true
+    },
+    "extensions": {
+      "blankFamily": false,
+      "preparedTimeJump": true,
+      "pendingDescendantReview": false,
+      "sourceRevision": 1,
+      "chartLayoutPolicy": "strict-v1",
+      "sourceNote": "Autorisierte Ausarbeitung vom 20.10.2026. Unbekannte Gründer → Hausknoten → ein Zeitsprung → Herluin. Frühere Cenyri-Gefährtin Helygyn und verstorbene Cenyri-Schwiegertochter Perdella wurden ergänzend benannt und datiert. Keine weiteren Kinder oder Geschwister Rhydians. Maelwyn ist sein einziges Kind. Lebensalter und sichtbares Alter folgen der Nutzervorgabe; die genaue Ursache der Langlebigkeit bleibt offen. Der Bastardknoten ist eine hausinterne Linie und keine zweite Familienakte."
+    }
+  }
+}

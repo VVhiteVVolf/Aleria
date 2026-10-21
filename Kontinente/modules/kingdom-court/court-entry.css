@@ -1,0 +1,21 @@
+/* Shared entrances from kingdom chronicles to their court directories. */
+:is(.cenyr-court-entry, .kingdom-court-entry) {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 9px;
+  min-width: 180px;
+  max-width: 100%;
+  padding: 14px 24px;
+  border: 1px solid #a17d45;
+  border-radius: 5px;
+  color: #702b30;
+  background: #f5e8cd;
+  text-decoration: none;
+  font: 700 14px/1.5 Georgia, serif;
+}
+:is(.cenyr-court-entry, .kingdom-court-entry) img { width: 120px; height: 120px; object-fit: contain; border-radius: 8px; mix-blend-mode: multiply; }
+:is(.cenyr-court-entry, .kingdom-court-entry):hover { background: #fff3d9; border-color: #702b30; }
+:is(.cenyr-court-entry, .kingdom-court-entry):focus-visible { outline: 3px solid #702b30; outline-offset: 4px; }
+:is(.cenyr-court-entry-hint, .kingdom-court-entry-hint) { color: #705335; font: 11px/1.5 Verdana, sans-serif; }
+.kingdom-court-entry-slot { margin: 1.5rem 0; text-align: center; }

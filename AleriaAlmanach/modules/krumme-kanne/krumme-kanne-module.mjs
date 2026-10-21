@@ -2,6 +2,7 @@ import { KANNE_PEOPLE, KANNE_PETS, KANNE_DEPARTMENTS } from './krumme-kanne-rost
 import { buildKanneTradeCatalog } from './krumme-kanne-trade-catalog.mjs';
 import { KANNE_ROOMS } from './krumme-kanne-rooms.mjs';
 import { expandKanneGuestRegister } from './krumme-kanne-guests.mjs';
+import { withHouseholdWorkplaceLinks } from '../gwynthor-heime/household-workplaces.mjs';
 
 export const KANNE_MODULE_ID = 'modul-1781474092957';
 const asset = (folder, id) => `./assets/krumme-kanne/${folder}/${id}.png`;
@@ -91,5 +92,5 @@ export function completeKrummeKanne(source, catalogs) {
     if (room.intro) p.sessionIntro = room.intro;
   }
   e.image = e.pages[0].image;
-  return e;
+  return withHouseholdWorkplaceLinks(e);
 }

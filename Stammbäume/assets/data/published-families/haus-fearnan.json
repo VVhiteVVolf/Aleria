@@ -1,0 +1,309 @@
+{
+  "schemaVersion": 1,
+  "familyId": "haus-fearnan",
+  "revision": 2,
+  "updatedAt": "2026-10-20T17:36:18.197Z",
+  "family": {
+    "schema": "aleria.family-tree",
+    "schemaVersion": 1,
+    "document": {
+      "id": "haus-fearnan",
+      "title": "Familie Fearnan",
+      "motto": "",
+      "description": "Eine albische Fischerfamilie und ihr bescheidenes Zuhause nahe den Docks.",
+      "emblem": "../AleriaAlmanach/assets/gwynthor-heime/fearnan/wappen.png",
+      "houseProfile": {
+        "rankId": "commoner",
+        "seat": "Gwynthor",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "house-draig",
+        "liegeHouseName": "Haus Draig",
+        "regionEmblems": {
+          "seat": "",
+          "barony": "",
+          "county": "",
+          "kingdom": ""
+        }
+      }
+    },
+    "persons": [
+      {
+        "id": "eoghan",
+        "worldPersonId": "person--haus-fearnan--eoghan",
+        "name": "Eoghan Fearnan",
+        "title": "Fischer an den Docks",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1704",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/gwynthor-heime/fearnan/eoghan.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-fearnan",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "Eoghan spricht ruhig und lacht schnell, solange das Wetter mitspielt. Er hält seine Netze sorgfältiger instand als seinen Mantel und kommt nach dem Anlanden möglichst direkt nach Hause.",
+        "extensions": {
+          "appearance": "36-year-old human Alba fisherman, dark brown short wavy hair, hazel-brown eyes, broad nose, short dark beard. Lean weathered face, gentle crooked smile. Faded moss wool tunic and patched grey-brown sleeveless coat, relaxed standing chest-up, one hand loosely holding a folded net over his shoulder. Simple harbor-home doorway.",
+          "culture": "Albe · Leitheach",
+          "portraitAge": 36,
+          "registryManagedFields": [
+            "name",
+            "title",
+            "portrait",
+            "notes"
+          ],
+          "registryManagedExtensionFields": [
+            "appearance",
+            "culture",
+            "portraitAge"
+          ]
+        }
+      },
+      {
+        "id": "muireann",
+        "worldPersonId": "person--haus-fearnan--muireann",
+        "name": "Muireann",
+        "title": "Hausfrau",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1706",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/gwynthor-heime/fearnan/muireann.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Muireann führt den kleinen Haushalt mit Geduld und einem genauen Blick für Vorräte. Ihre Töchter dürfen widersprechen, solange sie danach trotzdem die nassen Schuhe vor dem Herd ausziehen.",
+        "extensions": {
+          "appearance": "34-year-old human Alba woman, deep chestnut brown hair in one low braid, warm brown eyes, narrow nose, oval face. Modest ochre wool dress, off-white linen apron, rolled sleeves. Relaxed standing waist-up, holding folded mended linen, quiet amused expression. Sparse plaster-and-timber room.",
+          "culture": "Albin · Leitheach",
+          "portraitAge": 34,
+          "registryManagedFields": [
+            "name",
+            "title",
+            "portrait",
+            "notes"
+          ],
+          "registryManagedExtensionFields": [
+            "appearance",
+            "culture",
+            "portraitAge"
+          ]
+        }
+      },
+      {
+        "id": "eithne",
+        "worldPersonId": "person--haus-fearnan--eithne",
+        "name": "Eithne Fearnan",
+        "title": "Ältere Tochter",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1731",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/gwynthor-heime/fearnan/eithne.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-fearnan",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Eithne zählt die heimkehrenden Boote und möchte jede Leine richtig benennen. Ihrer kleinen Schwester erklärt sie den Hafen mit großer Ernsthaftigkeit, auch wenn sie selbst gerade erst gefragt hat.",
+        "extensions": {
+          "appearance": "Nine-year-old human Alba girl, clearly childlike proportions, dark brown wavy shoulder-length hair in two loose braids, brown eyes like her parents. Plain faded blue long-sleeved wool dress, cream collar. Standing chest-up holding a tiny homemade wooden boat, earnest curious face. Modest family home. Fully modest ordinary child clothing.",
+          "culture": "Albisch · in Gwynthor geboren",
+          "portraitAge": 9,
+          "registryManagedFields": [
+            "name",
+            "title",
+            "portrait",
+            "notes"
+          ],
+          "registryManagedExtensionFields": [
+            "appearance",
+            "culture",
+            "portraitAge"
+          ]
+        }
+      },
+      {
+        "id": "nessa",
+        "worldPersonId": "person--haus-fearnan--nessa",
+        "name": "Nessa Fearnan",
+        "title": "Jüngere Tochter",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1733",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/gwynthor-heime/fearnan/nessa.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-fearnan",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Nessa redet mit dem Baum auf dem Türzeichen und sammelt flache Kiesel für ihren Vater. Bei Fremden versteckt sie sich zunächst hinter Muireann; nach wenigen Minuten fragt sie ihnen Löcher in den Bauch.",
+        "extensions": {
+          "appearance": "Seven-year-old human Alba girl, clearly young child with round cheeks, dark chestnut curly bob, large warm brown eyes, cheerful small tooth-gap smile. Plain russet long-sleeved dress with patched elbows, linen collar. Standing upper-body portrait holding one smooth beach pebble in both hands. Simple warm cottage wall. Fully modest ordinary child clothing.",
+          "culture": "Albisch · in Gwynthor geboren",
+          "portraitAge": 7,
+          "registryManagedFields": [
+            "name",
+            "title",
+            "portrait",
+            "notes"
+          ],
+          "registryManagedExtensionFields": [
+            "appearance",
+            "culture",
+            "portraitAge"
+          ]
+        }
+      }
+    ],
+    "partnerships": [
+      {
+        "id": "marriage-fearnan",
+        "participantIds": [
+          "eoghan",
+          "muireann"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "1728",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Gemeinsamer Haushalt im Hafenviertel von Gwynthor.",
+        "extensions": {
+          "chartAlignChildGroupBelowParentPair": true,
+          "registryManagedExtensionFields": [
+            "chartAlignParentPairOverChildPersonId",
+            "chartAlignChildGroupBelowParentPair"
+          ]
+        }
+      }
+    ],
+    "parentages": [
+      {
+        "id": "parentage-eithne",
+        "childId": "eithne",
+        "parentIds": [
+          "eoghan",
+          "muireann"
+        ],
+        "partnershipId": "marriage-fearnan",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-nessa",
+        "childId": "nessa",
+        "parentIds": [
+          "eoghan",
+          "muireann"
+        ],
+        "partnershipId": "marriage-fearnan",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      }
+    ],
+    "houses": [
+      {
+        "id": "house-fearnan",
+        "name": "Familie Fearnan",
+        "motto": "",
+        "emblem": "../AleriaAlmanach/assets/gwynthor-heime/fearnan/wappen.png",
+        "status": "active",
+        "extensions": {}
+      }
+    ],
+    "cadetBranches": [],
+    "timeJumps": [],
+    "lineage": {
+      "founderPartnershipId": "marriage-fearnan",
+      "houseId": "house-fearnan",
+      "crestSubtitle": "Hafenviertel",
+      "crestEmblemScale": 0.86,
+      "crestFrame": "iron",
+      "crestFrameScale": 1,
+      "timeGap": {
+        "enabled": false,
+        "years": 0,
+        "fromYear": "",
+        "toYear": "",
+        "label": ""
+      },
+      "originHouse": {
+        "enabled": false,
+        "id": "lineage-origin-house",
+        "houseId": "",
+        "name": "Ursprungshaus",
+        "subtitle": "",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "childIds": [],
+        "targetFamilyId": "",
+        "notes": "",
+        "timeGap": {
+          "enabled": false,
+          "years": 0,
+          "fromYear": "",
+          "toYear": "",
+          "label": ""
+        }
+      }
+    },
+    "presentation": {
+      "relationshipColors": {
+        "marriage": "#326c4a",
+        "engagement": "#b88b37",
+        "union": "#8e2724",
+        "affair": "#704485",
+        "concubinage": "#704485",
+        "political": "#9d7d48",
+        "forced": "#c7a974",
+        "biological": "#8e2724",
+        "adoptive": "#2f75a8",
+        "foster": "#2f75a8",
+        "step": "#7eb4d7",
+        "magical": "#704485",
+        "claimed": "#62615e"
+      }
+    },
+    "view": {
+      "focusPersonId": "eoghan",
+      "orientation": "vertical",
+      "ancestorDepth": 2,
+      "descendantDepth": 2,
+      "limitGenerations": false,
+      "showSiblings": true
+    },
+    "extensions": {
+      "blankFamily": false,
+      "sourceRevision": 2,
+      "chartLayoutPolicy": "strict-v1",
+      "registryManagedExtensionFields": [
+        "chartLayoutPolicy"
+      ],
+      "sourceNote": "Drei kleine private Haushalte aus dem Nutzerauftrag vom 20.10.2026. Nur der derzeitige Familienkreis; keine erfundene ältere Dynastie. Llinos ist dieselbe Person wie die Hausmagd der Krummen Kanne und behält ihre Identität und ihr Porträt.",
+      "registryTombstones": {},
+      "registryUpgrade": {
+        "fromRevision": 1,
+        "toRevision": 2
+      }
+    }
+  }
+}

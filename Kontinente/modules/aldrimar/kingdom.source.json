@@ -1,0 +1,1030 @@
+{
+  "id": "koenigreich-aldrimar",
+  "name": "Das Königreich Aldrimar",
+  "banner": "/Stammbäume/assets/images/regions/aldrimar.png",
+  "mapImage": "/Kontinente/assets/images/aldrimar/reichskarte.png",
+  "sections": [
+    {
+      "id": "einfuhrung",
+      "title": "Einführung",
+      "blocks": [
+        {
+          "kind": "paragraph",
+          "text": "Das Königreich Aldrimar ist eine Monarchie, die aus der Vereinigung zweier Reiktümer hervorging. Diese entstanden durch die Migration der Norrnaigh nach Süden und ihre Begegnung mit den dort bereits ansässigen Glaennath."
+        }
+      ]
+    },
+    {
+      "id": "geschichte",
+      "title": "Geschichte",
+      "blocks": [
+        {
+          "kind": "paragraph",
+          "text": "Vor der Gründung Aldrimars existierte in der Region ein Fürstentum der Glaennath-Alben, das friedlich mit dem benachbarten Fürstentum Ceitheach koexistierte. Mit dem Beginn des Zeitalters der Seefahrer migrierten immer mehr Norrnaigh in den Süden. Zunächst verlief die Besiedlung friedlich, doch religiöse und kulturelle Unterschiede führten zunehmend zu Spannungen."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Während einige Norrnaigh die Glaennath verdrängen oder vernichten wollten, suchten andere eine friedliche Koexistenz. Die Konflikte eskalierten, als sich für die Glaennath eine Auslöschung abzuzeichnen begann. Unter der Führung von Jurgen Windrufer und anderen Stammesherren setzten sich jene Norrnaigh, die für eine Koexistenz eintraten, gegen die Aggressoren durch. Der Krieg zerstörte das alte Fürstentum der Glaennath und führte zur Teilung des Landes in zwei große Fürstentümer, die sich östlich und westlich eines zentralen Flusses formierten."
+        },
+        {
+          "kind": "heading",
+          "text": "Vorgeschichte"
+        },
+        {
+          "kind": "paragraph",
+          "text": "Später wurde ein Königsthing einberufen, um einen König für Aldrimar zu wählen und die beiden Fürstentümer zu vereinen. Die Hauptanwärter waren der Wargh-Clan und der Vaeren-Clan. Nach intensiven Beratungen und Abstimmungen fiel die Wahl schließlich auf einen Reik des Vaeren-Clans, der damit als erster König Aldrimar begründete und die beiden Reiche zu einem Königreich vereinte."
+        },
+        {
+          "kind": "heading",
+          "text": "Kaiserzeit"
+        },
+        {
+          "kind": "paragraph",
+          "text": "Unter dem Kaiserreich war Aldrimar ein schwer zu bändigender Vasall. Obwohl keine Rebellionen oder Revolten von Aldrimar ausgingen, zeigte das Königreich nur wenig Bereitschaft, sich vollständig der neuen Alerischen Kirche zu unterwerfen. Ebenso wurde das von Cenyr übernommene Ritter- und Feudalsystem nur widerwillig und bis heute lediglich in Teilen adaptiert."
+        }
+      ]
+    },
+    {
+      "id": "kultur",
+      "title": "Kultur & Gesellschaft",
+      "blocks": [
+        {
+          "kind": "heading",
+          "text": "Bevölkerung"
+        },
+        {
+          "kind": "paragraph",
+          "text": "Die Bevölkerung Aldrimars setzt sich aus zwei Hauptgruppen zusammen: den Norrnaigh und den Glaennath. Die Norrnaigh sind Nachfahren der nordischen Migranten, die während des Zeitalters der Seefahrer in den Süden zogen. Sie prägen Aldrimar mit ihrer robusten Kultur, die von seefahrerischen Traditionen, handwerklicher Kunst und einer kämpferischen Mentalität geprägt ist. Ihre Gemeinschaftsstrukturen basieren auf Clans und Stammesverbänden."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Die Glaennath, ein Albenvolk, lebten schon seit Anbeginn in der Region und waren stark mit der Natur verbunden."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Durch Jahrhunderte des Zusammenlebens haben sich die beiden Kulturen vermischt, was zu einer einzigartigen Gesellschaft führte. Dennoch gibt es Regionen, in denen die Einflüsse einer der beiden Gruppen stärker vertreten sind. Die Vermischung zeigt sich auch in den unterschiedlichen Glaubensrichtungen, Sprachen und Bräuchen, die je nach Region variieren. Die Bevölkerung Aldrimars ist daher ein Symbol für die Verschmelzung zweier unterschiedlicher, aber sich ergänzender Kulturen."
+        },
+        {
+          "kind": "heading",
+          "text": "Subkulturen (Volksgruppen)"
+        },
+        {
+          "kind": "paragraph",
+          "text": "Die Rorlingar (Roriksvolk)"
+        },
+        {
+          "kind": "paragraph",
+          "text": "Die Rorlingar sind die Bewohner von Roriksheim, einem friedlichen und fruchtbaren Land, das von Bauern, Viehzüchtern und kunstliebenden Menschen geprägt ist. Ihre Kultur wurzelt tief in der Braukunst, der Arbeit mit Pferden und Rindern sowie in den Traditionen des ländlichen Lebens. Die Rorlingar gelten als friedvoll und gastfreundlich, oft inspiriert von den albenähnlichen Einflüssen, die sich in ihrer Architektur und Kunst widerspiegeln."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Der Gründervater der Rorlingar, Rorik Varulv, war ein legendärer Anführer, der nach Süden zog und das heutige Roriksheim erschloss. Er gründete den Clan der Varulv, bekannt für ihre enge Verbindung zur Natur und zu den Tieren des Landes. Rorik errichtete Rorikhall, eine große Burg, die sowohl als Schutzburg als auch als kulturelles Zentrum diente. Von hier aus begründete er das Jarltum von Roriksheim, das später zu einem Kernstück von Aldrimar wurde."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Die Ivarlingar (Ivarsvolk)"
+        },
+        {
+          "kind": "paragraph",
+          "text": "Die Ivarlingar stammen vom mächtigen Clan der Wargh ab, dessen Anführer Ivar Wargh die Region prägte. Durch ein Bündnis mit den dort lebenden Alben und seine Heirat in das Fürstenhaus begründete er die Wargh-Dynastie und wurde der erste Jarl von Ivarsheim. Ivar erweiterte die lokale Festung zu Ivarsfels und schuf ein Machtzentrum, das durch Stärke, Pragmatismus und die Nutzung der Ressourcen der rauen Landschaft geprägt war. Die Ivarlingar ehren ihn als Gründervater und sind für ihre stoische, materielle und kampfbetonte Kultur bekannt."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Die Fennlingar (Waldvolk)"
+        },
+        {
+          "kind": "paragraph",
+          "text": "Die Fennlingar erhielten ihren Namen von den dichten Wäldern und felsigen Gebirgszügen, die ihre Heimat Schwarzfenn prägen. In dieser rauen und kühlen Region, wo Landwirtschaft schwer fällt, leben sie vor allem von Viehzucht, Jagd und der Nutzung der reichen Wälder. Ihre rustikale Lebensweise spiegelt sich in ihrem engen Bezug zur Natur und ihrer praktischen, handwerklich geprägten Kultur wider. Der mittlere Einfluss der Glaennath zeigt sich in ihrer Verbundenheit mit den Wäldern, die sie als Quelle von Schutz und Wohlstand betrachten. Die Fennlingar gelten als zäh und widerstandsfähig, perfekt angepasst an ihre bewaldete, aber reiche Umgebung."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Die Havrmor (Sumpfvolk)"
+        },
+        {
+          "kind": "paragraph",
+          "text": "Die Havrmor sind die Bewohner von Krähenmoor, einem Land, das von ausgedehnten Mooren, sumpfigen Ebenen und einer weiten Küste geprägt ist. Ihr Name leitet sich von der Mischung aus „Hav“ (Meer) und „Mor“ (Moor) ab und spiegelt die einzigartige Geographie ihrer Heimat wider. Die Havrmor sind ein anpassungsfähiges, oft verschlagenes Volk, das sich durch ihre Nähe zum Wasser und ihre Fähigkeit, die oft unwirtliche Umgebung zu nutzen, auszeichnet."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Während der westliche Teil von Mooren und morschen Wäldern dominiert wird, liegt im Osten ein Gebirgszug, der wertvolle Mineralien birgt. Diese Ressourcen fördern den Wohlstand einiger, während weite Teile des Landes von großer Armut geprägt sind, was eine deutliche soziale Kluft geschaffen hat. Die Havrmor sind bekannt für ihre Seefahrertradition und ihre Fähigkeit, sowohl Handel als auch Piraterie zu betreiben. Ihre Kultur ist vulgärer und rauer als die anderer Regionen Aldrimars, mit einer Mischung aus pragmatischer Härte und scharfem Verstand."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Die Heltarn (Heldenvolk)"
+        },
+        {
+          "kind": "paragraph",
+          "text": "Die Heltarn sind die Bewohner von Kronental, dem Königslande Aldrimars und Sitz des Königs. Ihr Name, der „Heldenadler“ bedeutet, spiegelt den Stolz und die heldenhafte Geschichte ihrer Region wider. Kronental ist geprägt von fruchtbaren Ebenen, prächtigen Städten und einer langen Küstenlinie, die es zu einem Zentrum von Reichtum, Macht und Kultur gemacht haben. Die Heltarn sind städtischer und aristokratischer als andere Volksgruppen, mit einer tiefen Verbindung zu Seefahrt und Handel."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Da ihre Kultur mehr von den Norrnaigh beeinflusst wurde, tragen die Heltarn den Stolz der Norrnaigh in sich, insbesondere in ihren Clans, die als Seefahrer und Krieger eine entscheidende Rolle in der Geschichte Aldrimars spielten. Die Region wird durch prächtige Burgen, Handelshäfen und den königlichen Hof dominiert, wo Tradition und Macht sich verbinden. Die Heltarn gelten als ehrgeizig, kultiviert und entschlossen, die Stärke und den Glanz Aldrimars zu bewahren."
+        },
+        {
+          "kind": "heading",
+          "text": "Nationalsport"
+        },
+        {
+          "kind": "paragraph",
+          "text": "Das Ringen ist der Nationalsport von Aldrimar und tief in der Kultur aller Volksgruppen verwurzelt. Es spiegelt die Werte des Königreichs wider: Stärke, Geschicklichkeit und die Fähigkeit, Herausforderungen direkt zu begegnen. Über die Jahrhunderte hat sich das Ringen nicht nur als sportlicher Wettkampf etabliert, sondern auch als eine ehrenhafte Methode, Konflikte beizulegen, ohne zu Gewalt zu greifen."
+        },
+        {
+          "kind": "heading",
+          "text": "Clansystem"
+        },
+        {
+          "kind": "paragraph",
+          "text": "Das Clansystem Aldrimars ist tief in der Geschichte und Kultur des Reiches verwurzelt und basiert auf den Traditionen der Glaennath und Norrnaigh, aus denen das Königreich einst hervorging. Beide Völker hatten bereits eigene Clanstrukturen, die in Aldrimar nicht nur fortgeführt, sondern auch weiterentwickelt wurden. Clans sind dabei nicht nur Abstammungslinien, sondern zugleich wirtschaftliche, militärische und gesellschaftliche Einheiten, die das Fundament der aldrimarischen Gesellschaft bilden."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Ein Clan ist in erster Linie eine Familieneinheit, wobei es sowohl adlige als auch bürgerliche Clans gibt. Während die adligen Clans politisch eine große Rolle spielen und oft mit Lehensrechten ausgestattet sind, können auch bürgerliche Clans durch wirtschaftlichen Einfluss, militärische Verdienste oder herausragende Persönlichkeiten an Prestige gewinnen."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Eine der wichtigsten Aufgaben der Clans ist die Stellung von Kriegsvolk. In den frühen Tagen Aldrimars war es der Clansstruktur zu verdanken, dass das Reich stets über eine kampffähige Bevölkerung verfügte. Jeder Clan war verantwortlich für die Ausbildung seiner eigenen Krieger – darunter Hirdmänner, Kundschafter und Jäger. Diese Krieger wurden dem jeweiligen Lehnsherrn oder Jarltum zur Verfügung gestellt, wodurch sich ein organisches, von der Gesellschaft selbst getragenes Militär bildete."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Dieses System hat sich über die Jahrhunderte verändert. In den stark besiedelten Regionen und Städten spielen Clan-Krieger eine geringere Rolle. Dort konzentrieren sich die Menschen stärker auf Handwerk, Handel und Verwaltung, während in den abgelegenen oder gefährlichen Grenzregionen die Clans weiterhin eine zentrale Rolle in der Selbstverteidigung spielen. In diesen Gebieten ist es selbstverständlich, dass nahezu jedes Clanmitglied zumindest Grundkenntnisse im Kampf besitzt."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Ein Clan ist nicht nur eine wirtschaftliche oder militärische Institution, sondern auch eine soziale Rangordnung. Einfluss, Prestige und Ansehen sind eng mit dem Ruf des Clans verknüpft. Ein angesehener Clan öffnet seinen Mitgliedern Türen zu besseren Positionen in Verwaltung, Handel oder Militär, während ein Clan mit einem schlechten Ruf oder einer unehrenhaften Vergangenheit das Gegenteil bewirken kann."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Ein bedeutender Aspekt dieser Struktur ist die soziale Verantwortung. Ein Clan schützt und unterstützt seine Mitglieder, er kann ihnen Aufstiegsmöglichkeiten bieten, sie aber auch durch Fehlverhalten ins gesellschaftliche Abseits führen. Diese Dynamik führt zu einer Art Selbstregulierung: Clans achten genau darauf, welche Mitglieder für sie sprechen, da ein einzelnes Mitglied den gesamten Clan in den Augen der Gesellschaft schwächen kann."
+        },
+        {
+          "kind": "paragraph",
+          "text": "In Aldrimar gibt es auch Clanlose, Personen, die keiner Familie oder einem Clan zugehörig sind. Diese Gruppe wächst vor allem in den Hauptstädten, wo Individualismus stärker verbreitet ist als in den ländlichen und traditionellen Gegenden. Clanlose werden mit Skepsis betrachtet, da sie außerhalb der etablierten sozialen Ordnung stehen. Ohne Clan fehlt ihnen sowohl ein Schutznetz als auch eine Verpflichtung zur Gemeinschaft. Für viele Aldrimarer sind Clanlose ein Zeichen für den Verfall alter Traditionen – insbesondere für konservative oder ländliche Regionen, in denen das Clansystem noch tief verankert ist."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Das Clansystem ist eine der tragenden Säulen Aldrimars. Es bestimmt, wer man ist, welchen Status man hat und welche Pflichten man erfüllt. Während Clans in städtischen Gebieten zunehmend an Bedeutung verlieren, bleiben sie in den entlegeneren Teilen des Reiches unverzichtbar. Sie stellen nicht nur Krieger, sondern sind auch soziale Netzwerke, die über das Leben ihrer Mitglieder entscheiden. Wer einem mächtigen Clan angehört, hat automatisch Ansehen und Einfluss – wer keinem Clan angehört, lebt in den Augen vieler Aldrimarer in einem Zustand der Schutz- und Ehrlosigkeit."
+        },
+        {
+          "kind": "heading",
+          "text": "Kunst"
+        },
+        {
+          "kind": "paragraph",
+          "text": "Aldrimar gilt als die Wiegestätte des Bardentums, da hier die Kunst der Skalden (Barden) nicht nur eine Form der Unterhaltung ist, sondern eine zentrale gesellschaftliche Rolle spielt. Die Skalden sind mehr als einfache Sänger oder Dichter – sie sind Historiker, Geschichtenerzähler und Bewahrer der Traditionen."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Schon seit den frühen Tagen der Norrnaigh und Glaennath wurde Wissen hauptsächlich mündlich überliefert. Skalden tragen durch ihre Lieder, Sagen und Heldendichtungen die Geschichte Aldrimars von Generation zu Generation weiter. Sie erzählen von großen Schlachten, edlen Königen, schicksalhaften Bündnissen und göttlichen Wundern."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Es gibt verschiedene Arten von Skalden:"
+        },
+        {
+          "kind": "bullet",
+          "text": "Königliche Skalden, die an den Höfen der Jarls und des Königs leben und offizielle Chronisten der Herrscherhäuser sind."
+        },
+        {
+          "kind": "bullet",
+          "text": "Reiseskalden, die von Dorf zu Dorf ziehen und ihre Lieder gegen Unterkunft, Speisen oder Silber darbieten."
+        },
+        {
+          "kind": "bullet",
+          "text": "Kampfsänger, die in den Heeren Aldrimars reisen und durch ihre Gesänge die Moral der Krieger stärken."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Ihre Kunst wird auf Instrumenten wie Leiern, Harfen und Flöten begleitet, und besonders begabte Skalden genießen hohes gesellschaftliches Ansehen."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Neben der Bardenkunst sind die Runen eines der wichtigsten künstlerischen und religiösen Ausdrucksmittel Aldrimars. Sie werden nicht nur zur einfachen Schrift verwendet, sondern haben tiefgehende spirituelle, historische und magische Bedeutungen."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Runensteine sind eine weit verbreitete Form der Kunst, die in heiligen Stätten, an Straßen, in Tempeln oder auf Gräbern zu finden sind. Diese Steine werden mit Runeninschriften versehen, um:"
+        },
+        {
+          "kind": "heading",
+          "text": "Ehrenmale für Verstorbene zu errichten"
+        },
+        {
+          "kind": "paragraph",
+          "text": "Die Runenkunst wird oft von religiösen Gelehrten oder speziellen Runenmeistern ausgeführt, die die alten Zeichen verstehen und interpretieren können. Besonders im Glauben an die Götter Aldrimars spielen Runen eine große Rolle – Priester und Druiden ritzen sie auf Amulette, Waffen oder Tempelwände, um Schutz, Kraft oder göttlichen Beistand zu erbitten."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Eng mit der Runenkunst verbunden ist die Steinmetzkunst, eine der ältesten und angesehensten Handwerkskünste Aldrimars. Die Steinmetze sind nicht nur für die Errichtung von Runensteinen verantwortlich, sondern auch für:"
+        },
+        {
+          "kind": "bullet",
+          "text": "Hügelgräber (die Ruhestätten großer Helden, oft mit aufwendigen Reliefs geschmückt)"
+        },
+        {
+          "kind": "bullet",
+          "text": "Tempel und Kultstätten (die oft mit heiligen Symbolen und Runen versehen sind)"
+        },
+        {
+          "kind": "bullet",
+          "text": "Felsenreliefs, die epische Szenen darstellen, etwa berühmte Schlachten oder mythische Geschichten"
+        },
+        {
+          "kind": "paragraph",
+          "text": "Viele dieser Monumente werden in Fels gehauen oder aus großen Steinblöcken gefertigt und können Jahrhunderte überdauern. Die Kunst der Steinmetze ist ein Zeichen des Respekts für die Vergangenheit und eine Methode, die Erinnerungen an Aldrimars große Taten unvergänglich zu machen."
+        },
+        {
+          "kind": "heading",
+          "text": "Bräuche"
+        },
+        {
+          "kind": "paragraph",
+          "text": "Der Holmgang ist eine aldrimarische Praxis, die einem Urteil durch Zweikampf gleichkommt. Er dient der Klärung von Erbstreitigkeiten zwischen Vettern und Brüdern, die aufgrund traditioneller Erbfolgen uneins sind. In der Regel wird das Töten vermieden und ist gesellschaftlich missbilligt, jedoch vollkommen legal, solange der Verlierer nicht um Gnade fleht."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Im Holmgang treten die Kontrahenten gegeneinander an, oft auf einer abgegrenzten Kampffläche oder einem \"Holm\". Sie kämpfen nach festgelegten Regeln und Ehrenkodizes, die eingehalten werden müssen. Der Zweikampf endet in der Regel, wenn einer der Kämpfer aufgibt oder nicht mehr in der Lage ist weiterzukämpfen. Der Sieger des Holmgangs erhält in der Regel das Recht oder den Anspruch auf das umstrittene Erbe oder eine andere Forderung."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Obwohl der Holmgang eine archaische Praxis ist, hat er in Aldrimar eine tief verwurzelte Bedeutung und wird von den Beteiligten ernsthaft und respektvoll durchgeführt, um Streitigkeiten auf gerechte Weise beizulegen."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Die Schildmaid-Praktik erlaubt es einer Frau, sich auf legale Weise gegen eine Zwangsheirat zu wehren. Wenn ihr Vater sie mit einem Prinzen aus einem anderen Clan verheiraten möchte, hat die Schildmaid/Walküre das Recht, ihre Tugend und Hand durch diese Praktik zu verteidigen. Wenn sie diese Ablehnung erklärt, wird ein öffentlicher Schaukampf ähnlich dem Holmgang durchgeführt."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Ein unabhängiger Schiedsrichter, oft der Herrscher des Ortes oder der höchste Geistliche, leitet den Kampf. Der Schiedsrichter darf kein Verwandter der Beteiligten sein. Die Regeln dieses Kampfes werden von der Schildmaid selbst festgelegt, unter Beachtung bestimmter Regularitäten, die Fairness und Sauberkeit des Kampfes gewährleisten sollen."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Die Schildmaid-Praktik ist eine traditionelle Möglichkeit, die Selbstbestimmung und Ehre einer Frau in Aldrimar zu schützen, indem sie ihr Recht auf eine freie Wahl in Eheangelegenheiten ausübt."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Die Saga-Praktik ist eine hoch angesehene Tradition in Aldrimar, die auf Legitimität und Prestige gründet. Sie ermöglicht es einem Schwiegervater, der Braut, einem König oder sogar dem Bäcker von nebenan, eine Herausforderung an jemanden zu stellen. Diese Herausforderung wird mit einer Frist oder einem Eid versehen, der die Bedingungen und den Zeitrahmen festlegt."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Zum Beispiel könnte ein Schwiegervater seinem potenziellen Schwiegersohn die Aufgabe stellen, eine wilde Bestie zu erlegen und ihr den Kopf zu bringen. Eine Prinzessin könnte verlangen, dass jemand drei Jahre lang sein Haar und seinen Bart nicht berührt und keusch lebt. Ein König könnte seine drei Erben herausfordern, hinauszusegeln und erst zurückzukehren, wenn sie Ruhm und Ehre erlangt haben."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Die definierten Aufgaben müssen erfüllt werden, um das versprochene Ergebnis zu erlangen. Versäumnisse haben rechtliche Konsequenzen, selbst für einen König, und die Einhaltung der Vereinbarungen ist von höchster Bedeutung, um das Ansehen und die Ehre in Aldrimar zu wahren."
+        }
+      ]
+    },
+    {
+      "id": "religion",
+      "title": "Religion",
+      "blocks": [
+        {
+          "kind": "paragraph",
+          "text": "Die Religion Aldrimars ist stark von der Geschichte des Königreichs geprägt. Sie verbindet Elemente der ursprünglichen Glaubensrichtungen der Norrnaigh und Glaennath mit den Einflüssen der Alerischen Kirche. Dabei entstanden einzigartige Glaubensformen, die sich in Teilen von der offiziellen Lehre der Kirche unterscheiden."
+        },
+        {
+          "kind": "heading",
+          "text": "Geschichte"
+        },
+        {
+          "kind": "paragraph",
+          "text": "Vor der Gründung Aldrimars folgten die beiden Hauptvölker des Landes – die Norrnaigh und die Glaennath – unterschiedlichen spirituellen Traditionen:"
+        },
+        {
+          "kind": "bullet",
+          "text": "Die Glaennath verehrten einen naturverbundenen Pantheon, mit Göttern, die eng mit den Wäldern, Flüssen und den Elementen verwoben waren. Ihre Religion war stark druidisch geprägt, mit einer tiefen Ehrfurcht vor der natürlichen Ordnung."
+        },
+        {
+          "kind": "bullet",
+          "text": "Die Norrnaigh brachten eine kriegerische, schicksalsbezogene Glaubenswelt mit, in der Ahnenverehrung und göttliche Schicksalslenkung eine zentrale Rolle spielten. Ihr Pantheon bestand aus mächtigen, oft ambivalenten Gottheiten."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Mit der Migration und den darauf folgenden Konflikten zwischen den beiden Völkern kam es zur Durchmischung dieser Religionen. Der Versuch der Alerischen Kirche, Aldrimar zu missionieren, stieß auf Widerstand, und während das Königreich offiziell die Kirche anerkannte, wurden viele alte Traditionen bewahrt."
+        },
+        {
+          "kind": "paragraph",
+          "text": "In der Kaiserzeit blieb Aldrimar ein widerspenstiger Vasall, der sich nur teilweise den dogmatischen Strukturen der Kirche unterwarf. Bis heute gibt es eigenständige Strömungen und alte Bräuche, die den offiziellen Kirchenlehren widersprechen."
+        },
+        {
+          "kind": "heading",
+          "text": "Glaubenskultur"
+        },
+        {
+          "kind": "paragraph",
+          "text": "Die Glaubenskultur Aldrimars ist eine Verschmelzung alter nordischer Traditionen mit den Lehren der Alerischen Kirche. Trotz der offiziellen Anerkennung der Neun Göttlichen haben viele Bräuche und Ansichten aus der Zeit vor der aleriasierung durch die Kirche überlebt."
+        },
+        {
+          "kind": "heading",
+          "text": "Pantheon"
+        },
+        {
+          "kind": "paragraph",
+          "text": "Wodin (Der Vater - Ordan) → Wodin ist der höchste Gott Aldrimars, Herr über Zeit und Schicksal, Lenker der göttlichen Ordnung und Schutzpatron der Könige und Anführer."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Marja (Die Mutter - Mariel) → Marja ist die Göttin der Liebe, Barmherzigkeit und Familie, deren mütterliche Gnade Heilung und Trost für alle bringt, die in Not sind."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Balthor (Der Streiter - Baldran) → Balthor ist der Gott des ehrenhaften Kampfes, der Tapferkeit und des Schutzes, ein Patron der Krieger und Verteidiger des Reiches."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Skadia (Die Hirtin - Sylvana) → Skadia ist die Göttin der Natur, Jagd und Wildnis, die über die Wälder, Tiere und den ewigen Kreislauf des Lebens wacht."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Eiris (Die Maid - Lyris) → Eiris ist die Göttin der Liebe, Musik, Kunst und Inspiration, die den Menschen Kreativität, Leidenschaft und Schönheit schenkt."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Thorim (Der Knecht - Tharim) → Thorim ist der Gott des Fleißes, der Ehre in der Arbeit und der Aufrichtigkeit, ein Schutzpatron der Bauern, Handwerker und einfachen Leute."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Runor (Der Mentor - Orin) → Runor ist der Gott des Wissens, der Weisheit und der Wahrheit, der jene leitet, die nach Erkenntnis und geistiger Erleuchtung streben."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Lokan (Der Hüter - Kharon) → Lokan ist der Gott des Todes, der Vergänglichkeit und der Seelenwanderung, der die Verstorbenen auf ihrer letzten Reise begleitet."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Tyrdras (Der Templer - Maldras) → Tyrdras ist der Gott des Glaubens, der Gerechtigkeit und des Schutzes, der das Gleichgewicht zwischen göttlichem Gesetz und weltlicher Ordnung bewahrt."
+        },
+        {
+          "kind": "heading",
+          "text": "Aegyra (Die Seemaid)"
+        },
+        {
+          "kind": "bullet",
+          "text": "→ Göttin der Waldläufer, Entdecker, Forscher und Seefahrer, die jene leitet, die neue Welten erkunden und den Ozean bezwingen."
+        },
+        {
+          "kind": "heading",
+          "text": "Jofrun (Die Glücksbringerin)"
+        },
+        {
+          "kind": "paragraph",
+          "text": "→ Göttin des Glücks und der Freude, Schutzpatronin der Kinder und Reisenden, die Segen und Fröhlichkeit in das Leben der Menschen bringt."
+        },
+        {
+          "kind": "heading",
+          "text": "Aldrun (Der Erbauer)"
+        },
+        {
+          "kind": "paragraph",
+          "text": "→ Gott der Erfinder, Baumeister und Handwerker, der die Schöpfung von Kunstwerken, Bauwerken und technischen Errungenschaften inspiriert."
+        },
+        {
+          "kind": "heading",
+          "text": "Halrion (Der Vorbote)"
+        },
+        {
+          "kind": "paragraph",
+          "text": "→ Gott der Späher, Herolde und Abgesandten, der Botschaften überbringt, Vorzeichen enthüllt und über die Wege der Reisenden wacht."
+        },
+        {
+          "kind": "heading",
+          "text": "Orvindir (Der Mystiker)"
+        },
+        {
+          "kind": "paragraph",
+          "text": "→ Gott der Magie, Zauberei und Mystik, besonders verehrt von Druiden und Zauberern, mit seinem stärksten Einfluss im Lichthain und im Hain der Druiden (Glaenneach)."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Die 5 Souveränen sind fleischgewordene Göttliche, die als Wächtergötter das Gleichgewicht der Welt bewahren. Sie verkörpern die elementaren Kräfte und sind in physischer Form an bestimmte Orte gebunden."
+        },
+        {
+          "kind": "bullet",
+          "text": "Njáma (Nimue) – Hüterin des Wassers, Symbol für Reinheit und Ordnung."
+        },
+        {
+          "kind": "bullet",
+          "text": "Njora (Rhea) – Verkörperung der Erde, Beständigkeit und Stabilität."
+        },
+        {
+          "kind": "bullet",
+          "text": "Vindral (Zephyr) – Herr des Windes, Symbol für Freiheit und Wandel."
+        },
+        {
+          "kind": "bullet",
+          "text": "Althvarr (Aelthar) – Gott des Donners, Wächter der Wolken und Ordnung."
+        },
+        {
+          "kind": "bullet",
+          "text": "Eldthar (Thyrael) – Herr der Flammen, Gott der Erneuerung und Kraft."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Die Aldrimari ehren sie, doch ihre Verehrung bleibt gering, da sie an feste Orte gebunden sind und nicht überall angebetet werden können."
+        },
+        {
+          "kind": "heading",
+          "text": "Unterschiede, Abweichungen"
+        },
+        {
+          "kind": "paragraph",
+          "text": "Die Kirche Aldrimars unterscheidet sich in mehreren Aspekten von der Alerischen Kirche, da sie stark vom nordischen Pantheon geprägt ist und alte Traditionen bewahrt hat."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Ein bedeutender Unterschied ist die Hügelgrabbestattung, eine alte aldrimarische Praxis, in der ehrwürdige Clansmitglieder mumifiziert und mit untoten Wächtern ausgestattet wurden, um ihre Ruhestätten zu bewahren. Während die Alerische Kirche diese nekromantische Tradition in der Kaiserzeit unterband, existieren weiterhin abgewandelte Formen der Hügelgrabbestattung, die ohne Nekromantie auskommen – ein Kompromiss zwischen aldrimarischem Brauchtum und kirchlichen Vorschriften."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Zudem sind die Gottheiten Aldrimars oft mit alten, nicht-kanonischen Vorstellungen behaftet. Während die Alerische Kirche klare Trennungen zwischen den Neun Göttlichen und den Infernalischen zieht, sind die Grenzen in Aldrimar fließender. So wird Balthor (Der Streiter) für Ehre, Mut und Tapferkeit verehrt, doch manche Aldrimari sehen in ihm auch Aspekte, die der Alerischen Kirche nach eher dem Plünderer (Grimnar) zuzuordnen wären. Diese Vermischung ist typisch für das nordische Pantheon, in dem göttlich und infernal nicht immer klar getrennt sind – eine Denkweise, die in Aldrimar bis heute Bestand hat."
+        }
+      ]
+    },
+    {
+      "id": "politik",
+      "title": "Politik",
+      "blocks": []
+    },
+    {
+      "id": "verwaltung",
+      "title": "Verwaltung",
+      "blocks": [
+        {
+          "kind": "heading",
+          "text": "Wirtschaft"
+        },
+        {
+          "kind": "paragraph",
+          "text": "Die Wirtschaft Aldrimars ist tief mit den natürlichen Gegebenheiten und der Kultur der Clans verbunden. Ivarsheim gilt als die Kornkammer des Reiches, wo weite Felder mit Getreide, Gemüse und Futterpflanzen bestellt werden, um die Bevölkerung zu ernähren und andere Jarltümer zu versorgen. Roriksheim ist für seine hochwertige Pferdezucht bekannt, während die kalten Regionen von Schwarzfenn stärker auf Viehzucht und robuste Feldfrüchte wie Kartoffeln setzen. Der Fischfang an den Küsten und in den Flüssen spielt ebenfalls eine bedeutende Rolle, sowohl für den Eigenbedarf als auch für den Handel. Landwirtschaft bleibt das Rückgrat der Versorgung, auch wenn die Städte zunehmend von handwerklichen und wirtschaftlichen Zentren abhängen."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Der Bergbau ist eine weitere Säule der Wirtschaft. Besonders die Gebirgsregionen von Schwarzfenn und Ivarsheim bergen Eisen, Kupfer, Zinn, Silber und Gold, die in den Schmieden verarbeitet oder in umliegende Reiche exportiert werden. Die Handwerkskunst floriert in den Städten, allen voran in Kronental, wo Schmieden, Holzverarbeitung und Textilherstellung die Wirtschaft dominieren. Waffen und Rüstungen aus Aldrimar genießen einen exzellenten Ruf, und die Schiffsbaukunst entlang der Küsten ermöglicht sowohl militärische als auch wirtschaftliche Expansion. Die Clans selbst sind nicht nur politische, sondern auch wirtschaftliche Akteure, die Handelsrouten, Rohstoffquellen und Handwerksbetriebe kontrollieren."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Der Handel verbindet die einzelnen Regionen durch Flüsse wie den Vánlauf und Hurinn, die als natürliche Handelsrouten dienen. Heldenwacht ist ein zentrales Drehkreuz für Märkte und Karawanen, die Felle, Met, Waffen und landwirtschaftliche Erzeugnisse austauschen. Während der Tauschhandel in ländlichen Regionen dominiert, haben sich in den Städten Silber- und Kupfermünzen als Währung etabliert, besonders durch die reichen Silbervorkommen in Ivarsheim. Obwohl das Wirtschaftssystem stark von regionalen Besonderheiten geprägt ist, bleibt Aldrimar durch seine Ressourcen, Handwerkskunst und Handelsverbindungen ein wirtschaftlich stabiles Reich."
+        },
+        {
+          "kind": "heading",
+          "text": "Verteidigung"
+        },
+        {
+          "kind": "paragraph",
+          "text": "Die Verteidigung Aldrimars gegen Fjordheim ist stark durch die Geographie des Landes bestimmt. Der Konflikt erstreckt sich sowohl auf das Wasser als auch auf das Land. Auf See konzentrieren sich die Kämpfe hauptsächlich auf das Flüstermeer bei Kronental, da die westliche Bucht von Cenyr von Fjordheim weitgehend gemieden wird. Dort dominieren die Grendel-Clans, die als gefürchtete Seefahrer und Verteidiger der Küsten gelten. Im Flüstermeer hingegen sind die Gewässer offener, und die Flotten beider Seiten treffen in schnellen, oft brutalen Seegefechten aufeinander. Während Aldrimar hier auf die Erfahrung seiner Langschiffe und die Küstenfestungen um Kronental setzt, nutzt Fjordheim die Unberechenbarkeit des Meeres und Überfälle als bevorzugte Taktik."
+        },
+        {
+          "kind": "paragraph",
+          "text": "An Land gibt es nur vier Hauptwege, die eine größere Invasion aus dem Norden ermöglichen würden. Die schmalen Küstenpfade bei Torrenheim im Osten und Hjerimsheim im Westen sind natürliche Engstellen, die es einem Verteidiger leicht machen, eine feindliche Streitmacht in die Enge zu treiben. Diese Pfade sind oft von schroffen Klippen und tückischen Strömungen begleitet, sodass Fjordheim nur mit großer Mühe größere Kontingente anlanden kann. Noch tückischer sind die beiden Gebirgspfade, die durch die Wolfsklamm und Ivarsheim führen. Hier können kleinere Truppenverbände vordringen, doch für eine Armee ist der Weg schwer passierbar. Die Verteidigungslinien entlang dieser Gebirgspfade bestehen aus gut befestigten Wachtposten, Fallen und Winterlagern, die verhindern, dass feindliche Truppen ungehindert ins Landesinnere vordringen."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Diese geografischen Barrieren machen eine groß angelegte Invasion für Fjordheim äußerst schwierig, sodass ihre Angriffe meist auf Überfälle, kleinere Vorstöße und maritime Raubzüge beschränkt bleiben. Aldrimar nutzt diesen Vorteil, indem es seine Hirdmänner und Grenzkrieger gezielt an den Schlüsselstellen positioniert und sich auf flexible Verteidigungstaktiken, Hinterhalte und schnelle Gegenschläge konzentriert. Durch die natürliche Beschaffenheit des Landes kann Aldrimar seine Kräfte effektiv bündeln und größere Feldschlachten vermeiden, während Fjordheim gezwungen ist, immer wieder kleinere und riskante Angriffe zu wagen."
+        },
+        {
+          "kind": "heading",
+          "text": "Feudalsystem (Knappe, Waffenknecht & Stadtwache)"
+        },
+        {
+          "kind": "paragraph",
+          "text": "Das feudale System Aldrimars ist noch in der Entwicklung und wird stark vom Clansystem dominiert. Es ähnelt in Grundzügen den Ritterstaaten wie Cenyr oder Vennyr, unterscheidet sich jedoch durch die tief verwurzelte Rolle der Clans als politische und wirtschaftliche Einheiten. Die Herrschaftsstruktur beginnt bei den Jarlen, die in ihrer Macht einem Grafen gleichgesetzt sind. Sie regieren große Gebiete, die sie wiederum an niedere Adlige verpachten. Diese Form der Landvergabe bildet den Kern der aldrimarischen Territorialverwaltung, ist jedoch noch nicht so streng hierarchisch und formalisiert wie in anderen Königreichen."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Unterhalb der Jarle stehen die Thanen, vergleichbar mit Baronen, die über kleinere Gebiete innerhalb eines Jarltums herrschen. Ihre Verwaltung erfolgt oft durch einen mächtigen Clan, der das Land durch Abkommen oder Blutsbande vom Jarl erhalten hat. Noch eine Stufe darunter befindet sich das Hesirentum, eine kleinere Verwaltungseinheit als das Thanentum, aber ebenfalls mit eigenständiger Führung. Auf der untersten Ebene des Adels befindet sich der Thengr, der als Landherr meist nur eine einzige Siedlung oder Burg verwaltet und entweder direkt einem Jarl, einem Thane oder einem Hesiren dient. Diese Struktur sorgt für eine flexible, aber dennoch wachsende feudale Ordnung, die von Clanbündnissen und persönlichen Gefolgschaften geprägt ist."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Neben den Landherrn gibt es auch landlose Adlige, die als Huskarl oder Walküre bezeichnet werden. Diese Titel sind ritterlicher Natur und stehen Clansleuten zu, die zwar adliger Abstammung sind, aber keine eigenen Ländereien besitzen. Huskarle sind erfahrene Krieger und dienen als Elitewachen, Heerführer oder Berater an den Höfen ihrer Herren. Da die aldrimarische Gesellschaft auf Leistung und Kriegsdienst großen Wert legt, können auch bürgerliche Krieger zum Huskarl aufsteigen, wenn sie sich im Kampf oder durch besondere Verdienste auszeichnen. Das System bietet somit Raum für Aufstieg, bleibt aber durch die traditionelle Clanstruktur stark an Blutsbande und Loyalität gebunden."
+        },
+        {
+          "kind": "heading",
+          "text": "Heer"
+        },
+        {
+          "kind": "paragraph",
+          "text": "Das Heer Aldrimars ist stark vom Clansystem geprägt und unterscheidet sich grundlegend von einer zentralisierten Armee oder einer Berufsarmee wie den Legionen anderer Reiche. Stattdessen setzt sich das aldrimarische Heer aus Heeresgruppen zusammen, die eng an die jeweiligen Clans gebunden sind. Jeder Clan stellt seine eigenen Krieger und formiert diese in Kriegstrupps, die unter der Führung eines Clan-Anführers stehen. Diese Struktur bedeutet, dass Krieger nicht nur Soldaten sind, sondern auch eine persönliche und familiäre Verpflichtung gegenüber ihrem Clan tragen, was ihnen eine tief verwurzelte Loyalität verleiht."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Diese Heeresbanner unterstehen zwar dem Kriegsherren Aldrimars, besitzen jedoch eine gewisse Autonomie. Der Kriegsherr kann sie nicht nach Belieben befehligen, ohne vorher die Zustimmung der jeweiligen Anführer der Heeresgruppen einzuholen. Diese dezentrale Struktur sorgt dafür, dass Kriegsentscheidungen oft durch Verhandlungen und Bündnisse zwischen den Clans geprägt sind. Ein Kriegsherr, der einen Feldzug führen will, muss daher politisches Geschick beweisen und die Unterstützung der mächtigen Clans sichern, da diese selbst entscheiden, in welchem Umfang sie Truppen bereitstellen und welche strategischen Interessen sie verfolgen."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Obwohl dieses System eine starke Flexibilität bietet und das Heer anpassungsfähig macht, bedeutet es auch, dass das Zusammenwirken der Heeresgruppen oft durch Clankonflikte oder Eigeninteressen beeinflusst wird. In Kriegszeiten können sich Clans mit langjährigen Fehden weigern, miteinander zu kämpfen, oder ihre Truppen nur unter bestimmten Bedingungen zur Verfügung stellen. Dennoch garantiert die tiefe persönliche Bindung der Krieger zu ihren Anführern und Clans eine hohe Kampfmoral, und wenn das Heer einmal geeint auftritt, ist es eine schlagkräftige und unberechenbare Streitmacht, die sich an die unwegsamen Gebiete Aldrimars ebenso anpassen kann wie an großangelegte Feldschlachten."
+        }
+      ]
+    },
+    {
+      "id": "gesetze",
+      "title": "Gesetze",
+      "blocks": [
+        {
+          "kind": "heading",
+          "text": "Zivilgesetze"
+        },
+        {
+          "kind": "bullet",
+          "text": "§ Das Militärgesetz \"Urteil durch Zweikampf\""
+        },
+        {
+          "kind": "bullet",
+          "text": "Das \"Urteil durch Zweikampf\" ist eine alte, in Aldrimar und anderen feudalen Ländern noch gebräuchliche Praxis, die es sowohl Bürgern als auch Rittern erlaubt, ihre Ehre im Falle einer Anklage durch einen Zweikampf zu verteidigen und reinzuwaschen. Dieses Recht ist traditionell vor allem ein Privileg des Adels und wird von der Kirche nicht gern gesehen. In vielen Ländern wurde diese Praxis von der Alerischen Kirche bereits untersagt."
+        },
+        {
+          "kind": "bullet",
+          "text": "In Aldrimar ist das \"Urteil durch Zweikampf\" jedoch noch unter bestimmten Bedingungen erlaubt. Patriarchen der Kirche besitzen ein Vetorecht und können das Duell verweigern, indem sie das Verfahren in ein Urteil des Streiters umwandeln, um eine gerechtere, kirchlich überwachte Entscheidung zu ermöglichen. Auf diese Weise behält die Kirche eine gewisse Kontrolle über diese altehrwürdige, aber umstrittene Praxis."
+        },
+        {
+          "kind": "heading",
+          "text": "Militärgesetze"
+        },
+        {
+          "kind": "paragraph",
+          "text": "§ Das Gesetz \"Urteil durch Zweikampf\""
+        },
+        {
+          "kind": "bullet",
+          "text": "Das ...."
+        },
+        {
+          "kind": "heading",
+          "text": "Religionsgesetze"
+        },
+        {
+          "kind": "bullet",
+          "text": "§ Das Gesetz \"Gnade des Templers\""
+        },
+        {
+          "kind": "bullet",
+          "text": "Das von der Alerischen Kirche verlautete Gesetz bietet Kriminellen die Möglichkeit, unter der Obhut des Ordens der Geläuterten und priesterlicher Aufsicht, eine Resozialisierung zu durchlaufen. Zwar sieht die Kirche vor, dass dieses Grundrecht jedem Menschen zusteht, doch die Durchsetzung variiert von Königreich zu Königreich. In Aldrimar hängt die Anwendung von der Gnade des jeweiligen Adels ab. Der Kriminelle kann die Gnade einfordern, doch liegt die endgültige Entscheidung beim adeligen Herrscher."
+        },
+        {
+          "kind": "bullet",
+          "text": "Um Korruption und willkürliche Entscheidungen zu verhindern, hat der Patriarch des Landes das Recht, das Urteil eines Grafen oder Königs zu überprüfen und bei Bedarf anzufechten. In diesem Fall wird ein gerichtlicher Prozess eingeleitet, um die Gerechtigkeit zu wahren. Auf diese Weise bleibt die Macht des Adels eingeschränkt, und der Einfluss der Kirche stellt sicher, dass das Gesetz korrekt und nach den Prinzipien der Gnade angewendet wird."
+        },
+        {
+          "kind": "bullet",
+          "text": "§ Das Gesetz \"Urteil des Streiters\""
+        },
+        {
+          "kind": "paragraph",
+          "text": "Früher nutzte der Adel in vielen Reichen das Duell, um Rechtsstreitigkeiten untereinander zu klären. Diese Praxis wurde jedoch von der Alerischen Kirche in den meisten Ländern untersagt und durch das Urteil des Streiters ersetzt. Dieses Gesetz erlaubt es sowohl Bürgern als auch Adligen, eine göttliche Intervention zu fordern, um Gerechtigkeit herbeizuführen."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Das Duell wird jedoch nicht von den Klägern oder Angeklagten selbst bestritten. Stattdessen wählt ausschließlich der Klerus zwei neutrale Streiter aus, die den Kampf im Namen der Parteien führen. Diese Auswahl stellt sicher, dass das Urteil unabhängig von persönlichen Interessen erfolgt. Die Kirche gewährleistet somit eine parteilose und faire Lösung von Streitfällen, indem sie allein entscheidet, wer um das Recht kämpft, und so Manipulation und Parteilichkeit vermeidet"
+        }
+      ]
+    },
+    {
+      "id": "geographie",
+      "title": "Geographie",
+      "blocks": [
+        {
+          "kind": "heading",
+          "text": "Allgemein"
+        },
+        {
+          "kind": "paragraph",
+          "text": "Die Geographie Aldrimars ist von einer Mischung aus Bergen, Flüssen, Wäldern und Küstenlandschaften geprägt, was dem Königreich eine strategisch vorteilhafte, aber auch herausfordernde Struktur verleiht. Im Norden ragen die Fenrisberge empor, eine massive Gebirgskette, die die natürlichen Grenzen zu den Ländern Fjordheims bildet. Diese Region ist nur durch wenige Gebirgspässe, wie die bei Wolfsklamm und Ivarsheim, zugänglich, was Invasionen aus dem Norden erheblich erschwert. Die Pässe werden durch befestigte Siedlungen und natürliche Engstellen gesichert, die jedem Heerführer strategische Vorteile bieten."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Das zentrale Aldrimar wird von einem weit verzweigten Flusssystem durchzogen, wobei der große Fluss Hurinn eine Hauptschlagader des Handels und der Kommunikation darstellt. Städte wie Korsweiler, Jägersruh und Steinbruch liegen entlang dieses Flusses und profitieren wirtschaftlich von seiner schiffbaren Verbindung zwischen den Jarltümern. Die Wälder im Süden, insbesondere in der Nähe von Wolfshalt und Burg Hølsens, bilden einen natürlichen Schutzwall und bieten fruchtbares Land für Jagd und Forstwirtschaft."
+        },
+        {
+          "kind": "paragraph",
+          "text": "Die Küstenregionen im Westen und Osten sind von steilen Klippen, geschützten Buchten und Handelsstädten geprägt. Besonders die Hafenstadt Heldenwacht im Osten ist ein bedeutendes Zentrum für den Schiffsverkehr und den Handel mit den Nachbarreichen. Der westliche Küstenstreifen ist hingegen von kleineren befestigten Siedlungen wie Hjerimsheim und Skjolmburg geprägt, die als Verteidigungsanlagen gegen Seeräuber und Angriffe aus dem Norden dienen. Die Kombination aus schwer zugänglichen Gebirgspfaden, schiffbaren Flüssen und gut geschützten Küsten macht Aldrimar zu einem schwer einnehmbaren, aber wirtschaftlich vielseitigen Reich."
+        }
+      ]
+    },
+    {
+      "id": "flora-fauna",
+      "title": "Flora & Fauna",
+      "blocks": [
+        {
+          "kind": "heading",
+          "text": "Flora"
+        },
+        {
+          "kind": "paragraph",
+          "text": "Die Pflanzenwelt Aldrimars ist geprägt von der rauen Natur und umfasst eine Vielzahl robuster Arten. Dichte Nadelwälder aus Kiefern, Fichten und Tannen bedecken weite Teile des Landes und dienen nicht nur als Rohstoffquelle, sondern auch als Lebensraum für Tiere. In den Gebirgspässen dominieren Bürstengräser, Moose und Flechten, während die berühmten Frostblumen, mit ihren leuchtend blauen Blüten, auf eisigen Felsen gedeihen. Beerensträucher wie Heidelbeeren, Wacholder und Preiselbeeren bieten Nahrung für Mensch und Tier und werden rege gesammelt."
+        },
+        {
+          "kind": "heading",
+          "text": "Fauna"
+        },
+        {
+          "kind": "paragraph",
+          "text": "Aldrimar beherbergt eine vielseitige Tierwelt, die an die rauen Bedingungen angepasst ist. In den Wäldern und Ebenen streifen Wölfe, während Bären und Hirsche häufig anzutreffen sind. Flüsse und Seen sind reich an Fischen wie Forellen und Lachsen, während die Küsten Heimat von Seevögeln und gelegentlich Walen sind. Luchse, Füchse und Hasen ergänzen das Bild einer lebendigen, von Jagd geprägten Fauna. Viele Tiere, wie der Gramnir, ein domestizierbarer Wolf, spielen zudem kulturell eine besondere Rolle."
+        },
+        {
+          "kind": "heading",
+          "text": "Bedrohliche Tiere"
+        },
+        {
+          "kind": "paragraph",
+          "text": "Neben alltäglichen Tieren gibt es in Aldrimar gefährliche Kreaturen wie den Ulfr, einen riesigen, aggressiven Wolf, oder den Gnoll, einen hyänenartigen Raubwolf. In Mooren lauern Sumpftrolle und giftige Schlangen, während in den Bergen Frosttrolle und Bergtrolle eine ständige Gefahr darstellen. Besonders gefürchtet sind die Nebel- und Frostgarn, gigantische Spinnen, die ihre Netze in Höhlen spannen, und die in den Wäldern heimischen Unholde und Waldschrate, die oft mit Mythen und Legenden verbunden werden."
+        },
+        {
+          "kind": "heading",
+          "text": "Unnatürliche Kreaturen"
+        },
+        {
+          "kind": "paragraph",
+          "text": "Die unnatürliche Fauna Aldrimars umfasst Wesen wie die Grimmlinge und Hornlinge, goblinartige Plagegeister, die durch ihre Hinterlist bekannt sind. Gefährlicher sind die Ogroiden wie der Grimnak, massige Kreaturen, die Wanderer und Siedlungen angreifen. Im Küstenbereich gibt es Meeresgeister und Versunkene, die Schiffe attackieren und Angst verbreiten. Solche Kreaturen sind tief mit den Ängsten und Mythen Aldrimars verwoben und werden häufig in Liedern und Legenden der Skalden thematisiert."
+        }
+      ]
+    },
+    {
+      "id": "institutionen",
+      "title": "Institutionen, Gilden & Orden",
+      "blocks": []
+    },
+    {
+      "id": "ahnengalerie",
+      "title": "Ahnengalerie",
+      "blocks": []
+    },
+    {
+      "id": "trivia",
+      "title": "Trivia",
+      "blocks": []
+    }
+  ],
+  "infobox": [
+    {
+      "title": "Allgemein",
+      "rows": [
+        {
+          "label": "Name",
+          "value": "Das Königreich Aldrimar"
+        },
+        {
+          "label": "Typ",
+          "value": "Monarchie"
+        },
+        {
+          "label": "Oberhaupt",
+          "value": "Hochkönig Sigurd Vaeren"
+        },
+        {
+          "label": "Hauptstadt",
+          "value": "Heldenwacht"
+        }
+      ]
+    },
+    {
+      "title": "Geographie",
+      "rows": [
+        {
+          "label": "Region",
+          "value": "Nord, zentrales Estryll"
+        }
+      ]
+    },
+    {
+      "title": "Kultur",
+      "rows": [
+        {
+          "label": "Volksgruppen",
+          "value": "Aldrimarer"
+        },
+        {
+          "label": "Religion",
+          "value": "Die Alerische Kirche"
+        },
+        {
+          "label": "Patrongott",
+          "value": "Fokus auf dem Streiter, Balthor"
+        },
+        {
+          "label": "Bevölkerungsdichte",
+          "value": "Mittelmäßig, teils dünn besiedelt"
+        }
+      ]
+    },
+    {
+      "title": "Handel",
+      "rows": [
+        {
+          "label": "Primäre-Handelspartner",
+          "value": "Cenyr, Leiteach, Vennyr"
+        }
+      ]
+    }
+  ],
+  "councilGroups": [
+    {
+      "title": "Hochkönig von Aldrimar",
+      "members": [
+        {
+          "office": "Hochkönig",
+          "name": "Sigurd Vaeren",
+          "imageSrc": "/Stammbäume/assets/images/portraits/haus-vaeren/sigurd-vaeren.png",
+          "href": "/Stammbäume/Stammbaum.html?family=haus-vaeren&mode=view&person=sigurd-vaeren",
+          "seat": "Heldenwacht",
+          "featured": true
+        }
+      ]
+    },
+    {
+      "title": "Königlicher Rat",
+      "members": [
+        {
+          "office": "Kriegsherr des Königs",
+          "name": "Ketill Wargh",
+          "imageSrc": "/Stammbäume/assets/images/portraits/haus-varulv/ketill-wargh.png",
+          "href": "/Stammbäume/Stammbaum.html?family=haus-wargh&mode=view&person=ketill-wargh",
+          "seat": "",
+          "featured": false
+        },
+        {
+          "office": "Kastellan des Königs",
+          "name": "Hakon Varangr",
+          "imageSrc": "/Stammbäume/assets/images/portraits/haus-varangr/hakon-varangr.png",
+          "href": "/Stammbäume/Stammbaum.html?family=haus-varangr&mode=view&person=hakon-varangr",
+          "seat": "",
+          "featured": false
+        },
+        {
+          "office": "Justiziar des Königs",
+          "name": "Freydis Frostauge",
+          "imageSrc": "/Stammbäume/assets/images/portraits/haus-vaeren/freydis-frostauge.png",
+          "href": "/Stammbäume/Stammbaum.html?family=haus-frostauge&mode=view&person=freydis-frostauge",
+          "seat": "",
+          "featured": false
+        },
+        {
+          "office": "Schatten des Königs",
+          "name": "Skjor Vaeren",
+          "imageSrc": "/Stammbäume/assets/images/portraits/haus-vaeren/skjor-vaeren.png",
+          "href": "/Stammbäume/Stammbaum.html?family=haus-vaeren&mode=view&person=skjor-vaeren",
+          "seat": "",
+          "featured": false
+        },
+        {
+          "office": "Herold des Königs",
+          "name": "Aegir Frostauge",
+          "imageSrc": "/Stammbäume/assets/images/portraits/haus-schwarzblut/aegir-frostauge.png",
+          "href": "/Stammbäume/Stammbaum.html?family=haus-frostauge&mode=view&person=aegir-frostauge",
+          "seat": "",
+          "featured": false
+        },
+        {
+          "office": "Ratsskalde des Königs",
+          "name": "Ragnar Skald",
+          "imageSrc": "/Stammbäume/assets/images/portraits/haus-skald/ragnar-skald.png",
+          "href": "/Stammbäume/Stammbaum.html?family=haus-skald&mode=view&person=ragnar-skald",
+          "seat": "",
+          "featured": false
+        },
+        {
+          "office": "Erzpatriarch des Königs",
+          "name": "Heimskr Helgr",
+          "imageSrc": "/Stammbäume/assets/images/portraits/haus-helgr/heimskr-helgr.png",
+          "href": "/Stammbäume/Stammbaum.html?family=haus-helgr&mode=view&person=heimskr-helgr",
+          "seat": "",
+          "featured": false
+        },
+        {
+          "office": "Ratsmagier des Königs",
+          "name": "Bergelmir Hyrmgarthr",
+          "imageSrc": "/Stammbäume/assets/images/portraits/haus-hyrmgarthr/bergelmir-hyrmgardr.png",
+          "href": "/Stammbäume/Stammbaum.html?family=haus-hyrmgardr&mode=view&person=bergelmir-hyrmgardr",
+          "seat": "",
+          "featured": false
+        },
+        {
+          "office": "Herdwächter",
+          "name": "Gleipnir Varulv",
+          "imageSrc": "/Stammbäume/assets/images/portraits/haus-varulv/gleipnir-varulv.png",
+          "href": "/Stammbäume/Stammbaum.html?family=haus-varulv&mode=view&person=gleipnir-varulv",
+          "seat": "",
+          "featured": false
+        }
+      ]
+    },
+    {
+      "title": "Jarle des Reiches",
+      "members": [
+        {
+          "office": "Jarl",
+          "name": "Skjor Vaeren",
+          "imageSrc": "/Stammbäume/assets/images/portraits/haus-vaeren/skjor-vaeren.png",
+          "href": "/Stammbäume/Stammbaum.html?family=haus-vaeren&mode=view&person=skjor-vaeren",
+          "seat": "Heldenwacht",
+          "featured": false
+        },
+        {
+          "office": "Jarl",
+          "name": "Ketill Wargh",
+          "imageSrc": "/Stammbäume/assets/images/portraits/haus-varulv/ketill-wargh.png",
+          "href": "/Stammbäume/Stammbaum.html?family=haus-wargh&mode=view&person=ketill-wargh",
+          "seat": "Ivarsfels",
+          "featured": false
+        },
+        {
+          "office": "Jarl",
+          "name": "Gleipnir Varulv",
+          "imageSrc": "/Stammbäume/assets/images/portraits/haus-varulv/gleipnir-varulv.png",
+          "href": "/Stammbäume/Stammbaum.html?family=haus-varulv&mode=view&person=gleipnir-varulv",
+          "seat": "Rorikshall",
+          "featured": false
+        },
+        {
+          "office": "Jarl",
+          "name": "Hakon Varangr",
+          "imageSrc": "/Stammbäume/assets/images/portraits/haus-varangr/hakon-varangr.png",
+          "href": "/Stammbäume/Stammbaum.html?family=haus-varangr&mode=view&person=hakon-varangr",
+          "seat": "Moortal",
+          "featured": false
+        },
+        {
+          "office": "Jarl",
+          "name": "Gunnar Ragnulf",
+          "imageSrc": "/Stammbäume/assets/images/portraits/haus-wargh/gunnar-ragnulf.png",
+          "href": "/Stammbäume/Stammbaum.html?family=haus-ragnulf&mode=view&person=gunnar-ragnulf",
+          "seat": "Wolfsklamm",
+          "featured": false
+        }
+      ]
+    }
+  ],
+  "clans": [
+    {
+      "id": "haus-vaeren",
+      "name": "Clan Vaeren",
+      "imageSrc": "/Stammbäume/assets/images/houses/Aldrimar/clan-vaeren.png",
+      "href": "/Stammbäume/Stammbaum.html?family=haus-vaeren&mode=view",
+      "rank": "Königsclan",
+      "seat": "Heldenwacht",
+      "liege": "",
+      "featured": true,
+      "featuredLabel": "Königsclan",
+      "jarltum": "Kronental",
+      "banner": "/Stammbäume/assets/images/regions/aldrimar-kronental.png"
+    },
+    {
+      "id": "haus-wargh",
+      "name": "Clan Wargh",
+      "imageSrc": "/Stammbäume/assets/images/houses/Aldrimar/clan-wargh.png",
+      "href": "/Stammbäume/Stammbaum.html?family=haus-wargh&mode=view",
+      "rank": "Jarlsclan",
+      "seat": "Ivarsfels",
+      "liege": "Clan Vaeren",
+      "featured": false,
+      "featuredLabel": "Königsclan",
+      "jarltum": "Ivarsheim",
+      "banner": "/Stammbäume/assets/images/regions/aldrimar-ivarsheim.png"
+    },
+    {
+      "id": "haus-ragnulf",
+      "name": "Clan Ragnulf",
+      "imageSrc": "/Stammbäume/assets/images/houses/Aldrimar/clan-ragnulf.png",
+      "href": "/Stammbäume/Stammbaum.html?family=haus-ragnulf&mode=view",
+      "rank": "Jarlsclan",
+      "seat": "Wolfsklamm",
+      "liege": "Clan Vaeren",
+      "featured": false,
+      "featuredLabel": "Königsclan",
+      "jarltum": "Schwarzfenn",
+      "banner": "/Stammbäume/assets/images/regions/aldrimar-schwarzfenn.png"
+    },
+    {
+      "id": "haus-varangr",
+      "name": "Clan Varangr",
+      "imageSrc": "/Stammbäume/assets/images/houses/Aldrimar/clan-varangr.png",
+      "href": "/Stammbäume/Stammbaum.html?family=haus-varangr&mode=view",
+      "rank": "Jarlsclan",
+      "seat": "Moortal",
+      "liege": "Clan Vaeren",
+      "featured": false,
+      "featuredLabel": "Königsclan",
+      "jarltum": "Krähenmoor",
+      "banner": "/Stammbäume/assets/images/regions/aldrimar-kraehenmoor.png"
+    },
+    {
+      "id": "haus-varulv",
+      "name": "Clan Varulv",
+      "imageSrc": "/Stammbäume/assets/images/houses/Aldrimar/clan-varulv.png",
+      "href": "/Stammbäume/Stammbaum.html?family=haus-varulv&mode=view",
+      "rank": "Jarlsclan",
+      "seat": "Rorikshall",
+      "liege": "Clan Vaeren",
+      "featured": false,
+      "featuredLabel": "Königsclan",
+      "jarltum": "Roriksheim",
+      "territoryHref": "/Kontinente/Estryll/Königreich Aldrimar/Jarltum Roriksheim/Jarltum Roriksheim.html",
+      "banner": "/Stammbäume/assets/images/regions/aldrimar-roriksheim.png"
+    }
+  ],
+  "organizations": [
+    {
+      "id": "die-herdwachter",
+      "name": "Die Herdwächter",
+      "group": "Gilden",
+      "sourceImage": "https://i.imgur.com/rhzoxq0.png",
+      "imageSrc": "/Kontinente/assets/images/aldrimar/organisations/die-herdwachter.png"
+    },
+    {
+      "id": "die-runenkrieger",
+      "name": "Die Runenkrieger",
+      "group": "Gilden",
+      "sourceImage": "https://i.imgur.com/estQUlS.png",
+      "imageSrc": "/Kontinente/assets/images/aldrimar/organisations/die-runenkrieger.png"
+    },
+    {
+      "id": "die-wintersonne",
+      "name": "Die Wintersonne",
+      "group": "Gilden",
+      "sourceImage": "https://i.imgur.com/HdhMjXz.png",
+      "imageSrc": "/Kontinente/assets/images/aldrimar/organisations/die-wintersonne.png"
+    },
+    {
+      "id": "saatkrieger",
+      "name": "Saatkrieger",
+      "group": "Gilden",
+      "sourceImage": "https://i.imgur.com/Xv1zW3O.png",
+      "imageSrc": "/Kontinente/assets/images/aldrimar/organisations/saatkrieger.png"
+    },
+    {
+      "id": "titanenbrecher",
+      "name": "Titanenbrecher",
+      "group": "Gilden",
+      "sourceImage": "https://i.imgur.com/HJbGjz1.png",
+      "imageSrc": "/Kontinente/assets/images/aldrimar/organisations/titanenbrecher.png"
+    },
+    {
+      "id": "hnoss-kasse",
+      "name": "Hnoss' Kasse",
+      "group": "Gilden",
+      "sourceImage": "https://i.imgur.com/DWOS7va.png",
+      "imageSrc": "/Kontinente/assets/images/aldrimar/organisations/hnoss-kasse.png"
+    },
+    {
+      "id": "gerdurs-meisterstich",
+      "name": "Gerdurs Meisterstich",
+      "group": "Gilden",
+      "sourceImage": "https://i.imgur.com/EAVeUc7.png",
+      "imageSrc": "/Kontinente/assets/images/aldrimar/organisations/gerdurs-meisterstich.png"
+    },
+    {
+      "id": "silberschwur",
+      "name": "Silberschwur",
+      "group": "Gilden",
+      "sourceImage": "https://i.imgur.com/jPKOGau.png",
+      "imageSrc": "/Kontinente/assets/images/aldrimar/organisations/silberschwur.png"
+    },
+    {
+      "id": "schwarzdorn-brauerei",
+      "name": "Schwarzdorn Brauerei",
+      "group": "Zünfte",
+      "sourceImage": "https://i.imgur.com/q4sxt2b.png",
+      "imageSrc": "/Kontinente/assets/images/aldrimar/organisations/schwarzdorn-brauerei.png"
+    },
+    {
+      "id": "goldglanz-brauerei",
+      "name": "Goldglanz Brauerei",
+      "group": "Zünfte",
+      "sourceImage": "https://i.imgur.com/5fEECK2.png",
+      "imageSrc": "/Kontinente/assets/images/aldrimar/organisations/goldglanz-brauerei.png"
+    },
+    {
+      "id": "erzbender",
+      "name": "Erzbender",
+      "group": "Zünfte",
+      "sourceImage": "https://i.imgur.com/uOdMw3a.png",
+      "imageSrc": "/Kontinente/assets/images/aldrimar/organisations/erzbender.png"
+    },
+    {
+      "id": "glyphenformer",
+      "name": "Glyphenformer",
+      "group": "Zünfte",
+      "sourceImage": "https://i.imgur.com/pYbdz8v.png",
+      "imageSrc": "/Kontinente/assets/images/aldrimar/organisations/glyphenformer.png"
+    },
+    {
+      "id": "die-schar-balthors-sohne",
+      "name": "Die Schar - Balthors Söhne",
+      "group": "Orden",
+      "sourceImage": "https://i.imgur.com/944gCnm.png",
+      "imageSrc": "/Kontinente/assets/images/aldrimar/organisations/die-schar-balthors-sohne.png"
+    },
+    {
+      "id": "die-winterwacht",
+      "name": "Die Winterwacht",
+      "group": "Orden",
+      "sourceImage": "https://i.imgur.com/Z2fbLU5.png",
+      "imageSrc": "/Kontinente/assets/images/aldrimar/organisations/die-winterwacht.png"
+    },
+    {
+      "id": "skalden-akademie",
+      "name": "Skalden Akademie",
+      "group": "Institute & Organisationen",
+      "sourceImage": "https://i.imgur.com/GSpUKuw.png",
+      "imageSrc": "/Kontinente/assets/images/aldrimar/organisations/skalden-akademie.png"
+    }
+  ]
+}

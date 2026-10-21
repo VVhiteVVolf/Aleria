@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "date": "2026-10-20",
+  "mode": "built-in ImageGen",
+  "jobs": [
+    {
+      "id": "fearnan-familienbild",
+      "destination": "AleriaAlmanach/assets/gwynthor-heime/fearnan/familienbild.png",
+      "transparent": false,
+      "preset": "anime-scene-portrait",
+      "referencedImagePaths": [
+        "E:/Aleria/AleriaAlmanach/assets/gwynthor-heime/fearnan/eoghan.png",
+        "E:/Aleria/AleriaAlmanach/assets/gwynthor-heime/fearnan/muireann.png",
+        "E:/Aleria/AleriaAlmanach/assets/gwynthor-heime/fearnan/eithne.png",
+        "E:/Aleria/AleriaAlmanach/assets/gwynthor-heime/fearnan/nessa.png"
+      ],
+      "prompt": "Use case: compositing, identity-preserve. Combine these existing individual character portraits into ONE new family group portrait. The attached reference images define ONLY their respective character identities and clothing. Preserve each face, age, hair color, eye color, hairstyle and recognizable outfit; do not blend their faces. Reference order: Eoghan Fearnan, Muireann, Eithne Fearnan, Nessa Fearnan.\nBildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nEXACTLY four people: Eoghan father (36), Muireann mother (34), Eithne daughter (9), Nessa daughter (7). Two adults standing slightly behind their two young daughters, each face fully visible, all four standing naturally with feet visible. Eoghan has short wavy dark-brown hair, hazel-brown eyes, short brown beard, olive tunic and patched grey-brown sleeveless coat; gently smiling, an arm resting easily near older daughter. Muireann has one chestnut braid, brown eyes, ochre dress, off-white linen apron, calm warm smile, hands loosely together. Eithne has two brown braids, brown eyes, faded blue modest dress and small wooden boat; earnest curious look. Nessa has brown curly bob, brown eyes, patched russet modest dress, little tooth-gap smile, holding one pebble. Children have clearly childlike ages, faces, heights and proportions, never adult bodies. Simple harbor-home doorway and pale wall in the background, a small hint of sea light, very sparse. Warm humble family closeness, not aristocratic.\nVertical 2:3 portrait composition, all family members STANDING, full figures with comfortable headroom and space under their feet; relaxed uncomplicated poses. Human Alba, Aldrimar and Cenyri have normal ROUND human ears, never elf ears. Clear anime lineart and flat clean cel shading, restrained simple background. No lettering, no captions, no crests, no frame, no invented people. Do not change the characters or add costume finery."
+    },
+    {
+      "id": "torvik-familienbild",
+      "destination": "AleriaAlmanach/assets/gwynthor-heime/torvik/familienbild.png",
+      "transparent": false,
+      "preset": "anime-scene-portrait",
+      "referencedImagePaths": [
+        "E:/Aleria/AleriaAlmanach/assets/gwynthor-heime/torvik/haldor.png",
+        "E:/Aleria/AleriaAlmanach/assets/gwynthor-heime/torvik/maonaid.png",
+        "E:/Aleria/AleriaAlmanach/assets/gwynthor-heime/torvik/iver.png"
+      ],
+      "prompt": "Use case: compositing, identity-preserve. Combine these existing individual character portraits into ONE new family group portrait. The attached reference images define ONLY their respective character identities and clothing. Preserve each face, age, hair color, eye color, hairstyle and recognizable outfit; do not blend their faces. Reference order: Haldor Torvik, Maonaid, Iver Torvik.\nBildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nEXACTLY three people: Haldor father (32), Maonaid mother (30), Iver son (11). Both adults and their boy stand together naturally, every person shown head to feet, boy smaller between and slightly in front of parents. Haldor is broad and strong, flax-blond short low ponytail, light-blue eyes, thick blond moustache, otherwise clean-shaven, charcoal shirt and worn leather work apron; relaxed proud smile, one hand lightly on boy shoulder. Maonaid has dark-brown sleek low coiled bun, hazel eyes, plum dress with cream linen neck kerchief, softly angular face and knowing half smile, arms comfortably at her sides. Iver has tousled sandy-blond hair, pale hazel eyes, olive tunic and cream undershirt, cheerful youthful face, holding his small rough-carved wooden horse at waist WITHOUT a knife. Clearly an eleven-year-old child in ordinary modest clothing. Simple ordinary market-house doorway, warm plaster and timber background, few objects. Friendly unpretentious working family.\nVertical 2:3 portrait composition, all family members STANDING, full figures with comfortable headroom and space under their feet; relaxed uncomplicated poses. Human Alba, Aldrimar and Cenyri have normal ROUND human ears, never elf ears. Clear anime lineart and flat clean cel shading, restrained simple background. No lettering, no captions, no crests, no frame, no invented people. Do not change the characters or add costume finery."
+    },
+    {
+      "id": "celynfor-familienbild",
+      "destination": "AleriaAlmanach/assets/gwynthor-heime/celynfor/familienbild.png",
+      "transparent": false,
+      "preset": "anime-scene-portrait",
+      "referencedImagePaths": [
+        "E:/Aleria/AleriaAlmanach/assets/gwynthor-heime/celynfor/gwydan.png",
+        "E:/Aleria/AleriaAlmanach/assets/krumme-kanne/portraits/llinos.png",
+        "E:/Aleria/AleriaAlmanach/assets/gwynthor-heime/celynfor/spant.png"
+      ],
+      "prompt": "Use case: compositing, identity-preserve. Combine these existing individual character portraits into ONE new family group portrait. The attached reference images define ONLY their respective character identities and clothing. Preserve each face, age, hair color, eye color, hairstyle and recognizable outfit; do not blend their faces. Reference order: Gwydan Celynfor, Llinos Celynfor, then Spant the dog.\nBildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nEXACTLY TWO adult people and ONE dog: Gwydan (31), his wife Llinos (21), and their Brag family dog Spant (2). The couple stand together naturally from head to feet, dog standing on all four paws beside them at ground level, all subjects entirely inside the image. Gwydan has short swept chestnut-red wavy hair, warm brown eyes, long face, clean-shaven except short sideburns, teal waistcoat over rolled-sleeve cream shirt; relaxed soft smile, one hand loosely resting at his belt. Llinos must exactly resemble her reference: copper-red curly updo with escaping curls, green eyes, round freckled face, mischievous broad grin, dusty blue work dress, brown apron and cream blouse. Her arm rests naturally around her husband lower arm, no complicated intertwined hands; she is an adult woman. Spant is the small-to-medium compact scruffy ochre-brown dog from reference, half-folded ears and dark friendly eyes, plain leather collar. Modest home doorway with a small blue curtain behind them. Newly married couple, light playful warmth, no children or extra animals.\nVertical 2:3 portrait composition, all family members STANDING, full figures with comfortable headroom and space under their feet; relaxed uncomplicated poses. Human Alba, Aldrimar and Cenyri have normal ROUND human ears, never elf ears. Clear anime lineart and flat clean cel shading, restrained simple background. No lettering, no captions, no crests, no frame, no invented people. Do not change the characters or add costume finery."
+    }
+  ]
+}

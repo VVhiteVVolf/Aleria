@@ -1,0 +1,156 @@
+{
+  "schemaVersion": 1,
+  "sourceRules": [
+    {
+      "disposition": "route",
+      "sourceIds": [
+        "ba26a346-a8cc-474c-912b-0685847301ed"
+      ],
+      "reason": "Nutzerkorrektur: Gleannmor ist ein Weg. Kein Orts-Pin; ohne belegten Verlauf wird keine neue Liniengeometrie erfunden."
+    },
+    {
+      "disposition": "excluded",
+      "sourceIds": [
+        "0c61a7a6-70f6-4270-a4ea-a5f532fa5887",
+        "3fe8884a-0b3b-4f47-a76c-847013dd4cf1",
+        "5c5d48d2-d535-47ca-a839-01319c05c0fb",
+        "77eac01f-d9a2-44f4-9c88-51a9e6dd4c10",
+        "7ba6ff24-60f4-4736-8f89-4ff25626e3dc"
+      ],
+      "reason": "Die Tavernen wurden vom Nutzer bewusst entfernt und werden nicht auf die neue Karte übertragen."
+    },
+    {
+      "disposition": "excluded",
+      "sourceIds": [
+        "1ec30d18-bee8-404f-8e33-4b9504793f83",
+        "2e24442d-51ba-4962-87a6-706361022a39",
+        "94b51906-c1d1-44da-8728-ee67fc96b7ba",
+        "f7119835-b65f-4eae-8ec5-d8f1c3a401ae"
+      ],
+      "reason": "Nutzervorgabe: sämtliche Hornlingsstämme aus dieser Kartenübertragung entfernen."
+    },
+    {
+      "disposition": "excluded",
+      "sourceIds": [
+        "6ced62ce-dd6b-489f-a8e8-6943d0ad435a",
+        "72851536-d1d8-4c6d-9a14-59c2d925e93a",
+        "db069b68-cdc4-40e4-a7ab-e8536ad847b0"
+      ],
+      "reason": "Nutzervorgabe: die Schlachten- und Ereignismarker entfallen aus der neuen Karte."
+    },
+    {
+      "disposition": "embedded",
+      "sourceIds": [
+        "15ce2807-4597-4df4-9dca-93f3d04e80fa",
+        "21cb7f5b-8554-42d9-92b3-d32f8eedd56f",
+        "30ba7720-4b19-4958-8e53-0ae4282554b4",
+        "39938fec-3f2a-4a01-aac0-8fce8e6bac28",
+        "3bb21301-2c19-465d-8000-b9bfdfdd7a76",
+        "502a5ff4-d960-4f7d-a4f2-d2892f2df656",
+        "55f870c6-f426-4f5e-86f6-d119cd6651fc",
+        "5c8d288d-05b4-46db-b5a1-1bd378431e28",
+        "61ba1f7f-13dc-4902-90cd-c44f14e229df",
+        "66fa2bf7-64f2-4b4d-84a1-864629f6c13b",
+        "6f6364aa-bd1a-4a49-8c23-ded84ff53e00",
+        "8450be9a-4223-48fc-bd35-48d2e63d385b",
+        "917cd53a-7048-4f39-90c8-240741e95db5",
+        "ce33303c-d2eb-48a5-b7ee-1ee2d9be96de"
+      ],
+      "reason": "Herrschaften, Regionen und angrenzendes Gebiet sind gemäß Nutzervorgabe unmittelbar in der neuen Zonenkarte eingezeichnet. Keine zusätzlichen alten Flächen- oder Beschriftungsmarker."
+    }
+  ],
+  "excludedTargetIds": [
+    "new-pin-059b"
+  ],
+  "placements": [
+    {
+      "id": "roriksheim-dornquell",
+      "targetId": "new-pin-128",
+      "name": "Dornquell",
+      "siteType": "Schwarzdorn-Brauersiedlung",
+      "territoryEvidence": "Roter Einzelkreis auf der neuen Zonenkarte; vom Nutzer als Schwarzdorn-Exklave in Klangheim bestätigt. Auf neueren Nutzerauftrag als Dornquell benannt.",
+      "description": "Dornquell ist die zusätzliche Brauersiedlung der Schwarzdorn in Klangheim. Sie bildet eine Exklave des Schwarzdorn-Hesirentums; ihre geografische Lage in Klangheim ändert diese Zugehörigkeit nicht.",
+      "reason": "Neuer Name auf Nutzerauftrag; gegen den vorhandenen Ortsbestand auf Namensgleichheit geprüft. Kein fremder Alttext und keine erfundene World-Anvil-ID."
+    },
+    {
+      "targetId": "new-pin-045",
+      "sourceId": "9a0ff613-97d9-46cc-8869-98c04418882a",
+      "siteType": "Verborgene Feste der Frostwölfe",
+      "reason": "Freie finstere Burg in den Winterfängen; passt zur im Alttext verborgenen Banditenfeste Fjellborg. Frostwölfe sind die Betreiber, Freiwinter der territoriale Clan."
+    },
+    {
+      "targetId": "new-pin-156",
+      "sourceId": "155b53ad-ebbb-41d1-8b01-e3d939102f73",
+      "siteType": "Klosterruine",
+      "reason": "Freier Ruinenstandort im Sökeren-Gebiet. Der Text beschreibt ein niedergebranntes Kloster; der alte Ortsart-Hinweis Klostersiedlung war irreführend."
+    },
+    {
+      "targetId": "new-pin-052",
+      "sourceId": "8c1e36f7-ba66-407f-88a0-bf907f0ef89b",
+      "description": "Roggenweiler ist eine Handelssiedlung der Winterfänge unter den Freiwinter. Getreidehandel und Wolfszucht prägen den Ort. Hier werden die Erträge der Roggenhöfe gesammelt und Tiere für die Skytten gezüchtet und ausgebildet.\n\nDie Wolfszucht steht in der Tradition der Kampfgeborenen, die Roggenweiler mit Getreide und ausgebildeten Tieren versorgt. Diese wirtschaftliche Verbindung besteht neben der territorialen Zugehörigkeit zu den Freiwinter.",
+      "reason": "Freier Handelsmarker in den Winterfängen. Ortsart und territoriale Zugehörigkeit an die neue Karte angepasst; Getreidewirtschaft und Wolfszucht aus dem Alttext erhalten."
+    },
+    {
+      "targetId": "new-pin-070",
+      "sourceId": "9a56ce7a-92a1-4d33-9633-1bbc692a2b09",
+      "name": "Vindborg – Wehrkloster",
+      "siteType": "Befestigte Klostersiedlung",
+      "description": "Vindborg ist eine befestigte Klostersiedlung im Hesirentum der Kampfgeborenen. Hinter den Mauern des Wehrklosters befinden sich Wohnquartiere, eine Rüstkammer und ein Ausbildungsplatz. Die Anlage verbindet klösterliches Leben mit der kriegerischen Tradition ihres herrschenden Clans.\n\nDie Kampfgeborenen nutzen Vindborg als militärischen Stützpunkt und als Ausgangspunkt ihrer Beziehungen nach Rorikshall. Hier werden Knechte und Soldaten ausgebildet, Ausrüstung verwahrt und die Belange des Clans vertreten.",
+      "reason": "Freier Klostersiedlungsmarker im Kampfgeborenen-Gebiet; die vom Nutzer erlaubte Anpassung an die neue Karte erhält Namen und militärische Aufgaben, ändert die Bauform."
+    },
+    {
+      "targetId": "new-pin-152",
+      "sourceId": "8c55606f-8c2f-4c4f-aaa6-514014a2fbb8",
+      "siteType": "Ehemaliger Windreiter-Stützpunkt",
+      "description": "Im Dunkelhain liegt Wolfsspitze, eine Festung, die den Windreitern als Versorgungs- und Ausbildungsstützpunkt diente. Zur überlieferten Anlage gehörten Ställe, Schmieden und Vorratslager; Rekruten wurden in Kavallerie, Wolfsstrategie und Luftangriffen geschult.\n\nÜber eine heutige Besatzung oder einen fortgesetzten Betrieb liegen keine gesicherten Berichte vor.",
+      "reason": "Freie Festung im Dunkelhain. Die neue Karte bestimmt die Lage; keine unbelegte aktive Herrschaft der Windreiter über den Dunkelhain."
+    },
+    {
+      "targetId": "new-pin-141",
+      "sourceId": "b659fef6-ba86-4f7a-b6ea-168c229a2087",
+      "name": "Ruine des Blutfangturms",
+      "description": "Die Ruine des Blutfangturms liegt im Thanentum Dämmergrund. Der Turm war ein Vorposten des Blutbundes, an dem sich Kopfgeldjäger und Söldner sammelten und ausrüsteten. In seiner kleinen Versorgungssiedlung standen Schmieden, Alchemisten und Ställe bereit.\n\nHeute sind Turm und Vorposten verfallen. Die einstigen Versorgungsdienste gehören der Vergangenheit an.",
+      "reason": "Freier Turmruinenmarker in Dämmergrund; ehemalige Gildennutzung von heutiger territorialer Zugehörigkeit und ruinösem Zustand getrennt."
+    },
+    {
+      "targetId": "new-pin-123",
+      "sourceId": "2d59eb02-2bf2-4bbf-9988-31e0fbe68968",
+      "reason": "Freier Siedlungsruinenplatz in Dämmertal; Platz 137 in Dämmergrund wird nach der Nutzerkorrektur für Hornhall verwendet."
+    },
+    {
+      "id": "roriksheim-hornhall",
+      "targetId": "new-pin-137",
+      "name": "Hornhall",
+      "siteType": "Grenzwehrhalle und Clansitz",
+      "category": "Burg",
+      "icon": "/Karten/assets/icons/welt/gro-e-burg.png",
+      "description": "Hornhall ist die Wehrhalle des Clans Wolfshorn am Dunkelhainrand im Thanentum Dämmergrund. Die Wolfshorn dienen den Vangandr unmittelbar als Grenzwächter. Von ihrem Sitz aus schützen sie die umliegenden Höfe, Weiler und Wege.\n\nNach den Verwüstungen des Krieges gegen Ceitheach bedrohte der vorrückende Dunkelhain die Grenzlande immer stärker. Der bisherige Herr Hrolf Wolfshorn geriet mit seinen Lehnsherren in Konflikt und wurde ins Exil geschickt. Ihn begleiteten seine beiden ältesten Kinder Ylva und Asgeir sowie sein Bruder Halvar.\n\nHornhall ging an Hrolfs Bruder Bjoern Wolfshorn. Unter Bjoern bleibt der Sitz beim Clan Wolfshorn und unter der Lehnshoheit der Vangandr. Hrolfs Exil betrifft seinen ausgewanderten Familienzweig und bedeutet keine Vertreibung des gesamten Clans.",
+      "affiliation": {
+        "house": "Clan Wolfshorn",
+        "houseLabel": "Clansitz",
+        "href": "/Stammbäume/Stammbaum.html?family=haus-wolfshorn&mode=view",
+        "crest": "/Stammbäume/assets/images/houses/Aldrimar/clan-wolfshorn.png",
+        "liege": "Clan Vangandr",
+        "liegeHref": "/Stammbäume/Stammbaum.html?family=haus-vangandr&mode=view",
+        "liegeCrest": "/Stammbäume/assets/images/houses/Aldrimar/Roriksheim/clan-vangandr.png",
+        "lordId": "bjorn-wolfshorn",
+        "lord": "Bjoern Wolfshorn",
+        "tenure": "An Bjoern übertragen; Hrolf mit Ylva, Asgeir und Halvar im Exil"
+      },
+      "references": [
+        {
+          "label": "Wolfshorn-Akte und Stammbaum",
+          "href": "/Stammbäume/Stammbaum.html?family=haus-wolfshorn&mode=view"
+        }
+      ],
+      "reason": "Nutzerkorrektur vom 20. Oktober: Hornhall liegt räumlich in Dämmergrund, nicht in Dämmertal. Der vorhandene Ruinenplatz 137 wird als Wolfshorn-Grenzburg unter Bjoern umgewidmet. Hjamstad erhält den bisherigen Ruinenplatz 123 in Dämmertal. Burg Horunn bleibt erhalten."
+    },
+    {
+      "targetId": "new-pin-097",
+      "sourceId": "5c93324b-7ca8-4c86-a898-bd1f2a08c194",
+      "category": "Besondere Orte",
+      "siteType": "Skaldenhalle",
+      "reason": "Die Halle der Skalden ist laut Alttext eine Kultur- und Pilgerstätte, keine der entfernten Tavernen. Das Methallen-Bildzeichen wird nicht als Gewerbekategorie Taverne übernommen."
+    }
+  ]
+}

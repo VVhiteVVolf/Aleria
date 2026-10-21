@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "date": "2026-10-20",
+  "mode": "built-in ImageGen",
+  "referencesInspected": [
+    "Stammbäume/assets/images/houses/Brevanor/Lothaire.png",
+    "D:/0-KI Generierte/01 Bilder/01 - Items/Beispiele/image-removebg-preview (27).png"
+  ],
+  "jobs": [
+    {
+      "id": "herluin-unterschrift",
+      "destination": "Anzeigetafeln/assets/images/quests/herluin-angestellte-vermisst/unterschrift-v1.png",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Create ONE 1:1 transparent PNG image icon containing ONLY the handwritten signature \"Herluin Lothaire\" in dark near-black ink. Exact spelling: H e r l u i n, space, L o t h a i r e. A medieval scholar and eccentric alchemist signature: precise disciplined elegant quill pen cursive, slightly impatient angular capital H and L, confident connected letters, one restrained sweeping underline. It must read clearly at small size and look like a real handwritten personal signature placed on a parchment quest notice. A flat ink drawing, no physical sheet, NO paper, NO parchment rectangle, NO seal, NO hand, NO pen, NO frame, NO scenery, no embossed letters, no glow or shadow. Center the complete horizontal signature across about 80 percent of the square width, comfortably inside the canvas. Only the ink strokes are visible; all surrounding space and letter counters have TRUE transparent alpha. No other words or marks."
+    },
+    {
+      "id": "herluin-wachssiegel",
+      "destination": "Anzeigetafeln/assets/images/quests/herluin-angestellte-vermisst/wachssiegel-v1.png",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Create ONE square 1:1 fantasy RPG inventory item illustration: ONE small private medieval sealing-wax impression for Herluin Lothaire, entirely muted deep plum-purple wax, round pressed center and a slightly irregular thin wax rim. The impressed motif is a simplified tall ruined Gothic marble ARCH on two broken columns with flowering vines winding up both sides, the existing Lothaire family motif; represent every part as a MONOCHROME pressed wax relief, not painted colored heraldry. One thin circular engraved border, clear readable arch and a few simple flowers, minimal details. The whole modest seal is flat and seen directly front-on, centered, entire rim visible. No words, no initials, no metal, no gems, no wood, no ribbons, no attached paper. Matte illustrated wax with warm hand-painted highlights, not photorealistic. The previously inspected Lothaire crest defines only the arch-and-flowering-vines motif. Match the inspected Aleria inventory-art style: hand-painted illustrated fantasy inventory art, painterly textured metal, leather, wood and cloth, crisp dark outlines, soft simplified shading, muted warm colors, gentle illustrated highlights, readable details and a clear silhouette at small thumbnail size. Not photorealistic, not CGI or a glossy 3D render. Preserve the item's design and heraldry from reference 1; never copy the symbols or house colors of the style reference. Show the entire isolated object, centered and large within the square, with about 10% clear margin on all sides. Slight three-quarter view where appropriate; long weapons may run diagonally from lower-left handle to upper-right tip. TRUE transparent PNG alpha background; at most a very faint soft BLACK contact shadow immediately beneath the object. No person, hands, mannequin, scenery, floor, stand, frame, text, watermark or painted checkerboard. Do not add unrelated objects.\nStandalone private WAX SEAL, not a newly designed family coat of arms. Show at approximately 75 percent canvas width. Fully opaque wax, truly transparent background including outside rim, no shadow outside."
+    }
+  ]
+}

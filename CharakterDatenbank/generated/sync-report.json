@@ -2,16 +2,16 @@
   "schema": "aleria.character-sync-report",
   "schemaVersion": 1,
   "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
-  "sourceExportedAt": "2026-10-18T14:09:06.794Z",
+  "sourceExportedAt": "2026-10-21T00:00:00Z",
   "summary": {
-    "sourceDocuments": 374,
-    "total": 239,
+    "sourceDocuments": 379,
+    "total": 244,
     "mergedSameNameGroups": 45,
     "familyLinked": 161,
     "familyAmbiguous": 0,
-    "familyPending": 78,
+    "familyPending": 83,
     "primaryFamily": 161,
-    "primaryGroup": 26,
+    "primaryGroup": 31,
     "primaryPlace": 18,
     "primaryUnassigned": 34,
     "duplicateWorldPeople": 0
@@ -916,6 +916,66 @@
         "kind": "unassigned",
         "id": "unassigned",
         "label": "Unzugeordnet"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--zitteraale-schwarzer-zitteraal",
+      "name": "Der Schwarze Zitteraal",
+      "status": "pending",
+      "primary": {
+        "kind": "group",
+        "id": "schwarze-zitteraale",
+        "label": "Schwarze Zitteraale",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--zitteraale-schlickzahn",
+      "name": "Schlickzahn",
+      "status": "pending",
+      "primary": {
+        "kind": "group",
+        "id": "schwarze-zitteraale",
+        "label": "Schwarze Zitteraale",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--zitteraale-nachtkieme",
+      "name": "Nachtkieme",
+      "status": "pending",
+      "primary": {
+        "kind": "group",
+        "id": "schwarze-zitteraale",
+        "label": "Schwarze Zitteraale",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--zitteraale-donnerkiefer",
+      "name": "Donnerkiefer",
+      "status": "pending",
+      "primary": {
+        "kind": "group",
+        "id": "schwarze-zitteraale",
+        "label": "Schwarze Zitteraale",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--zitteraale-netznadel",
+      "name": "Netznadel",
+      "status": "pending",
+      "primary": {
+        "kind": "group",
+        "id": "schwarze-zitteraale",
+        "label": "Schwarze Zitteraale",
+        "source": "archive-tab"
       },
       "familyAlternatives": []
     }

@@ -1,0 +1,55 @@
+body.transfer-review { margin:0; background:#25221c; color:#30291f; font:16px/1.55 Georgia,serif; }
+.transfer-review * { box-sizing:border-box; }
+.transfer-review :is(button,input,select) { font:14px/1.4 Verdana,sans-serif; }
+.transfer-review :is(button,input,select,details) { border:1px solid #c8b89c; border-radius:3px; background:#fffbf3; color:#30291f; }
+.transfer-review :is(button,summary) { cursor:pointer; }
+.transfer-review :is(button,a,input,select,summary,[tabindex]):focus-visible { outline:3px solid #8b402f;outline-offset:3px; }
+.transfer-review header { padding:20px 28px; color:#f4e9d4; }
+.transfer-review header a { color:#e3cfa8; }
+.transfer-review h1 { margin:.25rem 0;font-size:30px; }
+.transfer-review header p { margin:.3rem 0;max-width:1100px; }
+.transfer-summary { color:#e3cfa8; }
+.transfer-workbench { display:grid;grid-template-columns:310px minmax(0,1fr);gap:1px;background:#c8b89c; }
+.transfer-sidebar { background:#f1ead9;padding:16px;min-width:0; }
+.transfer-filters { display:grid;gap:10px; }
+.transfer-filters label { display:grid;gap:3px;font:12px/1.5 Verdana,sans-serif; }
+.transfer-filters :is(input,select) { width:100%;padding:8px;min-width:0; }
+.transfer-count { font:12px Verdana,sans-serif;color:#746451; }
+.transfer-results { display:grid;gap:7px;max-height:calc(100vh - 410px);min-height:200px;overflow-y:auto;padding:3px; }
+.transfer-result { text-align:left;padding:10px;min-width:0;display:grid;gap:3px; }
+.transfer-result strong { font:700 16px/1.3 Georgia,serif; }
+.transfer-result small { color:#746451;font-size:11px; }
+.transfer-result[aria-pressed="true"] { border-color:#8b402f;background:#efe1c7; }
+.transfer-status { font:11px Verdana,sans-serif;color:#8b402f; }
+.transfer-main { min-width:0;background:#f1ead9; }
+.transfer-map-toolbar { padding:10px;display:flex;flex-wrap:wrap;gap:8px;align-items:center; }
+.transfer-map-toolbar :is(button,select) { padding:7px 11px; }
+.transfer-map-toolbar p { margin:0;font:11px Verdana,sans-serif;color:#746451; }
+.transfer-map-canvas { background:#cec0a4; }
+.transfer-map-canvas svg { display:block;width:100%;height:min(67vh,780px);min-height:330px;touch-action:none;cursor:grab; }
+.transfer-map-pin { cursor:pointer; }
+.transfer-map-pin.is-filtered { display:none; }
+.transfer-map-pin:not(.is-confirmed) circle:not(.transfer-map-hit) { opacity:.55; }
+.transfer-map-hit { fill:transparent;stroke:none; }
+.transfer-map-pin circle:not(.transfer-map-hit) { stroke:#fff8e7;stroke-width:4; }
+.transfer-map-pin.is-selected circle:not(.transfer-map-hit),.transfer-map-pin:focus circle:not(.transfer-map-hit) { r:25;fill:#ffb51b;stroke:#30291f;stroke-width:7; }
+.transfer-detail { padding:24px;max-width:1000px;overflow-wrap:anywhere; }
+.transfer-detail h2 { color:#74372d;margin:.25rem 0 1rem; }
+.transfer-kicker,.transfer-evidence { color:#746451;font:12px/1.6 Verdana,sans-serif; }
+.transfer-heraldry { display:flex;gap:12px;margin-bottom:15px; }
+.transfer-heraldry img { object-fit:contain;width:64px;height:64px; }
+.transfer-facts { display:grid;gap:5px;font:13px/1.6 Verdana,sans-serif; }
+.transfer-facts>div { display:grid;grid-template-columns:210px minmax(0,1fr);border-bottom:1px solid #d7c9ad;padding:5px 0; }
+.transfer-facts dt { color:#746451; }.transfer-facts dd { margin:0; }
+.transfer-issues { padding:12px 12px 12px 30px;background:#f2dfbd;border-left:3px solid #a37432;font:13px/1.65 Verdana,sans-serif; }
+.transfer-source-text { white-space:pre-line;line-height:1.8; }
+.transfer-detail details { padding:12px;margin-top:20px; }
+.transfer-detail pre { white-space:pre-wrap;font:12px/1.6 monospace; }
+.transfer-candidate { display:block;padding:9px 12px;margin:5px 0;text-align:left;max-width:100%; }
+@media(max-width:850px) {
+ .transfer-workbench { grid-template-columns:1fr; }
+ .transfer-filters { grid-template-columns:repeat(2,minmax(0,1fr)); }
+ .transfer-results { max-height:230px;min-height:0;grid-template-columns:repeat(2,minmax(0,1fr)); }
+ .transfer-detail { padding:18px; }.transfer-facts>div { grid-template-columns:1fr; }
+ .transfer-review header { padding:16px; }.transfer-review h1 { font-size:25px; }
+}

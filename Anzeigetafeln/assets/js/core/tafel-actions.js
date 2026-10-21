@@ -34,6 +34,23 @@
     'jump-to-notice': element => editor().jumpToNotice(element.dataset.noticeId),
     'close-sidebar': () => editor().closeSidebar(),
     'close-scroll': () => editor().closeScroll(),
+    'notice-stack-previous': () => window.TafelNoticeReader.step(-1),
+    'notice-stack-next': () => window.TafelNoticeReader.step(1),
+    'notice-publication-select': element => window.TafelNoticeReader.select(element.dataset.noticeId),
+    'notice-group-combine': element => window.TafelNoticeStackEditor.combine(element.dataset.noticeId),
+    'notice-group-separate': element => window.TafelNoticeStackEditor.separate(element.dataset.noticeId),
+    'notice-publication-detach': element => window.TafelNoticeStackEditor.detachPublication(element.dataset.noticeId),
+    'notice-stack-edit': element => window.TafelZettelEditor.open(element.dataset.noticeId),
+    'notice-stack-new': element => window.TafelNoticeStackEditor.add(element.dataset.noticeId),
+    'notice-stack-attach': element => window.TafelNoticeStackEditor.attach(element.dataset.noticeId),
+    'notice-stack-detach': element => window.TafelNoticeStackEditor.detach(element.dataset.noticeId),
+    'notice-stack-move': element => window.TafelNoticeStackEditor.move(element.dataset.noticeId, Number(element.dataset.direction)),
+    'notice-reward-open': element => window.TafelNoticeRewards.open(element.dataset.noticeId),
+    'notice-reward-money': element => window.TafelNoticeRewards.addMoney(element.dataset.noticeId),
+    'notice-reward-honor': element => window.TafelNoticeRewards.addHonor(element.dataset.noticeId),
+    'notice-reward-item': element => window.TafelNoticeRewards.chooseItem(element.dataset.noticeId),
+    'notice-reward-remove': element => window.TafelNoticeRewards.remove(element.dataset.noticeId, Number(element.dataset.rewardIndex)),
+    'notice-font-readable': element => window.TafelNoticeTypography.toggle(element),
     'notice-media-open': element => window.TafelZettelEditor.openMedia(element),
     'zettel-comment-image': element => window.TafelZettelComments.chooseImage(element.dataset.zettelId),
     'choose-region-icon': () => window.TafelNoticeMediaPicker.open({
@@ -69,6 +86,9 @@
   };
 
   const inputActions = {
+    'notice-stack-select': element => window.TafelNoticeReader.select(element.value),
+    'notice-reward-field': element => window.TafelNoticeRewards.field(element),
+    'notice-typography-field': element => window.TafelNoticeTypography.field(element),
     'search-notices': element => window.TafelNoticeRegister.search(element.value),
     'preview-region-icon': () => editor().previewIcon(),
     'preview-board-image': () => editor().previewBoardImage(),

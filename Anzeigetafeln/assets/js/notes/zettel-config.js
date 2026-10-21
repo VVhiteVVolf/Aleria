@@ -70,10 +70,25 @@
       id:'fund', icon:'🗝︎', color:'#68613c', label:'Fundanzeige',
       desc:'Verlorene Kleinode und wiedergefundene Schätze', fields:['bild','text'],
       table:[{k:'Fundstück',v:''},{k:'Fundort',v:''},{k:'Gefunden am',v:''},{k:'Abzuholen bei',v:''},{k:'Eigentumsnachweis',v:''}]
+    },
+    {
+      id:'hilfsgesuch', icon:'✎', color:'#655c3b', label:'Kleines Hilfsgesuch', paperPreview:true,
+      desc:'Ein handschriftlicher Zettel für Nachbarn und kleine Aufträge', fields:['text','bild'],
+      table:[{k:'Gesucht',v:''},{k:'Ort',v:''},{k:'Belohnung',v:''},{k:'Kontakt',v:''}]
+    },
+    {
+      id:'turnier', icon:'♜', color:'#722f35', label:'Turnier & Wettstreit', paperPreview:true,
+      desc:'Ein festlicher Banneraufruf mit Preisen und Teilnahmebedingungen', fields:['bild','text'],
+      table:[{k:'Disziplin',v:''},{k:'Wann',v:''},{k:'Austragungsort',v:''},{k:'Preisgeld',v:''},{k:'Teilnahme',v:''},{k:'Anmeldung',v:''}]
+    },
+    {
+      id:'auktion', icon:'⚖', color:'#35585e', label:'Versteigerung', paperPreview:true,
+      desc:'Ein nummerierter Loszettel mit Warenbild und Gebotsangaben', fields:['bild','text'],
+      table:[{k:'Losnummer',v:''},{k:'Gegenstand',v:''},{k:'Mindestgebot',v:''},{k:'Termin',v:''},{k:'Besichtigung',v:''},{k:'Kontakt',v:''}]
     }
   ].map(type => ({
     ...type,
-    iconImage: `assets/images/notice-types/${type.id}-v1.webp`,
+    iconImage: type.paperPreview ? '' : `assets/images/notice-types/${type.id}-v1.webp`,
   }));
 
   window.ZETTEL_COLOR = {
@@ -110,7 +125,7 @@
     renderTypeCards(esc){
       return window.ZETTEL_TYPES.map(type => `
         <button type="button" class="tpl-card tpl-card--${type.id}" id="ztplc-${type.id}" data-action="select-zettel-type" data-zettel-type="${type.id}" aria-pressed="false" style="--template-ink:${type.color}">
-          <span class="tpl-artwork has-image" aria-hidden="true"><span class="tpl-icon-fallback">${type.icon}</span><img src="${type.iconImage}" width="384" height="384" alt="" decoding="async" draggable="false" data-image-fallback="notice-media"></span>
+          <span class="tpl-artwork ${type.iconImage ? 'has-image' : `tpl-paper-preview tpl-paper-preview--${type.id}`}" aria-hidden="true"><span class="tpl-icon-fallback">${type.icon}</span>${type.iconImage ? `<img src="${type.iconImage}" width="384" height="384" alt="" decoding="async" draggable="false" data-image-fallback="notice-media">` : '<span class="tpl-paper-lines"></span>'}</span>
           <span class="tpl-label">${type.label}</span>
           <span class="tpl-desc">${type.desc}</span>
         </button>`).join('');

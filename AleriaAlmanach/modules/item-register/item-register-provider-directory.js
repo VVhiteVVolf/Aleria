@@ -22,6 +22,7 @@ export const PROVIDER_REGIONS = Object.freeze({
 });
 
 const directory = Object.freeze({
+  'lothaires-arkaneum': { tradeId: 'other', regionId: 'celtigerns-wacht', location: 'Gwynthor-Stadt · Parkviertel', image: './assets/herluin-lothaire/module-art/ladenschild.png' },
   'gortach-brauerei': { tradeId: 'brewers', regionId: 'tir-na-tonn', location: 'Broch an Ear' },
   'teyrngarch-brauerzunft': { tradeId: 'brewers', regionId: 'sonnenkueste', location: 'Aberon' },
   'penderyn-brauer-destillierzunft': { tradeId: 'brewers', regionId: 'vortigerns-ruh', location: 'Drakenburg' },

@@ -1,0 +1,154 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--zitteraale-nachtkieme",
+  "slug": "nachtkieme",
+  "identity": {
+    "name": "Nachtkieme",
+    "aliases": [],
+    "worldPersonId": ""
+  },
+  "classification": {
+    "primary": {
+      "kind": "group",
+      "id": "schwarze-zitteraale",
+      "label": "Schwarze Zitteraale",
+      "source": "archive-tab"
+    },
+    "familyStatus": "pending",
+    "families": [],
+    "familyAlternatives": [],
+    "groups": [
+      {
+        "id": "schwarze-zitteraale",
+        "label": "Schwarze Zitteraale",
+        "source": "archive-tab"
+      }
+    ],
+    "places": [],
+    "legacy": {
+      "tabs": [
+        "Schwarze Zitteraale"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "zitteraale-nachtkieme",
+      "documentIds": [
+        "zitteraale-nachtkieme"
+      ],
+      "documents": [
+        {
+          "documentId": "zitteraale-nachtkieme",
+          "createdAt": "2026-10-21T00:00:00Z",
+          "updatedAt": "2026-10-21T00:00:00Z"
+        }
+      ]
+    },
+    "familyTree": [],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/zitteraale-nachtkieme-2026-10-21.json",
+    "sourceExportedAt": "2026-10-21T00:00:00Z",
+    "sourceUpdatedAt": "2026-10-21T00:00:00Z",
+    "sourceDocumentIds": [
+      "zitteraale-nachtkieme"
+    ],
+    "contentHash": "cd92eb8aff888190d6033d5523312b77dd818330a93abdde2256192a0ce9d847"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null,
+    "authoredFeature": "schwarze-zitteraale"
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "zitteraale-nachtkieme",
+        "name": "Nachtkieme",
+        "aliases": [],
+        "title": "Linke Hand · Kundschaft und Verbindungen",
+        "fraktion": "Schwarze Zitteraale",
+        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/nachtkieme.png",
+        "bio": "Sie kannte die Straßen der Grafschaft bereits, bevor die Bande ihre Wege nutzte. Aus kleinen Botengängen wurden bezahlte Hinweise und schließlich die Planung von Hinterhalten. Niemand in der Bande verwendet einen anderen Namen für sie.\n\nAufmerksam, misstrauisch und wortkarg. Merkt sich Stimmen und kleine Unstimmigkeiten; antwortet selten auf die eigentliche Frage.\n\nBeobachtet Reisegewohnheiten, stellt Kontakte zu Abnehmern her und prüft fremde Nachrichten. Nur wenige erfahren von ihr mehr als ihren nächsten Treffpunkt.",
+        "status": "Gesucht",
+        "createdAt": "2026-10-21T00:00:00Z",
+        "updatedAt": "2026-10-21T00:00:00Z",
+        "archived": false,
+        "genealogy": {
+          "sex": "female",
+          "birth": "1703",
+          "status": "alive",
+          "relationships": {
+            "parents": [],
+            "partners": [],
+            "children": []
+          }
+        },
+        "imageSets": [
+          {
+            "id": "standard",
+            "name": "Standard",
+            "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/nachtkieme.png",
+            "emotes": []
+          }
+        ],
+        "activeImageSetId": "standard",
+        "imageSetSchemaVersion": 1
+      }
+    ]
+  },
+  "character": {
+    "id": "zitteraale-nachtkieme",
+    "name": "Nachtkieme",
+    "aliases": [],
+    "title": "Linke Hand · Kundschaft und Verbindungen",
+    "fraktion": "Schwarze Zitteraale",
+    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/nachtkieme.png",
+    "bio": "Sie kannte die Straßen der Grafschaft bereits, bevor die Bande ihre Wege nutzte. Aus kleinen Botengängen wurden bezahlte Hinweise und schließlich die Planung von Hinterhalten. Niemand in der Bande verwendet einen anderen Namen für sie.\n\nAufmerksam, misstrauisch und wortkarg. Merkt sich Stimmen und kleine Unstimmigkeiten; antwortet selten auf die eigentliche Frage.\n\nBeobachtet Reisegewohnheiten, stellt Kontakte zu Abnehmern her und prüft fremde Nachrichten. Nur wenige erfahren von ihr mehr als ihren nächsten Treffpunkt.",
+    "status": "Gesucht",
+    "createdAt": "2026-10-21T00:00:00Z",
+    "updatedAt": "2026-10-21T00:00:00Z",
+    "archived": false,
+    "genealogy": {
+      "sex": "female",
+      "birth": "1703",
+      "status": "alive",
+      "relationships": {
+        "parents": [],
+        "partners": [],
+        "children": []
+      },
+      "worldPersonId": "",
+      "death": "",
+      "houseId": "",
+      "houseName": "",
+      "familyRole": "",
+      "portraitPlaceholder": "",
+      "tags": [],
+      "sources": []
+    },
+    "imageSets": [
+      {
+        "id": "standard",
+        "name": "Standard",
+        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/nachtkieme.png",
+        "emotes": []
+      }
+    ],
+    "activeImageSetId": "standard",
+    "imageSetSchemaVersion": 1,
+    "identity": {
+      "worldPersonId": ""
+    }
+  }
+}

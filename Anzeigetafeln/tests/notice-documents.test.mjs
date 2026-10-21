@@ -14,15 +14,15 @@ function feature() {
   const esc = value => String(value ?? '').replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
   context.window.TafelRuntime = { esc, state: () => ({zettel:[]}) };
   context.window.TafelZettelRichText = { renderHtml: value => String(value || '') };
-  for (const file of ['media/notice-media-model.js', 'notes/zettel-config.js', 'notes/zettel-document-views.js', 'notes/zettel-scroll-views.js', 'core/tafel-state.js']) {
+  for (const file of ['media/notice-media-model.js', 'notes/notice-text-layout.js', 'notes/zettel-config.js', 'notes/zettel-document-views.js', 'notes/zettel-scroll-views.js', 'core/tafel-state.js']) {
     vm.runInContext(readFileSync(new URL(`../assets/js/${file}`, import.meta.url), 'utf8'), context);
   }
   return { ...context.window, events };
 }
 
-test('all thirteen templates render entered facts, text and six media slots without changing the saved notice', () => {
+test('all sixteen templates render entered facts, text and six media slots without changing the saved notice', () => {
   const app = feature();
-  assert.equal(app.ZETTEL_TYPES.length, 13);
+  assert.equal(app.ZETTEL_TYPES.length, 16);
   for (const type of app.ZETTEL_TYPES) {
     const notice = app.TafelZettelConfig.createDraft(type.id, {x:.3,y:.5}, () => 'notice');
     notice.text = '<p>Ein vorhandener Text</p>';
@@ -37,6 +37,21 @@ test('all thirteen templates render entered facts, text and six media slots with
     for (const field of ['bild','portrait','verfasser','emblem','siegel','unterschrift']) assert.ok(html.includes(`https://images.test/${field}.png`), `${type.id}: ${field}`);
     assert.equal(JSON.stringify(notice), before, type.id);
   }
+});
+
+test('per-image framing is bounded, independent of portrait framing, and detached on URL replacement', () => {
+  const { TafelNoticeMediaModel: media } = feature();
+  const source = { imageFit: 'cover', imagePosition: 'top', unterschrift: 'ink.png', media: {
+    unterschrift: { kind: 'image', src: 'ink.png', fit: 'cover', position: 'center' },
+  } };
+  assert.match(media.render(source, 'unterschrift', { fit: 'contain' }), /object-fit:cover;object-position:center/);
+  source.media.unterschrift.fit = 'invalid';
+  source.media.unterschrift.position = 'invalid';
+  assert.match(media.render(source, 'unterschrift', { fit: 'contain' }), /object-fit:contain;object-position:top/);
+  source.media.unterschrift.fit = 'cover';
+  source.media.unterschrift.position = 'center';
+  source.unterschrift = 'replacement.png';
+  assert.match(media.render(source, 'unterschrift', { fit: 'contain' }), /object-fit:contain;object-position:top/);
 });
 
 test('empty facts do not create empty rows; star values are bounded and labels escaped', () => {

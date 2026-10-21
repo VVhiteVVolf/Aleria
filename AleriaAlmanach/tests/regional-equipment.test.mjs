@@ -26,7 +26,9 @@ test('Regional armor never appears in standard goods, their category totals or s
   assert.equal(STANDARD_ITEMS.filter(i=>i.section==='regional').length,186);
   assert.ok(!REGISTER_CATEGORIES.some(c=>c.id==='cenyr-ruestungen'));
   const html=overview(snapshot,{section:'standard'},{});
-  assert.match(html,/213 Vorlagen/);assert.doesNotMatch(html,/Cenyr – Rüstungen|399 Vorlagen/);
+  const standardCount=STANDARD_ITEMS.filter(item=>item.section==='standard').length;
+  assert.match(html,new RegExp(`${standardCount} Vorlagen`));
+  assert.doesNotMatch(html,new RegExp(`Cenyr – Rüstungen|${STANDARD_ITEMS.length} Vorlagen`));
   assert.match(navigation(snapshot,initial),/data-id="regional"/);
 });
 test('Country, county and house drill-down constrain search; empty countries stay browsable',()=>{

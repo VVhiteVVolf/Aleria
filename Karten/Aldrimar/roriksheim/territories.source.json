@@ -1,0 +1,790 @@
+{
+  "territories": [
+    {
+      "id": "rorikstal",
+      "name": "Jarltümliches Thanentum Rorikstal",
+      "familyId": "haus-varulv",
+      "house": "Clan Varulv",
+      "crest": "/Stammbäume/assets/images/houses/Aldrimar/clan-varulv.png",
+      "banner": "/Stammbäume/assets/images/regions/aldrimar-rorikstal.png",
+      "href": "/Stammbäume/Stammbaum.html?family=haus-varulv&mode=view",
+      "seat": "Rorikshall"
+    },
+    {
+      "id": "schwarzdorn",
+      "name": "Hesirentum der Schwarzdorn",
+      "familyId": "haus-schwarzdorn",
+      "house": "Clan Schwarzdorn",
+      "crest": "/Stammbäume/assets/images/houses/Aldrimar/Roriksheim/clan-schwarzdorn.png",
+      "banner": "/Stammbäume/assets/images/regions/aldrimar-rorikstal.png",
+      "href": "/Stammbäume/Stammbaum.html?family=haus-schwarzdorn&mode=view",
+      "seat": "Rorikshall"
+    },
+    {
+      "id": "kampfgeborene",
+      "name": "Hesirentum der Kampfgeborenen",
+      "familyId": "haus-kampfgeborene",
+      "house": "Clan Kampfgeborene",
+      "crest": "/Stammbäume/assets/images/houses/Aldrimar/Roriksheim/clan-kampfgeborene.png",
+      "banner": "/Stammbäume/assets/images/regions/aldrimar-rorikstal.png",
+      "href": "/Stammbäume/Stammbaum.html?family=haus-kampfgeborene&mode=view",
+      "seat": "Rorikshall"
+    },
+    {
+      "id": "winterfaenge",
+      "name": "Hesirentum Winterfänge",
+      "familyId": "haus-freiwinter",
+      "house": "Clan Freiwinter",
+      "crest": "/Stammbäume/assets/images/houses/Aldrimar/Roriksheim/clan-freiwinter.png",
+      "banner": "/Stammbäume/assets/images/regions/aldrimar-rorikstal.png",
+      "href": "/Stammbäume/Stammbaum.html?family=haus-freiwinter&mode=view",
+      "seat": "Wolfswacht"
+    },
+    {
+      "id": "schwerthohn",
+      "name": "Thanentum Schwerthohn",
+      "familyId": "haus-skaal",
+      "house": "Clan Skaal",
+      "crest": "/Stammbäume/assets/images/houses/Aldrimar/Roriksheim/clan-skaal.png",
+      "banner": "/Stammbäume/assets/images/regions/aldrimar-schwerthohn.png",
+      "href": "/Stammbäume/Stammbaum.html?family=haus-skaal&mode=view",
+      "seat": "Schwertfall"
+    },
+    {
+      "id": "schwarzacker",
+      "name": "Hesirentum Schwarzacker",
+      "familyId": "haus-skjegg",
+      "house": "Clan Skjegg",
+      "crest": "/Stammbäume/assets/images/houses/Aldrimar/Roriksheim/clan-skjegg.png",
+      "banner": "/Stammbäume/assets/images/regions/aldrimar-schwarzacker.png",
+      "href": "/Stammbäume/Stammbaum.html?family=haus-skjegg&mode=view",
+      "seat": "Grabesruh"
+    },
+    {
+      "id": "daemmergrund",
+      "name": "Thanentum Dämmergrund",
+      "familyId": "haus-vangandr",
+      "house": "Clan Vangandr",
+      "crest": "/Stammbäume/assets/images/houses/Aldrimar/Roriksheim/clan-vangandr.png",
+      "banner": "/Stammbäume/assets/images/regions/aldrimar-daemmergrund.png",
+      "href": "/Stammbäume/Stammbaum.html?family=haus-vangandr&mode=view",
+      "seat": "Wolfspfad"
+    },
+    {
+      "id": "daemmertal",
+      "name": "Hesirentum Dämmertal",
+      "familyId": "haus-nachtjaeger",
+      "house": "Clan Nachtjäger",
+      "crest": "/Stammbäume/assets/images/houses/Aldrimar/Roriksheim/clan-nachtjaeger.png",
+      "banner": "/Stammbäume/assets/images/regions/aldrimar-daemmergrund.png",
+      "href": "/Stammbäume/Stammbaum.html?family=haus-nachtjaeger&mode=view",
+      "seat": "Horunn"
+    },
+    {
+      "id": "klangheim",
+      "name": "Thanentum Klangheim",
+      "familyId": "haus-brathfengr",
+      "house": "Clan Brathfengr",
+      "crest": "/Stammbäume/assets/images/houses/Aldrimar/Roriksheim/clan-brathfengr.png",
+      "banner": "/Stammbäume/assets/images/regions/aldrimar-skaldenheim.png",
+      "href": "/Stammbäume/Stammbaum.html?family=haus-brathfengr&mode=view",
+      "seat": "Klangheim"
+    },
+    {
+      "id": "skald",
+      "name": "Hesirentum der Skald",
+      "familyId": "haus-skald",
+      "house": "Clan Skald",
+      "crest": "/Stammbäume/assets/images/houses/Aldrimar/Roriksheim/clan-skald.png",
+      "banner": "/Stammbäume/assets/images/regions/aldrimar-skaldenheim.png",
+      "href": "/Stammbäume/Stammbaum.html?family=haus-skald&mode=view",
+      "seat": "Klangheim"
+    },
+    {
+      "id": "sterkr",
+      "name": "Hesirentum der Sterkr",
+      "familyId": "haus-sterkr",
+      "house": "Clan Sterkr",
+      "crest": "/Stammbäume/assets/images/houses/Aldrimar/Roriksheim/clan-sterkr.png",
+      "banner": "/Stammbäume/assets/images/regions/aldrimar-skaldenheim.png",
+      "href": "/Stammbäume/Stammbaum.html?family=haus-sterkr&mode=view",
+      "seat": "Klangheim"
+    },
+    {
+      "id": "soekeren",
+      "name": "Hesirentum der Sökeren",
+      "familyId": "haus-soekeren",
+      "house": "Clan Sökeren",
+      "crest": "/Stammbäume/assets/images/houses/Aldrimar/Roriksheim/clan-soekeren.png",
+      "banner": "/Stammbäume/assets/images/regions/aldrimar-skaldenheim.png",
+      "href": "/Stammbäume/Stammbaum.html?family=haus-soekeren&mode=view",
+      "seat": "Klangheim"
+    },
+    {
+      "id": "dunkelhain",
+      "name": "Dunkelhain",
+      "house": "Zugehörigkeit offen",
+      "familyId": "",
+      "crest": "",
+      "banner": "",
+      "href": "",
+      "seat": ""
+    }
+  ],
+  "reviewEnvelopes": {
+    "schwerthohn": [
+      [
+        575,
+        45
+      ],
+      [
+        1048,
+        0
+      ],
+      [
+        1095,
+        30
+      ],
+      [
+        1050,
+        100
+      ],
+      [
+        1003,
+        170
+      ],
+      [
+        1000,
+        295
+      ],
+      [
+        1040,
+        435
+      ],
+      [
+        920,
+        485
+      ],
+      [
+        835,
+        570
+      ],
+      [
+        760,
+        602
+      ],
+      [
+        625,
+        495
+      ],
+      [
+        620,
+        440
+      ],
+      [
+        747,
+        425
+      ],
+      [
+        760,
+        250
+      ],
+      [
+        590,
+        219
+      ],
+      [
+        547,
+        172
+      ]
+    ],
+    "schwarzacker": [
+      [
+        180,
+        365
+      ],
+      [
+        316,
+        287
+      ],
+      [
+        324,
+        245
+      ],
+      [
+        460,
+        231
+      ],
+      [
+        575,
+        208
+      ],
+      [
+        633,
+        235
+      ],
+      [
+        720,
+        252
+      ],
+      [
+        767,
+        310
+      ],
+      [
+        757,
+        404
+      ],
+      [
+        693,
+        432
+      ],
+      [
+        620,
+        440
+      ],
+      [
+        585,
+        500
+      ],
+      [
+        465,
+        449
+      ],
+      [
+        388,
+        426
+      ],
+      [
+        355,
+        452
+      ],
+      [
+        312,
+        452
+      ],
+      [
+        257,
+        416
+      ],
+      [
+        215,
+        470
+      ]
+    ],
+    "rorikstal": [
+      [
+        1120,
+        0
+      ],
+      [
+        1700,
+        23
+      ],
+      [
+        1673,
+        120
+      ],
+      [
+        1590,
+        190
+      ],
+      [
+        1560,
+        300
+      ],
+      [
+        1500,
+        374
+      ],
+      [
+        1495,
+        451
+      ],
+      [
+        1412,
+        550
+      ],
+      [
+        1336,
+        545
+      ],
+      [
+        1293,
+        487
+      ],
+      [
+        1215,
+        458
+      ],
+      [
+        1090,
+        440
+      ],
+      [
+        1040,
+        442
+      ],
+      [
+        1020,
+        335
+      ],
+      [
+        983,
+        202
+      ],
+      [
+        1055,
+        80
+      ]
+    ],
+    "klangheim": [
+      [
+        240,
+        450
+      ],
+      [
+        300,
+        458
+      ],
+      [
+        350,
+        449
+      ],
+      [
+        385,
+        424
+      ],
+      [
+        450,
+        452
+      ],
+      [
+        534,
+        474
+      ],
+      [
+        581,
+        501
+      ],
+      [
+        615,
+        540
+      ],
+      [
+        713,
+        618
+      ],
+      [
+        761,
+        605
+      ],
+      [
+        756,
+        717
+      ],
+      [
+        720,
+        810
+      ],
+      [
+        725,
+        897
+      ],
+      [
+        730,
+        999
+      ],
+      [
+        726,
+        1158
+      ],
+      [
+        655,
+        1176
+      ],
+      [
+        602,
+        1166
+      ],
+      [
+        540,
+        1170
+      ],
+      [
+        479,
+        1173
+      ],
+      [
+        429,
+        1176
+      ],
+      [
+        385,
+        1162
+      ],
+      [
+        332,
+        1179
+      ],
+      [
+        283,
+        1188
+      ],
+      [
+        225,
+        1178
+      ],
+      [
+        175,
+        1187
+      ],
+      [
+        117,
+        1183
+      ],
+      [
+        89,
+        1200
+      ],
+      [
+        28,
+        1179
+      ],
+      [
+        75,
+        1156
+      ],
+      [
+        110,
+        1114
+      ],
+      [
+        94,
+        1062
+      ],
+      [
+        104,
+        1001
+      ],
+      [
+        162,
+        891
+      ],
+      [
+        135,
+        844
+      ],
+      [
+        98,
+        817
+      ],
+      [
+        110,
+        741
+      ],
+      [
+        181,
+        691
+      ],
+      [
+        221,
+        650
+      ],
+      [
+        211,
+        583
+      ],
+      [
+        228,
+        512
+      ]
+    ],
+    "daemmergrund": [
+      [
+        770,
+        600
+      ],
+      [
+        840,
+        565
+      ],
+      [
+        877,
+        517
+      ],
+      [
+        1000,
+        453
+      ],
+      [
+        1090,
+        442
+      ],
+      [
+        1215,
+        460
+      ],
+      [
+        1294,
+        488
+      ],
+      [
+        1348,
+        561
+      ],
+      [
+        1346,
+        657
+      ],
+      [
+        1338,
+        731
+      ],
+      [
+        1385,
+        819
+      ],
+      [
+        1428,
+        880
+      ],
+      [
+        1434,
+        935
+      ],
+      [
+        1450,
+        1040
+      ],
+      [
+        1393,
+        1085
+      ],
+      [
+        1256,
+        1035
+      ],
+      [
+        1148,
+        1010
+      ],
+      [
+        1090,
+        1012
+      ],
+      [
+        1055,
+        981
+      ],
+      [
+        998,
+        1012
+      ],
+      [
+        922,
+        1017
+      ],
+      [
+        887,
+        996
+      ],
+      [
+        848,
+        1021
+      ],
+      [
+        814,
+        1111
+      ],
+      [
+        759,
+        1131
+      ],
+      [
+        724,
+        1160
+      ],
+      [
+        730,
+        999
+      ],
+      [
+        724,
+        889
+      ],
+      [
+        711,
+        812
+      ],
+      [
+        755,
+        717
+      ]
+    ],
+    "winterfaenge": [
+      [
+        1670,
+        119
+      ],
+      [
+        1748,
+        120
+      ],
+      [
+        1760,
+        390
+      ],
+      [
+        1782,
+        454
+      ],
+      [
+        1783,
+        573
+      ],
+      [
+        1752,
+        636
+      ],
+      [
+        1704,
+        626
+      ],
+      [
+        1630,
+        611
+      ],
+      [
+        1540,
+        566
+      ],
+      [
+        1490,
+        575
+      ],
+      [
+        1414,
+        550
+      ],
+      [
+        1495,
+        452
+      ],
+      [
+        1500,
+        374
+      ],
+      [
+        1555,
+        300
+      ],
+      [
+        1590,
+        195
+      ]
+    ],
+    "daemmertal": [
+      [
+        1410,
+        550
+      ],
+      [
+        1495,
+        574
+      ],
+      [
+        1540,
+        566
+      ],
+      [
+        1630,
+        611
+      ],
+      [
+        1704,
+        626
+      ],
+      [
+        1752,
+        636
+      ],
+      [
+        1786,
+        664
+      ],
+      [
+        1818,
+        732
+      ],
+      [
+        1855,
+        768
+      ],
+      [
+        1890,
+        799
+      ],
+      [
+        1847,
+        836
+      ],
+      [
+        1783,
+        852
+      ],
+      [
+        1712,
+        916
+      ],
+      [
+        1663,
+        910
+      ],
+      [
+        1595,
+        919
+      ],
+      [
+        1525,
+        948
+      ],
+      [
+        1460,
+        996
+      ],
+      [
+        1432,
+        1032
+      ],
+      [
+        1428,
+        935
+      ],
+      [
+        1428,
+        880
+      ],
+      [
+        1385,
+        819
+      ],
+      [
+        1340,
+        730
+      ],
+      [
+        1349,
+        656
+      ],
+      [
+        1348,
+        563
+      ]
+    ]
+  },
+  "envelopeSize": [
+    1917,
+    1279
+  ]
+}

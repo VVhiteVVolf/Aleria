@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-20",
+  "tool": "built-in image_gen",
+  "preset": "anime-scene-portrait",
+  "promptSet": "AleriaAlmanach/assets/herluin-lothaire/cast/prompts.json",
+  "castPlan": "AleriaAlmanach/assets/herluin-lothaire/cast/cast-plan.json",
+  "moduleCreated": false,
+  "pushed": false,
+  "deployed": false,
+  "images": [
+    {
+      "id": "rhydian-o-cenyr",
+      "name": "Rhydian O'Cenyr",
+      "destination": "AleriaAlmanach/assets/herluin-lothaire/cast/portraits/rhydian-o-cenyr.png",
+      "original": "C:/Users/fhg_r/.codex/generated_images/01a1464a-a20b-7c00-a9de-c0b8c10e3b32/exec-b83c1bc8-5c65-4333-90eb-3526fa38397f.png",
+      "originalRetained": true,
+      "width": 1024,
+      "height": 1536,
+      "sha256": "df4b6754da4122af482cba06f690447494f7454581fcf079e6fd527c7ddb815a",
+      "generatedPixelsPreserved": true,
+      "visualReview": {
+        "completed": true,
+        "singleHumanCharacter": true,
+        "distinctivePoseAndClothing": true,
+        "requiredTraitsPresent": true,
+        "notes": "Elderly, white beard, hood, dull eyes, long nails, tired critical gaze directed at herbs."
+      }
+    },
+    {
+      "id": "maelwyn-o-cenyr",
+      "name": "Maelwyn O'Cenyr",
+      "destination": "AleriaAlmanach/assets/herluin-lothaire/cast/portraits/maelwyn-o-cenyr.png",
+      "original": "C:/Users/fhg_r/.codex/generated_images/01a1464a-a20b-7c00-a9de-c0b8c10e3b32/exec-fd9fddf7-3687-44b5-b98f-542869774268.png",
+      "originalRetained": true,
+      "width": 1024,
+      "height": 1536,
+      "sha256": "c075845fc17aa9f598f821cc2767f3797cf6305f8f0e598c0e3353ffe83969b1",
+      "generatedPixelsPreserved": true,
+      "visualReview": {
+        "completed": true,
+        "singleHumanCharacter": true,
+        "distinctivePoseAndClothing": true,
+        "requiredTraitsPresent": true,
+        "notes": "Young adult appearance, orderly red hair with lighter ginger tips, short chin goatee, folded arms and smile."
+      }
+    },
+    {
+      "id": "cyrwyn",
+      "name": "Cyrwyn",
+      "destination": "AleriaAlmanach/assets/herluin-lothaire/cast/portraits/cyrwyn.png",
+      "original": "C:/Users/fhg_r/.codex/generated_images/01a1464a-a20b-7c00-a9de-c0b8c10e3b32/exec-62b57186-db70-4c2c-81e3-ed0c6747747f.png",
+      "originalRetained": true,
+      "width": 1024,
+      "height": 1536,
+      "sha256": "7c0137b88d6d33c3f24662f7b4ae20644bd76a74e7cbae1c86637b5822ed1942",
+      "generatedPixelsPreserved": true,
+      "visualReview": {
+        "completed": true,
+        "singleHumanCharacter": true,
+        "distinctivePoseAndClothing": true,
+        "requiredTraitsPresent": true,
+        "notes": "Red hair and beard, brown hood and leather armor, quiver, hand on sheathed sword hilt."
+      }
+    },
+    {
+      "id": "torvald",
+      "name": "Torvald",
+      "destination": "AleriaAlmanach/assets/herluin-lothaire/cast/portraits/torvald.png",
+      "original": "C:/Users/fhg_r/.codex/generated_images/01a1464a-a20b-7c00-a9de-c0b8c10e3b32/exec-07ace802-95ad-46ed-9380-c54d4a0d5242.png",
+      "originalRetained": true,
+      "width": 1024,
+      "height": 1536,
+      "sha256": "f5410a94282fe3d0e32b5256eb8754fd869e8efabf11a2afe808bd5329ac8ac6",
+      "generatedPixelsPreserved": true,
+      "visualReview": {
+        "completed": true,
+        "singleHumanCharacter": true,
+        "distinctivePoseAndClothing": true,
+        "requiredTraitsPresent": true,
+        "notes": "Blond warrior, blue eyes and slate-blue cloak, both hands resting on the pommel of one vertical sword."
+      }
+    },
+    {
+      "id": "rioneth",
+      "name": "Rioneth",
+      "destination": "AleriaAlmanach/assets/herluin-lothaire/cast/portraits/rioneth.png",
+      "original": "C:/Users/fhg_r/.codex/generated_images/01a1464a-a20b-7c00-a9de-c0b8c10e3b32/exec-b3d97615-0f12-4099-b314-f129eb8bb4fa.png",
+      "originalRetained": true,
+      "width": 1024,
+      "height": 1536,
+      "sha256": "a49f9e91b92c71b9a319c733fb9e397e6523c3340be5a13a015455bcf8d06427",
+      "generatedPixelsPreserved": true,
+      "visualReview": {
+        "completed": true,
+        "singleHumanCharacter": true,
+        "distinctivePoseAndClothing": true,
+        "requiredTraitsPresent": true,
+        "notes": "Round human ear, brown braid and cropped temple, green cloak, bow, basket with mushrooms and roots."
+      }
+    }
+  ]
+}

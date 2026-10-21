@@ -1,0 +1,423 @@
+{
+  "intro": [
+    "Das Königreich Aldrimar wird von mächtigen Clans regiert, die dem König unterstehen und ihren eigenen Hof führen. Diese Höfe sind weniger feudal und ritterlich geprägt, jedoch strukturell vergleichbar mit denen der cenyrischen Adelshäuser. Die Clans haben ihre eigenen Clanämter, die in Aldrimar den Ratsämtern anderer Reiche entsprechen und sich um die Belange des gesamten Clans kümmern.",
+    "Daneben gibt es die sogenannten Herd-Ämter – eine Tradition, die auf die Zeit zurückgeht, als die Clans kleiner waren und das „Hofleben“ sich um das warme Zentrum, das Herdfeuer in der Halle, versammelte. Diese Ämter dienen dem Clan auf persönlicher Ebene, kümmern sich um das Wohl der Gemeinschaft und den Zusammenhalt innerhalb des Hauses."
+  ],
+  "groups": [
+    {
+      "id": "ratsaemter",
+      "title": "Clan- und Ratsämter",
+      "number": "01",
+      "introduction": [
+        "In Aldrimar gelten die Clansämter als die höchsten Positionen innerhalb eines Clans, die von den Oberhäuptern, also dem König oder den Clanführern, besetzt werden. Diese Amtsträger tragen den Titel ihres jeweiligen Oberhauptes, zum Beispiel „des Königs“ oder „des Jarls“. Die Hierarchie ist klar festgelegt: Ein Amtsträger „des Königs“ steht über einem Amtsträger eines Clanführers oder niederen Lords. Um den Rang des Amts sichtbar zu machen, tragen diese Amtsträger Abzeichen, die das Amt und die Zugehörigkeit kennzeichnen. Das Material der Abzeichen spiegelt die Ebene der Autorität wider: Gold steht für den König, Silber für einen ranghohen Jarls, Bronze für den Häuptling eines kleineren Clans, und Eisen für Amtsträger eines niederen Lords. So erkennt man auf einen Blick, welchem Herrschaftsbereich der Amtsinhaber dient und welchen Rang er innehat."
+      ],
+      "offices": [
+        {
+          "id": "kriegsherr",
+          "title": "Kriegsherr",
+          "category": "Traditionelle Ämter",
+          "description": [
+            "Der Kriegsherr ist der oberste Krieger eines Landes oder einer Region und wird in Kriegszeiten auch \"Heermeister\" genannt um zu untermalen, dass er in solchen Fällen lediglich von einem Oberhaupt überstimmt werden kann. Der Kriegsherr ist zuständig für die innere und äußere Sicherheit des Landes."
+          ]
+        },
+        {
+          "id": "kastellan",
+          "title": "Kastellan",
+          "category": "Traditionelle Ämter",
+          "description": [
+            "Die Kastellane haben natürlich noch diverse Staatsmänner unter sich, die sich gewisse Belange Kümmern. Diese sind Steuereinnehmer, Kassenwarte, Zinsverwalter, Münzverwalter."
+          ]
+        },
+        {
+          "id": "justiziar",
+          "title": "Justiziar",
+          "category": "Traditionelle Ämter",
+          "description": [
+            "Der Justiziar des Königs ist der oberste Richter eines Landes oder einer Region hinter dem Oberhaupt und kümmert sich um alle rechtlichen und behördlichen Problematiken und Schwierigkeiten. Er sorgt unter anderem für eine funktionierende Strafverfolgung, setzt Belohnungen aus und kümmert sich als Schlichter um die Streitigkeiten zwischen Häusern. Außerdem sorgt er dafür, dass die Regularien und Gesetze hinsichtlich von Thronfolgen eingehalten werden.",
+            "Die Kämmerer haben natürlich noch diverse Staatsmänner unter sich, die sich gewisse Belange Kümmern. Die meisten von Ihnen sind die Richter (Rechtsprecher und Schöffen) oder die Rechtsarchivar, die die Protokolle und Schriftstücke über die Verhandlungen und Urteile führen. Dann gibt es noch Zensoren, die das Verhalten der Bürger beobachten um festzustellen, wo es am meisten Verbrechen gibt. Dann gibt es noch die Notare, die z.B. festhalten, wenn z.B. ein Graf ein Stück Land als Ritterliche Herrschaft einem Ritterfürsten gibt und sich auch generell um Verträge kümmern und natürlich die Rechtsboten, die etwaige Schriftstücke ausliefern."
+          ]
+        },
+        {
+          "id": "herold",
+          "title": "Herold",
+          "category": "Traditionelle Ämter",
+          "description": [
+            "Der Herold ist der oberste Diplomat eines Landes oder einer Region und zuständig für die Politik nach Außen. Er kümmert sich um die Korrespondenz und Treffen mit anderen Grafschaften oder Länder und ist maßgeblich dafür verantwortlich die guten Beziehungen und Bündnisse zu schaffen und zu halten. Oftmals vertritt er seinen Herren dabei gänzlich und darf frei für diesen sprechen.",
+            "Ihm unterstehen für gewöhnliche mehrere Gesandte, die für ihn Reisen unternehmen, aber auch Schreiber, die für ihn Briefe schreiben und andere Aufgaben ausführen. Ein weiteres Amt wäre der Verhandlungsführer.",
+            "Der Herold unterstützt auch die anderen Ratsämter bei Verhandlungen und Treffen, meist, in dem er ihm jemanden als \"Redner\" zur Seite stellt. Umgekehrt unterstützen sie ihn bei schwierigen Verhandlungen mit Wissen auf ihren Gebieten."
+          ]
+        },
+        {
+          "id": "schatten",
+          "title": "Schatten",
+          "category": "Traditionelle Ämter",
+          "description": [
+            "Der Schatten ist ein Amt, dass mit ein wenig Vorsicht zu genießen ist. Die Schatten sind nämlich jene, die im Grunde über alles und jeden Bescheid wissen und sowohl innerlands als auch außerlandes ihre Fühler ausstrecken umd etwaigen Gefahren vorzubeugen und den Rat und auch den König in dieser Hinsicht zu beraten."
+          ]
+        },
+        {
+          "id": "ratspriester",
+          "title": "Ratspriester",
+          "category": "Ämter mit wechselnder Namensbezeichnung",
+          "description": [
+            "Der Ratspriester des Königs wird für gewöhnlich \"Erzpatriarch\" genannt, passend zu seiner Stellung in der Alerischen Kirche. Aus diesem Grund divergiert seine Bezeichnung auch von Rat zu Rat.",
+            "Seine Aufgaben bedarfen keinerlei weiteren Erläuterung. Er ist für die Kathredralen, Kirchen und Tempelanlagen zuständig und ist das Bindeglied des Landes oder der Region zur Alerischen Kirche."
+          ]
+        },
+        {
+          "id": "ratsskalde",
+          "title": "Ratsskalde",
+          "category": "Ämter mit wechselnder Namensbezeichnung",
+          "description": [
+            "Der Ratsskalde ist ein wichtiges Amt welches den Ratsmagier von Aldrimar verdrängte, bzw ersetzte und nun zum einen für Arkane Aufgaben und Rat zuständig ist, aber auch die Aufgaben eines Ratsbarden übernimmt."
+          ]
+        },
+        {
+          "id": "regent",
+          "title": "Regent",
+          "category": "Nicht immer vergebene Ämter",
+          "description": [
+            "Ein Regent ist ein \"dauerhaft\" oder \"zeitweise\" eingesetzter Amtsinhaber für eine Region oder eines Landes, der dieses in Abwesenheit des Oberhauptes oder Herrschers regiert. Diese Abwesenheit kann dauerhafter Natur sein, wenn z.B. ein Graf ein Ratsmitglied des Königs ist oder dadurch entstehen, dass ein Baron, Graf oder König stirbt. In letzterem Fall ist dies eine Übergangslösung bis zur Inthronisierung des Erben.",
+            "Wenn ein Graf in den Rat des Königs einberufen wird und seine Frau in seiner Abwesenheit regiert, wird kein Regent ausgerufen. Ein bekannter Fall ist Tredegar, wo Cynfor Pysgod zum Regenten ernannt wurde, solange sein Vater Griflet in Mathragon weilt."
+          ]
+        },
+        {
+          "id": "ratsmagier",
+          "title": "Ratsmagier",
+          "category": "Nicht immer vergebene Ämter",
+          "description": [
+            "Die Ratsmagier Aldrimars sind ein Relikt der Vergangenheit die schon seit einem Jahrhundert nicht mehr den Rat des Königs geschweige denn, der Jarle bekleidet haben."
+          ],
+          "note": "Die ältere Amtsbeschreibung steht im Gegensatz zur Besetzung des gelieferten Königsrats: Dort wird Bergelmir Hyrmgarthr ausdrücklich als Ratsmagier geführt."
+        }
+      ]
+    },
+    {
+      "id": "herdaemter",
+      "title": "Herd- und Hofämter",
+      "number": "02",
+      "introduction": [
+        "Die Hofämter in Aldrimar sind feste und wiederkehrende Positionen am Hof einer Familie und folgen einer einheitlichen Struktur, unabhängig von der Stellung des Hauses. Während der Vogt des Königs den höchsten Rang unter den Vogten des Landes innehat, hat er in den Höfen eines Jarls, Thanes oder Hesirs keine direkte Befehlsgewalt. Stattdessen pflegt er den Austausch mit ihnen, um mögliche Kooperationen oder Unterstützung abzustimmen. Neben dem Vogt, dem … und dem Mundschenk tragen die Hofämter in der Regel den Beinamen „Meister“.",
+        "Der Vogt ist das höchste Amt an einem Hof und übernimmt ähnliche Aufgaben wie die Ratsämter, wird jedoch vom jeweiligen Oberhaupt des Hauses ernannt. Oft delegiert der Clanführer die Auswahl der Hofämter an den Vogt, der sich um die generelle Anstellung und Verwaltung der Bediensteten kümmert. In manchen Familien werden bestimmte Hofämter sogar vererbt, wodurch Tradition und Fachwissen weitergegeben werden."
+      ],
+      "offices": [
+        {
+          "id": "vogt",
+          "title": "Vogt",
+          "category": "traditionelle Ämter",
+          "description": [
+            "Der Vogt ist der oberste Verwalter am Hof und trägt die Verantwortung für sämtliche Belange des höfischen Lebens. Er kümmert sich um die Bediensteten sowie um die Angelegenheiten des Hauses oder der Burg. Zu seinen Aufgaben gehört die Zuteilung von Räumen für Gäste und Dienstboten, wobei er stets darauf achtet, dass alle Abläufe reibungslos funktionieren.",
+            "Doch seine Zuständigkeiten enden nicht hier: Der Vogt ist auch für die Anstellung von Knechten, Zofen und Dienstmädchen verantwortlich. Diese stehen direkt unter seinem Kommando und folgen seinen Anweisungen in vollem Umfang. Darüber hinaus hat der Vogt das Privileg, offene Hofämter im Sinne des Hausherren zu vergeben, es sei denn, dieser bringt eigene Vorschläge ein. Im Grunde genommen unterliegen auch die übrigen Hofämter seiner Aufsicht, was ihm eine zentrale Rolle im Gefüge des Hofes verleiht."
+          ]
+        },
+        {
+          "id": "schatzmeister",
+          "title": "Schatzmeister",
+          "category": "traditionelle Ämter",
+          "description": [
+            "Der Schatzmeister ist im Grunde der \"Kämmerer\" der Burg, wobei dies im Grunde nicht so ganz stimmt. Er verwaltet im Grunde einfach nur die Kasse. Eine Entscheidungsgewalt darüber hat er nicht. Er kann lediglich ein Veto einlegen wenn kein Geld mehr da ist."
+          ]
+        },
+        {
+          "id": "hirdmeister-kommandant",
+          "title": "Hirdmeister (Kommandant)",
+          "category": "traditionelle Ämter",
+          "description": [
+            "Der Kommandant ist zuständig für die Bewachung der Burg! Dies ist ein sehr ehrenhafter Titel da er für die Sicherheit des Oberhauptes und seiner Familie zuständig ist."
+          ]
+        },
+        {
+          "id": "zeremonienmeister",
+          "title": "Zeremonienmeister",
+          "category": "traditionelle Ämter",
+          "description": [
+            "Der Zeremonienmeister ist eine wichtige Aufgabe am Hofe. Seine Aufgaben beschränken sich dabei nicht nur auf die Ausrichtung von Bankets oder die Organisation von Feierlichkeiten bei den jeweiligen Namenstagen des Hausherren. Nein er ist auch zuständig dafür, dass die Insignien, Ornamente, Kronen und Wappen in einem einwandfreien zustand sind und jederzeit vorgezeigt werden können."
+          ]
+        },
+        {
+          "id": "mundschenk",
+          "title": "Mundschenk",
+          "category": "traditionelle Ämter",
+          "description": [
+            "Der Mundschenk ist dafür zuständig, dass der Hausherr und seine Familie stets Erfrischungen hat und ist daher meist seiner Nähe zu finden. In Absprache mit dem Vogt und dem Brotmeister sorgt er auch dafür, dass die Lager stets gefüllt sind.",
+            "Oftmals wird dieses Amt vom Hausherren selbst an ein Kind von einem verdienten Ritter oder Freund übergeben."
+          ]
+        },
+        {
+          "id": "kuchenmeister",
+          "title": "Küchenmeister",
+          "category": "traditionelle Ämter",
+          "description": [
+            "Der Küchenmeister ist für die Küche zuständig und sorgt dafür, dass die Bediensteten, Hofamtsinhaber aber auch Ratsamtsinhaber und die Hausherren gut genährt sind!"
+          ]
+        },
+        {
+          "id": "brotmeister",
+          "title": "Brotmeister",
+          "category": "traditionelle Ämter",
+          "description": [
+            "Der Brotmeister untersteht im Grunde dem Küchenmeister und ist einfach dafür da, dass die Speisekammer stets gefüllt sind. In vielen Häusern macht der Küchenmeister dies allerdings selbst."
+          ]
+        },
+        {
+          "id": "waffenmeister",
+          "title": "Waffenmeister",
+          "category": "traditionelle Ämter",
+          "description": [
+            "Der Waffenmeister ist ein verdienter Ritter und zuständig für die Ausbildung der jungen Knaben, Drengr und Maer. Er ist auch ein geschätzter Ratgeber in vieler Hinsicht und übernimmt in Abwesenheit des Kommandanten der Garde dessen Pflichten."
+          ]
+        },
+        {
+          "id": "kerkermeister",
+          "title": "Kerkermeister",
+          "category": "traditionelle Ämter",
+          "description": [
+            "Der Kerkermeister kümmert sich um die Kerker und deren Bewachung. Im Grunde macht er nichts anderes als zu schauen, dass drin bleibt was auch immer in die Kerker gesteckt wurden."
+          ]
+        },
+        {
+          "id": "stallmeister",
+          "title": "Stallmeister",
+          "category": "traditionelle Ämter",
+          "description": [
+            "Der Stallmeister ist zuständig für das die Stallungen des Hauses. Dabei trägt er natürlich nicht nur dafür Sorge, dass die Pferde bei bester Gesundheit sind oder nur die besten Pferde dort stehen, nein er bringt auch den jungen Sprösslingen das Reiten bei."
+          ]
+        },
+        {
+          "id": "jagdmeister",
+          "title": "Jagdmeister",
+          "category": "traditionelle Ämter",
+          "description": [
+            "Der Jagdmeister eines Adligen ist verantwortlich für die Organisation und Leitung der Jagden, die Pflege der Jagdreviere und die Verwaltung und Veranstaltung von Jagdgesllschaften. Er sorgt dafür, dass die Jagdgebiete gut erhalten bleiben und das Wild nachhaltig bewirtschaftet wird. Zudem berät er den Adligen in Jagdfragen, stellt sicher, dass das Jagdpersonal gut ausgebildet ist, und übernimmt die Ausbildung der Bogenschützen."
+          ]
+        },
+        {
+          "id": "gartenmeister",
+          "title": "Gartenmeister",
+          "category": "traditionelle Ämter",
+          "description": [
+            "Der Gartenmeister kümmert sich um die Gärten des Hauses. Nicht mehr oder nicht weniger. Oftmals wird hier ein Gärter von der Gilde Immergrün eingestellt oder diese Aufgabe ganz an diese übergeben."
+          ]
+        },
+        {
+          "id": "hofmeister",
+          "title": "Hofmeister",
+          "category": "traditionelle Ämter",
+          "description": [
+            "Der Hofmeister ist der Lehrer des Hauses. Seine Aufgabe ist es die jungen Sprösslinge zu unterrichten und Ihnen jegliches Wissen weiterzugeben, welches er beherrscht."
+          ]
+        },
+        {
+          "id": "hofdame",
+          "title": "Hofdame",
+          "category": "traditionelle Ämter",
+          "description": [
+            "Die Hofdame oder Hofdamen (manchmal gibt es mehrere) kümmern sich um die Belange der Hausherrin und ihren Töchtern. Ihre größte Aufgabe ist es allerdings den Sprösslingen Etikette beizubringen."
+          ]
+        },
+        {
+          "id": "archivar",
+          "title": "Archivar",
+          "category": "traditionelle Ämter",
+          "description": [
+            "Der Archivar führt die Familienchroniken und die Chroniken der Burg oder des Herrschaftsgebietes."
+          ]
+        },
+        {
+          "id": "gode-hofkaplan",
+          "title": "Gode (Hofkaplan)",
+          "category": "traditionelle Ämter",
+          "description": [
+            "Der Hofkaplan ist ein geistlicher der Alerischen Kirche, jedoch kann sein Rang und seine Beschaffenheit unterschiedlicher Natur sein. Für gewöhnlich kümmert er sich um die kleinen Kapellen des Hauses, bringt den Sprösslingen das eine oder andere Gebet bei und kümmert sich um die Familienkrypta."
+          ]
+        },
+        {
+          "id": "hafenmeister",
+          "title": "Hafenmeister",
+          "category": "traditionelle Ämter",
+          "description": [
+            "Der Hafenmeister ist verantwortlich für die Verwaltung und Überwachung eines Hafens. Zu seinen Hauptaufgaben gehört die Koordination des Schiffsverkehrs, das Zuweisen von Liegeplätzen und das Überwachen von Lade- und Entladevorgängen. Er sorgt dafür, dass alle Schiffe ordnungsgemäß registriert und die Hafenregeln eingehalten werden. Der Hafenmeister ist auch zuständig für die Sicherheit im Hafenbereich, einschließlich der Kontrolle von Waren und der Überwachung von Reparaturarbeiten an den Schiffen. Darüber hinaus ist er oft der Ansprechpartner für Kapitäne und Händler, die den Hafen nutzen."
+          ]
+        },
+        {
+          "id": "hoffalkner",
+          "title": "Hoffalkner",
+          "category": "traditionelle Ämter",
+          "description": [
+            "Der Hoffalkner ist verantwortlich für die Pflege, das Training und den Einsatz der Jagdfalken am Hof. Er sorgt dafür, dass die Vögel in optimalem Zustand sind, regelmäßig gefüttert werden und ihre Fähigkeiten für die Jagd geschärft bleiben. Der Hoffalkner organisiert und begleitet Jagdausflüge, bei denen die Falken eingesetzt werden, und steht dem Adligen in allen Fragen der Falknerei beratend zur Seite. Zudem kümmert er sich um die Zucht und Auswahl neuer Jagdfalken, um den Bestand stets hochwertig zu halten."
+          ]
+        },
+        {
+          "id": "hofhandwerksmeister",
+          "title": "Hofhandwerksmeister",
+          "category": "traditionelle Ämter",
+          "description": [
+            "Der Hofhandwerksmeister ist für die Handwerker seines Lehnsherren zuständig. Unter ihm stehen Schmiede, Bogner, Rüstungsschmiede und andere Handwerker, die er koordiniert und im Interesse seines Herren anleitet. Er sorgt dafür, dass alle handwerklichen Arbeiten effizient ausgeführt werden und die Bedürfnisse des Hofes stets erfüllt sind."
+          ]
+        },
+        {
+          "id": "bolverk-galgenvogel",
+          "title": "Bölverk (Galgenvogel)",
+          "category": "Seltene Hofämter",
+          "description": [
+            "Der Bölverk ist ein Listiger und Galgenvogel in Aldrimar, bekannt für scharfe Zunge und geschickte Doppeldeutigkeiten. Ohne offizielles Amt nutzt er Humor und Satire, um Missstände zu kommentieren und Regeln herauszufordern, oft ohne Konsequenzen zu fürchten. Bölverke bringen unbequeme Wahrheiten ans Licht, lockern das Leben am Hof auf und genießen Respekt als versteckte Kritiker und mutige Vermittler von Weisheit durch Humor.",
+            "Die Bölverk werden für gewöhnlich von der Gilde \"Narrenzunft\" rekrutiert."
+          ]
+        },
+        {
+          "id": "hofskalde",
+          "title": "Hofskalde",
+          "category": "Seltene Hofämter",
+          "description": [
+            "Die Hofmagier Aldrimars stammten ursprünglich aus Winterfeste, dem einstigen Zentrum arkanen Wissens. Doch da Winterfeste nur noch wenige Magier hervorbringt, wurden sie allmählich durch die Skalden ersetzt. Diese übernehmen zunehmend die arkanen Pflichten, während sie zugleich die kulturellen und geschichtlichen Traditionen Aldrimars bewahren."
+          ]
+        },
+        {
+          "id": "kartograf",
+          "title": "Kartograf",
+          "category": "Seltene Hofämter",
+          "description": [
+            "Einen eigenen Kartografen am Hof gibt es nur selten, jedoch soll dies in Küstenregionen häufiger mal vorkommen. Seine Aufgaben zur Erstellung und Aktualisierung von Karten wird meist vom Archivar übernommen.",
+            "Die Gilde \"Weltenkeller\" macht diesen Amt zumeist absolut, da man dort die besten Karten der Welt bekommt."
+          ]
+        },
+        {
+          "id": "zwingermeister",
+          "title": "Zwingermeister",
+          "category": "Seltene Hofämter",
+          "description": [
+            "Der Zwingermeister ist verantwortlich für die Pflege und das Training der Jagdhunde am Hof. Er sorgt dafür, dass die Hunde in bester Gesundheit sind, richtig gefüttert werden und für die Jagd gut ausgebildet sind. Der Zwingermeister organisiert die Hundezucht, wählt geeignete Tiere aus und stellt sicher, dass die Hunde ihren speziellen Aufgaben während der Jagd gewachsen sind. Zudem überwacht er die Unterbringung der Hunde und koordiniert die Arbeit der unter ihm stehenden Helfer, die ihm bei der Pflege der Tiere zur Seite stehen."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "titel",
+      "title": "Titel, Ehrungen & Ächtungen",
+      "number": "03",
+      "introduction": [],
+      "offices": [
+        {
+          "id": "der-konig-monarch",
+          "title": "Der König (Monarch)",
+          "category": "Adelstitel Aldrimars",
+          "description": [
+            "Der König ist der oberste Herrscher des gesamten Reiches. Er besitzt die höchste politische und militärische Macht und ist für das gesamte Land zuständig. Als Monarch hat er die Kontrolle über die Gesetzgebung, Militärführung und Diplomatie. Der König regiert über alle Regionen und Gebiete des Reiches und stellt sicher, dass alle Adligen und Vasallen ihre Verpflichtungen gegenüber dem Reich erfüllen. Seine Macht erstreckt sich auf alle weiteren Titel und Herrscher im Land, und er wird oft als oberster Schiedsrichter in Konflikten und Kriegen betrachtet."
+          ]
+        },
+        {
+          "id": "der-reik-herzog-furst",
+          "title": "Der Reik (Herzog/Fürst)",
+          "category": "Adelstitel Aldrimars",
+          "description": [
+            "Der Reik ist ein hochrangiger regionaler Herrscher, der mehrere Jarltümer verwaltet und dem König unterstellt ist. Ein Reik hat die Verantwortung, für mehrere größere Regionen des Reiches zu sorgen, die aus mehreren Jarltümern bestehen. Er spielt eine Schlüsselrolle in der Verwaltung des Reiches und sorgt dafür, dass die Gesetze des Königs in seinen Gebieten durchgesetzt werden. Als einer der wichtigsten Verwalter des Landes stellt der Reik sicher, dass Steuern, Ressourcen und militärische Beiträge aus den Jarltümern an den König geliefert werden. In militärischen Konflikten hat der Reik die Aufgabe, Truppen zu stellen und das Reich zu verteidigen."
+          ]
+        },
+        {
+          "id": "der-jarl-graf",
+          "title": "Der Jarl (Graf)",
+          "category": "Adelstitel Aldrimars",
+          "description": [
+            "Ein Jarl ist der Herrscher eines Jarltums, einer größeren Region innerhalb des Reiches. Ein Jarltum besteht in der Regel aus mehreren Städten, Dörfern, Festungen und Burganlagen. Der Jarl hat weitreichende Macht und ist verantwortlich für die Verwaltung, Sicherheit und Wirtschaft seines Gebiets. Er sorgt dafür, dass die örtliche Ordnung aufrechterhalten wird, die Steuern eingetrieben werden und dass seine Vasallen loyal zum König und zum Reik stehen. Der Jarl ist auch für die Militärführung in seiner Region verantwortlich und stellt Truppen für den König, wenn dieser im Krieg zieht."
+          ]
+        },
+        {
+          "id": "der-thane-baron",
+          "title": "Der Thane (Baron)",
+          "category": "Adelstitel Aldrimars",
+          "description": [
+            "Ein Thane ist ein niedrigerer Adliger, der über kleinere Gebiete wie Dörfer, Burganlagen oder Siedlungen innerhalb eines Jarltums herrscht. Der Thane erhält sein Land als Lehen vom Jarl und ist dafür verantwortlich, es zu verwalten und Ordnung zu halten. In seiner Funktion als Verwalter sorgt der Thane für die Durchsetzung von Gesetzen, das Eintreiben von Steuern und die Aufrechterhaltung der öffentlichen Ordnung in seinen Ländereien. Der Thane hat auch die militärische Verantwortung für die Verteidigung seines Gebiets und stellt Truppen, wenn der Jarl oder der König diese benötigt."
+          ]
+        },
+        {
+          "id": "der-hersir-ritterfurst",
+          "title": "Der Hersir (Ritterfürst)",
+          "category": "Adelstitel Aldrimars",
+          "description": [
+            "Der Hersir ist ein Adliger, der zwischen dem Thengr und dem Thane steht. Er ist oft der Herrscher eines kleineren Gebiets, das in der Regel aus wenigen Dörfern oder einer kleinen Festung besteht. Im Gegensatz zum Thane, der größere Regionen oder mehrere Siedlungen kontrolliert, hat der Hersir nur begrenzte militärische und administrative Verantwortlichkeiten über ein kleines Gebiet, das er in der Regel aufgrund seiner Loyalität zu einem Thane oder Jarl erhält.",
+            "Der Hersir übernimmt die Verwaltung und Organisation seines Gebiets, einschließlich der Sicherung der Ordnung, des Eintreibens von Steuern und der Verwaltung von Land. Er hat auch militärische Pflichten, wenn es um die Verteidigung seines Gebiets geht. In Zeiten von Kriegen oder Raubzügen stellt der Hersir die lokale Truppenaufstellung und Verteidigung sicher, jedoch in einem kleineren Maßstab als ein Thane oder Jarl. Der Hersir hat eine wichtige Rolle bei der Durchsetzung der Gesetze auf lokaler Ebene, jedoch ohne die weitreichende Verantwortung eines höheren Adligen.",
+            "Zusammengefasst liegt der Hersir genau zwischen dem Thengr und dem Thane: Er besitzt Land, hat Verantwortung über ein kleineres Gebiet und ist in militärischen und administrativen Aufgaben tätig, jedoch im kleineren Maßstab als ein Thane."
+          ]
+        },
+        {
+          "id": "thengr-landbesitzer",
+          "title": "Thengr (Landbesitzer)",
+          "category": "Adelstitel Aldrimars",
+          "description": [
+            "Der Thengr ist das Pendant eines Adligen zum Bürgermeister oder Prior in einem kleineren Gebiet. Er übernimmt die lokale Verwaltung und ist für die Organisation und das tägliche Leben in einem Dorf, einer kleinen Burg oder einer Bauernsiedlung verantwortlich. Dabei ist seine Rolle hauptsächlich administrativer Natur. Als Vogt eines bestimmten Gebiets kümmert er sich um die Verwaltung von Abgaben, die Aufrechterhaltung der Ordnung und das Wohl seiner Untergebenen.",
+            "Im Vergleich zu einem Bürgermeister oder Prior, der häufig die kommunalen oder kirchlichen Aufgaben in einer Stadt oder Gemeinde übernimmt, ist der Thengr als Adliger für das Wohl eines kleineren Gebiets verantwortlich, hat jedoch keine größere politische oder militärische Macht. Er ist einem Hersir oder Thane unterstellt und führt die täglichen Aufgaben aus, die für die Funktionalität und das Wachstum seines Gebiets notwendig sind. Der Thengr ist daher in seiner Funktion als Verwalter ein wichtiger organisatorischer Pfeiler für das Gebiet, das ihm anvertraut ist."
+          ]
+        },
+        {
+          "id": "ethir",
+          "title": "Ethir",
+          "category": "Landlose Titel",
+          "description": [
+            "Der Ethir (Eidträger) ist eine hoch angesehene, aber anspruchsvolle Rolle in Aldrimar. Dieser Titel wird an eine Schwurklinge verliehen, die sich einem Edelmann durch einen besonderen Eid verpflichtet. Meist bindet ein Jarl einen Huskarl oder eine Walküre als Ethir an sich und legt ihm besondere Schwüre und Verpflichtungen auf. Diese können verschiedenste Formen annehmen, von der Wahrung strengster Geheimnisse bis hin zur Verpflichtung zu absoluter Enthaltsamkeit und Treue, wodurch der Ethir zum ständigen Vertrauten und Berater wird.",
+            "Die Rolle eines Ethirs ist von großer Ehre, aber auch von tiefer Verantwortung geprägt, da sein Wert an seiner Integrität gemessen wird. Ein Ethir, der gegen seinen Schwur verstößt, wird als Skogamor geächtet, gebrandmarkt und aller Bürgerrechte enthoben, bevor er ins Exil geschickt wird. Dieser Verlust von Ehre und Status ist die größte Schande, die einem Krieger widerfahren kann. Daher nehmen die Ethire ihre Verpflichtungen mit äußerstem Ernst und sehen ihren Titel als einen lebenslangen Weg der Treue und Hingabe an den Eid und an ihren Herren."
+          ]
+        },
+        {
+          "id": "vring",
+          "title": "Væring",
+          "category": "Landlose Titel",
+          "description": [
+            "Der Titel des Væring in Aldrimar ist ein historisches Ehrenamt, das ursprünglich für die Söhne und Töchter des Landes gedacht war, die sich durch besondere Heldentaten, militärische Tapferkeit oder außergewöhnliche Taten für das Volk verdient gemacht hatten. Ein Væring war meist ein landloser Held, dem durch diesen Titel das Recht verliehen wurde, eigenes Land zu besiedeln und somit eine Art legitime, wenn auch niedrigere, adelige Stellung einzunehmen.",
+            "Durch die Einführung der Herdwächter jedoch verlor der Titel des Væring im Laufe der Zeit an Bedeutung. Da die Herdwächter nun als moderne Volkshelden gesehen werden und fast dieselben Privilegien genießen, wurde der Væring zunehmend verdrängt. Heute ist der Titel des Væring eher ein Relikt aus der Vergangenheit, während die Herdwächter in der Gesellschaft Aldrimars die Rolle der ehrwürdigen Helden übernommen haben."
+          ]
+        },
+        {
+          "id": "huskarl-walkure",
+          "title": "Huskarl/ Walküre",
+          "category": "Landlose Titel",
+          "description": [
+            "Die Huskarle und Walküren sind die Spitze der aldrimarischen Kriegergesellschaft. Sie nehmen verschiedene Rollen innerhalb der militärischen Kasten ein, wie beispielsweise die Schildbeißer, die als schwere Infanterie dienen, die Thegn, die als Kundschafter und Berittene fungieren, oder die Skytte, die geschickten Bogenschützen. Diese Kasten sind integraler Bestandteil der aldrimarischen Armee und spielen eine entscheidende Rolle in der Verteidigung des Königreichs."
+          ]
+        },
+        {
+          "id": "drenger-maer",
+          "title": "Drenger/ Maer",
+          "category": "Landlose Titel",
+          "description": [
+            "Drengr und Maer sind die Bezeichnungen für junge Menschen in Aldrimar, die als Novizen im Dienst eines erfahrenen Huskarls oder einer Walküre stehen. Drengr bezeichnet männliche Anwärter, Maer das weibliche Pendant. Diese Knappen durchlaufen eine harte Ausbildung, in der sie Kampfkunst, Strategie und die Werte der aldrimarischen Krieger lernen.",
+            "Nach Abschluss ihrer Ausbildung werden Drengr und Maer als Huskarle oder Walküren in die Kriegerkaste aufgenommen und gelten dann als vollwertige Mitglieder der Elite. Sie tragen nun Verantwortung und den Stolz ihres Clans in die Schlachten von Aldrimar."
+          ]
+        },
+        {
+          "id": "herdwachter",
+          "title": "Herdwächter",
+          "category": "Ehrungen (Status)",
+          "description": [
+            "Der Herdwächter ist ein nationaler Held bei den Aldrimarern und genießt eine ähnliche Stellung wie ein Ritter der Tafelrunde bei Cenyr oder ein Fianna bei den Alben. Man könnte sagen, dass der Herdwächter etwas weniger Gravitas besitzt als die ersteren beiden, doch ist es eine Ehre für jeden Aldrimarer, der den Weg mit einem Herdwächter kreuzt. Für Herdwächter gibt es eine Reihe von Anstandsregeln und Verhaltenskodexe, die zum einen vom Volk im Umgang mit ihnen, aber auch vom Herdwächter selbst eingehalten werden müssen."
+          ]
+        },
+        {
+          "id": "skogamor",
+          "title": "Skogamor",
+          "category": "Ächtungen (Status)",
+          "description": [
+            "Der Skogamor, auch bekannt als Skoga, ist eine Gestalt des Verrats, der Ächtung, Kriminalität oder Schande im Aldrimarischen Volk. Ein solcher Skoga wird durch seine Vergehen gebrandmarkt und trägt Brandzeichen auf Handrücken, Nacken und Schultern. Seine Taten müssen so schwerwiegend sein, dass er aus der Gesellschaft ausgestoßen wird. Ein Skoga wird wie ein Vogelfreier behandelt und genießt keinerlei Rechte mehr in der Gesellschaft. Ihm wird kein Gastrecht gewährt, und es gelten zahlreiche weitere Regeln und Verbote, die beachtet werden müssen. Wer einem Skoga Unterkunft, Essen oder Trank gewährt, wird bestraft und selbst mit einem Brandzeichen versehen. Diese Praxis wird von der Kirche stark kritisiert und abgelehnt."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "vergleichsaemter",
+      "title": "Vergleichsamt aus Cenyr",
+      "number": "04",
+      "introduction": [],
+      "offices": [
+        {
+          "id": "ratskanzler",
+          "title": "Ratskanzler",
+          "category": "Cenyrisches Vergleichsamt",
+          "description": [
+            "Der Ratskanzler ist ein Amt, dass König Tristan für Griflet Pysgod ins Leben gerufen hat, da es dieses vorher nicht gab. Der Ratskanzler ist der Moderator des Rates des Königs und auch der Vertreter des Königs in dessen Abwesenheit. Im Grunde kann man sagen, dass er die Rechte Hand und der oberste Berater des Königs ist und in dessen Abwesenheit an seiner Statt sprechen darf."
+          ],
+          "note": "Die gelieferte Beschreibung betrifft Tristans Hof in Cenyr. Ein entsprechendes Amt in Aldrimar ist damit nicht belegt."
+        }
+      ]
+    }
+  ],
+  "quote": "Ein guter König sucht den Rat, der ihm widerspricht, um das Wohl seines Volkes zu schützen. Ein schlechter König sucht den Rat, der ihm schmeichelt, um seine eigene Macht zu sichern."
+}

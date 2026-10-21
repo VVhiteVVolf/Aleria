@@ -1,0 +1,5813 @@
+{
+  "mapId": "aldrimar-roriksheim",
+  "imageSize": [
+    4096,
+    2734
+  ],
+  "coordinateOrigin": "bottom-left",
+  "sourceMapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+  "markers": [
+    {
+      "id": "roriksheim-e42c52f0-edd4-4ed4-8c5c-4d0e451ea00b",
+      "title": "Ulfshavn",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "hesirentum-schwarzdorn",
+      "x": 2607,
+      "y": 2625,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "e42c52f0-edd4-4ed4-8c5c-4d0e451ea00b",
+        "url": "https://www.worldanvil.com/world/map/marker/e42c52f0-edd4-4ed4-8c5c-4d0e451ea00b/edit",
+        "title": "Ulfshavn",
+        "coordinates": {
+          "x": 2612,
+          "y": 2599,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 2607,
+          "y": 109,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-001"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-062df5f9-cc9b-46f4-a777-8432f3a68219",
+      "title": "Thalorsstedt",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "hesirentum-schwarzdorn",
+      "x": 2410,
+      "y": 2622,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "062df5f9-cc9b-46f4-a777-8432f3a68219",
+        "url": "https://www.worldanvil.com/world/map/marker/062df5f9-cc9b-46f4-a777-8432f3a68219/edit",
+        "title": "Thalorsstedt",
+        "coordinates": {
+          "x": 2449,
+          "y": 2576,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 2410,
+          "y": 112,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-002"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-519ca51b-804e-4fb9-8d99-4aac4e1fca18",
+      "title": "Schwertfall",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "thanentum-schwerthohn",
+      "x": 1628.5,
+      "y": 2574,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "519ca51b-804e-4fb9-8d99-4aac4e1fca18",
+        "url": "https://www.worldanvil.com/world/map/marker/519ca51b-804e-4fb9-8d99-4aac4e1fca18/edit",
+        "title": "Schwertfall",
+        "coordinates": {
+          "x": 1617,
+          "y": 2563,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 1628.5,
+          "y": 160,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-003"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-0dd75d5e-e2ec-4319-9492-504e0feeffb9",
+      "title": "Wellenklinge",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "thanentum-schwerthohn",
+      "x": 2229.5,
+      "y": 2622,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "0dd75d5e-e2ec-4319-9492-504e0feeffb9",
+        "url": "https://www.worldanvil.com/world/map/marker/0dd75d5e-e2ec-4319-9492-504e0feeffb9/edit",
+        "title": "Wellenklinge",
+        "coordinates": {
+          "x": 2226,
+          "y": 2606,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 2229.5,
+          "y": 112,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-004"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-eeab0910-1969-449f-9003-d124069a0cde",
+      "title": "Handelsposten Ravenoro – Die klingende Münze",
+      "category": "Flusssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/flusssiedlung.png",
+      "territoryId": "thanentum-rorikstal",
+      "x": 3324,
+      "y": 2586,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "eeab0910-1969-449f-9003-d124069a0cde",
+        "url": "https://www.worldanvil.com/world/map/marker/eeab0910-1969-449f-9003-d124069a0cde/edit",
+        "title": "Handelsposten Ravenoro – Die klingende Münze",
+        "coordinates": {
+          "x": 3305,
+          "y": 2546,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 3324,
+          "y": 148,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-005"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-5c8da8c8-007d-498a-878a-7ed0a598c7c0",
+      "title": "Turm Abendstolz – Abendschilde",
+      "category": "Turm",
+      "templateId": "militaer",
+      "icon": "/Karten/assets/icons/welt/turm.png",
+      "territoryId": "thanentum-rorikstal",
+      "x": 3560,
+      "y": 2580,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "5c8da8c8-007d-498a-878a-7ed0a598c7c0",
+        "url": "https://www.worldanvil.com/world/map/marker/5c8da8c8-007d-498a-878a-7ed0a598c7c0/edit",
+        "title": "Turm Abendstolz – Abendschilde",
+        "coordinates": {
+          "x": 3535,
+          "y": 2562,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 3560,
+          "y": 154,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-006"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-01da364c-bc4a-40c3-94a7-35e24cab012a",
+      "title": "Vebjørnstein",
+      "category": "Waldsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/waldsiedlung.png",
+      "territoryId": "thanentum-schwerthohn",
+      "x": 1908,
+      "y": 2565,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "01da364c-bc4a-40c3-94a7-35e24cab012a",
+        "url": "https://www.worldanvil.com/world/map/marker/01da364c-bc4a-40c3-94a7-35e24cab012a/edit",
+        "title": "Vebjørnstein",
+        "coordinates": {
+          "x": 1848,
+          "y": 2513,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 1908,
+          "y": 169,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-007"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-eefc4576-f1cc-4611-a431-a062d0dd9aec",
+      "title": "Håkanvik",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "hesirentum-schwarzdorn",
+      "x": 2890,
+      "y": 2572,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "eefc4576-f1cc-4611-a431-a062d0dd9aec",
+        "url": "https://www.worldanvil.com/world/map/marker/eefc4576-f1cc-4611-a431-a062d0dd9aec/edit",
+        "title": "Håkanvik",
+        "coordinates": {
+          "x": 2900,
+          "y": 2533,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 2890,
+          "y": 162,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-008"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-7cbc6bcf-164d-4052-aa75-df11a274c623",
+      "title": "Skalborg",
+      "category": "Festung",
+      "templateId": "militaer",
+      "icon": "/Karten/assets/icons/welt/festung.png",
+      "territoryId": "thanentum-schwerthohn",
+      "x": 1755.5,
+      "y": 2530,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "7cbc6bcf-164d-4052-aa75-df11a274c623",
+        "url": "https://www.worldanvil.com/world/map/marker/7cbc6bcf-164d-4052-aa75-df11a274c623/edit",
+        "title": "Skalborg",
+        "coordinates": {
+          "x": 1756,
+          "y": 2571,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 1755.5,
+          "y": 204,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-009"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-67d07f39-bdd4-43f6-a08f-49a4362eba6b",
+      "title": "Astrulfstedt",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "hesirentum-kampfgeborene",
+      "x": 3084,
+      "y": 2547,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "67d07f39-bdd4-43f6-a08f-49a4362eba6b",
+        "url": "https://www.worldanvil.com/world/map/marker/67d07f39-bdd4-43f6-a08f-49a4362eba6b/edit",
+        "title": "Astrulfstedt",
+        "coordinates": {
+          "x": 3133,
+          "y": 2495,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 3084,
+          "y": 187,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-010"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-cdf143eb-eb2d-4cda-91b9-8e922ff44c24",
+      "title": "Svartborg – Schwarzdorn Festung",
+      "category": "Burgsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/burgsiedlung.png",
+      "territoryId": "hesirentum-schwarzdorn",
+      "x": 2504,
+      "y": 2545,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "cdf143eb-eb2d-4cda-91b9-8e922ff44c24",
+        "url": "https://www.worldanvil.com/world/map/marker/cdf143eb-eb2d-4cda-91b9-8e922ff44c24/edit",
+        "title": "Svartborg – Schwarzdorn Festung",
+        "coordinates": {
+          "x": 2554,
+          "y": 2490,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 2504,
+          "y": 189,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-011"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-e8b4afde-c423-4617-8ede-947debd2cd02",
+      "title": "Turm Hohenwacht",
+      "category": "Turm",
+      "templateId": "militaer",
+      "icon": "/Karten/assets/icons/welt/turm.png",
+      "territoryId": "thanentum-schwerthohn",
+      "x": 1261,
+      "y": 2540,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "e8b4afde-c423-4617-8ede-947debd2cd02",
+        "url": "https://www.worldanvil.com/world/map/marker/e8b4afde-c423-4617-8ede-947debd2cd02/edit",
+        "title": "Turm Hohenwacht",
+        "coordinates": {
+          "x": 1240,
+          "y": 2540,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 1261,
+          "y": 194,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-012"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-6a87d24e-49f3-48d1-84bc-dac8644f2dab",
+      "title": "Sigrunsdorf",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "thanentum-schwerthohn",
+      "x": 2085.5,
+      "y": 2535,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "6a87d24e-49f3-48d1-84bc-dac8644f2dab",
+        "url": "https://www.worldanvil.com/world/map/marker/6a87d24e-49f3-48d1-84bc-dac8644f2dab/edit",
+        "title": "Sigrunsdorf",
+        "coordinates": {
+          "x": 2094,
+          "y": 2540,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 2085.5,
+          "y": 199,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-013"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-1b553b07-a90c-4576-9443-a5b708d5921b",
+      "title": "Morten",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "hesirentum-schwarzdorn",
+      "x": 2696.5,
+      "y": 2505,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "1b553b07-a90c-4576-9443-a5b708d5921b",
+        "url": "https://www.worldanvil.com/world/map/marker/1b553b07-a90c-4576-9443-a5b708d5921b/edit",
+        "title": "Morten",
+        "coordinates": {
+          "x": 2712,
+          "y": 2484,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 2696.5,
+          "y": 229,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-014"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-a1cc3727-8dc8-4922-9908-aabf90cf6f2f",
+      "title": "Svartstedt",
+      "category": "Brauersiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/brauersiedlung.png",
+      "territoryId": "hesirentum-schwarzdorn",
+      "x": 2427,
+      "y": 2472,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "a1cc3727-8dc8-4922-9908-aabf90cf6f2f",
+        "url": "https://www.worldanvil.com/world/map/marker/a1cc3727-8dc8-4922-9908-aabf90cf6f2f/edit",
+        "title": "Svartstedt",
+        "coordinates": {
+          "x": 2388,
+          "y": 2454,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 2427,
+          "y": 262,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-015"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-08a768ce-62ab-404c-b0b9-b95b345f5a17",
+      "title": "Sturmhafen",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "thanentum-schwerthohn",
+      "x": 1420,
+      "y": 2482,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "08a768ce-62ab-404c-b0b9-b95b345f5a17",
+        "url": "https://www.worldanvil.com/world/map/marker/08a768ce-62ab-404c-b0b9-b95b345f5a17/edit",
+        "title": "Sturmhafen",
+        "coordinates": {
+          "x": 1411,
+          "y": 2458,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 1420,
+          "y": 252,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-016"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-7136ffd6-1a69-486f-8d6e-64bfd04e158b",
+      "title": "Hakonstatt",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "hesirentum-kampfgeborene",
+      "x": 2977.5,
+      "y": 2475,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "7136ffd6-1a69-486f-8d6e-64bfd04e158b",
+        "url": "https://www.worldanvil.com/world/map/marker/7136ffd6-1a69-486f-8d6e-64bfd04e158b/edit",
+        "title": "Hakonstatt",
+        "coordinates": {
+          "x": 3013,
+          "y": 2413,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 2977.5,
+          "y": 259,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-017"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-30cf1ad7-6b2f-4e5b-85a3-ef19cc2776b5",
+      "title": "Hrolfstedt",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "thanentum-schwerthohn",
+      "x": 1934,
+      "y": 2462,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "30cf1ad7-6b2f-4e5b-85a3-ef19cc2776b5",
+        "url": "https://www.worldanvil.com/world/map/marker/30cf1ad7-6b2f-4e5b-85a3-ef19cc2776b5/edit",
+        "title": "Hrolfstedt",
+        "coordinates": {
+          "x": 1930,
+          "y": 2443,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 1934,
+          "y": 272,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-018"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-29dd5479-5f93-44d9-b814-eab54e89d2a6",
+      "title": "Schwadenwall",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "thanentum-schwerthohn",
+      "x": 1600,
+      "y": 2425,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "29dd5479-5f93-44d9-b814-eab54e89d2a6",
+        "url": "https://www.worldanvil.com/world/map/marker/29dd5479-5f93-44d9-b814-eab54e89d2a6/edit",
+        "title": "Schwadenwall",
+        "coordinates": {
+          "x": 1628,
+          "y": 2463,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 1600,
+          "y": 309,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-019"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-2c7a2685-9051-4153-8aec-2ca3361cfd55",
+      "title": "Algotbruch",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "hesirentum-kampfgeborene",
+      "x": 3190.5,
+      "y": 2422,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "2c7a2685-9051-4153-8aec-2ca3361cfd55",
+        "url": "https://www.worldanvil.com/world/map/marker/2c7a2685-9051-4153-8aec-2ca3361cfd55/edit",
+        "title": "Algotbruch",
+        "coordinates": {
+          "x": 3192,
+          "y": 2418,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 3190.5,
+          "y": 312,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-020"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-1d6a1faa-9a40-4016-9ac5-a0975a5f1a50",
+      "title": "Veldricdorf",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "hesirentum-schwarzdorn",
+      "x": 2272,
+      "y": 2398,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "1d6a1faa-9a40-4016-9ac5-a0975a5f1a50",
+        "url": "https://www.worldanvil.com/world/map/marker/1d6a1faa-9a40-4016-9ac5-a0975a5f1a50/edit",
+        "title": "Veldricdorf",
+        "coordinates": {
+          "x": 2254,
+          "y": 2366,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 2272,
+          "y": 336,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-021"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-62d855d6-58d8-483e-9fe7-bf185e33d781",
+      "title": "Eriksstand",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "hesirentum-winterfaenge",
+      "x": 3677,
+      "y": 2385,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "62d855d6-58d8-483e-9fe7-bf185e33d781",
+        "url": "https://www.worldanvil.com/world/map/marker/62d855d6-58d8-483e-9fe7-bf185e33d781/edit",
+        "title": "Eriksstand",
+        "coordinates": {
+          "x": 3606,
+          "y": 2401,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 3677,
+          "y": 349,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-022"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-9ef027a1-5e93-44b3-9fb0-b23a847c7174",
+      "title": "Sigrunstein",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "hesirentum-kampfgeborene",
+      "x": 3390.5,
+      "y": 2383,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "9ef027a1-5e93-44b3-9fb0-b23a847c7174",
+        "url": "https://www.worldanvil.com/world/map/marker/9ef027a1-5e93-44b3-9fb0-b23a847c7174/edit",
+        "title": "Sigrunstein",
+        "coordinates": {
+          "x": 3419,
+          "y": 2365,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 3390.5,
+          "y": 351,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-023"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-51f96cbc-a45a-41e7-a18c-54f4703798e9",
+      "title": "Alaricfeld",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "hesirentum-schwarzdorn",
+      "x": 2543.5,
+      "y": 2374,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "51f96cbc-a45a-41e7-a18c-54f4703798e9",
+        "url": "https://www.worldanvil.com/world/map/marker/51f96cbc-a45a-41e7-a18c-54f4703798e9/edit",
+        "title": "Alaricfeld",
+        "coordinates": {
+          "x": 2558,
+          "y": 2388,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 2543.5,
+          "y": 360,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-024"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-d3d9f45c-2b0d-4306-a517-7885b5b64807",
+      "title": "Asbjørnstadt",
+      "category": "Waldsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/waldsiedlung.png",
+      "territoryId": "thanentum-schwerthohn",
+      "x": 1676.5,
+      "y": 2372,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "d3d9f45c-2b0d-4306-a517-7885b5b64807",
+        "url": "https://www.worldanvil.com/world/map/marker/d3d9f45c-2b0d-4306-a517-7885b5b64807/edit",
+        "title": "Asbjørnstadt",
+        "coordinates": {
+          "x": 1663,
+          "y": 2355,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 1676.5,
+          "y": 362,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-025"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-c93601cf-6e6b-4f69-94d3-a82dc0ecc946",
+      "title": "Skalhaug",
+      "category": "Hügelgrab",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/h-gelgrab.png",
+      "territoryId": "thanentum-schwerthohn",
+      "x": 1781.5,
+      "y": 2362,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "c93601cf-6e6b-4f69-94d3-a82dc0ecc946",
+        "url": "https://www.worldanvil.com/world/map/marker/c93601cf-6e6b-4f69-94d3-a82dc0ecc946/edit",
+        "title": "Skalhaug",
+        "coordinates": {
+          "x": 1800,
+          "y": 2366,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 1781.5,
+          "y": 372,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-026"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-61ecf58c-d935-4ff0-99c7-816465e8136b",
+      "title": "Svartdraugr – Hügelgrab",
+      "category": "Hügelgrab",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/h-gelgrab.png",
+      "territoryId": "thanentum-rorikstal",
+      "x": 2727,
+      "y": 2335,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "61ecf58c-d935-4ff0-99c7-816465e8136b",
+        "url": "https://www.worldanvil.com/world/map/marker/61ecf58c-d935-4ff0-99c7-816465e8136b/edit",
+        "title": "Svartdraugr – Hügelgrab",
+        "coordinates": {
+          "x": 2747,
+          "y": 2315,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 2727,
+          "y": 399,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-027"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-ff79cc3c-dda0-444f-9e35-1e8378b74115",
+      "title": "Haldorstatt",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "thanentum-schwerthohn",
+      "x": 1524,
+      "y": 2330,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "ff79cc3c-dda0-444f-9e35-1e8378b74115",
+        "url": "https://www.worldanvil.com/world/map/marker/ff79cc3c-dda0-444f-9e35-1e8378b74115/edit",
+        "title": "Haldorstatt",
+        "coordinates": {
+          "x": 1507,
+          "y": 2351,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 1524,
+          "y": 404,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-028"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-baa9fd7d-d1a2-4a60-8f50-1892ebc19667",
+      "title": "Eysteinrgrube",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "hesirentum-kampfgeborene",
+      "x": 2947,
+      "y": 2343,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "baa9fd7d-d1a2-4a60-8f50-1892ebc19667",
+        "url": "https://www.worldanvil.com/world/map/marker/baa9fd7d-d1a2-4a60-8f50-1892ebc19667/edit",
+        "title": "Eysteinrgrube",
+        "coordinates": {
+          "x": 2960,
+          "y": 2331,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 2947,
+          "y": 391,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-029"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-20bbf72e-0244-4256-9a02-1950c5598fb9",
+      "title": "Westfurt an der See",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "thanentum-schwerthohn",
+      "x": 1359,
+      "y": 2320,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "20bbf72e-0244-4256-9a02-1950c5598fb9",
+        "url": "https://www.worldanvil.com/world/map/marker/20bbf72e-0244-4256-9a02-1950c5598fb9/edit",
+        "title": "Westfurt an der See",
+        "coordinates": {
+          "x": 1342,
+          "y": 2295,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 1359,
+          "y": 414,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-030"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-b6c07c5a-239b-482f-b66e-7c619c4f5d19",
+      "title": "Vargborg – Ordensburg von Balthors Söhnen",
+      "category": "Festung",
+      "templateId": "militaer",
+      "icon": "/Karten/assets/icons/welt/festung.png",
+      "territoryId": "thanentum-schwerthohn",
+      "x": 2113.5,
+      "y": 2290,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "b6c07c5a-239b-482f-b66e-7c619c4f5d19",
+        "url": "https://www.worldanvil.com/world/map/marker/b6c07c5a-239b-482f-b66e-7c619c4f5d19/edit",
+        "title": "Vargborg – Ordensburg von Balthors Söhnen",
+        "coordinates": {
+          "x": 2096,
+          "y": 2263,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 2113.5,
+          "y": 444,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-031"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-687e67e4-c012-4d4a-bfef-d4311cf70533",
+      "title": "Hohnschwert",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "thanentum-schwerthohn",
+      "x": 1949.5,
+      "y": 2286,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "687e67e4-c012-4d4a-bfef-d4311cf70533",
+        "url": "https://www.worldanvil.com/world/map/marker/687e67e4-c012-4d4a-bfef-d4311cf70533/edit",
+        "title": "Hohnschwert",
+        "coordinates": {
+          "x": 1881,
+          "y": 2284,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 1949.5,
+          "y": 448,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-032"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-05a6bef5-5a9f-4bf7-ad3b-a3df482f3251",
+      "title": "Fenrishaug – Hügelgrab",
+      "category": "Hügelgrab",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/h-gelgrab.png",
+      "territoryId": "thanentum-rorikstal",
+      "x": 3033.5,
+      "y": 2286,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "05a6bef5-5a9f-4bf7-ad3b-a3df482f3251",
+        "url": "https://www.worldanvil.com/world/map/marker/05a6bef5-5a9f-4bf7-ad3b-a3df482f3251/edit",
+        "title": "Fenrishaug – Hügelgrab",
+        "coordinates": {
+          "x": 3054,
+          "y": 2290,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 3033.5,
+          "y": 448,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-033"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-7217b9a8-6cdc-477d-b7f4-f3c824baf264",
+      "title": "Ásgeirvik",
+      "category": "Klostersiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/klostersiedlung.png",
+      "territoryId": "hesirentum-schwarzdorn",
+      "x": 2323,
+      "y": 2259,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "7217b9a8-6cdc-477d-b7f4-f3c824baf264",
+        "url": "https://www.worldanvil.com/world/map/marker/7217b9a8-6cdc-477d-b7f4-f3c824baf264/edit",
+        "title": "Ásgeirvik",
+        "coordinates": {
+          "x": 2281,
+          "y": 2249,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 2323,
+          "y": 475,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-034"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-e8316cd5-983e-4a83-8f86-b74d56ce3c50",
+      "title": "Kaldhafen",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "hesirentum-schwarzacker",
+      "x": 1236.5,
+      "y": 2222,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "e8316cd5-983e-4a83-8f86-b74d56ce3c50",
+        "url": "https://www.worldanvil.com/world/map/marker/e8316cd5-983e-4a83-8f86-b74d56ce3c50/edit",
+        "title": "Kaldhafen",
+        "coordinates": {
+          "x": 1209,
+          "y": 2219,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 1236.5,
+          "y": 512,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-035"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-f94c9388-c5ed-4e88-8bbf-d3c28d9d68fc",
+      "title": "Fuchsbucht",
+      "category": "Siedlungsruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/zerst-rte-siedlung.png",
+      "territoryId": "hesirentum-winterfaenge",
+      "x": 3524.5,
+      "y": 2242,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "f94c9388-c5ed-4e88-8bbf-d3c28d9d68fc",
+        "url": "https://www.worldanvil.com/world/map/marker/f94c9388-c5ed-4e88-8bbf-d3c28d9d68fc/edit",
+        "title": "Fuchsbucht",
+        "coordinates": {
+          "x": 3608,
+          "y": 2236,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 3524.5,
+          "y": 492,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-036"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-150f3c8a-025a-4700-9555-25c587604524",
+      "title": "Hjörvardal",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "hesirentum-kampfgeborene",
+      "x": 2818.5,
+      "y": 2231,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "150f3c8a-025a-4700-9555-25c587604524",
+        "url": "https://www.worldanvil.com/world/map/marker/150f3c8a-025a-4700-9555-25c587604524/edit",
+        "title": "Hjörvardal",
+        "coordinates": {
+          "x": 2818,
+          "y": 2245,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 2818.5,
+          "y": 503,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-037"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-a86b37c0-5572-47a4-ae09-1455308df2d9",
+      "title": "Dornenfeld",
+      "category": "Brauersiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/brauersiedlung.png",
+      "territoryId": "hesirentum-schwarzdorn",
+      "x": 2492.5,
+      "y": 2223,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "a86b37c0-5572-47a4-ae09-1455308df2d9",
+        "url": "https://www.worldanvil.com/world/map/marker/a86b37c0-5572-47a4-ae09-1455308df2d9/edit",
+        "title": "Dornenfeld",
+        "coordinates": {
+          "x": 2517,
+          "y": 2221,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 2492.5,
+          "y": 511,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-038"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-1ead0b0e-8138-443a-9aa7-6d9218d0c972",
+      "title": "Klingenstedt",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "thanentum-schwerthohn",
+      "x": 1663.5,
+      "y": 2201,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "1ead0b0e-8138-443a-9aa7-6d9218d0c972",
+        "url": "https://www.worldanvil.com/world/map/marker/1ead0b0e-8138-443a-9aa7-6d9218d0c972/edit",
+        "title": "Klingenstedt",
+        "coordinates": {
+          "x": 1651,
+          "y": 2170,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 1663.5,
+          "y": 533,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-039"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-491d3501-5d56-46fe-b5e2-eef1426e3b5e",
+      "title": "Jornfeld",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "hesirentum-kampfgeborene",
+      "x": 2666.5,
+      "y": 2197,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "491d3501-5d56-46fe-b5e2-eef1426e3b5e",
+        "url": "https://www.worldanvil.com/world/map/marker/491d3501-5d56-46fe-b5e2-eef1426e3b5e/edit",
+        "title": "Jornfeld",
+        "coordinates": {
+          "x": 2681,
+          "y": 2183,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 2666.5,
+          "y": 537,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-040"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-19aab3b0-ebc2-4ff9-a719-6863ebe293cc",
+      "title": "Kjellweiler",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "thanentum-schwerthohn",
+      "x": 1836.5,
+      "y": 2183,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "19aab3b0-ebc2-4ff9-a719-6863ebe293cc",
+        "url": "https://www.worldanvil.com/world/map/marker/19aab3b0-ebc2-4ff9-a719-6863ebe293cc/edit",
+        "title": "Kjellweiler",
+        "coordinates": {
+          "x": 1834,
+          "y": 2171,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 1836.5,
+          "y": 551,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-041"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-8d5303da-e757-49d5-9252-64a362cb915a",
+      "title": "Brynulfstedt",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "hesirentum-schwarzdorn",
+      "x": 2201.5,
+      "y": 2166,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "8d5303da-e757-49d5-9252-64a362cb915a",
+        "url": "https://www.worldanvil.com/world/map/marker/8d5303da-e757-49d5-9252-64a362cb915a/edit",
+        "title": "Brynulfstedt",
+        "coordinates": {
+          "x": 2209,
+          "y": 2135,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 2201.5,
+          "y": 568,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-042"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-d465a738-6a84-46e4-87b1-78fd3b5ce051",
+      "title": "Tormundhavn",
+      "category": "Siedlungsruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/zerst-rte-siedlung.png",
+      "territoryId": "hesirentum-winterfaenge",
+      "x": 3578.5,
+      "y": 2103,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "d465a738-6a84-46e4-87b1-78fd3b5ce051",
+        "url": "https://www.worldanvil.com/world/map/marker/d465a738-6a84-46e4-87b1-78fd3b5ce051/edit",
+        "title": "Tormundhavn",
+        "coordinates": {
+          "x": 3641,
+          "y": 2101,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 3578.5,
+          "y": 631,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-043"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-43b53880-036b-4404-8aea-0eb4310690a3",
+      "title": "Grimnirsgrube",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "hesirentum-schwarzacker",
+      "x": 1182.5,
+      "y": 2071,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "43b53880-036b-4404-8aea-0eb4310690a3",
+        "url": "https://www.worldanvil.com/world/map/marker/43b53880-036b-4404-8aea-0eb4310690a3/edit",
+        "title": "Grimnirsgrube",
+        "coordinates": {
+          "x": 1234,
+          "y": 2007,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 1182.5,
+          "y": 663,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-044"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-9a0ff613-97d9-46cc-8869-98c04418882a",
+      "title": "Fjellborg",
+      "category": "Burg",
+      "templateId": "militaer",
+      "icon": "/Karten/assets/icons/welt/finstere-burg.png",
+      "territoryId": "hesirentum-winterfaenge",
+      "x": 3418.5,
+      "y": 2065,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "9a0ff613-97d9-46cc-8869-98c04418882a",
+        "url": "https://www.worldanvil.com/world/map/marker/9a0ff613-97d9-46cc-8869-98c04418882a/edit",
+        "title": "Fjellborg",
+        "coordinates": {
+          "x": 3290,
+          "y": 2200,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 3418.5,
+          "y": 669,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-045"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-2af49fd2-62cc-46b5-a850-67fc5f97beeb",
+      "title": "Grabesruh",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "hesirentum-schwarzacker",
+      "x": 1454.5,
+      "y": 2031,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "2af49fd2-62cc-46b5-a850-67fc5f97beeb",
+        "url": "https://www.worldanvil.com/world/map/marker/2af49fd2-62cc-46b5-a850-67fc5f97beeb/edit",
+        "title": "Grabesruh",
+        "coordinates": {
+          "x": 1436,
+          "y": 2012,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 1454.5,
+          "y": 703,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-046"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-c4e646be-f21a-44af-8461-788d489ae00e",
+      "title": "Vikheimskirch",
+      "category": "Klostersiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/klostersiedlung.png",
+      "territoryId": "thanentum-schwerthohn",
+      "x": 2040,
+      "y": 2055,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "c4e646be-f21a-44af-8461-788d489ae00e",
+        "url": "https://www.worldanvil.com/world/map/marker/c4e646be-f21a-44af-8461-788d489ae00e/edit",
+        "title": "Vikheimskirch",
+        "coordinates": {
+          "x": 2044,
+          "y": 2037,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 2040,
+          "y": 679,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-047"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-2b66c443-8007-448a-a1d9-e66400aa1dde",
+      "title": "Hirschsweiler",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "hesirentum-schwarzdorn",
+      "x": 2444,
+      "y": 2032,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "2b66c443-8007-448a-a1d9-e66400aa1dde",
+        "url": "https://www.worldanvil.com/world/map/marker/2b66c443-8007-448a-a1d9-e66400aa1dde/edit",
+        "title": "Hirschsweiler",
+        "coordinates": {
+          "x": 2463,
+          "y": 2008,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 2444,
+          "y": 702,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-048"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-6a244012-7033-40f0-afaf-1581a7c7ef43",
+      "title": "Rorikshall",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "thanentum-rorikstal",
+      "x": 2961,
+      "y": 1977,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "6a244012-7033-40f0-afaf-1581a7c7ef43",
+        "url": "https://www.worldanvil.com/world/map/marker/6a244012-7033-40f0-afaf-1581a7c7ef43/edit",
+        "title": "Rorikshall",
+        "coordinates": {
+          "x": 2961,
+          "y": 1971,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 2961,
+          "y": 757,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-049"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-2f95a077-e46d-4186-8684-5b2180809d7c",
+      "title": "Fjellheim",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "thanentum-schwerthohn",
+      "x": 1857.5,
+      "y": 2018,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "2f95a077-e46d-4186-8684-5b2180809d7c",
+        "url": "https://www.worldanvil.com/world/map/marker/2f95a077-e46d-4186-8684-5b2180809d7c/edit",
+        "title": "Fjellheim",
+        "coordinates": {
+          "x": 1851,
+          "y": 2023,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 1857.5,
+          "y": 716,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-050"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-b6875d79-50e2-4b9a-9cf5-310823ebab0f",
+      "title": "Lilienheim",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "hesirentum-schwarzdorn",
+      "x": 2643.5,
+      "y": 2010,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "b6875d79-50e2-4b9a-9cf5-310823ebab0f",
+        "url": "https://www.worldanvil.com/world/map/marker/b6875d79-50e2-4b9a-9cf5-310823ebab0f/edit",
+        "title": "Lilienheim",
+        "coordinates": {
+          "x": 2680,
+          "y": 1982,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 2643.5,
+          "y": 724,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-051"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-8c1e36f7-ba66-407f-88a0-bf907f0ef89b",
+      "title": "Roggenweiler",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "hesirentum-winterfaenge",
+      "x": 3714.5,
+      "y": 2006,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "8c1e36f7-ba66-407f-88a0-bf907f0ef89b",
+        "url": "https://www.worldanvil.com/world/map/marker/8c1e36f7-ba66-407f-88a0-bf907f0ef89b/edit",
+        "title": "Roggenweiler",
+        "coordinates": {
+          "x": 2866,
+          "y": 1762,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 3714.5,
+          "y": 728,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-052"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-e8cdd30a-9bda-4954-8698-ded9b868b6df",
+      "title": "Lios an Bhric",
+      "category": "Ruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/antike-ruine.png",
+      "territoryId": "thanentum-rorikstal",
+      "x": 3217,
+      "y": 1971,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "e8cdd30a-9bda-4954-8698-ded9b868b6df",
+        "url": "https://www.worldanvil.com/world/map/marker/e8cdd30a-9bda-4954-8698-ded9b868b6df/edit",
+        "title": "Lios an Bhric",
+        "coordinates": {
+          "x": 3251,
+          "y": 1946,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 3217,
+          "y": 763,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-053"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-30937237-ddc5-4cc6-a420-25b8430cbb49",
+      "title": "Rosenheim",
+      "category": "Brauersiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/brauersiedlung.png",
+      "territoryId": "hesirentum-schwarzdorn",
+      "x": 2243.5,
+      "y": 1968,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "30937237-ddc5-4cc6-a420-25b8430cbb49",
+        "url": "https://www.worldanvil.com/world/map/marker/30937237-ddc5-4cc6-a420-25b8430cbb49/edit",
+        "title": "Rosenheim",
+        "coordinates": {
+          "x": 2254,
+          "y": 1970,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 2243.5,
+          "y": 766,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-054"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-b1d10630-0957-4859-8d91-d9ceef34c5dd",
+      "title": "Rödrikdal",
+      "category": "Siedlungsruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/zerst-rte-siedlung.png",
+      "territoryId": "hesirentum-winterfaenge",
+      "x": 3564.5,
+      "y": 1916,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "b1d10630-0957-4859-8d91-d9ceef34c5dd",
+        "url": "https://www.worldanvil.com/world/map/marker/b1d10630-0957-4859-8d91-d9ceef34c5dd/edit",
+        "title": "Rödrikdal",
+        "coordinates": {
+          "x": 3618,
+          "y": 1887,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 3564.5,
+          "y": 818,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-055"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-374f44f7-7799-4466-a026-350cd6238aa7",
+      "title": "Grønnstad",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "thanentum-schwerthohn",
+      "x": 2074.5,
+      "y": 1916,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "374f44f7-7799-4466-a026-350cd6238aa7",
+        "url": "https://www.worldanvil.com/world/map/marker/374f44f7-7799-4466-a026-350cd6238aa7/edit",
+        "title": "Grønnstad",
+        "coordinates": {
+          "x": 2074,
+          "y": 1918,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 2074.5,
+          "y": 818,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-056"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-201fada1-1597-4d40-b8a7-36f465668d2a",
+      "title": "Eiriksbruch",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "hesirentum-schwarzacker",
+      "x": 1195.5,
+      "y": 1902,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "201fada1-1597-4d40-b8a7-36f465668d2a",
+        "url": "https://www.worldanvil.com/world/map/marker/201fada1-1597-4d40-b8a7-36f465668d2a/edit",
+        "title": "Eiriksbruch",
+        "coordinates": {
+          "x": 1223,
+          "y": 1874,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 1195.5,
+          "y": 832,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-057"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-f4bd4886-35ea-4571-a29c-0bcc0849374f",
+      "title": "Blütenstedt",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "hesirentum-schwarzdorn",
+      "x": 2440.5,
+      "y": 1892,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "f4bd4886-35ea-4571-a29c-0bcc0849374f",
+        "url": "https://www.worldanvil.com/world/map/marker/f4bd4886-35ea-4571-a29c-0bcc0849374f/edit",
+        "title": "Blütenstedt",
+        "coordinates": {
+          "x": 2428,
+          "y": 1863,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 2440.5,
+          "y": 842,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-058"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-d22c6d5a-497c-4218-a39f-b562c01d52af",
+      "title": "Jorundsfried",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "hesirentum-kampfgeborene",
+      "x": 2794,
+      "y": 1859,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "d22c6d5a-497c-4218-a39f-b562c01d52af",
+        "url": "https://www.worldanvil.com/world/map/marker/d22c6d5a-497c-4218-a39f-b562c01d52af/edit",
+        "title": "Jorundsfried",
+        "coordinates": {
+          "x": 2763,
+          "y": 1816,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 2794,
+          "y": 875,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-060"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-1267e4c7-6157-4e00-9f29-b37c67edbfd8",
+      "title": "Helleheim",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "thanentum-schwerthohn",
+      "x": 1561.5,
+      "y": 1814,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "1267e4c7-6157-4e00-9f29-b37c67edbfd8",
+        "url": "https://www.worldanvil.com/world/map/marker/1267e4c7-6157-4e00-9f29-b37c67edbfd8/edit",
+        "title": "Helleheim",
+        "coordinates": {
+          "x": 1548,
+          "y": 1812,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 1561.5,
+          "y": 920,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-061"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-befd8c09-8baf-45e2-909a-9f954d8e4671",
+      "title": "Haggenfeld",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "hesirentum-schwarzdorn",
+      "x": 2551,
+      "y": 1810,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "befd8c09-8baf-45e2-909a-9f954d8e4671",
+        "url": "https://www.worldanvil.com/world/map/marker/befd8c09-8baf-45e2-909a-9f954d8e4671/edit",
+        "title": "Haggenfeld",
+        "coordinates": {
+          "x": 2618,
+          "y": 1777,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 2551,
+          "y": 924,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-062"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-1b7f5ff6-3b41-4280-8008-d83c26052e3c",
+      "title": "Sveriggrube",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "hesirentum-winterfaenge",
+      "x": 3270.5,
+      "y": 1808,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "1b7f5ff6-3b41-4280-8008-d83c26052e3c",
+        "url": "https://www.worldanvil.com/world/map/marker/1b7f5ff6-3b41-4280-8008-d83c26052e3c/edit",
+        "title": "Sveriggrube",
+        "coordinates": {
+          "x": 3235,
+          "y": 1724,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 3270.5,
+          "y": 926,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-063"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-2964ab25-63e0-44dd-9829-230c0707e589",
+      "title": "Dalsjö",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "thanentum-schwerthohn",
+      "x": 1751.5,
+      "y": 1806,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "2964ab25-63e0-44dd-9829-230c0707e589",
+        "url": "https://www.worldanvil.com/world/map/marker/2964ab25-63e0-44dd-9829-230c0707e589/edit",
+        "title": "Dalsjö",
+        "coordinates": {
+          "x": 1740,
+          "y": 1793,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 1751.5,
+          "y": 928,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-064"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-61c96924-e9d0-42f8-91ae-c8a7860bcf79",
+      "title": "Dagskegge",
+      "category": "Siedlungsruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/zerst-rte-siedlung.png",
+      "territoryId": "hesirentum-winterfaenge",
+      "x": 3587.5,
+      "y": 1801,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "61c96924-e9d0-42f8-91ae-c8a7860bcf79",
+        "url": "https://www.worldanvil.com/world/map/marker/61c96924-e9d0-42f8-91ae-c8a7860bcf79/edit",
+        "title": "Dagskegge",
+        "coordinates": {
+          "x": 3643,
+          "y": 1791,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 3587.5,
+          "y": 933,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-065"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-e65eeb1f-7221-4fa6-8395-fed07e3443b0",
+      "title": "Ulfrdalr – Hügelgrab",
+      "category": "Hügelgrab",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/h-gelgrab.png",
+      "territoryId": "thanentum-rorikstal",
+      "x": 3104,
+      "y": 1789,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "e65eeb1f-7221-4fa6-8395-fed07e3443b0",
+        "url": "https://www.worldanvil.com/world/map/marker/e65eeb1f-7221-4fa6-8395-fed07e3443b0/edit",
+        "title": "Ulfrdalr – Hügelgrab",
+        "coordinates": {
+          "x": 3140,
+          "y": 1765,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 3104,
+          "y": 945,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-066"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-dddc74a1-b4bb-4f55-82b7-41fa9d40da4a",
+      "title": "Hovstad",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "thanentum-schwerthohn",
+      "x": 2140.5,
+      "y": 1773,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "dddc74a1-b4bb-4f55-82b7-41fa9d40da4a",
+        "url": "https://www.worldanvil.com/world/map/marker/dddc74a1-b4bb-4f55-82b7-41fa9d40da4a/edit",
+        "title": "Hovstad",
+        "coordinates": {
+          "x": 2140,
+          "y": 1749,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 2140.5,
+          "y": 961,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-067"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-654fe2ed-55ac-47c0-86a7-4aeea8346952",
+      "title": "Hrafnstein",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "hesirentum-schwarzacker",
+      "x": 1082,
+      "y": 1740,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "654fe2ed-55ac-47c0-86a7-4aeea8346952",
+        "url": "https://www.worldanvil.com/world/map/marker/654fe2ed-55ac-47c0-86a7-4aeea8346952/edit",
+        "title": "Hrafnstein",
+        "coordinates": {
+          "x": 1132,
+          "y": 1685,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 1082,
+          "y": 994,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-068"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-5d111e08-b49b-49f5-add7-76ed9cf6ab58",
+      "title": "Gråvik",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "hesirentum-schwarzacker",
+      "x": 1306.5,
+      "y": 1734,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "5d111e08-b49b-49f5-add7-76ed9cf6ab58",
+        "url": "https://www.worldanvil.com/world/map/marker/5d111e08-b49b-49f5-add7-76ed9cf6ab58/edit",
+        "title": "Gråvik",
+        "coordinates": {
+          "x": 1343,
+          "y": 1730,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 1306.5,
+          "y": 1000,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-069"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-9a56ce7a-92a1-4d33-9633-1bbc692a2b09",
+      "title": "Vindborg – Wehrkloster",
+      "category": "Klostersiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/klostersiedlung.png",
+      "territoryId": "hesirentum-kampfgeborene",
+      "x": 2688.5,
+      "y": 1700,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "9a56ce7a-92a1-4d33-9633-1bbc692a2b09",
+        "url": "https://www.worldanvil.com/world/map/marker/9a56ce7a-92a1-4d33-9633-1bbc692a2b09/edit",
+        "title": "Vindborg – Festung der Kampfgeborenen",
+        "coordinates": {
+          "x": 2860,
+          "y": 1890,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 2688.5,
+          "y": 1034,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-070"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-7f778036-0d30-4b5b-8abe-94fbad1a2023",
+      "title": "Skjærghaug",
+      "category": "Hügelgrab",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/h-gelgrab.png",
+      "territoryId": "thanentum-schwerthohn",
+      "x": 1468.5,
+      "y": 1697,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "7f778036-0d30-4b5b-8abe-94fbad1a2023",
+        "url": "https://www.worldanvil.com/world/map/marker/7f778036-0d30-4b5b-8abe-94fbad1a2023/edit",
+        "title": "Skjærghaug",
+        "coordinates": {
+          "x": 1444,
+          "y": 1669,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 1468.5,
+          "y": 1037,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-071"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-1dcce4fc-fc1b-4dc2-b69f-53d41b80c818",
+      "title": "Wolfswacht",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "hesirentum-winterfaenge",
+      "x": 3699.5,
+      "y": 1637,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "1dcce4fc-fc1b-4dc2-b69f-53d41b80c818",
+        "url": "https://www.worldanvil.com/world/map/marker/1dcce4fc-fc1b-4dc2-b69f-53d41b80c818/edit",
+        "title": "Wolfswacht",
+        "coordinates": {
+          "x": 3699,
+          "y": 1638,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 3699.5,
+          "y": 1097,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-072"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-d03b6007-58b0-44b1-a22b-a84aaa141cd7",
+      "title": "Eldvik",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "thanentum-daemmergrund",
+      "x": 2556,
+      "y": 1664,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "d03b6007-58b0-44b1-a22b-a84aaa141cd7",
+        "url": "https://www.worldanvil.com/world/map/marker/d03b6007-58b0-44b1-a22b-a84aaa141cd7/edit",
+        "title": "Eldvik",
+        "coordinates": {
+          "x": 2559,
+          "y": 1619,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 2556,
+          "y": 1070,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-073"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-de3f6bda-7edb-48d2-9d66-e6318cd3498a",
+      "title": "Grimmborg",
+      "category": "Festung",
+      "templateId": "militaer",
+      "icon": "/Karten/assets/icons/welt/festung.png",
+      "territoryId": "hesirentum-winterfaenge",
+      "x": 3321.5,
+      "y": 1660,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "de3f6bda-7edb-48d2-9d66-e6318cd3498a",
+        "url": "https://www.worldanvil.com/world/map/marker/de3f6bda-7edb-48d2-9d66-e6318cd3498a/edit",
+        "title": "Grimmborg",
+        "coordinates": {
+          "x": 3361,
+          "y": 1614,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 3321.5,
+          "y": 1074,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-074"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-1bb8ae75-94a8-437e-b3cb-9ca8893f428a",
+      "title": "Geraldstedt",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "hesirentum-winterfaenge",
+      "x": 3492.5,
+      "y": 1659,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "1bb8ae75-94a8-437e-b3cb-9ca8893f428a",
+        "url": "https://www.worldanvil.com/world/map/marker/1bb8ae75-94a8-437e-b3cb-9ca8893f428a/edit",
+        "title": "Geraldstedt",
+        "coordinates": {
+          "x": 3537,
+          "y": 1626,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 3492.5,
+          "y": 1075,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-075"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-50c088a0-501c-48ac-91a0-1bf3a223676f",
+      "title": "Maltvik - Schwarzdorn Brauerei",
+      "category": "Brauersiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/brauersiedlung.png",
+      "territoryId": "hesirentum-schwarzdorn",
+      "x": 1659,
+      "y": 1654,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "50c088a0-501c-48ac-91a0-1bf3a223676f",
+        "url": "https://www.worldanvil.com/world/map/marker/50c088a0-501c-48ac-91a0-1bf3a223676f/edit",
+        "title": "Maltvik - Schwarzdorn Brauerei",
+        "coordinates": {
+          "x": 1649,
+          "y": 1638,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 1659,
+          "y": 1080,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-076"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-dcf5c9ad-b2e3-4478-bcd7-64986906ee4e",
+      "title": "Torhildfeld",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "hesirentum-kampfgeborene",
+      "x": 2907.5,
+      "y": 1597,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "dcf5c9ad-b2e3-4478-bcd7-64986906ee4e",
+        "url": "https://www.worldanvil.com/world/map/marker/dcf5c9ad-b2e3-4478-bcd7-64986906ee4e/edit",
+        "title": "Torhildfeld",
+        "coordinates": {
+          "x": 2880,
+          "y": 1595,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 2907.5,
+          "y": 1137,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-077"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-5121042f-f213-427c-8c95-150eadfaed90",
+      "title": "Birkevik",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "thanentum-daemmergrund",
+      "x": 1921,
+      "y": 1575,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "5121042f-f213-427c-8c95-150eadfaed90",
+        "url": "https://www.worldanvil.com/world/map/marker/5121042f-f213-427c-8c95-150eadfaed90/edit",
+        "title": "Birkevik",
+        "coordinates": {
+          "x": 1897,
+          "y": 1528,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 1921,
+          "y": 1159,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-078"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-0c373651-9dea-4460-a4c7-148009ae9526",
+      "title": "Hjorthof",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "thanentum-schwerthohn",
+      "x": 1392.5,
+      "y": 1567,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "0c373651-9dea-4460-a4c7-148009ae9526",
+        "url": "https://www.worldanvil.com/world/map/marker/0c373651-9dea-4460-a4c7-148009ae9526/edit",
+        "title": "Hjorthof",
+        "coordinates": {
+          "x": 1429,
+          "y": 1530,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 1392.5,
+          "y": 1167,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-079"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-924adce9-b5cb-475a-9a2f-d529be9caae8",
+      "title": "Eiriksholt",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "hesirentum-winterfaenge",
+      "x": 3151,
+      "y": 1543,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "924adce9-b5cb-475a-9a2f-d529be9caae8",
+        "url": "https://www.worldanvil.com/world/map/marker/924adce9-b5cb-475a-9a2f-d529be9caae8/edit",
+        "title": "Eiriksholt",
+        "coordinates": {
+          "x": 3145,
+          "y": 1607,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 3151,
+          "y": 1191,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-080"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-a5b36c66-3983-45d2-913f-d15a6274d476",
+      "title": "Schwarzhof - Schwarzdorn Brauerei",
+      "category": "Brauersiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/brauersiedlung.png",
+      "territoryId": "hesirentum-schwarzdorn",
+      "x": 3482.5,
+      "y": 1521,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "a5b36c66-3983-45d2-913f-d15a6274d476",
+        "url": "https://www.worldanvil.com/world/map/marker/a5b36c66-3983-45d2-913f-d15a6274d476/edit",
+        "title": "Schwarzhof - Schwarzdorn Brauerei",
+        "coordinates": {
+          "x": 3527,
+          "y": 1520,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 3482.5,
+          "y": 1213,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-081"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-4124876b-f80a-4b6c-821e-2468a353617e",
+      "title": "Gormsfeld",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "hesirentum-winterfaenge",
+      "x": 3334.5,
+      "y": 1520,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "4124876b-f80a-4b6c-821e-2468a353617e",
+        "url": "https://www.worldanvil.com/world/map/marker/4124876b-f80a-4b6c-821e-2468a353617e/edit",
+        "title": "Gormsfeld",
+        "coordinates": {
+          "x": 3320,
+          "y": 1505,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 3334.5,
+          "y": 1214,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-082"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-069c000f-379a-4acd-b208-ee1b18706545",
+      "title": "Hjørdiswiesen",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "hesirentum-winterfaenge",
+      "x": 3709.5,
+      "y": 1508,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "069c000f-379a-4acd-b208-ee1b18706545",
+        "url": "https://www.worldanvil.com/world/map/marker/069c000f-379a-4acd-b208-ee1b18706545/edit",
+        "title": "Hjørdiswiesen",
+        "coordinates": {
+          "x": 3763,
+          "y": 1472,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 3709.5,
+          "y": 1226,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-083"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-d6c48631-8e91-45f9-a9d5-bc14deab5bfe",
+      "title": "Torsvann",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "thanentum-daemmergrund",
+      "x": 2389,
+      "y": 1502,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "d6c48631-8e91-45f9-a9d5-bc14deab5bfe",
+        "url": "https://www.worldanvil.com/world/map/marker/d6c48631-8e91-45f9-a9d5-bc14deab5bfe/edit",
+        "title": "Torsvann",
+        "coordinates": {
+          "x": 2411,
+          "y": 1452,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 2389,
+          "y": 1232,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-084"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-3f6946ed-8030-436d-a3b7-163a2e582401",
+      "title": "Skarnstatt",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "hesirentum-sterkr",
+      "x": 1268.5,
+      "y": 1495,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "3f6946ed-8030-436d-a3b7-163a2e582401",
+        "url": "https://www.worldanvil.com/world/map/marker/3f6946ed-8030-436d-a3b7-163a2e582401/edit",
+        "title": "Skarnstatt",
+        "coordinates": {
+          "x": 1256,
+          "y": 1477,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 1268.5,
+          "y": 1239,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-085"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-47eff364-45f4-43af-907f-405d7bb888ef",
+      "title": "Vikdal",
+      "category": "Turmruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/zerst-rter-turm.png",
+      "territoryId": "thanentum-daemmergrund",
+      "x": 2764.5,
+      "y": 1492,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "47eff364-45f4-43af-907f-405d7bb888ef",
+        "url": "https://www.worldanvil.com/world/map/marker/47eff364-45f4-43af-907f-405d7bb888ef/edit",
+        "title": "Vikdal",
+        "coordinates": {
+          "x": 2785,
+          "y": 1454,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 2764.5,
+          "y": 1242,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-086"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-60be0a5e-d8e3-4e3b-9fda-7c5af7e682d2",
+      "title": "Alfhaven",
+      "category": "Waldsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/waldsiedlung.png",
+      "territoryId": "hesirentum-daemmertal",
+      "x": 2972.5,
+      "y": 1459,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "60be0a5e-d8e3-4e3b-9fda-7c5af7e682d2",
+        "url": "https://www.worldanvil.com/world/map/marker/60be0a5e-d8e3-4e3b-9fda-7c5af7e682d2/edit",
+        "title": "Alfhaven",
+        "coordinates": {
+          "x": 2922,
+          "y": 1389,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 2972.5,
+          "y": 1275,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-087"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-8c1e6b29-bc4b-498b-b04b-ec2ec985f47f",
+      "title": "Grimstein",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "hesirentum-sterkr",
+      "x": 1069.5,
+      "y": 1455,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "8c1e6b29-bc4b-498b-b04b-ec2ec985f47f",
+        "url": "https://www.worldanvil.com/world/map/marker/8c1e6b29-bc4b-498b-b04b-ec2ec985f47f/edit",
+        "title": "Grimstein",
+        "coordinates": {
+          "x": 1042,
+          "y": 1429,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 1069.5,
+          "y": 1279,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-088"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-4dab5f75-7c92-4b4b-9df1-86e1bc64486f",
+      "title": "Valldal",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "thanentum-daemmergrund",
+      "x": 1729,
+      "y": 1446,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "4dab5f75-7c92-4b4b-9df1-86e1bc64486f",
+        "url": "https://www.worldanvil.com/world/map/marker/4dab5f75-7c92-4b4b-9df1-86e1bc64486f/edit",
+        "title": "Valldal",
+        "coordinates": {
+          "x": 1685,
+          "y": 1425,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 1729,
+          "y": 1288,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-089"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-a1beaf3f-6675-497c-8fab-0940bd10b770",
+      "title": "Undvik",
+      "category": "Waldsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/waldsiedlung.png",
+      "territoryId": "thanentum-daemmergrund",
+      "x": 2582.5,
+      "y": 1440,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "a1beaf3f-6675-497c-8fab-0940bd10b770",
+        "url": "https://www.worldanvil.com/world/map/marker/a1beaf3f-6675-497c-8fab-0940bd10b770/edit",
+        "title": "Undvik",
+        "coordinates": {
+          "x": 2611,
+          "y": 1402,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 2582.5,
+          "y": 1294,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-090"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-1d6a97c5-08dd-4f1b-8ee2-5259bad1b337",
+      "title": "Hjaldal",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "hesirentum-daemmertal",
+      "x": 3161,
+      "y": 1432,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "1d6a97c5-08dd-4f1b-8ee2-5259bad1b337",
+        "url": "https://www.worldanvil.com/world/map/marker/1d6a97c5-08dd-4f1b-8ee2-5259bad1b337/edit",
+        "title": "Hjaldal",
+        "coordinates": {
+          "x": 3134,
+          "y": 1406,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 3161,
+          "y": 1302,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-091"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-8d8c1e05-583c-40f8-86c3-e3204ed5beda",
+      "title": "Solvårhof",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "hesirentum-daemmertal",
+      "x": 3462,
+      "y": 1415,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "8d8c1e05-583c-40f8-86c3-e3204ed5beda",
+        "url": "https://www.worldanvil.com/world/map/marker/8d8c1e05-583c-40f8-86c3-e3204ed5beda/edit",
+        "title": "Solvårhof",
+        "coordinates": {
+          "x": 3495,
+          "y": 1401,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 3462,
+          "y": 1319,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-092"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-fee369ee-1c16-48c8-8a0f-1c5f7068472c",
+      "title": "Wolfspfad",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "thanentum-daemmergrund",
+      "x": 2338.5,
+      "y": 1364,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "fee369ee-1c16-48c8-8a0f-1c5f7068472c",
+        "url": "https://www.worldanvil.com/world/map/marker/fee369ee-1c16-48c8-8a0f-1c5f7068472c/edit",
+        "title": "Wolfspfad",
+        "coordinates": {
+          "x": 2296,
+          "y": 1287,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 2338.5,
+          "y": 1370,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-093"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-a4e88266-f72f-4b9f-99e0-69b897cc7d47",
+      "title": "Aldrikdorf",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "hesirentum-winterfaenge",
+      "x": 3722.5,
+      "y": 1385,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "a4e88266-f72f-4b9f-99e0-69b897cc7d47",
+        "url": "https://www.worldanvil.com/world/map/marker/a4e88266-f72f-4b9f-99e0-69b897cc7d47/edit",
+        "title": "Aldrikdorf",
+        "coordinates": {
+          "x": 3691,
+          "y": 1356,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 3722.5,
+          "y": 1349,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-094"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-cde673b2-c34b-4671-bd28-4300606830cd",
+      "title": "Kaldvik",
+      "category": "Waldsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/waldsiedlung.png",
+      "territoryId": "thanentum-daemmergrund",
+      "x": 2140,
+      "y": 1368,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "cde673b2-c34b-4671-bd28-4300606830cd",
+        "url": "https://www.worldanvil.com/world/map/marker/cde673b2-c34b-4671-bd28-4300606830cd/edit",
+        "title": "Kaldvik",
+        "coordinates": {
+          "x": 2139,
+          "y": 1320,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 2140,
+          "y": 1366,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-095"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-94b0f3a2-386a-4612-a645-8404d2a5b0fe",
+      "title": "Ulvevik",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "hesirentum-daemmertal",
+      "x": 3386.5,
+      "y": 1335,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "94b0f3a2-386a-4612-a645-8404d2a5b0fe",
+        "url": "https://www.worldanvil.com/world/map/marker/94b0f3a2-386a-4612-a645-8404d2a5b0fe/edit",
+        "title": "Ulvevik",
+        "coordinates": {
+          "x": 3395,
+          "y": 1249,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 3386.5,
+          "y": 1399,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-096"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-5c93324b-7ca8-4c86-a898-bd1f2a08c194",
+      "title": "Halle der Skalden",
+      "category": "Besondere Orte",
+      "templateId": "natur",
+      "icon": "/Karten/assets/icons/welt/methalle.png",
+      "territoryId": "thanentum-klangheim",
+      "x": 702,
+      "y": 1282,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "5c93324b-7ca8-4c86-a898-bd1f2a08c194",
+        "url": "https://www.worldanvil.com/world/map/marker/5c93324b-7ca8-4c86-a898-bd1f2a08c194/edit",
+        "title": "Halle der Skalden",
+        "coordinates": {
+          "x": 666,
+          "y": 1247,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 702,
+          "y": 1452,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-097"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-1e224893-2a35-474e-a112-6ccb28487fa3",
+      "title": "Steinfried",
+      "category": "Klostersiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/klostersiedlung.png",
+      "territoryId": "hesirentum-sterkr",
+      "x": 1544,
+      "y": 1277,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "1e224893-2a35-474e-a112-6ccb28487fa3",
+        "url": "https://www.worldanvil.com/world/map/marker/1e224893-2a35-474e-a112-6ccb28487fa3/edit",
+        "title": "Steinfried",
+        "coordinates": {
+          "x": 1523,
+          "y": 1225,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 1544,
+          "y": 1457,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-098"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-7b9397e1-e914-47e8-957e-e36cc7a816d3",
+      "title": "Vargheim",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "hesirentum-daemmertal",
+      "x": 3745,
+      "y": 1271,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "7b9397e1-e914-47e8-957e-e36cc7a816d3",
+        "url": "https://www.worldanvil.com/world/map/marker/7b9397e1-e914-47e8-957e-e36cc7a816d3/edit",
+        "title": "Vargheim",
+        "coordinates": {
+          "x": 3741,
+          "y": 1145,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 3745,
+          "y": 1463,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-099"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-f72b31ae-116f-4739-b9d0-fa7ed589bf37",
+      "title": "Erzkluft",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "hesirentum-sterkr",
+      "x": 946.5,
+      "y": 1262,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "f72b31ae-116f-4739-b9d0-fa7ed589bf37",
+        "url": "https://www.worldanvil.com/world/map/marker/f72b31ae-116f-4739-b9d0-fa7ed589bf37/edit",
+        "title": "Erzkluft",
+        "coordinates": {
+          "x": 926,
+          "y": 1217,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 946.5,
+          "y": 1472,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-100"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-3e6094ea-6070-44a3-ba42-1157f038d5d4",
+      "title": "Blådal",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "thanentum-daemmergrund",
+      "x": 1966.5,
+      "y": 1251,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "3e6094ea-6070-44a3-ba42-1157f038d5d4",
+        "url": "https://www.worldanvil.com/world/map/marker/3e6094ea-6070-44a3-ba42-1157f038d5d4/edit",
+        "title": "Blådal",
+        "coordinates": {
+          "x": 1872,
+          "y": 1144,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 1966.5,
+          "y": 1483,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-101"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-5aa77a9d-9df6-4901-b4a1-5db41e4c7ae8",
+      "title": "Nydal",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "hesirentum-daemmertal",
+      "x": 3166.5,
+      "y": 1252,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "5aa77a9d-9df6-4901-b4a1-5db41e4c7ae8",
+        "url": "https://www.worldanvil.com/world/map/marker/5aa77a9d-9df6-4901-b4a1-5db41e4c7ae8/edit",
+        "title": "Nydal",
+        "coordinates": {
+          "x": 3161,
+          "y": 1171,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 3166.5,
+          "y": 1482,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-102"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-c8322c22-e4a0-4cf0-b163-53ba81ab9b28",
+      "title": "Gabeldorf",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "hesirentum-sterkr",
+      "x": 1208.5,
+      "y": 1243,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "c8322c22-e4a0-4cf0-b163-53ba81ab9b28",
+        "url": "https://www.worldanvil.com/world/map/marker/c8322c22-e4a0-4cf0-b163-53ba81ab9b28/edit",
+        "title": "Gabeldorf",
+        "coordinates": {
+          "x": 1187,
+          "y": 1204,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 1208.5,
+          "y": 1491,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-103"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-34493434-e2a2-4b3b-8235-3255f5edc4d1",
+      "title": "Dunald",
+      "category": "Waldsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/waldsiedlung.png",
+      "territoryId": "thanentum-daemmergrund",
+      "x": 2197.5,
+      "y": 1200,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "34493434-e2a2-4b3b-8235-3255f5edc4d1",
+        "url": "https://www.worldanvil.com/world/map/marker/34493434-e2a2-4b3b-8235-3255f5edc4d1/edit",
+        "title": "Dunald",
+        "coordinates": {
+          "x": 2208,
+          "y": 1160,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 2197.5,
+          "y": 1534,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-104"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-32b339f1-3ab5-4d25-b99d-5192433209e4",
+      "title": "Eldhaug - Hügelgrab",
+      "category": "Hügelgrab",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/h-gelgrab.png",
+      "territoryId": "hesirentum-daemmertal",
+      "x": 3402.5,
+      "y": 1198,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "32b339f1-3ab5-4d25-b99d-5192433209e4",
+        "url": "https://www.worldanvil.com/world/map/marker/32b339f1-3ab5-4d25-b99d-5192433209e4/edit",
+        "title": "Eldhaug - Hügelgrab",
+        "coordinates": {
+          "x": 3406,
+          "y": 1158,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 3402.5,
+          "y": 1536,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-105"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-a7a9835b-b7c7-4c84-82bb-a41b3e83fd0a",
+      "title": "Myrdal",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "thanentum-daemmergrund",
+      "x": 2706.5,
+      "y": 1159,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "a7a9835b-b7c7-4c84-82bb-a41b3e83fd0a",
+        "url": "https://www.worldanvil.com/world/map/marker/a7a9835b-b7c7-4c84-82bb-a41b3e83fd0a/edit",
+        "title": "Myrdal",
+        "coordinates": {
+          "x": 2722,
+          "y": 1112,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 2706.5,
+          "y": 1575,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-106"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-58cfb32f-9162-464d-bdd0-c8243a77416f",
+      "title": "Frostfall",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "hesirentum-daemmertal",
+      "x": 3552.5,
+      "y": 1155,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "58cfb32f-9162-464d-bdd0-c8243a77416f",
+        "url": "https://www.worldanvil.com/world/map/marker/58cfb32f-9162-464d-bdd0-c8243a77416f/edit",
+        "title": "Frostfall",
+        "coordinates": {
+          "x": 3606,
+          "y": 1079,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 3552.5,
+          "y": 1579,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-107"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-c5acf3f2-7b99-41a3-8117-c4dac2fffc65",
+      "title": "Torsvik",
+      "category": "Turmruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/zerst-rter-turm.png",
+      "territoryId": "hesirentum-daemmertal",
+      "x": 3852,
+      "y": 1135,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "c5acf3f2-7b99-41a3-8117-c4dac2fffc65",
+        "url": "https://www.worldanvil.com/world/map/marker/c5acf3f2-7b99-41a3-8117-c4dac2fffc65/edit",
+        "title": "Torsvik",
+        "coordinates": {
+          "x": 3891,
+          "y": 1094,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 3852,
+          "y": 1599,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-108"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-01f704df-2c58-48b3-965e-5a6f4c5190cd",
+      "title": "Vågsund",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "thanentum-daemmergrund",
+      "x": 2871,
+      "y": 1142,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "01f704df-2c58-48b3-965e-5a6f4c5190cd",
+        "url": "https://www.worldanvil.com/world/map/marker/01f704df-2c58-48b3-965e-5a6f4c5190cd/edit",
+        "title": "Vågsund",
+        "coordinates": {
+          "x": 2956,
+          "y": 1138,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 2871,
+          "y": 1592,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-109"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-95e43551-f28e-4084-a32a-dde64e87c45a",
+      "title": "Brynvik",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "hesirentum-daemmertal",
+      "x": 3202.5,
+      "y": 1104,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "95e43551-f28e-4084-a32a-dde64e87c45a",
+        "url": "https://www.worldanvil.com/world/map/marker/95e43551-f28e-4084-a32a-dde64e87c45a/edit",
+        "title": "Brynvik",
+        "coordinates": {
+          "x": 3239,
+          "y": 1061,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 3202.5,
+          "y": 1630,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-110"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-f50c1e0f-6042-43ac-92ad-1d8b983e1304",
+      "title": "Klangheim",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "thanentum-klangheim",
+      "x": 994,
+      "y": 1031,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "f50c1e0f-6042-43ac-92ad-1d8b983e1304",
+        "url": "https://www.worldanvil.com/world/map/marker/f50c1e0f-6042-43ac-92ad-1d8b983e1304/edit",
+        "title": "Klangheim",
+        "coordinates": {
+          "x": 971,
+          "y": 1017,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 994,
+          "y": 1703,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-111"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-d96714cc-08f6-4c8c-a4b2-0be203fc15a7",
+      "title": "Skeldun",
+      "category": "Turm",
+      "templateId": "militaer",
+      "icon": "/Karten/assets/icons/welt/turm.png",
+      "territoryId": "hesirentum-daemmertal",
+      "x": 3015,
+      "y": 1091,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "d96714cc-08f6-4c8c-a4b2-0be203fc15a7",
+        "url": "https://www.worldanvil.com/world/map/marker/d96714cc-08f6-4c8c-a4b2-0be203fc15a7/edit",
+        "title": "Skeldun",
+        "coordinates": {
+          "x": 3043,
+          "y": 1041,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 3015,
+          "y": 1643,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-112"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-c7a393ff-1056-4592-b0c8-74b889b53c1e",
+      "title": "Bjoernsfurt",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "hesirentum-sterkr",
+      "x": 1449.5,
+      "y": 1077,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "c7a393ff-1056-4592-b0c8-74b889b53c1e",
+        "url": "https://www.worldanvil.com/world/map/marker/c7a393ff-1056-4592-b0c8-74b889b53c1e/edit",
+        "title": "Bjoernsfurt",
+        "coordinates": {
+          "x": 1436,
+          "y": 1039,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 1449.5,
+          "y": 1657,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-113"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-eaea884e-ca9f-4812-afc1-fe3bdba98b4f",
+      "title": "Aldersstedt",
+      "category": "Siedlungsruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/zerst-rte-siedlung.png",
+      "territoryId": "hesirentum-daemmertal",
+      "x": 3377.5,
+      "y": 1054,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "eaea884e-ca9f-4812-afc1-fe3bdba98b4f",
+        "url": "https://www.worldanvil.com/world/map/marker/eaea884e-ca9f-4812-afc1-fe3bdba98b4f/edit",
+        "title": "Aldersstedt",
+        "coordinates": {
+          "x": 3420,
+          "y": 1007,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 3377.5,
+          "y": 1680,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-114"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-66126455-5f39-4d78-b646-5fe442a6f643",
+      "title": "Skogheim",
+      "category": "Waldsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/waldsiedlung.png",
+      "territoryId": "thanentum-daemmergrund",
+      "x": 2441.5,
+      "y": 999,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "66126455-5f39-4d78-b646-5fe442a6f643",
+        "url": "https://www.worldanvil.com/world/map/marker/66126455-5f39-4d78-b646-5fe442a6f643/edit",
+        "title": "Skogheim",
+        "coordinates": {
+          "x": 2448,
+          "y": 946,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 2441.5,
+          "y": 1735,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-115"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-fb572bc5-91ad-42d8-aa20-91837a701c80",
+      "title": "Burg Horunn",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "hesirentum-daemmertal",
+      "x": 3712,
+      "y": 930,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "fb572bc5-91ad-42d8-aa20-91837a701c80",
+        "url": "https://www.worldanvil.com/world/map/marker/fb572bc5-91ad-42d8-aa20-91837a701c80/edit",
+        "title": "Burg Horunn",
+        "coordinates": {
+          "x": 3760,
+          "y": 910,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 3712,
+          "y": 1804,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-116"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-7eb213fc-9892-4372-9835-ac22eb5baa73",
+      "title": "Lindalsfried",
+      "category": "Siedlungsruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/zerst-rte-siedlung.png",
+      "territoryId": "thanentum-daemmergrund",
+      "x": 1550,
+      "y": 978,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "7eb213fc-9892-4372-9835-ac22eb5baa73",
+        "url": "https://www.worldanvil.com/world/map/marker/7eb213fc-9892-4372-9835-ac22eb5baa73/edit",
+        "title": "Lindalsfried",
+        "coordinates": {
+          "x": 1543,
+          "y": 946,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 1550,
+          "y": 1756,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-117"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-be65e4bf-ca3c-4978-96d1-31fe63229ff6",
+      "title": "Fjellstatt",
+      "category": "Siedlungsruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/zerst-rte-siedlung.png",
+      "territoryId": "hesirentum-daemmertal",
+      "x": 3981.5,
+      "y": 959,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "be65e4bf-ca3c-4978-96d1-31fe63229ff6",
+        "url": "https://www.worldanvil.com/world/map/marker/be65e4bf-ca3c-4978-96d1-31fe63229ff6/edit",
+        "title": "Fjellstatt",
+        "coordinates": {
+          "x": 3964,
+          "y": 956,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 3981.5,
+          "y": 1775,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-118"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-c239c626-d719-44a2-a74d-4a5a53ba7b9b",
+      "title": "Bjørk",
+      "category": "Turmruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/zerst-rter-turm.png",
+      "territoryId": "thanentum-daemmergrund",
+      "x": 2820.5,
+      "y": 945,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "c239c626-d719-44a2-a74d-4a5a53ba7b9b",
+        "url": "https://www.worldanvil.com/world/map/marker/c239c626-d719-44a2-a74d-4a5a53ba7b9b/edit",
+        "title": "Bjørk",
+        "coordinates": {
+          "x": 2850,
+          "y": 885,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 2820.5,
+          "y": 1789,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-119"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-fc48c792-1200-4a64-9b3e-c6296f8d42dc",
+      "title": "Skarstad",
+      "category": "Siedlungsruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/zerst-rte-siedlung.png",
+      "territoryId": "hesirentum-daemmertal",
+      "x": 3240,
+      "y": 938,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "fc48c792-1200-4a64-9b3e-c6296f8d42dc",
+        "url": "https://www.worldanvil.com/world/map/marker/fc48c792-1200-4a64-9b3e-c6296f8d42dc/edit",
+        "title": "Skarstad",
+        "coordinates": {
+          "x": 3292,
+          "y": 883,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 3240,
+          "y": 1796,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-120"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-5c6ec2e8-bdf6-4bb5-b0aa-a6e48c63fb88",
+      "title": "Ulfsstad",
+      "category": "Waldsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/waldsiedlung.png",
+      "territoryId": "thanentum-daemmergrund",
+      "x": 2026.5,
+      "y": 915,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "5c6ec2e8-bdf6-4bb5-b0aa-a6e48c63fb88",
+        "url": "https://www.worldanvil.com/world/map/marker/5c6ec2e8-bdf6-4bb5-b0aa-a6e48c63fb88/edit",
+        "title": "Ulfsstad",
+        "coordinates": {
+          "x": 2034,
+          "y": 872,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 2026.5,
+          "y": 1819,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-121"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-36e6779a-ccea-4bb4-970b-70af5066195b",
+      "title": "Vargdal",
+      "category": "Waldsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/waldsiedlung.png",
+      "territoryId": "hesirentum-daemmertal",
+      "x": 3048.5,
+      "y": 909,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "36e6779a-ccea-4bb4-970b-70af5066195b",
+        "url": "https://www.worldanvil.com/world/map/marker/36e6779a-ccea-4bb4-970b-70af5066195b/edit",
+        "title": "Vargdal",
+        "coordinates": {
+          "x": 2999,
+          "y": 913,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 3048.5,
+          "y": 1825,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-122"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-hornhall",
+      "title": "Hornhall",
+      "category": "Burg",
+      "templateId": "militaer",
+      "icon": "/Karten/assets/icons/welt/gro-e-burg.png",
+      "territoryId": "grenzsitz-hornhall",
+      "x": 2468.5,
+      "y": 614,
+      "sourceRef": {
+        "provider": "aleria",
+        "recordId": "roriksheim-hornhall",
+        "mapPositionId": "new-pin-137",
+        "targetPosition": {
+          "x": 2468.5,
+          "y": 2120,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-137"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-35ac6961-d93e-4b7e-a061-245237bf67ab",
+      "title": "Vargshaug",
+      "category": "Hügelgrab",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/h-gelgrab.png",
+      "territoryId": "thanentum-daemmergrund",
+      "x": 2614.5,
+      "y": 870,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "35ac6961-d93e-4b7e-a061-245237bf67ab",
+        "url": "https://www.worldanvil.com/world/map/marker/35ac6961-d93e-4b7e-a061-245237bf67ab/edit",
+        "title": "Vargshaug",
+        "coordinates": {
+          "x": 2650,
+          "y": 825,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 2614.5,
+          "y": 1864,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-124"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-39ff0e16-b2b0-480d-8c18-9239d462b34f",
+      "title": "Erikstatt",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "hesirentum-soekeren",
+      "x": 1072.5,
+      "y": 847,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "39ff0e16-b2b0-480d-8c18-9239d462b34f",
+        "url": "https://www.worldanvil.com/world/map/marker/39ff0e16-b2b0-480d-8c18-9239d462b34f/edit",
+        "title": "Erikstatt",
+        "coordinates": {
+          "x": 1049,
+          "y": 802,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 1072.5,
+          "y": 1887,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-125"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-7b8c1f32-f0b7-4dc7-ba47-ec731fb4b20a",
+      "title": "Hallfheim",
+      "category": "Siedlungsruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/zerst-rte-siedlung.png",
+      "territoryId": "thanentum-daemmergrund",
+      "x": 2304.5,
+      "y": 830,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "7b8c1f32-f0b7-4dc7-ba47-ec731fb4b20a",
+        "url": "https://www.worldanvil.com/world/map/marker/7b8c1f32-f0b7-4dc7-ba47-ec731fb4b20a/edit",
+        "title": "Hallfheim",
+        "coordinates": {
+          "x": 2314,
+          "y": 791,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 2304.5,
+          "y": 1904,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-126"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-ee5c918f-e5b5-455d-b57a-1b41be6ef891",
+      "title": "Dunborg",
+      "category": "Festung",
+      "templateId": "militaer",
+      "icon": "/Karten/assets/icons/welt/festung.png",
+      "territoryId": "thanentum-daemmergrund",
+      "x": 1813.5,
+      "y": 825,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "ee5c918f-e5b5-455d-b57a-1b41be6ef891",
+        "url": "https://www.worldanvil.com/world/map/marker/ee5c918f-e5b5-455d-b57a-1b41be6ef891/edit",
+        "title": "Dunborg",
+        "coordinates": {
+          "x": 1816,
+          "y": 724,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 1813.5,
+          "y": 1909,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-127"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-dornquell",
+      "title": "Dornquell",
+      "category": "Brauersiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/brauersiedlung.png",
+      "territoryId": "hesirentum-schwarzdorn",
+      "x": 1397.5,
+      "y": 805,
+      "sourceRef": {
+        "provider": "aleria",
+        "recordId": "roriksheim-dornquell",
+        "mapPositionId": "new-pin-128",
+        "targetPosition": {
+          "x": 1397.5,
+          "y": 1929,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-128"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-6fe971e1-8c69-4d47-aab5-6339ca5d4e84",
+      "title": "Dornheil",
+      "category": "Klostersiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/klostersiedlung.png",
+      "territoryId": "hesirentum-soekeren",
+      "x": 838,
+      "y": 754,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "6fe971e1-8c69-4d47-aab5-6339ca5d4e84",
+        "url": "https://www.worldanvil.com/world/map/marker/6fe971e1-8c69-4d47-aab5-6339ca5d4e84/edit",
+        "title": "Dornheil",
+        "coordinates": {
+          "x": 804,
+          "y": 693,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 838,
+          "y": 1980,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-129"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-3a6b77c0-1aab-4e48-9214-5ecd5bd65fe4",
+      "title": "Tungvass",
+      "category": "Turmruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/zerst-rter-turm.png",
+      "territoryId": "thanentum-daemmergrund",
+      "x": 3050.5,
+      "y": 751,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "3a6b77c0-1aab-4e48-9214-5ecd5bd65fe4",
+        "url": "https://www.worldanvil.com/world/map/marker/3a6b77c0-1aab-4e48-9214-5ecd5bd65fe4/edit",
+        "title": "Tungvass",
+        "coordinates": {
+          "x": 2994,
+          "y": 773,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 3050.5,
+          "y": 1983,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-130"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-3fc0d796-9856-45fa-b136-d4cda9ed897a",
+      "title": "Jornstad",
+      "category": "Siedlungsruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/zerst-rte-siedlung.png",
+      "territoryId": "thanentum-daemmergrund",
+      "x": 2629.5,
+      "y": 739,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "3fc0d796-9856-45fa-b136-d4cda9ed897a",
+        "url": "https://www.worldanvil.com/world/map/marker/3fc0d796-9856-45fa-b136-d4cda9ed897a/edit",
+        "title": "Jornstad",
+        "coordinates": {
+          "x": 2653,
+          "y": 698,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 2629.5,
+          "y": 1995,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-131"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-c254dd1d-b8d3-44d4-9f0a-3831056b716b",
+      "title": "Ulfrhaug",
+      "category": "Hügelgrab",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/h-gelgrab.png",
+      "territoryId": "thanentum-daemmergrund",
+      "x": 1960.5,
+      "y": 708,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "c254dd1d-b8d3-44d4-9f0a-3831056b716b",
+        "url": "https://www.worldanvil.com/world/map/marker/c254dd1d-b8d3-44d4-9f0a-3831056b716b/edit",
+        "title": "Ulfrhaug",
+        "coordinates": {
+          "x": 1973,
+          "y": 700,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 1960.5,
+          "y": 2026,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-132"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-9323ca5a-7a8c-44fa-be49-da331f1711e7",
+      "title": "Myrkdorf",
+      "category": "Siedlungsruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/zerst-rte-siedlung.png",
+      "territoryId": "hesirentum-soekeren",
+      "x": 1178.5,
+      "y": 698,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "9323ca5a-7a8c-44fa-be49-da331f1711e7",
+        "url": "https://www.worldanvil.com/world/map/marker/9323ca5a-7a8c-44fa-be49-da331f1711e7/edit",
+        "title": "Myrkdorf",
+        "coordinates": {
+          "x": 1151,
+          "y": 657,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 1178.5,
+          "y": 2036,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-133"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-e875a35c-c73c-4dc6-8f0a-ec818b4d9d87",
+      "title": "Brückenheim",
+      "category": "Klostersiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/klostersiedlung.png",
+      "territoryId": "hesirentum-soekeren",
+      "x": 1588.5,
+      "y": 678,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "e875a35c-c73c-4dc6-8f0a-ec818b4d9d87",
+        "url": "https://www.worldanvil.com/world/map/marker/e875a35c-c73c-4dc6-8f0a-ec818b4d9d87/edit",
+        "title": "Brückenheim",
+        "coordinates": {
+          "x": 1568,
+          "y": 652,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 1588.5,
+          "y": 2056,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-134"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-d7b6639d-b6c8-4be2-82fa-0d67869636fc",
+      "title": "Hagenfeld",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "hesirentum-skald",
+      "x": 637,
+      "y": 671,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "d7b6639d-b6c8-4be2-82fa-0d67869636fc",
+        "url": "https://www.worldanvil.com/world/map/marker/d7b6639d-b6c8-4be2-82fa-0d67869636fc/edit",
+        "title": "Hagenfeld",
+        "coordinates": {
+          "x": 613,
+          "y": 585,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 637,
+          "y": 2063,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-135"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-c218db3a-9cbe-4c66-9199-c39aa6dab416",
+      "title": "Hamsstedt",
+      "category": "Siedlungsruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/zerst-rte-siedlung.png",
+      "territoryId": "thanentum-daemmergrund",
+      "x": 2129.5,
+      "y": 665,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "c218db3a-9cbe-4c66-9199-c39aa6dab416",
+        "url": "https://www.worldanvil.com/world/map/marker/c218db3a-9cbe-4c66-9199-c39aa6dab416/edit",
+        "title": "Hamsstedt",
+        "coordinates": {
+          "x": 2149,
+          "y": 631,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 2129.5,
+          "y": 2069,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-136"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-2d59eb02-2bf2-4bbf-9988-31e0fbe68968",
+      "title": "Hjamstad",
+      "category": "Siedlungsruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/zerst-rte-siedlung.png",
+      "territoryId": "hesirentum-daemmertal",
+      "x": 3497.5,
+      "y": 903,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "2d59eb02-2bf2-4bbf-9988-31e0fbe68968",
+        "url": "https://www.worldanvil.com/world/map/marker/2d59eb02-2bf2-4bbf-9988-31e0fbe68968/edit",
+        "title": "Hjamstad",
+        "coordinates": {
+          "x": 3546,
+          "y": 848,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 3497.5,
+          "y": 1831,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-123"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-bd199a5e-74e5-4046-9eef-33457300cec9",
+      "title": "Torsfeld",
+      "category": "Turmruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/zerst-rter-turm.png",
+      "territoryId": "hesirentum-soekeren",
+      "x": 1019.5,
+      "y": 600,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "bd199a5e-74e5-4046-9eef-33457300cec9",
+        "url": "https://www.worldanvil.com/world/map/marker/bd199a5e-74e5-4046-9eef-33457300cec9/edit",
+        "title": "Torsfeld",
+        "coordinates": {
+          "x": 996,
+          "y": 537,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 1019.5,
+          "y": 2134,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-138"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-23a6dd96-a1a2-47e9-98de-4d96dd1dc67e",
+      "title": "Kriegshorn Lager",
+      "category": "Jägerlager",
+      "templateId": "natur",
+      "icon": "/Karten/assets/icons/welt/j-gerlager.png",
+      "territoryId": "thanentum-klangheim",
+      "x": 1424,
+      "y": 545,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "23a6dd96-a1a2-47e9-98de-4d96dd1dc67e",
+        "url": "https://www.worldanvil.com/world/map/marker/23a6dd96-a1a2-47e9-98de-4d96dd1dc67e/edit",
+        "title": "Kriegshorn Lager",
+        "coordinates": {
+          "x": 1417,
+          "y": 503,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 1424,
+          "y": 2189,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-139"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-new-pin-140",
+      "title": "Unbenannte Turmruine · 140",
+      "category": "Turmruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/zerst-rter-turm.png",
+      "territoryId": "region-roriksheim-dunkelhain",
+      "x": 2266,
+      "y": 559,
+      "sourceRef": {
+        "provider": "aleria",
+        "recordId": "roriksheim-new-pin-140",
+        "mapPositionId": "new-pin-140",
+        "targetPosition": {
+          "x": 2266,
+          "y": 2175,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-140"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-b659fef6-ba86-4f7a-b6ea-168c229a2087",
+      "title": "Ruine des Blutfangturms",
+      "category": "Turmruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/zerst-rter-turm.png",
+      "territoryId": "thanentum-daemmergrund",
+      "x": 2694.5,
+      "y": 555,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "b659fef6-ba86-4f7a-b6ea-168c229a2087",
+        "url": "https://www.worldanvil.com/world/map/marker/b659fef6-ba86-4f7a-b6ea-168c229a2087/edit",
+        "title": "Blutfang Turm",
+        "coordinates": {
+          "x": 2589,
+          "y": 1893,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 2694.5,
+          "y": 2179,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-141"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-new-pin-142",
+      "title": "Unbenannte Siedlungsruine · 142",
+      "category": "Siedlungsruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/zerst-rte-siedlung.png",
+      "territoryId": "region-roriksheim-dunkelhain",
+      "x": 1907,
+      "y": 542,
+      "sourceRef": {
+        "provider": "aleria",
+        "recordId": "roriksheim-new-pin-142",
+        "mapPositionId": "new-pin-142",
+        "targetPosition": {
+          "x": 1907,
+          "y": 2192,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-142"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-cad0fd96-8f4f-47d2-a7d1-0b5e8f157ab5",
+      "title": "Forsthain",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "hesirentum-skald",
+      "x": 504.5,
+      "y": 488,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "cad0fd96-8f4f-47d2-a7d1-0b5e8f157ab5",
+        "url": "https://www.worldanvil.com/world/map/marker/cad0fd96-8f4f-47d2-a7d1-0b5e8f157ab5/edit",
+        "title": "Forsthain",
+        "coordinates": {
+          "x": 457,
+          "y": 432,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 504.5,
+          "y": 2246,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-143"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-287329f5-919e-4d87-9eae-be6589240626",
+      "title": "Hirdmannsruh",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "hesirentum-skald",
+      "x": 856,
+      "y": 446,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "287329f5-919e-4d87-9eae-be6589240626",
+        "url": "https://www.worldanvil.com/world/map/marker/287329f5-919e-4d87-9eae-be6589240626/edit",
+        "title": "Hirdmannsruh",
+        "coordinates": {
+          "x": 811,
+          "y": 437,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 856,
+          "y": 2288,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-144"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-new-pin-145",
+      "title": "Unbenannte Siedlungsruine · 145",
+      "category": "Siedlungsruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/zerst-rte-siedlung.png",
+      "territoryId": "region-roriksheim-dunkelhain",
+      "x": 2638.5,
+      "y": 446,
+      "sourceRef": {
+        "provider": "aleria",
+        "recordId": "roriksheim-new-pin-145",
+        "mapPositionId": "new-pin-145",
+        "targetPosition": {
+          "x": 2638.5,
+          "y": 2288,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-145"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-94be4798-4ea7-427f-b33b-8b1e35a58316",
+      "title": "Horikstedt",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "hesirentum-skald",
+      "x": 674,
+      "y": 419,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "94be4798-4ea7-427f-b33b-8b1e35a58316",
+        "url": "https://www.worldanvil.com/world/map/marker/94be4798-4ea7-427f-b33b-8b1e35a58316/edit",
+        "title": "Horikstedt",
+        "coordinates": {
+          "x": 610,
+          "y": 326,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 674,
+          "y": 2315,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-146"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-56fc087e-4700-45af-a7b0-a107a4038ee6",
+      "title": "Ravnaborg",
+      "category": "Siedlungsruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/zerst-rte-siedlung.png",
+      "territoryId": "hesirentum-soekeren",
+      "x": 1239.5,
+      "y": 410,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "56fc087e-4700-45af-a7b0-a107a4038ee6",
+        "url": "https://www.worldanvil.com/world/map/marker/56fc087e-4700-45af-a7b0-a107a4038ee6/edit",
+        "title": "Ravnaborg",
+        "coordinates": {
+          "x": 1236,
+          "y": 378,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 1239.5,
+          "y": 2324,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-147"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-new-pin-148",
+      "title": "Unbenannte Turmruine · 148",
+      "category": "Turmruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/zerst-rter-turm.png",
+      "territoryId": "region-roriksheim-dunkelhain",
+      "x": 1794.5,
+      "y": 378,
+      "sourceRef": {
+        "provider": "aleria",
+        "recordId": "roriksheim-new-pin-148",
+        "mapPositionId": "new-pin-148",
+        "targetPosition": {
+          "x": 1794.5,
+          "y": 2356,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-148"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-new-pin-149",
+      "title": "Unbenannte Siedlungsruine · 149",
+      "category": "Siedlungsruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/zerst-rte-siedlung.png",
+      "territoryId": "region-roriksheim-dunkelhain",
+      "x": 2480.5,
+      "y": 376,
+      "sourceRef": {
+        "provider": "aleria",
+        "recordId": "roriksheim-new-pin-149",
+        "mapPositionId": "new-pin-149",
+        "targetPosition": {
+          "x": 2480.5,
+          "y": 2358,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-149"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-new-pin-150",
+      "title": "Unbenannte Siedlungsruine · 150",
+      "category": "Siedlungsruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/zerst-rte-siedlung.png",
+      "territoryId": "region-roriksheim-dunkelhain",
+      "x": 1977.5,
+      "y": 363,
+      "sourceRef": {
+        "provider": "aleria",
+        "recordId": "roriksheim-new-pin-150",
+        "mapPositionId": "new-pin-150",
+        "targetPosition": {
+          "x": 1977.5,
+          "y": 2371,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-150"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-1e96921c-5c5e-4558-bb82-3b2011a7cf4c",
+      "title": "Skjaldturm",
+      "category": "Turm",
+      "templateId": "militaer",
+      "icon": "/Karten/assets/icons/welt/turm.png",
+      "territoryId": "hesirentum-skald",
+      "x": 892.5,
+      "y": 323,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "1e96921c-5c5e-4558-bb82-3b2011a7cf4c",
+        "url": "https://www.worldanvil.com/world/map/marker/1e96921c-5c5e-4558-bb82-3b2011a7cf4c/edit",
+        "title": "Skjaldturm",
+        "coordinates": {
+          "x": 883,
+          "y": 327,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 892.5,
+          "y": 2411,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-151"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-8c55606f-8c2f-4c4f-aaa6-514014a2fbb8",
+      "title": "Wolfsspitze",
+      "category": "Festung",
+      "templateId": "militaer",
+      "icon": "/Karten/assets/icons/welt/festung.png",
+      "territoryId": "region-roriksheim-dunkelhain",
+      "x": 2337,
+      "y": 311,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "8c55606f-8c2f-4c4f-aaa6-514014a2fbb8",
+        "url": "https://www.worldanvil.com/world/map/marker/8c55606f-8c2f-4c4f-aaa6-514014a2fbb8/edit",
+        "title": "Wolfsspitze",
+        "coordinates": {
+          "x": 2006,
+          "y": 1630,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 2337,
+          "y": 2423,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-152"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-14bad7a8-1f16-4d5f-9a75-51220de856aa",
+      "title": "Bjarnstatt",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "hesirentum-skald",
+      "x": 264.5,
+      "y": 302,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "14bad7a8-1f16-4d5f-9a75-51220de856aa",
+        "url": "https://www.worldanvil.com/world/map/marker/14bad7a8-1f16-4d5f-9a75-51220de856aa/edit",
+        "title": "Bjarnstatt",
+        "coordinates": {
+          "x": 233,
+          "y": 242,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 264.5,
+          "y": 2432,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-153"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-c528e2f8-f374-41eb-ad3c-10932c90974b",
+      "title": "Hjerimstal",
+      "category": "Siedlungsruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/zerst-rte-siedlung.png",
+      "territoryId": "hesirentum-soekeren",
+      "x": 1011.5,
+      "y": 282,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "c528e2f8-f374-41eb-ad3c-10932c90974b",
+        "url": "https://www.worldanvil.com/world/map/marker/c528e2f8-f374-41eb-ad3c-10932c90974b/edit",
+        "title": "Hjerimstal",
+        "coordinates": {
+          "x": 984,
+          "y": 244,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 1011.5,
+          "y": 2452,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-154"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-new-pin-155",
+      "title": "Unbenannte Siedlungsruine · 155",
+      "category": "Siedlungsruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/zerst-rte-siedlung.png",
+      "territoryId": "region-roriksheim-dunkelhain",
+      "x": 2651.5,
+      "y": 277,
+      "sourceRef": {
+        "provider": "aleria",
+        "recordId": "roriksheim-new-pin-155",
+        "mapPositionId": "new-pin-155",
+        "targetPosition": {
+          "x": 2651.5,
+          "y": 2457,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-155"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-155b53ad-ebbb-41d1-8b01-e3d939102f73",
+      "title": "Thorskirch",
+      "category": "Siedlungsruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/zerst-rte-siedlung.png",
+      "territoryId": "hesirentum-soekeren",
+      "x": 1210,
+      "y": 262,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "155b53ad-ebbb-41d1-8b01-e3d939102f73",
+        "url": "https://www.worldanvil.com/world/map/marker/155b53ad-ebbb-41d1-8b01-e3d939102f73/edit",
+        "title": "Thorskirch",
+        "coordinates": {
+          "x": 1204,
+          "y": 881,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 1210,
+          "y": 2472,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-156"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-new-pin-157",
+      "title": "Unbenannte Siedlungsruine · 157",
+      "category": "Siedlungsruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/zerst-rte-siedlung.png",
+      "territoryId": "region-roriksheim-dunkelhain",
+      "x": 2075.5,
+      "y": 234,
+      "sourceRef": {
+        "provider": "aleria",
+        "recordId": "roriksheim-new-pin-157",
+        "mapPositionId": "new-pin-157",
+        "targetPosition": {
+          "x": 2075.5,
+          "y": 2500,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-157"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-new-pin-158",
+      "title": "Unbenannte Turmruine · 158",
+      "category": "Turmruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/zerst-rter-turm.png",
+      "territoryId": "region-roriksheim-dunkelhain",
+      "x": 1821,
+      "y": 219,
+      "sourceRef": {
+        "provider": "aleria",
+        "recordId": "roriksheim-new-pin-158",
+        "mapPositionId": "new-pin-158",
+        "targetPosition": {
+          "x": 1821,
+          "y": 2515,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-158"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-988424cf-3337-4778-a4d8-35f90b0a3f10",
+      "title": "Rabensheim",
+      "category": "Siedlungsruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/zerst-rte-siedlung.png",
+      "territoryId": "hesirentum-skald",
+      "x": 592.5,
+      "y": 215,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "988424cf-3337-4778-a4d8-35f90b0a3f10",
+        "url": "https://www.worldanvil.com/world/map/marker/988424cf-3337-4778-a4d8-35f90b0a3f10/edit",
+        "title": "Rabensheim",
+        "coordinates": {
+          "x": 514,
+          "y": 158,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 592.5,
+          "y": 2519,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-159"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-new-pin-160",
+      "title": "Unbenannte Siedlungsruine · 160",
+      "category": "Siedlungsruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/zerst-rte-siedlung.png",
+      "territoryId": "region-roriksheim-dunkelhain",
+      "x": 2423.5,
+      "y": 166,
+      "sourceRef": {
+        "provider": "aleria",
+        "recordId": "roriksheim-new-pin-160",
+        "mapPositionId": "new-pin-160",
+        "targetPosition": {
+          "x": 2423.5,
+          "y": 2568,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-160"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-08ce0900-6db0-4a5a-8887-5f8121ce6b73",
+      "title": "Südhall",
+      "category": "Siedlungsruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/zerst-rte-siedlung.png",
+      "territoryId": "region-roriksheim-dunkelhain",
+      "x": 788,
+      "y": 163,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "08ce0900-6db0-4a5a-8887-5f8121ce6b73",
+        "url": "https://www.worldanvil.com/world/map/marker/08ce0900-6db0-4a5a-8887-5f8121ce6b73/edit",
+        "title": "Südhall",
+        "coordinates": {
+          "x": 766,
+          "y": 129,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 788,
+          "y": 2571,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-161"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-new-pin-162",
+      "title": "Unbenannte Turmruine · 162",
+      "category": "Turmruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/zerst-rter-turm.png",
+      "territoryId": "region-roriksheim-dunkelhain",
+      "x": 1007.5,
+      "y": 157,
+      "sourceRef": {
+        "provider": "aleria",
+        "recordId": "roriksheim-new-pin-162",
+        "mapPositionId": "new-pin-162",
+        "targetPosition": {
+          "x": 1007.5,
+          "y": 2577,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-162"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-new-pin-163",
+      "title": "Unbenannte Siedlungsruine · 163",
+      "category": "Siedlungsruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/zerst-rte-siedlung.png",
+      "territoryId": "region-roriksheim-dunkelhain",
+      "x": 150,
+      "y": 106,
+      "sourceRef": {
+        "provider": "aleria",
+        "recordId": "roriksheim-new-pin-163",
+        "mapPositionId": "new-pin-163",
+        "targetPosition": {
+          "x": 150,
+          "y": 2628,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-163"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-new-pin-164",
+      "title": "Unbenannte Siedlungsruine · 164",
+      "category": "Siedlungsruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/zerst-rte-siedlung.png",
+      "territoryId": "region-roriksheim-dunkelhain",
+      "x": 672,
+      "y": 83,
+      "sourceRef": {
+        "provider": "aleria",
+        "recordId": "roriksheim-new-pin-164",
+        "mapPositionId": "new-pin-164",
+        "targetPosition": {
+          "x": 672,
+          "y": 2651,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-164"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-d0cac3c9-0429-4f8a-ac92-dd9885b808ff",
+      "title": "Alfarsborg",
+      "category": "Burgsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/burgsiedlung.png",
+      "territoryId": "thanentum-schwerthohn",
+      "x": 1926,
+      "y": 1859,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "d0cac3c9-0429-4f8a-ac92-dd9885b808ff",
+        "url": "https://www.worldanvil.com/world/map/marker/d0cac3c9-0429-4f8a-ac92-dd9885b808ff/edit",
+        "title": "Alfarsborg",
+        "coordinates": {
+          "x": 1922,
+          "y": 1859,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 1926,
+          "y": 875,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "new-pin-059a"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-9de53d77-6e93-46a5-9140-c8aa5a84c593",
+      "title": "Der Höllenschreiter",
+      "category": "Schiffswrack",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/schiffswrackpin.png",
+      "territoryId": "thanentum-schwerthohn",
+      "x": 1150,
+      "y": 2619,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "9de53d77-6e93-46a5-9140-c8aa5a84c593",
+        "url": "https://www.worldanvil.com/world/map/marker/9de53d77-6e93-46a5-9140-c8aa5a84c593/edit",
+        "title": "Der Höllenschreiter",
+        "coordinates": {
+          "x": 1206,
+          "y": 2314,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 1150,
+          "y": 115,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "roriksheim-wrack-9de53d77-6e93-46a5-9140-c8aa5a84c593"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-2d57ae12-3b3e-4733-a19e-83347510610d",
+      "title": "Die Frostkönigin",
+      "category": "Schiffswrack",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/schiffswrackpin.png",
+      "territoryId": "thanentum-schwerthohn",
+      "x": 1370,
+      "y": 2564,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "2d57ae12-3b3e-4733-a19e-83347510610d",
+        "url": "https://www.worldanvil.com/world/map/marker/2d57ae12-3b3e-4733-a19e-83347510610d/edit",
+        "title": "Die Frostkönigin",
+        "coordinates": {
+          "x": 1168,
+          "y": 2490,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 1370,
+          "y": 170,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "roriksheim-wrack-2d57ae12-3b3e-4733-a19e-83347510610d"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-1bba9337-131a-4fb6-b70c-142f71647f6a",
+      "title": "Der Tiefenschrecken",
+      "category": "Schiffswrack",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/schiffswrackpin.png",
+      "territoryId": "thanentum-schwerthohn",
+      "x": 1220,
+      "y": 2409,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "1bba9337-131a-4fb6-b70c-142f71647f6a",
+        "url": "https://www.worldanvil.com/world/map/marker/1bba9337-131a-4fb6-b70c-142f71647f6a/edit",
+        "title": "Der Tiefenschrecken",
+        "coordinates": {
+          "x": 1321,
+          "y": 2439,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 1220,
+          "y": 325,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "roriksheim-wrack-1bba9337-131a-4fb6-b70c-142f71647f6a"
+        }
+      },
+      "pinMarkerScale": 0.6
+    },
+    {
+      "id": "roriksheim-58ffda9c-51d0-489f-91f1-6d62199716d6",
+      "title": "Sturmflut",
+      "category": "Schiffswrack",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/schiffswrackpin.png",
+      "territoryId": "thanentum-schwerthohn",
+      "x": 1280,
+      "y": 2319,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "58ffda9c-51d0-489f-91f1-6d62199716d6",
+        "url": "https://www.worldanvil.com/world/map/marker/58ffda9c-51d0-489f-91f1-6d62199716d6/edit",
+        "title": "Sturmflut",
+        "coordinates": {
+          "x": 1327,
+          "y": 2612,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2656
+        ],
+        "targetPosition": {
+          "x": 1280,
+          "y": 415,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "roriksheim-wrack-58ffda9c-51d0-489f-91f1-6d62199716d6"
+        }
+      },
+      "pinMarkerScale": 0.6
+    }
+  ],
+  "unpositionedPlaces": [
+    {
+      "id": "roriksheim-3d507063-58f3-4be9-9379-5e30962a333a",
+      "title": "Zarok Stamm",
+      "category": "Kreaturenlager",
+      "templateId": "monsterhort",
+      "icon": "/Karten/assets/icons/welt/kreaturenhort.png",
+      "territoryId": "region-roriksheim-dunkelhain",
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "3d507063-58f3-4be9-9379-5e30962a333a",
+        "url": "https://www.worldanvil.com/world/map/marker/3d507063-58f3-4be9-9379-5e30962a333a/edit",
+        "coordinates": {
+          "x": 1758,
+          "y": 301,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "roriksheim-60ed7fcf-8f55-4163-8a4a-d08d0377fc07",
+      "title": "Grimmlingsstamm",
+      "category": "Kreaturenlager",
+      "templateId": "monsterhort",
+      "icon": "/Karten/assets/icons/welt/kreaturenhort.png",
+      "territoryId": "region-roriksheim-dunkelhain",
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "60ed7fcf-8f55-4163-8a4a-d08d0377fc07",
+        "url": "https://www.worldanvil.com/world/map/marker/60ed7fcf-8f55-4163-8a4a-d08d0377fc07/edit",
+        "coordinates": {
+          "x": 2187,
+          "y": 80,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "roriksheim-8e7304f1-ad17-404e-920e-3a2c6e83f689",
+      "title": "Zarok Stamm",
+      "category": "Kreaturenlager",
+      "templateId": "monsterhort",
+      "icon": "/Karten/assets/icons/welt/kreaturenhort.png",
+      "territoryId": "region-roriksheim-dunkelhain",
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "8e7304f1-ad17-404e-920e-3a2c6e83f689",
+        "url": "https://www.worldanvil.com/world/map/marker/8e7304f1-ad17-404e-920e-3a2c6e83f689/edit",
+        "coordinates": {
+          "x": 1921,
+          "y": 71,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "roriksheim-9ccfea04-d3c8-4d5e-827a-2f630077581f",
+      "title": "Zarok Stamm",
+      "category": "Kreaturenlager",
+      "templateId": "monsterhort",
+      "icon": "/Karten/assets/icons/welt/kreaturenhort.png",
+      "territoryId": "region-roriksheim-dunkelhain",
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "9ccfea04-d3c8-4d5e-827a-2f630077581f",
+        "url": "https://www.worldanvil.com/world/map/marker/9ccfea04-d3c8-4d5e-827a-2f630077581f/edit",
+        "coordinates": {
+          "x": 2072,
+          "y": 272,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    },
+    {
+      "id": "roriksheim-f881d789-5609-44d4-8735-13c70a36f975",
+      "title": "Grimmlingsstamm",
+      "category": "Kreaturenlager",
+      "templateId": "monsterhort",
+      "icon": "/Karten/assets/icons/welt/kreaturenhort.png",
+      "territoryId": "region-roriksheim-dunkelhain",
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "d1683ef9-7ed0-4c62-9e0b-29b98953865f",
+        "markerId": "f881d789-5609-44d4-8735-13c70a36f975",
+        "url": "https://www.worldanvil.com/world/map/marker/f881d789-5609-44d4-8735-13c70a36f975/edit",
+        "coordinates": {
+          "x": 2631,
+          "y": 259,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        }
+      }
+    }
+  ]
+}

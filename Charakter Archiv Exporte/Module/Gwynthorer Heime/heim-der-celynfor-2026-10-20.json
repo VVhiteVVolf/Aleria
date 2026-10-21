@@ -1,0 +1,256 @@
+{
+  "type": "aleria-module-package",
+  "version": 1,
+  "exportedAt": "2026-10-20T00:00:00Z",
+  "module": {
+    "type": "aleria-module",
+    "version": 1,
+    "section": {
+      "key": "Gwynthor-Stadt",
+      "tab": "Völker & Kulturen",
+      "path": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Bannkreis Gwynthor",
+        "Gwynthor-Stadt"
+      ],
+      "desc": "Orte und Wohnhäuser innerhalb Gwynthors."
+    },
+    "entry": {
+      "id": "heim-der-celynfor",
+      "title": "Heim der Celynfor",
+      "subtitle": "Ein jung verheiratetes cenyrisches Paar, zwei Arbeitswege und ein Hund vor dem Herd.",
+      "type": "Privates Wohnhaus",
+      "category": "Gwynthor-Stadt · Zwischen Hafen und Marktviertel",
+      "icon": "⌂",
+      "symbol": "./assets/gwynthor-heime/celynfor/wappen.png",
+      "image": "./assets/gwynthor-heime/celynfor/aussenansicht.png",
+      "previewImage": "./assets/gwynthor-heime/celynfor/aussenansicht.png",
+      "schemaVersion": 1,
+      "multipage": true,
+      "appendCommentsPage": false,
+      "enablePageComments": true,
+      "sessionCast": [
+        "person--haus-celynfor--gwydan",
+        "person--krumme-kanne--llinos"
+      ],
+      "pages": [
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Heim der Celynfor",
+          "commentThreadKey": "celynfor-heim",
+          "image": "./assets/gwynthor-heime/celynfor/aussenansicht.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "description": "<p>Gwydan und Llinos Celynfor haben 1739 geheiratet. Ihr kleines gepachtetes Haus liegt zwischen Hafen und Marktviertel, sodass Gwydan morgens zur Werft und Llinos zur Krummen Kanne gehen kann.</p><p>Gwydan ist Schiffsbaugeselle und arbeitet an Handelsschiffen. Er bessert Planken aus, passt Spanten ein und nimmt die Geduld seines Handwerks mit nach Hause. Llinos arbeitet weiterhin als Hausmagd der Krummen Kanne: Wasser, Lampen und das Sauberhalten der Schankstube gehören zu ihrem Dienst.</p><p>Das meiste im Haus ist gebraucht oder selbst zurechtgemacht. Ein Tisch, zwei Stühle und eine Bettstatt reichen vorerst. Ihr Hund Spant nimmt die einzige freie Stelle am Herd für sich in Anspruch. Kinder haben die beiden noch nicht.</p>",
+          "stats": [
+            [
+              "Ort",
+              "Gwynthor-Stadt · Zwischen Hafen und Marktviertel"
+            ],
+            [
+              "Bewohner",
+              "Gwydan Celynfor (31) · Llinos Celynfor (21)"
+            ],
+            [
+              "Lebensunterhalt",
+              "Gwydan Celynfor: Schiffsbaugeselle · Llinos Celynfor: Hausmagd der Krummen Kanne"
+            ],
+            [
+              "Haushalt",
+              "Gemeinsam nach den Arbeitsschichten"
+            ],
+            [
+              "Wohnverhältnis",
+              "Gepachtetes privates Wohnhaus"
+            ],
+            [
+              "Hauszeichen",
+              "Ein kleines ockerfarbenes Ruderboot auf braunem Holz; schlichter geschlossener Holzrand."
+            ]
+          ]
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Die Celynfor · Familienbio",
+          "commentThreadKey": "celynfor-familienbio",
+          "biographyPage": true,
+          "image": "./assets/gwynthor-heime/celynfor/familienbild.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "stats": [
+            [
+              "Familie",
+              "Gwydan Celynfor (31) · Llinos Celynfor (21)"
+            ],
+            [
+              "Wohnort",
+              "Gwynthor-Stadt · Zwischen Hafen und Marktviertel"
+            ],
+            [
+              "Gemeinsamer Haushalt",
+              "Seit 1739"
+            ]
+          ],
+          "biography": {
+            "portraitFit": "contain",
+            "biographyTitle": "Zwei Arbeitswege, ein gemeinsames Zuhause",
+            "biographyText": "<p>Gwydan und Llinos Celynfor haben erst vor Kurzem ihren eigenen Haushalt gegründet. Seine gelassene Art und ihr freches Lächeln passen gut zusammen. Nach einem langen Arbeitstag genügt oft eine kleine Bemerkung über den schiefen Stuhl oder den anspruchsvollen Hund, um beide zum Lachen zu bringen.</p><p>Kinder haben die beiden noch nicht. Zu ihrem Alltag gehört Spant, ein junger Brág, der neugierig an der Tür wartet und den Platz vor dem Herd für sich beansprucht. Zwischen Arbeitskleidung, Werkzeugbrett und gemeinsamer Truhe wächst langsam ein Zuhause, in dem jedes brauchbare Stück seinen Platz bekommt.</p>",
+            "abilitiesTitle": "Persönlichkeit der Familie",
+            "abilities": [
+              {
+                "title": "Geselligkeit",
+                "detail": "Llinos kommt in der Kanne leicht ins Gespräch, und Gwydan hört gern zu. Zu Hause geht der Gesprächsstoff selten vor dem Brennholz aus.",
+                "icon": "../IconOrdner/Big Traits/Trait_gregarious.png"
+              },
+              {
+                "title": "Gelassenheit",
+                "detail": "Gwydan geht kleine Reparaturen in Ruhe an. Seine Geduld hilft auch dann, wenn Spant etwas verschleppt oder der gemeinsame Tagesplan nicht aufgeht.",
+                "icon": "../IconOrdner/Big Traits/Trait_patient.png"
+              },
+              {
+                "title": "Anpacken",
+                "detail": "Werftarbeit, Wassereimer und Lampendienst lassen wenig Raum für liegen gebliebene Handgriffe. Im eigenen Haus teilen die beiden die nötige Arbeit untereinander auf.",
+                "icon": "../IconOrdner/Big Traits/Trait_diligent.png"
+              },
+              {
+                "title": "Freude am Einfachen",
+                "detail": "Ein brauchbarer Tisch, ein frisch gescheuerter Boden und ein ruhiger Abend reichen vorerst. Gebrauchte Dinge werden passend gemacht und nach und nach ergänzt.",
+                "icon": "../IconOrdner/Big Traits/Trait_content.png"
+              },
+              {
+                "title": "Ein gemeinsamer Anfang",
+                "detail": "Seit der Hochzeit werden Pläne und Ausgaben zusammen besprochen. Beide bringen ihren Verdienst und ihre Fähigkeiten in denselben Haushalt ein.",
+                "icon": "../IconOrdner/Cktraits/Trait_family_first.png"
+              }
+            ],
+            "historyTitle": "Aufbau & Hintergrund",
+            "historyText": "<p>Beide sind Cenyri aus Gwynthor. Seit ihrer Hochzeit 1739 führen sie den Namen Celynfor und wohnen zwischen Hafen und Marktviertel. Gwydan kann von hier zur Werft gehen, Llinos zur Krummen Kanne.</p><p>Llinos arbeitet weiterhin als Hausmagd bei den drei Wirten Merrik, Hrolf und Aedan. Ihr alter Arbeitskreis bleibt Teil ihres Alltags. Gwydan steht als Schiffsbaugeselle im Arbeitsleben und bringt aus seinem Handwerk die Fähigkeit mit, gewöhnlichen Hausrat selbst auszubessern.</p>",
+            "worksTitle": "Im Alltag",
+            "works": [
+              "Zwei Erwachsene und der Familienhund Spant teilen das kleine Haus.",
+              "Zwei Arbeitslöhne tragen den gemeinsamen Haushalt."
+            ],
+            "extraSections": [
+              {
+                "position": "afterWorks",
+                "mode": "text",
+                "title": "Lebensunterhalt & Wirtschaftlichkeit",
+                "text": "<p>Der Haushalt erhält zwei Erwerbseinkommen: Gwydans Gesellenlohn aus dem Schiffsbau und Llinos’ Lohn aus der Krummen Kanne. Damit lassen sich Pacht, Essen, Brennstoff und Kleidung leichter aufteilen. Die beiden achten darauf, Anschaffungen mit den vorhandenen Mitteln zu bezahlen.</p><p>Das Haus ist gepachtet, ein Teil der Einrichtung gebraucht oder selbst zurechtgemacht. Spants Futter und die Pflege von Arbeitskleidung und Werkzeug gehören ebenfalls in die Haushaltskasse. Wenn beide regelmäßig Arbeit haben, bleibt Spielraum für kleine Rücklagen. Eine Krankheit oder eine längere Lücke bei der Werftarbeit würde diesen Spielraum verringern.</p>"
+              }
+            ],
+            "triviaTitle": "Kleine Gewohnheiten",
+            "trivia": [
+              "Llinos hat ein blaues Tuch ans Fenster gehängt.",
+              "Spants Decke liegt am Herd; Gwydans Werkzeug hängt trocken am Brett."
+            ],
+            "quotesTitle": "Am Familientisch",
+            "quotes": [
+              "„Wenn der Tisch wackelt, machen wir ihn eben gerade.“ — Gwydan"
+            ],
+            "connectionsTitle": "Verbindungen & Kontakte",
+            "connections": [
+              {
+                "type": "connection",
+                "name": "Die Krumme Kanne",
+                "detail": "Llinos’ Arbeitsplatz unter Merrik Trevoryn, Hrolf Svathamar und Aedan Dubhdarach; Hausdienst für Wasser, Lampen und Schankstube.",
+                "image": "./assets/krumme-kanne/references/kanne-schild.png",
+                "imageFormat": "square"
+              },
+              {
+                "type": "connection",
+                "name": "Nestwen Trevoryn",
+                "detail": "Die Wäschehüterin der Kanne bringt Llinos nebenbei das Stopfen bei.",
+                "image": "./assets/krumme-kanne/portraits/nestwen.png",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "name": "Schiffsbauer an den Werften",
+                "detail": "Gwydans berufliches Umfeld: gemeinsame Arbeit beim Bau und bei der Ausbesserung von Handelsschiffen.",
+                "image": "./assets/gwynthor-heime/celynfor/gwydan.png",
+                "imageFormat": "portrait"
+              }
+            ],
+            "documentsTitle": "Familienakte",
+            "documents": [
+              {
+                "title": "Familie Celynfor",
+                "icon": "./assets/gwynthor-heime/celynfor/wappen.png",
+                "text": "Der gemeinsame Haushalt und seine Verwandtschaft im kleinen Stammbaum.",
+                "link": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-celynfor&mode=view"
+              }
+            ]
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Familie Celynfor",
+          "commentThreadKey": "celynfor-familie",
+          "familyTreePage": true,
+          "familyTree": {
+            "familyId": "haus-celynfor",
+            "source": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-celynfor&mode=view",
+            "title": "Familie Celynfor · Ein kleiner Haushalt",
+            "height": 640,
+            "intro": "Gwydan Celynfor, 31 Jahre, schiffsbaugeselle · Llinos Celynfor, 21 Jahre, hausmagd der krummen kanne."
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Spant · Der Familienhund",
+          "commentThreadKey": "celynfor-hund",
+          "image": "./assets/gwynthor-heime/celynfor/spant.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "description": "<p>Der kleine Brág ist neugierig, verspielt und bei bekannten Gesichtern sofort freundlich. Bei Schritten vor der Tür meldet er sich kurz und wartet dann auf seine Menschen. Er ist Familienhund, kein ausgebildeter Wachhund.</p><p><a href=\"../Bestiarium/tiere/vieh/haustiere/hunde/brag/index.html\" target=\"_blank\" rel=\"noopener\">Bestiarium · Brág</a></p>",
+          "stats": [
+            [
+              "Name",
+              "Spant"
+            ],
+            [
+              "Rasse",
+              "Brág"
+            ],
+            [
+              "Alter",
+              "2 Jahre"
+            ],
+            [
+              "Zugehörigkeit",
+              "Familie Celynfor"
+            ]
+          ]
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Die Wohnstube",
+          "commentThreadKey": "celynfor-wohnstube",
+          "image": "./assets/gwynthor-heime/celynfor/wohnstube.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Die kleine Wohnstube dient zugleich als Küche. Ein einfaches Doppelbett steht hinter einem Leinenvorhang, daneben die gemeinsame Truhe. Gwydans Werkzeug hängt trocken an einem Brett; Llinos hat ein blaues Tuch ans Fenster gehängt. Vor dem Herd liegt Spants geflickte Decke. Die Dielen sind frisch gescheuert, und durch die angelehnte Tür zieht der Geruch von Holz und Hafenwasser.</p>",
+          "sessionHint": "Ein Besuch bei einer Gwynthorer Familie.",
+          "sessionEmptyTitle": "Ein gewöhnlicher Tag zu Hause",
+          "sessionEmptyText": "Ein Klopfen an der Tür, ein Gespräch am Herd oder eine Nachricht aus dem Viertel.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        }
+      ]
+    }
+  }
+}

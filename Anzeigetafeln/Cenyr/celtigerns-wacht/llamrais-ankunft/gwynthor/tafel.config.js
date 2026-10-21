@@ -7,6 +7,7 @@ window.TAFEL_CONFIG = {
   },
   storage: {
     dataPath: "Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor/data.json",
+    authoredNoticesPath: "Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor/authored-notices.json",
   },
   firebase: {
     collection: "anzeigetafeln",

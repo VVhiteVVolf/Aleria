@@ -815,7 +815,7 @@ export const ECONOMY_EXAMPLES = [
         "label": "",
         "note": "Kost für neun Tage und einfacher Schlafplatz zusätzlich zum Geldlohn; Ansatz zu Selbstkosten.",
         "source": "Hierarchie: Die Krumme Kanne / Zimmer & Versorgung",
-        "name": "Llinos",
+        "name": "Llinos Celynfor",
         "role": "Hausmagd · Wasser & Lampen",
         "areas": [
           "Zimmer & Versorgung"

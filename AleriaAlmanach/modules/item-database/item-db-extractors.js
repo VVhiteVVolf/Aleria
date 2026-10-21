@@ -154,7 +154,7 @@ function itemDbLoadScript(src) {
       return;
     }
     const script = document.createElement('script');
-    script.src = `${safeSrc}${safeSrc.includes('?') ? '&' : '?'}v=20261019-prices-v1`;
+    script.src = `${safeSrc}${safeSrc.includes('?') ? '&' : '?'}v=20261020-arkaneum-v1`;
     script.defer = true;
     script.dataset.itemDbSource = safeSrc;
     script.onload = () => resolve(true);

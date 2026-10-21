@@ -32523,7 +32523,7 @@ test('bildet Bleiddorn als exakt abgegrenzte Wolfshorn-Auswanderungslinie ab', (
   assert.equal(family.cadetBranches.length, 0);
   assert.equal(family.timeJumps.length, 0);
   assert.equal(family.extensions.blankFamily, false);
-  assert.equal(family.extensions.sourceRevision, 1);
+  assert.equal(family.extensions.sourceRevision, HOUSE_BLEIDDORN_FAMILY.extensions.sourceRevision);
 
   for (const personId of expectedPersonIds) {
     const here = family.persons.find(person => person.id === personId);
@@ -32645,7 +32645,7 @@ test('aktualisiert eine lokale Wolfshorn-Revision ohne Personen- oder Hausknoten
 
   const loaded = loadFamilyById('haus-wolfshorn', storage);
   assert.equal(loaded.source, 'registry-upgrade');
-  assert.equal(loaded.family.extensions.sourceRevision, 4);
+  assert.equal(loaded.family.extensions.sourceRevision, HOUSE_WOLFSHORN_FAMILY.extensions.sourceRevision);
   assert.deepEqual(loaded.folderPath, ['Aldrimar', 'Roriksheim', 'Dämmergrund', 'Hornhall']);
   assert.equal(loaded.family.document.houseProfile.barony, 'Dämmergrund');
   assert.equal(loaded.family.persons.length, HOUSE_WOLFSHORN_FAMILY.persons.length);
@@ -32803,7 +32803,7 @@ test('migriert alte Nachkommenknoten von Bleiddorn und Dubhan zu seitlichen Ausw
       legacyPartnershipId: 'marriage-hrolf-liv',
       anchorPersonId: 'hrolf-wolfshorn',
       folderPath: ['Aldrimar', 'Roriksheim', 'Daemmergrund', 'Hornhall'],
-      expectedSourceRevision: 4
+      expectedSourceRevision: HOUSE_WOLFSHORN_FAMILY.extensions.sourceRevision
     },
     {
       id: 'haus-dubhan',
