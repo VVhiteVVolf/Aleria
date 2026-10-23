@@ -1,0 +1,152 @@
+{
+  "territories": [
+    {
+      "id": "jarltum-kraehenmoor",
+      "name": "Jarltum Krähenmoor",
+      "type": "Jarltum",
+      "familyId": "haus-varangr",
+      "house": "Clan Varangr",
+      "crest": "/Stammbäume/assets/images/houses/Aldrimar/clan-varangr.png",
+      "banner": "/Stammbäume/assets/images/regions/aldrimar-kraehenmoor.png",
+      "seat": "Moortal",
+      "parentId": "",
+      "href": "/Kontinente/Estryll/Königreich Aldrimar/Jarltum Krähenmoor/Jarltum Krähenmoor.html"
+    },
+    {
+      "id": "jarltuemliches-thanentum-nebelmoor",
+      "name": "Jarltümliches Thanentum Nebelmoor",
+      "type": "Thanentum",
+      "familyId": "haus-varangr",
+      "house": "Clan Varangr",
+      "crest": "/Stammbäume/assets/images/houses/Aldrimar/clan-varangr.png",
+      "banner": "/Stammbäume/assets/images/regions/aldrimar-kraehenmoor-nebelmoor.png",
+      "seat": "Moortal",
+      "parentId": "jarltum-kraehenmoor",
+      "href": "/Kontinente/Estryll/Königreich Aldrimar/Jarltum Krähenmoor/Jarltümliches Thanentum Nebelmoor/Jarltümliches Thanentum Nebelmoor.html"
+    },
+    {
+      "id": "herrschaft-kaltherz",
+      "name": "Herrschaft der Kaltherzen",
+      "type": "Hesirentum",
+      "familyId": "haus-kaltherz",
+      "house": "Clan Kaltherz",
+      "crest": "/Stammbäume/assets/images/houses/Aldrimar/Kraehenmoor/clan-kaltherz.png",
+      "banner": "/Stammbäume/assets/images/regions/aldrimar-kraehenmoor-nebelmoor.png",
+      "seat": "Norrborg",
+      "parentId": "jarltuemliches-thanentum-nebelmoor",
+      "href": "/Kontinente/Estryll/Königreich Aldrimar/Jarltum Krähenmoor/Jarltümliches Thanentum Nebelmoor/Herrschaft der Kaltherzen/Herrschaft der Kaltherzen.html"
+    },
+    {
+      "id": "herrschaft-feuerherz",
+      "name": "Herrschaft der Feuerherzen",
+      "type": "Hesirentum",
+      "familyId": "haus-feuerherz",
+      "house": "Clan Feuerherz",
+      "crest": "/Stammbäume/assets/images/houses/Aldrimar/Kraehenmoor/clan-feuerherz.png",
+      "banner": "/Stammbäume/assets/images/regions/aldrimar-kraehenmoor-nebelmoor.png",
+      "seat": "Suthborg",
+      "parentId": "jarltuemliches-thanentum-nebelmoor",
+      "href": "/Kontinente/Estryll/Königreich Aldrimar/Jarltum Krähenmoor/Jarltümliches Thanentum Nebelmoor/Herrschaft der Feuerherzen/Herrschaft der Feuerherzen.html"
+    },
+    {
+      "id": "thanentum-rabenweide",
+      "name": "Thanentum Rabenweide",
+      "type": "Thanentum",
+      "familyId": "haus-schattenherz",
+      "house": "Clan Schattenherz",
+      "crest": "/Stammbäume/assets/images/houses/Aldrimar/Kraehenmoor/clan-schattenherz.png",
+      "banner": "/Stammbäume/assets/images/regions/aldrimar-kraehenmoor-rabenweide.png",
+      "seat": "Rabenfurt",
+      "parentId": "jarltum-kraehenmoor",
+      "href": "/Kontinente/Estryll/Königreich Aldrimar/Jarltum Krähenmoor/Thanentum Rabenweide/Thanentum Rabenweide.html"
+    },
+    {
+      "id": "hesirentum-rabenforst",
+      "name": "Hesirentum Rabenforst",
+      "type": "Hesirentum",
+      "familyId": "haus-vragi",
+      "house": "Clan Vragi",
+      "crest": "/Stammbäume/assets/images/houses/Aldrimar/Kraehenmoor/clan-vragi.png",
+      "banner": "/Stammbäume/assets/images/regions/aldrimar-kraehenmoor-rabenforst.png",
+      "seat": "Rabenhain",
+      "parentId": "thanentum-rabenweide",
+      "href": "/Kontinente/Estryll/Königreich Aldrimar/Jarltum Krähenmoor/Thanentum Rabenweide/Hesirentum Rabenforst/Hesirentum Rabenforst.html"
+    },
+    {
+      "id": "thanentum-schimmerkueste",
+      "name": "Thanentum Schimmerküste",
+      "type": "Thanentum",
+      "familyId": "haus-silberblut",
+      "house": "Clan Silberblut · Clan Blutstahl",
+      "crest": "/Stammbäume/assets/images/houses/Aldrimar/Kraehenmoor/clan-silberblut.png",
+      "banner": "/Stammbäume/assets/images/regions/aldrimar-kraehenmoor-schimmerkueste.png",
+      "seat": "Silberquell",
+      "parentId": "jarltum-kraehenmoor",
+      "href": "/Kontinente/Estryll/Königreich Aldrimar/Jarltum Krähenmoor/Thanentum Schimmerküste/Thanentum Schimmerküste.html",
+      "coRulers": [
+        {
+          "house": "Clan Silberblut",
+          "familyId": "haus-silberblut",
+          "crest": "/Stammbäume/assets/images/houses/Aldrimar/Kraehenmoor/clan-silberblut.png",
+          "banner": "/Stammbäume/assets/images/regions/aldrimar-kraehenmoor-schimmerkueste.png",
+          "href": "/Kontinente/Estryll/Königreich Aldrimar/Jarltum Krähenmoor/Thanentum Schimmerküste/Verwaltungsbereich der Silberblut/Verwaltungsbereich der Silberblut.html"
+        },
+        {
+          "house": "Clan Blutstahl",
+          "familyId": "haus-blutstahl",
+          "crest": "/Stammbäume/assets/images/houses/Aldrimar/Kraehenmoor/clan-blutstahl.png",
+          "banner": "/Stammbäume/assets/images/regions/aldrimar-kraehenmoor-schimmerkueste.png",
+          "href": "/Kontinente/Estryll/Königreich Aldrimar/Jarltum Krähenmoor/Thanentum Schimmerküste/Verwaltungsbereich der Blutstahl/Verwaltungsbereich der Blutstahl.html"
+        }
+      ]
+    },
+    {
+      "id": "verwaltung-silberblut",
+      "name": "Verwaltungsbereich der Silberblut",
+      "type": "Verwaltungsbereich",
+      "familyId": "haus-silberblut",
+      "house": "Clan Silberblut",
+      "crest": "/Stammbäume/assets/images/houses/Aldrimar/Kraehenmoor/clan-silberblut.png",
+      "banner": "/Stammbäume/assets/images/regions/aldrimar-kraehenmoor-schimmerkueste.png",
+      "seat": "Silberquell",
+      "parentId": "thanentum-schimmerkueste",
+      "href": "/Kontinente/Estryll/Königreich Aldrimar/Jarltum Krähenmoor/Thanentum Schimmerküste/Verwaltungsbereich der Silberblut/Verwaltungsbereich der Silberblut.html"
+    },
+    {
+      "id": "verwaltung-blutstahl",
+      "name": "Verwaltungsbereich der Blutstahl",
+      "type": "Verwaltungsbereich",
+      "familyId": "haus-blutstahl",
+      "house": "Clan Blutstahl",
+      "crest": "/Stammbäume/assets/images/houses/Aldrimar/Kraehenmoor/clan-blutstahl.png",
+      "banner": "/Stammbäume/assets/images/regions/aldrimar-kraehenmoor-schimmerkueste.png",
+      "seat": "Silberquell",
+      "parentId": "thanentum-schimmerkueste",
+      "href": "/Kontinente/Estryll/Königreich Aldrimar/Jarltum Krähenmoor/Thanentum Schimmerküste/Verwaltungsbereich der Blutstahl/Verwaltungsbereich der Blutstahl.html"
+    },
+    {
+      "id": "hesirentum-goldglanz",
+      "name": "Hesirentum der Goldglanz",
+      "type": "Hesirentum",
+      "familyId": "haus-goldglanz",
+      "house": "Clan Goldglanz",
+      "crest": "/Stammbäume/assets/images/houses/Aldrimar/Kraehenmoor/clan-goldglanz.png",
+      "banner": "/Stammbäume/assets/images/regions/aldrimar-kraehenmoor-schimmerkueste.png",
+      "seat": "Silberquell",
+      "parentId": "thanentum-schimmerkueste",
+      "href": "/Kontinente/Estryll/Königreich Aldrimar/Jarltum Krähenmoor/Thanentum Schimmerküste/Hesirentum der Goldglanz/Hesirentum der Goldglanz.html"
+    },
+    {
+      "id": "hesirentum-schwarzfjord",
+      "name": "Hesirentum Schwarzfjord",
+      "type": "Hesirentum",
+      "familyId": "haus-schwarzblut",
+      "house": "Clan Schwarzblut",
+      "crest": "/Stammbäume/assets/images/houses/Aldrimar/Kraehenmoor/clan-schwarzblut.png",
+      "banner": "/Stammbäume/assets/images/regions/aldrimar-kraehenmoor-schwarzfjord.png",
+      "seat": "Nebelwacht",
+      "parentId": "jarltum-kraehenmoor",
+      "href": "/Kontinente/Estryll/Königreich Aldrimar/Jarltum Krähenmoor/Hesirentum Schwarzfjord/Hesirentum Schwarzfjord.html"
+    }
+  ]
+}

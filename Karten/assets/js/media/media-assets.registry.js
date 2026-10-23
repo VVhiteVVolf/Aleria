@@ -3401,6 +3401,14 @@ window.KARTO_MEDIA_ASSETS = Object.freeze([
     "source": "Hauswappen"
   },
   {
+    "id": "8b321f7db0da6e",
+    "name": "Skellor",
+    "url": "/Stammbäume/assets/images/houses/Rhonwens%20Tr%C3%A4nen/Ritterliche/Skellor.png",
+    "kind": "crest",
+    "group": "Rhonwens Tränen / Ritterliche",
+    "source": "Hauswappen"
+  },
+  {
     "id": "85ec92c1bd70b6",
     "name": "Talinvyr",
     "url": "/Stammbäume/assets/images/houses/Rhonwens%20Tr%C3%A4nen/Ritterliche/Talinvyr.png",
@@ -8521,6 +8529,14 @@ window.KARTO_MEDIA_ASSETS = Object.freeze([
     "source": "Orts- & Regionsbanner"
   },
   {
+    "id": "155c284c06ff73",
+    "name": "tir derwlas",
+    "url": "/Stammbäume/assets/images/regions/Vennyr/tir-derwlas.png",
+    "kind": "region",
+    "group": "Vennyr",
+    "source": "Orts- & Regionsbanner"
+  },
+  {
     "id": "3b9f415f4835d5",
     "name": "Tir Dwyrain",
     "url": "/Stammbäume/assets/images/regions/Vennyr/Tir%20Dwyrain.png",
@@ -8545,9 +8561,33 @@ window.KARTO_MEDIA_ASSETS = Object.freeze([
     "source": "Orts- & Regionsbanner"
   },
   {
+    "id": "d87925c40d9d73",
+    "name": "tir gwanwyn",
+    "url": "/Stammbäume/assets/images/regions/Vennyr/tir-gwanwyn.png",
+    "kind": "region",
+    "group": "Vennyr",
+    "source": "Orts- & Regionsbanner"
+  },
+  {
+    "id": "3e95f628b3ce9f",
+    "name": "tir gwawr",
+    "url": "/Stammbäume/assets/images/regions/Vennyr/tir-gwawr.png",
+    "kind": "region",
+    "group": "Vennyr",
+    "source": "Orts- & Regionsbanner"
+  },
+  {
     "id": "4b21bef713cf27",
     "name": "Tir Mynddoedd",
     "url": "/Stammbäume/assets/images/regions/Vennyr/Tir%20Mynddoedd.png",
+    "kind": "region",
+    "group": "Vennyr",
+    "source": "Orts- & Regionsbanner"
+  },
+  {
+    "id": "e742d3c1dfe71a",
+    "name": "tir traethwyn",
+    "url": "/Stammbäume/assets/images/regions/Vennyr/tir-traethwyn.png",
     "kind": "region",
     "group": "Vennyr",
     "source": "Orts- & Regionsbanner"

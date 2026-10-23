@@ -1,0 +1,48 @@
+{
+  "provider": "worldanvil",
+  "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+  "capturedAt": "2026-10-22",
+  "method": "Direkter Chrome-Zugriff: Markierungsliste und alle 121 einzelnen Bearbeitungsformulare, ausschließlich lesend. Lokale Sicherung der ausgelesenen Formularwerte.",
+  "sourceImageSize": [
+    3826,
+    4097
+  ],
+  "counts": {
+    "sourceMarkers": 121,
+    "importedSourceIds": 103,
+    "newPlaces": 12,
+    "mapPlaces": 115,
+    "omittedSources": 18,
+    "pages": 9
+  },
+  "files": [
+    {
+      "file": "sources/worldanvil-capture.json",
+      "sha256": "134cd7a6255dce58cf3a1f85124e640ab38f731c7c0ac1d13d70c4437baff9e5"
+    },
+    {
+      "file": "sources/worldanvil-markers.parsed.json",
+      "sha256": "8dd67724735faabbeaf30971874bb5203d45c08cfb2e810524fdc8987b1a6813"
+    },
+    {
+      "file": "markers.source.json",
+      "sha256": "b0176d484507ea8a25a51398c18a20a49a77d14bbb5eafdf395397e2cb2266e5"
+    },
+    {
+      "file": "places.source.json",
+      "sha256": "63140858de790ac377d082b76e0a04bcad4cbdbe072b21b40b53831495641fc4"
+    },
+    {
+      "file": "positions.source.json",
+      "sha256": "ed76795beec897bb8bc893013c934849d3173c985f8be1026f998d673a8f283e"
+    },
+    {
+      "file": "territories.import.json",
+      "sha256": "8c72c78b0bdd022a6fe6439c4409d1dc00c44e612797d5a74d35af22b3c37401"
+    },
+    {
+      "file": "import-decisions.source.json",
+      "sha256": "2b28487bf880f07685d89dd2ca44a2c6f7e5b98c22671dc4ac4b070b64ed439b"
+    }
+  ]
+}

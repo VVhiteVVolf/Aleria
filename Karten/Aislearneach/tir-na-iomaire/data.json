@@ -1,0 +1,5618 @@
+{
+  "schemaVersion": 1,
+  "dataPath": "Aislearneach/tir-na-iomaire/data.json",
+  "revision": 1,
+  "updatedAt": "2026-10-22T20:30:00.000Z",
+  "generatedStateHash": "9aa49a09b54e08a1a91033857a02974e3dfff99efaa9121cb72933d2dc26b451",
+  "state": {
+    "pins": [
+      {
+        "id": "aislearneach-74dd1834-58d7-4b8e-a14d-6a374bd82fe7",
+        "title": "Broch an Traigh",
+        "x": 0.92626953125,
+        "y": 0.41019317714755443,
+        "cat": "location-burg",
+        "templateId": "militaer",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/gro-e-burg.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Aislearneach/clan-an-gaisgh.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-gaisgh&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-iomaire.png",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Aislearneach/Herrschaft der An’Gaisgh/Herrschaft der An’Gaisgh.html",
+        "region": "Aislearneach",
+        "house": "Clan An’Gaisgh",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Broch an Traigh"
+          },
+          {
+            "k": "Typ",
+            "v": "Burg"
+          },
+          {
+            "k": "Befehlshaber",
+            "v": ""
+          },
+          {
+            "k": "Unterstellung",
+            "v": ""
+          },
+          {
+            "k": "Besatzung",
+            "v": ""
+          },
+          {
+            "k": "Aufgaben",
+            "v": ""
+          },
+          {
+            "k": "Ausrüstung",
+            "v": ""
+          },
+          {
+            "k": "Befestigung",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          },
+          {
+            "k": "Beschreibung",
+            "v": "Noch nicht ausgearbeitet"
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Clan An’Gaisgh"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "herrschaft-aislearneach-gaisgh",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "e6ebd163-2b46-4ac9-a622-8d8ee7e123b4",
+          "markerId": "74dd1834-58d7-4b8e-a14d-6a374bd82fe7",
+          "url": "https://www.worldanvil.com/world/map/marker/74dd1834-58d7-4b8e-a14d-6a374bd82fe7/edit",
+          "title": "Broch an Traigh",
+          "coordinates": {
+            "x": 3794,
+            "y": 1435,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          },
+          "imageSize": [
+            4096,
+            2433
+          ],
+          "targets": [],
+          "nameStatus": "source"
+        }
+      },
+      {
+        "id": "aislearneach-f2841c0d-46cb-4f66-827f-20036a2518dc",
+        "title": "Koldair",
+        "x": 0.580078125,
+        "y": 0.7570900123304563,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Aislearneach/clan-tir-an-ceallaigh.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-ceallaigh&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-iomaire.png",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Aislearneach/Oberherrschaft Tir na Iomaire/Oberherrschaft Tir na Iomaire.html",
+        "region": "Aislearneach",
+        "house": "Clan Tir An’Ceallaigh",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Koldair"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Clan Tir An’Ceallaigh"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Beschreibung",
+            "v": "Noch nicht ausgearbeitet"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "oberherrschaft-aislearneach-tir-na-iomaire",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "e6ebd163-2b46-4ac9-a622-8d8ee7e123b4",
+          "markerId": "f2841c0d-46cb-4f66-827f-20036a2518dc",
+          "url": "https://www.worldanvil.com/world/map/marker/f2841c0d-46cb-4f66-827f-20036a2518dc/edit",
+          "title": "Koldair",
+          "coordinates": {
+            "x": 2376,
+            "y": 591,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          },
+          "imageSize": [
+            4096,
+            2433
+          ],
+          "targets": [],
+          "nameStatus": "source"
+        }
+      },
+      {
+        "id": "aislearneach-3a0c4e11-340d-4d4f-a6fe-7b0d0f8d4baa",
+        "title": "Broch an Creig",
+        "x": 0.24072265625,
+        "y": 0.9494451294697904,
+        "cat": "location-burg",
+        "templateId": "militaer",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/gro-e-burg.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Aislearneach/clan-na-luchdon.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-luchdon&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-iomaire.png",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Aislearneach/Herrschaft der Na’Luchdon/Herrschaft der Na’Luchdon.html",
+        "region": "Aislearneach",
+        "house": "Clan Na’Luchdon",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Broch an Creig"
+          },
+          {
+            "k": "Typ",
+            "v": "Burg"
+          },
+          {
+            "k": "Befehlshaber",
+            "v": ""
+          },
+          {
+            "k": "Unterstellung",
+            "v": ""
+          },
+          {
+            "k": "Besatzung",
+            "v": ""
+          },
+          {
+            "k": "Aufgaben",
+            "v": ""
+          },
+          {
+            "k": "Ausrüstung",
+            "v": ""
+          },
+          {
+            "k": "Befestigung",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          },
+          {
+            "k": "Beschreibung",
+            "v": "Noch nicht ausgearbeitet"
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Clan Na’Luchdon"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "herrschaft-aislearneach-luchdon",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "e6ebd163-2b46-4ac9-a622-8d8ee7e123b4",
+          "markerId": "3a0c4e11-340d-4d4f-a6fe-7b0d0f8d4baa",
+          "url": "https://www.worldanvil.com/world/map/marker/3a0c4e11-340d-4d4f-a6fe-7b0d0f8d4baa/edit",
+          "title": "Broch an Creig",
+          "coordinates": {
+            "x": 986,
+            "y": 123,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          },
+          "imageSize": [
+            4096,
+            2433
+          ],
+          "targets": [],
+          "nameStatus": "source"
+        }
+      },
+      {
+        "id": "aislearneach-b3cb1727-fbd8-4b34-859f-c01ed4f893e2",
+        "title": "Caladhcuileann",
+        "x": 0.428955078125,
+        "y": 0.8310727496917386,
+        "cat": "mmflry5furso",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/hafensiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Aislearneach/clan-dal-tartarfhuil.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-tartarfhuil&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-iomaire.png",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Aislearneach/Herrschaft der Dal’Tartarfhuil/Herrschaft der Dal’Tartarfhuil.html",
+        "region": "Aislearneach",
+        "house": "Clan Dal’Tartarfhuil",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Caladhcuileann"
+          },
+          {
+            "k": "Typ",
+            "v": "Hafensiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Clan Dal’Tartarfhuil"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Beschreibung",
+            "v": "Noch nicht ausgearbeitet"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "herrschaft-aislearneach-tartarfhuil",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "e6ebd163-2b46-4ac9-a622-8d8ee7e123b4",
+          "markerId": "b3cb1727-fbd8-4b34-859f-c01ed4f893e2",
+          "url": "https://www.worldanvil.com/world/map/marker/b3cb1727-fbd8-4b34-859f-c01ed4f893e2/edit",
+          "title": "Hafensiedlung",
+          "coordinates": {
+            "x": 1757,
+            "y": 411,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          },
+          "imageSize": [
+            4096,
+            2433
+          ],
+          "targets": [],
+          "nameStatus": "generated",
+          "nameDecisionId": "b3cb1727-fbd8-4b34-859f-c01ed4f893e2"
+        }
+      },
+      {
+        "id": "aislearneach-82bd7899-1a99-43ad-a1e6-0b7bbf63d72f",
+        "title": "Caladhglas",
+        "x": 0.09521484375,
+        "y": 0.5803534730785038,
+        "cat": "mmflry5furso",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/hafensiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Aislearneach/clan-na-luchdon.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-luchdon&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-iomaire.png",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Aislearneach/Herrschaft der Na’Luchdon/Herrschaft der Na’Luchdon.html",
+        "region": "Aislearneach",
+        "house": "Clan Na’Luchdon",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Caladhglas"
+          },
+          {
+            "k": "Typ",
+            "v": "Hafensiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Clan Na’Luchdon"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Beschreibung",
+            "v": "Noch nicht ausgearbeitet"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "herrschaft-aislearneach-luchdon",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "e6ebd163-2b46-4ac9-a622-8d8ee7e123b4",
+          "markerId": "82bd7899-1a99-43ad-a1e6-0b7bbf63d72f",
+          "url": "https://www.worldanvil.com/world/map/marker/82bd7899-1a99-43ad-a1e6-0b7bbf63d72f/edit",
+          "title": "Hafensiedlung",
+          "coordinates": {
+            "x": 390,
+            "y": 1021,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          },
+          "imageSize": [
+            4096,
+            2433
+          ],
+          "targets": [],
+          "nameStatus": "generated",
+          "nameDecisionId": "82bd7899-1a99-43ad-a1e6-0b7bbf63d72f"
+        }
+      },
+      {
+        "id": "aislearneach-9547c3a5-4af2-4e1b-b57e-811d19a1daea",
+        "title": "Bailegleann",
+        "x": 0.1748046875,
+        "y": 0.770242498972462,
+        "cat": "mmflrqajby8b",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Aislearneach/clan-na-luchdon.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-luchdon&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-iomaire.png",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Aislearneach/Herrschaft der Na’Luchdon/Herrschaft der Na’Luchdon.html",
+        "region": "Aislearneach",
+        "house": "Clan Na’Luchdon",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Bailegleann"
+          },
+          {
+            "k": "Typ",
+            "v": "Bauernsiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Clan Na’Luchdon"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Beschreibung",
+            "v": "Noch nicht ausgearbeitet"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "herrschaft-aislearneach-luchdon",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "e6ebd163-2b46-4ac9-a622-8d8ee7e123b4",
+          "markerId": "9547c3a5-4af2-4e1b-b57e-811d19a1daea",
+          "url": "https://www.worldanvil.com/world/map/marker/9547c3a5-4af2-4e1b-b57e-811d19a1daea/edit",
+          "title": "Bauernsiedlung",
+          "coordinates": {
+            "x": 716,
+            "y": 559,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          },
+          "imageSize": [
+            4096,
+            2433
+          ],
+          "targets": [],
+          "nameStatus": "generated",
+          "nameDecisionId": "9547c3a5-4af2-4e1b-b57e-811d19a1daea"
+        }
+      },
+      {
+        "id": "aislearneach-966eabb5-677c-4f18-bf5d-abf14dd89b4e",
+        "title": "Gleanntorc",
+        "x": 0.81103515625,
+        "y": 0.2597616111796136,
+        "cat": "mmflt7uj831y",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/waldsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Aislearneach/clan-an-gaisgh.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-gaisgh&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-iomaire.png",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Aislearneach/Herrschaft der An’Gaisgh/Herrschaft der An’Gaisgh.html",
+        "region": "Aislearneach",
+        "house": "Clan An’Gaisgh",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Gleanntorc"
+          },
+          {
+            "k": "Typ",
+            "v": "Waldsiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Clan An’Gaisgh"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Beschreibung",
+            "v": "Noch nicht ausgearbeitet"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "herrschaft-aislearneach-gaisgh",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "e6ebd163-2b46-4ac9-a622-8d8ee7e123b4",
+          "markerId": "966eabb5-677c-4f18-bf5d-abf14dd89b4e",
+          "url": "https://www.worldanvil.com/world/map/marker/966eabb5-677c-4f18-bf5d-abf14dd89b4e/edit",
+          "title": "Waldsiedlung",
+          "coordinates": {
+            "x": 3322,
+            "y": 1801,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          },
+          "imageSize": [
+            4096,
+            2433
+          ],
+          "targets": [],
+          "nameStatus": "generated",
+          "nameDecisionId": "966eabb5-677c-4f18-bf5d-abf14dd89b4e"
+        }
+      },
+      {
+        "id": "aislearneach-98c046b8-3511-4253-ab89-a30f91762036",
+        "title": "Dundeas",
+        "x": 0.818603515625,
+        "y": 0.41019317714755443,
+        "cat": "location-dorf",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/bardensiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Aislearneach/clan-an-gaisgh.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-gaisgh&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-iomaire.png",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Aislearneach/Herrschaft der An’Gaisgh/Herrschaft der An’Gaisgh.html",
+        "region": "Aislearneach",
+        "house": "Clan An’Gaisgh",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Dundeas"
+          },
+          {
+            "k": "Typ",
+            "v": "Dorf"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Clan An’Gaisgh"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Beschreibung",
+            "v": "Noch nicht ausgearbeitet"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "herrschaft-aislearneach-gaisgh",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "e6ebd163-2b46-4ac9-a622-8d8ee7e123b4",
+          "markerId": "98c046b8-3511-4253-ab89-a30f91762036",
+          "url": "https://www.worldanvil.com/world/map/marker/98c046b8-3511-4253-ab89-a30f91762036/edit",
+          "title": "Siedlung",
+          "coordinates": {
+            "x": 3353,
+            "y": 1435,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          },
+          "imageSize": [
+            4096,
+            2433
+          ],
+          "targets": [],
+          "nameStatus": "generated",
+          "nameDecisionId": "98c046b8-3511-4253-ab89-a30f91762036"
+        }
+      },
+      {
+        "id": "aislearneach-9faeae20-8c7c-418c-b8a6-2474622c16bf",
+        "title": "Dungius",
+        "x": 0.117431640625,
+        "y": 0.47718865598027127,
+        "cat": "location-dorf",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/bardensiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Aislearneach/clan-na-luchdon.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-luchdon&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-iomaire.png",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Aislearneach/Herrschaft der Na’Luchdon/Herrschaft der Na’Luchdon.html",
+        "region": "Aislearneach",
+        "house": "Clan Na’Luchdon",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Dungius"
+          },
+          {
+            "k": "Typ",
+            "v": "Dorf"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Clan Na’Luchdon"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Beschreibung",
+            "v": "Noch nicht ausgearbeitet"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "herrschaft-aislearneach-luchdon",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "e6ebd163-2b46-4ac9-a622-8d8ee7e123b4",
+          "markerId": "9faeae20-8c7c-418c-b8a6-2474622c16bf",
+          "url": "https://www.worldanvil.com/world/map/marker/9faeae20-8c7c-418c-b8a6-2474622c16bf/edit",
+          "title": "Siedlung",
+          "coordinates": {
+            "x": 481,
+            "y": 1272,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          },
+          "imageSize": [
+            4096,
+            2433
+          ],
+          "targets": [],
+          "nameStatus": "generated",
+          "nameDecisionId": "9faeae20-8c7c-418c-b8a6-2474622c16bf"
+        }
+      },
+      {
+        "id": "aislearneach-a2a943cc-c6df-4562-8abc-9801e57ab0e0",
+        "title": "Cuancairn",
+        "x": 0.7451171875,
+        "y": 0.5758323057953144,
+        "cat": "mmflry5furso",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/hafensiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Aislearneach/clan-na-fiachiontach.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-fiachiontach&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-iomaire.png",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Aislearneach/Herrschaft der Na’Fiachiontach/Herrschaft der Na’Fiachiontach.html",
+        "region": "Aislearneach",
+        "house": "Clan Na’Fiachiontach",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Cuancairn"
+          },
+          {
+            "k": "Typ",
+            "v": "Hafensiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Clan Na’Fiachiontach"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Beschreibung",
+            "v": "Noch nicht ausgearbeitet"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "herrschaft-aislearneach-fiachiontach",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "e6ebd163-2b46-4ac9-a622-8d8ee7e123b4",
+          "markerId": "a2a943cc-c6df-4562-8abc-9801e57ab0e0",
+          "url": "https://www.worldanvil.com/world/map/marker/a2a943cc-c6df-4562-8abc-9801e57ab0e0/edit",
+          "title": "Hafensiedlung",
+          "coordinates": {
+            "x": 3052,
+            "y": 1032,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          },
+          "imageSize": [
+            4096,
+            2433
+          ],
+          "targets": [],
+          "nameStatus": "generated",
+          "nameDecisionId": "a2a943cc-c6df-4562-8abc-9801e57ab0e0"
+        }
+      },
+      {
+        "id": "aislearneach-a61619f8-0c48-4390-9d0b-31ddfd0ffd2e",
+        "title": "Duncoirce",
+        "x": 0.67578125,
+        "y": 0.5758323057953144,
+        "cat": "location-dorf",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/bardensiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Aislearneach/clan-na-fiachiontach.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-fiachiontach&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-iomaire.png",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Aislearneach/Herrschaft der Na’Fiachiontach/Herrschaft der Na’Fiachiontach.html",
+        "region": "Aislearneach",
+        "house": "Clan Na’Fiachiontach",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Duncoirce"
+          },
+          {
+            "k": "Typ",
+            "v": "Dorf"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Clan Na’Fiachiontach"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Beschreibung",
+            "v": "Noch nicht ausgearbeitet"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "herrschaft-aislearneach-fiachiontach",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "e6ebd163-2b46-4ac9-a622-8d8ee7e123b4",
+          "markerId": "a61619f8-0c48-4390-9d0b-31ddfd0ffd2e",
+          "url": "https://www.worldanvil.com/world/map/marker/a61619f8-0c48-4390-9d0b-31ddfd0ffd2e/edit",
+          "title": "Siedlung",
+          "coordinates": {
+            "x": 2768,
+            "y": 1032,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          },
+          "imageSize": [
+            4096,
+            2433
+          ],
+          "targets": [],
+          "nameStatus": "generated",
+          "nameDecisionId": "a61619f8-0c48-4390-9d0b-31ddfd0ffd2e"
+        }
+      },
+      {
+        "id": "aislearneach-b9bc3f23-5563-49eb-8230-5b148334c3b7",
+        "title": "Inbhiriar",
+        "x": 0.13818359375,
+        "y": 0.83436087135224,
+        "cat": "mmflry5furso",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/hafensiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Aislearneach/clan-na-luchdon.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-luchdon&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-iomaire.png",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Aislearneach/Herrschaft der Na’Luchdon/Herrschaft der Na’Luchdon.html",
+        "region": "Aislearneach",
+        "house": "Clan Na’Luchdon",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Inbhiriar"
+          },
+          {
+            "k": "Typ",
+            "v": "Hafensiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Clan Na’Luchdon"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Beschreibung",
+            "v": "Noch nicht ausgearbeitet"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "herrschaft-aislearneach-luchdon",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "e6ebd163-2b46-4ac9-a622-8d8ee7e123b4",
+          "markerId": "b9bc3f23-5563-49eb-8230-5b148334c3b7",
+          "url": "https://www.worldanvil.com/world/map/marker/b9bc3f23-5563-49eb-8230-5b148334c3b7/edit",
+          "title": "Hafensiedlung",
+          "coordinates": {
+            "x": 566,
+            "y": 403,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          },
+          "imageSize": [
+            4096,
+            2433
+          ],
+          "targets": [],
+          "nameStatus": "generated",
+          "nameDecisionId": "b9bc3f23-5563-49eb-8230-5b148334c3b7"
+        }
+      },
+      {
+        "id": "aislearneach-d4600790-763c-4167-ace4-9bcf1cf58a12",
+        "title": "Maradarach",
+        "x": 0.82275390625,
+        "y": 0.5125359638306617,
+        "cat": "mmflry5furso",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/hafensiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Aislearneach/clan-an-gaisgh.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-gaisgh&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-iomaire.png",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Aislearneach/Herrschaft der An’Gaisgh/Herrschaft der An’Gaisgh.html",
+        "region": "Aislearneach",
+        "house": "Clan An’Gaisgh",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Maradarach"
+          },
+          {
+            "k": "Typ",
+            "v": "Hafensiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Clan An’Gaisgh"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Beschreibung",
+            "v": "Noch nicht ausgearbeitet"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "herrschaft-aislearneach-gaisgh",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "e6ebd163-2b46-4ac9-a622-8d8ee7e123b4",
+          "markerId": "d4600790-763c-4167-ace4-9bcf1cf58a12",
+          "url": "https://www.worldanvil.com/world/map/marker/d4600790-763c-4167-ace4-9bcf1cf58a12/edit",
+          "title": "Hafensiedlung",
+          "coordinates": {
+            "x": 3370,
+            "y": 1186,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          },
+          "imageSize": [
+            4096,
+            2433
+          ],
+          "targets": [],
+          "nameStatus": "generated",
+          "nameDecisionId": "d4600790-763c-4167-ace4-9bcf1cf58a12"
+        }
+      },
+      {
+        "id": "aislearneach-dee0af57-b47e-4688-8707-0b27097005e8",
+        "title": "Cuanmara",
+        "x": 0.932373046875,
+        "y": 0.22112618166872178,
+        "cat": "mmflry5furso",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/hafensiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Aislearneach/clan-an-gaisgh.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-gaisgh&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-iomaire.png",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Aislearneach/Herrschaft der An’Gaisgh/Herrschaft der An’Gaisgh.html",
+        "region": "Aislearneach",
+        "house": "Clan An’Gaisgh",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Cuanmara"
+          },
+          {
+            "k": "Typ",
+            "v": "Hafensiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Clan An’Gaisgh"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Beschreibung",
+            "v": "Noch nicht ausgearbeitet"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "herrschaft-aislearneach-gaisgh",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "e6ebd163-2b46-4ac9-a622-8d8ee7e123b4",
+          "markerId": "dee0af57-b47e-4688-8707-0b27097005e8",
+          "url": "https://www.worldanvil.com/world/map/marker/dee0af57-b47e-4688-8707-0b27097005e8/edit",
+          "title": "Hafensiedlung",
+          "coordinates": {
+            "x": 3819,
+            "y": 1895,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          },
+          "imageSize": [
+            4096,
+            2433
+          ],
+          "targets": [],
+          "nameStatus": "generated",
+          "nameDecisionId": "dee0af57-b47e-4688-8707-0b27097005e8"
+        }
+      },
+      {
+        "id": "aislearneach-def91167-181e-469a-b1e6-c317ab231ae3",
+        "title": "Darachdruim",
+        "x": 0.203125,
+        "y": 0.30086313193588166,
+        "cat": "mmflt7uj831y",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/waldsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Aislearneach/clan-na-luchdon.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-luchdon&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-iomaire.png",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Aislearneach/Herrschaft der Na’Luchdon/Herrschaft der Na’Luchdon.html",
+        "region": "Aislearneach",
+        "house": "Clan Na’Luchdon",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Darachdruim"
+          },
+          {
+            "k": "Typ",
+            "v": "Waldsiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Clan Na’Luchdon"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Beschreibung",
+            "v": "Noch nicht ausgearbeitet"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "herrschaft-aislearneach-luchdon",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "e6ebd163-2b46-4ac9-a622-8d8ee7e123b4",
+          "markerId": "def91167-181e-469a-b1e6-c317ab231ae3",
+          "url": "https://www.worldanvil.com/world/map/marker/def91167-181e-469a-b1e6-c317ab231ae3/edit",
+          "title": "Waldsiedlung",
+          "coordinates": {
+            "x": 832,
+            "y": 1701,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          },
+          "imageSize": [
+            4096,
+            2433
+          ],
+          "targets": [],
+          "nameStatus": "generated",
+          "nameDecisionId": "def91167-181e-469a-b1e6-c317ab231ae3"
+        }
+      },
+      {
+        "id": "aislearneach-eaaa6417-2de4-4820-bf49-ec84bb3e8760",
+        "title": "Dailreoth",
+        "x": 0.6083984375,
+        "y": 0.5195232223592272,
+        "cat": "mmflrqajby8b",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Aislearneach/clan-na-fiachiontach.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-fiachiontach&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-iomaire.png",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Aislearneach/Herrschaft der Na’Fiachiontach/Herrschaft der Na’Fiachiontach.html",
+        "region": "Aislearneach",
+        "house": "Clan Na’Fiachiontach",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Dailreoth"
+          },
+          {
+            "k": "Typ",
+            "v": "Bauernsiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Clan Na’Fiachiontach"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Beschreibung",
+            "v": "Noch nicht ausgearbeitet"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "herrschaft-aislearneach-fiachiontach",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "e6ebd163-2b46-4ac9-a622-8d8ee7e123b4",
+          "markerId": "eaaa6417-2de4-4820-bf49-ec84bb3e8760",
+          "url": "https://www.worldanvil.com/world/map/marker/eaaa6417-2de4-4820-bf49-ec84bb3e8760/edit",
+          "title": "Bauernsiedlung",
+          "coordinates": {
+            "x": 2492,
+            "y": 1169,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          },
+          "imageSize": [
+            4096,
+            2433
+          ],
+          "targets": [],
+          "nameStatus": "generated",
+          "nameDecisionId": "eaaa6417-2de4-4820-bf49-ec84bb3e8760"
+        }
+      },
+      {
+        "id": "aislearneach-f0859ff9-7b66-43d2-add6-9ca846908af7",
+        "title": "Fiodhseagal",
+        "x": 0.18408203125,
+        "y": 0.5269214960953555,
+        "cat": "mmflt7uj831y",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/waldsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Aislearneach/clan-na-luchdon.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-luchdon&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-iomaire.png",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Aislearneach/Herrschaft der Na’Luchdon/Herrschaft der Na’Luchdon.html",
+        "region": "Aislearneach",
+        "house": "Clan Na’Luchdon",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Fiodhseagal"
+          },
+          {
+            "k": "Typ",
+            "v": "Waldsiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Clan Na’Luchdon"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Beschreibung",
+            "v": "Noch nicht ausgearbeitet"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "herrschaft-aislearneach-luchdon",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "e6ebd163-2b46-4ac9-a622-8d8ee7e123b4",
+          "markerId": "f0859ff9-7b66-43d2-add6-9ca846908af7",
+          "url": "https://www.worldanvil.com/world/map/marker/f0859ff9-7b66-43d2-add6-9ca846908af7/edit",
+          "title": "Waldsiedlung",
+          "coordinates": {
+            "x": 754,
+            "y": 1151,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          },
+          "imageSize": [
+            4096,
+            2433
+          ],
+          "targets": [],
+          "nameStatus": "generated",
+          "nameDecisionId": "f0859ff9-7b66-43d2-add6-9ca846908af7"
+        }
+      },
+      {
+        "id": "aislearneach-1774c652-1b0d-49e1-9749-17cda260d9dd",
+        "title": "Unbenannter Turm",
+        "x": 0.74658203125,
+        "y": 0.4882860665844636,
+        "cat": "location-turm",
+        "templateId": "militaer",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/turm.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Aislearneach/clan-na-fiachiontach.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-fiachiontach&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-iomaire.png",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Aislearneach/Herrschaft der Na’Fiachiontach/Herrschaft der Na’Fiachiontach.html",
+        "region": "Aislearneach",
+        "house": "Clan Na’Fiachiontach",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Unbenannt"
+          },
+          {
+            "k": "Typ",
+            "v": "Turm"
+          },
+          {
+            "k": "Befehlshaber",
+            "v": ""
+          },
+          {
+            "k": "Unterstellung",
+            "v": ""
+          },
+          {
+            "k": "Besatzung",
+            "v": ""
+          },
+          {
+            "k": "Aufgaben",
+            "v": ""
+          },
+          {
+            "k": "Ausrüstung",
+            "v": ""
+          },
+          {
+            "k": "Befestigung",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          },
+          {
+            "k": "Beschreibung",
+            "v": "Noch nicht ausgearbeitet"
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Clan Na’Fiachiontach"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "herrschaft-aislearneach-fiachiontach",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "e6ebd163-2b46-4ac9-a622-8d8ee7e123b4",
+          "markerId": "1774c652-1b0d-49e1-9749-17cda260d9dd",
+          "url": "https://www.worldanvil.com/world/map/marker/1774c652-1b0d-49e1-9749-17cda260d9dd/edit",
+          "title": "Wachtturm",
+          "coordinates": {
+            "x": 3058,
+            "y": 1245,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          },
+          "imageSize": [
+            4096,
+            2433
+          ],
+          "targets": [],
+          "nameStatus": "missing"
+        }
+      },
+      {
+        "id": "aislearneach-17b45765-23ae-47e6-9f86-a2d4f2742d65",
+        "title": "Cluainnaomh",
+        "x": 0.41455078125,
+        "y": 0.5770653514180024,
+        "cat": "mmflrqajby8b",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Aislearneach/clan-dal-tartarfhuil.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-tartarfhuil&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-iomaire.png",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Aislearneach/Herrschaft der Dal’Tartarfhuil/Herrschaft der Dal’Tartarfhuil.html",
+        "region": "Aislearneach",
+        "house": "Clan Dal’Tartarfhuil",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Cluainnaomh"
+          },
+          {
+            "k": "Typ",
+            "v": "Bauernsiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Clan Dal’Tartarfhuil"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Beschreibung",
+            "v": "Noch nicht ausgearbeitet"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "herrschaft-aislearneach-tartarfhuil",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "e6ebd163-2b46-4ac9-a622-8d8ee7e123b4",
+          "markerId": "17b45765-23ae-47e6-9f86-a2d4f2742d65",
+          "url": "https://www.worldanvil.com/world/map/marker/17b45765-23ae-47e6-9f86-a2d4f2742d65/edit",
+          "title": "Bauernsiedlung",
+          "coordinates": {
+            "x": 1698,
+            "y": 1029,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          },
+          "imageSize": [
+            4096,
+            2433
+          ],
+          "targets": [],
+          "nameStatus": "generated",
+          "nameDecisionId": "17b45765-23ae-47e6-9f86-a2d4f2742d65"
+        }
+      },
+      {
+        "id": "aislearneach-1bbdd5db-8093-4721-88f2-dc38df60074d",
+        "title": "Rathreoth",
+        "x": 0.5234375,
+        "y": 0.32552404438964244,
+        "cat": "location-dorf",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/bardensiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Aislearneach/clan-na-fiachiontach.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-fiachiontach&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-iomaire.png",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Aislearneach/Herrschaft der Na’Fiachiontach/Herrschaft der Na’Fiachiontach.html",
+        "region": "Aislearneach",
+        "house": "Clan Na’Fiachiontach",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Rathreoth"
+          },
+          {
+            "k": "Typ",
+            "v": "Dorf"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Clan Na’Fiachiontach"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Beschreibung",
+            "v": "Noch nicht ausgearbeitet"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "herrschaft-aislearneach-fiachiontach",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "e6ebd163-2b46-4ac9-a622-8d8ee7e123b4",
+          "markerId": "1bbdd5db-8093-4721-88f2-dc38df60074d",
+          "url": "https://www.worldanvil.com/world/map/marker/1bbdd5db-8093-4721-88f2-dc38df60074d/edit",
+          "title": "Siedlung",
+          "coordinates": {
+            "x": 2144,
+            "y": 1641,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          },
+          "imageSize": [
+            4096,
+            2433
+          ],
+          "targets": [],
+          "nameStatus": "generated",
+          "nameDecisionId": "1bbdd5db-8093-4721-88f2-dc38df60074d"
+        }
+      },
+      {
+        "id": "aislearneach-1d71bb25-2d78-41ae-8d42-e10a23f695e0",
+        "title": "Gleanncoirce",
+        "x": 0.372314453125,
+        "y": 0.7081792026304974,
+        "cat": "location-dorf",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/bardensiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Aislearneach/clan-dal-tartarfhuil.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-tartarfhuil&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-iomaire.png",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Aislearneach/Herrschaft der Dal’Tartarfhuil/Herrschaft der Dal’Tartarfhuil.html",
+        "region": "Aislearneach",
+        "house": "Clan Dal’Tartarfhuil",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Gleanncoirce"
+          },
+          {
+            "k": "Typ",
+            "v": "Dorf"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Clan Dal’Tartarfhuil"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Beschreibung",
+            "v": "Noch nicht ausgearbeitet"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "herrschaft-aislearneach-tartarfhuil",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "e6ebd163-2b46-4ac9-a622-8d8ee7e123b4",
+          "markerId": "1d71bb25-2d78-41ae-8d42-e10a23f695e0",
+          "url": "https://www.worldanvil.com/world/map/marker/1d71bb25-2d78-41ae-8d42-e10a23f695e0/edit",
+          "title": "Siedlung",
+          "coordinates": {
+            "x": 1525,
+            "y": 710,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          },
+          "imageSize": [
+            4096,
+            2433
+          ],
+          "targets": [],
+          "nameStatus": "generated",
+          "nameDecisionId": "1d71bb25-2d78-41ae-8d42-e10a23f695e0"
+        }
+      },
+      {
+        "id": "aislearneach-1fc6eff7-4c52-4d47-a440-e1b77cf9ffeb",
+        "title": "Dailceo",
+        "x": 0.20556640625,
+        "y": 0.6526921496095355,
+        "cat": "mmflrqajby8b",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Aislearneach/clan-na-luchdon.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-luchdon&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-iomaire.png",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Aislearneach/Herrschaft der Na’Luchdon/Herrschaft der Na’Luchdon.html",
+        "region": "Aislearneach",
+        "house": "Clan Na’Luchdon",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Dailceo"
+          },
+          {
+            "k": "Typ",
+            "v": "Bauernsiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Clan Na’Luchdon"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Beschreibung",
+            "v": "Noch nicht ausgearbeitet"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "herrschaft-aislearneach-luchdon",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "e6ebd163-2b46-4ac9-a622-8d8ee7e123b4",
+          "markerId": "1fc6eff7-4c52-4d47-a440-e1b77cf9ffeb",
+          "url": "https://www.worldanvil.com/world/map/marker/1fc6eff7-4c52-4d47-a440-e1b77cf9ffeb/edit",
+          "title": "Bauernsiedlung",
+          "coordinates": {
+            "x": 842,
+            "y": 845,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          },
+          "imageSize": [
+            4096,
+            2433
+          ],
+          "targets": [],
+          "nameStatus": "generated",
+          "nameDecisionId": "1fc6eff7-4c52-4d47-a440-e1b77cf9ffeb"
+        }
+      },
+      {
+        "id": "aislearneach-24f5c78e-58f2-4ca3-887d-0f0d23078b57",
+        "title": "Lochfraoch",
+        "x": 0.341552734375,
+        "y": 0.821619399917797,
+        "cat": "mmflry5furso",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/hafensiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Aislearneach/clan-na-luchdon.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-luchdon&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-iomaire.png",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Aislearneach/Herrschaft der Na’Luchdon/Herrschaft der Na’Luchdon.html",
+        "region": "Aislearneach",
+        "house": "Clan Na’Luchdon",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Lochfraoch"
+          },
+          {
+            "k": "Typ",
+            "v": "Hafensiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Clan Na’Luchdon"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Beschreibung",
+            "v": "Noch nicht ausgearbeitet"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "herrschaft-aislearneach-luchdon",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "e6ebd163-2b46-4ac9-a622-8d8ee7e123b4",
+          "markerId": "24f5c78e-58f2-4ca3-887d-0f0d23078b57",
+          "url": "https://www.worldanvil.com/world/map/marker/24f5c78e-58f2-4ca3-887d-0f0d23078b57/edit",
+          "title": "Hafensiedlung",
+          "coordinates": {
+            "x": 1399,
+            "y": 434,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          },
+          "imageSize": [
+            4096,
+            2433
+          ],
+          "targets": [],
+          "nameStatus": "generated",
+          "nameDecisionId": "24f5c78e-58f2-4ca3-887d-0f0d23078b57"
+        }
+      },
+      {
+        "id": "aislearneach-29e95490-afd9-4c0e-a49f-dfaed2b3a61e",
+        "title": "Cluaincairn",
+        "x": 0.63330078125,
+        "y": 0.3962186600904234,
+        "cat": "mmflrqajby8b",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Aislearneach/clan-na-fiachiontach.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-fiachiontach&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-iomaire.png",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Aislearneach/Herrschaft der Na’Fiachiontach/Herrschaft der Na’Fiachiontach.html",
+        "region": "Aislearneach",
+        "house": "Clan Na’Fiachiontach",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Cluaincairn"
+          },
+          {
+            "k": "Typ",
+            "v": "Bauernsiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Clan Na’Fiachiontach"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Beschreibung",
+            "v": "Noch nicht ausgearbeitet"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "herrschaft-aislearneach-fiachiontach",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "e6ebd163-2b46-4ac9-a622-8d8ee7e123b4",
+          "markerId": "29e95490-afd9-4c0e-a49f-dfaed2b3a61e",
+          "url": "https://www.worldanvil.com/world/map/marker/29e95490-afd9-4c0e-a49f-dfaed2b3a61e/edit",
+          "title": "Bauernsiedlung",
+          "coordinates": {
+            "x": 2594,
+            "y": 1469,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          },
+          "imageSize": [
+            4096,
+            2433
+          ],
+          "targets": [],
+          "nameStatus": "generated",
+          "nameDecisionId": "29e95490-afd9-4c0e-a49f-dfaed2b3a61e"
+        }
+      },
+      {
+        "id": "aislearneach-2bcba534-6ce8-4e39-b45a-9f98567855cd",
+        "title": "Unbenannter Turm",
+        "x": 0.0908203125,
+        "y": 0.7348951911220716,
+        "cat": "location-turm",
+        "templateId": "militaer",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/turm.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Aislearneach/clan-na-luchdon.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-luchdon&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-iomaire.png",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Aislearneach/Herrschaft der Na’Luchdon/Herrschaft der Na’Luchdon.html",
+        "region": "Aislearneach",
+        "house": "Clan Na’Luchdon",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Unbenannt"
+          },
+          {
+            "k": "Typ",
+            "v": "Turm"
+          },
+          {
+            "k": "Befehlshaber",
+            "v": ""
+          },
+          {
+            "k": "Unterstellung",
+            "v": ""
+          },
+          {
+            "k": "Besatzung",
+            "v": ""
+          },
+          {
+            "k": "Aufgaben",
+            "v": ""
+          },
+          {
+            "k": "Ausrüstung",
+            "v": ""
+          },
+          {
+            "k": "Befestigung",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          },
+          {
+            "k": "Beschreibung",
+            "v": "Noch nicht ausgearbeitet"
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Clan Na’Luchdon"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "herrschaft-aislearneach-luchdon",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "e6ebd163-2b46-4ac9-a622-8d8ee7e123b4",
+          "markerId": "2bcba534-6ce8-4e39-b45a-9f98567855cd",
+          "url": "https://www.worldanvil.com/world/map/marker/2bcba534-6ce8-4e39-b45a-9f98567855cd/edit",
+          "title": "Wachtturm",
+          "coordinates": {
+            "x": 372,
+            "y": 645,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          },
+          "imageSize": [
+            4096,
+            2433
+          ],
+          "targets": [],
+          "nameStatus": "missing"
+        }
+      },
+      {
+        "id": "aislearneach-08c94d97-8998-4249-853e-ec0c14fec44f",
+        "title": "Gleanntalamh",
+        "x": 0.65380859375,
+        "y": 0.2918207973695027,
+        "cat": "mmflt7uj831y",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/waldsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Aislearneach/clan-na-fiachiontach.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-fiachiontach&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-iomaire.png",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Aislearneach/Herrschaft der Na’Fiachiontach/Herrschaft der Na’Fiachiontach.html",
+        "region": "Aislearneach",
+        "house": "Clan Na’Fiachiontach",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Gleanntalamh"
+          },
+          {
+            "k": "Typ",
+            "v": "Waldsiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Clan Na’Fiachiontach"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Beschreibung",
+            "v": "Noch nicht ausgearbeitet"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "herrschaft-aislearneach-fiachiontach",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "e6ebd163-2b46-4ac9-a622-8d8ee7e123b4",
+          "markerId": "08c94d97-8998-4249-853e-ec0c14fec44f",
+          "url": "https://www.worldanvil.com/world/map/marker/08c94d97-8998-4249-853e-ec0c14fec44f/edit",
+          "title": "Waldsiedlung",
+          "coordinates": {
+            "x": 2678,
+            "y": 1723,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          },
+          "imageSize": [
+            4096,
+            2433
+          ],
+          "targets": [],
+          "nameStatus": "generated",
+          "nameDecisionId": "08c94d97-8998-4249-853e-ec0c14fec44f"
+        }
+      },
+      {
+        "id": "aislearneach-43db6d48-7331-4790-8cc1-b0804bbc2077",
+        "title": "Unbenannter Ahnenbaum",
+        "x": 0.677734375,
+        "y": 0.07973695026715988,
+        "cat": "location-ahnenbaum",
+        "templateId": "natur",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/ahnenbaum.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Aislearneach/clan-an-gaisgh.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-gaisgh&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-iomaire.png",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Aislearneach/Herrschaft der An’Gaisgh/Herrschaft der An’Gaisgh.html",
+        "region": "Aislearneach",
+        "house": "Clan An’Gaisgh",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Unbenannt"
+          },
+          {
+            "k": "Typ",
+            "v": "Ahnenbaum"
+          },
+          {
+            "k": "Baumart",
+            "v": ""
+          },
+          {
+            "k": "Alter",
+            "v": ""
+          },
+          {
+            "k": "Verehrte Ahnen",
+            "v": ""
+          },
+          {
+            "k": "Hüter",
+            "v": ""
+          },
+          {
+            "k": "Rituale",
+            "v": ""
+          },
+          {
+            "k": "Magische Einflüsse",
+            "v": ""
+          },
+          {
+            "k": "Überlieferungen",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          },
+          {
+            "k": "Beschreibung",
+            "v": "Noch nicht ausgearbeitet"
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Clan An’Gaisgh"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "herrschaft-aislearneach-gaisgh",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "e6ebd163-2b46-4ac9-a622-8d8ee7e123b4",
+          "markerId": "43db6d48-7331-4790-8cc1-b0804bbc2077",
+          "url": "https://www.worldanvil.com/world/map/marker/43db6d48-7331-4790-8cc1-b0804bbc2077/edit",
+          "title": "Ahnenbaum",
+          "coordinates": {
+            "x": 2776,
+            "y": 2239,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          },
+          "imageSize": [
+            4096,
+            2433
+          ],
+          "targets": [],
+          "nameStatus": "missing"
+        }
+      },
+      {
+        "id": "aislearneach-44d33bc9-3a33-4939-9299-77a529ac9420",
+        "title": "Cluaintuil",
+        "x": 0.267578125,
+        "y": 0.697081792026305,
+        "cat": "mmflrqajby8b",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Aislearneach/clan-na-luchdon.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-luchdon&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-iomaire.png",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Aislearneach/Herrschaft der Na’Luchdon/Herrschaft der Na’Luchdon.html",
+        "region": "Aislearneach",
+        "house": "Clan Na’Luchdon",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Cluaintuil"
+          },
+          {
+            "k": "Typ",
+            "v": "Bauernsiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Clan Na’Luchdon"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Beschreibung",
+            "v": "Noch nicht ausgearbeitet"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "herrschaft-aislearneach-luchdon",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "e6ebd163-2b46-4ac9-a622-8d8ee7e123b4",
+          "markerId": "44d33bc9-3a33-4939-9299-77a529ac9420",
+          "url": "https://www.worldanvil.com/world/map/marker/44d33bc9-3a33-4939-9299-77a529ac9420/edit",
+          "title": "Bauernsiedlung",
+          "coordinates": {
+            "x": 1096,
+            "y": 737,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          },
+          "imageSize": [
+            4096,
+            2433
+          ],
+          "targets": [],
+          "nameStatus": "generated",
+          "nameDecisionId": "44d33bc9-3a33-4939-9299-77a529ac9420"
+        }
+      },
+      {
+        "id": "aislearneach-5c5db4cf-de93-43a8-bb97-7d3e8a0645e0",
+        "title": "Unbenannter Ahnenbaum",
+        "x": 0.28955078125,
+        "y": 0.4027949034114262,
+        "cat": "location-ahnenbaum",
+        "templateId": "natur",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/ahnenbaum.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Aislearneach/clan-tir-an-ceallaigh.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-ceallaigh&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-iomaire.png",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Aislearneach/Oberherrschaft Tir na Iomaire/Oberherrschaft Tir na Iomaire.html",
+        "region": "Aislearneach",
+        "house": "Clan Tir An’Ceallaigh",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Unbenannt"
+          },
+          {
+            "k": "Typ",
+            "v": "Ahnenbaum"
+          },
+          {
+            "k": "Baumart",
+            "v": ""
+          },
+          {
+            "k": "Alter",
+            "v": ""
+          },
+          {
+            "k": "Verehrte Ahnen",
+            "v": ""
+          },
+          {
+            "k": "Hüter",
+            "v": ""
+          },
+          {
+            "k": "Rituale",
+            "v": ""
+          },
+          {
+            "k": "Magische Einflüsse",
+            "v": ""
+          },
+          {
+            "k": "Überlieferungen",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          },
+          {
+            "k": "Beschreibung",
+            "v": "Noch nicht ausgearbeitet"
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Clan Tir An’Ceallaigh"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "oberherrschaft-aislearneach-tir-na-iomaire",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "e6ebd163-2b46-4ac9-a622-8d8ee7e123b4",
+          "markerId": "5c5db4cf-de93-43a8-bb97-7d3e8a0645e0",
+          "url": "https://www.worldanvil.com/world/map/marker/5c5db4cf-de93-43a8-bb97-7d3e8a0645e0/edit",
+          "title": "Ahnenbaum",
+          "coordinates": {
+            "x": 1186,
+            "y": 1453,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          },
+          "imageSize": [
+            4096,
+            2433
+          ],
+          "targets": [],
+          "nameStatus": "missing"
+        }
+      },
+      {
+        "id": "aislearneach-610193ea-8a01-4162-8353-4389e5339d53",
+        "title": "Torrachadh",
+        "x": 0.50341796875,
+        "y": 0.5421290587751747,
+        "cat": "location-dorf",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/bardensiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Aislearneach/clan-dal-tartarfhuil.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-tartarfhuil&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-iomaire.png",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Aislearneach/Herrschaft der Dal’Tartarfhuil/Herrschaft der Dal’Tartarfhuil.html",
+        "region": "Aislearneach",
+        "house": "Clan Dal’Tartarfhuil",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Torrachadh"
+          },
+          {
+            "k": "Typ",
+            "v": "Dorf"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Clan Dal’Tartarfhuil"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Beschreibung",
+            "v": "Noch nicht ausgearbeitet"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "herrschaft-aislearneach-tartarfhuil",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "e6ebd163-2b46-4ac9-a622-8d8ee7e123b4",
+          "markerId": "610193ea-8a01-4162-8353-4389e5339d53",
+          "url": "https://www.worldanvil.com/world/map/marker/610193ea-8a01-4162-8353-4389e5339d53/edit",
+          "title": "Siedlung",
+          "coordinates": {
+            "x": 2062,
+            "y": 1114,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          },
+          "imageSize": [
+            4096,
+            2433
+          ],
+          "targets": [],
+          "nameStatus": "generated",
+          "nameDecisionId": "610193ea-8a01-4162-8353-4389e5339d53"
+        }
+      },
+      {
+        "id": "aislearneach-64c983f9-7bfd-4415-87cc-79ab4eb5568e",
+        "title": "Fiodhtorc",
+        "x": 0.421875,
+        "y": 0.3444307439375257,
+        "cat": "mmflt7uj831y",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/waldsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Aislearneach/clan-dal-tartarfhuil.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-tartarfhuil&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-iomaire.png",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Aislearneach/Herrschaft der Dal’Tartarfhuil/Herrschaft der Dal’Tartarfhuil.html",
+        "region": "Aislearneach",
+        "house": "Clan Dal’Tartarfhuil",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Fiodhtorc"
+          },
+          {
+            "k": "Typ",
+            "v": "Waldsiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Clan Dal’Tartarfhuil"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Beschreibung",
+            "v": "Noch nicht ausgearbeitet"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "herrschaft-aislearneach-tartarfhuil",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "e6ebd163-2b46-4ac9-a622-8d8ee7e123b4",
+          "markerId": "64c983f9-7bfd-4415-87cc-79ab4eb5568e",
+          "url": "https://www.worldanvil.com/world/map/marker/64c983f9-7bfd-4415-87cc-79ab4eb5568e/edit",
+          "title": "Waldsiedlung",
+          "coordinates": {
+            "x": 1728,
+            "y": 1595,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          },
+          "imageSize": [
+            4096,
+            2433
+          ],
+          "targets": [],
+          "nameStatus": "generated",
+          "nameDecisionId": "64c983f9-7bfd-4415-87cc-79ab4eb5568e"
+        }
+      },
+      {
+        "id": "aislearneach-6d1d1788-a5af-4064-ab52-08471fc578f7",
+        "title": "Frithtuil",
+        "x": 0.31201171875,
+        "y": 0.585285655569256,
+        "cat": "mmflt7uj831y",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/waldsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Aislearneach/clan-dal-tartarfhuil.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-tartarfhuil&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-iomaire.png",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Aislearneach/Herrschaft der Dal’Tartarfhuil/Herrschaft der Dal’Tartarfhuil.html",
+        "region": "Aislearneach",
+        "house": "Clan Dal’Tartarfhuil",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Frithtuil"
+          },
+          {
+            "k": "Typ",
+            "v": "Waldsiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Clan Dal’Tartarfhuil"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Beschreibung",
+            "v": "Noch nicht ausgearbeitet"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "herrschaft-aislearneach-tartarfhuil",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "e6ebd163-2b46-4ac9-a622-8d8ee7e123b4",
+          "markerId": "6d1d1788-a5af-4064-ab52-08471fc578f7",
+          "url": "https://www.worldanvil.com/world/map/marker/6d1d1788-a5af-4064-ab52-08471fc578f7/edit",
+          "title": "Waldsiedlung",
+          "coordinates": {
+            "x": 1278,
+            "y": 1009,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          },
+          "imageSize": [
+            4096,
+            2433
+          ],
+          "targets": [],
+          "nameStatus": "generated",
+          "nameDecisionId": "6d1d1788-a5af-4064-ab52-08471fc578f7"
+        }
+      }
+    ],
+    "cats": [
+      {
+        "id": "mmflrbzxydg7",
+        "label": "Hauptstadt",
+        "color": "#ff0000"
+      },
+      {
+        "id": "mmflrqajby8b",
+        "label": "Bauernsiedlung",
+        "color": "#6060b0"
+      },
+      {
+        "id": "mmflry5furso",
+        "label": "Hafensiedlung",
+        "color": "#b03030"
+      },
+      {
+        "id": "mmfls5afqqpr",
+        "label": "Burgsiedlung",
+        "color": "#9050b0"
+      },
+      {
+        "id": "mmflsfqh3sft",
+        "label": "Handelssiedlung",
+        "color": "#3a8a3a"
+      },
+      {
+        "id": "mmflsrndeiee",
+        "label": "Brückensiedlung",
+        "color": "#2a7aaa"
+      },
+      {
+        "id": "mmflt1x3v22o",
+        "label": "Bergbausiedlung",
+        "color": "#7a6040"
+      },
+      {
+        "id": "mmflt7uj831y",
+        "label": "Waldsiedlung",
+        "color": "#c07030"
+      },
+      {
+        "id": "mmflteurd4n5",
+        "label": "Kirchensiedlung",
+        "color": "#508080"
+      },
+      {
+        "id": "mmfltia1m3s7",
+        "label": "Leuchtturmsiedlung",
+        "color": "#c49a20"
+      },
+      {
+        "id": "mmfltullsctk",
+        "label": "Festungssiedlung",
+        "color": "#6060b0"
+      },
+      {
+        "id": "mmflvj37jbh2",
+        "label": "Taverne",
+        "color": "#b03030"
+      },
+      {
+        "id": "mmflvquv2rr3",
+        "label": "Siedlungsruine",
+        "color": "#9050b0"
+      },
+      {
+        "id": "mmflw1z5ko6e",
+        "label": "Stadtruine",
+        "color": "#3a8a3a"
+      },
+      {
+        "id": "mmflw73t2e8v",
+        "label": "Bardensiedlung",
+        "color": "#2a7aaa"
+      },
+      {
+        "id": "mmflwdjfl6ah",
+        "label": "Stadt",
+        "color": "#7a6040"
+      },
+      {
+        "id": "mmflwmdfcyua",
+        "label": "Turmruine",
+        "color": "#c07030"
+      },
+      {
+        "id": "mmflwxad8w1j",
+        "label": "Schiffswrack",
+        "color": "#508080"
+      },
+      {
+        "id": "mmflx4731uj6",
+        "label": "Turnierplatz",
+        "color": "#c49a20"
+      },
+      {
+        "id": "mmflxnnhbh4g",
+        "label": "Besondere Orte",
+        "color": "#6060b0"
+      },
+      {
+        "id": "location-dorf",
+        "label": "Dorf",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/bardensiedlung.png"
+      },
+      {
+        "id": "location-flusssiedlung",
+        "label": "Flusssiedlung",
+        "color": "#2a7aaa",
+        "marker": "/Karten/assets/icons/welt/flusssiedlung.png"
+      },
+      {
+        "id": "location-bauernhof",
+        "label": "Bauernhof",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/bauernsiedlung.png"
+      },
+      {
+        "id": "location-landgut",
+        "label": "Landgut",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/landgut.png"
+      },
+      {
+        "id": "location-anwesen",
+        "label": "Anwesen",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/anwesen.png"
+      },
+      {
+        "id": "location-rittergut",
+        "label": "Rittergut",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/kleine-burg.png"
+      },
+      {
+        "id": "location-weingut",
+        "label": "Weingut",
+        "color": "#a45630",
+        "marker": "/Karten/assets/icons/welt/weingut.png"
+      },
+      {
+        "id": "location-obstplantage",
+        "label": "Obstplantage",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/obstplantage.png"
+      },
+      {
+        "id": "location-viehweide",
+        "label": "Viehweide",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/weide.png"
+      },
+      {
+        "id": "location-gestuet",
+        "label": "Gestüt",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/gest-t.png"
+      },
+      {
+        "id": "location-muehle",
+        "label": "Mühle",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/m-hle.png"
+      },
+      {
+        "id": "location-mine",
+        "label": "Mine",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/einzelnemine.png"
+      },
+      {
+        "id": "location-steinbruch",
+        "label": "Steinbruch",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/steinbruch-1.png"
+      },
+      {
+        "id": "location-schmiede",
+        "label": "Schmiede",
+        "color": "#a45630",
+        "marker": "/Karten/assets/icons/welt/schmiede.png"
+      },
+      {
+        "id": "location-brauerei",
+        "label": "Brauerei",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/brauersiedlung.png"
+      },
+      {
+        "id": "location-fischerei",
+        "label": "Fischerei",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/fischerh-tte.png"
+      },
+      {
+        "id": "location-holzfaellerlager",
+        "label": "Holzfällerlager",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/holzf-llerlager.png"
+      },
+      {
+        "id": "location-koehlerei",
+        "label": "Köhlerei",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/k-hler3.png"
+      },
+      {
+        "id": "location-imkerei",
+        "label": "Imkerei",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/imkerhof.png"
+      },
+      {
+        "id": "location-handelskontor",
+        "label": "Handelskontor",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/kontor.png"
+      },
+      {
+        "id": "location-markt",
+        "label": "Markt",
+        "color": "#a45630",
+        "marker": "/Karten/assets/icons/welt/marktstand.png"
+      },
+      {
+        "id": "location-gildenhaus",
+        "label": "Gildenhaus",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/gildenzentrale.png"
+      },
+      {
+        "id": "location-burg",
+        "label": "Burg",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/gro-e-burg.png"
+      },
+      {
+        "id": "location-turm",
+        "label": "Turm",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/turm.png"
+      },
+      {
+        "id": "location-leuchtturm",
+        "label": "Leuchtturm",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/leuchtturm.png"
+      },
+      {
+        "id": "location-aussenposten",
+        "label": "Außenposten",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/au-enposten.png"
+      },
+      {
+        "id": "location-grenzposten",
+        "label": "Grenzposten",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/zoll-grenzposten.png"
+      },
+      {
+        "id": "location-heerlager",
+        "label": "Heerlager",
+        "color": "#a45630",
+        "marker": "/Karten/assets/icons/welt/heereslager.png"
+      },
+      {
+        "id": "location-lagerplatz",
+        "label": "Lagerplatz",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/lager.png"
+      },
+      {
+        "id": "location-jaegerlager",
+        "label": "Jägerlager",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/j-gerlager.png"
+      },
+      {
+        "id": "location-jagdhaus",
+        "label": "Jagdhaus",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/j-gerhaus.png"
+      },
+      {
+        "id": "location-druidenhuette",
+        "label": "Druidenhütte",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/druidenh-tte.png"
+      },
+      {
+        "id": "location-hexenhuette",
+        "label": "Hexenhütte",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/hexenhaus.png"
+      },
+      {
+        "id": "location-schrein",
+        "label": "Schrein",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/wegschrein.png"
+      },
+      {
+        "id": "location-heiligtum",
+        "label": "Heiligtum",
+        "color": "#a45630",
+        "marker": "/Karten/assets/icons/welt/heiligtum.png"
+      },
+      {
+        "id": "location-friedhof",
+        "label": "Friedhof",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/l-ndlicher-friedhof.png"
+      },
+      {
+        "id": "location-grabstaette",
+        "label": "Grabstätte",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/grabmal.png"
+      },
+      {
+        "id": "location-ruine",
+        "label": "Ruine",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/ruine2.png"
+      },
+      {
+        "id": "location-ausgrabung",
+        "label": "Ausgrabung",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/ausgrabung.png"
+      },
+      {
+        "id": "location-hoehle",
+        "label": "Höhle",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/h-hle.png"
+      },
+      {
+        "id": "location-hain",
+        "label": "Hain",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/hain.png"
+      },
+      {
+        "id": "location-ahnenbaum",
+        "label": "Ahnenbaum",
+        "color": "#a45630",
+        "marker": "/Karten/assets/icons/welt/ahnenbaum.png"
+      },
+      {
+        "id": "location-quelle",
+        "label": "Quelle",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/quelle.png"
+      },
+      {
+        "id": "location-berggipfel",
+        "label": "Berggipfel",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/gipfel.png"
+      },
+      {
+        "id": "location-monsterhort",
+        "label": "Monsterhort",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/kreaturenhort.png"
+      },
+      {
+        "id": "location-banditenlager",
+        "label": "Banditenlager",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/banditenlager.png"
+      },
+      {
+        "id": "location-hafen",
+        "label": "Hafen / Steg",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/gro-er-hafen.png"
+      },
+      {
+        "id": "location-werft",
+        "label": "Werft",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/schiffswerft.png"
+      },
+      {
+        "id": "location-poststation",
+        "label": "Poststation",
+        "color": "#a45630",
+        "marker": "/Karten/assets/icons/welt/poststation.png"
+      },
+      {
+        "id": "location-schule",
+        "label": "Schule",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/l-ndliche-universit-t.png"
+      },
+      {
+        "id": "location-zirkus",
+        "label": "Zirkus",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/zirkus3.png"
+      },
+      {
+        "id": "location-wohnhaus",
+        "label": "Wohnhaus",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/b-uerliches-heim.png"
+      },
+      {
+        "id": "location-brauersiedlung",
+        "label": "Brauersiedlung",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/brauersiedlung.png"
+      },
+      {
+        "id": "location-klostersiedlung",
+        "label": "Klostersiedlung",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/klostersiedlung.png"
+      },
+      {
+        "id": "location-rosszuchtsiedlung",
+        "label": "Rosszuchtsiedlung",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/pferdezuchtsiedlung.png"
+      },
+      {
+        "id": "location-sumpfsiedlung",
+        "label": "Sumpfsiedlung",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/sumpfsiedlung.png"
+      },
+      {
+        "id": "location-unterwasserstadt",
+        "label": "Unterwasserstadt",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/unterwasserstadt.png"
+      },
+      {
+        "id": "location-festung",
+        "label": "Festung",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/festung.png"
+      },
+      {
+        "id": "location-magierturm",
+        "label": "Magierturm",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/magierturm.png"
+      },
+      {
+        "id": "location-diebesgilde",
+        "label": "Diebesgilde",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/diebesgilde.png"
+      },
+      {
+        "id": "location-piratenversteck",
+        "label": "Piratenversteck",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/piratenlager.png"
+      },
+      {
+        "id": "location-schmugglerversteck",
+        "label": "Schmugglerversteck",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/schmuggler3.png"
+      },
+      {
+        "id": "location-verwunschener-wald",
+        "label": "Verwunschener Wald",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/waldschrat.png"
+      },
+      {
+        "id": "location-wahrzeichen",
+        "label": "Wahrzeichen",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/wahrzeichen.png"
+      },
+      {
+        "id": "location-dimensionaler-riss",
+        "label": "Dimensionaler Riss",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/dimensionaler-riss.png"
+      },
+      {
+        "id": "location-galgen",
+        "label": "Galgen",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/exekutionsplatz.png"
+      },
+      {
+        "id": "location-muenzpraegestaette",
+        "label": "Münzprägestätte",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/m-nzpr-ger.png"
+      },
+      {
+        "id": "location-bogenschiessstand",
+        "label": "Bogenschießstand",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/schie-stand2.png"
+      },
+      {
+        "id": "location-ziegelei",
+        "label": "Ziegelei",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/ziegelbrenner.png"
+      },
+      {
+        "id": "location-schiff",
+        "label": "Schiff",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/orte/schiff-gut.png"
+      },
+      {
+        "id": "location-kreaturenlager",
+        "label": "Kreaturenlager",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/goblinlager.png"
+      },
+      {
+        "id": "location-heisse-quellen",
+        "label": "Heiße Quellen",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/hei-e-quellen.png"
+      },
+      {
+        "id": "location-brueckenruine",
+        "label": "Brückenruine",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/zerst-rte-br-cke.png"
+      },
+      {
+        "id": "location-kirchenruine",
+        "label": "Kirchenruine",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/zerst-rte-kirche.png"
+      },
+      {
+        "id": "location-hausruine",
+        "label": "Hausruine",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/zerst-rtes-heim.png"
+      },
+      {
+        "id": "location-huegelgrab",
+        "label": "Hügelgrab",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/h-gelgrab.png"
+      },
+      {
+        "id": "location-plantage",
+        "label": "Plantage",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/landgut.png"
+      },
+      {
+        "id": "location-kultstaette",
+        "label": "Kultstätte",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/okkulter-schrein.png"
+      },
+      {
+        "id": "location-zelt",
+        "label": "Zelt",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/ritterlicheszelt.png"
+      },
+      {
+        "id": "location-faehrstelle",
+        "label": "Fährstelle",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/orte/f-hre-steg.png"
+      },
+      {
+        "id": "location-schlachtfeld",
+        "label": "Schlachtfeld",
+        "color": "#6060b0"
+      }
+    ],
+    "categoryCatalogVersion": 3,
+    "regions": [
+      {
+        "id": "wa-9cd8e376-0c42-49f7-b6a4-41c51b590bab",
+        "name": "Herrschaft der Dal’Tartarfhuil",
+        "kind": "boundary",
+        "paths": [
+          [
+            [
+              0.43359375,
+              0.82401316
+            ],
+            [
+              0.37402344,
+              0.69901316
+            ],
+            [
+              0.30859375,
+              0.57072368
+            ],
+            [
+              0.42480469,
+              0.33717105
+            ],
+            [
+              0.50488281,
+              0.53618421
+            ],
+            [
+              0.43359375,
+              0.82565789
+            ],
+            [
+              0.41503906,
+              0.58223684
+            ],
+            [
+              0.30957031,
+              0.57236842
+            ],
+            [
+              0.41601563,
+              0.58059211
+            ],
+            [
+              0.50585938,
+              0.53453947
+            ],
+            [
+              0.4140625,
+              0.58059211
+            ],
+            [
+              0.42480469,
+              0.33552632
+            ]
+          ]
+        ],
+        "color": "#0055ff",
+        "borderColor": "#0055ff",
+        "opacity": 0,
+        "parentId": "wa-2c9deb25-ea5b-4e05-b936-bda95017b518",
+        "dominionId": "herrschaft-aislearneach-tartarfhuil",
+        "familyId": "haus-tartarfhuil",
+        "showLabel": false,
+        "note": "",
+        "source": {
+          "type": "world-anvil",
+          "mapId": "e6ebd163-2b46-4ac9-a622-8d8ee7e123b4",
+          "markerId": "9cd8e376-0c42-49f7-b6a4-41c51b590bab",
+          "url": "https://www.worldanvil.com/world/map/marker/9cd8e376-0c42-49f7-b6a4-41c51b590bab/edit",
+          "originalName": "Herrschaft der Dal'Tartarfhuil",
+          "geometryMethod": "visible-svg",
+          "coordinateSystem": "normalized-top-left"
+        }
+      },
+      {
+        "id": "wa-a60a41c2-845d-4265-9c37-1bcccd9fb44e",
+        "name": "Herrschaft der Na’Fiachiontach",
+        "kind": "boundary",
+        "paths": [
+          [
+            [
+              0.52441406,
+              0.32072368
+            ],
+            [
+              0.65625,
+              0.28947368
+            ],
+            [
+              0.74511719,
+              0.48355263
+            ],
+            [
+              0.74511719,
+              0.56414474
+            ],
+            [
+              0.66992188,
+              0.57236842
+            ],
+            [
+              0.60449219,
+              0.51973684
+            ],
+            [
+              0.52441406,
+              0.32072368
+            ],
+            [
+              0.63183594,
+              0.39473684
+            ],
+            [
+              0.60351563,
+              0.51809211
+            ],
+            [
+              0.65722656,
+              0.28618421
+            ],
+            [
+              0.6328125,
+              0.39473684
+            ],
+            [
+              0.66992188,
+              0.57072368
+            ],
+            [
+              0.6328125,
+              0.39309211
+            ],
+            [
+              0.74511719,
+              0.48355263
+            ],
+            [
+              0.66992188,
+              0.57072368
+            ]
+          ]
+        ],
+        "color": "#e8ff18",
+        "borderColor": "#e8ff18",
+        "opacity": 0,
+        "parentId": "wa-2c9deb25-ea5b-4e05-b936-bda95017b518",
+        "dominionId": "herrschaft-aislearneach-fiachiontach",
+        "familyId": "haus-fiachiontach",
+        "showLabel": false,
+        "note": "",
+        "source": {
+          "type": "world-anvil",
+          "mapId": "e6ebd163-2b46-4ac9-a622-8d8ee7e123b4",
+          "markerId": "a60a41c2-845d-4265-9c37-1bcccd9fb44e",
+          "url": "https://www.worldanvil.com/world/map/marker/a60a41c2-845d-4265-9c37-1bcccd9fb44e/edit",
+          "originalName": "Herrschaft der Na'Fiachiontach",
+          "geometryMethod": "visible-svg",
+          "coordinateSystem": "normalized-top-left"
+        }
+      },
+      {
+        "id": "wa-e71b08e0-c986-4130-813f-ccb16a2a52ba",
+        "name": "Herrschaft der Na’Luchdon",
+        "kind": "area",
+        "paths": [
+          [
+            [
+              0.16796875,
+              0.22532895
+            ],
+            [
+              0.19726563,
+              0.22039474
+            ],
+            [
+              0.20898438,
+              0.22532895
+            ],
+            [
+              0.21386719,
+              0.23848684
+            ],
+            [
+              0.21777344,
+              0.25328947
+            ],
+            [
+              0.21972656,
+              0.27302632
+            ],
+            [
+              0.22753906,
+              0.30098684
+            ],
+            [
+              0.23339844,
+              0.34046053
+            ],
+            [
+              0.2578125,
+              0.39144737
+            ],
+            [
+              0.26367188,
+              0.39638158
+            ],
+            [
+              0.27148438,
+              0.42269737
+            ],
+            [
+              0.27539063,
+              0.44243421
+            ],
+            [
+              0.27929688,
+              0.50657895
+            ],
+            [
+              0.28613281,
+              0.53947368
+            ],
+            [
+              0.2890625,
+              0.58388158
+            ],
+            [
+              0.28710938,
+              0.62993421
+            ],
+            [
+              0.28808594,
+              0.65460526
+            ],
+            [
+              0.296875,
+              0.71052632
+            ],
+            [
+              0.30566406,
+              0.73355263
+            ],
+            [
+              0.32910156,
+              0.74835526
+            ],
+            [
+              0.34765625,
+              0.75657895
+            ],
+            [
+              0.35546875,
+              0.76809211
+            ],
+            [
+              0.36523438,
+              0.79769737
+            ],
+            [
+              0.36621094,
+              0.82236842
+            ],
+            [
+              0.36132813,
+              0.84210526
+            ],
+            [
+              0.29785156,
+              0.84046053
+            ],
+            [
+              0.28515625,
+              0.89309211
+            ],
+            [
+              0.28515625,
+              0.89967105
+            ],
+            [
+              0.27832031,
+              0.91282895
+            ],
+            [
+              0.29199219,
+              0.93092105
+            ],
+            [
+              0.2890625,
+              0.9375
+            ],
+            [
+              0.27148438,
+              0.91940789
+            ],
+            [
+              0.265625,
+              0.92763158
+            ],
+            [
+              0.27832031,
+              0.94078947
+            ],
+            [
+              0.2734375,
+              0.94901316
+            ],
+            [
+              0.25878906,
+              0.93421053
+            ],
+            [
+              0.25390625,
+              0.93914474
+            ],
+            [
+              0.26757813,
+              0.95394737
+            ],
+            [
+              0.26269531,
+              0.96052632
+            ],
+            [
+              0.25,
+              0.94572368
+            ],
+            [
+              0.24511719,
+              0.95230263
+            ],
+            [
+              0.25390625,
+              0.96381579
+            ],
+            [
+              0.25,
+              0.97039474
+            ],
+            [
+              0.234375,
+              0.95888158
+            ],
+            [
+              0.21191406,
+              0.96381579
+            ],
+            [
+              0.20605469,
+              0.95888158
+            ],
+            [
+              0.19824219,
+              0.94078947
+            ],
+            [
+              0.18359375,
+              0.91776316
+            ],
+            [
+              0.14160156,
+              0.86184211
+            ],
+            [
+              0.12207031,
+              0.84868421
+            ],
+            [
+              0.11425781,
+              0.83717105
+            ],
+            [
+              0.10351563,
+              0.79769737
+            ],
+            [
+              0.08984375,
+              0.77631579
+            ],
+            [
+              0.08789063,
+              0.76809211
+            ],
+            [
+              0.07910156,
+              0.75164474
+            ],
+            [
+              0.07519531,
+              0.73519737
+            ],
+            [
+              0.07519531,
+              0.70723684
+            ],
+            [
+              0.08300781,
+              0.68256579
+            ],
+            [
+              0.08203125,
+              0.58717105
+            ],
+            [
+              0.07910156,
+              0.57730263
+            ],
+            [
+              0.08203125,
+              0.56414474
+            ],
+            [
+              0.08105469,
+              0.54605263
+            ],
+            [
+              0.078125,
+              0.53453947
+            ],
+            [
+              0.05859375,
+              0.50493421
+            ],
+            [
+              0.0546875,
+              0.49506579
+            ],
+            [
+              0.04199219,
+              0.47368421
+            ],
+            [
+              0.04492188,
+              0.46710526
+            ],
+            [
+              0.04394531,
+              0.45559211
+            ],
+            [
+              0.04785156,
+              0.45230263
+            ],
+            [
+              0.06152344,
+              0.45230263
+            ],
+            [
+              0.0703125,
+              0.43914474
+            ],
+            [
+              0.078125,
+              0.41611842
+            ],
+            [
+              0.07519531,
+              0.37993421
+            ],
+            [
+              0.0703125,
+              0.37171053
+            ],
+            [
+              0.08203125,
+              0.36348684
+            ],
+            [
+              0.08984375,
+              0.36513158
+            ],
+            [
+              0.09472656,
+              0.36184211
+            ],
+            [
+              0.09960938,
+              0.35197368
+            ],
+            [
+              0.10351563,
+              0.34868421
+            ],
+            [
+              0.11523438,
+              0.35197368
+            ],
+            [
+              0.12109375,
+              0.35032895
+            ],
+            [
+              0.13476563,
+              0.34046053
+            ],
+            [
+              0.15332031,
+              0.33552632
+            ],
+            [
+              0.16015625,
+              0.32565789
+            ],
+            [
+              0.16210938,
+              0.30921053
+            ],
+            [
+              0.15722656,
+              0.27960526
+            ],
+            [
+              0.17285156,
+              0.27467105
+            ],
+            [
+              0.17773438,
+              0.25986842
+            ],
+            [
+              0.17871094,
+              0.24835526
+            ],
+            [
+              0.17480469,
+              0.23355263
+            ],
+            [
+              0.16992188,
+              0.23355263
+            ]
+          ]
+        ],
+        "color": "#023e8a",
+        "borderColor": "#ff0000",
+        "opacity": 0.5,
+        "parentId": "wa-2c9deb25-ea5b-4e05-b936-bda95017b518",
+        "dominionId": "herrschaft-aislearneach-luchdon",
+        "familyId": "haus-luchdon",
+        "showLabel": true,
+        "note": "",
+        "source": {
+          "type": "world-anvil",
+          "mapId": "e6ebd163-2b46-4ac9-a622-8d8ee7e123b4",
+          "markerId": "e71b08e0-c986-4130-813f-ccb16a2a52ba",
+          "url": "https://www.worldanvil.com/world/map/marker/e71b08e0-c986-4130-813f-ccb16a2a52ba/edit",
+          "originalName": "Lairdtum von Broch an Creig",
+          "geometryMethod": "visible-svg",
+          "coordinateSystem": "normalized-top-left"
+        }
+      },
+      {
+        "id": "wa-60713ec6-56fc-4c44-a0bf-5bee970bd11f",
+        "name": "Herrschaft der An’Gaisgh",
+        "kind": "area",
+        "paths": [
+          [
+            [
+              0.59570313,
+              0.13157895
+            ],
+            [
+              0.62304688,
+              0.18421053
+            ],
+            [
+              0.64648438,
+              0.20723684
+            ],
+            [
+              0.6796875,
+              0.26151316
+            ],
+            [
+              0.70605469,
+              0.32072368
+            ],
+            [
+              0.71386719,
+              0.34539474
+            ],
+            [
+              0.74121094,
+              0.40625
+            ],
+            [
+              0.78710938,
+              0.48355263
+            ],
+            [
+              0.79296875,
+              0.5
+            ],
+            [
+              0.80859375,
+              0.53289474
+            ],
+            [
+              0.82226563,
+              0.51973684
+            ],
+            [
+              0.83398438,
+              0.51644737
+            ],
+            [
+              0.83691406,
+              0.50822368
+            ],
+            [
+              0.84472656,
+              0.5
+            ],
+            [
+              0.87402344,
+              0.45888158
+            ],
+            [
+              0.91113281,
+              0.41940789
+            ],
+            [
+              0.91699219,
+              0.41776316
+            ],
+            [
+              0.93359375,
+              0.43256579
+            ],
+            [
+              0.93847656,
+              0.42598684
+            ],
+            [
+              0.92773438,
+              0.41447368
+            ],
+            [
+              0.93359375,
+              0.40789474
+            ],
+            [
+              0.94824219,
+              0.42105263
+            ],
+            [
+              0.95410156,
+              0.41611842
+            ],
+            [
+              0.93945313,
+              0.39967105
+            ],
+            [
+              0.9453125,
+              0.39309211
+            ],
+            [
+              0.96191406,
+              0.40953947
+            ],
+            [
+              0.96582031,
+              0.40460526
+            ],
+            [
+              0.94921875,
+              0.38486842
+            ],
+            [
+              0.95605469,
+              0.38322368
+            ],
+            [
+              0.95800781,
+              0.36184211
+            ],
+            [
+              0.95117188,
+              0.33881579
+            ],
+            [
+              0.94824219,
+              0.23848684
+            ],
+            [
+              0.94921875,
+              0.22861842
+            ],
+            [
+              0.95214844,
+              0.22203947
+            ],
+            [
+              0.94628906,
+              0.19243421
+            ],
+            [
+              0.94335938,
+              0.12993421
+            ],
+            [
+              0.93164063,
+              0.12828947
+            ],
+            [
+              0.91894531,
+              0.13322368
+            ],
+            [
+              0.89355469,
+              0.12993421
+            ],
+            [
+              0.88964844,
+              0.13322368
+            ],
+            [
+              0.8828125,
+              0.14638158
+            ],
+            [
+              0.875,
+              0.14638158
+            ],
+            [
+              0.85839844,
+              0.13651316
+            ],
+            [
+              0.85546875,
+              0.125
+            ],
+            [
+              0.85546875,
+              0.11677632
+            ],
+            [
+              0.86230469,
+              0.09375
+            ],
+            [
+              0.85839844,
+              0.09375
+            ],
+            [
+              0.8515625,
+              0.09868421
+            ],
+            [
+              0.81640625,
+              0.10197368
+            ],
+            [
+              0.80957031,
+              0.10526316
+            ],
+            [
+              0.80566406,
+              0.11019737
+            ],
+            [
+              0.7890625,
+              0.11677632
+            ],
+            [
+              0.77441406,
+              0.11677632
+            ],
+            [
+              0.75976563,
+              0.10690789
+            ],
+            [
+              0.75488281,
+              0.09539474
+            ],
+            [
+              0.75292969,
+              0.08059211
+            ],
+            [
+              0.75585938,
+              0.07401316
+            ],
+            [
+              0.76660156,
+              0.06743421
+            ],
+            [
+              0.77246094,
+              0.05756579
+            ],
+            [
+              0.76757813,
+              0.05592105
+            ],
+            [
+              0.76464844,
+              0.05921053
+            ],
+            [
+              0.75878906,
+              0.05921053
+            ],
+            [
+              0.75195313,
+              0.05756579
+            ],
+            [
+              0.74414063,
+              0.05098684
+            ],
+            [
+              0.734375,
+              0.03453947
+            ],
+            [
+              0.73242188,
+              0.01480263
+            ],
+            [
+              0.72167969,
+              0.01973684
+            ],
+            [
+              0.71289063,
+              0.02796053
+            ],
+            [
+              0.70605469,
+              0.02960526
+            ],
+            [
+              0.68847656,
+              0.02138158
+            ],
+            [
+              0.68554688,
+              0.01480263
+            ],
+            [
+              0.68066406,
+              0.00986842
+            ],
+            [
+              0.66699219,
+              0.00986842
+            ],
+            [
+              0.6484375,
+              0.01644737
+            ],
+            [
+              0.62695313,
+              0.01151316
+            ],
+            [
+              0.609375,
+              0.01315789
+            ],
+            [
+              0.61230469,
+              0.01644737
+            ],
+            [
+              0.61328125,
+              0.03289474
+            ],
+            [
+              0.61914063,
+              0.05756579
+            ],
+            [
+              0.61328125,
+              0.08059211
+            ],
+            [
+              0.60351563,
+              0.08881579
+            ],
+            [
+              0.59472656,
+              0.09046053
+            ],
+            [
+              0.59179688,
+              0.09703947
+            ],
+            [
+              0.59765625,
+              0.12006579
+            ]
+          ]
+        ],
+        "color": "#9fefff",
+        "borderColor": "#ff0000",
+        "opacity": 0.5,
+        "parentId": "wa-2c9deb25-ea5b-4e05-b936-bda95017b518",
+        "dominionId": "herrschaft-aislearneach-gaisgh",
+        "familyId": "haus-gaisgh",
+        "showLabel": true,
+        "note": "",
+        "source": {
+          "type": "world-anvil",
+          "mapId": "e6ebd163-2b46-4ac9-a622-8d8ee7e123b4",
+          "markerId": "60713ec6-56fc-4c44-a0bf-5bee970bd11f",
+          "url": "https://www.worldanvil.com/world/map/marker/60713ec6-56fc-4c44-a0bf-5bee970bd11f/edit",
+          "originalName": "Lairdtum von Broch an Traigh",
+          "geometryMethod": "visible-svg",
+          "coordinateSystem": "normalized-top-left"
+        }
+      },
+      {
+        "id": "wa-2c9deb25-ea5b-4e05-b936-bda95017b518",
+        "name": "Oberherrschaft Tir na Iomaire",
+        "kind": "area",
+        "paths": [
+          [
+            [
+              0.04101563,
+              0.47368421
+            ],
+            [
+              0.07226563,
+              0.52631579
+            ],
+            [
+              0.08300781,
+              0.55592105
+            ],
+            [
+              0.078125,
+              0.56743421
+            ],
+            [
+              0.07714844,
+              0.57894737
+            ],
+            [
+              0.08105469,
+              0.58717105
+            ],
+            [
+              0.08300781,
+              0.66118421
+            ],
+            [
+              0.08105469,
+              0.68585526
+            ],
+            [
+              0.07421875,
+              0.70723684
+            ],
+            [
+              0.07324219,
+              0.72861842
+            ],
+            [
+              0.08007813,
+              0.75493421
+            ],
+            [
+              0.08886719,
+              0.77138158
+            ],
+            [
+              0.09375,
+              0.78782895
+            ],
+            [
+              0.10058594,
+              0.79605263
+            ],
+            [
+              0.11035156,
+              0.82565789
+            ],
+            [
+              0.11816406,
+              0.84210526
+            ],
+            [
+              0.13769531,
+              0.86184211
+            ],
+            [
+              0.17871094,
+              0.91447368
+            ],
+            [
+              0.19042969,
+              0.93421053
+            ],
+            [
+              0.19628906,
+              0.93914474
+            ],
+            [
+              0.20898438,
+              0.96546053
+            ],
+            [
+              0.21972656,
+              0.96381579
+            ],
+            [
+              0.22460938,
+              0.95888158
+            ],
+            [
+              0.23632813,
+              0.95888158
+            ],
+            [
+              0.24902344,
+              0.97203947
+            ],
+            [
+              0.25390625,
+              0.96710526
+            ],
+            [
+              0.24609375,
+              0.95559211
+            ],
+            [
+              0.25,
+              0.94736842
+            ],
+            [
+              0.26269531,
+              0.96052632
+            ],
+            [
+              0.26660156,
+              0.95394737
+            ],
+            [
+              0.25292969,
+              0.94078947
+            ],
+            [
+              0.25878906,
+              0.93421053
+            ],
+            [
+              0.2734375,
+              0.94736842
+            ],
+            [
+              0.27929688,
+              0.94243421
+            ],
+            [
+              0.26660156,
+              0.92763158
+            ],
+            [
+              0.27148438,
+              0.91940789
+            ],
+            [
+              0.2890625,
+              0.93585526
+            ],
+            [
+              0.29296875,
+              0.93256579
+            ],
+            [
+              0.27832031,
+              0.91282895
+            ],
+            [
+              0.28417969,
+              0.90296053
+            ],
+            [
+              0.28808594,
+              0.87828947
+            ],
+            [
+              0.29980469,
+              0.84210526
+            ],
+            [
+              0.30957031,
+              0.84046053
+            ],
+            [
+              0.35449219,
+              0.84375
+            ],
+            [
+              0.36914063,
+              0.84868421
+            ],
+            [
+              0.37890625,
+              0.85526316
+            ],
+            [
+              0.42871094,
+              0.85032895
+            ],
+            [
+              0.4375,
+              0.84703947
+            ],
+            [
+              0.45019531,
+              0.83388158
+            ],
+            [
+              0.45800781,
+              0.81414474
+            ],
+            [
+              0.46191406,
+              0.78453947
+            ],
+            [
+              0.46679688,
+              0.78125
+            ],
+            [
+              0.47363281,
+              0.79276316
+            ],
+            [
+              0.47363281,
+              0.81743421
+            ],
+            [
+              0.48046875,
+              0.82072368
+            ],
+            [
+              0.48242188,
+              0.78947368
+            ],
+            [
+              0.49804688,
+              0.78782895
+            ],
+            [
+              0.49902344,
+              0.81907895
+            ],
+            [
+              0.50488281,
+              0.81907895
+            ],
+            [
+              0.50683594,
+              0.78782895
+            ],
+            [
+              0.53125,
+              0.79111842
+            ],
+            [
+              0.53222656,
+              0.81907895
+            ],
+            [
+              0.53808594,
+              0.81907895
+            ],
+            [
+              0.54003906,
+              0.79111842
+            ],
+            [
+              0.55371094,
+              0.78947368
+            ],
+            [
+              0.57421875,
+              0.80921053
+            ],
+            [
+              0.58007813,
+              0.80592105
+            ],
+            [
+              0.56445313,
+              0.78453947
+            ],
+            [
+              0.578125,
+              0.76973684
+            ],
+            [
+              0.59667969,
+              0.79111842
+            ],
+            [
+              0.60253906,
+              0.78453947
+            ],
+            [
+              0.58691406,
+              0.76315789
+            ],
+            [
+              0.59765625,
+              0.74835526
+            ],
+            [
+              0.61523438,
+              0.76973684
+            ],
+            [
+              0.62207031,
+              0.76315789
+            ],
+            [
+              0.60839844,
+              0.74506579
+            ],
+            [
+              0.6171875,
+              0.73519737
+            ],
+            [
+              0.63574219,
+              0.75
+            ],
+            [
+              0.640625,
+              0.74342105
+            ],
+            [
+              0.62597656,
+              0.72697368
+            ],
+            [
+              0.64550781,
+              0.70888158
+            ],
+            [
+              0.66699219,
+              0.70888158
+            ],
+            [
+              0.66601563,
+              0.73684211
+            ],
+            [
+              0.67480469,
+              0.73519737
+            ],
+            [
+              0.67578125,
+              0.70888158
+            ],
+            [
+              0.69921875,
+              0.71052632
+            ],
+            [
+              0.69921875,
+              0.69901316
+            ],
+            [
+              0.703125,
+              0.6875
+            ],
+            [
+              0.70605469,
+              0.64473684
+            ],
+            [
+              0.71386719,
+              0.63651316
+            ],
+            [
+              0.72753906,
+              0.61348684
+            ],
+            [
+              0.7421875,
+              0.59868421
+            ],
+            [
+              0.75976563,
+              0.59210526
+            ],
+            [
+              0.76855469,
+              0.56743421
+            ],
+            [
+              0.78710938,
+              0.55921053
+            ],
+            [
+              0.82324219,
+              0.52302632
+            ],
+            [
+              0.83496094,
+              0.51644737
+            ],
+            [
+              0.84082031,
+              0.50493421
+            ],
+            [
+              0.87988281,
+              0.45394737
+            ],
+            [
+              0.91601563,
+              0.41611842
+            ],
+            [
+              0.93457031,
+              0.42927632
+            ],
+            [
+              0.93945313,
+              0.42434211
+            ],
+            [
+              0.93066406,
+              0.41447368
+            ],
+            [
+              0.93457031,
+              0.40953947
+            ],
+            [
+              0.94824219,
+              0.42105263
+            ],
+            [
+              0.95507813,
+              0.41447368
+            ],
+            [
+              0.94140625,
+              0.40296053
+            ],
+            [
+              0.94628906,
+              0.39473684
+            ],
+            [
+              0.96191406,
+              0.40953947
+            ],
+            [
+              0.96679688,
+              0.40296053
+            ],
+            [
+              0.95117188,
+              0.38486842
+            ],
+            [
+              0.95703125,
+              0.37993421
+            ],
+            [
+              0.95800781,
+              0.36513158
+            ],
+            [
+              0.95703125,
+              0.35361842
+            ],
+            [
+              0.95214844,
+              0.33552632
+            ],
+            [
+              0.94824219,
+              0.28782895
+            ],
+            [
+              0.94921875,
+              0.23519737
+            ],
+            [
+              0.95214844,
+              0.21381579
+            ],
+            [
+              0.94824219,
+              0.20230263
+            ],
+            [
+              0.94628906,
+              0.18914474
+            ],
+            [
+              0.94335938,
+              0.12993421
+            ],
+            [
+              0.89941406,
+              0.12993421
+            ],
+            [
+              0.89257813,
+              0.13157895
+            ],
+            [
+              0.88574219,
+              0.14144737
+            ],
+            [
+              0.88085938,
+              0.14473684
+            ],
+            [
+              0.87402344,
+              0.14473684
+            ],
+            [
+              0.859375,
+              0.13486842
+            ],
+            [
+              0.85742188,
+              0.11842105
+            ],
+            [
+              0.86132813,
+              0.09375
+            ],
+            [
+              0.84863281,
+              0.09868421
+            ],
+            [
+              0.80859375,
+              0.10526316
+            ],
+            [
+              0.79785156,
+              0.11513158
+            ],
+            [
+              0.77539063,
+              0.11677632
+            ],
+            [
+              0.76855469,
+              0.11348684
+            ],
+            [
+              0.76171875,
+              0.10526316
+            ],
+            [
+              0.75683594,
+              0.09539474
+            ],
+            [
+              0.75488281,
+              0.08223684
+            ],
+            [
+              0.7578125,
+              0.07236842
+            ],
+            [
+              0.76757813,
+              0.06414474
+            ],
+            [
+              0.77148438,
+              0.05592105
+            ],
+            [
+              0.75585938,
+              0.05592105
+            ],
+            [
+              0.74804688,
+              0.05263158
+            ],
+            [
+              0.73535156,
+              0.03782895
+            ],
+            [
+              0.73242188,
+              0.01480263
+            ],
+            [
+              0.72851563,
+              0.01480263
+            ],
+            [
+              0.71191406,
+              0.02467105
+            ],
+            [
+              0.70117188,
+              0.02631579
+            ],
+            [
+              0.68652344,
+              0.01809211
+            ],
+            [
+              0.68066406,
+              0.01151316
+            ],
+            [
+              0.67285156,
+              0.00986842
+            ],
+            [
+              0.64941406,
+              0.01480263
+            ],
+            [
+              0.61132813,
+              0.01151316
+            ],
+            [
+              0.61230469,
+              0.03125
+            ],
+            [
+              0.61816406,
+              0.04440789
+            ],
+            [
+              0.61914063,
+              0.05921053
+            ],
+            [
+              0.61621094,
+              0.07236842
+            ],
+            [
+              0.609375,
+              0.08223684
+            ],
+            [
+              0.59082031,
+              0.08881579
+            ],
+            [
+              0.59570313,
+              0.12171053
+            ],
+            [
+              0.59472656,
+              0.13486842
+            ],
+            [
+              0.58691406,
+              0.15131579
+            ],
+            [
+              0.57714844,
+              0.15460526
+            ],
+            [
+              0.5703125,
+              0.14967105
+            ],
+            [
+              0.55761719,
+              0.16282895
+            ],
+            [
+              0.54785156,
+              0.16611842
+            ],
+            [
+              0.54199219,
+              0.16447368
+            ],
+            [
+              0.53515625,
+              0.17434211
+            ],
+            [
+              0.52929688,
+              0.17598684
+            ],
+            [
+              0.52832031,
+              0.19407895
+            ],
+            [
+              0.53027344,
+              0.20394737
+            ],
+            [
+              0.52929688,
+              0.21052632
+            ],
+            [
+              0.5234375,
+              0.21710526
+            ],
+            [
+              0.515625,
+              0.22203947
+            ],
+            [
+              0.50585938,
+              0.22203947
+            ],
+            [
+              0.49902344,
+              0.23190789
+            ],
+            [
+              0.47265625,
+              0.24671053
+            ],
+            [
+              0.43652344,
+              0.24835526
+            ],
+            [
+              0.43164063,
+              0.25164474
+            ],
+            [
+              0.42480469,
+              0.26809211
+            ],
+            [
+              0.41796875,
+              0.27631579
+            ],
+            [
+              0.37207031,
+              0.27138158
+            ],
+            [
+              0.36816406,
+              0.25493421
+            ],
+            [
+              0.36328125,
+              0.25164474
+            ],
+            [
+              0.35839844,
+              0.25493421
+            ],
+            [
+              0.34570313,
+              0.25
+            ],
+            [
+              0.33203125,
+              0.25
+            ],
+            [
+              0.31542969,
+              0.25986842
+            ],
+            [
+              0.296875,
+              0.25328947
+            ],
+            [
+              0.29296875,
+              0.26315789
+            ],
+            [
+              0.28320313,
+              0.26809211
+            ],
+            [
+              0.27246094,
+              0.26480263
+            ],
+            [
+              0.2421875,
+              0.26644737
+            ],
+            [
+              0.22851563,
+              0.24506579
+            ],
+            [
+              0.22558594,
+              0.23190789
+            ],
+            [
+              0.21875,
+              0.22039474
+            ],
+            [
+              0.19238281,
+              0.22039474
+            ],
+            [
+              0.16894531,
+              0.22532895
+            ],
+            [
+              0.17773438,
+              0.24177632
+            ],
+            [
+              0.17871094,
+              0.25657895
+            ],
+            [
+              0.17089844,
+              0.27631579
+            ],
+            [
+              0.15527344,
+              0.27960526
+            ],
+            [
+              0.16210938,
+              0.30098684
+            ],
+            [
+              0.16113281,
+              0.31743421
+            ],
+            [
+              0.15820313,
+              0.32730263
+            ],
+            [
+              0.14257813,
+              0.33881579
+            ],
+            [
+              0.1328125,
+              0.33881579
+            ],
+            [
+              0.12304688,
+              0.34868421
+            ],
+            [
+              0.11425781,
+              0.35361842
+            ],
+            [
+              0.09863281,
+              0.35032895
+            ],
+            [
+              0.09667969,
+              0.35690789
+            ],
+            [
+              0.09179688,
+              0.36184211
+            ],
+            [
+              0.08496094,
+              0.36348684
+            ],
+            [
+              0.07226563,
+              0.37171053
+            ],
+            [
+              0.078125,
+              0.39473684
+            ],
+            [
+              0.078125,
+              0.41282895
+            ],
+            [
+              0.07519531,
+              0.42763158
+            ],
+            [
+              0.06933594,
+              0.44243421
+            ],
+            [
+              0.06347656,
+              0.44901316
+            ],
+            [
+              0.04296875,
+              0.45394737
+            ],
+            [
+              0.04492188,
+              0.45888158
+            ],
+            [
+              0.04492188,
+              0.46875
+            ]
+          ]
+        ],
+        "color": "#00ff22",
+        "borderColor": "#ff0000",
+        "opacity": 0.3,
+        "parentId": "",
+        "dominionId": "oberherrschaft-aislearneach-tir-na-iomaire",
+        "familyId": "haus-ceallaigh",
+        "showLabel": true,
+        "note": "",
+        "source": {
+          "type": "world-anvil",
+          "mapId": "e6ebd163-2b46-4ac9-a622-8d8ee7e123b4",
+          "markerId": "2c9deb25-ea5b-4e05-b936-bda95017b518",
+          "url": "https://www.worldanvil.com/world/map/marker/2c9deb25-ea5b-4e05-b936-bda95017b518/edit",
+          "originalName": "Oberherrschaft Koldair",
+          "geometryMethod": "visible-svg",
+          "coordinateSystem": "normalized-top-left"
+        }
+      }
+    ],
+    "dominions": [
+      {
+        "id": "fuerstentum-aislearneach",
+        "name": "Fürstentum Aislearneach",
+        "type": "Fürstentum",
+        "ruler": "Clan Ui’Morna",
+        "seat": "Gaelan",
+        "parentId": "",
+        "note": ""
+      },
+      {
+        "id": "oberherrschaft-aislearneach-tir-na-geach",
+        "name": "Oberherrschaft Tir na Geach",
+        "type": "Oberherrschaft",
+        "ruler": "Clan Ui’Morna",
+        "seat": "Gaelan",
+        "parentId": "fuerstentum-aislearneach",
+        "note": ""
+      },
+      {
+        "id": "oberherrschaft-aislearneach-tir-na-tirth",
+        "name": "Oberherrschaft Tir na Tirth",
+        "type": "Oberherrschaft",
+        "ruler": "Clan Mac’Durthacht",
+        "seat": "Lorai",
+        "parentId": "fuerstentum-aislearneach",
+        "note": ""
+      },
+      {
+        "id": "oberherrschaft-aislearneach-tir-na-faela",
+        "name": "Oberherrschaft Tir na Faela",
+        "type": "Oberherrschaft",
+        "ruler": "Clan Mac’Fintain",
+        "seat": "Croga",
+        "parentId": "fuerstentum-aislearneach",
+        "note": ""
+      },
+      {
+        "id": "oberherrschaft-aislearneach-tir-na-adharcach",
+        "name": "Oberherrschaft Tir na Adharcach",
+        "type": "Kirchliche Oberherrschaft",
+        "ruler": "",
+        "seat": "Foraoise",
+        "parentId": "fuerstentum-aislearneach",
+        "note": ""
+      },
+      {
+        "id": "oberherrschaft-aislearneach-tir-na-iomaire",
+        "name": "Oberherrschaft Tir na Iomaire",
+        "type": "Oberherrschaft",
+        "ruler": "Clan Tir An’Ceallaigh",
+        "seat": "Koldair",
+        "parentId": "fuerstentum-aislearneach",
+        "note": ""
+      },
+      {
+        "id": "herrschaft-aislearneach-coronach",
+        "name": "Herrschaft der Ua’Coronach",
+        "type": "Herrschaft",
+        "ruler": "Clan Ua’Coronach",
+        "seat": "Gaelan",
+        "parentId": "oberherrschaft-aislearneach-tir-na-geach",
+        "note": ""
+      },
+      {
+        "id": "herrschaft-aislearneach-morgacht",
+        "name": "Herrschaft der Na’Morgacht",
+        "type": "Herrschaft",
+        "ruler": "Clan Na’Morgacht",
+        "seat": "Broch an Geata",
+        "parentId": "oberherrschaft-aislearneach-tir-na-geach",
+        "note": ""
+      },
+      {
+        "id": "herrschaft-aislearneach-rioga",
+        "name": "Herrschaft der An’Rioga",
+        "type": "Herrschaft",
+        "ruler": "Clan An’Rioga",
+        "seat": "Broch an Duhbach",
+        "parentId": "oberherrschaft-aislearneach-tir-na-geach",
+        "note": ""
+      },
+      {
+        "id": "herrschaft-aislearneach-fiantorc",
+        "name": "Herrschaft der Ua’Fiáintorc",
+        "type": "Herrschaft",
+        "ruler": "Clan Ua’Fiáintorc",
+        "seat": "Lorai",
+        "parentId": "oberherrschaft-aislearneach-tir-na-tirth",
+        "note": ""
+      },
+      {
+        "id": "herrschaft-aislearneach-treada",
+        "name": "Herrschaft der Ua’Tréada",
+        "type": "Herrschaft",
+        "ruler": "Clan Ua’Tréada",
+        "seat": "Lorai",
+        "parentId": "oberherrschaft-aislearneach-tir-na-tirth",
+        "note": ""
+      },
+      {
+        "id": "herrschaft-aislearneach-muileach",
+        "name": "Lehnsherrschaft der Ua’Muileach",
+        "type": "Lehnsherrschaft",
+        "ruler": "Clan Ua’Muileach",
+        "seat": "Athan",
+        "parentId": "oberherrschaft-aislearneach-tir-na-tirth",
+        "note": ""
+      },
+      {
+        "id": "herrschaft-aislearneach-feannag",
+        "name": "Lehnsherrschaft der An’Feannag",
+        "type": "Lehnsherrschaft",
+        "ruler": "Clan An’Feannag",
+        "seat": "Ceatharlach",
+        "parentId": "oberherrschaft-aislearneach-tir-na-faela",
+        "note": ""
+      },
+      {
+        "id": "herrschaft-aislearneach-uilebheist",
+        "name": "Herrschaft der An’Uilebheist",
+        "type": "Herrschaft",
+        "ruler": "Clan An’Uilebheist",
+        "seat": "Foraoise",
+        "parentId": "oberherrschaft-aislearneach-tir-na-adharcach",
+        "note": ""
+      },
+      {
+        "id": "herrschaft-aislearneach-cnogan",
+        "name": "Herrschaft der Nic’Cnogan",
+        "type": "Herrschaft",
+        "ruler": "Clan Nic’Cnogan",
+        "seat": "Foraoise",
+        "parentId": "oberherrschaft-aislearneach-tir-na-adharcach",
+        "note": ""
+      },
+      {
+        "id": "herrschaft-aislearneach-fiachiontach",
+        "name": "Herrschaft der Na’Fiachiontach",
+        "type": "Herrschaft",
+        "ruler": "Clan Na’Fiachiontach",
+        "seat": "Koldair",
+        "parentId": "oberherrschaft-aislearneach-tir-na-iomaire",
+        "note": ""
+      },
+      {
+        "id": "herrschaft-aislearneach-tartarfhuil",
+        "name": "Herrschaft der Dal’Tartarfhuil",
+        "type": "Herrschaft",
+        "ruler": "Clan Dal’Tartarfhuil",
+        "seat": "Koldair",
+        "parentId": "oberherrschaft-aislearneach-tir-na-iomaire",
+        "note": ""
+      },
+      {
+        "id": "herrschaft-aislearneach-gaisgh",
+        "name": "Herrschaft der An’Gaisgh",
+        "type": "Herrschaft",
+        "ruler": "Clan An’Gaisgh",
+        "seat": "Broch an Traigh",
+        "parentId": "oberherrschaft-aislearneach-tir-na-iomaire",
+        "note": ""
+      },
+      {
+        "id": "herrschaft-aislearneach-luchdon",
+        "name": "Herrschaft der Na’Luchdon",
+        "type": "Herrschaft",
+        "ruler": "Clan Na’Luchdon",
+        "seat": "Broch an Creig",
+        "parentId": "oberherrschaft-aislearneach-tir-na-iomaire",
+        "note": ""
+      },
+      {
+        "id": "aislearneach-offen-b2bfc8cc-cbaa-463b-81dd-73c4e350eee1",
+        "name": "Potenzielles Herrschaftsgebiet",
+        "type": "Herrschaft",
+        "ruler": "",
+        "seat": "",
+        "parentId": "oberherrschaft-aislearneach-tir-na-faela",
+        "note": "Clan-Zuordnung offen"
+      },
+      {
+        "id": "aislearneach-offen-0582da8b-b10e-476c-be6c-5a102915295a",
+        "name": "Potenzielles Herrschaftsgebiet",
+        "type": "Herrschaft",
+        "ruler": "",
+        "seat": "",
+        "parentId": "oberherrschaft-aislearneach-tir-na-faela",
+        "note": "Clan-Zuordnung offen"
+      },
+      {
+        "id": "aislearneach-offen-57af0e3e-33e8-4a78-a3a8-d21a2fe21408",
+        "name": "Potenzielles Herrschaftsgebiet",
+        "type": "Herrschaft",
+        "ruler": "",
+        "seat": "",
+        "parentId": "oberherrschaft-aislearneach-tir-na-faela",
+        "note": "Clan-Zuordnung offen"
+      }
+    ],
+    "regionTitle": "Tir na Iomaire",
+    "regionIcon": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-iomaire.png",
+    "mapImages": {
+      "normal": "/Karten/Aislearneach/tir-na-iomaire/Kartenbilder/normal.webp",
+      "regions": "",
+      "pins": ""
+    },
+    "layerNames": {
+      "normal": "Karte",
+      "regions": "Regionen",
+      "pins": "Markierungen"
+    },
+    "dotSize": 80,
+    "lblSize": 50,
+    "displaySettingsVersion": 1,
+    "markerPresentation": "symbols",
+    "pinVisibilityVersion": 1,
+    "showMarkers": true,
+    "showPinLabels": false,
+    "alwaysShowLettering": false,
+    "extraLayers": [],
+    "dm": {
+      "sessions": [],
+      "notes": "",
+      "groupStatus": {}
+    }
+  }
+}

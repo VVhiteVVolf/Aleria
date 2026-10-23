@@ -1,0 +1,115 @@
+{
+  "territories": [
+    {
+      "id": "jarltum-ivarsheim",
+      "name": "Jarltum Ivarsheim",
+      "type": "Jarltum",
+      "familyId": "haus-wargh",
+      "house": "Clan Wargh",
+      "crest": "/Stammbäume/assets/images/houses/Aldrimar/clan-wargh.png",
+      "banner": "/Stammbäume/assets/images/regions/aldrimar-ivarsheim.png",
+      "seat": "Ivarsfels",
+      "parentId": "",
+      "href": "/Kontinente/Estryll/Königreich Aldrimar/Jarltum Ivarsheim/Jarltum Ivarsheim.html"
+    },
+    {
+      "id": "thanentum-ivarsklamm",
+      "name": "Thanentum Ivarsklamm",
+      "type": "Thanentum",
+      "familyId": "haus-wargh",
+      "house": "Clan Wargh",
+      "crest": "/Stammbäume/assets/images/houses/Aldrimar/clan-wargh.png",
+      "banner": "/Stammbäume/assets/images/regions/aldrimar-ivarsklamm.png",
+      "seat": "Ivarsfels",
+      "parentId": "jarltum-ivarsheim",
+      "href": "/Kontinente/Estryll/Königreich Aldrimar/Jarltum Ivarsheim/Thanentum Ivarsklamm/Thanentum Ivarsklamm.html"
+    },
+    {
+      "id": "thanentum-klippenschlag",
+      "name": "Thanentum Klippenschlag",
+      "type": "Thanentum",
+      "familyId": "haus-grendel",
+      "house": "Clan Grendel",
+      "crest": "/Stammbäume/assets/images/houses/Aldrimar/Ivarsheim/clan-grendel.png",
+      "banner": "/Stammbäume/assets/images/regions/aldrimar-klippenschlag.png",
+      "seat": "Hjerimsheim",
+      "parentId": "jarltum-ivarsheim",
+      "href": "/Kontinente/Estryll/Königreich Aldrimar/Jarltum Ivarsheim/Thanentum Klippenschlag/Thanentum Klippenschlag.html"
+    },
+    {
+      "id": "thanentum-rothain",
+      "name": "Thanentum Rothain",
+      "type": "Thanentum",
+      "familyId": "haus-feuerhaar",
+      "house": "Clan Feuerhaar",
+      "crest": "/Stammbäume/assets/images/houses/Aldrimar/Ivarsheim/clan-feuerhaar.png",
+      "banner": "/Stammbäume/assets/images/regions/aldrimar-rothain.png",
+      "seat": "Jägersruh",
+      "parentId": "jarltum-ivarsheim",
+      "href": "/Kontinente/Estryll/Königreich Aldrimar/Jarltum Ivarsheim/Thanentum Rothain/Thanentum Rothain.html"
+    },
+    {
+      "id": "thanentum-saatgrund",
+      "name": "Thanentum Saatgrund",
+      "type": "Thanentum",
+      "familyId": "haus-skogg",
+      "house": "Clan Skogg",
+      "crest": "/Stammbäume/assets/images/houses/Aldrimar/Ivarsheim/clan-skogg.png",
+      "banner": "/Stammbäume/assets/images/regions/aldrimar-saatgrund.png",
+      "seat": "Kornweiler",
+      "parentId": "jarltum-ivarsheim",
+      "href": "/Kontinente/Estryll/Königreich Aldrimar/Jarltum Ivarsheim/Thanentum Saatgrund/Thanentum Saatgrund.html"
+    },
+    {
+      "id": "hesirentum-winterwacht",
+      "name": "Hesirentum Winterwacht",
+      "type": "Hesirentum",
+      "familyId": "haus-hyrmgardr",
+      "house": "Clan Hyrmgarthr",
+      "crest": "/Stammbäume/assets/images/houses/Aldrimar/Ivarsheim/clan-hyrmgarthr.png",
+      "banner": "/Stammbäume/assets/images/regions/aldrimar-winterwacht.png",
+      "seat": "Winterfeste",
+      "parentId": "thanentum-saatgrund",
+      "href": "/Kontinente/Estryll/Königreich Aldrimar/Jarltum Ivarsheim/Hesirentum Winterwacht/Hesirentum Winterwacht.html"
+    },
+    {
+      "id": "hesirentum-trachwyll",
+      "name": "Herrschaft der Trachwyll",
+      "type": "Hesirentum",
+      "familyId": "haus-trachwyll",
+      "house": "Haus Trachwyll",
+      "crest": "/Stammbäume/assets/images/houses/Aldrimar/Ivarsheim/haus-trachwyll.png",
+      "banner": "/Stammbäume/assets/images/regions/aldrimar-ivarsklamm.png",
+      "seat": "Caer Trachwyll",
+      "parentId": "thanentum-ivarsklamm",
+      "href": "/Kontinente/Estryll/Königreich Aldrimar/Jarltum Ivarsheim/Herrschaft der Trachwyll/Herrschaft der Trachwyll.html"
+    },
+    {
+      "id": "hesirentum-silberzungen",
+      "name": "Herrschaft der Silberzungen",
+      "type": "Hesirentum",
+      "familyId": "haus-silberzunge",
+      "house": "Clan Silberzunge",
+      "crest": "/Stammbäume/assets/images/houses/Aldrimar/Ivarsheim/clan-silberzunge.png",
+      "banner": "/Stammbäume/assets/images/regions/aldrimar-ivarsklamm.png",
+      "seat": "Sølborg",
+      "parentId": "thanentum-ivarsklamm",
+      "href": "/Kontinente/Estryll/Königreich Aldrimar/Jarltum Ivarsheim/Herrschaft der Silberzungen/Herrschaft der Silberzungen.html"
+    },
+    {
+      "id": "exklaven-schwarzdorn-ivarsheim",
+      "name": "Schwarzdorn-Exklaven in Ivarsheim",
+      "type": "Exklaven",
+      "familyId": "haus-schwarzdorn",
+      "house": "Clan Schwarzdorn",
+      "crest": "/Stammbäume/assets/images/houses/Aldrimar/Roriksheim/clan-schwarzdorn.png",
+      "banner": "/Stammbäume/assets/images/regions/aldrimar-roriksheim.png",
+      "seat": "Gerstenberg · Hjorthorn · Tirann",
+      "parentId": "",
+      "href": "/Kontinente/Estryll/Königreich Aldrimar/Jarltum Roriksheim/Hesirentum Schwarzdorn/Hesirentum Schwarzdorn.html",
+      "bannerHref": "/Kontinente/Estryll/Königreich Aldrimar/Jarltum Roriksheim/Jarltum Roriksheim.html",
+      "externalLiege": "Clan Varulv",
+      "note": "Gepachtete Schwarzdorn-Exklaven; keine Vasallen der Wargh."
+    }
+  ]
+}

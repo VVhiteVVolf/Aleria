@@ -1,0 +1,3151 @@
+{
+  "imageSize": [
+    4096,
+    2418
+  ],
+  "coordinateOrigin": "top-left",
+  "positions": [
+    {
+      "x": 932,
+      "y": 0,
+      "width": 102,
+      "height": 123,
+      "area": 8260,
+      "tipX": 983.0,
+      "tipY": 123,
+      "id": "kraehenmoor-position-001",
+      "icon": "zerst-rte-siedlung.png",
+      "candidates": [
+        {
+          "icon": "zerst-rte-siedlung.png",
+          "score": 0.718
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.494
+        },
+        {
+          "icon": "zerst-rtekirche2.png",
+          "score": 0.474
+        }
+      ],
+      "number": 1,
+      "territoryId": "herrschaft-kaltherz",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 3479,
+      "y": 0,
+      "width": 103,
+      "height": 118,
+      "area": 8183,
+      "tipX": 3530.5,
+      "tipY": 118,
+      "id": "kraehenmoor-position-002",
+      "icon": "marktsiedlung.png",
+      "candidates": [
+        {
+          "icon": "kreaturenhort.png",
+          "score": 0.52
+        },
+        {
+          "icon": "marktsiedlung.png",
+          "score": 0.518
+        },
+        {
+          "icon": "waldsiedlung.png",
+          "score": 0.518
+        }
+      ],
+      "number": 2,
+      "territoryId": "hesirentum-schwarzfjord",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 1571,
+      "y": 44,
+      "width": 102,
+      "height": 129,
+      "area": 8220,
+      "tipX": 1622.0,
+      "tipY": 173,
+      "id": "kraehenmoor-position-003",
+      "icon": "zerst-rte-siedlung.png",
+      "candidates": [
+        {
+          "icon": "zerst-rte-siedlung.png",
+          "score": 0.769
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.517
+        },
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.459
+        }
+      ],
+      "number": 3,
+      "territoryId": "herrschaft-kaltherz",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 1393,
+      "y": 57,
+      "width": 103,
+      "height": 127,
+      "area": 8190,
+      "tipX": 1444.5,
+      "tipY": 184,
+      "id": "kraehenmoor-position-004",
+      "icon": "taverne.png",
+      "candidates": [
+        {
+          "icon": "taverne.png",
+          "score": 0.663
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.56
+        },
+        {
+          "icon": "kreaturenhort.png",
+          "score": 0.552
+        }
+      ],
+      "number": 4,
+      "territoryId": "jarltuemliches-thanentum-nebelmoor",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 3396,
+      "y": 65,
+      "width": 102,
+      "height": 135,
+      "area": 9111,
+      "tipX": 3447.0,
+      "tipY": 200,
+      "id": "kraehenmoor-position-005",
+      "icon": "bergbausiedlung.png",
+      "candidates": [
+        {
+          "icon": "bergbausiedlung.png",
+          "score": 0.78
+        },
+        {
+          "icon": "antikes-grab.png",
+          "score": 0.548
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.527
+        }
+      ],
+      "number": 5,
+      "territoryId": "hesirentum-schwarzfjord",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 3745,
+      "y": 84,
+      "width": 102,
+      "height": 136,
+      "area": 9131,
+      "tipX": 3796.0,
+      "tipY": 220,
+      "id": "kraehenmoor-position-006",
+      "icon": "hafensiedlung.png",
+      "candidates": [
+        {
+          "icon": "hafensiedlung.png",
+          "score": 0.734
+        },
+        {
+          "icon": "fischerh-tte.png",
+          "score": 0.512
+        },
+        {
+          "icon": "poststation.png",
+          "score": 0.444
+        }
+      ],
+      "number": 6,
+      "territoryId": "hesirentum-schwarzfjord",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 1239,
+      "y": 86,
+      "width": 102,
+      "height": 135,
+      "area": 9040,
+      "tipX": 1290.0,
+      "tipY": 221,
+      "id": "kraehenmoor-position-007",
+      "icon": "sumpfsiedlung.png",
+      "candidates": [
+        {
+          "icon": "sumpfsiedlung.png",
+          "score": 0.548
+        },
+        {
+          "icon": "ziegelbrenner.png",
+          "score": 0.48
+        },
+        {
+          "icon": "waldsiedlung.png",
+          "score": 0.447
+        }
+      ],
+      "number": 7,
+      "territoryId": "herrschaft-kaltherz",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 1794,
+      "y": 88,
+      "width": 101,
+      "height": 129,
+      "area": 8418,
+      "tipX": 1844.5,
+      "tipY": 217,
+      "id": "kraehenmoor-position-008",
+      "icon": "zerst-rte-siedlung.png",
+      "candidates": [
+        {
+          "icon": "zerst-rte-siedlung.png",
+          "score": 0.747
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.515
+        },
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.46
+        }
+      ],
+      "number": 8,
+      "territoryId": "herrschaft-kaltherz",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 3900,
+      "y": 123,
+      "width": 102,
+      "height": 136,
+      "area": 9123,
+      "tipX": 3951.0,
+      "tipY": 259,
+      "id": "kraehenmoor-position-009",
+      "icon": "schiffswrackpin.png",
+      "candidates": [
+        {
+          "icon": "schiffswrackpin.png",
+          "score": 0.781
+        },
+        {
+          "icon": "ziegelbrenner.png",
+          "score": 0.507
+        },
+        {
+          "icon": "zerst-rtekirche2.png",
+          "score": 0.506
+        }
+      ],
+      "number": 9,
+      "territoryId": "hesirentum-schwarzfjord",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 1655,
+      "y": 163,
+      "width": 102,
+      "height": 135,
+      "area": 9021,
+      "tipX": 1706.0,
+      "tipY": 298,
+      "id": "kraehenmoor-position-010",
+      "icon": "sumpfsiedlung.png",
+      "candidates": [
+        {
+          "icon": "sumpfsiedlung.png",
+          "score": 0.525
+        },
+        {
+          "icon": "ziegelbrenner.png",
+          "score": 0.464
+        },
+        {
+          "icon": "waldsiedlung.png",
+          "score": 0.455
+        }
+      ],
+      "number": 10,
+      "territoryId": "herrschaft-kaltherz",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 1398,
+      "y": 207,
+      "width": 102,
+      "height": 136,
+      "area": 9092,
+      "tipX": 1449.0,
+      "tipY": 343,
+      "id": "kraehenmoor-position-011",
+      "icon": "marktsiedlung.png",
+      "candidates": [
+        {
+          "icon": "marktsiedlung.png",
+          "score": 0.635
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.504
+        },
+        {
+          "icon": "nordische-ruine.png",
+          "score": 0.483
+        }
+      ],
+      "number": 11,
+      "territoryId": "herrschaft-kaltherz",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 2217,
+      "y": 224,
+      "width": 103,
+      "height": 135,
+      "area": 9061,
+      "tipX": 2268.5,
+      "tipY": 359,
+      "id": "kraehenmoor-position-012",
+      "icon": "bergbausiedlung.png",
+      "candidates": [
+        {
+          "icon": "bergbausiedlung.png",
+          "score": 0.765
+        },
+        {
+          "icon": "antikes-grab.png",
+          "score": 0.539
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.524
+        }
+      ],
+      "number": 12,
+      "territoryId": "jarltuemliches-thanentum-nebelmoor",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 671,
+      "y": 237,
+      "width": 101,
+      "height": 134,
+      "area": 8779,
+      "tipX": 721.5,
+      "tipY": 371,
+      "id": "kraehenmoor-position-013",
+      "icon": "zerst-rte-siedlung.png",
+      "candidates": [
+        {
+          "icon": "zerst-rte-siedlung.png",
+          "score": 0.814
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.488
+        },
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.463
+        }
+      ],
+      "number": 13,
+      "territoryId": "herrschaft-kaltherz",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 2572,
+      "y": 256,
+      "width": 102,
+      "height": 136,
+      "area": 9055,
+      "tipX": 2623.0,
+      "tipY": 392,
+      "id": "kraehenmoor-position-014",
+      "icon": "bergbausiedlung.png",
+      "candidates": [
+        {
+          "icon": "bergbausiedlung.png",
+          "score": 0.846
+        },
+        {
+          "icon": "antikes-grab.png",
+          "score": 0.56
+        },
+        {
+          "icon": "grabmal.png",
+          "score": 0.532
+        }
+      ],
+      "number": 14,
+      "territoryId": "jarltuemliches-thanentum-nebelmoor",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 1011,
+      "y": 258,
+      "width": 102,
+      "height": 135,
+      "area": 8968,
+      "tipX": 1062.0,
+      "tipY": 393,
+      "id": "kraehenmoor-position-015",
+      "icon": "sumpfsiedlung.png",
+      "candidates": [
+        {
+          "icon": "sumpfsiedlung.png",
+          "score": 0.525
+        },
+        {
+          "icon": "waldsiedlung.png",
+          "score": 0.439
+        },
+        {
+          "icon": "ziegelbrenner.png",
+          "score": 0.433
+        }
+      ],
+      "number": 15,
+      "territoryId": "herrschaft-kaltherz",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 2001,
+      "y": 283,
+      "width": 102,
+      "height": 136,
+      "area": 9062,
+      "tipX": 2052.0,
+      "tipY": 419,
+      "id": "kraehenmoor-position-016",
+      "icon": "bergbausiedlung.png",
+      "candidates": [
+        {
+          "icon": "bergbausiedlung.png",
+          "score": 0.837
+        },
+        {
+          "icon": "antikes-grab.png",
+          "score": 0.555
+        },
+        {
+          "icon": "grabmal.png",
+          "score": 0.518
+        }
+      ],
+      "number": 16,
+      "territoryId": "herrschaft-kaltherz",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 1239,
+      "y": 287,
+      "width": 102,
+      "height": 135,
+      "area": 9013,
+      "tipX": 1290.0,
+      "tipY": 422,
+      "id": "kraehenmoor-position-017",
+      "icon": "zerst-rte-siedlung.png",
+      "candidates": [
+        {
+          "icon": "zerst-rte-siedlung.png",
+          "score": 0.746
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.499
+        },
+        {
+          "icon": "bauernh-tte.png",
+          "score": 0.457
+        }
+      ],
+      "number": 17,
+      "territoryId": "herrschaft-kaltherz",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 1680,
+      "y": 300,
+      "width": 101,
+      "height": 135,
+      "area": 8993,
+      "tipX": 1730.5,
+      "tipY": 435,
+      "id": "kraehenmoor-position-018",
+      "icon": "zerst-rte-siedlung.png",
+      "candidates": [
+        {
+          "icon": "zerst-rte-siedlung.png",
+          "score": 0.877
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.488
+        },
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.473
+        }
+      ],
+      "number": 18,
+      "territoryId": "herrschaft-kaltherz",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 3466,
+      "y": 305,
+      "width": 152,
+      "height": 204,
+      "area": 20519,
+      "tipX": 3542.0,
+      "tipY": 509,
+      "id": "kraehenmoor-position-019",
+      "icon": "stadt.png",
+      "candidates": [
+        {
+          "icon": "stadt.png",
+          "score": 0.485
+        },
+        {
+          "icon": "waldsiedlung.png",
+          "score": 0.46
+        },
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.412
+        }
+      ],
+      "number": 19,
+      "territoryId": "hesirentum-schwarzfjord",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 3822,
+      "y": 322,
+      "width": 102,
+      "height": 135,
+      "area": 9107,
+      "tipX": 3873.0,
+      "tipY": 457,
+      "id": "kraehenmoor-position-020",
+      "icon": "schiffswrackpin.png",
+      "candidates": [
+        {
+          "icon": "schiffswrackpin.png",
+          "score": 0.75
+        },
+        {
+          "icon": "ziegelbrenner.png",
+          "score": 0.513
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.509
+        }
+      ],
+      "number": 20,
+      "territoryId": "hesirentum-schwarzfjord",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 2113,
+      "y": 367,
+      "width": 102,
+      "height": 135,
+      "area": 9073,
+      "tipX": 2164.0,
+      "tipY": 502,
+      "id": "kraehenmoor-position-021",
+      "icon": "h-gelgrab.png",
+      "candidates": [
+        {
+          "icon": "h-gelgrab.png",
+          "score": 0.84
+        },
+        {
+          "icon": "zerst-rte-kirche.png",
+          "score": 0.603
+        },
+        {
+          "icon": "kreaturenhort.png",
+          "score": 0.533
+        }
+      ],
+      "number": 21,
+      "territoryId": "jarltuemliches-thanentum-nebelmoor",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 1492,
+      "y": 388,
+      "width": 102,
+      "height": 136,
+      "area": 9107,
+      "tipX": 1543.0,
+      "tipY": 524,
+      "id": "kraehenmoor-position-022",
+      "icon": "taverne.png",
+      "candidates": [
+        {
+          "icon": "taverne.png",
+          "score": 0.607
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.586
+        },
+        {
+          "icon": "waldsiedlung.png",
+          "score": 0.554
+        }
+      ],
+      "number": 22,
+      "territoryId": "jarltuemliches-thanentum-nebelmoor",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 429,
+      "y": 424,
+      "width": 100,
+      "height": 133,
+      "area": 8462,
+      "tipX": 479.0,
+      "tipY": 557,
+      "id": "kraehenmoor-position-023",
+      "icon": "sumpfsiedlung.png",
+      "candidates": [
+        {
+          "icon": "sumpfsiedlung.png",
+          "score": 0.495
+        },
+        {
+          "icon": "ziegelbrenner.png",
+          "score": 0.471
+        },
+        {
+          "icon": "waldsiedlung.png",
+          "score": 0.443
+        }
+      ],
+      "number": 23,
+      "territoryId": "thanentum-rabenweide",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 2514,
+      "y": 445,
+      "width": 103,
+      "height": 136,
+      "area": 9028,
+      "tipX": 2565.5,
+      "tipY": 581,
+      "id": "kraehenmoor-position-024",
+      "icon": "bergbausiedlung.png",
+      "candidates": [
+        {
+          "icon": "bergbausiedlung.png",
+          "score": 0.829
+        },
+        {
+          "icon": "antikes-grab.png",
+          "score": 0.553
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.524
+        }
+      ],
+      "number": 24,
+      "territoryId": "jarltuemliches-thanentum-nebelmoor",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 2699,
+      "y": 484,
+      "width": 102,
+      "height": 135,
+      "area": 9019,
+      "tipX": 2750.0,
+      "tipY": 619,
+      "id": "kraehenmoor-position-025",
+      "icon": "bergbausiedlung.png",
+      "candidates": [
+        {
+          "icon": "bergbausiedlung.png",
+          "score": 0.843
+        },
+        {
+          "icon": "antikes-grab.png",
+          "score": 0.551
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.527
+        }
+      ],
+      "number": 25,
+      "territoryId": "jarltuemliches-thanentum-nebelmoor",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 3366,
+      "y": 497,
+      "width": 103,
+      "height": 136,
+      "area": 9091,
+      "tipX": 3417.5,
+      "tipY": 633,
+      "id": "kraehenmoor-position-026",
+      "icon": "bergbausiedlung.png",
+      "candidates": [
+        {
+          "icon": "bergbausiedlung.png",
+          "score": 0.798
+        },
+        {
+          "icon": "antikes-grab.png",
+          "score": 0.545
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.501
+        }
+      ],
+      "number": 26,
+      "territoryId": "hesirentum-schwarzfjord",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 628,
+      "y": 498,
+      "width": 101,
+      "height": 136,
+      "area": 9013,
+      "tipX": 678.5,
+      "tipY": 634,
+      "id": "kraehenmoor-position-027",
+      "icon": "zerst-rte-siedlung.png",
+      "candidates": [
+        {
+          "icon": "zerst-rte-siedlung.png",
+          "score": 0.768
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.483
+        },
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.452
+        }
+      ],
+      "number": 27,
+      "territoryId": "herrschaft-feuerherz",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 1655,
+      "y": 507,
+      "width": 128,
+      "height": 173,
+      "area": 14092,
+      "tipX": 1719.0,
+      "tipY": 680,
+      "id": "kraehenmoor-position-028",
+      "icon": "gro-e-burg.png",
+      "candidates": [
+        {
+          "icon": "gro-e-burg.png",
+          "score": 0.635
+        },
+        {
+          "icon": "stadt.png",
+          "score": 0.425
+        },
+        {
+          "icon": "anwesen.png",
+          "score": 0.398
+        }
+      ],
+      "number": 28,
+      "territoryId": "herrschaft-kaltherz",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 2089,
+      "y": 509,
+      "width": 103,
+      "height": 136,
+      "area": 9025,
+      "tipX": 2140.5,
+      "tipY": 645,
+      "id": "kraehenmoor-position-029",
+      "icon": "bergbausiedlung.png",
+      "candidates": [
+        {
+          "icon": "bergbausiedlung.png",
+          "score": 0.824
+        },
+        {
+          "icon": "antikes-grab.png",
+          "score": 0.557
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.52
+        }
+      ],
+      "number": 29,
+      "territoryId": "jarltuemliches-thanentum-nebelmoor",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 3737,
+      "y": 531,
+      "width": 102,
+      "height": 136,
+      "area": 9073,
+      "tipX": 3788.0,
+      "tipY": 667,
+      "id": "kraehenmoor-position-030",
+      "icon": "hafensiedlung.png",
+      "candidates": [
+        {
+          "icon": "hafensiedlung.png",
+          "score": 0.759
+        },
+        {
+          "icon": "fischerh-tte.png",
+          "score": 0.487
+        },
+        {
+          "icon": "poststation.png",
+          "score": 0.466
+        }
+      ],
+      "number": 30,
+      "territoryId": "hesirentum-schwarzfjord",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 3881,
+      "y": 538,
+      "width": 102,
+      "height": 136,
+      "area": 9134,
+      "tipX": 3932.0,
+      "tipY": 674,
+      "id": "kraehenmoor-position-031",
+      "icon": "schiffswrackpin.png",
+      "candidates": [
+        {
+          "icon": "schiffswrackpin.png",
+          "score": 0.791
+        },
+        {
+          "icon": "schmuggler2.png",
+          "score": 0.517
+        },
+        {
+          "icon": "ziegelbrenner.png",
+          "score": 0.515
+        }
+      ],
+      "number": 31,
+      "territoryId": "hesirentum-schwarzfjord",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 1319,
+      "y": 570,
+      "width": 103,
+      "height": 135,
+      "area": 8978,
+      "tipX": 1370.5,
+      "tipY": 705,
+      "id": "kraehenmoor-position-032",
+      "icon": "sumpfsiedlung.png",
+      "candidates": [
+        {
+          "icon": "sumpfsiedlung.png",
+          "score": 0.542
+        },
+        {
+          "icon": "ziegelbrenner.png",
+          "score": 0.471
+        },
+        {
+          "icon": "imkerhof.png",
+          "score": 0.46
+        }
+      ],
+      "number": 32,
+      "territoryId": "herrschaft-feuerherz",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 2270,
+      "y": 582,
+      "width": 102,
+      "height": 136,
+      "area": 9083,
+      "tipX": 2321.0,
+      "tipY": 718,
+      "id": "kraehenmoor-position-033",
+      "icon": "bergbausiedlung.png",
+      "candidates": [
+        {
+          "icon": "bergbausiedlung.png",
+          "score": 0.831
+        },
+        {
+          "icon": "antikes-grab.png",
+          "score": 0.533
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.497
+        }
+      ],
+      "number": 33,
+      "territoryId": "jarltuemliches-thanentum-nebelmoor",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 1034,
+      "y": 600,
+      "width": 101,
+      "height": 134,
+      "area": 8964,
+      "tipX": 1084.5,
+      "tipY": 734,
+      "id": "kraehenmoor-position-034",
+      "icon": "j-gerlager.png",
+      "candidates": [
+        {
+          "icon": "j-gerlager.png",
+          "score": 0.628
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.501
+        },
+        {
+          "icon": "gildenzentrale.png",
+          "score": 0.486
+        }
+      ],
+      "number": 34,
+      "territoryId": "jarltuemliches-thanentum-nebelmoor",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 280,
+      "y": 624,
+      "width": 102,
+      "height": 135,
+      "area": 8978,
+      "tipX": 331.0,
+      "tipY": 759,
+      "id": "kraehenmoor-position-035",
+      "icon": "burgsiedlung.png",
+      "candidates": [
+        {
+          "icon": "burgsiedlung.png",
+          "score": 0.759
+        },
+        {
+          "icon": "exekutionsplatz.png",
+          "score": 0.543
+        },
+        {
+          "icon": "befestigte-siedlung.png",
+          "score": 0.542
+        }
+      ],
+      "number": 35,
+      "territoryId": "thanentum-rabenweide",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 806,
+      "y": 642,
+      "width": 101,
+      "height": 136,
+      "area": 9031,
+      "tipX": 856.5,
+      "tipY": 778,
+      "id": "kraehenmoor-position-036",
+      "icon": "sumpfsiedlung.png",
+      "candidates": [
+        {
+          "icon": "sumpfsiedlung.png",
+          "score": 0.544
+        },
+        {
+          "icon": "imkerhof.png",
+          "score": 0.456
+        },
+        {
+          "icon": "ziegelbrenner.png",
+          "score": 0.454
+        }
+      ],
+      "number": 36,
+      "territoryId": "herrschaft-feuerherz",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 3265,
+      "y": 668,
+      "width": 102,
+      "height": 135,
+      "area": 9060,
+      "tipX": 3316.0,
+      "tipY": 803,
+      "id": "kraehenmoor-position-037",
+      "icon": "bergbausiedlung.png",
+      "candidates": [
+        {
+          "icon": "bergbausiedlung.png",
+          "score": 0.826
+        },
+        {
+          "icon": "antikes-grab.png",
+          "score": 0.539
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.499
+        }
+      ],
+      "number": 37,
+      "territoryId": "hesirentum-schwarzfjord",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 3593,
+      "y": 673,
+      "width": 102,
+      "height": 136,
+      "area": 9135,
+      "tipX": 3644.0,
+      "tipY": 809,
+      "id": "kraehenmoor-position-038",
+      "icon": "hafensiedlung.png",
+      "candidates": [
+        {
+          "icon": "hafensiedlung.png",
+          "score": 0.769
+        },
+        {
+          "icon": "fischerh-tte.png",
+          "score": 0.531
+        },
+        {
+          "icon": "poststation.png",
+          "score": 0.456
+        }
+      ],
+      "number": 38,
+      "territoryId": "hesirentum-schwarzfjord",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 78,
+      "y": 703,
+      "width": 127,
+      "height": 167,
+      "area": 13536,
+      "tipX": 141.5,
+      "tipY": 870,
+      "id": "kraehenmoor-position-039",
+      "icon": "bardensiedlung.png",
+      "candidates": [
+        {
+          "icon": "bardensiedlung.png",
+          "score": 0.674
+        },
+        {
+          "icon": "au-enposten.png",
+          "score": 0.457
+        },
+        {
+          "icon": "gasthof.png",
+          "score": 0.444
+        }
+      ],
+      "number": 39,
+      "territoryId": "thanentum-rabenweide",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 1921,
+      "y": 749,
+      "width": 153,
+      "height": 203,
+      "area": 20298,
+      "tipX": 1997.5,
+      "tipY": 952,
+      "id": "kraehenmoor-position-040",
+      "icon": "stadt.png",
+      "candidates": [
+        {
+          "icon": "stadt.png",
+          "score": 0.533
+        },
+        {
+          "icon": "waldsiedlung.png",
+          "score": 0.489
+        },
+        {
+          "icon": "druidenh-tte.png",
+          "score": 0.437
+        }
+      ],
+      "number": 40,
+      "territoryId": "jarltuemliches-thanentum-nebelmoor",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 3868,
+      "y": 756,
+      "width": 102,
+      "height": 136,
+      "area": 9062,
+      "tipX": 3919.0,
+      "tipY": 892,
+      "id": "kraehenmoor-position-041",
+      "icon": "kleine-burg.png",
+      "candidates": [
+        {
+          "icon": "kleine-burg.png",
+          "score": 0.66
+        },
+        {
+          "icon": "exekutionsplatz.png",
+          "score": 0.587
+        },
+        {
+          "icon": "au-enposten.png",
+          "score": 0.556
+        }
+      ],
+      "number": 41,
+      "territoryId": "hesirentum-schwarzfjord",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 1482,
+      "y": 757,
+      "width": 102,
+      "height": 135,
+      "area": 8992,
+      "tipX": 1533.0,
+      "tipY": 892,
+      "id": "kraehenmoor-position-042",
+      "icon": "sumpfsiedlung.png",
+      "candidates": [
+        {
+          "icon": "sumpfsiedlung.png",
+          "score": 0.56
+        },
+        {
+          "icon": "ziegelbrenner.png",
+          "score": 0.476
+        },
+        {
+          "icon": "imkerhof.png",
+          "score": 0.459
+        }
+      ],
+      "number": 42,
+      "territoryId": "herrschaft-feuerherz",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 391,
+      "y": 780,
+      "width": 102,
+      "height": 135,
+      "area": 9102,
+      "tipX": 442.0,
+      "tipY": 915,
+      "id": "kraehenmoor-position-043",
+      "icon": "bauernsiedlung-2.png",
+      "candidates": [
+        {
+          "icon": "bauernsiedlung-2.png",
+          "score": 0.835
+        },
+        {
+          "icon": "l-ndlicher-friedhof.png",
+          "score": 0.417
+        },
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.41
+        }
+      ],
+      "number": 43,
+      "territoryId": "thanentum-rabenweide",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 645,
+      "y": 822,
+      "width": 102,
+      "height": 135,
+      "area": 9127,
+      "tipX": 696.0,
+      "tipY": 957,
+      "id": "kraehenmoor-position-044",
+      "icon": "bauernsiedlung-2.png",
+      "candidates": [
+        {
+          "icon": "bauernsiedlung-2.png",
+          "score": 0.748
+        },
+        {
+          "icon": "l-ndlicher-friedhof.png",
+          "score": 0.42
+        },
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.412
+        }
+      ],
+      "number": 44,
+      "territoryId": "thanentum-rabenweide",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 860,
+      "y": 833,
+      "width": 102,
+      "height": 135,
+      "area": 9064,
+      "tipX": 911.0,
+      "tipY": 968,
+      "id": "kraehenmoor-position-045",
+      "icon": "brauersiedlung.png",
+      "candidates": [
+        {
+          "icon": "brauersiedlung.png",
+          "score": 0.643
+        },
+        {
+          "icon": "h-gelgrab.png",
+          "score": 0.399
+        },
+        {
+          "icon": "zerst-rte-kirche.png",
+          "score": 0.347
+        }
+      ],
+      "number": 45,
+      "territoryId": "hesirentum-goldglanz",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung.",
+      "locationTerritoryId": "thanentum-rabenweide",
+      "possession": "Exklave"
+    },
+    {
+      "x": 1279,
+      "y": 838,
+      "width": 102,
+      "height": 136,
+      "area": 9102,
+      "tipX": 1330.0,
+      "tipY": 974,
+      "id": "kraehenmoor-position-046",
+      "icon": "sumpfsiedlung.png",
+      "candidates": [
+        {
+          "icon": "sumpfsiedlung.png",
+          "score": 0.521
+        },
+        {
+          "icon": "ziegelbrenner.png",
+          "score": 0.473
+        },
+        {
+          "icon": "poststation.png",
+          "score": 0.451
+        }
+      ],
+      "number": 46,
+      "territoryId": "herrschaft-feuerherz",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 3419,
+      "y": 872,
+      "width": 102,
+      "height": 135,
+      "area": 9086,
+      "tipX": 3470.0,
+      "tipY": 1007,
+      "id": "kraehenmoor-position-047",
+      "icon": "bergbausiedlung.png",
+      "candidates": [
+        {
+          "icon": "bergbausiedlung.png",
+          "score": 0.809
+        },
+        {
+          "icon": "antikes-grab.png",
+          "score": 0.533
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.523
+        }
+      ],
+      "number": 47,
+      "territoryId": "hesirentum-schwarzfjord",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 535,
+      "y": 882,
+      "width": 102,
+      "height": 135,
+      "area": 9116,
+      "tipX": 586.0,
+      "tipY": 1017,
+      "id": "kraehenmoor-position-048",
+      "icon": "klostersiedlung.png",
+      "candidates": [
+        {
+          "icon": "klostersiedlung.png",
+          "score": 0.848
+        },
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.59
+        },
+        {
+          "icon": "leuchtturm.png",
+          "score": 0.572
+        }
+      ],
+      "number": 48,
+      "territoryId": "thanentum-rabenweide",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 3645,
+      "y": 904,
+      "width": 103,
+      "height": 136,
+      "area": 9089,
+      "tipX": 3696.5,
+      "tipY": 1040,
+      "id": "kraehenmoor-position-049",
+      "icon": "hafensiedlung.png",
+      "candidates": [
+        {
+          "icon": "hafensiedlung.png",
+          "score": 0.737
+        },
+        {
+          "icon": "fischerh-tte.png",
+          "score": 0.525
+        },
+        {
+          "icon": "poststation.png",
+          "score": 0.447
+        }
+      ],
+      "number": 49,
+      "territoryId": "hesirentum-schwarzfjord",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 234,
+      "y": 933,
+      "width": 102,
+      "height": 136,
+      "area": 9130,
+      "tipX": 285.0,
+      "tipY": 1069,
+      "id": "kraehenmoor-position-050",
+      "icon": "marktsiedlung.png",
+      "candidates": [
+        {
+          "icon": "marktsiedlung.png",
+          "score": 0.614
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.525
+        },
+        {
+          "icon": "nordische-ruine.png",
+          "score": 0.479
+        }
+      ],
+      "number": 50,
+      "territoryId": "thanentum-rabenweide",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 2589,
+      "y": 939,
+      "width": 102,
+      "height": 136,
+      "area": 9107,
+      "tipX": 2640.0,
+      "tipY": 1075,
+      "id": "kraehenmoor-position-051",
+      "icon": "bergbausiedlung.png",
+      "candidates": [
+        {
+          "icon": "bergbausiedlung.png",
+          "score": 0.828
+        },
+        {
+          "icon": "antikes-grab.png",
+          "score": 0.541
+        },
+        {
+          "icon": "grabmal.png",
+          "score": 0.507
+        }
+      ],
+      "number": 51,
+      "territoryId": "jarltuemliches-thanentum-nebelmoor",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 1134,
+      "y": 958,
+      "width": 102,
+      "height": 136,
+      "area": 9052,
+      "tipX": 1185.0,
+      "tipY": 1094,
+      "id": "kraehenmoor-position-052",
+      "icon": "taverne.png",
+      "candidates": [
+        {
+          "icon": "taverne.png",
+          "score": 0.638
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.609
+        },
+        {
+          "icon": "fischerh-tte.png",
+          "score": 0.591
+        }
+      ],
+      "number": 52,
+      "territoryId": "thanentum-rabenweide",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 2230,
+      "y": 1013,
+      "width": 102,
+      "height": 136,
+      "area": 9073,
+      "tipX": 2281.0,
+      "tipY": 1149,
+      "id": "kraehenmoor-position-053",
+      "icon": "bergbausiedlung.png",
+      "candidates": [
+        {
+          "icon": "bergbausiedlung.png",
+          "score": 0.846
+        },
+        {
+          "icon": "antikes-grab.png",
+          "score": 0.563
+        },
+        {
+          "icon": "grabmal.png",
+          "score": 0.545
+        }
+      ],
+      "number": 53,
+      "territoryId": "herrschaft-feuerherz",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 1558,
+      "y": 1029,
+      "width": 102,
+      "height": 135,
+      "area": 8989,
+      "tipX": 1609.0,
+      "tipY": 1164,
+      "id": "kraehenmoor-position-054",
+      "icon": "sumpfsiedlung.png",
+      "candidates": [
+        {
+          "icon": "sumpfsiedlung.png",
+          "score": 0.522
+        },
+        {
+          "icon": "ziegelbrenner.png",
+          "score": 0.479
+        },
+        {
+          "icon": "waldsiedlung.png",
+          "score": 0.452
+        }
+      ],
+      "number": 54,
+      "territoryId": "herrschaft-feuerherz",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 3810,
+      "y": 1031,
+      "width": 103,
+      "height": 135,
+      "area": 9020,
+      "tipX": 3861.5,
+      "tipY": 1166,
+      "id": "kraehenmoor-position-055",
+      "icon": "hafensiedlung.png",
+      "candidates": [
+        {
+          "icon": "hafensiedlung.png",
+          "score": 0.713
+        },
+        {
+          "icon": "fischerh-tte.png",
+          "score": 0.535
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.428
+        }
+      ],
+      "number": 55,
+      "territoryId": "verwaltung-blutstahl",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 1005,
+      "y": 1052,
+      "width": 102,
+      "height": 134,
+      "area": 9100,
+      "tipX": 1056.0,
+      "tipY": 1186,
+      "id": "kraehenmoor-position-056",
+      "icon": "klostersiedlung.png",
+      "candidates": [
+        {
+          "icon": "klostersiedlung.png",
+          "score": 0.77
+        },
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.589
+        },
+        {
+          "icon": "gasthof.png",
+          "score": 0.554
+        }
+      ],
+      "number": 56,
+      "territoryId": "thanentum-rabenweide",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 94,
+      "y": 1064,
+      "width": 102,
+      "height": 136,
+      "area": 9039,
+      "tipX": 145.0,
+      "tipY": 1200,
+      "id": "kraehenmoor-position-057",
+      "icon": "hafensiedlung.png",
+      "candidates": [
+        {
+          "icon": "hafensiedlung.png",
+          "score": 0.765
+        },
+        {
+          "icon": "fischerh-tte.png",
+          "score": 0.493
+        },
+        {
+          "icon": "poststation.png",
+          "score": 0.463
+        }
+      ],
+      "number": 57,
+      "territoryId": "thanentum-rabenweide",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 1928,
+      "y": 1069,
+      "width": 127,
+      "height": 174,
+      "area": 14059,
+      "tipX": 1991.5,
+      "tipY": 1243,
+      "id": "kraehenmoor-position-058",
+      "icon": "gro-e-burg.png",
+      "candidates": [
+        {
+          "icon": "gro-e-burg.png",
+          "score": 0.693
+        },
+        {
+          "icon": "stadt.png",
+          "score": 0.433
+        },
+        {
+          "icon": "anwesen.png",
+          "score": 0.397
+        }
+      ],
+      "number": 58,
+      "territoryId": "herrschaft-feuerherz",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 386,
+      "y": 1080,
+      "width": 102,
+      "height": 135,
+      "area": 9117,
+      "tipX": 437.0,
+      "tipY": 1215,
+      "id": "kraehenmoor-position-059",
+      "icon": "bauernsiedlung-2.png",
+      "candidates": [
+        {
+          "icon": "bauernsiedlung-2.png",
+          "score": 0.753
+        },
+        {
+          "icon": "l-ndlicher-friedhof.png",
+          "score": 0.424
+        },
+        {
+          "icon": "kontor.png",
+          "score": 0.414
+        }
+      ],
+      "number": 59,
+      "territoryId": "thanentum-rabenweide",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 651,
+      "y": 1086,
+      "width": 103,
+      "height": 135,
+      "area": 9133,
+      "tipX": 702.5,
+      "tipY": 1221,
+      "id": "kraehenmoor-position-060",
+      "icon": "marktsiedlung.png",
+      "candidates": [
+        {
+          "icon": "marktsiedlung.png",
+          "score": 0.621
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.519
+        },
+        {
+          "icon": "nordische-ruine.png",
+          "score": 0.472
+        }
+      ],
+      "number": 60,
+      "territoryId": "thanentum-rabenweide",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 3474,
+      "y": 1126,
+      "width": 103,
+      "height": 136,
+      "area": 9002,
+      "tipX": 3525.5,
+      "tipY": 1262,
+      "id": "kraehenmoor-position-061",
+      "icon": "bergbausiedlung.png",
+      "candidates": [
+        {
+          "icon": "bergbausiedlung.png",
+          "score": 0.842
+        },
+        {
+          "icon": "antikes-grab.png",
+          "score": 0.562
+        },
+        {
+          "icon": "grabmal.png",
+          "score": 0.532
+        }
+      ],
+      "number": 61,
+      "territoryId": "verwaltung-blutstahl",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 1345,
+      "y": 1174,
+      "width": 103,
+      "height": 135,
+      "area": 9148,
+      "tipX": 1396.5,
+      "tipY": 1309,
+      "id": "kraehenmoor-position-062",
+      "icon": "marktsiedlung.png",
+      "candidates": [
+        {
+          "icon": "marktsiedlung.png",
+          "score": 0.636
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.5
+        },
+        {
+          "icon": "nordische-ruine.png",
+          "score": 0.469
+        }
+      ],
+      "number": 62,
+      "territoryId": "thanentum-rabenweide",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 2576,
+      "y": 1179,
+      "width": 102,
+      "height": 135,
+      "area": 9016,
+      "tipX": 2627.0,
+      "tipY": 1314,
+      "id": "kraehenmoor-position-063",
+      "icon": "kleine-burg.png",
+      "candidates": [
+        {
+          "icon": "kleine-burg.png",
+          "score": 0.669
+        },
+        {
+          "icon": "h-gelgrab.png",
+          "score": 0.537
+        },
+        {
+          "icon": "exekutionsplatz.png",
+          "score": 0.516
+        }
+      ],
+      "number": 63,
+      "territoryId": "jarltuemliches-thanentum-nebelmoor",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 2289,
+      "y": 1207,
+      "width": 102,
+      "height": 135,
+      "area": 9113,
+      "tipX": 2340.0,
+      "tipY": 1342,
+      "id": "kraehenmoor-position-064",
+      "icon": "waldsiedlung.png",
+      "candidates": [
+        {
+          "icon": "waldsiedlung.png",
+          "score": 0.798
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.628
+        },
+        {
+          "icon": "antikes-grab.png",
+          "score": 0.604
+        }
+      ],
+      "number": 64,
+      "territoryId": "herrschaft-feuerherz",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 286,
+      "y": 1248,
+      "width": 153,
+      "height": 203,
+      "area": 20514,
+      "tipX": 362.5,
+      "tipY": 1451,
+      "id": "kraehenmoor-position-065",
+      "icon": "stadt.png",
+      "candidates": [
+        {
+          "icon": "stadt.png",
+          "score": 0.49
+        },
+        {
+          "icon": "waldsiedlung.png",
+          "score": 0.478
+        },
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.425
+        }
+      ],
+      "number": 65,
+      "territoryId": "thanentum-rabenweide",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 3554,
+      "y": 1261,
+      "width": 102,
+      "height": 136,
+      "area": 9127,
+      "tipX": 3605.0,
+      "tipY": 1397,
+      "id": "kraehenmoor-position-066",
+      "icon": "marktsiedlung.png",
+      "candidates": [
+        {
+          "icon": "marktsiedlung.png",
+          "score": 0.647
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.518
+        },
+        {
+          "icon": "waldsiedlung.png",
+          "score": 0.479
+        }
+      ],
+      "number": 66,
+      "territoryId": "verwaltung-blutstahl",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 1031,
+      "y": 1282,
+      "width": 102,
+      "height": 135,
+      "area": 9106,
+      "tipX": 1082.0,
+      "tipY": 1417,
+      "id": "kraehenmoor-position-067",
+      "icon": "marktsiedlung.png",
+      "candidates": [
+        {
+          "icon": "marktsiedlung.png",
+          "score": 0.654
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.519
+        },
+        {
+          "icon": "waldsiedlung.png",
+          "score": 0.475
+        }
+      ],
+      "number": 67,
+      "territoryId": "thanentum-rabenweide",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 1583,
+      "y": 1300,
+      "width": 102,
+      "height": 136,
+      "area": 9080,
+      "tipX": 1634.0,
+      "tipY": 1436,
+      "id": "kraehenmoor-position-068",
+      "icon": "marktsiedlung.png",
+      "candidates": [
+        {
+          "icon": "marktsiedlung.png",
+          "score": 0.629
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.515
+        },
+        {
+          "icon": "waldsiedlung.png",
+          "score": 0.46
+        }
+      ],
+      "number": 68,
+      "territoryId": "thanentum-rabenweide",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 2487,
+      "y": 1310,
+      "width": 103,
+      "height": 135,
+      "area": 8952,
+      "tipX": 2538.5,
+      "tipY": 1445,
+      "id": "kraehenmoor-position-069",
+      "icon": "bergbausiedlung.png",
+      "candidates": [
+        {
+          "icon": "bergbausiedlung.png",
+          "score": 0.772
+        },
+        {
+          "icon": "antikes-grab.png",
+          "score": 0.547
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.533
+        }
+      ],
+      "number": 69,
+      "territoryId": "herrschaft-feuerherz",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 800,
+      "y": 1325,
+      "width": 128,
+      "height": 170,
+      "area": 14191,
+      "tipX": 864.0,
+      "tipY": 1495,
+      "id": "kraehenmoor-position-070",
+      "icon": "festung.png",
+      "candidates": [
+        {
+          "icon": "fischerh-tte.png",
+          "score": 0.485
+        },
+        {
+          "icon": "kutscher.png",
+          "score": 0.467
+        },
+        {
+          "icon": "sch-bigeh-tte.png",
+          "score": 0.439
+        }
+      ],
+      "number": 70,
+      "territoryId": "thanentum-rabenweide",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 1958,
+      "y": 1327,
+      "width": 102,
+      "height": 135,
+      "area": 9090,
+      "tipX": 2009.0,
+      "tipY": 1462,
+      "id": "kraehenmoor-position-071",
+      "icon": "marktsiedlung.png",
+      "candidates": [
+        {
+          "icon": "marktsiedlung.png",
+          "score": 0.65
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.502
+        },
+        {
+          "icon": "waldsiedlung.png",
+          "score": 0.47
+        }
+      ],
+      "number": 71,
+      "territoryId": "thanentum-rabenweide",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 3328,
+      "y": 1388,
+      "width": 102,
+      "height": 136,
+      "area": 9080,
+      "tipX": 3379.0,
+      "tipY": 1524,
+      "id": "kraehenmoor-position-072",
+      "icon": "bergbausiedlung.png",
+      "candidates": [
+        {
+          "icon": "bergbausiedlung.png",
+          "score": 0.796
+        },
+        {
+          "icon": "antikes-grab.png",
+          "score": 0.541
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.528
+        }
+      ],
+      "number": 72,
+      "territoryId": "verwaltung-blutstahl",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 3862,
+      "y": 1388,
+      "width": 102,
+      "height": 135,
+      "area": 9121,
+      "tipX": 3913.0,
+      "tipY": 1523,
+      "id": "kraehenmoor-position-073",
+      "icon": "schiffswrackpin.png",
+      "candidates": [
+        {
+          "icon": "schiffswrackpin.png",
+          "score": 0.772
+        },
+        {
+          "icon": "ziegelbrenner.png",
+          "score": 0.521
+        },
+        {
+          "icon": "zerst-rtekirche2.png",
+          "score": 0.515
+        }
+      ],
+      "number": 73,
+      "territoryId": "verwaltung-blutstahl",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 521,
+      "y": 1393,
+      "width": 102,
+      "height": 135,
+      "area": 9094,
+      "tipX": 572.0,
+      "tipY": 1528,
+      "id": "kraehenmoor-position-074",
+      "icon": "bauernsiedlung-2.png",
+      "candidates": [
+        {
+          "icon": "bauernsiedlung-2.png",
+          "score": 0.756
+        },
+        {
+          "icon": "l-ndlicher-friedhof.png",
+          "score": 0.43
+        },
+        {
+          "icon": "kontor.png",
+          "score": 0.422
+        }
+      ],
+      "number": 74,
+      "territoryId": "thanentum-rabenweide",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 1725,
+      "y": 1417,
+      "width": 128,
+      "height": 169,
+      "area": 14306,
+      "tipX": 1789.0,
+      "tipY": 1586,
+      "id": "kraehenmoor-position-075",
+      "icon": "landgut.png",
+      "candidates": [
+        {
+          "icon": "anwesen.png",
+          "score": 0.745
+        },
+        {
+          "icon": "goblinlager.png",
+          "score": 0.316
+        },
+        {
+          "icon": "schmiede.png",
+          "score": 0.281
+        }
+      ],
+      "number": 75,
+      "territoryId": "jarltuemliches-thanentum-nebelmoor",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung.",
+      "locationTerritoryId": "thanentum-rabenweide",
+      "possession": "Landgut des Jarls"
+    },
+    {
+      "x": 1065,
+      "y": 1436,
+      "width": 103,
+      "height": 136,
+      "area": 9091,
+      "tipX": 1116.5,
+      "tipY": 1572,
+      "id": "kraehenmoor-position-076",
+      "icon": "bauernsiedlung-2.png",
+      "candidates": [
+        {
+          "icon": "bauernsiedlung-2.png",
+          "score": 0.816
+        },
+        {
+          "icon": "kontor.png",
+          "score": 0.435
+        },
+        {
+          "icon": "l-ndlicher-friedhof.png",
+          "score": 0.423
+        }
+      ],
+      "number": 76,
+      "territoryId": "thanentum-rabenweide",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 2525,
+      "y": 1444,
+      "width": 103,
+      "height": 135,
+      "area": 9084,
+      "tipX": 2576.5,
+      "tipY": 1579,
+      "id": "kraehenmoor-position-077",
+      "icon": "h-gelgrab.png",
+      "candidates": [
+        {
+          "icon": "h-gelgrab.png",
+          "score": 0.852
+        },
+        {
+          "icon": "zerst-rte-kirche.png",
+          "score": 0.622
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.546
+        }
+      ],
+      "number": 77,
+      "territoryId": "jarltuemliches-thanentum-nebelmoor",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 1207,
+      "y": 1483,
+      "width": 102,
+      "height": 136,
+      "area": 9056,
+      "tipX": 1258.0,
+      "tipY": 1619,
+      "id": "kraehenmoor-position-078",
+      "icon": "h-gelgrab.png",
+      "candidates": [
+        {
+          "icon": "h-gelgrab.png",
+          "score": 0.849
+        },
+        {
+          "icon": "zerst-rte-kirche.png",
+          "score": 0.598
+        },
+        {
+          "icon": "kreaturenhort.png",
+          "score": 0.525
+        }
+      ],
+      "number": 78,
+      "territoryId": "thanentum-rabenweide",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 2220,
+      "y": 1485,
+      "width": 102,
+      "height": 135,
+      "area": 9127,
+      "tipX": 2271.0,
+      "tipY": 1620,
+      "id": "kraehenmoor-position-079",
+      "icon": "bauernsiedlung-2.png",
+      "candidates": [
+        {
+          "icon": "bauernsiedlung-2.png",
+          "score": 0.822
+        },
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.411
+        },
+        {
+          "icon": "l-ndlicher-friedhof.png",
+          "score": 0.407
+        }
+      ],
+      "number": 79,
+      "territoryId": "verwaltung-silberblut",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 3651,
+      "y": 1506,
+      "width": 102,
+      "height": 136,
+      "area": 9100,
+      "tipX": 3702.0,
+      "tipY": 1642,
+      "id": "kraehenmoor-position-080",
+      "icon": "hafensiedlung.png",
+      "candidates": [
+        {
+          "icon": "hafensiedlung.png",
+          "score": 0.763
+        },
+        {
+          "icon": "fischerh-tte.png",
+          "score": 0.528
+        },
+        {
+          "icon": "poststation.png",
+          "score": 0.439
+        }
+      ],
+      "number": 80,
+      "territoryId": "verwaltung-blutstahl",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 1411,
+      "y": 1540,
+      "width": 102,
+      "height": 136,
+      "area": 9097,
+      "tipX": 1462.0,
+      "tipY": 1676,
+      "id": "kraehenmoor-position-081",
+      "icon": "marktsiedlung.png",
+      "candidates": [
+        {
+          "icon": "marktsiedlung.png",
+          "score": 0.617
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.532
+        },
+        {
+          "icon": "waldsiedlung.png",
+          "score": 0.458
+        }
+      ],
+      "number": 81,
+      "territoryId": "thanentum-rabenweide",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 3213,
+      "y": 1553,
+      "width": 102,
+      "height": 136,
+      "area": 9004,
+      "tipX": 3264.0,
+      "tipY": 1689,
+      "id": "kraehenmoor-position-082",
+      "icon": "bergbausiedlung.png",
+      "candidates": [
+        {
+          "icon": "bergbausiedlung.png",
+          "score": 0.822
+        },
+        {
+          "icon": "antikes-grab.png",
+          "score": 0.55
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.53
+        }
+      ],
+      "number": 82,
+      "territoryId": "verwaltung-blutstahl",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 3850,
+      "y": 1554,
+      "width": 102,
+      "height": 136,
+      "area": 9079,
+      "tipX": 3901.0,
+      "tipY": 1690,
+      "id": "kraehenmoor-position-083",
+      "icon": "schiffswrackpin.png",
+      "candidates": [
+        {
+          "icon": "schiffswrackpin.png",
+          "score": 0.738
+        },
+        {
+          "icon": "schmuggler2.png",
+          "score": 0.507
+        },
+        {
+          "icon": "ziegelbrenner.png",
+          "score": 0.506
+        }
+      ],
+      "number": 83,
+      "territoryId": "verwaltung-blutstahl",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 418,
+      "y": 1560,
+      "width": 102,
+      "height": 136,
+      "area": 9101,
+      "tipX": 469.0,
+      "tipY": 1696,
+      "id": "kraehenmoor-position-084",
+      "icon": "marktsiedlung.png",
+      "candidates": [
+        {
+          "icon": "marktsiedlung.png",
+          "score": 0.656
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.502
+        },
+        {
+          "icon": "burgsiedlung.png",
+          "score": 0.462
+        }
+      ],
+      "number": 84,
+      "territoryId": "thanentum-rabenweide",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 851,
+      "y": 1569,
+      "width": 102,
+      "height": 136,
+      "area": 9008,
+      "tipX": 902.0,
+      "tipY": 1705,
+      "id": "kraehenmoor-position-085",
+      "icon": "waldsiedlung.png",
+      "candidates": [
+        {
+          "icon": "waldsiedlung.png",
+          "score": 0.829
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.657
+        },
+        {
+          "icon": "gildenzentrale.png",
+          "score": 0.645
+        }
+      ],
+      "number": 85,
+      "territoryId": "hesirentum-rabenforst",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 2545,
+      "y": 1580,
+      "width": 102,
+      "height": 136,
+      "area": 9048,
+      "tipX": 2596.0,
+      "tipY": 1716,
+      "id": "kraehenmoor-position-086",
+      "icon": "bergbausiedlung.png",
+      "candidates": [
+        {
+          "icon": "bergbausiedlung.png",
+          "score": 0.867
+        },
+        {
+          "icon": "antikes-grab.png",
+          "score": 0.556
+        },
+        {
+          "icon": "grabmal.png",
+          "score": 0.543
+        }
+      ],
+      "number": 86,
+      "territoryId": "jarltuemliches-thanentum-nebelmoor",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 3056,
+      "y": 1650,
+      "width": 103,
+      "height": 135,
+      "area": 9028,
+      "tipX": 3107.5,
+      "tipY": 1785,
+      "id": "kraehenmoor-position-087",
+      "icon": "bergbausiedlung.png",
+      "candidates": [
+        {
+          "icon": "bergbausiedlung.png",
+          "score": 0.77
+        },
+        {
+          "icon": "antikes-grab.png",
+          "score": 0.521
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.5
+        }
+      ],
+      "number": 87,
+      "territoryId": "hesirentum-goldglanz",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 1670,
+      "y": 1666,
+      "width": 102,
+      "height": 135,
+      "area": 9106,
+      "tipX": 1721.0,
+      "tipY": 1801,
+      "id": "kraehenmoor-position-088",
+      "icon": "brauersiedlung.png",
+      "candidates": [
+        {
+          "icon": "brauersiedlung.png",
+          "score": 0.601
+        },
+        {
+          "icon": "h-gelgrab.png",
+          "score": 0.375
+        },
+        {
+          "icon": "zerst-rte-kirche.png",
+          "score": 0.336
+        }
+      ],
+      "number": 88,
+      "territoryId": "hesirentum-goldglanz",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung.",
+      "locationTerritoryId": "thanentum-rabenweide",
+      "possession": "Exklave"
+    },
+    {
+      "x": 271,
+      "y": 1687,
+      "width": 102,
+      "height": 135,
+      "area": 8999,
+      "tipX": 322.0,
+      "tipY": 1822,
+      "id": "kraehenmoor-position-089",
+      "icon": "hafensiedlung.png",
+      "candidates": [
+        {
+          "icon": "hafensiedlung.png",
+          "score": 0.805
+        },
+        {
+          "icon": "fischerh-tte.png",
+          "score": 0.503
+        },
+        {
+          "icon": "poststation.png",
+          "score": 0.484
+        }
+      ],
+      "number": 89,
+      "territoryId": "thanentum-rabenweide",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 2219,
+      "y": 1702,
+      "width": 102,
+      "height": 136,
+      "area": 9020,
+      "tipX": 2270.0,
+      "tipY": 1838,
+      "id": "kraehenmoor-position-090",
+      "icon": "bauernsiedlung-2.png",
+      "candidates": [
+        {
+          "icon": "bauernsiedlung-2.png",
+          "score": 0.838
+        },
+        {
+          "icon": "kontor.png",
+          "score": 0.437
+        },
+        {
+          "icon": "l-ndlicher-friedhof.png",
+          "score": 0.424
+        }
+      ],
+      "number": 90,
+      "territoryId": "verwaltung-silberblut",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 1985,
+      "y": 1745,
+      "width": 102,
+      "height": 136,
+      "area": 9140,
+      "tipX": 2036.0,
+      "tipY": 1881,
+      "id": "kraehenmoor-position-091",
+      "icon": "burgsiedlung.png",
+      "candidates": [
+        {
+          "icon": "burgsiedlung.png",
+          "score": 0.677
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.536
+        },
+        {
+          "icon": "exekutionsplatz.png",
+          "score": 0.505
+        }
+      ],
+      "number": 91,
+      "territoryId": "verwaltung-silberblut",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 2565,
+      "y": 1751,
+      "width": 102,
+      "height": 135,
+      "area": 9057,
+      "tipX": 2616.0,
+      "tipY": 1886,
+      "id": "kraehenmoor-position-092",
+      "icon": "bergbausiedlung.png",
+      "candidates": [
+        {
+          "icon": "bergbausiedlung.png",
+          "score": 0.861
+        },
+        {
+          "icon": "antikes-grab.png",
+          "score": 0.557
+        },
+        {
+          "icon": "grabmal.png",
+          "score": 0.525
+        }
+      ],
+      "number": 92,
+      "territoryId": "verwaltung-silberblut",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 1224,
+      "y": 1756,
+      "width": 102,
+      "height": 135,
+      "area": 8990,
+      "tipX": 1275.0,
+      "tipY": 1891,
+      "id": "kraehenmoor-position-093",
+      "icon": "marktsiedlung.png",
+      "candidates": [
+        {
+          "icon": "marktsiedlung.png",
+          "score": 0.651
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.505
+        },
+        {
+          "icon": "nordische-ruine.png",
+          "score": 0.469
+        }
+      ],
+      "number": 93,
+      "territoryId": "hesirentum-rabenforst",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 3531,
+      "y": 1759,
+      "width": 102,
+      "height": 135,
+      "area": 9077,
+      "tipX": 3582.0,
+      "tipY": 1894,
+      "id": "kraehenmoor-position-094",
+      "icon": "klostersiedlung.png",
+      "candidates": [
+        {
+          "icon": "klostersiedlung.png",
+          "score": 0.834
+        },
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.577
+        },
+        {
+          "icon": "gasthof.png",
+          "score": 0.556
+        }
+      ],
+      "number": 94,
+      "territoryId": "hesirentum-goldglanz",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 3296,
+      "y": 1786,
+      "width": 102,
+      "height": 136,
+      "area": 9124,
+      "tipX": 3347.0,
+      "tipY": 1922,
+      "id": "kraehenmoor-position-095",
+      "icon": "brauersiedlung.png",
+      "candidates": [
+        {
+          "icon": "brauersiedlung.png",
+          "score": 0.627
+        },
+        {
+          "icon": "h-gelgrab.png",
+          "score": 0.386
+        },
+        {
+          "icon": "zerst-rte-kirche.png",
+          "score": 0.337
+        }
+      ],
+      "number": 95,
+      "territoryId": "hesirentum-goldglanz",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 775,
+      "y": 1787,
+      "width": 152,
+      "height": 203,
+      "area": 20219,
+      "tipX": 851.0,
+      "tipY": 1990,
+      "id": "kraehenmoor-position-096",
+      "icon": "stadt.png",
+      "candidates": [
+        {
+          "icon": "stadt.png",
+          "score": 0.499
+        },
+        {
+          "icon": "waldsiedlung.png",
+          "score": 0.496
+        },
+        {
+          "icon": "druidenh-tte.png",
+          "score": 0.418
+        }
+      ],
+      "number": 96,
+      "territoryId": "hesirentum-rabenforst",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 1538,
+      "y": 1901,
+      "width": 114,
+      "height": 141,
+      "area": 17909,
+      "tipX": 1595,
+      "tipY": 2042,
+      "id": "kraehenmoor-position-097",
+      "icon": "klostersiedlung.png",
+      "candidates": [
+        {
+          "icon": "taverne.png",
+          "score": 0.443
+        },
+        {
+          "icon": "heereslager.png",
+          "score": 0.413
+        },
+        {
+          "icon": "zerst-rte-siedlung.png",
+          "score": 0.377
+        }
+      ],
+      "number": 97,
+      "territoryId": "hesirentum-rabenforst",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 3738,
+      "y": 1803,
+      "width": 102,
+      "height": 136,
+      "area": 9026,
+      "tipX": 3789.0,
+      "tipY": 1939,
+      "id": "kraehenmoor-position-098",
+      "icon": "hafensiedlung.png",
+      "candidates": [
+        {
+          "icon": "hafensiedlung.png",
+          "score": 0.737
+        },
+        {
+          "icon": "fischerh-tte.png",
+          "score": 0.534
+        },
+        {
+          "icon": "poststation.png",
+          "score": 0.436
+        }
+      ],
+      "number": 98,
+      "territoryId": "verwaltung-blutstahl",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 496,
+      "y": 1888,
+      "width": 102,
+      "height": 135,
+      "area": 9016,
+      "tipX": 547.0,
+      "tipY": 2023,
+      "id": "kraehenmoor-position-099",
+      "icon": "waldsiedlung.png",
+      "candidates": [
+        {
+          "icon": "waldsiedlung.png",
+          "score": 0.825
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.655
+        },
+        {
+          "icon": "antikes-grab.png",
+          "score": 0.637
+        }
+      ],
+      "number": 99,
+      "territoryId": "hesirentum-rabenforst",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 2097,
+      "y": 1901,
+      "width": 102,
+      "height": 136,
+      "area": 9107,
+      "tipX": 2148.0,
+      "tipY": 2037,
+      "id": "kraehenmoor-position-100",
+      "icon": "klostersiedlung.png",
+      "candidates": [
+        {
+          "icon": "klostersiedlung.png",
+          "score": 0.831
+        },
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.573
+        },
+        {
+          "icon": "gasthof.png",
+          "score": 0.556
+        }
+      ],
+      "number": 100,
+      "territoryId": "verwaltung-silberblut",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 3150,
+      "y": 1911,
+      "width": 102,
+      "height": 136,
+      "area": 9061,
+      "tipX": 3201.0,
+      "tipY": 2047,
+      "id": "kraehenmoor-position-101",
+      "icon": "klostersiedlung.png",
+      "candidates": [
+        {
+          "icon": "klostersiedlung.png",
+          "score": 0.817
+        },
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.587
+        },
+        {
+          "icon": "leuchtturm.png",
+          "score": 0.551
+        }
+      ],
+      "number": 101,
+      "territoryId": "hesirentum-goldglanz",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 1126,
+      "y": 1919,
+      "width": 102,
+      "height": 136,
+      "area": 8994,
+      "tipX": 1177.0,
+      "tipY": 2055,
+      "id": "kraehenmoor-position-102",
+      "icon": "waldsiedlung.png",
+      "candidates": [
+        {
+          "icon": "waldsiedlung.png",
+          "score": 0.81
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.649
+        },
+        {
+          "icon": "antikes-grab.png",
+          "score": 0.63
+        }
+      ],
+      "number": 102,
+      "territoryId": "hesirentum-rabenforst",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 3555,
+      "y": 1923,
+      "width": 103,
+      "height": 136,
+      "area": 9107,
+      "tipX": 3606.5,
+      "tipY": 2059,
+      "id": "kraehenmoor-position-103",
+      "icon": "hafensiedlung.png",
+      "candidates": [
+        {
+          "icon": "hafensiedlung.png",
+          "score": 0.736
+        },
+        {
+          "icon": "fischerh-tte.png",
+          "score": 0.519
+        },
+        {
+          "icon": "poststation.png",
+          "score": 0.444
+        }
+      ],
+      "number": 103,
+      "territoryId": "hesirentum-goldglanz",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 2499,
+      "y": 1936,
+      "width": 102,
+      "height": 136,
+      "area": 9122,
+      "tipX": 2550.0,
+      "tipY": 2072,
+      "id": "kraehenmoor-position-104",
+      "icon": "marktsiedlung.png",
+      "candidates": [
+        {
+          "icon": "marktsiedlung.png",
+          "score": 0.626
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.513
+        },
+        {
+          "icon": "waldsiedlung.png",
+          "score": 0.454
+        }
+      ],
+      "number": 104,
+      "territoryId": "verwaltung-silberblut",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 3804,
+      "y": 1965,
+      "width": 102,
+      "height": 136,
+      "area": 9129,
+      "tipX": 3855.0,
+      "tipY": 2101,
+      "id": "kraehenmoor-position-105",
+      "icon": "schiffswrackpin.png",
+      "candidates": [
+        {
+          "icon": "schiffswrackpin.png",
+          "score": 0.774
+        },
+        {
+          "icon": "schmuggler2.png",
+          "score": 0.517
+        },
+        {
+          "icon": "ziegelbrenner.png",
+          "score": 0.511
+        }
+      ],
+      "number": 105,
+      "territoryId": "verwaltung-blutstahl",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 1864,
+      "y": 1969,
+      "width": 103,
+      "height": 134,
+      "area": 8877,
+      "tipX": 1915.5,
+      "tipY": 2103,
+      "id": "kraehenmoor-position-106",
+      "icon": "flusssiedlung.png",
+      "candidates": [
+        {
+          "icon": "flusssiedlung.png",
+          "score": 0.607
+        },
+        {
+          "icon": "br-ckensiedlung.png",
+          "score": 0.589
+        },
+        {
+          "icon": "hei-e-quellen.png",
+          "score": 0.334
+        }
+      ],
+      "number": 106,
+      "territoryId": "hesirentum-rabenforst",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 771,
+      "y": 2045,
+      "width": 101,
+      "height": 135,
+      "area": 8972,
+      "tipX": 821.5,
+      "tipY": 2180,
+      "id": "kraehenmoor-position-107",
+      "icon": "flusssiedlung.png",
+      "candidates": [
+        {
+          "icon": "flusssiedlung.png",
+          "score": 0.633
+        },
+        {
+          "icon": "br-ckensiedlung.png",
+          "score": 0.63
+        },
+        {
+          "icon": "j-gerhaus.png",
+          "score": 0.354
+        }
+      ],
+      "number": 107,
+      "territoryId": "hesirentum-rabenforst",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 3002,
+      "y": 2065,
+      "width": 102,
+      "height": 135,
+      "area": 9116,
+      "tipX": 3053.0,
+      "tipY": 2200,
+      "id": "kraehenmoor-position-108",
+      "icon": "marktsiedlung.png",
+      "candidates": [
+        {
+          "icon": "marktsiedlung.png",
+          "score": 0.654
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.535
+        },
+        {
+          "icon": "waldsiedlung.png",
+          "score": 0.476
+        }
+      ],
+      "number": 108,
+      "territoryId": "verwaltung-silberblut",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 2693,
+      "y": 2085,
+      "width": 103,
+      "height": 136,
+      "area": 9102,
+      "tipX": 2744.5,
+      "tipY": 2221,
+      "id": "kraehenmoor-position-109",
+      "icon": "hafensiedlung.png",
+      "candidates": [
+        {
+          "icon": "hafensiedlung.png",
+          "score": 0.688
+        },
+        {
+          "icon": "fischerh-tte.png",
+          "score": 0.491
+        },
+        {
+          "icon": "bauernh-tte.png",
+          "score": 0.452
+        }
+      ],
+      "number": 109,
+      "territoryId": "verwaltung-silberblut",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 3376,
+      "y": 2138,
+      "width": 154,
+      "height": 204,
+      "area": 20342,
+      "tipX": 3453.0,
+      "tipY": 2342,
+      "id": "kraehenmoor-position-110",
+      "icon": "stadt.png",
+      "candidates": [
+        {
+          "icon": "stadt.png",
+          "score": 0.494
+        },
+        {
+          "icon": "waldsiedlung.png",
+          "score": 0.474
+        },
+        {
+          "icon": "druidenh-tte.png",
+          "score": 0.439
+        }
+      ],
+      "number": 110,
+      "territoryId": "thanentum-schimmerkueste",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "x": 3728,
+      "y": 2203,
+      "width": 102,
+      "height": 136,
+      "area": 9108,
+      "tipX": 3779.0,
+      "tipY": 2339,
+      "id": "kraehenmoor-position-111",
+      "icon": "hafensiedlung.png",
+      "candidates": [
+        {
+          "icon": "hafensiedlung.png",
+          "score": 0.775
+        },
+        {
+          "icon": "fischerh-tte.png",
+          "score": 0.501
+        },
+        {
+          "icon": "poststation.png",
+          "score": 0.469
+        }
+      ],
+      "number": 111,
+      "territoryId": "hesirentum-goldglanz",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "id": "kraehenmoor-position-112",
+      "x": 1617,
+      "y": 1804,
+      "width": 99,
+      "height": 130,
+      "tipX": 1666.5,
+      "tipY": 1934,
+      "icon": "taverne.png",
+      "note": "Separates Tavernenzeichen oberhalb rechts neben dem Tempel.",
+      "number": 112,
+      "territoryId": "hesirentum-rabenforst",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    },
+    {
+      "id": "kraehenmoor-position-113",
+      "x": 730,
+      "y": 1330,
+      "width": 100,
+      "height": 100,
+      "tipX": 780,
+      "tipY": 1394,
+      "icon": "h-gelgrab.png",
+      "note": "Helgrinds World-Anvil-Position trifft das eingezeichnete Grabgebäude westlich von Klingenhort; kein zusätzlicher eingebrannter Pin vorhanden. Originalposition erhalten.",
+      "number": 113,
+      "territoryId": "thanentum-rabenweide",
+      "assignmentEvidence": "Regionskarte: farbig verbundene Clanorte, Gebietsgrenzen und ausdrücklich bezeichnete Goldglanz-Exklaven; Nutzer-Vorgabe zur Verschachtelung."
+    }
+  ]
+}

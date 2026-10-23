@@ -102,7 +102,7 @@ export const IVARSHEIM_HOUSE_PROFILES = Object.freeze({
   trachwyll: ivarsheimProfile('hesire', IVARSFELS_PATH, {
     baronyEmblem: IVARSHEIM_REGION_EMBLEMS.ivarsklamm
   }),
-  grendel: ivarsheimProfile('hesire', HJERIMSHEIM_PATH, {
+  grendel: ivarsheimProfile('thane', HJERIMSHEIM_PATH, {
     baronyEmblem: IVARSHEIM_REGION_EMBLEMS.klippenschlag
   }),
   hyrmgardr: ivarsheimProfile('hesire', WINTERFESTE_PATH, {

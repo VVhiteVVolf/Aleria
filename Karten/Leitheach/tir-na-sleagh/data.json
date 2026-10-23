@@ -1,0 +1,1635 @@
+{
+  "schemaVersion": 1,
+  "dataPath": "Leitheach/tir-na-sleagh/data.json",
+  "revision": 1,
+  "updatedAt": "2026-10-22T16:10:00.000Z",
+  "generatedStateHash": "8cf1d3fa610df05871eb1b6672d0c61e2ba102e2e0148e86643e47c3c4f7a9c2",
+  "state": {
+    "pins": [],
+    "cats": [
+      {
+        "id": "mmflrbzxydg7",
+        "label": "Hauptstadt",
+        "color": "#ff0000"
+      },
+      {
+        "id": "mmflrqajby8b",
+        "label": "Bauernsiedlung",
+        "color": "#6060b0"
+      },
+      {
+        "id": "mmflry5furso",
+        "label": "Hafensiedlung",
+        "color": "#b03030"
+      },
+      {
+        "id": "mmfls5afqqpr",
+        "label": "Burgsiedlung",
+        "color": "#9050b0"
+      },
+      {
+        "id": "mmflsfqh3sft",
+        "label": "Handelssiedlung",
+        "color": "#3a8a3a"
+      },
+      {
+        "id": "mmflsrndeiee",
+        "label": "Brückensiedlung",
+        "color": "#2a7aaa"
+      },
+      {
+        "id": "mmflt1x3v22o",
+        "label": "Bergbausiedlung",
+        "color": "#7a6040"
+      },
+      {
+        "id": "mmflt7uj831y",
+        "label": "Waldsiedlung",
+        "color": "#c07030"
+      },
+      {
+        "id": "mmflteurd4n5",
+        "label": "Kirchensiedlung",
+        "color": "#508080"
+      },
+      {
+        "id": "mmfltia1m3s7",
+        "label": "Leuchtturmsiedlung",
+        "color": "#c49a20"
+      },
+      {
+        "id": "mmfltullsctk",
+        "label": "Festungssiedlung",
+        "color": "#6060b0"
+      },
+      {
+        "id": "mmflvj37jbh2",
+        "label": "Taverne",
+        "color": "#b03030"
+      },
+      {
+        "id": "mmflvquv2rr3",
+        "label": "Siedlungsruine",
+        "color": "#9050b0"
+      },
+      {
+        "id": "mmflw1z5ko6e",
+        "label": "Stadtruine",
+        "color": "#3a8a3a"
+      },
+      {
+        "id": "mmflw73t2e8v",
+        "label": "Bardensiedlung",
+        "color": "#2a7aaa"
+      },
+      {
+        "id": "mmflwdjfl6ah",
+        "label": "Stadt",
+        "color": "#7a6040"
+      },
+      {
+        "id": "mmflwmdfcyua",
+        "label": "Turmruine",
+        "color": "#c07030"
+      },
+      {
+        "id": "mmflwxad8w1j",
+        "label": "Schiffswrack",
+        "color": "#508080"
+      },
+      {
+        "id": "mmflx4731uj6",
+        "label": "Turnierplatz",
+        "color": "#c49a20"
+      },
+      {
+        "id": "mmflxnnhbh4g",
+        "label": "Besondere Orte",
+        "color": "#6060b0"
+      },
+      {
+        "id": "location-dorf",
+        "label": "Dorf",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/bardensiedlung.png"
+      },
+      {
+        "id": "location-flusssiedlung",
+        "label": "Flusssiedlung",
+        "color": "#2a7aaa",
+        "marker": "/Karten/assets/icons/welt/flusssiedlung.png"
+      },
+      {
+        "id": "location-bauernhof",
+        "label": "Bauernhof",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/bauernsiedlung.png"
+      },
+      {
+        "id": "location-landgut",
+        "label": "Landgut",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/landgut.png"
+      },
+      {
+        "id": "location-anwesen",
+        "label": "Anwesen",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/anwesen.png"
+      },
+      {
+        "id": "location-rittergut",
+        "label": "Rittergut",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/kleine-burg.png"
+      },
+      {
+        "id": "location-weingut",
+        "label": "Weingut",
+        "color": "#a45630",
+        "marker": "/Karten/assets/icons/welt/weingut.png"
+      },
+      {
+        "id": "location-obstplantage",
+        "label": "Obstplantage",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/obstplantage.png"
+      },
+      {
+        "id": "location-viehweide",
+        "label": "Viehweide",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/weide.png"
+      },
+      {
+        "id": "location-gestuet",
+        "label": "Gestüt",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/gest-t.png"
+      },
+      {
+        "id": "location-muehle",
+        "label": "Mühle",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/m-hle.png"
+      },
+      {
+        "id": "location-mine",
+        "label": "Mine",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/einzelnemine.png"
+      },
+      {
+        "id": "location-steinbruch",
+        "label": "Steinbruch",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/steinbruch-1.png"
+      },
+      {
+        "id": "location-schmiede",
+        "label": "Schmiede",
+        "color": "#a45630",
+        "marker": "/Karten/assets/icons/welt/schmiede.png"
+      },
+      {
+        "id": "location-brauerei",
+        "label": "Brauerei",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/brauersiedlung.png"
+      },
+      {
+        "id": "location-fischerei",
+        "label": "Fischerei",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/fischerh-tte.png"
+      },
+      {
+        "id": "location-holzfaellerlager",
+        "label": "Holzfällerlager",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/holzf-llerlager.png"
+      },
+      {
+        "id": "location-koehlerei",
+        "label": "Köhlerei",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/k-hler3.png"
+      },
+      {
+        "id": "location-imkerei",
+        "label": "Imkerei",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/imkerhof.png"
+      },
+      {
+        "id": "location-handelskontor",
+        "label": "Handelskontor",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/kontor.png"
+      },
+      {
+        "id": "location-markt",
+        "label": "Markt",
+        "color": "#a45630",
+        "marker": "/Karten/assets/icons/welt/marktstand.png"
+      },
+      {
+        "id": "location-gildenhaus",
+        "label": "Gildenhaus",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/gildenzentrale.png"
+      },
+      {
+        "id": "location-burg",
+        "label": "Burg",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/gro-e-burg.png"
+      },
+      {
+        "id": "location-turm",
+        "label": "Turm",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/turm.png"
+      },
+      {
+        "id": "location-leuchtturm",
+        "label": "Leuchtturm",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/leuchtturm.png"
+      },
+      {
+        "id": "location-aussenposten",
+        "label": "Außenposten",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/au-enposten.png"
+      },
+      {
+        "id": "location-grenzposten",
+        "label": "Grenzposten",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/zoll-grenzposten.png"
+      },
+      {
+        "id": "location-heerlager",
+        "label": "Heerlager",
+        "color": "#a45630",
+        "marker": "/Karten/assets/icons/welt/heereslager.png"
+      },
+      {
+        "id": "location-lagerplatz",
+        "label": "Lagerplatz",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/lager.png"
+      },
+      {
+        "id": "location-jaegerlager",
+        "label": "Jägerlager",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/j-gerlager.png"
+      },
+      {
+        "id": "location-jagdhaus",
+        "label": "Jagdhaus",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/j-gerhaus.png"
+      },
+      {
+        "id": "location-druidenhuette",
+        "label": "Druidenhütte",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/druidenh-tte.png"
+      },
+      {
+        "id": "location-hexenhuette",
+        "label": "Hexenhütte",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/hexenhaus.png"
+      },
+      {
+        "id": "location-schrein",
+        "label": "Schrein",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/wegschrein.png"
+      },
+      {
+        "id": "location-heiligtum",
+        "label": "Heiligtum",
+        "color": "#a45630",
+        "marker": "/Karten/assets/icons/welt/heiligtum.png"
+      },
+      {
+        "id": "location-friedhof",
+        "label": "Friedhof",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/l-ndlicher-friedhof.png"
+      },
+      {
+        "id": "location-grabstaette",
+        "label": "Grabstätte",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/grabmal.png"
+      },
+      {
+        "id": "location-ruine",
+        "label": "Ruine",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/ruine2.png"
+      },
+      {
+        "id": "location-ausgrabung",
+        "label": "Ausgrabung",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/ausgrabung.png"
+      },
+      {
+        "id": "location-hoehle",
+        "label": "Höhle",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/h-hle.png"
+      },
+      {
+        "id": "location-hain",
+        "label": "Hain",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/hain.png"
+      },
+      {
+        "id": "location-ahnenbaum",
+        "label": "Ahnenbaum",
+        "color": "#a45630",
+        "marker": "/Karten/assets/icons/welt/ahnenbaum.png"
+      },
+      {
+        "id": "location-quelle",
+        "label": "Quelle",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/quelle.png"
+      },
+      {
+        "id": "location-berggipfel",
+        "label": "Berggipfel",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/gipfel.png"
+      },
+      {
+        "id": "location-monsterhort",
+        "label": "Monsterhort",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/kreaturenhort.png"
+      },
+      {
+        "id": "location-banditenlager",
+        "label": "Banditenlager",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/banditenlager.png"
+      },
+      {
+        "id": "location-hafen",
+        "label": "Hafen / Steg",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/gro-er-hafen.png"
+      },
+      {
+        "id": "location-werft",
+        "label": "Werft",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/schiffswerft.png"
+      },
+      {
+        "id": "location-poststation",
+        "label": "Poststation",
+        "color": "#a45630",
+        "marker": "/Karten/assets/icons/welt/poststation.png"
+      },
+      {
+        "id": "location-schule",
+        "label": "Schule",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/l-ndliche-universit-t.png"
+      },
+      {
+        "id": "location-zirkus",
+        "label": "Zirkus",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/zirkus3.png"
+      },
+      {
+        "id": "location-wohnhaus",
+        "label": "Wohnhaus",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/b-uerliches-heim.png"
+      },
+      {
+        "id": "location-brauersiedlung",
+        "label": "Brauersiedlung",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/brauersiedlung.png"
+      },
+      {
+        "id": "location-klostersiedlung",
+        "label": "Klostersiedlung",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/klostersiedlung.png"
+      },
+      {
+        "id": "location-rosszuchtsiedlung",
+        "label": "Rosszuchtsiedlung",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/pferdezuchtsiedlung.png"
+      },
+      {
+        "id": "location-sumpfsiedlung",
+        "label": "Sumpfsiedlung",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/sumpfsiedlung.png"
+      },
+      {
+        "id": "location-unterwasserstadt",
+        "label": "Unterwasserstadt",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/unterwasserstadt.png"
+      },
+      {
+        "id": "location-festung",
+        "label": "Festung",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/festung.png"
+      },
+      {
+        "id": "location-magierturm",
+        "label": "Magierturm",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/magierturm.png"
+      },
+      {
+        "id": "location-diebesgilde",
+        "label": "Diebesgilde",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/diebesgilde.png"
+      },
+      {
+        "id": "location-piratenversteck",
+        "label": "Piratenversteck",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/piratenlager.png"
+      },
+      {
+        "id": "location-schmugglerversteck",
+        "label": "Schmugglerversteck",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/schmuggler3.png"
+      },
+      {
+        "id": "location-verwunschener-wald",
+        "label": "Verwunschener Wald",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/waldschrat.png"
+      },
+      {
+        "id": "location-wahrzeichen",
+        "label": "Wahrzeichen",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/wahrzeichen.png"
+      },
+      {
+        "id": "location-dimensionaler-riss",
+        "label": "Dimensionaler Riss",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/dimensionaler-riss.png"
+      },
+      {
+        "id": "location-galgen",
+        "label": "Galgen",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/exekutionsplatz.png"
+      },
+      {
+        "id": "location-muenzpraegestaette",
+        "label": "Münzprägestätte",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/m-nzpr-ger.png"
+      },
+      {
+        "id": "location-bogenschiessstand",
+        "label": "Bogenschießstand",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/schie-stand2.png"
+      },
+      {
+        "id": "location-ziegelei",
+        "label": "Ziegelei",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/ziegelbrenner.png"
+      },
+      {
+        "id": "location-schiff",
+        "label": "Schiff",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/orte/schiff-gut.png"
+      },
+      {
+        "id": "location-kreaturenlager",
+        "label": "Kreaturenlager",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/goblinlager.png"
+      },
+      {
+        "id": "location-heisse-quellen",
+        "label": "Heiße Quellen",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/hei-e-quellen.png"
+      },
+      {
+        "id": "location-brueckenruine",
+        "label": "Brückenruine",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/zerst-rte-br-cke.png"
+      },
+      {
+        "id": "location-kirchenruine",
+        "label": "Kirchenruine",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/zerst-rte-kirche.png"
+      },
+      {
+        "id": "location-hausruine",
+        "label": "Hausruine",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/zerst-rtes-heim.png"
+      },
+      {
+        "id": "location-huegelgrab",
+        "label": "Hügelgrab",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/h-gelgrab.png"
+      },
+      {
+        "id": "location-plantage",
+        "label": "Plantage",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/landgut.png"
+      },
+      {
+        "id": "location-kultstaette",
+        "label": "Kultstätte",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/okkulter-schrein.png"
+      },
+      {
+        "id": "location-zelt",
+        "label": "Zelt",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/ritterlicheszelt.png"
+      },
+      {
+        "id": "location-faehrstelle",
+        "label": "Fährstelle",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/orte/f-hre-steg.png"
+      },
+      {
+        "id": "location-schlachtfeld",
+        "label": "Schlachtfeld",
+        "color": "#6060b0"
+      }
+    ],
+    "categoryCatalogVersion": 3,
+    "regions": [
+      {
+        "id": "wa-b4e72dc2-a448-4ada-b088-187fbd6b0547",
+        "name": "Ehemalige Herrschaft der Ruin'Laoch - Eigenverwaltung des Cumhaill Clans",
+        "shortName": "Ehemalige Herrschaft der Ruin'Laoch - Eigenverwaltung des Cumhaill Clans",
+        "kind": "boundary",
+        "paths": [
+          [
+            [
+              -0.2578125,
+              0.57536822
+            ],
+            [
+              -0.21582031,
+              0.38232529
+            ],
+            [
+              0.03125,
+              0.24318395
+            ],
+            [
+              0.23144531,
+              0.44876214
+            ],
+            [
+              -0.02539063,
+              0.68317142
+            ],
+            [
+              -0.26269531,
+              0.58163585
+            ],
+            [
+              -0.04296875,
+              0.50517079
+            ],
+            [
+              -0.21386719,
+              0.38232529
+            ],
+            [
+              -0.04101563,
+              0.51143842
+            ],
+            [
+              -0.02734375,
+              0.69069257
+            ],
+            [
+              -0.04199219,
+              0.50517079
+            ],
+            [
+              0.03027344,
+              0.24318395
+            ],
+            [
+              -0.04199219,
+              0.50517079
+            ],
+            [
+              0.2265625,
+              0.45252272
+            ]
+          ]
+        ],
+        "color": "#ff1f1f",
+        "borderColor": "#ff1f1f",
+        "opacity": 0,
+        "parentId": "wa-a6dce509-1c41-46b0-9ac6-dfeed80e4077",
+        "dominionId": "region-b4e72dc2-a448-4ada-b088-187fbd6b0547",
+        "familyId": "haus-mac-ard-cumhaill",
+        "targetMapId": "",
+        "showLabel": false,
+        "note": "",
+        "source": {
+          "type": "world-anvil",
+          "mapId": "bf7d9da0-78df-4051-a138-4b64769e393e",
+          "markerId": "b4e72dc2-a448-4ada-b088-187fbd6b0547",
+          "coordinateSystem": "normalized-top-left",
+          "geometryMethod": "visible-svg",
+          "url": "https://www.worldanvil.com/world/map/marker/b4e72dc2-a448-4ada-b088-187fbd6b0547/edit"
+        },
+        "familyName": "Clan Mac Ard Cumhaill"
+      },
+      {
+        "id": "wa-26c9d1d6-933e-4ea9-9318-bb4b733b9d33",
+        "name": "Herrschaft der Na'Fiachrach",
+        "shortName": "Na'Fiachrach",
+        "kind": "boundary",
+        "paths": [
+          [
+            [
+              0.44726563,
+              -0.13036666
+            ],
+            [
+              0.19921875,
+              -0.10905672
+            ],
+            [
+              0.44726563,
+              -0.13036666
+            ],
+            [
+              0.5703125,
+              -0.17424005
+            ]
+          ],
+          [
+            [
+              0.56933594,
+              -0.17424005
+            ],
+            [
+              0.44921875,
+              -0.13162018
+            ],
+            [
+              0.4765625,
+              0.10028204
+            ],
+            [
+              0.43554688,
+              0.31588844
+            ],
+            [
+              0.4765625,
+              0.09777499
+            ],
+            [
+              0.67089844,
+              0.15669069
+            ],
+            [
+              0.83007813,
+              0.08523974
+            ],
+            [
+              0.93457031,
+              -0.06016923
+            ],
+            [
+              0.89453125,
+              -0.17424005
+            ]
+          ],
+          [
+            [
+              0.89648438,
+              -0.17424005
+            ],
+            [
+              0.93847656,
+              -0.06267628
+            ],
+            [
+              0.828125,
+              0.08398621
+            ]
+          ]
+        ],
+        "color": "#00ff04",
+        "borderColor": "#00ff04",
+        "opacity": 0,
+        "parentId": "wa-a6dce509-1c41-46b0-9ac6-dfeed80e4077",
+        "dominionId": "region-26c9d1d6-933e-4ea9-9318-bb4b733b9d33",
+        "familyId": "haus-fiachrach",
+        "targetMapId": "",
+        "showLabel": false,
+        "note": "",
+        "source": {
+          "type": "world-anvil",
+          "mapId": "bf7d9da0-78df-4051-a138-4b64769e393e",
+          "markerId": "26c9d1d6-933e-4ea9-9318-bb4b733b9d33",
+          "coordinateSystem": "normalized-top-left",
+          "geometryMethod": "visible-svg",
+          "url": "https://www.worldanvil.com/world/map/marker/26c9d1d6-933e-4ea9-9318-bb4b733b9d33/edit"
+        },
+        "familyName": "Clan Uí Fiachrach"
+      },
+      {
+        "id": "wa-6b1c69d1-d780-4c62-9657-8d2e22401fe9",
+        "name": "Herrschaft der Ua'Eirce",
+        "shortName": "Ua'Eirce",
+        "kind": "boundary",
+        "paths": [
+          [
+            [
+              0.13085938,
+              0.83484801
+            ],
+            [
+              0.23925781,
+              0.95518646
+            ],
+            [
+              0.55761719,
+              1.02162332
+            ],
+            [
+              0.68261719,
+              0.83986211
+            ],
+            [
+              0.84570313,
+              0.71701661
+            ],
+            [
+              0.8984375,
+              0.48762144
+            ],
+            [
+              0.96191406,
+              0.33970542
+            ],
+            [
+              0.62988281,
+              0.50015669
+            ],
+            [
+              0.50292969,
+              0.64556565
+            ],
+            [
+              0.16796875,
+              0.67063616
+            ],
+            [
+              0.13574219,
+              0.83234096
+            ]
+          ]
+        ],
+        "color": "#eaff00",
+        "borderColor": "#eaff00",
+        "opacity": 0,
+        "parentId": "wa-a6dce509-1c41-46b0-9ac6-dfeed80e4077",
+        "dominionId": "region-6b1c69d1-d780-4c62-9657-8d2e22401fe9",
+        "familyId": "haus-ua-eirce",
+        "targetMapId": "",
+        "showLabel": false,
+        "note": "",
+        "source": {
+          "type": "world-anvil",
+          "mapId": "bf7d9da0-78df-4051-a138-4b64769e393e",
+          "markerId": "6b1c69d1-d780-4c62-9657-8d2e22401fe9",
+          "coordinateSystem": "normalized-top-left",
+          "geometryMethod": "visible-svg",
+          "url": "https://www.worldanvil.com/world/map/marker/6b1c69d1-d780-4c62-9657-8d2e22401fe9/edit"
+        },
+        "familyName": "Clan Ua’Eirce"
+      },
+      {
+        "id": "wa-72525362-7e7e-4df4-aee3-106614756410",
+        "name": "Rhosmeres Rösser",
+        "shortName": "Rhosmeres Rösser",
+        "kind": "area",
+        "paths": [
+          [
+            [
+              0.234375,
+              0.08147916
+            ],
+            [
+              0.23355625,
+              0.09751372
+            ],
+            [
+              0.231114,
+              0.11327392
+            ],
+            [
+              0.22709003,
+              0.1284901
+            ],
+            [
+              0.22155321,
+              0.14290191
+            ],
+            [
+              0.21459827,
+              0.15626276
+            ],
+            [
+              0.2063442,
+              0.16834405
+            ],
+            [
+              0.19693225,
+              0.17893905
+            ],
+            [
+              0.18652344,
+              0.18786649
+            ],
+            [
+              0.17529588,
+              0.19497361
+            ],
+            [
+              0.16344167,
+              0.2001388
+            ],
+            [
+              0.15116364,
+              0.2032737
+            ],
+            [
+              0.13867188,
+              0.20432466
+            ],
+            [
+              0.12618011,
+              0.2032737
+            ],
+            [
+              0.11390208,
+              0.2001388
+            ],
+            [
+              0.10204787,
+              0.19497361
+            ],
+            [
+              0.09082031,
+              0.18786649
+            ],
+            [
+              0.0804115,
+              0.17893905
+            ],
+            [
+              0.07099955,
+              0.16834405
+            ],
+            [
+              0.06274548,
+              0.15626276
+            ],
+            [
+              0.05579054,
+              0.14290191
+            ],
+            [
+              0.05025372,
+              0.1284901
+            ],
+            [
+              0.04622975,
+              0.11327392
+            ],
+            [
+              0.0437875,
+              0.09751372
+            ],
+            [
+              0.04296875,
+              0.08147916
+            ],
+            [
+              0.0437875,
+              0.0654446
+            ],
+            [
+              0.04622975,
+              0.0496844
+            ],
+            [
+              0.05025372,
+              0.03446822
+            ],
+            [
+              0.05579054,
+              0.02005641
+            ],
+            [
+              0.06274548,
+              0.00669556
+            ],
+            [
+              0.07099955,
+              -0.00538573
+            ],
+            [
+              0.0804115,
+              -0.01598073
+            ],
+            [
+              0.09082031,
+              -0.02490817
+            ],
+            [
+              0.10204787,
+              -0.03201529
+            ],
+            [
+              0.11390208,
+              -0.03718048
+            ],
+            [
+              0.12618011,
+              -0.04031538
+            ],
+            [
+              0.13867188,
+              -0.04136634
+            ],
+            [
+              0.15116364,
+              -0.04031538
+            ],
+            [
+              0.16344167,
+              -0.03718048
+            ],
+            [
+              0.17529588,
+              -0.03201529
+            ],
+            [
+              0.18652344,
+              -0.02490817
+            ],
+            [
+              0.19693225,
+              -0.01598073
+            ],
+            [
+              0.2063442,
+              -0.00538573
+            ],
+            [
+              0.21459827,
+              0.00669556
+            ],
+            [
+              0.22155321,
+              0.02005641
+            ],
+            [
+              0.22709003,
+              0.03446822
+            ],
+            [
+              0.231114,
+              0.0496844
+            ],
+            [
+              0.23355625,
+              0.0654446
+            ]
+          ]
+        ],
+        "color": "#48cae4",
+        "borderColor": "#ff0000",
+        "opacity": 0.3,
+        "parentId": "wa-a6dce509-1c41-46b0-9ac6-dfeed80e4077",
+        "dominionId": "",
+        "familyId": "",
+        "targetMapId": "",
+        "showLabel": false,
+        "note": "Örtlicher Bereich",
+        "source": {
+          "type": "world-anvil",
+          "mapId": "bf7d9da0-78df-4051-a138-4b64769e393e",
+          "markerId": "72525362-7e7e-4df4-aee3-106614756410",
+          "coordinateSystem": "normalized-top-left",
+          "geometryMethod": "visible-svg",
+          "url": "https://www.worldanvil.com/world/map/marker/72525362-7e7e-4df4-aee3-106614756410/edit"
+        }
+      },
+      {
+        "id": "wa-a3a623ab-5b57-42ba-b570-3e721914033d",
+        "name": "Herrschaft von Broch an Abhainn",
+        "shortName": "Broch an Abhainn",
+        "kind": "area",
+        "paths": [
+          [
+            [
+              0.54296875,
+              1.18708869
+            ],
+            [
+              0.67089844,
+              1.05170793
+            ],
+            [
+              0.68945313,
+              0.97774992
+            ],
+            [
+              0.71484375,
+              0.9276089
+            ],
+            [
+              0.75585938,
+              0.87496083
+            ],
+            [
+              0.82324219,
+              0.80100282
+            ],
+            [
+              0.83398438,
+              0.78219994
+            ],
+            [
+              0.8359375,
+              0.75462238
+            ],
+            [
+              0.86621094,
+              0.74710122
+            ],
+            [
+              0.87207031,
+              0.73331244
+            ],
+            [
+              0.87402344,
+              0.71827013
+            ],
+            [
+              0.86328125,
+              0.71701661
+            ],
+            [
+              0.86425781,
+              0.69069257
+            ],
+            [
+              0.87988281,
+              0.63679097
+            ],
+            [
+              0.90332031,
+              0.61548104
+            ],
+            [
+              0.93652344,
+              0.60169226
+            ],
+            [
+              0.97460938,
+              0.5691006
+            ],
+            [
+              0.98535156,
+              0.55280476
+            ],
+            [
+              0.98144531,
+              0.53400188
+            ],
+            [
+              1,
+              0.49263554
+            ],
+            [
+              1.01464844,
+              0.49388906
+            ],
+            [
+              1.04003906,
+              0.51645252
+            ],
+            [
+              1.06640625,
+              0.53274835
+            ],
+            [
+              1.11621094,
+              0.53274835
+            ],
+            [
+              1.12695313,
+              0.53650893
+            ],
+            [
+              1.15136719,
+              0.5791288
+            ],
+            [
+              1.17382813,
+              0.59041053
+            ],
+            [
+              1.21484375,
+              0.58790348
+            ],
+            [
+              1.23046875,
+              0.60419931
+            ],
+            [
+              1.23242188,
+              0.6330304
+            ],
+            [
+              1.26757813,
+              0.66687559
+            ],
+            [
+              1.28320313,
+              0.68442495
+            ],
+            [
+              1.29101563,
+              0.72579129
+            ],
+            [
+              1.32324219,
+              0.82983391
+            ],
+            [
+              1.34277344,
+              0.85239737
+            ],
+            [
+              1.37109375,
+              0.87245378
+            ],
+            [
+              1.40917969,
+              0.89125666
+            ],
+            [
+              1.421875,
+              0.89251018
+            ],
+            [
+              1.43261719,
+              0.9175807
+            ],
+            [
+              1.44726563,
+              0.94014416
+            ],
+            [
+              1.46289063,
+              0.95769351
+            ],
+            [
+              1.48046875,
+              1.00282043
+            ],
+            [
+              1.4921875,
+              1.01159511
+            ],
+            [
+              1.4921875,
+              1.02789094
+            ],
+            [
+              1.44140625,
+              1.05546851
+            ],
+            [
+              1.41894531,
+              1.07427139
+            ],
+            [
+              1.40039063,
+              1.09558132
+            ],
+            [
+              1.37109375,
+              1.11187715
+            ],
+            [
+              1.35058594,
+              1.13444061
+            ],
+            [
+              1.34570313,
+              1.15449702
+            ],
+            [
+              1.33398438,
+              1.18207458
+            ],
+            [
+              1.34375,
+              1.18708869
+            ]
+          ]
+        ],
+        "color": "#c70000",
+        "borderColor": "#ff0000",
+        "opacity": 0.3,
+        "parentId": "wa-a6dce509-1c41-46b0-9ac6-dfeed80e4077",
+        "dominionId": "region-a3a623ab-5b57-42ba-b570-3e721914033d",
+        "familyId": "",
+        "targetMapId": "",
+        "showLabel": true,
+        "note": "",
+        "source": {
+          "type": "world-anvil",
+          "mapId": "bf7d9da0-78df-4051-a138-4b64769e393e",
+          "markerId": "a3a623ab-5b57-42ba-b570-3e721914033d",
+          "coordinateSystem": "normalized-top-left",
+          "geometryMethod": "visible-svg",
+          "url": "https://www.worldanvil.com/world/map/marker/a3a623ab-5b57-42ba-b570-3e721914033d/edit"
+        }
+      },
+      {
+        "id": "wa-a6dce509-1c41-46b0-9ac6-dfeed80e4077",
+        "name": "Fürstliches Herrschaftsgebiet",
+        "shortName": "Tir na Sleagh",
+        "kind": "area",
+        "paths": [
+          [
+            [
+              -0.49023438,
+              -0.18677531
+            ],
+            [
+              -0.49023438,
+              1.1093701
+            ],
+            [
+              -0.48632813,
+              1.10686305
+            ],
+            [
+              -0.46679688,
+              1.11062363
+            ],
+            [
+              -0.44433594,
+              1.12315888
+            ],
+            [
+              -0.41992188,
+              1.11939831
+            ],
+            [
+              -0.37890625,
+              1.12315888
+            ],
+            [
+              -0.34082031,
+              1.13820119
+            ],
+            [
+              -0.32128906,
+              1.16076465
+            ],
+            [
+              -0.30566406,
+              1.18708869
+            ],
+            [
+              0.54296875,
+              1.18708869
+            ],
+            [
+              0.5546875,
+              1.16953933
+            ],
+            [
+              0.63378906,
+              1.09056722
+            ],
+            [
+              0.67089844,
+              1.0404262
+            ],
+            [
+              0.68554688,
+              0.98401755
+            ],
+            [
+              0.70507813,
+              0.94390473
+            ],
+            [
+              0.73925781,
+              0.89000313
+            ],
+            [
+              0.78125,
+              0.84236916
+            ],
+            [
+              0.82519531,
+              0.80601692
+            ],
+            [
+              0.8359375,
+              0.77718584
+            ],
+            [
+              0.83691406,
+              0.75211532
+            ],
+            [
+              0.85351563,
+              0.74334065
+            ],
+            [
+              0.86425781,
+              0.74459417
+            ],
+            [
+              0.87304688,
+              0.72704481
+            ],
+            [
+              0.87304688,
+              0.71701661
+            ],
+            [
+              0.86132813,
+              0.71701661
+            ],
+            [
+              0.87988281,
+              0.63428392
+            ],
+            [
+              0.90136719,
+              0.61422751
+            ],
+            [
+              0.93554688,
+              0.60545284
+            ],
+            [
+              0.98242188,
+              0.55656534
+            ],
+            [
+              0.98535156,
+              0.53400188
+            ],
+            [
+              0.99609375,
+              0.50767784
+            ],
+            [
+              1,
+              0.48511438
+            ],
+            [
+              0.98925781,
+              0.4562833
+            ],
+            [
+              0.9765625,
+              0.43371984
+            ],
+            [
+              0.96191406,
+              0.40112817
+            ],
+            [
+              0.96679688,
+              0.37731119
+            ],
+            [
+              0.98339844,
+              0.36979003
+            ],
+            [
+              1.0078125,
+              0.2995926
+            ],
+            [
+              1.01464844,
+              0.27452209
+            ],
+            [
+              1.00878906,
+              0.26198684
+            ],
+            [
+              1.00585938,
+              0.24318395
+            ],
+            [
+              1.00585938,
+              0.20683171
+            ],
+            [
+              0.97167969,
+              0.18050768
+            ],
+            [
+              0.96972656,
+              0.15669069
+            ],
+            [
+              0.91601563,
+              0.1178314
+            ],
+            [
+              0.92382813,
+              0.0689439
+            ],
+            [
+              0.93457031,
+              0.03133814
+            ],
+            [
+              0.94628906,
+              0.01378878
+            ],
+            [
+              0.95410156,
+              -0.03008461
+            ],
+            [
+              0.99023438,
+              -0.0488875
+            ],
+            [
+              0.98828125,
+              -0.08022563
+            ],
+            [
+              0.93847656,
+              -0.11532435
+            ],
+            [
+              0.92578125,
+              -0.13036666
+            ],
+            [
+              0.91601563,
+              -0.14916954
+            ],
+            [
+              0.91796875,
+              -0.17549358
+            ],
+            [
+              0.92285156,
+              -0.18677531
+            ]
+          ]
+        ],
+        "color": "#e76f51",
+        "borderColor": "#d62828",
+        "opacity": 0.4,
+        "parentId": "",
+        "dominionId": "region-a6dce509-1c41-46b0-9ac6-dfeed80e4077",
+        "familyId": "haus-mac-ard-cumhaill",
+        "targetMapId": "",
+        "showLabel": true,
+        "note": "",
+        "source": {
+          "type": "world-anvil",
+          "mapId": "bf7d9da0-78df-4051-a138-4b64769e393e",
+          "markerId": "a6dce509-1c41-46b0-9ac6-dfeed80e4077",
+          "coordinateSystem": "normalized-top-left",
+          "geometryMethod": "visible-svg",
+          "url": "https://www.worldanvil.com/world/map/marker/a6dce509-1c41-46b0-9ac6-dfeed80e4077/edit"
+        },
+        "familyName": "Clan Mac Ard Cumhaill"
+      }
+    ],
+    "dominions": [
+      {
+        "id": "region-b4e72dc2-a448-4ada-b088-187fbd6b0547",
+        "name": "Ehemalige Herrschaft der Ruin'Laoch - Eigenverwaltung des Cumhaill Clans",
+        "type": "Herrschaft",
+        "ruler": "Clan Mac Ard Cumhaill",
+        "seat": "",
+        "note": "",
+        "parentId": "region-a6dce509-1c41-46b0-9ac6-dfeed80e4077"
+      },
+      {
+        "id": "region-26c9d1d6-933e-4ea9-9318-bb4b733b9d33",
+        "name": "Herrschaft der Na'Fiachrach",
+        "type": "Herrschaft",
+        "ruler": "Clan Uí Fiachrach",
+        "seat": "",
+        "note": "",
+        "parentId": "region-a6dce509-1c41-46b0-9ac6-dfeed80e4077"
+      },
+      {
+        "id": "region-6b1c69d1-d780-4c62-9657-8d2e22401fe9",
+        "name": "Herrschaft der Ua'Eirce",
+        "type": "Herrschaft",
+        "ruler": "Clan Ua’Eirce",
+        "seat": "",
+        "note": "",
+        "parentId": "region-a6dce509-1c41-46b0-9ac6-dfeed80e4077"
+      },
+      {
+        "id": "region-a3a623ab-5b57-42ba-b570-3e721914033d",
+        "name": "Herrschaft von Broch an Abhainn",
+        "type": "Herrschaft",
+        "ruler": "",
+        "seat": "",
+        "note": "",
+        "parentId": "region-a6dce509-1c41-46b0-9ac6-dfeed80e4077"
+      },
+      {
+        "id": "region-a6dce509-1c41-46b0-9ac6-dfeed80e4077",
+        "name": "Fürstliches Herrschaftsgebiet",
+        "type": "Herrschaft",
+        "ruler": "Clan Mac Ard Cumhaill",
+        "seat": "Dun Athar",
+        "note": "",
+        "parentId": ""
+      }
+    ],
+    "regionTitle": "Tir na Sleagh",
+    "regionIcon": "/Stammbäume/assets/images/regions/Leitheach/tir-na-sleagh.png",
+    "mapImages": {
+      "normal": "/Karten/Leitheach/tir-na-sleagh/Kartenbilder/normal.webp",
+      "regions": "",
+      "pins": ""
+    },
+    "layerNames": {
+      "normal": "Karte",
+      "regions": "Regionen",
+      "pins": "Markierungen"
+    },
+    "dotSize": 80,
+    "lblSize": 50,
+    "displaySettingsVersion": 1,
+    "markerPresentation": "symbols",
+    "pinVisibilityVersion": 1,
+    "showMarkers": true,
+    "showPinLabels": false,
+    "alwaysShowLettering": false,
+    "extraLayers": [],
+    "dm": {
+      "sessions": [],
+      "notes": "",
+      "groupStatus": {}
+    }
+  }
+}

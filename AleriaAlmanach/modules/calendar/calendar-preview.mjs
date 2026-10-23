@@ -14,7 +14,8 @@ export function renderCalendarParticipants(people = []) {
 export function renderCalendarPreview(event, { calendar = globalThis.AleriaCalendar, compact = false, link = false, collision = false, calendarHref = './kalender.html', articleBase = null } = {}) {
   const template = CALENDAR_TEMPLATES.find(item => item.id === event.type) || CALENDAR_TEMPLATES.at(-1);
   const delta = calendar.ordinal(event.start) - calendar.ordinal(calendar.current());
-  const relative = delta === 0 ? 'Heute' : delta === 1 ? 'Morgen' : delta < 0 ? 'Läuft bereits' : `In ${delta} Tagen`;
+  const archived = event.archived || event.source?.archived;
+  const relative = delta === 0 ? 'Heute' : delta === 1 ? 'Morgen' : delta < 0 ? calendar.ordinal(event.end) < calendar.ordinal(calendar.current()) ? 'Vergangenes Ereignis' : 'Läuft bereits' : `In ${delta} Tagen`;
   const range = calendar.ordinal(event.start) === calendar.ordinal(event.end)
     ? calendar.format(event.start, { withWeekday: false })
     : `${calendar.format(event.start, { withWeekday: false })} – ${calendar.format(event.end, { withWeekday: false })}`;
@@ -26,7 +27,7 @@ export function renderCalendarPreview(event, { calendar = globalThis.AleriaCalen
     : `<button type="button" data-calendar-open="${e(event.id)}" data-calendar-occurrence="${occurrenceDay}">${e(event.title)}</button>`;
   return `<article class="calendar-preview" data-calendar-type="${e(template.id)}">
     <img class="calendar-preview-icon" src="${safeCalendarUrl(event.icon) || `../IconOrdner/${e(template.icon)}`}" alt="" loading="lazy">
-    <div class="calendar-preview-copy"><div class="calendar-preview-kicker">${e(template.name)} · ${e(relative)}${event.localOnly || event.source?.localOnly ? ' · Lokal' : ''}</div>
+    <div class="calendar-preview-copy"><div class="calendar-preview-kicker">${e(template.name)} · ${e(relative)}${archived ? ' · Chronik' : event.localOnly || event.source?.localOnly ? ' · Lokal' : ''}${event.experimental || event.source?.experimental ? ' · Experimentell' : ''}</div>
     <h3>${title}</h3><p class="calendar-preview-meta">${e(range)}${event.startTime ? ` · ${e(event.startTime)}–${e(event.endTime)} Uhr` : ' · Ganztägig'}${event.location ? ` · ${e(event.location)}` : ''}</p>
     ${event.summary ? `<p>${e(compact && event.summary.length > 160 ? `${event.summary.slice(0, 157)}…` : event.summary)}</p>` : ''}
     ${event.participants?.length ? `<div class="calendar-participants">${renderCalendarParticipants(compact ? event.participants.slice(0, 4) : event.participants)}${compact && event.participants.length > 4 ? `<span>+${event.participants.length - 4}</span>` : ''}</div>` : ''}

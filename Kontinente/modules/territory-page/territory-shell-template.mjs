@@ -3,9 +3,9 @@ const escape = value => String(value).replace(/[&<>"']/g, char => ({
 })[char]);
 
 // Generated region pages share one shell; articles and ownership remain regional data.
-export function renderTerritoryShell({ id, title, kingdom, county, version }) {
+export function renderTerritoryShell({ id, title, kingdom, county, version, generator = 'build-roriksheim.mjs' }) {
   return `<!doctype html>
-<!-- Erzeugt durch Kontinente/scripts/build-roriksheim.mjs; gemeinsame Herrschaftsoberfläche. -->
+<!-- Erzeugt durch Kontinente/scripts/${escape(generator)}; gemeinsame Herrschaftsoberfläche. -->
 <html lang="de">
 <head>
   <meta charset="utf-8">
@@ -14,7 +14,7 @@ export function renderTerritoryShell({ id, title, kingdom, county, version }) {
   <link rel="stylesheet" href="/Kontinente/assets/css/koenigreich.css?v=${escape(version)}">
   <link rel="stylesheet" href="/Kontinente/assets/css/herrschaft.css?v=administration-row-20260911a">
   <link rel="stylesheet" href="/Kontinente/modules/administration/administration.css?v=administration-dialog-20260911b">
-  <link rel="stylesheet" href="/Kontinente/modules/territory-page/territory-navigation.css?v=${escape(version)}">
+  <link rel="stylesheet" href="/Kontinente/modules/territory-page/territory-navigation.css?v=${escape(version)}&amp;heraldry=20261022a">
   <script defer src="/Kontinente/modules/administration/administration-content.js?v=administration-row-20260911a"></script>
   <script defer src="/Kontinente/modules/administration/administration-dialog.js?v=administration-dialog-20260911b"></script>
   <script src="/Kontinente/assets/js/herrschaft-data.js?v=administration-row-20260911a"></script>
@@ -26,7 +26,7 @@ export function renderTerritoryShell({ id, title, kingdom, county, version }) {
 <body class="herrschaft-body world-codex">
   <main class="kingdom-page herrschaft-page" data-page-type="county" data-herrschaft-page data-herrschaft-shell
     data-kontinent-root data-default-id="${escape(id)}" data-kingdom="${escape(kingdom)}" data-county="${escape(county)}"></main>
-  <script defer src="/Kontinente/assets/js/herrschaft-page.js?v=${escape(version)}"></script>
+  <script defer src="/Kontinente/assets/js/herrschaft-page.js?v=${escape(version)}&amp;heraldry=20261022a"></script>
   <script defer src="/Kontinente/assets/js/koenigreich.js?v=20261018d"></script>
 </body>
 </html>

@@ -9,6 +9,16 @@ Der Ordner `Karten` soll langfristig als gemeinsame Karten-Plattform funktionier
 - Neue Karten sollen nicht als eigene HTML-Dateien vervielfacht werden.
 - Der Standardzugriff laeuft ueber `karte.html?map=<karten-id>` und `karten.registry.js`.
 
+Das gekapselte Feature `modules/regions/` ergänzt bearbeitbare SVG-Grenzen ohne
+Rasterbildpflicht. Es nutzt den gemeinsamen State und Speicherweg, besitzt aber
+eigene Zeichensitzung, Eingabeverwaltung und Ansicht. Schnittstellen und
+Datenvertrag stehen in [REGIONS_EDITOR.md](docs/REGIONS_EDITOR.md).
+
+Die zuschaltbare Familienwappenebene liegt in `modules/households/`. Sie trennt
+Familiensitze von territorialer Zugehörigkeit, besitzt eine eigene Ansicht und
+verwendet die gemeinsamen Kartenereignisse. Quellen, Markerzuordnungen und
+Editorintegration stehen in [Familienwappen auf Karten](modules/households/README.md).
+
 ## Aktueller Schnitt
 
 ```txt

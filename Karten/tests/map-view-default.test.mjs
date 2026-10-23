@@ -47,19 +47,21 @@ function createFixture() {
     },
   };
 
-  const window = { KartoRuntime: {} };
+  const events = [];
+  const window = { KartoRuntime: {}, dispatchEvent: event => events.push(event.type) };
   vm.runInNewContext(
     fs.readFileSync(new URL("../assets/js/map/map-view.js", import.meta.url), "utf8"),
-    { document, window }
+    { document, window, CustomEvent: class { constructor(type) { this.type=type; } } }
   );
 
-  return { window, buttons, overlays, pinLayer };
+  return { window, buttons, overlays, pinLayer, events };
 }
 
 test("the default layer is the normal map without zone or marker overlays", () => {
   const fixture = createFixture();
 
   fixture.window.resetLayers();
+  assert.ok(fixture.events.includes('aleria:karto:layers-changed'));
 
   assert.equal(fixture.buttons[0].classList.contains("on"), true);
   assert.equal(fixture.buttons[1].classList.contains("on"), false);
@@ -99,4 +101,23 @@ test("marker overlay can be enabled and normal resets it again", () => {
   fixture.window.toggleLayer("normal");
   assert.equal(fixture.overlays.get("pins").style.opacity, "0");
   assert.equal(fixture.pinLayer.style.display, "none");
+});
+
+test('maps with editor symbols show their marker layer on the normal view, including after reset',()=>{
+  const f=createFixture(),state={markerPresentation:'symbols',showMarkers:true,pins:[{id:'visible'}]};
+  f.window.KartoRuntime.state=()=>state;
+  f.window.resetLayers();
+  assert.equal(f.buttons[2].classList.contains('on'),true);
+  assert.equal(f.pinLayer.classList.contains('marker-layer-active'),true);
+  assert.equal(f.pinLayer.style.display,'block');
+  f.window.deactivateLayer('pins');
+  assert.equal(f.pinLayer.style.display,'none');
+  f.window.resetLayers();
+  assert.equal(f.pinLayer.style.display,'block');
+  state.showMarkers=false;
+  f.window.resetLayers();
+  assert.equal(f.pinLayer.style.display,'none');
+  state.showMarkers=true;state.pins=[];
+  f.window.resetLayers();
+  assert.equal(f.buttons[2].classList.contains('on'),false,'No invisible empty layer blending into a region image');
 });

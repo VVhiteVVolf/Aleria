@@ -67,19 +67,21 @@
     });
     const wrap = document.getElementById('layer-opacity-wrap');
     if(wrap) wrap.style.display = blend ? 'flex' : 'none';
+    window.dispatchEvent(new CustomEvent('aleria:karto:layers-changed'));
   }
 
   function resetLayers(){
+    const state = runtime.state?.() || {};
+    const symbols = state.markerPresentation === 'symbols' && state.showMarkers === true && state.pins?.length > 0;
     document.querySelectorAll('#layer-btns .lbtn:not([data-layer="normal"])').forEach(button => {
-      setLayerActive(button.dataset.layer, false);
+      setLayerActive(button.dataset.layer, button.dataset.layer === 'pins' && symbols);
     });
     document.getElementById('lb-normal')?.classList.add('on');
     applyLayerOpacities();
   }
 
-  // "Karte" isn't really a 4th toggleable overlay (the base map is always
-  // visible) - clicking it just clears every active overlay back to the
-  // plain base map, same as before.
+  // The base map is always visible. "Karte" restores its normal presentation,
+  // retaining editor symbols only on maps that explicitly use them.
   function toggleLayer(layer){
     if(layer === 'normal'){ resetLayers(); return; }
     const button = document.getElementById('lb-' + layer);

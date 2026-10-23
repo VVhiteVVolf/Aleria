@@ -8,10 +8,10 @@ import { renderEventCard, renderEventCatalog } from '../modules/catalog/events-r
 import { renderCalendarChronicle } from '../../AleriaAlmanach/modules/calendar/calendar-chronicle.mjs';
 import { renderCalendarPreview } from '../../AleriaAlmanach/modules/calendar/calendar-preview.mjs';
 
-test('Alle zehn benannten Ereignisse und sechs Kapitel; keine erfundene Reise oder Datierung', () => {
-  assert.equal(EVENTS.length, 10);
+test('Elf benannte Ereignisse und sechs Kapitel; keine erfundene Reise oder Datierung', () => {
+  assert.equal(EVENTS.length, 11);
   assert.equal(EVENT_CHAPTERS.length, 6);
-  assert.equal(new Set(EVENTS.map(event => event.id)).size, 10);
+  assert.equal(new Set(EVENTS.map(event => event.id)).size, 11);
   assert.equal(EVENTS.filter(event => event.chapter === 'reisen').length, 0);
   assert.deepEqual(EVENTS.filter(event => event.startYear === null).map(event => event.id), ['seeschlacht-rhonwens-traenen']);
   for (const event of EVENTS) {

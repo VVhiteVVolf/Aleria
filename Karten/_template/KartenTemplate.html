@@ -14,6 +14,8 @@
 <script src="./template.config.js"></script>
 <script src="../assets/js/karto-storage.js?v=20261001-publish"></script>
 <link rel="stylesheet" href="../assets/css/pin-lettering.css?v=20260920a">
+<link rel="stylesheet" href="../modules/regions/regions.css?v=20261022b">
+<link rel="stylesheet" href="../modules/households/households.css?v=20261023">
 </head>
 <body>
 <div style="display:flex;flex-direction:column;height:100%;">
@@ -421,6 +423,7 @@
         <div class="dmgr-sec-desc">Wähle welche Bereiche exportiert werden sollen. Die Datei kann später wieder importiert werden.</div>
         <div class="dmgr-checks" id="exp-checks">
           <label class="dmgr-chk"><input type="checkbox" id="exp-pins" checked><span class="dmgr-chk-icon">📍</span><span class="dmgr-chk-lbl">Pins</span><span class="dmgr-chk-cnt" id="exp-pins-cnt"></span></label>
+          <label class="dmgr-chk"><input type="checkbox" id="exp-regions" checked><span class="dmgr-chk-icon">▱</span><span class="dmgr-chk-lbl">Gebiete &amp; Grenzen</span><span class="dmgr-chk-cnt" id="exp-regions-cnt"></span></label>
           <label class="dmgr-chk"><input type="checkbox" id="exp-cats" checked><span class="dmgr-chk-icon">🏷</span><span class="dmgr-chk-lbl">Kategorien</span><span class="dmgr-chk-cnt" id="exp-cats-cnt"></span></label>
           <label class="dmgr-chk"><input type="checkbox" id="exp-mcat" checked><span class="dmgr-chk-icon">🗂</span><span class="dmgr-chk-lbl">Marker-Katalog</span><span class="dmgr-chk-cnt" id="exp-mcat-cnt"></span></label>
           <label class="dmgr-chk"><input type="checkbox" id="exp-lsb"><span class="dmgr-chk-icon">📋</span><span class="dmgr-chk-lbl">Sidebar / Gruppen</span></label>
@@ -458,6 +461,7 @@
           <div class="dmgr-sec-desc" style="margin-bottom:.4rem;" id="dmgr-imp-meta"></div>
           <div class="dmgr-checks" id="imp-checks">
             <label class="dmgr-chk" id="imp-chk-pins"   style="display:none"><input type="checkbox" id="imp-pins"  checked><span class="dmgr-chk-icon">📍</span><span class="dmgr-chk-lbl">Pins überschreiben</span><span class="dmgr-chk-cnt" id="imp-pins-cnt"></span></label>
+            <label class="dmgr-chk region-import-section" id="imp-chk-regions"><input type="checkbox" id="imp-regions" checked><span class="dmgr-chk-icon">▱</span><span class="dmgr-chk-lbl">Gebiete &amp; Grenzen überschreiben</span><span class="dmgr-chk-cnt" id="imp-regions-cnt"></span></label>
             <label class="dmgr-chk" id="imp-chk-cats"   style="display:none"><input type="checkbox" id="imp-cats"  checked><span class="dmgr-chk-icon">🏷</span><span class="dmgr-chk-lbl">Kategorien überschreiben</span><span class="dmgr-chk-cnt" id="imp-cats-cnt"></span></label>
             <label class="dmgr-chk" id="imp-chk-mcat"   style="display:none"><input type="checkbox" id="imp-mcat"  checked><span class="dmgr-chk-icon">🗂</span><span class="dmgr-chk-lbl">Marker-Katalog</span><span class="dmgr-chk-cnt" id="imp-mcat-cnt"></span>
               <select class="dmgr-mode-sel" id="imp-mcat-mode"><option value="replace">Ersetzen</option><option value="merge">Zusammenführen</option></select>
@@ -709,31 +713,34 @@
 <script src="../assets/js/media/media-assets.registry.js?v=tal-der-milane-20261019"></script>
 <script src="../assets/js/pins/pin-card-renderer.js?v=weidebucht-20261019"></script>
 <script src="../assets/js/map/map-display-settings.js?v=20261018a"></script>
-<script src="../assets/js/karto-app.js?v=20261019-marker-anchor"></script>
+<script src="../assets/js/pins/pin-presentation.js?v=20261022-symbols"></script>
+<script src="../assets/js/karto-app.js?v=20261022-symbols"></script>
 <script src="../assets/js/media/media-library.js?v=20260901b"></script>
 <script src="../assets/js/lsb/lsb-groups.js"></script>
 <script src="../assets/js/lsb/lsb-modals.js"></script>
-<script src="../assets/js/data/data-manager.js?v=20261001-map-search-view"></script>
+<script src="../assets/js/data/data-manager.js?v=regions-20261022a"></script>
 <script src="../assets/js/dm/dm-tools.js"></script>
 <script src="../assets/js/map/map-panzoom.js"></script>
 <script src="../assets/js/map/map-panning.js"></script>
 <script src="../assets/js/map/map-interaction.js"></script>
-<script src="../assets/js/map/map-view.js?v=20261001-map-search-view"></script>
+<script src="../assets/js/map/map-view.js?v=20261022-symbols"></script>
 <script src="../assets/js/pins/marker-catalog.js"></script>
 <script src="../assets/js/pins/categories.js"></script>
 <script src="../assets/js/pins/pin-templates.js?v=20261001-template-pins"></script>
 <script src="../assets/js/pins/stamp-overwrite.js?v=20261001-placeholders"></script>
 <script src="../assets/js/pins/pin-lettering.js?v=20260920a"></script>
-<script src="../assets/js/pins/pin-renderer.js?v=20261019-marker-anchor"></script>
+<script src="../assets/js/pins/pin-renderer.js?v=20261023-households"></script>
 <script src="../assets/js/pins/pin-visibility.js?v=20261001-map-search-view"></script>
 <script src="../assets/js/pins/pin-detail-view.js?v=20260911b"></script>
 <script src="../assets/js/pins/pin-editor-draft.js?v=20260901a"></script>
 <script src="../assets/js/pins/pin-editor-preview.js?v=20261001-pin-performance"></script>
-<script src="../assets/js/pins/pin-editor.js?v=20261001-pin-performance"></script>
+<script src="../assets/js/pins/pin-editor.js?v=20261023-households"></script>
 <script src="../assets/js/pins/pin-navigation.js?v=20261001-map-search-view"></script>
 <script src="../assets/js/pins/search.js?v=20261001-map-search-view"></script>
-<script src="../assets/js/core/karto-load-published-ui.js?v=20260911a"></script>
+<script src="../assets/js/core/karto-load-published-ui.js?v=regions-20261022a"></script>
 <script src="../assets/js/core/karto-actions.js?v=20261001-map-search-view"></script>
 <script src="../assets/js/core/karto-bootstrap.js"></script>
+<script type="module" src="../modules/regions/region-editor.mjs?v=20261022b"></script>
+<script type="module" src="../modules/households/household-overlay.mjs?v=20261023"></script>
 </body>
 </html>

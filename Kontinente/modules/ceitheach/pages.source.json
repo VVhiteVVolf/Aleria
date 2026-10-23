@@ -1,0 +1,2580 @@
+{
+  "pages": [
+    {
+      "id": "fuerstentum-ceitheach",
+      "title": "Fürstentum Ceitheach",
+      "shortTitle": "Ceitheach",
+      "type": "Fürstentum",
+      "kicker": "Historisches Fürstentum · Clan Ui’Rochraide",
+      "parentHref": "/Kontinente/Alben/Der Schild von Ailith.html",
+      "parentLabel": "Der Schild von Ailith",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Estryll",
+          "slug": "estryll"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Ceitheach",
+          "slug": "fuerstentum-ceitheach"
+        }
+      ],
+      "crestSrc": "/Stammbäume/assets/images/regions/Ceitheach/ceitheach.png",
+      "crestAlt": "Banner Fürstentum Ceitheach",
+      "copy": {
+        "overview": [
+          "Ceitheach ist als Fürstentum untergegangen. Die hier dargestellten Oberherrschaften und Clans dokumentieren seine historische Ordnung. Sein ehemaliges Kerngebiet wird heute als Dunkelhain geführt."
+        ]
+      },
+      "cultureSections": [
+        {
+          "title": "Der Clan",
+          "paragraphs": [
+            "Clans in der Kultur der Alben sind familiäre Einheiten, die sich auf eine gemeinsame Abstammung oder eine spezifische Herkunft beziehen. Sie spielen eine zentrale Rolle in der albischen Gesellschaft und organisieren sich oft um einen gemeinsamen Präfix, der ihre Abstammung oder ihre historische Bedeutung kennzeichnet. Diese Präfixe können auf direkte Abstammungslinien, bestimmte Orte, Berufe oder mythologische Figuren verweisen. Clans dienen als soziale Einheiten und tragen oft zur politischen, wirtschaftlichen und kulturellen Struktur der albischen Gemeinschaft bei."
+          ]
+        },
+        {
+          "title": "Die Sept",
+          "paragraphs": [
+            "Eine Sept bezeichnet eine gewöhnliche albische bäuerliche oder bürgerliche Familie, die nicht dem Adel angehört. Diese Familien können sich über alle sozialen Schichten erstrecken, von der Unterschicht bis zur Oberschicht. Im Allgemeinen verwenden Septs keine Präfixe, es sei denn, sie steigen in den Adelsstand auf. In diesem Fall wählen sie ein passendes Präfix für ihren bestehenden Namen. Zum Beispiel würde ein neu ernannter Laird das Präfix \"Na\" annehmen, was \"Neuer Clan\" bedeutet. Ein aufstrebender Clan kann jedoch jedes passende Präfix beanspruchen, das seinen neuen Status angemessen widerspiegelt.",
+            "Der Präfix \"Fáill\" kennzeichnet Clans, die in Ungnade gefallen sind, sei es durch eigene Taten oder durch den schlechten Ruf, der ihnen anhaftet. Dieser Präfix signalisiert eine Geschichte des Misserfolgs oder Verfalls, und die Clans, die ihn tragen, werden oft misstrauisch betrachtet und haben einen schweren Stand in der Gesellschaft.",
+            "Ein Fáill-Clan kämpft ständig gegen das Stigma ihrer Vergangenheit an und versucht, ihre Ehre wiederherzustellen. Ihre Mitglieder sind oft gezwungen, doppelt so hart zu arbeiten, um Respekt und Anerkennung zu erlangen, und stehen unter ständiger Beobachtung und Bewertung durch ihre Mitmenschen.",
+            "Die Geschichte eines Fáill-Clans ist oft geprägt von Tragödien und Herausforderungen, und ihre Reise zur Wiederherstellung ihrer Ehre ist lang und beschwerlich. Dennoch sind diese Clans oft auch Geschichten von Resilienz und unbeugsamem Willen, da sie sich trotz aller Widrigkeiten bemühen, ihre Position in der Gesellschaft zu verbessern und ihren Namen zu rehabilitieren."
+          ],
+          "links": [
+            {
+              "label": "Gemeinsame Clan-Präfixe im Schild von Ailith",
+              "href": "/Kontinente/Alben/Der Schild von Ailith.html#kultur"
+            }
+          ]
+        }
+      ],
+      "infobox": [
+        {
+          "title": "Allgemein",
+          "rows": [
+            {
+              "label": "Name",
+              "value": "Fürstentum Ceitheach"
+            },
+            {
+              "label": "Typ",
+              "value": "Fürstentum"
+            },
+            {
+              "label": "Sitz",
+              "value": "Carraigreach"
+            },
+            {
+              "label": "Oberhaupt",
+              "value": "Ard Tiarna..."
+            },
+            {
+              "label": "Ehemaliger Clan",
+              "value": "Clan Ui’Rochraide"
+            },
+            {
+              "label": "Status",
+              "value": "Historisches, untergegangenes Fürstentum"
+            }
+          ]
+        },
+        {
+          "title": "Geographie",
+          "rows": [
+            {
+              "label": "Region",
+              "value": "Zentrales Estryll"
+            }
+          ]
+        },
+        {
+          "title": "Kultur",
+          "rows": [
+            {
+              "label": "Volksgruppen",
+              "value": "Glaennath, Flussalben"
+            },
+            {
+              "label": "Religion",
+              "value": "Die Alerische Kirche"
+            },
+            {
+              "label": "Bevölkerungsdichte",
+              "value": "Hoch"
+            }
+          ]
+        },
+        {
+          "title": "Handel",
+          "rows": []
+        }
+      ],
+      "families": [
+        {
+          "title": "Historischer regierender Clan",
+          "houses": [
+            {
+              "name": "Clan Ui’Rochraide",
+              "familyId": "haus-ui-rochraide",
+              "imageSrc": "/Stammbäume/assets/images/houses/Ceitheach/clan-ui-rochraide.png",
+              "seat": "Carraigreach",
+              "liege": "",
+              "rank": "Fürstenclan (historisch)",
+              "featured": true,
+              "featuredLabel": "Historischer Clan"
+            }
+          ]
+        },
+        {
+          "title": "Historische Clans von Tir na Cruach",
+          "houses": [
+            {
+              "name": "Clan Tir an Craobhan",
+              "familyId": "haus-craobhan",
+              "imageSrc": "/Stammbäume/assets/images/houses/Ceitheach/clan-tir-an-craobhan.png",
+              "seat": "Carraigreach",
+              "liege": "Clan Ui’Rochraide",
+              "rank": "Offen (historisch)",
+              "featured": false
+            },
+            {
+              "name": "Clan Fáill Ua’Eldath",
+              "familyId": "haus-eldath",
+              "imageSrc": "/Stammbäume/assets/images/houses/Ceitheach/clan-faill-ua-eldath.png",
+              "seat": "Carraigreach",
+              "liege": "Clan Ui’Rochraide",
+              "rank": "Offen (historisch)",
+              "featured": false
+            },
+            {
+              "name": "Clan Fáill Mallacht Eamhra",
+              "familyId": "haus-eamhra",
+              "imageSrc": "/Stammbäume/assets/images/houses/Ceitheach/clan-faill-mallacht-eamhra.png",
+              "seat": "Tineach",
+              "liege": "Clan Ui’Rochraide",
+              "rank": "Offen (historisch)",
+              "featured": false
+            }
+          ]
+        },
+        {
+          "title": "Historische Clans von Tir na Scian",
+          "houses": [
+            {
+              "name": "Clan Nic Blar",
+              "familyId": "haus-nic-blar",
+              "imageSrc": "/Stammbäume/assets/images/houses/Ceitheach/clan-nic-blar.png",
+              "seat": "Lochcoille",
+              "liege": "Clan Ui’Rochraide",
+              "rank": "Mor-Tiarna-Clan (historisch)",
+              "featured": true,
+              "featuredLabel": "Historischer Clan"
+            }
+          ]
+        },
+        {
+          "title": "Historische Clans von Tir na Dorcha",
+          "houses": [
+            {
+              "name": "Clan Mac Tuirseach",
+              "familyId": "haus-mac-tuirseach",
+              "imageSrc": "/Stammbäume/assets/images/houses/Ceitheach/clan-mac-tuirseach.png",
+              "seat": "Lochanach",
+              "liege": "Clan Ui’Rochraide",
+              "rank": "Mor-Tiarna-Clan (historisch)",
+              "featured": true,
+              "featuredLabel": "Historischer Clan"
+            },
+            {
+              "name": "Clan Mallacht Seaghda",
+              "familyId": "haus-seaghda",
+              "imageSrc": "/Stammbäume/assets/images/houses/Ceitheach/clan-mallacht-seaghda.png",
+              "seat": "Glaennmor",
+              "liege": "Clan Mac Tuirseach",
+              "rank": "Offen (historisch)",
+              "featured": false
+            }
+          ]
+        },
+        {
+          "title": "Historische Clans von Tir na Dun",
+          "houses": [
+            {
+              "name": "Clan Dal’Leite",
+              "familyId": "haus-dal-leite",
+              "imageSrc": "/Stammbäume/assets/images/houses/Ceitheach/clan-dal-leite.png",
+              "seat": "Greinmhar",
+              "liege": "Clan Ui’Rochraide",
+              "rank": "Mor-Tiarna-Clan (historisch)",
+              "featured": true,
+              "featuredLabel": "Historischer Clan"
+            },
+            {
+              "name": "Clan Sidhe Somhairle",
+              "familyId": "haus-somhairle",
+              "imageSrc": "/Stammbäume/assets/images/houses/Leitheach/clan-sidhe-somhairle.png",
+              "seat": "Glaennmor",
+              "liege": "Clan Dal’Leite",
+              "rank": "Laird-Clan (historisch)",
+              "featured": false
+            }
+          ]
+        },
+        {
+          "title": "Historische Clans von Tir na Ceo",
+          "houses": [
+            {
+              "name": "Clan Nic Holloran",
+              "familyId": "haus-nic-holloran",
+              "imageSrc": "/Stammbäume/assets/images/houses/Ceitheach/clan-nic-holloran.png",
+              "seat": "Tirscath",
+              "liege": "Clan Ui’Rochraide",
+              "rank": "Mor-Tiarna-Clan (historisch)",
+              "featured": true,
+              "featuredLabel": "Historischer Clan"
+            },
+            {
+              "name": "Clan An’Morchoe",
+              "familyId": "haus-an-morchoe",
+              "imageSrc": "/Stammbäume/assets/images/houses/Ceitheach/clan-an-morchoe.png",
+              "seat": "Sruthbruach",
+              "liege": "Clan Nic Holloran",
+              "rank": "Offen (historisch)",
+              "featured": false
+            }
+          ]
+        },
+        {
+          "title": "Historische Clans von Tir na Toraidh",
+          "houses": [
+            {
+              "name": "Clan Ua Nic Ceinselaig",
+              "familyId": "haus-ua-nic-ceinselaig",
+              "imageSrc": "/Stammbäume/assets/images/houses/Ceitheach/clan-ua-nic-ceinselaig.png",
+              "seat": "Bruachan",
+              "liege": "Clan Ui’Rochraide",
+              "rank": "Mor-Tiarna-Clan (historisch)",
+              "featured": true,
+              "featuredLabel": "Historischer Clan"
+            },
+            {
+              "name": "Clan Tir An’Tordarroch",
+              "familyId": "haus-tir-an-tordarroch",
+              "imageSrc": "/Stammbäume/assets/images/houses/Ceitheach/clan-tir-an-tordarroch.png",
+              "seat": "Teorannach",
+              "liege": "Clan Ua Nic Ceinselaig",
+              "rank": "Offen (historisch)",
+              "featured": false
+            },
+            {
+              "name": "Clan An’Bhaird",
+              "familyId": "haus-an-bhaird",
+              "imageSrc": "/Stammbäume/assets/images/houses/Ceitheach/clan-an-bhaird.png",
+              "seat": "Lochmorach",
+              "liege": "Clan Ua Nic Ceinselaig",
+              "rank": "Offen (historisch)",
+              "featured": false
+            }
+          ]
+        }
+      ],
+      "councilGroups": [
+        {
+          "title": "Herrschaft",
+          "members": [
+            {
+              "office": "Ard Tiarna (historisch)",
+              "name": "Name nicht überliefert",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "featured": true,
+              "sourceArticle": "article-09.html",
+              "imageSrc": ""
+            }
+          ]
+        },
+        {
+          "title": "Ratsämter",
+          "members": [
+            {
+              "office": "Marschall des Fürsten",
+              "name": "Name nicht überliefert",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "sourceArticle": "article-09.html",
+              "imageSrc": ""
+            },
+            {
+              "office": "Kämmerer des Fürsten",
+              "name": "Name nicht überliefert",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "sourceArticle": "article-09.html",
+              "imageSrc": ""
+            },
+            {
+              "office": "Justiziar des Fürsten",
+              "name": "Name nicht überliefert",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "sourceArticle": "article-09.html",
+              "imageSrc": ""
+            },
+            {
+              "office": "Schatten des Fürsten",
+              "name": "Name nicht überliefert",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "sourceArticle": "article-09.html",
+              "imageSrc": ""
+            },
+            {
+              "office": "Herold des Fürsten",
+              "name": "Name nicht überliefert",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "sourceArticle": "article-09.html",
+              "imageSrc": ""
+            }
+          ]
+        },
+        {
+          "title": "Geistliche und beratende Ämter",
+          "members": [
+            {
+              "office": "Ratsmagier des Fürsten",
+              "name": "Name nicht überliefert",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "sourceArticle": "article-09.html",
+              "imageSrc": ""
+            },
+            {
+              "office": "Patriarch des Fürsten",
+              "name": "Name nicht überliefert",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "sourceArticle": "article-09.html",
+              "imageSrc": ""
+            },
+            {
+              "office": "Barde des Fürsten",
+              "name": "Name nicht überliefert",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "sourceArticle": "article-09.html",
+              "imageSrc": ""
+            },
+            {
+              "office": "Volkswart des Fürsten",
+              "name": "Name nicht überliefert",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "sourceArticle": "article-09.html",
+              "imageSrc": ""
+            },
+            {
+              "office": "Regent des Fürsten",
+              "name": "Name nicht überliefert",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "sourceArticle": "article-09.html",
+              "imageSrc": ""
+            }
+          ]
+        }
+      ],
+      "councilNote": "Historische Herrschaftsordnung. Vorhandene Nachkommen und spätere Ämter in den Familienakten begründen keine gegenwärtige Herrschaft über Ceitheach.",
+      "vassalGroups": [],
+      "domains": [],
+      "territoryLinks": [
+        "oberherrschaft-ceitheach-tir-na-cruach",
+        "oberherrschaft-ceitheach-tir-na-scian",
+        "oberherrschaft-ceitheach-tir-na-dorcha",
+        "oberherrschaft-ceitheach-tir-na-dun",
+        "oberherrschaft-ceitheach-tir-na-ceo",
+        "oberherrschaft-ceitheach-tir-na-toraidh"
+      ],
+      "map": {
+        "title": "Karte Ceitheach",
+        "imageSrc": "/Karten/Ceitheach/Kartenbilder/normal.webp",
+        "imageAlt": "Fürstentum Ceitheach",
+        "href": "/Karten/karte.html?map=ceitheach"
+      }
+    },
+    {
+      "id": "oberherrschaft-ceitheach-tir-na-cruach",
+      "title": "Oberherrschaft Tir na Cruach",
+      "shortTitle": "Tir na Cruach",
+      "type": "Oberherrschaft",
+      "kicker": "Historisches Oberherrschaft · Clan Ui’Rochraide",
+      "parentHref": "/Kontinente/Estryll/Fürstentum Ceitheach/Fürstentum Ceitheach.html",
+      "parentLabel": "Fürstentum Ceitheach",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Estryll",
+          "slug": "estryll"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Ceitheach",
+          "slug": "fuerstentum-ceitheach"
+        },
+        {
+          "type": "Oberherrschaft",
+          "name": "Oberherrschaft Tir na Cruach",
+          "slug": "oberherrschaft-ceitheach-tir-na-cruach"
+        }
+      ],
+      "crestSrc": "/Stammbäume/assets/images/regions/Ceitheach/tir-na-cruach.png",
+      "crestAlt": "Banner Oberherrschaft Tir na Cruach",
+      "copy": {},
+      "cultureSections": [],
+      "infobox": [
+        {
+          "title": "Allgemein",
+          "rows": [
+            {
+              "label": "Name",
+              "value": "Oberherrschaft Tir na Cruach"
+            },
+            {
+              "label": "Typ",
+              "value": "Oberherrschaft"
+            },
+            {
+              "label": "Sitz",
+              "value": "Carraigreach"
+            },
+            {
+              "label": "Oberhaupt",
+              "value": "Mor Tiarna"
+            },
+            {
+              "label": "Ehemaliger Clan",
+              "value": "Clan Ui’Rochraide"
+            },
+            {
+              "label": "Status",
+              "value": "Historisches, untergegangenes Fürstentum"
+            }
+          ]
+        },
+        {
+          "title": "Geographie",
+          "rows": [
+            {
+              "label": "Region",
+              "value": "Zentrales Estryll"
+            }
+          ]
+        },
+        {
+          "title": "Kultur",
+          "rows": [
+            {
+              "label": "Volksgruppen",
+              "value": "Glaennath, Flussalben"
+            },
+            {
+              "label": "Religion",
+              "value": "Die Alerische Kirche"
+            },
+            {
+              "label": "Bevölkerungsdichte",
+              "value": "Mittelmäßig"
+            }
+          ]
+        },
+        {
+          "title": "Handel",
+          "rows": []
+        }
+      ],
+      "families": [
+        {
+          "title": "Historischer regierender Clan",
+          "houses": [
+            {
+              "name": "Clan Ui’Rochraide",
+              "familyId": "haus-ui-rochraide",
+              "imageSrc": "/Stammbäume/assets/images/houses/Ceitheach/clan-ui-rochraide.png",
+              "seat": "Carraigreach",
+              "liege": "",
+              "rank": "Fürstenclan (historisch)",
+              "featured": true,
+              "featuredLabel": "Historischer Clan"
+            }
+          ]
+        },
+        {
+          "title": "Historische untergeordnete Clans",
+          "houses": [
+            {
+              "name": "Clan Tir an Craobhan",
+              "familyId": "haus-craobhan",
+              "imageSrc": "/Stammbäume/assets/images/houses/Ceitheach/clan-tir-an-craobhan.png",
+              "seat": "Carraigreach",
+              "liege": "Clan Ui’Rochraide",
+              "rank": "Offen (historisch)",
+              "featured": false
+            },
+            {
+              "name": "Clan Fáill Ua’Eldath",
+              "familyId": "haus-eldath",
+              "imageSrc": "/Stammbäume/assets/images/houses/Ceitheach/clan-faill-ua-eldath.png",
+              "seat": "Carraigreach",
+              "liege": "Clan Ui’Rochraide",
+              "rank": "Offen (historisch)",
+              "featured": false
+            },
+            {
+              "name": "Clan Fáill Mallacht Eamhra",
+              "familyId": "haus-eamhra",
+              "imageSrc": "/Stammbäume/assets/images/houses/Ceitheach/clan-faill-mallacht-eamhra.png",
+              "seat": "Tineach",
+              "liege": "Clan Ui’Rochraide",
+              "rank": "Offen (historisch)",
+              "featured": false
+            }
+          ]
+        }
+      ],
+      "councilGroups": [
+        {
+          "title": "Herrschaft",
+          "members": [
+            {
+              "office": "Mor Tiarna von Tir na Cruach",
+              "name": "Name nicht überliefert",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "featured": true,
+              "sourceArticle": "article-11.html",
+              "imageSrc": ""
+            }
+          ]
+        },
+        {
+          "title": "Ratsämter",
+          "members": [
+            {
+              "office": "Marschall des Mor Tiarna",
+              "name": "Name nicht überliefert",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "sourceArticle": "article-11.html",
+              "imageSrc": ""
+            },
+            {
+              "office": "Kämmerer des Mor Tiarna",
+              "name": "Name nicht überliefert",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "sourceArticle": "article-11.html",
+              "imageSrc": ""
+            },
+            {
+              "office": "Justiziar des Mor Tiarna",
+              "name": "Name nicht überliefert",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "sourceArticle": "article-11.html",
+              "imageSrc": ""
+            },
+            {
+              "office": "Schatten des Mor Tiarna",
+              "name": "Name nicht überliefert",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "sourceArticle": "article-11.html",
+              "imageSrc": ""
+            },
+            {
+              "office": "Herold des Mor Tiarna",
+              "name": "Name nicht überliefert",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "sourceArticle": "article-11.html",
+              "imageSrc": ""
+            }
+          ]
+        },
+        {
+          "title": "Geistliche und beratende Ämter",
+          "members": [
+            {
+              "office": "Ratsmagier des Mor Tiarna",
+              "name": "Name nicht überliefert",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "sourceArticle": "article-11.html",
+              "imageSrc": ""
+            },
+            {
+              "office": "Patriarch des Mor Tiarna",
+              "name": "Name nicht überliefert",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "sourceArticle": "article-11.html",
+              "imageSrc": ""
+            },
+            {
+              "office": "Barde des Mor Tiarna",
+              "name": "Name nicht überliefert",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "sourceArticle": "article-11.html",
+              "imageSrc": ""
+            },
+            {
+              "office": "Volkswart des Mor Tiarna",
+              "name": "Name nicht überliefert",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "sourceArticle": "article-11.html",
+              "imageSrc": ""
+            },
+            {
+              "office": "Regent des Mor Tiarna",
+              "name": "Name nicht überliefert",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "sourceArticle": "article-11.html",
+              "imageSrc": ""
+            }
+          ]
+        }
+      ],
+      "councilNote": "Historische Herrschaftsordnung. Vorhandene Nachkommen und spätere Ämter in den Familienakten begründen keine gegenwärtige Herrschaft über Ceitheach.",
+      "vassalGroups": [],
+      "domains": [],
+      "territoryLinks": [
+        "herrschaft-ceitheach-craobhan",
+        "herrschaft-ceitheach-eldath",
+        "herrschaft-ceitheach-eamhra"
+      ],
+      "map": {
+        "title": "Karte Tir na Cruach",
+        "imageSrc": "/Karten/Ceitheach/Kartenbilder/normal.webp",
+        "imageAlt": "Fürstentum Ceitheach",
+        "href": "/Karten/karte.html?map=ceitheach"
+      }
+    },
+    {
+      "id": "oberherrschaft-ceitheach-tir-na-scian",
+      "title": "Oberherrschaft Tir na Scian",
+      "shortTitle": "Tir na Scian",
+      "type": "Oberherrschaft",
+      "kicker": "Historisches Oberherrschaft · Clan Nic Blar",
+      "parentHref": "/Kontinente/Estryll/Fürstentum Ceitheach/Fürstentum Ceitheach.html",
+      "parentLabel": "Fürstentum Ceitheach",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Estryll",
+          "slug": "estryll"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Ceitheach",
+          "slug": "fuerstentum-ceitheach"
+        },
+        {
+          "type": "Oberherrschaft",
+          "name": "Oberherrschaft Tir na Scian",
+          "slug": "oberherrschaft-ceitheach-tir-na-scian"
+        }
+      ],
+      "crestSrc": "/Stammbäume/assets/images/regions/Ceitheach/tir-na-scian.png",
+      "crestAlt": "Banner Oberherrschaft Tir na Scian",
+      "copy": {},
+      "cultureSections": [],
+      "infobox": [
+        {
+          "title": "Allgemein",
+          "rows": [
+            {
+              "label": "Name",
+              "value": "Oberherrschaft Tir na Scian"
+            },
+            {
+              "label": "Typ",
+              "value": "Oberherrschaft"
+            },
+            {
+              "label": "Sitz",
+              "value": "Lochcoille"
+            },
+            {
+              "label": "Oberhaupt",
+              "value": "Mor Tiarna"
+            },
+            {
+              "label": "Ehemaliger Clan",
+              "value": "Clan Nic Blar"
+            },
+            {
+              "label": "Status",
+              "value": "Historisches, untergegangenes Fürstentum"
+            }
+          ]
+        },
+        {
+          "title": "Geographie",
+          "rows": [
+            {
+              "label": "Region",
+              "value": "Zentrales Estryll"
+            }
+          ]
+        },
+        {
+          "title": "Kultur",
+          "rows": [
+            {
+              "label": "Volksgruppen",
+              "value": "Glaennath, Flussalben"
+            },
+            {
+              "label": "Religion",
+              "value": "Die Alerische Kirche"
+            },
+            {
+              "label": "Bevölkerungsdichte",
+              "value": "Mittelmäßig"
+            }
+          ]
+        },
+        {
+          "title": "Handel",
+          "rows": []
+        }
+      ],
+      "families": [
+        {
+          "title": "Historischer regierender Clan",
+          "houses": [
+            {
+              "name": "Clan Nic Blar",
+              "familyId": "haus-nic-blar",
+              "imageSrc": "/Stammbäume/assets/images/houses/Ceitheach/clan-nic-blar.png",
+              "seat": "Lochcoille",
+              "liege": "Clan Ui’Rochraide",
+              "rank": "Mor-Tiarna-Clan (historisch)",
+              "featured": true,
+              "featuredLabel": "Historischer Clan"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [
+        {
+          "title": "Herrschaft",
+          "members": [
+            {
+              "office": "Mor Tiarna von Tir na Scian",
+              "name": "Name nicht überliefert",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "featured": true,
+              "sourceArticle": "article-12.html",
+              "imageSrc": ""
+            }
+          ]
+        },
+        {
+          "title": "Ratsämter",
+          "members": [
+            {
+              "office": "Marschall des Mor Tiarna",
+              "name": "Name nicht überliefert",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "sourceArticle": "article-12.html",
+              "imageSrc": ""
+            },
+            {
+              "office": "Kämmerer des Mor Tiarna",
+              "name": "Name nicht überliefert",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "sourceArticle": "article-12.html",
+              "imageSrc": ""
+            },
+            {
+              "office": "Justiziar des Mor Tiarna",
+              "name": "Name nicht überliefert",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "sourceArticle": "article-12.html",
+              "imageSrc": ""
+            },
+            {
+              "office": "Schatten des Mor Tiarna",
+              "name": "Name nicht überliefert",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "sourceArticle": "article-12.html",
+              "imageSrc": ""
+            },
+            {
+              "office": "Herold des Mor Tiarna",
+              "name": "Name nicht überliefert",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "sourceArticle": "article-12.html",
+              "imageSrc": ""
+            }
+          ]
+        },
+        {
+          "title": "Geistliche und beratende Ämter",
+          "members": [
+            {
+              "office": "Ratsmagier des Mor Tiarna",
+              "name": "Name nicht überliefert",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "sourceArticle": "article-12.html",
+              "imageSrc": ""
+            },
+            {
+              "office": "Patriarch des Mor Tiarna",
+              "name": "Name nicht überliefert",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "sourceArticle": "article-12.html",
+              "imageSrc": ""
+            },
+            {
+              "office": "Barde des Mor Tiarna",
+              "name": "Name nicht überliefert",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "sourceArticle": "article-12.html",
+              "imageSrc": ""
+            },
+            {
+              "office": "Volkswart des Mor Tiarna",
+              "name": "Name nicht überliefert",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "sourceArticle": "article-12.html",
+              "imageSrc": ""
+            },
+            {
+              "office": "Regent des Mor Tiarna",
+              "name": "Name nicht überliefert",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "sourceArticle": "article-12.html",
+              "imageSrc": ""
+            }
+          ]
+        }
+      ],
+      "councilNote": "Historische Herrschaftsordnung. Vorhandene Nachkommen und spätere Ämter in den Familienakten begründen keine gegenwärtige Herrschaft über Ceitheach.",
+      "vassalGroups": [],
+      "domains": [],
+      "territoryLinks": [],
+      "map": {
+        "title": "Karte Tir na Scian",
+        "imageSrc": "/Karten/Ceitheach/Kartenbilder/normal.webp",
+        "imageAlt": "Fürstentum Ceitheach",
+        "href": "/Karten/karte.html?map=ceitheach"
+      }
+    },
+    {
+      "id": "oberherrschaft-ceitheach-tir-na-dorcha",
+      "title": "Oberherrschaft Tir na Dorcha",
+      "shortTitle": "Tir na Dorcha",
+      "type": "Oberherrschaft",
+      "kicker": "Historisches Oberherrschaft · Clan Mac Tuirseach",
+      "parentHref": "/Kontinente/Estryll/Fürstentum Ceitheach/Fürstentum Ceitheach.html",
+      "parentLabel": "Fürstentum Ceitheach",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Estryll",
+          "slug": "estryll"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Ceitheach",
+          "slug": "fuerstentum-ceitheach"
+        },
+        {
+          "type": "Oberherrschaft",
+          "name": "Oberherrschaft Tir na Dorcha",
+          "slug": "oberherrschaft-ceitheach-tir-na-dorcha"
+        }
+      ],
+      "crestSrc": "/Stammbäume/assets/images/regions/Ceitheach/tir-na-dorcha.png",
+      "crestAlt": "Banner Oberherrschaft Tir na Dorcha",
+      "copy": {},
+      "cultureSections": [],
+      "infobox": [
+        {
+          "title": "Allgemein",
+          "rows": [
+            {
+              "label": "Name",
+              "value": "Oberherrschaft Tir na Dorcha"
+            },
+            {
+              "label": "Typ",
+              "value": "Oberherrschaft"
+            },
+            {
+              "label": "Sitz",
+              "value": "Lochanach"
+            },
+            {
+              "label": "Oberhaupt",
+              "value": "Mor Tiarna"
+            },
+            {
+              "label": "Ehemaliger Clan",
+              "value": "Clan Mac Tuirseach"
+            },
+            {
+              "label": "Status",
+              "value": "Historisches, untergegangenes Fürstentum"
+            }
+          ]
+        },
+        {
+          "title": "Geographie",
+          "rows": [
+            {
+              "label": "Region",
+              "value": "Zentrales Estryll"
+            }
+          ]
+        },
+        {
+          "title": "Kultur",
+          "rows": [
+            {
+              "label": "Volksgruppen",
+              "value": "Glaennath, Flussalben"
+            },
+            {
+              "label": "Religion",
+              "value": "Die Alerische Kirche"
+            },
+            {
+              "label": "Bevölkerungsdichte",
+              "value": "Mittelmäßig"
+            }
+          ]
+        },
+        {
+          "title": "Handel",
+          "rows": []
+        }
+      ],
+      "families": [
+        {
+          "title": "Historischer regierender Clan",
+          "houses": [
+            {
+              "name": "Clan Mac Tuirseach",
+              "familyId": "haus-mac-tuirseach",
+              "imageSrc": "/Stammbäume/assets/images/houses/Ceitheach/clan-mac-tuirseach.png",
+              "seat": "Lochanach",
+              "liege": "Clan Ui’Rochraide",
+              "rank": "Mor-Tiarna-Clan (historisch)",
+              "featured": true,
+              "featuredLabel": "Historischer Clan"
+            }
+          ]
+        },
+        {
+          "title": "Historische untergeordnete Clans",
+          "houses": [
+            {
+              "name": "Clan Mallacht Seaghda",
+              "familyId": "haus-seaghda",
+              "imageSrc": "/Stammbäume/assets/images/houses/Ceitheach/clan-mallacht-seaghda.png",
+              "seat": "Glaennmor",
+              "liege": "Clan Mac Tuirseach",
+              "rank": "Offen (historisch)",
+              "featured": false
+            }
+          ]
+        }
+      ],
+      "councilGroups": [
+        {
+          "title": "Herrschaft",
+          "members": [
+            {
+              "office": "Mor Tiarna von Tir na Dorcha",
+              "name": "Name nicht überliefert",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "featured": true,
+              "sourceArticle": "article-13.html",
+              "imageSrc": ""
+            }
+          ]
+        },
+        {
+          "title": "Ratsämter",
+          "members": [
+            {
+              "office": "Marschall des Mor Tiarna",
+              "name": "Name nicht überliefert",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "sourceArticle": "article-13.html",
+              "imageSrc": ""
+            },
+            {
+              "office": "Kämmerer des Mor Tiarna",
+              "name": "Name nicht überliefert",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "sourceArticle": "article-13.html",
+              "imageSrc": ""
+            },
+            {
+              "office": "Justiziar des Mor Tiarna",
+              "name": "Name nicht überliefert",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "sourceArticle": "article-13.html",
+              "imageSrc": ""
+            },
+            {
+              "office": "Schatten des Mor Tiarna",
+              "name": "Name nicht überliefert",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "sourceArticle": "article-13.html",
+              "imageSrc": ""
+            },
+            {
+              "office": "Herold des Mor Tiarna",
+              "name": "Name nicht überliefert",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "sourceArticle": "article-13.html",
+              "imageSrc": ""
+            }
+          ]
+        },
+        {
+          "title": "Geistliche und beratende Ämter",
+          "members": [
+            {
+              "office": "Ratsmagier des Mor Tiarna",
+              "name": "Name nicht überliefert",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "sourceArticle": "article-13.html",
+              "imageSrc": ""
+            },
+            {
+              "office": "Patriarch des Mor Tiarna",
+              "name": "Name nicht überliefert",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "sourceArticle": "article-13.html",
+              "imageSrc": ""
+            },
+            {
+              "office": "Barde des Mor Tiarna",
+              "name": "Name nicht überliefert",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "sourceArticle": "article-13.html",
+              "imageSrc": ""
+            },
+            {
+              "office": "Volkswart des Mor Tiarna",
+              "name": "Name nicht überliefert",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "sourceArticle": "article-13.html",
+              "imageSrc": ""
+            },
+            {
+              "office": "Regent des Mor Tiarna",
+              "name": "Name nicht überliefert",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "sourceArticle": "article-13.html",
+              "imageSrc": ""
+            }
+          ]
+        }
+      ],
+      "councilNote": "Historische Herrschaftsordnung. Vorhandene Nachkommen und spätere Ämter in den Familienakten begründen keine gegenwärtige Herrschaft über Ceitheach.",
+      "vassalGroups": [],
+      "domains": [],
+      "territoryLinks": [
+        "herrschaft-ceitheach-seaghda"
+      ],
+      "map": {
+        "title": "Karte Tir na Dorcha",
+        "imageSrc": "/Karten/Ceitheach/Kartenbilder/normal.webp",
+        "imageAlt": "Fürstentum Ceitheach",
+        "href": "/Karten/karte.html?map=ceitheach"
+      }
+    },
+    {
+      "id": "oberherrschaft-ceitheach-tir-na-dun",
+      "title": "Oberherrschaft Tir na Dun",
+      "shortTitle": "Tir na Dun",
+      "type": "Oberherrschaft",
+      "kicker": "Historisches Oberherrschaft · Clan Dal’Leite",
+      "parentHref": "/Kontinente/Estryll/Fürstentum Ceitheach/Fürstentum Ceitheach.html",
+      "parentLabel": "Fürstentum Ceitheach",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Estryll",
+          "slug": "estryll"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Ceitheach",
+          "slug": "fuerstentum-ceitheach"
+        },
+        {
+          "type": "Oberherrschaft",
+          "name": "Oberherrschaft Tir na Dun",
+          "slug": "oberherrschaft-ceitheach-tir-na-dun"
+        }
+      ],
+      "crestSrc": "/Stammbäume/assets/images/regions/Ceitheach/tir-na-dun.png",
+      "crestAlt": "Banner Oberherrschaft Tir na Dun",
+      "copy": {},
+      "cultureSections": [],
+      "infobox": [
+        {
+          "title": "Allgemein",
+          "rows": [
+            {
+              "label": "Name",
+              "value": "Oberherrschaft Tir na Dun"
+            },
+            {
+              "label": "Typ",
+              "value": "Oberherrschaft"
+            },
+            {
+              "label": "Sitz",
+              "value": "Greinmhar"
+            },
+            {
+              "label": "Oberhaupt",
+              "value": "Mor Tiarna"
+            },
+            {
+              "label": "Ehemaliger Clan",
+              "value": "Clan Dal’Leite"
+            },
+            {
+              "label": "Status",
+              "value": "Historisches, untergegangenes Fürstentum"
+            }
+          ]
+        },
+        {
+          "title": "Geographie",
+          "rows": [
+            {
+              "label": "Region",
+              "value": "Zentrales Estryll"
+            }
+          ]
+        },
+        {
+          "title": "Kultur",
+          "rows": [
+            {
+              "label": "Volksgruppen",
+              "value": "Glaennath, Flussalben"
+            },
+            {
+              "label": "Religion",
+              "value": "Die Alerische Kirche"
+            },
+            {
+              "label": "Bevölkerungsdichte",
+              "value": "Mittelmäßig"
+            }
+          ]
+        },
+        {
+          "title": "Handel",
+          "rows": []
+        }
+      ],
+      "families": [
+        {
+          "title": "Historischer regierender Clan",
+          "houses": [
+            {
+              "name": "Clan Dal’Leite",
+              "familyId": "haus-dal-leite",
+              "imageSrc": "/Stammbäume/assets/images/houses/Ceitheach/clan-dal-leite.png",
+              "seat": "Greinmhar",
+              "liege": "Clan Ui’Rochraide",
+              "rank": "Mor-Tiarna-Clan (historisch)",
+              "featured": true,
+              "featuredLabel": "Historischer Clan"
+            }
+          ]
+        },
+        {
+          "title": "Historische untergeordnete Clans",
+          "houses": [
+            {
+              "name": "Clan Sidhe Somhairle",
+              "familyId": "haus-somhairle",
+              "imageSrc": "/Stammbäume/assets/images/houses/Leitheach/clan-sidhe-somhairle.png",
+              "seat": "Glaennmor",
+              "liege": "Clan Dal’Leite",
+              "rank": "Laird-Clan (historisch)",
+              "featured": false
+            }
+          ]
+        }
+      ],
+      "councilGroups": [
+        {
+          "title": "Herrschaft",
+          "members": [
+            {
+              "office": "Mor Tiarna von Tir na Dun",
+              "name": "Name nicht überliefert",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "featured": true,
+              "sourceArticle": "article-14.html",
+              "imageSrc": ""
+            }
+          ]
+        },
+        {
+          "title": "Ratsämter",
+          "members": [
+            {
+              "office": "Marschall des Mor Tiarna",
+              "name": "Name nicht überliefert",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "sourceArticle": "article-14.html",
+              "imageSrc": ""
+            },
+            {
+              "office": "Kämmerer des Mor Tiarna",
+              "name": "Name nicht überliefert",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "sourceArticle": "article-14.html",
+              "imageSrc": ""
+            },
+            {
+              "office": "Justiziar des Mor Tiarna",
+              "name": "Name nicht überliefert",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "sourceArticle": "article-14.html",
+              "imageSrc": ""
+            },
+            {
+              "office": "Schatten des Mor Tiarna",
+              "name": "Name nicht überliefert",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "sourceArticle": "article-14.html",
+              "imageSrc": ""
+            },
+            {
+              "office": "Herold des Mor Tiarna",
+              "name": "Name nicht überliefert",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "sourceArticle": "article-14.html",
+              "imageSrc": ""
+            }
+          ]
+        },
+        {
+          "title": "Geistliche und beratende Ämter",
+          "members": [
+            {
+              "office": "Ratsmagier des Mor Tiarna",
+              "name": "Name nicht überliefert",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "sourceArticle": "article-14.html",
+              "imageSrc": ""
+            },
+            {
+              "office": "Patriarch des Mor Tiarna",
+              "name": "Name nicht überliefert",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "sourceArticle": "article-14.html",
+              "imageSrc": ""
+            },
+            {
+              "office": "Barde des Mor Tiarna",
+              "name": "Name nicht überliefert",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "sourceArticle": "article-14.html",
+              "imageSrc": ""
+            },
+            {
+              "office": "Volkswart des Mor Tiarna",
+              "name": "Name nicht überliefert",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "sourceArticle": "article-14.html",
+              "imageSrc": ""
+            },
+            {
+              "office": "Regent des Mor Tiarna",
+              "name": "Name nicht überliefert",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "sourceArticle": "article-14.html",
+              "imageSrc": ""
+            }
+          ]
+        }
+      ],
+      "councilNote": "Historische Herrschaftsordnung. Vorhandene Nachkommen und spätere Ämter in den Familienakten begründen keine gegenwärtige Herrschaft über Ceitheach.",
+      "vassalGroups": [],
+      "domains": [],
+      "territoryLinks": [
+        "herrschaft-ceitheach-somhairle"
+      ],
+      "map": {
+        "title": "Karte Tir na Dun",
+        "imageSrc": "/Karten/Ceitheach/Kartenbilder/normal.webp",
+        "imageAlt": "Fürstentum Ceitheach",
+        "href": "/Karten/karte.html?map=ceitheach"
+      }
+    },
+    {
+      "id": "oberherrschaft-ceitheach-tir-na-ceo",
+      "title": "Oberherrschaft Tir na Ceo",
+      "shortTitle": "Tir na Ceo",
+      "type": "Oberherrschaft",
+      "kicker": "Historisches Oberherrschaft · Clan Nic Holloran",
+      "parentHref": "/Kontinente/Estryll/Fürstentum Ceitheach/Fürstentum Ceitheach.html",
+      "parentLabel": "Fürstentum Ceitheach",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Estryll",
+          "slug": "estryll"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Ceitheach",
+          "slug": "fuerstentum-ceitheach"
+        },
+        {
+          "type": "Oberherrschaft",
+          "name": "Oberherrschaft Tir na Ceo",
+          "slug": "oberherrschaft-ceitheach-tir-na-ceo"
+        }
+      ],
+      "crestSrc": "/Stammbäume/assets/images/regions/Ceitheach/tir-na-ceo.png",
+      "crestAlt": "Banner Oberherrschaft Tir na Ceo",
+      "copy": {},
+      "cultureSections": [],
+      "infobox": [
+        {
+          "title": "Allgemein",
+          "rows": [
+            {
+              "label": "Name",
+              "value": "Oberherrschaft Tir na Ceo"
+            },
+            {
+              "label": "Typ",
+              "value": "Oberherrschaft"
+            },
+            {
+              "label": "Sitz",
+              "value": "Tirscath"
+            },
+            {
+              "label": "Oberhaupt",
+              "value": "Mor Tiarna"
+            },
+            {
+              "label": "Ehemaliger Clan",
+              "value": "Clan Nic Holloran"
+            },
+            {
+              "label": "Status",
+              "value": "Historisches, untergegangenes Fürstentum"
+            }
+          ]
+        },
+        {
+          "title": "Geographie",
+          "rows": [
+            {
+              "label": "Region",
+              "value": "Zentrales Estryll"
+            }
+          ]
+        },
+        {
+          "title": "Kultur",
+          "rows": [
+            {
+              "label": "Volksgruppen",
+              "value": "Glaennath, Flussalben"
+            },
+            {
+              "label": "Religion",
+              "value": "Die Alerische Kirche"
+            },
+            {
+              "label": "Bevölkerungsdichte",
+              "value": "Mittelmäßig"
+            }
+          ]
+        },
+        {
+          "title": "Handel",
+          "rows": []
+        }
+      ],
+      "families": [
+        {
+          "title": "Historischer regierender Clan",
+          "houses": [
+            {
+              "name": "Clan Nic Holloran",
+              "familyId": "haus-nic-holloran",
+              "imageSrc": "/Stammbäume/assets/images/houses/Ceitheach/clan-nic-holloran.png",
+              "seat": "Tirscath",
+              "liege": "Clan Ui’Rochraide",
+              "rank": "Mor-Tiarna-Clan (historisch)",
+              "featured": true,
+              "featuredLabel": "Historischer Clan"
+            }
+          ]
+        },
+        {
+          "title": "Historische untergeordnete Clans",
+          "houses": [
+            {
+              "name": "Clan An’Morchoe",
+              "familyId": "haus-an-morchoe",
+              "imageSrc": "/Stammbäume/assets/images/houses/Ceitheach/clan-an-morchoe.png",
+              "seat": "Sruthbruach",
+              "liege": "Clan Nic Holloran",
+              "rank": "Offen (historisch)",
+              "featured": false
+            }
+          ]
+        }
+      ],
+      "councilGroups": [
+        {
+          "title": "Herrschaft",
+          "members": [
+            {
+              "office": "Mor Tiarna von Tir na Ceo",
+              "name": "Name nicht überliefert",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "featured": true,
+              "sourceArticle": "article-15.html",
+              "imageSrc": ""
+            }
+          ]
+        },
+        {
+          "title": "Ratsämter",
+          "members": [
+            {
+              "office": "Marschall des Mor Tiarna",
+              "name": "Name nicht überliefert",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "sourceArticle": "article-15.html",
+              "imageSrc": ""
+            },
+            {
+              "office": "Kämmerer des Mor Tiarna",
+              "name": "Name nicht überliefert",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "sourceArticle": "article-15.html",
+              "imageSrc": ""
+            },
+            {
+              "office": "Justiziar des Mor Tiarna",
+              "name": "Name nicht überliefert",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "sourceArticle": "article-15.html",
+              "imageSrc": ""
+            },
+            {
+              "office": "Schatten des Mor Tiarna",
+              "name": "Name nicht überliefert",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "sourceArticle": "article-15.html",
+              "imageSrc": ""
+            },
+            {
+              "office": "Herold des Mor Tiarna",
+              "name": "Name nicht überliefert",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "sourceArticle": "article-15.html",
+              "imageSrc": ""
+            }
+          ]
+        },
+        {
+          "title": "Geistliche und beratende Ämter",
+          "members": [
+            {
+              "office": "Ratsmagier des Mor Tiarna",
+              "name": "Name nicht überliefert",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "sourceArticle": "article-15.html",
+              "imageSrc": ""
+            },
+            {
+              "office": "Patriarch des Mor Tiarna",
+              "name": "Name nicht überliefert",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "sourceArticle": "article-15.html",
+              "imageSrc": ""
+            },
+            {
+              "office": "Barde des Mor Tiarna",
+              "name": "Name nicht überliefert",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "sourceArticle": "article-15.html",
+              "imageSrc": ""
+            },
+            {
+              "office": "Volkswart des Mor Tiarna",
+              "name": "Name nicht überliefert",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "sourceArticle": "article-15.html",
+              "imageSrc": ""
+            },
+            {
+              "office": "Regent des Mor Tiarna",
+              "name": "Name nicht überliefert",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "sourceArticle": "article-15.html",
+              "imageSrc": ""
+            }
+          ]
+        }
+      ],
+      "councilNote": "Historische Herrschaftsordnung. Vorhandene Nachkommen und spätere Ämter in den Familienakten begründen keine gegenwärtige Herrschaft über Ceitheach.",
+      "vassalGroups": [],
+      "domains": [],
+      "territoryLinks": [
+        "herrschaft-ceitheach-an-morchoe"
+      ],
+      "map": {
+        "title": "Karte Tir na Ceo",
+        "imageSrc": "/Karten/Ceitheach/Kartenbilder/normal.webp",
+        "imageAlt": "Fürstentum Ceitheach",
+        "href": "/Karten/karte.html?map=ceitheach"
+      }
+    },
+    {
+      "id": "oberherrschaft-ceitheach-tir-na-toraidh",
+      "title": "Oberherrschaft Tir na Toraidh",
+      "shortTitle": "Tir na Toraidh",
+      "type": "Oberherrschaft",
+      "kicker": "Historisches Oberherrschaft · Clan Ua Nic Ceinselaig",
+      "parentHref": "/Kontinente/Estryll/Fürstentum Ceitheach/Fürstentum Ceitheach.html",
+      "parentLabel": "Fürstentum Ceitheach",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Estryll",
+          "slug": "estryll"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Ceitheach",
+          "slug": "fuerstentum-ceitheach"
+        },
+        {
+          "type": "Oberherrschaft",
+          "name": "Oberherrschaft Tir na Toraidh",
+          "slug": "oberherrschaft-ceitheach-tir-na-toraidh"
+        }
+      ],
+      "crestSrc": "/Stammbäume/assets/images/regions/Ceitheach/tir-na-toraidh.png",
+      "crestAlt": "Banner Oberherrschaft Tir na Toraidh",
+      "copy": {},
+      "cultureSections": [],
+      "infobox": [
+        {
+          "title": "Allgemein",
+          "rows": [
+            {
+              "label": "Name",
+              "value": "Oberherrschaft Tir na Toraidh"
+            },
+            {
+              "label": "Typ",
+              "value": "Oberherrschaft"
+            },
+            {
+              "label": "Sitz",
+              "value": "Bruachan"
+            },
+            {
+              "label": "Oberhaupt",
+              "value": "Mor Tiarna"
+            },
+            {
+              "label": "Ehemaliger Clan",
+              "value": "Clan Ua Nic Ceinselaig"
+            },
+            {
+              "label": "Status",
+              "value": "Historisches, untergegangenes Fürstentum"
+            }
+          ]
+        },
+        {
+          "title": "Geographie",
+          "rows": [
+            {
+              "label": "Region",
+              "value": "Zentrales Estryll"
+            }
+          ]
+        },
+        {
+          "title": "Kultur",
+          "rows": [
+            {
+              "label": "Volksgruppen",
+              "value": "Glaennath, Flussalben"
+            },
+            {
+              "label": "Religion",
+              "value": "Die Alerische Kirche"
+            },
+            {
+              "label": "Bevölkerungsdichte",
+              "value": "Mittelmäßig"
+            }
+          ]
+        },
+        {
+          "title": "Handel",
+          "rows": []
+        }
+      ],
+      "families": [
+        {
+          "title": "Historischer regierender Clan",
+          "houses": [
+            {
+              "name": "Clan Ua Nic Ceinselaig",
+              "familyId": "haus-ua-nic-ceinselaig",
+              "imageSrc": "/Stammbäume/assets/images/houses/Ceitheach/clan-ua-nic-ceinselaig.png",
+              "seat": "Bruachan",
+              "liege": "Clan Ui’Rochraide",
+              "rank": "Mor-Tiarna-Clan (historisch)",
+              "featured": true,
+              "featuredLabel": "Historischer Clan"
+            }
+          ]
+        },
+        {
+          "title": "Historische untergeordnete Clans",
+          "houses": [
+            {
+              "name": "Clan Tir An’Tordarroch",
+              "familyId": "haus-tir-an-tordarroch",
+              "imageSrc": "/Stammbäume/assets/images/houses/Ceitheach/clan-tir-an-tordarroch.png",
+              "seat": "Teorannach",
+              "liege": "Clan Ua Nic Ceinselaig",
+              "rank": "Offen (historisch)",
+              "featured": false
+            },
+            {
+              "name": "Clan An’Bhaird",
+              "familyId": "haus-an-bhaird",
+              "imageSrc": "/Stammbäume/assets/images/houses/Ceitheach/clan-an-bhaird.png",
+              "seat": "Lochmorach",
+              "liege": "Clan Ua Nic Ceinselaig",
+              "rank": "Offen (historisch)",
+              "featured": false
+            }
+          ]
+        }
+      ],
+      "councilGroups": [
+        {
+          "title": "Herrschaft",
+          "members": [
+            {
+              "office": "Mor Tiarna von Tir na Toraidh",
+              "name": "Name nicht überliefert",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "featured": true,
+              "sourceArticle": "article-16.html",
+              "imageSrc": ""
+            }
+          ]
+        },
+        {
+          "title": "Ratsämter",
+          "members": [
+            {
+              "office": "Marschall des Mor Tiarna",
+              "name": "Name nicht überliefert",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "sourceArticle": "article-16.html",
+              "imageSrc": ""
+            },
+            {
+              "office": "Kämmerer des Mor Tiarna",
+              "name": "Name nicht überliefert",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "sourceArticle": "article-16.html",
+              "imageSrc": ""
+            },
+            {
+              "office": "Justiziar des Mor Tiarna",
+              "name": "Name nicht überliefert",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "sourceArticle": "article-16.html",
+              "imageSrc": ""
+            },
+            {
+              "office": "Schatten des Mor Tiarna",
+              "name": "Name nicht überliefert",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "sourceArticle": "article-16.html",
+              "imageSrc": ""
+            },
+            {
+              "office": "Herold des Mor Tiarna",
+              "name": "Name nicht überliefert",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "sourceArticle": "article-16.html",
+              "imageSrc": ""
+            }
+          ]
+        },
+        {
+          "title": "Geistliche und beratende Ämter",
+          "members": [
+            {
+              "office": "Ratsmagier des Mor Tiarna",
+              "name": "Name nicht überliefert",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "sourceArticle": "article-16.html",
+              "imageSrc": ""
+            },
+            {
+              "office": "Patriarch des Mor Tiarna",
+              "name": "Name nicht überliefert",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "sourceArticle": "article-16.html",
+              "imageSrc": ""
+            },
+            {
+              "office": "Barde des Mor Tiarna",
+              "name": "Name nicht überliefert",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "sourceArticle": "article-16.html",
+              "imageSrc": ""
+            },
+            {
+              "office": "Volkswart des Mor Tiarna",
+              "name": "Name nicht überliefert",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "sourceArticle": "article-16.html",
+              "imageSrc": ""
+            },
+            {
+              "office": "Regent des Mor Tiarna",
+              "name": "Name nicht überliefert",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "sourceArticle": "article-16.html",
+              "imageSrc": ""
+            }
+          ]
+        }
+      ],
+      "councilNote": "Historische Herrschaftsordnung. Vorhandene Nachkommen und spätere Ämter in den Familienakten begründen keine gegenwärtige Herrschaft über Ceitheach.",
+      "vassalGroups": [],
+      "domains": [],
+      "territoryLinks": [
+        "herrschaft-ceitheach-tir-an-tordarroch",
+        "herrschaft-ceitheach-an-bhaird"
+      ],
+      "map": {
+        "title": "Karte Tir na Toraidh",
+        "imageSrc": "/Karten/Ceitheach/Kartenbilder/normal.webp",
+        "imageAlt": "Fürstentum Ceitheach",
+        "href": "/Karten/karte.html?map=ceitheach"
+      }
+    },
+    {
+      "id": "herrschaft-ceitheach-craobhan",
+      "title": "Herrschaft der Tir an Craobhan",
+      "shortTitle": "Herrschaft der Tir an Craobhan",
+      "type": "Herrschaft",
+      "kicker": "Historisches Herrschaft · Clan Tir an Craobhan",
+      "parentHref": "/Kontinente/Estryll/Fürstentum Ceitheach/Oberherrschaft Tir na Cruach/Oberherrschaft Tir na Cruach.html",
+      "parentLabel": "Oberherrschaft Tir na Cruach",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Estryll",
+          "slug": "estryll"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Ceitheach",
+          "slug": "fuerstentum-ceitheach"
+        },
+        {
+          "type": "Oberherrschaft",
+          "name": "Oberherrschaft Tir na Cruach",
+          "slug": "oberherrschaft-ceitheach-tir-na-cruach"
+        },
+        {
+          "type": "Herrschaft",
+          "name": "Herrschaft der Tir an Craobhan",
+          "slug": "herrschaft-ceitheach-craobhan"
+        }
+      ],
+      "crestSrc": "/Stammbäume/assets/images/regions/Ceitheach/tir-na-cruach.png",
+      "crestAlt": "Banner Oberherrschaft Tir na Cruach",
+      "copy": {},
+      "cultureSections": [],
+      "infobox": [
+        {
+          "title": "Allgemein",
+          "rows": [
+            {
+              "label": "Name",
+              "value": "Herrschaft der Tir an Craobhan"
+            },
+            {
+              "label": "Typ",
+              "value": "Herrschaft"
+            },
+            {
+              "label": "Sitz",
+              "value": "Carraigreach"
+            },
+            {
+              "label": "Ehemaliger Clan",
+              "value": "Clan Tir an Craobhan"
+            },
+            {
+              "label": "Status",
+              "value": "Historisches, untergegangenes Fürstentum"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Historischer regierender Clan",
+          "houses": [
+            {
+              "name": "Clan Tir an Craobhan",
+              "familyId": "haus-craobhan",
+              "imageSrc": "/Stammbäume/assets/images/houses/Ceitheach/clan-tir-an-craobhan.png",
+              "seat": "Carraigreach",
+              "liege": "Clan Ui’Rochraide",
+              "rank": "Offen (historisch)",
+              "featured": true,
+              "featuredLabel": "Historischer Clan"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [],
+      "councilNote": "Historische Herrschaftsordnung. Vorhandene Nachkommen und spätere Ämter in den Familienakten begründen keine gegenwärtige Herrschaft über Ceitheach.",
+      "vassalGroups": [],
+      "domains": [],
+      "territoryLinks": [],
+      "map": {
+        "title": "Karte Tir na Cruach",
+        "imageSrc": "/Karten/Ceitheach/Kartenbilder/normal.webp",
+        "imageAlt": "Fürstentum Ceitheach",
+        "href": "/Karten/karte.html?map=ceitheach"
+      }
+    },
+    {
+      "id": "herrschaft-ceitheach-eldath",
+      "title": "Herrschaft der Fáill Ua’Eldath",
+      "shortTitle": "Herrschaft der Fáill Ua’Eldath",
+      "type": "Herrschaft",
+      "kicker": "Historisches Herrschaft · Clan Fáill Ua’Eldath",
+      "parentHref": "/Kontinente/Estryll/Fürstentum Ceitheach/Oberherrschaft Tir na Cruach/Oberherrschaft Tir na Cruach.html",
+      "parentLabel": "Oberherrschaft Tir na Cruach",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Estryll",
+          "slug": "estryll"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Ceitheach",
+          "slug": "fuerstentum-ceitheach"
+        },
+        {
+          "type": "Oberherrschaft",
+          "name": "Oberherrschaft Tir na Cruach",
+          "slug": "oberherrschaft-ceitheach-tir-na-cruach"
+        },
+        {
+          "type": "Herrschaft",
+          "name": "Herrschaft der Fáill Ua’Eldath",
+          "slug": "herrschaft-ceitheach-eldath"
+        }
+      ],
+      "crestSrc": "/Stammbäume/assets/images/regions/Ceitheach/tir-na-cruach.png",
+      "crestAlt": "Banner Oberherrschaft Tir na Cruach",
+      "copy": {},
+      "cultureSections": [],
+      "infobox": [
+        {
+          "title": "Allgemein",
+          "rows": [
+            {
+              "label": "Name",
+              "value": "Herrschaft der Fáill Ua’Eldath"
+            },
+            {
+              "label": "Typ",
+              "value": "Herrschaft"
+            },
+            {
+              "label": "Sitz",
+              "value": "Carraigreach"
+            },
+            {
+              "label": "Ehemaliger Clan",
+              "value": "Clan Fáill Ua’Eldath"
+            },
+            {
+              "label": "Status",
+              "value": "Historisches, untergegangenes Fürstentum"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Historischer regierender Clan",
+          "houses": [
+            {
+              "name": "Clan Fáill Ua’Eldath",
+              "familyId": "haus-eldath",
+              "imageSrc": "/Stammbäume/assets/images/houses/Ceitheach/clan-faill-ua-eldath.png",
+              "seat": "Carraigreach",
+              "liege": "Clan Ui’Rochraide",
+              "rank": "Offen (historisch)",
+              "featured": true,
+              "featuredLabel": "Historischer Clan"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [],
+      "councilNote": "Historische Herrschaftsordnung. Vorhandene Nachkommen und spätere Ämter in den Familienakten begründen keine gegenwärtige Herrschaft über Ceitheach.",
+      "vassalGroups": [],
+      "domains": [],
+      "territoryLinks": [],
+      "map": {
+        "title": "Karte Tir na Cruach",
+        "imageSrc": "/Karten/Ceitheach/Kartenbilder/normal.webp",
+        "imageAlt": "Fürstentum Ceitheach",
+        "href": "/Karten/karte.html?map=ceitheach"
+      }
+    },
+    {
+      "id": "herrschaft-ceitheach-eamhra",
+      "title": "Herrschaft der Fáill Mallacht Eamhra",
+      "shortTitle": "Herrschaft der Fáill Mallacht Eamhra",
+      "type": "Herrschaft",
+      "kicker": "Historisches Herrschaft · Clan Fáill Mallacht Eamhra",
+      "parentHref": "/Kontinente/Estryll/Fürstentum Ceitheach/Oberherrschaft Tir na Cruach/Oberherrschaft Tir na Cruach.html",
+      "parentLabel": "Oberherrschaft Tir na Cruach",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Estryll",
+          "slug": "estryll"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Ceitheach",
+          "slug": "fuerstentum-ceitheach"
+        },
+        {
+          "type": "Oberherrschaft",
+          "name": "Oberherrschaft Tir na Cruach",
+          "slug": "oberherrschaft-ceitheach-tir-na-cruach"
+        },
+        {
+          "type": "Herrschaft",
+          "name": "Herrschaft der Fáill Mallacht Eamhra",
+          "slug": "herrschaft-ceitheach-eamhra"
+        }
+      ],
+      "crestSrc": "/Stammbäume/assets/images/regions/Ceitheach/tir-na-cruach.png",
+      "crestAlt": "Banner Oberherrschaft Tir na Cruach",
+      "copy": {},
+      "cultureSections": [],
+      "infobox": [
+        {
+          "title": "Allgemein",
+          "rows": [
+            {
+              "label": "Name",
+              "value": "Herrschaft der Fáill Mallacht Eamhra"
+            },
+            {
+              "label": "Typ",
+              "value": "Herrschaft"
+            },
+            {
+              "label": "Sitz",
+              "value": "Tineach"
+            },
+            {
+              "label": "Ehemaliger Clan",
+              "value": "Clan Fáill Mallacht Eamhra"
+            },
+            {
+              "label": "Status",
+              "value": "Historisches, untergegangenes Fürstentum"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Historischer regierender Clan",
+          "houses": [
+            {
+              "name": "Clan Fáill Mallacht Eamhra",
+              "familyId": "haus-eamhra",
+              "imageSrc": "/Stammbäume/assets/images/houses/Ceitheach/clan-faill-mallacht-eamhra.png",
+              "seat": "Tineach",
+              "liege": "Clan Ui’Rochraide",
+              "rank": "Offen (historisch)",
+              "featured": true,
+              "featuredLabel": "Historischer Clan"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [],
+      "councilNote": "Historische Herrschaftsordnung. Vorhandene Nachkommen und spätere Ämter in den Familienakten begründen keine gegenwärtige Herrschaft über Ceitheach.",
+      "vassalGroups": [],
+      "domains": [],
+      "territoryLinks": [],
+      "map": {
+        "title": "Karte Tir na Cruach",
+        "imageSrc": "/Karten/Ceitheach/Kartenbilder/normal.webp",
+        "imageAlt": "Fürstentum Ceitheach",
+        "href": "/Karten/karte.html?map=ceitheach"
+      }
+    },
+    {
+      "id": "herrschaft-ceitheach-seaghda",
+      "title": "Herrschaft der Mallacht Seaghda",
+      "shortTitle": "Herrschaft der Mallacht Seaghda",
+      "type": "Herrschaft",
+      "kicker": "Historisches Herrschaft · Clan Mallacht Seaghda",
+      "parentHref": "/Kontinente/Estryll/Fürstentum Ceitheach/Oberherrschaft Tir na Dorcha/Oberherrschaft Tir na Dorcha.html",
+      "parentLabel": "Oberherrschaft Tir na Dorcha",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Estryll",
+          "slug": "estryll"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Ceitheach",
+          "slug": "fuerstentum-ceitheach"
+        },
+        {
+          "type": "Oberherrschaft",
+          "name": "Oberherrschaft Tir na Dorcha",
+          "slug": "oberherrschaft-ceitheach-tir-na-dorcha"
+        },
+        {
+          "type": "Herrschaft",
+          "name": "Herrschaft der Mallacht Seaghda",
+          "slug": "herrschaft-ceitheach-seaghda"
+        }
+      ],
+      "crestSrc": "/Stammbäume/assets/images/regions/Ceitheach/tir-na-dorcha.png",
+      "crestAlt": "Banner Oberherrschaft Tir na Dorcha",
+      "copy": {},
+      "cultureSections": [],
+      "infobox": [
+        {
+          "title": "Allgemein",
+          "rows": [
+            {
+              "label": "Name",
+              "value": "Herrschaft der Mallacht Seaghda"
+            },
+            {
+              "label": "Typ",
+              "value": "Herrschaft"
+            },
+            {
+              "label": "Sitz",
+              "value": "Glaennmor"
+            },
+            {
+              "label": "Ehemaliger Clan",
+              "value": "Clan Mallacht Seaghda"
+            },
+            {
+              "label": "Status",
+              "value": "Historisches, untergegangenes Fürstentum"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Historischer regierender Clan",
+          "houses": [
+            {
+              "name": "Clan Mallacht Seaghda",
+              "familyId": "haus-seaghda",
+              "imageSrc": "/Stammbäume/assets/images/houses/Ceitheach/clan-mallacht-seaghda.png",
+              "seat": "Glaennmor",
+              "liege": "Clan Mac Tuirseach",
+              "rank": "Offen (historisch)",
+              "featured": true,
+              "featuredLabel": "Historischer Clan"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [],
+      "councilNote": "Historische Herrschaftsordnung. Vorhandene Nachkommen und spätere Ämter in den Familienakten begründen keine gegenwärtige Herrschaft über Ceitheach.",
+      "vassalGroups": [],
+      "domains": [],
+      "territoryLinks": [],
+      "map": {
+        "title": "Karte Tir na Dorcha",
+        "imageSrc": "/Karten/Ceitheach/Kartenbilder/normal.webp",
+        "imageAlt": "Fürstentum Ceitheach",
+        "href": "/Karten/karte.html?map=ceitheach"
+      }
+    },
+    {
+      "id": "herrschaft-ceitheach-somhairle",
+      "title": "Herrschaft der Sidhe Somhairle",
+      "shortTitle": "Herrschaft der Sidhe Somhairle",
+      "type": "Herrschaft",
+      "kicker": "Historisches Herrschaft · Clan Sidhe Somhairle",
+      "parentHref": "/Kontinente/Estryll/Fürstentum Ceitheach/Oberherrschaft Tir na Dun/Oberherrschaft Tir na Dun.html",
+      "parentLabel": "Oberherrschaft Tir na Dun",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Estryll",
+          "slug": "estryll"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Ceitheach",
+          "slug": "fuerstentum-ceitheach"
+        },
+        {
+          "type": "Oberherrschaft",
+          "name": "Oberherrschaft Tir na Dun",
+          "slug": "oberherrschaft-ceitheach-tir-na-dun"
+        },
+        {
+          "type": "Herrschaft",
+          "name": "Herrschaft der Sidhe Somhairle",
+          "slug": "herrschaft-ceitheach-somhairle"
+        }
+      ],
+      "crestSrc": "/Stammbäume/assets/images/regions/Ceitheach/tir-na-dun.png",
+      "crestAlt": "Banner Oberherrschaft Tir na Dun",
+      "copy": {},
+      "cultureSections": [],
+      "infobox": [
+        {
+          "title": "Allgemein",
+          "rows": [
+            {
+              "label": "Name",
+              "value": "Herrschaft der Sidhe Somhairle"
+            },
+            {
+              "label": "Typ",
+              "value": "Herrschaft"
+            },
+            {
+              "label": "Sitz",
+              "value": "Glaennmor"
+            },
+            {
+              "label": "Ehemaliger Clan",
+              "value": "Clan Sidhe Somhairle"
+            },
+            {
+              "label": "Status",
+              "value": "Historisches, untergegangenes Fürstentum"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Historischer regierender Clan",
+          "houses": [
+            {
+              "name": "Clan Sidhe Somhairle",
+              "familyId": "haus-somhairle",
+              "imageSrc": "/Stammbäume/assets/images/houses/Leitheach/clan-sidhe-somhairle.png",
+              "seat": "Glaennmor",
+              "liege": "Clan Dal’Leite",
+              "rank": "Laird-Clan (historisch)",
+              "featured": true,
+              "featuredLabel": "Historischer Clan"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [],
+      "councilNote": "Historische Herrschaftsordnung. Vorhandene Nachkommen und spätere Ämter in den Familienakten begründen keine gegenwärtige Herrschaft über Ceitheach.",
+      "vassalGroups": [],
+      "domains": [],
+      "territoryLinks": [],
+      "map": {
+        "title": "Karte Tir na Dun",
+        "imageSrc": "/Karten/Ceitheach/Kartenbilder/normal.webp",
+        "imageAlt": "Fürstentum Ceitheach",
+        "href": "/Karten/karte.html?map=ceitheach"
+      }
+    },
+    {
+      "id": "herrschaft-ceitheach-an-morchoe",
+      "title": "Herrschaft der An’Morchoe",
+      "shortTitle": "Herrschaft der An’Morchoe",
+      "type": "Herrschaft",
+      "kicker": "Historisches Herrschaft · Clan An’Morchoe",
+      "parentHref": "/Kontinente/Estryll/Fürstentum Ceitheach/Oberherrschaft Tir na Ceo/Oberherrschaft Tir na Ceo.html",
+      "parentLabel": "Oberherrschaft Tir na Ceo",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Estryll",
+          "slug": "estryll"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Ceitheach",
+          "slug": "fuerstentum-ceitheach"
+        },
+        {
+          "type": "Oberherrschaft",
+          "name": "Oberherrschaft Tir na Ceo",
+          "slug": "oberherrschaft-ceitheach-tir-na-ceo"
+        },
+        {
+          "type": "Herrschaft",
+          "name": "Herrschaft der An’Morchoe",
+          "slug": "herrschaft-ceitheach-an-morchoe"
+        }
+      ],
+      "crestSrc": "/Stammbäume/assets/images/regions/Ceitheach/tir-na-ceo.png",
+      "crestAlt": "Banner Oberherrschaft Tir na Ceo",
+      "copy": {},
+      "cultureSections": [],
+      "infobox": [
+        {
+          "title": "Allgemein",
+          "rows": [
+            {
+              "label": "Name",
+              "value": "Herrschaft der An’Morchoe"
+            },
+            {
+              "label": "Typ",
+              "value": "Herrschaft"
+            },
+            {
+              "label": "Sitz",
+              "value": "Sruthbruach"
+            },
+            {
+              "label": "Ehemaliger Clan",
+              "value": "Clan An’Morchoe"
+            },
+            {
+              "label": "Status",
+              "value": "Historisches, untergegangenes Fürstentum"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Historischer regierender Clan",
+          "houses": [
+            {
+              "name": "Clan An’Morchoe",
+              "familyId": "haus-an-morchoe",
+              "imageSrc": "/Stammbäume/assets/images/houses/Ceitheach/clan-an-morchoe.png",
+              "seat": "Sruthbruach",
+              "liege": "Clan Nic Holloran",
+              "rank": "Offen (historisch)",
+              "featured": true,
+              "featuredLabel": "Historischer Clan"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [],
+      "councilNote": "Historische Herrschaftsordnung. Vorhandene Nachkommen und spätere Ämter in den Familienakten begründen keine gegenwärtige Herrschaft über Ceitheach.",
+      "vassalGroups": [],
+      "domains": [],
+      "territoryLinks": [],
+      "map": {
+        "title": "Karte Tir na Ceo",
+        "imageSrc": "/Karten/Ceitheach/Kartenbilder/normal.webp",
+        "imageAlt": "Fürstentum Ceitheach",
+        "href": "/Karten/karte.html?map=ceitheach"
+      }
+    },
+    {
+      "id": "herrschaft-ceitheach-tir-an-tordarroch",
+      "title": "Herrschaft der Tir An’Tordarroch",
+      "shortTitle": "Herrschaft der Tir An’Tordarroch",
+      "type": "Herrschaft",
+      "kicker": "Historisches Herrschaft · Clan Tir An’Tordarroch",
+      "parentHref": "/Kontinente/Estryll/Fürstentum Ceitheach/Oberherrschaft Tir na Toraidh/Oberherrschaft Tir na Toraidh.html",
+      "parentLabel": "Oberherrschaft Tir na Toraidh",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Estryll",
+          "slug": "estryll"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Ceitheach",
+          "slug": "fuerstentum-ceitheach"
+        },
+        {
+          "type": "Oberherrschaft",
+          "name": "Oberherrschaft Tir na Toraidh",
+          "slug": "oberherrschaft-ceitheach-tir-na-toraidh"
+        },
+        {
+          "type": "Herrschaft",
+          "name": "Herrschaft der Tir An’Tordarroch",
+          "slug": "herrschaft-ceitheach-tir-an-tordarroch"
+        }
+      ],
+      "crestSrc": "/Stammbäume/assets/images/regions/Ceitheach/tir-na-toraidh.png",
+      "crestAlt": "Banner Oberherrschaft Tir na Toraidh",
+      "copy": {},
+      "cultureSections": [],
+      "infobox": [
+        {
+          "title": "Allgemein",
+          "rows": [
+            {
+              "label": "Name",
+              "value": "Herrschaft der Tir An’Tordarroch"
+            },
+            {
+              "label": "Typ",
+              "value": "Herrschaft"
+            },
+            {
+              "label": "Sitz",
+              "value": "Teorannach"
+            },
+            {
+              "label": "Ehemaliger Clan",
+              "value": "Clan Tir An’Tordarroch"
+            },
+            {
+              "label": "Status",
+              "value": "Historisches, untergegangenes Fürstentum"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Historischer regierender Clan",
+          "houses": [
+            {
+              "name": "Clan Tir An’Tordarroch",
+              "familyId": "haus-tir-an-tordarroch",
+              "imageSrc": "/Stammbäume/assets/images/houses/Ceitheach/clan-tir-an-tordarroch.png",
+              "seat": "Teorannach",
+              "liege": "Clan Ua Nic Ceinselaig",
+              "rank": "Offen (historisch)",
+              "featured": true,
+              "featuredLabel": "Historischer Clan"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [],
+      "councilNote": "Historische Herrschaftsordnung. Vorhandene Nachkommen und spätere Ämter in den Familienakten begründen keine gegenwärtige Herrschaft über Ceitheach.",
+      "vassalGroups": [],
+      "domains": [],
+      "territoryLinks": [],
+      "map": {
+        "title": "Karte Tir na Toraidh",
+        "imageSrc": "/Karten/Ceitheach/Kartenbilder/normal.webp",
+        "imageAlt": "Fürstentum Ceitheach",
+        "href": "/Karten/karte.html?map=ceitheach"
+      }
+    },
+    {
+      "id": "herrschaft-ceitheach-an-bhaird",
+      "title": "Herrschaft der An’Bhaird",
+      "shortTitle": "Herrschaft der An’Bhaird",
+      "type": "Herrschaft",
+      "kicker": "Historisches Herrschaft · Clan An’Bhaird",
+      "parentHref": "/Kontinente/Estryll/Fürstentum Ceitheach/Oberherrschaft Tir na Toraidh/Oberherrschaft Tir na Toraidh.html",
+      "parentLabel": "Oberherrschaft Tir na Toraidh",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Estryll",
+          "slug": "estryll"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Ceitheach",
+          "slug": "fuerstentum-ceitheach"
+        },
+        {
+          "type": "Oberherrschaft",
+          "name": "Oberherrschaft Tir na Toraidh",
+          "slug": "oberherrschaft-ceitheach-tir-na-toraidh"
+        },
+        {
+          "type": "Herrschaft",
+          "name": "Herrschaft der An’Bhaird",
+          "slug": "herrschaft-ceitheach-an-bhaird"
+        }
+      ],
+      "crestSrc": "/Stammbäume/assets/images/regions/Ceitheach/tir-na-toraidh.png",
+      "crestAlt": "Banner Oberherrschaft Tir na Toraidh",
+      "copy": {},
+      "cultureSections": [],
+      "infobox": [
+        {
+          "title": "Allgemein",
+          "rows": [
+            {
+              "label": "Name",
+              "value": "Herrschaft der An’Bhaird"
+            },
+            {
+              "label": "Typ",
+              "value": "Herrschaft"
+            },
+            {
+              "label": "Sitz",
+              "value": "Lochmorach"
+            },
+            {
+              "label": "Ehemaliger Clan",
+              "value": "Clan An’Bhaird"
+            },
+            {
+              "label": "Status",
+              "value": "Historisches, untergegangenes Fürstentum"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Historischer regierender Clan",
+          "houses": [
+            {
+              "name": "Clan An’Bhaird",
+              "familyId": "haus-an-bhaird",
+              "imageSrc": "/Stammbäume/assets/images/houses/Ceitheach/clan-an-bhaird.png",
+              "seat": "Lochmorach",
+              "liege": "Clan Ua Nic Ceinselaig",
+              "rank": "Offen (historisch)",
+              "featured": true,
+              "featuredLabel": "Historischer Clan"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [],
+      "councilNote": "Historische Herrschaftsordnung. Vorhandene Nachkommen und spätere Ämter in den Familienakten begründen keine gegenwärtige Herrschaft über Ceitheach.",
+      "vassalGroups": [],
+      "domains": [],
+      "territoryLinks": [],
+      "map": {
+        "title": "Karte Tir na Toraidh",
+        "imageSrc": "/Karten/Ceitheach/Kartenbilder/normal.webp",
+        "imageAlt": "Fürstentum Ceitheach",
+        "href": "/Karten/karte.html?map=ceitheach"
+      }
+    }
+  ]
+}

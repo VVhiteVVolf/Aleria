@@ -192,7 +192,7 @@ export const KRAEHENMOOR_HOUSE_PROFILES = Object.freeze({
   schwarzblut: kraehenmoorProfile('hesire', NEBELWACHT_PATH, {
     baronyEmblem: KRAEHENMOOR_REGION_EMBLEMS.schwarzfjord
   }),
-  schwarzstolz: kraehenmoorProfile('unknown', ELDVIK_PATH, {
+  schwarzstolz: kraehenmoorProfile('huskarl', ELDVIK_PATH, {
     liegeHouseId: '',
     liegeHouseName: '',
     baronyEmblem: KRAEHENMOOR_REGION_EMBLEMS.schwarzfjord

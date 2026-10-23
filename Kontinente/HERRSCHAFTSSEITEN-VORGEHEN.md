@@ -113,3 +113,24 @@ Maßgebliche Quellen: `Stammbäume/assets/js/data/families.registry.js`, `house-
 Das Register sowie Politik- und Infobereich wurden auf allen acht bestehenden Seiten im Bereich Celtigerns Wacht bei diesen drei Breiten geprüft: lokale Bilder, Hausränge, direkte Hausseitenlinks, Tastaturfokus, die alleinstehende Grafenebene, Infoboxposition und vollständige Portraits oberhalb der Namen. Die alte Grafschaftsvorlage und der Ämter-Link auf der Königreichsseite wurden ebenfalls geprüft. Automatisierte Prüfungen liegen in `tests/territory-directory.browser.mjs`, `tests/territory-ranks.test.mjs`, `tests/house-territory-scope.test.mjs` und `tests/celtigerns-wacht-families.test.mjs`.
 
 Die Prüfungen des jeweils letzten Ausbauschritts sind im zugehörigen Hausseiten-Protokoll dokumentiert. Frühere Gesamtzahlen der Grafschaft gelten nach einer Änderung ihrer territorialen Auswahl nicht weiter.
+
+## Unfertige albische Herrschaften – Nutzerfestlegung vom 22. Oktober 2026
+
+Nummerierte Standardnamen wie „I. Herrschaft“ in alten Artikelübersichten sind
+keine belastbare Zuordnung zu Clans. Vorhandene Kartenbeschriftungen und belegte
+Quellen haben Vorrang. Ohne eindeutigen Beleg keine Reihenfolge aus einer alten
+Tabelle auf die Kartenflächen übertragen.
+
+In Dunfal gehören die drei nummerierten Bereiche zum Umfeld der Anbhair, Casur
+und Aonghusa; die genaue Verteilung wird später festgelegt. Die drei Grenznetze
+bleiben deshalb ohne Clan-Zuweisung. Die bekannten Clan-Herrschaften sind bereits
+mit Wappen und belegten Portraits vorbereitet, ohne erfundene Gebietszuteilung
+oder Beschreibungstexte. Diese Vorgehensweise gilt auch für folgende unfertige
+Fürstentümer, bis die Zuordnung aus einer Karte oder Nutzerkorrektur hervorgeht.
+
+Nachtrag zur Dunfal-Übersicht am selben Tag: Auf ausdrücklichen Nutzerwunsch
+zeigt die Fürstentumsseite alle zwölf Clans und die Sept Ferbend, nach den beiden
+Oberherrschaften gegliedert. Die Ortsregister bleiben auf den jeweiligen
+Herrschaftsseiten. Diese Übersicht legt keine noch offene Flächenzuordnung fest.
+Herrschaftsverweise zeigen das Regionsbanner und separat das Clanwappen;
+das Wappen darf das vorhandene Banner nicht verdrängen.

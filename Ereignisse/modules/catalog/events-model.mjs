@@ -14,6 +14,7 @@ export function eventOccursInYear(event, year) {
 }
 
 export function formatEventYears(event) {
+  if (event.startDate) return `${String(event.startDate.day).padStart(2, '0')}.${String(event.startDate.month).padStart(2, '0')}.${event.startDate.year}`;
   if (event.startYear === null) return 'Zeitpunkt offen';
   return event.endYear && event.endYear !== event.startYear ? `${event.startYear}–${event.endYear}` : `Jahr ${event.startYear}`;
 }
@@ -38,7 +39,9 @@ export function selectEvents({ query = '', chapter = 'all', year = null, order =
 
 export function calendarYearHref(event, year = event.startYear) {
   const validYear = parseEventYear(year);
-  return validYear === null ? null : `../AleriaAlmanach/kalender.html?year=${validYear}&chronicle=${encodeURIComponent(event.id)}#chronik`;
+  if (validYear === null) return null;
+  const exact = event.startDate?.year === validYear ? `&month=${event.startDate.month}&date=${event.startDate.day}&event=${encodeURIComponent(event.id)}` : '';
+  return `../AleriaAlmanach/kalender.html?year=${validYear}${exact}&chronicle=${encodeURIComponent(event.id)}#chronik`;
 }
 
 export function eventHref(id, year = null) {
@@ -54,9 +57,10 @@ export function eventDossier(event) {
 
 // Ein Jahresverweis wechselt nur das betrachtete Jahr, niemals das Welt-/Tagesdatum.
 export function calendarChronicleSelection(params, current) {
-  const entry = EVENTS.find(event => event.id === params.get('chronicle'));
+  const entry = EVENTS.find(event => event.id === params.get('chronicle') || event.startDate && event.id === params.get('event'));
   const year = parseEventYear(params.get('year')) ?? parseEventYear(entry?.startYear);
   const selected = year === null ? { ...current } : { ...current, year };
+  if (entry?.startDate?.year === year) Object.assign(selected, entry.startDate);
   const month = Number(params.get('month')), day = Number(params.get('date'));
   if (year !== null && Number.isInteger(month) && month >= 1 && month <= 13) {
     selected.month = month;

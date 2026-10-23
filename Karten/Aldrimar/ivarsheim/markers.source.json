@@ -1,0 +1,4324 @@
+{
+  "imageSize": [
+    4096,
+    2682
+  ],
+  "coordinateOrigin": "bottom-left",
+  "markers": [
+    {
+      "id": "ivarsheim-65c1a893-b472-455f-a417-f538f3a12f59",
+      "title": "Ard Eabhraig",
+      "category": "Ruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/antike-ruine.png",
+      "territoryId": "hesirentum-winterwacht",
+      "x": 3129.0,
+      "y": 2469,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "65c1a893-b472-455f-a417-f538f3a12f59",
+        "url": "https://www.worldanvil.com/world/map/marker/65c1a893-b472-455f-a417-f538f3a12f59/edit",
+        "title": "Ard Eabhraig",
+        "coordinates": {
+          "x": 3126.0,
+          "y": 2559.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 3129.0,
+          "y": 213,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-001"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-c550511f-5322-4da9-baeb-5bd05c8cebfb",
+      "title": "Winterfeste",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "hesirentum-winterwacht",
+      "x": 3522.0,
+      "y": 2401,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "c550511f-5322-4da9-baeb-5bd05c8cebfb",
+        "url": "https://www.worldanvil.com/world/map/marker/c550511f-5322-4da9-baeb-5bd05c8cebfb/edit",
+        "title": "Winterfeste",
+        "coordinates": {
+          "x": 3512.0,
+          "y": 2397.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 3522.0,
+          "y": 281,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-002"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-hjarnentor",
+      "title": "Hjarnentor",
+      "category": "Ruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/nordische-ruine.png",
+      "territoryId": "thanentum-ivarsklamm",
+      "x": 2663.5,
+      "y": 2453,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "aleria",
+        "mapPositionId": "ivarsheim-position-003",
+        "basis": "Nutzerfreigabe vom 21.10.2026: neue Namen und geographisch passende Texte; drei gelieferte Karten.",
+        "targetPosition": {
+          "x": 2663.5,
+          "y": 229,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-003"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-a3fd9e26-e6ff-4b05-8ae7-41c8d1a7ace5",
+      "title": "Sølborg -  Sitz der Silberzungen",
+      "category": "Burg",
+      "templateId": "gebaeude",
+      "icon": "/Karten/assets/icons/welt/gro-e-burg.png",
+      "territoryId": "hesirentum-silberzungen",
+      "x": 1685.5,
+      "y": 2462,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "a3fd9e26-e6ff-4b05-8ae7-41c8d1a7ace5",
+        "url": "https://www.worldanvil.com/world/map/marker/a3fd9e26-e6ff-4b05-8ae7-41c8d1a7ace5/edit",
+        "title": "Sølborg -  Sitz der Silberzungen",
+        "coordinates": {
+          "x": 1681.0,
+          "y": 2476.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 1685.5,
+          "y": 220,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-004"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-skarenvik",
+      "title": "Skarenvik",
+      "category": "Siedlungsruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/zerst-rte-siedlung.png",
+      "territoryId": "thanentum-klippenschlag",
+      "x": 425.5,
+      "y": 2427,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "aleria",
+        "mapPositionId": "ivarsheim-position-005",
+        "basis": "Nutzerfreigabe vom 21.10.2026: neue Namen und geographisch passende Texte; drei gelieferte Karten.",
+        "targetPosition": {
+          "x": 425.5,
+          "y": 255,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-005"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-cf496521-59cc-4c5b-803e-066e63b212bb",
+      "title": "Jötunborg - Titanenbrecher",
+      "category": "Festung",
+      "templateId": "gebaeude",
+      "icon": "/Karten/assets/icons/welt/festung.png",
+      "territoryId": "thanentum-ivarsklamm",
+      "x": 2364.0,
+      "y": 2296,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "cf496521-59cc-4c5b-803e-066e63b212bb",
+        "url": "https://www.worldanvil.com/world/map/marker/cf496521-59cc-4c5b-803e-066e63b212bb/edit",
+        "title": "Jötunborg - Titanenbrecher",
+        "coordinates": {
+          "x": 2359.0,
+          "y": 2322.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 2364.0,
+          "y": 386,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-006"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-hrafnskar",
+      "title": "Hrafnskar",
+      "category": "Ruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/nordische-ruine.png",
+      "territoryId": "thanentum-klippenschlag",
+      "x": 549.0,
+      "y": 2288,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "aleria",
+        "mapPositionId": "ivarsheim-position-007",
+        "basis": "Nutzerfreigabe vom 21.10.2026: neue Namen und geographisch passende Texte; drei gelieferte Karten.",
+        "targetPosition": {
+          "x": 549.0,
+          "y": 394,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-007"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-339e414e-78f4-46b9-8f65-0b18eb0279f1",
+      "title": "Tiefensilber",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "hesirentum-silberzungen",
+      "x": 2144.5,
+      "y": 2268,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "339e414e-78f4-46b9-8f65-0b18eb0279f1",
+        "url": "https://www.worldanvil.com/world/map/marker/339e414e-78f4-46b9-8f65-0b18eb0279f1/edit",
+        "title": "Tiefensilber",
+        "coordinates": {
+          "x": 2140.0,
+          "y": 2273.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 2144.5,
+          "y": 414,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-008"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-67fb2be1-3633-460a-90f8-8a2187136254",
+      "title": "Ivarsfels",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "thanentum-ivarsklamm",
+      "x": 1667.0,
+      "y": 2181,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "67fb2be1-3633-460a-90f8-8a2187136254",
+        "url": "https://www.worldanvil.com/world/map/marker/67fb2be1-3633-460a-90f8-8a2187136254/edit",
+        "title": "Ivarsfels",
+        "coordinates": {
+          "x": 1675.0,
+          "y": 2208.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 1667.0,
+          "y": 501,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-009"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-7ebe6ad6-b4e6-4d3a-8e80-e4dddecb61be",
+      "title": "Hyrnstein",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "hesirentum-silberzungen",
+      "x": 2852.5,
+      "y": 2259,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "7ebe6ad6-b4e6-4d3a-8e80-e4dddecb61be",
+        "url": "https://www.worldanvil.com/world/map/marker/7ebe6ad6-b4e6-4d3a-8e80-e4dddecb61be/edit",
+        "title": "Hyrnstein",
+        "coordinates": {
+          "x": 2870.0,
+          "y": 2263.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 2852.5,
+          "y": 423,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-010"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-a87facbe-da6c-4468-90ca-6c7fe598a175",
+      "title": "Vetrvakt",
+      "category": "Turm",
+      "templateId": "gebaeude",
+      "icon": "/Karten/assets/icons/welt/turm.png",
+      "territoryId": "hesirentum-winterwacht",
+      "x": 3260.0,
+      "y": 2243,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "a87facbe-da6c-4468-90ca-6c7fe598a175",
+        "url": "https://www.worldanvil.com/world/map/marker/a87facbe-da6c-4468-90ca-6c7fe598a175/edit",
+        "title": "Vetrvakt",
+        "coordinates": {
+          "x": 3263.0,
+          "y": 2245.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 3260.0,
+          "y": 439,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-011"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-25a2825a-cc1d-414f-9357-38c4546b31b8",
+      "title": "Winterhalt Lager - Jagdklingen",
+      "category": "Jägerlager",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/j-gerlager.png",
+      "territoryId": "hesirentum-winterwacht",
+      "x": 3768.5,
+      "y": 2218,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "25a2825a-cc1d-414f-9357-38c4546b31b8",
+        "url": "https://www.worldanvil.com/world/map/marker/25a2825a-cc1d-414f-9357-38c4546b31b8/edit",
+        "title": "Winterhalt Lager - Jagdklingen",
+        "coordinates": {
+          "x": 3769.0,
+          "y": 2221.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 3768.5,
+          "y": 464,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-012"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-ffebac53-193d-42b4-9738-d33a5f8d4dcc",
+      "title": "Erzklamm",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "hesirentum-silberzungen",
+      "x": 2583.5,
+      "y": 2226,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "ffebac53-193d-42b4-9738-d33a5f8d4dcc",
+        "url": "https://www.worldanvil.com/world/map/marker/ffebac53-193d-42b4-9738-d33a5f8d4dcc/edit",
+        "title": "Erzklamm",
+        "coordinates": {
+          "x": 2588.0,
+          "y": 2228.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 2583.5,
+          "y": 456,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-013"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-riffweide",
+      "title": "Riffweide",
+      "category": "Siedlungsruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/zerst-rte-siedlung.png",
+      "territoryId": "thanentum-klippenschlag",
+      "x": 369.5,
+      "y": 2212,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "aleria",
+        "mapPositionId": "ivarsheim-position-014",
+        "basis": "Nutzerfreigabe vom 21.10.2026: neue Namen und geographisch passende Texte; drei gelieferte Karten.",
+        "targetPosition": {
+          "x": 369.5,
+          "y": 470,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-014"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-a0ed3437-8c39-4d6d-a335-7e65b0472aa2",
+      "title": "Helgashof",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "hesirentum-silberzungen",
+      "x": 2059.0,
+      "y": 2120,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "a0ed3437-8c39-4d6d-a335-7e65b0472aa2",
+        "url": "https://www.worldanvil.com/world/map/marker/a0ed3437-8c39-4d6d-a335-7e65b0472aa2/edit",
+        "title": "Helgashof",
+        "coordinates": {
+          "x": 2058.0,
+          "y": 2114.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 2059.0,
+          "y": 562,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-015"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-3516723d-926c-4354-8873-eb9176194ab3",
+      "title": "Falkhof",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "hesirentum-winterwacht",
+      "x": 3660.5,
+      "y": 2092,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "3516723d-926c-4354-8873-eb9176194ab3",
+        "url": "https://www.worldanvil.com/world/map/marker/3516723d-926c-4354-8873-eb9176194ab3/edit",
+        "title": "Falkhof",
+        "coordinates": {
+          "x": 3666.0,
+          "y": 2102.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 3660.5,
+          "y": 590,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-016"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-27e549ed-7bd0-4f31-826e-beddc6e07df1",
+      "title": "Caer Trachwyll",
+      "category": "Burg",
+      "templateId": "gebaeude",
+      "icon": "/Karten/assets/icons/welt/gro-e-burg.png",
+      "territoryId": "hesirentum-trachwyll",
+      "x": 1695.5,
+      "y": 2052,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "27e549ed-7bd0-4f31-826e-beddc6e07df1",
+        "url": "https://www.worldanvil.com/world/map/marker/27e549ed-7bd0-4f31-826e-beddc6e07df1/edit",
+        "title": "Caer Trachwyll",
+        "coordinates": {
+          "x": 1686.0,
+          "y": 2065.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 1695.5,
+          "y": 630,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-017"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-a4eab638-f56c-4440-9d19-6999493560ea",
+      "title": "Gerstenberg",
+      "category": "Brauersiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/brauersiedlung.png",
+      "territoryId": "exklaven-schwarzdorn-ivarsheim",
+      "x": 2769.0,
+      "y": 2069,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "a4eab638-f56c-4440-9d19-6999493560ea",
+        "url": "https://www.worldanvil.com/world/map/marker/a4eab638-f56c-4440-9d19-6999493560ea/edit",
+        "title": "Gerstenberg",
+        "coordinates": {
+          "x": 2785.0,
+          "y": 2102.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 2769.0,
+          "y": 613,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-018"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-15ad6973-9dd0-4a7d-abc4-b6f40899d6bf",
+      "title": "Torhilddorf",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "hesirentum-winterwacht",
+      "x": 3339.5,
+      "y": 2064,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "15ad6973-9dd0-4a7d-abc4-b6f40899d6bf",
+        "url": "https://www.worldanvil.com/world/map/marker/15ad6973-9dd0-4a7d-abc4-b6f40899d6bf/edit",
+        "title": "Torhilddorf",
+        "coordinates": {
+          "x": 3341.0,
+          "y": 2056.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 3339.5,
+          "y": 618,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-019"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-0c457e75-067d-42e9-b7dd-e3e65c32a60d",
+      "title": "Torstad",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "hesirentum-winterwacht",
+      "x": 3105.5,
+      "y": 2047,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "0c457e75-067d-42e9-b7dd-e3e65c32a60d",
+        "url": "https://www.worldanvil.com/world/map/marker/0c457e75-067d-42e9-b7dd-e3e65c32a60d/edit",
+        "title": "Torstad",
+        "coordinates": {
+          "x": 3104.0,
+          "y": 2046.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 3105.5,
+          "y": 635,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-020"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-fa0ada94-fbb8-470a-ac90-6b915b31af0a",
+      "title": "Sølvstatt",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "hesirentum-silberzungen",
+      "x": 2319.5,
+      "y": 2042,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "fa0ada94-fbb8-470a-ac90-6b915b31af0a",
+        "url": "https://www.worldanvil.com/world/map/marker/fa0ada94-fbb8-470a-ac90-6b915b31af0a/edit",
+        "title": "Sølvstatt",
+        "coordinates": {
+          "x": 2325.0,
+          "y": 2032.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 2319.5,
+          "y": 640,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-021"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-04900661-885e-4a25-8b20-1d9bd335199c",
+      "title": "Hirschsweiler",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "hesirentum-silberzungen",
+      "x": 2547.0,
+      "y": 2035,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "04900661-885e-4a25-8b20-1d9bd335199c",
+        "url": "https://www.worldanvil.com/world/map/marker/04900661-885e-4a25-8b20-1d9bd335199c/edit",
+        "title": "Hirschsweiler",
+        "coordinates": {
+          "x": 2555.0,
+          "y": 2038.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 2547.0,
+          "y": 647,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-022"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-0d86e902-416c-4a9f-bc31-96d8955aa7f3",
+      "title": "Hyrmhaug - Hügelgrab",
+      "category": "Hügelgrab",
+      "templateId": "natur",
+      "icon": "/Karten/assets/icons/welt/h-gelgrab.png",
+      "territoryId": "hesirentum-winterwacht",
+      "x": 3799.0,
+      "y": 2005,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "0d86e902-416c-4a9f-bc31-96d8955aa7f3",
+        "url": "https://www.worldanvil.com/world/map/marker/0d86e902-416c-4a9f-bc31-96d8955aa7f3/edit",
+        "title": "Hyrmhaug - Hügelgrab",
+        "coordinates": {
+          "x": 3812.0,
+          "y": 2046.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 3799.0,
+          "y": 677,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-023"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-skeldkliff",
+      "title": "Skeldkliff",
+      "category": "Burg",
+      "templateId": "gebaeude",
+      "icon": "/Karten/assets/icons/welt/kleine-burg.png",
+      "territoryId": "thanentum-klippenschlag",
+      "x": 334.5,
+      "y": 1987,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "aleria",
+        "mapPositionId": "ivarsheim-position-024",
+        "basis": "Nutzerfreigabe vom 21.10.2026: neue Namen und geographisch passende Texte; drei gelieferte Karten.",
+        "targetPosition": {
+          "x": 334.5,
+          "y": 695,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-024"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-9bcbdc65-18a6-41e5-b924-5054dbf84591",
+      "title": "Hochfeld",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "hesirentum-trachwyll",
+      "x": 1838.0,
+      "y": 1982,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "9bcbdc65-18a6-41e5-b924-5054dbf84591",
+        "url": "https://www.worldanvil.com/world/map/marker/9bcbdc65-18a6-41e5-b924-5054dbf84591/edit",
+        "title": "Hochfeld",
+        "coordinates": {
+          "x": 1843.0,
+          "y": 1983.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 1838.0,
+          "y": 700,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-025"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-d37b9bb4-a879-4bf3-8863-9cc1a79a7fce",
+      "title": "Hårfjel - Hügelgrab",
+      "category": "Hügelgrab",
+      "templateId": "natur",
+      "icon": "/Karten/assets/icons/welt/h-gelgrab.png",
+      "territoryId": "thanentum-ivarsklamm",
+      "x": 1528.5,
+      "y": 1967,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "d37b9bb4-a879-4bf3-8863-9cc1a79a7fce",
+        "url": "https://www.worldanvil.com/world/map/marker/d37b9bb4-a879-4bf3-8863-9cc1a79a7fce/edit",
+        "title": "Hårfjel - Hügelgrab",
+        "coordinates": {
+          "x": 1037.0,
+          "y": 1409.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 1528.5,
+          "y": 715,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-026"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-8cf43b90-2f07-49c0-9175-838c4935e249",
+      "title": "Hjortvann",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "hesirentum-winterwacht",
+      "x": 3521.5,
+      "y": 1962,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "8cf43b90-2f07-49c0-9175-838c4935e249",
+        "url": "https://www.worldanvil.com/world/map/marker/8cf43b90-2f07-49c0-9175-838c4935e249/edit",
+        "title": "Hjortvann",
+        "coordinates": {
+          "x": 3525.0,
+          "y": 1974.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 3521.5,
+          "y": 720,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-027"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-83336bfc-3587-4fa1-9507-c101a30c601d",
+      "title": "Hvitdal",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "hesirentum-winterwacht",
+      "x": 3137.5,
+      "y": 1919,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "83336bfc-3587-4fa1-9507-c101a30c601d",
+        "url": "https://www.worldanvil.com/world/map/marker/83336bfc-3587-4fa1-9507-c101a30c601d/edit",
+        "title": "Hvitdal",
+        "coordinates": {
+          "x": 3132.0,
+          "y": 1943.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 3137.5,
+          "y": 763,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-028"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-5424653f-c168-416e-8f1b-d1a41c2f64e0",
+      "title": "Blôdborg",
+      "category": "Burgsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/burgsiedlung.png",
+      "territoryId": "thanentum-ivarsklamm",
+      "x": 2033.5,
+      "y": 1915,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "5424653f-c168-416e-8f1b-d1a41c2f64e0",
+        "url": "https://www.worldanvil.com/world/map/marker/5424653f-c168-416e-8f1b-d1a41c2f64e0/edit",
+        "title": "Blôdborg",
+        "coordinates": {
+          "x": 2036.0,
+          "y": 1948.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 2033.5,
+          "y": 767,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-029"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-6d3b4a77-ea50-42a5-bf5a-c29a928948d7",
+      "title": "Sølvfurt",
+      "category": "Flusssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/flusssiedlung.png",
+      "territoryId": "hesirentum-silberzungen",
+      "x": 2847.5,
+      "y": 1913,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "6d3b4a77-ea50-42a5-bf5a-c29a928948d7",
+        "url": "https://www.worldanvil.com/world/map/marker/6d3b4a77-ea50-42a5-bf5a-c29a928948d7/edit",
+        "title": "Sølvfurt",
+        "coordinates": {
+          "x": 2827.0,
+          "y": 1936.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 2847.5,
+          "y": 769,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-030"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-6032db0d-acaa-489c-a857-c68ffa1976d3",
+      "title": "Blodvakt",
+      "category": "Turm",
+      "templateId": "gebaeude",
+      "icon": "/Karten/assets/icons/welt/turm.png",
+      "territoryId": "thanentum-ivarsklamm",
+      "x": 2488.5,
+      "y": 1858,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "6032db0d-acaa-489c-a857-c68ffa1976d3",
+        "url": "https://www.worldanvil.com/world/map/marker/6032db0d-acaa-489c-a857-c68ffa1976d3/edit",
+        "title": "Blodvakt",
+        "coordinates": {
+          "x": 2501.0,
+          "y": 1862.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 2488.5,
+          "y": 824,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-031"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-de752a04-159a-41a1-aaab-52ea36b63415",
+      "title": "Svartgil",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "hesirentum-trachwyll",
+      "x": 1625.0,
+      "y": 1827,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "de752a04-159a-41a1-aaab-52ea36b63415",
+        "url": "https://www.worldanvil.com/world/map/marker/de752a04-159a-41a1-aaab-52ea36b63415/edit",
+        "title": "Svartgil",
+        "coordinates": {
+          "x": 1624.0,
+          "y": 1835.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 1625.0,
+          "y": 855,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-032"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-29bb792e-a4fa-4ea0-967f-bc2922a2072f",
+      "title": "Tyrholm",
+      "category": "Klostersiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/klostersiedlung.png",
+      "territoryId": "hesirentum-winterwacht",
+      "x": 3326.5,
+      "y": 1822,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "29bb792e-a4fa-4ea0-967f-bc2922a2072f",
+        "url": "https://www.worldanvil.com/world/map/marker/29bb792e-a4fa-4ea0-967f-bc2922a2072f/edit",
+        "title": "Tyrholm",
+        "coordinates": {
+          "x": 3323.0,
+          "y": 1815.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 3326.5,
+          "y": 860,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-033"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-d3cdbd47-ad66-4f86-a08c-c09b12f08cf2",
+      "title": "Wellenfurt",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "hesirentum-winterwacht",
+      "x": 3846.5,
+      "y": 1815,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "d3cdbd47-ad66-4f86-a08c-c09b12f08cf2",
+        "url": "https://www.worldanvil.com/world/map/marker/d3cdbd47-ad66-4f86-a08c-c09b12f08cf2/edit",
+        "title": "Wellenfurt",
+        "coordinates": {
+          "x": 3847.0,
+          "y": 1831.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 3846.5,
+          "y": 867,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-034"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-dff0dece-0182-410c-99a1-0677bedd32d9",
+      "title": "Örnhof",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "hesirentum-winterwacht",
+      "x": 3087.5,
+      "y": 1813,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "dff0dece-0182-410c-99a1-0677bedd32d9",
+        "url": "https://www.worldanvil.com/world/map/marker/dff0dece-0182-410c-99a1-0677bedd32d9/edit",
+        "title": "Örnhof",
+        "coordinates": {
+          "x": 3087.0,
+          "y": 1815.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 3087.5,
+          "y": 869,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-035"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-bd0e5c2b-30f2-42b7-b10d-f30b350f8f93",
+      "title": "Lichtheil",
+      "category": "Klostersiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/klostersiedlung.png",
+      "territoryId": "thanentum-ivarsklamm",
+      "x": 2252.0,
+      "y": 1793,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "bd0e5c2b-30f2-42b7-b10d-f30b350f8f93",
+        "url": "https://www.worldanvil.com/world/map/marker/bd0e5c2b-30f2-42b7-b10d-f30b350f8f93/edit",
+        "title": "Lichtheil",
+        "coordinates": {
+          "x": 2256.0,
+          "y": 1801.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 2252.0,
+          "y": 889,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-036"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-brandungsstieg",
+      "title": "Brandungsstieg",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "thanentum-klippenschlag",
+      "x": 310.0,
+      "y": 1771,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "aleria",
+        "mapPositionId": "ivarsheim-position-037",
+        "basis": "Nutzerfreigabe vom 21.10.2026: neue Namen und geographisch passende Texte; drei gelieferte Karten.",
+        "targetPosition": {
+          "x": 310.0,
+          "y": 911,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-037"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-fc1848bd-d36f-459b-9982-26322922b4f6",
+      "title": "Aldorf",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "hesirentum-winterwacht",
+      "x": 3566.5,
+      "y": 1771,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "fc1848bd-d36f-459b-9982-26322922b4f6",
+        "url": "https://www.worldanvil.com/world/map/marker/fc1848bd-d36f-459b-9982-26322922b4f6/edit",
+        "title": "Aldorf",
+        "coordinates": {
+          "x": 3573.0,
+          "y": 1769.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 3566.5,
+          "y": 911,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-038"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-0ce79549-fad0-4dd7-a3aa-1d2c61b85e1b",
+      "title": "Frosthof",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "thanentum-ivarsklamm",
+      "x": 2698.0,
+      "y": 1752,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "0ce79549-fad0-4dd7-a3aa-1d2c61b85e1b",
+        "url": "https://www.worldanvil.com/world/map/marker/0ce79549-fad0-4dd7-a3aa-1d2c61b85e1b/edit",
+        "title": "Frosthof",
+        "coordinates": {
+          "x": 2703.0,
+          "y": 1752.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 2698.0,
+          "y": 930,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-039"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-47c90019-79a8-45f2-9321-208c0d9fefed",
+      "title": "Vikstad",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "hesirentum-winterwacht",
+      "x": 3183.5,
+      "y": 1721,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "47c90019-79a8-45f2-9321-208c0d9fefed",
+        "url": "https://www.worldanvil.com/world/map/marker/47c90019-79a8-45f2-9321-208c0d9fefed/edit",
+        "title": "Vikstad",
+        "coordinates": {
+          "x": 3178.0,
+          "y": 1734.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 3183.5,
+          "y": 961,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-040"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-9ab9fa79-3596-4fc7-b271-6fd4e22847c2",
+      "title": "Llangarwyn",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "hesirentum-trachwyll",
+      "x": 1814.0,
+      "y": 1721,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "9ab9fa79-3596-4fc7-b271-6fd4e22847c2",
+        "url": "https://www.worldanvil.com/world/map/marker/9ab9fa79-3596-4fc7-b271-6fd4e22847c2/edit",
+        "title": "Llangarwyn",
+        "coordinates": {
+          "x": 1819.0,
+          "y": 1732.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 1814.0,
+          "y": 961,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-041"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-broch-maeldun",
+      "title": "Broch Maeldun",
+      "category": "Ruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/antike-ruine.png",
+      "territoryId": "thanentum-klippenschlag",
+      "x": 802.5,
+      "y": 1621,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "aleria",
+        "mapPositionId": "ivarsheim-position-042",
+        "basis": "Nutzerfreigabe vom 21.10.2026: neue Namen und geographisch passende Texte; drei gelieferte Karten.",
+        "targetPosition": {
+          "x": 802.5,
+          "y": 1061,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-042"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-aec74ca0-11da-4087-a771-26c690f55b21",
+      "title": "Järnsgjot",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "hesirentum-trachwyll",
+      "x": 1574.0,
+      "y": 1666,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "aec74ca0-11da-4087-a771-26c690f55b21",
+        "url": "https://www.worldanvil.com/world/map/marker/aec74ca0-11da-4087-a771-26c690f55b21/edit",
+        "title": "Järnsgjot",
+        "coordinates": {
+          "x": 1574.0,
+          "y": 1666.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 1574.0,
+          "y": 1016,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-043"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-06851faa-1e57-4395-a5df-66f7408a3290",
+      "title": "Svalstein",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "thanentum-klippenschlag",
+      "x": 466.0,
+      "y": 1642,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "06851faa-1e57-4395-a5df-66f7408a3290",
+        "url": "https://www.worldanvil.com/world/map/marker/06851faa-1e57-4395-a5df-66f7408a3290/edit",
+        "title": "Svalstein",
+        "coordinates": {
+          "x": 472.0,
+          "y": 1666.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 466.0,
+          "y": 1040,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-044"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-20c6930b-8aff-4072-8c62-a4f524c2d79d",
+      "title": "Trachweiler",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "hesirentum-trachwyll",
+      "x": 1916.5,
+      "y": 1622,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "20c6930b-8aff-4072-8c62-a4f524c2d79d",
+        "url": "https://www.worldanvil.com/world/map/marker/20c6930b-8aff-4072-8c62-a4f524c2d79d/edit",
+        "title": "Trachweiler",
+        "coordinates": {
+          "x": 1965.0,
+          "y": 1631.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 1916.5,
+          "y": 1060,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-045"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-332726cc-3395-4cf9-b0ea-19b0f6503f11",
+      "title": "Brynjolfsstad",
+      "category": "Flusssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/flusssiedlung.png",
+      "territoryId": "thanentum-ivarsklamm",
+      "x": 2780.0,
+      "y": 1611,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "332726cc-3395-4cf9-b0ea-19b0f6503f11",
+        "url": "https://www.worldanvil.com/world/map/marker/332726cc-3395-4cf9-b0ea-19b0f6503f11/edit",
+        "title": "Brynjolfsstad",
+        "coordinates": {
+          "x": 2784.0,
+          "y": 1614.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 2780.0,
+          "y": 1071,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-046"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-2fd1bbb1-82fd-48c7-9c3a-ba2a28ea766f",
+      "title": "Vindtvakt",
+      "category": "Turm",
+      "templateId": "gebaeude",
+      "icon": "/Karten/assets/icons/welt/turm.png",
+      "territoryId": "thanentum-ivarsklamm",
+      "x": 2208.0,
+      "y": 1587,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "2fd1bbb1-82fd-48c7-9c3a-ba2a28ea766f",
+        "url": "https://www.worldanvil.com/world/map/marker/2fd1bbb1-82fd-48c7-9c3a-ba2a28ea766f/edit",
+        "title": "Vindtvakt",
+        "coordinates": {
+          "x": 2202.0,
+          "y": 1602.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 2208.0,
+          "y": 1095,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-047"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-317a2454-4bcf-45ba-8c72-432146dd1f6d",
+      "title": "Karnfjell",
+      "category": "Hügelgrab",
+      "templateId": "natur",
+      "icon": "/Karten/assets/icons/welt/h-gelgrab.png",
+      "territoryId": "thanentum-ivarsklamm",
+      "x": 2438.5,
+      "y": 1595,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "317a2454-4bcf-45ba-8c72-432146dd1f6d",
+        "url": "https://www.worldanvil.com/world/map/marker/317a2454-4bcf-45ba-8c72-432146dd1f6d/edit",
+        "title": "Karnfjell",
+        "coordinates": {
+          "x": 2450.0,
+          "y": 1637.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 2438.5,
+          "y": 1087,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-048"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-0e4f1992-1618-4603-a58f-89f4f44c55c2",
+      "title": "Skeldal - Die Saatkrieger",
+      "category": "Festung",
+      "templateId": "gebaeude",
+      "icon": "/Karten/assets/icons/welt/festung.png",
+      "territoryId": "thanentum-saatgrund",
+      "x": 3404.0,
+      "y": 1534,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "0e4f1992-1618-4603-a58f-89f4f44c55c2",
+        "url": "https://www.worldanvil.com/world/map/marker/0e4f1992-1618-4603-a58f-89f4f44c55c2/edit",
+        "title": "Skeldal - Die Saatkrieger",
+        "coordinates": {
+          "x": 3410.0,
+          "y": 1570.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 3404.0,
+          "y": 1148,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-049"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-075076f5-7ac9-4323-9747-e25f1bcc06d6",
+      "title": "Fridtun",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "thanentum-saatgrund",
+      "x": 3780.5,
+      "y": 1566,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "075076f5-7ac9-4323-9747-e25f1bcc06d6",
+        "url": "https://www.worldanvil.com/world/map/marker/075076f5-7ac9-4323-9747-e25f1bcc06d6/edit",
+        "title": "Fridtun",
+        "coordinates": {
+          "x": 3680.0,
+          "y": 1563.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 3780.5,
+          "y": 1116,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-050"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-130d0786-c521-48b4-b7c1-85ad025bb43e",
+      "title": "Tannweiler",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "thanentum-ivarsklamm",
+      "x": 2534.5,
+      "y": 1515,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "130d0786-c521-48b4-b7c1-85ad025bb43e",
+        "url": "https://www.worldanvil.com/world/map/marker/130d0786-c521-48b4-b7c1-85ad025bb43e/edit",
+        "title": "Tannweiler",
+        "coordinates": {
+          "x": 2538.0,
+          "y": 1506.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 2534.5,
+          "y": 1167,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-051"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-70ec1915-81b3-48d4-b522-4372766841dd",
+      "title": "Thrainfeld",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "thanentum-saatgrund",
+      "x": 3000.0,
+      "y": 1461,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "70ec1915-81b3-48d4-b522-4372766841dd",
+        "url": "https://www.worldanvil.com/world/map/marker/70ec1915-81b3-48d4-b522-4372766841dd/edit",
+        "title": "Thrainfeld",
+        "coordinates": {
+          "x": 3002.0,
+          "y": 1461.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 3000.0,
+          "y": 1221,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-052"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-88ca6738-751c-4960-9f86-a4f5b4c2de16",
+      "title": "Broch Fearch",
+      "category": "Ruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/nordische-ruine.png",
+      "territoryId": "thanentum-klippenschlag",
+      "x": 1137.0,
+      "y": 1435,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "88ca6738-751c-4960-9f86-a4f5b4c2de16",
+        "url": "https://www.worldanvil.com/world/map/marker/88ca6738-751c-4960-9f86-a4f5b4c2de16/edit",
+        "title": "Broch Fearch",
+        "coordinates": {
+          "x": 1255.0,
+          "y": 1445.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 1137.0,
+          "y": 1247,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-053"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-38585108-2807-41f0-8008-b94cf62487f9",
+      "title": "Nordhavn",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "thanentum-klippenschlag",
+      "x": 194.5,
+      "y": 1432,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "38585108-2807-41f0-8008-b94cf62487f9",
+        "url": "https://www.worldanvil.com/world/map/marker/38585108-2807-41f0-8008-b94cf62487f9/edit",
+        "title": "Nordhavn",
+        "coordinates": {
+          "x": 238.0,
+          "y": 1453.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 194.5,
+          "y": 1250,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-054"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-821f9b77-80c4-48fd-b9a3-bcf4581f8bc1",
+      "title": "Birkfeld",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "hesirentum-trachwyll",
+      "x": 1944.5,
+      "y": 1442,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "821f9b77-80c4-48fd-b9a3-bcf4581f8bc1",
+        "url": "https://www.worldanvil.com/world/map/marker/821f9b77-80c4-48fd-b9a3-bcf4581f8bc1/edit",
+        "title": "Birkfeld",
+        "coordinates": {
+          "x": 1949.0,
+          "y": 1444.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 1944.5,
+          "y": 1240,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-055"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-68627177-a6f3-4c0c-9b3f-9977bbfe0a60",
+      "title": "Trevalgan",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "hesirentum-trachwyll",
+      "x": 1766.5,
+      "y": 1368,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "68627177-a6f3-4c0c-9b3f-9977bbfe0a60",
+        "url": "https://www.worldanvil.com/world/map/marker/68627177-a6f3-4c0c-9b3f-9977bbfe0a60/edit",
+        "title": "Trevalgan",
+        "coordinates": {
+          "x": 1773.0,
+          "y": 1361.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 1766.5,
+          "y": 1314,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-056"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-b5bfcd0e-cb36-4dd5-8e6f-ffe7898f82cc",
+      "title": "Kaldhaug - Hügelgrab",
+      "category": "Hügelgrab",
+      "templateId": "natur",
+      "icon": "/Karten/assets/icons/welt/h-gelgrab.png",
+      "territoryId": "thanentum-saatgrund",
+      "x": 3118,
+      "y": 1289,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "b5bfcd0e-cb36-4dd5-8e6f-ffe7898f82cc",
+        "url": "https://www.worldanvil.com/world/map/marker/b5bfcd0e-cb36-4dd5-8e6f-ffe7898f82cc/edit",
+        "title": "Kaldhaug - Hügelgrab",
+        "coordinates": {
+          "x": 3112.0,
+          "y": 1316.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 3118,
+          "y": 1393,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-057"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-55ac2635-9660-4493-aa8e-da20edb1ab37",
+      "title": "Torsvik",
+      "category": "Flusssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/flusssiedlung.png",
+      "territoryId": "thanentum-saatgrund",
+      "x": 3796.0,
+      "y": 1335,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "55ac2635-9660-4493-aa8e-da20edb1ab37",
+        "url": "https://www.worldanvil.com/world/map/marker/55ac2635-9660-4493-aa8e-da20edb1ab37/edit",
+        "title": "Torsvik",
+        "coordinates": {
+          "x": 3741.0,
+          "y": 1204.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 3796.0,
+          "y": 1347,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-058"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-4b7ed21c-b5e3-4750-8ae9-cb1fd91b10f4",
+      "title": "Ravnholt",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "thanentum-saatgrund",
+      "x": 3616.0,
+      "y": 1331,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "4b7ed21c-b5e3-4750-8ae9-cb1fd91b10f4",
+        "url": "https://www.worldanvil.com/world/map/marker/4b7ed21c-b5e3-4750-8ae9-cb1fd91b10f4/edit",
+        "title": "Ravnholt",
+        "coordinates": {
+          "x": 3708.0,
+          "y": 1369.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 3616.0,
+          "y": 1351,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-059"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-579fd5ae-99d1-4466-b895-a0fcd5ef4721",
+      "title": "Grøndal",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "thanentum-saatgrund",
+      "x": 2824.5,
+      "y": 1329,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "579fd5ae-99d1-4466-b895-a0fcd5ef4721",
+        "url": "https://www.worldanvil.com/world/map/marker/579fd5ae-99d1-4466-b895-a0fcd5ef4721/edit",
+        "title": "Grøndal",
+        "coordinates": {
+          "x": 2826.0,
+          "y": 1333.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 2824.5,
+          "y": 1353,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-060"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-60e54efa-fd0d-4505-9162-4026b891ac4e",
+      "title": "Rökstad",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "thanentum-saatgrund",
+      "x": 3424.0,
+      "y": 1320,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "60e54efa-fd0d-4505-9162-4026b891ac4e",
+        "url": "https://www.worldanvil.com/world/map/marker/60e54efa-fd0d-4505-9162-4026b891ac4e/edit",
+        "title": "Rökstad",
+        "coordinates": {
+          "x": 3430.0,
+          "y": 1321.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 3424.0,
+          "y": 1362,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-061"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-09ee868d-0c06-48bd-89f3-38be0e6ec662",
+      "title": "Eirikstalle",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "thanentum-saatgrund",
+      "x": 2627.0,
+      "y": 1301,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "09ee868d-0c06-48bd-89f3-38be0e6ec662",
+        "url": "https://www.worldanvil.com/world/map/marker/09ee868d-0c06-48bd-89f3-38be0e6ec662/edit",
+        "title": "Eirikstalle",
+        "coordinates": {
+          "x": 2626.0,
+          "y": 1295.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 2627.0,
+          "y": 1381,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-062"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-b43f4458-0933-4a60-ab75-33894d5772c2",
+      "title": "Baltborg - Ordensburg Balthors Söhne",
+      "category": "Burg",
+      "templateId": "gebaeude",
+      "icon": "/Karten/assets/icons/welt/kleine-burg.png",
+      "territoryId": "thanentum-rothain",
+      "x": 2465.5,
+      "y": 1255,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "b43f4458-0933-4a60-ab75-33894d5772c2",
+        "url": "https://www.worldanvil.com/world/map/marker/b43f4458-0933-4a60-ab75-33894d5772c2/edit",
+        "title": "Baltborg - Ordensburg Balthors Söhne",
+        "coordinates": {
+          "x": 2373.0,
+          "y": 1335.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 2465.5,
+          "y": 1427,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-063"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-de536a08-888b-46f3-88d5-2b864f706bab",
+      "title": "Hjerimsheim",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "thanentum-klippenschlag",
+      "x": 207.0,
+      "y": 1194,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "de536a08-888b-46f3-88d5-2b864f706bab",
+        "url": "https://www.worldanvil.com/world/map/marker/de536a08-888b-46f3-88d5-2b864f706bab/edit",
+        "title": "Hjerimsheim",
+        "coordinates": {
+          "x": 204.0,
+          "y": 1187.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 207.0,
+          "y": 1488,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-064"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-7c640fb4-182d-40e4-a8d2-c8f8fd63429d",
+      "title": "Robynsweid",
+      "category": "Flusssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/flusssiedlung.png",
+      "territoryId": "thanentum-rothain",
+      "x": 2038.5,
+      "y": 1243,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "7c640fb4-182d-40e4-a8d2-c8f8fd63429d",
+        "url": "https://www.worldanvil.com/world/map/marker/7c640fb4-182d-40e4-a8d2-c8f8fd63429d/edit",
+        "title": "Robynsweid",
+        "coordinates": {
+          "x": 2032.0,
+          "y": 1230.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 2038.5,
+          "y": 1439,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-065"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-d73e949e-795c-4f6b-b785-228f2adf3635",
+      "title": "Kaldrans Stein",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "thanentum-klippenschlag",
+      "x": 648.0,
+      "y": 1226,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "d73e949e-795c-4f6b-b785-228f2adf3635",
+        "url": "https://www.worldanvil.com/world/map/marker/d73e949e-795c-4f6b-b785-228f2adf3635/edit",
+        "title": "Kaldrans Stein",
+        "coordinates": {
+          "x": 657.0,
+          "y": 1234.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 648.0,
+          "y": 1456,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-066"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-8ce58f59-2a38-4264-a0ed-14287b75e494",
+      "title": "Nordbruch",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "thanentum-klippenschlag",
+      "x": 1412.5,
+      "y": 1214,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "8ce58f59-2a38-4264-a0ed-14287b75e494",
+        "url": "https://www.worldanvil.com/world/map/marker/8ce58f59-2a38-4264-a0ed-14287b75e494/edit",
+        "title": "Nordbruch",
+        "coordinates": {
+          "x": 1411.0,
+          "y": 1224.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 1412.5,
+          "y": 1468,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-067"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-63eadc0a-d014-4114-b3e0-ea401f77fec4",
+      "title": "Lifstad",
+      "category": "Flusssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/flusssiedlung.png",
+      "territoryId": "thanentum-rothain",
+      "x": 1810.0,
+      "y": 1139,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "63eadc0a-d014-4114-b3e0-ea401f77fec4",
+        "url": "https://www.worldanvil.com/world/map/marker/63eadc0a-d014-4114-b3e0-ea401f77fec4/edit",
+        "title": "Lifstad",
+        "coordinates": {
+          "x": 1819.0,
+          "y": 1135.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 1810.0,
+          "y": 1543,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-068"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-2bfc6912-7cb8-4353-b1f4-a7efb093f21d",
+      "title": "Hagaswald",
+      "category": "Waldsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/waldsiedlung.png",
+      "territoryId": "thanentum-klippenschlag",
+      "x": 1088.5,
+      "y": 1134,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "2bfc6912-7cb8-4353-b1f4-a7efb093f21d",
+        "url": "https://www.worldanvil.com/world/map/marker/2bfc6912-7cb8-4353-b1f4-a7efb093f21d/edit",
+        "title": "Hagaswald",
+        "coordinates": {
+          "x": 1102.0,
+          "y": 1170.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 1088.5,
+          "y": 1548,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-069"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-f3509039-5778-4454-b3c0-a8e6530962b4",
+      "title": "Grimhólm",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "thanentum-saatgrund",
+      "x": 3437.0,
+      "y": 1131,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "f3509039-5778-4454-b3c0-a8e6530962b4",
+        "url": "https://www.worldanvil.com/world/map/marker/f3509039-5778-4454-b3c0-a8e6530962b4/edit",
+        "title": "Grimhólm",
+        "coordinates": {
+          "x": 3439.0,
+          "y": 1143.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 3437.0,
+          "y": 1551,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-070"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-d4b04ba5-4e13-4737-a2f4-4ae068ec387b",
+      "title": "Grimnweiler",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "thanentum-saatgrund",
+      "x": 3055.5,
+      "y": 1129,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "d4b04ba5-4e13-4737-a2f4-4ae068ec387b",
+        "url": "https://www.worldanvil.com/world/map/marker/d4b04ba5-4e13-4737-a2f4-4ae068ec387b/edit",
+        "title": "Grimnweiler",
+        "coordinates": {
+          "x": 3061.0,
+          "y": 1130.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 3055.5,
+          "y": 1553,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-071"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-f0cba167-25c2-4cb6-a76a-26228b4b76ee",
+      "title": "Skogvann",
+      "category": "Klostersiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/klostersiedlung.png",
+      "territoryId": "thanentum-saatgrund",
+      "x": 3589.0,
+      "y": 1081,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "f0cba167-25c2-4cb6-a76a-26228b4b76ee",
+        "url": "https://www.worldanvil.com/world/map/marker/f0cba167-25c2-4cb6-a76a-26228b4b76ee/edit",
+        "title": "Skogvann",
+        "coordinates": {
+          "x": 3588.0,
+          "y": 1088.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 3589.0,
+          "y": 1601,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-072"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-44c076ba-de30-460a-b1a4-ac996d9cddef",
+      "title": "Llwynedd",
+      "category": "Flusssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/flusssiedlung.png",
+      "territoryId": "thanentum-saatgrund",
+      "x": 2739.5,
+      "y": 1079,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "44c076ba-de30-460a-b1a4-ac996d9cddef",
+        "url": "https://www.worldanvil.com/world/map/marker/44c076ba-de30-460a-b1a4-ac996d9cddef/edit",
+        "title": "Llwynedd",
+        "coordinates": {
+          "x": 2740.0,
+          "y": 1088.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 2739.5,
+          "y": 1603,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-073"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-9911cf80-60a8-401f-916f-ecc2500792d3",
+      "title": "Eldhjem - Hügelgrab",
+      "category": "Hügelgrab",
+      "templateId": "natur",
+      "icon": "/Karten/assets/icons/welt/h-gelgrab.png",
+      "territoryId": "thanentum-rothain",
+      "x": 2212.0,
+      "y": 1064,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "9911cf80-60a8-401f-916f-ecc2500792d3",
+        "url": "https://www.worldanvil.com/world/map/marker/9911cf80-60a8-401f-916f-ecc2500792d3/edit",
+        "title": "Eldhjem - Hügelgrab",
+        "coordinates": {
+          "x": 2221.0,
+          "y": 1105.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 2212.0,
+          "y": 1618,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-074"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-f4272bc5-ba53-49dc-b3ef-016e7ea2cba8",
+      "title": "Veldar",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "thanentum-klippenschlag",
+      "x": 884.5,
+      "y": 1042,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "f4272bc5-ba53-49dc-b3ef-016e7ea2cba8",
+        "url": "https://www.worldanvil.com/world/map/marker/f4272bc5-ba53-49dc-b3ef-016e7ea2cba8/edit",
+        "title": "Veldar",
+        "coordinates": {
+          "x": 886.0,
+          "y": 1049.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 884.5,
+          "y": 1640,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-075"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-d8f12085-50c8-4f9c-a9be-e4947086b981",
+      "title": "Grimvakt",
+      "category": "Turm",
+      "templateId": "gebaeude",
+      "icon": "/Karten/assets/icons/welt/turm.png",
+      "territoryId": "thanentum-klippenschlag",
+      "x": 456.5,
+      "y": 1017,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "d8f12085-50c8-4f9c-a9be-e4947086b981",
+        "url": "https://www.worldanvil.com/world/map/marker/d8f12085-50c8-4f9c-a9be-e4947086b981/edit",
+        "title": "Grimvakt",
+        "coordinates": {
+          "x": 458.0,
+          "y": 1013.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 456.5,
+          "y": 1665,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-076"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-ca58d993-6f80-4d1b-8378-650e334c45b1",
+      "title": "Forstborg",
+      "category": "Burgsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/burgsiedlung.png",
+      "territoryId": "thanentum-rothain",
+      "x": 2525.0,
+      "y": 1013,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "ca58d993-6f80-4d1b-8378-650e334c45b1",
+        "url": "https://www.worldanvil.com/world/map/marker/ca58d993-6f80-4d1b-8378-650e334c45b1/edit",
+        "title": "Forstborg",
+        "coordinates": {
+          "x": 2529.0,
+          "y": 1026.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 2525.0,
+          "y": 1669,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-077"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-665801df-2019-4e07-9cf5-949ea674219b",
+      "title": "Hjortrund",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "thanentum-saatgrund",
+      "x": 2938.0,
+      "y": 1009,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "665801df-2019-4e07-9cf5-949ea674219b",
+        "url": "https://www.worldanvil.com/world/map/marker/665801df-2019-4e07-9cf5-949ea674219b/edit",
+        "title": "Hjortrund",
+        "coordinates": {
+          "x": 2937.0,
+          "y": 1006.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 2938.0,
+          "y": 1673,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-078"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-43599e3a-c6a2-4055-80b2-6ea8a41803e5",
+      "title": "Ardwych - Antike Glaennath Burg",
+      "category": "Ruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/antike-ruine.png",
+      "territoryId": "thanentum-klippenschlag",
+      "x": 223.0,
+      "y": 966,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "43599e3a-c6a2-4055-80b2-6ea8a41803e5",
+        "url": "https://www.worldanvil.com/world/map/marker/43599e3a-c6a2-4055-80b2-6ea8a41803e5/edit",
+        "title": "Ardwych - Antike Glaennath Burg",
+        "coordinates": {
+          "x": 231.0,
+          "y": 969.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 223.0,
+          "y": 1716,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-079"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-3b0ae817-7b8b-43f9-b2ca-bae2fb565dbb",
+      "title": "Mørkholt",
+      "category": "Klostersiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/klostersiedlung.png",
+      "territoryId": "thanentum-rothain",
+      "x": 1427.5,
+      "y": 973,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "3b0ae817-7b8b-43f9-b2ca-bae2fb565dbb",
+        "url": "https://www.worldanvil.com/world/map/marker/3b0ae817-7b8b-43f9-b2ca-bae2fb565dbb/edit",
+        "title": "Mørkholt",
+        "coordinates": {
+          "x": 1424.0,
+          "y": 986.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 1427.5,
+          "y": 1709,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-080"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-3cd1fc42-8bd2-4008-b472-0d34261f7182",
+      "title": "Vannborgen",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "thanentum-rothain",
+      "x": 1600.5,
+      "y": 956,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "3cd1fc42-8bd2-4008-b472-0d34261f7182",
+        "url": "https://www.worldanvil.com/world/map/marker/3cd1fc42-8bd2-4008-b472-0d34261f7182/edit",
+        "title": "Vannborgen",
+        "coordinates": {
+          "x": 1606.0,
+          "y": 977.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 1600.5,
+          "y": 1726,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-081"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-e62d63ba-8562-49a1-9d51-082f574e6a3d",
+      "title": "Aesirsborg - Ordensburg Balthors Söhne",
+      "category": "Burg",
+      "templateId": "gebaeude",
+      "icon": "/Karten/assets/icons/welt/kleine-burg.png",
+      "territoryId": "thanentum-saatgrund",
+      "x": 3547.0,
+      "y": 907,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "e62d63ba-8562-49a1-9d51-082f574e6a3d",
+        "url": "https://www.worldanvil.com/world/map/marker/e62d63ba-8562-49a1-9d51-082f574e6a3d/edit",
+        "title": "Aesirsborg - Ordensburg Balthors Söhne",
+        "coordinates": {
+          "x": 3551.0,
+          "y": 914.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 3547.0,
+          "y": 1775,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-082"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-593a7562-77eb-4978-afd4-8136329d7096",
+      "title": "Varghain",
+      "category": "Waldsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/waldsiedlung.png",
+      "territoryId": "thanentum-klippenschlag",
+      "x": 942.0,
+      "y": 902,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "593a7562-77eb-4978-afd4-8136329d7096",
+        "url": "https://www.worldanvil.com/world/map/marker/593a7562-77eb-4978-afd4-8136329d7096/edit",
+        "title": "Varghain",
+        "coordinates": {
+          "x": 944.0,
+          "y": 918.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 942.0,
+          "y": 1780,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-083"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-40438e2c-e5ab-4bbe-ab94-ecc987e58277",
+      "title": "Fjellhain",
+      "category": "Waldsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/waldsiedlung.png",
+      "territoryId": "thanentum-klippenschlag",
+      "x": 576.5,
+      "y": 874,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "40438e2c-e5ab-4bbe-ab94-ecc987e58277",
+        "url": "https://www.worldanvil.com/world/map/marker/40438e2c-e5ab-4bbe-ab94-ecc987e58277/edit",
+        "title": "Fjellhain",
+        "coordinates": {
+          "x": 570.0,
+          "y": 918.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 576.5,
+          "y": 1808,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-084"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-c45badcc-fb2e-44e1-a056-d3df920ba946",
+      "title": "Tirgwyn",
+      "category": "Waldsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/waldsiedlung.png",
+      "territoryId": "thanentum-rothain",
+      "x": 2642.0,
+      "y": 871,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "c45badcc-fb2e-44e1-a056-d3df920ba946",
+        "url": "https://www.worldanvil.com/world/map/marker/c45badcc-fb2e-44e1-a056-d3df920ba946/edit",
+        "title": "Tirgwyn",
+        "coordinates": {
+          "x": 2644.0,
+          "y": 887.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 2642.0,
+          "y": 1811,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-085"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-7528eae0-e9e7-4952-bb3e-7675525a9bbe",
+      "title": "Svergestad",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "thanentum-saatgrund",
+      "x": 3112.5,
+      "y": 861,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "7528eae0-e9e7-4952-bb3e-7675525a9bbe",
+        "url": "https://www.worldanvil.com/world/map/marker/7528eae0-e9e7-4952-bb3e-7675525a9bbe/edit",
+        "title": "Svergestad",
+        "coordinates": {
+          "x": 3125.0,
+          "y": 848.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 3112.5,
+          "y": 1821,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-086"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-bc14d994-c419-495c-891b-49784e85ed8f",
+      "title": "Skaldenfurt",
+      "category": "Besondere Orte",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bardensiedlung.png",
+      "territoryId": "thanentum-rothain",
+      "x": 2900.0,
+      "y": 804,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "bc14d994-c419-495c-891b-49784e85ed8f",
+        "url": "https://www.worldanvil.com/world/map/marker/bc14d994-c419-495c-891b-49784e85ed8f/edit",
+        "title": "Skaldenfurt",
+        "coordinates": {
+          "x": 2898.0,
+          "y": 835.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 2900.0,
+          "y": 1878,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-087"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-d9d3b9fc-a9b9-43f8-97f7-25067aad9fb7",
+      "title": "Brinmel",
+      "category": "Waldsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/waldsiedlung.png",
+      "territoryId": "thanentum-rothain",
+      "x": 2222.0,
+      "y": 850,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "d9d3b9fc-a9b9-43f8-97f7-25067aad9fb7",
+        "url": "https://www.worldanvil.com/world/map/marker/d9d3b9fc-a9b9-43f8-97f7-25067aad9fb7/edit",
+        "title": "Brinmel",
+        "coordinates": {
+          "x": 2228.0,
+          "y": 868.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 2222.0,
+          "y": 1832,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-088"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-0a70e36b-2794-4717-840a-ccec010512ed",
+      "title": "Trollfurt",
+      "category": "Flusssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/flusssiedlung.png",
+      "territoryId": "thanentum-saatgrund",
+      "x": 3312.0,
+      "y": 815,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "0a70e36b-2794-4717-840a-ccec010512ed",
+        "url": "https://www.worldanvil.com/world/map/marker/0a70e36b-2794-4717-840a-ccec010512ed/edit",
+        "title": "Trollfurt",
+        "coordinates": {
+          "x": 3318.0,
+          "y": 844.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 3312.0,
+          "y": 1867,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-089"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-15181a18-d991-48d7-be03-254d4317bd39",
+      "title": "Brackhafen",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "thanentum-saatgrund",
+      "x": 3702.5,
+      "y": 826,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "15181a18-d991-48d7-be03-254d4317bd39",
+        "url": "https://www.worldanvil.com/world/map/marker/15181a18-d991-48d7-be03-254d4317bd39/edit",
+        "title": "Brackhafen",
+        "coordinates": {
+          "x": 3699.0,
+          "y": 833.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 3702.5,
+          "y": 1856,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-090"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-968e1613-d8b4-4ad4-96d1-88cf0242767c",
+      "title": "Tidsvakt",
+      "category": "Flusssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/flusssiedlung.png",
+      "territoryId": "thanentum-rothain",
+      "x": 1949.5,
+      "y": 818,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "968e1613-d8b4-4ad4-96d1-88cf0242767c",
+        "url": "https://www.worldanvil.com/world/map/marker/968e1613-d8b4-4ad4-96d1-88cf0242767c/edit",
+        "title": "Tidsvakt",
+        "coordinates": {
+          "x": 1924.0,
+          "y": 834.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 1949.5,
+          "y": 1864,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-091"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-8712c718-7168-4580-bcc1-a08da6e026f0",
+      "title": "Torbjörnulfhof",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "thanentum-klippenschlag",
+      "x": 1204.5,
+      "y": 805,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "8712c718-7168-4580-bcc1-a08da6e026f0",
+        "url": "https://www.worldanvil.com/world/map/marker/8712c718-7168-4580-bcc1-a08da6e026f0/edit",
+        "title": "Torbjörnulfhof",
+        "coordinates": {
+          "x": 1210.0,
+          "y": 835.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 1204.5,
+          "y": 1877,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-092"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-c7d0e0ea-55bb-4467-b9d6-d3d2f235593f",
+      "title": "Asmundstad",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "thanentum-klippenschlag",
+      "x": 831.0,
+      "y": 778,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "c7d0e0ea-55bb-4467-b9d6-d3d2f235593f",
+        "url": "https://www.worldanvil.com/world/map/marker/c7d0e0ea-55bb-4467-b9d6-d3d2f235593f/edit",
+        "title": "Asmundstad",
+        "coordinates": {
+          "x": 832.0,
+          "y": 805.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 831.0,
+          "y": 1904,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-093"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-c34f9f4e-bca1-48f6-a778-76234e23687b",
+      "title": "Klippvik",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "thanentum-klippenschlag",
+      "x": 331.0,
+      "y": 719,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "c34f9f4e-bca1-48f6-a778-76234e23687b",
+        "url": "https://www.worldanvil.com/world/map/marker/c34f9f4e-bca1-48f6-a778-76234e23687b/edit",
+        "title": "Klippvik",
+        "coordinates": {
+          "x": 327.0,
+          "y": 724.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 331.0,
+          "y": 1963,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-094"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-74c7ee95-1b6a-4487-a90c-86557f9ebfba",
+      "title": "Celynedd",
+      "category": "Waldsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/waldsiedlung.png",
+      "territoryId": "thanentum-rothain",
+      "x": 1708.0,
+      "y": 716,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "74c7ee95-1b6a-4487-a90c-86557f9ebfba",
+        "url": "https://www.worldanvil.com/world/map/marker/74c7ee95-1b6a-4487-a90c-86557f9ebfba/edit",
+        "title": "Celynedd",
+        "coordinates": {
+          "x": 1712.0,
+          "y": 735.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 1708.0,
+          "y": 1966,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-095"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-5827b59d-c1d5-4ede-9621-00d2a5066d82",
+      "title": "Abtrünnigen Söldnerlager",
+      "category": "Banditenlager",
+      "templateId": "monsterhort",
+      "icon": "/Karten/assets/icons/welt/banditenlager.png",
+      "territoryId": "thanentum-klippenschlag",
+      "x": 700.0,
+      "y": 688,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "5827b59d-c1d5-4ede-9621-00d2a5066d82",
+        "url": "https://www.worldanvil.com/world/map/marker/5827b59d-c1d5-4ede-9621-00d2a5066d82/edit",
+        "title": "Abtrünnigen Söldnerlager",
+        "coordinates": {
+          "x": 702.0,
+          "y": 699.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 700.0,
+          "y": 1994,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-096"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-731ceb34-34b3-4275-99fa-81ef5285007e",
+      "title": "Vespervik",
+      "category": "Klostersiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/klostersiedlung.png",
+      "territoryId": "thanentum-rothain",
+      "x": 2383.0,
+      "y": 690,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "731ceb34-34b3-4275-99fa-81ef5285007e",
+        "url": "https://www.worldanvil.com/world/map/marker/731ceb34-34b3-4275-99fa-81ef5285007e/edit",
+        "title": "Vespervik",
+        "coordinates": {
+          "x": 2392.0,
+          "y": 705.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 2383.0,
+          "y": 1992,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-097"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-ee020b0e-596a-47e1-8451-3a546d4b5d10",
+      "title": "Ehrenfels - Windreiter Burg",
+      "category": "Burg",
+      "templateId": "gebaeude",
+      "icon": "/Karten/assets/icons/welt/gro-e-burg.png",
+      "territoryId": "thanentum-rothain",
+      "x": 1462.0,
+      "y": 638,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "ee020b0e-596a-47e1-8451-3a546d4b5d10",
+        "url": "https://www.worldanvil.com/world/map/marker/ee020b0e-596a-47e1-8451-3a546d4b5d10/edit",
+        "title": "Ehrenfels - Windreiter Burg",
+        "coordinates": {
+          "x": 1469.0,
+          "y": 650.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 1462.0,
+          "y": 2044,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-098"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-8f8b73d0-44bb-4230-b327-c45f0d671b85",
+      "title": "Tirann",
+      "category": "Brauersiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/brauersiedlung.png",
+      "territoryId": "exklaven-schwarzdorn-ivarsheim",
+      "x": 2959.0,
+      "y": 610,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "8f8b73d0-44bb-4230-b327-c45f0d671b85",
+        "url": "https://www.worldanvil.com/world/map/marker/8f8b73d0-44bb-4230-b327-c45f0d671b85/edit",
+        "title": "Tirann",
+        "coordinates": {
+          "x": 2957.0,
+          "y": 637.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 2959.0,
+          "y": 2072,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-099"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-8ea9a6b1-8346-46c3-84f4-48052fc45fdc",
+      "title": "Caoimh",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "thanentum-saatgrund",
+      "x": 3172.0,
+      "y": 611,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "8ea9a6b1-8346-46c3-84f4-48052fc45fdc",
+        "url": "https://www.worldanvil.com/world/map/marker/8ea9a6b1-8346-46c3-84f4-48052fc45fdc/edit",
+        "title": "Caoimh",
+        "coordinates": {
+          "x": 3185.0,
+          "y": 605.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 3172.0,
+          "y": 2071,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-100"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-e54c7961-9c84-4de2-b863-05e95b73bab0",
+      "title": "Dúnor",
+      "category": "Klostersiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/klostersiedlung.png",
+      "territoryId": "thanentum-saatgrund",
+      "x": 3423.5,
+      "y": 581,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "e54c7961-9c84-4de2-b863-05e95b73bab0",
+        "url": "https://www.worldanvil.com/world/map/marker/e54c7961-9c84-4de2-b863-05e95b73bab0/edit",
+        "title": "Dúnor",
+        "coordinates": {
+          "x": 3422.0,
+          "y": 571.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 3423.5,
+          "y": 2101,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-101"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-0b52fec0-fa31-4cae-90b6-04feeba9b2b4",
+      "title": "Jägersruh",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "thanentum-rothain",
+      "x": 2141.5,
+      "y": 511,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "0b52fec0-fa31-4cae-90b6-04feeba9b2b4",
+        "url": "https://www.worldanvil.com/world/map/marker/0b52fec0-fa31-4cae-90b6-04feeba9b2b4/edit",
+        "title": "Jägersruh",
+        "coordinates": {
+          "x": 2137.0,
+          "y": 569.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 2141.5,
+          "y": 2171,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-102"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-e222e667-3e6c-4dcc-81eb-b15bda197eca",
+      "title": "Rogersland",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "thanentum-rothain",
+      "x": 1229.5,
+      "y": 577,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "e222e667-3e6c-4dcc-81eb-b15bda197eca",
+        "url": "https://www.worldanvil.com/world/map/marker/e222e667-3e6c-4dcc-81eb-b15bda197eca/edit",
+        "title": "Rogersland",
+        "coordinates": {
+          "x": 1230.0,
+          "y": 571.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 1229.5,
+          "y": 2105,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-103"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-efc23865-a576-4533-8f04-dedff3ab2a4a",
+      "title": "Lindstad",
+      "category": "Klostersiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/klostersiedlung.png",
+      "territoryId": "thanentum-klippenschlag",
+      "x": 705.5,
+      "y": 552,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "efc23865-a576-4533-8f04-dedff3ab2a4a",
+        "url": "https://www.worldanvil.com/world/map/marker/efc23865-a576-4533-8f04-dedff3ab2a4a/edit",
+        "title": "Lindstad",
+        "coordinates": {
+          "x": 707.0,
+          "y": 555.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 705.5,
+          "y": 2130,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-104"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-8af575bc-4d88-4df6-982c-56552775e77c",
+      "title": "Bagseggsheim",
+      "category": "Burgsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/burgsiedlung.png",
+      "territoryId": "thanentum-klippenschlag",
+      "x": 276.0,
+      "y": 499,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "8af575bc-4d88-4df6-982c-56552775e77c",
+        "url": "https://www.worldanvil.com/world/map/marker/8af575bc-4d88-4df6-982c-56552775e77c/edit",
+        "title": "Bagseggsheim",
+        "coordinates": {
+          "x": 287.0,
+          "y": 502.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 276.0,
+          "y": 2183,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-105"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-c178d490-ecc4-4cce-9552-ab941e1ebaf9",
+      "title": "Ciárans Turm",
+      "category": "Turm",
+      "templateId": "gebaeude",
+      "icon": "/Karten/assets/icons/welt/magierturm.png",
+      "territoryId": "thanentum-saatgrund",
+      "x": 2835.5,
+      "y": 491,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "c178d490-ecc4-4cce-9552-ab941e1ebaf9",
+        "url": "https://www.worldanvil.com/world/map/marker/c178d490-ecc4-4cce-9552-ab941e1ebaf9/edit",
+        "title": "Ciárans Turm",
+        "coordinates": {
+          "x": 2834.0,
+          "y": 503.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 2835.5,
+          "y": 2191,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-106"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-948878a4-cb85-43d6-ab1b-58de3736bba3",
+      "title": "Raith",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "thanentum-saatgrund",
+      "x": 3597.5,
+      "y": 480,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "948878a4-cb85-43d6-ab1b-58de3736bba3",
+        "url": "https://www.worldanvil.com/world/map/marker/948878a4-cb85-43d6-ab1b-58de3736bba3/edit",
+        "title": "Raith",
+        "coordinates": {
+          "x": 3590.0,
+          "y": 475.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 3597.5,
+          "y": 2202,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-107"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-2f80e2b5-4276-4d90-ab58-5706eb38319a",
+      "title": "Hjorthorn",
+      "category": "Brauersiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/brauersiedlung.png",
+      "territoryId": "exklaven-schwarzdorn-ivarsheim",
+      "x": 960.5,
+      "y": 457,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "2f80e2b5-4276-4d90-ab58-5706eb38319a",
+        "url": "https://www.worldanvil.com/world/map/marker/2f80e2b5-4276-4d90-ab58-5706eb38319a/edit",
+        "title": "Hjorthorn",
+        "coordinates": {
+          "x": 960.0,
+          "y": 460.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 960.5,
+          "y": 2225,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-108"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-d072fe4d-bb7a-41cb-898d-343f3f291cb3",
+      "title": "Gwernwyn",
+      "category": "Waldsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/waldsiedlung.png",
+      "territoryId": "thanentum-rothain",
+      "x": 1840.0,
+      "y": 466,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "d072fe4d-bb7a-41cb-898d-343f3f291cb3",
+        "url": "https://www.worldanvil.com/world/map/marker/d072fe4d-bb7a-41cb-898d-343f3f291cb3/edit",
+        "title": "Gwernwyn",
+        "coordinates": {
+          "x": 1843.0,
+          "y": 490.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 1840.0,
+          "y": 2216,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-109"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-1b681afe-7148-4e4d-b981-08d459c50331",
+      "title": "Rykirstad",
+      "category": "Flusssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/flusssiedlung.png",
+      "territoryId": "thanentum-rothain",
+      "x": 2573.5,
+      "y": 454,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "1b681afe-7148-4e4d-b981-08d459c50331",
+        "url": "https://www.worldanvil.com/world/map/marker/1b681afe-7148-4e4d-b981-08d459c50331/edit",
+        "title": "Rykirstad",
+        "coordinates": {
+          "x": 2578.0,
+          "y": 466.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 2573.5,
+          "y": 2228,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-110"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-a5686b4d-c23b-47cb-9a0a-83b6d5add4d4",
+      "title": "Branach",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "thanentum-saatgrund",
+      "x": 3152.5,
+      "y": 436,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "a5686b4d-c23b-47cb-9a0a-83b6d5add4d4",
+        "url": "https://www.worldanvil.com/world/map/marker/a5686b4d-c23b-47cb-9a0a-83b6d5add4d4/edit",
+        "title": "Branach",
+        "coordinates": {
+          "x": 3148.0,
+          "y": 451.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 3152.5,
+          "y": 2246,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-111"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-8029dc9b-f09b-47cf-a971-fd9b81debdbc",
+      "title": "Vargheim",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "thanentum-rothain",
+      "x": 1329.5,
+      "y": 376,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "8029dc9b-f09b-47cf-a971-fd9b81debdbc",
+        "url": "https://www.worldanvil.com/world/map/marker/8029dc9b-f09b-47cf-a971-fd9b81debdbc/edit",
+        "title": "Vargheim",
+        "coordinates": {
+          "x": 1333.0,
+          "y": 379.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 1329.5,
+          "y": 2306,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-112"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-d349f7bc-9a58-4c0c-b30c-18e4d62438e5",
+      "title": "Alvheim",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "thanentum-rothain",
+      "x": 575.5,
+      "y": 365,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "d349f7bc-9a58-4c0c-b30c-18e4d62438e5",
+        "url": "https://www.worldanvil.com/world/map/marker/d349f7bc-9a58-4c0c-b30c-18e4d62438e5/edit",
+        "title": "Alvheim",
+        "coordinates": {
+          "x": 578.0,
+          "y": 366.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 575.5,
+          "y": 2317,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-113"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-7be8fd44-fe82-48c7-afb5-71f080eca78b",
+      "title": "Fiarra",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "thanentum-saatgrund",
+      "x": 3014.5,
+      "y": 341,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "7be8fd44-fe82-48c7-afb5-71f080eca78b",
+        "url": "https://www.worldanvil.com/world/map/marker/7be8fd44-fe82-48c7-afb5-71f080eca78b/edit",
+        "title": "Fiarra",
+        "coordinates": {
+          "x": 3021.0,
+          "y": 336.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 3014.5,
+          "y": 2341,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-114"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-c57e8a02-7307-44b3-a1d8-e4a89636cfb4",
+      "title": "Tryggvarstedt",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "thanentum-saatgrund",
+      "x": 2736.0,
+      "y": 338,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "c57e8a02-7307-44b3-a1d8-e4a89636cfb4",
+        "url": "https://www.worldanvil.com/world/map/marker/c57e8a02-7307-44b3-a1d8-e4a89636cfb4/edit",
+        "title": "Tryggvarstedt",
+        "coordinates": {
+          "x": 2738.0,
+          "y": 325.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 2736.0,
+          "y": 2344,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-115"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-e9754e26-e7bc-4f6a-b8af-f8d2bc2fcc77",
+      "title": "Kornweiler",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "thanentum-saatgrund",
+      "x": 3333.5,
+      "y": 255,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "e9754e26-e7bc-4f6a-b8af-f8d2bc2fcc77",
+        "url": "https://www.worldanvil.com/world/map/marker/e9754e26-e7bc-4f6a-b8af-f8d2bc2fcc77/edit",
+        "title": "Kornweiler",
+        "coordinates": {
+          "x": 3330.0,
+          "y": 300.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 3333.5,
+          "y": 2427,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-116"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-c016c2d9-419c-4700-a865-9352ad34d5f6",
+      "title": "Skärfjord",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "thanentum-rothain",
+      "x": 1620.5,
+      "y": 299,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "c016c2d9-419c-4700-a865-9352ad34d5f6",
+        "url": "https://www.worldanvil.com/world/map/marker/c016c2d9-419c-4700-a865-9352ad34d5f6/edit",
+        "title": "Skärfjord",
+        "coordinates": {
+          "x": 1633.0,
+          "y": 309.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 1620.5,
+          "y": 2383,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-117"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-572a0bdd-9360-4808-9b3d-da2bee5fe829",
+      "title": "Laxhavn",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "thanentum-rothain",
+      "x": 2082.5,
+      "y": 254,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "572a0bdd-9360-4808-9b3d-da2bee5fe829",
+        "url": "https://www.worldanvil.com/world/map/marker/572a0bdd-9360-4808-9b3d-da2bee5fe829/edit",
+        "title": "Laxhavn",
+        "coordinates": {
+          "x": 2083.0,
+          "y": 251.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 2082.5,
+          "y": 2428,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-118"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-2fc25ecf-3888-419c-bb1f-0e3da4d16ad1",
+      "title": "Vanrborg - Ordensburg Balthors Söhne",
+      "category": "Burg",
+      "templateId": "gebaeude",
+      "icon": "/Karten/assets/icons/welt/kleine-burg.png",
+      "territoryId": "thanentum-rothain",
+      "x": 1000.5,
+      "y": 223,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "2fc25ecf-3888-419c-bb1f-0e3da4d16ad1",
+        "url": "https://www.worldanvil.com/world/map/marker/2fc25ecf-3888-419c-bb1f-0e3da4d16ad1/edit",
+        "title": "Vanrborg - Ordensburg Balthors Söhne",
+        "coordinates": {
+          "x": 1019.0,
+          "y": 244.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 1000.5,
+          "y": 2459,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-119"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-1c2ea618-4334-43e6-b9fd-21c295078fd9",
+      "title": "Alsvik",
+      "category": "Burg",
+      "templateId": "gebaeude",
+      "icon": "/Karten/assets/icons/welt/kleine-burg.png",
+      "territoryId": "thanentum-rothain",
+      "x": 757.0,
+      "y": 201,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "1c2ea618-4334-43e6-b9fd-21c295078fd9",
+        "url": "https://www.worldanvil.com/world/map/marker/1c2ea618-4334-43e6-b9fd-21c295078fd9/edit",
+        "title": "Alsvik",
+        "coordinates": {
+          "x": 764.0,
+          "y": 295.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 757.0,
+          "y": 2481,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-120"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-0c76b2ba-c743-499d-ae67-3c8e61200720",
+      "title": "Broch an Sárd",
+      "category": "Burgsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/burgsiedlung.png",
+      "territoryId": "thanentum-saatgrund",
+      "x": 2752.5,
+      "y": 192,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "0c76b2ba-c743-499d-ae67-3c8e61200720",
+        "url": "https://www.worldanvil.com/world/map/marker/0c76b2ba-c743-499d-ae67-3c8e61200720/edit",
+        "title": "Broch an Sárd",
+        "coordinates": {
+          "x": 2749.0,
+          "y": 206.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 2752.5,
+          "y": 2490,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-121"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-9048711b-2a11-47c5-b514-0cf91ea64246",
+      "title": "Hafnvik",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "thanentum-rothain",
+      "x": 1190.5,
+      "y": 183,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "9048711b-2a11-47c5-b514-0cf91ea64246",
+        "url": "https://www.worldanvil.com/world/map/marker/9048711b-2a11-47c5-b514-0cf91ea64246/edit",
+        "title": "Hafnvik",
+        "coordinates": {
+          "x": 1195.0,
+          "y": 162.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 1190.5,
+          "y": 2499,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-122"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-ba0388bb-6806-4699-be41-1be2407ed404",
+      "title": "Binn",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "thanentum-saatgrund",
+      "x": 3002.0,
+      "y": 162,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "ba0388bb-6806-4699-be41-1be2407ed404",
+        "url": "https://www.worldanvil.com/world/map/marker/ba0388bb-6806-4699-be41-1be2407ed404/edit",
+        "title": "Binn",
+        "coordinates": {
+          "x": 3008.0,
+          "y": 159.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 3002.0,
+          "y": 2520,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-123"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-316de68b-913e-48b3-bf06-af8c309fb551",
+      "title": "Beal",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "thanentum-saatgrund",
+      "x": 2542.5,
+      "y": 139,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "316de68b-913e-48b3-bf06-af8c309fb551",
+        "url": "https://www.worldanvil.com/world/map/marker/316de68b-913e-48b3-bf06-af8c309fb551/edit",
+        "title": "Beal",
+        "coordinates": {
+          "x": 2532.0,
+          "y": 148.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 2542.5,
+          "y": 2543,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-124"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-c3784ed3-f2e6-43fe-9b1a-4dcb4fd66bf1",
+      "title": "Fiskebolg",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "thanentum-rothain",
+      "x": 551.5,
+      "y": 113,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "a23f5373-807c-4868-8563-43181a86be46",
+        "markerId": "c3784ed3-f2e6-43fe-9b1a-4dcb4fd66bf1",
+        "url": "https://www.worldanvil.com/world/map/marker/c3784ed3-f2e6-43fe-9b1a-4dcb4fd66bf1/edit",
+        "title": "Fiskebolg",
+        "coordinates": {
+          "x": 560.0,
+          "y": 123.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2682
+        ],
+        "targetPosition": {
+          "x": 551.5,
+          "y": 2569,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-125"
+        }
+      }
+    },
+    {
+      "id": "ivarsheim-caer-dathruinn",
+      "title": "Caer Dathruinn",
+      "category": "Ruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/antike-ruine.png",
+      "territoryId": "thanentum-saatgrund",
+      "x": 3043,
+      "y": 1337,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "aleria",
+        "mapPositionId": "ivarsheim-position-057-ruin",
+        "basis": "Nutzerfreigabe vom 21.10.2026: neue Namen und geographisch passende Texte; drei gelieferte Karten.",
+        "targetPosition": {
+          "x": 3043,
+          "y": 1345,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "ivarsheim-position-057-ruin"
+        }
+      }
+    }
+  ],
+  "unpositionedPlaces": []
+}

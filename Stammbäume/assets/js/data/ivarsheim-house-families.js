@@ -22,7 +22,7 @@ export const IVARSHEIM_ACTIVE_HOUSE_DEFINITIONS = Object.freeze([
   Object.freeze({ slug: 'skogg', title: 'Clan Skogg', rank: 'Thane', territory: 'Kornweiler' }),
   Object.freeze({ slug: 'silberzunge', title: 'Clan Silberzunge', rank: 'Hesire', territory: 'Ivarsfels' }),
   Object.freeze({ slug: 'trachwyll', title: 'Haus Trachwyll', rank: 'Hesire', territory: 'Ivarsfels' }),
-  Object.freeze({ slug: 'grendel', title: 'Clan Grendel', rank: 'Hesire', territory: 'Hjerimsheim' }),
+  Object.freeze({ slug: 'grendel', title: 'Clan Grendel', rank: 'Thane', territory: 'Hjerimsheim' }),
   Object.freeze({
     slug: 'hyrmgardr',
     title: 'Clan Hyrmgarthr',

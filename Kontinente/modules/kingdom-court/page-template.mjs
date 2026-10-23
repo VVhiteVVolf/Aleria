@@ -12,6 +12,7 @@ export function paragraphs(values) {
 export function createCourtRenderer(context) {
   return function courtPage({ title, subtitle, description, page, icon, navigation, body, script = '', extraHead = '', iconSrc = '' }) {
     const { kingdom, assets, home, tabs, familyLink, buildSource, bodyClass = 'kingdom-court' } = context;
+    const realmLabel = context.realmLabel || `Königreich ${kingdom}`;
     return `<!doctype html>
 <!-- Erzeugt mit ${buildSource}. -->
 <html lang="de">
@@ -19,7 +20,7 @@ export function createCourtRenderer(context) {
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="${escapeHtml(description)}">
-  <title>${escapeHtml(title)} · Königreich ${escapeHtml(kingdom)}</title>
+  <title>${escapeHtml(title)} · ${escapeHtml(realmLabel)}</title>
   <link rel="stylesheet" href="${assets}/court.css?v=${context.styleVersion}">
   ${script ? `<script type="module" src="${assets}/${script}?v=${context.scriptVersion}"></script>` : ''}${extraHead ? '\n'+extraHead : ''}
 </head>
@@ -27,11 +28,11 @@ export function createCourtRenderer(context) {
   <a class="court-skip" href="#inhalt">Zum Inhalt</a>
   <div class="court-book" id="seitenanfang">
     <nav class="court-breadcrumb" aria-label="Brotkrumennavigation">
-      <a href="${home}">← Königreich ${escapeHtml(kingdom)}</a><span aria-hidden="true">/</span><span>${escapeHtml(title)}</span>
+      <a href="${home}">← ${escapeHtml(realmLabel)}</a><span aria-hidden="true">/</span><span>${escapeHtml(title)}</span>
     </nav>
     <header class="court-hero">
       <img class="court-hero-icon" src="${iconSrc || `${assets}/assets/${icon}.png`}" width="176" height="176" alt="">
-      <div><p class="court-eyebrow">Königreich ${escapeHtml(kingdom)} · ${escapeHtml(subtitle)}</p><h1>${escapeHtml(title)}</h1><p class="court-lead">${escapeHtml(description)}</p></div>
+      <div><p class="court-eyebrow">${escapeHtml(realmLabel)} · ${escapeHtml(subtitle)}</p><h1>${escapeHtml(title)}</h1><p class="court-lead">${escapeHtml(description)}</p></div>
     </header>
     <nav class="court-tabs" aria-label="${escapeHtml(kingdom)}-Unterseiten">
       ${tabs.map(tab=>`<a href="${escapeHtml(tab.href)}"${page === tab.id ? ' aria-current="page"' : ''}>${escapeHtml(tab.label)}</a>`).join('\n      ')}

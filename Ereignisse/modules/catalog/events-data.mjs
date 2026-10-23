@@ -1,3 +1,5 @@
+import { WELLENRUH } from '../battles/wellenruh-data.mjs';
+
 // Inhalt der alten Ereignisübersicht. Unbekannte Daten bleiben ausdrücklich offen.
 // articleHref ist relativ zu Ereignisse/index.html; nur vorhandene Seiten verlinken.
 // sourceHref bewahrt bestehende Altseiten, bis ein lokales articleHref sie ablöst.
@@ -40,6 +42,13 @@ export const EVENTS = Object.freeze([
     icon: 'raubzug', sourceHref: 'https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=2467',
     startYear: 1733, endYear: 1733, duration: 'Ein Tag', note: 'Beinahe Auslöschung des Hauses Iomrach', articleHref: null,
     summary: 'Im Jahr 1733 wagte eine größere Gruppe der Schwarzblut Marodeure einen Raubzug an der Südküste Leitheachs. Die Piraten griffen im Schutz der Nacht die Burg Broch an Clais an und töteten oder verschleppten den gesamten Clan der Iomrach. Ohne den Schutz, den Broch an Clais an der Flussmündung bot, konnten die Schiffe der Piraten bis nach Dun Laog hinaufsegeln, um es direkt anzugreifen. Bei diesem Streifzug verschleppten, raubten und töteten die Piraten viele Alben, bevor Verstärkung aus Westen und Osten eintreffen konnte. Letztlich wurden die Piraten zwar zurückgeschlagen, jedoch waren zu jenem Zeitpunkt die meisten der Räuber bereits entkommen und mit ihnen auch viele der Alben.'
+  },
+  {
+    id: WELLENRUH.id, chapter: 'schlachten', title: WELLENRUH.title, type: 'Seeschlacht',
+    icon: 'seeschlacht', startYear: WELLENRUH.date.year, endYear: WELLENRUH.date.year,
+    startDate: WELLENRUH.date, duration: 'Ein Tag', note: 'Sieg der Grünen · Experimentelles Schlachtdossier',
+    summary: WELLENRUH.summary, articleHref: WELLENRUH.articleHref, experimental: true,
+    location: WELLENRUH.location, calendarType: 'battle'
   },
   {
     id: 'seeschlacht-rhonwens-traenen', chapter: 'schlachten', title: 'Seeschlacht um Rhonwens Tränen', type: 'Schlacht',

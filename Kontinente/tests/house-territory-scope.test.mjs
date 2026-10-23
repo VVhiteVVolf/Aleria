@@ -28,7 +28,7 @@ const ids = cards => Array.from(cards, card => card.id).filter(Boolean).sort();
 
 test('Grafschaft zeigt alle großen Häuser, ausschließlich örtliche kleinere Häuser und die drei historischen Ausnahmen', () => {
   assert.deepEqual(ids(countySections[0].cards), ['arwydd','draig','gafyr','gwefrydd','gwyvern','saethwyr','wyrm'].map(id => 'haus-' + id).sort());
-  assert.deepEqual(Array.from(countySections, section => section.cards.length), [7,14,13,3]);
+  assert.deepEqual(ids([...countySections[1].cards,...countySections[2].cards]), FAMILY_REGISTRY.filter(record=>record.folderPath.includes('Celtigerns Wacht')&&record.folderPath.includes('Llamreis Ankunft')&&!countySections[0].cards.some(card=>card.id===record.id)).map(record=>record.id).sort());
   for (const card of [...countySections[1].cards, ...countySections[2].cards]) {
     assert.ok(FAMILY_REGISTRY.find(record => record.id === card.id).folderPath.includes('Llamreis Ankunft'), card.id);
   }
@@ -83,7 +83,7 @@ test('Ritterfürsten zeigen ihre belegten Vasallen direkt auf der eigenen Herrsc
   }
 });
 
-test('Alle 76 belegten Grafschaftsfamilien bleiben über örtliche Wappenkarten erreichbar, auch ohne Hausseitenregister', async () => {
+test('Alle registrierten Grafschaftsfamilien bleiben über örtliche Wappenkarten erreichbar, auch ohne Hausseitenregister', async () => {
   const cards = [...local, ...Object.values(territories).flatMap(sections => sections.flatMap(section => section.cards))];
   for (const record of FAMILY_REGISTRY.filter(record => record.folderPath.includes('Celtigerns Wacht'))) {
     const found = cards.filter(card => card.id === record.id);

@@ -37859,7 +37859,7 @@ test('gliedert Ivarsheims Thane, Hesire und Trachwyll-Herkunft ohne Doppelakten 
     ['skogg', { rankId: 'thane', path: ['Aldrimar', 'Ivarsheim', 'Saatgrund', 'Kornweiler'], liege: 'house-wargh' }],
     ['silberzunge', { rankId: 'hesire', path: ['Aldrimar', 'Ivarsheim', 'Ivarsklamm', 'Ivarsfels'], liege: 'house-wargh' }],
     ['trachwyll', { rankId: 'hesire', path: ['Aldrimar', 'Ivarsheim', 'Ivarsklamm', 'Ivarsfels'], liege: 'house-wargh' }],
-    ['grendel', { rankId: 'hesire', path: ['Aldrimar', 'Ivarsheim', 'Klippenschlag', 'Hjerimsheim'], liege: 'house-wargh' }],
+    ['grendel', { rankId: 'thane', path: ['Aldrimar', 'Ivarsheim', 'Klippenschlag', 'Hjerimsheim'], liege: 'house-wargh' }],
     ['hyrmgardr', { rankId: 'hesire', path: ['Aldrimar', 'Ivarsheim', 'Saatgrund', 'Winterwacht', 'Winterfeste'], liege: 'house-skogg' }]
   ]);
 
@@ -42169,7 +42169,7 @@ test('bildet Clan Grendel vollständig von Leif bis zur Generation von 1740 ab',
   assert.equal(family.parentages.length, 35);
   assert.equal(family.cadetBranches.length, 12);
   assert.equal(family.timeJumps.length, 1);
-  assert.equal(family.extensions.sourceRevision, 3);
+  assert.equal(family.extensions.sourceRevision, 4);
   assert.equal(family.extensions.blankFamily, false);
   assert.equal(family.lineage.founderPartnershipId, 'marriage-leif-ljotunn-grendel');
   assert.equal(family.view.focusPersonId, 'leif-grendel');
@@ -42314,8 +42314,8 @@ test('ersetzt die vorbereitete Grendel-Leerakte kontrolliert durch den vollstän
   };
 
   const upgraded = resolveRegisteredFamilyUpgrade(HOUSE_GRENDEL_FAMILY, stale);
-  assert.equal(upgraded.extensions.sourceRevision, 3);
-  assert.deepEqual(upgraded.extensions.registryUpgrade, { fromRevision: 1, toRevision: 3 });
+  assert.equal(upgraded.extensions.sourceRevision, 4);
+  assert.deepEqual(upgraded.extensions.registryUpgrade, { fromRevision: 1, toRevision: 4 });
   assert.equal(upgraded.extensions.blankFamily, false);
   assert.equal(upgraded.persons.length, 62);
   assert.equal(upgraded.partnerships.length, 26);

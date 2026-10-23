@@ -1,0 +1,3956 @@
+{
+  "pages": [
+    {
+      "id": "fuerstentum-aislearneach",
+      "title": "Fürstentum Aislearneach",
+      "shortTitle": "Aislearneach",
+      "type": "Fürstentum",
+      "kicker": "Fürstentum · Clan Ui’Morna",
+      "parentHref": "/Kontinente/Alben/Der Schild von Ailith.html",
+      "parentLabel": "Der Schild von Ailith",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Estryll",
+          "slug": "estryll"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Aislearneach",
+          "slug": "fuerstentum-aislearneach"
+        }
+      ],
+      "crestSrc": "/Stammbäume/assets/images/houses/Aislearneach/clan-ui-morna.png",
+      "crestAlt": "Banner Fürstentum Aislearneach",
+      "copy": {},
+      "cultureSections": [
+        {
+          "title": "Der Clan",
+          "paragraphs": [
+            "Clans in der Kultur der Alben sind familiäre Einheiten, die sich auf eine gemeinsame Abstammung oder eine spezifische Herkunft beziehen. Sie spielen eine zentrale Rolle in der albischen Gesellschaft und organisieren sich oft um einen gemeinsamen Präfix, der ihre Abstammung oder ihre historische Bedeutung kennzeichnet. Diese Präfixe können auf direkte Abstammungslinien, bestimmte Orte, Berufe oder mythologische Figuren verweisen. Clans dienen als soziale Einheiten und tragen oft zur politischen, wirtschaftlichen und kulturellen Struktur der albischen Gemeinschaft bei."
+          ]
+        },
+        {
+          "title": "Die Sept",
+          "paragraphs": [
+            "Eine Sept bezeichnet eine gewöhnliche albische bäuerliche oder bürgerliche Familie, die nicht dem Adel angehört. Diese Familien können sich über alle sozialen Schichten erstrecken, von der Unterschicht bis zur Oberschicht. Im Allgemeinen verwenden Septs keine Präfixe, es sei denn, sie steigen in den Adelsstand auf. In diesem Fall wählen sie ein passendes Präfix für ihren bestehenden Namen. Zum Beispiel würde ein neu ernannter Laird das Präfix \"Na\" annehmen, was \"Neuer Clan\" bedeutet. Ein aufstrebender Clan kann jedoch jedes passende Präfix beanspruchen, das seinen neuen Status angemessen widerspiegelt.",
+            "Der Präfix \"Fáill\" kennzeichnet Clans, die in Ungnade gefallen sind, sei es durch eigene Taten oder durch den schlechten Ruf, der ihnen anhaftet. Dieser Präfix signalisiert eine Geschichte des Misserfolgs oder Verfalls, und die Clans, die ihn tragen, werden oft misstrauisch betrachtet und haben einen schweren Stand in der Gesellschaft.",
+            "Ein Fáill-Clan kämpft ständig gegen das Stigma ihrer Vergangenheit an und versucht, ihre Ehre wiederherzustellen. Ihre Mitglieder sind oft gezwungen, doppelt so hart zu arbeiten, um Respekt und Anerkennung zu erlangen, und stehen unter ständiger Beobachtung und Bewertung durch ihre Mitmenschen.",
+            "Die Geschichte eines Fáill-Clans ist oft geprägt von Tragödien und Herausforderungen, und ihre Reise zur Wiederherstellung ihrer Ehre ist lang und beschwerlich. Dennoch sind diese Clans oft auch Geschichten von Resilienz und unbeugsamem Willen, da sie sich trotz aller Widrigkeiten bemühen, ihre Position in der Gesellschaft zu verbessern und ihren Namen zu rehabilitieren."
+          ],
+          "links": [
+            {
+              "label": "Gemeinsame Clan-Präfixe im Schild von Ailith",
+              "href": "/Kontinente/Alben/Der Schild von Ailith.html#kultur"
+            }
+          ]
+        }
+      ],
+      "infobox": [
+        {
+          "title": "Allgemein",
+          "rows": [
+            {
+              "label": "Name",
+              "value": "Fürstentum Aislearneach"
+            },
+            {
+              "label": "Typ",
+              "value": "Fürstentum"
+            },
+            {
+              "label": "Sitz",
+              "value": "Gaelan"
+            },
+            {
+              "label": "Regierender Clan / Amt",
+              "value": "Clan Ui’Morna"
+            },
+            {
+              "label": "Oberhaupt",
+              "value": "Goll Morna"
+            }
+          ]
+        },
+        {
+          "title": "Geographie",
+          "rows": [
+            {
+              "label": "Region",
+              "value": "Südliches Estryll"
+            }
+          ]
+        },
+        {
+          "title": "Kultur",
+          "rows": [
+            {
+              "label": "Religion",
+              "value": "Die Alerische Kirche"
+            }
+          ]
+        },
+        {
+          "title": "Handel",
+          "rows": []
+        }
+      ],
+      "families": [
+        {
+          "title": "Regierender Clan",
+          "houses": [
+            {
+              "name": "Clan Ui’Morna",
+              "familyId": "haus-morna",
+              "imageSrc": "/Stammbäume/assets/images/houses/Aislearneach/clan-ui-morna.png",
+              "seat": "Gaelan",
+              "liege": "",
+              "rank": "Fürstenclan",
+              "featured": true,
+              "featuredLabel": "Fürstenclan"
+            }
+          ]
+        },
+        {
+          "title": "Clans von Tir na Geach",
+          "houses": [
+            {
+              "name": "Clan Ua’Coronach",
+              "familyId": "haus-coronach",
+              "imageSrc": "/Stammbäume/assets/images/houses/Aislearneach/clan-ua-coronach.png",
+              "seat": "Gaelan",
+              "liege": "Clan Ui’Morna",
+              "rank": "Laird-Clan",
+              "featured": false
+            },
+            {
+              "name": "Clan Na’Morgacht",
+              "familyId": "haus-morgacht",
+              "imageSrc": "/Stammbäume/assets/images/houses/Aislearneach/clan-na-morgacht.png",
+              "seat": "Broch an Geata",
+              "liege": "Clan Ui’Morna",
+              "rank": "Laird-Clan",
+              "featured": false
+            },
+            {
+              "name": "Clan An’Rioga",
+              "familyId": "haus-rioga",
+              "imageSrc": "/Stammbäume/assets/images/houses/Aislearneach/clan-an-rioga.png",
+              "seat": "Broch an Duhbach",
+              "liege": "Clan Ui’Morna",
+              "rank": "Laird-Clan",
+              "featured": false
+            }
+          ]
+        },
+        {
+          "title": "Clans von Tir na Tirth",
+          "houses": [
+            {
+              "name": "Clan Mac’Durthacht",
+              "familyId": "haus-durthacht",
+              "imageSrc": "/Stammbäume/assets/images/houses/Aislearneach/clan-mac-durthacht.png",
+              "seat": "Lorai",
+              "liege": "Clan Ui’Morna",
+              "rank": "Mor-Tiarna-Clan",
+              "featured": true,
+              "featuredLabel": "Regierender Clan"
+            },
+            {
+              "name": "Clan Ua’Fiáintorc",
+              "familyId": "haus-fiantorc",
+              "imageSrc": "/Stammbäume/assets/images/houses/Aislearneach/clan-ua-fiaintorc.png",
+              "seat": "Lorai",
+              "liege": "Clan Mac’Durthacht",
+              "rank": "Laird-Clan",
+              "featured": false
+            },
+            {
+              "name": "Clan Ua’Tréada",
+              "familyId": "haus-treada",
+              "imageSrc": "/Stammbäume/assets/images/houses/Aislearneach/clan-ua-treada.png",
+              "seat": "Lorai",
+              "liege": "Clan Mac’Durthacht",
+              "rank": "Laird-Clan",
+              "featured": false
+            },
+            {
+              "name": "Clan Ua’Muileach",
+              "familyId": "haus-muileach",
+              "imageSrc": "/Stammbäume/assets/images/houses/Aislearneach/clan-ua-muileach.png",
+              "seat": "Athan",
+              "liege": "Clan Mac’Durthacht",
+              "rank": "Dún-Tiarna-Clan",
+              "featured": false
+            }
+          ]
+        },
+        {
+          "title": "Clans von Tir na Faela",
+          "houses": [
+            {
+              "name": "Clan Mac’Fintain",
+              "familyId": "haus-fintain",
+              "imageSrc": "/Stammbäume/assets/images/houses/Aislearneach/clan-mac-fintain.png",
+              "seat": "Croga",
+              "liege": "Clan Ui’Morna",
+              "rank": "Mor-Tiarna-Clan",
+              "featured": true,
+              "featuredLabel": "Regierender Clan"
+            },
+            {
+              "name": "Clan An’Feannag",
+              "familyId": "haus-feannag",
+              "imageSrc": "/Stammbäume/assets/images/houses/Aislearneach/clan-an-feannag.png",
+              "seat": "Ceatharlach",
+              "liege": "Clan Mac’Fintain",
+              "rank": "Dún-Tiarna-Clan",
+              "featured": false
+            }
+          ]
+        },
+        {
+          "title": "Clans von Tir na Adharcach",
+          "houses": [
+            {
+              "name": "Clan An’Uilebheist",
+              "familyId": "haus-uilebheist",
+              "imageSrc": "/Stammbäume/assets/images/houses/Aislearneach/clan-an-uilebheist.png",
+              "seat": "Foraoise",
+              "liege": "Sagarth von Foraoise (kirchliche Oberherrschaft)",
+              "rank": "Laird-Clan",
+              "featured": false
+            },
+            {
+              "name": "Clan Nic’Cnogan",
+              "familyId": "haus-cnogan",
+              "imageSrc": "/Stammbäume/assets/images/houses/Aislearneach/clan-nic-cnogan.png",
+              "seat": "Foraoise",
+              "liege": "Sagarth von Foraoise (kirchliche Oberherrschaft)",
+              "rank": "Laird-Clan",
+              "featured": false
+            }
+          ]
+        },
+        {
+          "title": "Clans von Tir na Iomaire",
+          "houses": [
+            {
+              "name": "Clan Tir An’Ceallaigh",
+              "familyId": "haus-ceallaigh",
+              "imageSrc": "/Stammbäume/assets/images/houses/Aislearneach/clan-tir-an-ceallaigh.png",
+              "seat": "Koldair",
+              "liege": "Clan Ui’Morna",
+              "rank": "Mor-Tiarna-Clan",
+              "featured": true,
+              "featuredLabel": "Regierender Clan"
+            },
+            {
+              "name": "Clan Na’Fiachiontach",
+              "familyId": "haus-fiachiontach",
+              "imageSrc": "/Stammbäume/assets/images/houses/Aislearneach/clan-na-fiachiontach.png",
+              "seat": "Koldair",
+              "liege": "Clan Tir An’Ceallaigh",
+              "rank": "Laird-Clan",
+              "featured": false
+            },
+            {
+              "name": "Clan Dal’Tartarfhuil",
+              "familyId": "haus-tartarfhuil",
+              "imageSrc": "/Stammbäume/assets/images/houses/Aislearneach/clan-dal-tartarfhuil.png",
+              "seat": "Koldair",
+              "liege": "Clan Tir An’Ceallaigh",
+              "rank": "Laird-Clan",
+              "featured": false
+            },
+            {
+              "name": "Clan An’Gaisgh",
+              "familyId": "haus-gaisgh",
+              "imageSrc": "/Stammbäume/assets/images/houses/Aislearneach/clan-an-gaisgh.png",
+              "seat": "Broch an Traigh",
+              "liege": "Clan Tir An’Ceallaigh",
+              "rank": "Laird-Clan",
+              "featured": false
+            },
+            {
+              "name": "Clan Na’Luchdon",
+              "familyId": "haus-luchdon",
+              "imageSrc": "/Stammbäume/assets/images/houses/Aislearneach/clan-na-luchdon.png",
+              "seat": "Broch an Creig",
+              "liege": "Clan Tir An’Ceallaigh",
+              "rank": "Laird-Clan",
+              "featured": false
+            }
+          ]
+        },
+        {
+          "title": "Örtliche Septs",
+          "variant": "",
+          "houses": [
+            {
+              "name": "Sept Techtmar",
+              "familyId": "sept-techtmar",
+              "imageSrc": "/Stammbäume/assets/images/houses/Aislearneach/sept-techtmar.png",
+              "seat": "Foraoise",
+              "liege": "",
+              "rank": "Bürgerliche Sept",
+              "featured": false
+            }
+          ]
+        },
+        {
+          "title": "Ausgestoßene Clans",
+          "variant": "",
+          "houses": [
+            {
+              "name": "Clan Ui Faill Duibhne",
+              "familyId": "haus-ui-faill-duibhne",
+              "imageSrc": "/Stammbäume/assets/images/houses/Aislearneach/clan-ui-faill-duibhne.png",
+              "seat": "Cliath",
+              "liege": "",
+              "rank": "Offen",
+              "featured": false
+            }
+          ]
+        }
+      ],
+      "councilGroups": [
+        {
+          "title": "Herrschaft",
+          "members": [
+            {
+              "office": "Ard Tiarna von Aislearneach",
+              "name": "Goll Morna",
+              "sourcePortrait": "https://i.imgur.com/1YlKccg.jpeg",
+              "featured": true,
+              "sourceArticle": "article-17.html",
+              "imageSrc": "/Stammbäume/assets/images/portraits/haus-morna/goll-1668-morna.jpg",
+              "familyId": "haus-morna",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-morna&mode=view&person=goll-1668-morna"
+            }
+          ]
+        },
+        {
+          "title": "Ratsämter",
+          "members": [
+            {
+              "office": "Marschall des Fürsten",
+              "name": "Catan Morna",
+              "sourcePortrait": "https://i.imgur.com/RbWIO0t.jpeg",
+              "sourceArticle": "article-17.html",
+              "imageSrc": "/Stammbäume/assets/images/portraits/haus-morna/catan-1674-morna.jpg",
+              "familyId": "haus-morna",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-morna&mode=view&person=catan-1674-morna"
+            },
+            {
+              "office": "Kämmerer des Fürsten",
+              "name": "Urramach Fintain",
+              "sourcePortrait": "https://i.imgur.com/jakoUc4.jpeg",
+              "sourceArticle": "article-17.html",
+              "imageSrc": "/Stammbäume/assets/images/portraits/haus-fintain/urramach-1678-fintain.jpg",
+              "familyId": "haus-fintain",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-fintain&mode=view&person=urramach-1678-fintain"
+            },
+            {
+              "office": "Justiziar des Fürsten",
+              "name": "Ruarias Ceallaigh",
+              "sourcePortrait": "https://64.media.tumblr.com/f40aa1aab6da7e0fe18be54e8acae4a0/c6d1e80b45fe9f5d-ba/s250x400/a3ab839aeeb9849bb1485d245a7b4437f232379a.pnj",
+              "sourceArticle": "article-17.html",
+              "imageSrc": "/Stammbäume/assets/images/portraits/haus-morna/ruairias-1671-ceallaigh.jpg"
+            },
+            {
+              "office": "Schatten des Fürsten",
+              "name": "Ailbric",
+              "sourcePortrait": "https://i.postimg.cc/fRBhRmKN/image.png",
+              "sourceArticle": "article-17.html",
+              "imageSrc": "/Kontinente/assets/images/aislearneach/council-ailbric.png"
+            },
+            {
+              "office": "Herold des Fürsten",
+              "name": "Nessa Morna",
+              "sourcePortrait": "https://64.media.tumblr.com/b958e54ed9f209ee2081d17042c300bd/39e6ba2b188d0b1d-16/s400x600/b3304c23e1a08229b75d12196285435ab95a20ca.pnj",
+              "sourceArticle": "article-17.html",
+              "imageSrc": "/Stammbäume/assets/images/portraits/haus-chulainn/nessa-1672-chulainn.jpg"
+            }
+          ]
+        },
+        {
+          "title": "Geistliche und beratende Ämter",
+          "members": [
+            {
+              "office": "Ratsmagier des Fürsten",
+              "name": "Turloughas Fiachiontach",
+              "sourcePortrait": "https://64.media.tumblr.com/837760adddf4a2a1a745121eafb90a3c/f23095f507db9a08-2d/s250x400/b4ab147baa5a736e8e24f819132d9efb972defbd.pnj",
+              "sourceArticle": "article-17.html",
+              "imageSrc": "/Stammbäume/assets/images/portraits/haus-fiachiontach/turloughas-1605-fiachiontach.jpg",
+              "familyId": "haus-fiachiontach",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-fiachiontach&mode=view&person=turloughas-1605-fiachiontach"
+            },
+            {
+              "office": "Patriarch des Fürsten",
+              "name": "Derbforgaill",
+              "sourcePortrait": "https://i.postimg.cc/gj33VvcS/image.png",
+              "sourceArticle": "article-17.html",
+              "imageSrc": "/Kontinente/assets/images/aislearneach/council-derbforgaill.png"
+            },
+            {
+              "office": "Barde des Fürsten",
+              "name": "Cruithnechán",
+              "sourcePortrait": "https://i.postimg.cc/DzS1zVGP/image.png",
+              "sourceArticle": "article-17.html",
+              "imageSrc": "/Kontinente/assets/images/aislearneach/council-cruithnechan.png"
+            },
+            {
+              "office": "Volkswart des Fürsten",
+              "name": "Vakant",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "sourceArticle": "article-17.html",
+              "imageSrc": ""
+            },
+            {
+              "office": "Regent des Fürsten",
+              "name": "Garbhán Morna",
+              "sourcePortrait": "https://i.imgur.com/7DSDq05.jpeg",
+              "sourceArticle": "article-17.html",
+              "imageSrc": "/Stammbäume/assets/images/portraits/haus-morna/garbhan-morna.jpg",
+              "familyId": "haus-morna",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-morna&mode=view&person=garbhan-morna"
+            }
+          ]
+        }
+      ],
+      "councilNote": "",
+      "vassalGroups": [],
+      "domains": [],
+      "territoryLinks": [
+        "oberherrschaft-aislearneach-tir-na-geach",
+        "oberherrschaft-aislearneach-tir-na-tirth",
+        "oberherrschaft-aislearneach-tir-na-faela",
+        "oberherrschaft-aislearneach-tir-na-adharcach",
+        "oberherrschaft-aislearneach-tir-na-iomaire"
+      ],
+      "map": {
+        "title": "Karte Aislearneach",
+        "imageSrc": "/Karten/Aislearneach/Kartenbilder/normal.webp",
+        "imageAlt": "Fürstentum Aislearneach",
+        "href": "/Karten/karte.html?map=aislearneach"
+      }
+    },
+    {
+      "id": "oberherrschaft-aislearneach-tir-na-geach",
+      "title": "Oberherrschaft Tir na Geach",
+      "shortTitle": "Tir na Geach",
+      "type": "Oberherrschaft",
+      "kicker": "Oberherrschaft · Clan Ui’Morna",
+      "parentHref": "/Kontinente/Estryll/Fürstentum Aislearneach/Fürstentum Aislearneach.html",
+      "parentLabel": "Fürstentum Aislearneach",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Estryll",
+          "slug": "estryll"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Aislearneach",
+          "slug": "fuerstentum-aislearneach"
+        },
+        {
+          "type": "Oberherrschaft",
+          "name": "Oberherrschaft Tir na Geach",
+          "slug": "oberherrschaft-aislearneach-tir-na-geach"
+        }
+      ],
+      "crestSrc": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-geach.png",
+      "crestAlt": "Banner Oberherrschaft Tir na Geach",
+      "copy": {},
+      "cultureSections": [],
+      "infobox": [
+        {
+          "title": "Allgemein",
+          "rows": [
+            {
+              "label": "Name",
+              "value": "Oberherrschaft Tir na Geach"
+            },
+            {
+              "label": "Typ",
+              "value": "Oberherrschaft"
+            },
+            {
+              "label": "Sitz",
+              "value": "Gaelan"
+            },
+            {
+              "label": "Regierender Clan / Amt",
+              "value": "Clan Ui’Morna"
+            },
+            {
+              "label": "Oberhaupt",
+              "value": "Garbhán Morna"
+            }
+          ]
+        },
+        {
+          "title": "Geographie",
+          "rows": [
+            {
+              "label": "Region",
+              "value": "Südliches Estyll"
+            }
+          ]
+        },
+        {
+          "title": "Kultur",
+          "rows": []
+        },
+        {
+          "title": "Handel",
+          "rows": []
+        }
+      ],
+      "families": [
+        {
+          "title": "Regierender Clan",
+          "houses": [
+            {
+              "name": "Clan Ui’Morna",
+              "familyId": "haus-morna",
+              "imageSrc": "/Stammbäume/assets/images/houses/Aislearneach/clan-ui-morna.png",
+              "seat": "Gaelan",
+              "liege": "",
+              "rank": "Fürstenclan",
+              "featured": true,
+              "featuredLabel": "Fürstenclan"
+            }
+          ]
+        },
+        {
+          "title": "Untergeordnete Clans",
+          "houses": [
+            {
+              "name": "Clan Ua’Coronach",
+              "familyId": "haus-coronach",
+              "imageSrc": "/Stammbäume/assets/images/houses/Aislearneach/clan-ua-coronach.png",
+              "seat": "Gaelan",
+              "liege": "Clan Ui’Morna",
+              "rank": "Laird-Clan",
+              "featured": false
+            },
+            {
+              "name": "Clan Na’Morgacht",
+              "familyId": "haus-morgacht",
+              "imageSrc": "/Stammbäume/assets/images/houses/Aislearneach/clan-na-morgacht.png",
+              "seat": "Broch an Geata",
+              "liege": "Clan Ui’Morna",
+              "rank": "Laird-Clan",
+              "featured": false
+            },
+            {
+              "name": "Clan An’Rioga",
+              "familyId": "haus-rioga",
+              "imageSrc": "/Stammbäume/assets/images/houses/Aislearneach/clan-an-rioga.png",
+              "seat": "Broch an Duhbach",
+              "liege": "Clan Ui’Morna",
+              "rank": "Laird-Clan",
+              "featured": false
+            }
+          ]
+        }
+      ],
+      "councilGroups": [
+        {
+          "title": "Herrschaft",
+          "members": [
+            {
+              "office": "Mor Tiarna von Tir na Geach",
+              "name": "Garbhán Morna",
+              "sourcePortrait": "https://i.imgur.com/7DSDq05.jpeg",
+              "featured": true,
+              "sourceArticle": "article-00.html",
+              "imageSrc": "/Stammbäume/assets/images/portraits/haus-morna/garbhan-morna.jpg",
+              "familyId": "haus-morna",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-morna&mode=view&person=garbhan-morna"
+            }
+          ]
+        },
+        {
+          "title": "Ratsämter",
+          "members": [
+            {
+              "office": "Marschall des Mor Tiarna",
+              "name": "Macthar Rioga",
+              "sourcePortrait": "https://i.imgur.com/QtT88Hb.jpeg",
+              "sourceArticle": "article-00.html",
+              "imageSrc": "/Stammbäume/assets/images/portraits/haus-rioga/macthar-1670-rioga.jpg",
+              "familyId": "haus-rioga",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-rioga&mode=view&person=macthar-1670-rioga"
+            },
+            {
+              "office": "Kämmerer des Mor Tiarna",
+              "name": "Caitria Morna",
+              "sourcePortrait": "https://64.media.tumblr.com/9a70085ea10609072df29a2f940ef91c/5d87030d7fb55542-ad/s250x400/f8dae5c83bb2c52ac5e25c1bdf97b01337bc5ee5.pnj",
+              "sourceArticle": "article-00.html",
+              "imageSrc": "/Stammbäume/assets/images/portraits/haus-chulainn/caitria-1705-chulainn.jpg"
+            },
+            {
+              "office": "Justiziar des Mor Tiarna",
+              "name": "Brianach Morgacht",
+              "sourcePortrait": "https://i.imgur.com/tCTGwFB.jpeg",
+              "sourceArticle": "article-00.html",
+              "imageSrc": "/Stammbäume/assets/images/portraits/haus-ceallaigh/brianach-1671-morgacht.jpg",
+              "familyId": "haus-morgacht",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-morgacht&mode=view&person=brianach-1671-morgacht"
+            },
+            {
+              "office": "Schatten des Mor Tiarna",
+              "name": "Rónánach Morna",
+              "sourcePortrait": "https://i.imgur.com/F5E68Ke.jpeg",
+              "sourceArticle": "article-00.html",
+              "imageSrc": "/Stammbäume/assets/images/portraits/haus-morna/ronanach-1698-morna.jpg",
+              "familyId": "haus-morna",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-morna&mode=view&person=ronanach-1698-morna"
+            },
+            {
+              "office": "Herold des Mor Tiarna",
+              "name": "Saorlaith Morna",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "sourceArticle": "article-00.html",
+              "imageSrc": "/Stammbäume/assets/images/portraits/haus-draig/cadwalladar-draig.jpg"
+            }
+          ]
+        },
+        {
+          "title": "Geistliche und beratende Ämter",
+          "members": [
+            {
+              "office": "Berater des Mor Tiarna",
+              "name": "Vakant",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "sourceArticle": "article-00.html",
+              "imageSrc": ""
+            },
+            {
+              "office": "Patriarch des Mor Tiarna",
+              "name": "Bríg",
+              "sourcePortrait": "https://i.imgur.com/frY58eb.jpeg",
+              "sourceArticle": "article-00.html",
+              "imageSrc": "/Kontinente/assets/images/aislearneach/council-brig.png"
+            },
+            {
+              "office": "Barde des Mor Tiarna",
+              "name": "Maeldúin",
+              "sourcePortrait": "https://i.imgur.com/WSR842m.jpeg",
+              "sourceArticle": "article-00.html",
+              "imageSrc": "/Kontinente/assets/images/aislearneach/council-maelduin.png"
+            },
+            {
+              "office": "Volkswahrer des Mor Tiarna",
+              "name": "Vakant",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "sourceArticle": "article-00.html",
+              "imageSrc": ""
+            },
+            {
+              "office": "Regent des Mor Tiarna",
+              "name": "Leogán Morna",
+              "sourcePortrait": "https://i.imgur.com/dnqvWVA.jpeg",
+              "sourceArticle": "article-00.html",
+              "imageSrc": "/Stammbäume/assets/images/portraits/haus-morna/leogan-1715-morna.jpg",
+              "familyId": "haus-morna",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-morna&mode=view&person=leogan-1715-morna"
+            }
+          ]
+        }
+      ],
+      "councilNote": "",
+      "vassalGroups": [],
+      "domains": [
+        {
+          "territoryId": "oberherrschaft-aislearneach-tir-na-geach",
+          "title": "Oberherrschaft Tir na Geach",
+          "center": "Gaelan",
+          "sections": [
+            {
+              "title": "Festung",
+              "placeIds": [
+                "aislearneach-a1241c37-927e-4b35-9a94-d7ed1a07fe79"
+              ]
+            },
+            {
+              "title": "Hauptstadt",
+              "placeIds": [
+                "aislearneach-c9fe10f2-f145-40ec-a15e-6304562ab399"
+              ]
+            },
+            {
+              "title": "Rosszuchtsiedlung",
+              "placeIds": [
+                "aislearneach-6ff2a434-dd47-4cbb-bceb-5c6a9382a524",
+                "aislearneach-989279d0-fcbe-4f88-b316-c84d6f7591fc"
+              ]
+            },
+            {
+              "title": "Bauernsiedlung",
+              "placeIds": [
+                "aislearneach-73b53d5b-6802-4fb2-a983-f6789fac7209",
+                "aislearneach-9feb5b98-e727-4361-8b0f-9e3acb3e9636",
+                "aislearneach-a23eef5f-b4ad-457d-9e12-a37abd47d198",
+                "aislearneach-33c6c7af-0e51-4293-beb4-460edd65e651",
+                "aislearneach-4505cacb-fd25-4de4-8d17-c321aca044a8"
+              ]
+            },
+            {
+              "title": "Mine",
+              "placeIds": [
+                "aislearneach-8a6fc99f-5c5c-4048-8de9-73e992af0ab3",
+                "aislearneach-0cf3d5e3-ab87-4c3d-9c9d-fbe3efca7fbf",
+                "aislearneach-1e471c02-e072-4fb6-a862-1528e53df994"
+              ]
+            },
+            {
+              "title": "Turm",
+              "placeIds": [
+                "aislearneach-9782bade-e1d3-4ff7-ad8c-b6cf85a54750",
+                "aislearneach-364021b9-fead-4040-9c24-4e06d03f6068"
+              ]
+            },
+            {
+              "title": "Dorf",
+              "placeIds": [
+                "aislearneach-69877159-2688-484e-a754-df6a99225299",
+                "aislearneach-d0a2b92f-0305-4d1b-9e9f-cfc5550e5659",
+                "aislearneach-0deef75f-08cc-4551-9410-714f26d7739b",
+                "aislearneach-2ca3c4db-384f-4aa7-b44a-30b6aabd1c0a",
+                "aislearneach-08371696-1c93-4a89-9b06-d55ce1c333e1",
+                "aislearneach-51ba0248-3c69-426d-ab53-7e9d1a94f84c"
+              ]
+            },
+            {
+              "title": "Klostersiedlung",
+              "placeIds": [
+                "aislearneach-1b545911-0995-4828-bd95-07c88af4db93"
+              ]
+            },
+            {
+              "title": "Magierturm",
+              "placeIds": [
+                "aislearneach-357070c9-fe1a-4481-bc54-45730b92695a"
+              ]
+            },
+            {
+              "title": "Waldsiedlung",
+              "placeIds": [
+                "aislearneach-36377a56-b9d6-4823-9e9e-7b60fa8f09cb",
+                "aislearneach-4de6c873-86e4-4497-8f31-534c5832f07c"
+              ]
+            }
+          ]
+        }
+      ],
+      "territoryLinks": [
+        "herrschaft-aislearneach-coronach",
+        "herrschaft-aislearneach-morgacht",
+        "herrschaft-aislearneach-rioga"
+      ],
+      "map": {
+        "title": "Karte Tir na Geach",
+        "imageSrc": "/Karten/Aislearneach/tir-na-geach/Kartenbilder/normal.webp",
+        "imageAlt": "Tir na Geach",
+        "href": "/Karten/karte.html?map=aislearneach-tir-na-geach"
+      }
+    },
+    {
+      "id": "oberherrschaft-aislearneach-tir-na-tirth",
+      "title": "Oberherrschaft Tir na Tirth",
+      "shortTitle": "Tir na Tirth",
+      "type": "Oberherrschaft",
+      "kicker": "Oberherrschaft · Clan Mac’Durthacht",
+      "parentHref": "/Kontinente/Estryll/Fürstentum Aislearneach/Fürstentum Aislearneach.html",
+      "parentLabel": "Fürstentum Aislearneach",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Estryll",
+          "slug": "estryll"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Aislearneach",
+          "slug": "fuerstentum-aislearneach"
+        },
+        {
+          "type": "Oberherrschaft",
+          "name": "Oberherrschaft Tir na Tirth",
+          "slug": "oberherrschaft-aislearneach-tir-na-tirth"
+        }
+      ],
+      "crestSrc": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-tirth.png",
+      "crestAlt": "Banner Oberherrschaft Tir na Tirth",
+      "copy": {},
+      "cultureSections": [],
+      "infobox": [
+        {
+          "title": "Allgemein",
+          "rows": [
+            {
+              "label": "Name",
+              "value": "Oberherrschaft Tir na Tirth"
+            },
+            {
+              "label": "Typ",
+              "value": "Oberherrschaft"
+            },
+            {
+              "label": "Sitz",
+              "value": "Lorai"
+            },
+            {
+              "label": "Regierender Clan / Amt",
+              "value": "Clan Mac’Durthacht"
+            },
+            {
+              "label": "Oberhaupt",
+              "value": "Eagon Durthacht"
+            }
+          ]
+        },
+        {
+          "title": "Geographie",
+          "rows": [
+            {
+              "label": "Region",
+              "value": "Südliches Estyll"
+            }
+          ]
+        },
+        {
+          "title": "Kultur",
+          "rows": []
+        },
+        {
+          "title": "Handel",
+          "rows": []
+        }
+      ],
+      "families": [
+        {
+          "title": "Regierender Clan",
+          "houses": [
+            {
+              "name": "Clan Mac’Durthacht",
+              "familyId": "haus-durthacht",
+              "imageSrc": "/Stammbäume/assets/images/houses/Aislearneach/clan-mac-durthacht.png",
+              "seat": "Lorai",
+              "liege": "Clan Ui’Morna",
+              "rank": "Mor-Tiarna-Clan",
+              "featured": true,
+              "featuredLabel": "Regierender Clan"
+            }
+          ]
+        },
+        {
+          "title": "Untergeordnete Clans",
+          "houses": [
+            {
+              "name": "Clan Ua’Fiáintorc",
+              "familyId": "haus-fiantorc",
+              "imageSrc": "/Stammbäume/assets/images/houses/Aislearneach/clan-ua-fiaintorc.png",
+              "seat": "Lorai",
+              "liege": "Clan Mac’Durthacht",
+              "rank": "Laird-Clan",
+              "featured": false
+            },
+            {
+              "name": "Clan Ua’Tréada",
+              "familyId": "haus-treada",
+              "imageSrc": "/Stammbäume/assets/images/houses/Aislearneach/clan-ua-treada.png",
+              "seat": "Lorai",
+              "liege": "Clan Mac’Durthacht",
+              "rank": "Laird-Clan",
+              "featured": false
+            },
+            {
+              "name": "Clan Ua’Muileach",
+              "familyId": "haus-muileach",
+              "imageSrc": "/Stammbäume/assets/images/houses/Aislearneach/clan-ua-muileach.png",
+              "seat": "Athan",
+              "liege": "Clan Mac’Durthacht",
+              "rank": "Dún-Tiarna-Clan",
+              "featured": false
+            }
+          ]
+        },
+        {
+          "title": "Ausgestoßene Clans",
+          "variant": "",
+          "houses": [
+            {
+              "name": "Clan Ui Faill Duibhne",
+              "familyId": "haus-ui-faill-duibhne",
+              "imageSrc": "/Stammbäume/assets/images/houses/Aislearneach/clan-ui-faill-duibhne.png",
+              "seat": "Cliath",
+              "liege": "",
+              "rank": "Offen",
+              "featured": false
+            }
+          ]
+        }
+      ],
+      "councilGroups": [
+        {
+          "title": "Herrschaft",
+          "members": [
+            {
+              "office": "Mor Tiarna von Tir na Tirth",
+              "name": "Eagon Durthacht",
+              "sourcePortrait": "https://64.media.tumblr.com/49771a0ee928b25d6baca0d3973a5682/c0b8c6850758d314-61/s250x400/a8d196112c66b3c54b4cd7acd9a9fb255016a763.pnj",
+              "featured": true,
+              "sourceArticle": "article-01.html",
+              "imageSrc": "/Stammbäume/assets/images/portraits/haus-durthacht/eagon-1668-durthacht.jpg",
+              "familyId": "haus-durthacht",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-durthacht&mode=view&person=eagon-1668-durthacht"
+            }
+          ]
+        },
+        {
+          "title": "Ratsämter",
+          "members": [
+            {
+              "office": "Marschall des Mor Tiarna",
+              "name": "Giollán Durthacht",
+              "sourcePortrait": "https://64.media.tumblr.com/7f5f2f0e6e57df8c07370536132ff28b/5335c2898a479a35-21/s250x400/244d2e0d032f2b15d3c065fc842349c2ebe9a5ef.pnj",
+              "sourceArticle": "article-01.html",
+              "imageSrc": "/Stammbäume/assets/images/portraits/haus-durthacht/giollan-durthacht.jpg",
+              "familyId": "haus-durthacht",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-durthacht&mode=view&person=giollan-durthacht"
+            },
+            {
+              "office": "Kämmerer des Mor Tiarna",
+              "name": "Maol Muileach",
+              "sourcePortrait": "https://i.imgur.com/eETqvWf.jpeg",
+              "sourceArticle": "article-01.html",
+              "imageSrc": "/Stammbäume/assets/images/portraits/haus-muileach/maol-1699-muileach.jpg",
+              "familyId": "haus-muileach",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-muileach&mode=view&person=maol-1699-muileach"
+            },
+            {
+              "office": "Justiziar des Mor Tiarna",
+              "name": "Kealtán Treada",
+              "sourcePortrait": "https://64.media.tumblr.com/29da626537db9de89d13ca9b90d4522e/b573101d9a39973e-39/s250x400/6367cac931f756674df51b4c2394e8e0f1280ede.pnj",
+              "sourceArticle": "article-01.html",
+              "imageSrc": "/Stammbäume/assets/images/portraits/haus-treada/kealtan-1673-treada.jpg",
+              "familyId": "haus-treada",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-treada&mode=view&person=kealtan-1673-treada"
+            },
+            {
+              "office": "Schatten des Mor Tiarna",
+              "name": "Niall",
+              "sourcePortrait": "https://i.postimg.cc/PqGywrM5/image.png",
+              "sourceArticle": "article-01.html",
+              "imageSrc": "/Kontinente/assets/images/aislearneach/council-niall.png"
+            },
+            {
+              "office": "Herold des Mor Tiarna",
+              "name": "Réamonn Durthacht",
+              "sourcePortrait": "https://64.media.tumblr.com/da698ef4929ea0adde612ca35fe30244/5335c2898a479a35-24/s250x400/a558bd27f686e78cee6237397eb46c09325e0169.pnj",
+              "sourceArticle": "article-01.html",
+              "imageSrc": "/Stammbäume/assets/images/portraits/haus-durthacht/reamonn-1675-durthacht.jpg",
+              "familyId": "haus-durthacht",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-durthacht&mode=view&person=reamonn-1675-durthacht"
+            }
+          ]
+        },
+        {
+          "title": "Geistliche und beratende Ämter",
+          "members": [
+            {
+              "office": "Berater des Mor Tiarna",
+              "name": "Vakant",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "sourceArticle": "article-01.html",
+              "imageSrc": ""
+            },
+            {
+              "office": "Patriarch des Mor Tiarna",
+              "name": "Cael Fiantorc",
+              "sourcePortrait": "https://64.media.tumblr.com/dd6b8e42fad618563dbd1653c4751441/a586b45f9137e870-66/s250x400/9ba6d926cb534aa674a1cb0fbea1b5a16dd3430c.pnj",
+              "sourceArticle": "article-01.html",
+              "imageSrc": "/Stammbäume/assets/images/portraits/haus-durthacht/cael-1673-fiantorc.jpg",
+              "familyId": "haus-fiantorc",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-fiantorc&mode=view&person=cael-1673-fiantorc"
+            },
+            {
+              "office": "Barde des Mor Tiarna",
+              "name": "Loarn",
+              "sourcePortrait": "https://i.postimg.cc/T2H4PxBp/image.png",
+              "sourceArticle": "article-01.html",
+              "imageSrc": "/Kontinente/assets/images/aislearneach/council-loarn.png"
+            },
+            {
+              "office": "Volkswahrer des Mor Tiarna",
+              "name": "Vakant",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "sourceArticle": "article-01.html",
+              "imageSrc": ""
+            },
+            {
+              "office": "Regent des Mor Tiarna",
+              "name": "Vakant",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "sourceArticle": "article-01.html",
+              "imageSrc": ""
+            }
+          ]
+        }
+      ],
+      "councilNote": "",
+      "vassalGroups": [],
+      "domains": [
+        {
+          "territoryId": "oberherrschaft-aislearneach-tir-na-tirth",
+          "title": "Oberherrschaft Tir na Tirth",
+          "center": "Lorai",
+          "sections": [
+            {
+              "title": "Stadt",
+              "placeIds": [
+                "aislearneach-af66e8c3-da6e-4866-b272-986712ab81dc",
+                "aislearneach-10be63f5-a26b-4643-ab31-357a715cf3ff"
+              ]
+            },
+            {
+              "title": "Ahnenbaum",
+              "placeIds": [
+                "aislearneach-a4af8ffd-720c-401b-9b8d-e44da579ad6d"
+              ]
+            }
+          ]
+        }
+      ],
+      "territoryLinks": [
+        "herrschaft-aislearneach-fiantorc",
+        "herrschaft-aislearneach-treada",
+        "herrschaft-aislearneach-muileach"
+      ],
+      "map": {
+        "title": "Karte Tir na Tirth",
+        "imageSrc": "/Karten/Aislearneach/tir-na-tirth/Kartenbilder/normal.webp",
+        "imageAlt": "Tir na Tirth",
+        "href": "/Karten/karte.html?map=aislearneach-tir-na-tirth"
+      }
+    },
+    {
+      "id": "oberherrschaft-aislearneach-tir-na-faela",
+      "title": "Oberherrschaft Tir na Faela",
+      "shortTitle": "Tir na Faela",
+      "type": "Oberherrschaft",
+      "kicker": "Oberherrschaft · Clan Mac’Fintain",
+      "parentHref": "/Kontinente/Estryll/Fürstentum Aislearneach/Fürstentum Aislearneach.html",
+      "parentLabel": "Fürstentum Aislearneach",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Estryll",
+          "slug": "estryll"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Aislearneach",
+          "slug": "fuerstentum-aislearneach"
+        },
+        {
+          "type": "Oberherrschaft",
+          "name": "Oberherrschaft Tir na Faela",
+          "slug": "oberherrschaft-aislearneach-tir-na-faela"
+        }
+      ],
+      "crestSrc": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-faela.png",
+      "crestAlt": "Banner Oberherrschaft Tir na Faela",
+      "copy": {},
+      "cultureSections": [],
+      "infobox": [
+        {
+          "title": "Allgemein",
+          "rows": [
+            {
+              "label": "Name",
+              "value": "Oberherrschaft Tir na Faela"
+            },
+            {
+              "label": "Typ",
+              "value": "Oberherrschaft"
+            },
+            {
+              "label": "Sitz",
+              "value": "Croga"
+            },
+            {
+              "label": "Regierender Clan / Amt",
+              "value": "Clan Mac’Fintain"
+            },
+            {
+              "label": "Oberhaupt",
+              "value": "Eachan Fintain"
+            }
+          ]
+        },
+        {
+          "title": "Geographie",
+          "rows": [
+            {
+              "label": "Region",
+              "value": "Südliches Estyll"
+            }
+          ]
+        },
+        {
+          "title": "Kultur",
+          "rows": []
+        },
+        {
+          "title": "Handel",
+          "rows": []
+        }
+      ],
+      "families": [
+        {
+          "title": "Regierender Clan",
+          "houses": [
+            {
+              "name": "Clan Mac’Fintain",
+              "familyId": "haus-fintain",
+              "imageSrc": "/Stammbäume/assets/images/houses/Aislearneach/clan-mac-fintain.png",
+              "seat": "Croga",
+              "liege": "Clan Ui’Morna",
+              "rank": "Mor-Tiarna-Clan",
+              "featured": true,
+              "featuredLabel": "Regierender Clan"
+            }
+          ]
+        },
+        {
+          "title": "Untergeordnete Clans",
+          "houses": [
+            {
+              "name": "Clan An’Feannag",
+              "familyId": "haus-feannag",
+              "imageSrc": "/Stammbäume/assets/images/houses/Aislearneach/clan-an-feannag.png",
+              "seat": "Ceatharlach",
+              "liege": "Clan Mac’Fintain",
+              "rank": "Dún-Tiarna-Clan",
+              "featured": false
+            }
+          ]
+        }
+      ],
+      "councilGroups": [
+        {
+          "title": "Herrschaft",
+          "members": [
+            {
+              "office": "Mor Tiarna von Tir na Faela",
+              "name": "Eachan Fintain",
+              "sourcePortrait": "https://i.imgur.com/T5De7Cd.jpeg",
+              "featured": true,
+              "sourceArticle": "article-02.html",
+              "imageSrc": "/Stammbäume/assets/images/portraits/haus-fintain/eachan-1669-fintain.jpg",
+              "familyId": "haus-fintain",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-fintain&mode=view&person=eachan-1669-fintain"
+            }
+          ]
+        },
+        {
+          "title": "Ratsämter",
+          "members": [
+            {
+              "office": "Marschall des Mor Tiarna",
+              "name": "Górdanach Fintain",
+              "sourcePortrait": "https://i.postimg.cc/qM8sXmZS/image.png",
+              "sourceArticle": "article-02.html",
+              "imageSrc": "/Stammbäume/assets/images/portraits/haus-fintain/gordanach-1675-fintain.png",
+              "familyId": "haus-fintain",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-fintain&mode=view&person=gordanach-1675-fintain"
+            },
+            {
+              "office": "Kämmerer des Mor Tiarna",
+              "name": "Cethern Fintain",
+              "sourcePortrait": "https://i.imgur.com/lyxmve1.jpeg",
+              "sourceArticle": "article-02.html",
+              "imageSrc": "/Stammbäume/assets/images/portraits/haus-fintain/cethern-1692-fintain.jpg",
+              "familyId": "haus-fintain",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-fintain&mode=view&person=cethern-1692-fintain"
+            },
+            {
+              "office": "Justiziar des Mor Tiarna",
+              "name": "Baodan Fintain",
+              "sourcePortrait": "https://i.postimg.cc/1XnNkbfs/2275fb62-ca8a-4ab0-857f-83ac1edb3615.png",
+              "sourceArticle": "article-02.html",
+              "imageSrc": "/Stammbäume/assets/images/portraits/haus-fintain/baodan-1698-fintain.png",
+              "familyId": "haus-fintain",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-fintain&mode=view&person=baodan-1698-fintain"
+            },
+            {
+              "office": "Schatten des Mor Tiarna",
+              "name": "Tuathlaith",
+              "sourcePortrait": "https://i.postimg.cc/hvzWGtr1/image.png",
+              "sourceArticle": "article-02.html",
+              "imageSrc": "/Kontinente/assets/images/aislearneach/council-tuathlaith.png"
+            },
+            {
+              "office": "Herold des Mor Tiarna",
+              "name": "Fingín Fintain",
+              "sourcePortrait": "https://i.imgur.com/XozF6bS.jpeg",
+              "sourceArticle": "article-02.html",
+              "imageSrc": "/Stammbäume/assets/images/portraits/haus-fintain/fingin-1705-fintain.jpg",
+              "familyId": "haus-fintain",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-fintain&mode=view&person=fingin-1705-fintain"
+            }
+          ]
+        },
+        {
+          "title": "Geistliche und beratende Ämter",
+          "members": [
+            {
+              "office": "Berater des Mor Tiarna",
+              "name": "Dànaidh Feannag",
+              "sourcePortrait": "https://i.imgur.com/Ee0c6BK.jpeg",
+              "sourceArticle": "article-02.html",
+              "imageSrc": "/Stammbäume/assets/images/portraits/haus-feannag/danaidh-1674-feannag.jpg",
+              "familyId": "haus-feannag",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-feannag&mode=view&person=danaidh-1674-feannag"
+            },
+            {
+              "office": "Patriarch des Mor Tiarna",
+              "name": "Cennétig",
+              "sourcePortrait": "https://i.postimg.cc/mD4yDXyX/image.png",
+              "sourceArticle": "article-02.html",
+              "imageSrc": "/Kontinente/assets/images/aislearneach/council-cennetig.png"
+            },
+            {
+              "office": "Barde des Mor Tiarna",
+              "name": "Sile",
+              "sourcePortrait": "https://i.postimg.cc/t45xkq35/image.png",
+              "sourceArticle": "article-02.html",
+              "imageSrc": "",
+              "familyId": "haus-fiachiontach",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-fiachiontach&mode=view&person=sile-unknown-fiachiontach-88-0"
+            },
+            {
+              "office": "Volkswahrer des Mor Tiarna",
+              "name": "Vakant",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "sourceArticle": "article-02.html",
+              "imageSrc": ""
+            },
+            {
+              "office": "Regent des Mor Tiarna",
+              "name": "Vakant",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "sourceArticle": "article-02.html",
+              "imageSrc": ""
+            }
+          ]
+        }
+      ],
+      "councilNote": "",
+      "vassalGroups": [],
+      "domains": [
+        {
+          "territoryId": "oberherrschaft-aislearneach-tir-na-faela",
+          "title": "Oberherrschaft Tir na Faela",
+          "center": "Croga",
+          "sections": [
+            {
+              "title": "Stadt",
+              "placeIds": [
+                "aislearneach-c607830f-4c21-4208-afa3-4bdd53dab3a9"
+              ]
+            },
+            {
+              "title": "Dorf",
+              "placeIds": [
+                "aislearneach-b246214b-ee86-463c-b418-62c2a5043358"
+              ]
+            },
+            {
+              "title": "Waldsiedlung",
+              "placeIds": [
+                "aislearneach-e831cacc-7243-4bfc-97bd-81021cd9d28d"
+              ]
+            },
+            {
+              "title": "Bauernsiedlung",
+              "placeIds": [
+                "aislearneach-eb460840-cb89-466a-9c8b-ae25705184be",
+                "aislearneach-2e47e983-4328-4642-a666-73506e05b568",
+                "aislearneach-6d5e55fe-d857-4a37-8ba7-15bd89667647",
+                "aislearneach-75d5a07c-1ae9-49f7-be1d-171de19bd357"
+              ]
+            },
+            {
+              "title": "Ahnenbaum",
+              "placeIds": [
+                "aislearneach-fbd11ae2-133f-4606-bf8b-ec1892df8fa8"
+              ]
+            },
+            {
+              "title": "Flusssiedlung",
+              "placeIds": [
+                "aislearneach-2c8de923-b904-4e4d-ae7f-6fddc22b5ffd",
+                "aislearneach-4f2bedc6-90d3-4d8f-82c4-f4d2cbfde0a0"
+              ]
+            }
+          ]
+        },
+        {
+          "territoryId": "aislearneach-offen-b2bfc8cc-cbaa-463b-81dd-73c4e350eee1",
+          "title": "Potenzielles Herrschaftsgebiet · Clan-Zuordnung offen",
+          "center": "",
+          "sections": [
+            {
+              "title": "Burg",
+              "placeIds": [
+                "aislearneach-33313549-04d7-4ce2-98da-0d99b96bf8b4"
+              ]
+            },
+            {
+              "title": "Flusssiedlung",
+              "placeIds": [
+                "aislearneach-8018cf34-e33b-4556-987b-fc0e222cbe87",
+                "aislearneach-7ac07136-a6bd-40d1-aa96-f0a4e27bcdb9"
+              ]
+            },
+            {
+              "title": "Waldsiedlung",
+              "placeIds": [
+                "aislearneach-ef577f03-37fe-4f8b-9383-5ffb5710671d"
+              ]
+            },
+            {
+              "title": "Bauernsiedlung",
+              "placeIds": [
+                "aislearneach-4ef88c68-aa39-40ed-9c49-16282941c012",
+                "aislearneach-3450a96b-5f37-47b0-847e-dec91a189793"
+              ]
+            },
+            {
+              "title": "Klostersiedlung",
+              "placeIds": [
+                "aislearneach-50d17d7e-5fce-4a79-a6b5-8d9a54a95d87"
+              ]
+            },
+            {
+              "title": "Turm",
+              "placeIds": [
+                "aislearneach-6a0a71ff-7ef9-4f90-b8dc-1311be23cce6"
+              ]
+            }
+          ]
+        },
+        {
+          "territoryId": "aislearneach-offen-0582da8b-b10e-476c-be6c-5a102915295a",
+          "title": "Potenzielles Herrschaftsgebiet · Clan-Zuordnung offen",
+          "center": "",
+          "sections": [
+            {
+              "title": "Burg",
+              "placeIds": [
+                "aislearneach-a1e774e3-8810-43fd-b870-65543bf7ca81"
+              ]
+            },
+            {
+              "title": "Bauernsiedlung",
+              "placeIds": [
+                "aislearneach-81e5af1b-ccc4-4440-96de-0175c1f9fdd4",
+                "aislearneach-7ca26ced-9630-491a-b497-89c27d8ab587",
+                "aislearneach-2f10e3d2-22e2-4dfa-8ef8-011d778ddf66"
+              ]
+            },
+            {
+              "title": "Flusssiedlung",
+              "placeIds": [
+                "aislearneach-ac77ce77-09ee-4d03-91c2-4fe39e37d943",
+                "aislearneach-d5f49e35-27c6-47e4-9e46-9c113737138d",
+                "aislearneach-59caa251-6cd5-444c-b36f-4a77dec6c4a4"
+              ]
+            },
+            {
+              "title": "Dorf",
+              "placeIds": [
+                "aislearneach-d0bbb6f1-4ebd-4532-ae9f-d0fe98eeb9f8"
+              ]
+            }
+          ]
+        },
+        {
+          "territoryId": "aislearneach-offen-57af0e3e-33e8-4a78-a3a8-d21a2fe21408",
+          "title": "Potenzielles Herrschaftsgebiet · Clan-Zuordnung offen",
+          "center": "",
+          "sections": [
+            {
+              "title": "Burg",
+              "placeIds": [
+                "aislearneach-cb9656a2-9855-428a-99e7-a1a8774b038e"
+              ]
+            },
+            {
+              "title": "Klostersiedlung",
+              "placeIds": [
+                "aislearneach-bd33677f-a929-42ec-9c5f-778679363180"
+              ]
+            },
+            {
+              "title": "Waldsiedlung",
+              "placeIds": [
+                "aislearneach-7e386bfe-1acf-47f4-9ff0-f5f5ae78c8ae",
+                "aislearneach-e96e1fee-76e0-45f7-9de3-f83368ff8e44"
+              ]
+            }
+          ]
+        }
+      ],
+      "territoryLinks": [
+        "herrschaft-aislearneach-feannag"
+      ],
+      "map": {
+        "title": "Karte Tir na Faela",
+        "imageSrc": "/Karten/Aislearneach/tir-na-faela/Kartenbilder/normal.webp",
+        "imageAlt": "Tir na Faela",
+        "href": "/Karten/karte.html?map=aislearneach-tir-na-faela"
+      }
+    },
+    {
+      "id": "oberherrschaft-aislearneach-tir-na-adharcach",
+      "title": "Oberherrschaft Tir na Adharcach",
+      "shortTitle": "Tir na Adharcach",
+      "type": "Kirchliche Oberherrschaft",
+      "kicker": "Kirchliche Oberherrschaft",
+      "parentHref": "/Kontinente/Estryll/Fürstentum Aislearneach/Fürstentum Aislearneach.html",
+      "parentLabel": "Fürstentum Aislearneach",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Estryll",
+          "slug": "estryll"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Aislearneach",
+          "slug": "fuerstentum-aislearneach"
+        },
+        {
+          "type": "Kirchliche Oberherrschaft",
+          "name": "Oberherrschaft Tir na Adharcach",
+          "slug": "oberherrschaft-aislearneach-tir-na-adharcach"
+        }
+      ],
+      "crestSrc": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-adharcach.png",
+      "crestAlt": "Banner Oberherrschaft Tir na Adharcach",
+      "copy": {},
+      "cultureSections": [],
+      "infobox": [
+        {
+          "title": "Allgemein",
+          "rows": [
+            {
+              "label": "Name",
+              "value": "Oberherrschaft Tir na Adharcach"
+            },
+            {
+              "label": "Typ",
+              "value": "Kirchliche Oberherrschaft"
+            },
+            {
+              "label": "Sitz",
+              "value": "Foraoise"
+            },
+            {
+              "label": "Oberhaupt",
+              "value": "Derbforgaill"
+            }
+          ]
+        },
+        {
+          "title": "Geographie",
+          "rows": [
+            {
+              "label": "Region",
+              "value": "Südliches Estyll"
+            }
+          ]
+        },
+        {
+          "title": "Kultur",
+          "rows": []
+        },
+        {
+          "title": "Handel",
+          "rows": []
+        }
+      ],
+      "families": [
+        {
+          "title": "Untergeordnete Clans",
+          "houses": [
+            {
+              "name": "Clan An’Uilebheist",
+              "familyId": "haus-uilebheist",
+              "imageSrc": "/Stammbäume/assets/images/houses/Aislearneach/clan-an-uilebheist.png",
+              "seat": "Foraoise",
+              "liege": "Sagarth von Foraoise (kirchliche Oberherrschaft)",
+              "rank": "Laird-Clan",
+              "featured": false
+            },
+            {
+              "name": "Clan Nic’Cnogan",
+              "familyId": "haus-cnogan",
+              "imageSrc": "/Stammbäume/assets/images/houses/Aislearneach/clan-nic-cnogan.png",
+              "seat": "Foraoise",
+              "liege": "Sagarth von Foraoise (kirchliche Oberherrschaft)",
+              "rank": "Laird-Clan",
+              "featured": false
+            }
+          ]
+        },
+        {
+          "title": "Örtliche Septs",
+          "variant": "",
+          "houses": [
+            {
+              "name": "Sept Techtmar",
+              "familyId": "sept-techtmar",
+              "imageSrc": "/Stammbäume/assets/images/houses/Aislearneach/sept-techtmar.png",
+              "seat": "Foraoise",
+              "liege": "",
+              "rank": "Bürgerliche Sept",
+              "featured": false
+            }
+          ]
+        }
+      ],
+      "councilGroups": [
+        {
+          "title": "Herrschaft",
+          "members": [
+            {
+              "office": "Sagarth von Tir na Adharcach",
+              "name": "Derbforgaill",
+              "sourcePortrait": "https://i.postimg.cc/gj33VvcS/image.png",
+              "featured": true,
+              "sourceArticle": "article-03.html",
+              "imageSrc": "/Kontinente/assets/images/aislearneach/council-derbforgaill.png"
+            }
+          ]
+        },
+        {
+          "title": "Ratsämter",
+          "members": [
+            {
+              "office": "Marschall des Sagarth",
+              "name": "Sétnai",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "gender": "male",
+              "sourceArticle": "article-03.html",
+              "imageSrc": "/Stammbäume/assets/images/portraits/haus-draig/cadwalladar-draig.jpg"
+            },
+            {
+              "office": "Kämmerer des Sagarth",
+              "name": "Findabair",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "gender": "female",
+              "sourceArticle": "article-03.html",
+              "imageSrc": "/Stammbäume/assets/images/portraits/haus-draig/cadwalladar-draig.jpg"
+            },
+            {
+              "office": "Justiziar des Sagarth",
+              "name": "Tálchar",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "gender": "male",
+              "sourceArticle": "article-03.html",
+              "imageSrc": "/Stammbäume/assets/images/portraits/haus-draig/cadwalladar-draig.jpg"
+            },
+            {
+              "office": "Schatten des Sagarth",
+              "name": "Èbliu",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "gender": "female",
+              "sourceArticle": "article-03.html",
+              "imageSrc": "/Stammbäume/assets/images/portraits/haus-draig/cadwalladar-draig.jpg"
+            },
+            {
+              "office": "Herold des Sagarth",
+              "name": "Tadcán",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "gender": "male",
+              "sourceArticle": "article-03.html",
+              "imageSrc": "/Stammbäume/assets/images/portraits/haus-draig/cadwalladar-draig.jpg"
+            }
+          ]
+        },
+        {
+          "title": "Geistliche und beratende Ämter",
+          "members": [
+            {
+              "office": "Berater des Sagarth",
+              "name": "Vakant",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "sourceArticle": "article-03.html",
+              "imageSrc": ""
+            },
+            {
+              "office": "Patriarch des Sagarth",
+              "name": "Mugrón",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "gender": "male",
+              "sourceArticle": "article-03.html",
+              "imageSrc": "/Stammbäume/assets/images/portraits/haus-draig/cadwalladar-draig.jpg"
+            },
+            {
+              "office": "Barde des Sagarth",
+              "name": "Macha",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "gender": "female",
+              "sourceArticle": "article-03.html",
+              "imageSrc": "/Stammbäume/assets/images/portraits/haus-draig/cadwalladar-draig.jpg"
+            },
+            {
+              "office": "Volkswahrer des Sagarth",
+              "name": "Téite Techtmar",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "gender": "female",
+              "sourceArticle": "article-03.html",
+              "imageSrc": "",
+              "familyId": "sept-techtmar",
+              "href": "/Stammbäume/Stammbaum.html?family=sept-techtmar&mode=view&person=teite-1674-sept-techtmar"
+            },
+            {
+              "office": "Regent des Sagarth",
+              "name": "Mugrón",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "gender": "male",
+              "sourceArticle": "article-03.html",
+              "imageSrc": "/Stammbäume/assets/images/portraits/haus-draig/cadwalladar-draig.jpg"
+            }
+          ]
+        }
+      ],
+      "councilNote": "",
+      "vassalGroups": [],
+      "domains": [
+        {
+          "territoryId": "oberherrschaft-aislearneach-tir-na-adharcach",
+          "title": "Oberherrschaft Tir na Adharcach",
+          "center": "Foraoise",
+          "sections": [
+            {
+              "title": "Stadt",
+              "placeIds": [
+                "aislearneach-3a7f802a-aef3-4cf2-82dc-ec0d63e916e9"
+              ]
+            },
+            {
+              "title": "Waldsiedlung",
+              "placeIds": [
+                "aislearneach-b3032bdb-1d2c-46f1-b8ee-e61aa8f57aae"
+              ]
+            },
+            {
+              "title": "Ahnenbaum",
+              "placeIds": [
+                "aislearneach-bce3eda5-f413-4fd5-8e2d-1c6bd88997f3"
+              ]
+            },
+            {
+              "title": "Kreaturenlager",
+              "placeIds": [
+                "aislearneach-c454f6a0-7b01-4aaf-b7e8-514b2f1e1d3e",
+                "aislearneach-c8bbbaca-df08-4e3d-8c2f-d5aa9f9e2c02",
+                "aislearneach-61da13ae-4868-432a-87a0-d23a37a1bd6a",
+                "aislearneach-76313348-93bf-481d-8289-74aff5068a8b",
+                "aislearneach-8e40e5f8-a6ac-4904-94f1-234c953a6866",
+                "aislearneach-95c86215-2b5d-4056-b618-0eda1fd1e60d"
+              ]
+            }
+          ]
+        }
+      ],
+      "territoryLinks": [
+        "herrschaft-aislearneach-uilebheist",
+        "herrschaft-aislearneach-cnogan"
+      ],
+      "map": {
+        "title": "Karte Tir na Adharcach",
+        "imageSrc": "/Karten/Aislearneach/tir-na-adharcach/Kartenbilder/normal.webp",
+        "imageAlt": "Tir na Adharcach",
+        "href": "/Karten/karte.html?map=aislearneach-tir-na-adharcach"
+      }
+    },
+    {
+      "id": "oberherrschaft-aislearneach-tir-na-iomaire",
+      "title": "Oberherrschaft Tir na Iomaire",
+      "shortTitle": "Tir na Iomaire",
+      "type": "Oberherrschaft",
+      "kicker": "Oberherrschaft · Clan Tir An’Ceallaigh",
+      "parentHref": "/Kontinente/Estryll/Fürstentum Aislearneach/Fürstentum Aislearneach.html",
+      "parentLabel": "Fürstentum Aislearneach",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Estryll",
+          "slug": "estryll"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Aislearneach",
+          "slug": "fuerstentum-aislearneach"
+        },
+        {
+          "type": "Oberherrschaft",
+          "name": "Oberherrschaft Tir na Iomaire",
+          "slug": "oberherrschaft-aislearneach-tir-na-iomaire"
+        }
+      ],
+      "crestSrc": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-iomaire.png",
+      "crestAlt": "Banner Oberherrschaft Tir na Iomaire",
+      "copy": {},
+      "cultureSections": [],
+      "infobox": [
+        {
+          "title": "Allgemein",
+          "rows": [
+            {
+              "label": "Name",
+              "value": "Oberherrschaft Tir na Iomaire"
+            },
+            {
+              "label": "Typ",
+              "value": "Oberherrschaft"
+            },
+            {
+              "label": "Sitz",
+              "value": "Koldair"
+            },
+            {
+              "label": "Regierender Clan / Amt",
+              "value": "Clan Tir An’Ceallaigh"
+            },
+            {
+              "label": "Oberhaupt",
+              "value": "Ruarias Ceallaigh"
+            }
+          ]
+        },
+        {
+          "title": "Geographie",
+          "rows": [
+            {
+              "label": "Region",
+              "value": "Südliches Estyll"
+            }
+          ]
+        },
+        {
+          "title": "Kultur",
+          "rows": []
+        },
+        {
+          "title": "Handel",
+          "rows": []
+        }
+      ],
+      "families": [
+        {
+          "title": "Regierender Clan",
+          "houses": [
+            {
+              "name": "Clan Tir An’Ceallaigh",
+              "familyId": "haus-ceallaigh",
+              "imageSrc": "/Stammbäume/assets/images/houses/Aislearneach/clan-tir-an-ceallaigh.png",
+              "seat": "Koldair",
+              "liege": "Clan Ui’Morna",
+              "rank": "Mor-Tiarna-Clan",
+              "featured": true,
+              "featuredLabel": "Regierender Clan"
+            }
+          ]
+        },
+        {
+          "title": "Untergeordnete Clans",
+          "houses": [
+            {
+              "name": "Clan Na’Fiachiontach",
+              "familyId": "haus-fiachiontach",
+              "imageSrc": "/Stammbäume/assets/images/houses/Aislearneach/clan-na-fiachiontach.png",
+              "seat": "Koldair",
+              "liege": "Clan Tir An’Ceallaigh",
+              "rank": "Laird-Clan",
+              "featured": false
+            },
+            {
+              "name": "Clan Dal’Tartarfhuil",
+              "familyId": "haus-tartarfhuil",
+              "imageSrc": "/Stammbäume/assets/images/houses/Aislearneach/clan-dal-tartarfhuil.png",
+              "seat": "Koldair",
+              "liege": "Clan Tir An’Ceallaigh",
+              "rank": "Laird-Clan",
+              "featured": false
+            },
+            {
+              "name": "Clan An’Gaisgh",
+              "familyId": "haus-gaisgh",
+              "imageSrc": "/Stammbäume/assets/images/houses/Aislearneach/clan-an-gaisgh.png",
+              "seat": "Broch an Traigh",
+              "liege": "Clan Tir An’Ceallaigh",
+              "rank": "Laird-Clan",
+              "featured": false
+            },
+            {
+              "name": "Clan Na’Luchdon",
+              "familyId": "haus-luchdon",
+              "imageSrc": "/Stammbäume/assets/images/houses/Aislearneach/clan-na-luchdon.png",
+              "seat": "Broch an Creig",
+              "liege": "Clan Tir An’Ceallaigh",
+              "rank": "Laird-Clan",
+              "featured": false
+            }
+          ]
+        }
+      ],
+      "councilGroups": [
+        {
+          "title": "Herrschaft",
+          "members": [
+            {
+              "office": "Mor Tiarna von Tir na Iomaire",
+              "name": "Ruarias Ceallaigh",
+              "sourcePortrait": "https://64.media.tumblr.com/f40aa1aab6da7e0fe18be54e8acae4a0/c6d1e80b45fe9f5d-ba/s250x400/a3ab839aeeb9849bb1485d245a7b4437f232379a.pnj",
+              "featured": true,
+              "sourceArticle": "article-04.html",
+              "imageSrc": "/Stammbäume/assets/images/portraits/haus-morna/ruairias-1671-ceallaigh.jpg"
+            }
+          ]
+        },
+        {
+          "title": "Ratsämter",
+          "members": [
+            {
+              "office": "Marschall des Mor Tiarna",
+              "name": "Macmhar Tartarfhuil",
+              "sourcePortrait": "https://64.media.tumblr.com/d54acf983550ca7cbb848f310fcca521/69119d5efb6eed14-b8/s250x400/87924938e2d12ff9990779cf3bebb1a67057d0e3.pnj",
+              "sourceArticle": "article-04.html",
+              "imageSrc": "/Stammbäume/assets/images/portraits/haus-tartarfhuil/macmhar-1672-tartarfhuil.jpg",
+              "familyId": "haus-tartarfhuil",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-tartarfhuil&mode=view&person=macmhar-1672-tartarfhuil"
+            },
+            {
+              "office": "Kämmerer des Mor Tiarna",
+              "name": "Raghnall Ceallaigh",
+              "sourcePortrait": "https://64.media.tumblr.com/f776bfad518cef8036922bfdb9184777/17732ff738b901d1-f2/s250x400/81cbc3aab69205edac187b66c7fd56eb9473cea2.pnj",
+              "sourceArticle": "article-04.html",
+              "imageSrc": "/Stammbäume/assets/images/portraits/haus-ceallaigh/raghnall-1678-ceallaigh.jpg",
+              "familyId": "haus-ceallaigh",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-ceallaigh&mode=view&person=raghnall-1678-ceallaigh"
+            },
+            {
+              "office": "Justiziar des Mor Tiarna",
+              "name": "Giollach Ceallaigh",
+              "sourcePortrait": "https://64.media.tumblr.com/15f33755c83ed548150d30986b81ecf5/17732ff738b901d1-31/s250x400/632b1e130ab21f50e245866c09bee8c6b4f3d64d.pnj",
+              "sourceArticle": "article-04.html",
+              "imageSrc": "/Stammbäume/assets/images/portraits/haus-ceallaigh/giollaach-1679-ceallaigh.jpg"
+            },
+            {
+              "office": "Schatten des Mor Tiarna",
+              "name": "Congal",
+              "sourcePortrait": "https://i.imgur.com/ORCFOa2.jpeg",
+              "sourceArticle": "article-04.html",
+              "imageSrc": "/Kontinente/assets/images/aislearneach/council-congal.png"
+            },
+            {
+              "office": "Herold des Mor Tiarna",
+              "name": "Heilbhic Fiachiontach",
+              "sourcePortrait": "https://64.media.tumblr.com/56344afba98f344d4ea55aabf087effc/17732ff738b901d1-cc/s250x400/f6f70376ba8f69f986b95a97f220c7f96201bc57.pnj",
+              "sourceArticle": "article-04.html",
+              "imageSrc": "/Stammbäume/assets/images/portraits/haus-ceallaigh/heilbhic-1673-ceallaigh.jpg"
+            }
+          ]
+        },
+        {
+          "title": "Geistliche und beratende Ämter",
+          "members": [
+            {
+              "office": "Ratsmagier des Mor Tiarna",
+              "name": "Turloughas Fiachiontach",
+              "sourcePortrait": "https://64.media.tumblr.com/837760adddf4a2a1a745121eafb90a3c/f23095f507db9a08-2d/s250x400/b4ab147baa5a736e8e24f819132d9efb972defbd.pnj",
+              "sourceArticle": "article-04.html",
+              "imageSrc": "/Stammbäume/assets/images/portraits/haus-fiachiontach/turloughas-1605-fiachiontach.jpg",
+              "familyId": "haus-fiachiontach",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-fiachiontach&mode=view&person=turloughas-1605-fiachiontach"
+            },
+            {
+              "office": "Patriarch des Mor Tiarna",
+              "name": "Colmach Fiachiontach",
+              "sourcePortrait": "https://64.media.tumblr.com/001b991a852d47690d186095a7fff8bf/03b33af67f086ecd-93/s250x400/0d0d360a5be54280e6a6222b665c3f829157f7d3.pnj",
+              "sourceArticle": "article-04.html",
+              "imageSrc": "/Stammbäume/assets/images/portraits/haus-magach/colmach-1628-fiachiontach.jpg",
+              "familyId": "haus-fiachiontach",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-fiachiontach&mode=view&person=colmach-1628-fiachiontach"
+            },
+            {
+              "office": "Barde des Mor Tiarna",
+              "name": "Lasfairfhíona",
+              "sourcePortrait": "https://i.imgur.com/KpG9Dfd.jpeg",
+              "sourceArticle": "article-04.html",
+              "imageSrc": "/Kontinente/assets/images/aislearneach/council-lasfairfhiona.png"
+            },
+            {
+              "office": "Volkswahrer des Mor Tiarna",
+              "name": "Vakant",
+              "sourcePortrait": "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png",
+              "sourceArticle": "article-04.html",
+              "imageSrc": ""
+            },
+            {
+              "office": "Regent des Mor Tiarna",
+              "name": "Réaltín Ceallaigh",
+              "sourcePortrait": "https://64.media.tumblr.com/11d54cfae3a516645e563ea2753af2ab/c6d1e80b45fe9f5d-83/s250x400/540bc10f25e2eab8ccd95e9834a066f433a08dc4.pnj",
+              "sourceArticle": "article-04.html",
+              "imageSrc": "/Stammbäume/assets/images/portraits/haus-ceallaigh/realtin-1675-ceallaigh.jpg",
+              "familyId": "haus-ceallaigh",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-ceallaigh&mode=view&person=realtin-1675-ceallaigh"
+            }
+          ]
+        }
+      ],
+      "councilNote": "",
+      "vassalGroups": [],
+      "domains": [
+        {
+          "territoryId": "oberherrschaft-aislearneach-tir-na-iomaire",
+          "title": "Oberherrschaft Tir na Iomaire",
+          "center": "Koldair",
+          "sections": [
+            {
+              "title": "Stadt",
+              "placeIds": [
+                "aislearneach-f2841c0d-46cb-4f66-827f-20036a2518dc"
+              ]
+            },
+            {
+              "title": "Ahnenbaum",
+              "placeIds": [
+                "aislearneach-5c5db4cf-de93-43a8-bb97-7d3e8a0645e0"
+              ]
+            }
+          ]
+        }
+      ],
+      "territoryLinks": [
+        "herrschaft-aislearneach-fiachiontach",
+        "herrschaft-aislearneach-tartarfhuil",
+        "herrschaft-aislearneach-gaisgh",
+        "herrschaft-aislearneach-luchdon"
+      ],
+      "map": {
+        "title": "Karte Tir na Iomaire",
+        "imageSrc": "/Karten/Aislearneach/tir-na-iomaire/Kartenbilder/normal.webp",
+        "imageAlt": "Tir na Iomaire",
+        "href": "/Karten/karte.html?map=aislearneach-tir-na-iomaire"
+      }
+    },
+    {
+      "id": "herrschaft-aislearneach-coronach",
+      "title": "Herrschaft der Ua’Coronach",
+      "shortTitle": "Herrschaft der Ua’Coronach",
+      "type": "Herrschaft",
+      "kicker": "Herrschaft · Clan Ua’Coronach",
+      "parentHref": "/Kontinente/Estryll/Fürstentum Aislearneach/Oberherrschaft Tir na Geach/Oberherrschaft Tir na Geach.html",
+      "parentLabel": "Oberherrschaft Tir na Geach",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Estryll",
+          "slug": "estryll"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Aislearneach",
+          "slug": "fuerstentum-aislearneach"
+        },
+        {
+          "type": "Oberherrschaft",
+          "name": "Oberherrschaft Tir na Geach",
+          "slug": "oberherrschaft-aislearneach-tir-na-geach"
+        },
+        {
+          "type": "Herrschaft",
+          "name": "Herrschaft der Ua’Coronach",
+          "slug": "herrschaft-aislearneach-coronach"
+        }
+      ],
+      "crestSrc": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-geach.png",
+      "crestAlt": "Banner Oberherrschaft Tir na Geach",
+      "copy": {},
+      "cultureSections": [],
+      "infobox": [
+        {
+          "title": "Allgemein",
+          "rows": [
+            {
+              "label": "Name",
+              "value": "Herrschaft der Ua’Coronach"
+            },
+            {
+              "label": "Typ",
+              "value": "Herrschaft"
+            },
+            {
+              "label": "Sitz",
+              "value": "Gaelan"
+            },
+            {
+              "label": "Regierender Clan / Amt",
+              "value": "Clan Ua’Coronach"
+            },
+            {
+              "label": "Oberhaupt",
+              "value": "Colmach Coronach"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Regierender Clan",
+          "houses": [
+            {
+              "name": "Clan Ua’Coronach",
+              "familyId": "haus-coronach",
+              "imageSrc": "/Stammbäume/assets/images/houses/Aislearneach/clan-ua-coronach.png",
+              "seat": "Gaelan",
+              "liege": "Clan Ui’Morna",
+              "rank": "Laird-Clan",
+              "featured": true,
+              "featuredLabel": "Regierender Clan"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [
+        {
+          "title": "Herrschaft",
+          "members": [
+            {
+              "office": "Laird",
+              "name": "Colmach Coronach",
+              "imageSrc": "/Stammbäume/assets/images/portraits/haus-coronach/colmach-1671-coronach.jpg",
+              "familyId": "haus-coronach",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-coronach&mode=view&person=colmach-1671-coronach",
+              "featured": true
+            }
+          ]
+        }
+      ],
+      "councilNote": "",
+      "vassalGroups": [],
+      "domains": [
+        {
+          "territoryId": "herrschaft-aislearneach-coronach",
+          "title": "Herrschaft der Ua’Coronach",
+          "center": "Gaelan",
+          "sections": [
+            {
+              "title": "Bauernsiedlung",
+              "placeIds": [
+                "aislearneach-bfedf816-a75c-4e39-83e1-f3c95b878cd6",
+                "aislearneach-a9f562f6-3077-43d2-97fc-6f6f2ae62dc0",
+                "aislearneach-d97bea9b-5569-4c9d-88d9-b0f4a1a93853",
+                "aislearneach-2fb05c28-33c9-40a2-a67e-8579fd1d10d4"
+              ]
+            },
+            {
+              "title": "Dorf",
+              "placeIds": [
+                "aislearneach-a1e8c676-632c-4126-b345-3e9097bf7c6e",
+                "aislearneach-61e96fe9-88f2-4350-a7e6-71c993aff8f9"
+              ]
+            },
+            {
+              "title": "Waldsiedlung",
+              "placeIds": [
+                "aislearneach-fdcf35d3-3861-48b6-8127-1996c971e7eb",
+                "aislearneach-627d9a5b-ac43-4eb5-ac7d-46e34606510b"
+              ]
+            },
+            {
+              "title": "Hafensiedlung",
+              "placeIds": [
+                "aislearneach-5e005bbd-50da-45a2-93f2-6c3c6160094f"
+              ]
+            }
+          ]
+        }
+      ],
+      "territoryLinks": [],
+      "map": {
+        "title": "Karte Tir na Geach",
+        "imageSrc": "/Karten/Aislearneach/tir-na-geach/Kartenbilder/normal.webp",
+        "imageAlt": "Tir na Geach",
+        "href": "/Karten/karte.html?map=aislearneach-tir-na-geach"
+      }
+    },
+    {
+      "id": "herrschaft-aislearneach-morgacht",
+      "title": "Herrschaft der Na’Morgacht",
+      "shortTitle": "Herrschaft der Na’Morgacht",
+      "type": "Herrschaft",
+      "kicker": "Herrschaft · Clan Na’Morgacht",
+      "parentHref": "/Kontinente/Estryll/Fürstentum Aislearneach/Oberherrschaft Tir na Geach/Oberherrschaft Tir na Geach.html",
+      "parentLabel": "Oberherrschaft Tir na Geach",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Estryll",
+          "slug": "estryll"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Aislearneach",
+          "slug": "fuerstentum-aislearneach"
+        },
+        {
+          "type": "Oberherrschaft",
+          "name": "Oberherrschaft Tir na Geach",
+          "slug": "oberherrschaft-aislearneach-tir-na-geach"
+        },
+        {
+          "type": "Herrschaft",
+          "name": "Herrschaft der Na’Morgacht",
+          "slug": "herrschaft-aislearneach-morgacht"
+        }
+      ],
+      "crestSrc": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-geach.png",
+      "crestAlt": "Banner Oberherrschaft Tir na Geach",
+      "copy": {},
+      "cultureSections": [],
+      "infobox": [
+        {
+          "title": "Allgemein",
+          "rows": [
+            {
+              "label": "Name",
+              "value": "Herrschaft der Na’Morgacht"
+            },
+            {
+              "label": "Typ",
+              "value": "Herrschaft"
+            },
+            {
+              "label": "Sitz",
+              "value": "Broch an Geata"
+            },
+            {
+              "label": "Regierender Clan / Amt",
+              "value": "Clan Na’Morgacht"
+            },
+            {
+              "label": "Oberhaupt",
+              "value": "Brianach Morgacht"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Regierender Clan",
+          "houses": [
+            {
+              "name": "Clan Na’Morgacht",
+              "familyId": "haus-morgacht",
+              "imageSrc": "/Stammbäume/assets/images/houses/Aislearneach/clan-na-morgacht.png",
+              "seat": "Broch an Geata",
+              "liege": "Clan Ui’Morna",
+              "rank": "Laird-Clan",
+              "featured": true,
+              "featuredLabel": "Regierender Clan"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [
+        {
+          "title": "Herrschaft",
+          "members": [
+            {
+              "office": "Laird",
+              "name": "Brianach Morgacht",
+              "imageSrc": "/Stammbäume/assets/images/portraits/haus-ceallaigh/brianach-1671-morgacht.jpg",
+              "familyId": "haus-morgacht",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-morgacht&mode=view&person=brianach-1671-morgacht",
+              "featured": true
+            }
+          ]
+        }
+      ],
+      "councilNote": "",
+      "vassalGroups": [],
+      "domains": [
+        {
+          "territoryId": "herrschaft-aislearneach-morgacht",
+          "title": "Herrschaft der Na’Morgacht",
+          "center": "Broch an Geata",
+          "sections": [
+            {
+              "title": "Burg",
+              "placeIds": [
+                "aislearneach-53a3a6c5-90e2-46d3-8565-964da5f78bc6"
+              ]
+            },
+            {
+              "title": "Bauernsiedlung",
+              "placeIds": [
+                "aislearneach-6a3ca0a2-89c5-4c43-978f-2e90ea7fd6b8",
+                "aislearneach-d0f7b302-a388-42e1-a569-e39db2b42db5",
+                "aislearneach-11c3c6df-5d63-4627-9886-fb0578c7f53e",
+                "aislearneach-12f5ceb9-fb81-4f97-a570-79eec4f6dc4d",
+                "aislearneach-47bb443d-cc27-46d1-be64-c0d3d17fd1bd"
+              ]
+            },
+            {
+              "title": "Dorf",
+              "placeIds": [
+                "aislearneach-6c874040-0cef-4711-ad5b-c29d0189aac3"
+              ]
+            },
+            {
+              "title": "Klostersiedlung",
+              "placeIds": [
+                "aislearneach-c59d64d3-3c08-4a62-a198-736adad971f3"
+              ]
+            },
+            {
+              "title": "Turm",
+              "placeIds": [
+                "aislearneach-de7a870f-bbf0-4abb-8d10-7565cef4635c"
+              ]
+            },
+            {
+              "title": "Mine",
+              "placeIds": [
+                "aislearneach-fec73a84-7c8f-44e8-a4a7-e20877cd69e5"
+              ]
+            },
+            {
+              "title": "Waldsiedlung",
+              "placeIds": [
+                "aislearneach-184cf919-e52d-44be-b2bf-b309a60292ef"
+              ]
+            }
+          ]
+        }
+      ],
+      "territoryLinks": [],
+      "map": {
+        "title": "Karte Tir na Geach",
+        "imageSrc": "/Karten/Aislearneach/tir-na-geach/Kartenbilder/normal.webp",
+        "imageAlt": "Tir na Geach",
+        "href": "/Karten/karte.html?map=aislearneach-tir-na-geach"
+      }
+    },
+    {
+      "id": "herrschaft-aislearneach-rioga",
+      "title": "Herrschaft der An’Rioga",
+      "shortTitle": "Herrschaft der An’Rioga",
+      "type": "Herrschaft",
+      "kicker": "Herrschaft · Clan An’Rioga",
+      "parentHref": "/Kontinente/Estryll/Fürstentum Aislearneach/Oberherrschaft Tir na Geach/Oberherrschaft Tir na Geach.html",
+      "parentLabel": "Oberherrschaft Tir na Geach",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Estryll",
+          "slug": "estryll"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Aislearneach",
+          "slug": "fuerstentum-aislearneach"
+        },
+        {
+          "type": "Oberherrschaft",
+          "name": "Oberherrschaft Tir na Geach",
+          "slug": "oberherrschaft-aislearneach-tir-na-geach"
+        },
+        {
+          "type": "Herrschaft",
+          "name": "Herrschaft der An’Rioga",
+          "slug": "herrschaft-aislearneach-rioga"
+        }
+      ],
+      "crestSrc": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-geach.png",
+      "crestAlt": "Banner Oberherrschaft Tir na Geach",
+      "copy": {},
+      "cultureSections": [],
+      "infobox": [
+        {
+          "title": "Allgemein",
+          "rows": [
+            {
+              "label": "Name",
+              "value": "Herrschaft der An’Rioga"
+            },
+            {
+              "label": "Typ",
+              "value": "Herrschaft"
+            },
+            {
+              "label": "Sitz",
+              "value": "Broch an Duhbach"
+            },
+            {
+              "label": "Regierender Clan / Amt",
+              "value": "Clan An’Rioga"
+            },
+            {
+              "label": "Oberhaupt",
+              "value": "Macthar Rioga"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Regierender Clan",
+          "houses": [
+            {
+              "name": "Clan An’Rioga",
+              "familyId": "haus-rioga",
+              "imageSrc": "/Stammbäume/assets/images/houses/Aislearneach/clan-an-rioga.png",
+              "seat": "Broch an Duhbach",
+              "liege": "Clan Ui’Morna",
+              "rank": "Laird-Clan",
+              "featured": true,
+              "featuredLabel": "Regierender Clan"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [
+        {
+          "title": "Herrschaft",
+          "members": [
+            {
+              "office": "Laird",
+              "name": "Macthar Rioga",
+              "imageSrc": "/Stammbäume/assets/images/portraits/haus-rioga/macthar-1670-rioga.jpg",
+              "familyId": "haus-rioga",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-rioga&mode=view&person=macthar-1670-rioga",
+              "featured": true
+            }
+          ]
+        }
+      ],
+      "councilNote": "",
+      "vassalGroups": [],
+      "domains": [
+        {
+          "territoryId": "herrschaft-aislearneach-rioga",
+          "title": "Herrschaft der An’Rioga",
+          "center": "Broch an Duhbach",
+          "sections": [
+            {
+              "title": "Burg",
+              "placeIds": [
+                "aislearneach-9b6df7a2-a55b-4b37-bd27-a428cb57d74f"
+              ]
+            },
+            {
+              "title": "Mine",
+              "placeIds": [
+                "aislearneach-effa48e6-e5c8-4e7c-a892-a504f5fe4c08",
+                "aislearneach-fdb31c9e-7090-4cc0-b873-d8c8f5cfb6ed",
+                "aislearneach-3b7d12d6-bb39-4e7d-9d25-cf7ed49243fe",
+                "aislearneach-675ca91e-bcb3-4ddb-abd7-c8fcd323a88c"
+              ]
+            },
+            {
+              "title": "Dorf",
+              "placeIds": [
+                "aislearneach-fe2d6737-7510-4dcd-aa9c-ab7a03d2503f"
+              ]
+            },
+            {
+              "title": "Turm",
+              "placeIds": [
+                "aislearneach-27203a84-663f-45de-b5d5-96f831c47cac"
+              ]
+            },
+            {
+              "title": "Hafensiedlung",
+              "placeIds": [
+                "aislearneach-4a118756-f1aa-4566-9dfd-3fce32e72dfc",
+                "aislearneach-4fcff704-d110-4723-a85c-1d4b1ccb3fdc",
+                "aislearneach-57973240-1079-475f-a4f1-d2ab457f33cb"
+              ]
+            }
+          ]
+        }
+      ],
+      "territoryLinks": [],
+      "map": {
+        "title": "Karte Tir na Geach",
+        "imageSrc": "/Karten/Aislearneach/tir-na-geach/Kartenbilder/normal.webp",
+        "imageAlt": "Tir na Geach",
+        "href": "/Karten/karte.html?map=aislearneach-tir-na-geach"
+      }
+    },
+    {
+      "id": "herrschaft-aislearneach-fiantorc",
+      "title": "Herrschaft der Ua’Fiáintorc",
+      "shortTitle": "Herrschaft der Ua’Fiáintorc",
+      "type": "Herrschaft",
+      "kicker": "Herrschaft · Clan Ua’Fiáintorc",
+      "parentHref": "/Kontinente/Estryll/Fürstentum Aislearneach/Oberherrschaft Tir na Tirth/Oberherrschaft Tir na Tirth.html",
+      "parentLabel": "Oberherrschaft Tir na Tirth",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Estryll",
+          "slug": "estryll"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Aislearneach",
+          "slug": "fuerstentum-aislearneach"
+        },
+        {
+          "type": "Oberherrschaft",
+          "name": "Oberherrschaft Tir na Tirth",
+          "slug": "oberherrschaft-aislearneach-tir-na-tirth"
+        },
+        {
+          "type": "Herrschaft",
+          "name": "Herrschaft der Ua’Fiáintorc",
+          "slug": "herrschaft-aislearneach-fiantorc"
+        }
+      ],
+      "crestSrc": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-tirth.png",
+      "crestAlt": "Banner Oberherrschaft Tir na Tirth",
+      "copy": {},
+      "cultureSections": [],
+      "infobox": [
+        {
+          "title": "Allgemein",
+          "rows": [
+            {
+              "label": "Name",
+              "value": "Herrschaft der Ua’Fiáintorc"
+            },
+            {
+              "label": "Typ",
+              "value": "Herrschaft"
+            },
+            {
+              "label": "Sitz",
+              "value": "Lorai"
+            },
+            {
+              "label": "Regierender Clan / Amt",
+              "value": "Clan Ua’Fiáintorc"
+            },
+            {
+              "label": "Oberhaupt",
+              "value": "Cael Fiantorc"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Regierender Clan",
+          "houses": [
+            {
+              "name": "Clan Ua’Fiáintorc",
+              "familyId": "haus-fiantorc",
+              "imageSrc": "/Stammbäume/assets/images/houses/Aislearneach/clan-ua-fiaintorc.png",
+              "seat": "Lorai",
+              "liege": "Clan Mac’Durthacht",
+              "rank": "Laird-Clan",
+              "featured": true,
+              "featuredLabel": "Regierender Clan"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [
+        {
+          "title": "Herrschaft",
+          "members": [
+            {
+              "office": "Laird",
+              "name": "Cael Fiantorc",
+              "imageSrc": "/Stammbäume/assets/images/portraits/haus-durthacht/cael-1673-fiantorc.jpg",
+              "familyId": "haus-fiantorc",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-fiantorc&mode=view&person=cael-1673-fiantorc",
+              "featured": true
+            }
+          ]
+        }
+      ],
+      "councilNote": "",
+      "vassalGroups": [],
+      "domains": [
+        {
+          "territoryId": "herrschaft-aislearneach-fiantorc",
+          "title": "Herrschaft der Ua’Fiáintorc",
+          "center": "Lorai",
+          "sections": [
+            {
+              "title": "Dorf",
+              "placeIds": [
+                "aislearneach-b442c787-b33c-4f81-9a21-55eda0f30a35",
+                "aislearneach-908b644c-6390-4ef7-a34f-cd9452d463f5",
+                "aislearneach-e66955bc-2857-433d-bd24-e62a06bd33f9",
+                "aislearneach-3cfed698-e027-464b-b35a-4011ac2f55fd"
+              ]
+            },
+            {
+              "title": "Außenposten",
+              "placeIds": [
+                "aislearneach-d5aeb783-fb3a-4748-8dab-ca763ba52f11"
+              ]
+            },
+            {
+              "title": "Flusssiedlung",
+              "placeIds": [
+                "aislearneach-0c0a5010-79d8-44f6-93de-abd962f28727"
+              ]
+            }
+          ]
+        }
+      ],
+      "territoryLinks": [],
+      "map": {
+        "title": "Karte Tir na Tirth",
+        "imageSrc": "/Karten/Aislearneach/tir-na-tirth/Kartenbilder/normal.webp",
+        "imageAlt": "Tir na Tirth",
+        "href": "/Karten/karte.html?map=aislearneach-tir-na-tirth"
+      }
+    },
+    {
+      "id": "herrschaft-aislearneach-treada",
+      "title": "Herrschaft der Ua’Tréada",
+      "shortTitle": "Herrschaft der Ua’Tréada",
+      "type": "Herrschaft",
+      "kicker": "Herrschaft · Clan Ua’Tréada",
+      "parentHref": "/Kontinente/Estryll/Fürstentum Aislearneach/Oberherrschaft Tir na Tirth/Oberherrschaft Tir na Tirth.html",
+      "parentLabel": "Oberherrschaft Tir na Tirth",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Estryll",
+          "slug": "estryll"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Aislearneach",
+          "slug": "fuerstentum-aislearneach"
+        },
+        {
+          "type": "Oberherrschaft",
+          "name": "Oberherrschaft Tir na Tirth",
+          "slug": "oberherrschaft-aislearneach-tir-na-tirth"
+        },
+        {
+          "type": "Herrschaft",
+          "name": "Herrschaft der Ua’Tréada",
+          "slug": "herrschaft-aislearneach-treada"
+        }
+      ],
+      "crestSrc": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-tirth.png",
+      "crestAlt": "Banner Oberherrschaft Tir na Tirth",
+      "copy": {},
+      "cultureSections": [],
+      "infobox": [
+        {
+          "title": "Allgemein",
+          "rows": [
+            {
+              "label": "Name",
+              "value": "Herrschaft der Ua’Tréada"
+            },
+            {
+              "label": "Typ",
+              "value": "Herrschaft"
+            },
+            {
+              "label": "Sitz",
+              "value": "Lorai"
+            },
+            {
+              "label": "Regierender Clan / Amt",
+              "value": "Clan Ua’Tréada"
+            },
+            {
+              "label": "Oberhaupt",
+              "value": "Kealtán Treada"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Regierender Clan",
+          "houses": [
+            {
+              "name": "Clan Ua’Tréada",
+              "familyId": "haus-treada",
+              "imageSrc": "/Stammbäume/assets/images/houses/Aislearneach/clan-ua-treada.png",
+              "seat": "Lorai",
+              "liege": "Clan Mac’Durthacht",
+              "rank": "Laird-Clan",
+              "featured": true,
+              "featuredLabel": "Regierender Clan"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [
+        {
+          "title": "Herrschaft",
+          "members": [
+            {
+              "office": "Laird",
+              "name": "Kealtán Treada",
+              "imageSrc": "/Stammbäume/assets/images/portraits/haus-treada/kealtan-1673-treada.jpg",
+              "familyId": "haus-treada",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-treada&mode=view&person=kealtan-1673-treada",
+              "featured": true
+            }
+          ]
+        }
+      ],
+      "councilNote": "",
+      "vassalGroups": [],
+      "domains": [
+        {
+          "territoryId": "herrschaft-aislearneach-treada",
+          "title": "Herrschaft der Ua’Tréada",
+          "center": "Lorai",
+          "sections": [
+            {
+              "title": "Bauernsiedlung",
+              "placeIds": [
+                "aislearneach-937dced6-eeb3-4c34-84df-cf9fc892bdf7",
+                "aislearneach-f78f38a0-e201-414a-8df4-ff4dbb97978e",
+                "aislearneach-6825a1ff-5956-4d74-bdd1-9d1e477511fc"
+              ]
+            },
+            {
+              "title": "Klostersiedlung",
+              "placeIds": [
+                "aislearneach-95ce384b-6651-4819-aaa6-5e25cf64735e"
+              ]
+            },
+            {
+              "title": "Außenposten",
+              "placeIds": [
+                "aislearneach-a8e18bcf-5aba-4218-9583-45162a49ff20",
+                "aislearneach-1b08b28e-dee7-47d0-892b-d6ee3a85deb0"
+              ]
+            },
+            {
+              "title": "Waldsiedlung",
+              "placeIds": [
+                "aislearneach-d59a7a20-cb0c-462a-8bbe-29c28d65bf9f",
+                "aislearneach-01af7bcd-42cb-4bce-9686-9eb93a109a55"
+              ]
+            },
+            {
+              "title": "Dorf",
+              "placeIds": [
+                "aislearneach-2df2cca1-1437-4033-a8e9-c70e0c351cce",
+                "aislearneach-569d0eae-6404-4534-89b3-6027e15094ec"
+              ]
+            }
+          ]
+        }
+      ],
+      "territoryLinks": [],
+      "map": {
+        "title": "Karte Tir na Tirth",
+        "imageSrc": "/Karten/Aislearneach/tir-na-tirth/Kartenbilder/normal.webp",
+        "imageAlt": "Tir na Tirth",
+        "href": "/Karten/karte.html?map=aislearneach-tir-na-tirth"
+      }
+    },
+    {
+      "id": "herrschaft-aislearneach-muileach",
+      "title": "Lehnsherrschaft der Ua’Muileach",
+      "shortTitle": "Lehnsherrschaft der Ua’Muileach",
+      "type": "Lehnsherrschaft",
+      "kicker": "Lehnsherrschaft · Clan Ua’Muileach",
+      "parentHref": "/Kontinente/Estryll/Fürstentum Aislearneach/Oberherrschaft Tir na Tirth/Oberherrschaft Tir na Tirth.html",
+      "parentLabel": "Oberherrschaft Tir na Tirth",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Estryll",
+          "slug": "estryll"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Aislearneach",
+          "slug": "fuerstentum-aislearneach"
+        },
+        {
+          "type": "Oberherrschaft",
+          "name": "Oberherrschaft Tir na Tirth",
+          "slug": "oberherrschaft-aislearneach-tir-na-tirth"
+        },
+        {
+          "type": "Lehnsherrschaft",
+          "name": "Lehnsherrschaft der Ua’Muileach",
+          "slug": "herrschaft-aislearneach-muileach"
+        }
+      ],
+      "crestSrc": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-tirth.png",
+      "crestAlt": "Banner Oberherrschaft Tir na Tirth",
+      "copy": {},
+      "cultureSections": [],
+      "infobox": [
+        {
+          "title": "Allgemein",
+          "rows": [
+            {
+              "label": "Name",
+              "value": "Lehnsherrschaft der Ua’Muileach"
+            },
+            {
+              "label": "Typ",
+              "value": "Lehnsherrschaft"
+            },
+            {
+              "label": "Sitz",
+              "value": "Athan"
+            },
+            {
+              "label": "Regierender Clan / Amt",
+              "value": "Clan Ua’Muileach"
+            },
+            {
+              "label": "Oberhaupt",
+              "value": "Aonghas Muileach"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Regierender Clan",
+          "houses": [
+            {
+              "name": "Clan Ua’Muileach",
+              "familyId": "haus-muileach",
+              "imageSrc": "/Stammbäume/assets/images/houses/Aislearneach/clan-ua-muileach.png",
+              "seat": "Athan",
+              "liege": "Clan Mac’Durthacht",
+              "rank": "Dún-Tiarna-Clan",
+              "featured": true,
+              "featuredLabel": "Regierender Clan"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [
+        {
+          "title": "Herrschaft",
+          "members": [
+            {
+              "office": "Dún Tiarna",
+              "name": "Aonghas Muileach",
+              "imageSrc": "/Stammbäume/assets/images/portraits/haus-durthacht/aonghas-1670-muileach.jpg",
+              "familyId": "haus-muileach",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-muileach&mode=view&person=aonghas-1670-muileach",
+              "featured": true
+            }
+          ]
+        }
+      ],
+      "councilNote": "",
+      "vassalGroups": [],
+      "domains": [
+        {
+          "territoryId": "herrschaft-aislearneach-muileach",
+          "title": "Lehnsherrschaft der Ua’Muileach",
+          "center": "Athan",
+          "sections": [
+            {
+              "title": "Stadt",
+              "placeIds": [
+                "aislearneach-2b98cb2b-6712-4292-990f-1aed567cc010"
+              ]
+            },
+            {
+              "title": "Bauernsiedlung",
+              "placeIds": [
+                "aislearneach-9a6c89f4-56f8-4e50-87bf-3e496c7dc905",
+                "aislearneach-f8a72845-b7fe-4158-92db-5182f8886152"
+              ]
+            },
+            {
+              "title": "Dorf",
+              "placeIds": [
+                "aislearneach-9b376b80-49c3-47a7-9b1e-6266f644c9e6",
+                "aislearneach-1f575cb4-8b97-477a-8847-8615f3d26d02",
+                "aislearneach-475c4154-74ba-4924-8928-5222e483d82f",
+                "aislearneach-70e89287-9ce3-4aee-8080-1948ae708707"
+              ]
+            },
+            {
+              "title": "Flusssiedlung",
+              "placeIds": [
+                "aislearneach-9d67bdec-1142-4bde-a30c-c10b2fc7f485"
+              ]
+            },
+            {
+              "title": "Außenposten",
+              "placeIds": [
+                "aislearneach-e5712d7a-9655-4a62-bbb9-b4b7f78798b4"
+              ]
+            },
+            {
+              "title": "Waldsiedlung",
+              "placeIds": [
+                "aislearneach-2317c3fa-f437-4605-9843-40fd882eb2ac",
+                "aislearneach-621cac89-8c42-4cac-8c7e-17267f3ce3fb"
+              ]
+            }
+          ]
+        }
+      ],
+      "territoryLinks": [],
+      "map": {
+        "title": "Karte Tir na Tirth",
+        "imageSrc": "/Karten/Aislearneach/tir-na-tirth/Kartenbilder/normal.webp",
+        "imageAlt": "Tir na Tirth",
+        "href": "/Karten/karte.html?map=aislearneach-tir-na-tirth"
+      }
+    },
+    {
+      "id": "herrschaft-aislearneach-feannag",
+      "title": "Lehnsherrschaft der An’Feannag",
+      "shortTitle": "Lehnsherrschaft der An’Feannag",
+      "type": "Lehnsherrschaft",
+      "kicker": "Lehnsherrschaft · Clan An’Feannag",
+      "parentHref": "/Kontinente/Estryll/Fürstentum Aislearneach/Oberherrschaft Tir na Faela/Oberherrschaft Tir na Faela.html",
+      "parentLabel": "Oberherrschaft Tir na Faela",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Estryll",
+          "slug": "estryll"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Aislearneach",
+          "slug": "fuerstentum-aislearneach"
+        },
+        {
+          "type": "Oberherrschaft",
+          "name": "Oberherrschaft Tir na Faela",
+          "slug": "oberherrschaft-aislearneach-tir-na-faela"
+        },
+        {
+          "type": "Lehnsherrschaft",
+          "name": "Lehnsherrschaft der An’Feannag",
+          "slug": "herrschaft-aislearneach-feannag"
+        }
+      ],
+      "crestSrc": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-faela.png",
+      "crestAlt": "Banner Oberherrschaft Tir na Faela",
+      "copy": {},
+      "cultureSections": [],
+      "infobox": [
+        {
+          "title": "Allgemein",
+          "rows": [
+            {
+              "label": "Name",
+              "value": "Lehnsherrschaft der An’Feannag"
+            },
+            {
+              "label": "Typ",
+              "value": "Lehnsherrschaft"
+            },
+            {
+              "label": "Sitz",
+              "value": "Ceatharlach"
+            },
+            {
+              "label": "Regierender Clan / Amt",
+              "value": "Clan An’Feannag"
+            },
+            {
+              "label": "Oberhaupt",
+              "value": "Dànaidh Feannag"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Regierender Clan",
+          "houses": [
+            {
+              "name": "Clan An’Feannag",
+              "familyId": "haus-feannag",
+              "imageSrc": "/Stammbäume/assets/images/houses/Aislearneach/clan-an-feannag.png",
+              "seat": "Ceatharlach",
+              "liege": "Clan Mac’Fintain",
+              "rank": "Dún-Tiarna-Clan",
+              "featured": true,
+              "featuredLabel": "Regierender Clan"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [
+        {
+          "title": "Herrschaft",
+          "members": [
+            {
+              "office": "Dún Tiarna",
+              "name": "Dànaidh Feannag",
+              "imageSrc": "/Stammbäume/assets/images/portraits/haus-feannag/danaidh-1674-feannag.jpg",
+              "familyId": "haus-feannag",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-feannag&mode=view&person=danaidh-1674-feannag",
+              "featured": true
+            }
+          ]
+        }
+      ],
+      "councilNote": "",
+      "vassalGroups": [],
+      "domains": [
+        {
+          "territoryId": "herrschaft-aislearneach-feannag",
+          "title": "Lehnsherrschaft der An’Feannag",
+          "center": "Ceatharlach",
+          "sections": [
+            {
+              "title": "Stadt",
+              "placeIds": [
+                "aislearneach-9c8a27aa-daf5-4e35-a58c-d9c2d6f86a0a"
+              ]
+            },
+            {
+              "title": "Waldsiedlung",
+              "placeIds": [
+                "aislearneach-80d59f54-56db-44f3-9436-19f782f58b84",
+                "aislearneach-89861710-ea5b-4401-b9c1-fea19ee14c97",
+                "aislearneach-1224fc06-462f-41d6-b349-aa21bc929c52"
+              ]
+            },
+            {
+              "title": "Klostersiedlung",
+              "placeIds": [
+                "aislearneach-8c6ed0e6-1268-48cc-af93-9f82605a1c66"
+              ]
+            },
+            {
+              "title": "Bauernsiedlung",
+              "placeIds": [
+                "aislearneach-cc62ad13-a98c-4054-abc6-5fc70d7c7d33",
+                "aislearneach-0af41998-9b78-4189-9ec5-95c2c0fd06e8",
+                "aislearneach-107dc6d9-2d1d-4e68-a41a-6610d463dc8e",
+                "aislearneach-108acf9f-b821-4350-87a9-9fe951fec47f",
+                "aislearneach-124fabe8-9a2d-4cbc-a296-b53a1f34383c",
+                "aislearneach-34ce4420-7304-4691-b27a-c0639e1e12f0"
+              ]
+            },
+            {
+              "title": "Dorf",
+              "placeIds": [
+                "aislearneach-d7f79d67-d242-4991-9f32-94243f8885eb",
+                "aislearneach-44922b96-6b65-45f6-bf14-ca2acb4cc6db",
+                "aislearneach-74c72c6f-9ece-4398-b587-773ac7785104",
+                "aislearneach-774c65d5-7a3f-4e5b-b36e-0bcf6d28308b"
+              ]
+            }
+          ]
+        }
+      ],
+      "territoryLinks": [],
+      "map": {
+        "title": "Karte Tir na Faela",
+        "imageSrc": "/Karten/Aislearneach/tir-na-faela/Kartenbilder/normal.webp",
+        "imageAlt": "Tir na Faela",
+        "href": "/Karten/karte.html?map=aislearneach-tir-na-faela"
+      }
+    },
+    {
+      "id": "herrschaft-aislearneach-uilebheist",
+      "title": "Herrschaft der An’Uilebheist",
+      "shortTitle": "Herrschaft der An’Uilebheist",
+      "type": "Herrschaft",
+      "kicker": "Herrschaft · Clan An’Uilebheist",
+      "parentHref": "/Kontinente/Estryll/Fürstentum Aislearneach/Oberherrschaft Tir na Adharcach/Oberherrschaft Tir na Adharcach.html",
+      "parentLabel": "Oberherrschaft Tir na Adharcach",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Estryll",
+          "slug": "estryll"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Aislearneach",
+          "slug": "fuerstentum-aislearneach"
+        },
+        {
+          "type": "Kirchliche Oberherrschaft",
+          "name": "Oberherrschaft Tir na Adharcach",
+          "slug": "oberherrschaft-aislearneach-tir-na-adharcach"
+        },
+        {
+          "type": "Herrschaft",
+          "name": "Herrschaft der An’Uilebheist",
+          "slug": "herrschaft-aislearneach-uilebheist"
+        }
+      ],
+      "crestSrc": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-adharcach.png",
+      "crestAlt": "Banner Oberherrschaft Tir na Adharcach",
+      "copy": {},
+      "cultureSections": [],
+      "infobox": [
+        {
+          "title": "Allgemein",
+          "rows": [
+            {
+              "label": "Name",
+              "value": "Herrschaft der An’Uilebheist"
+            },
+            {
+              "label": "Typ",
+              "value": "Herrschaft"
+            },
+            {
+              "label": "Sitz",
+              "value": "Foraoise"
+            },
+            {
+              "label": "Regierender Clan / Amt",
+              "value": "Clan An’Uilebheist"
+            },
+            {
+              "label": "Oberhaupt",
+              "value": "Proinnsias Uilebheist"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Regierender Clan",
+          "houses": [
+            {
+              "name": "Clan An’Uilebheist",
+              "familyId": "haus-uilebheist",
+              "imageSrc": "/Stammbäume/assets/images/houses/Aislearneach/clan-an-uilebheist.png",
+              "seat": "Foraoise",
+              "liege": "Sagarth von Foraoise (kirchliche Oberherrschaft)",
+              "rank": "Laird-Clan",
+              "featured": true,
+              "featuredLabel": "Regierender Clan"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [
+        {
+          "title": "Herrschaft",
+          "members": [
+            {
+              "office": "Laird",
+              "name": "Proinnsias Uilebheist",
+              "imageSrc": "/Stammbäume/assets/images/portraits/haus-uilebheist/proinnsias-1672-uilebheist.jpg",
+              "familyId": "haus-uilebheist",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-uilebheist&mode=view&person=proinnsias-1672-uilebheist",
+              "featured": true
+            }
+          ]
+        }
+      ],
+      "councilNote": "",
+      "vassalGroups": [],
+      "domains": [
+        {
+          "territoryId": "herrschaft-aislearneach-uilebheist",
+          "title": "Herrschaft der An’Uilebheist",
+          "center": "Foraoise",
+          "sections": [
+            {
+              "title": "Klostersiedlung",
+              "placeIds": [
+                "aislearneach-d50383df-468b-49cc-b50f-9b78084d2243",
+                "aislearneach-ce598811-5f42-4caf-9ffb-a5c6ad7f0b8c",
+                "aislearneach-1552c511-54f7-44ac-87db-152d634286cd"
+              ]
+            },
+            {
+              "title": "Waldsiedlung",
+              "placeIds": [
+                "aislearneach-dc64f74e-d44a-4120-ac8d-a10dc9bec446",
+                "aislearneach-fa03e946-921f-4025-8187-dca47f8ae1f4",
+                "aislearneach-fd3cac27-a8f8-4d64-b197-b54d71c0421e",
+                "aislearneach-92053320-f24b-4914-b9ce-22b66f2444d6"
+              ]
+            },
+            {
+              "title": "Dorf",
+              "placeIds": [
+                "aislearneach-e65d2e1f-bf18-4230-99da-a8c3a2107c5a",
+                "aislearneach-733ce655-4b2b-411c-8874-9fbc40b57acb"
+              ]
+            },
+            {
+              "title": "Ahnenbaum",
+              "placeIds": [
+                "aislearneach-5a0c4946-a490-49af-a704-4c9121da5acb",
+                "aislearneach-9930ec95-a592-4a2b-abc7-e0381ba58cb5"
+              ]
+            },
+            {
+              "title": "Turm",
+              "placeIds": [
+                "aislearneach-50350c5c-1b67-431e-a704-74f2ac5fa76b"
+              ]
+            }
+          ]
+        }
+      ],
+      "territoryLinks": [],
+      "map": {
+        "title": "Karte Tir na Adharcach",
+        "imageSrc": "/Karten/Aislearneach/tir-na-adharcach/Kartenbilder/normal.webp",
+        "imageAlt": "Tir na Adharcach",
+        "href": "/Karten/karte.html?map=aislearneach-tir-na-adharcach"
+      }
+    },
+    {
+      "id": "herrschaft-aislearneach-cnogan",
+      "title": "Herrschaft der Nic’Cnogan",
+      "shortTitle": "Herrschaft der Nic’Cnogan",
+      "type": "Herrschaft",
+      "kicker": "Herrschaft · Clan Nic’Cnogan",
+      "parentHref": "/Kontinente/Estryll/Fürstentum Aislearneach/Oberherrschaft Tir na Adharcach/Oberherrschaft Tir na Adharcach.html",
+      "parentLabel": "Oberherrschaft Tir na Adharcach",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Estryll",
+          "slug": "estryll"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Aislearneach",
+          "slug": "fuerstentum-aislearneach"
+        },
+        {
+          "type": "Kirchliche Oberherrschaft",
+          "name": "Oberherrschaft Tir na Adharcach",
+          "slug": "oberherrschaft-aislearneach-tir-na-adharcach"
+        },
+        {
+          "type": "Herrschaft",
+          "name": "Herrschaft der Nic’Cnogan",
+          "slug": "herrschaft-aislearneach-cnogan"
+        }
+      ],
+      "crestSrc": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-adharcach.png",
+      "crestAlt": "Banner Oberherrschaft Tir na Adharcach",
+      "copy": {},
+      "cultureSections": [],
+      "infobox": [
+        {
+          "title": "Allgemein",
+          "rows": [
+            {
+              "label": "Name",
+              "value": "Herrschaft der Nic’Cnogan"
+            },
+            {
+              "label": "Typ",
+              "value": "Herrschaft"
+            },
+            {
+              "label": "Sitz",
+              "value": "Foraoise"
+            },
+            {
+              "label": "Regierender Clan / Amt",
+              "value": "Clan Nic’Cnogan"
+            },
+            {
+              "label": "Oberhaupt",
+              "value": "Tormoid Cnogan"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Regierender Clan",
+          "houses": [
+            {
+              "name": "Clan Nic’Cnogan",
+              "familyId": "haus-cnogan",
+              "imageSrc": "/Stammbäume/assets/images/houses/Aislearneach/clan-nic-cnogan.png",
+              "seat": "Foraoise",
+              "liege": "Sagarth von Foraoise (kirchliche Oberherrschaft)",
+              "rank": "Laird-Clan",
+              "featured": true,
+              "featuredLabel": "Regierender Clan"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [
+        {
+          "title": "Herrschaft",
+          "members": [
+            {
+              "office": "Laird",
+              "name": "Tormoid Cnogan",
+              "imageSrc": "/Stammbäume/assets/images/portraits/haus-cnogan/tormoid-1670-cnogan.jpg",
+              "familyId": "haus-cnogan",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-cnogan&mode=view&person=tormoid-1670-cnogan",
+              "featured": true
+            }
+          ]
+        }
+      ],
+      "councilNote": "",
+      "vassalGroups": [],
+      "domains": [
+        {
+          "territoryId": "herrschaft-aislearneach-cnogan",
+          "title": "Herrschaft der Nic’Cnogan",
+          "center": "Foraoise",
+          "sections": [
+            {
+              "title": "Waldsiedlung",
+              "placeIds": [
+                "aislearneach-ad817317-07c9-4c1a-b74e-40bbe5192577",
+                "aislearneach-c0f0249d-33a2-4c7b-976a-c079b66a72c6",
+                "aislearneach-0b7e77e2-fd51-4c1f-982a-cca27877884a",
+                "aislearneach-11d7102b-a8fd-4e0d-b9f0-f6c9a3291493",
+                "aislearneach-56461bac-bd0b-4aae-97c5-d395205de04e"
+              ]
+            },
+            {
+              "title": "Klostersiedlung",
+              "placeIds": [
+                "aislearneach-b0d56299-ebfc-4b8d-86bb-b88c9a00e0d2",
+                "aislearneach-e6e4e223-069b-401f-84d8-a603038e9927"
+              ]
+            },
+            {
+              "title": "Ahnenbaum",
+              "placeIds": [
+                "aislearneach-9f17da9b-e6d4-46c6-83e7-96859c7b4371"
+              ]
+            },
+            {
+              "title": "Turm",
+              "placeIds": [
+                "aislearneach-fd230817-0356-4027-8c23-931835721e72"
+              ]
+            }
+          ]
+        }
+      ],
+      "territoryLinks": [],
+      "map": {
+        "title": "Karte Tir na Adharcach",
+        "imageSrc": "/Karten/Aislearneach/tir-na-adharcach/Kartenbilder/normal.webp",
+        "imageAlt": "Tir na Adharcach",
+        "href": "/Karten/karte.html?map=aislearneach-tir-na-adharcach"
+      }
+    },
+    {
+      "id": "herrschaft-aislearneach-fiachiontach",
+      "title": "Herrschaft der Na’Fiachiontach",
+      "shortTitle": "Herrschaft der Na’Fiachiontach",
+      "type": "Herrschaft",
+      "kicker": "Herrschaft · Clan Na’Fiachiontach",
+      "parentHref": "/Kontinente/Estryll/Fürstentum Aislearneach/Oberherrschaft Tir na Iomaire/Oberherrschaft Tir na Iomaire.html",
+      "parentLabel": "Oberherrschaft Tir na Iomaire",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Estryll",
+          "slug": "estryll"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Aislearneach",
+          "slug": "fuerstentum-aislearneach"
+        },
+        {
+          "type": "Oberherrschaft",
+          "name": "Oberherrschaft Tir na Iomaire",
+          "slug": "oberherrschaft-aislearneach-tir-na-iomaire"
+        },
+        {
+          "type": "Herrschaft",
+          "name": "Herrschaft der Na’Fiachiontach",
+          "slug": "herrschaft-aislearneach-fiachiontach"
+        }
+      ],
+      "crestSrc": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-iomaire.png",
+      "crestAlt": "Banner Oberherrschaft Tir na Iomaire",
+      "copy": {},
+      "cultureSections": [],
+      "infobox": [
+        {
+          "title": "Allgemein",
+          "rows": [
+            {
+              "label": "Name",
+              "value": "Herrschaft der Na’Fiachiontach"
+            },
+            {
+              "label": "Typ",
+              "value": "Herrschaft"
+            },
+            {
+              "label": "Sitz",
+              "value": "Koldair"
+            },
+            {
+              "label": "Regierender Clan / Amt",
+              "value": "Clan Na’Fiachiontach"
+            },
+            {
+              "label": "Oberhaupt",
+              "value": "Colmach Fiachiontach"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Regierender Clan",
+          "houses": [
+            {
+              "name": "Clan Na’Fiachiontach",
+              "familyId": "haus-fiachiontach",
+              "imageSrc": "/Stammbäume/assets/images/houses/Aislearneach/clan-na-fiachiontach.png",
+              "seat": "Koldair",
+              "liege": "Clan Tir An’Ceallaigh",
+              "rank": "Laird-Clan",
+              "featured": true,
+              "featuredLabel": "Regierender Clan"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [
+        {
+          "title": "Herrschaft",
+          "members": [
+            {
+              "office": "Laird",
+              "name": "Colmach Fiachiontach",
+              "imageSrc": "/Stammbäume/assets/images/portraits/haus-magach/colmach-1628-fiachiontach.jpg",
+              "familyId": "haus-fiachiontach",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-fiachiontach&mode=view&person=colmach-1628-fiachiontach",
+              "featured": true
+            }
+          ]
+        }
+      ],
+      "councilNote": "",
+      "vassalGroups": [],
+      "domains": [
+        {
+          "territoryId": "herrschaft-aislearneach-fiachiontach",
+          "title": "Herrschaft der Na’Fiachiontach",
+          "center": "Koldair",
+          "sections": [
+            {
+              "title": "Hafensiedlung",
+              "placeIds": [
+                "aislearneach-a2a943cc-c6df-4562-8abc-9801e57ab0e0"
+              ]
+            },
+            {
+              "title": "Dorf",
+              "placeIds": [
+                "aislearneach-a61619f8-0c48-4390-9d0b-31ddfd0ffd2e",
+                "aislearneach-1bbdd5db-8093-4721-88f2-dc38df60074d"
+              ]
+            },
+            {
+              "title": "Bauernsiedlung",
+              "placeIds": [
+                "aislearneach-eaaa6417-2de4-4820-bf49-ec84bb3e8760",
+                "aislearneach-29e95490-afd9-4c0e-a49f-dfaed2b3a61e"
+              ]
+            },
+            {
+              "title": "Turm",
+              "placeIds": [
+                "aislearneach-1774c652-1b0d-49e1-9749-17cda260d9dd"
+              ]
+            },
+            {
+              "title": "Waldsiedlung",
+              "placeIds": [
+                "aislearneach-08c94d97-8998-4249-853e-ec0c14fec44f"
+              ]
+            }
+          ]
+        }
+      ],
+      "territoryLinks": [],
+      "map": {
+        "title": "Karte Tir na Iomaire",
+        "imageSrc": "/Karten/Aislearneach/tir-na-iomaire/Kartenbilder/normal.webp",
+        "imageAlt": "Tir na Iomaire",
+        "href": "/Karten/karte.html?map=aislearneach-tir-na-iomaire"
+      }
+    },
+    {
+      "id": "herrschaft-aislearneach-tartarfhuil",
+      "title": "Herrschaft der Dal’Tartarfhuil",
+      "shortTitle": "Herrschaft der Dal’Tartarfhuil",
+      "type": "Herrschaft",
+      "kicker": "Herrschaft · Clan Dal’Tartarfhuil",
+      "parentHref": "/Kontinente/Estryll/Fürstentum Aislearneach/Oberherrschaft Tir na Iomaire/Oberherrschaft Tir na Iomaire.html",
+      "parentLabel": "Oberherrschaft Tir na Iomaire",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Estryll",
+          "slug": "estryll"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Aislearneach",
+          "slug": "fuerstentum-aislearneach"
+        },
+        {
+          "type": "Oberherrschaft",
+          "name": "Oberherrschaft Tir na Iomaire",
+          "slug": "oberherrschaft-aislearneach-tir-na-iomaire"
+        },
+        {
+          "type": "Herrschaft",
+          "name": "Herrschaft der Dal’Tartarfhuil",
+          "slug": "herrschaft-aislearneach-tartarfhuil"
+        }
+      ],
+      "crestSrc": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-iomaire.png",
+      "crestAlt": "Banner Oberherrschaft Tir na Iomaire",
+      "copy": {},
+      "cultureSections": [],
+      "infobox": [
+        {
+          "title": "Allgemein",
+          "rows": [
+            {
+              "label": "Name",
+              "value": "Herrschaft der Dal’Tartarfhuil"
+            },
+            {
+              "label": "Typ",
+              "value": "Herrschaft"
+            },
+            {
+              "label": "Sitz",
+              "value": "Koldair"
+            },
+            {
+              "label": "Regierender Clan / Amt",
+              "value": "Clan Dal’Tartarfhuil"
+            },
+            {
+              "label": "Oberhaupt",
+              "value": "Macmhar Tartarfhuil"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Regierender Clan",
+          "houses": [
+            {
+              "name": "Clan Dal’Tartarfhuil",
+              "familyId": "haus-tartarfhuil",
+              "imageSrc": "/Stammbäume/assets/images/houses/Aislearneach/clan-dal-tartarfhuil.png",
+              "seat": "Koldair",
+              "liege": "Clan Tir An’Ceallaigh",
+              "rank": "Laird-Clan",
+              "featured": true,
+              "featuredLabel": "Regierender Clan"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [
+        {
+          "title": "Herrschaft",
+          "members": [
+            {
+              "office": "Laird",
+              "name": "Macmhar Tartarfhuil",
+              "imageSrc": "/Stammbäume/assets/images/portraits/haus-tartarfhuil/macmhar-1672-tartarfhuil.jpg",
+              "familyId": "haus-tartarfhuil",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-tartarfhuil&mode=view&person=macmhar-1672-tartarfhuil",
+              "featured": true
+            }
+          ]
+        }
+      ],
+      "councilNote": "",
+      "vassalGroups": [],
+      "domains": [
+        {
+          "territoryId": "herrschaft-aislearneach-tartarfhuil",
+          "title": "Herrschaft der Dal’Tartarfhuil",
+          "center": "Koldair",
+          "sections": [
+            {
+              "title": "Hafensiedlung",
+              "placeIds": [
+                "aislearneach-b3cb1727-fbd8-4b34-859f-c01ed4f893e2"
+              ]
+            },
+            {
+              "title": "Bauernsiedlung",
+              "placeIds": [
+                "aislearneach-17b45765-23ae-47e6-9f86-a2d4f2742d65"
+              ]
+            },
+            {
+              "title": "Dorf",
+              "placeIds": [
+                "aislearneach-1d71bb25-2d78-41ae-8d42-e10a23f695e0",
+                "aislearneach-610193ea-8a01-4162-8353-4389e5339d53"
+              ]
+            },
+            {
+              "title": "Waldsiedlung",
+              "placeIds": [
+                "aislearneach-64c983f9-7bfd-4415-87cc-79ab4eb5568e",
+                "aislearneach-6d1d1788-a5af-4064-ab52-08471fc578f7"
+              ]
+            }
+          ]
+        }
+      ],
+      "territoryLinks": [],
+      "map": {
+        "title": "Karte Tir na Iomaire",
+        "imageSrc": "/Karten/Aislearneach/tir-na-iomaire/Kartenbilder/normal.webp",
+        "imageAlt": "Tir na Iomaire",
+        "href": "/Karten/karte.html?map=aislearneach-tir-na-iomaire"
+      }
+    },
+    {
+      "id": "herrschaft-aislearneach-gaisgh",
+      "title": "Herrschaft der An’Gaisgh",
+      "shortTitle": "Herrschaft der An’Gaisgh",
+      "type": "Herrschaft",
+      "kicker": "Herrschaft · Clan An’Gaisgh",
+      "parentHref": "/Kontinente/Estryll/Fürstentum Aislearneach/Oberherrschaft Tir na Iomaire/Oberherrschaft Tir na Iomaire.html",
+      "parentLabel": "Oberherrschaft Tir na Iomaire",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Estryll",
+          "slug": "estryll"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Aislearneach",
+          "slug": "fuerstentum-aislearneach"
+        },
+        {
+          "type": "Oberherrschaft",
+          "name": "Oberherrschaft Tir na Iomaire",
+          "slug": "oberherrschaft-aislearneach-tir-na-iomaire"
+        },
+        {
+          "type": "Herrschaft",
+          "name": "Herrschaft der An’Gaisgh",
+          "slug": "herrschaft-aislearneach-gaisgh"
+        }
+      ],
+      "crestSrc": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-iomaire.png",
+      "crestAlt": "Banner Oberherrschaft Tir na Iomaire",
+      "copy": {},
+      "cultureSections": [],
+      "infobox": [
+        {
+          "title": "Allgemein",
+          "rows": [
+            {
+              "label": "Name",
+              "value": "Herrschaft der An’Gaisgh"
+            },
+            {
+              "label": "Typ",
+              "value": "Herrschaft"
+            },
+            {
+              "label": "Sitz",
+              "value": "Broch an Traigh"
+            },
+            {
+              "label": "Regierender Clan / Amt",
+              "value": "Clan An’Gaisgh"
+            },
+            {
+              "label": "Oberhaupt",
+              "value": "Seumas Gaisgh"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Regierender Clan",
+          "houses": [
+            {
+              "name": "Clan An’Gaisgh",
+              "familyId": "haus-gaisgh",
+              "imageSrc": "/Stammbäume/assets/images/houses/Aislearneach/clan-an-gaisgh.png",
+              "seat": "Broch an Traigh",
+              "liege": "Clan Tir An’Ceallaigh",
+              "rank": "Laird-Clan",
+              "featured": true,
+              "featuredLabel": "Regierender Clan"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [
+        {
+          "title": "Herrschaft",
+          "members": [
+            {
+              "office": "Laird",
+              "name": "Seumas Gaisgh",
+              "imageSrc": "/Stammbäume/assets/images/portraits/haus-uilebheist/seumas-1676-gaisgh.jpg",
+              "familyId": "haus-gaisgh",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-gaisgh&mode=view&person=seumas-1676-gaisgh",
+              "featured": true
+            }
+          ]
+        }
+      ],
+      "councilNote": "",
+      "vassalGroups": [],
+      "domains": [
+        {
+          "territoryId": "herrschaft-aislearneach-gaisgh",
+          "title": "Herrschaft der An’Gaisgh",
+          "center": "Broch an Traigh",
+          "sections": [
+            {
+              "title": "Burg",
+              "placeIds": [
+                "aislearneach-74dd1834-58d7-4b8e-a14d-6a374bd82fe7"
+              ]
+            },
+            {
+              "title": "Waldsiedlung",
+              "placeIds": [
+                "aislearneach-966eabb5-677c-4f18-bf5d-abf14dd89b4e"
+              ]
+            },
+            {
+              "title": "Dorf",
+              "placeIds": [
+                "aislearneach-98c046b8-3511-4253-ab89-a30f91762036"
+              ]
+            },
+            {
+              "title": "Hafensiedlung",
+              "placeIds": [
+                "aislearneach-d4600790-763c-4167-ace4-9bcf1cf58a12",
+                "aislearneach-dee0af57-b47e-4688-8707-0b27097005e8"
+              ]
+            },
+            {
+              "title": "Ahnenbaum",
+              "placeIds": [
+                "aislearneach-43db6d48-7331-4790-8cc1-b0804bbc2077"
+              ]
+            }
+          ]
+        }
+      ],
+      "territoryLinks": [],
+      "map": {
+        "title": "Karte Tir na Iomaire",
+        "imageSrc": "/Karten/Aislearneach/tir-na-iomaire/Kartenbilder/normal.webp",
+        "imageAlt": "Tir na Iomaire",
+        "href": "/Karten/karte.html?map=aislearneach-tir-na-iomaire"
+      }
+    },
+    {
+      "id": "herrschaft-aislearneach-luchdon",
+      "title": "Herrschaft der Na’Luchdon",
+      "shortTitle": "Herrschaft der Na’Luchdon",
+      "type": "Herrschaft",
+      "kicker": "Herrschaft · Clan Na’Luchdon",
+      "parentHref": "/Kontinente/Estryll/Fürstentum Aislearneach/Oberherrschaft Tir na Iomaire/Oberherrschaft Tir na Iomaire.html",
+      "parentLabel": "Oberherrschaft Tir na Iomaire",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Estryll",
+          "slug": "estryll"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Aislearneach",
+          "slug": "fuerstentum-aislearneach"
+        },
+        {
+          "type": "Oberherrschaft",
+          "name": "Oberherrschaft Tir na Iomaire",
+          "slug": "oberherrschaft-aislearneach-tir-na-iomaire"
+        },
+        {
+          "type": "Herrschaft",
+          "name": "Herrschaft der Na’Luchdon",
+          "slug": "herrschaft-aislearneach-luchdon"
+        }
+      ],
+      "crestSrc": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-iomaire.png",
+      "crestAlt": "Banner Oberherrschaft Tir na Iomaire",
+      "copy": {},
+      "cultureSections": [],
+      "infobox": [
+        {
+          "title": "Allgemein",
+          "rows": [
+            {
+              "label": "Name",
+              "value": "Herrschaft der Na’Luchdon"
+            },
+            {
+              "label": "Typ",
+              "value": "Herrschaft"
+            },
+            {
+              "label": "Sitz",
+              "value": "Broch an Creig"
+            },
+            {
+              "label": "Regierender Clan / Amt",
+              "value": "Clan Na’Luchdon"
+            },
+            {
+              "label": "Oberhaupt",
+              "value": "Liamach Luchdon"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Regierender Clan",
+          "houses": [
+            {
+              "name": "Clan Na’Luchdon",
+              "familyId": "haus-luchdon",
+              "imageSrc": "/Stammbäume/assets/images/houses/Aislearneach/clan-na-luchdon.png",
+              "seat": "Broch an Creig",
+              "liege": "Clan Tir An’Ceallaigh",
+              "rank": "Laird-Clan",
+              "featured": true,
+              "featuredLabel": "Regierender Clan"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [
+        {
+          "title": "Herrschaft",
+          "members": [
+            {
+              "office": "Laird",
+              "name": "Liamach Luchdon",
+              "imageSrc": "/Stammbäume/assets/images/portraits/haus-feannag/liamach-1673-luchdon.jpg",
+              "familyId": "haus-luchdon",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-luchdon&mode=view&person=liamach-1673-luchdon",
+              "featured": true
+            }
+          ]
+        }
+      ],
+      "councilNote": "",
+      "vassalGroups": [],
+      "domains": [
+        {
+          "territoryId": "herrschaft-aislearneach-luchdon",
+          "title": "Herrschaft der Na’Luchdon",
+          "center": "Broch an Creig",
+          "sections": [
+            {
+              "title": "Burg",
+              "placeIds": [
+                "aislearneach-3a0c4e11-340d-4d4f-a6fe-7b0d0f8d4baa"
+              ]
+            },
+            {
+              "title": "Hafensiedlung",
+              "placeIds": [
+                "aislearneach-82bd7899-1a99-43ad-a1e6-0b7bbf63d72f",
+                "aislearneach-b9bc3f23-5563-49eb-8230-5b148334c3b7",
+                "aislearneach-24f5c78e-58f2-4ca3-887d-0f0d23078b57"
+              ]
+            },
+            {
+              "title": "Bauernsiedlung",
+              "placeIds": [
+                "aislearneach-9547c3a5-4af2-4e1b-b57e-811d19a1daea",
+                "aislearneach-1fc6eff7-4c52-4d47-a440-e1b77cf9ffeb",
+                "aislearneach-44d33bc9-3a33-4939-9299-77a529ac9420"
+              ]
+            },
+            {
+              "title": "Dorf",
+              "placeIds": [
+                "aislearneach-9faeae20-8c7c-418c-b8a6-2474622c16bf"
+              ]
+            },
+            {
+              "title": "Waldsiedlung",
+              "placeIds": [
+                "aislearneach-def91167-181e-469a-b1e6-c317ab231ae3",
+                "aislearneach-f0859ff9-7b66-43d2-add6-9ca846908af7"
+              ]
+            },
+            {
+              "title": "Turm",
+              "placeIds": [
+                "aislearneach-2bcba534-6ce8-4e39-b45a-9f98567855cd"
+              ]
+            }
+          ]
+        }
+      ],
+      "territoryLinks": [],
+      "map": {
+        "title": "Karte Tir na Iomaire",
+        "imageSrc": "/Karten/Aislearneach/tir-na-iomaire/Kartenbilder/normal.webp",
+        "imageAlt": "Tir na Iomaire",
+        "href": "/Karten/karte.html?map=aislearneach-tir-na-iomaire"
+      }
+    }
+  ]
+}

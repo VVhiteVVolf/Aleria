@@ -172,6 +172,8 @@
   hyphens: auto;
 }
 .directory-detail-link {
+  position: relative;
+  z-index: 1;
   color: inherit;
   text-underline-offset: 0.2em;
   text-decoration-color: #b6a17c;
@@ -356,9 +358,10 @@
   .kingdom-place-card { transition: none; }
 }
 /* Source descriptions stay with their place without making every card a wall of text. */
-.directory-place-description { margin-top: 0.5rem; }
+.directory-place-description { position: relative; z-index: 1; margin-top: 0.5rem; }
+.kingdom-place-card:has(.directory-place-description[open]) { align-items: start; }
 .directory-place-description summary { cursor: pointer; color: #74372d; }
-.directory-place-description p { margin: 0.5rem 0 0; line-height: 1.65; overflow-wrap: break-word; }
+.directory-place-description p { margin: 0.5rem 0 0; line-height: 1.65; overflow-wrap: break-word; white-space: pre-line; }
 .territory-directory .directory-co-ruler { display: flex; align-items: center; gap: .35rem; }
 .territory-directory .directory-co-ruler img { width: 24px; height: 28px; object-fit: contain; }
 .territory-directory .directory-co-ruler > a { min-width: 0; }

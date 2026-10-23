@@ -46,14 +46,19 @@ test('Llysfaens 24 interaktive Marker sind ohne Markerbild einschaltbar und öff
     esc: value => value,
     openPin: (id, mode) => opened.push({ id, mode })
   };
-  const window = { KartoRuntime: runtime, addEventListener() {} };
-  const context = vm.createContext({ window, document, URL, S: state, editMode: false, KARTO_CONFIG: { images: { normal: 'map.webp' } } });
+  const window = { KartoRuntime: runtime, addEventListener() {}, dispatchEvent() {} };
+  const context = vm.createContext({ window, document, URL, CustomEvent, S: state, editMode: false, KARTO_CONFIG: { images: { normal: 'map.webp' } } });
   vm.runInContext(read('../assets/js/map/map-image-sources.js'), context);
   vm.runInContext(renderLayers, context);
   vm.runInContext('renderLayerButtons()', context);
   assert.equal(elements['lb-pins'].hidden, false);
   assert.equal(elements['lb-regions'].hidden, true);
   assert.equal(elements['layer-btns'].children.length, 0);
+
+  // A vector-only region layer is available independently of raster overlays.
+  vm.runInContext('S.regions = [{id:"coast"}]; renderLayerButtons()', context);
+  assert.equal(elements['lb-regions'].hidden, false);
+  vm.runInContext('S.regions = []; renderLayerButtons()', context);
 
   vm.runInContext(read('../assets/js/map/map-view.js'), context);
   window.resetLayers();

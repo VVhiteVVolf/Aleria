@@ -12,6 +12,10 @@ Der Zukunftsplan liegt in `ZUKUNFTSPLAN.md`.
 Infotabellen, Anzeigeoptionen und formbare Schriftzug-Pins sind in
 [PIN_EDITOR.md](docs/PIN_EDITOR.md) beschrieben.
 
+Bearbeitbare Regionsflächen und Grenzlinien liegen im gemeinsamen Werkzeug
+**Bearbeiten → Gebiete**. Bedienung und Datenmodell:
+[REGIONS_EDITOR.md](docs/REGIONS_EDITOR.md).
+
 Die geplanten Grafschaftskarten von Cenyr liegen als Linkliste unter `Cenyr/GRAFSCHAFTEN-LINKS.md`.
 
 Neue Karten werden langfristig nicht durch eigene HTML-Dateien angelegt. Stattdessen werden sie ueber `karte.html` und `karten.registry.js` geladen.

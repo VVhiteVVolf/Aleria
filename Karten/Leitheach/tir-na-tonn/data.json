@@ -1,0 +1,2066 @@
+{
+  "schemaVersion": 1,
+  "dataPath": "Leitheach/tir-na-tonn/data.json",
+  "revision": 1,
+  "updatedAt": "2026-10-22T16:10:00.000Z",
+  "generatedStateHash": "55d0182fb0a05a41617c24f5d5472f6ccf37d3b5143485675aaed3d953086802",
+  "state": {
+    "pins": [],
+    "cats": [
+      {
+        "id": "mmflrbzxydg7",
+        "label": "Hauptstadt",
+        "color": "#ff0000"
+      },
+      {
+        "id": "mmflrqajby8b",
+        "label": "Bauernsiedlung",
+        "color": "#6060b0"
+      },
+      {
+        "id": "mmflry5furso",
+        "label": "Hafensiedlung",
+        "color": "#b03030"
+      },
+      {
+        "id": "mmfls5afqqpr",
+        "label": "Burgsiedlung",
+        "color": "#9050b0"
+      },
+      {
+        "id": "mmflsfqh3sft",
+        "label": "Handelssiedlung",
+        "color": "#3a8a3a"
+      },
+      {
+        "id": "mmflsrndeiee",
+        "label": "Brückensiedlung",
+        "color": "#2a7aaa"
+      },
+      {
+        "id": "mmflt1x3v22o",
+        "label": "Bergbausiedlung",
+        "color": "#7a6040"
+      },
+      {
+        "id": "mmflt7uj831y",
+        "label": "Waldsiedlung",
+        "color": "#c07030"
+      },
+      {
+        "id": "mmflteurd4n5",
+        "label": "Kirchensiedlung",
+        "color": "#508080"
+      },
+      {
+        "id": "mmfltia1m3s7",
+        "label": "Leuchtturmsiedlung",
+        "color": "#c49a20"
+      },
+      {
+        "id": "mmfltullsctk",
+        "label": "Festungssiedlung",
+        "color": "#6060b0"
+      },
+      {
+        "id": "mmflvj37jbh2",
+        "label": "Taverne",
+        "color": "#b03030"
+      },
+      {
+        "id": "mmflvquv2rr3",
+        "label": "Siedlungsruine",
+        "color": "#9050b0"
+      },
+      {
+        "id": "mmflw1z5ko6e",
+        "label": "Stadtruine",
+        "color": "#3a8a3a"
+      },
+      {
+        "id": "mmflw73t2e8v",
+        "label": "Bardensiedlung",
+        "color": "#2a7aaa"
+      },
+      {
+        "id": "mmflwdjfl6ah",
+        "label": "Stadt",
+        "color": "#7a6040"
+      },
+      {
+        "id": "mmflwmdfcyua",
+        "label": "Turmruine",
+        "color": "#c07030"
+      },
+      {
+        "id": "mmflwxad8w1j",
+        "label": "Schiffswrack",
+        "color": "#508080"
+      },
+      {
+        "id": "mmflx4731uj6",
+        "label": "Turnierplatz",
+        "color": "#c49a20"
+      },
+      {
+        "id": "mmflxnnhbh4g",
+        "label": "Besondere Orte",
+        "color": "#6060b0"
+      },
+      {
+        "id": "location-dorf",
+        "label": "Dorf",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/bardensiedlung.png"
+      },
+      {
+        "id": "location-flusssiedlung",
+        "label": "Flusssiedlung",
+        "color": "#2a7aaa",
+        "marker": "/Karten/assets/icons/welt/flusssiedlung.png"
+      },
+      {
+        "id": "location-bauernhof",
+        "label": "Bauernhof",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/bauernsiedlung.png"
+      },
+      {
+        "id": "location-landgut",
+        "label": "Landgut",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/landgut.png"
+      },
+      {
+        "id": "location-anwesen",
+        "label": "Anwesen",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/anwesen.png"
+      },
+      {
+        "id": "location-rittergut",
+        "label": "Rittergut",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/kleine-burg.png"
+      },
+      {
+        "id": "location-weingut",
+        "label": "Weingut",
+        "color": "#a45630",
+        "marker": "/Karten/assets/icons/welt/weingut.png"
+      },
+      {
+        "id": "location-obstplantage",
+        "label": "Obstplantage",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/obstplantage.png"
+      },
+      {
+        "id": "location-viehweide",
+        "label": "Viehweide",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/weide.png"
+      },
+      {
+        "id": "location-gestuet",
+        "label": "Gestüt",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/gest-t.png"
+      },
+      {
+        "id": "location-muehle",
+        "label": "Mühle",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/m-hle.png"
+      },
+      {
+        "id": "location-mine",
+        "label": "Mine",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/einzelnemine.png"
+      },
+      {
+        "id": "location-steinbruch",
+        "label": "Steinbruch",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/steinbruch-1.png"
+      },
+      {
+        "id": "location-schmiede",
+        "label": "Schmiede",
+        "color": "#a45630",
+        "marker": "/Karten/assets/icons/welt/schmiede.png"
+      },
+      {
+        "id": "location-brauerei",
+        "label": "Brauerei",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/brauersiedlung.png"
+      },
+      {
+        "id": "location-fischerei",
+        "label": "Fischerei",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/fischerh-tte.png"
+      },
+      {
+        "id": "location-holzfaellerlager",
+        "label": "Holzfällerlager",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/holzf-llerlager.png"
+      },
+      {
+        "id": "location-koehlerei",
+        "label": "Köhlerei",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/k-hler3.png"
+      },
+      {
+        "id": "location-imkerei",
+        "label": "Imkerei",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/imkerhof.png"
+      },
+      {
+        "id": "location-handelskontor",
+        "label": "Handelskontor",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/kontor.png"
+      },
+      {
+        "id": "location-markt",
+        "label": "Markt",
+        "color": "#a45630",
+        "marker": "/Karten/assets/icons/welt/marktstand.png"
+      },
+      {
+        "id": "location-gildenhaus",
+        "label": "Gildenhaus",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/gildenzentrale.png"
+      },
+      {
+        "id": "location-burg",
+        "label": "Burg",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/gro-e-burg.png"
+      },
+      {
+        "id": "location-turm",
+        "label": "Turm",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/turm.png"
+      },
+      {
+        "id": "location-leuchtturm",
+        "label": "Leuchtturm",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/leuchtturm.png"
+      },
+      {
+        "id": "location-aussenposten",
+        "label": "Außenposten",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/au-enposten.png"
+      },
+      {
+        "id": "location-grenzposten",
+        "label": "Grenzposten",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/zoll-grenzposten.png"
+      },
+      {
+        "id": "location-heerlager",
+        "label": "Heerlager",
+        "color": "#a45630",
+        "marker": "/Karten/assets/icons/welt/heereslager.png"
+      },
+      {
+        "id": "location-lagerplatz",
+        "label": "Lagerplatz",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/lager.png"
+      },
+      {
+        "id": "location-jaegerlager",
+        "label": "Jägerlager",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/j-gerlager.png"
+      },
+      {
+        "id": "location-jagdhaus",
+        "label": "Jagdhaus",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/j-gerhaus.png"
+      },
+      {
+        "id": "location-druidenhuette",
+        "label": "Druidenhütte",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/druidenh-tte.png"
+      },
+      {
+        "id": "location-hexenhuette",
+        "label": "Hexenhütte",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/hexenhaus.png"
+      },
+      {
+        "id": "location-schrein",
+        "label": "Schrein",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/wegschrein.png"
+      },
+      {
+        "id": "location-heiligtum",
+        "label": "Heiligtum",
+        "color": "#a45630",
+        "marker": "/Karten/assets/icons/welt/heiligtum.png"
+      },
+      {
+        "id": "location-friedhof",
+        "label": "Friedhof",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/l-ndlicher-friedhof.png"
+      },
+      {
+        "id": "location-grabstaette",
+        "label": "Grabstätte",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/grabmal.png"
+      },
+      {
+        "id": "location-ruine",
+        "label": "Ruine",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/ruine2.png"
+      },
+      {
+        "id": "location-ausgrabung",
+        "label": "Ausgrabung",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/ausgrabung.png"
+      },
+      {
+        "id": "location-hoehle",
+        "label": "Höhle",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/h-hle.png"
+      },
+      {
+        "id": "location-hain",
+        "label": "Hain",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/hain.png"
+      },
+      {
+        "id": "location-ahnenbaum",
+        "label": "Ahnenbaum",
+        "color": "#a45630",
+        "marker": "/Karten/assets/icons/welt/ahnenbaum.png"
+      },
+      {
+        "id": "location-quelle",
+        "label": "Quelle",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/quelle.png"
+      },
+      {
+        "id": "location-berggipfel",
+        "label": "Berggipfel",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/gipfel.png"
+      },
+      {
+        "id": "location-monsterhort",
+        "label": "Monsterhort",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/kreaturenhort.png"
+      },
+      {
+        "id": "location-banditenlager",
+        "label": "Banditenlager",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/banditenlager.png"
+      },
+      {
+        "id": "location-hafen",
+        "label": "Hafen / Steg",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/gro-er-hafen.png"
+      },
+      {
+        "id": "location-werft",
+        "label": "Werft",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/schiffswerft.png"
+      },
+      {
+        "id": "location-poststation",
+        "label": "Poststation",
+        "color": "#a45630",
+        "marker": "/Karten/assets/icons/welt/poststation.png"
+      },
+      {
+        "id": "location-schule",
+        "label": "Schule",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/l-ndliche-universit-t.png"
+      },
+      {
+        "id": "location-zirkus",
+        "label": "Zirkus",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/zirkus3.png"
+      },
+      {
+        "id": "location-wohnhaus",
+        "label": "Wohnhaus",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/b-uerliches-heim.png"
+      },
+      {
+        "id": "location-brauersiedlung",
+        "label": "Brauersiedlung",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/brauersiedlung.png"
+      },
+      {
+        "id": "location-klostersiedlung",
+        "label": "Klostersiedlung",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/klostersiedlung.png"
+      },
+      {
+        "id": "location-rosszuchtsiedlung",
+        "label": "Rosszuchtsiedlung",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/pferdezuchtsiedlung.png"
+      },
+      {
+        "id": "location-sumpfsiedlung",
+        "label": "Sumpfsiedlung",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/sumpfsiedlung.png"
+      },
+      {
+        "id": "location-unterwasserstadt",
+        "label": "Unterwasserstadt",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/unterwasserstadt.png"
+      },
+      {
+        "id": "location-festung",
+        "label": "Festung",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/festung.png"
+      },
+      {
+        "id": "location-magierturm",
+        "label": "Magierturm",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/magierturm.png"
+      },
+      {
+        "id": "location-diebesgilde",
+        "label": "Diebesgilde",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/diebesgilde.png"
+      },
+      {
+        "id": "location-piratenversteck",
+        "label": "Piratenversteck",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/piratenlager.png"
+      },
+      {
+        "id": "location-schmugglerversteck",
+        "label": "Schmugglerversteck",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/schmuggler3.png"
+      },
+      {
+        "id": "location-verwunschener-wald",
+        "label": "Verwunschener Wald",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/waldschrat.png"
+      },
+      {
+        "id": "location-wahrzeichen",
+        "label": "Wahrzeichen",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/wahrzeichen.png"
+      },
+      {
+        "id": "location-dimensionaler-riss",
+        "label": "Dimensionaler Riss",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/dimensionaler-riss.png"
+      },
+      {
+        "id": "location-galgen",
+        "label": "Galgen",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/exekutionsplatz.png"
+      },
+      {
+        "id": "location-muenzpraegestaette",
+        "label": "Münzprägestätte",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/m-nzpr-ger.png"
+      },
+      {
+        "id": "location-bogenschiessstand",
+        "label": "Bogenschießstand",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/schie-stand2.png"
+      },
+      {
+        "id": "location-ziegelei",
+        "label": "Ziegelei",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/ziegelbrenner.png"
+      },
+      {
+        "id": "location-schiff",
+        "label": "Schiff",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/orte/schiff-gut.png"
+      },
+      {
+        "id": "location-kreaturenlager",
+        "label": "Kreaturenlager",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/goblinlager.png"
+      },
+      {
+        "id": "location-heisse-quellen",
+        "label": "Heiße Quellen",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/hei-e-quellen.png"
+      },
+      {
+        "id": "location-brueckenruine",
+        "label": "Brückenruine",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/zerst-rte-br-cke.png"
+      },
+      {
+        "id": "location-kirchenruine",
+        "label": "Kirchenruine",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/zerst-rte-kirche.png"
+      },
+      {
+        "id": "location-hausruine",
+        "label": "Hausruine",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/zerst-rtes-heim.png"
+      },
+      {
+        "id": "location-huegelgrab",
+        "label": "Hügelgrab",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/h-gelgrab.png"
+      },
+      {
+        "id": "location-plantage",
+        "label": "Plantage",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/landgut.png"
+      },
+      {
+        "id": "location-kultstaette",
+        "label": "Kultstätte",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/okkulter-schrein.png"
+      },
+      {
+        "id": "location-zelt",
+        "label": "Zelt",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/ritterlicheszelt.png"
+      },
+      {
+        "id": "location-faehrstelle",
+        "label": "Fährstelle",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/orte/f-hre-steg.png"
+      },
+      {
+        "id": "location-schlachtfeld",
+        "label": "Schlachtfeld",
+        "color": "#6060b0"
+      }
+    ],
+    "categoryCatalogVersion": 3,
+    "regions": [
+      {
+        "id": "wa-91845cb6-5ca1-487d-a3f0-7a7461862624",
+        "name": "Herrschaft der Ru'Gortach",
+        "shortName": "Ru'Gortach",
+        "kind": "area",
+        "paths": [
+          [
+            [
+              0,
+              0.38588474
+            ],
+            [
+              0,
+              0.43665905
+            ],
+            [
+              0.04589844,
+              0.45087586
+            ],
+            [
+              0.19042969,
+              0.47423204
+            ],
+            [
+              0.21191406,
+              0.47524752
+            ],
+            [
+              0.23144531,
+              0.47220107
+            ],
+            [
+              0.3046875,
+              0.46915461
+            ],
+            [
+              0.31933594,
+              0.46407718
+            ],
+            [
+              0.37792969,
+              0.45290683
+            ],
+            [
+              0.44140625,
+              0.45392232
+            ],
+            [
+              0.47167969,
+              0.45696877
+            ],
+            [
+              0.48144531,
+              0.43462808
+            ],
+            [
+              0.4921875,
+              0.42244224
+            ],
+            [
+              0.50488281,
+              0.41431835
+            ],
+            [
+              0.5234375,
+              0.41431835
+            ],
+            [
+              0.53320313,
+              0.40720995
+            ],
+            [
+              0.54882813,
+              0.38283828
+            ],
+            [
+              0.54882813,
+              0.36049759
+            ],
+            [
+              0.55566406,
+              0.35542016
+            ],
+            [
+              0.56347656,
+              0.3523737
+            ],
+            [
+              0.58105469,
+              0.32394009
+            ],
+            [
+              0.60546875,
+              0.29449099
+            ],
+            [
+              0.61132813,
+              0.28332064
+            ],
+            [
+              0.61914063,
+              0.27316578
+            ],
+            [
+              0.63964844,
+              0.25894897
+            ],
+            [
+              0.67480469,
+              0.21832953
+            ],
+            [
+              0.67480469,
+              0.20614369
+            ],
+            [
+              0.6953125,
+              0.18075654
+            ],
+            [
+              0.70507813,
+              0.18786494
+            ],
+            [
+              0.73046875,
+              0.13709063
+            ],
+            [
+              0.734375,
+              0.10967251
+            ],
+            [
+              0.72949219,
+              0.06397563
+            ],
+            [
+              0.72265625,
+              0.04874334
+            ],
+            [
+              0.71484375,
+              0.04265042
+            ],
+            [
+              0.70703125,
+              0.0294491
+            ],
+            [
+              0.70507813,
+              0.01523229
+            ],
+            [
+              0.6953125,
+              0.00812389
+            ],
+            [
+              0.67578125,
+              0.01218583
+            ],
+            [
+              0.65820313,
+              0.00203097
+            ],
+            [
+              0.60449219,
+              -0.00101549
+            ],
+            [
+              0.58691406,
+              0.01624778
+            ],
+            [
+              0.58105469,
+              0.0365575
+            ],
+            [
+              0.57617188,
+              0.04061945
+            ],
+            [
+              0.56054688,
+              0.04163493
+            ],
+            [
+              0.55175781,
+              0.05382077
+            ],
+            [
+              0.55175781,
+              0.10357959
+            ],
+            [
+              0.54492188,
+              0.11170348
+            ],
+            [
+              0.53027344,
+              0.11881188
+            ],
+            [
+              0.51757813,
+              0.14216806
+            ],
+            [
+              0.49804688,
+              0.16247779
+            ],
+            [
+              0.47558594,
+              0.16755522
+            ],
+            [
+              0.45898438,
+              0.17669459
+            ],
+            [
+              0.44140625,
+              0.17466362
+            ],
+            [
+              0.41796875,
+              0.15536938
+            ],
+            [
+              0.41113281,
+              0.15536938
+            ],
+            [
+              0.39453125,
+              0.16653973
+            ],
+            [
+              0.34570313,
+              0.17364813
+            ],
+            [
+              0.33496094,
+              0.18888043
+            ],
+            [
+              0.31933594,
+              0.1980198
+            ],
+            [
+              0.30566406,
+              0.19903529
+            ],
+            [
+              0.29199219,
+              0.19497334
+            ],
+            [
+              0.27929688,
+              0.20715918
+            ],
+            [
+              0.26757813,
+              0.21325209
+            ],
+            [
+              0.26464844,
+              0.21832953
+            ],
+            [
+              0.25976563,
+              0.23762376
+            ],
+            [
+              0.24707031,
+              0.24676314
+            ],
+            [
+              0.24316406,
+              0.25793349
+            ],
+            [
+              0.2265625,
+              0.27215029
+            ],
+            [
+              0.21582031,
+              0.27519675
+            ],
+            [
+              0.20410156,
+              0.27215029
+            ],
+            [
+              0.18359375,
+              0.26199543
+            ],
+            [
+              0.17382813,
+              0.25996446
+            ],
+            [
+              0.16894531,
+              0.26707286
+            ],
+            [
+              0.16308594,
+              0.27113481
+            ],
+            [
+              0.16113281,
+              0.28535161
+            ],
+            [
+              0.15136719,
+              0.29855293
+            ],
+            [
+              0.13769531,
+              0.30261488
+            ],
+            [
+              0.1171875,
+              0.32089363
+            ],
+            [
+              0.10449219,
+              0.3229246
+            ],
+            [
+              0.09765625,
+              0.31683168
+            ],
+            [
+              0.09277344,
+              0.31480071
+            ],
+            [
+              0.08691406,
+              0.31683168
+            ],
+            [
+              0.07324219,
+              0.330033
+            ],
+            [
+              0.05957031,
+              0.36252856
+            ],
+            [
+              0.04492188,
+              0.36862148
+            ],
+            [
+              0.02929688,
+              0.36760599
+            ],
+            [
+              0.01367188,
+              0.37471439
+            ]
+          ]
+        ],
+        "color": "#00b4d8",
+        "borderColor": "#ff0000",
+        "opacity": 0.5,
+        "parentId": "wa-c8b7a2c8-5c5b-45bf-b6c8-583ad28303fc",
+        "dominionId": "region-91845cb6-5ca1-487d-a3f0-7a7461862624",
+        "familyId": "haus-gortach",
+        "targetMapId": "",
+        "showLabel": true,
+        "note": "",
+        "source": {
+          "type": "world-anvil",
+          "mapId": "49b0dc39-8bf6-4935-9080-ae7f164f1f65",
+          "markerId": "91845cb6-5ca1-487d-a3f0-7a7461862624",
+          "coordinateSystem": "normalized-top-left",
+          "geometryMethod": "visible-svg",
+          "url": "https://www.worldanvil.com/world/map/marker/91845cb6-5ca1-487d-a3f0-7a7461862624/edit"
+        },
+        "familyName": "Ru’Gortach"
+      },
+      {
+        "id": "wa-bb32717e-6b8c-4730-a0fc-8912a634cd5a",
+        "name": "Ordensburg - Schwanenorden",
+        "shortName": "Ordensburg - Schwanenorden",
+        "kind": "area",
+        "paths": [
+          [
+            [
+              0.5546875,
+              0.45392232
+            ],
+            [
+              0.55434496,
+              0.45935676
+            ],
+            [
+              0.5533232,
+              0.46469823
+            ],
+            [
+              0.55163971,
+              0.46985531
+            ],
+            [
+              0.54932328,
+              0.47473978
+            ],
+            [
+              0.54641356,
+              0.47926806
+            ],
+            [
+              0.54296033,
+              0.48336266
+            ],
+            [
+              0.53902267,
+              0.48695353
+            ],
+            [
+              0.53466797,
+              0.48997922
+            ],
+            [
+              0.52997072,
+              0.49238798
+            ],
+            [
+              0.52501131,
+              0.49413857
+            ],
+            [
+              0.51987458,
+              0.49520106
+            ],
+            [
+              0.51464844,
+              0.49555725
+            ],
+            [
+              0.50942229,
+              0.49520106
+            ],
+            [
+              0.50428557,
+              0.49413857
+            ],
+            [
+              0.49932615,
+              0.49238798
+            ],
+            [
+              0.49462891,
+              0.48997922
+            ],
+            [
+              0.4902742,
+              0.48695353
+            ],
+            [
+              0.48633654,
+              0.48336266
+            ],
+            [
+              0.48288331,
+              0.47926806
+            ],
+            [
+              0.47997359,
+              0.47473978
+            ],
+            [
+              0.47765717,
+              0.46985531
+            ],
+            [
+              0.47597367,
+              0.46469823
+            ],
+            [
+              0.47495191,
+              0.45935676
+            ],
+            [
+              0.47460938,
+              0.45392232
+            ],
+            [
+              0.47495191,
+              0.44848787
+            ],
+            [
+              0.47597367,
+              0.4431464
+            ],
+            [
+              0.47765717,
+              0.43798932
+            ],
+            [
+              0.47997359,
+              0.43310485
+            ],
+            [
+              0.48288331,
+              0.42857657
+            ],
+            [
+              0.48633654,
+              0.42448197
+            ],
+            [
+              0.4902742,
+              0.4208911
+            ],
+            [
+              0.49462891,
+              0.41786541
+            ],
+            [
+              0.49932615,
+              0.41545665
+            ],
+            [
+              0.50428557,
+              0.41370606
+            ],
+            [
+              0.50942229,
+              0.41264358
+            ],
+            [
+              0.51464844,
+              0.41228738
+            ],
+            [
+              0.51987458,
+              0.41264358
+            ],
+            [
+              0.52501131,
+              0.41370606
+            ],
+            [
+              0.52997072,
+              0.41545665
+            ],
+            [
+              0.53466797,
+              0.41786541
+            ],
+            [
+              0.53902267,
+              0.4208911
+            ],
+            [
+              0.54296033,
+              0.42448197
+            ],
+            [
+              0.54641356,
+              0.42857657
+            ],
+            [
+              0.54932328,
+              0.43310485
+            ],
+            [
+              0.55163971,
+              0.43798932
+            ],
+            [
+              0.5533232,
+              0.4431464
+            ],
+            [
+              0.55434496,
+              0.44848787
+            ]
+          ]
+        ],
+        "color": "#023e8a",
+        "borderColor": "#ff0000",
+        "opacity": 0.5,
+        "parentId": "wa-c8b7a2c8-5c5b-45bf-b6c8-583ad28303fc",
+        "dominionId": "",
+        "familyId": "",
+        "targetMapId": "",
+        "showLabel": false,
+        "note": "Örtlicher Bereich",
+        "source": {
+          "type": "world-anvil",
+          "mapId": "49b0dc39-8bf6-4935-9080-ae7f164f1f65",
+          "markerId": "bb32717e-6b8c-4730-a0fc-8912a634cd5a",
+          "coordinateSystem": "normalized-top-left",
+          "geometryMethod": "visible-svg",
+          "url": "https://www.worldanvil.com/world/map/marker/bb32717e-6b8c-4730-a0fc-8912a634cd5a/edit"
+        }
+      },
+      {
+        "id": "wa-c8b7a2c8-5c5b-45bf-b6c8-583ad28303fc",
+        "name": "Oberherrschaft - Tir na Tonn",
+        "shortName": "Tir na Tonn",
+        "kind": "area",
+        "paths": [
+          [
+            [
+              -0.00097656,
+              0.43767454
+            ],
+            [
+              0.03808594,
+              0.44884488
+            ],
+            [
+              0.11132813,
+              0.46306169
+            ],
+            [
+              0.20703125,
+              0.47524752
+            ],
+            [
+              0.28027344,
+              0.46915461
+            ],
+            [
+              0.3046875,
+              0.46915461
+            ],
+            [
+              0.37207031,
+              0.45392232
+            ],
+            [
+              0.4453125,
+              0.45189134
+            ],
+            [
+              0.4609375,
+              0.45392232
+            ],
+            [
+              0.47167969,
+              0.46001523
+            ],
+            [
+              0.47851563,
+              0.48032496
+            ],
+            [
+              0.48632813,
+              0.48540239
+            ],
+            [
+              0.50878906,
+              0.49047982
+            ],
+            [
+              0.53808594,
+              0.48844884
+            ],
+            [
+              0.54980469,
+              0.46915461
+            ],
+            [
+              0.56054688,
+              0.46407718
+            ],
+            [
+              0.56933594,
+              0.46407718
+            ],
+            [
+              0.58398438,
+              0.47118558
+            ],
+            [
+              0.6015625,
+              0.48235593
+            ],
+            [
+              0.63183594,
+              0.50774308
+            ],
+            [
+              0.66015625,
+              0.52399086
+            ],
+            [
+              0.68457031,
+              0.52906829
+            ],
+            [
+              0.73046875,
+              0.53008378
+            ],
+            [
+              0.76367188,
+              0.53820767
+            ],
+            [
+              0.90429688,
+              0.62249302
+            ],
+            [
+              0.95605469,
+              0.65905052
+            ],
+            [
+              0.94628906,
+              0.66209698
+            ],
+            [
+              0.94238281,
+              0.66717441
+            ],
+            [
+              0.94042969,
+              0.6752983
+            ],
+            [
+              0.94140625,
+              0.68443767
+            ],
+            [
+              0.93652344,
+              0.69053059
+            ],
+            [
+              0.92675781,
+              0.69763899
+            ],
+            [
+              0.91601563,
+              0.70271643
+            ],
+            [
+              0.91015625,
+              0.7118558
+            ],
+            [
+              0.91015625,
+              0.71997969
+            ],
+            [
+              0.9140625,
+              0.73622747
+            ],
+            [
+              0.91796875,
+              0.74333587
+            ],
+            [
+              0.90917969,
+              0.74638233
+            ],
+            [
+              0.89550781,
+              0.75856816
+            ],
+            [
+              0.890625,
+              0.76567657
+            ],
+            [
+              0.88964844,
+              0.79207921
+            ],
+            [
+              0.86621094,
+              0.79614115
+            ],
+            [
+              0.85351563,
+              0.79614115
+            ],
+            [
+              0.84082031,
+              0.79918761
+            ],
+            [
+              0.83300781,
+              0.80223407
+            ],
+            [
+              0.83007813,
+              0.80934247
+            ],
+            [
+              0.80175781,
+              0.81949733
+            ],
+            [
+              0.79003906,
+              0.82863671
+            ],
+            [
+              0.78320313,
+              0.84183803
+            ],
+            [
+              0.77929688,
+              0.85605484
+            ],
+            [
+              0.75878906,
+              0.85910129
+            ],
+            [
+              0.74609375,
+              0.86316324
+            ],
+            [
+              0.73535156,
+              0.88550394
+            ],
+            [
+              0.71777344,
+              0.87636456
+            ],
+            [
+              0.67773438,
+              0.88245748
+            ],
+            [
+              0.65722656,
+              0.89261234
+            ],
+            [
+              0.6484375,
+              0.91292206
+            ],
+            [
+              0.65429688,
+              0.93526276
+            ],
+            [
+              0.62890625,
+              0.95455699
+            ],
+            [
+              0.62988281,
+              0.95963442
+            ],
+            [
+              0.62597656,
+              0.97182026
+            ],
+            [
+              0.62597656,
+              0.98400609
+            ],
+            [
+              0.57421875,
+              0.99416095
+            ],
+            [
+              0.56835938,
+              1.00228484
+            ],
+            [
+              0.24414063,
+              1.00025387
+            ],
+            [
+              0.23730469,
+              0.98299061
+            ],
+            [
+              0.23144531,
+              0.9758822
+            ],
+            [
+              0.22558594,
+              0.97182026
+            ],
+            [
+              0.22460938,
+              0.95963442
+            ],
+            [
+              0.21972656,
+              0.94440213
+            ],
+            [
+              0.21484375,
+              0.93627824
+            ],
+            [
+              0.20800781,
+              0.93018533
+            ],
+            [
+              0.19335938,
+              0.92409241
+            ],
+            [
+              0.19335938,
+              0.91089109
+            ],
+            [
+              0.19042969,
+              0.89261234
+            ],
+            [
+              0.1875,
+              0.88144199
+            ],
+            [
+              0.18164063,
+              0.87433359
+            ],
+            [
+              0.16796875,
+              0.86722518
+            ],
+            [
+              0.14648438,
+              0.86722518
+            ],
+            [
+              0.13378906,
+              0.86214775
+            ],
+            [
+              0.125,
+              0.86113227
+            ],
+            [
+              0.12207031,
+              0.8662097
+            ],
+            [
+              0.11328125,
+              0.86722518
+            ],
+            [
+              0.10644531,
+              0.86214775
+            ],
+            [
+              0.1015625,
+              0.85605484
+            ],
+            [
+              0.08691406,
+              0.84996192
+            ],
+            [
+              0.08691406,
+              0.82660574
+            ],
+            [
+              0.08105469,
+              0.80832699
+            ],
+            [
+              0.08203125,
+              0.79817212
+            ],
+            [
+              0.07519531,
+              0.78395532
+            ],
+            [
+              0.0703125,
+              0.77887789
+            ],
+            [
+              0.04882813,
+              0.76059914
+            ],
+            [
+              0.03808594,
+              0.75653719
+            ],
+            [
+              0.0234375,
+              0.75653719
+            ],
+            [
+              0.00976563,
+              0.76567657
+            ],
+            [
+              0.00585938,
+              0.76567657
+            ],
+            [
+              0.00585938,
+              0.76059914
+            ],
+            [
+              0.00976563,
+              0.74942879
+            ],
+            [
+              0.00683594,
+              0.73724296
+            ],
+            [
+              0,
+              0.72810358
+            ],
+            [
+              0.00097656,
+              0.64483371
+            ],
+            [
+              0.00683594,
+              0.64381823
+            ],
+            [
+              0.01171875,
+              0.63366337
+            ],
+            [
+              0.01660156,
+              0.60522975
+            ],
+            [
+              0.01660156,
+              0.59202843
+            ],
+            [
+              0.00878906,
+              0.5727342
+            ],
+            [
+              0.01074219,
+              0.56359482
+            ],
+            [
+              0.01269531,
+              0.53516121
+            ],
+            [
+              0.01171875,
+              0.52195989
+            ],
+            [
+              0.00097656,
+              0.50469662
+            ],
+            [
+              0,
+              0.49758822
+            ]
+          ]
+        ],
+        "color": "#2a9d8f",
+        "borderColor": "#d62828",
+        "opacity": 0.5,
+        "parentId": "",
+        "dominionId": "region-c8b7a2c8-5c5b-45bf-b6c8-583ad28303fc",
+        "familyId": "haus-fir-an-tarvo",
+        "targetMapId": "",
+        "showLabel": true,
+        "note": "",
+        "source": {
+          "type": "world-anvil",
+          "mapId": "49b0dc39-8bf6-4935-9080-ae7f164f1f65",
+          "markerId": "c8b7a2c8-5c5b-45bf-b6c8-583ad28303fc",
+          "coordinateSystem": "normalized-top-left",
+          "geometryMethod": "visible-svg",
+          "url": "https://www.worldanvil.com/world/map/marker/c8b7a2c8-5c5b-45bf-b6c8-583ad28303fc/edit"
+        },
+        "familyName": "Clan Fir An’Tarvo"
+      },
+      {
+        "id": "wa-47363827-41a3-482d-8ec1-6d30674955aa",
+        "name": "Herrschaft der Dal'Ruitheach",
+        "shortName": "Dal'Ruitheach",
+        "kind": "area",
+        "paths": [
+          [
+            [
+              0.95507813,
+              0.65803503
+            ],
+            [
+              0.76171875,
+              0.53719218
+            ],
+            [
+              0.74609375,
+              0.53414572
+            ],
+            [
+              0.73046875,
+              0.52805281
+            ],
+            [
+              0.67675781,
+              0.52602183
+            ],
+            [
+              0.64941406,
+              0.51891343
+            ],
+            [
+              0.58398438,
+              0.46915461
+            ],
+            [
+              0.57226563,
+              0.46407718
+            ],
+            [
+              0.55664063,
+              0.46103072
+            ],
+            [
+              0.55175781,
+              0.45189134
+            ],
+            [
+              0.54785156,
+              0.42751968
+            ],
+            [
+              0.54003906,
+              0.4183803
+            ],
+            [
+              0.52734375,
+              0.4112719
+            ],
+            [
+              0.53515625,
+              0.40619447
+            ],
+            [
+              0.546875,
+              0.38690023
+            ],
+            [
+              0.54980469,
+              0.37776085
+            ],
+            [
+              0.54980469,
+              0.36557502
+            ],
+            [
+              0.55175781,
+              0.3594821
+            ],
+            [
+              0.55957031,
+              0.35338919
+            ],
+            [
+              0.60644531,
+              0.29449099
+            ],
+            [
+              0.62304688,
+              0.26808835
+            ],
+            [
+              0.63867188,
+              0.25590251
+            ],
+            [
+              0.65820313,
+              0.23660828
+            ],
+            [
+              0.671875,
+              0.2203605
+            ],
+            [
+              0.67480469,
+              0.20715918
+            ],
+            [
+              0.68359375,
+              0.1980198
+            ],
+            [
+              0.6953125,
+              0.18075654
+            ],
+            [
+              0.70507813,
+              0.18684945
+            ],
+            [
+              0.71777344,
+              0.15943133
+            ],
+            [
+              0.73339844,
+              0.13302869
+            ],
+            [
+              0.734375,
+              0.10154862
+            ],
+            [
+              0.73242188,
+              0.0588982
+            ],
+            [
+              0.72460938,
+              0.04874334
+            ],
+            [
+              0.74121094,
+              0.05178979
+            ],
+            [
+              0.75097656,
+              0.05788271
+            ],
+            [
+              0.77441406,
+              0.06194466
+            ],
+            [
+              0.80078125,
+              0.04366591
+            ],
+            [
+              0.81738281,
+              0.04061945
+            ],
+            [
+              0.82910156,
+              0.04468139
+            ],
+            [
+              0.82910156,
+              0.05280528
+            ],
+            [
+              0.8359375,
+              0.06092917
+            ],
+            [
+              0.86425781,
+              0.07514598
+            ],
+            [
+              0.87304688,
+              0.07616146
+            ],
+            [
+              0.8828125,
+              0.07209952
+            ],
+            [
+              0.88867188,
+              0.0660066
+            ],
+            [
+              0.8984375,
+              0.06803757
+            ],
+            [
+              0.90527344,
+              0.07514598
+            ],
+            [
+              0.92675781,
+              0.08428535
+            ],
+            [
+              0.94140625,
+              0.08733181
+            ],
+            [
+              0.95898438,
+              0.08530084
+            ],
+            [
+              0.96484375,
+              0.09240924
+            ],
+            [
+              0.97070313,
+              0.10459507
+            ],
+            [
+              0.97460938,
+              0.11982737
+            ],
+            [
+              0.98339844,
+              0.12388931
+            ],
+            [
+              1.00195313,
+              0.12896674
+            ],
+            [
+              1,
+              0.30464585
+            ],
+            [
+              0.99707031,
+              0.30972328
+            ],
+            [
+              0.98730469,
+              0.3158162
+            ],
+            [
+              0.98242188,
+              0.32394009
+            ],
+            [
+              0.97558594,
+              0.35643564
+            ],
+            [
+              0.97167969,
+              0.36252856
+            ],
+            [
+              0.95214844,
+              0.37471439
+            ],
+            [
+              0.94238281,
+              0.3960396
+            ],
+            [
+              0.94238281,
+              0.40619447
+            ],
+            [
+              0.95117188,
+              0.42650419
+            ],
+            [
+              0.95507813,
+              0.44275197
+            ],
+            [
+              0.96875,
+              0.4549378
+            ],
+            [
+              0.97070313,
+              0.47220107
+            ],
+            [
+              0.9765625,
+              0.48743336
+            ],
+            [
+              0.98144531,
+              0.49555725
+            ],
+            [
+              0.99902344,
+              0.50977405
+            ],
+            [
+              1.00097656,
+              0.59507489
+            ],
+            [
+              0.99023438,
+              0.61030718
+            ],
+            [
+              0.98828125,
+              0.61741559
+            ],
+            [
+              0.984375,
+              0.62147753
+            ],
+            [
+              0.9765625,
+              0.6235085
+            ],
+            [
+              0.96679688,
+              0.63670982
+            ],
+            [
+              0.96484375,
+              0.64381823
+            ],
+            [
+              0.95898438,
+              0.64991114
+            ]
+          ]
+        ],
+        "color": "#00ff11",
+        "borderColor": "#ff0000",
+        "opacity": 0.5,
+        "parentId": "wa-c8b7a2c8-5c5b-45bf-b6c8-583ad28303fc",
+        "dominionId": "region-47363827-41a3-482d-8ec1-6d30674955aa",
+        "familyId": "haus-ruitheach",
+        "targetMapId": "",
+        "showLabel": true,
+        "note": "",
+        "source": {
+          "type": "world-anvil",
+          "mapId": "49b0dc39-8bf6-4935-9080-ae7f164f1f65",
+          "markerId": "47363827-41a3-482d-8ec1-6d30674955aa",
+          "coordinateSystem": "normalized-top-left",
+          "geometryMethod": "visible-svg",
+          "url": "https://www.worldanvil.com/world/map/marker/47363827-41a3-482d-8ec1-6d30674955aa/edit"
+        },
+        "familyName": "Dál’Ruitheach"
+      }
+    ],
+    "dominions": [
+      {
+        "id": "region-91845cb6-5ca1-487d-a3f0-7a7461862624",
+        "name": "Herrschaft der Ru'Gortach",
+        "type": "Herrschaft",
+        "ruler": "Ru’Gortach",
+        "seat": "Broch an Ear",
+        "note": "",
+        "parentId": "region-c8b7a2c8-5c5b-45bf-b6c8-583ad28303fc"
+      },
+      {
+        "id": "region-c8b7a2c8-5c5b-45bf-b6c8-583ad28303fc",
+        "name": "Oberherrschaft - Tir na Tonn",
+        "type": "Oberherrschaft",
+        "ruler": "Clan Fir An’Tarvo",
+        "seat": "Dun Rothar",
+        "note": "",
+        "parentId": ""
+      },
+      {
+        "id": "region-47363827-41a3-482d-8ec1-6d30674955aa",
+        "name": "Herrschaft der Dal'Ruitheach",
+        "type": "Herrschaft",
+        "ruler": "Dál’Ruitheach",
+        "seat": "Broch an Iar",
+        "note": "",
+        "parentId": "region-c8b7a2c8-5c5b-45bf-b6c8-583ad28303fc"
+      }
+    ],
+    "regionTitle": "Tir na Tonn",
+    "regionIcon": "/Stammbäume/assets/images/regions/Leitheach/tir-na-tonn.png",
+    "mapImages": {
+      "normal": "/Karten/Leitheach/tir-na-tonn/Kartenbilder/normal.webp",
+      "regions": "",
+      "pins": ""
+    },
+    "layerNames": {
+      "normal": "Karte",
+      "regions": "Regionen",
+      "pins": "Markierungen"
+    },
+    "dotSize": 80,
+    "lblSize": 50,
+    "displaySettingsVersion": 1,
+    "markerPresentation": "symbols",
+    "pinVisibilityVersion": 1,
+    "showMarkers": true,
+    "showPinLabels": false,
+    "alwaysShowLettering": false,
+    "extraLayers": [],
+    "dm": {
+      "sessions": [],
+      "notes": "",
+      "groupStatus": {}
+    }
+  }
+}

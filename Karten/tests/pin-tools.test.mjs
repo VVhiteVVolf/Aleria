@@ -43,8 +43,9 @@ function fixture(pins = [{ id: 'one', title: 'Klerus', x: .25, y: .3 }]) {
     pushUndo: (_, handler) => undo.push(handler), save: () => { saves++; },
     openPin: (...args) => opened.push(args)
   };
-  const window = { KartoRuntime: runtime, addEventListener: (type, handler) => { windowEvents[type] = handler; } };
-  const context = vm.createContext({ window, document,
+  const window = { KartoRuntime: runtime, addEventListener: (type, handler) => { windowEvents[type] = handler; },
+    dispatchEvent: event => { windowEvents[event.type]?.(event); return true; } };
+  const context = vm.createContext({ window, document, CustomEvent: class CustomEvent { constructor(type) { this.type = type; } },
     requestAnimationFrame: callback => { frames.set(++frameId, callback); return frameId; },
     cancelAnimationFrame: id => frames.delete(id)
   });

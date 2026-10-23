@@ -1,0 +1,2214 @@
+{
+  "pages": [
+    {
+      "id": "fuerstentum-dunfal",
+      "title": "Fürstentum Dunfal",
+      "shortTitle": "Fürstentum Dunfal",
+      "type": "Fürstentum",
+      "kicker": "Fürstentum · Clan Ard’Chulainn",
+      "parentHref": "/Kontinente/Alben/Der Schild von Ailith.html",
+      "parentLabel": "Der Schild von Ailith",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Estryll",
+          "slug": "estryll"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Dunfal",
+          "slug": "fuerstentum-dunfal"
+        }
+      ],
+      "crestSrc": "/Stammbäume/assets/images/regions/Dunfal/dunfal.png",
+      "copy": {},
+      "infobox": [
+        {
+          "title": "Allgemein",
+          "rows": [
+            {
+              "label": "Typ",
+              "value": "Fürstentum"
+            },
+            {
+              "label": "Herrschender Clan / Bund",
+              "value": "Clan Ard’Chulainn"
+            },
+            {
+              "label": "Sitz",
+              "value": "Dunfal"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Regierender Clan",
+          "houses": [
+            {
+              "name": "Clan Ard’Chulainn",
+              "familyId": "haus-chulainn",
+              "imageSrc": "/Stammbäume/assets/images/houses/Dunfal/clan-ard-chulainn.png",
+              "seat": "Dunfal",
+              "liege": "",
+              "rank": "Fürstenclan",
+              "featured": true,
+              "featuredLabel": "Fürstenclan"
+            }
+          ]
+        },
+        {
+          "title": "Clans von Tir na Rithe",
+          "houses": [
+            {
+              "name": "Clan Mac Sidhe’Ailella",
+              "familyId": "haus-ailella",
+              "imageSrc": "/Stammbäume/assets/images/houses/Dunfal/clan-mac-sidhe-ailella.png",
+              "seat": "Braighmòr",
+              "liege": "Clan Ard’Chulainn",
+              "rank": "Laird-Clan",
+              "featured": false
+            },
+            {
+              "name": "Clan Mac’Céin",
+              "familyId": "haus-cein",
+              "imageSrc": "/Stammbäume/assets/images/houses/Dunfal/clan-mac-cein.png",
+              "seat": "Caerthalas",
+              "liege": "Clan Ard’Chulainn",
+              "rank": "Laird-Clan",
+              "featured": false
+            },
+            {
+              "name": "Clan Dál’Birn",
+              "familyId": "haus-birn",
+              "imageSrc": "/Stammbäume/assets/images/houses/Dunfal/clan-dal-birn.png",
+              "seat": "Dùnthàirne",
+              "liege": "Clan Ard’Chulainn",
+              "rank": "Laird-Clan",
+              "featured": false
+            },
+            {
+              "name": "Clan Ruin’Morath",
+              "familyId": "haus-morath",
+              "imageSrc": "/Stammbäume/assets/images/houses/Dunfal/clan-ruin-morath.png",
+              "seat": "Iarthar",
+              "liege": "Clan Ard’Chulainn",
+              "rank": "Laird-Clan",
+              "featured": false
+            }
+          ]
+        },
+        {
+          "title": "Clans von Tir na Fathach",
+          "houses": [
+            {
+              "name": "Clan Nic’Nuadat",
+              "familyId": "haus-nuadat",
+              "imageSrc": "/Stammbäume/assets/images/houses/Dunfal/clan-nic-nuadat.png",
+              "seat": "Cradh na Frinne",
+              "liege": "Clan Ard’Chulainn",
+              "rank": "Mor-Tiarna-Clan",
+              "featured": true,
+              "featuredLabel": "Mor-Tiarna-Clan"
+            },
+            {
+              "name": "Clan Ua’Anbhair",
+              "familyId": "haus-anbhair",
+              "imageSrc": "/Stammbäume/assets/images/houses/Dunfal/clan-ua-anbhair.png",
+              "seat": "Cradh na Frinne",
+              "liege": "Clan Nic’Nuadat",
+              "rank": "Laird-Clan",
+              "featured": false
+            },
+            {
+              "name": "Clan Ua’Casur",
+              "familyId": "haus-casur",
+              "imageSrc": "/Stammbäume/assets/images/houses/Dunfal/clan-ua-casur.png",
+              "seat": "Cradh na Frinne",
+              "liege": "Clan Nic’Nuadat",
+              "rank": "Laird-Clan",
+              "featured": false
+            },
+            {
+              "name": "Clan Dál’Aonghusa",
+              "familyId": "haus-aonghusa",
+              "imageSrc": "/Stammbäume/assets/images/houses/Dunfal/clan-dal-aonghusa.png",
+              "seat": "Cradh na Frinne",
+              "liege": "Clan Nic’Nuadat",
+              "rank": "Laird-Clan",
+              "featured": false
+            },
+            {
+              "name": "Clan Na’Riangabra",
+              "familyId": "haus-riangabra",
+              "imageSrc": "/Stammbäume/assets/images/houses/Dunfal/clan-na-riangabra.png",
+              "seat": "Baile Begg",
+              "liege": "Clan Nic’Nuadat",
+              "rank": "Laird-Clan",
+              "featured": false
+            },
+            {
+              "name": "Clan Mac’Eachtrai",
+              "familyId": "haus-eachtrai",
+              "imageSrc": "/Stammbäume/assets/images/houses/Dunfal/clan-mac-eachtrai.png",
+              "seat": "Athenry",
+              "liege": "Clan Nic’Nuadat",
+              "rank": "Laird-Clan",
+              "featured": false
+            }
+          ]
+        },
+        {
+          "title": "Örtliche Septs",
+          "houses": [
+            {
+              "name": "Sept Ferbend",
+              "familyId": "sept-ferbend",
+              "imageSrc": "/Stammbäume/assets/images/houses/Dunfal/sept-ferbend.png",
+              "seat": "Cradh na Frinne",
+              "liege": "",
+              "rank": "Bauernsept",
+              "featured": false
+            }
+          ]
+        },
+        {
+          "title": "Ausgestorbene Clans",
+          "variant": "extinct",
+          "houses": [
+            {
+              "name": "Clan Ui’Duilb",
+              "familyId": "haus-duilb",
+              "imageSrc": "/Stammbäume/assets/images/houses/Dunfal/clan-ui-duilb.png",
+              "seat": "Dunfal",
+              "liege": "",
+              "rank": "Offen",
+              "featured": false
+            }
+          ]
+        }
+      ],
+      "councilGroups": [
+        {
+          "title": "Herrschaft",
+          "members": [
+            {
+              "office": "Ard Tiarna von Dunfal",
+              "name": "Cú Chulainn",
+              "imageSrc": "/Stammbäume/assets/images/portraits/haus-chulainn/cu-1509-chulainn.jpg",
+              "familyId": "haus-chulainn",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-chulainn&mode=view&person=cu-1509-chulainn",
+              "featured": true
+            }
+          ]
+        },
+        {
+          "title": "Ratsämter",
+          "members": [
+            {
+              "office": "Marschall des Fürsten",
+              "name": "Connla Chulainn",
+              "imageSrc": "/Stammbäume/assets/images/portraits/haus-chulainn/connla-1660-chulainn.jpg",
+              "familyId": "haus-chulainn",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-chulainn&mode=view&person=connla-1660-chulainn"
+            },
+            {
+              "office": "Kämmerer des Fürsten",
+              "name": "Górman Cein",
+              "imageSrc": "/Stammbäume/assets/images/portraits/haus-cein/gorman-1670-cein.png",
+              "familyId": "haus-cein",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-cein&mode=view&person=gorman-1670-cein"
+            },
+            {
+              "office": "Justiziar des Fürsten",
+              "name": "Tarlachán Birn",
+              "imageSrc": "/Stammbäume/assets/images/portraits/haus-birn/tarlachan-1670-birn.png",
+              "familyId": "haus-birn",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-birn&mode=view&person=tarlachan-1670-birn"
+            },
+            {
+              "office": "Schatten des Fürsten",
+              "name": "Sencha",
+              "imageSrc": "/Kontinente/assets/images/dunfal/council-sencha.png"
+            },
+            {
+              "office": "Herold des Fürsten",
+              "name": "Ruaidhrígh Chulainn",
+              "imageSrc": "/Stammbäume/assets/images/portraits/haus-chulainn/ruaidhrigh-1680-chulainn.jpg",
+              "familyId": "haus-chulainn",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-chulainn&mode=view&person=ruaidhrigh-1680-chulainn"
+            }
+          ]
+        },
+        {
+          "title": "Geistliche und beratende Ämter",
+          "members": [
+            {
+              "office": "Ratsmagier des Fürsten",
+              "name": "Amairgin Chulainn",
+              "imageSrc": "/Stammbäume/assets/images/portraits/haus-chulainn/amairgin-1512-chulainn.jpg",
+              "familyId": "haus-chulainn",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-chulainn&mode=view&person=amairgin-1512-chulainn"
+            },
+            {
+              "office": "Patriarch des Fürsten",
+              "name": "Quinn Ailella",
+              "imageSrc": "/Stammbäume/assets/images/portraits/haus-marwolaeth/quinn-ailella.png",
+              "familyId": "haus-ailella",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-ailella&mode=view&person=quinn-ailella"
+            },
+            {
+              "office": "Barde des Fürsten",
+              "name": "Dubhthach Morath",
+              "imageSrc": "/Stammbäume/assets/images/portraits/haus-morath/dubhthach-1676-morath.png",
+              "familyId": "haus-morath",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-morath&mode=view&person=dubhthach-1676-morath"
+            },
+            {
+              "office": "Berater des Fürsten",
+              "name": "Cathbad",
+              "imageSrc": "/Kontinente/assets/images/dunfal/council-cathbad.png"
+            },
+            {
+              "office": "Regent/Berater des Fürsten",
+              "name": "Tadg Nuadat",
+              "imageSrc": "/Stammbäume/assets/images/portraits/haus-nuadat/tadg-1663-nuadat-20261022.png",
+              "familyId": "haus-nuadat",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-nuadat&mode=view&person=tadg-1663-nuadat"
+            }
+          ]
+        }
+      ],
+      "vassalGroups": [],
+      "domains": [
+        {
+          "territoryId": "fuerstentum-dunfal",
+          "title": "Fürstentum Dunfal",
+          "center": "Dunfal",
+          "sections": [
+            {
+              "title": "Burg",
+              "placeIds": [
+                "dunfal-ace24959-eda4-414b-9957-01ca132ef272"
+              ]
+            }
+          ]
+        }
+      ],
+      "territoryLinks": [
+        "oberherrschaft-tir-na-rithe",
+        "oberherrschaft-tir-na-fathach"
+      ]
+    },
+    {
+      "id": "oberherrschaft-tir-na-rithe",
+      "title": "Oberherrschaft Tir na Rithe",
+      "shortTitle": "Tir na Rithe",
+      "type": "Oberherrschaft",
+      "kicker": "Oberherrschaft · Clan Ard’Chulainn",
+      "parentHref": "/Kontinente/Estryll/Fürstentum Dunfal/Fürstentum Dunfal.html",
+      "parentLabel": "Fürstentum Dunfal",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Estryll",
+          "slug": "estryll"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Dunfal",
+          "slug": "fuerstentum-dunfal"
+        },
+        {
+          "type": "Oberherrschaft",
+          "name": "Oberherrschaft Tir na Rithe",
+          "slug": "oberherrschaft-tir-na-rithe"
+        }
+      ],
+      "crestSrc": "/Stammbäume/assets/images/regions/Dunfal/tir-na-rithe.png",
+      "copy": {},
+      "infobox": [
+        {
+          "title": "Allgemein",
+          "rows": [
+            {
+              "label": "Typ",
+              "value": "Oberherrschaft"
+            },
+            {
+              "label": "Herrschender Clan / Bund",
+              "value": "Clan Ard’Chulainn"
+            },
+            {
+              "label": "Sitz",
+              "value": "Dunfal"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Regierender Clan",
+          "houses": [
+            {
+              "name": "Clan Ard’Chulainn",
+              "familyId": "haus-chulainn",
+              "imageSrc": "/Stammbäume/assets/images/houses/Dunfal/clan-ard-chulainn.png",
+              "seat": "Dunfal",
+              "liege": "",
+              "rank": "Fürstenclan",
+              "featured": true,
+              "featuredLabel": "Regierender Clan"
+            }
+          ]
+        },
+        {
+          "title": "Unmittelbar untergebene Clans",
+          "houses": [
+            {
+              "name": "Clan Mac Sidhe’Ailella",
+              "familyId": "haus-ailella",
+              "imageSrc": "/Stammbäume/assets/images/houses/Dunfal/clan-mac-sidhe-ailella.png",
+              "seat": "Braighmòr",
+              "liege": "Clan Ard’Chulainn",
+              "rank": "Laird-Clan",
+              "featured": false
+            },
+            {
+              "name": "Clan Mac’Céin",
+              "familyId": "haus-cein",
+              "imageSrc": "/Stammbäume/assets/images/houses/Dunfal/clan-mac-cein.png",
+              "seat": "Caerthalas",
+              "liege": "Clan Ard’Chulainn",
+              "rank": "Laird-Clan",
+              "featured": false
+            },
+            {
+              "name": "Clan Dál’Birn",
+              "familyId": "haus-birn",
+              "imageSrc": "/Stammbäume/assets/images/houses/Dunfal/clan-dal-birn.png",
+              "seat": "Dùnthàirne",
+              "liege": "Clan Ard’Chulainn",
+              "rank": "Laird-Clan",
+              "featured": false
+            },
+            {
+              "name": "Clan Ruin’Morath",
+              "familyId": "haus-morath",
+              "imageSrc": "/Stammbäume/assets/images/houses/Dunfal/clan-ruin-morath.png",
+              "seat": "Iarthar",
+              "liege": "Clan Ard’Chulainn",
+              "rank": "Laird-Clan",
+              "featured": false
+            }
+          ]
+        },
+        {
+          "title": "Ausgestorbene Clans",
+          "variant": "extinct",
+          "houses": [
+            {
+              "name": "Clan Ui’Duilb",
+              "familyId": "haus-duilb",
+              "imageSrc": "/Stammbäume/assets/images/houses/Dunfal/clan-ui-duilb.png",
+              "seat": "Dunfal",
+              "liege": "",
+              "rank": "Offen",
+              "featured": false
+            }
+          ]
+        }
+      ],
+      "councilGroups": [
+        {
+          "title": "Herrschaft",
+          "members": [
+            {
+              "office": "Mor Tiarna von Tir na Rithe",
+              "name": "Connla Chulainn",
+              "imageSrc": "/Stammbäume/assets/images/portraits/haus-chulainn/connla-1660-chulainn.jpg",
+              "familyId": "haus-chulainn",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-chulainn&mode=view&person=connla-1660-chulainn",
+              "featured": true
+            }
+          ]
+        },
+        {
+          "title": "Ratsämter",
+          "members": [
+            {
+              "office": "Marschall des Mor Tiarna",
+              "name": "Déaglán Birn",
+              "imageSrc": "/Stammbäume/assets/images/portraits/haus-birn/deaglan-1696-birn.png",
+              "familyId": "haus-birn",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-birn&mode=view&person=deaglan-1696-birn"
+            },
+            {
+              "office": "Kämmerer des Mor Tiarna",
+              "name": "Joriath Cein",
+              "imageSrc": "/Stammbäume/assets/images/portraits/haus-cein/joriath-1678-cein.png",
+              "familyId": "haus-cein",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-cein&mode=view&person=joriath-1678-cein"
+            },
+            {
+              "office": "Justiziar des Mor Tiarna",
+              "name": "Uibhist Birn",
+              "imageSrc": "/Stammbäume/assets/images/portraits/haus-birn/uibhist-1675-birn.png",
+              "familyId": "haus-birn",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-birn&mode=view&person=uibhist-1675-birn"
+            },
+            {
+              "office": "Schatten des Mor Tiarna",
+              "name": "Eimhear",
+              "imageSrc": "/Kontinente/assets/images/dunfal/council-eimhear.png"
+            },
+            {
+              "office": "Herold des Mor Tiarna",
+              "name": "Tomaltach Chulainn",
+              "imageSrc": "/Stammbäume/assets/images/portraits/haus-chulainn/tomaltach-1689-chulainn.jpg",
+              "familyId": "haus-chulainn",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-chulainn&mode=view&person=tomaltach-1689-chulainn"
+            }
+          ]
+        },
+        {
+          "title": "Geistliche und beratende Ämter",
+          "members": [
+            {
+              "office": "Ratsmagier des Mor Tiarna",
+              "name": "Wairbhín Cein",
+              "imageSrc": "/Stammbäume/assets/images/portraits/haus-cein/wairbhin-1657-cein.png",
+              "familyId": "haus-cein",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-cein&mode=view&person=wairbhin-1657-cein"
+            },
+            {
+              "office": "Patriarch des Mor Tiarna",
+              "name": "Kessog Ailella",
+              "imageSrc": "/Stammbäume/assets/images/portraits/haus-ailella/kessog-1633-ailella.png",
+              "familyId": "haus-ailella",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-ailella&mode=view&person=kessog-1633-ailella"
+            },
+            {
+              "office": "Barde des Mor Tiarna",
+              "name": "Cairbre Morath",
+              "imageSrc": "/Stammbäume/assets/images/portraits/haus-morath/cairbre-1669-morath.png",
+              "familyId": "haus-morath",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-morath&mode=view&person=cairbre-1669-morath"
+            },
+            {
+              "office": "Volkswahrer des Mor Tiarna",
+              "name": "Vakant",
+              "imageSrc": ""
+            },
+            {
+              "office": "Regent des Mor Tiarna",
+              "name": "Fearghas Chulainn",
+              "imageSrc": "/Stammbäume/assets/images/portraits/haus-chulainn/fearghas-1683-chulainn.jpg",
+              "familyId": "haus-chulainn",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-chulainn&mode=view&person=fearghas-1683-chulainn"
+            }
+          ]
+        }
+      ],
+      "vassalGroups": [],
+      "domains": [
+        {
+          "territoryId": "oberherrschaft-tir-na-rithe",
+          "title": "Oberherrschaft Tir na Rithe",
+          "center": "Dunfal",
+          "sections": [
+            {
+              "title": "Hauptstadt",
+              "placeIds": [
+                "dunfal-c0bb185c-e548-4952-b4df-d456c9f8fa0a"
+              ]
+            },
+            {
+              "title": "Landgut",
+              "placeIds": [
+                "dunfal-07ae9b21-01d9-4f31-9144-7005c3f5176a"
+              ]
+            },
+            {
+              "title": "Ahnenbaum",
+              "placeIds": [
+                "dunfal-08bc27fc-09f0-47b3-a731-4386e16040a3"
+              ]
+            },
+            {
+              "title": "Burg",
+              "placeIds": [
+                "dunfal-36945acb-2e2a-47fa-aa34-0bb72f489637"
+              ]
+            },
+            {
+              "title": "Handelssiedlung",
+              "placeIds": [
+                "dunfal-bdb0d7a5-c423-4937-aa1e-c0c7d748dd0e"
+              ]
+            }
+          ]
+        }
+      ],
+      "territoryLinks": [
+        "herrschaft-ailella",
+        "herrschaft-cein",
+        "herrschaft-birn",
+        "herrschaft-morath"
+      ]
+    },
+    {
+      "id": "oberherrschaft-tir-na-fathach",
+      "title": "Oberherrschaft Tir na Fathach",
+      "shortTitle": "Tir na Fathach",
+      "type": "Oberherrschaft",
+      "kicker": "Oberherrschaft · Clan Nic’Nuadat",
+      "parentHref": "/Kontinente/Estryll/Fürstentum Dunfal/Fürstentum Dunfal.html",
+      "parentLabel": "Fürstentum Dunfal",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Estryll",
+          "slug": "estryll"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Dunfal",
+          "slug": "fuerstentum-dunfal"
+        },
+        {
+          "type": "Oberherrschaft",
+          "name": "Oberherrschaft Tir na Fathach",
+          "slug": "oberherrschaft-tir-na-fathach"
+        }
+      ],
+      "crestSrc": "/Stammbäume/assets/images/regions/Dunfal/tir-na-fathach.png",
+      "copy": {},
+      "infobox": [
+        {
+          "title": "Allgemein",
+          "rows": [
+            {
+              "label": "Typ",
+              "value": "Oberherrschaft"
+            },
+            {
+              "label": "Herrschender Clan / Bund",
+              "value": "Clan Nic’Nuadat"
+            },
+            {
+              "label": "Sitz",
+              "value": "Cradh na Fírinne"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Regierender Clan",
+          "houses": [
+            {
+              "name": "Clan Nic’Nuadat",
+              "familyId": "haus-nuadat",
+              "imageSrc": "/Stammbäume/assets/images/houses/Dunfal/clan-nic-nuadat.png",
+              "seat": "Cradh na Frinne",
+              "liege": "Clan Ard’Chulainn",
+              "rank": "Mor-Tiarna-Clan",
+              "featured": true,
+              "featuredLabel": "Regierender Clan"
+            }
+          ]
+        },
+        {
+          "title": "Unmittelbar untergebene Clans",
+          "houses": [
+            {
+              "name": "Clan Ua’Anbhair",
+              "familyId": "haus-anbhair",
+              "imageSrc": "/Stammbäume/assets/images/houses/Dunfal/clan-ua-anbhair.png",
+              "seat": "Cradh na Frinne",
+              "liege": "Clan Nic’Nuadat",
+              "rank": "Laird-Clan",
+              "featured": false
+            },
+            {
+              "name": "Clan Ua’Casur",
+              "familyId": "haus-casur",
+              "imageSrc": "/Stammbäume/assets/images/houses/Dunfal/clan-ua-casur.png",
+              "seat": "Cradh na Frinne",
+              "liege": "Clan Nic’Nuadat",
+              "rank": "Laird-Clan",
+              "featured": false
+            },
+            {
+              "name": "Clan Dál’Aonghusa",
+              "familyId": "haus-aonghusa",
+              "imageSrc": "/Stammbäume/assets/images/houses/Dunfal/clan-dal-aonghusa.png",
+              "seat": "Cradh na Frinne",
+              "liege": "Clan Nic’Nuadat",
+              "rank": "Laird-Clan",
+              "featured": false
+            },
+            {
+              "name": "Clan Na’Riangabra",
+              "familyId": "haus-riangabra",
+              "imageSrc": "/Stammbäume/assets/images/houses/Dunfal/clan-na-riangabra.png",
+              "seat": "Baile Begg",
+              "liege": "Clan Nic’Nuadat",
+              "rank": "Laird-Clan",
+              "featured": false
+            },
+            {
+              "name": "Clan Mac’Eachtrai",
+              "familyId": "haus-eachtrai",
+              "imageSrc": "/Stammbäume/assets/images/houses/Dunfal/clan-mac-eachtrai.png",
+              "seat": "Athenry",
+              "liege": "Clan Nic’Nuadat",
+              "rank": "Laird-Clan",
+              "featured": false
+            }
+          ]
+        },
+        {
+          "title": "Örtliche Septs",
+          "houses": [
+            {
+              "name": "Sept Ferbend",
+              "familyId": "sept-ferbend",
+              "imageSrc": "/Stammbäume/assets/images/houses/Dunfal/sept-ferbend.png",
+              "seat": "Cradh na Frinne",
+              "liege": "",
+              "rank": "Bauernsept",
+              "featured": false
+            }
+          ]
+        }
+      ],
+      "councilGroups": [
+        {
+          "title": "Herrschaft",
+          "members": [
+            {
+              "office": "Mor Tiarna von Tir na Fathach",
+              "name": "Tadg Nuadat",
+              "imageSrc": "/Stammbäume/assets/images/portraits/haus-nuadat/tadg-1663-nuadat-20261022.png",
+              "familyId": "haus-nuadat",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-nuadat&mode=view&person=tadg-1663-nuadat",
+              "featured": true
+            }
+          ]
+        },
+        {
+          "title": "Ratsämter",
+          "members": [
+            {
+              "office": "Marschall des Mor Tiarna",
+              "name": "Iagan Anbhair",
+              "imageSrc": "/Stammbäume/assets/images/portraits/haus-nuadat/iagan-1675-anbhair.png",
+              "familyId": "haus-anbhair",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-anbhair&mode=view&person=iagan-1675-anbhair"
+            },
+            {
+              "office": "Kämmerer des Mor Tiarna",
+              "name": "Muircheartach Casur",
+              "imageSrc": "/Stammbäume/assets/images/portraits/haus-anbhair/muircheartach-1670-casur.png",
+              "familyId": "haus-casur",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-casur&mode=view&person=muircheartach-1670-casur"
+            },
+            {
+              "office": "Justiziar des Mor Tiarna",
+              "name": "Treasa Aonghusa",
+              "imageSrc": "/Stammbäume/assets/images/portraits/haus-nuadat/treasa-1669-aonghusa.png",
+              "familyId": "haus-aonghusa",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-aonghusa&mode=view&person=treasa-1669-aonghusa"
+            },
+            {
+              "office": "Schatten des Mor Tiarna",
+              "name": "Hearn Nuadat",
+              "imageSrc": ""
+            },
+            {
+              "office": "Herold des Mor Tiarna",
+              "name": "Artan Nuadat",
+              "imageSrc": "/Stammbäume/assets/images/portraits/haus-nuadat/artan-1694-nuadat.png",
+              "familyId": "haus-nuadat",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-nuadat&mode=view&person=artan-1694-nuadat"
+            }
+          ]
+        },
+        {
+          "title": "Geistliche und beratende Ämter",
+          "members": [
+            {
+              "office": "Berater des Mor Tiarna",
+              "name": "Maeva",
+              "imageSrc": "/Kontinente/assets/images/dunfal/council-maeva.png"
+            },
+            {
+              "office": "Patriarch des Mor Tiarna",
+              "name": "Gilleasbuig Eachtrai",
+              "imageSrc": "/Stammbäume/assets/images/portraits/haus-riangabra/gilleasbuig-1634-eachtrai.png",
+              "familyId": "haus-eachtrai",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-eachtrai&mode=view&person=gilleasbuig-1634-eachtrai"
+            },
+            {
+              "office": "Barde des Mor Tiarna",
+              "name": "Latharna Casur",
+              "imageSrc": "/Kontinente/assets/images/dunfal/council-latharnacasur.png"
+            },
+            {
+              "office": "Volkswahrer des Mor Tiarna",
+              "name": "Vakant",
+              "imageSrc": ""
+            },
+            {
+              "office": "Regent des Mor Tiarna",
+              "name": "Brodie Nuadat",
+              "imageSrc": "/Stammbäume/assets/images/portraits/haus-nuadat/brodie-1686-nuadat.png",
+              "familyId": "haus-nuadat",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-nuadat&mode=view&person=brodie-1686-nuadat"
+            }
+          ]
+        }
+      ],
+      "vassalGroups": [],
+      "domains": [
+        {
+          "territoryId": "oberherrschaft-tir-na-fathach",
+          "title": "Oberherrschaft Tir na Fathach",
+          "center": "Cradh na Fírinne",
+          "sections": [
+            {
+              "title": "Stadt",
+              "placeIds": [
+                "dunfal-0993227a-7258-4539-9fc9-a95e3775e27c"
+              ]
+            }
+          ]
+        },
+        {
+          "territoryId": "dunfal-offen-i",
+          "title": "Noch nicht zugeordnete Herrschaft I · Clan-Zuordnung offen",
+          "sections": [
+            {
+              "title": "Bergbausiedlung",
+              "placeIds": [
+                "dunfal-04a4ef2f-f440-4b28-b39f-9c8a0e12355f"
+              ]
+            },
+            {
+              "title": "Hafensiedlung",
+              "placeIds": [
+                "dunfal-34497024-48c8-4e0a-83af-f78a16a80941",
+                "dunfal-e842c209-f15b-458d-8c25-f6ca73ddfd06"
+              ]
+            },
+            {
+              "title": "Dorf",
+              "placeIds": [
+                "dunfal-655c6f4f-dccd-4168-a829-a7a8f78ea29a",
+                "dunfal-e4933bf7-bb50-46ed-9c1a-a39c8cde5ac0"
+              ]
+            },
+            {
+              "title": "Heiligtum",
+              "placeIds": [
+                "dunfal-c6f059e9-8a3c-4b31-99d7-1810d77d0e8c"
+              ]
+            }
+          ]
+        },
+        {
+          "territoryId": "dunfal-offen-ii",
+          "title": "Noch nicht zugeordnete Herrschaft II · Clan-Zuordnung offen",
+          "sections": [
+            {
+              "title": "Bauernsiedlung",
+              "placeIds": [
+                "dunfal-14c150d0-64e4-4c7f-92fb-df45ba527c83",
+                "dunfal-24964bcf-b539-4602-b4c4-da91f93af8d1",
+                "dunfal-6b02d125-1115-4f51-be8a-79120b1be923"
+              ]
+            },
+            {
+              "title": "Magierturm",
+              "placeIds": [
+                "dunfal-385d43c1-fb71-4727-bf2c-e386203ccfbf"
+              ]
+            },
+            {
+              "title": "Bergbausiedlung",
+              "placeIds": [
+                "dunfal-450c55b1-6651-456b-ae2f-46436b556250",
+                "dunfal-78c43c3b-28f5-48b3-8df9-7bc80630cc6e",
+                "dunfal-d638c8af-c29d-4610-841e-53882be3ef20",
+                "dunfal-e9eabda7-d28e-47ae-a9f5-766b28dcbed5"
+              ]
+            },
+            {
+              "title": "Dorf",
+              "placeIds": [
+                "dunfal-5cf6ad72-e299-43ce-9c49-7b26393e9d1f"
+              ]
+            },
+            {
+              "title": "Hafensiedlung",
+              "placeIds": [
+                "dunfal-b772905f-8a7e-4431-85c1-8027186909be",
+                "dunfal-dd5cfadf-b1d0-4f38-acf1-d0591e525513",
+                "dunfal-eb33856a-0656-46eb-9fa2-445520f55ae5"
+              ]
+            }
+          ]
+        },
+        {
+          "territoryId": "dunfal-offen-iii",
+          "title": "Noch nicht zugeordnete Herrschaft III · Clan-Zuordnung offen",
+          "sections": [
+            {
+              "title": "Bergbausiedlung",
+              "placeIds": [
+                "dunfal-04a94d2e-1da0-4ee0-850e-f26dba2996cc",
+                "dunfal-55826a48-759e-41f6-9cc1-bb5fa0acd398",
+                "dunfal-76344247-5944-4ba8-aa96-bb32784e0824",
+                "dunfal-c92fc1ea-2f99-4f69-bf2c-aa8c98882764"
+              ]
+            },
+            {
+              "title": "Heiligtum",
+              "placeIds": [
+                "dunfal-15ca2551-1a77-48d7-9e57-93a12553a16a",
+                "dunfal-20c6b815-2659-4c51-b563-195cf066a228"
+              ]
+            },
+            {
+              "title": "Klostersiedlung",
+              "placeIds": [
+                "dunfal-3b8a7216-b775-4f4b-83c5-0974a3c8c0c4"
+              ]
+            },
+            {
+              "title": "Dorf",
+              "placeIds": [
+                "dunfal-88a65d6a-1517-4473-9ff5-93cb4d288686",
+                "dunfal-97f019df-2cdf-4213-a8fb-42fbd10e8aa0",
+                "dunfal-f112fa44-7f6a-4777-9d65-5c1b66545158"
+              ]
+            }
+          ]
+        }
+      ],
+      "territoryLinks": [
+        "herrschaft-anbhair",
+        "herrschaft-casur",
+        "herrschaft-aonghusa",
+        "herrschaft-riangabra",
+        "herrschaft-eachtrai",
+        "herrschaft-fianna"
+      ]
+    },
+    {
+      "id": "herrschaft-ailella",
+      "title": "Herrschaft der Mac Sidhe’Ailella",
+      "shortTitle": "Herrschaft der Mac Sidhe’Ailella",
+      "type": "Herrschaft",
+      "kicker": "Herrschaft · Clan Mac Sidhe’Ailella",
+      "parentHref": "/Kontinente/Estryll/Fürstentum Dunfal/Oberherrschaft Tir na Rithe/Oberherrschaft Tir na Rithe.html",
+      "parentLabel": "Oberherrschaft Tir na Rithe",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Estryll",
+          "slug": "estryll"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Dunfal",
+          "slug": "fuerstentum-dunfal"
+        },
+        {
+          "type": "Oberherrschaft",
+          "name": "Oberherrschaft Tir na Rithe",
+          "slug": "oberherrschaft-tir-na-rithe"
+        },
+        {
+          "type": "Herrschaft",
+          "name": "Herrschaft der Mac Sidhe’Ailella",
+          "slug": "herrschaft-ailella"
+        }
+      ],
+      "crestSrc": "/Stammbäume/assets/images/regions/Dunfal/herrschaft-mac-sidhe-ailella.png",
+      "copy": {},
+      "infobox": [
+        {
+          "title": "Allgemein",
+          "rows": [
+            {
+              "label": "Typ",
+              "value": "Herrschaft"
+            },
+            {
+              "label": "Herrschender Clan / Bund",
+              "value": "Clan Mac Sidhe’Ailella"
+            },
+            {
+              "label": "Sitz",
+              "value": "Braighmòr"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Regierender Clan",
+          "houses": [
+            {
+              "name": "Clan Mac Sidhe’Ailella",
+              "familyId": "haus-ailella",
+              "imageSrc": "/Stammbäume/assets/images/houses/Dunfal/clan-mac-sidhe-ailella.png",
+              "seat": "Braighmòr",
+              "liege": "Clan Ard’Chulainn",
+              "rank": "Laird-Clan",
+              "featured": true,
+              "featuredLabel": "Regierender Clan"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [
+        {
+          "title": "Herrschaft",
+          "members": [
+            {
+              "office": "Laird",
+              "name": "Quinn Ailella",
+              "imageSrc": "/Stammbäume/assets/images/portraits/haus-marwolaeth/quinn-ailella.png",
+              "familyId": "haus-ailella",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-ailella&mode=view&person=quinn-ailella",
+              "featured": true
+            }
+          ]
+        }
+      ],
+      "vassalGroups": [],
+      "domains": [
+        {
+          "territoryId": "herrschaft-ailella",
+          "title": "Herrschaft der Mac Sidhe’Ailella",
+          "center": "Braighmòr",
+          "sections": [
+            {
+              "title": "Burg",
+              "placeIds": [
+                "dunfal-c60315c2-fae8-4200-880e-137552a72ea2"
+              ]
+            },
+            {
+              "title": "Dorf",
+              "placeIds": [
+                "dunfal-0c09ac7c-ec10-43d6-b2d9-326689052548",
+                "dunfal-69a15c19-86d6-4033-8355-6afe38dc3b58",
+                "dunfal-a529cb9b-afbe-4674-8da7-7ccfb9a4f99b",
+                "dunfal-c8c03eb1-3f86-4d27-8513-f27cb6cb8ff8"
+              ]
+            },
+            {
+              "title": "Klostersiedlung",
+              "placeIds": [
+                "dunfal-0ed2dc40-b9e2-4007-a296-fbe3f6dbaf77"
+              ]
+            },
+            {
+              "title": "Bauernsiedlung",
+              "placeIds": [
+                "dunfal-23effe36-cd9c-4da4-8582-027692cf2b7f",
+                "dunfal-4fa8aa8d-4f39-4e43-a4d7-26fc2a4e373a",
+                "dunfal-6d2c8242-d8f4-4168-9813-fce23a147fa1",
+                "dunfal-6ea038dd-5fcf-40ad-a581-36fb08e51087",
+                "dunfal-da039baf-95a6-4824-b867-85d8bfcfb886"
+              ]
+            },
+            {
+              "title": "Hafensiedlung",
+              "placeIds": [
+                "dunfal-2439473c-3554-46f1-b2e1-fa55198b3a36",
+                "dunfal-aab54de3-3231-4171-95e6-081970fa710f",
+                "dunfal-bfe435ca-a60c-40f5-a686-6c6329e8d3c6",
+                "dunfal-d929907a-0427-4672-95db-03e0c0ea84c2",
+                "dunfal-f94eef18-f269-419c-834e-9d3377b99ca7"
+              ]
+            },
+            {
+              "title": "Leuchtturm",
+              "placeIds": [
+                "dunfal-59c833d7-6cea-4a8d-95b4-07ab05a4754f"
+              ]
+            },
+            {
+              "title": "Magierturm",
+              "placeIds": [
+                "dunfal-67db851a-f0c0-48d6-a06d-067f9622e641",
+                "dunfal-f5f557a5-bd47-49b9-9f42-01c7a10c93e6"
+              ]
+            },
+            {
+              "title": "Turm",
+              "placeIds": [
+                "dunfal-a4071864-057b-49a4-9a1f-7457294ea6b5"
+              ]
+            },
+            {
+              "title": "Heiligtum",
+              "placeIds": [
+                "dunfal-befc22e8-c455-46e3-a551-ce41cf2d4dbc",
+                "dunfal-e50a8e4e-a7e8-4c7e-ae57-cc64a752a79e"
+              ]
+            }
+          ]
+        }
+      ],
+      "territoryLinks": []
+    },
+    {
+      "id": "herrschaft-cein",
+      "title": "Herrschaft der Mac’Céin",
+      "shortTitle": "Herrschaft der Mac’Céin",
+      "type": "Herrschaft",
+      "kicker": "Herrschaft · Clan Mac’Céin",
+      "parentHref": "/Kontinente/Estryll/Fürstentum Dunfal/Oberherrschaft Tir na Rithe/Oberherrschaft Tir na Rithe.html",
+      "parentLabel": "Oberherrschaft Tir na Rithe",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Estryll",
+          "slug": "estryll"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Dunfal",
+          "slug": "fuerstentum-dunfal"
+        },
+        {
+          "type": "Oberherrschaft",
+          "name": "Oberherrschaft Tir na Rithe",
+          "slug": "oberherrschaft-tir-na-rithe"
+        },
+        {
+          "type": "Herrschaft",
+          "name": "Herrschaft der Mac’Céin",
+          "slug": "herrschaft-cein"
+        }
+      ],
+      "crestSrc": "/Stammbäume/assets/images/regions/Dunfal/herrschaft-mac-cein.png",
+      "copy": {},
+      "infobox": [
+        {
+          "title": "Allgemein",
+          "rows": [
+            {
+              "label": "Typ",
+              "value": "Herrschaft"
+            },
+            {
+              "label": "Herrschender Clan / Bund",
+              "value": "Clan Mac’Céin"
+            },
+            {
+              "label": "Sitz",
+              "value": "Caerthalas"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Regierender Clan",
+          "houses": [
+            {
+              "name": "Clan Mac’Céin",
+              "familyId": "haus-cein",
+              "imageSrc": "/Stammbäume/assets/images/houses/Dunfal/clan-mac-cein.png",
+              "seat": "Caerthalas",
+              "liege": "Clan Ard’Chulainn",
+              "rank": "Laird-Clan",
+              "featured": true,
+              "featuredLabel": "Regierender Clan"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [
+        {
+          "title": "Herrschaft",
+          "members": [
+            {
+              "office": "Laird",
+              "name": "Górman Cein",
+              "imageSrc": "/Stammbäume/assets/images/portraits/haus-cein/gorman-1670-cein.png",
+              "familyId": "haus-cein",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-cein&mode=view&person=gorman-1670-cein",
+              "featured": true
+            }
+          ]
+        }
+      ],
+      "vassalGroups": [],
+      "domains": [
+        {
+          "territoryId": "herrschaft-cein",
+          "title": "Herrschaft der Mac’Céin",
+          "center": "Caerthalas",
+          "sections": [
+            {
+              "title": "Burg",
+              "placeIds": [
+                "dunfal-d58d2bd2-7223-490d-bb68-e5e60e64bf9d",
+                "dunfal-5bbd2606-c1c2-4fde-9800-610192bd479d"
+              ]
+            },
+            {
+              "title": "Bauernsiedlung",
+              "placeIds": [
+                "dunfal-0592bec5-9870-4594-b621-2b7d21f12465",
+                "dunfal-3e993e41-aea3-4c61-a6a0-2563f4f569e2",
+                "dunfal-56405f7e-2c7e-4745-946c-a67f1c89fc2e",
+                "dunfal-873a4256-a7a0-467b-b5c2-458435bfe280",
+                "dunfal-cc0d9ac2-b27f-45ca-9dd0-825f2e8693c2",
+                "dunfal-e000c034-882a-4400-9fc5-aecdae42fcfe",
+                "dunfal-eef5be23-1efd-418b-ae22-a7d27167723e"
+              ]
+            },
+            {
+              "title": "Dorf",
+              "placeIds": [
+                "dunfal-06772b1b-c533-48ca-9892-d7b8c9fb877a",
+                "dunfal-6e4b8996-636d-40d3-8262-9fbc513beca1",
+                "dunfal-af5dfe9d-cf14-452f-9763-839134d75ee5",
+                "dunfal-d598284e-d4ee-4c5f-8b35-cdd183ce9cef"
+              ]
+            },
+            {
+              "title": "Bergbausiedlung",
+              "placeIds": [
+                "dunfal-2c5d195c-666a-4435-a684-b0d686c36ab8"
+              ]
+            },
+            {
+              "title": "Handelssiedlung",
+              "placeIds": [
+                "dunfal-98f21066-6480-485e-aef7-00002a83a1c5"
+              ]
+            },
+            {
+              "title": "Turm",
+              "placeIds": [
+                "dunfal-a80aff9f-db44-4bfd-b773-0142922e084c"
+              ]
+            },
+            {
+              "title": "Rosszuchtsiedlung",
+              "placeIds": [
+                "dunfal-c8bd3192-adaa-403a-b042-32307c4ea4a0"
+              ]
+            }
+          ]
+        }
+      ],
+      "territoryLinks": []
+    },
+    {
+      "id": "herrschaft-birn",
+      "title": "Herrschaft der Dál’Birn",
+      "shortTitle": "Herrschaft der Dál’Birn",
+      "type": "Herrschaft",
+      "kicker": "Herrschaft · Clan Dál’Birn",
+      "parentHref": "/Kontinente/Estryll/Fürstentum Dunfal/Oberherrschaft Tir na Rithe/Oberherrschaft Tir na Rithe.html",
+      "parentLabel": "Oberherrschaft Tir na Rithe",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Estryll",
+          "slug": "estryll"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Dunfal",
+          "slug": "fuerstentum-dunfal"
+        },
+        {
+          "type": "Oberherrschaft",
+          "name": "Oberherrschaft Tir na Rithe",
+          "slug": "oberherrschaft-tir-na-rithe"
+        },
+        {
+          "type": "Herrschaft",
+          "name": "Herrschaft der Dál’Birn",
+          "slug": "herrschaft-birn"
+        }
+      ],
+      "crestSrc": "/Stammbäume/assets/images/regions/Dunfal/herrschaft-dal-birn.png",
+      "copy": {},
+      "infobox": [
+        {
+          "title": "Allgemein",
+          "rows": [
+            {
+              "label": "Typ",
+              "value": "Herrschaft"
+            },
+            {
+              "label": "Herrschender Clan / Bund",
+              "value": "Clan Dál’Birn"
+            },
+            {
+              "label": "Sitz",
+              "value": "Dùnthàirne"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Regierender Clan",
+          "houses": [
+            {
+              "name": "Clan Dál’Birn",
+              "familyId": "haus-birn",
+              "imageSrc": "/Stammbäume/assets/images/houses/Dunfal/clan-dal-birn.png",
+              "seat": "Dùnthàirne",
+              "liege": "Clan Ard’Chulainn",
+              "rank": "Laird-Clan",
+              "featured": true,
+              "featuredLabel": "Regierender Clan"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [
+        {
+          "title": "Herrschaft",
+          "members": [
+            {
+              "office": "Laird",
+              "name": "Tarlachán Birn",
+              "imageSrc": "/Stammbäume/assets/images/portraits/haus-birn/tarlachan-1670-birn.png",
+              "familyId": "haus-birn",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-birn&mode=view&person=tarlachan-1670-birn",
+              "featured": true
+            }
+          ]
+        }
+      ],
+      "vassalGroups": [],
+      "domains": [
+        {
+          "territoryId": "herrschaft-birn",
+          "title": "Herrschaft der Dál’Birn",
+          "center": "Dùnthàirne",
+          "sections": [
+            {
+              "title": "Festung",
+              "placeIds": [
+                "dunfal-e80fafb9-1e51-42e4-91b6-78c3ac7f750b"
+              ]
+            },
+            {
+              "title": "Dorf",
+              "placeIds": [
+                "dunfal-24f2288d-ffa4-4caf-856d-5f472660167e",
+                "dunfal-65461264-4332-4e78-9c53-664f09825ce9",
+                "dunfal-d7a4ccc0-66d2-443e-b28f-9afa53e700d4",
+                "dunfal-e1313921-7d89-408f-b9d2-e133599257dd"
+              ]
+            },
+            {
+              "title": "Hafensiedlung",
+              "placeIds": [
+                "dunfal-29ae2232-9edd-4f20-8878-637e9abb833c",
+                "dunfal-91bdda76-3af9-4ba7-87e7-cf81e1fdb508"
+              ]
+            },
+            {
+              "title": "Bauernsiedlung",
+              "placeIds": [
+                "dunfal-403e172a-beef-4a50-ac58-737aa4ef3894",
+                "dunfal-51aa32a5-a89f-481a-96d2-f502dd061d66",
+                "dunfal-e0a7f098-02df-4444-b51f-17623f1d4575"
+              ]
+            },
+            {
+              "title": "Leuchtturm",
+              "placeIds": [
+                "dunfal-5b1955c7-97cf-476b-9ee5-a1bc815b2e41"
+              ]
+            }
+          ]
+        }
+      ],
+      "territoryLinks": []
+    },
+    {
+      "id": "herrschaft-morath",
+      "title": "Herrschaft der Ruin’Morath",
+      "shortTitle": "Herrschaft der Ruin’Morath",
+      "type": "Herrschaft",
+      "kicker": "Herrschaft · Clan Ruin’Morath",
+      "parentHref": "/Kontinente/Estryll/Fürstentum Dunfal/Oberherrschaft Tir na Rithe/Oberherrschaft Tir na Rithe.html",
+      "parentLabel": "Oberherrschaft Tir na Rithe",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Estryll",
+          "slug": "estryll"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Dunfal",
+          "slug": "fuerstentum-dunfal"
+        },
+        {
+          "type": "Oberherrschaft",
+          "name": "Oberherrschaft Tir na Rithe",
+          "slug": "oberherrschaft-tir-na-rithe"
+        },
+        {
+          "type": "Herrschaft",
+          "name": "Herrschaft der Ruin’Morath",
+          "slug": "herrschaft-morath"
+        }
+      ],
+      "crestSrc": "/Stammbäume/assets/images/regions/Dunfal/herrschaft-ruin-morath.png",
+      "copy": {},
+      "infobox": [
+        {
+          "title": "Allgemein",
+          "rows": [
+            {
+              "label": "Typ",
+              "value": "Herrschaft"
+            },
+            {
+              "label": "Herrschender Clan / Bund",
+              "value": "Clan Ruin’Morath"
+            },
+            {
+              "label": "Sitz",
+              "value": "Iarthar"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Regierender Clan",
+          "houses": [
+            {
+              "name": "Clan Ruin’Morath",
+              "familyId": "haus-morath",
+              "imageSrc": "/Stammbäume/assets/images/houses/Dunfal/clan-ruin-morath.png",
+              "seat": "Iarthar",
+              "liege": "Clan Ard’Chulainn",
+              "rank": "Laird-Clan",
+              "featured": true,
+              "featuredLabel": "Regierender Clan"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [
+        {
+          "title": "Herrschaft",
+          "members": [
+            {
+              "office": "Laird",
+              "name": "Flann Morath",
+              "imageSrc": "/Stammbäume/assets/images/portraits/haus-morath/flann-1623-morath.png",
+              "familyId": "haus-morath",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-morath&mode=view&person=flann-1623-morath",
+              "featured": true
+            }
+          ]
+        }
+      ],
+      "vassalGroups": [],
+      "domains": [
+        {
+          "territoryId": "herrschaft-morath",
+          "title": "Herrschaft der Ruin’Morath",
+          "center": "Iarthar",
+          "sections": [
+            {
+              "title": "Stadt",
+              "placeIds": [
+                "dunfal-7b1cf8b1-76c3-4ba9-90c7-64cfa07a05a4"
+              ]
+            },
+            {
+              "title": "Waldsiedlung",
+              "placeIds": [
+                "dunfal-0e2bbcbf-649d-439e-b849-6ac73e32eb5c",
+                "dunfal-aa883549-c6d4-4926-af3e-16ef67832493"
+              ]
+            },
+            {
+              "title": "Bauernsiedlung",
+              "placeIds": [
+                "dunfal-1c297145-d9f4-41c5-b44f-a21aef50bef8",
+                "dunfal-6dfa3692-7d88-489c-8689-0c607a6c31d5",
+                "dunfal-7be6f8d5-9d24-4443-bb21-d3ed94d67d0b",
+                "dunfal-d1dd4242-3b58-418a-b01f-e7ec62f452e1"
+              ]
+            },
+            {
+              "title": "Klostersiedlung",
+              "placeIds": [
+                "dunfal-2db9cea8-d0cc-4ea7-986e-fee18a7cd836"
+              ]
+            },
+            {
+              "title": "Dorf",
+              "placeIds": [
+                "dunfal-31fdf54e-91e5-4cb6-bf67-c0181355c047",
+                "dunfal-51079575-f0ee-4de9-9275-d564025c0877",
+                "dunfal-52719949-bd9e-4b94-a8d3-835ef374029b"
+              ]
+            },
+            {
+              "title": "Heiligtum",
+              "placeIds": [
+                "dunfal-56b48929-a20d-4e17-8d55-616d093e521a"
+              ]
+            },
+            {
+              "title": "Hafensiedlung",
+              "placeIds": [
+                "dunfal-597a1abf-23ef-4063-915e-3758d375f675",
+                "dunfal-b239049d-b924-4c4f-9738-6458bf039c21"
+              ]
+            },
+            {
+              "title": "Burg",
+              "placeIds": [
+                "dunfal-c2d4d943-38cd-48d1-9e48-2856e8e9f250"
+              ]
+            }
+          ]
+        }
+      ],
+      "territoryLinks": []
+    },
+    {
+      "id": "herrschaft-anbhair",
+      "title": "Herrschaft der Ua’Anbhair",
+      "shortTitle": "Herrschaft der Ua’Anbhair",
+      "type": "Herrschaft",
+      "kicker": "Herrschaft · Clan Ua’Anbhair",
+      "parentHref": "/Kontinente/Estryll/Fürstentum Dunfal/Oberherrschaft Tir na Fathach/Oberherrschaft Tir na Fathach.html",
+      "parentLabel": "Oberherrschaft Tir na Fathach",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Estryll",
+          "slug": "estryll"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Dunfal",
+          "slug": "fuerstentum-dunfal"
+        },
+        {
+          "type": "Oberherrschaft",
+          "name": "Oberherrschaft Tir na Fathach",
+          "slug": "oberherrschaft-tir-na-fathach"
+        },
+        {
+          "type": "Herrschaft",
+          "name": "Herrschaft der Ua’Anbhair",
+          "slug": "herrschaft-anbhair"
+        }
+      ],
+      "crestSrc": "/Stammbäume/assets/images/regions/Dunfal/herrschaft-ua-anbhair.png",
+      "copy": {},
+      "infobox": [
+        {
+          "title": "Allgemein",
+          "rows": [
+            {
+              "label": "Typ",
+              "value": "Herrschaft"
+            },
+            {
+              "label": "Herrschender Clan / Bund",
+              "value": "Clan Ua’Anbhair"
+            },
+            {
+              "label": "Sitz",
+              "value": "Cradh na Frinne"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Regierender Clan",
+          "houses": [
+            {
+              "name": "Clan Ua’Anbhair",
+              "familyId": "haus-anbhair",
+              "imageSrc": "/Stammbäume/assets/images/houses/Dunfal/clan-ua-anbhair.png",
+              "seat": "Cradh na Frinne",
+              "liege": "Clan Nic’Nuadat",
+              "rank": "Laird-Clan",
+              "featured": true,
+              "featuredLabel": "Regierender Clan"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [
+        {
+          "title": "Herrschaft",
+          "members": [
+            {
+              "office": "Laird",
+              "name": "Iagan Anbhair",
+              "imageSrc": "/Stammbäume/assets/images/portraits/haus-nuadat/iagan-1675-anbhair.png",
+              "familyId": "haus-anbhair",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-anbhair&mode=view&person=iagan-1675-anbhair",
+              "featured": true
+            }
+          ]
+        }
+      ],
+      "vassalGroups": [],
+      "domains": [],
+      "territoryLinks": []
+    },
+    {
+      "id": "herrschaft-casur",
+      "title": "Herrschaft der Ua’Casur",
+      "shortTitle": "Herrschaft der Ua’Casur",
+      "type": "Herrschaft",
+      "kicker": "Herrschaft · Clan Ua’Casur",
+      "parentHref": "/Kontinente/Estryll/Fürstentum Dunfal/Oberherrschaft Tir na Fathach/Oberherrschaft Tir na Fathach.html",
+      "parentLabel": "Oberherrschaft Tir na Fathach",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Estryll",
+          "slug": "estryll"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Dunfal",
+          "slug": "fuerstentum-dunfal"
+        },
+        {
+          "type": "Oberherrschaft",
+          "name": "Oberherrschaft Tir na Fathach",
+          "slug": "oberherrschaft-tir-na-fathach"
+        },
+        {
+          "type": "Herrschaft",
+          "name": "Herrschaft der Ua’Casur",
+          "slug": "herrschaft-casur"
+        }
+      ],
+      "crestSrc": "/Stammbäume/assets/images/regions/Dunfal/herrschaft-ua-casur.png",
+      "copy": {},
+      "infobox": [
+        {
+          "title": "Allgemein",
+          "rows": [
+            {
+              "label": "Typ",
+              "value": "Herrschaft"
+            },
+            {
+              "label": "Herrschender Clan / Bund",
+              "value": "Clan Ua’Casur"
+            },
+            {
+              "label": "Sitz",
+              "value": "Cradh na Frinne"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Regierender Clan",
+          "houses": [
+            {
+              "name": "Clan Ua’Casur",
+              "familyId": "haus-casur",
+              "imageSrc": "/Stammbäume/assets/images/houses/Dunfal/clan-ua-casur.png",
+              "seat": "Cradh na Frinne",
+              "liege": "Clan Nic’Nuadat",
+              "rank": "Laird-Clan",
+              "featured": true,
+              "featuredLabel": "Regierender Clan"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [
+        {
+          "title": "Herrschaft",
+          "members": [
+            {
+              "office": "Laird",
+              "name": "Muircheartach Casur",
+              "imageSrc": "/Stammbäume/assets/images/portraits/haus-anbhair/muircheartach-1670-casur.png",
+              "familyId": "haus-casur",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-casur&mode=view&person=muircheartach-1670-casur",
+              "featured": true
+            }
+          ]
+        }
+      ],
+      "vassalGroups": [],
+      "domains": [],
+      "territoryLinks": []
+    },
+    {
+      "id": "herrschaft-aonghusa",
+      "title": "Herrschaft der Dál’Aonghusa",
+      "shortTitle": "Herrschaft der Dál’Aonghusa",
+      "type": "Herrschaft",
+      "kicker": "Herrschaft · Clan Dál’Aonghusa",
+      "parentHref": "/Kontinente/Estryll/Fürstentum Dunfal/Oberherrschaft Tir na Fathach/Oberherrschaft Tir na Fathach.html",
+      "parentLabel": "Oberherrschaft Tir na Fathach",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Estryll",
+          "slug": "estryll"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Dunfal",
+          "slug": "fuerstentum-dunfal"
+        },
+        {
+          "type": "Oberherrschaft",
+          "name": "Oberherrschaft Tir na Fathach",
+          "slug": "oberherrschaft-tir-na-fathach"
+        },
+        {
+          "type": "Herrschaft",
+          "name": "Herrschaft der Dál’Aonghusa",
+          "slug": "herrschaft-aonghusa"
+        }
+      ],
+      "crestSrc": "/Stammbäume/assets/images/regions/Dunfal/herrschaft-dal-aonghusa.png",
+      "copy": {},
+      "infobox": [
+        {
+          "title": "Allgemein",
+          "rows": [
+            {
+              "label": "Typ",
+              "value": "Herrschaft"
+            },
+            {
+              "label": "Herrschender Clan / Bund",
+              "value": "Clan Dál’Aonghusa"
+            },
+            {
+              "label": "Sitz",
+              "value": "Cradh na Frinne"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Regierender Clan",
+          "houses": [
+            {
+              "name": "Clan Dál’Aonghusa",
+              "familyId": "haus-aonghusa",
+              "imageSrc": "/Stammbäume/assets/images/houses/Dunfal/clan-dal-aonghusa.png",
+              "seat": "Cradh na Frinne",
+              "liege": "Clan Nic’Nuadat",
+              "rank": "Laird-Clan",
+              "featured": true,
+              "featuredLabel": "Regierender Clan"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [
+        {
+          "title": "Herrschaft",
+          "members": [
+            {
+              "office": "Laird",
+              "name": "Treasa Aonghusa",
+              "imageSrc": "/Stammbäume/assets/images/portraits/haus-nuadat/treasa-1669-aonghusa.png",
+              "familyId": "haus-aonghusa",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-aonghusa&mode=view&person=treasa-1669-aonghusa",
+              "featured": true
+            }
+          ]
+        }
+      ],
+      "vassalGroups": [],
+      "domains": [],
+      "territoryLinks": []
+    },
+    {
+      "id": "herrschaft-riangabra",
+      "title": "Herrschaft der Na’Riangabra",
+      "shortTitle": "Herrschaft der Na’Riangabra",
+      "type": "Herrschaft",
+      "kicker": "Herrschaft · Clan Na’Riangabra",
+      "parentHref": "/Kontinente/Estryll/Fürstentum Dunfal/Oberherrschaft Tir na Fathach/Oberherrschaft Tir na Fathach.html",
+      "parentLabel": "Oberherrschaft Tir na Fathach",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Estryll",
+          "slug": "estryll"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Dunfal",
+          "slug": "fuerstentum-dunfal"
+        },
+        {
+          "type": "Oberherrschaft",
+          "name": "Oberherrschaft Tir na Fathach",
+          "slug": "oberherrschaft-tir-na-fathach"
+        },
+        {
+          "type": "Herrschaft",
+          "name": "Herrschaft der Na’Riangabra",
+          "slug": "herrschaft-riangabra"
+        }
+      ],
+      "crestSrc": "/Stammbäume/assets/images/regions/Dunfal/herrschaft-na-riangabra.png",
+      "copy": {},
+      "infobox": [
+        {
+          "title": "Allgemein",
+          "rows": [
+            {
+              "label": "Typ",
+              "value": "Herrschaft"
+            },
+            {
+              "label": "Herrschender Clan / Bund",
+              "value": "Clan Na’Riangabra"
+            },
+            {
+              "label": "Sitz",
+              "value": "Baile Begg"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Regierender Clan",
+          "houses": [
+            {
+              "name": "Clan Na’Riangabra",
+              "familyId": "haus-riangabra",
+              "imageSrc": "/Stammbäume/assets/images/houses/Dunfal/clan-na-riangabra.png",
+              "seat": "Baile Begg",
+              "liege": "Clan Nic’Nuadat",
+              "rank": "Laird-Clan",
+              "featured": true,
+              "featuredLabel": "Regierender Clan"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [
+        {
+          "title": "Herrschaft",
+          "members": [
+            {
+              "office": "Laird",
+              "name": "Glaisne Riangabra",
+              "imageSrc": "/Stammbäume/assets/images/portraits/haus-riangabra/glaisne-1695-riangabra.png",
+              "familyId": "haus-riangabra",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-riangabra&mode=view&person=glaisne-1695-riangabra",
+              "featured": true
+            }
+          ]
+        }
+      ],
+      "vassalGroups": [],
+      "domains": [
+        {
+          "territoryId": "herrschaft-riangabra",
+          "title": "Herrschaft der Na’Riangabra",
+          "center": "Baile Begg",
+          "sections": [
+            {
+              "title": "Stadt",
+              "placeIds": [
+                "dunfal-0f74844f-16c7-4def-99df-658b13ab8bd0"
+              ]
+            },
+            {
+              "title": "Waldsiedlung",
+              "placeIds": [
+                "dunfal-027b7bae-a4c1-4d23-822c-04011c8bbc34",
+                "dunfal-548cbde3-76f1-4571-98cc-06a122b52cd5",
+                "dunfal-8adb9a35-0f45-4289-8b17-ad1f13e58cf1",
+                "dunfal-ed95e667-b380-461f-898b-35f94d8df21e",
+                "dunfal-f7cff256-d667-4c02-adfe-ebb7083723a4"
+              ]
+            },
+            {
+              "title": "Hafensiedlung",
+              "placeIds": [
+                "dunfal-91ef8f02-ae3f-4bd3-8e14-1226faaf1592"
+              ]
+            },
+            {
+              "title": "Dorf",
+              "placeIds": [
+                "dunfal-b590b3d2-2dd0-4943-95ea-75d8d9ce4fc3"
+              ]
+            },
+            {
+              "title": "Bauernsiedlung",
+              "placeIds": [
+                "dunfal-d66445af-f2b4-4cf4-9e16-5a4f34f96147"
+              ]
+            }
+          ]
+        }
+      ],
+      "territoryLinks": []
+    },
+    {
+      "id": "herrschaft-eachtrai",
+      "title": "Herrschaft der Mac’Eachtrai",
+      "shortTitle": "Herrschaft der Mac’Eachtrai",
+      "type": "Herrschaft",
+      "kicker": "Herrschaft · Clan Mac’Eachtrai",
+      "parentHref": "/Kontinente/Estryll/Fürstentum Dunfal/Oberherrschaft Tir na Fathach/Oberherrschaft Tir na Fathach.html",
+      "parentLabel": "Oberherrschaft Tir na Fathach",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Estryll",
+          "slug": "estryll"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Dunfal",
+          "slug": "fuerstentum-dunfal"
+        },
+        {
+          "type": "Oberherrschaft",
+          "name": "Oberherrschaft Tir na Fathach",
+          "slug": "oberherrschaft-tir-na-fathach"
+        },
+        {
+          "type": "Herrschaft",
+          "name": "Herrschaft der Mac’Eachtrai",
+          "slug": "herrschaft-eachtrai"
+        }
+      ],
+      "crestSrc": "/Stammbäume/assets/images/regions/Dunfal/herrschaft-mac-eachtrai.png",
+      "copy": {},
+      "infobox": [
+        {
+          "title": "Allgemein",
+          "rows": [
+            {
+              "label": "Typ",
+              "value": "Herrschaft"
+            },
+            {
+              "label": "Herrschender Clan / Bund",
+              "value": "Clan Mac’Eachtrai"
+            },
+            {
+              "label": "Sitz",
+              "value": "Athenry"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Regierender Clan",
+          "houses": [
+            {
+              "name": "Clan Mac’Eachtrai",
+              "familyId": "haus-eachtrai",
+              "imageSrc": "/Stammbäume/assets/images/houses/Dunfal/clan-mac-eachtrai.png",
+              "seat": "Athenry",
+              "liege": "Clan Nic’Nuadat",
+              "rank": "Laird-Clan",
+              "featured": true,
+              "featuredLabel": "Regierender Clan"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [
+        {
+          "title": "Herrschaft",
+          "members": [
+            {
+              "office": "Laird",
+              "name": "Malachias Eachtrai",
+              "imageSrc": "/Stammbäume/assets/images/portraits/haus-ailella/malachias-1604-eachtrai.png",
+              "familyId": "haus-eachtrai",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-eachtrai&mode=view&person=malachias-1604-eachtrai",
+              "featured": true
+            }
+          ]
+        }
+      ],
+      "vassalGroups": [],
+      "domains": [
+        {
+          "territoryId": "herrschaft-eachtrai",
+          "title": "Herrschaft der Mac’Eachtrai",
+          "center": "Athenry",
+          "sections": [
+            {
+              "title": "Stadt",
+              "placeIds": [
+                "dunfal-54ce58e0-ee00-40bb-b5fb-4c7386a59ba8"
+              ]
+            },
+            {
+              "title": "Waldsiedlung",
+              "placeIds": [
+                "dunfal-0a5e6b32-c61f-4e0f-8ca3-379882bb5bc5",
+                "dunfal-395167ee-76e7-47fd-8dcc-e7f77cadd1c9",
+                "dunfal-d3edd013-db97-4b94-ab5a-a2b01bb5ee62"
+              ]
+            },
+            {
+              "title": "Magierturm",
+              "placeIds": [
+                "dunfal-0b375df4-fd9d-4cc2-aa09-3681390d08f6"
+              ]
+            },
+            {
+              "title": "Bauernsiedlung",
+              "placeIds": [
+                "dunfal-1b3cc35d-2b83-4341-8e77-ab25ef1d81e2",
+                "dunfal-bbf19cda-15e4-4856-90c1-8ef5339a77be"
+              ]
+            },
+            {
+              "title": "Dorf",
+              "placeIds": [
+                "dunfal-2931cf7a-5910-4974-b0c6-c6416f201a1a",
+                "dunfal-383931aa-66f7-4ab5-96f3-b6064f5ca6ef",
+                "dunfal-507b24e0-eec6-4b31-bdb2-5a6dd31d3b8a",
+                "dunfal-e20742c7-88a3-45a6-a7a9-bac8e8ecd287",
+                "dunfal-fb9b6cb9-46e5-469d-abd9-8845be060cf3"
+              ]
+            },
+            {
+              "title": "Ruine",
+              "placeIds": [
+                "dunfal-82f48429-843f-4526-ae37-a2ca9ad3b3a8"
+              ]
+            },
+            {
+              "title": "Heiligtum",
+              "placeIds": [
+                "dunfal-94dbcc70-c470-4ca2-a000-6e24721a52c7"
+              ]
+            }
+          ]
+        }
+      ],
+      "territoryLinks": []
+    },
+    {
+      "id": "herrschaft-fianna",
+      "title": "Herrschaft der Fianna",
+      "shortTitle": "Herrschaft der Fianna",
+      "type": "Herrschaft",
+      "kicker": "Herrschaft · Fianna",
+      "parentHref": "/Kontinente/Estryll/Fürstentum Dunfal/Oberherrschaft Tir na Fathach/Oberherrschaft Tir na Fathach.html",
+      "parentLabel": "Oberherrschaft Tir na Fathach",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Estryll",
+          "slug": "estryll"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Dunfal",
+          "slug": "fuerstentum-dunfal"
+        },
+        {
+          "type": "Oberherrschaft",
+          "name": "Oberherrschaft Tir na Fathach",
+          "slug": "oberherrschaft-tir-na-fathach"
+        },
+        {
+          "type": "Herrschaft",
+          "name": "Herrschaft der Fianna",
+          "slug": "herrschaft-fianna"
+        }
+      ],
+      "crestSrc": "/Stammbäume/assets/images/regions/Dunfal/herrschaft-fianna.png",
+      "copy": {},
+      "infobox": [
+        {
+          "title": "Allgemein",
+          "rows": [
+            {
+              "label": "Typ",
+              "value": "Herrschaft"
+            },
+            {
+              "label": "Herrschender Clan / Bund",
+              "value": "Fianna"
+            },
+            {
+              "label": "Sitz",
+              "value": "Burg der Fianna"
+            }
+          ]
+        }
+      ],
+      "families": [],
+      "councilGroups": [
+        {
+          "title": "Vorsitz der Fianna",
+          "members": [
+            {
+              "office": "Ard Fianna",
+              "name": "Cú Chulainn",
+              "imageSrc": "/Stammbäume/assets/images/portraits/haus-chulainn/cu-1509-chulainn.jpg",
+              "familyId": "haus-chulainn",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-chulainn&mode=view&person=cu-1509-chulainn",
+              "featured": true
+            }
+          ]
+        }
+      ],
+      "vassalGroups": [],
+      "domains": [
+        {
+          "territoryId": "herrschaft-fianna",
+          "title": "Herrschaft der Fianna",
+          "center": "Burg der Fianna",
+          "sections": [
+            {
+              "title": "Burgsiedlung",
+              "placeIds": [
+                "dunfal-22d6cdd8-9873-4c94-b9be-e00bc1544c6d",
+                "dunfal-33bdc353-d694-46eb-b04e-53f36da82118",
+                "dunfal-3a1810a2-210e-49f9-9e01-c91d25ef6390",
+                "dunfal-55236240-15bc-45eb-9e34-6af0d878ea0b",
+                "dunfal-68fbff43-6a90-415a-abcd-f0c87797ab3a",
+                "dunfal-89f840db-25a3-43d8-be57-f5faf4589c3d"
+              ]
+            },
+            {
+              "title": "Taverne",
+              "placeIds": [
+                "dunfal-589d95b7-aac9-4ad6-8e0f-9a8d483dc243"
+              ]
+            },
+            {
+              "title": "Magierturm",
+              "placeIds": [
+                "dunfal-af70c7cc-3741-4b6c-a5c0-67b7bde8fba2"
+              ]
+            },
+            {
+              "title": "Klostersiedlung",
+              "placeIds": [
+                "dunfal-b62023d8-9470-48f9-9d1c-565f2da05d75"
+              ]
+            },
+            {
+              "title": "Burg",
+              "placeIds": [
+                "dunfal-f2b572e8-a389-4bc4-8e86-dc8c8e59f53f"
+              ]
+            }
+          ]
+        }
+      ],
+      "territoryLinks": []
+    }
+  ]
+}

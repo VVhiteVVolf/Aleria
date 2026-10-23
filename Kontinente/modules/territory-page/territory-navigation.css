@@ -25,10 +25,10 @@
   outline-offset: 2px;
 }
 
-.territory-navigation-card img {
-  flex: 0 0 64px;
-  width: 64px;
-  height: 64px;
+.territory-navigation-banner {
+  flex: 0 0 80px;
+  width: 80px;
+  height: 96px;
   object-fit: contain;
 }
 
@@ -48,4 +48,18 @@
 .territory-navigation-card span span {
   font: 0.82rem/1.4 var(--font-sans, Arial, sans-serif);
   color: #665c4c;
+}
+
+.territory-navigation-card .territory-navigation-owner {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+}
+
+.territory-navigation-crest {
+  flex: 0 0 28px;
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
 }

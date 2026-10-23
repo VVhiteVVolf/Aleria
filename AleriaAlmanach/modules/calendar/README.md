@@ -30,6 +30,9 @@ weiterhin die Monatsnummer; spätere Umbenennungen verändern keine Termine.
   mit dessen Verbindung und Anmeldung aufgebaut. Ein Dokument je Termin.
 - `calendar-store.mjs`: lokaler Cache, ausdrücklich gekennzeichnete lokale Entwürfe,
   Live-Abgleich und Veröffentlichungen mit Versionsprüfung.
+- `calendar-archive-events.mjs`: exakt datierte Quellenereignisse aus der Chronik;
+  einmalig in Monats- und Tagesansicht, ohne Firebase-Schreibzugriffe oder Entwürfe.
+  Aktuell die experimentelle I. Seeschlacht bei Wellenruh am 11.04.1628.
 - `calendar-preview.mjs`: kleine Terminkarten, später erweiterbar um einen Artikelverweis.
 - `calendar-editor.mjs`: Termine bearbeiten; Icon-Verzeichnis und Personenwahl.
 - `calendar-page.mjs` / `.css`: eigenständige Kalenderseite, Monats- und Tagesansicht.

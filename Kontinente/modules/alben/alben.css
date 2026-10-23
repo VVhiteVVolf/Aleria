@@ -1,0 +1,27 @@
+.alben-progress,.alben-home-links { text-align:center; }
+.alben-page .kingdom-page a,.alben-page .court-book a { color:#803b31; text-decoration-color:#c7b89c; }
+.alben-home-links a { white-space:nowrap; }
+.alben-progress { color:#77674e; font:12px/1.6 Verdana,Arial,sans-serif; letter-spacing:.05em; }
+.alben-principalities { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr)); gap:12px; margin:24px 0; }
+.alben-principality-card { display:grid; grid-template-columns:88px minmax(0,1fr); gap:16px; align-items:center; padding:18px; border:1px solid #d9cbb0; background:#faf5e9; }
+.alben-principality-card img { width:88px; height:88px; object-fit:contain; }
+.alben-principality-card h3 { margin:0 0 6px; }
+.alben-principality-card p { margin:0 0 6px; font-size:14px; }
+.alben-principality-card.is-historical { background:#eee8dd; }
+.alben-label,.alben-principality-card .alben-label { color:#7a6b57; font:11px/1.5 Verdana,Arial,sans-serif; }
+.alben-entry-link { font-size:13px; }
+.alben-open-crest { display:grid; place-items:center; width:88px; min-height:88px; border:1px dashed #c7b89c; color:#85765f; text-align:center; font:11px/1.5 Verdana,Arial,sans-serif; }
+.alben-branches { display:grid; grid-auto-flow:column; grid-auto-columns:minmax(190px,1fr); gap:10px; overflow-x:auto; padding:8px 0 14px; margin:24px 0; }
+.alben-branches a { display:grid; grid-template-rows:54px auto auto; align-content:start; gap:12px; padding:18px 12px; border:1px solid #d9cbb0; text-align:center; text-decoration:none; background:#faf5e9; }
+.alben-branches img { width:54px; height:54px; object-fit:contain; justify-self:center; }
+.alben-branches span { color:#7a6b57; font:12px/1.5 Verdana,Arial,sans-serif; }
+.alben-branch { padding:10px 0; }
+.alben-topic { padding:14px 0; border-bottom:1px solid #d9cbb0; }
+.alben-topic summary { cursor:pointer; color:#803b31; font-weight:600; }
+.alben-topic[open] summary { margin-bottom:18px; }
+.alben-historical { margin:20px 0; padding:18px; border:1px solid #d9cbb0; background:#eee8dd; }
+.alben-entry { padding-bottom:28px; margin-bottom:28px; border-bottom:1px solid #d9cbb0; }
+.alben-entry-crest { display:block; object-fit:contain; margin:16px 0; }
+.alben-page .court-hero-icon { border-radius:0; mix-blend-mode:normal; object-fit:contain; }
+.alben-page .court-facts dd { margin:6px 0 0; }
+@media(max-width:520px){ .alben-principality-card { grid-template-columns:64px minmax(0,1fr); padding:14px; gap:12px; } .alben-principality-card img,.alben-open-crest { width:64px; height:64px; min-height:64px; } }

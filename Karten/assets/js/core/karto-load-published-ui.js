@@ -20,7 +20,7 @@
   }
 
   function requireClosedEditor() {
-    if (window.KartoPinEditor?.isOpen() || document.querySelector('.mo.open')) {
+    if (window.KartoPinEditor?.isOpen() || document.querySelector('.mo.open') || runtime.canTransitionEditors?.() === false) {
       throw new Error('Bitte die offene Bearbeitung zuerst übernehmen oder schließen.');
     }
   }

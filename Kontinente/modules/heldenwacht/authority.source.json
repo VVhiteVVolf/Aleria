@@ -1,0 +1,41 @@
+{
+  "scope": "Königliche Delegationsämter des Clans Vaeren in Heldenwacht",
+  "chain": [
+    {
+      "office": "König",
+      "territory": "Aldrimar",
+      "familyId": "haus-vaeren",
+      "person": "Sigurd Vaeren"
+    },
+    {
+      "office": "Jarl",
+      "territoryId": "jarltum-heldenwacht",
+      "person": "Skjor Vaeren"
+    },
+    {
+      "office": "Thane",
+      "territoryId": "thanentum-tal-der-helden",
+      "person": ""
+    },
+    {
+      "office": "Hesir",
+      "territoryId": "hesirentum-heldenwacht",
+      "person": ""
+    }
+  ],
+  "reversion": {
+    "offices": [
+      "Jarl",
+      "Thane",
+      "Hesir"
+    ],
+    "recipient": "König",
+    "trigger": "Tod des Amtsträgers",
+    "automaticInheritance": false
+  },
+  "paragraphs": [
+    "Heldenwacht ist das Jarltum des Königsclans Vaeren. Die Kernregion Tal der Helden bildet zugleich das königliche Thanentum; die Stadt Heldenwacht und ihr Bannkreis werden auf der örtlichen Ebene von einem Hesir der Vaeren geführt.",
+    "König, Jarl, Thane und Hesir bilden aufeinander aufbauende Verantwortungsstufen innerhalb derselben Herrschaft. Der Hesir trägt Entscheidungen zum Thanen, der Thane zum Jarl und der Jarl zum König. Die Zuständigkeiten der unteren Ebene schränken die Autorität der höheren nicht ein; der König hat immer das letzte Wort.",
+    "Die hier übertragenen Vaeren-Ämter des Jarls, Thanen und Hesirs sind keine automatisch erblichen Ansprüche. Beim Tod des Amtsträgers fallen die Titel unmittelbar an den König zurück, der sie selbst neu vergibt. Diese Verteilung entlastet den König und soll Erbkonflikte um die delegierten Verantwortungen vermeiden."
+  ]
+}

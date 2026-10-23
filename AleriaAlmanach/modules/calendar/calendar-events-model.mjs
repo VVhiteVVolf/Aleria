@@ -1,4 +1,5 @@
 export const CALENDAR_TEMPLATES = Object.freeze([
+  { id: 'battle', name: 'Schlacht', title: '', icon: 'ReiterIcons/Ereignisse.png', prompt: 'Konfliktparteien, Schlachtverlauf und Folgen …', recurrence: 'none' },
   { id: 'audience', name: 'Audienz', title: 'Audienz am Hof', icon: 'ReiterIcons/Orden.png', prompt: 'Wer empfängt wen? Welches Anliegen wird vorgetragen?', recurrence: 'none' },
   { id: 'court', name: 'Gerichtstag', title: 'Offenes Gericht', icon: 'ReiterIcons/Organisationen.png', prompt: 'Ort der Verhandlung, Zuständigkeit und Anliegen …', recurrence: 'week' },
   { id: 'holiday', name: 'Feiertag', title: '', icon: 'ReiterIcons/Religion.png', prompt: 'Bedeutung, Bräuche und beteiligte Gemeinschaften …', recurrence: 'year' },

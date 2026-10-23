@@ -19,6 +19,7 @@ import { toFamilyChartData } from '../assets/js/adapters/family-chart-adapter.js
 import { auditFamilyChartLayoutPolicy } from '../assets/js/adapters/family-chart-layout-policy.js';
 import { validateWorkspaceForPublishing } from '../../firebase/functions/src/families/family-validation.js';
 import { BLAITHNEACH_SOURCE_COUNTER_PATCHES } from '../assets/js/data/blaithneach-source-counter-patches.js';
+import { DUNFAL_PORTRAIT_REVISIONS } from '../assets/js/data/dunfal-portrait-upgrade.js';
 
 const read = path => JSON.parse(fs.readFileSync(new URL('../' + path, import.meta.url), 'utf8'));
 const audit = read('assets/data/source-inventories/dunfal-families-audit-2026-10-07.json');
@@ -38,7 +39,7 @@ test('all 626 source cards resolve into twelve complete, connected families and 
     assertValidFamily(current);
     assert.equal(current.persons.length, count, slug);
     assert.equal(new Set(current.persons.map(person => person.worldPersonId)).size, count, slug);
-    assert.equal(current.extensions.sourceRevision, BRANN_SOURCE_COUNTER_PATCHES[current.document.id]?.revision || FAERNA_SOURCE_COUNTER_PATCHES[current.document.id]?.revision || BRAIGH_SOURCE_COUNTER_PATCHES[current.document.id]?.revision || MATHGHAM_SOURCE_COUNTER_PATCHES[current.document.id]?.revision || FAELAORN_SOURCE_COUNTER_PATCHES[current.document.id]?.revision || ALBEN_SOURCE_PORTRAIT_FAMILIES[current.document.id]?.revision || AISLEARNEACH_SOURCE_COUNTER_PATCHES[current.document.id]?.revision || BLAITHNEACH_SOURCE_COUNTER_PATCHES[current.document.id]?.revision || 2);
+    assert.equal(current.extensions.sourceRevision, DUNFAL_PORTRAIT_REVISIONS[current.document.id] || BRANN_SOURCE_COUNTER_PATCHES[current.document.id]?.revision || FAERNA_SOURCE_COUNTER_PATCHES[current.document.id]?.revision || BRAIGH_SOURCE_COUNTER_PATCHES[current.document.id]?.revision || MATHGHAM_SOURCE_COUNTER_PATCHES[current.document.id]?.revision || FAELAORN_SOURCE_COUNTER_PATCHES[current.document.id]?.revision || ALBEN_SOURCE_PORTRAIT_FAMILIES[current.document.id]?.revision || AISLEARNEACH_SOURCE_COUNTER_PATCHES[current.document.id]?.revision || BLAITHNEACH_SOURCE_COUNTER_PATCHES[current.document.id]?.revision || 2);
     assert.deepEqual(auditFamilyChartLayoutPolicy(current).issues, [], slug);
     assert.deepEqual(toFamilyChartData(current).diagnostics.filter(d => d.severity !== 'info'), [], slug);
     const connected = new Set([

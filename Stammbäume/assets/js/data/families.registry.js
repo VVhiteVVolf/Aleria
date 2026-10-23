@@ -80,6 +80,7 @@ import { createFolderPathFromHouseProfile } from '../domain/house-profile.js';
 import { HOUSE_BIOGRAPHY_DEFAULTS } from './house-biographies.registry.js?v=20261021-arvel-v3';
 import { withHouseBiographyDefault } from '../modules/house-biography/house-biography-registry-default.js';
 import { withCwingodSourcePortraitUpgrade } from './cwingod-source-portrait-upgrade.js';
+import { withDunfalPortraitUpgrade } from './dunfal-portrait-upgrade.js';
 import { withMathghamSourceCounterUpgrade } from './mathgham-source-counter-upgrade.js';
 import { withBraighSourceCounterUpgrade } from './braigh-source-counter-upgrade.js';
 import { withFaernaSourceCounterUpgrade } from './faerna-source-counter-upgrade.js';
@@ -127,6 +128,7 @@ function familyRecord({ id, title, family, type = 'dynasty', listing = 'listed',
   family = withFaernaSourceCounterUpgrade(family);
   family = withDamhSourceCounterUpgrade(family);
   family = withBrannSourceCounterUpgrade(family);
+  family = withDunfalPortraitUpgrade(family);
   family = withHouseBiographyDefault(family, HOUSE_BIOGRAPHY_DEFAULTS);
   const folderPath = Object.freeze(createFolderPathFromHouseProfile(family.document.houseProfile));
   const additionalPlacements = additionalPlacementsFor(family, territorialPlacements);

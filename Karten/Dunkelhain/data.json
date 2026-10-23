@@ -1,0 +1,1780 @@
+{
+  "schemaVersion": 1,
+  "dataPath": "Dunkelhain/data.json",
+  "revision": 1,
+  "updatedAt": "2026-10-22T20:30:00.000Z",
+  "generatedStateHash": "5865ed01571e6604d621db5ebf5c31b047ee285dd52e1c782728951da0d7332d",
+  "state": {
+    "pins": [
+      {
+        "id": "dunkelhain-3875e0c9-da75-458b-b59a-3b7eebc8ce90",
+        "title": "Tirscath",
+        "x": 0.938720703125,
+        "y": 0.37677351550183924,
+        "cat": "mmflw1z5ko6e",
+        "templateId": "ruine",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadtruine.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "",
+        "crestLink": "",
+        "banner": "/Kontinente/assets/images/dunkelhain/banner.png",
+        "bannerLink": "/Kontinente/Estryll/Dunkelhain/Der Dunkelhain.html",
+        "region": "Dunkelhain",
+        "house": "",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Tirscath"
+          },
+          {
+            "k": "Ursprung",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Ursache des Verfalls",
+            "v": ""
+          },
+          {
+            "k": "Aktuelle Bewohner",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Schätze / Reliquien",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Typ",
+            "v": "Stadtruine"
+          },
+          {
+            "k": "Beschreibung",
+            "v": "Noch nicht ausgearbeitet"
+          },
+          {
+            "k": "Lehensherr",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "dunkelhain",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "59345470-35e0-4e3a-90aa-b4d1f65dbca3",
+          "markerId": "3875e0c9-da75-458b-b59a-3b7eebc8ce90",
+          "url": "https://www.worldanvil.com/world/map/marker/3875e0c9-da75-458b-b59a-3b7eebc8ce90/edit",
+          "title": "Tirscath",
+          "coordinates": {
+            "x": 3845,
+            "y": 1186,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          },
+          "imageSize": [
+            4096,
+            1903
+          ],
+          "targets": [],
+          "nameStatus": "source"
+        }
+      },
+      {
+        "id": "dunkelhain-392ec9d5-e683-4bba-9f3b-3a9eb7714652",
+        "title": "Bruachan",
+        "x": 0.876708984375,
+        "y": 0.1334734629532317,
+        "cat": "mmflw1z5ko6e",
+        "templateId": "ruine",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadtruine.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "",
+        "crestLink": "",
+        "banner": "/Kontinente/assets/images/dunkelhain/banner.png",
+        "bannerLink": "/Kontinente/Estryll/Dunkelhain/Der Dunkelhain.html",
+        "region": "Dunkelhain",
+        "house": "",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Bruachan"
+          },
+          {
+            "k": "Ursprung",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Ursache des Verfalls",
+            "v": ""
+          },
+          {
+            "k": "Aktuelle Bewohner",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Schätze / Reliquien",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Typ",
+            "v": "Stadtruine"
+          },
+          {
+            "k": "Beschreibung",
+            "v": "Noch nicht ausgearbeitet"
+          },
+          {
+            "k": "Lehensherr",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "dunkelhain",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "59345470-35e0-4e3a-90aa-b4d1f65dbca3",
+          "markerId": "392ec9d5-e683-4bba-9f3b-3a9eb7714652",
+          "url": "https://www.worldanvil.com/world/map/marker/392ec9d5-e683-4bba-9f3b-3a9eb7714652/edit",
+          "title": "Bruachan",
+          "coordinates": {
+            "x": 3591,
+            "y": 1649,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          },
+          "imageSize": [
+            4096,
+            1903
+          ],
+          "targets": [],
+          "nameStatus": "source"
+        }
+      },
+      {
+        "id": "dunkelhain-3a99610f-227d-4cb1-ac64-9ef7556a82c8",
+        "title": "Sruthbruach",
+        "x": 0.84130859375,
+        "y": 0.7109826589595376,
+        "cat": "mmflvquv2rr3",
+        "templateId": "ruine",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/ruine2.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "",
+        "crestLink": "",
+        "banner": "/Kontinente/assets/images/dunkelhain/banner.png",
+        "bannerLink": "/Kontinente/Estryll/Dunkelhain/Der Dunkelhain.html",
+        "region": "Dunkelhain",
+        "house": "",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Sruthbruach"
+          },
+          {
+            "k": "Ursprung",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Ursache des Verfalls",
+            "v": ""
+          },
+          {
+            "k": "Aktuelle Bewohner",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Schätze / Reliquien",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Typ",
+            "v": "Siedlungsruine"
+          },
+          {
+            "k": "Beschreibung",
+            "v": "Noch nicht ausgearbeitet"
+          },
+          {
+            "k": "Lehensherr",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "dunkelhain",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "59345470-35e0-4e3a-90aa-b4d1f65dbca3",
+          "markerId": "3a99610f-227d-4cb1-ac64-9ef7556a82c8",
+          "url": "https://www.worldanvil.com/world/map/marker/3a99610f-227d-4cb1-ac64-9ef7556a82c8/edit",
+          "title": "Sruthbruach",
+          "coordinates": {
+            "x": 3446,
+            "y": 550,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          },
+          "imageSize": [
+            4096,
+            1903
+          ],
+          "targets": [],
+          "nameStatus": "source"
+        }
+      },
+      {
+        "id": "dunkelhain-69766489-14a8-4b85-92f2-681e594be8d2",
+        "title": "Tineach",
+        "x": 0.553466796875,
+        "y": 0.5065685759327379,
+        "cat": "mmflvquv2rr3",
+        "templateId": "ruine",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/ruine2.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "",
+        "crestLink": "",
+        "banner": "/Kontinente/assets/images/dunkelhain/banner.png",
+        "bannerLink": "/Kontinente/Estryll/Dunkelhain/Der Dunkelhain.html",
+        "region": "Dunkelhain",
+        "house": "",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Tineach"
+          },
+          {
+            "k": "Ursprung",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Ursache des Verfalls",
+            "v": ""
+          },
+          {
+            "k": "Aktuelle Bewohner",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Schätze / Reliquien",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Typ",
+            "v": "Siedlungsruine"
+          },
+          {
+            "k": "Beschreibung",
+            "v": "Noch nicht ausgearbeitet"
+          },
+          {
+            "k": "Lehensherr",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "dunkelhain",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "59345470-35e0-4e3a-90aa-b4d1f65dbca3",
+          "markerId": "69766489-14a8-4b85-92f2-681e594be8d2",
+          "url": "https://www.worldanvil.com/world/map/marker/69766489-14a8-4b85-92f2-681e594be8d2/edit",
+          "title": "Tineach",
+          "coordinates": {
+            "x": 2267,
+            "y": 939,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          },
+          "imageSize": [
+            4096,
+            1903
+          ],
+          "targets": [],
+          "nameStatus": "source"
+        }
+      },
+      {
+        "id": "dunkelhain-708bf7a9-df02-4931-bced-713dba51616c",
+        "title": "Siochan",
+        "x": 0.392578125,
+        "y": 0.6715712033631109,
+        "cat": "mmflvquv2rr3",
+        "templateId": "ruine",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/ruine2.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "",
+        "crestLink": "",
+        "banner": "/Kontinente/assets/images/dunkelhain/banner.png",
+        "bannerLink": "/Kontinente/Estryll/Dunkelhain/Der Dunkelhain.html",
+        "region": "Dunkelhain",
+        "house": "",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Siochan"
+          },
+          {
+            "k": "Ursprung",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Ursache des Verfalls",
+            "v": ""
+          },
+          {
+            "k": "Aktuelle Bewohner",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Schätze / Reliquien",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Typ",
+            "v": "Siedlungsruine"
+          },
+          {
+            "k": "Beschreibung",
+            "v": "Noch nicht ausgearbeitet"
+          },
+          {
+            "k": "Lehensherr",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "dunkelhain",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "59345470-35e0-4e3a-90aa-b4d1f65dbca3",
+          "markerId": "708bf7a9-df02-4931-bced-713dba51616c",
+          "url": "https://www.worldanvil.com/world/map/marker/708bf7a9-df02-4931-bced-713dba51616c/edit",
+          "title": "Siochan",
+          "coordinates": {
+            "x": 1608,
+            "y": 625,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          },
+          "imageSize": [
+            4096,
+            1903
+          ],
+          "targets": [],
+          "nameStatus": "source"
+        }
+      },
+      {
+        "id": "dunkelhain-7449574b-af24-40a5-8c3f-df8eb520c0f6",
+        "title": "Gleannmor",
+        "x": 0.336669921875,
+        "y": 0.2832369942196532,
+        "cat": "mmflvquv2rr3",
+        "templateId": "ruine",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/ruine2.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "",
+        "crestLink": "",
+        "banner": "/Kontinente/assets/images/dunkelhain/banner.png",
+        "bannerLink": "/Kontinente/Estryll/Dunkelhain/Der Dunkelhain.html",
+        "region": "Dunkelhain",
+        "house": "",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Gleannmor"
+          },
+          {
+            "k": "Ursprung",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Ursache des Verfalls",
+            "v": ""
+          },
+          {
+            "k": "Aktuelle Bewohner",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Schätze / Reliquien",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Typ",
+            "v": "Siedlungsruine"
+          },
+          {
+            "k": "Beschreibung",
+            "v": "Noch nicht ausgearbeitet"
+          },
+          {
+            "k": "Lehensherr",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "dunkelhain",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "59345470-35e0-4e3a-90aa-b4d1f65dbca3",
+          "markerId": "7449574b-af24-40a5-8c3f-df8eb520c0f6",
+          "url": "https://www.worldanvil.com/world/map/marker/7449574b-af24-40a5-8c3f-df8eb520c0f6/edit",
+          "title": "Gleannmor",
+          "coordinates": {
+            "x": 1379,
+            "y": 1364,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          },
+          "imageSize": [
+            4096,
+            1903
+          ],
+          "targets": [],
+          "nameStatus": "source"
+        }
+      },
+      {
+        "id": "dunkelhain-a44475ff-30a3-466b-ba50-cf347a893ac5",
+        "title": "Lochmorach",
+        "x": 0.794189453125,
+        "y": 0.3268523384130321,
+        "cat": "mmflvquv2rr3",
+        "templateId": "ruine",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/ruine2.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "",
+        "crestLink": "",
+        "banner": "/Kontinente/assets/images/dunkelhain/banner.png",
+        "bannerLink": "/Kontinente/Estryll/Dunkelhain/Der Dunkelhain.html",
+        "region": "Dunkelhain",
+        "house": "",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Lochmorach"
+          },
+          {
+            "k": "Ursprung",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Ursache des Verfalls",
+            "v": ""
+          },
+          {
+            "k": "Aktuelle Bewohner",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Schätze / Reliquien",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Typ",
+            "v": "Siedlungsruine"
+          },
+          {
+            "k": "Beschreibung",
+            "v": "Noch nicht ausgearbeitet"
+          },
+          {
+            "k": "Lehensherr",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "dunkelhain",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "59345470-35e0-4e3a-90aa-b4d1f65dbca3",
+          "markerId": "a44475ff-30a3-466b-ba50-cf347a893ac5",
+          "url": "https://www.worldanvil.com/world/map/marker/a44475ff-30a3-466b-ba50-cf347a893ac5/edit",
+          "title": "Lochmorach",
+          "coordinates": {
+            "x": 3253,
+            "y": 1281,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          },
+          "imageSize": [
+            4096,
+            1903
+          ],
+          "targets": [],
+          "nameStatus": "source"
+        }
+      },
+      {
+        "id": "dunkelhain-be64333c-187f-4c23-aba6-5dc4798683fd",
+        "title": "Greinmhar",
+        "x": 0.700927734375,
+        "y": 0.6121912769311613,
+        "cat": "mmflw1z5ko6e",
+        "templateId": "ruine",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadtruine.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "",
+        "crestLink": "",
+        "banner": "/Kontinente/assets/images/dunkelhain/banner.png",
+        "bannerLink": "/Kontinente/Estryll/Dunkelhain/Der Dunkelhain.html",
+        "region": "Dunkelhain",
+        "house": "",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Greinmhar"
+          },
+          {
+            "k": "Ursprung",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Ursache des Verfalls",
+            "v": ""
+          },
+          {
+            "k": "Aktuelle Bewohner",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Schätze / Reliquien",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Typ",
+            "v": "Stadtruine"
+          },
+          {
+            "k": "Beschreibung",
+            "v": "Noch nicht ausgearbeitet"
+          },
+          {
+            "k": "Lehensherr",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "dunkelhain",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "59345470-35e0-4e3a-90aa-b4d1f65dbca3",
+          "markerId": "be64333c-187f-4c23-aba6-5dc4798683fd",
+          "url": "https://www.worldanvil.com/world/map/marker/be64333c-187f-4c23-aba6-5dc4798683fd/edit",
+          "title": "Greinmhar",
+          "coordinates": {
+            "x": 2871,
+            "y": 738,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          },
+          "imageSize": [
+            4096,
+            1903
+          ],
+          "targets": [],
+          "nameStatus": "source"
+        }
+      },
+      {
+        "id": "dunkelhain-c2bf413a-21a2-4cd3-9d8d-6189ee6f4922",
+        "title": "Lochanach",
+        "x": 0.276611328125,
+        "y": 0.6184971098265897,
+        "cat": "mmflw1z5ko6e",
+        "templateId": "ruine",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadtruine.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "",
+        "crestLink": "",
+        "banner": "/Kontinente/assets/images/dunkelhain/banner.png",
+        "bannerLink": "/Kontinente/Estryll/Dunkelhain/Der Dunkelhain.html",
+        "region": "Dunkelhain",
+        "house": "",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Lochanach"
+          },
+          {
+            "k": "Ursprung",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Ursache des Verfalls",
+            "v": ""
+          },
+          {
+            "k": "Aktuelle Bewohner",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Schätze / Reliquien",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Typ",
+            "v": "Stadtruine"
+          },
+          {
+            "k": "Beschreibung",
+            "v": "Noch nicht ausgearbeitet"
+          },
+          {
+            "k": "Lehensherr",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "dunkelhain",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "59345470-35e0-4e3a-90aa-b4d1f65dbca3",
+          "markerId": "c2bf413a-21a2-4cd3-9d8d-6189ee6f4922",
+          "url": "https://www.worldanvil.com/world/map/marker/c2bf413a-21a2-4cd3-9d8d-6189ee6f4922/edit",
+          "title": "Lochanach",
+          "coordinates": {
+            "x": 1133,
+            "y": 726,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          },
+          "imageSize": [
+            4096,
+            1903
+          ],
+          "targets": [],
+          "nameStatus": "source"
+        }
+      },
+      {
+        "id": "dunkelhain-c2fe8e44-ece6-4721-957b-52f15669c349",
+        "title": "Teorannach",
+        "x": 0.76708984375,
+        "y": 0.05780346820809246,
+        "cat": "mmflvquv2rr3",
+        "templateId": "ruine",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/ruine2.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "",
+        "crestLink": "",
+        "banner": "/Kontinente/assets/images/dunkelhain/banner.png",
+        "bannerLink": "/Kontinente/Estryll/Dunkelhain/Der Dunkelhain.html",
+        "region": "Dunkelhain",
+        "house": "",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Teorannach"
+          },
+          {
+            "k": "Ursprung",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Ursache des Verfalls",
+            "v": ""
+          },
+          {
+            "k": "Aktuelle Bewohner",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Schätze / Reliquien",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Typ",
+            "v": "Siedlungsruine"
+          },
+          {
+            "k": "Beschreibung",
+            "v": "Noch nicht ausgearbeitet"
+          },
+          {
+            "k": "Lehensherr",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "dunkelhain",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "59345470-35e0-4e3a-90aa-b4d1f65dbca3",
+          "markerId": "c2fe8e44-ece6-4721-957b-52f15669c349",
+          "url": "https://www.worldanvil.com/world/map/marker/c2fe8e44-ece6-4721-957b-52f15669c349/edit",
+          "title": "Teorannach",
+          "coordinates": {
+            "x": 3142,
+            "y": 1793,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          },
+          "imageSize": [
+            4096,
+            1903
+          ],
+          "targets": [],
+          "nameStatus": "source"
+        }
+      },
+      {
+        "id": "dunkelhain-d28a1e07-f629-4dd2-9ffe-5fb57ad32389",
+        "title": "Carraigreach",
+        "x": 0.564208984375,
+        "y": 0.19390436153441937,
+        "cat": "mmflw1z5ko6e",
+        "templateId": "ruine",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadtruine.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "",
+        "crestLink": "",
+        "banner": "/Kontinente/assets/images/dunkelhain/banner.png",
+        "bannerLink": "/Kontinente/Estryll/Dunkelhain/Der Dunkelhain.html",
+        "region": "Dunkelhain",
+        "house": "",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Carraigreach"
+          },
+          {
+            "k": "Ursprung",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Ursache des Verfalls",
+            "v": ""
+          },
+          {
+            "k": "Aktuelle Bewohner",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Schätze / Reliquien",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Typ",
+            "v": "Stadtruine"
+          },
+          {
+            "k": "Beschreibung",
+            "v": "Noch nicht ausgearbeitet"
+          },
+          {
+            "k": "Lehensherr",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "dunkelhain",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "59345470-35e0-4e3a-90aa-b4d1f65dbca3",
+          "markerId": "d28a1e07-f629-4dd2-9ffe-5fb57ad32389",
+          "url": "https://www.worldanvil.com/world/map/marker/d28a1e07-f629-4dd2-9ffe-5fb57ad32389/edit",
+          "title": "Carraigreach",
+          "coordinates": {
+            "x": 2311,
+            "y": 1534,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          },
+          "imageSize": [
+            4096,
+            1903
+          ],
+          "targets": [],
+          "nameStatus": "source"
+        }
+      },
+      {
+        "id": "dunkelhain-d3a9e34c-8581-4efa-af07-03ca8f00947c",
+        "title": "Lochancoille",
+        "x": 0.20947265625,
+        "y": 0.883867577509196,
+        "cat": "mmflw1z5ko6e",
+        "templateId": "ruine",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadtruine.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "",
+        "crestLink": "",
+        "banner": "/Kontinente/assets/images/dunkelhain/banner.png",
+        "bannerLink": "/Kontinente/Estryll/Dunkelhain/Der Dunkelhain.html",
+        "region": "Dunkelhain",
+        "house": "",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Lochancoille"
+          },
+          {
+            "k": "Ursprung",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Ursache des Verfalls",
+            "v": ""
+          },
+          {
+            "k": "Aktuelle Bewohner",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Schätze / Reliquien",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Typ",
+            "v": "Stadtruine"
+          },
+          {
+            "k": "Beschreibung",
+            "v": "Noch nicht ausgearbeitet"
+          },
+          {
+            "k": "Lehensherr",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "dunkelhain",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "59345470-35e0-4e3a-90aa-b4d1f65dbca3",
+          "markerId": "d3a9e34c-8581-4efa-af07-03ca8f00947c",
+          "url": "https://www.worldanvil.com/world/map/marker/d3a9e34c-8581-4efa-af07-03ca8f00947c/edit",
+          "title": "Lochancoille",
+          "coordinates": {
+            "x": 858,
+            "y": 221,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          },
+          "imageSize": [
+            4096,
+            1903
+          ],
+          "targets": [],
+          "nameStatus": "source"
+        }
+      }
+    ],
+    "cats": [
+      {
+        "id": "mmflrbzxydg7",
+        "label": "Hauptstadt",
+        "color": "#ff0000"
+      },
+      {
+        "id": "mmflrqajby8b",
+        "label": "Bauernsiedlung",
+        "color": "#6060b0"
+      },
+      {
+        "id": "mmflry5furso",
+        "label": "Hafensiedlung",
+        "color": "#b03030"
+      },
+      {
+        "id": "mmfls5afqqpr",
+        "label": "Burgsiedlung",
+        "color": "#9050b0"
+      },
+      {
+        "id": "mmflsfqh3sft",
+        "label": "Handelssiedlung",
+        "color": "#3a8a3a"
+      },
+      {
+        "id": "mmflsrndeiee",
+        "label": "Brückensiedlung",
+        "color": "#2a7aaa"
+      },
+      {
+        "id": "mmflt1x3v22o",
+        "label": "Bergbausiedlung",
+        "color": "#7a6040"
+      },
+      {
+        "id": "mmflt7uj831y",
+        "label": "Waldsiedlung",
+        "color": "#c07030"
+      },
+      {
+        "id": "mmflteurd4n5",
+        "label": "Kirchensiedlung",
+        "color": "#508080"
+      },
+      {
+        "id": "mmfltia1m3s7",
+        "label": "Leuchtturmsiedlung",
+        "color": "#c49a20"
+      },
+      {
+        "id": "mmfltullsctk",
+        "label": "Festungssiedlung",
+        "color": "#6060b0"
+      },
+      {
+        "id": "mmflvj37jbh2",
+        "label": "Taverne",
+        "color": "#b03030"
+      },
+      {
+        "id": "mmflvquv2rr3",
+        "label": "Siedlungsruine",
+        "color": "#9050b0"
+      },
+      {
+        "id": "mmflw1z5ko6e",
+        "label": "Stadtruine",
+        "color": "#3a8a3a"
+      },
+      {
+        "id": "mmflw73t2e8v",
+        "label": "Bardensiedlung",
+        "color": "#2a7aaa"
+      },
+      {
+        "id": "mmflwdjfl6ah",
+        "label": "Stadt",
+        "color": "#7a6040"
+      },
+      {
+        "id": "mmflwmdfcyua",
+        "label": "Turmruine",
+        "color": "#c07030"
+      },
+      {
+        "id": "mmflwxad8w1j",
+        "label": "Schiffswrack",
+        "color": "#508080"
+      },
+      {
+        "id": "mmflx4731uj6",
+        "label": "Turnierplatz",
+        "color": "#c49a20"
+      },
+      {
+        "id": "mmflxnnhbh4g",
+        "label": "Besondere Orte",
+        "color": "#6060b0"
+      },
+      {
+        "id": "location-dorf",
+        "label": "Dorf",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/bardensiedlung.png"
+      },
+      {
+        "id": "location-flusssiedlung",
+        "label": "Flusssiedlung",
+        "color": "#2a7aaa",
+        "marker": "/Karten/assets/icons/welt/flusssiedlung.png"
+      },
+      {
+        "id": "location-bauernhof",
+        "label": "Bauernhof",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/bauernsiedlung.png"
+      },
+      {
+        "id": "location-landgut",
+        "label": "Landgut",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/landgut.png"
+      },
+      {
+        "id": "location-anwesen",
+        "label": "Anwesen",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/anwesen.png"
+      },
+      {
+        "id": "location-rittergut",
+        "label": "Rittergut",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/kleine-burg.png"
+      },
+      {
+        "id": "location-weingut",
+        "label": "Weingut",
+        "color": "#a45630",
+        "marker": "/Karten/assets/icons/welt/weingut.png"
+      },
+      {
+        "id": "location-obstplantage",
+        "label": "Obstplantage",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/obstplantage.png"
+      },
+      {
+        "id": "location-viehweide",
+        "label": "Viehweide",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/weide.png"
+      },
+      {
+        "id": "location-gestuet",
+        "label": "Gestüt",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/gest-t.png"
+      },
+      {
+        "id": "location-muehle",
+        "label": "Mühle",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/m-hle.png"
+      },
+      {
+        "id": "location-mine",
+        "label": "Mine",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/einzelnemine.png"
+      },
+      {
+        "id": "location-steinbruch",
+        "label": "Steinbruch",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/steinbruch-1.png"
+      },
+      {
+        "id": "location-schmiede",
+        "label": "Schmiede",
+        "color": "#a45630",
+        "marker": "/Karten/assets/icons/welt/schmiede.png"
+      },
+      {
+        "id": "location-brauerei",
+        "label": "Brauerei",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/brauersiedlung.png"
+      },
+      {
+        "id": "location-fischerei",
+        "label": "Fischerei",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/fischerh-tte.png"
+      },
+      {
+        "id": "location-holzfaellerlager",
+        "label": "Holzfällerlager",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/holzf-llerlager.png"
+      },
+      {
+        "id": "location-koehlerei",
+        "label": "Köhlerei",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/k-hler3.png"
+      },
+      {
+        "id": "location-imkerei",
+        "label": "Imkerei",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/imkerhof.png"
+      },
+      {
+        "id": "location-handelskontor",
+        "label": "Handelskontor",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/kontor.png"
+      },
+      {
+        "id": "location-markt",
+        "label": "Markt",
+        "color": "#a45630",
+        "marker": "/Karten/assets/icons/welt/marktstand.png"
+      },
+      {
+        "id": "location-gildenhaus",
+        "label": "Gildenhaus",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/gildenzentrale.png"
+      },
+      {
+        "id": "location-burg",
+        "label": "Burg",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/gro-e-burg.png"
+      },
+      {
+        "id": "location-turm",
+        "label": "Turm",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/turm.png"
+      },
+      {
+        "id": "location-leuchtturm",
+        "label": "Leuchtturm",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/leuchtturm.png"
+      },
+      {
+        "id": "location-aussenposten",
+        "label": "Außenposten",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/au-enposten.png"
+      },
+      {
+        "id": "location-grenzposten",
+        "label": "Grenzposten",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/zoll-grenzposten.png"
+      },
+      {
+        "id": "location-heerlager",
+        "label": "Heerlager",
+        "color": "#a45630",
+        "marker": "/Karten/assets/icons/welt/heereslager.png"
+      },
+      {
+        "id": "location-lagerplatz",
+        "label": "Lagerplatz",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/lager.png"
+      },
+      {
+        "id": "location-jaegerlager",
+        "label": "Jägerlager",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/j-gerlager.png"
+      },
+      {
+        "id": "location-jagdhaus",
+        "label": "Jagdhaus",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/j-gerhaus.png"
+      },
+      {
+        "id": "location-druidenhuette",
+        "label": "Druidenhütte",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/druidenh-tte.png"
+      },
+      {
+        "id": "location-hexenhuette",
+        "label": "Hexenhütte",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/hexenhaus.png"
+      },
+      {
+        "id": "location-schrein",
+        "label": "Schrein",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/wegschrein.png"
+      },
+      {
+        "id": "location-heiligtum",
+        "label": "Heiligtum",
+        "color": "#a45630",
+        "marker": "/Karten/assets/icons/welt/heiligtum.png"
+      },
+      {
+        "id": "location-friedhof",
+        "label": "Friedhof",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/l-ndlicher-friedhof.png"
+      },
+      {
+        "id": "location-grabstaette",
+        "label": "Grabstätte",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/grabmal.png"
+      },
+      {
+        "id": "location-ruine",
+        "label": "Ruine",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/ruine2.png"
+      },
+      {
+        "id": "location-ausgrabung",
+        "label": "Ausgrabung",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/ausgrabung.png"
+      },
+      {
+        "id": "location-hoehle",
+        "label": "Höhle",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/h-hle.png"
+      },
+      {
+        "id": "location-hain",
+        "label": "Hain",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/hain.png"
+      },
+      {
+        "id": "location-ahnenbaum",
+        "label": "Ahnenbaum",
+        "color": "#a45630",
+        "marker": "/Karten/assets/icons/welt/ahnenbaum.png"
+      },
+      {
+        "id": "location-quelle",
+        "label": "Quelle",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/quelle.png"
+      },
+      {
+        "id": "location-berggipfel",
+        "label": "Berggipfel",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/gipfel.png"
+      },
+      {
+        "id": "location-monsterhort",
+        "label": "Monsterhort",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/kreaturenhort.png"
+      },
+      {
+        "id": "location-banditenlager",
+        "label": "Banditenlager",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/banditenlager.png"
+      },
+      {
+        "id": "location-hafen",
+        "label": "Hafen / Steg",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/gro-er-hafen.png"
+      },
+      {
+        "id": "location-werft",
+        "label": "Werft",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/schiffswerft.png"
+      },
+      {
+        "id": "location-poststation",
+        "label": "Poststation",
+        "color": "#a45630",
+        "marker": "/Karten/assets/icons/welt/poststation.png"
+      },
+      {
+        "id": "location-schule",
+        "label": "Schule",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/l-ndliche-universit-t.png"
+      },
+      {
+        "id": "location-zirkus",
+        "label": "Zirkus",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/zirkus3.png"
+      },
+      {
+        "id": "location-wohnhaus",
+        "label": "Wohnhaus",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/b-uerliches-heim.png"
+      },
+      {
+        "id": "location-brauersiedlung",
+        "label": "Brauersiedlung",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/brauersiedlung.png"
+      },
+      {
+        "id": "location-klostersiedlung",
+        "label": "Klostersiedlung",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/klostersiedlung.png"
+      },
+      {
+        "id": "location-rosszuchtsiedlung",
+        "label": "Rosszuchtsiedlung",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/pferdezuchtsiedlung.png"
+      },
+      {
+        "id": "location-sumpfsiedlung",
+        "label": "Sumpfsiedlung",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/sumpfsiedlung.png"
+      },
+      {
+        "id": "location-unterwasserstadt",
+        "label": "Unterwasserstadt",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/unterwasserstadt.png"
+      },
+      {
+        "id": "location-festung",
+        "label": "Festung",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/festung.png"
+      },
+      {
+        "id": "location-magierturm",
+        "label": "Magierturm",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/magierturm.png"
+      },
+      {
+        "id": "location-diebesgilde",
+        "label": "Diebesgilde",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/diebesgilde.png"
+      },
+      {
+        "id": "location-piratenversteck",
+        "label": "Piratenversteck",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/piratenlager.png"
+      },
+      {
+        "id": "location-schmugglerversteck",
+        "label": "Schmugglerversteck",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/schmuggler3.png"
+      },
+      {
+        "id": "location-verwunschener-wald",
+        "label": "Verwunschener Wald",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/waldschrat.png"
+      },
+      {
+        "id": "location-wahrzeichen",
+        "label": "Wahrzeichen",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/wahrzeichen.png"
+      },
+      {
+        "id": "location-dimensionaler-riss",
+        "label": "Dimensionaler Riss",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/dimensionaler-riss.png"
+      },
+      {
+        "id": "location-galgen",
+        "label": "Galgen",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/exekutionsplatz.png"
+      },
+      {
+        "id": "location-muenzpraegestaette",
+        "label": "Münzprägestätte",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/m-nzpr-ger.png"
+      },
+      {
+        "id": "location-bogenschiessstand",
+        "label": "Bogenschießstand",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/schie-stand2.png"
+      },
+      {
+        "id": "location-ziegelei",
+        "label": "Ziegelei",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/ziegelbrenner.png"
+      },
+      {
+        "id": "location-schiff",
+        "label": "Schiff",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/orte/schiff-gut.png"
+      },
+      {
+        "id": "location-kreaturenlager",
+        "label": "Kreaturenlager",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/goblinlager.png"
+      },
+      {
+        "id": "location-heisse-quellen",
+        "label": "Heiße Quellen",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/hei-e-quellen.png"
+      },
+      {
+        "id": "location-brueckenruine",
+        "label": "Brückenruine",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/zerst-rte-br-cke.png"
+      },
+      {
+        "id": "location-kirchenruine",
+        "label": "Kirchenruine",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/zerst-rte-kirche.png"
+      },
+      {
+        "id": "location-hausruine",
+        "label": "Hausruine",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/zerst-rtes-heim.png"
+      },
+      {
+        "id": "location-huegelgrab",
+        "label": "Hügelgrab",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/h-gelgrab.png"
+      },
+      {
+        "id": "location-plantage",
+        "label": "Plantage",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/landgut.png"
+      },
+      {
+        "id": "location-kultstaette",
+        "label": "Kultstätte",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/okkulter-schrein.png"
+      },
+      {
+        "id": "location-zelt",
+        "label": "Zelt",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/ritterlicheszelt.png"
+      },
+      {
+        "id": "location-faehrstelle",
+        "label": "Fährstelle",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/orte/f-hre-steg.png"
+      },
+      {
+        "id": "location-schlachtfeld",
+        "label": "Schlachtfeld",
+        "color": "#6060b0"
+      }
+    ],
+    "categoryCatalogVersion": 3,
+    "regions": [
+      {
+        "id": "wa-8ec3abb1-48a5-4947-875d-8d34c0946682",
+        "name": "Das Herz des Dunkelhains",
+        "kind": "area",
+        "paths": [
+          [
+            [
+              0.66894531,
+              0.2394958
+            ],
+            [
+              0.66015625,
+              0.26260504
+            ],
+            [
+              0.64648438,
+              0.27521008
+            ],
+            [
+              0.64550781,
+              0.30462185
+            ],
+            [
+              0.65039063,
+              0.33823529
+            ],
+            [
+              0.66210938,
+              0.36344538
+            ],
+            [
+              0.66894531,
+              0.36554622
+            ],
+            [
+              0.68945313,
+              0.36554622
+            ],
+            [
+              0.69824219,
+              0.37184874
+            ],
+            [
+              0.70800781,
+              0.36554622
+            ],
+            [
+              0.71386719,
+              0.35714286
+            ],
+            [
+              0.71875,
+              0.34453782
+            ],
+            [
+              0.72167969,
+              0.32773109
+            ],
+            [
+              0.72265625,
+              0.28361345
+            ],
+            [
+              0.72558594,
+              0.27310924
+            ],
+            [
+              0.72265625,
+              0.25840336
+            ],
+            [
+              0.70117188,
+              0.2289916
+            ],
+            [
+              0.67480469,
+              0.2289916
+            ]
+          ]
+        ],
+        "color": "#ff0000",
+        "borderColor": "#ff0000",
+        "opacity": 0.03,
+        "parentId": "",
+        "dominionId": "",
+        "familyId": "",
+        "showLabel": true,
+        "note": "Örtlicher oder historischer Bereich; keine zusätzliche Clan-Herrschaft",
+        "source": {
+          "type": "world-anvil",
+          "mapId": "59345470-35e0-4e3a-90aa-b4d1f65dbca3",
+          "markerId": "8ec3abb1-48a5-4947-875d-8d34c0946682",
+          "url": "https://www.worldanvil.com/world/map/marker/8ec3abb1-48a5-4947-875d-8d34c0946682/edit",
+          "originalName": "Das Herz des Dunkelhains",
+          "geometryMethod": "visible-svg",
+          "coordinateSystem": "normalized-top-left"
+        }
+      }
+    ],
+    "dominions": [
+      {
+        "id": "dunkelhain",
+        "name": "Der Dunkelhain",
+        "type": "Wildnis",
+        "ruler": "",
+        "seat": "Das Herz des Waldes",
+        "parentId": "",
+        "note": ""
+      }
+    ],
+    "regionTitle": "Der Dunkelhain",
+    "regionIcon": "/Kontinente/assets/images/dunkelhain/banner.png",
+    "mapImages": {
+      "normal": "/Karten/Dunkelhain/Kartenbilder/normal.webp",
+      "regions": "",
+      "pins": ""
+    },
+    "layerNames": {
+      "normal": "Karte",
+      "regions": "Regionen",
+      "pins": "Markierungen"
+    },
+    "dotSize": 80,
+    "lblSize": 50,
+    "displaySettingsVersion": 1,
+    "markerPresentation": "symbols",
+    "pinVisibilityVersion": 1,
+    "showMarkers": true,
+    "showPinLabels": false,
+    "alwaysShowLettering": false,
+    "extraLayers": [],
+    "dm": {
+      "sessions": [],
+      "notes": "",
+      "groupStatus": {}
+    }
+  }
+}

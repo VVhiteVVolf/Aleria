@@ -3,6 +3,10 @@
 // window.KartoRuntime - no direct GitHub/network code lives here.
 (function () {
   function openPublishModal() {
+    if (window.KartoRuntime?.canTransitionEditors?.() === false) {
+      window.KartoRuntime.toast('Bitte die offene Bearbeitung zuerst übernehmen oder verwerfen.');
+      return;
+    }
     const mo = document.getElementById('publish-mo');
     mo.classList.add('open');
     document.getElementById('publish-map-title').textContent = window.KartoRuntime?.state()?.regionTitle || '';
@@ -11,6 +15,10 @@
   }
 
   async function publishOnline() {
+    if (window.KartoRuntime?.canTransitionEditors?.() === false) {
+      window.KartoRuntime.toast('Bitte die offene Bearbeitung zuerst übernehmen oder verwerfen.');
+      return;
+    }
     const button = document.getElementById('publish-confirm-btn');
     const resultEl = document.getElementById('publish-result');
     button.disabled = true;

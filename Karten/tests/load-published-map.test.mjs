@@ -24,7 +24,7 @@ const draftState = {
 };
 const clone = value => JSON.parse(JSON.stringify(value));
 
-async function fixture({ withDraft = true, pendingSave = false, store } = {}) {
+async function fixture({ withDraft = true, pendingSave = false, store, regionEditorOpen = false } = {}) {
   const items = store || new Map(withDraft
     ? [[draftKey, JSON.stringify({ basedOnRevision: 1, state: draftState })]] : []);
   const calls = [];
@@ -39,6 +39,7 @@ async function fixture({ withDraft = true, pendingSave = false, store } = {}) {
   let liveState = {};
   let readOnline = async () => ({ ok: true, json: async () => clone(published) });
   const runtime = {
+    canTransitionEditors: () => !regionEditorOpen,
     state: () => liveState,
     applyState: data => { Object.assign(liveState, data); },
     hasPendingSave: () => pendingSave,
@@ -177,6 +178,17 @@ test('an open pin editor blocks switching and is checked again after the request
   await f.button.click();
   assert.equal(f.items.has(draftKey), true);
   assert.equal(f.reloaded, false);
+});
+
+test('an open region draft blocks published reload before fetching or discarding any data', async () => {
+  const f = await fixture({ regionEditorOpen: true, pendingSave: true });
+  const before = f.items.get(draftKey);
+  await f.button.click();
+  assert.deepEqual(f.calls, []);
+  assert.equal(f.items.get(draftKey), before);
+  assert.equal(f.pendingSave, true);
+  assert.equal(f.reloaded, false);
+  assert.match(f.messages.at(-1), /offene Bearbeitung/);
 });
 
 test('backup restoration uses the selected entry and all saved fields', async () => {

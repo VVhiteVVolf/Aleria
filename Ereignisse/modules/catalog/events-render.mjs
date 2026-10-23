@@ -18,7 +18,7 @@ export function renderEventCard(event, { iconHref = staticIconHref } = {}) {
       ${lead ? `<p class="event-lead">${e(lead)}</p>` : '<p class="event-unwritten">Die ausführliche Überlieferung ist noch nicht niedergeschrieben.</p>'}
       ${rest ? `<details class="event-story"><summary>Überlieferung weiterlesen</summary><p>${e(rest)}</p></details>` : ''}
       <footer class="event-actions">${dossier ? `<a class="event-dossier-link" href="${e(dossier.href)}">${e(dossier.label)} ↗</a>` : '<span class="event-dossier-note">Ereignisseite folgt</span>'}
-      ${calendarLink ? `<a href="${e(calendarLink)}">${event.startYear === event.endYear ? 'Jahr' : 'Beginn'} im Kalender ↗</a>${event.endYear !== event.startYear ? `<a href="${e(calendarYearHref(event, event.endYear))}">Ende im Kalender ↗</a>` : ''}` : '<span>Kalenderverweis folgt mit der Datierung.</span>'}</footer>
+      ${calendarLink ? `<a href="${e(calendarLink)}">${event.startDate ? 'Tag' : event.startYear === event.endYear ? 'Jahr' : 'Beginn'} im Kalender ↗</a>${event.endYear !== event.startYear ? `<a href="${e(calendarYearHref(event, event.endYear))}">Ende im Kalender ↗</a>` : ''}` : '<span>Kalenderverweis folgt mit der Datierung.</span>'}</footer>
     </div>
   </article>`;
 }

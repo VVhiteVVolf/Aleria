@@ -7,7 +7,7 @@ const base = createBlankHouseFamily({
   title: 'Clan Schwarzstolz',
   emblem: KRAEHENMOOR_HOUSE_EMBLEMS.schwarzstolz,
   houseProfile: KRAEHENMOOR_HOUSE_PROFILES.schwarzstolz,
-  description: 'Clan aus Eldvik im Hesirentum von Schwarzfjord. Sindre Brandstolz stammt als Bastard aus diesem Clan und kehrte ihm den Rücken, nachdem man ihn und seine Mutter nicht mehr dort haben wollte. Weitere Angehörige und die genaue Stellung des Clans werden noch ausgearbeitet.'
+  description: 'Huskarlclan aus Eldvik im Hesirentum von Schwarzfjord. Sindre Brandstolz stammt als Bastard aus diesem Clan und kehrte ihm den Rücken, nachdem man ihn und seine Mutter nicht mehr dort haben wollte. Weitere Angehörige werden noch ausgearbeitet.'
 });
 
 const familySituation = Object.freeze({
@@ -17,7 +17,7 @@ const familySituation = Object.freeze({
   father: 'Angehöriger des Clans Schwarzstolz; Name und genaue Zuordnung noch offen.',
   mother: 'Name noch offen. Sie und Sindre waren im Clan nicht mehr erwünscht. Ihr heutiger Verbleib ist nicht festgelegt.',
   halfBrother: 'Schwarzstolz-Halbbruder, Name und genaue Zuordnung noch offen. Drückte Sindres Gesicht bei einer eskalierten Prügelei in die Herdglut; seitdem Brandnarbe und Augenklappe.',
-  openQuestions: Object.freeze(['Namen und Lebensdaten der Angehörigen', 'Genaue Eltern- und Halbbruderzuordnung', 'Heutiger Verbleib der Mutter', 'Rang und Lehnsherr des Clans'])
+  openQuestions: Object.freeze(['Namen und Lebensdaten der Angehörigen', 'Genaue Eltern- und Halbbruderzuordnung', 'Heutiger Verbleib der Mutter', 'Lehnsherr des Clans'])
 });
 
 export const HOUSE_SCHWARZSTOLZ_FAMILY = Object.freeze({

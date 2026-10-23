@@ -1,5 +1,6 @@
-// Registerstruktur aus der Reichstabelle vom 09.10.2026.
-// Genealogien und die Jarltumszuordnung der niederen Clans folgen später.
+// Reichstabelle vom 09.10.2026, Zuordnungen nach den Regionskarten vom 22.10.
+// Draugmar dient Stanleagh; Veknar, Skath und Thirsk dienen Knything
+// (ausdrückliche Nutzerklärung). Genealogien bleiben weiterhin offen.
 const regionEmblem = slug => `assets/images/regions/Skjaerheim/${slug}.png`;
 const clan = (name, slug, rankLabel, sourceNote = '', aliases = []) => Object.freeze({
   name, rankLabel, sourceNote, aliases: Object.freeze(aliases),
@@ -32,7 +33,11 @@ export const SKJAERHEIM_TERRITORIES = Object.freeze([
   ...territory, aliases: Object.freeze(territory.aliases), emblem: regionEmblem(territory.slug)
 })));
 
-export const SKJAERHEIM_UNASSIGNED_FOLDER = 'Niedere Clans – noch nicht zugeordnet';
+const assignments = Object.freeze({
+  Hjarning: 'bjerk', Vargul: 'hrothgar', Veknar: 'knything', Hjorvik: 'bjerk',
+  Iskarn: 'hrothgar', Hrodmar: 'bjerk', Skath: 'knything', Thirsk: 'knything',
+  Garnulf: 'hrothgar', Draugmar: 'stanleagh'
+});
 
 export const SKJAERHEIM_LOWER_CLANS = Object.freeze([
   ['Hjarning', 'hjarning', 'Hjarngard', 'Beinnstir'],
@@ -46,15 +51,15 @@ export const SKJAERHEIM_LOWER_CLANS = Object.freeze([
   ['Garnulf', 'garnulf', 'Lærdal', 'Glenmohr'],
   ['Draugmar', 'draugmar', 'Valnar', 'Maolnair']
 ].map(([name, slug, seat, formerSeat]) => Object.freeze({
-  ...clan(name, slug, 'Thanenclan',
-    `Sitz: ${seat} (${formerSeat}). Die Zugehörigkeit zu einem Jarltum wird später festgelegt.`),
-  seat, formerSeat
+  ...clan(name, slug, ['Hjorvik', 'Thirsk'].includes(name) ? 'Hesirenclan' : 'Thanenclan',
+    `Sitz: ${seat} (${formerSeat}). Zuordnung nach der Regionskarte und Nutzerklärung vom 22.10.2026.`),
+  seat, formerSeat, jarltumSlug: assignments[name]
 })));
 
 export const SKJAERHEIM_REGISTRY_FOLDERS = Object.freeze([
   {
     path: ['Skjaerheim'], icon: regionEmblem('skjaerheim'),
-    description: 'Reiktum Skjaerheim · Königsclan Hrothgar, drei weitere Jarlclans und zehn niedere Thanenclans. Die vier Jarltümer sind vorbereitet; alle niederen Clans bleiben bis zur späteren Zuordnung gemeinsam in einem eigenen Bereich.',
+    description: 'Reiktum Skjaerheim im besetzten Teil Faelaorns · Königsclan Hrothgar, drei weitere Jarlclans, acht Thanen- und zwei Hesirenclans. Die Regionskarten belegen die Gebietsverteilung; genealogische Familienakten folgen später.',
     searchTerms: ['Reiktum', 'Nordmänner', 'Königsclan', 'Hrothgar']
   },
   ...SKJAERHEIM_TERRITORIES.flatMap(territory => [
@@ -64,17 +69,17 @@ export const SKJAERHEIM_REGISTRY_FOLDERS = Object.freeze([
     },
     {
       path: ['Skjaerheim', territory.name, territory.seat],
-      description: `Weiterer überlieferter Ortsname: ${territory.aliases.join(' · ')}.`,
+      icon: territory.clan.emblem,
+      description: `Eigenes Thanentum des Jarlclans. Weiterer überlieferter Ortsname: ${territory.aliases.join(' · ')}.`,
       plannedHouses: [territory.clan],
       searchTerms: [...territory.aliases, territory.clan.name, territory.clan.rankLabel, ...territory.clan.aliases]
-    }
+    },
+    ...SKJAERHEIM_LOWER_CLANS.filter(c => c.jarltumSlug === territory.slug).map(c => ({
+      path: ['Skjaerheim', territory.name, ...(c.rankLabel === 'Hesirenclan' ? [territory.seat] : []), c.seat],
+      icon: c.emblem, description: `${c.rankLabel} unter Clan ${territory.clan.name}. ${c.sourceNote}`,
+      plannedHouses: [c], searchTerms: [c.name, c.seat, c.formerSeat, c.rankLabel]
+    }))
   ]),
-  {
-    path: ['Skjaerheim', SKJAERHEIM_UNASSIGNED_FOLDER],
-    description: 'Zehn niedere Clans im Rang von Thanen. Ihre belegten Sitze bleiben erfasst; eine Unterstellung unter Hrothgar, Knything, Stanleagh oder Bjerk ist noch nicht festgelegt.',
-    plannedHouses: SKJAERHEIM_LOWER_CLANS,
-    searchTerms: ['Thane', 'Thanenclans', ...SKJAERHEIM_LOWER_CLANS.flatMap(entry => [entry.name, entry.seat, entry.formerSeat])]
-  }
 ].map(folder => Object.freeze({
   ...folder,
   path: Object.freeze(folder.path),

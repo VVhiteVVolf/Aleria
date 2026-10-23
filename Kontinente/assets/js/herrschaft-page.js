@@ -7,7 +7,7 @@
   const { renderSettlementDomain } = await import(directoryUrl);
   const { mountDirectoryBrowser, directoryState } = await import(new URL('directory-browser.mjs?v=register-20261018a', directoryUrl));
   const { renderCouncilGroups } = await import(new URL('council-directory.mjs?v=vortigern-20261018', directoryUrl));
-  const { renderTerritoryNavigation } = await import(new URL('../territory-page/territory-navigation.mjs?v=roriksheim-20261020c', directoryUrl));
+  const { renderTerritoryNavigation } = await import(new URL('../territory-page/territory-navigation.mjs?v=heraldry-20261022', directoryUrl));
 
   renderPageModules();
   window.addEventListener("aleria:kontinente:data-ready", renderPageModules);
@@ -297,6 +297,13 @@
     for (const subsection of subsections || []) {
       section.append(createElement("h3", "herrschaft-subheading", subsection.title));
       appendParagraphs(section, subsection.paragraphs);
+      for (const item of subsection.links || []) {
+        const paragraph = createElement("p", "herrschaft-reference-link");
+        const link = createElement("a", "", item.label);
+        link.href = item.href;
+        paragraph.append(link);
+        section.append(paragraph);
+      }
     }
     return section;
   }
@@ -382,7 +389,7 @@
 
   function renderGeography(root, geography) {
     const domains = geography?.domains || (geography?.domain ? [geography.domain] : []);
-    if (!root || (!domains.length && !geography?.links?.length)) return;
+    if (!root || (!domains.length && !geography?.links?.length && !geography?.map?.imageSrc)) return;
     const state = directoryState(root);
     const fragment = document.createDocumentFragment();
 

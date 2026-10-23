@@ -1,0 +1,4490 @@
+{
+  "schemaVersion": 1,
+  "dataPath": "Aislearneach/tir-na-adharcach/data.json",
+  "revision": 1,
+  "updatedAt": "2026-10-22T20:30:00.000Z",
+  "generatedStateHash": "74bf9dda9a37ca4a2e772aa826eded69704c9635358957a209e6e931bd4a8258",
+  "state": {
+    "pins": [
+      {
+        "id": "aislearneach-3a7f802a-aef3-4cf2-82dc-ec0d63e916e9",
+        "title": "Foraoise",
+        "x": 0.43155288291475064,
+        "y": 0.697827678789358,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "",
+        "crestLink": "",
+        "banner": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-adharcach.png",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Aislearneach/Oberherrschaft Tir na Adharcach/Oberherrschaft Tir na Adharcach.html",
+        "region": "Aislearneach",
+        "house": "",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Foraoise"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Sagarth von Tir na Adharcach"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Beschreibung",
+            "v": "Noch nicht ausgearbeitet"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "oberherrschaft-aislearneach-tir-na-adharcach",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "52aee057-1feb-40b0-b733-6ca8e7bf5c4b",
+          "markerId": "3a7f802a-aef3-4cf2-82dc-ec0d63e916e9",
+          "url": "https://www.worldanvil.com/world/map/marker/3a7f802a-aef3-4cf2-82dc-ec0d63e916e9/edit",
+          "title": "Foraoise",
+          "coordinates": {
+            "x": 1220,
+            "y": 1238,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          },
+          "imageSize": [
+            2827,
+            4097
+          ],
+          "targets": [],
+          "nameStatus": "source"
+        }
+      },
+      {
+        "id": "aislearneach-d50383df-468b-49cc-b50f-9b78084d2243",
+        "title": "Eaglaisgrian",
+        "x": 0.23664662186062965,
+        "y": 0.5772516475469855,
+        "cat": "location-klostersiedlung",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/klostersiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Aislearneach/clan-an-uilebheist.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-uilebheist&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-adharcach.png",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Aislearneach/Herrschaft der An’Uilebheist/Herrschaft der An’Uilebheist.html",
+        "region": "Aislearneach",
+        "house": "Clan An’Uilebheist",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Eaglaisgrian"
+          },
+          {
+            "k": "Typ",
+            "v": "Klostersiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Clan An’Uilebheist"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Beschreibung",
+            "v": "Noch nicht ausgearbeitet"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "herrschaft-aislearneach-uilebheist",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "52aee057-1feb-40b0-b733-6ca8e7bf5c4b",
+          "markerId": "d50383df-468b-49cc-b50f-9b78084d2243",
+          "url": "https://www.worldanvil.com/world/map/marker/d50383df-468b-49cc-b50f-9b78084d2243/edit",
+          "title": "Klostersiedlung",
+          "coordinates": {
+            "x": 669,
+            "y": 1732,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          },
+          "imageSize": [
+            2827,
+            4097
+          ],
+          "targets": [],
+          "nameStatus": "generated",
+          "nameDecisionId": "d50383df-468b-49cc-b50f-9b78084d2243"
+        }
+      },
+      {
+        "id": "aislearneach-ad817317-07c9-4c1a-b74e-40bbe5192577",
+        "title": "Frithmeall",
+        "x": 0.7951892465511142,
+        "y": 0.21991701244813278,
+        "cat": "mmflt7uj831y",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/waldsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Aislearneach/clan-nic-cnogan.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-cnogan&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-adharcach.png",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Aislearneach/Herrschaft der Nic’Cnogan/Herrschaft der Nic’Cnogan.html",
+        "region": "Aislearneach",
+        "house": "Clan Nic’Cnogan",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Frithmeall"
+          },
+          {
+            "k": "Typ",
+            "v": "Waldsiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Clan Nic’Cnogan"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Beschreibung",
+            "v": "Noch nicht ausgearbeitet"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "herrschaft-aislearneach-cnogan",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "52aee057-1feb-40b0-b733-6ca8e7bf5c4b",
+          "markerId": "ad817317-07c9-4c1a-b74e-40bbe5192577",
+          "url": "https://www.worldanvil.com/world/map/marker/ad817317-07c9-4c1a-b74e-40bbe5192577/edit",
+          "title": "Waldsiedlung",
+          "coordinates": {
+            "x": 2248,
+            "y": 3196,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          },
+          "imageSize": [
+            2827,
+            4097
+          ],
+          "targets": [],
+          "nameStatus": "generated",
+          "nameDecisionId": "ad817317-07c9-4c1a-b74e-40bbe5192577"
+        }
+      },
+      {
+        "id": "aislearneach-b0d56299-ebfc-4b8d-86bb-b88c9a00e0d2",
+        "title": "Manachleathann",
+        "x": 0.7421294658648744,
+        "y": 0.2933854039541127,
+        "cat": "location-klostersiedlung",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/klostersiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Aislearneach/clan-nic-cnogan.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-cnogan&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-adharcach.png",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Aislearneach/Herrschaft der Nic’Cnogan/Herrschaft der Nic’Cnogan.html",
+        "region": "Aislearneach",
+        "house": "Clan Nic’Cnogan",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Manachleathann"
+          },
+          {
+            "k": "Typ",
+            "v": "Klostersiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Clan Nic’Cnogan"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Beschreibung",
+            "v": "Noch nicht ausgearbeitet"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "herrschaft-aislearneach-cnogan",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "52aee057-1feb-40b0-b733-6ca8e7bf5c4b",
+          "markerId": "b0d56299-ebfc-4b8d-86bb-b88c9a00e0d2",
+          "url": "https://www.worldanvil.com/world/map/marker/b0d56299-ebfc-4b8d-86bb-b88c9a00e0d2/edit",
+          "title": "Klostersiedlung",
+          "coordinates": {
+            "x": 2098,
+            "y": 2895,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          },
+          "imageSize": [
+            2827,
+            4097
+          ],
+          "targets": [],
+          "nameStatus": "generated",
+          "nameDecisionId": "b0d56299-ebfc-4b8d-86bb-b88c9a00e0d2"
+        }
+      },
+      {
+        "id": "aislearneach-b3032bdb-1d2c-46f1-b8ee-e61aa8f57aae",
+        "title": "Coilledruim",
+        "x": 0.6469755925008843,
+        "y": 0.37710519892604344,
+        "cat": "mmflt7uj831y",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/waldsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Fraktionen/assets/emblems/gilden/jagdklingen.webp",
+        "crestLink": "",
+        "banner": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-adharcach.png",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Aislearneach/Oberherrschaft Tir na Adharcach/Oberherrschaft Tir na Adharcach.html",
+        "region": "Aislearneach",
+        "house": "Jagdklingen",
+        "faction": "Jagdklingen",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Coilledruim"
+          },
+          {
+            "k": "Typ",
+            "v": "Waldsiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Geistliche Oberherrschaft"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Beschreibung",
+            "v": "Noch nicht ausgearbeitet"
+          },
+          {
+            "k": "Betreiber",
+            "v": "Jagdklingen"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "oberherrschaft-aislearneach-tir-na-adharcach",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "52aee057-1feb-40b0-b733-6ca8e7bf5c4b",
+          "markerId": "b3032bdb-1d2c-46f1-b8ee-e61aa8f57aae",
+          "url": "https://www.worldanvil.com/world/map/marker/b3032bdb-1d2c-46f1-b8ee-e61aa8f57aae/edit",
+          "title": "Jagdklingen - Pachtsiedlung",
+          "coordinates": {
+            "x": 1829,
+            "y": 2552,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          },
+          "imageSize": [
+            2827,
+            4097
+          ],
+          "targets": [],
+          "nameStatus": "generated",
+          "nameDecisionId": "b3032bdb-1d2c-46f1-b8ee-e61aa8f57aae"
+        }
+      },
+      {
+        "id": "aislearneach-bce3eda5-f413-4fd5-8e2d-1c6bd88997f3",
+        "title": "Unbenannter Ahnenbaum",
+        "x": 0.7456667845772904,
+        "y": 0.3587991213082743,
+        "cat": "location-ahnenbaum",
+        "templateId": "natur",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/ahnenbaum.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "",
+        "crestLink": "",
+        "banner": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-adharcach.png",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Aislearneach/Oberherrschaft Tir na Adharcach/Oberherrschaft Tir na Adharcach.html",
+        "region": "Aislearneach",
+        "house": "",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Unbenannt"
+          },
+          {
+            "k": "Typ",
+            "v": "Ahnenbaum"
+          },
+          {
+            "k": "Baumart",
+            "v": ""
+          },
+          {
+            "k": "Alter",
+            "v": ""
+          },
+          {
+            "k": "Verehrte Ahnen",
+            "v": ""
+          },
+          {
+            "k": "Hüter",
+            "v": ""
+          },
+          {
+            "k": "Rituale",
+            "v": ""
+          },
+          {
+            "k": "Magische Einflüsse",
+            "v": ""
+          },
+          {
+            "k": "Überlieferungen",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          },
+          {
+            "k": "Beschreibung",
+            "v": "Noch nicht ausgearbeitet"
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Sagarth von Tir na Adharcach"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "oberherrschaft-aislearneach-tir-na-adharcach",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "52aee057-1feb-40b0-b733-6ca8e7bf5c4b",
+          "markerId": "bce3eda5-f413-4fd5-8e2d-1c6bd88997f3",
+          "url": "https://www.worldanvil.com/world/map/marker/bce3eda5-f413-4fd5-8e2d-1c6bd88997f3/edit",
+          "title": "Großer Ahnenbaum",
+          "coordinates": {
+            "x": 2108,
+            "y": 2627,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          },
+          "imageSize": [
+            2827,
+            4097
+          ],
+          "targets": [],
+          "nameStatus": "missing"
+        }
+      },
+      {
+        "id": "aislearneach-c0f0249d-33a2-4c7b-976a-c079b66a72c6",
+        "title": "Gleannruadh",
+        "x": 0.5744605588963566,
+        "y": 0.08274347083231637,
+        "cat": "mmflt7uj831y",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/waldsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Aislearneach/clan-nic-cnogan.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-cnogan&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-adharcach.png",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Aislearneach/Herrschaft der Nic’Cnogan/Herrschaft der Nic’Cnogan.html",
+        "region": "Aislearneach",
+        "house": "Clan Nic’Cnogan",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Gleannruadh"
+          },
+          {
+            "k": "Typ",
+            "v": "Waldsiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Clan Nic’Cnogan"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Beschreibung",
+            "v": "Noch nicht ausgearbeitet"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "herrschaft-aislearneach-cnogan",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "52aee057-1feb-40b0-b733-6ca8e7bf5c4b",
+          "markerId": "c0f0249d-33a2-4c7b-976a-c079b66a72c6",
+          "url": "https://www.worldanvil.com/world/map/marker/c0f0249d-33a2-4c7b-976a-c079b66a72c6/edit",
+          "title": "Waldsiedlung",
+          "coordinates": {
+            "x": 1624,
+            "y": 3758,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          },
+          "imageSize": [
+            2827,
+            4097
+          ],
+          "targets": [],
+          "nameStatus": "generated",
+          "nameDecisionId": "c0f0249d-33a2-4c7b-976a-c079b66a72c6"
+        }
+      },
+      {
+        "id": "aislearneach-c454f6a0-7b01-4aaf-b7e8-514b2f1e1d3e",
+        "title": "Bluthand-Stamm",
+        "x": 0.21365405022992573,
+        "y": 0.3036368074200635,
+        "cat": "location-kreaturenlager",
+        "templateId": "monsterhort",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/goblinlager.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "",
+        "crestLink": "",
+        "banner": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-adharcach.png",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Aislearneach/Oberherrschaft Tir na Adharcach/Oberherrschaft Tir na Adharcach.html",
+        "region": "Aislearneach",
+        "house": "",
+        "faction": "Bluthand-Stamm",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Bluthand-Stamm"
+          },
+          {
+            "k": "Kreatur(en)",
+            "v": ""
+          },
+          {
+            "k": "Anzahl",
+            "v": ""
+          },
+          {
+            "k": "Gefährlichkeit",
+            "v": ""
+          },
+          {
+            "k": "Territorium",
+            "v": ""
+          },
+          {
+            "k": "Beute / Schatz",
+            "v": ""
+          },
+          {
+            "k": "Schwächen",
+            "v": ""
+          },
+          {
+            "k": "Verbündete",
+            "v": ""
+          },
+          {
+            "k": "Typ",
+            "v": "Kreaturenlager"
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Keine Lehnshoheit belegt"
+          },
+          {
+            "k": "Einordnung",
+            "v": "Hornling-Stammeslager"
+          }
+        ],
+        "text": "**Bluthand-Stamm**\n\n\nDer Bluthand-Stamm, beheimatet in der Region Foraoise (Land der Geweihten), ist einer der **aggressivsten** Hornling-Stämme dieser Oberherrschaft. Ihre unerbittliche Wildheit ist berüchtigt, und sie befinden sich in einem ständigen, aktiven **Krieg** mit dem Scharfzahn- und dem Dreifeder-Stamm im Osten ihres Territoriums. Dieser anhaltende Konflikt betrifft leider auch die dazwischen liegenden menschlichen Siedlungen, obwohl die Hornlinge ihre Auseinandersetzungen meist untereinander austragen.\n\nDie Bluthand-Hornlinge sind bekannt für ihre **brutalen Taktiken** und ihre **Gier nach neuen Jagdgründen**. Ihre Krieger schmücken oft ihre Hände mit dem Blut ihrer Feinde oder erlegten Beute, was ihnen ihren Namen eingebracht hat. Jeder Sieg gilt als direkte Manifestation von Zatrachs Gunst, und sie streben danach, ihre Dominanz durch ständige Aggression in Foraoise zu festigen.",
+        "secret": false,
+        "dominionId": "oberherrschaft-aislearneach-tir-na-adharcach",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "52aee057-1feb-40b0-b733-6ca8e7bf5c4b",
+          "markerId": "c454f6a0-7b01-4aaf-b7e8-514b2f1e1d3e",
+          "url": "https://www.worldanvil.com/world/map/marker/c454f6a0-7b01-4aaf-b7e8-514b2f1e1d3e/edit",
+          "title": "",
+          "coordinates": {
+            "x": 604,
+            "y": 2853,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          },
+          "imageSize": [
+            2827,
+            4097
+          ],
+          "targets": [],
+          "nameStatus": "recovered"
+        }
+      },
+      {
+        "id": "aislearneach-c8bbbaca-df08-4e3d-8c2f-d5aa9f9e2c02",
+        "title": "Schwarzblatt-Stamm",
+        "x": 0.8546162009197029,
+        "y": 0.4544788869904809,
+        "cat": "location-kreaturenlager",
+        "templateId": "monsterhort",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/goblinlager.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "",
+        "crestLink": "",
+        "banner": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-adharcach.png",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Aislearneach/Oberherrschaft Tir na Adharcach/Oberherrschaft Tir na Adharcach.html",
+        "region": "Aislearneach",
+        "house": "",
+        "faction": "Schwarzblatt-Stamm",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Schwarzblatt-Stamm"
+          },
+          {
+            "k": "Kreatur(en)",
+            "v": ""
+          },
+          {
+            "k": "Anzahl",
+            "v": ""
+          },
+          {
+            "k": "Gefährlichkeit",
+            "v": ""
+          },
+          {
+            "k": "Territorium",
+            "v": ""
+          },
+          {
+            "k": "Beute / Schatz",
+            "v": ""
+          },
+          {
+            "k": "Schwächen",
+            "v": ""
+          },
+          {
+            "k": "Verbündete",
+            "v": ""
+          },
+          {
+            "k": "Typ",
+            "v": "Kreaturenlager"
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Keine Lehnshoheit belegt"
+          },
+          {
+            "k": "Einordnung",
+            "v": "Hornling-Stammeslager"
+          }
+        ],
+        "text": "**Schwarzblatt-Stamm**\n\n\nDer Schwarzblatt-Stamm zählt zu den **aggressiven Hornling-Stämmen** Foraoises. Er hat sich vor Kurzem aus \"Ketzern\" des Weißrinden-Stammes gebildet, die sich von dessen baumverehrender Lebensweise abgewandt haben. Ihr primäres Ziel ist es, **Zatrachs Gunst wiederzuerlangen**, nachdem sie das Verhalten ihrer ehemaligen Brüder als Verrat empfinden. Diese Rückkehr zur ursprünglichen Wildheit und Hingabe an den Jägergott treibt sie zu extremen Handlungen an.\n\nUm ihre Loyalität zu beweisen und die vermeintliche Ketzerei ihrer Verwandten zu sühnen, versuchen die Schwarzblatt-Hornlinge, den **Ahnenbaum am großen See zu korrumpieren**. Obwohl ein mächtiger Hochdruide über diesen heiligen Baum wacht und ihre Versuche bislang scheiterten, lassen sich die Schwarzblätter nicht davon abhalten, es immer wieder zu versuchen. Ihre Hartnäckigkeit und Aggression machen sie zu einer ständigen Bedrohung für die Balance der Region und für alle, die sich ihnen in den Weg stellen.",
+        "secret": false,
+        "dominionId": "oberherrschaft-aislearneach-tir-na-adharcach",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "52aee057-1feb-40b0-b733-6ca8e7bf5c4b",
+          "markerId": "c8bbbaca-df08-4e3d-8c2f-d5aa9f9e2c02",
+          "url": "https://www.worldanvil.com/world/map/marker/c8bbbaca-df08-4e3d-8c2f-d5aa9f9e2c02/edit",
+          "title": "",
+          "coordinates": {
+            "x": 2416,
+            "y": 2235,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          },
+          "imageSize": [
+            2827,
+            4097
+          ],
+          "targets": [],
+          "nameStatus": "recovered"
+        }
+      },
+      {
+        "id": "aislearneach-ce598811-5f42-4caf-9ffb-a5c6ad7f0b8c",
+        "title": "Cluaincoirce",
+        "x": 0.6253979483551468,
+        "y": 0.8757627532340737,
+        "cat": "location-klostersiedlung",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/klostersiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Aislearneach/clan-an-uilebheist.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-uilebheist&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-adharcach.png",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Aislearneach/Herrschaft der An’Uilebheist/Herrschaft der An’Uilebheist.html",
+        "region": "Aislearneach",
+        "house": "Clan An’Uilebheist",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Cluaincoirce"
+          },
+          {
+            "k": "Typ",
+            "v": "Klostersiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Clan An’Uilebheist"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Beschreibung",
+            "v": "Noch nicht ausgearbeitet"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "herrschaft-aislearneach-uilebheist",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "52aee057-1feb-40b0-b733-6ca8e7bf5c4b",
+          "markerId": "ce598811-5f42-4caf-9ffb-a5c6ad7f0b8c",
+          "url": "https://www.worldanvil.com/world/map/marker/ce598811-5f42-4caf-9ffb-a5c6ad7f0b8c/edit",
+          "title": "Klostersiedlung",
+          "coordinates": {
+            "x": 1768,
+            "y": 509,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          },
+          "imageSize": [
+            2827,
+            4097
+          ],
+          "targets": [],
+          "nameStatus": "generated",
+          "nameDecisionId": "ce598811-5f42-4caf-9ffb-a5c6ad7f0b8c"
+        }
+      },
+      {
+        "id": "aislearneach-9f17da9b-e6d4-46c6-83e7-96859c7b4371",
+        "title": "Unbenannter Ahnenbaum",
+        "x": 0.5072515033604528,
+        "y": 0.11667073468391509,
+        "cat": "location-ahnenbaum",
+        "templateId": "natur",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/ahnenbaum.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Aislearneach/clan-nic-cnogan.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-cnogan&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-adharcach.png",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Aislearneach/Herrschaft der Nic’Cnogan/Herrschaft der Nic’Cnogan.html",
+        "region": "Aislearneach",
+        "house": "Clan Nic’Cnogan",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Unbenannt"
+          },
+          {
+            "k": "Typ",
+            "v": "Ahnenbaum"
+          },
+          {
+            "k": "Baumart",
+            "v": ""
+          },
+          {
+            "k": "Alter",
+            "v": ""
+          },
+          {
+            "k": "Verehrte Ahnen",
+            "v": ""
+          },
+          {
+            "k": "Hüter",
+            "v": ""
+          },
+          {
+            "k": "Rituale",
+            "v": ""
+          },
+          {
+            "k": "Magische Einflüsse",
+            "v": ""
+          },
+          {
+            "k": "Überlieferungen",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          },
+          {
+            "k": "Beschreibung",
+            "v": "Noch nicht ausgearbeitet"
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Clan Nic’Cnogan"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "herrschaft-aislearneach-cnogan",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "52aee057-1feb-40b0-b733-6ca8e7bf5c4b",
+          "markerId": "9f17da9b-e6d4-46c6-83e7-96859c7b4371",
+          "url": "https://www.worldanvil.com/world/map/marker/9f17da9b-e6d4-46c6-83e7-96859c7b4371/edit",
+          "title": "Ahnenbaum",
+          "coordinates": {
+            "x": 1434,
+            "y": 3619,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          },
+          "imageSize": [
+            2827,
+            4097
+          ],
+          "targets": [],
+          "nameStatus": "missing"
+        }
+      },
+      {
+        "id": "aislearneach-dc64f74e-d44a-4120-ac8d-a10dc9bec446",
+        "title": "Coilleruadh",
+        "x": 0.6972055182171913,
+        "y": 0.7776421772028314,
+        "cat": "mmflt7uj831y",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/waldsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Aislearneach/clan-an-uilebheist.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-uilebheist&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-adharcach.png",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Aislearneach/Herrschaft der An’Uilebheist/Herrschaft der An’Uilebheist.html",
+        "region": "Aislearneach",
+        "house": "Clan An’Uilebheist",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Coilleruadh"
+          },
+          {
+            "k": "Typ",
+            "v": "Waldsiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Clan An’Uilebheist"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Beschreibung",
+            "v": "Noch nicht ausgearbeitet"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "herrschaft-aislearneach-uilebheist",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "52aee057-1feb-40b0-b733-6ca8e7bf5c4b",
+          "markerId": "dc64f74e-d44a-4120-ac8d-a10dc9bec446",
+          "url": "https://www.worldanvil.com/world/map/marker/dc64f74e-d44a-4120-ac8d-a10dc9bec446/edit",
+          "title": "Waldsiedlung",
+          "coordinates": {
+            "x": 1971,
+            "y": 911,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          },
+          "imageSize": [
+            2827,
+            4097
+          ],
+          "targets": [],
+          "nameStatus": "generated",
+          "nameDecisionId": "dc64f74e-d44a-4120-ac8d-a10dc9bec446"
+        }
+      },
+      {
+        "id": "aislearneach-e65d2e1f-bf18-4230-99da-a8c3a2107c5a",
+        "title": "Dundruim",
+        "x": 0.3841528121683764,
+        "y": 0.7881376617036856,
+        "cat": "location-dorf",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/bardensiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Aislearneach/clan-an-uilebheist.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-uilebheist&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-adharcach.png",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Aislearneach/Herrschaft der An’Uilebheist/Herrschaft der An’Uilebheist.html",
+        "region": "Aislearneach",
+        "house": "Clan An’Uilebheist",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Dundruim"
+          },
+          {
+            "k": "Typ",
+            "v": "Dorf"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Clan An’Uilebheist"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Beschreibung",
+            "v": "Noch nicht ausgearbeitet"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "herrschaft-aislearneach-uilebheist",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "52aee057-1feb-40b0-b733-6ca8e7bf5c4b",
+          "markerId": "e65d2e1f-bf18-4230-99da-a8c3a2107c5a",
+          "url": "https://www.worldanvil.com/world/map/marker/e65d2e1f-bf18-4230-99da-a8c3a2107c5a/edit",
+          "title": "Siedlung",
+          "coordinates": {
+            "x": 1086,
+            "y": 868,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          },
+          "imageSize": [
+            2827,
+            4097
+          ],
+          "targets": [],
+          "nameStatus": "generated",
+          "nameDecisionId": "e65d2e1f-bf18-4230-99da-a8c3a2107c5a"
+        }
+      },
+      {
+        "id": "aislearneach-e6e4e223-069b-401f-84d8-a603038e9927",
+        "title": "Cillreoth",
+        "x": 0.4301379554297842,
+        "y": 0.2306565779838906,
+        "cat": "location-klostersiedlung",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/klostersiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Aislearneach/clan-nic-cnogan.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-cnogan&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-adharcach.png",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Aislearneach/Herrschaft der Nic’Cnogan/Herrschaft der Nic’Cnogan.html",
+        "region": "Aislearneach",
+        "house": "Clan Nic’Cnogan",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Cillreoth"
+          },
+          {
+            "k": "Typ",
+            "v": "Klostersiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Clan Nic’Cnogan"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Beschreibung",
+            "v": "Noch nicht ausgearbeitet"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "herrschaft-aislearneach-cnogan",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "52aee057-1feb-40b0-b733-6ca8e7bf5c4b",
+          "markerId": "e6e4e223-069b-401f-84d8-a603038e9927",
+          "url": "https://www.worldanvil.com/world/map/marker/e6e4e223-069b-401f-84d8-a603038e9927/edit",
+          "title": "Klostersiedlung",
+          "coordinates": {
+            "x": 1216,
+            "y": 3152,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          },
+          "imageSize": [
+            2827,
+            4097
+          ],
+          "targets": [],
+          "nameStatus": "generated",
+          "nameDecisionId": "e6e4e223-069b-401f-84d8-a603038e9927"
+        }
+      },
+      {
+        "id": "aislearneach-fa03e946-921f-4025-8187-dca47f8ae1f4",
+        "title": "Fiodhfionn",
+        "x": 0.7569862044570216,
+        "y": 0.5599218940688309,
+        "cat": "mmflt7uj831y",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/waldsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Aislearneach/clan-an-uilebheist.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-uilebheist&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-adharcach.png",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Aislearneach/Herrschaft der An’Uilebheist/Herrschaft der An’Uilebheist.html",
+        "region": "Aislearneach",
+        "house": "Clan An’Uilebheist",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Fiodhfionn"
+          },
+          {
+            "k": "Typ",
+            "v": "Waldsiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Clan An’Uilebheist"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Beschreibung",
+            "v": "Noch nicht ausgearbeitet"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "herrschaft-aislearneach-uilebheist",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "52aee057-1feb-40b0-b733-6ca8e7bf5c4b",
+          "markerId": "fa03e946-921f-4025-8187-dca47f8ae1f4",
+          "url": "https://www.worldanvil.com/world/map/marker/fa03e946-921f-4025-8187-dca47f8ae1f4/edit",
+          "title": "Waldsiedlung",
+          "coordinates": {
+            "x": 2140,
+            "y": 1803,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          },
+          "imageSize": [
+            2827,
+            4097
+          ],
+          "targets": [],
+          "nameStatus": "generated",
+          "nameDecisionId": "fa03e946-921f-4025-8187-dca47f8ae1f4"
+        }
+      },
+      {
+        "id": "aislearneach-fd230817-0356-4027-8c23-931835721e72",
+        "title": "Unbenannter Turm",
+        "x": 0.5146798726565264,
+        "y": 0.14791310715157435,
+        "cat": "location-turm",
+        "templateId": "militaer",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/turm.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Aislearneach/clan-nic-cnogan.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-cnogan&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-adharcach.png",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Aislearneach/Herrschaft der Nic’Cnogan/Herrschaft der Nic’Cnogan.html",
+        "region": "Aislearneach",
+        "house": "Clan Nic’Cnogan",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Unbenannt"
+          },
+          {
+            "k": "Typ",
+            "v": "Turm"
+          },
+          {
+            "k": "Befehlshaber",
+            "v": ""
+          },
+          {
+            "k": "Unterstellung",
+            "v": ""
+          },
+          {
+            "k": "Besatzung",
+            "v": ""
+          },
+          {
+            "k": "Aufgaben",
+            "v": ""
+          },
+          {
+            "k": "Ausrüstung",
+            "v": ""
+          },
+          {
+            "k": "Befestigung",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          },
+          {
+            "k": "Beschreibung",
+            "v": "Noch nicht ausgearbeitet"
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Clan Nic’Cnogan"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "herrschaft-aislearneach-cnogan",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "52aee057-1feb-40b0-b733-6ca8e7bf5c4b",
+          "markerId": "fd230817-0356-4027-8c23-931835721e72",
+          "url": "https://www.worldanvil.com/world/map/marker/fd230817-0356-4027-8c23-931835721e72/edit",
+          "title": "Wachtturm",
+          "coordinates": {
+            "x": 1455,
+            "y": 3491,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          },
+          "imageSize": [
+            2827,
+            4097
+          ],
+          "targets": [],
+          "nameStatus": "missing"
+        }
+      },
+      {
+        "id": "aislearneach-fd3cac27-a8f8-4d64-b197-b54d71c0421e",
+        "title": "Frithcoirce",
+        "x": 0.5815351963211886,
+        "y": 0.833536734195753,
+        "cat": "mmflt7uj831y",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/waldsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Fraktionen/assets/emblems/gilden/jagdklingen.webp",
+        "crestLink": "",
+        "banner": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-adharcach.png",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Aislearneach/Herrschaft der An’Uilebheist/Herrschaft der An’Uilebheist.html",
+        "region": "Aislearneach",
+        "house": "Jagdklingen",
+        "faction": "Jagdklingen",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Frithcoirce"
+          },
+          {
+            "k": "Typ",
+            "v": "Waldsiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Clan An’Uilebheist"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Beschreibung",
+            "v": "Noch nicht ausgearbeitet"
+          },
+          {
+            "k": "Betreiber",
+            "v": "Jagdklingen"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "herrschaft-aislearneach-uilebheist",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "52aee057-1feb-40b0-b733-6ca8e7bf5c4b",
+          "markerId": "fd3cac27-a8f8-4d64-b197-b54d71c0421e",
+          "url": "https://www.worldanvil.com/world/map/marker/fd3cac27-a8f8-4d64-b197-b54d71c0421e/edit",
+          "title": "Jagdklingen - Pachtsiedlung",
+          "coordinates": {
+            "x": 1644,
+            "y": 682,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          },
+          "imageSize": [
+            2827,
+            4097
+          ],
+          "targets": [],
+          "nameStatus": "generated",
+          "nameDecisionId": "fd3cac27-a8f8-4d64-b197-b54d71c0421e"
+        }
+      },
+      {
+        "id": "aislearneach-5a0c4946-a490-49af-a704-4c9121da5acb",
+        "title": "Unbenannter Ahnenbaum",
+        "x": 0.6621860629642731,
+        "y": 0.8547717842323651,
+        "cat": "location-ahnenbaum",
+        "templateId": "natur",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/ahnenbaum.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Aislearneach/clan-an-uilebheist.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-uilebheist&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-adharcach.png",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Aislearneach/Herrschaft der An’Uilebheist/Herrschaft der An’Uilebheist.html",
+        "region": "Aislearneach",
+        "house": "Clan An’Uilebheist",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Unbenannt"
+          },
+          {
+            "k": "Typ",
+            "v": "Ahnenbaum"
+          },
+          {
+            "k": "Baumart",
+            "v": ""
+          },
+          {
+            "k": "Alter",
+            "v": ""
+          },
+          {
+            "k": "Verehrte Ahnen",
+            "v": ""
+          },
+          {
+            "k": "Hüter",
+            "v": ""
+          },
+          {
+            "k": "Rituale",
+            "v": ""
+          },
+          {
+            "k": "Magische Einflüsse",
+            "v": ""
+          },
+          {
+            "k": "Überlieferungen",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          },
+          {
+            "k": "Beschreibung",
+            "v": "Noch nicht ausgearbeitet"
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Clan An’Uilebheist"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "herrschaft-aislearneach-uilebheist",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "52aee057-1feb-40b0-b733-6ca8e7bf5c4b",
+          "markerId": "5a0c4946-a490-49af-a704-4c9121da5acb",
+          "url": "https://www.worldanvil.com/world/map/marker/5a0c4946-a490-49af-a704-4c9121da5acb/edit",
+          "title": "Ahnenbaum",
+          "coordinates": {
+            "x": 1872,
+            "y": 595,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          },
+          "imageSize": [
+            2827,
+            4097
+          ],
+          "targets": [],
+          "nameStatus": "missing"
+        }
+      },
+      {
+        "id": "aislearneach-0b7e77e2-fd51-4c1f-982a-cca27877884a",
+        "title": "Coilleseagal",
+        "x": 0.22780332507958967,
+        "y": 0.5010983646570661,
+        "cat": "mmflt7uj831y",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/waldsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Aislearneach/clan-nic-cnogan.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-cnogan&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-adharcach.png",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Aislearneach/Herrschaft der Nic’Cnogan/Herrschaft der Nic’Cnogan.html",
+        "region": "Aislearneach",
+        "house": "Clan Nic’Cnogan",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Coilleseagal"
+          },
+          {
+            "k": "Typ",
+            "v": "Waldsiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Clan Nic’Cnogan"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Beschreibung",
+            "v": "Noch nicht ausgearbeitet"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "herrschaft-aislearneach-cnogan",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "52aee057-1feb-40b0-b733-6ca8e7bf5c4b",
+          "markerId": "0b7e77e2-fd51-4c1f-982a-cca27877884a",
+          "url": "https://www.worldanvil.com/world/map/marker/0b7e77e2-fd51-4c1f-982a-cca27877884a/edit",
+          "title": "Waldsiedlung",
+          "coordinates": {
+            "x": 644,
+            "y": 2044,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          },
+          "imageSize": [
+            2827,
+            4097
+          ],
+          "targets": [],
+          "nameStatus": "generated",
+          "nameDecisionId": "0b7e77e2-fd51-4c1f-982a-cca27877884a"
+        }
+      },
+      {
+        "id": "aislearneach-11d7102b-a8fd-4e0d-b9f0-f6c9a3291493",
+        "title": "Fiodhreoth",
+        "x": 0.3431199151043509,
+        "y": 0.320478398828411,
+        "cat": "mmflt7uj831y",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/waldsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Aislearneach/clan-nic-cnogan.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-cnogan&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-adharcach.png",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Aislearneach/Herrschaft der Nic’Cnogan/Herrschaft der Nic’Cnogan.html",
+        "region": "Aislearneach",
+        "house": "Clan Nic’Cnogan",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Fiodhreoth"
+          },
+          {
+            "k": "Typ",
+            "v": "Waldsiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Clan Nic’Cnogan"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Beschreibung",
+            "v": "Noch nicht ausgearbeitet"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "herrschaft-aislearneach-cnogan",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "52aee057-1feb-40b0-b733-6ca8e7bf5c4b",
+          "markerId": "11d7102b-a8fd-4e0d-b9f0-f6c9a3291493",
+          "url": "https://www.worldanvil.com/world/map/marker/11d7102b-a8fd-4e0d-b9f0-f6c9a3291493/edit",
+          "title": "Waldsiedlung",
+          "coordinates": {
+            "x": 970,
+            "y": 2784,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          },
+          "imageSize": [
+            2827,
+            4097
+          ],
+          "targets": [],
+          "nameStatus": "generated",
+          "nameDecisionId": "11d7102b-a8fd-4e0d-b9f0-f6c9a3291493"
+        }
+      },
+      {
+        "id": "aislearneach-1552c511-54f7-44ac-87db-152d634286cd",
+        "title": "Cluaincuileann",
+        "x": 0.14503006720905554,
+        "y": 0.7136929460580913,
+        "cat": "location-klostersiedlung",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/klostersiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Aislearneach/clan-an-uilebheist.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-uilebheist&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-adharcach.png",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Aislearneach/Herrschaft der An’Uilebheist/Herrschaft der An’Uilebheist.html",
+        "region": "Aislearneach",
+        "house": "Clan An’Uilebheist",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Cluaincuileann"
+          },
+          {
+            "k": "Typ",
+            "v": "Klostersiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Clan An’Uilebheist"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Beschreibung",
+            "v": "Noch nicht ausgearbeitet"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "herrschaft-aislearneach-uilebheist",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "52aee057-1feb-40b0-b733-6ca8e7bf5c4b",
+          "markerId": "1552c511-54f7-44ac-87db-152d634286cd",
+          "url": "https://www.worldanvil.com/world/map/marker/1552c511-54f7-44ac-87db-152d634286cd/edit",
+          "title": "Klostersiedlung",
+          "coordinates": {
+            "x": 410,
+            "y": 1173,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          },
+          "imageSize": [
+            2827,
+            4097
+          ],
+          "targets": [],
+          "nameStatus": "generated",
+          "nameDecisionId": "1552c511-54f7-44ac-87db-152d634286cd"
+        }
+      },
+      {
+        "id": "aislearneach-50350c5c-1b67-431e-a704-74f2ac5fa76b",
+        "title": "Unbenannter Turm",
+        "x": 0.5974531305270605,
+        "y": 0.5184281181352208,
+        "cat": "location-turm",
+        "templateId": "militaer",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/turm.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Aislearneach/clan-an-uilebheist.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-uilebheist&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-adharcach.png",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Aislearneach/Herrschaft der An’Uilebheist/Herrschaft der An’Uilebheist.html",
+        "region": "Aislearneach",
+        "house": "Clan An’Uilebheist",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Unbenannt"
+          },
+          {
+            "k": "Typ",
+            "v": "Turm"
+          },
+          {
+            "k": "Befehlshaber",
+            "v": ""
+          },
+          {
+            "k": "Unterstellung",
+            "v": ""
+          },
+          {
+            "k": "Besatzung",
+            "v": ""
+          },
+          {
+            "k": "Aufgaben",
+            "v": ""
+          },
+          {
+            "k": "Ausrüstung",
+            "v": ""
+          },
+          {
+            "k": "Befestigung",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          },
+          {
+            "k": "Beschreibung",
+            "v": "Noch nicht ausgearbeitet"
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Clan An’Uilebheist"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "herrschaft-aislearneach-uilebheist",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "52aee057-1feb-40b0-b733-6ca8e7bf5c4b",
+          "markerId": "50350c5c-1b67-431e-a704-74f2ac5fa76b",
+          "url": "https://www.worldanvil.com/world/map/marker/50350c5c-1b67-431e-a704-74f2ac5fa76b/edit",
+          "title": "Wachtturm",
+          "coordinates": {
+            "x": 1689,
+            "y": 1973,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          },
+          "imageSize": [
+            2827,
+            4097
+          ],
+          "targets": [],
+          "nameStatus": "missing"
+        }
+      },
+      {
+        "id": "aislearneach-56461bac-bd0b-4aae-97c5-d395205de04e",
+        "title": "Coillefear",
+        "x": 0.5889635656172622,
+        "y": 0.3448865023187698,
+        "cat": "mmflt7uj831y",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/waldsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Aislearneach/clan-nic-cnogan.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-cnogan&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-adharcach.png",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Aislearneach/Herrschaft der Nic’Cnogan/Herrschaft der Nic’Cnogan.html",
+        "region": "Aislearneach",
+        "house": "Clan Nic’Cnogan",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Coillefear"
+          },
+          {
+            "k": "Typ",
+            "v": "Waldsiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Clan Nic’Cnogan"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Beschreibung",
+            "v": "Noch nicht ausgearbeitet"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "herrschaft-aislearneach-cnogan",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "52aee057-1feb-40b0-b733-6ca8e7bf5c4b",
+          "markerId": "56461bac-bd0b-4aae-97c5-d395205de04e",
+          "url": "https://www.worldanvil.com/world/map/marker/56461bac-bd0b-4aae-97c5-d395205de04e/edit",
+          "title": "Waldsiedlung",
+          "coordinates": {
+            "x": 1665,
+            "y": 2684,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          },
+          "imageSize": [
+            2827,
+            4097
+          ],
+          "targets": [],
+          "nameStatus": "generated",
+          "nameDecisionId": "56461bac-bd0b-4aae-97c5-d395205de04e"
+        }
+      },
+      {
+        "id": "aislearneach-61da13ae-4868-432a-87a0-d23a37a1bd6a",
+        "title": "Weißrinden-Stamm",
+        "x": 0.7679518924655111,
+        "y": 0.1318037588479375,
+        "cat": "location-kreaturenlager",
+        "templateId": "monsterhort",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/goblinlager.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "",
+        "crestLink": "",
+        "banner": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-adharcach.png",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Aislearneach/Oberherrschaft Tir na Adharcach/Oberherrschaft Tir na Adharcach.html",
+        "region": "Aislearneach",
+        "house": "",
+        "faction": "Weißrinden-Stamm",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Weißrinden-Stamm"
+          },
+          {
+            "k": "Kreatur(en)",
+            "v": ""
+          },
+          {
+            "k": "Anzahl",
+            "v": ""
+          },
+          {
+            "k": "Gefährlichkeit",
+            "v": ""
+          },
+          {
+            "k": "Territorium",
+            "v": ""
+          },
+          {
+            "k": "Beute / Schatz",
+            "v": ""
+          },
+          {
+            "k": "Schwächen",
+            "v": ""
+          },
+          {
+            "k": "Verbündete",
+            "v": ""
+          },
+          {
+            "k": "Typ",
+            "v": "Kreaturenlager"
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Keine Lehnshoheit belegt"
+          },
+          {
+            "k": "Einordnung",
+            "v": "Hornling-Stammeslager"
+          }
+        ],
+        "text": "**Weißrinden-Stamm**\n\n\nDer Weißrinden-Stamm ist ebenfalls ein **ungewöhnlicher Stamm** von Hornlingen in Foraoise. Sie haben sich **eigenständig von Zatrachs Einfluss befreit** und stattdessen einen Weißen Baum als Gottheit auserkoren. Dieser Baum ist eine seltene Art von Rieseneiche mit weißer Rinde, die in den Wäldern von Foraoise vorkommt. Obwohl diese Bäume an sich keine besonderen magischen Eigenschaften besitzen und manchmal für Ahnenbäume gehalten werden, huldigen die Weißrinden-Hornlinge ihnen. Sie bekämpfen jeden, der diesen Bäumen schaden will, mit unerbittlicher Entschlossenheit.\n\nAbgesehen von der Verteidigung ihrer heiligen Bäume sind die Weißrinden-Hornlinge **völlig harmlos**. Sie jagen nur, was sie zum Überleben unbedingt benötigen, leben aber hauptsächlich von den **zahlreichen Nüssen**, die die Weißen Eichen produzieren. Ihr Lebensstil ähnelt dem von Eichhörnchen; sie sammeln und lagern die Nüsse in großem Umfang. Ihre Isolation und ihre friedliche Lebensweise machen sie zu einer einzigartigen Ausnahme unter den kriegerischen Stämmen Foraoises.",
+        "secret": false,
+        "dominionId": "oberherrschaft-aislearneach-tir-na-adharcach",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "52aee057-1feb-40b0-b733-6ca8e7bf5c4b",
+          "markerId": "61da13ae-4868-432a-87a0-d23a37a1bd6a",
+          "url": "https://www.worldanvil.com/world/map/marker/61da13ae-4868-432a-87a0-d23a37a1bd6a/edit",
+          "title": "",
+          "coordinates": {
+            "x": 2171,
+            "y": 3557,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          },
+          "imageSize": [
+            2827,
+            4097
+          ],
+          "targets": [],
+          "nameStatus": "recovered"
+        }
+      },
+      {
+        "id": "aislearneach-733ce655-4b2b-411c-8874-9fbc40b57acb",
+        "title": "Torrfear",
+        "x": 0.29324372125928544,
+        "y": 0.9077373688064437,
+        "cat": "location-dorf",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/bardensiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Aislearneach/clan-an-uilebheist.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-uilebheist&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-adharcach.png",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Aislearneach/Herrschaft der An’Uilebheist/Herrschaft der An’Uilebheist.html",
+        "region": "Aislearneach",
+        "house": "Clan An’Uilebheist",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Torrfear"
+          },
+          {
+            "k": "Typ",
+            "v": "Dorf"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Clan An’Uilebheist"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Beschreibung",
+            "v": "Noch nicht ausgearbeitet"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "herrschaft-aislearneach-uilebheist",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "52aee057-1feb-40b0-b733-6ca8e7bf5c4b",
+          "markerId": "733ce655-4b2b-411c-8874-9fbc40b57acb",
+          "url": "https://www.worldanvil.com/world/map/marker/733ce655-4b2b-411c-8874-9fbc40b57acb/edit",
+          "title": "Siedlung",
+          "coordinates": {
+            "x": 829,
+            "y": 378,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          },
+          "imageSize": [
+            2827,
+            4097
+          ],
+          "targets": [],
+          "nameStatus": "generated",
+          "nameDecisionId": "733ce655-4b2b-411c-8874-9fbc40b57acb"
+        }
+      },
+      {
+        "id": "aislearneach-76313348-93bf-481d-8289-74aff5068a8b",
+        "title": "Eichenhüter-Stamm",
+        "x": 0.4694021931376017,
+        "y": 0.899926775689529,
+        "cat": "location-kreaturenlager",
+        "templateId": "monsterhort",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/goblinlager.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "",
+        "crestLink": "",
+        "banner": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-adharcach.png",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Aislearneach/Oberherrschaft Tir na Adharcach/Oberherrschaft Tir na Adharcach.html",
+        "region": "Aislearneach",
+        "house": "",
+        "faction": "Eichenhüter-Stamm",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Eichenhüter-Stamm"
+          },
+          {
+            "k": "Kreatur(en)",
+            "v": ""
+          },
+          {
+            "k": "Anzahl",
+            "v": ""
+          },
+          {
+            "k": "Gefährlichkeit",
+            "v": ""
+          },
+          {
+            "k": "Territorium",
+            "v": ""
+          },
+          {
+            "k": "Beute / Schatz",
+            "v": ""
+          },
+          {
+            "k": "Schwächen",
+            "v": ""
+          },
+          {
+            "k": "Verbündete",
+            "v": ""
+          },
+          {
+            "k": "Typ",
+            "v": "Kreaturenlager"
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Keine Lehnshoheit belegt"
+          },
+          {
+            "k": "Einordnung",
+            "v": "Hornling-Stammeslager"
+          }
+        ],
+        "text": "**Eichenhüter-Stamm**\n\n\nDie Eichenhüter sind ein weiterer Hornling-Stamm, der sich dem Einfluss Zatrachs entzogen hat. Erneut war ein Druide der Grund für ihre Verschwörung, der sie verschonte, anstatt sie zu vernichten. Heute leben sie fast schon in **Freundschaft mit den Menschen** im Süden von Foraoise. Man hat sich an ihre Anwesenheit gewöhnt und ignoriert sie weitestgehend. Diese Hornlinge sind bekannt dafür, auf Wildschweinen oder Hirschen zu reiten und opfern Nüsse, Waldfrüchte oder kleine Nagetiere an Wegschreinen entlang des Pfades nach Foraoise.\n\nTrotz dieser friedlichen Koexistenz kann man nicht von absolutem \"Vertrauen\" sprechen, da es immer wieder **Ausreißer** gibt, die aggressiv werden. Wenn sich Kinder im Wald verirren, bringen die Eichenhüter sie jedoch zuverlässig zurück. Im Großen und Ganzen sind sie mit absoluter Sicherheit als **harmlos** einzustufen, was sie zu einer Besonderheit unter den wilden Stämmen Foraoises macht, auch wenn ihre Natur immer noch unberechenbar sein kann.",
+        "secret": false,
+        "dominionId": "oberherrschaft-aislearneach-tir-na-adharcach",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "52aee057-1feb-40b0-b733-6ca8e7bf5c4b",
+          "markerId": "76313348-93bf-481d-8289-74aff5068a8b",
+          "url": "https://www.worldanvil.com/world/map/marker/76313348-93bf-481d-8289-74aff5068a8b/edit",
+          "title": "",
+          "coordinates": {
+            "x": 1327,
+            "y": 410,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          },
+          "imageSize": [
+            2827,
+            4097
+          ],
+          "targets": [],
+          "nameStatus": "recovered"
+        }
+      },
+      {
+        "id": "aislearneach-8e40e5f8-a6ac-4904-94f1-234c953a6866",
+        "title": "Dreifeder-Stamm",
+        "x": 0.45030067209055535,
+        "y": 0.4430070783500122,
+        "cat": "location-kreaturenlager",
+        "templateId": "monsterhort",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/goblinlager.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "",
+        "crestLink": "",
+        "banner": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-adharcach.png",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Aislearneach/Oberherrschaft Tir na Adharcach/Oberherrschaft Tir na Adharcach.html",
+        "region": "Aislearneach",
+        "house": "",
+        "faction": "Dreifeder-Stamm",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Dreifeder-Stamm"
+          },
+          {
+            "k": "Kreatur(en)",
+            "v": ""
+          },
+          {
+            "k": "Anzahl",
+            "v": ""
+          },
+          {
+            "k": "Gefährlichkeit",
+            "v": ""
+          },
+          {
+            "k": "Territorium",
+            "v": ""
+          },
+          {
+            "k": "Beute / Schatz",
+            "v": ""
+          },
+          {
+            "k": "Schwächen",
+            "v": ""
+          },
+          {
+            "k": "Verbündete",
+            "v": ""
+          },
+          {
+            "k": "Typ",
+            "v": "Kreaturenlager"
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Keine Lehnshoheit belegt"
+          },
+          {
+            "k": "Einordnung",
+            "v": "Hornling-Stammeslager"
+          }
+        ],
+        "text": "**Dreifeder-Stamm**\n\n\nDer Dreifeder-Stamm ist ein **ungewöhnlicher Stamm** von Hornlingen in Foraoise, der sich Zatrachs Einfluss entzogen hat. Sie leben in einer gewissen Symbiose mit den Menschen, was einem lokalen Druiden zu verdanken ist, der Zatrachs Willen über sie brechen und sie verschonen konnte, anstatt sie zu vernichten. Dieses Phänomen kommt bei niederen infernalen Wesen, die oft ein wechselhaftes Gemüt haben, tatsächlich öfter vor. Befreit von Zatrachs Einfluss, haben die Dreifeder-Hornlinge nun jedoch die **Aggression und den Zorn** anderer Hornling-Stämme auf sich gezogen. Ihren Namen tragen sie aufgrund des Federschmucks, mit dem sich ihre Krieger verzieren.\n\nGanz **harmlos** sind die Dreifeder-Hornlinge trotz ihrer ungewöhnlichen Allianz nicht. Sie gelten als **geschickte Scharmützler** und sind bekannt dafür, oft aus dem Hinterhalt zuzuschlagen. Ihre Kampfweise ist darauf ausgelegt, Verwirrung zu stiften und Feinde schnell zu überwältigen, bevor diese sich formieren können. Ihre Anpassungsfähigkeit und ihr Überlebensinstinkt, gepaart mit ihrer Freiheit von Zatrachs direkter Kontrolle, machen sie zu unberechenbaren Verbündeten und gefährlichen Gegnern.",
+        "secret": false,
+        "dominionId": "oberherrschaft-aislearneach-tir-na-adharcach",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "52aee057-1feb-40b0-b733-6ca8e7bf5c4b",
+          "markerId": "8e40e5f8-a6ac-4904-94f1-234c953a6866",
+          "url": "https://www.worldanvil.com/world/map/marker/8e40e5f8-a6ac-4904-94f1-234c953a6866/edit",
+          "title": "",
+          "coordinates": {
+            "x": 1273,
+            "y": 2282,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          },
+          "imageSize": [
+            2827,
+            4097
+          ],
+          "targets": [],
+          "nameStatus": "recovered"
+        }
+      },
+      {
+        "id": "aislearneach-92053320-f24b-4914-b9ce-22b66f2444d6",
+        "title": "Gleanngeal",
+        "x": 0.12097629996462682,
+        "y": 0.614351964852331,
+        "cat": "mmflt7uj831y",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/waldsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Aislearneach/clan-an-uilebheist.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-uilebheist&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-adharcach.png",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Aislearneach/Herrschaft der An’Uilebheist/Herrschaft der An’Uilebheist.html",
+        "region": "Aislearneach",
+        "house": "Clan An’Uilebheist",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Gleanngeal"
+          },
+          {
+            "k": "Typ",
+            "v": "Waldsiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Clan An’Uilebheist"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Beschreibung",
+            "v": "Noch nicht ausgearbeitet"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "herrschaft-aislearneach-uilebheist",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "52aee057-1feb-40b0-b733-6ca8e7bf5c4b",
+          "markerId": "92053320-f24b-4914-b9ce-22b66f2444d6",
+          "url": "https://www.worldanvil.com/world/map/marker/92053320-f24b-4914-b9ce-22b66f2444d6/edit",
+          "title": "Waldsiedlung",
+          "coordinates": {
+            "x": 342,
+            "y": 1580,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          },
+          "imageSize": [
+            2827,
+            4097
+          ],
+          "targets": [],
+          "nameStatus": "generated",
+          "nameDecisionId": "92053320-f24b-4914-b9ce-22b66f2444d6"
+        }
+      },
+      {
+        "id": "aislearneach-95c86215-2b5d-4056-b618-0eda1fd1e60d",
+        "title": "Scharfzahn-Stamm",
+        "x": 0.5864874425185709,
+        "y": 0.2538442762997315,
+        "cat": "location-kreaturenlager",
+        "templateId": "monsterhort",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/goblinlager.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "",
+        "crestLink": "",
+        "banner": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-adharcach.png",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Aislearneach/Oberherrschaft Tir na Adharcach/Oberherrschaft Tir na Adharcach.html",
+        "region": "Aislearneach",
+        "house": "",
+        "faction": "Scharfzahn-Stamm",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Scharfzahn-Stamm"
+          },
+          {
+            "k": "Kreatur(en)",
+            "v": ""
+          },
+          {
+            "k": "Anzahl",
+            "v": ""
+          },
+          {
+            "k": "Gefährlichkeit",
+            "v": ""
+          },
+          {
+            "k": "Territorium",
+            "v": ""
+          },
+          {
+            "k": "Beute / Schatz",
+            "v": ""
+          },
+          {
+            "k": "Schwächen",
+            "v": ""
+          },
+          {
+            "k": "Verbündete",
+            "v": ""
+          },
+          {
+            "k": "Typ",
+            "v": "Kreaturenlager"
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Keine Lehnshoheit belegt"
+          },
+          {
+            "k": "Einordnung",
+            "v": "Hornling-Stammeslager"
+          }
+        ],
+        "text": "**Scharfzahn-Stamm**\n\n\nDer Scharfzahn-Stamm wurde vor einiger Zeit von anderen Hornlingen und Waldläufern der Region beinahe zerschlagen. Doch ein Zarok (Waldork) konnte die Kontrolle über den Stamm übernehmen und ist nun ihr Häuptling. Einst einer der kleinsten Stämme, ist der Scharfzahn-Stamm unter seiner Führung stark gewachsen. Sie sind den Menschen dieser Region ein permanentes Ärgernis und müssen beseitigt werden, was sich als hartnäckig erweist, da sie sich **unterirdisch bewegen** und ihre Lager nicht direkt im Wald haben.\n\nIhren Namen tragen sie, weil sie die **Zähne ihrer gefallenen Beute** als Schmuck und Trophäen mit sich führen. Ihre Verstecke in den Höhlen und unterirdischen Gängen machen sie zu schwer fassbaren Gegnern, die aus dem Nichts auftauchen und wieder verschwinden können. Dies, gepaart mit ihrer nun **verstärkten militärischen Stärke** unter der Führung des Zarok, macht sie zu einer ernsthaften Bedrohung, deren Vernichtung hohe Priorität hat.",
+        "secret": false,
+        "dominionId": "oberherrschaft-aislearneach-tir-na-adharcach",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "52aee057-1feb-40b0-b733-6ca8e7bf5c4b",
+          "markerId": "95c86215-2b5d-4056-b618-0eda1fd1e60d",
+          "url": "https://www.worldanvil.com/world/map/marker/95c86215-2b5d-4056-b618-0eda1fd1e60d/edit",
+          "title": "",
+          "coordinates": {
+            "x": 1658,
+            "y": 3057,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          },
+          "imageSize": [
+            2827,
+            4097
+          ],
+          "targets": [],
+          "nameStatus": "recovered"
+        }
+      },
+      {
+        "id": "aislearneach-9930ec95-a592-4a2b-abc7-e0381ba58cb5",
+        "title": "Unbenannter Ahnenbaum",
+        "x": 0.1804032543332154,
+        "y": 0.7053941908713692,
+        "cat": "location-ahnenbaum",
+        "templateId": "natur",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/ahnenbaum.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Aislearneach/clan-an-uilebheist.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-uilebheist&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-adharcach.png",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Aislearneach/Herrschaft der An’Uilebheist/Herrschaft der An’Uilebheist.html",
+        "region": "Aislearneach",
+        "house": "Clan An’Uilebheist",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Unbenannt"
+          },
+          {
+            "k": "Typ",
+            "v": "Ahnenbaum"
+          },
+          {
+            "k": "Baumart",
+            "v": ""
+          },
+          {
+            "k": "Alter",
+            "v": ""
+          },
+          {
+            "k": "Verehrte Ahnen",
+            "v": ""
+          },
+          {
+            "k": "Hüter",
+            "v": ""
+          },
+          {
+            "k": "Rituale",
+            "v": ""
+          },
+          {
+            "k": "Magische Einflüsse",
+            "v": ""
+          },
+          {
+            "k": "Überlieferungen",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          },
+          {
+            "k": "Beschreibung",
+            "v": "Noch nicht ausgearbeitet"
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Clan An’Uilebheist"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "herrschaft-aislearneach-uilebheist",
+        "sourceRef": {
+          "provider": "worldanvil",
+          "mapId": "52aee057-1feb-40b0-b733-6ca8e7bf5c4b",
+          "markerId": "9930ec95-a592-4a2b-abc7-e0381ba58cb5",
+          "url": "https://www.worldanvil.com/world/map/marker/9930ec95-a592-4a2b-abc7-e0381ba58cb5/edit",
+          "title": "Ahnenbaum",
+          "coordinates": {
+            "x": 510,
+            "y": 1207,
+            "origin": "bottom-left",
+            "unit": "pixel"
+          },
+          "imageSize": [
+            2827,
+            4097
+          ],
+          "targets": [],
+          "nameStatus": "missing"
+        }
+      }
+    ],
+    "cats": [
+      {
+        "id": "mmflrbzxydg7",
+        "label": "Hauptstadt",
+        "color": "#ff0000"
+      },
+      {
+        "id": "mmflrqajby8b",
+        "label": "Bauernsiedlung",
+        "color": "#6060b0"
+      },
+      {
+        "id": "mmflry5furso",
+        "label": "Hafensiedlung",
+        "color": "#b03030"
+      },
+      {
+        "id": "mmfls5afqqpr",
+        "label": "Burgsiedlung",
+        "color": "#9050b0"
+      },
+      {
+        "id": "mmflsfqh3sft",
+        "label": "Handelssiedlung",
+        "color": "#3a8a3a"
+      },
+      {
+        "id": "mmflsrndeiee",
+        "label": "Brückensiedlung",
+        "color": "#2a7aaa"
+      },
+      {
+        "id": "mmflt1x3v22o",
+        "label": "Bergbausiedlung",
+        "color": "#7a6040"
+      },
+      {
+        "id": "mmflt7uj831y",
+        "label": "Waldsiedlung",
+        "color": "#c07030"
+      },
+      {
+        "id": "mmflteurd4n5",
+        "label": "Kirchensiedlung",
+        "color": "#508080"
+      },
+      {
+        "id": "mmfltia1m3s7",
+        "label": "Leuchtturmsiedlung",
+        "color": "#c49a20"
+      },
+      {
+        "id": "mmfltullsctk",
+        "label": "Festungssiedlung",
+        "color": "#6060b0"
+      },
+      {
+        "id": "mmflvj37jbh2",
+        "label": "Taverne",
+        "color": "#b03030"
+      },
+      {
+        "id": "mmflvquv2rr3",
+        "label": "Siedlungsruine",
+        "color": "#9050b0"
+      },
+      {
+        "id": "mmflw1z5ko6e",
+        "label": "Stadtruine",
+        "color": "#3a8a3a"
+      },
+      {
+        "id": "mmflw73t2e8v",
+        "label": "Bardensiedlung",
+        "color": "#2a7aaa"
+      },
+      {
+        "id": "mmflwdjfl6ah",
+        "label": "Stadt",
+        "color": "#7a6040"
+      },
+      {
+        "id": "mmflwmdfcyua",
+        "label": "Turmruine",
+        "color": "#c07030"
+      },
+      {
+        "id": "mmflwxad8w1j",
+        "label": "Schiffswrack",
+        "color": "#508080"
+      },
+      {
+        "id": "mmflx4731uj6",
+        "label": "Turnierplatz",
+        "color": "#c49a20"
+      },
+      {
+        "id": "mmflxnnhbh4g",
+        "label": "Besondere Orte",
+        "color": "#6060b0"
+      },
+      {
+        "id": "location-dorf",
+        "label": "Dorf",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/bardensiedlung.png"
+      },
+      {
+        "id": "location-flusssiedlung",
+        "label": "Flusssiedlung",
+        "color": "#2a7aaa",
+        "marker": "/Karten/assets/icons/welt/flusssiedlung.png"
+      },
+      {
+        "id": "location-bauernhof",
+        "label": "Bauernhof",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/bauernsiedlung.png"
+      },
+      {
+        "id": "location-landgut",
+        "label": "Landgut",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/landgut.png"
+      },
+      {
+        "id": "location-anwesen",
+        "label": "Anwesen",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/anwesen.png"
+      },
+      {
+        "id": "location-rittergut",
+        "label": "Rittergut",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/kleine-burg.png"
+      },
+      {
+        "id": "location-weingut",
+        "label": "Weingut",
+        "color": "#a45630",
+        "marker": "/Karten/assets/icons/welt/weingut.png"
+      },
+      {
+        "id": "location-obstplantage",
+        "label": "Obstplantage",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/obstplantage.png"
+      },
+      {
+        "id": "location-viehweide",
+        "label": "Viehweide",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/weide.png"
+      },
+      {
+        "id": "location-gestuet",
+        "label": "Gestüt",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/gest-t.png"
+      },
+      {
+        "id": "location-muehle",
+        "label": "Mühle",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/m-hle.png"
+      },
+      {
+        "id": "location-mine",
+        "label": "Mine",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/einzelnemine.png"
+      },
+      {
+        "id": "location-steinbruch",
+        "label": "Steinbruch",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/steinbruch-1.png"
+      },
+      {
+        "id": "location-schmiede",
+        "label": "Schmiede",
+        "color": "#a45630",
+        "marker": "/Karten/assets/icons/welt/schmiede.png"
+      },
+      {
+        "id": "location-brauerei",
+        "label": "Brauerei",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/brauersiedlung.png"
+      },
+      {
+        "id": "location-fischerei",
+        "label": "Fischerei",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/fischerh-tte.png"
+      },
+      {
+        "id": "location-holzfaellerlager",
+        "label": "Holzfällerlager",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/holzf-llerlager.png"
+      },
+      {
+        "id": "location-koehlerei",
+        "label": "Köhlerei",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/k-hler3.png"
+      },
+      {
+        "id": "location-imkerei",
+        "label": "Imkerei",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/imkerhof.png"
+      },
+      {
+        "id": "location-handelskontor",
+        "label": "Handelskontor",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/kontor.png"
+      },
+      {
+        "id": "location-markt",
+        "label": "Markt",
+        "color": "#a45630",
+        "marker": "/Karten/assets/icons/welt/marktstand.png"
+      },
+      {
+        "id": "location-gildenhaus",
+        "label": "Gildenhaus",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/gildenzentrale.png"
+      },
+      {
+        "id": "location-burg",
+        "label": "Burg",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/gro-e-burg.png"
+      },
+      {
+        "id": "location-turm",
+        "label": "Turm",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/turm.png"
+      },
+      {
+        "id": "location-leuchtturm",
+        "label": "Leuchtturm",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/leuchtturm.png"
+      },
+      {
+        "id": "location-aussenposten",
+        "label": "Außenposten",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/au-enposten.png"
+      },
+      {
+        "id": "location-grenzposten",
+        "label": "Grenzposten",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/zoll-grenzposten.png"
+      },
+      {
+        "id": "location-heerlager",
+        "label": "Heerlager",
+        "color": "#a45630",
+        "marker": "/Karten/assets/icons/welt/heereslager.png"
+      },
+      {
+        "id": "location-lagerplatz",
+        "label": "Lagerplatz",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/lager.png"
+      },
+      {
+        "id": "location-jaegerlager",
+        "label": "Jägerlager",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/j-gerlager.png"
+      },
+      {
+        "id": "location-jagdhaus",
+        "label": "Jagdhaus",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/j-gerhaus.png"
+      },
+      {
+        "id": "location-druidenhuette",
+        "label": "Druidenhütte",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/druidenh-tte.png"
+      },
+      {
+        "id": "location-hexenhuette",
+        "label": "Hexenhütte",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/hexenhaus.png"
+      },
+      {
+        "id": "location-schrein",
+        "label": "Schrein",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/wegschrein.png"
+      },
+      {
+        "id": "location-heiligtum",
+        "label": "Heiligtum",
+        "color": "#a45630",
+        "marker": "/Karten/assets/icons/welt/heiligtum.png"
+      },
+      {
+        "id": "location-friedhof",
+        "label": "Friedhof",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/l-ndlicher-friedhof.png"
+      },
+      {
+        "id": "location-grabstaette",
+        "label": "Grabstätte",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/grabmal.png"
+      },
+      {
+        "id": "location-ruine",
+        "label": "Ruine",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/ruine2.png"
+      },
+      {
+        "id": "location-ausgrabung",
+        "label": "Ausgrabung",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/ausgrabung.png"
+      },
+      {
+        "id": "location-hoehle",
+        "label": "Höhle",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/h-hle.png"
+      },
+      {
+        "id": "location-hain",
+        "label": "Hain",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/hain.png"
+      },
+      {
+        "id": "location-ahnenbaum",
+        "label": "Ahnenbaum",
+        "color": "#a45630",
+        "marker": "/Karten/assets/icons/welt/ahnenbaum.png"
+      },
+      {
+        "id": "location-quelle",
+        "label": "Quelle",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/quelle.png"
+      },
+      {
+        "id": "location-berggipfel",
+        "label": "Berggipfel",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/gipfel.png"
+      },
+      {
+        "id": "location-monsterhort",
+        "label": "Monsterhort",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/kreaturenhort.png"
+      },
+      {
+        "id": "location-banditenlager",
+        "label": "Banditenlager",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/banditenlager.png"
+      },
+      {
+        "id": "location-hafen",
+        "label": "Hafen / Steg",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/gro-er-hafen.png"
+      },
+      {
+        "id": "location-werft",
+        "label": "Werft",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/schiffswerft.png"
+      },
+      {
+        "id": "location-poststation",
+        "label": "Poststation",
+        "color": "#a45630",
+        "marker": "/Karten/assets/icons/welt/poststation.png"
+      },
+      {
+        "id": "location-schule",
+        "label": "Schule",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/l-ndliche-universit-t.png"
+      },
+      {
+        "id": "location-zirkus",
+        "label": "Zirkus",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/zirkus3.png"
+      },
+      {
+        "id": "location-wohnhaus",
+        "label": "Wohnhaus",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/b-uerliches-heim.png"
+      },
+      {
+        "id": "location-brauersiedlung",
+        "label": "Brauersiedlung",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/brauersiedlung.png"
+      },
+      {
+        "id": "location-klostersiedlung",
+        "label": "Klostersiedlung",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/klostersiedlung.png"
+      },
+      {
+        "id": "location-rosszuchtsiedlung",
+        "label": "Rosszuchtsiedlung",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/pferdezuchtsiedlung.png"
+      },
+      {
+        "id": "location-sumpfsiedlung",
+        "label": "Sumpfsiedlung",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/sumpfsiedlung.png"
+      },
+      {
+        "id": "location-unterwasserstadt",
+        "label": "Unterwasserstadt",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/unterwasserstadt.png"
+      },
+      {
+        "id": "location-festung",
+        "label": "Festung",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/festung.png"
+      },
+      {
+        "id": "location-magierturm",
+        "label": "Magierturm",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/magierturm.png"
+      },
+      {
+        "id": "location-diebesgilde",
+        "label": "Diebesgilde",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/diebesgilde.png"
+      },
+      {
+        "id": "location-piratenversteck",
+        "label": "Piratenversteck",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/piratenlager.png"
+      },
+      {
+        "id": "location-schmugglerversteck",
+        "label": "Schmugglerversteck",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/schmuggler3.png"
+      },
+      {
+        "id": "location-verwunschener-wald",
+        "label": "Verwunschener Wald",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/waldschrat.png"
+      },
+      {
+        "id": "location-wahrzeichen",
+        "label": "Wahrzeichen",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/wahrzeichen.png"
+      },
+      {
+        "id": "location-dimensionaler-riss",
+        "label": "Dimensionaler Riss",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/dimensionaler-riss.png"
+      },
+      {
+        "id": "location-galgen",
+        "label": "Galgen",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/exekutionsplatz.png"
+      },
+      {
+        "id": "location-muenzpraegestaette",
+        "label": "Münzprägestätte",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/m-nzpr-ger.png"
+      },
+      {
+        "id": "location-bogenschiessstand",
+        "label": "Bogenschießstand",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/schie-stand2.png"
+      },
+      {
+        "id": "location-ziegelei",
+        "label": "Ziegelei",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/ziegelbrenner.png"
+      },
+      {
+        "id": "location-schiff",
+        "label": "Schiff",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/orte/schiff-gut.png"
+      },
+      {
+        "id": "location-kreaturenlager",
+        "label": "Kreaturenlager",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/goblinlager.png"
+      },
+      {
+        "id": "location-heisse-quellen",
+        "label": "Heiße Quellen",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/hei-e-quellen.png"
+      },
+      {
+        "id": "location-brueckenruine",
+        "label": "Brückenruine",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/zerst-rte-br-cke.png"
+      },
+      {
+        "id": "location-kirchenruine",
+        "label": "Kirchenruine",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/zerst-rte-kirche.png"
+      },
+      {
+        "id": "location-hausruine",
+        "label": "Hausruine",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/zerst-rtes-heim.png"
+      },
+      {
+        "id": "location-huegelgrab",
+        "label": "Hügelgrab",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/h-gelgrab.png"
+      },
+      {
+        "id": "location-plantage",
+        "label": "Plantage",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/landgut.png"
+      },
+      {
+        "id": "location-kultstaette",
+        "label": "Kultstätte",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/okkulter-schrein.png"
+      },
+      {
+        "id": "location-zelt",
+        "label": "Zelt",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/ritterlicheszelt.png"
+      },
+      {
+        "id": "location-faehrstelle",
+        "label": "Fährstelle",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/orte/f-hre-steg.png"
+      },
+      {
+        "id": "location-schlachtfeld",
+        "label": "Schlachtfeld",
+        "color": "#6060b0"
+      }
+    ],
+    "categoryCatalogVersion": 3,
+    "regions": [
+      {
+        "id": "wa-1317e02b-b6a9-4bfc-be90-35d8549a3f0f",
+        "name": "Herrschaft der An’Uilebheist",
+        "kind": "boundary",
+        "paths": [
+          [
+            [
+              0.23620934,
+              0.57617188
+            ],
+            [
+              0.12164074,
+              0.61328125
+            ],
+            [
+              0.14427157,
+              0.70800781
+            ],
+            [
+              0.39179632,
+              0.78125
+            ],
+            [
+              0.28854314,
+              0.91210938
+            ],
+            [
+              0.39321075,
+              0.78125
+            ],
+            [
+              0.63649222,
+              0.87109375
+            ],
+            [
+              0.69024045,
+              0.77539063
+            ],
+            [
+              0.75813296,
+              0.55664063
+            ],
+            [
+              0.59123055,
+              0.515625
+            ],
+            [
+              0.23479491,
+              0.57617188
+            ]
+          ]
+        ],
+        "color": "#ff0000",
+        "borderColor": "#ff0000",
+        "opacity": 0,
+        "parentId": "",
+        "dominionId": "herrschaft-aislearneach-uilebheist",
+        "familyId": "haus-uilebheist",
+        "showLabel": false,
+        "note": "",
+        "source": {
+          "type": "world-anvil",
+          "mapId": "52aee057-1feb-40b0-b733-6ca8e7bf5c4b",
+          "markerId": "1317e02b-b6a9-4bfc-be90-35d8549a3f0f",
+          "url": "https://www.worldanvil.com/world/map/marker/1317e02b-b6a9-4bfc-be90-35d8549a3f0f/edit",
+          "originalName": "Herrschaft der An'Uilebheist",
+          "geometryMethod": "visible-svg",
+          "coordinateSystem": "normalized-top-left"
+        }
+      },
+      {
+        "id": "wa-04eeb7b6-5b1b-4284-81ed-9229b2d328bb",
+        "name": "Herrschaft der Nic’Cnogan",
+        "kind": "boundary",
+        "paths": [
+          [
+            [
+              0.22772277,
+              0.49707031
+            ],
+            [
+              0.34087694,
+              0.31640625
+            ],
+            [
+              0.43564356,
+              0.22753906
+            ],
+            [
+              0.51626591,
+              0.13964844
+            ],
+            [
+              0.57991513,
+              0.08398438
+            ],
+            [
+              0.51626591,
+              0.140625
+            ],
+            [
+              0.79915134,
+              0.21875
+            ],
+            [
+              0.73691655,
+              0.29492188
+            ],
+            [
+              0.58274399,
+              0.34472656
+            ],
+            [
+              0.34087694,
+              0.31640625
+            ]
+          ]
+        ],
+        "color": "#fbff00",
+        "borderColor": "#fbff00",
+        "opacity": 0,
+        "parentId": "",
+        "dominionId": "herrschaft-aislearneach-cnogan",
+        "familyId": "haus-cnogan",
+        "showLabel": false,
+        "note": "",
+        "source": {
+          "type": "world-anvil",
+          "mapId": "52aee057-1feb-40b0-b733-6ca8e7bf5c4b",
+          "markerId": "04eeb7b6-5b1b-4284-81ed-9229b2d328bb",
+          "url": "https://www.worldanvil.com/world/map/marker/04eeb7b6-5b1b-4284-81ed-9229b2d328bb/edit",
+          "originalName": "Herrschaft der Nic'Cnogan",
+          "geometryMethod": "visible-svg",
+          "coordinateSystem": "normalized-top-left"
+        }
+      },
+      {
+        "id": "wa-cf0c605e-cee4-40b2-b18b-0f90ab394947",
+        "name": "Weißrinde-Stamm",
+        "kind": "area",
+        "paths": [
+          [
+            [
+              0.71004243,
+              0.07910156
+            ],
+            [
+              0.7029703,
+              0.09179688
+            ],
+            [
+              0.68175389,
+              0.1015625
+            ],
+            [
+              0.69306931,
+              0.11621094
+            ],
+            [
+              0.68882603,
+              0.13183594
+            ],
+            [
+              0.71145686,
+              0.13476563
+            ],
+            [
+              0.70721358,
+              0.15136719
+            ],
+            [
+              0.73408769,
+              0.1484375
+            ],
+            [
+              0.74823197,
+              0.16699219
+            ],
+            [
+              0.76803395,
+              0.15429688
+            ],
+            [
+              0.79066478,
+              0.17285156
+            ],
+            [
+              0.8175389,
+              0.16210938
+            ],
+            [
+              0.81329562,
+              0.14648438
+            ],
+            [
+              0.83168317,
+              0.15039063
+            ],
+            [
+              0.84724187,
+              0.13867188
+            ],
+            [
+              0.8330976,
+              0.12304688
+            ],
+            [
+              0.8330976,
+              0.11328125
+            ],
+            [
+              0.83734088,
+              0.10742188
+            ],
+            [
+              0.82602546,
+              0.10546875
+            ],
+            [
+              0.80763791,
+              0.09277344
+            ],
+            [
+              0.80339463,
+              0.08789063
+            ],
+            [
+              0.79349364,
+              0.08300781
+            ],
+            [
+              0.76661952,
+              0.08398438
+            ],
+            [
+              0.75954738,
+              0.08984375
+            ],
+            [
+              0.74823197,
+              0.09375
+            ],
+            [
+              0.73267327,
+              0.09472656
+            ],
+            [
+              0.72560113,
+              0.09277344
+            ],
+            [
+              0.71287129,
+              0.08203125
+            ]
+          ]
+        ],
+        "color": "#00fbff",
+        "borderColor": "#ff0000",
+        "opacity": 0.5,
+        "parentId": "",
+        "dominionId": "",
+        "familyId": "",
+        "showLabel": true,
+        "note": "Örtlicher oder historischer Bereich; keine zusätzliche Clan-Herrschaft",
+        "source": {
+          "type": "world-anvil",
+          "mapId": "52aee057-1feb-40b0-b733-6ca8e7bf5c4b",
+          "markerId": "cf0c605e-cee4-40b2-b18b-0f90ab394947",
+          "url": "https://www.worldanvil.com/world/map/marker/cf0c605e-cee4-40b2-b18b-0f90ab394947/edit",
+          "originalName": "Weißrinde-Stamm",
+          "geometryMethod": "visible-svg",
+          "coordinateSystem": "normalized-top-left"
+        }
+      },
+      {
+        "id": "wa-f1c21362-030c-40a2-ab38-eed434ae7516",
+        "name": "Scharfzahn-Stamm",
+        "kind": "area",
+        "paths": [
+          [
+            [
+              0.51768034,
+              0.21289063
+            ],
+            [
+              0.52333805,
+              0.22363281
+            ],
+            [
+              0.5049505,
+              0.23632813
+            ],
+            [
+              0.49363508,
+              0.24804688
+            ],
+            [
+              0.4893918,
+              0.25585938
+            ],
+            [
+              0.49787836,
+              0.26269531
+            ],
+            [
+              0.4950495,
+              0.28515625
+            ],
+            [
+              0.48797737,
+              0.296875
+            ],
+            [
+              0.51485149,
+              0.29101563
+            ],
+            [
+              0.52192362,
+              0.30273438
+            ],
+            [
+              0.54455446,
+              0.3046875
+            ],
+            [
+              0.56577086,
+              0.29199219
+            ],
+            [
+              0.59971711,
+              0.30175781
+            ],
+            [
+              0.62659123,
+              0.29199219
+            ],
+            [
+              0.63083451,
+              0.27246094
+            ],
+            [
+              0.64922207,
+              0.27246094
+            ],
+            [
+              0.67468175,
+              0.25976563
+            ],
+            [
+              0.64497878,
+              0.24609375
+            ],
+            [
+              0.66760962,
+              0.22460938
+            ],
+            [
+              0.65770863,
+              0.21679688
+            ],
+            [
+              0.64497878,
+              0.22265625
+            ],
+            [
+              0.62234795,
+              0.21777344
+            ],
+            [
+              0.61103253,
+              0.19238281
+            ],
+            [
+              0.59971711,
+              0.20117188
+            ],
+            [
+              0.56859972,
+              0.18261719
+            ],
+            [
+              0.55869873,
+              0.1796875
+            ],
+            [
+              0.55869873,
+              0.20410156
+            ],
+            [
+              0.52899576,
+              0.19921875
+            ],
+            [
+              0.53889675,
+              0.20996094
+            ]
+          ]
+        ],
+        "color": "#ff8000",
+        "borderColor": "#ff0000",
+        "opacity": 0.5,
+        "parentId": "",
+        "dominionId": "",
+        "familyId": "",
+        "showLabel": true,
+        "note": "Örtlicher oder historischer Bereich; keine zusätzliche Clan-Herrschaft",
+        "source": {
+          "type": "world-anvil",
+          "mapId": "52aee057-1feb-40b0-b733-6ca8e7bf5c4b",
+          "markerId": "f1c21362-030c-40a2-ab38-eed434ae7516",
+          "url": "https://www.worldanvil.com/world/map/marker/f1c21362-030c-40a2-ab38-eed434ae7516/edit",
+          "originalName": "Scharfzahn-Stamm",
+          "geometryMethod": "visible-svg",
+          "coordinateSystem": "normalized-top-left"
+        }
+      },
+      {
+        "id": "wa-f2d471ae-dc44-4d30-8cb9-962020013f15",
+        "name": "Dreifeder-Stamm",
+        "kind": "area",
+        "paths": [
+          [
+            [
+              0.43564356,
+              0.40039063
+            ],
+            [
+              0.40169731,
+              0.4453125
+            ],
+            [
+              0.37765205,
+              0.46386719
+            ],
+            [
+              0.37340877,
+              0.47363281
+            ],
+            [
+              0.38613861,
+              0.49121094
+            ],
+            [
+              0.42998586,
+              0.5
+            ],
+            [
+              0.46676096,
+              0.49707031
+            ],
+            [
+              0.49080622,
+              0.48144531
+            ],
+            [
+              0.49787836,
+              0.45996094
+            ],
+            [
+              0.5106082,
+              0.44726563
+            ],
+            [
+              0.52899576,
+              0.43652344
+            ],
+            [
+              0.54596888,
+              0.41894531
+            ],
+            [
+              0.53606789,
+              0.40332031
+            ],
+            [
+              0.52758133,
+              0.39941406
+            ],
+            [
+              0.50636492,
+              0.39550781
+            ],
+            [
+              0.49929279,
+              0.390625
+            ],
+            [
+              0.45403112,
+              0.390625
+            ],
+            [
+              0.44130127,
+              0.39648438
+            ]
+          ]
+        ],
+        "color": "#acff74",
+        "borderColor": "#ff0000",
+        "opacity": 0.5,
+        "parentId": "",
+        "dominionId": "",
+        "familyId": "",
+        "showLabel": true,
+        "note": "Örtlicher oder historischer Bereich; keine zusätzliche Clan-Herrschaft",
+        "source": {
+          "type": "world-anvil",
+          "mapId": "52aee057-1feb-40b0-b733-6ca8e7bf5c4b",
+          "markerId": "f2d471ae-dc44-4d30-8cb9-962020013f15",
+          "url": "https://www.worldanvil.com/world/map/marker/f2d471ae-dc44-4d30-8cb9-962020013f15/edit",
+          "originalName": "Dreifeder-Stamm",
+          "geometryMethod": "visible-svg",
+          "coordinateSystem": "normalized-top-left"
+        }
+      },
+      {
+        "id": "wa-2eabdaab-3fb3-4387-8909-4407267873e3",
+        "name": "Eichenhüter-Stamm",
+        "kind": "area",
+        "paths": [
+          [
+            [
+              0.42998586,
+              0.8671875
+            ],
+            [
+              0.40452617,
+              0.8828125
+            ],
+            [
+              0.40028289,
+              0.89746094
+            ],
+            [
+              0.40169731,
+              0.91210938
+            ],
+            [
+              0.43705799,
+              0.92773438
+            ],
+            [
+              0.46676096,
+              0.92480469
+            ],
+            [
+              0.50070721,
+              0.91210938
+            ],
+            [
+              0.51343706,
+              0.89550781
+            ],
+            [
+              0.50636492,
+              0.86035156
+            ],
+            [
+              0.48656294,
+              0.84863281
+            ],
+            [
+              0.4738331,
+              0.84960938
+            ],
+            [
+              0.45685997,
+              0.85742188
+            ],
+            [
+              0.45120226,
+              0.86230469
+            ],
+            [
+              0.43564356,
+              0.86425781
+            ]
+          ]
+        ],
+        "color": "#ff0000",
+        "borderColor": "#ff0000",
+        "opacity": 0.5,
+        "parentId": "",
+        "dominionId": "",
+        "familyId": "",
+        "showLabel": true,
+        "note": "Örtlicher oder historischer Bereich; keine zusätzliche Clan-Herrschaft",
+        "source": {
+          "type": "world-anvil",
+          "mapId": "52aee057-1feb-40b0-b733-6ca8e7bf5c4b",
+          "markerId": "2eabdaab-3fb3-4387-8909-4407267873e3",
+          "url": "https://www.worldanvil.com/world/map/marker/2eabdaab-3fb3-4387-8909-4407267873e3/edit",
+          "originalName": "Eichenhüter-Stamm",
+          "geometryMethod": "visible-svg",
+          "coordinateSystem": "normalized-top-left"
+        }
+      },
+      {
+        "id": "wa-560bbc82-114e-4dec-a614-458fbcbdc29c",
+        "name": "Schwarzblatt-Stamm",
+        "kind": "area",
+        "paths": [
+          [
+            [
+              0.84724187,
+              0.41308594
+            ],
+            [
+              0.81329562,
+              0.40917969
+            ],
+            [
+              0.82461103,
+              0.42089844
+            ],
+            [
+              0.76661952,
+              0.43554688
+            ],
+            [
+              0.81329562,
+              0.44042969
+            ],
+            [
+              0.76379066,
+              0.46582031
+            ],
+            [
+              0.80763791,
+              0.46386719
+            ],
+            [
+              0.7864215,
+              0.50585938
+            ],
+            [
+              0.82036775,
+              0.48632813
+            ],
+            [
+              0.8330976,
+              0.5078125
+            ],
+            [
+              0.85007072,
+              0.49511719
+            ],
+            [
+              0.86704385,
+              0.50878906
+            ],
+            [
+              0.87553041,
+              0.49316406
+            ],
+            [
+              0.88401697,
+              0.5
+            ],
+            [
+              0.89108911,
+              0.49023438
+            ],
+            [
+              0.89816124,
+              0.48632813
+            ],
+            [
+              0.90947666,
+              0.48535156
+            ],
+            [
+              0.92220651,
+              0.47851563
+            ],
+            [
+              0.91796322,
+              0.47070313
+            ],
+            [
+              0.91937765,
+              0.45898438
+            ],
+            [
+              0.92362093,
+              0.44921875
+            ],
+            [
+              0.93069307,
+              0.44726563
+            ],
+            [
+              0.93069307,
+              0.43457031
+            ],
+            [
+              0.90806223,
+              0.42871094
+            ],
+            [
+              0.89816124,
+              0.41894531
+            ],
+            [
+              0.87694484,
+              0.390625
+            ],
+            [
+              0.86562942,
+              0.3984375
+            ],
+            [
+              0.84016973,
+              0.39453125
+            ]
+          ]
+        ],
+        "color": "#023e8a",
+        "borderColor": "#ff0000",
+        "opacity": 0.5,
+        "parentId": "",
+        "dominionId": "",
+        "familyId": "",
+        "showLabel": true,
+        "note": "Örtlicher oder historischer Bereich; keine zusätzliche Clan-Herrschaft",
+        "source": {
+          "type": "world-anvil",
+          "mapId": "52aee057-1feb-40b0-b733-6ca8e7bf5c4b",
+          "markerId": "560bbc82-114e-4dec-a614-458fbcbdc29c",
+          "url": "https://www.worldanvil.com/world/map/marker/560bbc82-114e-4dec-a614-458fbcbdc29c/edit",
+          "originalName": "Schwarzblatt-Stamm",
+          "geometryMethod": "visible-svg",
+          "coordinateSystem": "normalized-top-left"
+        }
+      },
+      {
+        "id": "wa-81cda4d8-677e-4454-9425-41ffe1282373",
+        "name": "Bluthand-Stamm",
+        "kind": "area",
+        "paths": [
+          [
+            [
+              0.1301273,
+              0.25390625
+            ],
+            [
+              0.14992928,
+              0.25683594
+            ],
+            [
+              0.1669024,
+              0.25097656
+            ],
+            [
+              0.17821782,
+              0.25195313
+            ],
+            [
+              0.19519095,
+              0.2578125
+            ],
+            [
+              0.20792079,
+              0.25195313
+            ],
+            [
+              0.22065064,
+              0.23828125
+            ],
+            [
+              0.24752475,
+              0.23242188
+            ],
+            [
+              0.26449788,
+              0.22460938
+            ],
+            [
+              0.27015559,
+              0.21972656
+            ],
+            [
+              0.28005658,
+              0.21875
+            ],
+            [
+              0.2970297,
+              0.22558594
+            ],
+            [
+              0.30693069,
+              0.2421875
+            ],
+            [
+              0.30268741,
+              0.26074219
+            ],
+            [
+              0.281471,
+              0.2890625
+            ],
+            [
+              0.27722772,
+              0.31933594
+            ],
+            [
+              0.26591231,
+              0.33398438
+            ],
+            [
+              0.22489392,
+              0.34765625
+            ],
+            [
+              0.21923621,
+              0.35351563
+            ],
+            [
+              0.20650636,
+              0.35644531
+            ],
+            [
+              0.18670438,
+              0.34960938
+            ],
+            [
+              0.18104668,
+              0.34472656
+            ],
+            [
+              0.18387553,
+              0.33691406
+            ],
+            [
+              0.17397454,
+              0.33105469
+            ],
+            [
+              0.17680339,
+              0.32519531
+            ],
+            [
+              0.1824611,
+              0.32128906
+            ],
+            [
+              0.17963225,
+              0.30957031
+            ],
+            [
+              0.15983027,
+              0.29882813
+            ],
+            [
+              0.15841584,
+              0.28515625
+            ],
+            [
+              0.14144272,
+              0.27441406
+            ],
+            [
+              0.13154173,
+              0.265625
+            ],
+            [
+              0.1301273,
+              0.26074219
+            ],
+            [
+              0.12305516,
+              0.25390625
+            ]
+          ]
+        ],
+        "color": "#00ff00",
+        "borderColor": "#ff0000",
+        "opacity": 0.5,
+        "parentId": "",
+        "dominionId": "",
+        "familyId": "",
+        "showLabel": true,
+        "note": "Örtlicher oder historischer Bereich; keine zusätzliche Clan-Herrschaft",
+        "source": {
+          "type": "world-anvil",
+          "mapId": "52aee057-1feb-40b0-b733-6ca8e7bf5c4b",
+          "markerId": "81cda4d8-677e-4454-9425-41ffe1282373",
+          "url": "https://www.worldanvil.com/world/map/marker/81cda4d8-677e-4454-9425-41ffe1282373/edit",
+          "originalName": "Bluthand-Stamm",
+          "geometryMethod": "visible-svg",
+          "coordinateSystem": "normalized-top-left"
+        }
+      }
+    ],
+    "dominions": [
+      {
+        "id": "fuerstentum-aislearneach",
+        "name": "Fürstentum Aislearneach",
+        "type": "Fürstentum",
+        "ruler": "Clan Ui’Morna",
+        "seat": "Gaelan",
+        "parentId": "",
+        "note": ""
+      },
+      {
+        "id": "oberherrschaft-aislearneach-tir-na-geach",
+        "name": "Oberherrschaft Tir na Geach",
+        "type": "Oberherrschaft",
+        "ruler": "Clan Ui’Morna",
+        "seat": "Gaelan",
+        "parentId": "fuerstentum-aislearneach",
+        "note": ""
+      },
+      {
+        "id": "oberherrschaft-aislearneach-tir-na-tirth",
+        "name": "Oberherrschaft Tir na Tirth",
+        "type": "Oberherrschaft",
+        "ruler": "Clan Mac’Durthacht",
+        "seat": "Lorai",
+        "parentId": "fuerstentum-aislearneach",
+        "note": ""
+      },
+      {
+        "id": "oberherrschaft-aislearneach-tir-na-faela",
+        "name": "Oberherrschaft Tir na Faela",
+        "type": "Oberherrschaft",
+        "ruler": "Clan Mac’Fintain",
+        "seat": "Croga",
+        "parentId": "fuerstentum-aislearneach",
+        "note": ""
+      },
+      {
+        "id": "oberherrschaft-aislearneach-tir-na-adharcach",
+        "name": "Oberherrschaft Tir na Adharcach",
+        "type": "Kirchliche Oberherrschaft",
+        "ruler": "",
+        "seat": "Foraoise",
+        "parentId": "fuerstentum-aislearneach",
+        "note": ""
+      },
+      {
+        "id": "oberherrschaft-aislearneach-tir-na-iomaire",
+        "name": "Oberherrschaft Tir na Iomaire",
+        "type": "Oberherrschaft",
+        "ruler": "Clan Tir An’Ceallaigh",
+        "seat": "Koldair",
+        "parentId": "fuerstentum-aislearneach",
+        "note": ""
+      },
+      {
+        "id": "herrschaft-aislearneach-coronach",
+        "name": "Herrschaft der Ua’Coronach",
+        "type": "Herrschaft",
+        "ruler": "Clan Ua’Coronach",
+        "seat": "Gaelan",
+        "parentId": "oberherrschaft-aislearneach-tir-na-geach",
+        "note": ""
+      },
+      {
+        "id": "herrschaft-aislearneach-morgacht",
+        "name": "Herrschaft der Na’Morgacht",
+        "type": "Herrschaft",
+        "ruler": "Clan Na’Morgacht",
+        "seat": "Broch an Geata",
+        "parentId": "oberherrschaft-aislearneach-tir-na-geach",
+        "note": ""
+      },
+      {
+        "id": "herrschaft-aislearneach-rioga",
+        "name": "Herrschaft der An’Rioga",
+        "type": "Herrschaft",
+        "ruler": "Clan An’Rioga",
+        "seat": "Broch an Duhbach",
+        "parentId": "oberherrschaft-aislearneach-tir-na-geach",
+        "note": ""
+      },
+      {
+        "id": "herrschaft-aislearneach-fiantorc",
+        "name": "Herrschaft der Ua’Fiáintorc",
+        "type": "Herrschaft",
+        "ruler": "Clan Ua’Fiáintorc",
+        "seat": "Lorai",
+        "parentId": "oberherrschaft-aislearneach-tir-na-tirth",
+        "note": ""
+      },
+      {
+        "id": "herrschaft-aislearneach-treada",
+        "name": "Herrschaft der Ua’Tréada",
+        "type": "Herrschaft",
+        "ruler": "Clan Ua’Tréada",
+        "seat": "Lorai",
+        "parentId": "oberherrschaft-aislearneach-tir-na-tirth",
+        "note": ""
+      },
+      {
+        "id": "herrschaft-aislearneach-muileach",
+        "name": "Lehnsherrschaft der Ua’Muileach",
+        "type": "Lehnsherrschaft",
+        "ruler": "Clan Ua’Muileach",
+        "seat": "Athan",
+        "parentId": "oberherrschaft-aislearneach-tir-na-tirth",
+        "note": ""
+      },
+      {
+        "id": "herrschaft-aislearneach-feannag",
+        "name": "Lehnsherrschaft der An’Feannag",
+        "type": "Lehnsherrschaft",
+        "ruler": "Clan An’Feannag",
+        "seat": "Ceatharlach",
+        "parentId": "oberherrschaft-aislearneach-tir-na-faela",
+        "note": ""
+      },
+      {
+        "id": "herrschaft-aislearneach-uilebheist",
+        "name": "Herrschaft der An’Uilebheist",
+        "type": "Herrschaft",
+        "ruler": "Clan An’Uilebheist",
+        "seat": "Foraoise",
+        "parentId": "oberherrschaft-aislearneach-tir-na-adharcach",
+        "note": ""
+      },
+      {
+        "id": "herrschaft-aislearneach-cnogan",
+        "name": "Herrschaft der Nic’Cnogan",
+        "type": "Herrschaft",
+        "ruler": "Clan Nic’Cnogan",
+        "seat": "Foraoise",
+        "parentId": "oberherrschaft-aislearneach-tir-na-adharcach",
+        "note": ""
+      },
+      {
+        "id": "herrschaft-aislearneach-fiachiontach",
+        "name": "Herrschaft der Na’Fiachiontach",
+        "type": "Herrschaft",
+        "ruler": "Clan Na’Fiachiontach",
+        "seat": "Koldair",
+        "parentId": "oberherrschaft-aislearneach-tir-na-iomaire",
+        "note": ""
+      },
+      {
+        "id": "herrschaft-aislearneach-tartarfhuil",
+        "name": "Herrschaft der Dal’Tartarfhuil",
+        "type": "Herrschaft",
+        "ruler": "Clan Dal’Tartarfhuil",
+        "seat": "Koldair",
+        "parentId": "oberherrschaft-aislearneach-tir-na-iomaire",
+        "note": ""
+      },
+      {
+        "id": "herrschaft-aislearneach-gaisgh",
+        "name": "Herrschaft der An’Gaisgh",
+        "type": "Herrschaft",
+        "ruler": "Clan An’Gaisgh",
+        "seat": "Broch an Traigh",
+        "parentId": "oberherrschaft-aislearneach-tir-na-iomaire",
+        "note": ""
+      },
+      {
+        "id": "herrschaft-aislearneach-luchdon",
+        "name": "Herrschaft der Na’Luchdon",
+        "type": "Herrschaft",
+        "ruler": "Clan Na’Luchdon",
+        "seat": "Broch an Creig",
+        "parentId": "oberherrschaft-aislearneach-tir-na-iomaire",
+        "note": ""
+      },
+      {
+        "id": "aislearneach-offen-b2bfc8cc-cbaa-463b-81dd-73c4e350eee1",
+        "name": "Potenzielles Herrschaftsgebiet",
+        "type": "Herrschaft",
+        "ruler": "",
+        "seat": "",
+        "parentId": "oberherrschaft-aislearneach-tir-na-faela",
+        "note": "Clan-Zuordnung offen"
+      },
+      {
+        "id": "aislearneach-offen-0582da8b-b10e-476c-be6c-5a102915295a",
+        "name": "Potenzielles Herrschaftsgebiet",
+        "type": "Herrschaft",
+        "ruler": "",
+        "seat": "",
+        "parentId": "oberherrschaft-aislearneach-tir-na-faela",
+        "note": "Clan-Zuordnung offen"
+      },
+      {
+        "id": "aislearneach-offen-57af0e3e-33e8-4a78-a3a8-d21a2fe21408",
+        "name": "Potenzielles Herrschaftsgebiet",
+        "type": "Herrschaft",
+        "ruler": "",
+        "seat": "",
+        "parentId": "oberherrschaft-aislearneach-tir-na-faela",
+        "note": "Clan-Zuordnung offen"
+      }
+    ],
+    "regionTitle": "Tir na Adharcach",
+    "regionIcon": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-adharcach.png",
+    "mapImages": {
+      "normal": "/Karten/Aislearneach/tir-na-adharcach/Kartenbilder/normal.webp",
+      "regions": "",
+      "pins": ""
+    },
+    "layerNames": {
+      "normal": "Karte",
+      "regions": "Regionen",
+      "pins": "Markierungen"
+    },
+    "dotSize": 80,
+    "lblSize": 50,
+    "displaySettingsVersion": 1,
+    "markerPresentation": "symbols",
+    "pinVisibilityVersion": 1,
+    "showMarkers": true,
+    "showPinLabels": false,
+    "alwaysShowLettering": false,
+    "extraLayers": [],
+    "dm": {
+      "sessions": [],
+      "notes": "",
+      "groupStatus": {}
+    }
+  }
+}

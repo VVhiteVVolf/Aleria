@@ -1,0 +1,64 @@
+{
+  "chair": {
+    "familyId": "haus-chulainn",
+    "personId": "cu-1509-chulainn",
+    "office": "Ard Fianna · Vorsitzender der Fianna"
+  },
+  "admission": {
+    "unanimous": true,
+    "veto": true,
+    "scope": "Aufnahme neuer Mitglieder",
+    "attendantsAreMembers": false
+  },
+  "mission": [
+    "Die Fianna sind uralte Bewahrer des albischen Volkes: eine fromme, ihren ritterlichen Tugenden verpflichtete und geschlossene Gemeinschaft von Volkshelden.",
+    "Sie entscheiden über die gemeinsamen Belange der Alben – Gesetze, Wirtschaft, Militär, Handel, Politik und Sitte. Cú Chulainn, Fürst von Dunfal, führt ihren Vorsitz; die Gemeinschaft besitzt einen eigenen Rat und eigene Ämter.",
+    "Ein neuer Fianna wird nur aufgenommen, wenn sämtliche Fianna zustimmen. Bereits eine Gegenstimme verhindert die Aufnahme. Knechte dienen der Gemeinschaft und können Anwärter sein; sie besitzen dadurch noch keine Mitgliedschaft."
+  ],
+  "prophecy": [
+    "Die Fianna bewahren die druidische Verheißung eines kommenden Königs, der die albischen Fürstentümer wieder vereinen soll. Das Zeichen seiner Würdigkeit ist Gae Bolg: der Speer, in dem die Seele des letzten Albenkönigs gebunden ist.",
+    "Der Speer entscheidet selbst, wen er duldet. Bewahrer dürfen ihn hüten; allein der auserwählte Prinz soll ihn eines Tages führen können. Die Aufgabe der Fianna ist die Bewahrung dieser Hoffnung, nicht die Behauptung eines bereits wiederhergestellten Königtums."
+  ],
+  "branches": [
+    {
+      "id": "kammer",
+      "name": "Kammer der Fürsten",
+      "remit": "Verwaltung und Wirtschaft",
+      "area": "finanzen"
+    },
+    {
+      "id": "schatten",
+      "name": "Schatten der Fürsten",
+      "remit": "Spionage und Information",
+      "area": "spionage"
+    },
+    {
+      "id": "speer",
+      "name": "Speer der Fürsten",
+      "remit": "Exekutive und Militär",
+      "area": "militaer"
+    },
+    {
+      "id": "recht",
+      "name": "Recht der Fürsten",
+      "remit": "Legislative und Judikative",
+      "area": "gerichtsbarkeit"
+    },
+    {
+      "id": "wort",
+      "name": "Wort der Fürsten",
+      "remit": "Diplomatie und Verständigung",
+      "area": "diplomatie"
+    }
+  ],
+  "duskWatch": {
+    "name": "Dämmerwacht",
+    "formerName": "Arkane der Fürsten",
+    "status": "Aufgelöst",
+    "active": false,
+    "paragraphs": [
+      "Die Arkane der Fürsten war ursprünglich für magische Belange zuständig. Durch die Präsenz der Druiden verlor dieser sechste Verwaltungsstrang zunehmend an Bedeutung.",
+      "Die Zauberin Hagar formte die Organisation zur Dämmerwacht um und unterwanderte sie mit immer mehr Hexern. Gemeinsam mit Ceitheach erhob sie sich schließlich gegen die übrigen Mächte. Seit diesem Aufstand ist die Dämmerwacht aufgelöst. Die Fianna sehen keinen Anlass, die Arkane der Fürsten neu zu errichten."
+    ]
+  }
+}

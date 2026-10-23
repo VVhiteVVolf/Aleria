@@ -1,0 +1,33 @@
+.region-vector-layer { position:absolute; inset:0; z-index:2; overflow:hidden; pointer-events:none; }
+.region-vector-layer[hidden],.region-manager[hidden] { display:none; }
+.region-name { fill:#fff9eb; stroke:#251d13; stroke-width:3px; paint-order:stroke; stroke-linejoin:round; font-family:Georgia,serif; font-weight:bold; vector-effect:non-scaling-stroke; }
+.region-vertex { fill:#fff9eb; stroke:#8c402d; stroke-width:2px; pointer-events:all; cursor:move; }
+.region-vertex.is-selected { fill:#d5a54b; stroke:#251d13; }
+.region-map-link { pointer-events:all; cursor:pointer; }
+.region-map-link:focus-visible { outline:3px solid #dfb855; }
+.region-manager { position:absolute; z-index:250; top:10px; right:10px; width:min(410px,calc(100% - 20px)); max-height:calc(100% - 20px); display:flex; flex-direction:column; background:#f5edda; color:#332819; border:1px solid #a99470; box-shadow:0 8px 30px #0005; font:14px/1.5 Verdana,Arial,sans-serif; }
+.region-manager header { display:flex; gap:12px; align-items:center; justify-content:space-between; padding:12px 16px; border-bottom:1px solid #c9b99b; }
+.region-manager h2 { margin:0; font:bold 19px Georgia,serif; color:#803b31; }
+.region-manager-body { padding:14px 16px; overflow-y:auto; overscroll-behavior:contain; }
+.region-manager button { padding:7px 9px; color:#563a25; border:1px solid #b9a17e; background:#fff9eb; cursor:pointer; font:inherit; }
+.region-manager button:focus-visible,.region-manager input:focus-visible,.region-manager select:focus-visible { outline:2px solid #9a6025; outline-offset:2px; }
+.region-manager-actions { display:flex; flex-wrap:wrap; gap:7px; margin:12px 0; }
+.region-manager-actions[hidden] { display:none; }
+.region-manager form { display:grid; gap:12px; }
+.region-manager label { display:grid; gap:5px; }
+.region-manager input:not([type=checkbox]),.region-manager select { width:100%; min-width:0; padding:7px; border:1px solid #b9a17e; background:#fffaf0; color:#332819; font:inherit; }
+.region-manager input[type=color] { padding:2px; height:36px; }
+.region-field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+.region-manager .region-checkbox { display:flex; align-items:center; gap:8px; }
+.region-help,.region-source { font-size:12px; color:#75654f; }
+.region-source { overflow-wrap:anywhere; }
+.region-list { display:grid; gap:10px; padding:0; list-style:none; }
+.region-list li { border-bottom:1px solid #c9b99b; padding-bottom:10px; }
+.region-list button { display:block; width:100%; border:0; background:transparent; text-align:left; padding:3px 0; }
+.region-list small { display:block; color:#75654f; font-size:11px; margin-top:4px; }
+.region-list a { color:#803b31; font-size:12px; }
+.region-manager [role=alert] { color:#a02d1e; }
+.region-manager [role=status] { font-size:12px; }
+.region-import-section { display:none; }
+.region-drawing-active { cursor:crosshair; }
+body.presentation-mode .region-manager { display:none; }

@@ -1,0 +1,153 @@
+{
+  "territories": [
+    {
+      "id": "jarltum-schwarzfenn",
+      "name": "Jarltum Schwarzfenn",
+      "type": "Jarltum",
+      "familyId": "haus-ragnulf",
+      "house": "Clan Ragnulf",
+      "crest": "/Stammbäume/assets/images/houses/Aldrimar/clan-ragnulf.png",
+      "banner": "/Stammbäume/assets/images/regions/aldrimar-schwarzfenn.png",
+      "seat": "Wolfsklamm",
+      "parentId": "",
+      "href": "/Kontinente/Estryll/Königreich Aldrimar/Jarltum Schwarzfenn/Jarltum Schwarzfenn.html"
+    },
+    {
+      "id": "hesirentum-wolfsfenn",
+      "name": "Hesirentum Wolfsfenn",
+      "type": "Hesirentum",
+      "familyId": "haus-ragnulf",
+      "house": "Clan Ragnulf",
+      "crest": "/Stammbäume/assets/images/houses/Aldrimar/clan-ragnulf.png",
+      "banner": "/Stammbäume/assets/images/regions/aldrimar-schwarzfenn-wolfsfenn.png",
+      "seat": "Wolfsklamm",
+      "parentId": "jarltum-schwarzfenn",
+      "href": "/Kontinente/Estryll/Königreich Aldrimar/Jarltum Schwarzfenn/Hesirentum Wolfsfenn/Hesirentum Wolfsfenn.html"
+    },
+    {
+      "id": "thanentum-gramfenn",
+      "name": "Thanentum Gramfenn",
+      "type": "Thanentum",
+      "familyId": "haus-kummerherz",
+      "house": "Clan Kummerherz",
+      "crest": "/Stammbäume/assets/images/houses/Aldrimar/Schwarzfenn/clan-kummerherz.png",
+      "banner": "/Stammbäume/assets/images/regions/aldrimar-schwarzfenn-gramfenn.png",
+      "seat": "Trauerwald",
+      "parentId": "jarltum-schwarzfenn",
+      "href": "/Kontinente/Estryll/Königreich Aldrimar/Jarltum Schwarzfenn/Thanentum Gramfenn/Thanentum Gramfenn.html"
+    },
+    {
+      "id": "thanentum-lichtfenn",
+      "name": "Thanentum Lichtfenn",
+      "type": "Thanentum",
+      "familyId": "haus-helgr",
+      "house": "Clan Helgr",
+      "crest": "/Stammbäume/assets/images/houses/Aldrimar/Schwarzfenn/clan-helgr.png",
+      "banner": "/Stammbäume/assets/images/regions/aldrimar-schwarzfenn-lichtfenn.png",
+      "seat": "Finstermoor",
+      "parentId": "jarltum-schwarzfenn",
+      "href": "/Kontinente/Estryll/Königreich Aldrimar/Jarltum Schwarzfenn/Thanentum Lichtfenn/Thanentum Lichtfenn.html"
+    },
+    {
+      "id": "thanentum-todesfenn",
+      "name": "Thanentum Todesfenn",
+      "type": "Thanentum",
+      "familyId": "haus-todbrand",
+      "house": "Clan Todbrand",
+      "crest": "/Stammbäume/assets/images/houses/Aldrimar/Schwarzfenn/clan-todbrand.png",
+      "banner": "/Stammbäume/assets/images/regions/aldrimar-schwarzfenn-todesfenn.png",
+      "seat": "Dunkelmoor",
+      "parentId": "jarltum-schwarzfenn",
+      "href": "/Kontinente/Estryll/Königreich Aldrimar/Jarltum Schwarzfenn/Thanentum Todesfenn/Thanentum Todesfenn.html"
+    },
+    {
+      "id": "hesirentum-flussblick",
+      "name": "Hesirentum Flussblick",
+      "type": "Hesirentum",
+      "familyId": "haus-hrafn",
+      "house": "Clan Hrafn",
+      "crest": "/Stammbäume/assets/images/houses/Aldrimar/Schwarzfenn/clan-hrafn.png",
+      "banner": "/Stammbäume/assets/images/regions/aldrimar-schwarzfenn-flussblick.png",
+      "seat": "Flusswall",
+      "parentId": "jarltum-schwarzfenn",
+      "href": "/Kontinente/Estryll/Königreich Aldrimar/Jarltum Schwarzfenn/Hesirentum Flussblick/Hesirentum Flussblick.html"
+    },
+    {
+      "id": "herrschaft-graumahnen",
+      "name": "Herrschaft der Graumähnen",
+      "type": "Hesirentum",
+      "familyId": "haus-graumahne",
+      "house": "Clan Graumähne",
+      "crest": "/Stammbäume/assets/images/houses/Aldrimar/Schwarzfenn/clan-graumahne.png",
+      "banner": "/Stammbäume/assets/images/regions/aldrimar-schwarzfenn-wolfsfenn.png",
+      "seat": "Grámborg",
+      "parentId": "hesirentum-wolfsfenn",
+      "href": "/Kontinente/Estryll/Königreich Aldrimar/Jarltum Schwarzfenn/Herrschaft der Graumähnen/Herrschaft der Graumähnen.html"
+    },
+    {
+      "id": "herrschaft-schmetterschilde",
+      "name": "Herrschaft der Schmetterschilde",
+      "type": "Hesirentum",
+      "familyId": "haus-schmetterschild",
+      "house": "Clan Schmetterschild",
+      "crest": "/Stammbäume/assets/images/houses/Aldrimar/Schwarzfenn/clan-schmetterschild.png",
+      "banner": "/Stammbäume/assets/images/regions/aldrimar-schwarzfenn-wolfsfenn.png",
+      "seat": "Skrammborg",
+      "parentId": "hesirentum-wolfsfenn",
+      "href": "/Kontinente/Estryll/Königreich Aldrimar/Jarltum Schwarzfenn/Herrschaft der Schmetterschilde/Herrschaft der Schmetterschilde.html"
+    },
+    {
+      "id": "banditengebiet-silberzaehne",
+      "name": "Banditengebiet der Silberzähne",
+      "type": "Banditengebiet",
+      "familyId": "haus-eisbrand",
+      "house": "Haus Eisbrand",
+      "crest": "/Stammbäume/assets/images/houses/Aldrimar/Schwarzfenn/clan-eisbrand.png",
+      "banner": "/Stammbäume/assets/images/regions/aldrimar-schwarzfenn.png",
+      "seat": "Hallsvalr",
+      "parentId": "jarltum-schwarzfenn",
+      "href": "/Kontinente/Estryll/Königreich Aldrimar/Jarltum Schwarzfenn/Banditengebiet der Silberzähne/Banditengebiet der Silberzähne.html"
+    },
+    {
+      "id": "exklaven-goldglanz-schwarzfenn",
+      "name": "Goldglanz-Exklaven in Schwarzfenn",
+      "type": "Exklaven",
+      "familyId": "haus-goldglanz",
+      "house": "Clan Goldglanz",
+      "crest": "/Stammbäume/assets/images/houses/Aldrimar/Kraehenmoor/clan-goldglanz.png",
+      "banner": "/Stammbäume/assets/images/regions/aldrimar-schwarzfenn-lichtfenn.png",
+      "bannerHref": "/Kontinente/Estryll/Königreich Aldrimar/Jarltum Schwarzfenn/Thanentum Lichtfenn/Thanentum Lichtfenn.html",
+      "seat": "Gildstatt · Goldquell",
+      "parentId": "",
+      "href": "/Kontinente/Estryll/Königreich Aldrimar/Jarltum Schwarzfenn/Thanentum Lichtfenn/Thanentum Lichtfenn.html",
+      "externalLiege": "Clan Blutstahl · Clan Silberblut",
+      "coRulers": []
+    },
+    {
+      "id": "pachtsiedlung-rhosmeres-roesser",
+      "name": "Pachtsiedlung der Rhosmeres Rösser",
+      "type": "Pachtsiedlung",
+      "familyId": "",
+      "house": "Rhosmeres Rösser",
+      "crest": "/Fraktionen/assets/emblems/gilden/rhosmeres-roesser.webp",
+      "banner": "/Stammbäume/assets/images/regions/aldrimar-schwarzfenn-wolfsfenn.png",
+      "bannerHref": "/Kontinente/Estryll/Königreich Aldrimar/Jarltum Schwarzfenn/Hesirentum Wolfsfenn/Hesirentum Wolfsfenn.html",
+      "seat": "Rovensfeld",
+      "parentId": "",
+      "href": "/Kontinente/Estryll/Königreich Aldrimar/Jarltum Schwarzfenn/Hesirentum Wolfsfenn/Hesirentum Wolfsfenn.html"
+    },
+    {
+      "id": "ordenssitze-balthors-soehne",
+      "name": "Ordenssitze Balthors Söhne",
+      "type": "Ordensbesitz",
+      "familyId": "",
+      "house": "Balthors Söhne",
+      "crest": "/Kontinente/assets/images/aldrimar/organisations/die-schar-balthors-sohne.png",
+      "banner": "/Stammbäume/assets/images/regions/aldrimar-schwarzfenn.png",
+      "bannerHref": "/Kontinente/Estryll/Königreich Aldrimar/Jarltum Schwarzfenn/Jarltum Schwarzfenn.html",
+      "seat": "Hargbolg · Hvarborg · Dravnborg",
+      "parentId": "",
+      "href": "/Kontinente/Estryll/Königreich Aldrimar/Jarltum Schwarzfenn/Jarltum Schwarzfenn.html"
+    }
+  ]
+}

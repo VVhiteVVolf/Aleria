@@ -1,0 +1,3965 @@
+{
+  "imageSize": [
+    4096,
+    2418
+  ],
+  "coordinateOrigin": "bottom-left",
+  "markers": [
+    {
+      "id": "kraehenmoor-767f68b4-8a60-4010-b941-e67399a46b32",
+      "title": "Ravnskov",
+      "category": "Siedlungsruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/zerst-rte-siedlung.png",
+      "territoryId": "herrschaft-kaltherz",
+      "x": 983.0,
+      "y": 2295,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "767f68b4-8a60-4010-b941-e67399a46b32",
+        "url": "https://www.worldanvil.com/world/map/marker/767f68b4-8a60-4010-b941-e67399a46b32/edit",
+        "title": "Ravnskov",
+        "coordinates": {
+          "x": 975.0,
+          "y": 2323.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 983.0,
+          "y": 123,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-001"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-348b6b1c-d1c9-4de6-bad3-b7b02bcc9cdd",
+      "title": "Nordpfad",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "hesirentum-schwarzfjord",
+      "x": 3530.5,
+      "y": 2300,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "348b6b1c-d1c9-4de6-bad3-b7b02bcc9cdd",
+        "url": "https://www.worldanvil.com/world/map/marker/348b6b1c-d1c9-4de6-bad3-b7b02bcc9cdd/edit",
+        "title": "Nordpfad",
+        "coordinates": {
+          "x": 3534.0,
+          "y": 2355.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 3530.5,
+          "y": 118,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-002"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-2f192d9c-008f-4547-87a8-483e71c3359c",
+      "title": "Fløkbogg",
+      "category": "Siedlungsruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/zerst-rte-siedlung.png",
+      "territoryId": "herrschaft-kaltherz",
+      "x": 1622.0,
+      "y": 2245,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "2f192d9c-008f-4547-87a8-483e71c3359c",
+        "url": "https://www.worldanvil.com/world/map/marker/2f192d9c-008f-4547-87a8-483e71c3359c/edit",
+        "title": "Fløkbogg",
+        "coordinates": {
+          "x": 1619.0,
+          "y": 2274.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 1622.0,
+          "y": 173,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-003"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-05dd33df-014f-4eb5-8d03-f5644c586e8a",
+      "title": "Zum Flüsternden Blatt",
+      "category": "Taverne",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/taverne.png",
+      "territoryId": "jarltuemliches-thanentum-nebelmoor",
+      "x": 1444.5,
+      "y": 2234,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "05dd33df-014f-4eb5-8d03-f5644c586e8a",
+        "url": "https://www.worldanvil.com/world/map/marker/05dd33df-014f-4eb5-8d03-f5644c586e8a/edit",
+        "title": "Zum Flüsternden Blatt",
+        "coordinates": {
+          "x": 1451.0,
+          "y": 2253.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 1444.5,
+          "y": 184,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-004"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-cacbb598-297f-4990-9c51-7f1a591786ba",
+      "title": "Grambruch",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "hesirentum-schwarzfjord",
+      "x": 3447.0,
+      "y": 2218,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "cacbb598-297f-4990-9c51-7f1a591786ba",
+        "url": "https://www.worldanvil.com/world/map/marker/cacbb598-297f-4990-9c51-7f1a591786ba/edit",
+        "title": "Grambruch",
+        "coordinates": {
+          "x": 3461.0,
+          "y": 2228.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 3447.0,
+          "y": 200,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-005"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-1870d573-100c-4641-acd8-93fdf57ddd4b",
+      "title": "Eldvik",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "hesirentum-schwarzfjord",
+      "x": 3796.0,
+      "y": 2198,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "1870d573-100c-4641-acd8-93fdf57ddd4b",
+        "url": "https://www.worldanvil.com/world/map/marker/1870d573-100c-4641-acd8-93fdf57ddd4b/edit",
+        "title": "Eldvik",
+        "coordinates": {
+          "x": 3778.0,
+          "y": 2204.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 3796.0,
+          "y": 220,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-006"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-69ed727f-daaa-458d-a1d9-fc72ae00cb54",
+      "title": "Hjálmvund",
+      "category": "Sumpfsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/sumpfsiedlung.png",
+      "territoryId": "herrschaft-kaltherz",
+      "x": 1290.0,
+      "y": 2197,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "69ed727f-daaa-458d-a1d9-fc72ae00cb54",
+        "url": "https://www.worldanvil.com/world/map/marker/69ed727f-daaa-458d-a1d9-fc72ae00cb54/edit",
+        "title": "Hjálmvund",
+        "coordinates": {
+          "x": 1301.0,
+          "y": 2225.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 1290.0,
+          "y": 221,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-007"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-06d2a7a1-3332-48d8-910d-6c3c68ad4fe3",
+      "title": "Nekkvund",
+      "category": "Siedlungsruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/zerst-rte-siedlung.png",
+      "territoryId": "herrschaft-kaltherz",
+      "x": 1844.5,
+      "y": 2201,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "06d2a7a1-3332-48d8-910d-6c3c68ad4fe3",
+        "url": "https://www.worldanvil.com/world/map/marker/06d2a7a1-3332-48d8-910d-6c3c68ad4fe3/edit",
+        "title": "Nekkvund",
+        "coordinates": {
+          "x": 1833.0,
+          "y": 2219.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 1844.5,
+          "y": 217,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-008"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-b9d97cc9-c997-4967-8c44-55666e630b7c",
+      "title": "Fenrirs Zahn",
+      "category": "Schiffswrack",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/schiffswrackpin.png",
+      "territoryId": "hesirentum-schwarzfjord",
+      "x": 3951.0,
+      "y": 2159,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "b9d97cc9-c997-4967-8c44-55666e630b7c",
+        "url": "https://www.worldanvil.com/world/map/marker/b9d97cc9-c997-4967-8c44-55666e630b7c/edit",
+        "title": "Fenrirs Zahn",
+        "coordinates": {
+          "x": 3955.0,
+          "y": 2178.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 3951.0,
+          "y": 259,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-009"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-109b91f3-11da-4258-a6b4-41097045031b",
+      "title": "Svarskov",
+      "category": "Sumpfsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/sumpfsiedlung.png",
+      "territoryId": "herrschaft-kaltherz",
+      "x": 1706.0,
+      "y": 2120,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "109b91f3-11da-4258-a6b4-41097045031b",
+        "url": "https://www.worldanvil.com/world/map/marker/109b91f3-11da-4258-a6b4-41097045031b/edit",
+        "title": "Svarskov",
+        "coordinates": {
+          "x": 1715.0,
+          "y": 2143.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 1706.0,
+          "y": 298,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-010"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-6aa8419c-a336-4c15-b436-5b7602d588aa",
+      "title": "Knarrvund",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "herrschaft-kaltherz",
+      "x": 1449.0,
+      "y": 2075,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "6aa8419c-a336-4c15-b436-5b7602d588aa",
+        "url": "https://www.worldanvil.com/world/map/marker/6aa8419c-a336-4c15-b436-5b7602d588aa/edit",
+        "title": "Knarrvund",
+        "coordinates": {
+          "x": 1453.0,
+          "y": 2124.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 1449.0,
+          "y": 343,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-011"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-b3264783-ea32-4604-99a6-a4b3b461591b",
+      "title": "Nachtklingenberg",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "jarltuemliches-thanentum-nebelmoor",
+      "x": 2268.5,
+      "y": 2059,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "b3264783-ea32-4604-99a6-a4b3b461591b",
+        "url": "https://www.worldanvil.com/world/map/marker/b3264783-ea32-4604-99a6-a4b3b461591b/edit",
+        "title": "Nachtklingenberg",
+        "coordinates": {
+          "x": 2275.0,
+          "y": 2101.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 2268.5,
+          "y": 359,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-012"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-4e40b15d-dfa6-4e32-86cd-b12c99c1822b",
+      "title": "Fjernbogg",
+      "category": "Siedlungsruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/zerst-rte-siedlung.png",
+      "territoryId": "herrschaft-kaltherz",
+      "x": 721.5,
+      "y": 2047,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "4e40b15d-dfa6-4e32-86cd-b12c99c1822b",
+        "url": "https://www.worldanvil.com/world/map/marker/4e40b15d-dfa6-4e32-86cd-b12c99c1822b/edit",
+        "title": "Fjernbogg",
+        "coordinates": {
+          "x": 718.0,
+          "y": 2078.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 721.5,
+          "y": 371,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-013"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-b2af6ca2-ba3c-4643-a3d9-8d01ab5e9d75",
+      "title": "Höllenstollen",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "jarltuemliches-thanentum-nebelmoor",
+      "x": 2623.0,
+      "y": 2026,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "b2af6ca2-ba3c-4643-a3d9-8d01ab5e9d75",
+        "url": "https://www.worldanvil.com/world/map/marker/b2af6ca2-ba3c-4643-a3d9-8d01ab5e9d75/edit",
+        "title": "Höllenstollen",
+        "coordinates": {
+          "x": 2625.0,
+          "y": 2062.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 2623.0,
+          "y": 392,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-014"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-9513384a-4cfa-4d62-a2da-79285bea9e05",
+      "title": "Fenrmoor",
+      "category": "Sumpfsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/sumpfsiedlung.png",
+      "territoryId": "herrschaft-kaltherz",
+      "x": 1062.0,
+      "y": 2025,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "9513384a-4cfa-4d62-a2da-79285bea9e05",
+        "url": "https://www.worldanvil.com/world/map/marker/9513384a-4cfa-4d62-a2da-79285bea9e05/edit",
+        "title": "Fenrmoor",
+        "coordinates": {
+          "x": 1050.0,
+          "y": 2061.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 1062.0,
+          "y": 393,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-015"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-b1a0f18e-4036-4a82-b3eb-926a99bff531",
+      "title": "Dämmerspitze",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "herrschaft-kaltherz",
+      "x": 2052.0,
+      "y": 1999,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "b1a0f18e-4036-4a82-b3eb-926a99bff531",
+        "url": "https://www.worldanvil.com/world/map/marker/b1a0f18e-4036-4a82-b3eb-926a99bff531/edit",
+        "title": "Dämmerspitze",
+        "coordinates": {
+          "x": 2059.0,
+          "y": 2037.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 2052.0,
+          "y": 419,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-016"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-5d3e56b4-783a-44cc-af11-64149a6664f9",
+      "title": "Jarnskov",
+      "category": "Siedlungsruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/zerst-rte-siedlung.png",
+      "territoryId": "herrschaft-kaltherz",
+      "x": 1290.0,
+      "y": 1996,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "5d3e56b4-783a-44cc-af11-64149a6664f9",
+        "url": "https://www.worldanvil.com/world/map/marker/5d3e56b4-783a-44cc-af11-64149a6664f9/edit",
+        "title": "Jarnskov",
+        "coordinates": {
+          "x": 1284.0,
+          "y": 2026.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 1290.0,
+          "y": 422,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-017"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-21160d92-ea45-4f67-ad3e-e6991b923694",
+      "title": "Grytvund",
+      "category": "Siedlungsruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/zerst-rte-siedlung.png",
+      "territoryId": "herrschaft-kaltherz",
+      "x": 1730.5,
+      "y": 1983,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "21160d92-ea45-4f67-ad3e-e6991b923694",
+        "url": "https://www.worldanvil.com/world/map/marker/21160d92-ea45-4f67-ad3e-e6991b923694/edit",
+        "title": "Grytvund",
+        "coordinates": {
+          "x": 1729.0,
+          "y": 2021.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 1730.5,
+          "y": 435,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-018"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-5c8978e0-bd10-4713-8c50-85a027508721",
+      "title": "Nebelwacht",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "hesirentum-schwarzfjord",
+      "x": 3542.0,
+      "y": 1909,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "5c8978e0-bd10-4713-8c50-85a027508721",
+        "url": "https://www.worldanvil.com/world/map/marker/5c8978e0-bd10-4713-8c50-85a027508721/edit",
+        "title": "Nebelwacht",
+        "coordinates": {
+          "x": 3490.0,
+          "y": 1983.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 3542.0,
+          "y": 509,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-019"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-801140e3-a329-4b56-a0b5-9a678d9be793",
+      "title": "Wodins Blick",
+      "category": "Schiffswrack",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/schiffswrackpin.png",
+      "territoryId": "hesirentum-schwarzfjord",
+      "x": 3873.0,
+      "y": 1961,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "801140e3-a329-4b56-a0b5-9a678d9be793",
+        "url": "https://www.worldanvil.com/world/map/marker/801140e3-a329-4b56-a0b5-9a678d9be793/edit",
+        "title": "Wodins Blick",
+        "coordinates": {
+          "x": 3870.0,
+          "y": 1973.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 3873.0,
+          "y": 457,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-020"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-9c364d69-f8cc-4f66-8299-a96d9009c35a",
+      "title": "Nidavellir",
+      "category": "Hügelgrab",
+      "templateId": "natur",
+      "icon": "/Karten/assets/icons/welt/h-gelgrab.png",
+      "territoryId": "jarltuemliches-thanentum-nebelmoor",
+      "x": 2164.0,
+      "y": 1916,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "9c364d69-f8cc-4f66-8299-a96d9009c35a",
+        "url": "https://www.worldanvil.com/world/map/marker/9c364d69-f8cc-4f66-8299-a96d9009c35a/edit",
+        "title": "Nidavellir",
+        "coordinates": {
+          "x": 2170.0,
+          "y": 1936.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 2164.0,
+          "y": 502,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-021"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-7850505b-5360-4bb9-a2f2-fd2052569148",
+      "title": "Zum Fauligen Fass",
+      "category": "Taverne",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/taverne.png",
+      "territoryId": "jarltuemliches-thanentum-nebelmoor",
+      "x": 1543.0,
+      "y": 1894,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "7850505b-5360-4bb9-a2f2-fd2052569148",
+        "url": "https://www.worldanvil.com/world/map/marker/7850505b-5360-4bb9-a2f2-fd2052569148/edit",
+        "title": "Zum Fauligen Fass",
+        "coordinates": {
+          "x": 1550.0,
+          "y": 1925.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 1543.0,
+          "y": 524,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-022"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-9c9ea436-2a5b-4268-9414-27085af51873",
+      "title": "Krokskov",
+      "category": "Sumpfsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/sumpfsiedlung.png",
+      "territoryId": "thanentum-rabenweide",
+      "x": 479.0,
+      "y": 1861,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "9c9ea436-2a5b-4268-9414-27085af51873",
+        "url": "https://www.worldanvil.com/world/map/marker/9c9ea436-2a5b-4268-9414-27085af51873/edit",
+        "title": "Krokskov",
+        "coordinates": {
+          "x": 471.0,
+          "y": 1899.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 479.0,
+          "y": 557,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-023"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-3fcd16ae-caf7-4057-873e-bf201bd244bd",
+      "title": "Grimmschlagberg",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "jarltuemliches-thanentum-nebelmoor",
+      "x": 2565.5,
+      "y": 1837,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "3fcd16ae-caf7-4057-873e-bf201bd244bd",
+        "url": "https://www.worldanvil.com/world/map/marker/3fcd16ae-caf7-4057-873e-bf201bd244bd/edit",
+        "title": "Grimmschlagberg",
+        "coordinates": {
+          "x": 2571.0,
+          "y": 1876.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 2565.5,
+          "y": 581,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-024"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-ebacb7df-d026-4658-92e4-b624f371027c",
+      "title": "Flüsterstollen",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "jarltuemliches-thanentum-nebelmoor",
+      "x": 2750.0,
+      "y": 1799,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "ebacb7df-d026-4658-92e4-b624f371027c",
+        "url": "https://www.worldanvil.com/world/map/marker/ebacb7df-d026-4658-92e4-b624f371027c/edit",
+        "title": "Flüsterstollen",
+        "coordinates": {
+          "x": 2752.0,
+          "y": 1844.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 2750.0,
+          "y": 619,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-025"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-837a164f-240d-47c8-a8a2-42d14be836ec",
+      "title": "Blutfangbruch",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "hesirentum-schwarzfjord",
+      "x": 3417.5,
+      "y": 1785,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "837a164f-240d-47c8-a8a2-42d14be836ec",
+        "url": "https://www.worldanvil.com/world/map/marker/837a164f-240d-47c8-a8a2-42d14be836ec/edit",
+        "title": "Blutfangbruch",
+        "coordinates": {
+          "x": 3411.0,
+          "y": 1813.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 3417.5,
+          "y": 633,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-026"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-d3502e09-8bad-4b67-bc96-0eef5fc677a1",
+      "title": "Trollmoor",
+      "category": "Siedlungsruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/zerst-rte-siedlung.png",
+      "territoryId": "herrschaft-feuerherz",
+      "x": 678.5,
+      "y": 1784,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "d3502e09-8bad-4b67-bc96-0eef5fc677a1",
+        "url": "https://www.worldanvil.com/world/map/marker/d3502e09-8bad-4b67-bc96-0eef5fc677a1/edit",
+        "title": "Trollmoor",
+        "coordinates": {
+          "x": 681.0,
+          "y": 1818.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 678.5,
+          "y": 634,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-027"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-ace83511-7139-4005-8895-b7c195e9fda8",
+      "title": "Norrborg",
+      "category": "Burg",
+      "templateId": "gebaeude",
+      "icon": "/Karten/assets/icons/welt/gro-e-burg.png",
+      "territoryId": "herrschaft-kaltherz",
+      "x": 1719.0,
+      "y": 1738,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "ace83511-7139-4005-8895-b7c195e9fda8",
+        "url": "https://www.worldanvil.com/world/map/marker/ace83511-7139-4005-8895-b7c195e9fda8/edit",
+        "title": "Norrborg",
+        "coordinates": {
+          "x": 1731.0,
+          "y": 1760.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 1719.0,
+          "y": 680,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-028"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-e25cbc48-1a22-4f1d-a56f-df4eb3deda95",
+      "title": "Wundenklamm",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "jarltuemliches-thanentum-nebelmoor",
+      "x": 2140.5,
+      "y": 1773,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "e25cbc48-1a22-4f1d-a56f-df4eb3deda95",
+        "url": "https://www.worldanvil.com/world/map/marker/e25cbc48-1a22-4f1d-a56f-df4eb3deda95/edit",
+        "title": "Wundenklamm",
+        "coordinates": {
+          "x": 2144.0,
+          "y": 1811.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 2140.5,
+          "y": 645,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-029"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-540d78c5-e04d-4913-b7d7-a2484a3a9594",
+      "title": "Dvalfjord",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "hesirentum-schwarzfjord",
+      "x": 3788.0,
+      "y": 1751,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "540d78c5-e04d-4913-b7d7-a2484a3a9594",
+        "url": "https://www.worldanvil.com/world/map/marker/540d78c5-e04d-4913-b7d7-a2484a3a9594/edit",
+        "title": "Dvalfjord",
+        "coordinates": {
+          "x": 3792.0,
+          "y": 1769.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 3788.0,
+          "y": 667,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-030"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-29ed35a1-7171-4b7c-b301-95e235a4c63c",
+      "title": "Nebelsegler",
+      "category": "Schiffswrack",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/schiffswrackpin.png",
+      "territoryId": "hesirentum-schwarzfjord",
+      "x": 3932.0,
+      "y": 1744,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "29ed35a1-7171-4b7c-b301-95e235a4c63c",
+        "url": "https://www.worldanvil.com/world/map/marker/29ed35a1-7171-4b7c-b301-95e235a4c63c/edit",
+        "title": "Nebelsegler",
+        "coordinates": {
+          "x": 3931.0,
+          "y": 1768.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 3932.0,
+          "y": 674,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-031"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-3f00f9c9-c872-4f3d-8e95-08c29c539e55",
+      "title": "Tyrsokov",
+      "category": "Sumpfsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/sumpfsiedlung.png",
+      "territoryId": "herrschaft-feuerherz",
+      "x": 1370.5,
+      "y": 1713,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "3f00f9c9-c872-4f3d-8e95-08c29c539e55",
+        "url": "https://www.worldanvil.com/world/map/marker/3f00f9c9-c872-4f3d-8e95-08c29c539e55/edit",
+        "title": "Tyrsokov",
+        "coordinates": {
+          "x": 1375.0,
+          "y": 1750.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 1370.5,
+          "y": 705,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-032"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-8a970919-ec62-4cc7-8c28-22523311f3f6",
+      "title": "Blutnebelklamm",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "jarltuemliches-thanentum-nebelmoor",
+      "x": 2321.0,
+      "y": 1700,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "8a970919-ec62-4cc7-8c28-22523311f3f6",
+        "url": "https://www.worldanvil.com/world/map/marker/8a970919-ec62-4cc7-8c28-22523311f3f6/edit",
+        "title": "Blutnebelklamm",
+        "coordinates": {
+          "x": 2311.0,
+          "y": 1729.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 2321.0,
+          "y": 718,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-033"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-366f9449-1699-4a87-b093-c67441a3c1d4",
+      "title": "Nebelfanglager - Jagdklingen",
+      "category": "Jägerlager",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/j-gerlager.png",
+      "territoryId": "jarltuemliches-thanentum-nebelmoor",
+      "x": 1084.5,
+      "y": 1684,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "366f9449-1699-4a87-b093-c67441a3c1d4",
+        "url": "https://www.worldanvil.com/world/map/marker/366f9449-1699-4a87-b093-c67441a3c1d4/edit",
+        "title": "Nebelfanglager - Jagdklingen",
+        "coordinates": {
+          "x": 1088.0,
+          "y": 1717.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 1084.5,
+          "y": 734,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-034"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-5c52db1a-d396-4f22-a013-ebf945a1c48c",
+      "title": "Dvalborg",
+      "category": "Burgsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/burgsiedlung.png",
+      "territoryId": "thanentum-rabenweide",
+      "x": 331.0,
+      "y": 1659,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "5c52db1a-d396-4f22-a013-ebf945a1c48c",
+        "url": "https://www.worldanvil.com/world/map/marker/5c52db1a-d396-4f22-a013-ebf945a1c48c/edit",
+        "title": "Dvalborg",
+        "coordinates": {
+          "x": 334.0,
+          "y": 1691.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 331.0,
+          "y": 759,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-035"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-adcd9756-72a0-41ab-bc1c-24e4ee76e7bf",
+      "title": "Stjarvund",
+      "category": "Sumpfsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/sumpfsiedlung.png",
+      "territoryId": "herrschaft-feuerherz",
+      "x": 856.5,
+      "y": 1640,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "adcd9756-72a0-41ab-bc1c-24e4ee76e7bf",
+        "url": "https://www.worldanvil.com/world/map/marker/adcd9756-72a0-41ab-bc1c-24e4ee76e7bf/edit",
+        "title": "Stjarvund",
+        "coordinates": {
+          "x": 858.0,
+          "y": 1679.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 856.5,
+          "y": 778,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-036"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-b77fcbab-29fc-46d7-bc8e-e3232c83b068",
+      "title": "Natternfels",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "hesirentum-schwarzfjord",
+      "x": 3316.0,
+      "y": 1615,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "b77fcbab-29fc-46d7-bc8e-e3232c83b068",
+        "url": "https://www.worldanvil.com/world/map/marker/b77fcbab-29fc-46d7-bc8e-e3232c83b068/edit",
+        "title": "Natternfels",
+        "coordinates": {
+          "x": 3318.0,
+          "y": 1635.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 3316.0,
+          "y": 803,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-037"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-39a836dc-da27-40ed-bcf7-038deae6ac68",
+      "title": "Marnhamn",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "hesirentum-schwarzfjord",
+      "x": 3644.0,
+      "y": 1609,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "39a836dc-da27-40ed-bcf7-038deae6ac68",
+        "url": "https://www.worldanvil.com/world/map/marker/39a836dc-da27-40ed-bcf7-038deae6ac68/edit",
+        "title": "Marnhamn",
+        "coordinates": {
+          "x": 3638.0,
+          "y": 1632.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 3644.0,
+          "y": 809,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-038"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-ec5652c8-72ab-446b-ba59-cd631af4b6f6",
+      "title": "Liedhafen -  Bardenakademie",
+      "category": "Besondere Orte",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bardensiedlung.png",
+      "territoryId": "thanentum-rabenweide",
+      "x": 141.5,
+      "y": 1548,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "ec5652c8-72ab-446b-ba59-cd631af4b6f6",
+        "url": "https://www.worldanvil.com/world/map/marker/ec5652c8-72ab-446b-ba59-cd631af4b6f6/edit",
+        "title": "Liedhafen -  Bardenakademie",
+        "coordinates": {
+          "x": 145.0,
+          "y": 1570.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 141.5,
+          "y": 870,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-039"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-1f843b2a-e9b2-4d4a-bc7b-21f011481b59",
+      "title": "Moortal",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "jarltuemliches-thanentum-nebelmoor",
+      "x": 1997.5,
+      "y": 1466,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "1f843b2a-e9b2-4d4a-bc7b-21f011481b59",
+        "url": "https://www.worldanvil.com/world/map/marker/1f843b2a-e9b2-4d4a-bc7b-21f011481b59/edit",
+        "title": "Moortal",
+        "coordinates": {
+          "x": 2011.0,
+          "y": 1506.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 1997.5,
+          "y": 952,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-040"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-902902c8-cdc3-4867-b343-3a6a169ab9e9",
+      "title": "Glýmborg - Balthors Söhne",
+      "category": "Burg",
+      "templateId": "gebaeude",
+      "icon": "/Karten/assets/icons/welt/kleine-burg.png",
+      "territoryId": "hesirentum-schwarzfjord",
+      "x": 3919.0,
+      "y": 1526,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "902902c8-cdc3-4867-b343-3a6a169ab9e9",
+        "url": "https://www.worldanvil.com/world/map/marker/902902c8-cdc3-4867-b343-3a6a169ab9e9/edit",
+        "title": "Glýmborg - Balthors Söhne",
+        "coordinates": {
+          "x": 3925.0,
+          "y": 1570.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 3919.0,
+          "y": 892,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-041"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-06a51e65-2443-41b4-9cff-ef36b2801a5a",
+      "title": "Drekkbogg",
+      "category": "Sumpfsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/sumpfsiedlung.png",
+      "territoryId": "herrschaft-feuerherz",
+      "x": 1533.0,
+      "y": 1526,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "06a51e65-2443-41b4-9cff-ef36b2801a5a",
+        "url": "https://www.worldanvil.com/world/map/marker/06a51e65-2443-41b4-9cff-ef36b2801a5a/edit",
+        "title": "Drekkbogg",
+        "coordinates": {
+          "x": 1542.0,
+          "y": 1563.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 1533.0,
+          "y": 892,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-042"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-4d7646c2-1070-46dd-bfcf-0991e1eb3cc9",
+      "title": "Lýgstett",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "thanentum-rabenweide",
+      "x": 442.0,
+      "y": 1503,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "4d7646c2-1070-46dd-bfcf-0991e1eb3cc9",
+        "url": "https://www.worldanvil.com/world/map/marker/4d7646c2-1070-46dd-bfcf-0991e1eb3cc9/edit",
+        "title": "Lýgstett",
+        "coordinates": {
+          "x": 437.0,
+          "y": 1536.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 442.0,
+          "y": 915,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-043"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-e532bdd1-70f6-4f58-b387-6af85fea31f1",
+      "title": "Hreinstad",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "thanentum-rabenweide",
+      "x": 696.0,
+      "y": 1461,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "e532bdd1-70f6-4f58-b387-6af85fea31f1",
+        "url": "https://www.worldanvil.com/world/map/marker/e532bdd1-70f6-4f58-b387-6af85fea31f1/edit",
+        "title": "Hreinstad",
+        "coordinates": {
+          "x": 704.0,
+          "y": 1484.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 696.0,
+          "y": 957,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-044"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-047f368c-5906-443e-920c-ce9fc9479d91",
+      "title": "Edelstatt",
+      "category": "Brauersiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/brauersiedlung.png",
+      "territoryId": "hesirentum-goldglanz",
+      "x": 911.0,
+      "y": 1450,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "047f368c-5906-443e-920c-ce9fc9479d91",
+        "url": "https://www.worldanvil.com/world/map/marker/047f368c-5906-443e-920c-ce9fc9479d91/edit",
+        "title": "Edelstatt",
+        "coordinates": {
+          "x": 908.0,
+          "y": 1450.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 911.0,
+          "y": 968,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-045"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-bebfe0ab-1be4-45dc-b26e-392b80b0e406",
+      "title": "Hölmbogg",
+      "category": "Sumpfsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/sumpfsiedlung.png",
+      "territoryId": "herrschaft-feuerherz",
+      "x": 1330.0,
+      "y": 1444,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "bebfe0ab-1be4-45dc-b26e-392b80b0e406",
+        "url": "https://www.worldanvil.com/world/map/marker/bebfe0ab-1be4-45dc-b26e-392b80b0e406/edit",
+        "title": "Hölmbogg",
+        "coordinates": {
+          "x": 1330.0,
+          "y": 1488.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 1330.0,
+          "y": 974,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-046"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-0b8ea41a-cd74-4efb-9c2a-07c118e84ee9",
+      "title": "Silberfels",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "hesirentum-schwarzfjord",
+      "x": 3470.0,
+      "y": 1411,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "0b8ea41a-cd74-4efb-9c2a-07c118e84ee9",
+        "url": "https://www.worldanvil.com/world/map/marker/0b8ea41a-cd74-4efb-9c2a-07c118e84ee9/edit",
+        "title": "Silberfels",
+        "coordinates": {
+          "x": 3467.0,
+          "y": 1447.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 3470.0,
+          "y": 1007,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-047"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-5427e3e7-a1d2-40d0-b6e0-3aee9c6ef67e",
+      "title": "Marjas Licht - Kloster",
+      "category": "Klostersiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/klostersiedlung.png",
+      "territoryId": "thanentum-rabenweide",
+      "x": 586.0,
+      "y": 1401,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "5427e3e7-a1d2-40d0-b6e0-3aee9c6ef67e",
+        "url": "https://www.worldanvil.com/world/map/marker/5427e3e7-a1d2-40d0-b6e0-3aee9c6ef67e/edit",
+        "title": "Marjas Licht - Kloster",
+        "coordinates": {
+          "x": 585.0,
+          "y": 1435.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 586.0,
+          "y": 1017,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-048"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-5306405f-48c1-48e9-b736-7b9ce2764783",
+      "title": "Grymfjord",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "hesirentum-schwarzfjord",
+      "x": 3696.5,
+      "y": 1378,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "5306405f-48c1-48e9-b736-7b9ce2764783",
+        "url": "https://www.worldanvil.com/world/map/marker/5306405f-48c1-48e9-b736-7b9ce2764783/edit",
+        "title": "Grymfjord",
+        "coordinates": {
+          "x": 3698.0,
+          "y": 1400.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 3696.5,
+          "y": 1040,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-049"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-d400edc5-52e1-41e9-83bc-5e457a58aa99",
+      "title": "Rokstatt",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "thanentum-rabenweide",
+      "x": 285.0,
+      "y": 1349,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "d400edc5-52e1-41e9-83bc-5e457a58aa99",
+        "url": "https://www.worldanvil.com/world/map/marker/d400edc5-52e1-41e9-83bc-5e457a58aa99/edit",
+        "title": "Rokstatt",
+        "coordinates": {
+          "x": 281.0,
+          "y": 1378.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 285.0,
+          "y": 1069,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-050"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-50880940-4fd7-46b4-bd50-d2fa2960d741",
+      "title": "Nebelschleiergrat",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "jarltuemliches-thanentum-nebelmoor",
+      "x": 2640.0,
+      "y": 1343,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "50880940-4fd7-46b4-bd50-d2fa2960d741",
+        "url": "https://www.worldanvil.com/world/map/marker/50880940-4fd7-46b4-bd50-d2fa2960d741/edit",
+        "title": "Nebelschleiergrat",
+        "coordinates": {
+          "x": 2636.0,
+          "y": 1365.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 2640.0,
+          "y": 1075,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-051"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-ab7d4136-5229-40dd-b320-aff11991dccf",
+      "title": "Zur Ewigen Münze",
+      "category": "Taverne",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/taverne.png",
+      "territoryId": "thanentum-rabenweide",
+      "x": 1185.0,
+      "y": 1324,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "ab7d4136-5229-40dd-b320-aff11991dccf",
+        "url": "https://www.worldanvil.com/world/map/marker/ab7d4136-5229-40dd-b320-aff11991dccf/edit",
+        "title": "Zur Ewigen Münze",
+        "coordinates": {
+          "x": 1183.0,
+          "y": 1353.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 1185.0,
+          "y": 1094,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-052"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-a341f75e-1af6-4151-8700-c0b555140e25",
+      "title": "Rostklamm",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "herrschaft-feuerherz",
+      "x": 2281.0,
+      "y": 1269,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "a341f75e-1af6-4151-8700-c0b555140e25",
+        "url": "https://www.worldanvil.com/world/map/marker/a341f75e-1af6-4151-8700-c0b555140e25/edit",
+        "title": "Rostklamm",
+        "coordinates": {
+          "x": 2286.0,
+          "y": 1303.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 2281.0,
+          "y": 1149,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-053"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-419a7bd7-7d70-4cc6-94cc-9fa2f2db38f4",
+      "title": "Isbogg",
+      "category": "Sumpfsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/sumpfsiedlung.png",
+      "territoryId": "herrschaft-feuerherz",
+      "x": 1609.0,
+      "y": 1254,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "419a7bd7-7d70-4cc6-94cc-9fa2f2db38f4",
+        "url": "https://www.worldanvil.com/world/map/marker/419a7bd7-7d70-4cc6-94cc-9fa2f2db38f4/edit",
+        "title": "Isbogg",
+        "coordinates": {
+          "x": 1612.0,
+          "y": 1289.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 1609.0,
+          "y": 1164,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-054"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-e4f3e5d8-8129-4f52-8804-0fec835b260a",
+      "title": "Roknes",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "verwaltung-blutstahl",
+      "x": 3861.5,
+      "y": 1252,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "e4f3e5d8-8129-4f52-8804-0fec835b260a",
+        "url": "https://www.worldanvil.com/world/map/marker/e4f3e5d8-8129-4f52-8804-0fec835b260a/edit",
+        "title": "Roknes",
+        "coordinates": {
+          "x": 3852.0,
+          "y": 1270.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 3861.5,
+          "y": 1166,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-055"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-6a6b75b1-fc72-49e2-8485-c3aca7c9ca79",
+      "title": "Wodinsruh",
+      "category": "Klostersiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/klostersiedlung.png",
+      "territoryId": "thanentum-rabenweide",
+      "x": 1056.0,
+      "y": 1232,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "6a6b75b1-fc72-49e2-8485-c3aca7c9ca79",
+        "url": "https://www.worldanvil.com/world/map/marker/6a6b75b1-fc72-49e2-8485-c3aca7c9ca79/edit",
+        "title": "Wodinsruh",
+        "coordinates": {
+          "x": 1051.0,
+          "y": 1244.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 1056.0,
+          "y": 1186,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-056"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-46c48cc1-b4ca-403f-9bc4-83d74182e2b9",
+      "title": "Klagwark",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "thanentum-rabenweide",
+      "x": 145.0,
+      "y": 1218,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "46c48cc1-b4ca-403f-9bc4-83d74182e2b9",
+        "url": "https://www.worldanvil.com/world/map/marker/46c48cc1-b4ca-403f-9bc4-83d74182e2b9/edit",
+        "title": "Klagwark",
+        "coordinates": {
+          "x": 138.0,
+          "y": 1239.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 145.0,
+          "y": 1200,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-057"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-4aba2c78-bd8d-4d89-a933-5e5079a169cc",
+      "title": "Suthborg",
+      "category": "Burg",
+      "templateId": "gebaeude",
+      "icon": "/Karten/assets/icons/welt/gro-e-burg.png",
+      "territoryId": "herrschaft-feuerherz",
+      "x": 1991.5,
+      "y": 1175,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "4aba2c78-bd8d-4d89-a933-5e5079a169cc",
+        "url": "https://www.worldanvil.com/world/map/marker/4aba2c78-bd8d-4d89-a933-5e5079a169cc/edit",
+        "title": "Suthborg",
+        "coordinates": {
+          "x": 1997.0,
+          "y": 1182.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 1991.5,
+          "y": 1243,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-058"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-8968928a-883a-4db6-891a-a4ad047c1837",
+      "title": "Vondstad",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "thanentum-rabenweide",
+      "x": 437.0,
+      "y": 1203,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "8968928a-883a-4db6-891a-a4ad047c1837",
+        "url": "https://www.worldanvil.com/world/map/marker/8968928a-883a-4db6-891a-a4ad047c1837/edit",
+        "title": "Vondstad",
+        "coordinates": {
+          "x": 438.0,
+          "y": 1238.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 437.0,
+          "y": 1215,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-059"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-a5de57cb-be1a-4cdb-afc0-dda297f40965",
+      "title": "Fyrheim",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "thanentum-rabenweide",
+      "x": 702.5,
+      "y": 1197,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "a5de57cb-be1a-4cdb-afc0-dda297f40965",
+        "url": "https://www.worldanvil.com/world/map/marker/a5de57cb-be1a-4cdb-afc0-dda297f40965/edit",
+        "title": "Fyrheim",
+        "coordinates": {
+          "x": 706.0,
+          "y": 1233.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 702.5,
+          "y": 1221,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-060"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-8cfe5155-38e1-4a5e-96c8-ae18e0e87825",
+      "title": "Eisenbruch",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "verwaltung-blutstahl",
+      "x": 3525.5,
+      "y": 1156,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "8cfe5155-38e1-4a5e-96c8-ae18e0e87825",
+        "url": "https://www.worldanvil.com/world/map/marker/8cfe5155-38e1-4a5e-96c8-ae18e0e87825/edit",
+        "title": "Eisenbruch",
+        "coordinates": {
+          "x": 3527.0,
+          "y": 1180.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 3525.5,
+          "y": 1262,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-061"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-20c4f702-ee1a-495c-a5e3-b1f33f95762d",
+      "title": "Dvaldorf",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "thanentum-rabenweide",
+      "x": 1396.5,
+      "y": 1109,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "20c4f702-ee1a-495c-a5e3-b1f33f95762d",
+        "url": "https://www.worldanvil.com/world/map/marker/20c4f702-ee1a-495c-a5e3-b1f33f95762d/edit",
+        "title": "Dvaldorf",
+        "coordinates": {
+          "x": 1400.0,
+          "y": 1162.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 1396.5,
+          "y": 1309,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-062"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-34d1b935-fa9b-45c3-8064-c48f72ef67a2",
+      "title": "Ísbjarnbolg",
+      "category": "Burg",
+      "templateId": "gebaeude",
+      "icon": "/Karten/assets/icons/welt/kleine-burg.png",
+      "territoryId": "jarltuemliches-thanentum-nebelmoor",
+      "x": 2627.0,
+      "y": 1104,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "34d1b935-fa9b-45c3-8064-c48f72ef67a2",
+        "url": "https://www.worldanvil.com/world/map/marker/34d1b935-fa9b-45c3-8064-c48f72ef67a2/edit",
+        "title": "Ísbjarnbolg",
+        "coordinates": {
+          "x": 2626.0,
+          "y": 1114.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 2627.0,
+          "y": 1314,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-063"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-7d944dee-777b-4f99-a04c-d26a19139f64",
+      "title": "Hlingbogg",
+      "category": "Waldsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/waldsiedlung.png",
+      "territoryId": "herrschaft-feuerherz",
+      "x": 2340.0,
+      "y": 1076,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "7d944dee-777b-4f99-a04c-d26a19139f64",
+        "url": "https://www.worldanvil.com/world/map/marker/7d944dee-777b-4f99-a04c-d26a19139f64/edit",
+        "title": "Hlingbogg",
+        "coordinates": {
+          "x": 2337.0,
+          "y": 1118.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 2340.0,
+          "y": 1342,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-064"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-c5dce85e-26f6-4482-bb08-26c36d67394e",
+      "title": "Rabenfurt",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "thanentum-rabenweide",
+      "x": 362.5,
+      "y": 967,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "c5dce85e-26f6-4482-bb08-26c36d67394e",
+        "url": "https://www.worldanvil.com/world/map/marker/c5dce85e-26f6-4482-bb08-26c36d67394e/edit",
+        "title": "Rabenfurt",
+        "coordinates": {
+          "x": 373.0,
+          "y": 998.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 362.5,
+          "y": 1451,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-065"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-1ad5e5b6-a495-4ec4-ba7d-7ed0def3e7b2",
+      "title": "Eyrstatt",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "verwaltung-blutstahl",
+      "x": 3605.0,
+      "y": 1021,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "1ad5e5b6-a495-4ec4-ba7d-7ed0def3e7b2",
+        "url": "https://www.worldanvil.com/world/map/marker/1ad5e5b6-a495-4ec4-ba7d-7ed0def3e7b2/edit",
+        "title": "Eyrstatt",
+        "coordinates": {
+          "x": 3607.0,
+          "y": 1053.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 3605.0,
+          "y": 1397,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-066"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-5f16eac4-1538-4d27-b45c-c5676346d90a",
+      "title": "Huldorf",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "thanentum-rabenweide",
+      "x": 1082.0,
+      "y": 1001,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "5f16eac4-1538-4d27-b45c-c5676346d90a",
+        "url": "https://www.worldanvil.com/world/map/marker/5f16eac4-1538-4d27-b45c-c5676346d90a/edit",
+        "title": "Huldorf",
+        "coordinates": {
+          "x": 1080.0,
+          "y": 1052.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 1082.0,
+          "y": 1417,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-067"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-554be2d4-302f-4a9c-af2b-458730905d46",
+      "title": "Vardstad",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "thanentum-rabenweide",
+      "x": 1634.0,
+      "y": 982,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "554be2d4-302f-4a9c-af2b-458730905d46",
+        "url": "https://www.worldanvil.com/world/map/marker/554be2d4-302f-4a9c-af2b-458730905d46/edit",
+        "title": "Vardstad",
+        "coordinates": {
+          "x": 1637.0,
+          "y": 1019.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 1634.0,
+          "y": 1436,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-068"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-226b36e8-d962-4a13-94b1-9c36e32a6c7a",
+      "title": "Totengrundstollen",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "herrschaft-feuerherz",
+      "x": 2538.5,
+      "y": 973,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "226b36e8-d962-4a13-94b1-9c36e32a6c7a",
+        "url": "https://www.worldanvil.com/world/map/marker/226b36e8-d962-4a13-94b1-9c36e32a6c7a/edit",
+        "title": "Totengrundstollen",
+        "coordinates": {
+          "x": 2552.0,
+          "y": 1005.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 2538.5,
+          "y": 1445,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-069"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-fa5b939c-1754-4981-9749-77259419dbe5",
+      "title": "Burg Klingenhort - Windreiter",
+      "category": "Festung",
+      "templateId": "gebaeude",
+      "icon": "/Karten/assets/icons/welt/festung.png",
+      "territoryId": "thanentum-rabenweide",
+      "x": 864.0,
+      "y": 923,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "fa5b939c-1754-4981-9749-77259419dbe5",
+        "url": "https://www.worldanvil.com/world/map/marker/fa5b939c-1754-4981-9749-77259419dbe5/edit",
+        "title": "Burg Klingenhort - Windreiter",
+        "coordinates": {
+          "x": 819.0,
+          "y": 888.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 864.0,
+          "y": 1495,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-070"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-26d4c222-b5ca-4e2e-894d-65cbffe2febc",
+      "title": "Dökkstad",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "thanentum-rabenweide",
+      "x": 2009.0,
+      "y": 956,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "26d4c222-b5ca-4e2e-894d-65cbffe2febc",
+        "url": "https://www.worldanvil.com/world/map/marker/26d4c222-b5ca-4e2e-894d-65cbffe2febc/edit",
+        "title": "Dökkstad",
+        "coordinates": {
+          "x": 2012.0,
+          "y": 987.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 2009.0,
+          "y": 1462,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-071"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-904ac5f4-9873-4daf-9830-a723947a0b06",
+      "title": "Rabenstollen",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "verwaltung-blutstahl",
+      "x": 3379.0,
+      "y": 894,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "904ac5f4-9873-4daf-9830-a723947a0b06",
+        "url": "https://www.worldanvil.com/world/map/marker/904ac5f4-9873-4daf-9830-a723947a0b06/edit",
+        "title": "Rabenstollen",
+        "coordinates": {
+          "x": 3388.0,
+          "y": 915.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 3379.0,
+          "y": 1524,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-072"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-9adeedd0-422e-4422-8346-1931a4d41d57",
+      "title": "Schlangenzahn",
+      "category": "Schiffswrack",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/schiffswrackpin.png",
+      "territoryId": "verwaltung-blutstahl",
+      "x": 3913.0,
+      "y": 895,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "9adeedd0-422e-4422-8346-1931a4d41d57",
+        "url": "https://www.worldanvil.com/world/map/marker/9adeedd0-422e-4422-8346-1931a4d41d57/edit",
+        "title": "Schlangenzahn",
+        "coordinates": {
+          "x": 3915.0,
+          "y": 894.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 3913.0,
+          "y": 1523,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-073"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-aa975fc7-c7b9-42a3-84d6-8c6d41ae56d4",
+      "title": "Jörmundstad",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "thanentum-rabenweide",
+      "x": 572.0,
+      "y": 890,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "aa975fc7-c7b9-42a3-84d6-8c6d41ae56d4",
+        "url": "https://www.worldanvil.com/world/map/marker/aa975fc7-c7b9-42a3-84d6-8c6d41ae56d4/edit",
+        "title": "Jörmundstad",
+        "coordinates": {
+          "x": 573.0,
+          "y": 924.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 572.0,
+          "y": 1528,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-074"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-44b5e398-03d1-4bd3-85c1-0a2c0cbe9fe9",
+      "title": "Landgut des Jarls",
+      "category": "Landgut",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/landgut.png",
+      "territoryId": "jarltuemliches-thanentum-nebelmoor",
+      "x": 1789.0,
+      "y": 832,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "44b5e398-03d1-4bd3-85c1-0a2c0cbe9fe9",
+        "url": "https://www.worldanvil.com/world/map/marker/44b5e398-03d1-4bd3-85c1-0a2c0cbe9fe9/edit",
+        "title": "Landgut des Jarls",
+        "coordinates": {
+          "x": 1795.0,
+          "y": 880.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 1789.0,
+          "y": 1586,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-075"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-7670c499-488e-42b2-89e3-385074258011",
+      "title": "Rauðheim",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "thanentum-rabenweide",
+      "x": 1116.5,
+      "y": 846,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "7670c499-488e-42b2-89e3-385074258011",
+        "url": "https://www.worldanvil.com/world/map/marker/7670c499-488e-42b2-89e3-385074258011/edit",
+        "title": "Rauðheim",
+        "coordinates": {
+          "x": 1122.0,
+          "y": 884.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 1116.5,
+          "y": 1572,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-076"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-939321ac-c66e-453d-91f7-66f25db34e1e",
+      "title": "Dvalgrind",
+      "category": "Hügelgrab",
+      "templateId": "natur",
+      "icon": "/Karten/assets/icons/welt/h-gelgrab.png",
+      "territoryId": "jarltuemliches-thanentum-nebelmoor",
+      "x": 2576.5,
+      "y": 839,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "939321ac-c66e-453d-91f7-66f25db34e1e",
+        "url": "https://www.worldanvil.com/world/map/marker/939321ac-c66e-453d-91f7-66f25db34e1e/edit",
+        "title": "Dvalgrind",
+        "coordinates": {
+          "x": 2574.0,
+          "y": 875.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 2576.5,
+          "y": 1579,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-077"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-e5aaf0cc-92d5-4bf7-acf0-c6c011dd65d0",
+      "title": "Hrafngardr",
+      "category": "Hügelgrab",
+      "templateId": "natur",
+      "icon": "/Karten/assets/icons/welt/h-gelgrab.png",
+      "territoryId": "thanentum-rabenweide",
+      "x": 1258.0,
+      "y": 799,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "e5aaf0cc-92d5-4bf7-acf0-c6c011dd65d0",
+        "url": "https://www.worldanvil.com/world/map/marker/e5aaf0cc-92d5-4bf7-acf0-c6c011dd65d0/edit",
+        "title": "Hrafngardr",
+        "coordinates": {
+          "x": 1244.0,
+          "y": 819.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 1258.0,
+          "y": 1619,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-078"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-b43cabac-a06a-416b-b04b-489f58b95c0a",
+      "title": "Kvallstatt",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "verwaltung-silberblut",
+      "x": 2271.0,
+      "y": 798,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "b43cabac-a06a-416b-b04b-489f58b95c0a",
+        "url": "https://www.worldanvil.com/world/map/marker/b43cabac-a06a-416b-b04b-489f58b95c0a/edit",
+        "title": "Kvallstatt",
+        "coordinates": {
+          "x": 2269.0,
+          "y": 834.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 2271.0,
+          "y": 1620,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-079"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-d15db285-11c7-4a78-a751-9e94603f45e8",
+      "title": "Svarthamn",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "verwaltung-blutstahl",
+      "x": 3702.0,
+      "y": 776,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "d15db285-11c7-4a78-a751-9e94603f45e8",
+        "url": "https://www.worldanvil.com/world/map/marker/d15db285-11c7-4a78-a751-9e94603f45e8/edit",
+        "title": "Svarthamn",
+        "coordinates": {
+          "x": 3709.0,
+          "y": 794.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 3702.0,
+          "y": 1642,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-080"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-356c66a6-f803-4e5b-998b-05cb8e6798c9",
+      "title": "Tjarnstatt",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "thanentum-rabenweide",
+      "x": 1462.0,
+      "y": 742,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "356c66a6-f803-4e5b-998b-05cb8e6798c9",
+        "url": "https://www.worldanvil.com/world/map/marker/356c66a6-f803-4e5b-998b-05cb8e6798c9/edit",
+        "title": "Tjarnstatt",
+        "coordinates": {
+          "x": 1462.0,
+          "y": 774.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 1462.0,
+          "y": 1676,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-081"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-aa1c789e-90aa-4b9c-b203-588831c10661",
+      "title": "Silbertal",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "verwaltung-blutstahl",
+      "x": 3264.0,
+      "y": 729,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "aa1c789e-90aa-4b9c-b203-588831c10661",
+        "url": "https://www.worldanvil.com/world/map/marker/aa1c789e-90aa-4b9c-b203-588831c10661/edit",
+        "title": "Silbertal",
+        "coordinates": {
+          "x": 3260.0,
+          "y": 743.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 3264.0,
+          "y": 1689,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-082"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-ef0701fc-5729-4fcf-b6fe-219f8db7bd73",
+      "title": "Seelenfresser",
+      "category": "Schiffswrack",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/schiffswrackpin.png",
+      "territoryId": "verwaltung-blutstahl",
+      "x": 3901.0,
+      "y": 728,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "ef0701fc-5729-4fcf-b6fe-219f8db7bd73",
+        "url": "https://www.worldanvil.com/world/map/marker/ef0701fc-5729-4fcf-b6fe-219f8db7bd73/edit",
+        "title": "Seelenfresser",
+        "coordinates": {
+          "x": 3929.0,
+          "y": 750.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 3901.0,
+          "y": 1690,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-083"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-f6bc5092-4501-4309-b568-06c0b494fb41",
+      "title": "Eirheim",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "thanentum-rabenweide",
+      "x": 469.0,
+      "y": 722,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "f6bc5092-4501-4309-b568-06c0b494fb41",
+        "url": "https://www.worldanvil.com/world/map/marker/f6bc5092-4501-4309-b568-06c0b494fb41/edit",
+        "title": "Eirheim",
+        "coordinates": {
+          "x": 469.0,
+          "y": 760.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 469.0,
+          "y": 1696,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-084"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-d6bafe3f-01f1-4133-8569-29423ef7c968",
+      "title": "Myrbogg",
+      "category": "Waldsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/waldsiedlung.png",
+      "territoryId": "hesirentum-rabenforst",
+      "x": 902.0,
+      "y": 713,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "d6bafe3f-01f1-4133-8569-29423ef7c968",
+        "url": "https://www.worldanvil.com/world/map/marker/d6bafe3f-01f1-4133-8569-29423ef7c968/edit",
+        "title": "Myrbogg",
+        "coordinates": {
+          "x": 899.0,
+          "y": 750.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 902.0,
+          "y": 1705,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-085"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-e70984ea-3803-4db3-9252-18e434b74cc3",
+      "title": "Ehrenberg",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "jarltuemliches-thanentum-nebelmoor",
+      "x": 2596.0,
+      "y": 702,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "e70984ea-3803-4db3-9252-18e434b74cc3",
+        "url": "https://www.worldanvil.com/world/map/marker/e70984ea-3803-4db3-9252-18e434b74cc3/edit",
+        "title": "Ehrenberg",
+        "coordinates": {
+          "x": 2594.0,
+          "y": 742.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 2596.0,
+          "y": 1716,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-086"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-2f255074-9582-4bbf-9f6b-5e10747b8229",
+      "title": "Silbergrat",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "hesirentum-goldglanz",
+      "x": 3107.5,
+      "y": 633,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "2f255074-9582-4bbf-9f6b-5e10747b8229",
+        "url": "https://www.worldanvil.com/world/map/marker/2f255074-9582-4bbf-9f6b-5e10747b8229/edit",
+        "title": "Silbergrat",
+        "coordinates": {
+          "x": 3103.0,
+          "y": 648.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 3107.5,
+          "y": 1785,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-087"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-4fd8f9a2-0aef-4711-9fb2-df8150b5f670",
+      "title": "Honigberg",
+      "category": "Brauersiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/brauersiedlung.png",
+      "territoryId": "hesirentum-goldglanz",
+      "x": 1721.0,
+      "y": 617,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "4fd8f9a2-0aef-4711-9fb2-df8150b5f670",
+        "url": "https://www.worldanvil.com/world/map/marker/4fd8f9a2-0aef-4711-9fb2-df8150b5f670/edit",
+        "title": "Honigberg",
+        "coordinates": {
+          "x": 1721.0,
+          "y": 627.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 1721.0,
+          "y": 1801,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-088"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-13471555-287e-43ac-9a1c-7c7a1a617c32",
+      "title": "Runmar",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "thanentum-rabenweide",
+      "x": 322.0,
+      "y": 596,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "13471555-287e-43ac-9a1c-7c7a1a617c32",
+        "url": "https://www.worldanvil.com/world/map/marker/13471555-287e-43ac-9a1c-7c7a1a617c32/edit",
+        "title": "Runmar",
+        "coordinates": {
+          "x": 332.0,
+          "y": 608.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 322.0,
+          "y": 1822,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-089"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-722b6a68-6f3f-4bea-b451-de8d7bf1aad2",
+      "title": "Myrkheim",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "verwaltung-silberblut",
+      "x": 2270.0,
+      "y": 580,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "722b6a68-6f3f-4bea-b451-de8d7bf1aad2",
+        "url": "https://www.worldanvil.com/world/map/marker/722b6a68-6f3f-4bea-b451-de8d7bf1aad2/edit",
+        "title": "Myrkheim",
+        "coordinates": {
+          "x": 2269.0,
+          "y": 622.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 2270.0,
+          "y": 1838,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-090"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-c5ad8b42-cbdd-43d2-b9fd-da48186d52f3",
+      "title": "Tjarnborg",
+      "category": "Burgsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/burgsiedlung.png",
+      "territoryId": "verwaltung-silberblut",
+      "x": 2036.0,
+      "y": 537,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "c5ad8b42-cbdd-43d2-b9fd-da48186d52f3",
+        "url": "https://www.worldanvil.com/world/map/marker/c5ad8b42-cbdd-43d2-b9fd-da48186d52f3/edit",
+        "title": "Tjarnborg",
+        "coordinates": {
+          "x": 2026.0,
+          "y": 572.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 2036.0,
+          "y": 1881,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-091"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-eee23b0a-503a-4b1e-b46f-35d48eaf349b",
+      "title": "Schatztal",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "verwaltung-silberblut",
+      "x": 2616.0,
+      "y": 532,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "eee23b0a-503a-4b1e-b46f-35d48eaf349b",
+        "url": "https://www.worldanvil.com/world/map/marker/eee23b0a-503a-4b1e-b46f-35d48eaf349b/edit",
+        "title": "Schatztal",
+        "coordinates": {
+          "x": 2610.0,
+          "y": 566.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 2616.0,
+          "y": 1886,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-092"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-494d109c-b99e-4770-8e09-50c57abefe5a",
+      "title": "Krähenruh",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "hesirentum-rabenforst",
+      "x": 1275.0,
+      "y": 527,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "494d109c-b99e-4770-8e09-50c57abefe5a",
+        "url": "https://www.worldanvil.com/world/map/marker/494d109c-b99e-4770-8e09-50c57abefe5a/edit",
+        "title": "Krähenruh",
+        "coordinates": {
+          "x": 1288.0,
+          "y": 558.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 1275.0,
+          "y": 1891,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-093"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-839ae990-e610-4e02-8871-7c14a858c935",
+      "title": "Goldquell Kloster",
+      "category": "Klostersiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/klostersiedlung.png",
+      "territoryId": "hesirentum-goldglanz",
+      "x": 3582.0,
+      "y": 524,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "839ae990-e610-4e02-8871-7c14a858c935",
+        "url": "https://www.worldanvil.com/world/map/marker/839ae990-e610-4e02-8871-7c14a858c935/edit",
+        "title": "Goldquell Kloster",
+        "coordinates": {
+          "x": 3586.0,
+          "y": 554.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 3582.0,
+          "y": 1894,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-094"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-08ab3d1c-2a76-4192-afb2-11adccd541f7",
+      "title": "Goldenglanz",
+      "category": "Brauersiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/brauersiedlung.png",
+      "territoryId": "hesirentum-goldglanz",
+      "x": 3347.0,
+      "y": 496,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "08ab3d1c-2a76-4192-afb2-11adccd541f7",
+        "url": "https://www.worldanvil.com/world/map/marker/08ab3d1c-2a76-4192-afb2-11adccd541f7/edit",
+        "title": "Goldenglanz",
+        "coordinates": {
+          "x": 3351.0,
+          "y": 520.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 3347.0,
+          "y": 1922,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-095"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-3bfc032e-808f-4c73-ae25-429408a4cbcd",
+      "title": "Rabenhain",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "hesirentum-rabenforst",
+      "x": 851.0,
+      "y": 428,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "3bfc032e-808f-4c73-ae25-429408a4cbcd",
+        "url": "https://www.worldanvil.com/world/map/marker/3bfc032e-808f-4c73-ae25-429408a4cbcd/edit",
+        "title": "Rabenhain",
+        "coordinates": {
+          "x": 869.0,
+          "y": 445.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 851.0,
+          "y": 1990,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-096"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-abc960c4-ae29-491f-906f-e7aafab0749e",
+      "title": "Tempel des stillen Hügels",
+      "category": "Klostersiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/klostersiedlung.png",
+      "territoryId": "hesirentum-rabenforst",
+      "x": 1595,
+      "y": 376,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "abc960c4-ae29-491f-906f-e7aafab0749e",
+        "url": "https://www.worldanvil.com/world/map/marker/abc960c4-ae29-491f-906f-e7aafab0749e/edit",
+        "title": "Tempel des stillen Hügels",
+        "coordinates": {
+          "x": 1599.0,
+          "y": 401.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 1595,
+          "y": 2042,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-097"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-b69249b1-4462-43da-9ae6-bf1982996f38",
+      "title": "Erynes",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "verwaltung-blutstahl",
+      "x": 3789.0,
+      "y": 479,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "b69249b1-4462-43da-9ae6-bf1982996f38",
+        "url": "https://www.worldanvil.com/world/map/marker/b69249b1-4462-43da-9ae6-bf1982996f38/edit",
+        "title": "Erynes",
+        "coordinates": {
+          "x": 3783.0,
+          "y": 485.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 3789.0,
+          "y": 1939,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-098"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-cadbaca2-64a5-48ec-b047-57d6da352b3f",
+      "title": "Skovfalk",
+      "category": "Waldsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/waldsiedlung.png",
+      "territoryId": "hesirentum-rabenforst",
+      "x": 547.0,
+      "y": 395,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "cadbaca2-64a5-48ec-b047-57d6da352b3f",
+        "url": "https://www.worldanvil.com/world/map/marker/cadbaca2-64a5-48ec-b047-57d6da352b3f/edit",
+        "title": "Skovfalk",
+        "coordinates": {
+          "x": 547.0,
+          "y": 428.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 547.0,
+          "y": 2023,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-099"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-8110f22e-eb39-40ad-847b-414da4e1e648",
+      "title": "Blutstein Kloster",
+      "category": "Klostersiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/klostersiedlung.png",
+      "territoryId": "verwaltung-silberblut",
+      "x": 2148.0,
+      "y": 381,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "8110f22e-eb39-40ad-847b-414da4e1e648",
+        "url": "https://www.worldanvil.com/world/map/marker/8110f22e-eb39-40ad-847b-414da4e1e648/edit",
+        "title": "Blutstein Kloster",
+        "coordinates": {
+          "x": 2148.0,
+          "y": 402.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 2148.0,
+          "y": 2037,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-100"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-a68ef669-c202-4f5e-97ec-a36a1c49378c",
+      "title": "Schattenberg Kloster",
+      "category": "Klostersiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/klostersiedlung.png",
+      "territoryId": "hesirentum-goldglanz",
+      "x": 3201.0,
+      "y": 371,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "a68ef669-c202-4f5e-97ec-a36a1c49378c",
+        "url": "https://www.worldanvil.com/world/map/marker/a68ef669-c202-4f5e-97ec-a36a1c49378c/edit",
+        "title": "Schattenberg Kloster",
+        "coordinates": {
+          "x": 3196.0,
+          "y": 395.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 3201.0,
+          "y": 2047,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-101"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-2c438d4c-3227-4f0f-87ba-ae582fb77d4f",
+      "title": "Bjarnskov",
+      "category": "Waldsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/waldsiedlung.png",
+      "territoryId": "hesirentum-rabenforst",
+      "x": 1177.0,
+      "y": 363,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "2c438d4c-3227-4f0f-87ba-ae582fb77d4f",
+        "url": "https://www.worldanvil.com/world/map/marker/2c438d4c-3227-4f0f-87ba-ae582fb77d4f/edit",
+        "title": "Bjarnskov",
+        "coordinates": {
+          "x": 1184.0,
+          "y": 395.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 1177.0,
+          "y": 2055,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-102"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-2457b5a4-8b77-4f8f-b6d4-bfeae3eff474",
+      "title": "Dunkhamn",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "hesirentum-goldglanz",
+      "x": 3606.5,
+      "y": 359,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "2457b5a4-8b77-4f8f-b6d4-bfeae3eff474",
+        "url": "https://www.worldanvil.com/world/map/marker/2457b5a4-8b77-4f8f-b6d4-bfeae3eff474/edit",
+        "title": "Dunkhamn",
+        "coordinates": {
+          "x": 3603.0,
+          "y": 369.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 3606.5,
+          "y": 2059,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-103"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-1a82605c-74de-4fbc-8757-124c9f054107",
+      "title": "Grimmstad",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "verwaltung-silberblut",
+      "x": 2550.0,
+      "y": 346,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "1a82605c-74de-4fbc-8757-124c9f054107",
+        "url": "https://www.worldanvil.com/world/map/marker/1a82605c-74de-4fbc-8757-124c9f054107/edit",
+        "title": "Grimmstad",
+        "coordinates": {
+          "x": 2565.0,
+          "y": 383.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 2550.0,
+          "y": 2072,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-104"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-f082df35-5492-45ee-b30c-ae10c789c45e",
+      "title": "Vargsnid",
+      "category": "Schiffswrack",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/schiffswrackpin.png",
+      "territoryId": "verwaltung-blutstahl",
+      "x": 3855.0,
+      "y": 317,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "f082df35-5492-45ee-b30c-ae10c789c45e",
+        "url": "https://www.worldanvil.com/world/map/marker/f082df35-5492-45ee-b30c-ae10c789c45e/edit",
+        "title": "Vargsnid",
+        "coordinates": {
+          "x": 3857.0,
+          "y": 339.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 3855.0,
+          "y": 2101,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-105"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-93ac7071-e45b-4748-a5d8-13ea458f4c64",
+      "title": "Bjarnes",
+      "category": "Flusssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/flusssiedlung.png",
+      "territoryId": "hesirentum-rabenforst",
+      "x": 1915.5,
+      "y": 315,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "93ac7071-e45b-4748-a5d8-13ea458f4c64",
+        "url": "https://www.worldanvil.com/world/map/marker/93ac7071-e45b-4748-a5d8-13ea458f4c64/edit",
+        "title": "Bjarnes",
+        "coordinates": {
+          "x": 1912.0,
+          "y": 356.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 1915.5,
+          "y": 2103,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-106"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-2d701c2e-5af1-43ba-8bd4-a3597a1fcf24",
+      "title": "Bjornvik",
+      "category": "Flusssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/flusssiedlung.png",
+      "territoryId": "hesirentum-rabenforst",
+      "x": 821.5,
+      "y": 238,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "2d701c2e-5af1-43ba-8bd4-a3597a1fcf24",
+        "url": "https://www.worldanvil.com/world/map/marker/2d701c2e-5af1-43ba-8bd4-a3597a1fcf24/edit",
+        "title": "Bjornvik",
+        "coordinates": {
+          "x": 828.0,
+          "y": 250.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 821.5,
+          "y": 2180,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-107"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-ac8d2121-dd01-4cfc-adbe-d6a8b31b4373",
+      "title": "Einhjersdorf",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "verwaltung-silberblut",
+      "x": 3053.0,
+      "y": 218,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "ac8d2121-dd01-4cfc-adbe-d6a8b31b4373",
+        "url": "https://www.worldanvil.com/world/map/marker/ac8d2121-dd01-4cfc-adbe-d6a8b31b4373/edit",
+        "title": "Einhjersdorf",
+        "coordinates": {
+          "x": 3065.0,
+          "y": 260.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 3053.0,
+          "y": 2200,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-108"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-3333b032-8b1c-4c51-bcff-90d2c4167375",
+      "title": "Dunkelblickwark",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "verwaltung-silberblut",
+      "x": 2744.5,
+      "y": 197,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "3333b032-8b1c-4c51-bcff-90d2c4167375",
+        "url": "https://www.worldanvil.com/world/map/marker/3333b032-8b1c-4c51-bcff-90d2c4167375/edit",
+        "title": "Dunkelblickwark",
+        "coordinates": {
+          "x": 2753.0,
+          "y": 215.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 2744.5,
+          "y": 2221,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-109"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-28f1a584-629b-4472-9a34-bb3d9de03863",
+      "title": "Silberquell",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "thanentum-schimmerkueste",
+      "x": 3453.0,
+      "y": 76,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "28f1a584-629b-4472-9a34-bb3d9de03863",
+        "url": "https://www.worldanvil.com/world/map/marker/28f1a584-629b-4472-9a34-bb3d9de03863/edit",
+        "title": "Silberquell",
+        "coordinates": {
+          "x": 3452.0,
+          "y": 97.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 3453.0,
+          "y": 2342,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-110"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-c3401756-f40a-4c85-8188-900f1212c25d",
+      "title": "Galdnes",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "hesirentum-goldglanz",
+      "x": 3779.0,
+      "y": 79,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "c3401756-f40a-4c85-8188-900f1212c25d",
+        "url": "https://www.worldanvil.com/world/map/marker/c3401756-f40a-4c85-8188-900f1212c25d/edit",
+        "title": "Galdnes",
+        "coordinates": {
+          "x": 3787.0,
+          "y": 84.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 3779.0,
+          "y": 2339,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-111"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-83611678-ad74-4e4a-b659-3304da43bb01",
+      "title": "Zum Glänzenden Kelch",
+      "category": "Taverne",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/taverne.png",
+      "territoryId": "hesirentum-rabenforst",
+      "x": 1666.5,
+      "y": 484,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "83611678-ad74-4e4a-b659-3304da43bb01",
+        "url": "https://www.worldanvil.com/world/map/marker/83611678-ad74-4e4a-b659-3304da43bb01/edit",
+        "title": "Zum Glänzenden Kelch",
+        "coordinates": {
+          "x": 1647.0,
+          "y": 508.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 1666.5,
+          "y": 1934,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-112"
+        }
+      }
+    },
+    {
+      "id": "kraehenmoor-440c397d-0d05-41c6-aa56-ed0cca5ef178",
+      "title": "Helgrind",
+      "category": "Hügelgrab",
+      "templateId": "natur",
+      "icon": "/Karten/assets/icons/welt/h-gelgrab.png",
+      "territoryId": "thanentum-rabenweide",
+      "x": 780,
+      "y": 1024,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "2209b401-8956-4ddf-88c6-99d4c9416391",
+        "markerId": "440c397d-0d05-41c6-aa56-ed0cca5ef178",
+        "url": "https://www.worldanvil.com/world/map/marker/440c397d-0d05-41c6-aa56-ed0cca5ef178/edit",
+        "title": "Helgrind",
+        "coordinates": {
+          "x": 780.0,
+          "y": 1024.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          2418
+        ],
+        "targetPosition": {
+          "x": 780,
+          "y": 1394,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "kraehenmoor-position-113"
+        }
+      }
+    }
+  ],
+  "unpositionedPlaces": []
+}

@@ -278,7 +278,7 @@ export const HOUSE_GRENDEL_FAMILY = Object.freeze({
     id: 'haus-grendel',
     title: 'Clan Grendel',
     motto: '',
-    description: 'Alter Hesirenclan von Hjerimsheim in Klippenschlag. Die Grendel dienen den Wargh als Seefahrer, Küstenwächter und Verteidiger der westlichen Grenzen Ivarsheims.',
+    description: 'Thanenclan von Hjerimsheim im Thanentum Klippenschlag, hervorgegangen aus dem alten Hesirenclan der Grendel. Die Grendel dienen den Wargh als Seefahrer, Küstenwächter und Verteidiger der westlichen Grenzen Ivarsheims.',
     emblem: HOUSE_EMBLEMS.grendel,
     houseProfile: IVARSHEIM_HOUSE_PROFILES.grendel
   },
@@ -364,7 +364,8 @@ export const HOUSE_GRENDEL_FAMILY = Object.freeze({
     spouse('baldkatla-grendel-spouse', 'Baldkatla', 'female', '1653', '1711'),
 
     person('thorvald-grendel', 'Thorvald Grendel', 'male', '1671', '', {
-      title: 'Hesir des Clans Grendel seit 1725'
+      title: 'Thane von Klippenschlag; Oberhaupt des Clans Grendel seit 1725',
+      extensions: { registryManagedFieldRevisions: { title: 4 } }
     }),
     awayWoman('gwelda-grindel', 'Gwelda Grendel', '1674', '', 'Clan Freiwinter'),
     person('karli-grendel', 'Kárli Grendel', 'male', '1671', '1679'),
@@ -501,7 +502,7 @@ export const HOUSE_GRENDEL_FAMILY = Object.freeze({
   lineage: {
     founderPartnershipId: 'marriage-leif-ljotunn-grendel',
     houseId: GRENDEL_HOUSE_ID,
-    crestSubtitle: 'Hesirenclan von Hjerimsheim · Vasallen des Clans Wargh',
+    crestSubtitle: 'Thanenclan von Klippenschlag · Vasallen des Clans Wargh',
     crestEmblemScale: 0.86,
     crestFrame: 'gold',
     crestFrameScale: 1,
@@ -518,7 +519,15 @@ export const HOUSE_GRENDEL_FAMILY = Object.freeze({
   },
   extensions: {
     blankFamily: false,
-    sourceRevision: 3,
+    sourceRevision: 4,
+    registryManagedEntitySourceRevision: 3,
+    registryManagedDocumentFields: ['description'],
+    registryManagedDocumentFieldRevisions: { description: 4 },
+    registryManagedHouseProfileFieldRevisions: {
+      rankId: 4, seat: 3, barony: 3, county: 3, kingdom: 3,
+      liegeHouseId: 3, liegeHouseName: 3, secondarySeats: 3, regionEmblems: 3
+    },
+    registryManagedLineageFieldRevisions: { founderPartnershipId: 3, crestSubtitle: 4 },
     sourceModule: 'Clan Grendel (bereitgestellte Altdaten)',
     sourceNote: 'Der vollständige Quellenstammbaum wurde ohne Personenfokus vom Gründerpaar Leif und Ljotunn bis zur Generation von 1740 übernommen. Das Clanwappen und genau ein Zeitsprung liegen strikt seriell zwischen dem Gründerpaar und Eiríkr beziehungsweise Halldís. Die alte Schreibweise Grindel wird entsprechend der Registerregel als Grendel normalisiert; stabile Gegenakten-IDs mit „grindel“ bleiben aus Kompatibilitätsgründen unverändert. Hlökk folgt der eindeutigen Stammbaumgrafik statt der fehlerhaften Tabellenform Hlölkk. Der alte Quellkasten nennt Horunn als Sitz, während die verbindliche Ivarsheim-Gliederung Clan Grendel unter Klippenschlag/Hjerimsheim führt; Hjerimsheim bleibt maßgeblich. Thordis wird 1630 geboren, obwohl ihr Vater Gunnar laut derselben Quelle 1625 stirbt; Asgeir wird 1628 geboren, obwohl Bagsecg 1627 stirbt. Beide Chronologiefehler bleiben sichtbar dokumentiert und wurden nicht spekulativ umdatiert. Bjarni und Ísdís tragen in der Stammbaumgrafik eindeutig den hellblauen Mündelrahmen. Ísdís’ Zielwappen entspricht dem bei Thorbrand gezeigten Clan Sturmgeborener. Die Grendel-Quelle lässt Bjarnis Meerfrauenwappen unbenannt; die Wellensänger-Hausquelle identifiziert dieselbe Person mit identischem Namen, Geburtsjahr und Porträt ausdrücklich als Uthars Mündel, weshalb das Ziel nun Clan Wellensänger ist. Die namenlosen Verlobtenfelder der Tabelle werden nicht als reale Beziehungen angelegt. Verheiratete Grendel-Frauen erhalten direkte Wegverheiratet-Knoten; Kinder ihrer auswärtigen Ehen verbleiben ausschließlich in den fortführenden Gegenakten. Wiederholte Standardsilhouetten wurden nicht als Individualporträts importiert.',
     registryTombstones: {
@@ -538,7 +547,7 @@ export const HOUSE_GRENDEL_FAMILY = Object.freeze({
       'regionEmblems'
     ],
     registryManagedRecordFields: ['folderPath'],
-    registryManagedLineageFields: ['founderPartnershipId'],
+    registryManagedLineageFields: ['founderPartnershipId', 'crestSubtitle'],
     registryManagedViewFields: ['focusPersonId', 'limitGenerations']
   }
 });

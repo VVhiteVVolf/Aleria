@@ -66,7 +66,7 @@ function initializeCalendarPage() {
   }
   function showEvent(event) {
     shownEvent = event.source || event;
-    detail.innerHTML = `<section class="calendar-detail"><header><span>Terminvorschau</span><button type="button" data-calendar-detail-close aria-label="Schließen">×</button></header>${renderCalendarPreview(event, { calendar })}<footer><button type="button" data-calendar-detail-close>Schließen</button><button type="button" data-calendar-edit class="calendar-primary">Termin bearbeiten</button>${event.localOnly ? '<button type="button" data-calendar-discard>Lokalen Entwurf verwerfen</button>' : ''}</footer></section>`;
+    detail.innerHTML = `<section class="calendar-detail"><header><span>${shownEvent.archived ? 'Historisches Ereignis' : 'Terminvorschau'}</span><button type="button" data-calendar-detail-close aria-label="Schließen">×</button></header>${renderCalendarPreview(event, { calendar })}<footer><button type="button" data-calendar-detail-close>Schließen</button>${shownEvent.archived ? '' : '<button type="button" data-calendar-edit class="calendar-primary">Termin bearbeiten</button>'}${event.localOnly ? '<button type="button" data-calendar-discard>Lokalen Entwurf verwerfen</button>' : ''}</footer></section>`;
     globalThis.activateDialog(detail.id);
   }
   detail.addEventListener('click', event => {

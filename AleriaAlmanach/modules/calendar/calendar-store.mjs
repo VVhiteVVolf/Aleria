@@ -1,7 +1,8 @@
 import { createCalendarEventModel } from './calendar-events-model.mjs';
+import { CALENDAR_ARCHIVE_EVENTS } from './calendar-archive-events.mjs';
 
 const STORAGE_KEY = 'aleria.calendar-events.v1';
-export function createCalendarStore({ storage = globalThis.localStorage, getBackend = () => globalThis._fb?.calendar, calendar = globalThis.AleriaCalendar, target = globalThis } = {}) {
+export function createCalendarStore({ storage = globalThis.localStorage, getBackend = () => globalThis._fb?.calendar, calendar = globalThis.AleriaCalendar, target = globalThis, archiveEvents = [] } = {}) {
   const model = createCalendarEventModel(calendar);
   const listeners = new Set();
   let cache = [], drafts = {}, error = '', online = false, unsubscribe = null, started = false;
@@ -20,6 +21,7 @@ export function createCalendarStore({ storage = globalThis.localStorage, getBack
   function state() {
     const byId = new Map(cache.map(event => [event.id, event]));
     Object.values(drafts).forEach(event => byId.set(event.id, { ...event, localOnly: true }));
+    archiveEvents.forEach(event => byId.set(event.id, event));
     return { events: [...byId.values()].filter(event => !event.deleted), online, error, pendingCount: Object.keys(drafts).length };
   }
   function emit() { listeners.forEach(listener => listener(state())); }
@@ -34,6 +36,7 @@ export function createCalendarStore({ storage = globalThis.localStorage, getBack
     }, failure => { online = false; error = String(failure?.message || 'Kalenderverbindung unterbrochen.'); emit(); });
   }
   async function save(input) {
+    if (archiveEvents.some(event => event.id === input.id)) throw new Error('Dieses Quellenereignis wird in der Ereignischronik gepflegt.');
     const event = model.normalize({ ...input, id: input.id || crypto.randomUUID() });
     if (pending.has(event.id)) throw new Error('Dieser Termin wird gerade gespeichert.');
     pending.add(event.id);
@@ -53,7 +56,7 @@ export function createCalendarStore({ storage = globalThis.localStorage, getBack
   }
   async function publish() {
     if (!online) throw new Error('Bitte zuerst die Kalenderverbindung wiederherstellen.');
-    for (const event of Object.values(drafts)) await save(event);
+    for (const event of Object.values(drafts).filter(draft => !archiveEvents.some(event => event.id === draft.id))) await save(event);
   }
   function onStorage(event) { if (event.key === STORAGE_KEY) { read(); emit(); } }
   function initialize() {
@@ -73,6 +76,6 @@ export function createCalendarStore({ storage = globalThis.localStorage, getBack
 
 let sharedStore;
 export function getCalendarStore() {
-  if (!sharedStore) { sharedStore = createCalendarStore(); sharedStore.initialize(); }
+  if (!sharedStore) { sharedStore = createCalendarStore({ archiveEvents: CALENDAR_ARCHIVE_EVENTS }); sharedStore.initialize(); }
   return sharedStore;
 }

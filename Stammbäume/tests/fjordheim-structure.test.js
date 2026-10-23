@@ -123,7 +123,8 @@ test('all six source snapshots and all 21 original emblems have verifiable local
   const usedEmblems = FJORDHEIM_REGISTRY_FOLDERS.flatMap(folder => [
     ...(folder.icon ? [folder.icon] : []), ...folder.plannedHouses.map(house => house.emblem)
   ]);
-  assert.equal(usedEmblems.length, 21);
+  // Sitzkategorien verwenden dieselben belegten Clanwappen erneut.
+  assert.equal(new Set(usedEmblems).size, 21);
   assert.deepEqual(new Set(usedEmblems), new Set(inventory.assets.map(asset => asset.path)));
   for (const asset of inventory.assets) {
     const bytes = fs.readFileSync(new URL(asset.path, root));

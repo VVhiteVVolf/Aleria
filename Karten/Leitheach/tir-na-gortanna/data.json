@@ -1,0 +1,2486 @@
+{
+  "schemaVersion": 1,
+  "dataPath": "Leitheach/tir-na-gortanna/data.json",
+  "revision": 1,
+  "updatedAt": "2026-10-22T16:10:00.000Z",
+  "generatedStateHash": "dcc38349875b1ff64fe7bdbfd4c6df312f08069a62bf8822c8fc7ea20a9edd26",
+  "state": {
+    "pins": [],
+    "cats": [
+      {
+        "id": "mmflrbzxydg7",
+        "label": "Hauptstadt",
+        "color": "#ff0000"
+      },
+      {
+        "id": "mmflrqajby8b",
+        "label": "Bauernsiedlung",
+        "color": "#6060b0"
+      },
+      {
+        "id": "mmflry5furso",
+        "label": "Hafensiedlung",
+        "color": "#b03030"
+      },
+      {
+        "id": "mmfls5afqqpr",
+        "label": "Burgsiedlung",
+        "color": "#9050b0"
+      },
+      {
+        "id": "mmflsfqh3sft",
+        "label": "Handelssiedlung",
+        "color": "#3a8a3a"
+      },
+      {
+        "id": "mmflsrndeiee",
+        "label": "Brückensiedlung",
+        "color": "#2a7aaa"
+      },
+      {
+        "id": "mmflt1x3v22o",
+        "label": "Bergbausiedlung",
+        "color": "#7a6040"
+      },
+      {
+        "id": "mmflt7uj831y",
+        "label": "Waldsiedlung",
+        "color": "#c07030"
+      },
+      {
+        "id": "mmflteurd4n5",
+        "label": "Kirchensiedlung",
+        "color": "#508080"
+      },
+      {
+        "id": "mmfltia1m3s7",
+        "label": "Leuchtturmsiedlung",
+        "color": "#c49a20"
+      },
+      {
+        "id": "mmfltullsctk",
+        "label": "Festungssiedlung",
+        "color": "#6060b0"
+      },
+      {
+        "id": "mmflvj37jbh2",
+        "label": "Taverne",
+        "color": "#b03030"
+      },
+      {
+        "id": "mmflvquv2rr3",
+        "label": "Siedlungsruine",
+        "color": "#9050b0"
+      },
+      {
+        "id": "mmflw1z5ko6e",
+        "label": "Stadtruine",
+        "color": "#3a8a3a"
+      },
+      {
+        "id": "mmflw73t2e8v",
+        "label": "Bardensiedlung",
+        "color": "#2a7aaa"
+      },
+      {
+        "id": "mmflwdjfl6ah",
+        "label": "Stadt",
+        "color": "#7a6040"
+      },
+      {
+        "id": "mmflwmdfcyua",
+        "label": "Turmruine",
+        "color": "#c07030"
+      },
+      {
+        "id": "mmflwxad8w1j",
+        "label": "Schiffswrack",
+        "color": "#508080"
+      },
+      {
+        "id": "mmflx4731uj6",
+        "label": "Turnierplatz",
+        "color": "#c49a20"
+      },
+      {
+        "id": "mmflxnnhbh4g",
+        "label": "Besondere Orte",
+        "color": "#6060b0"
+      },
+      {
+        "id": "location-dorf",
+        "label": "Dorf",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/bardensiedlung.png"
+      },
+      {
+        "id": "location-flusssiedlung",
+        "label": "Flusssiedlung",
+        "color": "#2a7aaa",
+        "marker": "/Karten/assets/icons/welt/flusssiedlung.png"
+      },
+      {
+        "id": "location-bauernhof",
+        "label": "Bauernhof",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/bauernsiedlung.png"
+      },
+      {
+        "id": "location-landgut",
+        "label": "Landgut",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/landgut.png"
+      },
+      {
+        "id": "location-anwesen",
+        "label": "Anwesen",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/anwesen.png"
+      },
+      {
+        "id": "location-rittergut",
+        "label": "Rittergut",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/kleine-burg.png"
+      },
+      {
+        "id": "location-weingut",
+        "label": "Weingut",
+        "color": "#a45630",
+        "marker": "/Karten/assets/icons/welt/weingut.png"
+      },
+      {
+        "id": "location-obstplantage",
+        "label": "Obstplantage",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/obstplantage.png"
+      },
+      {
+        "id": "location-viehweide",
+        "label": "Viehweide",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/weide.png"
+      },
+      {
+        "id": "location-gestuet",
+        "label": "Gestüt",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/gest-t.png"
+      },
+      {
+        "id": "location-muehle",
+        "label": "Mühle",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/m-hle.png"
+      },
+      {
+        "id": "location-mine",
+        "label": "Mine",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/einzelnemine.png"
+      },
+      {
+        "id": "location-steinbruch",
+        "label": "Steinbruch",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/steinbruch-1.png"
+      },
+      {
+        "id": "location-schmiede",
+        "label": "Schmiede",
+        "color": "#a45630",
+        "marker": "/Karten/assets/icons/welt/schmiede.png"
+      },
+      {
+        "id": "location-brauerei",
+        "label": "Brauerei",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/brauersiedlung.png"
+      },
+      {
+        "id": "location-fischerei",
+        "label": "Fischerei",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/fischerh-tte.png"
+      },
+      {
+        "id": "location-holzfaellerlager",
+        "label": "Holzfällerlager",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/holzf-llerlager.png"
+      },
+      {
+        "id": "location-koehlerei",
+        "label": "Köhlerei",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/k-hler3.png"
+      },
+      {
+        "id": "location-imkerei",
+        "label": "Imkerei",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/imkerhof.png"
+      },
+      {
+        "id": "location-handelskontor",
+        "label": "Handelskontor",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/kontor.png"
+      },
+      {
+        "id": "location-markt",
+        "label": "Markt",
+        "color": "#a45630",
+        "marker": "/Karten/assets/icons/welt/marktstand.png"
+      },
+      {
+        "id": "location-gildenhaus",
+        "label": "Gildenhaus",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/gildenzentrale.png"
+      },
+      {
+        "id": "location-burg",
+        "label": "Burg",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/gro-e-burg.png"
+      },
+      {
+        "id": "location-turm",
+        "label": "Turm",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/turm.png"
+      },
+      {
+        "id": "location-leuchtturm",
+        "label": "Leuchtturm",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/leuchtturm.png"
+      },
+      {
+        "id": "location-aussenposten",
+        "label": "Außenposten",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/au-enposten.png"
+      },
+      {
+        "id": "location-grenzposten",
+        "label": "Grenzposten",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/zoll-grenzposten.png"
+      },
+      {
+        "id": "location-heerlager",
+        "label": "Heerlager",
+        "color": "#a45630",
+        "marker": "/Karten/assets/icons/welt/heereslager.png"
+      },
+      {
+        "id": "location-lagerplatz",
+        "label": "Lagerplatz",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/lager.png"
+      },
+      {
+        "id": "location-jaegerlager",
+        "label": "Jägerlager",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/j-gerlager.png"
+      },
+      {
+        "id": "location-jagdhaus",
+        "label": "Jagdhaus",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/j-gerhaus.png"
+      },
+      {
+        "id": "location-druidenhuette",
+        "label": "Druidenhütte",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/druidenh-tte.png"
+      },
+      {
+        "id": "location-hexenhuette",
+        "label": "Hexenhütte",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/hexenhaus.png"
+      },
+      {
+        "id": "location-schrein",
+        "label": "Schrein",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/wegschrein.png"
+      },
+      {
+        "id": "location-heiligtum",
+        "label": "Heiligtum",
+        "color": "#a45630",
+        "marker": "/Karten/assets/icons/welt/heiligtum.png"
+      },
+      {
+        "id": "location-friedhof",
+        "label": "Friedhof",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/l-ndlicher-friedhof.png"
+      },
+      {
+        "id": "location-grabstaette",
+        "label": "Grabstätte",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/grabmal.png"
+      },
+      {
+        "id": "location-ruine",
+        "label": "Ruine",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/ruine2.png"
+      },
+      {
+        "id": "location-ausgrabung",
+        "label": "Ausgrabung",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/ausgrabung.png"
+      },
+      {
+        "id": "location-hoehle",
+        "label": "Höhle",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/h-hle.png"
+      },
+      {
+        "id": "location-hain",
+        "label": "Hain",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/hain.png"
+      },
+      {
+        "id": "location-ahnenbaum",
+        "label": "Ahnenbaum",
+        "color": "#a45630",
+        "marker": "/Karten/assets/icons/welt/ahnenbaum.png"
+      },
+      {
+        "id": "location-quelle",
+        "label": "Quelle",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/quelle.png"
+      },
+      {
+        "id": "location-berggipfel",
+        "label": "Berggipfel",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/gipfel.png"
+      },
+      {
+        "id": "location-monsterhort",
+        "label": "Monsterhort",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/kreaturenhort.png"
+      },
+      {
+        "id": "location-banditenlager",
+        "label": "Banditenlager",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/banditenlager.png"
+      },
+      {
+        "id": "location-hafen",
+        "label": "Hafen / Steg",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/gro-er-hafen.png"
+      },
+      {
+        "id": "location-werft",
+        "label": "Werft",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/schiffswerft.png"
+      },
+      {
+        "id": "location-poststation",
+        "label": "Poststation",
+        "color": "#a45630",
+        "marker": "/Karten/assets/icons/welt/poststation.png"
+      },
+      {
+        "id": "location-schule",
+        "label": "Schule",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/l-ndliche-universit-t.png"
+      },
+      {
+        "id": "location-zirkus",
+        "label": "Zirkus",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/zirkus3.png"
+      },
+      {
+        "id": "location-wohnhaus",
+        "label": "Wohnhaus",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/b-uerliches-heim.png"
+      },
+      {
+        "id": "location-brauersiedlung",
+        "label": "Brauersiedlung",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/brauersiedlung.png"
+      },
+      {
+        "id": "location-klostersiedlung",
+        "label": "Klostersiedlung",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/klostersiedlung.png"
+      },
+      {
+        "id": "location-rosszuchtsiedlung",
+        "label": "Rosszuchtsiedlung",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/pferdezuchtsiedlung.png"
+      },
+      {
+        "id": "location-sumpfsiedlung",
+        "label": "Sumpfsiedlung",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/sumpfsiedlung.png"
+      },
+      {
+        "id": "location-unterwasserstadt",
+        "label": "Unterwasserstadt",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/unterwasserstadt.png"
+      },
+      {
+        "id": "location-festung",
+        "label": "Festung",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/festung.png"
+      },
+      {
+        "id": "location-magierturm",
+        "label": "Magierturm",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/magierturm.png"
+      },
+      {
+        "id": "location-diebesgilde",
+        "label": "Diebesgilde",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/diebesgilde.png"
+      },
+      {
+        "id": "location-piratenversteck",
+        "label": "Piratenversteck",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/piratenlager.png"
+      },
+      {
+        "id": "location-schmugglerversteck",
+        "label": "Schmugglerversteck",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/schmuggler3.png"
+      },
+      {
+        "id": "location-verwunschener-wald",
+        "label": "Verwunschener Wald",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/waldschrat.png"
+      },
+      {
+        "id": "location-wahrzeichen",
+        "label": "Wahrzeichen",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/wahrzeichen.png"
+      },
+      {
+        "id": "location-dimensionaler-riss",
+        "label": "Dimensionaler Riss",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/dimensionaler-riss.png"
+      },
+      {
+        "id": "location-galgen",
+        "label": "Galgen",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/exekutionsplatz.png"
+      },
+      {
+        "id": "location-muenzpraegestaette",
+        "label": "Münzprägestätte",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/m-nzpr-ger.png"
+      },
+      {
+        "id": "location-bogenschiessstand",
+        "label": "Bogenschießstand",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/schie-stand2.png"
+      },
+      {
+        "id": "location-ziegelei",
+        "label": "Ziegelei",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/ziegelbrenner.png"
+      },
+      {
+        "id": "location-schiff",
+        "label": "Schiff",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/orte/schiff-gut.png"
+      },
+      {
+        "id": "location-kreaturenlager",
+        "label": "Kreaturenlager",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/goblinlager.png"
+      },
+      {
+        "id": "location-heisse-quellen",
+        "label": "Heiße Quellen",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/hei-e-quellen.png"
+      },
+      {
+        "id": "location-brueckenruine",
+        "label": "Brückenruine",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/zerst-rte-br-cke.png"
+      },
+      {
+        "id": "location-kirchenruine",
+        "label": "Kirchenruine",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/zerst-rte-kirche.png"
+      },
+      {
+        "id": "location-hausruine",
+        "label": "Hausruine",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/zerst-rtes-heim.png"
+      },
+      {
+        "id": "location-huegelgrab",
+        "label": "Hügelgrab",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/h-gelgrab.png"
+      },
+      {
+        "id": "location-plantage",
+        "label": "Plantage",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/landgut.png"
+      },
+      {
+        "id": "location-kultstaette",
+        "label": "Kultstätte",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/okkulter-schrein.png"
+      },
+      {
+        "id": "location-zelt",
+        "label": "Zelt",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/ritterlicheszelt.png"
+      },
+      {
+        "id": "location-faehrstelle",
+        "label": "Fährstelle",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/orte/f-hre-steg.png"
+      },
+      {
+        "id": "location-schlachtfeld",
+        "label": "Schlachtfeld",
+        "color": "#6060b0"
+      }
+    ],
+    "categoryCatalogVersion": 3,
+    "regions": [
+      {
+        "id": "wa-acbd71ac-85df-4e89-9e66-b1d0d86ccd06",
+        "name": "Herrschaft der Ard Trodach",
+        "shortName": "Ard Trodach",
+        "kind": "boundary",
+        "paths": [
+          [
+            [
+              0.93066406,
+              0.85742124
+            ],
+            [
+              1.07421875,
+              0.89769406
+            ],
+            [
+              1.14160156,
+              0.81065281
+            ],
+            [
+              1.26367188,
+              0.63657032
+            ],
+            [
+              1.42773438,
+              0.40792465
+            ],
+            [
+              1.25,
+              0.4443001
+            ],
+            [
+              1.03320313,
+              0.4105229
+            ],
+            [
+              0.99121094,
+              0.58720364
+            ],
+            [
+              0.93066406,
+              0.85612212
+            ]
+          ]
+        ],
+        "color": "#e9c46a",
+        "borderColor": "#e9c46a",
+        "opacity": 0,
+        "parentId": "wa-945d1344-d509-4917-9aaa-c4876669336e",
+        "dominionId": "region-acbd71ac-85df-4e89-9e66-b1d0d86ccd06",
+        "familyId": "haus-ard-trodach",
+        "targetMapId": "",
+        "showLabel": false,
+        "note": "",
+        "source": {
+          "type": "world-anvil",
+          "mapId": "41225047-cb8f-415f-9f20-a4150053d7ae",
+          "markerId": "acbd71ac-85df-4e89-9e66-b1d0d86ccd06",
+          "coordinateSystem": "normalized-top-left",
+          "geometryMethod": "visible-svg",
+          "url": "https://www.worldanvil.com/world/map/marker/acbd71ac-85df-4e89-9e66-b1d0d86ccd06/edit"
+        },
+        "familyName": "Ard Trodach"
+      },
+      {
+        "id": "wa-59822a1e-e6e1-4b07-86f6-7878a845a26e",
+        "name": "Herrschaft der Nic Caoimhe",
+        "shortName": "Nic Caoimhe",
+        "kind": "boundary",
+        "paths": [
+          [
+            [
+              0.21777344,
+              -0.13640792
+            ],
+            [
+              0.20019531,
+              0.03897369
+            ],
+            [
+              0.36621094,
+              0.2195518
+            ],
+            [
+              0.55664063,
+              0.15849302
+            ],
+            [
+              0.62011719,
+              -0.03767457
+            ],
+            [
+              0.76171875,
+              -0.10782722
+            ],
+            [
+              0.7265625,
+              -0.19876583
+            ]
+          ],
+          [
+            [
+              0.46386719,
+              -0.19876583
+            ],
+            [
+              0.21875,
+              -0.13770705
+            ],
+            [
+              0.43945313,
+              0.03117895
+            ],
+            [
+              0.19921875,
+              0.03637545
+            ],
+            [
+              0.43945313,
+              0.02987983
+            ],
+            [
+              0.36621094,
+              0.21175706
+            ],
+            [
+              0.43847656,
+              0.03117895
+            ],
+            [
+              0.55664063,
+              0.15719389
+            ],
+            [
+              0.43945313,
+              0.02728158
+            ],
+            [
+              0.62304688,
+              -0.04027282
+            ]
+          ]
+        ],
+        "color": "#ff0808",
+        "borderColor": "#ff0808",
+        "opacity": 0,
+        "parentId": "wa-945d1344-d509-4917-9aaa-c4876669336e",
+        "dominionId": "region-59822a1e-e6e1-4b07-86f6-7878a845a26e",
+        "familyId": "haus-nic-caoimhe",
+        "targetMapId": "",
+        "showLabel": false,
+        "note": "",
+        "source": {
+          "type": "world-anvil",
+          "mapId": "41225047-cb8f-415f-9f20-a4150053d7ae",
+          "markerId": "59822a1e-e6e1-4b07-86f6-7878a845a26e",
+          "coordinateSystem": "normalized-top-left",
+          "geometryMethod": "visible-svg",
+          "url": "https://www.worldanvil.com/world/map/marker/59822a1e-e6e1-4b07-86f6-7878a845a26e/edit"
+        },
+        "familyName": "Nic Caoimhe"
+      },
+      {
+        "id": "wa-945d1344-d509-4917-9aaa-c4876669336e",
+        "name": "Oberherrschaft Tir na Gortanna",
+        "shortName": "Tir na Gortanna",
+        "kind": "area",
+        "paths": [
+          [
+            [
+              1.21289063,
+              0.94186424
+            ],
+            [
+              1.22265625,
+              0.91977915
+            ],
+            [
+              1.2421875,
+              0.89249756
+            ],
+            [
+              1.27832031,
+              0.8158493
+            ],
+            [
+              1.28417969,
+              0.77557649
+            ],
+            [
+              1.28808594,
+              0.71841507
+            ],
+            [
+              1.29980469,
+              0.6807405
+            ],
+            [
+              1.31542969,
+              0.67554401
+            ],
+            [
+              1.34667969,
+              0.60798961
+            ],
+            [
+              1.38378906,
+              0.58330627
+            ],
+            [
+              1.43945313,
+              0.55082819
+            ],
+            [
+              1.46191406,
+              0.53004222
+            ],
+            [
+              1.46582031,
+              0.51445274
+            ],
+            [
+              1.46289063,
+              0.49626502
+            ],
+            [
+              1.46875,
+              0.47288081
+            ],
+            [
+              1.47460938,
+              0.46378694
+            ],
+            [
+              1.48925781,
+              0.4611887
+            ],
+            [
+              1.4921875,
+              0.45729133
+            ],
+            [
+              1.4921875,
+              0.45079571
+            ],
+            [
+              1.484375,
+              0.4443001
+            ],
+            [
+              1.48046875,
+              0.42091588
+            ],
+            [
+              1.48535156,
+              0.40402728
+            ],
+            [
+              1.48730469,
+              0.38973693
+            ],
+            [
+              1.48242188,
+              0.37934394
+            ],
+            [
+              1.48242188,
+              0.35336148
+            ],
+            [
+              1.47851563,
+              0.34166937
+            ],
+            [
+              1.47851563,
+              0.32997727
+            ],
+            [
+              1.48144531,
+              0.31178954
+            ],
+            [
+              1.45898438,
+              0.30009743
+            ],
+            [
+              1.44824219,
+              0.30529393
+            ],
+            [
+              1.42480469,
+              0.30789217
+            ],
+            [
+              1.41894531,
+              0.29620006
+            ],
+            [
+              1.41796875,
+              0.28190971
+            ],
+            [
+              1.41992188,
+              0.26761936
+            ],
+            [
+              1.42480469,
+              0.25982462
+            ],
+            [
+              1.43359375,
+              0.25722637
+            ],
+            [
+              1.44335938,
+              0.24683339
+            ],
+            [
+              1.45019531,
+              0.23384216
+            ],
+            [
+              1.45898438,
+              0.22474829
+            ],
+            [
+              1.47070313,
+              0.21825268
+            ],
+            [
+              1.45800781,
+              0.21305619
+            ],
+            [
+              1.44921875,
+              0.20526145
+            ],
+            [
+              1.44726563,
+              0.19097109
+            ],
+            [
+              1.453125,
+              0.15069828
+            ],
+            [
+              1.41113281,
+              0.14550179
+            ],
+            [
+              1.39746094,
+              0.14939916
+            ],
+            [
+              1.3828125,
+              0.13900617
+            ],
+            [
+              1.36523438,
+              0.12211757
+            ],
+            [
+              1.36035156,
+              0.10392985
+            ],
+            [
+              1.36328125,
+              0.08963949
+            ],
+            [
+              1.36132813,
+              0.0675544
+            ],
+            [
+              1.34570313,
+              0.06495615
+            ],
+            [
+              1.33398438,
+              0.05846054
+            ],
+            [
+              1.33007813,
+              0.04287106
+            ],
+            [
+              1.32910156,
+              0.02728158
+            ],
+            [
+              1.296875,
+              0.02208509
+            ],
+            [
+              1.27929688,
+              0.0168886
+            ],
+            [
+              1.26367188,
+              0.00259825
+            ],
+            [
+              1.265625,
+              -0.03247808
+            ],
+            [
+              1.27148438,
+              -0.07794739
+            ],
+            [
+              1.28417969,
+              -0.11042546
+            ],
+            [
+              1.26269531,
+              -0.10782722
+            ],
+            [
+              1.23632813,
+              -0.11302371
+            ],
+            [
+              1.21386719,
+              -0.10912634
+            ],
+            [
+              1.19140625,
+              -0.12081845
+            ],
+            [
+              1.18847656,
+              -0.13640792
+            ],
+            [
+              1.18945313,
+              -0.15329652
+            ],
+            [
+              1.1953125,
+              -0.16239039
+            ],
+            [
+              1.16796875,
+              -0.168886
+            ],
+            [
+              1.1484375,
+              -0.16368951
+            ],
+            [
+              1.12597656,
+              -0.168886
+            ],
+            [
+              1.11230469,
+              -0.18837285
+            ],
+            [
+              1.10742188,
+              -0.21175706
+            ],
+            [
+              0.26074219,
+              -0.21175706
+            ],
+            [
+              0.25976563,
+              -0.19876583
+            ],
+            [
+              0.22949219,
+              -0.17668074
+            ],
+            [
+              0.20605469,
+              -0.17018513
+            ],
+            [
+              0.18652344,
+              -0.17278337
+            ],
+            [
+              0.17480469,
+              -0.17927899
+            ],
+            [
+              0.17480469,
+              -0.15849302
+            ],
+            [
+              0.16308594,
+              -0.14550179
+            ],
+            [
+              0.14355469,
+              -0.13121143
+            ],
+            [
+              0.13183594,
+              -0.11432283
+            ],
+            [
+              0.11035156,
+              -0.10782722
+            ],
+            [
+              0.10253906,
+              -0.1013316
+            ],
+            [
+              0.08984375,
+              -0.07794739
+            ],
+            [
+              0.06347656,
+              -0.06105879
+            ],
+            [
+              0.04199219,
+              -0.07145177
+            ],
+            [
+              0.03613281,
+              -0.04806755
+            ],
+            [
+              0.0234375,
+              -0.0337772
+            ],
+            [
+              0.00683594,
+              -0.02338422
+            ],
+            [
+              -0.00878906,
+              -0.0168886
+            ],
+            [
+              -0.04003906,
+              -0.00779474
+            ],
+            [
+              -0.04003906,
+              0.01299123
+            ],
+            [
+              -0.05273438,
+              0.02468334
+            ],
+            [
+              -0.0546875,
+              0.03507632
+            ],
+            [
+              -0.078125,
+              0.04676843
+            ],
+            [
+              -0.09472656,
+              0.04417019
+            ],
+            [
+              -0.13769531,
+              0.02728158
+            ],
+            [
+              -0.140625,
+              0.04417019
+            ],
+            [
+              -0.15722656,
+              0.06105879
+            ],
+            [
+              -0.1875,
+              0.06625528
+            ],
+            [
+              -0.19726563,
+              0.07275089
+            ],
+            [
+              -0.22363281,
+              0.06885352
+            ],
+            [
+              -0.234375,
+              0.06495615
+            ],
+            [
+              -0.23925781,
+              0.07145177
+            ],
+            [
+              -0.26464844,
+              0.09483599
+            ],
+            [
+              -0.27050781,
+              0.10263072
+            ],
+            [
+              -0.30371094,
+              0.09353686
+            ],
+            [
+              -0.30957031,
+              0.08834037
+            ],
+            [
+              -0.32910156,
+              0.10003248
+            ],
+            [
+              -0.34179688,
+              0.11302371
+            ],
+            [
+              -0.35546875,
+              0.11302371
+            ],
+            [
+              -0.3671875,
+              0.11042546
+            ],
+            [
+              -0.3828125,
+              0.12601494
+            ],
+            [
+              -0.38183594,
+              0.13640792
+            ],
+            [
+              -0.39550781,
+              0.15329652
+            ],
+            [
+              -0.40527344,
+              0.15849302
+            ],
+            [
+              -0.42480469,
+              0.17538162
+            ],
+            [
+              -0.42382813,
+              0.20526145
+            ],
+            [
+              -0.43847656,
+              0.22085093
+            ],
+            [
+              -0.44628906,
+              0.22474829
+            ],
+            [
+              -0.45605469,
+              0.23384216
+            ],
+            [
+              -0.45214844,
+              0.24553426
+            ],
+            [
+              -0.45019531,
+              0.2585255
+            ],
+            [
+              -0.46289063,
+              0.30659305
+            ],
+            [
+              -0.47460938,
+              0.31438779
+            ],
+            [
+              -0.49023438,
+              0.3208834
+            ],
+            [
+              -0.49023438,
+              0.48457291
+            ],
+            [
+              -0.46289063,
+              0.47547905
+            ],
+            [
+              -0.43652344,
+              0.49106853
+            ],
+            [
+              -0.42285156,
+              0.50925625
+            ],
+            [
+              -0.41308594,
+              0.54303345
+            ],
+            [
+              -0.40332031,
+              0.56771679
+            ],
+            [
+              -0.38574219,
+              0.56641767
+            ],
+            [
+              -0.3671875,
+              0.55732381
+            ],
+            [
+              -0.33984375,
+              0.55472556
+            ],
+            [
+              -0.32617188,
+              0.56381942
+            ],
+            [
+              -0.30761719,
+              0.59369925
+            ],
+            [
+              -0.28808594,
+              0.59889575
+            ],
+            [
+              -0.27734375,
+              0.61188698
+            ],
+            [
+              -0.2734375,
+              0.62487821
+            ],
+            [
+              -0.2578125,
+              0.6300747
+            ],
+            [
+              -0.22851563,
+              0.63527119
+            ],
+            [
+              -0.20214844,
+              0.64956155
+            ],
+            [
+              -0.19042969,
+              0.66904839
+            ],
+            [
+              -0.17480469,
+              0.70152647
+            ],
+            [
+              -0.15136719,
+              0.73530367
+            ],
+            [
+              -0.12402344,
+              0.76648262
+            ],
+            [
+              -0.12792969,
+              0.78986684
+            ],
+            [
+              -0.12402344,
+              0.8327379
+            ],
+            [
+              -0.11230469,
+              0.84702826
+            ],
+            [
+              -0.08496094,
+              0.85872036
+            ],
+            [
+              -0.07519531,
+              0.87430984
+            ],
+            [
+              -0.07714844,
+              0.89899318
+            ],
+            [
+              -0.0703125,
+              0.90808704
+            ],
+            [
+              -0.05761719,
+              0.90808704
+            ],
+            [
+              -0.04589844,
+              0.9002923
+            ],
+            [
+              -0.03417969,
+              0.89639493
+            ],
+            [
+              -0.01757813,
+              0.9002923
+            ],
+            [
+              -0.01074219,
+              0.86521598
+            ],
+            [
+              -0.00488281,
+              0.85222475
+            ],
+            [
+              0.02929688,
+              0.84313089
+            ],
+            [
+              0.05664063,
+              0.85872036
+            ],
+            [
+              0.08300781,
+              0.8665151
+            ],
+            [
+              0.09960938,
+              0.88210458
+            ],
+            [
+              0.11425781,
+              0.88080546
+            ],
+            [
+              0.12695313,
+              0.88860019
+            ],
+            [
+              0.13671875,
+              0.9002923
+            ],
+            [
+              0.16210938,
+              0.87820721
+            ],
+            [
+              0.1796875,
+              0.8665151
+            ],
+            [
+              0.20019531,
+              0.8665151
+            ],
+            [
+              0.21679688,
+              0.87430984
+            ],
+            [
+              0.23144531,
+              0.89249756
+            ],
+            [
+              0.24511719,
+              0.92757389
+            ],
+            [
+              0.25,
+              0.95875284
+            ],
+            [
+              0.25878906,
+              0.98863267
+            ],
+            [
+              0.25878906,
+              0.99642741
+            ],
+            [
+              0.26757813,
+              1.00941864
+            ],
+            [
+              0.26953125,
+              1.02111075
+            ],
+            [
+              0.26757813,
+              1.05618707
+            ],
+            [
+              0.27929688,
+              1.07177655
+            ],
+            [
+              0.29199219,
+              1.08476778
+            ],
+            [
+              0.29492188,
+              1.10945112
+            ],
+            [
+              0.30273438,
+              1.12633972
+            ],
+            [
+              0.30859375,
+              1.14712569
+            ],
+            [
+              0.32714844,
+              1.18220201
+            ],
+            [
+              0.34863281,
+              1.21208184
+            ],
+            [
+              0.36230469,
+              1.21208184
+            ],
+            [
+              0.36425781,
+              1.20428711
+            ],
+            [
+              0.38085938,
+              1.19389412
+            ],
+            [
+              0.41894531,
+              1.17830464
+            ],
+            [
+              0.49414063,
+              1.17960377
+            ],
+            [
+              0.52929688,
+              1.17050991
+            ],
+            [
+              0.56152344,
+              1.14452744
+            ],
+            [
+              0.61035156,
+              1.11854498
+            ],
+            [
+              0.625,
+              1.10555375
+            ],
+            [
+              0.62695313,
+              1.08476778
+            ],
+            [
+              0.63183594,
+              1.07177655
+            ],
+            [
+              0.64160156,
+              1.06138357
+            ],
+            [
+              0.6640625,
+              1.05099058
+            ],
+            [
+              0.69238281,
+              1.04319584
+            ],
+            [
+              0.71386719,
+              1.02500812
+            ],
+            [
+              0.80078125,
+              0.96135109
+            ],
+            [
+              0.83691406,
+              0.97434232
+            ],
+            [
+              0.86523438,
+              0.96394933
+            ],
+            [
+              0.87402344,
+              0.95875284
+            ],
+            [
+              0.8984375,
+              0.96265021
+            ],
+            [
+              0.921875,
+              0.95355635
+            ],
+            [
+              0.93652344,
+              0.94446249
+            ],
+            [
+              0.95898438,
+              0.95875284
+            ],
+            [
+              0.97070313,
+              0.95875284
+            ],
+            [
+              0.98828125,
+              0.9678467
+            ],
+            [
+              1.02636719,
+              0.97564144
+            ],
+            [
+              1.17675781,
+              0.96394933
+            ],
+            [
+              1.20703125,
+              0.94835986
+            ]
+          ]
+        ],
+        "color": "#aa00ff",
+        "borderColor": "#ff0000",
+        "opacity": 0.5,
+        "parentId": "",
+        "dominionId": "region-945d1344-d509-4917-9aaa-c4876669336e",
+        "familyId": "haus-dal-cruthin",
+        "targetMapId": "",
+        "showLabel": true,
+        "note": "",
+        "source": {
+          "type": "world-anvil",
+          "mapId": "41225047-cb8f-415f-9f20-a4150053d7ae",
+          "markerId": "945d1344-d509-4917-9aaa-c4876669336e",
+          "coordinateSystem": "normalized-top-left",
+          "geometryMethod": "visible-svg",
+          "url": "https://www.worldanvil.com/world/map/marker/945d1344-d509-4917-9aaa-c4876669336e/edit"
+        },
+        "familyName": "Clan Dál’Cruthin"
+      },
+      {
+        "id": "wa-fa9af8ee-b1be-4e22-9637-5234dc76e54e",
+        "name": "Lehnsherrschaft von Lasbun",
+        "shortName": "Lasbun",
+        "kind": "area",
+        "paths": [
+          [
+            [
+              0.36132813,
+              1.21857746
+            ],
+            [
+              0.36230469,
+              1.21338097
+            ],
+            [
+              0.3984375,
+              1.18739851
+            ],
+            [
+              0.43066406,
+              1.17700552
+            ],
+            [
+              0.49609375,
+              1.17700552
+            ],
+            [
+              0.53027344,
+              1.17180903
+            ],
+            [
+              0.54785156,
+              1.15232218
+            ],
+            [
+              0.58789063,
+              1.1250406
+            ],
+            [
+              0.62402344,
+              1.10555375
+            ],
+            [
+              0.62890625,
+              1.08736603
+            ],
+            [
+              0.62792969,
+              1.07177655
+            ],
+            [
+              0.64550781,
+              1.05878532
+            ],
+            [
+              0.67382813,
+              1.04969146
+            ],
+            [
+              0.70019531,
+              1.03799935
+            ],
+            [
+              0.76171875,
+              0.99253004
+            ],
+            [
+              0.7734375,
+              0.98343618
+            ],
+            [
+              0.78417969,
+              0.97174407
+            ],
+            [
+              0.79296875,
+              0.96654758
+            ],
+            [
+              0.80371094,
+              0.96265021
+            ],
+            [
+              0.82324219,
+              0.97434232
+            ],
+            [
+              0.84765625,
+              0.97434232
+            ],
+            [
+              0.87109375,
+              0.95875284
+            ],
+            [
+              0.87695313,
+              0.95875284
+            ],
+            [
+              0.890625,
+              0.96654758
+            ],
+            [
+              0.90527344,
+              0.96394933
+            ],
+            [
+              0.91503906,
+              0.95745372
+            ],
+            [
+              0.92578125,
+              0.94706073
+            ],
+            [
+              0.93554688,
+              0.94186424
+            ],
+            [
+              0.94335938,
+              0.94186424
+            ],
+            [
+              0.95410156,
+              0.95745372
+            ],
+            [
+              0.97070313,
+              0.95485547
+            ],
+            [
+              1.00488281,
+              0.97953881
+            ],
+            [
+              1.08105469,
+              0.96914583
+            ],
+            [
+              1.16210938,
+              0.96394933
+            ],
+            [
+              1.21484375,
+              0.94446249
+            ],
+            [
+              1.27539063,
+              0.97694057
+            ],
+            [
+              1.29492188,
+              0.9899318
+            ],
+            [
+              1.34277344,
+              1.02760637
+            ],
+            [
+              1.41894531,
+              1.07957129
+            ],
+            [
+              1.46386719,
+              1.12893797
+            ],
+            [
+              1.4921875,
+              1.14842481
+            ],
+            [
+              1.49707031,
+              1.17050991
+            ],
+            [
+              1.49707031,
+              1.21857746
+            ]
+          ]
+        ],
+        "color": "#ff0000",
+        "borderColor": "#ff0000",
+        "opacity": 0.5,
+        "parentId": "wa-945d1344-d509-4917-9aaa-c4876669336e",
+        "dominionId": "region-fa9af8ee-b1be-4e22-9637-5234dc76e54e",
+        "familyId": "haus-frisealach",
+        "targetMapId": "",
+        "showLabel": true,
+        "note": "",
+        "source": {
+          "type": "world-anvil",
+          "mapId": "41225047-cb8f-415f-9f20-a4150053d7ae",
+          "markerId": "fa9af8ee-b1be-4e22-9637-5234dc76e54e",
+          "coordinateSystem": "normalized-top-left",
+          "geometryMethod": "visible-svg",
+          "url": "https://www.worldanvil.com/world/map/marker/fa9af8ee-b1be-4e22-9637-5234dc76e54e/edit"
+        },
+        "familyName": "Ard Frisealach"
+      },
+      {
+        "id": "wa-bb11fd6e-2000-4a57-9284-7b1295f3e3af",
+        "name": "Lehnsherrschaft der Sidhe Somhairle Clan",
+        "shortName": "Sidhe Somhairle Clan",
+        "kind": "area",
+        "paths": [
+          [
+            [
+              0.08496094,
+              0.8665151
+            ],
+            [
+              0.14355469,
+              0.82884053
+            ],
+            [
+              0.17871094,
+              0.78856772
+            ],
+            [
+              0.22167969,
+              0.72101332
+            ],
+            [
+              0.29882813,
+              0.65345892
+            ],
+            [
+              0.35839844,
+              0.6300747
+            ],
+            [
+              0.42773438,
+              0.56771679
+            ],
+            [
+              0.47265625,
+              0.53134134
+            ],
+            [
+              0.51464844,
+              0.50276064
+            ],
+            [
+              0.52050781,
+              0.45859045
+            ],
+            [
+              0.51171875,
+              0.43650536
+            ],
+            [
+              0.46777344,
+              0.41831764
+            ],
+            [
+              0.38476563,
+              0.40012991
+            ],
+            [
+              0.34179688,
+              0.3715492
+            ],
+            [
+              0.30664063,
+              0.28450796
+            ],
+            [
+              0.28710938,
+              0.253329
+            ],
+            [
+              0.25585938,
+              0.20915882
+            ],
+            [
+              0.20996094,
+              0.19746671
+            ],
+            [
+              0.1796875,
+              0.168886
+            ],
+            [
+              0.16601563,
+              0.10263072
+            ],
+            [
+              0.14355469,
+              0.05586229
+            ],
+            [
+              0.10058594,
+              0.01558948
+            ],
+            [
+              0.06445313,
+              -0.01039298
+            ],
+            [
+              0.0234375,
+              -0.03637545
+            ],
+            [
+              -0.03613281,
+              -0.00909386
+            ],
+            [
+              -0.04199219,
+              0.01299123
+            ],
+            [
+              -0.05859375,
+              0.03637545
+            ],
+            [
+              -0.06542969,
+              0.04157194
+            ],
+            [
+              -0.08886719,
+              0.04936668
+            ],
+            [
+              -0.12304688,
+              0.0337772
+            ],
+            [
+              -0.13476563,
+              0.03117895
+            ],
+            [
+              -0.15039063,
+              0.05846054
+            ],
+            [
+              -0.15625,
+              0.06235791
+            ],
+            [
+              -0.18554688,
+              0.05975966
+            ],
+            [
+              -0.19335938,
+              0.06885352
+            ],
+            [
+              -0.20214844,
+              0.07145177
+            ],
+            [
+              -0.24023438,
+              0.06885352
+            ],
+            [
+              -0.25488281,
+              0.08963949
+            ],
+            [
+              -0.265625,
+              0.10003248
+            ],
+            [
+              -0.27441406,
+              0.10522897
+            ],
+            [
+              -0.28515625,
+              0.09613511
+            ],
+            [
+              -0.31054688,
+              0.08704125
+            ],
+            [
+              -0.34082031,
+              0.11562196
+            ],
+            [
+              -0.37109375,
+              0.11302371
+            ],
+            [
+              -0.38085938,
+              0.12211757
+            ],
+            [
+              -0.38476563,
+              0.13900617
+            ],
+            [
+              -0.40625,
+              0.16239039
+            ],
+            [
+              -0.42089844,
+              0.17278337
+            ],
+            [
+              -0.42382813,
+              0.20656057
+            ],
+            [
+              -0.4375,
+              0.2195518
+            ],
+            [
+              -0.45214844,
+              0.22994479
+            ],
+            [
+              -0.45507813,
+              0.23773953
+            ],
+            [
+              -0.45214844,
+              0.253329
+            ],
+            [
+              -0.453125,
+              0.2702176
+            ],
+            [
+              -0.45898438,
+              0.29360182
+            ],
+            [
+              -0.46484375,
+              0.3091913
+            ],
+            [
+              -0.49023438,
+              0.32478077
+            ],
+            [
+              -0.49023438,
+              0.48457291
+            ],
+            [
+              -0.46386719,
+              0.48067554
+            ],
+            [
+              -0.44335938,
+              0.48197467
+            ],
+            [
+              -0.43066406,
+              0.49626502
+            ],
+            [
+              -0.421875,
+              0.51055538
+            ],
+            [
+              -0.41113281,
+              0.53783696
+            ],
+            [
+              -0.40625,
+              0.56122118
+            ],
+            [
+              -0.3984375,
+              0.56771679
+            ],
+            [
+              -0.36328125,
+              0.55602468
+            ],
+            [
+              -0.35058594,
+              0.55472556
+            ],
+            [
+              -0.328125,
+              0.55732381
+            ],
+            [
+              -0.30957031,
+              0.58980188
+            ],
+            [
+              -0.29394531,
+              0.59369925
+            ],
+            [
+              -0.27636719,
+              0.60279311
+            ],
+            [
+              -0.26953125,
+              0.62877558
+            ],
+            [
+              -0.22363281,
+              0.63267295
+            ],
+            [
+              -0.20507813,
+              0.64176681
+            ],
+            [
+              -0.1953125,
+              0.65605716
+            ],
+            [
+              -0.18359375,
+              0.67814225
+            ],
+            [
+              -0.17675781,
+              0.70022735
+            ],
+            [
+              -0.16113281,
+              0.71711595
+            ],
+            [
+              -0.14648438,
+              0.73920104
+            ],
+            [
+              -0.13085938,
+              0.75868789
+            ],
+            [
+              -0.12597656,
+              0.77167912
+            ],
+            [
+              -0.12695313,
+              0.82104579
+            ],
+            [
+              -0.12207031,
+              0.83143878
+            ],
+            [
+              -0.10742188,
+              0.84832738
+            ],
+            [
+              -0.08203125,
+              0.86131861
+            ],
+            [
+              -0.07910156,
+              0.86521598
+            ],
+            [
+              -0.07617188,
+              0.87690809
+            ],
+            [
+              -0.07421875,
+              0.89899318
+            ],
+            [
+              -0.06347656,
+              0.90418967
+            ],
+            [
+              -0.02832031,
+              0.89769406
+            ],
+            [
+              -0.02050781,
+              0.89899318
+            ],
+            [
+              -0.01464844,
+              0.88730107
+            ],
+            [
+              -0.00683594,
+              0.85352387
+            ],
+            [
+              0.00195313,
+              0.84702826
+            ],
+            [
+              0.03125,
+              0.84702826
+            ],
+            [
+              0.05078125,
+              0.85352387
+            ],
+            [
+              0.0703125,
+              0.86391686
+            ]
+          ]
+        ],
+        "color": "#00ff48",
+        "borderColor": "#ff0000",
+        "opacity": 0.5,
+        "parentId": "wa-945d1344-d509-4917-9aaa-c4876669336e",
+        "dominionId": "region-bb11fd6e-2000-4a57-9284-7b1295f3e3af",
+        "familyId": "haus-somhairle",
+        "targetMapId": "",
+        "showLabel": true,
+        "note": "",
+        "source": {
+          "type": "world-anvil",
+          "mapId": "41225047-cb8f-415f-9f20-a4150053d7ae",
+          "markerId": "bb11fd6e-2000-4a57-9284-7b1295f3e3af",
+          "coordinateSystem": "normalized-top-left",
+          "geometryMethod": "visible-svg",
+          "url": "https://www.worldanvil.com/world/map/marker/bb11fd6e-2000-4a57-9284-7b1295f3e3af/edit"
+        },
+        "familyName": "Sidhe Somhairle"
+      },
+      {
+        "id": "wa-32cf2679-8047-4302-ae13-0ac7540376c9",
+        "name": "Grenzgebiet",
+        "shortName": "Grenzgebiet",
+        "kind": "area",
+        "paths": [
+          [
+            [
+              1.46582031,
+              0.52354661
+            ],
+            [
+              1.45996094,
+              0.53653784
+            ],
+            [
+              1.42382813,
+              0.56122118
+            ],
+            [
+              1.36621094,
+              0.59369925
+            ],
+            [
+              1.34277344,
+              0.6131861
+            ],
+            [
+              1.31835938,
+              0.67554401
+            ],
+            [
+              1.30078125,
+              0.6807405
+            ],
+            [
+              1.29003906,
+              0.71062033
+            ],
+            [
+              1.28222656,
+              0.79376421
+            ],
+            [
+              1.26855469,
+              0.83533615
+            ],
+            [
+              1.24511719,
+              0.88989932
+            ],
+            [
+              1.21679688,
+              0.93277038
+            ],
+            [
+              1.21679688,
+              0.94316336
+            ],
+            [
+              1.28125,
+              0.97953881
+            ],
+            [
+              1.32714844,
+              1.01201689
+            ],
+            [
+              1.375,
+              1.0405976
+            ],
+            [
+              1.38964844,
+              1.05618707
+            ],
+            [
+              1.4140625,
+              1.07177655
+            ],
+            [
+              1.45800781,
+              1.12244235
+            ],
+            [
+              1.47167969,
+              1.13413446
+            ],
+            [
+              1.4921875,
+              1.14582657
+            ],
+            [
+              1.4921875,
+              0.6131861
+            ],
+            [
+              1.48925781,
+              0.6131861
+            ],
+            [
+              1.47949219,
+              0.60409224
+            ],
+            [
+              1.4765625,
+              0.59110101
+            ],
+            [
+              1.4765625,
+              0.57421241
+            ],
+            [
+              1.48339844,
+              0.54433258
+            ],
+            [
+              1.49121094,
+              0.53523871
+            ],
+            [
+              1.46972656,
+              0.53004222
+            ]
+          ]
+        ],
+        "color": "#000000",
+        "borderColor": "#ff0000",
+        "opacity": 0.5,
+        "parentId": "wa-945d1344-d509-4917-9aaa-c4876669336e",
+        "dominionId": "",
+        "familyId": "",
+        "targetMapId": "",
+        "showLabel": false,
+        "note": "Grenzgebiet · Zugehörigkeit offen",
+        "source": {
+          "type": "world-anvil",
+          "mapId": "41225047-cb8f-415f-9f20-a4150053d7ae",
+          "markerId": "32cf2679-8047-4302-ae13-0ac7540376c9",
+          "coordinateSystem": "normalized-top-left",
+          "geometryMethod": "visible-svg",
+          "url": "https://www.worldanvil.com/world/map/marker/32cf2679-8047-4302-ae13-0ac7540376c9/edit"
+        }
+      }
+    ],
+    "dominions": [
+      {
+        "id": "region-acbd71ac-85df-4e89-9e66-b1d0d86ccd06",
+        "name": "Herrschaft der Ard Trodach",
+        "type": "Herrschaft",
+        "ruler": "Ard Trodach",
+        "seat": "Lochansail",
+        "note": "",
+        "parentId": "region-945d1344-d509-4917-9aaa-c4876669336e"
+      },
+      {
+        "id": "region-59822a1e-e6e1-4b07-86f6-7878a845a26e",
+        "name": "Herrschaft der Nic Caoimhe",
+        "type": "Herrschaft",
+        "ruler": "Nic Caoimhe",
+        "seat": "Lochansail",
+        "note": "",
+        "parentId": "region-945d1344-d509-4917-9aaa-c4876669336e"
+      },
+      {
+        "id": "region-945d1344-d509-4917-9aaa-c4876669336e",
+        "name": "Oberherrschaft Tir na Gortanna",
+        "type": "Oberherrschaft",
+        "ruler": "Clan Dál’Cruthin",
+        "seat": "Lochansail",
+        "note": "",
+        "parentId": ""
+      },
+      {
+        "id": "region-fa9af8ee-b1be-4e22-9637-5234dc76e54e",
+        "name": "Lehnsherrschaft von Lasbun",
+        "type": "Herrschaft",
+        "ruler": "Ard Frisealach",
+        "seat": "Lasbun",
+        "note": "",
+        "parentId": "region-945d1344-d509-4917-9aaa-c4876669336e"
+      },
+      {
+        "id": "region-bb11fd6e-2000-4a57-9284-7b1295f3e3af",
+        "name": "Lehnsherrschaft der Sidhe Somhairle Clan",
+        "type": "Herrschaft",
+        "ruler": "Sidhe Somhairle",
+        "seat": "Broch an Clais",
+        "note": "",
+        "parentId": "region-945d1344-d509-4917-9aaa-c4876669336e"
+      }
+    ],
+    "regionTitle": "Tir na Gortanna",
+    "regionIcon": "/Stammbäume/assets/images/regions/Leitheach/tir-na-gortanna.png",
+    "mapImages": {
+      "normal": "/Karten/Leitheach/tir-na-gortanna/Kartenbilder/normal.webp",
+      "regions": "",
+      "pins": ""
+    },
+    "layerNames": {
+      "normal": "Karte",
+      "regions": "Regionen",
+      "pins": "Markierungen"
+    },
+    "dotSize": 80,
+    "lblSize": 50,
+    "displaySettingsVersion": 1,
+    "markerPresentation": "symbols",
+    "pinVisibilityVersion": 1,
+    "showMarkers": true,
+    "showPinLabels": false,
+    "alwaysShowLettering": false,
+    "extraLayers": [],
+    "dm": {
+      "sessions": [],
+      "notes": "",
+      "groupStatus": {}
+    }
+  }
+}

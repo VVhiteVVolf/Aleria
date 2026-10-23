@@ -3,11 +3,15 @@
 `index.html` ist die eigenständige Übersicht. Das vorhandene Ereignisse-Icon im
 Almanach öffnet sie; der Kalender bleibt eine eigene Seite.
 
-- `modules/catalog/events-data.mjs`: einzige Quelle der zehn benannten Ereignisse
+- `modules/catalog/events-data.mjs`: gemeinsames Register der elf benannten Ereignisse
   und sechs Kapitel aus der übergebenen Altübersicht. Texte wurden nur sprachlich
   bereinigt. Die unbenannte Reise wird als leeres Kapitel geführt. Die Hochzeit
   ist auf Nutzerangabe dem Jahr 1740 zugeordnet und öffnet das neue Festbuch;
   dessen Registry führt den genauen Termin am 27. Lichtkehr.
+- `modules/battles`: experimentelles Schlachtdossier der I. Seeschlacht bei
+  Wellenruh mit neuem Szenenbild und steuerbarer Rekonstruktion. Der exakt
+  überlieferte 11.04.1628 erscheint als einmaliger Quellenkalendereintrag.
+  Architektur, Bildprompt und Prüfungen: `modules/battles/README.md`.
 - `assets/icons`: unveränderte Original-Icons der Vorlage, lokal gespeichert;
   `sources.json` dokumentiert die Bildquellen. Jedes Ereignis wählt sein eigenes
   Motiv über `icon`. Die statische Ausgabe und die Filteransichten verwenden
@@ -42,6 +46,8 @@ Nach Datenänderungen `node Ereignisse/scripts/build-events.mjs` ausführen. Es
 aktualisiert nur die markierten Register-/Katalogbereiche in `index.html`;
 die HTML-Hülle bleibt handgepflegt. So ist die Übersicht ohne JavaScript lesbar.
 Der reguläre Almanach-Prebuild führt den Schritt ebenfalls aus.
+Die Schlachtseite wird mit `node Ereignisse/scripts/build-battles.mjs` erzeugt;
+der gemeinsame `build:events`-Schritt enthält auch diesen Generator.
 
 Prüfungen aus dem Workspace:
 

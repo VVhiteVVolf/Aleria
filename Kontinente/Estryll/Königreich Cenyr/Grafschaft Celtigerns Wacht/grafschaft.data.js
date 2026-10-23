@@ -9,7 +9,7 @@
     return Object.freeze({
       id,
       name,
-      imageSrc: `${houseImageRoot}/${emblem}`,
+      imageSrc: emblem.startsWith("/") ? emblem : `${houseImageRoot}/${emblem}`,
       imageAlt: `Wappen Haus ${name}`,
       href: `${housePage}${options.page || "kleinehaeuser.html"}?haus=${encodeURIComponent(id)}`,
       seat: options.seat || "",
@@ -73,6 +73,14 @@
       family("haus-gofrann", "Gofrann", "Llamreis Ankunft/Bürgerliche/Gwynthor/Gofrann.png", { seat: "Gwynthor · Zum Dritten Funken", liege: "Tlawd", rank: "Bürgerliches Haus" }),
       family("haus-svathamar", "Svathamar", "Llamreis Ankunft/Bürgerliche/Gwynthor/Svathamar.png", { seat: "Gwynthor · Krumme Kanne", liege: "Draig", rank: "Bürgerliches Haus" }),
       family("haus-dubhdarach", "Dubhdarach", "Llamreis Ankunft/Bürgerliche/Gwynthor/Dubhdarach.png", { seat: "Gwynthor · Krumme Kanne", liege: "Draig", rank: "Bürgerliches Haus" }),
+      family("haus-fontani", "Fontani", "Llamreis Ankunft/Bürgerliche/Gwynthor/Fontani.png", { seat: "Gwynthor · Badehaus", liege: "Draig", rank: "Bürgerliches Haus" }),
+      family("haus-rhwyd", "Rhwyd", "Llamreis Ankunft/Bürgerliche/Gwynthor/Rhwyd.png", { seat: "Gwynthor", liege: "Draig", rank: "Bürgerliches Haus" }),
+      family("haus-penrudd", "Penrudd", "Llamreis Ankunft/Bürgerliche/Bannkreis Gwynthor/Penrudd.png", { seat: "Bannkreis Gwynthor · Zum Roten Tor · Penrudd-Hof", liege: "Draig", rank: "Bürgerliches Haus" }),
+      family("haus-gwregysdu", "Gwregysdu", "Llamreis Ankunft/Bürgerliche/Gwynthor/Gwregysdu.png", { seat: "Gwynthor", liege: "Draig", rank: "Bürgerliches Haus" }),
+      family("haus-valerus", "Valerus", "Venalys/haus-valerus.png", { seat: "Gwynthor · Die rote Klaue", rank: "Bürgerliches Haus" }),
+      family("haus-fearnan", "Fearnan", "/AleriaAlmanach/assets/gwynthor-heime/fearnan/wappen.png", { seat: "Gwynthor", liege: "Draig", rank: "Bürgerliche Familie" }),
+      family("haus-torvik", "Torvik", "/AleriaAlmanach/assets/gwynthor-heime/torvik/wappen.png", { seat: "Gwynthor", liege: "Draig", rank: "Bürgerliche Familie" }),
+      family("haus-celynfor", "Celynfor", "/AleriaAlmanach/assets/gwynthor-heime/celynfor/wappen.png", { seat: "Gwynthor", liege: "Draig", rank: "Bürgerliche Familie" }),
       family("haus-argall", "Argall", "Llamreis Ankunft/Bürgerliche/Llysfaen/Argall.png", { seat: "Llysfaen", liege: "Wyrm" }),
     ]),
     familySection("Ausgestorbene Häuser", [

@@ -1,0 +1,3609 @@
+{
+  "imageSize": [
+    4063,
+    4097
+  ],
+  "coordinateOrigin": "bottom-left",
+  "markers": [
+    {
+      "id": "dunfal-0993227a-7258-4539-9fc9-a95e3775e27c",
+      "title": "Cradh na Fírinne",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "oberherrschaft-tir-na-fathach",
+      "x": 1335,
+      "y": 1917,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "0993227a-7258-4539-9fc9-a95e3775e27c",
+        "url": "https://www.worldanvil.com/world/map/marker/0993227a-7258-4539-9fc9-a95e3775e27c/edit",
+        "title": "Cradh na Fírinne",
+        "coordinates": {
+          "x": 1335,
+          "y": 1917,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-0f74844f-16c7-4def-99df-658b13ab8bd0",
+      "title": "Baile Begg",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "herrschaft-riangabra",
+      "x": 2852,
+      "y": 2420,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "0f74844f-16c7-4def-99df-658b13ab8bd0",
+        "url": "https://www.worldanvil.com/world/map/marker/0f74844f-16c7-4def-99df-658b13ab8bd0/edit",
+        "title": "Baile Begg",
+        "coordinates": {
+          "x": 2852,
+          "y": 2420,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-54ce58e0-ee00-40bb-b5fb-4c7386a59ba8",
+      "title": "Athenry",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "herrschaft-eachtrai",
+      "x": 2119,
+      "y": 2991,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "54ce58e0-ee00-40bb-b5fb-4c7386a59ba8",
+        "url": "https://www.worldanvil.com/world/map/marker/54ce58e0-ee00-40bb-b5fb-4c7386a59ba8/edit",
+        "title": "Athenry",
+        "coordinates": {
+          "x": 2119,
+          "y": 2991,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-7b1cf8b1-76c3-4ba9-90c7-64cfa07a05a4",
+      "title": "Iarthar",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "herrschaft-morath",
+      "x": 2692,
+      "y": 1400,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "7b1cf8b1-76c3-4ba9-90c7-64cfa07a05a4",
+        "url": "https://www.worldanvil.com/world/map/marker/7b1cf8b1-76c3-4ba9-90c7-64cfa07a05a4/edit",
+        "title": "Iarthar",
+        "coordinates": {
+          "x": 2692,
+          "y": 1400,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-c0bb185c-e548-4952-b4df-d456c9f8fa0a",
+      "title": "Dunfal",
+      "category": "Hauptstadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "oberherrschaft-tir-na-rithe",
+      "x": 1481,
+      "y": 294,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "c0bb185c-e548-4952-b4df-d456c9f8fa0a",
+        "url": "https://www.worldanvil.com/world/map/marker/c0bb185c-e548-4952-b4df-d456c9f8fa0a/edit",
+        "title": "Dunfal",
+        "coordinates": {
+          "x": 1481,
+          "y": 294,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-c60315c2-fae8-4200-880e-137552a72ea2",
+      "title": "Braighmòr",
+      "category": "Burg",
+      "templateId": "militaer",
+      "icon": "/Karten/assets/icons/welt/gro-e-burg.png",
+      "territoryId": "herrschaft-ailella",
+      "x": 2068,
+      "y": 640,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "c60315c2-fae8-4200-880e-137552a72ea2",
+        "url": "https://www.worldanvil.com/world/map/marker/c60315c2-fae8-4200-880e-137552a72ea2/edit",
+        "title": "Braighmòr",
+        "coordinates": {
+          "x": 2068,
+          "y": 640,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-d58d2bd2-7223-490d-bb68-e5e60e64bf9d",
+      "title": "Caerthalas",
+      "category": "Burg",
+      "templateId": "militaer",
+      "icon": "/Karten/assets/icons/welt/gro-e-burg.png",
+      "territoryId": "herrschaft-cein",
+      "x": 1433,
+      "y": 724,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "d58d2bd2-7223-490d-bb68-e5e60e64bf9d",
+        "url": "https://www.worldanvil.com/world/map/marker/d58d2bd2-7223-490d-bb68-e5e60e64bf9d/edit",
+        "title": "Caerthalas",
+        "coordinates": {
+          "x": 1433,
+          "y": 724,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-e80fafb9-1e51-42e4-91b6-78c3ac7f750b",
+      "title": "Dùnthàirne",
+      "category": "Festung",
+      "templateId": "militaer",
+      "icon": "/Karten/assets/icons/welt/festung.png",
+      "territoryId": "herrschaft-birn",
+      "x": 896,
+      "y": 627,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "e80fafb9-1e51-42e4-91b6-78c3ac7f750b",
+        "url": "https://www.worldanvil.com/world/map/marker/e80fafb9-1e51-42e4-91b6-78c3ac7f750b/edit",
+        "title": "Dùnthàirne",
+        "coordinates": {
+          "x": 896,
+          "y": 627,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-027b7bae-a4c1-4d23-822c-04011c8bbc34",
+      "title": "Gleanndràh",
+      "category": "Waldsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/waldsiedlung.png",
+      "territoryId": "herrschaft-riangabra",
+      "x": 2426,
+      "y": 2050,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "027b7bae-a4c1-4d23-822c-04011c8bbc34",
+        "url": "https://www.worldanvil.com/world/map/marker/027b7bae-a4c1-4d23-822c-04011c8bbc34/edit",
+        "title": "Gleanndràh",
+        "coordinates": {
+          "x": 2426,
+          "y": 2050,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-04a4ef2f-f440-4b28-b39f-9c8a0e12355f",
+      "title": "Achadhlua",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "dunfal-offen-i",
+      "x": 1457,
+      "y": 1600,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "04a4ef2f-f440-4b28-b39f-9c8a0e12355f",
+        "url": "https://www.worldanvil.com/world/map/marker/04a4ef2f-f440-4b28-b39f-9c8a0e12355f/edit",
+        "title": "Achadhlua",
+        "coordinates": {
+          "x": 1457,
+          "y": 1600,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-04a94d2e-1da0-4ee0-850e-f26dba2996cc",
+      "title": "Fionnarg",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "dunfal-offen-iii",
+      "x": 2037,
+      "y": 1779,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "04a94d2e-1da0-4ee0-850e-f26dba2996cc",
+        "url": "https://www.worldanvil.com/world/map/marker/04a94d2e-1da0-4ee0-850e-f26dba2996cc/edit",
+        "title": "Fionnarg",
+        "coordinates": {
+          "x": 2037,
+          "y": 1779,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-0592bec5-9870-4594-b621-2b7d21f12465",
+      "title": "Beinngart",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "herrschaft-cein",
+      "x": 1479,
+      "y": 1037,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "0592bec5-9870-4594-b621-2b7d21f12465",
+        "url": "https://www.worldanvil.com/world/map/marker/0592bec5-9870-4594-b621-2b7d21f12465/edit",
+        "title": "Beinngart",
+        "coordinates": {
+          "x": 1479,
+          "y": 1037,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-06772b1b-c533-48ca-9892-d7b8c9fb877a",
+      "title": "Raithmagh",
+      "category": "Dorf",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bardensiedlung.png",
+      "territoryId": "herrschaft-cein",
+      "x": 1496,
+      "y": 799,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "06772b1b-c533-48ca-9892-d7b8c9fb877a",
+        "url": "https://www.worldanvil.com/world/map/marker/06772b1b-c533-48ca-9892-d7b8c9fb877a/edit",
+        "title": "Raithmagh",
+        "coordinates": {
+          "x": 1496,
+          "y": 799,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-07ae9b21-01d9-4f31-9144-7005c3f5176a",
+      "title": "Beinnstrath",
+      "category": "Landgut",
+      "templateId": "landwirtschaft",
+      "icon": "/Karten/assets/icons/welt/landgut.png",
+      "territoryId": "oberherrschaft-tir-na-rithe",
+      "x": 1625,
+      "y": 931,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "07ae9b21-01d9-4f31-9144-7005c3f5176a",
+        "url": "https://www.worldanvil.com/world/map/marker/07ae9b21-01d9-4f31-9144-7005c3f5176a/edit",
+        "title": "",
+        "coordinates": {
+          "x": 1625,
+          "y": 931,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ],
+        "nameRecoveredFrom": "description-heading"
+      }
+    },
+    {
+      "id": "dunfal-08bc27fc-09f0-47b3-a731-4386e16040a3",
+      "title": "Ahnenbaum",
+      "category": "Ahnenbaum",
+      "templateId": "natur",
+      "icon": "/Karten/assets/icons/welt/ahnenbaum.png",
+      "territoryId": "oberherrschaft-tir-na-rithe",
+      "x": 1657,
+      "y": 1308,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "08bc27fc-09f0-47b3-a731-4386e16040a3",
+        "url": "https://www.worldanvil.com/world/map/marker/08bc27fc-09f0-47b3-a731-4386e16040a3/edit",
+        "title": "Ahnenbaum",
+        "coordinates": {
+          "x": 1657,
+          "y": 1308,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-0a5e6b32-c61f-4e0f-8ca3-379882bb5bc5",
+      "title": "Cluainceò",
+      "category": "Waldsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/waldsiedlung.png",
+      "territoryId": "herrschaft-eachtrai",
+      "x": 2194,
+      "y": 2755,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "0a5e6b32-c61f-4e0f-8ca3-379882bb5bc5",
+        "url": "https://www.worldanvil.com/world/map/marker/0a5e6b32-c61f-4e0f-8ca3-379882bb5bc5/edit",
+        "title": "Cluainceò",
+        "coordinates": {
+          "x": 2194,
+          "y": 2755,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-0b375df4-fd9d-4cc2-aa09-3681390d08f6",
+      "title": "Airc nan Smùid",
+      "category": "Magierturm",
+      "templateId": "gebaeude",
+      "icon": "/Karten/assets/icons/welt/magierturm.png",
+      "territoryId": "herrschaft-eachtrai",
+      "x": 2192,
+      "y": 2850,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "0b375df4-fd9d-4cc2-aa09-3681390d08f6",
+        "url": "https://www.worldanvil.com/world/map/marker/0b375df4-fd9d-4cc2-aa09-3681390d08f6/edit",
+        "title": "Airc nan Smùid",
+        "coordinates": {
+          "x": 2192,
+          "y": 2850,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-0c09ac7c-ec10-43d6-b2d9-326689052548",
+      "title": "Marctòrr",
+      "category": "Dorf",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bardensiedlung.png",
+      "territoryId": "herrschaft-ailella",
+      "x": 1948,
+      "y": 516,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "0c09ac7c-ec10-43d6-b2d9-326689052548",
+        "url": "https://www.worldanvil.com/world/map/marker/0c09ac7c-ec10-43d6-b2d9-326689052548/edit",
+        "title": "Marctòrr",
+        "coordinates": {
+          "x": 1948,
+          "y": 516,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-0e2bbcbf-649d-439e-b849-6ac73e32eb5c",
+      "title": "Fraochgius",
+      "category": "Waldsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/waldsiedlung.png",
+      "territoryId": "herrschaft-morath",
+      "x": 2292,
+      "y": 1817,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "0e2bbcbf-649d-439e-b849-6ac73e32eb5c",
+        "url": "https://www.worldanvil.com/world/map/marker/0e2bbcbf-649d-439e-b849-6ac73e32eb5c/edit",
+        "title": "Fraochgius",
+        "coordinates": {
+          "x": 2292,
+          "y": 1817,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-0ed2dc40-b9e2-4007-a296-fbe3f6dbaf77",
+      "title": "Abtei Dämmerlicht",
+      "category": "Klostersiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/klostersiedlung.png",
+      "territoryId": "herrschaft-ailella",
+      "x": 2038,
+      "y": 983,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "0ed2dc40-b9e2-4007-a296-fbe3f6dbaf77",
+        "url": "https://www.worldanvil.com/world/map/marker/0ed2dc40-b9e2-4007-a296-fbe3f6dbaf77/edit",
+        "title": "",
+        "coordinates": {
+          "x": 2038,
+          "y": 983,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ],
+        "nameRecoveredFrom": "description-heading"
+      }
+    },
+    {
+      "id": "dunfal-14c150d0-64e4-4c7f-92fb-df45ba527c83",
+      "title": "Creagbuar",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "dunfal-offen-ii",
+      "x": 1639,
+      "y": 2362,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "14c150d0-64e4-4c7f-92fb-df45ba527c83",
+        "url": "https://www.worldanvil.com/world/map/marker/14c150d0-64e4-4c7f-92fb-df45ba527c83/edit",
+        "title": "Creagbuar",
+        "coordinates": {
+          "x": 1639,
+          "y": 2362,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-15ca2551-1a77-48d7-9e57-93a12553a16a",
+      "title": "Altair an Drùidh",
+      "category": "Heiligtum",
+      "templateId": "institution",
+      "icon": "/Karten/assets/icons/welt/heiligtum.png",
+      "territoryId": "dunfal-offen-iii",
+      "x": 1735,
+      "y": 1593,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "15ca2551-1a77-48d7-9e57-93a12553a16a",
+        "url": "https://www.worldanvil.com/world/map/marker/15ca2551-1a77-48d7-9e57-93a12553a16a/edit",
+        "title": "Altair an Drùidh",
+        "coordinates": {
+          "x": 1735,
+          "y": 1593,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-1b3cc35d-2b83-4341-8e77-ab25ef1d81e2",
+      "title": "Druimraith",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "herrschaft-eachtrai",
+      "x": 1829,
+      "y": 2942,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "1b3cc35d-2b83-4341-8e77-ab25ef1d81e2",
+        "url": "https://www.worldanvil.com/world/map/marker/1b3cc35d-2b83-4341-8e77-ab25ef1d81e2/edit",
+        "title": "Druimraith",
+        "coordinates": {
+          "x": 1829,
+          "y": 2942,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-1c297145-d9f4-41c5-b44f-a21aef50bef8",
+      "title": "Torcraith",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "herrschaft-morath",
+      "x": 2421,
+      "y": 1166,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "1c297145-d9f4-41c5-b44f-a21aef50bef8",
+        "url": "https://www.worldanvil.com/world/map/marker/1c297145-d9f4-41c5-b44f-a21aef50bef8/edit",
+        "title": "Torcraith",
+        "coordinates": {
+          "x": 2421,
+          "y": 1166,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-20c6b815-2659-4c51-b563-195cf066a228",
+      "title": "Altair an Fuil",
+      "category": "Heiligtum",
+      "templateId": "institution",
+      "icon": "/Karten/assets/icons/welt/heiligtum.png",
+      "territoryId": "dunfal-offen-iii",
+      "x": 2155,
+      "y": 1610,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "20c6b815-2659-4c51-b563-195cf066a228",
+        "url": "https://www.worldanvil.com/world/map/marker/20c6b815-2659-4c51-b563-195cf066a228/edit",
+        "title": "Altair an Fuil",
+        "coordinates": {
+          "x": 2155,
+          "y": 1610,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-22d6cdd8-9873-4c94-b9be-e00bc1544c6d",
+      "title": "Raithtorc",
+      "category": "Burgsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/burgsiedlung.png",
+      "territoryId": "herrschaft-fianna",
+      "x": 2271,
+      "y": 3670,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "22d6cdd8-9873-4c94-b9be-e00bc1544c6d",
+        "url": "https://www.worldanvil.com/world/map/marker/22d6cdd8-9873-4c94-b9be-e00bc1544c6d/edit",
+        "title": "Raithtorc",
+        "coordinates": {
+          "x": 2271,
+          "y": 3670,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-23effe36-cd9c-4da4-8582-027692cf2b7f",
+      "title": "Druimtalamh",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "herrschaft-ailella",
+      "x": 2116,
+      "y": 1075,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "23effe36-cd9c-4da4-8582-027692cf2b7f",
+        "url": "https://www.worldanvil.com/world/map/marker/23effe36-cd9c-4da4-8582-027692cf2b7f/edit",
+        "title": "Druimtalamh",
+        "coordinates": {
+          "x": 2116,
+          "y": 1075,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-2439473c-3554-46f1-b2e1-fa55198b3a36",
+      "title": "Luscamas",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "herrschaft-ailella",
+      "x": 1840,
+      "y": 353,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "2439473c-3554-46f1-b2e1-fa55198b3a36",
+        "url": "https://www.worldanvil.com/world/map/marker/2439473c-3554-46f1-b2e1-fa55198b3a36/edit",
+        "title": "Luscamas",
+        "coordinates": {
+          "x": 1840,
+          "y": 353,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-24964bcf-b539-4602-b4c4-da91f93af8d1",
+      "title": "Creagcaor",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "dunfal-offen-ii",
+      "x": 1835,
+      "y": 2548,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "24964bcf-b539-4602-b4c4-da91f93af8d1",
+        "url": "https://www.worldanvil.com/world/map/marker/24964bcf-b539-4602-b4c4-da91f93af8d1/edit",
+        "title": "Creagcaor",
+        "coordinates": {
+          "x": 1835,
+          "y": 2548,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-24f2288d-ffa4-4caf-856d-5f472660167e",
+      "title": "Gartstrath",
+      "category": "Dorf",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bardensiedlung.png",
+      "territoryId": "herrschaft-birn",
+      "x": 1133,
+      "y": 841,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "24f2288d-ffa4-4caf-856d-5f472660167e",
+        "url": "https://www.worldanvil.com/world/map/marker/24f2288d-ffa4-4caf-856d-5f472660167e/edit",
+        "title": "Gartstrath",
+        "coordinates": {
+          "x": 1133,
+          "y": 841,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-2931cf7a-5910-4974-b0c6-c6416f201a1a",
+      "title": "Achadhclachan",
+      "category": "Dorf",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bardensiedlung.png",
+      "territoryId": "herrschaft-eachtrai",
+      "x": 1862,
+      "y": 3252,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "2931cf7a-5910-4974-b0c6-c6416f201a1a",
+        "url": "https://www.worldanvil.com/world/map/marker/2931cf7a-5910-4974-b0c6-c6416f201a1a/edit",
+        "title": "Achadhclachan",
+        "coordinates": {
+          "x": 1862,
+          "y": 3252,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-29ae2232-9edd-4f20-8878-637e9abb833c",
+      "title": "Marccuan",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "herrschaft-birn",
+      "x": 1045,
+      "y": 548,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "29ae2232-9edd-4f20-8878-637e9abb833c",
+        "url": "https://www.worldanvil.com/world/map/marker/29ae2232-9edd-4f20-8878-637e9abb833c/edit",
+        "title": "Marccuan",
+        "coordinates": {
+          "x": 1045,
+          "y": 548,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-2c5d195c-666a-4435-a684-b0d686c36ab8",
+      "title": "Blàrclach",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "herrschaft-cein",
+      "x": 1489,
+      "y": 1303,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "2c5d195c-666a-4435-a684-b0d686c36ab8",
+        "url": "https://www.worldanvil.com/world/map/marker/2c5d195c-666a-4435-a684-b0d686c36ab8/edit",
+        "title": "Blàrclach",
+        "coordinates": {
+          "x": 1489,
+          "y": 1303,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-2db9cea8-d0cc-4ea7-986e-fee18a7cd836",
+      "title": "Der Asket der Krone – Weg der Offenen Faust",
+      "category": "Klostersiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/klostersiedlung.png",
+      "territoryId": "herrschaft-morath",
+      "x": 2989,
+      "y": 1785,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "2db9cea8-d0cc-4ea7-986e-fee18a7cd836",
+        "url": "https://www.worldanvil.com/world/map/marker/2db9cea8-d0cc-4ea7-986e-fee18a7cd836/edit",
+        "title": "Mönchskloster",
+        "coordinates": {
+          "x": 2989,
+          "y": 1785,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-31fdf54e-91e5-4cb6-bf67-c0181355c047",
+      "title": "Fraochmagh",
+      "category": "Dorf",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bardensiedlung.png",
+      "territoryId": "herrschaft-morath",
+      "x": 2601,
+      "y": 1130,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "31fdf54e-91e5-4cb6-bf67-c0181355c047",
+        "url": "https://www.worldanvil.com/world/map/marker/31fdf54e-91e5-4cb6-bf67-c0181355c047/edit",
+        "title": "Fraochmagh",
+        "coordinates": {
+          "x": 2601,
+          "y": 1130,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-33bdc353-d694-46eb-b04e-53f36da82118",
+      "title": "Raithtalamh",
+      "category": "Burgsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/burgsiedlung.png",
+      "territoryId": "herrschaft-fianna",
+      "x": 2355,
+      "y": 3446,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "33bdc353-d694-46eb-b04e-53f36da82118",
+        "url": "https://www.worldanvil.com/world/map/marker/33bdc353-d694-46eb-b04e-53f36da82118/edit",
+        "title": "Raithtalamh",
+        "coordinates": {
+          "x": 2355,
+          "y": 3446,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-34497024-48c8-4e0a-83af-f78a16a80941",
+      "title": "Uaithcuan",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "dunfal-offen-i",
+      "x": 1017,
+      "y": 1827,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "34497024-48c8-4e0a-83af-f78a16a80941",
+        "url": "https://www.worldanvil.com/world/map/marker/34497024-48c8-4e0a-83af-f78a16a80941/edit",
+        "title": "Uaithcuan",
+        "coordinates": {
+          "x": 1017,
+          "y": 1827,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-36945acb-2e2a-47fa-aa34-0bb72f489637",
+      "title": "Burg Abendlicht",
+      "category": "Burg",
+      "templateId": "militaer",
+      "icon": "/Karten/assets/icons/welt/gro-e-burg.png",
+      "territoryId": "oberherrschaft-tir-na-rithe",
+      "x": 1153,
+      "y": 371,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "36945acb-2e2a-47fa-aa34-0bb72f489637",
+        "url": "https://www.worldanvil.com/world/map/marker/36945acb-2e2a-47fa-aa34-0bb72f489637/edit",
+        "title": "",
+        "coordinates": {
+          "x": 1153,
+          "y": 371,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ],
+        "nameRecoveredFrom": "description-heading"
+      }
+    },
+    {
+      "id": "dunfal-383931aa-66f7-4ab5-96f3-b6064f5ca6ef",
+      "title": "Blàrfoithir",
+      "category": "Dorf",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bardensiedlung.png",
+      "territoryId": "herrschaft-eachtrai",
+      "x": 2443,
+      "y": 2750,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "383931aa-66f7-4ab5-96f3-b6064f5ca6ef",
+        "url": "https://www.worldanvil.com/world/map/marker/383931aa-66f7-4ab5-96f3-b6064f5ca6ef/edit",
+        "title": "Blàrfoithir",
+        "coordinates": {
+          "x": 2443,
+          "y": 2750,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-385d43c1-fb71-4727-bf2c-e386203ccfbf",
+      "title": "Airc nan Tuiltean",
+      "category": "Magierturm",
+      "templateId": "gebaeude",
+      "icon": "/Karten/assets/icons/welt/magierturm.png",
+      "territoryId": "dunfal-offen-ii",
+      "x": 1617,
+      "y": 2487,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "385d43c1-fb71-4727-bf2c-e386203ccfbf",
+        "url": "https://www.worldanvil.com/world/map/marker/385d43c1-fb71-4727-bf2c-e386203ccfbf/edit",
+        "title": "Airc nan Tuiltean",
+        "coordinates": {
+          "x": 1617,
+          "y": 2487,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-395167ee-76e7-47fd-8dcc-e7f77cadd1c9",
+      "title": "Talamhcòin",
+      "category": "Waldsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/waldsiedlung.png",
+      "territoryId": "herrschaft-eachtrai",
+      "x": 2390,
+      "y": 2600,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "395167ee-76e7-47fd-8dcc-e7f77cadd1c9",
+        "url": "https://www.worldanvil.com/world/map/marker/395167ee-76e7-47fd-8dcc-e7f77cadd1c9/edit",
+        "title": "Talamhcòin",
+        "coordinates": {
+          "x": 2390,
+          "y": 2600,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-3a1810a2-210e-49f9-9e01-c91d25ef6390",
+      "title": "Fionnachadh",
+      "category": "Burgsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/burgsiedlung.png",
+      "territoryId": "herrschaft-fianna",
+      "x": 2134,
+      "y": 3223,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "3a1810a2-210e-49f9-9e01-c91d25ef6390",
+        "url": "https://www.worldanvil.com/world/map/marker/3a1810a2-210e-49f9-9e01-c91d25ef6390/edit",
+        "title": "Fionnachadh",
+        "coordinates": {
+          "x": 2134,
+          "y": 3223,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-3b8a7216-b775-4f4b-83c5-0974a3c8c0c4",
+      "title": "Der Asket der Krone – Weg der Gebundenen Klinge",
+      "category": "Klostersiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/klostersiedlung.png",
+      "territoryId": "dunfal-offen-iii",
+      "x": 1681,
+      "y": 1948,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "3b8a7216-b775-4f4b-83c5-0974a3c8c0c4",
+        "url": "https://www.worldanvil.com/world/map/marker/3b8a7216-b775-4f4b-83c5-0974a3c8c0c4/edit",
+        "title": "Mönchskloster",
+        "coordinates": {
+          "x": 1681,
+          "y": 1948,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-3e993e41-aea3-4c61-a6a0-2563f4f569e2",
+      "title": "Cluainbuar",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "herrschaft-cein",
+      "x": 1851,
+      "y": 595,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "3e993e41-aea3-4c61-a6a0-2563f4f569e2",
+        "url": "https://www.worldanvil.com/world/map/marker/3e993e41-aea3-4c61-a6a0-2563f4f569e2/edit",
+        "title": "Cluainbuar",
+        "coordinates": {
+          "x": 1851,
+          "y": 595,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-403e172a-beef-4a50-ac58-737aa4ef3894",
+      "title": "Achadhbuar",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "herrschaft-birn",
+      "x": 1187,
+      "y": 713,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "403e172a-beef-4a50-ac58-737aa4ef3894",
+        "url": "https://www.worldanvil.com/world/map/marker/403e172a-beef-4a50-ac58-737aa4ef3894/edit",
+        "title": "Achadhbuar",
+        "coordinates": {
+          "x": 1187,
+          "y": 713,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-450c55b1-6651-456b-ae2f-46436b556250",
+      "title": "Raithiar",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "dunfal-offen-ii",
+      "x": 1745,
+      "y": 2102,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "450c55b1-6651-456b-ae2f-46436b556250",
+        "url": "https://www.worldanvil.com/world/map/marker/450c55b1-6651-456b-ae2f-46436b556250/edit",
+        "title": "Raithiar",
+        "coordinates": {
+          "x": 1745,
+          "y": 2102,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-4fa8aa8d-4f39-4e43-a4d7-26fc2a4e373a",
+      "title": "Gleanncluain",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "herrschaft-ailella",
+      "x": 2023,
+      "y": 1321,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "4fa8aa8d-4f39-4e43-a4d7-26fc2a4e373a",
+        "url": "https://www.worldanvil.com/world/map/marker/4fa8aa8d-4f39-4e43-a4d7-26fc2a4e373a/edit",
+        "title": "Gleanncluain",
+        "coordinates": {
+          "x": 2023,
+          "y": 1321,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-507b24e0-eec6-4b31-bdb2-5a6dd31d3b8a",
+      "title": "Achadhmagh",
+      "category": "Dorf",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bardensiedlung.png",
+      "territoryId": "herrschaft-eachtrai",
+      "x": 1734,
+      "y": 3037,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "507b24e0-eec6-4b31-bdb2-5a6dd31d3b8a",
+        "url": "https://www.worldanvil.com/world/map/marker/507b24e0-eec6-4b31-bdb2-5a6dd31d3b8a/edit",
+        "title": "Achadhmagh",
+        "coordinates": {
+          "x": 1734,
+          "y": 3037,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-51079575-f0ee-4de9-9275-d564025c0877",
+      "title": "Smeòbaile",
+      "category": "Dorf",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bardensiedlung.png",
+      "territoryId": "herrschaft-morath",
+      "x": 2868,
+      "y": 1950,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "51079575-f0ee-4de9-9275-d564025c0877",
+        "url": "https://www.worldanvil.com/world/map/marker/51079575-f0ee-4de9-9275-d564025c0877/edit",
+        "title": "Smeòbaile",
+        "coordinates": {
+          "x": 2868,
+          "y": 1950,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-51aa32a5-a89f-481a-96d2-f502dd061d66",
+      "title": "Gartcaor",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "herrschaft-birn",
+      "x": 1151,
+      "y": 1096,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "51aa32a5-a89f-481a-96d2-f502dd061d66",
+        "url": "https://www.worldanvil.com/world/map/marker/51aa32a5-a89f-481a-96d2-f502dd061d66/edit",
+        "title": "Gartcaor",
+        "coordinates": {
+          "x": 1151,
+          "y": 1096,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-52719949-bd9e-4b94-a8d3-835ef374029b",
+      "title": "Reothachadh",
+      "category": "Dorf",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bardensiedlung.png",
+      "territoryId": "herrschaft-morath",
+      "x": 2359,
+      "y": 1478,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "52719949-bd9e-4b94-a8d3-835ef374029b",
+        "url": "https://www.worldanvil.com/world/map/marker/52719949-bd9e-4b94-a8d3-835ef374029b/edit",
+        "title": "Reothachadh",
+        "coordinates": {
+          "x": 2359,
+          "y": 1478,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-548cbde3-76f1-4571-98cc-06a122b52cd5",
+      "title": "Fionnfeàr",
+      "category": "Waldsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/waldsiedlung.png",
+      "territoryId": "herrschaft-riangabra",
+      "x": 2155,
+      "y": 2089,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "548cbde3-76f1-4571-98cc-06a122b52cd5",
+        "url": "https://www.worldanvil.com/world/map/marker/548cbde3-76f1-4571-98cc-06a122b52cd5/edit",
+        "title": "Fionnfeàr",
+        "coordinates": {
+          "x": 2155,
+          "y": 2089,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-55236240-15bc-45eb-9e34-6af0d878ea0b",
+      "title": "Marcraith",
+      "category": "Burgsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/burgsiedlung.png",
+      "territoryId": "herrschaft-fianna",
+      "x": 2192,
+      "y": 3504,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "55236240-15bc-45eb-9e34-6af0d878ea0b",
+        "url": "https://www.worldanvil.com/world/map/marker/55236240-15bc-45eb-9e34-6af0d878ea0b/edit",
+        "title": "Marcraith",
+        "coordinates": {
+          "x": 2192,
+          "y": 3504,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-55826a48-759e-41f6-9cc1-bb5fa0acd398",
+      "title": "Cluainiar",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "dunfal-offen-iii",
+      "x": 2000,
+      "y": 1671,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "55826a48-759e-41f6-9cc1-bb5fa0acd398",
+        "url": "https://www.worldanvil.com/world/map/marker/55826a48-759e-41f6-9cc1-bb5fa0acd398/edit",
+        "title": "Cluainiar",
+        "coordinates": {
+          "x": 2000,
+          "y": 1671,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-56405f7e-2c7e-4745-946c-a67f1c89fc2e",
+      "title": "Achadhraith",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "herrschaft-cein",
+      "x": 1316,
+      "y": 903,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "56405f7e-2c7e-4745-946c-a67f1c89fc2e",
+        "url": "https://www.worldanvil.com/world/map/marker/56405f7e-2c7e-4745-946c-a67f1c89fc2e/edit",
+        "title": "Achadhraith",
+        "coordinates": {
+          "x": 1316,
+          "y": 903,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-56b48929-a20d-4e17-8d55-616d093e521a",
+      "title": "Eaglais an Reothadh",
+      "category": "Heiligtum",
+      "templateId": "institution",
+      "icon": "/Karten/assets/icons/welt/heiligtum.png",
+      "territoryId": "herrschaft-morath",
+      "x": 2893,
+      "y": 1598,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "56b48929-a20d-4e17-8d55-616d093e521a",
+        "url": "https://www.worldanvil.com/world/map/marker/56b48929-a20d-4e17-8d55-616d093e521a/edit",
+        "title": "Eaglais an Reothadh",
+        "coordinates": {
+          "x": 2893,
+          "y": 1598,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-589d95b7-aac9-4ad6-8e0f-9a8d483dc243",
+      "title": "Die Speerschenke",
+      "category": "Taverne",
+      "templateId": "gastbetrieb",
+      "icon": "/Karten/assets/icons/welt/taverne.png",
+      "territoryId": "herrschaft-fianna",
+      "x": 2129,
+      "y": 3383,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "589d95b7-aac9-4ad6-8e0f-9a8d483dc243",
+        "url": "https://www.worldanvil.com/world/map/marker/589d95b7-aac9-4ad6-8e0f-9a8d483dc243/edit",
+        "title": "",
+        "coordinates": {
+          "x": 2129,
+          "y": 3383,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ],
+        "nameRecoveredFrom": "description-heading"
+      }
+    },
+    {
+      "id": "dunfal-597a1abf-23ef-4063-915e-3758d375f675",
+      "title": "Uaithcaladh",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "herrschaft-morath",
+      "x": 2812,
+      "y": 1790,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "597a1abf-23ef-4063-915e-3758d375f675",
+        "url": "https://www.worldanvil.com/world/map/marker/597a1abf-23ef-4063-915e-3758d375f675/edit",
+        "title": "Uaithcaladh",
+        "coordinates": {
+          "x": 2812,
+          "y": 1790,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-59c833d7-6cea-4a8d-95b4-07ab05a4754f",
+      "title": "Tùr an Reul",
+      "category": "Leuchtturm",
+      "templateId": "gebaeude",
+      "icon": "/Karten/assets/icons/welt/leuchtturm.png",
+      "territoryId": "herrschaft-ailella",
+      "x": 2806,
+      "y": 1026,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "59c833d7-6cea-4a8d-95b4-07ab05a4754f",
+        "url": "https://www.worldanvil.com/world/map/marker/59c833d7-6cea-4a8d-95b4-07ab05a4754f/edit",
+        "title": "Tùr an Reul",
+        "coordinates": {
+          "x": 2806,
+          "y": 1026,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-5b1955c7-97cf-476b-9ee5-a1bc815b2e41",
+      "title": "Tùr an Solais",
+      "category": "Leuchtturm",
+      "templateId": "gebaeude",
+      "icon": "/Karten/assets/icons/welt/leuchtturm.png",
+      "territoryId": "herrschaft-birn",
+      "x": 832,
+      "y": 1421,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "5b1955c7-97cf-476b-9ee5-a1bc815b2e41",
+        "url": "https://www.worldanvil.com/world/map/marker/5b1955c7-97cf-476b-9ee5-a1bc815b2e41/edit",
+        "title": "Tùr an Solais",
+        "coordinates": {
+          "x": 832,
+          "y": 1421,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-5bbd2606-c1c2-4fde-9800-610192bd479d",
+      "title": "Broch an Sìthe - Rindenwache Ritterlicher Orden",
+      "category": "Burg",
+      "templateId": "militaer",
+      "icon": "/Karten/assets/icons/welt/gro-e-burg.png",
+      "territoryId": "herrschaft-cein",
+      "x": 1899,
+      "y": 929,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "5bbd2606-c1c2-4fde-9800-610192bd479d",
+        "url": "https://www.worldanvil.com/world/map/marker/5bbd2606-c1c2-4fde-9800-610192bd479d/edit",
+        "title": "Broch an Sìthe - Rindenwache Ritterlicher Orden",
+        "coordinates": {
+          "x": 1899,
+          "y": 929,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-5cf6ad72-e299-43ce-9c49-7b26393e9d1f",
+      "title": "Blàrbaile",
+      "category": "Dorf",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bardensiedlung.png",
+      "territoryId": "dunfal-offen-ii",
+      "x": 1719,
+      "y": 2685,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "5cf6ad72-e299-43ce-9c49-7b26393e9d1f",
+        "url": "https://www.worldanvil.com/world/map/marker/5cf6ad72-e299-43ce-9c49-7b26393e9d1f/edit",
+        "title": "Blàrbaile",
+        "coordinates": {
+          "x": 1719,
+          "y": 2685,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-65461264-4332-4e78-9c53-664f09825ce9",
+      "title": "Fionnfoithir",
+      "category": "Dorf",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bardensiedlung.png",
+      "territoryId": "herrschaft-birn",
+      "x": 1009,
+      "y": 1002,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "65461264-4332-4e78-9c53-664f09825ce9",
+        "url": "https://www.worldanvil.com/world/map/marker/65461264-4332-4e78-9c53-664f09825ce9/edit",
+        "title": "Fionnfoithir",
+        "coordinates": {
+          "x": 1009,
+          "y": 1002,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-655c6f4f-dccd-4168-a829-a7a8f78ea29a",
+      "title": "Dubhbaile",
+      "category": "Dorf",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bardensiedlung.png",
+      "territoryId": "dunfal-offen-i",
+      "x": 1332,
+      "y": 1398,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "655c6f4f-dccd-4168-a829-a7a8f78ea29a",
+        "url": "https://www.worldanvil.com/world/map/marker/655c6f4f-dccd-4168-a829-a7a8f78ea29a/edit",
+        "title": "Dubhbaile",
+        "coordinates": {
+          "x": 1332,
+          "y": 1398,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-67db851a-f0c0-48d6-a06d-067f9622e641",
+      "title": "Airc nan Iarmailt",
+      "category": "Magierturm",
+      "templateId": "gebaeude",
+      "icon": "/Karten/assets/icons/welt/magierturm.png",
+      "territoryId": "herrschaft-ailella",
+      "x": 2392,
+      "y": 1065,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "67db851a-f0c0-48d6-a06d-067f9622e641",
+        "url": "https://www.worldanvil.com/world/map/marker/67db851a-f0c0-48d6-a06d-067f9622e641/edit",
+        "title": "Airc nan Iarmailt",
+        "coordinates": {
+          "x": 2392,
+          "y": 1065,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-68fbff43-6a90-415a-abcd-f0c87797ab3a",
+      "title": "Lochachadh",
+      "category": "Burgsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/burgsiedlung.png",
+      "territoryId": "herrschaft-fianna",
+      "x": 2422,
+      "y": 3250,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "68fbff43-6a90-415a-abcd-f0c87797ab3a",
+        "url": "https://www.worldanvil.com/world/map/marker/68fbff43-6a90-415a-abcd-f0c87797ab3a/edit",
+        "title": "Lochachadh",
+        "coordinates": {
+          "x": 2422,
+          "y": 3250,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-69a15c19-86d6-4033-8355-6afe38dc3b58",
+      "title": "Raithclachan",
+      "category": "Dorf",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bardensiedlung.png",
+      "territoryId": "herrschaft-ailella",
+      "x": 2378,
+      "y": 590,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "69a15c19-86d6-4033-8355-6afe38dc3b58",
+        "url": "https://www.worldanvil.com/world/map/marker/69a15c19-86d6-4033-8355-6afe38dc3b58/edit",
+        "title": "Raithclachan",
+        "coordinates": {
+          "x": 2378,
+          "y": 590,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-6b02d125-1115-4f51-be8a-79120b1be923",
+      "title": "Buartorc",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "dunfal-offen-ii",
+      "x": 1909,
+      "y": 2326,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "6b02d125-1115-4f51-be8a-79120b1be923",
+        "url": "https://www.worldanvil.com/world/map/marker/6b02d125-1115-4f51-be8a-79120b1be923/edit",
+        "title": "Buartorc",
+        "coordinates": {
+          "x": 1909,
+          "y": 2326,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-6d2c8242-d8f4-4168-9813-fce23a147fa1",
+      "title": "Dubhgart",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "herrschaft-ailella",
+      "x": 2374,
+      "y": 962,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "6d2c8242-d8f4-4168-9813-fce23a147fa1",
+        "url": "https://www.worldanvil.com/world/map/marker/6d2c8242-d8f4-4168-9813-fce23a147fa1/edit",
+        "title": "Dubhgart",
+        "coordinates": {
+          "x": 2374,
+          "y": 962,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-6dfa3692-7d88-489c-8689-0c607a6c31d5",
+      "title": "Blàrcluain",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "herrschaft-morath",
+      "x": 2591,
+      "y": 1577,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "6dfa3692-7d88-489c-8689-0c607a6c31d5",
+        "url": "https://www.worldanvil.com/world/map/marker/6dfa3692-7d88-489c-8689-0c607a6c31d5/edit",
+        "title": "Blàrcluain",
+        "coordinates": {
+          "x": 2591,
+          "y": 1577,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-6e4b8996-636d-40d3-8262-9fbc513beca1",
+      "title": "Fionnclachan",
+      "category": "Dorf",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bardensiedlung.png",
+      "territoryId": "herrschaft-cein",
+      "x": 1774,
+      "y": 681,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "6e4b8996-636d-40d3-8262-9fbc513beca1",
+        "url": "https://www.worldanvil.com/world/map/marker/6e4b8996-636d-40d3-8262-9fbc513beca1/edit",
+        "title": "Fionnclachan",
+        "coordinates": {
+          "x": 1774,
+          "y": 681,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-6ea038dd-5fcf-40ad-a581-36fb08e51087",
+      "title": "Gleannachadh",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "herrschaft-ailella",
+      "x": 1946,
+      "y": 1159,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "6ea038dd-5fcf-40ad-a581-36fb08e51087",
+        "url": "https://www.worldanvil.com/world/map/marker/6ea038dd-5fcf-40ad-a581-36fb08e51087/edit",
+        "title": "Gleannachadh",
+        "coordinates": {
+          "x": 1946,
+          "y": 1159,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-76344247-5944-4ba8-aa96-bb32784e0824",
+      "title": "Blàriar",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "dunfal-offen-iii",
+      "x": 1641,
+      "y": 1679,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "76344247-5944-4ba8-aa96-bb32784e0824",
+        "url": "https://www.worldanvil.com/world/map/marker/76344247-5944-4ba8-aa96-bb32784e0824/edit",
+        "title": "Blàriar",
+        "coordinates": {
+          "x": 1641,
+          "y": 1679,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-78c43c3b-28f5-48b3-8df9-7bc80630cc6e",
+      "title": "Sìthearg",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "dunfal-offen-ii",
+      "x": 1673,
+      "y": 2233,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "78c43c3b-28f5-48b3-8df9-7bc80630cc6e",
+        "url": "https://www.worldanvil.com/world/map/marker/78c43c3b-28f5-48b3-8df9-7bc80630cc6e/edit",
+        "title": "Sìthearg",
+        "coordinates": {
+          "x": 1673,
+          "y": 2233,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-7be6f8d5-9d24-4443-bb21-d3ed94d67d0b",
+      "title": "Marcachadh",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "herrschaft-morath",
+      "x": 2315,
+      "y": 1359,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "7be6f8d5-9d24-4443-bb21-d3ed94d67d0b",
+        "url": "https://www.worldanvil.com/world/map/marker/7be6f8d5-9d24-4443-bb21-d3ed94d67d0b/edit",
+        "title": "Marcachadh",
+        "coordinates": {
+          "x": 2315,
+          "y": 1359,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-82f48429-843f-4526-ae37-a2ca9ad3b3a8",
+      "title": "Ruine der Dämmerwacht",
+      "category": "Ruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/ruine2.png",
+      "territoryId": "herrschaft-eachtrai",
+      "x": 1617,
+      "y": 3104,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "82f48429-843f-4526-ae37-a2ca9ad3b3a8",
+        "url": "https://www.worldanvil.com/world/map/marker/82f48429-843f-4526-ae37-a2ca9ad3b3a8/edit",
+        "title": "",
+        "coordinates": {
+          "x": 1617,
+          "y": 3104,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ],
+        "nameRecoveredFrom": "description-heading"
+      }
+    },
+    {
+      "id": "dunfal-873a4256-a7a0-467b-b5c2-458435bfe280",
+      "title": "Caortorc",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "herrschaft-cein",
+      "x": 1751,
+      "y": 1030,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "873a4256-a7a0-467b-b5c2-458435bfe280",
+        "url": "https://www.worldanvil.com/world/map/marker/873a4256-a7a0-467b-b5c2-458435bfe280/edit",
+        "title": "Caortorc",
+        "coordinates": {
+          "x": 1751,
+          "y": 1030,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-88a65d6a-1517-4473-9ff5-93cb4d288686",
+      "title": "Cluaindail",
+      "category": "Dorf",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bardensiedlung.png",
+      "territoryId": "dunfal-offen-iii",
+      "x": 2016,
+      "y": 1922,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "88a65d6a-1517-4473-9ff5-93cb4d288686",
+        "url": "https://www.worldanvil.com/world/map/marker/88a65d6a-1517-4473-9ff5-93cb4d288686/edit",
+        "title": "Cluaindail",
+        "coordinates": {
+          "x": 2016,
+          "y": 1922,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-89f840db-25a3-43d8-be57-f5faf4589c3d",
+      "title": "Marcgart",
+      "category": "Burgsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/burgsiedlung.png",
+      "territoryId": "herrschaft-fianna",
+      "x": 1998,
+      "y": 3501,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "89f840db-25a3-43d8-be57-f5faf4589c3d",
+        "url": "https://www.worldanvil.com/world/map/marker/89f840db-25a3-43d8-be57-f5faf4589c3d/edit",
+        "title": "Marcgart",
+        "coordinates": {
+          "x": 1998,
+          "y": 3501,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-8adb9a35-0f45-4289-8b17-ad1f13e58cf1",
+      "title": "Lochuaith",
+      "category": "Waldsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/waldsiedlung.png",
+      "territoryId": "herrschaft-riangabra",
+      "x": 2460,
+      "y": 2203,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "8adb9a35-0f45-4289-8b17-ad1f13e58cf1",
+        "url": "https://www.worldanvil.com/world/map/marker/8adb9a35-0f45-4289-8b17-ad1f13e58cf1/edit",
+        "title": "Lochuaith",
+        "coordinates": {
+          "x": 2460,
+          "y": 2203,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-91bdda76-3af9-4ba7-87e7-cf81e1fdb508",
+      "title": "Smeòcuan",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "herrschaft-birn",
+      "x": 835,
+      "y": 866,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "91bdda76-3af9-4ba7-87e7-cf81e1fdb508",
+        "url": "https://www.worldanvil.com/world/map/marker/91bdda76-3af9-4ba7-87e7-cf81e1fdb508/edit",
+        "title": "Smeòcuan",
+        "coordinates": {
+          "x": 835,
+          "y": 866,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-91ef8f02-ae3f-4bd3-8e14-1226faaf1592",
+      "title": "Blàreilean",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "herrschaft-riangabra",
+      "x": 2825,
+      "y": 2120,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "91ef8f02-ae3f-4bd3-8e14-1226faaf1592",
+        "url": "https://www.worldanvil.com/world/map/marker/91ef8f02-ae3f-4bd3-8e14-1226faaf1592/edit",
+        "title": "Blàreilean",
+        "coordinates": {
+          "x": 2825,
+          "y": 2120,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-94dbcc70-c470-4ca2-a000-6e24721a52c7",
+      "title": "Carn an Dòchas",
+      "category": "Heiligtum",
+      "templateId": "institution",
+      "icon": "/Karten/assets/icons/welt/heiligtum.png",
+      "territoryId": "herrschaft-eachtrai",
+      "x": 2243,
+      "y": 2619,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "94dbcc70-c470-4ca2-a000-6e24721a52c7",
+        "url": "https://www.worldanvil.com/world/map/marker/94dbcc70-c470-4ca2-a000-6e24721a52c7/edit",
+        "title": "Carn an Dòchas",
+        "coordinates": {
+          "x": 2243,
+          "y": 2619,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-97f019df-2cdf-4213-a8fb-42fbd10e8aa0",
+      "title": "Creagmagh",
+      "category": "Dorf",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bardensiedlung.png",
+      "territoryId": "dunfal-offen-iii",
+      "x": 1658,
+      "y": 1837,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "97f019df-2cdf-4213-a8fb-42fbd10e8aa0",
+        "url": "https://www.worldanvil.com/world/map/marker/97f019df-2cdf-4213-a8fb-42fbd10e8aa0/edit",
+        "title": "Creagmagh",
+        "coordinates": {
+          "x": 1658,
+          "y": 1837,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-98f21066-6480-485e-aef7-00002a83a1c5",
+      "title": "Gleannbaile",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "herrschaft-cein",
+      "x": 1462,
+      "y": 546,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "98f21066-6480-485e-aef7-00002a83a1c5",
+        "url": "https://www.worldanvil.com/world/map/marker/98f21066-6480-485e-aef7-00002a83a1c5/edit",
+        "title": "",
+        "coordinates": {
+          "x": 1462,
+          "y": 546,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ],
+        "nameRecoveredFrom": "description-heading"
+      }
+    },
+    {
+      "id": "dunfal-a4071864-057b-49a4-9a1f-7457294ea6b5",
+      "title": "Tùr an Geilt",
+      "category": "Turm",
+      "templateId": "militaer",
+      "icon": "/Karten/assets/icons/welt/turm.png",
+      "territoryId": "herrschaft-ailella",
+      "x": 2223,
+      "y": 1172,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "a4071864-057b-49a4-9a1f-7457294ea6b5",
+        "url": "https://www.worldanvil.com/world/map/marker/a4071864-057b-49a4-9a1f-7457294ea6b5/edit",
+        "title": "Tùr an Geilt",
+        "coordinates": {
+          "x": 2223,
+          "y": 1172,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-a529cb9b-afbe-4674-8da7-7ccfb9a4f99b",
+      "title": "Lochfoithir",
+      "category": "Dorf",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bardensiedlung.png",
+      "territoryId": "herrschaft-ailella",
+      "x": 1707,
+      "y": 473,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "a529cb9b-afbe-4674-8da7-7ccfb9a4f99b",
+        "url": "https://www.worldanvil.com/world/map/marker/a529cb9b-afbe-4674-8da7-7ccfb9a4f99b/edit",
+        "title": "Lochfoithir",
+        "coordinates": {
+          "x": 1707,
+          "y": 473,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-a80aff9f-db44-4bfd-b773-0142922e084c",
+      "title": "Tùr an Drùidh",
+      "category": "Turm",
+      "templateId": "militaer",
+      "icon": "/Karten/assets/icons/welt/turm.png",
+      "territoryId": "herrschaft-cein",
+      "x": 1319,
+      "y": 1045,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "a80aff9f-db44-4bfd-b773-0142922e084c",
+        "url": "https://www.worldanvil.com/world/map/marker/a80aff9f-db44-4bfd-b773-0142922e084c/edit",
+        "title": "Tùr an Drùidh",
+        "coordinates": {
+          "x": 1319,
+          "y": 1045,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-aa883549-c6d4-4926-af3e-16ef67832493",
+      "title": "Tòrrcòin",
+      "category": "Waldsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/waldsiedlung.png",
+      "territoryId": "herrschaft-morath",
+      "x": 2700,
+      "y": 1888,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "aa883549-c6d4-4926-af3e-16ef67832493",
+        "url": "https://www.worldanvil.com/world/map/marker/aa883549-c6d4-4926-af3e-16ef67832493/edit",
+        "title": "Tòrrcòin",
+        "coordinates": {
+          "x": 2700,
+          "y": 1888,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-aab54de3-3231-4171-95e6-081970fa710f",
+      "title": "Reothmara",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "herrschaft-ailella",
+      "x": 2644,
+      "y": 984,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "aab54de3-3231-4171-95e6-081970fa710f",
+        "url": "https://www.worldanvil.com/world/map/marker/aab54de3-3231-4171-95e6-081970fa710f/edit",
+        "title": "Reothmara",
+        "coordinates": {
+          "x": 2644,
+          "y": 984,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-ace24959-eda4-414b-9957-01ca132ef272",
+      "title": "Broch an Fìrinn - Rindenwache Ritterlicher Orden",
+      "category": "Burg",
+      "templateId": "militaer",
+      "icon": "/Karten/assets/icons/welt/gro-e-burg.png",
+      "territoryId": "fuerstentum-dunfal",
+      "x": 2146,
+      "y": 2337,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "ace24959-eda4-414b-9957-01ca132ef272",
+        "url": "https://www.worldanvil.com/world/map/marker/ace24959-eda4-414b-9957-01ca132ef272/edit",
+        "title": "Broch an Fìrinn - Rindenwache Ritterlicher Orden",
+        "coordinates": {
+          "x": 2146,
+          "y": 2337,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-af5dfe9d-cf14-452f-9763-839134d75ee5",
+      "title": "Gleannstrath",
+      "category": "Dorf",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bardensiedlung.png",
+      "territoryId": "herrschaft-cein",
+      "x": 1217,
+      "y": 466,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "af5dfe9d-cf14-452f-9763-839134d75ee5",
+        "url": "https://www.worldanvil.com/world/map/marker/af5dfe9d-cf14-452f-9763-839134d75ee5/edit",
+        "title": "Gleannstrath",
+        "coordinates": {
+          "x": 1217,
+          "y": 466,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-af70c7cc-3741-4b6c-a5c0-67b7bde8fba2",
+      "title": "Airc nan Liosal",
+      "category": "Magierturm",
+      "templateId": "gebaeude",
+      "icon": "/Karten/assets/icons/welt/magierturm.png",
+      "territoryId": "herrschaft-fianna",
+      "x": 2120,
+      "y": 3646,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "af70c7cc-3741-4b6c-a5c0-67b7bde8fba2",
+        "url": "https://www.worldanvil.com/world/map/marker/af70c7cc-3741-4b6c-a5c0-67b7bde8fba2/edit",
+        "title": "Airc nan Liosal",
+        "coordinates": {
+          "x": 2120,
+          "y": 3646,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-b239049d-b924-4c4f-9738-6458bf039c21",
+      "title": "Sgòrinbhir",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "herrschaft-morath",
+      "x": 2748,
+      "y": 1594,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "b239049d-b924-4c4f-9738-6458bf039c21",
+        "url": "https://www.worldanvil.com/world/map/marker/b239049d-b924-4c4f-9738-6458bf039c21/edit",
+        "title": "Sgòrinbhir",
+        "coordinates": {
+          "x": 2748,
+          "y": 1594,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-b590b3d2-2dd0-4943-95ea-75d8d9ce4fc3",
+      "title": "Buarmagh",
+      "category": "Dorf",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bardensiedlung.png",
+      "territoryId": "herrschaft-riangabra",
+      "x": 2474,
+      "y": 2325,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "b590b3d2-2dd0-4943-95ea-75d8d9ce4fc3",
+        "url": "https://www.worldanvil.com/world/map/marker/b590b3d2-2dd0-4943-95ea-75d8d9ce4fc3/edit",
+        "title": "Buarmagh",
+        "coordinates": {
+          "x": 2474,
+          "y": 2325,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-b62023d8-9470-48f9-9d1c-565f2da05d75",
+      "title": "Der Asket der Krone – Weg des Inneren Lichts",
+      "category": "Klostersiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/klostersiedlung.png",
+      "territoryId": "herrschaft-fianna",
+      "x": 1868,
+      "y": 3386,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "b62023d8-9470-48f9-9d1c-565f2da05d75",
+        "url": "https://www.worldanvil.com/world/map/marker/b62023d8-9470-48f9-9d1c-565f2da05d75/edit",
+        "title": "Mönchskloster",
+        "coordinates": {
+          "x": 1868,
+          "y": 3386,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-b772905f-8a7e-4431-85c1-8027186909be",
+      "title": "Achadhcuan",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "dunfal-offen-ii",
+      "x": 1560,
+      "y": 2568,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "b772905f-8a7e-4431-85c1-8027186909be",
+        "url": "https://www.worldanvil.com/world/map/marker/b772905f-8a7e-4431-85c1-8027186909be/edit",
+        "title": "Achadhcuan",
+        "coordinates": {
+          "x": 1560,
+          "y": 2568,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-bbf19cda-15e4-4856-90c1-8ef5339a77be",
+      "title": "Dubhcaor",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "herrschaft-eachtrai",
+      "x": 2457,
+      "y": 2919,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "bbf19cda-15e4-4856-90c1-8ef5339a77be",
+        "url": "https://www.worldanvil.com/world/map/marker/bbf19cda-15e4-4856-90c1-8ef5339a77be/edit",
+        "title": "Dubhcaor",
+        "coordinates": {
+          "x": 2457,
+          "y": 2919,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-bdb0d7a5-c423-4937-aa1e-c0c7d748dd0e",
+      "title": "Fionngart",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "oberherrschaft-tir-na-rithe",
+      "x": 1646,
+      "y": 585,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "bdb0d7a5-c423-4937-aa1e-c0c7d748dd0e",
+        "url": "https://www.worldanvil.com/world/map/marker/bdb0d7a5-c423-4937-aa1e-c0c7d748dd0e/edit",
+        "title": "",
+        "coordinates": {
+          "x": 1646,
+          "y": 585,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ],
+        "nameRecoveredFrom": "description-heading"
+      }
+    },
+    {
+      "id": "dunfal-befc22e8-c455-46e3-a551-ce41cf2d4dbc",
+      "title": "Altair an Famhair",
+      "category": "Heiligtum",
+      "templateId": "institution",
+      "icon": "/Karten/assets/icons/welt/heiligtum.png",
+      "territoryId": "herrschaft-ailella",
+      "x": 1820,
+      "y": 1308,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "befc22e8-c455-46e3-a551-ce41cf2d4dbc",
+        "url": "https://www.worldanvil.com/world/map/marker/befc22e8-c455-46e3-a551-ce41cf2d4dbc/edit",
+        "title": "Altair an Famhair",
+        "coordinates": {
+          "x": 1820,
+          "y": 1308,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-bfe435ca-a60c-40f5-a686-6c6329e8d3c6",
+      "title": "Ceòslige",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "herrschaft-ailella",
+      "x": 2728,
+      "y": 727,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "bfe435ca-a60c-40f5-a686-6c6329e8d3c6",
+        "url": "https://www.worldanvil.com/world/map/marker/bfe435ca-a60c-40f5-a686-6c6329e8d3c6/edit",
+        "title": "Ceòslige",
+        "coordinates": {
+          "x": 2728,
+          "y": 727,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-c2d4d943-38cd-48d1-9e48-2856e8e9f250",
+      "title": "Broch an Claidheamh - Rindenwache Ritterlicher Orden",
+      "category": "Burg",
+      "templateId": "militaer",
+      "icon": "/Karten/assets/icons/welt/gro-e-burg.png",
+      "territoryId": "herrschaft-morath",
+      "x": 2595,
+      "y": 1755,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "c2d4d943-38cd-48d1-9e48-2856e8e9f250",
+        "url": "https://www.worldanvil.com/world/map/marker/c2d4d943-38cd-48d1-9e48-2856e8e9f250/edit",
+        "title": "Broch an Claidheamh - Rindenwache Ritterlicher Orden",
+        "coordinates": {
+          "x": 2595,
+          "y": 1755,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-c6f059e9-8a3c-4b31-99d7-1810d77d0e8c",
+      "title": "Altair an Ceò",
+      "category": "Heiligtum",
+      "templateId": "institution",
+      "icon": "/Karten/assets/icons/welt/heiligtum.png",
+      "territoryId": "dunfal-offen-i",
+      "x": 1261,
+      "y": 1545,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "c6f059e9-8a3c-4b31-99d7-1810d77d0e8c",
+        "url": "https://www.worldanvil.com/world/map/marker/c6f059e9-8a3c-4b31-99d7-1810d77d0e8c/edit",
+        "title": "Altair an Ceò",
+        "coordinates": {
+          "x": 1261,
+          "y": 1545,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-c8bd3192-adaa-403a-b042-32307c4ea4a0",
+      "title": "Dubhtòrr",
+      "category": "Rosszuchtsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/pferdezuchtsiedlung.png",
+      "territoryId": "herrschaft-cein",
+      "x": 1283,
+      "y": 585,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "c8bd3192-adaa-403a-b042-32307c4ea4a0",
+        "url": "https://www.worldanvil.com/world/map/marker/c8bd3192-adaa-403a-b042-32307c4ea4a0/edit",
+        "title": "",
+        "coordinates": {
+          "x": 1283,
+          "y": 585,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ],
+        "nameRecoveredFrom": "description-heading"
+      }
+    },
+    {
+      "id": "dunfal-c8c03eb1-3f86-4d27-8513-f27cb6cb8ff8",
+      "title": "Eabarachadh",
+      "category": "Dorf",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bardensiedlung.png",
+      "territoryId": "herrschaft-ailella",
+      "x": 2575,
+      "y": 856,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "c8c03eb1-3f86-4d27-8513-f27cb6cb8ff8",
+        "url": "https://www.worldanvil.com/world/map/marker/c8c03eb1-3f86-4d27-8513-f27cb6cb8ff8/edit",
+        "title": "Eabarachadh",
+        "coordinates": {
+          "x": 2575,
+          "y": 856,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-c92fc1ea-2f99-4f69-bf2c-aa8c98882764",
+      "title": "Fraochalt",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "dunfal-offen-iii",
+      "x": 1833,
+      "y": 1982,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "c92fc1ea-2f99-4f69-bf2c-aa8c98882764",
+        "url": "https://www.worldanvil.com/world/map/marker/c92fc1ea-2f99-4f69-bf2c-aa8c98882764/edit",
+        "title": "Fraochalt",
+        "coordinates": {
+          "x": 1833,
+          "y": 1982,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-cc0d9ac2-b27f-45ca-9dd0-825f2e8693c2",
+      "title": "Gartcluain",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "herrschaft-cein",
+      "x": 1360,
+      "y": 1194,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "cc0d9ac2-b27f-45ca-9dd0-825f2e8693c2",
+        "url": "https://www.worldanvil.com/world/map/marker/cc0d9ac2-b27f-45ca-9dd0-825f2e8693c2/edit",
+        "title": "Gartcluain",
+        "coordinates": {
+          "x": 1360,
+          "y": 1194,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-d1dd4242-3b58-418a-b01f-e7ec62f452e1",
+      "title": "Achadhgart",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "herrschaft-morath",
+      "x": 2407,
+      "y": 1634,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "d1dd4242-3b58-418a-b01f-e7ec62f452e1",
+        "url": "https://www.worldanvil.com/world/map/marker/d1dd4242-3b58-418a-b01f-e7ec62f452e1/edit",
+        "title": "Achadhgart",
+        "coordinates": {
+          "x": 2407,
+          "y": 1634,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-d3edd013-db97-4b94-ab5a-a2b01bb5ee62",
+      "title": "Eabarfid",
+      "category": "Waldsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/waldsiedlung.png",
+      "territoryId": "herrschaft-eachtrai",
+      "x": 2120,
+      "y": 2558,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "d3edd013-db97-4b94-ab5a-a2b01bb5ee62",
+        "url": "https://www.worldanvil.com/world/map/marker/d3edd013-db97-4b94-ab5a-a2b01bb5ee62/edit",
+        "title": "Eabarfid",
+        "coordinates": {
+          "x": 2120,
+          "y": 2558,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-d598284e-d4ee-4c5f-8b35-cdd183ce9cef",
+      "title": "Talamhdail",
+      "category": "Dorf",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bardensiedlung.png",
+      "territoryId": "herrschaft-cein",
+      "x": 1617,
+      "y": 1130,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "d598284e-d4ee-4c5f-8b35-cdd183ce9cef",
+        "url": "https://www.worldanvil.com/world/map/marker/d598284e-d4ee-4c5f-8b35-cdd183ce9cef/edit",
+        "title": "Talamhdail",
+        "coordinates": {
+          "x": 1617,
+          "y": 1130,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-d638c8af-c29d-4610-841e-53882be3ef20",
+      "title": "Talamhùrl",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "dunfal-offen-ii",
+      "x": 1381,
+      "y": 2154,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "d638c8af-c29d-4610-841e-53882be3ef20",
+        "url": "https://www.worldanvil.com/world/map/marker/d638c8af-c29d-4610-841e-53882be3ef20/edit",
+        "title": "Talamhùrl",
+        "coordinates": {
+          "x": 1381,
+          "y": 2154,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-d66445af-f2b4-4cf4-9e16-5a4f34f96147",
+      "title": "Buarachadh",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "herrschaft-riangabra",
+      "x": 2611,
+      "y": 2250,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "d66445af-f2b4-4cf4-9e16-5a4f34f96147",
+        "url": "https://www.worldanvil.com/world/map/marker/d66445af-f2b4-4cf4-9e16-5a4f34f96147/edit",
+        "title": "Buarachadh",
+        "coordinates": {
+          "x": 2611,
+          "y": 2250,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-d7a4ccc0-66d2-443e-b28f-9afa53e700d4",
+      "title": "Dubhfoithir",
+      "category": "Dorf",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bardensiedlung.png",
+      "territoryId": "herrschaft-birn",
+      "x": 1009,
+      "y": 1291,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "d7a4ccc0-66d2-443e-b28f-9afa53e700d4",
+        "url": "https://www.worldanvil.com/world/map/marker/d7a4ccc0-66d2-443e-b28f-9afa53e700d4/edit",
+        "title": "Dubhfoithir",
+        "coordinates": {
+          "x": 1009,
+          "y": 1291,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-d929907a-0427-4672-95db-03e0c0ea84c2",
+      "title": "Gleannuige",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "herrschaft-ailella",
+      "x": 2209,
+      "y": 449,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "d929907a-0427-4672-95db-03e0c0ea84c2",
+        "url": "https://www.worldanvil.com/world/map/marker/d929907a-0427-4672-95db-03e0c0ea84c2/edit",
+        "title": "Gleannuige",
+        "coordinates": {
+          "x": 2209,
+          "y": 449,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-da039baf-95a6-4824-b867-85d8bfcfb886",
+      "title": "Druimcluain",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "herrschaft-ailella",
+      "x": 2294,
+      "y": 744,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "da039baf-95a6-4824-b867-85d8bfcfb886",
+        "url": "https://www.worldanvil.com/world/map/marker/da039baf-95a6-4824-b867-85d8bfcfb886/edit",
+        "title": "Druimcluain",
+        "coordinates": {
+          "x": 2294,
+          "y": 744,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-dd5cfadf-b1d0-4f38-acf1-d0591e525513",
+      "title": "Uaithuige",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "dunfal-offen-ii",
+      "x": 1187,
+      "y": 2130,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "dd5cfadf-b1d0-4f38-acf1-d0591e525513",
+        "url": "https://www.worldanvil.com/world/map/marker/dd5cfadf-b1d0-4f38-acf1-d0591e525513/edit",
+        "title": "Uaithuige",
+        "coordinates": {
+          "x": 1187,
+          "y": 2130,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-e000c034-882a-4400-9fc5-aecdae42fcfe",
+      "title": "Blàrbuar",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "herrschaft-cein",
+      "x": 1733,
+      "y": 800,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "e000c034-882a-4400-9fc5-aecdae42fcfe",
+        "url": "https://www.worldanvil.com/world/map/marker/e000c034-882a-4400-9fc5-aecdae42fcfe/edit",
+        "title": "Blàrbuar",
+        "coordinates": {
+          "x": 1733,
+          "y": 800,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-e0a7f098-02df-4444-b51f-17623f1d4575",
+      "title": "Gartraith",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "herrschaft-birn",
+      "x": 1180,
+      "y": 1340,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "e0a7f098-02df-4444-b51f-17623f1d4575",
+        "url": "https://www.worldanvil.com/world/map/marker/e0a7f098-02df-4444-b51f-17623f1d4575/edit",
+        "title": "Gartraith",
+        "coordinates": {
+          "x": 1180,
+          "y": 1340,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-e1313921-7d89-408f-b9d2-e133599257dd",
+      "title": "Gartachadh",
+      "category": "Dorf",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bardensiedlung.png",
+      "territoryId": "herrschaft-birn",
+      "x": 886,
+      "y": 932,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "e1313921-7d89-408f-b9d2-e133599257dd",
+        "url": "https://www.worldanvil.com/world/map/marker/e1313921-7d89-408f-b9d2-e133599257dd/edit",
+        "title": "Gartachadh",
+        "coordinates": {
+          "x": 886,
+          "y": 932,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-e20742c7-88a3-45a6-a7a9-bac8e8ecd287",
+      "title": "Achadhdail",
+      "category": "Dorf",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bardensiedlung.png",
+      "territoryId": "herrschaft-eachtrai",
+      "x": 2477,
+      "y": 3061,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "e20742c7-88a3-45a6-a7a9-bac8e8ecd287",
+        "url": "https://www.worldanvil.com/world/map/marker/e20742c7-88a3-45a6-a7a9-bac8e8ecd287/edit",
+        "title": "Achadhdail",
+        "coordinates": {
+          "x": 2477,
+          "y": 3061,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-e4933bf7-bb50-46ed-9c1a-a39c8cde5ac0",
+      "title": "Druimdail",
+      "category": "Dorf",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bardensiedlung.png",
+      "territoryId": "dunfal-offen-i",
+      "x": 1055,
+      "y": 1551,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "e4933bf7-bb50-46ed-9c1a-a39c8cde5ac0",
+        "url": "https://www.worldanvil.com/world/map/marker/e4933bf7-bb50-46ed-9c1a-a39c8cde5ac0/edit",
+        "title": "Druimdail",
+        "coordinates": {
+          "x": 1055,
+          "y": 1551,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-e50a8e4e-a7e8-4c7e-ae57-cc64a752a79e",
+      "title": "Carn an Trom",
+      "category": "Heiligtum",
+      "templateId": "institution",
+      "icon": "/Karten/assets/icons/welt/heiligtum.png",
+      "territoryId": "herrschaft-ailella",
+      "x": 2799,
+      "y": 852,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "e50a8e4e-a7e8-4c7e-ae57-cc64a752a79e",
+        "url": "https://www.worldanvil.com/world/map/marker/e50a8e4e-a7e8-4c7e-ae57-cc64a752a79e/edit",
+        "title": "Carn an Trom",
+        "coordinates": {
+          "x": 2799,
+          "y": 852,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-e842c209-f15b-458d-8c25-f6ca73ddfd06",
+      "title": "Tòrrcaladh",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "dunfal-offen-i",
+      "x": 919,
+      "y": 1603,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "e842c209-f15b-458d-8c25-f6ca73ddfd06",
+        "url": "https://www.worldanvil.com/world/map/marker/e842c209-f15b-458d-8c25-f6ca73ddfd06/edit",
+        "title": "Tòrrcaladh",
+        "coordinates": {
+          "x": 919,
+          "y": 1603,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-e9eabda7-d28e-47ae-a9f5-766b28dcbed5",
+      "title": "Talamhòr",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "dunfal-offen-ii",
+      "x": 1532,
+      "y": 2139,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "e9eabda7-d28e-47ae-a9f5-766b28dcbed5",
+        "url": "https://www.worldanvil.com/world/map/marker/e9eabda7-d28e-47ae-a9f5-766b28dcbed5/edit",
+        "title": "Talamhòr",
+        "coordinates": {
+          "x": 1532,
+          "y": 2139,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-eb33856a-0656-46eb-9fa2-445520f55ae5",
+      "title": "Beinncamas",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "dunfal-offen-ii",
+      "x": 1428,
+      "y": 2356,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "eb33856a-0656-46eb-9fa2-445520f55ae5",
+        "url": "https://www.worldanvil.com/world/map/marker/eb33856a-0656-46eb-9fa2-445520f55ae5/edit",
+        "title": "Beinncamas",
+        "coordinates": {
+          "x": 1428,
+          "y": 2356,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-ed95e667-b380-461f-898b-35f94d8df21e",
+      "title": "Gleannceò",
+      "category": "Waldsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/waldsiedlung.png",
+      "territoryId": "herrschaft-riangabra",
+      "x": 2335,
+      "y": 2445,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "ed95e667-b380-461f-898b-35f94d8df21e",
+        "url": "https://www.worldanvil.com/world/map/marker/ed95e667-b380-461f-898b-35f94d8df21e/edit",
+        "title": "Gleannceò",
+        "coordinates": {
+          "x": 2335,
+          "y": 2445,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-eef5be23-1efd-418b-ae22-a7d27167723e",
+      "title": "Cluaintòrr",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "herrschaft-cein",
+      "x": 2010,
+      "y": 824,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "eef5be23-1efd-418b-ae22-a7d27167723e",
+        "url": "https://www.worldanvil.com/world/map/marker/eef5be23-1efd-418b-ae22-a7d27167723e/edit",
+        "title": "Cluaintòrr",
+        "coordinates": {
+          "x": 2010,
+          "y": 824,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-f112fa44-7f6a-4777-9d65-5c1b66545158",
+      "title": "Lustòrr",
+      "category": "Dorf",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bardensiedlung.png",
+      "territoryId": "dunfal-offen-iii",
+      "x": 2026,
+      "y": 1452,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "f112fa44-7f6a-4777-9d65-5c1b66545158",
+        "url": "https://www.worldanvil.com/world/map/marker/f112fa44-7f6a-4777-9d65-5c1b66545158/edit",
+        "title": "Lustòrr",
+        "coordinates": {
+          "x": 2026,
+          "y": 1452,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-f2b572e8-a389-4bc4-8e86-dc8c8e59f53f",
+      "title": "Burg der Fianna",
+      "category": "Burg",
+      "templateId": "militaer",
+      "icon": "/Karten/assets/icons/welt/gro-e-burg.png",
+      "territoryId": "herrschaft-fianna",
+      "x": 2293,
+      "y": 3841,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "f2b572e8-a389-4bc4-8e86-dc8c8e59f53f",
+        "url": "https://www.worldanvil.com/world/map/marker/f2b572e8-a389-4bc4-8e86-dc8c8e59f53f/edit",
+        "title": "",
+        "coordinates": {
+          "x": 2293,
+          "y": 3841,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ],
+        "nameRecoveredFrom": "description-heading"
+      }
+    },
+    {
+      "id": "dunfal-f5f557a5-bd47-49b9-9f42-01c7a10c93e6",
+      "title": "Airc nan Eòlas",
+      "category": "Magierturm",
+      "templateId": "gebaeude",
+      "icon": "/Karten/assets/icons/welt/magierturm.png",
+      "territoryId": "herrschaft-ailella",
+      "x": 2369,
+      "y": 708,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "f5f557a5-bd47-49b9-9f42-01c7a10c93e6",
+        "url": "https://www.worldanvil.com/world/map/marker/f5f557a5-bd47-49b9-9f42-01c7a10c93e6/edit",
+        "title": "Airc nan Eòlas",
+        "coordinates": {
+          "x": 2369,
+          "y": 708,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-f7cff256-d667-4c02-adfe-ebb7083723a4",
+      "title": "Smeòfeàr",
+      "category": "Waldsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/waldsiedlung.png",
+      "territoryId": "herrschaft-riangabra",
+      "x": 2641,
+      "y": 2062,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "f7cff256-d667-4c02-adfe-ebb7083723a4",
+        "url": "https://www.worldanvil.com/world/map/marker/f7cff256-d667-4c02-adfe-ebb7083723a4/edit",
+        "title": "Smeòfeàr",
+        "coordinates": {
+          "x": 2641,
+          "y": 2062,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-f94eef18-f269-419c-834e-9d3377b99ca7",
+      "title": "Fraochuige",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "herrschaft-ailella",
+      "x": 2505,
+      "y": 682,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "f94eef18-f269-419c-834e-9d3377b99ca7",
+        "url": "https://www.worldanvil.com/world/map/marker/f94eef18-f269-419c-834e-9d3377b99ca7/edit",
+        "title": "Fraochuige",
+        "coordinates": {
+          "x": 2505,
+          "y": 682,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    },
+    {
+      "id": "dunfal-fb9b6cb9-46e5-469d-abd9-8845be060cf3",
+      "title": "Beinnbaile",
+      "category": "Dorf",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bardensiedlung.png",
+      "territoryId": "herrschaft-eachtrai",
+      "x": 1948,
+      "y": 2719,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c5c35f56-f5e0-4a85-b5cb-0fd5f19a00e2",
+        "markerId": "fb9b6cb9-46e5-469d-abd9-8845be060cf3",
+        "url": "https://www.worldanvil.com/world/map/marker/fb9b6cb9-46e5-469d-abd9-8845be060cf3/edit",
+        "title": "Beinnbaile",
+        "coordinates": {
+          "x": 1948,
+          "y": 2719,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4063,
+          4097
+        ]
+      }
+    }
+  ]
+}

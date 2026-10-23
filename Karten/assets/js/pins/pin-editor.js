@@ -210,6 +210,7 @@
             <label class="e-lbl" for="sb-faction">Fraktion / Gilde</label>
             <input class="e-inp" id="sb-faction" value="${esc(pin.faction || '')}" maxlength="80" placeholder="z. B. Händlergilde …"/>
           </div>
+          <div data-household-editor></div>
         `)}
 
         ${panel('medien', `
@@ -261,6 +262,15 @@
       <button type="button" class="s-btn s-save" data-action="save-pin-editor" data-pin-id="${pin.id}">✓ Pin übernehmen</button>`;
 
     bindFormEvents(body);
+    body.dispatchEvent(new CustomEvent('aleria:karto:pin-residents-editor', { bubbles: true, detail: {
+      container: body.querySelector('[data-household-editor]'), pin: clone(pin),
+      change(ids) {
+        if (currentPin() !== pin) return;
+        if (ids === undefined) delete pin.residentFamilyIds;
+        else pin.residentFamilyIds = [...ids];
+        updateStatus();
+      },
+    } }));
     if (pin.kind === 'text') window.KartoPinLettering.updatePreview(body, pin);
     setHeader();
     runtime.renderEditorPreview?.(pin);

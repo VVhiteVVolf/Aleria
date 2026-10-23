@@ -129,6 +129,7 @@
   }
 
   function backupRestore(i){
+    if(runtime.canTransitionEditors?.() === false){runtime.toast('Bitte die offene Bearbeitung zuerst übernehmen oder verwerfen.');return;}
     const all = backupGetAll();
     const b = all[i];
     if(!b) return;
@@ -198,6 +199,7 @@
   }
 
   function importApply(){
+    if(runtime.canTransitionEditors?.() === false){runtime.toast('Bitte die offene Bearbeitung zuerst übernehmen oder verwerfen.');return;}
     if(!importParsed) return;
     backupSave('Vor Import');
     const s = state();
@@ -215,6 +217,8 @@
   function openDataMgr(){
     const s = state();
     document.getElementById('exp-pins-cnt').textContent = `(${(s.pins||[]).length})`;
+    const regionCount = document.getElementById('exp-regions-cnt');
+    if(regionCount) regionCount.textContent = `(${(s.regions||[]).length})`;
     document.getElementById('exp-cats-cnt').textContent = `(${(s.cats||[]).length})`;
     document.getElementById('exp-mcat-cnt').textContent = `(${(s.markerCatalog||[]).length})`;
     dmgrParsed = null;
@@ -234,6 +238,7 @@
     const s = state();
     const out = { exportedAt: new Date().toISOString(), version: 1 };
     if(document.getElementById('exp-pins').checked) out.pins = s.pins;
+    if(document.getElementById('exp-regions')?.checked) out.regions = s.regions || [];
     if(document.getElementById('exp-cats').checked){
       out.cats = s.cats;
       out.categoryCatalogVersion = s.categoryCatalogVersion;
@@ -276,6 +281,7 @@
         dmgrParsed = d;
         const secs = {
           pins:  {el:'imp-chk-pins',  cnt:'imp-pins-cnt',  val: d.pins?.length},
+          regions: {el:'imp-chk-regions', cnt:'imp-regions-cnt', val:d.regions?.length},
           cats:  {el:'imp-chk-cats',  cnt:'imp-cats-cnt',  val: d.cats?.length},
           mcat:  {el:'imp-chk-mcat',  cnt:'imp-mcat-cnt',  val: d.markerCatalog?.length},
           lsb:   {el:'imp-chk-lsb',   cnt:null,            val: d.lsb},
@@ -286,6 +292,7 @@
         let found = 0;
         Object.values(secs).forEach(s => {
           const el = document.getElementById(s.el);
+          if(!el) return;
           const show = s.val !== undefined && s.val !== null && s.val !== false;
           el.style.display = show ? 'flex' : 'none';
           if(show){
@@ -307,12 +314,25 @@
     reader.readAsText(f);
   }
 
-  function dmgrImportApply(){
+  async function dmgrImportApply(){
+    if(runtime.canTransitionEditors?.() === false){runtime.toast('Bitte die offene Bearbeitung zuerst übernehmen oder verwerfen.');return;}
     if(!dmgrParsed){ runtime.toast('⚠ Keine Datei geladen'); return; }
     const s = state();
     const d = dmgrParsed;
+    const importRegions = document.getElementById('imp-regions')?.checked && d.regions !== undefined;
+    if(importRegions){
+      try {
+        const { validateRegions } = await import('../../../modules/regions/region-model.mjs');
+        validateRegions(d.regions);
+      } catch(error){runtime.toast('Regionsimport abgebrochen: '+error.message);return;}
+      if(runtime.canTransitionEditors?.() === false) return;
+    }
     backupSave('Vor Daten-Import');
     const applied = [];
+    if(importRegions){
+      s.regions = JSON.parse(JSON.stringify(d.regions));
+      applied.push('Gebiete und Grenzen');
+    }
 
     if(document.getElementById('imp-pins')?.checked && d.pins){ s.pins = d.pins.map(normalizePin); applied.push('Pins'); }
     if(document.getElementById('imp-cats')?.checked && d.cats){ Object.assign(s, window.KartoCategoryCatalog.upgrade(d)); applied.push('Kategorien'); }

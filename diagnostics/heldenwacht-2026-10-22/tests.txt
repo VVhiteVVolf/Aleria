@@ -1,0 +1,362 @@
+﻿TAP version 13
+147 Marker, 138 Beschreibungen und 16 Gebietszuordnungen geprüft.
+113 Marker, 102 Beschreibungen und 11 Gebietszuordnungen geprüft.
+168 Marker, 148 Beschreibungen und 15 Gebietszuordnungen geprüft.
+115 Marker, 114 Beschreibungen und 12 Gebietszuordnungen geprüft.
+# Subtest: eleven original documents and sixteen image sources remain verifiable
+ok 1 - eleven original documents and sixteen image sources remain verifiable
+  ---
+  duration_ms: 41.7535
+  type: 'test'
+  ...
+# Subtest: all pages have valid local resources, unique IDs and resolvable internal links
+ok 2 - all pages have valid local resources, unique IDs and resolvable internal links
+  ---
+  duration_ms: 17.9452
+  type: 'test'
+  ...
+# Subtest: the kingdom follows Cenyr’s world codex layout rather than the court subpage shell
+ok 3 - the kingdom follows Cenyr’s world codex layout rather than the court subpage shell
+  ---
+  duration_ms: 2.4463
+  type: 'test'
+  ...
+# Subtest: all biographies and current royal links resolve existing canonical people
+ok 4 - all biographies and current royal links resolve existing canonical people
+  ---
+  duration_ms: 1.704
+  type: 'test'
+  ...
+# Subtest: all forty-five roles remain searchable and disputed offices keep their source context
+ok 5 - all forty-five roles remain searchable and disputed offices keep their source context
+  ---
+  duration_ms: 1.021
+  type: 'test'
+  ...
+# Subtest: the kingdom owns its council, five clans, organizations and eight administration links
+ok 6 - the kingdom owns its council, five clans, organizations and eight administration links
+  ---
+  duration_ms: 5.3472
+  type: 'test'
+  ...
+# Subtest: registry discovery includes Aldrimar and its Roriksheim branch while preserving Cenyr
+ok 7 - registry discovery includes Aldrimar and its Roriksheim branch while preserving Cenyr
+  ---
+  duration_ms: 2.7131
+  type: 'test'
+  ...
+# Subtest: 147 complete WA forms reconcile without loss or duplicate source IDs
+ok 8 - 147 complete WA forms reconcile without loss or duplicate source IDs
+  ---
+  duration_ms: 1.0004
+  type: 'test'
+  ...
+# Subtest: target positions use the real image size and preserve distinct overlapping signs
+ok 9 - target positions use the real image size and preserve distinct overlapping signs
+  ---
+  duration_ms: 10.6605
+  type: 'test'
+  ...
+# Subtest: Vaeren delegation retains the king and three distinct offices with reversion
+ok 10 - Vaeren delegation retains the king and three distinct offices with reversion
+  ---
+  duration_ms: 1.5979
+  type: 'test'
+  ...
+# Subtest: Torrenwacht stays vacant while royal forts and the Grimr chronology remain explicit
+ok 11 - Torrenwacht stays vacant while royal forts and the Grimr chronology remain explicit
+  ---
+  duration_ms: 0.4032
+  type: 'test'
+  ...
+# Subtest: Galmar decree permits exactly one separate brewery lease per guild
+ok 12 - Galmar decree permits exactly one separate brewery lease per guild
+  ---
+  duration_ms: 0.2177
+  type: 'test'
+  ...
+# Subtest: direct small fiefs and the two new island clans remain nested and unassigned
+ok 13 - direct small fiefs and the two new island clans remain nested and unassigned
+  ---
+  duration_ms: 8.2835
+  type: 'test'
+  ...
+# Subtest: every current description and pin is reachable through its owning register
+ok 14 - every current description and pin is reachable through its owning register
+  ---
+  duration_ms: 3.2772
+  type: 'test'
+  ...
+# Subtest: changed settlement types and special organisation ownership match their present roles
+ok 15 - changed settlement types and special organisation ownership match their present roles
+  ---
+  duration_ms: 0.3176
+  type: 'test'
+  ...
+# Subtest: new names are unique throughout existing Aldrimar map catalogs
+ok 16 - new names are unique throughout existing Aldrimar map catalogs
+  ---
+  duration_ms: 4.8011
+  type: 'test'
+  ...
+# Subtest: source files, heraldry, canonical portraits and all sixteen registered pages remain local and intact
+ok 17 - source files, heraldry, canonical portraits and all sixteen registered pages remain local and intact
+  ---
+  duration_ms: 56.7543
+  type: 'test'
+  ...
+# Subtest: verification cannot reset an already populated map
+ok 18 - verification cannot reset an already populated map
+  ---
+  duration_ms: 68.9834
+  type: 'test'
+  ...
+# Subtest: all seven legacy articles and only the three supplied images are archived with checksums
+ok 19 - all seven legacy articles and only the three supplied images are archived with checksums
+  ---
+  duration_ms: 18.1468
+  type: 'test'
+  ...
+# Subtest: 136 browser-captured entries reconcile to 118 stable places and 18 documented overlays
+ok 20 - 136 browser-captured entries reconcile to 118 stable places and 18 documented overlays
+  ---
+  duration_ms: 2.9727
+  type: 'test'
+  ...
+# Subtest: 126 unique target positions use the actual canvas, current templates and local heraldry
+ok 21 - 126 unique target positions use the actual canvas, current templates and local heraldry
+  ---
+  duration_ms: 23.1028
+  type: 'test'
+  ...
+# Subtest: Winterwacht is nested under Saatgrund while six primary domains remain expanded
+ok 22 - Winterwacht is nested under Saatgrund while six primary domains remain expanded
+  ---
+  duration_ms: 0.4665
+  type: 'test'
+  ...
+# Subtest: Klippenschlag and the Grendel upgrade preserve historical ancestors and stable people
+ok 23 - Klippenschlag and the Grendel upgrade preserve historical ancestors and stable people
+  ---
+  duration_ms: 4.3259
+  type: 'test'
+  ...
+# Subtest: confirmed relocations and new settlement states agree across the map and the registers
+ok 24 - confirmed relocations and new settlement states agree across the map and the registers
+  ---
+  duration_ms: 0.4055
+  type: 'test'
+  ...
+# Subtest: three Schwarzdorn exclaves keep their external owner and orders keep their affiliations
+ok 25 - three Schwarzdorn exclaves keep their external owner and orders keep their affiliations
+  ---
+  duration_ms: 0.2324
+  type: 'test'
+  ...
+# Subtest: eight sourced new names and five genuinely missing descriptions stay distinguishable
+ok 26 - eight sourced new names and five genuinely missing descriptions stay distinguishable
+  ---
+  duration_ms: 0.5547
+  type: 'test'
+  ...
+# Subtest: all eight generated pages, councils and links use local shared assets
+ok 27 - all eight generated pages, councils and links use local shared assets
+  ---
+  duration_ms: 7.0774
+  type: 'test'
+  ...
+# Subtest: all 126 captured sources reconcile to 113 stable place IDs and 13 areas
+ok 28 - all 126 captured sources reconcile to 113 stable place IDs and 13 areas
+  ---
+  duration_ms: 0.7932
+  type: 'test'
+  ...
+# Subtest: reviewed pin coordinates, categories and images match the actual 4096 by 2418 canvas
+ok 29 - reviewed pin coordinates, categories and images match the actual 4096 by 2418 canvas
+  ---
+  duration_ms: 21.2676
+  type: 'test'
+  ...
+# Subtest: the jarl page expands primary clans while Rabenforst and Goldglanz remain nested
+ok 30 - the jarl page expands primary clans while Rabenforst and Goldglanz remain nested
+  ---
+  duration_ms: 1.017
+  type: 'test'
+  ...
+# Subtest: Schimmerküste separates administration and retains a single shared council and joint capital
+ok 31 - Schimmerküste separates administration and retains a single shared council and joint capital
+  ---
+  duration_ms: 0.6151
+  type: 'test'
+  ...
+# Subtest: every place and complete current description is reachable through its owning page
+ok 32 - every place and complete current description is reachable through its owning page
+  ---
+  duration_ms: 2.2717
+  type: 'test'
+  ...
+# Subtest: exclaves, independent organisations and the neighbouring grave signs retain their identities
+ok 33 - exclaves, independent organisations and the neighbouring grave signs retain their identities
+  ---
+  duration_ms: 0.2447
+  type: 'test'
+  ...
+# Subtest: moved settlements agree with current clan descriptions and original empty texts stay empty
+ok 34 - moved settlements agree with current clan descriptions and original empty texts stay empty
+  ---
+  duration_ms: 0.2654
+  type: 'test'
+  ...
+# Subtest: nine source articles, three maps, eleven registered pages and local canonical portraits remain intact
+ok 35 - nine source articles, three maps, eleven registered pages and local canonical portraits remain intact
+  ---
+  duration_ms: 29.5784
+  type: 'test'
+  ...
+# Subtest: a verification import cannot overwrite existing edited map data
+ok 36 - a verification import cannot overwrite existing edited map data
+  ---
+  duration_ms: 50.4214
+  type: 'test'
+  ...
+# Subtest: all supplied articles and the three new map images remain byte-verifiable
+ok 37 - all supplied articles and the three new map images remain byte-verifiable
+  ---
+  duration_ms: 22.9755
+  type: 'test'
+  ...
+# Subtest: 168 stable pins use exact new positions while retaining the old coordinate evidence
+ok 38 - 168 stable pins use exact new positions while retaining the old coordinate evidence
+  ---
+  duration_ms: 2.1637
+  type: 'test'
+  ...
+# Subtest: the regular map is discoverable and exposes live icons and all three supplied images
+ok 39 - the regular map is discoverable and exposes live icons and all three supplied images
+  ---
+  duration_ms: 16.4544
+  type: 'test'
+  ...
+# Subtest: 15 registered pages reuse the common territory UI and give each positioned place a map link
+ok 40 - 15 registered pages reuse the common territory UI and give each positioned place a map link
+  ---
+  duration_ms: 11.4408
+  type: 'test'
+  ...
+# Subtest: Hornhall is physically in Dämmergrund, uses Wolfshorn heraldry and keeps Bjoerns succession
+ok 41 - Hornhall is physically in Dämmergrund, uses Wolfshorn heraldry and keeps Bjoerns succession
+  ---
+  duration_ms: 0.4003
+  type: 'test'
+  ...
+# Subtest: three Schwarzdorn exclaves appear with the owner and in the host territory register
+ok 42 - three Schwarzdorn exclaves appear with the owner and in the host territory register
+  ---
+  duration_ms: 0.2447
+  type: 'test'
+  ...
+# Subtest: displaced settlements, personal castle ownership and revised descriptions agree with the current territories
+ok 43 - displaced settlements, personal castle ownership and revised descriptions agree with the current territories
+  ---
+  duration_ms: 0.2494
+  type: 'test'
+  ...
+# Subtest: local clan hierarchies include all 33 existing clans without flattening subordinate courts
+ok 44 - local clan hierarchies include all 33 existing clans without flattening subordinate courts
+  ---
+  duration_ms: 0.2211
+  type: 'test'
+  ...
+# Subtest: the Jarltum expands seven primary domains with their own places while keeping subordinate domains nested
+ok 45 - the Jarltum expands seven primary domains with their own places while keeping subordinate domains nested
+  ---
+  duration_ms: 0.4666
+  type: 'test'
+  ...
+# Subtest: current symbols, templates, local crests, banners and council portraits all exist
+ok 46 - current symbols, templates, local crests, banners and council portraits all exist
+  ---
+  duration_ms: 25.5798
+  type: 'test'
+  ...
+# Subtest: unresolved data remain explicit without invented names, texts or coordinates
+ok 47 - unresolved data remain explicit without invented names, texts or coordinates
+  ---
+  duration_ms: 0.7026
+  type: 'test'
+  ...
+# Subtest: repeat imports verify the snapshot and refuse to overwrite subsequently edited maps
+ok 48 - repeat imports verify the snapshot and refuse to overwrite subsequently edited maps
+  ---
+  duration_ms: 67.3351
+  type: 'test'
+  ...
+# Subtest: direct pin links wait for map readiness and never expose secret pins
+ok 49 - direct pin links wait for map readiness and never expose secret pins
+  ---
+  duration_ms: 15.6588
+  type: 'test'
+  ...
+# Subtest: all 121 browser sources reconcile to 103 source IDs and 18 documented omissions
+ok 50 - all 121 browser sources reconcile to 103 source IDs and 18 documented omissions
+  ---
+  duration_ms: 1.1504
+  type: 'test'
+  ...
+# Subtest: all 115 positions use the actual image size and safe reusable categories
+ok 51 - all 115 positions use the actual image size and safe reusable categories
+  ---
+  duration_ms: 22.9754
+  type: 'test'
+  ...
+# Subtest: every map place appears with the same text in its responsible page
+ok 52 - every map place appears with the same text in its responsible page
+  ---
+  duration_ms: 0.6799
+  type: 'test'
+  ...
+# Subtest: primary clan domains remain expanded with local subordinate navigation
+ok 53 - primary clan domains remain expanded with local subordinate navigation
+  ---
+  duration_ms: 0.1424
+  type: 'test'
+  ...
+# Subtest: leases, guilds and orders keep their own heraldry rather than the host clan
+ok 54 - leases, guilds and orders keep their own heraldry rather than the host clan
+  ---
+  duration_ms: 0.2728
+  type: 'test'
+  ...
+# Subtest: current ruins and settlements retain their history without contradictory active claims
+ok 55 - current ruins and settlements retain their history without contradictory active claims
+  ---
+  duration_ms: 0.2789
+  type: 'test'
+  ...
+# Subtest: new descriptions and the single missing old text stay explicit
+ok 56 - new descriptions and the single missing old text stay explicit
+  ---
+  duration_ms: 0.2446
+  type: 'test'
+  ...
+# Subtest: archived source articles, maps, local portraits and page registry remain complete
+ok 57 - archived source articles, maps, local portraits and page registry remain complete
+  ---
+  duration_ms: 33.0038
+  type: 'test'
+  ...
+# Subtest: a repeated import can verify but cannot replace an already edited map
+ok 58 - a repeated import can verify but cannot replace an already edited map
+  ---
+  duration_ms: 49.8188
+  type: 'test'
+  ...
+1..58
+# tests 58
+# suites 0
+# pass 58
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 2239.248

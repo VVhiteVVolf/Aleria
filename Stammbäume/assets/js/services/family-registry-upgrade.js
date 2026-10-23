@@ -39,6 +39,13 @@ function registryManagedFieldNames(family, extensionKey) {
   return Array.isArray(fieldNames) ? fieldNames : [];
 }
 
+// Optional field revisions let later metadata releases preserve intervening local edits.
+function metadataFieldsForUpgrade(registered, localRevision, key, fallback = true) {
+  const revisions = registered.extensions?.[key.replace(/Fields$/, 'FieldRevisions')] || {};
+  return registryManagedFieldNames(registered, key).filter(field => Number.isInteger(revisions[field])
+    ? localRevision < revisions[field] : fallback);
+}
+
 function mergeRegisteredManagedFields(registeredValue = {}, localValue = {}, fieldNames = []) {
   const result = { ...registeredValue, ...localValue };
   fieldNames.forEach(fieldName => {
@@ -187,22 +194,22 @@ export function resolveRegisteredFamilyUpgrade(registeredInput, localInput) {
   const mergedHouseProfile = mergeRegisteredManagedFields(
     registered.document.houseProfile,
     local.document.houseProfile,
-    registryManagedFieldNames(registered, 'registryManagedHouseProfileFields')
+    metadataFieldsForUpgrade(registered, localRevision, 'registryManagedHouseProfileFields')
   );
   const mergedDocument = mergeRegisteredManagedFields(
     registered.document,
     local.document,
-    registryManagedFieldNames(registered, 'registryManagedDocumentFields')
+    metadataFieldsForUpgrade(registered, localRevision, 'registryManagedDocumentFields')
   );
   const mergedView = mergeRegisteredManagedFields(
     registered.view,
     local.view,
-    applyManagedEntityFields ? registryManagedFieldNames(registered, 'registryManagedViewFields') : []
+    metadataFieldsForUpgrade(registered, localRevision, 'registryManagedViewFields', applyManagedEntityFields)
   );
   const mergedLineage = mergeRegisteredManagedFields(
     registered.lineage,
     local.lineage,
-    applyManagedEntityFields ? registryManagedFieldNames(registered, 'registryManagedLineageFields') : []
+    metadataFieldsForUpgrade(registered, localRevision, 'registryManagedLineageFields', applyManagedEntityFields)
   );
   const mergedExtensions = mergeRegisteredManagedFields(
     registered.extensions,
@@ -211,17 +218,23 @@ export function resolveRegisteredFamilyUpgrade(registeredInput, localInput) {
   );
   const registryManagedUpgradeMetadata = Object.fromEntries([
     'registryManagedDocumentFields',
+    'registryManagedDocumentFieldRevisions',
     'registryManagedEntitySourceRevision',
     'registryManagedExtensionFields',
     'registryManagedHouseProfileFields',
+    'registryManagedHouseProfileFieldRevisions',
     'registryManagedLineageFields',
+    'registryManagedLineageFieldRevisions',
     'registryManagedRecordFields',
-    'registryManagedViewFields'
+    'registryManagedViewFields',
+    'registryManagedViewFieldRevisions'
   ].flatMap(extensionKey => {
     const fieldNames = registered.extensions?.[extensionKey];
     if (extensionKey === 'registryManagedEntitySourceRevision') {
       return Number.isInteger(fieldNames) ? [[extensionKey, fieldNames]] : [];
     }
+    if (extensionKey.endsWith('FieldRevisions')) return fieldNames && typeof fieldNames === 'object'
+      ? [[extensionKey, { ...fieldNames }]] : [];
     return Array.isArray(fieldNames) ? [[extensionKey, [...fieldNames]]] : [];
   }));
 

@@ -82,6 +82,7 @@ export const FJORDHEIM_REGISTRY_FOLDERS = Object.freeze([
     { path: ['Fjordheim', territory.name], description: territory.description, icon: territory.emblem },
     ...territory.places.map(place => ({
       path: ['Fjordheim', territory.name, place.name],
+      icon: place.clans[0]?.emblem || territory.emblem,
       description: place.description || (place.aliases.length ? `Weitere überlieferte Ortsnamen: ${place.aliases.join(' · ')}.` : ''),
       plannedHouses: place.clans,
       searchTerms: [...place.aliases, ...place.clans.flatMap(entry => [entry.name, entry.rankLabel, ...entry.aliases])]

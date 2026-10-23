@@ -1,0 +1,4982 @@
+{
+  "imageSize": [
+    4096,
+    3446
+  ],
+  "coordinateOrigin": "bottom-left",
+  "markers": [
+    {
+      "id": "heldenwacht-local-001",
+      "title": "Hrafnadal",
+      "category": "Siedlungsruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/zerst-rte-siedlung.png",
+      "territoryId": "direktlehen-tal-der-helden",
+      "x": 1214.0,
+      "y": 3334,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "aleria",
+        "basis": "Neues Kartenzeichen; Name und Beschreibung im Auftrag des Nutzers ergänzt.",
+        "mapPositionId": "heldenwacht-position-001",
+        "targetPosition": {
+          "x": 1214.0,
+          "y": 112,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-001"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-f83a1de4-9496-45bf-8474-73a06e9f1d28",
+      "title": "Tâkvakt",
+      "category": "Turmruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/zerst-rter-turm.png",
+      "territoryId": "hesirentum-torrenwacht",
+      "x": 2336.5,
+      "y": 3332,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "f83a1de4-9496-45bf-8474-73a06e9f1d28",
+        "url": "https://www.worldanvil.com/world/map/marker/f83a1de4-9496-45bf-8474-73a06e9f1d28/edit",
+        "title": "Tâkvakt",
+        "coordinates": {
+          "x": 2328.0,
+          "y": 3393.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 2336.5,
+          "y": 114,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-002"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-a420628d-4706-497f-abc1-e392cd576346",
+      "title": "Torrenheim",
+      "category": "Siedlungsruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/stadtruine.png",
+      "territoryId": "hesirentum-torrenwacht",
+      "x": 2086.5,
+      "y": 3157,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "a420628d-4706-497f-abc1-e392cd576346",
+        "url": "https://www.worldanvil.com/world/map/marker/a420628d-4706-497f-abc1-e392cd576346/edit",
+        "title": "Torrenheim",
+        "coordinates": {
+          "x": 2087.0,
+          "y": 3191.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 2086.5,
+          "y": 289,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-003"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-07aa8c3b-a9cb-43a0-86d3-8a1695392e5b",
+      "title": "Rûnstorm",
+      "category": "Schiffswrack",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/schiffswrackpin.png",
+      "territoryId": "hesirentum-torrenwacht",
+      "x": 2595.5,
+      "y": 3166,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "07aa8c3b-a9cb-43a0-86d3-8a1695392e5b",
+        "url": "https://www.worldanvil.com/world/map/marker/07aa8c3b-a9cb-43a0-86d3-8a1695392e5b/edit",
+        "title": "Rûnstorm",
+        "coordinates": {
+          "x": 2579.0,
+          "y": 3180.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 2595.5,
+          "y": 280,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-004"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-local-005",
+      "title": "Steinwende",
+      "category": "Siedlungsruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/zerst-rte-siedlung.png",
+      "territoryId": "direktlehen-tal-der-helden",
+      "x": 1477.0,
+      "y": 3088,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "aleria",
+        "basis": "Neues Kartenzeichen; Name und Beschreibung im Auftrag des Nutzers ergänzt.",
+        "mapPositionId": "heldenwacht-position-005",
+        "targetPosition": {
+          "x": 1477.0,
+          "y": 358,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-005"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-d47f2606-73e1-4ca4-8502-392fe28c173a",
+      "title": "Nordglanz",
+      "category": "Turmruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/zerst-rter-turm.png",
+      "territoryId": "piratentum-sirenen-zahn-riff",
+      "x": 3257.0,
+      "y": 3043,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "d47f2606-73e1-4ca4-8502-392fe28c173a",
+        "url": "https://www.worldanvil.com/world/map/marker/d47f2606-73e1-4ca4-8502-392fe28c173a/edit",
+        "title": "Nordglanz",
+        "coordinates": {
+          "x": 3253.0,
+          "y": 3044.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 3257.0,
+          "y": 403,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-006"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-3c036681-d59c-403a-bbee-a9ed7b37ffe1",
+      "title": "Havfrbolg",
+      "category": "Burgsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/burgsiedlung.png",
+      "territoryId": "hesirentum-torrenwacht",
+      "x": 2304.5,
+      "y": 3036,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "3c036681-d59c-403a-bbee-a9ed7b37ffe1",
+        "url": "https://www.worldanvil.com/world/map/marker/3c036681-d59c-403a-bbee-a9ed7b37ffe1/edit",
+        "title": "Havfrbolg",
+        "coordinates": {
+          "x": 2309.0,
+          "y": 3071.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 2304.5,
+          "y": 410,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-007"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-b9508f20-0318-4cc5-b829-60fc1e293701",
+      "title": "Isvakt",
+      "category": "Siedlungsruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/zerst-rte-siedlung.png",
+      "territoryId": "hesirentum-torrenwacht",
+      "x": 2469.0,
+      "y": 3018,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "b9508f20-0318-4cc5-b829-60fc1e293701",
+        "url": "https://www.worldanvil.com/world/map/marker/b9508f20-0318-4cc5-b829-60fc1e293701/edit",
+        "title": "Isvakt",
+        "coordinates": {
+          "x": 2468.0,
+          "y": 3023.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 2469.0,
+          "y": 428,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-008"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-local-009",
+      "title": "Kammspäherwacht",
+      "category": "Turm",
+      "templateId": "gebaeude",
+      "icon": "/Karten/assets/icons/welt/turm.png",
+      "territoryId": "direktlehen-tal-der-helden",
+      "x": 1000.0,
+      "y": 3014,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "aleria",
+        "basis": "Neues Kartenzeichen; Name und Beschreibung im Auftrag des Nutzers ergänzt.",
+        "mapPositionId": "heldenwacht-position-009",
+        "targetPosition": {
+          "x": 1000.0,
+          "y": 432,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-009"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-0a1aeaea-46f3-426d-bb78-fe4aa978d7df",
+      "title": "Sjødrakkr",
+      "category": "Schiffswrack",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/schiffswrackpin.png",
+      "territoryId": "hesirentum-wellenklang",
+      "x": 2800.0,
+      "y": 2933,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "0a1aeaea-46f3-426d-bb78-fe4aa978d7df",
+        "url": "https://www.worldanvil.com/world/map/marker/0a1aeaea-46f3-426d-bb78-fe4aa978d7df/edit",
+        "title": "Sjødrakkr",
+        "coordinates": {
+          "x": 2801.0,
+          "y": 2945.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 2800.0,
+          "y": 513,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-010"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-5624ced1-3173-4062-a8bd-5589990b06d5",
+      "title": "Vintrefjord",
+      "category": "Siedlungsruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/stadtruine.png",
+      "territoryId": "piratentum-sirenen-zahn-riff",
+      "x": 3221.0,
+      "y": 2896,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "5624ced1-3173-4062-a8bd-5589990b06d5",
+        "url": "https://www.worldanvil.com/world/map/marker/5624ced1-3173-4062-a8bd-5589990b06d5/edit",
+        "title": "Vintrfjord",
+        "coordinates": {
+          "x": 3234.0,
+          "y": 2954.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 3221.0,
+          "y": 550,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-011"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-local-012",
+      "title": "Eidfelskloster",
+      "category": "Klostersiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/klostersiedlung.png",
+      "territoryId": "direktlehen-tal-der-helden",
+      "x": 720.5,
+      "y": 2908,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "aleria",
+        "basis": "Neues Kartenzeichen; Name und Beschreibung im Auftrag des Nutzers ergänzt.",
+        "mapPositionId": "heldenwacht-position-012",
+        "targetPosition": {
+          "x": 720.5,
+          "y": 538,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-012"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-d59b00a3-3d58-4988-a2fc-534d251e32a5",
+      "title": "Røsteberg",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "hesirentum-wellenklang",
+      "x": 2147.5,
+      "y": 2888,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "d59b00a3-3d58-4988-a2fc-534d251e32a5",
+        "url": "https://www.worldanvil.com/world/map/marker/d59b00a3-3d58-4988-a2fc-534d251e32a5/edit",
+        "title": "Røsteberg",
+        "coordinates": {
+          "x": 2147.0,
+          "y": 2887.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 2147.5,
+          "y": 558,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-013"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-23707241-67e3-45e5-a2a1-94704bc84eb9",
+      "title": "Abtrünnigenlager Wellenklang",
+      "category": "Heerlager",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/heereslager.png",
+      "territoryId": "hesirentum-wellenklang",
+      "x": 2292.5,
+      "y": 2875,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "23707241-67e3-45e5-a2a1-94704bc84eb9",
+        "url": "https://www.worldanvil.com/world/map/marker/23707241-67e3-45e5-a2a1-94704bc84eb9/edit",
+        "title": "Abtrünnigen Söldnerlager",
+        "coordinates": {
+          "x": 2297.0,
+          "y": 2905.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 2292.5,
+          "y": 571,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-014"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-local-015",
+      "title": "Hammergrat",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "herrschaft-eisenbieger",
+      "x": 77.5,
+      "y": 2854,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "aleria",
+        "basis": "Neues Kartenzeichen; Name und Beschreibung im Auftrag des Nutzers ergänzt.",
+        "mapPositionId": "heldenwacht-position-015",
+        "targetPosition": {
+          "x": 77.5,
+          "y": 592,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-015"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-2f7acb32-0761-4a74-a709-e97826046187",
+      "title": "Grymschmiede - Erzbender",
+      "category": "Schmiede",
+      "templateId": "gebaeude",
+      "icon": "/Karten/assets/icons/welt/schmiede.png",
+      "territoryId": "thanentum-tal-der-helden",
+      "x": 371.0,
+      "y": 2780,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "2f7acb32-0761-4a74-a709-e97826046187",
+        "url": "https://www.worldanvil.com/world/map/marker/2f7acb32-0761-4a74-a709-e97826046187/edit",
+        "title": "Grymschmiede - Erzbender",
+        "coordinates": {
+          "x": 369.0,
+          "y": 2789.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 371.0,
+          "y": 666,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-016"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-35117b25-e085-40fd-b18c-ad46a71fba54",
+      "title": "Skråvakt",
+      "category": "Siedlungsruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/zerst-rte-siedlung.png",
+      "territoryId": "piratentum-sirenen-zahn-riff",
+      "x": 3147.5,
+      "y": 2814,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "35117b25-e085-40fd-b18c-ad46a71fba54",
+        "url": "https://www.worldanvil.com/world/map/marker/35117b25-e085-40fd-b18c-ad46a71fba54/edit",
+        "title": "Skråvakt",
+        "coordinates": {
+          "x": 3168.0,
+          "y": 2800.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 3147.5,
+          "y": 632,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-017"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-local-018",
+      "title": "Aschental",
+      "category": "Siedlungsruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/zerst-rte-siedlung.png",
+      "territoryId": "direktlehen-tal-der-helden",
+      "x": 1419.0,
+      "y": 2795,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "aleria",
+        "basis": "Neues Kartenzeichen; Name und Beschreibung im Auftrag des Nutzers ergänzt.",
+        "mapPositionId": "heldenwacht-position-018",
+        "targetPosition": {
+          "x": 1419.0,
+          "y": 651,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-018"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-a13d62d8-17d7-4541-b362-ff0f71e722fb",
+      "title": "Havglim",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "hesirentum-wellenklang",
+      "x": 2504.0,
+      "y": 2793,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "a13d62d8-17d7-4541-b362-ff0f71e722fb",
+        "url": "https://www.worldanvil.com/world/map/marker/a13d62d8-17d7-4541-b362-ff0f71e722fb/edit",
+        "title": "Havglim",
+        "coordinates": {
+          "x": 2512.0,
+          "y": 2810.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 2504.0,
+          "y": 653,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-019"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-b21de499-c29f-40cd-9c81-4ed66f08aaa8",
+      "title": "Mørkmalm",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "hesirentum-wellenklang",
+      "x": 2281.0,
+      "y": 2744,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "b21de499-c29f-40cd-9c81-4ed66f08aaa8",
+        "url": "https://www.worldanvil.com/world/map/marker/b21de499-c29f-40cd-9c81-4ed66f08aaa8/edit",
+        "title": "Mørkmalm",
+        "coordinates": {
+          "x": 2271.0,
+          "y": 2758.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 2281.0,
+          "y": 702,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-020"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-e7f93f93-17ce-41d2-9b77-035881cb5961",
+      "title": "Móðurgaldr",
+      "category": "Schiffswrack",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/schiffswrackpin.png",
+      "territoryId": "hesirentum-wellenklang",
+      "x": 2729.0,
+      "y": 2735,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "e7f93f93-17ce-41d2-9b77-035881cb5961",
+        "url": "https://www.worldanvil.com/world/map/marker/e7f93f93-17ce-41d2-9b77-035881cb5961/edit",
+        "title": "Móðurgaldr",
+        "coordinates": {
+          "x": 2735.0,
+          "y": 2761.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 2729.0,
+          "y": 711,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-021"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-629f0a28-3a00-4ef6-82cb-9a5ac47fe3e7",
+      "title": "Folgunthur",
+      "category": "Ruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/nordische-ruine.png",
+      "territoryId": "thanentum-tal-der-helden",
+      "x": 862.5,
+      "y": 2668,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "629f0a28-3a00-4ef6-82cb-9a5ac47fe3e7",
+        "url": "https://www.worldanvil.com/world/map/marker/629f0a28-3a00-4ef6-82cb-9a5ac47fe3e7/edit",
+        "title": "Folgunthur",
+        "coordinates": {
+          "x": 876.0,
+          "y": 2716.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 862.5,
+          "y": 778,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-022"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-bf5bd345-a63c-41ba-a330-f83b2d57af26",
+      "title": "Mørknes",
+      "category": "Siedlungsruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/zerst-rte-siedlung.png",
+      "territoryId": "piratentum-sirenen-zahn-riff",
+      "x": 3183,
+      "y": 2695,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "bf5bd345-a63c-41ba-a330-f83b2d57af26",
+        "url": "https://www.worldanvil.com/world/map/marker/bf5bd345-a63c-41ba-a330-f83b2d57af26/edit",
+        "title": "Mørknes",
+        "coordinates": {
+          "x": 3190.0,
+          "y": 2693.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 3183,
+          "y": 751,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-023"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-local-024",
+      "title": "Kohlenrain",
+      "category": "Waldsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/waldsiedlung.png",
+      "territoryId": "herrschaft-eisenbieger",
+      "x": 169.0,
+      "y": 2668,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "aleria",
+        "basis": "Neues Kartenzeichen; Name und Beschreibung im Auftrag des Nutzers ergänzt.",
+        "mapPositionId": "heldenwacht-position-024",
+        "targetPosition": {
+          "x": 169.0,
+          "y": 778,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-024"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-local-025",
+      "title": "Riffhort",
+      "category": "Piratenversteck",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/piratenlager.png",
+      "territoryId": "piratentum-sirenen-zahn-riff",
+      "x": 3326.5,
+      "y": 2559,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "aleria",
+        "basis": "Neues Kartenzeichen; Name und Beschreibung im Auftrag des Nutzers ergänzt.",
+        "mapPositionId": "heldenwacht-position-025",
+        "targetPosition": {
+          "x": 3326.5,
+          "y": 887,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-025"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-d2cf1e11-4679-413b-916e-a66ae343a44c",
+      "title": "Blodvåg",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "hesirentum-wellenklang",
+      "x": 2522.0,
+      "y": 2614,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "d2cf1e11-4679-413b-916e-a66ae343a44c",
+        "url": "https://www.worldanvil.com/world/map/marker/d2cf1e11-4679-413b-916e-a66ae343a44c/edit",
+        "title": "Blodvåg",
+        "coordinates": {
+          "x": 2525.0,
+          "y": 2632.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 2522.0,
+          "y": 832,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-026"
+        },
+        "links": [
+          {
+            "url": "https://www.worldanvil.com/w/die-welt-von-aleria-therhythm/map/0de3423e-03a0-4ede-aabc-c93a5c919556",
+            "label": "Blodvåg"
+          }
+        ]
+      }
+    },
+    {
+      "id": "heldenwacht-local-027",
+      "title": "Kronenklamm",
+      "category": "Burgsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/burgsiedlung.png",
+      "territoryId": "direktlehen-tal-der-helden",
+      "x": 1457.0,
+      "y": 2607,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "aleria",
+        "basis": "Neues Kartenzeichen; Name und Beschreibung im Auftrag des Nutzers ergänzt.",
+        "mapPositionId": "heldenwacht-position-027",
+        "targetPosition": {
+          "x": 1457.0,
+          "y": 839,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-027"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-07cc5a99-cb15-4025-8019-c480949f36a5",
+      "title": "Volunrud",
+      "category": "Ruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/nordische-ruine.png",
+      "territoryId": "thanentum-tal-der-helden",
+      "x": 469.5,
+      "y": 2533,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "07cc5a99-cb15-4025-8019-c480949f36a5",
+        "url": "https://www.worldanvil.com/world/map/marker/07cc5a99-cb15-4025-8019-c480949f36a5/edit",
+        "title": "Volunrud",
+        "coordinates": {
+          "x": 474.0,
+          "y": 2544.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 469.5,
+          "y": 913,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-028"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-950722ea-8497-47b8-a8a4-db68f2f29776",
+      "title": "Tungskov",
+      "category": "Waldsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/waldsiedlung.png",
+      "territoryId": "hesirentum-wellenklang",
+      "x": 2178.0,
+      "y": 2572,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "950722ea-8497-47b8-a8a4-db68f2f29776",
+        "url": "https://www.worldanvil.com/world/map/marker/950722ea-8497-47b8-a8a4-db68f2f29776/edit",
+        "title": "Tungskov",
+        "coordinates": {
+          "x": 2175.0,
+          "y": 2594.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 2178.0,
+          "y": 874,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-029"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-d0391f6f-dc31-4366-9215-27373d926550",
+      "title": "Guldbogg",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "hesirentum-wellenklang",
+      "x": 2011.5,
+      "y": 2547,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "d0391f6f-dc31-4366-9215-27373d926550",
+        "url": "https://www.worldanvil.com/world/map/marker/d0391f6f-dc31-4366-9215-27373d926550/edit",
+        "title": "Guldbogg",
+        "coordinates": {
+          "x": 2012.0,
+          "y": 2557.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 2011.5,
+          "y": 899,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-030"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-87f29460-2555-4182-8e35-bd3863ff8b80",
+      "title": "Morgenberg",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "herrschaft-eisenbieger",
+      "x": 253.0,
+      "y": 2543,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "87f29460-2555-4182-8e35-bd3863ff8b80",
+        "url": "https://www.worldanvil.com/world/map/marker/87f29460-2555-4182-8e35-bd3863ff8b80/edit",
+        "title": "Morgenberg",
+        "coordinates": {
+          "x": 255.0,
+          "y": 2535.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 253.0,
+          "y": 903,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-031"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-edd07596-eb88-4ae5-b88f-48166639bbe5",
+      "title": "Goldbach",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "herrschaft-eisenbieger",
+      "x": 61.5,
+      "y": 2529,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "edd07596-eb88-4ae5-b88f-48166639bbe5",
+        "url": "https://www.worldanvil.com/world/map/marker/edd07596-eb88-4ae5-b88f-48166639bbe5/edit",
+        "title": "Goldbach",
+        "coordinates": {
+          "x": 60.0,
+          "y": 2539.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 61.5,
+          "y": 917,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-032"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-8e06d584-b366-4d7a-98f5-f46834969058",
+      "title": "Guldsjö",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "hesirentum-wellenklang",
+      "x": 2454,
+      "y": 2517,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "8e06d584-b366-4d7a-98f5-f46834969058",
+        "url": "https://www.worldanvil.com/world/map/marker/8e06d584-b366-4d7a-98f5-f46834969058/edit",
+        "title": "Guldsjö",
+        "coordinates": {
+          "x": 2455.0,
+          "y": 2544.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 2454,
+          "y": 929,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-033"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-abe3db75-7480-45da-9739-2acb53aa00ef",
+      "title": "Vidribolg - Balthors Söhne",
+      "category": "Burg",
+      "templateId": "gebaeude",
+      "icon": "/Karten/assets/icons/welt/kleine-burg.png",
+      "territoryId": "hesirentum-wellenklang",
+      "x": 2307.5,
+      "y": 2493,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "abe3db75-7480-45da-9739-2acb53aa00ef",
+        "url": "https://www.worldanvil.com/world/map/marker/abe3db75-7480-45da-9739-2acb53aa00ef/edit",
+        "title": "Vidribolg - Balthors Söhne",
+        "coordinates": {
+          "x": 2299.0,
+          "y": 2525.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 2307.5,
+          "y": 953,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-034"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-619b9d0e-e9d0-4d68-97ee-aa1729a368b6",
+      "title": "Angarvunde",
+      "category": "Ruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/nordische-ruine.png",
+      "territoryId": "thanentum-tal-der-helden",
+      "x": 1262.0,
+      "y": 2408,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "619b9d0e-e9d0-4d68-97ee-aa1729a368b6",
+        "url": "https://www.worldanvil.com/world/map/marker/619b9d0e-e9d0-4d68-97ee-aa1729a368b6/edit",
+        "title": "Angarvunde",
+        "coordinates": {
+          "x": 1256.0,
+          "y": 2444.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 1262.0,
+          "y": 1038,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-035"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-03f4ad1f-7b2a-4ec8-93c3-3f9975a1723a",
+      "title": "Eisklaue",
+      "category": "Schiffswrack",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/schiffswrackpin.png",
+      "territoryId": "hesirentum-wellenklang",
+      "x": 2894.5,
+      "y": 2457,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "03f4ad1f-7b2a-4ec8-93c3-3f9975a1723a",
+        "url": "https://www.worldanvil.com/world/map/marker/03f4ad1f-7b2a-4ec8-93c3-3f9975a1723a/edit",
+        "title": "Eisklaue",
+        "coordinates": {
+          "x": 2895.0,
+          "y": 2483.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 2894.5,
+          "y": 989,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-036"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-3d38aeb4-e579-472a-b0ad-43259e4bc80d",
+      "title": "Eldhamn",
+      "category": "Siedlungsruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/zerst-rte-siedlung.png",
+      "territoryId": "piratentum-sirenen-zahn-riff",
+      "x": 3264.5,
+      "y": 2449,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "3d38aeb4-e579-472a-b0ad-43259e4bc80d",
+        "url": "https://www.worldanvil.com/world/map/marker/3d38aeb4-e579-472a-b0ad-43259e4bc80d/edit",
+        "title": "Eldhamn",
+        "coordinates": {
+          "x": 3257.0,
+          "y": 2460.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 3264.5,
+          "y": 997,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-037"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-403c5466-93a7-4c43-8607-3e445886196a",
+      "title": "Rödrun",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "hesirentum-wellenklang",
+      "x": 2182.0,
+      "y": 2419,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "403c5466-93a7-4c43-8607-3e445886196a",
+        "url": "https://www.worldanvil.com/world/map/marker/403c5466-93a7-4c43-8607-3e445886196a/edit",
+        "title": "Rödrun",
+        "coordinates": {
+          "x": 2183.0,
+          "y": 2448.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 2182.0,
+          "y": 1027,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-038"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-6a54b214-5789-4602-b4e5-7a258ae53e2f",
+      "title": "Nebelbraut",
+      "category": "Schiffswrack",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/schiffswrackpin.png",
+      "territoryId": "hesirentum-wellenklang",
+      "x": 2724.5,
+      "y": 2416,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "6a54b214-5789-4602-b4e5-7a258ae53e2f",
+        "url": "https://www.worldanvil.com/world/map/marker/6a54b214-5789-4602-b4e5-7a258ae53e2f/edit",
+        "title": "Nebelbraut",
+        "coordinates": {
+          "x": 2729.0,
+          "y": 2427.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 2724.5,
+          "y": 1030,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-039"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-ab00d766-51c2-4bcd-bc59-7badcd103884",
+      "title": "Riesenklamm",
+      "category": "Festung",
+      "templateId": "gebaeude",
+      "icon": "/Karten/assets/icons/welt/festung.png",
+      "territoryId": "thanentum-tal-der-helden",
+      "x": 1625.5,
+      "y": 2411,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "ab00d766-51c2-4bcd-bc59-7badcd103884",
+        "url": "https://www.worldanvil.com/world/map/marker/ab00d766-51c2-4bcd-bc59-7badcd103884/edit",
+        "title": "Riesenklamm",
+        "coordinates": {
+          "x": 1623.0,
+          "y": 2426.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 1625.5,
+          "y": 1035,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-040"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-b63447ee-4e21-49ab-8a5d-d981c16e418c",
+      "title": "Hjartvakt - Blutbund",
+      "category": "Turm",
+      "templateId": "gebaeude",
+      "icon": "/Karten/assets/icons/welt/turm.png",
+      "territoryId": "herrschaft-eisenbieger",
+      "x": 387.5,
+      "y": 2397,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "b63447ee-4e21-49ab-8a5d-d981c16e418c",
+        "url": "https://www.worldanvil.com/world/map/marker/b63447ee-4e21-49ab-8a5d-d981c16e418c/edit",
+        "title": "Hjartvakt -  Blutbund",
+        "coordinates": {
+          "x": 392.0,
+          "y": 2421.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 387.5,
+          "y": 1049,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-041"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-96a32581-0588-4399-8125-02c131b3a23b",
+      "title": "Valkirk",
+      "category": "Klostersiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/klostersiedlung.png",
+      "territoryId": "herrschaft-eisenbieger",
+      "x": 55.5,
+      "y": 2380,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "96a32581-0588-4399-8125-02c131b3a23b",
+        "url": "https://www.worldanvil.com/world/map/marker/96a32581-0588-4399-8125-02c131b3a23b/edit",
+        "title": "Valkirk",
+        "coordinates": {
+          "x": 60.0,
+          "y": 2405.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 55.5,
+          "y": 1066,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-042"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-eec0f083-e7c0-46f1-9231-1b20adb55adb",
+      "title": "Glaennath Ahnenbaum",
+      "category": "Ahnenbaum",
+      "templateId": "natur",
+      "icon": "/Karten/assets/icons/welt/ahnenbaum.png",
+      "territoryId": "thanentum-tal-der-helden",
+      "x": 585.5,
+      "y": 2368,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "eec0f083-e7c0-46f1-9231-1b20adb55adb",
+        "url": "https://www.worldanvil.com/world/map/marker/eec0f083-e7c0-46f1-9231-1b20adb55adb/edit",
+        "title": "Glaennath Ahnenbaum",
+        "coordinates": {
+          "x": 591.0,
+          "y": 2402.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 585.5,
+          "y": 1078,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-043"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-fa0dcf95-f640-4251-8397-413c1d387fb2",
+      "title": "Alfarikstad",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "herrschaft-eisenbieger",
+      "x": 182.5,
+      "y": 2365,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "fa0dcf95-f640-4251-8397-413c1d387fb2",
+        "url": "https://www.worldanvil.com/world/map/marker/fa0dcf95-f640-4251-8397-413c1d387fb2/edit",
+        "title": "Alfarikstad",
+        "coordinates": {
+          "x": 187.0,
+          "y": 2384.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 182.5,
+          "y": 1081,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-044"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-15cc716e-19a4-4cc0-a7b7-901e8a8cb20c",
+      "title": "Gravvik",
+      "category": "Siedlungsruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/zerst-rte-siedlung.png",
+      "territoryId": "piratentum-sirenen-zahn-riff",
+      "x": 3332.5,
+      "y": 2362,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "15cc716e-19a4-4cc0-a7b7-901e8a8cb20c",
+        "url": "https://www.worldanvil.com/world/map/marker/15cc716e-19a4-4cc0-a7b7-901e8a8cb20c/edit",
+        "title": "Gravvik",
+        "coordinates": {
+          "x": 3347.0,
+          "y": 2359.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 3332.5,
+          "y": 1084,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-045"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-fabaeceb-ddf5-4a63-be1a-90c5e6ee81af",
+      "title": "Tiefhain",
+      "category": "Waldsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/waldsiedlung.png",
+      "territoryId": "herrschaft-frostauge",
+      "x": 1824.5,
+      "y": 2320,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "fabaeceb-ddf5-4a63-be1a-90c5e6ee81af",
+        "url": "https://www.worldanvil.com/world/map/marker/fabaeceb-ddf5-4a63-be1a-90c5e6ee81af/edit",
+        "title": "Tiefhain",
+        "coordinates": {
+          "x": 1828.0,
+          "y": 2339.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 1824.5,
+          "y": 1126,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-046"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-531a1a12-1bb3-487a-a072-9e2c43bdd985",
+      "title": "Stunvik",
+      "category": "Siedlungsruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/zerst-rte-siedlung.png",
+      "territoryId": "piratentum-sirenen-zahn-riff",
+      "x": 3413.0,
+      "y": 2319,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "531a1a12-1bb3-487a-a072-9e2c43bdd985",
+        "url": "https://www.worldanvil.com/world/map/marker/531a1a12-1bb3-487a-a072-9e2c43bdd985/edit",
+        "title": "Stunvik",
+        "coordinates": {
+          "x": 3415.0,
+          "y": 2323.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 3413.0,
+          "y": 1127,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-047"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-b985ea02-39ec-481a-9f75-376b9c983ba0",
+      "title": "Hochgraben",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "herrschaft-frostauge",
+      "x": 1683.5,
+      "y": 2309,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "b985ea02-39ec-481a-9f75-376b9c983ba0",
+        "url": "https://www.worldanvil.com/world/map/marker/b985ea02-39ec-481a-9f75-376b9c983ba0/edit",
+        "title": "Hochgraben",
+        "coordinates": {
+          "x": 1682.0,
+          "y": 2298.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 1683.5,
+          "y": 1137,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-048"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-75819422-7a33-4b12-8a10-1b2bc8e3633b",
+      "title": "Huldrehamn",
+      "category": "Siedlungsruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/stadtruine.png",
+      "territoryId": "piratentum-sirenen-zahn-riff",
+      "x": 3545,
+      "y": 2302,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "75819422-7a33-4b12-8a10-1b2bc8e3633b",
+        "url": "https://www.worldanvil.com/world/map/marker/75819422-7a33-4b12-8a10-1b2bc8e3633b/edit",
+        "title": "Huldrehamn",
+        "coordinates": {
+          "x": 3536.0,
+          "y": 2334.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 3545,
+          "y": 1144,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-049"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-a4ddb933-9396-49c2-a976-bd965dde821b",
+      "title": "Bergschwade",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "herrschaft-frostauge",
+      "x": 1433.0,
+      "y": 2303,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "a4ddb933-9396-49c2-a976-bd965dde821b",
+        "url": "https://www.worldanvil.com/world/map/marker/a4ddb933-9396-49c2-a976-bd965dde821b/edit",
+        "title": "Bergschwade",
+        "coordinates": {
+          "x": 1435.0,
+          "y": 2306.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 1433.0,
+          "y": 1143,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-050"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-335be8b5-c358-4ee4-a4e8-ae689817eefb",
+      "title": "Høgrune",
+      "category": "Klostersiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/klostersiedlung.png",
+      "territoryId": "herrschaft-eisenbieger",
+      "x": 449.5,
+      "y": 2294,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "335be8b5-c358-4ee4-a4e8-ae689817eefb",
+        "url": "https://www.worldanvil.com/world/map/marker/335be8b5-c358-4ee4-a4e8-ae689817eefb/edit",
+        "title": "Høgrune",
+        "coordinates": {
+          "x": 451.0,
+          "y": 2309.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 449.5,
+          "y": 1152,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-051"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-b13e676e-4ff0-4a5e-9e2d-a27bb54604b7",
+      "title": "Håvardstad",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "herrschaft-eisenbieger",
+      "x": 274.5,
+      "y": 2282,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "b13e676e-4ff0-4a5e-9e2d-a27bb54604b7",
+        "url": "https://www.worldanvil.com/world/map/marker/b13e676e-4ff0-4a5e-9e2d-a27bb54604b7/edit",
+        "title": "Håvardstad",
+        "coordinates": {
+          "x": 276.0,
+          "y": 2314.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 274.5,
+          "y": 1164,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-052"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-8df4c7ea-1c45-4310-b92f-93aaa1319d4e",
+      "title": "Draugrwacht-Kloster",
+      "category": "Klostersiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/klostersiedlung.png",
+      "territoryId": "direktlehen-tal-der-helden",
+      "x": 886.0,
+      "y": 2273,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "8df4c7ea-1c45-4310-b92f-93aaa1319d4e",
+        "url": "https://www.worldanvil.com/world/map/marker/8df4c7ea-1c45-4310-b92f-93aaa1319d4e/edit",
+        "title": "Draugrwacht-Kloster",
+        "coordinates": {
+          "x": 887.0,
+          "y": 2293.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 886.0,
+          "y": 1173,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-053"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-4b5a4bd3-15e9-4830-8eb0-a236048db46e",
+      "title": "Amol",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "hesirentum-wellenklang",
+      "x": 2208.5,
+      "y": 2211,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "4b5a4bd3-15e9-4830-8eb0-a236048db46e",
+        "url": "https://www.worldanvil.com/world/map/marker/4b5a4bd3-15e9-4830-8eb0-a236048db46e/edit",
+        "title": "Amol",
+        "coordinates": {
+          "x": 2214.0,
+          "y": 2230.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 2208.5,
+          "y": 1235,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-054"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-43f41a3c-bef2-4d66-8164-cacfa6d86f35",
+      "title": "Ulvulfheim",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "herrschaft-riesentod",
+      "x": 37.0,
+      "y": 2258,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "43f41a3c-bef2-4d66-8164-cacfa6d86f35",
+        "url": "https://www.worldanvil.com/world/map/marker/43f41a3c-bef2-4d66-8164-cacfa6d86f35/edit",
+        "title": "Ulvulfheim",
+        "coordinates": {
+          "x": 37.0,
+          "y": 2282.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 37.0,
+          "y": 1188,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-055"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-893ce81b-fde7-49b6-8e45-2626b017f300",
+      "title": "Rúnvakt",
+      "category": "Turm",
+      "templateId": "gebaeude",
+      "icon": "/Karten/assets/icons/welt/turm.png",
+      "territoryId": "direktlehen-tal-der-helden",
+      "x": 1211.5,
+      "y": 2242,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "893ce81b-fde7-49b6-8e45-2626b017f300",
+        "url": "https://www.worldanvil.com/world/map/marker/893ce81b-fde7-49b6-8e45-2626b017f300/edit",
+        "title": "Rúnvakt",
+        "coordinates": {
+          "x": 1213.0,
+          "y": 2251.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 1211.5,
+          "y": 1204,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-056"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-6a2c02e6-5755-4a35-874b-3c6b0c203914",
+      "title": "Frostvik",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "hesirentum-wellenklang",
+      "x": 2541.0,
+      "y": 2235,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "6a2c02e6-5755-4a35-874b-3c6b0c203914",
+        "url": "https://www.worldanvil.com/world/map/marker/6a2c02e6-5755-4a35-874b-3c6b0c203914/edit",
+        "title": "Frostvik",
+        "coordinates": {
+          "x": 2542.0,
+          "y": 2238.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 2541.0,
+          "y": 1211,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-057"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-e4e77f39-f1ed-4d2a-b5a6-7e9225b52d68",
+      "title": "Jagdklingen - Kronenfeld Lager",
+      "category": "Jägerlager",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/j-gerlager.png",
+      "territoryId": "thanentum-tal-der-helden",
+      "x": 728.0,
+      "y": 2214,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "e4e77f39-f1ed-4d2a-b5a6-7e9225b52d68",
+        "url": "https://www.worldanvil.com/world/map/marker/e4e77f39-f1ed-4d2a-b5a6-7e9225b52d68/edit",
+        "title": "Jagdklingen - Kronenfeld Lager",
+        "coordinates": {
+          "x": 729.0,
+          "y": 2233.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 728.0,
+          "y": 1232,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-058"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-a0ed6cff-4b4a-4ccb-a702-81b5a47a4e2f",
+      "title": "Eikdalen",
+      "category": "Waldsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/waldsiedlung.png",
+      "territoryId": "direktlehen-tal-der-helden",
+      "x": 1086.5,
+      "y": 2198,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "a0ed6cff-4b4a-4ccb-a702-81b5a47a4e2f",
+        "url": "https://www.worldanvil.com/world/map/marker/a0ed6cff-4b4a-4ccb-a702-81b5a47a4e2f/edit",
+        "title": "Eikdalen",
+        "coordinates": {
+          "x": 1087.0,
+          "y": 2210.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 1086.5,
+          "y": 1248,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-059"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-18da59a3-4206-4309-8f68-518adec74ef4",
+      "title": "Haldendgut",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "herrschaft-frostauge",
+      "x": 1457.0,
+      "y": 2181,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "18da59a3-4206-4309-8f68-518adec74ef4",
+        "url": "https://www.worldanvil.com/world/map/marker/18da59a3-4206-4309-8f68-518adec74ef4/edit",
+        "title": "Haldendgut",
+        "coordinates": {
+          "x": 1449.0,
+          "y": 2177.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 1457.0,
+          "y": 1265,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-060"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-b22060b4-269d-4520-9c89-739d4af9b84d",
+      "title": "Bjarkstad",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "herrschaft-riesentod",
+      "x": 179.5,
+      "y": 2172,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "b22060b4-269d-4520-9c89-739d4af9b84d",
+        "url": "https://www.worldanvil.com/world/map/marker/b22060b4-269d-4520-9c89-739d4af9b84d/edit",
+        "title": "Bjarkstad",
+        "coordinates": {
+          "x": 178.0,
+          "y": 2187.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 179.5,
+          "y": 1274,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-061"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-d1a862f5-001c-45d5-9a3a-d0cda20a8252",
+      "title": "Freyrstad",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "herrschaft-frostauge",
+      "x": 1877.0,
+      "y": 2171,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "d1a862f5-001c-45d5-9a3a-d0cda20a8252",
+        "url": "https://www.worldanvil.com/world/map/marker/d1a862f5-001c-45d5-9a3a-d0cda20a8252/edit",
+        "title": "Freyrstad",
+        "coordinates": {
+          "x": 1877.0,
+          "y": 2203.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 1877.0,
+          "y": 1275,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-062"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-ee2e8636-78dd-4477-b771-2cd1b704bb74",
+      "title": "Vargmótvakt",
+      "category": "Turm",
+      "templateId": "gebaeude",
+      "icon": "/Karten/assets/icons/welt/turm.png",
+      "territoryId": "herrschaft-riesentod",
+      "x": 445,
+      "y": 2152,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "ee2e8636-78dd-4477-b771-2cd1b704bb74",
+        "url": "https://www.worldanvil.com/world/map/marker/ee2e8636-78dd-4477-b771-2cd1b704bb74/edit",
+        "title": "Vargmótvakt",
+        "coordinates": {
+          "x": 445.0,
+          "y": 2176.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 445,
+          "y": 1294,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-063"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-local-064",
+      "title": "Malzhain",
+      "category": "Brauersiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/brauersiedlung.png",
+      "territoryId": "thanentum-tal-der-helden",
+      "x": 890.0,
+      "y": 2115,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "aleria",
+        "basis": "Neues Kartenzeichen; Name und Beschreibung im Auftrag des Nutzers ergänzt.",
+        "mapPositionId": "heldenwacht-position-064",
+        "targetPosition": {
+          "x": 890.0,
+          "y": 1331,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-064"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-e5b47ac5-48b5-4e84-bb7b-6c8b90c97c71",
+      "title": "Fischersruh",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "herrschaft-frostauge",
+      "x": 1731.0,
+      "y": 2069,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "e5b47ac5-48b5-4e84-bb7b-6c8b90c97c71",
+        "url": "https://www.worldanvil.com/world/map/marker/e5b47ac5-48b5-4e84-bb7b-6c8b90c97c71/edit",
+        "title": "Fischersruh",
+        "coordinates": {
+          "x": 1738.0,
+          "y": 2085.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 1731.0,
+          "y": 1377,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-065"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-38ed8401-fee0-42a5-9b7f-b48e899a9141",
+      "title": "Kreuzpfad",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "herrschaft-riesentod",
+      "x": 279.0,
+      "y": 2065,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "38ed8401-fee0-42a5-9b7f-b48e899a9141",
+        "url": "https://www.worldanvil.com/world/map/marker/38ed8401-fee0-42a5-9b7f-b48e899a9141/edit",
+        "title": "Kreuzpfad",
+        "coordinates": {
+          "x": 273.0,
+          "y": 2088.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 279.0,
+          "y": 1381,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-066"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-1ce93497-2fc3-4931-99f4-e8b32be81938",
+      "title": "Kronenpfad",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "herrschaft-riesentod",
+      "x": 36.5,
+      "y": 2063,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "1ce93497-2fc3-4931-99f4-e8b32be81938",
+        "url": "https://www.worldanvil.com/world/map/marker/1ce93497-2fc3-4931-99f4-e8b32be81938/edit",
+        "title": "Kronenpfad",
+        "coordinates": {
+          "x": 28.0,
+          "y": 2081.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 36.5,
+          "y": 1383,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-067"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-1a461b64-ade3-4eff-bd42-04f4dcb0cd1c",
+      "title": "Frostblick",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "herrschaft-frostauge",
+      "x": 1971.5,
+      "y": 2054,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "1a461b64-ade3-4eff-bd42-04f4dcb0cd1c",
+        "url": "https://www.worldanvil.com/world/map/marker/1a461b64-ade3-4eff-bd42-04f4dcb0cd1c/edit",
+        "title": "Frostblick",
+        "coordinates": {
+          "x": 1969.0,
+          "y": 2085.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 1971.5,
+          "y": 1392,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-068"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-7ee8b4e6-3fa9-414d-9afc-bfa32eaad49e",
+      "title": "Hopfengut",
+      "category": "Brauersiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/brauersiedlung.png",
+      "territoryId": "thanentum-tal-der-helden",
+      "x": 704.0,
+      "y": 2007,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "7ee8b4e6-3fa9-414d-9afc-bfa32eaad49e",
+        "url": "https://www.worldanvil.com/world/map/marker/7ee8b4e6-3fa9-414d-9afc-bfa32eaad49e/edit",
+        "title": "Hopfengut",
+        "coordinates": {
+          "x": 712.0,
+          "y": 2022.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 704.0,
+          "y": 1439,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-069"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-457cde3e-77ab-4002-8462-e47de2d1a301",
+      "title": "Hestvakt - Rhosmeres Rösser",
+      "category": "Rosszuchtsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/pferdezuchtsiedlung.png",
+      "territoryId": "thanentum-tal-der-helden",
+      "x": 1014.5,
+      "y": 1990,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "457cde3e-77ab-4002-8462-e47de2d1a301",
+        "url": "https://www.worldanvil.com/world/map/marker/457cde3e-77ab-4002-8462-e47de2d1a301/edit",
+        "title": "Hestvakt - Rhosmeres Rösser",
+        "coordinates": {
+          "x": 1024.0,
+          "y": 2010.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 1014.5,
+          "y": 1456,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-070"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-27333f38-0762-4739-990a-30583423d34e",
+      "title": "Kjølebolg",
+      "category": "Burgsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/burgsiedlung.png",
+      "territoryId": "direktlehen-tal-der-helden",
+      "x": 1354.5,
+      "y": 1990,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "27333f38-0762-4739-990a-30583423d34e",
+        "url": "https://www.worldanvil.com/world/map/marker/27333f38-0762-4739-990a-30583423d34e/edit",
+        "title": "Kjølebolg",
+        "coordinates": {
+          "x": 1348.0,
+          "y": 2014.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 1354.5,
+          "y": 1456,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-071"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-3e220b56-b8cf-46f2-90a1-078b429b3eeb",
+      "title": "Branvik",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "herrschaft-frostauge",
+      "x": 2169.5,
+      "y": 1958,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "3e220b56-b8cf-46f2-90a1-078b429b3eeb",
+        "url": "https://www.worldanvil.com/world/map/marker/3e220b56-b8cf-46f2-90a1-078b429b3eeb/edit",
+        "title": "Branvik",
+        "coordinates": {
+          "x": 2164.0,
+          "y": 1982.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 2169.5,
+          "y": 1488,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-072"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-290de69c-7bdf-4e2d-8578-d34b87a1319b",
+      "title": "Buchtwark",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "herrschaft-frostauge",
+      "x": 1836.0,
+      "y": 1955,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "290de69c-7bdf-4e2d-8578-d34b87a1319b",
+        "url": "https://www.worldanvil.com/world/map/marker/290de69c-7bdf-4e2d-8578-d34b87a1319b/edit",
+        "title": "Buchtwark",
+        "coordinates": {
+          "x": 1827.0,
+          "y": 1979.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 1836.0,
+          "y": 1491,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-073"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-44d6680c-b1ca-4003-ae52-410913f8e41a",
+      "title": "Sindrestad",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "herrschaft-riesentod",
+      "x": 39.0,
+      "y": 1925,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "44d6680c-b1ca-4003-ae52-410913f8e41a",
+        "url": "https://www.worldanvil.com/world/map/marker/44d6680c-b1ca-4003-ae52-410913f8e41a/edit",
+        "title": "Sindrestad",
+        "coordinates": {
+          "x": 43.0,
+          "y": 1977.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 39.0,
+          "y": 1521,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-074"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-49d6500b-4ac5-4d25-9aed-5e411453e613",
+      "title": "Alrikstad",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "direktlehen-tal-der-helden",
+      "x": 825.5,
+      "y": 1925,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "49d6500b-4ac5-4d25-9aed-5e411453e613",
+        "url": "https://www.worldanvil.com/world/map/marker/49d6500b-4ac5-4d25-9aed-5e411453e613/edit",
+        "title": "Alrikstad",
+        "coordinates": {
+          "x": 838.0,
+          "y": 1929.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 825.5,
+          "y": 1521,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-075"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-1f924143-bc3b-4510-b7bd-c40be964eda9",
+      "title": "Zu Axt und Schild",
+      "category": "Taverne",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/taverne.png",
+      "territoryId": "herrschaft-riesentod",
+      "x": 295.0,
+      "y": 1920,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "1f924143-bc3b-4510-b7bd-c40be964eda9",
+        "url": "https://www.worldanvil.com/world/map/marker/1f924143-bc3b-4510-b7bd-c40be964eda9/edit",
+        "title": "Zu Axt und Schild",
+        "coordinates": {
+          "x": 292.0,
+          "y": 1930.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 295.0,
+          "y": 1526,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-076"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-90b56c5a-bd4f-48c2-9bfb-4c15401fc46f",
+      "title": "Seewinkel",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "direktlehen-tal-der-helden",
+      "x": 1667.5,
+      "y": 1905,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "90b56c5a-bd4f-48c2-9bfb-4c15401fc46f",
+        "url": "https://www.worldanvil.com/world/map/marker/90b56c5a-bd4f-48c2-9bfb-4c15401fc46f/edit",
+        "title": "Seewinkel",
+        "coordinates": {
+          "x": 1668.0,
+          "y": 1935.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 1667.5,
+          "y": 1541,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-077"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-fdbf294f-8085-47d1-a85b-58becacc5875",
+      "title": "Sverresberg",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "herrschaft-riesentod",
+      "x": 109.5,
+      "y": 1851,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "fdbf294f-8085-47d1-a85b-58becacc5875",
+        "url": "https://www.worldanvil.com/world/map/marker/fdbf294f-8085-47d1-a85b-58becacc5875/edit",
+        "title": "Sverresberg",
+        "coordinates": {
+          "x": 110.0,
+          "y": 1852.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 109.5,
+          "y": 1595,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-078"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-853137ff-8b68-40f5-9553-959218c753bd",
+      "title": "Anwesen der Varangr",
+      "category": "Landgut",
+      "templateId": "gebaeude",
+      "icon": "/Karten/assets/icons/welt/anwesen.png",
+      "territoryId": "hesirentum-heldenwacht",
+      "x": 1119.5,
+      "y": 1827,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "853137ff-8b68-40f5-9553-959218c753bd",
+        "url": "https://www.worldanvil.com/world/map/marker/853137ff-8b68-40f5-9553-959218c753bd/edit",
+        "title": "Anwesen der Varangr",
+        "coordinates": {
+          "x": 1126.0,
+          "y": 1835.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 1119.5,
+          "y": 1619,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-079"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-953680fe-dda0-4b87-b854-5853359e3081",
+      "title": "Aslaugheim",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "direktlehen-tal-der-helden",
+      "x": 571.0,
+      "y": 1823,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "953680fe-dda0-4b87-b854-5853359e3081",
+        "url": "https://www.worldanvil.com/world/map/marker/953680fe-dda0-4b87-b854-5853359e3081/edit",
+        "title": "Aslaugheim",
+        "coordinates": {
+          "x": 572.0,
+          "y": 1846.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 571.0,
+          "y": 1623,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-080"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-3b60bffe-2ef5-4f44-a1a1-b732fa1bb6e6",
+      "title": "Heldenwacht",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "hesirentum-heldenwacht",
+      "x": 1408.0,
+      "y": 1767,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "3b60bffe-2ef5-4f44-a1a1-b732fa1bb6e6",
+        "url": "https://www.worldanvil.com/world/map/marker/3b60bffe-2ef5-4f44-a1a1-b732fa1bb6e6/edit",
+        "title": "Heldenwacht",
+        "coordinates": {
+          "x": 1407.0,
+          "y": 1853.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 1408.0,
+          "y": 1679,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-081"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-129e6e76-7d1b-4aef-a966-d57024fd9b24",
+      "title": "Torkjellstad",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "herrschaft-sturmgeborene",
+      "x": 385.0,
+      "y": 1806,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "129e6e76-7d1b-4aef-a966-d57024fd9b24",
+        "url": "https://www.worldanvil.com/world/map/marker/129e6e76-7d1b-4aef-a966-d57024fd9b24/edit",
+        "title": "Torkjellstad",
+        "coordinates": {
+          "x": 387.0,
+          "y": 1826.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 385.0,
+          "y": 1640,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-082"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-6c4fc658-f0ed-4533-9e6d-ed96d63d5ba2",
+      "title": "Nidhoggborg",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "direktlehen-tal-der-helden",
+      "x": 759.0,
+      "y": 1805,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "6c4fc658-f0ed-4533-9e6d-ed96d63d5ba2",
+        "url": "https://www.worldanvil.com/world/map/marker/6c4fc658-f0ed-4533-9e6d-ed96d63d5ba2/edit",
+        "title": "Nidhoggborg",
+        "coordinates": {
+          "x": 717.0,
+          "y": 1838.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 759.0,
+          "y": 1641,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-083"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-a208c12c-11ed-437f-aa13-97de4d418b9c",
+      "title": "Spindelheim",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung.png",
+      "territoryId": "herrschaft-spindelheim",
+      "x": 965.0,
+      "y": 1784,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "a208c12c-11ed-437f-aa13-97de4d418b9c",
+        "url": "https://www.worldanvil.com/world/map/marker/a208c12c-11ed-437f-aa13-97de4d418b9c/edit",
+        "title": "Spindelheim",
+        "coordinates": {
+          "x": 968.0,
+          "y": 1796.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 965.0,
+          "y": 1662,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-084"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-9baa21c1-f125-4ad4-8dc5-99a0090ffd40",
+      "title": "Gravvakt",
+      "category": "Turm",
+      "templateId": "gebaeude",
+      "icon": "/Karten/assets/icons/welt/turm.png",
+      "territoryId": "herrschaft-sturmgeborene",
+      "x": 294,
+      "y": 1750,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "9baa21c1-f125-4ad4-8dc5-99a0090ffd40",
+        "url": "https://www.worldanvil.com/world/map/marker/9baa21c1-f125-4ad4-8dc5-99a0090ffd40/edit",
+        "title": "Gravvakt",
+        "coordinates": {
+          "x": 291.0,
+          "y": 1762.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 294,
+          "y": 1696,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-085"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-d8670289-f67d-4117-94c8-30bd34dc4298",
+      "title": "Frodeheim",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "herrschaft-sturmgeborene",
+      "x": 155.5,
+      "y": 1727,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "d8670289-f67d-4117-94c8-30bd34dc4298",
+        "url": "https://www.worldanvil.com/world/map/marker/d8670289-f67d-4117-94c8-30bd34dc4298/edit",
+        "title": "Frodeheim",
+        "coordinates": {
+          "x": 160.0,
+          "y": 1741.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 155.5,
+          "y": 1719,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-086"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-f4f76a7e-1c0e-480d-9b41-2c9da8ddd04c",
+      "title": "Heldensang",
+      "category": "Besondere Orte",
+      "templateId": "gebaeude",
+      "icon": "/Karten/assets/icons/welt/bardensiedlung.png",
+      "territoryId": "hesirentum-heldenwacht",
+      "x": 1121.0,
+      "y": 1663,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "f4f76a7e-1c0e-480d-9b41-2c9da8ddd04c",
+        "url": "https://www.worldanvil.com/world/map/marker/f4f76a7e-1c0e-480d-9b41-2c9da8ddd04c/edit",
+        "title": "Heldensang",
+        "coordinates": {
+          "x": 1129.0,
+          "y": 1729.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 1121.0,
+          "y": 1783,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-087"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-cba3f141-b0c0-4c4a-b890-0020f5518e98",
+      "title": "Gudmundsdorf",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "herrschaft-sturmgeborene",
+      "x": 627.5,
+      "y": 1694,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "cba3f141-b0c0-4c4a-b890-0020f5518e98",
+        "url": "https://www.worldanvil.com/world/map/marker/cba3f141-b0c0-4c4a-b890-0020f5518e98/edit",
+        "title": "Gudmundsdorf",
+        "coordinates": {
+          "x": 631.0,
+          "y": 1709.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 627.5,
+          "y": 1752,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-088"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-92751217-5090-4961-b312-2b26292cf021",
+      "title": "Ulfstead",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "herrschaft-sturmgeborene",
+      "x": 407.0,
+      "y": 1667,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "92751217-5090-4961-b312-2b26292cf021",
+        "url": "https://www.worldanvil.com/world/map/marker/92751217-5090-4961-b312-2b26292cf021/edit",
+        "title": "Ulfstead",
+        "coordinates": {
+          "x": 416.0,
+          "y": 1701.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 407.0,
+          "y": 1779,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-089"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-eebac4b3-d96f-4eeb-b80b-e97c5407e9f9",
+      "title": "Frostlund",
+      "category": "Waldsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/waldsiedlung.png",
+      "territoryId": "direktlehen-tal-der-helden",
+      "x": 880.5,
+      "y": 1648,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "eebac4b3-d96f-4eeb-b80b-e97c5407e9f9",
+        "url": "https://www.worldanvil.com/world/map/marker/eebac4b3-d96f-4eeb-b80b-e97c5407e9f9/edit",
+        "title": "Frostlund",
+        "coordinates": {
+          "x": 879.0,
+          "y": 1663.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 880.5,
+          "y": 1798,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-090"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-3331dfd0-1203-45f5-9b88-47cfe2dffecf",
+      "title": "Ørnfjord",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "herrschaft-sturmgeborene",
+      "x": 1019.0,
+      "y": 1610,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "3331dfd0-1203-45f5-9b88-47cfe2dffecf",
+        "url": "https://www.worldanvil.com/world/map/marker/3331dfd0-1203-45f5-9b88-47cfe2dffecf/edit",
+        "title": "Ørnfjord",
+        "coordinates": {
+          "x": 1018.0,
+          "y": 1639.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 1019.0,
+          "y": 1836,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-091"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-29acb1d4-00ed-4228-80e7-577972aadaf8",
+      "title": "Skymar",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "direktlehen-tal-der-helden",
+      "x": 2053.5,
+      "y": 1597,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "29acb1d4-00ed-4228-80e7-577972aadaf8",
+        "url": "https://www.worldanvil.com/world/map/marker/29acb1d4-00ed-4228-80e7-577972aadaf8/edit",
+        "title": "Skymar",
+        "coordinates": {
+          "x": 2059.0,
+          "y": 1602.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 2053.5,
+          "y": 1849,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-092"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-cc9fb1bc-c70a-44a9-80af-a302f5dd276f",
+      "title": "Freudenquell",
+      "category": "Klostersiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/klostersiedlung.png",
+      "territoryId": "herrschaft-sturmgeborene",
+      "x": 48.0,
+      "y": 1531,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "cc9fb1bc-c70a-44a9-80af-a302f5dd276f",
+        "url": "https://www.worldanvil.com/world/map/marker/cc9fb1bc-c70a-44a9-80af-a302f5dd276f/edit",
+        "title": "Freudenquell",
+        "coordinates": {
+          "x": 51.0,
+          "y": 1557.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 48.0,
+          "y": 1915,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-093"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-3e5391ee-bb44-442d-aeac-95f9868a3d70",
+      "title": "Jorrstad",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "herrschaft-sturmgeborene",
+      "x": 619.5,
+      "y": 1517,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "3e5391ee-bb44-442d-aeac-95f9868a3d70",
+        "url": "https://www.worldanvil.com/world/map/marker/3e5391ee-bb44-442d-aeac-95f9868a3d70/edit",
+        "title": "Jorrstad",
+        "coordinates": {
+          "x": 626.0,
+          "y": 1544.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 619.5,
+          "y": 1929,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-094"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-ccfdc854-2e47-4949-83ed-6b7650b95471",
+      "title": "Galdakeldur - Heiße Quellen",
+      "category": "Heiße Quellen",
+      "templateId": "natur",
+      "icon": "/Karten/assets/icons/welt/hei-e-quellen.png",
+      "territoryId": "herrschaft-sturmgeborene",
+      "x": 235.5,
+      "y": 1509,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "ccfdc854-2e47-4949-83ed-6b7650b95471",
+        "url": "https://www.worldanvil.com/world/map/marker/ccfdc854-2e47-4949-83ed-6b7650b95471/edit",
+        "title": "Galdakeldur - Heiße Quellen",
+        "coordinates": {
+          "x": 220.0,
+          "y": 1549.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 235.5,
+          "y": 1937,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-095"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-fc0580ce-8468-4294-948b-4dcae4b57342",
+      "title": "Sjöreid",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "herrschaft-sturmgeborene",
+      "x": 937.5,
+      "y": 1464,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "fc0580ce-8468-4294-948b-4dcae4b57342",
+        "url": "https://www.worldanvil.com/world/map/marker/fc0580ce-8468-4294-948b-4dcae4b57342/edit",
+        "title": "Sjöreid",
+        "coordinates": {
+          "x": 945.0,
+          "y": 1495.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 937.5,
+          "y": 1982,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-096"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-988c7a99-68fe-4eb1-a34d-95b3d441ff95",
+      "title": "Niederquell",
+      "category": "Klostersiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/klostersiedlung.png",
+      "territoryId": "herrschaft-sturmgeborene",
+      "x": 364.0,
+      "y": 1445,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "988c7a99-68fe-4eb1-a34d-95b3d441ff95",
+        "url": "https://www.worldanvil.com/world/map/marker/988c7a99-68fe-4eb1-a34d-95b3d441ff95/edit",
+        "title": "Niederquell",
+        "coordinates": {
+          "x": 366.0,
+          "y": 1473.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 364.0,
+          "y": 2001,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-097"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-98dd474d-a8d8-489b-86cf-edcbaf32771f",
+      "title": "Drakkarhamn",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "herrschaft-sturmgeborene",
+      "x": 706.5,
+      "y": 1405,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "98dd474d-a8d8-489b-86cf-edcbaf32771f",
+        "url": "https://www.worldanvil.com/world/map/marker/98dd474d-a8d8-489b-86cf-edcbaf32771f/edit",
+        "title": "Drakkarhamn",
+        "coordinates": {
+          "x": 705.0,
+          "y": 1437.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 706.5,
+          "y": 2041,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-098"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-local-099",
+      "title": "Sturmriegelfeste",
+      "category": "Burgsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/burgsiedlung.png",
+      "territoryId": "herrschaft-sturmgeborene",
+      "x": 142.5,
+      "y": 1397,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "aleria",
+        "basis": "Neues Kartenzeichen; Name und Beschreibung im Auftrag des Nutzers ergänzt.",
+        "mapPositionId": "heldenwacht-position-099",
+        "targetPosition": {
+          "x": 142.5,
+          "y": 2049,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-099"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-30eb69f6-0dc5-41e4-b1ad-c1901aa3ff44",
+      "title": "Sturmbrück",
+      "category": "Flusssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/flusssiedlung.png",
+      "territoryId": "herrschaft-sturmgeborene",
+      "x": 559.0,
+      "y": 1357,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "30eb69f6-0dc5-41e4-b1ad-c1901aa3ff44",
+        "url": "https://www.worldanvil.com/world/map/marker/30eb69f6-0dc5-41e4-b1ad-c1901aa3ff44/edit",
+        "title": "Sturmbrück",
+        "coordinates": {
+          "x": 562.0,
+          "y": 1372.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 559.0,
+          "y": 2089,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-100"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-e7b1c10e-8ee8-49bf-8315-cbdb46921dff",
+      "title": "Myrhamn",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "direktlehen-tal-der-helden",
+      "x": 2328.0,
+      "y": 1352,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "e7b1c10e-8ee8-49bf-8315-cbdb46921dff",
+        "url": "https://www.worldanvil.com/world/map/marker/e7b1c10e-8ee8-49bf-8315-cbdb46921dff/edit",
+        "title": "Myrhamn",
+        "coordinates": {
+          "x": 2326.0,
+          "y": 1348.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 2328.0,
+          "y": 2094,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-101"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-a2222608-d2df-4bbb-bd4d-dd1809368401",
+      "title": "Flusslauf",
+      "category": "Flusssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/flusssiedlung.png",
+      "territoryId": "hesirentum-moewenfels",
+      "x": 516.0,
+      "y": 1254,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "a2222608-d2df-4bbb-bd4d-dd1809368401",
+        "url": "https://www.worldanvil.com/world/map/marker/a2222608-d2df-4bbb-bd4d-dd1809368401/edit",
+        "title": "Flusslauf",
+        "coordinates": {
+          "x": 525.0,
+          "y": 1276.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 516.0,
+          "y": 2192,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-102"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-6e05f66a-99ed-49ed-831d-1dc1ddc60e53",
+      "title": "Klarhafen",
+      "category": "Siedlungsruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/zerst-rte-siedlung.png",
+      "territoryId": "hesirentum-moewenfels",
+      "x": 667.5,
+      "y": 1221,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "6e05f66a-99ed-49ed-831d-1dc1ddc60e53",
+        "url": "https://www.worldanvil.com/world/map/marker/6e05f66a-99ed-49ed-831d-1dc1ddc60e53/edit",
+        "title": "Klarhafen",
+        "coordinates": {
+          "x": 676.0,
+          "y": 1225.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 667.5,
+          "y": 2225,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-103"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-20e65f69-d04e-4370-92d5-f683ed120687",
+      "title": "Isnes",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "hesirentum-moewenfels",
+      "x": 775.0,
+      "y": 1100,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "20e65f69-d04e-4370-92d5-f683ed120687",
+        "url": "https://www.worldanvil.com/world/map/marker/20e65f69-d04e-4370-92d5-f683ed120687/edit",
+        "title": "Isnes",
+        "coordinates": {
+          "x": 774.0,
+          "y": 1111.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 775.0,
+          "y": 2346,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-104"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-b8882ab1-3875-4a6b-af1d-e829a459b4de",
+      "title": "Möwenfeld",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "hesirentum-moewenfels",
+      "x": 577.0,
+      "y": 1098,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "b8882ab1-3875-4a6b-af1d-e829a459b4de",
+        "url": "https://www.worldanvil.com/world/map/marker/b8882ab1-3875-4a6b-af1d-e829a459b4de/edit",
+        "title": "Möwenfeld",
+        "coordinates": {
+          "x": 579.0,
+          "y": 1129.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 577.0,
+          "y": 2348,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-105"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-faf79bb7-6680-4400-a001-fa53d238f695",
+      "title": "Vagaborg",
+      "category": "Burgsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/burgsiedlung.png",
+      "territoryId": "hesirentum-klageschild-inseln",
+      "x": 2480.5,
+      "y": 1008,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "faf79bb7-6680-4400-a001-fa53d238f695",
+        "url": "https://www.worldanvil.com/world/map/marker/faf79bb7-6680-4400-a001-fa53d238f695/edit",
+        "title": "Vågaborg",
+        "coordinates": {
+          "x": 2477.0,
+          "y": 1030.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 2480.5,
+          "y": 2438,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-106"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-9b79fa0b-87ab-4d8f-894d-89ba8badd7cd",
+      "title": "Kastav",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "hesirentum-moewenfels",
+      "x": 464.0,
+      "y": 863,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "9b79fa0b-87ab-4d8f-894d-89ba8badd7cd",
+        "url": "https://www.worldanvil.com/world/map/marker/9b79fa0b-87ab-4d8f-894d-89ba8badd7cd/edit",
+        "title": "Kastav",
+        "coordinates": {
+          "x": 459.0,
+          "y": 904.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 464.0,
+          "y": 2583,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-107"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-local-108",
+      "title": "Wellenbastion",
+      "category": "Burgsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/burgsiedlung.png",
+      "territoryId": "hesirentum-klageschild-inseln",
+      "x": 1625.5,
+      "y": 913,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "aleria",
+        "basis": "Neues Kartenzeichen; Name und Beschreibung im Auftrag des Nutzers ergänzt.",
+        "mapPositionId": "heldenwacht-position-108",
+        "targetPosition": {
+          "x": 1625.5,
+          "y": 2533,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-108"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-ebfcbaf8-ba5d-49f0-a62a-fb109eff947a",
+      "title": "Blutiger Kiel",
+      "category": "Schiffswrack",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/schiffswrackpin.png",
+      "territoryId": "hesirentum-moewenfels",
+      "x": 949.5,
+      "y": 909,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "ebfcbaf8-ba5d-49f0-a62a-fb109eff947a",
+        "url": "https://www.worldanvil.com/world/map/marker/ebfcbaf8-ba5d-49f0-a62a-fb109eff947a/edit",
+        "title": "Blutiger Kiel",
+        "coordinates": {
+          "x": 953.0,
+          "y": 912.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 949.5,
+          "y": 2537,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-109"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-59797908-5e28-49c1-bf7c-70971233cce3",
+      "title": "Kobberslag",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "hesirentum-moewenfels",
+      "x": 217.5,
+      "y": 906,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "59797908-5e28-49c1-bf7c-70971233cce3",
+        "url": "https://www.worldanvil.com/world/map/marker/59797908-5e28-49c1-bf7c-70971233cce3/edit",
+        "title": "Kobberslag",
+        "coordinates": {
+          "x": 221.0,
+          "y": 929.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 217.5,
+          "y": 2540,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-110"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-8134ae3e-eef7-4f9a-9de2-d61b8cfb213a",
+      "title": "Svalvakt",
+      "category": "Turm",
+      "templateId": "gebaeude",
+      "icon": "/Karten/assets/icons/welt/turm.png",
+      "territoryId": "hesirentum-moewenfels",
+      "x": 670.5,
+      "y": 849,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "8134ae3e-eef7-4f9a-9de2-d61b8cfb213a",
+        "url": "https://www.worldanvil.com/world/map/marker/8134ae3e-eef7-4f9a-9de2-d61b8cfb213a/edit",
+        "title": "Svalvakt",
+        "coordinates": {
+          "x": 666.0,
+          "y": 868.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 670.5,
+          "y": 2597,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-111"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-local-112",
+      "title": "Treibholmbucht",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "hesirentum-klageschild-inseln",
+      "x": 1942.5,
+      "y": 787,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "aleria",
+        "basis": "Neues Kartenzeichen; Name und Beschreibung im Auftrag des Nutzers ergänzt.",
+        "mapPositionId": "heldenwacht-position-112",
+        "targetPosition": {
+          "x": 1942.5,
+          "y": 2659,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-112"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-194d9138-17bb-491a-bb6f-b0b9f00c759e",
+      "title": "Tunglvakt",
+      "category": "Turm",
+      "templateId": "gebaeude",
+      "icon": "/Karten/assets/icons/welt/turm.png",
+      "territoryId": "hesirentum-moewenfels",
+      "x": 323.0,
+      "y": 688,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "194d9138-17bb-491a-bb6f-b0b9f00c759e",
+        "url": "https://www.worldanvil.com/world/map/marker/194d9138-17bb-491a-bb6f-b0b9f00c759e/edit",
+        "title": "Tunglvakt",
+        "coordinates": {
+          "x": 329.0,
+          "y": 704.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 323.0,
+          "y": 2758,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-113"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-5bdf0756-fa6c-40d7-94d8-b5c62a7cc683",
+      "title": "Stormvik",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "hesirentum-klageschild-inseln",
+      "x": 1708.0,
+      "y": 685,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "5bdf0756-fa6c-40d7-94d8-b5c62a7cc683",
+        "url": "https://www.worldanvil.com/world/map/marker/5bdf0756-fa6c-40d7-94d8-b5c62a7cc683/edit",
+        "title": "Stormvik",
+        "coordinates": {
+          "x": 1702.0,
+          "y": 691.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 1708.0,
+          "y": 2761,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-114"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-784aceba-1e31-4cbf-b986-ef94ba35d8f0",
+      "title": "Ravnkhamn",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "hesirentum-moewenfels",
+      "x": 723.5,
+      "y": 674,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "784aceba-1e31-4cbf-b986-ef94ba35d8f0",
+        "url": "https://www.worldanvil.com/world/map/marker/784aceba-1e31-4cbf-b986-ef94ba35d8f0/edit",
+        "title": "Ravnkhamn",
+        "coordinates": {
+          "x": 727.0,
+          "y": 697.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 723.5,
+          "y": 2772,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-115"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-9386a8e9-af5b-4b44-b98e-797328d4fc0a",
+      "title": "Möwenhof",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "hesirentum-moewenfels",
+      "x": 557.0,
+      "y": 644,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "9386a8e9-af5b-4b44-b98e-797328d4fc0a",
+        "url": "https://www.worldanvil.com/world/map/marker/9386a8e9-af5b-4b44-b98e-797328d4fc0a/edit",
+        "title": "Möwenhof",
+        "coordinates": {
+          "x": 556.0,
+          "y": 659.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 557.0,
+          "y": 2802,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-116"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-47facf34-3250-4537-80a6-4bfe1849b821",
+      "title": "Hrafnes",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "hesirentum-klageschild-inseln",
+      "x": 2119.5,
+      "y": 571,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "47facf34-3250-4537-80a6-4bfe1849b821",
+        "url": "https://www.worldanvil.com/world/map/marker/47facf34-3250-4537-80a6-4bfe1849b821/edit",
+        "title": "Hrafnes",
+        "coordinates": {
+          "x": 2112.0,
+          "y": 596.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 2119.5,
+          "y": 2875,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-117"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-50d69753-24cb-42a8-a985-a29a5174478e",
+      "title": "Heljaskip",
+      "category": "Schiffswrack",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/schiffswrackpin.png",
+      "territoryId": "hesirentum-moewenfels",
+      "x": 881.5,
+      "y": 569,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "50d69753-24cb-42a8-a985-a29a5174478e",
+        "url": "https://www.worldanvil.com/world/map/marker/50d69753-24cb-42a8-a985-a29a5174478e/edit",
+        "title": "Heljaskip",
+        "coordinates": {
+          "x": 877.0,
+          "y": 585.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 881.5,
+          "y": 2877,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-118"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-e44767d5-7c08-4860-94f5-5b0db4797b2d",
+      "title": "Wellenruh",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "hesirentum-klageschild-inseln",
+      "x": 1800.5,
+      "y": 496,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "e44767d5-7c08-4860-94f5-5b0db4797b2d",
+        "url": "https://www.worldanvil.com/world/map/marker/e44767d5-7c08-4860-94f5-5b0db4797b2d/edit",
+        "title": "Wellenruh",
+        "coordinates": {
+          "x": 1776.0,
+          "y": 539.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 1800.5,
+          "y": 2950,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-119"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-35cc43c3-7780-415f-aef0-c8a61e76035a",
+      "title": "Tungbrudd",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "hesirentum-moewenfels",
+      "x": 199.5,
+      "y": 539,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "35cc43c3-7780-415f-aef0-c8a61e76035a",
+        "url": "https://www.worldanvil.com/world/map/marker/35cc43c3-7780-415f-aef0-c8a61e76035a/edit",
+        "title": "Tungbrudd",
+        "coordinates": {
+          "x": 201.0,
+          "y": 569.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 199.5,
+          "y": 2907,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-120"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-00b61bcb-c78a-4de5-8f3f-72c47c55c9bb",
+      "title": "Lindvakt",
+      "category": "Turm",
+      "templateId": "gebaeude",
+      "icon": "/Karten/assets/icons/welt/turm.png",
+      "territoryId": "hesirentum-moewenfels",
+      "x": 597.0,
+      "y": 454,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "00b61bcb-c78a-4de5-8f3f-72c47c55c9bb",
+        "url": "https://www.worldanvil.com/world/map/marker/00b61bcb-c78a-4de5-8f3f-72c47c55c9bb/edit",
+        "title": "Lindvakt",
+        "coordinates": {
+          "x": 602.0,
+          "y": 479.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 597.0,
+          "y": 2992,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-121"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-4af958df-af89-47bd-bfd0-d84f500dae1c",
+      "title": "Die I. Seeschlacht bei Wellenruh",
+      "category": "Schlachtfeld",
+      "templateId": "natur",
+      "icon": "/Karten/assets/icons/welt/schmuggler3.png",
+      "territoryId": "hesirentum-klageschild-inseln",
+      "x": 1380.0,
+      "y": 441,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "4af958df-af89-47bd-bfd0-d84f500dae1c",
+        "url": "https://www.worldanvil.com/world/map/marker/4af958df-af89-47bd-bfd0-d84f500dae1c/edit",
+        "title": "Die I. Seeschlacht bei Wellenruh",
+        "coordinates": {
+          "x": 1374.0,
+          "y": 453.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 1380.0,
+          "y": 3005,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-122"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-e6806890-2499-4073-9b1d-a3115f9e80c4",
+      "title": "Skärvakt",
+      "category": "Turm",
+      "templateId": "gebaeude",
+      "icon": "/Karten/assets/icons/welt/turm.png",
+      "territoryId": "hesirentum-klageschild-inseln",
+      "x": 2026.0,
+      "y": 413,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "e6806890-2499-4073-9b1d-a3115f9e80c4",
+        "url": "https://www.worldanvil.com/world/map/marker/e6806890-2499-4073-9b1d-a3115f9e80c4/edit",
+        "title": "Skärvakt",
+        "coordinates": {
+          "x": 2028.0,
+          "y": 445.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 2026.0,
+          "y": 3033,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-123"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-4c87bded-ea50-4d25-bb99-c0f1fad15f7f",
+      "title": "Tornvik",
+      "category": "Siedlungsruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/zerst-rte-siedlung.png",
+      "territoryId": "hesirentum-moewenfels",
+      "x": 676.0,
+      "y": 401,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "4c87bded-ea50-4d25-bb99-c0f1fad15f7f",
+        "url": "https://www.worldanvil.com/world/map/marker/4c87bded-ea50-4d25-bb99-c0f1fad15f7f/edit",
+        "title": "Tornvik",
+        "coordinates": {
+          "x": 691.0,
+          "y": 403.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 676.0,
+          "y": 3045,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-124"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-local-125",
+      "title": "Segelrast",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "hesirentum-klageschild-inseln",
+      "x": 2596.5,
+      "y": 393,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "aleria",
+        "basis": "Neues Kartenzeichen; Name und Beschreibung im Auftrag des Nutzers ergänzt.",
+        "mapPositionId": "heldenwacht-position-125",
+        "targetPosition": {
+          "x": 2596.5,
+          "y": 3053,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-125"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-03804f4c-d7e6-43f9-b3dd-85d6b622b121",
+      "title": "Zum Goldenen Fass",
+      "category": "Taverne",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/taverne.png",
+      "territoryId": "hesirentum-moewenfels",
+      "x": 477.5,
+      "y": 388,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "03804f4c-d7e6-43f9-b3dd-85d6b622b121",
+        "url": "https://www.worldanvil.com/world/map/marker/03804f4c-d7e6-43f9-b3dd-85d6b622b121/edit",
+        "title": "Zum Goldenen Fass",
+        "coordinates": {
+          "x": 480.0,
+          "y": 407.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 477.5,
+          "y": 3058,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-126"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-local-127",
+      "title": "Sundkrone",
+      "category": "Burgsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/burgsiedlung.png",
+      "territoryId": "huskarllehen-sundkrone",
+      "x": 3956.5,
+      "y": 355,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "aleria",
+        "basis": "Neues Kartenzeichen; Name und Beschreibung im Auftrag des Nutzers ergänzt.",
+        "mapPositionId": "heldenwacht-position-127",
+        "targetPosition": {
+          "x": 3956.5,
+          "y": 3091,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-127"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-f901f30c-8a77-404c-9edc-1679d51def39",
+      "title": "Alfslag",
+      "category": "Klostersiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/klostersiedlung.png",
+      "territoryId": "hesirentum-moewenfels",
+      "x": 249.5,
+      "y": 345,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "f901f30c-8a77-404c-9edc-1679d51def39",
+        "url": "https://www.worldanvil.com/world/map/marker/f901f30c-8a77-404c-9edc-1679d51def39/edit",
+        "title": "Alfslag",
+        "coordinates": {
+          "x": 194.0,
+          "y": 292.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 249.5,
+          "y": 3101,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-128"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-5abded4e-0d8f-48df-90c9-06ddb726df5d",
+      "title": "Vigholm",
+      "category": "Klostersiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/klostersiedlung.png",
+      "territoryId": "hesirentum-klageschild-inseln",
+      "x": 1678.0,
+      "y": 327,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "5abded4e-0d8f-48df-90c9-06ddb726df5d",
+        "url": "https://www.worldanvil.com/world/map/marker/5abded4e-0d8f-48df-90c9-06ddb726df5d/edit",
+        "title": "Vigholm",
+        "coordinates": {
+          "x": 1681.0,
+          "y": 345.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 1678.0,
+          "y": 3119,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-129"
+        },
+        "links": [
+          {
+            "url": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=2327",
+            "label": " Aldrun"
+          }
+        ]
+      }
+    },
+    {
+      "id": "heldenwacht-a5d4550a-7761-4735-be80-28e4662d9790",
+      "title": "Die zweite Seeschlacht bei Wellenruh",
+      "category": "Schlachtfeld",
+      "templateId": "natur",
+      "icon": "/Karten/assets/icons/welt/schmuggler3.png",
+      "territoryId": "hesirentum-klageschild-inseln",
+      "x": 2233.0,
+      "y": 326,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "a5d4550a-7761-4735-be80-28e4662d9790",
+        "url": "https://www.worldanvil.com/world/map/marker/a5d4550a-7761-4735-be80-28e4662d9790/edit",
+        "title": "Die zweite Seeschlacht bei Wellenruh",
+        "coordinates": {
+          "x": 2230.0,
+          "y": 346.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 2233.0,
+          "y": 3120,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-130"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-842b95ab-dc96-432e-a426-1180dcd06b83",
+      "title": "Tårnvakt",
+      "category": "Turm",
+      "templateId": "gebaeude",
+      "icon": "/Karten/assets/icons/welt/turm.png",
+      "territoryId": "hesirentum-klageschild-inseln",
+      "x": 1788.0,
+      "y": 325,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "842b95ab-dc96-432e-a426-1180dcd06b83",
+        "url": "https://www.worldanvil.com/world/map/marker/842b95ab-dc96-432e-a426-1180dcd06b83/edit",
+        "title": "Tårnvakt",
+        "coordinates": {
+          "x": 1793.0,
+          "y": 330.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 1788.0,
+          "y": 3121,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-131"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-f0cf16fa-7463-4a03-934a-f4a9578edaf0",
+      "title": "Drakkfjord",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "hesirentum-klageschild-inseln",
+      "x": 1489.0,
+      "y": 282,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "f0cf16fa-7463-4a03-934a-f4a9578edaf0",
+        "url": "https://www.worldanvil.com/world/map/marker/f0cf16fa-7463-4a03-934a-f4a9578edaf0/edit",
+        "title": "Drakkfjord",
+        "coordinates": {
+          "x": 1491.0,
+          "y": 315.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 1489.0,
+          "y": 3164,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-132"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-e2ca8c6d-5d1e-45ae-8c78-c331a7668f26",
+      "title": "Blodmar",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "hesirentum-klageschild-inseln",
+      "x": 2026.5,
+      "y": 277,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "e2ca8c6d-5d1e-45ae-8c78-c331a7668f26",
+        "url": "https://www.worldanvil.com/world/map/marker/e2ca8c6d-5d1e-45ae-8c78-c331a7668f26/edit",
+        "title": "Blodmar",
+        "coordinates": {
+          "x": 2021.0,
+          "y": 305.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 2026.5,
+          "y": 3169,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-133"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-fa1f9f72-e84e-4a90-9838-7df7b12071a2",
+      "title": "Sjønes",
+      "category": "Siedlungsruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/zerst-rte-siedlung.png",
+      "territoryId": "hesirentum-moewenfels",
+      "x": 570.5,
+      "y": 270,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "fa1f9f72-e84e-4a90-9838-7df7b12071a2",
+        "url": "https://www.worldanvil.com/world/map/marker/fa1f9f72-e84e-4a90-9838-7df7b12071a2/edit",
+        "title": "Sjønes",
+        "coordinates": {
+          "x": 573.0,
+          "y": 264.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 570.5,
+          "y": 3176,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-134"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-5f94bdb3-efbb-4cd3-8f9f-8e15894ed726",
+      "title": "Vargsblod",
+      "category": "Schiffswrack",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/schiffswrackpin.png",
+      "territoryId": "hesirentum-moewenfels",
+      "x": 858.5,
+      "y": 189,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "5f94bdb3-efbb-4cd3-8f9f-8e15894ed726",
+        "url": "https://www.worldanvil.com/world/map/marker/5f94bdb3-efbb-4cd3-8f9f-8e15894ed726/edit",
+        "title": "Vargsblod",
+        "coordinates": {
+          "x": 862.0,
+          "y": 201.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 858.5,
+          "y": 3257,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-135"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-5992808a-31bc-4a68-a597-1bd7c89b7477",
+      "title": "Klippenhafen",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "hesirentum-moewenfels",
+      "x": 668.5,
+      "y": 165,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "5992808a-31bc-4a68-a597-1bd7c89b7477",
+        "url": "https://www.worldanvil.com/world/map/marker/5992808a-31bc-4a68-a597-1bd7c89b7477/edit",
+        "title": "Klippenhafen",
+        "coordinates": {
+          "x": 664.0,
+          "y": 169.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 668.5,
+          "y": 3281,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-136"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-local-137",
+      "title": "Lothirblick",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "huskarllehen-lothirblick",
+      "x": 3838.5,
+      "y": 160,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "aleria",
+        "basis": "Neues Kartenzeichen; Name und Beschreibung im Auftrag des Nutzers ergänzt.",
+        "mapPositionId": "heldenwacht-position-137",
+        "targetPosition": {
+          "x": 3838.5,
+          "y": 3286,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-137"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-224095d6-68e7-4256-a730-b2bd890c62d7",
+      "title": "Rebfeld",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "hesirentum-moewenfels",
+      "x": 534.5,
+      "y": 45,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "224095d6-68e7-4256-a730-b2bd890c62d7",
+        "url": "https://www.worldanvil.com/world/map/marker/224095d6-68e7-4256-a730-b2bd890c62d7/edit",
+        "title": "Rebfeld",
+        "coordinates": {
+          "x": 539.0,
+          "y": 75.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 534.5,
+          "y": 3401,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-138"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-0f056645-fcb5-473f-aae0-a9b32e34f089",
+      "title": "Jarnfjell",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "hesirentum-moewenfels",
+      "x": 347.5,
+      "y": 39,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "0f056645-fcb5-473f-aae0-a9b32e34f089",
+        "url": "https://www.worldanvil.com/world/map/marker/0f056645-fcb5-473f-aae0-a9b32e34f089/edit",
+        "title": "Jarnfjell",
+        "coordinates": {
+          "x": 347.0,
+          "y": 61.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 347.5,
+          "y": 3407,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-139"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-local-140",
+      "title": "Klippenrest",
+      "category": "Siedlungsruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/zerst-rte-siedlung.png",
+      "territoryId": "piratentum-sirenen-zahn-riff",
+      "x": 3174,
+      "y": 2619,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "aleria",
+        "basis": "Neues Kartenzeichen; Name und Beschreibung im Auftrag des Nutzers ergänzt.",
+        "mapPositionId": "heldenwacht-position-140",
+        "targetPosition": {
+          "x": 3174,
+          "y": 827,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-140"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-01ccbc6a-4928-49a2-94f9-d683d422fc09",
+      "title": "Blódfjord",
+      "category": "Siedlungsruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/zerst-rte-siedlung.png",
+      "territoryId": "piratentum-sirenen-zahn-riff",
+      "x": 3196,
+      "y": 2532,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "01ccbc6a-4928-49a2-94f9-d683d422fc09",
+        "url": "https://www.worldanvil.com/world/map/marker/01ccbc6a-4928-49a2-94f9-d683d422fc09/edit",
+        "title": "Blódfjord",
+        "coordinates": {
+          "x": 3201.0,
+          "y": 2540.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 3196,
+          "y": 914,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-141"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-1d879fe9-15ed-4ec5-80ea-df571faaf34a",
+      "title": "Dødrift",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "territoryId": "hesirentum-wellenklang",
+      "x": 2428,
+      "y": 2403,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "1d879fe9-15ed-4ec5-80ea-df571faaf34a",
+        "url": "https://www.worldanvil.com/world/map/marker/1d879fe9-15ed-4ec5-80ea-df571faaf34a/edit",
+        "title": "Dødrift",
+        "coordinates": {
+          "x": 2426.0,
+          "y": 2421.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 2428,
+          "y": 1043,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-142"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-ebb15fb4-3fc4-450d-a39a-996e9d241660",
+      "title": "Frostlicht",
+      "category": "Turmruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/zerst-rter-turm.png",
+      "territoryId": "piratentum-sirenen-zahn-riff",
+      "x": 3501,
+      "y": 2189,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "ebb15fb4-3fc4-450d-a39a-996e9d241660",
+        "url": "https://www.worldanvil.com/world/map/marker/ebb15fb4-3fc4-450d-a39a-996e9d241660/edit",
+        "title": "Frostlicht",
+        "coordinates": {
+          "x": 3505.0,
+          "y": 2207.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 3501,
+          "y": 1257,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-143"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-a4178ef5-36eb-4240-ae02-134e4eb666d2",
+      "title": "Taverne am Königsweg",
+      "category": "Taverne",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/taverne.png",
+      "territoryId": "herrschaft-riesentod",
+      "x": 477,
+      "y": 2056,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "a4178ef5-36eb-4240-ae02-134e4eb666d2",
+        "url": "https://www.worldanvil.com/world/map/marker/a4178ef5-36eb-4240-ae02-134e4eb666d2/edit",
+        "title": "Taverne am Königsweg",
+        "coordinates": {
+          "x": 482.0,
+          "y": 2054.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 477,
+          "y": 1390,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-144"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-5a1bef8d-2400-4ef9-8af8-8efb9bcaa293",
+      "title": "Siggstatt",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "herrschaft-riesentod",
+      "x": 498,
+      "y": 1929,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "5a1bef8d-2400-4ef9-8af8-8efb9bcaa293",
+        "url": "https://www.worldanvil.com/world/map/marker/5a1bef8d-2400-4ef9-8af8-8efb9bcaa293/edit",
+        "title": "Siggstatt",
+        "coordinates": {
+          "x": 498.0,
+          "y": 1941.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 498,
+          "y": 1517,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-145"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-a795710c-15f4-41f9-b745-ae058df5e8a4",
+      "title": "Galdrkirk",
+      "category": "Klostersiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/klostersiedlung.png",
+      "territoryId": "herrschaft-sturmgeborene",
+      "x": 310,
+      "y": 1623,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "a795710c-15f4-41f9-b745-ae058df5e8a4",
+        "url": "https://www.worldanvil.com/world/map/marker/a795710c-15f4-41f9-b745-ae058df5e8a4/edit",
+        "title": "Galdrkirk",
+        "coordinates": {
+          "x": 306.0,
+          "y": 1643.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 310,
+          "y": 1823,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-146"
+        }
+      }
+    },
+    {
+      "id": "heldenwacht-a1c979f3-1a2e-4ee6-9130-b48c2ffb2522",
+      "title": "Vigfinnstad",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "direktlehen-tal-der-helden",
+      "x": 637,
+      "y": 2159,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "markerId": "a1c979f3-1a2e-4ee6-9130-b48c2ffb2522",
+        "url": "https://www.worldanvil.com/world/map/marker/a1c979f3-1a2e-4ee6-9130-b48c2ffb2522/edit",
+        "title": "Vigfinnstad",
+        "coordinates": {
+          "x": 637.0,
+          "y": 2159.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          4096,
+          3446
+        ],
+        "targetPosition": {
+          "x": 637,
+          "y": 1287,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "heldenwacht-position-147"
+        }
+      }
+    }
+  ],
+  "unpositionedPlaces": [
+    {
+      "id": "heldenwacht-e0e00ab6-1c16-4258-88ed-7cbecbdb4d6a",
+      "name": "Heldenfeld - Turnierplatz",
+      "text": "Heldenfeld - Turnierplatz ist der offizielle Turnierplatz des Jarltums und des Königreichs Aldrimar. Hier werden Turniere ausgetragen und öffentliche Feste gefeiert, sofern es die Umstände erlauben. Der Platz ist jedoch die meiste Zeit verwaist, da es derzeit weder Anlässe für Feiern noch für Turniere gibt.\n\nDie Aldrimarer sind ohnehin kein Volk, das Turniere besonders schätzt, da solche Veranstaltungen eher als Unterhaltung für Könige in Friedenszeiten dienten. Dennoch bleibt der Heldenfeld ein symbolträchtiger Ort, der an vergangene Zeiten erinnert, in denen ritterliche Wettkämpfe und große Feste das Volk zusammenbrachten.",
+      "territoryId": "hesirentum-heldenwacht",
+      "sourceRef": {
+        "provider": "worldanvil",
+        "markerId": "e0e00ab6-1c16-4258-88ed-7cbecbdb4d6a",
+        "mapId": "c0b4518d-2f9a-4e76-ab2d-a14818034d53",
+        "coordinates": {
+          "x": 971.0,
+          "y": 1912.0,
+          "origin": "bottom-left"
+        },
+        "url": "https://www.worldanvil.com/world/map/marker/e0e00ab6-1c16-4258-88ed-7cbecbdb4d6a/edit"
+      },
+      "reason": "Kein eigenes Turnierzeichen auf der neuen Karte; als Einrichtung bei Heldenwacht erhalten, keine erfundene Position."
+    }
+  ]
+}

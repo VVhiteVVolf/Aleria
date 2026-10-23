@@ -1,0 +1,588 @@
+{
+  "basis": "Neue gelieferte Karten und Nutzerauftrag 22.10.2026; Herkunft, Geschichte und benachbarte Orte berücksichtigt.",
+  "coordinateConversion": "3826 × 4097; Original X/Y unten links erhalten. Zielspitzen aus neuer Markerkarte oben links; Laufzeit x=X/3826, y=Y/4097.",
+  "decisions": [
+    {
+      "markerId": "a591f45f-4abb-4346-9eaf-f6d0db060090",
+      "name": "Grimfjell",
+      "positionId": "schwarzfenn-position-001",
+      "territoryId": "hesirentum-wolfsfenn",
+      "category": "Turmruine",
+      "originalText": "Grimfjell, einst eine bedeutende Grenzburg, dient heute als Heereslager im Gebirgspass, der in den Norden nach Fjordheim, ehemals Vennyr, führt. Die Festung ist der zentrale Stützpunkt des Kriegsherren von Schwarzfenn und beherbergt die Mehrheit der stationierten Truppen. Von Grimfjell aus wird der Pass überwacht und verteidigt, was sie zu einem kritischen strategischen Punkt in der Auseinandersetzung mit Fjordheim macht. Die Burg ist stark befestigt und optimal darauf ausgelegt, große Armeen zu versorgen und Einsätze in die nördlichen Grenzgebiete zu koordinieren.",
+      "currentText": "Grimfjell war einst eine bedeutende Grenzburg und später ein Heereslager am nördlichen Pass nach Fjordheim, dem früheren Vennyr. Von hier aus wurde der Zugang nach Schwarzfenn überwacht und der Nachschub für die nördlichen Kämpfe gesammelt.\n\nHeute zeigt der Ort nur noch einen zerfallenen Turm und Mauerreste am felsigen Pass. Eine voll besetzte Heeresburg besteht hier nicht mehr. Die erhaltenen Anlagen markieren weiterhin den Zugang; die intakte Burg Skrammborg südlich davon trägt nun die befestigte Sicherung dieses Abschnitts. Der genaue Zeitpunkt des Verfalls Grimfjells ist nicht überliefert.",
+      "reason": "Heutiger Standort und Zustand an die neue Karte angepasst; Original im Quellenarchiv erhalten."
+    },
+    {
+      "markerId": "53a773cf-0e4a-434a-9c2b-aa73aae721f3",
+      "name": "Skrammborg",
+      "positionId": "schwarzfenn-position-004",
+      "territoryId": "herrschaft-schmetterschilde",
+      "category": "Burg",
+      "originalText": "Skrammborg ist die Festung des Clans der Schmetterschilde, strategisch im Gebirgspass des Fenriszahn-Gebirges erbaut. Sie dient als erste Bastion gegen Angriffe aus dem Norden und spielt eine entscheidende Rolle in der Verteidigung von Wolfsklamm und des gesamten Jarltums Schwarzfenn. Besonders im andauernden Konflikt mit Fjordheim ist Skrammborg von zentraler Bedeutung, da sie den Pass kontrolliert und das Eindringen feindlicher Truppen verhindert. Die Burg ist massiv befestigt und stets kampfbereit, um die nördlichen Grenzen zu sichern.",
+      "currentText": "Skrammborg ist die Festung des Clans der Schmetterschilde, strategisch im Gebirgspass des Fenriszahn-Gebirges erbaut. Sie dient als erste Bastion gegen Angriffe aus dem Norden und spielt eine entscheidende Rolle in der Verteidigung von Wolfsklamm und des gesamten Jarltums Schwarzfenn. Besonders im andauernden Konflikt mit Fjordheim ist Skrammborg von zentraler Bedeutung, da sie den Pass kontrolliert und das Eindringen feindlicher Truppen verhindert. Die Burg ist massiv befestigt und stets kampfbereit, um die nördlichen Grenzen zu sichern.",
+      "reason": "Heutiger Standort und Zustand an die neue Karte angepasst; Original im Quellenarchiv erhalten."
+    },
+    {
+      "markerId": "58b80d05-2e79-4995-8964-b41eb87663c2",
+      "name": "Wolfsklamm",
+      "positionId": "schwarzfenn-position-007",
+      "territoryId": "hesirentum-wolfsfenn",
+      "category": "Stadt",
+      "originalText": "",
+      "currentText": "Wolfsklamm ist die befestigte Hauptstadt Schwarzfenns und Sitz des Jarls Gunnar Ragnulf. Die Stadt liegt im nördlichen Wolfsfenn zwischen den Gebirgshängen und dem Hurinn. Von hier werden die unmittelbaren Ragnulf-Orte, die Clanpflichten und die Versorgung der nördlichen Wachstellungen koordiniert. Die Wege führen zu den Bergbauorten der Schmetterschilde, zu den südlichen Weiden der Graumähnen und weiter nach Gramfenn und Flussblick.",
+      "reason": "Heutiger Standort und Zustand an die neue Karte angepasst; Original im Quellenarchiv erhalten."
+    },
+    {
+      "markerId": "4e59d730-962b-4550-9ef7-557f85b8ac29",
+      "name": "Schlackenhall",
+      "positionId": "schwarzfenn-position-012",
+      "territoryId": "herrschaft-schmetterschilde",
+      "category": "Bergbausiedlung",
+      "originalText": "Schlackenhall ist eine Jägersiedlung, die in einer weiten Lichtung am Rand des Fenriszahn-Gebirges liegt. Die Siedlung ist bekannt für ihre Versorgung mit Fellen, Pelzen und Wildbret, die aus den umliegenden Wäldern stammen. Die Bewohner sind erfahrene Jäger und Fallensteller, die nicht nur die Region mit hochwertigen Rohmaterialien beliefern, sondern auch meisterhafte Handwerksstücke wie Lederwaren und Kleidung fertigen. Schlackenhall ist ein wichtiger Ort für die nachhaltige Nutzung der Wälder und ein Zentrum der Jagdkultur in der Herrschaft der Schmetterschilde.",
+      "currentText": "Schlackenhall liegt im nördlichen Wolfsfenn im Bergbaugebiet der Schmetterschilde. Aus der früheren Jägersiedlung ist ein Bergbauort mit Gruben, Arbeitsplätzen und einfachen Anlagen zur Rohstoffverarbeitung geworden. Wald und Lichtungen liefern weiterhin Holz, Holzkohle und Jagdbeute für die Versorgung. Die Siedlung ist mit den benachbarten Bergbauorten und den südlichen Versorgungshöfen verbunden.",
+      "reason": "Heutiger Standort und Zustand an die neue Karte angepasst; Original im Quellenarchiv erhalten."
+    },
+    {
+      "markerId": "ef9ef05e-0781-4e43-a942-21d8aaae87b0",
+      "name": "Erzgrund",
+      "positionId": "schwarzfenn-position-014",
+      "territoryId": "hesirentum-wolfsfenn",
+      "category": "Bergbausiedlung",
+      "originalText": "Erzgrund liegt am Fuße des Fenriszahn-Gebirges und ist eine bedeutende Bergbausiedlung des Clans der Graumähnen. Die Siedlung ist auf den Abbau und die Verarbeitung von Eisen spezialisiert, das zu hochwertigem Stahl veredelt wird. Dieser Stahl wird für die Herstellung von Rüstungen, Waffen und Hufeisen genutzt, die vor allem für die Kavallerie des Clans unverzichtbar sind. Erzgrund ist das industrielle Herzstück der Graumähnen und spielt eine zentrale Rolle in der militärischen und wirtschaftlichen Stärke des Clans. Die Schmieden der Siedlung sind weithin bekannt für ihre robuste und zuverlässige Handwerkskunst.",
+      "currentText": "Erzgrund liegt am Fuße des Fenriszahn-Gebirges und ist eine bedeutende Bergbausiedlung im unmittelbar verwalteten Wolfsfenn. Die Siedlung ist auf den Abbau und die Verarbeitung von Eisen spezialisiert, das zu hochwertigem Stahl veredelt wird. Dieser Stahl wird für die Herstellung von Rüstungen, Waffen und Hufeisen genutzt, die vor allem für die Kavallerie des Jarltums unverzichtbar sind. Erzgrund ist das industrielle Herzstück Wolfsfenns und spielt eine zentrale Rolle in der militärischen und wirtschaftlichen Stärke Wolfsfenns. Die Schmieden der Siedlung sind weithin bekannt für ihre robuste und zuverlässige Handwerkskunst.\n\nErzgrund untersteht unmittelbar den Ragnulf. Seine wirtschaftlichen Beziehungen zu den Graumähnen bleiben bestehen.",
+      "reason": "Heutiger Standort und Zustand an die neue Karte angepasst; Original im Quellenarchiv erhalten."
+    },
+    {
+      "markerId": "8e1fe450-f335-4ca1-8550-a93b36244401",
+      "name": "Stansweide",
+      "positionId": "schwarzfenn-position-020",
+      "territoryId": "thanentum-gramfenn",
+      "category": "Bauernsiedlung",
+      "originalText": "Stansweide ist eine nördliche Bauernsiedlung im Thanentum Trauerwald, die sich auf Schweinezucht und den Anbau von Gemüse spezialisiert hat. Die fruchtbaren Böden und die Nähe zu den Wäldern bieten ideale Bedingungen für die Landwirtschaft. Schweine aus Stansweide sind in der gesamten Region bekannt für ihre Qualität und werden sowohl für die lokale Versorgung als auch für den Handel genutzt. Die Siedlung spielt eine wichtige Rolle in der Ernährungssicherung der nördlichen Gebiete.",
+      "currentText": "Stansweide ist eine nördliche Bauernsiedlung im Thanentum Gramfenn, die sich auf Schweinezucht und den Anbau von Gemüse spezialisiert hat. Die fruchtbaren Böden und die Nähe zu den Wäldern bieten ideale Bedingungen für die Landwirtschaft. Schweine aus Stansweide sind in der gesamten Region bekannt für ihre Qualität und werden sowohl für die lokale Versorgung als auch für den Handel genutzt. Die Siedlung spielt eine wichtige Rolle in der Ernährungssicherung der nördlichen Gebiete.",
+      "reason": "Heutiger Standort und Zustand an die neue Karte angepasst; Original im Quellenarchiv erhalten."
+    },
+    {
+      "markerId": "69ab17db-78aa-4a8e-94b9-6fd720b75cd0",
+      "name": "Dunkelkluft",
+      "positionId": "schwarzfenn-position-022",
+      "territoryId": "hesirentum-wolfsfenn",
+      "category": "Bergbausiedlung",
+      "originalText": "Dunkelkluft ist eine Bergbausiedlung, die sich an der Spitze einer Hügelkette erstreckt. Die Siedlung ist bekannt für ihre reichen Vorkommen an Kohle und Schiefer, die aus den tiefen Gruben der Hügel gewonnen werden. Kohle aus Dunkelkluft wird vor allem als Brennmaterial für die Schmieden des Clans der Graumähnen genutzt, während der Schiefer für Dachdeckungen und Bauarbeiten in der Region geschätzt wird. Die besondere Lage der Siedlung bietet zudem einen guten Überblick über die umliegenden Ländereien, was Dunkelkluft auch zu einem strategischen Punkt für die Überwachung der Region macht.",
+      "currentText": "Dunkelkluft ist eine Bergbausiedlung, die sich an der Spitze einer Hügelkette erstreckt. Die Siedlung ist bekannt für ihre reichen Vorkommen an Kohle und Schiefer, die aus den tiefen Gruben der Hügel gewonnen werden. Kohle aus Dunkelkluft wird vor allem als Brennmaterial für die Schmieden des Clans der Graumähnen genutzt, während der Schiefer für Dachdeckungen und Bauarbeiten in der Region geschätzt wird. Die besondere Lage der Siedlung bietet zudem einen guten Überblick über die umliegenden Ländereien, was Dunkelkluft auch zu einem strategischen Punkt für die Überwachung der Region macht.\n\nDunkelkluft untersteht unmittelbar den Ragnulf und beliefert auch die benachbarten Graumähnen.",
+      "reason": "Heutiger Standort und Zustand an die neue Karte angepasst; Original im Quellenarchiv erhalten."
+    },
+    {
+      "markerId": "1503c5c3-7e00-49d1-aeb0-4ebddf23fa9c",
+      "name": "Zum Heulenden Wolf",
+      "positionId": "schwarzfenn-position-026",
+      "territoryId": "hesirentum-wolfsfenn",
+      "category": "Taverne",
+      "originalText": "Die Taverne „Zum heulenden Wolf“ ist eine traditionelle Gaststätte im Gebiet des Clans der Graumähnen. Sie dient als beliebter Treffpunkt für Reisende, Händler und Einheimische gleichermaßen. Mit ihrer rustikalen Einrichtung und dem bekannten Met der Region bietet die Taverne eine gemütliche Rastmöglichkeit und ist oft Schauplatz von Geschichten und Neuigkeiten aus Schwarzfenn und darüber hinaus.",
+      "currentText": "Die Taverne „Zum heulenden Wolf“ ist eine traditionelle Gaststätte im unmittelbar von den Ragnulf verwalteten Wolfsfenn. Sie dient als beliebter Treffpunkt für Reisende, Händler und Einheimische gleichermaßen. Mit ihrer rustikalen Einrichtung und dem bekannten Met der Region bietet die Taverne eine gemütliche Rastmöglichkeit und ist oft Schauplatz von Geschichten und Neuigkeiten aus Schwarzfenn und darüber hinaus.",
+      "reason": "Heutiger Standort und Zustand an die neue Karte angepasst; Original im Quellenarchiv erhalten."
+    },
+    {
+      "markerId": "7815dc9c-4359-4979-a71f-aba1347cee50",
+      "name": "Trauerwald",
+      "positionId": "schwarzfenn-position-030",
+      "territoryId": "thanentum-gramfenn",
+      "category": "Stadt",
+      "originalText": "",
+      "currentText": "Trauerwald ist der befestigte Hauptort Gramfenns und Sitz der Kummerherzen. Die Stadt liegt am Hurinn zwischen bewaldeten Höhen. Holzverarbeitung, Jagd und die Versorgung der umliegenden Höfe prägen das tägliche Leben. Nach Norden und Osten bestehen Verbindungen zu den Waldsiedlungen und zum Königsweg; im Süden führen die Wege an die unsichere Grenze zum Dvergskjær-Gebirge.",
+      "reason": "Heutiger Standort und Zustand an die neue Karte angepasst; Original im Quellenarchiv erhalten."
+    },
+    {
+      "markerId": "3bd31b52-139b-443a-8cc4-13e2d56f87b6",
+      "name": "Landgut der Ragnulf",
+      "positionId": "schwarzfenn-position-032",
+      "territoryId": "hesirentum-wolfsfenn",
+      "category": "Landgut",
+      "originalText": "Ragnheim ist das persönliche Eigentum des Jarls und Ragnulf Clans, welche als Zufluchtsort für den Jarl fungiert. Von hier aus, werden auch oft Jagdgesellschaften veranstaltet.",
+      "currentText": "Ragnheim ist das persönliche Eigentum des Jarls und Ragnulf Clans, welche als Zufluchtsort für den Jarl fungiert. Von hier aus, werden auch oft Jagdgesellschaften veranstaltet.\n\nDie große Methalle bildet den Mittelpunkt des Landguts. Sie beherbergt Jagdgesellschaften und die private Gefolgschaft des Jarls und ist keine öffentliche Taverne.",
+      "reason": "Heutiger Standort und Zustand an die neue Karte angepasst; Original im Quellenarchiv erhalten."
+    },
+    {
+      "markerId": "490b3739-7ed9-41f5-8a55-e2e08d6765a6",
+      "name": "Arnsholm",
+      "positionId": "schwarzfenn-position-040",
+      "territoryId": "hesirentum-wolfsfenn",
+      "category": "Ruine",
+      "originalText": "Arnsholm war ursprünglich eine kleine Burg namens Eiriksbolg, bis die Grüne Fraktion während des Krieges der Prätendenten die Schlacht am Hurinnsfluss gewann und die Festung befestigte. Sie benannten sie nach ihrem Anführer Arn Vaeren um und nutzten Arnsholm als Basis, um Wolfsklamm und Flusswall zu belagern sowie als Zufluchtsort für Truppen und Tross.\n\nNach der Rückeroberung durch die Rote Fraktion wurde Arnsholm niedergerissen, um den Vasallen der Grünen eine deutliche Botschaft zu senden: Rebellion würde nicht geduldet. Seitdem ist die Burg ein zerfallenes Relikt des Bürgerkrieges vor 100 Jahren. Gelegentlich werden Turniere oder Heerversammlungen auf dem Gelände abgehalten, doch von der einstigen Festung stehen nur noch alte Fundamente und ein halb verfallener Bergfried.",
+      "currentText": "Arnsholm war ursprünglich eine kleine Burg namens Eiriksbolg, bis die Grüne Fraktion während des Krieges der Prätendenten die Schlacht am Hurinnsfluss gewann und die Festung befestigte. Sie benannten sie nach ihrem Anführer Arn Vaeren um und nutzten Arnsholm als Basis, um Wolfsklamm und Flusswall zu belagern sowie als Zufluchtsort für Truppen und Tross.\n\nNach der Rückeroberung durch die Rote Fraktion wurde Arnsholm niedergerissen, um den Vasallen der Grünen eine deutliche Botschaft zu senden: Rebellion würde nicht geduldet. Seitdem ist die Burg ein zerfallenes Relikt des Bürgerkrieges vor 100 Jahren. Gelegentlich werden Turniere oder Heerversammlungen auf dem Gelände abgehalten, doch von der einstigen Festung stehen nur noch alte Fundamente und ein halb verfallener Bergfried.\n\nVon Arnsholm sind heute Mauerzüge und ein alter Torbogen erhalten. Der Ort wird als unbewohnte Ruine geführt; die Geschichte der früheren Burg Eiriksbolg bleibt von diesem heutigen Zustand getrennt.",
+      "reason": "Heutiger Standort und Zustand an die neue Karte angepasst; Original im Quellenarchiv erhalten."
+    },
+    {
+      "markerId": "8f13b185-9754-40c5-9209-1637f5f5554a",
+      "name": "Myrkhov",
+      "positionId": "schwarzfenn-position-045",
+      "territoryId": "thanentum-gramfenn",
+      "category": "Siedlungsruine",
+      "originalText": "Myrkhov war einst ein bedeutendes Heiligtum im Thanentum Trauerwald, ein Ort der Andacht und Zuflucht während des Bürgerkriegs. Doch das Heiligtum wurde von marodierenden Truppen geplündert und geschleift. Die Verantwortlichen bleiben ein Rätsel: Einige sagen, es waren die Grünen, andere behaupten, es handelte sich um Plünderer der Roten oder der Goldenen Kompanie, Söldner, die während des Krieges für ihren Opportunismus berüchtigt waren. Heute sind die Ruinen von Myrkhov ein stiller, aber eindringlicher Zeuge der Schrecken des Bürgerkriegs und der Zerstörung, die er brachte.",
+      "currentText": "Myrkhov war einst ein bedeutendes Heiligtum im Thanentum Gramfenn, ein Ort der Andacht und Zuflucht während des Bürgerkriegs. Doch das Heiligtum wurde von marodierenden Truppen geplündert und geschleift. Die Verantwortlichen bleiben ein Rätsel: Einige sagen, es waren die Grünen, andere behaupten, es handelte sich um Plünderer der Roten oder der Goldenen Kompanie, Söldner, die während des Krieges für ihren Opportunismus berüchtigt waren. Heute sind die Ruinen von Myrkhov ein stiller, aber eindringlicher Zeuge der Schrecken des Bürgerkriegs und der Zerstörung, die er brachte.",
+      "reason": "Heutiger Standort und Zustand an die neue Karte angepasst; Original im Quellenarchiv erhalten."
+    },
+    {
+      "markerId": "1606e258-bb17-460a-88f5-f6a4d9c8ad06",
+      "name": "Jagdklingen - Fenris Lager",
+      "positionId": "schwarzfenn-position-046",
+      "territoryId": "hesirentum-wolfsfenn",
+      "category": "Jägerlager",
+      "originalText": "Die Jagdklingen haben ein Lager im Grenzgebiet zwischen den Ländereien der Graumähnen und des Hrafn-Clans errichtet. Dieser ortsunabhängige Orden von Jägern und Kämpfern widmet sich der Bekämpfung von Bestien und der Jagd auf Unholde, die die Grenzregion unsicher machen. Ihre Präsenz ist besonders in den wilden und unzugänglichen Gebieten von Schwarzfenn von großer Bedeutung. Die Jagdklingen werden oft von beiden Clans gerufen, um gefährliche Kreaturen zu vertreiben oder mysteriöse Bedrohungen zu untersuchen. Ihr Lager dient als Basis für ihre Einsätze und als Sammelpunkt für neue Rekruten.",
+      "currentText": "Die Jagdklingen haben ein Lager im südlichen Wolfsfenn nahe den Ländereien der Graumähnen und dem Übergang zum Hrafn-Gebiet errichtet. Dieser ortsunabhängige Orden von Jägern und Kämpfern widmet sich der Bekämpfung von Bestien und der Jagd auf Unholde, die die Grenzregion unsicher machen. Ihre Präsenz ist besonders in den wilden und unzugänglichen Gebieten von Schwarzfenn von großer Bedeutung. Die Jagdklingen werden oft von beiden Clans gerufen, um gefährliche Kreaturen zu vertreiben oder mysteriöse Bedrohungen zu untersuchen. Ihr Lager dient als Basis für ihre Einsätze und als Sammelpunkt für neue Rekruten.",
+      "reason": "Heutiger Standort und Zustand an die neue Karte angepasst; Original im Quellenarchiv erhalten."
+    },
+    {
+      "markerId": "a25481f1-ba1d-4a76-91e8-9cbc9afad5b6",
+      "name": "Flusswall",
+      "positionId": "schwarzfenn-position-047",
+      "territoryId": "hesirentum-flussblick",
+      "category": "Stadt",
+      "originalText": "",
+      "currentText": "Flusswall ist der befestigte Hauptort des Hesirentums Flussblick und Sitz der Hrafn. Er liegt am Vánlauf und verbindet den Flussverkehr mit den Wegen zu den örtlichen Höfen und Werkstätten. Steinmetze, Schmiede und die überlieferte Glyphenkunst prägen den Ort. Das Erbe des ausgelöschten Clans Arnvild bleibt Teil seiner Geschichte; heute führen die Hrafn die Verwaltung und sichern Handel und Handwerk.",
+      "reason": "Heutiger Standort und Zustand an die neue Karte angepasst; Original im Quellenarchiv erhalten."
+    },
+    {
+      "markerId": "8361e51e-8462-4c14-b6fe-0fa3a79c8be0",
+      "name": "Hvarborg - Balthors Söhne",
+      "positionId": "schwarzfenn-position-052",
+      "territoryId": "ordenssitze-balthors-soehne",
+      "category": "Burg",
+      "originalText": "Hvarborg ist eine kleine Ordensburg der Balthors Söhne, gelegen im Thanentum Trauerwald. Sie dient hauptsächlich als Ausbildungsstätte für Kleriker und Paladine, die hier in den Lehren und Disziplinen des Ordens unterrichtet werden. Die Festung beherbergt nur eine geringe Anzahl erfahrener Krieger, da der Schwerpunkt auf der Ausbildung und dem geistlichen Dienst liegt. Dennoch ist Hvarborg ein bedeutender Ort für die religiöse und militärische Vorbereitung des Ordens in der Region.",
+      "currentText": "Hvarborg ist eine kleine Ordensburg der Balthors Söhne, gelegen im Thanentum Gramfenn. Sie dient hauptsächlich als Ausbildungsstätte für Kleriker und Paladine, die hier in den Lehren und Disziplinen des Ordens unterrichtet werden. Die Festung beherbergt nur eine geringe Anzahl erfahrener Krieger, da der Schwerpunkt auf der Ausbildung und dem geistlichen Dienst liegt. Dennoch ist Hvarborg ein bedeutender Ort für die religiöse und militärische Vorbereitung des Ordens in der Region.",
+      "reason": "Heutiger Standort und Zustand an die neue Karte angepasst; Original im Quellenarchiv erhalten."
+    },
+    {
+      "markerId": "839a394d-6e98-430b-8f53-0fdb978f54e5",
+      "name": "Wiestebruch",
+      "positionId": "schwarzfenn-position-054",
+      "territoryId": "thanentum-gramfenn",
+      "category": "Bauernsiedlung",
+      "originalText": "Wiestebruch ist eine Bauernsiedlung im Thanentum Trauerwald, die für ihre landwirtschaftliche Produktion bekannt ist. Sie versorgt unter anderem den Orden der Balthors Söhne (die Burg etwas im Osten) mit Nahrungsmitteln, insbesondere Getreide, Gemüse und Fleisch. Obwohl die Siedlung offiziell dem Thanen untersteht, hat sich eine enge, informelle Kooperation mit dem Orden entwickelt. Der Orden kauft regelmäßig Vorräte aus Wiestebruch, während die Burg und ihre Garnison im Gegenzug für Sicherheit sorgen und die Siedlung vor Überfällen schützen. Diese gegenseitige Unterstützung ist für beide Seiten von Vorteil, auch wenn sie nicht immer im Sinne des Thanen ist.",
+      "currentText": "Wiestebruch ist eine Bauernsiedlung im Thanentum Gramfenn, die für ihre landwirtschaftliche Produktion bekannt ist. Sie versorgt unter anderem den Orden der Balthors Söhne (die Burg etwas im Osten) mit Nahrungsmitteln, insbesondere Getreide, Gemüse und Fleisch. Obwohl die Siedlung offiziell dem Thanen untersteht, hat sich eine enge, informelle Kooperation mit dem Orden entwickelt. Der Orden kauft regelmäßig Vorräte aus Wiestebruch, während die Burg und ihre Garnison im Gegenzug für Sicherheit sorgen und die Siedlung vor Überfällen schützen. Diese gegenseitige Unterstützung ist für beide Seiten von Vorteil, auch wenn sie nicht immer im Sinne des Thanen ist.",
+      "reason": "Heutiger Standort und Zustand an die neue Karte angepasst; Original im Quellenarchiv erhalten."
+    },
+    {
+      "markerId": "4e66224a-02b2-4930-853d-274b27016f58",
+      "name": "Brynhof",
+      "positionId": "schwarzfenn-position-056",
+      "territoryId": "hesirentum-flussblick",
+      "category": "Handelssiedlung",
+      "originalText": "Diese Siedlung liegt direkt am Ufer des breiten Vánlauf-Flusses, unterhalb von Flusswall. Brynhof ist bekannt für seine fruchtbaren Böden, die dank des Flusses reichlich bewässert werden, und seine traditionsreiche Viehzucht. Die Siedlung spielt eine entscheidende Rolle bei der Versorgung des Hrafn-Clans mit Nahrung und Rohstoffen. Fischerboote säumen die Ufer, und der kleine Hafen dient als Knotenpunkt für den lokalen Handel entlang des Flusses. Brynhof ist ein Ort, an dem Landwirtschaft und Flusshandel Hand in Hand gehen.",
+      "currentText": "Diese Handelssiedlung liegt direkt am Ufer des breiten Vánlauf-Flusses, unterhalb von Flusswall. Brynhof ist bekannt für seine fruchtbaren Böden, die dank des Flusses reichlich bewässert werden, und seine traditionsreiche Viehzucht. Die Siedlung spielt eine entscheidende Rolle bei der Versorgung des Hrafn-Clans mit Nahrung und Rohstoffen. Fischerboote säumen die Ufer, und der kleine Hafen dient als Knotenpunkt für den lokalen Handel entlang des Flusses. Brynhof ist ein Ort, an dem Landwirtschaft und Flusshandel Hand in Hand gehen.",
+      "reason": "Heutiger Standort und Zustand an die neue Karte angepasst; Original im Quellenarchiv erhalten."
+    },
+    {
+      "markerId": "5c05fd3b-e919-4cea-915d-d38ed3813c69",
+      "name": "Halmarstatt",
+      "positionId": "schwarzfenn-position-058",
+      "territoryId": "hesirentum-flussblick",
+      "category": "Bauernsiedlung",
+      "originalText": "Im Süden von Flusswall, an der strategisch wichtigen Weggabelung gelegen, ist Halmarstatt das pulsierende Handelszentrum der Hrafn. Während des Bürgerkriegs wurde die Siedlung zerstört, doch sie war die erste, die nach dem Konflikt wieder aufgebaut wurde. Heute ist Halmarstatt ein florierender Umschlagplatz für Waren aus ganz Schwarzfenn und darüber hinaus. Händler, Handwerker und Reisende beleben die Straßen, und die Marktstände sind voller Waren, die sowohl aus den umliegenden Bauernhöfen als auch von weit entfernten Regionen stammen.",
+      "currentText": "Halmarstatt ist eine Bauernsiedlung südlich von Flusswall an der örtlichen Weggabelung. Während des Bürgerkriegs wurde der Ort zerstört; nach dem Konflikt gehörte er zu den früh wieder aufgebauten Siedlungen.\n\nHeute bewirtschaften die Bewohner die Felder und versorgen die Hrafn-Werkstätten mit Nahrung und landwirtschaftlichen Rohstoffen. Die günstige Lage erhält einen kleineren Warenaustausch zwischen den Höfen und den nahen Märkten. Das frühere Handelsleben bleibt Teil der Geschichte, während die Landwirtschaft die heutige Siedlung prägt.",
+      "reason": "Heutiger Standort und Zustand an die neue Karte angepasst; Original im Quellenarchiv erhalten."
+    },
+    {
+      "markerId": "e75bfd7d-be6b-44ff-90a8-ff29db436ad2",
+      "name": "Eidralborg",
+      "positionId": "schwarzfenn-position-084",
+      "territoryId": "thanentum-lichtfenn",
+      "category": "Burg",
+      "originalText": "Eidralborg ist eine Burg des Hrafn-Clans, gelegen am südlichen Nebenfluss, östlich von Vidarrsbrück. Während des Bürgerkriegs kapitulierte die Besatzung kampflos vor der anrückenden Grünen Armee, nachdem diese bereits mehrere Dörfer und Siedlungen niedergebrannt hatte. Im Gegenzug wurde die Festung verschont, doch die Besatzung wurde zwangsweise in die Reihen der Grünen rekrutiert. Heute dient Eidralborg erneut als militärischer Stützpunkt und sichert die südliche Grenze der Hrafn-Herrschaft.",
+      "currentText": "Eidralborg ist eine kleine Burg im westlichen Lichtfenn. Sie sichert die Wege zwischen den nördlichen Höfen am Vánlauf, Dravnborg und Finstermoor. Hinter den Mauern liegen Vorratsräume und ein geschützter Hof für die örtliche Wache.\n\nDie Burg war früher ein Stützpunkt der Hrafn; heute liegt sie im Herrschaftsgebiet der Helgr. Ihre Sicherungsaufgabe bleibt eng mit dem Verkehr zwischen Lichtfenn und Flussblick verbunden. Dravnborg ist der weiter östlich gelegene Ordenssitz Balthors Söhne.",
+      "reason": "Heutiger Standort und Zustand an die neue Karte angepasst; Original im Quellenarchiv erhalten."
+    },
+    {
+      "markerId": "f056396e-16aa-4b96-887e-8a776c92485f",
+      "name": "Seidhborg",
+      "positionId": "schwarzfenn-position-069",
+      "territoryId": "thanentum-gramfenn",
+      "category": "Burgsiedlung",
+      "originalText": "Seidhborg ist eine bedeutende Festung des Todbrand-Clans, strategisch auf einer Hügelkette errichtet, von der aus das moorastige Inland überblickt werden kann. Die Burg dient nicht nur als militärischer Stützpunkt, sondern auch als Wachposten gegen die Bedrohung durch die Silberzähne. Ein hoher Feuerturm auf der Burg ermöglicht es, Dunkelmoor schnell zu alarmieren, falls die Banditen einen Angriff wagen sollten.\n\nSeidhborg ist ein Symbol der Verteidigung und Wachsamkeit im Thanentum und spielt eine Schlüsselrolle bei der Sicherung der Grenze zwischen den Gebieten der Silberzähne und den noch freien Siedlungen. Von hier aus werden Patrouillen koordiniert und Verteidigungsmaßnahmen überwacht, um die Bedrohung durch die Banditen in Schach zu halten.",
+      "currentText": "Seidhborg ist eine befestigte Siedlung am südlichen Hurinn-Übergang Gramfenns. Die Burg bewacht den Weg zwischen dem Waldland der Kummerherzen und den Mooren Todesfenns. Ihre erhöhte Stellung und der Übergang am Fluss erlauben es, Reisende, Nachschub und verdächtige Bewegungen früh zu erkennen.\n\nSeidhborg war früher eine Festung der Todbrand. Heute liegt sie auf Gramfenns Seite der Grenze unter den Kummerherzen. Ihre Sicherungsaufgabe gegenüber den Silberzähnen bleibt bestehen; die Verbindung mit Dunkelmoor und den südlichen Wachorten ist dafür weiterhin wichtig.",
+      "reason": "Heutiger Standort und Zustand an die neue Karte angepasst; Original im Quellenarchiv erhalten."
+    },
+    {
+      "markerId": "d877a7b4-72fc-4c04-9489-8ba98575aa86",
+      "name": "Skogvakt",
+      "positionId": "schwarzfenn-position-071",
+      "territoryId": "thanentum-todesfenn",
+      "category": "Sumpfsiedlung",
+      "originalText": "Skogvakt ist eine ärmliche Siedlung, deren Bewohner sich vor allem der Jagd und der Verarbeitung von Kräutern widmen. Die Nähe zu den Sümpfen macht das Leben hier gefährlich, da die Bewohner häufig mit Sumpfkreaturen wie Trollen und riesigen Spinnen konfrontiert sind.",
+      "currentText": "Skogvakt ist eine ärmliche Siedlung, deren Bewohner sich vor allem der Jagd und der Verarbeitung von Kräutern widmen. Die Nähe zu den Sümpfen macht das Leben hier gefährlich, da die Bewohner häufig mit Sumpfkreaturen wie Trollen und riesigen Spinnen konfrontiert sind.",
+      "reason": "Heutiger Standort und Zustand an die neue Karte angepasst; Original im Quellenarchiv erhalten."
+    },
+    {
+      "markerId": "bb375700-eb36-4b31-b2ac-269f8da4339d",
+      "name": "Dravnborg - Balthors Söhne",
+      "positionId": "schwarzfenn-position-075",
+      "territoryId": "ordenssitze-balthors-soehne",
+      "category": "Burgsiedlung",
+      "originalText": "Dravnborg ist eine der zahlreichen Ordensburgen des Ritterordens der Balthors Söhne. Sie wurde bewusst in der Nähe der frommen und geistlich geprägten Helgr von Finstermoor errichtet. Der Helgr-Clan unterstützt den Orden aktiv, indem sie viele ihrer Sprösslinge entweder in den Orden oder in den kirchlichen Dienst entsenden. Die Burg dient nicht nur als militärischer Stützpunkt, sondern auch als geistliches Zentrum, in dem junge Rekruten ausgebildet und auf ihre heiligen Pflichten vorbereitet werden. Dravnborg symbolisiert die enge Verbindung zwischen Glauben und militärischer Stärke in der Region.",
+      "currentText": "Dravnborg ist ein Ordenssitz Balthors Söhne im nördlichen Lichtfenn. Die befestigte Siedlung liegt östlich des Vánlaufs zwischen den Wegen nach Finstermoor, den Höfen und den Übergängen zu Todesfenn. Die Ordensleute halten hier Unterkunft, Ausbildung und Vorräte bereit.\n\nDie Burg und ihre Wirtschaftsgebäude dienen dem Orden als geschützter Stützpunkt. Östlich anschließende Wege verbinden die Gemeinschaft mit den Siedlungen am Moor; westlich davon sichert die Helgr-Burg Eidralborg einen eigenen Straßenabschnitt.",
+      "reason": "Heutiger Standort und Zustand an die neue Karte angepasst; Original im Quellenarchiv erhalten."
+    },
+    {
+      "markerId": "298112d6-a342-4829-8cf1-e85a78aeaeeb",
+      "name": "Dunkelmoor",
+      "positionId": "schwarzfenn-position-076",
+      "territoryId": "thanentum-todesfenn",
+      "category": "Stadt",
+      "originalText": "",
+      "currentText": "Dunkelmoor ist der befestigte Hauptort Todesfenns und Sitz des Clans Todbrand. Er liegt zwischen den Wasserarmen und Waldinseln des Düstersumpfs. Stege, Boote und befestigte Wegabschnitte verbinden die Stadt mit den verstreuten Sumpfsiedlungen. Kräuterkunde, Torfgewinnung und Handwerk sichern die Versorgung; im Osten bedrohen die Silberzähne die Wege zu den verbliebenen Bergbauorten.",
+      "reason": "Heutiger Standort und Zustand an die neue Karte angepasst; Original im Quellenarchiv erhalten."
+    },
+    {
+      "markerId": "abb17333-1294-4863-90c2-37b65fc4e6fa",
+      "name": "Malmberg",
+      "positionId": "schwarzfenn-position-079",
+      "territoryId": "banditengebiet-silberzaehne",
+      "category": "Siedlungsruine",
+      "originalText": "Malmberg, Djúpholmr und Stenholt sind strategisch wichtige Bergbausiedlungen am Rand des Gebiets der Silberzähne. Diese Siedlungen, die für ihre reichen Erzvorkommen bekannt sind, wurden vom Thanen des Todbrand-Clans stark befestigt, um die Expansion der Silberzähne zu stoppen. Sie dienen als vorderste Bastionen der Verteidigung und sichern die wertvollen Ressourcen des Gebiets.\n\nZwischen den befestigten Siedlungen und den von den Silberzähnen kontrollierten Bergregionen kommt es immer wieder zu Scharmützeln und kleineren Gefechten. Beide Seiten versuchen, ihren Einfluss auszubauen, doch bisher hat keiner die Oberhand gewinnen können. Diese Pattsituation belastet die Ressourcen des Thanen ebenso wie die Moral der Bewohner, die in ständiger Wachsamkeit leben müssen.\n\nMalmberg, Djúpholmr und Stenholt stehen symbolisch für den Widerstand gegen die Banditenbande, doch ohne zusätzliche Unterstützung von außen bleibt die Situation festgefahren. Sie bilden die letzte Barriere, die den Silberzähnen den Weg in die tiefer gelegenen Regionen des Thanentums versperrt.",
+      "currentText": "Malmberg liegt heute als Siedlungsruine im von den Silberzähnen kontrollierten Dvergskjær-Gebirge. Von den Häusern und Arbeitsplätzen stehen nur noch verfallene Reste zwischen Fels und Wald. Eine intakte, regulär verwaltete Bergbausiedlung besteht hier nicht mehr.\n\nMalmberg gehörte früher zu den befestigten Gegenstellungen der Todbrand. Die heutige Ruinenlage zeigt, dass dieser Ort keine verlässliche Bastion der freien Bergbauorte mehr ist. Djúpholmr und Stenholt liegen dagegen weiterhin auf der Seite Todesfenns.",
+      "reason": "Heutiger Standort und Zustand an die neue Karte angepasst; Original im Quellenarchiv erhalten."
+    },
+    {
+      "markerId": "ad582230-28b5-472f-9597-6e59c777d3c5",
+      "name": "Düsterbruch",
+      "positionId": "schwarzfenn-position-080",
+      "territoryId": "thanentum-todesfenn",
+      "category": "Bergbausiedlung",
+      "originalText": "Düsterbruch, die östlichste der vier Siedlungen, kombiniert Bergbau mit Holzverarbeitung. Die Siedlung ist bekannt für ihre tiefen Minen und die dichten Wälder, die sie umgeben. Neben dem Abbau von Kohle und Erz wird hier hochwertiges Holz für die Herstellung von Bau- und Schiffsmaterial gewonnen. Düsterbruch ist sowohl eine Quelle für Rohstoffe als auch ein wichtiger Standort für die Holzveredelung in der Herrschaft.",
+      "currentText": "Düsterbruch liegt heute am nordöstlichen Rand Todesfenns, zwischen dem Moorland und den Ausläufern des Dvergskjær-Gebirges. Die Bergbausiedlung gewinnt Kohle und Erz; aus den benachbarten Waldstücken kommen Holz und Brennstoff für Ausbau und Verarbeitung. Die Wege nach Dunkelmoor und zu den südlicheren Gruben sind für die Versorgung wichtig.\n\nDüsterbruch gehörte früher zum Wirtschaftsgebiet der Schmetterschilde. Heute untersteht der Ort den Todbrand. Die bekannte Verbindung von Bergbau und Holzverarbeitung bleibt erhalten, wird aber durch die bedrohte östliche Grenzlage bestimmt.",
+      "reason": "Heutiger Standort und Zustand an die neue Karte angepasst; Original im Quellenarchiv erhalten."
+    },
+    {
+      "markerId": "0c7d2120-749b-4f8e-8cdc-98a57965148b",
+      "name": "Vidarrsbrück",
+      "positionId": "schwarzfenn-position-081",
+      "territoryId": "thanentum-lichtfenn",
+      "category": "Bauernsiedlung",
+      "originalText": "Vidarrsbrück liegt an einer Brücke über den Nebenfluss, der südlich von Flusswall entspringt und weiter ins Inland Richtung Osten verläuft. Die Siedlung dient als wichtiger Übergangspunkt für Reisende und Transporte entlang der südlichen Handelsroute. Neben dem Brückenzoll ist Vidarrsbrück für seine Flößerei bekannt, bei der Holz aus den umliegenden Wäldern flussabwärts transportiert wird.",
+      "currentText": "Vidarrsbrück ist eine Bauernsiedlung im nördlichen Lichtfenn, nahe den Wegen zwischen Flussblick und Finstermoor. Die Höfe nutzen die lichteren Waldflächen für Ackerbau und Viehhaltung. Ihr Name erinnert an die ältere Rolle als Übergangsort an einem Nebenfluss.\n\nHolzgewinnung und die Arbeit an den örtlichen Transportwegen ergänzen die Landwirtschaft. Die Erzeugnisse werden nach Finstermoor und zu den Handelsorten am Vánlauf gebracht. Der Ort untersteht den Helgr und bleibt über den Warenverkehr mit den Nachbarn im Norden verbunden.",
+      "reason": "Heutiger Standort und Zustand an die neue Karte angepasst; Original im Quellenarchiv erhalten."
+    },
+    {
+      "markerId": "817384cc-6551-4219-bb32-e686a8afaca3",
+      "name": "Hjorthain",
+      "positionId": "schwarzfenn-position-085",
+      "territoryId": "thanentum-lichtfenn",
+      "category": "Waldsiedlung",
+      "originalText": "Hjorthain ist bekannt für die Nutzung der natürlichen Ressourcen der Sümpfe. Die Bewohner sammeln Heilkräuter und betreiben Torfgewinnung, um ihr Überleben zu sichern. Sie leiden jedoch unter hohen Abgaben und den Gefahren der Sumpfwildnis.",
+      "currentText": "Hjorthain ist eine Waldsiedlung im östlichen Lichtfenn am Rand der Sümpfe Todesfenns. Die Bewohner sammeln Heilkräuter, gewinnen Holz und nutzen die feuchten Randflächen zur Torfgewinnung. Die Höfe liegen im Waldgebiet der Helgr; die unmittelbaren Nachbarn in den Mooren gehören dagegen den Todbrand. Der Handel mit Kräutern und Brennstoff verbindet beide Landschaften, bleibt aber von unsicheren Wegen abhängig.",
+      "reason": "Heutiger Standort und Zustand an die neue Karte angepasst; Original im Quellenarchiv erhalten."
+    },
+    {
+      "markerId": "6f0e2ea8-477a-48a1-a3c4-bf4febd4c81a",
+      "name": "Järnvatt",
+      "positionId": "schwarzfenn-position-086",
+      "territoryId": "banditengebiet-silberzaehne",
+      "category": "Siedlungsruine",
+      "originalText": "Die Siedlungen Järnvatt, Bjornstedt, Hrafnvik und Draugrstad liegen am Rande oder innerhalb der Berge des Dvergskjær-Gebirges. Einst wichtige Orte für Bergbau und Rohstoffförderung, wurden sie von den Silberzähnen besetzt, die die Bevölkerung unterdrücken und zwingen, in den gefährlichen Minen zu arbeiten. Die Banditenbande nutzt diese Siedlungen als Zentren ihrer Macht, doch das Leben der Bewohner ist geprägt von Angst und Zwang.\n\nInnerhalb dieser Siedlungen herrscht zwar eine rudimentäre Ordnung, doch sie ist rein von den Bedürfnissen der Silberzähne geprägt. Die Bevölkerung wird ausgebeutet und von jeglichem Schutz oder Unterstützung durch den Thanen des Todbrand-Clans abgeschnitten. Viele versuchen, den Alltag irgendwie zu bewältigen, doch Widerstand gegen die Banditen wird brutal niedergeschlagen.\n\nDas Gebiet um die Siedlungen gilt als Niemandsland, wo nur die Silberzähne das Sagen haben. Die Banditen kümmern sich nicht um die Belange der Bewohner, sondern terrorisieren sie, um ihre Macht zu sichern. Diese Region ist zu einem Sinnbild für das Versagen der Ordnungskräfte geworden und wartet auf mutige Helden, die den Silberzähnen Einhalt gebieten können.",
+      "currentText": "Järnvatt liegt heute als Siedlungsruine im von den Silberzähnen kontrollierten Dvergskjær-Gebirge. Von den Häusern und Arbeitsplätzen stehen nur noch verfallene Reste zwischen Fels und Wald. Eine intakte, regulär verwaltete Bergbausiedlung besteht hier nicht mehr.\n\nVor dem Verfall wurde die Siedlung von den Silberzähnen besetzt und ihre Bevölkerung zur Arbeit gezwungen. Zwischen den zerstörten Häusern und den umliegenden Stollen besitzt die Bande weiterhin Verstecke; die frühere Dorfgemeinschaft ist zerbrochen.",
+      "reason": "Heutiger Standort und Zustand an die neue Karte angepasst; Original im Quellenarchiv erhalten."
+    },
+    {
+      "markerId": "6814527c-c126-4629-804f-458e188d54bf",
+      "name": "Vargbog",
+      "positionId": "schwarzfenn-position-088",
+      "territoryId": "thanentum-lichtfenn",
+      "category": "Bauernsiedlung",
+      "originalText": "Die Bewohner von Vargbog spezialisieren sich auf die Jagd und die Herstellung von einfachen Waren aus Sumpfholz. Trotz ihrer Bemühungen sind sie oft gezwungen, mit den Verlusten durch Angriffe von Kreaturen und Banditen zu kämpfen.",
+      "currentText": "Vargbog ist eine Bauernsiedlung im inneren Lichtfenn. Die Höfe bewirtschaften die offenen Flächen zwischen Wald und Moor und halten Vieh auf den trockeneren Weiden. Jagd, Kräuterkunde und die ältere Verarbeitung von Sumpfholz ergänzen die Versorgung. Die Erzeugnisse gelangen nach Finstermoor und zu den nahegelegenen Handelsorten; die Helgr sichern die bewohnten Wege.",
+      "reason": "Heutiger Standort und Zustand an die neue Karte angepasst; Original im Quellenarchiv erhalten."
+    },
+    {
+      "markerId": "f9ecfc51-998b-4c07-89dc-6a09f6ee0bd7",
+      "name": "Djúpholmr",
+      "positionId": "schwarzfenn-position-092",
+      "territoryId": "thanentum-todesfenn",
+      "category": "Bergbausiedlung",
+      "originalText": "Malmberg, Djúpholmr und Stenholt sind strategisch wichtige Bergbausiedlungen am Rand des Gebiets der Silberzähne. Diese Siedlungen, die für ihre reichen Erzvorkommen bekannt sind, wurden vom Thanen des Todbrand-Clans stark befestigt, um die Expansion der Silberzähne zu stoppen. Sie dienen als vorderste Bastionen der Verteidigung und sichern die wertvollen Ressourcen des Gebiets.\n\nZwischen den befestigten Siedlungen und den von den Silberzähnen kontrollierten Bergregionen kommt es immer wieder zu Scharmützeln und kleineren Gefechten. Beide Seiten versuchen, ihren Einfluss auszubauen, doch bisher hat keiner die Oberhand gewinnen können. Diese Pattsituation belastet die Ressourcen des Thanen ebenso wie die Moral der Bewohner, die in ständiger Wachsamkeit leben müssen.\n\nMalmberg, Djúpholmr und Stenholt stehen symbolisch für den Widerstand gegen die Banditenbande, doch ohne zusätzliche Unterstützung von außen bleibt die Situation festgefahren. Sie bilden die letzte Barriere, die den Silberzähnen den Weg in die tiefer gelegenen Regionen des Thanentums versperrt.",
+      "currentText": "Djúpholmr ist eine befestigte Bergbausiedlung am östlichen Rand Todesfenns. Die Gruben und Arbeitsplätze liegen vor den von den Silberzähnen kontrollierten Gebirgsteilen. Wachen und einfache Befestigungen sollen Bewohner, Rohstoffe und den Weg nach Dunkelmoor schützen.\n\nFrüher bildeten Malmberg, Djúpholmr und Stenholt gemeinsam die Gegenstellungen der Todbrand. Malmberg liegt inzwischen als Ruine im Banditengebiet. Die verbliebenen Orte Djúpholmr und Stenholt tragen deshalb umso schwerer an der Versorgung und Wachsamkeit entlang dieser Grenze.",
+      "reason": "Heutiger Standort und Zustand an die neue Karte angepasst; Original im Quellenarchiv erhalten."
+    },
+    {
+      "markerId": "d8ae4639-2c02-4165-aeb8-4765b03b7741",
+      "name": "Hrafnvik",
+      "positionId": "schwarzfenn-position-095",
+      "territoryId": "banditengebiet-silberzaehne",
+      "category": "Siedlungsruine",
+      "originalText": "Die Siedlungen Järnvatt, Bjornstedt, Hrafnvik und Draugrstad liegen am Rande oder innerhalb der Berge des Dvergskjær-Gebirges. Einst wichtige Orte für Bergbau und Rohstoffförderung, wurden sie von den Silberzähnen besetzt, die die Bevölkerung unterdrücken und zwingen, in den gefährlichen Minen zu arbeiten. Die Banditenbande nutzt diese Siedlungen als Zentren ihrer Macht, doch das Leben der Bewohner ist geprägt von Angst und Zwang.\n\nInnerhalb dieser Siedlungen herrscht zwar eine rudimentäre Ordnung, doch sie ist rein von den Bedürfnissen der Silberzähne geprägt. Die Bevölkerung wird ausgebeutet und von jeglichem Schutz oder Unterstützung durch den Thanen des Todbrand-Clans abgeschnitten. Viele versuchen, den Alltag irgendwie zu bewältigen, doch Widerstand gegen die Banditen wird brutal niedergeschlagen.\n\nDas Gebiet um die Siedlungen gilt als Niemandsland, wo nur die Silberzähne das Sagen haben. Die Banditen kümmern sich nicht um die Belange der Bewohner, sondern terrorisieren sie, um ihre Macht zu sichern. Diese Region ist zu einem Sinnbild für das Versagen der Ordnungskräfte geworden und wartet auf mutige Helden, die den Silberzähnen Einhalt gebieten können.",
+      "currentText": "Hrafnvik liegt heute als Siedlungsruine im von den Silberzähnen kontrollierten Dvergskjær-Gebirge. Von den Häusern und Arbeitsplätzen stehen nur noch verfallene Reste zwischen Fels und Wald. Eine intakte, regulär verwaltete Bergbausiedlung besteht hier nicht mehr.\n\nVor dem Verfall wurde die Siedlung von den Silberzähnen besetzt und ihre Bevölkerung zur Arbeit gezwungen. Zwischen den zerstörten Häusern und den umliegenden Stollen besitzt die Bande weiterhin Verstecke; die frühere Dorfgemeinschaft ist zerbrochen.",
+      "reason": "Heutiger Standort und Zustand an die neue Karte angepasst; Original im Quellenarchiv erhalten."
+    },
+    {
+      "markerId": "bcb7a2db-8635-4324-8010-f6026faa5c8c",
+      "name": "Finstermoor",
+      "positionId": "schwarzfenn-position-096",
+      "territoryId": "thanentum-lichtfenn",
+      "category": "Stadt",
+      "originalText": "",
+      "currentText": "Finstermoor ist der befestigte Hauptort Lichtfenns und Sitz der Helgr. Die Stadt liegt am westlichen Vánlauf und ist durch Wege mit den Höfen, Klöstern und Burgen des Thanentums verbunden. Landwirtschaft, Flusshandel und kirchliches Leben treffen hier zusammen. Von Finstermoor aus werden die Wachen und die Versorgung der südlichen und östlichen Siedlungen koordiniert.",
+      "reason": "Heutiger Standort und Zustand an die neue Karte angepasst; Original im Quellenarchiv erhalten."
+    },
+    {
+      "markerId": "7529dd6c-2b9c-4788-a2ad-863fd0ce6d0b",
+      "name": "Trollholm",
+      "positionId": "schwarzfenn-position-103",
+      "territoryId": "thanentum-lichtfenn",
+      "category": "Handelssiedlung",
+      "originalText": "Trollholm hat seinen Namen von den Sumpftrollen, die das Gebiet heimsuchen. Die Bewohner leben von der Jagd und Kräuterkunde, sind jedoch ständig auf der Hut vor den Gefahren der Umgebung und den Abgaben an den Thanen.",
+      "currentText": "Trollholm ist heute eine Handelssiedlung im südöstlichen Lichtfenn, nahe den Wegen nach Todesfenn. Kräuter, Jagdbeute und Waren der umliegenden Höfe werden hier gesammelt und getauscht. Die Verbindung des Ortsnamens zu den Sumpftrollen bleibt in den Geschichten der Bewohner lebendig. Die Helgr schützen den Ort, dessen Markttage auch Händler aus den benachbarten Mooren anziehen.",
+      "reason": "Heutiger Standort und Zustand an die neue Karte angepasst; Original im Quellenarchiv erhalten."
+    },
+    {
+      "markerId": "6e76cb18-1d64-4b40-97e0-cca3cf4d3ed4",
+      "name": "Stenholt",
+      "positionId": "schwarzfenn-position-105",
+      "territoryId": "thanentum-todesfenn",
+      "category": "Bergbausiedlung",
+      "originalText": "Malmberg, Djúpholmr und Stenholt sind strategisch wichtige Bergbausiedlungen am Rand des Gebiets der Silberzähne. Diese Siedlungen, die für ihre reichen Erzvorkommen bekannt sind, wurden vom Thanen des Todbrand-Clans stark befestigt, um die Expansion der Silberzähne zu stoppen. Sie dienen als vorderste Bastionen der Verteidigung und sichern die wertvollen Ressourcen des Gebiets.\n\nZwischen den befestigten Siedlungen und den von den Silberzähnen kontrollierten Bergregionen kommt es immer wieder zu Scharmützeln und kleineren Gefechten. Beide Seiten versuchen, ihren Einfluss auszubauen, doch bisher hat keiner die Oberhand gewinnen können. Diese Pattsituation belastet die Ressourcen des Thanen ebenso wie die Moral der Bewohner, die in ständiger Wachsamkeit leben müssen.\n\nMalmberg, Djúpholmr und Stenholt stehen symbolisch für den Widerstand gegen die Banditenbande, doch ohne zusätzliche Unterstützung von außen bleibt die Situation festgefahren. Sie bilden die letzte Barriere, die den Silberzähnen den Weg in die tiefer gelegenen Regionen des Thanentums versperrt.",
+      "currentText": "Stenholt ist eine befestigte Bergbausiedlung am östlichen Rand Todesfenns. Die Gruben und Arbeitsplätze liegen vor den von den Silberzähnen kontrollierten Gebirgsteilen. Wachen und einfache Befestigungen sollen Bewohner, Rohstoffe und den Weg nach Dunkelmoor schützen.\n\nFrüher bildeten Malmberg, Djúpholmr und Stenholt gemeinsam die Gegenstellungen der Todbrand. Malmberg liegt inzwischen als Ruine im Banditengebiet. Die verbliebenen Orte Djúpholmr und Stenholt tragen deshalb umso schwerer an der Versorgung und Wachsamkeit entlang dieser Grenze.",
+      "reason": "Heutiger Standort und Zustand an die neue Karte angepasst; Original im Quellenarchiv erhalten."
+    },
+    {
+      "markerId": "194b2a8d-532c-4d54-b83c-6780d9c2d7ea",
+      "name": "Zur Goldenen Stute",
+      "positionId": "schwarzfenn-position-108",
+      "territoryId": "thanentum-todesfenn",
+      "category": "Taverne",
+      "originalText": "Im südlichen Jarltum gelegen, ist Zur Goldenen Stute eine weitere Taverne der Goldglanz Brauerei und erfüllt denselben Zweck wie ihre Schwester-Taverne im Norden. Diese Taverne dient als Rastplatz für Reisende und bietet den beliebten Met der Brauerei sowie eine Vielzahl an Speisen. Ihre goldene, hölzerne Theke und die kräftigen goldenen Verzierungen verleihen ihr ein besonderes Ambiente, das sowohl Händler als auch Abenteurer anzieht.\n\nNeben ihrer Rolle als Herberge für müde Reisende ist Zur Goldenen Stute auch ein strategischer Standort für das Goldglanz Syndikat. Hier wird ebenfalls das Netzwerk der Brauerei gepflegt und ausgebaut, um die Kontrolle über die südlichen Gebirgspässe und Handelsrouten aufrechtzuerhalten. Gäste wissen oftmals nicht, dass unter der Oberfläche diese Taverne ebenso ein geheimes Zentrum für die Operationen der Brauerei und ihrer weitreichenden Einflussnahme im Süden darstellt.",
+      "currentText": "Im südlichen Jarltum gelegen, ist Zur Goldenen Stute eine weitere Taverne der Goldglanz Brauerei und erfüllt denselben Zweck wie ihre Schwester-Taverne im Norden. Diese Taverne dient als Rastplatz für Reisende und bietet den beliebten Met der Brauerei sowie eine Vielzahl an Speisen. Ihre goldene, hölzerne Theke und die kräftigen goldenen Verzierungen verleihen ihr ein besonderes Ambiente, das sowohl Händler als auch Abenteurer anzieht.\n\nNeben ihrer Rolle als Herberge für müde Reisende ist Zur Goldenen Stute auch ein strategischer Standort für das Goldglanz Syndikat. Hier wird ebenfalls das Netzwerk der Brauerei gepflegt und ausgebaut, um die Kontrolle über die südlichen Gebirgspässe und Handelsrouten aufrechtzuerhalten. Gäste wissen oftmals nicht, dass unter der Oberfläche diese Taverne ebenso ein geheimes Zentrum für die Operationen der Brauerei und ihrer weitreichenden Einflussnahme im Süden darstellt.",
+      "reason": "Heutiger Standort und Zustand an die neue Karte angepasst; Original im Quellenarchiv erhalten."
+    },
+    {
+      "markerId": "59337ea3-9988-425f-8d2f-86aa624a9d3b",
+      "name": "Bjornstedt",
+      "positionId": "schwarzfenn-position-109",
+      "territoryId": "banditengebiet-silberzaehne",
+      "category": "Siedlungsruine",
+      "originalText": "Die Siedlungen Järnvatt, Bjornstedt, Hrafnvik und Draugrstad liegen am Rande oder innerhalb der Berge des Dvergskjær-Gebirges. Einst wichtige Orte für Bergbau und Rohstoffförderung, wurden sie von den Silberzähnen besetzt, die die Bevölkerung unterdrücken und zwingen, in den gefährlichen Minen zu arbeiten. Die Banditenbande nutzt diese Siedlungen als Zentren ihrer Macht, doch das Leben der Bewohner ist geprägt von Angst und Zwang.\n\nInnerhalb dieser Siedlungen herrscht zwar eine rudimentäre Ordnung, doch sie ist rein von den Bedürfnissen der Silberzähne geprägt. Die Bevölkerung wird ausgebeutet und von jeglichem Schutz oder Unterstützung durch den Thanen des Todbrand-Clans abgeschnitten. Viele versuchen, den Alltag irgendwie zu bewältigen, doch Widerstand gegen die Banditen wird brutal niedergeschlagen.\n\nDas Gebiet um die Siedlungen gilt als Niemandsland, wo nur die Silberzähne das Sagen haben. Die Banditen kümmern sich nicht um die Belange der Bewohner, sondern terrorisieren sie, um ihre Macht zu sichern. Diese Region ist zu einem Sinnbild für das Versagen der Ordnungskräfte geworden und wartet auf mutige Helden, die den Silberzähnen Einhalt gebieten können.",
+      "currentText": "Bjornstedt liegt heute als Siedlungsruine im von den Silberzähnen kontrollierten Dvergskjær-Gebirge. Von den Häusern und Arbeitsplätzen stehen nur noch verfallene Reste zwischen Fels und Wald. Eine intakte, regulär verwaltete Bergbausiedlung besteht hier nicht mehr.\n\nVor dem Verfall wurde die Siedlung von den Silberzähnen besetzt und ihre Bevölkerung zur Arbeit gezwungen. Zwischen den zerstörten Häusern und den umliegenden Stollen besitzt die Bande weiterhin Verstecke; die frühere Dorfgemeinschaft ist zerbrochen.",
+      "reason": "Heutiger Standort und Zustand an die neue Karte angepasst; Original im Quellenarchiv erhalten."
+    },
+    {
+      "markerId": "75dc4ce3-cf97-4778-b295-2d81b2a88a86",
+      "name": "Viddaskog",
+      "positionId": "schwarzfenn-position-110",
+      "territoryId": "thanentum-todesfenn",
+      "category": "Flusssiedlung",
+      "originalText": "Viddaskog liegt im äußersten Süden des Thanentums Dunkelmoor, am südlichen Fluss, der die Grenze zum benachbarten Jarltum Krähenmoor markiert. Die Siedlung ist von den sumpfigen Ausläufern des Moors umgeben, die auch südlich des Flusses weitergehen. Obwohl die Stadt stark heruntergekommen ist und unter den harten Bedingungen leidet, bietet sie Reisenden und Händlern einen wichtigen Rastplatz, bevor sie die beschwerliche Reise durch das Sumpfgebiet fortsetzen. Viddaskog ist ein Ort des Übergangs, der trotz seiner kargen Erscheinung eine bedeutende Rolle im Verkehr zwischen den Jarltümern spielt.",
+      "currentText": "Viddaskog liegt im äußersten Süden des Thanentums Todesfenn, am südlichen Fluss, der die Grenze zum benachbarten Jarltum Krähenmoor markiert. Die Siedlung ist von den sumpfigen Ausläufern des Moors umgeben, die auch südlich des Flusses weitergehen. Obwohl die Stadt stark heruntergekommen ist und unter den harten Bedingungen leidet, bietet sie Reisenden und Händlern einen wichtigen Rastplatz, bevor sie die beschwerliche Reise durch das Sumpfgebiet fortsetzen. Viddaskog ist ein Ort des Übergangs, der trotz seiner kargen Erscheinung eine bedeutende Rolle im Verkehr zwischen den Jarltümern spielt.",
+      "reason": "Heutiger Standort und Zustand an die neue Karte angepasst; Original im Quellenarchiv erhalten."
+    },
+    {
+      "markerId": "8b1dc3ea-8116-44b5-8f57-9870224c859b",
+      "name": "Moorquell",
+      "positionId": "schwarzfenn-position-112",
+      "territoryId": "thanentum-lichtfenn",
+      "category": "Klostersiedlung",
+      "originalText": "Moorquell liegt abgelegen in den östlichen Sümpfen und ist ein Kloster, das dem Templer, Gott der Buße und Läuterung, geweiht ist. Die Mönche beaufsichtigen die Geläuterten, ehemals Kriminelle, die durch den Dienst an der Kirche resozialisiert werden. Ein wichtiger Wirtschaftszweig des Klosters ist die Verarbeitung von Ton, der aus den Sümpfen gewonnen wird. Der Ton wird zu Gefäßen, Ziegeln und einfachen Keramiken geformt, die in benachbarten Regionen für den Bau und Alltag geschätzt werden. Die Arbeit mit Ton symbolisiert auch den Weg der Geläuterten – geformt und gefestigt durch Buße und Hingabe.",
+      "currentText": "Moorquell liegt abgelegen am südöstlichen Rand Lichtfenns, nahe den Sümpfen und ist ein Kloster, das dem Templer, Gott der Buße und Läuterung, geweiht ist. Die Mönche beaufsichtigen die Geläuterten, ehemals Kriminelle, die durch den Dienst an der Kirche resozialisiert werden. Ein wichtiger Wirtschaftszweig des Klosters ist die Verarbeitung von Ton, der aus den Sümpfen gewonnen wird. Der Ton wird zu Gefäßen, Ziegeln und einfachen Keramiken geformt, die in benachbarten Regionen für den Bau und Alltag geschätzt werden. Die Arbeit mit Ton symbolisiert auch den Weg der Geläuterten – geformt und gefestigt durch Buße und Hingabe.",
+      "reason": "Heutiger Standort und Zustand an die neue Karte angepasst; Original im Quellenarchiv erhalten."
+    },
+    {
+      "markerId": "8b47d9ed-15e0-4613-be3a-78a16951b46a",
+      "name": "Draugrstad",
+      "positionId": "schwarzfenn-position-115",
+      "territoryId": "banditengebiet-silberzaehne",
+      "category": "Banditenlager",
+      "originalText": "Die Siedlungen Järnvatt, Bjornstedt, Hrafnvik und Draugrstad liegen am Rande oder innerhalb der Berge des Dvergskjær-Gebirges. Einst wichtige Orte für Bergbau und Rohstoffförderung, wurden sie von den Silberzähnen besetzt, die die Bevölkerung unterdrücken und zwingen, in den gefährlichen Minen zu arbeiten. Die Banditenbande nutzt diese Siedlungen als Zentren ihrer Macht, doch das Leben der Bewohner ist geprägt von Angst und Zwang.\n\nInnerhalb dieser Siedlungen herrscht zwar eine rudimentäre Ordnung, doch sie ist rein von den Bedürfnissen der Silberzähne geprägt. Die Bevölkerung wird ausgebeutet und von jeglichem Schutz oder Unterstützung durch den Thanen des Todbrand-Clans abgeschnitten. Viele versuchen, den Alltag irgendwie zu bewältigen, doch Widerstand gegen die Banditen wird brutal niedergeschlagen.\n\nDas Gebiet um die Siedlungen gilt als Niemandsland, wo nur die Silberzähne das Sagen haben. Die Banditen kümmern sich nicht um die Belange der Bewohner, sondern terrorisieren sie, um ihre Macht zu sichern. Diese Region ist zu einem Sinnbild für das Versagen der Ordnungskräfte geworden und wartet auf mutige Helden, die den Silberzähnen Einhalt gebieten können.",
+      "currentText": "Draugrstad ist ein Lager der Silberzähne westlich des Grabmals Hallsvalr. Zelte und einfache Unterstände stehen zwischen den Ruinen des früheren Orts. Die Bande nutzt den Platz als Ausgangspunkt für Streifzüge und zur Versorgung ihrer Verstecke im Gebirge.\n\nEinst wurde hier Erz gewonnen, bevor die Silberzähne den Ort besetzten und die Bewohner zur Arbeit zwangen. Heute prägen das Lager und verfallenes Gemäuer den Platz. Das benachbarte Grabmal Hallsvalr ist über einen kurzen Weg erreichbar.",
+      "reason": "Heutiger Standort und Zustand an die neue Karte angepasst; Original im Quellenarchiv erhalten."
+    },
+    {
+      "markerId": "6b301d0a-afdd-4f02-993e-e4864e6089ca",
+      "name": "Sankt Eirinnskirch",
+      "positionId": "schwarzfenn-position-015",
+      "territoryId": "thanentum-gramfenn",
+      "category": "Klostersiedlung",
+      "originalText": "Die Sankt Éirinnskirch wurde an den Hügeln des Nordens errichtet, wo [url:https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=2344]Éirinn[/url] einst gelebt haben soll. Schlichte Architektur, farbige Glasfenster und ein Altar mit einem geteilten Brot symbolisieren seine Tugenden und sein Vermächtnis als Friedensstifter.",
+      "currentText": "Die Sankt Éirinnskirch wurde an den Hügeln des Nordens errichtet, wo Éirinn (https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=2344) einst gelebt haben soll. Schlichte Architektur, farbige Glasfenster und ein Altar mit einem geteilten Brot symbolisieren seine Tugenden und sein Vermächtnis als Friedensstifter.",
+      "reason": "Gegenwartsbeschreibung nach neuer Karte angepasst; Geschichte erhalten."
+    },
+    {
+      "markerId": "da58410d-36ef-41a8-bbb4-b59c96d4df20",
+      "name": "Myrrborg",
+      "positionId": "schwarzfenn-position-061",
+      "territoryId": "thanentum-gramfenn",
+      "category": "Burgsiedlung",
+      "originalText": "Myrrborg war eine unbedeutende Burg im Norden, die während des Bürgerkrieges von der Goldenen Kompanie als Übungsziel für ihre neuen Belagerungswaffen genutzt wurde. Die Burg, die keine größere Bedeutung hatte, wurde während des Vorstoßes in den Norden geplündert und zerstört. Die Belagerungswaffen, die bei der Zerstörung eingesetzt wurden, versagten jedoch kläglich, als sie durch die Sümpfe geschleift wurden und bei der Belagerung von Heldenwacht keinen Erfolg hatten.\n\nNach der Zerstörung wurde Myrrborg nie wieder aufgebaut. Heute existieren nur noch Ruinen, die kaum mehr als ein Überbleibsel aus der Kriegszeit sind. Die Burg bleibt ein Ort ohne Bedeutung, verlassen und im Verfall begriffen.",
+      "currentText": "Myrrborg ist eine befestigte Burgsiedlung im südwestlichen Gramfenn. Der Ort liegt zwischen den bewaldeten Höhen und den südlichen Wegen nach Todesfenn. Seine Mauern bieten Unterkunft für die Wache und Schutz für die umliegenden Wohn- und Wirtschaftsgebäude.\n\nWährend des Bürgerkriegs wurde die frühere Burg von der Goldenen Kompanie als Ziel für neue Belagerungswaffen schwer zerstört. Auf den alten Anlagen ist inzwischen wieder eine bewohnte Burgsiedlung entstanden. Die Erinnerung an den Beschuss ist geblieben, während der Ort heute erneut die Wege und Höfe der Kummerherzen sichert.",
+      "reason": "Gegenwartsbeschreibung nach neuer Karte angepasst; Geschichte erhalten."
+    }
+  ],
+  "newPlaces": [
+    {
+      "number": 2,
+      "name": "Fjellbruch",
+      "reason": "Neues Ortszeichen; geographisch begründeter Ergänzungstext"
+    },
+    {
+      "number": 3,
+      "name": "Skarnsdal",
+      "reason": "Neues Ortszeichen; geographisch begründeter Ergänzungstext"
+    },
+    {
+      "number": 25,
+      "name": "Hufhain",
+      "reason": "Neues Ortszeichen; geographisch begründeter Ergänzungstext"
+    },
+    {
+      "number": 44,
+      "name": "Hurinnwacht",
+      "reason": "Neues Ortszeichen; geographisch begründeter Ergänzungstext"
+    },
+    {
+      "number": 62,
+      "name": "Coil na Bróin",
+      "reason": "Neues Ortszeichen; geographisch begründeter Ergänzungstext unter Verwendung des vorhandenen historischen Ortsnamens"
+    },
+    {
+      "number": 65,
+      "name": "Vánweide",
+      "reason": "Neues Ortszeichen; geographisch begründeter Ergänzungstext"
+    },
+    {
+      "number": 77,
+      "name": "Fennrinde",
+      "reason": "Neues Ortszeichen; geographisch begründeter Ergänzungstext"
+    },
+    {
+      "number": 82,
+      "name": "Torfsteg",
+      "reason": "Neues Ortszeichen; geographisch begründeter Ergänzungstext"
+    },
+    {
+      "number": 63,
+      "name": "Fennbruch",
+      "reason": "Neues Ortszeichen; geographisch begründeter Ergänzungstext"
+    },
+    {
+      "number": 93,
+      "name": "Moorwachtlager",
+      "reason": "Neues Ortszeichen; geographisch begründeter Ergänzungstext"
+    },
+    {
+      "number": 99,
+      "name": "Krähenried",
+      "reason": "Neues Ortszeichen; geographisch begründeter Ergänzungstext"
+    },
+    {
+      "number": 100,
+      "name": "Bruchturm von Hallsvalr",
+      "reason": "Neues Ortszeichen; geographisch begründeter Ergänzungstext"
+    }
+  ],
+  "omittedMarkers": [
+    {
+      "markerId": "170537af-761c-48e3-a7cd-f90e1520d922",
+      "title": "Vánlauf",
+      "group": "Geographische Elemente",
+      "reason": "Alte Gebietsfläche oder geographische Beschriftung; keine zusätzliche Ortsposition"
+    },
+    {
+      "markerId": "1fa6ed14-8f28-496a-a08d-5696759d11e2",
+      "title": "Neutrale Herrschaft Ragnulf",
+      "group": "Herrschaften Wolfklamms",
+      "reason": "Alte Gebietsfläche oder geographische Beschriftung; keine zusätzliche Ortsposition"
+    },
+    {
+      "markerId": "25ec5608-c29e-48a2-9703-5d674654f8c1",
+      "title": "Die letzte Schlacht bei Dunkelmoor",
+      "group": "Landmarkierungen",
+      "reason": "Historischer Schlachtenmarker auf neuer Karte nicht vorhanden; Text bleibt im Quellenarchiv"
+    },
+    {
+      "markerId": "30a983e2-0986-4144-ba6c-b24885f587ee",
+      "title": "Herrschaft Flusswall",
+      "group": "Regionen",
+      "reason": "Alte Gebietsfläche oder geographische Beschriftung; keine zusätzliche Ortsposition"
+    },
+    {
+      "markerId": "3d4b40a7-780d-4468-82e5-1c331bf2454c",
+      "title": "Thanentum Dunkelmoor",
+      "group": "Regionen",
+      "reason": "Alte Gebietsfläche oder geographische Beschriftung; keine zusätzliche Ortsposition"
+    },
+    {
+      "markerId": "4d93c2e3-ea12-461b-919d-afd9eaef9b46",
+      "title": "Düstersumpf",
+      "group": "Geographische Elemente",
+      "reason": "Alte Gebietsfläche oder geographische Beschriftung; keine zusätzliche Ortsposition"
+    },
+    {
+      "markerId": "68286ec8-9e54-46e1-966c-8fb7197226ca",
+      "title": "Die Schlacht beim Trauerpfad",
+      "group": "Landmarkierungen",
+      "reason": "Historischer Schlachtenmarker auf neuer Karte nicht vorhanden; Text bleibt im Quellenarchiv"
+    },
+    {
+      "markerId": "6a26a54a-20c8-4907-9754-76106b3b5518",
+      "title": "Herrschaft der Graumähnen",
+      "group": "Herrschaften Wolfklamms",
+      "reason": "Alte Gebietsfläche oder geographische Beschriftung; keine zusätzliche Ortsposition"
+    },
+    {
+      "markerId": "a31134d0-48ee-448d-bde1-4d0bc363cc56",
+      "title": "Thanentum Finstermoor",
+      "group": "Regionen",
+      "reason": "Alte Gebietsfläche oder geographische Beschriftung; keine zusätzliche Ortsposition"
+    },
+    {
+      "markerId": "af7a0fb6-31c4-47dc-bb47-34e5d39ac38a",
+      "title": "Fluss Hurinn",
+      "group": "Geographische Elemente",
+      "reason": "Alte Gebietsfläche oder geographische Beschriftung; keine zusätzliche Ortsposition"
+    },
+    {
+      "markerId": "ba610893-9990-474e-ae94-b49c98b450f5",
+      "title": "Fenriszahn Gebirge",
+      "group": "Geographische Elemente",
+      "reason": "Alte Gebietsfläche oder geographische Beschriftung; keine zusätzliche Ortsposition"
+    },
+    {
+      "markerId": "bd6e0c0b-51d6-41e3-a224-c8330b20b401",
+      "title": "Jarltümliche Herrschaft",
+      "group": "Regionen",
+      "reason": "Alte Gebietsfläche oder geographische Beschriftung; keine zusätzliche Ortsposition"
+    },
+    {
+      "markerId": "ca45bce3-b0e8-48cc-8b79-83ff12b64d2c",
+      "title": "Die Schlacht bei den Mooren",
+      "group": "Landmarkierungen",
+      "reason": "Historischer Schlachtenmarker auf neuer Karte nicht vorhanden; Text bleibt im Quellenarchiv"
+    },
+    {
+      "markerId": "cc711369-3d9a-4c42-9a6f-3c3d95c5604e",
+      "title": "Thanentum Trauerwald",
+      "group": "Regionen",
+      "reason": "Alte Gebietsfläche oder geographische Beschriftung; keine zusätzliche Ortsposition"
+    },
+    {
+      "markerId": "d8ed48bf-7702-4c54-98c8-aaf112232997",
+      "title": "Die Silberzahn Bande",
+      "group": "Territorium von Fraktionen",
+      "reason": "Alte Gebietsfläche oder geographische Beschriftung; keine zusätzliche Ortsposition"
+    },
+    {
+      "markerId": "dc8708cd-0e2d-435a-8c9d-eb4dc3ac46ee",
+      "title": "Das Dvergskjær Gebirge.",
+      "group": "Geographische Elemente",
+      "reason": "Alte Gebietsfläche oder geographische Beschriftung; keine zusätzliche Ortsposition"
+    },
+    {
+      "markerId": "f10a1815-f5ae-4ad7-968f-8625404c4413",
+      "title": "Die Schlacht am Fluss Hurinn",
+      "group": "Landmarkierungen",
+      "reason": "Historischer Schlachtenmarker auf neuer Karte nicht vorhanden; Text bleibt im Quellenarchiv"
+    },
+    {
+      "markerId": "fe4bed33-c4eb-43e5-8553-b7eea3efc159",
+      "title": "Herrschaft der Schmetterschilde",
+      "group": "Herrschaften Wolfklamms",
+      "reason": "Alte Gebietsfläche oder geographische Beschriftung; keine zusätzliche Ortsposition"
+    }
+  ]
+}

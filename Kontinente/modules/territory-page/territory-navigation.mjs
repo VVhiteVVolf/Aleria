@@ -11,8 +11,9 @@ export function renderTerritoryNavigation(links) {
       const image = document.createElement('img');
       image.src = territory.imageSrc;
       image.alt = territory.imageAlt;
-      image.width = 64;
-      image.height = 64;
+      image.className = 'territory-navigation-banner';
+      image.width = 80;
+      image.height = 96;
       image.loading = 'lazy';
       link.append(image);
     }
@@ -20,7 +21,27 @@ export function renderTerritoryNavigation(links) {
     const title = document.createElement('strong');
     title.textContent = territory.title;
     copy.append(title);
-    for (const value of [territory.house, territory.seat ? `Sitz: ${territory.seat}` : '']) {
+    if (territory.house || territory.crestSrc) {
+      const owner = document.createElement('span');
+      owner.className = 'territory-navigation-owner';
+      if (territory.crestSrc) {
+        const crest = document.createElement('img');
+        crest.className = 'territory-navigation-crest';
+        crest.src = territory.crestSrc;
+        crest.alt = territory.crestAlt;
+        crest.width = 28;
+        crest.height = 28;
+        crest.loading = 'lazy';
+        owner.append(crest);
+      }
+      if (territory.house) {
+        const name = document.createElement('span');
+        name.textContent = territory.house;
+        owner.append(name);
+      }
+      copy.append(owner);
+    }
+    for (const value of [territory.seat ? `Sitz: ${territory.seat}` : '']) {
       if (!value) continue;
       const line = document.createElement('span');
       line.textContent = value;

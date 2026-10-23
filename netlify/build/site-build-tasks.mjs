@@ -1,3 +1,5 @@
+import { WORLD_CONTENT_TASKS } from './world-content-tasks.mjs';
+
 const testCommand = (...files) => ['--test', '--experimental-test-isolation=none', ...files];
 const almanach = name => `AleriaAlmanach/tests/${name}.test.mjs`;
 const skellorFamilyInputs = [
@@ -314,7 +316,8 @@ export const SITE_BUILD_TASKS = [
     excludes: ['Stammbäume/assets/data/published-families/backups/'],
     commands: [['netlify/build/verify-task-inputs.mjs', 'family-charts'],
       ['Stammbäume/tools/check-release.mjs', '--prepare-browser']]
-  }
+  },
+  ...WORLD_CONTENT_TASKS
 ];
 
 export const SHARED_BUILD_INPUTS = ['netlify/build/', 'netlify/tests/', 'netlify.toml',

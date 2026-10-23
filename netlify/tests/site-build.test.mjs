@@ -191,3 +191,12 @@ test('only private, unconsumed changes can skip an entire deploy', () => {
     assert.equal(changesRequireBuild(files), true, files.join(','));
   }
 });
+
+test('world-content source changes invalidate their release consumers', () => {
+  const consumers = file => checks(select([...tree, source(file)]));
+  assert.ok(consumers('Karten/modules/households/household-model.mjs').includes('map-systems'));
+  assert.ok(consumers('Kontinente/modules/territory-page/territory-shell-template.mjs').includes('territory-pages'));
+  assert.ok(consumers('AleriaAlmanach/modules/calendar/calendar-events-model.mjs').includes('events-calendar'));
+  assert.ok(consumers('Vorschau/Uathneach/clans.mjs').includes('uathneach-preview'));
+  assert.ok(consumers('Stammbäume/assets/js/data/dunfal-portrait-upgrade.js').includes('family-records'));
+});

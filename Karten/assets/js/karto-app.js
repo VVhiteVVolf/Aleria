@@ -73,9 +73,10 @@ function cleanDominions(list){
 // ═══════════════════════════════════════════
 let S = {
   pins: [],
+  regions: [],
   ...window.KartoCategoryCatalog.upgrade({cats:KARTO_CONFIG.defaultCats}),
   ...window.KartoDisplaySettings.resolve(),
-  showMarkers: false,
+  ...window.KartoPinPresentation.resolve({}, KARTO_CONFIG),
   showPinLabels: false,
   alwaysShowLettering: false,
   regionIcon: KARTO_CONFIG.regionIcon || '',
@@ -249,8 +250,12 @@ function renderLayerButtons(){
     regions:true,
     pins:true,
   };
-  // Interactive pins form a marker layer even without a raster overlay.
-  const availability = {...imageAvailability, pins: imageAvailability.pins || S.pins.length > 0 || editMode};
+  // Editable vector regions and pins do not require a raster overlay.
+  const availability = {
+    ...imageAvailability,
+    regions: imageAvailability.regions || (S.regions || []).length > 0 || editMode,
+    pins: imageAvailability.pins || S.pins.length > 0 || editMode,
+  };
   Object.keys(fixed).forEach(key=>{
     const btn=document.getElementById('lb-'+key);
     if(!btn) return;
@@ -319,6 +324,9 @@ window.KartoRuntime = {
   pushUndo,
   closeModal: closeLMo,
   applyState,
+  canTransitionEditors(){
+    return window.dispatchEvent(new CustomEvent('aleria:karto:before-editor-transition', {cancelable:true}));
+  },
   renderPins,
   openEditorShell,
   renderEditorPreview,
@@ -377,6 +385,7 @@ window.KartoRuntime = {
   },
   applyMapTransform(){
     stage.style.transform=`translate(${vx}px,${vy}px) scale(${vz})`;
+    window.dispatchEvent(new CustomEvent('aleria:karto:view-changed'));
   },
   translateMap(dx, dy){
     vx+=dx;vy+=dy;this.applyMapTransform();
@@ -394,6 +403,7 @@ window.KartoRuntime = {
   },
   renderMapContent(){
     renderPins();renderCatBar();window.KartoLsbCanvas.draw();
+    window.dispatchEvent(new CustomEvent('aleria:karto:map-render'));
   },
   travelGroups(){
     return lsbS.groups || [];
@@ -471,9 +481,10 @@ window.KartoRuntime = {
 
 function applyState(remote){
   if(remote.pins)       S.pins=remote.pins;
+  if(Array.isArray(remote.regions)) S.regions=JSON.parse(JSON.stringify(remote.regions));
   if(remote.cats)       Object.assign(S, window.KartoCategoryCatalog.upgrade(remote));
   Object.assign(S, window.KartoDisplaySettings.resolve(remote));
-  S.showMarkers = remote.showMarkers === true;
+  Object.assign(S, window.KartoPinPresentation.resolve(remote, KARTO_CONFIG));
   S.showPinLabels = remote.showPinLabels === true;
   S.alwaysShowLettering = remote.alwaysShowLettering === true;
   if(remote.regionIcon!==undefined) S.regionIcon=remote.regionIcon;
@@ -542,6 +553,7 @@ function togglePresentationMode(){
 // ═══════════════════════════════════════════
 function toggleEdit(){editMode?exitEdit():enterEdit();}
 function exitEdit(){
+  if(!window.KartoRuntime.canTransitionEditors()){toast('Bitte die offene Bearbeitung zuerst übernehmen oder verwerfen.');return;}
   editMode=false;addingPin=false;
   document.body.classList.remove('map-edit-mode');
   renderLayerButtons();
@@ -565,6 +577,7 @@ function exitEdit(){
   mapWrap.style.cursor='grab';hint('');renderPins();
   clearSelection();
   updateUndoButton();
+  window.dispatchEvent(new CustomEvent('aleria:karto:edit-mode-changed'));
 }
 function enterEdit(){
   editMode=true;
@@ -588,6 +601,7 @@ function enterEdit(){
   mapWrap.style.cursor='grab';
   renderPins();toast('✓ Editormodus aktiviert');
   updateUndoButton();
+  window.dispatchEvent(new CustomEvent('aleria:karto:edit-mode-changed'));
 }
 
 // ═══════════════════════════════════════════

@@ -1,0 +1,140 @@
+{
+  "pages": [
+    {
+      "id": "dunkelhain",
+      "title": "Der Dunkelhain",
+      "shortTitle": "Dunkelhain",
+      "type": "Wildnis",
+      "kicker": "Wildnis",
+      "parentHref": "/Kontinente/Estryll/Estryll.html",
+      "parentLabel": "Estryll",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Estryll",
+          "slug": "estryll"
+        },
+        {
+          "type": "Wildnis",
+          "name": "Dunkelhain",
+          "slug": "dunkelhain"
+        }
+      ],
+      "crestSrc": "/Kontinente/assets/images/dunkelhain/banner.png",
+      "crestAlt": "Banner Der Dunkelhain",
+      "copy": {
+        "overview": [
+          "Der Dunkelhain ist das verwüstete ehemalige Kerngebiet Ceitheachs. Eine gemeinsame Herrschaft besteht nicht; zwischen den Ruinen leben Überlebende, Kultisten, Wilderer, Plünderer und Banditen."
+        ]
+      },
+      "cultureSections": [
+        {
+          "title": "Gruppierungen im Dunkelhain",
+          "paragraphs": [
+            "Im überlieferten Verzeichnis sind die Erben der Morgenröte und die Blutmond Gefährten genannt. Ihre Anführer und die Zuordnung einzelner Ruinen sind bisher nicht belegt."
+          ]
+        }
+      ],
+      "infobox": [
+        {
+          "title": "Allgemein",
+          "rows": [
+            {
+              "label": "Name",
+              "value": "Der Dunkelhain"
+            },
+            {
+              "label": "Typ",
+              "value": "Wildnis"
+            },
+            {
+              "label": "Sitz",
+              "value": "Das Herz des Waldes"
+            },
+            {
+              "label": "Oberhaupt",
+              "value": "Niemand"
+            }
+          ]
+        },
+        {
+          "title": "Geographie",
+          "rows": [
+            {
+              "label": "Region",
+              "value": "Zentrales Estryll"
+            }
+          ]
+        },
+        {
+          "title": "Kultur",
+          "rows": [
+            {
+              "label": "Volksgruppen",
+              "value": "Überlebende Ceitheachs, Kultisten, Wilderer, Plünderer, Banditen"
+            },
+            {
+              "label": "Religion",
+              "value": "Kulte von Zatrach/ Dagon"
+            },
+            {
+              "label": "Bevölkerungsdichte",
+              "value": "Sehr gering"
+            }
+          ]
+        },
+        {
+          "title": "Handel",
+          "rows": []
+        }
+      ],
+      "families": [],
+      "councilGroups": [],
+      "councilNote": "",
+      "vassalGroups": [],
+      "domains": [
+        {
+          "territoryId": "dunkelhain",
+          "title": "Der Dunkelhain",
+          "center": "Das Herz des Waldes",
+          "sections": [
+            {
+              "title": "Stadtruine",
+              "placeIds": [
+                "dunkelhain-3875e0c9-da75-458b-b59a-3b7eebc8ce90",
+                "dunkelhain-392ec9d5-e683-4bba-9f3b-3a9eb7714652",
+                "dunkelhain-be64333c-187f-4c23-aba6-5dc4798683fd",
+                "dunkelhain-c2bf413a-21a2-4cd3-9d8d-6189ee6f4922",
+                "dunkelhain-d28a1e07-f629-4dd2-9ffe-5fb57ad32389",
+                "dunkelhain-d3a9e34c-8581-4efa-af07-03ca8f00947c"
+              ]
+            },
+            {
+              "title": "Siedlungsruine",
+              "placeIds": [
+                "dunkelhain-3a99610f-227d-4cb1-ac64-9ef7556a82c8",
+                "dunkelhain-69766489-14a8-4b85-92f2-681e594be8d2",
+                "dunkelhain-708bf7a9-df02-4931-bced-713dba51616c",
+                "dunkelhain-7449574b-af24-40a5-8c3f-df8eb520c0f6",
+                "dunkelhain-a44475ff-30a3-466b-ba50-cf347a893ac5",
+                "dunkelhain-c2fe8e44-ece6-4721-957b-52f15669c349"
+              ]
+            }
+          ]
+        }
+      ],
+      "territoryLinks": [],
+      "map": {
+        "title": "Karte Dunkelhain",
+        "imageSrc": "/Karten/Dunkelhain/Kartenbilder/normal.webp",
+        "imageAlt": "Der Dunkelhain",
+        "href": "/Karten/karte.html?map=dunkelhain"
+      }
+    }
+  ]
+}

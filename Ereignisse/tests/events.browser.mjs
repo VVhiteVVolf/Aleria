@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import { EVENTS } from '../modules/catalog/events-data.mjs';
 import { mkdir } from 'node:fs/promises';
 const { chromium } = await import(process.env.PLAYWRIGHT_MODULE || 'playwright');
 const origin = process.env.CALENDAR_TEST_ORIGIN || 'http://127.0.0.1:5500';
@@ -19,7 +20,7 @@ page.on('response', response => {
 try {
   await page.goto(`${base}/Ereignisse/index.html`);
   await page.locator('[data-role="catalog-tools"]:visible').waitFor();
-  assert.equal(await page.locator('[data-event-id]').count(), 10);
+  assert.equal(await page.locator('[data-event-id]').count(), EVENTS.length);
   assert.equal(await page.locator('.events-chapter').count(), 6);
   // Auch nach dem dynamischen Rendern müssen alle Original-Icons lokal laden.
   for (const icon of await page.locator('.event-icon').all()) {
@@ -40,7 +41,7 @@ try {
   await page.locator('[data-role="search"]').fill('unbekanntegeschichte');
   assert.equal(await page.locator('[data-event-id]').count(), 0);
   await page.getByRole('button', { name: 'Alle Ereignisse anzeigen', exact: true }).click();
-  assert.equal(await page.locator('[data-event-id]').count(), 10);
+  assert.equal(await page.locator('[data-event-id]').count(), EVENTS.length);
   await page.locator('[data-action="select-chapter"][data-chapter="reisen"]').click();
   assert.equal(await page.locator('[data-event-id]').count(), 0);
   assert.match(await page.locator('[data-role="catalog"]').innerText(), /benannter Eintrag liegt bisher nicht vor/);
@@ -107,13 +108,13 @@ try {
   await register.click();
   checkingAlmanach = false;
   assert.match(page.url(), /Ereignisse\/index.html$/);
-  assert.equal(await page.locator('[data-event-id]').count(), 10);
+  assert.equal(await page.locator('[data-event-id]').count(), EVENTS.length);
 
   const staticContext = await browser.newContext({ javaScriptEnabled: false, viewport: { width: 390, height: 900 } });
   await staticContext.route('**/*', route => new URL(route.request().url()).origin === origin ? route.continue() : route.abort());
   const staticPage = await staticContext.newPage();
   await staticPage.goto(`${base}/Ereignisse/index.html`);
-  assert.equal(await staticPage.locator('[data-event-id]').count(), 10);
+  assert.equal(await staticPage.locator('[data-event-id]').count(), EVENTS.length);
   await staticPage.locator('#ereignis-krieg-der-praetendenten summary').click();
   assert.match(await staticPage.locator('#ereignis-krieg-der-praetendenten details').innerText(), /Halbgeschwister/);
   await staticContext.close();

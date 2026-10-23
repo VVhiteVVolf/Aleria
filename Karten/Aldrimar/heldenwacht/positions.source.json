@@ -1,0 +1,3976 @@
+{
+  "imageSize": [
+    4096,
+    3446
+  ],
+  "coordinateOrigin": "top-left",
+  "positions": [
+    {
+      "x": 1168,
+      "y": 0,
+      "width": 92,
+      "height": 112,
+      "area": 6947,
+      "tipX": 1214.0,
+      "tipY": 112,
+      "id": "heldenwacht-position-001",
+      "icon": "zerst-rte-siedlung.png",
+      "candidates": [
+        {
+          "icon": "zerst-rte-siedlung.png",
+          "score": 0.736
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.496
+        },
+        {
+          "icon": "zerst-rtekirche2.png",
+          "score": 0.478
+        }
+      ],
+      "number": 1,
+      "territoryId": "direktlehen-tal-der-helden"
+    },
+    {
+      "x": 2292,
+      "y": 0,
+      "width": 89,
+      "height": 114,
+      "area": 6782,
+      "tipX": 2336.5,
+      "tipY": 114,
+      "id": "heldenwacht-position-002",
+      "icon": "zerst-rter-turm.png",
+      "candidates": [
+        {
+          "icon": "au-enposten.png",
+          "score": 0.435
+        },
+        {
+          "icon": "m-hle.png",
+          "score": 0.418
+        },
+        {
+          "icon": "zerst-rter-turm.png",
+          "score": 0.417
+        }
+      ],
+      "number": 2,
+      "territoryId": "hesirentum-torrenwacht"
+    },
+    {
+      "x": 2023,
+      "y": 120,
+      "width": 127,
+      "height": 169,
+      "area": 14072,
+      "tipX": 2086.5,
+      "tipY": 289,
+      "id": "heldenwacht-position-003",
+      "icon": "stadtruine.png",
+      "candidates": [
+        {
+          "icon": "stadtruine.png",
+          "score": 0.687
+        },
+        {
+          "icon": "schmuggler3.png",
+          "score": 0.511
+        },
+        {
+          "icon": "nordische-ruine.png",
+          "score": 0.47
+        }
+      ],
+      "number": 3,
+      "territoryId": "hesirentum-torrenwacht"
+    },
+    {
+      "x": 2551,
+      "y": 161,
+      "width": 89,
+      "height": 119,
+      "area": 6989,
+      "tipX": 2595.5,
+      "tipY": 280,
+      "id": "heldenwacht-position-004",
+      "icon": "schiffswrackpin.png",
+      "candidates": [
+        {
+          "icon": "schiffswrackpin.png",
+          "score": 0.787
+        },
+        {
+          "icon": "schmuggler2.png",
+          "score": 0.509
+        },
+        {
+          "icon": "ziegelbrenner.png",
+          "score": 0.504
+        }
+      ],
+      "number": 4,
+      "territoryId": "hesirentum-torrenwacht"
+    },
+    {
+      "x": 1431,
+      "y": 235,
+      "width": 92,
+      "height": 123,
+      "area": 7381,
+      "tipX": 1477.0,
+      "tipY": 358,
+      "id": "heldenwacht-position-005",
+      "icon": "zerst-rte-siedlung.png",
+      "candidates": [
+        {
+          "icon": "zerst-rte-siedlung.png",
+          "score": 0.779
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.484
+        },
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.474
+        }
+      ],
+      "number": 5,
+      "territoryId": "direktlehen-tal-der-helden"
+    },
+    {
+      "x": 3212,
+      "y": 284,
+      "width": 90,
+      "height": 119,
+      "area": 6981,
+      "tipX": 3257.0,
+      "tipY": 403,
+      "id": "heldenwacht-position-006",
+      "icon": "zerst-rter-turm.png",
+      "candidates": [
+        {
+          "icon": "zerst-rter-turm.png",
+          "score": 0.435
+        },
+        {
+          "icon": "au-enposten.png",
+          "score": 0.434
+        },
+        {
+          "icon": "m-hle.png",
+          "score": 0.41
+        }
+      ],
+      "number": 6,
+      "territoryId": "piratentum-sirenen-zahn-riff"
+    },
+    {
+      "x": 2260,
+      "y": 291,
+      "width": 89,
+      "height": 119,
+      "area": 6962,
+      "tipX": 2304.5,
+      "tipY": 410,
+      "id": "heldenwacht-position-007",
+      "icon": "burgsiedlung.png",
+      "candidates": [
+        {
+          "icon": "burgsiedlung.png",
+          "score": 0.684
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.544
+        },
+        {
+          "icon": "exekutionsplatz.png",
+          "score": 0.494
+        }
+      ],
+      "number": 7,
+      "territoryId": "hesirentum-torrenwacht"
+    },
+    {
+      "x": 2418,
+      "y": 292,
+      "width": 102,
+      "height": 136,
+      "area": 9086,
+      "tipX": 2469.0,
+      "tipY": 428,
+      "id": "heldenwacht-position-008",
+      "icon": "zerst-rte-siedlung.png",
+      "candidates": [
+        {
+          "icon": "zerst-rte-siedlung.png",
+          "score": 0.799
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.498
+        },
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.454
+        }
+      ],
+      "number": 8,
+      "territoryId": "hesirentum-torrenwacht"
+    },
+    {
+      "x": 955,
+      "y": 313,
+      "width": 90,
+      "height": 119,
+      "area": 6932,
+      "tipX": 1000.0,
+      "tipY": 432,
+      "id": "heldenwacht-position-009",
+      "icon": "turm.png",
+      "candidates": [
+        {
+          "icon": "turm.png",
+          "score": 0.687
+        },
+        {
+          "icon": "magierturm.png",
+          "score": 0.498
+        },
+        {
+          "icon": "leuchtturm.png",
+          "score": 0.468
+        }
+      ],
+      "number": 9,
+      "territoryId": "direktlehen-tal-der-helden"
+    },
+    {
+      "x": 2755,
+      "y": 394,
+      "width": 90,
+      "height": 119,
+      "area": 6969,
+      "tipX": 2800.0,
+      "tipY": 513,
+      "id": "heldenwacht-position-010",
+      "icon": "schiffswrackpin.png",
+      "candidates": [
+        {
+          "icon": "schiffswrackpin.png",
+          "score": 0.771
+        },
+        {
+          "icon": "ziegelbrenner.png",
+          "score": 0.518
+        },
+        {
+          "icon": "zerst-rtekirche2.png",
+          "score": 0.511
+        }
+      ],
+      "number": 10,
+      "territoryId": "hesirentum-wellenklang"
+    },
+    {
+      "x": 3170,
+      "y": 414,
+      "width": 102,
+      "height": 136,
+      "area": 9066,
+      "tipX": 3221.0,
+      "tipY": 550,
+      "id": "heldenwacht-position-011",
+      "icon": "stadtruine.png",
+      "candidates": [
+        {
+          "icon": "stadtruine.png",
+          "score": 0.727
+        },
+        {
+          "icon": "schmuggler3.png",
+          "score": 0.512
+        },
+        {
+          "icon": "ruine2.png",
+          "score": 0.481
+        }
+      ],
+      "number": 11,
+      "territoryId": "piratentum-sirenen-zahn-riff"
+    },
+    {
+      "x": 676,
+      "y": 419,
+      "width": 89,
+      "height": 119,
+      "area": 6922,
+      "tipX": 720.5,
+      "tipY": 538,
+      "id": "heldenwacht-position-012",
+      "icon": "klostersiedlung.png",
+      "candidates": [
+        {
+          "icon": "klostersiedlung.png",
+          "score": 0.772
+        },
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.574
+        },
+        {
+          "icon": "gasthof.png",
+          "score": 0.563
+        }
+      ],
+      "number": 12,
+      "territoryId": "direktlehen-tal-der-helden"
+    },
+    {
+      "x": 2103,
+      "y": 439,
+      "width": 89,
+      "height": 119,
+      "area": 6952,
+      "tipX": 2147.5,
+      "tipY": 558,
+      "id": "heldenwacht-position-013",
+      "icon": "bergbausiedlung.png",
+      "candidates": [
+        {
+          "icon": "bergbausiedlung.png",
+          "score": 0.804
+        },
+        {
+          "icon": "antikes-grab.png",
+          "score": 0.528
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.501
+        }
+      ],
+      "number": 13,
+      "territoryId": "hesirentum-wellenklang"
+    },
+    {
+      "x": 2248,
+      "y": 452,
+      "width": 89,
+      "height": 119,
+      "area": 6995,
+      "tipX": 2292.5,
+      "tipY": 571,
+      "id": "heldenwacht-position-014",
+      "icon": "heereslager.png",
+      "candidates": [
+        {
+          "icon": "j-gerlager.png",
+          "score": 0.496
+        },
+        {
+          "icon": "einzelnemine.png",
+          "score": 0.449
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.441
+        }
+      ],
+      "number": 14,
+      "territoryId": "hesirentum-wellenklang"
+    },
+    {
+      "x": 33,
+      "y": 474,
+      "width": 89,
+      "height": 118,
+      "area": 6924,
+      "tipX": 77.5,
+      "tipY": 592,
+      "id": "heldenwacht-position-015",
+      "icon": "bergbausiedlung.png",
+      "candidates": [
+        {
+          "icon": "bergbausiedlung.png",
+          "score": 0.806
+        },
+        {
+          "icon": "antikes-grab.png",
+          "score": 0.539
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.509
+        }
+      ],
+      "number": 15,
+      "territoryId": "herrschaft-eisenbieger"
+    },
+    {
+      "x": 307,
+      "y": 496,
+      "width": 128,
+      "height": 170,
+      "area": 14217,
+      "tipX": 371.0,
+      "tipY": 666,
+      "id": "heldenwacht-position-016",
+      "icon": "schmiede.png",
+      "candidates": [
+        {
+          "icon": "schmiede.png",
+          "score": 0.507
+        },
+        {
+          "icon": "grube.png",
+          "score": 0.4
+        },
+        {
+          "icon": "schiffswerft.png",
+          "score": 0.381
+        }
+      ],
+      "number": 16,
+      "territoryId": "thanentum-tal-der-helden"
+    },
+    {
+      "x": 3103,
+      "y": 513,
+      "width": 89,
+      "height": 119,
+      "area": 6966,
+      "tipX": 3147.5,
+      "tipY": 632,
+      "id": "heldenwacht-position-017",
+      "icon": "zerst-rte-siedlung.png",
+      "candidates": [
+        {
+          "icon": "zerst-rte-siedlung.png",
+          "score": 0.805
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.504
+        },
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.46
+        }
+      ],
+      "number": 17,
+      "territoryId": "piratentum-sirenen-zahn-riff"
+    },
+    {
+      "x": 1373,
+      "y": 529,
+      "width": 92,
+      "height": 122,
+      "area": 7404,
+      "tipX": 1419.0,
+      "tipY": 651,
+      "id": "heldenwacht-position-018",
+      "icon": "zerst-rte-siedlung.png",
+      "candidates": [
+        {
+          "icon": "zerst-rte-siedlung.png",
+          "score": 0.783
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.495
+        },
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.454
+        }
+      ],
+      "number": 18,
+      "territoryId": "direktlehen-tal-der-helden"
+    },
+    {
+      "x": 2459,
+      "y": 533,
+      "width": 90,
+      "height": 120,
+      "area": 6983,
+      "tipX": 2504.0,
+      "tipY": 653,
+      "id": "heldenwacht-position-019",
+      "icon": "hafensiedlung.png",
+      "candidates": [
+        {
+          "icon": "hafensiedlung.png",
+          "score": 0.739
+        },
+        {
+          "icon": "fischerh-tte.png",
+          "score": 0.525
+        },
+        {
+          "icon": "poststation.png",
+          "score": 0.433
+        }
+      ],
+      "number": 19,
+      "territoryId": "hesirentum-wellenklang"
+    },
+    {
+      "x": 2236,
+      "y": 583,
+      "width": 90,
+      "height": 119,
+      "area": 6924,
+      "tipX": 2281.0,
+      "tipY": 702,
+      "id": "heldenwacht-position-020",
+      "icon": "bergbausiedlung.png",
+      "candidates": [
+        {
+          "icon": "bergbausiedlung.png",
+          "score": 0.827
+        },
+        {
+          "icon": "antikes-grab.png",
+          "score": 0.525
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.502
+        }
+      ],
+      "number": 20,
+      "territoryId": "hesirentum-wellenklang"
+    },
+    {
+      "x": 2684,
+      "y": 593,
+      "width": 90,
+      "height": 118,
+      "area": 6988,
+      "tipX": 2729.0,
+      "tipY": 711,
+      "id": "heldenwacht-position-021",
+      "icon": "schiffswrackpin.png",
+      "candidates": [
+        {
+          "icon": "schiffswrackpin.png",
+          "score": 0.772
+        },
+        {
+          "icon": "ziegelbrenner.png",
+          "score": 0.519
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.509
+        }
+      ],
+      "number": 21,
+      "territoryId": "hesirentum-wellenklang"
+    },
+    {
+      "x": 799,
+      "y": 608,
+      "width": 127,
+      "height": 170,
+      "area": 14052,
+      "tipX": 862.5,
+      "tipY": 778,
+      "id": "heldenwacht-position-022",
+      "icon": "nordische-ruine.png",
+      "candidates": [
+        {
+          "icon": "nordische-ruine.png",
+          "score": 0.692
+        },
+        {
+          "icon": "grabmal.png",
+          "score": 0.642
+        },
+        {
+          "icon": "kreaturenhort.png",
+          "score": 0.594
+        }
+      ],
+      "number": 22,
+      "territoryId": "thanentum-tal-der-helden"
+    },
+    {
+      "x": 3129,
+      "y": 635,
+      "width": 118,
+      "height": 279,
+      "area": 19304,
+      "tipX": 3183,
+      "tipY": 751,
+      "id": "heldenwacht-position-023",
+      "icon": "zerst-rte-siedlung.png",
+      "candidates": [
+        {
+          "icon": "schmuggler2.png",
+          "score": 0.329
+        },
+        {
+          "icon": "turnierplatz.png",
+          "score": 0.319
+        },
+        {
+          "icon": "ahnenbaum.png",
+          "score": 0.311
+        }
+      ],
+      "note": "Manuell getrennte Einzelspitze aus überlappender Komponente 23; Teil 1/3.",
+      "number": 23,
+      "territoryId": "piratentum-sirenen-zahn-riff"
+    },
+    {
+      "x": 124,
+      "y": 660,
+      "width": 90,
+      "height": 118,
+      "area": 6952,
+      "tipX": 169.0,
+      "tipY": 778,
+      "id": "heldenwacht-position-024",
+      "icon": "waldsiedlung.png",
+      "candidates": [
+        {
+          "icon": "waldsiedlung.png",
+          "score": 0.832
+        },
+        {
+          "icon": "gildenzentrale.png",
+          "score": 0.643
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.637
+        }
+      ],
+      "number": 24,
+      "territoryId": "herrschaft-eisenbieger"
+    },
+    {
+      "x": 3253,
+      "y": 692,
+      "width": 147,
+      "height": 195,
+      "area": 18968,
+      "tipX": 3326.5,
+      "tipY": 887,
+      "id": "heldenwacht-position-025",
+      "icon": "piratenlager.png",
+      "candidates": [
+        {
+          "icon": "piratenlager.png",
+          "score": 0.472
+        },
+        {
+          "icon": "zerst-rte-kirche.png",
+          "score": 0.356
+        },
+        {
+          "icon": "holzf-llerlager.png",
+          "score": 0.345
+        }
+      ],
+      "number": 25,
+      "territoryId": "piratentum-sirenen-zahn-riff"
+    },
+    {
+      "x": 2477,
+      "y": 713,
+      "width": 90,
+      "height": 119,
+      "area": 6973,
+      "tipX": 2522.0,
+      "tipY": 832,
+      "id": "heldenwacht-position-026",
+      "icon": "hafensiedlung.png",
+      "candidates": [
+        {
+          "icon": "hafensiedlung.png",
+          "score": 0.733
+        },
+        {
+          "icon": "fischerh-tte.png",
+          "score": 0.495
+        },
+        {
+          "icon": "poststation.png",
+          "score": 0.442
+        }
+      ],
+      "number": 26,
+      "territoryId": "hesirentum-wellenklang"
+    },
+    {
+      "x": 1412,
+      "y": 720,
+      "width": 90,
+      "height": 119,
+      "area": 6970,
+      "tipX": 1457.0,
+      "tipY": 839,
+      "id": "heldenwacht-position-027",
+      "icon": "burgsiedlung.png",
+      "candidates": [
+        {
+          "icon": "burgsiedlung.png",
+          "score": 0.654
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.551
+        },
+        {
+          "icon": "exekutionsplatz.png",
+          "score": 0.495
+        }
+      ],
+      "number": 27,
+      "territoryId": "direktlehen-tal-der-helden"
+    },
+    {
+      "x": 406,
+      "y": 745,
+      "width": 127,
+      "height": 168,
+      "area": 14036,
+      "tipX": 469.5,
+      "tipY": 913,
+      "id": "heldenwacht-position-028",
+      "icon": "nordische-ruine.png",
+      "candidates": [
+        {
+          "icon": "nordische-ruine.png",
+          "score": 0.715
+        },
+        {
+          "icon": "grabmal.png",
+          "score": 0.639
+        },
+        {
+          "icon": "kreaturenhort.png",
+          "score": 0.595
+        }
+      ],
+      "number": 28,
+      "territoryId": "thanentum-tal-der-helden"
+    },
+    {
+      "x": 2133,
+      "y": 755,
+      "width": 90,
+      "height": 119,
+      "area": 6996,
+      "tipX": 2178.0,
+      "tipY": 874,
+      "id": "heldenwacht-position-029",
+      "icon": "waldsiedlung.png",
+      "candidates": [
+        {
+          "icon": "waldsiedlung.png",
+          "score": 0.801
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.627
+        },
+        {
+          "icon": "gildenzentrale.png",
+          "score": 0.618
+        }
+      ],
+      "number": 29,
+      "territoryId": "hesirentum-wellenklang"
+    },
+    {
+      "x": 1967,
+      "y": 781,
+      "width": 89,
+      "height": 118,
+      "area": 6970,
+      "tipX": 2011.5,
+      "tipY": 899,
+      "id": "heldenwacht-position-030",
+      "icon": "bergbausiedlung.png",
+      "candidates": [
+        {
+          "icon": "bergbausiedlung.png",
+          "score": 0.81
+        },
+        {
+          "icon": "antikes-grab.png",
+          "score": 0.526
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.504
+        }
+      ],
+      "number": 30,
+      "territoryId": "hesirentum-wellenklang"
+    },
+    {
+      "x": 208,
+      "y": 784,
+      "width": 90,
+      "height": 119,
+      "area": 6969,
+      "tipX": 253.0,
+      "tipY": 903,
+      "id": "heldenwacht-position-031",
+      "icon": "bergbausiedlung.png",
+      "candidates": [
+        {
+          "icon": "bergbausiedlung.png",
+          "score": 0.772
+        },
+        {
+          "icon": "antikes-grab.png",
+          "score": 0.532
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.512
+        }
+      ],
+      "number": 31,
+      "territoryId": "herrschaft-eisenbieger"
+    },
+    {
+      "x": 17,
+      "y": 798,
+      "width": 89,
+      "height": 119,
+      "area": 7003,
+      "tipX": 61.5,
+      "tipY": 917,
+      "id": "heldenwacht-position-032",
+      "icon": "bergbausiedlung.png",
+      "candidates": [
+        {
+          "icon": "bergbausiedlung.png",
+          "score": 0.806
+        },
+        {
+          "icon": "antikes-grab.png",
+          "score": 0.543
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.511
+        }
+      ],
+      "number": 32,
+      "territoryId": "herrschaft-eisenbieger"
+    },
+    {
+      "x": 2386,
+      "y": 807,
+      "width": 104,
+      "height": 236,
+      "area": 13983,
+      "tipX": 2454,
+      "tipY": 929,
+      "id": "heldenwacht-position-033",
+      "icon": "bauernsiedlung-2.png",
+      "candidates": [
+        {
+          "icon": "waldsiedlung.png",
+          "score": 0.277
+        },
+        {
+          "icon": "turnierplatz.png",
+          "score": 0.258
+        },
+        {
+          "icon": "holzf-llerlager.png",
+          "score": 0.258
+        }
+      ],
+      "note": "Manuell getrennte Einzelspitze aus überlappender Komponente 33; Teil 1/2.",
+      "number": 33,
+      "territoryId": "hesirentum-wellenklang"
+    },
+    {
+      "x": 2263,
+      "y": 834,
+      "width": 89,
+      "height": 119,
+      "area": 6998,
+      "tipX": 2307.5,
+      "tipY": 953,
+      "id": "heldenwacht-position-034",
+      "icon": "kleine-burg.png",
+      "candidates": [
+        {
+          "icon": "kleine-burg.png",
+          "score": 0.529
+        },
+        {
+          "icon": "banditenversteck2.png",
+          "score": 0.49
+        },
+        {
+          "icon": "h-gelgrab.png",
+          "score": 0.487
+        }
+      ],
+      "number": 34,
+      "territoryId": "hesirentum-wellenklang"
+    },
+    {
+      "x": 1199,
+      "y": 868,
+      "width": 126,
+      "height": 170,
+      "area": 14085,
+      "tipX": 1262.0,
+      "tipY": 1038,
+      "id": "heldenwacht-position-035",
+      "icon": "nordische-ruine.png",
+      "candidates": [
+        {
+          "icon": "nordische-ruine.png",
+          "score": 0.71
+        },
+        {
+          "icon": "grabmal.png",
+          "score": 0.634
+        },
+        {
+          "icon": "kreaturenhort.png",
+          "score": 0.595
+        }
+      ],
+      "number": 35,
+      "territoryId": "thanentum-tal-der-helden"
+    },
+    {
+      "x": 2850,
+      "y": 871,
+      "width": 89,
+      "height": 118,
+      "area": 6991,
+      "tipX": 2894.5,
+      "tipY": 989,
+      "id": "heldenwacht-position-036",
+      "icon": "schiffswrackpin.png",
+      "candidates": [
+        {
+          "icon": "schiffswrackpin.png",
+          "score": 0.813
+        },
+        {
+          "icon": "ziegelbrenner.png",
+          "score": 0.519
+        },
+        {
+          "icon": "schmuggler2.png",
+          "score": 0.516
+        }
+      ],
+      "number": 36,
+      "territoryId": "hesirentum-wellenklang"
+    },
+    {
+      "x": 3220,
+      "y": 878,
+      "width": 89,
+      "height": 119,
+      "area": 6982,
+      "tipX": 3264.5,
+      "tipY": 997,
+      "id": "heldenwacht-position-037",
+      "icon": "zerst-rte-siedlung.png",
+      "candidates": [
+        {
+          "icon": "zerst-rte-siedlung.png",
+          "score": 0.854
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.492
+        },
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.485
+        }
+      ],
+      "number": 37,
+      "territoryId": "piratentum-sirenen-zahn-riff"
+    },
+    {
+      "x": 2137,
+      "y": 908,
+      "width": 90,
+      "height": 119,
+      "area": 6974,
+      "tipX": 2182.0,
+      "tipY": 1027,
+      "id": "heldenwacht-position-038",
+      "icon": "bauernsiedlung-2.png",
+      "candidates": [
+        {
+          "icon": "bauernsiedlung-2.png",
+          "score": 0.81
+        },
+        {
+          "icon": "l-ndlicher-friedhof.png",
+          "score": 0.409
+        },
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.408
+        }
+      ],
+      "number": 38,
+      "territoryId": "hesirentum-wellenklang"
+    },
+    {
+      "x": 2680,
+      "y": 911,
+      "width": 89,
+      "height": 119,
+      "area": 6981,
+      "tipX": 2724.5,
+      "tipY": 1030,
+      "id": "heldenwacht-position-039",
+      "icon": "schiffswrackpin.png",
+      "candidates": [
+        {
+          "icon": "schiffswrackpin.png",
+          "score": 0.787
+        },
+        {
+          "icon": "schmuggler2.png",
+          "score": 0.511
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.509
+        }
+      ],
+      "number": 39,
+      "territoryId": "hesirentum-wellenklang"
+    },
+    {
+      "x": 1581,
+      "y": 916,
+      "width": 89,
+      "height": 119,
+      "area": 6849,
+      "tipX": 1625.5,
+      "tipY": 1035,
+      "id": "heldenwacht-position-040",
+      "icon": "festung.png",
+      "candidates": [
+        {
+          "icon": "festung.png",
+          "score": 0.513
+        },
+        {
+          "icon": "m-hle.png",
+          "score": 0.4
+        },
+        {
+          "icon": "exekutionsplatz.png",
+          "score": 0.381
+        }
+      ],
+      "number": 40,
+      "territoryId": "thanentum-tal-der-helden"
+    },
+    {
+      "x": 343,
+      "y": 930,
+      "width": 89,
+      "height": 119,
+      "area": 7005,
+      "tipX": 387.5,
+      "tipY": 1049,
+      "id": "heldenwacht-position-041",
+      "icon": "turm.png",
+      "candidates": [
+        {
+          "icon": "turm.png",
+          "score": 0.628
+        },
+        {
+          "icon": "magierturm.png",
+          "score": 0.489
+        },
+        {
+          "icon": "leuchtturm.png",
+          "score": 0.465
+        }
+      ],
+      "number": 41,
+      "territoryId": "herrschaft-eisenbieger"
+    },
+    {
+      "x": 11,
+      "y": 948,
+      "width": 89,
+      "height": 118,
+      "area": 6933,
+      "tipX": 55.5,
+      "tipY": 1066,
+      "id": "heldenwacht-position-042",
+      "icon": "klostersiedlung.png",
+      "candidates": [
+        {
+          "icon": "klostersiedlung.png",
+          "score": 0.789
+        },
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.568
+        },
+        {
+          "icon": "gasthof.png",
+          "score": 0.552
+        }
+      ],
+      "number": 42,
+      "territoryId": "herrschaft-eisenbieger"
+    },
+    {
+      "x": 541,
+      "y": 960,
+      "width": 89,
+      "height": 118,
+      "area": 6956,
+      "tipX": 585.5,
+      "tipY": 1078,
+      "id": "heldenwacht-position-043",
+      "icon": "ahnenbaum.png",
+      "candidates": [
+        {
+          "icon": "ahnenbaum.png",
+          "score": 0.515
+        },
+        {
+          "icon": "einzelnemine.png",
+          "score": 0.448
+        },
+        {
+          "icon": "antikes-grab.png",
+          "score": 0.406
+        }
+      ],
+      "number": 43,
+      "territoryId": "thanentum-tal-der-helden"
+    },
+    {
+      "x": 138,
+      "y": 962,
+      "width": 89,
+      "height": 119,
+      "area": 6993,
+      "tipX": 182.5,
+      "tipY": 1081,
+      "id": "heldenwacht-position-044",
+      "icon": "bauernsiedlung-2.png",
+      "candidates": [
+        {
+          "icon": "bauernsiedlung-2.png",
+          "score": 0.854
+        },
+        {
+          "icon": "l-ndlicher-friedhof.png",
+          "score": 0.415
+        },
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.401
+        }
+      ],
+      "number": 44,
+      "territoryId": "herrschaft-eisenbieger"
+    },
+    {
+      "x": 3288,
+      "y": 965,
+      "width": 89,
+      "height": 119,
+      "area": 6977,
+      "tipX": 3332.5,
+      "tipY": 1084,
+      "id": "heldenwacht-position-045",
+      "icon": "zerst-rte-siedlung.png",
+      "candidates": [
+        {
+          "icon": "zerst-rte-siedlung.png",
+          "score": 0.809
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.512
+        },
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.457
+        }
+      ],
+      "number": 45,
+      "territoryId": "piratentum-sirenen-zahn-riff"
+    },
+    {
+      "x": 1780,
+      "y": 1007,
+      "width": 89,
+      "height": 119,
+      "area": 6935,
+      "tipX": 1824.5,
+      "tipY": 1126,
+      "id": "heldenwacht-position-046",
+      "icon": "waldsiedlung.png",
+      "candidates": [
+        {
+          "icon": "waldsiedlung.png",
+          "score": 0.853
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.655
+        },
+        {
+          "icon": "gildenzentrale.png",
+          "score": 0.653
+        }
+      ],
+      "number": 46,
+      "territoryId": "herrschaft-frostauge"
+    },
+    {
+      "x": 3368,
+      "y": 1008,
+      "width": 90,
+      "height": 119,
+      "area": 6970,
+      "tipX": 3413.0,
+      "tipY": 1127,
+      "id": "heldenwacht-position-047",
+      "icon": "zerst-rte-siedlung.png",
+      "candidates": [
+        {
+          "icon": "zerst-rte-siedlung.png",
+          "score": 0.742
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.51
+        },
+        {
+          "icon": "kreaturenhort.png",
+          "score": 0.451
+        }
+      ],
+      "number": 47,
+      "territoryId": "piratentum-sirenen-zahn-riff"
+    },
+    {
+      "x": 1639,
+      "y": 1018,
+      "width": 89,
+      "height": 119,
+      "area": 6938,
+      "tipX": 1683.5,
+      "tipY": 1137,
+      "id": "heldenwacht-position-048",
+      "icon": "bergbausiedlung.png",
+      "candidates": [
+        {
+          "icon": "bergbausiedlung.png",
+          "score": 0.793
+        },
+        {
+          "icon": "antikes-grab.png",
+          "score": 0.539
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.508
+        }
+      ],
+      "number": 48,
+      "territoryId": "herrschaft-frostauge"
+    },
+    {
+      "x": 3449,
+      "y": 1023,
+      "width": 138,
+      "height": 234,
+      "area": 15893,
+      "tipX": 3545,
+      "tipY": 1144,
+      "id": "heldenwacht-position-049",
+      "icon": "stadtruine.png",
+      "candidates": [
+        {
+          "icon": "schiffswrackpin.png",
+          "score": 0.427
+        },
+        {
+          "icon": "stadtruine.png",
+          "score": 0.416
+        },
+        {
+          "icon": "gro-e-burg.png",
+          "score": 0.375
+        }
+      ],
+      "note": "Manuell getrennte Einzelspitze aus überlappender Komponente 49; Teil 1/2.",
+      "number": 49,
+      "territoryId": "piratentum-sirenen-zahn-riff"
+    },
+    {
+      "x": 1388,
+      "y": 1024,
+      "width": 90,
+      "height": 119,
+      "area": 6966,
+      "tipX": 1433.0,
+      "tipY": 1143,
+      "id": "heldenwacht-position-050",
+      "icon": "bergbausiedlung.png",
+      "candidates": [
+        {
+          "icon": "bergbausiedlung.png",
+          "score": 0.773
+        },
+        {
+          "icon": "antikes-grab.png",
+          "score": 0.531
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.508
+        }
+      ],
+      "number": 50,
+      "territoryId": "herrschaft-frostauge"
+    },
+    {
+      "x": 405,
+      "y": 1033,
+      "width": 89,
+      "height": 119,
+      "area": 6987,
+      "tipX": 449.5,
+      "tipY": 1152,
+      "id": "heldenwacht-position-051",
+      "icon": "klostersiedlung.png",
+      "candidates": [
+        {
+          "icon": "klostersiedlung.png",
+          "score": 0.797
+        },
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.576
+        },
+        {
+          "icon": "gasthof.png",
+          "score": 0.567
+        }
+      ],
+      "number": 51,
+      "territoryId": "herrschaft-eisenbieger"
+    },
+    {
+      "x": 230,
+      "y": 1045,
+      "width": 89,
+      "height": 119,
+      "area": 6985,
+      "tipX": 274.5,
+      "tipY": 1164,
+      "id": "heldenwacht-position-052",
+      "icon": "marktsiedlung.png",
+      "candidates": [
+        {
+          "icon": "marktsiedlung.png",
+          "score": 0.638
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.505
+        },
+        {
+          "icon": "waldsiedlung.png",
+          "score": 0.466
+        }
+      ],
+      "number": 52,
+      "territoryId": "herrschaft-eisenbieger"
+    },
+    {
+      "x": 841,
+      "y": 1054,
+      "width": 90,
+      "height": 119,
+      "area": 6964,
+      "tipX": 886.0,
+      "tipY": 1173,
+      "id": "heldenwacht-position-053",
+      "icon": "klostersiedlung.png",
+      "candidates": [
+        {
+          "icon": "klostersiedlung.png",
+          "score": 0.762
+        },
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.578
+        },
+        {
+          "icon": "gasthof.png",
+          "score": 0.561
+        }
+      ],
+      "number": 53,
+      "territoryId": "direktlehen-tal-der-helden"
+    },
+    {
+      "x": 2145,
+      "y": 1065,
+      "width": 127,
+      "height": 170,
+      "area": 14081,
+      "tipX": 2208.5,
+      "tipY": 1235,
+      "id": "heldenwacht-position-054",
+      "icon": "stadt.png",
+      "candidates": [
+        {
+          "icon": "waldsiedlung.png",
+          "score": 0.481
+        },
+        {
+          "icon": "stadt.png",
+          "score": 0.481
+        },
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.413
+        }
+      ],
+      "number": 54,
+      "territoryId": "hesirentum-wellenklang"
+    },
+    {
+      "x": 0,
+      "y": 1069,
+      "width": 74,
+      "height": 119,
+      "area": 6326,
+      "tipX": 37.0,
+      "tipY": 1188,
+      "id": "heldenwacht-position-055",
+      "icon": "bauernsiedlung-2.png",
+      "candidates": [
+        {
+          "icon": "bauernsiedlung-2.png",
+          "score": 0.621
+        },
+        {
+          "icon": "h-gelgrab.png",
+          "score": 0.483
+        },
+        {
+          "icon": "kreaturenhort.png",
+          "score": 0.473
+        }
+      ],
+      "number": 55,
+      "territoryId": "herrschaft-riesentod"
+    },
+    {
+      "x": 1167,
+      "y": 1085,
+      "width": 89,
+      "height": 119,
+      "area": 6979,
+      "tipX": 1211.5,
+      "tipY": 1204,
+      "id": "heldenwacht-position-056",
+      "icon": "turm.png",
+      "candidates": [
+        {
+          "icon": "turm.png",
+          "score": 0.638
+        },
+        {
+          "icon": "magierturm.png",
+          "score": 0.501
+        },
+        {
+          "icon": "leuchtturm.png",
+          "score": 0.45
+        }
+      ],
+      "number": 56,
+      "territoryId": "direktlehen-tal-der-helden"
+    },
+    {
+      "x": 2496,
+      "y": 1092,
+      "width": 90,
+      "height": 119,
+      "area": 6898,
+      "tipX": 2541.0,
+      "tipY": 1211,
+      "id": "heldenwacht-position-057",
+      "icon": "hafensiedlung.png",
+      "candidates": [
+        {
+          "icon": "hafensiedlung.png",
+          "score": 0.764
+        },
+        {
+          "icon": "fischerh-tte.png",
+          "score": 0.513
+        },
+        {
+          "icon": "poststation.png",
+          "score": 0.463
+        }
+      ],
+      "number": 57,
+      "territoryId": "hesirentum-wellenklang"
+    },
+    {
+      "x": 683,
+      "y": 1113,
+      "width": 90,
+      "height": 119,
+      "area": 6987,
+      "tipX": 728.0,
+      "tipY": 1232,
+      "id": "heldenwacht-position-058",
+      "icon": "j-gerlager.png",
+      "candidates": [
+        {
+          "icon": "j-gerlager.png",
+          "score": 0.493
+        },
+        {
+          "icon": "banditenversteck2.png",
+          "score": 0.437
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.436
+        }
+      ],
+      "number": 58,
+      "territoryId": "thanentum-tal-der-helden"
+    },
+    {
+      "x": 1042,
+      "y": 1130,
+      "width": 89,
+      "height": 118,
+      "area": 6972,
+      "tipX": 1086.5,
+      "tipY": 1248,
+      "id": "heldenwacht-position-059",
+      "icon": "waldsiedlung.png",
+      "candidates": [
+        {
+          "icon": "waldsiedlung.png",
+          "score": 0.848
+        },
+        {
+          "icon": "gildenzentrale.png",
+          "score": 0.645
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.632
+        }
+      ],
+      "number": 59,
+      "territoryId": "direktlehen-tal-der-helden"
+    },
+    {
+      "x": 1412,
+      "y": 1147,
+      "width": 90,
+      "height": 118,
+      "area": 6955,
+      "tipX": 1457.0,
+      "tipY": 1265,
+      "id": "heldenwacht-position-060",
+      "icon": "bauernsiedlung-2.png",
+      "candidates": [
+        {
+          "icon": "bauernsiedlung-2.png",
+          "score": 0.829
+        },
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.415
+        },
+        {
+          "icon": "l-ndlicher-friedhof.png",
+          "score": 0.401
+        }
+      ],
+      "number": 60,
+      "territoryId": "herrschaft-frostauge"
+    },
+    {
+      "x": 135,
+      "y": 1155,
+      "width": 89,
+      "height": 119,
+      "area": 6918,
+      "tipX": 179.5,
+      "tipY": 1274,
+      "id": "heldenwacht-position-061",
+      "icon": "bauernsiedlung-2.png",
+      "candidates": [
+        {
+          "icon": "bauernsiedlung-2.png",
+          "score": 0.853
+        },
+        {
+          "icon": "l-ndlicher-friedhof.png",
+          "score": 0.411
+        },
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.404
+        }
+      ],
+      "number": 61,
+      "territoryId": "herrschaft-riesentod"
+    },
+    {
+      "x": 1832,
+      "y": 1156,
+      "width": 90,
+      "height": 119,
+      "area": 6990,
+      "tipX": 1877.0,
+      "tipY": 1275,
+      "id": "heldenwacht-position-062",
+      "icon": "bauernsiedlung-2.png",
+      "candidates": [
+        {
+          "icon": "bauernsiedlung-2.png",
+          "score": 0.842
+        },
+        {
+          "icon": "kontor.png",
+          "score": 0.419
+        },
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.405
+        }
+      ],
+      "number": 62,
+      "territoryId": "herrschaft-frostauge"
+    },
+    {
+      "x": 400,
+      "y": 1181,
+      "width": 137,
+      "height": 336,
+      "area": 21020,
+      "tipX": 445,
+      "tipY": 1294,
+      "id": "heldenwacht-position-063",
+      "icon": "turm.png",
+      "candidates": [
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.332
+        },
+        {
+          "icon": "h-hle.png",
+          "score": 0.33
+        },
+        {
+          "icon": "taverne.png",
+          "score": 0.327
+        }
+      ],
+      "note": "Manuell getrennte Einzelspitze aus überlappender Komponente 63; Teil 1/3.",
+      "number": 63,
+      "territoryId": "herrschaft-riesentod"
+    },
+    {
+      "x": 845,
+      "y": 1212,
+      "width": 90,
+      "height": 119,
+      "area": 6972,
+      "tipX": 890.0,
+      "tipY": 1331,
+      "id": "heldenwacht-position-064",
+      "icon": "brauersiedlung.png",
+      "candidates": [
+        {
+          "icon": "brauersiedlung.png",
+          "score": 0.62
+        },
+        {
+          "icon": "h-gelgrab.png",
+          "score": 0.382
+        },
+        {
+          "icon": "zerst-rte-kirche.png",
+          "score": 0.334
+        }
+      ],
+      "number": 64,
+      "territoryId": "thanentum-tal-der-helden"
+    },
+    {
+      "x": 1686,
+      "y": 1258,
+      "width": 90,
+      "height": 119,
+      "area": 6970,
+      "tipX": 1731.0,
+      "tipY": 1377,
+      "id": "heldenwacht-position-065",
+      "icon": "hafensiedlung.png",
+      "candidates": [
+        {
+          "icon": "hafensiedlung.png",
+          "score": 0.75
+        },
+        {
+          "icon": "fischerh-tte.png",
+          "score": 0.513
+        },
+        {
+          "icon": "poststation.png",
+          "score": 0.463
+        }
+      ],
+      "number": 65,
+      "territoryId": "herrschaft-frostauge"
+    },
+    {
+      "x": 234,
+      "y": 1263,
+      "width": 90,
+      "height": 118,
+      "area": 6985,
+      "tipX": 279.0,
+      "tipY": 1381,
+      "id": "heldenwacht-position-066",
+      "icon": "marktsiedlung.png",
+      "candidates": [
+        {
+          "icon": "marktsiedlung.png",
+          "score": 0.629
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.513
+        },
+        {
+          "icon": "kreaturenhort.png",
+          "score": 0.451
+        }
+      ],
+      "number": 66,
+      "territoryId": "herrschaft-riesentod"
+    },
+    {
+      "x": 0,
+      "y": 1264,
+      "width": 73,
+      "height": 119,
+      "area": 6226,
+      "tipX": 36.5,
+      "tipY": 1383,
+      "id": "heldenwacht-position-067",
+      "icon": "marktsiedlung.png",
+      "candidates": [
+        {
+          "icon": "marktsiedlung.png",
+          "score": 0.747
+        },
+        {
+          "icon": "waldsiedlung.png",
+          "score": 0.522
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.51
+        }
+      ],
+      "number": 67,
+      "territoryId": "herrschaft-riesentod"
+    },
+    {
+      "x": 1927,
+      "y": 1272,
+      "width": 89,
+      "height": 120,
+      "area": 6962,
+      "tipX": 1971.5,
+      "tipY": 1392,
+      "id": "heldenwacht-position-068",
+      "icon": "hafensiedlung.png",
+      "candidates": [
+        {
+          "icon": "hafensiedlung.png",
+          "score": 0.774
+        },
+        {
+          "icon": "fischerh-tte.png",
+          "score": 0.529
+        },
+        {
+          "icon": "poststation.png",
+          "score": 0.443
+        }
+      ],
+      "number": 68,
+      "territoryId": "herrschaft-frostauge"
+    },
+    {
+      "x": 659,
+      "y": 1321,
+      "width": 90,
+      "height": 118,
+      "area": 6979,
+      "tipX": 704.0,
+      "tipY": 1439,
+      "id": "heldenwacht-position-069",
+      "icon": "brauersiedlung.png",
+      "candidates": [
+        {
+          "icon": "brauersiedlung.png",
+          "score": 0.648
+        },
+        {
+          "icon": "h-gelgrab.png",
+          "score": 0.413
+        },
+        {
+          "icon": "schmiede.png",
+          "score": 0.337
+        }
+      ],
+      "number": 69,
+      "territoryId": "thanentum-tal-der-helden"
+    },
+    {
+      "x": 970,
+      "y": 1337,
+      "width": 89,
+      "height": 119,
+      "area": 6958,
+      "tipX": 1014.5,
+      "tipY": 1456,
+      "id": "heldenwacht-position-070",
+      "icon": "pferdezuchtsiedlung.png",
+      "candidates": [
+        {
+          "icon": "pferdezuchtsiedlung.png",
+          "score": 0.757
+        },
+        {
+          "icon": "schiffswerft.png",
+          "score": 0.388
+        },
+        {
+          "icon": "ruine2.png",
+          "score": 0.382
+        }
+      ],
+      "number": 70,
+      "territoryId": "thanentum-tal-der-helden"
+    },
+    {
+      "x": 1310,
+      "y": 1337,
+      "width": 89,
+      "height": 119,
+      "area": 6999,
+      "tipX": 1354.5,
+      "tipY": 1456,
+      "id": "heldenwacht-position-071",
+      "icon": "burgsiedlung.png",
+      "candidates": [
+        {
+          "icon": "burgsiedlung.png",
+          "score": 0.73
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.528
+        },
+        {
+          "icon": "exekutionsplatz.png",
+          "score": 0.516
+        }
+      ],
+      "number": 71,
+      "territoryId": "direktlehen-tal-der-helden"
+    },
+    {
+      "x": 2125,
+      "y": 1369,
+      "width": 89,
+      "height": 119,
+      "area": 6888,
+      "tipX": 2169.5,
+      "tipY": 1488,
+      "id": "heldenwacht-position-072",
+      "icon": "hafensiedlung.png",
+      "candidates": [
+        {
+          "icon": "hafensiedlung.png",
+          "score": 0.757
+        },
+        {
+          "icon": "fischerh-tte.png",
+          "score": 0.513
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.433
+        }
+      ],
+      "number": 72,
+      "territoryId": "herrschaft-frostauge"
+    },
+    {
+      "x": 1791,
+      "y": 1373,
+      "width": 90,
+      "height": 118,
+      "area": 6927,
+      "tipX": 1836.0,
+      "tipY": 1491,
+      "id": "heldenwacht-position-073",
+      "icon": "hafensiedlung.png",
+      "candidates": [
+        {
+          "icon": "hafensiedlung.png",
+          "score": 0.704
+        },
+        {
+          "icon": "fischerh-tte.png",
+          "score": 0.499
+        },
+        {
+          "icon": "poststation.png",
+          "score": 0.415
+        }
+      ],
+      "number": 73,
+      "territoryId": "herrschaft-frostauge"
+    },
+    {
+      "x": 0,
+      "y": 1402,
+      "width": 78,
+      "height": 119,
+      "area": 6579,
+      "tipX": 39.0,
+      "tipY": 1521,
+      "id": "heldenwacht-position-074",
+      "icon": "bauernsiedlung-2.png",
+      "candidates": [
+        {
+          "icon": "bauernsiedlung-2.png",
+          "score": 0.673
+        },
+        {
+          "icon": "kleine-burg.png",
+          "score": 0.495
+        },
+        {
+          "icon": "h-gelgrab.png",
+          "score": 0.472
+        }
+      ],
+      "number": 74,
+      "territoryId": "herrschaft-riesentod"
+    },
+    {
+      "x": 781,
+      "y": 1402,
+      "width": 89,
+      "height": 119,
+      "area": 6948,
+      "tipX": 825.5,
+      "tipY": 1521,
+      "id": "heldenwacht-position-075",
+      "icon": "bauernsiedlung-2.png",
+      "candidates": [
+        {
+          "icon": "bauernsiedlung-2.png",
+          "score": 0.877
+        },
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.425
+        },
+        {
+          "icon": "l-ndlicher-friedhof.png",
+          "score": 0.422
+        }
+      ],
+      "number": 75,
+      "territoryId": "direktlehen-tal-der-helden"
+    },
+    {
+      "x": 250,
+      "y": 1408,
+      "width": 90,
+      "height": 118,
+      "area": 6997,
+      "tipX": 295.0,
+      "tipY": 1526,
+      "id": "heldenwacht-position-076",
+      "icon": "taverne.png",
+      "candidates": [
+        {
+          "icon": "taverne.png",
+          "score": 0.625
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.572
+        },
+        {
+          "icon": "fischerh-tte.png",
+          "score": 0.555
+        }
+      ],
+      "number": 76,
+      "territoryId": "herrschaft-riesentod"
+    },
+    {
+      "x": 1623,
+      "y": 1421,
+      "width": 89,
+      "height": 120,
+      "area": 6932,
+      "tipX": 1667.5,
+      "tipY": 1541,
+      "id": "heldenwacht-position-077",
+      "icon": "hafensiedlung.png",
+      "candidates": [
+        {
+          "icon": "hafensiedlung.png",
+          "score": 0.808
+        },
+        {
+          "icon": "fischerh-tte.png",
+          "score": 0.503
+        },
+        {
+          "icon": "poststation.png",
+          "score": 0.471
+        }
+      ],
+      "number": 77,
+      "territoryId": "direktlehen-tal-der-helden"
+    },
+    {
+      "x": 65,
+      "y": 1477,
+      "width": 89,
+      "height": 118,
+      "area": 6904,
+      "tipX": 109.5,
+      "tipY": 1595,
+      "id": "heldenwacht-position-078",
+      "icon": "bergbausiedlung.png",
+      "candidates": [
+        {
+          "icon": "bergbausiedlung.png",
+          "score": 0.807
+        },
+        {
+          "icon": "antikes-grab.png",
+          "score": 0.526
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.505
+        }
+      ],
+      "number": 78,
+      "territoryId": "herrschaft-riesentod"
+    },
+    {
+      "x": 1075,
+      "y": 1501,
+      "width": 89,
+      "height": 118,
+      "area": 6955,
+      "tipX": 1119.5,
+      "tipY": 1619,
+      "id": "heldenwacht-position-079",
+      "icon": "anwesen.png",
+      "candidates": [
+        {
+          "icon": "anwesen.png",
+          "score": 0.832
+        },
+        {
+          "icon": "goblinlager.png",
+          "score": 0.344
+        },
+        {
+          "icon": "kreaturenhort.png",
+          "score": 0.297
+        }
+      ],
+      "number": 79,
+      "territoryId": "hesirentum-heldenwacht"
+    },
+    {
+      "x": 526,
+      "y": 1504,
+      "width": 90,
+      "height": 119,
+      "area": 6981,
+      "tipX": 571.0,
+      "tipY": 1623,
+      "id": "heldenwacht-position-080",
+      "icon": "bauernsiedlung-2.png",
+      "candidates": [
+        {
+          "icon": "bauernsiedlung-2.png",
+          "score": 0.816
+        },
+        {
+          "icon": "kontor.png",
+          "score": 0.428
+        },
+        {
+          "icon": "l-ndlicher-friedhof.png",
+          "score": 0.415
+        }
+      ],
+      "number": 80,
+      "territoryId": "direktlehen-tal-der-helden"
+    },
+    {
+      "x": 1345,
+      "y": 1509,
+      "width": 126,
+      "height": 170,
+      "area": 13965,
+      "tipX": 1408.0,
+      "tipY": 1679,
+      "id": "heldenwacht-position-081",
+      "icon": "stadt.png",
+      "candidates": [
+        {
+          "icon": "stadt.png",
+          "score": 0.57
+        },
+        {
+          "icon": "druidenh-tte.png",
+          "score": 0.453
+        },
+        {
+          "icon": "waldsiedlung.png",
+          "score": 0.453
+        }
+      ],
+      "number": 81,
+      "territoryId": "hesirentum-heldenwacht"
+    },
+    {
+      "x": 340,
+      "y": 1521,
+      "width": 90,
+      "height": 119,
+      "area": 6999,
+      "tipX": 385.0,
+      "tipY": 1640,
+      "id": "heldenwacht-position-082",
+      "icon": "marktsiedlung.png",
+      "candidates": [
+        {
+          "icon": "marktsiedlung.png",
+          "score": 0.554
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.509
+        },
+        {
+          "icon": "waldsiedlung.png",
+          "score": 0.482
+        }
+      ],
+      "number": 82,
+      "territoryId": "herrschaft-sturmgeborene"
+    },
+    {
+      "x": 714,
+      "y": 1523,
+      "width": 90,
+      "height": 118,
+      "area": 6986,
+      "tipX": 759.0,
+      "tipY": 1641,
+      "id": "heldenwacht-position-083",
+      "icon": "bauernsiedlung-2.png",
+      "candidates": [
+        {
+          "icon": "bauernsiedlung-2.png",
+          "score": 0.893
+        },
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.418
+        },
+        {
+          "icon": "l-ndlicher-friedhof.png",
+          "score": 0.418
+        }
+      ],
+      "number": 83,
+      "territoryId": "direktlehen-tal-der-helden"
+    },
+    {
+      "x": 920,
+      "y": 1543,
+      "width": 90,
+      "height": 119,
+      "area": 6987,
+      "tipX": 965.0,
+      "tipY": 1662,
+      "id": "heldenwacht-position-084",
+      "icon": "bauernsiedlung.png",
+      "candidates": [
+        {
+          "icon": "bauernsiedlung.png",
+          "score": 0.799
+        },
+        {
+          "icon": "zerst-rte-kirche.png",
+          "score": 0.494
+        },
+        {
+          "icon": "ruine2.png",
+          "score": 0.48
+        }
+      ],
+      "number": 84,
+      "territoryId": "herrschaft-spindelheim"
+    },
+    {
+      "x": 249,
+      "y": 1585,
+      "width": 97,
+      "height": 238,
+      "area": 14019,
+      "tipX": 294,
+      "tipY": 1696,
+      "id": "heldenwacht-position-085",
+      "icon": "turm.png",
+      "candidates": [
+        {
+          "icon": "goblinlager.png",
+          "score": 0.426
+        },
+        {
+          "icon": "kutscher.png",
+          "score": 0.376
+        },
+        {
+          "icon": "kreaturenhort.png",
+          "score": 0.37
+        }
+      ],
+      "note": "Manuell getrennte Einzelspitze aus überlappender Komponente 85; Teil 1/2.",
+      "number": 85,
+      "territoryId": "herrschaft-sturmgeborene"
+    },
+    {
+      "x": 111,
+      "y": 1600,
+      "width": 89,
+      "height": 119,
+      "area": 6970,
+      "tipX": 155.5,
+      "tipY": 1719,
+      "id": "heldenwacht-position-086",
+      "icon": "bauernsiedlung-2.png",
+      "candidates": [
+        {
+          "icon": "bauernsiedlung-2.png",
+          "score": 0.919
+        },
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.425
+        },
+        {
+          "icon": "l-ndlicher-friedhof.png",
+          "score": 0.415
+        }
+      ],
+      "number": 86,
+      "territoryId": "herrschaft-sturmgeborene"
+    },
+    {
+      "x": 1065,
+      "y": 1628,
+      "width": 112,
+      "height": 155,
+      "area": 11684,
+      "tipX": 1121.0,
+      "tipY": 1783,
+      "id": "heldenwacht-position-087",
+      "icon": "bardensiedlung.png",
+      "candidates": [
+        {
+          "icon": "au-enposten.png",
+          "score": 0.413
+        },
+        {
+          "icon": "weide.png",
+          "score": 0.393
+        },
+        {
+          "icon": "antike-ruine.png",
+          "score": 0.378
+        }
+      ],
+      "number": 87,
+      "territoryId": "hesirentum-heldenwacht"
+    },
+    {
+      "x": 583,
+      "y": 1633,
+      "width": 89,
+      "height": 119,
+      "area": 7000,
+      "tipX": 627.5,
+      "tipY": 1752,
+      "id": "heldenwacht-position-088",
+      "icon": "marktsiedlung.png",
+      "candidates": [
+        {
+          "icon": "marktsiedlung.png",
+          "score": 0.613
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.511
+        },
+        {
+          "icon": "waldsiedlung.png",
+          "score": 0.468
+        }
+      ],
+      "number": 88,
+      "territoryId": "herrschaft-sturmgeborene"
+    },
+    {
+      "x": 362,
+      "y": 1661,
+      "width": 90,
+      "height": 118,
+      "area": 6990,
+      "tipX": 407.0,
+      "tipY": 1779,
+      "id": "heldenwacht-position-089",
+      "icon": "bauernsiedlung-2.png",
+      "candidates": [
+        {
+          "icon": "bauernsiedlung-2.png",
+          "score": 0.828
+        },
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.411
+        },
+        {
+          "icon": "l-ndlicher-friedhof.png",
+          "score": 0.404
+        }
+      ],
+      "number": 89,
+      "territoryId": "herrschaft-sturmgeborene"
+    },
+    {
+      "x": 836,
+      "y": 1679,
+      "width": 89,
+      "height": 119,
+      "area": 6986,
+      "tipX": 880.5,
+      "tipY": 1798,
+      "id": "heldenwacht-position-090",
+      "icon": "waldsiedlung.png",
+      "candidates": [
+        {
+          "icon": "waldsiedlung.png",
+          "score": 0.829
+        },
+        {
+          "icon": "gildenzentrale.png",
+          "score": 0.628
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.627
+        }
+      ],
+      "number": 90,
+      "territoryId": "direktlehen-tal-der-helden"
+    },
+    {
+      "x": 974,
+      "y": 1717,
+      "width": 90,
+      "height": 119,
+      "area": 6959,
+      "tipX": 1019.0,
+      "tipY": 1836,
+      "id": "heldenwacht-position-091",
+      "icon": "hafensiedlung.png",
+      "candidates": [
+        {
+          "icon": "hafensiedlung.png",
+          "score": 0.756
+        },
+        {
+          "icon": "fischerh-tte.png",
+          "score": 0.502
+        },
+        {
+          "icon": "poststation.png",
+          "score": 0.45
+        }
+      ],
+      "number": 91,
+      "territoryId": "herrschaft-sturmgeborene"
+    },
+    {
+      "x": 2009,
+      "y": 1730,
+      "width": 89,
+      "height": 119,
+      "area": 6942,
+      "tipX": 2053.5,
+      "tipY": 1849,
+      "id": "heldenwacht-position-092",
+      "icon": "hafensiedlung.png",
+      "candidates": [
+        {
+          "icon": "hafensiedlung.png",
+          "score": 0.84
+        },
+        {
+          "icon": "fischerh-tte.png",
+          "score": 0.503
+        },
+        {
+          "icon": "poststation.png",
+          "score": 0.49
+        }
+      ],
+      "number": 92,
+      "territoryId": "direktlehen-tal-der-helden"
+    },
+    {
+      "x": 3,
+      "y": 1796,
+      "width": 90,
+      "height": 119,
+      "area": 7018,
+      "tipX": 48.0,
+      "tipY": 1915,
+      "id": "heldenwacht-position-093",
+      "icon": "klostersiedlung.png",
+      "candidates": [
+        {
+          "icon": "klostersiedlung.png",
+          "score": 0.759
+        },
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.575
+        },
+        {
+          "icon": "gasthof.png",
+          "score": 0.56
+        }
+      ],
+      "number": 93,
+      "territoryId": "herrschaft-sturmgeborene"
+    },
+    {
+      "x": 575,
+      "y": 1810,
+      "width": 89,
+      "height": 119,
+      "area": 6966,
+      "tipX": 619.5,
+      "tipY": 1929,
+      "id": "heldenwacht-position-094",
+      "icon": "bauernsiedlung-2.png",
+      "candidates": [
+        {
+          "icon": "bauernsiedlung-2.png",
+          "score": 0.92
+        },
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.426
+        },
+        {
+          "icon": "l-ndlicher-friedhof.png",
+          "score": 0.415
+        }
+      ],
+      "number": 94,
+      "territoryId": "herrschaft-sturmgeborene"
+    },
+    {
+      "x": 191,
+      "y": 1818,
+      "width": 89,
+      "height": 119,
+      "area": 6962,
+      "tipX": 235.5,
+      "tipY": 1937,
+      "id": "heldenwacht-position-095",
+      "icon": "hei-e-quellen.png",
+      "candidates": [
+        {
+          "icon": "hei-e-quellen.png",
+          "score": 0.522
+        },
+        {
+          "icon": "obstplantage.png",
+          "score": 0.426
+        },
+        {
+          "icon": "schmuggler3.png",
+          "score": 0.404
+        }
+      ],
+      "number": 95,
+      "territoryId": "herrschaft-sturmgeborene"
+    },
+    {
+      "x": 893,
+      "y": 1864,
+      "width": 89,
+      "height": 118,
+      "area": 6962,
+      "tipX": 937.5,
+      "tipY": 1982,
+      "id": "heldenwacht-position-096",
+      "icon": "hafensiedlung.png",
+      "candidates": [
+        {
+          "icon": "hafensiedlung.png",
+          "score": 0.762
+        },
+        {
+          "icon": "fischerh-tte.png",
+          "score": 0.492
+        },
+        {
+          "icon": "poststation.png",
+          "score": 0.443
+        }
+      ],
+      "number": 96,
+      "territoryId": "herrschaft-sturmgeborene"
+    },
+    {
+      "x": 319,
+      "y": 1882,
+      "width": 90,
+      "height": 119,
+      "area": 7001,
+      "tipX": 364.0,
+      "tipY": 2001,
+      "id": "heldenwacht-position-097",
+      "icon": "klostersiedlung.png",
+      "candidates": [
+        {
+          "icon": "klostersiedlung.png",
+          "score": 0.78
+        },
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.588
+        },
+        {
+          "icon": "gasthof.png",
+          "score": 0.558
+        }
+      ],
+      "number": 97,
+      "territoryId": "herrschaft-sturmgeborene"
+    },
+    {
+      "x": 662,
+      "y": 1921,
+      "width": 89,
+      "height": 120,
+      "area": 6958,
+      "tipX": 706.5,
+      "tipY": 2041,
+      "id": "heldenwacht-position-098",
+      "icon": "hafensiedlung.png",
+      "candidates": [
+        {
+          "icon": "hafensiedlung.png",
+          "score": 0.778
+        },
+        {
+          "icon": "fischerh-tte.png",
+          "score": 0.497
+        },
+        {
+          "icon": "poststation.png",
+          "score": 0.45
+        }
+      ],
+      "number": 98,
+      "territoryId": "herrschaft-sturmgeborene"
+    },
+    {
+      "x": 98,
+      "y": 1931,
+      "width": 89,
+      "height": 118,
+      "area": 6960,
+      "tipX": 142.5,
+      "tipY": 2049,
+      "id": "heldenwacht-position-099",
+      "icon": "burgsiedlung.png",
+      "candidates": [
+        {
+          "icon": "burgsiedlung.png",
+          "score": 0.675
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.548
+        },
+        {
+          "icon": "exekutionsplatz.png",
+          "score": 0.505
+        }
+      ],
+      "number": 99,
+      "territoryId": "herrschaft-sturmgeborene"
+    },
+    {
+      "x": 514,
+      "y": 1971,
+      "width": 90,
+      "height": 118,
+      "area": 6969,
+      "tipX": 559.0,
+      "tipY": 2089,
+      "id": "heldenwacht-position-100",
+      "icon": "flusssiedlung.png",
+      "candidates": [
+        {
+          "icon": "flusssiedlung.png",
+          "score": 0.544
+        },
+        {
+          "icon": "br-ckensiedlung.png",
+          "score": 0.537
+        },
+        {
+          "icon": "heereslager-2.png",
+          "score": 0.287
+        }
+      ],
+      "number": 100,
+      "territoryId": "herrschaft-sturmgeborene"
+    },
+    {
+      "x": 2283,
+      "y": 1975,
+      "width": 90,
+      "height": 119,
+      "area": 6940,
+      "tipX": 2328.0,
+      "tipY": 2094,
+      "id": "heldenwacht-position-101",
+      "icon": "hafensiedlung.png",
+      "candidates": [
+        {
+          "icon": "hafensiedlung.png",
+          "score": 0.695
+        },
+        {
+          "icon": "fischerh-tte.png",
+          "score": 0.491
+        },
+        {
+          "icon": "poststation.png",
+          "score": 0.437
+        }
+      ],
+      "number": 101,
+      "territoryId": "direktlehen-tal-der-helden"
+    },
+    {
+      "x": 471,
+      "y": 2073,
+      "width": 90,
+      "height": 119,
+      "area": 6971,
+      "tipX": 516.0,
+      "tipY": 2192,
+      "id": "heldenwacht-position-102",
+      "icon": "flusssiedlung.png",
+      "candidates": [
+        {
+          "icon": "flusssiedlung.png",
+          "score": 0.536
+        },
+        {
+          "icon": "br-ckensiedlung.png",
+          "score": 0.532
+        },
+        {
+          "icon": "heereslager-2.png",
+          "score": 0.306
+        }
+      ],
+      "number": 102,
+      "territoryId": "hesirentum-moewenfels"
+    },
+    {
+      "x": 623,
+      "y": 2106,
+      "width": 89,
+      "height": 119,
+      "area": 6975,
+      "tipX": 667.5,
+      "tipY": 2225,
+      "id": "heldenwacht-position-103",
+      "icon": "zerst-rte-siedlung.png",
+      "candidates": [
+        {
+          "icon": "zerst-rte-siedlung.png",
+          "score": 0.853
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.504
+        },
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.47
+        }
+      ],
+      "number": 103,
+      "territoryId": "hesirentum-moewenfels"
+    },
+    {
+      "x": 730,
+      "y": 2227,
+      "width": 90,
+      "height": 119,
+      "area": 6992,
+      "tipX": 775.0,
+      "tipY": 2346,
+      "id": "heldenwacht-position-104",
+      "icon": "hafensiedlung.png",
+      "candidates": [
+        {
+          "icon": "hafensiedlung.png",
+          "score": 0.728
+        },
+        {
+          "icon": "fischerh-tte.png",
+          "score": 0.49
+        },
+        {
+          "icon": "poststation.png",
+          "score": 0.442
+        }
+      ],
+      "number": 104,
+      "territoryId": "hesirentum-moewenfels"
+    },
+    {
+      "x": 532,
+      "y": 2229,
+      "width": 90,
+      "height": 119,
+      "area": 6981,
+      "tipX": 577.0,
+      "tipY": 2348,
+      "id": "heldenwacht-position-105",
+      "icon": "bauernsiedlung-2.png",
+      "candidates": [
+        {
+          "icon": "bauernsiedlung-2.png",
+          "score": 0.841
+        },
+        {
+          "icon": "l-ndlicher-friedhof.png",
+          "score": 0.41
+        },
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.409
+        }
+      ],
+      "number": 105,
+      "territoryId": "hesirentum-moewenfels"
+    },
+    {
+      "x": 2436,
+      "y": 2319,
+      "width": 89,
+      "height": 119,
+      "area": 6980,
+      "tipX": 2480.5,
+      "tipY": 2438,
+      "id": "heldenwacht-position-106",
+      "icon": "burgsiedlung.png",
+      "candidates": [
+        {
+          "icon": "burgsiedlung.png",
+          "score": 0.713
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.546
+        },
+        {
+          "icon": "antikes-grab.png",
+          "score": 0.51
+        }
+      ],
+      "number": 106,
+      "territoryId": "hesirentum-klageschild-inseln"
+    },
+    {
+      "x": 400,
+      "y": 2414,
+      "width": 128,
+      "height": 169,
+      "area": 14121,
+      "tipX": 464.0,
+      "tipY": 2583,
+      "id": "heldenwacht-position-107",
+      "icon": "stadt.png",
+      "candidates": [
+        {
+          "icon": "stadt.png",
+          "score": 0.532
+        },
+        {
+          "icon": "waldsiedlung.png",
+          "score": 0.505
+        },
+        {
+          "icon": "druidenh-tte.png",
+          "score": 0.432
+        }
+      ],
+      "number": 107,
+      "territoryId": "hesirentum-moewenfels"
+    },
+    {
+      "x": 1581,
+      "y": 2414,
+      "width": 89,
+      "height": 119,
+      "area": 6983,
+      "tipX": 1625.5,
+      "tipY": 2533,
+      "id": "heldenwacht-position-108",
+      "icon": "burgsiedlung.png",
+      "candidates": [
+        {
+          "icon": "burgsiedlung.png",
+          "score": 0.667
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.554
+        },
+        {
+          "icon": "antikes-grab.png",
+          "score": 0.485
+        }
+      ],
+      "number": 108,
+      "territoryId": "hesirentum-klageschild-inseln"
+    },
+    {
+      "x": 905,
+      "y": 2418,
+      "width": 89,
+      "height": 119,
+      "area": 7013,
+      "tipX": 949.5,
+      "tipY": 2537,
+      "id": "heldenwacht-position-109",
+      "icon": "schiffswrackpin.png",
+      "candidates": [
+        {
+          "icon": "schiffswrackpin.png",
+          "score": 0.788
+        },
+        {
+          "icon": "schmuggler2.png",
+          "score": 0.513
+        },
+        {
+          "icon": "ziegelbrenner.png",
+          "score": 0.508
+        }
+      ],
+      "number": 109,
+      "territoryId": "hesirentum-moewenfels"
+    },
+    {
+      "x": 173,
+      "y": 2422,
+      "width": 89,
+      "height": 118,
+      "area": 6960,
+      "tipX": 217.5,
+      "tipY": 2540,
+      "id": "heldenwacht-position-110",
+      "icon": "bergbausiedlung.png",
+      "candidates": [
+        {
+          "icon": "bergbausiedlung.png",
+          "score": 0.814
+        },
+        {
+          "icon": "antikes-grab.png",
+          "score": 0.542
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.51
+        }
+      ],
+      "number": 110,
+      "territoryId": "hesirentum-moewenfels"
+    },
+    {
+      "x": 626,
+      "y": 2478,
+      "width": 89,
+      "height": 119,
+      "area": 6973,
+      "tipX": 670.5,
+      "tipY": 2597,
+      "id": "heldenwacht-position-111",
+      "icon": "turm.png",
+      "candidates": [
+        {
+          "icon": "turm.png",
+          "score": 0.63
+        },
+        {
+          "icon": "magierturm.png",
+          "score": 0.507
+        },
+        {
+          "icon": "leuchtturm.png",
+          "score": 0.451
+        }
+      ],
+      "number": 111,
+      "territoryId": "hesirentum-moewenfels"
+    },
+    {
+      "x": 1898,
+      "y": 2541,
+      "width": 89,
+      "height": 118,
+      "area": 6981,
+      "tipX": 1942.5,
+      "tipY": 2659,
+      "id": "heldenwacht-position-112",
+      "icon": "hafensiedlung.png",
+      "candidates": [
+        {
+          "icon": "hafensiedlung.png",
+          "score": 0.769
+        },
+        {
+          "icon": "fischerh-tte.png",
+          "score": 0.499
+        },
+        {
+          "icon": "poststation.png",
+          "score": 0.465
+        }
+      ],
+      "number": 112,
+      "territoryId": "hesirentum-klageschild-inseln"
+    },
+    {
+      "x": 278,
+      "y": 2639,
+      "width": 90,
+      "height": 119,
+      "area": 6989,
+      "tipX": 323.0,
+      "tipY": 2758,
+      "id": "heldenwacht-position-113",
+      "icon": "turm.png",
+      "candidates": [
+        {
+          "icon": "turm.png",
+          "score": 0.643
+        },
+        {
+          "icon": "magierturm.png",
+          "score": 0.517
+        },
+        {
+          "icon": "leuchtturm.png",
+          "score": 0.46
+        }
+      ],
+      "number": 113,
+      "territoryId": "hesirentum-moewenfels"
+    },
+    {
+      "x": 1663,
+      "y": 2642,
+      "width": 90,
+      "height": 119,
+      "area": 6942,
+      "tipX": 1708.0,
+      "tipY": 2761,
+      "id": "heldenwacht-position-114",
+      "icon": "hafensiedlung.png",
+      "candidates": [
+        {
+          "icon": "hafensiedlung.png",
+          "score": 0.711
+        },
+        {
+          "icon": "fischerh-tte.png",
+          "score": 0.503
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.428
+        }
+      ],
+      "number": 114,
+      "territoryId": "hesirentum-klageschild-inseln"
+    },
+    {
+      "x": 679,
+      "y": 2652,
+      "width": 89,
+      "height": 120,
+      "area": 6960,
+      "tipX": 723.5,
+      "tipY": 2772,
+      "id": "heldenwacht-position-115",
+      "icon": "hafensiedlung.png",
+      "candidates": [
+        {
+          "icon": "hafensiedlung.png",
+          "score": 0.809
+        },
+        {
+          "icon": "fischerh-tte.png",
+          "score": 0.516
+        },
+        {
+          "icon": "poststation.png",
+          "score": 0.47
+        }
+      ],
+      "number": 115,
+      "territoryId": "hesirentum-moewenfels"
+    },
+    {
+      "x": 512,
+      "y": 2683,
+      "width": 90,
+      "height": 119,
+      "area": 7005,
+      "tipX": 557.0,
+      "tipY": 2802,
+      "id": "heldenwacht-position-116",
+      "icon": "marktsiedlung.png",
+      "candidates": [
+        {
+          "icon": "marktsiedlung.png",
+          "score": 0.589
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.517
+        },
+        {
+          "icon": "waldsiedlung.png",
+          "score": 0.453
+        }
+      ],
+      "number": 116,
+      "territoryId": "hesirentum-moewenfels"
+    },
+    {
+      "x": 2075,
+      "y": 2756,
+      "width": 89,
+      "height": 119,
+      "area": 7002,
+      "tipX": 2119.5,
+      "tipY": 2875,
+      "id": "heldenwacht-position-117",
+      "icon": "hafensiedlung.png",
+      "candidates": [
+        {
+          "icon": "hafensiedlung.png",
+          "score": 0.784
+        },
+        {
+          "icon": "fischerh-tte.png",
+          "score": 0.528
+        },
+        {
+          "icon": "poststation.png",
+          "score": 0.444
+        }
+      ],
+      "number": 117,
+      "territoryId": "hesirentum-klageschild-inseln"
+    },
+    {
+      "x": 837,
+      "y": 2759,
+      "width": 89,
+      "height": 118,
+      "area": 6962,
+      "tipX": 881.5,
+      "tipY": 2877,
+      "id": "heldenwacht-position-118",
+      "icon": "schiffswrackpin.png",
+      "candidates": [
+        {
+          "icon": "schiffswrackpin.png",
+          "score": 0.8
+        },
+        {
+          "icon": "ziegelbrenner.png",
+          "score": 0.515
+        },
+        {
+          "icon": "schmuggler2.png",
+          "score": 0.512
+        }
+      ],
+      "number": 118,
+      "territoryId": "hesirentum-moewenfels"
+    },
+    {
+      "x": 1737,
+      "y": 2780,
+      "width": 127,
+      "height": 170,
+      "area": 14189,
+      "tipX": 1800.5,
+      "tipY": 2950,
+      "id": "heldenwacht-position-119",
+      "icon": "stadt.png",
+      "candidates": [
+        {
+          "icon": "stadt.png",
+          "score": 0.479
+        },
+        {
+          "icon": "waldsiedlung.png",
+          "score": 0.464
+        },
+        {
+          "icon": "druidenh-tte.png",
+          "score": 0.414
+        }
+      ],
+      "number": 119,
+      "territoryId": "hesirentum-klageschild-inseln"
+    },
+    {
+      "x": 155,
+      "y": 2788,
+      "width": 89,
+      "height": 119,
+      "area": 6958,
+      "tipX": 199.5,
+      "tipY": 2907,
+      "id": "heldenwacht-position-120",
+      "icon": "bergbausiedlung.png",
+      "candidates": [
+        {
+          "icon": "bergbausiedlung.png",
+          "score": 0.81
+        },
+        {
+          "icon": "antikes-grab.png",
+          "score": 0.534
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.518
+        }
+      ],
+      "number": 120,
+      "territoryId": "hesirentum-moewenfels"
+    },
+    {
+      "x": 552,
+      "y": 2873,
+      "width": 90,
+      "height": 119,
+      "area": 6998,
+      "tipX": 597.0,
+      "tipY": 2992,
+      "id": "heldenwacht-position-121",
+      "icon": "turm.png",
+      "candidates": [
+        {
+          "icon": "turm.png",
+          "score": 0.627
+        },
+        {
+          "icon": "magierturm.png",
+          "score": 0.484
+        },
+        {
+          "icon": "leuchtturm.png",
+          "score": 0.444
+        }
+      ],
+      "number": 121,
+      "territoryId": "hesirentum-moewenfels"
+    },
+    {
+      "x": 1335,
+      "y": 2886,
+      "width": 90,
+      "height": 119,
+      "area": 6996,
+      "tipX": 1380.0,
+      "tipY": 3005,
+      "id": "heldenwacht-position-122",
+      "icon": "schmuggler3.png",
+      "candidates": [
+        {
+          "icon": "schmuggler3.png",
+          "score": 0.622
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.613
+        },
+        {
+          "icon": "methalle.png",
+          "score": 0.577
+        }
+      ],
+      "number": 122,
+      "territoryId": "hesirentum-klageschild-inseln"
+    },
+    {
+      "x": 1981,
+      "y": 2914,
+      "width": 90,
+      "height": 119,
+      "area": 6986,
+      "tipX": 2026.0,
+      "tipY": 3033,
+      "id": "heldenwacht-position-123",
+      "icon": "turm.png",
+      "candidates": [
+        {
+          "icon": "turm.png",
+          "score": 0.616
+        },
+        {
+          "icon": "magierturm.png",
+          "score": 0.504
+        },
+        {
+          "icon": "leuchtturm.png",
+          "score": 0.466
+        }
+      ],
+      "number": 123,
+      "territoryId": "hesirentum-klageschild-inseln"
+    },
+    {
+      "x": 631,
+      "y": 2926,
+      "width": 90,
+      "height": 119,
+      "area": 7007,
+      "tipX": 676.0,
+      "tipY": 3045,
+      "id": "heldenwacht-position-124",
+      "icon": "zerst-rte-siedlung.png",
+      "candidates": [
+        {
+          "icon": "zerst-rte-siedlung.png",
+          "score": 0.762
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.503
+        },
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.471
+        }
+      ],
+      "number": 124,
+      "territoryId": "hesirentum-moewenfels"
+    },
+    {
+      "x": 2552,
+      "y": 2934,
+      "width": 89,
+      "height": 119,
+      "area": 6977,
+      "tipX": 2596.5,
+      "tipY": 3053,
+      "id": "heldenwacht-position-125",
+      "icon": "hafensiedlung.png",
+      "candidates": [
+        {
+          "icon": "hafensiedlung.png",
+          "score": 0.744
+        },
+        {
+          "icon": "fischerh-tte.png",
+          "score": 0.486
+        },
+        {
+          "icon": "poststation.png",
+          "score": 0.437
+        }
+      ],
+      "number": 125,
+      "territoryId": "hesirentum-klageschild-inseln"
+    },
+    {
+      "x": 433,
+      "y": 2939,
+      "width": 89,
+      "height": 119,
+      "area": 6990,
+      "tipX": 477.5,
+      "tipY": 3058,
+      "id": "heldenwacht-position-126",
+      "icon": "taverne.png",
+      "candidates": [
+        {
+          "icon": "taverne.png",
+          "score": 0.672
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.627
+        },
+        {
+          "icon": "hexenhaus.png",
+          "score": 0.597
+        }
+      ],
+      "number": 126,
+      "territoryId": "hesirentum-moewenfels"
+    },
+    {
+      "x": 3912,
+      "y": 2973,
+      "width": 89,
+      "height": 118,
+      "area": 6939,
+      "tipX": 3956.5,
+      "tipY": 3091,
+      "id": "heldenwacht-position-127",
+      "icon": "burgsiedlung.png",
+      "candidates": [
+        {
+          "icon": "burgsiedlung.png",
+          "score": 0.684
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.569
+        },
+        {
+          "icon": "exekutionsplatz.png",
+          "score": 0.487
+        }
+      ],
+      "number": 127,
+      "territoryId": "huskarllehen-sundkrone"
+    },
+    {
+      "x": 205,
+      "y": 2983,
+      "width": 89,
+      "height": 118,
+      "area": 6923,
+      "tipX": 249.5,
+      "tipY": 3101,
+      "id": "heldenwacht-position-128",
+      "icon": "klostersiedlung.png",
+      "candidates": [
+        {
+          "icon": "klostersiedlung.png",
+          "score": 0.772
+        },
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.585
+        },
+        {
+          "icon": "gasthof.png",
+          "score": 0.555
+        }
+      ],
+      "number": 128,
+      "territoryId": "hesirentum-moewenfels"
+    },
+    {
+      "x": 1633,
+      "y": 3000,
+      "width": 90,
+      "height": 119,
+      "area": 6948,
+      "tipX": 1678.0,
+      "tipY": 3119,
+      "id": "heldenwacht-position-129",
+      "icon": "klostersiedlung.png",
+      "candidates": [
+        {
+          "icon": "klostersiedlung.png",
+          "score": 0.785
+        },
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.579
+        },
+        {
+          "icon": "gasthof.png",
+          "score": 0.56
+        }
+      ],
+      "number": 129,
+      "territoryId": "hesirentum-klageschild-inseln"
+    },
+    {
+      "x": 2188,
+      "y": 3001,
+      "width": 90,
+      "height": 119,
+      "area": 6980,
+      "tipX": 2233.0,
+      "tipY": 3120,
+      "id": "heldenwacht-position-130",
+      "icon": "schmuggler3.png",
+      "candidates": [
+        {
+          "icon": "schmuggler3.png",
+          "score": 0.617
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.611
+        },
+        {
+          "icon": "methalle.png",
+          "score": 0.571
+        }
+      ],
+      "number": 130,
+      "territoryId": "hesirentum-klageschild-inseln"
+    },
+    {
+      "x": 1743,
+      "y": 3003,
+      "width": 90,
+      "height": 118,
+      "area": 6993,
+      "tipX": 1788.0,
+      "tipY": 3121,
+      "id": "heldenwacht-position-131",
+      "icon": "turm.png",
+      "candidates": [
+        {
+          "icon": "turm.png",
+          "score": 0.622
+        },
+        {
+          "icon": "magierturm.png",
+          "score": 0.489
+        },
+        {
+          "icon": "leuchtturm.png",
+          "score": 0.453
+        }
+      ],
+      "number": 131,
+      "territoryId": "hesirentum-klageschild-inseln"
+    },
+    {
+      "x": 1444,
+      "y": 3046,
+      "width": 90,
+      "height": 118,
+      "area": 6942,
+      "tipX": 1489.0,
+      "tipY": 3164,
+      "id": "heldenwacht-position-132",
+      "icon": "marktsiedlung.png",
+      "candidates": [
+        {
+          "icon": "marktsiedlung.png",
+          "score": 0.619
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.509
+        },
+        {
+          "icon": "waldsiedlung.png",
+          "score": 0.464
+        }
+      ],
+      "number": 132,
+      "territoryId": "hesirentum-klageschild-inseln"
+    },
+    {
+      "x": 1982,
+      "y": 3050,
+      "width": 89,
+      "height": 119,
+      "area": 6961,
+      "tipX": 2026.5,
+      "tipY": 3169,
+      "id": "heldenwacht-position-133",
+      "icon": "hafensiedlung.png",
+      "candidates": [
+        {
+          "icon": "hafensiedlung.png",
+          "score": 0.783
+        },
+        {
+          "icon": "fischerh-tte.png",
+          "score": 0.502
+        },
+        {
+          "icon": "poststation.png",
+          "score": 0.45
+        }
+      ],
+      "number": 133,
+      "territoryId": "hesirentum-klageschild-inseln"
+    },
+    {
+      "x": 526,
+      "y": 3058,
+      "width": 89,
+      "height": 118,
+      "area": 6978,
+      "tipX": 570.5,
+      "tipY": 3176,
+      "id": "heldenwacht-position-134",
+      "icon": "zerst-rte-siedlung.png",
+      "candidates": [
+        {
+          "icon": "zerst-rte-siedlung.png",
+          "score": 0.842
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.503
+        },
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.48
+        }
+      ],
+      "number": 134,
+      "territoryId": "hesirentum-moewenfels"
+    },
+    {
+      "x": 814,
+      "y": 3139,
+      "width": 89,
+      "height": 118,
+      "area": 6966,
+      "tipX": 858.5,
+      "tipY": 3257,
+      "id": "heldenwacht-position-135",
+      "icon": "schiffswrackpin.png",
+      "candidates": [
+        {
+          "icon": "schiffswrackpin.png",
+          "score": 0.867
+        },
+        {
+          "icon": "ziegelbrenner.png",
+          "score": 0.526
+        },
+        {
+          "icon": "methalle.png",
+          "score": 0.516
+        }
+      ],
+      "number": 135,
+      "territoryId": "hesirentum-moewenfels"
+    },
+    {
+      "x": 624,
+      "y": 3162,
+      "width": 89,
+      "height": 119,
+      "area": 6951,
+      "tipX": 668.5,
+      "tipY": 3281,
+      "id": "heldenwacht-position-136",
+      "icon": "hafensiedlung.png",
+      "candidates": [
+        {
+          "icon": "hafensiedlung.png",
+          "score": 0.77
+        },
+        {
+          "icon": "fischerh-tte.png",
+          "score": 0.517
+        },
+        {
+          "icon": "poststation.png",
+          "score": 0.439
+        }
+      ],
+      "number": 136,
+      "territoryId": "hesirentum-moewenfels"
+    },
+    {
+      "x": 3794,
+      "y": 3168,
+      "width": 89,
+      "height": 118,
+      "area": 6949,
+      "tipX": 3838.5,
+      "tipY": 3286,
+      "id": "heldenwacht-position-137",
+      "icon": "marktsiedlung.png",
+      "candidates": [
+        {
+          "icon": "marktsiedlung.png",
+          "score": 0.606
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.503
+        },
+        {
+          "icon": "waldsiedlung.png",
+          "score": 0.463
+        }
+      ],
+      "number": 137,
+      "territoryId": "huskarllehen-lothirblick"
+    },
+    {
+      "x": 490,
+      "y": 3282,
+      "width": 89,
+      "height": 119,
+      "area": 7005,
+      "tipX": 534.5,
+      "tipY": 3401,
+      "id": "heldenwacht-position-138",
+      "icon": "marktsiedlung.png",
+      "candidates": [
+        {
+          "icon": "marktsiedlung.png",
+          "score": 0.679
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.509
+        },
+        {
+          "icon": "waldsiedlung.png",
+          "score": 0.464
+        }
+      ],
+      "number": 138,
+      "territoryId": "hesirentum-moewenfels"
+    },
+    {
+      "x": 303,
+      "y": 3288,
+      "width": 89,
+      "height": 119,
+      "area": 6893,
+      "tipX": 347.5,
+      "tipY": 3407,
+      "id": "heldenwacht-position-139",
+      "icon": "bergbausiedlung.png",
+      "candidates": [
+        {
+          "icon": "bergbausiedlung.png",
+          "score": 0.801
+        },
+        {
+          "icon": "antikes-grab.png",
+          "score": 0.543
+        },
+        {
+          "icon": "k-hler3.png",
+          "score": 0.511
+        }
+      ],
+      "number": 139,
+      "territoryId": "hesirentum-moewenfels"
+    },
+    {
+      "x": 3129,
+      "y": 635,
+      "width": 118,
+      "height": 279,
+      "area": 19304,
+      "tipX": 3174,
+      "tipY": 827,
+      "id": "heldenwacht-position-140",
+      "icon": "zerst-rte-siedlung.png",
+      "candidates": [
+        {
+          "icon": "schmuggler2.png",
+          "score": 0.329
+        },
+        {
+          "icon": "turnierplatz.png",
+          "score": 0.319
+        },
+        {
+          "icon": "ahnenbaum.png",
+          "score": 0.311
+        }
+      ],
+      "note": "Manuell getrennte Einzelspitze aus überlappender Komponente 23; Teil 2/3.",
+      "number": 140,
+      "territoryId": "piratentum-sirenen-zahn-riff"
+    },
+    {
+      "x": 3129,
+      "y": 635,
+      "width": 118,
+      "height": 279,
+      "area": 19304,
+      "tipX": 3196,
+      "tipY": 914,
+      "id": "heldenwacht-position-141",
+      "icon": "zerst-rte-siedlung.png",
+      "candidates": [
+        {
+          "icon": "schmuggler2.png",
+          "score": 0.329
+        },
+        {
+          "icon": "turnierplatz.png",
+          "score": 0.319
+        },
+        {
+          "icon": "ahnenbaum.png",
+          "score": 0.311
+        }
+      ],
+      "note": "Manuell getrennte Einzelspitze aus überlappender Komponente 23; Teil 3/3.",
+      "number": 141,
+      "territoryId": "piratentum-sirenen-zahn-riff"
+    },
+    {
+      "x": 2386,
+      "y": 807,
+      "width": 104,
+      "height": 236,
+      "area": 13983,
+      "tipX": 2428,
+      "tipY": 1043,
+      "id": "heldenwacht-position-142",
+      "icon": "hafensiedlung.png",
+      "candidates": [
+        {
+          "icon": "waldsiedlung.png",
+          "score": 0.277
+        },
+        {
+          "icon": "turnierplatz.png",
+          "score": 0.258
+        },
+        {
+          "icon": "holzf-llerlager.png",
+          "score": 0.258
+        }
+      ],
+      "note": "Manuell getrennte Einzelspitze aus überlappender Komponente 33; Teil 2/2.",
+      "number": 142,
+      "territoryId": "hesirentum-wellenklang"
+    },
+    {
+      "x": 3449,
+      "y": 1023,
+      "width": 138,
+      "height": 234,
+      "area": 15893,
+      "tipX": 3501,
+      "tipY": 1257,
+      "id": "heldenwacht-position-143",
+      "icon": "zerst-rter-turm.png",
+      "candidates": [
+        {
+          "icon": "schiffswrackpin.png",
+          "score": 0.427
+        },
+        {
+          "icon": "stadtruine.png",
+          "score": 0.416
+        },
+        {
+          "icon": "gro-e-burg.png",
+          "score": 0.375
+        }
+      ],
+      "note": "Manuell getrennte Einzelspitze aus überlappender Komponente 49; Teil 2/2.",
+      "number": 143,
+      "territoryId": "piratentum-sirenen-zahn-riff"
+    },
+    {
+      "x": 400,
+      "y": 1181,
+      "width": 137,
+      "height": 336,
+      "area": 21020,
+      "tipX": 477,
+      "tipY": 1390,
+      "id": "heldenwacht-position-144",
+      "icon": "taverne.png",
+      "candidates": [
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.332
+        },
+        {
+          "icon": "h-hle.png",
+          "score": 0.33
+        },
+        {
+          "icon": "taverne.png",
+          "score": 0.327
+        }
+      ],
+      "note": "Manuell getrennte Einzelspitze aus überlappender Komponente 63; Teil 2/3.",
+      "number": 144,
+      "territoryId": "herrschaft-riesentod"
+    },
+    {
+      "x": 400,
+      "y": 1181,
+      "width": 137,
+      "height": 336,
+      "area": 21020,
+      "tipX": 498,
+      "tipY": 1517,
+      "id": "heldenwacht-position-145",
+      "icon": "bauernsiedlung-2.png",
+      "candidates": [
+        {
+          "icon": "ritterlicheszelt.png",
+          "score": 0.332
+        },
+        {
+          "icon": "h-hle.png",
+          "score": 0.33
+        },
+        {
+          "icon": "taverne.png",
+          "score": 0.327
+        }
+      ],
+      "note": "Manuell getrennte Einzelspitze aus überlappender Komponente 63; Teil 3/3.",
+      "number": 145,
+      "territoryId": "herrschaft-riesentod"
+    },
+    {
+      "x": 249,
+      "y": 1585,
+      "width": 97,
+      "height": 238,
+      "area": 14019,
+      "tipX": 310,
+      "tipY": 1823,
+      "id": "heldenwacht-position-146",
+      "icon": "klostersiedlung.png",
+      "candidates": [
+        {
+          "icon": "goblinlager.png",
+          "score": 0.426
+        },
+        {
+          "icon": "kutscher.png",
+          "score": 0.376
+        },
+        {
+          "icon": "kreaturenhort.png",
+          "score": 0.37
+        }
+      ],
+      "note": "Manuell getrennte Einzelspitze aus überlappender Komponente 85; Teil 2/2.",
+      "number": 146,
+      "territoryId": "herrschaft-sturmgeborene"
+    },
+    {
+      "x": 587,
+      "y": 1169,
+      "width": 100,
+      "height": 118,
+      "tipX": 637,
+      "tipY": 1287,
+      "icon": "bauernsiedlung-2.png",
+      "note": "Vigfinnstad: weißer Direktlehenskreis auf der Regionskarte am alten Hofplatz; Pin auf Markerkarte ausgelassen. Name, Viehhaltung und Zielspitze durch den vorhandenen WA-Marker 637:2159 belegt.",
+      "number": 147,
+      "id": "heldenwacht-position-147",
+      "territoryId": "direktlehen-tal-der-helden"
+    }
+  ]
+}

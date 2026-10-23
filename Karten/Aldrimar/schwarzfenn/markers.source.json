@@ -1,0 +1,3891 @@
+{
+  "imageSize": [
+    3826,
+    4097
+  ],
+  "coordinateOrigin": "bottom-left",
+  "markers": [
+    {
+      "id": "schwarzfenn-a591f45f-4abb-4346-9eaf-f6d0db060090",
+      "title": "Grimfjell",
+      "category": "Turmruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/zerst-rter-turm.png",
+      "territoryId": "hesirentum-wolfsfenn",
+      "x": 2224.0,
+      "y": 3979,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "a591f45f-4abb-4346-9eaf-f6d0db060090",
+        "url": "https://www.worldanvil.com/world/map/marker/a591f45f-4abb-4346-9eaf-f6d0db060090/edit",
+        "title": "Grimfjell",
+        "coordinates": {
+          "x": 2146.0,
+          "y": 3935.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 2224.0,
+          "y": 118,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-001"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-neu-002",
+      "title": "Fjellbruch",
+      "category": "Siedlungsruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/zerst-rte-siedlung.png",
+      "territoryId": "hesirentum-wolfsfenn",
+      "x": 2077.0,
+      "y": 3944,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "aleria",
+        "mapPositionId": "schwarzfenn-position-002",
+        "basis": "Nutzerauftrag 22.10.2026: neue Karten priorisieren; Ortslage und Zugehörigkeit mit passenden Beschreibungen anpassen.",
+        "targetPosition": {
+          "x": 2077.0,
+          "y": 153,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-002"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-neu-003",
+      "title": "Skarnsdal",
+      "category": "Siedlungsruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/zerst-rte-siedlung.png",
+      "territoryId": "hesirentum-wolfsfenn",
+      "x": 1933.0,
+      "y": 3836,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "aleria",
+        "mapPositionId": "schwarzfenn-position-003",
+        "basis": "Nutzerauftrag 22.10.2026: neue Karten priorisieren; Ortslage und Zugehörigkeit mit passenden Beschreibungen anpassen.",
+        "targetPosition": {
+          "x": 1933.0,
+          "y": 261,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-003"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-53a773cf-0e4a-434a-9c2b-aa73aae721f3",
+      "title": "Skrammborg",
+      "category": "Burg",
+      "templateId": "gebaeude",
+      "icon": "/Karten/assets/icons/welt/gro-e-burg.png",
+      "territoryId": "herrschaft-schmetterschilde",
+      "x": 1884.0,
+      "y": 3645,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "53a773cf-0e4a-434a-9c2b-aa73aae721f3",
+        "url": "https://www.worldanvil.com/world/map/marker/53a773cf-0e4a-434a-9c2b-aa73aae721f3/edit",
+        "title": "Skrammborg",
+        "coordinates": {
+          "x": 1888.0,
+          "y": 3746.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 1884.0,
+          "y": 452,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-004"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-7b45b03b-f051-47eb-a930-6112fc564e74",
+      "title": "Nidhvelg",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "herrschaft-schmetterschilde",
+      "x": 2195.0,
+      "y": 3542,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "7b45b03b-f051-47eb-a930-6112fc564e74",
+        "url": "https://www.worldanvil.com/world/map/marker/7b45b03b-f051-47eb-a930-6112fc564e74/edit",
+        "title": "Nidhvelg",
+        "coordinates": {
+          "x": 2161.0,
+          "y": 3526.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 2195.0,
+          "y": 555,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-005"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-05bd930e-ef29-46f1-83f2-bb3259ad1179",
+      "title": "Jarnholm",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "herrschaft-schmetterschilde",
+      "x": 2446.0,
+      "y": 3541,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "05bd930e-ef29-46f1-83f2-bb3259ad1179",
+        "url": "https://www.worldanvil.com/world/map/marker/05bd930e-ef29-46f1-83f2-bb3259ad1179/edit",
+        "title": "Jarnholm",
+        "coordinates": {
+          "x": 2469.0,
+          "y": 3473.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 2446.0,
+          "y": 556,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-006"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-58b80d05-2e79-4995-8964-b41eb87663c2",
+      "title": "Wolfsklamm",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "hesirentum-wolfsfenn",
+      "x": 1708.5,
+      "y": 3391,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "58b80d05-2e79-4995-8964-b41eb87663c2",
+        "url": "https://www.worldanvil.com/world/map/marker/58b80d05-2e79-4995-8964-b41eb87663c2/edit",
+        "title": "Wolfsklamm",
+        "coordinates": {
+          "x": 1692.0,
+          "y": 3476.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 1708.5,
+          "y": 706,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-007"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-16d453dc-d807-47ef-83b8-9413c2d63fca",
+      "title": "Stornborg",
+      "category": "Ruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/stadtruine.png",
+      "territoryId": "thanentum-gramfenn",
+      "x": 3580.0,
+      "y": 3464,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "16d453dc-d807-47ef-83b8-9413c2d63fca",
+        "url": "https://www.worldanvil.com/world/map/marker/16d453dc-d807-47ef-83b8-9413c2d63fca/edit",
+        "title": "Stornborg",
+        "coordinates": {
+          "x": 3597.0,
+          "y": 3524.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 3580.0,
+          "y": 633,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-008"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-2fdd9e33-2acb-4814-bd75-cd329775367f",
+      "title": "Die Titanenbrecher",
+      "category": "Festung",
+      "templateId": "gebaeude",
+      "icon": "/Karten/assets/icons/welt/festung.png",
+      "territoryId": "thanentum-gramfenn",
+      "x": 3340.5,
+      "y": 3452,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "2fdd9e33-2acb-4814-bd75-cd329775367f",
+        "url": "https://www.worldanvil.com/world/map/marker/2fdd9e33-2acb-4814-bd75-cd329775367f/edit",
+        "title": "Die Titanenbrecher",
+        "coordinates": {
+          "x": 3348.0,
+          "y": 3446.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 3340.5,
+          "y": 645,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-009"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-4c9fbfff-6ae7-4f32-9e8b-81024e32c611",
+      "title": "Kornstoll",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "herrschaft-schmetterschilde",
+      "x": 2838.0,
+      "y": 3458,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "4c9fbfff-6ae7-4f32-9e8b-81024e32c611",
+        "url": "https://www.worldanvil.com/world/map/marker/4c9fbfff-6ae7-4f32-9e8b-81024e32c611/edit",
+        "title": "Kornstoll",
+        "coordinates": {
+          "x": 2839.0,
+          "y": 3428.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 2838.0,
+          "y": 639,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-010"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-9343e0e1-efe7-400d-ac2e-d86664132f25",
+      "title": "Grimbogg",
+      "category": "Siedlungsruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/zerst-rte-siedlung.png",
+      "territoryId": "herrschaft-schmetterschilde",
+      "x": 2108.0,
+      "y": 3385,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "9343e0e1-efe7-400d-ac2e-d86664132f25",
+        "url": "https://www.worldanvil.com/world/map/marker/9343e0e1-efe7-400d-ac2e-d86664132f25/edit",
+        "title": "Grimbogg",
+        "coordinates": {
+          "x": 2102.0,
+          "y": 3360.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 2108.0,
+          "y": 712,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-011"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-4e59d730-962b-4550-9ef7-557f85b8ac29",
+      "title": "Schlackenhall",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "herrschaft-schmetterschilde",
+      "x": 2382.0,
+      "y": 3322,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "4e59d730-962b-4550-9ef7-557f85b8ac29",
+        "url": "https://www.worldanvil.com/world/map/marker/4e59d730-962b-4550-9ef7-557f85b8ac29/edit",
+        "title": "Schlackenhall",
+        "coordinates": {
+          "x": 2361.0,
+          "y": 3292.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 2382.0,
+          "y": 775,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-012"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-9569c765-ce65-46a9-aee5-3eead0eb6235",
+      "title": "Rannsfeld",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "herrschaft-schmetterschilde",
+      "x": 2636.0,
+      "y": 3250,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "9569c765-ce65-46a9-aee5-3eead0eb6235",
+        "url": "https://www.worldanvil.com/world/map/marker/9569c765-ce65-46a9-aee5-3eead0eb6235/edit",
+        "title": "Rannsfeld",
+        "coordinates": {
+          "x": 2630.0,
+          "y": 3210.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 2636.0,
+          "y": 847,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-013"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-ef9ef05e-0781-4e43-a942-21d8aaae87b0",
+      "title": "Erzgrund",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "hesirentum-wolfsfenn",
+      "x": 1408.0,
+      "y": 3198,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "ef9ef05e-0781-4e43-a942-21d8aaae87b0",
+        "url": "https://www.worldanvil.com/world/map/marker/ef9ef05e-0781-4e43-a942-21d8aaae87b0/edit",
+        "title": "Erzgrund",
+        "coordinates": {
+          "x": 1436.0,
+          "y": 3063.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 1408.0,
+          "y": 899,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-014"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-6b301d0a-afdd-4f02-993e-e4864e6089ca",
+      "title": "Sankt Eirinnskirch",
+      "category": "Klostersiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/klostersiedlung.png",
+      "territoryId": "thanentum-gramfenn",
+      "x": 3384.0,
+      "y": 3210,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "6b301d0a-afdd-4f02-993e-e4864e6089ca",
+        "url": "https://www.worldanvil.com/world/map/marker/6b301d0a-afdd-4f02-993e-e4864e6089ca/edit",
+        "title": "Sankt Eirinnskirch",
+        "coordinates": {
+          "x": 3394.0,
+          "y": 3234.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 3384.0,
+          "y": 887,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-015"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-c6fdd21c-66b7-433b-a14e-8dfe59dbe858",
+      "title": "Fenrispfad",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "hesirentum-wolfsfenn",
+      "x": 2045.5,
+      "y": 3188,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "c6fdd21c-66b7-433b-a14e-8dfe59dbe858",
+        "url": "https://www.worldanvil.com/world/map/marker/c6fdd21c-66b7-433b-a14e-8dfe59dbe858/edit",
+        "title": "Fenrispfad",
+        "coordinates": {
+          "x": 2053.0,
+          "y": 3173.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 2045.5,
+          "y": 909,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-016"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-d6d8d6b5-04a2-465e-85a6-956a4aa77103",
+      "title": "Rovensfeld",
+      "category": "Pferdezuchtsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/pferdezuchtsiedlung.png",
+      "territoryId": "pachtsiedlung-rhosmeres-roesser",
+      "x": 1810.0,
+      "y": 3151,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "d6d8d6b5-04a2-465e-85a6-956a4aa77103",
+        "url": "https://www.worldanvil.com/world/map/marker/d6d8d6b5-04a2-465e-85a6-956a4aa77103/edit",
+        "title": "Rovensfeld",
+        "coordinates": {
+          "x": 1821.0,
+          "y": 3125.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 1810.0,
+          "y": 946,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-017"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-b84a0dfd-0520-46a1-83f0-4ab02af0465c",
+      "title": "Ulvarstatt",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "hesirentum-wolfsfenn",
+      "x": 2454.5,
+      "y": 3108,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "b84a0dfd-0520-46a1-83f0-4ab02af0465c",
+        "url": "https://www.worldanvil.com/world/map/marker/b84a0dfd-0520-46a1-83f0-4ab02af0465c/edit",
+        "title": "Ulvarstatt",
+        "coordinates": {
+          "x": 2432.0,
+          "y": 3097.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 2454.5,
+          "y": 989,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-018"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-9d9fffc4-55ad-4c63-95e7-856edf0c2947",
+      "title": "Varnstedt",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "herrschaft-schmetterschilde",
+      "x": 2789.0,
+      "y": 3098,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "9d9fffc4-55ad-4c63-95e7-856edf0c2947",
+        "url": "https://www.worldanvil.com/world/map/marker/9d9fffc4-55ad-4c63-95e7-856edf0c2947/edit",
+        "title": "Varnstedt",
+        "coordinates": {
+          "x": 2772.0,
+          "y": 3074.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 2789.0,
+          "y": 999,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-019"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-8e1fe450-f335-4ca1-8550-a93b36244401",
+      "title": "Stansweide",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "thanentum-gramfenn",
+      "x": 3643.0,
+      "y": 3097,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "8e1fe450-f335-4ca1-8550-a93b36244401",
+        "url": "https://www.worldanvil.com/world/map/marker/8e1fe450-f335-4ca1-8550-a93b36244401/edit",
+        "title": "Stansweide",
+        "coordinates": {
+          "x": 3640.0,
+          "y": 3091.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 3643.0,
+          "y": 1000,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-020"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-1d320f01-b083-4203-ae90-fb5046d13c14",
+      "title": "Dúnla",
+      "category": "Waldsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/waldsiedlung.png",
+      "territoryId": "thanentum-gramfenn",
+      "x": 3120.0,
+      "y": 3067,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "1d320f01-b083-4203-ae90-fb5046d13c14",
+        "url": "https://www.worldanvil.com/world/map/marker/1d320f01-b083-4203-ae90-fb5046d13c14/edit",
+        "title": "Dúnla",
+        "coordinates": {
+          "x": 3116.0,
+          "y": 3085.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 3120.0,
+          "y": 1030,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-021"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-69ab17db-78aa-4a8e-94b9-6fd720b75cd0",
+      "title": "Dunkelkluft",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "hesirentum-wolfsfenn",
+      "x": 1645.5,
+      "y": 3062,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "69ab17db-78aa-4a8e-94b9-6fd720b75cd0",
+        "url": "https://www.worldanvil.com/world/map/marker/69ab17db-78aa-4a8e-94b9-6fd720b75cd0/edit",
+        "title": "Dunkelkluft",
+        "coordinates": {
+          "x": 1779.0,
+          "y": 2996.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 1645.5,
+          "y": 1035,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-022"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-3778c907-020a-4b95-b9fc-fb468ab53c93",
+      "title": "Havarfried",
+      "category": "Klostersiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/klostersiedlung.png",
+      "territoryId": "herrschaft-graumahnen",
+      "x": 1095.5,
+      "y": 3019,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "3778c907-020a-4b95-b9fc-fb468ab53c93",
+        "url": "https://www.worldanvil.com/world/map/marker/3778c907-020a-4b95-b9fc-fb468ab53c93/edit",
+        "title": "Havarfried",
+        "coordinates": {
+          "x": 1101.0,
+          "y": 3037.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 1095.5,
+          "y": 1078,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-023"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-6e476805-c0fe-4cfe-91bb-7abce5cb96a5",
+      "title": "Lindkorn",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "hesirentum-wolfsfenn",
+      "x": 2167.0,
+      "y": 2981,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "6e476805-c0fe-4cfe-91bb-7abce5cb96a5",
+        "url": "https://www.worldanvil.com/world/map/marker/6e476805-c0fe-4cfe-91bb-7abce5cb96a5/edit",
+        "title": "Lindkorn",
+        "coordinates": {
+          "x": 2176.0,
+          "y": 2980.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 2167.0,
+          "y": 1116,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-024"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-neu-025",
+      "title": "Hufhain",
+      "category": "Siedlungsruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/zerst-rte-siedlung.png",
+      "territoryId": "herrschaft-graumahnen",
+      "x": 1418.0,
+      "y": 2926,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "aleria",
+        "mapPositionId": "schwarzfenn-position-025",
+        "basis": "Nutzerauftrag 22.10.2026: neue Karten priorisieren; Ortslage und Zugehörigkeit mit passenden Beschreibungen anpassen.",
+        "targetPosition": {
+          "x": 1418.0,
+          "y": 1171,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-025"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-1503c5c3-7e00-49d1-aeb0-4ebddf23fa9c",
+      "title": "Zum Heulenden Wolf",
+      "category": "Taverne",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/taverne.png",
+      "territoryId": "hesirentum-wolfsfenn",
+      "x": 1889.0,
+      "y": 2927,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "1503c5c3-7e00-49d1-aeb0-4ebddf23fa9c",
+        "url": "https://www.worldanvil.com/world/map/marker/1503c5c3-7e00-49d1-aeb0-4ebddf23fa9c/edit",
+        "title": "Zum Heulenden Wolf",
+        "coordinates": {
+          "x": 1741.0,
+          "y": 2845.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 1889.0,
+          "y": 1170,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-026"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-ab550573-9a05-4e1b-87d8-68afe4543943",
+      "title": "Vidrabrück",
+      "category": "Flusssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/flusssiedlung.png",
+      "territoryId": "hesirentum-wolfsfenn",
+      "x": 2784.0,
+      "y": 2879,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "ab550573-9a05-4e1b-87d8-68afe4543943",
+        "url": "https://www.worldanvil.com/world/map/marker/ab550573-9a05-4e1b-87d8-68afe4543943/edit",
+        "title": "Vidrabrück",
+        "coordinates": {
+          "x": 2775.0,
+          "y": 2899.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 2784.0,
+          "y": 1218,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-027"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-e7e39bd2-7886-4101-b56f-c6958f5f3c35",
+      "title": "Fíadh",
+      "category": "Waldsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/waldsiedlung.png",
+      "territoryId": "thanentum-gramfenn",
+      "x": 3430.0,
+      "y": 2877,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "e7e39bd2-7886-4101-b56f-c6958f5f3c35",
+        "url": "https://www.worldanvil.com/world/map/marker/e7e39bd2-7886-4101-b56f-c6958f5f3c35/edit",
+        "title": "Fíadh",
+        "coordinates": {
+          "x": 3419.0,
+          "y": 2901.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 3430.0,
+          "y": 1220,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-028"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-bb7843b4-56b8-49c0-8b6a-97ce572fdee0",
+      "title": "Grámborg",
+      "category": "Burg",
+      "templateId": "gebaeude",
+      "icon": "/Karten/assets/icons/welt/gro-e-burg.png",
+      "territoryId": "herrschaft-graumahnen",
+      "x": 1194.0,
+      "y": 2809,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "bb7843b4-56b8-49c0-8b6a-97ce572fdee0",
+        "url": "https://www.worldanvil.com/world/map/marker/bb7843b4-56b8-49c0-8b6a-97ce572fdee0/edit",
+        "title": "Grámborg",
+        "coordinates": {
+          "x": 1224.0,
+          "y": 2820.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 1194.0,
+          "y": 1288,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-029"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-7815dc9c-4359-4979-a71f-aba1347cee50",
+      "title": "Trauerwald",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "thanentum-gramfenn",
+      "x": 3167.0,
+      "y": 2727,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "7815dc9c-4359-4979-a71f-aba1347cee50",
+        "url": "https://www.worldanvil.com/world/map/marker/7815dc9c-4359-4979-a71f-aba1347cee50/edit",
+        "title": "Trauerwald",
+        "coordinates": {
+          "x": 3185.0,
+          "y": 2734.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 3167.0,
+          "y": 1370,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-030"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-fcc40ada-9d0d-4db5-b8ea-721d4fd9dfa8",
+      "title": "Hurinnsblick",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "hesirentum-wolfsfenn",
+      "x": 2482.0,
+      "y": 2802,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "fcc40ada-9d0d-4db5-b8ea-721d4fd9dfa8",
+        "url": "https://www.worldanvil.com/world/map/marker/fcc40ada-9d0d-4db5-b8ea-721d4fd9dfa8/edit",
+        "title": "Hurinnsblick",
+        "coordinates": {
+          "x": 2486.0,
+          "y": 2805.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 2482.0,
+          "y": 1295,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-031"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-3bd31b52-139b-443a-8cc4-13e2d56f87b6",
+      "title": "Landgut der Ragnulf",
+      "category": "Landgut",
+      "templateId": "gebaeude",
+      "icon": "/Karten/assets/icons/welt/methalle.png",
+      "territoryId": "hesirentum-wolfsfenn",
+      "x": 2167.0,
+      "y": 2734,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "3bd31b52-139b-443a-8cc4-13e2d56f87b6",
+        "url": "https://www.worldanvil.com/world/map/marker/3bd31b52-139b-443a-8cc4-13e2d56f87b6/edit",
+        "title": "Landgut der Ragnulf",
+        "coordinates": {
+          "x": 2171.0,
+          "y": 2758.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 2167.0,
+          "y": 1363,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-032"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-88387aba-462e-4c12-8021-0f6eaffb6268",
+      "title": "Wulfsweiler",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "herrschaft-graumahnen",
+      "x": 1526.0,
+      "y": 2757,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "88387aba-462e-4c12-8021-0f6eaffb6268",
+        "url": "https://www.worldanvil.com/world/map/marker/88387aba-462e-4c12-8021-0f6eaffb6268/edit",
+        "title": "Wulfsweiler",
+        "coordinates": {
+          "x": 1513.0,
+          "y": 2845.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 1526.0,
+          "y": 1340,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-033"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-bd16206f-164b-415a-b1b3-a6185c96343f",
+      "title": "Hargbolg - Balthors Söhne",
+      "category": "Burg",
+      "templateId": "gebaeude",
+      "icon": "/Karten/assets/icons/welt/kleine-burg.png",
+      "territoryId": "ordenssitze-balthors-soehne",
+      "x": 1760.0,
+      "y": 2742,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "bd16206f-164b-415a-b1b3-a6185c96343f",
+        "url": "https://www.worldanvil.com/world/map/marker/bd16206f-164b-415a-b1b3-a6185c96343f/edit",
+        "title": "Hargbolg - Balthors Söhne",
+        "coordinates": {
+          "x": 1793.0,
+          "y": 2730.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 1760.0,
+          "y": 1355,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-034"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-1cd47ae5-f3d0-4bd1-b44b-9667e47b3d0c",
+      "title": "Kronenweg",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "thanentum-gramfenn",
+      "x": 3710.0,
+      "y": 2708,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "1cd47ae5-f3d0-4bd1-b44b-9667e47b3d0c",
+        "url": "https://www.worldanvil.com/world/map/marker/1cd47ae5-f3d0-4bd1-b44b-9667e47b3d0c/edit",
+        "title": "Kronenweg",
+        "coordinates": {
+          "x": 3712.0,
+          "y": 2722.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 3710.0,
+          "y": 1389,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-035"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-b18f08a5-1819-4007-b152-d50859e29c28",
+      "title": "Árach",
+      "category": "Waldsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/waldsiedlung.png",
+      "territoryId": "thanentum-gramfenn",
+      "x": 2802.0,
+      "y": 2633,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "b18f08a5-1819-4007-b152-d50859e29c28",
+        "url": "https://www.worldanvil.com/world/map/marker/b18f08a5-1819-4007-b152-d50859e29c28/edit",
+        "title": "Árach",
+        "coordinates": {
+          "x": 2795.0,
+          "y": 2648.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 2802.0,
+          "y": 1464,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-036"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-2171b760-17ac-4895-83d2-deb475f08ef2",
+      "title": "Hurinnshöh",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "herrschaft-graumahnen",
+      "x": 2330.0,
+      "y": 2624,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "2171b760-17ac-4895-83d2-deb475f08ef2",
+        "url": "https://www.worldanvil.com/world/map/marker/2171b760-17ac-4895-83d2-deb475f08ef2/edit",
+        "title": "Hurinnshöh",
+        "coordinates": {
+          "x": 2333.0,
+          "y": 2602.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 2330.0,
+          "y": 1473,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-037"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-fde3c35b-ef6b-4ece-a2d0-3cb6b9892c77",
+      "title": "Torvenfeld",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "herrschaft-graumahnen",
+      "x": 1291.0,
+      "y": 2613,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "fde3c35b-ef6b-4ece-a2d0-3cb6b9892c77",
+        "url": "https://www.worldanvil.com/world/map/marker/fde3c35b-ef6b-4ece-a2d0-3cb6b9892c77/edit",
+        "title": "Torvenfeld",
+        "coordinates": {
+          "x": 1323.0,
+          "y": 2602.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 1291.0,
+          "y": 1484,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-038"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-224a8595-68f3-46e6-9db0-a4b9c4f237f9",
+      "title": "Fenrisvakt",
+      "category": "Turm",
+      "templateId": "gebaeude",
+      "icon": "/Karten/assets/icons/welt/turm.png",
+      "territoryId": "hesirentum-flussblick",
+      "x": 889.0,
+      "y": 2570,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "224a8595-68f3-46e6-9db0-a4b9c4f237f9",
+        "url": "https://www.worldanvil.com/world/map/marker/224a8595-68f3-46e6-9db0-a4b9c4f237f9/edit",
+        "title": "Fenrisvakt",
+        "coordinates": {
+          "x": 899.0,
+          "y": 2593.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 889.0,
+          "y": 1527,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-039"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-490b3739-7ed9-41f5-8a55-e2e08d6765a6",
+      "title": "Arnsholm",
+      "category": "Ruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/antike-ruine.png",
+      "territoryId": "hesirentum-wolfsfenn",
+      "x": 1932.0,
+      "y": 2550,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "490b3739-7ed9-41f5-8a55-e2e08d6765a6",
+        "url": "https://www.worldanvil.com/world/map/marker/490b3739-7ed9-41f5-8a55-e2e08d6765a6/edit",
+        "title": "Arnsholm",
+        "coordinates": {
+          "x": 1926.0,
+          "y": 2575.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 1932.0,
+          "y": 1547,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-040"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-f4faa005-c3dd-4d12-a15b-ed4be01380cf",
+      "title": "Seóla",
+      "category": "Waldsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/waldsiedlung.png",
+      "territoryId": "thanentum-gramfenn",
+      "x": 3439.0,
+      "y": 2537,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "f4faa005-c3dd-4d12-a15b-ed4be01380cf",
+        "url": "https://www.worldanvil.com/world/map/marker/f4faa005-c3dd-4d12-a15b-ed4be01380cf/edit",
+        "title": "Seóla",
+        "coordinates": {
+          "x": 3454.0,
+          "y": 2554.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 3439.0,
+          "y": 1560,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-041"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-b5563431-ca7c-4769-86e1-a3c8ea81018c",
+      "title": "Shorsheim",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "herrschaft-graumahnen",
+      "x": 1491.5,
+      "y": 2528,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "b5563431-ca7c-4769-86e1-a3c8ea81018c",
+        "url": "https://www.worldanvil.com/world/map/marker/b5563431-ca7c-4769-86e1-a3c8ea81018c/edit",
+        "title": "Shorsheim",
+        "coordinates": {
+          "x": 1518.0,
+          "y": 2579.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 1491.5,
+          "y": 1569,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-042"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-056e32cf-909e-4faa-bbf5-c33bedc23fff",
+      "title": "Erlingshof",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "herrschaft-graumahnen",
+      "x": 2154.0,
+      "y": 2468,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "056e32cf-909e-4faa-bbf5-c33bedc23fff",
+        "url": "https://www.worldanvil.com/world/map/marker/056e32cf-909e-4faa-bbf5-c33bedc23fff/edit",
+        "title": "Erlingshof",
+        "coordinates": {
+          "x": 2147.0,
+          "y": 2484.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 2154.0,
+          "y": 1629,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-043"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-neu-044",
+      "title": "Hurinnwacht",
+      "category": "Turm",
+      "templateId": "gebaeude",
+      "icon": "/Karten/assets/icons/welt/turm.png",
+      "territoryId": "thanentum-gramfenn",
+      "x": 2420.5,
+      "y": 2459,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "aleria",
+        "mapPositionId": "schwarzfenn-position-044",
+        "basis": "Nutzerauftrag 22.10.2026: neue Karten priorisieren; Ortslage und Zugehörigkeit mit passenden Beschreibungen anpassen.",
+        "targetPosition": {
+          "x": 2420.5,
+          "y": 1638,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-044"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-8f13b185-9754-40c5-9209-1637f5f5554a",
+      "title": "Myrkhov",
+      "category": "Siedlungsruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/zerst-rte-siedlung.png",
+      "territoryId": "thanentum-gramfenn",
+      "x": 2838.0,
+      "y": 2400,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "8f13b185-9754-40c5-9209-1637f5f5554a",
+        "url": "https://www.worldanvil.com/world/map/marker/8f13b185-9754-40c5-9209-1637f5f5554a/edit",
+        "title": "Myrkhov",
+        "coordinates": {
+          "x": 2842.0,
+          "y": 2430.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 2838.0,
+          "y": 1697,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-045"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-1606e258-bb17-460a-88f5-f6a4d9c8ad06",
+      "title": "Jagdklingen - Fenris Lager",
+      "category": "Jägerlager",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/j-gerlager.png",
+      "territoryId": "hesirentum-wolfsfenn",
+      "x": 1774.0,
+      "y": 2369,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "1606e258-bb17-460a-88f5-f6a4d9c8ad06",
+        "url": "https://www.worldanvil.com/world/map/marker/1606e258-bb17-460a-88f5-f6a4d9c8ad06/edit",
+        "title": "Jagdklingen - Fenris Lager",
+        "coordinates": {
+          "x": 1771.0,
+          "y": 2418.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 1774.0,
+          "y": 1728,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-046"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-a25481f1-ba1d-4a76-91e8-9cbc9afad5b6",
+      "title": "Flusswall",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "hesirentum-flussblick",
+      "x": 1052.5,
+      "y": 2299,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "a25481f1-ba1d-4a76-91e8-9cbc9afad5b6",
+        "url": "https://www.worldanvil.com/world/map/marker/a25481f1-ba1d-4a76-91e8-9cbc9afad5b6/edit",
+        "title": "Flusswall",
+        "coordinates": {
+          "x": 1048.0,
+          "y": 2316.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 1052.5,
+          "y": 1798,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-047"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-73e95f9a-f147-4cee-9604-0bfc97660149",
+      "title": "Myrkwacht",
+      "category": "Klostersiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/klostersiedlung.png",
+      "territoryId": "thanentum-gramfenn",
+      "x": 3575.0,
+      "y": 2339,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "73e95f9a-f147-4cee-9604-0bfc97660149",
+        "url": "https://www.worldanvil.com/world/map/marker/73e95f9a-f147-4cee-9604-0bfc97660149/edit",
+        "title": "Myrkwacht",
+        "coordinates": {
+          "x": 3581.0,
+          "y": 2371.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 3575.0,
+          "y": 1758,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-048"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-94c04017-2503-429a-a6e0-a16577f80fa0",
+      "title": "Erlingsstatt",
+      "category": "Siedlungsruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/zerst-rte-siedlung.png",
+      "territoryId": "hesirentum-flussblick",
+      "x": 1447.0,
+      "y": 2268,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "94c04017-2503-429a-a6e0-a16577f80fa0",
+        "url": "https://www.worldanvil.com/world/map/marker/94c04017-2503-429a-a6e0-a16577f80fa0/edit",
+        "title": "Erlingsstatt",
+        "coordinates": {
+          "x": 1457.0,
+          "y": 2247.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 1447.0,
+          "y": 1829,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-049"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-7f1472e1-18ae-4d0a-bf74-21864b66a00e",
+      "title": "Sonnheide",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "thanentum-gramfenn",
+      "x": 2953.0,
+      "y": 2247,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "7f1472e1-18ae-4d0a-bf74-21864b66a00e",
+        "url": "https://www.worldanvil.com/world/map/marker/7f1472e1-18ae-4d0a-bf74-21864b66a00e/edit",
+        "title": "Sonnheide",
+        "coordinates": {
+          "x": 2952.0,
+          "y": 2251.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 2953.0,
+          "y": 1850,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-050"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-72a2ea6a-1827-45e0-a306-248d109cf501",
+      "title": "Gravstein",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "herrschaft-graumahnen",
+      "x": 2129.0,
+      "y": 2218,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "72a2ea6a-1827-45e0-a306-248d109cf501",
+        "url": "https://www.worldanvil.com/world/map/marker/72a2ea6a-1827-45e0-a306-248d109cf501/edit",
+        "title": "Gravstein",
+        "coordinates": {
+          "x": 2169.0,
+          "y": 2236.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 2129.0,
+          "y": 1879,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-051"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-8361e51e-8462-4c14-b6fe-0fa3a79c8be0",
+      "title": "Hvarborg - Balthors Söhne",
+      "category": "Burg",
+      "templateId": "gebaeude",
+      "icon": "/Karten/assets/icons/welt/kleine-burg.png",
+      "territoryId": "ordenssitze-balthors-soehne",
+      "x": 3427.0,
+      "y": 2177,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "8361e51e-8462-4c14-b6fe-0fa3a79c8be0",
+        "url": "https://www.worldanvil.com/world/map/marker/8361e51e-8462-4c14-b6fe-0fa3a79c8be0/edit",
+        "title": "Hvarborg - Balthors Söhne",
+        "coordinates": {
+          "x": 3432.0,
+          "y": 2164.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 3427.0,
+          "y": 1920,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-052"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-65bf3d7a-df20-4cf1-a9af-77b1fbb642c5",
+      "title": "Halmsend",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "thanentum-gramfenn",
+      "x": 2462.0,
+      "y": 2166,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "65bf3d7a-df20-4cf1-a9af-77b1fbb642c5",
+        "url": "https://www.worldanvil.com/world/map/marker/65bf3d7a-df20-4cf1-a9af-77b1fbb642c5/edit",
+        "title": "Halmsend",
+        "coordinates": {
+          "x": 2465.0,
+          "y": 2172.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 2462.0,
+          "y": 1931,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-053"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-839a394d-6e98-430b-8f53-0fdb978f54e5",
+      "title": "Wiestebruch",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "thanentum-gramfenn",
+      "x": 3181.0,
+      "y": 2166,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "839a394d-6e98-430b-8f53-0fdb978f54e5",
+        "url": "https://www.worldanvil.com/world/map/marker/839a394d-6e98-430b-8f53-0fdb978f54e5/edit",
+        "title": "Wiestebruch",
+        "coordinates": {
+          "x": 3187.0,
+          "y": 2169.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 3181.0,
+          "y": 1931,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-054"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-faaa6c5e-b554-4d7d-9f7a-05ceb20db5b8",
+      "title": "Mornweide",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "hesirentum-flussblick",
+      "x": 1688.0,
+      "y": 2152,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "faaa6c5e-b554-4d7d-9f7a-05ceb20db5b8",
+        "url": "https://www.worldanvil.com/world/map/marker/faaa6c5e-b554-4d7d-9f7a-05ceb20db5b8/edit",
+        "title": "Mornweide",
+        "coordinates": {
+          "x": 1688.0,
+          "y": 2195.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 1688.0,
+          "y": 1945,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-055"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-4e66224a-02b2-4930-853d-274b27016f58",
+      "title": "Brynhof",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "hesirentum-flussblick",
+      "x": 898.0,
+      "y": 2027,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "4e66224a-02b2-4930-853d-274b27016f58",
+        "url": "https://www.worldanvil.com/world/map/marker/4e66224a-02b2-4930-853d-274b27016f58/edit",
+        "title": "Brynhof",
+        "coordinates": {
+          "x": 891.0,
+          "y": 2023.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 898.0,
+          "y": 2070,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-056"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-950349de-f468-4074-a277-c4a5080f4a8f",
+      "title": "Thyrnberg",
+      "category": "Besondere Orte",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bardensiedlung.png",
+      "territoryId": "hesirentum-flussblick",
+      "x": 1462.0,
+      "y": 1976,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "950349de-f468-4074-a277-c4a5080f4a8f",
+        "url": "https://www.worldanvil.com/world/map/marker/950349de-f468-4074-a277-c4a5080f4a8f/edit",
+        "title": "Thyrnberg",
+        "coordinates": {
+          "x": 1476.0,
+          "y": 1982.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 1462.0,
+          "y": 2121,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-057"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-5c05fd3b-e919-4cea-915d-d38ed3813c69",
+      "title": "Halmarstatt",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "hesirentum-flussblick",
+      "x": 1163.0,
+      "y": 1999,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "5c05fd3b-e919-4cea-915d-d38ed3813c69",
+        "url": "https://www.worldanvil.com/world/map/marker/5c05fd3b-e919-4cea-915d-d38ed3813c69/edit",
+        "title": "Halmarstatt",
+        "coordinates": {
+          "x": 1164.0,
+          "y": 2008.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 1163.0,
+          "y": 2098,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-058"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-00e1496c-07ee-44a2-83e7-7e729bf82b36",
+      "title": "Ackersheim",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "thanentum-gramfenn",
+      "x": 3250.0,
+      "y": 1978,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "00e1496c-07ee-44a2-83e7-7e729bf82b36",
+        "url": "https://www.worldanvil.com/world/map/marker/00e1496c-07ee-44a2-83e7-7e729bf82b36/edit",
+        "title": "Ackersheim",
+        "coordinates": {
+          "x": 3246.0,
+          "y": 1982.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 3250.0,
+          "y": 2119,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-059"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-04e872b3-720d-4e20-9b32-b5b8a26145e6",
+      "title": "Der Trauerschlund",
+      "category": "Taverne",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/taverne.png",
+      "territoryId": "thanentum-gramfenn",
+      "x": 2403.5,
+      "y": 2005,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "04e872b3-720d-4e20-9b32-b5b8a26145e6",
+        "url": "https://www.worldanvil.com/world/map/marker/04e872b3-720d-4e20-9b32-b5b8a26145e6/edit",
+        "title": "Der Trauerschlund",
+        "coordinates": {
+          "x": 2405.0,
+          "y": 1974.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 2403.5,
+          "y": 2092,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-060"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-da58410d-36ef-41a8-bbb4-b59c96d4df20",
+      "title": "Myrrborg",
+      "category": "Burgsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/burgsiedlung.png",
+      "territoryId": "thanentum-gramfenn",
+      "x": 2634.0,
+      "y": 1938,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "da58410d-36ef-41a8-bbb4-b59c96d4df20",
+        "url": "https://www.worldanvil.com/world/map/marker/da58410d-36ef-41a8-bbb4-b59c96d4df20/edit",
+        "title": "Myrrborg",
+        "coordinates": {
+          "x": 2667.0,
+          "y": 1965.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 2634.0,
+          "y": 2159,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-061"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-neu-062",
+      "title": "Coil na Bróin",
+      "category": "Ruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/stadtruine.png",
+      "territoryId": "thanentum-gramfenn",
+      "x": 2030.0,
+      "y": 1944,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "aleria",
+        "mapPositionId": "schwarzfenn-position-062",
+        "basis": "Nutzerauftrag 22.10.2026: neue Karten priorisieren; Ortslage und Zugehörigkeit mit passenden Beschreibungen anpassen.",
+        "targetPosition": {
+          "x": 2030.0,
+          "y": 2153,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-062"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-e75bfd7d-be6b-44ff-90a8-ff29db436ad2",
+      "title": "Eidralborg",
+      "category": "Burg",
+      "templateId": "gebaeude",
+      "icon": "/Karten/assets/icons/welt/kleine-burg.png",
+      "territoryId": "thanentum-lichtfenn",
+      "x": 665.0,
+      "y": 1222,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "e75bfd7d-be6b-44ff-90a8-ff29db436ad2",
+        "url": "https://www.worldanvil.com/world/map/marker/e75bfd7d-be6b-44ff-90a8-ff29db436ad2/edit",
+        "title": "Eidralborg",
+        "coordinates": {
+          "x": 1160.0,
+          "y": 1526.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 665.0,
+          "y": 2875,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-084"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-d7781331-bdf9-4641-8b4c-3546fdc7b546",
+      "title": "Lindweiler",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "hesirentum-flussblick",
+      "x": 1591.0,
+      "y": 1812,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "d7781331-bdf9-4641-8b4c-3546fdc7b546",
+        "url": "https://www.worldanvil.com/world/map/marker/d7781331-bdf9-4641-8b4c-3546fdc7b546/edit",
+        "title": "Lindweiler",
+        "coordinates": {
+          "x": 1533.0,
+          "y": 1839.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 1591.0,
+          "y": 2285,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-064"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-neu-065",
+      "title": "Vánweide",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "hesirentum-flussblick",
+      "x": 845.5,
+      "y": 1809,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "aleria",
+        "mapPositionId": "schwarzfenn-position-065",
+        "basis": "Nutzerauftrag 22.10.2026: neue Karten priorisieren; Ortslage und Zugehörigkeit mit passenden Beschreibungen anpassen.",
+        "targetPosition": {
+          "x": 845.5,
+          "y": 2288,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-065"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-6ee505b1-b12b-4ed3-838b-4c73cde9bace",
+      "title": "Svartskog",
+      "category": "Sumpfsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/sumpfsiedlung.png",
+      "territoryId": "thanentum-todesfenn",
+      "x": 2021.0,
+      "y": 1763,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "6ee505b1-b12b-4ed3-838b-4c73cde9bace",
+        "url": "https://www.worldanvil.com/world/map/marker/6ee505b1-b12b-4ed3-838b-4c73cde9bace/edit",
+        "title": "Svartskog",
+        "coordinates": {
+          "x": 2034.0,
+          "y": 1777.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 2021.0,
+          "y": 2334,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-066"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-5241a77e-6c37-47cb-be88-26907f4eb31e",
+      "title": "Lindheil",
+      "category": "Klostersiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/klostersiedlung.png",
+      "territoryId": "thanentum-gramfenn",
+      "x": 2521.0,
+      "y": 1761,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "5241a77e-6c37-47cb-be88-26907f4eb31e",
+        "url": "https://www.worldanvil.com/world/map/marker/5241a77e-6c37-47cb-be88-26907f4eb31e/edit",
+        "title": "Lindheil",
+        "coordinates": {
+          "x": 2529.0,
+          "y": 1796.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 2521.0,
+          "y": 2336,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-067"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-7622a2d5-cff7-4d27-adaf-6bf82b1d9703",
+      "title": "Fjellkirch",
+      "category": "Siedlungsruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/zerst-rte-siedlung.png",
+      "territoryId": "banditengebiet-silberzaehne",
+      "x": 3030.5,
+      "y": 1706,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "7622a2d5-cff7-4d27-adaf-6bf82b1d9703",
+        "url": "https://www.worldanvil.com/world/map/marker/7622a2d5-cff7-4d27-adaf-6bf82b1d9703/edit",
+        "title": "Fjellkirch",
+        "coordinates": {
+          "x": 3027.0,
+          "y": 1691.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 3030.5,
+          "y": 2391,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-068"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-f056396e-16aa-4b96-887e-8a776c92485f",
+      "title": "Seidhborg",
+      "category": "Burgsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/burgsiedlung.png",
+      "territoryId": "thanentum-gramfenn",
+      "x": 2671.0,
+      "y": 1670,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "f056396e-16aa-4b96-887e-8a776c92485f",
+        "url": "https://www.worldanvil.com/world/map/marker/f056396e-16aa-4b96-887e-8a776c92485f/edit",
+        "title": "Seidhborg",
+        "coordinates": {
+          "x": 2466.0,
+          "y": 1515.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 2671.0,
+          "y": 2427,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-069"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-dbed1b35-c1e2-4116-8b2d-0d58ede199fc",
+      "title": "Blutbund - Turm",
+      "category": "Turm",
+      "templateId": "gebaeude",
+      "icon": "/Karten/assets/icons/welt/turm.png",
+      "territoryId": "thanentum-todesfenn",
+      "x": 2223.0,
+      "y": 1694,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "dbed1b35-c1e2-4116-8b2d-0d58ede199fc",
+        "url": "https://www.worldanvil.com/world/map/marker/dbed1b35-c1e2-4116-8b2d-0d58ede199fc/edit",
+        "title": "Blutbund - Turm",
+        "coordinates": {
+          "x": 2220.0,
+          "y": 1677.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 2223.0,
+          "y": 2403,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-070"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-d877a7b4-72fc-4c04-9489-8ba98575aa86",
+      "title": "Skogvakt",
+      "category": "Sumpfsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/sumpfsiedlung.png",
+      "territoryId": "thanentum-todesfenn",
+      "x": 1865.0,
+      "y": 1650,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "d877a7b4-72fc-4c04-9489-8ba98575aa86",
+        "url": "https://www.worldanvil.com/world/map/marker/d877a7b4-72fc-4c04-9489-8ba98575aa86/edit",
+        "title": "Skogvakt",
+        "coordinates": {
+          "x": 1770.0,
+          "y": 1507.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 1865.0,
+          "y": 2447,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-071"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-699070e4-24a1-4780-955a-0f8a00a172d7",
+      "title": "Aldernfeld",
+      "category": "Flusssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/flusssiedlung.png",
+      "territoryId": "thanentum-lichtfenn",
+      "x": 771.5,
+      "y": 1636,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "699070e4-24a1-4780-955a-0f8a00a172d7",
+        "url": "https://www.worldanvil.com/world/map/marker/699070e4-24a1-4780-955a-0f8a00a172d7/edit",
+        "title": "Aldernfeld",
+        "coordinates": {
+          "x": 773.0,
+          "y": 1666.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 771.5,
+          "y": 2461,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-072"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-4515b093-4cba-4a4f-b5c9-f4431c899e89",
+      "title": "Zum Goldenen Horn",
+      "category": "Taverne",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/taverne.png",
+      "territoryId": "thanentum-lichtfenn",
+      "x": 944.5,
+      "y": 1641,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "4515b093-4cba-4a4f-b5c9-f4431c899e89",
+        "url": "https://www.worldanvil.com/world/map/marker/4515b093-4cba-4a4f-b5c9-f4431c899e89/edit",
+        "title": "Zum Goldenen Horn",
+        "coordinates": {
+          "x": 944.0,
+          "y": 1629.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 944.5,
+          "y": 2456,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-073"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-c7ebbc40-5c6e-4811-913a-e37203c9f145",
+      "title": "Gildstatt",
+      "category": "Brauersiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/brauersiedlung.png",
+      "territoryId": "exklaven-goldglanz-schwarzfenn",
+      "x": 1482.0,
+      "y": 1535,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "c7ebbc40-5c6e-4811-913a-e37203c9f145",
+        "url": "https://www.worldanvil.com/world/map/marker/c7ebbc40-5c6e-4811-913a-e37203c9f145/edit",
+        "title": "Gildstatt",
+        "coordinates": {
+          "x": 1486.0,
+          "y": 1534.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 1482.0,
+          "y": 2562,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-074"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-bb375700-eb36-4b31-b2ac-269f8da4339d",
+      "title": "Dravnborg - Balthors Söhne",
+      "category": "Burgsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/burgsiedlung.png",
+      "territoryId": "ordenssitze-balthors-soehne",
+      "x": 1159.0,
+      "y": 1478,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "bb375700-eb36-4b31-b2ac-269f8da4339d",
+        "url": "https://www.worldanvil.com/world/map/marker/bb375700-eb36-4b31-b2ac-269f8da4339d/edit",
+        "title": "Dravnborg - Balthors Söhne",
+        "coordinates": {
+          "x": 658.0,
+          "y": 1203.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 1159.0,
+          "y": 2619,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-075"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-298112d6-a342-4829-8cf1-e85a78aeaeeb",
+      "title": "Dunkelmoor",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "thanentum-todesfenn",
+      "x": 1970.5,
+      "y": 1329,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "298112d6-a342-4829-8cf1-e85a78aeaeeb",
+        "url": "https://www.worldanvil.com/world/map/marker/298112d6-a342-4829-8cf1-e85a78aeaeeb/edit",
+        "title": "Dunkelmoor",
+        "coordinates": {
+          "x": 1981.0,
+          "y": 1362.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 1970.5,
+          "y": 2768,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-076"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-neu-077",
+      "title": "Fennrinde",
+      "category": "Sumpfsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/sumpfsiedlung.png",
+      "territoryId": "thanentum-todesfenn",
+      "x": 2274.0,
+      "y": 1398,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "aleria",
+        "mapPositionId": "schwarzfenn-position-077",
+        "basis": "Nutzerauftrag 22.10.2026: neue Karten priorisieren; Ortslage und Zugehörigkeit mit passenden Beschreibungen anpassen.",
+        "targetPosition": {
+          "x": 2274.0,
+          "y": 2699,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-077"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-82ce49b7-84a3-4a31-ba98-422ba45a499b",
+      "title": "Hallsvalr",
+      "category": "Grabstätte",
+      "templateId": "natur",
+      "icon": "/Karten/assets/icons/welt/nordische-ruine.png",
+      "territoryId": "banditengebiet-silberzaehne",
+      "x": 3463,
+      "y": 1300,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "82ce49b7-84a3-4a31-ba98-422ba45a499b",
+        "url": "https://www.worldanvil.com/world/map/marker/82ce49b7-84a3-4a31-ba98-422ba45a499b/edit",
+        "title": "Hallsvalr",
+        "coordinates": {
+          "x": 3481.0,
+          "y": 1327.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 3463,
+          "y": 2797,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-078"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-abb17333-1294-4863-90c2-37b65fc4e6fa",
+      "title": "Malmberg",
+      "category": "Siedlungsruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/zerst-rte-siedlung.png",
+      "territoryId": "banditengebiet-silberzaehne",
+      "x": 2856.5,
+      "y": 1355,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "abb17333-1294-4863-90c2-37b65fc4e6fa",
+        "url": "https://www.worldanvil.com/world/map/marker/abb17333-1294-4863-90c2-37b65fc4e6fa/edit",
+        "title": "Malmberg",
+        "coordinates": {
+          "x": 2853.0,
+          "y": 1320.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 2856.5,
+          "y": 2742,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-079"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-ad582230-28b5-472f-9597-6e59c777d3c5",
+      "title": "Düsterbruch",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "thanentum-todesfenn",
+      "x": 2552.0,
+      "y": 1374,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "ad582230-28b5-472f-9597-6e59c777d3c5",
+        "url": "https://www.worldanvil.com/world/map/marker/ad582230-28b5-472f-9597-6e59c777d3c5/edit",
+        "title": "Düsterbruch",
+        "coordinates": {
+          "x": 3094.0,
+          "y": 3464.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 2552.0,
+          "y": 2723,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-080"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-0c7d2120-749b-4f8e-8cdc-98a57965148b",
+      "title": "Vidarrsbrück",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "thanentum-lichtfenn",
+      "x": 829.0,
+      "y": 1364,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "0c7d2120-749b-4f8e-8cdc-98a57965148b",
+        "url": "https://www.worldanvil.com/world/map/marker/0c7d2120-749b-4f8e-8cdc-98a57965148b/edit",
+        "title": "Vidarrsbrück",
+        "coordinates": {
+          "x": 824.0,
+          "y": 1395.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 829.0,
+          "y": 2733,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-081"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-neu-082",
+      "title": "Torfsteg",
+      "category": "Sumpfsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/sumpfsiedlung.png",
+      "territoryId": "thanentum-todesfenn",
+      "x": 1702.0,
+      "y": 1342,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "aleria",
+        "mapPositionId": "schwarzfenn-position-082",
+        "basis": "Nutzerauftrag 22.10.2026: neue Karten priorisieren; Ortslage und Zugehörigkeit mit passenden Beschreibungen anpassen.",
+        "targetPosition": {
+          "x": 1702.0,
+          "y": 2755,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-082"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-8e26b625-b37d-4113-a062-7f960322cb24",
+      "title": "Hraldstein",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "thanentum-lichtfenn",
+      "x": 1106.0,
+      "y": 1328,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "8e26b625-b37d-4113-a062-7f960322cb24",
+        "url": "https://www.worldanvil.com/world/map/marker/8e26b625-b37d-4113-a062-7f960322cb24/edit",
+        "title": "Hraldstein",
+        "coordinates": {
+          "x": 1094.0,
+          "y": 1312.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 1106.0,
+          "y": 2769,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-083"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-neu-063",
+      "title": "Fennbruch",
+      "category": "Siedlungsruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/zerst-rte-siedlung.png",
+      "territoryId": "hesirentum-flussblick",
+      "x": 1220.0,
+      "y": 1789,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "aleria",
+        "mapPositionId": "schwarzfenn-position-063",
+        "basis": "Nutzerauftrag 22.10.2026: neue Karten priorisieren; Ortslage und Zugehörigkeit mit passenden Beschreibungen anpassen.",
+        "targetPosition": {
+          "x": 1220.0,
+          "y": 2308,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-063"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-817384cc-6551-4219-bb32-e686a8afaca3",
+      "title": "Hjorthain",
+      "category": "Waldsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/waldsiedlung.png",
+      "territoryId": "thanentum-lichtfenn",
+      "x": 1414.5,
+      "y": 1177,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "817384cc-6551-4219-bb32-e686a8afaca3",
+        "url": "https://www.worldanvil.com/world/map/marker/817384cc-6551-4219-bb32-e686a8afaca3/edit",
+        "title": "Hjorthain",
+        "coordinates": {
+          "x": 1590.0,
+          "y": 1228.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 1414.5,
+          "y": 2920,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-085"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-6f0e2ea8-477a-48a1-a3c4-bf4febd4c81a",
+      "title": "Järnvatt",
+      "category": "Siedlungsruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/zerst-rte-siedlung.png",
+      "territoryId": "banditengebiet-silberzaehne",
+      "x": 2920.0,
+      "y": 1089,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "6f0e2ea8-477a-48a1-a3c4-bf4febd4c81a",
+        "url": "https://www.worldanvil.com/world/map/marker/6f0e2ea8-477a-48a1-a3c4-bf4febd4c81a/edit",
+        "title": "Järnvatt",
+        "coordinates": {
+          "x": 2937.0,
+          "y": 1084.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 2920.0,
+          "y": 3008,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-086"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-f7c2cf34-0a36-47d5-b719-2a822dcd6a5d",
+      "title": "Myrkdal",
+      "category": "Sumpfsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/sumpfsiedlung.png",
+      "territoryId": "thanentum-todesfenn",
+      "x": 2365.0,
+      "y": 1098,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "f7c2cf34-0a36-47d5-b719-2a822dcd6a5d",
+        "url": "https://www.worldanvil.com/world/map/marker/f7c2cf34-0a36-47d5-b719-2a822dcd6a5d/edit",
+        "title": "Myrkdal",
+        "coordinates": {
+          "x": 2367.0,
+          "y": 1086.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 2365.0,
+          "y": 2999,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-087"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-6814527c-c126-4629-804f-458e188d54bf",
+      "title": "Vargbog",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "thanentum-lichtfenn",
+      "x": 1137.0,
+      "y": 1087,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "6814527c-c126-4629-804f-458e188d54bf",
+        "url": "https://www.worldanvil.com/world/map/marker/6814527c-c126-4629-804f-458e188d54bf/edit",
+        "title": "Vargbog",
+        "coordinates": {
+          "x": 1256.0,
+          "y": 1030.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 1137.0,
+          "y": 3010,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-088"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-eb2bfe96-ac83-4624-a299-19164eaf930d",
+      "title": "Norrskog",
+      "category": "Sumpfsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/sumpfsiedlung.png",
+      "territoryId": "thanentum-todesfenn",
+      "x": 1851.0,
+      "y": 1074,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "eb2bfe96-ac83-4624-a299-19164eaf930d",
+        "url": "https://www.worldanvil.com/world/map/marker/eb2bfe96-ac83-4624-a299-19164eaf930d/edit",
+        "title": "Norrskog",
+        "coordinates": {
+          "x": 1886.0,
+          "y": 1072.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 1851.0,
+          "y": 3023,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-089"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-fc0a3b72-41fb-4257-bd4c-05a3331c7e98",
+      "title": "Moorweide",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung-2.png",
+      "territoryId": "thanentum-lichtfenn",
+      "x": 453.5,
+      "y": 1069,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "fc0a3b72-41fb-4257-bd4c-05a3331c7e98",
+        "url": "https://www.worldanvil.com/world/map/marker/fc0a3b72-41fb-4257-bd4c-05a3331c7e98/edit",
+        "title": "Moorweide",
+        "coordinates": {
+          "x": 449.0,
+          "y": 1060.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 453.5,
+          "y": 3028,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-090"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-ea868951-45ca-409e-90d6-552c478ea14b",
+      "title": "Nebelkirch",
+      "category": "Klostersiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/klostersiedlung.png",
+      "territoryId": "thanentum-lichtfenn",
+      "x": 831.0,
+      "y": 992,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "ea868951-45ca-409e-90d6-552c478ea14b",
+        "url": "https://www.worldanvil.com/world/map/marker/ea868951-45ca-409e-90d6-552c478ea14b/edit",
+        "title": "Nebelkirch",
+        "coordinates": {
+          "x": 830.0,
+          "y": 1016.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 831.0,
+          "y": 3105,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-091"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-f9ecfc51-998b-4c07-89dc-6a09f6ee0bd7",
+      "title": "Djúpholmr",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "thanentum-todesfenn",
+      "x": 2663.0,
+      "y": 921,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "f9ecfc51-998b-4c07-89dc-6a09f6ee0bd7",
+        "url": "https://www.worldanvil.com/world/map/marker/f9ecfc51-998b-4c07-89dc-6a09f6ee0bd7/edit",
+        "title": "Djúpholmr",
+        "coordinates": {
+          "x": 2670.0,
+          "y": 905.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 2663.0,
+          "y": 3176,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-092"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-neu-093",
+      "title": "Moorwachtlager",
+      "category": "Jägerlager",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/j-gerlager.png",
+      "territoryId": "thanentum-todesfenn",
+      "x": 1707.0,
+      "y": 876,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "aleria",
+        "mapPositionId": "schwarzfenn-position-093",
+        "basis": "Nutzerauftrag 22.10.2026: neue Karten priorisieren; Ortslage und Zugehörigkeit mit passenden Beschreibungen anpassen.",
+        "targetPosition": {
+          "x": 1707.0,
+          "y": 3221,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-093"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-c02dc499-2f8a-4616-a91d-68a53186657c",
+      "title": "Frostbaug",
+      "category": "Sumpfsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/sumpfsiedlung.png",
+      "territoryId": "thanentum-todesfenn",
+      "x": 2201.5,
+      "y": 878,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "c02dc499-2f8a-4616-a91d-68a53186657c",
+        "url": "https://www.worldanvil.com/world/map/marker/c02dc499-2f8a-4616-a91d-68a53186657c/edit",
+        "title": "Frostbaug",
+        "coordinates": {
+          "x": 2118.0,
+          "y": 859.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 2201.5,
+          "y": 3219,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-094"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-d8ae4639-2c02-4165-aeb8-4765b03b7741",
+      "title": "Hrafnvik",
+      "category": "Siedlungsruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/zerst-rte-siedlung.png",
+      "territoryId": "banditengebiet-silberzaehne",
+      "x": 3086.0,
+      "y": 876,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "d8ae4639-2c02-4165-aeb8-4765b03b7741",
+        "url": "https://www.worldanvil.com/world/map/marker/d8ae4639-2c02-4165-aeb8-4765b03b7741/edit",
+        "title": "Hrafnvik",
+        "coordinates": {
+          "x": 3091.0,
+          "y": 856.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 3086.0,
+          "y": 3221,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-095"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-bcb7a2db-8635-4324-8010-f6026faa5c8c",
+      "title": "Finstermoor",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "thanentum-lichtfenn",
+      "x": 324.5,
+      "y": 785,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "bcb7a2db-8635-4324-8010-f6026faa5c8c",
+        "url": "https://www.worldanvil.com/world/map/marker/bcb7a2db-8635-4324-8010-f6026faa5c8c/edit",
+        "title": "Finstermoor",
+        "coordinates": {
+          "x": 378.0,
+          "y": 756.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 324.5,
+          "y": 3312,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-096"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-84059f52-bf95-435e-9d3f-1f07fd1f7ae0",
+      "title": "Die Schwarze Fährte",
+      "category": "Taverne",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/taverne.png",
+      "territoryId": "thanentum-lichtfenn",
+      "x": 1238.5,
+      "y": 874,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "84059f52-bf95-435e-9d3f-1f07fd1f7ae0",
+        "url": "https://www.worldanvil.com/world/map/marker/84059f52-bf95-435e-9d3f-1f07fd1f7ae0/edit",
+        "title": "Die Schwarze Fährte",
+        "coordinates": {
+          "x": 1252.0,
+          "y": 840.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 1238.5,
+          "y": 3223,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-097"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-4080c88b-0ebf-4853-895f-14fe47f2b333",
+      "title": "Ravnholm",
+      "category": "Flusssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/flusssiedlung.png",
+      "territoryId": "thanentum-lichtfenn",
+      "x": 1516.5,
+      "y": 835,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "4080c88b-0ebf-4853-895f-14fe47f2b333",
+        "url": "https://www.worldanvil.com/world/map/marker/4080c88b-0ebf-4853-895f-14fe47f2b333/edit",
+        "title": "Ravnholm",
+        "coordinates": {
+          "x": 1498.0,
+          "y": 784.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 1516.5,
+          "y": 3262,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-098"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-neu-099",
+      "title": "Krähenried",
+      "category": "Sumpfsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/sumpfsiedlung.png",
+      "territoryId": "thanentum-todesfenn",
+      "x": 1924.0,
+      "y": 795,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "aleria",
+        "mapPositionId": "schwarzfenn-position-099",
+        "basis": "Nutzerauftrag 22.10.2026: neue Karten priorisieren; Ortslage und Zugehörigkeit mit passenden Beschreibungen anpassen.",
+        "targetPosition": {
+          "x": 1924.0,
+          "y": 3302,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-099"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-neu-100",
+      "title": "Bruchturm von Hallsvalr",
+      "category": "Turmruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/zerst-rter-turm.png",
+      "territoryId": "banditengebiet-silberzaehne",
+      "x": 3203.0,
+      "y": 760,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "aleria",
+        "mapPositionId": "schwarzfenn-position-100",
+        "basis": "Nutzerauftrag 22.10.2026: neue Karten priorisieren; Ortslage und Zugehörigkeit mit passenden Beschreibungen anpassen.",
+        "targetPosition": {
+          "x": 3203.0,
+          "y": 3337,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-100"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-1ea3eb1f-50bb-410e-8c50-f0b5ad2c7209",
+      "title": "Baldhólm",
+      "category": "Sumpfsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/sumpfsiedlung.png",
+      "territoryId": "thanentum-todesfenn",
+      "x": 2484.0,
+      "y": 746,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "1ea3eb1f-50bb-410e-8c50-f0b5ad2c7209",
+        "url": "https://www.worldanvil.com/world/map/marker/1ea3eb1f-50bb-410e-8c50-f0b5ad2c7209/edit",
+        "title": "Baldhólm",
+        "coordinates": {
+          "x": 2483.0,
+          "y": 735.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 2484.0,
+          "y": 3351,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-101"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-3cf9fd95-4782-4cb2-a44b-649e7f6b5eb8",
+      "title": "Njarnborg",
+      "category": "Burgsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/burgsiedlung.png",
+      "territoryId": "thanentum-lichtfenn",
+      "x": 793.0,
+      "y": 719,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "3cf9fd95-4782-4cb2-a44b-649e7f6b5eb8",
+        "url": "https://www.worldanvil.com/world/map/marker/3cf9fd95-4782-4cb2-a44b-649e7f6b5eb8/edit",
+        "title": "Njarnborg",
+        "coordinates": {
+          "x": 824.0,
+          "y": 752.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 793.0,
+          "y": 3378,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-102"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-7529dd6c-2b9c-4788-a2ad-863fd0ce6d0b",
+      "title": "Trollholm",
+      "category": "Handelssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/marktsiedlung.png",
+      "territoryId": "thanentum-lichtfenn",
+      "x": 1366.0,
+      "y": 703,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "7529dd6c-2b9c-4788-a2ad-863fd0ce6d0b",
+        "url": "https://www.worldanvil.com/world/map/marker/7529dd6c-2b9c-4788-a2ad-863fd0ce6d0b/edit",
+        "title": "Trollholm",
+        "coordinates": {
+          "x": 1172.0,
+          "y": 710.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 1366.0,
+          "y": 3394,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-103"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-42e9aa9a-d73e-472e-a7e9-9a93de423d15",
+      "title": "Dunkelfried",
+      "category": "Klostersiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/klostersiedlung.png",
+      "territoryId": "thanentum-lichtfenn",
+      "x": 301.0,
+      "y": 618,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "42e9aa9a-d73e-472e-a7e9-9a93de423d15",
+        "url": "https://www.worldanvil.com/world/map/marker/42e9aa9a-d73e-472e-a7e9-9a93de423d15/edit",
+        "title": "Dunkelfried",
+        "coordinates": {
+          "x": 297.0,
+          "y": 611.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 301.0,
+          "y": 3479,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-104"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-6e76cb18-1d64-4b40-97e0-cca3cf4d3ed4",
+      "title": "Stenholt",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "territoryId": "thanentum-todesfenn",
+      "x": 2665.0,
+      "y": 603,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "6e76cb18-1d64-4b40-97e0-cca3cf4d3ed4",
+        "url": "https://www.worldanvil.com/world/map/marker/6e76cb18-1d64-4b40-97e0-cca3cf4d3ed4/edit",
+        "title": "Stenholt",
+        "coordinates": {
+          "x": 2664.0,
+          "y": 593.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 2665.0,
+          "y": 3494,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-105"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-3986275c-6274-4efa-9133-c93481c4ce03",
+      "title": "Skarnshain",
+      "category": "Waldsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/waldsiedlung.png",
+      "territoryId": "thanentum-lichtfenn",
+      "x": 1037.5,
+      "y": 568,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "3986275c-6274-4efa-9133-c93481c4ce03",
+        "url": "https://www.worldanvil.com/world/map/marker/3986275c-6274-4efa-9133-c93481c4ce03/edit",
+        "title": "Skarnshain",
+        "coordinates": {
+          "x": 1040.0,
+          "y": 576.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 1037.5,
+          "y": 3529,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-106"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-2634b9f6-f4dd-49ee-b574-fcd3bfc1b06c",
+      "title": "Yggdrastholt",
+      "category": "Sumpfsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/sumpfsiedlung.png",
+      "territoryId": "thanentum-todesfenn",
+      "x": 2274.0,
+      "y": 543,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "2634b9f6-f4dd-49ee-b574-fcd3bfc1b06c",
+        "url": "https://www.worldanvil.com/world/map/marker/2634b9f6-f4dd-49ee-b574-fcd3bfc1b06c/edit",
+        "title": "Yggdrastholt",
+        "coordinates": {
+          "x": 2285.0,
+          "y": 537.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 2274.0,
+          "y": 3554,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-107"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-194b2a8d-532c-4d54-b83c-6780d9c2d7ea",
+      "title": "Zur Goldenen Stute",
+      "category": "Taverne",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/taverne.png",
+      "territoryId": "thanentum-todesfenn",
+      "x": 2051.5,
+      "y": 557,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "194b2a8d-532c-4d54-b83c-6780d9c2d7ea",
+        "url": "https://www.worldanvil.com/world/map/marker/194b2a8d-532c-4d54-b83c-6780d9c2d7ea/edit",
+        "title": "Zur Goldenen Stute",
+        "coordinates": {
+          "x": 1846.0,
+          "y": 772.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 2051.5,
+          "y": 3540,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-108"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-59337ea3-9988-425f-8d2f-86aa624a9d3b",
+      "title": "Bjornstedt",
+      "category": "Siedlungsruine",
+      "templateId": "ruine",
+      "icon": "/Karten/assets/icons/welt/zerst-rte-siedlung.png",
+      "territoryId": "banditengebiet-silberzaehne",
+      "x": 2902.0,
+      "y": 488,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "59337ea3-9988-425f-8d2f-86aa624a9d3b",
+        "url": "https://www.worldanvil.com/world/map/marker/59337ea3-9988-425f-8d2f-86aa624a9d3b/edit",
+        "title": "Bjornstedt",
+        "coordinates": {
+          "x": 2892.0,
+          "y": 467.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 2902.0,
+          "y": 3609,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-109"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-75dc4ce3-cf97-4778-b295-2d81b2a88a86",
+      "title": "Viddaskog",
+      "category": "Flusssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/flusssiedlung.png",
+      "territoryId": "thanentum-todesfenn",
+      "x": 1837.0,
+      "y": 478,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "75dc4ce3-cf97-4778-b295-2d81b2a88a86",
+        "url": "https://www.worldanvil.com/world/map/marker/75dc4ce3-cf97-4778-b295-2d81b2a88a86/edit",
+        "title": "Viddaskog",
+        "coordinates": {
+          "x": 1836.0,
+          "y": 506.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 1837.0,
+          "y": 3619,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-110"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-9258d500-c475-4229-b803-ce96aedc8452",
+      "title": "Goldquell",
+      "category": "Brauersiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/brauersiedlung.png",
+      "territoryId": "exklaven-goldglanz-schwarzfenn",
+      "x": 512.0,
+      "y": 443,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "9258d500-c475-4229-b803-ce96aedc8452",
+        "url": "https://www.worldanvil.com/world/map/marker/9258d500-c475-4229-b803-ce96aedc8452/edit",
+        "title": "Goldquell",
+        "coordinates": {
+          "x": 447.0,
+          "y": 447.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 512.0,
+          "y": 3654,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-111"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-8b1dc3ea-8116-44b5-8f57-9870224c859b",
+      "title": "Moorquell",
+      "category": "Klostersiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/klostersiedlung.png",
+      "territoryId": "thanentum-lichtfenn",
+      "x": 859.0,
+      "y": 384,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "8b1dc3ea-8116-44b5-8f57-9870224c859b",
+        "url": "https://www.worldanvil.com/world/map/marker/8b1dc3ea-8116-44b5-8f57-9870224c859b/edit",
+        "title": "Moorquell",
+        "coordinates": {
+          "x": 858.0,
+          "y": 397.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 859.0,
+          "y": 3713,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-112"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-4e89c3c1-fdb2-44c9-a0c8-e769b43a40f1",
+      "title": "Schattenheil",
+      "category": "Klostersiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/klostersiedlung.png",
+      "territoryId": "thanentum-lichtfenn",
+      "x": 393.0,
+      "y": 162,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "4e89c3c1-fdb2-44c9-a0c8-e769b43a40f1",
+        "url": "https://www.worldanvil.com/world/map/marker/4e89c3c1-fdb2-44c9-a0c8-e769b43a40f1/edit",
+        "title": "Schattenheil",
+        "coordinates": {
+          "x": 390.0,
+          "y": 142.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 393.0,
+          "y": 3935,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-113"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-825e2713-aad5-4b95-b6f0-9d70d6b1842e",
+      "title": "Svartvik",
+      "category": "Flusssiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/flusssiedlung.png",
+      "territoryId": "thanentum-lichtfenn",
+      "x": 631.0,
+      "y": 96,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "825e2713-aad5-4b95-b6f0-9d70d6b1842e",
+        "url": "https://www.worldanvil.com/world/map/marker/825e2713-aad5-4b95-b6f0-9d70d6b1842e/edit",
+        "title": "Svartvik",
+        "coordinates": {
+          "x": 627.0,
+          "y": 83.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 631.0,
+          "y": 4001,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-114"
+        }
+      }
+    },
+    {
+      "id": "schwarzfenn-8b47d9ed-15e0-4613-be3a-78a16951b46a",
+      "title": "Draugrstad",
+      "category": "Banditenlager",
+      "templateId": "monsterhort",
+      "icon": "/Karten/assets/icons/welt/j-gerlager.png",
+      "territoryId": "banditengebiet-silberzaehne",
+      "x": 3329,
+      "y": 1336,
+      "pinMarkerScale": 0.6,
+      "sourceRef": {
+        "provider": "worldanvil",
+        "mapId": "4da935be-9e7a-4eff-a9de-a62f2db46b63",
+        "markerId": "8b47d9ed-15e0-4613-be3a-78a16951b46a",
+        "url": "https://www.worldanvil.com/world/map/marker/8b47d9ed-15e0-4613-be3a-78a16951b46a/edit",
+        "title": "Draugrstad",
+        "coordinates": {
+          "x": 3186.0,
+          "y": 1352.0,
+          "origin": "bottom-left",
+          "unit": "pixel"
+        },
+        "imageSize": [
+          3826,
+          4097
+        ],
+        "targetPosition": {
+          "x": 3329,
+          "y": 2761,
+          "origin": "top-left",
+          "unit": "pixel",
+          "mapPositionId": "schwarzfenn-position-115"
+        }
+      }
+    }
+  ],
+  "unpositionedPlaces": []
+}

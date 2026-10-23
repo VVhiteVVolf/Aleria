@@ -1,0 +1,160 @@
+{
+  "territories": [
+    {
+      "id": "koenigreich-vennyr",
+      "name": "Königreich Vennyr",
+      "type": "Königreich",
+      "parentId": "",
+      "banner": "/Stammbäume/assets/images/regions/vennyr.png",
+      "house": "Haus Blodyn",
+      "familyId": "haus-blodyn",
+      "crest": "/Stammbäume/assets/images/houses/Blütenland/haus-blodyn.png",
+      "seat": "Lyndor",
+      "href": "/Kontinente/Estryll/Königreich Vennyr/Königreich Vennyr.html"
+    },
+    {
+      "id": "grafschaft-tir-gogledd",
+      "name": "Grafschaft Tir Gogledd",
+      "type": "Grafschaft",
+      "parentId": "koenigreich-vennyr",
+      "banner": "/Stammbäume/assets/images/regions/Vennyr/Tir Gogledd.png",
+      "house": "Haus Trachwyll",
+      "familyId": "haus-trachwyll-talfronwyn",
+      "crest": "/Stammbäume/assets/images/houses/Aldrimar/Ivarsheim/haus-trachwyll.png",
+      "seat": "Talfronwyn",
+      "href": "/Kontinente/Estryll/Königreich Vennyr/Grafschaft Tir Gogledd/Grafschaft Tir Gogledd.html"
+    },
+    {
+      "id": "grafschaft-tir-dwyrain",
+      "name": "Grafschaft Tir Dwyrain",
+      "type": "Grafschaft",
+      "parentId": "koenigreich-vennyr",
+      "banner": "/Stammbäume/assets/images/regions/Vennyr/Tir Dwyrain.png",
+      "house": "Haus Blaidd",
+      "familyId": "haus-blaidd",
+      "crest": "/Stammbäume/assets/images/houses/Graue Weite/Schimmerküste/haus-blaidd.png",
+      "seat": "Branon",
+      "href": "/Kontinente/Estryll/Königreich Vennyr/Grafschaft Tir Dwyrain/Grafschaft Tir Dwyrain.html"
+    },
+    {
+      "id": "grafschaft-tir-gorllewin",
+      "name": "Grafschaft Tir Gorllewin",
+      "type": "Grafschaft",
+      "parentId": "koenigreich-vennyr",
+      "banner": "/Stammbäume/assets/images/regions/Vennyr/Tir Gorllewin.png",
+      "house": "Haus Dyfrgi",
+      "familyId": "haus-dyfrgi",
+      "crest": "/Stammbäume/assets/images/houses/Klaueninsel/haus-dyfrgi.png",
+      "seat": "Mynyddharbwr",
+      "href": "/Kontinente/Estryll/Königreich Vennyr/Grafschaft Tir Gorllewin/Grafschaft Tir Gorllewin.html"
+    },
+    {
+      "id": "grafschaft-tir-arfordir",
+      "name": "Grafschaft Tir Arfordir",
+      "type": "Grafschaft",
+      "parentId": "koenigreich-vennyr",
+      "banner": "/Stammbäume/assets/images/regions/Vennyr/Tir Arfordir.png",
+      "house": "Haus Arfordir",
+      "familyId": "haus-arfordir",
+      "crest": "/Stammbäume/assets/images/houses/Klaueninsel/haus-arfordir.png",
+      "seat": "Serenlyn",
+      "href": "/Kontinente/Estryll/Königreich Vennyr/Grafschaft Tir Arfordir/Grafschaft Tir Arfordir.html"
+    },
+    {
+      "id": "grafschaft-tir-mynddoedd",
+      "name": "Grafschaft Tir Mynddoedd",
+      "type": "Grafschaft",
+      "parentId": "koenigreich-vennyr",
+      "banner": "/Stammbäume/assets/images/regions/Vennyr/Tir Mynddoedd.png",
+      "house": "Haus Dianc",
+      "familyId": "haus-dianc",
+      "crest": "/Stammbäume/assets/images/houses/Klaueninsel/haus-dianc.png",
+      "seat": "Gwynlann",
+      "href": "/Kontinente/Estryll/Königreich Vennyr/Grafschaft Tir Mynddoedd/Grafschaft Tir Mynddoedd.html"
+    },
+    {
+      "id": "koenigliche-grafschaft-bluetenland",
+      "name": "Königliche Grafschaft Blütenland",
+      "type": "Grafschaft",
+      "parentId": "koenigreich-vennyr",
+      "banner": "/Stammbäume/assets/images/regions/bluetenland.png",
+      "house": "Haus Blodyn",
+      "familyId": "haus-blodyn",
+      "crest": "/Stammbäume/assets/images/houses/Blütenland/haus-blodyn.png",
+      "seat": "Lyndor",
+      "href": "/Kontinente/Estryll/Königreich Vennyr/Königliche Grafschaft Blütenland/Königliche Grafschaft Blütenland.html"
+    },
+    {
+      "id": "baronie-tir-gwanwyn",
+      "name": "Baronie Tir Gwanwyn",
+      "type": "Baronie",
+      "parentId": "grafschaft-tir-dwyrain",
+      "banner": "/Stammbäume/assets/images/regions/Vennyr/tir-gwanwyn.png",
+      "house": "Haus Illygoden",
+      "familyId": "haus-illygoden",
+      "crest": "/Stammbäume/assets/images/houses/Graue Weite/Schimmerküste/haus-illygoden.png",
+      "seat": "Tirwedd",
+      "href": "/Kontinente/Estryll/Königreich Vennyr/Grafschaft Tir Dwyrain/Baronie Tir Gwanwyn/Baronie Tir Gwanwyn.html"
+    },
+    {
+      "id": "ritterfuerstliche-herrschaft-tir-gwawr",
+      "name": "Ritterfürstliche Herrschaft Tir Gwawr",
+      "type": "Ritterfürstliche Herrschaft",
+      "parentId": "grafschaft-tir-arfordir",
+      "banner": "/Stammbäume/assets/images/regions/Vennyr/tir-gwawr.png",
+      "house": "Haus Gwaedlyd",
+      "familyId": "haus-gwaedlyd",
+      "crest": "/Stammbäume/assets/images/houses/Graue Weite/Schimmerküste/haus-gwaedlyd.png",
+      "seat": "Caer Gorwel",
+      "href": "/Kontinente/Estryll/Königreich Vennyr/Grafschaft Tir Arfordir/Ritterfürstliche Herrschaft Tir Gwawr/Ritterfürstliche Herrschaft Tir Gwawr.html"
+    },
+    {
+      "id": "ritterfuerstliche-herrschaft-tir-traethwyn",
+      "name": "Ritterfürstliche Herrschaft Tir Traethwyn",
+      "type": "Ritterfürstliche Herrschaft",
+      "parentId": "grafschaft-tir-mynddoedd",
+      "banner": "/Stammbäume/assets/images/regions/Vennyr/tir-traethwyn.png",
+      "house": "Haus Walwrs",
+      "familyId": "haus-walwrs",
+      "crest": "/Stammbäume/assets/images/houses/Klaueninsel/haus-walwrs.png",
+      "seat": "Traeth",
+      "href": "/Kontinente/Estryll/Königreich Vennyr/Grafschaft Tir Mynddoedd/Ritterfürstliche Herrschaft Tir Traethwyn/Ritterfürstliche Herrschaft Tir Traethwyn.html"
+    },
+    {
+      "id": "ritterfuerstliche-herrschaft-tir-derwlas",
+      "name": "Ritterfürstliche Herrschaft Tir Derwlas",
+      "type": "Ritterfürstliche Herrschaft",
+      "parentId": "grafschaft-tir-mynddoedd",
+      "banner": "/Stammbäume/assets/images/regions/Vennyr/tir-derwlas.png",
+      "house": "Haus Lyfant",
+      "familyId": "haus-lyfant",
+      "crest": "/Stammbäume/assets/images/houses/Graue Weite/Silberwald/haus-lyfant.png",
+      "seat": "Derwyddion",
+      "href": "/Kontinente/Estryll/Königreich Vennyr/Grafschaft Tir Mynddoedd/Ritterfürstliche Herrschaft Tir Derwlas/Ritterfürstliche Herrschaft Tir Derwlas.html"
+    },
+    {
+      "id": "ritterfuerstliche-herrschaft-tir-brocair",
+      "name": "Ritterfürstliche Herrschaft Tir Brocair",
+      "type": "Ritterfürstliche Herrschaft",
+      "parentId": "grafschaft-tir-gorllewin",
+      "banner": "/Stammbäume/assets/images/regions/Vennyr/Tir Brocair.png",
+      "house": "Haus Mochdaer",
+      "familyId": "haus-mochdaer-gwyliau",
+      "crest": "/Stammbäume/assets/images/houses/Weidebucht/Melwas Au/haus-mochdaer.png",
+      "seat": "Gwyliau",
+      "href": "/Kontinente/Estryll/Königreich Vennyr/Grafschaft Tir Gorllewin/Ritterfürstliche Herrschaft Tir Brocair/Ritterfürstliche Herrschaft Tir Brocair.html"
+    },
+    {
+      "id": "baronie-hoyers-krone",
+      "name": "Baronie Hoyers Krone",
+      "type": "Baronie",
+      "parentId": "koenigliche-grafschaft-bluetenland",
+      "banner": "/Stammbäume/assets/images/regions/hoyers-krone.png",
+      "house": "Haus Blodyn",
+      "familyId": "haus-blodyn",
+      "crest": "/Stammbäume/assets/images/houses/Blütenland/haus-blodyn.png",
+      "seat": "Lyndor",
+      "href": "/Kontinente/Estryll/Königreich Vennyr/Königliche Grafschaft Blütenland/Baronie Hoyers Krone/Baronie Hoyers Krone.html"
+    }
+  ]
+}

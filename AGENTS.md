@@ -1,5 +1,15 @@
 # Dauerhafte Bildstil-Vorgaben
 
+## Getrennter Skyrim-Arbeitsbereich
+
+Seit dem 21. Oktober 2026 liegen Skyrim-/Nolvus-Werkzeuge, XTTS, die Skyrim-Kataloge,
+Modquellen und Skyrim-Diagnosen ausschließlich unter `D:\Skyrim-Modding`.
+Für Skyrim-Aufträge dessen `AGENTS.md` und `workspace.json` lesen; keine neuen
+Skyrim-Arbeitsordner unter Aleria anlegen. Die entfernten alten Skyrim-Dateien
+sind eine beabsichtigte Auslagerung. Aleria-Diagnosen und das Webprojekt bleiben
+hier. Die Spielinstallation bleibt unter `E:\Nolvus`, die Sicherungen unter
+`D:\Nolvus-Backups`.
+
 Die vom Nutzer am 7. und 9. Oktober 2026 festgelegten Bildprompts stehen vollständig in
 [Bildstil-Vorlagen](AleriaAlmanach/docs/art/image-style-presets.json).
 Vor jeder Bildgenerierung für Aleria diese Vorlagen lesen und den passenden

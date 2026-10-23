@@ -127,7 +127,9 @@ test('Schwarzstolz führt Sindre in Eldvik als Bastard und bewahrt die offenen F
   assert.equal(family.partnerships.length, 0);
   assert.match(family.extensions.pendingFamilySituation.halfBrother, /Herdglut/);
   assert.match(family.extensions.pendingFamilySituation.mother, /Verbleib ist nicht festgelegt/);
-  assert.equal(family.document.houseProfile.rankId, 'unknown');
+  assert.equal(family.document.houseProfile.rankId, 'huskarl');
+  assert.match(family.document.description, /^Huskarlclan aus Eldvik/);
+  assert.ok(!family.extensions.pendingFamilySituation.openQuestions.some(question => /Rang/.test(question)));
 });
 
 test('Beide Mannschaftsmitglieder besitzen eindeutige Stammbaumidentitäten und vorhandene Bilder', async () => {

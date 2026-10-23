@@ -1,0 +1,32 @@
+[
+  {
+    "kind": "normal",
+    "size": [
+      4096,
+      2682
+    ],
+    "meanAbsoluteDifference": 5.16,
+    "fractionOver40": 0.00262,
+    "fractionOver80": 0.00022
+  },
+  {
+    "kind": "regions",
+    "size": [
+      4096,
+      2682
+    ],
+    "meanAbsoluteDifference": 4.527,
+    "fractionOver40": 0.03398,
+    "fractionOver80": 0.00044
+  },
+  {
+    "kind": "pins",
+    "size": [
+      4096,
+      2682
+    ],
+    "meanAbsoluteDifference": 5.18,
+    "fractionOver40": 0.00401,
+    "fractionOver80": 0.0006
+  }
+]

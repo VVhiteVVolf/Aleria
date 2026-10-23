@@ -67,7 +67,9 @@
   margin: 0.15rem 0 0;
   color: #30281f;
   font: 700 1.05rem/1.2 Georgia, 'Times New Roman', serif;
-  overflow-wrap: anywhere;
+  overflow-wrap: break-word;
+  hyphens: auto;
+  hyphenate-limit-chars: 6 3 3;
 }
 .herrschaft-family-link { color: inherit; text-decoration: none; }
 .herrschaft-family-link:hover { text-decoration: underline; text-underline-offset: 3px; }

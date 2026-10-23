@@ -4,6 +4,7 @@ import { buildLaerelisReference } from './modules/language/laerelis/laerelis-bui
 import { listSpellCatalogSchools } from './modules/spell-catalog/spell-catalog-schools.js';
 import { copyCalendarIconAssets } from './modules/calendar/calendar-build-assets.mjs';
 import { copyWeddingAssets } from '../Ereignisse/modules/weddings/wedding-build-assets.mjs';
+import { copyBattleSourceAssets } from '../Ereignisse/modules/battles/battle-build-assets.mjs';
 import { getReligionPageInputs } from '../Religionen/modules/content/content-repository.mjs';
 import { buildReligionModules, copyReligionModuleAssets } from '../Religionen/modules/almanach/religion-module-build.mjs';
 import { getClergyPageInputs } from '../Religionen/modules/clergy/clergy-repository.mjs';
@@ -93,6 +94,7 @@ function preserveClassicAlmanachScripts() {
       }));
       await Promise.all(classicRootFiles.map(file => copyFile(resolve(almanachRoot, file), resolve(buildAlmanachRoot, file))));
       await copyWeddingAssets({ workspaceRoot, buildRoot });
+      await copyBattleSourceAssets({ workspaceRoot, buildRoot });
       await cp(
         resolve(almanachRoot, 'public/assets'),
         resolve(buildAlmanachRoot, 'public/assets'),
@@ -118,6 +120,10 @@ export default defineConfig({
   base: './',
   html: {
     additionalAssetSources: {
+      image: {
+        srcAttributes: ['href'],
+        filter: ({ attributes }) => Object.hasOwn(attributes, 'data-battle-art')
+      },
       // Keep full-size gallery links aligned with Vite's processed image URLs.
       a: {
         srcAttributes: ['href'],
@@ -138,6 +144,7 @@ export default defineConfig({
         almanach: resolve(almanachRoot, 'AleriaAlmanach.html'),
         kalender: resolve(almanachRoot, 'kalender.html'),
         ereignisse: resolve(workspaceRoot, 'Ereignisse/index.html'),
+        schlachtWellenruh: resolve(workspaceRoot, 'Ereignisse/Schlachten/Erste-Seeschlacht-bei-Wellenruh.html'),
         hochzeitDraigPenderyn: resolve(workspaceRoot, 'Ereignisse/Hochzeiten/Haus-Draig-und-Penderyn.html'),
         hochzeiten: resolve(workspaceRoot, 'Ereignisse/hochzeit.html'),
         hochzeitsvorlage: resolve(workspaceRoot, 'Ereignisse/Hochzeitsevent.html'),

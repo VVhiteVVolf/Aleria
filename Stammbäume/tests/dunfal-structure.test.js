@@ -17,6 +17,7 @@ import { createRegistryBrowserIndex, resolveRegistryLocation, searchRegistry } f
 import { loadFamilyById } from '../assets/js/services/family-library.js';
 import { validateWorkspaceForPublishing } from '../../firebase/functions/src/families/family-validation.js';
 import { BLAITHNEACH_SOURCE_COUNTER_PATCHES } from '../assets/js/data/blaithneach-source-counter-patches.js';
+import { DUNFAL_PORTRAIT_REVISIONS } from '../assets/js/data/dunfal-portrait-upgrade.js';
 
 const inventory = JSON.parse(fs.readFileSync(new URL('../assets/data/source-inventories/dunfal-2026-10-07.json', import.meta.url), 'utf8'));
 const sourceCell = (id, row, column = 0) => inventory.sources.find(source => source.id === id).rows.find(entry => entry.row === row).cells[column];
@@ -31,7 +32,7 @@ test('Dunfal retains thirteen browser- and server-valid territorial families wit
     assertValidFamily(family);
     const blank = definition.familyId === 'haus-duilb';
     assert.equal(family.extensions.blankFamily, blank);
-    assert.equal(family.extensions.sourceRevision, BRANN_SOURCE_COUNTER_PATCHES[family.document.id]?.revision || BRAIGH_SOURCE_COUNTER_PATCHES[definition.familyId]?.revision || MATHGHAM_SOURCE_COUNTER_PATCHES[definition.familyId]?.revision || FAELAORN_SOURCE_COUNTER_PATCHES[definition.familyId]?.revision || ALBEN_SOURCE_PORTRAIT_FAMILIES[definition.familyId]?.revision || AISLEARNEACH_SOURCE_COUNTER_PATCHES[definition.familyId]?.revision || BLAITHNEACH_SOURCE_COUNTER_PATCHES[definition.familyId]?.revision || (blank ? 1 : 2));
+    assert.equal(family.extensions.sourceRevision, DUNFAL_PORTRAIT_REVISIONS[family.document.id] || BRANN_SOURCE_COUNTER_PATCHES[family.document.id]?.revision || BRAIGH_SOURCE_COUNTER_PATCHES[definition.familyId]?.revision || MATHGHAM_SOURCE_COUNTER_PATCHES[definition.familyId]?.revision || FAELAORN_SOURCE_COUNTER_PATCHES[definition.familyId]?.revision || ALBEN_SOURCE_PORTRAIT_FAMILIES[definition.familyId]?.revision || AISLEARNEACH_SOURCE_COUNTER_PATCHES[definition.familyId]?.revision || BLAITHNEACH_SOURCE_COUNTER_PATCHES[definition.familyId]?.revision || (blank ? 1 : 2));
     assert.equal(family.lineage.houseId, definition.houseId);
     assert.equal(family.houses[0].id, definition.houseId);
     if (blank) {

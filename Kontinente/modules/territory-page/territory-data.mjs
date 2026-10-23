@@ -1,7 +1,8 @@
 // Regions own their selection, texts, heraldry and councils; this module owns
 // their common data shape for the shared territory UI.
 export function createTerritoryData(source, context, data = globalThis.ALERIA_HERRSCHAFT_DATA) {
-  const { map, placesById, territoriesById, countyPath, sharedCouncilGroups = new Map() } = context;
+  const { map: defaultMap, placesById, territoriesById, countyPath, sharedCouncilGroups = new Map() } = context;
+  const map = source.map || defaultMap;
   const heraldry = territoriesById.get(source.id);
   if (!heraldry) throw new Error(`Unbekannte Herrschaft: ${source.id}`);
   const familySections = source.families.map(section => data.familySection(
@@ -16,7 +17,7 @@ export function createTerritoryData(source, context, data = globalThis.ALERIA_HE
     const territory = territoriesById.get(domain.territoryId);
     if (!territory) throw new Error(`Unbekanntes Gebiet: ${domain.territoryId}`);
     return {
-      ...domain, crestSrc: territory.banner, crestAlt: `Banner ${domain.title}`,
+      ...domain, crestSrc: territory.banner, crestAlt: territory.bannerAlt || `Banner ${domain.title}`,
       href: domain.href || (domain.page ? countyPath + domain.page : ''),
       sections: domain.sections.map(section => ({
         title: section.title,
@@ -39,14 +40,17 @@ export function createTerritoryData(source, context, data = globalThis.ALERIA_HE
           const territory = territoriesById.get(id);
           if (!territory) throw new Error(`Unbekannte untergeordnete Herrschaft: ${id}`);
           return { id, title: territory.name, href: territory.href,
-            imageSrc: territory.crest || territory.banner,
-            imageAlt: territory.crest ? `Wappen ${territory.house}` : `Banner ${territory.name}`,
+            imageSrc: territory.banner || territory.crest,
+            imageAlt: territory.banner ? territory.bannerAlt || `Banner ${territory.name}` : `Wappen ${territory.house}`,
+            bannerSrc: territory.banner || '',
+            crestSrc: territory.crest || '',
+            crestAlt: territory.crest ? `Wappen ${territory.house}` : '',
             house: territory.house, seat: territory.seat };
         }),
       } : {}) },
       article: {
         id: source.id, title: source.title, shortTitle: source.shortTitle,
-        crestSrc: source.crestSrc || heraldry.banner, crestAlt: source.crestAlt || `Banner ${heraldry.name}`,
+        crestSrc: source.crestSrc || heraldry.banner, crestAlt: source.crestAlt || heraldry.bannerAlt || `Banner ${heraldry.name}`,
         kicker: source.kicker, parentHref: source.parentHref, parentLabel: source.parentLabel,
         councilNote: source.councilNote, map, infobox: source.infobox,
         copy: source.copy, cultureSections: source.cultureSections, floraSections: source.floraSections,

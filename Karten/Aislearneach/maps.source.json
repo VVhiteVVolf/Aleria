@@ -1,0 +1,81 @@
+{
+  "maps": [
+    {
+      "id": "aislearneach",
+      "title": "Fürstentum Aislearneach",
+      "folder": "Aislearneach",
+      "sourceMapId": "d719c156-ac6d-4291-9e2f-4b7919369ad0",
+      "imageSize": [
+        3311,
+        4097
+      ],
+      "imageSrc": "/Karten/Aislearneach/Kartenbilder/normal.webp",
+      "baseTerritoryId": "fuerstentum-aislearneach"
+    },
+    {
+      "id": "aislearneach-tir-na-geach",
+      "title": "Tir na Geach",
+      "folder": "Aislearneach/tir-na-geach",
+      "sourceMapId": "8b234e56-614f-44e2-b6b0-4b75c654ebe4",
+      "imageSize": [
+        3546,
+        4097
+      ],
+      "imageSrc": "/Karten/Aislearneach/tir-na-geach/Kartenbilder/normal.webp",
+      "parentMapId": "aislearneach",
+      "baseTerritoryId": "oberherrschaft-aislearneach-tir-na-geach"
+    },
+    {
+      "id": "aislearneach-tir-na-tirth",
+      "title": "Tir na Tirth",
+      "folder": "Aislearneach/tir-na-tirth",
+      "sourceMapId": "244448b0-6439-4921-9910-37ed3c54e35e",
+      "imageSize": [
+        4096,
+        2195
+      ],
+      "imageSrc": "/Karten/Aislearneach/tir-na-tirth/Kartenbilder/normal.webp",
+      "parentMapId": "aislearneach",
+      "baseTerritoryId": "oberherrschaft-aislearneach-tir-na-tirth"
+    },
+    {
+      "id": "aislearneach-tir-na-faela",
+      "title": "Tir na Faela",
+      "folder": "Aislearneach/tir-na-faela",
+      "sourceMapId": "061a3f0c-de7a-4d87-8ea5-6da4fee3412a",
+      "imageSize": [
+        3193,
+        4097
+      ],
+      "imageSrc": "/Karten/Aislearneach/tir-na-faela/Kartenbilder/normal.webp",
+      "parentMapId": "aislearneach",
+      "baseTerritoryId": "oberherrschaft-aislearneach-tir-na-faela"
+    },
+    {
+      "id": "aislearneach-tir-na-adharcach",
+      "title": "Tir na Adharcach",
+      "folder": "Aislearneach/tir-na-adharcach",
+      "sourceMapId": "52aee057-1feb-40b0-b733-6ca8e7bf5c4b",
+      "imageSize": [
+        2827,
+        4097
+      ],
+      "imageSrc": "/Karten/Aislearneach/tir-na-adharcach/Kartenbilder/normal.webp",
+      "parentMapId": "aislearneach",
+      "baseTerritoryId": "oberherrschaft-aislearneach-tir-na-adharcach"
+    },
+    {
+      "id": "aislearneach-tir-na-iomaire",
+      "title": "Tir na Iomaire",
+      "folder": "Aislearneach/tir-na-iomaire",
+      "sourceMapId": "e6ebd163-2b46-4ac9-a622-8d8ee7e123b4",
+      "imageSize": [
+        4096,
+        2433
+      ],
+      "imageSrc": "/Karten/Aislearneach/tir-na-iomaire/Kartenbilder/normal.webp",
+      "parentMapId": "aislearneach",
+      "baseTerritoryId": "oberherrschaft-aislearneach-tir-na-iomaire"
+    }
+  ]
+}

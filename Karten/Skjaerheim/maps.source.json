@@ -1,0 +1,28 @@
+{
+  "maps": [
+    {
+      "id": "skjaerheim-hrothgar",
+      "title": "Fürstliches Jarltum der Hrothgar",
+      "folder": "Skjaerheim/hrothgar",
+      "imageSrc": "/Karten/Faelaorn/tir-na-brann/Kartenbilder/normal.webp",
+      "regionsSrc": "/Karten/Skjaerheim/hrothgar/Kartenbilder/regions.webp",
+      "baseTerritoryId": "skjaerheim-jarltum-hrothgar"
+    },
+    {
+      "id": "skjaerheim-bjerk",
+      "title": "Jarltum der Bjerk",
+      "folder": "Skjaerheim/bjerk",
+      "imageSrc": "/Karten/Faelaorn/tir-na-faerna/Kartenbilder/normal.webp",
+      "regionsSrc": "/Karten/Skjaerheim/bjerk/Kartenbilder/regions.webp",
+      "baseTerritoryId": "skjaerheim-jarltum-bjerk"
+    },
+    {
+      "id": "skjaerheim-knything-stanleagh",
+      "title": "Jarltümer der Knything und Stanleagh",
+      "folder": "Skjaerheim/knything-stanleagh",
+      "imageSrc": "/Karten/Faelaorn/tir-na-damh/Kartenbilder/normal.webp",
+      "regionsSrc": "/Karten/Skjaerheim/knything-stanleagh/Kartenbilder/regions.webp",
+      "baseTerritoryId": "skjaerheim-jarltum-knything"
+    }
+  ]
+}

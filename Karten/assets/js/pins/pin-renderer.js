@@ -98,6 +98,7 @@
       layer.appendChild(element);
     });
     if(selectionChanged) updateBulkBar();
+    window.dispatchEvent(new CustomEvent('aleria:karto:pins-rendered'));
   }
 
   function attachPinEvents(element, pin){

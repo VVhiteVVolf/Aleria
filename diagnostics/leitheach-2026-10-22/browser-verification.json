@@ -1,0 +1,131 @@
+{
+  "mapId": "e4e40471-6f95-41a7-a54b-bb4500bf1fa6",
+  "qa": {
+    "checkedAt": "2026-10-22",
+    "checks": [
+      "draw polygon via clicks",
+      "drag a vertex",
+      "insert and remove vertex",
+      "undo point edit",
+      "save and reload local draft",
+      "remove test region",
+      "pending region blocks published reload",
+      "invalid region import rejected before state mutation",
+      "empty region array selectively imported",
+      "all six detail maps load with their source image dimensions and back links"
+    ],
+    "maps": [
+      {
+        "id": "leitheach-tir-na-sinsear",
+        "regions": 6,
+        "nestedUnderCoimhthioch": [
+          "Ua Ghaiscioch",
+          "Ua Cleir",
+          "Dal Ceardaiocht"
+        ],
+        "fancha": "Herrschaft Tir na Fancha"
+      },
+      {
+        "backLink": "karte.html?map=leitheach",
+        "entries": [
+          "Fürstliches HerrschaftsgebietFläche",
+          "↳ Ehemalige Herrschaft der Ruin'Laoch - Eigenverwaltung des Cumhaill ClansGrenzlinie",
+          "↳ Herrschaft der Na'FiachrachGrenzlinie",
+          "↳ Herrschaft der Ua'EirceGrenzlinie",
+          "↳ Rhosmeres RösserFläche · Örtlicher Bereich",
+          "↳ Herrschaft von Broch an AbhainnFläche"
+        ],
+        "image": {
+          "height": 3191,
+          "width": 4096
+        },
+        "regions": 6,
+        "title": "Tir na Sleagh — Kartograph"
+      },
+      {
+        "backLink": "karte.html?map=leitheach",
+        "entries": [
+          "Oberherrschaft Tir na GortannaFläche",
+          "↳ Herrschaft der Ard TrodachGrenzlinie",
+          "↳ Herrschaft der Nic CaoimheGrenzlinie",
+          "↳ Lehnsherrschaft von LasbunFläche",
+          "↳ Lehnsherrschaft der Sidhe Somhairle ClanFläche",
+          "↳ GrenzgebietFläche · Grenzgebiet · Zugehörigkeit offen"
+        ],
+        "image": {
+          "height": 3079,
+          "width": 4096
+        },
+        "regions": 6,
+        "title": "Tir na Gortanna — Kartograph"
+      },
+      {
+        "backLink": "karte.html?map=leitheach",
+        "entries": [
+          "Oberherrschaft - Tir na TonnFläche",
+          "↳ Herrschaft der Ru'GortachFläche",
+          "↳ Ordensburg - SchwanenordenFläche · Örtlicher Bereich",
+          "↳ Herrschaft der Dal'RuitheachFläche"
+        ],
+        "image": {
+          "height": 3939,
+          "width": 4096
+        },
+        "regions": 4,
+        "title": "Tir na Tonn — Kartograph"
+      },
+      {
+        "backLink": "karte.html?map=leitheach",
+        "entries": [
+          "Oberherrschaft - Tir an ComhchuibhisFläche",
+          "↳ Herrschaft der Ua'ChoinnichGrenzlinie",
+          "↳ Herrschaft der Nic BlarGrenzlinie",
+          "↳ Ehemalige Herrschaft der Dal'T'Saor Eigenverwaltung der Mac AirtGrenzlinie",
+          "↳ Lehnsherrschaft von ClaiseanFläche"
+        ],
+        "image": {
+          "height": 4097,
+          "width": 2662
+        },
+        "regions": 5,
+        "title": "Tir an Comhchuibhis — Kartograph"
+      },
+      {
+        "backLink": "karte.html?map=leitheach",
+        "entries": [
+          "Oberherrschaft Tir na SruthFläche",
+          "↳ Herrschaft der Ua'AmrhanGrenzlinie",
+          "↳ Lehnsherrschaft Cel LeaganFläche"
+        ],
+        "image": {
+          "height": 3168,
+          "width": 4096
+        },
+        "regions": 3,
+        "title": "Tir na Sruth — Kartograph"
+      },
+      {
+        "image": {
+          "height": 3573,
+          "width": 4096
+        },
+        "links": [
+          "karte.html?map=leitheach-tir-na-sleagh",
+          "karte.html?map=leitheach-tir-na-comhchuibhis",
+          "karte.html?map=leitheach-tir-na-sruth",
+          "karte.html?map=leitheach-tir-na-sinsear",
+          "karte.html?map=leitheach-tir-na-tonn",
+          "karte.html?map=leitheach-tir-na-gortanna"
+        ],
+        "regions": 6,
+        "title": "Fürstentum Leitheach — Kartograph"
+      }
+    ],
+    "tests": {
+      "karten": 100,
+      "alben": 8,
+      "structureErrors": 0,
+      "preExistingStructureWarnings": 174
+    }
+  }
+}

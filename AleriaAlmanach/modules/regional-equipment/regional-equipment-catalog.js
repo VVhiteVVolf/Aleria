@@ -13759,7 +13759,7 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
   {
     "id": "haus-skellor",
     "name": "Haus Skellor",
-    "image": "/Stammb%C3%A4ume/assets/images/houses/Rhonwens%20Tr%C3%A4nen/Ausgestorben/Skellor.png",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Rhonwens%20Tr%C3%A4nen/Ritterliche/Skellor.png",
     "path": [
       "Cenyr",
       "Celtigerns Wacht",

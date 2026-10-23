@@ -1,0 +1,670 @@
+TAP version 13
+# Subtest: Abergwint besitzt getrennte Stadt- und Bannkreiskarten im Karten-System
+ok 1 - Abergwint besitzt getrennte Stadt- und Bannkreiskarten im Karten-System
+  ---
+  duration_ms: 4.6067
+  type: 'test'
+  ...
+# Subtest: nine maps preserve all 434 source IDs exactly once: 360 points and 74 geometry objects
+ok 2 - nine maps preserve all 434 source IDs exactly once: 360 points and 74 geometry objects
+  ---
+  duration_ms: 1.6682
+  type: 'test'
+  ...
+# Subtest: native image coordinates, all six descriptions and existing marker templates survive the import
+ok 3 - native image coordinates, all six descriptions and existing marker templates survive the import
+  ---
+  duration_ms: 64.5834
+  type: 'test'
+  ...
+# Subtest: 232 unique new names apply only to settlements; missing other names and potential lordships stay explicit
+ok 4 - 232 unique new names apply only to settlements; missing other names and potential lordships stay explicit
+  ---
+  duration_ms: 3.7213
+  type: 'test'
+  ...
+# Subtest: five map links navigate to detailed maps; forest and mine glyphs use their reviewed categories
+ok 5 - five map links navigate to detailed maps; forest and mine glyphs use their reviewed categories
+  ---
+  duration_ms: 0.7627
+  type: 'test'
+  ...
+# Subtest: independent rendered axes account for image-height rounding without changing legacy conversion
+ok 6 - independent rendered axes account for image-height rounding without changing legacy conversion
+  ---
+  duration_ms: 27.3069
+  type: 'test'
+  ...
+# Subtest: Castellbryn startet mit einem dreistufigen Bannkreis ohne erfundenen Stadtplan
+ok 7 - Castellbryn startet mit einem dreistufigen Bannkreis ohne erfundenen Stadtplan
+  ---
+  duration_ms: 2.0287
+  type: 'test'
+  ...
+# Subtest: legacy maps gain the common smaller types without replacing their categories
+ok 8 - legacy maps gain the common smaller types without replacing their categories
+  ---
+  duration_ms: 0.7897
+  type: 'test'
+  ...
+# Subtest: upgrades are idempotent and respect later removal or renaming
+ok 9 - upgrades are idempotent and respect later removal or renaming
+  ---
+  duration_ms: 1.0096
+  type: 'test'
+  ...
+# Subtest: all default types have unique identities, canonical names, and local markers
+ok 10 - all default types have unique identities, canonical names, and local markers
+  ---
+  duration_ms: 11.0669
+  type: 'test'
+  ...
+# Subtest: every named type from the supplied symbol sheet is represented
+ok 11 - every named type from the supplied symbol sheet is represented
+  ---
+  duration_ms: 1.5272
+  type: 'test'
+  ...
+# Subtest: previously upgraded maps receive only the new symbol types
+ok 12 - previously upgraded maps receive only the new symbol types
+  ---
+  duration_ms: 0.4676
+  type: 'test'
+  ...
+# Subtest: marking import preserves existing pins and media, matches by position, and stays idempotent
+ok 13 - marking import preserves existing pins and media, matches by position, and stays idempotent
+  ---
+  duration_ms: 0.9372
+  type: 'test'
+  ...
+# Subtest: every reviewed Gwynthor symbol has one corresponding pin
+ok 14 - every reviewed Gwynthor symbol has one corresponding pin
+  ---
+  duration_ms: 11.4758
+  type: 'test'
+  ...
+# Subtest: template tables are independent copies and unknown templates cannot create bare pins
+ok 15 - template tables are independent copies and unknown templates cannot create bare pins
+  ---
+  duration_ms: 2.8626
+  type: 'test'
+  ...
+# Subtest: all 150 World Anvil IDs survive exactly once as 133 points and 17 region objects
+ok 16 - all 150 World Anvil IDs survive exactly once as 133 points and 17 region objects
+  ---
+  duration_ms: 0.3345
+  type: 'test'
+  ...
+# Subtest: native image dimensions, bottom-left coordinates and all 23 descriptions are preserved
+ok 17 - native image dimensions, bottom-left coordinates and all 23 descriptions are preserved
+  ---
+  duration_ms: 1.3236
+  type: 'test'
+  ...
+# Subtest: all pins use existing categories, templates, local symbols and valid dominions
+ok 18 - all pins use existing categories, templates, local symbols and valid dominions
+  ---
+  duration_ms: 20.1578
+  type: 'test'
+  ...
+# Subtest: unassigned numbered domains stay open while explicitly named seats have their evidenced owners
+ok 19 - unassigned numbered domains stay open while explicitly named seats have their evidenced owners
+  ---
+  duration_ms: 0.2461
+  type: 'test'
+  ...
+# Subtest: rebuilding a generated map refuses to overwrite later manual changes
+ok 20 - rebuilding a generated map refuses to overwrite later manual changes
+  ---
+  duration_ms: 12.9921
+  type: 'test'
+  ...
+# Subtest: corrected source symbols retain unique IDs and their reviewed locations
+ok 21 - corrected source symbols retain unique IDs and their reviewed locations
+  ---
+  duration_ms: 2.2886
+  type: 'test'
+  ...
+# Subtest: known house crests and allegiance chains follow existing family records
+ok 22 - known house crests and allegiance chains follow existing family records
+  ---
+  duration_ms: 3.4905
+  type: 'test'
+  ...
+# Subtest: Llysfaens 24 interaktive Marker sind ohne Markerbild einschaltbar und öffnen ihre Details
+ok 23 - Llysfaens 24 interaktive Marker sind ohne Markerbild einschaltbar und öffnen ihre Details
+  ---
+  duration_ms: 3.7637
+  type: 'test'
+  ...
+# Subtest: all seven supplied maps retain the 36 visible source borders and their marker IDs
+ok 24 - all seven supplied maps retain the 36 visible source borders and their marker IDs
+  ---
+  duration_ms: 0.4802
+  type: 'test'
+  ...
+# Subtest: Fancha uses the user-confirmed name and Sinsear preserves nested local territories
+ok 25 - Fancha uses the user-confirmed name and Sinsear preserves nested local territories
+  ---
+  duration_ms: 0.1363
+  type: 'test'
+  ...
+# Subtest: rendered SVG converts image offsets and viewBox origin without reversing Y or joining line sections
+ok 26 - rendered SVG converts image offsets and viewBox origin without reversing Y or joining line sections
+  ---
+  duration_ms: 0.2547
+  type: 'test'
+  ...
+# Subtest: the 24 supplied old articles remain archived byte for byte
+ok 27 - the 24 supplied old articles remain archived byte for byte
+  ---
+  duration_ms: 12.5634
+  type: 'test'
+  ...
+# Subtest: switch secures the complete current draft, then reloads the published map
+ok 28 - switch secures the complete current draft, then reloads the published map
+  ---
+  duration_ms: 3.2034
+  type: 'test'
+  ...
+# Subtest: offline keeps the draft and pending edits intact
+ok 29 - offline keeps the draft and pending edits intact
+  ---
+  duration_ms: 0.866
+  type: 'test'
+  ...
+# Subtest: HTTP error keeps the draft and pending edits intact
+ok 30 - HTTP error keeps the draft and pending edits intact
+  ---
+  duration_ms: 0.7993
+  type: 'test'
+  ...
+# Subtest: invalid state keeps the draft and pending edits intact
+ok 31 - invalid state keeps the draft and pending edits intact
+  ---
+  duration_ms: 0.7637
+  type: 'test'
+  ...
+# Subtest: missing revision keeps the draft and pending edits intact
+ok 32 - missing revision keeps the draft and pending edits intact
+  ---
+  duration_ms: 0.7696
+  type: 'test'
+  ...
+# Subtest: failBackup aborts the switch without clearing pending edits
+ok 33 - failBackup aborts the switch without clearing pending edits
+  ---
+  duration_ms: 0.8615
+  type: 'test'
+  ...
+# Subtest: failRemoval aborts the switch without clearing pending edits
+ok 34 - failRemoval aborts the switch without clearing pending edits
+  ---
+  duration_ms: 0.7457
+  type: 'test'
+  ...
+# Subtest: a clean published map reloads without creating an unnecessary backup
+ok 35 - a clean published map reloads without creating an unnecessary backup
+  ---
+  duration_ms: 0.8088
+  type: 'test'
+  ...
+# Subtest: pending edits are backed up even before the first autosave
+ok 36 - pending edits are backed up even before the first autosave
+  ---
+  duration_ms: 0.8945
+  type: 'test'
+  ...
+# Subtest: an open pin editor blocks switching and is checked again after the request
+ok 37 - an open pin editor blocks switching and is checked again after the request
+  ---
+  duration_ms: 0.8573
+  type: 'test'
+  ...
+# Subtest: an open region draft blocks published reload before fetching or discarding any data
+ok 38 - an open region draft blocks published reload before fetching or discarding any data
+  ---
+  duration_ms: 0.7498
+  type: 'test'
+  ...
+# Subtest: backup restoration uses the selected entry and all saved fields
+ok 39 - backup restoration uses the selected entry and all saved fields
+  ---
+  duration_ms: 0.8888
+  type: 'test'
+  ...
+# Subtest: new maps and legacy published states or drafts start at dot 80 / label 50
+ok 40 - new maps and legacy published states or drafts start at dot 80 / label 50
+  ---
+  duration_ms: 0.1745
+  type: 'test'
+  ...
+# Subtest: subsequent size choices persist without resetting on each load
+ok 41 - subsequent size choices persist without resetting on each load
+  ---
+  duration_ms: 0.1284
+  type: 'test'
+  ...
+# Subtest: display migration does not modify map contents
+ok 42 - display migration does not modify map contents
+  ---
+  duration_ms: 0.1127
+  type: 'test'
+  ...
+# Subtest: registry-relative Kartenpfade werden stabil unter /Karten ausgeliefert
+ok 43 - registry-relative Kartenpfade werden stabil unter /Karten ausgeliefert
+  ---
+  duration_ms: 0.0909
+  type: 'test'
+  ...
+# Subtest: Web- und Daten-URLs bleiben unverändert
+ok 44 - Web- und Daten-URLs bleiben unverändert
+  ---
+  duration_ms: 0.0736
+  type: 'test'
+  ...
+# Subtest: nicht portable Altpfade fallen auf die Registry-Konfiguration zurück
+ok 45 - nicht portable Altpfade fallen auf die Registry-Konfiguration zurück
+  ---
+  duration_ms: 0.0928
+  type: 'test'
+  ...
+# Subtest: die Fehlerwiederholung umgeht einen beschädigten Browsercache
+ok 46 - die Fehlerwiederholung umgeht einen beschädigten Browsercache
+  ---
+  duration_ms: 0.1987
+  type: 'test'
+  ...
+# Subtest: der Registry-Rückfall ist kanonisch vergleichbar
+ok 47 - der Registry-Rückfall ist kanonisch vergleichbar
+  ---
+  duration_ms: 0.1687
+  type: 'test'
+  ...
+# Subtest: optionale Ebenen gelten nur mit einem auslieferbaren Bild als verfügbar
+ok 48 - optionale Ebenen gelten nur mit einem auslieferbaren Bild als verfügbar
+  ---
+  duration_ms: 0.1135
+  type: 'test'
+  ...
+# Subtest: the default layer is the normal map without zone or marker overlays
+ok 49 - the default layer is the normal map without zone or marker overlays
+  ---
+  duration_ms: 1.1634
+  type: 'test'
+  ...
+# Subtest: persistent lettering keeps only its interactive layer above the base map and restores full opacity
+ok 50 - persistent lettering keeps only its interactive layer above the base map and restores full opacity
+  ---
+  duration_ms: 1.0319
+  type: 'test'
+  ...
+# Subtest: marker overlay can be enabled and normal resets it again
+ok 51 - marker overlay can be enabled and normal resets it again
+  ---
+  duration_ms: 0.7527
+  type: 'test'
+  ...
+# Subtest: metadata export/import preserves independent false and true view settings
+ok 52 - metadata export/import preserves independent false and true view settings
+  ---
+  duration_ms: 53.4657
+  type: 'test'
+  ...
+# Subtest: E:\\Aleria\\Karten\\tests\\media-library-registry.test.mjs
+ok 53 - E:\\Aleria\\Karten\\tests\\media-library-registry.test.mjs
+  ---
+  duration_ms: 0.0851
+  type: 'test'
+  ...
+# Subtest: E:\\Aleria\\Karten\\tests\\pin-editor-draft.test.mjs
+ok 54 - E:\\Aleria\\Karten\\tests\\pin-editor-draft.test.mjs
+  ---
+  duration_ms: 0.0497
+  type: 'test'
+  ...
+# Subtest: navigation reveals a filtered result, centers it at the current zoom and highlights it
+ok 55 - navigation reveals a filtered result, centers it at the current zoom and highlights it
+  ---
+  duration_ms: 1.103
+  type: 'test'
+  ...
+# Subtest: matching category filters remain selected
+ok 56 - matching category filters remain selected
+  ---
+  duration_ms: 0.759
+  type: 'test'
+  ...
+# Subtest: secret or stale results cannot reveal a pin
+ok 57 - secret or stale results cannot reveal a pin
+  ---
+  duration_ms: 0.7959
+  type: 'test'
+  ...
+# Subtest: a result can still open its detail card before map image dimensions are available
+ok 58 - a result can still open its detail card before map image dimensions are available
+  ---
+  duration_ms: 0.8328
+  type: 'test'
+  ...
+# Subtest: pins without an image receive a stable project placeholder
+ok 59 - pins without an image receive a stable project placeholder
+  ---
+  duration_ms: 0.2231
+  type: 'test'
+  ...
+# Subtest: every configured placeholder exists in the project
+ok 60 - every configured placeholder exists in the project
+  ---
+  duration_ms: 12.432
+  type: 'test'
+  ...
+# Subtest: an explicit pin image and its link take precedence
+ok 61 - an explicit pin image and its link take precedence
+  ---
+  duration_ms: 0.4666
+  type: 'test'
+  ...
+# Subtest: every settlement category has its own image regardless of its map-specific ID
+ok 62 - every settlement category has its own image regardless of its map-specific ID
+  ---
+  duration_ms: 0.4484
+  type: 'test'
+  ...
+# Subtest: every actual stamp template has its own image, with specific templates taking priority
+ok 63 - every actual stamp template has its own image, with specific templates taking priority
+  ---
+  duration_ms: 1.3246
+  type: 'test'
+  ...
+# Subtest: changing category or template immediately changes the fallback without modifying the pin
+ok 64 - changing category or template immediately changes the fallback without modifying the pin
+  ---
+  duration_ms: 0.1796
+  type: 'test'
+  ...
+# Subtest: saved built-in placeholders follow the current category and template too
+ok 65 - saved built-in placeholders follow the current category and template too
+  ---
+  duration_ms: 0.1736
+  type: 'test'
+  ...
+# Subtest: unknown templates and categories have a predictable square village fallback
+ok 66 - unknown templates and categories have a predictable square village fallback
+  ---
+  duration_ms: 0.1493
+  type: 'test'
+  ...
+# Subtest: smaller location categories and saved aliases choose their matching art
+ok 67 - smaller location categories and saved aliases choose their matching art
+  ---
+  duration_ms: 0.5817
+  type: 'test'
+  ...
+# Subtest: matching template families use the specific location artwork for every category and alias
+ok 68 - matching template families use the specific location artwork for every category and alias
+  ---
+  duration_ms: 2.618
+  type: 'test'
+  ...
+# Subtest: previously saved generic artwork is corrected while uploaded images and links stay intact
+ok 69 - previously saved generic artwork is corrected while uploaded images and links stay intact
+  ---
+  duration_ms: 0.1743
+  type: 'test'
+  ...
+# Subtest: every imported Gwynthor pin uses its reviewed location motif without changing map data
+ok 70 - every imported Gwynthor pin uses its reviewed location motif without changing map data
+  ---
+  duration_ms: 7.058
+  type: 'test'
+  ...
+# Subtest: all location categories have useful blank information tables
+ok 71 - all location categories have useful blank information tables
+  ---
+  duration_ms: 0.6332
+  type: 'test'
+  ...
+# Subtest: location fields follow compatible templates and preserve explicit unrelated choices
+ok 72 - location fields follow compatible templates and preserve explicit unrelated choices
+  ---
+  duration_ms: 0.2104
+  type: 'test'
+  ...
+# Subtest: category changes only replace unedited default tables
+ok 73 - category changes only replace unedited default tables
+  ---
+  duration_ms: 0.2418
+  type: 'test'
+  ...
+# Subtest: Bildmarker verwenden den Kartenanker ohne Ortskoordinaten oder Entwürfe zu verändern
+ok 74 - Bildmarker verwenden den Kartenanker ohne Ortskoordinaten oder Entwürfe zu verändern
+  ---
+  duration_ms: 10.5163
+  type: 'test'
+  ...
+# Subtest: Ziehen behält DOM-Knoten, bündelt Frames und speichert die letzte Position mit einem Undo
+ok 75 - Ziehen behält DOM-Knoten, bündelt Frames und speichert die letzte Position mit einem Undo
+  ---
+  duration_ms: 2.6253
+  type: 'test'
+  ...
+# Subtest: Kleine Mausbewegungen bleiben Klicks und erzeugen weder Speicherung noch Undo
+ok 76 - Kleine Mausbewegungen bleiben Klicks und erzeugen weder Speicherung noch Undo
+  ---
+  duration_ms: 2.2369
+  type: 'test'
+  ...
+# Subtest: Mehrfachauswahl erhält die bestehenden Marker und Bildknoten
+ok 77 - Mehrfachauswahl erhält die bestehenden Marker und Bildknoten
+  ---
+  duration_ms: 2.4459
+  type: 'test'
+  ...
+# Subtest: Sammellöschen entfernt die gewählten Marker und Undo erhält ihre Daten
+ok 78 - Sammellöschen entfernt die gewählten Marker und Undo erhält ihre Daten
+  ---
+  duration_ms: 2.552
+  type: 'test'
+  ...
+# Subtest: Verlassen des Fensters beendet Ziehen und begrenzt Pins auf die Karte
+ok 79 - Verlassen des Fensters beendet Ziehen und begrenzt Pins auf die Karte
+  ---
+  duration_ms: 2.5082
+  type: 'test'
+  ...
+# Subtest: Schriftzüge normalisieren Formdaten, erzeugen sichere eindeutige SVG-Pfade und überstehen Entwürfe
+ok 80 - Schriftzüge normalisieren Formdaten, erzeugen sichere eindeutige SVG-Pfade und überstehen Entwürfe
+  ---
+  duration_ms: 3.2345
+  type: 'test'
+  ...
+# Subtest: Schriftzug-Pins werden ohne Punktsymbol dargestellt und geheime Schriftzüge bleiben ausgefiltert
+ok 81 - Schriftzug-Pins werden ohne Punktsymbol dargestellt und geheime Schriftzüge bleiben ausgefiltert
+  ---
+  duration_ms: 2.5193
+  type: 'test'
+  ...
+# Subtest: Schriftzug anlegen und stempeln erhält eine unabhängige Kopie der Formdaten
+ok 82 - Schriftzug anlegen und stempeln erhält eine unabhängige Kopie der Formdaten
+  ---
+  duration_ms: 3.1648
+  type: 'test'
+  ...
+# Subtest: Dauerhafte Dots sind standardmäßig aus und nur im Editor als Karteneinstellung änderbar
+ok 83 - Dauerhafte Dots sind standardmäßig aus und nur im Editor als Karteneinstellung änderbar
+  ---
+  duration_ms: 2.808
+  type: 'test'
+  ...
+# Subtest: Schriftzug- und Namensanzeige werden unabhängig gespeichert und bei Zustandswechsel synchronisiert
+ok 84 - Schriftzug- und Namensanzeige werden unabhängig gespeichert und bei Zustandswechsel synchronisiert
+  ---
+  duration_ms: 5.2021
+  type: 'test'
+  ...
+# Subtest: Vorlagen-Overwrite führt das Platzhaltermotiv mit und Undo stellt die vorherige Zuordnung wieder her
+ok 85 - Vorlagen-Overwrite führt das Platzhaltermotiv mit und Undo stellt die vorherige Zuordnung wieder her
+  ---
+  duration_ms: 5.0688
+  type: 'test'
+  ...
+# Subtest: Stempelkopien behalten die Vorlagenzuordnung, aber speichern kein abgeleitetes Platzhalterbild
+ok 86 - Stempelkopien behalten die Vorlagenzuordnung, aber speichern kein abgeleitetes Platzhalterbild
+  ---
+  duration_ms: 2.3901
+  type: 'test'
+  ...
+# Subtest: Llysfaens Tabellen verwenden gemeinsame Fachvorlagen und die neuen Anzeigevorgaben
+ok 87 - Llysfaens Tabellen verwenden gemeinsame Fachvorlagen und die neuen Anzeigevorgaben
+  ---
+  duration_ms: 2.6122
+  type: 'test'
+  ...
+# Subtest: publishes from the dialog without login (no key configured)
+ok 88 - publishes from the dialog without login (no key configured)
+  ---
+  duration_ms: 6.6485
+  type: 'test'
+  ...
+# Subtest: publishes from the dialog without login (legacy key configured)
+ok 89 - publishes from the dialog without login (legacy key configured)
+  ---
+  duration_ms: 1.926
+  type: 'test'
+  ...
+# Subtest: a newer published revision keeps the local draft and writes nothing to GitHub
+ok 90 - a newer published revision keeps the local draft and writes nothing to GitHub
+  ---
+  duration_ms: 1.45
+  type: 'test'
+  ...
+# Subtest: server failures keep the draft available for another attempt
+ok 91 - server failures keep the draft available for another attempt
+  ---
+  duration_ms: 1.3647
+  type: 'test'
+  ...
+# Subtest: invalid paths and oversized requests are still rejected before any GitHub call
+ok 92 - invalid paths and oversized requests are still rejected before any GitHub call
+  ---
+  duration_ms: 3.5295
+  type: 'test'
+  ...
+# Subtest: region drafts isolate vertices and preserve source IDs until explicitly committed
+ok 93 - region drafts isolate vertices and preserve source IDs until explicitly committed
+  ---
+  duration_ms: 0.4071
+  type: 'test'
+  ...
+# Subtest: drawing requires a nonzero polygon or at least two boundary points
+ok 94 - drawing requires a nonzero polygon or at least two boundary points
+  ---
+  duration_ms: 0.4417
+  type: 'test'
+  ...
+# Subtest: vertex insertion projects onto the nearest edge, while removal keeps a valid boundary
+ok 95 - vertex insertion projects onto the nearest edge, while removal keeps a valid boundary
+  ---
+  duration_ms: 0.3513
+  type: 'test'
+  ...
+# Subtest: multiple outline parts stay separate and open borders do not become artificial filled territories
+ok 96 - multiple outline parts stay separate and open borders do not become artificial filled territories
+  ---
+  duration_ms: 0.1667
+  type: 'test'
+  ...
+# Subtest: parent validation prevents cycles, dangling parents and duplicate source entries
+ok 97 - parent validation prevents cycles, dangling parents and duplicate source entries
+  ---
+  duration_ms: 0.5282
+  type: 'test'
+  ...
+# Subtest: finite coordinates and opacity are checked before import without rounding existing vertices
+ok 98 - finite coordinates and opacity are checked before import without rounding existing vertices
+  ---
+  duration_ms: 0.2361
+  type: 'test'
+  ...
+# Subtest: Rhosmere besitzt einen dreistufigen Bannkreis ohne erfundenen Stadtplan
+ok 99 - Rhosmere besitzt einen dreistufigen Bannkreis ohne erfundenen Stadtplan
+  ---
+  duration_ms: 1.6294
+  type: 'test'
+  ...
+# Subtest: all 187 marker IDs, descriptions and exact source coordinates survive normalization
+ok 100 - all 187 marker IDs, descriptions and exact source coordinates survive normalization
+  ---
+  duration_ms: 13.3233
+  type: 'test'
+  ...
+# Subtest: the taller target canvas uses new image coordinates and never old normalized percentages
+ok 101 - the taller target canvas uses new image coordinates and never old normalized percentages
+  ---
+  duration_ms: 0.2364
+  type: 'test'
+  ...
+# Subtest: all three confirmed Schwarzdorn exclaves preserve their geographic host regions
+ok 102 - all three confirmed Schwarzdorn exclaves preserve their geographic host regions
+  ---
+  duration_ms: 0.3478
+  type: 'test'
+  ...
+# Subtest: candidate search remains reversible, unique and separate from confirmed import data
+ok 103 - candidate search remains reversible, unique and separate from confirmed import data
+  ---
+  duration_ms: 37.8736
+  type: 'test'
+  ...
+# Subtest: all supplied HTML and only the three new map images remain verifiable
+ok 104 - all supplied HTML and only the three new map images remain verifiable
+  ---
+  duration_ms: 50.0786
+  type: 'test'
+  ...
+# Subtest: new symbols use existing categories and matching table templates
+ok 105 - new symbols use existing categories and matching table templates
+  ---
+  duration_ms: 19.5815
+  type: 'test'
+  ...
+# Subtest: removed taverns, Hornling tribes and battles cannot match any new position
+ok 106 - removed taverns, Hornling tribes and battles cannot match any new position
+  ---
+  duration_ms: 0.3648
+  type: 'test'
+  ...
+# Subtest: embedded regions and Gleannmor never become point markers or fabricated routes
+ok 107 - embedded regions and Gleannmor never become point markers or fabricated routes
+  ---
+  duration_ms: 0.1656
+  type: 'test'
+  ...
+# Subtest: Hornhall reuses a position, keeps Horunn and follows Bjoerns succession after Hrolfs exile
+ok 108 - Hornhall reuses a position, keeps Horunn and follows Bjoerns succession after Hrolfs exile
+  ---
+  duration_ms: 0.5335
+  type: 'test'
+  ...
+# Subtest: invalid decisions fail before they can silently replace a source or target
+ok 109 - invalid decisions fail before they can silently replace a source or target
+  ---
+  duration_ms: 0.3556
+  type: 'test'
+  ...
+# Subtest: the succession correction upgrades saved family notes once while retaining identities and later edits
+ok 110 - the succession correction upgrades saved family notes once while retaining identities and later edits
+  ---
+  duration_ms: 4.7728
+  type: 'test'
+  ...
+1..110
+# tests 110
+# suites 0
+# pass 110
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 2160.1591
