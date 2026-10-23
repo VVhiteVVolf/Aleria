@@ -60,3 +60,17 @@ Dabei blieb der veröffentlichte Produktionsdeploy
 
 Push und Produktivveröffentlichung sind durch diesen Vorbereitungsschritt noch
 nicht ausgeführt.
+
+## Nachprüfung der Estryll-Navigation
+
+Die veröffentlichte Übersicht zeigt noch den alten Stand mit nur zwei verlinkten
+Reichen. Der vorbereitete Stand enthält sämtliche elf bereits angelegten
+Reichsseiten, Leitheach und die gemeinsame Alben-Ansicht. Zusätzlich wurden der
+fehlende Bannerlink des Dunkelhains, direkt verlinkte Königreichsnamen und das
+direkte Faelaorn-Ziel ergänzt. Die experimentelle Uathneach-Vorschau bleibt separat.
+Bei der Sichtprüfung wurde außerdem die überlappende Unterzeile der breiten
+Alben-Übersichtskachel in der gemeinsamen Komponente korrigiert.
+
+Ein neuer Navigationstest gleicht die Einträge mit dem tatsächlichen Seitenregister
+ab und prüft Namens- und Bannerlinks sowie vorhandene Ziele. Die 22 zugehörigen
+Navigations-, Alben- und Faelaorn-/Skjaerheim-Tests bestehen.

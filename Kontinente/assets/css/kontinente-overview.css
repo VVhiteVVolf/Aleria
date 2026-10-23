@@ -454,6 +454,7 @@
   font-size: clamp(1.1rem, 1.8vw, 1.45rem);
 }
 .realm-grid--two .realm-card-meta,
+.realm-card--wide .realm-card-meta,
 .realm-grid--two .atlas-entry-status,
 .realm-card--wide .atlas-entry-status {
   grid-column: 2;
