@@ -6,6 +6,15 @@ import {mergeMarkingPins} from '../tools/merge-marking-pins.mjs';
 
 const catalog = globalThis.KartoCategoryCatalog;
 
+test('map-specific city filters can reuse native artwork without losing their distinct identities', () => {
+  const category = {id:'local-great-city',label:'Große Stadt',placeholderCategoryId:'mmflwdjfl6ah',color:'#123456'};
+  const before = structuredClone(category);
+  assert.equal(catalog.definition(category),undefined);
+  assert.match(catalog.placeholder(category),/settlement-stadt\.webp$/);
+  assert.deepEqual(category,before);
+  assert.equal(catalog.placeholder({...category,placeholderCategoryId:'missing'}),'');
+});
+
 test('legacy maps gain the common smaller types without replacing their categories', () => {
   const state = {cats:[
     {id:'user-farm',label:'Einfacher Hof',color:'#123456',marker:'/own.png'},

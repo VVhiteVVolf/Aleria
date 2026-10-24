@@ -9,6 +9,9 @@ Leuchtturmsiedlung, Rioghain kein Dorf. Die genaue Größenklasse der drei
 neuen Clans ohne belegten Rang bleibt offen; ihre Orte sind ausdrücklich Städte.
 Diese Regel liegt in `city-classification.mjs`; Architekturdetails einzelner
 Kartenzeichnungen begründen keine Wirtschafts- oder Siedlungskategorie.
+Die lokalen Stadtfilter verwenden mit `placeholderCategoryId` die vorhandenen
+Stadt- und Burgstadt-Standardbilder; sie fallen nicht auf das allgemeine
+Dorfmotiv zurück. Ihre eigenen Filterkennungen und Bezeichnungen bleiben erhalten.
 
 Patrick hat Variante 1 am 24. Oktober 2026 bestätigt: sieben Gebiete, sechs
 Mor-Tiarna-Clans unter den Mac Ard’Lága, fünf Dún-Tiarna-Lehen und die örtlichen

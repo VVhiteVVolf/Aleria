@@ -35,7 +35,7 @@ const state = { pins, cats: cityCategories(markers), categoryCatalogVersion: con
   showMarkers: false, showPinLabels: false, alwaysShowLettering: false,
   extraLayers: [], dm: { sessions: [], notes: '', groupStatus: {} } };
 await writeGeneratedMap(root, 'Uathneach/data.json', { schemaVersion: 1, dataPath: 'Uathneach/data.json',
-  revision: 2, updatedAt: '2026-10-24T16:23:00.000Z', generatedStateHash: stateHash(state), state }, { check });
+  revision: 3, updatedAt: '2026-10-24T16:43:00.000Z', generatedStateHash: stateHash(state), state }, { check });
 await updateGeneratedMapRegistry(root, 'UATHNEACH', [{ id: 'uathneach', title: 'Fürstentum Uathneach', status: 'active', type: 'region',
   hierarchy: [{ level: 'kingdom', slug: 'uathneach', title: 'Uathneach' }], folder: 'Uathneach',
   images: { normal: 'Uathneach/Kartenbilder/regionen.webp' }, dataPath: 'Uathneach/data.json',

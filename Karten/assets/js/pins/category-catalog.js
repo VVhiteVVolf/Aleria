@@ -146,7 +146,9 @@
     return {cats, categoryCatalogVersion:Math.max(version, VERSION)};
   }
   function placeholder(category){
-    const entry = definition(category);
+    // A local subtype may reuse native artwork without merging its filter ID
+    // or assigning the native category's meaning to that subtype.
+    const entry = definition(category) || byId.get(category?.placeholderCategoryId);
     return entry ? BASE + entry.asset + '.webp' : '';
   }
   root.KartoCategoryCatalog = Object.freeze({

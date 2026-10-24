@@ -3,11 +3,11 @@
 const cityIcon = '/Karten/assets/icons/welt/stadt.png';
 const definitions = Object.freeze([
   { id: 'mmflrbzxydg7', label: 'Hauptstadt', color: '#a54430', marker: cityIcon },
-  { id: 'uathneach-grosse-stadt', label: 'Große Stadt', color: '#8a6334', marker: cityIcon },
+  { id: 'uathneach-grosse-stadt', label: 'Große Stadt', color: '#8a6334', marker: cityIcon, placeholderCategoryId: 'mmflwdjfl6ah' },
   { id: 'mmflwdjfl6ah', label: 'Normal große Stadt', color: '#6b7747', marker: cityIcon },
-  { id: 'uathneach-kleine-stadt', label: 'Kleine Stadt', color: '#6e8069', marker: cityIcon },
-  { id: 'uathneach-burgstadt', label: 'Burgstadt', color: '#79617e', marker: '/Karten/assets/icons/welt/burgsiedlung.png' },
-  { id: 'uathneach-stadt-offen', label: 'Stadt · Größe offen', color: '#777267', marker: cityIcon },
+  { id: 'uathneach-kleine-stadt', label: 'Kleine Stadt', color: '#6e8069', marker: cityIcon, placeholderCategoryId: 'mmflwdjfl6ah' },
+  { id: 'uathneach-burgstadt', label: 'Burgstadt', color: '#79617e', marker: '/Karten/assets/icons/welt/burgsiedlung.png', placeholderCategoryId: 'mmfls5afqqpr' },
+  { id: 'uathneach-stadt-offen', label: 'Stadt · Größe offen', color: '#777267', marker: cityIcon, placeholderCategoryId: 'mmflwdjfl6ah' },
 ].map(Object.freeze));
 const byLabel = new Map(definitions.map(definition => [definition.label, definition]));
 const byId = new Map(definitions.map(definition => [definition.id, definition]));

@@ -35,7 +35,7 @@ test('local Lairds cannot downgrade a greater clan seat, and unknown ranks stay 
 });
 
 test('map filters, marker tables and territory registers retain the same urban classification', () => {
-  assert.equal(stored.revision, 2);
+  assert.equal(stored.revision, 3);
   assert.equal(stored.state.cats.length, 5);
   const categories = new Map(stored.state.cats.map(category => [category.id, category.label]));
   const markersById = new Map(markers.map(marker => [marker.id, marker]));
@@ -62,4 +62,7 @@ test('the shared category upgrade preserves the reviewed city-only overview filt
   const result = JSON.parse(JSON.stringify(context.KartoCategoryCatalog.upgrade(stored.state)));
   assert.deepEqual(result.cats, stored.state.cats);
   assert.equal(result.categoryCatalogVersion, stored.state.categoryCatalogVersion);
+  for (const category of stored.state.cats) {
+    assert.match(context.KartoCategoryCatalog.placeholder(category), /settlement-(?:hauptstadt|stadt|burgsiedlung)\.webp$/);
+  }
 });

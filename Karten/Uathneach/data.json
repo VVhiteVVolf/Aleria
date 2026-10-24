@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "dataPath": "Uathneach/data.json",
-  "revision": 2,
-  "updatedAt": "2026-10-24T16:23:00.000Z",
-  "generatedStateHash": "c28c41b6f7d41715f62d268a0fc6ecb479a2b92421c94b5a3fd65b8aa184aad9",
+  "revision": 3,
+  "updatedAt": "2026-10-24T16:43:00.000Z",
+  "generatedStateHash": "e7a4cddec6616b55541135985f39f67a05f69f70fb9757c144ff249a206c53f7",
   "state": {
     "pins": [
       {
@@ -1672,7 +1672,8 @@
         "id": "uathneach-grosse-stadt",
         "label": "Große Stadt",
         "color": "#8a6334",
-        "marker": "/Karten/assets/icons/welt/stadt.png"
+        "marker": "/Karten/assets/icons/welt/stadt.png",
+        "placeholderCategoryId": "mmflwdjfl6ah"
       },
       {
         "id": "mmflwdjfl6ah",
@@ -1684,13 +1685,15 @@
         "id": "uathneach-burgstadt",
         "label": "Burgstadt",
         "color": "#79617e",
-        "marker": "/Karten/assets/icons/welt/burgsiedlung.png"
+        "marker": "/Karten/assets/icons/welt/burgsiedlung.png",
+        "placeholderCategoryId": "mmfls5afqqpr"
       },
       {
         "id": "uathneach-stadt-offen",
         "label": "Stadt · Größe offen",
         "color": "#777267",
-        "marker": "/Karten/assets/icons/welt/stadt.png"
+        "marker": "/Karten/assets/icons/welt/stadt.png",
+        "placeholderCategoryId": "mmflwdjfl6ah"
       }
     ],
     "categoryCatalogVersion": 3,
