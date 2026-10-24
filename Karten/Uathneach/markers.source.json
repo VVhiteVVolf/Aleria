@@ -1,0 +1,467 @@
+{
+  "imageSize": [
+    4096,
+    3365
+  ],
+  "coordinateOrigin": "bottom-left",
+  "markers": [
+    {
+      "id": "uathneach-dunnean",
+      "title": "Dunnean",
+      "category": "Hauptstadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "uathneach-tir-na-laimhe",
+      "x": 1859.5839999999998,
+      "y": 3149.64,
+      "residentFamilyIds": [
+        "haus-laga",
+        "haus-briccne",
+        "haus-arbhair",
+        "haus-scathain"
+      ],
+      "sourceRef": {
+        "provider": "aleria-reviewed-map",
+        "source": "Uathneach Städte Namen.png",
+        "selection": "original",
+        "settlementId": "dunnean",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          45.4,
+          6.4
+        ]
+      }
+    },
+    {
+      "id": "uathneach-fethlinn",
+      "title": "Féthlinn",
+      "category": "Leuchtturmsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/leuchtturm.png",
+      "territoryId": "uathneach-tir-na-laimhe",
+      "x": 1323.0079999999998,
+      "y": 2759.3,
+      "residentFamilyIds": [
+        "haus-siubhran"
+      ],
+      "sourceRef": {
+        "provider": "aleria-reviewed-map",
+        "source": "Uathneach Städte Namen.png",
+        "selection": "original",
+        "settlementId": "fethlinn",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          32.3,
+          18
+        ]
+      }
+    },
+    {
+      "id": "uathneach-bronnan",
+      "title": "Bronnan",
+      "category": "Burgsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/burgsiedlung.png",
+      "territoryId": "uathneach-herrschaft-fastaigh",
+      "x": 1536,
+      "y": 2177.155,
+      "residentFamilyIds": [
+        "haus-fastaigh"
+      ],
+      "sourceRef": {
+        "provider": "aleria-reviewed-map",
+        "source": "Uathneach Städte Namen.png",
+        "selection": "original",
+        "settlementId": "bronnan",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          37.5,
+          35.3
+        ]
+      }
+    },
+    {
+      "id": "uathneach-reithe",
+      "title": "Broch an Reithe",
+      "category": "Burgsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/burgsiedlung.png",
+      "territoryId": "uathneach-tir-na-laimhe",
+      "x": 802.816,
+      "y": 2254.5499999999997,
+      "residentFamilyIds": [
+        "haus-muirin"
+      ],
+      "sourceRef": {
+        "provider": "aleria-reviewed-map",
+        "source": "Uathneach Städte Namen.png",
+        "selection": "original",
+        "settlementId": "reithe",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          19.6,
+          33
+        ]
+      }
+    },
+    {
+      "id": "uathneach-moineal",
+      "title": "Moineal",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "uathneach-tir-na-sruthan",
+      "x": 1904.64,
+      "y": 1783.45,
+      "residentFamilyIds": [
+        "haus-gealan"
+      ],
+      "sourceRef": {
+        "provider": "aleria-reviewed-map",
+        "source": "Uathneach Städte Namen.png",
+        "selection": "original",
+        "settlementId": "moineal",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          46.5,
+          47
+        ]
+      }
+    },
+    {
+      "id": "uathneach-treabhair",
+      "title": "Treabhair",
+      "category": "Burgsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/burgsiedlung.png",
+      "territoryId": "uathneach-herrschaft-luachra",
+      "x": 2285.5679999999998,
+      "y": 2375.69,
+      "residentFamilyIds": [
+        "haus-luachra"
+      ],
+      "sourceRef": {
+        "provider": "aleria-reviewed-map",
+        "source": "Uathneach Städte Namen.png",
+        "selection": "original",
+        "settlementId": "treabhair",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          55.8,
+          29.4
+        ]
+      }
+    },
+    {
+      "id": "uathneach-cathair",
+      "title": "Cathair",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "uathneach-tir-na-gcoillte",
+      "x": 2932.736,
+      "y": 1887.7649999999999,
+      "residentFamilyIds": [
+        "haus-conchobhair"
+      ],
+      "sourceRef": {
+        "provider": "aleria-reviewed-map",
+        "source": "Uathneach Städte Namen.png",
+        "selection": "original",
+        "settlementId": "cathair",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          71.6,
+          43.9
+        ]
+      }
+    },
+    {
+      "id": "uathneach-dathuil",
+      "title": "Dathuil",
+      "category": "Burgsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/burgsiedlung.png",
+      "territoryId": "uathneach-tir-na-gcoillte",
+      "x": 3358.72,
+      "y": 2294.93,
+      "residentFamilyIds": [
+        "haus-fiodhran"
+      ],
+      "sourceRef": {
+        "provider": "aleria-reviewed-map",
+        "source": "Uathneach Städte Namen.png",
+        "selection": "original",
+        "settlementId": "dathuil",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          82,
+          31.8
+        ]
+      }
+    },
+    {
+      "id": "uathneach-orglen",
+      "title": "Orglen",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "uathneach-tir-na-taoide",
+      "x": 196.608,
+      "y": 1413.3000000000002,
+      "residentFamilyIds": [
+        "haus-roich",
+        "haus-cairbre",
+        "haus-reannachain"
+      ],
+      "sourceRef": {
+        "provider": "aleria-reviewed-map",
+        "source": "Uathneach Städte Namen.png",
+        "selection": "original",
+        "settlementId": "orglen",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          4.8,
+          58
+        ]
+      }
+    },
+    {
+      "id": "uathneach-mhor",
+      "title": "Broch an Mhor",
+      "category": "Burgsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/burgsiedlung.png",
+      "territoryId": "uathneach-tir-na-taoide",
+      "x": 974.8480000000001,
+      "y": 1211.3999999999999,
+      "residentFamilyIds": [
+        "haus-cairge"
+      ],
+      "sourceRef": {
+        "provider": "aleria-reviewed-map",
+        "source": "Uathneach Städte Namen.png",
+        "selection": "original",
+        "settlementId": "mhor",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          23.8,
+          64
+        ]
+      }
+    },
+    {
+      "id": "uathneach-rinnmara",
+      "title": "Rinnmara",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "uathneach-tir-na-dtorc",
+      "x": 1388.5439999999999,
+      "y": 834.52,
+      "residentFamilyIds": [
+        "haus-midgna",
+        "haus-cuilen"
+      ],
+      "sourceRef": {
+        "provider": "aleria-reviewed-map",
+        "source": "Uathneach Städte Namen.png",
+        "selection": "original",
+        "settlementId": "rinnmara",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          33.9,
+          75.2
+        ]
+      }
+    },
+    {
+      "id": "uathneach-cuan",
+      "title": "Broch an Cuan",
+      "category": "Burgsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/burgsiedlung.png",
+      "territoryId": "uathneach-tir-na-dtorc",
+      "x": 1638.4,
+      "y": 423.9899999999996,
+      "residentFamilyIds": [
+        "haus-cadhla"
+      ],
+      "sourceRef": {
+        "provider": "aleria-reviewed-map",
+        "source": "Uathneach Städte Namen.png",
+        "selection": "original",
+        "settlementId": "cuan",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          40,
+          87.4
+        ]
+      }
+    },
+    {
+      "id": "uathneach-temair",
+      "title": "Temair",
+      "category": "Burgsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/burgsiedlung.png",
+      "territoryId": "uathneach-tir-na-conaire",
+      "x": 3829.76,
+      "y": 2971.295,
+      "residentFamilyIds": [
+        "haus-mata"
+      ],
+      "sourceRef": {
+        "provider": "aleria-reviewed-map",
+        "source": "Uathneach Städte Namen.png",
+        "selection": "original",
+        "settlementId": "temair",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          93.5,
+          11.7
+        ]
+      }
+    },
+    {
+      "id": "uathneach-caorthann",
+      "title": "Caorthann",
+      "category": "Burgsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/burgsiedlung.png",
+      "territoryId": "uathneach-herrschaft-suilgeach",
+      "x": 2842.6240000000003,
+      "y": 2893.9,
+      "residentFamilyIds": [
+        "haus-suilgeach"
+      ],
+      "sourceRef": {
+        "provider": "aleria-reviewed-map",
+        "source": "Uathneach Städte Namen.png",
+        "selection": "original",
+        "settlementId": "caorthann",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          69.4,
+          14
+        ]
+      }
+    },
+    {
+      "id": "uathneach-ceithirn",
+      "title": "Ceithirn",
+      "category": "Burgsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/burgsiedlung.png",
+      "territoryId": "uathneach-tir-na-conaire",
+      "x": 3743.744,
+      "y": 2591.05,
+      "residentFamilyIds": [
+        "haus-creagan"
+      ],
+      "sourceRef": {
+        "provider": "aleria-reviewed-map",
+        "source": "Uathneach Städte Namen.png",
+        "selection": "original",
+        "settlementId": "ceithirn",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          91.4,
+          23
+        ]
+      }
+    },
+    {
+      "id": "uathneach-kharanor",
+      "title": "Kharanor",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "uathneach-tir-na-cloiche",
+      "x": 2224.1279999999997,
+      "y": 275.93000000000023,
+      "residentFamilyIds": [
+        "haus-luga",
+        "haus-marcaigh",
+        "haus-giolla"
+      ],
+      "sourceRef": {
+        "provider": "aleria-reviewed-map",
+        "source": "Uathneach Städte Namen.png",
+        "selection": "original",
+        "settlementId": "kharanor",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          54.3,
+          91.8
+        ]
+      }
+    },
+    {
+      "id": "uathneach-mhorcha",
+      "title": "Mhorcha",
+      "category": "Burgsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/burgsiedlung.png",
+      "territoryId": "uathneach-herrschaft-lasgair",
+      "x": 2600.96,
+      "y": 1399.8400000000001,
+      "residentFamilyIds": [
+        "haus-lasgair"
+      ],
+      "sourceRef": {
+        "provider": "aleria-reviewed-map",
+        "source": "Uathneach Städte Namen.png",
+        "selection": "original",
+        "settlementId": "mhorcha",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          63.5,
+          58.4
+        ]
+      }
+    },
+    {
+      "id": "uathneach-rioghain",
+      "title": "Rioghain",
+      "category": "Dorf",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bardensiedlung.png",
+      "territoryId": "uathneach-herrschaft-clannmhar",
+      "x": 2117.632,
+      "y": 1083.5300000000002,
+      "residentFamilyIds": [
+        "haus-clannmhar"
+      ],
+      "sourceRef": {
+        "provider": "aleria-reviewed-map",
+        "source": "Uathneach Städte Namen.png",
+        "selection": "original",
+        "settlementId": "rioghain",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          51.7,
+          67.8
+        ]
+      }
+    }
+  ]
+}

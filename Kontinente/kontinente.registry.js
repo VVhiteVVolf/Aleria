@@ -1,4 +1,444 @@
 window.KONTINENTE_REGISTRY = [
+  // BEGIN UATHNEACH_GENERATED
+  {
+    "id": "fuerstentum-uathneach",
+    "slug": "fuerstentum-uathneach",
+    "aliases": [
+      "uathneach"
+    ],
+    "name": "Fürstentum Uathneach",
+    "type": "Fürstentum",
+    "page": "Estryll/Fürstentum Uathneach/Fürstentum Uathneach.html",
+    "data": "Estryll/Fürstentum Uathneach/herrschaft.data.mjs?v=uathneach-20261024a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Uathneach",
+        "slug": "fuerstentum-uathneach"
+      }
+    ]
+  },
+  {
+    "id": "uathneach-tir-na-laimhe",
+    "slug": "uathneach-tir-na-laimhe",
+    "aliases": [],
+    "name": "Tir na Láimhe",
+    "type": "Fürstliche Domäne",
+    "page": "Estryll/Fürstentum Uathneach/Tir na Láimhe/Tir na Láimhe.html",
+    "data": "Estryll/Fürstentum Uathneach/Tir na Láimhe/herrschaft.data.mjs?v=uathneach-20261024a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Uathneach",
+        "slug": "fuerstentum-uathneach"
+      },
+      {
+        "type": "Fürstliche Domäne",
+        "name": "Tir na Láimhe",
+        "slug": "uathneach-tir-na-laimhe"
+      }
+    ]
+  },
+  {
+    "id": "uathneach-tir-na-sruthan",
+    "slug": "uathneach-tir-na-sruthan",
+    "aliases": [],
+    "name": "Tir na Sruthán",
+    "type": "Oberherrschaft",
+    "page": "Estryll/Fürstentum Uathneach/Tir na Sruthán/Tir na Sruthán.html",
+    "data": "Estryll/Fürstentum Uathneach/Tir na Sruthán/herrschaft.data.mjs?v=uathneach-20261024a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Uathneach",
+        "slug": "fuerstentum-uathneach"
+      },
+      {
+        "type": "Oberherrschaft",
+        "name": "Tir na Sruthán",
+        "slug": "uathneach-tir-na-sruthan"
+      }
+    ]
+  },
+  {
+    "id": "uathneach-tir-na-gcoillte",
+    "slug": "uathneach-tir-na-gcoillte",
+    "aliases": [],
+    "name": "Tir na gCoillte",
+    "type": "Oberherrschaft",
+    "page": "Estryll/Fürstentum Uathneach/Tir na gCoillte/Tir na gCoillte.html",
+    "data": "Estryll/Fürstentum Uathneach/Tir na gCoillte/herrschaft.data.mjs?v=uathneach-20261024a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Uathneach",
+        "slug": "fuerstentum-uathneach"
+      },
+      {
+        "type": "Oberherrschaft",
+        "name": "Tir na gCoillte",
+        "slug": "uathneach-tir-na-gcoillte"
+      }
+    ]
+  },
+  {
+    "id": "uathneach-tir-na-taoide",
+    "slug": "uathneach-tir-na-taoide",
+    "aliases": [],
+    "name": "Tir na Taoide",
+    "type": "Oberherrschaft",
+    "page": "Estryll/Fürstentum Uathneach/Tir na Taoide/Tir na Taoide.html",
+    "data": "Estryll/Fürstentum Uathneach/Tir na Taoide/herrschaft.data.mjs?v=uathneach-20261024a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Uathneach",
+        "slug": "fuerstentum-uathneach"
+      },
+      {
+        "type": "Oberherrschaft",
+        "name": "Tir na Taoide",
+        "slug": "uathneach-tir-na-taoide"
+      }
+    ]
+  },
+  {
+    "id": "uathneach-tir-na-dtorc",
+    "slug": "uathneach-tir-na-dtorc",
+    "aliases": [],
+    "name": "Tir na dTorc",
+    "type": "Oberherrschaft",
+    "page": "Estryll/Fürstentum Uathneach/Tir na dTorc/Tir na dTorc.html",
+    "data": "Estryll/Fürstentum Uathneach/Tir na dTorc/herrschaft.data.mjs?v=uathneach-20261024a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Uathneach",
+        "slug": "fuerstentum-uathneach"
+      },
+      {
+        "type": "Oberherrschaft",
+        "name": "Tir na dTorc",
+        "slug": "uathneach-tir-na-dtorc"
+      }
+    ]
+  },
+  {
+    "id": "uathneach-tir-na-conaire",
+    "slug": "uathneach-tir-na-conaire",
+    "aliases": [],
+    "name": "Tir na Conaire",
+    "type": "Oberherrschaft",
+    "page": "Estryll/Fürstentum Uathneach/Tir na Conaire/Tir na Conaire.html",
+    "data": "Estryll/Fürstentum Uathneach/Tir na Conaire/herrschaft.data.mjs?v=uathneach-20261024a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Uathneach",
+        "slug": "fuerstentum-uathneach"
+      },
+      {
+        "type": "Oberherrschaft",
+        "name": "Tir na Conaire",
+        "slug": "uathneach-tir-na-conaire"
+      }
+    ]
+  },
+  {
+    "id": "uathneach-tir-na-cloiche",
+    "slug": "uathneach-tir-na-cloiche",
+    "aliases": [],
+    "name": "Tir na Cloiche",
+    "type": "Oberherrschaft",
+    "page": "Estryll/Fürstentum Uathneach/Tir na Cloiche/Tir na Cloiche.html",
+    "data": "Estryll/Fürstentum Uathneach/Tir na Cloiche/herrschaft.data.mjs?v=uathneach-20261024a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Uathneach",
+        "slug": "fuerstentum-uathneach"
+      },
+      {
+        "type": "Oberherrschaft",
+        "name": "Tir na Cloiche",
+        "slug": "uathneach-tir-na-cloiche"
+      }
+    ]
+  },
+  {
+    "id": "uathneach-herrschaft-fastaigh",
+    "slug": "uathneach-herrschaft-fastaigh",
+    "aliases": [],
+    "name": "Herrschaft von Bronnan",
+    "type": "Herrschaft",
+    "page": "Estryll/Fürstentum Uathneach/Tir na Láimhe/Herrschaft von Bronnan/Herrschaft von Bronnan.html",
+    "data": "Estryll/Fürstentum Uathneach/Tir na Láimhe/Herrschaft von Bronnan/herrschaft.data.mjs?v=uathneach-20261024a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Uathneach",
+        "slug": "fuerstentum-uathneach"
+      },
+      {
+        "type": "Fürstliche Domäne",
+        "name": "Tir na Láimhe",
+        "slug": "uathneach-tir-na-laimhe"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Herrschaft von Bronnan",
+        "slug": "uathneach-herrschaft-fastaigh"
+      }
+    ]
+  },
+  {
+    "id": "uathneach-herrschaft-lasgair",
+    "slug": "uathneach-herrschaft-lasgair",
+    "aliases": [],
+    "name": "Herrschaft von Mhorcha",
+    "type": "Herrschaft",
+    "page": "Estryll/Fürstentum Uathneach/Tir na Cloiche/Herrschaft von Mhorcha/Herrschaft von Mhorcha.html",
+    "data": "Estryll/Fürstentum Uathneach/Tir na Cloiche/Herrschaft von Mhorcha/herrschaft.data.mjs?v=uathneach-20261024a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Uathneach",
+        "slug": "fuerstentum-uathneach"
+      },
+      {
+        "type": "Oberherrschaft",
+        "name": "Tir na Cloiche",
+        "slug": "uathneach-tir-na-cloiche"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Herrschaft von Mhorcha",
+        "slug": "uathneach-herrschaft-lasgair"
+      }
+    ]
+  },
+  {
+    "id": "uathneach-herrschaft-suilgeach",
+    "slug": "uathneach-herrschaft-suilgeach",
+    "aliases": [],
+    "name": "Herrschaft von Caorthann",
+    "type": "Herrschaft",
+    "page": "Estryll/Fürstentum Uathneach/Tir na Conaire/Herrschaft von Caorthann/Herrschaft von Caorthann.html",
+    "data": "Estryll/Fürstentum Uathneach/Tir na Conaire/Herrschaft von Caorthann/herrschaft.data.mjs?v=uathneach-20261024a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Uathneach",
+        "slug": "fuerstentum-uathneach"
+      },
+      {
+        "type": "Oberherrschaft",
+        "name": "Tir na Conaire",
+        "slug": "uathneach-tir-na-conaire"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Herrschaft von Caorthann",
+        "slug": "uathneach-herrschaft-suilgeach"
+      }
+    ]
+  },
+  {
+    "id": "uathneach-herrschaft-luachra",
+    "slug": "uathneach-herrschaft-luachra",
+    "aliases": [],
+    "name": "Herrschaft von Treabhair",
+    "type": "Herrschaft",
+    "page": "Estryll/Fürstentum Uathneach/Tir na Sruthán/Herrschaft von Treabhair/Herrschaft von Treabhair.html",
+    "data": "Estryll/Fürstentum Uathneach/Tir na Sruthán/Herrschaft von Treabhair/herrschaft.data.mjs?v=uathneach-20261024a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Uathneach",
+        "slug": "fuerstentum-uathneach"
+      },
+      {
+        "type": "Oberherrschaft",
+        "name": "Tir na Sruthán",
+        "slug": "uathneach-tir-na-sruthan"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Herrschaft von Treabhair",
+        "slug": "uathneach-herrschaft-luachra"
+      }
+    ]
+  },
+  {
+    "id": "uathneach-herrschaft-clannmhar",
+    "slug": "uathneach-herrschaft-clannmhar",
+    "aliases": [],
+    "name": "Herrschaft von Rioghain",
+    "type": "Herrschaft",
+    "page": "Estryll/Fürstentum Uathneach/Tir na Cloiche/Herrschaft von Rioghain/Herrschaft von Rioghain.html",
+    "data": "Estryll/Fürstentum Uathneach/Tir na Cloiche/Herrschaft von Rioghain/herrschaft.data.mjs?v=uathneach-20261024a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Uathneach",
+        "slug": "fuerstentum-uathneach"
+      },
+      {
+        "type": "Oberherrschaft",
+        "name": "Tir na Cloiche",
+        "slug": "uathneach-tir-na-cloiche"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Herrschaft von Rioghain",
+        "slug": "uathneach-herrschaft-clannmhar"
+      }
+    ]
+  },
+  // END UATHNEACH_GENERATED
   // BEGIN LEITHEACH_GENERATED
   {
     "id": "fuerstentum-leitheach",

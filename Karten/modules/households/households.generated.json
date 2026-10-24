@@ -5785,6 +5785,556 @@
       ]
     },
     {
+      "id": "haus-laga",
+      "name": "Clan Mac Ard’Lága",
+      "crest": "/Stammbäume/assets/images/houses/Uathneach/laga.webp",
+      "href": "/Stammbäume/Stammbaum.html?family=haus-laga&mode=view",
+      "status": "active",
+      "formerSeat": "",
+      "territories": [],
+      "priority": 1,
+      "residences": [
+        {
+          "seat": "Dunnean",
+          "role": "Hauptsitz",
+          "kingdom": "Uathneach",
+          "county": "Tir na Láimhe",
+          "territory": "",
+          "rank": "ard-tiarna"
+        }
+      ]
+    },
+    {
+      "id": "haus-gealan",
+      "name": "Clan An Gealân",
+      "crest": "/Stammbäume/assets/images/houses/Uathneach/gealan.webp",
+      "href": "/Stammbäume/Stammbaum.html?family=haus-gealan&mode=view",
+      "status": "active",
+      "formerSeat": "",
+      "territories": [],
+      "priority": 6,
+      "residences": [
+        {
+          "seat": "Moineal",
+          "role": "Hauptsitz",
+          "kingdom": "Uathneach",
+          "county": "Tir na Sruthán",
+          "territory": "",
+          "rank": "mor-tiarna"
+        }
+      ]
+    },
+    {
+      "id": "haus-conchobhair",
+      "name": "Clan Ard Conchobhair",
+      "crest": "/Stammbäume/assets/images/houses/Uathneach/conchobhair.webp",
+      "href": "/Stammbäume/Stammbaum.html?family=haus-conchobhair&mode=view",
+      "status": "active",
+      "formerSeat": "",
+      "territories": [],
+      "priority": 6,
+      "residences": [
+        {
+          "seat": "Cathair",
+          "role": "Hauptsitz",
+          "kingdom": "Uathneach",
+          "county": "Tir na gCoillte",
+          "territory": "",
+          "rank": "mor-tiarna"
+        }
+      ]
+    },
+    {
+      "id": "haus-roich",
+      "name": "Clan Mac Roich",
+      "crest": "/Stammbäume/assets/images/houses/Uathneach/roich.webp",
+      "href": "/Stammbäume/Stammbaum.html?family=haus-roich&mode=view",
+      "status": "active",
+      "formerSeat": "",
+      "territories": [],
+      "priority": 6,
+      "residences": [
+        {
+          "seat": "Orglen",
+          "role": "Hauptsitz",
+          "kingdom": "Uathneach",
+          "county": "Tir na Taoide",
+          "territory": "",
+          "rank": "mor-tiarna"
+        }
+      ]
+    },
+    {
+      "id": "haus-midgna",
+      "name": "Clan Mac Midgna",
+      "crest": "/Stammbäume/assets/images/houses/Uathneach/midgna.webp",
+      "href": "/Stammbäume/Stammbaum.html?family=haus-midgna&mode=view",
+      "status": "active",
+      "formerSeat": "",
+      "territories": [],
+      "priority": 6,
+      "residences": [
+        {
+          "seat": "Rinnmara",
+          "role": "Hauptsitz",
+          "kingdom": "Uathneach",
+          "county": "Tir na dTorc",
+          "territory": "",
+          "rank": "mor-tiarna"
+        }
+      ]
+    },
+    {
+      "id": "haus-mata",
+      "name": "Clan Tir an Máta",
+      "crest": "/Stammbäume/assets/images/houses/Uathneach/mata.webp",
+      "href": "/Stammbäume/Stammbaum.html?family=haus-mata&mode=view",
+      "status": "active",
+      "formerSeat": "",
+      "territories": [],
+      "priority": 6,
+      "residences": [
+        {
+          "seat": "Temair",
+          "role": "Hauptsitz",
+          "kingdom": "Uathneach",
+          "county": "Tir na Conaire",
+          "territory": "",
+          "rank": "mor-tiarna"
+        }
+      ]
+    },
+    {
+      "id": "haus-luga",
+      "name": "Clan Ua’Luga",
+      "crest": "/Stammbäume/assets/images/houses/Uathneach/luga.webp",
+      "href": "/Stammbäume/Stammbaum.html?family=haus-luga&mode=view",
+      "status": "active",
+      "formerSeat": "",
+      "territories": [],
+      "priority": 6,
+      "residences": [
+        {
+          "seat": "Kharanor",
+          "role": "Hauptsitz",
+          "kingdom": "Uathneach",
+          "county": "Tir na Cloiche",
+          "territory": "",
+          "rank": "mor-tiarna"
+        }
+      ]
+    },
+    {
+      "id": "haus-fastaigh",
+      "name": "Clan Dál Fastaigh",
+      "crest": "/Stammbäume/assets/images/houses/Uathneach/fastaigh.webp",
+      "href": "/Stammbäume/Stammbaum.html?family=haus-fastaigh&mode=view",
+      "status": "active",
+      "formerSeat": "",
+      "territories": [
+        {
+          "name": "Herrschaft von Bronnan",
+          "kingdom": "Uathneach",
+          "county": "Tir na Láimhe"
+        }
+      ],
+      "priority": 9,
+      "residences": [
+        {
+          "seat": "Bronnan",
+          "role": "Hauptsitz",
+          "kingdom": "Uathneach",
+          "county": "Tir na Láimhe",
+          "territory": "Herrschaft von Bronnan",
+          "rank": "dun-tiarna"
+        }
+      ]
+    },
+    {
+      "id": "haus-lasgair",
+      "name": "Clan Ua Lasgair",
+      "crest": "/Stammbäume/assets/images/houses/Uathneach/lasgair.webp",
+      "href": "/Stammbäume/Stammbaum.html?family=haus-lasgair&mode=view",
+      "status": "active",
+      "formerSeat": "",
+      "territories": [
+        {
+          "name": "Herrschaft von Mhorcha",
+          "kingdom": "Uathneach",
+          "county": "Tir na Cloiche"
+        }
+      ],
+      "priority": 9,
+      "residences": [
+        {
+          "seat": "Mhorcha",
+          "role": "Hauptsitz",
+          "kingdom": "Uathneach",
+          "county": "Tir na Cloiche",
+          "territory": "Herrschaft von Mhorcha",
+          "rank": "dun-tiarna"
+        }
+      ]
+    },
+    {
+      "id": "haus-suilgeach",
+      "name": "Clan Na Suilgeach",
+      "crest": "/Stammbäume/assets/images/houses/Uathneach/suilgeach.webp",
+      "href": "/Stammbäume/Stammbaum.html?family=haus-suilgeach&mode=view",
+      "status": "active",
+      "formerSeat": "",
+      "territories": [
+        {
+          "name": "Herrschaft von Caorthann",
+          "kingdom": "Uathneach",
+          "county": "Tir na Conaire"
+        }
+      ],
+      "priority": 9,
+      "residences": [
+        {
+          "seat": "Caorthann",
+          "role": "Hauptsitz",
+          "kingdom": "Uathneach",
+          "county": "Tir na Conaire",
+          "territory": "Herrschaft von Caorthann",
+          "rank": "dun-tiarna"
+        }
+      ]
+    },
+    {
+      "id": "haus-luachra",
+      "name": "Clan Nic Luachra",
+      "crest": "/Stammbäume/assets/images/houses/Uathneach/luachra.webp",
+      "href": "/Stammbäume/Stammbaum.html?family=haus-luachra&mode=view",
+      "status": "active",
+      "formerSeat": "",
+      "territories": [
+        {
+          "name": "Herrschaft von Treabhair",
+          "kingdom": "Uathneach",
+          "county": "Tir na Sruthán"
+        }
+      ],
+      "priority": 9,
+      "residences": [
+        {
+          "seat": "Treabhair",
+          "role": "Hauptsitz",
+          "kingdom": "Uathneach",
+          "county": "Tir na Sruthán",
+          "territory": "Herrschaft von Treabhair",
+          "rank": "dun-tiarna"
+        }
+      ]
+    },
+    {
+      "id": "haus-clannmhar",
+      "name": "Clan Tir an Clannmhar",
+      "crest": "/Stammbäume/assets/images/houses/Uathneach/clannmhar.webp",
+      "href": "/Stammbäume/Stammbaum.html?family=haus-clannmhar&mode=view",
+      "status": "active",
+      "formerSeat": "",
+      "territories": [
+        {
+          "name": "Herrschaft von Rioghain",
+          "kingdom": "Uathneach",
+          "county": "Tir na Cloiche"
+        }
+      ],
+      "priority": 9,
+      "residences": [
+        {
+          "seat": "Rioghain",
+          "role": "Hauptsitz",
+          "kingdom": "Uathneach",
+          "county": "Tir na Cloiche",
+          "territory": "Herrschaft von Rioghain",
+          "rank": "dun-tiarna"
+        }
+      ]
+    },
+    {
+      "id": "haus-briccne",
+      "name": "Clan Na Briccne",
+      "crest": "/Stammbäume/assets/images/houses/Uathneach/briccne.webp",
+      "href": "/Stammbäume/Stammbaum.html?family=haus-briccne&mode=view",
+      "status": "active",
+      "formerSeat": "",
+      "territories": [],
+      "priority": 13,
+      "residences": [
+        {
+          "seat": "Dunnean",
+          "role": "Hauptsitz",
+          "kingdom": "Uathneach",
+          "county": "Tir na Láimhe",
+          "territory": "",
+          "rank": "laird"
+        }
+      ]
+    },
+    {
+      "id": "haus-arbhair",
+      "name": "Clan Dâl Arbhair",
+      "crest": "/Stammbäume/assets/images/houses/Uathneach/arbhair.webp",
+      "href": "/Stammbäume/Stammbaum.html?family=haus-arbhair&mode=view",
+      "status": "active",
+      "formerSeat": "",
+      "territories": [],
+      "priority": 13,
+      "residences": [
+        {
+          "seat": "Dunnean",
+          "role": "Hauptsitz",
+          "kingdom": "Uathneach",
+          "county": "Tir na Láimhe",
+          "territory": "",
+          "rank": "laird"
+        }
+      ]
+    },
+    {
+      "id": "haus-scathain",
+      "name": "Clan An Scatháin",
+      "crest": "/Stammbäume/assets/images/houses/Uathneach/scathain.webp",
+      "href": "/Stammbäume/Stammbaum.html?family=haus-scathain&mode=view",
+      "status": "active",
+      "formerSeat": "",
+      "territories": [],
+      "priority": 13,
+      "residences": [
+        {
+          "seat": "Dunnean",
+          "role": "Hauptsitz",
+          "kingdom": "Uathneach",
+          "county": "Tir na Láimhe",
+          "territory": "",
+          "rank": "laird"
+        }
+      ]
+    },
+    {
+      "id": "haus-muirin",
+      "name": "Clan Ua Muirin",
+      "crest": "/Stammbäume/assets/images/houses/Uathneach/muirin.webp",
+      "href": "/Stammbäume/Stammbaum.html?family=haus-muirin&mode=view",
+      "status": "active",
+      "formerSeat": "",
+      "territories": [],
+      "priority": 13,
+      "residences": [
+        {
+          "seat": "Broch an Reithe",
+          "role": "Hauptsitz",
+          "kingdom": "Uathneach",
+          "county": "Tir na Láimhe",
+          "territory": "",
+          "rank": "laird"
+        }
+      ]
+    },
+    {
+      "id": "haus-cairbre",
+      "name": "Clan Ua Cairbre",
+      "crest": "/Stammbäume/assets/images/houses/Uathneach/cairbre.webp",
+      "href": "/Stammbäume/Stammbaum.html?family=haus-cairbre&mode=view",
+      "status": "active",
+      "formerSeat": "",
+      "territories": [],
+      "priority": 13,
+      "residences": [
+        {
+          "seat": "Orglen",
+          "role": "Hauptsitz",
+          "kingdom": "Uathneach",
+          "county": "Tir na Taoide",
+          "territory": "",
+          "rank": "laird"
+        }
+      ]
+    },
+    {
+      "id": "haus-reannachain",
+      "name": "Clan Ua Reannachain",
+      "crest": "/Stammbäume/assets/images/houses/Uathneach/reannachain.webp",
+      "href": "/Stammbäume/Stammbaum.html?family=haus-reannachain&mode=view",
+      "status": "active",
+      "formerSeat": "",
+      "territories": [],
+      "priority": 13,
+      "residences": [
+        {
+          "seat": "Orglen",
+          "role": "Hauptsitz",
+          "kingdom": "Uathneach",
+          "county": "Tir na Taoide",
+          "territory": "",
+          "rank": "laird"
+        }
+      ]
+    },
+    {
+      "id": "haus-cairge",
+      "name": "Clan Ua Cairge",
+      "crest": "/Stammbäume/assets/images/houses/Uathneach/cairge.webp",
+      "href": "/Stammbäume/Stammbaum.html?family=haus-cairge&mode=view",
+      "status": "active",
+      "formerSeat": "",
+      "territories": [],
+      "priority": 13,
+      "residences": [
+        {
+          "seat": "Broch an Mhor",
+          "role": "Hauptsitz",
+          "kingdom": "Uathneach",
+          "county": "Tir na Taoide",
+          "territory": "",
+          "rank": "laird"
+        }
+      ]
+    },
+    {
+      "id": "haus-cuilen",
+      "name": "Clan Ua Cuilen",
+      "crest": "/Stammbäume/assets/images/houses/Uathneach/cuilen.webp",
+      "href": "/Stammbäume/Stammbaum.html?family=haus-cuilen&mode=view",
+      "status": "active",
+      "formerSeat": "",
+      "territories": [],
+      "priority": 13,
+      "residences": [
+        {
+          "seat": "Rinnmara",
+          "role": "Hauptsitz",
+          "kingdom": "Uathneach",
+          "county": "Tir na dTorc",
+          "territory": "",
+          "rank": "laird"
+        }
+      ]
+    },
+    {
+      "id": "haus-cadhla",
+      "name": "Clan An Cadhla",
+      "crest": "/Stammbäume/assets/images/houses/Uathneach/cadhla.webp",
+      "href": "/Stammbäume/Stammbaum.html?family=haus-cadhla&mode=view",
+      "status": "active",
+      "formerSeat": "",
+      "territories": [],
+      "priority": 13,
+      "residences": [
+        {
+          "seat": "Broch an Cuan",
+          "role": "Hauptsitz",
+          "kingdom": "Uathneach",
+          "county": "Tir na dTorc",
+          "territory": "",
+          "rank": "laird"
+        }
+      ]
+    },
+    {
+      "id": "haus-marcaigh",
+      "name": "Clan Ruin Marcaigh",
+      "crest": "/Stammbäume/assets/images/houses/Uathneach/marcaigh.webp",
+      "href": "/Stammbäume/Stammbaum.html?family=haus-marcaigh&mode=view",
+      "status": "active",
+      "formerSeat": "",
+      "territories": [],
+      "priority": 13,
+      "residences": [
+        {
+          "seat": "Kharanor",
+          "role": "Hauptsitz",
+          "kingdom": "Uathneach",
+          "county": "Tir na Cloiche",
+          "territory": "",
+          "rank": "laird"
+        }
+      ]
+    },
+    {
+      "id": "haus-giolla",
+      "name": "Clan Ruin Giolla",
+      "crest": "/Stammbäume/assets/images/houses/Uathneach/giolla.webp",
+      "href": "/Stammbäume/Stammbaum.html?family=haus-giolla&mode=view",
+      "status": "active",
+      "formerSeat": "",
+      "territories": [],
+      "priority": 13,
+      "residences": [
+        {
+          "seat": "Kharanor",
+          "role": "Hauptsitz",
+          "kingdom": "Uathneach",
+          "county": "Tir na Cloiche",
+          "territory": "",
+          "rank": "laird"
+        }
+      ]
+    },
+    {
+      "id": "haus-fiodhran",
+      "name": "Clan Na Fiodhrán",
+      "crest": "/Stammbäume/assets/images/houses/Uathneach/fiodhran.webp",
+      "href": "/Stammbäume/Stammbaum.html?family=haus-fiodhran&mode=view",
+      "status": "active",
+      "formerSeat": "",
+      "territories": [],
+      "priority": 15,
+      "residences": [
+        {
+          "seat": "Dathuil",
+          "role": "Hauptsitz",
+          "kingdom": "Uathneach",
+          "county": "Tir na gCoillte",
+          "territory": "",
+          "rank": "unknown"
+        }
+      ]
+    },
+    {
+      "id": "haus-creagan",
+      "name": "Clan Tir An Creagán",
+      "crest": "/Stammbäume/assets/images/houses/Uathneach/creagan.webp",
+      "href": "/Stammbäume/Stammbaum.html?family=haus-creagan&mode=view",
+      "status": "active",
+      "formerSeat": "",
+      "territories": [],
+      "priority": 15,
+      "residences": [
+        {
+          "seat": "Ceithirn",
+          "role": "Hauptsitz",
+          "kingdom": "Uathneach",
+          "county": "Tir na Conaire",
+          "territory": "",
+          "rank": "unknown"
+        }
+      ]
+    },
+    {
+      "id": "haus-siubhran",
+      "name": "Clan Dál Siubhrán",
+      "crest": "/Stammbäume/assets/images/houses/Uathneach/einsiedlerkrebs.webp",
+      "href": "/Stammbäume/Stammbaum.html?family=haus-siubhran&mode=view",
+      "status": "active",
+      "formerSeat": "",
+      "territories": [],
+      "priority": 15,
+      "residences": [
+        {
+          "seat": "Féthlinn",
+          "role": "Hauptsitz",
+          "kingdom": "Uathneach",
+          "county": "Tir na Láimhe",
+          "territory": "",
+          "rank": "unknown"
+        }
+      ]
+    },
+    {
       "id": "haus-gwyllach",
       "name": "Haus Gwyllach",
       "crest": "/Stammbäume/assets/images/houses/Llamreis Ankunft/haus-gwyllach.png",

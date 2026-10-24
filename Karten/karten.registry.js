@@ -200,6 +200,28 @@
   }
 
   const MAPS = [
+    // BEGIN UATHNEACH_GENERATED
+    {
+      "id": "uathneach",
+      "title": "Fürstentum Uathneach",
+      "status": "active",
+      "type": "region",
+      "hierarchy": [
+        {
+          "level": "kingdom",
+          "slug": "uathneach",
+          "title": "Uathneach"
+        }
+      ],
+      "folder": "Uathneach",
+      "images": {
+        "normal": "Uathneach/Kartenbilder/regionen.webp"
+      },
+      "dataPath": "Uathneach/data.json",
+      "territoryHref": "/Kontinente/Estryll/Fürstentum Uathneach/Fürstentum Uathneach.html",
+      "link": "karte.html?map=uathneach"
+    },
+    // END UATHNEACH_GENERATED
     // BEGIN FAELAORN_SKJAERHEIM_GENERATED
     {
       "id": "faelaorn-tir-na-rann",

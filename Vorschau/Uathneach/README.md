@@ -1,5 +1,11 @@
 # Uathneach: Vorschlag für Patrick
 
+Patrick hat am 24. Oktober 2026 Variante 1 gewählt. Die reguläre Umsetzung liegt
+unter `Kontinente/Estryll/Fürstentum Uathneach/` und `Karten/Uathneach/`;
+der bestätigte Bestand hat seine eigene Quelle
+`Stammbäume/assets/js/data/uathneach-territories.source.json`.
+Diese Vorschau bleibt als unabhängiges Archiv der drei Möglichkeiten erhalten.
+
 Eigenständige, experimentelle Vorschau mit drei Varianten. Kein Eintrag in den
 Welt-, Haus- oder Kartenregistern; keine Firebase-Anbindung. Änderungen im
 Bearbeitungsmodus gelten nur bis zum Neuladen der geöffneten Seite.

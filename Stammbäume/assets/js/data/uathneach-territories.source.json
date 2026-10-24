@@ -1,0 +1,753 @@
+{
+  "schemaVersion": 1,
+  "selection": {
+    "variant": "original",
+    "number": 1,
+    "decidedBy": "Patrick",
+    "acceptedAt": "2026-10-24",
+    "source": "Vorschau/Uathneach/variants.mjs",
+    "coordinateOrigin": "top-left",
+    "coordinateUnit": "percent",
+    "note": "Punktanker an den Siedlungszeichnungen der freigegebenen Karte; keine World-Anvil-Koordinaten."
+  },
+  "realm": {
+    "id": "fuerstentum-uathneach",
+    "name": "Uathneach",
+    "banner": "/Stammbäume/assets/images/regions/Uathneach/uathneach.webp",
+    "rulerId": "laga",
+    "seat": "dunnean"
+  },
+  "regions": [
+    {
+      "id": "uathneach-tir-na-laimhe",
+      "key": "laimhe",
+      "name": "Tir na Láimhe",
+      "meaning": "Land der Hand",
+      "rulerId": "laga",
+      "seat": "Dunnean",
+      "kind": "Fürstliche Domäne",
+      "banner": "/Stammbäume/assets/images/regions/Uathneach/laimhe.webp",
+      "color": "#b88832",
+      "labelPoint": [
+        40.7,
+        26.5
+      ],
+      "geography": "Die nördliche Halbinsel verbindet die Küstenstadt Dunnean mit bewaldetem Hügelland. Ein Gebirgszug grenzt sie nach Südosten gegen das Tal von Moineal ab.",
+      "source": "https://www.teanglann.ie/ga/fgb/l%C3%A1mh"
+    },
+    {
+      "id": "uathneach-tir-na-sruthan",
+      "key": "sruthan",
+      "name": "Tir na Sruthán",
+      "meaning": "Land der Bäche",
+      "rulerId": "gealan",
+      "seat": "Moineal",
+      "kind": "Oberherrschaft",
+      "banner": "/Stammbäume/assets/images/regions/Uathneach/sruthan.webp",
+      "color": "#6767ac",
+      "labelPoint": [
+        53.5,
+        42.5
+      ],
+      "geography": "Moineal liegt im zentralen Tal am Fluss, unmittelbar unter den Bergen. Das Gebiet zieht sich zwischen Waldhängen und felsigen Höhen weit nach Süden.",
+      "source": "https://www.teanglann.ie/en/fgb/sruth%C3%A1n"
+    },
+    {
+      "id": "uathneach-tir-na-gcoillte",
+      "key": "gcoillte",
+      "name": "Tir na gCoillte",
+      "meaning": "Land der Wälder",
+      "rulerId": "conchobhair",
+      "seat": "Cathair",
+      "kind": "Oberherrschaft",
+      "banner": "/Stammbäume/assets/images/regions/Uathneach/gcoillte.webp",
+      "color": "#c27449",
+      "labelPoint": [
+        70.5,
+        37.3
+      ],
+      "geography": "Das östliche Gebiet um Cathair und Dathuil besitzt ausgedehnte Waldflächen. Wege führen zwischen Küstenorten, bewaldeten Höhen und dem Binnenland entlang.",
+      "source": "https://www.teanglann.ie/ga/fgb/Coill"
+    },
+    {
+      "id": "uathneach-tir-na-taoide",
+      "key": "taoide",
+      "name": "Tir na Taoide",
+      "meaning": "Land der Gezeiten",
+      "rulerId": "roich",
+      "seat": "Orglen",
+      "kind": "Oberherrschaft",
+      "banner": "/Stammbäume/assets/images/regions/Uathneach/taoide.webp",
+      "color": "#2b9c97",
+      "labelPoint": [
+        21,
+        50.5
+      ],
+      "geography": "Die westliche Küste um Orglen ist von Buchten und vorspringenden, bewaldeten Landzungen geprägt. Küstenwege verbinden die Stadt mit den beiden Brochs.",
+      "source": "https://www.teanglann.ie/en/fgb/tide"
+    },
+    {
+      "id": "uathneach-tir-na-dtorc",
+      "key": "dtorc",
+      "name": "Tir na dTorc",
+      "meaning": "Land der Keiler",
+      "rulerId": "midgna",
+      "seat": "Rinnmara",
+      "kind": "Oberherrschaft",
+      "banner": "/Stammbäume/assets/images/regions/Uathneach/dtorc.webp",
+      "color": "#45934c",
+      "labelPoint": [
+        39,
+        68.1
+      ],
+      "geography": "Die südwestliche Region verbindet Rinnmaras Küstenlage mit niedrigen Hügeln, Waldstücken und offenen Flächen. Nach Süden verengt sich das Land zum Broch an Cuan.",
+      "source": "https://www.teanglann.ie/en/fgb/torc"
+    },
+    {
+      "id": "uathneach-tir-na-conaire",
+      "key": "conaire",
+      "name": "Tir na Conaire",
+      "meaning": "Land des Pfades",
+      "rulerId": "mata",
+      "seat": "Temair",
+      "kind": "Oberherrschaft",
+      "banner": "/Stammbäume/assets/images/regions/Uathneach/conaire.webp",
+      "color": "#895c9f",
+      "labelPoint": [
+        79.5,
+        19.6
+      ],
+      "geography": "Das nordöstliche Küstenland zieht sich von Caorthann nach Temair. Waldwege und Hügel verbinden die Küste mit den bergigen Höhen um Ceithirn.",
+      "source": "https://www.teanglann.ie/en/fgb/conair"
+    },
+    {
+      "id": "uathneach-tir-na-cloiche",
+      "key": "cloiche",
+      "name": "Tir na Cloiche",
+      "meaning": "Land des Steins",
+      "rulerId": "luga",
+      "seat": "Kharanor",
+      "kind": "Oberherrschaft",
+      "banner": "/Stammbäume/assets/images/regions/Uathneach/cloiche.webp",
+      "color": "#8b8d39",
+      "labelPoint": [
+        54.2,
+        81.3
+      ],
+      "geography": "Der schmale südöstliche Landstreifen läuft über mehrere felsige Höhen bis Kharanor. Seine Siedlungen und Wege liegen zwischen Waldstücken, Bergen und Küste.",
+      "source": "https://www.teanglann.ie/en/fgb/cloch"
+    }
+  ],
+  "clans": [
+    {
+      "id": "laga",
+      "name": "Mac Ard’Lága",
+      "rank": "Ard Tiarna",
+      "liege": null,
+      "seat": "dunnean",
+      "crest": "/Stammbäume/assets/images/houses/Uathneach/laga.webp",
+      "familyId": "haus-laga",
+      "rankId": "ard-tiarna",
+      "alias": "",
+      "regionId": "uathneach-tir-na-laimhe",
+      "territoryId": "uathneach-tir-na-laimhe"
+    },
+    {
+      "id": "gealan",
+      "name": "An Gealân",
+      "rank": "Mor Tiarna",
+      "liege": "laga",
+      "seat": "moineal",
+      "crest": "/Stammbäume/assets/images/houses/Uathneach/gealan.webp",
+      "familyId": "haus-gealan",
+      "rankId": "mor-tiarna",
+      "alias": "",
+      "regionId": "uathneach-tir-na-sruthan",
+      "territoryId": "uathneach-tir-na-sruthan"
+    },
+    {
+      "id": "conchobhair",
+      "name": "Ard Conchobhair",
+      "rank": "Mor Tiarna",
+      "liege": "laga",
+      "seat": "cathair",
+      "crest": "/Stammbäume/assets/images/houses/Uathneach/conchobhair.webp",
+      "familyId": "haus-conchobhair",
+      "rankId": "mor-tiarna",
+      "alias": "",
+      "regionId": "uathneach-tir-na-gcoillte",
+      "territoryId": "uathneach-tir-na-gcoillte"
+    },
+    {
+      "id": "roich",
+      "name": "Mac Roich",
+      "rank": "Mor Tiarna",
+      "liege": "laga",
+      "seat": "orglen",
+      "crest": "/Stammbäume/assets/images/houses/Uathneach/roich.webp",
+      "familyId": "haus-roich",
+      "rankId": "mor-tiarna",
+      "alias": "",
+      "regionId": "uathneach-tir-na-taoide",
+      "territoryId": "uathneach-tir-na-taoide"
+    },
+    {
+      "id": "midgna",
+      "name": "Mac Midgna",
+      "rank": "Mor Tiarna",
+      "liege": "laga",
+      "seat": "rinnmara",
+      "crest": "/Stammbäume/assets/images/houses/Uathneach/midgna.webp",
+      "familyId": "haus-midgna",
+      "rankId": "mor-tiarna",
+      "alias": "",
+      "regionId": "uathneach-tir-na-dtorc",
+      "territoryId": "uathneach-tir-na-dtorc"
+    },
+    {
+      "id": "mata",
+      "name": "Tir an Máta",
+      "rank": "Mor Tiarna",
+      "liege": "laga",
+      "seat": "temair",
+      "crest": "/Stammbäume/assets/images/houses/Uathneach/mata.webp",
+      "familyId": "haus-mata",
+      "rankId": "mor-tiarna",
+      "alias": "",
+      "regionId": "uathneach-tir-na-conaire",
+      "territoryId": "uathneach-tir-na-conaire"
+    },
+    {
+      "id": "luga",
+      "name": "Ua’Luga",
+      "rank": "Mor Tiarna",
+      "liege": "laga",
+      "seat": "kharanor",
+      "crest": "/Stammbäume/assets/images/houses/Uathneach/luga.webp",
+      "familyId": "haus-luga",
+      "rankId": "mor-tiarna",
+      "alias": "",
+      "regionId": "uathneach-tir-na-cloiche",
+      "territoryId": "uathneach-tir-na-cloiche"
+    },
+    {
+      "id": "fastaigh",
+      "name": "Dál Fastaigh",
+      "rank": "Dún Tiarna",
+      "liege": "laga",
+      "seat": "bronnan",
+      "crest": "/Stammbäume/assets/images/houses/Uathneach/fastaigh.webp",
+      "familyId": "haus-fastaigh",
+      "rankId": "dun-tiarna",
+      "alias": "",
+      "regionId": "uathneach-tir-na-laimhe",
+      "territoryId": "uathneach-herrschaft-fastaigh"
+    },
+    {
+      "id": "lasgair",
+      "name": "Ua Lasgair",
+      "rank": "Dún Tiarna",
+      "liege": "luga",
+      "seat": "mhorcha",
+      "crest": "/Stammbäume/assets/images/houses/Uathneach/lasgair.webp",
+      "familyId": "haus-lasgair",
+      "rankId": "dun-tiarna",
+      "alias": "",
+      "regionId": "uathneach-tir-na-cloiche",
+      "territoryId": "uathneach-herrschaft-lasgair"
+    },
+    {
+      "id": "suilgeach",
+      "name": "Na Suilgeach",
+      "rank": "Dún Tiarna",
+      "liege": "mata",
+      "seat": "caorthann",
+      "crest": "/Stammbäume/assets/images/houses/Uathneach/suilgeach.webp",
+      "familyId": "haus-suilgeach",
+      "rankId": "dun-tiarna",
+      "alias": "",
+      "regionId": "uathneach-tir-na-conaire",
+      "territoryId": "uathneach-herrschaft-suilgeach"
+    },
+    {
+      "id": "luachra",
+      "name": "Nic Luachra",
+      "rank": "Dún Tiarna",
+      "liege": "gealan",
+      "seat": "treabhair",
+      "crest": "/Stammbäume/assets/images/houses/Uathneach/luachra.webp",
+      "familyId": "haus-luachra",
+      "rankId": "dun-tiarna",
+      "alias": "",
+      "regionId": "uathneach-tir-na-sruthan",
+      "territoryId": "uathneach-herrschaft-luachra"
+    },
+    {
+      "id": "clannmhar",
+      "name": "Tir an Clannmhar",
+      "rank": "Dún Tiarna",
+      "liege": "luga",
+      "seat": "rioghain",
+      "crest": "/Stammbäume/assets/images/houses/Uathneach/clannmhar.webp",
+      "familyId": "haus-clannmhar",
+      "rankId": "dun-tiarna",
+      "alias": "",
+      "regionId": "uathneach-tir-na-cloiche",
+      "territoryId": "uathneach-herrschaft-clannmhar"
+    },
+    {
+      "id": "briccne",
+      "name": "Na Briccne",
+      "rank": "Laird",
+      "liege": "laga",
+      "seat": "dunnean",
+      "crest": "/Stammbäume/assets/images/houses/Uathneach/briccne.webp",
+      "familyId": "haus-briccne",
+      "rankId": "laird",
+      "alias": "",
+      "regionId": "uathneach-tir-na-laimhe",
+      "territoryId": "uathneach-tir-na-laimhe"
+    },
+    {
+      "id": "arbhair",
+      "name": "Dâl Arbhair",
+      "rank": "Laird",
+      "liege": "laga",
+      "seat": "dunnean",
+      "crest": "/Stammbäume/assets/images/houses/Uathneach/arbhair.webp",
+      "familyId": "haus-arbhair",
+      "rankId": "laird",
+      "alias": "Dal Arbhair",
+      "regionId": "uathneach-tir-na-laimhe",
+      "territoryId": "uathneach-tir-na-laimhe"
+    },
+    {
+      "id": "scathain",
+      "name": "An Scatháin",
+      "rank": "Laird",
+      "liege": "laga",
+      "seat": "dunnean",
+      "crest": "/Stammbäume/assets/images/houses/Uathneach/scathain.webp",
+      "familyId": "haus-scathain",
+      "rankId": "laird",
+      "alias": "An Scathain",
+      "regionId": "uathneach-tir-na-laimhe",
+      "territoryId": "uathneach-tir-na-laimhe"
+    },
+    {
+      "id": "muirin",
+      "name": "Ua Muirin",
+      "rank": "Laird",
+      "liege": "laga",
+      "seat": "reithe",
+      "crest": "/Stammbäume/assets/images/houses/Uathneach/muirin.webp",
+      "familyId": "haus-muirin",
+      "rankId": "laird",
+      "alias": "",
+      "regionId": "uathneach-tir-na-laimhe",
+      "territoryId": "uathneach-tir-na-laimhe"
+    },
+    {
+      "id": "cairbre",
+      "name": "Ua Cairbre",
+      "rank": "Laird",
+      "liege": "roich",
+      "seat": "orglen",
+      "crest": "/Stammbäume/assets/images/houses/Uathneach/cairbre.webp",
+      "familyId": "haus-cairbre",
+      "rankId": "laird",
+      "alias": "Ua Caibre",
+      "regionId": "uathneach-tir-na-taoide",
+      "territoryId": "uathneach-tir-na-taoide"
+    },
+    {
+      "id": "reannachain",
+      "name": "Ua Reannachain",
+      "rank": "Laird",
+      "liege": "roich",
+      "seat": "orglen",
+      "crest": "/Stammbäume/assets/images/houses/Uathneach/reannachain.webp",
+      "familyId": "haus-reannachain",
+      "rankId": "laird",
+      "alias": "Ua Reannchain",
+      "regionId": "uathneach-tir-na-taoide",
+      "territoryId": "uathneach-tir-na-taoide"
+    },
+    {
+      "id": "cairge",
+      "name": "Ua Cairge",
+      "rank": "Laird",
+      "liege": "roich",
+      "seat": "mhor",
+      "crest": "/Stammbäume/assets/images/houses/Uathneach/cairge.webp",
+      "familyId": "haus-cairge",
+      "rankId": "laird",
+      "alias": "",
+      "regionId": "uathneach-tir-na-taoide",
+      "territoryId": "uathneach-tir-na-taoide"
+    },
+    {
+      "id": "cuilen",
+      "name": "Ua Cuilen",
+      "rank": "Laird",
+      "liege": "midgna",
+      "seat": "rinnmara",
+      "crest": "/Stammbäume/assets/images/houses/Uathneach/cuilen.webp",
+      "familyId": "haus-cuilen",
+      "rankId": "laird",
+      "alias": "",
+      "regionId": "uathneach-tir-na-dtorc",
+      "territoryId": "uathneach-tir-na-dtorc"
+    },
+    {
+      "id": "cadhla",
+      "name": "An Cadhla",
+      "rank": "Laird",
+      "liege": "midgna",
+      "seat": "cuan",
+      "crest": "/Stammbäume/assets/images/houses/Uathneach/cadhla.webp",
+      "familyId": "haus-cadhla",
+      "rankId": "laird",
+      "alias": "",
+      "regionId": "uathneach-tir-na-dtorc",
+      "territoryId": "uathneach-tir-na-dtorc"
+    },
+    {
+      "id": "marcaigh",
+      "name": "Ruin Marcaigh",
+      "rank": "Laird",
+      "liege": "luga",
+      "seat": "kharanor",
+      "crest": "/Stammbäume/assets/images/houses/Uathneach/marcaigh.webp",
+      "familyId": "haus-marcaigh",
+      "rankId": "laird",
+      "alias": "",
+      "regionId": "uathneach-tir-na-cloiche",
+      "territoryId": "uathneach-tir-na-cloiche"
+    },
+    {
+      "id": "giolla",
+      "name": "Ruin Giolla",
+      "rank": "Laird",
+      "liege": "luga",
+      "seat": "kharanor",
+      "crest": "/Stammbäume/assets/images/houses/Uathneach/giolla.webp",
+      "familyId": "haus-giolla",
+      "rankId": "laird",
+      "alias": "",
+      "regionId": "uathneach-tir-na-cloiche",
+      "territoryId": "uathneach-tir-na-cloiche"
+    },
+    {
+      "id": "fiodhran",
+      "seat": "dathuil",
+      "liege": "conchobhair",
+      "rank": null,
+      "name": "Na Fiodhrán",
+      "crest": "/Stammbäume/assets/images/houses/Uathneach/fiodhran.webp",
+      "familyId": "haus-fiodhran",
+      "rankId": "unknown",
+      "alias": "",
+      "regionId": "uathneach-tir-na-gcoillte",
+      "territoryId": "uathneach-tir-na-gcoillte"
+    },
+    {
+      "id": "creagan",
+      "seat": "ceithirn",
+      "liege": "mata",
+      "rank": null,
+      "name": "Tir An Creagán",
+      "crest": "/Stammbäume/assets/images/houses/Uathneach/creagan.webp",
+      "familyId": "haus-creagan",
+      "rankId": "unknown",
+      "alias": "",
+      "regionId": "uathneach-tir-na-conaire",
+      "territoryId": "uathneach-tir-na-conaire"
+    },
+    {
+      "id": "einsiedlerkrebs",
+      "seat": "fethlinn",
+      "liege": "laga",
+      "rank": null,
+      "name": "Dál Siubhrán",
+      "crest": "/Stammbäume/assets/images/houses/Uathneach/einsiedlerkrebs.webp",
+      "familyId": "haus-siubhran",
+      "rankId": "unknown",
+      "alias": "",
+      "regionId": "uathneach-tir-na-laimhe",
+      "territoryId": "uathneach-tir-na-laimhe"
+    }
+  ],
+  "settlements": [
+    {
+      "id": "dunnean",
+      "name": "Dunnean",
+      "point": [
+        45.4,
+        6.4
+      ],
+      "category": "Hauptstadt",
+      "mapRegionId": "uathneach-tir-na-laimhe",
+      "territoryId": "uathneach-tir-na-laimhe",
+      "residentFamilyIds": [
+        "haus-laga",
+        "haus-briccne",
+        "haus-arbhair",
+        "haus-scathain"
+      ]
+    },
+    {
+      "id": "fethlinn",
+      "name": "Féthlinn",
+      "point": [
+        32.3,
+        18
+      ],
+      "category": "Leuchtturmsiedlung",
+      "mapRegionId": "uathneach-tir-na-laimhe",
+      "territoryId": "uathneach-tir-na-laimhe",
+      "residentFamilyIds": [
+        "haus-siubhran"
+      ]
+    },
+    {
+      "id": "bronnan",
+      "name": "Bronnan",
+      "point": [
+        37.5,
+        35.3
+      ],
+      "category": "Burgsiedlung",
+      "mapRegionId": "uathneach-tir-na-laimhe",
+      "territoryId": "uathneach-herrschaft-fastaigh",
+      "residentFamilyIds": [
+        "haus-fastaigh"
+      ]
+    },
+    {
+      "id": "reithe",
+      "name": "Broch an Reithe",
+      "point": [
+        19.6,
+        33
+      ],
+      "category": "Burgsiedlung",
+      "mapRegionId": "uathneach-tir-na-taoide",
+      "territoryId": "uathneach-tir-na-laimhe",
+      "residentFamilyIds": [
+        "haus-muirin"
+      ]
+    },
+    {
+      "id": "moineal",
+      "name": "Moineal",
+      "point": [
+        46.5,
+        47
+      ],
+      "category": "Stadt",
+      "mapRegionId": "uathneach-tir-na-sruthan",
+      "territoryId": "uathneach-tir-na-sruthan",
+      "residentFamilyIds": [
+        "haus-gealan"
+      ]
+    },
+    {
+      "id": "treabhair",
+      "name": "Treabhair",
+      "point": [
+        55.8,
+        29.4
+      ],
+      "category": "Burgsiedlung",
+      "mapRegionId": "uathneach-tir-na-sruthan",
+      "territoryId": "uathneach-herrschaft-luachra",
+      "residentFamilyIds": [
+        "haus-luachra"
+      ]
+    },
+    {
+      "id": "cathair",
+      "name": "Cathair",
+      "point": [
+        71.6,
+        43.9
+      ],
+      "category": "Stadt",
+      "mapRegionId": "uathneach-tir-na-gcoillte",
+      "territoryId": "uathneach-tir-na-gcoillte",
+      "residentFamilyIds": [
+        "haus-conchobhair"
+      ]
+    },
+    {
+      "id": "dathuil",
+      "name": "Dathuil",
+      "point": [
+        82,
+        31.8
+      ],
+      "category": "Burgsiedlung",
+      "mapRegionId": "uathneach-tir-na-gcoillte",
+      "territoryId": "uathneach-tir-na-gcoillte",
+      "residentFamilyIds": [
+        "haus-fiodhran"
+      ]
+    },
+    {
+      "id": "orglen",
+      "name": "Orglen",
+      "point": [
+        4.8,
+        58
+      ],
+      "category": "Stadt",
+      "mapRegionId": "uathneach-tir-na-taoide",
+      "territoryId": "uathneach-tir-na-taoide",
+      "residentFamilyIds": [
+        "haus-roich",
+        "haus-cairbre",
+        "haus-reannachain"
+      ]
+    },
+    {
+      "id": "mhor",
+      "name": "Broch an Mhor",
+      "point": [
+        23.8,
+        64
+      ],
+      "category": "Burgsiedlung",
+      "mapRegionId": "uathneach-tir-na-taoide",
+      "territoryId": "uathneach-tir-na-taoide",
+      "residentFamilyIds": [
+        "haus-cairge"
+      ]
+    },
+    {
+      "id": "rinnmara",
+      "name": "Rinnmara",
+      "point": [
+        33.9,
+        75.2
+      ],
+      "category": "Stadt",
+      "mapRegionId": "uathneach-tir-na-dtorc",
+      "territoryId": "uathneach-tir-na-dtorc",
+      "residentFamilyIds": [
+        "haus-midgna",
+        "haus-cuilen"
+      ]
+    },
+    {
+      "id": "cuan",
+      "name": "Broch an Cuan",
+      "point": [
+        40,
+        87.4
+      ],
+      "category": "Burgsiedlung",
+      "mapRegionId": "uathneach-tir-na-dtorc",
+      "territoryId": "uathneach-tir-na-dtorc",
+      "residentFamilyIds": [
+        "haus-cadhla"
+      ]
+    },
+    {
+      "id": "temair",
+      "name": "Temair",
+      "point": [
+        93.5,
+        11.7
+      ],
+      "category": "Burgsiedlung",
+      "mapRegionId": "uathneach-tir-na-conaire",
+      "territoryId": "uathneach-tir-na-conaire",
+      "residentFamilyIds": [
+        "haus-mata"
+      ]
+    },
+    {
+      "id": "caorthann",
+      "name": "Caorthann",
+      "point": [
+        69.4,
+        14
+      ],
+      "category": "Burgsiedlung",
+      "mapRegionId": "uathneach-tir-na-conaire",
+      "territoryId": "uathneach-herrschaft-suilgeach",
+      "residentFamilyIds": [
+        "haus-suilgeach"
+      ]
+    },
+    {
+      "id": "ceithirn",
+      "name": "Ceithirn",
+      "point": [
+        91.4,
+        23
+      ],
+      "category": "Burgsiedlung",
+      "mapRegionId": "uathneach-tir-na-conaire",
+      "territoryId": "uathneach-tir-na-conaire",
+      "residentFamilyIds": [
+        "haus-creagan"
+      ]
+    },
+    {
+      "id": "kharanor",
+      "name": "Kharanor",
+      "point": [
+        54.3,
+        91.8
+      ],
+      "category": "Stadt",
+      "mapRegionId": "uathneach-tir-na-cloiche",
+      "territoryId": "uathneach-tir-na-cloiche",
+      "residentFamilyIds": [
+        "haus-luga",
+        "haus-marcaigh",
+        "haus-giolla"
+      ]
+    },
+    {
+      "id": "mhorcha",
+      "name": "Mhorcha",
+      "point": [
+        63.5,
+        58.4
+      ],
+      "category": "Burgsiedlung",
+      "mapRegionId": "uathneach-tir-na-cloiche",
+      "territoryId": "uathneach-herrschaft-lasgair",
+      "residentFamilyIds": [
+        "haus-lasgair"
+      ]
+    },
+    {
+      "id": "rioghain",
+      "name": "Rioghain",
+      "point": [
+        51.7,
+        67.8
+      ],
+      "category": "Dorf",
+      "mapRegionId": "uathneach-tir-na-cloiche",
+      "territoryId": "uathneach-herrschaft-clannmhar",
+      "residentFamilyIds": [
+        "haus-clannmhar"
+      ]
+    }
+  ],
+  "decisions": [
+    {
+      "id": "reithe-special-fief",
+      "text": "Broch an Reithe liegt geografisch in Tir na Taoide, dient als Lehen der Ua Muirin jedoch unmittelbar den Mac Ard’Lága und wird bei Tir na Láimhe geführt."
+    },
+    {
+      "id": "unconfirmed-ranks",
+      "text": "Na Fiodhrán, Tir An Creagán und Dál Siubhrán sind ihren Siedlungen und Lehnsherren zugeordnet; ihre Ränge bleiben offen."
+    }
+  ]
+}

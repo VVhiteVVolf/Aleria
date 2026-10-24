@@ -6,7 +6,7 @@ const tests = (directory, extension = 'mjs') => ['--test', '--experimental-test-
     .sort().map(name => directory + '/' + name)];
 const territoryBuilders = ['aislearneach', 'alben', 'blaithneach', 'ceitheach', 'cenyr-court',
   'dunfal', 'dunkelhain', 'faelaorn', 'fjordheim', 'heldenwacht', 'ivarsheim',
-  'kraehenmoor', 'leitheach', 'schwarzfenn', 'skjaerheim', 'vennyr'];
+  'kraehenmoor', 'leitheach', 'schwarzfenn', 'skjaerheim', 'uathneach', 'vennyr'];
 
 // These tasks own the new world-content systems. Existing focused Roriksheim
 // and family-chart geometry checks remain in site-build-tasks.mjs.
@@ -24,6 +24,7 @@ export const WORLD_CONTENT_TASKS = [
       'Stammbäume/assets/js/data/', 'Familien Häuser und Clans/'],
     commands: [['Karten/tools/import-leitheach-source.mjs', '--check'],
       ['Karten/tools/build-leitheach.mjs', '--check'],
+      ['Karten/tools/build-uathneach.mjs', '--check'],
       ['Karten/tools/build-households.mjs', '--check'], tests('Karten/tests')]
   },
   {

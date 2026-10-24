@@ -36,11 +36,11 @@ const third=structuredClone(second);
 Object.assign(third,{id:'alternative-2',number:3,title:'Sechs größere Gebiete',short:'Alternative Verteilung 2',map:'assets/karte-alternative-2.webp',file:'Uathneach Alternativ Verteilung2.png',
  summary:'Orglen und Rinnmara bilden ein gemeinsames Westgebiet. Broch an Cuan geht an das Südgebiet um Kharanor; Mhorcha an die östliche Oberherrschaft um Cathair.',
  strength:'Weniger Oberherrschaften und ein zusammenhängender Westküstenraum. Rinnmara bleibt als nachgeordneter Sitz der Mac Midgna erhalten.',
- tradeoff:'Die Mac Midgna würden zu Dún Tiarna unter den Mac Roich. Ua’Luga verlieren Na Lasgair in Mhorcha und erhalten dafür An Cadhla am südlichen Broch.',
+ tradeoff:'Die Mac Midgna würden zu Dún Tiarna unter den Mac Roich. Ua’Luga verlieren Ua Lasgair in Mhorcha und erhalten dafür An Cadhla am südlichen Broch.',
  changes:[...structuredClone(second.changes),
  {clan:'midgna',title:'Mac Midgna: Mor Tiarna → Dún Tiarna',text:'Rinnmara wird ein baronisches Lehen innerhalb der Roich-Oberherrschaft. Die Mac Midgna dienen künftig Mac Roich; Ua Cuilen bleiben ihre Lairds.'},
  {clan:'cadhla',title:'Broch an Cuan → Ua’Luga',text:'An Cadhla wechseln mit ihrem Broch von Mac Midgna zu Ua’Luga. Ihr Laird-Rang bleibt erhalten.'},
- {clan:'lasgair',title:'Mhorcha → Ard Conchobhair',text:'Na Lasgair wechseln mit Mhorcha aus der südlichen in die östliche Oberherrschaft. Sie bleiben Dún Tiarna.'}]});
+ {clan:'lasgair',title:'Mhorcha → Ard Conchobhair',text:'Ua Lasgair wechseln mit Mhorcha aus der südlichen in die östliche Oberherrschaft. Sie bleiben Dún Tiarna.'}]});
 Object.assign(third.clans.find(c=>c.id==='midgna'),{rank:'Dún Tiarna',liege:'roich'});
 third.clans.find(c=>c.id==='cadhla').liege='luga';
 third.clans.find(c=>c.id==='lasgair').liege='conchobhair';
@@ -50,8 +50,8 @@ third.regions=third.regions.filter(r=>r.id!=='dtorc');
 const thirdRegions={
  laimhe:{colour:'#b9a064'},sruthan:{colour:'#529a4a',geography:'Moineal, Treabhair und Bronnan bilden die zentrale Oberherrschaft. Ihr bewaldetes Hinterland reicht weiter nach Süden bis oberhalb von Rioghain.'},
  taoide:{colour:'#a3a747',point:[26,53],geography:'Das Westgebiet umfasst Orglen, Broch an Mhor und Rinnmara. Die Küstenwege verbinden die beiden Stadtsitze. Broch an Cuan liegt dagegen im südlichen Gebiet der Ua’Luga.',note:'Mac Roich führen die Oberherrschaft. Mac Midgna werden mit Rinnmara und ihren Lairds Ua Cuilen als Dún Tiarna untergeordnet.'},
- gcoillte:{colour:'#4d9995',point:[68,43],geography:'Die östliche Oberherrschaft verbindet Cathair und Dathuil mit Mhorcha an der südlichen Küste. Na Lasgair werden mit diesem Ort den Ard Conchobhair unterstellt.',note:'Na Lasgair behalten ihren Rang; die Grenze und der Lehnsherr wechseln.'},
- conaire:{colour:'#a2ac40'},cloiche:{colour:'#b66d55',point:[53,84],geography:'Kharanor, Rioghain und Broch an Cuan bilden das Südgebiet. Mhorcha liegt nun jenseits der Nordgrenze in der Oberherrschaft der Ard Conchobhair.',note:'Die Ua’Luga erhalten An Cadhla in Broch an Cuan und geben Na Lasgair in Mhorcha ab.'}
+ gcoillte:{colour:'#4d9995',point:[68,43],geography:'Die östliche Oberherrschaft verbindet Cathair und Dathuil mit Mhorcha an der südlichen Küste. Ua Lasgair werden mit diesem Ort den Ard Conchobhair unterstellt.',note:'Ua Lasgair behalten ihren Rang; die Grenze und der Lehnsherr wechseln.'},
+ conaire:{colour:'#a2ac40'},cloiche:{colour:'#b66d55',point:[53,84],geography:'Kharanor, Rioghain und Broch an Cuan bilden das Südgebiet. Mhorcha liegt nun jenseits der Nordgrenze in der Oberherrschaft der Ard Conchobhair.',note:'Die Ua’Luga erhalten An Cadhla in Broch an Cuan und geben Ua Lasgair in Mhorcha ab.'}
 };
 for(const region of third.regions)Object.assign(region,thirdRegions[region.id]);
 

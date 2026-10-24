@@ -24,6 +24,7 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "leitheach",
       "dunfal",
       "aislearneach",
+      "uathneach",
       "kaiserreich-argentum",
       "brevanor"
     ],
@@ -562,6 +563,32 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "haus-uilebheist",
       "haus-cnogan",
       "sept-techtmar",
+      "haus-laga",
+      "haus-briccne",
+      "haus-arbhair",
+      "haus-scathain",
+      "haus-fastaigh",
+      "haus-muirin",
+      "haus-siubhran",
+      "haus-gealan",
+      "haus-luachra",
+      "haus-conchobhair",
+      "haus-fiodhran",
+      "haus-roich",
+      "haus-cairbre",
+      "haus-reannachain",
+      "haus-cairge",
+      "haus-midgna",
+      "haus-cuilen",
+      "haus-cadhla",
+      "haus-mata",
+      "haus-suilgeach",
+      "haus-creagan",
+      "haus-luga",
+      "haus-marcaigh",
+      "haus-giolla",
+      "haus-lasgair",
+      "haus-clannmhar",
       "haus-veltrane",
       "haus-bielle",
       "haus-desele",
@@ -9691,6 +9718,624 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     ]
   },
   {
+    "id": "uathneach",
+    "parentId": "",
+    "name": "Uathneach",
+    "path": [
+      "Uathneach"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Uathneach/uathneach.webp",
+    "countryId": "uathneach",
+    "regionId": "",
+    "children": [
+      "uathneach/tir-na-laimhe",
+      "uathneach/tir-na-sruthan",
+      "uathneach/tir-na-gcoillte",
+      "uathneach/tir-na-taoide",
+      "uathneach/tir-na-dtorc",
+      "uathneach/tir-na-conaire",
+      "uathneach/tir-na-cloiche"
+    ],
+    "houseIds": [
+      "haus-laga",
+      "haus-briccne",
+      "haus-arbhair",
+      "haus-scathain",
+      "haus-fastaigh",
+      "haus-muirin",
+      "haus-siubhran",
+      "haus-gealan",
+      "haus-luachra",
+      "haus-conchobhair",
+      "haus-fiodhran",
+      "haus-roich",
+      "haus-cairbre",
+      "haus-reannachain",
+      "haus-cairge",
+      "haus-midgna",
+      "haus-cuilen",
+      "haus-cadhla",
+      "haus-mata",
+      "haus-suilgeach",
+      "haus-creagan",
+      "haus-luga",
+      "haus-marcaigh",
+      "haus-giolla",
+      "haus-lasgair",
+      "haus-clannmhar"
+    ]
+  },
+  {
+    "id": "uathneach/tir-na-laimhe",
+    "parentId": "uathneach",
+    "name": "Tir na Láimhe",
+    "path": [
+      "Uathneach",
+      "Tir na Láimhe"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Uathneach/laimhe.webp",
+    "countryId": "uathneach",
+    "regionId": "tir-na-laimhe",
+    "children": [
+      "uathneach/tir-na-laimhe/dunnean",
+      "uathneach/tir-na-laimhe/herrschaft-von-bronnan",
+      "uathneach/tir-na-laimhe/broch-an-reithe",
+      "uathneach/tir-na-laimhe/fethlinn"
+    ],
+    "houseIds": [
+      "haus-laga",
+      "haus-briccne",
+      "haus-arbhair",
+      "haus-scathain",
+      "haus-fastaigh",
+      "haus-muirin",
+      "haus-siubhran"
+    ]
+  },
+  {
+    "id": "uathneach/tir-na-laimhe/dunnean",
+    "parentId": "uathneach/tir-na-laimhe",
+    "name": "Dunnean",
+    "path": [
+      "Uathneach",
+      "Tir na Láimhe",
+      "Dunnean"
+    ],
+    "image": "",
+    "countryId": "uathneach",
+    "regionId": "tir-na-laimhe",
+    "children": [],
+    "houseIds": [
+      "haus-laga",
+      "haus-briccne",
+      "haus-arbhair",
+      "haus-scathain"
+    ]
+  },
+  {
+    "id": "uathneach/tir-na-laimhe/herrschaft-von-bronnan",
+    "parentId": "uathneach/tir-na-laimhe",
+    "name": "Herrschaft von Bronnan",
+    "path": [
+      "Uathneach",
+      "Tir na Láimhe",
+      "Herrschaft von Bronnan"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Uathneach/fastaigh.webp",
+    "countryId": "uathneach",
+    "regionId": "tir-na-laimhe",
+    "children": [
+      "uathneach/tir-na-laimhe/herrschaft-von-bronnan/bronnan"
+    ],
+    "houseIds": [
+      "haus-fastaigh"
+    ]
+  },
+  {
+    "id": "uathneach/tir-na-laimhe/herrschaft-von-bronnan/bronnan",
+    "parentId": "uathneach/tir-na-laimhe/herrschaft-von-bronnan",
+    "name": "Bronnan",
+    "path": [
+      "Uathneach",
+      "Tir na Láimhe",
+      "Herrschaft von Bronnan",
+      "Bronnan"
+    ],
+    "image": "",
+    "countryId": "uathneach",
+    "regionId": "tir-na-laimhe",
+    "children": [],
+    "houseIds": [
+      "haus-fastaigh"
+    ]
+  },
+  {
+    "id": "uathneach/tir-na-laimhe/broch-an-reithe",
+    "parentId": "uathneach/tir-na-laimhe",
+    "name": "Broch an Reithe",
+    "path": [
+      "Uathneach",
+      "Tir na Láimhe",
+      "Broch an Reithe"
+    ],
+    "image": "",
+    "countryId": "uathneach",
+    "regionId": "tir-na-laimhe",
+    "children": [],
+    "houseIds": [
+      "haus-muirin"
+    ]
+  },
+  {
+    "id": "uathneach/tir-na-laimhe/fethlinn",
+    "parentId": "uathneach/tir-na-laimhe",
+    "name": "Féthlinn",
+    "path": [
+      "Uathneach",
+      "Tir na Láimhe",
+      "Féthlinn"
+    ],
+    "image": "",
+    "countryId": "uathneach",
+    "regionId": "tir-na-laimhe",
+    "children": [],
+    "houseIds": [
+      "haus-siubhran"
+    ]
+  },
+  {
+    "id": "uathneach/tir-na-sruthan",
+    "parentId": "uathneach",
+    "name": "Tir na Sruthán",
+    "path": [
+      "Uathneach",
+      "Tir na Sruthán"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Uathneach/sruthan.webp",
+    "countryId": "uathneach",
+    "regionId": "tir-na-sruthan",
+    "children": [
+      "uathneach/tir-na-sruthan/moineal",
+      "uathneach/tir-na-sruthan/herrschaft-von-treabhair"
+    ],
+    "houseIds": [
+      "haus-gealan",
+      "haus-luachra"
+    ]
+  },
+  {
+    "id": "uathneach/tir-na-sruthan/moineal",
+    "parentId": "uathneach/tir-na-sruthan",
+    "name": "Moineal",
+    "path": [
+      "Uathneach",
+      "Tir na Sruthán",
+      "Moineal"
+    ],
+    "image": "",
+    "countryId": "uathneach",
+    "regionId": "tir-na-sruthan",
+    "children": [],
+    "houseIds": [
+      "haus-gealan"
+    ]
+  },
+  {
+    "id": "uathneach/tir-na-sruthan/herrschaft-von-treabhair",
+    "parentId": "uathneach/tir-na-sruthan",
+    "name": "Herrschaft von Treabhair",
+    "path": [
+      "Uathneach",
+      "Tir na Sruthán",
+      "Herrschaft von Treabhair"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Uathneach/luachra.webp",
+    "countryId": "uathneach",
+    "regionId": "tir-na-sruthan",
+    "children": [
+      "uathneach/tir-na-sruthan/herrschaft-von-treabhair/treabhair"
+    ],
+    "houseIds": [
+      "haus-luachra"
+    ]
+  },
+  {
+    "id": "uathneach/tir-na-sruthan/herrschaft-von-treabhair/treabhair",
+    "parentId": "uathneach/tir-na-sruthan/herrschaft-von-treabhair",
+    "name": "Treabhair",
+    "path": [
+      "Uathneach",
+      "Tir na Sruthán",
+      "Herrschaft von Treabhair",
+      "Treabhair"
+    ],
+    "image": "",
+    "countryId": "uathneach",
+    "regionId": "tir-na-sruthan",
+    "children": [],
+    "houseIds": [
+      "haus-luachra"
+    ]
+  },
+  {
+    "id": "uathneach/tir-na-gcoillte",
+    "parentId": "uathneach",
+    "name": "Tir na gCoillte",
+    "path": [
+      "Uathneach",
+      "Tir na gCoillte"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Uathneach/gcoillte.webp",
+    "countryId": "uathneach",
+    "regionId": "tir-na-gcoillte",
+    "children": [
+      "uathneach/tir-na-gcoillte/cathair",
+      "uathneach/tir-na-gcoillte/dathuil"
+    ],
+    "houseIds": [
+      "haus-conchobhair",
+      "haus-fiodhran"
+    ]
+  },
+  {
+    "id": "uathneach/tir-na-gcoillte/cathair",
+    "parentId": "uathneach/tir-na-gcoillte",
+    "name": "Cathair",
+    "path": [
+      "Uathneach",
+      "Tir na gCoillte",
+      "Cathair"
+    ],
+    "image": "",
+    "countryId": "uathneach",
+    "regionId": "tir-na-gcoillte",
+    "children": [],
+    "houseIds": [
+      "haus-conchobhair"
+    ]
+  },
+  {
+    "id": "uathneach/tir-na-gcoillte/dathuil",
+    "parentId": "uathneach/tir-na-gcoillte",
+    "name": "Dathuil",
+    "path": [
+      "Uathneach",
+      "Tir na gCoillte",
+      "Dathuil"
+    ],
+    "image": "",
+    "countryId": "uathneach",
+    "regionId": "tir-na-gcoillte",
+    "children": [],
+    "houseIds": [
+      "haus-fiodhran"
+    ]
+  },
+  {
+    "id": "uathneach/tir-na-taoide",
+    "parentId": "uathneach",
+    "name": "Tir na Taoide",
+    "path": [
+      "Uathneach",
+      "Tir na Taoide"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Uathneach/taoide.webp",
+    "countryId": "uathneach",
+    "regionId": "tir-na-taoide",
+    "children": [
+      "uathneach/tir-na-taoide/orglen",
+      "uathneach/tir-na-taoide/broch-an-mhor"
+    ],
+    "houseIds": [
+      "haus-roich",
+      "haus-cairbre",
+      "haus-reannachain",
+      "haus-cairge"
+    ]
+  },
+  {
+    "id": "uathneach/tir-na-taoide/orglen",
+    "parentId": "uathneach/tir-na-taoide",
+    "name": "Orglen",
+    "path": [
+      "Uathneach",
+      "Tir na Taoide",
+      "Orglen"
+    ],
+    "image": "",
+    "countryId": "uathneach",
+    "regionId": "tir-na-taoide",
+    "children": [],
+    "houseIds": [
+      "haus-roich",
+      "haus-cairbre",
+      "haus-reannachain"
+    ]
+  },
+  {
+    "id": "uathneach/tir-na-taoide/broch-an-mhor",
+    "parentId": "uathneach/tir-na-taoide",
+    "name": "Broch an Mhor",
+    "path": [
+      "Uathneach",
+      "Tir na Taoide",
+      "Broch an Mhor"
+    ],
+    "image": "",
+    "countryId": "uathneach",
+    "regionId": "tir-na-taoide",
+    "children": [],
+    "houseIds": [
+      "haus-cairge"
+    ]
+  },
+  {
+    "id": "uathneach/tir-na-dtorc",
+    "parentId": "uathneach",
+    "name": "Tir na dTorc",
+    "path": [
+      "Uathneach",
+      "Tir na dTorc"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Uathneach/dtorc.webp",
+    "countryId": "uathneach",
+    "regionId": "tir-na-dtorc",
+    "children": [
+      "uathneach/tir-na-dtorc/rinnmara",
+      "uathneach/tir-na-dtorc/broch-an-cuan"
+    ],
+    "houseIds": [
+      "haus-midgna",
+      "haus-cuilen",
+      "haus-cadhla"
+    ]
+  },
+  {
+    "id": "uathneach/tir-na-dtorc/rinnmara",
+    "parentId": "uathneach/tir-na-dtorc",
+    "name": "Rinnmara",
+    "path": [
+      "Uathneach",
+      "Tir na dTorc",
+      "Rinnmara"
+    ],
+    "image": "",
+    "countryId": "uathneach",
+    "regionId": "tir-na-dtorc",
+    "children": [],
+    "houseIds": [
+      "haus-midgna",
+      "haus-cuilen"
+    ]
+  },
+  {
+    "id": "uathneach/tir-na-dtorc/broch-an-cuan",
+    "parentId": "uathneach/tir-na-dtorc",
+    "name": "Broch an Cuan",
+    "path": [
+      "Uathneach",
+      "Tir na dTorc",
+      "Broch an Cuan"
+    ],
+    "image": "",
+    "countryId": "uathneach",
+    "regionId": "tir-na-dtorc",
+    "children": [],
+    "houseIds": [
+      "haus-cadhla"
+    ]
+  },
+  {
+    "id": "uathneach/tir-na-conaire",
+    "parentId": "uathneach",
+    "name": "Tir na Conaire",
+    "path": [
+      "Uathneach",
+      "Tir na Conaire"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Uathneach/conaire.webp",
+    "countryId": "uathneach",
+    "regionId": "tir-na-conaire",
+    "children": [
+      "uathneach/tir-na-conaire/temair",
+      "uathneach/tir-na-conaire/herrschaft-von-caorthann",
+      "uathneach/tir-na-conaire/ceithirn"
+    ],
+    "houseIds": [
+      "haus-mata",
+      "haus-suilgeach",
+      "haus-creagan"
+    ]
+  },
+  {
+    "id": "uathneach/tir-na-conaire/temair",
+    "parentId": "uathneach/tir-na-conaire",
+    "name": "Temair",
+    "path": [
+      "Uathneach",
+      "Tir na Conaire",
+      "Temair"
+    ],
+    "image": "",
+    "countryId": "uathneach",
+    "regionId": "tir-na-conaire",
+    "children": [],
+    "houseIds": [
+      "haus-mata"
+    ]
+  },
+  {
+    "id": "uathneach/tir-na-conaire/herrschaft-von-caorthann",
+    "parentId": "uathneach/tir-na-conaire",
+    "name": "Herrschaft von Caorthann",
+    "path": [
+      "Uathneach",
+      "Tir na Conaire",
+      "Herrschaft von Caorthann"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Uathneach/suilgeach.webp",
+    "countryId": "uathneach",
+    "regionId": "tir-na-conaire",
+    "children": [
+      "uathneach/tir-na-conaire/herrschaft-von-caorthann/caorthann"
+    ],
+    "houseIds": [
+      "haus-suilgeach"
+    ]
+  },
+  {
+    "id": "uathneach/tir-na-conaire/herrschaft-von-caorthann/caorthann",
+    "parentId": "uathneach/tir-na-conaire/herrschaft-von-caorthann",
+    "name": "Caorthann",
+    "path": [
+      "Uathneach",
+      "Tir na Conaire",
+      "Herrschaft von Caorthann",
+      "Caorthann"
+    ],
+    "image": "",
+    "countryId": "uathneach",
+    "regionId": "tir-na-conaire",
+    "children": [],
+    "houseIds": [
+      "haus-suilgeach"
+    ]
+  },
+  {
+    "id": "uathneach/tir-na-conaire/ceithirn",
+    "parentId": "uathneach/tir-na-conaire",
+    "name": "Ceithirn",
+    "path": [
+      "Uathneach",
+      "Tir na Conaire",
+      "Ceithirn"
+    ],
+    "image": "",
+    "countryId": "uathneach",
+    "regionId": "tir-na-conaire",
+    "children": [],
+    "houseIds": [
+      "haus-creagan"
+    ]
+  },
+  {
+    "id": "uathneach/tir-na-cloiche",
+    "parentId": "uathneach",
+    "name": "Tir na Cloiche",
+    "path": [
+      "Uathneach",
+      "Tir na Cloiche"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Uathneach/cloiche.webp",
+    "countryId": "uathneach",
+    "regionId": "tir-na-cloiche",
+    "children": [
+      "uathneach/tir-na-cloiche/kharanor",
+      "uathneach/tir-na-cloiche/herrschaft-von-mhorcha",
+      "uathneach/tir-na-cloiche/herrschaft-von-rioghain"
+    ],
+    "houseIds": [
+      "haus-luga",
+      "haus-marcaigh",
+      "haus-giolla",
+      "haus-lasgair",
+      "haus-clannmhar"
+    ]
+  },
+  {
+    "id": "uathneach/tir-na-cloiche/kharanor",
+    "parentId": "uathneach/tir-na-cloiche",
+    "name": "Kharanor",
+    "path": [
+      "Uathneach",
+      "Tir na Cloiche",
+      "Kharanor"
+    ],
+    "image": "",
+    "countryId": "uathneach",
+    "regionId": "tir-na-cloiche",
+    "children": [],
+    "houseIds": [
+      "haus-luga",
+      "haus-marcaigh",
+      "haus-giolla"
+    ]
+  },
+  {
+    "id": "uathneach/tir-na-cloiche/herrschaft-von-mhorcha",
+    "parentId": "uathneach/tir-na-cloiche",
+    "name": "Herrschaft von Mhorcha",
+    "path": [
+      "Uathneach",
+      "Tir na Cloiche",
+      "Herrschaft von Mhorcha"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Uathneach/lasgair.webp",
+    "countryId": "uathneach",
+    "regionId": "tir-na-cloiche",
+    "children": [
+      "uathneach/tir-na-cloiche/herrschaft-von-mhorcha/mhorcha"
+    ],
+    "houseIds": [
+      "haus-lasgair"
+    ]
+  },
+  {
+    "id": "uathneach/tir-na-cloiche/herrschaft-von-mhorcha/mhorcha",
+    "parentId": "uathneach/tir-na-cloiche/herrschaft-von-mhorcha",
+    "name": "Mhorcha",
+    "path": [
+      "Uathneach",
+      "Tir na Cloiche",
+      "Herrschaft von Mhorcha",
+      "Mhorcha"
+    ],
+    "image": "",
+    "countryId": "uathneach",
+    "regionId": "tir-na-cloiche",
+    "children": [],
+    "houseIds": [
+      "haus-lasgair"
+    ]
+  },
+  {
+    "id": "uathneach/tir-na-cloiche/herrschaft-von-rioghain",
+    "parentId": "uathneach/tir-na-cloiche",
+    "name": "Herrschaft von Rioghain",
+    "path": [
+      "Uathneach",
+      "Tir na Cloiche",
+      "Herrschaft von Rioghain"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Uathneach/clannmhar.webp",
+    "countryId": "uathneach",
+    "regionId": "tir-na-cloiche",
+    "children": [
+      "uathneach/tir-na-cloiche/herrschaft-von-rioghain/rioghain"
+    ],
+    "houseIds": [
+      "haus-clannmhar"
+    ]
+  },
+  {
+    "id": "uathneach/tir-na-cloiche/herrschaft-von-rioghain/rioghain",
+    "parentId": "uathneach/tir-na-cloiche/herrschaft-von-rioghain",
+    "name": "Rioghain",
+    "path": [
+      "Uathneach",
+      "Tir na Cloiche",
+      "Herrschaft von Rioghain",
+      "Rioghain"
+    ],
+    "image": "",
+    "countryId": "uathneach",
+    "regionId": "tir-na-cloiche",
+    "children": [],
+    "houseIds": [
+      "haus-clannmhar"
+    ]
+  },
+  {
     "id": "kaiserreich-argentum",
     "parentId": "",
     "name": "Kaiserreich Argentum",
@@ -12785,6 +13430,297 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
       "Drumrath"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-wemyss&mode=view"
+  },
+  {
+    "id": "haus-laga",
+    "name": "Clan Mac Ard’Lága",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Uathneach/laga.webp",
+    "path": [
+      "Uathneach",
+      "Tir na Láimhe",
+      "Dunnean"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-laga&mode=view"
+  },
+  {
+    "id": "haus-gealan",
+    "name": "Clan An Gealân",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Uathneach/gealan.webp",
+    "path": [
+      "Uathneach",
+      "Tir na Sruthán",
+      "Moineal"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-gealan&mode=view"
+  },
+  {
+    "id": "haus-conchobhair",
+    "name": "Clan Ard Conchobhair",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Uathneach/conchobhair.webp",
+    "path": [
+      "Uathneach",
+      "Tir na gCoillte",
+      "Cathair"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-conchobhair&mode=view"
+  },
+  {
+    "id": "haus-roich",
+    "name": "Clan Mac Roich",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Uathneach/roich.webp",
+    "path": [
+      "Uathneach",
+      "Tir na Taoide",
+      "Orglen"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-roich&mode=view"
+  },
+  {
+    "id": "haus-midgna",
+    "name": "Clan Mac Midgna",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Uathneach/midgna.webp",
+    "path": [
+      "Uathneach",
+      "Tir na dTorc",
+      "Rinnmara"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-midgna&mode=view"
+  },
+  {
+    "id": "haus-mata",
+    "name": "Clan Tir an Máta",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Uathneach/mata.webp",
+    "path": [
+      "Uathneach",
+      "Tir na Conaire",
+      "Temair"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-mata&mode=view"
+  },
+  {
+    "id": "haus-luga",
+    "name": "Clan Ua’Luga",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Uathneach/luga.webp",
+    "path": [
+      "Uathneach",
+      "Tir na Cloiche",
+      "Kharanor"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-luga&mode=view"
+  },
+  {
+    "id": "haus-fastaigh",
+    "name": "Clan Dál Fastaigh",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Uathneach/fastaigh.webp",
+    "path": [
+      "Uathneach",
+      "Tir na Láimhe",
+      "Herrschaft von Bronnan",
+      "Bronnan"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-fastaigh&mode=view"
+  },
+  {
+    "id": "haus-lasgair",
+    "name": "Clan Ua Lasgair",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Uathneach/lasgair.webp",
+    "path": [
+      "Uathneach",
+      "Tir na Cloiche",
+      "Herrschaft von Mhorcha",
+      "Mhorcha"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-lasgair&mode=view"
+  },
+  {
+    "id": "haus-suilgeach",
+    "name": "Clan Na Suilgeach",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Uathneach/suilgeach.webp",
+    "path": [
+      "Uathneach",
+      "Tir na Conaire",
+      "Herrschaft von Caorthann",
+      "Caorthann"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-suilgeach&mode=view"
+  },
+  {
+    "id": "haus-luachra",
+    "name": "Clan Nic Luachra",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Uathneach/luachra.webp",
+    "path": [
+      "Uathneach",
+      "Tir na Sruthán",
+      "Herrschaft von Treabhair",
+      "Treabhair"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-luachra&mode=view"
+  },
+  {
+    "id": "haus-clannmhar",
+    "name": "Clan Tir an Clannmhar",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Uathneach/clannmhar.webp",
+    "path": [
+      "Uathneach",
+      "Tir na Cloiche",
+      "Herrschaft von Rioghain",
+      "Rioghain"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-clannmhar&mode=view"
+  },
+  {
+    "id": "haus-briccne",
+    "name": "Clan Na Briccne",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Uathneach/briccne.webp",
+    "path": [
+      "Uathneach",
+      "Tir na Láimhe",
+      "Dunnean"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-briccne&mode=view"
+  },
+  {
+    "id": "haus-arbhair",
+    "name": "Clan Dâl Arbhair",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Uathneach/arbhair.webp",
+    "path": [
+      "Uathneach",
+      "Tir na Láimhe",
+      "Dunnean"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-arbhair&mode=view"
+  },
+  {
+    "id": "haus-scathain",
+    "name": "Clan An Scatháin",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Uathneach/scathain.webp",
+    "path": [
+      "Uathneach",
+      "Tir na Láimhe",
+      "Dunnean"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-scathain&mode=view"
+  },
+  {
+    "id": "haus-muirin",
+    "name": "Clan Ua Muirin",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Uathneach/muirin.webp",
+    "path": [
+      "Uathneach",
+      "Tir na Láimhe",
+      "Broch an Reithe"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-muirin&mode=view"
+  },
+  {
+    "id": "haus-cairbre",
+    "name": "Clan Ua Cairbre",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Uathneach/cairbre.webp",
+    "path": [
+      "Uathneach",
+      "Tir na Taoide",
+      "Orglen"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-cairbre&mode=view"
+  },
+  {
+    "id": "haus-reannachain",
+    "name": "Clan Ua Reannachain",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Uathneach/reannachain.webp",
+    "path": [
+      "Uathneach",
+      "Tir na Taoide",
+      "Orglen"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-reannachain&mode=view"
+  },
+  {
+    "id": "haus-cairge",
+    "name": "Clan Ua Cairge",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Uathneach/cairge.webp",
+    "path": [
+      "Uathneach",
+      "Tir na Taoide",
+      "Broch an Mhor"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-cairge&mode=view"
+  },
+  {
+    "id": "haus-cuilen",
+    "name": "Clan Ua Cuilen",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Uathneach/cuilen.webp",
+    "path": [
+      "Uathneach",
+      "Tir na dTorc",
+      "Rinnmara"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-cuilen&mode=view"
+  },
+  {
+    "id": "haus-cadhla",
+    "name": "Clan An Cadhla",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Uathneach/cadhla.webp",
+    "path": [
+      "Uathneach",
+      "Tir na dTorc",
+      "Broch an Cuan"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-cadhla&mode=view"
+  },
+  {
+    "id": "haus-marcaigh",
+    "name": "Clan Ruin Marcaigh",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Uathneach/marcaigh.webp",
+    "path": [
+      "Uathneach",
+      "Tir na Cloiche",
+      "Kharanor"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-marcaigh&mode=view"
+  },
+  {
+    "id": "haus-giolla",
+    "name": "Clan Ruin Giolla",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Uathneach/giolla.webp",
+    "path": [
+      "Uathneach",
+      "Tir na Cloiche",
+      "Kharanor"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-giolla&mode=view"
+  },
+  {
+    "id": "haus-fiodhran",
+    "name": "Clan Na Fiodhrán",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Uathneach/fiodhran.webp",
+    "path": [
+      "Uathneach",
+      "Tir na gCoillte",
+      "Dathuil"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-fiodhran&mode=view"
+  },
+  {
+    "id": "haus-creagan",
+    "name": "Clan Tir An Creagán",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Uathneach/creagan.webp",
+    "path": [
+      "Uathneach",
+      "Tir na Conaire",
+      "Ceithirn"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-creagan&mode=view"
+  },
+  {
+    "id": "haus-siubhran",
+    "name": "Clan Dál Siubhrán",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Uathneach/einsiedlerkrebs.webp",
+    "path": [
+      "Uathneach",
+      "Tir na Láimhe",
+      "Féthlinn"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-siubhran&mode=view"
   },
   {
     "id": "haus-gwyllach",

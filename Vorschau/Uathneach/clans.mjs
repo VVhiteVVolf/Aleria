@@ -11,7 +11,7 @@ export const clans = [
  {id:'mata',name:'Tir an Máta',rank:'Mor Tiarna',liege:'laga',seat:'temair',crest:'conaire-clan.png'},
  {id:'luga',name:'Ua’Luga',rank:'Mor Tiarna',liege:'laga',seat:'kharanor',crest:'cloiche-clan.png'},
  {id:'fastaigh',name:'Dál Fastaigh',rank:'Dún Tiarna',liege:'laga',seat:'bronnan',crest:'fastaigh-clan.png'},
- {id:'lasgair',name:'Na Lasgair',rank:'Dún Tiarna',liege:'luga',seat:'mhorcha',crest:'lasgair-clan.png'},
+ {id:'lasgair',name:'Ua Lasgair',rank:'Dún Tiarna',liege:'luga',seat:'mhorcha',crest:'lasgair-clan.png'},
  {id:'suilgeach',name:'Na Suilgeach',rank:'Dún Tiarna',liege:'mata',seat:'caorthann',crest:'suilgeach-clan.png'},
  {id:'luachra',name:'Nic Luachra',rank:'Dún Tiarna',liege:'gealan',seat:'treabhair',crest:'luachra-clan.png'},
  {id:'clannmhar',name:'Tir an Clannmhar',rank:'Dún Tiarna',liege:'luga',seat:'rioghain',crest:'clannmhar-clan.png'},

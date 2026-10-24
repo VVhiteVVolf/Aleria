@@ -38,6 +38,7 @@ import { AISLEARNEACH_HOUSE_FAMILIES } from './aislearneach-house-families.js';
 import { BLAITHNEACH_HOUSE_FAMILIES } from './blaithneach-house-families.js';
 import { BLAITHNEACH_ADDITIONAL_PLACEMENTS } from './blaithneach-house-profiles.js';
 import { FAELAORN_HOUSE_FAMILIES } from './faelaorn-house-families.js';
+import { UATHNEACH_HOUSE_FAMILIES } from './uathneach-house-families.js';
 import { LOWER_KNIGHT_HOUSE_FAMILIES } from './lower-knight-house-families.js?v=armel-bio-20260912';
 import { ARTUS_STREBEN_HOUSE_FAMILIES } from './artus-streben-house-families.js';
 import { GWENDOLYNS_UFER_HOUSE_FAMILIES } from './gwendolyns-ufer-house-families.js';
@@ -345,7 +346,7 @@ export const FAMILY_REGISTRY = Object.freeze([
         ? 'lower-nobility'
         : 'dynasty'
   })),
-  ...[...DUNFAL_HOUSE_FAMILIES, ...AISLEARNEACH_HOUSE_FAMILIES, ...BLAITHNEACH_HOUSE_FAMILIES, ...FAELAORN_HOUSE_FAMILIES].map(family => familyRecord({
+  ...[...DUNFAL_HOUSE_FAMILIES, ...AISLEARNEACH_HOUSE_FAMILIES, ...BLAITHNEACH_HOUSE_FAMILIES, ...FAELAORN_HOUSE_FAMILIES, ...UATHNEACH_HOUSE_FAMILIES].map(family => familyRecord({
     id: family.document.id,
     title: family.document.title,
     family,

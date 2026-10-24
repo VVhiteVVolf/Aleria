@@ -4081,6 +4081,214 @@ window.KARTO_MEDIA_ASSETS = Object.freeze([
     "source": "Hauswappen"
   },
   {
+    "id": "a6ff7725a56135",
+    "name": "arbhair",
+    "url": "/Stammbäume/assets/images/houses/Uathneach/arbhair.webp",
+    "kind": "crest",
+    "group": "Uathneach",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "15a54aec0aff8d",
+    "name": "briccne",
+    "url": "/Stammbäume/assets/images/houses/Uathneach/briccne.webp",
+    "kind": "crest",
+    "group": "Uathneach",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "2d5ab6ba81a34b",
+    "name": "cadhla",
+    "url": "/Stammbäume/assets/images/houses/Uathneach/cadhla.webp",
+    "kind": "crest",
+    "group": "Uathneach",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "aab87641f5b34f",
+    "name": "cairbre",
+    "url": "/Stammbäume/assets/images/houses/Uathneach/cairbre.webp",
+    "kind": "crest",
+    "group": "Uathneach",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "76623da2dc038e",
+    "name": "cairge",
+    "url": "/Stammbäume/assets/images/houses/Uathneach/cairge.webp",
+    "kind": "crest",
+    "group": "Uathneach",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "a1d450dbbb1290",
+    "name": "clannmhar",
+    "url": "/Stammbäume/assets/images/houses/Uathneach/clannmhar.webp",
+    "kind": "crest",
+    "group": "Uathneach",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "b28b291a9427c4",
+    "name": "conchobhair",
+    "url": "/Stammbäume/assets/images/houses/Uathneach/conchobhair.webp",
+    "kind": "crest",
+    "group": "Uathneach",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "38a4211cc8bb5b",
+    "name": "creagan",
+    "url": "/Stammbäume/assets/images/houses/Uathneach/creagan.webp",
+    "kind": "crest",
+    "group": "Uathneach",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "116179f06feeb1",
+    "name": "cuilen",
+    "url": "/Stammbäume/assets/images/houses/Uathneach/cuilen.webp",
+    "kind": "crest",
+    "group": "Uathneach",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "41f69c40e92178",
+    "name": "einsiedlerkrebs",
+    "url": "/Stammbäume/assets/images/houses/Uathneach/einsiedlerkrebs.webp",
+    "kind": "crest",
+    "group": "Uathneach",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "1f8876bfd01bed",
+    "name": "fastaigh",
+    "url": "/Stammbäume/assets/images/houses/Uathneach/fastaigh.webp",
+    "kind": "crest",
+    "group": "Uathneach",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "cf131ae8dd5b9e",
+    "name": "fiodhran",
+    "url": "/Stammbäume/assets/images/houses/Uathneach/fiodhran.webp",
+    "kind": "crest",
+    "group": "Uathneach",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "aeb869f2f6052f",
+    "name": "gealan",
+    "url": "/Stammbäume/assets/images/houses/Uathneach/gealan.webp",
+    "kind": "crest",
+    "group": "Uathneach",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "443fd90dbdccd8",
+    "name": "giolla",
+    "url": "/Stammbäume/assets/images/houses/Uathneach/giolla.webp",
+    "kind": "crest",
+    "group": "Uathneach",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "ba5ea54d9a06b5",
+    "name": "laga",
+    "url": "/Stammbäume/assets/images/houses/Uathneach/laga.webp",
+    "kind": "crest",
+    "group": "Uathneach",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "0bad1c71ac6e5d",
+    "name": "lasgair",
+    "url": "/Stammbäume/assets/images/houses/Uathneach/lasgair.webp",
+    "kind": "crest",
+    "group": "Uathneach",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "db24b1d6a4c797",
+    "name": "luachra",
+    "url": "/Stammbäume/assets/images/houses/Uathneach/luachra.webp",
+    "kind": "crest",
+    "group": "Uathneach",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "c29a6b38d91c29",
+    "name": "luga",
+    "url": "/Stammbäume/assets/images/houses/Uathneach/luga.webp",
+    "kind": "crest",
+    "group": "Uathneach",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "7fa195e5446dbb",
+    "name": "marcaigh",
+    "url": "/Stammbäume/assets/images/houses/Uathneach/marcaigh.webp",
+    "kind": "crest",
+    "group": "Uathneach",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "03fc653bff654e",
+    "name": "mata",
+    "url": "/Stammbäume/assets/images/houses/Uathneach/mata.webp",
+    "kind": "crest",
+    "group": "Uathneach",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "9be9f07198deb6",
+    "name": "midgna",
+    "url": "/Stammbäume/assets/images/houses/Uathneach/midgna.webp",
+    "kind": "crest",
+    "group": "Uathneach",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "0d8f0b1f314ac9",
+    "name": "muirin",
+    "url": "/Stammbäume/assets/images/houses/Uathneach/muirin.webp",
+    "kind": "crest",
+    "group": "Uathneach",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "61e6e04a042722",
+    "name": "reannachain",
+    "url": "/Stammbäume/assets/images/houses/Uathneach/reannachain.webp",
+    "kind": "crest",
+    "group": "Uathneach",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "8d749b36bb84c9",
+    "name": "roich",
+    "url": "/Stammbäume/assets/images/houses/Uathneach/roich.webp",
+    "kind": "crest",
+    "group": "Uathneach",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "3a5979e36efdc8",
+    "name": "scathain",
+    "url": "/Stammbäume/assets/images/houses/Uathneach/scathain.webp",
+    "kind": "crest",
+    "group": "Uathneach",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "d1c7fbb0b525d5",
+    "name": "suilgeach",
+    "url": "/Stammbäume/assets/images/houses/Uathneach/suilgeach.webp",
+    "kind": "crest",
+    "group": "Uathneach",
+    "source": "Hauswappen"
+  },
+  {
     "id": "f1a8585bc63781",
     "name": "haus falveri",
     "url": "/Stammbäume/assets/images/houses/Venalys/haus-falveri.png",
@@ -8510,6 +8718,70 @@ window.KARTO_MEDIA_ASSETS = Object.freeze([
     "url": "/Stammbäume/assets/images/regions/Skjaerheim/stanleagh.png",
     "kind": "region",
     "group": "Skjaerheim",
+    "source": "Orts- & Regionsbanner"
+  },
+  {
+    "id": "ace1affaa1dc41",
+    "name": "cloiche",
+    "url": "/Stammbäume/assets/images/regions/Uathneach/cloiche.webp",
+    "kind": "region",
+    "group": "Uathneach",
+    "source": "Orts- & Regionsbanner"
+  },
+  {
+    "id": "ff1fc32037bb1a",
+    "name": "conaire",
+    "url": "/Stammbäume/assets/images/regions/Uathneach/conaire.webp",
+    "kind": "region",
+    "group": "Uathneach",
+    "source": "Orts- & Regionsbanner"
+  },
+  {
+    "id": "d3a3e8d5eb706e",
+    "name": "dtorc",
+    "url": "/Stammbäume/assets/images/regions/Uathneach/dtorc.webp",
+    "kind": "region",
+    "group": "Uathneach",
+    "source": "Orts- & Regionsbanner"
+  },
+  {
+    "id": "27748b3d92b0db",
+    "name": "gcoillte",
+    "url": "/Stammbäume/assets/images/regions/Uathneach/gcoillte.webp",
+    "kind": "region",
+    "group": "Uathneach",
+    "source": "Orts- & Regionsbanner"
+  },
+  {
+    "id": "f4480b047c6645",
+    "name": "laimhe",
+    "url": "/Stammbäume/assets/images/regions/Uathneach/laimhe.webp",
+    "kind": "region",
+    "group": "Uathneach",
+    "source": "Orts- & Regionsbanner"
+  },
+  {
+    "id": "57713733b60129",
+    "name": "sruthan",
+    "url": "/Stammbäume/assets/images/regions/Uathneach/sruthan.webp",
+    "kind": "region",
+    "group": "Uathneach",
+    "source": "Orts- & Regionsbanner"
+  },
+  {
+    "id": "7d92cb591d07c4",
+    "name": "taoide",
+    "url": "/Stammbäume/assets/images/regions/Uathneach/taoide.webp",
+    "kind": "region",
+    "group": "Uathneach",
+    "source": "Orts- & Regionsbanner"
+  },
+  {
+    "id": "71d20adafaa023",
+    "name": "uathneach",
+    "url": "/Stammbäume/assets/images/regions/Uathneach/uathneach.webp",
+    "kind": "region",
+    "group": "Uathneach",
     "source": "Orts- & Regionsbanner"
   },
   {

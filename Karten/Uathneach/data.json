@@ -1,0 +1,2240 @@
+{
+  "schemaVersion": 1,
+  "dataPath": "Uathneach/data.json",
+  "revision": 1,
+  "updatedAt": "2026-10-24T10:00:00.000Z",
+  "generatedStateHash": "2a8c6fef6b82809d9693fdd93be399d89051250ce4363a31489c661e2c77ff9f",
+  "state": {
+    "pins": [
+      {
+        "id": "uathneach-dunnean",
+        "title": "Dunnean",
+        "x": 0.45399999999999996,
+        "y": 0.06400000000000006,
+        "cat": "mmflrbzxydg7",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Uathneach/laga.webp",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-laga&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Uathneach/laimhe.webp",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Uathneach/Tir na Láimhe/Tir na Láimhe.html",
+        "region": "Uathneach",
+        "house": "Mac Ard’Lága",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Dunnean"
+          },
+          {
+            "k": "Typ",
+            "v": "Hauptstadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Mac Ard’Lága"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Mac Ard’Lága, Na Briccne, Dâl Arbhair, An Scatháin"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "uathneach-tir-na-laimhe",
+        "sourceRef": {
+          "provider": "aleria-reviewed-map",
+          "source": "Uathneach Städte Namen.png",
+          "selection": "original",
+          "settlementId": "dunnean",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            45.4,
+            6.4
+          ]
+        },
+        "residentFamilyIds": [
+          "haus-laga",
+          "haus-briccne",
+          "haus-arbhair",
+          "haus-scathain"
+        ]
+      },
+      {
+        "id": "uathneach-fethlinn",
+        "title": "Féthlinn",
+        "x": 0.32299999999999995,
+        "y": 0.17999999999999994,
+        "cat": "mmfltia1m3s7",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/leuchtturm.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Uathneach/einsiedlerkrebs.webp",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-siubhran&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Uathneach/laimhe.webp",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Uathneach/Tir na Láimhe/Tir na Láimhe.html",
+        "region": "Uathneach",
+        "house": "Dál Siubhrán",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Féthlinn"
+          },
+          {
+            "k": "Typ",
+            "v": "Leuchtturmsiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Dál Siubhrán"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Dál Siubhrán"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "uathneach-tir-na-laimhe",
+        "sourceRef": {
+          "provider": "aleria-reviewed-map",
+          "source": "Uathneach Städte Namen.png",
+          "selection": "original",
+          "settlementId": "fethlinn",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            32.3,
+            18
+          ]
+        },
+        "residentFamilyIds": [
+          "haus-siubhran"
+        ]
+      },
+      {
+        "id": "uathneach-bronnan",
+        "title": "Bronnan",
+        "x": 0.375,
+        "y": 0.353,
+        "cat": "mmfls5afqqpr",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/burgsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Uathneach/fastaigh.webp",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-fastaigh&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Uathneach/laimhe.webp",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Uathneach/Tir na Láimhe/Herrschaft von Bronnan/Herrschaft von Bronnan.html",
+        "region": "Uathneach",
+        "house": "Dál Fastaigh",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Bronnan"
+          },
+          {
+            "k": "Typ",
+            "v": "Burgsiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Dál Fastaigh"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Dál Fastaigh"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "uathneach-herrschaft-fastaigh",
+        "sourceRef": {
+          "provider": "aleria-reviewed-map",
+          "source": "Uathneach Städte Namen.png",
+          "selection": "original",
+          "settlementId": "bronnan",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            37.5,
+            35.3
+          ]
+        },
+        "residentFamilyIds": [
+          "haus-fastaigh"
+        ]
+      },
+      {
+        "id": "uathneach-reithe",
+        "title": "Broch an Reithe",
+        "x": 0.196,
+        "y": 0.33000000000000007,
+        "cat": "mmfls5afqqpr",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/burgsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Uathneach/muirin.webp",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-muirin&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Uathneach/laimhe.webp",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Uathneach/Tir na Láimhe/Tir na Láimhe.html",
+        "region": "Uathneach",
+        "house": "Ua Muirin",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Broch an Reithe"
+          },
+          {
+            "k": "Typ",
+            "v": "Burgsiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Ua Muirin"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Ua Muirin"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Kartenregion",
+            "v": "Tir na Taoide"
+          },
+          {
+            "k": "Lehenszugehörigkeit",
+            "v": "Tir na Láimhe · fürstliches Sonderlehen"
+          }
+        ],
+        "text": "Broch an Reithe liegt geografisch in Tir na Taoide, dient als Lehen der Ua Muirin jedoch unmittelbar den Mac Ard’Lága und wird bei Tir na Láimhe geführt.",
+        "secret": false,
+        "dominionId": "uathneach-tir-na-laimhe",
+        "sourceRef": {
+          "provider": "aleria-reviewed-map",
+          "source": "Uathneach Städte Namen.png",
+          "selection": "original",
+          "settlementId": "reithe",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            19.6,
+            33
+          ]
+        },
+        "residentFamilyIds": [
+          "haus-muirin"
+        ]
+      },
+      {
+        "id": "uathneach-moineal",
+        "title": "Moineal",
+        "x": 0.465,
+        "y": 0.47,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Uathneach/gealan.webp",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-gealan&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Uathneach/sruthan.webp",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Uathneach/Tir na Sruthán/Tir na Sruthán.html",
+        "region": "Uathneach",
+        "house": "An Gealân",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Moineal"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "An Gealân"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "An Gealân"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "uathneach-tir-na-sruthan",
+        "sourceRef": {
+          "provider": "aleria-reviewed-map",
+          "source": "Uathneach Städte Namen.png",
+          "selection": "original",
+          "settlementId": "moineal",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            46.5,
+            47
+          ]
+        },
+        "residentFamilyIds": [
+          "haus-gealan"
+        ]
+      },
+      {
+        "id": "uathneach-treabhair",
+        "title": "Treabhair",
+        "x": 0.5579999999999999,
+        "y": 0.29400000000000004,
+        "cat": "mmfls5afqqpr",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/burgsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Uathneach/luachra.webp",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-luachra&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Uathneach/sruthan.webp",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Uathneach/Tir na Sruthán/Herrschaft von Treabhair/Herrschaft von Treabhair.html",
+        "region": "Uathneach",
+        "house": "Nic Luachra",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Treabhair"
+          },
+          {
+            "k": "Typ",
+            "v": "Burgsiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Nic Luachra"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Nic Luachra"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "uathneach-herrschaft-luachra",
+        "sourceRef": {
+          "provider": "aleria-reviewed-map",
+          "source": "Uathneach Städte Namen.png",
+          "selection": "original",
+          "settlementId": "treabhair",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            55.8,
+            29.4
+          ]
+        },
+        "residentFamilyIds": [
+          "haus-luachra"
+        ]
+      },
+      {
+        "id": "uathneach-cathair",
+        "title": "Cathair",
+        "x": 0.716,
+        "y": 0.43900000000000006,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Uathneach/conchobhair.webp",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-conchobhair&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Uathneach/gcoillte.webp",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Uathneach/Tir na gCoillte/Tir na gCoillte.html",
+        "region": "Uathneach",
+        "house": "Ard Conchobhair",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Cathair"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Ard Conchobhair"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Ard Conchobhair"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "uathneach-tir-na-gcoillte",
+        "sourceRef": {
+          "provider": "aleria-reviewed-map",
+          "source": "Uathneach Städte Namen.png",
+          "selection": "original",
+          "settlementId": "cathair",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            71.6,
+            43.9
+          ]
+        },
+        "residentFamilyIds": [
+          "haus-conchobhair"
+        ]
+      },
+      {
+        "id": "uathneach-dathuil",
+        "title": "Dathuil",
+        "x": 0.82,
+        "y": 0.31800000000000006,
+        "cat": "mmfls5afqqpr",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/burgsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Uathneach/fiodhran.webp",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-fiodhran&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Uathneach/gcoillte.webp",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Uathneach/Tir na gCoillte/Tir na gCoillte.html",
+        "region": "Uathneach",
+        "house": "Na Fiodhrán",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Dathuil"
+          },
+          {
+            "k": "Typ",
+            "v": "Burgsiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Na Fiodhrán"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Na Fiodhrán"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "uathneach-tir-na-gcoillte",
+        "sourceRef": {
+          "provider": "aleria-reviewed-map",
+          "source": "Uathneach Städte Namen.png",
+          "selection": "original",
+          "settlementId": "dathuil",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            82,
+            31.8
+          ]
+        },
+        "residentFamilyIds": [
+          "haus-fiodhran"
+        ]
+      },
+      {
+        "id": "uathneach-orglen",
+        "title": "Orglen",
+        "x": 0.048,
+        "y": 0.58,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Uathneach/roich.webp",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-roich&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Uathneach/taoide.webp",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Uathneach/Tir na Taoide/Tir na Taoide.html",
+        "region": "Uathneach",
+        "house": "Mac Roich",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Orglen"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Mac Roich"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Mac Roich, Ua Cairbre, Ua Reannachain"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "uathneach-tir-na-taoide",
+        "sourceRef": {
+          "provider": "aleria-reviewed-map",
+          "source": "Uathneach Städte Namen.png",
+          "selection": "original",
+          "settlementId": "orglen",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            4.8,
+            58
+          ]
+        },
+        "residentFamilyIds": [
+          "haus-roich",
+          "haus-cairbre",
+          "haus-reannachain"
+        ]
+      },
+      {
+        "id": "uathneach-mhor",
+        "title": "Broch an Mhor",
+        "x": 0.23800000000000002,
+        "y": 0.64,
+        "cat": "mmfls5afqqpr",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/burgsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Uathneach/cairge.webp",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-cairge&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Uathneach/taoide.webp",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Uathneach/Tir na Taoide/Tir na Taoide.html",
+        "region": "Uathneach",
+        "house": "Ua Cairge",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Broch an Mhor"
+          },
+          {
+            "k": "Typ",
+            "v": "Burgsiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Ua Cairge"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Ua Cairge"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "uathneach-tir-na-taoide",
+        "sourceRef": {
+          "provider": "aleria-reviewed-map",
+          "source": "Uathneach Städte Namen.png",
+          "selection": "original",
+          "settlementId": "mhor",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            23.8,
+            64
+          ]
+        },
+        "residentFamilyIds": [
+          "haus-cairge"
+        ]
+      },
+      {
+        "id": "uathneach-rinnmara",
+        "title": "Rinnmara",
+        "x": 0.33899999999999997,
+        "y": 0.752,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Uathneach/midgna.webp",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-midgna&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Uathneach/dtorc.webp",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Uathneach/Tir na dTorc/Tir na dTorc.html",
+        "region": "Uathneach",
+        "house": "Mac Midgna",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Rinnmara"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Mac Midgna"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Mac Midgna, Ua Cuilen"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "uathneach-tir-na-dtorc",
+        "sourceRef": {
+          "provider": "aleria-reviewed-map",
+          "source": "Uathneach Städte Namen.png",
+          "selection": "original",
+          "settlementId": "rinnmara",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            33.9,
+            75.2
+          ]
+        },
+        "residentFamilyIds": [
+          "haus-midgna",
+          "haus-cuilen"
+        ]
+      },
+      {
+        "id": "uathneach-cuan",
+        "title": "Broch an Cuan",
+        "x": 0.4,
+        "y": 0.8740000000000001,
+        "cat": "mmfls5afqqpr",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/burgsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Uathneach/cadhla.webp",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-cadhla&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Uathneach/dtorc.webp",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Uathneach/Tir na dTorc/Tir na dTorc.html",
+        "region": "Uathneach",
+        "house": "An Cadhla",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Broch an Cuan"
+          },
+          {
+            "k": "Typ",
+            "v": "Burgsiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "An Cadhla"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "An Cadhla"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "uathneach-tir-na-dtorc",
+        "sourceRef": {
+          "provider": "aleria-reviewed-map",
+          "source": "Uathneach Städte Namen.png",
+          "selection": "original",
+          "settlementId": "cuan",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            40,
+            87.4
+          ]
+        },
+        "residentFamilyIds": [
+          "haus-cadhla"
+        ]
+      },
+      {
+        "id": "uathneach-temair",
+        "title": "Temair",
+        "x": 0.935,
+        "y": 0.11699999999999999,
+        "cat": "mmfls5afqqpr",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/burgsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Uathneach/mata.webp",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-mata&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Uathneach/conaire.webp",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Uathneach/Tir na Conaire/Tir na Conaire.html",
+        "region": "Uathneach",
+        "house": "Tir an Máta",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Temair"
+          },
+          {
+            "k": "Typ",
+            "v": "Burgsiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Tir an Máta"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Tir an Máta"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "uathneach-tir-na-conaire",
+        "sourceRef": {
+          "provider": "aleria-reviewed-map",
+          "source": "Uathneach Städte Namen.png",
+          "selection": "original",
+          "settlementId": "temair",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            93.5,
+            11.7
+          ]
+        },
+        "residentFamilyIds": [
+          "haus-mata"
+        ]
+      },
+      {
+        "id": "uathneach-caorthann",
+        "title": "Caorthann",
+        "x": 0.6940000000000001,
+        "y": 0.14,
+        "cat": "mmfls5afqqpr",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/burgsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Uathneach/suilgeach.webp",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-suilgeach&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Uathneach/conaire.webp",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Uathneach/Tir na Conaire/Herrschaft von Caorthann/Herrschaft von Caorthann.html",
+        "region": "Uathneach",
+        "house": "Na Suilgeach",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Caorthann"
+          },
+          {
+            "k": "Typ",
+            "v": "Burgsiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Na Suilgeach"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Na Suilgeach"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "uathneach-herrschaft-suilgeach",
+        "sourceRef": {
+          "provider": "aleria-reviewed-map",
+          "source": "Uathneach Städte Namen.png",
+          "selection": "original",
+          "settlementId": "caorthann",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            69.4,
+            14
+          ]
+        },
+        "residentFamilyIds": [
+          "haus-suilgeach"
+        ]
+      },
+      {
+        "id": "uathneach-ceithirn",
+        "title": "Ceithirn",
+        "x": 0.914,
+        "y": 0.22999999999999998,
+        "cat": "mmfls5afqqpr",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/burgsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Uathneach/creagan.webp",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-creagan&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Uathneach/conaire.webp",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Uathneach/Tir na Conaire/Tir na Conaire.html",
+        "region": "Uathneach",
+        "house": "Tir An Creagán",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Ceithirn"
+          },
+          {
+            "k": "Typ",
+            "v": "Burgsiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Tir An Creagán"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Tir An Creagán"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "uathneach-tir-na-conaire",
+        "sourceRef": {
+          "provider": "aleria-reviewed-map",
+          "source": "Uathneach Städte Namen.png",
+          "selection": "original",
+          "settlementId": "ceithirn",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            91.4,
+            23
+          ]
+        },
+        "residentFamilyIds": [
+          "haus-creagan"
+        ]
+      },
+      {
+        "id": "uathneach-kharanor",
+        "title": "Kharanor",
+        "x": 0.5429999999999999,
+        "y": 0.9179999999999999,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Uathneach/luga.webp",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-luga&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Uathneach/cloiche.webp",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Uathneach/Tir na Cloiche/Tir na Cloiche.html",
+        "region": "Uathneach",
+        "house": "Ua’Luga",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Kharanor"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Ua’Luga"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Ua’Luga, Ruin Marcaigh, Ruin Giolla"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "uathneach-tir-na-cloiche",
+        "sourceRef": {
+          "provider": "aleria-reviewed-map",
+          "source": "Uathneach Städte Namen.png",
+          "selection": "original",
+          "settlementId": "kharanor",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            54.3,
+            91.8
+          ]
+        },
+        "residentFamilyIds": [
+          "haus-luga",
+          "haus-marcaigh",
+          "haus-giolla"
+        ]
+      },
+      {
+        "id": "uathneach-mhorcha",
+        "title": "Mhorcha",
+        "x": 0.635,
+        "y": 0.584,
+        "cat": "mmfls5afqqpr",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/burgsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Uathneach/lasgair.webp",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-lasgair&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Uathneach/cloiche.webp",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Uathneach/Tir na Cloiche/Herrschaft von Mhorcha/Herrschaft von Mhorcha.html",
+        "region": "Uathneach",
+        "house": "Ua Lasgair",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Mhorcha"
+          },
+          {
+            "k": "Typ",
+            "v": "Burgsiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Ua Lasgair"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Ua Lasgair"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "uathneach-herrschaft-lasgair",
+        "sourceRef": {
+          "provider": "aleria-reviewed-map",
+          "source": "Uathneach Städte Namen.png",
+          "selection": "original",
+          "settlementId": "mhorcha",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            63.5,
+            58.4
+          ]
+        },
+        "residentFamilyIds": [
+          "haus-lasgair"
+        ]
+      },
+      {
+        "id": "uathneach-rioghain",
+        "title": "Rioghain",
+        "x": 0.517,
+        "y": 0.6779999999999999,
+        "cat": "location-dorf",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/bardensiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Uathneach/clannmhar.webp",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-clannmhar&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Uathneach/cloiche.webp",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Uathneach/Tir na Cloiche/Herrschaft von Rioghain/Herrschaft von Rioghain.html",
+        "region": "Uathneach",
+        "house": "Tir an Clannmhar",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Rioghain"
+          },
+          {
+            "k": "Typ",
+            "v": "Dorf"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Tir an Clannmhar"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Tir an Clannmhar"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "uathneach-herrschaft-clannmhar",
+        "sourceRef": {
+          "provider": "aleria-reviewed-map",
+          "source": "Uathneach Städte Namen.png",
+          "selection": "original",
+          "settlementId": "rioghain",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            51.7,
+            67.8
+          ]
+        },
+        "residentFamilyIds": [
+          "haus-clannmhar"
+        ]
+      }
+    ],
+    "cats": [
+      {
+        "id": "mmflrbzxydg7",
+        "label": "Hauptstadt",
+        "color": "#ff0000"
+      },
+      {
+        "id": "mmflrqajby8b",
+        "label": "Bauernsiedlung",
+        "color": "#6060b0"
+      },
+      {
+        "id": "mmflry5furso",
+        "label": "Hafensiedlung",
+        "color": "#b03030"
+      },
+      {
+        "id": "mmfls5afqqpr",
+        "label": "Burgsiedlung",
+        "color": "#9050b0"
+      },
+      {
+        "id": "mmflsfqh3sft",
+        "label": "Handelssiedlung",
+        "color": "#3a8a3a"
+      },
+      {
+        "id": "mmflsrndeiee",
+        "label": "Brückensiedlung",
+        "color": "#2a7aaa"
+      },
+      {
+        "id": "mmflt1x3v22o",
+        "label": "Bergbausiedlung",
+        "color": "#7a6040"
+      },
+      {
+        "id": "mmflt7uj831y",
+        "label": "Waldsiedlung",
+        "color": "#c07030"
+      },
+      {
+        "id": "mmflteurd4n5",
+        "label": "Kirchensiedlung",
+        "color": "#508080"
+      },
+      {
+        "id": "mmfltia1m3s7",
+        "label": "Leuchtturmsiedlung",
+        "color": "#c49a20"
+      },
+      {
+        "id": "mmfltullsctk",
+        "label": "Festungssiedlung",
+        "color": "#6060b0"
+      },
+      {
+        "id": "mmflvj37jbh2",
+        "label": "Taverne",
+        "color": "#b03030"
+      },
+      {
+        "id": "mmflvquv2rr3",
+        "label": "Siedlungsruine",
+        "color": "#9050b0"
+      },
+      {
+        "id": "mmflw1z5ko6e",
+        "label": "Stadtruine",
+        "color": "#3a8a3a"
+      },
+      {
+        "id": "mmflw73t2e8v",
+        "label": "Bardensiedlung",
+        "color": "#2a7aaa"
+      },
+      {
+        "id": "mmflwdjfl6ah",
+        "label": "Stadt",
+        "color": "#7a6040"
+      },
+      {
+        "id": "mmflwmdfcyua",
+        "label": "Turmruine",
+        "color": "#c07030"
+      },
+      {
+        "id": "mmflwxad8w1j",
+        "label": "Schiffswrack",
+        "color": "#508080"
+      },
+      {
+        "id": "mmflx4731uj6",
+        "label": "Turnierplatz",
+        "color": "#c49a20"
+      },
+      {
+        "id": "mmflxnnhbh4g",
+        "label": "Besondere Orte",
+        "color": "#6060b0"
+      },
+      {
+        "id": "location-dorf",
+        "label": "Dorf",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/bardensiedlung.png"
+      },
+      {
+        "id": "location-flusssiedlung",
+        "label": "Flusssiedlung",
+        "color": "#2a7aaa",
+        "marker": "/Karten/assets/icons/welt/flusssiedlung.png"
+      },
+      {
+        "id": "location-bauernhof",
+        "label": "Bauernhof",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/bauernsiedlung.png"
+      },
+      {
+        "id": "location-landgut",
+        "label": "Landgut",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/landgut.png"
+      },
+      {
+        "id": "location-anwesen",
+        "label": "Anwesen",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/anwesen.png"
+      },
+      {
+        "id": "location-rittergut",
+        "label": "Rittergut",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/kleine-burg.png"
+      },
+      {
+        "id": "location-weingut",
+        "label": "Weingut",
+        "color": "#a45630",
+        "marker": "/Karten/assets/icons/welt/weingut.png"
+      },
+      {
+        "id": "location-obstplantage",
+        "label": "Obstplantage",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/obstplantage.png"
+      },
+      {
+        "id": "location-viehweide",
+        "label": "Viehweide",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/weide.png"
+      },
+      {
+        "id": "location-gestuet",
+        "label": "Gestüt",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/gest-t.png"
+      },
+      {
+        "id": "location-muehle",
+        "label": "Mühle",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/m-hle.png"
+      },
+      {
+        "id": "location-mine",
+        "label": "Mine",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/einzelnemine.png"
+      },
+      {
+        "id": "location-steinbruch",
+        "label": "Steinbruch",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/steinbruch-1.png"
+      },
+      {
+        "id": "location-schmiede",
+        "label": "Schmiede",
+        "color": "#a45630",
+        "marker": "/Karten/assets/icons/welt/schmiede.png"
+      },
+      {
+        "id": "location-brauerei",
+        "label": "Brauerei",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/brauersiedlung.png"
+      },
+      {
+        "id": "location-fischerei",
+        "label": "Fischerei",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/fischerh-tte.png"
+      },
+      {
+        "id": "location-holzfaellerlager",
+        "label": "Holzfällerlager",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/holzf-llerlager.png"
+      },
+      {
+        "id": "location-koehlerei",
+        "label": "Köhlerei",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/k-hler3.png"
+      },
+      {
+        "id": "location-imkerei",
+        "label": "Imkerei",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/imkerhof.png"
+      },
+      {
+        "id": "location-handelskontor",
+        "label": "Handelskontor",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/kontor.png"
+      },
+      {
+        "id": "location-markt",
+        "label": "Markt",
+        "color": "#a45630",
+        "marker": "/Karten/assets/icons/welt/marktstand.png"
+      },
+      {
+        "id": "location-gildenhaus",
+        "label": "Gildenhaus",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/gildenzentrale.png"
+      },
+      {
+        "id": "location-burg",
+        "label": "Burg",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/gro-e-burg.png"
+      },
+      {
+        "id": "location-turm",
+        "label": "Turm",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/turm.png"
+      },
+      {
+        "id": "location-leuchtturm",
+        "label": "Leuchtturm",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/leuchtturm.png"
+      },
+      {
+        "id": "location-aussenposten",
+        "label": "Außenposten",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/au-enposten.png"
+      },
+      {
+        "id": "location-grenzposten",
+        "label": "Grenzposten",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/zoll-grenzposten.png"
+      },
+      {
+        "id": "location-heerlager",
+        "label": "Heerlager",
+        "color": "#a45630",
+        "marker": "/Karten/assets/icons/welt/heereslager.png"
+      },
+      {
+        "id": "location-lagerplatz",
+        "label": "Lagerplatz",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/lager.png"
+      },
+      {
+        "id": "location-jaegerlager",
+        "label": "Jägerlager",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/j-gerlager.png"
+      },
+      {
+        "id": "location-jagdhaus",
+        "label": "Jagdhaus",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/j-gerhaus.png"
+      },
+      {
+        "id": "location-druidenhuette",
+        "label": "Druidenhütte",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/druidenh-tte.png"
+      },
+      {
+        "id": "location-hexenhuette",
+        "label": "Hexenhütte",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/hexenhaus.png"
+      },
+      {
+        "id": "location-schrein",
+        "label": "Schrein",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/wegschrein.png"
+      },
+      {
+        "id": "location-heiligtum",
+        "label": "Heiligtum",
+        "color": "#a45630",
+        "marker": "/Karten/assets/icons/welt/heiligtum.png"
+      },
+      {
+        "id": "location-friedhof",
+        "label": "Friedhof",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/l-ndlicher-friedhof.png"
+      },
+      {
+        "id": "location-grabstaette",
+        "label": "Grabstätte",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/grabmal.png"
+      },
+      {
+        "id": "location-ruine",
+        "label": "Ruine",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/ruine2.png"
+      },
+      {
+        "id": "location-ausgrabung",
+        "label": "Ausgrabung",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/ausgrabung.png"
+      },
+      {
+        "id": "location-hoehle",
+        "label": "Höhle",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/h-hle.png"
+      },
+      {
+        "id": "location-hain",
+        "label": "Hain",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/hain.png"
+      },
+      {
+        "id": "location-ahnenbaum",
+        "label": "Ahnenbaum",
+        "color": "#a45630",
+        "marker": "/Karten/assets/icons/welt/ahnenbaum.png"
+      },
+      {
+        "id": "location-quelle",
+        "label": "Quelle",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/quelle.png"
+      },
+      {
+        "id": "location-berggipfel",
+        "label": "Berggipfel",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/gipfel.png"
+      },
+      {
+        "id": "location-monsterhort",
+        "label": "Monsterhort",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/kreaturenhort.png"
+      },
+      {
+        "id": "location-banditenlager",
+        "label": "Banditenlager",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/banditenlager.png"
+      },
+      {
+        "id": "location-hafen",
+        "label": "Hafen / Steg",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/gro-er-hafen.png"
+      },
+      {
+        "id": "location-werft",
+        "label": "Werft",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/schiffswerft.png"
+      },
+      {
+        "id": "location-poststation",
+        "label": "Poststation",
+        "color": "#a45630",
+        "marker": "/Karten/assets/icons/welt/poststation.png"
+      },
+      {
+        "id": "location-schule",
+        "label": "Schule",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/l-ndliche-universit-t.png"
+      },
+      {
+        "id": "location-zirkus",
+        "label": "Zirkus",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/zirkus3.png"
+      },
+      {
+        "id": "location-wohnhaus",
+        "label": "Wohnhaus",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/b-uerliches-heim.png"
+      },
+      {
+        "id": "location-brauersiedlung",
+        "label": "Brauersiedlung",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/brauersiedlung.png"
+      },
+      {
+        "id": "location-klostersiedlung",
+        "label": "Klostersiedlung",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/klostersiedlung.png"
+      },
+      {
+        "id": "location-rosszuchtsiedlung",
+        "label": "Rosszuchtsiedlung",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/pferdezuchtsiedlung.png"
+      },
+      {
+        "id": "location-sumpfsiedlung",
+        "label": "Sumpfsiedlung",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/sumpfsiedlung.png"
+      },
+      {
+        "id": "location-unterwasserstadt",
+        "label": "Unterwasserstadt",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/unterwasserstadt.png"
+      },
+      {
+        "id": "location-festung",
+        "label": "Festung",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/festung.png"
+      },
+      {
+        "id": "location-magierturm",
+        "label": "Magierturm",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/magierturm.png"
+      },
+      {
+        "id": "location-diebesgilde",
+        "label": "Diebesgilde",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/diebesgilde.png"
+      },
+      {
+        "id": "location-piratenversteck",
+        "label": "Piratenversteck",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/piratenlager.png"
+      },
+      {
+        "id": "location-schmugglerversteck",
+        "label": "Schmugglerversteck",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/schmuggler3.png"
+      },
+      {
+        "id": "location-verwunschener-wald",
+        "label": "Verwunschener Wald",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/waldschrat.png"
+      },
+      {
+        "id": "location-wahrzeichen",
+        "label": "Wahrzeichen",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/wahrzeichen.png"
+      },
+      {
+        "id": "location-dimensionaler-riss",
+        "label": "Dimensionaler Riss",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/dimensionaler-riss.png"
+      },
+      {
+        "id": "location-galgen",
+        "label": "Galgen",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/exekutionsplatz.png"
+      },
+      {
+        "id": "location-muenzpraegestaette",
+        "label": "Münzprägestätte",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/m-nzpr-ger.png"
+      },
+      {
+        "id": "location-bogenschiessstand",
+        "label": "Bogenschießstand",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/schie-stand2.png"
+      },
+      {
+        "id": "location-ziegelei",
+        "label": "Ziegelei",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/ziegelbrenner.png"
+      },
+      {
+        "id": "location-schiff",
+        "label": "Schiff",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/orte/schiff-gut.png"
+      },
+      {
+        "id": "location-kreaturenlager",
+        "label": "Kreaturenlager",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/goblinlager.png"
+      },
+      {
+        "id": "location-heisse-quellen",
+        "label": "Heiße Quellen",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/hei-e-quellen.png"
+      },
+      {
+        "id": "location-brueckenruine",
+        "label": "Brückenruine",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/zerst-rte-br-cke.png"
+      },
+      {
+        "id": "location-kirchenruine",
+        "label": "Kirchenruine",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/welt/zerst-rte-kirche.png"
+      },
+      {
+        "id": "location-hausruine",
+        "label": "Hausruine",
+        "color": "#6060b0",
+        "marker": "/Karten/assets/icons/welt/zerst-rtes-heim.png"
+      },
+      {
+        "id": "location-huegelgrab",
+        "label": "Hügelgrab",
+        "color": "#b08030",
+        "marker": "/Karten/assets/icons/welt/h-gelgrab.png"
+      },
+      {
+        "id": "location-plantage",
+        "label": "Plantage",
+        "color": "#7a6040",
+        "marker": "/Karten/assets/icons/welt/landgut.png"
+      },
+      {
+        "id": "location-kultstaette",
+        "label": "Kultstätte",
+        "color": "#3a8a3a",
+        "marker": "/Karten/assets/icons/welt/okkulter-schrein.png"
+      },
+      {
+        "id": "location-zelt",
+        "label": "Zelt",
+        "color": "#508080",
+        "marker": "/Karten/assets/icons/welt/ritterlicheszelt.png"
+      },
+      {
+        "id": "location-faehrstelle",
+        "label": "Fährstelle",
+        "color": "#906438",
+        "marker": "/Karten/assets/icons/orte/f-hre-steg.png"
+      },
+      {
+        "id": "location-schlachtfeld",
+        "label": "Schlachtfeld",
+        "color": "#6060b0"
+      }
+    ],
+    "categoryCatalogVersion": 3,
+    "regions": [],
+    "dominions": [
+      {
+        "id": "fuerstentum-uathneach",
+        "name": "Fürstentum Uathneach",
+        "type": "Fürstentum",
+        "ruler": "Mac Ard’Lága",
+        "seat": "Dunnean",
+        "parentId": ""
+      },
+      {
+        "id": "uathneach-tir-na-laimhe",
+        "name": "Tir na Láimhe",
+        "type": "Fürstliche Domäne",
+        "ruler": "Mac Ard’Lága",
+        "seat": "Dunnean",
+        "parentId": "fuerstentum-uathneach"
+      },
+      {
+        "id": "uathneach-tir-na-sruthan",
+        "name": "Tir na Sruthán",
+        "type": "Oberherrschaft",
+        "ruler": "An Gealân",
+        "seat": "Moineal",
+        "parentId": "fuerstentum-uathneach"
+      },
+      {
+        "id": "uathneach-tir-na-gcoillte",
+        "name": "Tir na gCoillte",
+        "type": "Oberherrschaft",
+        "ruler": "Ard Conchobhair",
+        "seat": "Cathair",
+        "parentId": "fuerstentum-uathneach"
+      },
+      {
+        "id": "uathneach-tir-na-taoide",
+        "name": "Tir na Taoide",
+        "type": "Oberherrschaft",
+        "ruler": "Mac Roich",
+        "seat": "Orglen",
+        "parentId": "fuerstentum-uathneach"
+      },
+      {
+        "id": "uathneach-tir-na-dtorc",
+        "name": "Tir na dTorc",
+        "type": "Oberherrschaft",
+        "ruler": "Mac Midgna",
+        "seat": "Rinnmara",
+        "parentId": "fuerstentum-uathneach"
+      },
+      {
+        "id": "uathneach-tir-na-conaire",
+        "name": "Tir na Conaire",
+        "type": "Oberherrschaft",
+        "ruler": "Tir an Máta",
+        "seat": "Temair",
+        "parentId": "fuerstentum-uathneach"
+      },
+      {
+        "id": "uathneach-tir-na-cloiche",
+        "name": "Tir na Cloiche",
+        "type": "Oberherrschaft",
+        "ruler": "Ua’Luga",
+        "seat": "Kharanor",
+        "parentId": "fuerstentum-uathneach"
+      },
+      {
+        "id": "uathneach-herrschaft-fastaigh",
+        "name": "Herrschaft von Bronnan",
+        "type": "Herrschaft",
+        "ruler": "Dál Fastaigh",
+        "seat": "Bronnan",
+        "parentId": "uathneach-tir-na-laimhe"
+      },
+      {
+        "id": "uathneach-herrschaft-lasgair",
+        "name": "Herrschaft von Mhorcha",
+        "type": "Herrschaft",
+        "ruler": "Ua Lasgair",
+        "seat": "Mhorcha",
+        "parentId": "uathneach-tir-na-cloiche"
+      },
+      {
+        "id": "uathneach-herrschaft-suilgeach",
+        "name": "Herrschaft von Caorthann",
+        "type": "Herrschaft",
+        "ruler": "Na Suilgeach",
+        "seat": "Caorthann",
+        "parentId": "uathneach-tir-na-conaire"
+      },
+      {
+        "id": "uathneach-herrschaft-luachra",
+        "name": "Herrschaft von Treabhair",
+        "type": "Herrschaft",
+        "ruler": "Nic Luachra",
+        "seat": "Treabhair",
+        "parentId": "uathneach-tir-na-sruthan"
+      },
+      {
+        "id": "uathneach-herrschaft-clannmhar",
+        "name": "Herrschaft von Rioghain",
+        "type": "Herrschaft",
+        "ruler": "Tir an Clannmhar",
+        "seat": "Rioghain",
+        "parentId": "uathneach-tir-na-cloiche"
+      }
+    ],
+    "regionTitle": "Fürstentum Uathneach",
+    "regionIcon": "/Stammbäume/assets/images/regions/Uathneach/uathneach.webp",
+    "mapImages": {
+      "normal": "/Karten/Uathneach/Kartenbilder/regionen.webp",
+      "regions": "",
+      "pins": ""
+    },
+    "layerNames": {
+      "normal": "Karte",
+      "regions": "Regionen",
+      "pins": "Markierungen"
+    },
+    "dotSize": 80,
+    "lblSize": 50,
+    "displaySettingsVersion": 1,
+    "showMarkers": false,
+    "showPinLabels": false,
+    "alwaysShowLettering": false,
+    "extraLayers": [],
+    "dm": {
+      "sessions": [],
+      "notes": "",
+      "groupStatus": {}
+    }
+  }
+}

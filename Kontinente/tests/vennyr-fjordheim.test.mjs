@@ -4,6 +4,8 @@ import fs from 'node:fs';
 import vm from 'node:vm';
 import {createHash} from 'node:crypto';
 import {FAMILY_REGISTRY} from '../../Stammbäume/assets/js/data/families.registry.js';
+import {assertFamilyBaseline} from './support/family-baseline.mjs';
+import historicalFamilyIds from './support/family-baseline-20261023.json' with {type:'json'};
 import {FAMILY_REGISTRY_FOLDERS} from '../../Stammbäume/assets/js/data/family-registry-folders.js';
 import {createRegistryBrowserIndex} from '../../Stammbäume/assets/js/modules/family-registry/registry-browser-model.js';
 import {VENNYR_TERRITORIAL_HOUSES} from '../../Stammbäume/assets/js/data/vennyr-territorial-catalog.js';
@@ -84,7 +86,7 @@ test('gemeinsame Renderer-Daten und sämtliche sichtbaren lokalen Bilder und Lin
 
 test('jede Vennyr- und Fjordheim-Kategorie hat ein lokales Zeichen, ohne Familien oder Beziehungen zu verändern',()=>{
   const baseline=read('Kontinente/modules/vennyr-fjordheim/sources/family-baseline.json');
-  assert.equal(createHash('sha256').update(JSON.stringify(FAMILY_REGISTRY)).digest('hex'),baseline.sha256);
+  assertFamilyBaseline(FAMILY_REGISTRY,baseline,historicalFamilyIds);
   const index=createRegistryBrowserIndex(FAMILY_REGISTRY,FAMILY_REGISTRY_FOLDERS);
   const nodes=[...index.nodes.values()].filter(n=>['Vennyr','Fjordheim'].includes(n.path[0]));
   assert.ok(nodes.length>40);
