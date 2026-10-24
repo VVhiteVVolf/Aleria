@@ -116,18 +116,37 @@ test('saving throw dice keep the target’s saving result instead of using attac
   assert.doesNotMatch(renderCombatEvaluation({ combatResolution: r }), /W20 \[15\][^<]*verfehlt/);
 });
 
-test('training and duels reject damage against zero HP before any new die or payment; other scene policies remain explicit', async () => {
+test('every encounter type rolls full damage against zero HP without subtracting further HP or repeating defeat', async () => {
   const actor = fighter('Asgeir Wolfshorn');
   const target = { ...fighter('Gawain Draig'), currentHitPoints: 0 };
-  const service = new CombatResolutionService({ rollAttack() { throw Error('should not roll'); } });
-  for (const combatType of ['training', 'duel']) await assert.rejects(service.resolveAttack({ actor, target }, {
-    encounter: { combatType }
-  }), /bereits kampfunfähig/);
-  await assert.doesNotReject(new CombatResolutionService(receipts()).resolveAttack({ actor, target }, { encounter: { combatType: 'combat' } }));
+  for (const combatType of ['training', 'duel', 'combat', undefined]) {
+    const dice = receipts([20]);
+    const result = await new CombatResolutionService(dice).resolveAttack({ actor, target }, { encounter: { combatType } });
+    assert.equal(dice.calls.length, 1);
+    assert.equal(result.attack.naturalRoll, 20);
+    assert.ok(result.damage.total > 0);
+    assert.equal(result.targetSnapshot.hitPointsBefore, 0);
+    assert.equal(result.targetSnapshot.hitPointsAfter, 0);
+    assert.equal(result.defeat, null);
+  }
   const healer = { ...actor, actionResolutionMode: 'automatic', profileActionKind: 'ability',
     selectedAction: { ...actor.selectedAction, resolutionMode: 'automatic', effects: [{ id: 'healing', type: 'healing', target: 'target', on: 'always', formula: '1d4' }] } };
   const healed = await new CombatResolutionService(receipts()).resolveAttack({ actor: healer, target }, { encounter: { combatType: 'training' } });
   assert.ok(healed.targetSnapshot.hitPointsAfter > 0);
+});
+
+test('all four attacks are rolled when the first hit exhausts the target HP, including when starting at zero', async () => {
+  const actor = fighter('Asgeir Wolfshorn', 'technique:asgeir-vier-faenge');
+  for (const combatType of ['training', 'duel', 'combat']) for (const currentHitPoints of [1, 0]) {
+    const target = { ...fighter('Gawain Draig'), currentHitPoints, totalDefense: 1 };
+    const dice = receipts([15, 16, 17, 18]);
+    const result = await new CombatResolutionService(dice).resolveAttack({ actor, target }, { encounter: { combatType } });
+    assert.deepEqual([result.attack, ...result.followUpAttacks.map(follow => follow.attack)].map(roll => roll.naturalRoll), [15, 16, 17, 18]);
+    assert.equal(dice.calls.length, 4);
+    assert.ok(result.followUpAttacks.every(follow => follow.damage.total > 0));
+    assert.equal(result.targetSnapshot.hitPointsAfter, 0);
+    assert.equal(result.defeat?.occurred === true, currentHitPoints > 0);
+  }
 });
 
 test('a counter defeat updates the encounter roster and administrative events preserve spent resources and effect clocks', () => {

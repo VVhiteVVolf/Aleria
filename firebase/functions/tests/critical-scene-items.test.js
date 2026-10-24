@@ -139,19 +139,36 @@ for (const roll of [10, 12, 19]) test(`a critical prepared counter stores its ow
   assert.equal(deriveSceneItems(records(db)).size, 0);
 });
 
-test('a second hostile segment against a defeated training target rejects the entire transaction without paying or changing history', async () => {
+for (const combatType of ['training', 'duel', 'combat']) test(`${combatType}: later segments and posts retain their dice after the first hit reaches zero HP`, async () => {
   const db = fixture(1);
-  db.data.get('comments/start').combatEncounter.combatType = 'training';
+  db.data.get('comments/start').combatEncounter.combatType = combatType;
   db.data.get('characters/target').combatProfile.hitPoints.current = 1;
-  const before = copy([...db.data]);
-  await assert.rejects(commit(db, [attack(15), attack(15)]), /bereits kampfunfähig/);
-  assert.deepEqual(copy([...db.data]), before);
-  const saved = await commit(db, [attack(15)]);
+  db.data.get('characters/actor').combatProfile.progression = { level: 10, actionPoolChoices: [{ level: 10, resourceId: 'action' }] };
+  const originalStart = copy(db.data.get('comments/start'));
+  const segments = [attack(15), attack(16)];
+  segments[1].combatResolution.damage.diceResults = [7];
+  const saved = await commit(db, segments);
+  const resolutions = saved.mechanics.commentSegments.map(segment => segment.combatResolution);
+  assert.deepEqual(resolutions.map(r => r.attack.naturalRoll), [15, 16]);
+  assert.deepEqual(resolutions.map(r => r.damage.diceResults), [[4], [7]]);
+  assert.deepEqual(resolutions.map(r => r.damage.total), [4, 7]);
+  assert.deepEqual(resolutions.map(r => [r.targetSnapshot.hitPointsBefore, r.targetSnapshot.hitPointsAfter]), [[1, 0], [0, 0]]);
+  assert.equal(resolutions[0].defeat.occurred, true);
+  assert.equal(resolutions[1].defeat, null);
+  assert.equal(resolutions[1].actorResourceSnapshot.after.find(resource => resource.id === 'action').current, 0);
+  const originalPost = copy(db.data.get(`comments/${saved.id}`));
+  const later = await commitCombatCommentOperation(request([attack(17)]), { database: db, nowClient: 200 });
+  const next = later.mechanics.commentSegments[0].combatResolution;
+  assert.equal(next.attack.naturalRoll, 17);
+  assert.equal(next.damage.total, 4);
+  assert.equal(next.targetSnapshot.hitPointsBefore, 0);
+  assert.equal(next.targetSnapshot.hitPointsAfter, 0);
+  assert.equal(next.defeat, null);
   assert.equal(db.data.get('characters/target').combatProfile.hitPoints.current, 0);
-  const after = copy([...db.data]);
-  await assert.rejects(commit(db, [attack(15)]), /bereits kampfunfähig/);
-  assert.deepEqual(copy([...db.data]), after);
-  assert.ok(saved.id);
+  assert.equal(deriveCombatStateFromComments(records(db)).get('target').current, 0);
+  assert.equal(getActiveCombatEncounter(records(db)).participants.get('target').status, 'defeated');
+  assert.deepEqual(db.data.get('comments/start'), originalStart);
+  assert.deepEqual(db.data.get(`comments/${saved.id}`), originalPost);
 });
 
 test('the server retains both critical categories in Vier Fänge while drawing only one W20 per allowed category', async () => {

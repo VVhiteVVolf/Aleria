@@ -13,14 +13,6 @@ export function getEncounterActionValidationError(action = {}, current = null) {
   return '';
 }
 
-export function getEncounterTargetValidationError({ encounter, actor, target, hostile } = {}) {
-  if (['training', 'duel'].includes(encounter?.combatType) && hostile
-    && actor?.characterId !== target?.characterId && Number(target?.currentHitPoints) <= 0) {
-    return `${target.name || 'Das Ziel'} ist bereits kampfunfähig. Im Übungskampf oder Duell werden keine weiteren schädlichen Handlungen gegen diese Figur ausgeführt.`;
-  }
-  return '';
-}
-
 export function getEncounterValidationError(event, current = null) {
   const participants = event.participants || [];
   if (new Set(participants.map(participant => participant.actorId)).size !== participants.length) return 'Eine Figur darf nur einmal in der Kampfliste stehen.';

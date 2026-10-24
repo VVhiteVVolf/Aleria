@@ -55,10 +55,9 @@ import {
 
 import { attachCombatEquipmentPreparation } from './combat-equipment-preparation.js?v=20260928-equipment-art-v4';
 import { getCombatWeaponLoadout } from './combat-weapon-loadout.js';
-import { getEncounterTargetValidationError } from './combat-encounter-lifecycle.js';
 import { prepareCombatTurnStart, attachCombatTurnStart } from './combat-turn-start.js?v=20260928-equipment-art-v4';
 
-export const COMBAT_EVALUATION_RULES_VERSION = 'combat-evaluation-11';
+export const COMBAT_EVALUATION_RULES_VERSION = 'combat-evaluation-12';
 
 function normalizeRollMode(value) {
   return ['advantage', 'disadvantage'].includes(value) ? value : 'normal';
@@ -308,10 +307,8 @@ export class CombatResolutionService {
   }
 
   async resolveAttack({ actor, target, description = '', rollMode = 'normal' } = {}, options = {}) {
-    const declaredEffects = normalizeCombatEffects(actor?.selectedAction?.effects || []);
-    const defeatedTargetError = getEncounterTargetValidationError({ encounter: options.encounter, actor, target,
-      hostile: !declaredEffects.length || hasHostileEffects(declaredEffects.filter(effect => effect.target !== 'self')) });
-    if (defeatedTargetError) throw new Error(defeatedTargetError);
+    // Targets at 0 HP remain rollable in every encounter type. Damage receipts
+    // retain the full result; the shared damage model clamps remaining HP at 0.
     const prepared = await prepareCombatTurnStart(actor, this.dice, options);
     const resolved = await this.resolvePreparedAttack({ actor: prepared.actor,
       target: actor.characterId === target.characterId ? prepared.actor : target, description, rollMode }, options);
@@ -342,9 +339,6 @@ export class CombatResolutionService {
     const effectiveEffects = options.skipSelfEffects
       ? actionEffects.filter(effect => effect.target !== 'self')
       : actionEffects;
-    const defeatedTargetError = getEncounterTargetValidationError({ encounter: options.encounter, actor, target,
-      hostile: hasHostileEffects(effectiveEffects.filter(effect => effect.target !== 'self')) });
-    if (defeatedTargetError) throw new Error(defeatedTargetError);
     const sustainsConcentration = actor.selectedAction?.concentration
       || effectiveEffects.some(effect => effect.concentration || effect.condition?.durationModel?.kind === 'concentration');
     const concentrationInstanceId = sustainsConcentration
